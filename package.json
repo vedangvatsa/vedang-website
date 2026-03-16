@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit",
     "x:authorize": "npx tsx scripts/x-authorize.ts",
     "x:post-essays": "npx tsx scripts/x-auto-post.ts",
-    "postbuild": "bash scripts/submit-indexnow.sh"
+    "indexnow": "bash scripts/submit-indexnow.sh"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.3",
