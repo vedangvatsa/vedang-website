@@ -62,7 +62,7 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://platform.twitter.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; frame-src https://www.youtube.com; connect-src 'self' https://www.google-analytics.com;",
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://platform.twitter.com https://cdn.syndication.twimg.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; frame-src https://www.youtube.com https://platform.twitter.com https://syndication.twitter.com; connect-src 'self' https://www.google-analytics.com https://syndication.twitter.com https://cdn.syndication.twimg.com;",
           },
           {
             key: 'X-Robots-Tag',
