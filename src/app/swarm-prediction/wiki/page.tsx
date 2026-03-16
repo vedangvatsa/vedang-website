@@ -6,19 +6,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'How Swarm Prediction Works',
-  description: 'Architecture and technical details of the swarm intelligence prediction engine. Learn about the five-stage pipeline — document ingestion, knowledge graph extraction, agent generation, multi-round debate simulation, and consensus reporting.',
-  alternates: { canonical: '/swarm-prediction/wiki' },
-  openGraph: {
-    title: 'How Swarm Prediction Works',
-    description: 'Five-stage pipeline: document ingestion, knowledge graph, agent generation, multi-round debate, and consensus report.',
-    url: '/swarm-prediction/wiki',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary',
-    title: 'How Swarm Prediction Works',
-    description: 'Technical architecture of the swarm intelligence prediction engine.',
-  },
+  description: 'Architecture and technical details of the swarm intelligence prediction engine.',
 };
 
 const pipelineSteps = [
@@ -94,7 +82,7 @@ export default function WikiPage() {
             <div className="space-y-3 mt-4">
               {pipelineSteps.map((step) => (
                 <div key={step.num} className="flex items-start gap-4 rounded-lg border border-border p-4">
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-foreground text-background text-xs font-bold">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">
                     {step.num}
                   </span>
                   <div>

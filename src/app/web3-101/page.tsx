@@ -32,7 +32,7 @@ const faqItems = [
   },
   {
     question: "Is Web3 secure? What are the risks?",
-    answer: "Web3's decentralization offers a new security model. Because data is distributed across thousands of computers, there is no single point of failure for an attacker to target, making the underlying network highly resistant to attacks. However, this model shifts responsibility to the user. You are in control of your own assets ('self-custody'), which means you must protect your wallet's 'private keys' or 'seed phrase.' The biggest risks are scams (phishing), social engineering, and interacting with poorly-coded smart contracts. Education is your best defense."
+    answer: "Web3's decentralization offers a new security model. Because data is distributed across thousands of computers, there is no single point of failure for an attacker to target, making the underlying network extremely robust. However, this model shifts responsibility to the user. You are in control of your own assets ('self-custody'), which means you must protect your wallet's 'private keys' or 'seed phrase.' The biggest risks are scams (phishing), social engineering, and interacting with poorly-coded smart contracts. Education is your best defense."
   },
   {
     question: "What is a 'DAO' and how does it work?",
@@ -90,7 +90,7 @@ export default function Web3CoursePage() {
                     Fundamentals of Web3
                 </h1>
                 <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-                Go beyond the buzzwords and understand the next evolution of the internet. This course breaks down Web3 — blockchain, decentralization, and digital ownership — into clear, practical concepts. Learn what it means to build and participate in a user-owned web.
+                Go beyond the buzzwords and discover the next evolution of the internet. This course demystifies Web3, breaking down blockchain, decentralization, and digital ownership into clear, understandable concepts. Learn what it means to build and participate in a user-owned web.
                 </p>
 
                 <div className="mt-8 flex justify-center items-center gap-4">
@@ -102,7 +102,7 @@ export default function Web3CoursePage() {
 
         <div className="container mx-auto px-4 md:px-6 max-w-5xl py-16 space-y-12">
             
-            <Card className="overflow-hidden border-border shadow-lg shadow-foreground/5">
+            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -115,7 +115,7 @@ export default function Web3CoursePage() {
                     </div>
                 </CardHeader>
                 <CardContent className="p-6">
-                     <p className="text-muted-foreground">Before diving into the technology, it helps to understand the 'why' behind Web3. This module traces the internet's evolution, highlights the problems Web3 aims to solve, and lays out its philosophical foundations: decentralization, user sovereignty, and open protocols.</p>
+                     <p className="text-muted-foreground">Before diving into the technology, it's crucial to understand the 'why' behind Web3. This module traces the internet's evolution, highlighting the problems Web3 aims to solve and laying out its philosophical foundations based on decentralization, user sovereignty, and open protocols.</p>
                     <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg">The Evolution of the Web: From Read to Read-Write-Own</AccordionTrigger>
@@ -129,7 +129,7 @@ export default function Web3CoursePage() {
                                         <strong>Web2 (The Read-Write Web, ~2004-Present):</strong> The rise of social media and user-generated content transformed users into creators. Platforms like Facebook, YouTube, and Twitter made it easy to create and share content. However, this came at a cost: centralization. A few large corporations now act as gatekeepers, controlling the platforms, owning user data, and setting the rules. You can create content, but you don't truly own it or your digital identity.
                                     </li>
                                     <li>
-                                        <strong>Web3 (The Read-Write-Own Web):</strong> This is the next major shift, aiming to combine the decentralized, open ethos of Web1 with the rich, interactive experience of Web2. Built on technologies like blockchain, Web3 lets users actually own their data, assets, and identity. It's about moving power from centralized platforms back to users and creators.
+                                        <strong>Web3 (The Read-Write-Own Web):</strong> This is the next paradigm shift, aiming to combine the decentralized, open ethos of Web1 with the rich, interactive experience of Web2. Built on technologies like blockchain, Web3 enables users to truly own their data, assets, and identity. It's about shifting power from centralized platforms back to users and creators.
                                     </li>
                                 </ul>
                             </AccordionContent>
@@ -151,7 +151,7 @@ export default function Web3CoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-border shadow-lg shadow-foreground/5">
+            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -164,7 +164,7 @@ export default function Web3CoursePage() {
                     </div>
                 </CardHeader>
                 <CardContent className="p-6">
-                    <p className="text-muted-foreground">This module explains the core technology behind Web3. We'll break down what a blockchain is, how it works, and the important role cryptocurrencies play in making these decentralized networks function.</p>
+                    <p className="text-muted-foreground">This module demystifies the core technology that underpins Web3. We'll break down what a blockchain is, how it works, and the crucial role cryptocurrencies play in making these decentralized networks function.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg">What is a Blockchain? (A Simple Analogy)</AccordionTrigger>
@@ -193,7 +193,7 @@ export default function Web3CoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-border shadow-lg shadow-foreground/5">
+            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -212,7 +212,7 @@ export default function Web3CoursePage() {
                             <AccordionTrigger className="text-lg">What are Smart Contracts?</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>A smart contract is simply a program that runs on the blockchain. It's a self-executing contract where the terms of the agreement between parties are written directly into code. They run exactly as programmed without any possibility of downtime, censorship, fraud, or third-party interference.</p>
-                                <blockquote className="border-l-4 border-border pl-4 italic my-4">
+                                <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
                                   <strong>Analogy: A Vending Machine.</strong> A vending machine is a physical smart contract. You put in money (input), select an item (condition), and the machine automatically dispenses the item (output). There's no cashier needed; the logic is baked into the machine. Smart contracts are digital vending machines for any kind of agreement or application.
                                 </blockquote>
                             </AccordionContent>
@@ -226,14 +226,14 @@ export default function Web3CoursePage() {
                                     <li><strong>Transparent:</strong> The code is visible to everyone on the blockchain, allowing anyone to verify its logic and functionality.</li>
                                     <li><strong>Composable ("Money Legos"):</strong> This is one of the most powerful features. Because smart contracts are open and live on the same network, developers can build new applications by combining existing ones, like snapping together Lego blocks. A new DeFi protocol can integrate a pre-existing stablecoin and a decentralized exchange to create a completely new product without asking for permission.</li>
                                 </ul>
-                                <p>This composability accelerates innovation rapidly and is the driving force behind the growth of the Web3 ecosystem.</p>
+                                <p>This composability accelerates innovation at an unprecedented rate and is the driving force behind the rapid growth of the Web3 ecosystem.</p>
                             </AccordionContent>
                         </AccordionItem>
                      </Accordion>
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-border shadow-lg shadow-foreground/5">
+            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -246,7 +246,7 @@ export default function Web3CoursePage() {
                     </div>
                 </CardHeader>
                  <CardContent className="p-6">
-                     <p className="text-muted-foreground">With the foundational technologies in place, we can now look at the applications being built in Web3. This module covers three important pillars of the current ecosystem.</p>
+                     <p className="text-muted-foreground">With the foundational technologies in place, we can now explore the exciting landscape of applications being built in Web3. This module covers the three most important pillars of the current ecosystem.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg">dApps: Decentralized Applications</AccordionTrigger>
@@ -258,7 +258,7 @@ export default function Web3CoursePage() {
                                     <li><strong>Permissionless Login:</strong> You don't sign up with an email and password. You connect your digital wallet, which acts as your secure, self-owned identity.</li>
                                     <li><strong>Transparency:</strong> All transactions and interactions are recorded on the public blockchain for anyone to verify.</li>
                                 </ul>
-                                <blockquote className="border-l-4 border-border pl-4 italic my-4">
+                                <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
                                   <strong>Example: Uniswap.</strong> Uniswap is a decentralized exchange (DEX) for swapping cryptocurrencies. Unlike a centralized exchange like Coinbase, there is no company holding your funds or acting as an intermediary. It's just a set of smart contracts that allow users to trade directly with each other from their own wallets.
                                 </blockquote>
                             </AccordionContent>
@@ -296,7 +296,7 @@ export default function Web3CoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-border shadow-lg shadow-foreground/5">
+            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -357,7 +357,7 @@ export default function Web3CoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-border shadow-lg shadow-foreground/5">
+            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                      <div className="flex items-center gap-4">
                         <div>
@@ -380,7 +380,7 @@ export default function Web3CoursePage() {
                                     <li><strong>A Fairer Creator Economy:</strong> Artists, musicians, and writers can publish their work as NFTs, capturing more of the value and building a direct relationship with their audience, free from platform intermediaries.</li>
                                     <li><strong>User-Owned Platforms:</strong> Social media, gaming, and other platforms can be owned and governed by their users through DAOs, ensuring the rules are fair and the value is distributed among those who create it.</li>
                                     <li><strong>A Global, Open Financial System (DeFi):</strong> Decentralized Finance aims to rebuild the traditional financial system on open rails, providing access to services like lending, borrowing, and trading to anyone with an internet connection, without needing a bank.</li>
-                                    <li><strong>Portable Digital Identity:</strong> Your wallet becomes your universal, self-owned identity, letting you move between applications without giving up control of your data.</li>
+                                    <li><strong>Portable Digital Identity:</strong> Your wallet becomes your universal, self-sovereign identity, allowing you to move seamlessly between applications without giving up control of your data.</li>
                                 </ul>
                             </AccordionContent>
                         </AccordionItem>

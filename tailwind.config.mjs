@@ -22,9 +22,9 @@ const config = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            '--tw-prose-body': theme('colors.muted.foreground'),
+            '--tw-prose-body': theme('colors.foreground'),
             '--tw-prose-headings': theme('colors.foreground'),
-            '--tw-prose-lead': theme('colors.muted.foreground'),
+            '--tw-prose-lead': theme('colors.foreground'),
             '--tw-prose-links': theme('colors.primary.DEFAULT'),
             '--tw-prose-bold': theme('colors.foreground'),
             '--tw-prose-counters': theme('colors.muted.foreground'),
@@ -38,9 +38,9 @@ const config = {
             '--tw-prose-pre-bg': theme('colors.muted.DEFAULT'),
             '--tw-prose-th-borders': theme('colors.border'),
             '--tw-prose-td-borders': theme('colors.border'),
-            '--tw-prose-invert-body': theme('colors.muted.foreground'),
+            '--tw-prose-invert-body': theme('colors.foreground'),
             '--tw-prose-invert-headings': theme('colors.foreground'),
-            '--tw-prose-invert-lead': theme('colors.muted.foreground'),
+            '--tw-prose-invert-lead': theme('colors.foreground'),
             '--tw-prose-invert-links': theme('colors.primary.DEFAULT'),
             '--tw-prose-invert-bold': theme('colors.foreground'),
             '--tw-prose-invert-counters': theme('colors.muted.foreground'),
@@ -54,33 +54,6 @@ const config = {
             '--tw-prose-invert-pre-bg': theme('colors.muted.DEFAULT'),
             '--tw-prose-invert-th-borders': theme('colors.border'),
             '--tw-prose-invert-td-borders': theme('colors.border'),
-            // Notion-like heading styles
-            'h1': {
-              letterSpacing: '-0.03em',
-              fontWeight: '600',
-            },
-            'h2': {
-              letterSpacing: '-0.02em',
-              fontWeight: '600',
-              borderBottom: `1px solid ${theme('colors.border')}`,
-              paddingBottom: '0.5rem',
-              marginTop: '2.5em',
-            },
-            'h3': {
-              fontWeight: '600',
-            },
-            // More relaxed line height
-            'p': {
-              lineHeight: '1.75',
-            },
-            'li': {
-              lineHeight: '1.7',
-            },
-            // Clean blockquotes
-            'blockquote': {
-              fontStyle: 'normal',
-              borderLeftWidth: '3px',
-            },
           },
         },
       }),

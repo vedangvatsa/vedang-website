@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ChevronDown } from 'lucide-react';
@@ -60,13 +59,18 @@ export default function SwarmPredictionPage() {
       <main className="flex-grow flex items-center justify-center py-16 px-4">
         <div className="w-full max-w-xl space-y-8">
           <div className="text-center space-y-3">
-            <Image src="/images/swarm/swarm.png" alt="Swarm illustration" width={160} height={160} className="mx-auto" priority />
             <h1 className="text-4xl font-semibold tracking-tight">
               Swarm Intelligence Prediction
             </h1>
             <p className="text-muted-foreground text-lg">
               Multi-agent AI debate to forecast outcomes from any data
             </p>
+            <Link
+              href="/swarm-prediction/wiki"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors underline underline-offset-4"
+            >
+              How it works
+            </Link>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -86,7 +90,7 @@ export default function SwarmPredictionPage() {
 
             <div>
               <label className="block text-sm font-medium mb-1.5">
-                Source material
+                Source material (optional)
               </label>
               <textarea
                 value={sourceText}
@@ -135,8 +139,8 @@ export default function SwarmPredictionPage() {
                         onClick={() => setDepth(d.value)}
                         className={`rounded-md border px-3 py-2 text-left text-sm transition-colors ${
                           depth === d.value
-                            ? 'border-foreground bg-foreground/5 text-foreground'
-                            : 'border-border hover:border-foreground/50'
+                            ? 'border-primary bg-primary/10 text-primary'
+                            : 'border-border hover:border-primary/50'
                         }`}
                       >
                         <span className="font-medium">{d.label}</span>
@@ -168,18 +172,10 @@ export default function SwarmPredictionPage() {
             <button
               type="submit"
               disabled={loading || !goal.trim() || !apiKey.trim()}
-              className="w-full rounded-md bg-foreground text-background py-2.5 text-sm font-medium hover:bg-foreground/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full rounded-md bg-primary text-primary-foreground py-2.5 text-sm font-medium hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Starting...' : 'Run prediction'}
             </button>
-            <div className="text-center">
-              <Link
-                href="/swarm-prediction/wiki"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4"
-              >
-                How it works
-              </Link>
-            </div>
           </form>
         </div>
       </main>

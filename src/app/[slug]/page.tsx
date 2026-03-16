@@ -197,20 +197,18 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
         { name: essay.frontmatter.title, url: `https://veda.ng/${params.slug}` },
       ]} />
 
-      <div className="container mx-auto max-w-3xl px-4 md:px-6 py-12">
-        <Link href="/writings" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-          &larr; Writings
-        </Link>
-        <article className="prose dark:prose-invert mt-4">
+      <div className="py-8">
+        <article className="prose dark:prose-invert mx-auto px-4 md:px-6">
           <h1>{essay.frontmatter.title}</h1>
-          <p className="text-sm text-muted-foreground !mt-0">
-            {essay.frontmatter.date && <>{new Date(essay.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</>}
-            {essay.frontmatter.updated && <> &middot; Updated {new Date(essay.frontmatter.updated).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</>}
+          <p className="text-sm text-muted-foreground">
+            By <a href="/profile" className="hover:underline">Vedang Vatsa</a>
+            {essay.frontmatter.date && <> &middot; Published: {new Date(essay.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</>}
+            {essay.frontmatter.updated && <> &middot; Updated: {new Date(essay.frontmatter.updated).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</>}
           </p>
           <MDXRemote source={essay.content} />
         </article>
 
-        <div className="mt-12">
+        <div className="mx-auto max-w-4xl px-4 md:px-6 mt-12">
             <RelatedGlossaryTerms
               essaySlug={params.slug}
               terms={glossaryTerms.map(t => ({ slug: t.slug, term: t.term }))}
