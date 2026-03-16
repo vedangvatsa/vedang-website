@@ -110,11 +110,38 @@ export default async function GlossaryTermPage({ params }: PageProps) {
 
       <article className="container mx-auto px-4 md:px-6 max-w-3xl py-16">
         <div className="space-y-6 mb-12">
-          {term.definition.split('\n\n').filter(Boolean).map((paragraph, i) => (
-            <p key={i} className="text-lg text-foreground leading-relaxed">
-              {paragraph.trim()}
-            </p>
-          ))}
+          {(() => {
+            // Split on explicit paragraph breaks first
+            const paragraphs = term.definition.split('\n\n').filter(Boolean);
+            
+            // If definition is one long paragraph, break it into chunks of ~3 sentences
+            const formatted = paragraphs.flatMap(p => {
+              const trimmed = p.trim();
+              if (trimmed.length < 400) return [trimmed];
+              
+              // Split on sentence boundaries (period followed by space and uppercase)
+              const sentences = trimmed.match(/[^.!?]+[.!?]+(?:\s|$)/g) || [trimmed];
+              const chunks: string[] = [];
+              let current = '';
+              
+              for (const s of sentences) {
+                if (current && (current + s).length > 400) {
+                  chunks.push(current.trim());
+                  current = s;
+                } else {
+                  current += s;
+                }
+              }
+              if (current.trim()) chunks.push(current.trim());
+              return chunks;
+            });
+            
+            return formatted.map((paragraph, i) => (
+              <p key={i} className="text-lg text-foreground leading-relaxed">
+                {paragraph}
+              </p>
+            ));
+          })()}
         </div>
 
         {relatedTermObjects.length > 0 && (
