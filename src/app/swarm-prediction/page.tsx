@@ -67,12 +67,13 @@ export default function SwarmPredictionPage() {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4" aria-label="Run a swarm intelligence prediction">
             <div>
               <label className="block text-sm font-medium mb-1.5">
                 Prediction question
               </label>
               <input
+                id="prediction-question"
                 type="text"
                 value={goal}
                 onChange={(e) => setGoal(e.target.value)}
@@ -87,6 +88,7 @@ export default function SwarmPredictionPage() {
                 Source material (optional)
               </label>
               <textarea
+                id="source-material"
                 value={sourceText}
                 onChange={(e) => setSourceText(e.target.value)}
                 placeholder="Paste articles, reports, or data to ground the prediction..."
@@ -111,6 +113,8 @@ export default function SwarmPredictionPage() {
                     LLM Provider
                   </label>
                   <select
+                    id="llm-provider"
+                    aria-label="Select LLM provider"
                     value={provider}
                     onChange={(e) => setProvider(e.target.value)}
                     className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
@@ -151,6 +155,7 @@ export default function SwarmPredictionPage() {
                 API Key
               </label>
               <input
+                id="api-key"
                 type="password"
                 value={apiKey}
                 onChange={(e) => setApiKey(e.target.value)}
@@ -164,6 +169,7 @@ export default function SwarmPredictionPage() {
             </div>
 
             <button
+              id="run-prediction-btn"
               type="submit"
               disabled={loading || !goal.trim() || !apiKey.trim()}
               className="w-full rounded-md bg-primary text-primary-foreground py-2.5 text-sm font-medium hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"

@@ -7,6 +7,16 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'How Swarm Prediction Works',
   description: 'Architecture and technical details of the swarm intelligence prediction engine. Learn about the five-stage pipeline — document ingestion, knowledge graph extraction, agent generation, multi-round debate simulation, and consensus reporting.',
+  keywords: [
+    'swarm intelligence architecture',
+    'multi-agent AI system',
+    'knowledge graph extraction',
+    'AI debate simulation',
+    'prediction pipeline',
+    'LLM agent generation',
+    'consensus forecasting',
+    'BYOK LLM',
+  ],
   alternates: { canonical: '/swarm-prediction/wiki' },
   openGraph: {
     title: 'How Swarm Prediction Works',
@@ -19,6 +29,75 @@ export const metadata: Metadata = {
     title: 'How Swarm Prediction Works',
     description: 'Technical architecture of the swarm intelligence prediction engine.',
   },
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: 'How Swarm Intelligence Prediction Works',
+  description: 'Architecture and technical details of a multi-agent AI debate engine that produces consensus forecasts from any data source.',
+  url: 'https://veda.ng/swarm-prediction/wiki',
+  author: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
+  publisher: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://veda.ng/swarm-prediction/wiki' },
+  about: { '@type': 'SoftwareApplication', name: 'Swarm Intelligence Prediction Engine', url: 'https://veda.ng/swarm-prediction' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is swarm intelligence prediction?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Instead of asking one AI model a question, swarm prediction creates a population of AI agents with different perspectives and makes them debate. The final prediction comes from the group consensus, not any single agent.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does the prediction pipeline work?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Every prediction runs through five stages: document ingestion, knowledge graph extraction, agent generation, multi-round debate simulation, and consensus report generation.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What LLM providers are supported?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The engine supports 8 providers via Bring Your Own Key: Anthropic, OpenAI, Google Gemini, Groq, Mistral AI, Together AI, OpenRouter, and DeepSeek.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is my API key safe?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Your API key is stored only in your browser. It is sent over HTTPS, used for a single request, then deleted from server memory. It is never written to disk, logged, or shared.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How many agents can run in a simulation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Simulations range from 10 agents over 4 rounds (Quick, ~1 minute) to 100 agents over 16 rounds (Maximum, ~15 minutes).',
+      },
+    },
+  ],
+};
+
+const wikiBreadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://veda.ng' },
+    { '@type': 'ListItem', position: 2, name: 'Swarm Prediction', item: 'https://veda.ng/swarm-prediction' },
+    { '@type': 'ListItem', position: 3, name: 'How It Works', item: 'https://veda.ng/swarm-prediction/wiki' },
+  ],
 };
 
 const pipelineSteps = [
@@ -45,7 +124,19 @@ export default function WikiPage() {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
       <main className="flex-grow">
-        <div className="container mx-auto max-w-3xl px-4 md:px-6 py-12">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(wikiBreadcrumbSchema) }}
+        />
+        <article className="container mx-auto max-w-3xl px-4 md:px-6 py-12">
           <Link href="/swarm-prediction" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             &larr; Back
           </Link>
@@ -255,7 +346,7 @@ export default function WikiPage() {
               <li><strong className="text-foreground">Cost scales with depth.</strong> Each agent makes LLM calls. A maximum-depth run with 100 agents across 16 rounds can consume significant API credits. The depth presets exist to give you control over this tradeoff.</li>
             </ul>
           </section>
-        </div>
+        </article>
       </main>
       <Footer />
     </div>
