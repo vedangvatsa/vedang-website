@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ChevronDown } from 'lucide-react';
@@ -59,6 +60,7 @@ export default function SwarmPredictionPage() {
       <main className="flex-grow flex items-center justify-center py-16 px-4">
         <div className="w-full max-w-xl space-y-8">
           <div className="text-center space-y-3">
+            <Image src="/images/swarm/swarm.png" alt="Swarm illustration" width={160} height={160} className="mx-auto" priority />
             <h1 className="text-4xl font-semibold tracking-tight">
               Swarm Intelligence Prediction
             </h1>

@@ -127,7 +127,7 @@ export default function AgenticWebCoursePage() {
 
         <div className="container mx-auto px-4 md:px-6 max-w-5xl py-16 space-y-12">
             
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
+            <Card className="overflow-hidden border-border shadow-lg shadow-foreground/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -190,7 +190,7 @@ export default function AgenticWebCoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
+            <Card className="overflow-hidden border-border shadow-lg shadow-foreground/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -266,7 +266,7 @@ export default function AgenticWebCoursePage() {
                 </CardContent>
             </Card>
             
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
+            <Card className="overflow-hidden border-border shadow-lg shadow-foreground/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -324,7 +324,7 @@ export default function AgenticWebCoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
+            <Card className="overflow-hidden border-border shadow-lg shadow-foreground/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -343,7 +343,7 @@ export default function AgenticWebCoursePage() {
                             <AccordionTrigger className="text-lg text-left">Informational Agents: Your Personal Researcher</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>These agents are designed to autonomously find, synthesize, and analyze information. They go far beyond a simple web search, acting as tireless researchers that can work for hours or days on a complex query.</p>
-                                <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
+                                <blockquote className="border-l-4 border-border pl-4 italic my-4">
                                   <strong>Example: A "Deep Research Agent."</strong> You could give it a high-level task like: "Create a comprehensive report on the current state of quantum computing. The report should cover the top research labs, recent breakthroughs in qubit stability, and the major technical and economic challenges to building a scalable quantum computer. Include a list of key companies and a summary of their approaches."
                                 </blockquote>
                                 <p>The agent would then:</p>
@@ -361,7 +361,7 @@ export default function AgenticWebCoursePage() {
                             <AccordionTrigger className="text-lg text-left">Transactional Agents: Your Personal Assistant</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>These agents execute tasks and make transactions on your behalf. They are designed to interact with the web's services to get things done in the real world.</p>
-                                <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
+                                <blockquote className="border-l-4 border-border pl-4 italic my-4">
                                   <strong>Example: A "Travel Agent."</strong> You tell it, "Book a round-trip flight to San Francisco for the first week of June. I need to arrive before Monday morning and leave after Friday afternoon. Find a 4-star hotel near the Moscone Center. My total budget for flight and hotel is $1500. I prefer flying with airlines where I have status."
                                 </blockquote>
                                 <p>The agent would then:</p>
@@ -380,7 +380,7 @@ export default function AgenticWebCoursePage() {
                             <AccordionTrigger className="text-lg text-left">Communicational Agents: Your Digital Diplomat</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>These agents excel at coordinating with other agents to achieve a common goal. This is the foundation of complex, multi-agent systems and is where the Agentic Web becomes a truly interconnected network.</p>
-                                <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
+                                <blockquote className="border-l-4 border-border pl-4 italic my-4">
                                   <strong>Example: A "Supply Chain Automation System."</strong> In a manufacturing company, multiple agents work together to manage the supply chain.
                                 </blockquote>
                                 <ol>
@@ -396,7 +396,7 @@ export default function AgenticWebCoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
+            <Card className="overflow-hidden border-border shadow-lg shadow-foreground/5">
                 <CardHeader className="bg-secondary/30 p-6">
                      <div className="flex items-center gap-4">
                         <div>

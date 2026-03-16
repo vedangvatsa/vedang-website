@@ -249,7 +249,7 @@ export default function VibeCodingCoursePage() {
                                             <p className="text-sm text-muted-foreground">In the past, you had to design the house and lay every brick yourself. You needed to know JavaScript, Python, and CSS. A small mistake, like a missing semicolon, could break everything. This made it hard for new people to start building.</p>
                                         </CardContent>
                                     </Card>
-                                    <Card className="border-primary/50">
+                                    <Card className="border-border">
                                         <CardHeader>
                                             <CardTitle className="text-lg font-semibold">The Vibe Way: Product Manager & Creative Director</CardTitle>
                                         </CardHeader>
@@ -446,7 +446,7 @@ export default function VibeCodingCoursePage() {
                                     <li><strong>What Not to Build:</strong> What will you NOT build in the first version? (e.g., "No social features," "No integrations.")</li>
                                 </ul>
                                 <p><strong>A Useful Trick:</strong> You can use one AI to help you make a plan for another AI. For example, you can prompt a powerful model like <Link href="https://claude.ai" target="_blank" rel="noopener noreferrer">Claude</Link> or <Link href="https://chat.openai.com" target="_blank" rel="noopener noreferrer">ChatGPT</Link> with this:</p>
-                                <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">"You are an expert product manager. I want to build a [Recipe App for users with food allergies]. Ask me questions to create a detailed Product Requirements Document (PRD)."</blockquote>
+                                <blockquote className="border-l-4 border-border pl-4 italic my-4">"You are an expert product manager. I want to build a [Recipe App for users with food allergies]. Ask me questions to create a detailed Product Requirements Document (PRD)."</blockquote>
                                 <p>The AI will ask you questions to help you think about all the details. The final document becomes the main prompt for your project.</p>
                             </AccordionContent>
                         </AccordionItem>
@@ -458,7 +458,7 @@ export default function VibeCodingCoursePage() {
                                 <ol className="my-6 space-y-4">
                                   <li>
                                     <strong>Prompt:</strong> Give your clear instruction from your PRD.
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Build the login page with email and password fields and a 'Login' button. Use our brand's main blue color for the button."</blockquote>
+                                    <blockquote className="border-l-4 border-border pl-4 italic my-2">"Build the login page with email and password fields and a 'Login' button. Use our brand's main blue color for the button."</blockquote>
                                   </li>
                                   <li>
                                     <strong>Review:</strong> The AI builds the page. It works, but you see problems. The button is too small, and the color is too bright.
@@ -468,7 +468,7 @@ export default function VibeCodingCoursePage() {
                                   </li>
                                   <li>
                                     <strong>Refine (The Right Way):</strong> Give specific, clear feedback.
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Make the login button 20% larger and use a darker blue (#4A90E2). Add a 'Forgot Password?' link below it."</blockquote>
+                                    <blockquote className="border-l-4 border-border pl-4 italic my-2">"Make the login button 20% larger and use a darker blue (#4A90E2). Add a 'Forgot Password?' link below it."</blockquote>
                                   </li>
                                 </ol>
                                 <p>Repeating this process is the key to creating something great. It is a partnership between your idea and the AI's work, and your job is to lead.</p>
@@ -484,7 +484,7 @@ export default function VibeCodingCoursePage() {
                                         <div>
                                             <h4 className="font-semibold text-foreground">Persona Prompting: Get Expert Advice</h4>
                                             <p className="text-muted-foreground">Start your prompt by telling the AI what its job is. This helps it give you expert-level advice instead of a general answer.</p>
-                                            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2 text-sm">"You are an expert security engineer. Check this code for security problems and suggest how to fix them."</blockquote>
+                                            <blockquote className="border-l-4 border-border pl-4 italic my-2 text-sm">"You are an expert security engineer. Check this code for security problems and suggest how to fix them."</blockquote>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
@@ -492,7 +492,7 @@ export default function VibeCodingCoursePage() {
                                         <div>
                                             <h4 className="font-semibold text-foreground">Chain of Thought: See the AI's Reasoning</h4>
                                             <p className="text-muted-foreground">For a difficult task, ask the AI to "think step-by-step." This makes the AI break down the problem and show its work. This often leads to a better answer and makes it easier for you to see and fix its logic.</p>
-                                             <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2 text-sm">"I need to connect to a new API. First, think step-by-step about what to do. Then, write the code."</blockquote>
+                                             <blockquote className="border-l-4 border-border pl-4 italic my-2 text-sm">"I need to connect to a new API. First, think step-by-step about what to do. Then, write the code."</blockquote>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
@@ -500,7 +500,7 @@ export default function VibeCodingCoursePage() {
                                         <div>
                                             <h4 className="font-semibold text-foreground">Negative Prompts: State What to Avoid</h4>
                                             <p className="text-muted-foreground">Specify what you *don't* want. Tell the AI what to avoid.</p>
-                                             <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2 text-sm">"Generate a list of startup names. Do not use generic words like 'synergy,' 'cloud,' or 'link'."</blockquote>
+                                             <blockquote className="border-l-4 border-border pl-4 italic my-2 text-sm">"Generate a list of startup names. Do not use generic words like 'synergy,' 'cloud,' or 'link'."</blockquote>
                                         </div>
                                     </div>
                                 </div>
@@ -541,11 +541,11 @@ export default function VibeCodingCoursePage() {
                                 <ol className="space-y-4">
                                   <li>To use this tool, go to <strong>Firebase Studio</strong> and start a new project.</li>
                                   <li><strong>Initial Prompt (The Big Idea):</strong> In the main prompt box, describe the entire app you want to build. This is where your PRD is useful.
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Create a 'startup name generator' app. It needs a text box to enter an industry, and a 'Generate' button. When I click the button, it should show a list of 10 creative names. The design should be modern, with a dark gray background and bright green text. The app must work well on mobile."</blockquote>
+                                    <blockquote className="border-l-4 border-border pl-4 italic my-2">"Create a 'startup name generator' app. It needs a text box to enter an industry, and a 'Generate' button. When I click the button, it should show a list of 10 creative names. The design should be modern, with a dark gray background and bright green text. The app must work well on mobile."</blockquote>
                                   </li>
-                                  <li><strong>Review the Blueprint:</strong> Firebase Studio will generate a blueprint for you to check. This is its plan. You can give feedback here before it writes any code. Example feedback: <br/><blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"This looks good, but add a 'Copy to Clipboard' button next to each generated name."</blockquote></li>
+                                  <li><strong>Review the Blueprint:</strong> Firebase Studio will generate a blueprint for you to check. This is its plan. You can give feedback here before it writes any code. Example feedback: <br/><blockquote className="border-l-4 border-border pl-4 italic my-2">"This looks good, but add a 'Copy to Clipboard' button next to each generated name."</blockquote></li>
                                   <li><strong>Generate and Refine:</strong> After you approve the blueprint, the AI generates the full app. Now you can use the chat to make it better.
-                                     <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"The generated names are too simple. Change the AI's instructions to be more creative. Tell it to 'think like a Silicon Valley branding expert.' Also, make the loading icon smaller."</blockquote>
+                                     <blockquote className="border-l-4 border-border pl-4 italic my-2">"The generated names are too simple. Change the AI's instructions to be more creative. Tell it to 'think like a Silicon Valley branding expert.' Also, make the loading icon smaller."</blockquote>
                                   </li>
                                    <li><strong>Deploy to the World:</strong> In the Firebase Studio dashboard, click the <strong>Publish</strong> button. This will make your app live on the internet, running on Google's powerful servers. Congratulations, you have just built and launched a full AI app.</li>
                                 </ol>
@@ -559,13 +559,13 @@ export default function VibeCodingCoursePage() {
                                 <ol className="space-y-4">
                                   <li>To start, go to <strong>Lovable.dev</strong> and create a new project.</li>
                                   <li><strong>Initial Prompt:</strong> You can start by describing the user interface.
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Create a page with a title that says 'Startup Name Generator'. Below it, add a text input with the placeholder 'Enter an industry...' and a button next to it that says 'Generate'. Below that, add a section to show a list of names."</blockquote>
+                                    <blockquote className="border-l-4 border-border pl-4 italic my-2">"Create a page with a title that says 'Startup Name Generator'. Below it, add a text input with the placeholder 'Enter an industry...' and a button next to it that says 'Generate'. Below that, add a section to show a list of names."</blockquote>
                                   </li>
                                   <li><strong>Refine the UI:</strong> Use more prompts to change the style.
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Style the page with a dark theme. Make the main button have a gradient from purple to blue. The generated names should appear inside a card with a small shadow."</blockquote>
+                                    <blockquote className="border-l-4 border-border pl-4 italic my-2">"Style the page with a dark theme. Make the main button have a gradient from purple to blue. The generated names should appear inside a card with a small shadow."</blockquote>
                                   </li>
                                    <li><strong>Add Logic:</strong> Now, you can add the AI part.
-                                     <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"When the 'Generate' button is clicked, use an AI to generate 10 startup names based on the text in the input field. Show them in the list section."</blockquote>
+                                     <blockquote className="border-l-4 border-border pl-4 italic my-2">"When the 'Generate' button is clicked, use an AI to generate 10 startup names based on the text in the input field. Show them in the list section."</blockquote>
                                   </li>
                                    <li><strong>Deploy:</strong> Lovable has a built-in deploy option, which lets you publish your app with a single click.</li>
                                 </ol>
@@ -579,11 +579,11 @@ export default function VibeCodingCoursePage() {
                                 <ol className="space-y-4">
                                   <li>To get started, go to <strong>Replit</strong> and start a new project from a template (like "Next.js").</li>
                                   <li><strong>Initial Prompt:</strong> You can ask the Replit AI to create files for you.
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Create a Next.js page component for a startup name generator. It should have a state for the industry input and another for the list of names. Include a text input, a button, and a list to show the results. For the backend, create an API route that takes an 'industry' and uses an AI to generate 10 names."</blockquote>
+                                    <blockquote className="border-l-4 border-border pl-4 italic my-2">"Create a Next.js page component for a startup name generator. It should have a state for the industry input and another for the list of names. Include a text input, a button, and a list to show the results. For the backend, create an API route that takes an 'industry' and uses an AI to generate 10 names."</blockquote>
                                   </li>
                                   <li><strong>Review and Debug:</strong> The AI will create the code. Check each file. If there is an error, you can copy the error message and paste it into the chat. "I got this error when running the app, please fix it: [paste error message]".</li>
                                    <li><strong>Refine:</strong>
-                                     <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"The style is too plain. Add Tailwind CSS and use it to give the page a modern, dark theme. Center everything on the page."</blockquote>
+                                     <blockquote className="border-l-4 border-border pl-4 italic my-2">"The style is too plain. Add Tailwind CSS and use it to give the page a modern, dark theme. Center everything on the page."</blockquote>
                                   </li>
                                    <li><strong>Deploy:</strong> Clicking the "Deploy" button in Replit will publish your app to a live website.</li>
                                 </ol>
@@ -597,10 +597,10 @@ export default function VibeCodingCoursePage() {
                                 <ol className="space-y-4">
                                   <li>First, set up a new Next.js project on your computer and open the project folder in <strong>Cursor</strong>.</li>
                                   <li><strong>Generate Code:</strong> Use the chat (Cmd/Ctrl + K) to create code or entire files.
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Generate the code for a React component called 'NameGenerator'. It should have a form with an input for 'industry' and a button. When submitted, it should get names from the '/api/generate' endpoint and show them."</blockquote>
+                                    <blockquote className="border-l-4 border-border pl-4 italic my-2">"Generate the code for a React component called 'NameGenerator'. It should have a form with an input for 'industry' and a button. When submitted, it should get names from the '/api/generate' endpoint and show them."</blockquote>
                                   </li>
                                   <li><strong>Edit with AI:</strong> You can select code and ask the AI to edit it. For example, select your list of names and prompt:
-                                     <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"For each name in this list, add a 'Copy' button next to it that copies the name to the clipboard."</blockquote>
+                                     <blockquote className="border-l-4 border-border pl-4 italic my-2">"For each name in this list, add a 'Copy' button next to it that copies the name to the clipboard."</blockquote>
                                   </li>
                                    <li><strong>Debug with AI:</strong> If you have an error, you can use the "Debug" feature. The AI will analyze the problem and suggest a fix.</li>
                                    <li><strong>Deploy:</strong> Since this is on your local computer, you can deploy it any way you like (for example, by pushing to GitHub and deploying with <Link href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel</Link>).</li>
@@ -640,7 +640,7 @@ export default function VibeCodingCoursePage() {
                                 <ul>
                                   <li><strong>The Risk:</strong> An AI might put your private API keys in public code. It might create a login page that is not secure. It does not know what is secret unless you tell it.</li>
                                   <li><strong>The Fix: The Rule File.</strong> Most AI coding tools let you create a special file (like `.cursorrules` or `CLAUDE.md`) with permanent instructions. You must create one.
-                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
+                                    <blockquote className="border-l-4 border-border pl-4 italic my-4">
                                     <strong>Rule #1 (Secrets):</strong> Always use environment variables for secret keys. Never write them directly in the code. Call them using `process.env.VARIABLE_NAME`.<br/><br/>
                                     <strong>Rule #2 (Passwords):</strong> All user passwords must be securely hashed (encrypted) before you store them. Never store passwords as plain text.<br/><br/>
                                     <strong>Rule #3 (Database Access):</strong> Always check data on the server side. Use your platform's security rules (like Firebase Security Rules or Supabase RLS) to protect data. Do not only rely on checks in the browser, because they can be skipped.
@@ -721,7 +721,7 @@ export default function VibeCodingCoursePage() {
                             <ul className="space-y-2">
                                 {tool.links.map((link) => (
                                     <li key={link.name}>
-                                        <Link href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-muted-foreground hover:text-primary group">
+                                        <Link href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-muted-foreground hover:text-foreground group">
                                             {link.name}
                                             <ExternalLink className="ml-1.5 h-3 w-3 opacity-70 group-hover:opacity-100" />
                                         </Link>

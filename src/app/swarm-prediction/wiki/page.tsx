@@ -6,7 +6,19 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'How Swarm Prediction Works',
-  description: 'Architecture and technical details of the swarm intelligence prediction engine.',
+  description: 'Architecture and technical details of the swarm intelligence prediction engine. Learn about the five-stage pipeline — document ingestion, knowledge graph extraction, agent generation, multi-round debate simulation, and consensus reporting.',
+  alternates: { canonical: '/swarm-prediction/wiki' },
+  openGraph: {
+    title: 'How Swarm Prediction Works',
+    description: 'Five-stage pipeline: document ingestion, knowledge graph, agent generation, multi-round debate, and consensus report.',
+    url: '/swarm-prediction/wiki',
+    type: 'article',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'How Swarm Prediction Works',
+    description: 'Technical architecture of the swarm intelligence prediction engine.',
+  },
 };
 
 const pipelineSteps = [

@@ -18,17 +18,12 @@ function truncate(text: string, maxLen: number): string {
 
 export default function GlossaryPage() {
   const terms = getAllTermsSorted();
-
   const categoryOrder = ["AI", "Web3", "Tech", "Other"];
-
   const categories = [...new Set(terms.map((t) => t.category || "Other"))].sort(
     (a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b)
   );
-
   const lightTerms = terms.map((t) => ({
-    term: t.term,
-    slug: t.slug,
-    category: t.category,
+    term: t.term, slug: t.slug, category: t.category,
     definition: truncate(t.definition.replace(/\n/g, ' '), 100),
   }));
 
@@ -40,32 +35,19 @@ export default function GlossaryPage() {
     "description": "Definitions of AI, Web3, and technical terms.",
     "url": "https://veda.ng/glossary",
     "hasDefinedTerm": terms.map((term) => ({
-      "@type": "DefinedTerm",
-      "name": term.term,
-      "url": `https://veda.ng/glossary/${term.slug}`
+      "@type": "DefinedTerm", "name": term.term, "url": `https://veda.ng/glossary/${term.slug}`
     }))
   };
 
   return (
     <PageLayout>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(glossarySchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(glossarySchema) }} />
       <BreadcrumbSchema items={[{ name: "Glossary", url: "https://veda.ng/glossary" }]} />
-
-      <section className="text-center pt-16 pb-12 border-b border-border/30">
-        <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
-            Glossary
-          </h1>
-          <p className="mt-4 text-base md:text-lg text-muted-foreground">
-            Deep dives into the terminology shaping AI, Web3, and deep tech.
-          </p>
-        </div>
-      </section>
-
-      <div className="container mx-auto px-4 md:px-6 max-w-7xl py-16">
+      <div className="container mx-auto max-w-3xl px-4 md:px-6 py-12">
+        <h1 className="text-4xl font-semibold tracking-tight">Glossary</h1>
+        <p className="mt-2 text-muted-foreground">Deep dives into the terminology shaping AI, Web3, and deep tech.</p>
+      </div>
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl pb-16">
         <GlossaryFilter terms={lightTerms} categories={categories} />
       </div>
     </PageLayout>

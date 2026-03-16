@@ -101,7 +101,7 @@ export default function PromptEngineeringCoursePage() {
 
         <div className="container mx-auto px-4 md:px-6 max-w-5xl py-16 space-y-12">
             
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
+            <Card className="overflow-hidden border-border shadow-lg shadow-foreground/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -139,7 +139,7 @@ export default function PromptEngineeringCoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
+            <Card className="overflow-hidden border-border shadow-lg shadow-foreground/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -181,7 +181,7 @@ export default function PromptEngineeringCoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
+            <Card className="overflow-hidden border-border shadow-lg shadow-foreground/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -200,7 +200,7 @@ export default function PromptEngineeringCoursePage() {
                             <AccordionTrigger className="text-lg">Chain of Thought (CoT) Prompting</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>Chain of Thought is a breakthrough technique for improving an LLM's reasoning. Instead of asking for an answer directly, you ask the model to "think step-by-step." This forces the model to generate intermediate reasoning steps, which dramatically improves its accuracy on math, logic, and multi-step problems.</p>
-                                <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
+                                <blockquote className="border-l-4 border-border pl-4 italic my-4">
                                   "When I was 3 years old, my partner was 3 times my age. Now, I am 20 years old. How old is my partner? Let's think step by step."
                                 </blockquote>
                                 <p>By talking through the problem, the model is less likely to make a simple calculation error.</p>
@@ -222,7 +222,7 @@ export default function PromptEngineeringCoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
+            <Card className="overflow-hidden border-border shadow-lg shadow-foreground/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -242,13 +242,13 @@ export default function PromptEngineeringCoursePage() {
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <ul>
                                     <li><strong>Writing Code:</strong> Be specific about the language, libraries, and desired functionality.
-                                        <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Write a Python function that takes a URL and returns the text content of the page using the 'requests' and 'BeautifulSoup' libraries."</blockquote>
+                                        <blockquote className="border-l-4 border-border pl-4 italic my-2">"Write a Python function that takes a URL and returns the text content of the page using the 'requests' and 'BeautifulSoup' libraries."</blockquote>
                                     </li>
                                     <li><strong>Explaining Code:</strong> Paste a snippet of code and ask for an explanation. This is great for understanding legacy code or learning a new language.
-                                        <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Explain this React hook line by line."</blockquote>
+                                        <blockquote className="border-l-4 border-border pl-4 italic my-2">"Explain this React hook line by line."</blockquote>
                                     </li>
                                     <li><strong>Translating Code:</strong> Provide a function in one language and ask for its equivalent in another.
-                                        <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Translate the following Bash script into a Python script with the same functionality."</blockquote>
+                                        <blockquote className="border-l-4 border-border pl-4 italic my-2">"Translate the following Bash script into a Python script with the same functionality."</blockquote>
                                     </li>
                                 </ul>
                             </AccordionContent>
@@ -262,7 +262,7 @@ export default function PromptEngineeringCoursePage() {
                                     <li>The full error message and traceback.</li>
                                     <li>Your intent: what were you trying to do?</li>
                                 </ol>
-                                <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"The Python code below gives a `NameError: name 'toUpperCase' is not defined`. Please debug the code and fix it. Also, suggest any other improvements you see."</blockquote>
+                                <blockquote className="border-l-4 border-border pl-4 italic my-2">"The Python code below gives a `NameError: name 'toUpperCase' is not defined`. Please debug the code and fix it. Also, suggest any other improvements you see."</blockquote>
                                 <p>Often, the model will not only fix the immediate bug but also identify other issues and suggest more robust, efficient code.</p>
                             </AccordionContent>
                         </AccordionItem>
@@ -270,7 +270,7 @@ export default function PromptEngineeringCoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
+            <Card className="overflow-hidden border-border shadow-lg shadow-foreground/5">
                 <CardHeader className="bg-secondary/30 p-6">
                      <div className="flex items-center gap-4">
                         <div>

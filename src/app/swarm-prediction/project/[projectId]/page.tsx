@@ -203,7 +203,7 @@ export default function ProjectPage() {
           </div>
           <div className="flex gap-1">
             {(['split', 'graph', 'report'] as const).map((m) => (
-              <button key={m} onClick={() => setViewMode(m)} className={`px-3 py-1 text-xs rounded-md ${viewMode === m ? 'bg-primary text-primary-foreground' : 'text-muted-foreground hover:text-foreground'}`}>
+              <button key={m} onClick={() => setViewMode(m)} className={`px-3 py-1 text-xs rounded-md ${viewMode === m ? 'bg-foreground text-background' : 'text-muted-foreground hover:text-foreground'}`}>
                 {m === 'split' ? 'Split' : m === 'graph' ? 'Graph' : 'Report'}
               </button>
             ))}
@@ -224,7 +224,7 @@ export default function ProjectPage() {
                       {m.role === 'assistant' ? (
                         <div className="prose dark:prose-invert prose-sm max-w-none" dangerouslySetInnerHTML={{ __html: marked(m.content) as string }} />
                       ) : (
-                        <span className="inline-block rounded-lg bg-primary text-primary-foreground px-3 py-1.5">{m.content}</span>
+                        <span className="inline-block rounded-lg bg-foreground text-background px-3 py-1.5">{m.content}</span>
                       )}
                     </div>
                   ))}
@@ -239,7 +239,7 @@ export default function ProjectPage() {
                     placeholder="Ask a question..."
                     className="flex-1 rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                   />
-                  <button onClick={() => askQ(question)} disabled={!question.trim() || thinking} className="rounded-md bg-primary text-primary-foreground px-4 py-2 text-sm disabled:opacity-50">
+                  <button onClick={() => askQ(question)} disabled={!question.trim() || thinking} className="rounded-md bg-foreground text-background px-4 py-2 text-sm disabled:opacity-50">
                     Send
                   </button>
                 </div>

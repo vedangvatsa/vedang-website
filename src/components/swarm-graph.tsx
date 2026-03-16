@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 
 const TYPE_COLORS = [
@@ -21,6 +21,7 @@ interface Post {
   agent_name?: string;
   round_num?: number;
   is_reply_to?: string;
+  content?: string;
 }
 
 interface Props {
@@ -30,8 +31,18 @@ interface Props {
   height?: number;
 }
 
+interface SelectedNode {
+  name: string;
+  type: string;
+  stance: string;
+  summary: string;
+  posts: number;
+  recentPosts: string[];
+}
+
 export function SwarmGraph({ profiles, posts, width = 800, height = 700 }: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
+  const [selected, setSelected] = useState<SelectedNode | null>(null);
 
   useEffect(() => {
     if (!svgRef.current || profiles.length === 0) return;
@@ -52,13 +63,19 @@ export function SwarmGraph({ profiles, posts, width = 800, height = 700 }: Props
       radius: 6,
       x: width / 2,
       y: height / 2,
+      recentPosts: [] as string[],
     }));
 
     const nameMap: Record<string, (typeof nodes)[0]> = {};
     nodes.forEach((n) => { nameMap[n.name.toLowerCase()] = n; });
     for (const post of posts) {
       const n = nameMap[(post.agent_name || '').toLowerCase()];
-      if (n) n.posts++;
+      if (n) {
+        n.posts++;
+        if (post.content && n.recentPosts.length < 3) {
+          n.recentPosts.push(post.content.slice(0, 150) + (post.content.length > 150 ? '...' : ''));
+        }
+      }
     }
     const maxPosts = Math.max(...nodes.map((n) => n.posts), 1);
     nodes.forEach((n) => { n.radius = 5 + (n.posts / maxPosts) * 15; });
@@ -114,7 +131,17 @@ export function SwarmGraph({ profiles, posts, width = 800, height = 700 }: Props
       .attr('fill', (d) => typeColor(d.type))
       .attr('stroke', '#fff')
       .attr('stroke-width', 1)
-      .attr('cursor', 'pointer');
+      .attr('cursor', 'pointer')
+      .on('click', (_event, d: any) => {
+        setSelected({
+          name: d.name,
+          type: d.type,
+          stance: d.stance,
+          summary: d.summary,
+          posts: d.posts,
+          recentPosts: d.recentPosts || [],
+        });
+      });
 
     const labels = g.append('g').selectAll('text').data(nodes).join('text')
       .text((d) => d.name.length > 14 ? d.name.slice(0, 12) + '...' : d.name)
@@ -147,6 +174,28 @@ export function SwarmGraph({ profiles, posts, width = 800, height = 700 }: Props
         preserveAspectRatio="xMidYMid meet"
         className="w-full h-full"
       />
+      {selected && (
+        <div className="absolute bottom-4 left-4 right-4 max-w-sm rounded-lg border border-border bg-background p-4 shadow-lg">
+          <div className="flex items-start justify-between">
+            <div>
+              <h4 className="font-medium text-sm">{selected.name}</h4>
+              <p className="text-xs text-muted-foreground">{selected.type} · {selected.posts} posts · Stance: {selected.stance}</p>
+            </div>
+            <button onClick={() => setSelected(null)} className="text-muted-foreground hover:text-foreground text-xs ml-2">✕</button>
+          </div>
+          {selected.summary && (
+            <p className="text-xs text-muted-foreground mt-2 leading-relaxed">{selected.summary}</p>
+          )}
+          {selected.recentPosts.length > 0 && (
+            <div className="mt-2 space-y-1">
+              <p className="text-xs font-medium">Recent posts:</p>
+              {selected.recentPosts.map((p, i) => (
+                <p key={i} className="text-xs text-muted-foreground leading-relaxed border-l-2 border-border pl-2">{p}</p>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

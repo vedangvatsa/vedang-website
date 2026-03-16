@@ -91,22 +91,15 @@ export default function GlossaryTermPage({ params }: PageProps) {
         { name: term.term, url: `https://veda.ng/glossary/${term.slug}` },
       ]} />
 
-      <section className="text-center pt-12 pb-8 border-b border-border/30">
-        <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-          <Link 
-            href="/glossary" 
-            className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-6"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Glossary
-          </Link>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
-            {term.term}
-          </h1>
-        </div>
-      </section>
+      <div className="container mx-auto max-w-3xl px-4 md:px-6 py-12">
+        <Link href="/glossary" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          &larr; Glossary
+        </Link>
+        <h1 className="mt-4 text-4xl font-semibold tracking-tight">
+          {term.term}
+        </h1>
 
-      <article className="container mx-auto px-4 md:px-6 max-w-3xl py-16">
+        <article className="mt-8">
         <div className="space-y-6 mb-12">
           {term.definition.split('\n\n').filter(Boolean).map((paragraph, i) => (
             <p key={i} className="text-lg text-foreground leading-relaxed">
@@ -123,7 +116,7 @@ export default function GlossaryTermPage({ params }: PageProps) {
                 <Link 
                   key={relatedTerm!.slug} 
                   href={`/glossary/${relatedTerm!.slug}`}
-                  className="inline-flex px-3 py-2 text-sm font-medium border border-border/50 rounded-md hover:border-primary hover:text-primary transition-colors"
+                  className="inline-flex px-3 py-2 text-sm font-medium border border-border rounded-md hover:border-foreground hover:text-foreground transition-colors"
                 >
                   {relatedTerm!.term}
                 </Link>
@@ -134,6 +127,7 @@ export default function GlossaryTermPage({ params }: PageProps) {
 
         <RelatedEssaysForTerm termSlug={params.slug} />
       </article>
+      </div>
     </PageLayout>
   );
 }
