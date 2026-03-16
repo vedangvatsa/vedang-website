@@ -67,7 +67,7 @@ export default function SwarmPredictionPage() {
             </p>
             <Link
               href="/swarm-prediction/wiki"
-              className="text-sm text-muted-foreground hover:text-primary transition-colors underline underline-offset-4"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4"
             >
               How it works
             </Link>
@@ -139,8 +139,8 @@ export default function SwarmPredictionPage() {
                         onClick={() => setDepth(d.value)}
                         className={`rounded-md border px-3 py-2 text-left text-sm transition-colors ${
                           depth === d.value
-                            ? 'border-primary bg-primary/10 text-primary'
-                            : 'border-border hover:border-primary/50'
+                            ? 'border-foreground bg-foreground/5 text-foreground'
+                            : 'border-border hover:border-foreground/50'
                         }`}
                       >
                         <span className="font-medium">{d.label}</span>
@@ -172,7 +172,7 @@ export default function SwarmPredictionPage() {
             <button
               type="submit"
               disabled={loading || !goal.trim() || !apiKey.trim()}
-              className="w-full rounded-md bg-primary text-primary-foreground py-2.5 text-sm font-medium hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full rounded-md bg-foreground text-background py-2.5 text-sm font-medium hover:bg-foreground/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Starting...' : 'Run prediction'}
             </button>

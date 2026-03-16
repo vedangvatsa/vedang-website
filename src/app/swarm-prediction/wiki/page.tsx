@@ -82,7 +82,7 @@ export default function WikiPage() {
             <div className="space-y-3 mt-4">
               {pipelineSteps.map((step) => (
                 <div key={step.num} className="flex items-start gap-4 rounded-lg border border-border p-4">
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-foreground text-background text-xs font-bold">
                     {step.num}
                   </span>
                   <div>
