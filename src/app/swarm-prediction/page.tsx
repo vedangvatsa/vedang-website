@@ -65,12 +65,6 @@ export default function SwarmPredictionPage() {
             <p className="text-muted-foreground text-lg">
               Multi-agent AI debate to forecast outcomes from any data
             </p>
-            <Link
-              href="/swarm-prediction/wiki"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4"
-            >
-              How it works
-            </Link>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -176,6 +170,14 @@ export default function SwarmPredictionPage() {
             >
               {loading ? 'Starting...' : 'Run prediction'}
             </button>
+            <div className="text-center">
+              <Link
+                href="/swarm-prediction/wiki"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4"
+              >
+                How it works
+              </Link>
+            </div>
           </form>
         </div>
       </main>
