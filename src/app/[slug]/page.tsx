@@ -15,7 +15,7 @@ import { RelatedGlossaryTerms } from '@/lib/cross-links';
 import { glossaryTerms } from '@/lib/glossary';
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 const essaysDirectory = path.join(process.cwd(), 'src', 'content', 'essays');
@@ -91,14 +91,15 @@ function getEssay(slug: string) {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const essay = getEssay(params.slug);
+  const { slug } = await params;
+  const essay = getEssay(slug);
 
   if (!essay) {
     notFound();
   }
 
   const siteUrl = 'https://veda.ng';
-  const essayUrl = `${siteUrl}/${params.slug}`;
+  const essayUrl = `${siteUrl}/${slug}`;
   const imageUrl = `${siteUrl}/images/icon.png`;
 
   const publishedTime = essay.frontmatter.date ? new Date(essay.frontmatter.date).toISOString() : new Date().toISOString();
@@ -107,7 +108,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: essay.frontmatter.title,
     description: essay.frontmatter.summary,
     alternates: {
-      canonical: `/${params.slug}`,
+      canonical: `/${slug}`,
     },
     openGraph: {
       title: essay.frontmatter.title,
@@ -133,8 +134,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function EssayPage({ params }: { params: { slug: string } }) {
-  const essay = getEssay(params.slug);
+export default async function EssayPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const essay = getEssay(slug);
 
   if (!essay) {
     notFound();
@@ -168,7 +170,7 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://veda.ng/${params.slug}`,
+      '@id': `https://veda.ng/${slug}`,
     },
     datePublished: datePublished,
     dateModified: dateModified,
@@ -182,7 +184,7 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://veda.ng' },
       { '@type': 'ListItem', position: 2, name: 'Writings', item: 'https://veda.ng/writings' },
-      { '@type': 'ListItem', position: 3, name: essay.frontmatter.title, item: `https://veda.ng/${params.slug}` },
+      { '@type': 'ListItem', position: 3, name: essay.frontmatter.title, item: `https://veda.ng/${slug}` },
     ],
   };
 
@@ -194,7 +196,7 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
       />
       <BreadcrumbSchema items={[
         { name: "Writings", url: "https://veda.ng/writings" },
-        { name: essay.frontmatter.title, url: `https://veda.ng/${params.slug}` },
+        { name: essay.frontmatter.title, url: `https://veda.ng/${slug}` },
       ]} />
 
       <div className="py-8">
@@ -210,11 +212,11 @@ export default function EssayPage({ params }: { params: { slug: string } }) {
 
         <div className="mx-auto max-w-4xl px-4 md:px-6 mt-12">
             <RelatedGlossaryTerms
-              essaySlug={params.slug}
+              essaySlug={slug}
               terms={glossaryTerms.map(t => ({ slug: t.slug, term: t.term }))}
             />
             <Separator className="my-8" />
-            <RelatedEssays currentSlug={params.slug} />
+            <RelatedEssays currentSlug={slug} />
         </div>
       </div>
     </PageLayout>

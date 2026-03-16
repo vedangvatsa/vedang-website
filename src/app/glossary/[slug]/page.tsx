@@ -8,9 +8,9 @@ import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 import { RelatedEssaysForTerm } from '@/lib/cross-links';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -20,7 +20,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const term = getTermBySlug(params.slug);
+  const { slug } = await params;
+  const term = getTermBySlug(slug);
   
   if (!term) {
     return { title: 'Term Not Found' };
@@ -45,7 +46,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${titleName} | Glossary`,
     description: truncatedDescription,
-    alternates: { canonical: `/glossary/${term.slug}` },
+    alternates: { canonical: `/glossary/${slug}` },
     openGraph: {
       title: `${term.term} | Glossary`,
       description: truncatedDescription,
@@ -60,8 +61,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function GlossaryTermPage({ params }: PageProps) {
-  const term = getTermBySlug(params.slug);
+export default async function GlossaryTermPage({ params }: PageProps) {
+  const { slug } = await params;
+  const term = getTermBySlug(slug);
 
   if (!term) {
     notFound();
@@ -132,7 +134,7 @@ export default function GlossaryTermPage({ params }: PageProps) {
           </div>
         )}
 
-        <RelatedEssaysForTerm termSlug={params.slug} />
+        <RelatedEssaysForTerm termSlug={slug} />
       </article>
     </PageLayout>
   );
