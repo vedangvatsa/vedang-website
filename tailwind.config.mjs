@@ -59,6 +59,7 @@ const config = {
       }),
       fontFamily: {
         sans: [
+          'Inter',
           'var(--font-sans)',
           '-apple-system',
           'BlinkMacSystemFont',
@@ -74,6 +75,9 @@ const config = {
           '"Noto Color Emoji"',
         ],
         code: ['monospace'],
+      },
+      letterSpacing: {
+        tighter: '-0.03em',
       },
       fontSize: {
         '4xl': ['2.25rem', { lineHeight: '2.5rem' }],

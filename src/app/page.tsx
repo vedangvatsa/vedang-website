@@ -64,7 +64,7 @@ export default function Home() {
 
       <section id="learn" className="py-12 bg-secondary/30">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="mb-8 text-center text-2xl md:text-3xl font-semibold tracking-tight">Courses & Resources</h2>
+          <h2 className="mb-8 text-center text-2xl md:text-3xl font-semibold tracking-tight">Resources</h2>
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             <Link href="/web3-101" className="group">
               <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-6 transition-colors duration-200 hover:border-primary/50">

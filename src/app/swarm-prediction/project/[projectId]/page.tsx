@@ -117,9 +117,9 @@ export default function ProjectPage() {
       <div className="flex min-h-screen flex-col bg-background text-foreground">
         <Header />
         <main className="flex-grow flex items-center justify-center px-4">
-          <div className="w-full max-w-lg space-y-6">
+          <div className="w-full max-w-lg space-y-6 text-center">
             <h2 className="text-2xl font-semibold tracking-tight">Running prediction</h2>
-            <div className="rounded-lg border border-border p-5 space-y-3">
+            <div className="rounded-lg border border-border p-5 space-y-3 text-left">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
@@ -132,7 +132,7 @@ export default function ProjectPage() {
               </div>
               <p className="text-sm text-muted-foreground min-h-[1.4em] transition-opacity">{activeHint}</p>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2 text-left">
               {phases.map((step) => (
                 <div key={step.key} className="flex items-center gap-3">
                   <span className={`text-sm ${phaseIndex(step.key) <= phaseIndex(status.phase) ? 'text-foreground' : 'text-muted-foreground'}`}>
@@ -150,15 +150,36 @@ export default function ProjectPage() {
     );
   }
 
-  // Failed
+  // Failed - parse error message
   if (status.failed) {
+    let errorTitle = 'Something went wrong';
+    let errorDesc = status.message || 'An unexpected error occurred.';
+    const msg = status.message || '';
+
+    if (msg.includes('authentication_error') || msg.includes('invalid') && msg.includes('api-key') || msg.includes('401') || msg.includes('Unauthorized')) {
+      errorTitle = 'Invalid API key';
+      errorDesc = 'The API key you provided was rejected by the LLM provider. Please double-check your key and try again.';
+    } else if (msg.includes('rate_limit') || msg.includes('429') || msg.includes('Too Many Requests')) {
+      errorTitle = 'Rate limit exceeded';
+      errorDesc = 'Too many requests to the LLM provider. Wait a minute and try again, or switch to a different provider.';
+    } else if (msg.includes('insufficient_quota') || msg.includes('billing')) {
+      errorTitle = 'Insufficient quota';
+      errorDesc = 'Your API account has run out of credits. Add billing to your provider account and try again.';
+    } else if (msg.includes('NetworkError') || msg.includes('Failed to fetch') || msg.includes('ECONNREFUSED')) {
+      errorTitle = 'Network error';
+      errorDesc = 'Could not reach the LLM provider. Check your internet connection and try again.';
+    } else if (msg.includes('model') && msg.includes('not found')) {
+      errorTitle = 'Model not available';
+      errorDesc = 'The selected LLM model is not available for your API key. Try a different provider.';
+    }
+
     return (
       <div className="flex min-h-screen flex-col bg-background text-foreground">
         <Header />
         <main className="flex-grow flex items-center justify-center px-4">
-          <div className="text-center space-y-4">
-            <h2 className="text-2xl font-semibold">Something went wrong</h2>
-            <p className="text-muted-foreground">{status.message}</p>
+          <div className="text-center space-y-4 max-w-md">
+            <h2 className="text-2xl font-semibold">{errorTitle}</h2>
+            <p className="text-muted-foreground text-sm leading-relaxed">{errorDesc}</p>
             <button onClick={() => router.push('/swarm-prediction')} className="rounded-md bg-primary text-primary-foreground px-4 py-2 text-sm">
               Start over
             </button>
