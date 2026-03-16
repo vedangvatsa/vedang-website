@@ -10,6 +10,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "build:worker": "opennextjs-cloudflare build",
     "x:authorize": "npx tsx scripts/x-authorize.ts",
     "x:post-essays": "npx tsx scripts/x-auto-post.ts",
     "indexnow": "bash scripts/submit-indexnow.sh"
