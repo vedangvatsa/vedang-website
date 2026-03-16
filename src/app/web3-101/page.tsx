@@ -102,7 +102,7 @@ export default function Web3CoursePage() {
 
         <div className="container mx-auto px-4 md:px-6 max-w-5xl py-16 space-y-12">
             
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -151,7 +151,7 @@ export default function Web3CoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -193,7 +193,7 @@ export default function Web3CoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -233,7 +233,7 @@ export default function Web3CoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -296,7 +296,7 @@ export default function Web3CoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                     <div className="flex items-center gap-4">
                         <div>
@@ -357,7 +357,7 @@ export default function Web3CoursePage() {
                 </CardContent>
             </Card>
 
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
                      <div className="flex items-center gap-4">
                         <div>
