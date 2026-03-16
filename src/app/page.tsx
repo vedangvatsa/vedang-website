@@ -56,7 +56,7 @@ export default function Home() {
         </section>
 
         <section className="mt-16">
-          <h2 className="text-2xl font-semibold tracking-tight border-b border-border pb-2">Courses</h2>
+          <h2 className="text-2xl font-semibold tracking-tight border-b border-border pb-2">Resources</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
             {courses.map((c) => (
               <Link key={c.href} href={c.href} className="group rounded-lg border border-border p-4 transition-colors hover:border-primary/50">
