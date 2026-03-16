@@ -84,7 +84,7 @@ export default function SwarmPredictionPage() {
 
             <div>
               <label className="block text-sm font-medium mb-1.5">
-                Source material (optional)
+                Source material
               </label>
               <textarea
                 value={sourceText}
