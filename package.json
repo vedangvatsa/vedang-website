@@ -80,7 +80,8 @@
     "typescript": "^5"
   },
   "overrides": {
-    "glob": "^11.0.0",
-    "undici": "^7.24.0"
+    "glob": "^13.0.0",
+    "undici": "^7.23.0",
+    "formdata-node": "^6.0.3"
   }
 }
