@@ -987,7 +987,7 @@ export default function LinkedInTranslatorPage() {
 
             {/* Examples */}
             <div className="flex flex-wrap justify-center gap-1.5">
-              {EXAMPLES.slice(0, 8).map((example, i) => (
+              {EXAMPLES.map((example, i) => (
                 <button
                   key={i}
                   onClick={() => handleExample(example)}
