@@ -34,13 +34,58 @@ const SYSTEM_PROMPT = [
   'NEVER include emojis. Write like a real LinkedIn power user who takes themselves too seriously.',
 ].join('\n');
 
+// --- Rate limiter: max 10 requests per IP per 60 seconds ---
+const WINDOW_MS = 60_000;
+const MAX_REQUESTS = 10;
+const ipHits = new Map<string, { count: number; resetAt: number }>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = ipHits.get(ip);
+
+  if (!entry || now > entry.resetAt) {
+    ipHits.set(ip, { count: 1, resetAt: now + WINDOW_MS });
+    return false;
+  }
+
+  entry.count++;
+  if (entry.count > MAX_REQUESTS) return true;
+  return false;
+}
+
+// Clean up stale entries every 5 minutes
+setInterval(() => {
+  const now = Date.now();
+  for (const [ip, entry] of ipHits) {
+    if (now > entry.resetAt) ipHits.delete(ip);
+  }
+}, 5 * 60_000);
+
+// Max input length (chars)
+const MAX_INPUT_LENGTH = 500;
+
 export async function POST(req: NextRequest) {
   try {
+    // Rate limit by IP
+    const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+      || req.headers.get('x-real-ip')
+      || 'unknown';
+
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please wait a minute.' },
+        { status: 429 }
+      );
+    }
+
     const { text } = await req.json();
 
     if (!text?.trim()) {
       return NextResponse.json({ error: 'No input text' }, { status: 400 });
     }
+
+    // Cap input length to limit token cost
+    const trimmedText = text.trim().slice(0, MAX_INPUT_LENGTH);
 
     const apiKey = process.env.ANTHROPIC_API_KEY;
     if (!apiKey) {
@@ -65,7 +110,7 @@ export async function POST(req: NextRequest) {
             cache_control: { type: 'ephemeral' },
           },
         ],
-        messages: [{ role: 'user', content: text.trim() }],
+        messages: [{ role: 'user', content: trimmedText }],
       }),
     });
 
