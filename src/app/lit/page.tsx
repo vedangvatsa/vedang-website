@@ -990,19 +990,19 @@ export default function LinkedInTranslatorPage() {
                 )}
               </Button>
             </div>
+          </div>
 
-            {/* Examples */}
-            <div className="flex flex-wrap justify-center gap-1.5">
-              {EXAMPLES.map((example, i) => (
-                <button
-                  key={i}
-                  onClick={() => handleExample(example)}
-                  className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-secondary/50 transition-colors"
-                >
-                  {example}
-                </button>
-              ))}
-            </div>
+          {/* Examples - full width, limited to ~3 rows */}
+          <div className="flex flex-wrap justify-center gap-1 max-h-[5.5rem] overflow-hidden">
+            {EXAMPLES.map((example, i) => (
+              <button
+                key={i}
+                onClick={() => handleExample(example)}
+                className="rounded-full border border-border px-2.5 py-0.5 text-xs text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-secondary/50 transition-colors"
+              >
+                {example}
+              </button>
+            ))}
           </div>
         </div>
       </section>
