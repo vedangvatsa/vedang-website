@@ -908,7 +908,9 @@ export default function LinkedInTranslator() {
       'Someone built an English to LinkedIn Translator and honestly it is the funniest thing I have seen all week',
     ];
     const hook = hooks[Math.floor(Math.random() * hooks.length)];
-    const text = hook + '\n\n' + getShareUrl();
+    let url = getShareUrl();
+    if (input.trim()) url += `?t=${encodeURIComponent(input.trim())}`;
+    const text = hook + '\n\n' + url;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
   }
 
