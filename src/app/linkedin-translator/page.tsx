@@ -558,17 +558,31 @@ export default function LinkedInTranslatorPage() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
 
-  // Read shareable URL params on mount
+  // Read shareable URL params on mount and auto-translate
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const t = params.get('t');
-    const o = params.get('o');
-    try {
-      if (t) setInput(decodeURIComponent(atob(t)));
-      if (o) setOutput(decodeURIComponent(atob(o)));
-    } catch {
-      // Invalid base64, ignore
+    if (t) {
+      setInput(t);
+      // Auto-translate the shared input
+      (async () => {
+        setIsTranslating(true);
+        try {
+          const resp = await fetch('/api/llm/linkedin', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ text: t.trim() }),
+          });
+          if (resp.ok) {
+            const data = await resp.json();
+            if (data.text) { setOutput(data.text); setIsTranslating(false); return; }
+          }
+        } catch { /* fallback */ }
+        setOutput(translateToLinkedIn(t));
+        setIsTranslating(false);
+      })();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function handleTranslate() {
@@ -761,11 +775,8 @@ export default function LinkedInTranslatorPage() {
 
   function getShareUrl(): string {
     const base = 'https://veda.ng/linkedin-translator';
-    if (!input && !output) return base;
-    const params = new URLSearchParams();
-    if (input) params.set('t', btoa(encodeURIComponent(input)));
-    if (output) params.set('o', btoa(encodeURIComponent(output)));
-    return `${base}?${params.toString()}`;
+    if (!input) return base;
+    return `${base}?t=${encodeURIComponent(input)}`;
   }
 
   function getShareText(): string {
