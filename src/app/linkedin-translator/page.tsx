@@ -605,9 +605,6 @@ export default function LinkedInTranslatorPage() {
               <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
                 English to LinkedIn Translator
               </h1>
-              <p className="text-muted-foreground text-base md:text-lg">
-                Type something honest and watch it become a post that gets 47 comments saying &ldquo;So inspiring!&rdquo;
-              </p>
             </div>
 
             {/* Translator — side-by-side */}
