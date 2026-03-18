@@ -1018,9 +1018,9 @@ export default function LinkedInTranslatorPage() {
   return (
     <>
     <PageLayout>
-      <section aria-label="LinkedIn Translator Tool" className="py-6 md:py-10">
+      <section aria-label="LinkedIn Translator Tool" className="py-4 md:py-6">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="mx-auto max-w-5xl space-y-5">
+          <div className="mx-auto max-w-5xl space-y-3">
             {/* Title */}
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-center">
               {direction === 'en-to-li' ? 'English to LinkedIn Translator' : 'LinkedIn to English Translator'}
@@ -1048,7 +1048,7 @@ export default function LinkedInTranslatorPage() {
               </div>
 
               {/* Panels */}
-              <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border min-h-[50vh]">
+              <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border min-h-[35vh] md:min-h-[40vh]">
                 {/* Input panel */}
                 <div className="relative flex flex-col">
                   <textarea
@@ -1146,8 +1146,8 @@ export default function LinkedInTranslatorPage() {
           </div>
 
           {/* Examples - full container width */}
-          <div className="flex flex-wrap justify-center content-start gap-1.5 mt-4 min-h-[150px]">
-            {(direction === 'en-to-li' ? EXAMPLES : LI_EXAMPLES).slice(0, 14).map((example, i) => (
+          <div className="flex flex-wrap justify-center content-start gap-1.5 mt-3 min-h-[120px]">
+            {(direction === 'en-to-li' ? EXAMPLES : LI_EXAMPLES).slice(0, 12).map((example, i) => (
               <button
                 key={i}
                 onClick={() => handleExample(example)}
