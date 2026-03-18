@@ -641,12 +641,16 @@ export default function LinkedInTranslatorPage() {
 
   function generateShareImage(): Promise<Blob | null> {
     return new Promise((resolve) => {
+      const DPR = 2;
       const W = 1200, H = 630;
       const canvas = document.createElement('canvas');
-      canvas.width = W;
-      canvas.height = H;
+      canvas.width = W * DPR;
+      canvas.height = H * DPR;
+      canvas.style.width = W + 'px';
+      canvas.style.height = H + 'px';
       const ctx = canvas.getContext('2d');
       if (!ctx) return resolve(null);
+      ctx.scale(DPR, DPR);
 
       // Background
       ctx.fillStyle = '#ffffff';
@@ -666,8 +670,14 @@ export default function LinkedInTranslatorPage() {
       ctx.roundRect(cardX, cardY, cardW, cardH, 12);
       ctx.stroke();
 
-      // Divider
+      // Right panel light background
       const midX = W / 2;
+      ctx.fillStyle = '#f8f8f8';
+      ctx.beginPath();
+      ctx.roundRect(midX + 1, cardY + 1, cardW / 2 - 1, cardH - 2, [0, 11, 11, 0]);
+      ctx.fill();
+
+      // Divider
       ctx.strokeStyle = '#e0e0e0';
       ctx.beginPath();
       ctx.moveTo(midX, cardY);
@@ -729,34 +739,25 @@ export default function LinkedInTranslatorPage() {
       ctx.textAlign = 'center';
       ctx.fillText('→', midX, cardY + cardH / 2 + 6);
 
-      // Right panel light background
-      ctx.fillStyle = '#f8f8f8';
-      ctx.beginPath();
-      ctx.roundRect(midX + 1, cardY + 1, cardW / 2 - 1, cardH - 2, [0, 11, 11, 0]);
-      ctx.fill();
-
-      // Re-draw output text on top of background
-      ctx.font = '20px Inter, system-ui, sans-serif';
-      ctx.fillStyle = output ? '#222222' : '#999999';
-      ctx.textAlign = 'left';
-      wrapText(outputText, midX + 24, cardY + 72, W - midX - cardX - 48, 28);
-
-      // Re-draw right label on top
-      ctx.font = '600 14px Inter, system-ui, sans-serif';
-      ctx.fillStyle = '#3b82f6';
-      ctx.fillText('LinkedIn Language', midX + 24, cardY + 32);
-      ctx.strokeStyle = '#3b82f6';
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-      ctx.moveTo(midX + 24, cardY + 38);
-      ctx.lineTo(midX + 160, cardY + 38);
-      ctx.stroke();
-
-      // Branding
-      ctx.fillStyle = '#555555';
-      ctx.font = '600 20px Inter, system-ui, sans-serif';
+      // Branding - styled as a link
       ctx.textAlign = 'center';
-      ctx.fillText('generated on veda.ng', W / 2, H - 40);
+      ctx.font = '500 18px Inter, system-ui, sans-serif';
+      ctx.fillStyle = '#888888';
+      ctx.fillText('generated on', W / 2 - 46, H - 40);
+
+      ctx.font = '600 20px Inter, system-ui, sans-serif';
+      ctx.fillStyle = '#3b82f6';
+      const linkText = 'veda.ng';
+      const linkX = W / 2 + 30;
+      ctx.fillText(linkText, linkX, H - 40);
+      // Underline the link
+      const linkW = ctx.measureText(linkText).width;
+      ctx.strokeStyle = '#3b82f6';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(linkX - linkW / 2, H - 37);
+      ctx.lineTo(linkX + linkW / 2, H - 37);
+      ctx.stroke();
 
       canvas.toBlob(resolve, 'image/png');
     });
