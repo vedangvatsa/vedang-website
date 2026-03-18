@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { PageLayout } from '@/components/page-layout';
 import { Button } from '@/components/ui/button';
-import { Copy, Check, ArrowRight, RotateCcw } from 'lucide-react';
+import { Copy, Check, ArrowRight, RotateCcw, Share2 } from 'lucide-react';
 import { composeNarrative } from './templates';
 
 // ── LinkedIn transformation engine ─────────────────────────────────────────────
@@ -540,6 +540,7 @@ export default function LinkedInTranslatorPage() {
   const [copied, setCopied] = useState(false);
   const [isTranslating, setIsTranslating] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   async function handleTranslate() {
     if (!input.trim()) return;
@@ -595,138 +596,212 @@ export default function LinkedInTranslatorPage() {
     }
   }
 
+  async function captureScreenshot(): Promise<Blob | null> {
+    if (!cardRef.current) return null;
+    const html2canvas = (await import('html2canvas')).default;
+    const canvas = await html2canvas(cardRef.current, {
+      backgroundColor: '#0a0a0a',
+      scale: 2,
+    });
+    return new Promise((resolve) => canvas.toBlob(resolve, 'image/png'));
+  }
+
+  async function handleShareX() {
+    const shareText = 'This English to LinkedIn Translator is hilarious. Try it yourself:';
+    const url = 'https://veda.ng/linkedin-translator';
+    const blob = await captureScreenshot();
+
+    if (blob && navigator.canShare?.({ files: [new File([blob], 'translation.png', { type: 'image/png' })] })) {
+      const file = new File([blob], 'translation.png', { type: 'image/png' });
+      await navigator.share({ text: `${shareText} ${url}`, files: [file] });
+    } else {
+      // Fallback: download image + open X compose
+      if (blob) {
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'linkedin-translation.png';
+        a.click();
+        URL.revokeObjectURL(a.href);
+      }
+      window.open(`https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}`, '_blank');
+    }
+  }
+
+  async function handleShareLinkedIn() {
+    const url = 'https://veda.ng/linkedin-translator';
+    const blob = await captureScreenshot();
+
+    if (blob && navigator.canShare?.({ files: [new File([blob], 'translation.png', { type: 'image/png' })] })) {
+      const file = new File([blob], 'translation.png', { type: 'image/png' });
+      await navigator.share({ text: `This English to LinkedIn Translator is too good. ${url}`, files: [file] });
+    } else {
+      // Fallback: download image + open LinkedIn share
+      if (blob) {
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'linkedin-translation.png';
+        a.click();
+        URL.revokeObjectURL(a.href);
+      }
+      window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+    }
+  }
+
   return (
     <PageLayout>
-      <section className="py-6 md:py-10">
+      <section className="py-4 md:py-6 min-h-[calc(100vh-4rem)] flex flex-col justify-center">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="mx-auto max-w-6xl space-y-6">
+          <div className="mx-auto max-w-5xl space-y-4">
             {/* Title */}
-            <div className="text-center space-y-2">
-              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
-                English to LinkedIn Translator
-              </h1>
+            <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-center">
+              English to LinkedIn Translator
+            </h1>
+
+            {/* Translator Card - Google Translate style */}
+            <div ref={cardRef} className="rounded-xl border border-border bg-card shadow-sm overflow-hidden">
+              {/* Language tabs header */}
+              <div className="grid grid-cols-[1fr_auto_1fr] items-center border-b border-border">
+                <div className="px-5 py-2.5">
+                  <span className="text-sm font-semibold text-primary border-b-2 border-primary pb-2.5 px-1">Human Language</span>
+                </div>
+                <div className="flex items-center justify-center px-2">
+                  <div className="rounded-full border border-border p-1.5 bg-background">
+                    <ArrowRight className="h-3.5 w-3.5 text-muted-foreground" />
+                  </div>
+                </div>
+                <div className="px-5 py-2.5">
+                  <span className="text-sm font-semibold text-primary border-b-2 border-primary pb-2.5 px-1">LinkedIn Language</span>
+                </div>
+              </div>
+
+              {/* Panels */}
+              <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
+                {/* Input panel */}
+                <div className="relative flex flex-col">
+                  <textarea
+                    ref={textareaRef}
+                    id="translator-input"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value.slice(0, 2000))}
+                    onKeyDown={handleKeyDown}
+                    placeholder='e.g. "I got fired last week"'
+                    className="flex-1 w-full bg-transparent px-5 py-3 text-sm placeholder:text-muted-foreground/50 focus:outline-none resize-none min-h-[260px]"
+                  />
+                  <div className="flex items-center justify-between px-5 py-2 border-t border-border/50">
+                    <button
+                      id="reset-btn"
+                      type="button"
+                      onClick={handleReset}
+                      disabled={!input && !output}
+                      className="text-muted-foreground hover:text-foreground transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                      title="Clear"
+                    >
+                      <RotateCcw className="h-3.5 w-3.5" />
+                    </button>
+                    <span className="text-xs text-muted-foreground">{input.length} / 2000</span>
+                  </div>
+                </div>
+
+                {/* Output panel */}
+                <div className="relative flex flex-col bg-secondary/20">
+                  <div className="flex-1 px-5 py-3 text-sm leading-relaxed whitespace-pre-wrap min-h-[260px]">
+                    {isTranslating ? (
+                      <span className="text-muted-foreground animate-pulse">Generating LinkedIn gold...</span>
+                    ) : output ? (
+                      output
+                    ) : (
+                      <span className="text-muted-foreground/40">Translation will appear here...</span>
+                    )}
+                  </div>
+                  <div className="flex items-center justify-between px-5 py-2 border-t border-border/50">
+                    <div className="flex items-center gap-3">
+                      {output && (
+                        <>
+                          <button
+                            id="copy-btn"
+                            type="button"
+                            onClick={handleCopy}
+                            className="text-muted-foreground hover:text-foreground transition-colors"
+                            title="Copy"
+                          >
+                            {copied ? <Check className="h-3.5 w-3.5 text-green-500" /> : <Copy className="h-3.5 w-3.5" />}
+                          </button>
+                          <button
+                            type="button"
+                            onClick={handleShareX}
+                            className="text-muted-foreground hover:text-foreground transition-colors"
+                            title="Share on X"
+                          >
+                            <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                          </button>
+                          <button
+                            type="button"
+                            onClick={handleShareLinkedIn}
+                            className="text-muted-foreground hover:text-foreground transition-colors"
+                            title="Share on LinkedIn"
+                          >
+                            <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                          </button>
+                        </>
+                      )}
+                    </div>
+                    {copied && <span className="text-xs text-green-500">Copied!</span>}
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Translator — side-by-side */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {/* Input panel */}
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <label htmlFor="translator-input" className="text-sm font-medium">
-                    Human Language
-                  </label>
-                  <span className="text-xs text-muted-foreground">{input.length} / 2000</span>
-                </div>
-                <textarea
-                  ref={textareaRef}
-                  id="translator-input"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value.slice(0, 2000))}
-                  onKeyDown={handleKeyDown}
-                  placeholder='e.g. "I got fired last week"'
-                  rows={8}
-                  className="w-full rounded-md border border-border bg-background px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none min-h-[200px]"
-                />
-                <div className="flex items-center justify-between pt-2">
-                  <button
-                    id="reset-btn"
-                    type="button"
-                    onClick={handleReset}
-                    disabled={!input && !output}
-                    className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-                  >
-                    <RotateCcw className="h-3.5 w-3.5" />
-                    Clear
-                  </button>
-                  <Button
-                    id="translate-btn"
-                    onClick={handleTranslate}
-                    disabled={!input.trim() || isTranslating}
-                    className="px-8"
-                  >
-                    {isTranslating ? (
-                      <>
-                        <div className="h-4 w-4 animate-spin rounded-full border-2 border-primary-foreground/30 border-t-primary-foreground" />
-                        Translating...
-                      </>
-                    ) : (
-                      <>
-                        Translate
-                        <ArrowRight className="h-4 w-4" />
-                      </>
-                    )}
-                  </Button>
-                </div>
-              </div>
-
-              {/* Output panel */}
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <label className="text-sm font-medium">LinkedIn Language</label>
-                  {output && (
-                    <button
-                      id="copy-btn"
-                      type="button"
-                      onClick={handleCopy}
-                      className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      {copied ? (
-                        <><Check className="h-3.5 w-3.5 text-green-500" /> Copied</>
-                      ) : (
-                        <><Copy className="h-3.5 w-3.5" /> Copy</>
-                      )}
-                    </button>
-                  )}
-                </div>
-                <div className="w-full rounded-md border border-border bg-secondary/30 px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap min-h-[200px]">
-                  {isTranslating ? (
-                    <span className="text-muted-foreground animate-pulse">Generating LinkedIn gold...</span>
-                  ) : output ? (
-                    output
-                  ) : (
-                    <span className="text-muted-foreground/50">Translation will appear here...</span>
-                  )}
-                </div>
-              </div>
+            {/* Translate button */}
+            <div className="flex justify-center">
+              <Button
+                id="translate-btn"
+                onClick={handleTranslate}
+                disabled={!input.trim() || isTranslating}
+                className="px-8"
+              >
+                {isTranslating ? (
+                  <>
+                    <div className="h-4 w-4 animate-spin rounded-full border-2 border-primary-foreground/30 border-t-primary-foreground" />
+                    Translating...
+                  </>
+                ) : (
+                  <>
+                    Translate
+                    <ArrowRight className="h-4 w-4" />
+                  </>
+                )}
+              </Button>
             </div>
 
             {/* Examples */}
-            <div className="space-y-3">
-              <p className="text-sm font-medium text-center">Try an example</p>
-              <div className="flex flex-wrap justify-center gap-2">
-                {EXAMPLES.slice(0, 8).map((example, i) => (
+            <div className="space-y-2">
+              <p className="text-xs font-medium text-center text-muted-foreground">Try an example</p>
+              <div className="flex flex-wrap justify-center gap-1.5">
+                {EXAMPLES.slice(0, 6).map((example, i) => (
                   <button
                     key={i}
                     onClick={() => handleExample(example)}
-                    className="rounded-md border border-border px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors"
+                    className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-secondary/50 transition-colors"
                   >
-                    {example.length > 40 ? example.slice(0, 37) + '...' : example}
+                    {example.length > 35 ? example.slice(0, 32) + '...' : example}
                   </button>
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Dictionary */}
-      <section className="py-6 bg-secondary/30">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="mx-auto max-w-6xl space-y-4">
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center">The LinkedIn Dictionary</h2>
-            <div className="grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+            {/* Compact dictionary row */}
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-xs text-muted-foreground pt-1">
               {[
-                { human: '"I got fired"', linkedin: '"Exploring new opportunities"' },
-                { human: '"We failed"', linkedin: '"We ran a bold experiment"' },
-                { human: '"Office"', linkedin: '"Innovation hub"' },
-                { human: '"Coffee"', linkedin: '"Morning fuel"' },
-                { human: '"Homework"', linkedin: '"Deliverable"' },
-                { human: '"I\'m sorry"', linkedin: '"I take full ownership"' },
-              ].map((item, i) => (
-                <div key={i} className="rounded-lg border bg-card p-3 hover:border-primary/50 transition-colors">
-                  <span className="block text-xs text-muted-foreground line-through decoration-destructive/40">{item.human}</span>
-                  <span className="block mt-1 text-sm font-medium">{item.linkedin}</span>
-                </div>
+                ['"I got fired"', '"Exploring new opportunities"'],
+                ['"We failed"', '"We ran a bold experiment"'],
+                ['"Coffee"', '"Morning fuel"'],
+                ['"I\'m sorry"', '"I take full ownership"'],
+              ].map(([human, linkedin], i) => (
+                <span key={i}>
+                  <span className="line-through decoration-destructive/40">{human}</span>
+                  {' → '}
+                  <span className="font-medium text-foreground/70">{linkedin}</span>
+                </span>
               ))}
             </div>
           </div>
