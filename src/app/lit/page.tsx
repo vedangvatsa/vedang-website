@@ -1018,9 +1018,9 @@ export default function LinkedInTranslatorPage() {
   return (
     <>
     <PageLayout>
-      <section aria-label="LinkedIn Translator Tool" className="py-4 md:py-6">
+      <section aria-label="LinkedIn Translator Tool" className="py-2 md:py-4">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="mx-auto max-w-5xl space-y-3">
+          <div className="mx-auto max-w-5xl space-y-4">
             {/* Title */}
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-center">
               {direction === 'en-to-li' ? 'English to LinkedIn Translator' : 'LinkedIn to English Translator'}
@@ -1048,7 +1048,7 @@ export default function LinkedInTranslatorPage() {
               </div>
 
               {/* Panels */}
-              <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border min-h-[35vh] md:min-h-[40vh]">
+              <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border min-h-[40vh] lg:min-h-[50vh]">
                 {/* Input panel */}
                 <div className="relative flex flex-col">
                   <textarea
@@ -1145,13 +1145,13 @@ export default function LinkedInTranslatorPage() {
             </div>
           </div>
 
-          {/* Examples - full container width */}
-          <div className="flex flex-wrap justify-center content-start gap-1.5 mt-3 min-h-[120px]">
-            {(direction === 'en-to-li' ? EXAMPLES : LI_EXAMPLES).slice(0, 12).map((example, i) => (
+          {/* Examples - horizontal scrolling row */}
+          <div className="flex overflow-x-auto gap-2 mt-4 pb-2 w-full snap-x [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            {(direction === 'en-to-li' ? EXAMPLES : LI_EXAMPLES).slice(0, 16).map((example, i) => (
               <button
                 key={i}
                 onClick={() => handleExample(example)}
-                className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-secondary/50 transition-colors text-left"
+                className="shrink-0 snap-center rounded-full border border-border px-4 py-1.5 text-xs text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-secondary/50 transition-colors"
               >
                 {example}
               </button>
