@@ -3,7 +3,7 @@
 import { useState, useRef } from 'react';
 import { PageLayout } from '@/components/page-layout';
 import { Button } from '@/components/ui/button';
-import { Copy, Check, ArrowRight, RotateCcw, Share2, Download, Link } from 'lucide-react';
+import { Copy, Check, ArrowRight, RotateCcw, Download, Link } from 'lucide-react';
 import { composeNarrative } from './templates';
 
 // ── LinkedIn transformation engine ─────────────────────────────────────────────

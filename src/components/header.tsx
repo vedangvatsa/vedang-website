@@ -48,7 +48,7 @@ export function Header() {
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
-                  <Link href="/linkedin-translator">LinkedIn Translator</Link>
+                  <Link href="/lit">LinkedIn Translator</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/swarm-prediction">Swarm Prediction</Link>
