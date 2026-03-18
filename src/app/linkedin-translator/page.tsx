@@ -530,6 +530,21 @@ const EXAMPLES = [
   'I\'m broke and living with my parents.',
   'I got a speeding ticket on the way to work.',
   'Nobody came to my product launch.',
+  'I made coffee this morning.',
+  'I went to the gym today.',
+  'I was stuck in traffic for 2 hours.',
+  'I watched Netflix all weekend.',
+  'I forgot my password again.',
+  'I took a nap during lunch.',
+  'I ate instant noodles for dinner.',
+  'I argued with a stranger online.',
+  'I just turned 30.',
+  'I finally cleaned my room.',
+  'I showed up late and nobody noticed.',
+  'I survived another Monday.',
+  'I changed my LinkedIn profile picture.',
+  'I read a book on the train.',
+  'I said no to overtime.',
 ];
 
 // ── Component ──────────────────────────────────────────────────────────────────
@@ -539,6 +554,7 @@ export default function LinkedInTranslatorPage() {
   const [output, setOutput] = useState('');
   const [copied, setCopied] = useState(false);
   const [isTranslating, setIsTranslating] = useState(false);
+  const [shareToast, setShareToast] = useState('');
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -596,62 +612,192 @@ export default function LinkedInTranslatorPage() {
     }
   }
 
-  async function captureScreenshot(): Promise<Blob | null> {
-    if (!cardRef.current) return null;
-    const html2canvas = (await import('html2canvas')).default;
-    const canvas = await html2canvas(cardRef.current, {
-      backgroundColor: '#0a0a0a',
-      scale: 2,
+  function generateShareImage(): Promise<Blob | null> {
+    return new Promise((resolve) => {
+      const W = 1200, H = 630;
+      const canvas = document.createElement('canvas');
+      canvas.width = W;
+      canvas.height = H;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return resolve(null);
+
+      // Background
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, W, H);
+
+      // Title
+      ctx.fillStyle = '#111111';
+      ctx.font = 'bold 36px Inter, system-ui, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('English to LinkedIn Translator', W / 2, 55);
+
+      // Card area
+      const cardX = 60, cardY = 80, cardW = W - 120, cardH = 420;
+      ctx.strokeStyle = '#e0e0e0';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.roundRect(cardX, cardY, cardW, cardH, 12);
+      ctx.stroke();
+
+      // Divider
+      const midX = W / 2;
+      ctx.strokeStyle = '#e0e0e0';
+      ctx.beginPath();
+      ctx.moveTo(midX, cardY);
+      ctx.lineTo(midX, cardY + cardH);
+      ctx.stroke();
+
+      // Panel labels
+      ctx.font = '600 14px Inter, system-ui, sans-serif';
+      ctx.textAlign = 'left';
+      ctx.fillStyle = '#3b82f6';
+      ctx.fillText('Human Language', cardX + 24, cardY + 32);
+      ctx.fillText('LinkedIn Language', midX + 24, cardY + 32);
+
+      // Label underlines
+      ctx.strokeStyle = '#3b82f6';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(cardX + 24, cardY + 38);
+      ctx.lineTo(cardX + 150, cardY + 38);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(midX + 24, cardY + 38);
+      ctx.lineTo(midX + 160, cardY + 38);
+      ctx.stroke();
+
+      // Word wrap helper
+      function wrapText(text: string, x: number, y: number, maxW: number, lineH: number) {
+        const words = text.split(' ');
+        let line = '';
+        let curY = y;
+        for (const word of words) {
+          const test = line + word + ' ';
+          if (ctx!.measureText(test).width > maxW && line) {
+            ctx!.fillText(line.trim(), x, curY);
+            line = word + ' ';
+            curY += lineH;
+          } else {
+            line = test;
+          }
+        }
+        ctx!.fillText(line.trim(), x, curY);
+      }
+
+      // Input text
+      ctx.font = '20px Inter, system-ui, sans-serif';
+      ctx.fillStyle = '#222222';
+      ctx.textAlign = 'left';
+      const inputText = input || 'Type something honest...';
+      wrapText(inputText, cardX + 24, cardY + 72, midX - cardX - 48, 28);
+
+      // Output text
+      const outputText = output || 'Translation will appear here...';
+      ctx.fillStyle = output ? '#222222' : '#999999';
+      wrapText(outputText, midX + 24, cardY + 72, W - midX - cardX - 48, 28);
+
+      // Arrow icon in middle
+      ctx.fillStyle = '#999999';
+      ctx.font = '20px Inter, system-ui, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('→', midX, cardY + cardH / 2 + 6);
+
+      // Right panel light background
+      ctx.fillStyle = '#f8f8f8';
+      ctx.beginPath();
+      ctx.roundRect(midX + 1, cardY + 1, cardW / 2 - 1, cardH - 2, [0, 11, 11, 0]);
+      ctx.fill();
+
+      // Re-draw output text on top of background
+      ctx.font = '20px Inter, system-ui, sans-serif';
+      ctx.fillStyle = output ? '#222222' : '#999999';
+      ctx.textAlign = 'left';
+      wrapText(outputText, midX + 24, cardY + 72, W - midX - cardX - 48, 28);
+
+      // Re-draw right label on top
+      ctx.font = '600 14px Inter, system-ui, sans-serif';
+      ctx.fillStyle = '#3b82f6';
+      ctx.fillText('LinkedIn Language', midX + 24, cardY + 32);
+      ctx.strokeStyle = '#3b82f6';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(midX + 24, cardY + 38);
+      ctx.lineTo(midX + 160, cardY + 38);
+      ctx.stroke();
+
+      // Branding
+      ctx.fillStyle = '#555555';
+      ctx.font = '600 20px Inter, system-ui, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('generated on veda.ng', W / 2, H - 40);
+
+      canvas.toBlob(resolve, 'image/png');
     });
-    return new Promise((resolve) => canvas.toBlob(resolve, 'image/png'));
+  }
+
+  async function copyImageToClipboard(blob: Blob): Promise<boolean> {
+    try {
+      await navigator.clipboard.write([
+        new ClipboardItem({ 'image/png': blob }),
+      ]);
+      return true;
+    } catch {
+      return false;
+    }
   }
 
   async function handleShareX() {
-    const shareText = 'This English to LinkedIn Translator is hilarious. Try it yourself:';
+    const shareText = `I typed "${input}" into an English to LinkedIn Translator and I can't stop laughing at the result 😂\n\nTry it yourself:`;
     const url = 'https://veda.ng/linkedin-translator';
-    const blob = await captureScreenshot();
+    const blob = await generateShareImage();
 
-    if (blob && navigator.canShare?.({ files: [new File([blob], 'translation.png', { type: 'image/png' })] })) {
-      const file = new File([blob], 'translation.png', { type: 'image/png' });
-      await navigator.share({ text: `${shareText} ${url}`, files: [file] });
-    } else {
-      // Fallback: download image + open X compose
-      if (blob) {
+    if (blob) {
+      const clipboardOk = await copyImageToClipboard(blob);
+      if (clipboardOk) {
+        setShareToast('Screenshot copied! Paste it in your post (Ctrl+V)');
+      } else {
+        // Fallback: download
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
         a.download = 'linkedin-translation.png';
         a.click();
         URL.revokeObjectURL(a.href);
+        setShareToast('Screenshot saved! Attach it to your post');
       }
-      window.open(`https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}`, '_blank');
+      setTimeout(() => setShareToast(''), 4000);
     }
+
+    window.open(`https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}`, '_blank');
   }
 
   async function handleShareLinkedIn() {
     const url = 'https://veda.ng/linkedin-translator';
-    const blob = await captureScreenshot();
+    const blob = await generateShareImage();
 
-    if (blob && navigator.canShare?.({ files: [new File([blob], 'translation.png', { type: 'image/png' })] })) {
-      const file = new File([blob], 'translation.png', { type: 'image/png' });
-      await navigator.share({ text: `This English to LinkedIn Translator is too good. ${url}`, files: [file] });
-    } else {
-      // Fallback: download image + open LinkedIn share
-      if (blob) {
+    if (blob) {
+      const clipboardOk = await copyImageToClipboard(blob);
+      if (clipboardOk) {
+        setShareToast('Screenshot copied! Paste it in your post (Ctrl+V)');
+      } else {
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
         a.download = 'linkedin-translation.png';
         a.click();
         URL.revokeObjectURL(a.href);
+        setShareToast('Screenshot saved! Attach it to your post');
       }
-      window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+      setTimeout(() => setShareToast(''), 4000);
     }
+
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
   }
 
   return (
+    <>
     <PageLayout>
-      <section className="py-4 md:py-6 min-h-[calc(100vh-4rem)] flex flex-col justify-center">
+      <section aria-label="LinkedIn Translator Tool" className="py-4 md:py-5">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="mx-auto max-w-5xl space-y-4">
+          <div className="mx-auto max-w-5xl space-y-3">
             {/* Title */}
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-center">
               English to LinkedIn Translator
@@ -675,7 +821,7 @@ export default function LinkedInTranslatorPage() {
               </div>
 
               {/* Panels */}
-              <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
+              <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border min-h-[50vh]">
                 {/* Input panel */}
                 <div className="relative flex flex-col">
                   <textarea
@@ -685,7 +831,7 @@ export default function LinkedInTranslatorPage() {
                     onChange={(e) => setInput(e.target.value.slice(0, 2000))}
                     onKeyDown={handleKeyDown}
                     placeholder='e.g. "I got fired last week"'
-                    className="flex-1 w-full bg-transparent px-5 py-3 text-sm placeholder:text-muted-foreground/50 focus:outline-none resize-none min-h-[260px]"
+                    className="flex-1 w-full bg-transparent px-5 py-3 text-sm placeholder:text-muted-foreground/50 focus:outline-none resize-none"
                   />
                   <div className="flex items-center justify-between px-5 py-2 border-t border-border/50">
                     <button
@@ -704,7 +850,7 @@ export default function LinkedInTranslatorPage() {
 
                 {/* Output panel */}
                 <div className="relative flex flex-col bg-secondary/20">
-                  <div className="flex-1 px-5 py-3 text-sm leading-relaxed whitespace-pre-wrap min-h-[260px]">
+                  <div className="flex-1 px-5 py-3 text-sm leading-relaxed whitespace-pre-wrap overflow-y-auto">
                     {isTranslating ? (
                       <span className="text-muted-foreground animate-pulse">Generating LinkedIn gold...</span>
                     ) : output ? (
@@ -774,39 +920,53 @@ export default function LinkedInTranslatorPage() {
             </div>
 
             {/* Examples */}
-            <div className="space-y-2">
-              <p className="text-xs font-medium text-center text-muted-foreground">Try an example</p>
-              <div className="flex flex-wrap justify-center gap-1.5">
-                {EXAMPLES.slice(0, 6).map((example, i) => (
-                  <button
-                    key={i}
-                    onClick={() => handleExample(example)}
-                    className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-secondary/50 transition-colors"
-                  >
-                    {example.length > 35 ? example.slice(0, 32) + '...' : example}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Compact dictionary row */}
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-xs text-muted-foreground pt-1">
-              {[
-                ['"I got fired"', '"Exploring new opportunities"'],
-                ['"We failed"', '"We ran a bold experiment"'],
-                ['"Coffee"', '"Morning fuel"'],
-                ['"I\'m sorry"', '"I take full ownership"'],
-              ].map(([human, linkedin], i) => (
-                <span key={i}>
-                  <span className="line-through decoration-destructive/40">{human}</span>
-                  {' → '}
-                  <span className="font-medium text-foreground/70">{linkedin}</span>
-                </span>
+            <div className="flex flex-wrap justify-center gap-1.5">
+              {EXAMPLES.slice(0, 8).map((example, i) => (
+                <button
+                  key={i}
+                  onClick={() => handleExample(example)}
+                  className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-secondary/50 transition-colors"
+                >
+                  {example.length > 35 ? example.slice(0, 32) + '...' : example}
+                </button>
               ))}
             </div>
           </div>
         </div>
       </section>
+
+      {/* SEO content for search engines and AI */}
+      <section aria-label="About this translator" className="py-6 border-t border-border/50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="mx-auto max-w-3xl space-y-3 text-sm text-muted-foreground">
+            <h2 className="text-lg font-semibold text-foreground">What is the English to LinkedIn Translator?</h2>
+            <p>
+              The English to LinkedIn Translator is a free AI-powered tool that converts everyday honest language
+              into the kind of corporate-speak you see on LinkedIn posts. Type any sentence — like "I got fired"
+              or "I'm bored at work" — and watch it transform into an over-the-top LinkedIn post complete with
+              buzzwords, humble brags, and motivational energy.
+            </p>
+            <h2 className="text-lg font-semibold text-foreground">How does it work?</h2>
+            <p>
+              Simply type your honest thought in the left panel and click Translate. The AI will rewrite it in
+              authentic LinkedIn language — preserving your original meaning while adding the corporate polish,
+              emojis, and inspirational tone that defines the platform. You can copy the result, share it on X
+              or LinkedIn with a branded screenshot, or try one of our example phrases.
+            </p>
+          </div>
+        </div>
+      </section>
     </PageLayout>
+
+    {/* Share toast notification */}
+    {shareToast && (
+      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+        <div className="bg-primary text-primary-foreground px-5 py-3 rounded-lg shadow-lg text-sm font-medium flex items-center gap-2">
+          <Check className="h-4 w-4" />
+          {shareToast}
+        </div>
+      </div>
+    )}
+    </>
   );
 }
