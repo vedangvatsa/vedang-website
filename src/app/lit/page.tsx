@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { PageLayout } from '@/components/page-layout';
 import { Button } from '@/components/ui/button';
 import { Copy, Check, ArrowRight, RotateCcw, Share2, Download, Link } from 'lucide-react';
@@ -558,33 +558,6 @@ export default function LinkedInTranslatorPage() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
 
-  // Read shareable URL params on mount and auto-translate
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const t = params.get('t');
-    if (t) {
-      setInput(t);
-      // Auto-translate the shared input
-      (async () => {
-        setIsTranslating(true);
-        try {
-          const resp = await fetch('/api/llm/linkedin', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ text: t.trim() }),
-          });
-          if (resp.ok) {
-            const data = await resp.json();
-            if (data.text) { setOutput(data.text); setIsTranslating(false); return; }
-          }
-        } catch { /* fallback */ }
-        setOutput(translateToLinkedIn(t));
-        setIsTranslating(false);
-      })();
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   async function handleTranslate() {
     if (!input.trim()) return;
     setIsTranslating(true);
@@ -775,9 +748,7 @@ export default function LinkedInTranslatorPage() {
   }
 
   function getShareUrl(): string {
-    const base = 'https://veda.ng/lit';
-    if (!input) return base;
-    return `${base}?t=${encodeURIComponent(input)}`;
+    return 'https://veda.ng/lit';
   }
 
   function getShareText(): string {
