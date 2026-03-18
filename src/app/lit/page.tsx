@@ -869,9 +869,9 @@ export default function LinkedInTranslatorPage() {
   return (
     <>
     <PageLayout>
-      <section aria-label="LinkedIn Translator Tool" className="py-4 md:py-5">
+      <section aria-label="LinkedIn Translator Tool" className="py-6 md:py-10">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="mx-auto max-w-5xl space-y-3">
+          <div className="mx-auto max-w-5xl space-y-5">
             {/* Title */}
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-center">
               English to LinkedIn Translator
@@ -993,7 +993,7 @@ export default function LinkedInTranslatorPage() {
           </div>
 
           {/* Examples - full width, limited to ~3 rows */}
-          <div className="flex flex-wrap justify-center gap-1 max-h-[3rem] overflow-hidden">
+          <div className="flex flex-wrap justify-center gap-1.5 max-h-[3.25rem] overflow-hidden mt-2">
             {EXAMPLES.map((example, i) => (
               <button
                 key={i}
