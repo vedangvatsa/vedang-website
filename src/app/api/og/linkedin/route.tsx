@@ -31,7 +31,7 @@ export async function GET(request: NextRequest) {
           style={{
             display: 'flex',
             width: '100%',
-            border: '1.5px solid #e0e0e0',
+            border: '2px solid #e0e0e0',
             borderRadius: 12,
             overflow: 'hidden',
             flex: 1,
@@ -44,7 +44,7 @@ export async function GET(request: NextRequest) {
               flexDirection: 'column',
               width: '50%',
               padding: '20px 24px',
-              borderRight: '1.5px solid #e0e0e0',
+              borderRight: '2px solid #e0e0e0',
             }}
           >
             <div
@@ -56,7 +56,6 @@ export async function GET(request: NextRequest) {
                 borderBottom: '2px solid #3b82f6',
                 paddingBottom: 8,
                 display: 'flex',
-                width: 'fit-content',
               }}
             >
               Human Language
@@ -93,7 +92,6 @@ export async function GET(request: NextRequest) {
                 borderBottom: '2px solid #3b82f6',
                 paddingBottom: 8,
                 display: 'flex',
-                width: 'fit-content',
               }}
             >
               LinkedIn Language
