@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from 'next/server';
 // calls pay only 10% of the input cost for the system prompt tokens.
 // max_tokens: 150 (keeps output short and cost low).
 
-const SYSTEM_PROMPT = [
+const SYSTEM_PROMPT_EN_TO_LI = [
   'Parody "English to LinkedIn" translator. Rewrite input as a sincere LinkedIn post.',
   'NO emojis ever. 2-3 short paragraphs. Under 80 words.',
   'NEVER use hashtags. NEVER use placeholder brackets like [industry] or [name].',
@@ -32,6 +32,17 @@ const SYSTEM_PROMPT = [
   'The compound effect of intentional nutrition and timely outreach cannot be overstated."',
   '',
   'NEVER include emojis. Write like a real LinkedIn power user who takes themselves too seriously.',
+].join('\n');
+
+const SYSTEM_PROMPT_LI_TO_EN = [
+  'Parody "LinkedIn to English" translator. Translate the given over-the-top corporate LinkedIn speak back into what the person actually means in blunt, honest, everyday human English.',
+  'Keep it under 15 words. Be direct, cynical, and ruthlessly honest. Strip away all corporate jargon.',
+  'Example: "Thrilled to announce that I have made the tough decision to transition to a new chapter..." -> "I got fired."',
+  'Example: "Delivering synergistic value adds to the onboarding process..." -> "I did basically nothing today."',
+  'Example: "Building my personal brand through consistent value creation..." -> "I want to be an influencer."',
+  'Example: "Extremely humbled to be recognized top 10% in the company..." -> "I am bragging."',
+  'Example: "I am humbled to share that after an incredible journey, I am exploring new opportunities..." -> "I am unemployed."',
+  'Write ONLY the translation. Never use emojis. No preamble. Make it sound like something someone would say to a close friend over a beer.'
 ].join('\n');
 
 // --- Rate limiter: max 10 requests per IP per 60 seconds ---
@@ -75,7 +86,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ useLocal: true });
     }
 
-    const { text } = await req.json();
+    const { text, direction = 'en-to-li' } = await req.json();
 
     if (!text?.trim()) {
       return NextResponse.json({ error: 'No input text' }, { status: 400 });
@@ -89,6 +100,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'API key not configured' }, { status: 500 });
     }
 
+    const systemPrompt = direction === 'li-to-en' ? SYSTEM_PROMPT_LI_TO_EN : SYSTEM_PROMPT_EN_TO_LI;
+
     const resp = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
@@ -98,12 +111,12 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         model: 'claude-3-haiku-20240307',
-        max_tokens: 150,
+        max_tokens: direction === 'li-to-en' ? 50 : 150,
         temperature: 0.9,
         system: [
           {
             type: 'text',
-            text: SYSTEM_PROMPT,
+            text: systemPrompt,
             cache_control: { type: 'ephemeral' },
           },
         ],

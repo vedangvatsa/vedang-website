@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { PageLayout } from '@/components/page-layout';
 import { Button } from '@/components/ui/button';
-import { Copy, Check, ArrowRight, RotateCcw, Download, Link } from 'lucide-react';
+import { Copy, Check, ArrowRight, ArrowRightLeft, RotateCcw, Download, Link } from 'lucide-react';
 import { composeNarrative } from './templates';
 import { getCachedTranslation } from './translations';
 
@@ -570,9 +570,33 @@ const EXAMPLES = [
   'I said no to overtime.',
 ];
 
+const LI_EXAMPLES = [
+  'Thrilled to announce that I have made the tough decision to transition to a new chapter.',
+  'Delivering synergistic value adds to the onboarding process.',
+  'Building my personal brand through consistent value creation.',
+  'Extremely humbled to be recognized top 10% in the company.',
+  'I am humbled to share that after an incredible journey, I am exploring new opportunities.',
+  'Invested in a premium cognitive performance accelerant this morning.',
+  'Fueled a strategic midday reset, then executed a high-priority asynchronous communication.',
+  'I made the bold decision to bet on myself.',
+  'I chose growth over comfort.',
+  'I am selectively exploring high-impact roles where I can drive transformation.',
+];
+
+function translateToEnglish(text: string): string {
+  const lower = text.toLowerCase();
+  if (lower.includes('transition') || lower.includes('new chapter') || lower.includes('exploring new opportunities')) return 'I need a job.';
+  if (lower.includes('humbled') || lower.includes('honored') || lower.includes('thrilled')) return 'I am bragging.';
+  if (lower.includes('synergistic') || lower.includes('alignment') || lower.includes('sync')) return 'We had a pointless meeting.';
+  if (lower.includes('bet on myself') || lower.includes('growth over comfort')) return 'I quit my job.';
+  if (lower.includes('accelerant') || lower.includes('ritual')) return 'I had coffee.';
+  return "I don't know how to say this normally. I've spent too much time on LinkedIn.";
+}
+
 // ── Component ──────────────────────────────────────────────────────────────────
 
 export default function LinkedInTranslatorPage() {
+  const [direction, setDirection] = useState<'en-to-li' | 'li-to-en'>('en-to-li');
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
   const [copied, setCopied] = useState(false);
@@ -599,7 +623,7 @@ export default function LinkedInTranslatorPage() {
         const resp = await fetch('/api/llm/linkedin', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ text: t.trim() }),
+          body: JSON.stringify({ text: t.trim(), direction: 'en-to-li' }),
         });
         if (resp.ok) {
           const data = await resp.json();
@@ -621,7 +645,7 @@ export default function LinkedInTranslatorPage() {
       const resp = await fetch('/api/llm/linkedin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: input.trim() }),
+        body: JSON.stringify({ text: input.trim(), direction }),
       });
       if (resp.ok) {
         const data = await resp.json();
@@ -638,8 +662,12 @@ export default function LinkedInTranslatorPage() {
     }
 
     // Fallback: cached translation or regex
-    const cached = getCachedTranslation(input);
-    setOutput(cached || translateToLinkedIn(input));
+    if (direction === 'en-to-li') {
+      const cached = getCachedTranslation(input);
+      setOutput(cached || translateToLinkedIn(input));
+    } else {
+      setOutput(translateToEnglish(input));
+    }
     setIsTranslating(false);
   }
 
@@ -660,15 +688,19 @@ export default function LinkedInTranslatorPage() {
         const resp = await fetch('/api/llm/linkedin', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ text: example.trim() }),
+          body: JSON.stringify({ text: example.trim(), direction }),
         });
         if (resp.ok) {
           const data = await resp.json();
           if (data.text) { setOutput(data.text); setIsTranslating(false); return; }
         }
       } catch { /* fallback */ }
-      const cached = getCachedTranslation(example);
-      setOutput(cached || translateToLinkedIn(example));
+      if (direction === 'en-to-li') {
+        const cached = getCachedTranslation(example);
+        setOutput(cached || translateToLinkedIn(example));
+      } else {
+        setOutput(translateToEnglish(example));
+      }
       setIsTranslating(false);
     })();
   }
@@ -676,6 +708,17 @@ export default function LinkedInTranslatorPage() {
   function handleReset() {
     setInput('');
     setOutput('');
+  }
+
+  function handleSwapDirection() {
+    setDirection((prev) => (prev === 'en-to-li' ? 'li-to-en' : 'en-to-li'));
+    if (output) {
+      setInput(output);
+      setOutput('');
+    } else if (input) {
+      setInput('');
+      setOutput('');
+    }
   }
 
   function handleKeyDown(e: React.KeyboardEvent) {
@@ -706,7 +749,7 @@ export default function LinkedInTranslatorPage() {
       ctx.fillStyle = '#111111';
       ctx.font = 'bold 36px Inter, system-ui, sans-serif';
       ctx.textAlign = 'center';
-      ctx.fillText('English to LinkedIn Translator', W / 2, 55);
+      ctx.fillText(direction === 'en-to-li' ? 'English to LinkedIn Translator' : 'LinkedIn to English Translator', W / 2, 55);
 
       // Card area
       const cardX = 60, cardY = 80, cardW = W - 120, cardH = 420;
@@ -734,8 +777,8 @@ export default function LinkedInTranslatorPage() {
       ctx.font = '600 14px Inter, system-ui, sans-serif';
       ctx.textAlign = 'left';
       ctx.fillStyle = '#3b82f6';
-      ctx.fillText('Human Language', cardX + 24, cardY + 32);
-      ctx.fillText('LinkedIn Language', midX + 24, cardY + 32);
+      ctx.fillText(direction === 'en-to-li' ? 'Human Language' : 'LinkedIn Language', cardX + 24, cardY + 32);
+      ctx.fillText(direction === 'en-to-li' ? 'LinkedIn Language' : 'Human Language', midX + 24, cardY + 32);
 
       // Label underlines
       ctx.strokeStyle = '#3b82f6';
@@ -980,7 +1023,7 @@ export default function LinkedInTranslatorPage() {
           <div className="mx-auto max-w-5xl space-y-5">
             {/* Title */}
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-center">
-              English to LinkedIn Translator
+              {direction === 'en-to-li' ? 'English to LinkedIn Translator' : 'LinkedIn to English Translator'}
             </h1>
 
             {/* Translator Card - Google Translate style */}
@@ -988,15 +1031,19 @@ export default function LinkedInTranslatorPage() {
               {/* Language tabs header */}
               <div className="grid grid-cols-[1fr_auto_1fr] items-center border-b border-border">
                 <div className="px-5 py-2.5">
-                  <span className="text-sm font-semibold text-primary border-b-2 border-primary pb-2.5 px-1">Human Language</span>
+                  <span className="text-sm font-semibold text-primary border-b-2 border-primary pb-2.5 px-1">
+                    {direction === 'en-to-li' ? 'Human Language' : 'LinkedIn Language'}
+                  </span>
                 </div>
                 <div className="flex items-center justify-center px-2">
-                  <div className="rounded-full border border-border p-1.5 bg-background">
-                    <ArrowRight className="h-3.5 w-3.5 text-muted-foreground" />
-                  </div>
+                  <button onClick={handleSwapDirection} className="rounded-full border border-border p-1.5 bg-background hover:bg-secondary transition-colors" title="Swap languages">
+                    <ArrowRightLeft className="h-3.5 w-3.5 text-muted-foreground" />
+                  </button>
                 </div>
                 <div className="px-5 py-2.5">
-                  <span className="text-sm font-semibold text-primary border-b-2 border-primary pb-2.5 px-1">LinkedIn Language</span>
+                  <span className="text-sm font-semibold text-primary border-b-2 border-primary pb-2.5 px-1">
+                    {direction === 'en-to-li' ? 'LinkedIn Language' : 'Human Language'}
+                  </span>
                 </div>
               </div>
 
@@ -1100,7 +1147,7 @@ export default function LinkedInTranslatorPage() {
 
           {/* Examples - full container width */}
           <div className="flex flex-wrap justify-center gap-1.5 mt-4">
-            {EXAMPLES.slice(0, 16).map((example, i) => (
+            {(direction === 'en-to-li' ? EXAMPLES : LI_EXAMPLES).slice(0, 16).map((example, i) => (
               <button
                 key={i}
                 onClick={() => handleExample(example)}
