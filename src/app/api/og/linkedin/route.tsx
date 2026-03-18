@@ -115,8 +115,8 @@ export async function GET(request: NextRequest) {
         </div>
 
         {/* Branding */}
-        <div style={{ fontSize: 22, fontWeight: 600, color: '#444444', marginTop: 20, display: 'flex' }}>
-          generated on veda.ng
+        <div style={{ fontSize: 18, fontWeight: 500, color: '#888888', marginTop: 20, display: 'flex', gap: 6 }}>
+          generated on <span style={{ fontWeight: 600, color: '#3b82f6', textDecoration: 'underline' }}>veda.ng/lit</span>
         </div>
       </div>
     ),

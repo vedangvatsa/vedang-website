@@ -6,7 +6,7 @@ export const metadata: Metadata = generateMetadata({
   description:
     'Free English to LinkedIn translator. Type any honest sentence and watch it transform into over-the-top LinkedIn-speak. "I got fired" becomes "Thrilled to announce I\'m exploring new opportunities." AI-powered, instant results.',
   url: '/lit',
-  ogImage: '/images/linkedin-translator-og.png',
+  ogImage: '/api/og/linkedin',
   ogImageAlt: 'English to LinkedIn Translator - showing a translation from human language to LinkedIn language',
   keywords: [
     'LinkedIn Translator',
