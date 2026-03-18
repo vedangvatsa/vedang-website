@@ -1018,7 +1018,7 @@ export default function LinkedInTranslatorPage() {
   return (
     <>
     <PageLayout>
-      <section aria-label="LinkedIn Translator Tool" className="py-2 md:py-4">
+      <section aria-label="LinkedIn Translator Tool" className="pt-2 pb-0 md:pt-4 md:pb-0">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mx-auto max-w-5xl space-y-4">
             {/* Title */}
@@ -1146,8 +1146,8 @@ export default function LinkedInTranslatorPage() {
           </div>
 
           {/* Examples - wrapped rows */}
-          <div className="flex flex-wrap justify-center content-start gap-1.5 mt-4 min-h-[90px] md:min-h-[70px]">
-            {(direction === 'en-to-li' ? EXAMPLES.slice(0, 17) : LI_EXAMPLES.slice(0, 9)).map((example, i) => (
+          <div className="flex flex-wrap justify-center content-start gap-1.5 min-h-[90px] md:min-h-[70px]">
+            {(direction === 'en-to-li' ? EXAMPLES.slice(0, 17) : LI_EXAMPLES.slice(0, 8)).map((example, i) => (
               <button
                 key={i}
                 onClick={() => handleExample(example)}
