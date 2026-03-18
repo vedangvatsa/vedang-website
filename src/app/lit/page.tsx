@@ -833,19 +833,23 @@ export default function LinkedInTranslatorPage() {
 
   async function handleShareLinkedIn() {
     const url = getShareUrl();
-    const blob = await generateShareImage();
 
-    if (blob) {
-      const ok = await copyImageToClipboard(blob);
-      showToast(ok ? 'Screenshot copied! Paste it in your post (Ctrl+V)' : 'Screenshot saved! Attach it to your post');
-      if (!ok) {
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = 'linkedin-translation.png';
-        a.click();
-        URL.revokeObjectURL(a.href);
-      }
+    // Copy the translated text to clipboard so user can paste it as their post
+    if (output) {
+      await navigator.clipboard.writeText(output + '\n\n' + url);
+      showToast('Translation copied! Paste it as your LinkedIn post (Ctrl+V)');
     }
+
+    // Also generate and download the image
+    const blob = await generateShareImage();
+    if (blob) {
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'linkedin-translation.png';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
   }
 
