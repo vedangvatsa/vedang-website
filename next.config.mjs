@@ -100,15 +100,6 @@ const nextConfig = {
       },
     ];
   },
-  async redirects() {
-    return [
-      {
-        source: '/linkedin-translator',
-        destination: '/lit',
-        permanent: true,
-      },
-    ];
-  },
 };
 
 const withMDX = createMDX({
