@@ -775,7 +775,7 @@ export default function LinkedInTranslatorPage() {
   }
 
   function getShareUrl(): string {
-    const base = 'https://veda.ng/linkedin-translator';
+    const base = 'https://veda.ng/lit';
     if (!input) return base;
     return `${base}?t=${encodeURIComponent(input)}`;
   }
