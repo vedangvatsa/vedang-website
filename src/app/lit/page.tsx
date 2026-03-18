@@ -676,14 +676,18 @@ export default function LinkedInTranslatorPage() {
       ctx.lineTo(midX + 160, cardY + 38);
       ctx.stroke();
 
-      // Word wrap helper
-      function wrapText(text: string, x: number, y: number, maxW: number, lineH: number) {
+      // Word wrap helper with vertical clipping
+      function wrapText(text: string, x: number, y: number, maxW: number, lineH: number, maxY: number) {
         const words = text.split(' ');
         let line = '';
         let curY = y;
         for (const word of words) {
           const test = line + word + ' ';
           if (ctx!.measureText(test).width > maxW && line) {
+            if (curY + lineH > maxY) {
+              ctx!.fillText(line.trim() + '...', x, curY);
+              return;
+            }
             ctx!.fillText(line.trim(), x, curY);
             line = word + ' ';
             curY += lineH;
@@ -691,20 +695,24 @@ export default function LinkedInTranslatorPage() {
             line = test;
           }
         }
-        ctx!.fillText(line.trim(), x, curY);
+        if (curY <= maxY) {
+          ctx!.fillText(line.trim(), x, curY);
+        }
       }
+
+      const textMaxY = cardY + cardH - 16;
 
       // Input text
       ctx.font = '20px Inter, system-ui, sans-serif';
       ctx.fillStyle = '#222222';
       ctx.textAlign = 'left';
       const inputText = input || 'Type something honest...';
-      wrapText(inputText, cardX + 24, cardY + 72, midX - cardX - 48, 28);
+      wrapText(inputText, cardX + 24, cardY + 72, midX - cardX - 48, 28, textMaxY);
 
       // Output text
       const outputText = output || 'Translation will appear here...';
       ctx.fillStyle = output ? '#222222' : '#999999';
-      wrapText(outputText, midX + 24, cardY + 72, W - midX - cardX - 48, 28);
+      wrapText(outputText, midX + 24, cardY + 72, W - midX - cardX - 48, 28, textMaxY);
 
       // Arrow icon in middle
       ctx.fillStyle = '#999999';
@@ -712,24 +720,38 @@ export default function LinkedInTranslatorPage() {
       ctx.textAlign = 'center';
       ctx.fillText('→', midX, cardY + cardH / 2 + 6);
 
-      // Branding - styled as a link
-      ctx.textAlign = 'center';
-      ctx.font = '500 18px Inter, system-ui, sans-serif';
-      ctx.fillStyle = '#888888';
-      ctx.fillText('generated on', W / 2 - 46, H - 40);
 
-      ctx.font = '600 20px Inter, system-ui, sans-serif';
+      // Branding - "generated on" + "veda.ng/lit" as link
+      const prefixFont = '500 18px Inter, system-ui, sans-serif';
+      const linkFont = '600 20px Inter, system-ui, sans-serif';
+      const prefix = 'generated on  ';
+      const link = 'veda.ng/lit';
+
+      ctx.font = prefixFont;
+      const prefixW = ctx.measureText(prefix).width;
+      ctx.font = linkFont;
+      const linkW = ctx.measureText(link).width;
+      const totalW = prefixW + linkW;
+      const startX = (W - totalW) / 2;
+      const brandY = H - 40;
+
+      // Draw prefix
+      ctx.font = prefixFont;
+      ctx.fillStyle = '#888888';
+      ctx.textAlign = 'left';
+      ctx.fillText(prefix, startX, brandY);
+
+      // Draw link
+      ctx.font = linkFont;
       ctx.fillStyle = '#3b82f6';
-      const linkText = 'veda.ng';
-      const linkX = W / 2 + 30;
-      ctx.fillText(linkText, linkX, H - 40);
+      ctx.fillText(link, startX + prefixW, brandY);
+
       // Underline the link
-      const linkW = ctx.measureText(linkText).width;
       ctx.strokeStyle = '#3b82f6';
       ctx.lineWidth = 1.5;
       ctx.beginPath();
-      ctx.moveTo(linkX - linkW / 2, H - 37);
-      ctx.lineTo(linkX + linkW / 2, H - 37);
+      ctx.moveTo(startX + prefixW, brandY + 3);
+      ctx.lineTo(startX + prefixW + linkW, brandY + 3);
       ctx.stroke();
 
       canvas.toBlob(resolve, 'image/png');
