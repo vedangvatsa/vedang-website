@@ -851,9 +851,12 @@ export default function LinkedInTranslatorPage() {
 
   function handleShareWhatsApp() {
     const hooks = [
-      `I typed "${input.slice(0, 60)}" into an English to LinkedIn Translator and I can't stop laughing`,
-      `This English to LinkedIn Translator is too accurate — try typing "${input.slice(0, 50)}"`,
-      `You need to see what this English to LinkedIn Translator did to "${input.slice(0, 50)}"`,
+      'This English to LinkedIn Translator is hilarious — type anything honest and watch it become peak LinkedIn',
+      'Found an English to LinkedIn Translator that turns normal sentences into corporate fluff and it is too accurate',
+      'Type "I got fired" into this and see what LinkedIn would say instead',
+      'This tool translates normal English into LinkedIn speak and the results are unreal',
+      'You need to try this English to LinkedIn Translator — it nails the corporate tone perfectly',
+      'Someone built an English to LinkedIn Translator and honestly it is the funniest thing I have seen all week',
     ];
     const hook = hooks[Math.floor(Math.random() * hooks.length)];
     const text = hook + '\n\n' + getShareUrl();
@@ -992,13 +995,13 @@ export default function LinkedInTranslatorPage() {
             </div>
           </div>
 
-          {/* Examples - full width, limited to ~3 rows */}
-          <div className="flex flex-wrap justify-center gap-1.5 max-h-[3.25rem] overflow-hidden mt-2">
+          {/* Examples */}
+          <div className="flex flex-wrap justify-center gap-2 max-h-[3.5rem] overflow-hidden mt-4">
             {EXAMPLES.map((example, i) => (
               <button
                 key={i}
                 onClick={() => handleExample(example)}
-                className="rounded-full border border-border px-2.5 py-0.5 text-xs text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-secondary/50 transition-colors"
+                className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-secondary/50 transition-colors"
               >
                 {example}
               </button>
