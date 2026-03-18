@@ -549,7 +549,7 @@ const EXAMPLES = [
 
 // ── Component ──────────────────────────────────────────────────────────────────
 
-export default function LinkedInTranslator() {
+export default function LinkedInTranslatorPage() {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
   const [copied, setCopied] = useState(false);
@@ -908,9 +908,7 @@ export default function LinkedInTranslator() {
       'Someone built an English to LinkedIn Translator and honestly it is the funniest thing I have seen all week',
     ];
     const hook = hooks[Math.floor(Math.random() * hooks.length)];
-    let url = getShareUrl();
-    if (input.trim()) url += `?t=${encodeURIComponent(input.trim())}`;
-    const text = hook + '\n\n' + url;
+    const text = hook + '\n\n' + getShareUrl();
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
   }
 
