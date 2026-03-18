@@ -993,7 +993,7 @@ export default function LinkedInTranslatorPage() {
           </div>
 
           {/* Examples - full width, limited to ~3 rows */}
-          <div className="flex flex-wrap justify-center gap-1 max-h-[5.5rem] overflow-hidden">
+          <div className="flex flex-wrap justify-center gap-1 max-h-[3rem] overflow-hidden">
             {EXAMPLES.map((example, i) => (
               <button
                 key={i}
