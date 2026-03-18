@@ -367,28 +367,16 @@ const FILLERS = [
   '\n\nThe hard truth that nobody wants to hear.',
   '\n\nFull stop.',
   '\n\n(If you know, you know.)',
-];
-
-const POSITIVE_ELABORATIONS = [
-  'This wouldn\'t have been possible without the amazing people around me.\n\nI\'m fortunate to work with people who push me to be better every single day. Not because they have to, but because that\'s the culture we\'ve built together.\n\nIf there\'s one thing I\'ve learned, it\'s this: success is always shared.',
-  'Every day I show up, I\'m reminded why doing meaningful work matters.\n\nIt\'s not about the title. It\'s about the impact. The small wins that nobody sees. The quiet consistency that compounds over months and years.\n\nThat\'s the real work. And it doesn\'t need applause.',
-  'It\'s moments like these that make the grind worth it.\n\nThe late nights. The early mornings. The moments of doubt where you wonder if any of it matters. All of it led here.\n\nAnd I\'d do it all again. No hesitation.',
-  'The journey wasn\'t easy. But nothing worth having ever is.\n\nI share this not to boast, but to remind anyone on a similar path: the struggle is the story. And your story matters more than you think.\n\nKeep going.',
-  'This is what happens when you bet on yourself.\n\nWhen everyone said it couldn\'t be done, I chose to show up anyway. Not because I was confident, but because I was committed.\n\nThere\'s a difference. And that difference changes everything.',
-  'A year ago, I wouldn\'t have believed this was possible.\n\nBut here we are. And that\'s the power of consistency. Not motivation. Not talent. Just showing up when it\'s hard and trusting that the work matters.\n\nIt does.',
-  'I didn\'t get here by being the smartest person in the room.\n\nI got here by staying in the room longer than everyone else. By asking questions when others stayed quiet. By choosing growth over comfort, over and over again.\n\nThat\'s the whole secret. There is no secret.',
-  'The best version of this didn\'t come from a masterplan.\n\nIt came from doing the work. Day after day. Making mistakes. Learning from them. And refusing to let setbacks become stop signs.\n\nMomentum is built in the boring middle. Remember that.',
-];
-
-const NEGATIVE_ELABORATIONS = [
-  'I share this not for sympathy.\n\nI share it because pretending everything is fine helps nobody. We all struggle. We all have moments where things fall apart. And the sooner we normalize saying that out loud, the sooner we can actually fix things.\n\nHonesty isn\'t weakness. It\'s the first step.',
-  'Most people keep stuff like this to themselves.\n\nBut silence doesn\'t make it easier. If anything, it makes it harder. It lets the pressure build until something breaks.\n\nSo here I am, saying the quiet part out loud. Because someone else might need to hear they\'re not alone.',
-  'I used to think vulnerability was weakness.\n\nNow I know it takes more courage to be honest than to keep performing. The highlight reel is easy. The real story is harder to tell.\n\nBut the real story is the one that actually connects with people.',
-  'If you\'re going through something similar, know this: you\'re not alone.\n\nAnd there\'s nothing wrong with admitting where you are. The strongest people I know are the ones who can say "this is hard" without apologizing for it.\n\nThat\'s not weakness. That\'s self-awareness.',
-  'Not every post has to be a win.\n\nSome posts are just honest. And that\'s enough. We don\'t always need to wrap things in a bow or extract a "lesson." Sometimes the thing just is what it is.\n\nAnd sitting with that is its own kind of strength.',
-  'The hardest part isn\'t the situation itself.\n\nIt\'s pretending it doesn\'t exist. Smiling through it. Saying "I\'m fine" when you\'re not. That performance is exhausting.\n\nSo I\'m choosing honesty instead. It\'s scarier, but it\'s also lighter.',
-  'I almost didn\'t post this.\n\nBut then I thought about all the people who feel the same way and say nothing. If even one person reads this and feels less alone, it was worth the discomfort.\n\nWe\'re all figuring it out. Let\'s stop pretending otherwise.',
-  'Here\'s what I\'ve realized: the "tough times" are where the actual growth lives.\n\nNot in the wins. Not in the metrics. In the hard, honest, unglamorous work of facing what\'s real.\n\nThat\'s not a motivational quote. That\'s just the truth.',
+  '\n\nAnd that\'s not up for debate.',
+  '\n\nNo, really.',
+  '\n\nSit with that for a moment.',
+  '\n\nNot a hot take. Just the truth.',
+  '\n\nSay it louder.',
+  '\n\nLet me repeat that.',
+  '\n\nAnd I mean every word.',
+  '\n\nThink about that.',
+  '\n\nPeriod.',
+  '\n\nI said what I said.',
 ];
 
 const PATH_B_OPENERS_POSITIVE = [
@@ -400,6 +388,10 @@ const PATH_B_OPENERS_POSITIVE = [
   'Honest update.',
   'This has been on my mind.',
   'Something clicked recently.',
+  'Here\'s what happened.',
+  'Sharing this because it matters.',
+  'No filter. Just facts.',
+  'A good day, documented.',
 ];
 
 const PATH_B_OPENERS_NEGATIVE = [
@@ -411,6 +403,36 @@ const PATH_B_OPENERS_NEGATIVE = [
   'I wasn\'t going to share this. But then I thought, why not?',
   'An honest update.',
   'Let me be real.',
+  'No sugarcoating this one.',
+  'Here\'s what actually happened.',
+  'Transparency moment.',
+  'The unfiltered version.',
+];
+
+const POSITIVE_ELABORATIONS = [
+  'This wouldn\'t have been possible without the amazing people around me.\n\nSuccess is always shared.',
+  'Every day I show up, I\'m reminded why doing meaningful work matters.\n\nIt\'s not about the title. It\'s about the impact.',
+  'It\'s moments like these that make the grind worth it.\n\nThe late nights. The early mornings. All of it led here.',
+  'The journey wasn\'t easy. But nothing worth having ever is.\n\nKeep going.',
+  'This is what happens when you bet on yourself.\n\nCommitment beats talent every single time.',
+  'A year ago, I wouldn\'t have believed this was possible.\n\nBut here we are. Consistency wins.',
+  'I didn\'t get here by being the smartest person in the room.\n\nI got here by staying in the room the longest.',
+  'The best version of this didn\'t come from a masterplan.\n\nIt came from doing the work. Day after day.',
+  'Not a humble brag. Just genuine gratitude.\n\nThankful for the people who made this happen.',
+  'Small win. Big meaning.\n\nNever underestimate the power of showing up.',
+];
+
+const NEGATIVE_ELABORATIONS = [
+  'I share this not for sympathy.\n\nI share it because pretending everything is fine helps nobody.',
+  'Most people keep this to themselves.\n\nBut silence doesn\'t make it easier.',
+  'I used to think vulnerability was weakness.\n\nNow I know it takes more courage to be honest.',
+  'If you\'re going through something similar: you\'re not alone.\n\nThat\'s not a platitude. It\'s the truth.',
+  'Not every post has to be a win.\n\nSome posts are just honest. And that\'s enough.',
+  'The hardest part isn\'t the situation itself.\n\nIt\'s pretending it doesn\'t exist.',
+  'I almost didn\'t post this.\n\nBut then I thought about all the people who feel the same way.',
+  'The tough times are where the actual growth lives.\n\nNot in the wins. Not in the metrics. In the hard stuff.',
+  'No inspirational spin. Just the truth.\n\nSometimes that\'s the only thing worth posting.',
+  'Rock bottom has great WiFi.\n\nAnd an excellent view of what actually matters.',
 ];
 
 let composeIndex = 0;
