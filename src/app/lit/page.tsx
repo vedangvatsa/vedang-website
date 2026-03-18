@@ -781,10 +781,26 @@ export default function LinkedInTranslatorPage() {
 
   function getShareText(): string {
     const variations = [
-      `I typed "${input.slice(0, 60)}${input.length > 60 ? '...' : ''}" into an English to LinkedIn Translator and I can't stop laughing 😂`,
-      `LinkedIn people won't like this one 😂 I translated "${input.slice(0, 50)}${input.length > 50 ? '...' : ''}" into LinkedIn-speak`,
-      `The funniest tool I've found today — this English to LinkedIn Translator is too accurate 💀`,
-      `POV: You discover an English to LinkedIn Translator and suddenly everything makes sense 😂`,
+      'This English to LinkedIn Translator is dangerously accurate',
+      'Someone made a tool that translates normal English into LinkedIn speak and I am crying',
+      'Type any honest sentence into this and watch it become a LinkedIn post. Try it.',
+      'I found an English to LinkedIn Translator and now I understand every LinkedIn post ever',
+      'This might be the most useful and useless tool at the same time',
+      'LinkedIn influencers are NOT going to like this one',
+      'Turns out every LinkedIn post follows the same formula and this tool proves it',
+      'Finally a translator for the language LinkedIn people actually speak',
+      'I have been laughing at this English to LinkedIn Translator for 10 minutes straight',
+      'You need to try this before LinkedIn finds out about it',
+      'Every corporate email I have ever received suddenly makes sense after using this',
+      'This tool exposes the LinkedIn algorithm in the funniest way possible',
+      'I showed this to my manager and now they are questioning their own LinkedIn posts',
+      'If you have ever rolled your eyes at a LinkedIn post this tool is for you',
+      'The gap between what people mean and what they post on LinkedIn is now measurable',
+      'Accidentally created the most LinkedIn post ever with this tool',
+      'This English to LinkedIn Translator should be illegal for how accurate it is',
+      'Showed this to a recruiter and they said it is basically their job description',
+      'The internet peaked today. Someone built an English to LinkedIn Translator.',
+      'Try typing your real Monday morning thoughts into this. You will not be disappointed.',
     ];
     return variations[Math.floor(Math.random() * variations.length)];
   }
