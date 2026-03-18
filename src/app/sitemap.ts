@@ -56,6 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/prompt-engineering-101`, lastModified: new Date('2026-03-14') },
     { url: `${BASE_URL}/web3-101`, lastModified: new Date('2026-03-14') },
     { url: `${BASE_URL}/agentic-web`, lastModified: new Date('2026-03-14') },
+    { url: `${BASE_URL}/linkedin-translator`, lastModified: new Date('2026-03-18') },
   ];
 
   const glossaryRoutes: MetadataRoute.Sitemap = glossaryTerms.map(term => ({
