@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { generateMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'English to LinkedIn Translator | Turn Honest Words into LinkedIn Gold',
+  title: 'English to LinkedIn Translator | Turn Honest Words into LinkedIn Speak',
   description:
     'Free English to LinkedIn translator. Type any honest sentence and watch it transform into over-the-top LinkedIn-speak. "I got fired" becomes "Thrilled to announce I\'m exploring new opportunities." AI-powered, instant results.',
   url: '/lit',
