@@ -620,7 +620,23 @@ export default function LinkedInTranslatorPage() {
   function handleExample(example: string) {
     setInput(example);
     setOutput('');
-    textareaRef.current?.focus();
+    // Auto-translate
+    setIsTranslating(true);
+    (async () => {
+      try {
+        const resp = await fetch('/api/llm/linkedin', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text: example.trim() }),
+        });
+        if (resp.ok) {
+          const data = await resp.json();
+          if (data.text) { setOutput(data.text); setIsTranslating(false); return; }
+        }
+      } catch { /* fallback */ }
+      setOutput(translateToLinkedIn(example));
+      setIsTranslating(false);
+    })();
   }
 
   function handleReset() {
