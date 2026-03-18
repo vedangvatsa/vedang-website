@@ -841,7 +841,7 @@ export default function LinkedInTranslatorPage() {
     if (blob) {
       const a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
-      a.download = 'linkedin-translation.png';
+      a.download = 'lit-by-vedang.png';
       a.click();
       URL.revokeObjectURL(a.href);
       showToast('Image downloaded!');
@@ -868,7 +868,7 @@ export default function LinkedInTranslatorPage() {
       if (!ok) {
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
-        a.download = 'linkedin-translation.png';
+        a.download = 'lit-by-vedang.png';
         a.click();
         URL.revokeObjectURL(a.href);
       }
@@ -890,7 +890,7 @@ export default function LinkedInTranslatorPage() {
     if (blob) {
       const a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
-      a.download = 'linkedin-translation.png';
+      a.download = 'lit-by-vedang.png';
       a.click();
       URL.revokeObjectURL(a.href);
     }
