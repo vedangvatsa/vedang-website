@@ -678,25 +678,34 @@ export default function LinkedInTranslatorPage() {
 
       // Word wrap helper with vertical clipping
       function wrapText(text: string, x: number, y: number, maxW: number, lineH: number, maxY: number) {
-        const words = text.split(' ');
-        let line = '';
+        const paragraphs = text.split('\n');
         let curY = y;
-        for (const word of words) {
-          const test = line + word + ' ';
-          if (ctx!.measureText(test).width > maxW && line) {
-            if (curY + lineH > maxY) {
-              ctx!.fillText(line.trim() + '...', x, curY);
-              return;
-            }
-            ctx!.fillText(line.trim(), x, curY);
-            line = word + ' ';
-            curY += lineH;
-          } else {
-            line = test;
+        for (const para of paragraphs) {
+          if (curY > maxY) break;
+          if (para.trim() === '') {
+            curY += lineH * 0.5; // empty line = half spacing
+            continue;
           }
-        }
-        if (curY <= maxY) {
-          ctx!.fillText(line.trim(), x, curY);
+          const words = para.split(' ');
+          let line = '';
+          for (const word of words) {
+            const test = line + word + ' ';
+            if (ctx!.measureText(test).width > maxW && line) {
+              if (curY + lineH > maxY) {
+                ctx!.fillText(line.trim() + '...', x, curY);
+                return;
+              }
+              ctx!.fillText(line.trim(), x, curY);
+              line = word + ' ';
+              curY += lineH;
+            } else {
+              line = test;
+            }
+          }
+          if (curY <= maxY && line.trim()) {
+            ctx!.fillText(line.trim(), x, curY);
+          }
+          curY += lineH;
         }
       }
 
