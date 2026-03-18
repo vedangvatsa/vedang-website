@@ -1145,13 +1145,13 @@ export default function LinkedInTranslatorPage() {
             </div>
           </div>
 
-          {/* Examples - horizontal scrolling row */}
-          <div className="flex overflow-x-auto gap-2 mt-4 pb-2 w-full snap-x [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-            {(direction === 'en-to-li' ? EXAMPLES : LI_EXAMPLES).slice(0, 16).map((example, i) => (
+          {/* Examples - wrapped rows */}
+          <div className="flex flex-wrap justify-center content-start gap-1.5 mt-4 min-h-[90px] md:min-h-[70px]">
+            {(direction === 'en-to-li' ? EXAMPLES : LI_EXAMPLES).slice(0, 8).map((example, i) => (
               <button
                 key={i}
                 onClick={() => handleExample(example)}
-                className="shrink-0 snap-center rounded-full border border-border px-4 py-1.5 text-xs text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-secondary/50 transition-colors"
+                className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-secondary/50 transition-colors text-left"
               >
                 {example}
               </button>
