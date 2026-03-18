@@ -510,18 +510,20 @@ function translateToLinkedIn(text: string): string {
 // ── Example prompts ────────────────────────────────────────────────────────────
 
 const EXAMPLES = [
-  'I got fired last week and I\'m looking for a job.',
+  'I got fired last week.',
+  'I\'m bored at work.',
+  'My boss is terrible.',
+  'I had lunch and sent an email.',
+  'I made coffee this morning.',
+  'I took a nap during lunch.',
+  'I survived another Monday.',
+  'Nobody came to my product launch.',
   'I quit my job because my boss is terrible.',
   'We failed to hit our sales deadline.',
   'I have finished my science homework.',
   'I\'m tired and burnt out from too many meetings.',
-  'I had lunch and sent an email.',
-  'I made a mistake and I\'m sorry.',
-  'I\'m scared and confused about my career.',
-  'The startup failed and we ran out of money.',
   'I scrolled social media all day and did nothing.',
   'This meeting could\'ve been an email.',
-  'I\'m bored at work.',
   'My coworkers are annoying.',
   'I dropped out and I\'m freelancing now.',
   'I have been arrested for fraud.',
@@ -529,20 +531,18 @@ const EXAMPLES = [
   'I got ghosted after 3 interviews.',
   'I\'m broke and living with my parents.',
   'I got a speeding ticket on the way to work.',
-  'Nobody came to my product launch.',
-  'I made coffee this morning.',
+  'I made a mistake and I\'m sorry.',
+  'I\'m scared and confused about my career.',
+  'The startup failed and we ran out of money.',
   'I went to the gym today.',
   'I was stuck in traffic for 2 hours.',
   'I watched Netflix all weekend.',
   'I forgot my password again.',
-  'I took a nap during lunch.',
   'I ate instant noodles for dinner.',
   'I argued with a stranger online.',
   'I just turned 30.',
   'I finally cleaned my room.',
   'I showed up late and nobody noticed.',
-  'I survived another Monday.',
-  'I changed my LinkedIn profile picture.',
   'I read a book on the train.',
   'I said no to overtime.',
 ];
@@ -965,7 +965,7 @@ export default function LinkedInTranslatorPage() {
                   onClick={() => handleExample(example)}
                   className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-secondary/50 transition-colors"
                 >
-                  {example.length > 35 ? example.slice(0, 32) + '...' : example}
+                  {example}
                 </button>
               ))}
             </div>
