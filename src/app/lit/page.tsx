@@ -1057,7 +1057,7 @@ export default function LinkedInTranslatorPage() {
                     value={input}
                     onChange={(e) => setInput(e.target.value.slice(0, 2000))}
                     onKeyDown={handleKeyDown}
-                    placeholder='e.g. "I got fired last week"'
+                    placeholder={direction === 'en-to-li' ? 'e.g. "I got fired last week"' : 'e.g. "Thrilled to announce I\'m exploring new opportunities..."'}
                     className="flex-1 w-full bg-transparent px-5 py-3 text-sm placeholder:text-muted-foreground/50 focus:outline-none resize-none"
                   />
                   <div className="flex items-center justify-between px-5 py-2 border-t border-border/50">
@@ -1077,15 +1077,32 @@ export default function LinkedInTranslatorPage() {
 
                 {/* Output panel */}
                 <div className="relative flex flex-col bg-secondary/20">
-                  <div className="flex-1 px-5 py-3 text-sm leading-relaxed whitespace-pre-wrap overflow-y-auto">
-                    {isTranslating ? (
-                      <span className="text-muted-foreground animate-pulse">Generating LinkedIn gold...</span>
-                    ) : output ? (
-                      output
-                    ) : (
-                      <span className="text-muted-foreground/40">Translation will appear here...</span>
-                    )}
-                  </div>
+                  {isTranslating ? (
+                    <div className="flex-1 px-5 py-3 text-sm leading-relaxed text-muted-foreground animate-pulse">
+                      Generating LinkedIn gold...
+                    </div>
+                  ) : (
+                    <textarea
+                      value={output}
+                      readOnly
+                      onFocus={() => {
+                        // If output is empty and user clicks here, they likely want to type in this language.
+                        // Auto-swap the direction and shift their focus to the input box automatically!
+                        if (!output && !isTranslating) {
+                          handleSwapDirection();
+                          setTimeout(() => document.getElementById('translator-input')?.focus(), 10);
+                        }
+                      }}
+                      onClick={() => {
+                        if (!output && !isTranslating) {
+                          handleSwapDirection();
+                          setTimeout(() => document.getElementById('translator-input')?.focus(), 10);
+                        }
+                      }}
+                      placeholder="Translation will appear here..."
+                      className="flex-1 w-full bg-transparent px-5 py-3 text-sm leading-relaxed placeholder:text-muted-foreground/40 focus:outline-none resize-none cursor-text disabled:opacity-50"
+                    />
+                  )}
                   <div className="flex items-center justify-between px-5 py-2 border-t border-border/50">
                     <div className="flex items-center gap-2.5">
                       {output && (
