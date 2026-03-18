@@ -850,8 +850,14 @@ export default function LinkedInTranslatorPage() {
   }
 
   function handleShareWhatsApp() {
-    const text = getShareText() + '\n\nTry it yourself: ' + getShareUrl();
-    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+    const shareText = [
+      `I typed "${input.slice(0, 80)}" into an English to LinkedIn Translator and this is what came out:`,
+      '',
+      `"${output.slice(0, 300)}${output.length > 300 ? '...' : ''}"`,
+      '',
+      'Try it yourself: ' + getShareUrl(),
+    ].join('\n');
+    window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`, '_blank');
   }
 
   function handleShareReddit() {
