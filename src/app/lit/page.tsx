@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { PageLayout } from '@/components/page-layout';
 import { Button } from '@/components/ui/button';
 import { Copy, Check, ArrowRight, RotateCcw, Download, Link } from 'lucide-react';
@@ -558,6 +558,32 @@ export default function LinkedInTranslatorPage() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
 
+  // Read ?t= param on mount and auto-translate
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const t = params.get('t');
+    if (t) {
+      setInput(t);
+      (async () => {
+        setIsTranslating(true);
+        try {
+          const resp = await fetch('/api/llm/linkedin', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ text: t.trim() }),
+          });
+          if (resp.ok) {
+            const data = await resp.json();
+            if (data.text) { setOutput(data.text); setIsTranslating(false); return; }
+          }
+        } catch { /* fallback */ }
+        setOutput(translateToLinkedIn(t));
+        setIsTranslating(false);
+      })();
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   async function handleTranslate() {
     if (!input.trim()) return;
     setIsTranslating(true);
@@ -823,7 +849,10 @@ export default function LinkedInTranslatorPage() {
   }
 
   function handleCopyLink() {
-    const url = getShareUrl();
+    let url = getShareUrl();
+    if (input.trim()) {
+      url += `?t=${encodeURIComponent(input.trim())}`;
+    }
     navigator.clipboard.writeText(url);
     showToast('Share link copied to clipboard!');
   }
