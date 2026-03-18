@@ -568,7 +568,6 @@ export default function LinkedInTranslatorPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: input.trim() }),
       });
-
       if (resp.ok) {
         const data = await resp.json();
         if (data.text) {
@@ -578,12 +577,10 @@ export default function LinkedInTranslatorPage() {
         }
       }
     } catch {
-      // API failed, fall through to local translator
+      // API failed, fall through to local
     }
 
-    // Fallback: local regex-based translation
-    const translated = translateToLinkedIn(input);
-    setOutput(translated);
+    setOutput(translateToLinkedIn(input));
     setIsTranslating(false);
   }
 
