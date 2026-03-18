@@ -5,6 +5,7 @@ import { PageLayout } from '@/components/page-layout';
 import { Button } from '@/components/ui/button';
 import { Copy, Check, ArrowRight, RotateCcw, Download, Link } from 'lucide-react';
 import { composeNarrative } from './templates';
+import { getCachedTranslation } from './translations';
 
 // ── LinkedIn transformation engine ─────────────────────────────────────────────
 //
@@ -583,7 +584,8 @@ export default function LinkedInTranslatorPage() {
           if (data.text) { setOutput(data.text); setIsTranslating(false); return; }
         }
       } catch { /* fallback */ }
-      setOutput(translateToLinkedIn(t));
+      const cached = getCachedTranslation(t);
+      setOutput(cached || translateToLinkedIn(t));
       setIsTranslating(false);
     })();
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -601,17 +603,21 @@ export default function LinkedInTranslatorPage() {
       });
       if (resp.ok) {
         const data = await resp.json();
+        // API returned text -> use it
         if (data.text) {
           setOutput(data.text);
           setIsTranslating(false);
           return;
         }
+        // Rate limited (useLocal flag) -> fall through
       }
     } catch {
       // API failed, fall through to local
     }
 
-    setOutput(translateToLinkedIn(input));
+    // Fallback: cached translation or regex
+    const cached = getCachedTranslation(input);
+    setOutput(cached || translateToLinkedIn(input));
     setIsTranslating(false);
   }
 
@@ -639,7 +645,8 @@ export default function LinkedInTranslatorPage() {
           if (data.text) { setOutput(data.text); setIsTranslating(false); return; }
         }
       } catch { /* fallback */ }
-      setOutput(translateToLinkedIn(example));
+      const cached = getCachedTranslation(example);
+      setOutput(cached || translateToLinkedIn(example));
       setIsTranslating(false);
     })();
   }

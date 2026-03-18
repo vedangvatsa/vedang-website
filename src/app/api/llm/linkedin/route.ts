@@ -72,10 +72,7 @@ export async function POST(req: NextRequest) {
       || 'unknown';
 
     if (isRateLimited(ip)) {
-      return NextResponse.json(
-        { error: 'Too many requests. Please wait a minute.' },
-        { status: 429 }
-      );
+      return NextResponse.json({ useLocal: true });
     }
 
     const { text } = await req.json();
