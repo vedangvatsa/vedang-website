@@ -1146,8 +1146,8 @@ export default function LinkedInTranslatorPage() {
           </div>
 
           {/* Examples - wrapped rows */}
-          <div className="flex flex-wrap justify-center content-start gap-1.5 min-h-[90px] md:min-h-[70px]">
-            {(direction === 'en-to-li' ? EXAMPLES.slice(0, 17) : LI_EXAMPLES.slice(0, 8)).map((example, i) => (
+          <div className="flex flex-wrap justify-center content-start gap-1.5 mt-3 min-h-[90px] md:min-h-[70px]">
+            {(direction === 'en-to-li' ? EXAMPLES.slice(0, 17) : LI_EXAMPLES.slice(0, 6)).map((example, i) => (
               <button
                 key={i}
                 onClick={() => handleExample(example)}
