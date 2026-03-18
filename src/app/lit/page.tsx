@@ -1077,32 +1077,15 @@ export default function LinkedInTranslatorPage() {
 
                 {/* Output panel */}
                 <div className="relative flex flex-col bg-secondary/20">
-                  {isTranslating ? (
-                    <div className="flex-1 px-5 py-3 text-sm leading-relaxed text-muted-foreground animate-pulse">
-                      Generating LinkedIn gold...
-                    </div>
-                  ) : (
-                    <textarea
-                      value={output}
-                      readOnly
-                      onFocus={() => {
-                        // If output is empty and user clicks here, they likely want to type in this language.
-                        // Auto-swap the direction and shift their focus to the input box automatically!
-                        if (!output && !isTranslating) {
-                          handleSwapDirection();
-                          setTimeout(() => document.getElementById('translator-input')?.focus(), 10);
-                        }
-                      }}
-                      onClick={() => {
-                        if (!output && !isTranslating) {
-                          handleSwapDirection();
-                          setTimeout(() => document.getElementById('translator-input')?.focus(), 10);
-                        }
-                      }}
-                      placeholder="Translation will appear here..."
-                      className="flex-1 w-full bg-transparent px-5 py-3 text-sm leading-relaxed placeholder:text-muted-foreground/40 focus:outline-none resize-none cursor-text disabled:opacity-50"
-                    />
-                  )}
+                  <div className="flex-1 px-5 py-3 text-sm leading-relaxed whitespace-pre-wrap overflow-y-auto">
+                    {isTranslating ? (
+                      <span className="text-muted-foreground animate-pulse">Generating LinkedIn gold...</span>
+                    ) : output ? (
+                      output
+                    ) : (
+                      <span className="text-muted-foreground/40">Translation will appear here...</span>
+                    )}
+                  </div>
                   <div className="flex items-center justify-between px-5 py-2 border-t border-border/50">
                     <div className="flex items-center gap-2.5">
                       {output && (
@@ -1163,12 +1146,12 @@ export default function LinkedInTranslatorPage() {
           </div>
 
           {/* Examples - full container width */}
-          <div className="flex flex-wrap justify-center gap-1.5 mt-4">
-            {(direction === 'en-to-li' ? EXAMPLES : LI_EXAMPLES).slice(0, 16).map((example, i) => (
+          <div className="flex flex-wrap justify-center content-start gap-1.5 mt-4 min-h-[150px]">
+            {(direction === 'en-to-li' ? EXAMPLES : LI_EXAMPLES).slice(0, 14).map((example, i) => (
               <button
                 key={i}
                 onClick={() => handleExample(example)}
-                className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-secondary/50 transition-colors"
+                className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-secondary/50 transition-colors text-left"
               >
                 {example}
               </button>
