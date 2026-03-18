@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container mx-auto flex flex-col items-center justify-center px-4 md:px-6">
         <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-medium text-muted-foreground mb-4">
           <Link href="/writings" className="hover:text-primary transition-colors">Writings</Link>
-          <Link href="/web3-101" className="hover:text-primary transition-colors">Courses</Link>
+          <Link href="/#learn" className="hover:text-primary transition-colors">Resources</Link>
           <Link href="/glossary" className="hover:text-primary transition-colors">Glossary</Link>
           <Link href="/profile" className="hover:text-primary transition-colors">Profile</Link>
         </div>

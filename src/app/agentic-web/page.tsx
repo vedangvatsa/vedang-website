@@ -9,9 +9,44 @@ import { PageLayout } from '@/components/page-layout';
 
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { BrainCircuit, Users, Hand, ShieldCheck, Zap, Star } from 'lucide-react';
+import { Star, BookOpen, ExternalLink } from 'lucide-react';
+import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
+
+const referenceLinks = [
+    {
+        name: 'Protocols and Standards',
+        links: [
+            { name: 'Model Context Protocol (MCP)', url: 'https://modelcontextprotocol.io' },
+            { name: 'Agent-to-Agent Protocol (A2A)', url: 'https://google.github.io/A2A/' },
+        ],
+    },
+    {
+        name: 'Agent Frameworks',
+        links: [
+            { name: 'LangGraph Docs', url: 'https://langchain-ai.github.io/langgraph/' },
+            { name: 'CrewAI Docs', url: 'https://docs.crewai.com' },
+            { name: 'Google Agent Development Kit', url: 'https://google.github.io/adk-docs/' },
+            { name: 'AutoGen (Microsoft)', url: 'https://microsoft.github.io/autogen/' },
+        ],
+    },
+    {
+        name: 'Agent Products',
+        links: [
+            { name: 'ChatGPT Operator', url: 'https://openai.com/index/introducing-operator/' },
+            { name: 'Google Project Mariner', url: 'https://deepmind.google/technologies/project-mariner/' },
+            { name: 'Genspark Super Agent', url: 'https://www.genspark.ai' },
+        ],
+    },
+    {
+        name: 'Further Reading',
+        links: [
+            { name: 'Google Cloud: What are AI Agents?', url: 'https://cloud.google.com/discover/what-are-ai-agents' },
+            { name: 'Anthropic: Building Effective Agents', url: 'https://www.anthropic.com/engineering/building-effective-agents' },
+        ],
+    },
+];
 
 export const metadata: Metadata = generateMetadata({
   title: pageMetadata.agenticWeb.title,
@@ -51,7 +86,7 @@ const faqItems = [
 const videoSchema = {
   '@context': 'https://schema.org',
   '@type': 'VideoObject',
-  name: 'The Agentic Web — Introduction',
+  name: 'The Agentic Web - Introduction',
   description: 'An introduction to the Agentic Web: how autonomous AI agents are transforming the internet from a place to find information into a platform for getting things done.',
   thumbnailUrl: 'https://img.youtube.com/vi/Gqgk25SOIMM/maxresdefault.jpg',
   uploadDate: '2025-01-01',
@@ -129,15 +164,8 @@ export default function AgenticWebCoursePage() {
             
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
-                    <div className="flex items-center gap-4">
-                        <div>
-                           <BrainCircuit className="w-6 h-6 text-muted-foreground"/>
-                        </div>
-                        <div>
-                            <CardDescription>Module 1</CardDescription>
-                            <CardTitle className="text-2xl">The Core Idea: From Information Web to Action Web</CardTitle>
-                        </div>
-                    </div>
+                    <CardDescription>Module 1</CardDescription>
+                    <CardTitle className="text-2xl">The Core Idea: From Information Web to Action Web</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
                      <p className="text-muted-foreground">This module introduces the fundamental shift from a human-driven web to an agent-driven one. You'll learn how the internet is evolving from a passive library of information into a dynamic ecosystem where autonomous agents perform complex tasks on your behalf.</p>
@@ -192,15 +220,8 @@ export default function AgenticWebCoursePage() {
 
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
-                    <div className="flex items-center gap-4">
-                        <div>
-                           <Zap className="w-6 h-6 text-muted-foreground"/>
-                        </div>
-                        <div>
-                            <CardDescription>Module 2</CardDescription>
-                            <CardTitle className="text-2xl">The Core Components of Agentic Systems</CardTitle>
-                        </div>
-                    </div>
+                    <CardDescription>Module 2</CardDescription>
+                    <CardTitle className="text-2xl">The Core Components of Agentic Systems</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
                     <p className="text-muted-foreground">To understand the Agentic Web, you need to know its building blocks. This module explores the key components that enable agents to function, from their internal "minds" to the external tools they use to interact with the world.</p>
@@ -262,21 +283,33 @@ export default function AgenticWebCoursePage() {
                                 <p>Multi-agent systems allow for a division of labor, making it possible to tackle incredibly complex, multi-domain problems that would be beyond the capability of any single agent.</p>
                             </AccordionContent>
                         </AccordionItem>
+                        <AccordionItem value="item-4">
+                            <AccordionTrigger className="text-lg text-left">Real-World Platforms and Frameworks</AccordionTrigger>
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+                                <p>The concepts above are already being built into products and developer tools. Here are the most important ones to know about:</p>
+                                <h5>Products You Can Try Today</h5>
+                                <ul>
+                                  <li><strong><Link href="https://openai.com/index/introducing-operator/" target="_blank" rel="noopener noreferrer">ChatGPT Operator (OpenAI)</Link>:</strong> An agent that can use a web browser on your behalf. You give it a task like "order groceries" or "find flights," and it navigates websites, fills out forms, and completes the action.</li>
+                                  <li><strong><Link href="https://deepmind.google/technologies/project-mariner/" target="_blank" rel="noopener noreferrer">Project Mariner (Google DeepMind)</Link>:</strong> A research prototype that can understand and interact with web pages in your Chrome browser, performing multi-step tasks based on your instructions.</li>
+                                  <li><strong><Link href="https://www.genspark.ai" target="_blank" rel="noopener noreferrer">Genspark Super Agent</Link>:</strong> An AI search engine where agents perform deep research across multiple sources and return comprehensive, synthesized answers instead of a list of links.</li>
+                                </ul>
+                                <h5>Frameworks for Developers</h5>
+                                <ul>
+                                  <li><strong><Link href="https://langchain-ai.github.io/langgraph/" target="_blank" rel="noopener noreferrer">LangGraph</Link>:</strong> A framework for building stateful, multi-step agent workflows as graphs. Each node in the graph is a step (like "search the web" or "write a summary"), and edges define the flow between them.</li>
+                                  <li><strong><Link href="https://docs.crewai.com" target="_blank" rel="noopener noreferrer">CrewAI</Link>:</strong> A framework for building multi-agent teams. You define agents with specific roles ("researcher," "writer," "editor") and they collaborate to complete a task.</li>
+                                  <li><strong><Link href="https://google.github.io/adk-docs/" target="_blank" rel="noopener noreferrer">Google Agent Development Kit (ADK)</Link>:</strong> Google's open-source toolkit for building, testing, and deploying agents that can use tools and work together.</li>
+                                  <li><strong><Link href="https://microsoft.github.io/autogen/" target="_blank" rel="noopener noreferrer">AutoGen (Microsoft)</Link>:</strong> A framework for building multi-agent conversations where agents can talk to each other and to humans to solve problems.</li>
+                                </ul>
+                            </AccordionContent>
+                        </AccordionItem>
                      </Accordion>
                 </CardContent>
             </Card>
             
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
-                    <div className="flex items-center gap-4">
-                        <div>
-                           <Users className="w-6 h-6 text-muted-foreground"/>
-                        </div>
-                        <div>
-                            <CardDescription>Module 3</CardDescription>
-                            <CardTitle className="text-2xl">The Three Dimensions of the Agentic Web</CardTitle>
-                        </div>
-                    </div>
+                    <CardDescription>Module 3</CardDescription>
+                    <CardTitle className="text-2xl">The Three Dimensions of the Agentic Web</CardTitle>
                 </CardHeader>
                  <CardContent className="p-6">
                      <p className="text-muted-foreground">The Agentic Web isn't just one thing; it can be understood through three interconnected layers or dimensions. Each dimension builds on the one before it, showing how agents evolve from simple reasoners to active participants in a new digital economy.</p>
@@ -326,15 +359,8 @@ export default function AgenticWebCoursePage() {
 
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
-                    <div className="flex items-center gap-4">
-                        <div>
-                           <Hand className="w-6 h-6 text-muted-foreground"/>
-                        </div>
-                        <div>
-                            <CardDescription>Module 4</CardDescription>
-                            <CardTitle className="text-2xl">Applications: The Agentic Web in Action</CardTitle>
-                        </div>
-                    </div>
+                    <CardDescription>Module 4</CardDescription>
+                    <CardTitle className="text-2xl">Applications: The Agentic Web in Action</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
                     <p className="text-muted-foreground">The Agentic Web is not science fiction; it's being built today. This module explores the three main ways agents are currently being applied, showcasing how they are already changing our digital lives.</p>
@@ -398,15 +424,8 @@ export default function AgenticWebCoursePage() {
 
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
-                     <div className="flex items-center gap-4">
-                        <div>
-                           <ShieldCheck className="w-6 h-6 text-muted-foreground"/>
-                        </div>
-                        <div>
-                            <CardDescription>Module 5</CardDescription>
-                            <CardTitle className="text-2xl">The Future: Challenges and Opportunities</CardTitle>
-                        </div>
-                    </div>
+                    <CardDescription>Module 5</CardDescription>
+                    <CardTitle className="text-2xl">The Future: Challenges and Opportunities</CardTitle>
                 </CardHeader>
                  <CardContent className="p-6">
                      <p className="text-muted-foreground">The Agentic Web holds incredible promise, but it also presents significant challenges in security, ethics, and economics. This module explores the open questions we must solve to build a safe and prosperous agentic future.</p>
@@ -454,6 +473,33 @@ export default function AgenticWebCoursePage() {
                      </Accordion>
                 </CardContent>
             </Card>
+
+            <section id="references" className="py-16">
+                <div className="text-center">
+                    <BookOpen className="mx-auto h-12 w-12 text-muted-foreground" />
+                    <h2 className="mt-4 text-2xl md:text-3xl font-semibold tracking-tight">Learn More</h2>
+                    <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+                        Protocols, frameworks, and platforms for exploring the Agentic Web.
+                    </p>
+                </div>
+                 <div className="mt-12 columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                    {referenceLinks.map((tool) => (
+                        <div key={tool.name} className="break-inside-avoid">
+                            <h3 className="font-semibold text-lg mb-2">{tool.name}</h3>
+                            <ul className="space-y-2">
+                                {tool.links.map((link) => (
+                                    <li key={link.name}>
+                                        <Link href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-muted-foreground hover:text-primary group">
+                                            {link.name}
+                                            <ExternalLink className="ml-1.5 h-3 w-3 opacity-70 group-hover:opacity-100" />
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </section>
 
             <section id="faq" className="py-16">
                 <div className="text-center">

@@ -9,7 +9,43 @@ import { PageLayout } from '@/components/page-layout';
 
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Globe, Layers, ShieldCheck, Wallet, Puzzle, Star, BrainCircuit } from 'lucide-react';
+import { Star, BookOpen, ExternalLink } from 'lucide-react';
+
+const referenceLinks = [
+    {
+        name: 'Blockchain Fundamentals',
+        links: [
+            { name: 'Ethereum.org Learn', url: 'https://ethereum.org/en/learn/' },
+            { name: 'Bitcoin Whitepaper', url: 'https://bitcoin.org/bitcoin.pdf' },
+            { name: 'Solana Docs', url: 'https://solana.com/docs' },
+        ],
+    },
+    {
+        name: 'Wallets and Getting Started',
+        links: [
+            { name: 'MetaMask', url: 'https://metamask.io/' },
+            { name: 'Rainbow Wallet', url: 'https://www.rainbow.me/' },
+            { name: 'Phantom (Solana)', url: 'https://phantom.app/' },
+        ],
+    },
+    {
+        name: 'DeFi and dApps',
+        links: [
+            { name: 'Uniswap', url: 'https://uniswap.org/' },
+            { name: 'Aave', url: 'https://aave.com/' },
+            { name: 'DappRadar', url: 'https://dappradar.com/' },
+            { name: 'DeFi Llama', url: 'https://defillama.com/' },
+        ],
+    },
+    {
+        name: 'Learning Resources',
+        links: [
+            { name: 'a16z Crypto Canon', url: 'https://a16zcrypto.com/posts/article/crypto-readings-resources/' },
+            { name: 'Ethereum Name Service (ENS)', url: 'https://ens.domains/' },
+            { name: 'L2Beat (Layer 2 Tracker)', url: 'https://l2beat.com/' },
+        ],
+    },
+];
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
@@ -90,7 +126,7 @@ export default function Web3CoursePage() {
                     Fundamentals of Web3
                 </h1>
                 <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-                Go beyond the buzzwords and understand the next evolution of the internet. This course breaks down Web3 — blockchain, decentralization, and digital ownership — into clear, practical concepts. Learn what it means to build and participate in a user-owned web.
+                Go beyond the buzzwords and understand the next evolution of the internet. This course breaks down Web3, including blockchain, decentralization, and digital ownership, into clear, practical concepts. Learn what it means to build and participate in a user-owned web.
                 </p>
 
                 <div className="mt-8 flex justify-center items-center gap-4">
@@ -104,15 +140,8 @@ export default function Web3CoursePage() {
             
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
-                    <div className="flex items-center gap-4">
-                        <div>
-                           <Globe className="w-6 h-6 text-muted-foreground"/>
-                        </div>
-                        <div>
-                            <CardDescription>Module 1</CardDescription>
-                            <CardTitle className="text-2xl">The Vision: Why Web3 Matters</CardTitle>
-                        </div>
-                    </div>
+                    <CardDescription>Module 1</CardDescription>
+                    <CardTitle className="text-2xl">The Vision: Why Web3 Matters</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
                      <p className="text-muted-foreground">Before diving into the technology, it helps to understand the 'why' behind Web3. This module traces the internet's evolution, highlights the problems Web3 aims to solve, and lays out its philosophical foundations: decentralization, user sovereignty, and open protocols.</p>
@@ -153,15 +182,8 @@ export default function Web3CoursePage() {
 
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
-                    <div className="flex items-center gap-4">
-                        <div>
-                           <Layers className="w-6 h-6 text-muted-foreground"/>
-                        </div>
-                        <div>
-                            <CardDescription>Module 2</CardDescription>
-                            <CardTitle className="text-2xl">The Bedrock: Blockchain and Cryptocurrencies</CardTitle>
-                        </div>
-                    </div>
+                    <CardDescription>Module 2</CardDescription>
+                    <CardTitle className="text-2xl">The Bedrock: Blockchain and Cryptocurrencies</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
                     <p className="text-muted-foreground">This module explains the core technology behind Web3. We'll break down what a blockchain is, how it works, and the important role cryptocurrencies play in making these decentralized networks function.</p>
@@ -195,15 +217,8 @@ export default function Web3CoursePage() {
 
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
-                    <div className="flex items-center gap-4">
-                        <div>
-                           <BrainCircuit className="w-6 h-6 text-muted-foreground"/>
-                        </div>
-                        <div>
-                            <CardDescription>Module 3</CardDescription>
-                            <CardTitle className="text-2xl">Smart Contracts: The Brains of Web3</CardTitle>
-                        </div>
-                    </div>
+                    <CardDescription>Module 3</CardDescription>
+                    <CardTitle className="text-2xl">Smart Contracts: The Brains of Web3</CardTitle>
                 </CardHeader>
                  <CardContent className="p-6">
                      <p className="text-muted-foreground">If blockchain is the immutable ledger, smart contracts are what make it programmable and intelligent. This module explores how these pieces of code are transforming blockchain from a simple database into a global, permissionless computer.</p>
@@ -235,15 +250,8 @@ export default function Web3CoursePage() {
 
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
-                    <div className="flex items-center gap-4">
-                        <div>
-                           <Puzzle className="w-6 h-6 text-muted-foreground"/>
-                        </div>
-                        <div>
-                            <CardDescription>Module 4</CardDescription>
-                            <CardTitle className="text-2xl">The Web3 Ecosystem: dApps, NFTs, and DAOs</CardTitle>
-                        </div>
-                    </div>
+                    <CardDescription>Module 4</CardDescription>
+                    <CardTitle className="text-2xl">The Web3 Ecosystem: dApps, NFTs, and DAOs</CardTitle>
                 </CardHeader>
                  <CardContent className="p-6">
                      <p className="text-muted-foreground">With the foundational technologies in place, we can now look at the applications being built in Web3. This module covers three important pillars of the current ecosystem.</p>
@@ -292,21 +300,27 @@ export default function Web3CoursePage() {
                                 <p>DAOs are being used to manage everything from DeFi protocols (like MakerDAO) to social clubs (like Friends with Benefits) and investment collectives. They represent a powerful new tool for collective action and governance.</p>
                             </AccordionContent>
                         </AccordionItem>
+                        <AccordionItem value="item-4">
+                            <AccordionTrigger className="text-lg">DeFi: Decentralized Finance</AccordionTrigger>
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+                                <p>DeFi is one of Web3's most developed use cases. It recreates traditional financial services (lending, borrowing, trading, insurance) using smart contracts instead of banks. Anyone with a wallet can participate, with no application forms, credit checks, or intermediaries.</p>
+                                <ul>
+                                    <li><strong>Decentralized Exchanges (DEXes):</strong> Platforms like <Link href="https://uniswap.org/" target="_blank" rel="noopener noreferrer">Uniswap</Link> and <Link href="https://curve.fi/" target="_blank" rel="noopener noreferrer">Curve</Link> allow you to swap one cryptocurrency for another directly from your wallet, without a centralized company holding your funds.</li>
+                                    <li><strong>Lending and Borrowing:</strong> Protocols like <Link href="https://aave.com/" target="_blank" rel="noopener noreferrer">Aave</Link> and Compound let you lend your crypto to earn interest, or borrow against your existing holdings. The interest rates are set by supply and demand, not a bank.</li>
+                                    <li><strong>Stablecoins:</strong> Cryptocurrencies pegged to the value of a real-world currency (like the US Dollar). USDC and DAI are common examples. They provide stability in a volatile market and are the most common medium of exchange in DeFi.</li>
+                                    <li><strong>Yield Farming and Liquidity:</strong> Users can provide their tokens to a protocol's "liquidity pool" (used to facilitate trades) and earn fees in return. This is how DEXes work without a traditional order book.</li>
+                                </ul>
+                                <p>DeFi is still experimental and carries real financial risk. Smart contract bugs, market volatility, and protocol failures have caused significant losses. Always research thoroughly and never invest more than you can afford to lose.</p>
+                            </AccordionContent>
+                        </AccordionItem>
                      </Accordion>
                 </CardContent>
             </Card>
 
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
-                    <div className="flex items-center gap-4">
-                        <div>
-                           <Wallet className="w-6 h-6 text-muted-foreground"/>
-                        </div>
-                        <div>
-                            <CardDescription>Module 5</CardDescription>
-                            <CardTitle className="text-2xl">Getting Started: Your Passport to Web3</CardTitle>
-                        </div>
-                    </div>
+                    <CardDescription>Module 5</CardDescription>
+                    <CardTitle className="text-2xl">Getting Started: Your Passport to Web3</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
                     <p className="text-muted-foreground">Ready to dive in? This module covers the practical first steps to begin your journey into the world of Web3. It's less technical than you might think, but requires a new mindset around security and self-custody.</p>
@@ -353,21 +367,33 @@ export default function Web3CoursePage() {
                                 <p><strong>Important:</strong> Start small. Only use small amounts of money that you are comfortable losing as you learn. The goal is to learn the mechanics safely.</p>
                             </AccordionContent>
                         </AccordionItem>
+                        <AccordionItem value="item-4">
+                            <AccordionTrigger className="text-lg">Staying Safe: Scams and Red Flags</AccordionTrigger>
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+                                <p>Web3 gives you more control, but that also means more responsibility. Scams are common, especially targeting beginners. Knowing the patterns is your best defense.</p>
+                                <ul>
+                                    <li><strong>Phishing:</strong> Fake websites or social media accounts that look like real projects. They ask you to "connect your wallet" or "enter your seed phrase." A legitimate project will never ask for your seed phrase. If a site asks for it, close the tab immediately.</li>
+                                    <li><strong>Rug Pulls:</strong> A team creates a token or NFT project, hypes it up to attract investment, and then disappears with the money. Red flags include anonymous teams, unrealistic promises of returns, and no working product.</li>
+                                    <li><strong>Too-Good-to-Be-True Offers:</strong> Messages promising free tokens, guaranteed returns, or "airdrop" rewards that require you to connect your wallet to an unknown site. These usually drain your wallet once you approve a transaction.</li>
+                                </ul>
+                                <p><strong>Rules to live by:</strong></p>
+                                <ol>
+                                    <li>Never share your seed phrase. Ever. With anyone.</li>
+                                    <li>Always double-check URLs before connecting your wallet.</li>
+                                    <li>Use a separate "burner" wallet with small amounts for trying new projects.</li>
+                                    <li>If something sounds too good to be true, it almost certainly is.</li>
+                                    <li>Research the team, the code, and the community before putting money in.</li>
+                                </ol>
+                            </AccordionContent>
+                        </AccordionItem>
                      </Accordion>
                 </CardContent>
             </Card>
 
             <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
                 <CardHeader className="bg-secondary/30 p-6">
-                     <div className="flex items-center gap-4">
-                        <div>
-                           <ShieldCheck className="w-6 h-6 text-muted-foreground"/>
-                        </div>
-                        <div>
-                            <CardDescription>Module 6</CardDescription>
-                            <CardTitle className="text-2xl">The Future: Challenges and Opportunities</CardTitle>
-                        </div>
-                    </div>
+                     <CardDescription>Module 6</CardDescription>
+                    <CardTitle className="text-2xl">The Future: Challenges and Opportunities</CardTitle>
                 </CardHeader>
                  <CardContent className="p-6">
                      <p className="text-muted-foreground">Web3 is not a utopia. It's a young, evolving technology with immense potential but also significant hurdles. This final module explores the open questions and the exciting road ahead.</p>
@@ -400,6 +426,33 @@ export default function Web3CoursePage() {
                      </Accordion>
                 </CardContent>
             </Card>
+
+            <section id="references" className="py-16">
+                <div className="text-center">
+                    <BookOpen className="mx-auto h-12 w-12 text-muted-foreground" />
+                    <h2 className="mt-4 text-2xl md:text-3xl font-semibold tracking-tight">Learn More</h2>
+                    <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+                        Wallets, protocols, and resources to start your Web3 journey.
+                    </p>
+                </div>
+                 <div className="mt-12 columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                    {referenceLinks.map((tool) => (
+                        <div key={tool.name} className="break-inside-avoid">
+                            <h3 className="font-semibold text-lg mb-2">{tool.name}</h3>
+                            <ul className="space-y-2">
+                                {tool.links.map((link) => (
+                                    <li key={link.name}>
+                                        <Link href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-muted-foreground hover:text-primary group">
+                                            {link.name}
+                                            <ExternalLink className="ml-1.5 h-3 w-3 opacity-70 group-hover:opacity-100" />
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </section>
 
             <section id="faq" className="py-16">
                 <div className="text-center">

@@ -10,7 +10,7 @@ import { PageLayout } from '@/components/page-layout';
 
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Bot, BrainCircuit, Code, DraftingCompass, ExternalLink, Hand, Lightbulb, MonitorPlay, Palette, ShieldCheck, Star, BookOpen } from 'lucide-react';
+import { Bot, BrainCircuit, DraftingCompass, ExternalLink, Hand, MonitorPlay, Star, BookOpen } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -102,6 +102,19 @@ const referenceLinks = [
             { name: 'Learn', url: 'https://supabase.com/learn' }
         ]
     },
+    {
+        name: 'VS Code + AI Extensions',
+        links: [
+            { name: 'VS Code', url: 'https://code.visualstudio.com/' },
+            { name: 'Gemini Code Assist', url: 'https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist' },
+        ],
+    },
+    {
+        name: 'Antigravity',
+        links: [
+            { name: 'Antigravity', url: 'https://antigravity.dev' },
+        ],
+    },
 ];
 
 const faqItems = [
@@ -151,7 +164,7 @@ const courseSchema = {
   '@context': 'https://schema.org',
   '@type': 'Course',
   name: 'Vibe Coding 101',
-  description: 'A free, self-paced course on intuitive, human-centered software development — combining technical excellence with creative intuition.',
+  description: 'A free, self-paced course on building software with AI. Learn to describe what you want in plain English and let AI handle the code.',
   url: 'https://veda.ng/vibe-coding',
   provider: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
   isAccessibleForFree: true,
@@ -216,15 +229,8 @@ export default function VibeCodingCoursePage() {
             
             <Card className="overflow-hidden">
                 <CardHeader className="bg-secondary/30 p-6">
-                    <div className="flex items-center gap-4">
-                        <div>
-                           <BrainCircuit className="w-6 h-6 text-muted-foreground"/>
-                        </div>
-                        <div>
-                            <CardDescription>Module 1</CardDescription>
-                            <CardTitle className="text-2xl">The Philosophy: From Coder to Director</CardTitle>
-                        </div>
-                    </div>
+                    <CardDescription>Module 1</CardDescription>
+                    <CardTitle className="text-2xl">The Philosophy: From Coder to Director</CardTitle>
                      <p className="text-muted-foreground mt-4">Shift from coder to creative director. Learn to articulate your vision and guide AI toward the product you want. Focus on the "what" and "why," not the "how."</p>
                 </CardHeader>
                 <CardContent className="p-6">
@@ -304,16 +310,9 @@ export default function VibeCodingCoursePage() {
 
             <Card className="overflow-hidden">
                 <CardHeader className="bg-secondary/30 p-6">
-                    <div className="flex items-center gap-4">
-                        <div>
-                           <Palette className="w-6 h-6 text-muted-foreground"/>
-                        </div>
-                        <div>
-                            <CardDescription>Module 2</CardDescription>
-                            <CardTitle className="text-2xl">The Modern Toolkit</CardTitle>
-                        </div>
-                    </div>
-                     <p className="text-muted-foreground mt-4">Tool choice determines development speed. There is no universal best tool—only the right one for your project. This module surveys tools from visual builders to professional editors.</p>
+                    <CardDescription>Module 2</CardDescription>
+                    <CardTitle className="text-2xl">The Modern Toolkit</CardTitle>
+                     <p className="text-muted-foreground mt-4">Tool choice determines development speed. There is no single best tool, only the right one for your project. This module surveys tools from visual builders to professional editors.</p>
                 </CardHeader>
                 <CardContent className="p-6">
                     <Image
@@ -393,6 +392,31 @@ export default function VibeCodingCoursePage() {
                                         </div>
                                     </CardContent>
                                 </Card>
+
+                                <Card className="my-6">
+                                    <CardHeader>
+                                        <CardTitle><Link href="https://bolt.new" target="_blank" rel="noopener noreferrer" className="hover:underline">Bolt.new</Link>: The Instant Full-Stack Builder</CardTitle>
+                                    </CardHeader>
+                                     <CardContent>
+                                        <div>
+                                            <h5 className="mt-0 font-semibold text-foreground">Best For: Quickly prototyping full-stack web apps entirely in the browser with zero setup.</h5>
+                                            <p className="text-sm text-muted-foreground"><strong>How it works:</strong> Bolt.new, built by StackBlitz, runs a full development environment inside your browser using WebContainers. You describe what you want, and it generates a complete project with a live preview. It supports frameworks like Next.js and Vite out of the box, and you can deploy directly from the interface.</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+
+                                <Card className="my-6">
+                                    <CardHeader>
+                                        <CardTitle><Link href="https://v0.dev" target="_blank" rel="noopener noreferrer" className="hover:underline">v0 by Vercel</Link>: The UI Component Generator</CardTitle>
+                                    </CardHeader>
+                                     <CardContent>
+                                        <div>
+                                            <h5 className="mt-0 font-semibold text-foreground">Best For: Generating polished React UI components from text or image descriptions.</h5>
+                                            <p className="text-sm text-muted-foreground"><strong>How it works:</strong> v0 specializes in creating beautiful, production-ready UI components. Describe a component or paste a screenshot, and v0 generates clean React code using shadcn/ui and Tailwind CSS. It excels at design-forward work and can be used alongside any other tool for the backend.</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+
                                 <Card className="my-6">
                                     <CardHeader>
                                         <CardTitle><Link href="https://cursor.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Cursor</Link>: The AI-Native Code Editor</CardTitle>
@@ -405,6 +429,39 @@ export default function VibeCodingCoursePage() {
                                         </div>
                                     </CardContent>
                                 </Card>
+                                <Card className="my-6">
+                                    <CardHeader>
+                                        <CardTitle><Link href="https://docs.anthropic.com/en/docs/claude-code/overview" target="_blank" rel="noopener noreferrer" className="hover:underline">Claude Code</Link>: The Terminal-First Agent</CardTitle>
+                                    </CardHeader>
+                                     <CardContent>
+                                        <div>
+                                            <h5 className="mt-0 font-semibold text-foreground">Best For: Developers who live in the terminal and want an AI that can read, write, and execute code across your entire project.</h5>
+                                            <p className="text-sm text-muted-foreground"><strong>How it works:</strong> Claude Code is a command-line tool from Anthropic. You run it in your terminal and it can see your full codebase, make multi-file edits, run tests, and commit changes. It excels at large refactors and complex tasks that span many files, acting like an autonomous pair programmer.</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                                <Card className="my-6">
+                                    <CardHeader>
+                                        <CardTitle><Link href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">VS Code</Link> + AI Extensions</CardTitle>
+                                    </CardHeader>
+                                     <CardContent>
+                                        <div>
+                                            <h5 className="mt-0 font-semibold text-foreground">Best For: Developers who want AI in the most popular editor, with the freedom to choose their AI provider.</h5>
+                                            <p className="text-sm text-muted-foreground"><strong>How it works:</strong> VS Code is the world&apos;s most used code editor. With extensions like <Link href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot</Link> or <Link href="https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist" target="_blank" rel="noopener noreferrer">Gemini Code Assist</Link>, it gets inline suggestions, chat, and multi-file editing. It&apos;s the most flexible option because you can mix and match AI tools.</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                                <Card className="my-6">
+                                    <CardHeader>
+                                        <CardTitle><Link href="https://antigravity.dev" target="_blank" rel="noopener noreferrer" className="hover:underline">Antigravity</Link>: The Agentic Coding Assistant</CardTitle>
+                                    </CardHeader>
+                                     <CardContent>
+                                        <div>
+                                            <h5 className="mt-0 font-semibold text-foreground">Best For: Large tasks that span many files and need the AI to understand your whole project.</h5>
+                                            <p className="text-sm text-muted-foreground"><strong>How it works:</strong> Antigravity is an AI coding assistant built by Google DeepMind. It runs inside your editor and can research your codebase, plan changes, edit files, run terminal commands, and use a browser. You stay in control. It is built for tasks that are too complex for a simple suggestion.</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
                             </AccordionContent>
                         </AccordionItem>
                      </Accordion>
@@ -413,15 +470,8 @@ export default function VibeCodingCoursePage() {
 
             <Card className="overflow-hidden">
                 <CardHeader className="bg-secondary/30 p-6">
-                    <div className="flex items-center gap-4">
-                        <div>
-                           <Hand className="w-6 h-6 text-muted-foreground"/>
-                        </div>
-                        <div>
-                            <CardDescription>Module 3</CardDescription>
-                            <CardTitle className="text-2xl">The Art of the Prompt</CardTitle>
-                        </div>
-                    </div>
+                    <CardDescription>Module 3</CardDescription>
+                    <CardTitle className="text-2xl">The Art of the Prompt</CardTitle>
                     <p className="text-muted-foreground mt-4">Good prompts produce good products. This module teaches clear communication and instruction-writing to guide AI effectively.</p>
                 </CardHeader>
                  <CardContent className="p-6">
@@ -507,21 +557,66 @@ export default function VibeCodingCoursePage() {
                                 <p>By using these techniques with the GCES framework, your prompts become better directives. This results in a product that matches your vision much more closely from the start.</p>
                             </AccordionContent>
                         </AccordionItem>
+                        <AccordionItem value="item-4">
+                            <AccordionTrigger className="text-lg text-left">Version Control: Your Safety Net</AccordionTrigger>
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+                                <p>AI makes mistakes. It will sometimes break something that was working. Without a way to undo, a single bad edit can ruin hours of progress. Version control is how you protect yourself.</p>
+                                <ul>
+                                  <li><strong>Cloud Tool Checkpoints:</strong> Tools like Lovable, Replit, and Firebase Studio have built-in "checkpoint" or "history" features. After every successful change, create a checkpoint. Name it clearly (e.g., "login page working" or "added payment form"). If the AI breaks something, you can roll back to the last working version in one click.</li>
+                                  <li><strong>Git for Local Tools:</strong> If you use Cursor, VS Code, or Claude Code, you should learn the basics of Git. You only need three commands to start:
+                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2 text-sm">git add .&nbsp;&nbsp;then&nbsp;&nbsp;git commit -m "describe what works"&nbsp;&nbsp;then&nbsp;&nbsp;git push</blockquote>
+                                    This saves a snapshot of your code. If the AI makes a mess later, you can always go back to this snapshot.
+                                  </li>
+                                  <li><strong>The Golden Rule:</strong> Commit after every successful step. Never let the AI make ten changes before you save. Small, frequent saves are your best protection.</li>
+                                </ul>
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-5">
+                            <AccordionTrigger className="text-lg text-left">Debugging & Recovery: When Things Go Wrong</AccordionTrigger>
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+                                <p>Every vibe coder will hit errors. The difference between a beginner and an expert is how they handle them. Your job is not to fix the bug yourself. It is to report it clearly so the AI can fix it.</p>
+                                <ol className="my-6 space-y-4">
+                                  <li>
+                                    <strong>Copy the Full Error:</strong> When you see a red error message, copy the entire thing, not just the first line. The full stack trace tells the AI exactly where the problem is.
+                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2 text-sm">&quot;I&apos;m getting this error when I click the submit button. Here is the full error: [paste entire error]. Please fix it without changing any other functionality.&quot;</blockquote>
+                                  </li>
+                                  <li>
+                                    <strong>Use Screenshots:</strong> If the bug is visual (e.g., a layout is broken), take a screenshot and describe what&apos;s wrong versus what you expected. Many tools like Lovable and Firebase Studio accept image inputs.
+                                  </li>
+                                  <li>
+                                    <strong>The &quot;Undo and Retry&quot; Pattern:</strong> If the AI keeps looping on the same bug and can&apos;t fix it after 2-3 attempts, stop. Roll back to your last working checkpoint and try a completely different prompt. Describe the same goal with different words or break it into smaller steps.
+                                  </li>
+                                  <li>
+                                    <strong>The Escape Hatch:</strong> When one tool is stuck, switch tools. Copy the error into ChatGPT or Claude and ask for help. Use a different AI to diagnose what your primary tool can&apos;t. You can also ask: &quot;Explain this error to me in simple terms&quot; to understand the problem yourself.
+                                  </li>
+                                </ol>
+                                <p>Errors are not failures. They are part of the conversation. Be patient, be specific, and save often.</p>
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-6">
+                            <AccordionTrigger className="text-lg text-left">Using Design References Effectively</AccordionTrigger>
+                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+                                <p>Instead of describing a design from scratch, show the AI what you want. A reference image saves you dozens of back-and-forth prompts.</p>
+                                <ul>
+                                  <li><strong>Screenshot-to-Code:</strong> Take a screenshot of a design you like (from a website, Figma, or even a napkin sketch) and paste it into tools like v0, Lovable, or Firebase Studio. The AI will replicate the visual style in code.</li>
+                                  <li><strong>Design Inspiration:</strong> Browse <Link href="https://dribbble.com" target="_blank" rel="noopener noreferrer">Dribbble</Link>, <Link href="https://www.awwwards.com" target="_blank" rel="noopener noreferrer">Awwwards</Link>, or <Link href="https://www.lapa.ninja" target="_blank" rel="noopener noreferrer">Lapa.ninja</Link> for inspiration. When you find something you like, reference it in your prompt.
+                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2 text-sm">&quot;Style this dashboard like the ones on Dribbble. Use a clean layout with lots of whitespace, rounded cards, and a soft color palette.&quot;</blockquote>
+                                  </li>
+                                  <li><strong>Component Libraries:</strong> Reference established design systems to get consistent, professional results. Mention <Link href="https://ui.shadcn.com" target="_blank" rel="noopener noreferrer">shadcn/ui</Link>, Material UI, or Ant Design in your prompts to get polished components without describing every detail.
+                                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2 text-sm">&quot;Use shadcn/ui components for all buttons, cards, and forms. Dark mode by default.&quot;</blockquote>
+                                  </li>
+                                </ul>
+                                <p>Good design is not about being a designer. It is about knowing what looks right and being able to point to it.</p>
+                            </AccordionContent>
+                        </AccordionItem>
                      </Accordion>
                 </CardContent>
             </Card>
 
             <Card className="overflow-hidden">
                 <CardHeader className="bg-secondary/30 p-6">
-                     <div className="flex items-center gap-4">
-                        <div>
-                           <Code className="w-6 h-6 text-muted-foreground"/>
-                        </div>
-                        <div>
-                            <CardDescription>Module 4</CardDescription>
-                            <CardTitle className="text-2xl">Lab: Building a "Startup Name Generator"</CardTitle>
-                        </div>
-                    </div>
+                     <CardDescription>Module 4</CardDescription>
+                    <CardTitle className="text-2xl">Lab: Building a "Startup Name Generator"</CardTitle>
                     <p className="text-muted-foreground mt-4">Build a real "Startup Name Generator" app from concept to deployment. Practice everything you've learned, iterate, and publish.</p>
                 </CardHeader>
                 <CardContent className="p-6">
@@ -613,15 +708,8 @@ export default function VibeCodingCoursePage() {
 
             <Card className="overflow-hidden">
                 <CardHeader className="bg-secondary/30 p-6">
-                     <div className="flex items-center gap-4">
-                        <div>
-                           <ShieldCheck className="w-6 h-6 text-muted-foreground"/>
-                        </div>
-                        <div>
-                            <CardDescription>Module 5</CardDescription>
-                            <CardTitle className="text-2xl">From Project to Professional Product</CardTitle>
-                        </div>
-                    </div>
+                     <CardDescription>Module 5</CardDescription>
+                    <CardTitle className="text-2xl">From Project to Professional Product</CardTitle>
                      <p className="text-muted-foreground mt-4">Building is the first step. The goal is to create something valuable and lasting. This module explains how to turn your project into a secure product that can make money. It also covers how this new skill can change your career. This is about going from a test project to a professional one.</p>
                 </CardHeader>
                  <CardContent className="p-6">
