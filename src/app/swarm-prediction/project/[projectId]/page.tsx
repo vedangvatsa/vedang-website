@@ -42,7 +42,15 @@ export default function ProjectPage() {
   const [thinking, setThinking] = useState(false);
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const [hintIndex, setHintIndex] = useState(0);
-  const [viewMode, setViewMode] = useState<'split' | 'graph' | 'report'>('split');
+  const [viewMode, setViewMode] = useState<'split' | 'graph' | 'report'>('report');
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
   const chatRef = useRef<HTMLDivElement>(null);
   const engineRef = useRef<SwarmEngine | null>(null);
@@ -196,29 +204,29 @@ export default function ProjectPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
-      <main className="flex-grow flex flex-col" style={{ height: 'calc(100vh - 56px)' }}>
+      <main className="flex-grow flex flex-col min-h-0">
         <div className="flex items-center justify-between px-4 py-2 border-b border-border">
           <div className="flex items-center gap-3">
             <button onClick={() => router.push('/swarm-prediction')} className="text-sm text-muted-foreground hover:text-foreground">&larr; New</button>
           </div>
           <div className="flex gap-1">
-            {(['split', 'graph', 'report'] as const).map((m) => (
+            {(isMobile ? (['graph', 'report'] as const) : (['split', 'graph', 'report'] as const)).map((m) => (
               <button key={m} onClick={() => setViewMode(m)} className={`px-3 py-1 text-xs rounded-md ${viewMode === m ? 'bg-primary text-primary-foreground' : 'text-muted-foreground hover:text-foreground'}`}>
                 {m === 'split' ? 'Split' : m === 'graph' ? 'Graph' : 'Report'}
               </button>
             ))}
           </div>
         </div>
-        <div className="flex flex-1 overflow-hidden">
-          <div className={`transition-all duration-300 ${viewMode === 'report' ? 'w-0 overflow-hidden opacity-0' : viewMode === 'graph' ? 'w-full' : 'w-1/2'} border-r border-border`}>
+        <div className="flex flex-1 min-h-0 overflow-hidden">
+          <div className={`transition-all duration-300 ${viewMode === 'report' ? 'hidden' : viewMode === 'graph' ? 'w-full' : 'w-1/2'} border-r border-border`}>
             <SwarmGraph profiles={profiles} posts={posts} />
           </div>
-          <div className={`transition-all duration-300 overflow-y-auto ${viewMode === 'graph' ? 'w-0 overflow-hidden opacity-0' : viewMode === 'report' ? 'w-full' : 'w-1/2'}`}>
-            <div className="p-6 space-y-6">
+          <div className={`transition-all duration-300 overflow-y-auto ${viewMode === 'graph' ? 'hidden' : viewMode === 'report' ? 'w-full' : 'w-1/2'}`}>
+            <div className="p-4 sm:p-6 space-y-6">
               <div className="prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: reportHtml }} />
               <div className="border-t border-border pt-6">
                 <h3 className="font-medium mb-3">Ask about the simulation</h3>
-                <div ref={chatRef} className="space-y-3 max-h-80 overflow-y-auto mb-3">
+                <div ref={chatRef} className="space-y-3 max-h-60 sm:max-h-80 overflow-y-auto mb-3">
                   {messages.map((m, i) => (
                     <div key={i} className={`text-sm ${m.role === 'user' ? 'text-right' : ''}`}>
                       {m.role === 'assistant' ? (

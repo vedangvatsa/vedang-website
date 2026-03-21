@@ -61,10 +61,10 @@ export default function SwarmPredictionPage() {
         <div className="w-full max-w-xl space-y-8">
           <div className="text-center space-y-3">
             <Image src="/images/swarm/swarm.png" alt="Swarm illustration" width={160} height={160} className="mx-auto" priority />
-            <h1 className="text-4xl font-semibold tracking-tight">
+            <h1 className="text-2xl sm:text-4xl font-semibold tracking-tight">
               Swarm Intelligence Prediction
             </h1>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-base sm:text-lg">
               Multi-agent AI debate to forecast outcomes from any data
             </p>
           </div>
