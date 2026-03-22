@@ -132,7 +132,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-9LJSZF8BGZ"
+          src="https://www.googletagmanager.com/gtag/js?id=G-4F6799MM5G"
           strategy="afterInteractive"
         />
         <Script
@@ -143,7 +143,7 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-9LJSZF8BGZ');
+              gtag('config', 'G-4F6799MM5G');
             `,
           }}
         />
