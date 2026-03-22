@@ -1031,7 +1031,7 @@ export default function LinkedInTranslatorPage() {
               {/* Language tabs header */}
               <div className="grid grid-cols-[1fr_auto_1fr] items-center border-b border-border">
                 <div className="px-5 py-2.5">
-                  <span className="text-sm font-semibold text-primary border-b-2 border-primary pb-2.5 px-1">
+                  <span className="text-sm font-semibold text-primary">
                     {direction === 'en-to-li' ? 'Human Language' : 'LinkedIn Language'}
                   </span>
                 </div>
@@ -1041,7 +1041,7 @@ export default function LinkedInTranslatorPage() {
                   </button>
                 </div>
                 <div className="px-5 py-2.5">
-                  <span className="text-sm font-semibold text-primary border-b-2 border-primary pb-2.5 px-1">
+                  <span className="text-sm font-semibold text-primary">
                     {direction === 'en-to-li' ? 'LinkedIn Language' : 'Human Language'}
                   </span>
                 </div>
