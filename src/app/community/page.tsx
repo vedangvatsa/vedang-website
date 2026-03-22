@@ -202,9 +202,15 @@ export default function CommunityProfilePage() {
                     </CardContent>
                 </Card>
             </section>
+          </div>
+        </div>
+      </div>
 
-            <AsSeenIn />
+      <AsSeenIn />
 
+      <div className="py-8">
+        <div className="container mx-auto max-w-7xl px-4 md:px-6">
+          <div className="space-y-8">
             <section id="testimonials">
                 <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <MessageSquare className="w-6 h-6 text-primary" /> Testimonials

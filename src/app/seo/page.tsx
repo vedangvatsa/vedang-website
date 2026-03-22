@@ -22,7 +22,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { essays } from '@/lib/essays';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
-
+import { AsSeenIn } from '@/components/as-seen-in';
 
 export const metadata: Metadata = generateMetadata({
   title: pageMetadata.seo.title,
@@ -30,33 +30,6 @@ export const metadata: Metadata = generateMetadata({
   url: pageMetadata.seo.url,
   ogImageAlt: 'Vedang Vatsa - SEO & Growth Specialist',
 });
-
-const asSeenInLogos = [
-    { name: 'Inc42', logo: '/images/press/68296-business-media-company-inc42-startup-marketing.png' },
-    { name: 'KPMG', logo: '/images/press/TheStreetRoundtable_Vedang.png' },
-    { name: 'ANI', logo: '/images/press/Ani-logo-black.png' },
-    { name: 'Business Today', logo: '/images/press/bt_business_today_vedang%20vatsa-min%20(1).png' },
-    { name: 'Business Insider', logo: '/images/press/Business_Insider_2023_logo.svg.png' },
-    { name: 'Business Standard', logo: '/images/press/business-standard-logo-2.png' },
-    { name: 'Dainik Bhaskar', logo: '/images/press/Dainik_Bhaskar_Logo.png' },
-    { name: 'Decrypt', logo: '/images/press/Decrypt_logo.svg' },
-    { name: 'ET', logo: '/images/press/et-logo4px.png' },
-    { name: 'IEEE Computer', logo: '/images/press/IEEE_Computer.png' },
-    { name: 'YourStory', logo: '/images/press/image-23.webp' },
-    { name: 'The Print', logo: '/images/press/image-24.webp' },
-    { name: 'OpIndia', logo: '/images/press/image-28.webp' },
-    { name: 'IndiaAI', logo: '/images/press/image-29.webp' },
-    { name: 'Lebigdata', logo: '/images/press/image-32.webp' },
-    { name: 'Cryptonews', logo: '/images/press/image-37.webp' },
-    { name: 'TheNewsCrypto', logo: '/images/press/image-42.webp' },
-    { name: 'NDTVGadgets360', logo: '/images/press/image-48.webp' },
-    { name: 'BritishNewsNetwork', logo: '/images/press/image-58.webp' },
-    { name: 'Yourstory', logo: '/images/press/images.png' },
-    { name: 'Outlook Money', logo: '/images/press/money-logo.png' },
-    { name: 'The Tribune IPRD', logo: '/images/press/The_Tribune_India_IPRD_Indian_PR_Distribution.png' },
-    { name: 'ThePrint', logo: '/images/press/ThePrint_logo.png' },
-    { name: 'Yahoo! Finance', logo: '/images/press/Yahoo!_Finance_logo_2021%20(1).png' },
-];
 
 export default function SeoProfilePage() {
 
@@ -254,24 +227,15 @@ export default function SeoProfilePage() {
                     </CardContent>
                 </Card>
             </section>
+          </div>
+        </div>
+      </div>
 
-            <section className="py-8">
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center mb-6">As Seen In</h2>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 items-center">
-                {asSeenInLogos.map((media, index) => (
-                    <div key={index} className="flex justify-center">
-                    <Image
-                        src={media.logo}
-                        alt={`${media.name} logo`}
-                        width={120}
-                        height={40}
-                        className="object-contain dark:brightness-0 dark:invert"
-                        />
-                    </div>
-                ))}
-                </div>
-            </section>
+      <AsSeenIn />
 
+      <div className="py-8">
+        <div className="container mx-auto max-w-7xl px-4 md:px-6">
+          <div className="space-y-8">
             <section id="testimonials">
                 <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <MessageSquare className="w-6 h-6 text-primary" /> Testimonials

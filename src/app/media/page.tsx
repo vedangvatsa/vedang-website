@@ -157,9 +157,13 @@ export default function MediaPage() {
                 </CardContent>
             </Card>
           </section>
+        </div>
+      </div>
 
-          <AsSeenIn />
+      <AsSeenIn />
 
+      <div className="py-8">
+        <div className="container mx-auto px-4 md:px-6">
           <section className="py-8">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center mb-6">Speaking Engagements</h2>
             <div className="columns-2 sm:columns-3 md:columns-4 gap-4">
@@ -170,7 +174,7 @@ export default function MediaPage() {
                     alt={`Vedang Vatsa speaking at engagement ${index + 1}`}
                     width={500}
                     height={500}
-                    className="rounded-md object-cover w-full h-auto"
+                    className="rounded-xl object-cover w-full h-auto"
                     data-ai-hint="person speaking"
                   />
                 </div>
@@ -187,7 +191,7 @@ export default function MediaPage() {
                     href={mention.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group rounded-md border bg-card text-card-foreground transition-shadow duration-300 block hover:bg-muted/50 p-4"
+                    className="group rounded-xl border bg-card text-card-foreground transition-shadow duration-300 block hover:bg-muted/50 p-4"
                   >
                     <div className="flex items-start justify-between">
                         <div>

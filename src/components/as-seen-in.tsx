@@ -35,10 +35,10 @@ export function AsSeenIn() {
     <section className="py-12 bg-background">
         <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center mb-6">As Seen In</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 items-center">
-              {asSeenInLogos.map((media, index) => (
-                <div key={index} className="flex justify-center">
-                   <Image
+        <div className="flex flex-wrap justify-center gap-6 md:gap-8 items-center pb-2">
+          {asSeenInLogos.map((media, index) => (
+            <div key={index} className="flex justify-center flex-shrink-0 w-[100px] sm:w-[120px]">
+              <Image
                       src={media.logo}
                       alt={`${media.name} logo`}
                       width={120}
