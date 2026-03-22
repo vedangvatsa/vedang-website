@@ -35,7 +35,7 @@ export default function Home() {
           <p className="mx-auto mt-4 max-w-3xl text-base md:text-lg text-muted-foreground leading-relaxed">
             Founder, <Link href="https://hashtagweb3.com" className="underline hover:text-foreground">Hashtag Web3</Link> (120k community of AI & Web3 professionals)
           </p>
-          <p className="mx-auto mt-1 max-w-3xl text-sm text-muted-foreground">
+          <p className="mx-auto mt-2 max-w-3xl text-sm text-muted-foreground">
             MTech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
           </p>
           <div className="mt-8 flex justify-center">
@@ -67,49 +67,49 @@ export default function Home() {
           <h2 className="mb-8 text-center text-2xl md:text-3xl font-semibold tracking-tight">Resources</h2>
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             <Link href="/web3-101" className="group">
-              <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
+              <div className="flex h-full flex-col justify-between overflow-hidden rounded-xl border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
                 <h3 className="text-lg font-semibold mb-2">Web3 101</h3>
                 <p className="text-sm text-muted-foreground mb-4">Master blockchain, decentralization, and digital ownership.</p>
                 <MoveUpRight className="h-4 w-4 self-end text-muted-foreground" />
               </div>
             </Link>
             <Link href="/agentic-web" className="group">
-              <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
+              <div className="flex h-full flex-col justify-between overflow-hidden rounded-xl border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
                 <h3 className="text-lg font-semibold mb-2">Agentic Web</h3>
                 <p className="text-sm text-muted-foreground mb-4">Learn to build and interact with autonomous AI agents.</p>
                 <MoveUpRight className="h-4 w-4 self-end text-muted-foreground" />
               </div>
             </Link>
             <Link href="/prompt-engineering-101" className="group">
-              <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
+              <div className="flex h-full flex-col justify-between overflow-hidden rounded-xl border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
                 <h3 className="text-lg font-semibold mb-2">Prompt Engineering</h3>
                 <p className="text-sm text-muted-foreground mb-4">Master the art of communicating with Large Language Models.</p>
                 <MoveUpRight className="h-4 w-4 self-end text-muted-foreground" />
               </div>
             </Link>
             <Link href="/vibe-coding" className="group">
-              <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
+              <div className="flex h-full flex-col justify-between overflow-hidden rounded-xl border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
                 <h3 className="text-lg font-semibold mb-2">Vibe Coding</h3>
                 <p className="text-sm text-muted-foreground mb-4">Build software naturally using natural language and AI.</p>
                 <MoveUpRight className="h-4 w-4 self-end text-muted-foreground" />
               </div>
             </Link>
             <Link href="/lit" className="group">
-              <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
+              <div className="flex h-full flex-col justify-between overflow-hidden rounded-xl border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
                 <h3 className="text-lg font-semibold mb-2">LinkedIn Translator</h3>
                 <p className="text-sm text-muted-foreground mb-4">Turn honest English into perfectly crafted LinkedIn-speak. A fun parody tool.</p>
                 <MoveUpRight className="h-4 w-4 self-end text-muted-foreground" />
               </div>
             </Link>
             <Link href="/swarm-prediction" className="group">
-              <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
+              <div className="flex h-full flex-col justify-between overflow-hidden rounded-xl border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
                 <h3 className="text-lg font-semibold mb-2">Swarm Prediction</h3>
                 <p className="text-sm text-muted-foreground mb-4">Multi-agent AI debate to forecast outcomes from any data.</p>
                 <MoveUpRight className="h-4 w-4 self-end text-muted-foreground" />
               </div>
             </Link>
             <Link href="/glossary" className="group">
-              <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
+              <div className="flex h-full flex-col justify-between overflow-hidden rounded-xl border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
                 <h3 className="text-lg font-semibold mb-2">The Web3 & AI Glossary</h3>
                 <p className="text-sm text-muted-foreground mb-4">Explore our comprehensive dictionary of 100+ deep-dive technical terms, concepts, and jargon.</p>
                 <MoveUpRight className="h-4 w-4 self-end text-muted-foreground" />

@@ -96,7 +96,7 @@ export function generateMetadata(params: MetadataParams): Metadata {
     description,
     url,
     keywords,
-    ogImage = '/images/icon.png',
+    ogImage,
     ogImageAlt = 'Vedang Vatsa',
     type = 'website',
   } = params;
@@ -112,6 +112,31 @@ export function generateMetadata(params: MetadataParams): Metadata {
     }
   }
 
+  const openGraph: any = {
+    title,
+    description,
+    url,
+    type,
+  };
+
+  const twitter: any = {
+    card: 'summary_large_image',
+    title,
+    description,
+  };
+
+  if (ogImage) {
+    openGraph.images = [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: ogImageAlt,
+      },
+    ];
+    twitter.images = [ogImage];
+  }
+
   return {
     title,
     description,
@@ -119,25 +144,7 @@ export function generateMetadata(params: MetadataParams): Metadata {
     alternates: {
       canonical: url,
     },
-    openGraph: {
-      title,
-      description,
-      url,
-      type,
-      images: [
-        {
-          url: ogImage,
-          width: ogImage === '/images/icon.png' ? 256 : 1200,
-          height: ogImage === '/images/icon.png' ? 256 : 630,
-          alt: ogImageAlt,
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      images: [ogImage],
-    },
+    openGraph,
+    twitter,
   };
 }

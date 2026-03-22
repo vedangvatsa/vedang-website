@@ -116,20 +116,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: essayUrl,
       type: 'article',
       publishedTime: publishedTime,
-      images: [
-        {
-          url: imageUrl,
-          width: 256,
-          height: 256,
-          alt: essay.frontmatter.title,
-        },
-      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: essay.frontmatter.title,
       description: essay.frontmatter.summary,
-      images: [imageUrl],
     },
   };
 }
