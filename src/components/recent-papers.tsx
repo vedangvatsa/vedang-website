@@ -51,9 +51,9 @@ export function RecentPapers() {
               target={paper.url ? '_blank' : undefined}
               rel={paper.url ? 'noopener noreferrer' : undefined}
             >
-              <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-4 transition-colors duration-200 hover:border-primary/50">
+              <div className="flex h-full flex-col justify-between overflow-hidden rounded-xl border bg-card p-4 transition-colors duration-200 hover:border-primary/50">
                 <p className="font-medium relative z-10">{paper.title}</p>
-                <MoveUpRight className="h-4 w-4 self-end text-muted-foreground" />
+                <MoveUpRight className="h-4 w-4 self-end text-muted-foreground mt-4" />
               </div>
             </Link>
           ))}

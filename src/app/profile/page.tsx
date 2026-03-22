@@ -366,18 +366,17 @@ export default function ProfilePage() {
                     </Card>
                  </div>
             </section>
-
-            <AsSeenIn />
-
-            <section id="media-link" className="text-center">
-                <Button asChild size="lg">
-                    <Link href="/media">Speaking Engagements &amp; Media Mentions</Link>
-                </Button>
-            </section>
-
           </div>
         </div>
       </div>
+
+      <AsSeenIn />
+
+      <section id="media-link" className="text-center pb-16">
+          <Button asChild size="lg" className="min-w-64 px-8">
+              <Link href="/media">Speaking Engagements &amp; Media Mentions</Link>
+          </Button>
+      </section>
 
     </PageLayout>
   );

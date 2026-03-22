@@ -201,7 +201,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
           <MDXRemote source={essay.content} />
         </article>
 
-        <div className="mx-auto max-w-4xl px-4 md:px-6 mt-12">
+        <div className="mx-auto max-w-3xl px-4 md:px-6 mt-12">
             <RelatedGlossaryTerms
               essaySlug={slug}
               terms={glossaryTerms.map(t => ({ slug: t.slug, term: t.term }))}
