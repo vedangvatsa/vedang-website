@@ -20,14 +20,14 @@ export function Header() {
         <Link href="/" className="font-semibold tracking-tight text-lg">
           veda.ng
         </Link>
-        <div className="flex items-center gap-2 sm:gap-4">
-          <nav className="flex items-center space-x-2 sm:space-x-4 text-sm font-medium">
-            <Link href="/writings" className="text-foreground transition-colors hover:text-primary px-2 py-1">
+        <div className="flex items-center justify-end gap-2 sm:gap-4 ml-auto">
+          <nav className="flex items-center gap-1 sm:gap-4 text-[13px] sm:text-sm font-medium">
+            <Link href="/writings" className="text-foreground transition-colors hover:text-primary px-1.5 py-1 sm:px-2">
               Writings
             </Link>
             
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-foreground transition-colors hover:text-primary px-2 py-1 text-sm font-medium outline-none">
+              <DropdownMenuTrigger className="flex items-center gap-1 text-foreground transition-colors hover:text-primary px-1.5 py-1 sm:px-2 text-[13px] sm:text-sm font-medium outline-none">
                 Resources <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent>
@@ -57,7 +57,7 @@ export function Header() {
             </DropdownMenu>
 
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-foreground transition-colors hover:text-primary px-2 py-1 text-sm font-medium outline-none">
+              <DropdownMenuTrigger className="flex items-center gap-1 text-foreground transition-colors hover:text-primary px-1.5 py-1 sm:px-2 text-[13px] sm:text-sm font-medium outline-none">
                 About <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent>
