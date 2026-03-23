@@ -7,7 +7,7 @@ export function EssaysList({ limit }: { limit?: number }) {
   const essaysToShow = limit ? essays.slice(0, limit) : essays;
 
   return (
-    <div className="mx-auto max-w-4xl">
+    <div className="mx-auto max-w-6xl">
       <div className="flex flex-col gap-6">
         {essaysToShow.map((essay, index) => (
           <div key={essay.slug}>
