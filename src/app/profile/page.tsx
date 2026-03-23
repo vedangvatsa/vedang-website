@@ -10,6 +10,7 @@ import {
   Briefcase,
   GraduationCap,
   Heart,
+  Instagram,
   Lightbulb,
   Linkedin,
   Mail,
@@ -53,6 +54,7 @@ const personSchema = {
     'https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en',
     'https://x.com/vedangvatsa',
     'https://www.t.me/vedangvatsa',
+    'https://www.instagram.com/vedangvatsa',
   ],
   knowsAbout: ['Artificial Intelligence', 'Web3', 'Blockchain', 'Cryptocurrency', 'Community Building'],
 };
@@ -97,6 +99,9 @@ export default function ProfilePage() {
               </Link>
               <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Google Scholar">
                 <BookOpen className="h-5 w-5" />
+              </Link>
+              <Link href="https://www.instagram.com/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Instagram">
+                <Instagram className="h-5 w-5" />
               </Link>
             </div>
           </section>

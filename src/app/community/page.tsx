@@ -8,6 +8,7 @@ import {
   BookOpen,
   Briefcase,
   Globe,
+  Instagram,
   Linkedin,
   MessageSquare,
   Mic,
@@ -66,6 +67,9 @@ export default function CommunityProfilePage() {
                 </Link>
                 <Link href="https://t.me/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary flex items-center gap-1.5">
                   <Send className="h-5 w-5" />
+                </Link>
+                <Link href="https://www.instagram.com/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary flex items-center gap-1.5">
+                  <Instagram className="h-5 w-5" />
                 </Link>
               </div>
             </div>

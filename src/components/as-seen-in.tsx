@@ -5,7 +5,7 @@ const asSeenInLogos = [
     { name: 'Inc42', logo: '/images/press/68296-business-media-company-inc42-startup-marketing.png' },
     { name: 'KPMG', logo: '/images/press/TheStreetRoundtable_Vedang.png' },
     { name: 'ANI', logo: '/images/press/Ani-logo-black.png' },
-    { name: 'Business Today', logo: '/images/press/bt_business_today_vedang%20vatsa-min%20(1).png' },
+    { name: 'Business Today', logo: '/images/press/bt_business_today_vedang_vatsa.png' },
     { name: 'Business Insider', logo: '/images/press/Business_Insider_2023_logo.svg.png' },
     { name: 'Business Standard', logo: '/images/press/business-standard-logo-2.png' },
     { name: 'Dainik Bhaskar', logo: '/images/press/Dainik_Bhaskar_Logo.png' },
@@ -25,7 +25,7 @@ const asSeenInLogos = [
     { name: 'Outlook Money', logo: '/images/press/money-logo.png' },
     { name: 'The Tribune IPRD', logo: '/images/press/The_Tribune_India_IPRD_Indian_PR_Distribution.png' },
     { name: 'ThePrint', logo: '/images/press/ThePrint_logo.png' },
-    { name: 'Yahoo! Finance', logo: '/images/press/Yahoo!_Finance_logo_2021%20(1).png' },
+    { name: 'Yahoo! Finance', logo: '/images/press/Yahoo_Finance_logo.png' },
     { name: 'Startup India', logo: '/images/press/DPIIT_StartupIndia_Vedang.png' },
     { name: 'Investing.com', logo: '/images/press/investing_vedang.webp' },
 ];
@@ -35,16 +35,16 @@ export function AsSeenIn() {
     <section className="py-12 bg-background">
         <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center mb-6">As Seen In</h2>
-        <div className="flex flex-wrap justify-center gap-6 md:gap-8 items-center pb-2">
-          {asSeenInLogos.map((media, index) => (
-            <div key={index} className="flex justify-center flex-shrink-0 w-[100px] sm:w-[120px]">
-              <Image
-                      src={media.logo}
-                      alt={`${media.name} logo`}
-                      width={120}
-                      height={40}
-                      className="object-contain dark:brightness-0 dark:invert"
-                    />
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-6 md:gap-8 items-center">
+              {asSeenInLogos.map((media, index) => (
+                <div key={index} className="flex items-center justify-center">
+                  <Image
+                    src={media.logo}
+                    alt={`${media.name} logo`}
+                    width={120}
+                    height={40}
+                    className="w-full h-8 sm:h-10 object-contain dark:brightness-0 dark:invert"
+                  />
                 </div>
               ))}
             </div>
