@@ -43,6 +43,7 @@ export function AsSeenIn() {
                     alt={`${media.name} logo`}
                     width={120}
                     height={40}
+                    unoptimized={media.logo.endsWith('.svg')}
                     className="w-full h-8 sm:h-10 object-contain dark:brightness-0 dark:invert"
                   />
                 </div>
