@@ -1,0 +1,94 @@
+[
+  {
+    "id": "lit-thread",
+    "type": "thread",
+    "scheduleDate": "2026-03-25",
+    "scheduleTime": "12:57",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "LinkedIn is not a professional network. It's a language.\n\nI built a translator. Here's what it does. 🧵\n\nveda.ng/lit",
+        "image": "scripts/thread-assets/lit_1.png"
+      },
+      {
+        "text": "Nobody you know speaks like this in real life.\nYet somehow, on LinkedIn, it's the only language.\n\nSo I asked: what if we just... admitted that?",
+        "image": "scripts/thread-assets/lit_2.png"
+      },
+      {
+        "text": "My personal favourite.\n\nYou took a nap. You are not optimising anything. You were tired.\nLinkedIn disagrees.",
+        "image": "scripts/thread-assets/lit_3.png"
+      },
+      {
+        "text": "The product launch one broke me.\n\n\"Had an intimate, high-signal gathering.\" Zero people showed up. The translator felt nothing.",
+        "image": "scripts/thread-assets/lit_4.png"
+      },
+      {
+        "text": "I got arrested for fraud.\n\"Thrilled to announce I'm starting a new chapter.\"\n\nAt some point the platform became a parody of itself. I just made it official.\n\nTry it: veda.ng/lit",
+        "image": "scripts/thread-assets/lit_5.png"
+      }
+    ]
+  },
+  {
+    "id": "os-sovereignty",
+    "text": "States are trying to force identity checks into your phone's Operating System. GrapheneOS is saying no.\n\nThis isn't just about privacy. It's about who owns the hardware. If a state tells your phone when it can or can't run code, it isn't your device anymore.\n\nThe kernel is the last wall. Once it's gone, your device belongs to the government.\n\n@vedangvatsa",
+    "scheduleDate": "2026-03-25",
+    "scheduleTime": "10:22",
+    "posted": false
+  },
+  {
+    "id": "ai-labor",
+    "text": "Companies are done hiring for 'CS degrees.' They want builders who build products fast.\n\nThe hard part isn't writing code anymore; the tools handle that. The hard part is knowing what to build and why it matters.\n\nIdeas are the new code. Builders are the new engineers.\n\n@vedangvatsa",
+    "scheduleDate": "2026-03-25",
+    "scheduleTime": "18:22",
+    "posted": false
+  },
+  {
+    "id": "resource-infinity",
+    "text": "The move toward asteroid mining marks the end of zero-sum thinking.\n\nScarcity has always been a policy choice. By moving resource extraction to space, we decouple growth from planetary damage.\n\nThe next century belongs to those who look up, not down.\n\n@vedangvatsa",
+    "scheduleDate": "2026-03-26",
+    "scheduleTime": "02:22",
+    "posted": false
+  },
+  {
+    "id": "google-junk",
+    "text": "Google is purging the low-quality junk made by machines.\n\nIf you spent a decade building real expertise, you just won. The web is finally getting harder for bots to game.\n\nWhen information is free, proof of effort is the only thing with value.\n\n@vedangvatsa",
+    "scheduleDate": "2026-03-26",
+    "scheduleTime": "10:22",
+    "posted": false
+  },
+  {
+    "id": "water-air",
+    "text": "We can now pull 1,000 liters of water from dry air every day.\n\nWe don't need pipes or plants anymore. Just the air around us. This is what happens when we solve for the physical world, not just digital pixels.\n\nThe next big wealth will come from the atmosphere.\n\n@vedangvatsa",
+    "scheduleDate": "2026-03-26",
+    "scheduleTime": "18:22",
+    "posted": false
+  },
+  {
+    "id": "agentic-web-future",
+    "text": "Web 2 was about attention. Web 3 is about delegation.\n\nYou won't go online to browse. You'll go online to tell an agent to get something done. Bookings, research, deals—handled.\n\nThe human provides the goal. The machine provides the result.\n\n@vedangvatsa",
+    "scheduleDate": "2026-03-27",
+    "scheduleTime": "02:22",
+    "posted": false
+  },
+  {
+    "id": "sovereign-kernel",
+    "text": "The kernel is the new border.\n\nIf we let states bridge that gap for 'safety,' we lose the personal computer forever. A device that can't say no to its creator is not yours.\n\nEncryption is a human right. So is hardware ownership.\n\n@vedangvatsa",
+    "scheduleDate": "2026-03-27",
+    "scheduleTime": "10:22",
+    "posted": false
+  },
+  {
+    "id": "ai-agents-money",
+    "text": "AI agents can't open bank accounts, but they can hold crypto wallets.\n\nStablecoins are the native payment rail for the machine era. We're moving to a world where software does more deals than humans.\n\nThe financial web is being rewired for agents.\n\n@vedangvatsa",
+    "scheduleDate": "2026-03-27",
+    "scheduleTime": "18:22",
+    "posted": false
+  },
+  {
+    "id": "context-scarcity",
+    "text": "When context is scarce, authenticity becomes a search signal.\n\nWe are drowning in content but starving for truth. The platforms that survive will be the ones that verify, not just aggregate.\n\nTrust is the only asset that doesn't scale with compute.\n\n@vedangvatsa",
+    "scheduleDate": "2026-03-28",
+    "scheduleTime": "02:22",
+    "posted": false
+  }
+]
