@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" style="background-color: transparent; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <linearGradient id="grad-1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#8b5cf6"/><stop offset="100%" stop-color="#c084fc"/></linearGradient>
+    <linearGradient id="grad-2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#60a5fa"/></linearGradient>
+    <linearGradient id="grad-3" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#34d399"/></linearGradient>
+    <linearGradient id="grad-4" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#fbbf24"/></linearGradient>
+    <linearGradient id="grad-5" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#ef4444"/><stop offset="100%" stop-color="#f87171"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <!-- Base Grid/Bg -->
+  <rect width="1000" height="640" fill="#0f172a" rx="16" />
+  
+  <text x="500" y="65" fill="#ffffff" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="1">AGENTIC COMMERCE ECOSYSTEM</text>
+  <text x="500" y="90" fill="#94a3b8" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0.5">THE FIVE-LAYER STACK POWERING MACHINE-TO-MACHINE RETAIL</text>
+
+  <!-- Layers Mapping -->
+  <!-- 1: AI Platforms -->
+  <g transform="translate(60, 130)">
+    <rect width="880" height="74" rx="12" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-width="1.5"/>
+    <text x="210" y="42" fill="#f8fafc" font-size="18" font-weight="700">1. AI PLATFORMS</text>
+    <text x="440" y="41" fill="#cbd5e1" font-size="15">OpenAI (ChatGPT) • Google (Gemini) • Anthropic (Claude) • Microsoft</text>
+    <!-- Connecting dot -->
+    <circle cx="500" cy="74" r="4" fill="#8b5cf6" opacity="0.5" />
+  </g>
+
+  <!-- 2: Protocols -->
+  <g transform="translate(60, 224)">
+    <rect width="880" height="74" rx="12" fill="#3b82f6" opacity="0.1" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="210" y="42" fill="#f8fafc" font-size="18" font-weight="700">2. COMMERCE PROTOCOLS</text>
+    <text x="440" y="41" fill="#cbd5e1" font-size="15">UCP • ACP • MCP • A2A • x402 V2 • MPP (Stripe/Paradigm)</text>
+    <!-- Connecting dots -->
+    <circle cx="500" cy="0" r="4" fill="#3b82f6" opacity="0.5" />
+    <circle cx="500" cy="74" r="4" fill="#3b82f6" opacity="0.5" />
+  </g>
+
+  <!-- 3: Payments -->
+  <g transform="translate(60, 318)">
+    <rect width="880" height="88" rx="12" fill="#10b981" opacity="0.1" stroke="#10b981" stroke-width="1.5"/>
+    <text x="210" y="50" fill="#f8fafc" font-size="18" font-weight="700">3. PAYMENT RAILS</text>
+    
+    <text x="440" y="38" fill="#e2e8f0" font-size="14" font-weight="700">Traditional: <tspan fill="#cbd5e1" font-weight="400">Visa Trusted Agent, Mastercard Agent Pay, PayPal</tspan></text>
+    <text x="440" y="64" fill="#e2e8f0" font-size="14" font-weight="700">Crypto: <tspan fill="#cbd5e1" font-weight="400">Coinbase Agentic Wallets, Stripe/Paradigm Tempo, Solana</tspan></text>
+    <!-- Connecting dots -->
+    <circle cx="500" cy="0" r="4" fill="#10b981" opacity="0.5" />
+    <circle cx="500" cy="88" r="4" fill="#10b981" opacity="0.5" />
+  </g>
+
+  <!-- 4: Commerce Platforms -->
+  <g transform="translate(60, 426)">
+    <rect width="880" height="74" rx="12" fill="#f59e0b" opacity="0.1" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="210" y="42" fill="#f8fafc" font-size="18" font-weight="700">4. RETAIL PLATFORMS</text>
+    <text x="440" y="41" fill="#cbd5e1" font-size="15">Shopify (Agentic Storefronts) • Commercetools • Walmart • Target</text>
+    <!-- Connecting dots -->
+    <circle cx="500" cy="0" r="4" fill="#f59e0b" opacity="0.5" />
+    <circle cx="500" cy="74" r="4" fill="#f59e0b" opacity="0.5" />
+  </g>
+
+  <!-- 5: Startups -->
+  <g transform="translate(60, 520)">
+    <rect width="880" height="74" rx="12" fill="#ef4444" opacity="0.1" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="210" y="42" fill="#f8fafc" font-size="18" font-weight="700">5. AGENT STARTUPS</text>
+    <text x="440" y="41" fill="#cbd5e1" font-size="15">Wildcard • Sierra • Skyfire (KYAPay) • Cloudflare Agents SDK • Openx402</text>
+    <!-- Connecting dot -->
+    <circle cx="500" cy="0" r="4" fill="#ef4444" opacity="0.5" />
+  </g>
+
+  <!-- Connecting Lines between layers -->
+  <path d="M560,204 L560,224 M560,298 L560,318 M560,406 L560,426 M560,500 L560,520" stroke="#475569" stroke-width="2" stroke-dasharray="4,4"/>
+  
+</svg>
