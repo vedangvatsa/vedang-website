@@ -90,5 +90,34 @@
     "scheduleDate": "2026-03-28",
     "scheduleTime": "02:22",
     "posted": false
+  },
+  {
+    "id": "agentic-commerce-thread",
+    "type": "thread",
+    "scheduleDate": "2026-03-28",
+    "scheduleTime": "10:22",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "Shopping used to mean: open browser, search, compare, click, form, checkout.\n\nAI agents cut that to one step. You describe. They buy.\n\nThe agent is not a new channel. It is a new buyer. 🧵",
+        "image": "scripts/thread-assets/agentic_1.png"
+      },
+      {
+        "text": "During Cyber Week 2025, AI agents influenced 1 in 5 online orders globally.\n\nNearly half of US adults now use AI assistants regularly. But only 24% trust them to spend their money.\n\nThat gap is the entire business opportunity.",
+        "image": "scripts/thread-assets/agentic_2.png"
+      },
+      {
+        "text": "Every major company shipped a different answer to this in the last 12 months.\n\nGoogle. OpenAI. Coinbase. Stripe. Mastercard. Visa.\n\nNobody agrees on how agents should pay. Six competing standards, all live, none dominant. The one that wins becomes invisible infrastructure.",
+        "image": "scripts/thread-assets/agentic_3.png"
+      },
+      {
+        "text": "When the buyer is an algorithm, your toothpaste ad does nothing.\n\nAlgorithms don't see display ads. They read structured data. Brand loyalty disappears when the agent picks the cheaper option with the same ingredients.",
+        "image": "scripts/thread-assets/agentic_4.png"
+      },
+      {
+        "text": "The infrastructure is built. The payment rails work.\n\nWhat's still missing: only 24% of people trust an agent to spend their money. And legally, in most countries, an AI cannot sign a contract on your behalf.\n\nFull essay: veda.ng/agentic-commerce",
+        "image": "scripts/thread-assets/agentic_5.png"
+      }
+    ]
   }
 ]
