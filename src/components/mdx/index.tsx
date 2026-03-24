@@ -54,12 +54,22 @@ export function StatRow({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function Stat({ value, label, source }: { value: string; label: string; source?: string }) {
+export function Stat({ value, label, source, sourceUrl }: { value: string; label: string; source?: string; sourceUrl?: string }) {
   return (
     <div className="rounded-lg border border-border/60 bg-card p-4 text-center">
       <div className="text-2xl md:text-3xl font-bold text-primary tracking-tight">{value}</div>
       <div className="mt-1 text-xs text-muted-foreground leading-tight">{label}</div>
-      {source && <div className="mt-2 text-[10px] text-muted-foreground/60">{source}</div>}
+      {source && (
+        <div className="mt-2 text-[10px] text-muted-foreground/60">
+          {sourceUrl ? (
+            <a href={sourceUrl} target="_blank" rel="noopener noreferrer" className="hover:text-primary underline underline-offset-2 transition-colors">
+              {source}
+            </a>
+          ) : (
+            source
+          )}
+        </div>
+      )}
     </div>
   );
 }
