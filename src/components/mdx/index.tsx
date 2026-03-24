@@ -68,8 +68,8 @@ export function Stat({ value, label, source }: { value: string; label: string; s
 export function Callout({ children, type = 'info', title }: { children: React.ReactNode; type?: 'info' | 'warning' | 'insight'; title?: string }) {
   const styles = {
     info: 'border-primary/30 bg-primary/5',
-    warning: 'border-orange-500/30 bg-orange-500/5',
-    insight: 'border-emerald-500/30 bg-emerald-500/5',
+    warning: 'border-destructive/30 bg-destructive/5',
+    insight: 'border-accent/40 bg-accent/10',
   };
   const icons = {
     info: '💡',
