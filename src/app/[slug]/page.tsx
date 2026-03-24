@@ -110,6 +110,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: essay.frontmatter.title,
     description: essay.frontmatter.summary,
+    keywords: essay.frontmatter.keywords,
     alternates: {
       canonical: `/${slug}`,
     },
@@ -225,15 +226,6 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
             )}
             <span>{readingTime} min read</span>
           </div>
-          {essay.frontmatter.keywords && (
-            <div className="mt-4 flex flex-wrap gap-2">
-              {(essay.frontmatter.keywords as string[]).map((kw: string) => (
-                <span key={kw} className="inline-block rounded-full bg-primary/10 px-3 py-0.5 text-xs font-medium text-primary">
-                  {kw}
-                </span>
-              ))}
-            </div>
-          )}
         </div>
       </header>
 
