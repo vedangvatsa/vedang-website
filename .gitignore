@@ -45,3 +45,11 @@ firebase-debug.log
 firestore-debug.logvedang-website/
 vedang-website/
 .open-next/
+
+# local scratch / research files
+extract_pdfs.py
+refactor_essays.py
+remove_slop.py
+kearney.pdf
+visa.pdf
+pdf_text.txt
