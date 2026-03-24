@@ -14,7 +14,7 @@ import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import { RelatedGlossaryTerms } from '@/lib/cross-links';
 import { glossaryTerms } from '@/lib/glossary';
-import { Columns, Column, Figure, StatRow, Stat, Callout, PullQuote, Timeline, TimelineItem, SectionLabel, KeyTakeaway } from '@/components/mdx';
+import { Columns, Column, Figure, StatRow, Stat, Callout, PullQuote, Timeline, TimelineItem, SectionLabel, KeyTakeaway, EcosystemDiagram } from '@/components/mdx';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -57,6 +57,7 @@ const ESSAY_GLOSSARY_LINKS: Record<string, string[]> = {
   'in-between-state': ['agi', 'alignment'],
   'hustle-culture': ['agent', 'dao'],
   'agentic-commerce': ['agent', 'llm', 'api'],
+  'towards-the-agentic-web': ['agent', 'llm', 'rag', 'api'],
 };
 
 const GLOSSARY_LABELS: Record<string, string> = {
@@ -247,6 +248,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               TimelineItem,
               SectionLabel,
               KeyTakeaway,
+              EcosystemDiagram,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
