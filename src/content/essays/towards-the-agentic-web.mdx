@@ -12,6 +12,10 @@ The internet has gone through two major phases. The first was about reading. Sta
 
 In this phase, the web stops being a place you browse and becomes a system that acts. You state a goal and an AI agent figures out how to accomplish it. Book a trip. Research a market. Negotiate a deal. Find the cheapest energy supplier for your home. The agent breaks the task into steps, calls the right services, handles the details, and reports back. The human provides direction. The machine provides execution.
 
+<PullQuote author="The Agentic Web">
+You state a goal and an AI agent figures out how to accomplish it. The web stops being a place you browse and becomes a system that acts.
+</PullQuote>
+
 This is what is being called the Agentic Web.
 
 ## From Attention to Intention
@@ -20,13 +24,32 @@ The business model of the current internet runs on attention. Every platform, ev
 
 The Agentic Web inverts that model. Agents do not scroll. They do not get distracted by clickbait. They have objectives, and they pursue them efficiently. A travel agent bot does not care about the booking site's banner ads or loyalty program pop-ups. It queries the cheapest flights, checks availability, and moves on. This shifts the economic logic of the web from engagement to outcomes.
 
-Doc Searls coined the term [intention economy](https://cyber.harvard.edu/research/projectvrm) back in 2006, describing a world where buyers broadcast their needs and sellers compete to fill them. The technology was not ready then. Now it is. Large language models gave agents the ability to understand ambiguous requests. [Model Context Protocol](https://modelcontextprotocol.io/) (MCP), introduced by Anthropic in late 2024 and donated to the [Linux Foundation](https://linuxfoundation.org/) in December 2025, gave agents a standard way to connect to tools. As of early 2026, there are over [6,400 registered MCP servers](https://thenextweb.com/), and every major AI platform, OpenAI, Google, Microsoft, and Anthropic, has standardized around it. Google then released its own complementary protocol, the [Agent-to-Agent (A2A) protocol](https://a2a-protocol.org/latest/), in April 2025, allowing agents from different vendors to communicate and collaborate with each other. By mid-2025, over [150 organizations](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/) including Salesforce, SAP, Atlassian, and PayPal had adopted it. These two protocols together, MCP for connecting agents to tools and A2A for connecting agents to each other, are forming what some call the HTTP layer for the agent era.
+Doc Searls coined the term [intention economy](https://cyber.harvard.edu/research/projectvrm) back in 2006, describing a world where buyers broadcast their needs and sellers compete to fill them. The technology was not ready then. Now it is. Large language models gave agents the ability to understand ambiguous requests. [Model Context Protocol](https://modelcontextprotocol.io/) (MCP), introduced by Anthropic in late 2024 and donated to the [Linux Foundation](https://linuxfoundation.org/) in December 2025, gave agents a standard way to connect to tools. 
+
+<StatRow>
+  <Stat value="6,400+" label="Registered MCP servers" source="The Next Web (2026)" sourceUrl="https://thenextweb.com/" />
+  <Stat value="150+" label="A2A Protocol Adopters" source="Google Developers (2025)" sourceUrl="https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/" />
+  <Stat value="4" label="Major AI Platforms on MCP" />
+</StatRow>
+
+Every major AI platform—OpenAI, Google, Microsoft, and Anthropic—has standardized around MCP. Google then released its own complementary protocol, the [Agent-to-Agent (A2A) protocol](https://a2a-protocol.org/latest/), in April 2025, allowing agents from different vendors to communicate and collaborate with each other. By mid-2025, over 150 organizations including Salesforce, SAP, Atlassian, and PayPal had adopted it. These two protocols together, MCP for connecting agents to tools and A2A for connecting agents to each other, are forming what some call the HTTP layer for the agent era.
 
 ## What Makes an Agent Different from a Chatbot
 
 The distinction matters because it changes what computers can do for you.
 
-A chatbot waits for a prompt and answers it. You type a question, you get a response. The interaction ends there. An agent receives a goal and pursues it across multiple steps. It can call APIs, browse websites, run code, query databases, and communicate with other agents. It remembers context across those steps. It decides when to ask for clarification and when to proceed.
+<Columns>
+<Column>
+<Callout type="info" title="The Chatbot Paradigm">
+A chatbot waits for a prompt and answers it. You type a question, you get a response. The interaction ends there. It operates entirely as a reactive conversational interface, requiring continuous micro-management from the user to achieve multi-step outcomes.
+</Callout>
+</Column>
+<Column>
+<Callout type="insight" title="The Agent Paradigm">
+An agent receives a goal and pursues it across multiple steps. It calls APIs, browses websites, runs code, and queries databases. It remembers context, decides when to ask for clarification, and loops its own reasoning until the human's objective is completed.
+</Callout>
+</Column>
+</Columns>
 
 The key capabilities are perception (understanding its digital environment), reasoning (breaking a goal into steps), action (executing those steps using tools), and learning (improving from outcomes over time). These are not hypothetical. [OpenAI's Operator](https://openai.com/index/introducing-operator/), [Google's Project Mariner](https://deepmind.google/technologies/project-mariner/), and startups like [Genspark's Super Agent](https://www.genspark.ai/) are all shipping products that operate this way.
 
@@ -48,7 +71,14 @@ One of the most concrete intersections between AI agents and blockchain is payme
 
 Coinbase launched [Agentic Wallets](https://www.coinbase.com/blog/introducing-agentic-wallets) in February 2026, the first wallet infrastructure built specifically for AI agents. These wallets allow agents to hold stablecoins like USDC, swap tokens, pay for API services, and execute financial operations without human intervention. The private keys sit inside Trusted Execution Environments with programmable guardrails like spending limits and transaction screening.
 
-Central to this is the [x402 protocol](https://www.x402.org/), also built by Coinbase, which revives the old HTTP 402 "Payment Required" status code. It allows AI agents to pay for web services automatically using stablecoins, without accounts, without sessions, without authentication flows. The protocol has already processed over [50 million machine-to-machine transactions](https://www.coinbase.com/blog/introducing-agentic-wallets).
+<StatRow>
+  <Stat value="50M+" label="Machine-to-machine TXs" source="x402 Protocol" sourceUrl="https://www.coinbase.com/blog/introducing-agentic-wallets" />
+  <Stat value="0" label="KYC Checks Required" />
+</StatRow>
+
+<Callout type="insight" title="The HTTP 402 Revival">
+Central to this is the [x402 protocol](https://www.x402.org/), also built by Coinbase, which revives the old HTTP 402 "Payment Required" status code. It allows AI agents to pay for web services automatically using stablecoins, without accounts, without sessions, and without authentication flows. The protocol has already processed over 50 million machine-to-machine transactions.
+</Callout>
 
 Coinbase CEO Brian Armstrong and Binance founder Changpeng Zhao have both predicted that AI agents will soon execute more financial transactions than humans. The logic is straightforward. Agents operate at machine speed, handle micro-transactions that are too small for credit card fees, and run around the clock. Traditional payment rails were designed for humans transacting a few times a day. Agent commerce may involve thousands of small payments per hour, buying API calls, data feeds, compute time, and services from other agents.
 
@@ -56,7 +86,14 @@ The agent-to-agent transaction layer is still early, but it is being built on in
 
 ## The Adoption Arc
 
-[Gartner predicts](https://www.gartner.com/en/newsroom/press-releases) that by the end of 2026, 40% of enterprise applications will embed task-specific AI agents, up from less than 5% in 2025. The global AI agents market, estimated at around [$8 billion in 2025](https://www.grandviewresearch.com/industry-analysis/ai-agents-market-report), is projected to reach over $50 billion by 2030. [79% of organizations](https://towardsai.net/) are already deploying AI agents in some capacity, and 88% plan to increase their AI budgets in the next twelve months.
+<StatRow>
+  <Stat value="40%" label="Enterprise apps w/ agents" source="Gartner (2026)" sourceUrl="https://www.gartner.com/en/newsroom/press-releases" />
+  <Stat value="$50B" label="Agent Market Size by 2030" source="Grand View Research" sourceUrl="https://www.grandviewresearch.com/industry-analysis/ai-agents-market-report" />
+  <Stat value="79%" label="Orgs deploying AI agents" source="Towards AI" sourceUrl="https://towardsai.net/" />
+  <Stat value="56%" label="Job tasks accelerated" source="OpenAI / UPenn" sourceUrl="https://arxiv.org/abs/2303.10130" />
+</StatRow>
+
+[Gartner predicts](https://www.gartner.com/en/newsroom/press-releases) that by the end of 2026, 40% of enterprise applications will embed task-specific AI agents, up from less than 5% in 2025. The global AI agents market is projected to reach over $50 billion by 2030. 79% of organizations are already deploying AI agents in some capacity, and 88% plan to increase their AI budgets in the next twelve months.
 
 The adoption is not abstract. [Salesforce eliminated 4,000 customer support positions](https://builtin.com/articles/ai-washing-layoffs) in early 2026, citing agentic AI efficiency. Duolingo stopped using human contractors for tasks AI could handle. A [study by OpenAI and the University of Pennsylvania](https://arxiv.org/abs/2303.10130) found that large language models can accelerate the completion of roughly 15% of U.S. job tasks without loss of quality. When additional tools are integrated, that figure rises to between 47% and 56%.
 
@@ -74,13 +111,17 @@ Settlement networks provide the rails for agent transactions. [Solana](https://s
 
 Data marketplaces like [Ocean Protocol](https://oceanprotocol.com/) and [Snowflake Marketplace](https://www.snowflake.com/en/data-cloud/marketplace/) let agents buy and sell verified datasets. A financial planning agent might purchase market analysis data. A logistics agent might access real-time shipping information. The quality and availability of data will increasingly determine how well agents perform.
 
+<SectionLabel>Risks & Challenges</SectionLabel>
+
 ## What Needs to Go Right
 
 Several things can go wrong with this transition.
 
 Trust is the most obvious challenge. Delegating important tasks to autonomous software requires confidence that the software will do what you intended, not just what you literally asked for. This is the alignment problem applied to practical daily tasks. An agent told to "find me a cheap flight" might book a 36-hour journey with three connections. A well-designed agent asks clarifying questions. A poorly designed one just optimizes for the literal objective.
 
-Security is another. An agent with access to your email, calendar, bank account, and crypto wallet is a very attractive target for attackers. [Zero-trust architectures](https://www.nist.gov/publications/zero-trust-architecture), robust permissioning systems, and sandboxed execution environments are not optional features. They are fundamental requirements.
+<Callout type="warning" title="Security & Sandboxing">
+An agent with access to your email, calendar, bank account, and crypto wallet is a very attractive target for attackers. [Zero-trust architectures](https://www.nist.gov/publications/zero-trust-architecture), robust permissioning systems, and sandboxed execution environments are not optional features. They are fundamental requirements.
+</Callout>
 
 Concentration risk is real. The companies that build the best foundational models and agentic platforms may end up controlling the infrastructure that all economic activity flows through. If agents become the primary way people interact with digital services, then whoever controls the agents controls the access point. This is the same platform-monopoly problem that Web2 created, potentially repeated at a deeper level.
 
