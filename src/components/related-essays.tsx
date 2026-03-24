@@ -4,20 +4,20 @@ import { essays } from '@/lib/essays';
 
 // AI-related topic keywords for intelligent linking
 const AI_TOPICS = {
-  'ai-superintelligence-timeline': ['artificial-intuition', 'are-we-in-a-simulation', 'governance-in-the-age-of-agi', 'rationality-in-ai'],
-  'artificial-intuition': ['ai-superintelligence-timeline', 'rationality-in-ai', 'the-ai-agent-economy'],
-  'are-we-in-a-simulation': ['ai-superintelligence-timeline', 'artificial-intuition'],
-  'the-ai-agent-economy': ['artificial-intuition', 'the-attention-refinery', 'programmable-trust'],
-  'computational-constitutions': ['api-states', 'governance-in-the-age-of-agi', 'programmable-trust'],
-  'api-states': ['computational-constitutions', 'governance-in-the-age-of-agi'],
-  'computational-social-science-at-scale': ['artificial-intuition', 'rationality-in-ai', 'the-ai-agent-economy'],
-  'governance-in-the-age-of-agi': ['ai-superintelligence-timeline', 'computational-constitutions', 'api-states'],
-  'programmable-trust': ['computational-constitutions', 'api-states', 'the-ai-agent-economy'],
-  'rationality-in-ai': ['artificial-intuition', 'ai-superintelligence-timeline', 'computational-social-science-at-scale'],
-  'ambient-intelligence': ['artificial-intuition', 'the-ai-agent-economy', 'synthetic-empathy'],
+  'asi-timeline': ['artificial-intuition', 'simulation-hypothesis', 'agi-governance', 'rationality-in-ai'],
+  'artificial-intuition': ['asi-timeline', 'rationality-in-ai', 'ai-agent-economy'],
+  'simulation-hypothesis': ['asi-timeline', 'artificial-intuition'],
+  'ai-agent-economy': ['artificial-intuition', 'attention-refinery', 'programmable-trust'],
+  'computational-constitutions': ['api-states', 'agi-governance', 'programmable-trust'],
+  'api-states': ['computational-constitutions', 'agi-governance'],
+  'computational-social-science': ['artificial-intuition', 'rationality-in-ai', 'ai-agent-economy'],
+  'agi-governance': ['asi-timeline', 'computational-constitutions', 'api-states'],
+  'programmable-trust': ['computational-constitutions', 'api-states', 'ai-agent-economy'],
+  'rationality-in-ai': ['artificial-intuition', 'asi-timeline', 'computational-social-science'],
+  'ambient-intelligence': ['artificial-intuition', 'ai-agent-economy', 'synthetic-empathy'],
   'synthetic-empathy': ['ambient-intelligence', 'artificial-intuition'],
-  'the-attention-refinery': ['the-ai-agent-economy', 'the-cognitive-load-crisis'],
-  'the-cognitive-load-crisis': ['the-attention-refinery', 'digital-monasticism'],
+  'attention-refinery': ['ai-agent-economy', 'cognitive-load'],
+  'cognitive-load': ['attention-refinery', 'digital-monasticism'],
 };
 
 export function RelatedEssays({ currentSlug }: { currentSlug: string }) {

@@ -2,6 +2,7 @@
 import { essays } from '@/lib/essays';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import remarkGfm from 'remark-gfm';
 import { PageLayout } from '@/components/page-layout';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 import fs from 'fs';
@@ -13,6 +14,7 @@ import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import { RelatedGlossaryTerms } from '@/lib/cross-links';
 import { glossaryTerms } from '@/lib/glossary';
+import { Columns, Column, Figure, StatRow, Stat, Callout, PullQuote, Timeline, TimelineItem, SectionLabel, KeyTakeaway } from '@/components/mdx';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -22,38 +24,39 @@ const essaysDirectory = path.join(process.cwd(), 'src', 'content', 'essays');
 
 // Maps essay slugs to relevant glossary term slugs for internal linking
 const ESSAY_GLOSSARY_LINKS: Record<string, string[]> = {
-  'ai-superintelligence-timeline': ['agi', 'llm', 'alignment', 'transformer'],
+  'asi-timeline': ['agi', 'llm', 'alignment', 'transformer'],
   'artificial-intuition': ['llm', 'embeddings', 'rlhf', 'agent'],
-  'are-we-in-a-simulation': ['agi', 'llm'],
-  'the-ai-agent-economy': ['agent', 'llm', 'defi', 'dao'],
+  'simulation-hypothesis': ['agi', 'llm'],
+  'ai-agent-economy': ['agent', 'llm', 'defi', 'dao'],
   'computational-constitutions': ['smart-contract', 'dao', 'zero-knowledge-proof'],
   'api-states': ['api', 'smart-contract', 'blockchain', 'dao'],
-  'computational-social-science-at-scale': ['llm', 'agent', 'rag'],
-  'governance-in-the-age-of-agi': ['agi', 'dao', 'alignment', 'constitutional-ai'],
+  'computational-social-science': ['llm', 'agent', 'rag'],
+  'agi-governance': ['agi', 'dao', 'alignment', 'constitutional-ai'],
   'programmable-trust': ['zero-knowledge-proof', 'smart-contract', 'blockchain', 'oracle'],
   'rationality-in-ai': ['alignment', 'rlhf', 'constitutional-ai', 'llm'],
   'ambient-intelligence': ['agent', 'multimodal-ai', 'embeddings'],
   'synthetic-empathy': ['llm', 'rlhf', 'multimodal-ai'],
-  'the-attention-refinery': ['agent', 'llm'],
-  'the-cognitive-load-crisis': ['llm', 'rag'],
+  'attention-refinery': ['agent', 'llm'],
+  'cognitive-load': ['llm', 'rag'],
   'digital-monasticism': ['agent', 'llm'],
-  'the-dark-forest-internet': ['zero-knowledge-proof', 'blockchain', 'ipfs'],
-  'an-internet-of-lies': ['zero-knowledge-proof', 'blockchain', 'merkle-tree'],
+  'dark-forest-internet': ['zero-knowledge-proof', 'blockchain', 'ipfs'],
+  'internet-of-lies': ['zero-knowledge-proof', 'blockchain', 'merkle-tree'],
   'pseudonymous-agency': ['zero-knowledge-proof', 'wallet', 'blockchain'],
-  'the-god-protocol': ['agi', 'alignment', 'constitutional-ai'],
-  'the-plurality-trap': ['agi', 'multimodal-ai', 'embeddings'],
+  'god-protocol': ['agi', 'alignment', 'constitutional-ai'],
+  'plurality-trap': ['agi', 'multimodal-ai', 'embeddings'],
   'sacred-algorithms': ['alignment', 'constitutional-ai', 'rlhf'],
-  'the-substrate-shift': ['ipfs', 'webassembly', 'edge-computing'],
-  'the-mesh-economy': ['defi', 'dao', 'ipfs', 'blockchain'],
-  'the-simulation-layer': ['agent', 'llm', 'rag'],
-  'the-singularity-paradox': ['agi', 'llm', 'alignment'],
-  'what-is-the-singularity': ['agi', 'llm', 'transformer'],
-  'the-intuitive-singularity': ['agi', 'llm', 'embeddings'],
-  'tracing-blockchains-journey': ['blockchain', 'smart-contract', 'defi', 'consensus-mechanism'],
-  'the-twilight-economy': ['agent', 'llm', 'dao'],
-  'the-sensory-internet': ['multimodal-ai', 'agent', 'embeddings'],
-  'the-in-between-state': ['agi', 'alignment'],
-  'hustle-culture-is-a-cage': ['agent', 'dao'],
+  'substrate-shift': ['ipfs', 'webassembly', 'edge-computing'],
+  'mesh-economy': ['defi', 'dao', 'ipfs', 'blockchain'],
+  'simulation-layer': ['agent', 'llm', 'rag'],
+  'singularity-paradox': ['agi', 'llm', 'alignment'],
+  'singularity': ['agi', 'llm', 'transformer'],
+  'intuitive-singularity': ['agi', 'llm', 'embeddings'],
+  'blockchain-journey': ['blockchain', 'smart-contract', 'defi', 'consensus-mechanism'],
+  'twilight-economy': ['agent', 'llm', 'dao'],
+  'sensory-internet': ['multimodal-ai', 'agent', 'embeddings'],
+  'in-between-state': ['agi', 'alignment'],
+  'hustle-culture': ['agent', 'dao'],
+  'agentic-commerce': ['agent', 'llm', 'api'],
 };
 
 const GLOSSARY_LABELS: Record<string, string> = {
@@ -136,8 +139,14 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
   const datePublished = essay.frontmatter.date ? new Date(essay.frontmatter.date).toISOString() : new Date().toISOString();
   const dateModified = essay.frontmatter.updated ? new Date(essay.frontmatter.updated).toISOString() : datePublished;
 
-  // Calculate word count from content
-  const wordCount = essay.content.split(/\s+/).length;
+  // Calculate word count from content (strip MDX/JSX tags for accurate reading time)
+  const plainText = essay.content
+    .replace(/<[^>]+>/g, '')      // strip HTML/JSX tags
+    .replace(/\{[^}]+\}/g, '')    // strip JSX expressions
+    .replace(/^---[\s\S]*?---/m, '') // strip frontmatter
+    .replace(/!\[.*?\]\(.*?\)/g, '') // strip image markdown
+    .replace(/\[([^\]]+)\]\(.*?\)/g, '$1'); // keep link text
+  const wordCount = plainText.split(/\s+/).filter(Boolean).length;
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -179,6 +188,8 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
     ],
   };
 
+  const readingTime = Math.ceil(wordCount / 250);
+
   return (
     <PageLayout>
        <script
@@ -190,18 +201,82 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
         { name: essay.frontmatter.title, url: `https://veda.ng/${slug}` },
       ]} />
 
-      <div className="py-8">
-        <article className="prose dark:prose-invert mx-auto px-4 md:px-6">
-          <h1>{essay.frontmatter.title}</h1>
-          <p className="text-sm text-muted-foreground">
-            By <a href="/profile" className="hover:underline">Vedang Vatsa</a>
-            {essay.frontmatter.date && <> &middot; Published: {new Date(essay.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</>}
-            {essay.frontmatter.updated && <> &middot; Updated: {new Date(essay.frontmatter.updated).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</>}
-          </p>
-          <MDXRemote source={essay.content} />
+      {/* ─── Report Hero ─── */}
+      <header className="border-b border-border/40 bg-secondary/20">
+        <div className="mx-auto max-w-6xl px-4 md:px-6 py-10 md:py-16">
+          <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">
+            <Link href="/writings" className="hover:text-foreground transition-colors">Essays</Link>
+            <span>/</span>
+            <span className="text-foreground">{essay.frontmatter.title}</span>
+          </div>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+            {essay.frontmatter.title}
+          </h1>
+          {essay.frontmatter.summary && (
+            <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl leading-relaxed">
+              {essay.frontmatter.summary}
+            </p>
+          )}
+          <div className="mt-6 flex flex-wrap items-center gap-x-2 gap-y-2 text-sm text-muted-foreground">
+            <Link href="/profile" className="font-medium text-foreground hover:text-primary transition-colors">Vedang Vatsa</Link>
+            <span>·</span>
+            {essay.frontmatter.date && (
+              <><span>{new Date(essay.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span><span>·</span></>
+            )}
+            <span>{readingTime} min read</span>
+          </div>
+          {essay.frontmatter.keywords && (
+            <div className="mt-4 flex flex-wrap gap-2">
+              {(essay.frontmatter.keywords as string[]).map((kw: string) => (
+                <span key={kw} className="inline-block rounded-full bg-primary/10 px-3 py-0.5 text-xs font-medium text-primary">
+                  {kw}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      </header>
+
+      {/* ─── Report Body ─── */}
+      <div className="py-10 md:py-14">
+        <article className="report-article prose dark:prose-invert prose-img:rounded-lg prose-table:w-full prose-headings:tracking-tight prose-p:leading-relaxed prose-p:text-[15px] md:prose-p:text-base max-w-6xl mx-auto px-4 md:px-6">
+          <MDXRemote
+            source={essay.content}
+            options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+            components={{
+              Columns,
+              Column,
+              Figure,
+              StatRow,
+              Stat,
+              Callout,
+              PullQuote,
+              Timeline,
+              TimelineItem,
+              SectionLabel,
+              KeyTakeaway,
+              img: (props: any) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  {...props}
+                  alt={props.alt || ''}
+                  className="rounded-lg shadow-sm border border-border/30"
+                  style={{
+                    maxWidth: '640px',
+                    width: '100%',
+                    height: 'auto',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    display: 'block',
+                    ...props.style,
+                  }}
+                />
+              ),
+            }}
+          />
         </article>
 
-        <div className="mx-auto max-w-3xl px-4 md:px-6 mt-12">
+        <div className="mx-auto max-w-6xl px-4 md:px-6 mt-16">
             <RelatedGlossaryTerms
               essaySlug={slug}
               terms={glossaryTerms.map(t => ({ slug: t.slug, term: t.term }))}

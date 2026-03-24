@@ -1,0 +1,353 @@
+---
+title: 'Agentic Commerce'
+summary: >-
+  A detailed look at agentic commerce - where AI agents shop on your behalf.
+  Covers the ecosystem, protocols, business model disruption, revenue shifts,
+  trust challenges, fraud risks, and what this means for consumers
+  and businesses.
+date: '2026-03-24'
+author: 'Vedang Vatsa'
+keywords: ['agentic commerce', 'AI agents', 'e-commerce', 'x402', 'UCP', 'ACP', 'MPP', 'MCP', 'A2A']
+---
+
+<SectionLabel>Introduction</SectionLabel>
+
+## What is agentic commerce?
+
+Agentic commerce is when AI agents handle shopping on your behalf. You tell an agent what you want, and it finds products, compares prices across stores, checks reviews, places the order using a tokenized payment method, and tracks delivery. You never open a browser or fill out a checkout form.
+
+This is not another chatbot recommending products. In traditional e-commerce, you browse, compare, and click. In agentic commerce, you say "get me running shoes under $150, good for flat feet, delivered by Friday" and the agent searches Nike, Amazon, and specialty retailers simultaneously, weighs price against reviews and shipping speed, and completes checkout. You go from *doing the shopping* to *describing what you want*.
+
+Consider a practical example. You accept a job in a new city and need to relocate your family. Today, that means weeks of juggling real estate listings, moving company quotes, utility transfers, school research, and furniture shopping across dozens of websites. In an agentic world, you describe your budget, commute preferences, kids' school requirements, and the agent handles the rest. It scans rental listings, cross-references commute times, identifies neighborhoods with the right schools, gets moving quotes, negotiates rates, schedules utility transfers, and coordinates furniture deliveries to arrive the day you move in. What used to be a project spanning weeks of browser tabs and phone calls collapses into a series of conversations over a few days.
+
+The shift is structural. Each prior wave of commerce technology (web storefronts in the 2000s, mobile commerce in the 2010s, social commerce in the 2020s) added a new channel. Agentic commerce does something different: it removes the human from the transaction loop entirely. The agent is not a new channel. It is a new buyer.
+
+<Callout type="insight" title="Why now?">
+Three things converged in 2025-2026. Large language models got good enough to parse nuanced shopping intent and make reasonable purchase decisions. Google, OpenAI, and Stripe shipped open commerce protocols so agents can talk to any merchant through a standard API. And payment infrastructure caught up: Visa, Mastercard, PayPal, Coinbase, and Stripe each built dedicated products for agent-initiated transactions, including crypto-native protocols like x402 that let machines pay machines. The adoption curve could be faster than prior platform shifts because agents traverse the same digital paths as human shoppers, riding on rails already laid by two decades of e-commerce.
+</Callout>
+
+
+## What has already shipped
+
+Every major platform and payment network has shipped agent commerce products in the past twelve months. The pace has been remarkable.
+
+<Timeline>
+<TimelineItem date="April 2025" title="Mastercard Agent Pay">
+A payment framework where the buyer is a machine, not a person clicking buttons. Uses tokenized credentials scoped per-agent and per-merchant.
+</TimelineItem>
+<TimelineItem date="May 2025" title="Coinbase x402 Protocol">
+Revived the dormant HTTP 402 "Payment Required" status code to enable machine-to-machine stablecoin payments over standard HTTP. An agent requests a resource, gets a 402 response with payment instructions (amount, asset, wallet address), sends a cryptographically signed stablecoin transaction, and gets access. No accounts, no API keys, no subscriptions needed. Cloudflare joined as a founding member of the x402 Foundation.
+</TimelineItem>
+<TimelineItem date="May 2025" title="PayPal × Perplexity">
+Checkout directly inside AI search results. You ask Perplexity a shopping question and can buy without leaving the conversation.
+</TimelineItem>
+<TimelineItem date="September 2025" title="ChatGPT In-Chat Purchasing">
+In-chat purchasing powered by the Agentic Commerce Protocol (ACP), co-built with Stripe.
+</TimelineItem>
+<TimelineItem date="November 2025" title="Visa Trusted Agent Protocol">
+APIs for integrating payment tools into AI agent apps. Visa now blocks over 500 fraudulent agent transactions per minute.
+</TimelineItem>
+<TimelineItem date="December 2025" title="Shopify Agentic Storefronts">
+Merchants sell products inside AI conversations on ChatGPT, Google, and Microsoft Copilot. Three tools: Checkout Kit, Shopify Catalog, Universal Cart.
+</TimelineItem>
+<TimelineItem date="December 2025" title="x402 V2">
+Multi-chain support (Base, Ethereum, Solana, Polygon), wallet-based identity for reusable sessions, and automatic service discovery.
+</TimelineItem>
+<TimelineItem date="January 2026" title="Google Universal Commerce Protocol">
+Open standard co-developed with Shopify, Walmart, Target, and Etsy. Powers "Buy for me" in Google Search AI Mode and the Gemini app.
+</TimelineItem>
+<TimelineItem date="March 2026" title="Stripe + Paradigm launch MPP">
+Machine Payments Protocol: an open standard supporting stablecoins, card payments (via Visa), and Bitcoin Lightning. Built on their new Tempo blockchain with sub-second finality. Backed by Anthropic, OpenAI, Mastercard, Shopify, and DoorDash.
+</TimelineItem>
+<TimelineItem date="March 2026" title="Coinbase Agentic Wallets">
+Wallet infrastructure built specifically for AI agents. Agents can spend, earn, and trade autonomously using x402 and stablecoins.
+</TimelineItem>
+<TimelineItem date="March 2026" title="Cloudflare Agents SDK adds payments">
+Native support for both x402 and MPP. Any developer can add agent payments to their Cloudflare Worker in a few lines of code.
+</TimelineItem>
+<TimelineItem date="March 2026" title="OpenAI pivots strategy">
+Scaled back direct in-chat checkout, moved toward app-based integrations where merchants own the final purchase step. Signals that controlling discovery matters more than owning checkout.
+</TimelineItem>
+</Timeline>
+
+<Columns>
+<Column>
+
+<Figure src="/images/essays/agentic-commerce/mastercard-agentpay.png" alt="Mastercard Agent Pay announcement" caption="Mastercard's Agent Pay launch" source="mastercard.com" sourceUrl="https://www.mastercard.com/global/en/news-and-trends/press/2025/april/mastercard-unveils-agent-pay.html" />
+
+</Column>
+<Column>
+
+<Figure src="/images/essays/agentic-commerce/tobi-tweet.png" alt="Tobi Lutke tweet on agentic commerce" caption="Shopify CEO on agents as a shopping channel" source="@tobi on X" sourceUrl="https://x.com/tobi/status/1952800271257706676" />
+
+</Column>
+</Columns>
+
+<KeyTakeaway>
+The most interesting development is the split between traditional payment rails (Visa, Mastercard, PayPal) and crypto-native protocols (x402, MPP). Traditional players tokenize existing card networks for agents. Coinbase and Stripe are betting that agents will pay each other in stablecoins over HTTP, bypassing card networks entirely. Both approaches are live and in production. The market has not picked a winner.
+</KeyTakeaway>
+
+<SectionLabel>Protocols</SectionLabel>
+
+## The protocol layer
+
+The pace of protocol development is what separates this from prior hype cycles. Six interoperability standards are driving real adoption:
+
+**Model Context Protocol (MCP)**, created by Anthropic, standardizes how AI agents connect to external tools and data sources. Unlike one-off API integrations, MCP provides persistent, structured communication. An agent retains memory, reasoning, and objectives across environments. For commerce, this means a shopping agent can maintain context about your preferences, price sensitivity, and past purchases across every merchant it interacts with, rather than starting from scratch each time.
+
+**Agent-to-Agent Protocol (A2A)**, from Google, enables autonomous agents to coordinate and negotiate with each other directly, regardless of vendor or architecture. Your shopping agent communicates with a retailer's commerce agent through standardized JSON-RPC and HTTP. This supports long-running tasks (like finding the best price over several days), dynamic capability discovery (one agent learning what another can do), and multimodal collaboration. The practical result is that a buyer's agent and a seller's agent can reach agreement on price, delivery terms, and return policy in seconds, at machine speed.
+
+**Agent Payments Protocol (AP2)**, also from Google, creates cryptographically signed mandates that link user intent, shopping cart, and payment into a single auditable chain. When an agent makes a purchase, the intent ("buy this specific camera for under $800") is cryptographically bound to the transaction. This creates accountability and reduces dispute risk: if something goes wrong, the signed mandate shows exactly what was authorized.
+
+**Agentic Commerce Protocol (ACP)**, built by OpenAI and Stripe, powers in-chat purchasing in ChatGPT. It connects the conversation layer (where intent is expressed) directly to payment processing. The merchant receives a structured order through Stripe's infrastructure, and the user sees a purchase confirmation without leaving the chat.
+
+**x402 and MPP** represent the crypto-native path. x402 operates at the HTTP layer: request a resource, get a 402 status code with payment details, send a signed stablecoin transaction in the HTTP header, receive the resource. MPP is the multi-rail version: stablecoins, card payments, and Lightning through one protocol. Both are designed for machines paying machines, with no human-oriented checkout flow.
+
+**Computer use agents** (Anthropic's Claude, OpenAI's Operator) take a different approach entirely. Instead of using structured APIs, these agents control a mouse and keyboard to navigate existing websites built for humans. This is particularly valuable where merchants have not yet built agent-ready APIs. The agent fills out forms, clicks buttons, and completes checkout the same way a person would, just faster.
+
+<Callout type="info" title="The x402 model is different">
+In the x402 model, payment happens at the HTTP layer. An agent requests a resource, gets back a 402 status code with payment instructions (price, accepted stablecoins, wallet address), constructs a signed transaction, and sends it in an HTTP header. The server verifies on-chain, then returns the resource. No checkout flow, no cart, no account. This is closer to how machines naturally transact: request, pay, receive.
+</Callout>
+
+
+## How a transaction works
+
+A typical agentic purchase has six steps. You state what you want ("order two bags of Colombian coffee beans, same brand as last time"). The agent checks your purchase history, brand preferences, and budget. It searches multiple stores simultaneously and compares options by weighing price, shipping speed, reviews, and your past preferences.
+
+When it finds the best match, it completes checkout through tokenized payment using Visa, Mastercard, or PayPal agent protocols. Your card details are never exposed to the agent. After purchase, it tracks shipping, handles returns if needed, and updates its model of your preferences for next time.
+
+McKinsey identified three interaction models ([mckinsey.com](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/agentic-commerce)). In the **agent-to-site** model, your agent talks directly to a merchant's website or API. The merchant may not even know the buyer is an AI. In the **agent-to-agent** model, your shopping agent negotiates with a retailer's commerce agent, both communicating at machine speed through structured protocols. In the **brokered** model, an intermediary agent sits between you and multiple merchants, querying dozens of stores simultaneously.
+
+What makes these models different from prior automation is the feedback loop. Each purchase teaches the agent something. After three coffee orders, it knows your preferred roast, your price ceiling, and how fast you go through a bag. By the tenth order, it reorders before you run out. This is predictive commerce: the agent makes decisions based on patterns you never explicitly described.
+
+
+## The ecosystem
+
+Agentic commerce runs on five layers, each depending on the ones above and below it.
+
+<Figure src="/images/essays/agentic-commerce/ecosystem.png" alt="Agentic commerce ecosystem layers" caption="Five-layer stack powering agentic commerce" wide />
+
+<Columns>
+<Column>
+
+**AI Platforms** sit at the top: OpenAI (ChatGPT), Google (Gemini), Amazon (Alexa+), Perplexity, and Microsoft (Copilot). These are the surfaces where consumers express intent. Half of all consumers already use AI for internet search, and what starts as discovery increasingly extends to checkout.
+
+**Commerce Protocols** let agents talk to stores. Five main ones: ACP (OpenAI + Stripe), UCP (Google + Shopify/Walmart/Target), MCP (Anthropic), A2A (Google agent-to-agent), and x402/MPP (Coinbase/Stripe + Paradigm) for machine-to-machine payments. The lack of a single standard is intentional: each protocol optimizes for a different architecture.
+
+**Payment Rails** handle the money. Two competing approaches: traditional tokenized cards (Visa, Mastercard, PayPal) and crypto-native stablecoin payments (x402, MPP on Tempo/Base/Solana).
+
+</Column>
+<Column>
+
+**Commerce Platforms** power the merchant side: Shopify, BigCommerce, Commercetools, and Salesforce are retooling their backends for agent-first shopping. The transition requires exposing product catalogs, inventory, and pricing through structured APIs rather than HTML pages designed for browsers.
+
+**Agent Startups** build specialized tools: Wildcard does merchant integration protocols, Sierra handles AI customer service, Anglera manages product data for AI, Operand builds AI decision systems, and Cloudflare provides the infrastructure layer with native x402 and MPP support. Skyfire launched Agent Checkout with KYAPay, an open standard that gives AI agents verified identities and programmable payment capabilities.
+
+</Column>
+</Columns>
+
+<Figure src="/images/essays/agentic-commerce/google-ucp.png" alt="Google UCP announcement" caption="Google's UCP launch" source="blog.google" sourceUrl="https://blog.google/products-and-platforms/products/shopping/ucp-updates/" />
+
+### The Artemis Market Map
+
+The rapid growth of these layers is visible in tracking the startup ecosystem. According to the **Agentic Commerce Market Map** by Artemis Analytics, there are already over 173 companies operating across 14 distinct categories in the space. 
+
+The landscape is currently heavily weighted toward foundational infrastructure rather than consumer-facing apps, indicating a robust building phase:
+- **Agent Frameworks & Tooling (33 companies)**: The largest category, building the core plumbing (e.g., MCP, A2A, thirdweb, Questflow, Privy).
+- **Payment Infrastructure (25 companies)**: Establishing the new rails (e.g., Stripe, Visa, Crossmint, Reveel, Superfluid).
+- **Facilitators & Discovery (37 companies)**: Helping agents find products and execute tasks (e.g., Coinbase, PayAI, Openx402, UCP).
+- **Wallets & Account Abstraction (32 companies)**: Managing agent identity and balances (e.g., Phantom, Dynamic, ERC-4337, Rhinestone).
+- **Data & Analytics (17 companies)**: Providing on-chain and off-chain insights (e.g., Dune, Nansen, Quicknode).
+- **Identity & Trust (17 companies)**: Verifying agents and managing permissions (e.g., Mastercard, AgentProof, Cred Protocol).
+
+With only 7 companies primarily classified as "User Interfaces" (like ChatGPT and Claude), the market has clearly not yet picked a winning consumer access point. The underlying rails are being heavily laid before consumer applications dominate the market.
+
+## Key numbers
+
+<StatRow>
+<Stat value="$175B" label="Projected market by 2030" source="Mordor Intelligence" />
+<Stat value="54%" label="US adults using AI agents" source="PYMNTS, Jan 2026" />
+<Stat value="24%" label="Trust agents to buy for them" source="Forrester, Mar 2025" />
+<Stat value="13%" label="Have completed an AI purchase" source="Payments Industry Intel" />
+</StatRow>
+
+36% of consumers say they are open to AI making purchases for them ([SWAP Commerce](https://swap-commerce.com)), and 84% consider one-click checkout important ([WPFactory](https://wpfactory.com)). Commercetools projects agent-intermediated transaction volume could reach $3-5 trillion by 2030. During Cyber Week 2025, one in five orders involved an AI agent. McKinsey estimates the US B2C retail market alone could see up to $1 trillion in agent-orchestrated revenue by 2030.
+
+<StatRow>
+<Stat value="$3-5T" label="Projected transaction volume by 2030" source="Commercetools" />
+<Stat value="30.2%" label="Compound annual growth rate" source="Mordor Intelligence" />
+<Stat value="+450%" label="Dark web AI exploit discussions" source="Visa, Fall 2025" />
+<Stat value="+25%" label="Malicious bot transactions (global)" source="Visa, Fall 2025" />
+</StatRow>
+
+
+## What changes for consumers
+
+Shopping becomes a conversation. You describe what you want, the agent handles everything from discovery through delivery. No browsing, no tabs, no checkout forms.
+
+Brand loyalty weakens. If your agent switches you to a cheaper toothpaste that works just as well, you probably will not notice. Predictive reordering kicks in: your agent knows you buy coffee every three weeks and handles it before you think about it.
+
+<Figure src="/images/essays/agentic-commerce/meme-marketer.png" alt="Every e-commerce marketer in 2026" caption="The marketer's new reality" />
+
+Product pages built for human eyes matter less than structured data built for agent consumption: schema.org markup, real-time inventory feeds, machine-readable specs. Traditional SEO gives way to what Commercetools calls "Answer Engine Optimization" and "LLM Optimization" ([commercetools.com](https://commercetools.com)). Display ads and retargeting lose relevance when the buyer is an algorithm. The traditional idea of visiting Amazon for shopping or Expedia for travel gives way to a horizontal agent ecosystem where a single concierge handles everything when your intent first surfaces.
+
+<Callout type="info" title="B2B moves faster">
+Procurement is structured and repetitive, exactly what agents handle well. Forrester projects B2B buying will be largely agent-intermediated by 2028. Agents already do supplier sourcing, PO creation, contract verification, and vendor scoring at companies using GEP, Ivalua, and Traxtech. The next step: a buyer's procurement agent negotiates directly with a seller's sales agent and reaches agreement in seconds.
+</Callout>
+
+<SectionLabel>Business Model Disruption</SectionLabel>
+
+## What changes for businesses
+
+The more important question is what this means for the companies selling things. Agentic commerce does not just add a channel. It restructures how products get discovered, how buying decisions are made, and how customer relationships form. Six areas of a retail business face pressure.
+
+**Product discovery and engagement.** Companies need to build agents that understand customer intent and proactively suggest products, bundles, or alternatives. Product catalogs need semantic and behavioral metadata embedded at the data layer, not just keywords on a webpage. When an agent asks "what running shoes do you have under $150 with good arch support in size 11?", the response needs to come from structured data, not a product page designed for a human to scroll through.
+
+**Customer loyalty and personalization.** Legacy loyalty programs (points, tiers, birthday coupons) break down when the customer never visits your app. Hyperpersonalized offers triggered by inferred intent replace generic promotions. If an agent knows a customer moves every two years based on lease history, furniture retailers can time outreach to coincide with the next likely move. The challenge is building persistent customer-context layers accessible by agents, and exposing loyalty eligibility through APIs rather than through sign-in walls.
+
+**Core commerce platforms.** Existing e-commerce infrastructure was built around a human clicking through pages. Agents need structured transaction endpoints where they can query inventory, check pricing, and complete checkout in a single API call. Dynamic pricing, real-time inventory awareness, and machine-readable return policies become requirements, not features.
+
+**Payments and fraud.** Authentication moves from stopping bots to enabling the right agents to transact for the right customers. This is a conceptual inversion for the entire security industry. Know Your Customer (KYC) standards must extend to Know Your Agent (KYA): verifying not just users but the agents acting on their behalf. Tokenization, dispute resolution, and settlement systems need enhancements to carry richer context about agent identity within transaction metadata.
+
+**In-store operations.** Physical retail does not get a pass. Agents need to synchronize digital and physical customer journeys: sharing context with store associates, accessing digitized store maps and inventory, and eventually using spatial computing for in-store navigation. The agent that helps you shop online should know what is available at the store nearest you and hold items for pickup.
+
+**Fulfillment and returns.** Agents can automate fulfillment decisions, negotiate return logic, and coordinate post-purchase actions. This requires agent-ready fulfillment APIs and integration with multi-carrier and last-mile logistics through modular connectors. An agent that bought the wrong size should be able to initiate a return, select a replacement, and schedule delivery without the customer filing a support ticket.
+
+The businesses that treat these as incremental upgrades will fall behind. The ones that re-architect their stack around the assumption that their next customer is an autonomous agent will be in position to capture the market.
+
+
+## How money flows change
+
+Agentic commerce threatens existing revenue streams, particularly advertising. Retail media networks built on ad-based models face pressure as agents bypass traditional discovery channels. If your agent picks your toothpaste based on ingredient analysis and price comparison, the toothpaste brand's display ad budget is wasted.
+
+Several new monetization models are emerging:
+
+**Bundled commerce and revenue sharing.** Agents coordinate purchases across multiple brands, assembling them into coherent experiences. A honeymoon planning agent negotiates flights, hotels, excursions, and dining from separate providers. Each provider gets a share. The coordinating platform takes a service fee.
+
+**Real-time negotiation fees.** Agents negotiate on behalf of users: seat upgrades, loyalty point redemptions, bulk discounts. Platforms enabling these negotiations charge success fees per transaction.
+
+**Premium agent capabilities.** Third-party developers offer vertical AI agents (fashion stylists, travel planners, procurement specialists) through subscription plans or tiered access to advanced features.
+
+**Data insights.** Brands pay for anonymized, agent-filtered consumer behavior analytics: which products get considered versus rejected, price sensitivities, competitor comparison patterns. This data is more granular than anything available through traditional analytics because agents evaluate products systematically rather than through emotional browsing.
+
+**Conversational marketplaces.** AI agents evolve into full marketplaces where purchases happen through dialogue. Marketplace operators monetize through listing fees, commissions, and payment processing.
+
+**Inter-agent protocol fees.** When agents from different platforms interact, monetization can happen through protocol-level fees for interoperability or commission sharing when joint value is created. This is analogous to interchange fees in the card network world, but applied to agent-to-agent communication.
+
+The companies that define these pricing models early will set the terms. The window is open now because most agent interactions are still free and providers have not developed clear revenue strategies.
+
+<SectionLabel>Risks &amp; Challenges</SectionLabel>
+
+## The trust gap and fraud problem
+
+There is a 30-point gap between agent usage and purchase trust: 54% of US adults use AI agents, but only 24% trust them to buy things. Top consumer concerns: payment security (32%), privacy (26%), agent errors (18%), loss of control (17%).
+
+<Columns>
+<Column>
+
+The fraud picture is worse than the trust numbers suggest. Visa's Fall 2025 report found that the threat model has shifted from stolen credit cards to compromising AI agents themselves. Malware that alters agent preferences to steer purchases toward fraudulent merchants. Fake stores designed to trick AI shopping agents. Traditional fraud detection was not built for the speed and scale of agent-driven attacks.
+
+<Callout type="warning" title="Legal grey zone">
+AI agents cannot form binding contracts in most jurisdictions. Can agents accept terms of service on your behalf? Who pays when an agent makes a bad purchase? The EU AI Act was drafted before autonomous purchasing agents existed.
+</Callout>
+
+</Column>
+<Column>
+
+<Figure src="/images/essays/agentic-commerce/meme-agent.png" alt="Is this a great deal?" caption="The agent trust dilemma" />
+
+</Column>
+</Columns>
+
+### Systemic risk
+
+Autonomous agents are decision-makers operating at scale. A single faulty prompt or model update can trigger cascading failures: incorrectly booked flights, overordered inventory, purchases made without proper consent. When agents are interconnected across multiple systems and protocols, minor errors can compound exponentially. The question is not just whether an agent makes good decisions today, but whether the system is designed to contain and recover from failures gracefully. Can agents backtrack? Can purchases be reversed automatically?
+
+### Accountability
+
+When an agent makes a bad purchase, who is liable? The platform that trained the model? The brand that deployed the agent? The user who set the spending limit? There is no global consensus. The EU AI Act provides partial clarity for high-risk systems, but enforcement is still evolving. In the US, fragmented regulations leave companies in a liability vacuum. Until frameworks solidify, companies are building their own guardrails: permissions layers, identity mapping, tiered trust levels, and explainable decision logs.
+
+### Data sovereignty
+
+AI agents operate on data, and data sovereignty is increasingly a geopolitical issue. Countries like India and France enforce data localization. Europe is pushing for AI sovereignty. If an agent processes EU citizen data through a US-based API, compliance is unclear. If it is trained on global data but acts locally, the legal status is ambiguous. OpenAI has already launched a "for countries" model offering localized infrastructure and regulatory flexibility, which highlights the challenge of scaling agent platforms without breaching national data protection and consumer protection laws.
+
+Trust is deeply contextual. What feels intuitive in one market might be unacceptable in another. Adoption follows comfort and credibility, not just technological capability. For agents to earn trust, they need transparent decision trails, fail-safes, reversibility, and the ability for users to define boundaries that the system respects. Consent cannot be a one-time checkbox. It has to be a living agreement that deepens through interaction.
+
+To bridge this gap, organizations are adopting the **TRiSM Framework** (Trust, Risk, and Security Management) tailored specifically for autonomous agents. According to McKinsey, a core component of this is the "Trust Equation," which combines transparent operations with easy human-in-the-loop overrides. There is also a reliance on "Trust Transferability," where legacy institutions (like Visa or Mastercard) use their established brand credibility to reassure consumers about new, machine-driven transactions.
+
+<SectionLabel>Competition</SectionLabel>
+
+## Competitive landscape
+
+The core question: who controls the agent? That entity controls what gets bought.
+
+<Columns>
+<Column>
+
+**Google** plays the open standard angle with UCP. Anyone can build on it, but distribution runs through Google Search and Gemini, which Google owns. Same playbook as Android: open the protocol, own the distribution.
+
+**OpenAI** moved first with ChatGPT checkout in September 2025 but is pivoting to become the discovery and intent layer, letting merchants own checkout. With 800 million weekly active users, controlling where intent originates is arguably more valuable than owning the payment step.
+
+**Coinbase** is betting on a different game entirely. x402 and Agentic Wallets position Coinbase as the payment layer for machine-to-machine commerce. If agents end up paying each other in stablecoins instead of using card networks, Coinbase wins regardless of which AI platform dominates.
+
+</Column>
+<Column>
+
+**Shopify** positions itself as infrastructure, connected to every AI platform but owned by none. Use Shopify and your products are automatically available wherever agents shop. Its Checkout Kit, Catalog, and Universal Cart tools make this integration seamless for merchants.
+
+**Stripe + Paradigm** built MPP and Tempo as the multi-rail bridge: stablecoins, cards, and Lightning all through one protocol. They want to be the payment abstraction that works regardless of whether agents prefer crypto or traditional rails. With backing from Anthropic, OpenAI, Mastercard, and Shopify, they have assembled a coalition that spans both sides of the traditional-vs-crypto divide.
+
+**Amazon** has decades of purchase history, reviews, and fulfillment powering Rufus and Alexa+, but open protocols could route purchases away from Amazon entirely. Amazon's advantage is its logistics network and data depth. Its vulnerability is that agents can access that same data through third-party reviews and redirect purchases to cheaper sources.
+
+</Column>
+</Columns>
+
+<SectionLabel>Looking Forward</SectionLabel>
+
+## What needs to happen next
+
+Mass adoption depends on solving several interlocking problems. Users must be able to set transparent limits on what their agents can do: spend caps, category restrictions, approval thresholds. Agents should operate on scoped payment tokens limited by merchant, amount, and frequency. Purchasing decisions need to be explainable, not just in the sense of showing a receipt, but in showing why one product was chosen over another.
+
+Governments need to draft liability rules, consent frameworks, and data standards specific to agent purchasing. The EU and US are expected to publish guidance by 2027-2028. Until then, the industry is self-regulating through technical standards like AP2's cryptographic mandates and Skyfire's KYAPay identity verification.
+
+The infrastructure challenge also extends to merchant readiness. Most e-commerce sites are still built for human browsers. Product data is locked in HTML templates, pricing is hidden behind JavaScript, and inventory is not exposed through APIs. Agents can use computer-use tools to navigate these sites, but structured APIs are faster, more reliable, and cheaper to operate at scale. The merchants that expose their catalogs through agent-ready APIs first will capture disproportionate agent traffic.
+
+Finally, this transition will require organizational change, not just technical upgrades. Companies need to move from treating AI as a project run by a dedicated team to embedding agent-readiness across product, engineering, marketing, and operations. The mobile transition took most retailers five to ten years. The agent transition will move faster because agents ride on existing digital infrastructure, but the organizational adaptation is just as deep.
+
+<KeyTakeaway>
+The infrastructure is built. The protocols are live. The payment rails work, both traditional and crypto-native. What is missing is consumer trust, merchant readiness, and regulatory clarity. The companies building for both humans and agents simultaneously will be in position when adoption accelerates. Those waiting for the market to consolidate around a single protocol will find that the market is already moving without them.
+</KeyTakeaway>
+
+---
+
+## Sources
+
+| Source | Detail | Date |
+|--------|--------|------|
+| [Google Blog](https://blog.google/products-and-platforms/products/shopping/ucp-updates/) | UCP updates announcement | Mar 2026 |
+| [Shopify News](https://www.shopify.com/news/winter-26-edition-agentic-storefronts) | Agentic Storefronts launch | Dec 2025 |
+| [@tobi on X](https://x.com/tobi/status/1952800271257706676) | Commerce tools for agents | 2025 |
+| [Mastercard](https://www.mastercard.com/global/en/news-and-trends/press/2025/april/mastercard-unveils-agent-pay.html) | Agent Pay | Apr 2025 |
+| [PayPal](https://about.pypl.com/news-details/2025/Perplexity-Selects-PayPal-to-Power-Agentic-Commerce/default.aspx) | Perplexity partnership | May 2025 |
+| [Visa](https://usa.visa.com/) | Trusted Agent Protocol, Threats Report | Fall 2025 |
+| [Coinbase x402](https://x402.org) | x402 Protocol and Foundation | May 2025 |
+| [Coinbase](https://coinbase.com) | Agentic Wallets, x402 V2 | Mar 2026 |
+| [Stripe + Paradigm](https://stripe.com) | MPP, Tempo blockchain | Mar 2026 |
+| [Cloudflare](https://developers.cloudflare.com/agents/api-reference/agentic-payments/) | Agents SDK with x402 + MPP | Mar 2026 |
+| [PYMNTS](https://pymnts.com) | 3,497 US adults surveyed | Jan 2026 |
+| [Forrester](https://forrester.com) | Consumer Pulse Survey | Mar 2025 |
+| [Mordor Intelligence](https://mordorintelligence.com) | $175.1B market, 30.2% CAGR | 2025 |
+| [Commercetools](https://commercetools.com) | Zero-click commerce analysis | 2025-2026 |
+| [McKinsey](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/agentic-commerce) | Three interaction models, market projections | 2025 |
+| [Payments Industry Intelligence](https://paymentsindustryintelligence.com) | Consumer trust survey | 2025 |
+| [Retail Touchpoints](https://retailtouchpoints.com) | OpenAI checkout pivot | Mar 2026 |
+| [SWAP Commerce](https://swap-commerce.com) | Consumer willingness | 2025 |
+| [WPFactory](https://wpfactory.com) | Checkout preference | 2025 |
+| [Linklaters](https://linklaters.com) | Legal framework gaps | 2025 |
+| [JD Supra](https://jdsupra.com) | Auth challenges | 2025 |
+| [GEP](https://gep.com) | B2B procurement agents | 2025 |
+| [Skyfire](https://skyfire.xyz) | Agent Checkout, KYAPay protocol | 2025 |
+| [Anthropic](https://anthropic.com) | MCP specification | 2025 |
+| [METR](https://metr.org) | AI task horizon doubling rate | 2025 |
+
+*Written March 2026.*

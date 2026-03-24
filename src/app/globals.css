@@ -92,3 +92,23 @@
     @apply bg-primary/20 text-foreground;
   }
 }
+
+/* Report article styles */
+.report-article h2 {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid hsl(var(--border) / 0.4);
+}
+
+.report-article h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+/* Default standalone images in reports: medium width, centered */
+.report-article > p > img {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
