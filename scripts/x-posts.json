@@ -4,7 +4,9 @@
     "type": "thread",
     "scheduleDate": "2026-03-25",
     "scheduleTime": "12:57",
-    "posted": false,
+    "posted": true,
+    "postedAt": "2026-03-25T08:32:13.000Z",
+    "tweetId": "2036722749054353704",
     "tweets": [
       {
         "text": "LinkedIn is not a professional network. It's a language.\n\nI built a translator. Here's what it does. 🧵\n\nveda.ng/lit",
