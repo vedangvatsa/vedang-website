@@ -65,9 +65,11 @@
     "id": "local-ai-future",
     "scheduleDate": "2026-03-26",
     "scheduleTime": "04:57",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/local_ai_parity.png",
-    "text": "Everyone argues about whether the datacenter buildout pays off.\n\nNobody is arguing about the third option.\n\nOpen source models match frontier models within 3-6 months of release. o1 came out in September 2024. DeepSeek-R1 matched it by January. GPT-4o in May. DeepSeek-V3 by December.\n\nThe gap has already closed.\n\nFrontier model providers are bleeding money. OpenAI: $13B in revenue, $14B in projected losses for 2026. Prices will go up. When they do, running models locally stops being a preference and becomes the obvious call.\n\nApple is not building datacenters. Everyone says they're behind.\n\nTheir actual bet: let rivals burn cash training models, wait for open source to absorb those advances, build hardware that runs them. The M5 Max runs a 134B model locally today.\n\nThe cloud AI buildout may turn out to be R&D that open source inherits for free.\n\nFrontier labs train the models. Open source copies them. Your laptop runs them.\n\nNo subscription. No data leaving your machine. No rate limits.\n\nThat future has no billionaires in it. That's why nobody talks about it."
+    "text": "Everyone argues about whether the datacenter buildout pays off.\n\nNobody is arguing about the third option.\n\nOpen source models match frontier models within 3-6 months of release. o1 came out in September 2024. DeepSeek-R1 matched it by January. GPT-4o in May. DeepSeek-V3 by December.\n\nThe gap has already closed.\n\nFrontier model providers are bleeding money. OpenAI: $13B in revenue, $14B in projected losses for 2026. Prices will go up. When they do, running models locally stops being a preference and becomes the obvious call.\n\nApple is not building datacenters. Everyone says they're behind.\n\nTheir actual bet: let rivals burn cash training models, wait for open source to absorb those advances, build hardware that runs them. The M5 Max runs a 134B model locally today.\n\nThe cloud AI buildout may turn out to be R&D that open source inherits for free.\n\nFrontier labs train the models. Open source copies them. Your laptop runs them.\n\nNo subscription. No data leaving your machine. No rate limits.\n\nThat future has no billionaires in it. That's why nobody talks about it.",
+    "postedAt": "2026-03-25T23:30:26.076Z",
+    "tweetId": "2036948853245476985"
   },
   {
     "id": "psych-maslow",
