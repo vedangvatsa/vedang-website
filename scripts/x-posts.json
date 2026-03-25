@@ -64,5 +64,13 @@
     "posted": false,
     "image": "scripts/thread-assets/local_ai_parity.png",
     "text": "Everyone argues about whether the datacenter buildout pays off.\n\nNobody is arguing about the third option.\n\nOpen source models match frontier models within 3-6 months of release. o1 came out in September 2024. DeepSeek-R1 matched it by January. GPT-4o in May. DeepSeek-V3 by December.\n\nThe gap has already closed.\n\nFrontier model providers are bleeding money. OpenAI: $13B in revenue, $14B in projected losses for 2026. Prices will go up. When they do, running models locally stops being a preference and becomes the obvious call.\n\nApple is not building datacenters. Everyone says they're behind.\n\nTheir actual bet: let rivals burn cash training models, wait for open source to absorb those advances, build hardware that runs them. The M5 Max runs a 134B model locally today.\n\nThe cloud AI buildout may turn out to be R&D that open source inherits for free.\n\nFrontier labs train the models. Open source copies them. Your laptop runs them.\n\nNo subscription. No data leaving your machine. No rate limits.\n\nThat future has no billionaires in it. That's why nobody talks about it."
+  },
+  {
+    "id": "business-world-model",
+    "scheduleDate": "2026-03-26",
+    "scheduleTime": "12:57",
+    "posted": false,
+    "image": "scripts/thread-assets/world_model_gap.png",
+    "text": "Within a few years, most companies will have more AI agents running than human employees.\n\nThat is not a prediction. It is already starting.\n\nWhen that happens, the old management model breaks.\n\nToday you manage people. Check-ins, approvals, status updates. You stay on top because the number of decisions is manageable.\n\nWhen thousands of agents are making thousands of decisions a day, you cannot manage that way. You have to manage by exception. Scan for what broke. Simulate what to do next.\n\nThe problem is there is nothing to simulate on.\n\nEvery CEO already runs what-ifs in their head. \"If I cut prices here, what happens to margins there?\" The thinking exists. It just lives in one person's head and walks out the door when they leave.\n\nWhat needs to be built is that model in software. Autonomous cars had this problem first. Waymo does not train a car by telling it what to do. They build a world model. A simulation of the road where you run millions of what-ifs before the car touches real tarmac.\n\nBusiness needs that. Something connected to every system in the company. Not a dashboard. Not an agent. Something that answers: if I do X, what happens next?\n\nThe tools exist for the left side of that image.\n\nNobody has built the right side yet."
   }
 ]
