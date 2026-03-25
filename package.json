@@ -13,6 +13,7 @@
     "build:worker": "opennextjs-cloudflare build",
     "x:authorize": "npx tsx scripts/x-authorize.ts",
     "x:post-essays": "npx tsx scripts/x-auto-post.ts",
+    "x:thread": "npx tsx scripts/x-post-thread.ts",
     "indexnow": "bash scripts/submit-indexnow.sh"
   },
   "dependencies": {
@@ -52,6 +53,7 @@
     "dotenv": "^16.5.0",
     "embla-carousel-react": "^8.6.0",
     "firebase": "^11.9.1",
+    "form-data": "^4.0.5",
     "gray-matter": "^4.0.3",
     "html2canvas": "^1.4.1",
     "lucide-react": "^0.475.0",
@@ -59,6 +61,7 @@
     "next": "^16.1.6",
     "next-mdx-remote": "^6.0.0",
     "next-themes": "^0.4.0",
+    "node-fetch": "^3.3.2",
     "react": "^19.2.4",
     "react-day-picker": "^9.0.4",
     "react-dom": "^19.2.4",
@@ -77,8 +80,10 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "postcss": "^8",
+    "puppeteer": "^24.40.0",
     "tailwindcss": "^3.4.1",
     "tsx": "^4.16.2",
+    "twitter-api-v2": "^1.29.0",
     "typescript": "^5"
   },
   "overrides": {
