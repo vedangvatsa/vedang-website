@@ -280,5 +280,45 @@
     "posted": false,
     "image": "scripts/thread-assets/psych_smart_employees.png",
     "text": "The smartest employees do not play the corporate game the usual way.\n\nThey build a side hustle outside their job. They do not chase manager titles for status. They keep interviewing even when employed. They treat everyone with respect... including the cleaner.\n\nThey push back on micromanagement. They decline useless meetings. They help others grow in their careers. They do not reply to every email.\n\nThey stay away from gossip and office politics. They build passive income so one job doesn't control their life.\n\nIt is about owning your time, not your title."
+  },
+  {
+    "id": "lit-fired",
+    "scheduleDate": "2026-04-05",
+    "scheduleTime": "12:57",
+    "posted": false,
+    "image": "scripts/thread-assets/lit_fired.png",
+    "text": "I got fired last week.\n\nLinkedIn version: Navigated an Organizational Restructuring Event.\n\nSomewhere between the real thing and the LinkedIn version, an entire industry of professional storytelling was born.\n\nI built a translator for this. It converts honest sentences into LinkedIn-speak. The results are uncomfortably accurate.\n\nTry it: veda.ng/lit"
+  },
+  {
+    "id": "lit-bosses",
+    "scheduleDate": "2026-04-05",
+    "scheduleTime": "20:57",
+    "posted": false,
+    "image": "scripts/thread-assets/lit_bosses.png",
+    "text": "LinkedIn language: Working under different leadership styles has given me unparalleled insight into what great management looks like.\n\nWhat it actually means: I have dealt with a lot of terrible bosses.\n\nThe reverse translator is even more fun than the original. Put in any polished LinkedIn sentence and watch the real meaning come out the other side.\n\nTry the LinkedIn to English translator: veda.ng/lit"
+  },
+  {
+    "id": "lit-scrolling",
+    "scheduleDate": "2026-04-06",
+    "scheduleTime": "04:57",
+    "posted": false,
+    "image": "scripts/thread-assets/lit_scrolling.png",
+    "text": "I scrolled social media all day and did nothing.\n\nLinkedIn version: Fully optimized my digital engagement cadence today. Implemented a comprehensive content consumption strategy, leveraging immersive social experiences to drive meaningful insights.\n\nEvery mundane act becomes a strategic initiative when you run it through the LinkedIn filter. The platform has created a parallel language where nothing bad ever happens and every failure is a growth opportunity.\n\nTranslate your own: veda.ng/lit"
+  },
+  {
+    "id": "lit-meetings",
+    "scheduleDate": "2026-04-06",
+    "scheduleTime": "12:57",
+    "posted": false,
+    "image": "scripts/thread-assets/lit_meetings.png",
+    "text": "I spent 3 hours in meetings that could have been emails.\n\nLinkedIn version: Maximized collaborative alignment through an immersive roundtable experience. Proactively invested 180 minutes interfacing with cross-functional stakeholders.\n\nThe translator turned 3 wasted hours into a strategic investment. This is the core skill of modern corporate communication. Saying absolutely nothing with maximum confidence.\n\nGenerate yours: veda.ng/lit"
+  },
+  {
+    "id": "lit-password",
+    "scheduleDate": "2026-04-06",
+    "scheduleTime": "20:57",
+    "posted": false,
+    "image": "scripts/thread-assets/lit_password.png",
+    "text": "LinkedIn language: Encountered a Temporary Credential Misalignment. Recently encountered a minor setback in my personal identity management protocols.\n\nWhat it actually means: I forgot my password and had to reset it.\n\nThis is the one that made me build the translator in the first place. The gap between what we say on LinkedIn and what we actually mean has become absurd. So I turned it into a tool.\n\nTry it yourself: veda.ng/lit"
   }
 ]
