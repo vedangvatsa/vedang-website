@@ -117,8 +117,8 @@
   },
   {
     "id": "psych-dunning-kruger",
-    "scheduleDate": "2026-03-28",
-    "scheduleTime": "12:57",
+    "scheduleDate": "2026-04-11",
+    "scheduleTime": "04:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_dunning_kruger.png",
     "text": "I formed strong opinions about AI after a few weeks with it.\n\nThe longer I spent actually building with these systems, the less certain I became.\n\nThis is the Dunning-Kruger pattern. Early exposure produces peak confidence. Real depth produces more careful claims.\n\nAI may be running this cycle faster than anything before it. A week in and people publish threads about AGI timelines. Two years in and they ask more questions than they answer.\n\nThe loudest voices in any new technology tend to be the most recently arrived."
@@ -341,26 +341,10 @@
   },
   {
     "id": "swarm-x-prediction-1",
-    "scheduleDate": "2026-04-11",
-    "scheduleTime": "04:57",
+    "scheduleDate": "2026-03-28",
+    "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/swarm_prediction.png",
     "text": "One AI model gives you one opinion.\n\n100 AI agents debating across 16 rounds gives you something closer to truth.\n\nBuilt a swarm intelligence prediction tool. Bring your own API key. Ask any question.\n\nveda.ng/swarm-prediction"
-  },
-  {
-    "id": "swarm-x-prediction-2",
-    "scheduleDate": "2026-04-12",
-    "scheduleTime": "04:57",
-    "posted": false,
-    "image": "scripts/thread-assets/swarm_prediction.png",
-    "text": "Prediction markets work because crowds beat individuals.\n\nThis is the AI version. Dozens of agents, multiple rounds of debate, consensus or disagreement visualised in real time.\n\nWorks with Anthropic, OpenAI, Gemini, Groq, DeepSeek.\n\nveda.ng/swarm-prediction"
-  },
-  {
-    "id": "swarm-x-prediction-3",
-    "scheduleDate": "2026-04-13",
-    "scheduleTime": "04:57",
-    "posted": false,
-    "image": "scripts/thread-assets/swarm_prediction.png",
-    "text": "Asking one AI for a prediction is like polling one person.\n\nSwarm Intelligence runs your question through 100 agents across 16 debate rounds. You see where they agree and where they do not.\n\nFree. BYO API key.\n\nveda.ng/swarm-prediction"
   }
 ]

@@ -243,7 +243,7 @@
   },
   {
     "id": "psych-dunning-kruger",
-    "scheduleDate": "2026-04-03",
+    "scheduleDate": "2026-04-07",
     "scheduleTime": "04:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_dunning_kruger.png",
@@ -323,26 +323,10 @@
   },
   {
     "id": "swarm-prediction-1",
-    "scheduleDate": "2026-04-07",
+    "scheduleDate": "2026-04-03",
     "scheduleTime": "04:57",
     "posted": false,
     "image": "scripts/thread-assets/swarm_prediction.png",
     "text": "One AI model gives you one opinion. What if you could run 100 of them against the same question and watch them argue?\n\nSwarm Intelligence Prediction puts up to 100 AI agents in a structured debate. They challenge each other across multiple rounds. The prediction that survives the most scrutiny wins.\n\nBring your own API key. Pick any major provider. Ask any question.\n\nTry it: veda.ng/swarm-prediction"
-  },
-  {
-    "id": "swarm-prediction-2",
-    "scheduleDate": "2026-04-08",
-    "scheduleTime": "12:57",
-    "posted": false,
-    "image": "scripts/thread-assets/swarm_prediction.png",
-    "text": "Prediction markets work because crowds outperform individuals when opinions are independent and diverse.\n\nI built the AI version. Instead of polling humans, it runs dozens of AI agents with different reasoning approaches against the same question. They debate in rounds. Outlier opinions get challenged. Consensus emerges or it does not.\n\nThe tool works with Anthropic, OpenAI, Gemini, Groq, DeepSeek, and more.\n\nveda.ng/swarm-prediction"
-  },
-  {
-    "id": "swarm-prediction-3",
-    "scheduleDate": "2026-04-09",
-    "scheduleTime": "20:57",
-    "posted": false,
-    "image": "scripts/thread-assets/swarm_prediction.png",
-    "text": "Asking one AI model for a prediction is like asking one person in a crowd. You get an answer but you have no idea how robust it is.\n\nSwarm Intelligence Prediction runs the same question through up to 100 agents across 16 debate rounds. You see where they agree, where they disagree, and how the consensus shifts over time.\n\nFree to use. Bring your own API key.\n\nveda.ng/swarm-prediction"
   }
 ]
