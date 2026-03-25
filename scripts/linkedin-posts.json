@@ -287,7 +287,7 @@
     "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/lit_fired.png",
-    "text": "Someone types: I got fired last week.\n\nThe translator returns: Navigated an Organizational Restructuring Event.\n\nSomewhere between the honest version and the LinkedIn version, an entire industry of professional storytelling was born.\n\nI built a tool that converts real sentences into LinkedIn-speak. The results are uncomfortably accurate.\n\nTry it: veda.ng/lit"
+    "text": "Corporate language exists to make uncomfortable things sound strategic.\n\nGetting fired becomes a transition. Failure becomes a pivot. Burning out becomes realigning priorities.\n\nThis is not always dishonest. Sometimes it is survival. But somewhere along the way, the gap between what people say and what they mean became so wide that I built a tool to measure it.\n\nThe image above is a real output from the translator. Try your own: veda.ng/lit"
   },
   {
     "id": "lit-bosses",
@@ -295,7 +295,7 @@
     "scheduleTime": "20:57",
     "posted": false,
     "image": "scripts/thread-assets/lit_bosses.png",
-    "text": "LinkedIn language: Working under different leadership styles has given me unparalleled insight into what great management looks like.\n\nWhat it actually means: I have dealt with a lot of terrible bosses.\n\nThe reverse translator is even more fun than the original. Put in any polished LinkedIn sentence and watch the real meaning come out the other side.\n\nTry the LinkedIn to English translator: veda.ng/lit"
+    "text": "LinkedIn turned professional networking into performance art.\n\nEvery post is optimised for perception, not truth. Every setback is a lesson. Every bad boss taught you something valuable. Every layoff was actually a gift.\n\nSo I built a reverse translator. You paste in the polished LinkedIn version and it tells you what the person probably meant. The results are brutal and weirdly therapeutic.\n\nThe image above is a real output. Try the reverse mode: veda.ng/lit"
   },
   {
     "id": "lit-scrolling",
@@ -303,7 +303,7 @@
     "scheduleTime": "04:57",
     "posted": false,
     "image": "scripts/thread-assets/lit_scrolling.png",
-    "text": "I scrolled social media all day and did nothing.\n\nLinkedIn version: Fully optimized my digital engagement cadence today. Implemented a comprehensive content consumption strategy, leveraging immersive social experiences to drive meaningful insights.\n\nEvery mundane act becomes a strategic initiative when you run it through the LinkedIn filter. The platform has created a parallel language where nothing bad ever happens and every failure is a growth opportunity.\n\nTranslate your own: veda.ng/lit"
+    "text": "Productivity theater is the defining skill of the modern knowledge worker.\n\nWe have built an entire vocabulary around making wasted time sound intentional. Digital engagement cadence. Content consumption strategy. Immersive social experiences.\n\nNone of it means anything. All of it sounds impressive in a performance review.\n\nThe translator I built exposes this perfectly. Feed it an honest sentence and watch it produce something your manager would put on a slide deck.\n\nveda.ng/lit"
   },
   {
     "id": "lit-meetings",
@@ -311,7 +311,7 @@
     "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/lit_meetings.png",
-    "text": "I spent 3 hours in meetings that could have been emails.\n\nLinkedIn version: Maximized collaborative alignment through an immersive roundtable experience. Proactively invested 180 minutes interfacing with cross-functional stakeholders.\n\nThe translator turned 3 wasted hours into a strategic investment. This is the core skill of modern corporate communication. Saying absolutely nothing with maximum confidence.\n\nGenerate yours: veda.ng/lit"
+    "text": "The meeting-industrial complex runs on one fuel: the belief that talking about work is the same as doing work.\n\n180 minutes of cross-functional alignment. Zero decisions made. Everyone leaves feeling busy. Nobody leaves knowing what to do next.\n\nThe best companies I have worked with have one thing in common. They protect their people from meetings the way immune systems protect against infection.\n\nI turned this frustration into a tool. Take any corporate sentence and watch it collapse under its own weight: veda.ng/lit"
   },
   {
     "id": "lit-password",
@@ -319,6 +319,6 @@
     "scheduleTime": "20:57",
     "posted": false,
     "image": "scripts/thread-assets/lit_password.png",
-    "text": "LinkedIn language: Encountered a Temporary Credential Misalignment. Recently encountered a minor setback in my personal identity management protocols.\n\nWhat it actually means: I forgot my password and had to reset it.\n\nThis is the one that made me build the translator in the first place. The gap between what we say on LinkedIn and what we actually mean has become absurd. So I turned it into a tool.\n\nTry it yourself: veda.ng/lit"
+    "text": "I forgot my password. The translator called it a Temporary Credential Misalignment with a minor setback in personal identity management protocols.\n\nThat was the moment I knew the tool worked.\n\nWhen even a forgotten password gets the full LinkedIn treatment, you know the language has crossed a line. We are not communicating anymore. We are performing.\n\nOver 4,000 people have used the translator since launch. The most popular input is still: I got fired last week.\n\nveda.ng/lit"
   }
 ]
