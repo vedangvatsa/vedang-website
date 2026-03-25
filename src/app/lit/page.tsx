@@ -932,11 +932,17 @@ export default function LinkedInTranslatorPage() {
   async function handleDownloadImage() {
     const blob = await generateShareImage();
     if (blob) {
+      const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
+      a.href = url;
       a.download = 'lit-by-vedang.png';
+      a.style.display = 'none';
+      document.body.appendChild(a);
       a.click();
-      URL.revokeObjectURL(a.href);
+      setTimeout(() => {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, 100);
       showToast('Image downloaded!');
     }
   }
@@ -959,11 +965,14 @@ export default function LinkedInTranslatorPage() {
       const ok = await copyImageToClipboard(blob);
       showToast(ok ? 'Screenshot copied! Paste it in your post (Ctrl+V)' : 'Screenshot saved! Attach it to your post');
       if (!ok) {
+        const dlUrl = URL.createObjectURL(blob);
         const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
+        a.href = dlUrl;
         a.download = 'lit-by-vedang.png';
+        a.style.display = 'none';
+        document.body.appendChild(a);
         a.click();
-        URL.revokeObjectURL(a.href);
+        setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(dlUrl); }, 100);
       }
     }
     window.open(`https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}`, '_blank');
@@ -981,11 +990,14 @@ export default function LinkedInTranslatorPage() {
     // Also generate and download the image
     const blob = await generateShareImage();
     if (blob) {
+      const dlUrl = URL.createObjectURL(blob);
       const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
+      a.href = dlUrl;
       a.download = 'lit-by-vedang.png';
+      a.style.display = 'none';
+      document.body.appendChild(a);
       a.click();
-      URL.revokeObjectURL(a.href);
+      setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(dlUrl); }, 100);
     }
 
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
