@@ -1,0 +1,148 @@
+#!/usr/bin/env node
+import dotenv from 'dotenv';
+import path from 'path';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+import fetch from 'node-fetch';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const REPO_ROOT = path.resolve(__dirname, '..');
+dotenv.config({ path: path.resolve(REPO_ROOT, '.env.local') });
+
+const TOKEN = process.env.HASHNODE_TOKEN!;
+const PUB_ID = process.env.HASHNODE_PUBLICATION_ID!;
+const GQL_URL = 'https://gql.hashnode.com';
+
+const TIMEZONE_OFFSET_HOURS = 5.5;
+const POSTS_FILE = path.resolve(__dirname, 'hashnode-posts.json');
+const ESSAYS_DIR = path.resolve(REPO_ROOT, 'src/content/essays');
+
+interface HashnodePost {
+  id: string;
+  slug: string;
+  title: string;
+  tags: string[];
+  scheduleDate: string;
+  posted: boolean;
+  postedAt?: string;
+  hashnodeUrl?: string;
+  error?: string;
+}
+
+function extractEssayContent(slug: string): { title: string; body: string } | null {
+  const filePath = path.resolve(ESSAYS_DIR, `${slug}.mdx`);
+  if (!fs.existsSync(filePath)) return null;
+
+  const raw = fs.readFileSync(filePath, 'utf-8');
+  const fmMatch = raw.match(/^---\n([\s\S]*?)\n---/);
+  if (!fmMatch) return null;
+
+  const fm = fmMatch[1];
+  const titleMatch = fm.match(/title:\s*['"]?(.+?)['"]?\n/);
+  const title = titleMatch ? titleMatch[1].trim().replace(/^['"]|['"]$/g, '') : slug;
+
+  let body = raw.replace(/^---\n[\s\S]*?\n---\n*/, '');
+  body = body.replace(/^import\s+.*$/gm, '');
+  body = body.replace(/<SectionLabel[^>]*label="([^"]*)"[^/]*\/>/g, '\n## $1\n');
+  body = body.replace(/<PullQuote[^>]*quote="([^"]*)"[^/]*\/>/g, '\n> $1\n');
+  body = body.replace(/<Callout[^>]*text="([^"]*)"[^/]*\/>/g, '\n> 💡 $1\n');
+  body = body.replace(/<KeyTakeaway[^>]*text="([^"]*)"[^/]*\/>/g, '\n> ✅ $1\n');
+  body = body.replace(/<[A-Z][^>]*\/>/g, '');
+  body = body.replace(/<[A-Z][^>]*>[\s\S]*?<\/[A-Z][^>]*>/g, '');
+  body = body.trim();
+
+  return { title, body };
+}
+
+async function gql(query: string, variables: Record<string, any> = {}): Promise<any> {
+  const res = await fetch(GQL_URL, {
+    method: 'POST',
+    headers: {
+      Authorization: TOKEN,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ query, variables }),
+  });
+  const data = await res.json() as any;
+  if (data.errors) {
+    throw new Error(data.errors.map((e: any) => e.message).join('; '));
+  }
+  return data.data;
+}
+
+async function publishArticle(post: HashnodePost): Promise<string> {
+  const essay = extractEssayContent(post.slug);
+  if (!essay) throw new Error(`Essay not found: ${post.slug}`);
+
+  const canonicalUrl = `https://veda.ng/essays/${post.slug}`;
+
+  const mutation = `
+    mutation PublishPost($input: PublishPostInput!) {
+      publishPost(input: $input) {
+        post {
+          id
+          url
+          title
+        }
+      }
+    }
+  `;
+
+  const input = {
+    publicationId: PUB_ID,
+    title: essay.title,
+    contentMarkdown: essay.body,
+    slug: post.slug,
+    originalArticleURL: canonicalUrl,
+    tags: post.tags.map(t => ({ slug: t, name: t })),
+  };
+
+  const data = await gql(mutation, { input });
+  return data.publishPost.post.url;
+}
+
+async function main() {
+  if (!TOKEN || !PUB_ID) {
+    console.log('⏭️ Hashnode credentials not set, skipping');
+    return;
+  }
+
+  if (!fs.existsSync(POSTS_FILE)) {
+    console.log('⏭️ No hashnode-posts.json found');
+    return;
+  }
+
+  const posts: HashnodePost[] = JSON.parse(fs.readFileSync(POSTS_FILE, 'utf-8'));
+  const now = new Date();
+  const istNow = new Date(now.getTime() + TIMEZONE_OFFSET_HOURS * 60 * 60 * 1000);
+  const todayIST = istNow.toISOString().slice(0, 10);
+
+  console.log(`📝 Hashnode scheduler running at ${todayIST} IST`);
+  console.log(`📋 Total articles: ${posts.length}, Posted: ${posts.filter(p => p.posted).length}`);
+
+  const due = posts.filter(p => !p.posted && p.scheduleDate <= todayIST);
+
+  if (due.length === 0) {
+    console.log('✅ No articles due');
+    return;
+  }
+
+  for (const post of due) {
+    try {
+      console.log(`\n📝 Publishing: ${post.title} (${post.slug})`);
+      const url = await publishArticle(post);
+      post.posted = true;
+      post.postedAt = new Date().toISOString();
+      post.hashnodeUrl = url;
+      console.log(`  ✅ Published: ${url}`);
+    } catch (err: any) {
+      post.error = err.message;
+      console.error(`  ❌ Failed: ${err.message}`);
+    }
+  }
+
+  fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
+  console.log('\n💾 Updated hashnode-posts.json');
+}
+
+main().catch(console.error);
