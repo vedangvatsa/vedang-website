@@ -178,5 +178,45 @@
     "posted": false,
     "image": "scripts/thread-assets/psych_pygmalion.png",
     "text": "The best manager I worked with told me early that he thought I could do things I did not yet believe I could.\n\nI did most of them.\n\nThe Pygmalion effect is the name for what happens when expectation shapes performance. Students told they are gifted by teachers who believe it genuinely perform better. Teams told they are high-potential tend to become high-performing.\n\nThis is one reason strong leaders hire people they believe in rather than people who are already proven. The expectation is part of the output.\n\nWhat you believe about someone tends to become what they become."
+  },
+  {
+    "id": "psych-mirror",
+    "scheduleDate": "2026-03-31",
+    "scheduleTime": "12:57",
+    "posted": false,
+    "image": "scripts/thread-assets/psych_mirror.png",
+    "text": "There is a class of neurons that fire both when you act and when you watch someone else act.\n\nThey are the biological foundation of imitation. Possibly of empathy.\n\nAI models are trained on vast amounts of human output. They mirror our patterns back at scale. When an AI response feels like it is reading you correctly, it is probably because it has seen enough examples of people who wrote and thought similarly.\n\nI notice this more as these systems improve. The mirroring gets more accurate.\n\nWhether accurate mirroring becomes something that feels like understanding is still an open question."
+  },
+  {
+    "id": "psych-contagion",
+    "scheduleDate": "2026-03-31",
+    "scheduleTime": "20:57",
+    "posted": false,
+    "image": "scripts/thread-assets/psych_contagion.png",
+    "text": "Emotions spread without words. Without intention. Just proximity.\n\nA nervous person in a meeting makes the room nervous. An excited team makes new hires excited before they have any reason to be.\n\nI watched this play out in real time during a crypto cycle. Sentiment flipped overnight on crypto Twitter. Nothing about the underlying assets had changed. The emotion had changed. And in crypto, the emotion can be close to the actual price mechanism.\n\nRemote work may have reduced emotional contagion in offices. It is an underrated cost of distributed teams that nobody measures."
+  },
+  {
+    "id": "psych-halo",
+    "scheduleDate": "2026-04-01",
+    "scheduleTime": "04:57",
+    "posted": false,
+    "image": "scripts/thread-assets/psych_halo.png",
+    "text": "A person walks into a room with a specific credential and the room adjusts before they say a word.\n\nThat is the halo effect. One impressive trait causes people to attribute other positive traits automatically.\n\nI have been on both sides of this. There are rooms where you are taken seriously before you have said anything. There are rooms where you have to earn it from zero.\n\nIn hiring, a degree from a particular school acts as a halo. In venture, a previous exit does. Neither is irrelevant. The problem is when the halo becomes the whole evaluation.\n\nMost pattern-matching in tech is this, dressed up as judgment."
+  },
+  {
+    "id": "psych-helplessness",
+    "scheduleDate": "2026-04-01",
+    "scheduleTime": "12:57",
+    "posted": false,
+    "image": "scripts/thread-assets/psych_helplessness.png",
+    "text": "After enough times being ignored, people stop raising their hand.\n\nNot because they stopped having ideas. Because they stopped expecting the idea to go anywhere.\n\nLearned helplessness is what happens when an organism experiences repeated situations where its actions have no effect. Eventually it stops trying, even when the situation changes.\n\nTeams that have been through multiple rounds of layoffs and reorgs carry this. The people who stayed watched proposals go nowhere. They learn the lesson even if it no longer applies.\n\nThis may be one of the real costs of restructuring that never shows up in the announcement."
+  },
+  {
+    "id": "psych-shadow",
+    "scheduleDate": "2026-04-01",
+    "scheduleTime": "20:57",
+    "posted": false,
+    "image": "scripts/thread-assets/psych_shadow.png",
+    "text": "Every company has two versions of itself.\n\nThe one on the about page. And the one that shows up in the product decisions made when doing the right thing gets expensive.\n\nJung called this the shadow self. The part of the personality the conscious mind does not want to see.\n\nSocial media companies say they build connection. The product decisions say they build compulsion. Most people know this. Most people stay anyway.\n\nI think about this a lot when I read company values pages. The gap between the stated version and the actual version tends to compress over time. It usually resolves in the direction of the actual version."
   }
 ]
