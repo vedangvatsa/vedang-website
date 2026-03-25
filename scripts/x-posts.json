@@ -258,5 +258,85 @@
     "posted": false,
     "image": "scripts/thread-assets/psych_confirmation.png",
     "text": "I read the same AI news differently depending on what I already believe about AI.\n\nAn impressive result feels like confirmation. A failure feels expected. Neither reaction is fully honest.\n\nThis is confirmation bias. We look for evidence that supports what we already think. We interpret ambiguous evidence in the direction of our existing view.\n\nAt scale, this is what recommendation algorithms do. They learn what you believe and surface evidence of it. Different people end up with genuinely different bodies of evidence. Not because one side is lying. Because both sides are only seeing what confirms their starting position.\n\nInvestors have this problem too. The founder who does not fit the pattern of past successes gets less attention, even when the underlying opportunity is the same."
+  },
+  {
+    "id": "solo-unicorn-1",
+    "scheduleDate": "2026-04-03",
+    "scheduleTime": "20:57",
+    "posted": false,
+    "image": "scripts/thread-assets/solo_unicorn_1.png",
+    "text": "A company with one employee and a billion dollar valuation is no longer a joke. It is a mathematical certainty.\n\nWhen the cost of coordination drops to zero, the need for a 50-person team disappears.\n\nOne person with a strong idea can command 1,000 AI modules. The bottleneck is no longer execution. It is the quality of the original thought."
+  },
+  {
+    "id": "solo-unicorn-2",
+    "scheduleDate": "2026-04-04",
+    "scheduleTime": "04:57",
+    "posted": false,
+    "image": "scripts/thread-assets/solo_unicorn_2.png",
+    "text": "Middle management only exists because humans are hard to coordinate. You need people to watch people.\n\nAI agents do not need meetings. They do not need status updates. They do not need motivation.\n\nIf the work is purely digital, the management layer is just latency. Most companies will soon be 10x smaller and 100x more productive."
+  },
+  {
+    "id": "solo-unicorn-3",
+    "scheduleDate": "2026-04-04",
+    "scheduleTime": "12:57",
+    "posted": false,
+    "image": "scripts/thread-assets/solo_unicorn_3.png",
+    "text": "Companies used to be built with people and processes. Now they are built with code and agents.\n\nYou do not hire a marketing team. You deploy a marketing module.\n\nYou do not build a support department. You configure a support agent.\n\nThe founder who wins is the one who treats their entire company as a single piece of software."
+  },
+  {
+    "id": "ai-limits-1",
+    "scheduleDate": "2026-04-04",
+    "scheduleTime": "20:57",
+    "posted": false,
+    "image": "scripts/thread-assets/ai_limits_1.png",
+    "text": "AI does not run on code. It runs on electricity.\n\nThe growth of the intelligence layer is now hitting a wall of physics.\n\nWe have enough silicon. We do not have enough power grids. Training runs are moving to where the energy is cheapest. Not where the talent is. Intelligence follows the power lines."
+  },
+  {
+    "id": "ai-limits-2",
+    "scheduleDate": "2026-04-05",
+    "scheduleTime": "04:57",
+    "posted": false,
+    "image": "scripts/thread-assets/ai_limits_2.png",
+    "text": "Intelligence used to be rare. Now it is becoming a utility. Like water or electricity.\n\nWhen something becomes a commodity, the value moves to what you do with it. Not the thing itself.\n\nOwning the model is not the win. Owning the problem that the model solves is the win."
+  },
+  {
+    "id": "ai-limits-3",
+    "scheduleDate": "2026-04-05",
+    "scheduleTime": "12:57",
+    "posted": false,
+    "image": "scripts/thread-assets/ai_limits_3.png",
+    "text": "Data centers used to be built near cities for low latency. Now they are being built near nuclear plants and hydroelectric dams.\n\nWe are trading speed for power.\n\nThe physical world is reasserting itself because the digital world got too hungry."
+  },
+  {
+    "id": "vibe-coding-1",
+    "scheduleDate": "2026-04-05",
+    "scheduleTime": "20:57",
+    "posted": false,
+    "image": "scripts/thread-assets/vibe_coding_1.png",
+    "text": "English is the new programming language. You no longer need to know syntax.\n\nYou need to know how to describe things clearly. This shifts the power from the person who can write code to the person who knows what should be built.\n\nThe barrier to entry is gone. The value of taste has doubled."
+  },
+  {
+    "id": "vibe-coding-2",
+    "scheduleDate": "2026-04-06",
+    "scheduleTime": "04:57",
+    "posted": false,
+    "image": "scripts/thread-assets/vibe_coding_2.png",
+    "text": "When building software costs zero, everyone builds software. Most of it will be terrible.\n\nThe skill of the future is not building. It is editing. It is knowing when something is good enough.\n\nIt is having a \"vibe\" that people want to belong to. Taste is the only thing that cannot be automated."
+  },
+  {
+    "id": "vibe-coding-3",
+    "scheduleDate": "2026-04-06",
+    "scheduleTime": "12:57",
+    "posted": false,
+    "image": "scripts/thread-assets/vibe_coding_3.png",
+    "text": "I can now build in an afternoon what used to take a month.\n\nThis does not mean I work less. It means I can try 30 ideas instead of one.\n\nThe cycle of failure has compressed.\n\nSuccess is just a high-speed search for what works."
+  },
+  {
+    "id": "dark-forest-1",
+    "scheduleDate": "2026-04-06",
+    "scheduleTime": "20:57",
+    "posted": false,
+    "image": "scripts/thread-assets/dark_forest_1.png",
+    "text": "The public web is filling with AI-generated noise. SEO is dead. Search is broken.\n\nThis is the Dark Forest. To find real people, you have to go into the shadows.\n\nPrivate groups. Gated communities. Places where proof-of-human still matters."
   }
 ]
