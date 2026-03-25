@@ -98,9 +98,17 @@
     "text": "Every pitch deck that works tells a story.\n\nNot always on purpose. But the structure is almost always the same.\n\nHere is the world as it is. Here is the thing the founder saw that others missed. Here is how hard it was to act on that. Here is what they built because of it. Here is what changes for people now.\n\nCampbell documented this arc across myths from every culture. The hero is called, descends, transforms, and returns with something of value.\n\nThe pitches that do not work tend to skip the descent. They go from broken world to working product with no difficulty in between. That is not believable. And investors feel it even when they cannot name it."
   },
   {
-    "id": "psych-shadow",
+    "id": "lit-fired",
     "scheduleDate": "2026-03-28",
     "scheduleTime": "04:57",
+    "posted": false,
+    "image": "scripts/thread-assets/lit_fired.png",
+    "text": "Nobody gets fired on LinkedIn. They navigate transitions. Nobody fails. They pivot. Nobody has a bad quarter. They recalibrate.\n\nThe platform rewards exaggeration so consistently that honesty looks like a mistake.\n\nI built a translator for this. Type what actually happened and watch it become a LinkedIn post.\n\nTry it yourself: veda.ng/lit"
+  },
+  {
+    "id": "psych-shadow",
+    "scheduleDate": "2026-03-28",
+    "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_shadow.png",
     "text": "Every company has two versions of itself.\n\nThe one on the about page. And the one that shows up in the product decisions made when doing the right thing gets expensive.\n\nJung called this the shadow self. The part of the personality the conscious mind does not want to see.\n\nSocial media companies say they build connection. The product decisions say they build compulsion. Most people know this. Most people stay anyway.\n\nI think about this a lot when I read company values pages. The gap between the stated version and the actual version tends to compress over time. It usually resolves in the direction of the actual version."
@@ -108,15 +116,15 @@
   {
     "id": "psych-toxic-positivity",
     "scheduleDate": "2026-03-28",
-    "scheduleTime": "12:57",
+    "scheduleTime": "20:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_toxic_positivity.png",
     "text": "There is a version of optimism that makes problems worse by refusing to name them.\n\nI have sat in rooms where a company was clearly in trouble. Every concern was met with a reframe. Burn rate is high but we are learning fast. Users are churning but the core audience is engaged. Morale is low but that is the nature of building hard things.\n\nSometimes those reframes are true. Sometimes they are a way of not having the conversation that might actually help.\n\nThe teams that recover from hard periods tend to be the ones that named the difficulty clearly before deciding how to respond to it. The reframe is more useful after the problem has been seen without it."
   },
   {
     "id": "psych-attribution",
-    "scheduleDate": "2026-03-28",
-    "scheduleTime": "20:57",
+    "scheduleDate": "2026-03-29",
+    "scheduleTime": "04:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_attribution.png",
     "text": "When a competitor fails, the instinct is to say their product was bad or their team was weak.\n\nWhen something we worked on does not find traction, the instinct is to say the market was not ready or the timing was off.\n\nI have caught myself doing both in the same month.\n\nThe fundamental attribution error is the name for this asymmetry. We explain others through character. We explain ourselves through circumstances.\n\nBoth explanations can be accurate in any specific case. The error is in the automatic direction of the explanation, not the conclusion.\n\nCompanies that learn the most from failure tend to apply the same framework to themselves that they apply to everyone else."
@@ -124,7 +132,7 @@
   {
     "id": "psych-confirmation",
     "scheduleDate": "2026-03-29",
-    "scheduleTime": "04:57",
+    "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_confirmation.png",
     "text": "I read the same AI news differently depending on what I already believe about AI.\n\nAn impressive result feels like confirmation. A failure feels expected. Neither reaction is fully honest.\n\nThis is confirmation bias. We look for evidence that supports what we already think. We interpret ambiguous evidence in the direction of our existing view.\n\nAt scale, this is what recommendation algorithms do. They learn what you believe and surface evidence of it. Different people end up with genuinely different bodies of evidence. Not because one side is lying. Because both sides are only seeing what confirms their starting position.\n\nInvestors have this problem too. The founder who does not fit the pattern of past successes gets less attention, even when the underlying opportunity is the same."
@@ -132,39 +140,47 @@
   {
     "id": "solo-unicorn-1",
     "scheduleDate": "2026-03-29",
-    "scheduleTime": "12:57",
+    "scheduleTime": "20:57",
     "posted": false,
     "image": "scripts/thread-assets/solo_unicorn_1.png",
     "text": "A company with one employee and a billion dollar valuation is no longer a joke. It is a mathematical certainty.\n\nWhen the cost of coordination drops to zero, the need for a 50-person team disappears.\n\nOne person with a strong idea can command 1,000 AI modules. The bottleneck is no longer execution. It is the quality of the original thought."
   },
   {
     "id": "solo-unicorn-2",
-    "scheduleDate": "2026-03-29",
-    "scheduleTime": "20:57",
+    "scheduleDate": "2026-03-30",
+    "scheduleTime": "04:57",
     "posted": false,
     "image": "scripts/thread-assets/solo_unicorn_2.png",
     "text": "Middle management only exists because humans are hard to coordinate. You need people to watch people.\n\nAI agents do not need meetings. They do not need status updates. They do not need motivation.\n\nIf the work is purely digital, the management layer is just latency. Most companies will soon be 10x smaller and 100x more productive."
   },
   {
+    "id": "lit-bosses",
+    "scheduleDate": "2026-03-30",
+    "scheduleTime": "12:57",
+    "posted": false,
+    "image": "scripts/thread-assets/lit_bosses.png",
+    "text": "Thrilled to announce that [mundane thing] has given me [exaggerated insight] which will [change the world somehow].\n\nThis is the most popular sentence format on LinkedIn. Every toxic manager was a masterclass in resilience. Every burnout was a recalibration of priorities.\n\nThe reverse translator strips the polish and shows what people probably meant.\n\nPaste any LinkedIn post and see what it really means: veda.ng/lit"
+  },
+  {
     "id": "solo-unicorn-3",
     "scheduleDate": "2026-03-30",
-    "scheduleTime": "04:57",
+    "scheduleTime": "20:57",
     "posted": false,
     "image": "scripts/thread-assets/solo_unicorn_3.png",
     "text": "Companies used to be built with people and processes. Now they are built with code and agents.\n\nYou do not hire a marketing team. You deploy a marketing module.\n\nYou do not build a support department. You configure a support agent.\n\nThe founder who wins is the one who treats their entire company as a single piece of software."
   },
   {
     "id": "ai-limits-1",
-    "scheduleDate": "2026-03-30",
-    "scheduleTime": "12:57",
+    "scheduleDate": "2026-03-31",
+    "scheduleTime": "04:57",
     "posted": false,
     "image": "scripts/thread-assets/ai_limits_1.png",
     "text": "AI does not run on code. It runs on electricity.\n\nThe growth of the intelligence layer is now hitting a wall of physics.\n\nWe have enough silicon. We do not have enough power grids. Training runs are moving to where the energy is cheapest. Not where the talent is. Intelligence follows the power lines."
   },
   {
     "id": "ai-limits-2",
-    "scheduleDate": "2026-03-30",
-    "scheduleTime": "20:57",
+    "scheduleDate": "2026-03-31",
+    "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/ai_limits_2.png",
     "text": "Intelligence used to be rare. Now it is becoming a utility. Like water or electricity.\n\nWhen something becomes a commodity, the value moves to what you do with it. Not the thing itself.\n\nOwning the model is not the win. Owning the problem that the model solves is the win."
@@ -172,30 +188,38 @@
   {
     "id": "psych-maslow",
     "scheduleDate": "2026-03-31",
-    "scheduleTime": "04:57",
+    "scheduleTime": "20:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_maslow.png",
     "text": "People do not want productivity tools.\n\nThey want to feel less behind. Less alone. More in control.\n\nMaslow mapped this out in 1943. Survival first. Then safety. Then belonging. Then status. Then growth. You cannot sell someone rung five when they are stuck on rung two.\n\nInstagram succeeded because it sold belonging, not photos. LinkedIn sells status, not jobs.\n\nI noticed this when I realised the AI tools I kept using were not the most powerful ones. They were the ones that made the work feel less isolating.\n\nThe AI products that may last are not the most capable. They are the ones that address the right rung."
   },
   {
     "id": "ctc-arc",
-    "scheduleDate": "2026-03-31",
-    "scheduleTime": "12:57",
+    "scheduleDate": "2026-04-01",
+    "scheduleTime": "04:57",
     "posted": false,
     "image": "scripts/thread-assets/ctc_arc.png",
     "text": "Japan made transistor radios that broke. Then they made cars that didn't.\n\nBy 1985, Japanese cars had 25% of the US car market, up from near zero in 1965. The oil crisis forced people to try them. Once they did, the quality was evident.\n\nKorea's Hyundai entered the US in 1986 at $4,995. J.D. Power ranked it near the bottom. Twenty years later Samsung had overtaken Apple in global smartphone shipments.\n\nChina in 2000 meant cheap. China in 2023 is DJI holding 70% of the drone market and BYD being the largest EV manufacturer by volume. Western surveys still score \"Made in China\" below \"Made in Germany.\"\n\nIndia's GDP per capita in 2023 was $2,730. China's in 2007 was $2,651.\n\nThe perception tends to trail the reality. By 15 to 20 years. In every case so far."
   },
   {
     "id": "business-world-model",
-    "scheduleDate": "2026-03-31",
-    "scheduleTime": "20:57",
+    "scheduleDate": "2026-04-01",
+    "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/world_model_gap.png",
     "text": "Within a few years, most companies will have more AI agents running than human employees.\n\nThat is not a prediction. It is already starting.\n\nWhen that happens, the old management model breaks.\n\nToday you manage people. Check-ins, approvals, status updates. You stay on top because the number of decisions is manageable.\n\nWhen thousands of agents are making thousands of decisions a day, you cannot manage that way. You have to manage by exception. Scan for what broke. Simulate what to do next.\n\nThe problem is there is nothing to simulate on.\n\nEvery CEO already runs what-ifs in their head. \"If I cut prices here, what happens to margins there?\" The thinking exists. It just lives in one person's head and walks out the door when they leave.\n\nWhat needs to be built is that model in software. Autonomous cars had this problem first. Waymo does not train a car by telling it what to do. They build a world model. A simulation of the road where you run millions of what-ifs before the car touches real tarmac.\n\nBusiness needs that. Something connected to every system in the company. Not a dashboard. Not an agent. Something that answers: if I do X, what happens next?\n\nThe tools exist for the left side of that image.\n\nNobody has built the right side yet."
   },
   {
-    "id": "psych-bystander",
+    "id": "lit-scrolling",
     "scheduleDate": "2026-04-01",
+    "scheduleTime": "20:57",
+    "posted": false,
+    "image": "scripts/thread-assets/lit_scrolling.png",
+    "text": "Five years ago, people said they worked hard. Now they say they are deeply passionate about driving impact at scale.\n\nFive years ago, people ate lunch. Now they have wellness-optimised nutrition windows.\n\nThe algorithm trained millions of professionals to write like press releases.\n\nI built a tool that automates this inflation. Type what you actually did: veda.ng/lit"
+  },
+  {
+    "id": "psych-bystander",
+    "scheduleDate": "2026-04-02",
     "scheduleTime": "04:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_bystander.png",
@@ -203,7 +227,7 @@
   },
   {
     "id": "ctc-india",
-    "scheduleDate": "2026-04-01",
+    "scheduleDate": "2026-04-02",
     "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/ctc_india.png",
@@ -211,7 +235,7 @@
   },
   {
     "id": "ai-timelines-uncertainty",
-    "scheduleDate": "2026-04-01",
+    "scheduleDate": "2026-04-02",
     "scheduleTime": "20:57",
     "posted": false,
     "image": "scripts/thread-assets/ai_timelines.png",
@@ -219,7 +243,7 @@
   },
   {
     "id": "psych-dunning-kruger",
-    "scheduleDate": "2026-04-02",
+    "scheduleDate": "2026-04-03",
     "scheduleTime": "04:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_dunning_kruger.png",
@@ -227,7 +251,7 @@
   },
   {
     "id": "ctc-lag",
-    "scheduleDate": "2026-04-02",
+    "scheduleDate": "2026-04-03",
     "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/ctc_lag.png",
@@ -235,88 +259,64 @@
   },
   {
     "id": "math-ai-highway",
-    "scheduleDate": "2026-04-02",
+    "scheduleDate": "2026-04-03",
     "scheduleTime": "20:57",
     "posted": false,
     "image": "scripts/thread-assets/math_ai_city.png",
     "text": "When cars arrived, cities tried to fit them into streets built for horses. That did not work. They built new roads for cars. Those worked. But they destroyed neighborhoods in the process.\n\nTerence Tao, the world's most celebrated living mathematician, thinks AI in mathematics is at the same point.\n\nMath journals, papers, conferences, advisor-student relationships. All of it was built for humans working at human speed. AI gets from hypothesis to proof faster. But it skips everything that makes the proof valuable beyond the answer.\n\nThe author develops skills. The reader gets a map of the terrain. Dead ends get documented. Future researchers know where not to go.\n\nAn AI proof skips all of that. It arrives at the destination and has nothing to say about the road.\n\nThe mistake happening right now is trying to make AI write papers that look like human papers. That is fitting a car into a horse street. It looks right from a distance and does not work up close.\n\nThe better path: build new infrastructure for the new tool. Large-scale mathematical challenges verified by proof assistants. Libraries of rough machine-generated proofs that humans then refine into something worth reading.\n\nThe goal is not to replace the walkable city. It is to build the highway without demolishing the neighborhood.\n\nWe have not been good at that historically."
   },
   {
-    "id": "psych-attachment",
-    "scheduleDate": "2026-04-03",
+    "id": "lit-meetings",
+    "scheduleDate": "2026-04-04",
     "scheduleTime": "04:57",
+    "posted": false,
+    "image": "scripts/thread-assets/lit_meetings.png",
+    "text": "Nobody on LinkedIn has meetings. They have cross-functional alignment sessions.\n\nNobody wastes time. They invest in stakeholder engagement.\n\nNobody sits through pointless calls. They maximise collaborative synergies through immersive roundtable experiences.\n\nType what actually happened and watch it become a consulting deck: veda.ng/lit"
+  },
+  {
+    "id": "psych-attachment",
+    "scheduleDate": "2026-04-04",
+    "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_attachment.png",
     "text": "Some apps keep you coming back because they are good.\n\nSome keep you coming back because they never quite resolve the feeling that brought you there.\n\nAnxiety drives more return visits than satisfaction. Unpredictable rewards outperform consistent ones. Occasional viral posts surrounded by silence keep creators more hooked than steady performance.\n\nI catch myself opening apps for no clear reason. Not because I expect anything. Because there is an unresolved feeling and the reflex is to check.\n\nThe most retentive products may not be the most loved ones."
   },
   {
     "id": "jevons-paradox-ai",
-    "scheduleDate": "2026-04-03",
-    "scheduleTime": "12:57",
+    "scheduleDate": "2026-04-04",
+    "scheduleTime": "20:57",
     "posted": false,
     "image": "scripts/thread-assets/jevons.png",
     "text": "In 1865, making steam engines more efficient did not reduce coal use. It increased it. Cheaper energy meant people found more uses for energy.\n\nThis is Jevons Paradox.\n\nIt is happening with AI right now.\n\nWhen code costs less to write, companies write more code. They build products that were too expensive before. They enter markets they ignored. They automate things they manually skipped.\n\nPhotography is the clearest example. Digital cameras made photos essentially free. The number of photos taken per year went from billions to trillions. Photographers did not disappear. There are more of them now.\n\nThe people predicting mass unemployment and the people predicting no disruption are using the same wrong assumption: that the pool of work is fixed.\n\nIt is not.\n\nThe real question is whether demand in your field is constrained by price. If the only thing stopping more of your work from existing was cost, AI will create more of it.\n\nMost fields work that way."
   },
   {
     "id": "psych-stockholm",
-    "scheduleDate": "2026-04-03",
-    "scheduleTime": "20:57",
+    "scheduleDate": "2026-04-05",
+    "scheduleTime": "04:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_stockholm.png",
     "text": "A founder I know has been underpaid, diluted, and overridden repeatedly by one investor.\n\nHe still talks about that investor as a mentor.\n\nStockholm syndrome describes what happens when people in a controlling environment start to identify with and defend the controlling party. The startup version is quieter but present.\n\nWorkers defend 80-hour weeks publicly. First employees celebrate exits that left them with nothing. The practice becomes the identity. Criticising the conditions means criticising yourself.\n\nIt may be the most effective retention mechanism in the industry."
   },
   {
     "id": "psych-mirror",
-    "scheduleDate": "2026-04-04",
-    "scheduleTime": "04:57",
+    "scheduleDate": "2026-04-05",
+    "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_mirror.png",
     "text": "There is a class of neurons that fire both when you act and when you watch someone else act.\n\nThey are the biological foundation of imitation. Possibly of empathy.\n\nAI models are trained on vast amounts of human output. They mirror our patterns back at scale. When an AI response feels like it is reading you correctly, it is probably because it has seen enough examples of people who wrote and thought similarly.\n\nI notice this more as these systems improve. The mirroring gets more accurate.\n\nWhether accurate mirroring becomes something that feels like understanding is still an open question."
   },
   {
     "id": "smart-employees",
-    "scheduleDate": "2026-04-04",
-    "scheduleTime": "12:57",
+    "scheduleDate": "2026-04-05",
+    "scheduleTime": "20:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_smart_employees.png",
     "text": "The smartest employees do not play the corporate game the usual way.\n\nThey build a side hustle outside their job. They do not chase manager titles for status. They keep interviewing even when employed. They treat everyone with respect... including the cleaner.\n\nThey push back on micromanagement. They decline useless meetings. They help others grow in their careers. They do not reply to every email.\n\nThey stay away from gossip and office politics. They build passive income so one job doesn't control their life.\n\nIt is about owning your time, not your title."
   },
   {
-    "id": "lit-fired",
-    "scheduleDate": "2026-04-05",
-    "scheduleTime": "12:57",
-    "posted": false,
-    "image": "scripts/thread-assets/lit_fired.png",
-    "text": "Nobody gets fired on LinkedIn. They navigate transitions. Nobody fails. They pivot. Nobody has a bad quarter. They recalibrate.\n\nThe platform rewards exaggeration so consistently that honesty looks like a mistake.\n\nI built a translator for this. Type what actually happened and watch it become a LinkedIn post.\n\nTry it yourself: veda.ng/lit"
-  },
-  {
-    "id": "lit-bosses",
-    "scheduleDate": "2026-04-05",
-    "scheduleTime": "20:57",
-    "posted": false,
-    "image": "scripts/thread-assets/lit_bosses.png",
-    "text": "Thrilled to announce that [mundane thing] has given me [exaggerated insight] which will [change the world somehow].\n\nThis is the most popular sentence format on LinkedIn. Every toxic manager was a masterclass in resilience. Every burnout was a recalibration of priorities.\n\nThe reverse translator strips the polish and shows what people probably meant.\n\nPaste any LinkedIn post and see what it really means: veda.ng/lit"
-  },
-  {
-    "id": "lit-scrolling",
-    "scheduleDate": "2026-04-06",
-    "scheduleTime": "04:57",
-    "posted": false,
-    "image": "scripts/thread-assets/lit_scrolling.png",
-    "text": "Five years ago, people said they worked hard. Now they say they are deeply passionate about driving impact at scale.\n\nFive years ago, people ate lunch. Now they have wellness-optimised nutrition windows.\n\nThe algorithm trained millions of professionals to write like press releases.\n\nI built a tool that automates this inflation. Type what you actually did: veda.ng/lit"
-  },
-  {
-    "id": "lit-meetings",
-    "scheduleDate": "2026-04-06",
-    "scheduleTime": "12:57",
-    "posted": false,
-    "image": "scripts/thread-assets/lit_meetings.png",
-    "text": "Nobody on LinkedIn has meetings. They have cross-functional alignment sessions.\n\nNobody wastes time. They invest in stakeholder engagement.\n\nNobody sits through pointless calls. They maximise collaborative synergies through immersive roundtable experiences.\n\nType what actually happened and watch it become a consulting deck: veda.ng/lit"
-  },
-  {
     "id": "lit-password",
     "scheduleDate": "2026-04-06",
-    "scheduleTime": "20:57",
+    "scheduleTime": "04:57",
     "posted": false,
     "image": "scripts/thread-assets/lit_password.png",
     "text": "You know LinkedIn language has gone too far when forgetting a password becomes a Temporary Credential Misalignment with a setback in personal identity management protocols.\n\nA coffee break is a mindful recalibration of cognitive bandwidth. A nap is an investment in neural recovery.\n\nSatire is now indistinguishable from real posts. That is why I built the translator.\n\nTry it: veda.ng/lit"
