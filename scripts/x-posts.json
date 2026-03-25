@@ -130,5 +130,13 @@
     "posted": false,
     "image": "scripts/thread-assets/psych_maslow.png",
     "text": "People do not want productivity tools.\n\nThey want to feel less behind. Less alone. More in control.\n\nMaslow mapped this out in 1943. Survival first. Then safety. Then belonging. Then status. Then growth. You cannot sell someone rung five when they are stuck on rung two.\n\nInstagram succeeded because it sold belonging, not photos. LinkedIn sells status, not jobs.\n\nI noticed this when I realised the AI tools I kept using were not the most powerful ones. They were the ones that made the work feel less isolating.\n\nThe AI products that may last are not the most capable. They are the ones that address the right rung."
+  },
+  {
+    "id": "psych-bystander",
+    "scheduleDate": "2026-03-29",
+    "scheduleTime": "12:57",
+    "posted": false,
+    "image": "scripts/thread-assets/psych_bystander.png",
+    "text": "The more people in the room, the less likely anyone acts.\n\nThat is not cynicism. It is a documented pattern. When responsibility is shared, it evaporates.\n\nI have seen this in every large org I have been close to. A bug sits for months. A feature everyone hates stays live for years. An outage gets handled by nobody because three teams each assumed one of the others was on it.\n\nSmall teams do not have this problem. When there are two people, someone has to move.\n\nScale creates bystanders. That is worth remembering before adding more people to a problem."
   }
 ]
