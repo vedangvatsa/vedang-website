@@ -138,5 +138,45 @@
     "posted": false,
     "image": "scripts/thread-assets/psych_bystander.png",
     "text": "The more people in the room, the less likely anyone acts.\n\nThat is not cynicism. It is a documented pattern. When responsibility is shared, it evaporates.\n\nI have seen this in every large org I have been close to. A bug sits for months. A feature everyone hates stays live for years. An outage gets handled by nobody because three teams each assumed one of the others was on it.\n\nSmall teams do not have this problem. When there are two people, someone has to move.\n\nScale creates bystanders. That is worth remembering before adding more people to a problem."
+  },
+  {
+    "id": "psych-dunning-kruger",
+    "scheduleDate": "2026-03-29",
+    "scheduleTime": "20:57",
+    "posted": false,
+    "image": "scripts/thread-assets/psych_dunning_kruger.png",
+    "text": "I formed strong opinions about AI after a few weeks with it.\n\nThe longer I spent actually building with these systems, the less certain I became.\n\nThis is the Dunning-Kruger pattern. Early exposure produces peak confidence. Real depth produces more careful claims.\n\nAI may be running this cycle faster than anything before it. A week in and people publish threads about AGI timelines. Two years in and they ask more questions than they answer.\n\nThe loudest voices in any new technology tend to be the most recently arrived."
+  },
+  {
+    "id": "psych-attachment",
+    "scheduleDate": "2026-03-30",
+    "scheduleTime": "04:57",
+    "posted": false,
+    "image": "scripts/thread-assets/psych_attachment.png",
+    "text": "Some apps keep you coming back because they are good.\n\nSome keep you coming back because they never quite resolve the feeling that brought you there.\n\nAnxiety drives more return visits than satisfaction. Unpredictable rewards outperform consistent ones. Occasional viral posts surrounded by silence keep creators more hooked than steady performance.\n\nI catch myself opening apps for no clear reason. Not because I expect anything. Because there is an unresolved feeling and the reflex is to check.\n\nThe most retentive products may not be the most loved ones."
+  },
+  {
+    "id": "psych-stockholm",
+    "scheduleDate": "2026-03-30",
+    "scheduleTime": "12:57",
+    "posted": false,
+    "image": "scripts/thread-assets/psych_stockholm.png",
+    "text": "A founder I know has been underpaid, diluted, and overridden repeatedly by one investor.\n\nHe still talks about that investor as a mentor.\n\nStockholm syndrome describes what happens when people in a controlling environment start to identify with and defend the controlling party. The startup version is quieter but present.\n\nWorkers defend 80-hour weeks publicly. First employees celebrate exits that left them with nothing. The practice becomes the identity. Criticising the conditions means criticising yourself.\n\nIt may be the most effective retention mechanism in the industry."
+  },
+  {
+    "id": "psych-cbt",
+    "scheduleDate": "2026-03-30",
+    "scheduleTime": "20:57",
+    "posted": false,
+    "image": "scripts/thread-assets/psych_cbt.png",
+    "text": "Notion is therapy. Journaling apps are therapy. Habit trackers are therapy.\n\nNot literally. But the mechanism is the same.\n\nCognitive behavioral therapy works by surfacing thought patterns, interrupting automatic behavior, and reframing how experiences are interpreted. Most productivity software does a version of exactly that.\n\nI realised this when things my therapist suggested and things productivity tools were doing had started to overlap.\n\nThe market for AI coaches is a bet that this intervention scales better through software than through a weekly session. That bet may hold."
+  },
+  {
+    "id": "psych-pygmalion",
+    "scheduleDate": "2026-03-31",
+    "scheduleTime": "04:57",
+    "posted": false,
+    "image": "scripts/thread-assets/psych_pygmalion.png",
+    "text": "The best manager I worked with told me early that he thought I could do things I did not yet believe I could.\n\nI did most of them.\n\nThe Pygmalion effect is the name for what happens when expectation shapes performance. Students told they are gifted by teachers who believe it genuinely perform better. Teams told they are high-potential tend to become high-performing.\n\nThis is one reason strong leaders hire people they believe in rather than people who are already proven. The expectation is part of the output.\n\nWhat you believe about someone tends to become what they become."
   }
 ]
