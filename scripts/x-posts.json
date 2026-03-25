@@ -338,5 +338,29 @@
     "posted": false,
     "image": "scripts/thread-assets/lit_password.png",
     "text": "Forgetting a password on LinkedIn:\n\n\"Encountered a Temporary Credential Misalignment with a setback in personal identity management protocols.\"\n\nSatire is now indistinguishable from real LinkedIn posts.\n\nveda.ng/lit"
+  },
+  {
+    "id": "swarm-x-prediction-1",
+    "scheduleDate": "2026-04-11",
+    "scheduleTime": "04:57",
+    "posted": false,
+    "image": "scripts/thread-assets/swarm_prediction.png",
+    "text": "One AI model gives you one opinion.\n\n100 AI agents debating across 16 rounds gives you something closer to truth.\n\nBuilt a swarm intelligence prediction tool. Bring your own API key. Ask any question.\n\nveda.ng/swarm-prediction"
+  },
+  {
+    "id": "swarm-x-prediction-2",
+    "scheduleDate": "2026-04-12",
+    "scheduleTime": "04:57",
+    "posted": false,
+    "image": "scripts/thread-assets/swarm_prediction.png",
+    "text": "Prediction markets work because crowds beat individuals.\n\nThis is the AI version. Dozens of agents, multiple rounds of debate, consensus or disagreement visualised in real time.\n\nWorks with Anthropic, OpenAI, Gemini, Groq, DeepSeek.\n\nveda.ng/swarm-prediction"
+  },
+  {
+    "id": "swarm-x-prediction-3",
+    "scheduleDate": "2026-04-13",
+    "scheduleTime": "04:57",
+    "posted": false,
+    "image": "scripts/thread-assets/swarm_prediction.png",
+    "text": "Asking one AI for a prediction is like polling one person.\n\nSwarm Intelligence runs your question through 100 agents across 16 debate rounds. You see where they agree and where they do not.\n\nFree. BYO API key.\n\nveda.ng/swarm-prediction"
   }
 ]
