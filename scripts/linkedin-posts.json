@@ -287,7 +287,7 @@
     "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/lit_fired.png",
-    "text": "Corporate language exists to make uncomfortable things sound strategic.\n\nGetting fired becomes a transition. Failure becomes a pivot. Burning out becomes realigning priorities.\n\nThis is not always dishonest. Sometimes it is survival. But somewhere along the way, the gap between what people say and what they mean became so wide that I built a tool to measure it.\n\nThe image above is a real output from the translator. Try your own: veda.ng/lit"
+    "text": "LinkedIn has its own language. And it is getting worse.\n\nNobody gets fired on LinkedIn. They navigate transitions. Nobody fails. They pivot. Nobody has a bad quarter. They recalibrate.\n\nThe platform rewards exaggeration so consistently that honesty looks like a mistake. Say you made coffee this morning and the algorithm buries you. Say you leveraged a cross-functional beverage optimisation framework and you get 50,000 impressions.\n\nI built a translator that converts normal English into LinkedIn-speak. The fact that the output is indistinguishable from real posts tells you everything.\n\nveda.ng/lit"
   },
   {
     "id": "lit-bosses",
@@ -295,7 +295,7 @@
     "scheduleTime": "20:57",
     "posted": false,
     "image": "scripts/thread-assets/lit_bosses.png",
-    "text": "LinkedIn turned professional networking into performance art.\n\nEvery post is optimised for perception, not truth. Every setback is a lesson. Every bad boss taught you something valuable. Every layoff was actually a gift.\n\nSo I built a reverse translator. You paste in the polished LinkedIn version and it tells you what the person probably meant. The results are brutal and weirdly therapeutic.\n\nThe image above is a real output. Try the reverse mode: veda.ng/lit"
+    "text": "The most popular sentence format on LinkedIn:\n\nThrilled to announce that [mundane thing] has given me [exaggerated insight] which will [change the world somehow].\n\nEvery bad job was a learning experience. Every toxic manager was a masterclass in resilience. Every burnout was a recalibration of priorities.\n\nLinkedIn is the only platform where people describe getting yelled at by their boss as gaining unparalleled insight into leadership styles.\n\nThe reverse translator strips away the polish and shows you what people probably meant. The results are painfully funny.\n\nveda.ng/lit"
   },
   {
     "id": "lit-scrolling",
@@ -303,7 +303,7 @@
     "scheduleTime": "04:57",
     "posted": false,
     "image": "scripts/thread-assets/lit_scrolling.png",
-    "text": "Productivity theater is the defining skill of the modern knowledge worker.\n\nWe have built an entire vocabulary around making wasted time sound intentional. Digital engagement cadence. Content consumption strategy. Immersive social experiences.\n\nNone of it means anything. All of it sounds impressive in a performance review.\n\nThe translator I built exposes this perfectly. Feed it an honest sentence and watch it produce something your manager would put on a slide deck.\n\nveda.ng/lit"
+    "text": "LinkedIn buzzword inflation is real.\n\nFive years ago, people said they worked hard. Now they say they are deeply passionate about driving impact at scale.\n\nFive years ago, people ate lunch. Now they have wellness-optimised nutrition windows.\n\nThe language keeps inflating because understatement gets zero engagement. The algorithm has trained millions of professionals to write like press releases. Every sentence needs a framework. Every observation needs to be a paradigm shift.\n\nI built a tool that automates this inflation. You type what you actually did and it returns what LinkedIn would want you to say.\n\nveda.ng/lit"
   },
   {
     "id": "lit-meetings",
@@ -311,7 +311,7 @@
     "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/lit_meetings.png",
-    "text": "The meeting-industrial complex runs on one fuel: the belief that talking about work is the same as doing work.\n\n180 minutes of cross-functional alignment. Zero decisions made. Everyone leaves feeling busy. Nobody leaves knowing what to do next.\n\nThe best companies I have worked with have one thing in common. They protect their people from meetings the way immune systems protect against infection.\n\nI turned this frustration into a tool. Take any corporate sentence and watch it collapse under its own weight: veda.ng/lit"
+    "text": "Nobody on LinkedIn has meetings. They have cross-functional alignment sessions.\n\nNobody wastes time. They invest in stakeholder engagement.\n\nNobody sits through pointless calls. They maximise collaborative synergies through immersive roundtable experiences.\n\nThe corporate vocabulary has evolved to make it structurally impossible to admit that anything was a waste of time. Every minute must be leveraged. Every conversation must unlock value.\n\nThe translator exposes this beautifully. Type what actually happened and watch it become something a consulting firm would charge you for.\n\nveda.ng/lit"
   },
   {
     "id": "lit-password",
@@ -319,6 +319,6 @@
     "scheduleTime": "20:57",
     "posted": false,
     "image": "scripts/thread-assets/lit_password.png",
-    "text": "I forgot my password. The translator called it a Temporary Credential Misalignment with a minor setback in personal identity management protocols.\n\nThat was the moment I knew the tool worked.\n\nWhen even a forgotten password gets the full LinkedIn treatment, you know the language has crossed a line. We are not communicating anymore. We are performing.\n\nOver 4,000 people have used the translator since launch. The most popular input is still: I got fired last week.\n\nveda.ng/lit"
+    "text": "You know LinkedIn language has gone too far when forgetting a password becomes a Temporary Credential Misalignment with a setback in personal identity management protocols.\n\nThis is the platform where people announce a coffee break as a mindful recalibration of cognitive bandwidth. Where leaving on time is called prioritising holistic work-life integration. Where a nap is an investment in neural recovery.\n\nThe language is so inflated that satire is now indistinguishable from real posts. That is exactly why I built the translator.\n\nOver 4,000 people have tried it. The most popular input is still: I got fired last week.\n\nveda.ng/lit"
   }
 ]
