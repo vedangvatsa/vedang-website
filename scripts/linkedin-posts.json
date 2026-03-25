@@ -287,7 +287,7 @@
     "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/lit_fired.png",
-    "text": "I got fired last week.\n\nLinkedIn version: Navigated an Organizational Restructuring Event.\n\nSomewhere between the real thing and the LinkedIn version, an entire industry of professional storytelling was born.\n\nI built a translator for this. It converts honest sentences into LinkedIn-speak. The results are uncomfortably accurate.\n\nTry it: veda.ng/lit"
+    "text": "Someone types: I got fired last week.\n\nThe translator returns: Navigated an Organizational Restructuring Event.\n\nSomewhere between the honest version and the LinkedIn version, an entire industry of professional storytelling was born.\n\nI built a tool that converts real sentences into LinkedIn-speak. The results are uncomfortably accurate.\n\nTry it: veda.ng/lit"
   },
   {
     "id": "lit-bosses",
