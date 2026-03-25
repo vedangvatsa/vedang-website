@@ -9,7 +9,7 @@
     "tweetId": "2036722749054353704",
     "tweets": [
       {
-        "text": "LinkedIn is not a professional network. It's a language.\n\nI built a translator. Here's what it does. \ud83e\uddf5\n\nveda.ng/lit",
+        "text": "LinkedIn is not a professional network. It's a language.\n\nI built a translator. Here's what it does. 🧵\n\nveda.ng/lit",
         "image": "scripts/thread-assets/lit_1.png"
       },
       {
@@ -35,10 +35,10 @@
     "type": "thread",
     "scheduleDate": "2026-03-25",
     "scheduleTime": "20:57",
-    "posted": false,
+    "posted": true,
     "tweets": [
       {
-        "text": "Shopping used to mean: open browser, search, compare, click, form, checkout.\n\nAI agents cut that to one step. You describe. They buy.\n\nThe agent is not a new channel. It is a new buyer. \ud83e\uddf5",
+        "text": "Shopping used to mean: open browser, search, compare, click, form, checkout.\n\nAI agents cut that to one step. You describe. They buy.\n\nThe agent is not a new channel. It is a new buyer. 🧵",
         "image": "scripts/thread-assets/agentic_1.png"
       },
       {
@@ -57,7 +57,9 @@
         "text": "The infrastructure is built. The payment rails work.\n\nWhat's still missing: only 24% of people trust an agent to spend their money. And legally, in most countries, an AI cannot sign a contract on your behalf.\n\nFull essay: veda.ng/agentic-commerce",
         "image": "scripts/thread-assets/agentic_5.png"
       }
-    ]
+    ],
+    "postedAt": "2026-03-25T15:44:44.465Z",
+    "tweetId": "2036831607038877820"
   },
   {
     "id": "local-ai-future",
