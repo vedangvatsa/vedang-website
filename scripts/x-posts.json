@@ -68,52 +68,60 @@
     "text": "Everyone argues about whether the datacenter buildout pays off.\n\nNobody is arguing about the third option.\n\nOpen source models match frontier models within 3-6 months of release. o1 came out in September 2024. DeepSeek-R1 matched it by January. GPT-4o in May. DeepSeek-V3 by December.\n\nThe gap has already closed.\n\nFrontier model providers are bleeding money. OpenAI: $13B in revenue, $14B in projected losses for 2026. Prices will go up. When they do, running models locally stops being a preference and becomes the obvious call.\n\nApple is not building datacenters. Everyone says they're behind.\n\nTheir actual bet: let rivals burn cash training models, wait for open source to absorb those advances, build hardware that runs them. The M5 Max runs a 134B model locally today.\n\nThe cloud AI buildout may turn out to be R&D that open source inherits for free.\n\nFrontier labs train the models. Open source copies them. Your laptop runs them.\n\nNo subscription. No data leaving your machine. No rate limits.\n\nThat future has no billionaires in it. That's why nobody talks about it."
   },
   {
-    "id": "business-world-model",
+    "id": "psych-maslow",
     "scheduleDate": "2026-03-26",
     "scheduleTime": "12:57",
     "posted": false,
-    "image": "scripts/thread-assets/world_model_gap.png",
-    "text": "Within a few years, most companies will have more AI agents running than human employees.\n\nThat is not a prediction. It is already starting.\n\nWhen that happens, the old management model breaks.\n\nToday you manage people. Check-ins, approvals, status updates. You stay on top because the number of decisions is manageable.\n\nWhen thousands of agents are making thousands of decisions a day, you cannot manage that way. You have to manage by exception. Scan for what broke. Simulate what to do next.\n\nThe problem is there is nothing to simulate on.\n\nEvery CEO already runs what-ifs in their head. \"If I cut prices here, what happens to margins there?\" The thinking exists. It just lives in one person's head and walks out the door when they leave.\n\nWhat needs to be built is that model in software. Autonomous cars had this problem first. Waymo does not train a car by telling it what to do. They build a world model. A simulation of the road where you run millions of what-ifs before the car touches real tarmac.\n\nBusiness needs that. Something connected to every system in the company. Not a dashboard. Not an agent. Something that answers: if I do X, what happens next?\n\nThe tools exist for the left side of that image.\n\nNobody has built the right side yet."
-  },
-  {
-    "id": "ai-timelines-uncertainty",
-    "scheduleDate": "2026-03-26",
-    "scheduleTime": "20:57",
-    "posted": false,
-    "image": "scripts/thread-assets/ai_timelines.png",
-    "text": "Dario Amodei says AGI by 2026 or 2027. The co-founder of Epoch AI says 2045. Twenty years apart. Both have studied this longer than almost anyone.\n\nThis is not one of them being careless. The evidence does not pin it down.\n\nThe Metaculus community forecast shortened from 50 years to 5 years in just 5 years. Not because AI suddenly accelerated that much. Because people are updating fast on limited data.\n\nThe problem is the single number. When an expert says \"AGI in 4 years,\" audiences hear \"between 3 and 5.\" What the expert actually means: 10% chance next year, 25% chance by 2028, 50% chance by 2030, 10% chance not before 2050. Those are completely different situations to prepare for.\n\nWhen 2027 comes and goes quietly, every outlet that ran \"AI transforms everything by 2027\" will say the whole field was wrong. The researchers never predicted 2027. They said it was one scenario in a distribution that runs from next year to next century.\n\nWriting a book takes 5 years. There is roughly a 20% chance of transformative AI in the next 5 years. That means 80% of the expected value of that book survives.\n\nThe question is not whether timelines are short or long. It is how to act when both are live options."
-  },
-  {
-    "id": "math-ai-highway",
-    "scheduleDate": "2026-03-27",
-    "scheduleTime": "04:57",
-    "posted": false,
-    "image": "scripts/thread-assets/math_ai_city.png",
-    "text": "When cars arrived, cities tried to fit them into streets built for horses. That did not work. They built new roads for cars. Those worked. But they destroyed neighborhoods in the process.\n\nTerence Tao, the world's most celebrated living mathematician, thinks AI in mathematics is at the same point.\n\nMath journals, papers, conferences, advisor-student relationships. All of it was built for humans working at human speed. AI gets from hypothesis to proof faster. But it skips everything that makes the proof valuable beyond the answer.\n\nThe author develops skills. The reader gets a map of the terrain. Dead ends get documented. Future researchers know where not to go.\n\nAn AI proof skips all of that. It arrives at the destination and has nothing to say about the road.\n\nThe mistake happening right now is trying to make AI write papers that look like human papers. That is fitting a car into a horse street. It looks right from a distance and does not work up close.\n\nThe better path: build new infrastructure for the new tool. Large-scale mathematical challenges verified by proof assistants. Libraries of rough machine-generated proofs that humans then refine into something worth reading.\n\nThe goal is not to replace the walkable city. It is to build the highway without demolishing the neighborhood.\n\nWe have not been good at that historically."
-  },
-  {
-    "id": "jevons-paradox-ai",
-    "scheduleDate": "2026-03-27",
-    "scheduleTime": "20:57",
-    "posted": false,
-    "image": "scripts/thread-assets/jevons.png",
-    "text": "In 1865, making steam engines more efficient did not reduce coal use. It increased it. Cheaper energy meant people found more uses for energy.\n\nThis is Jevons Paradox.\n\nIt is happening with AI right now.\n\nWhen code costs less to write, companies write more code. They build products that were too expensive before. They enter markets they ignored. They automate things they manually skipped.\n\nPhotography is the clearest example. Digital cameras made photos essentially free. The number of photos taken per year went from billions to trillions. Photographers did not disappear. There are more of them now.\n\nThe people predicting mass unemployment and the people predicting no disruption are using the same wrong assumption: that the pool of work is fixed.\n\nIt is not.\n\nThe real question is whether demand in your field is constrained by price. If the only thing stopping more of your work from existing was cost, AI will create more of it.\n\nMost fields work that way."
+    "image": "scripts/thread-assets/psych_maslow.png",
+    "text": "People do not want productivity tools.\n\nThey want to feel less behind. Less alone. More in control.\n\nMaslow mapped this out in 1943. Survival first. Then safety. Then belonging. Then status. Then growth. You cannot sell someone rung five when they are stuck on rung two.\n\nInstagram succeeded because it sold belonging, not photos. LinkedIn sells status, not jobs.\n\nI noticed this when I realised the AI tools I kept using were not the most powerful ones. They were the ones that made the work feel less isolating.\n\nThe AI products that may last are not the most capable. They are the ones that address the right rung."
   },
   {
     "id": "ctc-arc",
-    "scheduleDate": "2026-03-28",
-    "scheduleTime": "04:57",
+    "scheduleDate": "2026-03-26",
+    "scheduleTime": "20:57",
     "posted": false,
     "image": "scripts/thread-assets/ctc_arc.png",
     "text": "Japan made transistor radios that broke. Then they made cars that didn't.\n\nBy 1985, Japanese cars had 25% of the US car market, up from near zero in 1965. The oil crisis forced people to try them. Once they did, the quality was evident.\n\nKorea's Hyundai entered the US in 1986 at $4,995. J.D. Power ranked it near the bottom. Twenty years later Samsung had overtaken Apple in global smartphone shipments.\n\nChina in 2000 meant cheap. China in 2023 is DJI holding 70% of the drone market and BYD being the largest EV manufacturer by volume. Western surveys still score \"Made in China\" below \"Made in Germany.\"\n\nIndia's GDP per capita in 2023 was $2,730. China's in 2007 was $2,651.\n\nThe perception tends to trail the reality. By 15 to 20 years. In every case so far."
   },
   {
-    "id": "ctc-india",
-    "scheduleDate": "2026-03-28",
+    "id": "business-world-model",
+    "scheduleDate": "2026-03-27",
+    "scheduleTime": "04:57",
+    "posted": false,
+    "image": "scripts/thread-assets/world_model_gap.png",
+    "text": "Within a few years, most companies will have more AI agents running than human employees.\n\nThat is not a prediction. It is already starting.\n\nWhen that happens, the old management model breaks.\n\nToday you manage people. Check-ins, approvals, status updates. You stay on top because the number of decisions is manageable.\n\nWhen thousands of agents are making thousands of decisions a day, you cannot manage that way. You have to manage by exception. Scan for what broke. Simulate what to do next.\n\nThe problem is there is nothing to simulate on.\n\nEvery CEO already runs what-ifs in their head. \"If I cut prices here, what happens to margins there?\" The thinking exists. It just lives in one person's head and walks out the door when they leave.\n\nWhat needs to be built is that model in software. Autonomous cars had this problem first. Waymo does not train a car by telling it what to do. They build a world model. A simulation of the road where you run millions of what-ifs before the car touches real tarmac.\n\nBusiness needs that. Something connected to every system in the company. Not a dashboard. Not an agent. Something that answers: if I do X, what happens next?\n\nThe tools exist for the left side of that image.\n\nNobody has built the right side yet."
+  },
+  {
+    "id": "psych-bystander",
+    "scheduleDate": "2026-03-27",
     "scheduleTime": "12:57",
+    "posted": false,
+    "image": "scripts/thread-assets/psych_bystander.png",
+    "text": "The more people in the room, the less likely anyone acts.\n\nThat is not cynicism. It is a documented pattern. When responsibility is shared, it evaporates.\n\nI have seen this in every large org I have been close to. A bug sits for months. A feature everyone hates stays live for years. An outage gets handled by nobody because three teams each assumed one of the others was on it.\n\nSmall teams do not have this problem. When there are two people, someone has to move.\n\nScale creates bystanders. That is worth remembering before adding more people to a problem."
+  },
+  {
+    "id": "ctc-india",
+    "scheduleDate": "2026-03-27",
+    "scheduleTime": "20:57",
     "posted": false,
     "image": "scripts/thread-assets/ctc_india.png",
     "text": "India may have already completed the quality cycle in two sectors.\n\nSoftware exports went from $6 billion in 2001 to $194 billion in 2023. TCS and Infosys now compete on quality terms, not price.\n\nPharmaceuticals cover 20% of global generic exports and 40% of US generic drug approvals, meeting the same FDA standards as anything made in Switzerland.\n\nConsumer manufacturing is still early. Apple is now assembling iPhones in Tamil Nadu and Karnataka.\n\nJapan shifted perception through cars. Korea through smartphones. China may be doing it through EVs. India could do it through consumer electronics.\n\nIn every historical case, the reputation followed the reality. That pattern may hold here too."
+  },
+  {
+    "id": "ai-timelines-uncertainty",
+    "scheduleDate": "2026-03-28",
+    "scheduleTime": "04:57",
+    "posted": false,
+    "image": "scripts/thread-assets/ai_timelines.png",
+    "text": "Dario Amodei says AGI by 2026 or 2027. The co-founder of Epoch AI says 2045. Twenty years apart. Both have studied this longer than almost anyone.\n\nThis is not one of them being careless. The evidence does not pin it down.\n\nThe Metaculus community forecast shortened from 50 years to 5 years in just 5 years. Not because AI suddenly accelerated that much. Because people are updating fast on limited data.\n\nThe problem is the single number. When an expert says \"AGI in 4 years,\" audiences hear \"between 3 and 5.\" What the expert actually means: 10% chance next year, 25% chance by 2028, 50% chance by 2030, 10% chance not before 2050. Those are completely different situations to prepare for.\n\nWhen 2027 comes and goes quietly, every outlet that ran \"AI transforms everything by 2027\" will say the whole field was wrong. The researchers never predicted 2027. They said it was one scenario in a distribution that runs from next year to next century.\n\nWriting a book takes 5 years. There is roughly a 20% chance of transformative AI in the next 5 years. That means 80% of the expected value of that book survives.\n\nThe question is not whether timelines are short or long. It is how to act when both are live options."
+  },
+  {
+    "id": "psych-dunning-kruger",
+    "scheduleDate": "2026-03-28",
+    "scheduleTime": "12:57",
+    "posted": false,
+    "image": "scripts/thread-assets/psych_dunning_kruger.png",
+    "text": "I formed strong opinions about AI after a few weeks with it.\n\nThe longer I spent actually building with these systems, the less certain I became.\n\nThis is the Dunning-Kruger pattern. Early exposure produces peak confidence. Real depth produces more careful claims.\n\nAI may be running this cycle faster than anything before it. A week in and people publish threads about AGI timelines. Two years in and they ask more questions than they answer.\n\nThe loudest voices in any new technology tend to be the most recently arrived."
   },
   {
     "id": "ctc-lag",
@@ -124,76 +132,76 @@
     "text": "The lag has been consistent. In every case examined, it resolved.\n\n\"Made in Japan\" was a joke in 1955. By 1980 it meant precision engineering.\n\n\"Made in Korea\" meant cheap in 1986. By 2012 Samsung was number one globally.\n\n\"Made in China\" still registers below \"Made in Germany\" in consumer surveys. DJI holds 70% of the drone market. BYD is the largest EV maker by volume. The perception lag appears to be running about 15 years behind the current reality.\n\nIndia is at the start of that curve. GDP per capita of $2,730. Software and pharma may have already crossed. Consumer manufacturing has not yet.\n\nIf the historical pattern holds, the gap closes. It just takes time."
   },
   {
-    "id": "psych-maslow",
+    "id": "math-ai-highway",
     "scheduleDate": "2026-03-29",
     "scheduleTime": "04:57",
     "posted": false,
-    "image": "scripts/thread-assets/psych_maslow.png",
-    "text": "People do not want productivity tools.\n\nThey want to feel less behind. Less alone. More in control.\n\nMaslow mapped this out in 1943. Survival first. Then safety. Then belonging. Then status. Then growth. You cannot sell someone rung five when they are stuck on rung two.\n\nInstagram succeeded because it sold belonging, not photos. LinkedIn sells status, not jobs.\n\nI noticed this when I realised the AI tools I kept using were not the most powerful ones. They were the ones that made the work feel less isolating.\n\nThe AI products that may last are not the most capable. They are the ones that address the right rung."
-  },
-  {
-    "id": "psych-bystander",
-    "scheduleDate": "2026-03-29",
-    "scheduleTime": "12:57",
-    "posted": false,
-    "image": "scripts/thread-assets/psych_bystander.png",
-    "text": "The more people in the room, the less likely anyone acts.\n\nThat is not cynicism. It is a documented pattern. When responsibility is shared, it evaporates.\n\nI have seen this in every large org I have been close to. A bug sits for months. A feature everyone hates stays live for years. An outage gets handled by nobody because three teams each assumed one of the others was on it.\n\nSmall teams do not have this problem. When there are two people, someone has to move.\n\nScale creates bystanders. That is worth remembering before adding more people to a problem."
-  },
-  {
-    "id": "psych-dunning-kruger",
-    "scheduleDate": "2026-03-29",
-    "scheduleTime": "20:57",
-    "posted": false,
-    "image": "scripts/thread-assets/psych_dunning_kruger.png",
-    "text": "I formed strong opinions about AI after a few weeks with it.\n\nThe longer I spent actually building with these systems, the less certain I became.\n\nThis is the Dunning-Kruger pattern. Early exposure produces peak confidence. Real depth produces more careful claims.\n\nAI may be running this cycle faster than anything before it. A week in and people publish threads about AGI timelines. Two years in and they ask more questions than they answer.\n\nThe loudest voices in any new technology tend to be the most recently arrived."
+    "image": "scripts/thread-assets/math_ai_city.png",
+    "text": "When cars arrived, cities tried to fit them into streets built for horses. That did not work. They built new roads for cars. Those worked. But they destroyed neighborhoods in the process.\n\nTerence Tao, the world's most celebrated living mathematician, thinks AI in mathematics is at the same point.\n\nMath journals, papers, conferences, advisor-student relationships. All of it was built for humans working at human speed. AI gets from hypothesis to proof faster. But it skips everything that makes the proof valuable beyond the answer.\n\nThe author develops skills. The reader gets a map of the terrain. Dead ends get documented. Future researchers know where not to go.\n\nAn AI proof skips all of that. It arrives at the destination and has nothing to say about the road.\n\nThe mistake happening right now is trying to make AI write papers that look like human papers. That is fitting a car into a horse street. It looks right from a distance and does not work up close.\n\nThe better path: build new infrastructure for the new tool. Large-scale mathematical challenges verified by proof assistants. Libraries of rough machine-generated proofs that humans then refine into something worth reading.\n\nThe goal is not to replace the walkable city. It is to build the highway without demolishing the neighborhood.\n\nWe have not been good at that historically."
   },
   {
     "id": "psych-attachment",
-    "scheduleDate": "2026-03-30",
-    "scheduleTime": "04:57",
+    "scheduleDate": "2026-03-29",
+    "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_attachment.png",
     "text": "Some apps keep you coming back because they are good.\n\nSome keep you coming back because they never quite resolve the feeling that brought you there.\n\nAnxiety drives more return visits than satisfaction. Unpredictable rewards outperform consistent ones. Occasional viral posts surrounded by silence keep creators more hooked than steady performance.\n\nI catch myself opening apps for no clear reason. Not because I expect anything. Because there is an unresolved feeling and the reflex is to check.\n\nThe most retentive products may not be the most loved ones."
   },
   {
+    "id": "jevons-paradox-ai",
+    "scheduleDate": "2026-03-29",
+    "scheduleTime": "20:57",
+    "posted": false,
+    "image": "scripts/thread-assets/jevons.png",
+    "text": "In 1865, making steam engines more efficient did not reduce coal use. It increased it. Cheaper energy meant people found more uses for energy.\n\nThis is Jevons Paradox.\n\nIt is happening with AI right now.\n\nWhen code costs less to write, companies write more code. They build products that were too expensive before. They enter markets they ignored. They automate things they manually skipped.\n\nPhotography is the clearest example. Digital cameras made photos essentially free. The number of photos taken per year went from billions to trillions. Photographers did not disappear. There are more of them now.\n\nThe people predicting mass unemployment and the people predicting no disruption are using the same wrong assumption: that the pool of work is fixed.\n\nIt is not.\n\nThe real question is whether demand in your field is constrained by price. If the only thing stopping more of your work from existing was cost, AI will create more of it.\n\nMost fields work that way."
+  },
+  {
     "id": "psych-stockholm",
     "scheduleDate": "2026-03-30",
-    "scheduleTime": "12:57",
+    "scheduleTime": "04:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_stockholm.png",
     "text": "A founder I know has been underpaid, diluted, and overridden repeatedly by one investor.\n\nHe still talks about that investor as a mentor.\n\nStockholm syndrome describes what happens when people in a controlling environment start to identify with and defend the controlling party. The startup version is quieter but present.\n\nWorkers defend 80-hour weeks publicly. First employees celebrate exits that left them with nothing. The practice becomes the identity. Criticising the conditions means criticising yourself.\n\nIt may be the most effective retention mechanism in the industry."
   },
   {
-    "id": "psych-cbt",
-    "scheduleDate": "2026-03-30",
-    "scheduleTime": "20:57",
-    "posted": false,
-    "image": "scripts/thread-assets/psych_cbt.png",
-    "text": "Notion is therapy. Journaling apps are therapy. Habit trackers are therapy.\n\nNot literally. But the mechanism is the same.\n\nCognitive behavioral therapy works by surfacing thought patterns, interrupting automatic behavior, and reframing how experiences are interpreted. Most productivity software does a version of exactly that.\n\nI realised this when things my therapist suggested and things productivity tools were doing had started to overlap.\n\nThe market for AI coaches is a bet that this intervention scales better through software than through a weekly session. That bet may hold."
-  },
-  {
-    "id": "psych-pygmalion",
-    "scheduleDate": "2026-03-31",
-    "scheduleTime": "04:57",
-    "posted": false,
-    "image": "scripts/thread-assets/psych_pygmalion.png",
-    "text": "The best manager I worked with told me early that he thought I could do things I did not yet believe I could.\n\nI did most of them.\n\nThe Pygmalion effect is the name for what happens when expectation shapes performance. Students told they are gifted by teachers who believe it genuinely perform better. Teams told they are high-potential tend to become high-performing.\n\nThis is one reason strong leaders hire people they believe in rather than people who are already proven. The expectation is part of the output.\n\nWhat you believe about someone tends to become what they become."
-  },
-  {
     "id": "psych-mirror",
-    "scheduleDate": "2026-03-31",
+    "scheduleDate": "2026-03-30",
     "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_mirror.png",
     "text": "There is a class of neurons that fire both when you act and when you watch someone else act.\n\nThey are the biological foundation of imitation. Possibly of empathy.\n\nAI models are trained on vast amounts of human output. They mirror our patterns back at scale. When an AI response feels like it is reading you correctly, it is probably because it has seen enough examples of people who wrote and thought similarly.\n\nI notice this more as these systems improve. The mirroring gets more accurate.\n\nWhether accurate mirroring becomes something that feels like understanding is still an open question."
   },
   {
+    "id": "smart-employees",
+    "scheduleDate": "2026-03-30",
+    "scheduleTime": "20:57",
+    "posted": false,
+    "image": "scripts/thread-assets/psych_smart_employees.png",
+    "text": "The smartest employees do not play the corporate game the usual way.\n\nThey build a side hustle outside their job. They do not chase manager titles for status. They keep interviewing even when employed. They treat everyone with respect... including the cleaner.\n\nThey push back on micromanagement. They decline useless meetings. They help others grow in their careers. They do not reply to every email.\n\nThey stay away from gossip and office politics. They build passive income so one job doesn't control their life.\n\nIt is about owning your time, not your title."
+  },
+  {
+    "id": "psych-cbt",
+    "scheduleDate": "2026-03-31",
+    "scheduleTime": "04:57",
+    "posted": false,
+    "image": "scripts/thread-assets/psych_cbt.png",
+    "text": "Notion is therapy. Journaling apps are therapy. Habit trackers are therapy.\n\nNot literally. But the mechanism is the same.\n\nCognitive behavioral therapy works by surfacing thought patterns, interrupting automatic behavior, and reframing how experiences are interpreted. Most productivity software does a version of exactly that.\n\nI realised this when things my therapist suggested and things productivity tools were doing had started to overlap.\n\nThe market for AI coaches is a bet that this intervention scales better through software than through a weekly session. That bet may hold."
+  },
+  {
     "id": "psych-contagion",
     "scheduleDate": "2026-03-31",
-    "scheduleTime": "20:57",
+    "scheduleTime": "12:57",
     "posted": false,
     "image": "scripts/thread-assets/psych_contagion.png",
     "text": "Emotions spread without words. Without intention. Just proximity.\n\nA nervous person in a meeting makes the room nervous. An excited team makes new hires excited before they have any reason to be.\n\nI watched this play out in real time during a crypto cycle. Sentiment flipped overnight on crypto Twitter. Nothing about the underlying assets had changed. The emotion had changed. And in crypto, the emotion can be close to the actual price mechanism.\n\nRemote work may have reduced emotional contagion in offices. It is an underrated cost of distributed teams that nobody measures."
+  },
+  {
+    "id": "psych-pygmalion",
+    "scheduleDate": "2026-03-31",
+    "scheduleTime": "20:57",
+    "posted": false,
+    "image": "scripts/thread-assets/psych_pygmalion.png",
+    "text": "The best manager I worked with told me early that he thought I could do things I did not yet believe I could.\n\nI did most of them.\n\nThe Pygmalion effect is the name for what happens when expectation shapes performance. Students told they are gifted by teachers who believe it genuinely perform better. Teams told they are high-potential tend to become high-performing.\n\nThis is one reason strong leaders hire people they believe in rather than people who are already proven. The expectation is part of the output.\n\nWhat you believe about someone tends to become what they become."
   },
   {
     "id": "psych-halo",
@@ -212,20 +220,20 @@
     "text": "After enough times being ignored, people stop raising their hand.\n\nNot because they stopped having ideas. Because they stopped expecting the idea to go anywhere.\n\nLearned helplessness is what happens when an organism experiences repeated situations where its actions have no effect. Eventually it stops trying, even when the situation changes.\n\nTeams that have been through multiple rounds of layoffs and reorgs carry this. The people who stayed watched proposals go nowhere. They learn the lesson even if it no longer applies.\n\nThis may be one of the real costs of restructuring that never shows up in the announcement."
   },
   {
-    "id": "psych-shadow",
+    "id": "psych-hero",
     "scheduleDate": "2026-04-01",
     "scheduleTime": "20:57",
     "posted": false,
-    "image": "scripts/thread-assets/psych_shadow.png",
-    "text": "Every company has two versions of itself.\n\nThe one on the about page. And the one that shows up in the product decisions made when doing the right thing gets expensive.\n\nJung called this the shadow self. The part of the personality the conscious mind does not want to see.\n\nSocial media companies say they build connection. The product decisions say they build compulsion. Most people know this. Most people stay anyway.\n\nI think about this a lot when I read company values pages. The gap between the stated version and the actual version tends to compress over time. It usually resolves in the direction of the actual version."
+    "image": "scripts/thread-assets/psych_hero.png",
+    "text": "Every pitch deck that works tells a story.\n\nNot always on purpose. But the structure is almost always the same.\n\nHere is the world as it is. Here is the thing the founder saw that others missed. Here is how hard it was to act on that. Here is what they built because of it. Here is what changes for people now.\n\nCampbell documented this arc across myths from every culture. The hero is called, descends, transforms, and returns with something of value.\n\nThe pitches that do not work tend to skip the descent. They go from broken world to working product with no difficulty in between. That is not believable. And investors feel it even when they cannot name it."
   },
   {
-    "id": "psych-hero",
+    "id": "psych-shadow",
     "scheduleDate": "2026-04-02",
     "scheduleTime": "04:57",
     "posted": false,
-    "image": "scripts/thread-assets/psych_hero.png",
-    "text": "Every pitch deck that works tells a story.\n\nNot always on purpose. But the structure is almost always the same.\n\nHere is the world as it is. Here is the thing the founder saw that others missed. Here is how hard it was to act on that. Here is what they built because of it. Here is what changes for people now.\n\nCampbell documented this arc across myths from every culture. The hero is called, descends, transforms, and returns with something of value.\n\nThe pitches that do not work tend to skip the descent. They go from broken world to working product with no difficulty in between. That is not believable. And investors feel it even when they cannot name it."
+    "image": "scripts/thread-assets/psych_shadow.png",
+    "text": "Every company has two versions of itself.\n\nThe one on the about page. And the one that shows up in the product decisions made when doing the right thing gets expensive.\n\nJung called this the shadow self. The part of the personality the conscious mind does not want to see.\n\nSocial media companies say they build connection. The product decisions say they build compulsion. Most people know this. Most people stay anyway.\n\nI think about this a lot when I read company values pages. The gap between the stated version and the actual version tends to compress over time. It usually resolves in the direction of the actual version."
   },
   {
     "id": "psych-toxic-positivity",
@@ -250,13 +258,5 @@
     "posted": false,
     "image": "scripts/thread-assets/psych_confirmation.png",
     "text": "I read the same AI news differently depending on what I already believe about AI.\n\nAn impressive result feels like confirmation. A failure feels expected. Neither reaction is fully honest.\n\nThis is confirmation bias. We look for evidence that supports what we already think. We interpret ambiguous evidence in the direction of our existing view.\n\nAt scale, this is what recommendation algorithms do. They learn what you believe and surface evidence of it. Different people end up with genuinely different bodies of evidence. Not because one side is lying. Because both sides are only seeing what confirms their starting position.\n\nInvestors have this problem too. The founder who does not fit the pattern of past successes gets less attention, even when the underlying opportunity is the same."
-  },
-  {
-    "id": "smart-employees",
-    "scheduleDate": "2026-04-03",
-    "scheduleTime": "12:57",
-    "posted": false,
-    "image": "scripts/thread-assets/psych_smart_employees.png",
-    "text": "The smartest employees do not play the corporate game the usual way.\n\nThey build a side hustle outside their job. They do not chase manager titles for status. They keep interviewing even when employed. They treat everyone with respect... including the cleaner.\n\nThey push back on micromanagement. They decline useless meetings. They help others grow in their careers. They do not reply to every email.\n\nThey stay away from gossip and office politics. They build passive income so one job doesn't control their life.\n\nIt is about owning your time, not your title."
   }
 ]
