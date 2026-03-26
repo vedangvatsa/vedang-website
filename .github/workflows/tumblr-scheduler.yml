@@ -2,7 +2,7 @@ name: Tumblr Scheduled Posts
 
 on:
   schedule:
-    - cron: '2 2,10,18 * * *' # Run at 07:32, 15:32, 23:32 IST (post times: 07:27, 15:27, 23:27)
+    - cron: '5 21,5,13 * * *' # Run at 02:35, 10:35, 18:35 IST (post times: 02:30, 10:30, 18:30)
   workflow_dispatch:
 
 jobs:

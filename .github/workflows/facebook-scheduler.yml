@@ -2,7 +2,7 @@ name: Facebook Page Scheduled Posts
 
 on:
   schedule:
-    - cron: '2 1,9,17 * * *' # Run at 06:32, 14:32, 22:32 IST (post times: 06:27, 14:27, 22:27)
+    - cron: '35 20,4,12 * * *' # Run at 02:05, 10:05, 18:05 IST (post times: 02:00, 10:00, 18:00)
   workflow_dispatch:
 
 jobs:

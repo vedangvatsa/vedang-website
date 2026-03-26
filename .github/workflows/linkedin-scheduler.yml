@@ -2,7 +2,7 @@ name: LinkedIn Scheduled Posts
 
 on:
   schedule:
-    - cron: '32 23,3,7,15 * * *' # Run at 05:02, 09:02, 13:02, 21:02 IST (post times: 04:57, 08:57, 12:57, 20:57)
+    - cron: '35 19,3,11 * * *' # Run at 01:05, 09:05, 17:05 IST (post times: 01:00, 09:00, 17:00)
   workflow_dispatch:
 
 jobs:
