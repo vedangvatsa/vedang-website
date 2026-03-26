@@ -2,7 +2,7 @@ name: Bluesky Scheduled Posts
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # Run every 30 minutes
+    - cron: '2 0,8,16 * * *' # Run at 05:32, 13:32, 21:32 IST (post times: 05:27, 13:27, 21:27)
   workflow_dispatch: # Allow manual trigger
 
 jobs:
