@@ -23,6 +23,7 @@ interface HashnodePost {
   title: string;
   tags: string[];
   scheduleDate: string;
+  scheduleTime?: string;
   posted: boolean;
   postedAt?: string;
   hashnodeUrl?: string;
@@ -116,11 +117,19 @@ async function main() {
   const now = new Date();
   const istNow = new Date(now.getTime() + TIMEZONE_OFFSET_HOURS * 60 * 60 * 1000);
   const todayIST = istNow.toISOString().slice(0, 10);
+  const timeIST = istNow.toISOString().slice(11, 16); // HH:MM
 
-  console.log(`📝 Hashnode scheduler running at ${todayIST} IST`);
+  console.log(`📝 Hashnode scheduler running at ${todayIST} ${timeIST} IST`);
   console.log(`📋 Total articles: ${posts.length}, Posted: ${posts.filter(p => p.posted).length}`);
 
-  const due = posts.filter(p => !p.posted && p.scheduleDate <= todayIST);
+  const due = posts.filter(p => {
+    if (p.posted) return false;
+    if (p.scheduleDate > todayIST) return false;
+    if (p.scheduleDate < todayIST) return true;
+    // Same day — check time if present
+    if (p.scheduleTime && p.scheduleTime > timeIST) return false;
+    return true;
+  });
 
   if (due.length === 0) {
     console.log('✅ No articles due');

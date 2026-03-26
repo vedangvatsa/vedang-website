@@ -43,7 +43,7 @@ function createOAuth() {
   );
 }
 
-function oauthPost(url: string, body: Record<string, any>): Promise<any> {
+function oauthPostRaw(url: string, body: Record<string, any>): Promise<string> {
   const oa = createOAuth();
   return new Promise((resolve, reject) => {
     oa.post(
@@ -54,7 +54,7 @@ function oauthPost(url: string, body: Record<string, any>): Promise<any> {
       'application/x-www-form-urlencoded',
       (err: any, data: any) => {
         if (err) return reject(new Error(`Tumblr API error: ${JSON.stringify(err)}`));
-        resolve(JSON.parse(data as string));
+        resolve(data as string);
       }
     );
   });
@@ -85,8 +85,11 @@ async function publishPost(post: TumblrPost): Promise<string> {
     }
   }
 
-  const result = await oauthPost(url, body);
-  return result.response?.id?.toString() || 'posted';
+  const raw = await oauthPostRaw(url, body);
+  // Extract ID as string from raw JSON to avoid JS number precision loss
+  // Tumblr IDs exceed Number.MAX_SAFE_INTEGER
+  const idMatch = raw.match(/"id"\s*:\s*(\d+)/);
+  return idMatch ? idMatch[1] : 'posted';
 }
 
 async function main() {
