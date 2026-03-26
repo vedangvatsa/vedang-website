@@ -28,6 +28,7 @@ interface XPost {
   id: string;
   type?: 'single' | 'thread';
   text?: string;           // single tweet
+  image?: string;          // image for single tweet
   tweets?: TweetItem[];    // thread tweets
   scheduleDate: string;
   scheduleTime: string;
@@ -37,9 +38,21 @@ interface XPost {
   error?: string;
 }
 
-async function postSingleTweet(text: string): Promise<{ success: boolean; id?: string; error?: string }> {
+async function postSingleTweet(text: string, image?: string): Promise<{ success: boolean; id?: string; error?: string }> {
   try {
-    const { data } = await client.v2.tweet({ text });
+    const params: Record<string, unknown> = { text };
+
+    if (image) {
+      const absImage = path.isAbsolute(image) ? image : path.resolve(REPO_ROOT, image);
+      if (fs.existsSync(absImage)) {
+        const mediaId = await client.v1.uploadMedia(absImage, { mimeType: 'image/png' });
+        params.media = { media_ids: [mediaId] };
+      } else {
+        console.warn(`  ⚠️ Image not found: ${absImage}`);
+      }
+    }
+
+    const { data } = await client.v2.tweet(params as Parameters<typeof client.v2.tweet>[0]);
     return { success: true, id: data.id };
   } catch (err) {
     return { success: false, error: err instanceof Error ? err.message : String(err) };
@@ -114,7 +127,7 @@ async function main() {
 
     const result = isThread
       ? await postThread(post.tweets!)
-      : await postSingleTweet(post.text!);
+      : await postSingleTweet(post.text!, post.image);
 
     if (result.success) {
       console.log(`✅ Posted! First ID: ${result.id}`);
