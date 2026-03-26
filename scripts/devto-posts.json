@@ -26,9 +26,11 @@
       "webdev"
     ],
     "scheduleDate": "2026-03-26",
-    "posted": false,
+    "posted": true,
     "error": "Dev.to API error: 429 Retry later\n",
-    "scheduleTime": "09:00"
+    "scheduleTime": "09:00",
+    "postedAt": "2026-03-26T20:02:48.147Z",
+    "devtoUrl": "https://dev.to/vedangvatsa/the-dark-forest-internet-j50"
   },
   {
     "id": "devto-towards-the-agentic-web",
@@ -41,9 +43,11 @@
       "future"
     ],
     "scheduleDate": "2026-03-26",
-    "posted": false,
+    "posted": true,
     "error": "Dev.to API error: 429 Retry later\n",
-    "scheduleTime": "17:00"
+    "scheduleTime": "17:00",
+    "postedAt": "2026-03-26T20:02:48.568Z",
+    "devtoUrl": "https://dev.to/vedangvatsa/towards-the-agentic-web-2mcp"
   },
   {
     "id": "devto-ai-agent-economy",
@@ -101,7 +105,8 @@
     ],
     "scheduleDate": "2026-03-27",
     "posted": false,
-    "scheduleTime": "01:00"
+    "scheduleTime": "01:00",
+    "error": "Dev.to API error: 429 Retry later\n"
   },
   {
     "id": "devto-bureaucracy-tax",
@@ -143,7 +148,8 @@
     ],
     "scheduleDate": "2026-03-27",
     "posted": false,
-    "scheduleTime": "01:00"
+    "scheduleTime": "01:00",
+    "error": "Dev.to API error: 429 Retry later\n"
   },
   {
     "id": "devto-digital-monasticism",

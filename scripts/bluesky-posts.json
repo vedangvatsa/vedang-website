@@ -23,9 +23,11 @@
     "id": "ctc-arc",
     "scheduleDate": "2026-03-27",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Japan made transistor radios that broke. Then they made cars that didn't.\n\nBy 1985, Japanese cars had 25% of the US car market, up from near zero in 1965. The oil crisis forced people to try them. Once they did, the quality was evident.\n\nKorea's Hyundai entered the US in 1986 at $4,995. J.D.",
-    "image": "scripts/thread-assets/ctc_arc.png"
+    "image": "scripts/thread-assets/ctc_arc.png",
+    "postedAt": "2026-03-26T20:02:38.122Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mhyfivmdo52r"
   },
   {
     "id": "business-world-model",

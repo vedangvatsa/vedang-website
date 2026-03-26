@@ -9,8 +9,10 @@
       "automation"
     ],
     "scheduleDate": "2026-03-27",
-    "posted": false,
-    "scheduleTime": "01:00"
+    "posted": true,
+    "scheduleTime": "01:00",
+    "postedAt": "2026-03-26T20:02:50.587Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/agentic-commerce"
   },
   {
     "id": "hashnode-dark-forest-internet",
@@ -49,7 +51,8 @@
     ],
     "scheduleDate": "2026-03-27",
     "posted": false,
-    "scheduleTime": "01:00"
+    "scheduleTime": "01:00",
+    "error": "Essay not found: ai-agent-economy"
   },
   {
     "id": "hashnode-hustle-culture",

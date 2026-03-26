@@ -33,14 +33,16 @@
     "id": "agentic-commerce-2",
     "scheduleDate": "2026-03-27",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "During Cyber Week 2025, AI agents influenced 1 in 5 online orders globally.\n\nNearly half of US adults now use AI assistants regularly. But only 24% trust them to spend their money.\n\nThat trust gap is the entire business opportunity. The infrastructure works. The payments work. The willingness is lagging behind the capability.\n\nThe companies that solve trust first will own the transaction layer of the agentic web.",
     "tags": [
       "ai",
       "technology",
       "future"
     ],
-    "image": "scripts/thread-assets/agentic_2.png"
+    "image": "scripts/thread-assets/agentic_2.png",
+    "postedAt": "2026-03-26T20:02:46.774Z",
+    "tumblrId": "812180168028323840"
   },
   {
     "id": "agentic-commerce-3",
