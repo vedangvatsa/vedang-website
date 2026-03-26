@@ -9,7 +9,7 @@
     "tweetId": "2036722749054353704",
     "tweets": [
       {
-        "text": "LinkedIn is not a professional network. It's a language.\n\nI built a translator. Here's what it does. \ud83e\uddf5\n\nveda.ng/lit",
+        "text": "LinkedIn is not a professional network. It's a language.\n\nI built a translator. Here's what it does. 🧵\n\nveda.ng/lit",
         "image": "scripts/thread-assets/lit_1.png"
       },
       {
@@ -38,7 +38,7 @@
     "posted": true,
     "tweets": [
       {
-        "text": "Shopping used to mean: open browser, search, compare, click, form, checkout.\n\nAI agents cut that to one step. You describe. They buy.\n\nThe agent is not a new channel. It is a new buyer. \ud83e\uddf5",
+        "text": "Shopping used to mean: open browser, search, compare, click, form, checkout.\n\nAI agents cut that to one step. You describe. They buy.\n\nThe agent is not a new channel. It is a new buyer. 🧵",
         "image": "scripts/thread-assets/agentic_1.png"
       },
       {
@@ -75,9 +75,11 @@
     "id": "psych-maslow",
     "scheduleDate": "2026-03-26",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/psych_maslow.png",
-    "text": "People do not want productivity tools.\n\nThey want to feel less behind. Less alone. More in control.\n\nMaslow mapped this out in 1943. Survival first. Then safety. Then belonging. Then status. Then growth. You cannot sell someone rung five when they are stuck on rung two.\n\nInstagram succeeded because it sold belonging, not photos. LinkedIn sells status, not jobs.\n\nI noticed this when I realised the AI tools I kept using were not the most powerful ones. They were the ones that made the work feel less isolating.\n\nThe AI products that may last are not the most capable. They are the ones that address the right rung."
+    "text": "People do not want productivity tools.\n\nThey want to feel less behind. Less alone. More in control.\n\nMaslow mapped this out in 1943. Survival first. Then safety. Then belonging. Then status. Then growth. You cannot sell someone rung five when they are stuck on rung two.\n\nInstagram succeeded because it sold belonging, not photos. LinkedIn sells status, not jobs.\n\nI noticed this when I realised the AI tools I kept using were not the most powerful ones. They were the ones that made the work feel less isolating.\n\nThe AI products that may last are not the most capable. They are the ones that address the right rung.",
+    "postedAt": "2026-03-26T12:08:30.900Z",
+    "tweetId": "2037139629904703942"
   },
   {
     "id": "ctc-arc",

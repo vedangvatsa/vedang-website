@@ -13,9 +13,11 @@
     "id": "psych-maslow",
     "scheduleDate": "2026-03-26",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "People do not want productivity tools.\n\nThey want to feel less behind. Less alone. More in control.\n\nMaslow mapped this out in 1943. Survival first. Then safety. Then belonging. Then status. Then growth. You cannot sell someone rung five when they are stuck on rung two.\n",
-    "image": "scripts/thread-assets/psych_maslow.png"
+    "image": "scripts/thread-assets/psych_maslow.png",
+    "postedAt": "2026-03-26T12:08:40.266Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mhxkzfam452x"
   },
   {
     "id": "ctc-arc",
