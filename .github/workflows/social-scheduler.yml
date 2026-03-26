@@ -57,6 +57,17 @@ jobs:
           TUMBLR_ACCESS_SECRET: ${{ secrets.TUMBLR_ACCESS_SECRET }}
           TUMBLR_BLOG_NAME: ${{ secrets.TUMBLR_BLOG_NAME }}
 
+      - name: Publish to Dev.to
+        run: npx tsx scripts/devto-scheduled-executor.ts
+        env:
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+
+      - name: Publish to Hashnode
+        run: npx tsx scripts/hashnode-scheduled-executor.ts
+        env:
+          HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
+          HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
+
       - name: Commit updated post files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
