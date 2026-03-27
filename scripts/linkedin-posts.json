@@ -63,9 +63,11 @@
     "id": "psych-halo",
     "scheduleDate": "2026-03-27",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/psych_halo.png",
-    "text": "A person walks into a room with a specific credential and the room adjusts before they say a word.\n\nThat is the halo effect. One impressive trait causes people to attribute other positive traits automatically.\n\nI have been on both sides of this. There are rooms where you are taken seriously before you have said anything. There are rooms where you have to earn it from zero.\n\nIn hiring, a degree from a particular school acts as a halo. In venture, a previous exit does. Neither is irrelevant. The problem is when the halo becomes the whole evaluation.\n\nMost pattern-matching in tech is this, dressed up as judgment."
+    "text": "A person walks into a room with a specific credential and the room adjusts before they say a word.\n\nThat is the halo effect. One impressive trait causes people to attribute other positive traits automatically.\n\nI have been on both sides of this. There are rooms where you are taken seriously before you have said anything. There are rooms where you have to earn it from zero.\n\nIn hiring, a degree from a particular school acts as a halo. In venture, a previous exit does. Neither is irrelevant. The problem is when the halo becomes the whole evaluation.\n\nMost pattern-matching in tech is this, dressed up as judgment.",
+    "postedAt": "2026-03-27T05:12:00.109Z",
+    "postId": "urn:li:share:7443162888158240768"
   },
   {
     "id": "agentic-commerce-3",

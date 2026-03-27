@@ -75,9 +75,11 @@
       "culture"
     ],
     "scheduleDate": "2026-03-26",
-    "posted": false,
+    "posted": true,
     "error": "Dev.to API error: 429 Retry later\n",
-    "scheduleTime": "09:00"
+    "scheduleTime": "09:00",
+    "postedAt": "2026-03-27T05:12:15.318Z",
+    "devtoUrl": "https://dev.to/vedangvatsa/hustle-culture-is-a-cage-dressed-up-as-ambition-3h88"
   },
   {
     "id": "devto-cognitive-load",
@@ -104,9 +106,11 @@
       "india"
     ],
     "scheduleDate": "2026-03-27",
-    "posted": false,
+    "posted": true,
     "scheduleTime": "01:00",
-    "error": "Dev.to API error: 429 Retry later\n"
+    "error": "Dev.to API error: 429 Retry later\n",
+    "postedAt": "2026-03-27T05:12:15.688Z",
+    "devtoUrl": "https://dev.to/vedangvatsa/from-cheap-to-competitive-3cpl"
   },
   {
     "id": "devto-bureaucracy-tax",
@@ -120,7 +124,8 @@
     ],
     "scheduleDate": "2026-03-27",
     "posted": false,
-    "scheduleTime": "09:00"
+    "scheduleTime": "09:00",
+    "error": "Dev.to API error: 429 Retry later\n"
   },
   {
     "id": "devto-singularity",

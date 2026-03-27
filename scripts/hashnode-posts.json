@@ -24,8 +24,10 @@
       "security"
     ],
     "scheduleDate": "2026-03-27",
-    "posted": false,
-    "scheduleTime": "09:00"
+    "posted": true,
+    "scheduleTime": "09:00",
+    "postedAt": "2026-03-27T05:12:17.141Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/dark-forest-internet"
   },
   {
     "id": "hashnode-towards-the-agentic-web",
@@ -64,8 +66,10 @@
       "culture"
     ],
     "scheduleDate": "2026-03-27",
-    "posted": false,
-    "scheduleTime": "09:00"
+    "posted": true,
+    "scheduleTime": "09:00",
+    "postedAt": "2026-03-27T05:12:17.360Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/hustle-culture"
   },
   {
     "id": "hashnode-cognitive-load",

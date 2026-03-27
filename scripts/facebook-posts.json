@@ -33,9 +33,11 @@
     "id": "agentic-commerce-3",
     "scheduleDate": "2026-03-27",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Every major company shipped a different answer to agent payments in the last 12 months.\n\nGoogle. OpenAI. Coinbase. Stripe. Mastercard. Visa.\n\nNobody agrees on how agents should pay. Six competing standards, all live, none dominant.\n\nThis is the browser wars of the agentic era. The standard that wins will become invisible infrastructure that processes trillions of dollars. The ones that lose will be forgotten.\n\nIf you are building for agents, the safest bet is to support all six and wait.",
-    "image": "scripts/thread-assets/agentic_3.png"
+    "image": "scripts/thread-assets/agentic_3.png",
+    "postedAt": "2026-03-27T05:12:12.558Z",
+    "fbPostId": "1785048661795414_1243804017929640"
   },
   {
     "id": "agentic-commerce-4",
