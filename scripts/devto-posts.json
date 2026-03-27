@@ -144,9 +144,11 @@
       "technology"
     ],
     "scheduleDate": "2026-03-27",
-    "posted": false,
+    "posted": true,
     "scheduleTime": "17:00",
-    "error": "Dev.to API error: 429 Retry later\n"
+    "error": "Dev.to API error: 429 Retry later\n",
+    "postedAt": "2026-03-27T12:32:07.884Z",
+    "devtoUrl": "https://dev.to/vedangvatsa/what-is-the-singularity-16kj"
   },
   {
     "id": "devto-ai-economy",
