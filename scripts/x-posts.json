@@ -105,9 +105,11 @@
     "id": "psych-bystander",
     "scheduleDate": "2026-03-27",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/psych_bystander.png",
-    "text": "The more people in the room, the less likely anyone acts.\n\nThat is not cynicism. It is a documented pattern. When responsibility is shared, it evaporates.\n\nI have seen this in every large org I have been close to. A bug sits for months. A feature everyone hates stays live for years. An outage gets handled by nobody because three teams each assumed one of the others was on it.\n\nSmall teams do not have this problem. When there are two people, someone has to move.\n\nScale creates bystanders. That is worth remembering before adding more people to a problem."
+    "text": "The more people in the room, the less likely anyone acts.\n\nThat is not cynicism. It is a documented pattern. When responsibility is shared, it evaporates.\n\nI have seen this in every large org I have been close to. A bug sits for months. A feature everyone hates stays live for years. An outage gets handled by nobody because three teams each assumed one of the others was on it.\n\nSmall teams do not have this problem. When there are two people, someone has to move.\n\nScale creates bystanders. That is worth remembering before adding more people to a problem.",
+    "postedAt": "2026-03-27T12:04:27.039Z",
+    "tweetId": "2037500995240927524"
   },
   {
     "id": "ctc-india",

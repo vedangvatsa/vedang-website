@@ -43,9 +43,11 @@
     "id": "psych-bystander",
     "scheduleDate": "2026-03-27",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The more people in the room, the less likely anyone acts.\n\nThat is not cynicism. It is a documented pattern. When responsibility is shared, it evaporates.\n\nI have seen this in every large org I have been close to. A bug sits for months. A feature everyone hates stays live for years.",
-    "image": "scripts/thread-assets/psych_bystander.png"
+    "image": "scripts/thread-assets/psych_bystander.png",
+    "postedAt": "2026-03-27T12:04:36.702Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mi23b2bxjf2z"
   },
   {
     "id": "ctc-india",

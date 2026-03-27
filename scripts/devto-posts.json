@@ -60,9 +60,11 @@
       "automation"
     ],
     "scheduleDate": "2026-03-26",
-    "posted": false,
+    "posted": true,
     "error": "Essay not found: ai-agent-economy",
-    "scheduleTime": "01:00"
+    "scheduleTime": "01:00",
+    "postedAt": "2026-03-27T12:04:45.238Z",
+    "devtoUrl": "https://dev.to/vedangvatsa/the-ai-agent-economy-400l"
   },
   {
     "id": "devto-hustle-culture",
@@ -92,8 +94,10 @@
       "productivity"
     ],
     "scheduleDate": "2026-03-27",
-    "posted": false,
-    "scheduleTime": "17:00"
+    "posted": true,
+    "scheduleTime": "17:00",
+    "postedAt": "2026-03-27T12:04:45.623Z",
+    "devtoUrl": "https://dev.to/vedangvatsa/cognitive-load-crisis-7d5"
   },
   {
     "id": "devto-cheap-to-competitive",
@@ -141,7 +145,8 @@
     ],
     "scheduleDate": "2026-03-27",
     "posted": false,
-    "scheduleTime": "17:00"
+    "scheduleTime": "17:00",
+    "error": "Dev.to API error: 429 Retry later\n"
   },
   {
     "id": "devto-ai-economy",

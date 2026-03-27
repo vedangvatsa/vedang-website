@@ -39,8 +39,10 @@
       "agents"
     ],
     "scheduleDate": "2026-03-27",
-    "posted": false,
-    "scheduleTime": "17:00"
+    "posted": true,
+    "scheduleTime": "17:00",
+    "postedAt": "2026-03-27T12:04:47.193Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/towards-the-agentic-web"
   },
   {
     "id": "hashnode-ai-agent-economy",
@@ -52,9 +54,11 @@
       "agents"
     ],
     "scheduleDate": "2026-03-27",
-    "posted": false,
+    "posted": true,
     "scheduleTime": "01:00",
-    "error": "Essay not found: ai-agent-economy"
+    "error": "Essay not found: ai-agent-economy",
+    "postedAt": "2026-03-27T12:04:47.453Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/ai-agent-economy"
   },
   {
     "id": "hashnode-hustle-culture",
