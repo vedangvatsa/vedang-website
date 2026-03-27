@@ -98,8 +98,10 @@
       "india"
     ],
     "scheduleDate": "2026-03-28",
-    "posted": false,
-    "scheduleTime": "01:00"
+    "posted": true,
+    "scheduleTime": "01:00",
+    "postedAt": "2026-03-27T20:00:08.891Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/cheap-to-competitive"
   },
   {
     "id": "hashnode-bureaucracy-tax",
@@ -137,8 +139,10 @@
       "automation"
     ],
     "scheduleDate": "2026-03-28",
-    "posted": false,
-    "scheduleTime": "01:00"
+    "posted": true,
+    "scheduleTime": "01:00",
+    "postedAt": "2026-03-27T20:00:09.308Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/ai-economy"
   },
   {
     "id": "hashnode-digital-monasticism",

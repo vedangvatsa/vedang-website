@@ -53,9 +53,11 @@
     "id": "ctc-india",
     "scheduleDate": "2026-03-28",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "\"Made in China\" still registers below \"Made in Germany\" in surveys. Yet DJI holds 70% of the drone market. BYD is the largest EV maker.\n\nIndia is at the start of that curve. If the historical pattern holds, the perception gap closes. It just takes time.",
-    "image": "scripts/thread-assets/ctc_india.png"
+    "image": "scripts/thread-assets/ctc_india.png",
+    "postedAt": "2026-03-27T19:59:56.542Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mi2vsz3dtp2w"
   },
   {
     "id": "ai-timelines-uncertainty",
