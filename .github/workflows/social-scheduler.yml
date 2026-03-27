@@ -2,7 +2,8 @@ name: Social Media Scheduled Posts
 
 on:
   schedule:
-    - cron: '35 19,3,11 * * *' # Run at 01:05, 09:05, 17:05 IST (8hr gaps)
+    - cron: '35 19,3,11 * * *' # Primary: 01:05, 09:05, 17:05 IST
+    - cron: '50 19,3,11 * * *' # Backup: 01:20, 09:20, 17:20 IST (if primary is skipped)
   workflow_dispatch: # Allow manual trigger
 
 jobs:
