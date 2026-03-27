@@ -123,9 +123,11 @@
       "policy"
     ],
     "scheduleDate": "2026-03-27",
-    "posted": false,
+    "posted": true,
     "scheduleTime": "09:00",
-    "error": "Dev.to API error: 429 Retry later\n"
+    "error": "Dev.to API error: 429 Retry later\n",
+    "postedAt": "2026-03-27T05:23:33.320Z",
+    "devtoUrl": "https://dev.to/vedangvatsa/bureaucracy-is-the-friction-tax-we-all-pay-1ele"
   },
   {
     "id": "devto-singularity",
@@ -152,9 +154,11 @@
       "automation"
     ],
     "scheduleDate": "2026-03-27",
-    "posted": false,
+    "posted": true,
     "scheduleTime": "01:00",
-    "error": "Dev.to API error: 429 Retry later\n"
+    "error": "Dev.to API error: 429 Retry later\n",
+    "postedAt": "2026-03-27T05:23:33.798Z",
+    "devtoUrl": "https://dev.to/vedangvatsa/the-ai-economy-5b1a"
   },
   {
     "id": "devto-digital-monasticism",
