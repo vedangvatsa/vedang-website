@@ -1,53 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#09090b">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#ffffff">
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.5" fill="#a1a1aa" opacity="0.15"/>
+      <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
     </pattern>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6"/>
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="#09090b"/>
+  <rect width="800" height="420" fill="#ffffff"/>
   <rect width="800" height="420" fill="url(#grid)"/>
   
-  <text x="400" y="45" font-family="'Inter',sans-serif" font-weight="800" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">Vesting Schedule</text>
-  <text x="400" y="70" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#3b82f6" text-anchor="middle" letter-spacing="2" text-transform="uppercase">Deconstructed: Web3 Concept</text>
-  <line x1="200" y1="85" x2="600" y2="85" stroke="#27272a" stroke-width="1.5" opacity="0.5"/>
-  
-  <g transform="translate(0, 100)">
-    <rect x="310" y="105" width="180" height="50" rx="25" fill="#09090b" stroke="#27272a" stroke-width="2"/>
-<rect x="310" y="105" width="180" height="50" rx="25" fill="rgba(59,130,246,0.1)"/>
-<text x="400" y="135.6" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#3b82f6" text-anchor="middle">Vesting Schedule</text>
-<path d="M 400 130 L 170 130" fill="none" stroke="#27272a" stroke-width="2" stroke-dasharray="4 4"/>
-<rect x="75" y="90" width="190" height="80" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
-<rect x="75" y="90" width="190" height="80" rx="8" fill="rgba(59,130,246,0.1)"/>
-<text x="170" y="126.10000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">A vesting schedule</text>
-<text x="170" y="142.3" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">releases tokens</text>
-<path d="M 400 130 L 630 130" fill="none" stroke="#27272a" stroke-width="2" stroke-dasharray="4 4"/>
-<rect x="535" y="90" width="190" height="80" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
-<rect x="535" y="90" width="190" height="80" rx="8" fill="rgba(59,130,246,0.1)"/>
-<text x="630" y="109.89999999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">To recipients gradually</text>
-<text x="630" y="126.1" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">over time rather than all</text>
-<text x="630" y="142.29999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">at once, creating</text>
-<text x="630" y="158.5" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">alignment between...</text>
-<path d="M 400 130 L 400 240" fill="none" stroke="#27272a" stroke-width="2" stroke-dasharray="4 4"/>
-<rect x="305" y="200" width="190" height="80" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
-<rect x="305" y="200" width="190" height="80" rx="8" fill="rgba(59,130,246,0.1)"/>
-<text x="400" y="219.89999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">Founders, team members,</text>
-<text x="400" y="236.09999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">investors, and advisors</text>
-<text x="400" y="252.29999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">typically receive tokens</text>
-<text x="400" y="268.5" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">with vesting conditions</text>
-<path d="M 400 130 L 400 30" fill="none" stroke="#27272a" stroke-width="2" stroke-dasharray="4 4"/>
-<rect x="305" y="-10" width="190" height="80" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
-<rect x="305" y="-10" width="190" height="80" rx="8" fill="rgba(59,130,246,0.1)"/>
-<text x="400" y="9.899999999999995" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">That prevent immediate</text>
-<text x="400" y="26.099999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">selling . The standard</text>
-<text x="400" y="42.3" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">structure includes a cliff</text>
-<text x="400" y="58.5" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">period (often 6-12 mont...</text>
+  <g transform="translate(0, 80)">
+    <rect x="45" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="45" y="75" width="210" height="110" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="150" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">A vesting schedule releases</text>
+<text x="150" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">tokens</text>
+<line x1="260" y1="130" x2="283" y2="130" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="295" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="295" y="75" width="210" height="110" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="400" y="108.225" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">To recipients gradually over</text>
+<text x="400" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">time rather than all at</text>
+<text x="400" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">once, creating alignment</text>
+<text x="400" y="160.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">between stakeholders and...</text>
+<line x1="510" y1="130" x2="533" y2="130" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="545" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="545" y="75" width="210" height="110" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="650" y="108.225" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">Founders, team members,</text>
+<text x="650" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">investors, and advisors</text>
+<text x="650" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">typically receive tokens</text>
+<text x="650" y="160.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">with vesting conditions</text>
 
   </g>
   
-  <rect x="0" y="380" width="800" height="40" fill="#09090b" opacity="0.9"/>
-  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#a1a1aa" text-anchor="end">veda.ng</text>
+  <rect x="0" y="380" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#52525b" text-anchor="end">veda.ng</text>
 </svg>

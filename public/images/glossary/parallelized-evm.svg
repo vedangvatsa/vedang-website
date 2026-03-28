@@ -1,52 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#09090b">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#ffffff">
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.5" fill="#a1a1aa" opacity="0.15"/>
+      <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
     </pattern>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6"/>
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="#09090b"/>
+  <rect width="800" height="420" fill="#ffffff"/>
   <rect width="800" height="420" fill="url(#grid)"/>
   
-  <text x="400" y="45" font-family="'Inter',sans-serif" font-weight="800" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">Parallelized EVM</text>
-  <text x="400" y="70" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#3b82f6" text-anchor="middle" letter-spacing="2" text-transform="uppercase">Deconstructed: Web3 Concept</text>
-  <line x1="200" y1="85" x2="600" y2="85" stroke="#27272a" stroke-width="1.5" opacity="0.5"/>
-  
-  <g transform="translate(0, 100)">
-    <rect x="310" y="105" width="180" height="50" rx="25" fill="#09090b" stroke="#27272a" stroke-width="2"/>
-<rect x="310" y="105" width="180" height="50" rx="25" fill="rgba(59,130,246,0.1)"/>
-<text x="400" y="135.6" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#3b82f6" text-anchor="middle">Parallelized EVM</text>
-<path d="M 400 130 L 170 130" fill="none" stroke="#27272a" stroke-width="2" stroke-dasharray="4 4"/>
-<rect x="75" y="90" width="190" height="80" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
-<rect x="75" y="90" width="190" height="80" rx="8" fill="rgba(59,130,246,0.1)"/>
-<text x="170" y="109.89999999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">A Parallelized EVM</text>
-<text x="170" y="126.1" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">distributes Ethereum</text>
-<text x="170" y="142.29999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">smart-contract execution</text>
-<text x="170" y="158.5" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">across multiple CPU cor...</text>
-<path d="M 400 130 L 630 130" fill="none" stroke="#27272a" stroke-width="2" stroke-dasharray="4 4"/>
-<rect x="535" y="90" width="190" height="80" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
-<rect x="535" y="90" width="190" height="80" rx="8" fill="rgba(59,130,246,0.1)"/>
-<text x="630" y="118" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">The traditional EVM</text>
-<text x="630" y="134.2" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">processes operations one</text>
-<text x="630" y="150.39999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">after another</text>
-<path d="M 400 130 L 400 240" fill="none" stroke="#27272a" stroke-width="2" stroke-dasharray="4 4"/>
-<rect x="305" y="200" width="190" height="80" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
-<rect x="305" y="200" width="190" height="80" rx="8" fill="rgba(59,130,246,0.1)"/>
-<text x="400" y="228" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">Which becomes a bottleneck</text>
-<text x="400" y="244.2" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">when many contracts</text>
-<text x="400" y="260.40000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">compete for block space</text>
-<path d="M 400 130 L 400 30" fill="none" stroke="#27272a" stroke-width="2" stroke-dasharray="4 4"/>
-<rect x="305" y="-10" width="190" height="80" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
-<rect x="305" y="-10" width="190" height="80" rx="8" fill="rgba(59,130,246,0.1)"/>
-<text x="400" y="17.999999999999996" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">A parallelized version</text>
-<text x="400" y="34.2" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">assigns independent</text>
-<text x="400" y="50.400000000000006" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">instructions</text>
+  <g transform="translate(0, 80)">
+    <rect x="310" y="65" width="180" height="50" rx="25" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="310" y="65" width="180" height="50" rx="25" fill="rgba(37,99,235,0.06)"/>
+<text x="400" y="95.6" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#2563eb" text-anchor="middle">Parallelized EVM</text>
+<path d="M 400 115 L 160 150" fill="none" stroke="#e5e7eb" stroke-width="2" stroke-dasharray="4 4"/>
+<rect x="60" y="150" width="200" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="60" y="150" width="200" height="80" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="160" y="169.89999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">A Parallelized EVM</text>
+<text x="160" y="186.09999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">distributes Ethereum</text>
+<text x="160" y="202.29999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">smart-contract execution</text>
+<text x="160" y="218.5" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">across multiple CPU cores...</text>
+<path d="M 400 115 L 640 150" fill="none" stroke="#e5e7eb" stroke-width="2" stroke-dasharray="4 4"/>
+<rect x="540" y="150" width="200" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="540" y="150" width="200" height="80" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="640" y="178" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">The traditional EVM</text>
+<text x="640" y="194.2" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">processes operations one</text>
+<text x="640" y="210.4" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">after another</text>
+<path d="M 400 115 L 400 180" fill="none" stroke="#e5e7eb" stroke-width="2" stroke-dasharray="4 4"/>
+<rect x="300" y="180" width="200" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="300" y="180" width="200" height="80" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="400" y="208" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">Which becomes a bottleneck</text>
+<text x="400" y="224.2" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">when many contracts compete</text>
+<text x="400" y="240.4" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">for block space</text>
+<path d="M 400 115 L 520 220" fill="none" stroke="#e5e7eb" stroke-width="2" stroke-dasharray="4 4"/>
+<rect x="420" y="220" width="200" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="420" y="220" width="200" height="80" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="520" y="248" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">A parallelized version</text>
+<text x="520" y="264.2" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">assigns independent</text>
+<text x="520" y="280.40000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">instructions</text>
 
   </g>
   
-  <rect x="0" y="380" width="800" height="40" fill="#09090b" opacity="0.9"/>
-  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#a1a1aa" text-anchor="end">veda.ng</text>
+  <rect x="0" y="380" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#52525b" text-anchor="end">veda.ng</text>
 </svg>

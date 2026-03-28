@@ -1,38 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#09090b">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#ffffff">
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.5" fill="#a1a1aa" opacity="0.15"/>
+      <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
     </pattern>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#a855f7"/>
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9333ea"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="#09090b"/>
+  <rect width="800" height="420" fill="#ffffff"/>
   <rect width="800" height="420" fill="url(#grid)"/>
   
-  <text x="400" y="45" font-family="'Inter',sans-serif" font-weight="800" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">Constitutional AI</text>
-  <text x="400" y="70" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#a855f7" text-anchor="middle" letter-spacing="2" text-transform="uppercase">Deconstructed: AI Concept</text>
-  <line x1="200" y1="85" x2="600" y2="85" stroke="#27272a" stroke-width="1.5" opacity="0.5"/>
-  
-  <g transform="translate(0, 100)">
-    <rect x="190" y="20" width="420" height="60" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
-<rect x="190" y="20" width="420" height="60" rx="8" fill="rgba(168,85,247,0.1)"/>
-<text x="400" y="54.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#a1a1aa" text-anchor="middle">Constitutional AI is a training approach</text>
-<line x1="400" y1="83" x2="400" y2="92" stroke="#a855f7" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="190" y="100" width="420" height="60" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
-<rect x="190" y="100" width="420" height="60" rx="8" fill="rgba(168,85,247,0.1)"/>
-<text x="400" y="116" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#a1a1aa" text-anchor="middle">Where an AI system evaluates its own outputs against a set</text>
-<text x="400" y="134.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#a1a1aa" text-anchor="middle">of principles, a constitution, and improves through</text>
-<text x="400" y="153.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#a1a1aa" text-anchor="middle">self-critique and revision</text>
-<line x1="400" y1="163" x2="400" y2="172" stroke="#a855f7" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="190" y="180" width="420" height="60" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
-<rect x="190" y="180" width="420" height="60" rx="8" fill="rgba(168,85,247,0.1)"/>
-<text x="400" y="205.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#a1a1aa" text-anchor="middle">The system generates an initial response, then evaluates</text>
-<text x="400" y="224.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#a1a1aa" text-anchor="middle">whether</text>
+  <g transform="translate(0, 80)">
+    <circle cx="80" cy="80" r="15" fill="#9333ea"/>
+<text x="80" y="85" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="60" y="35" width="320" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<rect x="60" y="35" width="320" height="90" rx="6" fill="rgba(147,51,234,0.06)"/>
+<text x="105" y="75.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">Constitutional AI is a training</text>
+<text x="105" y="93.32499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">approach</text>
+<circle cx="440" cy="80" r="15" fill="#9333ea"/>
+<text x="440" y="85" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+<rect x="420" y="35" width="320" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<rect x="420" y="35" width="320" height="90" rx="6" fill="rgba(147,51,234,0.06)"/>
+<text x="465" y="58.224999999999994" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">Where an AI system evaluates its</text>
+<text x="465" y="75.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">own outputs against a set of</text>
+<text x="465" y="93.325" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">principles, a constitution, and</text>
+<text x="465" y="110.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">improves through self-critiqu...</text>
+<circle cx="80" cy="200" r="15" fill="#9333ea"/>
+<text x="80" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">3</text>
+<rect x="60" y="155" width="320" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<rect x="60" y="155" width="320" height="90" rx="6" fill="rgba(147,51,234,0.06)"/>
+<text x="105" y="195.775" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">The system generates an initial</text>
+<text x="105" y="213.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">response, then evaluates whether</text>
+<circle cx="440" cy="200" r="15" fill="#9333ea"/>
+<text x="440" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">4</text>
+<rect x="420" y="155" width="320" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<rect x="420" y="155" width="320" height="90" rx="6" fill="rgba(147,51,234,0.06)"/>
+<text x="465" y="187" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">That response violates any</text>
+<text x="465" y="204.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">principles in its constitution,</text>
+<text x="465" y="222.1" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">then revises it if needed</text>
 
   </g>
   
-  <rect x="0" y="380" width="800" height="40" fill="#09090b" opacity="0.9"/>
-  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#a1a1aa" text-anchor="end">veda.ng</text>
+  <rect x="0" y="380" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#52525b" text-anchor="end">veda.ng</text>
 </svg>
