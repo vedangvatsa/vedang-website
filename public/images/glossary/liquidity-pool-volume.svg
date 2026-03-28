@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
-<rect width="800" height="400" fill="#fff"/>
-<polygon points="330,20 470,20 560,110 240,110" fill="#2563eb" opacity="0.35" stroke="#fff" stroke-width="3"/>
-<text x="400" y="70.25" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Liquidation</text>
-<polygon points="240,110 560,110 650,200 150,200" fill="#2563eb" opacity="0.53" stroke="#fff" stroke-width="3"/>
-<text x="400" y="160.25" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Token</text>
-<polygon points="150,200 650,200 740,290 60,290" fill="#2563eb" opacity="0.71" stroke="#fff" stroke-width="3"/>
-<text x="400" y="250.25" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Cold Storage</text>
-<polygon points="60,290 740,290 830,380 -30,380" fill="#2563eb" opacity="0.89" stroke="#fff" stroke-width="3"/>
-<text x="400" y="340.25" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Sequencer</text>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(59,130,246,0.15)"/>
+      <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#a1a1aa" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="#09090b"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  <rect x="0" y="0" width="800" height="400" fill="url(#glow)"/>
+  
+  <!-- Visual Architecture -->
+  <g transform="translate(0, -20)">
+    <rect x="250" y="100" width="300" height="12" rx="6" fill="#3b82f6" opacity="0.2"/>
+<rect x="196.1982931825358" y="125" width="407.6034136349284" height="12" rx="6" fill="#3b82f6" opacity="0.35"/>
+<rect x="175.0319797718871" y="150" width="449.9360404562258" height="12" rx="6" fill="#3b82f6" opacity="0.5"/>
+<rect x="199.3402614586637" y="175" width="401.3194770826726" height="12" rx="6" fill="#3b82f6" opacity="0.6499999999999999"/>
+<rect x="254.3780607570685" y="200" width="291.243878485863" height="12" rx="6" fill="#3b82f6" opacity="0.8"/>
+<rect x="306.7601871480946" y="225" width="186.47962570381077" height="12" rx="6" fill="#3b82f6" opacity="0.95"/>
 
+  </g>
+
+  <!-- Typography Card Section at Bottom -->
+  <rect x="0" y="300" width="800" height="100" fill="#09090b" opacity="0.8"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#a1a1aa" stroke-opacity="0.2" stroke-width="1"/>
+  
+  <text x="400" y="335" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#3b82f6" text-anchor="middle" letter-spacing="2" text-transform="uppercase">Web3 GLOSSARY</text>
+  <text x="400" y="370" font-family="'Inter',sans-serif" font-weight="700" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">Liquidity Pool Volume</text>
 </svg>

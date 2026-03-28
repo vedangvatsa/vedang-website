@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
-<rect width="800" height="400" fill="#fff"/>
-<circle cx="400" cy="210" r="195" fill="none" stroke="#ede9fe" stroke-width="1"/>
-<circle cx="320" cy="175" r="110" fill="#7c3aed" opacity="0.1" stroke="#7c3aed" stroke-width="2"/>
-<text x="320" y="179.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Backpropagation</text>
-<circle cx="480" cy="175" r="110" fill="#7c3aed" opacity="0.1" stroke="#7c3aed" stroke-width="2"/>
-<text x="480" y="179.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Adapter</text>
-<circle cx="400" cy="290" r="110" fill="#7c3aed" opacity="0.1" stroke="#7c3aed" stroke-width="2"/>
-<text x="400" y="294.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Expert Systems</text>
-<text x="400" y="211.7275" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#7c3aed" text-anchor="middle">Residual</text>
-<text x="400" y="226.6025" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#7c3aed" text-anchor="middle">Connection</text>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(168,85,247,0.15)"/>
+      <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#a1a1aa" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="#09090b"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  <rect x="0" y="0" width="800" height="400" fill="url(#glow)"/>
+  
+  <!-- Visual Architecture -->
+  <g transform="translate(0, -20)">
+    <circle cx="340" cy="180" r="80" fill="#a855f7" opacity="0.15" stroke="#a855f7" stroke-width="2"/>
+<circle cx="460" cy="180" r="80" fill="#a855f7" opacity="0.25" stroke="#a855f7" stroke-width="2"/>
+<circle cx="400" cy="100" r="80" fill="#a855f7" opacity="0.35" stroke="#a855f7" stroke-width="2"/>
 
+  </g>
+
+  <!-- Typography Card Section at Bottom -->
+  <rect x="0" y="300" width="800" height="100" fill="#09090b" opacity="0.8"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#a1a1aa" stroke-opacity="0.2" stroke-width="1"/>
+  
+  <text x="400" y="335" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#a855f7" text-anchor="middle" letter-spacing="2" text-transform="uppercase">AI GLOSSARY</text>
+  <text x="400" y="370" font-family="'Inter',sans-serif" font-weight="700" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">Residual Connection</text>
 </svg>

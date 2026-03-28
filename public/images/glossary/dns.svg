@@ -1,27 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
-<rect width="800" height="400" fill="#fff"/>
-<circle cx="400" cy="200" r="180" fill="none" stroke="#059669" stroke-width="2.5" opacity="0.15"/>
-<text x="400" y="44.2" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#064e3b" text-anchor="middle">Serverless</text>
-<circle cx="400" cy="200" r="135" fill="none" stroke="#059669" stroke-width="2.1" opacity="0.43000000000000005"/>
-<text x="400" y="89.2" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#064e3b" text-anchor="middle">Load Balancer</text>
-<circle cx="400" cy="200" r="90" fill="none" stroke="#059669" stroke-width="1.7" opacity="0.7100000000000001"/>
-<text x="400" y="134.2" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#064e3b" text-anchor="middle">Kubernetes</text>
-<circle cx="400" cy="200" r="50" fill="#059669" stroke="#059669" stroke-width="1.2999999999999998" opacity="0.9900000000000001"/>
-<text x="400" y="189.29" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#fff" text-anchor="middle">DNS (Domain</text>
-<text x="400" y="204.165" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#fff" text-anchor="middle">Name</text>
-<text x="400" y="219.04" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#fff" text-anchor="middle">System)</text>
-<circle cx="580" cy="200" r="3" fill="#6ee7b7"/>
-<circle cx="555.884572681199" cy="290" r="3" fill="#6ee7b7"/>
-<circle cx="490" cy="355.88457268119896" r="3" fill="#6ee7b7"/>
-<circle cx="400" cy="380" r="3" fill="#6ee7b7"/>
-<circle cx="310.00000000000006" cy="355.88457268119896" r="3" fill="#6ee7b7"/>
-<circle cx="244.11542731880104" cy="290" r="3" fill="#6ee7b7"/>
-<circle cx="220" cy="200.00000000000003" r="3" fill="#6ee7b7"/>
-<circle cx="244.11542731880104" cy="109.99999999999999" r="3" fill="#6ee7b7"/>
-<circle cx="309.9999999999999" cy="44.11542731880107" r="3" fill="#6ee7b7"/>
-<circle cx="399.99999999999994" cy="20" r="3" fill="#6ee7b7"/>
-<circle cx="490" cy="44.11542731880104" r="3" fill="#6ee7b7"/>
-<circle cx="555.884572681199" cy="109.99999999999991" r="3" fill="#6ee7b7"/>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(16,185,129,0.15)"/>
+      <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#a1a1aa" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="#09090b"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  <rect x="0" y="0" width="800" height="400" fill="url(#glow)"/>
+  
+  <!-- Visual Architecture -->
+  <g transform="translate(0, -20)">
+    <rect x="220" y="130" width="100" height="100" rx="8" fill="none" stroke="#10b981" stroke-width="2" opacity="0.4"/>
+<rect x="228" y="138" width="84" height="84" rx="4" fill="#10b981" opacity="0.1"/>
+<line x1="320" y1="180" x2="350" y2="180" stroke="#a1a1aa" stroke-width="2" opacity="0.5"/>
+<polygon points="344,176 350,180 344,184" fill="#a1a1aa" opacity="0.5"/>
+<rect x="350" y="130" width="100" height="100" rx="8" fill="none" stroke="#10b981" stroke-width="2" opacity="0.7"/>
+<rect x="358" y="138" width="84" height="84" rx="4" fill="#10b981" opacity="0.2"/>
+<line x1="450" y1="180" x2="480" y2="180" stroke="#a1a1aa" stroke-width="2" opacity="0.5"/>
+<polygon points="474,176 480,180 474,184" fill="#a1a1aa" opacity="0.5"/>
+<rect x="480" y="130" width="100" height="100" rx="8" fill="none" stroke="#10b981" stroke-width="2" opacity="1"/>
+<rect x="488" y="138" width="84" height="84" rx="4" fill="#10b981" opacity="0.30000000000000004"/>
 
+  </g>
+
+  <!-- Typography Card Section at Bottom -->
+  <rect x="0" y="300" width="800" height="100" fill="#09090b" opacity="0.8"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#a1a1aa" stroke-opacity="0.2" stroke-width="1"/>
+  
+  <text x="400" y="335" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#10b981" text-anchor="middle" letter-spacing="2" text-transform="uppercase">Tech GLOSSARY</text>
+  <text x="400" y="370" font-family="'Inter',sans-serif" font-weight="700" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">DNS (Domain Name System)</text>
 </svg>

@@ -1,32 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
-<rect width="800" height="400" fill="#fff"/>
-<circle cx="400" cy="200" r="195" fill="none" stroke="#ede9fe" stroke-width="1"/>
-<circle cx="400" cy="200" r="140" fill="none" stroke="#ede9fe" stroke-width="1" stroke-dasharray="6 4"/>
-<line x1="400" y1="200" x2="400" y2="60" stroke="#c4b5fd" stroke-width="1.5"/>
-<circle cx="400" cy="60" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="400" y="57.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Pattern</text>
-<text x="400" y="68.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Recognition</text>
-<line x1="400" y1="200" x2="521.2435565298214" y2="130" stroke="#c4b5fd" stroke-width="1.5"/>
-<circle cx="521.2435565298214" cy="130" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="521.2435565298214" y="127.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Byte-Pair</text>
-<text x="521.2435565298214" y="138.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Encoding</text>
-<line x1="400" y1="200" x2="521.2435565298214" y2="270" stroke="#c4b5fd" stroke-width="1.5"/>
-<circle cx="521.2435565298214" cy="270" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="521.2435565298214" y="273.5" font-family="'Inter',sans-serif" font-weight="600" font-size="10" fill="#4c1d95" text-anchor="middle">Fine-Tuning</text>
-<line x1="400" y1="200" x2="400" y2="340" stroke="#c4b5fd" stroke-width="1.5"/>
-<circle cx="400" cy="340" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="400" y="332.35" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Generative</text>
-<text x="400" y="342.975" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Adversarial</text>
-<text x="400" y="353.6" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Network</text>
-<line x1="400" y1="200" x2="278.75644347017857" y2="270" stroke="#c4b5fd" stroke-width="1.5"/>
-<circle cx="278.75644347017857" cy="270" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="278.75644347017857" y="267.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Prefix</text>
-<text x="278.75644347017857" y="278.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Tuning</text>
-<line x1="400" y1="200" x2="278.7564434701786" y2="130" stroke="#c4b5fd" stroke-width="1.5"/>
-<circle cx="278.7564434701786" cy="130" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="278.7564434701786" y="133.5" font-family="'Inter',sans-serif" font-weight="600" font-size="10" fill="#4c1d95" text-anchor="middle">Quantization</text>
-<circle cx="400" cy="200" r="55" fill="#7c3aed"/>
-<text x="400" y="204.9" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#fff" text-anchor="middle">LoRA</text>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(168,85,247,0.15)"/>
+      <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#a1a1aa" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="#09090b"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  <rect x="0" y="0" width="800" height="400" fill="url(#glow)"/>
+  
+  <!-- Visual Architecture -->
+  <g transform="translate(0, -20)">
+    <circle cx="400" cy="180" r="115" fill="none" stroke="#a855f7" stroke-width="1.3" opacity="0.85"/>
+<circle cx="400" cy="180" r="140" fill="none" stroke="#a855f7" stroke-width="1.1" opacity="0.7"/>
+<circle cx="400" cy="180" r="165" fill="none" stroke="#a855f7" stroke-width="0.8999999999999999" opacity="0.55"/>
+<circle cx="400" cy="180" r="190" fill="none" stroke="#a855f7" stroke-width="0.7" opacity="0.4"/>
+<circle cx="400" cy="180" r="215" fill="none" stroke="#a855f7" stroke-width="0.5" opacity="0.25"/>
+<circle cx="400" cy="180" r="90" fill="#a855f7" opacity="0.1"/>
+<circle cx="515" cy="180" r="3" fill="#a855f7"/>
+<circle cx="499.5929214352104" cy="237.5" r="3" fill="#a855f7"/>
+<circle cx="457.5" cy="279.5929214352104" r="3" fill="#a855f7"/>
+<circle cx="400" cy="295" r="3" fill="#a855f7"/>
+<circle cx="342.5" cy="279.5929214352104" r="3" fill="#a855f7"/>
+<circle cx="300.4070785647896" cy="237.5" r="3" fill="#a855f7"/>
+<circle cx="285" cy="180" r="3" fill="#a855f7"/>
+<circle cx="300.4070785647896" cy="122.49999999999999" r="3" fill="#a855f7"/>
+<circle cx="342.49999999999994" cy="80.40707856478957" r="3" fill="#a855f7"/>
+<circle cx="400" cy="65" r="3" fill="#a855f7"/>
+<circle cx="457.5" cy="80.40707856478956" r="3" fill="#a855f7"/>
+<circle cx="499.5929214352104" cy="122.49999999999994" r="3" fill="#a855f7"/>
 
+  </g>
+
+  <!-- Typography Card Section at Bottom -->
+  <rect x="0" y="300" width="800" height="100" fill="#09090b" opacity="0.8"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#a1a1aa" stroke-opacity="0.2" stroke-width="1"/>
+  
+  <text x="400" y="335" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#a855f7" text-anchor="middle" letter-spacing="2" text-transform="uppercase">AI GLOSSARY</text>
+  <text x="400" y="370" font-family="'Inter',sans-serif" font-weight="700" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">LoRA</text>
 </svg>

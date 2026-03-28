@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
-<rect width="800" height="400" fill="#fff"/>
-<circle cx="400" cy="200" r="195" fill="none" stroke="#dbeafe" stroke-width="1"/>
-<circle cx="400" cy="200" r="140" fill="none" stroke="#dbeafe" stroke-width="1" stroke-dasharray="6 4"/>
-<line x1="400" y1="200" x2="400" y2="60" stroke="#93c5fd" stroke-width="1.5"/>
-<circle cx="400" cy="60" r="34" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="400" y="57.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#1e3a5f" text-anchor="middle">Cryptocurrency</text>
-<text x="400" y="68.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#1e3a5f" text-anchor="middle">Wallet</text>
-<line x1="400" y1="200" x2="521.2435565298214" y2="130" stroke="#93c5fd" stroke-width="1.5"/>
-<circle cx="521.2435565298214" cy="130" r="34" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="521.2435565298214" y="133.5" font-family="'Inter',sans-serif" font-weight="600" font-size="10" fill="#1e3a5f" text-anchor="middle">Rollup</text>
-<line x1="400" y1="200" x2="521.2435565298214" y2="270" stroke="#93c5fd" stroke-width="1.5"/>
-<circle cx="521.2435565298214" cy="270" r="34" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="521.2435565298214" y="273.5" font-family="'Inter',sans-serif" font-weight="600" font-size="10" fill="#1e3a5f" text-anchor="middle">Sequencer</text>
-<line x1="400" y1="200" x2="400" y2="340" stroke="#93c5fd" stroke-width="1.5"/>
-<circle cx="400" cy="340" r="34" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="400" y="337.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#1e3a5f" text-anchor="middle">Basis</text>
-<text x="400" y="348.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#1e3a5f" text-anchor="middle">Trade</text>
-<line x1="400" y1="200" x2="278.75644347017857" y2="270" stroke="#93c5fd" stroke-width="1.5"/>
-<circle cx="278.75644347017857" cy="270" r="34" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="278.75644347017857" y="273.5" font-family="'Inter',sans-serif" font-weight="600" font-size="10" fill="#1e3a5f" text-anchor="middle">ZK Rollup</text>
-<line x1="400" y1="200" x2="278.7564434701786" y2="130" stroke="#93c5fd" stroke-width="1.5"/>
-<circle cx="278.7564434701786" cy="130" r="34" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
-<text x="278.7564434701786" y="133.5" font-family="'Inter',sans-serif" font-weight="600" font-size="10" fill="#1e3a5f" text-anchor="middle">Yield</text>
-<circle cx="400" cy="200" r="55" fill="#2563eb"/>
-<text x="400" y="204.9" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#fff" text-anchor="middle">Cold Wallet</text>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(59,130,246,0.15)"/>
+      <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#a1a1aa" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="#09090b"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  <rect x="0" y="0" width="800" height="400" fill="url(#glow)"/>
+  
+  <!-- Visual Architecture -->
+  <g transform="translate(0, -20)">
+    <polygon points="434.6410161513775,160 434.6410161513775,200 400,220 365.3589838486225,200 365.3589838486225,160 400,140" fill="#3b82f6" opacity="0.2" stroke="#3b82f6" stroke-width="2"/>
+<polygon points="364.6410161513775,118 364.6410161513775,158 330,178 295.3589838486225,158 295.3589838486225,118 330,98" fill="none" opacity="1" stroke="#3b82f6" stroke-width="2"/>
+<polygon points="504.6410161513775,118 504.6410161513775,158 470,178 435.3589838486225,158 435.3589838486225,118 470,98" fill="none" opacity="1" stroke="#3b82f6" stroke-width="2"/>
+<polygon points="364.6410161513775,202 364.6410161513775,242 330,262 295.3589838486225,242 295.3589838486225,202 330,182" fill="none" opacity="1" stroke="#3b82f6" stroke-width="2"/>
+<polygon points="504.6410161513775,202 504.6410161513775,242 470,262 435.3589838486225,242 435.3589838486225,202 470,182" fill="none" opacity="1" stroke="#3b82f6" stroke-width="2"/>
+<polygon points="294.6410161513775,160 294.6410161513775,200 260,220 225.35898384862244,200 225.35898384862247,160 260,140" fill="none" opacity="1" stroke="#3b82f6" stroke-width="2"/>
+<polygon points="574.6410161513776,160 574.6410161513776,200 540,220 505.3589838486225,200 505.3589838486225,160 540,140" fill="none" opacity="1" stroke="#3b82f6" stroke-width="2"/>
 
+  </g>
+
+  <!-- Typography Card Section at Bottom -->
+  <rect x="0" y="300" width="800" height="100" fill="#09090b" opacity="0.8"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#a1a1aa" stroke-opacity="0.2" stroke-width="1"/>
+  
+  <text x="400" y="335" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#3b82f6" text-anchor="middle" letter-spacing="2" text-transform="uppercase">Web3 GLOSSARY</text>
+  <text x="400" y="370" font-family="'Inter',sans-serif" font-weight="700" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">Cold Wallet</text>
 </svg>

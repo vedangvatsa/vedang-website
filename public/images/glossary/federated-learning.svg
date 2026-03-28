@@ -1,30 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
-<rect width="800" height="400" fill="#fff"/>
-<polygon points="245.03332099679082,90.8 245.03332099679082,142.79999999999998 200,168.8 154.96667900320918,142.79999999999998 154.9666790032092,90.79999999999998 200,64.8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5" opacity="0.7"/>
-<text x="200" y="119.95" font-family="'Inter',sans-serif" font-weight="600" font-size="9" fill="#4c1d95" text-anchor="middle">RLHF</text>
-<polygon points="336.0333209967908,90.8 336.0333209967908,142.79999999999998 291,168.8 245.96667900320918,142.79999999999998 245.9666790032092,90.79999999999998 291,64.8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5" opacity="0.7"/>
-<text x="291" y="114.69624999999999" font-family="'Inter',sans-serif" font-weight="600" font-size="7.6499999999999995" fill="#4c1d95" text-anchor="middle">Word</text>
-<text x="291" y="124.25874999999999" font-family="'Inter',sans-serif" font-weight="600" font-size="7.6499999999999995" fill="#4c1d95" text-anchor="middle">Embeddings</text>
-<polygon points="427.0333209967908,90.8 427.0333209967908,142.79999999999998 382,168.8 336.9666790032092,142.79999999999998 336.9666790032092,90.79999999999998 382,64.8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5" opacity="0.7"/>
-<text x="382" y="119.95" font-family="'Inter',sans-serif" font-weight="600" font-size="9" fill="#4c1d95" text-anchor="middle">Quantization</text>
-<polygon points="518.0333209967908,90.8 518.0333209967908,142.79999999999998 473,168.8 427.9666790032092,142.79999999999998 427.9666790032092,90.79999999999998 473,64.8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5" opacity="0.7"/>
-<text x="473" y="114.69624999999999" font-family="'Inter',sans-serif" font-weight="600" font-size="7.6499999999999995" fill="#4c1d95" text-anchor="middle">Question</text>
-<text x="473" y="124.25874999999999" font-family="'Inter',sans-serif" font-weight="600" font-size="7.6499999999999995" fill="#4c1d95" text-anchor="middle">Answering</text>
-<polygon points="290.5333209967908,174 290.5333209967908,226 245.5,252 200.46667900320918,226 200.4666790032092,174 245.5,148" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5" opacity="0.7"/>
-<text x="245.5" y="203.15" font-family="'Inter',sans-serif" font-weight="600" font-size="9" fill="#4c1d95" text-anchor="middle">Cross-Attention</text>
-<polygon points="381.5333209967908,174 381.5333209967908,226 336.5,252 291.4666790032092,226 291.4666790032092,174 336.5,148" fill="#7c3aed" stroke="#7c3aed" stroke-width="1.5" opacity="1"/>
-<text x="336.5" y="197.42875" font-family="'Inter',sans-serif" font-weight="800" font-size="9.35" fill="#fff" text-anchor="middle">Federated</text>
-<text x="336.5" y="209.11625" font-family="'Inter',sans-serif" font-weight="800" font-size="9.35" fill="#fff" text-anchor="middle">Learning</text>
-<polygon points="472.5333209967908,174 472.5333209967908,226 427.5,252 382.4666790032092,226 382.4666790032092,174 427.5,148" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5" opacity="0.7"/>
-<text x="427.5" y="203.15" font-family="'Inter',sans-serif" font-weight="600" font-size="9" fill="#4c1d95" text-anchor="middle">Grounding</text>
-<polygon points="563.5333209967908,174 563.5333209967908,226 518.5,252 473.4666790032092,226 473.4666790032092,174 518.5,148" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5" opacity="0.7"/>
-<text x="518.5" y="197.89625" font-family="'Inter',sans-serif" font-weight="600" font-size="7.6499999999999995" fill="#4c1d95" text-anchor="middle">Cluster</text>
-<text x="518.5" y="207.45875" font-family="'Inter',sans-serif" font-weight="600" font-size="7.6499999999999995" fill="#4c1d95" text-anchor="middle">Analysis</text>
-<polygon points="245.03332099679082,257.2 245.03332099679082,309.2 200,335.2 154.96667900320918,309.2 154.9666790032092,257.2 200,231.2" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5" opacity="0.7"/>
-<text x="200" y="286.34999999999997" font-family="'Inter',sans-serif" font-weight="600" font-size="9" fill="#4c1d95" text-anchor="middle">Self-Attention</text>
-<polygon points="336.0333209967908,257.2 336.0333209967908,309.2 291,335.2 245.96667900320918,309.2 245.9666790032092,257.2 291,231.2" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5" opacity="0.7"/>
-<polygon points="427.0333209967908,257.2 427.0333209967908,309.2 382,335.2 336.9666790032092,309.2 336.9666790032092,257.2 382,231.2" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5" opacity="0.7"/>
-<polygon points="518.0333209967908,257.2 518.0333209967908,309.2 473,335.2 427.9666790032092,309.2 427.9666790032092,257.2 473,231.2" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5" opacity="0.7"/>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(168,85,247,0.15)"/>
+      <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#a1a1aa" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="#09090b"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  <rect x="0" y="0" width="800" height="400" fill="url(#glow)"/>
+  
+  <!-- Visual Architecture -->
+  <g transform="translate(0, -20)">
+    <circle cx="548" cy="180" r="6" fill="#a855f7"/>
+<circle cx="505.3589103967956" cy="285.3589103967956" r="6" fill="#a855f7"/>
+<circle cx="400" cy="280" r="6" fill="#a855f7"/>
+<circle cx="328.5822151001587" cy="251.4177848998413" r="6" fill="#a855f7"/>
+<circle cx="298" cy="180" r="6" fill="#a855f7"/>
+<circle cx="327.1680015377856" cy="107.16800153778561" r="6" fill="#a855f7"/>
+<circle cx="400" cy="76" r="6" fill="#a855f7"/>
+<circle cx="474.24621202458746" cy="105.7537879754125" r="6" fill="#a855f7"/>
+<line x1="548" y1="180" x2="505.3589103967956" y2="285.3589103967956" stroke="#a855f7" stroke-width="1.5" opacity="0.4"/>
+<line x1="548" y1="180" x2="298" y2="180" stroke="#a855f7" stroke-width="1.5" opacity="0.4"/>
+<line x1="548" y1="180" x2="474.24621202458746" y2="105.7537879754125" stroke="#a855f7" stroke-width="1.5" opacity="0.4"/>
+<line x1="505.3589103967956" y1="285.3589103967956" x2="400" y2="280" stroke="#a855f7" stroke-width="1.5" opacity="0.4"/>
+<line x1="505.3589103967956" y1="285.3589103967956" x2="328.5822151001587" y2="251.4177848998413" stroke="#a855f7" stroke-width="1.5" opacity="0.4"/>
+<line x1="505.3589103967956" y1="285.3589103967956" x2="400" y2="76" stroke="#a855f7" stroke-width="1.5" opacity="0.4"/>
+<line x1="400" y1="280" x2="328.5822151001587" y2="251.4177848998413" stroke="#a855f7" stroke-width="1.5" opacity="0.4"/>
+<line x1="400" y1="280" x2="327.1680015377856" y2="107.16800153778561" stroke="#a855f7" stroke-width="1.5" opacity="0.4"/>
+<line x1="328.5822151001587" y1="251.4177848998413" x2="298" y2="180" stroke="#a855f7" stroke-width="1.5" opacity="0.4"/>
+<line x1="328.5822151001587" y1="251.4177848998413" x2="474.24621202458746" y2="105.7537879754125" stroke="#a855f7" stroke-width="1.5" opacity="0.4"/>
+<line x1="298" y1="180" x2="327.1680015377856" y2="107.16800153778561" stroke="#a855f7" stroke-width="1.5" opacity="0.4"/>
+<line x1="298" y1="180" x2="400" y2="76" stroke="#a855f7" stroke-width="1.5" opacity="0.4"/>
+<line x1="327.1680015377856" y1="107.16800153778561" x2="400" y2="76" stroke="#a855f7" stroke-width="1.5" opacity="0.4"/>
+<line x1="400" y1="76" x2="474.24621202458746" y2="105.7537879754125" stroke="#a855f7" stroke-width="1.5" opacity="0.4"/>
 
+  </g>
+
+  <!-- Typography Card Section at Bottom -->
+  <rect x="0" y="300" width="800" height="100" fill="#09090b" opacity="0.8"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#a1a1aa" stroke-opacity="0.2" stroke-width="1"/>
+  
+  <text x="400" y="335" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#a855f7" text-anchor="middle" letter-spacing="2" text-transform="uppercase">AI GLOSSARY</text>
+  <text x="400" y="370" font-family="'Inter',sans-serif" font-weight="700" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">Federated Learning</text>
 </svg>

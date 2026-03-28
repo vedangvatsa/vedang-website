@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
-<rect width="800" height="400" fill="#fff"/>
-<circle cx="400" cy="210" r="195" fill="none" stroke="#dbeafe" stroke-width="1"/>
-<circle cx="320" cy="175" r="110" fill="#2563eb" opacity="0.1" stroke="#2563eb" stroke-width="2"/>
-<text x="320" y="179.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Genesis Block</text>
-<circle cx="480" cy="175" r="110" fill="#2563eb" opacity="0.1" stroke="#2563eb" stroke-width="2"/>
-<text x="480" y="179.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Token</text>
-<circle cx="400" cy="290" r="110" fill="#2563eb" opacity="0.1" stroke="#2563eb" stroke-width="2"/>
-<text x="400" y="294.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Bridge</text>
-<text x="400" y="219.9" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#2563eb" text-anchor="middle">Tokenomics</text>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(59,130,246,0.15)"/>
+      <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#a1a1aa" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="#09090b"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  <rect x="0" y="0" width="800" height="400" fill="url(#glow)"/>
+  
+  <!-- Visual Architecture -->
+  <g transform="translate(0, -20)">
+    <rect x="250" y="100" width="300" height="12" rx="6" fill="#3b82f6" opacity="0.2"/>
+<rect x="196.1982931825358" y="125" width="407.6034136349284" height="12" rx="6" fill="#3b82f6" opacity="0.35"/>
+<rect x="175.0319797718871" y="150" width="449.9360404562258" height="12" rx="6" fill="#3b82f6" opacity="0.5"/>
+<rect x="199.3402614586637" y="175" width="401.3194770826726" height="12" rx="6" fill="#3b82f6" opacity="0.6499999999999999"/>
+<rect x="254.3780607570685" y="200" width="291.243878485863" height="12" rx="6" fill="#3b82f6" opacity="0.8"/>
+<rect x="306.7601871480946" y="225" width="186.47962570381077" height="12" rx="6" fill="#3b82f6" opacity="0.95"/>
 
+  </g>
+
+  <!-- Typography Card Section at Bottom -->
+  <rect x="0" y="300" width="800" height="100" fill="#09090b" opacity="0.8"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#a1a1aa" stroke-opacity="0.2" stroke-width="1"/>
+  
+  <text x="400" y="335" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#3b82f6" text-anchor="middle" letter-spacing="2" text-transform="uppercase">Web3 GLOSSARY</text>
+  <text x="400" y="370" font-family="'Inter',sans-serif" font-weight="700" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">Tokenomics</text>
 </svg>

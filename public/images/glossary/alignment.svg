@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
-<rect width="800" height="400" fill="#fff"/>
-<rect x="30" y="15" width="240" height="180" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="0.5"/>
-<text x="150" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">◆</text>
-<text x="150" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">LSTM</text>
-<rect x="280" y="15" width="240" height="180" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="0.5"/>
-<text x="400" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">●</text>
-<text x="400" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Multimodal AI</text>
-<rect x="530" y="15" width="240" height="180" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="0.5"/>
-<text x="650" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">▲</text>
-<text x="650" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Proof of Stake</text>
-<rect x="30" y="205" width="240" height="180" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="0.5"/>
-<text x="150" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">■</text>
-<text x="150" y="318.055" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Direct</text>
-<text x="150" y="331.8675" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Preference</text>
-<text x="150" y="345.68" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Optimization</text>
-<rect x="280" y="205" width="240" height="180" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="0.5"/>
-<text x="400" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">★</text>
-<text x="400" y="332.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Softmax</text>
-<rect x="530" y="205" width="240" height="180" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="0.5"/>
-<text x="650" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">◎</text>
-<text x="650" y="332.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Logit</text>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(168,85,247,0.15)"/>
+      <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#a1a1aa" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="#09090b"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  <rect x="0" y="0" width="800" height="400" fill="url(#glow)"/>
+  
+  <!-- Visual Architecture -->
+  <g transform="translate(0, -20)">
+    <circle cx="340" cy="180" r="80" fill="#a855f7" opacity="0.15" stroke="#a855f7" stroke-width="2"/>
+<circle cx="460" cy="180" r="80" fill="#a855f7" opacity="0.25" stroke="#a855f7" stroke-width="2"/>
+<circle cx="400" cy="100" r="80" fill="#a855f7" opacity="0.35" stroke="#a855f7" stroke-width="2"/>
 
+  </g>
+
+  <!-- Typography Card Section at Bottom -->
+  <rect x="0" y="300" width="800" height="100" fill="#09090b" opacity="0.8"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#a1a1aa" stroke-opacity="0.2" stroke-width="1"/>
+  
+  <text x="400" y="335" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#a855f7" text-anchor="middle" letter-spacing="2" text-transform="uppercase">AI GLOSSARY</text>
+  <text x="400" y="370" font-family="'Inter',sans-serif" font-weight="700" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">Alignment</text>
 </svg>

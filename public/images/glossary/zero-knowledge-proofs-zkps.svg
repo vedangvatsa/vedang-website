@@ -1,20 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
-<rect width="800" height="400" fill="#fff"/>
-<rect x="30" y="14" width="740" height="68" rx="10" fill="#2563eb" opacity="1"/>
-<text x="54" y="53" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#fff">State Channel</text>
-<rect x="700" y="38" width="50" height="20" rx="10" fill="rgba(255,255,255,0.2)"/>
-<rect x="42.5" y="90" width="715" height="68" rx="10" fill="#2563eb" opacity="0.88"/>
-<text x="66.5" y="129" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#fff">Concentrated Liquidity</text>
-<rect x="687.5" y="114" width="50" height="20" rx="10" fill="rgba(255,255,255,0.2)"/>
-<rect x="55" y="166" width="690" height="68" rx="10" fill="#2563eb" opacity="0.76"/>
-<text x="79" y="205" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#fff">DAG</text>
-<rect x="675" y="190" width="50" height="20" rx="10" fill="rgba(255,255,255,0.2)"/>
-<rect x="67.5" y="242" width="665" height="68" rx="10" fill="#2563eb" opacity="0.64"/>
-<text x="91.5" y="281" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#fff">Utilization Rate</text>
-<rect x="662.5" y="266" width="50" height="20" rx="10" fill="rgba(255,255,255,0.2)"/>
-<rect x="80" y="318" width="640" height="68" rx="10" fill="#2563eb" opacity="0.52"/>
-<text x="104" y="357" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#fff">Delta Neutral</text>
-<rect x="650" y="342" width="50" height="20" rx="10" fill="rgba(255,255,255,0.2)"/>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(59,130,246,0.15)"/>
+      <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#a1a1aa" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="#09090b"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  <rect x="0" y="0" width="800" height="400" fill="url(#glow)"/>
+  
+  <!-- Visual Architecture -->
+  <g transform="translate(0, -20)">
+    <polygon points="434.6410161513775,160 434.6410161513775,200 400,220 365.3589838486225,200 365.3589838486225,160 400,140" fill="#3b82f6" opacity="0.2" stroke="#3b82f6" stroke-width="2"/>
+<polygon points="364.6410161513775,118 364.6410161513775,158 330,178 295.3589838486225,158 295.3589838486225,118 330,98" fill="none" opacity="1" stroke="#3b82f6" stroke-width="2"/>
+<polygon points="504.6410161513775,118 504.6410161513775,158 470,178 435.3589838486225,158 435.3589838486225,118 470,98" fill="none" opacity="1" stroke="#3b82f6" stroke-width="2"/>
+<polygon points="364.6410161513775,202 364.6410161513775,242 330,262 295.3589838486225,242 295.3589838486225,202 330,182" fill="none" opacity="1" stroke="#3b82f6" stroke-width="2"/>
+<polygon points="504.6410161513775,202 504.6410161513775,242 470,262 435.3589838486225,242 435.3589838486225,202 470,182" fill="none" opacity="1" stroke="#3b82f6" stroke-width="2"/>
+<polygon points="294.6410161513775,160 294.6410161513775,200 260,220 225.35898384862244,200 225.35898384862247,160 260,140" fill="none" opacity="1" stroke="#3b82f6" stroke-width="2"/>
+<polygon points="574.6410161513776,160 574.6410161513776,200 540,220 505.3589838486225,200 505.3589838486225,160 540,140" fill="none" opacity="1" stroke="#3b82f6" stroke-width="2"/>
 
+  </g>
+
+  <!-- Typography Card Section at Bottom -->
+  <rect x="0" y="300" width="800" height="100" fill="#09090b" opacity="0.8"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#a1a1aa" stroke-opacity="0.2" stroke-width="1"/>
+  
+  <text x="400" y="335" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#3b82f6" text-anchor="middle" letter-spacing="2" text-transform="uppercase">Web3 GLOSSARY</text>
+  <text x="400" y="370" font-family="'Inter',sans-serif" font-weight="700" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">Zero-Knowledge Proofs (ZKPs)</text>
 </svg>

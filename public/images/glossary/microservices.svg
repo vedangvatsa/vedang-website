@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
-<rect width="800" height="400" fill="#fff"/>
-<circle cx="400" cy="200" r="195" fill="none" stroke="#d1fae5" stroke-width="1"/>
-<circle cx="400" cy="200" r="140" fill="none" stroke="#d1fae5" stroke-width="1" stroke-dasharray="6 4"/>
-<line x1="400" y1="200" x2="400" y2="60" stroke="#6ee7b7" stroke-width="1.5"/>
-<circle cx="400" cy="60" r="34" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
-<text x="400" y="63.5" font-family="'Inter',sans-serif" font-weight="600" font-size="10" fill="#064e3b" text-anchor="middle">Docker</text>
-<line x1="400" y1="200" x2="521.2435565298214" y2="130" stroke="#6ee7b7" stroke-width="1.5"/>
-<circle cx="521.2435565298214" cy="130" r="34" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
-<text x="521.2435565298214" y="122.35" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">API</text>
-<text x="521.2435565298214" y="132.975" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">(Application</text>
-<text x="521.2435565298214" y="143.6" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Programmi…</text>
-<line x1="400" y1="200" x2="521.2435565298214" y2="270" stroke="#6ee7b7" stroke-width="1.5"/>
-<circle cx="521.2435565298214" cy="270" r="34" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
-<text x="521.2435565298214" y="267.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Digital</text>
-<text x="521.2435565298214" y="278.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Twin</text>
-<line x1="400" y1="200" x2="400" y2="340" stroke="#6ee7b7" stroke-width="1.5"/>
-<circle cx="400" cy="340" r="34" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
-<text x="400" y="337.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Modular</text>
-<text x="400" y="348.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Blockchain</text>
-<line x1="400" y1="200" x2="278.75644347017857" y2="270" stroke="#6ee7b7" stroke-width="1.5"/>
-<circle cx="278.75644347017857" cy="270" r="34" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
-<text x="278.75644347017857" y="273.5" font-family="'Inter',sans-serif" font-weight="600" font-size="10" fill="#064e3b" text-anchor="middle">Serverless</text>
-<line x1="400" y1="200" x2="278.7564434701786" y2="130" stroke="#6ee7b7" stroke-width="1.5"/>
-<circle cx="278.7564434701786" cy="130" r="34" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
-<text x="278.7564434701786" y="127.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Spatial</text>
-<text x="278.7564434701786" y="138.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Computing</text>
-<circle cx="400" cy="200" r="55" fill="#059669"/>
-<text x="400" y="204.9" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#fff" text-anchor="middle">Microservices</text>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(16,185,129,0.15)"/>
+      <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#a1a1aa" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="#09090b"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  <rect x="0" y="0" width="800" height="400" fill="url(#glow)"/>
+  
+  <!-- Visual Architecture -->
+  <g transform="translate(0, -20)">
+    <circle cx="340" cy="180" r="80" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="2"/>
+<circle cx="460" cy="180" r="80" fill="#10b981" opacity="0.25" stroke="#10b981" stroke-width="2"/>
+<circle cx="400" cy="100" r="80" fill="#10b981" opacity="0.35" stroke="#10b981" stroke-width="2"/>
 
+  </g>
+
+  <!-- Typography Card Section at Bottom -->
+  <rect x="0" y="300" width="800" height="100" fill="#09090b" opacity="0.8"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#a1a1aa" stroke-opacity="0.2" stroke-width="1"/>
+  
+  <text x="400" y="335" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#10b981" text-anchor="middle" letter-spacing="2" text-transform="uppercase">Tech GLOSSARY</text>
+  <text x="400" y="370" font-family="'Inter',sans-serif" font-weight="700" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">Microservices</text>
 </svg>
