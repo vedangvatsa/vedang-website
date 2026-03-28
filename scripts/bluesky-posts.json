@@ -334,5 +334,29 @@
     "posted": false,
     "text": "GPT-3.5 had 175B parameters. Llama 3 matched it with 8B. That is 20x fewer.\n\nPhi-4 has 14B. It outperforms GPT-4o on math and science benchmarks. A laptop model beating a datacenter model.\n\nThe winning strategy shifted from more parameters to better data.",
     "image": "scripts/thread-assets/models_shrinking.png"
+  },
+  {
+    "id": "cognitive-load",
+    "scheduleDate": "2026-04-11",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "Your brain was built for scarcity. It now lives in abundance.\n\nEvery context switch costs you. Every notification occupies a slot in working memory.\n\nThe result is continuous partial attention. Aware of everything. Focused on nothing.\n\nveda.ng/cognitive-load",
+    "image": "scripts/thread-assets/cognitive_load.png"
+  },
+  {
+    "id": "attention-refinery",
+    "scheduleDate": "2026-04-12",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "You are not the customer. You are the raw material.\n\nYour attention enters as crude input. Gets refined into behavioral data. Sold to advertisers.\n\nOutrage is high-octane fuel. Nuance is low-yield crude.\n\nveda.ng/attention-refinery",
+    "image": "scripts/thread-assets/attention_refinery.png"
+  },
+  {
+    "id": "simulation-hypothesis",
+    "scheduleDate": "2026-04-13",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "Physics looks like optimization.\n\nParticles have no properties until measured. Like a game that only renders what you look at.\n\nIf civilizations can run ancestor simulations and do, simulated beings outnumber real ones.\n\nveda.ng/simulation-hypothesis",
+    "image": "scripts/thread-assets/simulation.png"
   }
 ]
