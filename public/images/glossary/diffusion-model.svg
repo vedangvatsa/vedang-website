@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#ffffff">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
     </pattern>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9333ea"/>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#9333ea"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect width="800" height="420" fill="url(#grid)"/>
+  <rect width="800" height="400" fill="#ffffff"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
   
-  <g transform="translate(0, 80)">
-    <rect x="190" y="20" width="420" height="60" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="190" y="20" width="420" height="60" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="54.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A diffusion model generates data</text>
-<line x1="400" y1="83" x2="400" y2="92" stroke="#9333ea" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="190" y="100" width="420" height="60" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="190" y="100" width="420" height="60" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="116" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By learning to reverse a gradual noising process,</text>
-<text x="400" y="134.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">iteratively denoising random noise into coherent samples</text>
-<text x="400" y="153.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">through many small refinement steps</text>
-<line x1="400" y1="163" x2="400" y2="172" stroke="#9333ea" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="190" y="180" width="420" height="60" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="190" y="180" width="420" height="60" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="205.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The forward diffusion process progressively adds Gaussian</text>
-<text x="400" y="224.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">noise</text>
+  <g>
+    <rect x="40" y="130" width="320" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="40" y="130" width="320" height="100" rx="10" fill="rgba(147,51,234,0.06)"/>
+<text x="200" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A diffusion model generates data</text>
+<path d="M 360 180 C 420 180, 420 80, 470 80" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 360 180 C 420 180, 420 280, 470 280" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="470" y="35" width="300" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="470" y="35" width="300" height="90" rx="8" fill="rgba(147,51,234,0.06)"/>
+<text x="620" y="56.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By learning to reverse a gradual</text>
+<text x="620" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">noising process, iteratively</text>
+<text x="620" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">denoising random noise into</text>
+<text x="620" y="113.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">coherent samples through many...</text>
+<rect x="470" y="235" width="300" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="470" y="235" width="300" height="90" rx="8" fill="rgba(147,51,234,0.06)"/>
+<text x="620" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The forward diffusion process</text>
+<text x="620" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">progressively adds Gaussian noise</text>
 
   </g>
   
-  <rect x="0" y="380" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#52525b" text-anchor="end">veda.ng</text>
+  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
 </svg>

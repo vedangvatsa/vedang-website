@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#ffffff">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
     </pattern>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#2563eb"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect width="800" height="420" fill="url(#grid)"/>
+  <rect width="800" height="400" fill="#ffffff"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
   
-  <g transform="translate(0, 80)">
-    <rect x="250" y="30" width="300" height="60" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="250" y="30" width="300" height="60" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="38.224999999999994" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">A Zero-Knowledge Ethereum Virtual Machine</text>
-<text x="400" y="55.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">(zkEVM) represents the holy grail of</text>
-<text x="400" y="73.325" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">blockchain scaling: generating</text>
-<text x="400" y="90.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">cryptographically secure mathematical...</text>
-<path d="M 400 90 L 250 152" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
-<path d="M 400 90 L 550 152" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="120" y="155" width="260" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="120" y="155" width="260" height="90" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="250" y="187" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">A ZK-Rollup batches thousands of</text>
-<text x="250" y="204.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">transactions off-chain and submits a</text>
-<text x="250" y="222.1" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">tiny 'validity proof'</text>
-<rect x="420" y="155" width="260" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="420" y="155" width="260" height="90" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="550" y="187" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">To the Ethereum mainnet,</text>
-<text x="550" y="204.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">guaranteeing execution was flawless</text>
-<text x="550" y="222.1" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">without the base layer needing</text>
+  <g>
+    <rect x="40" y="130" width="320" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="40" y="130" width="320" height="100" rx="10" fill="rgba(37,99,235,0.06)"/>
+<text x="200" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A Zero-Knowledge Ethereum Virtual</text>
+<text x="200" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Machine (zkEVM) represents the holy</text>
+<text x="200" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">grail of blockchain scaling:</text>
+<text x="200" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">generating cryptographically secu...</text>
+<path d="M 360 180 C 420 180, 420 80, 470 80" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 360 180 C 420 180, 420 280, 470 280" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="470" y="35" width="300" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="470" y="35" width="300" height="90" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="620" y="66" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A ZK-Rollup batches thousands of</text>
+<text x="620" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">transactions off-chain and submits</text>
+<text x="620" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">a tiny 'validity proof'</text>
+<rect x="470" y="235" width="300" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="470" y="235" width="300" height="90" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="620" y="256.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To the Ethereum mainnet,</text>
+<text x="620" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">guaranteeing execution was</text>
+<text x="620" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">flawless without the base layer</text>
+<text x="620" y="313.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">needing</text>
 
   </g>
   
-  <rect x="0" y="380" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#52525b" text-anchor="end">veda.ng</text>
+  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
 </svg>

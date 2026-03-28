@@ -1,48 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#ffffff">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
     </pattern>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#059669"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect width="800" height="420" fill="url(#grid)"/>
+  <rect width="800" height="400" fill="#ffffff"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
   
-  <g transform="translate(0, 80)">
-    <rect x="310" y="65" width="180" height="50" rx="25" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="310" y="65" width="180" height="50" rx="25" fill="rgba(5,150,105,0.06)"/>
-<text x="400" y="95.6" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#059669" text-anchor="middle">Zero-Knowledge Proof</text>
-<path d="M 400 115 L 160 150" fill="none" stroke="#e5e7eb" stroke-width="2" stroke-dasharray="4 4"/>
-<rect x="60" y="150" width="200" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="60" y="150" width="200" height="80" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="160" y="186.1" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">A zero-knowledge proof is a</text>
-<text x="160" y="202.3" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">cryptographic method</text>
-<path d="M 400 115 L 640 150" fill="none" stroke="#e5e7eb" stroke-width="2" stroke-dasharray="4 4"/>
-<rect x="540" y="150" width="200" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="540" y="150" width="200" height="80" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="640" y="169.89999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">To prove knowledge of</text>
-<text x="640" y="186.09999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">information without</text>
-<text x="640" y="202.29999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">revealing the information</text>
-<text x="640" y="218.5" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">itself</text>
-<path d="M 400 115 L 400 180" fill="none" stroke="#e5e7eb" stroke-width="2" stroke-dasharray="4 4"/>
-<rect x="300" y="180" width="200" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="300" y="180" width="200" height="80" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="400" y="208" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">You can prove you know a</text>
-<text x="400" y="224.2" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">secret without telling</text>
-<text x="400" y="240.4" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">anyone what the secret is</text>
-<path d="M 400 115 L 520 220" fill="none" stroke="#e5e7eb" stroke-width="2" stroke-dasharray="4 4"/>
-<rect x="420" y="220" width="200" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="420" y="220" width="200" height="80" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="520" y="239.89999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">You can prove that a</text>
-<text x="520" y="256.09999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">computation was done</text>
-<text x="520" y="272.3" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">correctly without showing</text>
-<text x="520" y="288.5" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#52525b" text-anchor="middle">the computation or inputs</text>
+  <g>
+    <rect x="27.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="27.5" y="90" width="175" height="180" rx="6" fill="rgba(5,150,105,0.06)"/>
+<text x="115" y="166" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A zero-knowledge</text>
+<text x="115" y="184.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">proof is a</text>
+<text x="115" y="203.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">cryptographic method</text>
+<rect x="217.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="217.5" y="90" width="175" height="180" rx="6" fill="rgba(5,150,105,0.06)"/>
+<text x="305" y="156.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To prove knowledge of</text>
+<text x="305" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">information without</text>
+<text x="305" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">revealing the</text>
+<text x="305" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">information itself</text>
+<rect x="407.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="407.5" y="90" width="175" height="180" rx="6" fill="rgba(5,150,105,0.06)"/>
+<text x="495" y="156.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">You can prove you</text>
+<text x="495" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">know a secret without</text>
+<text x="495" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">telling anyone what</text>
+<text x="495" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">the secret is</text>
+<rect x="597.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="597.5" y="90" width="175" height="180" rx="6" fill="rgba(5,150,105,0.06)"/>
+<text x="685" y="156.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">You can prove that a</text>
+<text x="685" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">computation was done</text>
+<text x="685" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">correctly without</text>
+<text x="685" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">showing the...</text>
 
   </g>
   
-  <rect x="0" y="380" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#52525b" text-anchor="end">veda.ng</text>
+  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
 </svg>

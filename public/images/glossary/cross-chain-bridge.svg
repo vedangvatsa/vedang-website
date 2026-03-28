@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#ffffff">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
     </pattern>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#2563eb"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect width="800" height="420" fill="url(#grid)"/>
+  <rect width="800" height="400" fill="#ffffff"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
   
-  <g transform="translate(0, 80)">
-    <rect x="45" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="45" y="75" width="210" height="110" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="150" y="108.225" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">A cross-chain bridge enables</text>
-<text x="150" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">transferring tokens, data,</text>
-<text x="150" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">or messages between separate</text>
-<text x="150" y="160.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">blockchains</text>
-<line x1="260" y1="130" x2="283" y2="130" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="295" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="295" y="75" width="210" height="110" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="108.225" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">That otherwise cannot</text>
-<text x="400" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">directly communicate,</text>
-<text x="400" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">creating interoperability</text>
-<text x="400" y="160.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">across the fragmented...</text>
-<line x1="510" y1="130" x2="533" y2="130" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="545" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="545" y="75" width="210" height="110" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="650" y="108.225" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">The fundamental mechanism</text>
-<text x="650" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">for token transfers: lock</text>
-<text x="650" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">native tokens on the source</text>
-<text x="650" y="160.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">chain in a bridge contrac...</text>
+  <g>
+    <rect x="40" y="130" width="320" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="40" y="130" width="320" height="100" rx="10" fill="rgba(37,99,235,0.06)"/>
+<text x="200" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A cross-chain bridge enables</text>
+<text x="200" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">transferring tokens, data, or</text>
+<text x="200" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">messages between separate</text>
+<text x="200" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">blockchains</text>
+<path d="M 360 180 C 420 180, 420 80, 470 80" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 360 180 C 420 180, 420 280, 470 280" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="470" y="35" width="300" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="470" y="35" width="300" height="90" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="620" y="56.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That otherwise cannot directly</text>
+<text x="620" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">communicate, creating</text>
+<text x="620" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">interoperability across the</text>
+<text x="620" y="113.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">fragmented multi-chain ecosystem</text>
+<rect x="470" y="235" width="300" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="470" y="235" width="300" height="90" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="620" y="256.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The fundamental mechanism for</text>
+<text x="620" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">token transfers: lock native</text>
+<text x="620" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">tokens on the source chain in a</text>
+<text x="620" y="313.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">bridge contract, then mint...</text>
 
   </g>
   
-  <rect x="0" y="380" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#52525b" text-anchor="end">veda.ng</text>
+  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
 </svg>

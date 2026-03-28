@@ -1,47 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#ffffff">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
     </pattern>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#2563eb"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect width="800" height="420" fill="url(#grid)"/>
+  <rect width="800" height="400" fill="#ffffff"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
   
-  <g transform="translate(0, 80)">
-    <circle cx="80" cy="80" r="15" fill="#2563eb"/>
-<text x="80" y="85" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
-<rect x="60" y="35" width="320" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<rect x="60" y="35" width="320" height="90" rx="6" fill="rgba(37,99,235,0.06)"/>
-<text x="105" y="75.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">An atomic swap is a trustless</text>
-<text x="105" y="93.32499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">peer-</text>
-<circle cx="440" cy="80" r="15" fill="#2563eb"/>
-<text x="440" y="85" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
-<rect x="420" y="35" width="320" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<rect x="420" y="35" width="320" height="90" rx="6" fill="rgba(37,99,235,0.06)"/>
-<text x="465" y="58.224999999999994" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">To -peer exchange of</text>
-<text x="465" y="75.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">cryptocurrencies across</text>
-<text x="465" y="93.325" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">different blockchains using</text>
-<text x="465" y="110.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">cryptographic hash locks and...</text>
-<circle cx="80" cy="200" r="15" fill="#2563eb"/>
-<text x="80" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">3</text>
-<rect x="60" y="155" width="320" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<rect x="60" y="155" width="320" height="90" rx="6" fill="rgba(37,99,235,0.06)"/>
-<text x="105" y="187" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">That either both parties receive</text>
-<text x="105" y="204.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">their assets or neither does, no</text>
-<text x="105" y="222.1" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">intermediary required</text>
-<circle cx="440" cy="200" r="15" fill="#2563eb"/>
-<text x="440" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">4</text>
-<rect x="420" y="155" width="320" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<rect x="420" y="155" width="320" height="90" rx="6" fill="rgba(37,99,235,0.06)"/>
-<text x="465" y="195.775" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">The mechanism uses Hash</text>
-<text x="465" y="213.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">Time-Locked Contracts (HTLCs)</text>
+  <g>
+    <rect x="100" y="275" width="600" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="100" y="275" width="600" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
+<text x="400" y="304.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">An atomic swap is a trustless peer-</text>
+<rect x="140" y="210" width="520" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="140" y="210" width="520" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
+<text x="400" y="221" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To -peer exchange of cryptocurrencies across different</text>
+<text x="400" y="239.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">blockchains using cryptographic hash locks and time</text>
+<text x="400" y="258.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">locks, ensuring</text>
+<line x1="400" y1="275" x2="400" y2="265" stroke="#2563eb" stroke-width="3"/>
+<rect x="180" y="145" width="440" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="180" y="145" width="440" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
+<text x="400" y="165.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That either both parties receive their assets or</text>
+<text x="400" y="184.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">neither does, no intermediary required</text>
+<line x1="400" y1="210" x2="400" y2="200" stroke="#2563eb" stroke-width="3"/>
+<rect x="220" y="80" width="360" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="220" y="80" width="360" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
+<text x="400" y="100.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The mechanism uses Hash Time-Locked</text>
+<text x="400" y="119.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Contracts (HTLCs)</text>
+<line x1="400" y1="145" x2="400" y2="135" stroke="#2563eb" stroke-width="3"/>
 
   </g>
   
-  <rect x="0" y="380" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#52525b" text-anchor="end">veda.ng</text>
+  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
 </svg>

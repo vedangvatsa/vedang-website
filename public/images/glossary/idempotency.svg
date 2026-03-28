@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#ffffff">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
     </pattern>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#059669"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect width="800" height="420" fill="url(#grid)"/>
+  <rect width="800" height="400" fill="#ffffff"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
   
-  <g transform="translate(0, 80)">
-    <circle cx="80" cy="80" r="15" fill="#059669"/>
-<text x="80" y="85" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
-<rect x="60" y="35" width="320" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<rect x="60" y="35" width="320" height="90" rx="6" fill="rgba(5,150,105,0.06)"/>
-<text x="105" y="58.224999999999994" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">Idempotency is the property</text>
-<text x="105" y="75.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">where performing an operation</text>
-<text x="105" y="93.325" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">multiple times produces the same</text>
-<text x="105" y="110.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">result as performing it once,...</text>
-<circle cx="440" cy="80" r="15" fill="#059669"/>
-<text x="440" y="85" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
-<rect x="420" y="35" width="320" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<rect x="420" y="35" width="320" height="90" rx="6" fill="rgba(5,150,105,0.06)"/>
-<text x="465" y="75.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">To retry without causing</text>
-<text x="465" y="93.32499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">unintended side effects</text>
-<circle cx="80" cy="200" r="15" fill="#059669"/>
-<text x="80" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">3</text>
-<rect x="60" y="155" width="320" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<rect x="60" y="155" width="320" height="90" rx="6" fill="rgba(5,150,105,0.06)"/>
-<text x="105" y="187" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">HTTP GET requests are inherently</text>
-<text x="105" y="204.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">idempotent: fetching data</text>
-<text x="105" y="222.1" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">doesn't modify it</text>
-<circle cx="440" cy="200" r="15" fill="#059669"/>
-<text x="440" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">4</text>
-<rect x="420" y="155" width="320" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<rect x="420" y="155" width="320" height="90" rx="6" fill="rgba(5,150,105,0.06)"/>
-<text x="465" y="195.775" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">So fetching repeatedly returns</text>
-<text x="465" y="213.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">the same state</text>
+  <g>
+    <path d="M 400 135 L 180 155" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
+<rect x="65" y="155" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="65" y="155" width="230" height="90" rx="10" fill="rgba(5,150,105,0.06)"/>
+<text x="180" y="176.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Idempotency is the property</text>
+<text x="180" y="195.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">where performing an</text>
+<text x="180" y="214.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">operation multiple times</text>
+<text x="180" y="233.25000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">produces the same result ...</text>
+<path d="M 400 135 L 620 155" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
+<rect x="505" y="155" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="505" y="155" width="230" height="90" rx="10" fill="rgba(5,150,105,0.06)"/>
+<text x="620" y="195.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To retry without causing</text>
+<text x="620" y="214.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">unintended side effects</text>
+<path d="M 400 135 L 280 265" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
+<rect x="165" y="265" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="165" y="265" width="230" height="90" rx="10" fill="rgba(5,150,105,0.06)"/>
+<text x="280" y="286.54999999999995" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">HTTP GET requests are</text>
+<text x="280" y="305.44999999999993" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">inherently idempotent:</text>
+<text x="280" y="324.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">fetching data doesn't modify</text>
+<text x="280" y="343.24999999999994" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">it</text>
+<path d="M 400 135 L 520 265" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
+<rect x="405" y="265" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="405" y="265" width="230" height="90" rx="10" fill="rgba(5,150,105,0.06)"/>
+<text x="520" y="305.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">So fetching repeatedly</text>
+<text x="520" y="324.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">returns the same state</text>
+<rect x="300" y="65" width="200" height="70" rx="35" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="300" y="65" width="200" height="70" rx="35" fill="rgba(5,150,105,0.06)"/>
+<text x="400" y="107" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#059669" text-anchor="middle">Idempotency</text>
 
   </g>
   
-  <rect x="0" y="380" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#52525b" text-anchor="end">veda.ng</text>
+  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
 </svg>

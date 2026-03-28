@@ -1,38 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#ffffff">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
     </pattern>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9333ea"/>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#9333ea"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect width="800" height="420" fill="url(#grid)"/>
+  <rect width="800" height="400" fill="#ffffff"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
   
-  <g transform="translate(0, 80)">
-    <rect x="45" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="45" y="75" width="210" height="110" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="150" y="108.225" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">Edge AI runs artificial</text>
-<text x="150" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">intelligence algorithms</text>
-<text x="150" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">directly on devices at the</text>
-<text x="150" y="160.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">periphery of a network,...</text>
-<line x1="260" y1="130" x2="283" y2="130" stroke="#9333ea" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="295" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="295" y="75" width="210" height="110" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="108.225" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">To a distant server . The</text>
-<text x="400" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">model runs locally and</text>
-<text x="400" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">delivers decisions in</text>
-<text x="400" y="160.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">milliseconds</text>
-<line x1="510" y1="130" x2="533" y2="130" stroke="#9333ea" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="545" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="545" y="75" width="210" height="110" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="650" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">This matters for three</text>
-<text x="650" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">reasons</text>
+  <g>
+    <rect x="40" y="50" width="340" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="40" y="50" width="340" height="100" rx="10" fill="rgba(147,51,234,0.06)"/>
+<text x="210" y="74.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Edge AI runs artificial intelligence</text>
+<text x="210" y="95.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">algorithms directly on devices at the</text>
+<text x="210" y="115.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">periphery of a network, smartphones,</text>
+<text x="210" y="135.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">industrial sensors, cameras, drones,...</text>
+<rect x="420" y="50" width="340" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="420" y="50" width="340" height="100" rx="10" fill="rgba(147,51,234,0.06)"/>
+<text x="590" y="85" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">To a distant server . The model runs</text>
+<text x="590" y="105.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">locally and delivers decisions in</text>
+<text x="590" y="125.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">milliseconds</text>
+<path d="M 210 150 L 380 230" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 590 150 L 420 230" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="170" y="235" width="460" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="170" y="235" width="460" height="90" rx="10" fill="rgba(147,51,234,0.06)"/>
+<text x="400" y="285.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">This matters for three reasons</text>
 
   </g>
   
-  <rect x="0" y="380" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#52525b" text-anchor="end">veda.ng</text>
+  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
 </svg>

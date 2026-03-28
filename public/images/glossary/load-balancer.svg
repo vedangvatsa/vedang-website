@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#ffffff">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
     </pattern>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#059669"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect width="800" height="420" fill="url(#grid)"/>
+  <rect width="800" height="400" fill="#ffffff"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
   
-  <g transform="translate(0, 80)">
-    <rect x="190" y="20" width="420" height="60" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="190" y="20" width="420" height="60" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="400" y="45.449999999999996" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A load balancer is a system that distributes incoming</text>
-<text x="400" y="64.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">network traffic across multiple servers</text>
-<line x1="400" y1="83" x2="400" y2="92" stroke="#059669" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="190" y="100" width="420" height="60" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="190" y="100" width="420" height="60" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="400" y="134.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To prevent any single server from becoming overwhelmed</text>
-<line x1="400" y1="163" x2="400" y2="172" stroke="#059669" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="190" y="180" width="420" height="60" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="190" y="180" width="420" height="60" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="400" y="205.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">It sits between users and application servers, routing</text>
-<text x="400" y="224.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">each request</text>
+  <g>
+    <rect x="40" y="50" width="340" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="40" y="50" width="340" height="100" rx="10" fill="rgba(5,150,105,0.06)"/>
+<text x="210" y="85" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">A load balancer is a system that</text>
+<text x="210" y="105.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">distributes incoming network traffic</text>
+<text x="210" y="125.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">across multiple servers</text>
+<rect x="420" y="50" width="340" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="420" y="50" width="340" height="100" rx="10" fill="rgba(5,150,105,0.06)"/>
+<text x="590" y="95.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">To prevent any single server from</text>
+<text x="590" y="115.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">becoming overwhelmed</text>
+<path d="M 210 150 L 380 230" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 590 150 L 420 230" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="170" y="235" width="460" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="170" y="235" width="460" height="90" rx="10" fill="rgba(5,150,105,0.06)"/>
+<text x="400" y="274.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">It sits between users and application servers,</text>
+<text x="400" y="296.40000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">routing each request</text>
 
   </g>
   
-  <rect x="0" y="380" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#52525b" text-anchor="end">veda.ng</text>
+  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
 </svg>

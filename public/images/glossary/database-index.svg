@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#ffffff">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
     </pattern>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#059669"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect width="800" height="420" fill="url(#grid)"/>
+  <rect width="800" height="400" fill="#ffffff"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
   
-  <g transform="translate(0, 80)">
-    <rect x="45" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="45" y="75" width="210" height="110" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="150" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">A database index is a data</text>
-<text x="150" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">structure</text>
-<line x1="260" y1="130" x2="283" y2="130" stroke="#059669" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="295" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="295" y="75" width="210" height="110" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="400" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">That accelerates query</text>
-<text x="400" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">performance</text>
-<line x1="510" y1="130" x2="533" y2="130" stroke="#059669" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="545" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="545" y="75" width="210" height="110" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="650" y="117" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">By maintaining sorted</text>
-<text x="650" y="134.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">pointers to table rows,</text>
-<text x="650" y="152.10000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">enabling the database</text>
+  <g>
+    <rect x="27.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="27.5" y="90" width="175" height="180" rx="6" fill="rgba(5,150,105,0.06)"/>
+<text x="115" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A database index is a</text>
+<text x="115" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">data structure</text>
+<rect x="217.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="217.5" y="90" width="175" height="180" rx="6" fill="rgba(5,150,105,0.06)"/>
+<text x="305" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That accelerates</text>
+<text x="305" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">query performance</text>
+<rect x="407.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="407.5" y="90" width="175" height="180" rx="6" fill="rgba(5,150,105,0.06)"/>
+<text x="495" y="156.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By maintaining sorted</text>
+<text x="495" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">pointers to table</text>
+<text x="495" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">rows, enabling the</text>
+<text x="495" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">database</text>
+<rect x="597.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="597.5" y="90" width="175" height="180" rx="6" fill="rgba(5,150,105,0.06)"/>
+<text x="685" y="166" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To locate data</text>
+<text x="685" y="184.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">without scanning</text>
+<text x="685" y="203.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">every row</text>
 
   </g>
   
-  <rect x="0" y="380" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#52525b" text-anchor="end">veda.ng</text>
+  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
 </svg>

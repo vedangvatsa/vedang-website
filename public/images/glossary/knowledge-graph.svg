@@ -1,48 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#ffffff">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
     </pattern>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9333ea"/>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#9333ea"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect width="800" height="420" fill="url(#grid)"/>
+  <rect width="800" height="400" fill="#ffffff"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
   
-  <g transform="translate(0, 80)">
-    <circle cx="80" cy="80" r="15" fill="#9333ea"/>
-<text x="80" y="85" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
-<rect x="60" y="35" width="320" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<rect x="60" y="35" width="320" height="90" rx="6" fill="rgba(147,51,234,0.06)"/>
-<text x="105" y="67" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">A knowledge graph stores</text>
-<text x="105" y="84.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">information as a network of</text>
-<text x="105" y="102.10000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">entities connected</text>
-<circle cx="440" cy="80" r="15" fill="#9333ea"/>
-<text x="440" y="85" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
-<rect x="420" y="35" width="320" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<rect x="420" y="35" width="320" height="90" rx="6" fill="rgba(147,51,234,0.06)"/>
-<text x="465" y="67" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">By typed relationships .</text>
-<text x="465" y="84.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">Entities, people, places,</text>
-<text x="465" y="102.10000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">products, concepts, are nodes</text>
-<circle cx="80" cy="200" r="15" fill="#9333ea"/>
-<text x="80" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">3</text>
-<rect x="60" y="155" width="320" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<rect x="60" y="155" width="320" height="90" rx="6" fill="rgba(147,51,234,0.06)"/>
-<text x="105" y="187" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">Relationships like "works for,"</text>
-<text x="105" y="204.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">"located in," or "produces" are</text>
-<text x="105" y="222.1" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">edges</text>
-<circle cx="440" cy="200" r="15" fill="#9333ea"/>
-<text x="440" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#ffffff" text-anchor="middle">4</text>
-<rect x="420" y="155" width="320" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<rect x="420" y="155" width="320" height="90" rx="6" fill="rgba(147,51,234,0.06)"/>
-<text x="465" y="187" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">The graph is enriched with</text>
-<text x="465" y="204.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">attributes, timestamps, and</text>
-<text x="465" y="222.1" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="start">confidence scores</text>
+  <g>
+    <rect x="15" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="15" y="105" width="230" height="150" rx="10" fill="rgba(147,51,234,0.06)"/>
+<text x="130" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A knowledge graph stores</text>
+<text x="130" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">information as a network</text>
+<text x="130" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">of entities connected</text>
+<line x1="250" y1="180" x2="271" y2="180" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="285" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="285" y="105" width="230" height="150" rx="10" fill="rgba(147,51,234,0.06)"/>
+<text x="400" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">By typed relationships .</text>
+<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Entities, people, places,</text>
+<text x="400" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">products, concepts, are</text>
+<text x="400" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">nodes</text>
+<line x1="520" y1="180" x2="541" y2="180" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="555" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="555" y="105" width="230" height="150" rx="10" fill="rgba(147,51,234,0.06)"/>
+<text x="670" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Relationships like "works</text>
+<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">for," "located in," or</text>
+<text x="670" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">"produces" are edges</text>
 
   </g>
   
-  <rect x="0" y="380" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#52525b" text-anchor="end">veda.ng</text>
+  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
 </svg>

@@ -1,37 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#ffffff">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
     </pattern>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#2563eb"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect width="800" height="420" fill="url(#grid)"/>
+  <rect width="800" height="400" fill="#ffffff"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
   
-  <g transform="translate(0, 80)">
-    <rect x="250" y="30" width="300" height="60" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="250" y="30" width="300" height="60" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="47" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">A market order executes immediately at the</text>
-<text x="400" y="64.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">best available price, prioritizing speed</text>
-<text x="400" y="82.10000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">of execution over price certainty</text>
-<path d="M 400 90 L 250 152" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
-<path d="M 400 90 L 550 152" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="120" y="155" width="260" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="120" y="155" width="260" height="90" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="250" y="195.775" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">You get the trade done now,</text>
-<text x="250" y="213.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">accepting whatever the market offers</text>
-<rect x="420" y="155" width="260" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="420" y="155" width="260" height="90" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="550" y="178.22500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">Market orders guarantee execution</text>
-<text x="550" y="195.77500000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">(assuming any liquidity exists) but</text>
-<text x="550" y="213.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">provide no price guarantee, the</text>
-<text x="550" y="230.87500000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">actual execution price depends on...</text>
+  <g>
+    <rect x="27.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="27.5" y="90" width="175" height="180" rx="6" fill="rgba(37,99,235,0.06)"/>
+<text x="115" y="156.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A market order</text>
+<text x="115" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">executes immediately</text>
+<text x="115" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">at the best available</text>
+<text x="115" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">price, prioritizin...</text>
+<rect x="217.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="217.5" y="90" width="175" height="180" rx="6" fill="rgba(37,99,235,0.06)"/>
+<text x="305" y="156.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">You get the trade</text>
+<text x="305" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">done now, accepting</text>
+<text x="305" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">whatever the market</text>
+<text x="305" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">offers</text>
+<rect x="407.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="407.5" y="90" width="175" height="180" rx="6" fill="rgba(37,99,235,0.06)"/>
+<text x="495" y="156.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Market orders</text>
+<text x="495" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">guarantee execution</text>
+<text x="495" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">(assuming any</text>
+<text x="495" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">liquidity exists) ...</text>
+<rect x="597.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="597.5" y="90" width="175" height="180" rx="6" fill="rgba(37,99,235,0.06)"/>
+<text x="685" y="156.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">In liquid markets</text>
+<text x="685" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">with tight spreads,</text>
+<text x="685" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">market orders execute</text>
+<text x="685" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">close</text>
 
   </g>
   
-  <rect x="0" y="380" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#52525b" text-anchor="end">veda.ng</text>
+  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
 </svg>

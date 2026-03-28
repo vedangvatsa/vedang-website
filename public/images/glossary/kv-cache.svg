@@ -1,40 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#ffffff">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
     </pattern>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9333ea"/>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#9333ea"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect width="800" height="420" fill="url(#grid)"/>
+  <rect width="800" height="400" fill="#ffffff"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
   
-  <g transform="translate(0, 80)">
-    <rect x="45" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="45" y="75" width="210" height="110" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="150" y="108.225" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">KV cache (Key-Value cache)</text>
-<text x="150" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">stores the computed Key and</text>
-<text x="150" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">Value vectors from previous</text>
-<text x="150" y="160.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">tokens during autoregress...</text>
-<line x1="260" y1="130" x2="283" y2="130" stroke="#9333ea" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="295" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="295" y="75" width="210" height="110" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="108.225" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">In transformer attention,</text>
-<text x="400" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">generating token N requires</text>
-<text x="400" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">computing attention with all</text>
-<text x="400" y="160.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">previous tokens 0 through...</text>
-<line x1="510" y1="130" x2="533" y2="130" stroke="#9333ea" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="545" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="545" y="75" width="210" height="110" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="650" y="108.225" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">Without caching, this means</text>
-<text x="650" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">recomputing Keys and Values</text>
-<text x="650" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">for all previous tokens at</text>
-<text x="650" y="160.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">every generation step,...</text>
+  <g>
+    <rect x="150" y="30" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="150" y="30" width="500" height="80" rx="10" fill="rgba(147,51,234,0.06)"/>
+<text x="400" y="41.52499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">KV cache (Key-Value cache) stores the computed Key and</text>
+<text x="400" y="64.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Value vectors from previous tokens during autoregressive</text>
+<text x="400" y="87.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">generation, avoiding redundant computation and greatly</text>
+<text x="400" y="110.37500000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">speeding up inference</text>
+<line x1="400" y1="114" x2="400" y2="128" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="150" y="140" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="150" y="140" width="500" height="80" rx="10" fill="rgba(147,51,234,0.06)"/>
+<text x="400" y="174.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">In transformer attention, generating token N requires</text>
+<text x="400" y="197.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">computing attention with all previous tokens 0 through N-1</text>
+<line x1="400" y1="224" x2="400" y2="238" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="150" y="250" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="150" y="250" width="500" height="80" rx="10" fill="rgba(147,51,234,0.06)"/>
+<text x="400" y="273" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Without caching, this means recomputing Keys and Values</text>
+<text x="400" y="295.95" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">for all previous tokens at every generation step,</text>
+<text x="400" y="318.90000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">quadratic complexity as the sequence grows</text>
 
   </g>
   
-  <rect x="0" y="380" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#52525b" text-anchor="end">veda.ng</text>
+  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
 </svg>

@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#ffffff">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
     </pattern>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9333ea"/>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#9333ea"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect width="800" height="420" fill="url(#grid)"/>
+  <rect width="800" height="400" fill="#ffffff"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
   
-  <g transform="translate(0, 80)">
-    <rect x="45" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="45" y="75" width="210" height="110" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="150" y="108.225" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">A residual connection, also</text>
-<text x="150" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">called a skip connection,</text>
-<text x="150" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">adds the input of a layer</text>
-<text x="150" y="160.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">directly</text>
-<line x1="260" y1="130" x2="283" y2="130" stroke="#9333ea" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="295" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="295" y="75" width="210" height="110" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">To its output, allowing</text>
-<text x="400" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">information and gradients</text>
-<line x1="510" y1="130" x2="533" y2="130" stroke="#9333ea" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="545" y="75" width="210" height="110" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="545" y="75" width="210" height="110" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="650" y="117" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">To flow through the network</text>
-<text x="650" y="134.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">without passing through</text>
-<text x="650" y="152.10000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#52525b" text-anchor="middle">every transformation</text>
+  <g>
+    <rect x="100" y="275" width="600" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="100" y="275" width="600" height="50" rx="6" fill="rgba(147,51,234,0.06)"/>
+<text x="400" y="295.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A residual connection, also called a skip connection, adds the</text>
+<text x="400" y="314.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">input of a layer directly</text>
+<rect x="140" y="210" width="520" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="140" y="210" width="520" height="50" rx="6" fill="rgba(147,51,234,0.06)"/>
+<text x="400" y="239.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To its output, allowing information and gradients</text>
+<line x1="400" y1="275" x2="400" y2="265" stroke="#9333ea" stroke-width="3"/>
+<rect x="180" y="145" width="440" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="180" y="145" width="440" height="50" rx="6" fill="rgba(147,51,234,0.06)"/>
+<text x="400" y="165.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To flow through the network without passing</text>
+<text x="400" y="184.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">through every transformation</text>
+<line x1="400" y1="210" x2="400" y2="200" stroke="#9333ea" stroke-width="3"/>
+<rect x="220" y="80" width="360" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="220" y="80" width="360" height="50" rx="6" fill="rgba(147,51,234,0.06)"/>
+<text x="400" y="100.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">If a layer computes f(x), the output</text>
+<text x="400" y="119.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">with a residual connection is x + f(x)</text>
+<line x1="400" y1="145" x2="400" y2="135" stroke="#9333ea" stroke-width="3"/>
 
   </g>
   
-  <rect x="0" y="380" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#52525b" text-anchor="end">veda.ng</text>
+  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
 </svg>
