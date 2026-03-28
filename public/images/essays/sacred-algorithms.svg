@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #0f172a; }
+      .title { font-weight: 800; font-size: 24px; fill: #fff; text-anchor: middle; }
+      .ring { fill: none; stroke: #f59e0b; stroke-width: 2; opacity: 0.5; }
+      .core { fill: #f59e0b; }
+      .text-label { font-weight: 800; font-size: 16px; fill: #fff; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="800" height="400" class="bg" />
+  <text x="400" y="50" class="title">SACRED ALGORITHMS</text>
+  
+  <circle cx="400" cy="220" r="120" class="ring" />
+  <circle cx="400" cy="220" r="90" class="ring" />
+  <circle cx="400" cy="220" r="60" class="ring" />
+  
+  <circle cx="400" cy="220" r="20" class="core" />
+  <path d="M 400 60 L 400 380 M 240 220 L 560 220" class="ring" stroke-dasharray="4 4" />
+  
+  <text x="400" y="380" class="text-label">The Religiosity of Tech Trust</text>
+</svg>

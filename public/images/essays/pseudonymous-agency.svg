@@ -1,0 +1,31 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .title { font-weight: 800; font-size: 24px; fill: #111; }
+      .circle1 { fill: rgba(243, 244, 246, 0.8); stroke: #e5e7eb; stroke-width: 2; }
+      .circle2 { fill: rgba(239, 246, 255, 0.8); stroke: #3b82f6; stroke-width: 2; }
+      .node-text-title { font-weight: 800; font-size: 16px; fill: #1f2937; text-anchor: middle; }
+      .intersect-text { font-weight: 800; font-size: 16px; fill: #1e3a8a; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="800" height="400" fill="#fafafa" rx="16" stroke="#e2e8f0" />
+  <text x="400" y="50" class="title" text-anchor="middle">THE CRYPTO CITIZEN</text>
+  
+  <g transform="translate(400, 220)">
+    <!-- Move labels FAR outside the circles -->
+    <text x="-200" y="-150" class="node-text-title">AI Autonomy</text>
+    <text x="200" y="-150" class="node-text-title">True Privacy</text>
+    
+    <!-- Connect labels to rings -->
+    <path d="M -200 -140 L -200 -120 L -130 -120" stroke="#cbd5e1" stroke-width="2" fill="none" />
+    <path d="M 200 -140 L 200 -120 L 130 -120" stroke="#93c5fd" stroke-width="2" fill="none" />
+    
+    <circle cx="-130" cy="0" r="140" class="circle1" />
+    <circle cx="130" cy="0" r="140" class="circle2" />
+    
+    <text x="0" y="5" class="intersect-text">Pseudonymous Agency</text>
+  </g>
+</svg>

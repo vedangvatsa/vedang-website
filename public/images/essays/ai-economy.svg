@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #fff; }
+      .axis { stroke: #e5e7eb; stroke-width: 2; }
+      .line1 { stroke: #ef4444; stroke-width: 4; fill: none; }
+      .line2 { stroke: #10b981; stroke-width: 4; fill: none; }
+      .text-title { font-weight: 800; font-size: 16px; fill: #111; }
+      .text-alert { font-weight: 800; font-size: 14px; fill: #ef4444; }
+      .text-growth { font-weight: 800; font-size: 14px; fill: #10b981; }
+      .text-sub { font-weight: 400; font-size: 12px; fill: #9ca3af; }
+    </style>
+  </defs>
+  <rect width="800" height="400" class="bg" />
+
+  <text x="80" y="50" class="text-title">THE TRANSITION CHASM</text>
+  <text x="80" y="70" class="text-sub">Time →</text>
+
+  <!-- Axes -->
+  <path d="M 80 320 L 720 320" class="axis" />
+  <path d="M 80 320 L 80 100" class="axis" />
+
+  <!-- Lines (Fixed to exact Cubic Beziers to prevent arching over text) -->
+  <path d="M 80 280 C 250 280, 250 150, 400 150 C 550 150, 550 280, 720 280" class="line1" />
+  <path d="M 80 300 C 300 300, 380 150, 580 150 C 650 150, 680 100, 720 100" class="line2" />
+
+  <circle cx="400" cy="150" r="6" fill="#ef4444" />
+  <text x="400" y="130" class="text-alert" text-anchor="middle">Max Job Displacement</text>
+
+  <circle cx="580" cy="150" r="6" fill="#10b981" />
+  <text x="580" y="130" class="text-growth" text-anchor="middle">Productivity Boom</text>
+
+  <!-- Gap -->
+  <rect x="400" y="150" width="180" height="170" fill="rgba(239, 68, 68, 0.05)" />
+  <text x="490" y="250" class="text-sub" text-anchor="middle" style="fill:#ef4444; font-weight:600;">The Danger Zone</text>
+</svg>

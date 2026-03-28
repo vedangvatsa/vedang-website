@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #111; }
+      .circle-base { fill: none; stroke: rgba(255, 255, 255, 0.1); stroke-width: 1; }
+      .circle-glow { fill: none; stroke: #3b82f6; stroke-width: 2; opacity: 0.8; }
+      .text-title { font-weight: 800; font-size: 16px; fill: #fff; text-anchor: middle; }
+      .text-label { font-weight: 600; font-size: 12px; fill: #9ca3af; text-anchor: middle; letter-spacing: 0.1em; }
+    </style>
+  </defs>
+  <rect width="800" height="400" class="bg" />
+
+  <!-- Concentric Rings -->
+  <circle cx="400" cy="200" r="150" class="circle-base" />
+  <circle cx="400" cy="200" r="100" class="circle-base" />
+  <circle cx="400" cy="200" r="50" class="circle-base" />
+
+  <!-- Highlight Arc -->
+  <path d="M 400 50 A 150 150 0 0 1 550 200" class="circle-glow" />
+  <path d="M 400 100 A 100 100 0 0 1 500 200" class="circle-glow" />
+  <path d="M 400 150 A 50 50 0 0 1 450 200" class="circle-glow" />
+
+  <!-- Center -->
+  <circle cx="400" cy="200" r="8" fill="#fff" />
+  
+  <text x="400" y="195" class="text-title" style="fill:#111">HUMAN</text>
+  
+  <rect x="360" y="110" width="80" height="24" fill="#111" />
+  <text x="400" y="127" class="text-label">WEARABLES</text>
+
+  <rect x="340" y="60" width="120" height="24" fill="#111" />
+  <text x="400" y="77" class="text-label">SMART HOME</text>
+
+  <rect x="320" y="10" width="160" height="24" fill="#111" />
+  <text x="400" y="27" class="text-label">CITY INFRASTRUCTURE</text>
+
+  <text x="400" y="380" class="text-title" style="color:#6b7280;">THE WORLD BECOMES THE INTERFACE</text>
+</svg>

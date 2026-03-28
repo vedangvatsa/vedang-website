@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .subtitle { font-weight: 600; font-size: 14px; fill: #6b7280; letter-spacing: 0.1em; text-transform: uppercase; }
+      .circle { fill: #f3f4f6; stroke: #e5e7eb; stroke-width: 2; }
+      .circle-accent { fill: #eff6ff; stroke: #3b82f6; stroke-width: 2; }
+      .node-text-title { font-weight: 800; font-size: 16px; fill: #111; text-anchor: middle; }
+      .node-text { font-weight: 400; font-size: 13px; fill: #4b5563; text-anchor: middle; }
+      .connector { stroke: #e5e7eb; stroke-width: 4; stroke-dasharray: 6 6; }
+      .connector-solid { stroke: #3b82f6; stroke-width: 4; }
+    </style>
+  </defs>
+
+  <!-- Left Side: Past -->
+  <text x="200" y="40" class="subtitle" text-anchor="middle">Past: The Interface</text>
+  <circle cx="200" cy="150" r="90" class="circle" />
+  <text x="200" y="130" class="node-text-title">Human User</text>
+  <text x="200" y="155" class="node-text">Command Lines</text>
+  <text x="200" y="175" class="node-text">Graphical UI</text>
+  
+  <path d="M 305 150 L 495 150" class="connector" />
+  <text x="400" y="135" class="node-text" font-style="italic">High Friction</text>
+
+  <!-- Right Side: Future -->
+  <text x="600" y="40" class="subtitle" text-anchor="middle">Future: Co-Cognition</text>
+  <circle cx="600" cy="150" r="90" class="circle-accent" />
+  <text x="600" y="125" class="node-text-title">Human + AI</text>
+  <text x="600" y="150" class="node-text">Ambient Intelligence</text>
+  <text x="600" y="170" class="node-text">Neural Interfaces</text>
+  <text x="600" y="190" class="node-text">Fluid Dialogue</text>
+  
+  <circle cx="600" cy="150" r="105" fill="none" stroke="#bfdbfe" stroke-width="2" stroke-dasharray="4 4" />
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #ffffff; }
+      .title { font-weight: 800; font-size: 24px; fill: #111; text-anchor: middle; }
+      .grid { stroke: #e2e8f0; stroke-width: 1; }
+      .agent { fill: #3b82f6; }
+      .text-label { font-weight: 800; font-size: 16px; fill: #0f172a; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="800" height="400" class="bg" />
+  <text x="400" y="50" class="title">COMPUTATIONAL SOCIAL SCIENCE</text>
+  
+  <rect x="150" y="100" width="500" height="250" class="grid" fill="#f8fafc" />
+  <path d="M 150 150 L 650 150 M 150 200 L 650 200 M 150 250 L 650 250 M 150 300 L 650 300" class="grid" />
+  <path d="M 250 100 L 250 350 M 350 100 L 350 350 M 450 100 L 450 350 M 550 100 L 550 350" class="grid" />
+  
+  <circle cx="200" cy="125" r="10" class="agent" />
+  <circle cx="300" cy="175" r="10" class="agent" />
+  <circle cx="400" cy="225" r="10" class="agent" />
+  <circle cx="500" cy="125" r="10" class="agent" />
+  <circle cx="600" cy="325" r="10" class="agent" />
+  <circle cx="300" cy="275" r="10" class="agent" style="fill:#ef4444" />
+  <circle cx="500" cy="275" r="10" class="agent" style="fill:#10b981" />
+  
+  <text x="400" y="380" class="text-label">Massive Agentic Virtual Societies</text>
+</svg>

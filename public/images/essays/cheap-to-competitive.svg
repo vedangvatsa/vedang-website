@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #ffffff; }
+      .title { font-weight: 800; font-size: 24px; fill: #111; text-anchor: middle; }
+      .curve { stroke: #3b82f6; stroke-width: 4; fill: none; }
+      .label-title { font-weight: 800; font-size: 16px; fill: #1f2937; }
+      .node { fill: #3b82f6; }
+    </style>
+  </defs>
+  <rect width="800" height="400" class="bg" />
+  <text x="400" y="50" class="title">FROM CHEAP TO COMPETITIVE</text>
+  
+  <path d="M 100 300 Q 400 300 700 100" class="curve" />
+  
+  <circle cx="200" cy="285" r="8" class="node" />
+  <text x="200" y="320" class="label-title" text-anchor="middle">Low-Cost Outsourcing</text>
+  
+  <circle cx="450" cy="225" r="8" class="node" />
+  <text x="450" y="260" class="label-title" text-anchor="middle">Quality Perception Lag</text>
+  
+  <circle cx="650" cy="120" r="8" class="node" />
+  <text x="650" y="90" class="label-title" text-anchor="middle">Global Premium Competitor</text>
+</svg>

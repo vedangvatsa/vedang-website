@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #fff; }
+      .tri { fill: rgba(59, 130, 246, 0.1); stroke: #3b82f6; stroke-width: 3; }
+      .node { fill: #111; }
+      .text-title { font-weight: 800; font-size: 15px; fill: #fff; text-anchor: middle; }
+      .text-label { font-weight: 600; font-size: 14px; fill: #555; text-anchor: middle; }
+      .text-center { font-weight: 800; font-size: 20px; fill: #111; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="800" height="400" class="bg" />
+
+  <!-- Triad -->
+  <polygon points="400,100 240,320 560,320" class="tri" />
+  
+  <!-- Center Text -->
+  <text x="400" y="240" class="text-center">AGI ALIGNMENT</text>
+  <text x="400" y="265" class="text-label" style="font-size:12px;">Equilibrium Point</text>
+
+  <!-- Top Node -->
+  <circle cx="400" cy="100" r="55" class="node" />
+  <text x="400" y="95" class="text-title">Compute</text>
+  <text x="400" y="115" class="text-title">Control</text>
+
+  <!-- Left Node -->
+  <circle cx="240" cy="320" r="55" class="node" />
+  <text x="240" y="315" class="text-title">Global</text>
+  <text x="240" y="335" class="text-title">Treaties</text>
+
+  <!-- Right Node -->
+  <circle cx="560" cy="320" r="55" class="node" />
+  <text x="560" y="315" class="text-title">Value</text>
+  <text x="560" y="335" class="text-title">Alignment</text>
+</svg>

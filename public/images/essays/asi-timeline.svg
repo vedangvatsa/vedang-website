@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #fafafa; }
+      .title { font-weight: 800; font-size: 24px; fill: #111; text-anchor: middle; }
+      .curve { stroke: #ef4444; stroke-width: 4; fill: none; }
+      .axis { stroke: #e5e7eb; stroke-width: 2; }
+      .marker { fill: #ef4444; }
+      .label-title { font-weight: 800; font-size: 16px; fill: #1f2937; }
+      .label-sub { font-weight: 600; font-size: 12px; fill: #6b7280; }
+    </style>
+  </defs>
+  <rect width="800" height="400" class="bg" />
+  <text x="400" y="50" class="title">THE INTELLIGENCE EXPLOSION</text>
+
+  <path d="M 100 320 L 700 320" class="axis" />
+  <path d="M 100 320 L 100 80" class="axis" />
+  
+  <!-- Exponential Curve -->
+  <path d="M 100 300 C 400 290, 500 280, 550 180 C 580 120, 600 80, 650 40" class="curve" />
+
+  <!-- Point 1: ANI -->
+  <circle cx="300" cy="296" r="6" class="marker" />
+  <text x="300" y="340" class="label-title" text-anchor="middle">ANI</text>
+  <text x="300" y="360" class="label-sub" text-anchor="middle">Narrow AI (Now)</text>
+
+  <!-- Point 2: AGI -->
+  <circle cx="530" cy="216" r="6" class="marker" />
+  <text x="580" y="216" class="label-title">AGI</text>
+  <text x="580" y="236" class="label-sub">Human-Level</text>
+
+  <!-- Point 3: ASI -->
+  <circle cx="615" cy="85" r="8" class="marker" style="fill:#8b5cf6" />
+  <text x="640" y="90" class="label-title" style="fill:#8b5cf6">ASI</text>
+  <text x="640" y="110" class="label-sub">Superintelligence</text>
+  
+  <line x1="100" y1="216" x2="530" y2="216" stroke="#e5e7eb" stroke-dasharray="4 4" />
+  <line x1="100" y1="85" x2="615" y2="85" stroke="#e5e7eb" stroke-dasharray="4 4" />
+</svg>

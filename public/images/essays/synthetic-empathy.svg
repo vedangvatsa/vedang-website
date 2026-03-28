@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #ffffff; }
+      .title { font-weight: 800; font-size: 24px; fill: #111; text-anchor: middle; }
+      .heart { fill: #fecdd3; stroke: #e11d48; stroke-width: 4; }
+      .cpu { fill: #e5e7eb; stroke: #64748b; stroke-width: 4; }
+      .text-label { font-weight: 800; font-size: 16px; fill: #111; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="800" height="400" class="bg" />
+  <text x="400" y="50" class="title">SYNTHETIC EMPATHY</text>
+  
+  <rect x="250" y="150" width="300" height="150" class="cpu" rx="16" />
+  
+  <path d="M 400 250 C 400 250, 360 210, 360 180 C 360 160, 390 160, 400 180 C 410 160, 440 160, 440 180 C 440 210, 400 250, 400 250" class="heart" />
+  
+  <text x="400" y="340" class="text-label">Simulated Emotional Understanding</text>
+</svg>

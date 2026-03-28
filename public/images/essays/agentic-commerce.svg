@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #fafafa; }
+      .node { fill: #111; }
+      .text-title { font-weight: 800; font-size: 14px; fill: #fff; text-anchor: middle; }
+      .text-sub { font-weight: 600; font-size: 14px; fill: #555; text-anchor: middle; }
+      .text-dark { font-weight: 800; font-size: 18px; fill: #111; text-anchor: middle; }
+      .line { stroke: #e5e7eb; stroke-width: 3; stroke-dasharray: 4 4; }
+      .line-active { stroke: #3b82f6; stroke-width: 4; }
+    </style>
+  </defs>
+  <rect width="800" height="400" class="bg" />
+  
+  <text x="400" y="50" class="text-dark">MACHINE-TO-MACHINE RETAIL PROTOCOLS</text>
+
+  <!-- Human Layer -->
+  <circle cx="200" cy="150" r="40" class="node" style="fill:#e5e7eb"/>
+  <text x="200" y="155" class="text-title" style="fill:#111">Human</text>
+  
+  <!-- Merchant Layer -->
+  <circle cx="600" cy="150" r="40" class="node" style="fill:#e5e7eb"/>
+  <text x="600" y="155" class="text-title" style="fill:#111">Merchant</text>
+  
+  <!-- Traditional Flow -->
+  <path d="M 240 150 L 560 150" class="line" />
+  <text x="400" y="140" class="text-sub">Traditional E-Commerce (High Friction)</text>
+
+  <!-- Agent Layer (Moved wider to prevent text clash) -->
+  <circle cx="200" cy="300" r="50" class="node" style="fill:#3b82f6"/>
+  <text x="200" y="305" class="text-title">Buyer AI</text>
+  
+  <circle cx="600" cy="300" r="50" class="node" style="fill:#3b82f6"/>
+  <text x="600" y="305" class="text-title">Seller API</text>
+  
+  <!-- Agent Flow -->
+  <path d="M 250 300 L 550 300" class="line-active" />
+  <!-- Text raised slightly so it sits clearly above the line, away from the bottom -->
+  <text x="400" y="290" class="text-sub" style="fill:#3b82f6">Instant API Execution</text>
+  
+  <!-- Delegation -->
+  <path d="M 200 190 L 200 250" class="line-active" />
+  <path d="M 600 190 L 600 250" class="line-active" />
+</svg>

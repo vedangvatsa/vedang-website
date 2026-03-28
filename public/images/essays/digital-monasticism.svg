@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #fafafa; }
+      .title { font-weight: 800; font-size: 24px; fill: #111; text-anchor: middle; }
+      .noise { stroke: #cbd5e1; stroke-width: 2; fill: none; }
+      .circle-core { fill: #ffffff; stroke: #3b82f6; stroke-width: 4; }
+      .text-core { font-weight: 800; font-size: 16px; fill: #3b82f6; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="800" height="400" class="bg" />
+  <text x="400" y="50" class="title">DIGITAL MONASTICISM</text>
+  
+  <path d="M 50 100 Q 150 50 200 200 T 50 300" class="noise" />
+  <path d="M 750 100 Q 650 50 600 200 T 750 300" class="noise" />
+  <path d="M 50 200 Q 200 150 250 300 T 50 400" class="noise" />
+  <path d="M 750 200 Q 600 150 550 300 T 750 400" class="noise" />
+  
+  <circle cx="400" cy="220" r="80" class="circle-core" />
+  <text x="400" y="215" class="text-core">Radical</text>
+  <text x="400" y="235" class="text-core">Disconnection</text>
+</svg>

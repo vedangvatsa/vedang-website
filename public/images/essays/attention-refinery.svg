@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .title { font-weight: 800; font-size: 24px; fill: #111; text-anchor: middle; }
+      .bg { fill: #f8fafc; }
+      .funnel { fill: #e2e8f0; stroke: #94a3b8; stroke-width: 2; }
+      .fluid { fill: #f59e0b; }
+      .label-main { font-weight: 800; font-size: 16px; fill: #0f172a; text-anchor: middle; }
+      .label-white { font-weight: 800; font-size: 18px; fill: #ffffff; text-anchor: middle; }
+      .drip { fill: #f59e0b; }
+    </style>
+  </defs>
+  <rect width="800" height="400" class="bg" />
+  <text x="400" y="40" class="title">THE ATTENTION REFINERY</text>
+
+  <!-- Funnel Top -->
+  <polygon points="250,100 550,100 450,220 350,220" class="funnel" />
+  <polygon points="260,100 540,100 440,215 360,215" class="fluid" opacity="0.2" />
+
+  <text x="400" y="140" class="label-main">Raw Human Attention</text>
+
+  <!-- Funnel Shaft -->
+  <rect x="350" y="220" width="100" height="60" class="funnel" />
+  <text x="400" y="255" class="label-main" style="font-size: 12px;">Algorithmic Extraction</text>
+
+  <!-- Value Drops -->
+  <circle cx="400" cy="300" r="8" class="drip" />
+  <circle cx="400" cy="330" r="8" class="drip" />
+
+  <!-- Bottom Bucket -->
+  <rect x="300" y="340" width="200" height="40" rx="8" class="fluid" />
+  <text x="400" y="366" class="label-white">Monetized Behavior</text>
+  
+  <!-- Side arrows -->
+  <path d="M 220 120 Q 150 160 330 240" stroke="#f59e0b" stroke-width="2" fill="none" stroke-dasharray="4 4" />
+  <polygon points="325,235 330,240 320,245" fill="#f59e0b" />
+</svg>

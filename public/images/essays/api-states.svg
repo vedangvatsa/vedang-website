@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #f8fafc; }
+      .title { font-weight: 800; font-size: 24px; fill: #0f172a; text-anchor: middle; }
+      .layer { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 8; }
+      .layer-text { font-weight: 800; font-size: 16px; fill: #334155; text-anchor: middle; }
+      .line { stroke: #94a3b8; stroke-width: 2; stroke-dasharray: 4 4; }
+      .node { fill: #3b82f6; }
+      .node-text { font-weight: 600; font-size: 12px; fill: #ffffff; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="800" height="400" class="bg" rx="16" />
+  <text x="400" y="50" class="title">THE NATION-STATE AS AN API</text>
+  
+  <!-- Foundation Layer -->
+  <rect x="200" y="300" width="400" height="60" class="layer" style="stroke: #0f172a;" />
+  <text x="400" y="336" class="layer-text" style="fill: #0f172a;">Cryptographic Citizenship</text>
+  
+  <!-- Middle Layer -->
+  <rect x="250" y="200" width="300" height="60" class="layer" stroke="#3b82f6" />
+  <text x="400" y="236" class="layer-text" style="fill: #3b82f6;">Composable Public Services</text>
+
+  <!-- Top Layer -->
+  <rect x="300" y="100" width="200" height="60" class="layer" style="fill:#3b82f6; stroke:none;" />
+  <text x="400" y="136" class="layer-text" style="fill:#ffffff;">Programmable Governance</text>
+
+  <!-- Connections -->
+  <path d="M 400 300 L 400 260" class="line" />
+  <path d="M 400 200 L 400 160" class="line" />
+  
+  <!-- Network endpoints -->
+  <circle cx="280" cy="180" r="16" class="node" />
+  <text x="280" y="184" class="node-text">ID</text>
+  
+  <circle cx="400" cy="180" r="16" class="node" />
+  <text x="400" y="184" class="node-text">TAX</text>
+  
+  <circle cx="520" cy="180" r="16" class="node" />
+  <text x="520" y="184" class="node-text">LAW</text>
+  
+  <path d="M 280 196 L 280 200" class="line" />
+  <path d="M 520 196 L 520 200" class="line" />
+</svg>

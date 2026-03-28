@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .title { font-weight: 800; font-size: 24px; fill: #111; text-anchor: middle; }
+      .bg { fill: #ffffff; }
+      .rigid { stroke: #cbd5e1; stroke-width: 2; fill: none; }
+      .dot { fill: #64748b; }
+      .fluid { fill: url(#grad); opacity: 0.8; }
+      .text-sub { font-weight: 600; font-size: 14px; fill: #64748b; text-anchor: middle; }
+      .text-main { font-weight: 800; font-size: 18px; fill: #ffffff; text-anchor: middle; }
+    </style>
+    <radialGradient id="grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.8" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="400" class="bg" />
+  <text x="400" y="50" class="title">BEYOND LOGICAL PROCESSING</text>
+
+  <!-- Left: Rigid Logic Grid -->
+  <rect x="150" y="120" width="160" height="160" class="rigid" />
+  <path d="M 190 120 L 190 280 M 230 120 L 230 280 M 270 120 L 270 280" class="rigid" />
+  <path d="M 150 160 L 310 160 M 150 200 L 310 200 M 150 240 L 310 240" class="rigid" />
+  
+  <circle cx="190" cy="160" r="4" class="dot" />
+  <circle cx="230" cy="240" r="4" class="dot" />
+  <circle cx="270" cy="200" r="4" class="dot" />
+  
+  <text x="230" y="320" class="text-sub">Deterministic Logic</text>
+
+  <!-- Transition -->
+  <path d="M 340 200 Q 400 200 460 200" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 6" fill="none" />
+  <polygon points="450,195 460,200 450,205" fill="#94a3b8" />
+
+  <!-- Right: Fluid Pattern / Intuition -->
+  <circle cx="580" cy="200" r="100" class="fluid" />
+  <text x="580" y="206" class="text-main">Pattern 'Gut Feeling'</text>
+  <text x="580" y="320" class="text-sub">Artificial Intuition</text>
+</svg>

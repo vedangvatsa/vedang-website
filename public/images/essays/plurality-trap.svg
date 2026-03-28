@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #f8fafc; }
+      .title { font-weight: 800; font-size: 24px; fill: #0f172a; text-anchor: middle; }
+      .node { fill: none; stroke: #3b82f6; stroke-width: 2; }
+      .center { fill: #ef4444; }
+      .text-sub { font-weight: 800; font-size: 14px; fill: #334155; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="800" height="400" class="bg" rx="16" />
+  <text x="400" y="50" class="title">THE PLURALITY TRAP</text>
+  
+  <circle cx="400" cy="200" r="100" class="node" stroke-dasharray="8 8" />
+  <circle cx="400" cy="200" r="60" class="node" style="stroke:#8b5cf6" />
+  
+  <!-- Multiple identity streams -->
+  <circle cx="400" cy="200" r="20" class="center" />
+  <text x="400" y="205" class="text-sub" style="fill:#fff; font-size:12px;">Self</text>
+  
+  <path d="M 400 180 L 400 100" class="node" />
+  <path d="M 380 200 L 300 200" class="node" />
+  <path d="M 420 200 L 500 200" class="node" />
+  <path d="M 400 220 L 400 300" class="node" />
+  <path d="M 385 185 L 330 130" class="node" />
+  <path d="M 415 185 L 470 130" class="node" />
+  <path d="M 385 215 L 330 270" class="node" />
+  <path d="M 415 215 L 470 270" class="node" />
+  
+  <text x="400" y="360" class="text-sub">Identity Fragmentation via BCI Streams</text>
+</svg>

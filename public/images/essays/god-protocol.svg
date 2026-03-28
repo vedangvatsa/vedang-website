@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #ffffff; }
+      .title { font-weight: 800; font-size: 24px; fill: #111; text-anchor: middle; }
+      .pyramid { fill: none; stroke: #8b5cf6; stroke-width: 3; }
+      .eye { fill: #8b5cf6; }
+      .beam { stroke: rgba(139, 92, 246, 0.2); stroke-width: 20; fill: none; }
+      .text-label { font-weight: 800; font-size: 14px; fill: #334155; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="800" height="400" class="bg" />
+  <text x="400" y="50" class="title">THE GOD PROTOCOL</text>
+  
+  <polygon points="400,100 200,320 600,320" class="pyramid" />
+  <polygon points="400,100 300,200 500,200" class="pyramid" style="fill:#8b5cf6" />
+  
+  <circle cx="400" cy="165" r="10" class="bg" />
+  <circle cx="400" cy="165" r="4" class="eye" />
+  
+  <path d="M 400 320 L 400 380" class="beam" />
+  <text x="400" y="280" class="text-label">Omniscient ASI</text>
+</svg>
