@@ -1,46 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
-    </pattern>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M 0 0 L 12 6 L 0 12 z" fill="#9333ea"/>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
     </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  <rect width="800" height="400" fill="url(#grid)"/>
   
   <g>
-    <circle cx="65" cy="130" r="20" fill="#9333ea"/>
-<text x="65" y="136" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">1</text>
-<rect x="40" y="70" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="40" y="70" width="340" height="120" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="100" y="104.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">Semantic similarity</text>
-<text x="100" y="125.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">measures how alike two</text>
-<text x="100" y="145.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">pieces of text are in</text>
-<text x="100" y="165.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">meaning, beyond...</text>
-<circle cx="445" cy="130" r="20" fill="#9333ea"/>
-<text x="445" y="136" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">2</text>
-<rect x="420" y="70" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="420" y="70" width="340" height="120" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="480" y="125.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">The key insight is that</text>
-<text x="480" y="145.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">similar meanings should map</text>
-<circle cx="65" cy="280" r="20" fill="#9333ea"/>
-<text x="65" y="286" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">3</text>
-<rect x="40" y="220" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="40" y="220" width="340" height="120" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="100" y="275.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">To similar points in</text>
-<text x="100" y="295.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">embedding space</text>
-<circle cx="445" cy="280" r="20" fill="#9333ea"/>
-<text x="445" y="286" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">4</text>
-<rect x="420" y="220" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="420" y="220" width="340" height="120" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="480" y="275.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">Models learn to produce</text>
-<text x="480" y="295.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">embeddings</text>
+    <circle cx="65" cy="130" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
+<text x="65" y="135" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">1</text>
+<rect x="40" y="70" width="340" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="100" y="104.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">Semantic similarity</text>
+<text x="100" y="125.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">measures how alike two</text>
+<text x="100" y="145.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">pieces of text are in</text>
+<text x="100" y="165.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">meaning, beyond...</text>
+<circle cx="445" cy="130" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
+<text x="445" y="135" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">2</text>
+<rect x="420" y="70" width="340" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="480" y="125.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">The key insight is that</text>
+<text x="480" y="145.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">similar meanings should map</text>
+<circle cx="65" cy="280" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
+<text x="65" y="285" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">3</text>
+<rect x="40" y="220" width="340" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="100" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">To similar points in</text>
+<text x="100" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">embedding space</text>
+<circle cx="445" cy="280" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
+<text x="445" y="285" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">4</text>
+<rect x="420" y="220" width="340" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="480" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">Models learn to produce</text>
+<text x="480" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">embeddings</text>
 
   </g>
   
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

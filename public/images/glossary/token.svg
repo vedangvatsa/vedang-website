@@ -1,42 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
-    </pattern>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M 0 0 L 12 6 L 0 12 z" fill="#9333ea"/>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
     </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  <rect width="800" height="400" fill="url(#grid)"/>
   
   <g>
-    <rect x="27.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="27.5" y="90" width="175" height="180" rx="6" fill="rgba(147,51,234,0.06)"/>
-<text x="115" y="166" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A token is the</text>
-<text x="115" y="184.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">smallest unit of</text>
-<text x="115" y="203.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">text</text>
-<rect x="217.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="217.5" y="90" width="175" height="180" rx="6" fill="rgba(147,51,234,0.06)"/>
-<text x="305" y="166" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That an LLM</text>
-<text x="305" y="184.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">processes . It's</text>
-<text x="305" y="203.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">not a word</text>
-<rect x="407.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="407.5" y="90" width="175" height="180" rx="6" fill="rgba(147,51,234,0.06)"/>
-<text x="495" y="147.1" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A word is often</text>
-<text x="495" y="166" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">multiple tokens,</text>
-<text x="495" y="184.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">sometimes a</text>
-<text x="495" y="203.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">token is part of</text>
-<text x="495" y="222.70000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">a word</text>
-<rect x="597.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="597.5" y="90" width="175" height="180" rx="6" fill="rgba(147,51,234,0.06)"/>
-<text x="685" y="166" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">In English, one</text>
-<text x="685" y="184.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">token is roughly</text>
-<text x="685" y="203.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">0</text>
+    <line x1="115" y1="80" x2="685" y2="80" stroke="#9333ea" stroke-width="1.5"/>
+<circle cx="115" cy="80" r="4" fill="#9333ea"/>
+<line x1="115" y1="84" x2="115" y2="104" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="27.5" y="110" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="115" y="186" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">A token is the</text>
+<text x="115" y="204.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">smallest unit of</text>
+<text x="115" y="223.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">text</text>
+<circle cx="305" cy="80" r="4" fill="#9333ea"/>
+<line x1="305" y1="84" x2="305" y2="104" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="217.5" y="110" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="305" y="186" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">That an LLM</text>
+<text x="305" y="204.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">processes . It's</text>
+<text x="305" y="223.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">not a word</text>
+<circle cx="495" cy="80" r="4" fill="#9333ea"/>
+<line x1="495" y1="84" x2="495" y2="104" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="407.5" y="110" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="495" y="167.1" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">A word is often</text>
+<text x="495" y="186" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">multiple tokens,</text>
+<text x="495" y="204.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">sometimes a</text>
+<text x="495" y="223.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">token is part of</text>
+<text x="495" y="242.70000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">a word</text>
+<circle cx="685" cy="80" r="4" fill="#9333ea"/>
+<line x1="685" y1="84" x2="685" y2="104" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="597.5" y="110" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="685" y="186" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">In English, one</text>
+<text x="685" y="204.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">token is roughly</text>
+<text x="685" y="223.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">0</text>
 
   </g>
   
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

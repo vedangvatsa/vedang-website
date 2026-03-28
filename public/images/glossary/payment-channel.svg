@@ -1,42 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
-    </pattern>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M 0 0 L 12 6 L 0 12 z" fill="#2563eb"/>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
     </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  <rect width="800" height="400" fill="url(#grid)"/>
   
   <g>
-    <rect x="260" y="15" width="280" height="70" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="260" y="15" width="280" height="70" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="45.449999999999996" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A payment channel is a Layer</text>
-<text x="400" y="64.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">2 scaling technique</text>
-<path d="M 400 85 L 220 135" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
-<path d="M 400 85 L 580 135" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="60" y="135" width="280" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="60" y="135" width="280" height="80" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="200" y="161" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That enables unlimited</text>
-<text x="200" y="179.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">instant transactions between</text>
-<text x="200" y="198.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">two parties</text>
-<rect x="460" y="135" width="280" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="460" y="135" width="280" height="80" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="600" y="161" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By locking funds in an</text>
-<text x="600" y="179.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">on-chain smart contract and</text>
-<text x="600" y="198.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">exchanging signed off-cha...</text>
-<path d="M 220 215 L 400 265" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
-<path d="M 580 215 L 400 265" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="260" y="265" width="280" height="70" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="260" y="265" width="280" height="70" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="295.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That update the balance</text>
-<text x="400" y="314.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">distribution without...</text>
+    <rect x="260" y="7.5" width="280" height="85" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="45.449999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">A payment channel is a Layer</text>
+<text x="400" y="64.35000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">2 scaling technique</text>
+<path d="M 400 92 L 220 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M 400 92 L 580 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="60" y="132.5" width="280" height="85" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="200" y="161" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">That enables unlimited</text>
+<text x="200" y="179.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">instant transactions between</text>
+<text x="200" y="198.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">two parties</text>
+<rect x="460" y="132.5" width="280" height="85" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="600" y="161" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">By locking funds in an</text>
+<text x="600" y="179.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">on-chain smart contract and</text>
+<text x="600" y="198.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">exchanging signed off-cha...</text>
+<path d="M 220 215 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M 580 215 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="260" y="257.5" width="280" height="85" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="286" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">That update the balance</text>
+<text x="400" y="304.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">distribution without</text>
+<text x="400" y="323.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">touching the blockchain...</text>
 
   </g>
   
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

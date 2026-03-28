@@ -1,34 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
-    </pattern>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M 0 0 L 12 6 L 0 12 z" fill="#9333ea"/>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
     </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  <rect width="800" height="400" fill="url(#grid)"/>
   
   <g>
-    <rect x="150" y="30" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="150" y="30" width="500" height="80" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="64.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Top-k sampling is a text generation</text>
-<text x="400" y="87.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">strategy</text>
-<line x1="400" y1="114" x2="400" y2="128" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="150" y="140" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="150" y="140" width="500" height="80" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="174.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">That restricts the model's next token</text>
-<text x="400" y="197.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">choice</text>
-<line x1="400" y1="224" x2="400" y2="238" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="150" y="250" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="150" y="250" width="500" height="80" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="284.47499999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">To the k most probable tokens, preventing</text>
-<text x="400" y="307.42499999999995" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">selection of unlikely tokens</text>
+    <rect x="150" y="7.5" width="500" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="60.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Top-k sampling is a text generation strategy</text>
+<line x1="400" y1="106.5" x2="400" y2="124.5" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="150" y="132.5" width="500" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">That restricts the model's next token choice</text>
+<line x1="400" y1="231.5" x2="400" y2="249.5" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="150" y="257.5" width="500" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="299.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">To the k most probable tokens, preventing</text>
+<text x="400" y="321.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">selection of unlikely tokens</text>
 
   </g>
   
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

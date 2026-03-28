@@ -1,47 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
-    </pattern>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M 0 0 L 12 6 L 0 12 z" fill="#059669"/>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/>
     </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  <rect width="800" height="400" fill="url(#grid)"/>
   
   <g>
-    <path d="M 400 135 L 180 155" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
-<rect x="65" y="155" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="65" y="155" width="230" height="90" rx="10" fill="rgba(5,150,105,0.06)"/>
-<text x="180" y="186" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">GRPC is a</text>
-<text x="180" y="204.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">high-performance,</text>
-<text x="180" y="223.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">open-source remote...</text>
-<path d="M 400 135 L 620 155" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
-<rect x="505" y="155" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="505" y="155" width="230" height="90" rx="10" fill="rgba(5,150,105,0.06)"/>
-<text x="620" y="186" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That uses Protocol</text>
-<text x="620" y="204.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Buffers for</text>
-<text x="620" y="223.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">serialization and...</text>
-<path d="M 400 135 L 280 265" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
-<rect x="165" y="265" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="165" y="265" width="230" height="90" rx="10" fill="rgba(5,150,105,0.06)"/>
-<text x="280" y="296" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">You define service</text>
-<text x="280" y="314.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">interfaces and message</text>
-<text x="280" y="333.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">types in</text>
-<path d="M 400 135 L 520 265" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
-<rect x="405" y="265" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="405" y="265" width="230" height="90" rx="10" fill="rgba(5,150,105,0.06)"/>
-<text x="520" y="296" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Proto files ; gRPC</text>
-<text x="520" y="314.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">generates client and</text>
-<text x="520" y="333.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">server code in your...</text>
-<rect x="300" y="65" width="200" height="70" rx="35" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="300" y="65" width="200" height="70" rx="35" fill="rgba(5,150,105,0.06)"/>
-<text x="400" y="107" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#059669" text-anchor="middle">gRPC</text>
+    <path d="M 400 135 L 180 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="65" y="155" width="230" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="180" y="186" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">GRPC is a</text>
+<text x="180" y="204.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">high-performance,</text>
+<text x="180" y="223.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">open-source remote...</text>
+<path d="M 400 135 L 620 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="505" y="155" width="230" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="620" y="186" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">That uses Protocol</text>
+<text x="620" y="204.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Buffers for</text>
+<text x="620" y="223.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">serialization and...</text>
+<path d="M 400 135 L 280 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="165" y="265" width="230" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="280" y="296" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">You define service</text>
+<text x="280" y="314.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">interfaces and message</text>
+<text x="280" y="333.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">types in</text>
+<path d="M 400 135 L 520 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="405" y="265" width="230" height="90" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="520" y="296" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Proto files ; gRPC</text>
+<text x="520" y="314.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">generates client and</text>
+<text x="520" y="333.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">server code in your...</text>
+<rect x="300" y="65" width="200" height="70" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="106.3" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#37352f" text-anchor="middle">gRPC</text>
 
   </g>
   
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

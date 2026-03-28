@@ -1,43 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.5" fill="#52525b" opacity="0.15"/>
-    </pattern>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M 0 0 L 12 6 L 0 12 z" fill="#2563eb"/>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
     </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  <rect width="800" height="400" fill="url(#grid)"/>
   
   <g>
-    <rect x="80" y="35" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="80" y="35" width="280" height="90" rx="20" fill="rgba(37,99,235,0.06)"/>
-<text x="220" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A rug pull is a</text>
-<text x="220" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">cryptocurrency scam</text>
-<line x1="360" y1="80" x2="430" y2="80" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="440" y="35" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="440" y="35" width="280" height="90" rx="20" fill="rgba(37,99,235,0.06)"/>
-<text x="580" y="66" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Where project creators</text>
-<text x="580" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">abandon a project after</text>
-<text x="580" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">extracting investor funds...</text>
-<line x1="580" y1="125" x2="580" y2="225" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="440" y="235" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="440" y="235" width="280" height="90" rx="20" fill="rgba(37,99,235,0.06)"/>
-<text x="580" y="266" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By removing liquidity from</text>
-<text x="580" y="284.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">trading pools or exploiting</text>
-<text x="580" y="303.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">smart contract backdoors,...</text>
-<line x1="440" y1="280" x2="370" y2="280" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="80" y="235" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="80" y="235" width="280" height="90" rx="20" fill="rgba(37,99,235,0.06)"/>
-<text x="220" y="266" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The term derives from</text>
-<text x="220" y="284.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">'pulling the rug out' from</text>
-<text x="220" y="303.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">under someone</text>
-<line x1="220" y1="235" x2="220" y2="135" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="80" y="30" width="280" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="220" y="75.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">A rug pull is a</text>
+<text x="220" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">cryptocurrency scam</text>
+<line x1="360" y1="80" x2="435" y2="80" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="440" y="30" width="280" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="580" y="56.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Where project creators</text>
+<text x="580" y="75.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">abandon a project after</text>
+<text x="580" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">extracting investor funds,</text>
+<text x="580" y="113.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">typically</text>
+<line x1="580" y1="130" x2="580" y2="225" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="440" y="230" width="280" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="580" y="256.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">By removing liquidity from</text>
+<text x="580" y="275.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">trading pools or exploiting</text>
+<text x="580" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">smart contract backdoors,</text>
+<text x="580" y="313.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">leaving token holders wit...</text>
+<line x1="440" y1="280" x2="365" y2="280" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="80" y="230" width="280" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="220" y="266" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">The term derives from</text>
+<text x="220" y="284.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">'pulling the rug out' from</text>
+<text x="220" y="303.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">under someone</text>
+<line x1="220" y1="230" x2="220" y2="135" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   </g>
   
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#52525b" text-anchor="end">@vedangvatsa</text>
+  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>
