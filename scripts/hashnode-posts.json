@@ -113,8 +113,10 @@
       "policy"
     ],
     "scheduleDate": "2026-03-28",
-    "posted": false,
-    "scheduleTime": "09:00"
+    "posted": true,
+    "scheduleTime": "09:00",
+    "postedAt": "2026-03-28T05:11:23.267Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/bureaucracy-tax"
   },
   {
     "id": "hashnode-singularity",

@@ -178,8 +178,10 @@
       "culture"
     ],
     "scheduleDate": "2026-03-28",
-    "posted": false,
-    "scheduleTime": "09:00"
+    "posted": true,
+    "scheduleTime": "09:00",
+    "postedAt": "2026-03-28T05:11:21.751Z",
+    "devtoUrl": "https://dev.to/vedangvatsa/digital-monasticism-2ejc"
   },
   {
     "id": "devto-simulation-hypothesis",
@@ -223,7 +225,8 @@
     ],
     "scheduleDate": "2026-03-28",
     "posted": false,
-    "scheduleTime": "09:00"
+    "scheduleTime": "09:00",
+    "error": "Dev.to API error: 429 Retry later\n"
   },
   {
     "id": "devto-asi-timeline",

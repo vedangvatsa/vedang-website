@@ -63,9 +63,11 @@
     "id": "ai-timelines-uncertainty",
     "scheduleDate": "2026-03-28",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Dario Amodei says AGI by 2026 or 2027. The co-founder of Epoch AI says 2045. Twenty years apart. Both have studied this longer than almost anyone.\n\nThis is not one of them being careless. The evidence does not pin it down.\n",
-    "image": "scripts/thread-assets/ai_timelines.png"
+    "image": "scripts/thread-assets/ai_timelines.png",
+    "postedAt": "2026-03-28T05:11:09.297Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mi3umns5ic2r"
   },
   {
     "id": "psych-dunning-kruger",
