@@ -85,8 +85,10 @@
       "design"
     ],
     "scheduleDate": "2026-03-28",
-    "posted": false,
-    "scheduleTime": "17:00"
+    "posted": true,
+    "scheduleTime": "17:00",
+    "postedAt": "2026-03-28T11:53:16.371Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/cognitive-load"
   },
   {
     "id": "hashnode-cheap-to-competitive",
@@ -128,8 +130,10 @@
       "future"
     ],
     "scheduleDate": "2026-03-28",
-    "posted": false,
-    "scheduleTime": "17:00"
+    "posted": true,
+    "scheduleTime": "17:00",
+    "postedAt": "2026-03-28T11:53:16.670Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/singularity"
   },
   {
     "id": "hashnode-ai-economy",

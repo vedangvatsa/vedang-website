@@ -135,9 +135,11 @@
     "id": "swarm-x-prediction-1",
     "scheduleDate": "2026-03-28",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/swarm_prediction.png",
-    "text": "One AI model gives you one opinion.\n\n100 AI agents debating across 16 rounds gives you something closer to truth.\n\nBuilt a swarm intelligence prediction tool. Bring your own API key. Ask any question.\n\nveda.ng/swarm-prediction"
+    "text": "One AI model gives you one opinion.\n\n100 AI agents debating across 16 rounds gives you something closer to truth.\n\nBuilt a swarm intelligence prediction tool. Bring your own API key. Ask any question.\n\nveda.ng/swarm-prediction",
+    "postedAt": "2026-03-28T11:52:54.178Z",
+    "tweetId": "2037860476789403837"
   },
   {
     "id": "ctc-lag",

@@ -103,9 +103,11 @@
     "id": "lit-fired",
     "scheduleDate": "2026-03-28",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/lit_fired.png",
-    "text": "Nobody gets fired on LinkedIn. They navigate transitions. Nobody fails. They pivot. Nobody has a bad quarter. They recalibrate.\n\nThe platform rewards exaggeration so consistently that honesty looks like a mistake.\n\nI built a translator for this. Type what actually happened and watch it become a LinkedIn post.\n\nTry it yourself: veda.ng/lit"
+    "text": "Nobody gets fired on LinkedIn. They navigate transitions. Nobody fails. They pivot. Nobody has a bad quarter. They recalibrate.\n\nThe platform rewards exaggeration so consistently that honesty looks like a mistake.\n\nI built a translator for this. Type what actually happened and watch it become a LinkedIn post.\n\nTry it yourself: veda.ng/lit",
+    "postedAt": "2026-03-28T11:52:58.406Z",
+    "postId": "urn:li:share:7443626184099344384"
   },
   {
     "id": "agentic-commerce-4",

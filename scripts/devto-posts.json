@@ -194,8 +194,10 @@
       "science"
     ],
     "scheduleDate": "2026-03-28",
-    "posted": false,
-    "scheduleTime": "17:00"
+    "posted": true,
+    "scheduleTime": "17:00",
+    "postedAt": "2026-03-28T11:53:14.684Z",
+    "devtoUrl": "https://dev.to/vedangvatsa/are-we-in-a-computer-simulation-4jp7"
   },
   {
     "id": "devto-attention-refinery",
@@ -242,7 +244,8 @@
     ],
     "scheduleDate": "2026-03-28",
     "posted": false,
-    "scheduleTime": "17:00"
+    "scheduleTime": "17:00",
+    "error": "Dev.to API error: 429 Retry later\n"
   },
   {
     "id": "devto-god-protocol",

@@ -73,9 +73,11 @@
     "id": "psych-dunning-kruger",
     "scheduleDate": "2026-03-28",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "I formed strong opinions about AI after a few weeks with it.\n\nThe longer I spent actually building with these systems, the less certain I became.\n\nThis is the Dunning-Kruger pattern. Early exposure produces peak confidence. Real depth produces more careful claims.\n",
-    "image": "scripts/thread-assets/psych_dunning_kruger.png"
+    "image": "scripts/thread-assets/psych_dunning_kruger.png",
+    "postedAt": "2026-03-28T11:53:04.196Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mi4l3cuxtc2x"
   },
   {
     "id": "ctc-lag",
