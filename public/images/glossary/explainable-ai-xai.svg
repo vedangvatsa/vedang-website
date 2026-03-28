@@ -3,23 +3,23 @@
 <rect width="800" height="400" fill="#fff"/>
 <rect x="30" y="15" width="240" height="180" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="0.5"/>
 <text x="150" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">◆</text>
-<text x="150" y="134.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Design</text>
-<text x="150" y="148.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Principles</text>
+<text x="150" y="134.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Knowledge</text>
+<text x="150" y="148.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Distillation</text>
 <rect x="280" y="15" width="240" height="180" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="0.5"/>
 <text x="400" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">●</text>
-<text x="400" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Black Box</text>
+<text x="400" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Vocabulary</text>
 <rect x="530" y="15" width="240" height="180" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="0.5"/>
 <text x="650" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">▲</text>
-<text x="650" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Box XAI</text>
+<text x="650" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Top-k Sampling</text>
 <rect x="30" y="205" width="240" height="180" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="0.5"/>
 <text x="150" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">■</text>
-<text x="150" y="332.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">XAI Reveals</text>
+<text x="150" y="332.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Embeddings</text>
 <rect x="280" y="205" width="240" height="180" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="0.5"/>
 <text x="400" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">★</text>
-<text x="400" y="332.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Inputs Mattered</text>
+<text x="400" y="332.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Edge AI</text>
 <rect x="530" y="205" width="240" height="180" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="0.5"/>
 <text x="650" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">◎</text>
-<text x="650" y="324.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Answer</text>
-<text x="650" y="338.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Regulators</text>
+<text x="650" y="324.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Attention</text>
+<text x="650" y="338.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Mechanism</text>
 
 </svg>

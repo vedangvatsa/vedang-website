@@ -3,24 +3,23 @@
 <rect width="800" height="400" fill="#fff"/>
 <rect x="30" y="15" width="240" height="180" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="0.5"/>
 <text x="150" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">◆</text>
-<text x="150" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Soulbound Tokens</text>
+<text x="150" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Order Book</text>
 <rect x="280" y="15" width="240" height="180" rx="14" fill="#dbeafe" stroke="#93c5fd" stroke-width="0.5"/>
 <text x="400" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">●</text>
-<text x="400" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Tokens SBTs</text>
+<text x="400" y="134.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Liquidity Pool</text>
+<text x="400" y="148.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Volume</text>
 <rect x="530" y="15" width="240" height="180" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="0.5"/>
 <text x="650" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">▲</text>
-<text x="650" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Digital Tokens</text>
+<text x="650" y="134.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Public-Key</text>
+<text x="650" y="148.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Cryptography</text>
 <rect x="30" y="205" width="240" height="180" rx="14" fill="#dbeafe" stroke="#93c5fd" stroke-width="0.5"/>
 <text x="150" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">■</text>
-<text x="150" y="324.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Uniquely</text>
-<text x="150" y="338.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Represent</text>
+<text x="150" y="332.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">DAO</text>
 <rect x="280" y="205" width="240" height="180" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="0.5"/>
 <text x="400" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">★</text>
-<text x="400" y="324.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Traits</text>
-<text x="400" y="338.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Credentials</text>
+<text x="400" y="332.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">NFT</text>
 <rect x="530" y="205" width="240" height="180" rx="14" fill="#dbeafe" stroke="#93c5fd" stroke-width="0.5"/>
 <text x="650" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">◎</text>
-<text x="650" y="324.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Blockchain</text>
-<text x="650" y="338.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Proposed</text>
+<text x="650" y="332.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">PoH</text>
 
 </svg>

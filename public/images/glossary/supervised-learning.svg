@@ -3,22 +3,23 @@
 <rect width="800" height="400" fill="#fff"/>
 <rect x="30" y="15" width="240" height="180" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="0.5"/>
 <text x="150" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">◆</text>
-<text x="150" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Machine Learning</text>
+<text x="150" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Gradient Descent</text>
 <rect x="280" y="15" width="240" height="180" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="0.5"/>
 <text x="400" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">●</text>
-<text x="400" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Model Trains</text>
+<text x="400" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">XAI</text>
 <rect x="530" y="15" width="240" height="180" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="0.5"/>
 <text x="650" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">▲</text>
-<text x="650" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Labeled Data</text>
+<text x="650" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">SVM</text>
 <rect x="30" y="205" width="240" height="180" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="0.5"/>
 <text x="150" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">■</text>
-<text x="150" y="332.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Correct Output</text>
+<text x="150" y="318.055" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Direct</text>
+<text x="150" y="331.8675" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Preference</text>
+<text x="150" y="345.68" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Optimization</text>
 <rect x="280" y="205" width="240" height="180" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="0.5"/>
 <text x="400" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">★</text>
-<text x="400" y="324.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Algorithm</text>
-<text x="400" y="338.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Thousands</text>
+<text x="400" y="332.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Generative Model</text>
 <rect x="530" y="205" width="240" height="180" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="0.5"/>
 <text x="650" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">◎</text>
-<text x="650" y="332.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Images Labeled</text>
+<text x="650" y="332.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Re-ranking</text>
 
 </svg>

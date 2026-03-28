@@ -5,28 +5,25 @@
 <circle cx="400" cy="200" r="140" fill="none" stroke="#ede9fe" stroke-width="1" stroke-dasharray="6 4"/>
 <line x1="400" y1="200" x2="400" y2="60" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="400" cy="60" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="400" y="57.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Runs</text>
-<text x="400" y="68.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Artificial</text>
+<text x="400" y="63.5" font-family="'Inter',sans-serif" font-weight="600" font-size="10" fill="#4c1d95" text-anchor="middle">Cross-Attention</text>
 <line x1="400" y1="200" x2="521.2435565298214" y2="130" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="521.2435565298214" cy="130" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="521.2435565298214" y="127.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Algorithms</text>
-<text x="521.2435565298214" y="138.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Directly</text>
+<text x="521.2435565298214" y="133.5" font-family="'Inter',sans-serif" font-weight="600" font-size="10" fill="#4c1d95" text-anchor="middle">Hallucination</text>
 <line x1="400" y1="200" x2="521.2435565298214" y2="270" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="521.2435565298214" cy="270" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="521.2435565298214" y="267.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Network</text>
-<text x="521.2435565298214" y="278.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Smartphones</text>
+<text x="521.2435565298214" y="267.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Vision</text>
+<text x="521.2435565298214" y="278.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Transformer</text>
 <line x1="400" y1="200" x2="400" y2="340" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="400" cy="340" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="400" y="337.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Smartphones</text>
-<text x="400" y="348.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Industrial</text>
+<text x="400" y="343.5" font-family="'Inter',sans-serif" font-weight="600" font-size="10" fill="#4c1d95" text-anchor="middle">Throughput</text>
 <line x1="400" y1="200" x2="278.75644347017857" y2="270" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="278.75644347017857" cy="270" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="278.75644347017857" y="267.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Industrial</text>
-<text x="278.75644347017857" y="278.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Sensors</text>
+<text x="278.75644347017857" y="267.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Agentic</text>
+<text x="278.75644347017857" y="278.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Workflow</text>
 <line x1="400" y1="200" x2="278.7564434701786" y2="130" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="278.7564434701786" cy="130" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="278.7564434701786" y="127.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Sensors</text>
-<text x="278.7564434701786" y="138.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Cameras</text>
+<text x="278.7564434701786" y="127.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Reasoning</text>
+<text x="278.7564434701786" y="138.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Model</text>
 <circle cx="400" cy="200" r="55" fill="#7c3aed"/>
 <text x="400" y="204.9" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#fff" text-anchor="middle">Edge AI</text>
 

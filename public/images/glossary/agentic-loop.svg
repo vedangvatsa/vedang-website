@@ -3,12 +3,11 @@
 <rect width="800" height="400" fill="#fff"/>
 <circle cx="400" cy="210" r="195" fill="none" stroke="#ede9fe" stroke-width="1"/>
 <circle cx="320" cy="175" r="110" fill="#7c3aed" opacity="0.1" stroke="#7c3aed" stroke-width="2"/>
-<text x="320" y="179.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Core Execution</text>
+<text x="320" y="179.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Logit</text>
 <circle cx="480" cy="175" r="110" fill="#7c3aed" opacity="0.1" stroke="#7c3aed" stroke-width="2"/>
-<text x="480" y="171.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Execution</text>
-<text x="480" y="185.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Pattern</text>
+<text x="480" y="179.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Vocabulary</text>
 <circle cx="400" cy="290" r="110" fill="#7c3aed" opacity="0.1" stroke="#7c3aed" stroke-width="2"/>
-<text x="400" y="294.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Agent Systems</text>
+<text x="400" y="294.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Agent</text>
 <text x="400" y="219.9" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#7c3aed" text-anchor="middle">Agentic Loop</text>
 
 </svg>

@@ -2,12 +2,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
 <rect width="800" height="400" fill="#fff"/>
 <circle cx="400" cy="200" r="180" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0.15"/>
-<text x="400" y="44.2" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#4c1d95" text-anchor="middle">Computer Vision</text>
+<text x="400" y="44.2" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#4c1d95" text-anchor="middle">Attention Score</text>
 <circle cx="400" cy="200" r="135" fill="none" stroke="#7c3aed" stroke-width="2.1" opacity="0.43000000000000005"/>
-<text x="400" y="89.2" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#4c1d95" text-anchor="middle">Vision Task</text>
+<text x="400" y="89.2" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#4c1d95" text-anchor="middle">ViT</text>
 <circle cx="400" cy="200" r="90" fill="none" stroke="#7c3aed" stroke-width="1.7" opacity="0.7100000000000001"/>
-<text x="400" y="127.195" font-family="'Inter',sans-serif" font-weight="600" font-size="10.2" fill="#4c1d95" text-anchor="middle">Localizes</text>
-<text x="400" y="139.945" font-family="'Inter',sans-serif" font-weight="600" font-size="10.2" fill="#4c1d95" text-anchor="middle">Objects</text>
+<text x="400" y="127.195" font-family="'Inter',sans-serif" font-weight="600" font-size="10.2" fill="#4c1d95" text-anchor="middle">Batch</text>
+<text x="400" y="139.945" font-family="'Inter',sans-serif" font-weight="600" font-size="10.2" fill="#4c1d95" text-anchor="middle">Normalization</text>
 <circle cx="400" cy="200" r="50" fill="#7c3aed" stroke="#7c3aed" stroke-width="1.2999999999999998" opacity="0.9900000000000001"/>
 <text x="400" y="196.7275" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#fff" text-anchor="middle">Object</text>
 <text x="400" y="211.6025" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#fff" text-anchor="middle">Detection</text>

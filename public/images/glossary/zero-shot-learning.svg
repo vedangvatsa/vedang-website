@@ -5,28 +5,25 @@
 <circle cx="400" cy="200" r="140" fill="none" stroke="#ede9fe" stroke-width="1" stroke-dasharray="6 4"/>
 <line x1="400" y1="200" x2="400" y2="60" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="400" cy="60" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="400" y="57.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">System</text>
-<text x="400" y="68.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Performs</text>
+<text x="400" y="63.5" font-family="'Inter',sans-serif" font-weight="600" font-size="10" fill="#4c1d95" text-anchor="middle">Tokenizer</text>
 <line x1="400" y1="200" x2="521.2435565298214" y2="130" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="521.2435565298214" cy="130" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="521.2435565298214" y="127.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Performs</text>
-<text x="521.2435565298214" y="138.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Tasks</text>
+<text x="521.2435565298214" y="122.35" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Direct</text>
+<text x="521.2435565298214" y="132.975" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Preference</text>
+<text x="521.2435565298214" y="143.6" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Optimization</text>
 <line x1="400" y1="200" x2="521.2435565298214" y2="270" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="521.2435565298214" cy="270" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="521.2435565298214" y="267.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Never</text>
-<text x="521.2435565298214" y="278.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Explicitly</text>
+<text x="521.2435565298214" y="267.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Prompt</text>
+<text x="521.2435565298214" y="278.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Tuning</text>
 <line x1="400" y1="200" x2="400" y2="340" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="400" cy="340" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="400" y="337.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Explicitly</text>
-<text x="400" y="348.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Trained</text>
+<text x="400" y="343.5" font-family="'Inter',sans-serif" font-weight="600" font-size="10" fill="#4c1d95" text-anchor="middle">Temperature</text>
 <line x1="400" y1="200" x2="278.75644347017857" y2="270" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="278.75644347017857" cy="270" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="278.75644347017857" y="267.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Natural</text>
-<text x="278.75644347017857" y="278.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Language</text>
+<text x="278.75644347017857" y="273.5" font-family="'Inter',sans-serif" font-weight="600" font-size="10" fill="#4c1d95" text-anchor="middle">Overfitting</text>
 <line x1="400" y1="200" x2="278.7564434701786" y2="130" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="278.7564434701786" cy="130" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="278.7564434701786" y="127.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Language</text>
-<text x="278.7564434701786" y="138.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Instructions</text>
+<text x="278.7564434701786" y="133.5" font-family="'Inter',sans-serif" font-weight="600" font-size="10" fill="#4c1d95" text-anchor="middle">ViT</text>
 <circle cx="400" cy="200" r="55" fill="#7c3aed"/>
 <text x="400" y="196.7275" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#fff" text-anchor="middle">Zero-Shot</text>
 <text x="400" y="211.6025" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#fff" text-anchor="middle">Learning</text>

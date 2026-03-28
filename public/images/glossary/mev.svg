@@ -2,12 +2,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
 <rect width="800" height="400" fill="#fff"/>
 <polygon points="330,20 470,20 560,110 240,110" fill="#2563eb" opacity="0.35" stroke="#fff" stroke-width="3"/>
-<text x="400" y="70.25" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Block Producers</text>
+<text x="400" y="70.25" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Blockchain</text>
 <polygon points="240,110 560,110 650,200 150,200" fill="#2563eb" opacity="0.53" stroke="#fff" stroke-width="3"/>
-<text x="400" y="160.25" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Producers Validators</text>
+<text x="400" y="160.25" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">MEV Burn</text>
 <polygon points="150,200 650,200 740,290 60,290" fill="#2563eb" opacity="0.71" stroke="#fff" stroke-width="3"/>
-<text x="400" y="250.25" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Strategically Ordering</text>
+<text x="400" y="250.25" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Seed Phrase</text>
 <polygon points="60,290 740,290 830,380 -30,380" fill="#2563eb" opacity="0.89" stroke="#fff" stroke-width="3"/>
-<text x="400" y="340.25" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Ordering Inserting</text>
+<text x="400" y="340.25" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Dust Attack</text>
 
 </svg>

@@ -3,13 +3,15 @@
 <rect width="800" height="400" fill="#fff"/>
 <circle cx="400" cy="210" r="195" fill="none" stroke="#ede9fe" stroke-width="1"/>
 <circle cx="320" cy="175" r="110" fill="#7c3aed" opacity="0.1" stroke="#7c3aed" stroke-width="2"/>
-<text x="320" y="171.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">CLIP</text>
-<text x="320" y="185.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Contrastive</text>
+<text x="320" y="171.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Pattern</text>
+<text x="320" y="185.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Recognition</text>
 <circle cx="480" cy="175" r="110" fill="#7c3aed" opacity="0.1" stroke="#7c3aed" stroke-width="2"/>
-<text x="480" y="171.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Multimodal</text>
-<text x="480" y="185.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Model</text>
+<text x="480" y="171.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Byte-Pair</text>
+<text x="480" y="185.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Encoding</text>
 <circle cx="400" cy="290" r="110" fill="#7c3aed" opacity="0.1" stroke="#7c3aed" stroke-width="2"/>
-<text x="400" y="294.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Connect Images</text>
+<text x="400" y="280.055" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Generative</text>
+<text x="400" y="293.8675" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Adversarial</text>
+<text x="400" y="307.68" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Network</text>
 <text x="400" y="219.9" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#7c3aed" text-anchor="middle">CLIP</text>
 
 </svg>

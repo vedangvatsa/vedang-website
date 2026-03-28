@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
 <rect width="800" height="400" fill="#fff"/>
-<text x="40" y="65" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#444">Repeated Elements</text>
+<text x="40" y="65" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#444">Recurrent Neural Network</text>
 <rect x="220" y="34" width="540" height="52" rx="8" fill="#f5f3ff"/>
 <rect x="220" y="34" width="448.8" height="52" rx="8" fill="#7c3aed" opacity="0.5"/>
 <text x="654.8" y="65" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#fff" text-anchor="end">88%</text>
-<text x="40" y="135" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#444">Covers Everything</text>
+<text x="40" y="135" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#444">Model Quantization</text>
 <rect x="220" y="104" width="540" height="52" rx="8" fill="#f5f3ff"/>
 <rect x="220" y="104" width="367.2" height="52" rx="8" fill="#7c3aed" opacity="0.6"/>
 <text x="573.2" y="135" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#fff" text-anchor="end">72%</text>
-<text x="40" y="205" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#444">Familiar Face</text>
+<text x="40" y="205" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#444">Inference</text>
 <rect x="220" y="174" width="540" height="52" rx="8" fill="#f5f3ff"/>
 <rect x="220" y="174" width="484.5" height="52" rx="8" fill="#7c3aed" opacity="0.7"/>
 <text x="690.5" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#fff" text-anchor="end">95%</text>
-<text x="40" y="275" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#444">Machine Learning</text>
+<text x="40" y="275" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#444">Tokenizer</text>
 <rect x="220" y="244" width="540" height="52" rx="8" fill="#f5f3ff"/>
 <rect x="220" y="244" width="316.2" height="52" rx="8" fill="#7c3aed" opacity="0.8"/>
 <text x="522.2" y="275" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#fff" text-anchor="end">62%</text>
-<text x="40" y="345" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#444">Learning Model</text>
+<text x="40" y="345" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#444">AI Safety</text>
 <rect x="220" y="314" width="540" height="52" rx="8" fill="#f5f3ff"/>
 <rect x="220" y="314" width="408" height="52" rx="8" fill="#7c3aed" opacity="0.9"/>
 <text x="614" y="345" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#fff" text-anchor="end">80%</text>

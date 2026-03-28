@@ -3,12 +3,12 @@
 <rect width="800" height="400" fill="#fff"/>
 <circle cx="400" cy="210" r="195" fill="none" stroke="#dbeafe" stroke-width="1"/>
 <circle cx="320" cy="175" r="110" fill="#2563eb" opacity="0.1" stroke="#2563eb" stroke-width="2"/>
-<text x="320" y="179.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Price TWAP</text>
+<text x="320" y="179.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Proof of Work</text>
 <circle cx="480" cy="175" r="110" fill="#2563eb" opacity="0.1" stroke="#2563eb" stroke-width="2"/>
-<text x="480" y="171.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">TWAP</text>
-<text x="480" y="185.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Calculates</text>
+<text x="480" y="171.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Account</text>
+<text x="480" y="185.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Abstraction</text>
 <circle cx="400" cy="290" r="110" fill="#2563eb" opacity="0.1" stroke="#2563eb" stroke-width="2"/>
-<text x="400" y="294.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Asset Over</text>
+<text x="400" y="294.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">DeFi</text>
 <text x="400" y="211.7275" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#2563eb" text-anchor="middle">Time-Weighted</text>
 <text x="400" y="226.6025" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#2563eb" text-anchor="middle">Average Price</text>
 
