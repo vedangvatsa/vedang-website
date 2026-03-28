@@ -476,5 +476,29 @@
     "posted": false,
     "image": "scripts/thread-assets/twilight_economy.png",
     "text": "Who did the work? Nobody knows anymore.\n\nThe writer uses an LLM for the first draft. The artist uses diffusion models. The programmer uses code completion. Their work is no longer solely their own. It is a hybrid.\n\nThe tools are so smoothly integrated that the boundary between human and AI is dissolving. A writer starts with an AI outline, uses AI for research, has it draft paragraphs, then edits. Is the result human-written or AI-written? The question feels anachronistic.\n\nThis is the Twilight Economy. Human and AI labor blended indistinguishably.\n\nSkill may no longer mean writing the perfect sentence. It may mean crafting the perfect prompt. Creativity may not mean painting the image but curating the outputs.\n\nThe centaur, the human-AI hybrid, will outperform both humans alone and AIs alone. Those who resist this collaboration will face a competitive disadvantage that grows every quarter.\n\nWe also face a new impostor syndrome. Did I really write that, or did the machine?\n\nveda.ng/twilight-economy"
+  },
+  {
+    "id": "pseudonymous-agency",
+    "scheduleDate": "2026-04-16",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/pseudonymous_agency.png",
+    "text": "Participation or privacy. You were told to choose.\n\nTo use the modern internet, you surrender your name, location, preferences, and relationships. Your data becomes the currency. The concept of a private life is becoming a quaint anachronism.\n\nBut pseudonymity offers a way out. A pseudonym is not anonymity. It is a stable, persistent identity that is not tied to your real name. Think of George Orwell or Mark Twain. They built reputations and trust without revealing who they were.\n\nAI agents can be your pseudonymous representatives. Sophisticated digital proxies that negotiate, transact, and build reputation on your behalf. They carry your intent without carrying your identity.\n\nCombined with zero-knowledge proofs, your agent could prove you are creditworthy without revealing your income. Prove you are qualified without revealing your name.\n\nThe architecture of the internet was designed to link everything back to your real identity. That does not have to be permanent.\n\nveda.ng/pseudonymous-agency"
+  },
+  {
+    "id": "internet-of-lies",
+    "scheduleDate": "2026-04-16",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/internet_of_lies.png",
+    "text": "Truth has no built-in advantage on the internet.\n\nA screenshot of a fake headline travels as fast as a real one. There is no mechanism to verify provenance. The web was built for speed, not for trust.\n\nContent is location-addressed. We access information based on where it is stored. A webpage can be altered or deleted and its history is lost. There is nothing inherent in the architecture that says this is authentic.\n\nDecentralized identifiers could fix this. A journalist signs their article cryptographically. Anyone can verify the signature. If the article is distorted on social media, the original signed version remains checkable.\n\nContent addressing changes the question from \"where is this file?\" to \"what is this file's content?\" A unique hash guarantees data integrity. Any change, no matter how small, produces a completely different hash.\n\nThe fight against misinformation is a fight at the protocol level. Not moderation. Architecture.\n\nveda.ng/internet-of-lies"
+  },
+  {
+    "id": "sacred-algorithms",
+    "scheduleDate": "2026-04-17",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/sacred_algorithms.png",
+    "text": "We stopped questioning the algorithm.\n\nWhen a deep learning model produces a result, we often cannot trace how it got there. We check inputs and outputs. We measure accuracy. But we cannot truly understand it.\n\nIn the face of this opacity, trust becomes a leap of faith. We believe in the data it was trained on. We believe in the engineers. We believe in the statistical promise.\n\nThis is epistemological surrender. An admission that intelligence exists beyond human comprehension. The black box has become the modern oracle.\n\nIt gets more serious when these systems make life-or-death decisions. An autonomous vehicle in an unavoidable accident. An AI diagnosing cancer. Who decides the ethical framework? Encoding that framework into a machine is creating sacred law.\n\nWe treat these algorithms as moral authorities. A role traditionally reserved for priests, philosophers, and gods.\n\nThe antidote is not rejection. It is critical faith. Trust paired with skepticism. Always.\n\nveda.ng/sacred-algorithms"
   }
 ]

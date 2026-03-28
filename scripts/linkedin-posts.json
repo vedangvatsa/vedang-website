@@ -452,5 +452,29 @@
     "posted": false,
     "image": "scripts/thread-assets/synthetic_empathy.png",
     "text": "The machine does not feel. But you will.\n\nAI can modulate tone to convey warmth. Chatbots craft validation with precision. Avatars mirror your expressions in real time. They are executing a script. But your brain cannot tell the difference.\n\nThis is the most powerful sales tool ever built. If you trust your AI companion, you will take its recommendations. It knows your triggers, insecurities, and unstated desires.\n\nThere is also a risk of empathy laundering. We get our connection fix from a machine, then have less for real people.\n\nIf simulated empathy feels real, does it matter that nothing is on the other side?\n\nveda.ng/synthetic-empathy"
+  },
+  {
+    "id": "sacred-algorithms",
+    "scheduleDate": "2026-04-16",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/sacred_algorithms.png",
+    "text": "We stopped questioning the algorithm.\n\nWhen a deep learning model produces a result, we cannot trace how it got there. We measure accuracy but cannot understand the reasoning. Trust becomes a leap of faith.\n\nThis is epistemological surrender. The black box is the modern oracle.\n\nIt gets serious when these systems make life-or-death decisions. Autonomous vehicles. Cancer diagnoses. Loan approvals. Encoding an ethical framework into a machine is creating sacred law.\n\nWe treat algorithms as moral authorities. A role reserved for priests, philosophers, and gods.\n\nThe antidote is critical faith. Trust paired with skepticism. Transparency, auditability, and democratic debate over the values encoded in our machines.\n\nveda.ng/sacred-algorithms"
+  },
+  {
+    "id": "pseudonymous-agency",
+    "scheduleDate": "2026-04-17",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/pseudonymous_agency.png",
+    "text": "Participation or privacy. You were told to choose.\n\nTo use the modern internet, you surrender your identity. Your data becomes currency. But pseudonymity offers a way out.\n\nA pseudonym is not anonymity. It is a stable identity not tied to your real name. George Orwell and Mark Twain built trust without revealing who they were.\n\nAI agents can be your pseudonymous representatives. Digital proxies that negotiate and build reputation on your behalf. They carry your intent without your identity.\n\nWith zero-knowledge proofs, your agent could prove creditworthiness without revealing income. Prove qualifications without a name.\n\nveda.ng/pseudonymous-agency"
+  },
+  {
+    "id": "internet-of-lies",
+    "scheduleDate": "2026-04-17",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/internet_of_lies.png",
+    "text": "Truth has no built-in advantage on the internet.\n\nA fake headline screenshot travels as fast as a real one. There is no mechanism to verify provenance. The web was built for speed, not trust.\n\nDecentralized identifiers could change this. Journalists sign articles cryptographically. Anyone verifies the signature. If content is distorted, the original signed version remains checkable.\n\nContent addressing changes the question from \"where is this file?\" to \"what is this file?\" A unique hash guarantees integrity.\n\nThe fight against misinformation must happen at the protocol level. Not moderation. Architecture.\n\nveda.ng/internet-of-lies"
   }
 ]

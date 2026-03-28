@@ -406,5 +406,29 @@
     "posted": false,
     "text": "You cannot predict an intelligence smarter than you.\n\nThat is the singularity paradox. Any forecast about superintelligence is wrong by definition.\n\nDo we want AI smart enough to be useful and dumb enough to be safe?\n\nveda.ng/singularity-paradox",
     "image": "scripts/thread-assets/singularity_paradox.png"
+  },
+  {
+    "id": "internet-of-lies",
+    "scheduleDate": "2026-04-16",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "Truth has no built-in advantage on the internet.\n\nA fake headline travels as fast as a real one. No mechanism to verify provenance. Built for speed, not trust.\n\nThe fix is architectural, not moderation.\n\nveda.ng/internet-of-lies",
+    "image": "scripts/thread-assets/internet_of_lies.png"
+  },
+  {
+    "id": "sacred-algorithms",
+    "scheduleDate": "2026-04-16",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "We stopped questioning the algorithm.\n\nWhen we cannot explain how it works, trust becomes faith. The black box is the modern oracle.\n\nCritical faith: trust paired with skepticism. Always.\n\nveda.ng/sacred-algorithms",
+    "image": "scripts/thread-assets/sacred_algorithms.png"
+  },
+  {
+    "id": "pseudonymous-agency",
+    "scheduleDate": "2026-04-17",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "Participation or privacy. You were told to choose.\n\nPseudonymity is the third option. A stable identity not tied to your real name. AI agents as your digital proxies.\n\nveda.ng/pseudonymous-agency",
+    "image": "scripts/thread-assets/pseudonymous_agency.png"
   }
 ]
