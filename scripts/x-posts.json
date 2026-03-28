@@ -372,5 +372,21 @@
     "posted": false,
     "image": "scripts/thread-assets/ai_electricity.png",
     "text": "NVIDIA doubled its AI revenue forecast. From $500B to $1T.\n\nAt the same GTC keynote, they pitched their new chip on a new metric. Not speed. Not power. Throughput per megawatt.\n\nThe Vera Rubin platform can deliver up to 35x more inference per megawatt than GPU-only setups. 10x more per watt than the Blackwell generation before it.\n\nWhen the biggest chip company on earth starts selling energy efficiency, the bottleneck may have moved.\n\nThe US datacenter pipeline hit 241 GW recently. Up 159% in a year. But only a third is under active development. New additions dropped by half in one quarter. Not because demand fell. Because the grid cannot keep up.\n\n183 GW has signed power agreements. That is roughly a fifth of America's total peak power demand.\n\nHyperscalers plan to spend about $650B on infrastructure this year. The money is there. The electricity may not be.\n\nThis pattern is not new. Railroads hit a steel bottleneck. Telecom hit a spectrum bottleneck. The internet hit a last-mile bottleneck.\n\nAI may be hitting an electricity bottleneck.\n\nJensen described a future with 75,000 NVIDIA employees and 7.5 million AI agents. A 100-to-1 ratio. If the rest of the industry moves in that direction, the demand for compute may not grow gradually. It may arrive all at once.\n\nMost people are asking which AI company wins. The more interesting question may be which grid gets built first."
+  },
+  {
+    "id": "bureaucracy-tax",
+    "scheduleDate": "2026-04-09",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/bureaucracy_tax.png",
+    "text": "You need a permit to build a house. Then another permit. Then an inspection. Then more permits.\n\nRules were supposed to create order. Instead they created sophisticated inertia dressed up as responsibility.\n\nThe assumption was that oversight creates safety. But oversight became the product. More people with incentive to slow things down. Procedures that optimize for protecting institutions, not for getting things done.\n\nDubai reduced licensing friction. Economic activity accelerated. Estonia digitized its government. Friction dropped to near zero.\n\nThe pattern is consistent. Institutions that survive on friction have no incentive to remove it.\n\nBureaucracy does not fail. It succeeds at self-preservation.\n\nveda.ng/bureaucracy-tax"
+  },
+  {
+    "id": "dark-forest-internet",
+    "scheduleDate": "2026-04-10",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/dark_forest.png",
+    "text": "The open web may already be dead.\n\nBots generate the majority of internet traffic now. They scrape, spam, and manufacture content faster than humans can produce it. The public square got so noisy that the rational response was to leave.\n\nHumans retreated. Into group chats. Discord servers. Newsletters. DMs.\n\nThis mirrors the Dark Forest theory from Liu Cixin. In space, civilizations hide because being visible means being targeted. On the internet, being visible means being harvested.\n\nThe new digital divide may not be about who has internet access. It may be about who has access to the human internet.\n\nveda.ng/dark-forest-internet"
   }
 ]
