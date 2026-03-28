@@ -372,5 +372,13 @@
     "posted": false,
     "image": "scripts/thread-assets/hustle_culture.png",
     "text": "We worship busy.\n\nThe person who sleeps four hours is more dedicated than the one who sleeps eight. Rest is weakness. Stillness is stagnation.\n\nBut the research tells a different story.\n\nStanford found that after 55 hours per week, productivity drops to nearly zero. You are not producing more. You are just present longer.\n\nChronic stress shrinks the hippocampus. That is the part of your brain responsible for memory and learning. It physically gets smaller.\n\nHustle culture sells sacrifice as strategy. But the biological cost is real and measurable.\n\nThe goalpost moves every time you reach it. Six figures feels empty. The promotion just means new problems. The apartment loses its appeal in a month.\n\nThat is not ambition. That may be a treadmill designed to look like a ladder.\n\nveda.ng/hustle-culture"
+  },
+  {
+    "id": "models-shrinking",
+    "scheduleDate": "2026-04-11",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/models_shrinking.png",
+    "text": "GPT-3.5 had 175 billion parameters.\n\nLlama 3 matched it with 8 billion. That is 20x fewer.\n\nPhi-4 has 14 billion parameters. It outperforms GPT-4o on math and graduate-level science benchmarks. A model that runs on a laptop beating one that needs a datacenter.\n\nThe pattern is consistent. Models are getting smaller and better at the same time.\n\nThe winning strategy shifted from more parameters to better data. Microsoft trained Phi-4 on curated, textbook-quality synthetic data instead of scraping the entire internet. Quality over quantity.\n\nWhen frontier performance required trillion-parameter models, only a few labs could play. When 14 billion parameters can match that performance in specific domains, the barrier drops by orders of magnitude.\n\n70 to 80 percent of enterprise AI tasks may work better with a focused small model than a giant general one.\n\nThe future of AI may not be one massive model that does everything. It may be many small models, each doing one thing well. Running locally. No API call. No subscription.\n\nThe trillion-parameter era may turn out to be a detour, not a destination."
   }
 ]

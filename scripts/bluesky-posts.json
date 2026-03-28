@@ -326,5 +326,13 @@
     "posted": false,
     "text": "You need a permit. Then another permit. Then an inspection. Then more permits.\n\nRules were supposed to create order. They created sophisticated inertia dressed up as responsibility.\n\nInstitutions that survive on friction have no incentive to remove it.\n\nveda.ng/bureaucracy-tax",
     "image": "scripts/thread-assets/bureaucracy_tax.png"
+  },
+  {
+    "id": "models-shrinking",
+    "scheduleDate": "2026-04-11",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "GPT-3.5 had 175B parameters. Llama 3 matched it with 8B. That is 20x fewer.\n\nPhi-4 has 14B. It outperforms GPT-4o on math and science benchmarks. A laptop model beating a datacenter model.\n\nThe winning strategy shifted from more parameters to better data.",
+    "image": "scripts/thread-assets/models_shrinking.png"
   }
 ]
