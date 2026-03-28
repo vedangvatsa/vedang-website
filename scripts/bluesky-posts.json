@@ -302,5 +302,13 @@
     "posted": false,
     "text": "One AI model gives you one opinion.\n\n100 AI agents debating across 16 rounds gives you something closer to truth.\n\nBuilt a swarm intelligence prediction tool. Bring your own API key. Ask any question.\n\nveda.ng/swarm-prediction",
     "image": "scripts/thread-assets/swarm_prediction.png"
+  },
+  {
+    "id": "ai-electricity-bottleneck",
+    "scheduleDate": "2026-04-08",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "NVIDIA doubled its AI revenue forecast from $500B to $1T.\n\nAt the same keynote, they pitched their new chip on throughput per megawatt. Not speed. Not power.\n\nUS datacenter pipeline hit 241 GW. Up 159% in a year. Only a third is active. The grid cannot keep up.\n\nAI may be hitting an electricity bottleneck.",
+    "image": "scripts/thread-assets/ai_electricity.png"
   }
 ]

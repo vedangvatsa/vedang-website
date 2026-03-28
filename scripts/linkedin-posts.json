@@ -348,5 +348,13 @@
     "posted": false,
     "image": "scripts/thread-assets/psych_dunning_kruger.png",
     "text": "I formed strong opinions about AI after a few weeks with it.\n\nThe longer I spent actually building with these systems, the less certain I became.\n\nThis is the Dunning-Kruger pattern. Early exposure produces peak confidence. Real depth produces more careful claims.\n\nAI may be running this cycle faster than anything before it. A week in and people publish threads about AGI timelines. Two years in and they ask more questions than they answer.\n\nThe loudest voices in any new technology tend to be the most recently arrived."
+  },
+  {
+    "id": "ai-electricity-bottleneck",
+    "scheduleDate": "2026-04-08",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/ai_electricity.png",
+    "text": "NVIDIA doubled its AI revenue forecast. From $500B to $1T.\n\nAt the same GTC keynote, they pitched their new chip on a new metric. Not speed. Not power. Throughput per megawatt.\n\nThe Vera Rubin platform can deliver up to 35x more inference per megawatt than GPU-only setups. 10x more per watt than the Blackwell generation before it.\n\nWhen the biggest chip company on earth starts selling energy efficiency, the bottleneck may have moved.\n\nThe US datacenter pipeline hit 241 GW recently. Up 159% in a year. But only a third is under active development. New additions dropped by half in one quarter. Not because demand fell. Because the grid cannot keep up.\n\n183 GW has signed power agreements. That is roughly a fifth of America's total peak power demand.\n\nHyperscalers plan to spend about $650B on infrastructure this year. The money is there. The electricity may not be.\n\nThis pattern is not new. Railroads hit a steel bottleneck. Telecom hit a spectrum bottleneck. The internet hit a last-mile bottleneck.\n\nAI may be hitting an electricity bottleneck.\n\nJensen described a future with 75,000 NVIDIA employees and 7.5 million AI agents. A 100-to-1 ratio. If the rest of the industry moves in that direction, the demand for compute may not grow gradually. It may arrive all at once.\n\nMost people are asking which AI company wins. The more interesting question may be which grid gets built first."
   }
 ]

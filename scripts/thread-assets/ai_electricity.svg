@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <rect width="1080" height="1080" fill="#FAFAFA"/>
+  
+  <!-- Title -->
+  <text x="540" y="90" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="48" font-weight="800" fill="#1a1a1a" text-anchor="middle">AI's real bottleneck</text>
+  <text x="540" y="145" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="48" font-weight="800" fill="#1a1a1a" text-anchor="middle">may not be chips.</text>
+
+  <!-- Subtitle -->
+  <text x="540" y="200" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="28" font-weight="400" fill="#666" text-anchor="middle">It may be electricity.</text>
+
+  <!-- Divider -->
+  <line x1="440" y1="240" x2="640" y2="240" stroke="#ddd" stroke-width="2"/>
+
+  <!-- Stat Block 1 -->
+  <text x="540" y="310" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="72" font-weight="800" fill="#1a1a1a" text-anchor="middle">241 GW</text>
+  <text x="540" y="355" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="24" font-weight="400" fill="#666" text-anchor="middle">US datacenter pipeline</text>
+  <text x="540" y="390" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="22" font-weight="400" fill="#999" text-anchor="middle">Up 159% in 12 months</text>
+
+  <!-- Stat Block 2 -->
+  <text x="540" y="480" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="72" font-weight="800" fill="#1a1a1a" text-anchor="middle">1/3</text>
+  <text x="540" y="525" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="24" font-weight="400" fill="#666" text-anchor="middle">under active development</text>
+  <text x="540" y="560" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="22" font-weight="400" fill="#999" text-anchor="middle">New additions dropped 50% in one quarter</text>
+
+  <!-- Stat Block 3 -->
+  <text x="540" y="650" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="72" font-weight="800" fill="#1a1a1a" text-anchor="middle">22%</text>
+  <text x="540" y="695" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="24" font-weight="400" fill="#666" text-anchor="middle">of US peak power demand</text>
+  <text x="540" y="730" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="22" font-weight="400" fill="#999" text-anchor="middle">signed to datacenter power agreements</text>
+
+  <!-- Divider -->
+  <line x1="100" y1="780" x2="980" y2="780" stroke="#eee" stroke-width="1"/>
+
+  <!-- Historical pattern -->
+  <text x="540" y="830" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#1a1a1a" text-anchor="middle">Every infrastructure era hits a physical limit</text>
+
+  <!-- Three columns -->
+  <text x="220" y="885" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#1a1a1a" text-anchor="middle">Railroads</text>
+  <text x="220" y="920" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#999" text-anchor="middle">Steel</text>
+
+  <text x="540" y="885" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#1a1a1a" text-anchor="middle">Telecom</text>
+  <text x="540" y="920" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#999" text-anchor="middle">Spectrum</text>
+
+  <text x="860" y="885" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#1a1a1a" text-anchor="middle">AI</text>
+  <text x="860" y="920" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#999" text-anchor="middle">Electricity</text>
+
+  <!-- Source -->
+  <text x="540" y="985" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#bbb" text-anchor="middle">Source: Wood Mackenzie, NVIDIA GTC, Reuters</text>
+
+  <!-- Watermark -->
+  <text x="540" y="1040" font-family="system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#1a1a1a" text-anchor="middle">@vedangvatsa</text>
+</svg>
