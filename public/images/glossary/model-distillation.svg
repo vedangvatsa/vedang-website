@@ -4,26 +4,12 @@
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
       <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
     </marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/>
+    </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="100" y="10" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="44" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Model distillation is a technique for creating a smaller,</text>
-<text x="400" y="65.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">faster model that approximates the behavior of a larger,</text>
-<text x="400" y="87.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">more capable one.</text>
-<line x1="400" y1="114" x2="400" y2="122" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="100" y="130" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">The large model is called the teacher, the smaller model</text>
-<text x="400" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">the student.</text>
-<line x1="400" y1="234" x2="400" y2="242" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="100" y="250" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="284" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">During distillation, the student model is trained not just</text>
-<text x="400" y="305.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">on labeled data, but on the output probability</text>
-<text x="400" y="327.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">distributions of the teacher.</text>
-
-  </g>
-  
+  <g transform="translate(0,-22)"><rect x="80" y="110" width="200" height="140" rx="12" fill="#ffffff" stroke="#9333ea" stroke-width="2"/><text x="180" y="160" font-family="'Inter',sans-serif" font-weight="700" font-size="24" fill="#9333ea" text-anchor="middle">Teacher</text><text x="180" y="190" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#787774" text-anchor="middle">175B params</text><text x="180" y="230" font-family="'Inter',sans-serif" font-weight="500" font-size="30" fill="#787774" text-anchor="middle">🧠</text><line x1="285" y1="180" x2="400" y2="180" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><text x="345" y="165" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#9333ea" text-anchor="middle">Soft Labels</text><rect x="410" y="140" width="140" height="90" rx="12" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="480" y="180" font-family="'Inter',sans-serif" font-weight="700" font-size="22" fill="#10b981" text-anchor="middle">Student</text><text x="480" y="210" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#787774" text-anchor="middle">7B params</text><line x1="555" y1="185" x2="610" y2="185" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)"/><rect x="620" y="155" width="130" height="60" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="685" y="192" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#10b981" text-anchor="middle">95% quality</text><text x="400" y="310" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">Big model teaches small model</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

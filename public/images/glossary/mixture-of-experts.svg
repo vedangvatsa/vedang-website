@@ -4,28 +4,14 @@
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
       <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
     </marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/>
+    </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="35" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="71.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Mixture of Experts is a neural network</text>
-<text x="210" y="88" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">architecture where only a fraction of the</text>
-<text x="210" y="104.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">model's parameters are active for any given</text>
-<text x="210" y="120.4" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">input, routing each token to the subset of</text>
-<text x="210" y="136.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">'expert' networks most relevant to it.</text>
-<rect x="415" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="73.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Instead of every token passing</text>
-<text x="590" y="94.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">through all layers, a router</text>
-<text x="590" y="116.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">network decides which experts to</text>
-<text x="590" y="138" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">activate.</text>
-<path d="M 210 160 L 380 220" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 590 160 L 420 220" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="160" y="220" width="480" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="285.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">GPT-4 and Mixtral use MoE architectures.</text>
-
-  </g>
-  
+  <g transform="translate(0,-35)"><rect x="60" y="150" width="120" height="55" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<text x="120" y="184.5" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Input</text><line x1="185" y1="178" x2="240" y2="178" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="250" y="140" width="100" height="70" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="3"/>
+<text x="300" y="182" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#9333ea" text-anchor="middle">Router</text><rect x="430" y="100" width="120" height="45" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="3" /><text x="490" y="130" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#9333ea" text-anchor="middle">Expert 1</text><line x1="355" y1="175" x2="425" y2="122" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="430" y="165" width="120" height="45" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.4"/><text x="490" y="195" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Expert 2</text><rect x="430" y="230" width="120" height="45" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="3" /><text x="490" y="260" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#9333ea" text-anchor="middle">Expert 3</text><line x1="355" y1="175" x2="425" y2="252" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="430" y="295" width="120" height="45" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.4"/><text x="490" y="325" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Expert 4</text><line x1="555" y1="122" x2="640" y2="200" stroke="#9333ea" stroke-width="2"/><line x1="555" y1="252" x2="640" y2="200" stroke="#9333ea" stroke-width="2"/><rect x="650" y="175" width="100" height="50" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="700" y="207" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#10b981" text-anchor="middle">Output</text><text x="400" y="345" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Route to specialized sub-networks</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

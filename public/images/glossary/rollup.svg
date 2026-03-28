@@ -1,36 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="250" y="7.5" width="300" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="29.924999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">A rollup is a Layer 2 scaling solution that</text>
-<text x="400" y="42.074999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">executes transactions off-chain for speed and</text>
-<text x="400" y="54.225" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">cost efficiency while posting transaction data or</text>
-<text x="400" y="66.375" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">proofs to Layer 1 (typically Ethereum) for...</text>
-<line x1="400" y1="82.5" x2="400" y2="93.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="200" y="97.5" width="400" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="121" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">The core insight: execution is expensive</text>
-<text x="400" y="139.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">on-chain, but data storage and verification</text>
-<text x="400" y="158.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">are relatively cheap.</text>
-<line x1="400" y1="172.5" x2="400" y2="183.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="150" y="187.5" width="500" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="211" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Rollups move execution off-chain while keeping enough</text>
-<text x="400" y="229.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">data on Layer 1 that anyone can verify correctness or</text>
-<text x="400" y="248.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">reconstruct the rollup state.</text>
-<line x1="400" y1="262.5" x2="400" y2="273.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="100" y="277.5" width="600" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="302" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Two types dominate: Optimistic rollups assume transactions are valid by</text>
-<text x="400" y="319.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">default, using a challenge period (typically 7 days) where anyone can</text>
-<text x="400" y="337.1" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">submit fraud proofs if they detect invalid state transitions.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-42)"><text x="140" y="120" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#787774" text-anchor="middle">Transactions</text><rect x="80" y="135" width="18" height="80" rx="3" fill="#2563eb" fill-opacity="0.15" stroke="#2563eb" stroke-width="1"/><rect x="102" y="135" width="18" height="80" rx="3" fill="#2563eb" fill-opacity="0.2" stroke="#2563eb" stroke-width="1"/><rect x="124" y="135" width="18" height="80" rx="3" fill="#2563eb" fill-opacity="0.25" stroke="#2563eb" stroke-width="1"/><rect x="146" y="135" width="18" height="80" rx="3" fill="#2563eb" fill-opacity="0.30000000000000004" stroke="#2563eb" stroke-width="1"/><rect x="168" y="135" width="18" height="80" rx="3" fill="#2563eb" fill-opacity="0.35" stroke="#2563eb" stroke-width="1"/><rect x="190" y="135" width="18" height="80" rx="3" fill="#2563eb" fill-opacity="0.4" stroke="#2563eb" stroke-width="1"/><line x1="230" y1="175" x2="310" y2="175" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/><rect x="320" y="130" width="160" height="90" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="3"/><text x="400" y="170" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#2563eb" text-anchor="middle">Bundle</text><text x="400" y="198" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#2563eb" text-anchor="middle">+ Proof</text><line x1="485" y1="175" x2="560" y2="175" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/><rect x="570" y="130" width="170" height="90" rx="10" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="655" y="170" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#10b981" text-anchor="middle">Post to L1</text><text x="655" y="198" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#787774" text-anchor="middle">Ethereum</text><text x="400" y="290" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#2563eb" text-anchor="middle">100x cheaper, same security</text><text x="400" y="340" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Execute off-chain, verify on-chain</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

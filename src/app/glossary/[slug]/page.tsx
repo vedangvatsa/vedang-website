@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { ArrowLeft } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { getTermBySlug, glossaryTerms } from '@/lib/glossary';
 import { notFound } from 'next/navigation';
@@ -105,6 +106,17 @@ export default async function GlossaryTermPage({ params }: PageProps) {
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
             {term.term}
           </h1>
+          <div className="mt-6 mx-auto max-w-2xl">
+            <Image
+              src={`/images/glossary/${term.slug}.svg?v=4`}
+              alt={`${term.term} infographic`}
+              width={800}
+              height={400}
+              className="w-full h-auto rounded-lg"
+              unoptimized
+              priority
+            />
+          </div>
         </div>
       </section>
 

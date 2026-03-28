@@ -1,49 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
-<text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">1</text>
-<rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="77.65" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">Caching strategies determine how</text>
-<text x="80" y="96.55000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">data flows between cache and</text>
-<text x="80" y="115.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">underlying storage, optimizing</text>
-<text x="80" y="134.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">for different tradeoffs between</text>
-<text x="80" y="153.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">consistency, performance, and</text>
-<text x="80" y="172.15" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">complexity.</text>
-<circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
-<text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">2</text>
-<rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="77.65" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">Cache-aside (lazy loading)</text>
-<text x="480" y="96.55000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">requires application code to</text>
-<text x="480" y="115.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">manage the cache explicitly:</text>
-<text x="480" y="134.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">check cache first, on miss fetch</text>
-<text x="480" y="153.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">from database, then populate</text>
-<text x="480" y="172.15" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">cache.</text>
-<circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
-<text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">3</text>
-<rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Simple but error-prone,</text>
-<text x="80" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">developers must remember to</text>
-<text x="80" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">invalidate cached data when</text>
-<text x="80" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">the source changes.</text>
-<circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
-<text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">4</text>
-<rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="252.1" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">Read-through cache handles reads</text>
-<text x="480" y="270.99999999999994" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">automatically: misses trigger</text>
-<text x="480" y="289.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">database fetches that populate</text>
-<text x="480" y="308.79999999999995" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">the cache transparently to the</text>
-<text x="480" y="327.7" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">application.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-7)"><text x="400" y="100" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#787774" text-anchor="middle">Speed via stored copies</text><rect x="115" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#059669" stroke-width="3"/><text x="175" y="182" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#059669" text-anchor="middle">Request</text><line x1="238" y1="175" x2="262" y2="175" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="265" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="325" y="182" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#37352f" text-anchor="middle">Check Cache</text><line x1="388" y1="175" x2="412" y2="175" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="415" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="475" y="182" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Hit/Miss</text><line x1="538" y1="175" x2="562" y2="175" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="565" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#059669" stroke-width="3"/><text x="625" y="182" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#10b981" text-anchor="middle">Serve</text><text x="400" y="290" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">Store data closer to where it is needed</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

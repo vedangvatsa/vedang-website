@@ -1,49 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
-<text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">1</text>
-<rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="77.65" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">Throughput measures the rate at</text>
-<text x="80" y="96.55000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">which a system processes work</text>
-<text x="80" y="115.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">over time, typically expressed as</text>
-<text x="80" y="134.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">requests per second, tokens per</text>
-<text x="80" y="153.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">second, or transactions per</text>
-<text x="80" y="172.15" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">minute.</text>
-<circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
-<text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">2</text>
-<rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="77.65" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">It's distinct from but related to</text>
-<text x="480" y="96.55000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">latency: latency measures how</text>
-<text x="480" y="115.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">long each individual request</text>
-<text x="480" y="134.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">takes, while throughput measures</text>
-<text x="480" y="153.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">how many requests complete in a</text>
-<text x="480" y="172.15" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">given period.</text>
-<circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
-<text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">3</text>
-<rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">A system can have low latency</text>
-<text x="80" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">but low throughput if it</text>
-<text x="80" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">processes requests</text>
-<text x="80" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">sequentially.</text>
-<circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
-<text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">4</text>
-<rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="247.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Batching, grouping multiple</text>
-<text x="480" y="269.00000000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">requests and processing them</text>
-<text x="480" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">together, is the primary</text>
-<text x="480" y="312.20000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">technique for improving</text>
-<text x="480" y="333.80000000000007" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">throughput.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g><line x1="60" y1="60" x2="180" y2="60" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/><rect x="30" y="52" width="28" height="16" rx="3" fill="#059669" fill-opacity="0.1" stroke="#059669" stroke-width="1"/><line x1="60" y1="100" x2="180" y2="100" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/><rect x="30" y="92" width="28" height="16" rx="3" fill="#059669" fill-opacity="0.15000000000000002" stroke="#059669" stroke-width="1"/><line x1="60" y1="140" x2="180" y2="140" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/><rect x="30" y="132" width="28" height="16" rx="3" fill="#059669" fill-opacity="0.2" stroke="#059669" stroke-width="1"/><line x1="60" y1="180" x2="180" y2="180" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/><rect x="30" y="172" width="28" height="16" rx="3" fill="#059669" fill-opacity="0.25" stroke="#059669" stroke-width="1"/><line x1="60" y1="220" x2="180" y2="220" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/><rect x="30" y="212" width="28" height="16" rx="3" fill="#059669" fill-opacity="0.30000000000000004" stroke="#059669" stroke-width="1"/><line x1="60" y1="260" x2="180" y2="260" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/><rect x="30" y="252" width="28" height="16" rx="3" fill="#059669" fill-opacity="0.35" stroke="#059669" stroke-width="1"/><rect x="200" y="40" width="200" height="240" rx="16" fill="#ffffff" stroke="#059669" stroke-width="3"/><text x="300" y="130" font-family="'Inter',sans-serif" font-weight="800" font-size="24" fill="#059669" text-anchor="middle">System</text><circle cx="300" cy="200" r="40" fill="none" stroke="#e5e7eb" stroke-width="4"/><path d="M 300 200 L 325 175" stroke="#059669" stroke-width="3" stroke-linecap="round"/><circle cx="300" cy="200" r="5" fill="#059669"/><text x="300" y="260" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">Processing</text><line x1="405" y1="160" x2="470" y2="160" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/><rect x="490" y="60" width="240" height="180" rx="12" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="610" y="120" font-family="'Inter',sans-serif" font-weight="800" font-size="40" fill="#10b981" text-anchor="middle">10,000</text><text x="610" y="155" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#787774" text-anchor="middle">req/sec</text><text x="540" y="200" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#787774" text-anchor="start">Latency:</text><text x="640" y="200" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#787774" text-anchor="start">per request</text><text x="540" y="225" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#059669" text-anchor="start">Throughput:</text><text x="660" y="225" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#787774" text-anchor="start">all requests</text><text x="400" y="330" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">How much work flows through per unit time</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

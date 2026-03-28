@@ -1,43 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="10" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="130" y="114.35" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Federated Learning is an</text>
-<text x="130" y="131.9" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">advanced machine learning</text>
-<text x="130" y="149.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">technique that trains an</text>
-<text x="130" y="167" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">artificial intelligence</text>
-<text x="130" y="184.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">model across multiple</text>
-<text x="130" y="202.10000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">decentralized edge devices</text>
-<text x="130" y="219.65000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">or servers holding local</text>
-<text x="130" y="237.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">data samples, without</text>
-<text x="130" y="254.75" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">actively exchanging them.</text>
-<line x1="255" y1="180" x2="272" y2="180" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="280" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="124.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Simply put, instead of</text>
-<text x="400" y="144.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">sending your private</text>
-<text x="400" y="165" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">data to a central</text>
-<text x="400" y="185.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">server to train an AI,</text>
-<text x="400" y="205.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">the AI is sent directly</text>
-<text x="400" y="225.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">to your device to learn</text>
-<text x="400" y="246" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">from your data locally.</text>
-<line x1="525" y1="180" x2="542" y2="180" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="550" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="670" y="134.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Why this shift matters:</text>
-<text x="670" y="154.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Historically, training</text>
-<text x="670" y="175.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">powerful AI models</text>
-<text x="670" y="195.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">required centralizing</text>
-<text x="670" y="215.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">massive amounts of</text>
-<text x="670" y="235.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">information.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-37)"><circle cx="400" cy="200" r="40" fill="#9333ea" fill-opacity="0.08" stroke="#9333ea" stroke-width="3"/><text x="400" y="208" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#9333ea" text-anchor="middle">Global Model</text><rect x="140" y="110" width="80" height="40" rx="6" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="180" y="136" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#37352f" text-anchor="middle">Phone</text><path d="M 268 158 L 323 175.5" fill="none" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4 4"/><rect x="580" y="110" width="80" height="40" rx="6" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="620" y="136" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#37352f" text-anchor="middle">Tablet</text><path d="M 532 158 L 477 175.5" fill="none" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4 4"/><rect x="140" y="260" width="80" height="40" rx="6" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="180" y="286" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#37352f" text-anchor="middle">Laptop</text><path d="M 268 248 L 323 228" fill="none" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4 4"/><rect x="580" y="260" width="80" height="40" rx="6" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="620" y="286" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#37352f" text-anchor="middle">Hospital</text><path d="M 532 248 L 477 228" fill="none" stroke="#9333ea" stroke-width="1.5" stroke-dasharray="4 4"/><text x="400" y="340" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">Train AI without sharing raw data</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

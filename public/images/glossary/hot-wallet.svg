@@ -1,41 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="10" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="130" y="142.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">A hot wallet is</text>
-<text x="130" y="164" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">cryptocurrency</text>
-<text x="130" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">storage that stays</text>
-<text x="130" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">connected to the</text>
-<text x="130" y="228.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">internet.</text>
-<line x1="255" y1="180" x2="272" y2="180" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="280" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="120.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">It holds private keys</text>
-<text x="400" y="142.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">in a software</text>
-<text x="400" y="163.99999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">environment</text>
-<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">accessible from a</text>
-<text x="400" y="207.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">desktop, phone, or</text>
-<text x="400" y="228.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">browser, allowing</text>
-<text x="400" y="250.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">instant transactions.</text>
-<line x1="525" y1="180" x2="542" y2="180" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="550" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="670" y="118.75" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Hot wallets include</text>
-<text x="670" y="137.65" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">mobile apps (Trust</text>
-<text x="670" y="156.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Wallet, MetaMask</text>
-<text x="670" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Mobile), browser</text>
-<text x="670" y="194.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">extensions (MetaMask,</text>
-<text x="670" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Phantom), desktop</text>
-<text x="670" y="232.15" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">applications, and</text>
-<text x="670" y="251.05" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">exchange-hosted wallets.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g><rect x="250" y="40" width="300" height="160" rx="16" fill="#ffffff" stroke="#2563eb" stroke-width="3"/><circle cx="400" cy="100" r="18" fill="none" stroke="#2563eb" stroke-width="2"/><line x1="418" y1="100" x2="450" y2="100" stroke="#2563eb" stroke-width="2"/><line x1="440" y1="95" x2="440" y2="105" stroke="#2563eb" stroke-width="2"/><line x1="450" y1="95" x2="450" y2="105" stroke="#2563eb" stroke-width="2"/><text x="400" y="145" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#2563eb" text-anchor="middle">Private Key</text><text x="400" y="175" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#787774" text-anchor="middle">Connected to Internet</text><path d="M 368 68 Q 400 50 432 68" fill="none" stroke="#10b981" stroke-width="2"/><path d="M 380 58 Q 400 45 420 58" fill="none" stroke="#10b981" stroke-width="2"/><circle cx="400" cy="73" r="3" fill="#10b981"/><rect x="80" y="230" width="280" height="60" rx="8" fill="#10b981" fill-opacity="0.06" stroke="#10b981" stroke-width="1.5"/><text x="220" y="268" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#10b981" text-anchor="middle">✓ Fast access, easy to trade</text><rect x="440" y="230" width="280" height="60" rx="8" fill="#ef4444" fill-opacity="0.06" stroke="#ef4444" stroke-width="1.5"/><text x="580" y="268" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#ef4444" text-anchor="middle">✗ Vulnerable to hacks</text><text x="400" y="340" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Online wallet — convenient but riskier</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

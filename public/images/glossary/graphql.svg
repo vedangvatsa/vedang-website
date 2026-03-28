@@ -1,35 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="250" y="12.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="55.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">GraphQL is a query language</text>
-<text x="400" y="75.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">for APIs.</text>
-<path d="M 400 107 L 220 132" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 400 107 L 580 132" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="50" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="200" y="165" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Clients specify exactly what</text>
-<text x="200" y="185.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">data they need and the server</text>
-<text x="200" y="205.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">returns that data.</text>
-<rect x="450" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="600" y="165" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">This contrasts with REST APIs</text>
-<text x="600" y="185.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">where the server defines what</text>
-<text x="600" y="205.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">data is returned.</text>
-<path d="M 220 227 L 400 252" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 580 227 L 400 252" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="250" y="252.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="285" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A REST endpoint might return</text>
-<text x="400" y="305.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">user data with name, email,</text>
-<text x="400" y="325.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">age, address.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-7)"><text x="400" y="100" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#787774" text-anchor="middle">Flexible query language</text><rect x="115" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#059669" stroke-width="3"/><text x="175" y="182" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#059669" text-anchor="middle">Query Fields</text><line x1="238" y1="175" x2="262" y2="175" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="265" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="325" y="182" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#37352f" text-anchor="middle">Single Request</text><line x1="388" y1="175" x2="412" y2="175" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="415" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="475" y="182" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Exact Data</text><line x1="538" y1="175" x2="562" y2="175" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="565" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#059669" stroke-width="3"/><text x="625" y="182" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#10b981" text-anchor="middle">No Over-fetch</text><text x="400" y="290" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">Ask for exactly what you need</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

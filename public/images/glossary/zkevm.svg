@@ -1,38 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="70" y="120" width="280" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="146.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">A Zero-Knowledge Ethereum Virtual</text>
-<text x="210" y="161.575" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Machine (zkEVM) represents the holy</text>
-<text x="210" y="176.42499999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">grail of blockchain scaling:</text>
-<text x="210" y="191.275" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">generating cryptographically secure</text>
-<text x="210" y="206.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">mathematical proofs for standard</text>
-<text x="210" y="220.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Ethereum smart contract execution.</text>
-<path d="M 350 180 C 400 180, 400 80, 445 80" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 350 180 C 400 180, 400 280, 445 280" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="450" y="25" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="46.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">A ZK-Rollup batches thousands of</text>
-<text x="590" y="61.575" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">transactions off-chain and submits a</text>
-<text x="590" y="76.425" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">tiny 'validity proof' to the Ethereum</text>
-<text x="590" y="91.275" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">mainnet, guaranteeing execution was</text>
-<text x="590" y="106.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">flawless without the base layer</text>
-<text x="590" y="120.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">needing to recompute anything.</text>
-<rect x="450" y="225" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="254.15" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">However, historically, generating</text>
-<text x="590" y="269.00000000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">these proofs was so computationally</text>
-<text x="590" y="283.85" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">demanding that it only worked for</text>
-<text x="590" y="298.70000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">simple transfers or custom-built,</text>
-<text x="590" y="313.55000000000007" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">application-specific circuits.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g><rect x="60" y="130" width="160" height="60" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="140" y="167" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Solidity Code</text><line x1="225" y1="160" x2="300" y2="160" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/><rect x="310" y="110" width="180" height="100" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="3"/><text x="400" y="155" font-family="'Inter',sans-serif" font-weight="800" font-size="24" fill="#2563eb" text-anchor="middle">zkEVM</text><text x="400" y="185" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">ZK Circuit + EVM</text><line x1="495" y1="160" x2="580" y2="160" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/><rect x="590" y="120" width="150" height="80" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="665" y="155" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#10b981" text-anchor="middle">Validity Proof</text><text x="665" y="180" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">Instant Finality</text><text x="400" y="270" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">Deploy Solidity, get ZK security</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

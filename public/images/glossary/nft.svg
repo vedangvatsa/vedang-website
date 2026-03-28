@@ -4,32 +4,12 @@
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
       <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
     </marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/>
+    </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="10" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="130" y="131.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">An NFT is a unique</text>
-<text x="130" y="153.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">cryptographic token</text>
-<text x="130" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">representing</text>
-<text x="130" y="196.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">ownership of a</text>
-<text x="130" y="218" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">specific digital or</text>
-<text x="130" y="239.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">physical asset.</text>
-<line x1="255" y1="180" x2="272" y2="180" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="280" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="131.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Unlike</text>
-<text x="400" y="153.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">cryptocurrencies,</text>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">which are fungible,</text>
-<text x="400" y="196.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">one Bitcoin equals</text>
-<text x="400" y="218" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">another Bitcoin, NFTs</text>
-<text x="400" y="239.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">are distinct.</text>
-<line x1="525" y1="180" x2="542" y2="180" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="550" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="670" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Each NFT has a unique</text>
-<text x="670" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">identifier.</text>
-
-  </g>
-  
+  <g transform="translate(0,-30)"><rect x="250" y="90" width="180" height="160" rx="4" fill="#ffffff" stroke="#2563eb" stroke-width="3"/><rect x="265" y="105" width="150" height="120" rx="2" fill="#2563eb" fill-opacity="0.05"/><circle cx="310" cy="155" r="25" fill="#2563eb" fill-opacity="0.2"/><rect x="350" y="140" width="40" height="40" rx="4" fill="#f59e0b" fill-opacity="0.3"/><path d="M 290 190 L 330 160 L 370 180 L 400 150" fill="none" stroke="#2563eb" stroke-width="2"/><rect x="290" y="230" width="100" height="30" rx="15" fill="#2563eb" fill-opacity="0.1" stroke="#2563eb" stroke-width="1.5"/><text x="340" y="251" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#2563eb" text-anchor="middle">#1337</text><rect x="80" y="280" width="120" height="40" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="140" y="307" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Unique</text><rect x="260" y="280" width="160" height="40" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="340" y="307" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Verifiable Owner</text><rect x="480" y="280" width="130" height="40" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="545" y="307" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Tradeable</text><text x="400" y="345" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">One-of-a-kind digital ownership</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

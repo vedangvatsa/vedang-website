@@ -1,45 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="10" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="130" y="120.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Vision Transformers</text>
-<text x="130" y="142.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">(ViT) adapt the</text>
-<text x="130" y="163.99999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">transformer</text>
-<text x="130" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">architecture,</text>
-<text x="130" y="207.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">originally built for</text>
-<text x="130" y="228.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">text, to analyze</text>
-<text x="130" y="250.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">images.</text>
-<line x1="255" y1="180" x2="272" y2="180" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="280" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="119.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Instead of using</text>
-<text x="400" y="135.59999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">convolutional layers that</text>
-<text x="400" y="151.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">slide filters across pixels,</text>
-<text x="400" y="168" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">a ViT splits the picture into</text>
-<text x="400" y="184.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">a grid of fixed-size patches,</text>
-<text x="400" y="200.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">flattens each patch into a</text>
-<text x="400" y="216.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">vector, and feeds the</text>
-<text x="400" y="232.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">sequence into a standard</text>
-<text x="400" y="249" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">transformer encoder.</text>
-<line x1="525" y1="180" x2="542" y2="180" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="550" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="670" y="123.12499999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">The model learns to</text>
-<text x="670" y="140.675" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">recognize patterns by</text>
-<text x="670" y="158.225" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">attending to relationships</text>
-<text x="670" y="175.775" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">between all patches</text>
-<text x="670" y="193.325" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">simultaneously, capturing</text>
-<text x="670" y="210.875" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">long-range spatial</text>
-<text x="670" y="228.425" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">dependencies that CNNs</text>
-<text x="670" y="245.97500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">struggle with.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-7)"><text x="400" y="100" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#787774" text-anchor="middle">Image patches as tokens</text><rect x="115" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#9333ea" stroke-width="3"/><text x="175" y="182" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#9333ea" text-anchor="middle">Image</text><line x1="238" y1="175" x2="262" y2="175" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="265" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="325" y="182" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#37352f" text-anchor="middle">16×16 Patches</text><line x1="388" y1="175" x2="412" y2="175" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="415" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="475" y="182" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#37352f" text-anchor="middle">Transformer</text><line x1="538" y1="175" x2="562" y2="175" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="565" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#9333ea" stroke-width="3"/><text x="625" y="182" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#10b981" text-anchor="middle">Classify</text><text x="400" y="290" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">Apply self-attention to image patches</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

@@ -4,39 +4,12 @@
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
       <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
     </marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/>
+    </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <line x1="107.5" y1="70" x2="692.5" y2="70" stroke="#9333ea" stroke-width="1.5"/>
-<circle cx="107.5" cy="70" r="4" fill="#9333ea"/>
-<line x1="107.5" y1="74" x2="107.5" y2="94" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="15" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="107.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A token is the</text>
-<text x="107.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">smallest unit of</text>
-<text x="107.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">text that an LLM</text>
-<text x="107.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">processes.</text>
-<circle cx="302.5" cy="70" r="4" fill="#9333ea"/>
-<line x1="302.5" y1="74" x2="302.5" y2="94" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="210" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="302.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">It's not a word.</text>
-<circle cx="497.5" cy="70" r="4" fill="#9333ea"/>
-<line x1="497.5" y1="74" x2="497.5" y2="94" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="405" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="497.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A word is often</text>
-<text x="497.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">multiple tokens,</text>
-<text x="497.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">sometimes a token</text>
-<text x="497.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">is part of a</text>
-<text x="497.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">word.</text>
-<circle cx="692.5" cy="70" r="4" fill="#9333ea"/>
-<line x1="692.5" y1="74" x2="692.5" y2="94" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="600" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="692.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">In English, one</text>
-<text x="692.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">token is roughly</text>
-<text x="692.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">0.</text>
-
-  </g>
-  
+  <g transform="translate(0,-17)"><rect x="80" y="90" width="640" height="50" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="400" y="122" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">"Tokenization breaks text into pieces"</text><line x1="400" y1="145" x2="400" y2="175" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="80" y="190" width="100" height="45" rx="6" fill="#9333ea" fill-opacity="0.1" stroke="#9333ea" stroke-width="2"/><text x="130" y="218" font-family="'Inter',sans-serif" font-weight="600" font-size="15" fill="#9333ea" text-anchor="middle">Token</text><rect x="190" y="190" width="100" height="45" rx="6" fill="#2563eb" fill-opacity="0.1" stroke="#2563eb" stroke-width="2"/><text x="240" y="218" font-family="'Inter',sans-serif" font-weight="600" font-size="15" fill="#2563eb" text-anchor="middle">ization</text><rect x="300" y="190" width="100" height="45" rx="6" fill="#059669" fill-opacity="0.1" stroke="#059669" stroke-width="2"/><text x="350" y="218" font-family="'Inter',sans-serif" font-weight="600" font-size="15" fill="#059669" text-anchor="middle"> breaks</text><rect x="410" y="190" width="100" height="45" rx="6" fill="#f59e0b" fill-opacity="0.1" stroke="#f59e0b" stroke-width="2"/><text x="460" y="218" font-family="'Inter',sans-serif" font-weight="600" font-size="15" fill="#f59e0b" text-anchor="middle"> text</text><rect x="520" y="190" width="100" height="45" rx="6" fill="#ef4444" fill-opacity="0.1" stroke="#ef4444" stroke-width="2"/><text x="570" y="218" font-family="'Inter',sans-serif" font-weight="600" font-size="15" fill="#ef4444" text-anchor="middle"> into</text><rect x="630" y="190" width="100" height="45" rx="6" fill="#8b5cf6" fill-opacity="0.1" stroke="#8b5cf6" stroke-width="2"/><text x="680" y="218" font-family="'Inter',sans-serif" font-weight="600" font-size="15" fill="#8b5cf6" text-anchor="middle"> pieces</text><text x="130" y="265" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">ID: 2843</text><text x="240" y="265" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">ID: 2960</text><text x="350" y="265" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">ID: 3077</text><text x="460" y="265" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">ID: 3194</text><text x="570" y="265" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">ID: 3311</text><text x="680" y="265" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">ID: 3428</text><text x="400" y="320" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Text → Subword units → Numerical IDs</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

@@ -1,38 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="70" y="120" width="280" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="143.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">A Content Delivery Network is a</text>
-<text x="210" y="159.89999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">group of servers spread across</text>
-<text x="210" y="176.1" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">many locations around the world</text>
-<text x="210" y="192.3" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">that work together to deliver web</text>
-<text x="210" y="208.5" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">content faster by serving it from</text>
-<text x="210" y="224.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">the server closest to each user.</text>
-<path d="M 350 180 C 400 180, 400 80, 445 80" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 350 180 C 400 180, 400 280, 445 280" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="450" y="25" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="46.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Instead of every visitor hitting your</text>
-<text x="590" y="61.575" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">origin server in one location, a CDN</text>
-<text x="590" y="76.425" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">caches copies of your images, videos,</text>
-<text x="590" y="91.275" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">CSS, JavaScript, and other static</text>
-<text x="590" y="106.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">files at edge servers in dozens or</text>
-<text x="590" y="120.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">hundreds of cities.</text>
-<rect x="450" y="225" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="251.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">When someone in Tokyo requests</text>
-<text x="590" y="268" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">your website, they get served from</text>
-<text x="590" y="284.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">a nearby CDN node in Tokyo rather</text>
-<text x="590" y="300.4" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">than waiting for data to travel</text>
-<text x="590" y="316.59999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">from your server in New York.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-45)"><circle cx="400" cy="180" r="35" fill="#059669" fill-opacity="0.1" stroke="#059669" stroke-width="2"/><text x="400" y="188" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#059669" text-anchor="middle">Origin</text><circle cx="180" cy="120" r="20" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="180" y="126" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#787774" text-anchor="middle">Edge</text><line x1="257" y1="141" x2="334" y2="162" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3 3"/><circle cx="620" cy="120" r="20" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="620" y="126" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#787774" text-anchor="middle">Edge</text><line x1="543" y1="141" x2="466" y2="162" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3 3"/><circle cx="140" cy="260" r="20" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="140" y="266" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#787774" text-anchor="middle">Edge</text><line x1="231" y1="232" x2="322" y2="204" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3 3"/><circle cx="660" cy="260" r="20" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="660" y="266" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#787774" text-anchor="middle">Edge</text><line x1="569" y1="232" x2="478" y2="204" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3 3"/><circle cx="300" cy="290" r="20" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="300" y="296" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#787774" text-anchor="middle">Edge</text><line x1="335" y1="251.5" x2="370" y2="213" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3 3"/><circle cx="500" cy="290" r="20" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="500" y="296" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#787774" text-anchor="middle">Edge</text><line x1="465" y1="251.5" x2="430" y2="213" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3 3"/><text x="400" y="345" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">Serve content from nearest edge node</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

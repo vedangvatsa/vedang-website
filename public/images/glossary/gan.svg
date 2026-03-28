@@ -1,38 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
-    </marker>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/></marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/></marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="70" y="120" width="280" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="139.29999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">A generative adversarial network</text>
-<text x="210" y="154.14999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">trains two neural networks in</text>
-<text x="210" y="168.99999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">competition: a generator that creates</text>
-<text x="210" y="183.85" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">synthetic samples and a discriminator</text>
-<text x="210" y="198.7" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">that distinguishes real samples from</text>
-<text x="210" y="213.54999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">generated ones, with each network</text>
-<text x="210" y="228.4" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">improving to defeat the other.</text>
-<path d="M 350 180 C 400 180, 400 80, 445 80" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 350 180 C 400 180, 400 280, 445 280" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="450" y="25" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="49.449999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">The generator takes random</text>
-<text x="590" y="67" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">noise as input and transforms</text>
-<text x="590" y="84.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">it into samples mimicking the</text>
-<text x="590" y="102.10000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">training distribution, images,</text>
-<text x="590" y="119.64999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">audio, or other data types.</text>
-<rect x="450" y="225" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="249.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">The discriminator receives both</text>
-<text x="590" y="267" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">real training samples and</text>
-<text x="590" y="284.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">generated samples, outputting a</text>
-<text x="590" y="302.1" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">probability that each sample is</text>
-<text x="590" y="319.65000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">real.</text>
-
-  </g>
-  
+  <g transform="translate(0,-50)"><rect x="60" y="150" width="100" height="60" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="110" y="187" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">Noise</text><line x1="165" y1="180" x2="230" y2="180" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="240" y="130" width="140" height="100" rx="12" fill="#ffffff" stroke="#9333ea" stroke-width="3" stroke-dasharray="6 6"/><text x="310" y="175" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#9333ea" text-anchor="middle">Generator</text><text x="310" y="200" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="middle">Creates fakes</text><line x1="385" y1="180" x2="440" y2="180" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="450" y="130" width="140" height="100" rx="12" fill="#ffffff" stroke="#ef4444" stroke-width="3"/><text x="520" y="175" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#ef4444" text-anchor="middle">Discriminator</text><text x="520" y="200" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="middle">Real or Fake?</text><line x1="595" y1="180" x2="650" y2="180" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow)"/><text x="700" y="178" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#10b981" text-anchor="middle">Real?</text><text x="700" y="202" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#ef4444" text-anchor="middle">Fake?</text><path d="M 520 235 L 520 290 L 310 290 L 310 235" fill="none" stroke="#787774" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#arrowGray)"/><text x="415" y="310" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#787774" text-anchor="middle">Adversarial feedback loop</text><text x="400" y="345" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Two networks competing to improve</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

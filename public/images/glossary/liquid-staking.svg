@@ -4,31 +4,12 @@
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
       <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
     </marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/>
+    </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="250" y="12.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="36.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Liquid staking lets you stake</text>
-<text x="400" y="55.449999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">tokens while maintaining</text>
-<text x="400" y="74.35000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">liquidity through derivative</text>
-<text x="400" y="93.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">tokens.</text>
-<path d="M 400 107 L 220 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 400 107 L 580 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="50" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="200" y="175.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Normally staking locks your</text>
-<text x="200" y="195.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">tokens.</text>
-<rect x="450" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="600" y="185.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">You can't access them.</text>
-<path d="M 220 227 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 580 227 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="250" y="252.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="285" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">If you stake 32 ETH to become</text>
-<text x="400" y="305.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">a validator, that ETH is</text>
-<text x="400" y="325.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">locked.</text>
-
-  </g>
-  
+  <g transform="translate(0,-32)"><rect x="80" y="120" width="140" height="70" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="150" y="160" font-family="'Inter',sans-serif" font-weight="800" font-size="24" fill="#37352f" text-anchor="middle">ETH</text><line x1="225" y1="155" x2="290" y2="155" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/><rect x="300" y="100" width="200" height="110" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="400" y="145" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#2563eb" text-anchor="middle">Staking Protocol</text><text x="400" y="175" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#787774" text-anchor="middle">Lido / Rocket Pool</text><text x="400" y="195" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#787774" text-anchor="middle">Earns ~4% APY</text><line x1="505" y1="155" x2="570" y2="155" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)"/><rect x="580" y="120" width="150" height="70" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="3"/><text x="655" y="160" font-family="'Inter',sans-serif" font-weight="800" font-size="24" fill="#10b981" text-anchor="middle">stETH</text><line x1="655" y1="195" x2="655" y2="240" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)"/><rect x="540" y="250" width="230" height="50" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="655" y="282" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Use in DeFi (lend, LP)</text><text x="400" y="340" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Stake + stay liquid with receipt token</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

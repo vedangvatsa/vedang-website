@@ -1,37 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="250" y="12.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="45.99999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Double-spending is the act of</text>
-<text x="400" y="64.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">using the same unit of digital</text>
-<text x="400" y="83.80000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">currency more than once.</text>
-<path d="M 400 107 L 220 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 400 107 L 580 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="50" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="200" y="165" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Unlike physical cash, which</text>
-<text x="200" y="185.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">must be handed over, digital</text>
-<text x="200" y="205.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">data can be copied.</text>
-<rect x="450" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="600" y="156.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">If a network cannot verify that</text>
-<text x="600" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">a coin has already been spent,</text>
-<text x="600" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">the currency's integrity</text>
-<text x="600" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">collapses.</text>
-<path d="M 220 227 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 580 227 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="250" y="252.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="285" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Traditional banks solve this</text>
-<text x="400" y="305.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">with a central database that</text>
-<text x="400" y="325.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">logs every debit and credit.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g><circle cx="200" cy="100" r="35" fill="#2563eb" fill-opacity="0.1" stroke="#2563eb" stroke-width="3"/><text x="200" y="108" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#2563eb" text-anchor="middle">1 BTC</text><path d="M 235 85 Q 340 50 440 80" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/><path d="M 235 115 Q 340 150 440 120" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow)"/><rect x="460" y="50" width="180" height="60" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="550" y="78" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#10b981" text-anchor="middle">Pay Merchant A</text><text x="550" y="98" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#10b981" text-anchor="middle">✓ Valid</text><rect x="460" y="130" width="180" height="60" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2"/><text x="550" y="158" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#ef4444" text-anchor="middle">Pay Merchant B</text><text x="550" y="178" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#ef4444" text-anchor="middle">✗ Double-spend!</text><rect x="150" y="230" width="500" height="55" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="400" y="258" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#2563eb" text-anchor="middle">Consensus prevents this</text><text x="400" y="278" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">Wait for confirmations</text><text x="400" y="330" font-family="'Inter',sans-serif" font-weight="600" font-size="15" fill="#37352f" text-anchor="middle">Blockchain consensus solves the double-spend problem</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

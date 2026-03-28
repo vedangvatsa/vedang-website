@@ -1,36 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="35" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="66.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Speculative decoding is an inference</text>
-<text x="210" y="81.57499999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">acceleration technique that uses a smaller,</text>
-<text x="210" y="96.425" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">faster draft model to propose multiple tokens</text>
-<text x="210" y="111.275" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">that a larger target model verifies in</text>
-<text x="210" y="126.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">parallel, reducing the number of expensive</text>
-<text x="210" y="140.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">forward passes required for generation.</text>
-<rect x="415" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="64.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Standard autoregressive generation</text>
-<text x="590" y="85" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">runs one forward pass per token,</text>
-<text x="590" y="105.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">for a 100-token response, that's</text>
-<text x="590" y="125.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">100 sequential forward passes</text>
-<text x="590" y="145.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">through the target model.</text>
-<path d="M 210 160 L 380 220" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 590 160 L 420 220" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="160" y="220" width="480" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="254.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Speculative decoding changes this: the draft</text>
-<text x="400" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">model rapidly generates several candidate tokens</text>
-<text x="400" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">(typically 3-8), then the target model evaluates</text>
-<text x="400" y="315.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">all candidates in a single forward pass.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-7)"><text x="400" y="100" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#787774" text-anchor="middle">Draft then verify</text><rect x="115" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#9333ea" stroke-width="3"/><text x="175" y="182" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#9333ea" text-anchor="middle">Small Draft</text><line x1="238" y1="175" x2="262" y2="175" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="265" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="325" y="182" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Big Verify</text><line x1="388" y1="175" x2="412" y2="175" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="415" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="475" y="182" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#37352f" text-anchor="middle">Accept/Reject</text><line x1="538" y1="175" x2="562" y2="175" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="565" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#9333ea" stroke-width="3"/><text x="625" y="182" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#10b981" text-anchor="middle">Faster</text><text x="400" y="290" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">Speed up inference with draft model</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

@@ -1,32 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="100" y="10" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="34.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Long Short-Term Memory is a recurrent neural network</text>
-<text x="400" y="55.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">architecture designed to capture long-range dependencies in</text>
-<text x="400" y="75.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">sequential data by using gating mechanisms that control</text>
-<text x="400" y="95.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">information flow through a persistent cell state.</text>
-<line x1="400" y1="114" x2="400" y2="122" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="100" y="130" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="164" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Standard RNNs struggle with sequences longer than a few</text>
-<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">dozen steps because gradients either vanish or explode</text>
-<text x="400" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">during backpropagation through time.</text>
-<line x1="400" y1="234" x2="400" y2="242" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="100" y="250" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="274.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">LSTMs solve this with three gates: the forget gate decides</text>
-<text x="400" y="295.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">what to discard from the cell state, the input gate decides</text>
-<text x="400" y="315.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">what new information to store, and the output gate decides</text>
-<text x="400" y="335.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">what to emit from the cell state.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-7)"><text x="400" y="100" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#787774" text-anchor="middle">Long short-term memory</text><rect x="115" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#9333ea" stroke-width="3"/><text x="175" y="182" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#9333ea" text-anchor="middle">Input</text><line x1="238" y1="175" x2="262" y2="175" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="265" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="325" y="182" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#37352f" text-anchor="middle">Forget Gate</text><line x1="388" y1="175" x2="412" y2="175" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="415" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="475" y="182" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Cell State</text><line x1="538" y1="175" x2="562" y2="175" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="565" y="145" width="120" height="60" rx="10" fill="#fff" stroke="#9333ea" stroke-width="3"/><text x="625" y="182" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#10b981" text-anchor="middle">Output</text><text x="400" y="290" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">Remember or forget over long sequences</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

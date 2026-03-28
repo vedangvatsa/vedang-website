@@ -3,15 +3,15 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
       text { font-family: 'Inter', sans-serif; }
-      .bg { fill: #000; }
-      .title { font-weight: 800; font-size: 24px; fill: #fff; text-anchor: middle; }
-      .curve { stroke: #fff; stroke-width: 3; fill: none; }
+      .bg { fill: #ffffff; }
+      .title { font-weight: 800; font-size: 24px; fill: #111; text-anchor: middle; }
+      .curve { stroke: #111; stroke-width: 3; fill: none; }
       .glow { fill: url(#glowGrad); }
-      .text-label { font-weight: 800; font-size: 16px; fill: #fff; text-anchor: left; }
+      .text-label { font-weight: 600; font-size: 14px; fill: #555; text-anchor: start; }
     </style>
     <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
     </radialGradient>
   </defs>
   <rect width="800" height="400" class="bg" />
@@ -20,5 +20,6 @@
   <path d="M 100 350 Q 500 340 600 100" class="curve" />
   <circle cx="600" cy="100" r="40" class="glow" />
   
-  <text x="630" y="105" class="text-label">Incomprehensible Acceleration</text>
+  <text x="645" y="105" class="text-label">Incomprehensible</text>
+  <text x="645" y="125" class="text-label">Acceleration</text>
 </svg>

@@ -19,7 +19,7 @@
   <text x="200" y="320" class="label-title" text-anchor="middle">Low-Cost Outsourcing</text>
   
   <circle cx="450" cy="225" r="8" class="node" />
-  <text x="450" y="260" class="label-title" text-anchor="middle">Quality Perception Lag</text>
+  <text x="450" y="195" class="label-title" text-anchor="middle">Quality Perception Lag</text>
   
   <circle cx="650" cy="120" r="8" class="node" />
   <text x="650" y="90" class="label-title" text-anchor="middle">Global Premium Competitor</text>

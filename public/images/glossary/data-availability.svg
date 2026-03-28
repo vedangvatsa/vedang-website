@@ -1,39 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="55" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="49.449999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Data availability (DA) ensures that</text>
-<text x="210" y="67" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">transaction data is accessible to</text>
-<text x="210" y="84.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">anyone who needs to verify the</text>
-<text x="210" y="102.10000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">blockchain state, reconstruct</text>
-<text x="210" y="119.64999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">history, or detect fraud.</text>
-<line x1="365" y1="80" x2="425" y2="80" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="435" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="49.449999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">This matters for rollup security:</text>
-<text x="590" y="67" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">even with valid proofs, if the</text>
-<text x="590" y="84.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">underlying transaction data is</text>
-<text x="590" y="102.10000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">hidden, users can't independently</text>
-<text x="590" y="119.64999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">verify state or prove fraud.</text>
-<line x1="590" y1="135" x2="590" y2="215" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="435" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="254.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The data availability problem</text>
-<text x="590" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">asks: how do we know data was</text>
-<text x="590" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">published without downloading</text>
-<text x="590" y="315.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">all of it?</text>
-<line x1="435" y1="280" x2="355" y2="280" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="55" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="285.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Naive solutions don't scale.</text>
-<line x1="210" y1="225" x2="210" y2="145" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-32)"><rect x="60" y="130" width="180" height="70" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="150" y="172" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Rollup Data</text><text x="150" y="220" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">Where does it go?</text><line x1="245" y1="165" x2="320" y2="165" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/><rect x="330" y="100" width="160" height="45" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="410" y="129.5" font-family="'Inter',sans-serif" font-weight="600" font-size="15" fill="#2563eb" text-anchor="middle">On-Chain (L1)</text><rect x="330" y="160" width="160" height="45" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="410" y="189.5" font-family="'Inter',sans-serif" font-weight="600" font-size="15" fill="#10b981" text-anchor="middle">Blobs (4844)</text><rect x="330" y="220" width="160" height="45" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/><text x="410" y="249.5" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#f59e0b" text-anchor="middle">Celestia / DA</text><text x="540" y="130" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#2563eb" text-anchor="middle">$$$</text><text x="540" y="190" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#10b981" text-anchor="middle">$$</text><text x="540" y="250" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#f59e0b" text-anchor="middle">$</text><text x="680" y="130" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#2563eb" text-anchor="middle">Security ↑</text><text x="680" y="250" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#f59e0b" text-anchor="middle">Cost ↓</text><text x="400" y="340" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Ensure transaction data stays accessible</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

@@ -1,44 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
-<text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">1</text>
-<rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="77.65" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">A webhook is a way for one</text>
-<text x="80" y="96.55000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">application to send real-time</text>
-<text x="80" y="115.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">data to another application the</text>
-<text x="80" y="134.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">moment something happens, instead</text>
-<text x="80" y="153.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">of the second application having</text>
-<text x="80" y="172.15" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">to keep checking for updates.</text>
-<circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
-<text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">2</text>
-<rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="104" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">It works by registering a URL</text>
-<text x="480" y="125.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">(an endpoint) with the source</text>
-<text x="480" y="147.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">service.</text>
-<circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
-<text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">3</text>
-<rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">When a specific event occurs,</text>
-<text x="80" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">the source service sends an</text>
-<text x="80" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">HTTP POST request to that URL</text>
-<text x="80" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">with details about the event.</text>
-<circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
-<text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">4</text>
-<rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">The receiving service</text>
-<text x="480" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">processes the data and takes</text>
-<text x="480" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">whatever action is needed.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-22)"><rect x="80" y="120" width="180" height="70" rx="8" fill="#fff" stroke="#059669" stroke-width="2"/><text x="170" y="161" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#059669" text-anchor="middle">Source Service</text><text x="170" y="210" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#059669" text-anchor="middle">Event occurs!</text><line x1="265" y1="155" x2="370" y2="155" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/><text x="318" y="140" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#059669" text-anchor="middle">HTTP POST</text><rect x="380" y="110" width="160" height="80" rx="12" fill="#fff" stroke="#059669" stroke-width="2"/><text x="460" y="150" font-family="'Inter',sans-serif" font-weight="600" font-size="15" fill="#37352f" text-anchor="middle">Your Endpoint</text><text x="460" y="175" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">/webhook</text><line x1="545" y1="150" x2="610" y2="150" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)"/><rect x="620" y="120" width="120" height="60" rx="8" fill="#fff" stroke="#10b981" stroke-width="2"/><text x="680" y="156" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#10b981" text-anchor="middle">Process</text><text x="400" y="270" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#37352f" text-anchor="middle">Push, not poll</text><text x="400" y="310" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">Real-time event notifications</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

@@ -1,40 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="250" y="12.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="36.5" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">An automated market maker is a type of</text>
-<text x="400" y="50" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">decentralized exchange protocol that uses</text>
-<text x="400" y="63.5" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">mathematical formulas and liquidity pools to</text>
-<text x="400" y="77" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">price and facilitate trades, replacing the</text>
-<text x="400" y="90.5" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">traditional order book model.</text>
-<path d="M 400 107 L 220 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 400 107 L 580 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="50" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="200" y="156.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">In a traditional exchange,</text>
-<text x="200" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">buyers and sellers place orders</text>
-<text x="200" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">at specific prices, and a</text>
-<text x="200" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">matching engine connects them.</text>
-<rect x="450" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="600" y="165" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">In an AMM, a smart contract</text>
-<text x="600" y="185.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">holds reserves of two or more</text>
-<text x="600" y="205.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">tokens in a liquidity pool.</text>
-<path d="M 220 227 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 580 227 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="250" y="252.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="278.225" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">A formula, typically x multiplied</text>
-<text x="400" y="295.77500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">by y equals k, determines the</text>
-<text x="400" y="313.32500000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">price based on the ratio of tokens</text>
-<text x="400" y="330.87500000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">in the pool.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-32)"><rect x="200" y="100" width="400" height="200" rx="16" fill="#ffffff" stroke="#2563eb" stroke-width="3"/><text x="400" y="140" font-family="'Inter',sans-serif" font-weight="800" font-size="28" fill="#2563eb" text-anchor="middle">x · y = k</text><circle cx="300" cy="210" r="30" fill="#2563eb" fill-opacity="0.15" stroke="#2563eb" stroke-width="2"/><text x="300" y="218" font-family="'Inter',sans-serif" font-weight="800" font-size="16" fill="#2563eb" text-anchor="middle">ETH</text><path d="M 340 200 L 370 180 M 370 220 L 340 200" fill="none" stroke="#787774" stroke-width="2"/><circle cx="440" cy="210" r="30" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="2"/><text x="440" y="218" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#10b981" text-anchor="middle">USDC</text><text x="100" y="210" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#787774" text-anchor="middle">Trader</text><line x1="140" y1="205" x2="195" y2="205" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="6 6"/><text x="700" y="210" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#787774" text-anchor="middle">LP</text><line x1="670" y1="205" x2="605" y2="205" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="6 6"/><text x="400" y="340" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Algorithmic price via constant product</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

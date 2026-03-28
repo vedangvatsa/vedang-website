@@ -2,54 +2,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/>
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/>
     </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <line x1="107.5" y1="70" x2="692.5" y2="70" stroke="#059669" stroke-width="1.5"/>
-<circle cx="107.5" cy="70" r="4" fill="#059669"/>
-<line x1="107.5" y1="74" x2="107.5" y2="94" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="15" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="107.5" y="124.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A zero-knowledge</text>
-<text x="107.5" y="144.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">proof is a</text>
-<text x="107.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">cryptographic</text>
-<text x="107.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">method to prove</text>
-<text x="107.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">knowledge of</text>
-<text x="107.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">information</text>
-<text x="107.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">without revealing</text>
-<text x="107.5" y="266" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">the information</text>
-<text x="107.5" y="286.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">itself.</text>
-<circle cx="302.5" cy="70" r="4" fill="#059669"/>
-<line x1="302.5" y1="74" x2="302.5" y2="94" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="210" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="302.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">You can prove you</text>
-<text x="302.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">know a secret</text>
-<text x="302.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">without telling</text>
-<text x="302.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">anyone what the</text>
-<text x="302.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">secret is.</text>
-<circle cx="497.5" cy="70" r="4" fill="#059669"/>
-<line x1="497.5" y1="74" x2="497.5" y2="94" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="405" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="497.5" y="144.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">You can prove</text>
-<text x="497.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">that a</text>
-<text x="497.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">computation was</text>
-<text x="497.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">done correctly</text>
-<text x="497.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">without showing</text>
-<text x="497.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">the computation</text>
-<text x="497.5" y="266" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">or inputs.</text>
-<circle cx="692.5" cy="70" r="4" fill="#059669"/>
-<line x1="692.5" y1="74" x2="692.5" y2="94" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="600" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="692.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">This is</text>
-<text x="692.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">mathematically</text>
-<text x="692.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">possible and has</text>
-<text x="692.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">major practical</text>
-<text x="692.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">uses.</text>
-
-  </g>
-  
+  <g transform="translate(0,-47)"><rect x="80" y="130" width="200" height="100" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="180" y="170" font-family="'Inter',sans-serif" font-weight="700" font-size="22" fill="#2563eb" text-anchor="middle">Prover</text><text x="180" y="200" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">"I know the secret"</text><line x1="285" y1="180" x2="410" y2="180" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/><text x="350" y="165" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#2563eb" text-anchor="middle">Proof</text><rect x="420" y="130" width="200" height="100" rx="10" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="520" y="170" font-family="'Inter',sans-serif" font-weight="700" font-size="22" fill="#10b981" text-anchor="middle">Verifier</text><text x="520" y="200" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#10b981" text-anchor="middle">"Verified! ✓"</text><rect x="250" y="270" width="300" height="40" rx="8" fill="#ef4444" fill-opacity="0.06" stroke="#ef4444" stroke-width="1.5"/><text x="400" y="297" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#ef4444" text-anchor="middle">Secret stays hidden</text><text x="400" y="340" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Prove truth without revealing data</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

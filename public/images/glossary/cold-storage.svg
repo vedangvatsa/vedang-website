@@ -7,7 +7,7 @@
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
   
-  <g>
+  <g transform="translate(0,-37)">
     <path d="M 400 145 L 170 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="45" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
 <text x="170" y="181.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">In cryptocurrency, cold</text>

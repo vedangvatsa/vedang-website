@@ -4,31 +4,12 @@
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
       <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
     </marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/>
+    </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="70" y="120" width="280" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="143.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">A vector database is a database</text>
-<text x="210" y="159.89999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">optimized for storing and</text>
-<text x="210" y="176.1" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">searching high-dimensional</text>
-<text x="210" y="192.3" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">numerical vectors, which are how</text>
-<text x="210" y="208.5" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">AI models represent the meaning of</text>
-<text x="210" y="224.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">text, images, and other data.</text>
-<path d="M 350 180 C 400 180, 400 80, 445 80" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 350 180 C 400 180, 400 280, 445 280" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="450" y="25" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="51.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">When an embedding model processes</text>
-<text x="590" y="68" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">a piece of text, it converts it</text>
-<text x="590" y="84.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">into a vector, an array of</text>
-<text x="590" y="100.4" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">hundreds or thousands of numbers</text>
-<text x="590" y="116.60000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">that encodes its semantic meaning.</text>
-<rect x="450" y="225" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="275.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Similar meanings produce</text>
-<text x="590" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">similar vectors.</text>
-
-  </g>
-  
+  <g transform="translate(0,-32)"><rect x="60" y="140" width="120" height="50" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="2"/><text x="120" y="172" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#9333ea" text-anchor="middle">[0.8, 0.3...]</text><text x="120" y="210" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Query</text><line x1="185" y1="165" x2="250" y2="165" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="260" y="100" width="280" height="200" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="400" y="130" font-family="'Inter',sans-serif" font-weight="700" font-size="22" fill="#37352f" text-anchor="middle">Vector Index</text><circle cx="310" cy="170" r="6" fill="#9333ea" fill-opacity="0.3" stroke="#9333ea" stroke-width="1.5"/><circle cx="340" cy="220" r="6" fill="#9333ea" fill-opacity="0.3" stroke="#9333ea" stroke-width="1.5"/><circle cx="370" cy="180" r="6" fill="#9333ea" fill-opacity="0.3" stroke="#9333ea" stroke-width="1.5"/><circle cx="400" cy="250" r="6" fill="#9333ea" fill-opacity="0.3" stroke="#9333ea" stroke-width="1.5"/><circle cx="430" cy="160" r="6" fill="#9333ea" fill-opacity="0.3" stroke="#9333ea" stroke-width="1.5"/><circle cx="460" cy="210" r="6" fill="#9333ea" fill-opacity="0.3" stroke="#9333ea" stroke-width="1.5"/><circle cx="490" cy="190" r="6" fill="#9333ea" fill-opacity="0.3" stroke="#9333ea" stroke-width="1.5"/><circle cx="310" cy="170" r="6" fill="#9333ea" stroke="#9333ea" stroke-width="2"/><circle cx="370" cy="180" r="6" fill="#9333ea" stroke="#9333ea" stroke-width="2"/><circle cx="310" cy="170" r="14" fill="none" stroke="#9333ea" stroke-width="1" stroke-dasharray="3 3"/><circle cx="370" cy="180" r="14" fill="none" stroke="#9333ea" stroke-width="1" stroke-dasharray="3 3"/><line x1="545" y1="200" x2="600" y2="200" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="610" y="155" width="140" height="90" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="680" y="195" font-family="'Inter',sans-serif" font-weight="700" font-size="22" fill="#10b981" text-anchor="middle">Top K</text><text x="680" y="225" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#787774" text-anchor="middle">Nearest</text><text x="400" y="340" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Similarity search over embeddings</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

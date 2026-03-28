@@ -4,29 +4,12 @@
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
       <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
     </marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/>
+    </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="10" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="130" y="131.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Decentralized Finance</text>
-<text x="130" y="153.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">is a category of</text>
-<text x="130" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">financial services</text>
-<text x="130" y="196.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">built on blockchain</text>
-<text x="130" y="218" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">without traditional</text>
-<text x="130" y="239.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">intermediaries.</text>
-<line x1="255" y1="180" x2="272" y2="180" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="280" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="153.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Banks, brokers,</text>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">exchanges, and</text>
-<text x="400" y="196.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">insurance companies</text>
-<text x="400" y="218" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">are intermediaries.</text>
-<line x1="525" y1="180" x2="542" y2="180" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="550" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">They take a cut.</text>
-
-  </g>
-  
+  <g transform="translate(0,-32)"><rect x="80" y="100" width="260" height="200" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="210" y="135" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#37352f" text-anchor="middle">Traditional Finance</text><circle cx="210" cy="200" r="30" fill="#787774" fill-opacity="0.1" stroke="#787774" stroke-width="2"/><text x="210" y="208" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#787774" text-anchor="middle">Bank</text><circle cx="140" cy="260" r="14" fill="none" stroke="#787774" stroke-width="1.5"/><circle cx="280" cy="260" r="14" fill="none" stroke="#787774" stroke-width="1.5"/><line x1="190" y1="220" x2="150" y2="248" stroke="#787774" stroke-width="1.5"/><line x1="230" y1="220" x2="270" y2="248" stroke="#787774" stroke-width="1.5"/><text x="400" y="200" font-family="'Inter',sans-serif" font-weight="800" font-size="28" fill="#2563eb" text-anchor="middle">vs</text><rect x="460" y="100" width="260" height="200" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="590" y="135" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#2563eb" text-anchor="middle">Decentralized</text><circle cx="540" cy="200" r="14" fill="#2563eb" fill-opacity="0.2" stroke="#2563eb" stroke-width="2"/><circle cx="640" cy="200" r="14" fill="#2563eb" fill-opacity="0.2" stroke="#2563eb" stroke-width="2"/><circle cx="590" cy="260" r="14" fill="#2563eb" fill-opacity="0.2" stroke="#2563eb" stroke-width="2"/><line x1="554" y1="200" x2="626" y2="200" stroke="#2563eb" stroke-width="2"/><line x1="548" y1="212" x2="582" y2="248" stroke="#2563eb" stroke-width="2"/><line x1="632" y1="212" x2="598" y2="248" stroke="#2563eb" stroke-width="2"/><text x="590" y="165" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#2563eb" text-anchor="middle">Smart Contracts</text><text x="400" y="340" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Finance without intermediaries</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

@@ -1,43 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="250" y="12.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="34.15" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">The Ethereum Virtual Machine (EVM) is</text>
-<text x="400" y="49" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">the fundamental computation engine at</text>
-<text x="400" y="63.85" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">the center of the Ethereum network,</text>
-<text x="400" y="78.69999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">acting as a global, decentralized</text>
-<text x="400" y="93.55" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">computer.</text>
-<path d="M 400 107 L 220 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 400 107 L 580 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="50" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="200" y="158.85" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">Unlike Bitcoin, which primarily runs a simple</text>
-<text x="200" y="171" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">scripting language designed only to process value</text>
-<text x="200" y="183.15" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">transfers, the EVM is Turing-complete, meaning it</text>
-<text x="200" y="195.29999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">can execute any arbitrary mathematical</text>
-<text x="200" y="207.45" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">computation if given enough time and memory.</text>
-<rect x="450" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="600" y="156.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">It is the environment where all</text>
-<text x="600" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Ethereum 'smart contracts'</text>
-<text x="600" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">live, run, and maintain their</text>
-<text x="600" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">state.</text>
-<path d="M 220 227 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 580 227 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="250" y="252.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="276.5" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">When a developer writes code in a language</text>
-<text x="400" y="290" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">like Solidity, that code is compiled down</text>
-<text x="400" y="303.5" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">into low-level EVM bytecode, which the</text>
-<text x="400" y="317" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">thousands of nodes globally then execute in</text>
-<text x="400" y="330.5" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">perfectly deterministic consensus.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-35)"><rect x="200" y="100" width="400" height="180" rx="16" fill="#ffffff" stroke="#2563eb" stroke-width="3"/><text x="400" y="140" font-family="'Inter',sans-serif" font-weight="800" font-size="36" fill="#2563eb" text-anchor="middle">EVM</text><line x1="250" y1="160" x2="550" y2="160" stroke="#e5e7eb" stroke-width="1.5"/><text x="310" y="190" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#787774" text-anchor="middle">Bytecode</text><text x="490" y="190" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#787774" text-anchor="middle">Opcodes</text><text x="400" y="230" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#787774" text-anchor="middle">Stack Machine</text><text x="400" y="260" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#2563eb" text-anchor="middle">Deterministic Execution</text><rect x="100" y="310" width="120" height="35" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="160" y="334.5" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#37352f" text-anchor="middle">Ethereum</text><rect x="250" y="310" width="120" height="35" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="310" y="334.5" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#37352f" text-anchor="middle">Arbitrum</text><rect x="400" y="310" width="120" height="35" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="460" y="334.5" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#37352f" text-anchor="middle">Polygon</text><rect x="550" y="310" width="120" height="35" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="610" y="334.5" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#37352f" text-anchor="middle">BSC</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

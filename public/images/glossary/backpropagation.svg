@@ -1,45 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
-    </marker>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/></marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/></marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <path d="M 400 145 L 170 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="45" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="170" y="176.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Backpropagation is the algorithm</text>
-<text x="170" y="191.575" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">that makes deep learning possible</text>
-<text x="170" y="206.42499999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">by efficiently computing how each</text>
-<text x="170" y="221.275" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">weight in a neural network should</text>
-<text x="170" y="236.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">change to reduce prediction</text>
-<text x="170" y="250.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">error.</text>
-<path d="M 400 145 L 630 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="505" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="630" y="184.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">During a forward pass,</text>
-<text x="630" y="205.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">input data flows through</text>
-<text x="630" y="225.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">the network producing an</text>
-<text x="630" y="245.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">output.</text>
-<path d="M 400 145 L 270 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="145" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="270" y="305" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The loss function</text>
-<text x="270" y="325.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">measures how wrong that</text>
-<text x="270" y="345.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">output is.</text>
-<path d="M 400 145 L 530 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="405" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="530" y="292.775" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">Backpropagation then computes the</text>
-<text x="530" y="304.92499999999995" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">gradient of this loss with respect to</text>
-<text x="530" y="317.075" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">every weight in the network by</text>
-<text x="530" y="329.22499999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">propagating error signals backward from</text>
-<text x="530" y="341.375" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">the output layer to the input layer</text>
-<text x="530" y="353.525" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">using the chain rule of calculus.</text>
-<rect x="280" y="75" width="240" height="70" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="116.3" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#37352f" text-anchor="middle">Backpropagation</text>
-
-  </g>
-  
+  <g transform="translate(0,-12)"><rect x="80" y="120" width="100" height="50" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="130" y="152" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Input</text><line x1="185" y1="145" x2="230" y2="145" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="240" y="120" width="120" height="50" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="2"/><text x="300" y="152" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#9333ea" text-anchor="middle">Hidden</text><line x1="365" y1="145" x2="410" y2="145" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="420" y="120" width="100" height="50" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="470" y="152" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#10b981" text-anchor="middle">Output</text><line x1="525" y1="145" x2="570" y2="145" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)"/><rect x="580" y="120" width="100" height="50" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2"/><text x="630" y="152" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#ef4444" text-anchor="middle">Loss</text><text x="400" y="100" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#787774" text-anchor="middle">Forward Pass →</text><line x1="630" y1="175" x2="630" y2="220" stroke="#ef4444" stroke-width="2"/><path d="M 630 220 L 130 220 L 130 175" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#arrow)"/><text x="400" y="245" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#ef4444" text-anchor="middle">← Backward Pass (Gradients)</text><text x="400" y="300" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Adjust weights to minimize error</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

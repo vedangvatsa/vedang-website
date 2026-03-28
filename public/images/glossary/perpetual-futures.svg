@@ -1,31 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="100" y="10" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="45" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Perpetual futures are derivative contracts that track an</text>
-<text x="400" y="65.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">underlying asset's price without expiration dates, invented</text>
-<text x="400" y="85.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">by BitMEX and now dominating crypto derivatives trading.</text>
-<line x1="400" y1="114" x2="400" y2="122" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="100" y="130" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="164" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Unlike traditional futures that settle on specific dates,</text>
-<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">perpetuals roll indefinitely, behaving like continuously</text>
-<text x="400" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">resettling contracts.</text>
-<line x1="400" y1="234" x2="400" y2="242" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="100" y="250" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="274.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The funding rate mechanism keeps perpetual prices anchored to</text>
-<text x="400" y="295.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">spot: when the perpetual trades above spot, longs pay shorts,</text>
-<text x="400" y="315.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">creating selling pressure that pushes the price down; when</text>
-<text x="400" y="335.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">below spot, shorts pay longs.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-37)"><line x1="100" y1="200" x2="700" y2="200" stroke="#e5e7eb" stroke-width="2"/><path d="M 100 250 Q 250 180 400 200 Q 550 220 700 150" fill="none" stroke="#2563eb" stroke-width="3"/><text x="720" y="150" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#2563eb" text-anchor="start">Price</text><text x="400" y="195" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#787774" text-anchor="middle">Spot Price</text><line x1="300" y1="195" x2="300" y2="175" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)"/><text x="300" y="170" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#10b981" text-anchor="middle">Funding</text><line x1="550" y1="205" x2="550" y2="225" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow)"/><text x="550" y="240" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#ef4444" text-anchor="middle">Funding</text><text x="400" y="300" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">No expiry. Funding keeps price anchored.</text><rect x="120" y="250" width="120" height="40" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="180" y="277" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#10b981" text-anchor="middle">10× Long</text><rect x="560" y="250" width="120" height="40" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2"/><text x="620" y="277" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#ef4444" text-anchor="middle">10× Short</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

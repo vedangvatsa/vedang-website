@@ -1,34 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="10" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="130" y="153.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Supervised Learning</text>
-<text x="130" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">is the most widely</text>
-<text x="130" y="196.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">used approach in</text>
-<text x="130" y="218" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">machine learning.</text>
-<line x1="255" y1="180" x2="272" y2="180" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="280" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="153.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">The model trains on</text>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">labeled data where</text>
-<text x="400" y="196.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">every input has a</text>
-<text x="400" y="218" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">known correct output.</text>
-<line x1="525" y1="180" x2="542" y2="180" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="550" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="670" y="142.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">You show the</text>
-<text x="670" y="164" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">algorithm thousands</text>
-<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">of images labeled</text>
-<text x="670" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">"car" and thousands</text>
-<text x="670" y="228.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">labeled "bicycle.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-17)"><rect x="60" y="110" width="200" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="160" y="140" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#37352f" text-anchor="middle">Labeled Data</text><rect x="80" y="155" width="60" height="25" rx="4" fill="#9333ea" fill-opacity="0.1"/><text x="110" y="172" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#9333ea" text-anchor="middle">🐱 Cat</text><rect x="150" y="155" width="60" height="25" rx="4" fill="#2563eb" fill-opacity="0.1"/><text x="180" y="172" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#2563eb" text-anchor="middle">🐶 Dog</text><rect x="80" y="190" width="60" height="25" rx="4" fill="#9333ea" fill-opacity="0.1"/><text x="110" y="207" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#9333ea" text-anchor="middle">🐱 Cat</text><line x1="265" y1="170" x2="340" y2="170" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><text x="300" y="155" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#9333ea" text-anchor="middle">Train</text><rect x="350" y="130" width="140" height="80" rx="12" fill="#ffffff" stroke="#9333ea" stroke-width="3"/><text x="420" y="177" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#9333ea" text-anchor="middle">Model</text><line x1="495" y1="170" x2="560" y2="170" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="570" y="140" width="160" height="60" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="650" y="177" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#10b981" text-anchor="middle">🐱 → "Cat" ✓</text><text x="400" y="300" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Input + Label → Learn patterns</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

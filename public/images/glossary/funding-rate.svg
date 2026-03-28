@@ -1,37 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="70" y="120" width="280" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="143.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Funding rate is a periodic payment</text>
-<text x="210" y="159.89999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">exchanged between long and short</text>
-<text x="210" y="176.1" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">perpetual futures holders that</text>
-<text x="210" y="192.3" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">anchors the perpetual price to the</text>
-<text x="210" y="208.5" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">underlying spot price through</text>
-<text x="210" y="224.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">incentive alignment.</text>
-<path d="M 350 180 C 400 180, 400 80, 445 80" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 350 180 C 400 180, 400 280, 445 280" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="450" y="25" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="49.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">When the perpetual trades above spot</text>
-<text x="590" y="63.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">(indicating bullish sentiment with more</text>
-<text x="590" y="76.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">longs than shorts), positive funding</text>
-<text x="590" y="90.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">makes longs pay shorts, this incentivizes</text>
-<text x="590" y="103.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">shorting and discourages longing, pushing</text>
-<text x="590" y="117.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">the perpetual back toward spot.</text>
-<rect x="450" y="225" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="256.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">When below spot, negative</text>
-<text x="590" y="275.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">funding makes shorts pay</text>
-<text x="590" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">longs, encouraging long</text>
-<text x="590" y="313.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">positions.</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g>
+  <!-- Positive funding -->
+  <rect x="100" y="100" width="260" height="100" rx="10" fill="#ffffff" stroke="#10b981" stroke-width="2"/>
+  <text x="230" y="140" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#10b981" text-anchor="middle">Perp &gt; Spot</text>
+  <text x="230" y="170" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#787774" text-anchor="middle">Longs pay Shorts</text>
+  <text x="230" y="195" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">Pushes price ↓</text>
 
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+  <!-- Negative funding -->
+  <rect x="440" y="100" width="260" height="100" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="570" y="140" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#ef4444" text-anchor="middle">Perp &lt; Spot</text>
+  <text x="570" y="170" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#787774" text-anchor="middle">Shorts pay Longs</text>
+  <text x="570" y="195" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">Pushes price ↑</text>
+
+  <text x="400" y="270" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#2563eb" text-anchor="middle">Keeps perpetual price ≈ spot price</text>
+  <text x="400" y="310" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Sentiment indicator + yield source</text>
+</g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

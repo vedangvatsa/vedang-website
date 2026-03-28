@@ -1,51 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <path d="M 400 145 L 170 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="45" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="170" y="176.70000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">Slashing is an economic penalty</text>
-<text x="170" y="188.85000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">mechanism in Proof of Stake blockchains</text>
-<text x="170" y="201.00000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">that automatically confiscates a portion</text>
-<text x="170" y="213.15" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">of a validator's staked tokens when they</text>
-<text x="170" y="225.3" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">violate protocol rules, providing</text>
-<text x="170" y="237.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">cryptoeconomic security through the</text>
-<text x="170" y="249.60000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">threat of financial loss.</text>
-<path d="M 400 145 L 630 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="505" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="630" y="176.70000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">The slashable offenses target behaviors</text>
-<text x="630" y="188.85000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">that could compromise network integrity:</text>
-<text x="630" y="201.00000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">double-signing (proposing or attesting</text>
-<text x="630" y="213.15" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">to conflicting blocks at the same</text>
-<text x="630" y="225.3" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">height), surround voting (making</text>
-<text x="630" y="237.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">attestations that contradict previous</text>
-<text x="630" y="249.60000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">ones in ways that could enable...</text>
-<path d="M 400 145 L 270 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="145" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="270" y="294.15000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">When a validator commits a</text>
-<text x="270" y="309.00000000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">slashable offense, their stake is</text>
-<text x="270" y="323.85" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">partially or fully destroyed, and</text>
-<text x="270" y="338.70000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">they may be forcibly ejected from</text>
-<text x="270" y="353.55000000000007" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">the validator set.</text>
-<path d="M 400 145 L 530 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="405" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="530" y="292.775" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">Ethereum's slashing penalties are</text>
-<text x="530" y="304.92499999999995" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">substantial: initial penalties of at</text>
-<text x="530" y="317.075" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">least 1 ETH plus a correlation penalty</text>
-<text x="530" y="329.22499999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">that increases if many validators are</text>
-<text x="530" y="341.375" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">slashed simultaneously (indicating</text>
-<text x="530" y="353.525" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">coordinated attacks).</text>
-<rect x="280" y="75" width="240" height="70" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="116.3" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#37352f" text-anchor="middle">Slashing</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-32)"><rect x="200" y="100" width="200" height="80" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="300" y="140" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#37352f" text-anchor="middle">Validator</text><text x="300" y="170" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#787774" text-anchor="middle">32 ETH Staked</text><path d="M 300 185 L 300 230" fill="none" stroke="#ef4444" stroke-width="3"/><rect x="200" y="235" width="200" height="60" rx="8" fill="#ef4444" fill-opacity="0.08" stroke="#ef4444" stroke-width="2"/><text x="300" y="262" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#ef4444" text-anchor="middle">Misbehaves</text><text x="300" y="282" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="middle">Double-sign / Offline</text><line x1="405" y1="265" x2="500" y2="265" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow)"/><rect x="510" y="235" width="200" height="60" rx="8" fill="#ef4444" fill-opacity="0.08" stroke="#ef4444" stroke-width="2"/><text x="610" y="262" font-family="'Inter',sans-serif" font-weight="800" font-size="20" fill="#ef4444" text-anchor="middle">-16 ETH Lost</text><text x="400" y="340" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Punish dishonest validators by cutting stake</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

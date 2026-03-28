@@ -1,69 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
-    </marker>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/></marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/></marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <line x1="107.5" y1="70" x2="692.5" y2="70" stroke="#9333ea" stroke-width="1.5"/>
-<circle cx="107.5" cy="70" r="4" fill="#9333ea"/>
-<line x1="107.5" y1="74" x2="107.5" y2="94" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="15" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="107.5" y="122.17499999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Beam search is a</text>
-<text x="107.5" y="137.02499999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">decoding algorithm for</text>
-<text x="107.5" y="151.87499999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">language models that</text>
-<text x="107.5" y="166.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">maintains multiple</text>
-<text x="107.5" y="181.575" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">candidate sequences in</text>
-<text x="107.5" y="196.42499999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">parallel, exploring the</text>
-<text x="107.5" y="211.275" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">k most promising</text>
-<text x="107.5" y="226.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">options at each</text>
-<text x="107.5" y="240.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">generation step rather</text>
-<text x="107.5" y="255.825" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">than greedily</text>
-<text x="107.5" y="270.675" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">committing to the</text>
-<text x="107.5" y="285.52500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">single best token.</text>
-<circle cx="302.5" cy="70" r="4" fill="#9333ea"/>
-<line x1="302.5" y1="74" x2="302.5" y2="94" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="210" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="302.5" y="131.29999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">The algorithm works</text>
-<text x="302.5" y="147.5" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">by expanding each</text>
-<text x="302.5" y="163.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">current candidate</text>
-<text x="302.5" y="179.89999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">with all possible</text>
-<text x="302.5" y="196.1" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">next tokens, scoring</text>
-<text x="302.5" y="212.3" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">the results, and</text>
-<text x="302.5" y="228.5" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">keeping only the top</text>
-<text x="302.5" y="244.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">k candidates (the</text>
-<text x="302.5" y="260.90000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">'beam width') for the</text>
-<text x="302.5" y="277.09999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">next step.</text>
-<circle cx="497.5" cy="70" r="4" fill="#9333ea"/>
-<line x1="497.5" y1="74" x2="497.5" y2="94" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="405" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="497.5" y="134.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A beam width of 1</text>
-<text x="497.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">is equivalent to</text>
-<text x="497.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">greedy decoding</text>
-<text x="497.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">and always</text>
-<text x="497.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">selects the</text>
-<text x="497.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">highest</text>
-<text x="497.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">probability</text>
-<text x="497.5" y="276.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">token.</text>
-<circle cx="692.5" cy="70" r="4" fill="#9333ea"/>
-<line x1="692.5" y1="74" x2="692.5" y2="94" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="600" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="692.5" y="131.29999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Wider beams explore</text>
-<text x="692.5" y="147.5" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">more of the output</text>
-<text x="692.5" y="163.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">space, often finding</text>
-<text x="692.5" y="179.89999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">higher-probability</text>
-<text x="692.5" y="196.1" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">complete sequences</text>
-<text x="692.5" y="212.3" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">that greedy decoding</text>
-<text x="692.5" y="228.5" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">misses because they</text>
-<text x="692.5" y="244.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">required</text>
-<text x="692.5" y="260.90000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">lower-probability</text>
-<text x="692.5" y="277.09999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">intermediate tokens.</text>
-
-  </g>
-  
+  <g transform="translate(0,-35)"><circle cx="400" cy="100" r="12" fill="#9333ea" stroke="#9333ea" stroke-width="2"/><line x1="400" y1="112" x2="250" y2="168" stroke="#9333ea" stroke-width="2"/><line x1="400" y1="112" x2="400" y2="168" stroke="#9333ea" stroke-width="2"/><line x1="400" y1="112" x2="550" y2="168" stroke="#787774" stroke-width="1" stroke-dasharray="4 4"/><circle cx="250" cy="180" r="12" fill="#9333ea" stroke="#9333ea" stroke-width="2"/><circle cx="400" cy="180" r="12" fill="#9333ea" stroke="#9333ea" stroke-width="2"/><circle cx="550" cy="180" r="12" fill="#e5e7eb" stroke="#787774" stroke-width="1"/><line x1="250" y1="192" x2="180" y2="248" stroke="#9333ea" stroke-width="2"/><line x1="250" y1="192" x2="320" y2="248" stroke="#787774" stroke-width="1" stroke-dasharray="4 4"/><line x1="400" y1="192" x2="460" y2="248" stroke="#9333ea" stroke-width="2"/><circle cx="180" cy="260" r="12" fill="#9333ea" stroke="#9333ea" stroke-width="2"/><circle cx="320" cy="260" r="12" fill="#e5e7eb" stroke="#787774" stroke-width="1"/><circle cx="460" cy="260" r="12" fill="#9333ea" stroke="#9333ea" stroke-width="2"/><text x="180" y="295" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#10b981" text-anchor="middle">Best</text><text x="460" y="295" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#9333ea" text-anchor="middle">2nd</text><rect x="620" y="150" width="120" height="45" rx="8" fill="#9333ea" fill-opacity="0.08"/><text x="680" y="180" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#9333ea" text-anchor="middle">Beam = 2</text><text x="400" y="345" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Keep top-K candidates at each step</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

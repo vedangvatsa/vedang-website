@@ -45,23 +45,23 @@ function getEssayRoutes(): MetadataRoute.Sitemap {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/`, lastModified: new Date('2026-03-14') },
-    { url: `${BASE_URL}/writings`, lastModified: new Date('2026-03-14') },
-    { url: `${BASE_URL}/glossary`, lastModified: new Date('2026-03-14') },
-    { url: `${BASE_URL}/profile`, lastModified: new Date('2026-03-14') },
-    { url: `${BASE_URL}/media`, lastModified: new Date('2026-03-14') },
-    { url: `${BASE_URL}/community`, lastModified: new Date('2026-03-14') },
-    { url: `${BASE_URL}/seo`, lastModified: new Date('2026-03-14') },
-    { url: `${BASE_URL}/vibe-coding`, lastModified: new Date('2026-03-14') },
-    { url: `${BASE_URL}/prompt-engineering-101`, lastModified: new Date('2026-03-14') },
-    { url: `${BASE_URL}/web3-101`, lastModified: new Date('2026-03-14') },
-    { url: `${BASE_URL}/agentic-web`, lastModified: new Date('2026-03-14') },
-    { url: `${BASE_URL}/lit`, lastModified: new Date('2026-03-18') },
+    { url: `${BASE_URL}/`, lastModified: new Date('2026-03-28') },
+    { url: `${BASE_URL}/writings`, lastModified: new Date('2026-03-28') },
+    { url: `${BASE_URL}/glossary`, lastModified: new Date('2026-03-28') },
+    { url: `${BASE_URL}/profile`, lastModified: new Date('2026-03-28') },
+    { url: `${BASE_URL}/media`, lastModified: new Date('2026-03-28') },
+    { url: `${BASE_URL}/community`, lastModified: new Date('2026-03-28') },
+    { url: `${BASE_URL}/seo`, lastModified: new Date('2026-03-28') },
+    { url: `${BASE_URL}/vibe-coding`, lastModified: new Date('2026-03-28') },
+    { url: `${BASE_URL}/prompt-engineering-101`, lastModified: new Date('2026-03-28') },
+    { url: `${BASE_URL}/web3-101`, lastModified: new Date('2026-03-28') },
+    { url: `${BASE_URL}/agentic-web`, lastModified: new Date('2026-03-28') },
+    { url: `${BASE_URL}/lit`, lastModified: new Date('2026-03-28') },
   ];
 
   const glossaryRoutes: MetadataRoute.Sitemap = glossaryTerms.map(term => ({
     url: `${BASE_URL}/glossary/${term.slug}`,
-    lastModified: CONTENT_FALLBACK_DATE,
+    lastModified: new Date('2026-03-28'),
   }));
 
   const essayRoutes = getEssayRoutes();

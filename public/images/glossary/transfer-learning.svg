@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="100" y="10" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="34.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Transfer learning is a machine learning approach where</text>
-<text x="400" y="55.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">knowledge gained from training on one task is applied to a</text>
-<text x="400" y="75.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">different but related task, significantly reducing the data</text>
-<text x="400" y="95.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">and compute required to achieve good performance.</text>
-<line x1="400" y1="114" x2="400" y2="122" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="100" y="130" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="154.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A model trained on ImageNet's millions of labeled images</text>
-<text x="400" y="175.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">learns general visual features, edges, textures, shapes, that</text>
-<text x="400" y="195.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">transfer to medical imaging, satellite analysis, or</text>
-<text x="400" y="215.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">manufacturing inspection.</text>
-<line x1="400" y1="234" x2="400" y2="242" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="100" y="250" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="284" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Fine-tuning this pretrained model on a few hundred</text>
-<text x="400" y="305.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">domain-specific examples often outperforms training a new</text>
-<text x="400" y="327.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">model from scratch on thousands.</text>
+<defs>
+  <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/></marker>
+</defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g>
+  <!-- Task A box -->
+  <rect x="80" y="120" width="220" height="100" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="190" y="165" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#37352f" text-anchor="middle">Task A Model</text>
+  <text x="190" y="195" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#787774" text-anchor="middle">Trained on cats/dogs</text>
 
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+  <!-- Arrow with label -->
+  <line x1="305" y1="170" x2="490" y2="170" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="398" y="155" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#9333ea" text-anchor="middle">Transfer</text>
+
+  <!-- Task B box -->
+  <rect x="500" y="120" width="220" height="100" rx="12" fill="#ffffff" stroke="#10b981" stroke-width="3"/>
+  <text x="610" y="165" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#10b981" text-anchor="middle">Task B Model</text>
+  <text x="610" y="195" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#787774" text-anchor="middle">Now classifies birds</text>
+
+  <!-- Benefits -->
+  <text x="400" y="280" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#10b981" text-anchor="middle">Less data needed · Faster training</text>
+
+  <!-- Summary -->
+  <text x="400" y="320" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">Reuse learned knowledge on new tasks</text>
+</g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

@@ -1,34 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="250" y="7.5" width="300" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="29.924999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">Git is a distributed version control system that</text>
-<text x="400" y="42.074999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">tracks changes to files over time, letting</text>
-<text x="400" y="54.225" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">multiple people work on the same codebase without</text>
-<text x="400" y="66.375" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">overwriting each other's work.</text>
-<line x1="400" y1="82.5" x2="400" y2="93.5" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="200" y="97.5" width="400" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="124" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Created by Linus Torvalds in 2005 to manage the Linux</text>
-<text x="400" y="138.85" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">kernel, Git is now the standard tool for source code</text>
-<text x="400" y="153.70000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">management in nearly every software project.</text>
-<line x1="400" y1="172.5" x2="400" y2="183.5" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="150" y="187.5" width="500" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="211" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">It runs locally on your machine and stores a complete</text>
-<text x="400" y="229.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">history of every change ever made, so you can go back</text>
-<text x="400" y="248.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">to any previous state of your project at any time.</text>
-<line x1="400" y1="262.5" x2="400" y2="273.5" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="100" y="277.5" width="600" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="319.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">The basic workflow goes like this.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-32)"><circle cx="150" cy="170" r="18" fill="#fff" fill-opacity="1" stroke="#e5e7eb" stroke-width="2"/><text x="150" y="176" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#37352f" text-anchor="middle">C1</text><line x1="170" y1="170" x2="280" y2="170" stroke="#e5e7eb" stroke-width="2"/><circle cx="300" cy="170" r="18" fill="#fff" fill-opacity="1" stroke="#e5e7eb" stroke-width="2"/><text x="300" y="176" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#37352f" text-anchor="middle">C2</text><line x1="320" y1="170" x2="430" y2="170" stroke="#e5e7eb" stroke-width="2"/><circle cx="450" cy="170" r="18" fill="#fff" fill-opacity="1" stroke="#e5e7eb" stroke-width="2"/><text x="450" y="176" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#37352f" text-anchor="middle">C3</text><line x1="470" y1="170" x2="580" y2="170" stroke="#e5e7eb" stroke-width="2"/><circle cx="600" cy="170" r="18" fill="#059669" fill-opacity="0.15" stroke="#059669" stroke-width="2"/><text x="600" y="176" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#059669" text-anchor="middle">C4</text><path d="M 300 188 Q 340 250 400 250" fill="none" stroke="#10b981" stroke-width="2"/><circle cx="400" cy="250" r="18" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="2"/><text x="400" y="256" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#10b981" text-anchor="middle">B1</text><path d="M 418 250 Q 460 250 500 230 Q 520 220 540 200 Q 560 188 600 188" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="4 4"/><text x="550" y="260" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#10b981" text-anchor="middle">Merge</text><text x="400" y="100" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#787774" text-anchor="middle">Branch, Commit, Merge</text><text x="400" y="340" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">Distributed version control</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

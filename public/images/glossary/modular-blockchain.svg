@@ -1,61 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <line x1="107.5" y1="70" x2="692.5" y2="70" stroke="#2563eb" stroke-width="1.5"/>
-<circle cx="107.5" cy="70" r="4" fill="#2563eb"/>
-<line x1="107.5" y1="74" x2="107.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="15" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="107.5" y="123.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">A modular blockchain</text>
-<text x="107.5" y="139.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">abandons the</text>
-<text x="107.5" y="155.59999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">monolithic</text>
-<text x="107.5" y="171.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">architecture where a</text>
-<text x="107.5" y="188" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">single network</text>
-<text x="107.5" y="204.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">attempts to handle</text>
-<text x="107.5" y="220.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">execution,</text>
-<text x="107.5" y="236.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">settlement,</text>
-<text x="107.5" y="252.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">consensus, and data</text>
-<text x="107.5" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">availability</text>
-<text x="107.5" y="285.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">simultaneously.</text>
-<circle cx="302.5" cy="70" r="4" fill="#2563eb"/>
-<line x1="302.5" y1="74" x2="302.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="210" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="302.5" y="139.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Monolithic chains</text>
-<text x="302.5" y="155.59999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">like Bitcoin and</text>
-<text x="302.5" y="171.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">early Ethereum</text>
-<text x="302.5" y="188" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">inevitably hit severe</text>
-<text x="302.5" y="204.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">scaling bottlenecks</text>
-<text x="302.5" y="220.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">because every node</text>
-<text x="302.5" y="236.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">must process every</text>
-<text x="302.5" y="252.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">transaction and store</text>
-<text x="302.5" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">every byte of data.</text>
-<circle cx="497.5" cy="70" r="4" fill="#2563eb"/>
-<line x1="497.5" y1="74" x2="497.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="405" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="497.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The modular</text>
-<text x="497.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">approach breaks</text>
-<text x="497.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">this stack apart</text>
-<text x="497.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">into specialized</text>
-<text x="497.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">layers.</text>
-<circle cx="692.5" cy="70" r="4" fill="#2563eb"/>
-<line x1="692.5" y1="74" x2="692.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="600" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="692.5" y="144.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A rollup like</text>
-<text x="692.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Arbitrum handles</text>
-<text x="692.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">purely execution,</text>
-<text x="692.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">processing</text>
-<text x="692.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">thousands of</text>
-<text x="692.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">transactions per</text>
-<text x="692.5" y="266" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">second off-chain.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-17)"><rect x="150" y="90" width="500" height="55" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="400" y="125" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#787774" text-anchor="middle">Monolithic (do everything)</text><text x="400" y="165" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#2563eb" text-anchor="middle">↓ Separate into layers</text><rect x="80" y="195" width="170" height="45" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="165" y="224.5" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#2563eb" text-anchor="middle">Execution</text><rect x="280" y="195" width="160" height="45" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="360" y="224.5" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#2563eb" text-anchor="middle">Settlement</text><rect x="470" y="195" width="150" height="45" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="545" y="224.5" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#2563eb" text-anchor="middle">Consensus</text><rect x="650" y="195" width="110" height="45" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="705" y="224.5" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#2563eb" text-anchor="middle">DA</text><text x="165" y="260" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">Arbitrum</text><text x="360" y="260" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">Ethereum</text><text x="545" y="260" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">Ethereum</text><text x="705" y="260" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">Celestia</text><text x="400" y="320" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Specialize each layer for scale</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

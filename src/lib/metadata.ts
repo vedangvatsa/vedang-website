@@ -12,9 +12,9 @@ interface MetadataParams {
 
 export const pageMetadata = {
   home: {
-    title: 'Vedang Vatsa - AI & Web3 Leader',
+    title: 'Vedang Vatsa — AI & Web3 Thought Leader',
     description:
-      'Founder of Hashtag Web3 (100k+), FRSA, and thought leader in AI, blockchain, and decentralized economies.',
+      'Vedang Vatsa — Founder of Hashtag Web3 (120k+ AI & Web3 professionals), Fellow of the Royal Society of Arts, IIT Kanpur alumnus. Explore essays on AI agents, blockchain, decentralized economies, and free courses on Vibe Coding, Prompt Engineering, and Web3.',
     url: '/',
     keywords: ['AI Thought Leader', 'Web3 Expert', 'Blockchain Technology', 'Generative AI', 'Future of AI', 'Decentralized Finance', 'DeFi', 'Digital Assets', 'Web3 Ecosystem'],
   },
@@ -68,9 +68,9 @@ export const pageMetadata = {
     keywords: ['Agentic Web', 'AI Agents Course', 'Autonomous AI', 'Agentic Systems', 'Digital Economy', 'Future of Web'],
   },
   vibeCoding: {
-    title: 'Vibe Coding - Intuitive Engineering',
+    title: 'Vibe Coding 101 | A Free Course on Building with AI',
     description:
-      'The art of combining technical excellence with creative intuition in software engineering and design.',
+      'Vibe Coding 101: A free, self-paced course on building real apps with AI. Learn to describe what you want in plain English and let tools like Firebase Studio, Replit, Cursor, and Lovable handle the code. By Vedang Vatsa.',
     url: '/vibe-coding',
     keywords: ['Vibe Coding', 'Intuitive Engineering', 'Creative Software Design', 'Technical Excellence', 'Design Engineering'],
   },

@@ -1,46 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
-    </marker>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/></marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/></marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <path d="M 400 145 L 170 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="45" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="170" y="179.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">An attention head is one of multiple</text>
-<text x="170" y="193.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">parallel attention mechanisms within</text>
-<text x="170" y="206.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">a transformer layer, each</text>
-<text x="170" y="220.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">independently learning different</text>
-<text x="170" y="233.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">types of relationships between</text>
-<text x="170" y="247.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">tokens in a sequence.</text>
-<path d="M 400 145 L 630 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="505" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="630" y="184.15" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">In multi-head attention, the</text>
-<text x="630" y="199" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">model doesn't compute attention</text>
-<text x="630" y="213.85" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">just once, it computes it</text>
-<text x="630" y="228.70000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">multiple times simultaneously</text>
-<text x="630" y="243.55" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">through separate heads.</text>
-<path d="M 400 145 L 270 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="145" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="270" y="289.45" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Each head has its own Query,</text>
-<text x="270" y="307" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Key, and Value projection</text>
-<text x="270" y="324.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">matrices, allowing it to</text>
-<text x="270" y="342.09999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">specialize in different</text>
-<text x="270" y="359.65" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">patterns.</text>
-<path d="M 400 145 L 530 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="405" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="530" y="294.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">One head might track</text>
-<text x="530" y="315.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">syntactic dependencies</text>
-<text x="530" y="335.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">like subject-verb</text>
-<text x="530" y="355.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">agreement.</text>
-<rect x="280" y="75" width="240" height="70" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="116.3" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#37352f" text-anchor="middle">Attention Head</text>
-
-  </g>
-  
+  <g transform="translate(0,-22)"><rect x="60" y="140" width="100" height="50" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="110" y="172" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Input</text><line x1="165" y1="165" x2="210" y2="130" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><line x1="165" y1="165" x2="210" y2="180" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><line x1="165" y1="165" x2="210" y2="230" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="220" y="110" width="60" height="40" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="2"/><text x="250" y="137" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#9333ea" text-anchor="middle">Q</text><rect x="220" y="160" width="60" height="40" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="250" y="187" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#2563eb" text-anchor="middle">K</text><rect x="220" y="210" width="60" height="40" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="250" y="237" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#10b981" text-anchor="middle">V</text><line x1="285" y1="130" x2="350" y2="165" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><line x1="285" y1="180" x2="350" y2="175" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="360" y="140" width="100" height="60" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="2"/><text x="410" y="167" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#9333ea" text-anchor="middle">Q·K^T</text><text x="410" y="192" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#787774" text-anchor="middle">÷ √d</text><line x1="465" y1="170" x2="510" y2="170" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="520" y="145" width="80" height="50" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="2"/><text x="560" y="177" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#9333ea" text-anchor="middle">Softmax</text><line x1="605" y1="170" x2="640" y2="170" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><line x1="285" y1="230" x2="640" y2="200" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="6 6"/><rect x="650" y="145" width="100" height="50" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="700" y="177" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#10b981" text-anchor="middle">Output</text><text x="400" y="310" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Scaled dot-product attention</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

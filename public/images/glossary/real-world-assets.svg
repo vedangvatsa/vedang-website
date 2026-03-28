@@ -1,47 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="55" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="46.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Real World Assets (RWAs) represent the</text>
-<text x="210" y="61.575" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">tokenization of off-chain, tangible, or</text>
-<text x="210" y="76.425" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">traditional financial assets - like real</text>
-<text x="210" y="91.275" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">estate, treasury bills, private credit,</text>
-<text x="210" y="106.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">or physical art - bringing them onto a</text>
-<text x="210" y="120.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">blockchain.</text>
-<line x1="365" y1="80" x2="425" y2="80" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="435" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="49.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">For the first decade of crypto, Decentralized</text>
-<text x="590" y="63.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">Finance (DeFi) existed mostly in a vacuum,</text>
-<text x="590" y="76.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">generating yields exclusively from highly</text>
-<text x="590" y="90.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">reflexive, circular economic activities like</text>
-<text x="590" y="103.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">yield farming and speculation on other crypto</text>
-<text x="590" y="117.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">tokens.</text>
-<line x1="590" y1="135" x2="590" y2="215" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="435" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="249.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">RWA tokenization is the bridge</text>
-<text x="590" y="267" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">connecting this isolated digital</text>
-<text x="590" y="284.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">economy with the massive,</text>
-<text x="590" y="302.1" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">multi-trillion-dollar traditional</text>
-<text x="590" y="319.65000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">financial system.</text>
-<line x1="435" y1="280" x2="355" y2="280" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="55" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="246.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">By representing physical assets as</text>
-<text x="210" y="261.57500000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">digital tokens on a ledger, RWAs inherit</text>
-<text x="210" y="276.425" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">blockchain properties: instant 24/7</text>
-<text x="210" y="291.27500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">global settlement, fractionalization,</text>
-<text x="210" y="306.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">programmable compliance, and total</text>
-<text x="210" y="320.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">transparency.</text>
-<line x1="210" y1="225" x2="210" y2="145" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-22)"><rect x="60" y="110" width="200" height="100" rx="10" fill="#ffffff" stroke="#787774" stroke-width="2"/><text x="160" y="150" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#37352f" text-anchor="middle">Physical World</text><rect x="80" y="165" width="70" height="35" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="115" y="189.5" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#37352f" text-anchor="middle">Land</text><rect x="165" y="165" width="75" height="35" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="202.5" y="189.5" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#37352f" text-anchor="middle">T-Bills</text><text x="400" y="170" font-family="'Inter',sans-serif" font-weight="800" font-size="20" fill="#2563eb" text-anchor="middle">Tokenize →</text><rect x="540" y="110" width="200" height="100" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="3"/><text x="640" y="150" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#2563eb" text-anchor="middle">On-Chain</text><rect x="560" y="165" width="75" height="35" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="597.5" y="189.5" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#2563eb" text-anchor="middle">ERC-20</text><rect x="645" y="165" width="75" height="35" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="682.5" y="189.5" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#10b981" text-anchor="middle">Yield</text><text x="400" y="270" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#10b981" text-anchor="middle">Real yields, not crypto-circular</text><text x="400" y="310" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Bring traditional assets onto blockchain</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

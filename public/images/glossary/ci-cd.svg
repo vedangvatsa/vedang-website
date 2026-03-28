@@ -1,27 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="100" y="10" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="44" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Continuous Integration / Continuous Deployment (CI/CD)</text>
-<text x="400" y="65.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">automates the pipeline from writing code to delivering it</text>
-<text x="400" y="87.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">to users.</text>
-<line x1="400" y1="114" x2="400" y2="122" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="100" y="130" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">In CI, developers merge changes frequently into a shared</text>
-<text x="400" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">repository.</text>
-<line x1="400" y1="234" x2="400" y2="242" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="100" y="250" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="305.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Each merge triggers automated builds and tests.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-20)"><rect x="100" y="140" width="100" height="50" rx="8" fill="#fff" stroke="#059669" stroke-width="2"/><text x="150" y="172" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#059669" text-anchor="middle">Code</text><line x1="205" y1="165" x2="225" y2="165" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/><rect x="230" y="140" width="100" height="50" rx="8" fill="#fff" stroke="#059669" stroke-width="2"/><text x="280" y="172" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#059669" text-anchor="middle">Build</text><line x1="335" y1="165" x2="355" y2="165" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/><rect x="360" y="140" width="100" height="50" rx="8" fill="#fff" stroke="#059669" stroke-width="2"/><text x="410" y="172" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#059669" text-anchor="middle">Test</text><line x1="465" y1="165" x2="485" y2="165" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/><rect x="490" y="140" width="100" height="50" rx="8" fill="#fff" stroke="#059669" stroke-width="2"/><text x="540" y="172" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#059669" text-anchor="middle">Deploy</text><line x1="595" y1="165" x2="615" y2="165" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/><rect x="620" y="140" width="100" height="50" rx="8" fill="#fff" stroke="#10b981" stroke-width="2"/><text x="670" y="172" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#10b981" text-anchor="middle">Live</text><rect x="100" y="130" width="400" height="70" rx="10" fill="none" stroke="#059669" stroke-width="1" stroke-dasharray="4 4"/><text x="300" y="125" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#059669" text-anchor="middle">Continuous Integration</text><rect x="360" y="130" width="270" height="70" rx="10" fill="none" stroke="#10b981" stroke-width="1" stroke-dasharray="4 4"/><text x="500" y="215" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#10b981" text-anchor="middle">Continuous Deployment</text><text x="400" y="290" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">Automated pipeline: code to production</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

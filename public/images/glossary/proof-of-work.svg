@@ -4,38 +4,12 @@
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
       <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
     </marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/>
+    </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="55" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="51.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Proof of Work is the original</text>
-<text x="210" y="68" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">blockchain consensus mechanism, used</text>
-<text x="210" y="84.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">by Bitcoin, that requires network</text>
-<text x="210" y="100.4" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">participants to expend computational</text>
-<text x="210" y="116.60000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">energy to add blocks to the chain.</text>
-<line x1="365" y1="80" x2="425" y2="80" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="435" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="49.449999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Miners compete to solve a</text>
-<text x="590" y="67" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">cryptographic puzzle, finding a</text>
-<text x="590" y="84.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">number that, when combined with</text>
-<text x="590" y="102.10000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">block data and hashed, produces an</text>
-<text x="590" y="119.64999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">output below a target threshold.</text>
-<line x1="590" y1="135" x2="590" y2="215" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="435" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="265" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">This is computationally</text>
-<text x="590" y="285.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">expensive but trivially</text>
-<text x="590" y="305.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">verifiable by others.</text>
-<line x1="435" y1="280" x2="355" y2="280" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="55" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="254.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The miner who finds the</text>
-<text x="210" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">solution first gets to add the</text>
-<text x="210" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">next block and earns the block</text>
-<text x="210" y="315.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">reward.</text>
-<line x1="210" y1="225" x2="210" y2="145" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  </g>
-  
+  <g transform="translate(0,-45)"><rect x="100" y="120" width="180" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="190" y="160" font-family="'Inter',sans-serif" font-weight="700" font-size="22" fill="#37352f" text-anchor="middle">Compute</text><text x="190" y="190" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#787774" text-anchor="middle">Hash(x) = 000...</text><path d="M 175 220 L 195 220 L 185 250 L 205 250 L 180 290 L 185 260 L 170 260 Z" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"/><text x="190" y="320" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#f59e0b" text-anchor="middle">Energy</text><line x1="290" y1="170" x2="380" y2="170" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/><rect x="400" y="120" width="180" height="100" rx="10" fill="#ffffff" stroke="#10b981" stroke-width="3"/><text x="490" y="160" font-family="'Inter',sans-serif" font-weight="700" font-size="22" fill="#10b981" text-anchor="middle">Valid Block</text><text x="490" y="190" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#787774" text-anchor="middle">Nonce Found</text><line x1="585" y1="170" x2="650" y2="170" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)"/><circle cx="700" cy="170" r="30" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="2"/><text x="700" y="178" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#f59e0b" text-anchor="middle">BTC</text><text x="400" y="345" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Spend energy to earn the right to validate</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

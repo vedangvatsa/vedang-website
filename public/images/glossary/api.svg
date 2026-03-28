@@ -1,29 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="190" y="20" width="420" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="64.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">An API is an interface for software to</text>
-<text x="400" y="86.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">communicate with other software.</text>
-<path d="M 400 120 L 220 205" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 400 120 L 580 205" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="30" y="205" width="340" height="130" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="200" y="254" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Instead of directly accessing</text>
-<text x="200" y="275.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">databases or files,</text>
-<text x="200" y="297.20000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">applications go through APIs.</text>
-<rect x="430" y="205" width="340" height="130" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="600" y="254" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">APIs define what requests are</text>
-<text x="600" y="275.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">allowed and what responses</text>
-<text x="600" y="297.20000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">you'll get.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-17)"><rect x="60" y="140" width="160" height="60" rx="8" fill="#fff" stroke="#059669" stroke-width="2"/><text x="140" y="176" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#059669" text-anchor="middle">Client App</text><line x1="225" y1="170" x2="310" y2="170" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/><text x="268" y="155" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#787774" text-anchor="middle">Request</text><rect x="320" y="120" width="160" height="100" rx="12" fill="#fff" stroke="#059669" stroke-width="3" stroke-dasharray="6 6"/><text x="400" y="170" font-family="'Inter',sans-serif" font-weight="800" font-size="28" fill="#059669" text-anchor="middle">API</text><line x1="485" y1="170" x2="570" y2="170" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/><text x="528" y="155" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#787774" text-anchor="middle">Response</text><rect x="580" y="140" width="150" height="60" rx="8" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="655" y="176" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Server / DB</text><text x="400" y="290" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">Standardized contract between systems</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

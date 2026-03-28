@@ -1,41 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="10" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="130" y="131.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Serverless</text>
-<text x="130" y="153.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">architecture is a</text>
-<text x="130" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">cloud-computing model</text>
-<text x="130" y="196.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">where developers</text>
-<text x="130" y="218" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">deploy code without</text>
-<text x="130" y="239.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">managing servers.</text>
-<line x1="255" y1="180" x2="272" y2="180" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="280" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="124.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The cloud provider runs</text>
-<text x="400" y="144.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">code in response to</text>
-<text x="400" y="165" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">events, automatically</text>
-<text x="400" y="185.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">allocates resources,</text>
-<text x="400" y="205.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">and bills only for</text>
-<text x="400" y="225.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">actual execution time</text>
-<text x="400" y="246" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">in milliseconds.</text>
-<line x1="525" y1="180" x2="542" y2="180" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="550" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="670" y="120.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Physical servers</text>
-<text x="670" y="142.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">still exist, the</text>
-<text x="670" y="163.99999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">"serverless" label</text>
-<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">means operational</text>
-<text x="670" y="207.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">responsibility shifts</text>
-<text x="670" y="228.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">entirely to the</text>
-<text x="670" y="250.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">provider.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#059669"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-25)"><rect x="60" y="130" width="150" height="60" rx="8" fill="#fff" stroke="#059669" stroke-width="2"/><text x="135" y="166" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#059669" text-anchor="middle">Event Trigger</text><line x1="215" y1="160" x2="290" y2="160" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/><rect x="300" y="110" width="200" height="100" rx="12" fill="#fff" stroke="#059669" stroke-width="3"/><text x="400" y="155" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#059669" text-anchor="middle">Function</text><text x="400" y="185" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#787774" text-anchor="middle">Auto-scales</text><line x1="505" y1="160" x2="580" y2="160" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/><rect x="590" y="130" width="140" height="60" rx="8" fill="#fff" stroke="#10b981" stroke-width="2"/><text x="660" y="166" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#10b981" text-anchor="middle">Result</text><text x="400" y="260" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Pay per execution, not per server</text><rect x="130" y="280" width="120" height="35" rx="8" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="190" y="303.5" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#37352f" text-anchor="middle">AWS Lambda</text><rect x="280" y="280" width="150" height="35" rx="8" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="355" y="303.5" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#37352f" text-anchor="middle">Cloud Functions</text><rect x="460" y="280" width="140" height="35" rx="8" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><text x="530" y="303.5" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#37352f" text-anchor="middle">Azure Func</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

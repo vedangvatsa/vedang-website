@@ -1,31 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="35" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="63.69999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Edge AI runs artificial intelligence</text>
-<text x="210" y="79.89999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">algorithms directly on devices at the</text>
-<text x="210" y="96.10000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">periphery of a network, smartphones,</text>
-<text x="210" y="112.3" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">industrial sensors, cameras, drones,</text>
-<text x="210" y="128.5" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">instead of sending data to a distant</text>
-<text x="210" y="144.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">server.</text>
-<rect x="415" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="84" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">The model runs locally and</text>
-<text x="590" y="105.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">delivers decisions in</text>
-<text x="590" y="127.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">milliseconds.</text>
-<path d="M 210 160 L 380 220" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 590 160 L 420 220" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="160" y="220" width="480" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="285.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">This matters for three reasons.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-42)"><circle cx="400" cy="120" r="30" fill="#787774" fill-opacity="0.08" stroke="#787774" stroke-width="2"/><text x="400" y="126" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#787774" text-anchor="middle">Cloud</text><line x1="400" y1="155" x2="400" y2="175" stroke="#ef4444" stroke-width="2"/><text x="440" y="170" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#ef4444" text-anchor="start">✗ Latency</text><rect x="135" y="250" width="90" height="40" rx="8" fill="#fff" stroke="#9333ea" stroke-width="2"/><text x="180" y="276" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#9333ea" text-anchor="middle">Phone</text><circle cx="180" cy="240" r="10" fill="#9333ea" fill-opacity="0.2" stroke="#9333ea" stroke-width="1.5"/><text x="180" y="244" font-family="'Inter',sans-serif" font-weight="700" font-size="9" fill="#9333ea" text-anchor="middle">AI</text><rect x="355" y="260" width="90" height="40" rx="8" fill="#fff" stroke="#9333ea" stroke-width="2"/><text x="400" y="286" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#9333ea" text-anchor="middle">Drone</text><circle cx="400" cy="250" r="10" fill="#9333ea" fill-opacity="0.2" stroke="#9333ea" stroke-width="1.5"/><text x="400" y="254" font-family="'Inter',sans-serif" font-weight="700" font-size="9" fill="#9333ea" text-anchor="middle">AI</text><rect x="575" y="250" width="90" height="40" rx="8" fill="#fff" stroke="#9333ea" stroke-width="2"/><text x="620" y="276" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#9333ea" text-anchor="middle">Camera</text><circle cx="620" cy="240" r="10" fill="#9333ea" fill-opacity="0.2" stroke="#9333ea" stroke-width="1.5"/><text x="620" y="244" font-family="'Inter',sans-serif" font-weight="700" font-size="9" fill="#9333ea" text-anchor="middle">AI</text><text x="400" y="220" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#10b981" text-anchor="middle">Process locally → instant response</text><text x="400" y="340" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">AI runs on device, not cloud</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

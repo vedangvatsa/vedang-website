@@ -4,27 +4,12 @@
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
       <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
     </marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/>
+    </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="70" y="120" width="280" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="144.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A consensus mechanism is a</text>
-<text x="210" y="165" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">protocol that lets nodes</text>
-<text x="210" y="185.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">agree on the state of a</text>
-<text x="210" y="205.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">blockchain without a</text>
-<text x="210" y="225.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">central authority.</text>
-<path d="M 350 180 C 400 180, 400 80, 445 80" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 350 180 C 400 180, 400 280, 445 280" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="450" y="25" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="75.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">The most famous is Proof of</text>
-<text x="590" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Work, used by Bitcoin.</text>
-<rect x="450" y="225" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="275.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Miners solve computationally</text>
-<text x="590" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">difficult puzzles.</text>
-
-  </g>
-  
+  <g transform="translate(0,-42)"><circle cx="200" cy="180" r="24" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><path d="M 194 182 L 199 187 L 208 175" fill="none" stroke="#10b981" stroke-width="3"/><circle cx="400" cy="120" r="24" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><path d="M 394 122 L 399 127 L 408 115" fill="none" stroke="#10b981" stroke-width="3"/><circle cx="600" cy="180" r="24" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><path d="M 594 182 L 599 187 L 608 175" fill="none" stroke="#10b981" stroke-width="3"/><circle cx="300" cy="280" r="24" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><path d="M 294 282 L 299 287 L 308 275" fill="none" stroke="#10b981" stroke-width="3"/><circle cx="500" cy="280" r="24" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><path d="M 494 282 L 499 287 L 508 275" fill="none" stroke="#10b981" stroke-width="3"/><line x1="200" y1="180" x2="400" y2="120" stroke="#e5e7eb" stroke-width="1" stroke-opacity="0.5"/><line x1="200" y1="180" x2="600" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-opacity="0.5"/><line x1="200" y1="180" x2="300" y2="280" stroke="#e5e7eb" stroke-width="1" stroke-opacity="0.5"/><line x1="200" y1="180" x2="500" y2="280" stroke="#e5e7eb" stroke-width="1" stroke-opacity="0.5"/><line x1="400" y1="120" x2="600" y2="180" stroke="#e5e7eb" stroke-width="1" stroke-opacity="0.5"/><line x1="400" y1="120" x2="300" y2="280" stroke="#e5e7eb" stroke-width="1" stroke-opacity="0.5"/><line x1="400" y1="120" x2="500" y2="280" stroke="#e5e7eb" stroke-width="1" stroke-opacity="0.5"/><line x1="600" y1="180" x2="300" y2="280" stroke="#e5e7eb" stroke-width="1" stroke-opacity="0.5"/><line x1="600" y1="180" x2="500" y2="280" stroke="#e5e7eb" stroke-width="1" stroke-opacity="0.5"/><line x1="300" y1="280" x2="500" y2="280" stroke="#e5e7eb" stroke-width="1" stroke-opacity="0.5"/><text x="400" y="340" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Nodes agree on a single truth</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

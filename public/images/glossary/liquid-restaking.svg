@@ -1,35 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="250" y="7.5" width="300" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="33" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Liquid Restaking takes the capital</text>
-<text x="400" y="49.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">efficiency of liquid staking to its</text>
-<text x="400" y="65.4" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">logical and arguably risky extreme.</text>
-<line x1="400" y1="82.5" x2="400" y2="93.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="200" y="97.5" width="400" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="125" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">With standard liquid staking, you deposit ETH, receive a</text>
-<text x="400" y="138.5" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">receipt token like stETH, and use that receipt in DeFi while</text>
-<text x="400" y="152" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">your underlying ETH secures the Ethereum network.</text>
-<line x1="400" y1="172.5" x2="400" y2="183.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="150" y="187.5" width="500" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="208.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">Restaking, pioneered by EigenLayer, allows you to take that staked ETH and</text>
-<text x="400" y="221.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">pledge it a second time to secure entirely different networks - bridges,</text>
-<text x="400" y="235.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">oracle networks, or specialized sequencers - called Actively Validated</text>
-<text x="400" y="248.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">Services (AVSs).</text>
-<line x1="400" y1="262.5" x2="400" y2="273.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="100" y="277.5" width="600" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="310.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">You expose your capital to multiple slashing conditions in</text>
-<text x="400" y="329.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">exchange for compounded yields.</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-17)"><rect x="60" y="110" width="100" height="50" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="110" y="142" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#37352f" text-anchor="middle">ETH</text><line x1="165" y1="135" x2="220" y2="135" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/><rect x="230" y="100" width="120" height="70" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="290" y="142" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#2563eb" text-anchor="middle">Stake</text><text x="290" y="155" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="middle">Layer 1</text><line x1="355" y1="135" x2="410" y2="135" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/><rect x="420" y="100" width="130" height="70" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/><text x="485" y="142" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#f59e0b" text-anchor="middle">Restake</text><text x="485" y="155" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="middle">AVS Layer</text><line x1="555" y1="135" x2="610" y2="135" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/><rect x="620" y="110" width="120" height="50" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="680" y="142" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#10b981" text-anchor="middle">LRT Token</text><line x1="680" y1="165" x2="680" y2="210" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)"/><rect x="610" y="215" width="180" height="45" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="700" y="244.5" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#10b981" text-anchor="middle">Use in DeFi Again</text><text x="400" y="310" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Triple earning: stake + restake + DeFi</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

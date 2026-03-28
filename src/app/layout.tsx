@@ -11,15 +11,15 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swa
 export const metadata: Metadata = {
   metadataBase: new URL('https://veda.ng'),
   title: {
-    default: 'Vedang Vatsa - AI & Web3 Founder',
+    default: 'Vedang Vatsa — AI & Web3 Thought Leader, Founder of Hashtag Web3',
     template: '%s | Vedang Vatsa',
   },
   description:
-    'Vedang Vatsa: Founder of Hashtag Web3 (100k+ professionals), thought leader in AI, blockchain, and decentralized economies.',
+    'Vedang Vatsa is the founder of Hashtag Web3 (120k+ AI & Web3 professionals), a Fellow of the Royal Society of Arts, and IIT Kanpur alumnus. Explore essays, courses, and tools on AI, blockchain, and decentralized economies.',
   keywords: ['Vedang Vatsa', 'AI', 'Blockchain', 'Web3', 'Growth Marketing', 'Founder', 'AI Researcher', 'DeFi'],
   openGraph: {
-    title: 'Vedang Vatsa - AI & Web3 Founder',
-    description: 'Founder of Hashtag Web3 (100k+ professionals), thought leader in AI and blockchain.',
+    title: 'Vedang Vatsa — AI & Web3 Thought Leader, Founder of Hashtag Web3',
+    description: 'Vedang Vatsa is the founder of Hashtag Web3 (120k+ AI & Web3 professionals), Fellow of the Royal Society of Arts, and IIT Kanpur alumnus. Essays, courses, and tools on AI, blockchain, and decentralized economies.',
     url: '/',
     siteName: 'Vedang Vatsa',
     locale: 'en_US',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: 'Vedang Vatsa - AI & Web3 Founder',
+    title: 'Vedang Vatsa — AI & Web3 Thought Leader, Founder of Hashtag Web3',
     card: 'summary_large_image',
     images: ['/images/icon.png'],
   },

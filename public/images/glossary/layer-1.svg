@@ -4,29 +4,12 @@
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
       <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
     </marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/>
+    </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="250" y="7.5" width="300" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="28.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">Layer 1 refers to the base blockchain</text>
-<text x="400" y="41.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">protocol, the foundational network that</text>
-<text x="400" y="55.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">provides security, consensus, and settlement</text>
-<text x="400" y="68.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">finality.</text>
-<line x1="400" y1="82.5" x2="400" y2="93.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="200" y="97.5" width="400" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="139.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Bitcoin and Ethereum are Layer 1 networks.</text>
-<line x1="400" y1="172.5" x2="400" y2="183.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="150" y="187.5" width="500" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="220.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">All transactions ultimately settle on the Layer 1,</text>
-<text x="400" y="239.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">which is the source of truth.</text>
-<line x1="400" y1="262.5" x2="400" y2="273.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="100" y="277.5" width="600" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="310.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">The security properties of Layer 1 come from its consensus</text>
-<text x="400" y="329.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">mechanism and the economic value securing it.</text>
-
-  </g>
-  
+  <g transform="translate(0,-57)"><rect x="150" y="160" width="500" height="100" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="3"/><text x="400" y="205" font-family="'Inter',sans-serif" font-weight="700" font-size="24" fill="#2563eb" text-anchor="middle">Base Chain</text><text x="400" y="240" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#787774" text-anchor="middle">Consensus + Execution + Data</text><rect x="130" y="290" width="110" height="40" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="185" y="317" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Bitcoin</text><rect x="270" y="290" width="110" height="40" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="325" y="317" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Ethereum</text><rect x="410" y="290" width="110" height="40" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="465" y="317" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Solana</text><rect x="550" y="290" width="110" height="40" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="605" y="317" font-family="'Inter',sans-serif" font-weight="600" font-size="15" fill="#37352f" text-anchor="middle">Avalanche</text><text x="400" y="140" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#787774" text-anchor="middle">Settlement Layer</text><text x="400" y="350" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">The foundational blockchain network</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

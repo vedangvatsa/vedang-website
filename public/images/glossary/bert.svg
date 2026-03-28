@@ -1,49 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
   <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
-    </marker>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/></marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/></marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
-<text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">1</text>
-<rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="75.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">BERT (Bidirectional Encoder</text>
-<text x="80" y="91.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">Representations from Transformers) is</text>
-<text x="80" y="108" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">a transformer-based language model</text>
-<text x="80" y="124.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">that transformed natural language</text>
-<text x="80" y="140.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">processing in 2018 by learning deep</text>
-<text x="80" y="156.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">bidirectional representations through</text>
-<text x="80" y="172.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">masked language modeling.</text>
-<circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
-<text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">2</text>
-<rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="87.1" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">Unlike GPT which reads text</text>
-<text x="480" y="106" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">left-to-right, BERT processes all</text>
-<text x="480" y="124.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">tokens simultaneously and uses</text>
-<text x="480" y="143.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">context from both directions when</text>
-<text x="480" y="162.70000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">understanding each word.</text>
-<circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
-<text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">3</text>
-<rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="247.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">During pretraining, BERT</text>
-<text x="80" y="269.00000000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">randomly masks 15% of input</text>
-<text x="80" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">tokens and learns to predict</text>
-<text x="80" y="312.20000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">them from surrounding</text>
-<text x="80" y="333.80000000000007" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">context.</text>
-<circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
-<text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">4</text>
-<rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">This masked language modeling</text>
-<text x="480" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">forces the model to develop</text>
-<text x="480" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">rich bidirectional</text>
-<text x="480" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">understanding.</text>
-
-  </g>
-  
+  <g transform="translate(0,-35)"><rect x="100" y="100" width="600" height="50" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="200" y="132" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">The</text><rect x="290" y="105" width="80" height="40" rx="6" fill="#9333ea" fill-opacity="0.15" stroke="#9333ea" stroke-width="2"/><text x="330" y="132" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#9333ea" text-anchor="middle">[MASK]</text><text x="460" y="132" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">sat on the</text><rect x="560" y="105" width="80" height="40" rx="6" fill="#9333ea" fill-opacity="0.15" stroke="#9333ea" stroke-width="2"/><text x="600" y="132" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#9333ea" text-anchor="middle">[MASK]</text><line x1="400" y1="155" x2="400" y2="175" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="250" y="180" width="300" height="60" rx="12" fill="#ffffff" stroke="#9333ea" stroke-width="3"/><text x="400" y="217" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#9333ea" text-anchor="middle">Bidirectional Encoder</text><line x1="330" y1="245" x2="330" y2="270" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="290" y="275" width="80" height="40" rx="6" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="2"/><text x="330" y="301" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#10b981" text-anchor="middle">cat</text><line x1="600" y1="245" x2="600" y2="270" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="560" y="275" width="80" height="40" rx="6" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="2"/><text x="600" y="301" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#10b981" text-anchor="middle">mat</text><text x="400" y="345" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Predict masked words using full context</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

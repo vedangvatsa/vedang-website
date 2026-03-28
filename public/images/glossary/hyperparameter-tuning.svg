@@ -1,44 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <path d="M 400 145 L 170 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="45" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="170" y="181.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Hyperparameter tuning is the</text>
-<text x="170" y="198" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">process of selecting the best</text>
-<text x="170" y="214.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">settings for the knobs that</text>
-<text x="170" y="230.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">control how a machine-learning</text>
-<text x="170" y="246.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">model learns.</text>
-<path d="M 400 145 L 630 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="505" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="630" y="188.22500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Unlike model weights, which</text>
-<text x="630" y="205.77500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">are learned during training,</text>
-<text x="630" y="223.32500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">hyperparameters are set</text>
-<text x="630" y="240.87500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">before training begins.</text>
-<path d="M 400 145 L 270 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="145" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="270" y="296.54999999999995" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Examples include learning</text>
-<text x="270" y="315.44999999999993" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">rate, tree depth, number</text>
-<text x="270" y="334.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">of hidden units, and</text>
-<text x="270" y="353.24999999999994" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">regularization strength.</text>
-<path d="M 400 145 L 530 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="405" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="530" y="294.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The goal is finding the</text>
-<text x="530" y="315.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">combination that yields</text>
-<text x="530" y="335.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">the best performance on</text>
-<text x="530" y="355.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">unseen data.</text>
-<rect x="280" y="75" width="240" height="70" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="104.14999999999999" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#37352f" text-anchor="middle">Hyperparameter</text>
-<text x="400" y="128.45" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#37352f" text-anchor="middle">Tuning</text>
-
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/></marker></defs>
+<rect width="800" height="400" fill="#ffffff"/>
+<g transform="translate(0,-35)"><circle cx="180" cy="120" r="40" fill="#ffffff" stroke="#9333ea" stroke-width="2"/><circle cx="180" cy="120" r="32" fill="none" stroke="#e5e7eb" stroke-width="4"/><line x1="180" y1="120" x2="200" y2="100" stroke="#9333ea" stroke-width="3" stroke-linecap="round"/><circle cx="180" cy="120" r="5" fill="#9333ea"/><text x="180" y="185" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#37352f" text-anchor="middle">Learning Rate</text><text x="180" y="210" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#9333ea" text-anchor="middle">0.001</text><circle cx="400" cy="120" r="40" fill="#ffffff" stroke="#9333ea" stroke-width="2"/><circle cx="400" cy="120" r="32" fill="none" stroke="#e5e7eb" stroke-width="4"/><line x1="400" y1="120" x2="420" y2="100" stroke="#9333ea" stroke-width="3" stroke-linecap="round"/><circle cx="400" cy="120" r="5" fill="#9333ea"/><text x="400" y="185" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#37352f" text-anchor="middle">Batch Size</text><text x="400" y="210" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#9333ea" text-anchor="middle">32</text><circle cx="620" cy="120" r="40" fill="#ffffff" stroke="#9333ea" stroke-width="2"/><circle cx="620" cy="120" r="32" fill="none" stroke="#e5e7eb" stroke-width="4"/><line x1="620" y1="120" x2="640" y2="100" stroke="#9333ea" stroke-width="3" stroke-linecap="round"/><circle cx="620" cy="120" r="5" fill="#9333ea"/><text x="620" y="185" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#37352f" text-anchor="middle">Epochs</text><text x="620" y="210" font-family="'Inter',sans-serif" font-weight="600" font-size="14" fill="#9333ea" text-anchor="middle">100</text><line x1="400" y1="230" x2="400" y2="260" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="200" y="270" width="400" height="55" rx="10" fill="#ffffff" stroke="#10b981" stroke-width="2"/><text x="400" y="298" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#10b981" text-anchor="middle">Best Configuration → Optimal Model</text><text x="400" y="345" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Systematically search for best settings</text></g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

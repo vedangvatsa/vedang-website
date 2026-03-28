@@ -1,59 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" style="background-color:#ffffff">
-  <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
-    </marker>
-  </defs>
-  <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <line x1="107.5" y1="70" x2="692.5" y2="70" stroke="#2563eb" stroke-width="1.5"/>
-<circle cx="107.5" cy="70" r="4" fill="#2563eb"/>
-<line x1="107.5" y1="74" x2="107.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="15" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="107.5" y="131.29999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Total Value Locked</text>
-<text x="107.5" y="147.5" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">(TVL) measures the</text>
-<text x="107.5" y="163.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">aggregate dollar</text>
-<text x="107.5" y="179.89999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">value of all assets</text>
-<text x="107.5" y="196.1" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">deposited in a DeFi</text>
-<text x="107.5" y="212.3" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">protocol, serving as</text>
-<text x="107.5" y="228.5" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">a rough proxy for</text>
-<text x="107.5" y="244.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">protocol adoption,</text>
-<text x="107.5" y="260.90000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">trust, and liquidity</text>
-<text x="107.5" y="277.09999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">depth.</text>
-<circle cx="302.5" cy="70" r="4" fill="#2563eb"/>
-<line x1="302.5" y1="74" x2="302.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="210" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="302.5" y="134.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Higher TVL</text>
-<text x="302.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">generally</text>
-<text x="302.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">indicates more</text>
-<text x="302.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">capital deployed,</text>
-<text x="302.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">enabling larger</text>
-<text x="302.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">trades with less</text>
-<text x="302.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">slippage and more</text>
-<text x="302.5" y="276.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">lending capacity.</text>
-<circle cx="497.5" cy="70" r="4" fill="#2563eb"/>
-<line x1="497.5" y1="74" x2="497.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="405" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="497.5" y="144.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">TVL became the</text>
-<text x="497.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">primary metric</text>
-<text x="497.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">for comparing</text>
-<text x="497.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">DeFi protocols</text>
-<text x="497.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">during the</text>
-<text x="497.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">2020-2021 growth</text>
-<text x="497.5" y="266" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">era.</text>
-<circle cx="692.5" cy="70" r="4" fill="#2563eb"/>
-<line x1="692.5" y1="74" x2="692.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="600" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="692.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">However, TVL has</text>
-<text x="692.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">significant</text>
-<text x="692.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">limitations as an</text>
-<text x="692.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">evaluation</text>
-<text x="692.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">metric.</text>
+<rect width="800" height="400" fill="#ffffff"/>
+<g>
+  <!-- Summary text at top -->
+  <text x="400" y="50" font-family="'Inter',sans-serif" font-weight="600" font-size="18" fill="#37352f" text-anchor="middle">Total deposits locked in DeFi protocols</text>
 
-  </g>
-  
-  <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
-  <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
+  <!-- X-axis -->
+  <line x1="120" y1="310" x2="720" y2="310" stroke="#e5e7eb" stroke-width="2"/>
+
+  <!-- Bars - scaled to fit y=80 to y=310 (230px range) -->
+  <!-- Aave $24B - tallest -->
+  <rect x="150" y="90" width="75" height="220" rx="4" fill="#2563eb" fill-opacity="0.2"/>
+  <text x="188" y="82" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#2563eb" text-anchor="middle">$24B</text>
+  <text x="188" y="330" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#787774" text-anchor="middle">Aave</text>
+
+  <!-- Lido $20B -->
+  <rect x="260" y="128" width="75" height="182" rx="4" fill="#2563eb" fill-opacity="0.32"/>
+  <text x="298" y="120" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#2563eb" text-anchor="middle">$20B</text>
+  <text x="298" y="330" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#787774" text-anchor="middle">Lido</text>
+
+  <!-- Maker $16B -->
+  <rect x="370" y="164" width="75" height="146" rx="4" fill="#2563eb" fill-opacity="0.44"/>
+  <text x="408" y="156" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#2563eb" text-anchor="middle">$16B</text>
+  <text x="408" y="330" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#787774" text-anchor="middle">Maker</text>
+
+  <!-- Curve $12B -->
+  <rect x="480" y="200" width="75" height="110" rx="4" fill="#2563eb" fill-opacity="0.56"/>
+  <text x="518" y="192" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#2563eb" text-anchor="middle">$12B</text>
+  <text x="518" y="330" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#787774" text-anchor="middle">Curve</text>
+
+  <!-- Uniswap $9B -->
+  <rect x="590" y="228" width="75" height="82" rx="4" fill="#2563eb" fill-opacity="0.68"/>
+  <text x="628" y="220" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#2563eb" text-anchor="middle">$9B</text>
+  <text x="628" y="330" font-family="'Inter',sans-serif" font-weight="600" font-size="13" fill="#787774" text-anchor="middle">Uniswap</text>
+</g>
+<rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
+<text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

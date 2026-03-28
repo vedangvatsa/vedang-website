@@ -1,0 +1,1428 @@
+{
+  "_token": "REDACTED_TELEGRAPH_TOKEN",
+  "llm": {
+    "url": "https://telegra.ph/Large-Language-Model-LLM-AI-Glossary--Explanation-03-28",
+    "term": "Large Language Model (LLM)",
+    "category": "AI"
+  },
+  "prompt-engineering": {
+    "url": "https://telegra.ph/Prompt-Engineering-AI-Glossary--Explanation-03-28",
+    "term": "Prompt Engineering",
+    "category": "AI"
+  },
+  "fine-tuning": {
+    "url": "https://telegra.ph/Fine-Tuning-AI-Glossary--Explanation-03-28",
+    "term": "Fine-Tuning",
+    "category": "AI"
+  },
+  "rag": {
+    "url": "https://telegra.ph/Retrieval-Augmented-Generation-RAG-AI-Glossary--Explanation-03-28",
+    "term": "Retrieval-Augmented Generation (RAG)",
+    "category": "AI"
+  },
+  "hallucination": {
+    "url": "https://telegra.ph/Hallucination-AI-Glossary--Explanation-03-28",
+    "term": "Hallucination",
+    "category": "AI"
+  },
+  "alignment": {
+    "url": "https://telegra.ph/Alignment-AI-Glossary--Explanation-03-28",
+    "term": "Alignment",
+    "category": "AI"
+  },
+  "constitutional-ai": {
+    "url": "https://telegra.ph/Constitutional-AI-AI-Glossary--Explanation-03-28",
+    "term": "Constitutional AI",
+    "category": "AI"
+  },
+  "zero-shot-learning": {
+    "url": "https://telegra.ph/Zero-Shot-Learning-AI-Glossary--Explanation-03-28",
+    "term": "Zero-Shot Learning",
+    "category": "AI"
+  },
+  "rlhf": {
+    "url": "https://telegra.ph/Reinforcement-Learning-from-Human-Feedback-RLHF-AI-Glossary--Explanation-03-28",
+    "term": "Reinforcement Learning from Human Feedback (RLHF)",
+    "category": "AI"
+  },
+  "transformer": {
+    "url": "https://telegra.ph/Transformer-AI-Glossary--Explanation-03-28",
+    "term": "Transformer",
+    "category": "AI"
+  },
+  "token": {
+    "url": "https://telegra.ph/Token-AI-Glossary--Explanation-03-28",
+    "term": "Token",
+    "category": "AI"
+  },
+  "embeddings": {
+    "url": "https://telegra.ph/Embeddings-AI-Glossary--Explanation-03-28",
+    "term": "Embeddings",
+    "category": "AI"
+  },
+  "agent": {
+    "url": "https://telegra.ph/Agent-AI-Glossary--Explanation-03-28",
+    "term": "Agent",
+    "category": "AI"
+  },
+  "multimodal-ai": {
+    "url": "https://telegra.ph/Multimodal-AI-AI-Glossary--Explanation-03-28",
+    "term": "Multimodal AI",
+    "category": "AI"
+  },
+  "blockchain": {
+    "url": "https://telegra.ph/Blockchain-Web3-Glossary--Explanation-03-28",
+    "term": "Blockchain",
+    "category": "Web3"
+  },
+  "smart-contract": {
+    "url": "https://telegra.ph/Smart-Contract-Web3-Glossary--Explanation-03-28",
+    "term": "Smart Contract",
+    "category": "Web3"
+  },
+  "defi": {
+    "url": "https://telegra.ph/Decentralized-Finance-DeFi-Web3-Glossary--Explanation-03-28",
+    "term": "Decentralized Finance (DeFi)",
+    "category": "Web3"
+  },
+  "nft": {
+    "url": "https://telegra.ph/Non-Fungible-Token-NFT-Web3-Glossary--Explanation-03-28",
+    "term": "Non-Fungible Token (NFT)",
+    "category": "Web3"
+  },
+  "dao": {
+    "url": "https://telegra.ph/Decentralized-Autonomous-Organization-DAO-Web3-Glossary--Explanation-03-28",
+    "term": "Decentralized Autonomous Organization (DAO)",
+    "category": "Web3"
+  },
+  "consensus-mechanism": {
+    "url": "https://telegra.ph/Consensus-Mechanism-Web3-Glossary--Explanation-03-28",
+    "term": "Consensus Mechanism",
+    "category": "Web3"
+  },
+  "gas-fees": {
+    "url": "https://telegra.ph/Gas-Fees-Web3-Glossary--Explanation-03-28",
+    "term": "Gas Fees",
+    "category": "Web3"
+  },
+  "layer-2": {
+    "url": "https://telegra.ph/Layer-2-Web3-Glossary--Explanation-03-28",
+    "term": "Layer 2",
+    "category": "Web3"
+  },
+  "wallet": {
+    "url": "https://telegra.ph/Wallet-Web3-Glossary--Explanation-03-28",
+    "term": "Wallet",
+    "category": "Web3"
+  },
+  "governance-token": {
+    "url": "https://telegra.ph/Governance-Token-Web3-Glossary--Explanation-03-28",
+    "term": "Governance Token",
+    "category": "Web3"
+  },
+  "stablecoin": {
+    "url": "https://telegra.ph/Stablecoin-Web3-Glossary--Explanation-03-28",
+    "term": "Stablecoin",
+    "category": "Web3"
+  },
+  "bridge": {
+    "url": "https://telegra.ph/Bridge-Web3-Glossary--Explanation-03-28",
+    "term": "Bridge",
+    "category": "Web3"
+  },
+  "oracle": {
+    "url": "https://telegra.ph/Oracle-Web3-Glossary--Explanation-03-28",
+    "term": "Oracle",
+    "category": "Web3"
+  },
+  "validator": {
+    "url": "https://telegra.ph/Validator-Web3-Glossary--Explanation-03-28",
+    "term": "Validator",
+    "category": "Web3"
+  },
+  "liquid-staking": {
+    "url": "https://telegra.ph/Liquid-Staking-Web3-Glossary--Explanation-03-28",
+    "term": "Liquid Staking",
+    "category": "Web3"
+  },
+  "api": {
+    "url": "https://telegra.ph/API-Application-Programming-Interface-Tech-Glossary--Explanation-03-28",
+    "term": "API (Application Programming Interface)",
+    "category": "Tech"
+  },
+  "microservices": {
+    "url": "https://telegra.ph/Microservices-Tech-Glossary--Explanation-03-28",
+    "term": "Microservices",
+    "category": "Tech"
+  },
+  "kubernetes": {
+    "url": "https://telegra.ph/Kubernetes-Tech-Glossary--Explanation-03-28",
+    "term": "Kubernetes",
+    "category": "Tech"
+  },
+  "serverless": {
+    "url": "https://telegra.ph/Serverless-Tech-Glossary--Explanation-03-28",
+    "term": "Serverless",
+    "category": "Tech"
+  },
+  "cicd": {
+    "url": "https://telegra.ph/CICD-Tech-Glossary--Explanation-03-28",
+    "term": "CI/CD",
+    "category": "Tech"
+  },
+  "edge-computing": {
+    "url": "https://telegra.ph/Edge-Computing-Tech-Glossary--Explanation-03-28",
+    "term": "Edge Computing",
+    "category": "Tech"
+  },
+  "zero-knowledge-proof": {
+    "url": "https://telegra.ph/Zero-Knowledge-Proof-Tech-Glossary--Explanation-03-28",
+    "term": "Zero-Knowledge Proof",
+    "category": "Tech"
+  },
+  "merkle-tree": {
+    "url": "https://telegra.ph/Merkle-Tree-Tech-Glossary--Explanation-03-28",
+    "term": "Merkle Tree",
+    "category": "Tech"
+  },
+  "sharding": {
+    "url": "https://telegra.ph/Sharding-Tech-Glossary--Explanation-03-28",
+    "term": "Sharding",
+    "category": "Tech"
+  },
+  "ipfs": {
+    "url": "https://telegra.ph/IPFS-InterPlanetary-File-System-Tech-Glossary--Explanation-03-28",
+    "term": "IPFS (InterPlanetary File System)",
+    "category": "Tech"
+  },
+  "webassembly": {
+    "url": "https://telegra.ph/WebAssembly-Wasm-Tech-Glossary--Explanation-03-28",
+    "term": "WebAssembly (Wasm)",
+    "category": "Tech"
+  },
+  "graphql": {
+    "url": "https://telegra.ph/GraphQL-Tech-Glossary--Explanation-03-28",
+    "term": "GraphQL",
+    "category": "Tech"
+  },
+  "docker": {
+    "url": "https://telegra.ph/Docker-Tech-Glossary--Explanation-03-28",
+    "term": "Docker",
+    "category": "Tech"
+  },
+  "message-queue": {
+    "url": "https://telegra.ph/Message-Queue-Tech-Glossary--Explanation-03-28",
+    "term": "Message Queue",
+    "category": "Tech"
+  },
+  "rate-limiting": {
+    "url": "https://telegra.ph/Rate-Limiting-Tech-Glossary--Explanation-03-28",
+    "term": "Rate Limiting",
+    "category": "Tech"
+  },
+  "context-window": {
+    "url": "https://telegra.ph/Context-Window-AI-Glossary--Explanation-03-28",
+    "term": "Context Window",
+    "category": "AI"
+  },
+  "temperature": {
+    "url": "https://telegra.ph/Temperature-AI-Glossary--Explanation-03-28",
+    "term": "Temperature",
+    "category": "AI"
+  },
+  "inference": {
+    "url": "https://telegra.ph/Inference-AI-Glossary--Explanation-03-28",
+    "term": "Inference",
+    "category": "AI"
+  },
+  "chain-of-thought": {
+    "url": "https://telegra.ph/Chain-of-Thought-Prompting-AI-Glossary--Explanation-03-28",
+    "term": "Chain-of-Thought Prompting",
+    "category": "AI"
+  },
+  "reasoning-model": {
+    "url": "https://telegra.ph/Reasoning-Model-AI-Glossary--Explanation-03-28",
+    "term": "Reasoning Model",
+    "category": "AI"
+  },
+  "mcp": {
+    "url": "https://telegra.ph/Model-Context-Protocol-MCP-AI-Glossary--Explanation-03-28",
+    "term": "Model Context Protocol (MCP)",
+    "category": "AI"
+  },
+  "vector-database": {
+    "url": "https://telegra.ph/Vector-Database-AI-Glossary--Explanation-03-28",
+    "term": "Vector Database",
+    "category": "AI"
+  },
+  "model-distillation": {
+    "url": "https://telegra.ph/Model-Distillation-AI-Glossary--Explanation-03-28",
+    "term": "Model Distillation",
+    "category": "AI"
+  },
+  "tokenization": {
+    "url": "https://telegra.ph/Tokenization-Web3-Glossary--Explanation-03-28",
+    "term": "Tokenization",
+    "category": "Web3"
+  },
+  "amm": {
+    "url": "https://telegra.ph/Automated-Market-Maker-AMM-Web3-Glossary--Explanation-03-28",
+    "term": "Automated Market Maker (AMM)",
+    "category": "Web3"
+  },
+  "seed-phrase": {
+    "url": "https://telegra.ph/Seed-Phrase-Web3-Glossary--Explanation-03-28",
+    "term": "Seed Phrase",
+    "category": "Web3"
+  },
+  "mev": {
+    "url": "https://telegra.ph/Maximal-Extractable-Value-MEV-Web3-Glossary--Explanation-03-28",
+    "term": "Maximal Extractable Value (MEV)",
+    "category": "Web3"
+  },
+  "depin": {
+    "url": "https://telegra.ph/DePIN-Web3-Glossary--Explanation-03-28",
+    "term": "DePIN",
+    "category": "Web3"
+  },
+  "restaking": {
+    "url": "https://telegra.ph/Restaking-Web3-Glossary--Explanation-03-28",
+    "term": "Restaking",
+    "category": "Web3"
+  },
+  "airdrop": {
+    "url": "https://telegra.ph/Airdrop-Web3-Glossary--Explanation-03-28",
+    "term": "Airdrop",
+    "category": "Web3"
+  },
+  "tokenomics": {
+    "url": "https://telegra.ph/Tokenomics-Web3-Glossary--Explanation-03-28",
+    "term": "Tokenomics",
+    "category": "Web3"
+  },
+  "attention-mechanism": {
+    "url": "https://telegra.ph/Attention-Mechanism-AI-Glossary--Explanation-03-28",
+    "term": "Attention Mechanism",
+    "category": "AI"
+  },
+  "quantization": {
+    "url": "https://telegra.ph/Quantization-AI-Glossary--Explanation-03-28",
+    "term": "Quantization",
+    "category": "AI"
+  },
+  "agentic-loop": {
+    "url": "https://telegra.ph/Agentic-Loop-AI-Glossary--Explanation-03-28",
+    "term": "Agentic Loop",
+    "category": "AI"
+  },
+  "synthetic-data": {
+    "url": "https://telegra.ph/Synthetic-Data-AI-Glossary--Explanation-03-28",
+    "term": "Synthetic Data",
+    "category": "AI"
+  },
+  "prompt-injection": {
+    "url": "https://telegra.ph/Prompt-Injection-AI-Glossary--Explanation-03-28",
+    "term": "Prompt Injection",
+    "category": "AI"
+  },
+  "mixture-of-experts": {
+    "url": "https://telegra.ph/Mixture-of-Experts-MoE-AI-Glossary--Explanation-03-28",
+    "term": "Mixture of Experts (MoE)",
+    "category": "AI"
+  },
+  "grounding": {
+    "url": "https://telegra.ph/Grounding-AI-Glossary--Explanation-03-28",
+    "term": "Grounding",
+    "category": "AI"
+  },
+  "liquidity-pool": {
+    "url": "https://telegra.ph/Liquidity-Pool-Web3-Glossary--Explanation-03-28",
+    "term": "Liquidity Pool",
+    "category": "Web3"
+  },
+  "yield-farming": {
+    "url": "https://telegra.ph/Yield-Farming-Web3-Glossary--Explanation-03-28",
+    "term": "Yield Farming",
+    "category": "Web3"
+  },
+  "flash-loan": {
+    "url": "https://telegra.ph/Flash-Loan-Web3-Glossary--Explanation-03-28",
+    "term": "Flash Loan",
+    "category": "Web3"
+  },
+  "layer-1": {
+    "url": "https://telegra.ph/Layer-1-Web3-Glossary--Explanation-03-28",
+    "term": "Layer 1",
+    "category": "Web3"
+  },
+  "proof-of-work": {
+    "url": "https://telegra.ph/Proof-of-Work-Web3-Glossary--Explanation-03-28",
+    "term": "Proof of Work",
+    "category": "Web3"
+  },
+  "proof-of-stake": {
+    "url": "https://telegra.ph/Proof-of-Stake-Web3-Glossary--Explanation-03-28",
+    "term": "Proof of Stake",
+    "category": "Web3"
+  },
+  "cold-wallet": {
+    "url": "https://telegra.ph/Cold-Wallet-Web3-Glossary--Explanation-03-28",
+    "term": "Cold Wallet",
+    "category": "Web3"
+  },
+  "wrapped-token": {
+    "url": "https://telegra.ph/Wrapped-Token-Web3-Glossary--Explanation-03-28",
+    "term": "Wrapped Token",
+    "category": "Web3"
+  },
+  "websocket": {
+    "url": "https://telegra.ph/WebSocket-Tech-Glossary--Explanation-03-28",
+    "term": "WebSocket",
+    "category": "Tech"
+  },
+  "oauth": {
+    "url": "https://telegra.ph/OAuth-Tech-Glossary--Explanation-03-28",
+    "term": "OAuth",
+    "category": "Tech"
+  },
+  "load-balancer": {
+    "url": "https://telegra.ph/Load-Balancer-Tech-Glossary--Explanation-03-28",
+    "term": "Load Balancer",
+    "category": "Tech"
+  },
+  "monorepo": {
+    "url": "https://telegra.ph/Monorepo-Tech-Glossary--Explanation-03-28",
+    "term": "Monorepo",
+    "category": "Tech"
+  },
+  "attention-head": {
+    "url": "https://telegra.ph/Attention-Head-AI-Glossary--Explanation-03-28",
+    "term": "Attention Head",
+    "category": "AI"
+  },
+  "positional-encoding": {
+    "url": "https://telegra.ph/Positional-Encoding-AI-Glossary--Explanation-03-28",
+    "term": "Positional Encoding",
+    "category": "AI"
+  },
+  "batch-normalization": {
+    "url": "https://telegra.ph/Batch-Normalization-AI-Glossary--Explanation-03-28",
+    "term": "Batch Normalization",
+    "category": "AI"
+  },
+  "beam-search": {
+    "url": "https://telegra.ph/Beam-Search-AI-Glossary--Explanation-03-28",
+    "term": "Beam Search",
+    "category": "AI"
+  },
+  "latency": {
+    "url": "https://telegra.ph/Latency-AI-Glossary--Explanation-03-28",
+    "term": "Latency",
+    "category": "AI"
+  },
+  "perplexity": {
+    "url": "https://telegra.ph/Perplexity-AI-Glossary--Explanation-03-28",
+    "term": "Perplexity",
+    "category": "AI"
+  },
+  "activation-function": {
+    "url": "https://telegra.ph/Activation-Function-AI-Glossary--Explanation-03-28",
+    "term": "Activation Function",
+    "category": "AI"
+  },
+  "softmax": {
+    "url": "https://telegra.ph/Softmax-AI-Glossary--Explanation-03-28",
+    "term": "Softmax",
+    "category": "AI"
+  },
+  "cross-entropy-loss": {
+    "url": "https://telegra.ph/Cross-Entropy-Loss-AI-Glossary--Explanation-03-28",
+    "term": "Cross-Entropy Loss",
+    "category": "AI"
+  },
+  "perplexity-trap": {
+    "url": "https://telegra.ph/Perplexity-Trap-AI-Glossary--Explanation-03-28",
+    "term": "Perplexity Trap",
+    "category": "AI"
+  },
+  "throughput": {
+    "url": "https://telegra.ph/Throughput-AI-Glossary--Explanation-03-28",
+    "term": "Throughput",
+    "category": "AI"
+  },
+  "protobuf": {
+    "url": "https://telegra.ph/Protocol-Buffer-Tech-Glossary--Explanation-03-28",
+    "term": "Protocol Buffer",
+    "category": "Tech"
+  },
+  "grpc": {
+    "url": "https://telegra.ph/gRPC-Tech-Glossary--Explanation-03-28",
+    "term": "gRPC",
+    "category": "Tech"
+  },
+  "idempotency": {
+    "url": "https://telegra.ph/Idempotency-Tech-Glossary--Explanation-03-28",
+    "term": "Idempotency",
+    "category": "Tech"
+  },
+  "circuit-breaker": {
+    "url": "https://telegra.ph/Circuit-Breaker-Tech-Glossary--Explanation-03-28",
+    "term": "Circuit Breaker",
+    "category": "Tech"
+  },
+  "database-index": {
+    "url": "https://telegra.ph/Database-Index-Tech-Glossary--Explanation-03-28",
+    "term": "Database Index",
+    "category": "Tech"
+  },
+  "acid-properties": {
+    "url": "https://telegra.ph/ACID-Properties-Tech-Glossary--Explanation-03-28",
+    "term": "ACID Properties",
+    "category": "Tech"
+  },
+  "consistency-hashing": {
+    "url": "https://telegra.ph/Consistency-Hashing-Tech-Glossary--Explanation-03-28",
+    "term": "Consistency Hashing",
+    "category": "Tech"
+  },
+  "cors": {
+    "url": "https://telegra.ph/CORS-Tech-Glossary--Explanation-03-28",
+    "term": "CORS",
+    "category": "Tech"
+  },
+  "database-sharding": {
+    "url": "https://telegra.ph/Database-Sharding-Tech-Glossary--Explanation-03-28",
+    "term": "Database Sharding",
+    "category": "Tech"
+  },
+  "yield": {
+    "url": "https://telegra.ph/Yield-Web3-Glossary--Explanation-03-28",
+    "term": "Yield",
+    "category": "Web3"
+  },
+  "impermanent-loss": {
+    "url": "https://telegra.ph/Impermanent-Loss-Web3-Glossary--Explanation-03-28",
+    "term": "Impermanent Loss",
+    "category": "Web3"
+  },
+  "slashing": {
+    "url": "https://telegra.ph/Slashing-Web3-Glossary--Explanation-03-28",
+    "term": "Slashing",
+    "category": "Web3"
+  },
+  "mev-burn": {
+    "url": "https://telegra.ph/MEV-Burn-Web3-Glossary--Explanation-03-28",
+    "term": "MEV Burn",
+    "category": "Web3"
+  },
+  "composability": {
+    "url": "https://telegra.ph/Composability-Web3-Glossary--Explanation-03-28",
+    "term": "Composability",
+    "category": "Web3"
+  },
+  "cross-chain-bridge": {
+    "url": "https://telegra.ph/Cross-Chain-Bridge-Web3-Glossary--Explanation-03-28",
+    "term": "Cross-Chain Bridge",
+    "category": "Web3"
+  },
+  "state-channel": {
+    "url": "https://telegra.ph/State-Channel-Web3-Glossary--Explanation-03-28",
+    "term": "State Channel",
+    "category": "Web3"
+  },
+  "payment-channel": {
+    "url": "https://telegra.ph/Payment-Channel-Web3-Glossary--Explanation-03-28",
+    "term": "Payment Channel",
+    "category": "Web3"
+  },
+  "atomic-swap": {
+    "url": "https://telegra.ph/Atomic-Swap-Web3-Glossary--Explanation-03-28",
+    "term": "Atomic Swap",
+    "category": "Web3"
+  },
+  "rug-pull": {
+    "url": "https://telegra.ph/Rug-Pull-Web3-Glossary--Explanation-03-28",
+    "term": "Rug Pull",
+    "category": "Web3"
+  },
+  "sparse-expert": {
+    "url": "https://telegra.ph/Sparse-Expert-AI-Glossary--Explanation-03-28",
+    "term": "Sparse Expert",
+    "category": "AI"
+  },
+  "knowledge-distillation": {
+    "url": "https://telegra.ph/Knowledge-Distillation-AI-Glossary--Explanation-03-28",
+    "term": "Knowledge Distillation",
+    "category": "AI"
+  },
+  "scaling-law": {
+    "url": "https://telegra.ph/Scaling-Law-AI-Glossary--Explanation-03-28",
+    "term": "Scaling Law",
+    "category": "AI"
+  },
+  "reward-model": {
+    "url": "https://telegra.ph/Reward-Model-AI-Glossary--Explanation-03-28",
+    "term": "Reward Model",
+    "category": "AI"
+  },
+  "scaffold": {
+    "url": "https://telegra.ph/Scaffold-AI-Glossary--Explanation-03-28",
+    "term": "Scaffold",
+    "category": "AI"
+  },
+  "few-shot-prompting": {
+    "url": "https://telegra.ph/Few-Shot-Prompting-AI-Glossary--Explanation-03-28",
+    "term": "Few-Shot Prompting",
+    "category": "AI"
+  },
+  "hyperparameter": {
+    "url": "https://telegra.ph/Hyperparameter-AI-Glossary--Explanation-03-28",
+    "term": "Hyperparameter",
+    "category": "AI"
+  },
+  "dropout": {
+    "url": "https://telegra.ph/Dropout-AI-Glossary--Explanation-03-28",
+    "term": "Dropout",
+    "category": "AI"
+  },
+  "overfitting": {
+    "url": "https://telegra.ph/Overfitting-AI-Glossary--Explanation-03-28",
+    "term": "Overfitting",
+    "category": "AI"
+  },
+  "generalization": {
+    "url": "https://telegra.ph/Generalization-AI-Glossary--Explanation-03-28",
+    "term": "Generalization",
+    "category": "AI"
+  },
+  "sybil-attack": {
+    "url": "https://telegra.ph/Sybil-Attack-Web3-Glossary--Explanation-03-28",
+    "term": "Sybil Attack",
+    "category": "Web3"
+  },
+  "double-spend": {
+    "url": "https://telegra.ph/Double-Spend-Web3-Glossary--Explanation-03-28",
+    "term": "Double Spend",
+    "category": "Web3"
+  },
+  "dust-attack": {
+    "url": "https://telegra.ph/Dust-Attack-Web3-Glossary--Explanation-03-28",
+    "term": "Dust Attack",
+    "category": "Web3"
+  },
+  "51-percent-attack": {
+    "url": "https://telegra.ph/51-Attack-Web3-Glossary--Explanation-03-28",
+    "term": "51% Attack",
+    "category": "Web3"
+  },
+  "liquidity-pool-volume": {
+    "url": "https://telegra.ph/Liquidity-Pool-Volume-Web3-Glossary--Explanation-03-28",
+    "term": "Liquidity Pool Volume",
+    "category": "Web3"
+  },
+  "slippage": {
+    "url": "https://telegra.ph/Slippage-Web3-Glossary--Explanation-03-28",
+    "term": "Slippage",
+    "category": "Web3"
+  },
+  "value-at-risk": {
+    "url": "https://telegra.ph/Value-at-Risk-Web3-Glossary--Explanation-03-28",
+    "term": "Value at Risk",
+    "category": "Web3"
+  },
+  "apy-vs-apr": {
+    "url": "https://telegra.ph/APY-vs-APR-Web3-Glossary--Explanation-03-28",
+    "term": "APY vs APR",
+    "category": "Web3"
+  },
+  "twap": {
+    "url": "https://telegra.ph/Time-Weighted-Average-Price-Web3-Glossary--Explanation-03-28",
+    "term": "Time-Weighted Average Price",
+    "category": "Web3"
+  },
+  "backpropagation": {
+    "url": "https://telegra.ph/Backpropagation-AI-Glossary--Explanation-03-28",
+    "term": "Backpropagation",
+    "category": "AI"
+  },
+  "gradient-descent": {
+    "url": "https://telegra.ph/Gradient-Descent-AI-Glossary--Explanation-03-28",
+    "term": "Gradient Descent",
+    "category": "AI"
+  },
+  "neural-network": {
+    "url": "https://telegra.ph/Neural-Network-AI-Glossary--Explanation-03-28",
+    "term": "Neural Network",
+    "category": "AI"
+  },
+  "cnn": {
+    "url": "https://telegra.ph/Convolutional-Neural-Network-AI-Glossary--Explanation-03-28",
+    "term": "Convolutional Neural Network",
+    "category": "AI"
+  },
+  "rnn": {
+    "url": "https://telegra.ph/Recurrent-Neural-Network-AI-Glossary--Explanation-03-28",
+    "term": "Recurrent Neural Network",
+    "category": "AI"
+  },
+  "lstm": {
+    "url": "https://telegra.ph/LSTM-AI-Glossary--Explanation-03-28",
+    "term": "LSTM",
+    "category": "AI"
+  },
+  "autoencoder": {
+    "url": "https://telegra.ph/Autoencoder-AI-Glossary--Explanation-03-28",
+    "term": "Autoencoder",
+    "category": "AI"
+  },
+  "vae": {
+    "url": "https://telegra.ph/Variational-Autoencoder-AI-Glossary--Explanation-03-28",
+    "term": "Variational Autoencoder",
+    "category": "AI"
+  },
+  "gan": {
+    "url": "https://telegra.ph/Generative-Adversarial-Network-AI-Glossary--Explanation-03-28",
+    "term": "Generative Adversarial Network",
+    "category": "AI"
+  },
+  "diffusion-model": {
+    "url": "https://telegra.ph/Diffusion-Model-AI-Glossary--Explanation-03-28",
+    "term": "Diffusion Model",
+    "category": "AI"
+  },
+  "generative-model": {
+    "url": "https://telegra.ph/Generative-Model-AI-Glossary--Explanation-03-28",
+    "term": "Generative Model",
+    "category": "AI"
+  },
+  "transfer-learning": {
+    "url": "https://telegra.ph/Transfer-Learning-AI-Glossary--Explanation-03-28",
+    "term": "Transfer Learning",
+    "category": "AI"
+  },
+  "foundation-model": {
+    "url": "https://telegra.ph/Foundation-Model-AI-Glossary--Explanation-03-28",
+    "term": "Foundation Model",
+    "category": "AI"
+  },
+  "bert": {
+    "url": "https://telegra.ph/BERT-AI-Glossary--Explanation-03-28",
+    "term": "BERT",
+    "category": "AI"
+  },
+  "attention-score": {
+    "url": "https://telegra.ph/Attention-Score-AI-Glossary--Explanation-03-28",
+    "term": "Attention Score",
+    "category": "AI"
+  },
+  "self-attention": {
+    "url": "https://telegra.ph/Self-Attention-AI-Glossary--Explanation-03-28",
+    "term": "Self-Attention",
+    "category": "AI"
+  },
+  "cross-attention": {
+    "url": "https://telegra.ph/Cross-Attention-AI-Glossary--Explanation-03-28",
+    "term": "Cross-Attention",
+    "category": "AI"
+  },
+  "layer-normalization": {
+    "url": "https://telegra.ph/Layer-Normalization-AI-Glossary--Explanation-03-28",
+    "term": "Layer Normalization",
+    "category": "AI"
+  },
+  "residual-connection": {
+    "url": "https://telegra.ph/Residual-Connection-AI-Glossary--Explanation-03-28",
+    "term": "Residual Connection",
+    "category": "AI"
+  },
+  "feedforward-network": {
+    "url": "https://telegra.ph/Feedforward-Network-AI-Glossary--Explanation-03-28",
+    "term": "Feedforward Network",
+    "category": "AI"
+  },
+  "causal-masking": {
+    "url": "https://telegra.ph/Causal-Masking-AI-Glossary--Explanation-03-28",
+    "term": "Causal Masking",
+    "category": "AI"
+  },
+  "tokenizer": {
+    "url": "https://telegra.ph/Tokenizer-AI-Glossary--Explanation-03-28",
+    "term": "Tokenizer",
+    "category": "AI"
+  },
+  "bpe": {
+    "url": "https://telegra.ph/Byte-Pair-Encoding-AI-Glossary--Explanation-03-28",
+    "term": "Byte-Pair Encoding",
+    "category": "AI"
+  },
+  "vocabulary": {
+    "url": "https://telegra.ph/Vocabulary-AI-Glossary--Explanation-03-28",
+    "term": "Vocabulary",
+    "category": "AI"
+  },
+  "logit": {
+    "url": "https://telegra.ph/Logit-AI-Glossary--Explanation-03-28",
+    "term": "Logit",
+    "category": "AI"
+  },
+  "top-k-sampling": {
+    "url": "https://telegra.ph/Top-k-Sampling-AI-Glossary--Explanation-03-28",
+    "term": "Top-k Sampling",
+    "category": "AI"
+  },
+  "top-p-sampling": {
+    "url": "https://telegra.ph/Top-p-Sampling-AI-Glossary--Explanation-03-28",
+    "term": "Top-p Sampling",
+    "category": "AI"
+  },
+  "speculative-decoding": {
+    "url": "https://telegra.ph/Speculative-Decoding-AI-Glossary--Explanation-03-28",
+    "term": "Speculative Decoding",
+    "category": "AI"
+  },
+  "kv-cache": {
+    "url": "https://telegra.ph/KV-Cache-AI-Glossary--Explanation-03-28",
+    "term": "KV Cache",
+    "category": "AI"
+  },
+  "prefix-tuning": {
+    "url": "https://telegra.ph/Prefix-Tuning-AI-Glossary--Explanation-03-28",
+    "term": "Prefix Tuning",
+    "category": "AI"
+  },
+  "lora": {
+    "url": "https://telegra.ph/LoRA-AI-Glossary--Explanation-03-28",
+    "term": "LoRA",
+    "category": "AI"
+  },
+  "adapter": {
+    "url": "https://telegra.ph/Adapter-AI-Glossary--Explanation-03-28",
+    "term": "Adapter",
+    "category": "AI"
+  },
+  "prompt-tuning": {
+    "url": "https://telegra.ph/Prompt-Tuning-AI-Glossary--Explanation-03-28",
+    "term": "Prompt Tuning",
+    "category": "AI"
+  },
+  "instruction-tuning": {
+    "url": "https://telegra.ph/Instruction-Tuning-AI-Glossary--Explanation-03-28",
+    "term": "Instruction Tuning",
+    "category": "AI"
+  },
+  "dpo": {
+    "url": "https://telegra.ph/Direct-Preference-Optimization-AI-Glossary--Explanation-03-28",
+    "term": "Direct Preference Optimization",
+    "category": "AI"
+  },
+  "contrastive-learning": {
+    "url": "https://telegra.ph/Contrastive-Learning-AI-Glossary--Explanation-03-28",
+    "term": "Contrastive Learning",
+    "category": "AI"
+  },
+  "clip": {
+    "url": "https://telegra.ph/CLIP-AI-Glossary--Explanation-03-28",
+    "term": "CLIP",
+    "category": "AI"
+  },
+  "vit": {
+    "url": "https://telegra.ph/Vision-Transformer-AI-Glossary--Explanation-03-28",
+    "term": "Vision Transformer",
+    "category": "AI"
+  },
+  "object-detection": {
+    "url": "https://telegra.ph/Object-Detection-AI-Glossary--Explanation-03-28",
+    "term": "Object Detection",
+    "category": "AI"
+  },
+  "image-segmentation": {
+    "url": "https://telegra.ph/Image-Segmentation-AI-Glossary--Explanation-03-28",
+    "term": "Image Segmentation",
+    "category": "AI"
+  },
+  "sam": {
+    "url": "https://telegra.ph/SAM-AI-Glossary--Explanation-03-28",
+    "term": "SAM",
+    "category": "AI"
+  },
+  "ocr": {
+    "url": "https://telegra.ph/Optical-Character-Recognition-AI-Glossary--Explanation-03-28",
+    "term": "Optical Character Recognition",
+    "category": "AI"
+  },
+  "computer-vision": {
+    "url": "https://telegra.ph/Computer-Vision-AI-Glossary--Explanation-03-28",
+    "term": "Computer Vision",
+    "category": "AI"
+  },
+  "speech-recognition": {
+    "url": "https://telegra.ph/Speech-Recognition-AI-Glossary--Explanation-03-28",
+    "term": "Speech Recognition",
+    "category": "AI"
+  },
+  "tts": {
+    "url": "https://telegra.ph/Text-to-Speech-AI-Glossary--Explanation-03-28",
+    "term": "Text-to-Speech",
+    "category": "AI"
+  },
+  "ner": {
+    "url": "https://telegra.ph/Named-Entity-Recognition-AI-Glossary--Explanation-03-28",
+    "term": "Named Entity Recognition",
+    "category": "AI"
+  },
+  "sentiment-analysis": {
+    "url": "https://telegra.ph/Sentiment-Analysis-AI-Glossary--Explanation-03-28",
+    "term": "Sentiment Analysis",
+    "category": "AI"
+  },
+  "question-answering": {
+    "url": "https://telegra.ph/Question-Answering-AI-Glossary--Explanation-03-28",
+    "term": "Question Answering",
+    "category": "AI"
+  },
+  "machine-translation": {
+    "url": "https://telegra.ph/Machine-Translation-AI-Glossary--Explanation-03-28",
+    "term": "Machine Translation",
+    "category": "AI"
+  },
+  "semantic-similarity": {
+    "url": "https://telegra.ph/Semantic-Similarity-AI-Glossary--Explanation-03-28",
+    "term": "Semantic Similarity",
+    "category": "AI"
+  },
+  "document-retrieval": {
+    "url": "https://telegra.ph/Document-Retrieval-AI-Glossary--Explanation-03-28",
+    "term": "Document Retrieval",
+    "category": "AI"
+  },
+  "re-ranking": {
+    "url": "https://telegra.ph/Re-ranking-AI-Glossary--Explanation-03-28",
+    "term": "Re-ranking",
+    "category": "AI"
+  },
+  "chunking": {
+    "url": "https://telegra.ph/Chunking-AI-Glossary--Explanation-03-28",
+    "term": "Chunking",
+    "category": "AI"
+  },
+  "market-cap": {
+    "url": "https://telegra.ph/Market-Cap-Web3-Glossary--Explanation-03-28",
+    "term": "Market Cap",
+    "category": "Web3"
+  },
+  "circulating-supply": {
+    "url": "https://telegra.ph/Circulating-Supply-Web3-Glossary--Explanation-03-28",
+    "term": "Circulating Supply",
+    "category": "Web3"
+  },
+  "vesting-schedule": {
+    "url": "https://telegra.ph/Vesting-Schedule-Web3-Glossary--Explanation-03-28",
+    "term": "Vesting Schedule",
+    "category": "Web3"
+  },
+  "token-burn": {
+    "url": "https://telegra.ph/Token-Burn-Web3-Glossary--Explanation-03-28",
+    "term": "Token Burn",
+    "category": "Web3"
+  },
+  "emission-rate": {
+    "url": "https://telegra.ph/Emission-Rate-Web3-Glossary--Explanation-03-28",
+    "term": "Emission Rate",
+    "category": "Web3"
+  },
+  "order-book": {
+    "url": "https://telegra.ph/Order-Book-Web3-Glossary--Explanation-03-28",
+    "term": "Order Book",
+    "category": "Web3"
+  },
+  "limit-order": {
+    "url": "https://telegra.ph/Limit-Order-Web3-Glossary--Explanation-03-28",
+    "term": "Limit Order",
+    "category": "Web3"
+  },
+  "market-order": {
+    "url": "https://telegra.ph/Market-Order-Web3-Glossary--Explanation-03-28",
+    "term": "Market Order",
+    "category": "Web3"
+  },
+  "liquidity-provider": {
+    "url": "https://telegra.ph/Liquidity-Provider-Web3-Glossary--Explanation-03-28",
+    "term": "Liquidity Provider",
+    "category": "Web3"
+  },
+  "concentrated-liquidity": {
+    "url": "https://telegra.ph/Concentrated-Liquidity-Web3-Glossary--Explanation-03-28",
+    "term": "Concentrated Liquidity",
+    "category": "Web3"
+  },
+  "tvl": {
+    "url": "https://telegra.ph/Total-Value-Locked-Web3-Glossary--Explanation-03-28",
+    "term": "Total Value Locked",
+    "category": "Web3"
+  },
+  "protocol-revenue": {
+    "url": "https://telegra.ph/Protocol-Revenue-Web3-Glossary--Explanation-03-28",
+    "term": "Protocol Revenue",
+    "category": "Web3"
+  },
+  "collateralization-ratio": {
+    "url": "https://telegra.ph/Collateralization-Ratio-Web3-Glossary--Explanation-03-28",
+    "term": "Collateralization Ratio",
+    "category": "Web3"
+  },
+  "liquidation": {
+    "url": "https://telegra.ph/Liquidation-Web3-Glossary--Explanation-03-28",
+    "term": "Liquidation",
+    "category": "Web3"
+  },
+  "borrow-rate": {
+    "url": "https://telegra.ph/Borrow-Rate-Web3-Glossary--Explanation-03-28",
+    "term": "Borrow Rate",
+    "category": "Web3"
+  },
+  "supply-rate": {
+    "url": "https://telegra.ph/Supply-Rate-Web3-Glossary--Explanation-03-28",
+    "term": "Supply Rate",
+    "category": "Web3"
+  },
+  "utilization-rate": {
+    "url": "https://telegra.ph/Utilization-Rate-Web3-Glossary--Explanation-03-28",
+    "term": "Utilization Rate",
+    "category": "Web3"
+  },
+  "perpetual-futures": {
+    "url": "https://telegra.ph/Perpetual-Futures-Web3-Glossary--Explanation-03-28",
+    "term": "Perpetual Futures",
+    "category": "Web3"
+  },
+  "funding-rate": {
+    "url": "https://telegra.ph/Funding-Rate-Web3-Glossary--Explanation-03-28",
+    "term": "Funding Rate",
+    "category": "Web3"
+  },
+  "leverage": {
+    "url": "https://telegra.ph/Leverage-Web3-Glossary--Explanation-03-28",
+    "term": "Leverage",
+    "category": "Web3"
+  },
+  "margin": {
+    "url": "https://telegra.ph/Margin-Web3-Glossary--Explanation-03-28",
+    "term": "Margin",
+    "category": "Web3"
+  },
+  "delta-neutral": {
+    "url": "https://telegra.ph/Delta-Neutral-Web3-Glossary--Explanation-03-28",
+    "term": "Delta Neutral",
+    "category": "Web3"
+  },
+  "basis-trade": {
+    "url": "https://telegra.ph/Basis-Trade-Web3-Glossary--Explanation-03-28",
+    "term": "Basis Trade",
+    "category": "Web3"
+  },
+  "rollup": {
+    "url": "https://telegra.ph/Rollup-Web3-Glossary--Explanation-03-28",
+    "term": "Rollup",
+    "category": "Web3"
+  },
+  "optimistic-rollup": {
+    "url": "https://telegra.ph/Optimistic-Rollup-Web3-Glossary--Explanation-03-28",
+    "term": "Optimistic Rollup",
+    "category": "Web3"
+  },
+  "zk-rollup": {
+    "url": "https://telegra.ph/ZK-Rollup-Web3-Glossary--Explanation-03-28",
+    "term": "ZK Rollup",
+    "category": "Web3"
+  },
+  "data-availability": {
+    "url": "https://telegra.ph/Data-Availability-Web3-Glossary--Explanation-03-28",
+    "term": "Data Availability",
+    "category": "Web3"
+  },
+  "sequencer": {
+    "url": "https://telegra.ph/Sequencer-Web3-Glossary--Explanation-03-28",
+    "term": "Sequencer",
+    "category": "Web3"
+  },
+  "account-abstraction": {
+    "url": "https://telegra.ph/Account-Abstraction-Web3-Glossary--Explanation-03-28",
+    "term": "Account Abstraction",
+    "category": "Web3"
+  },
+  "social-recovery": {
+    "url": "https://telegra.ph/Social-Recovery-Web3-Glossary--Explanation-03-28",
+    "term": "Social Recovery",
+    "category": "Web3"
+  },
+  "intent": {
+    "url": "https://telegra.ph/Intent-Web3-Glossary--Explanation-03-28",
+    "term": "Intent",
+    "category": "Web3"
+  },
+  "modular-blockchain": {
+    "url": "https://telegra.ph/Modular-Blockchain-Web3-Glossary--Explanation-03-28",
+    "term": "Modular Blockchain",
+    "category": "Web3"
+  },
+  "liquid-restaking": {
+    "url": "https://telegra.ph/Liquid-Restaking-Web3-Glossary--Explanation-03-28",
+    "term": "Liquid Restaking",
+    "category": "Web3"
+  },
+  "agentic-workflow": {
+    "url": "https://telegra.ph/Agentic-Workflow-AI-Glossary--Explanation-03-28",
+    "term": "Agentic Workflow",
+    "category": "AI"
+  },
+  "real-world-assets": {
+    "url": "https://telegra.ph/Real-World-Assets-RWA-Web3-Glossary--Explanation-03-28",
+    "term": "Real World Assets (RWA)",
+    "category": "Web3"
+  },
+  "ethereum-virtual-machine": {
+    "url": "https://telegra.ph/Ethereum-Virtual-Machine-EVM-Web3-Glossary--Explanation-03-28",
+    "term": "Ethereum Virtual Machine (EVM)",
+    "category": "Web3"
+  },
+  "decentralized-identity": {
+    "url": "https://telegra.ph/Decentralized-Identity-DID-Web3-Glossary--Explanation-03-28",
+    "term": "Decentralized Identity (DID)",
+    "category": "Web3"
+  },
+  "soulbound-token": {
+    "url": "https://telegra.ph/Soulbound-Token-SBT-Web3-Glossary--Explanation-03-28",
+    "term": "Soulbound Token (SBT)",
+    "category": "Web3"
+  },
+  "zkevm": {
+    "url": "https://telegra.ph/Zero-Knowledge-EVM-zkEVM-Web3-Glossary--Explanation-03-28",
+    "term": "Zero-Knowledge EVM (zkEVM)",
+    "category": "Web3"
+  },
+  "self-sovereign-identity": {
+    "url": "https://telegra.ph/Self-Sovereign-Identity-SSI-Web3-Glossary--Explanation-03-28",
+    "term": "Self-Sovereign Identity (SSI)",
+    "category": "Web3"
+  },
+  "federated-learning": {
+    "url": "https://telegra.ph/Federated-Learning-AI-Glossary--Explanation-03-28",
+    "term": "Federated Learning",
+    "category": "AI"
+  },
+  "autonomous-agents": {
+    "url": "https://telegra.ph/Autonomous-Agents-AI-Glossary--Explanation-03-28",
+    "term": "Autonomous Agents",
+    "category": "AI"
+  },
+  "reinforcement-learning": {
+    "url": "https://telegra.ph/Reinforcement-Learning-AI-Glossary--Explanation-03-28",
+    "term": "Reinforcement Learning",
+    "category": "AI"
+  },
+  "supervised-learning": {
+    "url": "https://telegra.ph/Supervised-Learning-AI-Glossary--Explanation-03-28",
+    "term": "Supervised Learning",
+    "category": "AI"
+  },
+  "deep-learning": {
+    "url": "https://telegra.ph/Deep-Learning-AI-Glossary--Explanation-03-28",
+    "term": "Deep Learning",
+    "category": "AI"
+  },
+  "generative-ai": {
+    "url": "https://telegra.ph/Generative-AI-AI-Glossary--Explanation-03-28",
+    "term": "Generative AI",
+    "category": "AI"
+  },
+  "transformer-architecture": {
+    "url": "https://telegra.ph/Transformer-Architecture-AI-Glossary--Explanation-03-28",
+    "term": "Transformer Architecture",
+    "category": "AI"
+  },
+  "semi-supervised-learning": {
+    "url": "https://telegra.ph/Semi-Supervised-Learning-AI-Glossary--Explanation-03-28",
+    "term": "Semi-Supervised Learning",
+    "category": "AI"
+  },
+  "expert-systems": {
+    "url": "https://telegra.ph/Expert-Systems-AI-Glossary--Explanation-03-28",
+    "term": "Expert Systems",
+    "category": "AI"
+  },
+  "ai-alignment": {
+    "url": "https://telegra.ph/AI-Alignment-AI-Glossary--Explanation-03-28",
+    "term": "AI Alignment",
+    "category": "AI"
+  },
+  "artificial-superintelligence-asi": {
+    "url": "https://telegra.ph/Artificial-Superintelligence-ASI-AI-Glossary--Explanation-03-28",
+    "term": "Artificial Superintelligence (ASI)",
+    "category": "AI"
+  },
+  "ai-safety": {
+    "url": "https://telegra.ph/AI-Safety-AI-Glossary--Explanation-03-28",
+    "term": "AI Safety",
+    "category": "AI"
+  },
+  "feature-extraction": {
+    "url": "https://telegra.ph/Feature-Extraction-AI-Glossary--Explanation-03-28",
+    "term": "Feature Extraction",
+    "category": "AI"
+  },
+  "support-vector-machine-svm": {
+    "url": "https://telegra.ph/Support-Vector-Machine-SVM-AI-Glossary--Explanation-03-28",
+    "term": "Support Vector Machine (SVM)",
+    "category": "AI"
+  },
+  "random-forest": {
+    "url": "https://telegra.ph/Random-Forest-AI-Glossary--Explanation-03-28",
+    "term": "Random Forest",
+    "category": "AI"
+  },
+  "cluster-analysis": {
+    "url": "https://telegra.ph/Cluster-Analysis-AI-Glossary--Explanation-03-28",
+    "term": "Cluster Analysis",
+    "category": "AI"
+  },
+  "word-embeddings": {
+    "url": "https://telegra.ph/Word-Embeddings-AI-Glossary--Explanation-03-28",
+    "term": "Word Embeddings",
+    "category": "AI"
+  },
+  "algorithmic-bias": {
+    "url": "https://telegra.ph/Algorithmic-Bias-AI-Glossary--Explanation-03-28",
+    "term": "Algorithmic Bias",
+    "category": "AI"
+  },
+  "explainable-ai-xai": {
+    "url": "https://telegra.ph/Explainable-AI-XAI-AI-Glossary--Explanation-03-28",
+    "term": "Explainable AI (XAI)",
+    "category": "AI"
+  },
+  "knowledge-graph": {
+    "url": "https://telegra.ph/Knowledge-Graph-AI-Glossary--Explanation-03-28",
+    "term": "Knowledge Graph",
+    "category": "AI"
+  },
+  "predictive-analytics": {
+    "url": "https://telegra.ph/Predictive-Analytics-AI-Glossary--Explanation-03-28",
+    "term": "Predictive Analytics",
+    "category": "AI"
+  },
+  "low-rank-adaptation-lora": {
+    "url": "https://telegra.ph/Low-Rank-Adaptation-LoRA-AI-Glossary--Explanation-03-28",
+    "term": "Low-Rank Adaptation (LoRA)",
+    "category": "AI"
+  },
+  "model-quantization": {
+    "url": "https://telegra.ph/Model-Quantization-AI-Glossary--Explanation-03-28",
+    "term": "Model Quantization",
+    "category": "AI"
+  },
+  "multi-agent-systems": {
+    "url": "https://telegra.ph/Multi-Agent-Systems-AI-Glossary--Explanation-03-28",
+    "term": "Multi-Agent Systems",
+    "category": "AI"
+  },
+  "edge-ai": {
+    "url": "https://telegra.ph/Edge-AI-AI-Glossary--Explanation-03-28",
+    "term": "Edge AI",
+    "category": "AI"
+  },
+  "hyperparameter-tuning": {
+    "url": "https://telegra.ph/Hyperparameter-Tuning-AI-Glossary--Explanation-03-28",
+    "term": "Hyperparameter Tuning",
+    "category": "AI"
+  },
+  "pattern-recognition": {
+    "url": "https://telegra.ph/Pattern-Recognition-AI-Glossary--Explanation-03-28",
+    "term": "Pattern Recognition",
+    "category": "AI"
+  },
+  "vision-transformers-vit": {
+    "url": "https://telegra.ph/Vision-Transformers-ViT-AI-Glossary--Explanation-03-28",
+    "term": "Vision Transformers (ViT)",
+    "category": "AI"
+  },
+  "delegated-proof-of-stake-dpos": {
+    "url": "https://telegra.ph/Delegated-Proof-of-Stake-DPoS-Web3-Glossary--Explanation-03-28",
+    "term": "Delegated Proof of Stake (DPoS)",
+    "category": "Web3"
+  },
+  "cryptocurrency-wallet": {
+    "url": "https://telegra.ph/Cryptocurrency-Wallet-Web3-Glossary--Explanation-03-28",
+    "term": "Cryptocurrency Wallet",
+    "category": "Web3"
+  },
+  "public-key-cryptography": {
+    "url": "https://telegra.ph/Public-Key-Cryptography-Web3-Glossary--Explanation-03-28",
+    "term": "Public-Key Cryptography",
+    "category": "Web3"
+  },
+  "cryptographic-hash-function": {
+    "url": "https://telegra.ph/Cryptographic-Hash-Function-Web3-Glossary--Explanation-03-28",
+    "term": "Cryptographic Hash Function",
+    "category": "Web3"
+  },
+  "mining-pool": {
+    "url": "https://telegra.ph/Mining-Pool-Web3-Glossary--Explanation-03-28",
+    "term": "Mining Pool",
+    "category": "Web3"
+  },
+  "genesis-block": {
+    "url": "https://telegra.ph/Genesis-Block-Web3-Glossary--Explanation-03-28",
+    "term": "Genesis Block",
+    "category": "Web3"
+  },
+  "hard-fork": {
+    "url": "https://telegra.ph/Hard-Fork-Web3-Glossary--Explanation-03-28",
+    "term": "Hard Fork",
+    "category": "Web3"
+  },
+  "soft-fork": {
+    "url": "https://telegra.ph/Soft-Fork-Web3-Glossary--Explanation-03-28",
+    "term": "Soft Fork",
+    "category": "Web3"
+  },
+  "zero-knowledge-proofs-zkps": {
+    "url": "https://telegra.ph/Zero-Knowledge-Proofs-ZKPs-Web3-Glossary--Explanation-03-28",
+    "term": "Zero-Knowledge Proofs (ZKPs)",
+    "category": "Web3"
+  },
+  "peer-to-peer-p2p": {
+    "url": "https://telegra.ph/Peer-to-Peer-P2P-Web3-Glossary--Explanation-03-28",
+    "term": "Peer-to-Peer (P2P)",
+    "category": "Web3"
+  },
+  "double-spending": {
+    "url": "https://telegra.ph/Double-Spending-Web3-Glossary--Explanation-03-28",
+    "term": "Double-Spending",
+    "category": "Web3"
+  },
+  "cold-storage": {
+    "url": "https://telegra.ph/Cold-Storage-Web3-Glossary--Explanation-03-28",
+    "term": "Cold Storage",
+    "category": "Web3"
+  },
+  "hot-wallet": {
+    "url": "https://telegra.ph/Hot-Wallet-Web3-Glossary--Explanation-03-28",
+    "term": "Hot Wallet",
+    "category": "Web3"
+  },
+  "proof-of-history-poh": {
+    "url": "https://telegra.ph/Proof-of-History-PoH-Web3-Glossary--Explanation-03-28",
+    "term": "Proof of History (PoH)",
+    "category": "Web3"
+  },
+  "directed-acyclic-graph-dag": {
+    "url": "https://telegra.ph/Directed-Acyclic-Graph-DAG-Web3-Glossary--Explanation-03-28",
+    "term": "Directed Acyclic Graph (DAG)",
+    "category": "Web3"
+  },
+  "depin-networks": {
+    "url": "https://telegra.ph/Decentralized-Physical-Infrastructure-Networks-DePIN-Web3-Glossary--Explanation-03-28",
+    "term": "Decentralized Physical Infrastructure Networks (DePIN)",
+    "category": "Web3"
+  },
+  "intent-centric-architecture": {
+    "url": "https://telegra.ph/Intent-Centric-Architecture-Web3-Glossary--Explanation-03-28",
+    "term": "Intent-Centric Architecture",
+    "category": "Web3"
+  },
+  "parallelized-evm": {
+    "url": "https://telegra.ph/Parallelized-EVM-Web3-Glossary--Explanation-03-28",
+    "term": "Parallelized EVM",
+    "category": "Web3"
+  },
+  "decentralized-sequencer": {
+    "url": "https://telegra.ph/Decentralized-Sequencer-Web3-Glossary--Explanation-03-28",
+    "term": "Decentralized Sequencer",
+    "category": "Web3"
+  },
+  "data-availability-sampling-das": {
+    "url": "https://telegra.ph/Data-Availability-Sampling-DAS-Web3-Glossary--Explanation-03-28",
+    "term": "Data Availability Sampling (DAS)",
+    "category": "Web3"
+  },
+  "decentralized-exchange-dex": {
+    "url": "https://telegra.ph/Decentralized-Exchange-DEX-Web3-Glossary--Explanation-03-28",
+    "term": "Decentralized Exchange (DEX)",
+    "category": "Web3"
+  },
+  "web2": {
+    "url": "https://telegra.ph/Web2-Tech-Glossary--Explanation-03-28",
+    "term": "Web2",
+    "category": "Tech"
+  },
+  "internet-of-things-iot": {
+    "url": "https://telegra.ph/Internet-of-Things-IoT-Tech-Glossary--Explanation-03-28",
+    "term": "Internet of Things (IoT)",
+    "category": "Tech"
+  },
+  "quantum-computing": {
+    "url": "https://telegra.ph/Quantum-Computing-Tech-Glossary--Explanation-03-28",
+    "term": "Quantum Computing",
+    "category": "Tech"
+  },
+  "serverless-architecture": {
+    "url": "https://telegra.ph/Serverless-Architecture-Tech-Glossary--Explanation-03-28",
+    "term": "Serverless Architecture",
+    "category": "Tech"
+  },
+  "ci-cd": {
+    "url": "https://telegra.ph/Continuous-Integration--Continuous-Deployment-CICD-Tech-Glossary--Explanation-03-28",
+    "term": "Continuous Integration / Continuous Deployment (CI/CD)",
+    "category": "Tech"
+  },
+  "containerization": {
+    "url": "https://telegra.ph/Containerization-Docker-Tech-Glossary--Explanation-03-28",
+    "term": "Containerization (Docker)",
+    "category": "Tech"
+  },
+  "spatial-computing": {
+    "url": "https://telegra.ph/Spatial-Computing-Tech-Glossary--Explanation-03-28",
+    "term": "Spatial Computing",
+    "category": "Tech"
+  },
+  "digital-twin": {
+    "url": "https://telegra.ph/Digital-Twin-Tech-Glossary--Explanation-03-28",
+    "term": "Digital Twin",
+    "category": "Tech"
+  },
+  "dns": {
+    "url": "https://telegra.ph/DNS-Domain-Name-System-Tech-Glossary--Explanation-03-28",
+    "term": "DNS (Domain Name System)",
+    "category": "Tech"
+  },
+  "rest-api": {
+    "url": "https://telegra.ph/REST-API-Tech-Glossary--Explanation-03-28",
+    "term": "REST API",
+    "category": "Tech"
+  },
+  "tcp-ip": {
+    "url": "https://telegra.ph/TCPIP-Tech-Glossary--Explanation-03-28",
+    "term": "TCP/IP",
+    "category": "Tech"
+  },
+  "cdn": {
+    "url": "https://telegra.ph/CDN-Content-Delivery-Network-Tech-Glossary--Explanation-03-28",
+    "term": "CDN (Content Delivery Network)",
+    "category": "Tech"
+  },
+  "ssl-tls": {
+    "url": "https://telegra.ph/SSLTLS-Tech-Glossary--Explanation-03-28",
+    "term": "SSL/TLS",
+    "category": "Tech"
+  },
+  "git": {
+    "url": "https://telegra.ph/Git-Tech-Glossary--Explanation-03-28",
+    "term": "Git",
+    "category": "Tech"
+  },
+  "webhook": {
+    "url": "https://telegra.ph/Webhook-Tech-Glossary--Explanation-03-28",
+    "term": "Webhook",
+    "category": "Tech"
+  }
+}

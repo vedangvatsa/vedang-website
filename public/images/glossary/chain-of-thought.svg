@@ -4,37 +4,15 @@
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
       <path d="M 0 0 L 6 3 L 0 6 z" fill="#9333ea"/>
     </marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/>
+    </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
-<text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">1</text>
-<rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="82.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Chain-of-thought prompting is</text>
-<text x="80" y="104" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">a technique where you</text>
-<text x="80" y="125.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">instruct a language model to</text>
-<text x="80" y="147.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">reason step by step before</text>
-<text x="80" y="168.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">giving a final answer.</text>
-<circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
-<text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">2</text>
-<rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="114.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Instead of asking 'What is</text>
-<text x="480" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">17% of 340?</text>
-<circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
-<text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">3</text>
-<rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">' directly, you say 'Think</text>
-<text x="80" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">through this step by step.</text>
-<circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
-<text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">4</text>
-<rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">' The model then reasons</text>
-<text x="480" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">through intermediate steps</text>
-<text x="480" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">before arriving at an answer.</text>
-
-  </g>
-  
+  <g transform="translate(0,-32)"><rect x="60" y="130" width="130" height="55" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<text x="125" y="164.5" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Question</text><line x1="195" y1="158" x2="230" y2="158" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="240" y="130" width="130" height="55" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="3"/>
+<text x="305" y="164.5" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#9333ea" text-anchor="middle">Step 1</text><line x1="375" y1="158" x2="410" y2="158" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="420" y="130" width="130" height="55" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="3"/>
+<text x="485" y="164.5" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#9333ea" text-anchor="middle">Step 2</text><line x1="555" y1="158" x2="590" y2="158" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow)"/><rect x="600" y="130" width="130" height="55" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="3"/><text x="665" y="165" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#10b981" text-anchor="middle">Answer</text><rect x="240" y="210" width="130" height="40" rx="6" fill="#9333ea" fill-opacity="0.08"/><text x="305" y="236" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#9333ea" text-anchor="middle">"Let me think..."</text><rect x="420" y="210" width="130" height="40" rx="6" fill="#9333ea" fill-opacity="0.08"/><text x="485" y="236" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#9333ea" text-anchor="middle">"Therefore..."</text><text x="400" y="310" font-family="'Inter',sans-serif" font-weight="600" font-size="16" fill="#37352f" text-anchor="middle">Reason step-by-step for better answers</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

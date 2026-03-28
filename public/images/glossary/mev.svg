@@ -4,38 +4,12 @@
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
       <path d="M 0 0 L 6 3 L 0 6 z" fill="#2563eb"/>
     </marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M 0 0 L 6 3 L 0 6 z" fill="#787774"/>
+    </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="10" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="130" y="123.12499999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Maximal Extractable Value</text>
-<text x="130" y="140.675" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">is the profit that block</text>
-<text x="130" y="158.225" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">producers (validators or</text>
-<text x="130" y="175.775" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">miners) can extract by</text>
-<text x="130" y="193.325" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">strategically ordering,</text>
-<text x="130" y="210.875" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">inserting, or censoring</text>
-<text x="130" y="228.425" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">transactions within the</text>
-<text x="130" y="245.97500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">blocks they produce.</text>
-<line x1="255" y1="180" x2="272" y2="180" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="280" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="131.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">When you submit a</text>
-<text x="400" y="153.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">transaction to a</text>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">blockchain, it enters</text>
-<text x="400" y="196.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">a public mempool</text>
-<text x="400" y="218" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">where it waits to be</text>
-<text x="400" y="239.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">included in a block.</text>
-<line x1="525" y1="180" x2="542" y2="180" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="550" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="670" y="131.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Anyone can see</text>
-<text x="670" y="153.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">pending transactions</text>
-<text x="670" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">before they are</text>
-<text x="670" y="196.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">confirmed, creating</text>
-<text x="670" y="218" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">opportunities for</text>
-<text x="670" y="239.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">exploitation.</text>
-
-  </g>
-  
+  <g transform="translate(0,-17)"><rect x="60" y="110" width="180" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="150" y="140" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#37352f" text-anchor="middle">Mempool</text><rect x="80" y="155" width="60" height="25" rx="4" fill="#e5e7eb"/><rect x="80" y="185" width="60" height="25" rx="4" fill="#e5e7eb"/><rect x="155" y="155" width="60" height="25" rx="4" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1"/><text x="185" y="172" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#ef4444" text-anchor="middle">Buy</text><circle cx="400" cy="170" r="35" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><circle cx="400" cy="170" r="15" fill="#2563eb"/><text x="400" y="225" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#2563eb" text-anchor="middle">Searcher</text><line x1="245" y1="170" x2="360" y2="170" stroke="#787774" stroke-width="1.5" stroke-dasharray="4 4"/><rect x="540" y="110" width="200" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="640" y="140" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#2563eb" text-anchor="middle">Reordered</text><rect x="560" y="155" width="80" height="25" rx="4" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1"/><text x="600" y="172" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#ef4444" text-anchor="middle">Frontrun</text><rect x="560" y="185" width="80" height="25" rx="4" fill="#e5e7eb"/><rect x="655" y="155" width="65" height="25" rx="4" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1"/><text x="687" y="172" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#10b981" text-anchor="middle">Profit</text><line x1="440" y1="170" x2="535" y2="170" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/><text x="400" y="300" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">Extract value by reordering transactions</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>
