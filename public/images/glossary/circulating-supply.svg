@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+<rect width="800" height="400" fill="#fff"/>
+<polygon points="245.03332099679082,90.8 245.03332099679082,142.79999999999998 200,168.8 154.96667900320918,142.79999999999998 154.9666790032092,90.79999999999998 200,64.8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.7"/>
+<text x="200" y="120.8" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#1e3a5f" text-anchor="middle">Supply Co…</text>
+<polygon points="336.0333209967908,90.8 336.0333209967908,142.79999999999998 291,168.8 245.96667900320918,142.79999999999998 245.9666790032092,90.79999999999998 291,64.8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.7"/>
+<text x="291" y="120.8" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#1e3a5f" text-anchor="middle">Tokens Cu…</text>
+<polygon points="427.0333209967908,90.8 427.0333209967908,142.79999999999998 382,168.8 336.9666790032092,142.79999999999998 336.9666790032092,90.79999999999998 382,64.8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.7"/>
+<text x="382" y="120.8" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#1e3a5f" text-anchor="middle">Market Ex…</text>
+<polygon points="518.0333209967908,90.8 518.0333209967908,142.79999999999998 473,168.8 427.9666790032092,142.79999999999998 427.9666790032092,90.79999999999998 473,64.8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.7"/>
+<text x="473" y="120.8" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#1e3a5f" text-anchor="middle">Excluding…</text>
+<polygon points="290.5333209967908,174 290.5333209967908,226 245.5,252 200.46667900320918,226 200.4666790032092,174 245.5,148" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.7"/>
+<text x="245.5" y="204" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#1e3a5f" text-anchor="middle">Locked Al…</text>
+<polygon points="381.5333209967908,174 381.5333209967908,226 336.5,252 291.4666790032092,226 291.4666790032092,174 336.5,148" fill="#2563eb" stroke="#2563eb" stroke-width="1.5" opacity="1"/>
+<text x="336.5" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="8" fill="#fff" text-anchor="middle">Circulating Supply</text>
+<polygon points="472.5333209967908,174 472.5333209967908,226 427.5,252 382.4666790032092,226 382.4666790032092,174 427.5,148" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.7"/>
+<text x="427.5" y="204" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#1e3a5f" text-anchor="middle">Unvested …</text>
+<polygon points="563.5333209967908,174 563.5333209967908,226 518.5,252 473.4666790032092,226 473.4666790032092,174 518.5,148" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.7"/>
+<text x="518.5" y="204" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#1e3a5f" text-anchor="middle">Team Toke…</text>
+<polygon points="245.03332099679082,257.2 245.03332099679082,309.2 200,335.2 154.96667900320918,309.2 154.9666790032092,257.2 200,231.2" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.7"/>
+<text x="200" y="287.2" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#1e3a5f" text-anchor="middle">Tokens Fo…</text>
+<polygon points="336.0333209967908,257.2 336.0333209967908,309.2 291,335.2 245.96667900320918,309.2 245.9666790032092,257.2 291,231.2" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.7"/>
+<polygon points="427.0333209967908,257.2 427.0333209967908,309.2 382,335.2 336.9666790032092,309.2 336.9666790032092,257.2 382,231.2" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.7"/>
+<polygon points="518.0333209967908,257.2 518.0333209967908,309.2 473,335.2 427.9666790032092,309.2 427.9666790032092,257.2 473,231.2" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" opacity="0.7"/>
+
+</svg>

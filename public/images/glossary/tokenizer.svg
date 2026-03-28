@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+<rect width="800" height="400" fill="#fff"/>
+<rect x="30" y="15" width="240" height="180" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="0.5"/>
+<text x="150" y="95" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">◆</text>
+<text x="150" y="135" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Converts Raw</text>
+<rect x="280" y="15" width="240" height="180" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="0.5"/>
+<text x="400" y="95" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">●</text>
+<text x="400" y="135" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Raw Text</text>
+<rect x="530" y="15" width="240" height="180" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="0.5"/>
+<text x="650" y="95" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">▲</text>
+<text x="650" y="135" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Discrete Tokens</text>
+<rect x="30" y="205" width="240" height="180" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="0.5"/>
+<text x="150" y="285" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">■</text>
+<text x="150" y="325" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Language Model</text>
+<rect x="280" y="205" width="240" height="180" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="0.5"/>
+<text x="400" y="285" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">★</text>
+<text x="400" y="325" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Process Serving</text>
+<rect x="530" y="205" width="240" height="180" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="0.5"/>
+<text x="650" y="285" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">◎</text>
+<text x="650" y="325" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Numerical Model</text>
+
+</svg>
