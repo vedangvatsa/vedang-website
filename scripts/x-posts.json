@@ -500,5 +500,69 @@
     "posted": false,
     "image": "scripts/thread-assets/sacred_algorithms.png",
     "text": "We stopped questioning the algorithm.\n\nWhen a deep learning model produces a result, we often cannot trace how it got there. We check inputs and outputs. We measure accuracy. But we cannot truly understand it.\n\nIn the face of this opacity, trust becomes a leap of faith. We believe in the data it was trained on. We believe in the engineers. We believe in the statistical promise.\n\nThis is epistemological surrender. An admission that intelligence exists beyond human comprehension. The black box has become the modern oracle.\n\nIt gets more serious when these systems make life-or-death decisions. An autonomous vehicle in an unavoidable accident. An AI diagnosing cancer. Who decides the ethical framework? Encoding that framework into a machine is creating sacred law.\n\nWe treat these algorithms as moral authorities. A role traditionally reserved for priests, philosophers, and gods.\n\nThe antidote is not rejection. It is critical faith. Trust paired with skepticism. Always.\n\nveda.ng/sacred-algorithms"
+  },
+  {
+    "id": "agentic-commerce",
+    "scheduleDate": "2026-04-17",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_commerce.png",
+    "text": "Your next customer is an algorithm.\n\nYou say \"get me running shoes under $150, good for flat feet, delivered by Friday.\" The agent searches Nike, Amazon, and specialty retailers simultaneously, weighs price against reviews and shipping speed, and completes checkout.\n\nYou went from doing the shopping to describing what you want.\n\nEvery major platform has shipped agent commerce products in the past 12 months. Mastercard Agent Pay. Coinbase x402. ChatGPT in-chat purchasing. Google's Universal Commerce Protocol. Shopify Agentic Storefronts.\n\nThe infrastructure is built. The protocols are live. The payment rails work. What is missing is consumer trust, merchant readiness, and regulatory clarity.\n\nBrand loyalty weakens when your agent switches you to a cheaper product that works just as well. Display ads lose relevance when the buyer is an algorithm.\n\nThe companies building for both humans and agents simultaneously will be in position when adoption accelerates.\n\nveda.ng/agentic-commerce"
+  },
+  {
+    "id": "ai-agent-economy",
+    "scheduleDate": "2026-04-18",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/ai_agent_economy.png",
+    "text": "The corporation is dissolving.\n\nThe traditional corporation exists to minimize transaction costs. When AI agents can discover, negotiate, and execute transactions in milliseconds, those costs approach zero.\n\nA company may not consist of thousands of employees in rigid silos. Instead, a core group of human strategists oversees a swarm of AI agents, each rented for specific capabilities. The firm becomes a temporary, task-specific nexus of agentic services.\n\nThe value of human labor shifts toward tasks that are non-reducible: strategic direction, creative ideation, ethical judgment, empathetic connection.\n\nThe web itself will be rebuilt. From an attention economy to an intention economy. Agents do not have attention to be captured. They have objectives. Services will be judged by utility to an agent, not ability to attract eyeballs.\n\nA web built for agents is a web where structured data beats prose. Where cryptographic proof beats claims. Where efficiency beats engagement.\n\nveda.ng/ai-agent-economy"
+  },
+  {
+    "id": "agi-governance",
+    "scheduleDate": "2026-04-18",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agi_governance.png",
+    "text": "How do you govern something smarter than you?\n\nEvery system of governance assumes Homo sapiens is the most intelligent actor. That assumption has held for 10,000 years. AGI may end it.\n\nAn AGI operating in financial markets could execute trades on a microsecond timescale. Human oversight becomes impossible. You need AI systems to monitor other AI systems. An arms race of control and counter-control.\n\nThe economic implications are equally profound. An AGI could automate not just manual labor but cognitive tasks: legal analysis, medical diagnosis, scientific research. How do you govern an economy where most human labor is obsolete?\n\nThose who own the AGIs wield unprecedented power. An AGI-powered state could monitor every citizen, predict their thoughts, and preempt dissent. Not punished. Preempted.\n\nWe are preparing to govern gods. And we have very little time to figure out how.\n\nveda.ng/agi-governance"
+  },
+  {
+    "id": "ai-economy",
+    "scheduleDate": "2026-04-19",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/ai_economy.png",
+    "text": "The entry ramp is narrowing.\n\nStanford payroll data covering millions of American workers: early-career workers aged 22-25 in AI-exposed occupations experienced a 16% relative decline in employment since late 2022. Senior workers in the same fields? Stable or growing.\n\nThis held even after excluding the tech sector and remote jobs. A February 2026 update showed the gap widening with no sign of reversal.\n\nSalesforce eliminated 4,000 customer support positions citing AI. Duolingo stopped using human contractors. Anthropic's CEO said nearly half of entry-level white-collar jobs could be replaced.\n\nThe question that matters most: whether economic gains from AI flow broadly or concentrate narrowly. Every previous technology eventually created broad prosperity. But the \"eventually\" ranged from one generation to three.\n\nThe difference with AI: it affects cognitive work. The communities affected are not regional towns. They are entry-level professionals in every major city.\n\nveda.ng/ai-economy"
+  },
+  {
+    "id": "ambient-intelligence",
+    "scheduleDate": "2026-04-19",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/ambient_intelligence.png",
+    "text": "The best interface is no interface.\n\nWe went from desktop to pocket to wrist. Each step made interaction more immediate and less obtrusive. But all still require a conscious act. A tap, a word, a gesture.\n\nAmbient intelligence is the final step: eliminate the command itself.\n\nA kitchen that knows you returned from a run and suggests a hydrating smoothie. A meeting room that recognizes participants, pulls up project files, and starts transcribing when everyone sits down.\n\nThe design goal is not to create an engaging screen. It is to make the interface disappear entirely. The best ambient system is one you do not notice.\n\nThe smartphone era hijacks attention with notifications. Ambient intelligence filters the noise. Only what truly requires your input reaches you.\n\nPrivacy is the obvious challenge. A world that senses constantly is a world that collects constantly. Trust requires local processing, transparent control, and strong encryption.\n\nveda.ng/ambient-intelligence"
+  },
+  {
+    "id": "api-states",
+    "scheduleDate": "2026-04-20",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/api_states.png",
+    "text": "The nation-state as a platform.\n\nInstead of navigating government websites and offices to register a business, you make a single authenticated API call. Instead of convoluted tax filing, your software interfaces directly with the tax authority in real time.\n\nGovernance as a service. Public services become a library of functions. The state becomes a foundational layer, like AWS for civic life.\n\nCitizenship becomes a set of cryptographic credentials in a digital wallet. To prove your age, you reveal only that you are over 18. No date of birth. No other data. Self-sovereign identity.\n\nStates would compete on service quality. A state with an inefficient business registration API loses customers to one with a better offering. A global marketplace for governance.\n\nEstonia already built this. Their e-Residency program lets anyone become a digital resident and access their services from anywhere.\n\nveda.ng/api-states"
+  },
+  {
+    "id": "artificial-intuition",
+    "scheduleDate": "2026-04-20",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/artificial_intuition.png",
+    "text": "Logic finds answers. Intuition finds questions.\n\nHuman cognition operates on two levels. Slow, deliberate reasoning. And fast, associative intuition. The gut feeling. The expert's instant recognition.\n\nAI has focused almost exclusively on replicating the first mode. Systems that excel at logic and math but struggle with ambiguity and creative problem-solving.\n\nThe next frontier: giving machines synthetic intuition. Not consciousness. But the ability to process information holistically, recognizing promising paths based on deeply encoded patterns.\n\nImagine knowledge as a vast network. Concepts are nodes. Relationships are weighted edges. A standard algorithm traverses paths methodically. An intuitive system assesses the entire topology, finding novel connections between distant concepts.\n\nA purely rational approach to business innovation analyzes market data for incremental improvements. An intuitive approach connects unrelated trends with unmet needs. Breakthroughs.\n\nveda.ng/artificial-intuition"
+  },
+  {
+    "id": "asi-timeline",
+    "scheduleDate": "2026-04-20",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/asi_timeline.png",
+    "text": "When does superintelligence arrive? The honest answer: nobody knows.\n\nMetaculus estimates 50% chance of AGI by 2040-2050. But the distribution is huge. Some predict 2030. Some predict 2100.\n\nMoore's Law is slowing. Transistors can only get so small. But progress now comes from architecture, not hardware. Better algorithms. Better training methods.\n\nWe are running out of high-quality human data. Solutions exist: synthetic data, video modalities, reinforcement learning. Each has tradeoffs but none is a dead end.\n\nThe biggest jumps came from surprises. Transformers in 2017. Scaling laws in 2020. Nobody predicted them exactly.\n\nIf the scaling hypothesis is true, superintelligence is inevitable. If false, we are missing something fundamental. Everything hinges on which is true.\n\nThe uncertainty is not a reason for complacency. It is a reason for urgency.\n\nveda.ng/asi-timeline"
   }
 ]

@@ -358,6 +358,14 @@
     "text": "NVIDIA doubled its AI revenue forecast. From $500B to $1T.\n\nAt the same GTC keynote, they pitched their new chip on a new metric. Not speed. Not power. Throughput per megawatt.\n\nThe Vera Rubin platform can deliver up to 35x more inference per megawatt than GPU-only setups. 10x more per watt than the Blackwell generation before it.\n\nWhen the biggest chip company on earth starts selling energy efficiency, the bottleneck may have moved.\n\nThe US datacenter pipeline hit 241 GW recently. Up 159% in a year. But only a third is under active development. New additions dropped by half in one quarter. Not because demand fell. Because the grid cannot keep up.\n\n183 GW has signed power agreements. That is roughly a fifth of America's total peak power demand.\n\nHyperscalers plan to spend about $650B on infrastructure this year. The money is there. The electricity may not be.\n\nThis pattern is not new. Railroads hit a steel bottleneck. Telecom hit a spectrum bottleneck. The internet hit a last-mile bottleneck.\n\nAI may be hitting an electricity bottleneck.\n\nJensen described a future with 75,000 NVIDIA employees and 7.5 million AI agents. A 100-to-1 ratio. If the rest of the industry moves in that direction, the demand for compute may not grow gradually. It may arrive all at once.\n\nMost people are asking which AI company wins. The more interesting question may be which grid gets built first."
   },
   {
+    "id": "agentic-commerce",
+    "scheduleDate": "2026-04-09",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_commerce.png",
+    "text": "Your next customer is an algorithm.\n\nAI agents now handle shopping. You describe what you want. The agent searches multiple stores, compares options, and completes checkout. You never open a browser.\n\nEvery major platform shipped agent commerce products in the past year. Mastercard Agent Pay. Coinbase x402. Google's Universal Commerce Protocol.\n\nBrand loyalty weakens when an algorithm picks your products. Display ads lose relevance when the buyer is a machine.\n\nThe infrastructure is built. The protocols are live. What is missing is trust and merchant readiness.\n\nveda.ng/agentic-commerce"
+  },
+  {
     "id": "dark-forest-internet",
     "scheduleDate": "2026-04-09",
     "scheduleTime": "09:00",
@@ -476,5 +484,61 @@
     "posted": false,
     "image": "scripts/thread-assets/internet_of_lies.png",
     "text": "Truth has no built-in advantage on the internet.\n\nA fake headline screenshot travels as fast as a real one. There is no mechanism to verify provenance. The web was built for speed, not trust.\n\nDecentralized identifiers could change this. Journalists sign articles cryptographically. Anyone verifies the signature. If content is distorted, the original signed version remains checkable.\n\nContent addressing changes the question from \"where is this file?\" to \"what is this file?\" A unique hash guarantees integrity.\n\nThe fight against misinformation must happen at the protocol level. Not moderation. Architecture.\n\nveda.ng/internet-of-lies"
+  },
+  {
+    "id": "ai-economy",
+    "scheduleDate": "2026-04-18",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/ai_economy.png",
+    "text": "The entry ramp is narrowing.\n\nStanford payroll data: early-career workers aged 22-25 in AI-exposed jobs saw a 16% relative decline in employment since late 2022. Senior workers remained stable.\n\nSalesforce cut 4,000 support positions. Duolingo stopped using human contractors. When the people writing the checks say the workforce is shrinking, the credibility bar is different.\n\nThe question: whether AI gains flow broadly or concentrate narrowly. Every previous technology eventually created broad prosperity. But \"eventually\" ranged from one to three generations.\n\nveda.ng/ai-economy"
+  },
+  {
+    "id": "asi-timeline",
+    "scheduleDate": "2026-04-18",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/asi_timeline.png",
+    "text": "When does superintelligence arrive?\n\nMetaculus: 50% chance of AGI by 2040-2050. But some predict 2030. Some predict 2100. The distribution is huge.\n\nMoore's Law is slowing, but progress now comes from better algorithms and architectures, not just hardware. Transformers in 2017. Scaling laws in 2020. Nobody predicted either.\n\nIf the scaling hypothesis is true, superintelligence is inevitable. If false, we are missing something fundamental.\n\nThe uncertainty is not a reason for complacency. It is a reason for urgency.\n\nveda.ng/asi-timeline"
+  },
+  {
+    "id": "ai-agent-economy",
+    "scheduleDate": "2026-04-18",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/ai_agent_economy.png",
+    "text": "The corporation is dissolving.\n\nTraditional firms exist to minimize transaction costs. When AI agents negotiate and execute in milliseconds, those costs approach zero.\n\nA company becomes a core group of strategists overseeing a swarm of AI agents. The firm becomes a temporary nexus of agentic services, dissolving and reforming as needs change.\n\nThe web rebuilds around intention, not attention. Agents have objectives, not eyeballs. Structured data beats prose. Efficiency beats engagement.\n\nThe agent economy is coming. The question is not if, but how we choose to build it.\n\nveda.ng/ai-agent-economy"
+  },
+  {
+    "id": "ambient-intelligence",
+    "scheduleDate": "2026-04-19",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/ambient_intelligence.png",
+    "text": "The best interface is no interface.\n\nDesktop to pocket to wrist. Each step more immediate, less obtrusive. But all require a conscious act.\n\nAmbient intelligence eliminates the command itself. A meeting room that recognizes participants and pulls up files when everyone sits down.\n\nThe design goal: make the interface disappear. The smartphone era hijacks attention. Ambient intelligence filters the noise.\n\nThe challenge is privacy. A world that senses constantly collects constantly. Trust requires local processing and transparent control.\n\nveda.ng/ambient-intelligence"
+  },
+  {
+    "id": "agi-governance",
+    "scheduleDate": "2026-04-19",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agi_governance.png",
+    "text": "How do you govern something smarter than you?\n\nEvery governance system assumes humans are the smartest actors. AGI may end that 10,000-year assumption.\n\nAn AGI in financial markets executes trades on microsecond timescales. Human oversight becomes impossible. You need AI monitoring AI.\n\nThose who control AGI systems wield unprecedented power. An AGI state could preempt dissent before it forms.\n\nWe are preparing to govern gods. And we have very little time to figure out how.\n\nveda.ng/agi-governance"
+  },
+  {
+    "id": "api-states",
+    "scheduleDate": "2026-04-20",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/api_states.png",
+    "text": "The nation-state as a platform.\n\nInstead of navigating offices, make an API call. Instead of convoluted tax filing, your software interfaces with the tax authority directly.\n\nCitizenship becomes cryptographic credentials. Prove your age without revealing your date of birth. Self-sovereign identity.\n\nStates compete on service quality. Inefficient APIs lose customers. A global marketplace for governance.\n\nEstonia already built this. E-Residency lets anyone access their services from anywhere.\n\nveda.ng/api-states"
+  },
+  {
+    "id": "artificial-intuition",
+    "scheduleDate": "2026-04-20",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/artificial_intuition.png",
+    "text": "Logic finds answers. Intuition finds questions.\n\nAI has focused on replicating deliberate reasoning. Systems that excel at logic but struggle with ambiguity and creative leaps.\n\nThe next frontier: synthetic intuition. Not consciousness, but holistic pattern recognition. The ability to find novel connections between distant concepts.\n\nA rational approach analyzes market data incrementally. An intuitive approach connects unrelated trends with unmet needs. Breakthroughs.\n\nveda.ng/artificial-intuition"
   }
 ]

@@ -342,5 +342,69 @@
     "posted": false,
     "text": "One AI model gives you one opinion. What if you could run 100 of them against the same question and watch them argue?\n\nSwarm Intelligence Prediction puts up to 100 AI agents in a structured debate. They challenge each other across multiple rounds. The prediction that survives the most scrutiny wins.\n\nBring your own API key. Pick any major provider. Ask any question.\n\nTry it: veda.ng/swarm-prediction",
     "image": "scripts/thread-assets/swarm_prediction.png"
+  },
+  {
+    "id": "agentic-commerce",
+    "scheduleDate": "2026-04-09",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "Your next customer is an algorithm.\n\nAI agents now handle shopping. You describe what you want. The agent compares options across multiple stores and completes checkout. You never open a browser.\n\nMastercard Agent Pay. Coinbase x402. Google's Universal Commerce Protocol. The infrastructure is live.\n\nBrand loyalty weakens when an algorithm picks your products. Display ads lose relevance when the buyer is a machine.\n\nveda.ng/agentic-commerce",
+    "image": "scripts/thread-assets/agentic_commerce.png"
+  },
+  {
+    "id": "agi-governance",
+    "scheduleDate": "2026-04-09",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "How do you govern something smarter than you?\n\nEvery governance system ever built assumes humans are the smartest actors. AGI may end that 10,000-year assumption.\n\nAn AGI in financial markets executes trades on microsecond timescales. Human oversight becomes impossible. You need AI monitoring AI. An arms race of control and counter-control.\n\nThose who control AGI systems wield unprecedented power. We are preparing to govern gods.\n\nveda.ng/agi-governance",
+    "image": "scripts/thread-assets/agi_governance.png"
+  },
+  {
+    "id": "ai-agent-economy",
+    "scheduleDate": "2026-04-10",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "The corporation is dissolving.\n\nTraditional firms exist to minimize transaction costs. When AI agents negotiate and execute in milliseconds, those costs approach zero.\n\nThe firm becomes a temporary nexus of agentic services. A core group of strategists overseeing a swarm of AI agents.\n\nThe web rebuilds around intention, not attention. Structured data beats prose. Efficiency beats engagement.\n\nveda.ng/ai-agent-economy",
+    "image": "scripts/thread-assets/ai_agent_economy.png"
+  },
+  {
+    "id": "ai-economy",
+    "scheduleDate": "2026-04-10",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "The entry ramp is narrowing.\n\nStanford payroll data: junior workers aged 22-25 in AI-exposed jobs saw a 16% relative employment decline since 2022. Senior workers stayed stable.\n\nSalesforce cut 4,000 support positions. Duolingo stopped using human contractors.\n\nEvery previous technology eventually created broad prosperity. But 'eventually' ranged from one to three generations. The question: will AI be different?\n\nveda.ng/ai-economy",
+    "image": "scripts/thread-assets/ai_economy.png"
+  },
+  {
+    "id": "ambient-intelligence",
+    "scheduleDate": "2026-04-11",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "The best interface is no interface.\n\nDesktop to pocket to wrist. Each step more immediate, less obtrusive. But all require a conscious command.\n\nAmbient intelligence is the final step: eliminate the command itself. A meeting room that recognizes participants and pulls up files when everyone sits down.\n\nPrivacy is the obvious challenge. A world that senses constantly collects constantly.\n\nveda.ng/ambient-intelligence",
+    "image": "scripts/thread-assets/ambient_intelligence.png"
+  },
+  {
+    "id": "api-states",
+    "scheduleDate": "2026-04-11",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "The nation-state as a platform.\n\nInstead of navigating offices, make an API call. Instead of convoluted tax filing, your software talks to the tax authority directly.\n\nCitizenship becomes cryptographic credentials. Prove your age without revealing your date of birth. Self-sovereign identity.\n\nEstonia already built this. E-Residency lets anyone access services from anywhere.\n\nveda.ng/api-states",
+    "image": "scripts/thread-assets/api_states.png"
+  },
+  {
+    "id": "artificial-intuition",
+    "scheduleDate": "2026-04-12",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "Logic finds answers. Intuition finds questions.\n\nAI has focused on replicating deliberate reasoning. Systems that excel at logic but struggle with ambiguity.\n\nThe next frontier: synthetic intuition. Not consciousness, but holistic pattern recognition. The ability to find novel connections between distant concepts.\n\nA rational approach analyzes incrementally. An intuitive approach connects unrelated trends with unmet needs. Breakthroughs.\n\nveda.ng/artificial-intuition",
+    "image": "scripts/thread-assets/artificial_intuition.png"
+  },
+  {
+    "id": "asi-timeline",
+    "scheduleDate": "2026-04-12",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "When does superintelligence arrive? The honest answer: nobody knows.\n\nMetaculus: 50% chance of AGI by 2040-2050. But predictions range from 2030 to 2100.\n\nMoore's Law is slowing. But progress now comes from architecture, not hardware. Transformers in 2017. Scaling laws in 2020. Nobody predicted either.\n\nThe uncertainty is not a reason for complacency. It is a reason for urgency.\n\nveda.ng/asi-timeline",
+    "image": "scripts/thread-assets/asi_timeline.png"
   }
 ]

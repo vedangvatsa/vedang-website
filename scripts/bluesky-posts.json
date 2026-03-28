@@ -320,6 +320,14 @@
     "image": "scripts/thread-assets/hustle_culture.png"
   },
   {
+    "id": "api-states",
+    "scheduleDate": "2026-04-09",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "The nation-state as a platform. API calls instead of office visits. Cryptographic credentials instead of passports.\n\nEstonia already built it.\n\nveda.ng/api-states",
+    "image": "scripts/thread-assets/api_states.png"
+  },
+  {
     "id": "bureaucracy-tax",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "09:00",
@@ -430,5 +438,61 @@
     "posted": false,
     "text": "Participation or privacy. You were told to choose.\n\nPseudonymity is the third option. A stable identity not tied to your real name. AI agents as your digital proxies.\n\nveda.ng/pseudonymous-agency",
     "image": "scripts/thread-assets/pseudonymous_agency.png"
+  },
+  {
+    "id": "agi-governance",
+    "scheduleDate": "2026-04-17",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "How do you govern something smarter than you?\n\nEvery governance system assumes humans are the smartest actors. AGI may end that assumption.\n\nveda.ng/agi-governance",
+    "image": "scripts/thread-assets/agi_governance.png"
+  },
+  {
+    "id": "ai-economy",
+    "scheduleDate": "2026-04-18",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "The entry ramp is narrowing.\n\nStanford data: junior workers in AI-exposed jobs down 16%. Senior workers stable. The gap is widening.\n\nveda.ng/ai-economy",
+    "image": "scripts/thread-assets/ai_economy.png"
+  },
+  {
+    "id": "ambient-intelligence",
+    "scheduleDate": "2026-04-18",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "The best interface is no interface.\n\nAmbient intelligence eliminates the command itself. The environment senses and acts. You never ask.\n\nveda.ng/ambient-intelligence",
+    "image": "scripts/thread-assets/ambient_intelligence.png"
+  },
+  {
+    "id": "agentic-commerce",
+    "scheduleDate": "2026-04-18",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "Your next customer is an algorithm.\n\nAI agents search stores, compare prices, complete checkout. You describe what you want. The machine buys it.\n\nveda.ng/agentic-commerce",
+    "image": "scripts/thread-assets/agentic_commerce.png"
+  },
+  {
+    "id": "artificial-intuition",
+    "scheduleDate": "2026-04-19",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "Logic finds answers. Intuition finds questions.\n\nThe next frontier: giving machines a gut feeling. Holistic pattern recognition, not just logical reasoning.\n\nveda.ng/artificial-intuition",
+    "image": "scripts/thread-assets/artificial_intuition.png"
+  },
+  {
+    "id": "asi-timeline",
+    "scheduleDate": "2026-04-19",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "When does superintelligence arrive? Nobody knows.\n\nMetaculus: 50% by 2040-2050. But predictions range from 2030 to 2100. The uncertainty demands urgency.\n\nveda.ng/asi-timeline",
+    "image": "scripts/thread-assets/asi_timeline.png"
+  },
+  {
+    "id": "ai-agent-economy",
+    "scheduleDate": "2026-04-19",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "The corporation is dissolving.\n\nWhen transaction costs approach zero, the firm stops making sense. AI agents dissolve the hierarchy into fluid networks.\n\nveda.ng/ai-agent-economy",
+    "image": "scripts/thread-assets/ai_agent_economy.png"
   }
 ]
