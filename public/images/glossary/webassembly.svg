@@ -8,28 +8,30 @@
   <rect width="800" height="400" fill="#ffffff"/>
   
   <g>
-    <circle cx="65" cy="130" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
-<text x="65" y="135" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">1</text>
-<rect x="40" y="70" width="340" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="100" y="115" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">WebAssembly is a binary</text>
-<text x="100" y="135.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">instruction format for a</text>
-<text x="100" y="155.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">stack-based virtual machine</text>
-<circle cx="445" cy="130" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
-<text x="445" y="135" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">2</text>
-<rect x="420" y="70" width="340" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="115" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">It lets you compile</text>
-<text x="480" y="135.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">languages like C++, Rust,</text>
-<text x="480" y="155.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">and Go</text>
-<circle cx="65" cy="280" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
-<text x="65" y="285" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">3</text>
-<rect x="40" y="220" width="340" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="100" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">To run in browsers at</text>
-<text x="100" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">near-native speed</text>
-<circle cx="445" cy="280" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
-<text x="445" y="285" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">4</text>
-<rect x="420" y="220" width="340" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">Historically, JavaScript</text>
-<text x="480" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">was the only language</text>
+    <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
+<text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">1</text>
+<rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="80" y="104" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">WebAssembly is a binary</text>
+<text x="80" y="125.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">instruction format for a</text>
+<text x="80" y="147.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">stack-based virtual machine.</text>
+<circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
+<text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">2</text>
+<rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="480" y="93.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">It lets you compile languages</text>
+<text x="480" y="114.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">like C++, Rust, and Go to run</text>
+<text x="480" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">in browsers at near-native</text>
+<text x="480" y="158" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">speed.</text>
+<circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
+<text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">3</text>
+<rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="80" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Historically, JavaScript was</text>
+<text x="80" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">the only language that ran in</text>
+<text x="80" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">browsers.</text>
+<circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
+<text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">4</text>
+<rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="480" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">It's a dynamically-typed,</text>
+<text x="480" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">interpreted language.</text>
 
   </g>
   

@@ -8,18 +8,15 @@
   <rect width="800" height="400" fill="#ffffff"/>
   
   <g>
-    <rect x="150" y="7.5" width="500" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="39" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Consistency hashing is a technique for</text>
-<text x="400" y="60.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">distributing keys across a dynamic set of</text>
-<text x="400" y="82.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">servers, like in caching systems and...</text>
-<line x1="400" y1="106.5" x2="400" y2="124.5" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="150" y="132.5" width="500" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Standard hashing modulo N assigns key K</text>
-<line x1="400" y1="231.5" x2="400" y2="249.5" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="150" y="257.5" width="500" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="289" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">To server K mod N .  when servers are added</text>
-<text x="400" y="310.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">or removed, most keys are reassigned, causing</text>
-<text x="400" y="332.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">cache misses and data movement</text>
+    <rect x="100" y="10" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="54.800000000000004" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Consistency hashing is a technique for distributing keys</text>
+<text x="400" y="76.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">across a dynamic set of servers,.</text>
+<line x1="400" y1="114" x2="400" y2="122" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="100" y="130" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Like in caching systems distributed databases.</text>
+<line x1="400" y1="234" x2="400" y2="242" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="100" y="250" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="305.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Standard hashing modulo N assigns key K to server K mod N.</text>
 
   </g>
   

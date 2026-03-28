@@ -8,18 +8,18 @@
   <rect width="800" height="400" fill="#ffffff"/>
   
   <g>
-    <rect x="150" y="7.5" width="500" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="49.800000000000004" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Long Short-Term Memory is a recurrent neural</text>
-<text x="400" y="71.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">network architecture</text>
-<line x1="400" y1="106.5" x2="400" y2="124.5" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="150" y="132.5" width="500" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Designed to capture long-range dependencies</text>
-<text x="400" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">in sequential data</text>
-<line x1="400" y1="231.5" x2="400" y2="249.5" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="150" y="257.5" width="500" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="289" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">By using gating mechanisms that control</text>
-<text x="400" y="310.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">information flow through a persistent cell</text>
-<text x="400" y="332.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">state</text>
+    <rect x="100" y="10" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="44" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Long Short-Term Memory is a recurrent neural network</text>
+<text x="400" y="65.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">architecture designed to capture long-range dependencies</text>
+<text x="400" y="87.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">in.</text>
+<line x1="400" y1="114" x2="400" y2="122" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="100" y="130" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Using gating mechanisms control information flow through a</text>
+<text x="400" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">persistent cell state.</text>
+<line x1="400" y1="234" x2="400" y2="242" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="100" y="250" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="294.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Standard RNNs struggle with sequences longer than a few</text>
+<text x="400" y="316.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">dozen steps gradients either vanish.</text>
 
   </g>
   

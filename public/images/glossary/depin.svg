@@ -8,21 +8,21 @@
   <rect width="800" height="400" fill="#ffffff"/>
   
   <g>
-    <rect x="40" y="45" width="340" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="85" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Decentralized Physical</text>
-<text x="210" y="105.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Infrastructure Networks are</text>
-<text x="210" y="125.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">blockchain projects</text>
-<rect x="420" y="45" width="340" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="85" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">That incentivize individuals to</text>
-<text x="590" y="105.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">deploy and operate real-world</text>
-<text x="590" y="125.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">physical hardware</text>
-<path d="M 210 155 L 380 220" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 590 155 L 420 220" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="170" y="225" width="460" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="253.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">By rewarding them with tokens . Instead</text>
-<text x="400" y="274.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">of a centralized company building and</text>
-<text x="400" y="296.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">owning infrastructure, DePIN projects</text>
-<text x="400" y="318" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">crowdsource it</text>
+    <rect x="35" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="210" y="73.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Decentralized Physical</text>
+<text x="210" y="94.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Infrastructure Networks are</text>
+<text x="210" y="116.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">blockchain projects incentivize</text>
+<text x="210" y="138" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">individuals to deploy.</text>
+<rect x="415" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="590" y="84" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Operate real-world physical</text>
+<text x="590" y="105.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">hardware rewarding them with</text>
+<text x="590" y="127.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">tokens.</text>
+<path d="M 210 160 L 380 220" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M 590 160 L 420 220" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="160" y="220" width="480" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="264" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Instead of a centralized company building and</text>
+<text x="400" y="285.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">owning infrastructure, DePIN projects</text>
+<text x="400" y="307.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">crowdsource it.</text>
 
   </g>
   

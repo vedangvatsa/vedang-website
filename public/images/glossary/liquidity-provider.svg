@@ -8,25 +8,25 @@
   <rect width="800" height="400" fill="#ffffff"/>
   
   <g>
-    <rect x="260" y="7.5" width="280" height="85" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="36" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">A liquidity provider (LP)</text>
-<text x="400" y="54.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">deposits assets into trading</text>
-<text x="400" y="73.80000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">pools or order books,...</text>
-<path d="M 400 92 L 220 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 400 92 L 580 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="60" y="132.5" width="280" height="85" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="200" y="170.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">To trade by providing the</text>
-<text x="200" y="189.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">other side of transactions</text>
-<rect x="460" y="132.5" width="280" height="85" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="600" y="161" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">LPs earn fees from trades</text>
-<text x="600" y="179.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">executed against their</text>
-<text x="600" y="198.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">liquidity, the compensati...</text>
-<path d="M 220 215 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 580 215 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="260" y="257.5" width="280" height="85" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="286" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">That enables market function</text>
-<text x="400" y="304.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">. In Automated Market Maker</text>
-<text x="400" y="323.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">(AMM) pools, LPs deposit...</text>
+    <rect x="250" y="12.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="36.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">A liquidity provider (LP)</text>
+<text x="400" y="55.449999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">deposits assets into trading</text>
+<text x="400" y="74.35000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">pools order books, enabling</text>
+<text x="400" y="93.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">others to trade.</text>
+<path d="M 400 107 L 220 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M 400 107 L 580 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="50" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="200" y="175.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Providing the other side of</text>
+<text x="200" y="195.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">transactions.</text>
+<rect x="450" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="600" y="156.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">LPs earn fees from trades</text>
+<text x="600" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">executed against their</text>
+<text x="600" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">liquidity, the compensation for</text>
+<text x="600" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">providing capital.</text>
+<path d="M 220 227 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M 580 227 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="250" y="252.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="305.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Enables market function.</text>
 
   </g>
   

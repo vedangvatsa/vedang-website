@@ -8,20 +8,16 @@
   <rect width="800" height="400" fill="#ffffff"/>
   
   <g>
-    <rect x="150" y="7.5" width="500" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="39" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">A decentralized sequencer orders transactions</text>
-<text x="400" y="60.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">in a distributed ledger without relying on a</text>
-<text x="400" y="82.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">single trusted authority</text>
-<line x1="400" y1="106.5" x2="400" y2="124.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="150" y="132.5" width="500" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="164" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Instead of one central server deciding the</text>
-<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">sequence, a group of independent nodes</text>
-<text x="400" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">collaborate</text>
-<line x1="400" y1="231.5" x2="400" y2="249.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="150" y="257.5" width="500" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="289" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">To agree on ordering . This concept is</text>
-<text x="400" y="310.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">critical in layer-2 scaling solutions for</text>
-<text x="400" y="332.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">blockchains</text>
+    <rect x="100" y="10" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="54.800000000000004" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">A decentralized sequencer orders transactions in a</text>
+<text x="400" y="76.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">distributed ledger without relying on a single trusted.</text>
+<line x1="400" y1="114" x2="400" y2="122" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="100" y="130" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Instead of one central server deciding the sequence,.</text>
+<line x1="400" y1="234" x2="400" y2="242" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="100" y="250" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="294.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">A group of independent nodes collaborate to agree on</text>
+<text x="400" y="316.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">ordering.</text>
 
   </g>
   

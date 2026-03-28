@@ -8,22 +8,24 @@
   <rect width="800" height="400" fill="#ffffff"/>
   
   <g>
-    <rect x="260" y="7.5" width="280" height="85" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="45.449999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Serverless is a cloud</text>
-<text x="400" y="64.35000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">execution model</text>
-<path d="M 400 92 L 220 132" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 400 92 L 580 132" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="60" y="132.5" width="280" height="85" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="200" y="170.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Where providers manage</text>
-<text x="200" y="189.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">infrastructure</text>
-<rect x="460" y="132.5" width="280" height="85" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="600" y="170.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">You write functions, the</text>
-<text x="600" y="189.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">provider handles scaling</text>
-<path d="M 220 215 L 400 252" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 580 215 L 400 252" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="260" y="257.5" width="280" height="85" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="295.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">You pay per execution, not</text>
-<text x="400" y="314.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">for idle time</text>
+    <rect x="250" y="12.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="45.99999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Serverless is a cloud execution</text>
+<text x="400" y="64.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">model where providers manage</text>
+<text x="400" y="83.80000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">infrastructure.</text>
+<path d="M 400 107 L 220 132" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M 400 107 L 580 132" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="50" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="200" y="175.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">You write functions, the</text>
+<text x="200" y="195.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">provider handles scaling.</text>
+<rect x="450" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="600" y="175.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">You pay per execution, not</text>
+<text x="600" y="195.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">for idle time.</text>
+<path d="M 220 227 L 400 252" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M 580 227 L 400 252" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="250" y="252.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="400" y="285" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">AWS Lambda, Google Cloud</text>
+<text x="400" y="305.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Functions, Azure Functions,</text>
+<text x="400" y="325.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Vercel Functions,.</text>
 
   </g>
   

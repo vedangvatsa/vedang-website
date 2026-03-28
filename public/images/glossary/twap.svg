@@ -8,18 +8,21 @@
   <rect width="800" height="400" fill="#ffffff"/>
   
   <g>
-    <rect x="190" y="27.5" width="420" height="85" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+    <rect x="190" y="20" width="420" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
 <text x="400" y="54" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Time-Weighted Average Price (TWAP)</text>
 <text x="400" y="75.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">calculates the average price of an</text>
-<text x="400" y="97.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">asset over a specified time period,...</text>
-<path d="M 400 112 L 220 205" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 400 112 L 580 205" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="35" y="210" width="330" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="200" y="265.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">By how long the asset spent at</text>
-<text x="200" y="285.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">each price level rather than</text>
-<rect x="435" y="210" width="330" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="600" y="265.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">By trading volume . This makes</text>
-<text x="600" y="285.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">TWAP resistant</text>
+<text x="400" y="97.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">asset over a specified time period,.</text>
+<path d="M 400 120 L 220 205" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M 400 120 L 580 205" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="30" y="205" width="340" height="130" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="200" y="254" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Weighted how long the asset</text>
+<text x="200" y="275.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">spent at each price level</text>
+<text x="200" y="297.20000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">rather than trading volume.</text>
+<rect x="430" y="205" width="340" height="130" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="600" y="243.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">This makes TWAP resistant to</text>
+<text x="600" y="264.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">spot price manipulation: an</text>
+<text x="600" y="286.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">attacker who briefly pushes the</text>
+<text x="600" y="308" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">price to an extreme level.</text>
 
   </g>
   

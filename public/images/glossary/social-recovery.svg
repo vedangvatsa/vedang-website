@@ -8,32 +8,31 @@
   <rect width="800" height="400" fill="#ffffff"/>
   
   <g>
-    <circle cx="65" cy="130" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
-<text x="65" y="135" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">1</text>
-<rect x="40" y="70" width="340" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="100" y="125.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">Social recovery is a wallet</text>
-<text x="100" y="145.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">security mechanism</text>
-<circle cx="445" cy="130" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
-<text x="445" y="135" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">2</text>
-<rect x="420" y="70" width="340" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="104.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">That enables account</text>
-<text x="480" y="125.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">recovery through trusted</text>
-<text x="480" y="145.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">contacts (guardians) rather</text>
-<text x="480" y="165.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">than seed phrases, solvi...</text>
-<circle cx="65" cy="280" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
-<text x="65" y="285" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">3</text>
-<rect x="40" y="220" width="340" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="100" y="254.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">The setup: you designate</text>
-<text x="100" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">multiple guardians,</text>
-<text x="100" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">friends, family, or</text>
-<text x="100" y="315.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">institutions you trust, ...</text>
-<circle cx="445" cy="280" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
-<text x="445" y="285" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">4</text>
-<rect x="420" y="220" width="340" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="254.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">If you lose access (lost</text>
-<text x="480" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">device, forgotten</text>
-<text x="480" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">password), you contact</text>
-<text x="480" y="315.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">guardians who sign recov...</text>
+    <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">1</text>
+<rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="80" y="114.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Social recovery is a wallet</text>
+<text x="80" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">security mechanism.</text>
+<circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">2</text>
+<rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="480" y="93.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Enables account recovery</text>
+<text x="480" y="114.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">through trusted contacts</text>
+<text x="480" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">(guardians) rather than seed</text>
+<text x="480" y="158" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">phrases,.</text>
+<circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">3</text>
+<rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="80" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Solving the fundamental</text>
+<text x="80" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">tension between security</text>
+<text x="80" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">usability in self-custody.</text>
+<circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">4</text>
+<rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+<text x="480" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">The setup: you designate</text>
+<text x="480" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">multiple guardians, friends,</text>
+<text x="480" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">family, institutions you</text>
+<text x="480" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">trust,.</text>
 
   </g>
   
