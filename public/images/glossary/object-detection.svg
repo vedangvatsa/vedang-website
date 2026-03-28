@@ -14,7 +14,8 @@
   <g>
     <rect x="190" y="30" width="420" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="190" y="30" width="420" height="80" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="75.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Object detection is a computer vision task</text>
+<text x="400" y="64.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Object detection is a computer vision</text>
+<text x="400" y="86.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">task</text>
 <path d="M 400 110 L 220 205" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <path d="M 400 110 L 580 205" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="35" y="210" width="330" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
@@ -23,9 +24,9 @@
 <text x="200" y="285.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">objects within images</text>
 <rect x="435" y="210" width="330" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="435" y="210" width="330" height="120" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="600" y="255" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">By outputting both class labels and</text>
-<text x="600" y="275.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">bounding box coordinates for each</text>
-<text x="600" y="295.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">detected object</text>
+<text x="600" y="255" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">By outputting both class labels</text>
+<text x="600" y="275.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">and bounding box coordinates</text>
+<text x="600" y="295.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">for each detected object</text>
 
   </g>
   

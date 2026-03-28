@@ -14,21 +14,25 @@
   <g>
     <rect x="15" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="15" y="105" width="230" height="150" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="130" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Emission rate measures the</text>
-<text x="130" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">speed at</text>
+<text x="130" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Emission rate</text>
+<text x="130" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">measures the speed</text>
+<text x="130" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">at</text>
 <line x1="250" y1="180" x2="271" y2="180" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="285" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="285" y="105" width="230" height="150" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Which new tokens enter</text>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">circulation, typically</text>
-<text x="400" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">expressed as annual</text>
-<text x="400" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">inflation percentage or...</text>
+<text x="400" y="131.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Which new tokens</text>
+<text x="400" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">enter circulation,</text>
+<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">typically expressed</text>
+<text x="400" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">as annual inflation</text>
+<text x="400" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">percentage or</text>
+<text x="400" y="239.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">tokens per time...</text>
 <line x1="520" y1="180" x2="541" y2="180" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="555" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="555" y="105" width="230" height="150" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="670" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Emissions serve critical</text>
-<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">functions: they fund</text>
-<text x="670" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">network security</text>
+<text x="670" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Emissions serve</text>
+<text x="670" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">critical functions:</text>
+<text x="670" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">they fund network</text>
+<text x="670" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">security</text>
 
   </g>
   

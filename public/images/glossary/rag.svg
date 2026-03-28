@@ -15,30 +15,31 @@
     <path d="M 400 135 L 180 155" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
 <rect x="65" y="155" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="65" y="155" width="230" height="90" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="180" y="195.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Retrieval-Augmented</text>
-<text x="180" y="214.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Generation is a technique</text>
+<text x="180" y="186" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Retrieval-Augmented</text>
+<text x="180" y="204.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Generation is a</text>
+<text x="180" y="223.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">technique</text>
 <path d="M 400 135 L 620 155" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
 <rect x="505" y="155" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="505" y="155" width="230" height="90" rx="10" fill="rgba(147,51,234,0.06)"/>
 <text x="620" y="186" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Where an LLM queries</text>
-<text x="620" y="204.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">external knowledge bases</text>
-<text x="620" y="223.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">before generating responses</text>
+<text x="620" y="204.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">external knowledge</text>
+<text x="620" y="223.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">bases before...</text>
 <path d="M 400 135 L 280 265" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
 <rect x="165" y="265" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="165" y="265" width="230" height="90" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="280" y="286.54999999999995" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Instead of relying solely on</text>
-<text x="280" y="305.44999999999993" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">knowledge baked into the</text>
-<text x="280" y="324.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">model during training, RAG</text>
-<text x="280" y="343.24999999999994" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">dynamically fetches relev...</text>
+<text x="280" y="296" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Instead of relying</text>
+<text x="280" y="314.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">solely on knowledge</text>
+<text x="280" y="333.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">baked into the mode...</text>
 <path d="M 400 135 L 520 265" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
 <rect x="405" y="265" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="405" y="265" width="230" height="90" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="520" y="305.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">This solves multiple</text>
-<text x="520" y="324.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">problems simultaneously</text>
+<text x="520" y="296" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">This solves multiple</text>
+<text x="520" y="314.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">problems</text>
+<text x="520" y="333.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">simultaneously</text>
 <rect x="300" y="65" width="200" height="70" rx="35" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="300" y="65" width="200" height="70" rx="35" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="93.5" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#9333ea" text-anchor="middle">Retrieval-Augmented</text>
-<text x="400" y="120.5" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#9333ea" text-anchor="middle">Generation (RAG)</text>
+<text x="400" y="93.5" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#9333ea" text-anchor="middle">Retrieval-Aug</text>
+<text x="400" y="120.5" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#9333ea" text-anchor="middle">mented...</text>
 
   </g>
   

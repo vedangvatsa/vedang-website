@@ -14,31 +14,27 @@
   <g>
     <rect x="80" y="35" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="80" y="35" width="280" height="90" rx="20" fill="rgba(37,99,235,0.06)"/>
-<text x="220" y="56.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Real World Assets (RWAs)</text>
-<text x="220" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">represent the tokenization of</text>
-<text x="220" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">off-chain, tangible, or</text>
-<text x="220" y="113.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">traditional financial assets ...</text>
+<text x="220" y="66" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Real World Assets (RWAs)</text>
+<text x="220" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">represent the tokenization</text>
+<text x="220" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">of off-chain, tangible, o...</text>
 <line x1="360" y1="80" x2="430" y2="80" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="440" y="35" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="440" y="35" width="280" height="90" rx="20" fill="rgba(37,99,235,0.06)"/>
-<text x="580" y="56.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">For the first decade of crypto,</text>
-<text x="580" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Decentralized Finance (DeFi)</text>
-<text x="580" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">existed mostly in a vacuum,</text>
-<text x="580" y="113.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">generating yields exclusively...</text>
+<text x="580" y="66" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">For the first decade of</text>
+<text x="580" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">crypto, Decentralized</text>
+<text x="580" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Finance (DeFi) existed...</text>
 <line x1="580" y1="125" x2="580" y2="225" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="440" y="235" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="440" y="235" width="280" height="90" rx="20" fill="rgba(37,99,235,0.06)"/>
-<text x="580" y="256.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">RWA tokenization is the bridge</text>
-<text x="580" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">connecting this isolated digital</text>
-<text x="580" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">economy with the massive,</text>
-<text x="580" y="313.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">multi-trillion-dollar...</text>
+<text x="580" y="266" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">RWA tokenization is the</text>
+<text x="580" y="284.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">bridge connecting this</text>
+<text x="580" y="303.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">isolated digital economy...</text>
 <line x1="440" y1="280" x2="370" y2="280" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="80" y="235" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="80" y="235" width="280" height="90" rx="20" fill="rgba(37,99,235,0.06)"/>
-<text x="220" y="256.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By representing physical assets</text>
-<text x="220" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">as digital tokens on a ledger,</text>
-<text x="220" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">RWAs inherit blockchain</text>
-<text x="220" y="313.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">properties: instant 24/7 glob...</text>
+<text x="220" y="266" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By representing physical</text>
+<text x="220" y="284.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">assets as digital tokens on</text>
+<text x="220" y="303.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">a ledger, RWAs inherit...</text>
 <line x1="220" y1="235" x2="220" y2="135" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 
   </g>

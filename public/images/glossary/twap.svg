@@ -14,19 +14,18 @@
   <g>
     <rect x="190" y="30" width="420" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="190" y="30" width="420" height="80" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="54" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Time-Weighted Average Price (TWAP) calculates the</text>
-<text x="400" y="75.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">average price of an asset over a specified time</text>
-<text x="400" y="97.19999999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">period, weighted</text>
+<text x="400" y="64.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Time-Weighted Average Price (TWAP)</text>
+<text x="400" y="86.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">calculates the average price of an...</text>
 <path d="M 400 110 L 220 205" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <path d="M 400 110 L 580 205" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="35" y="210" width="330" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="35" y="210" width="330" height="120" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="200" y="265.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">By how long the asset spent at each</text>
-<text x="200" y="285.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">price level rather than</text>
+<text x="200" y="265.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">By how long the asset spent at</text>
+<text x="200" y="285.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">each price level rather than</text>
 <rect x="435" y="210" width="330" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="435" y="210" width="330" height="120" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="600" y="265.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">By trading volume . This makes TWAP</text>
-<text x="600" y="285.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">resistant</text>
+<text x="600" y="265.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">By trading volume . This makes</text>
+<text x="600" y="285.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">TWAP resistant</text>
 
   </g>
   

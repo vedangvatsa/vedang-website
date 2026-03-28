@@ -14,21 +14,22 @@
   <g>
     <rect x="40" y="50" width="340" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="40" y="50" width="340" height="100" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="210" y="85" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Vocabulary in language models is the</text>
-<text x="210" y="105.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">complete set of tokens the model</text>
-<text x="210" y="125.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">recognizes, with each token mapping</text>
+<text x="210" y="74.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Vocabulary in language models is</text>
+<text x="210" y="95.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">the complete set of tokens the</text>
+<text x="210" y="115.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">model recognizes, with each</text>
+<text x="210" y="135.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">token mapping</text>
 <rect x="420" y="50" width="340" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="420" y="50" width="340" height="100" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="590" y="95.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">To a learnable embedding vector and an</text>
-<text x="590" y="115.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">entry in the output prediction layer</text>
+<text x="590" y="85" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">To a learnable embedding vector</text>
+<text x="590" y="105.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">and an entry in the output</text>
+<text x="590" y="125.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">prediction layer</text>
 <path d="M 210 150 L 380 230" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <path d="M 590 150 L 420 230" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="170" y="235" width="460" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="170" y="235" width="460" height="90" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="253.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Vocabulary size represents a fundamental design</text>
-<text x="400" y="274.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">tradeoff: larger vocabularies mean more parameters</text>
-<text x="400" y="296.40000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">(embedding matrices scale linearly with vocab</text>
-<text x="400" y="318" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">size), shorter sequences (common words become...</text>
+<text x="400" y="264" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Vocabulary size represents a fundamental</text>
+<text x="400" y="285.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">design tradeoff: larger vocabularies mean</text>
+<text x="400" y="307.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">more parameters (embedding matrices sc...</text>
 
   </g>
   

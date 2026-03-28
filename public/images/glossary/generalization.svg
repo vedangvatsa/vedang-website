@@ -12,23 +12,23 @@
   <rect width="800" height="400" fill="url(#grid)"/>
   
   <g>
-    <rect x="40" y="130" width="320" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="40" y="130" width="320" height="100" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="200" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Generalization is the ability of a</text>
-<text x="200" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">machine learning model</text>
-<path d="M 360 180 C 420 180, 420 80, 470 80" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
-<path d="M 360 180 C 420 180, 420 280, 470 280" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="470" y="35" width="300" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="470" y="35" width="300" height="90" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="620" y="66" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To perform well on new, previously</text>
-<text x="620" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">unseen data drawn from the same</text>
-<text x="620" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">distribution as the training data</text>
-<rect x="470" y="235" width="300" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="470" y="235" width="300" height="90" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="620" y="256.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A model that achieves 95% accuracy</text>
-<text x="620" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">on both training and test sets has</text>
-<text x="620" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">generalized well, it learned</text>
-<text x="620" y="313.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">patterns</text>
+    <rect x="70" y="130" width="280" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="70" y="130" width="280" height="100" rx="10" fill="rgba(147,51,234,0.06)"/>
+<text x="210" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Generalization is the</text>
+<text x="210" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">ability of a machine</text>
+<text x="210" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">learning model</text>
+<path d="M 350 180 C 400 180, 400 80, 450 80" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 350 180 C 400 180, 400 280, 450 280" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="450" y="35" width="280" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="450" y="35" width="280" height="90" rx="8" fill="rgba(147,51,234,0.06)"/>
+<text x="590" y="66" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To perform well on new,</text>
+<text x="590" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">previously unseen data drawn</text>
+<text x="590" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">from the same distributio...</text>
+<rect x="450" y="235" width="280" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="450" y="235" width="280" height="90" rx="8" fill="rgba(147,51,234,0.06)"/>
+<text x="590" y="266" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A model that achieves 95%</text>
+<text x="590" y="284.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">accuracy on both training</text>
+<text x="590" y="303.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">and test sets has...</text>
 
   </g>
   

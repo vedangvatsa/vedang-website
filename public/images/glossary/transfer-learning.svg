@@ -14,17 +14,18 @@
   <g>
     <rect x="150" y="30" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="150" y="30" width="500" height="80" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="75.95" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Transfer learning is a machine learning approach</text>
+<text x="400" y="64.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Transfer learning is a machine learning</text>
+<text x="400" y="87.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">approach</text>
 <line x1="400" y1="114" x2="400" y2="128" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="150" y="140" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="150" y="140" width="500" height="80" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="174.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Where knowledge gained from training on one task is</text>
-<text x="400" y="197.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">applied</text>
+<text x="400" y="174.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Where knowledge gained from training on one</text>
+<text x="400" y="197.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">task is applied</text>
 <line x1="400" y1="224" x2="400" y2="238" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="150" y="250" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="150" y="250" width="500" height="80" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="284.47499999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">To a different but related task, significantly reducing</text>
-<text x="400" y="307.42499999999995" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">the data and compute required</text>
+<text x="400" y="284.47499999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">To a different but related task,</text>
+<text x="400" y="307.42499999999995" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">significantly reducing the data and comp...</text>
 
   </g>
   

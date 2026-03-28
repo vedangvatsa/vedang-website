@@ -23,8 +23,9 @@
 <text x="445" y="136" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">2</text>
 <rect x="420" y="70" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="420" y="70" width="340" height="120" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="480" y="125.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">It lets you compile languages</text>
-<text x="480" y="145.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">like C++, Rust, and Go</text>
+<text x="480" y="115" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">It lets you compile</text>
+<text x="480" y="135.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">languages like C++, Rust,</text>
+<text x="480" y="155.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">and Go</text>
 <circle cx="65" cy="280" r="20" fill="#059669"/>
 <text x="65" y="286" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">3</text>
 <rect x="40" y="220" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
@@ -35,8 +36,8 @@
 <text x="445" y="286" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">4</text>
 <rect x="420" y="220" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="420" y="220" width="340" height="120" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="480" y="275.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">Historically, JavaScript was the</text>
-<text x="480" y="295.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">only language</text>
+<text x="480" y="275.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">Historically, JavaScript</text>
+<text x="480" y="295.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">was the only language</text>
 
   </g>
   

@@ -14,23 +14,27 @@
   <g>
     <rect x="15" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="15" y="105" width="230" height="150" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="130" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Contrastive learning is a</text>
-<text x="130" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">self-supervised training</text>
-<text x="130" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">approach</text>
+<text x="130" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Contrastive</text>
+<text x="130" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">learning is a</text>
+<text x="130" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">self-supervised</text>
+<text x="130" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">training approach</text>
 <line x1="250" y1="180" x2="271" y2="180" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="285" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="285" y="105" width="230" height="150" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">That learns</text>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">representations by pulling</text>
-<text x="400" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">similar items together and</text>
-<text x="400" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">pushing dissimilar item...</text>
+<text x="400" y="131.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">That learns</text>
+<text x="400" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">representations by</text>
+<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">pulling similar</text>
+<text x="400" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">items together and</text>
+<text x="400" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">pushing dissimilar</text>
+<text x="400" y="239.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">items apart in...</text>
 <line x1="520" y1="180" x2="541" y2="180" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="555" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="555" y="105" width="230" height="150" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="670" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">The core mechanism: given</text>
-<text x="670" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">an anchor example, define</text>
-<text x="670" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">positive examples (similar</text>
-<text x="670" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">items</text>
+<text x="670" y="142.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">The core mechanism:</text>
+<text x="670" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">given an anchor</text>
+<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">example, define</text>
+<text x="670" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">positive examples</text>
+<text x="670" y="228.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">(similar items</text>
 
   </g>
   

@@ -12,21 +12,21 @@
   <rect width="800" height="400" fill="url(#grid)"/>
   
   <g>
-    <rect x="40" y="130" width="320" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="40" y="130" width="320" height="100" rx="10" fill="rgba(5,150,105,0.06)"/>
-<text x="200" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A Content Delivery Network is a</text>
-<text x="200" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">group of servers spread across many</text>
-<text x="200" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">locations around the world</text>
-<path d="M 360 180 C 420 180, 420 80, 470 80" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
-<path d="M 360 180 C 420 180, 420 280, 470 280" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="470" y="35" width="300" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="470" y="35" width="300" height="90" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="620" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That work together to deliver web</text>
-<text x="620" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">content faster</text>
-<rect x="470" y="235" width="300" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="470" y="235" width="300" height="90" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="620" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By serving it from the server</text>
-<text x="620" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">closest</text>
+    <rect x="70" y="130" width="280" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="70" y="130" width="280" height="100" rx="10" fill="rgba(5,150,105,0.06)"/>
+<text x="210" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A Content Delivery</text>
+<text x="210" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Network is a group of</text>
+<text x="210" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">servers spread across...</text>
+<path d="M 350 180 C 400 180, 400 80, 450 80" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 350 180 C 400 180, 400 280, 450 280" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="450" y="35" width="280" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="450" y="35" width="280" height="90" rx="8" fill="rgba(5,150,105,0.06)"/>
+<text x="590" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That work together to</text>
+<text x="590" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">deliver web content faster</text>
+<rect x="450" y="235" width="280" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="450" y="235" width="280" height="90" rx="8" fill="rgba(5,150,105,0.06)"/>
+<text x="590" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By serving it from the</text>
+<text x="590" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">server closest</text>
 
   </g>
   

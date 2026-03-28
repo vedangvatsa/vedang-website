@@ -19,24 +19,21 @@
 <line x1="360" y1="80" x2="430" y2="80" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="440" y="35" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="440" y="35" width="280" height="90" rx="20" fill="rgba(147,51,234,0.06)"/>
-<text x="580" y="56.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Where an initial fast retriever</text>
-<text x="580" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">generates candidate documents,</text>
-<text x="580" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">then a more powerful but slower</text>
-<text x="580" y="113.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">model re-scores and reorders...</text>
+<text x="580" y="66" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Where an initial fast</text>
+<text x="580" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">retriever generates</text>
+<text x="580" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">candidate documents, then...</text>
 <line x1="580" y1="125" x2="580" y2="225" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="440" y="235" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="440" y="235" width="280" height="90" rx="20" fill="rgba(147,51,234,0.06)"/>
-<text x="580" y="256.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By relevance, greatly improving</text>
-<text x="580" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">search quality without the cost</text>
-<text x="580" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">of running expensive models over</text>
-<text x="580" y="313.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">entire corpora</text>
+<text x="580" y="266" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By relevance, greatly</text>
+<text x="580" y="284.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">improving search quality</text>
+<text x="580" y="303.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">without the cost of runni...</text>
 <line x1="440" y1="280" x2="370" y2="280" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="80" y="235" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="80" y="235" width="280" height="90" rx="20" fill="rgba(147,51,234,0.06)"/>
-<text x="220" y="256.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The initial retrieval stage</text>
-<text x="220" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">(BM25, dense retrieval, or</text>
-<text x="220" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">hybrid) runs efficiently over</text>
-<text x="220" y="313.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">millions or billions of...</text>
+<text x="220" y="266" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The initial retrieval stage</text>
+<text x="220" y="284.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">(BM25, dense retrieval, or</text>
+<text x="220" y="303.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">hybrid) runs efficiently...</text>
 <line x1="220" y1="235" x2="220" y2="135" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 
   </g>

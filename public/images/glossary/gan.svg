@@ -12,22 +12,22 @@
   <rect width="800" height="400" fill="url(#grid)"/>
   
   <g>
-    <rect x="40" y="130" width="320" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="40" y="130" width="320" height="100" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="200" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A generative adversarial network</text>
-<text x="200" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">trains two neural networks in</text>
-<text x="200" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">competition: a generator</text>
-<path d="M 360 180 C 420 180, 420 80, 470 80" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
-<path d="M 360 180 C 420 180, 420 280, 470 280" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="470" y="35" width="300" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="470" y="35" width="300" height="90" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="620" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That creates synthetic samples and</text>
-<text x="620" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">a discriminator</text>
-<rect x="470" y="235" width="300" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="470" y="235" width="300" height="90" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="620" y="266" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That distinguishes real samples</text>
-<text x="620" y="284.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">from generated ones, with each</text>
-<text x="620" y="303.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">network improving</text>
+    <rect x="70" y="130" width="280" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="70" y="130" width="280" height="100" rx="10" fill="rgba(147,51,234,0.06)"/>
+<text x="210" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A generative adversarial</text>
+<text x="210" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">network trains two</text>
+<text x="210" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">neural networks in...</text>
+<path d="M 350 180 C 400 180, 400 80, 450 80" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 350 180 C 400 180, 400 280, 450 280" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="450" y="35" width="280" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="450" y="35" width="280" height="90" rx="8" fill="rgba(147,51,234,0.06)"/>
+<text x="590" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That creates synthetic</text>
+<text x="590" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">samples and a discriminator</text>
+<rect x="450" y="235" width="280" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="450" y="235" width="280" height="90" rx="8" fill="rgba(147,51,234,0.06)"/>
+<text x="590" y="266" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That distinguishes real</text>
+<text x="590" y="284.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">samples from generated ones,</text>
+<text x="590" y="303.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">with each network improving</text>
 
   </g>
   

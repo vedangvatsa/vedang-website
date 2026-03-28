@@ -14,24 +14,18 @@
   <g>
     <rect x="100" y="275" width="600" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="100" y="275" width="600" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="295.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">ZK rollups (Zero-Knowledge rollups) post cryptographic validity</text>
-<text x="400" y="314.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">proofs</text>
+<text x="400" y="304.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">ZK rollups (Zero-Knowledge rollups) post cryptographic valid...</text>
 <rect x="140" y="210" width="520" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="140" y="210" width="520" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="221" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To Layer 1 that mathematically guarantee all transactions</text>
-<text x="400" y="239.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">in a batch are correct, eliminating the need for fraud</text>
-<text x="400" y="258.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">proofs or challenge periods</text>
+<text x="400" y="239.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To Layer 1 that mathematically guarantee all...</text>
 <line x1="400" y1="275" x2="400" y2="265" stroke="#2563eb" stroke-width="3"/>
 <rect x="180" y="145" width="440" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="180" y="145" width="440" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="165.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The technology uses zero-knowledge proofs</text>
-<text x="400" y="184.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">(SNARKs or STARKs)</text>
+<text x="400" y="174.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The technology uses zero-knowledge proofs...</text>
 <line x1="400" y1="210" x2="400" y2="200" stroke="#2563eb" stroke-width="3"/>
 <rect x="220" y="80" width="360" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="220" y="80" width="360" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="91" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To create a compact proof that an</text>
-<text x="400" y="109.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">arbitrary computation was performed</text>
-<text x="400" y="128.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">correctly</text>
+<text x="400" y="109.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To create a compact proof that an...</text>
 <line x1="400" y1="145" x2="400" y2="135" stroke="#2563eb" stroke-width="3"/>
 
   </g>

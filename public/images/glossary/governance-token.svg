@@ -14,21 +14,24 @@
   <g>
     <rect x="15" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="15" y="105" width="230" height="150" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="130" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A governance token is a</text>
-<text x="130" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">digital asset</text>
+<text x="130" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A governance token</text>
+<text x="130" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">is a digital asset</text>
 <line x1="250" y1="180" x2="271" y2="180" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="285" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="285" y="105" width="230" height="150" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">That grants voting rights</text>
-<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">in a decentralized</text>
-<text x="400" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">autonomous organization</text>
+<text x="400" y="142.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">That grants voting</text>
+<text x="400" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">rights in a</text>
+<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">decentralized</text>
+<text x="400" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">autonomous</text>
+<text x="400" y="228.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">organization</text>
 <line x1="520" y1="180" x2="541" y2="180" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="555" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="555" y="105" width="230" height="150" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="670" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Token holders can vote on</text>
-<text x="670" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">protocol changes, treasury</text>
-<text x="670" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">allocation, and strategic</text>
-<text x="670" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">decisions</text>
+<text x="670" y="142.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Token holders can</text>
+<text x="670" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">vote on protocol</text>
+<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">changes, treasury</text>
+<text x="670" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">allocation, and</text>
+<text x="670" y="228.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">strategic decisions</text>
 
   </g>
   

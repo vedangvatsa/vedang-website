@@ -14,16 +14,18 @@
   <g>
     <rect x="150" y="30" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="150" y="30" width="500" height="80" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="75.95" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Impermanent loss is the loss liquidity providers suffer</text>
+<text x="400" y="64.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Impermanent loss is the loss liquidity</text>
+<text x="400" y="87.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">providers suffer</text>
 <line x1="400" y1="114" x2="400" y2="128" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="150" y="140" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="150" y="140" width="500" height="80" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="185.95" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">When the price ratio of paired assets diverges from</text>
+<text x="400" y="174.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">When the price ratio of paired assets</text>
+<text x="400" y="197.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">diverges from</text>
 <line x1="400" y1="224" x2="400" y2="238" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="150" y="250" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="150" y="250" width="500" height="80" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="284.47499999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">When they provided liquidity . Deposit 1 ETH and 1000 USDC</text>
-<text x="400" y="307.42499999999995" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">at a $1000 ETH price</text>
+<text x="400" y="284.47499999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">When they provided liquidity . Deposit 1</text>
+<text x="400" y="307.42499999999995" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">ETH and 1000 USDC at a $1000 ETH price</text>
 
   </g>
   

@@ -14,20 +14,20 @@
   <g>
     <rect x="80" y="35" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="80" y="35" width="280" height="90" rx="20" fill="rgba(147,51,234,0.06)"/>
-<text x="220" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">OCR (Optical Character</text>
-<text x="220" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Recognition) is the technology</text>
+<text x="220" y="66" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">OCR (Optical Character</text>
+<text x="220" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Recognition) is the</text>
+<text x="220" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">technology</text>
 <line x1="360" y1="80" x2="430" y2="80" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="440" y="35" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="440" y="35" width="280" height="90" rx="20" fill="rgba(147,51,234,0.06)"/>
-<text x="580" y="56.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That converts images of text,</text>
-<text x="580" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">scanned documents, photos of</text>
-<text x="580" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">signs, handwritten notes, into</text>
-<text x="580" y="113.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">machine-readable text</text>
+<text x="580" y="66" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That converts images of</text>
+<text x="580" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">text, scanned documents,</text>
+<text x="580" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">photos of signs, handwrit...</text>
 <line x1="580" y1="125" x2="580" y2="225" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="440" y="235" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="440" y="235" width="280" height="90" rx="20" fill="rgba(147,51,234,0.06)"/>
-<text x="580" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That can be searched, edited,</text>
-<text x="580" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">and processed</text>
+<text x="580" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That can be searched,</text>
+<text x="580" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">edited, and processed</text>
 <line x1="440" y1="280" x2="370" y2="280" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="80" y="235" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="80" y="235" width="280" height="90" rx="20" fill="rgba(147,51,234,0.06)"/>

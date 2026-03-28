@@ -14,16 +14,15 @@
   <g>
     <rect x="80" y="35" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="80" y="35" width="280" height="90" rx="20" fill="rgba(147,51,234,0.06)"/>
-<text x="220" y="56.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Pattern recognition is the</text>
-<text x="220" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">process of identifying</text>
-<text x="220" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">regularities, structures, or</text>
-<text x="220" y="113.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">repeated elements within data</text>
+<text x="220" y="66" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Pattern recognition is the</text>
+<text x="220" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">process of identifying</text>
+<text x="220" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">regularities, structures,...</text>
 <line x1="360" y1="80" x2="430" y2="80" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="440" y="35" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="440" y="35" width="280" height="90" rx="20" fill="rgba(147,51,234,0.06)"/>
 <text x="580" y="66" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">It covers everything from</text>
-<text x="580" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">spotting a familiar face in a</text>
-<text x="580" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">crowd</text>
+<text x="580" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">spotting a familiar face in</text>
+<text x="580" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">a crowd</text>
 <line x1="580" y1="125" x2="580" y2="225" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="440" y="235" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="440" y="235" width="280" height="90" rx="20" fill="rgba(147,51,234,0.06)"/>
@@ -33,10 +32,9 @@
 <line x1="440" y1="280" x2="370" y2="280" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="80" y="235" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="80" y="235" width="280" height="90" rx="20" fill="rgba(147,51,234,0.06)"/>
-<text x="220" y="256.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The system takes raw input,</text>
-<text x="220" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">visual scenes, sounds, numerical</text>
-<text x="220" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">sequences, and extracts</text>
-<text x="220" y="313.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">meaningful groupings</text>
+<text x="220" y="266" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The system takes raw input,</text>
+<text x="220" y="284.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">visual scenes, sounds,</text>
+<text x="220" y="303.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">numerical sequences, and...</text>
 <line x1="220" y1="235" x2="220" y2="135" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 
   </g>

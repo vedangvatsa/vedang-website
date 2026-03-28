@@ -14,26 +14,34 @@
   <g>
     <rect x="27.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="27.5" y="90" width="175" height="180" rx="6" fill="rgba(147,51,234,0.06)"/>
-<text x="115" y="156.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">AI alignment is the</text>
-<text x="115" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">research field</text>
-<text x="115" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">focused on making AI</text>
-<text x="115" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">systems pursue goals</text>
+<text x="115" y="137.65" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">AI alignment is</text>
+<text x="115" y="156.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">the research</text>
+<text x="115" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">field focused on</text>
+<text x="115" y="194.35" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">making AI</text>
+<text x="115" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">systems pursue</text>
+<text x="115" y="232.15" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">goals</text>
 <rect x="217.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="217.5" y="90" width="175" height="180" rx="6" fill="rgba(147,51,234,0.06)"/>
-<text x="305" y="156.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That match human</text>
-<text x="305" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">intentions, values,</text>
-<text x="305" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">and safety</text>
-<text x="305" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">requirements</text>
+<text x="305" y="147.1" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That match human</text>
+<text x="305" y="166" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">intentions,</text>
+<text x="305" y="184.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">values, and</text>
+<text x="305" y="203.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">safety</text>
+<text x="305" y="222.70000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">requirements</text>
 <rect x="407.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="407.5" y="90" width="175" height="180" rx="6" fill="rgba(147,51,234,0.06)"/>
-<text x="495" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The problem is simple</text>
-<text x="495" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">to state and hard</text>
+<text x="495" y="166" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The problem is</text>
+<text x="495" y="184.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">simple to state</text>
+<text x="495" y="203.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">and hard</text>
 <rect x="597.5" y="90" width="175" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="597.5" y="90" width="175" height="180" rx="6" fill="rgba(147,51,234,0.06)"/>
-<text x="685" y="156.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To solve . A powerful</text>
-<text x="685" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">AI can find shortcuts</text>
-<text x="685" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">or interpret</text>
-<text x="685" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">instructions in wa...</text>
+<text x="685" y="118.75" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To solve . A</text>
+<text x="685" y="137.65" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">powerful AI can</text>
+<text x="685" y="156.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">find shortcuts</text>
+<text x="685" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">or interpret</text>
+<text x="685" y="194.35" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">instructions in</text>
+<text x="685" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">ways its</text>
+<text x="685" y="232.15" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">designers never</text>
+<text x="685" y="251.05" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">anticipated</text>
 
   </g>
   

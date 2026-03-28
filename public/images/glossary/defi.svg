@@ -14,21 +14,25 @@
   <g>
     <rect x="15" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="15" y="105" width="230" height="150" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="130" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Decentralized Finance is a</text>
-<text x="130" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">category of financial</text>
-<text x="130" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">services built on</text>
-<text x="130" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">blockchain without...</text>
+<text x="130" y="131.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Decentralized</text>
+<text x="130" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Finance is a</text>
+<text x="130" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">category of</text>
+<text x="130" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">financial services</text>
+<text x="130" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">built on blockchain</text>
+<text x="130" y="239.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">without traditio...</text>
 <line x1="250" y1="180" x2="271" y2="180" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="285" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="285" y="105" width="230" height="150" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Banks, brokers, exchanges,</text>
-<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">and insurance companies</text>
-<text x="400" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">are intermediaries</text>
+<text x="400" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Banks, brokers,</text>
+<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">exchanges, and</text>
+<text x="400" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">insurance companies</text>
+<text x="400" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">are intermediaries</text>
 <line x1="520" y1="180" x2="541" y2="180" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="555" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="555" y="105" width="230" height="150" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="670" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">They take a cut . They</text>
-<text x="670" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">have gatekeeping power</text>
+<text x="670" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">They take a cut .</text>
+<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">They have</text>
+<text x="670" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">gatekeeping power</text>
 
   </g>
   

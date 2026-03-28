@@ -14,19 +14,18 @@
   <g>
     <rect x="150" y="30" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="150" y="30" width="500" height="80" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="75.95" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Peer- to -Peer (P2P) is a network architecture</text>
+<text x="400" y="64.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Peer- to -Peer (P2P) is a network</text>
+<text x="400" y="87.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">architecture</text>
 <line x1="400" y1="114" x2="400" y2="128" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="150" y="140" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="150" y="140" width="500" height="80" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="163" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Where each node acts as both client and server, sharing</text>
-<text x="400" y="185.95" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">resources directly with other participants without a</text>
-<text x="400" y="208.9" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">central coordinator</text>
+<text x="400" y="174.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Where each node acts as both client and</text>
+<text x="400" y="197.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">server, sharing resources directly with...</text>
 <line x1="400" y1="224" x2="400" y2="238" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="150" y="250" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="150" y="250" width="500" height="80" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="273" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Every participant holds equal status, can initiate</text>
-<text x="400" y="295.95" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">requests, and can provide data, processing power, or</text>
-<text x="400" y="318.90000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">storage</text>
+<text x="400" y="284.47499999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Every participant holds equal status, can</text>
+<text x="400" y="307.42499999999995" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">initiate requests, and can provide data,...</text>
 
   </g>
   

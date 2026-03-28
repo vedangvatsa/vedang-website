@@ -14,12 +14,13 @@
   <g>
     <rect x="150" y="30" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="150" y="30" width="500" height="80" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="75.95" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Intent-Centric Architecture is a design approach</text>
+<text x="400" y="64.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Intent-Centric Architecture is a design</text>
+<text x="400" y="87.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">approach</text>
 <line x1="400" y1="114" x2="400" y2="128" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="150" y="140" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="150" y="140" width="500" height="80" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="174.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Where the user's desired outcome, called the intent,</text>
-<text x="400" y="197.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">becomes the core object</text>
+<text x="400" y="174.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">Where the user's desired outcome, called</text>
+<text x="400" y="197.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">the intent, becomes the core object</text>
 <line x1="400" y1="224" x2="400" y2="238" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="150" y="250" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="150" y="250" width="500" height="80" rx="10" fill="rgba(37,99,235,0.06)"/>

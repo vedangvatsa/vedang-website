@@ -14,22 +14,26 @@
   <g>
     <rect x="15" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="15" y="105" width="230" height="150" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="130" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A knowledge graph stores</text>
-<text x="130" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">information as a network</text>
-<text x="130" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">of entities connected</text>
+<text x="130" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A knowledge graph</text>
+<text x="130" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">stores information</text>
+<text x="130" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">as a network of</text>
+<text x="130" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">entities connected</text>
 <line x1="250" y1="180" x2="271" y2="180" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="285" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="285" y="105" width="230" height="150" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">By typed relationships .</text>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Entities, people, places,</text>
-<text x="400" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">products, concepts, are</text>
-<text x="400" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">nodes</text>
+<text x="400" y="142.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">By typed</text>
+<text x="400" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">relationships .</text>
+<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Entities, people,</text>
+<text x="400" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">places, products,</text>
+<text x="400" y="228.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">concepts, are nodes</text>
 <line x1="520" y1="180" x2="541" y2="180" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="555" y="105" width="230" height="150" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="555" y="105" width="230" height="150" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="670" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Relationships like "works</text>
-<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">for," "located in," or</text>
-<text x="670" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">"produces" are edges</text>
+<text x="670" y="142.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Relationships like</text>
+<text x="670" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">"works for,"</text>
+<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">"located in," or</text>
+<text x="670" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">"produces" are</text>
+<text x="670" y="228.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">edges</text>
 
   </g>
   

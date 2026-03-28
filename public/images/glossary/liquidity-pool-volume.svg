@@ -14,27 +14,18 @@
   <g>
     <rect x="100" y="275" width="600" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="100" y="275" width="600" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="276.54999999999995" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Liquidity pool volume measures the total dollar value of swaps</text>
-<text x="400" y="295.44999999999993" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">executed through a pool over a given period, typically 24 hours,</text>
-<text x="400" y="314.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">serving as the primary indicator of pool activity and the basis</text>
-<text x="400" y="333.24999999999994" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">for fee revenue calculations</text>
+<text x="400" y="304.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Liquidity pool volume measures the total dollar value of swa...</text>
 <rect x="140" y="210" width="520" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="140" y="210" width="520" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="211.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Volume matters because it directly determines liquidity</text>
-<text x="400" y="230.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">provider earnings: a pool with $1 million TVL but $10</text>
-<text x="400" y="249.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">million daily volume generates far more fee income than a</text>
-<text x="400" y="268.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">pool with $10 million TVL and $100,000 volume</text>
+<text x="400" y="239.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Volume matters because it directly determines...</text>
 <line x1="400" y1="275" x2="400" y2="265" stroke="#2563eb" stroke-width="3"/>
 <rect x="180" y="145" width="440" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="180" y="145" width="440" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="156" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The volume- to -TVL ratio indicates capital</text>
-<text x="400" y="174.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">efficiency, how hard each dollar of liquidity is</text>
-<text x="400" y="193.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">working</text>
+<text x="400" y="174.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The volume- to -TVL ratio indicates capita...</text>
 <line x1="400" y1="210" x2="400" y2="200" stroke="#2563eb" stroke-width="3"/>
 <rect x="220" y="80" width="360" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="220" y="80" width="360" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="100.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">High-volume pools attract more liquidity</text>
-<text x="400" y="119.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">providers seeking fees</text>
+<text x="400" y="109.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">High-volume pools attract more...</text>
 <line x1="400" y1="145" x2="400" y2="135" stroke="#2563eb" stroke-width="3"/>
 
   </g>

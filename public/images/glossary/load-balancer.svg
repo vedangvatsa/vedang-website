@@ -15,18 +15,18 @@
     <rect x="40" y="50" width="340" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="40" y="50" width="340" height="100" rx="10" fill="rgba(5,150,105,0.06)"/>
 <text x="210" y="85" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">A load balancer is a system that</text>
-<text x="210" y="105.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">distributes incoming network traffic</text>
-<text x="210" y="125.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">across multiple servers</text>
+<text x="210" y="105.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">distributes incoming network</text>
+<text x="210" y="125.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">traffic across multiple servers</text>
 <rect x="420" y="50" width="340" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="420" y="50" width="340" height="100" rx="10" fill="rgba(5,150,105,0.06)"/>
-<text x="590" y="95.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">To prevent any single server from</text>
-<text x="590" y="115.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">becoming overwhelmed</text>
+<text x="590" y="95.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">To prevent any single server</text>
+<text x="590" y="115.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">from becoming overwhelmed</text>
 <path d="M 210 150 L 380 230" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
 <path d="M 590 150 L 420 230" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="170" y="235" width="460" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="170" y="235" width="460" height="90" rx="10" fill="rgba(5,150,105,0.06)"/>
-<text x="400" y="274.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">It sits between users and application servers,</text>
-<text x="400" y="296.40000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">routing each request</text>
+<text x="400" y="274.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">It sits between users and application</text>
+<text x="400" y="296.40000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">servers, routing each request</text>
 
   </g>
   

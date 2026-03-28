@@ -23,17 +23,17 @@
 <text x="445" y="136" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">2</text>
 <rect x="420" y="70" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="420" y="70" width="340" height="120" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="480" y="104.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">Continuous Integration means</text>
-<text x="480" y="125.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">code changes are automatically</text>
-<text x="480" y="145.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">tested as soon as they're</text>
-<text x="480" y="165.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">committed</text>
+<text x="480" y="104.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">Continuous Integration</text>
+<text x="480" y="125.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">means code changes are</text>
+<text x="480" y="145.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">automatically tested as</text>
+<text x="480" y="165.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">soon as they're committed</text>
 <circle cx="65" cy="280" r="20" fill="#059669"/>
 <text x="65" y="286" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">3</text>
 <rect x="40" y="220" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="40" y="220" width="340" height="120" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="100" y="265" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">You push code, the CI system</text>
-<text x="100" y="285.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">checks it out, runs tests, lints</text>
-<text x="100" y="305.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">it, builds it</text>
+<text x="100" y="265" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">You push code, the CI</text>
+<text x="100" y="285.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">system checks it out, runs</text>
+<text x="100" y="305.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">tests, lints it, builds it</text>
 <circle cx="445" cy="280" r="20" fill="#059669"/>
 <text x="445" y="286" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">4</text>
 <rect x="420" y="220" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>

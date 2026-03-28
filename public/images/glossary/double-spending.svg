@@ -12,22 +12,28 @@
   <rect width="800" height="400" fill="url(#grid)"/>
   
   <g>
-    <rect x="100" y="30" width="360" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="100" y="30" width="360" height="80" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="280" y="54" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Double-spending is the act of using the</text>
-<text x="280" y="75.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">same unit of digital currency more than</text>
-<text x="280" y="97.19999999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">once</text>
-<path d="M 280 110 C 280 125, 520 125, 520 128" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="340" y="140" width="360" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="340" y="140" width="360" height="80" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="520" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Unlike physical cash, which must be handed</text>
-<text x="520" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">over, digital data can be copied</text>
-<path d="M 520 220 C 520 235, 280 235, 280 238" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="100" y="250" width="360" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="100" y="250" width="360" height="80" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="280" y="274" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">If a network cannot verify that a coin has</text>
-<text x="280" y="295.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">already been spent, the currency's</text>
-<text x="280" y="317.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">integrity collapses</text>
+    <rect x="260" y="15" width="280" height="70" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="260" y="15" width="280" height="70" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="400" y="45.449999999999996" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Double-spending is the act</text>
+<text x="400" y="64.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">of using the same unit of...</text>
+<path d="M 400 85 L 220 135" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 400 85 L 580 135" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="60" y="135" width="280" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="60" y="135" width="280" height="80" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="200" y="161" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Unlike physical cash, which</text>
+<text x="200" y="179.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">must be handed over, digital</text>
+<text x="200" y="198.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">data can be copied</text>
+<rect x="460" y="135" width="280" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="460" y="135" width="280" height="80" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="600" y="161" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">If a network cannot verify</text>
+<text x="600" y="179.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">that a coin has already been</text>
+<text x="600" y="198.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">spent, the currency's...</text>
+<path d="M 220 215 L 400 265" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 580 215 L 400 265" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="260" y="265" width="280" height="70" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="260" y="265" width="280" height="70" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="400" y="295.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Traditional banks solve this</text>
+<text x="400" y="314.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">with a central database</text>
 
   </g>
   

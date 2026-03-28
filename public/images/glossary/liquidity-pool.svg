@@ -14,15 +14,15 @@
   <g>
     <rect x="40" y="50" width="340" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="40" y="50" width="340" height="100" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="210" y="74.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">A liquidity pool is a smart contract</text>
-<text x="210" y="95.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">holding reserves of two or more tokens,</text>
-<text x="210" y="115.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">enabling decentralized trading without</text>
-<text x="210" y="135.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">traditional order books</text>
+<text x="210" y="74.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">A liquidity pool is a smart</text>
+<text x="210" y="95.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">contract holding reserves of two</text>
+<text x="210" y="115.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">or more tokens, enabling</text>
+<text x="210" y="135.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">decentralized trading without...</text>
 <rect x="420" y="50" width="340" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="420" y="50" width="340" height="100" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="590" y="85" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Instead of matching buyers with sellers,</text>
-<text x="590" y="105.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">automated market makers use liquidity</text>
-<text x="590" y="125.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">pools</text>
+<text x="590" y="85" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Instead of matching buyers with</text>
+<text x="590" y="105.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">sellers, automated market makers</text>
+<text x="590" y="125.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">use liquidity pools</text>
 <path d="M 210 150 L 380 230" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <path d="M 590 150 L 420 230" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="170" y="235" width="460" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>

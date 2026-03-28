@@ -14,19 +14,18 @@
   <g>
     <rect x="150" y="30" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="150" y="30" width="500" height="80" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="64.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">SAM (Segment Anything Model) is a foundation model for</text>
-<text x="400" y="87.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">image segmentation from Meta AI</text>
+<text x="400" y="64.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">SAM (Segment Anything Model) is a</text>
+<text x="400" y="87.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">foundation model for image segmentation...</text>
 <line x1="400" y1="114" x2="400" y2="128" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="150" y="140" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="150" y="140" width="500" height="80" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="163" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">That can segment any object in any image given a point,</text>
-<text x="400" y="185.95" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">box, or text prompt, generalizing across domains without</text>
-<text x="400" y="208.9" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">task-specific training</text>
+<text x="400" y="174.475" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">That can segment any object in any image</text>
+<text x="400" y="197.425" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">given a point, box, or text prompt,...</text>
 <line x1="400" y1="224" x2="400" y2="238" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="150" y="250" width="500" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="150" y="250" width="500" height="80" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="284.47499999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">SAM was trained on over 1 billion masks from 11 million</text>
-<text x="400" y="307.42499999999995" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">images using a data engine</text>
+<text x="400" y="284.47499999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">SAM was trained on over 1 billion masks</text>
+<text x="400" y="307.42499999999995" font-family="'Inter',sans-serif" font-weight="500" font-size="17" fill="#52525b" text-anchor="middle">from 11 million images using a data engine</text>
 
   </g>
   

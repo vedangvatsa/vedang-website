@@ -12,18 +12,26 @@
   <rect width="800" height="400" fill="url(#grid)"/>
   
   <g>
-    <rect x="100" y="30" width="360" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="100" y="30" width="360" height="80" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="280" y="75.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Serverless is a cloud execution model</text>
-<path d="M 280 110 C 280 125, 520 125, 520 128" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="340" y="140" width="360" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="340" y="140" width="360" height="80" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="520" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Where providers manage infrastructure</text>
-<path d="M 520 220 C 520 235, 280 235, 280 238" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="100" y="250" width="360" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="100" y="250" width="360" height="80" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="280" y="284.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">You write functions, the provider handles</text>
-<text x="280" y="306.40000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">scaling</text>
+    <rect x="260" y="15" width="280" height="70" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="260" y="15" width="280" height="70" rx="8" fill="rgba(5,150,105,0.06)"/>
+<text x="400" y="45.449999999999996" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Serverless is a cloud</text>
+<text x="400" y="64.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">execution model</text>
+<path d="M 400 85 L 220 135" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 400 85 L 580 135" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="60" y="135" width="280" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="60" y="135" width="280" height="80" rx="8" fill="rgba(5,150,105,0.06)"/>
+<text x="200" y="170.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Where providers manage</text>
+<text x="200" y="189.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">infrastructure</text>
+<rect x="460" y="135" width="280" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="460" y="135" width="280" height="80" rx="8" fill="rgba(5,150,105,0.06)"/>
+<text x="600" y="170.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">You write functions, the</text>
+<text x="600" y="189.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">provider handles scaling</text>
+<path d="M 220 215 L 400 265" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 580 215 L 400 265" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="260" y="265" width="280" height="70" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="260" y="265" width="280" height="70" rx="8" fill="rgba(5,150,105,0.06)"/>
+<text x="400" y="295.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">You pay per execution, not</text>
+<text x="400" y="314.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">for idle time</text>
 
   </g>
   

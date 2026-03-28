@@ -23,10 +23,10 @@
 <text x="200" y="285.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">sequence of discrete tokens</text>
 <rect x="435" y="210" width="330" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="435" y="210" width="330" height="120" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="600" y="244.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">That a language model can process,</text>
-<text x="600" y="265.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">serving as the bridge between</text>
-<text x="600" y="285.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">human-readable text and numerical</text>
-<text x="600" y="305.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">model inputs</text>
+<text x="600" y="244.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">That a language model can</text>
+<text x="600" y="265.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">process, serving as the bridge</text>
+<text x="600" y="285.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">between human-readable text and</text>
+<text x="600" y="305.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">numerical model inputs</text>
 
   </g>
   

@@ -17,8 +17,7 @@
 <text x="400" y="304.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Delegated Proof of Stake (DPoS) is a consensus mechanism</text>
 <rect x="140" y="210" width="520" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="140" y="210" width="520" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="230.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Where token holders elect a limited number of</text>
-<text x="400" y="249.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">representatives (delegates or witnesses)</text>
+<text x="400" y="239.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Where token holders elect a limited number of...</text>
 <line x1="400" y1="275" x2="400" y2="265" stroke="#2563eb" stroke-width="3"/>
 <rect x="180" y="145" width="440" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="180" y="145" width="440" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
@@ -26,9 +25,7 @@
 <line x1="400" y1="210" x2="400" y2="200" stroke="#2563eb" stroke-width="3"/>
 <rect x="220" y="80" width="360" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="220" y="80" width="360" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="91" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The election is continuous, so</text>
-<text x="400" y="109.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">underperforming delegates can be</text>
-<text x="400" y="128.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">replaced at any time</text>
+<text x="400" y="109.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The election is continuous, so...</text>
 <line x1="400" y1="145" x2="400" y2="135" stroke="#2563eb" stroke-width="3"/>
 
   </g>

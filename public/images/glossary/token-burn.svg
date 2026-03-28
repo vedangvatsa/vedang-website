@@ -14,22 +14,21 @@
   <g>
     <rect x="80" y="35" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="80" y="35" width="280" height="90" rx="20" fill="rgba(37,99,235,0.06)"/>
-<text x="220" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Token burning permanently</text>
-<text x="220" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">removes tokens from circulation</text>
+<text x="220" y="66" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Token burning permanently</text>
+<text x="220" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">removes tokens from</text>
+<text x="220" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">circulation</text>
 <line x1="360" y1="80" x2="430" y2="80" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="440" y="35" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="440" y="35" width="280" height="90" rx="20" fill="rgba(37,99,235,0.06)"/>
-<text x="580" y="56.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By sending them to an</text>
-<text x="580" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">inaccessible address with no</text>
-<text x="580" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">private key (a 'burn address'),</text>
-<text x="580" y="113.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">reducing total supply and...</text>
+<text x="580" y="66" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By sending them to an</text>
+<text x="580" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">inaccessible address with no</text>
+<text x="580" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">private key (a 'burn...</text>
 <line x1="580" y1="125" x2="580" y2="225" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="440" y="235" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="440" y="235" width="280" height="90" rx="20" fill="rgba(37,99,235,0.06)"/>
-<text x="580" y="256.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Burns can be manual (protocol</text>
-<text x="580" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">treasury burning tokens) or</text>
-<text x="580" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">automatic (programmatic burns on</text>
-<text x="580" y="313.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">each transaction)</text>
+<text x="580" y="266" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Burns can be manual</text>
+<text x="580" y="284.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">(protocol treasury burning</text>
+<text x="580" y="303.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">tokens) or automatic...</text>
 <line x1="440" y1="280" x2="370" y2="280" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="80" y="235" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="80" y="235" width="280" height="90" rx="20" fill="rgba(37,99,235,0.06)"/>

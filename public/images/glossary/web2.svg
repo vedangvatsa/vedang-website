@@ -21,15 +21,11 @@
 <line x1="400" y1="275" x2="400" y2="265" stroke="#059669" stroke-width="3"/>
 <rect x="180" y="145" width="440" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="180" y="145" width="440" height="50" rx="6" fill="rgba(5,150,105,0.06)"/>
-<text x="400" y="156" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Unlike the static, read-only pages of Web1, Web2</text>
-<text x="400" y="174.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">is built around interactive, user-generated</text>
-<text x="400" y="193.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">content, social networking, and cloud services</text>
+<text x="400" y="174.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Unlike the static, read-only pages of Web1...</text>
 <line x1="400" y1="210" x2="400" y2="200" stroke="#059669" stroke-width="3"/>
 <rect x="220" y="80" width="360" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="220" y="80" width="360" height="50" rx="6" fill="rgba(5,150,105,0.06)"/>
-<text x="400" y="91" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Websites became platforms where users</text>
-<text x="400" y="109.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">create, share, and remix content in real</text>
-<text x="400" y="128.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">time</text>
+<text x="400" y="109.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Websites became platforms where...</text>
 <line x1="400" y1="145" x2="400" y2="135" stroke="#059669" stroke-width="3"/>
 
   </g>

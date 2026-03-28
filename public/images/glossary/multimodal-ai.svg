@@ -14,8 +14,8 @@
   <g>
     <rect x="80" y="35" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="80" y="35" width="280" height="90" rx="20" fill="rgba(147,51,234,0.06)"/>
-<text x="220" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Multimodal AI is a category of</text>
-<text x="220" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">models</text>
+<text x="220" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Multimodal AI is a category</text>
+<text x="220" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">of models</text>
 <line x1="360" y1="80" x2="430" y2="80" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="440" y="35" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="440" y="35" width="280" height="90" rx="20" fill="rgba(147,51,234,0.06)"/>
@@ -25,14 +25,14 @@
 <line x1="580" y1="125" x2="580" y2="225" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="440" y="235" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="440" y="235" width="280" height="90" rx="20" fill="rgba(147,51,234,0.06)"/>
-<text x="580" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">GPT-4V can analyze images and</text>
-<text x="580" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">text together</text>
+<text x="580" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">GPT-4V can analyze images</text>
+<text x="580" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">and text together</text>
 <line x1="440" y1="280" x2="370" y2="280" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="80" y="235" width="280" height="90" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="80" y="235" width="280" height="90" rx="20" fill="rgba(147,51,234,0.06)"/>
-<text x="220" y="266" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Gemini is natively multimodal,</text>
-<text x="220" y="284.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">handling text, code, images,</text>
-<text x="220" y="303.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">audio, and video in one model</text>
+<text x="220" y="266" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Gemini is natively</text>
+<text x="220" y="284.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">multimodal, handling text,</text>
+<text x="220" y="303.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">code, images, audio, and...</text>
 <line x1="220" y1="235" x2="220" y2="135" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 
   </g>

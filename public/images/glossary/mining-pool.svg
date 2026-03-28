@@ -18,14 +18,14 @@
 <text x="210" y="115.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">arrangement</text>
 <rect x="420" y="50" width="340" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="420" y="50" width="340" height="100" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="590" y="95.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Where individual cryptocurrency miners</text>
-<text x="590" y="115.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">combine computing power</text>
+<text x="590" y="95.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Where individual cryptocurrency</text>
+<text x="590" y="115.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">miners combine computing power</text>
 <path d="M 210 150 L 380 230" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <path d="M 590 150 L 420 230" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="170" y="235" width="460" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="170" y="235" width="460" height="90" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="274.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">To increase the chance of solving a block and</text>
-<text x="400" y="296.40000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">earning the reward</text>
+<text x="400" y="274.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">To increase the chance of solving a block</text>
+<text x="400" y="296.40000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">and earning the reward</text>
 
   </g>
   

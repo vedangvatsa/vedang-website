@@ -17,12 +17,11 @@
 <text x="400" y="304.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A circuit breaker is a software design pattern</text>
 <rect x="140" y="210" width="520" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="140" y="210" width="520" height="50" rx="6" fill="rgba(5,150,105,0.06)"/>
-<text x="400" y="239.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That prevents cascading failures in distributed systems</text>
+<text x="400" y="239.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That prevents cascading failures in distributed...</text>
 <line x1="400" y1="275" x2="400" y2="265" stroke="#059669" stroke-width="3"/>
 <rect x="180" y="145" width="440" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="180" y="145" width="440" height="50" rx="6" fill="rgba(5,150,105,0.06)"/>
-<text x="400" y="165.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By detecting when a service is failing and</text>
-<text x="400" y="184.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">temporarily stopping requests</text>
+<text x="400" y="174.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By detecting when a service is failing and...</text>
 <line x1="400" y1="210" x2="400" y2="200" stroke="#059669" stroke-width="3"/>
 <rect x="220" y="80" width="360" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="220" y="80" width="360" height="50" rx="6" fill="rgba(5,150,105,0.06)"/>

@@ -12,20 +12,21 @@
   <rect width="800" height="400" fill="url(#grid)"/>
   
   <g>
-    <rect x="40" y="130" width="320" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="40" y="130" width="320" height="100" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="200" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A consensus mechanism is a protocol</text>
-<path d="M 360 180 C 420 180, 420 80, 470 80" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
-<path d="M 360 180 C 420 180, 420 280, 470 280" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="470" y="35" width="300" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="470" y="35" width="300" height="90" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="620" y="66" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That lets nodes agree on the state</text>
-<text x="620" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">of a blockchain without a central</text>
-<text x="620" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">authority</text>
-<rect x="470" y="235" width="300" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="470" y="235" width="300" height="90" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="620" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The most famous is Proof of Work,</text>
-<text x="620" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">used</text>
+    <rect x="70" y="130" width="280" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="70" y="130" width="280" height="100" rx="10" fill="rgba(37,99,235,0.06)"/>
+<text x="210" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A consensus mechanism is</text>
+<text x="210" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">a protocol</text>
+<path d="M 350 180 C 400 180, 400 80, 450 80" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 350 180 C 400 180, 400 280, 450 280" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="450" y="35" width="280" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="450" y="35" width="280" height="90" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="590" y="66" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That lets nodes agree on the</text>
+<text x="590" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">state of a blockchain</text>
+<text x="590" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">without a central authority</text>
+<rect x="450" y="235" width="280" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="450" y="235" width="280" height="90" rx="8" fill="rgba(37,99,235,0.06)"/>
+<text x="590" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The most famous is Proof of</text>
+<text x="590" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Work, used</text>
 
   </g>
   

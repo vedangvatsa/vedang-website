@@ -15,15 +15,15 @@
     <path d="M 400 135 L 180 155" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
 <rect x="65" y="155" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="65" y="155" width="230" height="90" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="180" y="186" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A bridge is a protocol for</text>
-<text x="180" y="204.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">transferring assets between</text>
-<text x="180" y="223.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">different blockchains</text>
+<text x="180" y="186" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A bridge is a protocol</text>
+<text x="180" y="204.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">for transferring</text>
+<text x="180" y="223.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">assets between...</text>
 <path d="M 400 135 L 620 155" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
 <rect x="505" y="155" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="505" y="155" width="230" height="90" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="620" y="186" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Blockchains are isolated .</text>
-<text x="620" y="204.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Bitcoin can't directly</text>
-<text x="620" y="223.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">transfer</text>
+<text x="620" y="186" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Blockchains are</text>
+<text x="620" y="204.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">isolated . Bitcoin</text>
+<text x="620" y="223.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">can't directly...</text>
 <path d="M 400 135 L 280 265" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
 <rect x="165" y="265" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="165" y="265" width="230" height="90" rx="10" fill="rgba(37,99,235,0.06)"/>
@@ -32,9 +32,9 @@
 <path d="M 400 135 L 520 265" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
 <rect x="405" y="265" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="405" y="265" width="230" height="90" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="520" y="296" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To move assets between them</text>
-<text x="520" y="314.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">. The basic mechanism is</text>
-<text x="520" y="333.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">locking and minting</text>
+<text x="520" y="296" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">To move assets between</text>
+<text x="520" y="314.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">them . The basic</text>
+<text x="520" y="333.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">mechanism is lockin...</text>
 <rect x="300" y="65" width="200" height="70" rx="35" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="300" y="65" width="200" height="70" rx="35" fill="rgba(37,99,235,0.06)"/>
 <text x="400" y="107" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#2563eb" text-anchor="middle">Bridge</text>

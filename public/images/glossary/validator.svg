@@ -14,18 +14,19 @@
   <g>
     <rect x="40" y="50" width="340" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="40" y="50" width="340" height="100" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="210" y="85" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">A validator is a node that proposes and</text>
-<text x="210" y="105.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">verifies new blocks on a Proof of Stake</text>
-<text x="210" y="125.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">blockchain</text>
+<text x="210" y="85" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">A validator is a node that</text>
+<text x="210" y="105.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">proposes and verifies new blocks</text>
+<text x="210" y="125.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">on a Proof of Stake blockchain</text>
 <rect x="420" y="50" width="340" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="420" y="50" width="340" height="100" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="590" y="105.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">In Proof of Work systems, miners compete</text>
+<text x="590" y="95.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">In Proof of Work systems, miners</text>
+<text x="590" y="115.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">compete</text>
 <path d="M 210 150 L 380 230" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <path d="M 590 150 L 420 230" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="170" y="235" width="460" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="170" y="235" width="460" height="90" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="274.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">To solve puzzles . In Proof of Stake, validators</text>
-<text x="400" y="296.40000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">stake tokens as collateral</text>
+<text x="400" y="274.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">To solve puzzles . In Proof of Stake,</text>
+<text x="400" y="296.40000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">validators stake tokens as collateral</text>
 
   </g>
   

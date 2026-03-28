@@ -17,8 +17,7 @@
 <text x="400" y="304.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A blockchain is a distributed ledger maintained</text>
 <rect x="140" y="210" width="520" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="140" y="210" width="520" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="230.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By a network of nodes . Each block contains transactions</text>
-<text x="400" y="249.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">and a cryptographic hash of the previous block</text>
+<text x="400" y="239.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">By a network of nodes . Each block contains...</text>
 <line x1="400" y1="275" x2="400" y2="265" stroke="#2563eb" stroke-width="3"/>
 <rect x="180" y="145" width="440" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="180" y="145" width="440" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
@@ -26,7 +25,7 @@
 <line x1="400" y1="210" x2="400" y2="200" stroke="#2563eb" stroke-width="3"/>
 <rect x="220" y="80" width="360" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="220" y="80" width="360" height="50" rx="6" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="109.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Change one block and the hash changes</text>
+<text x="400" y="109.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Change one block and the hash...</text>
 <line x1="400" y1="145" x2="400" y2="135" stroke="#2563eb" stroke-width="3"/>
 
   </g>

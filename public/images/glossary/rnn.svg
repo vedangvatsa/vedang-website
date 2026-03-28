@@ -14,21 +14,23 @@
   <g>
     <rect x="190" y="30" width="420" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="190" y="30" width="420" height="80" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="64.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A recurrent neural network processes sequential</text>
-<text x="400" y="86.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">data</text>
+<text x="400" y="64.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A recurrent neural network processes</text>
+<text x="400" y="86.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">sequential data</text>
 <path d="M 400 110 L 220 205" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <path d="M 400 110 L 580 205" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="35" y="210" width="330" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="35" y="210" width="330" height="120" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="200" y="255" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">By maintaining a hidden state that</text>
-<text x="200" y="275.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">carries information across time</text>
-<text x="200" y="295.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">steps, enabling the network</text>
+<text x="200" y="244.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">By maintaining a hidden state</text>
+<text x="200" y="265.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">that carries information across</text>
+<text x="200" y="285.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">time steps, enabling the</text>
+<text x="200" y="305.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">network</text>
 <rect x="435" y="210" width="330" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="435" y="210" width="330" height="120" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="600" y="244.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">To model temporal dependencies . At</text>
-<text x="600" y="265.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">each time step, the RNN reads the</text>
-<text x="600" y="285.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">current input and the previous</text>
-<text x="600" y="305.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">hidden state, producing an output...</text>
+<text x="600" y="234.75" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">To model temporal dependencies</text>
+<text x="600" y="255" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">. At each time step, the RNN</text>
+<text x="600" y="275.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">reads the current input and the</text>
+<text x="600" y="295.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">previous hidden state,</text>
+<text x="600" y="315.75" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">producing an output and an...</text>
 
   </g>
   

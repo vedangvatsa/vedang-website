@@ -16,28 +16,29 @@
 <text x="65" y="136" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">1</text>
 <rect x="40" y="70" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="40" y="70" width="340" height="120" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="100" y="125.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">Quantum computing uses quantum</text>
-<text x="100" y="145.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">mechanics</text>
+<text x="100" y="125.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">Quantum computing uses</text>
+<text x="100" y="145.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">quantum mechanics</text>
 <circle cx="445" cy="130" r="20" fill="#059669"/>
 <text x="445" y="136" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">2</text>
 <rect x="420" y="70" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="420" y="70" width="340" height="120" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="480" y="125.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">To process information in ways</text>
-<text x="480" y="145.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">that classical computers cannot</text>
+<text x="480" y="115" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">To process information in</text>
+<text x="480" y="135.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">ways that classical</text>
+<text x="480" y="155.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">computers cannot</text>
 <circle cx="65" cy="280" r="20" fill="#059669"/>
 <text x="65" y="286" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">3</text>
 <rect x="40" y="220" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="40" y="220" width="340" height="120" rx="8" fill="rgba(5,150,105,0.06)"/>
-<text x="100" y="265" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">Instead of bits that are either</text>
-<text x="100" y="285.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">0 or 1, quantum computers use</text>
-<text x="100" y="305.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">qubits</text>
+<text x="100" y="265" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">Instead of bits that are</text>
+<text x="100" y="285.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">either 0 or 1, quantum</text>
+<text x="100" y="305.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">computers use qubits</text>
 <circle cx="445" cy="280" r="20" fill="#059669"/>
 <text x="445" y="286" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">4</text>
 <rect x="420" y="220" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="420" y="220" width="340" height="120" rx="8" fill="rgba(5,150,105,0.06)"/>
 <text x="480" y="265" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">That can exist in a</text>
-<text x="480" y="285.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">superposition of both states</text>
-<text x="480" y="305.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">simultaneously</text>
+<text x="480" y="285.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">superposition of both</text>
+<text x="480" y="305.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">states simultaneously</text>
 
   </g>
   

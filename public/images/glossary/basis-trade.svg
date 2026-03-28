@@ -14,21 +14,23 @@
   <g>
     <rect x="40" y="50" width="340" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="40" y="50" width="340" height="100" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="210" y="85" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Basis trade profits from the price</text>
-<text x="210" y="105.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">difference between spot and futures</text>
-<text x="210" y="125.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">markets, exploiting the spread</text>
+<text x="210" y="74.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Basis trade profits from the</text>
+<text x="210" y="95.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">price difference between spot</text>
+<text x="210" y="115.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">and futures markets, exploiting</text>
+<text x="210" y="135.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">the spread</text>
 <rect x="420" y="50" width="340" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="420" y="50" width="340" height="100" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="590" y="74.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">That exists because futures embed</text>
-<text x="590" y="95.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">expectations about future prices,</text>
-<text x="590" y="115.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">funding costs, and supply-demand</text>
-<text x="590" y="135.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">imbalances</text>
+<text x="590" y="74.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">That exists because futures</text>
+<text x="590" y="95.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">embed expectations about future</text>
+<text x="590" y="115.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">prices, funding costs, and</text>
+<text x="590" y="135.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">supply-demand imbalances</text>
 <path d="M 210 150 L 380 230" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <path d="M 590 150 L 420 230" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="170" y="235" width="460" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="170" y="235" width="460" height="90" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="400" y="274.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">In contango (futures above spot), buy spot and</text>
-<text x="400" y="296.40000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">sell futures: you lock in a profit equal</text>
+<text x="400" y="264" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">In contango (futures above spot), buy</text>
+<text x="400" y="285.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">spot and sell futures: you lock in a</text>
+<text x="400" y="307.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">profit equal</text>
 
   </g>
   

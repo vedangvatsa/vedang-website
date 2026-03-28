@@ -19,12 +19,13 @@
 <path d="M 400 110 L 580 205" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="35" y="210" width="330" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="35" y="210" width="330" height="120" rx="10" fill="rgba(5,150,105,0.06)"/>
-<text x="200" y="275.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">To communicate with other software</text>
+<text x="200" y="265.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">To communicate with other</text>
+<text x="200" y="285.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">software</text>
 <rect x="435" y="210" width="330" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="435" y="210" width="330" height="120" rx="10" fill="rgba(5,150,105,0.06)"/>
 <text x="600" y="255" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Instead of directly accessing</text>
-<text x="600" y="275.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">databases or files, applications go</text>
-<text x="600" y="295.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">through APIs</text>
+<text x="600" y="275.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">databases or files,</text>
+<text x="600" y="295.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">applications go through APIs</text>
 
   </g>
   

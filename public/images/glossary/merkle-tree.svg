@@ -14,12 +14,10 @@
   <g>
     <rect x="100" y="275" width="600" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="100" y="275" width="600" height="50" rx="6" fill="rgba(5,150,105,0.06)"/>
-<text x="400" y="295.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A Merkle tree is a data structure for efficiently verifying the</text>
-<text x="400" y="314.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">integrity of large datasets</text>
+<text x="400" y="304.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A Merkle tree is a data structure for efficiently verifying ...</text>
 <rect x="140" y="210" width="520" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="140" y="210" width="520" height="50" rx="6" fill="rgba(5,150,105,0.06)"/>
-<text x="400" y="230.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">You hash leaf nodes, then combine and hash those hashes</text>
-<text x="400" y="249.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">up the tree</text>
+<text x="400" y="239.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">You hash leaf nodes, then combine and hash those...</text>
 <line x1="400" y1="275" x2="400" y2="265" stroke="#059669" stroke-width="3"/>
 <rect x="180" y="145" width="440" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="180" y="145" width="440" height="50" rx="6" fill="rgba(5,150,105,0.06)"/>

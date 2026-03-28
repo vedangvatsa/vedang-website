@@ -14,25 +14,18 @@
   <g>
     <rect x="100" y="275" width="600" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="100" y="275" width="600" height="50" rx="6" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="286" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Chunking is the process of splitting documents into smaller</text>
-<text x="400" y="304.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">segments for embedding and retrieval in RAG systems, representing</text>
-<text x="400" y="323.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">a critical design decision</text>
+<text x="400" y="304.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Chunking is the process of splitting documents into smaller...</text>
 <rect x="140" y="210" width="520" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="140" y="210" width="520" height="50" rx="6" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="230.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That significantly impacts retrieval quality and</text>
-<text x="400" y="249.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">generation accuracy</text>
+<text x="400" y="239.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That significantly impacts retrieval quality and...</text>
 <line x1="400" y1="275" x2="400" y2="265" stroke="#9333ea" stroke-width="3"/>
 <rect x="180" y="145" width="440" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="180" y="145" width="440" height="50" rx="6" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="146.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The fundamental tension: smaller chunks are more</text>
-<text x="400" y="165.45000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">precise, retrieving exactly the relevant</text>
-<text x="400" y="184.35000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">sentence rather than surrounding irrelevant</text>
-<text x="400" y="203.25000000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">content, but may lack context needed for...</text>
+<text x="400" y="174.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">The fundamental tension: smaller chunks ar...</text>
 <line x1="400" y1="210" x2="400" y2="200" stroke="#9333ea" stroke-width="3"/>
 <rect x="220" y="80" width="360" height="50" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="220" y="80" width="360" height="50" rx="6" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="100.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Larger chunks provide more context but</text>
-<text x="400" y="119.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">may contain irrelevant information</text>
+<text x="400" y="109.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Larger chunks provide more contex...</text>
 <line x1="400" y1="145" x2="400" y2="135" stroke="#9333ea" stroke-width="3"/>
 
   </g>

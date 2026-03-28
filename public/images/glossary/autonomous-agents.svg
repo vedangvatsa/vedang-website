@@ -20,12 +20,13 @@
 <rect x="35" y="210" width="330" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="35" y="210" width="330" height="120" rx="10" fill="rgba(147,51,234,0.06)"/>
 <text x="200" y="255" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Designed to pursue complex,</text>
-<text x="200" y="275.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">multi-step goals with virtually zero</text>
-<text x="200" y="295.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">human intervention</text>
+<text x="200" y="275.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">multi-step goals with virtually</text>
+<text x="200" y="295.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">zero human intervention</text>
 <rect x="435" y="210" width="330" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="435" y="210" width="330" height="120" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="600" y="265.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Unlike traditional software, which</text>
-<text x="600" y="285.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">passively waits for a user</text>
+<text x="600" y="255" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Unlike traditional software,</text>
+<text x="600" y="275.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">which passively waits for a</text>
+<text x="600" y="295.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">user</text>
 
   </g>
   

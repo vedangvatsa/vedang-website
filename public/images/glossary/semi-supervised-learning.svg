@@ -14,19 +14,20 @@
   <g>
     <rect x="190" y="30" width="420" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="190" y="30" width="420" height="80" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="64.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Semi-supervised learning uses both labeled and</text>
-<text x="400" y="86.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">unlabeled data</text>
+<text x="400" y="64.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Semi-supervised learning uses both</text>
+<text x="400" y="86.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">labeled and unlabeled data</text>
 <path d="M 400 110 L 220 205" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <path d="M 400 110 L 580 205" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="35" y="210" width="330" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="35" y="210" width="330" height="120" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="200" y="265.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">To build models . Fully supervised</text>
-<text x="200" y="285.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">learning requires every example</text>
+<text x="200" y="255" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">To build models . Fully</text>
+<text x="200" y="275.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">supervised learning requires</text>
+<text x="200" y="295.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">every example</text>
 <rect x="435" y="210" width="330" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="435" y="210" width="330" height="120" rx="10" fill="rgba(147,51,234,0.06)"/>
 <text x="600" y="255" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">To have a correct label .</text>
-<text x="600" y="275.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Unsupervised learning uses no labels</text>
-<text x="600" y="295.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">at all</text>
+<text x="600" y="275.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Unsupervised learning uses no</text>
+<text x="600" y="295.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">labels at all</text>
 
   </g>
   

@@ -12,26 +12,23 @@
   <rect width="800" height="400" fill="url(#grid)"/>
   
   <g>
-    <rect x="40" y="130" width="320" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="40" y="130" width="320" height="100" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="200" y="153.2" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Perplexity is a metric measuring how</text>
-<text x="200" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">well a language model predicts a</text>
-<text x="200" y="196.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">test dataset, calculated as the</text>
-<text x="200" y="218" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">exponentiated average negative...</text>
-<path d="M 360 180 C 420 180, 420 80, 470 80" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
-<path d="M 360 180 C 420 180, 420 280, 470 280" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="470" y="35" width="300" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="470" y="35" width="300" height="90" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="620" y="56.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Intuitively, it represents the</text>
-<text x="620" y="75.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">effective number of equally-likely</text>
-<text x="620" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">choices the model faces at each</text>
-<text x="620" y="113.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">position</text>
-<rect x="470" y="235" width="300" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-<rect x="470" y="235" width="300" height="90" rx="8" fill="rgba(147,51,234,0.06)"/>
-<text x="620" y="256.55" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A perplexity of 10 means the model</text>
-<text x="620" y="275.45" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">is, on average, as uncertain as if</text>
-<text x="620" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">choosing uniformly among 10</text>
-<text x="620" y="313.25" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">options</text>
+    <rect x="70" y="130" width="280" height="100" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="70" y="130" width="280" height="100" rx="10" fill="rgba(147,51,234,0.06)"/>
+<text x="210" y="164" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">Perplexity is a metric</text>
+<text x="210" y="185.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">measuring how well a</text>
+<text x="210" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">language model predic...</text>
+<path d="M 350 180 C 400 180, 400 80, 450 80" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 350 180 C 400 180, 400 280, 450 280" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="450" y="35" width="280" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="450" y="35" width="280" height="90" rx="8" fill="rgba(147,51,234,0.06)"/>
+<text x="590" y="66" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Intuitively, it represents</text>
+<text x="590" y="84.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">the effective number of</text>
+<text x="590" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">equally-likely choices th...</text>
+<rect x="450" y="235" width="280" height="90" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="450" y="235" width="280" height="90" rx="8" fill="rgba(147,51,234,0.06)"/>
+<text x="590" y="266" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">A perplexity of 10 means the</text>
+<text x="590" y="284.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">model is, on average, as</text>
+<text x="590" y="303.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">uncertain as if choosing...</text>
 
   </g>
   

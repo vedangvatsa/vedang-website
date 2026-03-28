@@ -14,21 +14,22 @@
   <g>
     <rect x="190" y="30" width="420" height="80" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="190" y="30" width="420" height="80" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="400" y="54" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A context window is the maximum amount of text a</text>
-<text x="400" y="75.6" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">language model can process in a single</text>
-<text x="400" y="97.19999999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">interaction, measured in tokens</text>
+<text x="400" y="64.8" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">A context window is the maximum amount</text>
+<text x="400" y="86.4" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#52525b" text-anchor="middle">of text a language model can proces...</text>
 <path d="M 400 110 L 220 205" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <path d="M 400 110 L 580 205" fill="none" stroke="#9333ea" stroke-width="3" marker-end="url(#arrow)"/>
 <rect x="35" y="210" width="330" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="35" y="210" width="330" height="120" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="200" y="244.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Everything the model can 'see' at</text>
-<text x="200" y="265.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">once (your prompt, the conversation</text>
-<text x="200" y="285.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">history, any documents you've pasted</text>
-<text x="200" y="305.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">in) must fit inside this window</text>
+<text x="200" y="234.75" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Everything the model can 'see'</text>
+<text x="200" y="255" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">at once (your prompt, the</text>
+<text x="200" y="275.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">conversation history, any</text>
+<text x="200" y="295.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">documents you've pasted in)</text>
+<text x="200" y="315.75" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">must fit inside this window</text>
 <rect x="435" y="210" width="330" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="435" y="210" width="330" height="120" rx="10" fill="rgba(147,51,234,0.06)"/>
-<text x="600" y="265.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Early GPT models had context windows</text>
-<text x="600" y="285.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">of 4,000 tokens, roughly 3,000 words</text>
+<text x="600" y="255" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">Early GPT models had context</text>
+<text x="600" y="275.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">windows of 4,000 tokens,</text>
+<text x="600" y="295.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="middle">roughly 3,000 words</text>
 
   </g>
   

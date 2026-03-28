@@ -15,22 +15,21 @@
     <path d="M 400 135 L 180 155" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
 <rect x="65" y="155" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="65" y="155" width="230" height="90" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="180" y="186" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Slashing is an economic</text>
-<text x="180" y="204.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">penalty mechanism in Proof</text>
-<text x="180" y="223.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">of Stake blockchains</text>
+<text x="180" y="186" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">Slashing is an</text>
+<text x="180" y="204.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">economic penalty</text>
+<text x="180" y="223.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">mechanism in Proof ...</text>
 <path d="M 400 135 L 620 155" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
 <rect x="505" y="155" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="505" y="155" width="230" height="90" rx="10" fill="rgba(37,99,235,0.06)"/>
 <text x="620" y="186" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">That automatically</text>
-<text x="620" y="204.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">confiscates a portion of a</text>
-<text x="620" y="223.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">validator's staked tokens</text>
+<text x="620" y="204.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">confiscates a portion</text>
+<text x="620" y="223.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">of a validator's...</text>
 <path d="M 400 135 L 280 265" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
 <rect x="165" y="265" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="165" y="265" width="230" height="90" rx="10" fill="rgba(37,99,235,0.06)"/>
-<text x="280" y="286.54999999999995" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">When they violate protocol</text>
-<text x="280" y="305.44999999999993" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">rules, providing</text>
-<text x="280" y="324.34999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">cryptoeconomic security</text>
-<text x="280" y="343.24999999999994" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">through the threat of...</text>
+<text x="280" y="296" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">When they violate</text>
+<text x="280" y="314.9" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">protocol rules,</text>
+<text x="280" y="333.8" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#52525b" text-anchor="middle">providing...</text>
 <path d="M 400 135 L 520 265" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-dasharray="6 6"/>
 <rect x="405" y="265" width="230" height="90" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="405" y="265" width="230" height="90" rx="10" fill="rgba(37,99,235,0.06)"/>

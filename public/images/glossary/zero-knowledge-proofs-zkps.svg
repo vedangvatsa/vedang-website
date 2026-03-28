@@ -16,31 +16,32 @@
 <text x="65" y="136" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">1</text>
 <rect x="40" y="70" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="40" y="70" width="340" height="120" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="100" y="125.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">Zero-knowledge proofs (ZKPs) are</text>
-<text x="100" y="145.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">cryptographic protocols</text>
+<text x="100" y="115" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">Zero-knowledge proofs</text>
+<text x="100" y="135.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">(ZKPs) are cryptographic</text>
+<text x="100" y="155.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">protocols</text>
 <circle cx="445" cy="130" r="20" fill="#2563eb"/>
 <text x="445" y="136" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">2</text>
 <rect x="420" y="70" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="420" y="70" width="340" height="120" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="480" y="115" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">That let one party (the prover)</text>
-<text x="480" y="135.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">convince another party (the</text>
-<text x="480" y="155.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">verifier)</text>
+<text x="480" y="115" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">That let one party (the</text>
+<text x="480" y="135.25" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">prover) convince another</text>
+<text x="480" y="155.5" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">party (the verifier)</text>
 <circle cx="65" cy="280" r="20" fill="#2563eb"/>
 <text x="65" y="286" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">3</text>
 <rect x="40" y="220" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="40" y="220" width="340" height="120" rx="8" fill="rgba(37,99,235,0.06)"/>
-<text x="100" y="254.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">That a statement is true without</text>
-<text x="100" y="275.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">revealing any information beyond</text>
-<text x="100" y="295.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">the truth of the statement</text>
-<text x="100" y="315.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">itself</text>
+<text x="100" y="254.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">That a statement is true</text>
+<text x="100" y="275.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">without revealing any</text>
+<text x="100" y="295.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">information beyond the</text>
+<text x="100" y="315.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">truth of the statement...</text>
 <circle cx="445" cy="280" r="20" fill="#2563eb"/>
 <text x="445" y="286" font-family="'Inter',sans-serif" font-weight="800" font-size="18" fill="#ffffff" text-anchor="middle">4</text>
 <rect x="420" y="220" width="340" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
 <rect x="420" y="220" width="340" height="120" rx="8" fill="rgba(37,99,235,0.06)"/>
 <text x="480" y="254.875" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">The protocol guarantees</text>
-<text x="480" y="275.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">completeness (an honest prover</text>
-<text x="480" y="295.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">can always convince the</text>
-<text x="480" y="315.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">verifier) and soundness (a...</text>
+<text x="480" y="275.125" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">completeness (an honest</text>
+<text x="480" y="295.375" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">prover can always convince</text>
+<text x="480" y="315.625" font-family="'Inter',sans-serif" font-weight="500" font-size="15" fill="#52525b" text-anchor="start">the verifier) and soundn...</text>
 
   </g>
   
