@@ -83,9 +83,11 @@
     "id": "ctc-lag",
     "scheduleDate": "2026-03-29",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "The lag has been consistent. In every case examined, it resolved.\n\n\"Made in Japan\" was a joke in 1955. By 1980 it meant precision engineering.\n\n\"Made in Korea\" meant cheap in 1986. By 2012 Samsung was number one globally.\n",
-    "image": "scripts/thread-assets/ctc_lag.png"
+    "image": "scripts/thread-assets/ctc_lag.png",
+    "postedAt": "2026-03-28T19:53:57.031Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mi5fx7r5tr26"
   },
   {
     "id": "math-ai-highway",

@@ -113,9 +113,11 @@
     "id": "agentic-commerce-4",
     "scheduleDate": "2026-03-29",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_4.png",
-    "text": "When the buyer is an algorithm, your toothpaste ad does nothing.\n\nAlgorithms do not see display ads. They read structured data. They compare ingredients, price per unit, and review sentiment. Brand loyalty disappears when the agent picks the cheaper option with the same active compounds.\n\nThis is not speculation. It is already happening in B2B procurement. Consumer brands are next.\n\nThe marketing playbook built for human attention does not work when the attention is no longer human."
+    "text": "When the buyer is an algorithm, your toothpaste ad does nothing.\n\nAlgorithms do not see display ads. They read structured data. They compare ingredients, price per unit, and review sentiment. Brand loyalty disappears when the agent picks the cheaper option with the same active compounds.\n\nThis is not speculation. It is already happening in B2B procurement. Consumer brands are next.\n\nThe marketing playbook built for human attention does not work when the attention is no longer human.",
+    "postedAt": "2026-03-28T19:53:52.278Z",
+    "postId": "urn:li:share:7443747205942960128"
   },
   {
     "id": "psych-shadow",

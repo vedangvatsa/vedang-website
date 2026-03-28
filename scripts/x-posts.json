@@ -145,9 +145,11 @@
     "id": "ctc-lag",
     "scheduleDate": "2026-03-29",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/ctc_lag.png",
-    "text": "The lag has been consistent. In every case examined, it resolved.\n\n\"Made in Japan\" was a joke in 1955. By 1980 it meant precision engineering.\n\n\"Made in Korea\" meant cheap in 1986. By 2012 Samsung was number one globally.\n\n\"Made in China\" still registers below \"Made in Germany\" in consumer surveys. DJI holds 70% of the drone market. BYD is the largest EV maker by volume. The perception lag appears to be running about 15 years behind the current reality.\n\nIndia is at the start of that curve. GDP per capita of $2,730. Software and pharma may have already crossed. Consumer manufacturing has not yet.\n\nIf the historical pattern holds, the gap closes. It just takes time."
+    "text": "The lag has been consistent. In every case examined, it resolved.\n\n\"Made in Japan\" was a joke in 1955. By 1980 it meant precision engineering.\n\n\"Made in Korea\" meant cheap in 1986. By 2012 Samsung was number one globally.\n\n\"Made in China\" still registers below \"Made in Germany\" in consumer surveys. DJI holds 70% of the drone market. BYD is the largest EV maker by volume. The perception lag appears to be running about 15 years behind the current reality.\n\nIndia is at the start of that curve. GDP per capita of $2,730. Software and pharma may have already crossed. Consumer manufacturing has not yet.\n\nIf the historical pattern holds, the gap closes. It just takes time.",
+    "postedAt": "2026-03-28T19:53:48.149Z",
+    "tweetId": "2037981499127902280"
   },
   {
     "id": "math-ai-highway",

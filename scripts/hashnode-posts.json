@@ -186,8 +186,10 @@
       "psychology"
     ],
     "scheduleDate": "2026-03-29",
-    "posted": false,
-    "scheduleTime": "01:00"
+    "posted": true,
+    "scheduleTime": "01:00",
+    "postedAt": "2026-03-28T19:54:07.958Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/attention-refinery"
   },
   {
     "id": "hashnode-internet-of-lies",
