@@ -2,36 +2,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
   <defs>
     <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="rgba(168,85,247,0.15)"/>
-      <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
+      <stop offset="0%" stop-color="rgba(147,51,234,0.06)"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#a1a1aa" opacity="0.15"/>
+      <circle cx="2" cy="2" r="1.5" fill="#e5e7eb" opacity="0.8"/>
     </pattern>
   </defs>
-  <rect width="800" height="400" fill="#09090b"/>
+  <rect width="800" height="400" fill="#ffffff"/>
   <rect width="800" height="400" fill="url(#grid)"/>
   <rect x="0" y="0" width="800" height="400" fill="url(#glow)"/>
   
   <!-- Visual Architecture -->
   <g transform="translate(0, -20)">
-    <rect x="220" y="130" width="100" height="100" rx="8" fill="none" stroke="#a855f7" stroke-width="2" opacity="0.4"/>
-<rect x="228" y="138" width="84" height="84" rx="4" fill="#a855f7" opacity="0.1"/>
-<line x1="320" y1="180" x2="350" y2="180" stroke="#a1a1aa" stroke-width="2" opacity="0.5"/>
-<polygon points="344,176 350,180 344,184" fill="#a1a1aa" opacity="0.5"/>
-<rect x="350" y="130" width="100" height="100" rx="8" fill="none" stroke="#a855f7" stroke-width="2" opacity="0.7"/>
-<rect x="358" y="138" width="84" height="84" rx="4" fill="#a855f7" opacity="0.2"/>
-<line x1="450" y1="180" x2="480" y2="180" stroke="#a1a1aa" stroke-width="2" opacity="0.5"/>
-<polygon points="474,176 480,180 474,184" fill="#a1a1aa" opacity="0.5"/>
-<rect x="480" y="130" width="100" height="100" rx="8" fill="none" stroke="#a855f7" stroke-width="2" opacity="1"/>
-<rect x="488" y="138" width="84" height="84" rx="4" fill="#a855f7" opacity="0.30000000000000004"/>
+    <rect x="220" y="130" width="100" height="100" rx="8" fill="none" stroke="#9333ea" stroke-width="2" opacity="0.4"/>
+<rect x="228" y="138" width="84" height="84" rx="4" fill="#9333ea" opacity="0.1"/>
+<line x1="320" y1="180" x2="350" y2="180" stroke="#e5e7eb" stroke-width="2" opacity="0.5"/>
+<polygon points="344,176 350,180 344,184" fill="#e5e7eb" opacity="0.5"/>
+<rect x="350" y="130" width="100" height="100" rx="8" fill="none" stroke="#9333ea" stroke-width="2" opacity="0.7"/>
+<rect x="358" y="138" width="84" height="84" rx="4" fill="#9333ea" opacity="0.2"/>
+<line x1="450" y1="180" x2="480" y2="180" stroke="#e5e7eb" stroke-width="2" opacity="0.5"/>
+<polygon points="474,176 480,180 474,184" fill="#e5e7eb" opacity="0.5"/>
+<rect x="480" y="130" width="100" height="100" rx="8" fill="none" stroke="#9333ea" stroke-width="2" opacity="1"/>
+<rect x="488" y="138" width="84" height="84" rx="4" fill="#9333ea" opacity="0.30000000000000004"/>
 
   </g>
 
   <!-- Typography Card Section at Bottom -->
-  <rect x="0" y="300" width="800" height="100" fill="#09090b" opacity="0.8"/>
-  <line x1="0" y1="300" x2="800" y2="300" stroke="#a1a1aa" stroke-opacity="0.2" stroke-width="1"/>
+  <rect x="0" y="300" width="800" height="100" fill="#ffffff" opacity="0.95"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#e5e7eb" stroke-opacity="1" stroke-width="1.5"/>
   
-  <text x="400" y="335" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#a855f7" text-anchor="middle" letter-spacing="2" text-transform="uppercase">AI GLOSSARY</text>
-  <text x="400" y="370" font-family="'Inter',sans-serif" font-weight="700" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">Foundation Model</text>
+  <text x="400" y="335" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#9333ea" text-anchor="middle" letter-spacing="2" text-transform="uppercase">AI GLOSSARY</text>
+  <text x="400" y="370" font-family="'Inter',sans-serif" font-weight="700" font-size="28" fill="#09090b" text-anchor="middle" letter-spacing="-0.5">Foundation Model</text>
 </svg>
