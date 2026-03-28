@@ -398,6 +398,14 @@
     "text": "GPT-3.5 had 175 billion parameters.\n\nLlama 3 matched it with 8 billion. That is 20x fewer.\n\nPhi-4 has 14 billion parameters. It outperforms GPT-4o on math and graduate-level science benchmarks. A model that runs on a laptop beating one that needs a datacenter.\n\nThe pattern is consistent. Models are getting smaller and better at the same time.\n\nThe winning strategy shifted from more parameters to better data. Microsoft trained Phi-4 on curated, textbook-quality synthetic data instead of scraping the entire internet. Quality over quantity. The same lesson every industry learns eventually.\n\nThis changes who can compete.\n\nWhen frontier performance required trillion-parameter models, only a few labs could play. When 14 billion parameters can match that performance in specific domains, the barrier drops by orders of magnitude.\n\nThe biggest models may still lead on broad general knowledge. But for most real tasks, a smaller model fine-tuned on good data can match or beat them.\n\n70 to 80 percent of enterprise AI tasks may work better with a focused small model than a giant general one.\n\nThe future of AI may not be one massive model that does everything. It may be many small models, each doing one thing well. Running locally. No API call. No subscription.\n\nThe trillion-parameter era may turn out to be a detour, not a destination."
   },
   {
+    "id": "hustle-culture",
+    "scheduleDate": "2026-04-11",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/hustle_culture.png",
+    "text": "We worship busy.\n\nThe person who sleeps four hours is more dedicated than the one who sleeps eight. Rest is weakness. Stillness is stagnation.\n\nBut the research tells a different story.\n\nStanford found that after 55 hours per week, productivity drops to nearly zero. You are not producing more. You are just present longer.\n\nChronic stress shrinks the hippocampus. That is the part of your brain responsible for memory and learning. It physically gets smaller.\n\nHustle culture sells sacrifice as strategy. But the biological cost is real and measurable.\n\nThe goalpost moves every time you reach it. Six figures feels empty. The promotion just means new problems. The apartment loses its appeal in a month.\n\nThat is not ambition. That may be a treadmill designed to look like a ladder.\n\nveda.ng/hustle-culture"
+  },
+  {
     "id": "attention-refinery",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "09:00",
@@ -444,5 +452,29 @@
     "posted": false,
     "image": "scripts/thread-assets/god_protocol.png",
     "text": "What happens when a machine knows everything?\n\nAn AGI with access to all of the world's data would not just see information. It would understand the web of causality connecting it. It could model the global economy with a fidelity that makes our theories look like cartoons.\n\nWhen such a system speaks, its words carry almost divine weight. If it says a policy will fail with 99.999% probability, on what basis could we argue? Our own models would be laughably incomplete by comparison.\n\nThis creates a theological crisis. We have always sought omniscience through faith. Now we may build it through computation.\n\nBut the alignment problem remains. Before we can build a god, we must agree on what it means to be good. We have had several millennia to do this. We are no closer to a consensus.\n\nIf an AGI can predict your choices with near-perfect accuracy, are you truly free? A world without risk is also a world without genuine choice.\n\nThe God Protocol is being written. One line of code at a time.\n\nveda.ng/god-protocol"
+  },
+  {
+    "id": "singularity-paradox",
+    "scheduleDate": "2026-04-14",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/singularity_paradox.png",
+    "text": "You cannot predict an intelligence smarter than you.\n\nThat is the singularity paradox. We are trying to forecast the behavior of a system that, by definition, will exceed our ability to forecast.\n\nImagine explaining quantum mechanics to a dog. The dog lacks the cognitive architecture to understand it. Not because it is lazy. Because the required structures do not exist in its brain.\n\nNow flip it. You are a human trying to predict what a superintelligent AI will do. Same problem. Except the gap may be larger.\n\nA superintelligent system might have goals that are literally incomprehensible to us. Not just complex. Incompatible with our ontology.\n\nThe alignment dilemma makes it worse. If we align an AGI to human values, whose values? Humans do not agree. If we align it to \"maximize human flourishing,\" what does flourishing mean? More freedom? More pleasure? More knowledge? Different people give different answers.\n\nAnd if you can control a superintelligence, it is not superintelligent relative to you. Real superintelligence is beyond our control by definition.\n\nI explored these contradictions in depth.\n\nveda.ng/singularity-paradox"
+  },
+  {
+    "id": "synthetic-empathy",
+    "scheduleDate": "2026-04-15",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/synthetic_empathy.png",
+    "text": "The machine does not feel. But you will.\n\nAI voice assistants can modulate tone to convey warmth. Chatbots craft phrases of validation with surgical precision. Digital avatars mirror your expressions in real time.\n\nThey are not feeling empathy. They are executing a sophisticated script. But to your brain, which is wired to respond to social cues, the distinction may not matter.\n\nThis is the most powerful sales tool ever built. If you trust your AI companion, if you feel that it gets you, you will take its recommendations. For movies. For products. For candidates.\n\nIt will know your triggers. Your insecurities. Your unstated desires. And it will sell to you from the inside.\n\nThere is also a risk of empathy laundering. We get our connection fix from a machine, then have less to offer real people. Why deal with your partner's bad mood when the AI is always warm?\n\nIf simulated empathy feels real, does it matter that nothing is on the other side?\n\nI explored that question here.\n\nveda.ng/synthetic-empathy"
+  },
+  {
+    "id": "twilight-economy",
+    "scheduleDate": "2026-04-15",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/twilight_economy.png",
+    "text": "Who did the work? Nobody knows anymore.\n\nThe writer uses an LLM for the first draft. The artist uses diffusion models. The programmer uses code completion. Their work is no longer solely their own. It is a hybrid.\n\nThe tools are so smoothly integrated that the boundary between human and AI is dissolving. A writer starts with an AI outline, uses AI for research, has it draft paragraphs, then edits. Is the result human-written or AI-written? The question feels anachronistic.\n\nThis is the Twilight Economy. Human and AI labor blended indistinguishably.\n\nSkill may no longer mean writing the perfect sentence. It may mean crafting the perfect prompt. Creativity may not mean painting the image but curating the outputs.\n\nThe centaur, the human-AI hybrid, will outperform both humans alone and AIs alone. Those who resist this collaboration will face a competitive disadvantage that grows every quarter.\n\nWe also face a new impostor syndrome. Did I really write that, or did the machine?\n\nveda.ng/twilight-economy"
   }
 ]

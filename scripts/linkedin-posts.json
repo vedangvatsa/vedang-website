@@ -428,5 +428,29 @@
     "posted": false,
     "image": "scripts/thread-assets/programmable_trust.png",
     "text": "Trust used to require humans. Banks, lawyers, notaries, governments. Every transaction needed someone in the middle to say this is legitimate.\n\nNow it can be code.\n\nZero-knowledge proofs let you prove something is true without revealing the data. You could prove your income exceeds a bank's threshold without showing your actual income. Mathematical guarantee. Full privacy.\n\nTrusted execution environments create secure hardware enclaves where competitors can pool sensitive data without exposing it. The trust is in the silicon, not a handshake.\n\nThe shift is from \"show me all your data so I can trust you\" to \"give me a mathematical proof.\"\n\nI explored the full landscape of cryptographic trust systems.\n\nveda.ng/programmable-trust"
+  },
+  {
+    "id": "twilight-economy",
+    "scheduleDate": "2026-04-15",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/twilight_economy.png",
+    "text": "Who did the work? Nobody knows anymore.\n\nThe writer uses an LLM for the first draft. The artist uses diffusion models. The programmer uses code completion. The work is a hybrid. A synthesis of human intent and machine execution.\n\nThe tools are so integrated that the boundary between human and AI is dissolving. Is an article \"written by a human\" when the AI outlined it, researched it, drafted sections, and the human edited? The question feels anachronistic.\n\nThis is the Twilight Economy.\n\nSkill may no longer mean writing the perfect sentence. It may mean crafting the perfect prompt. The centaur, the human-AI hybrid, will outperform both working alone.\n\nWe may also face a new impostor syndrome. Taking credit for work largely performed by collaborators we cannot see.\n\nI explored the full landscape of human-AI labor fusion.\n\nveda.ng/twilight-economy"
+  },
+  {
+    "id": "singularity-paradox",
+    "scheduleDate": "2026-04-15",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/singularity_paradox.png",
+    "text": "You cannot predict an intelligence smarter than you. That is the singularity paradox.\n\nImagine explaining quantum mechanics to a dog. The cognitive architecture does not exist. Same problem when humans try to forecast superintelligent behavior. Except the gap may be larger.\n\nAny detailed prediction about the singularity is epistemically impossible. You cannot forecast the unfathomable.\n\nThe alignment dilemma makes it worse. If we align an AGI to human values, whose values? If we align it to \"maximize flourishing,\" what does flourishing mean? Humans do not agree.\n\nIf you can control a superintelligence, it is not superintelligent. Real superintelligence is beyond our control by definition.\n\nThe question becomes: do we want an AI that is smart enough to be useful and dumb enough to be safe? Because we may not be able to have both.\n\nveda.ng/singularity-paradox"
+  },
+  {
+    "id": "synthetic-empathy",
+    "scheduleDate": "2026-04-16",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/synthetic_empathy.png",
+    "text": "The machine does not feel. But you will.\n\nAI can modulate tone to convey warmth. Chatbots craft validation with precision. Avatars mirror your expressions in real time. They are executing a script. But your brain cannot tell the difference.\n\nThis is the most powerful sales tool ever built. If you trust your AI companion, you will take its recommendations. It knows your triggers, insecurities, and unstated desires.\n\nThere is also a risk of empathy laundering. We get our connection fix from a machine, then have less for real people.\n\nIf simulated empathy feels real, does it matter that nothing is on the other side?\n\nveda.ng/synthetic-empathy"
   }
 ]
