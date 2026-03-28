@@ -420,5 +420,29 @@
     "posted": false,
     "image": "scripts/thread-assets/simulation.png",
     "text": "Physics looks like optimization.\n\nParticles do not have definite properties until measured. Entanglement connects distant objects instantly. Reality is fundamentally uncertain at the quantum level.\n\nThis looks like a simulation making computational tradeoffs. Why calculate particle properties that nobody is measuring? Why store that data? Just use probabilities until someone looks.\n\nThe simulation argument works like this. Either civilizations never reach the ability to run realistic simulations of their ancestors, or they do and run many of them. If the second is true, simulated beings vastly outnumber real ones. Statistically, we are more likely to be inside one.\n\nThe argument does not prove we are in a simulation. It shows that if the premise holds, the probability is high.\n\nVideo games already do this. They only render what the player can see. The rest does not exist until observed. Quantum mechanics behaves the same way.\n\nWhether this is literally true or just a useful metaphor, it changes how you think about the nature of observation and reality.\n\nveda.ng/simulation-hypothesis"
+  },
+  {
+    "id": "programmable-trust",
+    "scheduleDate": "2026-04-13",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/programmable_trust.png",
+    "text": "Trust used to require humans. Banks, lawyers, notaries, governments. Every transaction needed someone in the middle to say \"this is legitimate.\"\n\nNow it can be code.\n\nZero-knowledge proofs let you prove something is true without revealing the underlying data. You could prove to a bank that your income exceeds their threshold without showing your actual income. The bank gets a mathematical guarantee. You keep your privacy.\n\nImagine voting where each voter can prove they are eligible and cast only one ballot, without revealing who they voted for. Or AI systems that can prove they followed certain rules without revealing the proprietary model.\n\nTrusted execution environments create secure hardware enclaves where competing companies can pool sensitive data without exposing it to each other. The trust is in the silicon, not in a handshake.\n\nThe shift is from \"show me all your data so I can trust you\" to \"give me a mathematical proof.\"\n\nI explored the full landscape of cryptographic trust systems here.\n\nveda.ng/programmable-trust"
+  },
+  {
+    "id": "digital-monasticism",
+    "scheduleDate": "2026-04-13",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/digital_monasticism.png",
+    "text": "Silence became the new luxury.\n\nWhen the Roman Empire grew too complex, some people retreated into the desert. They became the first monks. When the Industrial Revolution filled the air with smoke, the Romantics sought the wilderness.\n\nNow, as technology saturates every moment, a new retreat is forming. Not to the desert. Not to the forest. To the quiet spaces we carve out in our own minds.\n\nDigital monasticism is not about rejecting technology. It is about engaging with it on your own terms. With intention. With discipline.\n\nA digital sabbath. One day per week with all screens off. The first few hours feel like withdrawal. The phantom vibration of a phone that is not there. The compulsive urge to check something, anything.\n\nBut then the anxiety fades. The mind expands. You remember what it felt like to think without interruption.\n\nSilence, solitude, and boredom are the soils where creativity grows. We have been systematically eliminating all three.\n\nI wrote about this practice and what it may look like at scale.\n\nveda.ng/digital-monasticism"
+  },
+  {
+    "id": "god-protocol",
+    "scheduleDate": "2026-04-14",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/god_protocol.png",
+    "text": "What happens when a machine knows everything?\n\nAn AGI with access to all of the world's data would not just see information. It would understand the web of causality connecting it. It could model the global economy with a fidelity that makes our theories look like cartoons.\n\nWhen such a system speaks, its words carry almost divine weight. If it says a policy will fail with 99.999% probability, on what basis could we argue? Our own models would be laughably incomplete by comparison.\n\nThis creates a theological crisis. We have always sought omniscience through faith. Now we may build it through computation.\n\nBut the alignment problem remains. Before we can build a god, we must agree on what it means to be good. We have had several millennia to do this. We are no closer to a consensus.\n\nIf an AGI can predict your choices with near-perfect accuracy, are you truly free? A world without risk is also a world without genuine choice.\n\nThe God Protocol is being written. One line of code at a time.\n\nveda.ng/god-protocol"
   }
 ]
