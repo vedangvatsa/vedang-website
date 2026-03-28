@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 
 /* ─── Two-column layout: text + image side by side ─── */

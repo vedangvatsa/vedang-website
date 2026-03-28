@@ -232,7 +232,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
 
       {/* ─── Report Body ─── */}
       <div className="py-10 md:py-14">
-        <article className="report-article prose dark:prose-invert prose-img:rounded-lg prose-table:w-full prose-headings:tracking-tight prose-p:leading-relaxed prose-p:text-[15px] md:prose-p:text-base max-w-6xl mx-auto px-4 md:px-6">
+        <article className="report-article prose prose-neutral dark:prose-invert prose-img:rounded-lg prose-table:w-full prose-headings:tracking-tight prose-headings:font-semibold prose-p:leading-relaxed prose-p:text-[#37352f] dark:prose-p:text-[rgba(255,255,255,0.81)] prose-li:text-[#37352f] dark:prose-li:text-[rgba(255,255,255,0.81)] prose-a:text-[#37352f] dark:prose-a:text-[rgba(255,255,255,0.81)] prose-strong:text-[#37352f] dark:prose-strong:text-[rgba(255,255,255,0.81)] max-w-6xl mx-auto px-4 md:px-6">
           <MDXRemote
             source={essay.content}
             options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}

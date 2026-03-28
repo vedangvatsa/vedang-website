@@ -49,6 +49,17 @@ function extractEssayContent(slug: string): { title: string; body: string; descr
   // Remove MDX imports
   body = body.replace(/^import\s+.*$/gm, '');
 
+  // Extract <Figure> to standard markdown images
+  body = body.replace(/<Figure\s+([^>]+)\/>/g, (match, props) => {
+    const srcMatch = props.match(/src="([^"]+)"/);
+    const altMatch = props.match(/alt="([^"]+)"/);
+    const src = srcMatch ? srcMatch[1] : '';
+    const alt = altMatch ? altMatch[1] : '';
+    if (!src) return '';
+    const absoluteSrc = src.startsWith('/') ? `https://veda.ng${src}` : src;
+    return `\n![${alt}](${absoluteSrc})\n`;
+  });
+
   // Convert MDX components to markdown equivalents
   body = body.replace(/<SectionLabel[^>]*label="([^"]*)"[^/]*\/>/g, '\n## $1\n');
   body = body.replace(/<PullQuote[^>]*quote="([^"]*)"[^/]*\/>/g, '\n> $1\n');
