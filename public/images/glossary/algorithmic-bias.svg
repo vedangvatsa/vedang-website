@@ -6,40 +6,7 @@
     </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <path d="M 400 145 L 170 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="45" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="170" y="181.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Algorithmic bias is when a</text>
-<text x="170" y="198" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">computer-based decision-making</text>
-<text x="170" y="214.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">process produces</text>
-<text x="170" y="230.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">systematically unfair outcomes</text>
-<text x="170" y="246.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">for certain groups of people.</text>
-<path d="M 400 145 L 630 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="505" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="630" y="186.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">The bias can enter at any</text>
-<text x="630" y="205.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">step, data collection,</text>
-<text x="630" y="224.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">feature selection, model</text>
-<text x="630" y="243.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">training, or deployment.</text>
-<path d="M 400 145 L 270 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="145" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="270" y="286.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">When an algorithm consistently</text>
-<text x="270" y="301.57500000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">favors one demographic over</text>
-<text x="270" y="316.425" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">another, it reflects hidden</text>
-<text x="270" y="331.27500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">assumptions, historical</text>
-<text x="270" y="346.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">inequities, or technical</text>
-<text x="270" y="360.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">shortcuts in the pipeline.</text>
-<path d="M 400 145 L 530 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="405" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="530" y="294.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">This matters because</text>
-<text x="530" y="315.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">many high-stakes</text>
-<text x="530" y="335.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">decisions now run on</text>
-<text x="530" y="355.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">automated scores.</text>
-<rect x="280" y="75" width="240" height="70" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="116.3" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#37352f" text-anchor="middle">Algorithmic Bias</text>
-
-  </g>
-  
+  <g><rect x="100" y="160" width="120" height="80" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/><path d="M 120 180 L 140 180 M 120 190 L 170 190 M 120 200 L 150 200 M 120 210 L 160 210" stroke="#787774" stroke-width="2"/><circle cx="200" cy="180" r="4" fill="#ef4444"/><text x="160" y="265" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#37352f" text-anchor="middle">Skewed Training Data</text><line x1="220" y1="200" x2="330" y2="200" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="340" y="140" width="120" height="120" rx="12" fill="#ffffff" stroke="#9333ea" stroke-width="2" stroke-dasharray="4 4"/><text x="400" y="205" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#9333ea" text-anchor="middle">ƒ ( x )</text><text x="400" y="285" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#37352f" text-anchor="middle">Machine Learning</text><path d="M 460 200 L 520 200 L 550 140 L 570 140" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/><path d="M 460 200 L 520 200 L 550 260 L 570 260" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="580" y="110" width="140" height="60" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/><circle cx="600" cy="140" r="10" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1.5"/><path d="M 596 142 L 599 145 L 605 137" fill="none" stroke="#10b981" stroke-width="2"/><text x="650" y="138" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#37352f" text-anchor="middle">Privileged</text><text x="650" y="155" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Systematically Favored</text><rect x="580" y="230" width="140" height="60" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/><circle cx="600" cy="260" r="10" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1.5"/><path d="M 596 256 L 604 264 M 604 256 L 596 264" fill="none" stroke="#ef4444" stroke-width="1.5"/><text x="650" y="258" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#37352f" text-anchor="middle">Marginalized</text><text x="650" y="275" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Unfairly Penalized</text><text x="400" y="60" font-family="'Inter',sans-serif" font-weight="700" font-size="28" fill="#37352f" text-anchor="middle">Algorithmic Bias</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

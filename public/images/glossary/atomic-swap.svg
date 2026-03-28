@@ -6,26 +6,7 @@
     </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="250" y="7.5" width="300" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="29.924999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">An atomic swap is a trustless peer-to-peer</text>
-<text x="400" y="42.074999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">exchange of cryptocurrencies across different</text>
-<text x="400" y="54.225" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">blockchains using cryptographic hash locks and</text>
-<text x="400" y="66.375" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">time locks, ensuring that either both parties...</text>
-<line x1="400" y1="82.5" x2="400" y2="93.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="200" y="97.5" width="400" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="130.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">The mechanism uses Hash Time-Locked</text>
-<text x="400" y="149.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Contracts (HTLCs).</text>
-<line x1="400" y1="172.5" x2="400" y2="183.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="150" y="187.5" width="500" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="229.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Alice wants to trade Bitcoin for Bob's Litecoin.</text>
-<line x1="400" y1="262.5" x2="400" y2="273.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="100" y="277.5" width="600" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="319.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Alice generates a secret and creates its hash.</text>
-
-  </g>
-  
+  <g><text x="400" y="60" font-family="'Inter',sans-serif" font-weight="700" font-size="28" fill="#37352f" text-anchor="middle">Atomic Swap</text><rect x="100" y="140" width="160" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/><circle cx="180" cy="170" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><path d="M 170 178 Q 180 185 190 178 M 180 155 L 180 165" stroke="#787774" stroke-width="1.5" fill="none"/><text x="180" y="220" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#37352f" text-anchor="middle">Alice</text><text x="180" y="240" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Has Bitcoin (BTC)</text><rect x="540" y="140" width="160" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/><circle cx="620" cy="170" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><path d="M 610 178 Q 620 185 630 178 M 620 155 L 620 165" stroke="#787774" stroke-width="1.5" fill="none"/><text x="620" y="220" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#37352f" text-anchor="middle">Bob</text><text x="620" y="240" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Has Ethereum (ETH)</text><rect x="340" y="160" width="120" height="80" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/><path d="M 380 160 L 380 145 C 380 135, 420 135, 420 145 L 420 160" fill="none" stroke="#2563eb" stroke-width="2"/><circle cx="400" cy="190" r="4" fill="#2563eb"/><path d="M 400 194 L 400 205" stroke="#2563eb" stroke-width="2"/><text x="400" y="260" font-family="'Inter',sans-serif" font-weight="500" font-size="14" fill="#37352f" text-anchor="middle">Hash Time-Locked Contract</text><text x="400" y="280" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Trustless P2P Exchange</text><path d="M 270 170 L 325 170" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="4 4"/><path d="M 530 210 L 475 210" fill="none" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="4 4"/><path d="M 325 210 L 270 210" fill="none" stroke="#6366f1" stroke-width="2" marker-end="url(#arrow)"/><path d="M 475 170 L 530 170" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow)"/></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>
