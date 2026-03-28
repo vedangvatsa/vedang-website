@@ -243,9 +243,11 @@
       "future"
     ],
     "scheduleDate": "2026-03-28",
-    "posted": false,
+    "posted": true,
     "scheduleTime": "17:00",
-    "error": "Dev.to API error: 429 Retry later\n"
+    "error": "Dev.to API error: 429 Retry later\n",
+    "postedAt": "2026-03-28T12:03:09.275Z",
+    "devtoUrl": "https://dev.to/vedangvatsa/ai-superintelligence-timeline-51l6"
   },
   {
     "id": "devto-god-protocol",
