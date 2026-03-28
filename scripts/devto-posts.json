@@ -224,9 +224,11 @@
       "trust"
     ],
     "scheduleDate": "2026-03-28",
-    "posted": false,
+    "posted": true,
     "scheduleTime": "09:00",
-    "error": "Dev.to API error: 429 Retry later\n"
+    "error": "Dev.to API error: 429 Retry later\n",
+    "postedAt": "2026-03-28T05:15:18.884Z",
+    "devtoUrl": "https://dev.to/vedangvatsa/an-internet-of-lies-54l"
   },
   {
     "id": "devto-asi-timeline",
