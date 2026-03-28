@@ -1,72 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#09090b">
   <defs>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="rgba(5,150,105,0.06)"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </radialGradient>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.5" fill="#e5e7eb" opacity="0.6"/>
+      <circle cx="2" cy="2" r="1.5" fill="#a1a1aa" opacity="0.15"/>
     </pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981"/>
+    </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect x="0" y="0" width="300" height="420" fill="url(#grid)"/>
-  <rect x="-100" y="10" width="400" height="400" fill="url(#glow)"/>
-  <line x1="300" y1="40" x2="300" y2="380" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <rect width="800" height="420" fill="#09090b"/>
+  <rect width="800" height="420" fill="url(#grid)"/>
   
-  <!-- Visual Architecture (Left Column) -->
-  <g transform="translate(-250, 20)">
-    <path d="M 440 180 Q 400 180 522.8615586646522 247.11957540458843" fill="none" stroke="#059669" stroke-width="2" opacity="0.1"/>
-<circle cx="522.8615586646522" cy="247.11957540458843" r="2" fill="#059669" opacity="0.8"/>
-<path d="M 438.04226065180615 192.3606797749979 Q 400 180 496.1071965149482 281.8008191422698" fill="none" stroke="#059669" stroke-width="2" opacity="0.2"/>
-<circle cx="496.1071965149482" cy="281.8008191422698" r="3" fill="#059669" opacity="0.8"/>
-<path d="M 432.3606797749979 203.51141009169893 Q 400 180 459.9451923521485 306.51708941429183" fill="none" stroke="#059669" stroke-width="2" opacity="0.30000000000000004"/>
-<circle cx="459.9451923521485" cy="306.51708941429183" r="4" fill="#059669" opacity="0.8"/>
-<path d="M 423.5114100916989 212.3606797749979 Q 400 180 417.9153350992063 318.8489854780479" fill="none" stroke="#059669" stroke-width="2" opacity="0.4"/>
-<circle cx="417.9153350992063" cy="318.8489854780479" r="2" fill="#059669" opacity="0.8"/>
-<path d="M 412.3606797749979 218.04226065180615 Q 400 180 374.13180002327437 317.58937542544527" fill="none" stroke="#059669" stroke-width="2" opacity="0.5"/>
-<circle cx="374.13180002327437" cy="317.58937542544527" r="3" fill="#059669" opacity="0.8"/>
-<path d="M 400 220 Q 400 180 332.88042459541157 302.8615586646522" fill="none" stroke="#059669" stroke-width="2" opacity="0.1"/>
-<circle cx="332.88042459541157" cy="302.8615586646522" r="4" fill="#059669" opacity="0.8"/>
-<path d="M 387.6393202250021 218.04226065180615 Q 400 180 298.1991808577302 276.1071965149482" fill="none" stroke="#059669" stroke-width="2" opacity="0.2"/>
-<circle cx="298.1991808577302" cy="276.1071965149482" r="2" fill="#059669" opacity="0.8"/>
-<path d="M 376.4885899083011 212.3606797749979 Q 400 180 273.48291058570817 239.94519235214852" fill="none" stroke="#059669" stroke-width="2" opacity="0.30000000000000004"/>
-<circle cx="273.48291058570817" cy="239.94519235214852" r="3" fill="#059669" opacity="0.8"/>
-<path d="M 367.6393202250021 203.51141009169893 Q 400 180 261.1510145219521 197.91533509920632" fill="none" stroke="#059669" stroke-width="2" opacity="0.4"/>
-<circle cx="261.1510145219521" cy="197.91533509920632" r="4" fill="#059669" opacity="0.8"/>
-<path d="M 361.95773934819385 192.3606797749979 Q 400 180 262.41062457455473 154.13180002327437" fill="none" stroke="#059669" stroke-width="2" opacity="0.5"/>
-<circle cx="262.41062457455473" cy="154.13180002327437" r="2" fill="#059669" opacity="0.8"/>
-<path d="M 360 180 Q 400 180 277.1384413353478 112.8804245954116" fill="none" stroke="#059669" stroke-width="2" opacity="0.1"/>
-<circle cx="277.1384413353478" cy="112.8804245954116" r="3" fill="#059669" opacity="0.8"/>
-<path d="M 361.95773934819385 167.63932022500208 Q 400 180 303.89280348505184 78.19918085773014" fill="none" stroke="#059669" stroke-width="2" opacity="0.2"/>
-<circle cx="303.89280348505184" cy="78.19918085773014" r="4" fill="#059669" opacity="0.8"/>
-<path d="M 367.6393202250021 156.4885899083011 Q 400 180 340.0548076478515 53.48291058570817" fill="none" stroke="#059669" stroke-width="2" opacity="0.30000000000000004"/>
-<circle cx="340.0548076478515" cy="53.48291058570817" r="2" fill="#059669" opacity="0.8"/>
-<path d="M 376.4885899083011 147.6393202250021 Q 400 180 382.08466490079365 41.151014521952135" fill="none" stroke="#059669" stroke-width="2" opacity="0.4"/>
-<circle cx="382.08466490079365" cy="41.151014521952135" r="3" fill="#059669" opacity="0.8"/>
-<path d="M 387.6393202250021 141.95773934819385 Q 400 180 425.86819997672563 42.4106245745547" fill="none" stroke="#059669" stroke-width="2" opacity="0.5"/>
-<circle cx="425.86819997672563" cy="42.4106245745547" r="4" fill="#059669" opacity="0.8"/>
-<path d="M 400 140 Q 400 180 467.11957540458843 57.13844133534781" fill="none" stroke="#059669" stroke-width="2" opacity="0.1"/>
-<circle cx="467.11957540458843" cy="57.13844133534781" r="2" fill="#059669" opacity="0.8"/>
-<path d="M 412.3606797749979 141.95773934819385 Q 400 180 501.8008191422698 83.8928034850518" fill="none" stroke="#059669" stroke-width="2" opacity="0.2"/>
-<circle cx="501.8008191422698" cy="83.8928034850518" r="3" fill="#059669" opacity="0.8"/>
-<path d="M 423.5114100916989 147.6393202250021 Q 400 180 526.5170894142918 120.05480764785146" fill="none" stroke="#059669" stroke-width="2" opacity="0.30000000000000004"/>
-<circle cx="526.5170894142918" cy="120.05480764785146" r="4" fill="#059669" opacity="0.8"/>
-<path d="M 432.3606797749979 156.48858990830107 Q 400 180 538.8489854780479 162.08466490079365" fill="none" stroke="#059669" stroke-width="2" opacity="0.4"/>
-<circle cx="538.8489854780479" cy="162.08466490079365" r="2" fill="#059669" opacity="0.8"/>
-<path d="M 438.04226065180615 167.6393202250021 Q 400 180 537.5893754254453 205.8681999767256" fill="none" stroke="#059669" stroke-width="2" opacity="0.5"/>
-<circle cx="537.5893754254453" cy="205.8681999767256" r="3" fill="#059669" opacity="0.8"/>
+  <text x="400" y="45" font-family="'Inter',sans-serif" font-weight="800" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">API (Application Programming Interface)</text>
+  <text x="400" y="70" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#10b981" text-anchor="middle" letter-spacing="2" text-transform="uppercase">Deconstructed: Tech Concept</text>
+  <line x1="200" y1="85" x2="600" y2="85" stroke="#27272a" stroke-width="1.5" opacity="0.5"/>
+  
+  <g transform="translate(0, 100)">
+    <rect x="310" y="105" width="180" height="50" rx="25" fill="#09090b" stroke="#27272a" stroke-width="2"/>
+<rect x="310" y="105" width="180" height="50" rx="25" fill="rgba(16,185,129,0.1)"/>
+<text x="400" y="114" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#10b981" text-anchor="middle">API (Application</text>
+<text x="400" y="135.6" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#10b981" text-anchor="middle">Programming</text>
+<text x="400" y="157.20000000000002" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#10b981" text-anchor="middle">Interface)</text>
+<path d="M 400 130 L 170 130" fill="none" stroke="#27272a" stroke-width="2" stroke-dasharray="4 4"/>
+<rect x="75" y="90" width="190" height="80" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
+<rect x="75" y="90" width="190" height="80" rx="8" fill="rgba(16,185,129,0.1)"/>
+<text x="170" y="126.10000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">An API is an interface for</text>
+<text x="170" y="142.3" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">software</text>
+<path d="M 400 130 L 630 130" fill="none" stroke="#27272a" stroke-width="2" stroke-dasharray="4 4"/>
+<rect x="535" y="90" width="190" height="80" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
+<rect x="535" y="90" width="190" height="80" rx="8" fill="rgba(16,185,129,0.1)"/>
+<text x="630" y="126.10000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">To communicate with other</text>
+<text x="630" y="142.3" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">software</text>
+<path d="M 400 130 L 400 240" fill="none" stroke="#27272a" stroke-width="2" stroke-dasharray="4 4"/>
+<rect x="305" y="200" width="190" height="80" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
+<rect x="305" y="200" width="190" height="80" rx="8" fill="rgba(16,185,129,0.1)"/>
+<text x="400" y="219.89999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">Instead of directly</text>
+<text x="400" y="236.09999999999997" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">accessing databases or</text>
+<text x="400" y="252.29999999999998" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">files, applications go</text>
+<text x="400" y="268.5" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">through APIs</text>
+<path d="M 400 130 L 400 30" fill="none" stroke="#27272a" stroke-width="2" stroke-dasharray="4 4"/>
+<rect x="305" y="-10" width="190" height="80" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
+<rect x="305" y="-10" width="190" height="80" rx="8" fill="rgba(16,185,129,0.1)"/>
+<text x="400" y="17.999999999999996" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">APIs define what requests</text>
+<text x="400" y="34.2" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">are allowed and what</text>
+<text x="400" y="50.400000000000006" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#a1a1aa" text-anchor="middle">responses you'll get</text>
 
   </g>
-
-  <!-- Content (Right Column) -->
-  <text x="350" y="85" font-family="'Inter',sans-serif" font-weight="700" font-size="12" fill="#059669" text-anchor="start" letter-spacing="2.5" text-transform="uppercase">Tech GLOSSARY</text>
-  <text x="350" y="130" font-family="'Inter',sans-serif" font-weight="800" font-size="36" fill="#09090b" text-anchor="start" letter-spacing="-1">API (Application</text>
-<text x="350" y="171.4" font-family="'Inter',sans-serif" font-weight="800" font-size="36" fill="#09090b" text-anchor="start" letter-spacing="-1">Programming</text>
-<text x="350" y="212.8" font-family="'Inter',sans-serif" font-weight="800" font-size="36" fill="#09090b" text-anchor="start" letter-spacing="-1">Interface)</text>
-
   
-  
-  <!-- Minimal Branding -->
-  <text x="760" y="390" font-family="'Inter',sans-serif" font-weight="700" font-size="12" fill="#e5e7eb" text-anchor="end">veda.ng</text>
+  <rect x="0" y="380" width="800" height="40" fill="#09090b" opacity="0.9"/>
+  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#a1a1aa" text-anchor="end">veda.ng</text>
 </svg>

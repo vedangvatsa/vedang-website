@@ -1,52 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#09090b">
   <defs>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="rgba(37,99,235,0.06)"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </radialGradient>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.5" fill="#e5e7eb" opacity="0.6"/>
+      <circle cx="2" cy="2" r="1.5" fill="#a1a1aa" opacity="0.15"/>
     </pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6"/>
+    </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect x="0" y="0" width="300" height="420" fill="url(#grid)"/>
-  <rect x="-100" y="10" width="400" height="400" fill="url(#glow)"/>
-  <line x1="300" y1="40" x2="300" y2="380" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <rect width="800" height="420" fill="#09090b"/>
+  <rect width="800" height="420" fill="url(#grid)"/>
   
-  <!-- Visual Architecture (Left Column) -->
-  <g transform="translate(-250, 20)">
-    <circle cx="548" cy="180" r="6" fill="#2563eb"/>
-<circle cx="505.3589103967956" cy="285.3589103967956" r="6" fill="#2563eb"/>
-<circle cx="400" cy="280" r="6" fill="#2563eb"/>
-<circle cx="328.5822151001587" cy="251.4177848998413" r="6" fill="#2563eb"/>
-<circle cx="298" cy="180" r="6" fill="#2563eb"/>
-<circle cx="327.1680015377856" cy="107.16800153778561" r="6" fill="#2563eb"/>
-<circle cx="400" cy="76" r="6" fill="#2563eb"/>
-<circle cx="474.24621202458746" cy="105.7537879754125" r="6" fill="#2563eb"/>
-<line x1="548" y1="180" x2="505.3589103967956" y2="285.3589103967956" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
-<line x1="548" y1="180" x2="298" y2="180" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
-<line x1="548" y1="180" x2="474.24621202458746" y2="105.7537879754125" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
-<line x1="505.3589103967956" y1="285.3589103967956" x2="400" y2="280" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
-<line x1="505.3589103967956" y1="285.3589103967956" x2="328.5822151001587" y2="251.4177848998413" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
-<line x1="505.3589103967956" y1="285.3589103967956" x2="400" y2="76" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
-<line x1="400" y1="280" x2="328.5822151001587" y2="251.4177848998413" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
-<line x1="400" y1="280" x2="327.1680015377856" y2="107.16800153778561" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
-<line x1="328.5822151001587" y1="251.4177848998413" x2="298" y2="180" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
-<line x1="328.5822151001587" y1="251.4177848998413" x2="474.24621202458746" y2="105.7537879754125" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
-<line x1="298" y1="180" x2="327.1680015377856" y2="107.16800153778561" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
-<line x1="298" y1="180" x2="400" y2="76" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
-<line x1="327.1680015377856" y1="107.16800153778561" x2="400" y2="76" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
-<line x1="400" y1="76" x2="474.24621202458746" y2="105.7537879754125" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
+  <text x="400" y="45" font-family="'Inter',sans-serif" font-weight="800" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">ZK Rollup</text>
+  <text x="400" y="70" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#3b82f6" text-anchor="middle" letter-spacing="2" text-transform="uppercase">Deconstructed: Web3 Concept</text>
+  <line x1="200" y1="85" x2="600" y2="85" stroke="#27272a" stroke-width="1.5" opacity="0.5"/>
+  
+  <g transform="translate(0, 100)">
+    <rect x="45" y="75" width="210" height="110" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
+<rect x="45" y="75" width="210" height="110" rx="8" fill="rgba(59,130,246,0.1)"/>
+<text x="150" y="117" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="middle">ZK rollups (Zero-Knowledge</text>
+<text x="150" y="134.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="middle">rollups) post cryptographic</text>
+<text x="150" y="152.10000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="middle">validity proofs</text>
+<line x1="260" y1="130" x2="283" y2="130" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="295" y="75" width="210" height="110" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
+<rect x="295" y="75" width="210" height="110" rx="8" fill="rgba(59,130,246,0.1)"/>
+<text x="400" y="108.225" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="middle">To Layer 1 that</text>
+<text x="400" y="125.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="middle">mathematically guarantee all</text>
+<text x="400" y="143.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="middle">transactions in a batch are</text>
+<text x="400" y="160.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="middle">correct, eliminating the...</text>
+<line x1="510" y1="130" x2="533" y2="130" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="545" y="75" width="210" height="110" rx="8" fill="#09090b" stroke="#27272a" stroke-width="2"/>
+<rect x="545" y="75" width="210" height="110" rx="8" fill="rgba(59,130,246,0.1)"/>
+<text x="650" y="117" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="middle">The technology uses</text>
+<text x="650" y="134.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="middle">zero-knowledge proofs</text>
+<text x="650" y="152.10000000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="middle">(SNARKs or STARKs)</text>
 
   </g>
-
-  <!-- Content (Right Column) -->
-  <text x="350" y="85" font-family="'Inter',sans-serif" font-weight="700" font-size="12" fill="#2563eb" text-anchor="start" letter-spacing="2.5" text-transform="uppercase">Web3 GLOSSARY</text>
-  <text x="350" y="130" font-family="'Inter',sans-serif" font-weight="800" font-size="36" fill="#09090b" text-anchor="start" letter-spacing="-1">ZK Rollup</text>
-
   
-  
-  <!-- Minimal Branding -->
-  <text x="760" y="390" font-family="'Inter',sans-serif" font-weight="700" font-size="12" fill="#e5e7eb" text-anchor="end">veda.ng</text>
+  <rect x="0" y="380" width="800" height="40" fill="#09090b" opacity="0.9"/>
+  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#a1a1aa" text-anchor="end">veda.ng</text>
 </svg>

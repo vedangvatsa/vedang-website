@@ -1,33 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#09090b">
   <defs>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="rgba(147,51,234,0.06)"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </radialGradient>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.5" fill="#e5e7eb" opacity="0.6"/>
+      <circle cx="2" cy="2" r="1.5" fill="#a1a1aa" opacity="0.15"/>
     </pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#a855f7"/>
+    </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect x="0" y="0" width="300" height="420" fill="url(#grid)"/>
-  <rect x="-100" y="10" width="400" height="400" fill="url(#glow)"/>
-  <line x1="300" y1="40" x2="300" y2="380" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <rect width="800" height="420" fill="#09090b"/>
+  <rect width="800" height="420" fill="url(#grid)"/>
   
-  <!-- Visual Architecture (Left Column) -->
-  <g transform="translate(-250, 20)">
-    <circle cx="340" cy="180" r="80" fill="#9333ea" opacity="0.15" stroke="#9333ea" stroke-width="2"/>
-<circle cx="460" cy="180" r="80" fill="#9333ea" opacity="0.25" stroke="#9333ea" stroke-width="2"/>
-<circle cx="400" cy="100" r="80" fill="#9333ea" opacity="0.35" stroke="#9333ea" stroke-width="2"/>
+  <text x="400" y="45" font-family="'Inter',sans-serif" font-weight="800" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">Algorithmic Bias</text>
+  <text x="400" y="70" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#a855f7" text-anchor="middle" letter-spacing="2" text-transform="uppercase">Deconstructed: AI Concept</text>
+  <line x1="200" y1="85" x2="600" y2="85" stroke="#27272a" stroke-width="1.5" opacity="0.5"/>
+  
+  <g transform="translate(0, 100)">
+    <circle cx="80" cy="80" r="15" fill="#a855f7"/>
+<text x="80" y="85" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#09090b" text-anchor="middle">1</text>
+<rect x="60" y="35" width="320" height="90" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1.5"/>
+<rect x="60" y="35" width="320" height="90" rx="6" fill="rgba(168,85,247,0.1)"/>
+<text x="105" y="58.224999999999994" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">Algorithmic bias is when a</text>
+<text x="105" y="75.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">computer-based decision-making</text>
+<text x="105" y="93.325" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">process produces systematically</text>
+<text x="105" y="110.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">unfair outcomes for certain...</text>
+<circle cx="440" cy="80" r="15" fill="#a855f7"/>
+<text x="440" y="85" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#09090b" text-anchor="middle">2</text>
+<rect x="420" y="35" width="320" height="90" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1.5"/>
+<rect x="420" y="35" width="320" height="90" rx="6" fill="rgba(168,85,247,0.1)"/>
+<text x="465" y="58.224999999999994" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">The bias can enter at any step,</text>
+<text x="465" y="75.77499999999999" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">data collection, feature</text>
+<text x="465" y="93.325" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">selection, model training, or</text>
+<text x="465" y="110.875" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">deployment</text>
+<circle cx="80" cy="200" r="15" fill="#a855f7"/>
+<text x="80" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#09090b" text-anchor="middle">3</text>
+<rect x="60" y="155" width="320" height="90" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1.5"/>
+<rect x="60" y="155" width="320" height="90" rx="6" fill="rgba(168,85,247,0.1)"/>
+<text x="105" y="178.22500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">When an algorithm consistently</text>
+<text x="105" y="195.77500000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">favors one demographic over</text>
+<text x="105" y="213.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">another, it reflects hidden</text>
+<text x="105" y="230.87500000000003" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">assumptions, historical...</text>
+<circle cx="440" cy="200" r="15" fill="#a855f7"/>
+<text x="440" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#09090b" text-anchor="middle">4</text>
+<rect x="420" y="155" width="320" height="90" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1.5"/>
+<rect x="420" y="155" width="320" height="90" rx="6" fill="rgba(168,85,247,0.1)"/>
+<text x="465" y="187" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">This matters because many</text>
+<text x="465" y="204.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">high-stakes decisions now run on</text>
+<text x="465" y="222.1" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">automated scores</text>
 
   </g>
-
-  <!-- Content (Right Column) -->
-  <text x="350" y="85" font-family="'Inter',sans-serif" font-weight="700" font-size="12" fill="#9333ea" text-anchor="start" letter-spacing="2.5" text-transform="uppercase">AI GLOSSARY</text>
-  <text x="350" y="130" font-family="'Inter',sans-serif" font-weight="800" font-size="36" fill="#09090b" text-anchor="start" letter-spacing="-1">Algorithmic Bias</text>
-
   
-  
-  <!-- Minimal Branding -->
-  <text x="760" y="390" font-family="'Inter',sans-serif" font-weight="700" font-size="12" fill="#e5e7eb" text-anchor="end">veda.ng</text>
+  <rect x="0" y="380" width="800" height="40" fill="#09090b" opacity="0.9"/>
+  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#a1a1aa" text-anchor="end">veda.ng</text>
 </svg>

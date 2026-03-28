@@ -1,37 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" style="background-color:#09090b">
   <defs>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="rgba(37,99,235,0.06)"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </radialGradient>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.5" fill="#e5e7eb" opacity="0.6"/>
+      <circle cx="2" cy="2" r="1.5" fill="#a1a1aa" opacity="0.15"/>
     </pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6"/>
+    </marker>
   </defs>
-  <rect width="800" height="420" fill="#ffffff"/>
-  <rect x="0" y="0" width="300" height="420" fill="url(#grid)"/>
-  <rect x="-100" y="10" width="400" height="400" fill="url(#glow)"/>
-  <line x1="300" y1="40" x2="300" y2="380" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <rect width="800" height="420" fill="#09090b"/>
+  <rect width="800" height="420" fill="url(#grid)"/>
   
-  <!-- Visual Architecture (Left Column) -->
-  <g transform="translate(-250, 20)">
-    <polygon points="434.6410161513775,160 434.6410161513775,200 400,220 365.3589838486225,200 365.3589838486225,160 400,140" fill="#2563eb" opacity="0.2" stroke="#2563eb" stroke-width="2"/>
-<polygon points="364.6410161513775,118 364.6410161513775,158 330,178 295.3589838486225,158 295.3589838486225,118 330,98" fill="none" opacity="1" stroke="#2563eb" stroke-width="2"/>
-<polygon points="504.6410161513775,118 504.6410161513775,158 470,178 435.3589838486225,158 435.3589838486225,118 470,98" fill="none" opacity="1" stroke="#2563eb" stroke-width="2"/>
-<polygon points="364.6410161513775,202 364.6410161513775,242 330,262 295.3589838486225,242 295.3589838486225,202 330,182" fill="none" opacity="1" stroke="#2563eb" stroke-width="2"/>
-<polygon points="504.6410161513775,202 504.6410161513775,242 470,262 435.3589838486225,242 435.3589838486225,202 470,182" fill="none" opacity="1" stroke="#2563eb" stroke-width="2"/>
-<polygon points="294.6410161513775,160 294.6410161513775,200 260,220 225.35898384862244,200 225.35898384862247,160 260,140" fill="none" opacity="1" stroke="#2563eb" stroke-width="2"/>
-<polygon points="574.6410161513776,160 574.6410161513776,200 540,220 505.3589838486225,200 505.3589838486225,160 540,140" fill="none" opacity="1" stroke="#2563eb" stroke-width="2"/>
+  <text x="400" y="45" font-family="'Inter',sans-serif" font-weight="800" font-size="28" fill="#fafafa" text-anchor="middle" letter-spacing="-0.5">Wallet</text>
+  <text x="400" y="70" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#3b82f6" text-anchor="middle" letter-spacing="2" text-transform="uppercase">Deconstructed: Web3 Concept</text>
+  <line x1="200" y1="85" x2="600" y2="85" stroke="#27272a" stroke-width="1.5" opacity="0.5"/>
+  
+  <g transform="translate(0, 100)">
+    <circle cx="80" cy="80" r="15" fill="#3b82f6"/>
+<text x="80" y="85" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#09090b" text-anchor="middle">1</text>
+<rect x="60" y="35" width="320" height="90" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1.5"/>
+<rect x="60" y="35" width="320" height="90" rx="6" fill="rgba(59,130,246,0.1)"/>
+<text x="105" y="67" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">A wallet is software that stores</text>
+<text x="105" y="84.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">private keys and allows</text>
+<text x="105" y="102.10000000000001" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">interaction with blockchains</text>
+<circle cx="440" cy="80" r="15" fill="#3b82f6"/>
+<text x="440" y="85" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#09090b" text-anchor="middle">2</text>
+<rect x="420" y="35" width="320" height="90" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1.5"/>
+<rect x="420" y="35" width="320" height="90" rx="6" fill="rgba(59,130,246,0.1)"/>
+<text x="465" y="84.55" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">Your private key is the password</text>
+<circle cx="80" cy="200" r="15" fill="#3b82f6"/>
+<text x="80" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#09090b" text-anchor="middle">3</text>
+<rect x="60" y="155" width="320" height="90" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1.5"/>
+<rect x="60" y="155" width="320" height="90" rx="6" fill="rgba(59,130,246,0.1)"/>
+<text x="105" y="195.775" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">To your crypto assets . It's a</text>
+<text x="105" y="213.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">long random string</text>
+<circle cx="440" cy="200" r="15" fill="#3b82f6"/>
+<text x="440" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#09090b" text-anchor="middle">4</text>
+<rect x="420" y="155" width="320" height="90" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1.5"/>
+<rect x="420" y="155" width="320" height="90" rx="6" fill="rgba(59,130,246,0.1)"/>
+<text x="465" y="195.775" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">That only you should know . The</text>
+<text x="465" y="213.32500000000002" font-family="'Inter',sans-serif" font-weight="500" font-size="13" fill="#a1a1aa" text-anchor="start">wallet stores it and uses it</text>
 
   </g>
-
-  <!-- Content (Right Column) -->
-  <text x="350" y="85" font-family="'Inter',sans-serif" font-weight="700" font-size="12" fill="#2563eb" text-anchor="start" letter-spacing="2.5" text-transform="uppercase">Web3 GLOSSARY</text>
-  <text x="350" y="130" font-family="'Inter',sans-serif" font-weight="800" font-size="36" fill="#09090b" text-anchor="start" letter-spacing="-1">Wallet</text>
-
   
-  
-  <!-- Minimal Branding -->
-  <text x="760" y="390" font-family="'Inter',sans-serif" font-weight="700" font-size="12" fill="#e5e7eb" text-anchor="end">veda.ng</text>
+  <rect x="0" y="380" width="800" height="40" fill="#09090b" opacity="0.9"/>
+  <text x="770" y="405" font-family="'Inter',sans-serif" font-weight="600" font-size="11" fill="#a1a1aa" text-anchor="end">veda.ng</text>
 </svg>
