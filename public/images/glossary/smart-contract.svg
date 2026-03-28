@@ -6,33 +6,7 @@
     </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <path d="M 400 145 L 170 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="45" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="170" y="184.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A smart contract is</text>
-<text x="170" y="205.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">self-executing code</text>
-<text x="170" y="225.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">deployed on a</text>
-<text x="170" y="245.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">blockchain.</text>
-<path d="M 400 145 L 630 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="505" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="630" y="184.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">It automatically</text>
-<text x="630" y="205.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">enforces agreements when</text>
-<text x="630" y="225.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">specified conditions are</text>
-<text x="630" y="245.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">met.</text>
-<path d="M 400 145 L 270 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="145" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="270" y="315.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">There are no</text>
-<text x="270" y="335.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">intermediaries.</text>
-<path d="M 400 145 L 530 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
-<rect x="405" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="530" y="315.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">No one needs to oversee</text>
-<text x="530" y="335.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">execution.</text>
-<rect x="280" y="75" width="240" height="70" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="116.3" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#37352f" text-anchor="middle">Smart Contract</text>
-
-  </g>
-  
+  <g><text x="400" y="70" font-family="'Inter',sans-serif" font-weight="700" font-size="32" fill="#37352f" text-anchor="middle">Smart Contract</text><rect x="120" y="160" width="120" height="60" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="180" y="196" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">IF Triggered</text><line x1="240" y1="190" x2="330" y2="190" stroke="#e5e7eb" stroke-width="2" marker-end="url(#arrow)"/><rect x="340" y="130" width="120" height="120" rx="16" fill="#ffffff" stroke="#2563eb" stroke-width="3" stroke-dasharray="6 6"/><path d="M 380 160 L 380 145 C 380 120, 420 120, 420 145 L 420 160" fill="none" stroke="#2563eb" stroke-width="3"/><circle cx="400" cy="190" r="10" fill="#2563eb"/><text x="400" y="235" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#2563eb" text-anchor="middle">Code App</text><line x1="460" y1="190" x2="550" y2="190" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/><rect x="560" y="160" width="120" height="60" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="620" y="196" font-family="'Inter',sans-serif" font-weight="600" font-size="20" fill="#37352f" text-anchor="middle">THEN Execute</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>

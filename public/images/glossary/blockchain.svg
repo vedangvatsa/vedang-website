@@ -6,25 +6,7 @@
     </marker>
   </defs>
   <rect width="800" height="400" fill="#ffffff"/>
-  
-  <g>
-    <rect x="250" y="7.5" width="300" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="30.999999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">A blockchain is a distributed</text>
-<text x="400" y="49.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">ledger maintained by a network</text>
-<text x="400" y="68.80000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">of nodes.</text>
-<line x1="400" y1="82.5" x2="400" y2="93.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="200" y="97.5" width="400" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="130.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Each block contains transactions and a</text>
-<text x="400" y="149.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">cryptographic hash of the previous block.</text>
-<line x1="400" y1="172.5" x2="400" y2="183.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="150" y="187.5" width="500" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="229.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">This chain of hashes creates immutability.</text>
-<line x1="400" y1="262.5" x2="400" y2="273.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="100" y="277.5" width="600" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="319.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Change one block and the hash changes.</text>
-
-  </g>
-  
+  <g><text x="400" y="70" font-family="'Inter',sans-serif" font-weight="700" font-size="32" fill="#37352f" text-anchor="middle">Blockchain</text><rect x="60" y="140" width="160" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="140" y="175" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#37352f" text-anchor="middle">Block 1</text><path d="M 80 190 L 200 190" stroke="#e5e7eb" stroke-width="2"/><text x="140" y="215" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#787774" text-anchor="middle">Data: Tx 1</text><text x="140" y="240" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#787774" text-anchor="middle">Hash: 0x1A</text><line x1="220" y1="200" x2="310" y2="200" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/><rect x="320" y="140" width="160" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="400" y="175" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#2563eb" text-anchor="middle">Block 2</text><path d="M 340 190 L 460 190" stroke="#e5e7eb" stroke-width="2"/><text x="400" y="215" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#787774" text-anchor="middle">Prev: 0x1A</text><text x="400" y="240" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#787774" text-anchor="middle">Hash: 0x2B</text><line x1="480" y1="200" x2="570" y2="200" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/><rect x="580" y="140" width="160" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/><text x="660" y="175" font-family="'Inter',sans-serif" font-weight="700" font-size="20" fill="#37352f" text-anchor="middle">Block 3</text><path d="M 600 190 L 720 190" stroke="#e5e7eb" stroke-width="2"/><text x="660" y="215" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#787774" text-anchor="middle">Prev: 0x2B</text><text x="660" y="240" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#787774" text-anchor="middle">Hash: 0x3C</text></g>
   <rect x="0" y="360" width="800" height="40" fill="#ffffff" opacity="0.9"/>
   <text x="770" y="385" font-family="'Inter',sans-serif" font-weight="500" font-size="12" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>
