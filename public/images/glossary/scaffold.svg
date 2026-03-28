@@ -9,20 +9,33 @@
   
   <g>
     <rect x="10" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="130" y="142.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">A scaffold in AI</text>
-<text x="130" y="164" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">prompting is a</text>
-<text x="130" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">structured template</text>
-<text x="130" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">guides models through</text>
-<text x="130" y="228.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">complex reasoning.</text>
+<text x="130" y="114.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A scaffold in AI</text>
+<text x="130" y="134.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">prompting is a</text>
+<text x="130" y="154.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">structured template</text>
+<text x="130" y="175.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">that guides models</text>
+<text x="130" y="195.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">through complex</text>
+<text x="130" y="215.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">reasoning by</text>
+<text x="130" y="235.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">decomposing problems</text>
+<text x="130" y="256.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">into explicit steps.</text>
 <line x1="255" y1="180" x2="272" y2="180" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="280" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Decomposing problems</text>
-<text x="400" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">into explicit steps.</text>
+<text x="400" y="111.3" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Rather than asking a model to</text>
+<text x="400" y="127.5" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">solve a problem directly,</text>
+<text x="400" y="143.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">scaffolding provides the</text>
+<text x="400" y="159.89999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">skeleton of a solution</text>
+<text x="400" y="176.1" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">process: first identify the</text>
+<text x="400" y="192.3" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">key variables, then establish</text>
+<text x="400" y="208.5" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">relationships between them,</text>
+<text x="400" y="224.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">then apply the appropriate</text>
+<text x="400" y="240.9" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">formula, then verify the</text>
+<text x="400" y="257.1" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">result.</text>
 <line x1="525" y1="180" x2="542" y2="180" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="550" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="670" y="164" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Rather than asking a</text>
-<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">model to solve a</text>
-<text x="670" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">problem directly,.</text>
+<text x="670" y="142.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">The model fills in</text>
+<text x="670" y="164" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">each section,</text>
+<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">constrained by the</text>
+<text x="670" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">structure to follow a</text>
+<text x="670" y="228.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">logical progression.</text>
 
   </g>
   

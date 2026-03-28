@@ -9,24 +9,34 @@
   
   <g>
     <rect x="10" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="130" y="120.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Named Entity</text>
-<text x="130" y="142.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Recognition (NER)</text>
-<text x="130" y="163.99999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">identifies classifies</text>
-<text x="130" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">named entities in</text>
-<text x="130" y="207.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">text, people,</text>
-<text x="130" y="228.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">organizations,</text>
-<text x="130" y="250.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">locations,.</text>
+<text x="130" y="119.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Named Entity Recognition</text>
+<text x="130" y="135.59999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">(NER) identifies and</text>
+<text x="130" y="151.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">classifies named entities in</text>
+<text x="130" y="168" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">text, people, organizations,</text>
+<text x="130" y="184.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">locations, dates, monetary</text>
+<text x="130" y="200.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">values, and other specific</text>
+<text x="130" y="216.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">items, enabling structured</text>
+<text x="130" y="232.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">information extraction from</text>
+<text x="130" y="249" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">unstructured text.</text>
 <line x1="255" y1="180" x2="272" y2="180" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="280" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="164" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Dates, monetary</text>
-<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">values, other</text>
-<text x="400" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">specific items,.</text>
+<text x="400" y="127.49999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Given a sentence like 'Apple</text>
+<text x="400" y="143.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">released the iPhone in San</text>
+<text x="400" y="159.89999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Francisco on January 9,</text>
+<text x="400" y="176.09999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">2007', NER identifies 'Apple'</text>
+<text x="400" y="192.29999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">as an organization, 'iPhone'</text>
+<text x="400" y="208.5" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">as a product, 'San Francisco'</text>
+<text x="400" y="224.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">as a location, and 'January</text>
+<text x="400" y="240.89999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">9, 2007' as a date.</text>
 <line x1="525" y1="180" x2="542" y2="180" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="550" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="670" y="153.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Enabling structured</text>
-<text x="670" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">information</text>
-<text x="670" y="196.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">extraction from</text>
-<text x="670" y="218" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">unstructured text.</text>
+<text x="670" y="120.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">The task is framed as</text>
+<text x="670" y="142.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">sequence labeling:</text>
+<text x="670" y="163.99999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">each token receives a</text>
+<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">tag indicating</text>
+<text x="670" y="207.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">whether it's part of</text>
+<text x="670" y="228.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">an entity and what</text>
+<text x="670" y="250.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">type.</text>
 
   </g>
   

@@ -9,21 +9,26 @@
   
   <g>
     <rect x="190" y="20" width="420" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="54" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Slippage is the difference between the</text>
-<text x="400" y="75.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">expected price of a trade when you</text>
-<text x="400" y="97.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">initiate it.</text>
+<text x="400" y="48.224999999999994" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Slippage is the difference between the expected</text>
+<text x="400" y="65.77499999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">price of a trade when you initiate it and the</text>
+<text x="400" y="83.325" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">actual executed price, representing one of the</text>
+<text x="400" y="100.875" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">primary costs of trading beyond explicit fees.</text>
 <path d="M 400 120 L 220 205" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 400 120 L 580 205" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="30" y="205" width="340" height="130" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="200" y="243.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">The actual executed price,</text>
-<text x="200" y="264.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">representing one of the primary</text>
-<text x="200" y="286.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">costs of trading beyond</text>
-<text x="200" y="308" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">explicit fees.</text>
+<text x="200" y="230.675" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Two types exist: price impact slippage</text>
+<text x="200" y="248.22500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">occurs because your trade itself moves</text>
+<text x="200" y="265.77500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">the market, on AMMs, larger trades move</text>
+<text x="200" y="283.325" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">further along the bonding curve,</text>
+<text x="200" y="300.875" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">receiving progressively worse prices</text>
+<text x="200" y="318.425" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">for each additional unit.</text>
 <rect x="430" y="205" width="340" height="130" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="600" y="243.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Two types exist: price impact</text>
-<text x="600" y="264.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">slippage occurs your trade</text>
-<text x="600" y="286.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">itself moves the market, on</text>
-<text x="600" y="308" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">AMMs,.</text>
+<text x="600" y="227.65" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Market movement slippage occurs when</text>
+<text x="600" y="246.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">prices change between transaction</text>
+<text x="600" y="265.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">submission and execution, especially</text>
+<text x="600" y="284.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">problematic in volatile markets or</text>
+<text x="600" y="303.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">when transactions remain pending in</text>
+<text x="600" y="322.15" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">the mempool.</text>
 
   </g>
   

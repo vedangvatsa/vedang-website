@@ -9,24 +9,33 @@
   
   <g>
     <rect x="10" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="130" y="142.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Artificial</text>
-<text x="130" y="164" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Superintelligence</text>
-<text x="130" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">(ASI) refers to a</text>
-<text x="130" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">hypothetical form of</text>
-<text x="130" y="228.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">machine intelligence.</text>
+<text x="130" y="123.12499999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Artificial</text>
+<text x="130" y="140.675" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Superintelligence (ASI)</text>
+<text x="130" y="158.225" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">refers to a hypothetical</text>
+<text x="130" y="175.775" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">form of machine</text>
+<text x="130" y="193.325" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">intelligence that exceeds</text>
+<text x="130" y="210.875" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">the full range of human</text>
+<text x="130" y="228.425" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">cognitive abilities across</text>
+<text x="130" y="245.97500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">every domain.</text>
 <line x1="255" y1="180" x2="272" y2="180" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="280" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="153.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Exceeds the full</text>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">range of human</text>
-<text x="400" y="196.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">cognitive abilities</text>
-<text x="400" y="218" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">across every domain.</text>
+<text x="400" y="114.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Unlike narrow systems</text>
+<text x="400" y="134.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">that solve specific</text>
+<text x="400" y="154.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">tasks, ASI would</text>
+<text x="400" y="175.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">understand, learn, and</text>
+<text x="400" y="195.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">create across all</text>
+<text x="400" y="215.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">disciplines, from</text>
+<text x="400" y="235.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">scientific theory to</text>
+<text x="400" y="256.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">artistic expression.</text>
 <line x1="525" y1="180" x2="542" y2="180" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="550" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="670" y="142.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Unlike narrow systems</text>
-<text x="670" y="164" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">solve specific tasks,</text>
-<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">ASI would understand,</text>
-<text x="670" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">learn, create across</text>
-<text x="670" y="228.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">all disciplines,.</text>
+<text x="670" y="120.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">It would operate with</text>
+<text x="670" y="142.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">speed, precision, and</text>
+<text x="670" y="163.99999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">memory far beyond any</text>
+<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">human brain, and</text>
+<text x="670" y="207.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">could autonomously</text>
+<text x="670" y="228.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">improve its own</text>
+<text x="670" y="250.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">architecture.</text>
 
   </g>
   

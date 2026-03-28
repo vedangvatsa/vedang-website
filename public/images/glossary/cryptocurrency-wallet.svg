@@ -11,26 +11,27 @@
     <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">1</text>
 <rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="93.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">A cryptocurrency wallet</text>
-<text x="80" y="114.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">stores the private public</text>
-<text x="80" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">cryptographic keys needed to</text>
-<text x="80" y="158" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">send, receive,.</text>
+<text x="80" y="84.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">A cryptocurrency wallet stores</text>
+<text x="80" y="105" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">the private and public</text>
+<text x="80" y="125.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">cryptographic keys needed to</text>
+<text x="80" y="145.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">send, receive, and manage</text>
+<text x="80" y="165.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">digital assets on a blockchain.</text>
 <circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">2</text>
 <rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="114.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Manage digital assets on a</text>
-<text x="480" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">blockchain.</text>
+<text x="480" y="114.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">It does not hold coins</text>
+<text x="480" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">themselves.</text>
 <circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">3</text>
 <rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">It does not hold coins</text>
-<text x="80" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">themselves.</text>
+<text x="80" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">It holds the keys that prove</text>
+<text x="80" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">ownership and authorize</text>
+<text x="80" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">transactions.</text>
 <circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">4</text>
 <rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">It holds the keys that prove</text>
-<text x="480" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">ownership and authorize</text>
-<text x="480" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">transactions.</text>
+<text x="480" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">The public key is an address</text>
+<text x="480" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">you share to receive funds.</text>
 
   </g>
   

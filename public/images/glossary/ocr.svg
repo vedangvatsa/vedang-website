@@ -9,25 +9,31 @@
   
   <g>
     <rect x="55" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="54.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">OCR (Optical Character</text>
-<text x="210" y="75.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Recognition) is the technology</text>
-<text x="210" y="95.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">converts images of text,</text>
-<text x="210" y="115.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">scanned documents,.</text>
+<text x="210" y="46.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">OCR (Optical Character Recognition) is</text>
+<text x="210" y="61.575" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">the technology that converts images of</text>
+<text x="210" y="76.425" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">text, scanned documents, photos of signs,</text>
+<text x="210" y="91.275" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">handwritten notes, into machine-readable</text>
+<text x="210" y="106.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">text that can be searched, edited, and</text>
+<text x="210" y="120.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">processed.</text>
 <line x1="365" y1="80" x2="425" y2="80" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="435" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="54.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Photos of signs, handwritten</text>
-<text x="590" y="75.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">notes, into machine-readable</text>
-<text x="590" y="95.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">text can be searched, edited,</text>
-<text x="590" y="115.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">processed.</text>
+<text x="590" y="58.224999999999994" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Traditional OCR systems use image</text>
+<text x="590" y="75.77499999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">processing to isolate characters,</text>
+<text x="590" y="93.325" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">then match them against known</text>
+<text x="590" y="110.875" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">character patterns.</text>
 <line x1="590" y1="135" x2="590" y2="215" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="435" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="265" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Traditional OCR systems use</text>
-<text x="590" y="285.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">image processing to isolate</text>
-<text x="590" y="305.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">characters,.</text>
+<text x="590" y="249.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Modern OCR uses deep learning: CNNs</text>
+<text x="590" y="267" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">extract visual features, while</text>
+<text x="590" y="284.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">sequence models like LSTMs or</text>
+<text x="590" y="302.1" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">transformers decode character</text>
+<text x="590" y="319.65000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">sequences.</text>
 <line x1="435" y1="280" x2="355" y2="280" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="55" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Then match them against known</text>
-<text x="210" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">character patterns.</text>
+<text x="210" y="254.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">This handles diverse fonts,</text>
+<text x="210" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">degraded quality, and complex</text>
+<text x="210" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">layouts far better than</text>
+<text x="210" y="315.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">rule-based systems.</text>
 <line x1="210" y1="225" x2="210" y2="145" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   </g>

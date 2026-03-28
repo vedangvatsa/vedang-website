@@ -12,32 +12,46 @@
 <circle cx="107.5" cy="70" r="4" fill="#059669"/>
 <line x1="107.5" y1="74" x2="107.5" y2="94" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="15" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="107.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A digital twin is</text>
-<text x="107.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">a virtual replica</text>
-<text x="107.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">of a physical</text>
-<text x="107.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">object, process,</text>
-<text x="107.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">system.</text>
+<text x="107.5" y="134.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A digital twin is</text>
+<text x="107.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">a virtual replica</text>
+<text x="107.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">of a physical</text>
+<text x="107.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">object, process,</text>
+<text x="107.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">or system that</text>
+<text x="107.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">updates in real</text>
+<text x="107.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">time from sensor</text>
+<text x="107.5" y="276.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">data.</text>
 <circle cx="302.5" cy="70" r="4" fill="#059669"/>
 <line x1="302.5" y1="74" x2="302.5" y2="94" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="210" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="302.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Updates in real</text>
-<text x="302.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">time from sensor</text>
-<text x="302.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">data.</text>
+<text x="302.5" y="134.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Engineers</text>
+<text x="302.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">interact with the</text>
+<text x="302.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">twin as they</text>
+<text x="302.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">would with the</text>
+<text x="302.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">real asset, but</text>
+<text x="302.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">without safety,</text>
+<text x="302.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">cost, or downtime</text>
+<text x="302.5" y="276.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">constraints.</text>
 <circle cx="497.5" cy="70" r="4" fill="#059669"/>
 <line x1="497.5" y1="74" x2="497.5" y2="94" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="405" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="497.5" y="144.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Engineers</text>
-<text x="497.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">interact with the</text>
-<text x="497.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">twin as they</text>
-<text x="497.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">would with the</text>
-<text x="497.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">real asset, but</text>
-<text x="497.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">without safety,</text>
-<text x="497.5" y="266" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">cost,.</text>
+<text x="497.5" y="144.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The concept</text>
+<text x="497.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">applies to a</text>
+<text x="497.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">single turbine</text>
+<text x="497.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">blade, an entire</text>
+<text x="497.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">factory floor, or</text>
+<text x="497.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">a city's</text>
+<text x="497.5" y="266" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">infrastructure.</text>
 <circle cx="692.5" cy="70" r="4" fill="#059669"/>
 <line x1="692.5" y1="74" x2="692.5" y2="94" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="600" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="692.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Downtime</text>
-<text x="692.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">constraints.</text>
+<text x="692.5" y="134.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Manufacturing</text>
+<text x="692.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">plants run</text>
+<text x="692.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">virtual assembly</text>
+<text x="692.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">lines to test</text>
+<text x="692.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">robot layouts and</text>
+<text x="692.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">predict</text>
+<text x="692.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">bottlenecks</text>
+<text x="692.5" y="276.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">before retooling.</text>
 
   </g>
   

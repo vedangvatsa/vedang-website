@@ -23,9 +23,10 @@
 <path d="M 220 227 L 400 252" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 580 227 L 400 252" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="250" y="252.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="285" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">AWS Lambda, Google Cloud</text>
-<text x="400" y="305.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Functions, Azure Functions,</text>
-<text x="400" y="325.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Vercel Functions,.</text>
+<text x="400" y="278.225" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">AWS Lambda, Google Cloud</text>
+<text x="400" y="295.77500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Functions, Azure Functions, Vercel</text>
+<text x="400" y="313.32500000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Functions, and Cloudflare Workers</text>
+<text x="400" y="330.87500000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">are all serverless platforms.</text>
 
   </g>
   

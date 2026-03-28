@@ -9,18 +9,22 @@
   
   <g>
     <rect x="35" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="73.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">A mining pool is a cooperative</text>
-<text x="210" y="94.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">arrangement where individual</text>
-<text x="210" y="116.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">cryptocurrency miners combine</text>
-<text x="210" y="138" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">computing power to.</text>
+<text x="210" y="69.45" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">A mining pool is a cooperative</text>
+<text x="210" y="87" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">arrangement where individual</text>
+<text x="210" y="104.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">cryptocurrency miners combine computing</text>
+<text x="210" y="122.10000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">power to increase the chance of solving</text>
+<text x="210" y="139.65000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">a block and earning the reward.</text>
 <rect x="415" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="105.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Earning the reward.</text>
+<text x="590" y="74.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Instead of each miner working alone</text>
+<text x="590" y="95.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">and waiting weeks or months for a</text>
+<text x="590" y="115.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">payout, participants share work and</text>
+<text x="590" y="135.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">split rewards proportionally.</text>
 <path d="M 210 160 L 380 220" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 590 160 L 420 220" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="160" y="220" width="480" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="264" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Instead of each miner working alone waiting</text>
-<text x="400" y="285.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">weeks months for a payout, participants share</text>
-<text x="400" y="307.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">work.</text>
+<text x="400" y="264" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">The pool server tracks contributions, assigns</text>
+<text x="400" y="285.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">tasks, and records which miner submitted the</text>
+<text x="400" y="307.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">winning solution.</text>
 
   </g>
   

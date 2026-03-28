@@ -18,10 +18,11 @@
 <text x="200" y="275.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">all subsequent blocks</text>
 <text x="200" y="297.20000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">reference.</text>
 <rect x="430" y="205" width="340" height="130" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="600" y="243.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Each block contains the hash of</text>
-<text x="600" y="264.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">the block before it, the</text>
-<text x="600" y="286.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Genesis Block has no</text>
-<text x="600" y="308" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">predecessor,.</text>
+<text x="600" y="237.1" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Because each block contains the hash</text>
+<text x="600" y="256" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">of the block before it, the Genesis</text>
+<text x="600" y="274.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Block has no predecessor, its hash</text>
+<text x="600" y="293.79999999999995" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">is calculated from its own contents</text>
+<text x="600" y="312.7" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">and a predetermined nonce.</text>
 
   </g>
   

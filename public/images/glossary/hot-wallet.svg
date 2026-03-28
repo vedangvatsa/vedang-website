@@ -16,16 +16,23 @@
 <text x="130" y="228.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">internet.</text>
 <line x1="255" y1="180" x2="272" y2="180" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="280" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="131.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">It holds private keys</text>
-<text x="400" y="153.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">in a software</text>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">environment</text>
-<text x="400" y="196.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">accessible from a</text>
-<text x="400" y="218" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">desktop, phone,</text>
-<text x="400" y="239.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">browser,.</text>
+<text x="400" y="120.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">It holds private keys</text>
+<text x="400" y="142.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">in a software</text>
+<text x="400" y="163.99999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">environment</text>
+<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">accessible from a</text>
+<text x="400" y="207.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">desktop, phone, or</text>
+<text x="400" y="228.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">browser, allowing</text>
+<text x="400" y="250.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">instant transactions.</text>
 <line x1="525" y1="180" x2="542" y2="180" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="550" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="670" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Allowing instant</text>
-<text x="670" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">transactions.</text>
+<text x="670" y="118.75" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Hot wallets include</text>
+<text x="670" y="137.65" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">mobile apps (Trust</text>
+<text x="670" y="156.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Wallet, MetaMask</text>
+<text x="670" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Mobile), browser</text>
+<text x="670" y="194.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">extensions (MetaMask,</text>
+<text x="670" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Phantom), desktop</text>
+<text x="670" y="232.15" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">applications, and</text>
+<text x="670" y="251.05" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">exchange-hosted wallets.</text>
 
   </g>
   

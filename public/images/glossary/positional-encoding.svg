@@ -9,24 +9,33 @@
   
   <g>
     <rect x="55" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="54.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Positional encoding is a</text>
-<text x="210" y="75.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">technique for injecting</text>
-<text x="210" y="95.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">sequence position information</text>
-<text x="210" y="115.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">into transformer models,.</text>
+<text x="210" y="54.15" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Positional encoding is a technique for</text>
+<text x="210" y="69" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">injecting sequence position information</text>
+<text x="210" y="83.85" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">into transformer models, which otherwise</text>
+<text x="210" y="98.69999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">process all tokens in parallel with no</text>
+<text x="210" y="113.55" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">inherent notion of order.</text>
 <line x1="365" y1="80" x2="425" y2="80" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="435" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="65" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Otherwise process all tokens</text>
-<text x="590" y="85.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">in parallel with no inherent</text>
-<text x="590" y="105.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">notion of order.</text>
+<text x="590" y="46.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Without positional information, a</text>
+<text x="590" y="61.575" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">transformer would treat 'the dog bit the</text>
+<text x="590" y="76.425" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">man' identically to 'the man bit the</text>
+<text x="590" y="91.275" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">dog', it would see the same set of tokens</text>
+<text x="590" y="106.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">with no understanding of their</text>
+<text x="590" y="120.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">arrangement.</text>
 <line x1="590" y1="135" x2="590" y2="215" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="435" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Without positional</text>
-<text x="590" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">information,.</text>
+<text x="590" y="246.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">The original transformer paper introduced</text>
+<text x="590" y="261.57500000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">sinusoidal positional encodings: sine and</text>
+<text x="590" y="276.425" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">cosine functions at different</text>
+<text x="590" y="291.27500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">frequencies, creating unique position</text>
+<text x="590" y="306.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">signatures that the model can</text>
+<text x="590" y="320.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">distinguish.</text>
 <line x1="435" y1="280" x2="355" y2="280" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="55" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="265" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A transformer would treat 'the</text>
-<text x="210" y="285.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">dog bit the man' identically</text>
-<text x="210" y="305.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">to 'the man bit the dog',.</text>
+<text x="210" y="258.225" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Each position gets a different</text>
+<text x="210" y="275.77500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">encoding pattern, and the model</text>
+<text x="210" y="293.32500000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">learns to interpret these patterns</text>
+<text x="210" y="310.87500000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">as positional information.</text>
 <line x1="210" y1="225" x2="210" y2="145" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   </g>

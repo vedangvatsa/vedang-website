@@ -9,22 +9,27 @@
   
   <g>
     <rect x="70" y="120" width="280" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="154.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A Content Delivery Network</text>
-<text x="210" y="175.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">is a group of servers</text>
-<text x="210" y="195.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">spread across many</text>
-<text x="210" y="215.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">locations around the world.</text>
+<text x="210" y="143.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">A Content Delivery Network is a</text>
+<text x="210" y="159.89999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">group of servers spread across</text>
+<text x="210" y="176.1" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">many locations around the world</text>
+<text x="210" y="192.3" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">that work together to deliver web</text>
+<text x="210" y="208.5" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">content faster by serving it from</text>
+<text x="210" y="224.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">the server closest to each user.</text>
 <path d="M 350 180 C 400 180, 400 80, 445 80" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 350 180 C 400 180, 400 280, 445 280" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="450" y="25" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="56.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Work together to deliver web</text>
-<text x="590" y="75.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">content faster serving it</text>
-<text x="590" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">from the server closest to</text>
-<text x="590" y="113.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">each user.</text>
+<text x="590" y="46.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Instead of every visitor hitting your</text>
+<text x="590" y="61.575" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">origin server in one location, a CDN</text>
+<text x="590" y="76.425" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">caches copies of your images, videos,</text>
+<text x="590" y="91.275" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">CSS, JavaScript, and other static</text>
+<text x="590" y="106.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">files at edge servers in dozens or</text>
+<text x="590" y="120.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">hundreds of cities.</text>
 <rect x="450" y="225" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="256.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Instead of every visitor</text>
-<text x="590" y="275.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">hitting your origin server in</text>
-<text x="590" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">one location, a CDN caches</text>
-<text x="590" y="313.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">copies of your images,.</text>
+<text x="590" y="251.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">When someone in Tokyo requests</text>
+<text x="590" y="268" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">your website, they get served from</text>
+<text x="590" y="284.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">a nearby CDN node in Tokyo rather</text>
+<text x="590" y="300.4" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">than waiting for data to travel</text>
+<text x="590" y="316.59999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">from your server in New York.</text>
 
   </g>
   

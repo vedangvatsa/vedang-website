@@ -9,21 +9,24 @@
   
   <g>
     <rect x="250" y="7.5" width="300" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="30.999999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">ZK rollups (Zero-Knowledge</text>
-<text x="400" y="49.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">rollups) post cryptographic</text>
-<text x="400" y="68.80000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">validity proofs to Layer 1.</text>
+<text x="400" y="29.924999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">ZK rollups (Zero-Knowledge rollups) post</text>
+<text x="400" y="42.074999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">cryptographic validity proofs to Layer 1 that</text>
+<text x="400" y="54.225" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">mathematically guarantee all transactions in a</text>
+<text x="400" y="66.375" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">batch are correct, eliminating the need for fr...</text>
 <line x1="400" y1="82.5" x2="400" y2="93.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="200" y="97.5" width="400" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="121" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Mathematically guarantee all transactions</text>
-<text x="400" y="139.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">in a batch are correct, eliminating the</text>
-<text x="400" y="158.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">need for fraud proofs.</text>
+<text x="400" y="123" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">The technology uses zero-knowledge proofs (SNARKs</text>
+<text x="400" y="139.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">or STARKs) to create a compact proof that an</text>
+<text x="400" y="155.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">arbitrary computation was performed correctly.</text>
 <line x1="400" y1="172.5" x2="400" y2="183.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="150" y="187.5" width="500" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="229.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Challenge periods.</text>
+<text x="400" y="220.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Layer 1 verifies this proof on-chain, confirming the</text>
+<text x="400" y="239.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">rollup's state without re-executing transactions.</text>
 <line x1="400" y1="262.5" x2="400" y2="273.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="277.5" width="600" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="310.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">The technology uses zero-knowledge proofs (SNARKs STARKs) to</text>
-<text x="400" y="329.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">create a compact proof.</text>
+<text x="400" y="301" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Proof verification is much cheaper than proof generation, making</text>
+<text x="400" y="319.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">the economics work: expensive off-chain proving produces cheap</text>
+<text x="400" y="338.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">on-chain verification.</text>
 
   </g>
   

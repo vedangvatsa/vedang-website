@@ -23,26 +23,30 @@
 <circle cx="302.5" cy="70" r="4" fill="#2563eb"/>
 <line x1="302.5" y1="74" x2="302.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="210" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="302.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Blocks created</text>
-<text x="302.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">under the new</text>
-<text x="302.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">rules are still</text>
-<text x="302.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">valid to old</text>
-<text x="302.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">nodes,.</text>
+<text x="302.5" y="134.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Blocks created</text>
+<text x="302.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">under the new</text>
+<text x="302.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">rules are still</text>
+<text x="302.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">valid to old</text>
+<text x="302.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">nodes, because</text>
+<text x="302.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">the new rules are</text>
+<text x="302.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">a stricter subset</text>
+<text x="302.5" y="276.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">of the old ones.</text>
 <circle cx="497.5" cy="70" r="4" fill="#2563eb"/>
 <line x1="497.5" y1="74" x2="497.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="405" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="497.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The new rules are</text>
-<text x="497.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">a stricter subset</text>
-<text x="497.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">of the old ones.</text>
+<text x="497.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">This lets the</text>
+<text x="497.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">network upgrade</text>
+<text x="497.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">without forcing</text>
+<text x="497.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">every participant</text>
+<text x="497.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">to update</text>
+<text x="497.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">simultaneously.</text>
 <circle cx="692.5" cy="70" r="4" fill="#2563eb"/>
 <line x1="692.5" y1="74" x2="692.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="600" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="692.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">This lets the</text>
-<text x="692.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">network upgrade</text>
-<text x="692.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">without forcing</text>
-<text x="692.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">every participant</text>
-<text x="692.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">to update</text>
-<text x="692.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">simultaneously.</text>
+<text x="692.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Soft forks avoid</text>
+<text x="692.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">the chain-split</text>
+<text x="692.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">risk of hard</text>
+<text x="692.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">forks.</text>
 
   </g>
   

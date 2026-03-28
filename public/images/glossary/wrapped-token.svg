@@ -11,27 +11,35 @@
     <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">1</text>
 <rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="93.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">A wrapped token is a</text>
-<text x="80" y="114.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">cryptocurrency represents</text>
-<text x="80" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">another cryptocurrency on a</text>
-<text x="80" y="158" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">different blockchain,.</text>
+<text x="80" y="77.65" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">A wrapped token is a</text>
+<text x="80" y="96.55000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">cryptocurrency that represents</text>
+<text x="80" y="115.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">another cryptocurrency on a</text>
+<text x="80" y="134.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">different blockchain, maintaining</text>
+<text x="80" y="153.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">a 1:1 peg with the original</text>
+<text x="80" y="172.15" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">asset.</text>
 <circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">2</text>
 <rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="114.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Maintaining a 1:1 peg with</text>
-<text x="480" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">the original asset.</text>
+<text x="480" y="77.65" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">Wrapped Bitcoin (WBTC) is the</text>
+<text x="480" y="96.55000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">canonical example: Bitcoin</text>
+<text x="480" y="115.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">holders deposit BTC with a</text>
+<text x="480" y="134.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">custodian, who mints an</text>
+<text x="480" y="153.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">equivalent amount of WBTC on</text>
+<text x="480" y="172.15" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">Ethereum.</text>
 <circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">3</text>
 <rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Wrapped Bitcoin (WBTC) is the</text>
-<text x="80" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">canonical example: Bitcoin</text>
-<text x="80" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">holders deposit BTC with a</text>
-<text x="80" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">custodian,.</text>
+<text x="80" y="247.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">WBTC holders can use</text>
+<text x="80" y="269.00000000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Bitcoin's value in Ethereum's</text>
+<text x="80" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">DeFi ecosystem by lending it,</text>
+<text x="80" y="312.20000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">providing liquidity, or using</text>
+<text x="80" y="333.80000000000007" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">it as collateral.</text>
 <circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">4</text>
 <rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Who mints an equivalent</text>
-<text x="480" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">amount of WBTC on Ethereum.</text>
+<text x="480" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">When they want their BTC</text>
+<text x="480" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">back, they burn WBTC and</text>
+<text x="480" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">receive native BTC.</text>
 
   </g>
   

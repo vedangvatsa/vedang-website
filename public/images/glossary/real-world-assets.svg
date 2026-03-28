@@ -9,24 +9,35 @@
   
   <g>
     <rect x="55" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="65" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Real World Assets (RWAs)</text>
-<text x="210" y="85.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">represent the tokenization of</text>
-<text x="210" y="105.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">off-chain, tangible,.</text>
+<text x="210" y="46.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Real World Assets (RWAs) represent the</text>
+<text x="210" y="61.575" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">tokenization of off-chain, tangible, or</text>
+<text x="210" y="76.425" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">traditional financial assets - like real</text>
+<text x="210" y="91.275" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">estate, treasury bills, private credit,</text>
+<text x="210" y="106.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">or physical art - bringing them onto a</text>
+<text x="210" y="120.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">blockchain.</text>
 <line x1="365" y1="80" x2="425" y2="80" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="435" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="65" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Traditional financial assets -</text>
-<text x="590" y="85.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">like real estate, treasury</text>
-<text x="590" y="105.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">bills, private credit,.</text>
+<text x="590" y="49.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">For the first decade of crypto, Decentralized</text>
+<text x="590" y="63.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">Finance (DeFi) existed mostly in a vacuum,</text>
+<text x="590" y="76.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">generating yields exclusively from highly</text>
+<text x="590" y="90.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">reflexive, circular economic activities like</text>
+<text x="590" y="103.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">yield farming and speculation on other crypto</text>
+<text x="590" y="117.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">tokens.</text>
 <line x1="590" y1="135" x2="590" y2="215" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="435" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Physical art - bringing them</text>
-<text x="590" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">onto a blockchain.</text>
+<text x="590" y="249.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">RWA tokenization is the bridge</text>
+<text x="590" y="267" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">connecting this isolated digital</text>
+<text x="590" y="284.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">economy with the massive,</text>
+<text x="590" y="302.1" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">multi-trillion-dollar traditional</text>
+<text x="590" y="319.65000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">financial system.</text>
 <line x1="435" y1="280" x2="355" y2="280" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="55" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="254.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">For the first decade of</text>
-<text x="210" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">crypto, Decentralized Finance</text>
-<text x="210" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">(DeFi) existed mostly in a</text>
-<text x="210" y="315.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">vacuum,.</text>
+<text x="210" y="246.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">By representing physical assets as</text>
+<text x="210" y="261.57500000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">digital tokens on a ledger, RWAs inherit</text>
+<text x="210" y="276.425" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">blockchain properties: instant 24/7</text>
+<text x="210" y="291.27500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">global settlement, fractionalization,</text>
+<text x="210" y="306.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">programmable compliance, and total</text>
+<text x="210" y="320.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">transparency.</text>
 <line x1="210" y1="225" x2="210" y2="145" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   </g>

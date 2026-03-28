@@ -10,28 +10,34 @@
   <g>
     <path d="M 400 145 L 170 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="45" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="170" y="179.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Value at Risk (VaR)</text>
-<text x="170" y="197.00000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">quantifies the maximum</text>
-<text x="170" y="214.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">expected loss on a portfolio</text>
-<text x="170" y="232.10000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">over a specific time horizon</text>
-<text x="170" y="249.65000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">at a given.</text>
+<text x="170" y="176.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Value at Risk (VaR) quantifies</text>
+<text x="170" y="191.575" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">the maximum expected loss on a</text>
+<text x="170" y="206.42499999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">portfolio over a specific time</text>
+<text x="170" y="221.275" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">horizon at a given confidence</text>
+<text x="170" y="236.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">level, providing a single number</text>
+<text x="170" y="250.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">that captures downside risk.</text>
 <path d="M 400 145 L 630 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="505" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="630" y="195" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Providing a single</text>
-<text x="630" y="215.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">number captures downside</text>
-<text x="630" y="235.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">risk.</text>
+<text x="630" y="176.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">A portfolio with 1-day 95% VaR of</text>
+<text x="630" y="191.575" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">$10,000 means there's a 95%</text>
+<text x="630" y="206.42499999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">probability of losing less than</text>
+<text x="630" y="221.275" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">$10,000 in a single day,</text>
+<text x="630" y="236.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">equivalently, a 5% probability of</text>
+<text x="630" y="250.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">losing more.</text>
 <path d="M 400 145 L 270 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="145" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="270" y="289.45" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">A portfolio with 1-day 95%</text>
-<text x="270" y="307" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">VaR of $10,000 means there's</text>
-<text x="270" y="324.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">a 95% probability of losing</text>
-<text x="270" y="342.09999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">less than $10,000 in a</text>
-<text x="270" y="359.65" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">single.</text>
+<text x="270" y="286.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">The metric originated in</text>
+<text x="270" y="301.57500000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">traditional finance risk</text>
+<text x="270" y="316.425" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">management, where banks and funds</text>
+<text x="270" y="331.27500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">use it to set capital reserves,</text>
+<text x="270" y="346.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">measure trader risk limits, and</text>
+<text x="270" y="360.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">report to regulators.</text>
 <path d="M 400 145 L 530 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="405" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="530" y="305" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Equivalently, a 5%</text>
-<text x="530" y="325.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">probability of losing</text>
-<text x="530" y="345.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">more.</text>
+<text x="530" y="294.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Calculating VaR requires</text>
+<text x="530" y="315.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">modeling the</text>
+<text x="530" y="335.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">distribution of</text>
+<text x="530" y="355.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">portfolio returns.</text>
 <rect x="280" y="75" width="240" height="70" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
 <text x="400" y="116.3" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#37352f" text-anchor="middle">Value at Risk</text>
 

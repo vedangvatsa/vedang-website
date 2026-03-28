@@ -9,19 +9,22 @@
   
   <g>
     <rect x="70" y="120" width="280" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Proof of History (PoH) is</text>
-<text x="210" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">a cryptographic clock.</text>
+<text x="210" y="147.1" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Proof of History (PoH) is a</text>
+<text x="210" y="166" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">cryptographic clock that</text>
+<text x="210" y="184.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">creates a verifiable sequence</text>
+<text x="210" y="203.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">of events without requiring</text>
+<text x="210" y="222.70000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">nodes to agree on timestamps.</text>
 <path d="M 350 180 C 400 180, 400 80, 445 80" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 350 180 C 400 180, 400 280, 445 280" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="450" y="25" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="66" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Creates a verifiable sequence</text>
-<text x="590" y="84.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">of events without requiring</text>
-<text x="590" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">nodes to agree on timestamps.</text>
+<text x="590" y="56.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Each event is hashed together</text>
+<text x="590" y="75.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">with the hash of the previous</text>
+<text x="590" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">event, forming an ordered</text>
+<text x="590" y="113.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">chain that anyone can verify.</text>
 <rect x="450" y="225" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="256.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Each event is hashed together</text>
-<text x="590" y="275.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">with the hash of the previous</text>
-<text x="590" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">event, forming an ordered</text>
-<text x="590" y="313.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">chain.</text>
+<text x="590" y="266" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">PoH does not replace</text>
+<text x="590" y="284.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">consensus mechanisms like</text>
+<text x="590" y="303.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Proof of Stake.</text>
 
   </g>
   

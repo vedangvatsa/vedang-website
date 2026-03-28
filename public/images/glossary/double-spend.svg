@@ -11,11 +11,11 @@
     <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">1</text>
 <rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="82.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Double spending is the</text>
-<text x="80" y="104" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">fundamental problem of</text>
-<text x="80" y="125.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">digital currency: spending</text>
-<text x="80" y="147.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">the same digital token twice</text>
-<text x="80" y="168.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">before the.</text>
+<text x="80" y="84.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">Double spending is the</text>
+<text x="80" y="105" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">fundamental problem of digital</text>
+<text x="80" y="125.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">currency: spending the same</text>
+<text x="80" y="145.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">digital token twice before the</text>
+<text x="80" y="165.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">system detects the duplication.</text>
 <circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">2</text>
 <rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
@@ -25,15 +25,19 @@
 <circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">3</text>
 <rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Before blockchain, the only</text>
-<text x="80" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">solution was a trusted</text>
-<text x="80" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">intermediary, a bank, PayPal,</text>
-<text x="80" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">payment processor,.</text>
+<text x="80" y="242.65" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">Before blockchain, the only</text>
+<text x="80" y="261.54999999999995" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">solution was a trusted</text>
+<text x="80" y="280.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">intermediary, a bank, PayPal, or</text>
+<text x="80" y="299.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">payment processor, that</text>
+<text x="80" y="318.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">maintained a central ledger</text>
+<text x="80" y="337.15" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">tracking who owns what.</text>
 <circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">4</text>
 <rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Maintained a central ledger</text>
-<text x="480" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">tracking who owns what.</text>
+<text x="480" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">This trusted party could</text>
+<text x="480" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">prevent double-spends because</text>
+<text x="480" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">they controlled the single</text>
+<text x="480" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">source of truth.</text>
 
   </g>
   

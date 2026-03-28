@@ -9,20 +9,24 @@
   
   <g>
     <rect x="35" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="73.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Speech recognition (Automatic</text>
-<text x="210" y="94.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Speech Recognition, ASR)</text>
-<text x="210" y="116.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">converts spoken language into</text>
-<text x="210" y="138" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">text,.</text>
+<text x="210" y="64.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Speech recognition (Automatic</text>
+<text x="210" y="85" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Speech Recognition, ASR) converts</text>
+<text x="210" y="105.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">spoken language into text, enabling</text>
+<text x="210" y="125.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">voice interfaces, transcription</text>
+<text x="210" y="145.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">services, and accessibility tools.</text>
 <rect x="415" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="84" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Enabling voice interfaces,</text>
-<text x="590" y="105.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">transcription services,</text>
-<text x="590" y="127.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">accessibility tools.</text>
+<text x="590" y="64.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The task is challenging: speech</text>
+<text x="590" y="85" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">varies by accent, speed, emotion,</text>
+<text x="590" y="105.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">and recording quality; words blend</text>
+<text x="590" y="125.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">together without clear boundaries;</text>
+<text x="590" y="145.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">and background noise interferes.</text>
 <path d="M 210 160 L 380 220" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 590 160 L 420 220" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="160" y="220" width="480" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="264" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">The task is challenging: speech varies by</text>
-<text x="400" y="285.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">accent, speed, emotion, and recording</text>
-<text x="400" y="307.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">quality;</text>
+<text x="400" y="253.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Traditional ASR used acoustic models,</text>
+<text x="400" y="274.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">language models, and pronunciation</text>
+<text x="400" y="296.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">dictionaries as separate components trained</text>
+<text x="400" y="318" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">on different objectives.</text>
 
   </g>
   

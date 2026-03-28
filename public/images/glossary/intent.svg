@@ -9,23 +9,23 @@
   
   <g>
     <rect x="250" y="7.5" width="300" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="34" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">An intent is a signed message expressing</text>
-<text x="400" y="48.85" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">what a user wants to achieve without</text>
-<text x="400" y="63.7" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">specifying exactly how to achieve.</text>
+<text x="400" y="29.924999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">An intent is a signed message expressing what a</text>
+<text x="400" y="42.074999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">user wants to achieve without specifying exactly</text>
+<text x="400" y="54.225" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">how to achieve it, shifting complexity from users</text>
+<text x="400" y="66.375" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">to specialized solvers who compete to fulfill...</text>
 <line x1="400" y1="82.5" x2="400" y2="93.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="200" y="97.5" width="400" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="121" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Shifting complexity from users to</text>
-<text x="400" y="139.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">specialized solvers who compete to fulfill</text>
-<text x="400" y="158.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">requests optimally.</text>
+<text x="400" y="122" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Traditional blockchain transactions require</text>
+<text x="400" y="139.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">users to specify exact actions: 'swap exactly</text>
+<text x="400" y="157.10000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">1 ETH for USDC on Uniswap v3 pool 0x...</text>
 <line x1="400" y1="172.5" x2="400" y2="183.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="150" y="187.5" width="500" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="211" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Traditional blockchain transactions require users to</text>
-<text x="400" y="229.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">specify exact actions: 'swap exactly 1 ETH for USDC</text>
-<text x="400" y="248.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">on.</text>
+<text x="400" y="211" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">' Intent-based transactions express outcomes: 'trade</text>
+<text x="400" y="229.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">my 1 ETH for at least 2,000 USDC within the next 30</text>
+<text x="400" y="248.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">seconds.</text>
 <line x1="400" y1="262.5" x2="400" y2="273.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="277.5" width="600" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="310.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Solvers can find the best execution path across multiple DEXs,</text>
-<text x="400" y="329.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">split orders for better pricing,.</text>
+<text x="400" y="319.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">' This abstraction is powerful.</text>
 
   </g>
   

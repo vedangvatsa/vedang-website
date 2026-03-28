@@ -11,27 +11,40 @@
     <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">1</text>
 <rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="93.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Circulating supply counts the</text>
-<text x="80" y="114.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">number of tokens currently</text>
-<text x="80" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">available for trading in the</text>
-<text x="80" y="158" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">market,.</text>
+<text x="80" y="75.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">Circulating supply counts the number</text>
+<text x="80" y="91.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">of tokens currently available for</text>
+<text x="80" y="108" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">trading in the market, excluding</text>
+<text x="80" y="124.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">locked allocations, unvested team</text>
+<text x="80" y="140.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">tokens, foundation reserves, and</text>
+<text x="80" y="156.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">tokens permanently removed through</text>
+<text x="80" y="172.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">burns.</text>
 <circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">2</text>
 <rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="104" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Excluding locked allocations,</text>
-<text x="480" y="125.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">unvested team tokens,</text>
-<text x="480" y="147.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">foundation reserves,.</text>
+<text x="480" y="84.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">This matters because only</text>
+<text x="480" y="105" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">circulating tokens can actually</text>
+<text x="480" y="125.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">be bought or sold, making it</text>
+<text x="480" y="145.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">the relevant denominator for</text>
+<text x="480" y="165.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">market cap calculations.</text>
 <circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">3</text>
 <rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Tokens permanently removed</text>
-<text x="80" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">through burns.</text>
+<text x="80" y="240.59999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">Total supply includes all existing</text>
+<text x="80" y="256.79999999999995" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">tokens regardless of restrictions;</text>
+<text x="80" y="272.99999999999994" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">maximum supply caps the tokens that</text>
+<text x="80" y="289.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">will ever exist (21 million for</text>
+<text x="80" y="305.4" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">Bitcoin, potentially infinite for</text>
+<text x="80" y="321.59999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">Ethereum post-merge though</text>
+<text x="80" y="337.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">deflationary in practice).</text>
 <circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">4</text>
 <rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">This matters only circulating</text>
-<text x="480" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">tokens can actually be bought</text>
-<text x="480" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">sold,.</text>
+<text x="480" y="242.65" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">Supply dynamics directly affect</text>
+<text x="480" y="261.54999999999995" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">price: if 90% of tokens are</text>
+<text x="480" y="280.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">locked and 50% unlock next month,</text>
+<text x="480" y="299.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">massive sell pressure looms</text>
+<text x="480" y="318.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">regardless of current market</text>
+<text x="480" y="337.15" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">conditions.</text>
 
   </g>
   

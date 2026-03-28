@@ -9,25 +9,29 @@
   
   <g>
     <rect x="55" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="54.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Account abstraction allows</text>
-<text x="210" y="75.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">smart contracts to serve as</text>
-<text x="210" y="95.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">user accounts with</text>
-<text x="210" y="115.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">programmable authentication.</text>
+<text x="210" y="49.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">Account abstraction allows smart contracts to</text>
+<text x="210" y="63.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">serve as user accounts with programmable</text>
+<text x="210" y="76.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">authentication and transaction logic,</text>
+<text x="210" y="90.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">replacing the rigid externally owned account</text>
+<text x="210" y="103.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">(EOA) model that requires specific</text>
+<text x="210" y="117.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">cryptographic signatures.</text>
 <line x1="365" y1="80" x2="425" y2="80" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="435" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="65" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Transaction logic, replacing</text>
-<text x="590" y="85.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">the rigid externally owned</text>
-<text x="590" y="105.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">account (EOA) model.</text>
+<text x="590" y="54.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Traditional Ethereum accounts</text>
+<text x="590" y="75.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">have hardcoded rules: one</text>
+<text x="590" y="95.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">private key, secp256k1</text>
+<text x="590" y="115.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">signatures, ETH for gas.</text>
 <line x1="590" y1="135" x2="590" y2="215" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="435" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Requires specific</text>
-<text x="590" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">cryptographic signatures.</text>
+<text x="590" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Account abstraction makes</text>
+<text x="590" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">these rules programmable.</text>
 <line x1="435" y1="280" x2="355" y2="280" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="55" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="254.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Traditional Ethereum accounts</text>
-<text x="210" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">have hardcoded rules: one</text>
-<text x="210" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">private key, secp256k1</text>
-<text x="210" y="315.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">signatures, ETH for gas.</text>
+<text x="210" y="249.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Custom validation might accept</text>
+<text x="210" y="267" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">multiple signers (multisig),</text>
+<text x="210" y="284.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">biometric authentication, social</text>
+<text x="210" y="302.1" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">recovery through trusted contacts,</text>
+<text x="210" y="319.65000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">or time-locked spending limits.</text>
 <line x1="210" y1="225" x2="210" y2="145" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   </g>

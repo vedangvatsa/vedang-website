@@ -9,20 +9,23 @@
   
   <g>
     <rect x="35" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="73.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">An autoencoder is a neural</text>
-<text x="210" y="94.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">network trained to reconstruct</text>
-<text x="210" y="116.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">its input through a compressed</text>
-<text x="210" y="138" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">intermediate.</text>
+<text x="210" y="71.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">An autoencoder is a neural network trained</text>
+<text x="210" y="88" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">to reconstruct its input through a</text>
+<text x="210" y="104.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">compressed intermediate representation</text>
+<text x="210" y="120.4" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">called the latent space, learning efficient</text>
+<text x="210" y="136.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">data encodings in an unsupervised manner.</text>
 <rect x="415" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="84" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Learning efficient data</text>
-<text x="590" y="105.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">encodings in an unsupervised</text>
-<text x="590" y="127.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">manner.</text>
+<text x="590" y="69.45" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">The architecture consists of an encoder</text>
+<text x="590" y="87" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">that compresses input to a</text>
+<text x="590" y="104.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">lower-dimensional latent representation</text>
+<text x="590" y="122.10000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">and a decoder that reconstructs the</text>
+<text x="590" y="139.65000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">original from this compression.</text>
 <path d="M 210 160 L 380 220" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 590 160 L 420 220" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="160" y="220" width="480" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="264" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">The architecture consists of an encoder</text>
-<text x="400" y="285.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">compresses input to a lower-dimensional</text>
-<text x="400" y="307.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">latent representation.</text>
+<text x="400" y="264" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">The network is trained to minimize</text>
+<text x="400" y="285.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">reconstruction error, the difference between</text>
+<text x="400" y="307.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">input and output.</text>
 
   </g>
   

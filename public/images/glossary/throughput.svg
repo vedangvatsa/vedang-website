@@ -11,29 +11,36 @@
     <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
 <text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">1</text>
 <rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="82.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Throughput measures the rate</text>
-<text x="80" y="104" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">at a system processes work</text>
-<text x="80" y="125.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">over time, typically</text>
-<text x="80" y="147.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">expressed as requests per</text>
-<text x="80" y="168.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">second,.</text>
+<text x="80" y="77.65" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">Throughput measures the rate at</text>
+<text x="80" y="96.55000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">which a system processes work</text>
+<text x="80" y="115.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">over time, typically expressed as</text>
+<text x="80" y="134.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">requests per second, tokens per</text>
+<text x="80" y="153.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">second, or transactions per</text>
+<text x="80" y="172.15" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">minute.</text>
 <circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
 <text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">2</text>
 <rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="114.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Tokens per second,</text>
-<text x="480" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">transactions per minute.</text>
+<text x="480" y="77.65" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">It's distinct from but related to</text>
+<text x="480" y="96.55000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">latency: latency measures how</text>
+<text x="480" y="115.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">long each individual request</text>
+<text x="480" y="134.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">takes, while throughput measures</text>
+<text x="480" y="153.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">how many requests complete in a</text>
+<text x="480" y="172.15" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">given period.</text>
 <circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
 <text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">3</text>
 <rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">It's distinct from but</text>
-<text x="80" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">related to latency: latency</text>
-<text x="80" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">measures how long each</text>
-<text x="80" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">individual request takes,.</text>
+<text x="80" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">A system can have low latency</text>
+<text x="80" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">but low throughput if it</text>
+<text x="80" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">processes requests</text>
+<text x="80" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">sequentially.</text>
 <circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
 <text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">4</text>
 <rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">While throughput measures how</text>
-<text x="480" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">many requests complete in a</text>
-<text x="480" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">given period.</text>
+<text x="480" y="247.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Batching, grouping multiple</text>
+<text x="480" y="269.00000000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">requests and processing them</text>
+<text x="480" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">together, is the primary</text>
+<text x="480" y="312.20000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">technique for improving</text>
+<text x="480" y="333.80000000000007" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">throughput.</text>
 
   </g>
   

@@ -9,22 +9,27 @@
   
   <g>
     <rect x="70" y="120" width="280" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="144.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Knowledge distillation is a</text>
-<text x="210" y="165" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">model compression technique</text>
-<text x="210" y="185.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">where a smaller student</text>
-<text x="210" y="205.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">model learns to replicate</text>
-<text x="210" y="225.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">the.</text>
+<text x="210" y="139.29999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Knowledge distillation is a model</text>
+<text x="210" y="154.14999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">compression technique where a smaller</text>
+<text x="210" y="168.99999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">student model learns to replicate the</text>
+<text x="210" y="183.85" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">behavior of a larger teacher model by</text>
+<text x="210" y="198.7" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">training on the teacher's output</text>
+<text x="210" y="213.54999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">probability distributions rather than</text>
+<text x="210" y="228.4" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">just hard labels.</text>
 <path d="M 350 180 C 400 180, 400 80, 445 80" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 350 180 C 400 180, 400 280, 445 280" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="450" y="25" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="56.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Training on the teacher's</text>
-<text x="590" y="75.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">output probability</text>
-<text x="590" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">distributions rather than</text>
-<text x="590" y="113.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">just hard labels.</text>
+<text x="590" y="49.449999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">When a teacher model classifies</text>
+<text x="590" y="67" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">an image as 90% cat and 10%</text>
+<text x="590" y="84.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">dog, that soft distribution</text>
+<text x="590" y="102.10000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">contains more information than</text>
+<text x="590" y="119.64999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">just the label 'cat.</text>
 <rect x="450" y="225" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="266" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">When a teacher model</text>
-<text x="590" y="284.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">classifies an image as 90%</text>
-<text x="590" y="303.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">cat 10% dog,.</text>
+<text x="590" y="249.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">' The near-miss</text>
+<text x="590" y="267" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">classifications, the confidence</text>
+<text x="590" y="284.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">levels, the relationships</text>
+<text x="590" y="302.1" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">between classes, all of this</text>
+<text x="590" y="319.65000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">transfers to the student.</text>
 
   </g>
   

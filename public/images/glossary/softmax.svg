@@ -9,21 +9,26 @@
   
   <g>
     <rect x="10" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="130" y="164" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Softmax is a</text>
-<text x="130" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">mathematical</text>
-<text x="130" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">function.</text>
+<text x="130" y="131.9" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Softmax is a mathematical</text>
+<text x="130" y="149.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">function that transforms a</text>
+<text x="130" y="167" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">vector of arbitrary real</text>
+<text x="130" y="184.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">numbers into a probability</text>
+<text x="130" y="202.10000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">distribution, where all</text>
+<text x="130" y="219.65" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">values are positive and</text>
+<text x="130" y="237.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">sum to exactly 1.</text>
 <line x1="255" y1="180" x2="272" y2="180" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="280" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="120.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Transforms a vector</text>
-<text x="400" y="142.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">of arbitrary real</text>
-<text x="400" y="163.99999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">numbers into a</text>
-<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">probability</text>
-<text x="400" y="207.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">distribution, where</text>
-<text x="400" y="228.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">all values are</text>
-<text x="400" y="250.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">positive.</text>
+<text x="400" y="131.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">For each input value,</text>
+<text x="400" y="153.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">softmax computes the</text>
+<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">exponential of that</text>
+<text x="400" y="196.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">value divided by the</text>
+<text x="400" y="218" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">sum of all</text>
+<text x="400" y="239.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">exponentials.</text>
 <line x1="525" y1="180" x2="542" y2="180" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="550" y="90" width="240" height="180" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Sum to exactly 1.</text>
+<text x="670" y="164" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">This normalizes the</text>
+<text x="670" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">outputs into valid</text>
+<text x="670" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">probabilities.</text>
 
   </g>
   

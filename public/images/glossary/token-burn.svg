@@ -9,25 +9,29 @@
   
   <g>
     <rect x="55" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="65" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Token burning permanently</text>
-<text x="210" y="85.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">removes tokens from</text>
-<text x="210" y="105.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">circulation.</text>
+<text x="210" y="54.15" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Token burning permanently removes tokens</text>
+<text x="210" y="69" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">from circulation by sending them to an</text>
+<text x="210" y="83.85" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">inaccessible address with no private key</text>
+<text x="210" y="98.69999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">(a 'burn address'), reducing total supply</text>
+<text x="210" y="113.55" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">and creating deflationary pressure.</text>
 <line x1="365" y1="80" x2="425" y2="80" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="435" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="56.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Sending them to an inaccessible</text>
-<text x="590" y="75.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">address with no private key (a</text>
-<text x="590" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">'burn address'), reducing total</text>
-<text x="590" y="113.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">supply.</text>
+<text x="590" y="54.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Burns can be manual (protocol</text>
+<text x="590" y="75.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">treasury burning tokens) or</text>
+<text x="590" y="95.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">automatic (programmatic burns</text>
+<text x="590" y="115.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">on each transaction).</text>
 <line x1="590" y1="135" x2="590" y2="215" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="435" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Creating deflationary</text>
-<text x="590" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">pressure.</text>
+<text x="590" y="258.225" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Ethereum implements burning through</text>
+<text x="590" y="275.77500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">EIP-1559, where a portion of every</text>
+<text x="590" y="293.32500000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">transaction's base fee is burned</text>
+<text x="590" y="310.87500000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">rather than going to validators.</text>
 <line x1="435" y1="280" x2="355" y2="280" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="55" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="254.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Burns can be manual (protocol</text>
-<text x="210" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">treasury burning tokens) or</text>
-<text x="210" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">automatic (programmatic burns</text>
-<text x="210" y="315.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">on each transaction).</text>
+<text x="210" y="254.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">During high network activity,</text>
+<text x="210" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Ethereum can burn more ETH</text>
+<text x="210" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">than it emits, making it</text>
+<text x="210" y="315.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">deflationary.</text>
 <line x1="210" y1="225" x2="210" y2="145" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   </g>

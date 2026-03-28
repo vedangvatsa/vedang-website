@@ -9,22 +9,23 @@
   
   <g>
     <rect x="70" y="120" width="280" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="144.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A vector database is a</text>
-<text x="210" y="165" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">database optimized for</text>
-<text x="210" y="185.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">storing searching</text>
-<text x="210" y="205.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">high-dimensional numerical</text>
-<text x="210" y="225.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">vectors,.</text>
+<text x="210" y="143.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">A vector database is a database</text>
+<text x="210" y="159.89999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">optimized for storing and</text>
+<text x="210" y="176.1" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">searching high-dimensional</text>
+<text x="210" y="192.3" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">numerical vectors, which are how</text>
+<text x="210" y="208.5" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">AI models represent the meaning of</text>
+<text x="210" y="224.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">text, images, and other data.</text>
 <path d="M 350 180 C 400 180, 400 80, 445 80" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 350 180 C 400 180, 400 280, 445 280" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="450" y="25" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="66" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Are how AI models represent</text>
-<text x="590" y="84.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">the meaning of text, images,</text>
-<text x="590" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">other data.</text>
+<text x="590" y="51.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">When an embedding model processes</text>
+<text x="590" y="68" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">a piece of text, it converts it</text>
+<text x="590" y="84.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">into a vector, an array of</text>
+<text x="590" y="100.4" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">hundreds or thousands of numbers</text>
+<text x="590" y="116.60000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">that encodes its semantic meaning.</text>
 <rect x="450" y="225" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="256.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">When an embedding model</text>
-<text x="590" y="275.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">processes a piece of text, it</text>
-<text x="590" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">converts it into a vector, an</text>
-<text x="590" y="313.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">array of hundreds.</text>
+<text x="590" y="275.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Similar meanings produce</text>
+<text x="590" y="294.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">similar vectors.</text>
 
   </g>
   

@@ -21,9 +21,11 @@
 <text x="590" y="84.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Control Protocol and IP</text>
 <text x="590" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">stands for Internet Protocol.</text>
 <rect x="450" y="225" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="266" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Together, they define how</text>
-<text x="590" y="284.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">computers address each other,</text>
-<text x="590" y="303.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">break data into packets,.</text>
+<text x="590" y="254.15" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Together, they define how computers</text>
+<text x="590" y="269.00000000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">address each other, break data into</text>
+<text x="590" y="283.85" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">packets, send those packets across</text>
+<text x="590" y="298.70000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">networks, and reassemble them at the</text>
+<text x="590" y="313.55000000000007" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">destination.</text>
 
   </g>
   

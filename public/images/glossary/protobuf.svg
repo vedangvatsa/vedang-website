@@ -9,15 +9,17 @@
   
   <g>
     <rect x="100" y="10" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="54.800000000000004" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Protocol Buffers (protobuf) is a language-neutral,</text>
-<text x="400" y="76.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">platform-neutral data serialization format developed.</text>
+<text x="400" y="38.224999999999994" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Protocol Buffers (protobuf) is a language-neutral, platform-neutral</text>
+<text x="400" y="55.77499999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">data serialization format developed by Google that encodes structured</text>
+<text x="400" y="73.325" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">data into a compact binary format, significantly smaller and faster</text>
+<text x="400" y="90.875" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">than text-based formats like JSON or XML.</text>
 <line x1="400" y1="114" x2="400" y2="122" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="130" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Google encodes structured data into a compact binary</text>
-<text x="400" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">format, significantly smaller.</text>
+<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">You define data structures in .</text>
 <line x1="400" y1="234" x2="400" y2="242" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="250" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="305.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Faster than text-based formats like JSON XML.</text>
+<text x="400" y="294.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">proto files using a schema language specifying field</text>
+<text x="400" y="316.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">names, types, and numbers.</text>
 
   </g>
   

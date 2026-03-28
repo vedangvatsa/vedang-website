@@ -10,25 +10,29 @@
   <g>
     <path d="M 400 145 L 170 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="45" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="170" y="184.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">SSL (Secure Sockets</text>
-<text x="170" y="205.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Layer) TLS (Transport</text>
-<text x="170" y="225.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Layer Security) are</text>
-<text x="170" y="245.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">cryptographic protocols.</text>
+<text x="170" y="182.775" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">SSL (Secure Sockets Layer) and TLS</text>
+<text x="170" y="194.925" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">(Transport Layer Security) are</text>
+<text x="170" y="207.07500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">cryptographic protocols that encrypt</text>
+<text x="170" y="219.225" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">data sent between a web browser and a</text>
+<text x="170" y="231.375" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">server, preventing anyone in between</text>
+<text x="170" y="243.525" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">from reading or tampering with it.</text>
 <path d="M 400 145 L 630 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="505" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="630" y="186.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Encrypt data sent between</text>
-<text x="630" y="205.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">a web browser a server,</text>
-<text x="630" y="224.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">preventing anyone in</text>
-<text x="630" y="243.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">between from reading.</text>
+<text x="630" y="184.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">When you see the padlock</text>
+<text x="630" y="205.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">icon or "https" in your</text>
+<text x="630" y="225.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">browser's address bar,</text>
+<text x="630" y="245.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">TLS is active.</text>
 <path d="M 400 145 L 270 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="145" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="270" y="325.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Tampering with it.</text>
+<text x="270" y="294.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">SSL was the original</text>
+<text x="270" y="315.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">protocol, but it had</text>
+<text x="270" y="335.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">security flaws and was</text>
+<text x="270" y="355.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">replaced by TLS.</text>
 <path d="M 400 145 L 530 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="405" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="530" y="294.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">When you see the padlock</text>
-<text x="530" y="315.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">icon or "https" in your</text>
-<text x="530" y="335.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">browser's address bar,</text>
-<text x="530" y="355.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">TLS is active.</text>
+<text x="530" y="305" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">People still say "SSL"</text>
+<text x="530" y="325.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">out of habit, but modern</text>
+<text x="530" y="345.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">connections use TLS 1.</text>
 <rect x="280" y="75" width="240" height="70" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
 <text x="400" y="116.3" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#37352f" text-anchor="middle">SSL/TLS</text>
 

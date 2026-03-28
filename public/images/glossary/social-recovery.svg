@@ -11,28 +11,32 @@
     <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">1</text>
 <rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="114.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Social recovery is a wallet</text>
-<text x="80" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">security mechanism.</text>
+<text x="80" y="75.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">Social recovery is a wallet security</text>
+<text x="80" y="91.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">mechanism that enables account</text>
+<text x="80" y="108" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">recovery through trusted contacts</text>
+<text x="80" y="124.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">(guardians) rather than seed phrases,</text>
+<text x="80" y="140.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">solving the fundamental tension</text>
+<text x="80" y="156.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">between security and usability in</text>
+<text x="80" y="172.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">self-custody.</text>
 <circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">2</text>
 <rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="93.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Enables account recovery</text>
-<text x="480" y="114.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">through trusted contacts</text>
-<text x="480" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">(guardians) rather than seed</text>
-<text x="480" y="158" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">phrases,.</text>
+<text x="480" y="87.1" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">The setup: you designate multiple</text>
+<text x="480" y="106" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">guardians, friends, family, or</text>
+<text x="480" y="124.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">institutions you trust, who</text>
+<text x="480" y="143.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">collectively can authorize</text>
+<text x="480" y="162.70000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">recovery of your wallet.</text>
 <circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">3</text>
 <rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Solving the fundamental</text>
-<text x="80" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">tension between security</text>
-<text x="80" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">usability in self-custody.</text>
+<text x="80" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">If you lose access (lost</text>
+<text x="80" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">device, forgotten password),</text>
+<text x="80" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">you contact guardians who</text>
+<text x="80" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">sign recovery transactions.</text>
 <circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">4</text>
 <rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">The setup: you designate</text>
-<text x="480" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">multiple guardians, friends,</text>
-<text x="480" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">family, institutions you</text>
-<text x="480" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">trust,.</text>
+<text x="480" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">A threshold requirement (e.</text>
 
   </g>
   

@@ -15,13 +15,13 @@
 <path d="M 350 180 C 400 180, 400 80, 445 80" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 350 180 C 400 180, 400 280, 445 280" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="450" y="25" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="66" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">When you type a website</text>
-<text x="590" y="84.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">address like google.com into</text>
-<text x="590" y="103.80000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">your browser, DNS translates.</text>
+<text x="590" y="75.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">When you type a website</text>
+<text x="590" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">address like google.</text>
 <rect x="450" y="225" width="280" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="266" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Human-readable name into a</text>
-<text x="590" y="284.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">numerical IP address like</text>
-<text x="590" y="303.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">142.250.80.46.</text>
+<text x="590" y="258.225" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">com into your browser, DNS</text>
+<text x="590" y="275.77500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">translates that human-readable</text>
+<text x="590" y="293.32500000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">name into a numerical IP</text>
+<text x="590" y="310.87500000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">address like 142.</text>
 
   </g>
   

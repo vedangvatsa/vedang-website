@@ -12,34 +12,36 @@
 <circle cx="107.5" cy="70" r="4" fill="#9333ea"/>
 <line x1="107.5" y1="74" x2="107.5" y2="94" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="15" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="107.5" y="144.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Zero-shot</text>
-<text x="107.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">learning is when</text>
-<text x="107.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">an AI system</text>
-<text x="107.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">performs tasks it</text>
-<text x="107.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">was never</text>
-<text x="107.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">explicitly</text>
-<text x="107.5" y="266" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">trained on,.</text>
+<text x="107.5" y="138.75" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Zero-shot learning</text>
+<text x="107.5" y="157.65" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">is when an AI</text>
+<text x="107.5" y="176.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">system performs</text>
+<text x="107.5" y="195.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">tasks it was never</text>
+<text x="107.5" y="214.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">explicitly trained</text>
+<text x="107.5" y="233.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">on, using only</text>
+<text x="107.5" y="252.15" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">natural language</text>
+<text x="107.5" y="271.04999999999995" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">instructions.</text>
 <circle cx="302.5" cy="70" r="4" fill="#9333ea"/>
 <line x1="302.5" y1="74" x2="302.5" y2="94" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="210" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="302.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Using only</text>
-<text x="302.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">natural language</text>
-<text x="302.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">instructions.</text>
+<text x="302.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">This is an</text>
+<text x="302.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">emergent</text>
+<text x="302.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">capability of</text>
+<text x="302.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">large models.</text>
 <circle cx="497.5" cy="70" r="4" fill="#9333ea"/>
 <line x1="497.5" y1="74" x2="497.5" y2="94" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="405" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="497.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">This is an</text>
-<text x="497.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">emergent</text>
-<text x="497.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">capability of</text>
-<text x="497.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">large models.</text>
+<text x="497.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">GPT-4 can</text>
+<text x="497.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">translate</text>
+<text x="497.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">languages it</text>
+<text x="497.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">rarely saw in</text>
+<text x="497.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">training data.</text>
 <circle cx="692.5" cy="70" r="4" fill="#9333ea"/>
 <line x1="692.5" y1="74" x2="692.5" y2="94" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="600" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="692.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">GPT-4 can</text>
-<text x="692.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">translate</text>
-<text x="692.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">languages it</text>
-<text x="692.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">rarely saw in</text>
-<text x="692.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">training data.</text>
+<text x="692.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">It can write</text>
+<text x="692.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">essays about</text>
+<text x="692.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">topics not in its</text>
+<text x="692.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">training set.</text>
 
   </g>
   

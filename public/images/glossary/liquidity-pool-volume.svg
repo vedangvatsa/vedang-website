@@ -9,21 +9,25 @@
   
   <g>
     <rect x="250" y="7.5" width="300" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="33" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Liquidity pool volume measures the</text>
-<text x="400" y="49.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">total dollar value of swaps executed</text>
-<text x="400" y="65.4" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">through a pool over a given period,.</text>
+<text x="400" y="29.924999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">Liquidity pool volume measures the total dollar</text>
+<text x="400" y="42.074999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">value of swaps executed through a pool over a</text>
+<text x="400" y="54.225" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">given period, typically 24 hours, serving as the</text>
+<text x="400" y="66.375" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">primary indicator of pool activity and the bas...</text>
 <line x1="400" y1="82.5" x2="400" y2="93.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="200" y="97.5" width="400" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="121" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Typically 24 hours, serving as the primary</text>
-<text x="400" y="139.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">indicator of pool activity the basis for</text>
-<text x="400" y="158.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">fee revenue calculations.</text>
+<text x="400" y="118.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">Volume matters because it directly determines liquidity</text>
+<text x="400" y="131.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">provider earnings: a pool with $1 million TVL but $10</text>
+<text x="400" y="145.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">million daily volume generates far more fee income than a</text>
+<text x="400" y="158.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">pool with $10 million TVL and $100,000 volume.</text>
 <line x1="400" y1="172.5" x2="400" y2="183.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="150" y="187.5" width="500" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="229.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Volume matters.</text>
+<text x="400" y="220.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">The volume-to-TVL ratio indicates capital efficiency,</text>
+<text x="400" y="239.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">how hard each dollar of liquidity is working.</text>
 <line x1="400" y1="262.5" x2="400" y2="273.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="277.5" width="600" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="310.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">It directly determines liquidity provider earnings: a pool with $1</text>
-<text x="400" y="329.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">million TVL but $10 million daily volume.</text>
+<text x="400" y="301" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">High-volume pools attract more liquidity providers seeking fees,</text>
+<text x="400" y="319.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">which deepens liquidity, reduces slippage, and attracts more</text>
+<text x="400" y="338.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">traders in a virtuous cycle.</text>
 
   </g>
   

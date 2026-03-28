@@ -12,33 +12,46 @@
 <circle cx="107.5" cy="70" r="4" fill="#2563eb"/>
 <line x1="107.5" y1="74" x2="107.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="15" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="107.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">An order book is</text>
-<text x="107.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">a real-time</text>
-<text x="107.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">ledger of buy</text>
-<text x="107.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">sell orders for</text>
-<text x="107.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">an asset on an</text>
-<text x="107.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">exchange,.</text>
+<text x="107.5" y="125.57499999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">An order book is a</text>
+<text x="107.5" y="143.125" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">real-time ledger of</text>
+<text x="107.5" y="160.675" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">buy and sell orders</text>
+<text x="107.5" y="178.22500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">for an asset on an</text>
+<text x="107.5" y="195.775" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">exchange,</text>
+<text x="107.5" y="213.325" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">displaying the</text>
+<text x="107.5" y="230.875" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">quantities traders</text>
+<text x="107.5" y="248.425" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">want to buy or sell</text>
+<text x="107.5" y="265.975" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">at various price</text>
+<text x="107.5" y="283.52500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">levels.</text>
 <circle cx="302.5" cy="70" r="4" fill="#2563eb"/>
 <line x1="302.5" y1="74" x2="302.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="210" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="302.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Displaying the</text>
-<text x="302.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">quantities</text>
-<text x="302.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">traders want to</text>
-<text x="302.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">buy sell at</text>
-<text x="302.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">various price</text>
-<text x="302.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">levels.</text>
+<text x="302.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Bids represent</text>
+<text x="302.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">buy orders (what</text>
+<text x="302.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">buyers will pay);</text>
+<text x="302.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">asks represent</text>
+<text x="302.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">sell orders (what</text>
+<text x="302.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">sellers want).</text>
 <circle cx="497.5" cy="70" r="4" fill="#2563eb"/>
 <line x1="497.5" y1="74" x2="497.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="405" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="497.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Bids represent</text>
-<text x="497.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">buy orders (what</text>
-<text x="497.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">buyers will pay);</text>
+<text x="497.5" y="144.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The spread, the</text>
+<text x="497.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">gap between</text>
+<text x="497.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">highest bid and</text>
+<text x="497.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">lowest ask,</text>
+<text x="497.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">indicates market</text>
+<text x="497.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">efficiency and</text>
+<text x="497.5" y="266" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">liquidity.</text>
 <circle cx="692.5" cy="70" r="4" fill="#2563eb"/>
 <line x1="692.5" y1="74" x2="692.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="600" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="692.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Asks represent</text>
-<text x="692.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">sell orders (what</text>
-<text x="692.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">sellers want).</text>
+<text x="692.5" y="134.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Tight spreads</text>
+<text x="692.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">mean competitive</text>
+<text x="692.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">markets with many</text>
+<text x="692.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">participants;</text>
+<text x="692.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">wide spreads</text>
+<text x="692.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">indicate thin</text>
+<text x="692.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">liquidity or</text>
+<text x="692.5" y="276.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">uncertainty.</text>
 
   </g>
   

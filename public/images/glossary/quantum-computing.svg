@@ -18,21 +18,27 @@
 <circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
 <text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">2</text>
 <rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="104" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Instead of bits are either 0</text>
-<text x="480" y="125.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">1, quantum computers use</text>
-<text x="480" y="147.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">qubits.</text>
+<text x="480" y="82.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Instead of bits that are</text>
+<text x="480" y="104" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">either 0 or 1, quantum</text>
+<text x="480" y="125.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">computers use qubits that can</text>
+<text x="480" y="147.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">exist in a superposition of</text>
+<text x="480" y="168.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">both states simultaneously.</text>
 <circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
 <text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">3</text>
 <rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Can exist in a superposition</text>
-<text x="80" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">of both states</text>
-<text x="80" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">simultaneously.</text>
+<text x="80" y="247.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Multiple qubits can be</text>
+<text x="80" y="269.00000000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">entangled, creating</text>
+<text x="80" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">correlations that let the</text>
+<text x="80" y="312.20000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">system explore many possible</text>
+<text x="80" y="333.80000000000007" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">solutions at once.</text>
 <circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
 <text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#059669" text-anchor="middle">4</text>
 <rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Multiple qubits can be</text>
-<text x="480" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">entangled, creating</text>
-<text x="480" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">correlations.</text>
+<text x="480" y="252.1" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">The hardware typically runs on</text>
+<text x="480" y="270.99999999999994" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">superconducting circuits, trapped</text>
+<text x="480" y="289.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">ions, or photons, kept at</text>
+<text x="480" y="308.79999999999995" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">temperatures near absolute zero</text>
+<text x="480" y="327.7" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">to maintain quantum coherence.</text>
 
   </g>
   

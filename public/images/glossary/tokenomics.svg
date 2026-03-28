@@ -12,37 +12,41 @@
 <circle cx="107.5" cy="70" r="4" fill="#2563eb"/>
 <line x1="107.5" y1="74" x2="107.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="15" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="107.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Tokenomics is the</text>
-<text x="107.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">economic design</text>
-<text x="107.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">of a</text>
-<text x="107.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">cryptocurrency</text>
-<text x="107.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">token system,.</text>
+<text x="107.5" y="143.125" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Tokenomics is the</text>
+<text x="107.5" y="160.675" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">economic design of</text>
+<text x="107.5" y="178.225" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">a cryptocurrency or</text>
+<text x="107.5" y="195.775" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">token system, the</text>
+<text x="107.5" y="213.325" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">rules governing how</text>
+<text x="107.5" y="230.875" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">tokens are created,</text>
+<text x="107.5" y="248.425" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">distributed, used,</text>
+<text x="107.5" y="265.975" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">and destroyed.</text>
 <circle cx="302.5" cy="70" r="4" fill="#2563eb"/>
 <line x1="302.5" y1="74" x2="302.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="210" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="302.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The rules</text>
-<text x="302.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">governing how</text>
-<text x="302.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">tokens are</text>
-<text x="302.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">created,</text>
-<text x="302.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">distributed,</text>
-<text x="302.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">used, destroyed.</text>
+<text x="302.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">It determines</text>
+<text x="302.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">whether a token</text>
+<text x="302.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">has sustainable</text>
+<text x="302.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">value or is</text>
+<text x="302.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">destined to</text>
+<text x="302.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">inflate to zero.</text>
 <circle cx="497.5" cy="70" r="4" fill="#2563eb"/>
 <line x1="497.5" y1="74" x2="497.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="405" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="497.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">It determines</text>
-<text x="497.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">whether a token</text>
-<text x="497.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">has sustainable</text>
-<text x="497.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">value or is</text>
-<text x="497.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">destined to</text>
-<text x="497.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">inflate to zero.</text>
+<text x="497.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The supply side</text>
+<text x="497.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">covers total</text>
+<text x="497.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">supply, emission</text>
+<text x="497.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">schedule, and</text>
+<text x="497.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">inflation rate.</text>
 <circle cx="692.5" cy="70" r="4" fill="#2563eb"/>
 <line x1="692.5" y1="74" x2="692.5" y2="94" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="600" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="692.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The supply side</text>
-<text x="692.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">covers total</text>
-<text x="692.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">supply, emission</text>
-<text x="692.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">schedule, and</text>
-<text x="692.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">inflation rate.</text>
+<text x="692.5" y="144.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A token with a</text>
+<text x="692.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">fixed maximum</text>
+<text x="692.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">supply, like</text>
+<text x="692.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Bitcoin's 21</text>
+<text x="692.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">million, has</text>
+<text x="692.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">built-in</text>
+<text x="692.5" y="266" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">scarcity.</text>
 
   </g>
   

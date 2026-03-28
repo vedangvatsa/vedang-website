@@ -9,27 +9,33 @@
   
   <g>
     <rect x="55" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="56.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Re-ranking is a two-stage</text>
-<text x="210" y="75.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">retrieval approach where an</text>
-<text x="210" y="94.35000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">initial fast retriever generates</text>
-<text x="210" y="113.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">candidate documents,.</text>
+<text x="210" y="52.775" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">Re-ranking is a two-stage retrieval approach where</text>
+<text x="210" y="64.925" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">an initial fast retriever generates candidate</text>
+<text x="210" y="77.075" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">documents, then a more powerful but slower model</text>
+<text x="210" y="89.22500000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">re-scores and reorders them by relevance, greatly</text>
+<text x="210" y="101.375" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">improving search quality without the cost of</text>
+<text x="210" y="113.525" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">running expensive models over entire corpora.</text>
 <line x1="365" y1="80" x2="425" y2="80" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="435" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="65" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Then a more powerful but</text>
-<text x="590" y="85.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">slower model re-scores</text>
-<text x="590" y="105.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">reorders them relevance,.</text>
+<text x="590" y="49.449999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">The initial retrieval stage (BM25,</text>
+<text x="590" y="67" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">dense retrieval, or hybrid) runs</text>
+<text x="590" y="84.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">efficiently over millions or</text>
+<text x="590" y="102.10000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">billions of documents, returning</text>
+<text x="590" y="119.64999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">the top 100-1000 candidates.</text>
 <line x1="590" y1="135" x2="590" y2="215" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="435" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="254.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Greatly improving search</text>
-<text x="590" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">quality without the cost of</text>
-<text x="590" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">running expensive models over</text>
-<text x="590" y="315.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">entire corpora.</text>
+<text x="590" y="249.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">The re-ranker, typically a</text>
+<text x="590" y="267" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">cross-encoder transformer, then</text>
+<text x="590" y="284.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">scores each candidate by attending</text>
+<text x="590" y="302.1" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">jointly to the query and document</text>
+<text x="590" y="319.65000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">together.</text>
 <line x1="435" y1="280" x2="355" y2="280" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="55" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="254.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The initial retrieval stage</text>
-<text x="210" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">(BM25, dense retrieval,</text>
-<text x="210" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">hybrid) runs efficiently over</text>
-<text x="210" y="315.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">millions.</text>
+<text x="210" y="254.15" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Cross-encoders are more accurate than</text>
+<text x="210" y="269.00000000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">bi-encoders because they can model</text>
+<text x="210" y="283.85" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">fine-grained query-document interactions,</text>
+<text x="210" y="298.70000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">but they're too slow for first-stage</text>
+<text x="210" y="313.55000000000007" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">retrieval over large corpora.</text>
 <line x1="210" y1="225" x2="210" y2="145" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   </g>

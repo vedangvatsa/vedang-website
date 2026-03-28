@@ -9,25 +9,33 @@
   
   <g>
     <rect x="55" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="54.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Composability in DeFi is the</text>
-<text x="210" y="75.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">property allows smart</text>
-<text x="210" y="95.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">contracts to interact with</text>
-<text x="210" y="115.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">each other seamlessly,.</text>
+<text x="210" y="49.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">Composability in DeFi is the property that</text>
+<text x="210" y="63.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">allows smart contracts to interact with each</text>
+<text x="210" y="76.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">other seamlessly, enabling complex financial</text>
+<text x="210" y="90.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">operations to be built by combining simpler</text>
+<text x="210" y="103.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">protocols like building blocks without</text>
+<text x="210" y="117.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">requiring permission or custom integration.</text>
 <line x1="365" y1="80" x2="425" y2="80" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="435" y="25" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="75.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Enabling complex financial</text>
-<text x="590" y="95.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">operations to be built.</text>
+<text x="590" y="46.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">A contract can call another contract</text>
+<text x="590" y="61.575" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">atomically: borrow from Aave, swap on</text>
+<text x="590" y="76.425" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Uniswap, provide liquidity on Curve,</text>
+<text x="590" y="91.275" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">stake somewhere else, all in a single</text>
+<text x="590" y="106.125" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">transaction that either completes</text>
+<text x="590" y="120.975" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">entirely or reverts entirely.</text>
 <line x1="590" y1="135" x2="590" y2="215" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="435" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="254.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Combining simpler protocols</text>
-<text x="590" y="275.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">like building blocks without</text>
-<text x="590" y="295.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">requiring permission custom</text>
-<text x="590" y="315.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">integration.</text>
+<text x="590" y="258.225" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">This permissionless</text>
+<text x="590" y="275.77500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">interoperability sparked the 'money</text>
+<text x="590" y="293.32500000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">legos' metaphor and enabled rapid</text>
+<text x="590" y="310.87500000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">financial innovation.</text>
 <line x1="435" y1="280" x2="355" y2="280" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="55" y="225" width="310" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="265" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A contract can call another</text>
-<text x="210" y="285.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">contract atomically: borrow</text>
-<text x="210" y="305.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">from Aave, swap on Uniswap,.</text>
+<text x="210" y="249.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Flash loans exemplify</text>
+<text x="210" y="267" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">composability's power: borrow any</text>
+<text x="210" y="284.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">amount without collateral, use it</text>
+<text x="210" y="302.1" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">across multiple protocols, and</text>
+<text x="210" y="319.65000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">repay within the same transaction.</text>
 <line x1="210" y1="225" x2="210" y2="145" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   </g>

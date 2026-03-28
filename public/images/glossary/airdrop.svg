@@ -10,27 +10,27 @@
   <g>
     <path d="M 400 145 L 170 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="45" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="170" y="179.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">An airdrop is a token</text>
-<text x="170" y="197.00000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">distribution method where a</text>
-<text x="170" y="214.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">project sends free tokens</text>
-<text x="170" y="232.10000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">directly to wallet</text>
-<text x="170" y="249.65000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">addresses,.</text>
+<text x="170" y="179.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">An airdrop is a token distribution</text>
+<text x="170" y="193.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">method where a project sends free</text>
+<text x="170" y="206.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">tokens directly to wallet addresses,</text>
+<text x="170" y="220.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">typically as a reward for early</text>
+<text x="170" y="233.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">users, community members, or holders</text>
+<text x="170" y="247.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">of a related token.</text>
 <path d="M 400 145 L 630 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="505" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="630" y="186.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Typically as a reward for</text>
-<text x="630" y="205.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">early users, community</text>
-<text x="630" y="224.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">members, holders of a</text>
-<text x="630" y="243.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">related token.</text>
+<text x="630" y="205.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Airdrops serve multiple</text>
+<text x="630" y="225.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">purposes.</text>
 <path d="M 400 145 L 270 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="145" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="270" y="315.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Airdrops serve multiple</text>
-<text x="270" y="335.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">purposes.</text>
+<text x="270" y="294.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">They distribute tokens</text>
+<text x="270" y="315.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">broadly, advancing a</text>
+<text x="270" y="335.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">project's goal of</text>
+<text x="270" y="355.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">decentralization.</text>
 <path d="M 400 145 L 530 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="405" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="530" y="294.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">They distribute tokens</text>
-<text x="530" y="315.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">broadly, advancing a</text>
-<text x="530" y="335.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">project's goal of</text>
-<text x="530" y="355.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">decentralization.</text>
+<text x="530" y="305" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">They reward early</text>
+<text x="530" y="325.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">adopters who took risk</text>
+<text x="530" y="345.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">on an unproven protocol.</text>
 <rect x="280" y="75" width="240" height="70" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
 <text x="400" y="116.3" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#37352f" text-anchor="middle">Airdrop</text>
 

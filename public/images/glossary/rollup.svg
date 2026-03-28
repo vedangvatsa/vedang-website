@@ -9,21 +9,25 @@
   
   <g>
     <rect x="250" y="7.5" width="300" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="30.999999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">A rollup is a Layer 2 scaling</text>
-<text x="400" y="49.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">solution executes transactions</text>
-<text x="400" y="68.80000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">off-chain for speed.</text>
+<text x="400" y="29.924999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">A rollup is a Layer 2 scaling solution that</text>
+<text x="400" y="42.074999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">executes transactions off-chain for speed and</text>
+<text x="400" y="54.225" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">cost efficiency while posting transaction data or</text>
+<text x="400" y="66.375" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">proofs to Layer 1 (typically Ethereum) for...</text>
 <line x1="400" y1="82.5" x2="400" y2="93.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="200" y="97.5" width="400" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="130.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Cost efficiency while posting transaction</text>
-<text x="400" y="149.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">data.</text>
+<text x="400" y="121" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">The core insight: execution is expensive</text>
+<text x="400" y="139.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">on-chain, but data storage and verification</text>
+<text x="400" y="158.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">are relatively cheap.</text>
 <line x1="400" y1="172.5" x2="400" y2="183.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="150" y="187.5" width="500" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="220.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Proofs to Layer 1 (typically Ethereum) for security</text>
-<text x="400" y="239.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">inheritance.</text>
+<text x="400" y="211" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Rollups move execution off-chain while keeping enough</text>
+<text x="400" y="229.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">data on Layer 1 that anyone can verify correctness or</text>
+<text x="400" y="248.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">reconstruct the rollup state.</text>
 <line x1="400" y1="262.5" x2="400" y2="273.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="277.5" width="600" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="310.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">The core insight: execution is expensive on-chain, but data</text>
-<text x="400" y="329.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">storage and verification are relatively cheap.</text>
+<text x="400" y="302" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Two types dominate: Optimistic rollups assume transactions are valid by</text>
+<text x="400" y="319.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">default, using a challenge period (typically 7 days) where anyone can</text>
+<text x="400" y="337.1" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">submit fraud proofs if they detect invalid state transitions.</text>
 
   </g>
   

@@ -9,21 +9,24 @@
   
   <g>
     <rect x="250" y="7.5" width="300" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="32" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Delegated Proof of Stake (DPoS) is</text>
-<text x="400" y="49.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">a consensus mechanism where token</text>
-<text x="400" y="67.1" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">holders elect a limited number of.</text>
+<text x="400" y="29.924999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">Delegated Proof of Stake (DPoS) is a consensus</text>
+<text x="400" y="42.074999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">mechanism where token holders elect a limited</text>
+<text x="400" y="54.225" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">number of representatives (delegates or</text>
+<text x="400" y="66.375" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">witnesses) to validate blocks on their behalf.</text>
 <line x1="400" y1="82.5" x2="400" y2="93.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="200" y="97.5" width="400" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="130.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Witnesses) to validate blocks on their</text>
-<text x="400" y="149.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">behalf.</text>
+<text x="400" y="121" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">The election is continuous, so</text>
+<text x="400" y="139.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">underperforming delegates can be replaced</text>
+<text x="400" y="158.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">at any time.</text>
 <line x1="400" y1="172.5" x2="400" y2="183.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="150" y="187.5" width="500" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="220.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">The election is continuous, so underperforming</text>
-<text x="400" y="239.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">delegates can be replaced at any time.</text>
+<text x="400" y="211" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">This structure combines stake-based security with</text>
+<text x="400" y="229.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">faster throughput than traditional Proof of Work or</text>
+<text x="400" y="248.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">plain Proof of Stake.</text>
 <line x1="400" y1="262.5" x2="400" y2="273.5" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="277.5" width="600" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="310.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">This structure combines stake-based security with faster</text>
-<text x="400" y="329.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">throughput than traditional Proof of Work.</text>
+<text x="400" y="310.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">By limiting block producers to a handful of elected delegates, the</text>
+<text x="400" y="329.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">network reaches consensus in seconds rather than minutes.</text>
 
   </g>
   

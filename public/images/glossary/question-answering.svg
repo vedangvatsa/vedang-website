@@ -12,39 +12,45 @@
 <circle cx="107.5" cy="70" r="4" fill="#9333ea"/>
 <line x1="107.5" y1="74" x2="107.5" y2="94" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="15" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="107.5" y="134.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Question</text>
-<text x="107.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Answering (QA)</text>
-<text x="107.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">systems</text>
-<text x="107.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">automatically</text>
-<text x="107.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">answer natural</text>
-<text x="107.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">language</text>
-<text x="107.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">questions,</text>
-<text x="107.5" y="276.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">either.</text>
+<text x="107.5" y="137.025" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">Question Answering (QA)</text>
+<text x="107.5" y="151.875" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">systems automatically</text>
+<text x="107.5" y="166.725" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">answer natural language</text>
+<text x="107.5" y="181.57500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">questions, either by</text>
+<text x="107.5" y="196.425" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">extracting answers from</text>
+<text x="107.5" y="211.275" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">provided documents</text>
+<text x="107.5" y="226.12500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">(extractive QA) or</text>
+<text x="107.5" y="240.97500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">generating answers from</text>
+<text x="107.5" y="255.82500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">learned knowledge</text>
+<text x="107.5" y="270.67500000000007" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">(generative QA).</text>
 <circle cx="302.5" cy="70" r="4" fill="#9333ea"/>
 <line x1="302.5" y1="74" x2="302.5" y2="94" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="210" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="302.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Extracting</text>
-<text x="302.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">answers from</text>
-<text x="302.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">provided</text>
-<text x="302.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">documents</text>
-<text x="302.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">(extractive QA).</text>
+<text x="302.5" y="125.57499999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Extractive QA,</text>
+<text x="302.5" y="143.125" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">exemplified by</text>
+<text x="302.5" y="160.675" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">SQuAD-trained</text>
+<text x="302.5" y="178.22500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">models, identifies</text>
+<text x="302.5" y="195.775" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">the span in a given</text>
+<text x="302.5" y="213.325" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">passage that</text>
+<text x="302.5" y="230.875" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">answers the</text>
+<text x="302.5" y="248.425" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">question: 'When was</text>
+<text x="302.5" y="265.975" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">the Eiffel Tower</text>
+<text x="302.5" y="283.52500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">built?</text>
 <circle cx="497.5" cy="70" r="4" fill="#9333ea"/>
 <line x1="497.5" y1="74" x2="497.5" y2="94" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="405" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="497.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Generating</text>
-<text x="497.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">answers from</text>
-<text x="497.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">learned knowledge</text>
-<text x="497.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">(generative QA).</text>
+<text x="497.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">' answered by</text>
+<text x="497.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">highlighting</text>
+<text x="497.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">'1889' in the</text>
+<text x="497.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">context.</text>
 <circle cx="692.5" cy="70" r="4" fill="#9333ea"/>
 <line x1="692.5" y1="74" x2="692.5" y2="94" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="600" y="100" width="185" height="200" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="692.5" y="144.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Extractive QA,</text>
-<text x="692.5" y="164.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">exemplified</text>
-<text x="692.5" y="185" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">SQuAD-trained</text>
-<text x="692.5" y="205.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">models,</text>
-<text x="692.5" y="225.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">identifies the</text>
-<text x="692.5" y="245.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">span in a given</text>
-<text x="692.5" y="266" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">passage.</text>
+<text x="692.5" y="154.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The model</text>
+<text x="692.5" y="174.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">predicts start</text>
+<text x="692.5" y="195.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">and end positions</text>
+<text x="692.5" y="215.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">of the answer</text>
+<text x="692.5" y="235.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">span within the</text>
+<text x="692.5" y="255.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">document.</text>
 
   </g>
   

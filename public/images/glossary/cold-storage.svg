@@ -10,27 +10,29 @@
   <g>
     <path d="M 400 145 L 170 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="45" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="170" y="184.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">In cryptocurrency, cold</text>
-<text x="170" y="205.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">storage means keeping</text>
-<text x="170" y="225.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">private keys on a</text>
-<text x="170" y="245.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">device.</text>
+<text x="170" y="181.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">In cryptocurrency, cold</text>
+<text x="170" y="198" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">storage means keeping private</text>
+<text x="170" y="214.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">keys on a device that is</text>
+<text x="170" y="230.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">completely disconnected from</text>
+<text x="170" y="246.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">the internet.</text>
 <path d="M 400 145 L 630 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="505" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="630" y="195" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Is completely</text>
-<text x="630" y="215.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">disconnected from the</text>
-<text x="630" y="235.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">internet.</text>
+<text x="630" y="184.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">This eliminates the</text>
+<text x="630" y="205.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">primary attack vector</text>
+<text x="630" y="225.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">for theft, remote</text>
+<text x="630" y="245.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">hacking.</text>
 <path d="M 400 145 L 270 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="145" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="270" y="294.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">This eliminates the</text>
-<text x="270" y="315.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">primary attack vector</text>
-<text x="270" y="335.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">for theft, remote</text>
-<text x="270" y="355.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">hacking.</text>
+<text x="270" y="292.775" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">Cold storage methods include hardware</text>
+<text x="270" y="304.92499999999995" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">wallets (dedicated USB devices like</text>
+<text x="270" y="317.075" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">Ledger or Trezor), paper wallets</text>
+<text x="270" y="329.22499999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">(printed QR codes of private keys), and</text>
+<text x="270" y="341.375" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">air-gapped computers that never connect</text>
+<text x="270" y="353.525" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">to a network.</text>
 <path d="M 400 145 L 530 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="405" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="530" y="294.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Cold storage methods</text>
-<text x="530" y="315.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">include hardware wallets</text>
-<text x="530" y="335.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">(dedicated USB devices</text>
-<text x="530" y="355.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">like Ledger Trezor),.</text>
+<text x="530" y="315.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The tradeoff is</text>
+<text x="530" y="335.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">convenience.</text>
 <rect x="280" y="75" width="240" height="70" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
 <text x="400" y="116.3" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#37352f" text-anchor="middle">Cold Storage</text>
 

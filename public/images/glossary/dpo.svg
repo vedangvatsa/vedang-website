@@ -9,15 +9,21 @@
   
   <g>
     <rect x="100" y="10" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="65.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Direct Preference Optimization is an alignment technique.</text>
+<text x="400" y="34.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Direct Preference Optimization is an alignment technique that</text>
+<text x="400" y="55.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">fine-tunes language models directly on preference data</text>
+<text x="400" y="75.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">without requiring a separate reward model, simplifying the</text>
+<text x="400" y="95.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">RLHF pipeline while achieving comparable results.</text>
 <line x1="400" y1="114" x2="400" y2="122" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="130" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Fine-tunes language models directly on preference data</text>
-<text x="400" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">without requiring a separate reward model,.</text>
+<text x="400" y="154.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Standard RLHF involves three stages: collect preference data,</text>
+<text x="400" y="175.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">train a reward model on preferences, then use reinforcement</text>
+<text x="400" y="195.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">learning to optimize the language model against the reward</text>
+<text x="400" y="215.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">model.</text>
 <line x1="400" y1="234" x2="400" y2="242" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="250" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="294.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Simplifying the RLHF pipeline while achieving comparable</text>
-<text x="400" y="316.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">results.</text>
+<text x="400" y="284" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">DPO collapses this into a single supervised learning step</text>
+<text x="400" y="305.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">by deriving a loss function directly from the preference</text>
+<text x="400" y="327.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">data.</text>
 
   </g>
   

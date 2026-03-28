@@ -10,26 +10,32 @@
   <g>
     <path d="M 400 145 L 170 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="45" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="170" y="188.22500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Grounding in AI refers to</text>
-<text x="170" y="205.77500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">connecting model outputs to</text>
-<text x="170" y="223.32500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">verifiable external reality,</text>
-<text x="170" y="240.87500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">ensuring claims made.</text>
+<text x="170" y="182.775" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">Grounding in AI refers to connecting</text>
+<text x="170" y="194.925" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">model outputs to verifiable external</text>
+<text x="170" y="207.07500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">reality, ensuring that claims made by</text>
+<text x="170" y="219.225" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">the model are supported by specific,</text>
+<text x="170" y="231.375" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">retrievable sources rather than patterns</text>
+<text x="170" y="243.525" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">learned during training.</text>
 <path d="M 400 145 L 630 155" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="505" y="155" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="630" y="188.22500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">The model are supported</text>
-<text x="630" y="205.77500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">specific, retrievable</text>
-<text x="630" y="223.32500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">sources rather than patterns</text>
-<text x="630" y="240.87500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">learned during training.</text>
+<text x="630" y="179.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">An ungrounded model reasons</text>
+<text x="630" y="197.00000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">purely from statistical</text>
+<text x="630" y="214.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">associations in its weights,</text>
+<text x="630" y="232.10000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">which can produce confident</text>
+<text x="630" y="249.65000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">hallucinations.</text>
 <path d="M 400 145 L 270 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="145" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="270" y="294.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">An ungrounded model</text>
-<text x="270" y="315.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">reasons purely from</text>
-<text x="270" y="335.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">statistical associations</text>
-<text x="270" y="355.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">in its weights,.</text>
+<text x="270" y="289.45" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">A grounded model ties its</text>
+<text x="270" y="307" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">outputs to citations,</text>
+<text x="270" y="324.55" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">retrieved documents, or</text>
+<text x="270" y="342.09999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">real-time data, allowing</text>
+<text x="270" y="359.65" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">verification.</text>
 <path d="M 400 145 L 530 265" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4 4"/>
 <rect x="405" y="265" width="250" height="110" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="530" y="315.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Can produce confident</text>
-<text x="530" y="335.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">hallucinations.</text>
+<text x="530" y="296.54999999999995" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Google's AI Overviews and</text>
+<text x="530" y="315.44999999999993" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Bing Copilot implement</text>
+<text x="530" y="334.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">grounding by citing web</text>
+<text x="530" y="353.24999999999994" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">sources for claims.</text>
 <rect x="280" y="75" width="240" height="70" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
 <text x="400" y="116.3" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#37352f" text-anchor="middle">Grounding</text>
 

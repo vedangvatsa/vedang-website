@@ -17,8 +17,9 @@
 <text x="400" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">the new rules, and vice versa.</text>
 <line x1="400" y1="234" x2="400" y2="242" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="250" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="294.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">The result is two separate chains sharing a common history</text>
-<text x="400" y="316.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">up to the fork block, after.</text>
+<text x="400" y="284" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">The result is two separate chains sharing a common history</text>
+<text x="400" y="305.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">up to the fork block, after which they diverge</text>
+<text x="400" y="327.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">permanently.</text>
 
   </g>
   

@@ -18,21 +18,24 @@
 <circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
 <text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">2</text>
 <rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="93.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Instead of updating every</text>
-<text x="480" y="114.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">parameter of a massive model,</text>
-<text x="480" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">LoRA inserts two small</text>
-<text x="480" y="158" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">trainable matrices.</text>
+<text x="480" y="87.1" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">Instead of updating every</text>
+<text x="480" y="106" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">parameter of a massive model,</text>
+<text x="480" y="124.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">LoRA inserts two small trainable</text>
+<text x="480" y="143.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">matrices that capture the most</text>
+<text x="480" y="162.70000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">important directions of change.</text>
 <circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
 <text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">3</text>
 <rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Capture the most important</text>
-<text x="80" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">directions of change.</text>
+<text x="80" y="247.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">These matrices have a much</text>
+<text x="80" y="269.00000000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">lower rank than the full</text>
+<text x="80" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">weight matrix, so they</text>
+<text x="80" y="312.20000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">contain far fewer parameters</text>
+<text x="80" y="333.80000000000007" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">to learn.</text>
 <circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
 <text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">4</text>
 <rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">These matrices have a much</text>
-<text x="480" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">lower rank than the full</text>
-<text x="480" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">weight matrix,.</text>
+<text x="480" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">The original model stays</text>
+<text x="480" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">frozen.</text>
 
   </g>
   

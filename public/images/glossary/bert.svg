@@ -11,28 +11,36 @@
     <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
 <text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">1</text>
 <rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="82.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">BERT (Bidirectional Encoder</text>
-<text x="80" y="104" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Representations from</text>
-<text x="80" y="125.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Transformers) is a</text>
-<text x="80" y="147.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">transformer-based language</text>
-<text x="80" y="168.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">model.</text>
+<text x="80" y="75.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">BERT (Bidirectional Encoder</text>
+<text x="80" y="91.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">Representations from Transformers) is</text>
+<text x="80" y="108" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">a transformer-based language model</text>
+<text x="80" y="124.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">that transformed natural language</text>
+<text x="80" y="140.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">processing in 2018 by learning deep</text>
+<text x="80" y="156.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">bidirectional representations through</text>
+<text x="80" y="172.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">masked language modeling.</text>
 <circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
 <text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">2</text>
 <rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="114.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Transformed natural language</text>
-<text x="480" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">processing in 2018.</text>
+<text x="480" y="87.1" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">Unlike GPT which reads text</text>
+<text x="480" y="106" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">left-to-right, BERT processes all</text>
+<text x="480" y="124.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">tokens simultaneously and uses</text>
+<text x="480" y="143.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">context from both directions when</text>
+<text x="480" y="162.70000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">understanding each word.</text>
 <circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
 <text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">3</text>
 <rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Learning deep bidirectional</text>
-<text x="80" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">representations through</text>
-<text x="80" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">masked language modeling.</text>
+<text x="80" y="247.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">During pretraining, BERT</text>
+<text x="80" y="269.00000000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">randomly masks 15% of input</text>
+<text x="80" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">tokens and learns to predict</text>
+<text x="80" y="312.20000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">them from surrounding</text>
+<text x="80" y="333.80000000000007" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">context.</text>
 <circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
 <text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">4</text>
 <rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Unlike GPT reads text</text>
-<text x="480" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">left-to-right, BERT processes</text>
-<text x="480" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">all tokens simultaneously.</text>
+<text x="480" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">This masked language modeling</text>
+<text x="480" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">forces the model to develop</text>
+<text x="480" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">rich bidirectional</text>
+<text x="480" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">understanding.</text>
 
   </g>
   

@@ -9,20 +9,23 @@
   
   <g>
     <rect x="250" y="7.5" width="300" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="30.999999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Latency measures the time delay</text>
-<text x="400" y="49.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">between initiating a request</text>
-<text x="400" y="68.80000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">receiving a response,.</text>
+<text x="400" y="28.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">Latency measures the time delay between</text>
+<text x="400" y="41.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">initiating a request and receiving a</text>
+<text x="400" y="55.25" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">response, a critical metric for user</text>
+<text x="400" y="68.75" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">experience and system design.</text>
 <line x1="400" y1="82.5" x2="400" y2="93.5" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="200" y="97.5" width="400" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="130.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">A critical metric for user experience</text>
-<text x="400" y="149.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">system design.</text>
+<text x="400" y="119.92500000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">In AI systems, latency breaks down into several components: network</text>
+<text x="400" y="132.07500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">latency (time for data to travel between client and server), queue</text>
+<text x="400" y="144.22500000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">latency (time waiting for processing resources), and inference</text>
+<text x="400" y="156.37500000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">latency (time for the model to generate output).</text>
 <line x1="400" y1="172.5" x2="400" y2="183.5" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="150" y="187.5" width="500" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="229.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">In AI systems,.</text>
+<text x="400" y="220.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">First-token latency measures time until the first</text>
+<text x="400" y="239.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">token appears, critical for perceived responsiveness.</text>
 <line x1="400" y1="262.5" x2="400" y2="273.5" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="277.5" width="600" height="75" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="310.45" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Latency breaks down into several components: network latency (time</text>
-<text x="400" y="329.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">for data to travel between client server),.</text>
+<text x="400" y="319.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Inter-token latency measures time between subsequent tokens.</text>
 
   </g>
   

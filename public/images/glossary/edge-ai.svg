@@ -9,20 +9,20 @@
   
   <g>
     <rect x="35" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="73.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Edge AI runs artificial</text>
-<text x="210" y="94.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">intelligence algorithms directly</text>
-<text x="210" y="116.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">on devices at the periphery of a</text>
-<text x="210" y="138" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">network,.</text>
+<text x="210" y="63.69999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">Edge AI runs artificial intelligence</text>
+<text x="210" y="79.89999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">algorithms directly on devices at the</text>
+<text x="210" y="96.10000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">periphery of a network, smartphones,</text>
+<text x="210" y="112.3" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">industrial sensors, cameras, drones,</text>
+<text x="210" y="128.5" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">instead of sending data to a distant</text>
+<text x="210" y="144.7" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="middle">server.</text>
 <rect x="415" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="73.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Smartphones, industrial sensors,</text>
-<text x="590" y="94.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">cameras, drones, instead of</text>
-<text x="590" y="116.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">sending data to a distant</text>
-<text x="590" y="138" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">server.</text>
+<text x="590" y="84" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">The model runs locally and</text>
+<text x="590" y="105.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">delivers decisions in</text>
+<text x="590" y="127.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">milliseconds.</text>
 <path d="M 210 160 L 380 220" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 590 160 L 420 220" fill="none" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="160" y="220" width="480" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="274.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">The model runs locally and delivers decisions</text>
-<text x="400" y="296.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">in milliseconds.</text>
+<text x="400" y="285.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">This matters for three reasons.</text>
 
   </g>
   

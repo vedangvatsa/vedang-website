@@ -11,30 +11,36 @@
     <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">1</text>
 <rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="82.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Concentrated liquidity allows</text>
-<text x="80" y="104" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">liquidity providers to</text>
-<text x="80" y="125.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">specify price ranges for</text>
-<text x="80" y="147.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">their capital rather than</text>
-<text x="80" y="168.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">spreading.</text>
+<text x="80" y="75.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">Concentrated liquidity allows</text>
+<text x="80" y="91.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">liquidity providers to specify price</text>
+<text x="80" y="108" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">ranges for their capital rather than</text>
+<text x="80" y="124.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">spreading it across all possible</text>
+<text x="80" y="140.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">prices, greatly improving capital</text>
+<text x="80" y="156.6" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">efficiency but increasing complexity</text>
+<text x="80" y="172.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">and risk.</text>
 <circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">2</text>
 <rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="104" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Greatly improving capital</text>
-<text x="480" y="125.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">efficiency but increasing</text>
-<text x="480" y="147.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">complexity risk.</text>
+<text x="480" y="87.1" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">Traditional AMMs like Uniswap v2</text>
+<text x="480" y="106" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">distribute liquidity uniformly</text>
+<text x="480" y="124.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">from zero to infinity, most of</text>
+<text x="480" y="143.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">which sits unused since prices</text>
+<text x="480" y="162.70000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">rarely move to extreme values.</text>
 <circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">3</text>
 <rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Traditional AMMs like Uniswap</text>
-<text x="80" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">v2 distribute liquidity</text>
-<text x="80" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">uniformly from zero to</text>
-<text x="80" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">infinity, most of.</text>
+<text x="80" y="249.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">Concentrated liquidity,</text>
+<text x="80" y="270" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">pioneered by Uniswap v3, lets</text>
+<text x="80" y="290.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">LPs choose: 'I want to provide</text>
+<text x="80" y="310.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">liquidity for ETH/USDC only</text>
+<text x="80" y="330.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">between $1,800 and $2,200.</text>
 <circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">4</text>
 <rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Sits unused since prices</text>
-<text x="480" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">rarely move to extreme</text>
-<text x="480" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">values.</text>
+<text x="480" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">' Within that range, the LP's</text>
+<text x="480" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">capital works much harder,</text>
+<text x="480" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">earning more fees per dollar</text>
+<text x="480" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">deployed.</text>
 
   </g>
   

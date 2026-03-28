@@ -9,27 +9,29 @@
   
   <g>
     <rect x="250" y="12.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="36.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">A payment channel is a Layer 2</text>
-<text x="400" y="55.449999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">scaling technique enables</text>
-<text x="400" y="74.35000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">unlimited instant transactions</text>
-<text x="400" y="93.25" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">between two parties.</text>
+<text x="400" y="32.775" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">A payment channel is a Layer 2 scaling technique</text>
+<text x="400" y="44.925" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">that enables unlimited instant transactions</text>
+<text x="400" y="57.074999999999996" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">between two parties by locking funds in an</text>
+<text x="400" y="69.22500000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">on-chain smart contract and exchanging signed</text>
+<text x="400" y="81.375" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">off-chain messages that update the balance</text>
+<text x="400" y="93.525" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">distribution without touching the blockchain...</text>
 <path d="M 400 107 L 220 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 400 107 L 580 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="50" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="200" y="165" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Locking funds in an on-chain</text>
-<text x="200" y="185.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">smart contract exchanging</text>
-<text x="200" y="205.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">signed off-chain messages.</text>
+<text x="200" y="156.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">The mechanics: Alice and Bob</text>
+<text x="200" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">each deposit funds into a</text>
+<text x="200" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">multi-signature contract</text>
+<text x="200" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">controlling a shared balance.</text>
 <rect x="450" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="600" y="166" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Update the balance distribution</text>
-<text x="600" y="184.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">without touching the blockchain</text>
-<text x="600" y="203.8" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">until final settlement.</text>
+<text x="600" y="156.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">They exchange cryptographically</text>
+<text x="600" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">signed messages representing</text>
+<text x="600" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">new balance states: 'Alice has</text>
+<text x="600" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">7, Bob has 3.</text>
 <path d="M 220 227 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 580 227 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="250" y="252.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="276.54999999999995" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">The mechanics: Alice and Bob</text>
-<text x="400" y="295.44999999999993" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">each deposit funds into a</text>
-<text x="400" y="314.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">multi-signature contract</text>
-<text x="400" y="333.24999999999994" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">controlling a shared balance.</text>
+<text x="400" y="295.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">' Each new message supersedes</text>
+<text x="400" y="315.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">previous ones.</text>
 
   </g>
   

@@ -11,30 +11,31 @@
     <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
 <text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">1</text>
 <rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="82.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">The Transformer is a neural</text>
-<text x="80" y="104" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">network architecture</text>
-<text x="80" y="125.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">introduced in the 2017 paper</text>
-<text x="80" y="147.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">'Attention Is All You Need.'</text>
-<text x="80" y="168.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">It's.</text>
+<text x="80" y="93.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">The Transformer is a neural</text>
+<text x="80" y="114.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">network architecture</text>
+<text x="80" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">introduced in the 2017 paper</text>
+<text x="80" y="158" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">'Attention Is All You Need.</text>
 <circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
 <text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">2</text>
 <rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="104" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Before Transformers, neural</text>
-<text x="480" y="125.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">networks used RNNs (Recurrent</text>
-<text x="480" y="147.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Neural Networks).</text>
+<text x="480" y="114.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">' It's the foundation of</text>
+<text x="480" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">modern LLMs.</text>
 <circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
 <text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">3</text>
 <rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="269" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">LSTMs (Long Short-Term Memory</text>
-<text x="80" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">networks) to process</text>
-<text x="80" y="312.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">sequences.</text>
+<text x="80" y="249.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">Before Transformers, neural</text>
+<text x="80" y="270" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">networks used RNNs (Recurrent</text>
+<text x="80" y="290.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">Neural Networks) and LSTMs</text>
+<text x="80" y="310.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">(Long Short-Term Memory</text>
+<text x="80" y="330.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="start">networks) to process sequences.</text>
 <circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
 <text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#9333ea" text-anchor="middle">4</text>
 <rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">These architectures process</text>
-<text x="480" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">data sequentially, one token</text>
-<text x="480" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">at a time, is slow loses</text>
-<text x="480" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">long-range dependencies.</text>
+<text x="480" y="247.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">These architectures process</text>
+<text x="480" y="269.00000000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">data sequentially, one token</text>
+<text x="480" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">at a time, which is slow and</text>
+<text x="480" y="312.20000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">loses long-range</text>
+<text x="480" y="333.80000000000007" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">dependencies.</text>
 
   </g>
   

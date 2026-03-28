@@ -9,17 +9,21 @@
   
   <g>
     <rect x="100" y="10" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="44" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Long Short-Term Memory is a recurrent neural network</text>
-<text x="400" y="65.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">architecture designed to capture long-range dependencies</text>
-<text x="400" y="87.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">in.</text>
+<text x="400" y="34.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Long Short-Term Memory is a recurrent neural network</text>
+<text x="400" y="55.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">architecture designed to capture long-range dependencies in</text>
+<text x="400" y="75.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">sequential data by using gating mechanisms that control</text>
+<text x="400" y="95.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">information flow through a persistent cell state.</text>
 <line x1="400" y1="114" x2="400" y2="122" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="130" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Using gating mechanisms control information flow through a</text>
-<text x="400" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">persistent cell state.</text>
+<text x="400" y="164" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Standard RNNs struggle with sequences longer than a few</text>
+<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">dozen steps because gradients either vanish or explode</text>
+<text x="400" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">during backpropagation through time.</text>
 <line x1="400" y1="234" x2="400" y2="242" stroke="#9333ea" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="250" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="294.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Standard RNNs struggle with sequences longer than a few</text>
-<text x="400" y="316.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">dozen steps gradients either vanish.</text>
+<text x="400" y="274.875" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">LSTMs solve this with three gates: the forget gate decides</text>
+<text x="400" y="295.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">what to discard from the cell state, the input gate decides</text>
+<text x="400" y="315.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">what new information to store, and the output gate decides</text>
+<text x="400" y="335.625" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">what to emit from the cell state.</text>
 
   </g>
   

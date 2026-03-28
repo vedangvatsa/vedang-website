@@ -9,16 +9,19 @@
   
   <g>
     <rect x="100" y="10" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="54.800000000000004" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Intent-Centric Architecture is a design approach where the</text>
-<text x="400" y="76.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">user's desired outcome, called the intent,.</text>
+<text x="400" y="44" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Intent-Centric Architecture is a design approach where the</text>
+<text x="400" y="65.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">user's desired outcome, called the intent, becomes the</text>
+<text x="400" y="87.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">core object that every system component operates on.</text>
 <line x1="400" y1="114" x2="400" y2="122" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="130" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="174.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Becomes the core object every system component operates</text>
-<text x="400" y="196.39999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">on.</text>
+<text x="400" y="164" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Instead of building around fixed APIs or rigid process</text>
+<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">steps, the architecture treats intents as first-class</text>
+<text x="400" y="207.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">objects that services discover, interpret, and fulfill.</text>
 <line x1="400" y1="234" x2="400" y2="242" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="250" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="294.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Instead of building around fixed APIs rigid process</text>
-<text x="400" y="316.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">steps,.</text>
+<text x="400" y="284" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Each component processes the intent in its own domain and</text>
+<text x="400" y="305.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">passes a refined version downstream until the result</text>
+<text x="400" y="327.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">matches the original request.</text>
 
   </g>
   

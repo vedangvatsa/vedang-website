@@ -9,14 +9,16 @@
   
   <g>
     <rect x="100" y="10" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="54.800000000000004" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Consistency hashing is a technique for distributing keys</text>
-<text x="400" y="76.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">across a dynamic set of servers,.</text>
+<text x="400" y="44" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Consistency hashing is a technique for distributing keys</text>
+<text x="400" y="65.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">across a dynamic set of servers, like in caching systems</text>
+<text x="400" y="87.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">and distributed databases.</text>
 <line x1="400" y1="114" x2="400" y2="122" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="130" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Like in caching systems distributed databases.</text>
+<text x="400" y="185.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Standard hashing modulo N assigns key K to server K mod N.</text>
 <line x1="400" y1="234" x2="400" y2="242" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="100" y="250" width="600" height="100" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="305.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Standard hashing modulo N assigns key K to server K mod N.</text>
+<text x="400" y="294.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">When servers are added or removed, most keys are</text>
+<text x="400" y="316.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">reassigned, causing cache misses and data movement.</text>
 
   </g>
   

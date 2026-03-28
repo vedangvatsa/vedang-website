@@ -11,28 +11,38 @@
     <circle cx="45" cy="120" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="45" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">1</text>
 <rect x="20" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="93.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">A sequencer orders batches</text>
-<text x="80" y="114.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">transactions on a rollup</text>
-<text x="80" y="136.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">before posting them to Layer</text>
-<text x="80" y="158" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">1,.</text>
+<text x="80" y="77.65" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">A sequencer orders and batches</text>
+<text x="80" y="96.55000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">transactions on a rollup before</text>
+<text x="80" y="115.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">posting them to Layer 1, playing</text>
+<text x="80" y="134.35" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">a critical role in determining</text>
+<text x="80" y="153.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">transaction inclusion, ordering,</text>
+<text x="80" y="172.15" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">and timing.</text>
 <circle cx="445" cy="120" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="445" y="125" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">2</text>
 <rect x="420" y="52.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="104" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Playing a critical role in</text>
-<text x="480" y="125.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">determining transaction</text>
-<text x="480" y="147.20000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">inclusion, ordering, timing.</text>
+<text x="480" y="87.1" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">Currently, most rollups operate</text>
+<text x="480" y="106" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">with centralized sequencers run</text>
+<text x="480" y="124.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">by the core team, Arbitrum's is</text>
+<text x="480" y="143.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">run by Offchain Labs, Optimism's</text>
+<text x="480" y="162.70000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="start">by the Optimism Foundation.</text>
 <circle cx="45" cy="285" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="45" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">3</text>
 <rect x="20" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="80" y="258.2" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Currently, most rollups</text>
-<text x="80" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">operate with centralized</text>
-<text x="80" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">sequencers run the core team,</text>
-<text x="80" y="323" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Arbitrum's is run.</text>
+<text x="80" y="240.59999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">This centralization creates several</text>
+<text x="80" y="256.79999999999995" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">concerns: censorship risk (the</text>
+<text x="80" y="272.99999999999994" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">sequencer could refuse to include</text>
+<text x="80" y="289.2" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">certain transactions), MEV extraction</text>
+<text x="80" y="305.4" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">(the sequencer can reorder</text>
+<text x="80" y="321.59999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">transactions to extract value), and</text>
+<text x="80" y="337.8" font-family="'Inter',sans-serif" font-weight="400" font-size="12" fill="#787774" text-anchor="start">liveness risk (if the sequencer goe...</text>
 <circle cx="445" cy="285" r="20" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
 <text x="445" y="290" font-family="'Inter',sans-serif" font-weight="500" font-size="16" fill="#2563eb" text-anchor="middle">4</text>
 <rect x="420" y="217.5" width="360" height="135" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="480" y="279.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Offchain Labs, Optimism's the</text>
-<text x="480" y="301.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Optimism Foundation.</text>
+<text x="480" y="247.4" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">Rollups typically have escape</text>
+<text x="480" y="269.00000000000006" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">hatches allowing users to</text>
+<text x="480" y="290.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">force-include transactions</text>
+<text x="480" y="312.20000000000005" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">through L1, but this is slow</text>
+<text x="480" y="333.80000000000007" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="start">and expensive.</text>
 
   </g>
   

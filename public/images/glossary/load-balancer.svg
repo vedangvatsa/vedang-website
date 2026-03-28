@@ -9,16 +9,22 @@
   
   <g>
     <rect x="35" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="210" y="105.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">A load balancer is a system.</text>
+<text x="210" y="64.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A load balancer is a system that</text>
+<text x="210" y="85" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">distributes incoming network</text>
+<text x="210" y="105.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">traffic across multiple servers to</text>
+<text x="210" y="125.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">prevent any single server from</text>
+<text x="210" y="145.75" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">becoming overwhelmed.</text>
 <rect x="415" y="40" width="350" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="590" y="73.19999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Distributes incoming network</text>
-<text x="590" y="94.79999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">traffic across multiple servers</text>
-<text x="590" y="116.39999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">to prevent any single server</text>
-<text x="590" y="138" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">from becoming.</text>
+<text x="590" y="67.1" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">It sits between users and application</text>
+<text x="590" y="86" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">servers, routing each request to an</text>
+<text x="590" y="104.9" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">available server based on algorithms</text>
+<text x="590" y="123.80000000000001" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">like round-robin, least connections,</text>
+<text x="590" y="142.70000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">or resource utilization.</text>
 <path d="M 210 160 L 380 220" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 590 160 L 420 220" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="160" y="220" width="480" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="285.6" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">It sits between users application servers,.</text>
+<text x="400" y="274.8" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">Without load balancing, all traffic hits one</text>
+<text x="400" y="296.40000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="16" fill="#787774" text-anchor="middle">server.</text>
 
   </g>
   

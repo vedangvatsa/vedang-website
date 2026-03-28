@@ -9,24 +9,32 @@
   
   <g>
     <rect x="250" y="12.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="38.224999999999994" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">The Ethereum Virtual Machine (EVM)</text>
-<text x="400" y="55.77499999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">is the fundamental computation</text>
-<text x="400" y="73.325" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">engine at the center of the</text>
-<text x="400" y="90.875" font-family="'Inter',sans-serif" font-weight="400" font-size="13" fill="#787774" text-anchor="middle">Ethereum network,.</text>
+<text x="400" y="34.15" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">The Ethereum Virtual Machine (EVM) is</text>
+<text x="400" y="49" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">the fundamental computation engine at</text>
+<text x="400" y="63.85" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">the center of the Ethereum network,</text>
+<text x="400" y="78.69999999999999" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">acting as a global, decentralized</text>
+<text x="400" y="93.55" font-family="'Inter',sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">computer.</text>
 <path d="M 400 107 L 220 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 400 107 L 580 132" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="50" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="200" y="175.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Acting as a global,</text>
-<text x="200" y="195.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">decentralized computer.</text>
+<text x="200" y="158.85" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">Unlike Bitcoin, which primarily runs a simple</text>
+<text x="200" y="171" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">scripting language designed only to process value</text>
+<text x="200" y="183.15" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">transfers, the EVM is Turing-complete, meaning it</text>
+<text x="200" y="195.29999999999998" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">can execute any arbitrary mathematical</text>
+<text x="200" y="207.45" font-family="'Inter',sans-serif" font-weight="400" font-size="9" fill="#787774" text-anchor="middle">computation if given enough time and memory.</text>
 <rect x="450" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="600" y="156.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Unlike Bitcoin, primarily runs</text>
-<text x="600" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">a simple scripting language</text>
-<text x="600" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">designed only to process value</text>
-<text x="600" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">transfers,.</text>
+<text x="600" y="156.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">It is the environment where all</text>
+<text x="600" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Ethereum 'smart contracts'</text>
+<text x="600" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">live, run, and maintain their</text>
+<text x="600" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">state.</text>
 <path d="M 220 227 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 580 227 L 400 252" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="250" y="252.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="305.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">The EVM is Turing-complete,.</text>
+<text x="400" y="276.5" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">When a developer writes code in a language</text>
+<text x="400" y="290" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">like Solidity, that code is compiled down</text>
+<text x="400" y="303.5" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">into low-level EVM bytecode, which the</text>
+<text x="400" y="317" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">thousands of nodes globally then execute in</text>
+<text x="400" y="330.5" font-family="'Inter',sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">perfectly deterministic consensus.</text>
 
   </g>
   

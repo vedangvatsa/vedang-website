@@ -16,19 +16,20 @@
 <path d="M 400 107 L 220 132" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 400 107 L 580 132" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="50" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="200" y="165" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">A container bundles</text>
-<text x="200" y="185.25" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">application code, runtime</text>
-<text x="200" y="205.5" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">libraries, system tools,.</text>
+<text x="200" y="156.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">A container bundles application</text>
+<text x="200" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">code, runtime libraries, system</text>
+<text x="200" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">tools, and settings into a</text>
+<text x="200" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">single lightweight unit.</text>
 <rect x="450" y="132.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="600" y="175.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Settings into a single</text>
-<text x="600" y="195.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">lightweight unit.</text>
+<text x="600" y="156.55" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Unlike virtual machines,</text>
+<text x="600" y="175.45000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">containers share the host OS</text>
+<text x="600" y="194.35000000000002" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">kernel, making them small and</text>
+<text x="600" y="213.25000000000003" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">fast to start.</text>
 <path d="M 220 227 L 400 252" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <path d="M 580 227 L 400 252" fill="none" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="250" y="252.5" width="300" height="95" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
-<text x="400" y="276.54999999999995" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">Unlike virtual machines,</text>
-<text x="400" y="295.44999999999993" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">containers share the host OS</text>
-<text x="400" y="314.34999999999997" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">kernel, making them small and</text>
-<text x="400" y="333.24999999999994" font-family="'Inter',sans-serif" font-weight="400" font-size="14" fill="#787774" text-anchor="middle">fast to start.</text>
+<text x="400" y="295.125" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">Docker is the dominant</text>
+<text x="400" y="315.375" font-family="'Inter',sans-serif" font-weight="400" font-size="15" fill="#787774" text-anchor="middle">container platform.</text>
 
   </g>
   
