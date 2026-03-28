@@ -475,12 +475,12 @@
 <path d="M 305 295 L 135 295 L 135 145" stroke="#c4b5fd" stroke-width="2.5" fill="none" stroke-dasharray="8 5"/>
 <polygon points="128,149 142,149 135,141" fill="#7c3aed"/>
 <rect x="40" y="55" width="190" height="90" rx="14" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="135" y="106" font-family="'Inter',sans-serif" font-weight="700" font-size="12" fill="#4c1d95" text-anchor="middle">Neural Network</text>
+<text x="135" y="104.9" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#4c1d95" text-anchor="middle">Neural Network</text>
 <rect x="305" y="55" width="190" height="90" rx="14" fill="#7c3aed" stroke="#7c3aed" stroke-width="2"/>
-<text x="400" y="106" font-family="'Inter',sans-serif" font-weight="700" font-size="12" fill="#fff" text-anchor="middle">Network Train…</text>
+<text x="400" y="104.9" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#fff" text-anchor="middle">Network Trained</text>
 <rect x="570" y="55" width="190" height="90" rx="14" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="665" y="106" font-family="'Inter',sans-serif" font-weight="700" font-size="12" fill="#4c1d95" text-anchor="middle">Latent Space</text>
+<text x="665" y="104.9" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#4c1d95" text-anchor="middle">Latent Space</text>
 <rect x="305" y="250" width="190" height="90" rx="14" fill="#4c1d95" stroke="#7c3aed" stroke-width="2"/>
-<text x="400" y="301" font-family="'Inter',sans-serif" font-weight="700" font-size="12" fill="#fff" text-anchor="middle">Space Learning</text>
+<text x="400" y="299.9" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#fff" text-anchor="middle">Space Learning</text>
 
 </svg>

@@ -2,13 +2,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
 <rect width="800" height="400" fill="#fff"/>
 <circle cx="400" cy="200" r="180" fill="none" stroke="#2563eb" stroke-width="2.5" opacity="0.15"/>
-<text x="400" y="40" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#1e3a5f" text-anchor="middle">Recovery Phrase</text>
+<text x="400" y="44.2" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#1e3a5f" text-anchor="middle">Recovery Phrase</text>
 <circle cx="400" cy="200" r="135" fill="none" stroke="#2563eb" stroke-width="2.1" opacity="0.43000000000000005"/>
-<text x="400" y="85" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#1e3a5f" text-anchor="middle">Mnemonic Phrase</text>
+<text x="400" y="89.2" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#1e3a5f" text-anchor="middle">Mnemonic Phrase</text>
 <circle cx="400" cy="200" r="90" fill="none" stroke="#2563eb" stroke-width="1.7" opacity="0.7100000000000001"/>
-<text x="400" y="130" font-family="'Inter',sans-serif" font-weight="600" font-size="12" fill="#1e3a5f" text-anchor="middle">Randomly Genera…</text>
-<circle cx="400" cy="200" r="45" fill="#2563eb" stroke="#2563eb" stroke-width="1.2999999999999998" opacity="0.9900000000000001"/>
-<text x="400" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="10" fill="#fff" text-anchor="middle">Seed Phrase</text>
+<text x="400" y="127.195" font-family="'Inter',sans-serif" font-weight="600" font-size="10.2" fill="#1e3a5f" text-anchor="middle">Randomly</text>
+<text x="400" y="139.945" font-family="'Inter',sans-serif" font-weight="600" font-size="10.2" fill="#1e3a5f" text-anchor="middle">Generated</text>
+<circle cx="400" cy="200" r="50" fill="#2563eb" stroke="#2563eb" stroke-width="1.2999999999999998" opacity="0.9900000000000001"/>
+<text x="400" y="204.9" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#fff" text-anchor="middle">Seed Phrase</text>
 <circle cx="580" cy="200" r="3" fill="#93c5fd"/>
 <circle cx="555.884572681199" cy="290" r="3" fill="#93c5fd"/>
 <circle cx="490" cy="355.88457268119896" r="3" fill="#93c5fd"/>

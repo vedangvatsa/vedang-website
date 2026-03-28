@@ -3,11 +3,14 @@
 <rect width="800" height="400" fill="#fff"/>
 <circle cx="400" cy="210" r="195" fill="none" stroke="#d1fae5" stroke-width="1"/>
 <circle cx="320" cy="175" r="110" fill="#059669" opacity="0.1" stroke="#059669" stroke-width="2"/>
-<text x="320" y="180" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#064e3b" text-anchor="middle">Container Inc…</text>
+<text x="320" y="171.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Packaging</text>
+<text x="320" y="185.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Applications</text>
 <circle cx="480" cy="175" r="110" fill="#059669" opacity="0.1" stroke="#059669" stroke-width="2"/>
-<text x="480" y="180" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#064e3b" text-anchor="middle">Application C…</text>
-<circle cx="400" cy="280" r="110" fill="#059669" opacity="0.1" stroke="#059669" stroke-width="2"/>
-<text x="400" y="285" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#064e3b" text-anchor="middle">Runtime Node.…</text>
-<text x="400" y="215" font-family="'Inter',sans-serif" font-weight="800" font-size="11" fill="#059669" text-anchor="middle">Docker</text>
+<text x="480" y="171.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Container</text>
+<text x="480" y="185.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Includes</text>
+<circle cx="400" cy="290" r="110" fill="#059669" opacity="0.1" stroke="#059669" stroke-width="2"/>
+<text x="400" y="286.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Application</text>
+<text x="400" y="300.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Code</text>
+<text x="400" y="219.9" font-family="'Inter',sans-serif" font-weight="800" font-size="14" fill="#059669" text-anchor="middle">Docker</text>
 
 </svg>

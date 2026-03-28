@@ -5,23 +5,31 @@
 <circle cx="400" cy="200" r="140" fill="none" stroke="#ede9fe" stroke-width="1" stroke-dasharray="6 4"/>
 <line x1="400" y1="200" x2="400" y2="60" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="400" cy="60" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="400" y="64" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#4c1d95" text-anchor="middle">Network Tra…</text>
+<text x="400" y="57.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Network</text>
+<text x="400" y="68.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Trains</text>
 <line x1="400" y1="200" x2="521.2435565298214" y2="130" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="521.2435565298214" cy="130" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="521.2435565298214" y="134" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#4c1d95" text-anchor="middle">Neural Netw…</text>
+<text x="521.2435565298214" y="127.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Neural</text>
+<text x="521.2435565298214" y="138.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Networks</text>
 <line x1="400" y1="200" x2="521.2435565298214" y2="270" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="521.2435565298214" cy="270" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="521.2435565298214" y="274" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#4c1d95" text-anchor="middle">Creates Syn…</text>
+<text x="521.2435565298214" y="267.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Creates</text>
+<text x="521.2435565298214" y="278.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Synthetic</text>
 <line x1="400" y1="200" x2="400" y2="340" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="400" cy="340" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="400" y="344" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#4c1d95" text-anchor="middle">Synthetic S…</text>
+<text x="400" y="337.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Synthetic</text>
+<text x="400" y="348.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Samples</text>
 <line x1="400" y1="200" x2="278.75644347017857" y2="270" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="278.75644347017857" cy="270" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="278.75644347017857" y="274" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#4c1d95" text-anchor="middle">Generated O…</text>
+<text x="278.75644347017857" y="267.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Generated</text>
+<text x="278.75644347017857" y="278.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Ones</text>
 <line x1="400" y1="200" x2="278.7564434701786" y2="130" stroke="#c4b5fd" stroke-width="1.5"/>
 <circle cx="278.7564434701786" cy="130" r="34" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
-<text x="278.7564434701786" y="134" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#4c1d95" text-anchor="middle">Network Imp…</text>
+<text x="278.7564434701786" y="127.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Network</text>
+<text x="278.7564434701786" y="138.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#4c1d95" text-anchor="middle">Improving</text>
 <circle cx="400" cy="200" r="55" fill="#7c3aed"/>
-<text x="400" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="9" fill="#fff" text-anchor="middle">Generative Adversarial</text>
+<text x="400" y="189.29" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#fff" text-anchor="middle">Generative</text>
+<text x="400" y="204.165" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#fff" text-anchor="middle">Adversarial</text>
+<text x="400" y="219.04" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#fff" text-anchor="middle">Network</text>
 
 </svg>

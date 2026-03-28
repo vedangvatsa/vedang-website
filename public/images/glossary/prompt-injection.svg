@@ -3,11 +3,15 @@
 <rect width="800" height="400" fill="#fff"/>
 <circle cx="400" cy="210" r="195" fill="none" stroke="#ede9fe" stroke-width="1"/>
 <circle cx="320" cy="175" r="110" fill="#7c3aed" opacity="0.1" stroke="#7c3aed" stroke-width="2"/>
-<text x="320" y="180" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Security Atta…</text>
+<text x="320" y="171.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Security</text>
+<text x="320" y="185.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Attack</text>
 <circle cx="480" cy="175" r="110" fill="#7c3aed" opacity="0.1" stroke="#7c3aed" stroke-width="2"/>
-<text x="480" y="180" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">System Proces…</text>
-<circle cx="400" cy="280" r="110" fill="#7c3aed" opacity="0.1" stroke="#7c3aed" stroke-width="2"/>
-<text x="400" y="285" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Processes Cau…</text>
-<text x="400" y="215" font-family="'Inter',sans-serif" font-weight="800" font-size="11" fill="#7c3aed" text-anchor="middle">Prompt Injection</text>
+<text x="480" y="171.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Malicious</text>
+<text x="480" y="185.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Instructions</text>
+<circle cx="400" cy="290" r="110" fill="#7c3aed" opacity="0.1" stroke="#7c3aed" stroke-width="2"/>
+<text x="400" y="286.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">System</text>
+<text x="400" y="300.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Processes</text>
+<text x="400" y="211.7275" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#7c3aed" text-anchor="middle">Prompt</text>
+<text x="400" y="226.6025" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#7c3aed" text-anchor="middle">Injection</text>
 
 </svg>

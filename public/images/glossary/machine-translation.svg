@@ -2,22 +2,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
 <rect width="800" height="400" fill="#fff"/>
 <rect x="30" y="15" width="240" height="180" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="0.5"/>
-<text x="150" y="95" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">◆</text>
-<text x="150" y="135" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Translates Text</text>
+<text x="150" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">◆</text>
+<text x="150" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Translates Text</text>
 <rect x="280" y="15" width="240" height="180" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="0.5"/>
-<text x="400" y="95" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">●</text>
-<text x="400" y="135" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Foundational NLP</text>
+<text x="400" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">●</text>
+<text x="400" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Foundational NLP</text>
 <rect x="530" y="15" width="240" height="180" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="0.5"/>
-<text x="650" y="95" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">▲</text>
-<text x="650" y="135" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">NLP Task</text>
+<text x="650" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">▲</text>
+<text x="650" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">NLP Task</text>
 <rect x="30" y="205" width="240" height="180" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="0.5"/>
-<text x="150" y="285" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">■</text>
-<text x="150" y="325" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Rule-based Syst…</text>
+<text x="150" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">■</text>
+<text x="150" y="324.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Rule-based</text>
+<text x="150" y="338.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Systems</text>
 <rect x="280" y="205" width="240" height="180" rx="14" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="0.5"/>
-<text x="400" y="285" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">★</text>
-<text x="400" y="325" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Neural Approach…</text>
+<text x="400" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">★</text>
+<text x="400" y="324.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Statistical</text>
+<text x="400" y="338.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Methods</text>
 <rect x="530" y="205" width="240" height="180" rx="14" fill="#ede9fe" stroke="#c4b5fd" stroke-width="0.5"/>
-<text x="650" y="285" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">◎</text>
-<text x="650" y="325" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#4c1d95" text-anchor="middle">Achieve Near-hu…</text>
+<text x="650" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#7c3aed" text-anchor="middle" opacity="0.5">◎</text>
+<text x="650" y="324.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Neural</text>
+<text x="650" y="338.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#4c1d95" text-anchor="middle">Approaches</text>
 
 </svg>

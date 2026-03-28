@@ -2,19 +2,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
 <rect width="800" height="400" fill="#fff"/>
 <rect x="30" y="14" width="740" height="68" rx="10" fill="#7c3aed" opacity="1"/>
-<text x="54" y="54" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff">Nucleus Sampling</text>
+<text x="54" y="53" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#fff">Nucleus Sampling</text>
 <rect x="700" y="38" width="50" height="20" rx="10" fill="rgba(255,255,255,0.2)"/>
 <rect x="42.5" y="90" width="715" height="68" rx="10" fill="#7c3aed" opacity="0.88"/>
-<text x="66.5" y="130" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff">Tokens Whose</text>
+<text x="66.5" y="129" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#fff">Sampling Dynamically</text>
 <rect x="687.5" y="114" width="50" height="20" rx="10" fill="rgba(255,255,255,0.2)"/>
 <rect x="55" y="166" width="690" height="68" rx="10" fill="#7c3aed" opacity="0.76"/>
-<text x="79" y="206" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff">Whose Cumulative</text>
+<text x="79" y="205" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#fff">Dynamically Selects</text>
 <rect x="675" y="190" width="50" height="20" rx="10" fill="rgba(255,255,255,0.2)"/>
 <rect x="67.5" y="242" width="665" height="68" rx="10" fill="#7c3aed" opacity="0.64"/>
-<text x="91.5" y="282" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff">Candidate Pool</text>
+<text x="91.5" y="281" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#fff">Tokens Whose</text>
 <rect x="662.5" y="266" width="50" height="20" rx="10" fill="rgba(255,255,255,0.2)"/>
 <rect x="80" y="318" width="640" height="68" rx="10" fill="#7c3aed" opacity="0.52"/>
-<text x="104" y="358" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff">Pool Size</text>
+<text x="104" y="357" font-family="'Inter',sans-serif" font-weight="700" font-size="14" fill="#fff">Whose Cumulative</text>
 <rect x="650" y="342" width="50" height="20" rx="10" fill="rgba(255,255,255,0.2)"/>
 
 </svg>

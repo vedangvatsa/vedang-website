@@ -5,23 +5,30 @@
 <circle cx="400" cy="200" r="140" fill="none" stroke="#d1fae5" stroke-width="1" stroke-dasharray="6 4"/>
 <line x1="400" y1="200" x2="400" y2="60" stroke="#6ee7b7" stroke-width="1.5"/>
 <circle cx="400" cy="60" r="34" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
-<text x="400" y="64" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#064e3b" text-anchor="middle">Developers …</text>
+<text x="400" y="57.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Cloud-computing</text>
+<text x="400" y="68.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Model</text>
 <line x1="400" y1="200" x2="521.2435565298214" y2="130" stroke="#6ee7b7" stroke-width="1.5"/>
 <circle cx="521.2435565298214" cy="130" r="34" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
-<text x="521.2435565298214" y="134" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#064e3b" text-anchor="middle">Deploy Code</text>
+<text x="521.2435565298214" y="127.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Developers</text>
+<text x="521.2435565298214" y="138.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Deploy</text>
 <line x1="400" y1="200" x2="521.2435565298214" y2="270" stroke="#6ee7b7" stroke-width="1.5"/>
 <circle cx="521.2435565298214" cy="270" r="34" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
-<text x="521.2435565298214" y="274" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#064e3b" text-anchor="middle">Managing Se…</text>
+<text x="521.2435565298214" y="267.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Deploy</text>
+<text x="521.2435565298214" y="278.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Code</text>
 <line x1="400" y1="200" x2="400" y2="340" stroke="#6ee7b7" stroke-width="1.5"/>
 <circle cx="400" cy="340" r="34" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
-<text x="400" y="344" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#064e3b" text-anchor="middle">Cloud Provi…</text>
+<text x="400" y="337.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Managing</text>
+<text x="400" y="348.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Servers</text>
 <line x1="400" y1="200" x2="278.75644347017857" y2="270" stroke="#6ee7b7" stroke-width="1.5"/>
 <circle cx="278.75644347017857" cy="270" r="34" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
-<text x="278.75644347017857" y="274" font-family="'Inter',sans-serif" font-weight="600" font-size="8" fill="#064e3b" text-anchor="middle">Provider Ru…</text>
+<text x="278.75644347017857" y="267.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Cloud</text>
+<text x="278.75644347017857" y="278.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Provider</text>
 <line x1="400" y1="200" x2="278.7564434701786" y2="130" stroke="#6ee7b7" stroke-width="1.5"/>
 <circle cx="278.7564434701786" cy="130" r="34" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
-<text x="278.7564434701786" y="134" font-family="'Inter',sans-serif" font-weight="600" font-size="10" fill="#064e3b" text-anchor="middle">Runs Code</text>
+<text x="278.7564434701786" y="127.6625" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Provider</text>
+<text x="278.7564434701786" y="138.2875" font-family="'Inter',sans-serif" font-weight="600" font-size="8.5" fill="#064e3b" text-anchor="middle">Runs</text>
 <circle cx="400" cy="200" r="55" fill="#059669"/>
-<text x="400" y="205" font-family="'Inter',sans-serif" font-weight="800" font-size="9" fill="#fff" text-anchor="middle">Serverless Architecture</text>
+<text x="400" y="196.7275" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#fff" text-anchor="middle">Serverless</text>
+<text x="400" y="211.6025" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#fff" text-anchor="middle">Architecture</text>
 
 </svg>

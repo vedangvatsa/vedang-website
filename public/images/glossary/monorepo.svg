@@ -2,22 +2,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
 <rect width="800" height="400" fill="#fff"/>
 <rect x="30" y="15" width="240" height="180" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="0.5"/>
-<text x="150" y="95" font-family="'Inter',sans-serif" font-size="40" fill="#059669" text-anchor="middle" opacity="0.5">◆</text>
-<text x="150" y="135" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#064e3b" text-anchor="middle">Multiple Projec…</text>
+<text x="150" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#059669" text-anchor="middle" opacity="0.5">◆</text>
+<text x="150" y="134.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Software</text>
+<text x="150" y="148.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Development</text>
 <rect x="280" y="15" width="240" height="180" rx="14" fill="#d1fae5" stroke="#6ee7b7" stroke-width="0.5"/>
-<text x="400" y="95" font-family="'Inter',sans-serif" font-size="40" fill="#059669" text-anchor="middle" opacity="0.5">●</text>
-<text x="400" y="135" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#064e3b" text-anchor="middle">Projects Packag…</text>
+<text x="400" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#059669" text-anchor="middle" opacity="0.5">●</text>
+<text x="400" y="134.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Development</text>
+<text x="400" y="148.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Strategy</text>
 <rect x="530" y="15" width="240" height="180" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="0.5"/>
-<text x="650" y="95" font-family="'Inter',sans-serif" font-size="40" fill="#059669" text-anchor="middle" opacity="0.5">▲</text>
-<text x="650" y="135" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#064e3b" text-anchor="middle">Single Version</text>
+<text x="650" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#059669" text-anchor="middle" opacity="0.5">▲</text>
+<text x="650" y="134.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Multiple</text>
+<text x="650" y="148.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Projects</text>
 <rect x="30" y="205" width="240" height="180" rx="14" fill="#d1fae5" stroke="#6ee7b7" stroke-width="0.5"/>
-<text x="150" y="285" font-family="'Inter',sans-serif" font-size="40" fill="#059669" text-anchor="middle" opacity="0.5">■</text>
-<text x="150" y="325" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#064e3b" text-anchor="middle">Version Control</text>
+<text x="150" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#059669" text-anchor="middle" opacity="0.5">■</text>
+<text x="150" y="324.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Projects</text>
+<text x="150" y="338.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Packages</text>
 <rect x="280" y="205" width="240" height="180" rx="14" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="0.5"/>
-<text x="400" y="285" font-family="'Inter',sans-serif" font-size="40" fill="#059669" text-anchor="middle" opacity="0.5">★</text>
-<text x="400" y="325" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#064e3b" text-anchor="middle">Control Reposit…</text>
+<text x="400" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#059669" text-anchor="middle" opacity="0.5">★</text>
+<text x="400" y="332.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#064e3b" text-anchor="middle">Single Version</text>
 <rect x="530" y="205" width="240" height="180" rx="14" fill="#d1fae5" stroke="#6ee7b7" stroke-width="0.5"/>
-<text x="650" y="285" font-family="'Inter',sans-serif" font-size="40" fill="#059669" text-anchor="middle" opacity="0.5">◎</text>
-<text x="650" y="325" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#064e3b" text-anchor="middle">Repositories Per</text>
+<text x="650" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#059669" text-anchor="middle" opacity="0.5">◎</text>
+<text x="650" y="332.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#064e3b" text-anchor="middle">Version Control</text>
 
 </svg>

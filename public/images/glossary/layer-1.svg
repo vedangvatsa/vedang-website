@@ -2,22 +2,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
 <rect width="800" height="400" fill="#fff"/>
 <rect x="30" y="15" width="240" height="180" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="0.5"/>
-<text x="150" y="95" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">◆</text>
-<text x="150" y="135" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Layer Refers</text>
+<text x="150" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">◆</text>
+<text x="150" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Layer Refers</text>
 <rect x="280" y="15" width="240" height="180" rx="14" fill="#dbeafe" stroke="#93c5fd" stroke-width="0.5"/>
-<text x="400" y="95" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">●</text>
-<text x="400" y="135" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Base Blockchain</text>
+<text x="400" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">●</text>
+<text x="400" y="142.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Base Blockchain</text>
 <rect x="530" y="15" width="240" height="180" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="0.5"/>
-<text x="650" y="95" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">▲</text>
-<text x="650" y="135" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Provides Securi…</text>
+<text x="650" y="90" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">▲</text>
+<text x="650" y="134.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Blockchain</text>
+<text x="650" y="148.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Protocol</text>
 <rect x="30" y="205" width="240" height="180" rx="14" fill="#dbeafe" stroke="#93c5fd" stroke-width="0.5"/>
-<text x="150" y="285" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">■</text>
-<text x="150" y="325" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Security Consen…</text>
+<text x="150" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">■</text>
+<text x="150" y="324.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Foundational</text>
+<text x="150" y="338.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Network</text>
 <rect x="280" y="205" width="240" height="180" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="0.5"/>
-<text x="400" y="285" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">★</text>
-<text x="400" y="325" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Finality Bitcoin</text>
+<text x="400" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">★</text>
+<text x="400" y="324.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Provides</text>
+<text x="400" y="338.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Security</text>
 <rect x="530" y="205" width="240" height="180" rx="14" fill="#dbeafe" stroke="#93c5fd" stroke-width="0.5"/>
-<text x="650" y="285" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">◎</text>
-<text x="650" y="325" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#1e3a5f" text-anchor="middle">Layer Networks</text>
+<text x="650" y="280" font-family="'Inter',sans-serif" font-size="40" fill="#2563eb" text-anchor="middle" opacity="0.5">◎</text>
+<text x="650" y="324.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Security</text>
+<text x="650" y="338.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#1e3a5f" text-anchor="middle">Consensus</text>
 
 </svg>

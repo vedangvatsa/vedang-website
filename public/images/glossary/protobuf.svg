@@ -32,22 +32,26 @@
 <line x1="0" y1="320" x2="800" y2="320" stroke="#f9fafb" stroke-width="1"/>
 <line x1="0" y1="360" x2="800" y2="360" stroke="#f9fafb" stroke-width="1"/>
 <rect x="52.5" y="120" width="155" height="160" rx="16" fill="#059669" stroke="#059669" stroke-width="1.5"/>
-<text x="130" y="188" font-family="'Inter',sans-serif" font-weight="800" font-size="36" fill="rgba(255,255,255,0.25)" text-anchor="middle">01</text>
-<text x="130" y="222" font-family="'Inter',sans-serif" font-weight="700" font-size="12" fill="#fff" text-anchor="middle">Protocol Buff…</text>
+<text x="130" y="185" font-family="'Inter',sans-serif" font-weight="800" font-size="36" fill="rgba(255,255,255,0.25)" text-anchor="middle">01</text>
+<text x="130" y="222.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#fff" text-anchor="middle">Protocol</text>
+<text x="130" y="236.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#fff" text-anchor="middle">Buffers</text>
 <line x1="210.5" y1="200" x2="229.5" y2="200" stroke="#6ee7b7" stroke-width="2.5"/>
 <polygon points="223.5,195 229.5,200 223.5,205" fill="#059669"/>
 <rect x="232.5" y="120" width="155" height="160" rx="16" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
-<text x="310" y="188" font-family="'Inter',sans-serif" font-weight="800" font-size="36" fill="#d1fae5" text-anchor="middle">02</text>
-<text x="310" y="222" font-family="'Inter',sans-serif" font-weight="700" font-size="12" fill="#064e3b" text-anchor="middle">Buffers Proto…</text>
+<text x="310" y="185" font-family="'Inter',sans-serif" font-weight="800" font-size="36" fill="#d1fae5" text-anchor="middle">02</text>
+<text x="310" y="222.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Buffers</text>
+<text x="310" y="236.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Protobuf</text>
 <line x1="390.5" y1="200" x2="409.5" y2="200" stroke="#6ee7b7" stroke-width="2.5"/>
 <polygon points="403.5,195 409.5,200 403.5,205" fill="#059669"/>
 <rect x="412.5" y="120" width="155" height="160" rx="16" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
-<text x="490" y="188" font-family="'Inter',sans-serif" font-weight="800" font-size="36" fill="#d1fae5" text-anchor="middle">03</text>
-<text x="490" y="222" font-family="'Inter',sans-serif" font-weight="700" font-size="12" fill="#064e3b" text-anchor="middle">Data Serializ…</text>
+<text x="490" y="185" font-family="'Inter',sans-serif" font-weight="800" font-size="36" fill="#d1fae5" text-anchor="middle">03</text>
+<text x="490" y="222.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Platform-neutral</text>
+<text x="490" y="236.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Data</text>
 <line x1="570.5" y1="200" x2="589.5" y2="200" stroke="#6ee7b7" stroke-width="2.5"/>
 <polygon points="583.5,195 589.5,200 583.5,205" fill="#059669"/>
 <rect x="592.5" y="120" width="155" height="160" rx="16" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
-<text x="670" y="188" font-family="'Inter',sans-serif" font-weight="800" font-size="36" fill="#d1fae5" text-anchor="middle">04</text>
-<text x="670" y="222" font-family="'Inter',sans-serif" font-weight="700" font-size="12" fill="#064e3b" text-anchor="middle">Format Develo…</text>
+<text x="670" y="185" font-family="'Inter',sans-serif" font-weight="800" font-size="36" fill="#d1fae5" text-anchor="middle">04</text>
+<text x="670" y="222.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Data</text>
+<text x="670" y="236.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Serialization</text>
 
 </svg>

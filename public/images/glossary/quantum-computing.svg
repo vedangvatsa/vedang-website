@@ -2,12 +2,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
 <rect width="800" height="400" fill="#fff"/>
 <polygon points="330,20 470,20 560,110 240,110" fill="#059669" opacity="0.35" stroke="#fff" stroke-width="3"/>
-<text x="400" y="71" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Computing Uses</text>
+<text x="400" y="70.25" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Computing Uses</text>
 <polygon points="240,110 560,110 650,200 150,200" fill="#059669" opacity="0.53" stroke="#fff" stroke-width="3"/>
-<text x="400" y="161" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Uses Quantum</text>
+<text x="400" y="160.25" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Uses Quantum</text>
 <polygon points="150,200 650,200 740,290 60,290" fill="#059669" opacity="0.71" stroke="#fff" stroke-width="3"/>
-<text x="400" y="251" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Quantum Mechani…</text>
+<text x="400" y="250.25" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Quantum Mechanics</text>
 <polygon points="60,290 740,290 830,380 -30,380" fill="#059669" opacity="0.89" stroke="#fff" stroke-width="3"/>
-<text x="400" y="341" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Computers Cannot</text>
+<text x="400" y="340.25" font-family="'Inter',sans-serif" font-weight="700" font-size="15" fill="#fff" text-anchor="middle">Process Information</text>
 
 </svg>

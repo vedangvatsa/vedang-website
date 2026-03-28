@@ -3,11 +3,14 @@
 <rect width="800" height="400" fill="#fff"/>
 <circle cx="400" cy="210" r="195" fill="none" stroke="#d1fae5" stroke-width="1"/>
 <circle cx="320" cy="175" r="110" fill="#059669" opacity="0.1" stroke="#059669" stroke-width="2"/>
-<text x="320" y="180" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#064e3b" text-anchor="middle">Sharing Files</text>
+<text x="320" y="171.96125" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Peer-to-peer</text>
+<text x="320" y="185.77375" font-family="'Inter',sans-serif" font-weight="700" font-size="11.049999999999999" fill="#064e3b" text-anchor="middle">Protocol</text>
 <circle cx="480" cy="175" r="110" fill="#059669" opacity="0.1" stroke="#059669" stroke-width="2"/>
-<text x="480" y="180" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#064e3b" text-anchor="middle">Files HTTP</text>
-<circle cx="400" cy="280" r="110" fill="#059669" opacity="0.1" stroke="#059669" stroke-width="2"/>
-<text x="400" y="285" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#064e3b" text-anchor="middle">URL Points</text>
-<text x="400" y="215" font-family="'Inter',sans-serif" font-weight="800" font-size="11" fill="#059669" text-anchor="middle">IPFS (InterPlanetary</text>
+<text x="480" y="179.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#064e3b" text-anchor="middle">Sharing Files</text>
+<circle cx="400" cy="290" r="110" fill="#059669" opacity="0.1" stroke="#059669" stroke-width="2"/>
+<text x="400" y="294.55" font-family="'Inter',sans-serif" font-weight="700" font-size="13" fill="#064e3b" text-anchor="middle">Files HTTP</text>
+<text x="400" y="204.29" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#059669" text-anchor="middle">IPFS</text>
+<text x="400" y="219.165" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#059669" text-anchor="middle">(InterPlanetary</text>
+<text x="400" y="234.04" font-family="'Inter',sans-serif" font-weight="800" font-size="11.9" fill="#059669" text-anchor="middle">File System)</text>
 
 </svg>
