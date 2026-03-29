@@ -175,9 +175,11 @@
     "id": "jevons-paradox-ai",
     "scheduleDate": "2026-03-30",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/jevons.png",
-    "text": "In 1865, making steam engines more efficient did not reduce coal use. It increased it. Cheaper energy meant people found more uses for energy.\n\nThis is Jevons Paradox.\n\nIt is happening with AI right now.\n\nWhen code costs less to write, companies write more code. They build products that were too expensive before. They enter markets they ignored. They automate things they manually skipped.\n\nPhotography is the clearest example. Digital cameras made photos essentially free. The number of photos taken per year went from billions to trillions. Photographers did not disappear. There are more of them now.\n\nThe people predicting mass unemployment and the people predicting no disruption are using the same wrong assumption: that the pool of work is fixed.\n\nIt is not.\n\nThe real question is whether demand in your field is constrained by price. If the only thing stopping more of your work from existing was cost, AI will create more of it.\n\nMost fields work that way."
+    "text": "In 1865, making steam engines more efficient did not reduce coal use. It increased it. Cheaper energy meant people found more uses for energy.\n\nThis is Jevons Paradox.\n\nIt is happening with AI right now.\n\nWhen code costs less to write, companies write more code. They build products that were too expensive before. They enter markets they ignored. They automate things they manually skipped.\n\nPhotography is the clearest example. Digital cameras made photos essentially free. The number of photos taken per year went from billions to trillions. Photographers did not disappear. There are more of them now.\n\nThe people predicting mass unemployment and the people predicting no disruption are using the same wrong assumption: that the pool of work is fixed.\n\nIt is not.\n\nThe real question is whether demand in your field is constrained by price. If the only thing stopping more of your work from existing was cost, AI will create more of it.\n\nMost fields work that way.",
+    "postedAt": "2026-03-29T19:56:27.825Z",
+    "tweetId": "2038344556643524920"
   },
   {
     "id": "psych-stockholm",

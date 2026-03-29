@@ -168,14 +168,16 @@
     "id": "psych-hero",
     "scheduleDate": "2026-03-30",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Every pitch deck that works tells a story.\n\nNot always on purpose. But the structure is almost always the same.\n\nHere is the world as it is. Here is the thing the founder saw that others missed. Here is how hard it was to act on that. Here is what they built because of it. Here is what changes for people now.\n\nCampbell documented this arc across myths from every culture. The hero is called, descends, transforms, and returns with something of value.\n\nThe pitches that do not work tend to skip the descent. They go from broken world to working product with no difficulty in between. That is not believable. And investors feel it even when they cannot name it.",
     "tags": [
       "psychology",
       "ai",
       "behavior"
     ],
-    "image": "scripts/thread-assets/psych_hero.png"
+    "image": "scripts/thread-assets/psych_hero.png",
+    "postedAt": "2026-03-29T19:56:44.628Z",
+    "tumblrId": "812451579144863744"
   },
   {
     "id": "lit-fired",

@@ -113,9 +113,11 @@
     "id": "jevons-paradox-ai",
     "scheduleDate": "2026-03-30",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "In 1865, making steam engines more efficient did not reduce coal use. It increased it. Cheaper energy meant people found more uses for energy.\n\nThis is Jevons Paradox.\n\nIt is happening with AI right now.\n\nWhen code costs less to write, companies write more code.",
-    "image": "scripts/thread-assets/jevons.png"
+    "image": "scripts/thread-assets/jevons.png",
+    "postedAt": "2026-03-29T19:56:37.215Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mi7wkvvzdz2r"
   },
   {
     "id": "psych-stockholm",

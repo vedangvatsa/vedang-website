@@ -235,8 +235,10 @@
       "trust"
     ],
     "scheduleDate": "2026-03-30",
-    "posted": false,
-    "scheduleTime": "01:00"
+    "posted": true,
+    "scheduleTime": "01:00",
+    "postedAt": "2026-03-29T19:56:46.931Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/god-protocol"
   },
   {
     "id": "hashnode-mesh-economy",
@@ -274,8 +276,10 @@
       "empathy"
     ],
     "scheduleDate": "2026-03-30",
-    "posted": false,
-    "scheduleTime": "01:00"
+    "posted": true,
+    "scheduleTime": "01:00",
+    "postedAt": "2026-03-29T19:56:47.332Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/synthetic-empathy"
   },
   {
     "id": "hashnode-ambient-intelligence",
