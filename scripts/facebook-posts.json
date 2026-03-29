@@ -103,9 +103,11 @@
     "id": "psych-helplessness",
     "scheduleDate": "2026-03-29",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "After enough times being ignored, people stop raising their hand.\n\nNot because they stopped having ideas. Because they stopped expecting the idea to go anywhere.\n\nLearned helplessness is what happens when an organism experiences repeated situations where its actions have no effect. Eventually it stops trying, even when the situation changes.\n\nTeams that have been through multiple rounds of layoffs and reorgs carry this. The people who stayed watched proposals go nowhere. They learn the lesson even if it no longer applies.\n\nThis may be one of the real costs of restructuring that never shows up in the announcement.",
-    "image": "scripts/thread-assets/psych_helplessness.png"
+    "image": "scripts/thread-assets/psych_helplessness.png",
+    "postedAt": "2026-03-29T11:53:54.233Z",
+    "fbPostId": "1785048661795414_1245647711078604"
   },
   {
     "id": "psych-hero",

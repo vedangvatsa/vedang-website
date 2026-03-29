@@ -175,8 +175,10 @@
       "ai"
     ],
     "scheduleDate": "2026-03-29",
-    "posted": false,
-    "scheduleTime": "17:00"
+    "posted": true,
+    "scheduleTime": "17:00",
+    "postedAt": "2026-03-29T11:53:58.578Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/simulation-hypothesis"
   },
   {
     "id": "hashnode-attention-refinery",
@@ -218,8 +220,10 @@
       "agi"
     ],
     "scheduleDate": "2026-03-29",
-    "posted": false,
-    "scheduleTime": "17:00"
+    "posted": true,
+    "scheduleTime": "17:00",
+    "postedAt": "2026-03-29T11:53:58.832Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/asi-timeline"
   },
   {
     "id": "hashnode-god-protocol",
