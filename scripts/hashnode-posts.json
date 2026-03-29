@@ -160,8 +160,10 @@
       "digital"
     ],
     "scheduleDate": "2026-03-29",
-    "posted": false,
-    "scheduleTime": "09:00"
+    "posted": true,
+    "scheduleTime": "09:00",
+    "postedAt": "2026-03-29T05:24:53.134Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/digital-monasticism"
   },
   {
     "id": "hashnode-simulation-hypothesis",
@@ -201,8 +203,10 @@
       "trust"
     ],
     "scheduleDate": "2026-03-29",
-    "posted": false,
-    "scheduleTime": "09:00"
+    "posted": true,
+    "scheduleTime": "09:00",
+    "postedAt": "2026-03-29T05:24:53.384Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/internet-of-lies"
   },
   {
     "id": "hashnode-asi-timeline",

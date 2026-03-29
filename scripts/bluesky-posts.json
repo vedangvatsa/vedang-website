@@ -93,9 +93,11 @@
     "id": "math-ai-highway",
     "scheduleDate": "2026-03-29",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Terence Tao thinks AI in mathematics is where cars were when cities tried fitting them into horse streets.\n\nAI gets from hypothesis to proof faster. But it skips everything that makes the proof valuable beyond the answer.\n\nThe fix: build new infrastructure, not force AI into old formats.",
-    "image": "scripts/thread-assets/math_ai_city.png"
+    "image": "scripts/thread-assets/math_ai_city.png",
+    "postedAt": "2026-03-29T05:24:43.039Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mi6fttad7p2r"
   },
   {
     "id": "psych-attachment",
