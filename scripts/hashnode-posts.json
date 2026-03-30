@@ -265,8 +265,10 @@
       "crypto"
     ],
     "scheduleDate": "2026-03-30",
-    "posted": false,
-    "scheduleTime": "17:00"
+    "posted": true,
+    "scheduleTime": "17:00",
+    "postedAt": "2026-03-30T12:10:17.005Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/programmable-trust"
   },
   {
     "id": "hashnode-synthetic-empathy",

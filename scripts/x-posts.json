@@ -195,9 +195,11 @@
     "id": "psych-mirror",
     "scheduleDate": "2026-03-30",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/psych_mirror.png",
-    "text": "There is a class of neurons that fire both when you act and when you watch someone else act.\n\nThey are the biological foundation of imitation. Possibly of empathy.\n\nAI models are trained on vast amounts of human output. They mirror our patterns back at scale. When an AI response feels like it is reading you correctly, it is probably because it has seen enough examples of people who wrote and thought similarly.\n\nI notice this more as these systems improve. The mirroring gets more accurate.\n\nWhether accurate mirroring becomes something that feels like understanding is still an open question."
+    "text": "There is a class of neurons that fire both when you act and when you watch someone else act.\n\nThey are the biological foundation of imitation. Possibly of empathy.\n\nAI models are trained on vast amounts of human output. They mirror our patterns back at scale. When an AI response feels like it is reading you correctly, it is probably because it has seen enough examples of people who wrote and thought similarly.\n\nI notice this more as these systems improve. The mirroring gets more accurate.\n\nWhether accurate mirroring becomes something that feels like understanding is still an open question.",
+    "postedAt": "2026-03-30T12:09:59.118Z",
+    "tweetId": "2038589551149470191"
   },
   {
     "id": "smart-employees",

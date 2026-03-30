@@ -198,14 +198,16 @@
     "id": "psych-shadow",
     "scheduleDate": "2026-03-30",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Every company has two versions of itself.\n\nThe one on the about page. And the one that shows up in the product decisions made when doing the right thing gets expensive.\n\nJung called this the shadow self. The part of the personality the conscious mind does not want to see.\n\nSocial media companies say they build connection. The product decisions say they build compulsion. Most people know this. Most people stay anyway.\n\nI think about this a lot when I read company values pages. The gap between the stated version and the actual version tends to compress over time. It usually resolves in the direction of the actual version.",
     "tags": [
       "psychology",
       "ai",
       "behavior"
     ],
-    "image": "scripts/thread-assets/psych_shadow.png"
+    "image": "scripts/thread-assets/psych_shadow.png",
+    "postedAt": "2026-03-30T12:10:15.075Z",
+    "tumblrId": "812512827002781696"
   },
   {
     "id": "psych-toxic-positivity",
