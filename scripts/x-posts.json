@@ -185,9 +185,11 @@
     "id": "psych-stockholm",
     "scheduleDate": "2026-03-30",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/psych_stockholm.png",
-    "text": "A founder I know has been underpaid, diluted, and overridden repeatedly by one investor.\n\nHe still talks about that investor as a mentor.\n\nStockholm syndrome describes what happens when people in a controlling environment start to identify with and defend the controlling party. The startup version is quieter but present.\n\nWorkers defend 80-hour weeks publicly. First employees celebrate exits that left them with nothing. The practice becomes the identity. Criticising the conditions means criticising yourself.\n\nIt may be the most effective retention mechanism in the industry."
+    "text": "A founder I know has been underpaid, diluted, and overridden repeatedly by one investor.\n\nHe still talks about that investor as a mentor.\n\nStockholm syndrome describes what happens when people in a controlling environment start to identify with and defend the controlling party. The startup version is quieter but present.\n\nWorkers defend 80-hour weeks publicly. First employees celebrate exits that left them with nothing. The practice becomes the identity. Criticising the conditions means criticising yourself.\n\nIt may be the most effective retention mechanism in the industry.",
+    "postedAt": "2026-03-30T05:38:17.596Z",
+    "tweetId": "2038490979137892360"
   },
   {
     "id": "psych-mirror",

@@ -250,8 +250,10 @@
       "web3"
     ],
     "scheduleDate": "2026-03-30",
-    "posted": false,
-    "scheduleTime": "09:00"
+    "posted": true,
+    "scheduleTime": "09:00",
+    "postedAt": "2026-03-30T05:38:37.335Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/mesh-economy"
   },
   {
     "id": "hashnode-programmable-trust",
@@ -291,7 +293,9 @@
       "ambient"
     ],
     "scheduleDate": "2026-03-30",
-    "posted": false,
-    "scheduleTime": "09:00"
+    "posted": true,
+    "scheduleTime": "09:00",
+    "postedAt": "2026-03-30T05:38:37.561Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/ambient-intelligence"
   }
 ]

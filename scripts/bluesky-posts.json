@@ -123,9 +123,11 @@
     "id": "psych-stockholm",
     "scheduleDate": "2026-03-30",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "A founder I know has been underpaid, diluted, and overridden repeatedly by one investor.\n\nHe still talks about that investor as a mentor.\n\nStockholm syndrome describes what happens when people in a controlling environment start to identify with and defend the controlling party.",
-    "image": "scripts/thread-assets/psych_stockholm.png"
+    "image": "scripts/thread-assets/psych_stockholm.png",
+    "postedAt": "2026-03-30T05:38:26.729Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3miax3c7ztq2o"
   },
   {
     "id": "psych-mirror",

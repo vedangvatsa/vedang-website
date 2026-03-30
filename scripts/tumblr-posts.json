@@ -183,14 +183,16 @@
     "id": "lit-fired",
     "scheduleDate": "2026-03-30",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Nobody gets fired on LinkedIn. They navigate transitions. Nobody fails. They pivot. Nobody has a bad quarter. They recalibrate.\n\nThe platform rewards exaggeration so consistently that honesty looks like a mistake.\n\nI built a translator for this. Type what actually happened and watch it become a LinkedIn post.\n\nTry it yourself: veda.ng/lit",
     "tags": [
       "linkedin",
       "humor",
       "satire"
     ],
-    "image": "scripts/thread-assets/lit_fired.png"
+    "image": "scripts/thread-assets/lit_fired.png",
+    "postedAt": "2026-03-30T05:38:35.222Z",
+    "tumblrId": "812488185513984000"
   },
   {
     "id": "psych-shadow",

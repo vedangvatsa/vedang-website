@@ -153,9 +153,11 @@
     "id": "agentic-commerce-5",
     "scheduleDate": "2026-03-30",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_5.png",
-    "text": "The infrastructure is built. The payment rails work. The models are good enough to comparison shop across thousands of products in seconds.\n\nWhat is still missing: only 24% of people trust an agent to spend their money. And legally, in most countries, an AI cannot sign a contract on your behalf.\n\nThe technology is ahead of the trust. And the trust is ahead of the law.\n\nThis gap will close. The question is whether it closes in 2 years or 10.\n\nFull essay: veda.ng/agentic-commerce"
+    "text": "The infrastructure is built. The payment rails work. The models are good enough to comparison shop across thousands of products in seconds.\n\nWhat is still missing: only 24% of people trust an agent to spend their money. And legally, in most countries, an AI cannot sign a contract on your behalf.\n\nThe technology is ahead of the trust. And the trust is ahead of the law.\n\nThis gap will close. The question is whether it closes in 2 years or 10.\n\nFull essay: veda.ng/agentic-commerce",
+    "postedAt": "2026-03-30T05:38:21.583Z",
+    "postId": "urn:li:share:7444256685231288320"
   },
   {
     "id": "psych-confirmation",
