@@ -205,9 +205,11 @@
     "id": "smart-employees",
     "scheduleDate": "2026-03-31",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/psych_smart_employees.png",
-    "text": "The smartest employees do not play the corporate game the usual way.\n\nThey build a side hustle outside their job. They do not chase manager titles for status. They keep interviewing even when employed. They treat everyone with respect... including the cleaner.\n\nThey push back on micromanagement. They decline useless meetings. They help others grow in their careers. They do not reply to every email.\n\nThey stay away from gossip and office politics. They build passive income so one job doesn't control their life.\n\nIt is about owning your time, not your title."
+    "text": "The smartest employees do not play the corporate game the usual way.\n\nThey build a side hustle outside their job. They do not chase manager titles for status. They keep interviewing even when employed. They treat everyone with respect... including the cleaner.\n\nThey push back on micromanagement. They decline useless meetings. They help others grow in their careers. They do not reply to every email.\n\nThey stay away from gossip and office politics. They build passive income so one job doesn't control their life.\n\nIt is about owning your time, not your title.",
+    "postedAt": "2026-03-30T20:06:16.101Z",
+    "tweetId": "2038709412295229866"
   },
   {
     "id": "psych-cbt",

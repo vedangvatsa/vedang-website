@@ -173,9 +173,11 @@
     "id": "solo-unicorn-1",
     "scheduleDate": "2026-03-31",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/solo_unicorn_1.png",
-    "text": "A company with one employee and a billion dollar valuation is no longer a joke. It is a mathematical certainty.\n\nWhen the cost of coordination drops to zero, the need for a 50-person team disappears.\n\nOne person with a strong idea can command 1,000 AI modules. The bottleneck is no longer execution. It is the quality of the original thought."
+    "text": "A company with one employee and a billion dollar valuation is no longer a joke. It is a mathematical certainty.\n\nWhen the cost of coordination drops to zero, the need for a 50-person team disappears.\n\nOne person with a strong idea can command 1,000 AI modules. The bottleneck is no longer execution. It is the quality of the original thought.",
+    "postedAt": "2026-03-30T20:06:19.997Z",
+    "postId": "urn:li:share:7444475117964984320"
   },
   {
     "id": "solo-unicorn-2",
