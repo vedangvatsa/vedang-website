@@ -14,68 +14,110 @@ keywords: ['AI', 'economy', 'jobs', 'automation', 'labor markets', 'universal ba
 Every major technology shift produces the same two reactions at the same time.
 </PullQuote>
 
- One group insists that this time is different, that the disruption is total. Another insists it is not, that the economy always adapts. Both are usually partly right and partly wrong. The interesting question is never whether AI changes work. It already has. The interesting question is how the gains and losses distribute, and whether societies can shape that distribution or only react to it after the fact.
+One group insists that the disruption is total. Another insists it is not, that the economy always adapts. Both are usually partly right and partly wrong. The productive question is never whether AI changes work. It already has. The productive question is how the gains and losses distribute, and whether societies can shape that distribution or only react to it after the fact.
 
-## The Numbers on Disruption
+## The Scale of Exposure
 
-The [IMF's January 2024 staff note](https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-SDN2024001) estimated that nearly 40% of global employment is exposed to AI, rising to 60% in advanced economies. [Goldman Sachs projected](https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent) that up to 300 million full-time jobs across the United States and Europe may be affected by generative AI, while also suggesting the technology could add roughly $7 trillion to global GDP over a decade. The [World Economic Forum's 2025 Future of Jobs Report](https://www.weforum.org/publications/the-future-of-jobs-report-2025/), surveying over 1,000 employers across 55 economies, projected 170 million new jobs created by 2030 against 92 million displaced, a net gain of 78 million.
+The [IMF's January 2024 staff note](https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-SDN2024001) estimated that nearly 40% of global employment is exposed to AI, rising to 60% in advanced economies and falling to 26% in low-income countries. "Exposure" is an important word here. The IMF distinguishes between augmentation (AI makes you more productive) and automation (AI replaces the task entirely). Roughly half of exposed jobs fall into each category.
 
-That net number sounds reassuring. It is less reassuring when you look at who gains and who loses. The fastest-growing roles are in AI development, cybersecurity, and sustainability. The fastest-declining roles are clerical and administrative. If you are a 23-year-old entering a back-office career in 2026, the aggregate net positive is cold comfort.
+<AIJobExposure />
 
-## What the Payroll Data Actually Shows
+Unlike previous automation waves that targeted routine manual labor, AI exposure is concentrated in cognitive, higher-skilled work. This is a structural difference that changes the politics of technological transition. The affected populations are urban, educated, and politically active, which may accelerate the policy response but also the backlash.
 
-Perhaps the most telling evidence comes from [Stanford's Digital Economy Lab](https://digitaleconomy.stanford.edu/news/ai-and-labor-markets/). Economists Erik Brynjolfsson, Bharat Chandar, and Ruyu Chen used high-frequency payroll data from ADP covering millions of American workers and found that since generative AI went mainstream in late 2022, early-career workers aged 22 to 25 in the most AI-exposed occupations experienced a [13% relative decline in employment](https://digitaleconomy.stanford.edu/news/ai-and-labor-markets/). After controlling for firm-level hiring patterns, the figure rose to 16%. Employment for older, more experienced workers in the same fields remained stable or grew.
+[Goldman Sachs projected](https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent) that up to 300 million full-time jobs across the United States and Europe may be affected by generative AI, while suggesting the technology could add roughly $7 trillion to global GDP over a decade. The [World Economic Forum's 2025 Future of Jobs Report](https://www.weforum.org/publications/the-future-of-jobs-report-2025/), surveying over 1,000 employers across 55 economies, projected 170 million new jobs created by 2030 against 92 million displaced, a net gain of 78 million roles.
 
-This pattern held even after excluding the tech sector, remote jobs, and computer-related occupations. It was not explained by pandemic-era overhiring corrections. A [February 2026 update](https://digitaleconomy.stanford.edu/) showed the gap had widened further with no sign of reversal. [ADP's own research team](https://www.adpresearch.com/) confirmed the trend independently.
+<JobChurnChart />
 
-This is a specific, measurable finding and it points to something that aggregate employment numbers can easily hide. The entry ramp to professional careers may be narrowing quietly, even while total employment looks healthy. It is worth thinking about what this means over a decade. If a generation of workers cannot get the early-career experience that leads to mid-career expertise, the long-run effect on human capital could be larger than the short-run job losses suggest.
+<StatRow>
+<Stat value="300M" label="Jobs affected in US + Europe" source="Goldman Sachs" sourceUrl="https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent" />
+<Stat value="$7T" label="Projected GDP gain over a decade" source="Goldman Sachs" sourceUrl="https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent" />
+<Stat value="22%" label="Total workforce churn by 2030" source="WEF (2025)" sourceUrl="https://www.weforum.org/publications/the-future-of-jobs-report-2025/" />
+<Stat value="86%" label="Firms expect AI to transform ops" source="WEF (2025)" sourceUrl="https://www.weforum.org/publications/the-future-of-jobs-report-2025/" />
+</StatRow>
 
-## Corporate Candor
+That net positive sounds reassuring. It is less reassuring when disaggregated. The fastest-growing roles are in AI development, cybersecurity, and sustainability. The fastest-declining roles are clerical and administrative. If you are a 23-year-old entering a back-office career in 2026, the aggregate net positive offers limited comfort.
 
-The corporate sector has been surprisingly open about its intentions. Anthropic's CEO Dario Amodei said that [nearly half of entry-level white-collar jobs](https://news.harvard.edu/gazette/) in tech, finance, law, and consulting could be replaced or eliminated. Ford's CEO warned of similar proportions across white-collar roles. [Salesforce eliminated 4,000 customer support positions](https://builtin.com/articles/ai-washing-layoffs) citing agentic AI efficiency. Duolingo announced it would stop using human contractors for tasks AI could handle.
+## What the Payroll Data Shows
 
-These are not predictions from futurists. They are decisions being made in real time by some of the largest employers on the planet. When the people writing the checks say the workforce is shrinking, the credibility bar is different from when a think tank says it might.
+Perhaps the most telling evidence comes from [Stanford's Digital Economy Lab](https://digitaleconomy.stanford.edu/news/ai-and-labor-markets/). Economists Erik Brynjolfsson, Bharat Chandar, and Ruyu Chen used high-frequency payroll data from ADP covering millions of American workers and found that since generative AI went mainstream in late 2022, early-career workers aged 22 to 25 in the most AI-exposed occupations experienced a [13% relative decline in employment](https://digitaleconomy.stanford.edu/news/ai-and-labor-markets/). After controlling for firm-level hiring patterns, the figure rose to 16%. In software development specifically, employment for the youngest workers fell by nearly 20% by July 2025 compared to its late-2022 peak.
 
-## The Productivity Puzzle
+<EarlyCareerImpact />
 
-Here is where the picture gets genuinely complicated. A [March 2026 Goldman Sachs note](https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent) found no meaningful relationship between AI adoption and economy-wide productivity at the aggregate level. But firms that measured AI impact on specific tasks reported a median gain of around 30%.
+This pattern held even after excluding the tech sector, remote jobs, and computer-related occupations. It was not explained by pandemic-era overhiring corrections. A [February 2026 update](https://digitaleconomy.stanford.edu/) showed the gap had widened further. [ADP's own research team](https://www.adpresearch.com/) confirmed the trend independently.
 
-This gap recalls the [Solow Paradox](https://en.wikipedia.org/wiki/Productivity_paradox) of the late 1980s, when Robert Solow observed that computers were everywhere except in the productivity statistics. It took over a decade for IT investments to show up in aggregate productivity data, because adoption, organizational redesign, and complementary investments take time.
+Critically, the impact is occurring through headcount (hiring), not wages. Companies are not paying entry-level workers less. They are hiring fewer of them. Employment for workers age 30 and older in the same AI-exposed roles remained stable or grew. And in occupations with low AI exposure (home health aides, for example), employment for young workers continued to grow.
 
-[Daron Acemoglu of MIT](https://economics.mit.edu/people/faculty/daron-acemoglu) has argued that generative AI may produce a modest GDP increase of only 1.1 to 1.6% over the next decade. He estimates that only about 4.6% of tasks can be meaningfully impacted in the near term. Goldman Sachs [has responded](https://www.aei.org/articles/) that Acemoglu's assumptions are based on current capabilities, which are advancing at a pace that makes static projections risky.
+<Callout type="warning" title="The Pipeline Problem">
+If a generation of workers cannot get the early-career experience that leads to mid-career expertise, the long-run effect on human capital could be larger than the short-run job losses suggest. This is not visible in quarterly labor statistics. It may become visible over a decade.
+</Callout>
 
-Both arguments have merit. Acemoglu is almost certainly right that naive extrapolation from demo capabilities to economy-wide adoption is a mistake. Goldman Sachs is right that assuming today's limitations persist for a decade is also a mistake. The truth is probably faster than Acemoglu expects and slower than Goldman Sachs hopes, with enormous variance across sectors and geographies. The honest answer is that no one knows the speed, and anyone claiming certainty in either direction is selling something.
+## Corporate Decisions
+
+The corporate sector has been open about its direction. Anthropic's CEO Dario Amodei said that [nearly half of entry-level white-collar jobs](https://news.harvard.edu/gazette/) in tech, finance, law, and consulting could be replaced or eliminated. Ford's CEO offered similar estimates for white-collar roles. [Salesforce eliminated 4,000 customer support positions](https://builtin.com/articles/ai-washing-layoffs) citing agentic AI efficiency. Duolingo announced it would stop using human contractors for tasks AI could handle.
+
+<StatRow>
+<Stat value="4,000" label="Salesforce support roles cut" source="Built In (2025)" sourceUrl="https://builtin.com/articles/ai-washing-layoffs" />
+<Stat value="~50%" label="Entry-level white-collar at risk" source="Dario Amodei, Anthropic CEO" />
+<Stat value="25%" label="AI skills wage premium" source="WEF / Coursera" sourceUrl="https://blog.coursera.org/wef-future-of-jobs-report-2025/" />
+<Stat value="63%" label="Employers cite skills gaps" source="WEF (2025)" sourceUrl="https://www.weforum.org/publications/the-future-of-jobs-report-2025/" />
+</StatRow>
+
+These are not predictions from futurists. They are decisions being made in real time by some of the largest employers on the planet. When the people writing the checks say the workforce is shrinking, the credibility context is different from when a think tank says it might.
+
+## The Productivity Paradox
+
+This is where the picture gets genuinely complicated. A [March 2026 Goldman Sachs note](https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent) found no meaningful relationship between AI adoption and economy-wide productivity at the aggregate level. But firms that measured AI impact on specific tasks reported a median productivity gain of around 30%.
+
+<ProductivityParadox />
+
+This gap recalls the [Solow Paradox](https://en.wikipedia.org/wiki/Productivity_paradox) of the late 1980s, when Robert Solow observed that computers were everywhere except in the productivity statistics. It took over a decade for IT investments to show up in aggregate productivity data, because adoption, organizational redesign, and complementary investments take time. Goldman Sachs economists argue this is a "J-curve" effect: heavy upfront investment with delayed payoff, consistent with patterns seen with electricity and the early internet.
+
+[Daron Acemoglu of MIT](https://economics.mit.edu/people/faculty/daron-acemoglu) has argued that generative AI may produce a modest GDP increase of only 1.1 to 1.6% over the next decade, estimating that only about 4.6% of tasks can be meaningfully impacted in the near term. Goldman Sachs [has responded](https://www.aei.org/articles/) that Acemoglu's assumptions are based on current capabilities, which are advancing at a pace that makes static projections risky.
+
+Both arguments have merit. Acemoglu is almost certainly right that extrapolation from demo capabilities to economy-wide adoption is a mistake. Goldman is right that assuming today's limitations persist for a decade is also a mistake. The truth likely lands somewhere between the two, with enormous variance across sectors and geographies. Goldman projects measurable macro impact beginning around 2027.
+
+<Callout type="info" title="The Solow Paradox, Revisited">
+In 1987, Robert Solow wrote: "You can see the computer age everywhere but in the productivity statistics." It took until the late 1990s for IT investment to show up in aggregate data. Goldman Sachs economists argue AI is following the same J-curve, and estimate approximately 10% of companies have meaningfully integrated AI into production processes as of early 2026.
+</Callout>
 
 ## The Concentration Problem
 
-This is the part of the AI economy discussion that deserves more attention than it gets. The AI supply chain is already highly concentrated. Nvidia manufactures most of the chips. Amazon, Google, and Microsoft dominate the cloud infrastructure needed to train and run models. These same companies are among the leading developers of frontier AI systems. A [paper by Tejas Narechania and Ganesh Sitaraman](https://yalelawandpolicy.org/) documented market power at every layer of the AI stack, from hardware to cloud to models to applications.
+This part of the AI economy discussion may deserve more attention than it gets. The AI supply chain is already highly concentrated. Nvidia designs most of the chips required for training. TSMC in Taiwan fabricates over 90% of the world's most advanced semiconductors. Amazon, Google, and Microsoft dominate the cloud infrastructure needed to train and run models. These same companies are among the leading developers of frontier AI systems.
 
-This structure creates a feedback loop. The companies with the most data and compute build the best models. The best models attract the most users. The most users generate the most data. The cycle repeats. In principle, open-source models and new entrants can break this loop. In practice, the capital requirements for frontier model training are so large that meaningful competition may require either substantial venture capital tolerance for losses or direct government funding.
+A [paper by Tejas Narechania and Ganesh Sitaraman](https://yalelawandpolicy.org/) documented market power at every layer of the AI stack, from hardware to cloud to models to applications. This structure creates a feedback loop. The companies with the most data and compute build the best models. The best models attract the most users. The most users generate the most data. The cycle repeats.
 
-Whether AI becomes a broadly shared productivity tool or a mechanism for extracting rents depends significantly on whether this concentration deepens or loosens over the next few years. If the differentiation between frontier models narrows, as [Raghuram Rajan argued in Project Syndicate](https://www.project-syndicate.org/), competition may keep prices low and spread benefits widely. If a few platforms achieve lock-in, the opposite could follow.
+In principle, open-weight models and new entrants can break this loop. In practice, the capital requirements for frontier model training (approaching $1 billion per run) mean that meaningful competition may require either substantial venture tolerance for losses or government funding. Whether AI becomes a broadly shared productivity tool or a mechanism for extracting rents depends significantly on whether this concentration deepens or loosens.
+
+If the performance gap between frontier models narrows, as [Raghuram Rajan argued in Project Syndicate](https://www.project-syndicate.org/), competition may keep prices low and spread benefits widely. If a few platforms achieve lock-in, the opposite could follow.
 
 ## Who Gets Hurt, and How
 
 An [April 2025 IMF working paper](https://www.imf.org/en/Publications/WP/Issues/2025/04/01/) found that unlike previous automation waves, which hit middle-skilled workers hardest, AI displacement risks extend to higher-wage earners. But those same workers' tasks tend to be highly complementary with AI, meaning they can use the technology to become more productive rather than be replaced. The net effect may be a modest narrowing of wage inequality paired with a substantial widening of wealth inequality, since capital owners capture a disproportionate share of AI-generated returns.
 
-There is also a gender dimension. [OECD analysis](https://www.demandsage.com/ai-job-replacement-stats/) shows that in high-income countries, jobs most vulnerable to AI task automation make up 9.6% of female employment, nearly three times the proportion for male jobs at 3.2%. In the United States specifically, 79% of employed women work in jobs at high risk of automation compared to 58% of men. Whether the AI transition deepens or narrows existing gender gaps depends heavily on whether reskilling programs reach the populations that need them.
+<GenderImpact />
+
+There is also a gender dimension. [OECD analysis](https://www.demandsage.com/ai-job-replacement-stats/) shows that in high-income countries, jobs most vulnerable to AI task automation make up 9.6% of female employment, nearly three times the proportion for male jobs at 3.2%. In the United States specifically, 79% of employed women work in occupations at high risk of automation compared to 58% of men. Whether the AI transition deepens or narrows existing gender gaps depends heavily on whether reskilling programs reach the populations that need them.
 
 ## Policy Responses and Their Limits
 
-Universal basic income has moved from thought experiment to active testing. The [Stanford Basic Income Lab](https://blogs.lse.ac.uk/businessreview/) counts over 160 UBI pilots across four decades. Sam Altman's OpenResearch pilot, providing $1,000 per month for three years, found only a 2% reduction in work, about 15 minutes less per day. The [Stockton, California pilot](https://www.scottsantens.com/) found that recipients actually increased full-time employment relative to non-recipients. Finland's experiment increased trust in government. Canada's 1970s experiment measured an 8.5% reduction in hospitalizations.
+Universal basic income has moved from thought experiment to active testing. The [Stanford Basic Income Lab](https://blogs.lse.ac.uk/businessreview/) counts over 160 UBI pilots across four decades. The empirical evidence is more nuanced than either advocates or critics tend to acknowledge.
 
-These results challenge the intuition that cash transfers destroy work incentives. But the fiscal math remains difficult. U.S. federal revenue stood at approximately $4.9 trillion in 2024 against a GDP of about $29 trillion. Even a modest UBI program targeting displaced workers at subsistence levels could cost what existing large federal programs cost today. Funding through automation taxes is theoretically possible but politically constrained.
+<UBIPilotResults />
 
-Reskilling is the other policy pillar, but the WEF data suggests the gap is large. [63% of employers](https://blog.coursera.org/wef-future-of-jobs-report-2025/) cite skills gaps as their primary barrier. Six in ten workers may require training before 2027, while only half currently have adequate access. Workers with AI skills earn approximately 25% more on average than those without.
+Sam Altman's OpenResearch pilot, providing $1,000 per month for three years, found only a 2% reduction in work (about 15 minutes less per day). The [Stockton, California pilot](https://www.scottsantens.com/) found that recipients actually increased full-time employment relative to non-recipients. Finland's experiment increased trust in government. Canada's 1970s Mincome experiment measured an 8.5% reduction in hospitalizations.
 
-## What I Think Actually Matters
+These results challenge the intuition that cash transfers destroy work incentives. But the fiscal math remains difficult. U.S. federal revenue stood at approximately $4.9 trillion in 2024 against a GDP of about $29 trillion. Even a modest UBI program targeting displaced workers at subsistence levels could cost what existing large federal programs cost today. Funding through automation taxes is theoretically possible but politically constrained, and the international mobility of capital makes unilateral automation taxes difficult to implement effectively.
 
-Most of the AI economy debate focuses on speed of displacement and size of GDP impact. These are important questions, but they may not be the most important ones.
+Reskilling is the other policy pillar. [63% of employers](https://blog.coursera.org/wef-future-of-jobs-report-2025/) cite skills gaps as their primary barrier to transformation. Six in ten workers may require training before 2027, while only half currently have adequate access. Workers with AI skills earn approximately 25% more on average. The question is not whether reskilling works. It is whether it can be made available at sufficient scale and speed.
 
-The question that matters most is whether the economic gains from AI flow broadly or concentrate narrowly. Every previous general-purpose technology, from electricity to the internet, eventually created broad prosperity, but the "eventually" ranged from one generation to three, and the transition periods were marked by genuine suffering for specific communities. The difference with AI may be that the transition affects cognitive work, which is the category where most of the economic value in advanced economies currently sits. The communities affected are not regional manufacturing towns. They are entry-level professionals in every major city, which changes the political dynamics entirely.
+## The Distribution Question
 
-The second question that matters is whether the entry ramp to skilled careers survives. If AI removes the tasks that junior lawyers, junior analysts, and junior developers used to learn on, the pipeline of experienced professionals could thin over time. This is a slow-moving problem that looks invisible in quarterly data but could reshape entire professions over a decade.
+Most of the AI economy debate focuses on the speed of displacement and the magnitude of GDP impact. These are important questions, but they may not be the most important ones.
 
-The third question is structural. Automated telephone exchanges were technically possible in the 1920s, yet the last human telephone operator in the United States was not replaced until the 1980s. Adoption lags matter. Organizations are slow, regulation is slower, and humans renegotiate their relationship with new tools over decades, not quarters. AI may be genuinely different in its speed of deployment because it requires no physical infrastructure, only software updates. Or it may hit the same organizational friction that every previous technology hit. Probably both, in different sectors, at different speeds.
+The question that may matter most is whether the economic gains from AI flow broadly or concentrate narrowly. Every previous general-purpose technology, from electricity to the internet, eventually created broad prosperity, but the "eventually" ranged from one generation to three, and the transition periods imposed genuine costs on specific communities. The difference with AI may be that the transition affects cognitive work, which is the category where most of the economic value in advanced economies currently sits. The affected populations are not regional manufacturing towns. They are entry-level professionals in every major city, which changes the political dynamics.
 
-The honest position is that AI's economic impact is real, measurable in specific labor markets, and concentrated in ways that aggregate statistics can obscure. It is not yet catastrophic, and it may never be, if the right institutional choices are made. Those choices involve competition policy, educational investment, fiscal design, and social insurance. They are not technical problems. They are political ones. And the window for making them well, rather than reactively, is open now but may not stay open indefinitely.
+The second question that may matter is whether the entry ramp to skilled careers survives. If AI removes the tasks that junior lawyers, junior analysts, and junior developers used to learn on, the pipeline of experienced professionals could thin over time. This is a slow-moving problem that looks invisible in quarterly data but could reshape entire professions over a decade.
+
+The third question is structural. Automated telephone exchanges were technically possible in the 1920s, yet the last human telephone operator in the United States was not replaced until the 1980s. Adoption lags matter. Organizations are slow, regulation is slower, and people renegotiate their relationship with new tools over decades, not quarters. AI may be genuinely different in its speed of deployment because it requires no physical infrastructure, only software updates. Or it may hit the same organizational friction that every previous technology encountered. Probably both, in different sectors, at different speeds.
+
+The honest position is that AI's economic impact is real, measurable in specific labor markets, and concentrated in ways that aggregate statistics can obscure. It is not yet catastrophic, and it may never be, if the right institutional choices are made. Those choices involve competition policy, educational investment, fiscal design, and social insurance. They are not technical problems. They are political ones. The window for making them thoughtfully, rather than reactively, is open now but may not stay open indefinitely.

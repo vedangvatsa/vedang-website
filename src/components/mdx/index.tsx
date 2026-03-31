@@ -79,14 +79,9 @@ export function Callout({ children, type = 'info', title }: { children: React.Re
     warning: 'border-destructive/30 bg-destructive/5',
     insight: 'border-accent/40 bg-accent/10',
   };
-  const icons = {
-    info: '💡',
-    warning: '⚠️',
-    insight: '🔍',
-  };
   return (
     <div className={`not-prose my-6 first:mt-0 last:mb-0 rounded-lg border-l-4 ${styles[type]} p-4 md:p-5`}>
-      {title && <div className="font-semibold text-sm mb-2">{icons[type]} {title}</div>}
+      {title && <div className="font-semibold text-sm mb-2">{title}</div>}
       <div className="text-sm text-muted-foreground leading-relaxed [&_p]:mb-2 [&_p:last-child]:mb-0">{children}</div>
     </div>
   );

@@ -15,6 +15,15 @@ import Link from 'next/link';
 import { RelatedGlossaryTerms } from '@/lib/cross-links';
 import { glossaryTerms } from '@/lib/glossary';
 import { Columns, Column, Figure, StatRow, Stat, Callout, PullQuote, Timeline, TimelineItem, SectionLabel, KeyTakeaway, EcosystemDiagram } from '@/components/mdx';
+import { MarketProjectionChart, TrustGapChart, ConsumerConcernsChart, ValueShiftGrid, InteractionModelsVisual, TransactionFlowDiagram, CommerceEvolutionTimeline, ProtocolComparisonTable, CompetitiveLandscape } from '@/components/mdx/charts';
+import { WebEvolutionTimeline, MCPAdoptionChart, TaskHorizonChart, ProtocolStackDiagram, IndustryAdoptionChart, AgentMarketChart, SecurityThreatMatrix, AgentVsChatbot, InfrastructureLandscape } from '@/components/mdx/agentic-web-charts';
+import { ScarcitySpectrum, DataCenterEnergyChart, TrainingCostChart, MaterialConstraints, PlatformConcentration, RealityCheckGrid, DualEconomyFramework } from '@/components/mdx/infinity-charts';
+import { AIJobExposure, JobChurnChart, EarlyCareerImpact, ProductivityParadox, GenderImpact, UBIPilotResults } from '@/components/mdx/ai-economy-charts';
+import { GDPGrowthTimeline, GovernanceScorecard, IndustrialEvolution, HealthcareComparison, InequalitySnapshot, TransferabilityGrid } from '@/components/mdx/singapore-charts';
+import { PerceptionArcTimeline, IndiaSectorBifurcation, IncomeThresholdChart, COOEffectSize } from '@/components/mdx/cheap-charts';
+import { AgentMarketGrowth, EnterpriseAdoption, CoaseDisruption } from '@/components/mdx/agent-economy-charts';
+import { BlockchainSnapshot, BlockchainPhases, L2ScalingLandscape, StablecoinRegulatory } from '@/components/mdx/blockchain-charts';
+import { RegulatoryFriction, BureaucracyCostChart, EGovernanceMaturity } from '@/components/mdx/bureaucracy-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -249,6 +258,57 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               SectionLabel,
               KeyTakeaway,
               EcosystemDiagram,
+              MarketProjectionChart,
+              TrustGapChart,
+              ConsumerConcernsChart,
+              ValueShiftGrid,
+              InteractionModelsVisual,
+              TransactionFlowDiagram,
+              CommerceEvolutionTimeline,
+              ProtocolComparisonTable,
+              CompetitiveLandscape,
+              WebEvolutionTimeline,
+              MCPAdoptionChart,
+              TaskHorizonChart,
+              ProtocolStackDiagram,
+              IndustryAdoptionChart,
+              AgentMarketChart,
+              SecurityThreatMatrix,
+              AgentVsChatbot,
+              InfrastructureLandscape,
+              ScarcitySpectrum,
+              DataCenterEnergyChart,
+              TrainingCostChart,
+              MaterialConstraints,
+              PlatformConcentration,
+              RealityCheckGrid,
+              DualEconomyFramework,
+              AIJobExposure,
+              JobChurnChart,
+              EarlyCareerImpact,
+              ProductivityParadox,
+              GenderImpact,
+              UBIPilotResults,
+              GDPGrowthTimeline,
+              GovernanceScorecard,
+              IndustrialEvolution,
+              HealthcareComparison,
+              InequalitySnapshot,
+              TransferabilityGrid,
+              PerceptionArcTimeline,
+              IndiaSectorBifurcation,
+              IncomeThresholdChart,
+              COOEffectSize,
+              AgentMarketGrowth,
+              EnterpriseAdoption,
+              CoaseDisruption,
+              BlockchainSnapshot,
+              BlockchainPhases,
+              L2ScalingLandscape,
+              StablecoinRegulatory,
+              RegulatoryFriction,
+              BureaucracyCostChart,
+              EGovernanceMaturity,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
