@@ -225,9 +225,11 @@
     "id": "psych-contagion",
     "scheduleDate": "2026-03-31",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/psych_contagion.png",
-    "text": "Emotions spread without words. Without intention. Just proximity.\n\nA nervous person in a meeting makes the room nervous. An excited team makes new hires excited before they have any reason to be.\n\nI watched this play out in real time during a crypto cycle. Sentiment flipped overnight on crypto Twitter. Nothing about the underlying assets had changed. The emotion had changed. And in crypto, the emotion can be close to the actual price mechanism.\n\nRemote work may have reduced emotional contagion in offices. It is an underrated cost of distributed teams that nobody measures."
+    "text": "Emotions spread without words. Without intention. Just proximity.\n\nA nervous person in a meeting makes the room nervous. An excited team makes new hires excited before they have any reason to be.\n\nI watched this play out in real time during a crypto cycle. Sentiment flipped overnight on crypto Twitter. Nothing about the underlying assets had changed. The emotion had changed. And in crypto, the emotion can be close to the actual price mechanism.\n\nRemote work may have reduced emotional contagion in offices. It is an underrated cost of distributed teams that nobody measures.",
+    "postedAt": "2026-03-31T12:08:23.212Z",
+    "tweetId": "2038951537238528200"
   },
   {
     "id": "psych-pygmalion",

@@ -163,9 +163,11 @@
     "id": "psych-contagion",
     "scheduleDate": "2026-03-31",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Emotions spread without words. Without intention. Just proximity.\n\nA nervous person in a meeting makes the room nervous. An excited team makes new hires excited before they have any reason to be.\n\nI watched this play out in real time during a crypto cycle.",
-    "image": "scripts/thread-assets/psych_contagion.png"
+    "image": "scripts/thread-assets/psych_contagion.png",
+    "postedAt": "2026-03-31T12:08:32.506Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mie5dr7mqg2n"
   },
   {
     "id": "psych-pygmalion",

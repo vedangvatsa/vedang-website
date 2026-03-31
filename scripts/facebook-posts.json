@@ -163,9 +163,11 @@
     "id": "psych-confirmation",
     "scheduleDate": "2026-03-31",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "I read the same AI news differently depending on what I already believe about AI.\n\nAn impressive result feels like confirmation. A failure feels expected. Neither reaction is fully honest.\n\nThis is confirmation bias. We look for evidence that supports what we already think. We interpret ambiguous evidence in the direction of our existing view.\n\nAt scale, this is what recommendation algorithms do. They learn what you believe and surface evidence of it. Different people end up with genuinely different bodies of evidence. Not because one side is lying. Because both sides are only seeing what confirms their starting position.\n\nInvestors have this problem too. The founder who does not fit the pattern of past successes gets less attention, even when the underlying opportunity is the same.",
-    "image": "scripts/thread-assets/psych_confirmation.png"
+    "image": "scripts/thread-assets/psych_confirmation.png",
+    "postedAt": "2026-03-31T12:08:37.803Z",
+    "fbPostId": "1785048661795414_1247134137596628"
   },
   {
     "id": "solo-unicorn-1",
