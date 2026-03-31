@@ -215,9 +215,11 @@
     "id": "psych-cbt",
     "scheduleDate": "2026-03-31",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/psych_cbt.png",
-    "text": "Notion is therapy. Journaling apps are therapy. Habit trackers are therapy.\n\nNot literally. But the mechanism is the same.\n\nCognitive behavioral therapy works by surfacing thought patterns, interrupting automatic behavior, and reframing how experiences are interpreted. Most productivity software does a version of exactly that.\n\nI realised this when things my therapist suggested and things productivity tools were doing had started to overlap.\n\nThe market for AI coaches is a bet that this intervention scales better through software than through a weekly session. That bet may hold."
+    "text": "Notion is therapy. Journaling apps are therapy. Habit trackers are therapy.\n\nNot literally. But the mechanism is the same.\n\nCognitive behavioral therapy works by surfacing thought patterns, interrupting automatic behavior, and reframing how experiences are interpreted. Most productivity software does a version of exactly that.\n\nI realised this when things my therapist suggested and things productivity tools were doing had started to overlap.\n\nThe market for AI coaches is a bet that this intervention scales better through software than through a weekly session. That bet may hold.",
+    "postedAt": "2026-03-31T05:25:57.654Z",
+    "tweetId": "2038850263188910242"
   },
   {
     "id": "psych-contagion",
