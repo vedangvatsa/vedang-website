@@ -235,9 +235,11 @@
     "id": "psych-pygmalion",
     "scheduleDate": "2026-04-01",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/psych_pygmalion.png",
-    "text": "The best manager I worked with told me early that he thought I could do things I did not yet believe I could.\n\nI did most of them.\n\nThe Pygmalion effect is the name for what happens when expectation shapes performance. Students told they are gifted by teachers who believe it genuinely perform better. Teams told they are high-potential tend to become high-performing.\n\nThis is one reason strong leaders hire people they believe in rather than people who are already proven. The expectation is part of the output.\n\nWhat you believe about someone tends to become what they become."
+    "text": "The best manager I worked with told me early that he thought I could do things I did not yet believe I could.\n\nI did most of them.\n\nThe Pygmalion effect is the name for what happens when expectation shapes performance. Students told they are gifted by teachers who believe it genuinely perform better. Teams told they are high-potential tend to become high-performing.\n\nThis is one reason strong leaders hire people they believe in rather than people who are already proven. The expectation is part of the output.\n\nWhat you believe about someone tends to become what they become.",
+    "postedAt": "2026-03-31T20:06:41.503Z",
+    "tweetId": "2039071906314301908"
   },
   {
     "id": "psych-halo",

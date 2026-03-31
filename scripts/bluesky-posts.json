@@ -173,9 +173,11 @@
     "id": "psych-pygmalion",
     "scheduleDate": "2026-04-01",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "The best manager I worked with told me early that he thought I could do things I did not yet believe I could.\n\nI did most of them.\n\nThe Pygmalion effect is the name for what happens when expectation shapes performance.",
-    "image": "scripts/thread-assets/psych_pygmalion.png"
+    "image": "scripts/thread-assets/psych_pygmalion.png",
+    "postedAt": "2026-03-31T20:06:51.187Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3miey32d5jr2n"
   },
   {
     "id": "psych-halo",
