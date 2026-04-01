@@ -303,14 +303,16 @@
     "id": "solo-unicorn-3",
     "scheduleDate": "2026-04-02",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Companies used to be built with people and processes. Now they are built with code and agents.\n\nYou do not hire a marketing team. You deploy a marketing module.\n\nYou do not build a support department. You configure a support agent.\n\nThe founder who wins is the one who treats their entire company as a single piece of software.",
     "tags": [
       "ai",
       "technology",
       "future"
     ],
-    "image": "scripts/thread-assets/solo_unicorn_3.png"
+    "image": "scripts/thread-assets/solo_unicorn_3.png",
+    "postedAt": "2026-04-01T20:30:28.540Z",
+    "tumblrId": "812725492267581440"
   },
   {
     "id": "ai-limits-1",
