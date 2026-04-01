@@ -263,6 +263,13 @@ export default function PromptEngineeringCoursePage() {
                     <CardTitle className="text-2xl">Code Prompting: Your AI Pair Programmer</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/PromptEngineering/PE_module4.png"
+                        alt="Infographic for Module 4, showing three code prompting patterns: Write Code, Explain Code, and Debug Code."
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                     <p className="text-muted-foreground">LLMs are incredibly powerful tools for developers. This module teaches you how to use prompts to speed up your coding workflow.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                          <AccordionItem value="item-1">
@@ -304,6 +311,13 @@ export default function PromptEngineeringCoursePage() {
                     <CardTitle className="text-2xl">Best Practices for Expert Prompting</CardTitle>
                 </CardHeader>
                  <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/PromptEngineering/PE_module5.png"
+                        alt="Infographic for Module 5, showing best practices for expert prompting: Clarity, Iterate, and Security."
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                      <p className="text-muted-foreground">Becoming an expert prompt engineer is an iterative process. Here are some key best practices to keep in mind.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">

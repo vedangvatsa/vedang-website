@@ -385,6 +385,13 @@ export default function AgenticWebCoursePage() {
                     <CardTitle className="text-2xl">Applications: The Agentic Web in Action</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/AgenticWeb/Agentic_module4.png"
+                        alt="Infographic showing Agentic Applications in the Real World: Code Agents, Research Agents, Commerce Agents, and Enterprise Agents."
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                     <p className="text-muted-foreground">The Agentic Web is not science fiction; it's being built today. This module explores the three main ways agents are currently being applied, showcasing how they are already changing our digital lives.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                          <AccordionItem value="item-1">
@@ -450,6 +457,13 @@ export default function AgenticWebCoursePage() {
                     <CardTitle className="text-2xl">The Future: Challenges and Opportunities</CardTitle>
                 </CardHeader>
                  <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/AgenticWeb/Agentic_module5.png"
+                        alt="Infographic showing The Future of the Agentic Web with Safety and Alignment, Agent Identity (KYA), and Agent Economy, plus a timeline from 2024 to 2027+."
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                      <p className="text-muted-foreground">The Agentic Web holds incredible promise, but it also presents significant challenges in security, ethics, and economics. This module explores the open questions we must solve to build a safe and prosperous agentic future.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">
