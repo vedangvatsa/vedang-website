@@ -254,25 +254,34 @@ export default function ProfilePage() {
                 </h2>
                  <Card>
                     <CardContent className="p-4">
-                        <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground columns-1 md:columns-2 lg:columns-3 md:gap-4">
-                            <li>Estonia's e-governance and public service delivery solution; IEEE</li>
+                        <h3 className="font-semibold text-base mb-3">Recent Research (2024-2026)</h3>
+                        <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground mb-6">
+                            <li><Link href="https://dx.doi.org/10.2139/ssrn.5660270" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Device-to-Device Economics and AI Agent Transactions</Link>; SSRN</li>
+                            <li><Link href="https://dx.doi.org/10.2139/ssrn.5325570" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Stablecoin Growth and Market Dynamics</Link>; SSRN</li>
+                            <li><Link href="https://dx.doi.org/10.2139/ssrn.5329957" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Stablecoins in the Modern Financial System</Link>; SSRN</li>
+                            <li><Link href="https://dx.doi.org/10.2139/ssrn.5386707" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Global Stablecoin Regulations and Policies</Link>; SSRN</li>
+                            <li><Link href="https://dx.doi.org/10.2139/ssrn.5357534" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Blockchain Ecosystem Evolution</Link>; SSRN</li>
+                        </ul>
+                        <h3 className="font-semibold text-base mb-3">Earlier Publications</h3>
+                        <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground columns-1 md:columns-2 lg:columns-3 md:gap-4">
+                            <li><Link href="https://ieeexplore.ieee.org/document/9515004" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Estonia&apos;s e-governance and public service delivery solution</Link>; IEEE</li>
+                            <li><Link href="https://ieeexplore.ieee.org/document/9514979" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Analysis of Global Research Proceedings in Artificial Intelligence</Link>; IEEE</li>
+                            <li><Link href="https://dx.doi.org/10.21474/IJAR01/11418" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Identification of Algorithmic Bias Through Policy Instruments</Link>; IJAR</li>
+                            <li>China&apos;s approach to AI: A review of policy, ethics, and research advancements; Responsible AI Forum 2021, Munich</li>
                             <li>Decoding identity in the Metaverse; Yourstory</li>
-                            <li>China's approach to AI: A review of policy, ethics, and research advancements; The Responsible AI Forum 2021 in Munich</li>
-                            <li>Ethical implications in Artificial Intelligence and Brain Computer Interfaces (under review)</li>
-                            <li>Analysis of Global Research Proceedings in Artificial Intelligence; IEEE</li>
+                            <li>Ethical implications in Artificial Intelligence and Brain Computer Interfaces</li>
                             <li>The emerging Internet of Value; Inc42</li>
-                            <li>Framework to evaluate the impact of Algorithmic bias; International Journal of Advanced Research</li>
-                            <li>Emergence of TechFin in the emerging economies; International Organization of Scientific Research</li>
-                            <li>Base erosion and profit shifting in multinational corporations; Theoretical & Applied Economics</li>
+                            <li>Emergence of TechFin in the emerging economies; IOSR</li>
+                            <li>Base erosion and profit shifting in multinational corporations; Theoretical &amp; Applied Economics</li>
                             <li>Growth of Digital Payments and the emergence of FinTech ecosystem in India; Indian Journal of Research</li>
                             <li>Coronavirus Outbreak: Trillion-Dollar Crisis and Evolution of New Global Order; Diplomacy and Beyond</li>
-                            <li>A literature review on Internet of Things (IoT); International Journal of Computer Systems</li>
-                            <li>Current Trends and Approaches of Network Intrusion Detection System, IJCSMC</li>
-                            <li>Case Study on Mobile Applications Industry; Imperial Journal of Interdisciplinary Research</li>
-                            <li>Security in Ubiquitous Computing: Location-Based Applications, Study and Analysis of security threats and attacks in MANET; National Conference on Recent Trends and Developments in Statistics (UGC SAP Sponsored)</li>
-                            <li>A Review on the Multi-Modal Biometric Systems; International Journal of Comp. Tech. & Applications</li>
-                            <li>Comparative Analysis of Coverage Schemes in Wireless Sensor Network; Communications on Applied Electronics</li>
-                            <li>Raspberry Pi based Implementation of Internet of Things using mobile messaging application - Telegram</li>
+                            <li>A literature review on Internet of Things (IoT); IJCS</li>
+                            <li>Current Trends and Approaches of Network Intrusion Detection System; IJCSMC</li>
+                            <li>Case Study on Mobile Applications Industry; IJIR</li>
+                            <li>Security in Ubiquitous Computing and Analysis of security threats in MANET; UGC SAP Conference</li>
+                            <li>A Review on Multi-Modal Biometric Systems; IJCTA</li>
+                            <li>Comparative Analysis of Coverage Schemes in Wireless Sensor Network; CAE</li>
+                            <li>Raspberry Pi based Implementation of IoT using Telegram</li>
                         </ul>
                     </CardContent>
                 </Card>
