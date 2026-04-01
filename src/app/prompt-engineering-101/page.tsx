@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { PageLayout } from '@/components/page-layout';
+import Image from 'next/image';
 
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
@@ -107,6 +108,13 @@ export default function PromptEngineeringCoursePage() {
                     <CardTitle className="text-2xl">The Core Idea: Guiding the Prediction Engine</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/PromptEngineering/PE_module1.png"
+                        alt="Infographic for Module 1 of Prompt Engineering 101, showing the LLM prediction flow and key model controls like Temperature and Top-K."
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                      <p className="text-muted-foreground">This module introduces the foundational concept of prompt engineering. You'll learn that LLMs are powerful prediction engines and that your prompt is the guide that steers those predictions. We'll cover the essential configurations and the mindset needed to get started.</p>
                     <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">
@@ -138,6 +146,13 @@ export default function PromptEngineeringCoursePage() {
                     <CardTitle className="text-2xl">Core Prompting Techniques</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/PromptEngineering/PE_module2.png"
+                        alt="Infographic for Module 2 of Prompt Engineering 101, showing Zero-Shot, Few-Shot, Chain of Thought techniques and Role, System, Contextual prompting."
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                     <p className="text-muted-foreground">This module covers the fundamental techniques every prompt engineer must know. These methods are the building blocks for all advanced prompting strategies.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">
@@ -191,6 +206,13 @@ export default function PromptEngineeringCoursePage() {
                     <CardTitle className="text-2xl">Advanced Reasoning Techniques</CardTitle>
                 </CardHeader>
                  <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/PromptEngineering/PE_module3.png"
+                        alt="Infographic for Module 3, showing Chain of Thought, Self-Consistency, ReAct Loop, and Multimodal Input techniques."
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                      <p className="text-muted-foreground">For complex problems, you need to guide the model's reasoning process. These techniques unlock the AI's ability to solve multi-step problems that require logic and planning.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">

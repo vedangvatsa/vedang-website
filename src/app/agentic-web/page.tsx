@@ -11,6 +11,7 @@ import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
 import { Star, BookOpen, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
@@ -168,6 +169,13 @@ export default function AgenticWebCoursePage() {
                     <CardTitle className="text-2xl">The Core Idea: From Information Web to Action Web</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/AgenticWeb/Agentic_module1.png"
+                        alt="Infographic showing the evolution from Web 1.0 Read to Web 2.0 Read-Write to Agentic Web Read-Write-Act, plus the four capabilities of an AI Agent: Perception, Reasoning, Action, Learning."
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                      <p className="text-muted-foreground">This module introduces the fundamental shift from a human-driven web to an agent-driven one. You'll learn how the internet is evolving from a passive library of information into a dynamic ecosystem where autonomous agents perform complex tasks on your behalf.</p>
                     <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">
@@ -224,6 +232,13 @@ export default function AgenticWebCoursePage() {
                     <CardTitle className="text-2xl">The Core Components of Agentic Systems</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/AgenticWeb/Agentic_module2.png"
+                        alt="Infographic showing the building blocks of agentic systems: The Mind (Planning and Memory), The Hands (Tools like APIs and Web Search), and The Team (Multi-Agent hierarchical structure)."
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                     <p className="text-muted-foreground">To understand the Agentic Web, you need to know its building blocks. This module explores the key components that enable agents to function, from their internal "minds" to the external tools they use to interact with the world.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">
@@ -312,6 +327,13 @@ export default function AgenticWebCoursePage() {
                     <CardTitle className="text-2xl">The Three Dimensions of the Agentic Web</CardTitle>
                 </CardHeader>
                  <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/AgenticWeb/Agentic_module3.png"
+                        alt="Infographic showing the three dimensions of the Agentic Web as stacked layers: Intelligence Dimension at the base, Interaction Dimension in the middle, Economic Dimension at the top."
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                      <p className="text-muted-foreground">The Agentic Web isn't just one thing; it can be understood through three interconnected layers or dimensions. Each dimension builds on the one before it, showing how agents evolve from simple reasoners to active participants in a new digital economy.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">

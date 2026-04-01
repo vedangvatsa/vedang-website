@@ -10,6 +10,7 @@ import { PageLayout } from '@/components/page-layout';
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
 import { Star, BookOpen, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 
 const referenceLinks = [
     {
@@ -144,6 +145,13 @@ export default function Web3CoursePage() {
                     <CardTitle className="text-2xl">The Vision: Why Web3 Matters</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/Web3/Web3_module1.png"
+                        alt="Infographic showing the evolution of the web from Web1 Read-Only to Web2 Read-Write to Web3 Read-Write-Own, with centralized vs decentralized network comparison."
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                      <p className="text-muted-foreground">Before diving into the technology, it helps to understand the 'why' behind Web3. This module traces the internet's evolution, highlights the problems Web3 aims to solve, and lays out its philosophical foundations: decentralization, user sovereignty, and open protocols.</p>
                     <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">
@@ -186,6 +194,13 @@ export default function Web3CoursePage() {
                     <CardTitle className="text-2xl">The Bedrock: Blockchain and Cryptocurrencies</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/Web3/Web3_module2.png"
+                        alt="Infographic showing how blockchain works with chained blocks and smart contracts depicted as a vending machine analogy, plus Gas Fees, Validators, and Composability icons."
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                     <p className="text-muted-foreground">This module explains the core technology behind Web3. We'll break down what a blockchain is, how it works, and the important role cryptocurrencies play in making these decentralized networks function.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">
@@ -254,6 +269,13 @@ export default function Web3CoursePage() {
                     <CardTitle className="text-2xl">The Web3 Ecosystem: dApps, NFTs, and DAOs</CardTitle>
                 </CardHeader>
                  <CardContent className="p-6">
+                    <Image
+                        src="/images/courses/Web3/Web3_module3.png"
+                        alt="Infographic showing the four pillars of the Web3 ecosystem: dApps, NFTs, DAOs, and DeFi with their key characteristics, plus a wallet passport section."
+                        width={1200}
+                        height={675}
+                        className="w-full rounded-lg mb-6"
+                    />
                      <p className="text-muted-foreground">With the foundational technologies in place, we can now look at the applications being built in Web3. This module covers three important pillars of the current ecosystem.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">
