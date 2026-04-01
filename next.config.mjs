@@ -37,6 +37,20 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+  async redirects() {
+    return [
+      {
+        source: '/194',
+        destination: '/towards-the-agentic-web',
+        permanent: true,
+      },
+      {
+        source: '/158',
+        destination: '/blockchain-journey',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
