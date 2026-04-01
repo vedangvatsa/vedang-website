@@ -239,7 +239,7 @@ export default function VibeCodingCoursePage() {
                         alt="An infographic for Module 1 of the Vibe Coding course, showing a brain icon and titled 'From Coder to Director'."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
@@ -320,7 +320,7 @@ export default function VibeCodingCoursePage() {
                         alt="An infographic for Module 2 of the Vibe Coding course, showing various tool logos and titled 'The Modern Toolkit'."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
@@ -480,7 +480,7 @@ export default function VibeCodingCoursePage() {
                         alt="An infographic for Module 3 of the Vibe Coding course, showing a hand icon and titled 'The Art of the Prompt'."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
@@ -625,7 +625,7 @@ export default function VibeCodingCoursePage() {
                         alt="An infographic for Module 4 of the Vibe Coding course, showing a code icon and titled 'Lab: Building a Startup Name Generator'."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                      <Accordion type="single" collapsible className="w-full">
                          <AccordionItem value="item-1">
@@ -718,7 +718,7 @@ export default function VibeCodingCoursePage() {
                         alt="An infographic for Module 5 of the Vibe Coding course, showing a shield icon and titled 'From Project to Professional Product'."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                      <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">

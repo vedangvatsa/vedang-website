@@ -129,7 +129,7 @@ export default function PromptEngineeringCoursePage() {
                         alt="Infographic for Module 1 of Prompt Engineering 101, showing the LLM prediction flow and key model controls like Temperature and Top-K."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                      <p className="text-muted-foreground">This module introduces the foundational concept of prompt engineering. You'll learn that LLMs are powerful prediction engines and that your prompt is the guide that steers those predictions. We'll cover the essential configurations and the mindset needed to get started.</p>
                     <Accordion type="single" collapsible className="w-full mt-4">
@@ -187,7 +187,7 @@ export default function PromptEngineeringCoursePage() {
                         alt="Infographic for Module 2 of Prompt Engineering 101, showing Zero-Shot, Few-Shot, Chain of Thought techniques and Role, System, Contextual prompting."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                     <p className="text-muted-foreground">This module covers the fundamental techniques every prompt engineer must know. These methods are the building blocks for all advanced prompting strategies.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
@@ -247,7 +247,7 @@ export default function PromptEngineeringCoursePage() {
                         alt="Infographic for Module 3, showing Chain of Thought, Self-Consistency, ReAct Loop, and Multimodal Input techniques."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                      <p className="text-muted-foreground">For complex problems, you need to guide the model's reasoning process. These techniques unlock the AI's ability to solve multi-step problems that require logic and planning.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
@@ -304,7 +304,7 @@ export default function PromptEngineeringCoursePage() {
                         alt="Infographic for Module 4, showing three code prompting patterns: Write Code, Explain Code, and Debug Code."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                     <p className="text-muted-foreground">LLMs are incredibly powerful tools for developers. This module teaches you how to use prompts to speed up your coding workflow.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
@@ -352,7 +352,7 @@ export default function PromptEngineeringCoursePage() {
                         alt="Infographic for Module 5, showing best practices for expert prompting: Clarity, Iterate, and Security."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                      <p className="text-muted-foreground">Becoming an expert prompt engineer is an iterative process. Here are some key best practices to keep in mind.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">

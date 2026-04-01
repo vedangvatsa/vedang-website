@@ -166,7 +166,7 @@ export default function Web3CoursePage() {
                         alt="Infographic showing the evolution of the web from Web1 Read-Only to Web2 Read-Write to Web3 Read-Write-Own, with centralized vs decentralized network comparison."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                      <p className="text-muted-foreground">Before diving into the technology, it helps to understand the 'why' behind Web3. This module traces the internet's evolution, highlights the problems Web3 aims to solve, and lays out its philosophical foundations: decentralization, user sovereignty, and open protocols.</p>
                     <Accordion type="single" collapsible className="w-full mt-4">
@@ -233,7 +233,7 @@ export default function Web3CoursePage() {
                         alt="Infographic showing how blockchain works with chained blocks and smart contracts depicted as a vending machine analogy, plus Gas Fees, Validators, and Composability icons."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                     <p className="text-muted-foreground">This module explains the core technology behind Web3. We'll break down what a blockchain is, how it works, and the important role cryptocurrencies play in making these decentralized networks function.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
@@ -275,7 +275,7 @@ export default function Web3CoursePage() {
                         alt="Infographic showing Smart Contracts and Programmable Money, including IF-THEN execution, DeFi lending, trading, and stablecoins."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                      <p className="text-muted-foreground">If blockchain is the immutable ledger, smart contracts are what make it programmable and intelligent. This module explores how these pieces of code are transforming blockchain from a simple database into a global, permissionless computer.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
@@ -315,7 +315,7 @@ export default function Web3CoursePage() {
                         alt="Infographic showing the four pillars of the Web3 ecosystem: dApps, NFTs, DAOs, and DeFi with their key characteristics, plus a wallet passport section."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                      <p className="text-muted-foreground">With the foundational technologies in place, we can now look at the applications being built in Web3. This module covers three important pillars of the current ecosystem.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
@@ -391,7 +391,7 @@ export default function Web3CoursePage() {
                         alt="Infographic showing Your Web3 Passport - Getting Started Safely with 4 steps: Get a Wallet, Secure Your Seed Phrase, Get Crypto, Explore."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                     <p className="text-muted-foreground">Ready to dive in? This module covers the practical first steps to begin your journey into the world of Web3. It's less technical than you might think, but requires a new mindset around security and self-custody.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
@@ -471,7 +471,7 @@ export default function Web3CoursePage() {
                         alt="Infographic showing The Future of Web3 with Scalability, Interoperability, Mass Adoption sections and a timeline from 2015 to 2026+."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                      <p className="text-muted-foreground">Web3 is not a utopia. It's a young, evolving technology with immense potential but also significant hurdles. This final module explores the open questions and the exciting road ahead.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">

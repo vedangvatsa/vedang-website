@@ -190,7 +190,7 @@ export default function AgenticWebCoursePage() {
                         alt="Infographic showing the evolution from Web 1.0 Read to Web 2.0 Read-Write to Agentic Web Read-Write-Act, plus the four capabilities of an AI Agent: Perception, Reasoning, Action, Learning."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                      <p className="text-muted-foreground">This module introduces the fundamental shift from a human-driven web to an agent-driven one. You'll learn how the internet is evolving from a passive library of information into a dynamic ecosystem where autonomous agents perform complex tasks on your behalf.</p>
                     <Accordion type="single" collapsible className="w-full mt-4">
@@ -271,7 +271,7 @@ export default function AgenticWebCoursePage() {
                         alt="Infographic showing the building blocks of agentic systems: The Mind (Planning and Memory), The Hands (Tools like APIs and Web Search), and The Team (Multi-Agent hierarchical structure)."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                     <p className="text-muted-foreground">To understand the Agentic Web, you need to know its building blocks. This module explores the key components that enable agents to function, from their internal "minds" to the external tools they use to interact with the world.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
@@ -366,7 +366,7 @@ export default function AgenticWebCoursePage() {
                         alt="Infographic showing the three dimensions of the Agentic Web as stacked layers: Intelligence Dimension at the base, Interaction Dimension in the middle, Economic Dimension at the top."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                      <p className="text-muted-foreground">The Agentic Web isn't just one thing; it can be understood through three interconnected layers or dimensions. Each dimension builds on the one before it, showing how agents evolve from simple reasoners to active participants in a new digital economy.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
@@ -424,7 +424,7 @@ export default function AgenticWebCoursePage() {
                         alt="Infographic showing Agentic Applications in the Real World: Code Agents, Research Agents, Commerce Agents, and Enterprise Agents."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                     <p className="text-muted-foreground">The Agentic Web is not science fiction; it's being built today. This module explores the three main ways agents are currently being applied, showcasing how they are already changing our digital lives.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
@@ -496,7 +496,7 @@ export default function AgenticWebCoursePage() {
                         alt="Infographic showing The Future of the Agentic Web with Safety and Alignment, Agent Identity (KYA), and Agent Economy, plus a timeline from 2024 to 2027+."
                         width={1200}
                         height={675}
-                        className="w-full rounded-lg mb-6"
+                        className="w-full max-h-80 object-contain rounded-lg mb-6"
                     />
                      <p className="text-muted-foreground">The Agentic Web holds incredible promise, but it also presents significant challenges in security, ethics, and economics. This module explores the open questions we must solve to build a safe and prosperous agentic future.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
