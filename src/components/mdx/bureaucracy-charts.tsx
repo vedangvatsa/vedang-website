@@ -151,3 +151,59 @@ export function EGovernanceMaturity() {
     </figure>
   );
 }
+
+/* ─── US Regulatory Growth ─── */
+export function RegulatoryGrowth() {
+  const data = [
+    { year: '1970', pages: 20036 },
+    { year: '1980', pages: 73258 },
+    { year: '1990', pages: 53620 },
+    { year: '2000', pages: 74258 },
+    { year: '2010', pages: 81405 },
+    { year: '2016', pages: 95894 },
+    { year: '2020', pages: 86356 },
+    { year: '2024', pages: 106109 },
+  ];
+  const max = 110000;
+
+  return (
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-6 md:p-10">
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">US Federal Register Growth</h3>
+        <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Pages published per year (rules, proposed rules, notices)</p>
+
+        <div className="space-y-1.5">
+          {data.map((d) => (
+            <div key={d.year} className="grid grid-cols-[50px_1fr_80px] gap-2 items-center">
+              <span className="text-xs text-muted-foreground font-medium">{d.year}</span>
+              <div className="w-full h-4 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+                <div
+                  className="h-full rounded-md"
+                  style={{
+                    width: `${(d.pages / max) * 100}%`,
+                    backgroundColor: d.year === '2024' ? 'hsl(0 70% 45%)' : '#37352f',
+                    opacity: d.year === '2024' ? 0.8 : 0.35,
+                  }}
+                />
+              </div>
+              <div className="text-right">
+                <span className={`text-xs font-bold ${d.year === '2024' ? 'text-red-600 dark:text-red-400' : 'text-[#37352f] dark:text-[rgba(255,255,255,0.81)]'}`}>
+                  {(d.pages / 1000).toFixed(1)}K
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[10px] text-muted-foreground">
+          <span>2024 set a record at 106,109 pages (+19% YoY)</span>
+          <span>CFR: ~190,260 pages across 245 volumes (+38% since 2000)</span>
+        </div>
+
+        <p className="mt-2 text-[10px] text-muted-foreground/60">
+          Sources: Competitive Enterprise Institute (Ten Thousand Commandments), National Archives, Federal Register. 2024 figure is final.
+        </p>
+      </div>
+    </figure>
+  );
+}

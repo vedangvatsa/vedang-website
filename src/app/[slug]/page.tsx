@@ -23,7 +23,7 @@ import { GDPGrowthTimeline, GovernanceScorecard, IndustrialEvolution, Healthcare
 import { PerceptionArcTimeline, IndiaSectorBifurcation, IncomeThresholdChart, COOEffectSize } from '@/components/mdx/cheap-charts';
 import { AgentMarketGrowth, EnterpriseAdoption, CoaseDisruption } from '@/components/mdx/agent-economy-charts';
 import { BlockchainSnapshot, BlockchainPhases, L2ScalingLandscape, StablecoinRegulatory } from '@/components/mdx/blockchain-charts';
-import { RegulatoryFriction, BureaucracyCostChart, EGovernanceMaturity } from '@/components/mdx/bureaucracy-charts';
+import { RegulatoryFriction, BureaucracyCostChart, EGovernanceMaturity, RegulatoryGrowth } from '@/components/mdx/bureaucracy-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -309,6 +309,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               RegulatoryFriction,
               BureaucracyCostChart,
               EGovernanceMaturity,
+              RegulatoryGrowth,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
