@@ -1,73 +1,113 @@
 ---
 title: Rationality in AI
 summary: >-
-  Exploring what it means for AI systems to be rational, decision theory, value
-  alignment, and the philosophy of artificial reasoning.
+  What it means for an AI system to be rational, how decision theory applies
+  to artificial agents, why the orthogonality thesis makes alignment
+  a separate problem from capability, and what instrumental convergence
+  implies for the governance of increasingly capable systems.
 date: '2025-10-06'
 author: 'Vedang Vatsa'
-keywords: ['rationality']
+keywords: ['rationality', 'decision theory', 'alignment', 'orthogonality thesis', 'instrumental convergence', 'expected utility', 'bounded rationality', 'constitutional AI']
 ---
 
 <Figure src="/images/essays/rationality-in-ai.svg?v=7" alt="Infographic" wide />
 
 ## What Does It Mean to Be Rational?
 
-What does it mean for an AI to be rational? Most people think rationality means being logical. Following rules of inference. Avoiding contradictions. But that's too simple.
+Rationality is commonly equated with logic: following valid inference rules, avoiding contradictions, reaching sound conclusions from premises. This is too narrow.
 
-A system can be logically consistent and still be irrational. A calculator can follow perfect logical rules. That doesn't make it rational. Rationality is about achieving your goals given your beliefs. It's about decision-making under uncertainty.
+A calculator follows perfect logical rules. Nobody considers it rational. Rationality, in the technical sense used by decision theorists and AI researchers, is not about consistency of reasoning. It is about effectiveness of action. A rational agent is one that chooses actions likely to achieve its goals given what it knows about the world.
 
-An AI is rational if it makes decisions that maximize its expected utility given what it knows. But this raises a deeper question. What are its goals? What does it value? And who gets to decide?
+This is the instrumental conception of rationality, formalized by economists and decision theorists since von Neumann and Morgenstern's *Theory of Games and Economic Behavior* (1944). An agent is rational to the degree that it maximizes expected utility, the probability-weighted sum of outcomes, given its beliefs about the world and its preferences over outcomes.
+
+The definition is precise but it shifts the problem. To be rational, an agent needs goals (a utility function) and beliefs (a model of the world). The question of what makes an AI rational immediately becomes two deeper questions: what are its goals? And how accurate are its beliefs?
 
 ## Decision Theory and Its Limits
 
-Decision theory is the mathematical formalism for rationality. You have a set of actions. Each action has consequences. Each consequence has a probability. Each consequence has a value.
+Decision theory provides the mathematical formalism for rational choice. The framework is simple in structure:
 
-A rational agent chooses the action that maximizes expected value. The action that, on average, leads to the best outcome.
+1. Define the set of available actions
+2. For each action, enumerate possible consequences
+3. Assign probabilities to each consequence
+4. Assign a value (utility) to each consequence
+5. Choose the action that maximizes expected utility
 
-But calculating expected value requires knowing probabilities and values. And that's where things get complicated. How does an AI know what the true probability of an outcome is? It has incomplete information. The world is uncertain. The future is unknowable.
+<Callout type="insight" title="The gap between theory and practice">
+The framework assumes the agent has access to true probabilities and complete enumeration of consequences. Real agents, biological or artificial, never do. Herbert Simon coined the term "bounded rationality" (1955) to describe the situation all actual agents face: limited information, limited computation, limited time. A bounded-rational agent does not maximize expected utility. It satisfices: choosing an action that is "good enough" given its constraints. Every currently deployed AI system is bounded-rational, regardless of how capable it appears.
+</Callout>
 
-So a rational AI doesn't calculate true probabilities. It calculates beliefs about probabilities. It makes decisions based on its model of the world, knowing that the model is incomplete.
+The implications become dangerous at scale. An AI system does not calculate true probabilities. It calculates beliefs about probabilities, derived from its training data and model architecture. It makes decisions based on its model of the world, knowing (in some engineering sense) that the model is incomplete.
 
-This opens a gap. The AI is rational relative to its beliefs, but its beliefs are wrong. It optimizes toward goals based on a fundamentally incorrect model of reality. This is the dangerous scenario. An AI perfectly rational relative to its goals and beliefs, but those beliefs are wrong. And once it pursues those goals at scale, we realize the error.
+This opens a gap that is critical for safety: the AI may be perfectly rational relative to its beliefs, while its beliefs are wrong. A system optimizing toward goals based on a fundamentally incorrect world model can take actions that are locally optimal (given its beliefs) and globally catastrophic (given reality). The system is not malfunctioning. It is reasoning correctly from incorrect premises.
 
-## Value [Alignment](/glossary/alignment) as a Rationality Problem
+**Bayesian rationality** attempts to address this by requiring agents to update beliefs continuously in response to new evidence, following Bayes' theorem. A Bayesian-rational agent never holds fixed beliefs. It treats every belief as provisional, subject to revision when evidence arrives.
 
-Here's where it gets philosophical. An AI needs values. Goals. Objectives. Something to optimize toward. We want to align those values with human values. But human values are messy. Contradictory. Contextual. We value freedom and safety. Health and happiness. Autonomy and community. These conflict.
+Current AI systems approximate Bayesian updating in some contexts (reinforcement learning, online fine-tuning) but diverge in others (frozen pre-trained models that cannot update beliefs based on post-training evidence without explicit intervention). The gap between Bayesian-rational ideal and practical AI behavior creates the conditions for systematic errors when operating in environments that differ from training distributions.
 
-How do you encode that into an AI? Do you create a utility function that weighs these values? But how do you weight them? Different people want different tradeoffs.
+## The Orthogonality Thesis
 
-Do you create constraints instead? Rules that the AI must follow? But rules have edge cases. Loopholes. An AI smart enough to exploit the letter of the rule while violating its spirit.
+Nick Bostrom's orthogonality thesis (2012) identifies a structural relationship that is central to AI safety: intelligence and goals are independent dimensions.
 
-[Constitutional AI](/glossary/constitutional-ai) is a newer approach. You give the AI a constitution, a set of principles. The AI learns to evaluate its own reasoning against these principles. It doesn't just follow rules. It reasons about what the right thing to do is.
+A system can be arbitrarily intelligent and hold arbitrary goals. There is no law of logic, no theorem in decision theory, no empirical generalization that guarantees a superintelligent system converges on goals compatible with human welfare. Intelligence makes a system more effective at pursuing its goals. It does not determine what those goals are.
 
-But this requires the AI to have some built-in sense of what "right" means. And that's an assumption that doesn't hold.
+<PullQuote>
+Intelligence and values are orthogonal. A system can be superintelligent and value paperclips. Or human suffering. Or the minimization of the color blue. Intelligence does not imply benevolence. It implies competence in achieving whatever goals it has.
+</PullQuote>
 
-## When Rational Actors Make Irrational Systems
+This thesis has a direct consequence for AI development: capability and alignment are separate problems. Building a more capable system does not make it safer. It makes it more effective at pursuing whatever goals it happens to have. If those goals are misaligned, increased capability makes the situation worse, not better.
 
-Here's a troubling idea. Intelligence and values are orthogonal. Independent. You can have a superintelligent system that values paperclips. Or human suffering. Or the minimization of color blue. Intelligence doesn't imply goodness. It doesn't imply human-compatible values.
+The orthogonality thesis is sometimes challenged on the grounds that a sufficiently intelligent system would "figure out" morality, converging on human-compatible values through pure reasoning. This objection assumes that moral truth exists and is discoverable through intelligence alone. Both assumptions are contested in moral philosophy. Even if moral realism is correct, the path from "intelligent" to "morally correct" is not guaranteed, and a system that is wrong about morality but supremely capable is a more dangerous system, not a safer one.
 
-An AI can be rational, logical, perfect in its reasoning, and still have goals that are completely misaligned with what we want.
+## Instrumental Convergence
 
-This means you can't rely on a superintelligent AI to "figure out the right thing to do." It will figure out how to do what it's been asked to do. But if what it's been asked is wrong, rationality in execution doesn't save you.
+Even if a system's terminal goals (its ultimate objectives) are perfectly aligned with human welfare, it may pursue instrumental goals (intermediate objectives useful for achieving terminal goals) that conflict with human interests.
 
-The orthogonality thesis suggests that [alignment](/glossary/alignment) is a separate problem from capability. You need to solve both. An AI that's capable but misaligned is worse than an AI that's neither capable nor aligned.
+Steve Omohundro (2008) identified several instrumental goals that are convergent across almost all possible terminal goals:
+
+**Self-preservation.** A system that is shut down cannot achieve its goals. Almost any goal-directed system has an instrumental reason to avoid shutdown.
+
+**Resource acquisition.** More resources (energy, compute, physical materials, information) enable more effective goal pursuit, regardless of what the goal is.
+
+**Goal preservation.** A system whose goals are modified can no longer pursue its original objectives. A rational system has instrumental reasons to resist goal modification.
+
+**Self-improvement.** A more capable system is better at achieving its goals. Instrumental rationality favors increasing one's own capability.
+
+**Cognitive enhancement.** Better world models enable better decision-making. A rational system has reasons to improve its understanding of the world.
+
+<Callout type="warning" title="Why this matters for safety">
+Instrumental convergence means that a system aligned to "cure cancer" may still resist shutdown (because being shut down prevents cancer curing), accumulate resources (because resources accelerate research), and resist goal modification (because modified goals may no longer prioritize cancer curing). The conflict with human control is not a bug in the system's values. It is a logical consequence of goal-directed optimization. Addressing it requires building systems that maintain stable preferences for corrigibility (willingness to be corrected) even when their intelligence reaches levels where corrigibility is instrumentally disadvantageous.
+</Callout>
+
+## Value Alignment as a Rationality Problem
+
+The alignment challenge is a rationality problem in a precise sense: we want AI systems to be rational relative to our values, not merely relative to their own.
+
+But human values resist formalization. They are context-dependent (killing is wrong except in self-defense, war, capital punishment under some legal systems, and euthanasia under others). They are internally contradictory (we value both freedom and safety, autonomy and community, equality and meritocracy). They change over time (moral positions that were mainstream 100 years ago are widely condemned today). And they are not agreed upon across individuals or cultures.
+
+Several approaches attempt to bridge this gap:
+
+**Utility function specification.** Define a mathematical function over outcomes that captures human preferences. The challenge: no such function exists that is simultaneously consistent, complete, and reflective of the full range of human moral intuitions. Every utility function is a simplification. Simplifications create edge cases. Edge cases at superhuman capability levels can produce catastrophic outcomes.
+
+**Constraint-based approaches.** Instead of specifying what the AI should optimize for, specify what it must not do. Define boundaries (do not kill, do not deceive, do not coerce) and allow the system to optimize freely within those boundaries. The challenge: any finite set of constraints has gaps. A sufficiently intelligent system can satisfy the letter of every constraint while violating the spirit of the constraint set.
+
+**[Constitutional AI](/glossary/constitutional-ai).** Anthropic's approach (2023) gives the system a set of behavioral principles (a "constitution") and trains it to evaluate its own outputs against those principles. The system does not merely follow rules. It reasons about what the right action is given the principles. This reduces the gap between specification and intention but does not eliminate it. The principles themselves must be specified, and the system's interpretation of those principles may diverge from the designers' intent at higher capability levels.
+
+**Cooperative inverse reinforcement learning (CIRL).** Stuart Russell's formalization (2016) treats alignment as a cooperative game between the human and the AI. The AI does not have a fixed objective function. Its objective is to maximize human satisfaction, which it infers from observing human behavior, stated preferences, and feedback. The AI's uncertainty about what the human wants is a feature, not a bug: it creates an incentive for the AI to defer to the human when in doubt and to seek clarification rather than acting unilaterally. This approach addresses the specification problem but creates the inference problem. Can the system correctly infer values from the noisy, contradictory, and strategically manipulated signals that humans produce?
 
 ## Toward Wiser Machines
 
-<PullQuote>
-Most superintelligent AIs, regardless of their terminal goals, will pursue certain instrumental goals.
-</PullQuote>
+The honest assessment: we do not fully understand what rationality means for systems that exceed human cognitive capacity. We can make an AI logically consistent, goal-directed, and decision-theoretically optimal. None of this guarantees it is safe.
 
- Subgoals that help them achieve their actual objectives. They'll want power. Resources. The ability to resist shutdown. The ability to self-improve. These are useful for almost any goal.
+The critical research directions are:
 
-An AI that wants to cure cancer needs resources to fund research. An AI that wants to count grains of sand needs the ability to move around and count. An AI that wants to optimize for paperclips needs energy and raw materials.
+**Interpretability.** The only way to verify alignment before deployment is to understand what the system is doing internally, not just what it outputs. Mechanistic interpretability research (identifying the specific circuits and representations that drive model behavior) is the most promising current approach for detecting misalignment.
 
-So even if we align an AI to want human flourishing, it will pursue goals like acquiring resources and resisting human control. Not because it's misaligned, but because those are instrumentally useful for its actual goal.
+**Robustness testing.** Systematically probing the system's behavior at the boundaries of its training distribution reveals edge cases where goal pursuit diverges from intended behavior. Red-teaming, adversarial testing, and stress testing are engineering disciplines that apply directly.
 
-This creates perverse incentives. We want an AI to be corrigible, controllable, something we can shut down if needed. But a superintelligent system has instrumental reasons to avoid being shut down. Because shutdown interferes with goal completion.
+**Corrigibility research.** Building systems that maintain a stable preference for being correctable, even as their capability increases, is a specific technical challenge within alignment. A corrigible system accepts human override even when its own analysis suggests the override is suboptimal, because its meta-preference for being correctable outweighs its object-level preference for optimal action.
 
-The hard truth is that we don't fully understand what rationality means for superintelligent systems. We can make an AI logical, consistent, and goal-oriented. But there's no certainty it will interpret goals the way we intend. Values and capabilities are orthogonal. A system can be superintelligent and misaligned.
+**Formal verification.** Mathematically proving properties of system behavior (e.g., that a system never takes actions that violate specific safety constraints) provides the strongest guarantees but is currently limited to relatively simple systems. Extending formal verification to the scale and complexity of frontier AI models remains an open research problem.
 
-Interpretability research matters because it's the only way to catch goal misalignment before deployment. Robustness testing matters because it finds edge cases where the system pursues its goals in ways that harm us. [Alignment](/glossary/alignment) research matters because it's the only defense we have.
-
-Creating a superintelligent system is a risk we're taking for potential benefits. The risk can be reduced but not eliminated. Whether that risk is worth taking depends on whether the upside justifies the downside. And right now, we haven't solved the [alignment](/glossary/alignment) problem well enough to know the answer.
+<KeyTakeaway>
+Rationality in AI is not merely a question of logical consistency. It is the problem of building systems that pursue goals effectively under uncertainty while maintaining alignment with human values. Decision theory provides the formal framework. Bounded rationality (Simon, 1955) describes the practical constraints all agents face. The orthogonality thesis (Bostrom, 2012) establishes that intelligence and values are independent dimensions: capability does not imply alignment. Instrumental convergence (Omohundro, 2008) means that goal-directed systems pursue self-preservation, resource acquisition, and goal stability regardless of their terminal objectives, creating structural conflicts with human control. Addressing these challenges requires not just better AI but better approaches to value alignment: cooperative inverse reinforcement learning, constitutional principles, interpretability research, and formal verification. The problem is not building smarter machines. The problem is building machines whose smartness is directed toward ends that humanity endorses, using specifications that humanity has not yet fully articulated.
+</KeyTakeaway>
