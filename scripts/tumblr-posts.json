@@ -288,14 +288,16 @@
     "id": "lit-bosses",
     "scheduleDate": "2026-04-01",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Thrilled to announce that [mundane thing] has given me [exaggerated insight] which will [change the world somehow].\n\nThis is the most popular sentence format on LinkedIn. Every toxic manager was a masterclass in resilience. Every burnout was a recalibration of priorities.\n\nThe reverse translator strips the polish and shows what people probably meant.\n\nPaste any LinkedIn post and see what it really means: veda.ng/lit",
     "tags": [
       "linkedin",
       "humor",
       "satire"
     ],
-    "image": "scripts/thread-assets/lit_bosses.png"
+    "image": "scripts/thread-assets/lit_bosses.png",
+    "postedAt": "2026-04-01T12:08:49.112Z",
+    "tumblrId": "812693930768515072"
   },
   {
     "id": "solo-unicorn-3",

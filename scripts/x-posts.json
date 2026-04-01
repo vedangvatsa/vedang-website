@@ -255,9 +255,11 @@
     "id": "psych-helplessness",
     "scheduleDate": "2026-04-01",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/psych_helplessness.png",
-    "text": "After enough times being ignored, people stop raising their hand.\n\nNot because they stopped having ideas. Because they stopped expecting the idea to go anywhere.\n\nLearned helplessness is what happens when an organism experiences repeated situations where its actions have no effect. Eventually it stops trying, even when the situation changes.\n\nTeams that have been through multiple rounds of layoffs and reorgs carry this. The people who stayed watched proposals go nowhere. They learn the lesson even if it no longer applies.\n\nThis may be one of the real costs of restructuring that never shows up in the announcement."
+    "text": "After enough times being ignored, people stop raising their hand.\n\nNot because they stopped having ideas. Because they stopped expecting the idea to go anywhere.\n\nLearned helplessness is what happens when an organism experiences repeated situations where its actions have no effect. Eventually it stops trying, even when the situation changes.\n\nTeams that have been through multiple rounds of layoffs and reorgs carry this. The people who stayed watched proposals go nowhere. They learn the lesson even if it no longer applies.\n\nThis may be one of the real costs of restructuring that never shows up in the announcement.",
+    "postedAt": "2026-04-01T12:08:30.957Z",
+    "tweetId": "2039313957358276654"
   },
   {
     "id": "psych-hero",
