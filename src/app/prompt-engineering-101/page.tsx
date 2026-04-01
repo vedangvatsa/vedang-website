@@ -121,7 +121,27 @@ export default function PromptEngineeringCoursePage() {
                             <AccordionTrigger className="text-lg">What is Prompt Engineering?</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base">
                                 <p>At its core, a Large Language Model (LLM) is a powerful prediction engine. It takes a sequence of text (your prompt) and predicts the most likely next word, token by token. Prompt engineering is the art and science of designing high-quality prompts that guide the LLM to produce accurate, relevant, and useful outputs.</p>
-                                <p>You don't need to be a data scientist. Your job is not to build the model, but to communicate with it effectively. A well-crafted prompt can be the difference between a generic, useless response and a brilliant, insightful one.</p>
+                                <div className="grid md:grid-cols-2 gap-6 my-6">
+                                    <Card>
+                                        <CardHeader>
+                                            <CardTitle className="text-lg font-semibold">❌ A Weak Prompt</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <p className="text-sm text-muted-foreground italic">"Tell me about marketing."</p>
+                                            <p className="text-sm text-muted-foreground mt-2">This is vague. The AI has no idea what aspect of marketing you care about, what format you want, or who the audience is. The result will be generic and unhelpful.</p>
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-primary/50">
+                                        <CardHeader>
+                                            <CardTitle className="text-lg font-semibold">✅ A Strong Prompt</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <p className="text-sm text-muted-foreground italic">"You are a senior growth marketer. Create a 5-point email campaign strategy for a B2B SaaS startup targeting CTOs. Focus on cold outreach. Format as a numbered list with one-sentence explanations."</p>
+                                            <p className="text-sm text-muted-foreground mt-2">This gives the AI a role, a task, a target audience, constraints, and a format. The output will be specific, actionable, and useful.</p>
+                                        </CardContent>
+                                    </Card>
+                                </div>
+                                <p>You don't need to be a data scientist. Your job is not to build the model, but to communicate with it effectively. The difference between these two prompts is the difference between a generic response and a brilliant one.</p>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">

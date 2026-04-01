@@ -220,6 +220,24 @@ export default function AgenticWebCoursePage() {
                                     </li>
                                 </ol>
                                 <p>The defining characteristic is <strong>autonomy</strong>. You set the destination, and the agent figures out how to drive there, handling all the turns, traffic, and detours along the way. This shift from giving instructions to delegating intent is the central promise of the Agentic Web.</p>
+                                <div className="grid md:grid-cols-2 gap-6 my-6">
+                                    <Card>
+                                        <CardHeader>
+                                            <CardTitle className="text-lg font-semibold">A Chatbot (ChatGPT, Gemini)</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <p className="text-sm text-muted-foreground">You ask "What are the best flights to Tokyo?" and it gives you a text answer. You then manually go to each airline site, compare prices, enter your details, and book. The AI provides information. You do the work.</p>
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-primary/50">
+                                        <CardHeader>
+                                            <CardTitle className="text-lg font-semibold">An AI Agent (Operator, Mariner)</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <p className="text-sm text-muted-foreground">You say "Book the cheapest direct flight to Tokyo next Tuesday, window seat, and add travel insurance." The agent searches multiple sites, compares prices, selects the best option, fills in your details, and completes the booking. You approve the final action.</p>
+                                        </CardContent>
+                                    </Card>
+                                </div>
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>

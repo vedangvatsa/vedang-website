@@ -169,6 +169,24 @@ export default function Web3CoursePage() {
                                         <strong>Web3 (The Read-Write-Own Web):</strong> This is the next major shift, aiming to combine the decentralized, open ethos of Web1 with the rich, interactive experience of Web2. Built on technologies like blockchain, Web3 lets users actually own their data, assets, and identity. It's about moving power from centralized platforms back to users and creators.
                                     </li>
                                 </ul>
+                                <div className="grid md:grid-cols-2 gap-6 my-6">
+                                    <Card>
+                                        <CardHeader>
+                                            <CardTitle className="text-lg font-semibold">Web2 Today</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <p className="text-sm text-muted-foreground">You create content on Instagram, but Meta owns the platform. Your data is sold to advertisers. Your account can be banned without appeal. Platform takes 30-45% of creator revenue. Single point of failure.</p>
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-primary/50">
+                                        <CardHeader>
+                                            <CardTitle className="text-lg font-semibold">Web3 Alternative</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <p className="text-sm text-muted-foreground">You create content as NFTs on a decentralized protocol like Lens or Farcaster. You own your social graph. Royalties are enforced by smart contracts. No single entity can censor or de-platform you. Data is portable across apps.</p>
+                                        </CardContent>
+                                    </Card>
+                                </div>
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
@@ -463,6 +481,32 @@ export default function Web3CoursePage() {
                                     <li><strong>Regulation:</strong> Governments around the world are still grappling with how to regulate cryptocurrencies, DAOs, and DeFi. This legal and regulatory uncertainty creates risk for builders and users alike.</li>
                                     <li><strong>Security and Education:</strong> The self-custody model puts a huge burden on the user. Scams are rampant, and without proper education, new users are highly vulnerable. Building safer wallets and better educational resources is paramount.</li>
                                 </ul>
+                                <div className="grid md:grid-cols-2 gap-6 my-6">
+                                    <Card>
+                                        <CardHeader>
+                                            <CardTitle className="text-lg font-semibold">2024-2025 Milestones</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <ul className="text-sm text-muted-foreground space-y-1">
+                                                <li>Bitcoin and Ethereum spot ETFs approved in the US, opening crypto to traditional investors</li>
+                                                <li>Solana ecosystem growth accelerated, competing with Ethereum on speed and cost</li>
+                                                <li>EU's MiCA regulation created the first comprehensive crypto legal framework</li>
+                                            </ul>
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-primary/50">
+                                        <CardHeader>
+                                            <CardTitle className="text-lg font-semibold">2026 Trends to Watch</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <ul className="text-sm text-muted-foreground space-y-1">
+                                                <li>Account abstraction making wallets as easy as email login</li>
+                                                <li>AI agents interacting with DeFi protocols autonomously</li>
+                                                <li>Real-world asset tokenization (RWA) reaching mainstream finance</li>
+                                            </ul>
+                                        </CardContent>
+                                    </Card>
+                                </div>
                                 <p>Solving these challenges is the primary focus of the thousands of developers and entrepreneurs building in the Web3 space today. The journey is just beginning.</p>
                             </AccordionContent>
                         </AccordionItem>
