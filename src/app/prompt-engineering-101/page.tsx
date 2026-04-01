@@ -47,6 +47,22 @@ const faqItems = [
     question: "How do I avoid getting generic or wrong answers?",
     answer: "Be specific. The more detailed your instructions, the better the output. Use the techniques in this course: give examples, define a role for the AI, provide context, and clearly state your desired output format (like JSON or a bulleted list). Don't be afraid to iterate and refine your prompt."
   },
+  {
+    question: "Which AI model should I use for prompt engineering?",
+    answer: "For most tasks, GPT-4o, Claude 3.5 Sonnet, or Gemini 2.0 Flash are excellent choices. GPT-4o is strong across all categories. Claude excels at long documents and nuanced writing. Gemini is fast and handles multimodal inputs well. For simple tasks, smaller and cheaper models like GPT-4o Mini work fine. The best approach is to experiment with the same prompt across models and compare outputs."
+  },
+  {
+    question: "Will prompt engineering become obsolete as AI improves?",
+    answer: "The opposite is happening. As models become more capable, the leverage from a well-crafted prompt increases. What is changing is the style of prompting. Early prompting was about tricking models into performing. Modern prompting is about clear, structured communication, which is a skill that becomes more valuable over time, not less."
+  },
+  {
+    question: "What are hallucinations and how do I prevent them?",
+    answer: "Hallucinations are when the model generates plausible-sounding but factually incorrect information. To reduce them, be specific about what the model does and does not know, ask it to cite sources, use lower temperature settings, and include instructions like 'If you are unsure, say so rather than guessing.' For critical tasks, always verify the output independently."
+  },
+  {
+    question: "What is the difference between a system prompt and a user prompt?",
+    answer: "A system prompt sets the overall behavior, constraints, and persona for the AI across the entire conversation. It is like setting the rules of the game. A user prompt is the specific request within that conversation. For example, you might set a system prompt of 'You are a legal assistant who responds in plain English' and then send user prompts like 'Summarize this contract.' The system prompt shapes every response the model gives."
+  },
 ];
 
 const courseSchema = {

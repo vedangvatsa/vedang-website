@@ -83,6 +83,22 @@ const faqItems = [
     question: "How is Web3 different from Web2 (the current internet)?",
     answer: "The simplest way to think about it is ownership and control. Web1 was 'read-only' (static websites). Web2 is 'read-write,' but large tech companies own the platforms and control your data (think Facebook, Google, X). Web3 is 'read-write-own.' It's a shift from a platform-centric internet to a user-centric one, where you have more sovereignty over your data and digital assets through decentralized networks."
   },
+  {
+    question: "How much money do I need to get started with Web3?",
+    answer: "You can start for free. Setting up a wallet like MetaMask costs nothing. Many blockchains like Solana and Polygon have transaction fees measured in fractions of a cent. You can explore dApps, claim free airdrops, and learn the ecosystem without spending anything. Only invest money you can afford to lose, and start small."
+  },
+  {
+    question: "Is blockchain bad for the environment?",
+    answer: "This was a legitimate concern during Bitcoin's early years when Proof of Work mining consumed enormous amounts of energy. However, the industry has shifted significantly. Ethereum moved to Proof of Stake in 2022, reducing its energy consumption by over 99.9%. Most new blockchains (Solana, Polygon, Avalanche) use energy-efficient consensus mechanisms. The environmental argument against blockchain is increasingly outdated."
+  },
+  {
+    question: "What is DeFi and is it safe?",
+    answer: "DeFi (Decentralized Finance) refers to financial services built on blockchain, like lending, borrowing, and trading, without traditional banks as intermediaries. It offers higher yields and permissionless access, but carries real risks. Smart contract bugs, rug pulls, and impermanent loss are real. Start with established protocols like Aave and Uniswap, use small amounts, and never invest what you cannot afford to lose."
+  },
+  {
+    question: "What changed with the Bitcoin and Ethereum ETF approvals?",
+    answer: "In 2024, the SEC approved spot Bitcoin and Ethereum ETFs, allowing traditional investors to gain crypto exposure through regulated brokerage accounts without needing a wallet or exchange. This was a watershed moment. It brought institutional capital into crypto and legitimized the asset class in the eyes of regulators and financial advisors. It also reduced the UX barrier since anyone with a brokerage account can now hold crypto indirectly."
+  },
 ];
 
 const courseSchema = {

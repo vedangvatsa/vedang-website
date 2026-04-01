@@ -82,6 +82,22 @@ const faqItems = [
     question: "Do I need to be a programmer to understand the Agentic Web?",
     answer: "Not at all. This course is designed for a broad audience. The concepts are explained in a way that is accessible to everyone, regardless of technical background. It's more about understanding the paradigm shift, similar to how one might learn about the social media revolution without needing to code."
   },
+  {
+    question: "What are MCP and A2A, and why do they matter?",
+    answer: "MCP (Model Context Protocol) and A2A (Agent-to-Agent Protocol) are two open standards that define how agents interact with the world. MCP, created by Anthropic, is a universal connector that lets any agent use any tool through a single standard interface. A2A, created by Google, lets agents from different vendors discover and communicate with each other. Together, they are doing for agents what HTTP did for the web."
+  },
+  {
+    question: "How can I build my first AI agent?",
+    answer: "The fastest way to start is with a framework like Google's Agent Development Kit (ADK), LangGraph, or CrewAI. These frameworks handle the complex plumbing, so you can focus on defining your agent's goal, tools, and behavior. Many have getting-started tutorials that let you build a simple research or coding agent in under an hour. You will need basic Python knowledge."
+  },
+  {
+    question: "What happens to my data when I use an AI agent?",
+    answer: "This depends on the provider and how the agent is built. Cloud-based agents from OpenAI or Google process data on their servers, subject to their privacy policies. Open-source frameworks let you run agents locally for maximum privacy. The best practice is to give agents the minimum permissions necessary for the task, use sandboxed environments, and never give a single agent access to everything in your digital life."
+  },
+  {
+    question: "Can agents communicate with each other across companies?",
+    answer: "Yes, and this is exactly what the A2A protocol enables. Before A2A, an agent built with one vendor's tools could not easily work with an agent from another vendor. A2A creates a common language, Agent Cards, that lets agents discover each other's capabilities and collaborate, regardless of who built them. This interoperability is what will unlock the true potential of multi-agent workflows across organizations."
+  },
 ];
 
 const videoSchema = {
