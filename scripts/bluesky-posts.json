@@ -183,9 +183,11 @@
     "id": "psych-halo",
     "scheduleDate": "2026-04-01",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "A person walks into a room with a specific credential and the room adjusts before they say a word.\n\nThat is the halo effect. One impressive trait causes people to attribute other positive traits automatically.\n\nI have been on both sides of this.",
-    "image": "scripts/thread-assets/psych_halo.png"
+    "image": "scripts/thread-assets/psych_halo.png",
+    "postedAt": "2026-04-01T05:35:55.280Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mifxumrdpp2r"
   },
   {
     "id": "psych-helplessness",

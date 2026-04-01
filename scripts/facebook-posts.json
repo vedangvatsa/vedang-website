@@ -183,9 +183,11 @@
     "id": "solo-unicorn-2",
     "scheduleDate": "2026-04-01",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Middle management only exists because humans are hard to coordinate. You need people to watch people.\n\nAI agents do not need meetings. They do not need status updates. They do not need motivation.\n\nIf the work is purely digital, the management layer is just latency. Most companies will soon be 10x smaller and 100x more productive.",
-    "image": "scripts/thread-assets/solo_unicorn_2.png"
+    "image": "scripts/thread-assets/solo_unicorn_2.png",
+    "postedAt": "2026-04-01T05:35:59.144Z",
+    "fbPostId": "1785048661795414_1247703097539732"
   },
   {
     "id": "lit-bosses",
