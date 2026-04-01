@@ -67,13 +67,6 @@ export function Header() {
                 <DropdownMenuItem asChild>
                   <Link href="/media">Media & Speaking</Link>
                 </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem asChild>
-                  <Link href="/seo">SEO & Growth</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/community">Content & Community</Link>
-                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </nav>
