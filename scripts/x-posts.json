@@ -275,9 +275,11 @@
     "id": "psych-shadow",
     "scheduleDate": "2026-04-02",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/psych_shadow.png",
-    "text": "Every company has two versions of itself.\n\nThe one on the about page. And the one that shows up in the product decisions made when doing the right thing gets expensive.\n\nJung called this the shadow self. The part of the personality the conscious mind does not want to see.\n\nSocial media companies say they build connection. The product decisions say they build compulsion. Most people know this. Most people stay anyway.\n\nI think about this a lot when I read company values pages. The gap between the stated version and the actual version tends to compress over time. It usually resolves in the direction of the actual version."
+    "text": "Every company has two versions of itself.\n\nThe one on the about page. And the one that shows up in the product decisions made when doing the right thing gets expensive.\n\nJung called this the shadow self. The part of the personality the conscious mind does not want to see.\n\nSocial media companies say they build connection. The product decisions say they build compulsion. Most people know this. Most people stay anyway.\n\nI think about this a lot when I read company values pages. The gap between the stated version and the actual version tends to compress over time. It usually resolves in the direction of the actual version.",
+    "postedAt": "2026-04-02T05:20:45.489Z",
+    "tweetId": "2039573729714282797"
   },
   {
     "id": "psych-toxic-positivity",

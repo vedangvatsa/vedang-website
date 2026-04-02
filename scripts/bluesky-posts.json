@@ -213,9 +213,11 @@
     "id": "psych-shadow",
     "scheduleDate": "2026-04-02",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Every company has two versions of itself.\n\nThe one on the about page. And the one that shows up in the product decisions made when doing the right thing gets expensive.\n\nJung called this the shadow self. The part of the personality the conscious mind does not want to see.\n",
-    "image": "scripts/thread-assets/psych_shadow.png"
+    "image": "scripts/thread-assets/psych_shadow.png",
+    "postedAt": "2026-04-02T05:20:54.171Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3miihioss7g2x"
   },
   {
     "id": "psych-toxic-positivity",
