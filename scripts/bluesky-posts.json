@@ -233,9 +233,11 @@
     "id": "psych-attribution",
     "scheduleDate": "2026-04-03",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "When a competitor fails, the instinct is to say their product was bad or their team was weak.\n\nWhen something we worked on does not find traction, the instinct is to say the market was not ready or the timing was off.\n\nI have caught myself doing both in the same month.\n",
-    "image": "scripts/thread-assets/psych_attribution.png"
+    "image": "scripts/thread-assets/psych_attribution.png",
+    "postedAt": "2026-04-02T20:03:08.024Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mijysadf6n2n"
   },
   {
     "id": "psych-confirmation",

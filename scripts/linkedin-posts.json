@@ -263,9 +263,11 @@
     "id": "lit-scrolling",
     "scheduleDate": "2026-04-03",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/lit_scrolling.png",
-    "text": "Five years ago, people said they worked hard. Now they say they are deeply passionate about driving impact at scale.\n\nFive years ago, people ate lunch. Now they have wellness-optimised nutrition windows.\n\nThe algorithm trained millions of professionals to write like press releases.\n\nI built a tool that automates this inflation. Type what you actually did: veda.ng/lit"
+    "text": "Five years ago, people said they worked hard. Now they say they are deeply passionate about driving impact at scale.\n\nFive years ago, people ate lunch. Now they have wellness-optimised nutrition windows.\n\nThe algorithm trained millions of professionals to write like press releases.\n\nI built a tool that automates this inflation. Type what you actually did: veda.ng/lit",
+    "postedAt": "2026-04-02T20:03:02.774Z",
+    "postId": "urn:li:share:7445561454243766273"
   },
   {
     "id": "psych-bystander",

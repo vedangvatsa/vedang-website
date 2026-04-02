@@ -233,9 +233,11 @@
     "id": "psych-maslow",
     "scheduleDate": "2026-04-03",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "People do not want productivity tools.\n\nThey want to feel less behind. Less alone. More in control.\n\nMaslow mapped this out in 1943. Survival first. Then safety. Then belonging. Then status. Then growth. You cannot sell someone rung five when they are stuck on rung two.\n\nInstagram succeeded because it sold belonging, not photos. LinkedIn sells status, not jobs.\n\nI noticed this when I realised the AI tools I kept using were not the most powerful ones. They were the ones that made the work feel less isolating.\n\nThe AI products that may last are not the most capable. They are the ones that address the right rung.",
-    "image": "scripts/thread-assets/psych_maslow.png"
+    "image": "scripts/thread-assets/psych_maslow.png",
+    "postedAt": "2026-04-02T20:03:14.293Z",
+    "fbPostId": "1785048661795414_1249032754073433"
   },
   {
     "id": "ctc-arc",

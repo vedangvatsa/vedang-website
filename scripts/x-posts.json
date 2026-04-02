@@ -295,9 +295,11 @@
     "id": "psych-attribution",
     "scheduleDate": "2026-04-03",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/psych_attribution.png",
-    "text": "When a competitor fails, the instinct is to say their product was bad or their team was weak.\n\nWhen something we worked on does not find traction, the instinct is to say the market was not ready or the timing was off.\n\nI have caught myself doing both in the same month.\n\nThe fundamental attribution error is the name for this asymmetry. We explain others through character. We explain ourselves through circumstances.\n\nBoth explanations can be accurate in any specific case. The error is in the automatic direction of the explanation, not the conclusion.\n\nCompanies that learn the most from failure tend to apply the same framework to themselves that they apply to everyone else."
+    "text": "When a competitor fails, the instinct is to say their product was bad or their team was weak.\n\nWhen something we worked on does not find traction, the instinct is to say the market was not ready or the timing was off.\n\nI have caught myself doing both in the same month.\n\nThe fundamental attribution error is the name for this asymmetry. We explain others through character. We explain ourselves through circumstances.\n\nBoth explanations can be accurate in any specific case. The error is in the automatic direction of the explanation, not the conclusion.\n\nCompanies that learn the most from failure tend to apply the same framework to themselves that they apply to everyone else.",
+    "postedAt": "2026-04-02T20:02:58.763Z",
+    "tweetId": "2039795748250976365"
   },
   {
     "id": "psych-confirmation",
