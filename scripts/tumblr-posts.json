@@ -333,14 +333,16 @@
     "id": "ai-limits-2",
     "scheduleDate": "2026-04-02",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Intelligence used to be rare. Now it is becoming a utility. Like water or electricity.\n\nWhen something becomes a commodity, the value moves to what you do with it. Not the thing itself.\n\nOwning the model is not the win. Owning the problem that the model solves is the win.",
     "tags": [
       "ai",
       "technology",
       "future"
     ],
-    "image": "scripts/thread-assets/ai_limits_2.png"
+    "image": "scripts/thread-assets/ai_limits_2.png",
+    "postedAt": "2026-04-02T12:08:27.754Z",
+    "tumblrId": "812784504841322496"
   },
   {
     "id": "psych-maslow",
