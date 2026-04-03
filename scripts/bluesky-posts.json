@@ -253,9 +253,11 @@
     "id": "solo-unicorn-1",
     "scheduleDate": "2026-04-03",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "A company with one employee and a billion dollar valuation is no longer a joke. It is a mathematical certainty.\n\nWhen the cost of coordination drops to zero, the need for a 50-person team disappears.\n\nOne person with a strong idea can command 1,000 AI modules.",
-    "image": "scripts/thread-assets/solo_unicorn_1.png"
+    "image": "scripts/thread-assets/solo_unicorn_1.png",
+    "postedAt": "2026-04-03T12:02:26.634Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3milofmnqx62o"
   },
   {
     "id": "solo-unicorn-2",

@@ -378,14 +378,16 @@
     "id": "business-world-model",
     "scheduleDate": "2026-04-03",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Within a few years, most companies will have more AI agents running than human employees.\n\nThat is not a prediction. It is already starting.\n\nWhen that happens, the old management model breaks.\n\nToday you manage people. Check-ins, approvals, status updates. You stay on top because the number of decisions is manageable.\n\nWhen thousands of agents are making thousands of decisions a day, you cannot manage that way. You have to manage by exception. Scan for what broke. Simulate what to do next.\n\nThe problem is there is nothing to simulate on.\n\nEvery CEO already runs what-ifs in their head. \"If I cut prices here, what happens to margins there?\" The thinking exists. It just lives in one person's head and walks out the door when they leave.\n\nWhat needs to be built is that model in software. Autonomous cars had this problem first. Waymo does not train a car by telling it what to do. They build a world model. A simulation of the road where you run millions of what-ifs before the car touches real tarmac.\n\nBusiness needs that. Something connected to every system in the company. Not a dashboard. Not an agent. Something that answers: if I do X, what happens next?\n\nThe tools exist for the left side of that image.\n\nNobody has built the right side yet.",
     "tags": [
       "ai",
       "technology",
       "future"
     ],
-    "image": "scripts/thread-assets/world_model_gap.png"
+    "image": "scripts/thread-assets/world_model_gap.png",
+    "postedAt": "2026-04-03T12:02:35.819Z",
+    "tumblrId": "812874733314064384"
   },
   {
     "id": "lit-scrolling",
