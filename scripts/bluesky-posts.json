@@ -243,9 +243,11 @@
     "id": "psych-confirmation",
     "scheduleDate": "2026-04-03",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "I read the same AI news differently depending on what I already believe about AI.\n\nAn impressive result feels like confirmation. A failure feels expected. Neither reaction is fully honest.\n\nThis is confirmation bias. We look for evidence that supports what we already think.",
-    "image": "scripts/thread-assets/psych_confirmation.png"
+    "image": "scripts/thread-assets/psych_confirmation.png",
+    "postedAt": "2026-04-03T05:22:10.453Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mikxzuz3bw2x"
   },
   {
     "id": "solo-unicorn-1",

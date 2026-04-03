@@ -243,9 +243,11 @@
     "id": "ctc-arc",
     "scheduleDate": "2026-04-03",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Japan made transistor radios that broke. Then they made cars that didn't.\n\nBy 1985, Japanese cars had 25% of the US car market, up from near zero in 1965. The oil crisis forced people to try them. Once they did, the quality was evident.\n\nKorea's Hyundai entered the US in 1986 at $4,995. J.D. Power ranked it near the bottom. Twenty years later Samsung had overtaken Apple in global smartphone shipments.\n\nChina in 2000 meant cheap. China in 2023 is DJI holding 70% of the drone market and BYD being the largest EV manufacturer by volume. Western surveys still score \"Made in China\" below \"Made in Germany.\"\n\nIndia's GDP per capita in 2023 was $2,730. China's in 2007 was $2,651.\n\nThe perception tends to trail the reality. By 15 to 20 years. In every case so far.",
-    "image": "scripts/thread-assets/ctc_arc.png"
+    "image": "scripts/thread-assets/ctc_arc.png",
+    "postedAt": "2026-04-03T05:22:16.860Z",
+    "fbPostId": "1785048661795414_1249311174045591"
   },
   {
     "id": "business-world-model",

@@ -305,9 +305,11 @@
     "id": "psych-confirmation",
     "scheduleDate": "2026-04-03",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/psych_confirmation.png",
-    "text": "I read the same AI news differently depending on what I already believe about AI.\n\nAn impressive result feels like confirmation. A failure feels expected. Neither reaction is fully honest.\n\nThis is confirmation bias. We look for evidence that supports what we already think. We interpret ambiguous evidence in the direction of our existing view.\n\nAt scale, this is what recommendation algorithms do. They learn what you believe and surface evidence of it. Different people end up with genuinely different bodies of evidence. Not because one side is lying. Because both sides are only seeing what confirms their starting position.\n\nInvestors have this problem too. The founder who does not fit the pattern of past successes gets less attention, even when the underlying opportunity is the same."
+    "text": "I read the same AI news differently depending on what I already believe about AI.\n\nAn impressive result feels like confirmation. A failure feels expected. Neither reaction is fully honest.\n\nThis is confirmation bias. We look for evidence that supports what we already think. We interpret ambiguous evidence in the direction of our existing view.\n\nAt scale, this is what recommendation algorithms do. They learn what you believe and surface evidence of it. Different people end up with genuinely different bodies of evidence. Not because one side is lying. Because both sides are only seeing what confirms their starting position.\n\nInvestors have this problem too. The founder who does not fit the pattern of past successes gets less attention, even when the underlying opportunity is the same.",
+    "postedAt": "2026-04-03T05:22:00.293Z",
+    "tweetId": "2039936431632928784"
   },
   {
     "id": "solo-unicorn-1",
