@@ -303,9 +303,11 @@
     "id": "swarm-prediction-1",
     "scheduleDate": "2026-04-04",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/swarm_prediction.png",
-    "text": "One AI model gives you one opinion. What if you could run 100 of them against the same question and watch them argue?\n\nSwarm Intelligence Prediction puts up to 100 AI agents in a structured debate. They challenge each other across multiple rounds. The prediction that survives the most scrutiny wins.\n\nBring your own API key. Pick any major provider. Ask any question.\n\nTry it: veda.ng/swarm-prediction"
+    "text": "One AI model gives you one opinion. What if you could run 100 of them against the same question and watch them argue?\n\nSwarm Intelligence Prediction puts up to 100 AI agents in a structured debate. They challenge each other across multiple rounds. The prediction that survives the most scrutiny wins.\n\nBring your own API key. Pick any major provider. Ask any question.\n\nTry it: veda.ng/swarm-prediction",
+    "postedAt": "2026-04-04T05:10:05.159Z",
+    "postId": "urn:li:share:7446061509094498304"
   },
   {
     "id": "ctc-lag",
