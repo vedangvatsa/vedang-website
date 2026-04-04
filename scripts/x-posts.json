@@ -345,9 +345,11 @@
     "id": "ai-limits-1",
     "scheduleDate": "2026-04-04",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/ai_limits_1.png",
-    "text": "AI does not run on code. It runs on electricity.\n\nThe growth of the intelligence layer is now hitting a wall of physics.\n\nWe have enough silicon. We do not have enough power grids. Training runs are moving to where the energy is cheapest. Not where the talent is. Intelligence follows the power lines."
+    "text": "AI does not run on code. It runs on electricity.\n\nThe growth of the intelligence layer is now hitting a wall of physics.\n\nWe have enough silicon. We do not have enough power grids. Training runs are moving to where the energy is cheapest. Not where the talent is. Intelligence follows the power lines.",
+    "postedAt": "2026-04-04T11:53:28.856Z",
+    "tweetId": "2040397337630011601"
   },
   {
     "id": "ai-limits-2",

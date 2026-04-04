@@ -283,9 +283,11 @@
     "id": "ai-limits-1",
     "scheduleDate": "2026-04-04",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "AI does not run on code. It runs on electricity.\n\nThe growth of the intelligence layer is now hitting a wall of physics.\n\nWe have enough silicon. We do not have enough power grids. Training runs are moving to where the energy is cheapest. Not where the talent is.",
-    "image": "scripts/thread-assets/ai_limits_1.png"
+    "image": "scripts/thread-assets/ai_limits_1.png",
+    "postedAt": "2026-04-04T11:53:37.841Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mio6errasn2z"
   },
   {
     "id": "ai-limits-2",

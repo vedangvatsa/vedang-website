@@ -423,14 +423,16 @@
     "id": "ctc-india",
     "scheduleDate": "2026-04-04",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "India may have already completed the quality cycle in two sectors.\n\nSoftware exports went from $6 billion in 2001 to $194 billion in 2023. TCS and Infosys now compete on quality terms, not price.\n\nPharmaceuticals cover 20% of global generic exports and 40% of US generic drug approvals, meeting the same FDA standards as anything made in Switzerland.\n\nConsumer manufacturing is still early. Apple is now assembling iPhones in Tamil Nadu and Karnataka.\n\nJapan shifted perception through cars. Korea through smartphones. China may be doing it through EVs. India could do it through consumer electronics.\n\nIn every historical case, the reputation followed the reality. That pattern may hold here too.",
     "tags": [
       "ai",
       "technology",
       "future"
     ],
-    "image": "scripts/thread-assets/ctc_india.png"
+    "image": "scripts/thread-assets/ctc_india.png",
+    "postedAt": "2026-04-04T11:53:46.039Z",
+    "tumblrId": "812964774723846144"
   },
   {
     "id": "ai-timelines-uncertainty",
