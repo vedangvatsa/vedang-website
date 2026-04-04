@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #fff; }
+      .title { font-weight: 800; font-size: 18px; fill: #1a1a1a; }
+      .section-label { font-weight: 700; font-size: 10px; fill: #9ca3af; letter-spacing: 1.5px; text-transform: uppercase; }
+      .bar-label { font-weight: 600; font-size: 11px; fill: #6b7280; }
+      .bar-value { font-weight: 800; font-size: 11px; fill: #1a1a1a; }
+      .metric-value { font-weight: 800; font-size: 26px; fill: #1a1a1a; }
+      .metric-label { font-weight: 500; font-size: 10px; fill: #9ca3af; }
+      .era-label { font-weight: 600; font-size: 10px; fill: #6b7280; }
+      .era-pattern { font-weight: 700; font-size: 10px; fill: #1a1a1a; }
+      .highlight { fill: #1d4ed8; }
+      .highlight-bg { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 1.5; }
+      .divider { stroke: #e5e7eb; stroke-width: 1; }
+      .subtle { fill: #f3f4f6; }
+    </style>
+  </defs>
+  <rect width="900" height="380" class="bg" />
+
+  <!-- Title -->
+  <text x="40" y="38" class="title">THE YC PORTFOLIO, DECODED</text>
+  <text x="40" y="54" style="font-weight:400; font-size:10px; fill:#9ca3af;">5,818 companies · $1T+ combined valuation · April 2026</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="68" x2="860" y2="68" class="divider" />
+
+  <!-- LEFT COLUMN: Industry Distribution -->
+  <text x="40" y="92" class="section-label">INDUSTRY DISTRIBUTION</text>
+
+  <!-- B2B bar -->
+  <text x="40" y="118" class="bar-label">B2B</text>
+  <rect x="105" y="105" width="248" height="16" rx="2" fill="#2563eb" />
+  <text x="360" y="118" class="bar-value" style="fill:#2563eb;">51%</text>
+
+  <!-- Consumer bar -->
+  <text x="40" y="142" class="bar-label">Consumer</text>
+  <rect x="105" y="129" width="73" height="16" rx="2" fill="#e11d48" opacity="0.75" />
+  <text x="184" y="142" class="bar-value">15%</text>
+
+  <!-- Healthcare bar -->
+  <text x="40" y="166" class="bar-label">Healthcare</text>
+  <rect x="105" y="153" width="54" height="16" rx="2" fill="#7c3aed" opacity="0.7" />
+  <text x="165" y="166" class="bar-value">11%</text>
+
+  <!-- Fintech bar -->
+  <text x="40" y="190" class="bar-label">Fintech</text>
+  <rect x="105" y="177" width="52" height="16" rx="2" fill="#059669" opacity="0.7" />
+  <text x="163" y="190" class="bar-value">11%</text>
+
+  <!-- Industrials bar -->
+  <text x="40" y="214" class="bar-label">Industrials</text>
+  <rect x="105" y="201" width="29" height="16" rx="2" fill="#d97706" opacity="0.7" />
+  <text x="140" y="214" class="bar-value">6%</text>
+
+  <!-- Other bar -->
+  <text x="40" y="238" class="bar-label">Other</text>
+  <rect x="105" y="225" width="29" height="16" rx="2" fill="#9ca3af" opacity="0.5" />
+  <text x="140" y="238" class="bar-value">6%</text>
+
+  <!-- Vertical divider -->
+  <line x1="400" y1="75" x2="400" y2="360" class="divider" />
+
+  <!-- CENTER COLUMN: Tagline Evolution -->
+  <text x="420" y="92" class="section-label">TAGLINE EVOLUTION</text>
+
+  <!-- Era boxes -->
+  <rect x="420" y="104" width="200" height="28" rx="3" fill="#f9fafb" />
+  <text x="430" y="117" class="era-label">2005-12</text>
+  <text x="500" y="117" class="era-pattern">Platform for X</text>
+
+  <rect x="420" y="138" width="200" height="28" rx="3" fill="#f9fafb" />
+  <text x="430" y="151" class="era-label">2013-17</text>
+  <text x="500" y="151" class="era-pattern">Uber for X</text>
+
+  <rect x="420" y="172" width="200" height="28" rx="3" fill="#f9fafb" />
+  <text x="430" y="185" class="era-label">2018-22</text>
+  <text x="500" y="185" class="era-pattern">Infra for X</text>
+
+  <rect x="420" y="206" width="200" height="28" rx="3" fill="#f9fafb" />
+  <text x="430" y="219" class="era-label">2023-24</text>
+  <text x="500" y="219" class="era-pattern">AI-powered X</text>
+
+  <!-- Highlighted era -->
+  <rect x="420" y="240" width="200" height="32" rx="3" class="highlight-bg" />
+  <text x="430" y="258" class="era-label" style="fill:#1d4ed8;">2025-26</text>
+  <text x="500" y="258" class="era-pattern" style="fill:#1d4ed8;">AI agent for X</text>
+
+  <!-- Arrow connectors -->
+  <line x1="520" y1="132" x2="520" y2="138" style="stroke:#d1d5db; stroke-width:1.5;" />
+  <line x1="520" y1="166" x2="520" y2="172" style="stroke:#d1d5db; stroke-width:1.5;" />
+  <line x1="520" y1="200" x2="520" y2="206" style="stroke:#d1d5db; stroke-width:1.5;" />
+  <line x1="520" y1="234" x2="520" y2="240" style="stroke:#1d4ed8; stroke-width:1.5;" />
+
+  <!-- Vertical divider -->
+  <line x1="640" y1="75" x2="640" y2="360" class="divider" />
+
+  <!-- RIGHT COLUMN: Key Metrics (2x2 grid) -->
+  <text x="660" y="92" class="section-label">KEY METRICS</text>
+
+  <!-- Top-left metric -->
+  <rect x="660" y="104" width="90" height="64" rx="4" fill="#f9fafb" />
+  <text x="705" y="136" class="metric-value" text-anchor="middle">5,818</text>
+  <text x="705" y="155" class="metric-label" text-anchor="middle">Companies</text>
+
+  <!-- Top-right metric -->
+  <rect x="760" y="104" width="90" height="64" rx="4" fill="#f9fafb" />
+  <text x="805" y="136" class="metric-value" text-anchor="middle">$1T+</text>
+  <text x="805" y="155" class="metric-label" text-anchor="middle">Valuation</text>
+
+  <!-- Bottom-left metric -->
+  <rect x="660" y="178" width="90" height="64" rx="4" fill="#f9fafb" />
+  <text x="705" y="210" class="metric-value" text-anchor="middle">52%</text>
+  <text x="705" y="229" class="metric-label" text-anchor="middle">SF-based</text>
+
+  <!-- Bottom-right metric -->
+  <rect x="760" y="178" width="90" height="64" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="1" />
+  <text x="805" y="210" class="metric-value highlight" text-anchor="middle">70%</text>
+  <text x="805" y="229" class="metric-label" text-anchor="middle" style="fill:#2563eb;">B2B in W26</text>
+
+  <!-- Subtle SF skyline at bottom -->
+  <g opacity="0.08">
+    <rect x="40" y="340" width="820" height="2" fill="#9ca3af" />
+    <rect x="80" y="320" width="12" height="22" fill="#9ca3af" rx="1" />
+    <rect x="100" y="310" width="16" height="32" fill="#9ca3af" rx="1" />
+    <rect x="124" y="325" width="10" height="17" fill="#9ca3af" rx="1" />
+    <rect x="150" y="300" width="14" height="42" fill="#9ca3af" rx="1" />
+    <rect x="172" y="315" width="11" height="27" fill="#9ca3af" rx="1" />
+    <rect x="200" y="295" width="18" height="47" fill="#9ca3af" rx="1" />
+    <rect x="226" y="308" width="12" height="34" fill="#9ca3af" rx="1" />
+    <rect x="260" y="318" width="10" height="24" fill="#9ca3af" rx="1" />
+    <rect x="300" y="305" width="15" height="37" fill="#9ca3af" rx="1" />
+    <rect x="340" y="312" width="12" height="30" fill="#9ca3af" rx="1" />
+    <rect x="380" y="296" width="20" height="46" fill="#9ca3af" rx="1" />
+    <rect x="420" y="310" width="14" height="32" fill="#9ca3af" rx="1" />
+    <rect x="460" y="322" width="10" height="20" fill="#9ca3af" rx="1" />
+    <rect x="500" y="300" width="16" height="42" fill="#9ca3af" rx="1" />
+    <rect x="540" y="315" width="12" height="27" fill="#9ca3af" rx="1" />
+    <rect x="580" y="308" width="14" height="34" fill="#9ca3af" rx="1" />
+    <rect x="620" y="318" width="10" height="24" fill="#9ca3af" rx="1" />
+    <rect x="660" y="305" width="16" height="37" fill="#9ca3af" rx="1" />
+    <rect x="700" y="295" width="18" height="47" fill="#9ca3af" rx="1" />
+    <rect x="740" y="312" width="12" height="30" fill="#9ca3af" rx="1" />
+    <rect x="780" y="320" width="10" height="22" fill="#9ca3af" rx="1" />
+    <rect x="810" y="308" width="14" height="34" fill="#9ca3af" rx="1" />
+  </g>
+
+  <!-- Source line -->
+  <text x="40" y="370" style="font-weight:400; font-size:8px; fill:#d1d5db;">Source: YC Startup Directory (ycombinator.com/companies) · Analysis: April 2026</text>
+</svg>

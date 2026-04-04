@@ -24,6 +24,7 @@ import { PerceptionArcTimeline, IndiaSectorBifurcation, IncomeThresholdChart, CO
 import { AgentMarketGrowth, EnterpriseAdoption, CoaseDisruption } from '@/components/mdx/agent-economy-charts';
 import { BlockchainSnapshot, BlockchainPhases, L2ScalingLandscape, StablecoinRegulatory } from '@/components/mdx/blockchain-charts';
 import { RegulatoryFriction, BureaucracyCostChart, EGovernanceMaturity, RegulatoryGrowth } from '@/components/mdx/bureaucracy-charts';
+import { YCIndustryBreakdown, RecentBatchComposition, AgentLayerTaxonomy, YCGeoConcentration, AgentForXPattern, DefenseHardwareSurge, TaglineArchaeology, BatchSizeTimeline } from '@/components/mdx/yc-landscape-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -67,6 +68,7 @@ const ESSAY_GLOSSARY_LINKS: Record<string, string[]> = {
   'hustle-culture': ['agent', 'dao'],
   'agentic-commerce': ['agent', 'llm', 'api'],
   'towards-the-agentic-web': ['agent', 'llm', 'rag', 'api'],
+  'yc-landscape': ['agent', 'llm', 'api'],
 };
 
 const GLOSSARY_LABELS: Record<string, string> = {
@@ -310,6 +312,14 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               BureaucracyCostChart,
               EGovernanceMaturity,
               RegulatoryGrowth,
+              YCIndustryBreakdown,
+              RecentBatchComposition,
+              AgentLayerTaxonomy,
+              YCGeoConcentration,
+              AgentForXPattern,
+              DefenseHardwareSurge,
+              TaglineArchaeology,
+              BatchSizeTimeline,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img

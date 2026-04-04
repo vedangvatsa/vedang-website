@@ -1,0 +1,182 @@
+---
+title: 'The YC Portfolio, Decoded'
+summary: >-
+  An analysis of Y Combinator's 5,818 companies reveals five structural
+  shifts: B2B dominance at 51%, the rise of the AI employee, defense tech
+  at scale, SF concentration, and the consumer retreat.
+date: '2026-04-04'
+author: 'Vedang Vatsa'
+keywords: ['Y Combinator', 'YC', 'startup trends', 'AI agents', 'defense tech', 'venture capital', 'B2B SaaS', 'startup landscape', 'agentic AI']
+---
+
+<Figure src="/images/essays/yc-landscape-2026.svg" alt="YC Landscape 2026 Infographic" wide />
+
+<Callout type="insight" title="Key Findings">
+Y Combinator's public directory of 5,818 portfolio companies functions as a leading indicator for where the technology industry is heading. Five structural shifts emerge from the data: B2B now accounts for 51% of the portfolio and is accelerating toward 70% in recent batches. The dominant startup pitch has changed from "AI-powered X" to "AI agent/employee for X." Defense and hard-tech companies have appeared at unprecedented scale. San Francisco's gravitational pull has intensified despite remote work. And consumer internet, once YC's heartland, has contracted to under 15%.
+</Callout>
+
+
+## Why this dataset matters
+
+YC's selection process is a filter applied to thousands of applications per batch. The companies that pass through reflect not just founder ambition but the committee's assessment of what is technically feasible and commercially viable with current technology. When the composition shifts, it is worth investigating why.
+
+The analytical value of the directory is not in the famous companies. It is in the aggregate. Individually, each startup is a bet. Collectively, 5,818 of them form something closer to a census of where technical talent and venture capital believe the future is heading. This analysis covers the full portfolio as of April 2026, with focus on the five most recent batches (W25 through S26).
+
+A caveat is necessary. YC is not a neutral sample of the startup ecosystem. It selects for a specific founder profile (technical, willing to relocate, comfortable with YC's terms). Its batch composition reflects both market reality and its own institutional preferences. When YC funds a category aggressively, other founders notice and build in that space. The directory does not just reflect trends. It may also amplify them. The patterns described here should be read as "what YC is betting on," not as a forecast of what will succeed.
+
+
+## The B2B supermajority
+
+<YCIndustryBreakdown />
+
+The dominance of B2B is the most important structural fact. 2,964 companies, 51% of the portfolio, are classified as B2B. Consumer is a distant second at 14.9%. In the most recent batches, B2B has climbed to roughly 70%.
+
+<StatRow>
+<Stat value="51%" label="YC portfolio is B2B" source="YC Startup Directory" sourceUrl="https://www.ycombinator.com/companies" />
+<Stat value="2,964" label="B2B companies in portfolio" source="YC Directory (Apr 2026)" sourceUrl="https://www.ycombinator.com/companies" />
+<Stat value="~70%" label="B2B share in W26/S26" />
+<Stat value="<15%" label="Consumer share, declining" />
+</StatRow>
+
+This reflects a genuine inversion of the startup economy's center of gravity. The consumer internet thesis (build for millions, monetize with ads) created Airbnb and Reddit. But it also required viral distribution, low churn, and tolerance for years of pre-revenue growth. The enterprise thesis requires none of that. The buyer is a budget-holder with a measurable problem. The product replaces a line item on a P&L statement.
+
+The economic logic is straightforward. Consumer apps compete for attention in a saturated market against Apple, Google, and Meta as platform landlords. Enterprise software competes on ROI against the status quo. Customer acquisition cost in consumer can exceed lifetime value for years. In B2B, a single contract can fund the next year of development.
+
+<RecentBatchComposition />
+
+The batch-over-batch trend is directional. B2B has gained roughly 2 percentage points per batch since Winter 2025. Consumer has lost roughly the same amount. Whether this trend continues or mean-reverts depends on whether the underlying economics of enterprise AI hold up in practice.
+
+
+## From "AI-powered" to "AI employee"
+
+The most important signal in recent batches is not that most companies use AI. Of course they do. It is the linguistic and structural shift in what they promise. The taglines have changed from "AI that helps you do X" to "AI that does X for you." This is not marketing semantics. It reflects a different product architecture, a different pricing model, and a different labor market thesis.
+
+<TaglineArchaeology />
+
+The Winter 2026 batch makes this concrete. Cranston AI is a "Full Stack AI Accounting Firm." General Legal is "The AI native law firm." Foreman is "Keeping contractors on the job site, not behind a desk." Beacon Health builds "AI Employees for Primary Care." Copperlane is an "AI Mortgage Loan Officer."
+
+These are not copilots. The word "copilot" implies a human doing the work with machine assistance. These companies position as staffing replacements and, based on their public pricing pages, many charge per-task or per-seat rather than via traditional software licenses. Whether the products deliver on that positioning is a separate question from the fact that the positioning itself has shifted.
+
+The shift happened sharply between Summer 2024 and Winter 2025. Before that, YC companies used language like "AI-powered analytics" or "intelligent automation." After, they used "AI accountant" and "AI lawyer." The inflection point correlates with the release of models capable of reliable multi-step tool use (Claude 3.5, GPT-4o with function calling, Gemini 1.5), which made the "agent" framing technically credible rather than aspirational.
+
+<AgentLayerTaxonomy />
+
+The agent ecosystem has stratified into four layers. Infrastructure (compute, memory, hosting) at the bottom with roughly 65 companies. Development tools (testing, evaluation, debugging) in the middle at 40. Vertical applications (the agents doing actual jobs) at the top at 110. Governance and security wrapping around everything at 30.
+
+<Callout type="info" title="Platform maturation, compressed">
+Cloud computing took a decade to develop this stack: IaaS in the late 2000s, PaaS in the early 2010s, SaaS applications in the mid-2010s, security and compliance in the late 2010s. The agent economy is building all four layers simultaneously. This compression suggests that either the market will mature unusually fast, or that premature standardization will lead to significant re-architecture later.
+</Callout>
+
+<AgentForXPattern />
+
+
+## The "agent for X" saturation
+
+The coverage of verticals is now comprehensive enough to be its own data point. Legal, healthcare, accounting, construction, insurance, sales, DevOps, and supply chain each have 5 or more YC companies building dedicated AI agents. No major white-collar vertical has been left untouched.
+
+<PullQuote>
+The YC portfolio reads as a census of which white-collar job functions the technology industry is betting software can replace. Whether those bets pay off is a different question.
+</PullQuote>
+
+There is an important analytical distinction here. Previous waves of startup activity targeted industries with obvious software-shaped holes: restaurants without online ordering, hotels without dynamic pricing, banks without mobile apps. The current wave targets something different. It targets the human labor within industries that are already computerized. A law firm using Microsoft Word does not need digitization. These startups are selling the proposition that it needs fewer associates.
+
+When hundreds of funded startups simultaneously target the same job functions, the surviving ones (most will fail) inherit the market insight and technical progress of the cohort. Whether this translates into actual labor displacement depends on execution, regulation, and buyer adoption. Stanford's Digital Economy Lab has documented a 13-16% decline in entry-level employment in AI-exposed occupations since 2022. The YC data is consistent with that trend, though correlation between startup activity and employment outcomes should not be overstated.
+
+
+## Defense tech arrives
+
+<DefenseHardwareSurge />
+
+YC was historically a software accelerator. Hardware companies were rare and usually in consumer electronics (Pebble, Boosted). Defense companies were absent. That has changed.
+
+The 2025-2026 batches include Maquoketa Research (attack drones), 9 Mothers (AI weapon systems), Tenet Industries (drones as ammunition), Seeing Systems (AI-commanded drone swarms), Milliray (drone detection), Perseus Defense (counter-drone systems), Icarus (stratospheric platforms), and Wardstone (missile defense satellites).
+
+<StatRow>
+<Stat value="12+" label="Defense cos in recent batches" />
+<Stat value="18+" label="Robotics / manufacturing" />
+<Stat value="3x" label="Defense growth vs. 2024" />
+<Stat value="8" label="Space and aerospace" />
+</StatRow>
+
+Three forces help explain this. First, the Ukraine conflict highlighted the tactical value of small, cheap autonomous drones, creating demand that legacy contractors (Lockheed, Raytheon) have been slow to fill. Second, the US defense budget has grown and procurement pathways for dual-use technology have expanded through SBIR/STTR and DIU. Third, Anduril and Shield AI demonstrated that defense startups can win government contracts at meaningful scale. Whether this scales into a durable category or remains a niche within YC's portfolio is still open.
+
+The robotics surge is the civilian parallel. Philon, Almond, Mbodi AI, Verne Robotics, Servo7, and others reflect declining hardware costs and improving manipulation models. Unlike the consumer robot wave (Jibo, Kuri) that failed in 2017-2019, these target specific industrial workflows with identifiable buyers. That said, hardware startups face capital requirements and iteration cycles that software companies do not, and YC's track record with hardware remains mixed.
+
+
+## Geographic concentration
+
+<YCGeoConcentration />
+
+52% of all YC companies list San Francisco as their headquarters. This has not decreased in the remote work era. If anything, the most recent batches are more SF-concentrated than the historical average.
+
+The explanation is structural, not cultural. YC operates from SF. It selects for founders willing to relocate. Its network effects (introductions to investors, customers, potential hires) are strongest in the Bay Area. The result is a self-reinforcing loop: the best founders go to SF because the best investors are there, investors stay because the best founders come.
+
+<Callout type="warning" title="The remote paradox">
+52% of YC companies tag themselves as "Remote," and 52% list San Francisco as HQ. These overlap. Most YC startups are remote-friendly but SF-headquartered. The assumption that remote work decentralizes power is only partially true. Capital and network effects keep the center of mass in the Bay Area.
+</Callout>
+
+New York is second at 8%. India has emerged as the largest non-US geography at 4%, driven by Groww, Razorpay, Meesho, Clear, and Zepto. Notably, India's share has held steady despite rising geopolitical complexity around US-India tech relations.
+
+
+## Consumer retreat
+
+Consumer represented a much larger share of early YC batches (Reddit, Scribd, Twitch, Airbnb, DoorDash). Today it is 14.9% overall and under 10% in recent batches.
+
+The surviving consumer categories are narrow: gaming (Pax Historia, CodeWisp, Fifth Door), social (RealRoots, DigiPals), content creation (Flick, Pixley AI, Koyal), and language learning (Parrot, Pingo AI). But the broad consumer internet thesis is no longer the dominant YC playbook.
+
+What replaced it is the "prosumer agent" category. Meteor (AI-native browser), Blue (AI phone manager), VoiceOS (voice productivity assistant), and April (voice AI assistant) sit at the intersection of consumer UX and agent automation. Their value proposition is not engagement. It is delegation. The metric that matters is not daily active users but tasks completed per user.
+
+This is worth framing explicitly: the consumer internet competed for attention (time spent). The consumer agent economy competes for delegation (tasks transferred). That is a different product, a different business model, and a different relationship with the user.
+
+
+## Fintech specialization
+
+Fintech is 10.6% of the portfolio (618 companies). The pattern has shifted from platform plays (Stripe, Brex, Razorpay) to workflow-specific automation: Zolvo (commercial lending servicing), Proximitty (business loan servicing), Kita (credit review in emerging markets), Maywood (IB deal workflow).
+
+The more interesting development is agent-native financial infrastructure. Maven builds payments for voice agents. ZeroSettle handles in-app billing. SpotPay is a stablecoin bank account. Unifold handles multi-chain payments. Fintech is no longer about building the bank. It is about building the financial plumbing that AI agents need to transact autonomously. This ties directly to the x402 and MPP protocols described in our [Agentic Commerce](/agentic-commerce) analysis.
+
+
+## Batch dynamics
+
+<BatchSizeTimeline />
+
+Batch sizes grew from 8 companies in Summer 2005 to a peak of roughly 230 in 2022-2024. In 2025, sizes moderated to 148-168 and YC added a third annual batch (Fall). Winter 2026 returned to 199. Spring 2026, still in-progress, shows 69 companies.
+
+The three-batch cadence is the more important change. It allows YC to be responsive to markets that move faster than a twice-yearly application window can capture. When a new capability (like reliable computer-use agents) ships in October, founders working on that capability no longer have to wait until January to apply.
+
+The composition shift matters more than the size shift. Agent infrastructure and vertical agent applications barely existed in 2023 batches. By Winter 2026, they constitute the majority of accepted companies.
+
+
+## What the data shows, and what it does not
+
+Five patterns are visible in the data. Each comes with caveats.
+
+**The agent economy is being built like the cloud was.** The full infrastructure stack (compute, tooling, applications, governance) is being assembled simultaneously. Whether the market compresses the typical platform maturation cycle from a decade to two years, or whether premature standardization creates technical debt, remains to be seen.
+
+**Defense technology has appeared at scale in YC for the first time.** Geopolitical instability, expanded procurement, and successful precedents (Anduril, Shield AI, Palantir) have opened the category. Whether it persists depends on budget cycles, policy shifts, and whether YC-scale companies can navigate government procurement at scale.
+
+**Consumer internet is contracting within YC's portfolio.** The emerging replacement is the "consumer agent" model, where products compete for delegation rather than attention. This is a YC-specific pattern; consumer internet remains a large market outside the YC ecosystem.
+
+**Geographic concentration has not decreased.** San Francisco's dominance in YC's portfolio reflects YC's own location and selection preferences as much as it reflects startup geography broadly. Other accelerators (Techstars, Antler, Entrepreneur First) show different geographic distributions.
+
+**The "AI for X" pattern is concentrated in specific white-collar verticals.** Whether this translates into actual labor displacement depends on product quality, regulatory response, and buyer adoption speed. Startup funding activity is a necessary but not sufficient condition for market disruption.
+
+<KeyTakeaway>
+Y Combinator's 5,818-company portfolio shows a clear shift from the "AI-powered tool" era to the "AI employee" era. B2B dominates at 51% and rising. Defense and hard-tech have appeared at scale. Consumer has contracted to under 15%. The vertical-by-vertical deployment of AI agents across regulated industries is the dominant pattern in recent batches. What the data cannot tell us is how many of these companies will succeed, whether the agent framing reflects genuine capability or positioning, and whether the labor market implications will materialize as the startup pitches suggest. The YC directory is a signal of intent, not a guarantee of outcome.
+</KeyTakeaway>
+
+---
+
+## Sources
+
+| Source | Detail | Date |
+|--------|--------|------|
+| [YC Startup Directory](https://www.ycombinator.com/companies) | Full portfolio data, 5,818 companies | Apr 2026 |
+| [Stanford Digital Economy Lab](https://digitaleconomy.stanford.edu/) | Entry-level employment decline in AI-exposed occupations | Feb 2026 |
+| [Gartner](https://www.gartner.com/en/newsroom/press-releases) | 40% enterprise apps embed agents by end 2026 | 2025-2026 |
+| [Grand View Research](https://www.grandviewresearch.com/industry-analysis/ai-agents-market-report) | AI agents market $50B by 2030 | 2025 |
+| [McKinsey](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/agentic-commerce) | Agentic commerce $3-5T by 2030 | 2025 |
+| [WEF Future of Jobs](https://www.weforum.org/publications/the-future-of-jobs-report-2025/) | 170M new jobs, 92M displaced by 2030 | 2025 |
+| [Artemis Analytics](https://www.artemis.xyz/dashboard/agentic-commerce/market-map) | Agentic commerce market map, 173+ companies | 2026 |
+
+*Analysis conducted April 2026. Data from YC's public company directory.*
