@@ -313,9 +313,11 @@
     "id": "ctc-lag",
     "scheduleDate": "2026-04-05",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The lag has been consistent. In every case examined, it resolved.\n\n\"Made in Japan\" was a joke in 1955. By 1980 it meant precision engineering.\n\n\"Made in Korea\" meant cheap in 1986. By 2012 Samsung was number one globally.\n\n\"Made in China\" still registers below \"Made in Germany\" in consumer surveys. DJI holds 70% of the drone market. BYD is the largest EV maker by volume. The perception lag appears to be running about 15 years behind the current reality.\n\nIndia is at the start of that curve. GDP per capita of $2,730. Software and pharma may have already crossed. Consumer manufacturing has not yet.\n\nIf the historical pattern holds, the gap closes. It just takes time.",
-    "image": "scripts/thread-assets/ctc_lag.png"
+    "image": "scripts/thread-assets/ctc_lag.png",
+    "postedAt": "2026-04-05T11:54:57.434Z",
+    "fbPostId": "1785048661795414_1251084130534962"
   },
   {
     "id": "math-ai-highway",

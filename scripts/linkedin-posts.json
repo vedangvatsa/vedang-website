@@ -343,9 +343,11 @@
     "id": "psych-attachment",
     "scheduleDate": "2026-04-05",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/psych_attachment.png",
-    "text": "Some apps keep you coming back because they are good.\n\nSome keep you coming back because they never quite resolve the feeling that brought you there.\n\nAnxiety drives more return visits than satisfaction. Unpredictable rewards outperform consistent ones. Occasional viral posts surrounded by silence keep creators more hooked than steady performance.\n\nI catch myself opening apps for no clear reason. Not because I expect anything. Because there is an unresolved feeling and the reflex is to check.\n\nThe most retentive products may not be the most loved ones."
+    "text": "Some apps keep you coming back because they are good.\n\nSome keep you coming back because they never quite resolve the feeling that brought you there.\n\nAnxiety drives more return visits than satisfaction. Unpredictable rewards outperform consistent ones. Occasional viral posts surrounded by silence keep creators more hooked than steady performance.\n\nI catch myself opening apps for no clear reason. Not because I expect anything. Because there is an unresolved feeling and the reflex is to check.\n\nThe most retentive products may not be the most loved ones.",
+    "postedAt": "2026-04-05T11:54:45.467Z",
+    "postId": "urn:li:share:7446525736028655617"
   },
   {
     "id": "jevons-paradox-ai",

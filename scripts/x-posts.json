@@ -375,9 +375,11 @@
     "id": "lit-x-bosses",
     "scheduleDate": "2026-04-05",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/lit_bosses.png",
-    "text": "\"Working under different leadership styles has given me unparalleled insight into what great management looks like.\"\n\nTranslation: I have dealt with a lot of terrible bosses.\n\nReverse translator: veda.ng/lit"
+    "text": "\"Working under different leadership styles has given me unparalleled insight into what great management looks like.\"\n\nTranslation: I have dealt with a lot of terrible bosses.\n\nReverse translator: veda.ng/lit",
+    "postedAt": "2026-04-05T11:54:41.305Z",
+    "tweetId": "2040760028508860542"
   },
   {
     "id": "lit-x-scrolling",
