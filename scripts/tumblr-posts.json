@@ -483,14 +483,16 @@
     "id": "math-ai-highway",
     "scheduleDate": "2026-04-06",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "When cars arrived, cities tried to fit them into streets built for horses. That did not work. They built new roads for cars. Those worked. But they destroyed neighborhoods in the process.\n\nTerence Tao, the world's most celebrated living mathematician, thinks AI in mathematics is at the same point.\n\nMath journals, papers, conferences, advisor-student relationships. All of it was built for humans working at human speed. AI gets from hypothesis to proof faster. But it skips everything that makes the proof valuable beyond the answer.\n\nThe author develops skills. The reader gets a map of the terrain. Dead ends get documented. Future researchers know where not to go.\n\nAn AI proof skips all of that. It arrives at the destination and has nothing to say about the road.\n\nThe mistake happening right now is trying to make AI write papers that look like human papers. That is fitting a car into a horse street. It looks right from a distance and does not work up close.\n\nThe better path: build new infrastructure for the new tool. Large-scale mathematical challenges verified by proof assistants. Libraries of rough machine-generated proofs that humans then refine into something worth reading.\n\nThe goal is not to replace the walkable city. It is to build the highway without demolishing the neighborhood.\n\nWe have not been good at that historically.",
     "tags": [
       "ai",
       "technology",
       "future"
     ],
-    "image": "scripts/thread-assets/math_ai_city.png"
+    "image": "scripts/thread-assets/math_ai_city.png",
+    "postedAt": "2026-04-05T19:57:26.982Z",
+    "tumblrId": "813085801825107968"
   },
   {
     "id": "lit-meetings",

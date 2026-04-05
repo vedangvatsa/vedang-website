@@ -385,9 +385,11 @@
     "id": "lit-x-scrolling",
     "scheduleDate": "2026-04-06",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/lit_scrolling.png",
-    "text": "5 years ago people said they worked hard.\n\nNow they say they are deeply passionate about driving impact at scale.\n\n5 years ago people ate lunch.\n\nNow they have wellness-optimised nutrition windows.\n\nveda.ng/lit"
+    "text": "5 years ago people said they worked hard.\n\nNow they say they are deeply passionate about driving impact at scale.\n\n5 years ago people ate lunch.\n\nNow they have wellness-optimised nutrition windows.\n\nveda.ng/lit",
+    "postedAt": "2026-04-05T19:57:07.900Z",
+    "tweetId": "2040881439248413045"
   },
   {
     "id": "lit-x-meetings",
