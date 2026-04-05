@@ -303,9 +303,11 @@
     "id": "psych-dunning-kruger",
     "scheduleDate": "2026-04-05",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "I formed strong opinions about AI after a few weeks with it.\n\nThe longer I spent actually building with these systems, the less certain I became.\n\nThis is the Dunning-Kruger pattern. Early exposure produces peak confidence. Real depth produces more careful claims.\n\nAI may be running this cycle faster than anything before it. A week in and people publish threads about AGI timelines. Two years in and they ask more questions than they answer.\n\nThe loudest voices in any new technology tend to be the most recently arrived.",
-    "image": "scripts/thread-assets/psych_dunning_kruger.png"
+    "image": "scripts/thread-assets/psych_dunning_kruger.png",
+    "postedAt": "2026-04-05T05:25:52.261Z",
+    "fbPostId": "1785048661795414_1250877193888989"
   },
   {
     "id": "ctc-lag",

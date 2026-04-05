@@ -365,9 +365,11 @@
     "id": "lit-x-fired",
     "scheduleDate": "2026-04-05",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/lit_fired.png",
-    "text": "Nobody gets fired on LinkedIn. They navigate transitions.\n\nNobody fails. They pivot.\n\nI built a translator for this. The output is indistinguishable from real posts.\n\nveda.ng/lit"
+    "text": "Nobody gets fired on LinkedIn. They navigate transitions.\n\nNobody fails. They pivot.\n\nI built a translator for this. The output is indistinguishable from real posts.\n\nveda.ng/lit",
+    "postedAt": "2026-04-05T05:25:31.606Z",
+    "tweetId": "2040662093007831180"
   },
   {
     "id": "lit-x-bosses",
