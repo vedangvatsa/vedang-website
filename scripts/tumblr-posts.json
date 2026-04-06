@@ -498,14 +498,16 @@
     "id": "lit-meetings",
     "scheduleDate": "2026-04-06",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Nobody on LinkedIn has meetings. They have cross-functional alignment sessions.\n\nNobody wastes time. They invest in stakeholder engagement.\n\nNobody sits through pointless calls. They maximise collaborative synergies through immersive roundtable experiences.\n\nType what actually happened and watch it become a consulting deck: veda.ng/lit",
     "tags": [
       "linkedin",
       "humor",
       "satire"
     ],
-    "image": "scripts/thread-assets/lit_meetings.png"
+    "image": "scripts/thread-assets/lit_meetings.png",
+    "postedAt": "2026-04-06T05:38:48.331Z",
+    "tumblrId": "813122378106388480"
   },
   {
     "id": "psych-attachment",

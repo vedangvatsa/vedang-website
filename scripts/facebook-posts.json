@@ -333,9 +333,11 @@
     "id": "lit-meetings",
     "scheduleDate": "2026-04-06",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Nobody on LinkedIn has meetings. They have cross-functional alignment sessions.\n\nNobody wastes time. They invest in stakeholder engagement.\n\nNobody sits through pointless calls. They maximise collaborative synergies through immersive roundtable experiences.\n\nType what actually happened and watch it become a consulting deck: veda.ng/lit",
-    "image": "scripts/thread-assets/lit_meetings.png"
+    "image": "scripts/thread-assets/lit_meetings.png",
+    "postedAt": "2026-04-06T05:38:45.655Z",
+    "fbPostId": "1785048661795414_1251646757145366"
   },
   {
     "id": "psych-attachment",
