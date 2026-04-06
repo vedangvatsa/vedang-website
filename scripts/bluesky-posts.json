@@ -353,9 +353,11 @@
     "id": "swarm-x-prediction-1",
     "scheduleDate": "2026-04-07",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "One AI model gives you one opinion.\n\n100 AI agents debating across 16 rounds gives you something closer to truth.\n\nBuilt a swarm intelligence prediction tool. Bring your own API key. Ask any question.\n\nveda.ng/swarm-prediction",
-    "image": "scripts/thread-assets/swarm_prediction.png"
+    "image": "scripts/thread-assets/swarm_prediction.png",
+    "postedAt": "2026-04-06T20:06:23.111Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3miu2tqjtqt2g"
   },
   {
     "id": "ai-electricity-bottleneck",
