@@ -405,9 +405,11 @@
     "id": "lit-x-password",
     "scheduleDate": "2026-04-06",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/lit_password.png",
-    "text": "Forgetting a password on LinkedIn:\n\n\"Encountered a Temporary Credential Misalignment with a setback in personal identity management protocols.\"\n\nSatire is now indistinguishable from real LinkedIn posts.\n\nveda.ng/lit"
+    "text": "Forgetting a password on LinkedIn:\n\n\"Encountered a Temporary Credential Misalignment with a setback in personal identity management protocols.\"\n\nSatire is now indistinguishable from real LinkedIn posts.\n\nveda.ng/lit",
+    "postedAt": "2026-04-06T12:06:11.504Z",
+    "tweetId": "2041125311333515652"
   },
   {
     "id": "psych-dunning-kruger",

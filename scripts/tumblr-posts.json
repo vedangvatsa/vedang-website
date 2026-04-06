@@ -513,14 +513,16 @@
     "id": "psych-attachment",
     "scheduleDate": "2026-04-06",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Some apps keep you coming back because they are good.\n\nSome keep you coming back because they never quite resolve the feeling that brought you there.\n\nAnxiety drives more return visits than satisfaction. Unpredictable rewards outperform consistent ones. Occasional viral posts surrounded by silence keep creators more hooked than steady performance.\n\nI catch myself opening apps for no clear reason. Not because I expect anything. Because there is an unresolved feeling and the reflex is to check.\n\nThe most retentive products may not be the most loved ones.",
     "tags": [
       "psychology",
       "ai",
       "behavior"
     ],
-    "image": "scripts/thread-assets/psych_attachment.png"
+    "image": "scripts/thread-assets/psych_attachment.png",
+    "postedAt": "2026-04-06T12:06:27.545Z",
+    "tumblrId": "813146767102296064"
   },
   {
     "id": "jevons-paradox-ai",
