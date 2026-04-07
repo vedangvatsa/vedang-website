@@ -385,7 +385,8 @@
     "scheduleTime": "01:00",
     "posted": false,
     "text": "The smartest employees do not play the corporate game the usual way.\n\nThey build a side hustle outside their job. They do not chase manager titles for status. They keep interviewing even when employed. They treat everyone with respect... including the cleaner.\n\nThey push back on micromanagement. They decline useless meetings. They help others grow in their careers. They do not reply to every email.\n\nThey stay away from gossip and office politics. They build passive income so one job doesn't control their life.\n\nIt is about owning your time, not your title.",
-    "image": "scripts/thread-assets/psych_smart_employees.png"
+    "image": "scripts/thread-assets/psych_smart_employees.png",
+    "error": "Photo upload failed: 500 {\"error\":{\"code\":1,\"message\":\"An unknown error occurred\",\"error_subcode\":99}}"
   },
   {
     "id": "lit-password",
