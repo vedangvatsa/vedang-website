@@ -393,9 +393,11 @@
     "id": "lit-password",
     "scheduleDate": "2026-04-07",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/lit_password.png",
-    "text": "You know LinkedIn language has gone too far when forgetting a password becomes a Temporary Credential Misalignment with a setback in personal identity management protocols.\n\nA coffee break is a mindful recalibration of cognitive bandwidth. A nap is an investment in neural recovery.\n\nSatire is now indistinguishable from real posts. That is why I built the translator.\n\nTry it: veda.ng/lit"
+    "text": "You know LinkedIn language has gone too far when forgetting a password becomes a Temporary Credential Misalignment with a setback in personal identity management protocols.\n\nA coffee break is a mindful recalibration of cognitive bandwidth. A nap is an investment in neural recovery.\n\nSatire is now indistinguishable from real posts. That is why I built the translator.\n\nTry it: veda.ng/lit",
+    "postedAt": "2026-04-07T05:26:40.587Z",
+    "postId": "urn:li:share:7447152847894528000"
   },
   {
     "id": "psych-dunning-kruger",
