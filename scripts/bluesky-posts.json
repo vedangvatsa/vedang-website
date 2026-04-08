@@ -365,7 +365,8 @@
     "scheduleTime": "17:00",
     "posted": false,
     "text": "NVIDIA doubled its AI revenue forecast from $500B to $1T.\n\nAt the same keynote, they pitched their new chip on throughput per megawatt. Not speed. Not power.\n\nUS datacenter pipeline hit 241 GW. Up 159% in a year. Only a third is active. The grid cannot keep up.\n\nAI may be hitting an electricity bottleneck.",
-    "image": "scripts/thread-assets/ai_electricity.png"
+    "image": "scripts/thread-assets/ai_electricity.png",
+    "error": "Post failed: 400 {\"error\":\"InvalidRequest\",\"message\":\"Invalid app.bsky.feed.post record: grapheme too big (maximum 300, got 307) at $.record.text\"}"
   },
   {
     "id": "hustle-culture",
