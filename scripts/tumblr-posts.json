@@ -618,7 +618,7 @@
     "id": "ai-economy",
     "scheduleDate": "2026-04-09",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "The entry ramp is narrowing.\n\nStanford payroll data: junior workers in AI-exposed jobs down 16%. Senior workers stable. The gap is widening.\n\nSalesforce cut 4,000 positions. Duolingo dropped human contractors. The question: will AI gains flow broadly or concentrate narrowly?\n\nveda.ng/ai-economy",
     "tags": [
       "ai",
@@ -626,7 +626,9 @@
       "labor",
       "future"
     ],
-    "image": "scripts/thread-assets/ai_economy.png"
+    "image": "scripts/thread-assets/ai_economy.png",
+    "postedAt": "2026-04-08T20:12:48.992Z",
+    "tumblrId": "813358560073465856"
   },
   {
     "id": "agi-governance",

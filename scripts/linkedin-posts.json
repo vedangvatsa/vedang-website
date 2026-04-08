@@ -423,9 +423,11 @@
     "id": "agentic-commerce",
     "scheduleDate": "2026-04-09",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_commerce.png",
-    "text": "Your next customer is an algorithm.\n\nAI agents now handle shopping. You describe what you want. The agent searches multiple stores, compares options, and completes checkout. You never open a browser.\n\nEvery major platform shipped agent commerce products in the past year. Mastercard Agent Pay. Coinbase x402. Google's Universal Commerce Protocol.\n\nBrand loyalty weakens when an algorithm picks your products. Display ads lose relevance when the buyer is a machine.\n\nThe infrastructure is built. The protocols are live. What is missing is trust and merchant readiness.\n\nveda.ng/agentic-commerce"
+    "text": "Your next customer is an algorithm.\n\nAI agents now handle shopping. You describe what you want. The agent searches multiple stores, compares options, and completes checkout. You never open a browser.\n\nEvery major platform shipped agent commerce products in the past year. Mastercard Agent Pay. Coinbase x402. Google's Universal Commerce Protocol.\n\nBrand loyalty weakens when an algorithm picks your products. Display ads lose relevance when the buyer is a machine.\n\nThe infrastructure is built. The protocols are live. What is missing is trust and merchant readiness.\n\nveda.ng/agentic-commerce",
+    "postedAt": "2026-04-08T20:12:42.248Z",
+    "postId": "urn:li:share:7447738211772129280"
   },
   {
     "id": "dark-forest-internet",

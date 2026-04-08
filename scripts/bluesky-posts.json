@@ -374,7 +374,8 @@
     "scheduleTime": "01:00",
     "posted": false,
     "text": "After 55 hours per week, productivity drops to nearly zero.\n\nYou are not producing more. You are just present longer.\n\nChronic stress shrinks the hippocampus. The part of your brain for memory and learning physically gets smaller.\n\nHustle culture sells sacrifice as strategy. The biological cost is real.",
-    "image": "scripts/thread-assets/hustle_culture.png"
+    "image": "scripts/thread-assets/hustle_culture.png",
+    "error": "Post failed: 400 {\"error\":\"InvalidRequest\",\"message\":\"Invalid app.bsky.feed.post record: grapheme too big (maximum 300, got 304) at $.record.text\"}"
   },
   {
     "id": "api-states",

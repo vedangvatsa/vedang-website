@@ -435,9 +435,11 @@
     "id": "bureaucracy-tax",
     "scheduleDate": "2026-04-09",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/bureaucracy_tax.png",
-    "text": "You need a permit to build a house. Then another permit. Then an inspection. Then more permits.\n\nRules were supposed to create order. Instead they created sophisticated inertia dressed up as responsibility.\n\nThe assumption was that oversight creates safety. But oversight became the product. More people with incentive to slow things down. Procedures that optimize for protecting institutions, not for getting things done.\n\nDubai reduced licensing friction. Economic activity accelerated. Estonia digitized its government. Friction dropped to near zero.\n\nThe pattern is consistent. Institutions that survive on friction have no incentive to remove it.\n\nBureaucracy does not fail. It succeeds at self-preservation.\n\nveda.ng/bureaucracy-tax"
+    "text": "You need a permit to build a house. Then another permit. Then an inspection. Then more permits.\n\nRules were supposed to create order. Instead they created sophisticated inertia dressed up as responsibility.\n\nThe assumption was that oversight creates safety. But oversight became the product. More people with incentive to slow things down. Procedures that optimize for protecting institutions, not for getting things done.\n\nDubai reduced licensing friction. Economic activity accelerated. Estonia digitized its government. Friction dropped to near zero.\n\nThe pattern is consistent. Institutions that survive on friction have no incentive to remove it.\n\nBureaucracy does not fail. It succeeds at self-preservation.\n\nveda.ng/bureaucracy-tax",
+    "postedAt": "2026-04-08T20:12:38.173Z",
+    "tweetId": "2041972505083093243"
   },
   {
     "id": "dark-forest-internet",
