@@ -588,14 +588,16 @@
     "id": "lit-password",
     "scheduleDate": "2026-04-08",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "You know LinkedIn language has gone too far when forgetting a password becomes a Temporary Credential Misalignment with a setback in personal identity management protocols.\n\nA coffee break is a mindful recalibration of cognitive bandwidth. A nap is an investment in neural recovery.\n\nSatire is now indistinguishable from real posts. That is why I built the translator.\n\nTry it: veda.ng/lit",
     "tags": [
       "linkedin",
       "humor",
       "satire"
     ],
-    "image": "scripts/thread-assets/lit_password.png"
+    "image": "scripts/thread-assets/lit_password.png",
+    "postedAt": "2026-04-08T05:26:48.922Z",
+    "tumblrId": "813302817687273472"
   },
   {
     "id": "swarm-prediction-1",
