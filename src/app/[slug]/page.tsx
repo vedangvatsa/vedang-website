@@ -25,6 +25,9 @@ import { AgentMarketGrowth, EnterpriseAdoption, CoaseDisruption } from '@/compon
 import { BlockchainSnapshot, BlockchainPhases, L2ScalingLandscape, StablecoinRegulatory } from '@/components/mdx/blockchain-charts';
 import { RegulatoryFriction, BureaucracyCostChart, EGovernanceMaturity, RegulatoryGrowth } from '@/components/mdx/bureaucracy-charts';
 import { YCIndustryBreakdown, RecentBatchComposition, AgentLayerTaxonomy, YCGeoConcentration, AgentForXPattern, DefenseHardwareSurge, TaglineArchaeology, BatchSizeTimeline } from '@/components/mdx/yc-landscape-charts';
+import { UIComplexityComparison, APIAbstractionLayer, TextUIAdoption, PlatformShiftTimeline } from '@/components/mdx/universal-charts';
+import { StepwiseMaturityModel, ROIImpactStats } from '@/components/mdx/stepwise-charts';
+import { DigitalGovMaturity, EResidencyImpact, AgenticStateArchitecture } from '@/components/mdx/agentic-state-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -320,6 +323,15 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               DefenseHardwareSurge,
               TaglineArchaeology,
               BatchSizeTimeline,
+              UIComplexityComparison,
+              APIAbstractionLayer,
+              TextUIAdoption,
+              PlatformShiftTimeline,
+              StepwiseMaturityModel,
+              ROIImpactStats,
+              DigitalGovMaturity,
+              EResidencyImpact,
+              AgenticStateArchitecture,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img

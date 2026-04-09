@@ -125,7 +125,7 @@ export default function PromptEngineeringCoursePage() {
                 </CardHeader>
                 <CardContent className="p-6">
                     <Image
-                        src="/images/courses/PromptEngineering/PE_module1.png"
+                        src="/images/courses/PromptEngineering/PE_module1.webp"
                         alt="Infographic for Module 1 of Prompt Engineering 101, showing the LLM prediction flow and key model controls like Temperature and Top-K."
                         width={1200}
                         height={675}
@@ -183,7 +183,7 @@ export default function PromptEngineeringCoursePage() {
                 </CardHeader>
                 <CardContent className="p-6">
                     <Image
-                        src="/images/courses/PromptEngineering/PE_module2.png"
+                        src="/images/courses/PromptEngineering/PE_module2.webp"
                         alt="Infographic for Module 2 of Prompt Engineering 101, showing Zero-Shot, Few-Shot, Chain of Thought techniques and Role, System, Contextual prompting."
                         width={1200}
                         height={675}
@@ -243,7 +243,7 @@ export default function PromptEngineeringCoursePage() {
                 </CardHeader>
                  <CardContent className="p-6">
                     <Image
-                        src="/images/courses/PromptEngineering/PE_module3.png"
+                        src="/images/courses/PromptEngineering/PE_module3.webp"
                         alt="Infographic for Module 3, showing Chain of Thought, Self-Consistency, ReAct Loop, and Multimodal Input techniques."
                         width={1200}
                         height={675}
@@ -300,7 +300,7 @@ export default function PromptEngineeringCoursePage() {
                 </CardHeader>
                 <CardContent className="p-6">
                     <Image
-                        src="/images/courses/PromptEngineering/PE_module4.png"
+                        src="/images/courses/PromptEngineering/PE_module4.webp"
                         alt="Infographic for Module 4, showing three code prompting patterns: Write Code, Explain Code, and Debug Code."
                         width={1200}
                         height={675}
@@ -348,7 +348,7 @@ export default function PromptEngineeringCoursePage() {
                 </CardHeader>
                  <CardContent className="p-6">
                     <Image
-                        src="/images/courses/PromptEngineering/PE_module5.png"
+                        src="/images/courses/PromptEngineering/PE_module5.webp"
                         alt="Infographic for Module 5, showing best practices for expert prompting: Clarity, Iterate, and Security."
                         width={1200}
                         height={675}

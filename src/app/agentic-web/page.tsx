@@ -186,7 +186,7 @@ export default function AgenticWebCoursePage() {
                 </CardHeader>
                 <CardContent className="p-6">
                     <Image
-                        src="/images/courses/AgenticWeb/Agentic_module1.png"
+                        src="/images/courses/AgenticWeb/Agentic_module1.webp"
                         alt="Infographic showing the evolution from Web 1.0 Read to Web 2.0 Read-Write to Agentic Web Read-Write-Act, plus the four capabilities of an AI Agent: Perception, Reasoning, Action, Learning."
                         width={1200}
                         height={675}
@@ -267,7 +267,7 @@ export default function AgenticWebCoursePage() {
                 </CardHeader>
                 <CardContent className="p-6">
                     <Image
-                        src="/images/courses/AgenticWeb/Agentic_module2.png"
+                        src="/images/courses/AgenticWeb/Agentic_module2.webp"
                         alt="Infographic showing the building blocks of agentic systems: The Mind (Planning and Memory), The Hands (Tools like APIs and Web Search), and The Team (Multi-Agent hierarchical structure)."
                         width={1200}
                         height={675}
@@ -362,7 +362,7 @@ export default function AgenticWebCoursePage() {
                 </CardHeader>
                  <CardContent className="p-6">
                     <Image
-                        src="/images/courses/AgenticWeb/Agentic_module3.png"
+                        src="/images/courses/AgenticWeb/Agentic_module3.webp"
                         alt="Infographic showing the three dimensions of the Agentic Web as stacked layers: Intelligence Dimension at the base, Interaction Dimension in the middle, Economic Dimension at the top."
                         width={1200}
                         height={675}
@@ -420,7 +420,7 @@ export default function AgenticWebCoursePage() {
                 </CardHeader>
                 <CardContent className="p-6">
                     <Image
-                        src="/images/courses/AgenticWeb/Agentic_module4.png"
+                        src="/images/courses/AgenticWeb/Agentic_module4.webp"
                         alt="Infographic showing Agentic Applications in the Real World: Code Agents, Research Agents, Commerce Agents, and Enterprise Agents."
                         width={1200}
                         height={675}
@@ -492,7 +492,7 @@ export default function AgenticWebCoursePage() {
                 </CardHeader>
                  <CardContent className="p-6">
                     <Image
-                        src="/images/courses/AgenticWeb/Agentic_module5.png"
+                        src="/images/courses/AgenticWeb/Agentic_module5.webp"
                         alt="Infographic showing The Future of the Agentic Web with Safety and Alignment, Agent Identity (KYA), and Agent Economy, plus a timeline from 2024 to 2027+."
                         width={1200}
                         height={675}

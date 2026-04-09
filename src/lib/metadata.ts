@@ -14,7 +14,7 @@ export const pageMetadata = {
   home: {
     title: 'Vedang Vatsa — AI & Web3 Thought Leader',
     description:
-      'Vedang Vatsa — Founder of Hashtag Web3 (120k+ AI & Web3 professionals), Fellow of the Royal Society of Arts, IIT Kanpur alumnus. Explore essays on AI agents, blockchain, decentralized economies, and free courses on Vibe Coding, Prompt Engineering, and Web3.',
+      'Vedang Vatsa — Founder of Hashtag Web3 (120k+ professionals), FRSA, IIT Kanpur alumnus. Essays, research, and free courses on AI agents and Web3.',
     url: '/',
     keywords: ['AI Thought Leader', 'Web3 Expert', 'Blockchain Technology', 'Generative AI', 'Future of AI', 'Decentralized Finance', 'DeFi', 'Digital Assets', 'Web3 Ecosystem'],
   },

@@ -162,7 +162,7 @@ export default function Web3CoursePage() {
                 </CardHeader>
                 <CardContent className="p-6">
                     <Image
-                        src="/images/courses/Web3/Web3_module1.png"
+                        src="/images/courses/Web3/Web3_module1.webp"
                         alt="Infographic showing the evolution of the web from Web1 Read-Only to Web2 Read-Write to Web3 Read-Write-Own, with centralized vs decentralized network comparison."
                         width={1200}
                         height={675}
@@ -229,7 +229,7 @@ export default function Web3CoursePage() {
                 </CardHeader>
                 <CardContent className="p-6">
                     <Image
-                        src="/images/courses/Web3/Web3_module2.png"
+                        src="/images/courses/Web3/Web3_module2.webp"
                         alt="Infographic showing how blockchain works with chained blocks and smart contracts depicted as a vending machine analogy, plus Gas Fees, Validators, and Composability icons."
                         width={1200}
                         height={675}
@@ -271,7 +271,7 @@ export default function Web3CoursePage() {
                 </CardHeader>
                  <CardContent className="p-6">
                     <Image
-                        src="/images/courses/Web3/Web3_module3_smart.png"
+                        src="/images/courses/Web3/Web3_module3_smart.webp"
                         alt="Infographic showing Smart Contracts and Programmable Money, including IF-THEN execution, DeFi lending, trading, and stablecoins."
                         width={1200}
                         height={675}
@@ -311,7 +311,7 @@ export default function Web3CoursePage() {
                 </CardHeader>
                  <CardContent className="p-6">
                     <Image
-                        src="/images/courses/Web3/Web3_module3.png"
+                        src="/images/courses/Web3/Web3_module3.webp"
                         alt="Infographic showing the four pillars of the Web3 ecosystem: dApps, NFTs, DAOs, and DeFi with their key characteristics, plus a wallet passport section."
                         width={1200}
                         height={675}
@@ -387,7 +387,7 @@ export default function Web3CoursePage() {
                 </CardHeader>
                 <CardContent className="p-6">
                     <Image
-                        src="/images/courses/Web3/Web3_module5.png"
+                        src="/images/courses/Web3/Web3_module5.webp"
                         alt="Infographic showing Your Web3 Passport - Getting Started Safely with 4 steps: Get a Wallet, Secure Your Seed Phrase, Get Crypto, Explore."
                         width={1200}
                         height={675}
@@ -467,7 +467,7 @@ export default function Web3CoursePage() {
                 </CardHeader>
                  <CardContent className="p-6">
                     <Image
-                        src="/images/courses/Web3/Web3_module6.png"
+                        src="/images/courses/Web3/Web3_module6.webp"
                         alt="Infographic showing The Future of Web3 with Scalability, Interoperability, Mass Adoption sections and a timeline from 2015 to 2026+."
                         width={1200}
                         height={675}

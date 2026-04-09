@@ -144,7 +144,7 @@ export default function WikiPage() {
           <p className="mt-2 text-lg text-muted-foreground">The architecture behind swarm intelligence prediction</p>
 
           <Image
-            src="/images/swarm/graph.png"
+            src="/images/swarm/graph.webp"
             alt="Knowledge graph network"
             width={520}
             height={520}
@@ -196,7 +196,7 @@ export default function WikiPage() {
               ))}
             </div>
             <Image
-              src="/images/swarm/pipeline.png"
+              src="/images/swarm/pipeline.webp"
               alt="Pipeline flow diagram"
               width={520}
               height={520}

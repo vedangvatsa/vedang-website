@@ -33,6 +33,7 @@ export const metadata: Metadata = {
       },
     ]
   },
+  authors: [{ name: 'Vedang Vatsa', url: 'https://veda.ng' }],
   robots: {
     index: true,
     follow: true,
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
+      'max-snippet': 300,
     },
   },
   twitter: {
@@ -60,6 +61,11 @@ const websiteSchema = {
   name: 'Vedang Vatsa',
   url: 'https://veda.ng',
   description: 'Official website of Vedang Vatsa — AI & Web3 thought leader, founder of Hashtag Web3.',
+  publisher: {
+    '@type': 'Person',
+    name: 'Vedang Vatsa',
+    url: 'https://veda.ng',
+  },
   potentialAction: {
     '@type': 'SearchAction',
     target: {

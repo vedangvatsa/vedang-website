@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #f8fafc; }
+      .title { font-weight: 800; font-size: 22px; fill: #0f172a; text-anchor: middle; }
+      .subtitle { font-weight: 600; font-size: 11px; fill: #64748b; text-anchor: middle; letter-spacing: 0.15em; }
+      .step { rx: 8; }
+      .step-1 { fill: #f1f5f9; stroke: #cbd5e1; stroke-width: 1.5; }
+      .step-2 { fill: #e0f2fe; stroke: #7dd3fc; stroke-width: 1.5; }
+      .step-3 { fill: #dbeafe; stroke: #60a5fa; stroke-width: 1.5; }
+      .step-4 { fill: #3b82f6; stroke: none; }
+      .text-dark { font-weight: 700; font-size: 12px; fill: #0f172a; text-anchor: middle; }
+      .text-sub { font-weight: 400; font-size: 10px; fill: #64748b; text-anchor: middle; }
+      .text-white { font-weight: 700; font-size: 12px; fill: #ffffff; text-anchor: middle; }
+      .text-white-sub { font-weight: 400; font-size: 10px; fill: rgba(255,255,255,0.8); text-anchor: middle; }
+      .stage-num { font-weight: 800; font-size: 32px; fill: #cbd5e1; text-anchor: middle; }
+      .stage-num-active { font-weight: 800; font-size: 32px; fill: rgba(255,255,255,0.3); text-anchor: middle; }
+      .arrow { stroke: #94a3b8; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#94a3b8" />
+    </marker>
+  </defs>
+  <rect width="800" height="400" class="bg" rx="16" />
+  <text x="400" y="42" class="title">THE STEPWISE APPROACH TO ENTERPRISE AI</text>
+  <text x="400" y="62" class="subtitle">FOUR-STAGE MATURITY MODEL</text>
+  
+  <!-- Stage 1 -->
+  <rect x="30" y="90" width="170" height="210" class="step step-1" />
+  <text x="115" y="130" class="stage-num">1</text>
+  <text x="115" y="160" class="text-dark">Exploration</text>
+  <text x="115" y="180" class="text-sub">Individual tool use</text>
+  <text x="115" y="195" class="text-sub">ChatGPT, Claude</text>
+  <text x="115" y="215" class="text-sub">1-2 hrs saved/week</text>
+  <text x="115" y="235" class="text-sub">No official strategy</text>
+  <text x="115" y="270" class="text-sub">Building literacy</text>
+  
+  <!-- Arrow -->
+  <line x1="200" y1="195" x2="225" y2="195" class="arrow" />
+  
+  <!-- Stage 2 -->
+  <rect x="225" y="90" width="170" height="210" class="step step-2" />
+  <text x="310" y="130" class="stage-num">2</text>
+  <text x="310" y="160" class="text-dark">Active Pilot</text>
+  <text x="310" y="180" class="text-sub">Single bottleneck</text>
+  <text x="310" y="195" class="text-sub">Targeted integration</text>
+  <text x="310" y="215" class="text-sub">Measurable results</text>
+  <text x="310" y="235" class="text-sub">Narrow scope</text>
+  <text x="310" y="270" class="text-sub">Proving ROI</text>
+  
+  <!-- Arrow -->
+  <line x1="395" y1="195" x2="420" y2="195" class="arrow" />
+  
+  <!-- Stage 3 -->
+  <rect x="420" y="90" width="170" height="210" class="step step-3" />
+  <text x="505" y="130" class="stage-num">3</text>
+  <text x="505" y="160" class="text-dark">Operational</text>
+  <text x="505" y="180" class="text-sub">Native integration</text>
+  <text x="505" y="195" class="text-sub">Human-in-the-loop</text>
+  <text x="505" y="215" class="text-sub">Cross-system data</text>
+  <text x="505" y="235" class="text-sub">Governance active</text>
+  <text x="505" y="270" class="text-sub">Scaling trust</text>
+  
+  <!-- Arrow -->
+  <line x1="590" y1="195" x2="615" y2="195" class="arrow" />
+  
+  <!-- Stage 4 -->
+  <rect x="615" y="90" width="170" height="210" class="step step-4" />
+  <text x="700" y="130" class="stage-num-active">4</text>
+  <text x="700" y="160" class="text-white">Systemic</text>
+  <text x="700" y="180" class="text-white-sub">Agent-to-agent</text>
+  <text x="700" y="195" class="text-white-sub">Autonomous ops</text>
+  <text x="700" y="215" class="text-white-sub">Strategic AI decisions</text>
+  <text x="700" y="235" class="text-white-sub">Full orchestration</text>
+  <text x="700" y="270" class="text-white-sub">Competitive edge</text>
+  
+  <!-- Bottom stats -->
+  <rect x="30" y="325" width="230" height="55" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1" />
+  <text x="145" y="350" font-weight="800" font-size="16" fill="#dc2626" text-anchor="middle" font-family="Inter">40% at risk</text>
+  <text x="145" y="367" font-weight="400" font-size="10" fill="#94a3b8" text-anchor="middle" font-family="Inter">Gartner: Projects skipping stages</text>
+  
+  <rect x="280" y="325" width="230" height="55" rx="6" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1" />
+  <text x="395" y="350" font-weight="800" font-size="16" fill="#16a34a" text-anchor="middle" font-family="Inter">3-6 month ROI</text>
+  <text x="395" y="367" font-weight="400" font-size="10" fill="#94a3b8" text-anchor="middle" font-family="Inter">Stepwise pilot deployments</text>
+  
+  <rect x="530" y="325" width="250" height="55" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1" />
+  <text x="655" y="350" font-weight="800" font-size="16" fill="#dc2626" text-anchor="middle" font-family="Inter">Klarna: $60M saved, then pivoted</text>
+  <text x="655" y="367" font-weight="400" font-size="10" fill="#94a3b8" text-anchor="middle" font-family="Inter">Skipped Stage 3 → quality declined</text>
+</svg>

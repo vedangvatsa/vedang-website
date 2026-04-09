@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #f8fafc; }
+      .title { font-weight: 800; font-size: 22px; fill: #0f172a; text-anchor: middle; }
+      .subtitle { font-weight: 600; font-size: 11px; fill: #64748b; text-anchor: middle; letter-spacing: 0.15em; }
+      .box { rx: 6; }
+      .box-primary { fill: #3b82f6; stroke: none; }
+      .box-muted { fill: #e2e8f0; stroke: #cbd5e1; stroke-width: 1; }
+      .box-dark { fill: #1e293b; stroke: none; }
+      .text-white { font-weight: 700; font-size: 12px; fill: #ffffff; text-anchor: middle; }
+      .text-dark { font-weight: 600; font-size: 11px; fill: #334155; text-anchor: middle; }
+      .text-small { font-weight: 400; font-size: 10px; fill: #94a3b8; text-anchor: middle; }
+      .arrow { stroke: #94a3b8; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .dashed { stroke: #cbd5e1; stroke-width: 1.5; stroke-dasharray: 4 3; fill: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#94a3b8" />
+    </marker>
+  </defs>
+  <rect width="800" height="400" class="bg" rx="16" />
+  <text x="400" y="42" class="title">THE TEXT FIELD IS THE NEW DASHBOARD</text>
+  <text x="400" y="62" class="subtitle">FROM NAVIGATION TO NATURAL LANGUAGE</text>
+  
+  <!-- Intent Layer -->
+  <rect x="250" y="85" width="300" height="45" class="box box-primary" />
+  <text x="400" y="113" class="text-white">Natural Language Text Field</text>
+  
+  <!-- Arrow down -->
+  <line x1="400" y1="130" x2="400" y2="155" class="arrow" />
+  
+  <!-- AI Translation Layer -->
+  <rect x="200" y="155" width="400" height="40" class="box box-dark" />
+  <text x="400" y="180" class="text-white">AI Agent / Intent Compiler (MCP + Function Calling)</text>
+  
+  <!-- Arrow down splits -->
+  <line x1="400" y1="195" x2="400" y2="220" class="arrow" />
+  
+  <!-- API Layer boxes -->
+  <rect x="40" y="220" width="130" height="55" class="box box-muted" />
+  <text x="105" y="244" class="text-dark">Analytics</text>
+  <text x="105" y="259" class="text-small">PostHog · Amplitude</text>
+  
+  <rect x="190" y="220" width="130" height="55" class="box box-muted" />
+  <text x="255" y="244" class="text-dark">CRM</text>
+  <text x="255" y="259" class="text-small">Salesforce · HubSpot</text>
+  
+  <rect x="340" y="220" width="130" height="55" class="box box-muted" />
+  <text x="405" y="244" class="text-dark">Codebase</text>
+  <text x="405" y="259" class="text-small">GitHub · Cursor · IDE</text>
+  
+  <rect x="490" y="220" width="130" height="55" class="box box-muted" />
+  <text x="555" y="244" class="text-dark">Knowledge</text>
+  <text x="555" y="259" class="text-small">Glean · Slack AI</text>
+  
+  <rect x="640" y="220" width="130" height="55" class="box box-muted" />
+  <text x="705" y="244" class="text-dark">Finance</text>
+  <text x="705" y="259" class="text-small">Stripe · QuickBooks</text>
+  
+  <!-- Dashed connections -->
+  <line x1="105" y1="220" x2="250" y2="195" class="dashed" />
+  <line x1="255" y1="220" x2="320" y2="195" class="dashed" />
+  <line x1="405" y1="220" x2="400" y2="195" class="dashed" />
+  <line x1="555" y1="220" x2="480" y2="195" class="dashed" />
+  <line x1="705" y1="220" x2="560" y2="195" class="dashed" />
+  
+  <!-- Stats row -->
+  <rect x="40" y="310" width="170" height="65" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1" />
+  <text x="125" y="337" font-weight="800" font-size="20" fill="#3b82f6" text-anchor="middle" font-family="Inter">10,000+</text>
+  <text x="125" y="355" class="text-small">MCP Servers</text>
+  
+  <rect x="230" y="310" width="170" height="65" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1" />
+  <text x="315" y="337" font-weight="800" font-size="20" fill="#3b82f6" text-anchor="middle" font-family="Inter">97M</text>
+  <text x="315" y="355" class="text-small">Monthly SDK Downloads</text>
+  
+  <rect x="420" y="310" width="170" height="65" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1" />
+  <text x="505" y="337" font-weight="800" font-size="20" fill="#3b82f6" text-anchor="middle" font-family="Inter">93%</text>
+  <text x="505" y="355" class="text-small">Want NL Data Queries</text>
+  
+  <rect x="610" y="310" width="170" height="65" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1" />
+  <text x="695" y="337" font-weight="800" font-size="20" fill="#3b82f6" text-anchor="middle" font-family="Inter">46%</text>
+  <text x="695" y="355" class="text-small">Code by Copilot</text>
+</svg>

@@ -5,16 +5,10 @@ import { PageLayout } from '@/components/page-layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import {
-  Award,
   BookOpen,
-  Briefcase,
-  GraduationCap,
-  Heart,
   Instagram,
-  Lightbulb,
   Linkedin,
   Mail,
-  MessageSquare,
   Send,
   Twitter,
 } from 'lucide-react';
@@ -85,22 +79,22 @@ export default function ProfilePage() {
              Computer Engineer, MBA, Chartered Engineer | Young Researcher 2020 Awardee (22 publications) & Young Achiever 2020-21 Awardee
             </p>
             <div className="mt-4 flex justify-center items-center space-x-4">
-              <Link href="mailto:vedangvatsa.2019@iitkalumni.org" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Email">
+              <Link href="mailto:vedangvatsa.2019@iitkalumni.org" className="text-[#EA4335] hover:text-[#D93025] transition-colors" aria-label="Email">
                 <Mail className="h-5 w-5" />
               </Link>
-              <Link href="https://linkedin.com/in/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
+              <Link href="https://linkedin.com/in/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-[#0A66C2] hover:text-[#004182] transition-colors" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link href="https://x.com/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Twitter">
+              <Link href="https://x.com/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-foreground/70 transition-colors" aria-label="Twitter">
                 <Twitter className="h-5 w-5" />
               </Link>
-              <Link href="https://t.me/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Telegram">
+              <Link href="https://t.me/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-[#26A5E4] hover:text-[#1E8ECB] transition-colors" aria-label="Telegram">
                 <Send className="h-5 w-5" />
               </Link>
-              <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Google Scholar">
+              <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="text-[#4285F4] hover:text-[#2B6ED4] transition-colors" aria-label="Google Scholar">
                 <BookOpen className="h-5 w-5" />
               </Link>
-              <Link href="https://www.instagram.com/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Instagram">
+              <Link href="https://www.instagram.com/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-[#E4405F] hover:text-[#C13584] transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </Link>
             </div>
@@ -110,8 +104,8 @@ export default function ProfilePage() {
 
           <div className="space-y-6">
             <section id="experience">
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-4">
-                <Briefcase className="w-6 h-6" /> Professional Experience
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+                Professional Experience
               </h2>
               <div className="space-y-4">
                 <Card>
@@ -211,8 +205,8 @@ export default function ProfilePage() {
 
              <div className="grid md:grid-cols-2 gap-6">
                 <section id="education">
-                  <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-4">
-                    <GraduationCap className="w-6 h-6" /> Education
+                  <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+                    Education
                   </h2>
                   <Card>
                     <CardHeader className="p-4 pb-0">
@@ -230,8 +224,8 @@ export default function ProfilePage() {
                 </section>
 
                 <section id="achievements">
-                  <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-4">
-                    <Award className="w-6 h-6" /> Key Achievements
+                  <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+                    Key Achievements
                   </h2>
                   <Card>
                     <CardContent className="p-4">
@@ -249,8 +243,8 @@ export default function ProfilePage() {
             </div>
 
             <section id="publications">
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-4">
-                    <BookOpen className="w-6 h-6" /> Publications
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+                    Publications
                 </h2>
                  <Card>
                     <CardContent className="p-4">
@@ -295,8 +289,8 @@ export default function ProfilePage() {
             </section>
             
             <section id="projects">
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-4">
-                    <Lightbulb className="w-6 h-6" /> Other Projects
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+                    Other Projects
                 </h2>
                  <Card>
                     <CardContent className="p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -325,8 +319,8 @@ export default function ProfilePage() {
             </section>
 
              <section id="interests">
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-4">
-                    <Heart className="w-6 h-6" /> Interests
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+                    Interests
                 </h2>
                  <Card>
                     <CardContent className="p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -347,8 +341,8 @@ export default function ProfilePage() {
             </section>
 
             <section id="testimonials">
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-4">
-                    <MessageSquare className="w-6 h-6" /> Testimonials
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+                    Testimonials
                 </h2>
                  <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-4">
                     <Card>
