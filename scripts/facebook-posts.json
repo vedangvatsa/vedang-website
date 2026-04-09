@@ -414,9 +414,11 @@
     "id": "agentic-commerce",
     "scheduleDate": "2026-04-09",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Your next customer is an algorithm.\n\nAI agents now handle shopping. You describe what you want. The agent compares options across multiple stores and completes checkout. You never open a browser.\n\nMastercard Agent Pay. Coinbase x402. Google's Universal Commerce Protocol. The infrastructure is live.\n\nBrand loyalty weakens when an algorithm picks your products. Display ads lose relevance when the buyer is a machine.\n\nveda.ng/agentic-commerce",
-    "image": "scripts/thread-assets/agentic_commerce.png"
+    "image": "scripts/thread-assets/agentic_commerce.png",
+    "postedAt": "2026-04-09T05:29:03.748Z",
+    "fbPostId": "1785048661795414_1253867913589917"
   },
   {
     "id": "agi-governance",

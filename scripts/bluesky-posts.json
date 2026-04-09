@@ -381,9 +381,11 @@
     "id": "api-states",
     "scheduleDate": "2026-04-09",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The nation-state as a platform. API calls instead of office visits. Cryptographic credentials instead of passports.\n\nEstonia already built it.\n\nveda.ng/api-states",
-    "image": "scripts/thread-assets/api_states.png"
+    "image": "scripts/thread-assets/api_states.png",
+    "postedAt": "2026-04-09T05:28:56.221Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mj237itrtw2w"
   },
   {
     "id": "bureaucracy-tax",
