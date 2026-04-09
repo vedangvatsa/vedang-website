@@ -424,9 +424,11 @@
     "id": "agi-governance",
     "scheduleDate": "2026-04-09",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "How do you govern something smarter than you?\n\nEvery governance system ever built assumes humans are the smartest actors. AGI may end that 10,000-year assumption.\n\nAn AGI in financial markets executes trades on microsecond timescales. Human oversight becomes impossible. You need AI monitoring AI. An arms race of control and counter-control.\n\nThose who control AGI systems wield unprecedented power. We are preparing to govern gods.\n\nveda.ng/agi-governance",
-    "image": "scripts/thread-assets/agi_governance.png"
+    "image": "scripts/thread-assets/agi_governance.png",
+    "postedAt": "2026-04-09T12:09:59.657Z",
+    "fbPostId": "1785048661795414_1254073440236031"
   },
   {
     "id": "ai-agent-economy",

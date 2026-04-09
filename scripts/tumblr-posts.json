@@ -634,7 +634,7 @@
     "id": "agi-governance",
     "scheduleDate": "2026-04-09",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "How do you govern something smarter than you?\n\nEvery governance system assumes humans are the smartest actors. AGI may end that assumption. We are preparing to govern gods.\n\nveda.ng/agi-governance",
     "tags": [
       "agi",
@@ -642,7 +642,9 @@
       "ai",
       "philosophy"
     ],
-    "image": "scripts/thread-assets/agi_governance.png"
+    "image": "scripts/thread-assets/agi_governance.png",
+    "postedAt": "2026-04-09T12:10:01.025Z",
+    "tumblrId": "813418781830479872"
   },
   {
     "id": "agentic-commerce",
