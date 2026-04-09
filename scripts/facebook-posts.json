@@ -434,9 +434,11 @@
     "id": "ai-agent-economy",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "The corporation is dissolving.\n\nTraditional firms exist to minimize transaction costs. When AI agents negotiate and execute in milliseconds, those costs approach zero.\n\nThe firm becomes a temporary nexus of agentic services. A core group of strategists overseeing a swarm of AI agents.\n\nThe web rebuilds around intention, not attention. Structured data beats prose. Efficiency beats engagement.\n\nveda.ng/ai-agent-economy",
-    "image": "scripts/thread-assets/ai_agent_economy.png"
+    "image": "scripts/thread-assets/ai_agent_economy.png",
+    "postedAt": "2026-04-09T20:13:51.214Z",
+    "fbPostId": "1785048661795414_1254345403542168"
   },
   {
     "id": "ai-economy",

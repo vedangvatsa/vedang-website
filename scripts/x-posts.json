@@ -445,9 +445,11 @@
     "id": "dark-forest-internet",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/dark_forest.png",
-    "text": "The open web may already be dead.\n\nBots generate the majority of internet traffic now. They scrape, spam, and manufacture content faster than humans can produce it. The public square got so noisy that the rational response was to leave.\n\nHumans retreated. Into group chats. Discord servers. Newsletters. DMs.\n\nThis mirrors the Dark Forest theory from Liu Cixin. In space, civilizations hide because being visible means being targeted. On the internet, being visible means being harvested.\n\nThe new digital divide may not be about who has internet access. It may be about who has access to the human internet.\n\nveda.ng/dark-forest-internet"
+    "text": "The open web may already be dead.\n\nBots generate the majority of internet traffic now. They scrape, spam, and manufacture content faster than humans can produce it. The public square got so noisy that the rational response was to leave.\n\nHumans retreated. Into group chats. Discord servers. Newsletters. DMs.\n\nThis mirrors the Dark Forest theory from Liu Cixin. In space, civilizations hide because being visible means being targeted. On the internet, being visible means being harvested.\n\nThe new digital divide may not be about who has internet access. It may be about who has access to the human internet.\n\nveda.ng/dark-forest-internet",
+    "postedAt": "2026-04-09T20:13:38.433Z",
+    "tweetId": "2042335146196582730"
   },
   {
     "id": "models-shrinking",
