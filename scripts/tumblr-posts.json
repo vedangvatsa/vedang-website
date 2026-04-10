@@ -650,7 +650,7 @@
     "id": "agentic-commerce",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Your next customer is an algorithm.\n\nAI agents search stores, compare options, complete checkout. Brand loyalty weakens when a machine picks your products.\n\nveda.ng/agentic-commerce",
     "tags": [
       "ai",
@@ -658,7 +658,9 @@
       "agents",
       "ecommerce"
     ],
-    "image": "scripts/thread-assets/agentic_commerce.png"
+    "image": "scripts/thread-assets/agentic_commerce.png",
+    "postedAt": "2026-04-10T05:38:30.457Z",
+    "tumblrId": "813484747256971264"
   },
   {
     "id": "ambient-intelligence",
