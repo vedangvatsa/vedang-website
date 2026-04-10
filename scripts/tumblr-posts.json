@@ -666,7 +666,7 @@
     "id": "ambient-intelligence",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The best interface is no interface.\n\nAmbient intelligence eliminates the command itself. The environment senses and acts. Privacy is the obvious challenge.\n\nveda.ng/ambient-intelligence",
     "tags": [
       "iot",
@@ -674,7 +674,9 @@
       "ai",
       "future"
     ],
-    "image": "scripts/thread-assets/ambient_intelligence.png"
+    "image": "scripts/thread-assets/ambient_intelligence.png",
+    "postedAt": "2026-04-10T12:06:58.739Z",
+    "tumblrId": "813509187777757184"
   },
   {
     "id": "ai-agent-economy",

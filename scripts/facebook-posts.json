@@ -444,9 +444,11 @@
     "id": "ai-economy",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The entry ramp is narrowing.\n\nStanford payroll data: junior workers aged 22-25 in AI-exposed jobs saw a 16% relative employment decline since 2022. Senior workers stayed stable.\n\nSalesforce cut 4,000 support positions. Duolingo stopped using human contractors.\n\nEvery previous technology eventually created broad prosperity. But 'eventually' ranged from one to three generations. The question: will AI be different?\n\nveda.ng/ai-economy",
-    "image": "scripts/thread-assets/ai_economy.png"
+    "image": "scripts/thread-assets/ai_economy.png",
+    "postedAt": "2026-04-10T12:06:57.502Z",
+    "fbPostId": "1785048661795414_1254802676829774"
   },
   {
     "id": "ambient-intelligence",
