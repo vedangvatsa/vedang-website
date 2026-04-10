@@ -682,7 +682,7 @@
     "id": "ai-agent-economy",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "The corporation is dissolving.\n\nWhen transaction costs approach zero, the firm stops making sense. AI agents dissolve hierarchy into fluid networks.\n\nveda.ng/ai-agent-economy",
     "tags": [
       "ai",
@@ -690,7 +690,9 @@
       "agents",
       "future"
     ],
-    "image": "scripts/thread-assets/ai_agent_economy.png"
+    "image": "scripts/thread-assets/ai_agent_economy.png",
+    "postedAt": "2026-04-10T20:02:46.586Z",
+    "tumblrId": "813539122323062784"
   },
   {
     "id": "api-states",

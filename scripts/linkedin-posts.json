@@ -453,9 +453,11 @@
     "id": "models-shrinking",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/models_shrinking.png",
-    "text": "GPT-3.5 had 175 billion parameters.\n\nLlama 3 matched it with 8 billion. That is 20x fewer.\n\nPhi-4 has 14 billion parameters. It outperforms GPT-4o on math and graduate-level science benchmarks. A model that runs on a laptop beating one that needs a datacenter.\n\nThe pattern is consistent. Models are getting smaller and better at the same time.\n\nThe winning strategy shifted from more parameters to better data. Microsoft trained Phi-4 on curated, textbook-quality synthetic data instead of scraping the entire internet. Quality over quantity.\n\nWhen frontier performance required trillion-parameter models, only a few labs could play. When 14 billion parameters can match that performance in specific domains, the barrier drops by orders of magnitude.\n\n70 to 80 percent of enterprise AI tasks may work better with a focused small model than a giant general one.\n\nThe future of AI may not be one massive model that does everything. It may be many small models, each doing one thing well. Running locally. No API call. No subscription.\n\nThe trillion-parameter era may turn out to be a detour, not a destination."
+    "text": "GPT-3.5 had 175 billion parameters.\n\nLlama 3 matched it with 8 billion. That is 20x fewer.\n\nPhi-4 has 14 billion parameters. It outperforms GPT-4o on math and graduate-level science benchmarks. A model that runs on a laptop beating one that needs a datacenter.\n\nThe pattern is consistent. Models are getting smaller and better at the same time.\n\nThe winning strategy shifted from more parameters to better data. Microsoft trained Phi-4 on curated, textbook-quality synthetic data instead of scraping the entire internet. Quality over quantity.\n\nWhen frontier performance required trillion-parameter models, only a few labs could play. When 14 billion parameters can match that performance in specific domains, the barrier drops by orders of magnitude.\n\n70 to 80 percent of enterprise AI tasks may work better with a focused small model than a giant general one.\n\nThe future of AI may not be one massive model that does everything. It may be many small models, each doing one thing well. Running locally. No API call. No subscription.\n\nThe trillion-parameter era may turn out to be a detour, not a destination.",
+    "postedAt": "2026-04-10T20:02:37.560Z",
+    "postId": "urn:li:share:7448460451270594560"
   },
   {
     "id": "simulation-hypothesis",

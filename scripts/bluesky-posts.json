@@ -409,9 +409,11 @@
     "id": "cognitive-load",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Your brain was built for scarcity. It now lives in abundance.\n\nEvery context switch costs you. Every notification occupies a slot in working memory.\n\nThe result is continuous partial attention. Aware of everything. Focused on nothing.\n\nveda.ng/cognitive-load",
-    "image": "scripts/thread-assets/cognitive_load.png"
+    "image": "scripts/thread-assets/cognitive_load.png",
+    "postedAt": "2026-04-10T20:02:44.336Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mj64ivebce2j"
   },
   {
     "id": "attention-refinery",
