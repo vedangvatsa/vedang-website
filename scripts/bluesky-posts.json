@@ -401,9 +401,11 @@
     "id": "models-shrinking",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "GPT-3.5 had 175B parameters. Llama 3 matched it with 8B. That is 20x fewer.\n\nPhi-4 has 14B. It outperforms GPT-4o on math and science benchmarks. A laptop model beating a datacenter model.\n\nThe winning strategy shifted from more parameters to better data.",
-    "image": "scripts/thread-assets/models_shrinking.png"
+    "image": "scripts/thread-assets/models_shrinking.png",
+    "postedAt": "2026-04-11T05:12:53.730Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mj73anuhsa2x"
   },
   {
     "id": "cognitive-load",

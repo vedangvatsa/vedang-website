@@ -475,9 +475,11 @@
     "id": "attention-refinery",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/attention_refinery.png",
-    "text": "You are not the customer. You are the raw material.\n\nEvery platform you use for free runs the same business model. Your attention enters as crude input. It gets refined into behavioral data. That data gets sold to advertisers.\n\nThe infinite scroll is not a design choice. It is an extraction tool. It removes the natural stopping point that a page break would create. Push notifications are factory whistles pulling you back to the production line.\n\nLike buttons and share counts are not social features. They are real-time dashboards for the refinery. They measure which stimulus produces the most engagement for the least effort. The algorithm adjusts accordingly.\n\nOutrage is high-octane fuel. Nuance is low-yield crude. In an economy optimized for attention, the most provocative content wins regardless of its truth.\n\nThe consequence is not just wasted time. It is the erosion of collective sensemaking. When the system rewards engagement over accuracy, misinformation travels faster than truth. A lie that generates a million clicks is more valuable than a fact that generates a thousand.\n\nI wrote more about how this refinery works and what may come after it.\n\nveda.ng/attention-refinery"
+    "text": "You are not the customer. You are the raw material.\n\nEvery platform you use for free runs the same business model. Your attention enters as crude input. It gets refined into behavioral data. That data gets sold to advertisers.\n\nThe infinite scroll is not a design choice. It is an extraction tool. It removes the natural stopping point that a page break would create. Push notifications are factory whistles pulling you back to the production line.\n\nLike buttons and share counts are not social features. They are real-time dashboards for the refinery. They measure which stimulus produces the most engagement for the least effort. The algorithm adjusts accordingly.\n\nOutrage is high-octane fuel. Nuance is low-yield crude. In an economy optimized for attention, the most provocative content wins regardless of its truth.\n\nThe consequence is not just wasted time. It is the erosion of collective sensemaking. When the system rewards engagement over accuracy, misinformation travels faster than truth. A lie that generates a million clicks is more valuable than a fact that generates a thousand.\n\nI wrote more about how this refinery works and what may come after it.\n\nveda.ng/attention-refinery",
+    "postedAt": "2026-04-11T05:12:47.278Z",
+    "tweetId": "2042833215019270194"
   },
   {
     "id": "cognitive-load",

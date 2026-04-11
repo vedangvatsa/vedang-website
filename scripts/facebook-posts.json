@@ -454,9 +454,11 @@
     "id": "ambient-intelligence",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The best interface is no interface.\n\nDesktop to pocket to wrist. Each step more immediate, less obtrusive. But all require a conscious command.\n\nAmbient intelligence is the final step: eliminate the command itself. A meeting room that recognizes participants and pulls up files when everyone sits down.\n\nPrivacy is the obvious challenge. A world that senses constantly collects constantly.\n\nveda.ng/ambient-intelligence",
-    "image": "scripts/thread-assets/ambient_intelligence.png"
+    "image": "scripts/thread-assets/ambient_intelligence.png",
+    "postedAt": "2026-04-11T05:13:00.939Z",
+    "fbPostId": "1785048661795414_1255314486778593"
   },
   {
     "id": "api-states",
