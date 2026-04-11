@@ -485,9 +485,11 @@
     "id": "cognitive-load",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/cognitive_load.png",
-    "text": "Your brain was built for scarcity. It now lives in abundance.\n\nWorking memory is finite. It can hold roughly four to seven items at once. Every notification, every tab, every unread message occupies a slot.\n\nEvery time you switch context, your brain pays a tax. It takes time to disengage from one task and load the next one. Do this dozens of times a day and your cognitive capacity drops significantly before you even start the real work.\n\nThis is not a willpower problem. It is an architecture problem. The tools we use are designed to interrupt us because interruption drives engagement.\n\nThe result is continuous partial attention. Aware of everything. Focused on nothing. We skim more and understand less.\n\nThe smartphone on the dinner table reduces empathy in the conversation even when it is turned off. Its presence is enough. It represents a portal to somewhere else.\n\nThe solution is not to unplug entirely. It is to design your environment for focus instead of distraction. Prune notifications. Use different devices for different tasks. Treat your attention as a finite resource, because it is.\n\nI explored this in more depth here.\n\nveda.ng/cognitive-load"
+    "text": "Your brain was built for scarcity. It now lives in abundance.\n\nWorking memory is finite. It can hold roughly four to seven items at once. Every notification, every tab, every unread message occupies a slot.\n\nEvery time you switch context, your brain pays a tax. It takes time to disengage from one task and load the next one. Do this dozens of times a day and your cognitive capacity drops significantly before you even start the real work.\n\nThis is not a willpower problem. It is an architecture problem. The tools we use are designed to interrupt us because interruption drives engagement.\n\nThe result is continuous partial attention. Aware of everything. Focused on nothing. We skim more and understand less.\n\nThe smartphone on the dinner table reduces empathy in the conversation even when it is turned off. Its presence is enough. It represents a portal to somewhere else.\n\nThe solution is not to unplug entirely. It is to design your environment for focus instead of distraction. Prune notifications. Use different devices for different tasks. Treat your attention as a finite resource, because it is.\n\nI explored this in more depth here.\n\nveda.ng/cognitive-load",
+    "postedAt": "2026-04-11T19:57:40.690Z",
+    "tweetId": "2043055904724074528"
   },
   {
     "id": "simulation-hypothesis",

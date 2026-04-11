@@ -474,9 +474,11 @@
     "id": "artificial-intuition",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Logic finds answers. Intuition finds questions.\n\nAI has focused on replicating deliberate reasoning. Systems that excel at logic but struggle with ambiguity.\n\nThe next frontier: synthetic intuition. Not consciousness, but holistic pattern recognition. The ability to find novel connections between distant concepts.\n\nA rational approach analyzes incrementally. An intuitive approach connects unrelated trends with unmet needs. Breakthroughs.\n\nveda.ng/artificial-intuition",
-    "image": "scripts/thread-assets/artificial_intuition.png"
+    "image": "scripts/thread-assets/artificial_intuition.png",
+    "postedAt": "2026-04-11T19:57:53.893Z",
+    "fbPostId": "1785048661795414_1255828620060513"
   },
   {
     "id": "asi-timeline",
