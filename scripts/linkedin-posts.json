@@ -463,9 +463,11 @@
     "id": "simulation-hypothesis",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/simulation.png",
-    "text": "Physics looks like optimization.\n\nParticles do not have definite properties until measured. Entanglement connects distant objects instantly. Reality is fundamentally uncertain at the quantum level.\n\nThis looks like a simulation making computational tradeoffs. Why calculate particle properties that nobody is measuring? Why store that data? Just use probabilities until someone looks.\n\nThe simulation argument works like this. Either civilizations never reach the ability to run ancestor simulations, or they do and run many. If the second is true, simulated beings vastly outnumber real ones.\n\nVideo games already do this. They only render what the player can see. The rest does not exist until observed. Quantum mechanics behaves the same way.\n\nWhether this is literally true or just a useful metaphor, it may change how you think about observation and reality.\n\nI explored the full argument and what modern AI tells us about it here.\n\nveda.ng/simulation-hypothesis"
+    "text": "Physics looks like optimization.\n\nParticles do not have definite properties until measured. Entanglement connects distant objects instantly. Reality is fundamentally uncertain at the quantum level.\n\nThis looks like a simulation making computational tradeoffs. Why calculate particle properties that nobody is measuring? Why store that data? Just use probabilities until someone looks.\n\nThe simulation argument works like this. Either civilizations never reach the ability to run ancestor simulations, or they do and run many. If the second is true, simulated beings vastly outnumber real ones.\n\nVideo games already do this. They only render what the player can see. The rest does not exist until observed. Quantum mechanics behaves the same way.\n\nWhether this is literally true or just a useful metaphor, it may change how you think about observation and reality.\n\nI explored the full argument and what modern AI tells us about it here.\n\nveda.ng/simulation-hypothesis",
+    "postedAt": "2026-04-11T11:55:03.225Z",
+    "postId": "urn:li:share:7448700137515769856"
   },
   {
     "id": "cognitive-load",

@@ -464,9 +464,11 @@
     "id": "api-states",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The nation-state as a platform.\n\nInstead of navigating offices, make an API call. Instead of convoluted tax filing, your software talks to the tax authority directly.\n\nCitizenship becomes cryptographic credentials. Prove your age without revealing your date of birth. Self-sovereign identity.\n\nEstonia already built this. E-Residency lets anyone access services from anywhere.\n\nveda.ng/api-states",
-    "image": "scripts/thread-assets/api_states.png"
+    "image": "scripts/thread-assets/api_states.png",
+    "postedAt": "2026-04-11T11:55:13.425Z",
+    "fbPostId": "1785048661795414_1255532346756807"
   },
   {
     "id": "artificial-intuition",

@@ -698,7 +698,7 @@
     "id": "api-states",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The nation-state as a platform. API calls instead of office visits. Cryptographic credentials instead of passports.\n\nEstonia already built it.\n\nveda.ng/api-states",
     "tags": [
       "governance",
@@ -706,7 +706,9 @@
       "identity",
       "crypto"
     ],
-    "image": "scripts/thread-assets/api_states.png"
+    "image": "scripts/thread-assets/api_states.png",
+    "postedAt": "2026-04-11T11:55:14.860Z",
+    "tumblrId": "813599046588628992"
   },
   {
     "id": "artificial-intuition",
