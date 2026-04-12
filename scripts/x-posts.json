@@ -455,41 +455,51 @@
     "id": "models-shrinking",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/models_shrinking.png",
-    "text": "GPT-3.5 had 175 billion parameters.\n\nLlama 3 matched it with 8 billion. That is 20x fewer.\n\nPhi-4 has 14 billion parameters. It outperforms GPT-4o on math and graduate-level science benchmarks. A model that runs on a laptop beating one that needs a datacenter.\n\nThe pattern is consistent. Models are getting smaller and better at the same time.\n\nThe winning strategy shifted from more parameters to better data. Microsoft trained Phi-4 on curated, textbook-quality synthetic data instead of scraping the entire internet. Quality over quantity. The same lesson every industry learns eventually.\n\nThis changes who can compete.\n\nWhen frontier performance required trillion-parameter models, only a few labs could play. When 14 billion parameters can match that performance in specific domains, the barrier drops by orders of magnitude.\n\nThe biggest models may still lead on broad general knowledge. But for most real tasks, a smaller model fine-tuned on good data can match or beat them.\n\n70 to 80 percent of enterprise AI tasks may work better with a focused small model than a giant general one.\n\nThe future of AI may not be one massive model that does everything. It may be many small models, each doing one thing well. Running locally. No API call. No subscription.\n\nThe trillion-parameter era may turn out to be a detour, not a destination.\n\nveda.ng/asi-timeline"
+    "text": "GPT-3.5 had 175 billion parameters.\n\nLlama 3 matched it with 8 billion. That is 20x fewer.\n\nPhi-4 has 14 billion parameters. It outperforms GPT-4o on math and graduate-level science benchmarks. A model that runs on a laptop beating one that needs a datacenter.\n\nThe pattern is consistent. Models are getting smaller and better at the same time.\n\nThe winning strategy shifted from more parameters to better data. Microsoft trained Phi-4 on curated, textbook-quality synthetic data instead of scraping the entire internet. Quality over quantity. The same lesson every industry learns eventually.\n\nThis changes who can compete.\n\nWhen frontier performance required trillion-parameter models, only a few labs could play. When 14 billion parameters can match that performance in specific domains, the barrier drops by orders of magnitude.\n\nThe biggest models may still lead on broad general knowledge. But for most real tasks, a smaller model fine-tuned on good data can match or beat them.\n\n70 to 80 percent of enterprise AI tasks may work better with a focused small model than a giant general one.\n\nThe future of AI may not be one massive model that does everything. It may be many small models, each doing one thing well. Running locally. No API call. No subscription.\n\nThe trillion-parameter era may turn out to be a detour, not a destination.\n\nveda.ng/asi-timeline",
+    "postedAt": "2026-04-12T11:58:21.350Z",
+    "tweetId": "2043297667325775890"
   },
   {
     "id": "hustle-culture",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/hustle_culture.png",
-    "text": "We worship busy.\n\nThe person who sleeps four hours is more dedicated than the one who sleeps eight. Rest is weakness. Stillness is stagnation.\n\nBut the research tells a different story.\n\nStanford found that after 55 hours per week, productivity drops to nearly zero. You are not producing more. You are just present longer.\n\nChronic stress shrinks the hippocampus. That is the part of your brain responsible for memory and learning. It physically gets smaller.\n\nHustle culture sells sacrifice as strategy. But the biological cost is real and measurable.\n\nThe goalpost moves every time you reach it. Six figures feels empty. The promotion just means new problems. The apartment loses its appeal in a month.\n\nThat is not ambition. That may be a treadmill designed to look like a ladder.\n\nveda.ng/hustle-culture"
+    "text": "We worship busy.\n\nThe person who sleeps four hours is more dedicated than the one who sleeps eight. Rest is weakness. Stillness is stagnation.\n\nBut the research tells a different story.\n\nStanford found that after 55 hours per week, productivity drops to nearly zero. You are not producing more. You are just present longer.\n\nChronic stress shrinks the hippocampus. That is the part of your brain responsible for memory and learning. It physically gets smaller.\n\nHustle culture sells sacrifice as strategy. But the biological cost is real and measurable.\n\nThe goalpost moves every time you reach it. Six figures feels empty. The promotion just means new problems. The apartment loses its appeal in a month.\n\nThat is not ambition. That may be a treadmill designed to look like a ladder.\n\nveda.ng/hustle-culture",
+    "postedAt": "2026-04-12T11:58:24.179Z",
+    "tweetId": "2043297679204069496"
   },
   {
     "id": "attention-refinery",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/attention_refinery.png",
-    "text": "You are not the customer. You are the raw material.\n\nEvery platform you use for free runs the same business model. Your attention enters as crude input. It gets refined into behavioral data. That data gets sold to advertisers.\n\nThe infinite scroll is not a design choice. It is an extraction tool. It removes the natural stopping point that a page break would create. Push notifications are factory whistles pulling you back to the production line.\n\nLike buttons and share counts are not social features. They are real-time dashboards for the refinery. They measure which stimulus produces the most engagement for the least effort. The algorithm adjusts accordingly.\n\nOutrage is high-octane fuel. Nuance is low-yield crude. In an economy optimized for attention, the most provocative content wins regardless of its truth.\n\nThe consequence is not just wasted time. It is the erosion of collective sensemaking. When the system rewards engagement over accuracy, misinformation travels faster than truth. A lie that generates a million clicks is more valuable than a fact that generates a thousand.\n\nI wrote more about how this refinery works and what may come after it.\n\nveda.ng/attention-refinery"
+    "text": "You are not the customer. You are the raw material.\n\nEvery platform you use for free runs the same business model. Your attention enters as crude input. It gets refined into behavioral data. That data gets sold to advertisers.\n\nThe infinite scroll is not a design choice. It is an extraction tool. It removes the natural stopping point that a page break would create. Push notifications are factory whistles pulling you back to the production line.\n\nLike buttons and share counts are not social features. They are real-time dashboards for the refinery. They measure which stimulus produces the most engagement for the least effort. The algorithm adjusts accordingly.\n\nOutrage is high-octane fuel. Nuance is low-yield crude. In an economy optimized for attention, the most provocative content wins regardless of its truth.\n\nThe consequence is not just wasted time. It is the erosion of collective sensemaking. When the system rewards engagement over accuracy, misinformation travels faster than truth. A lie that generates a million clicks is more valuable than a fact that generates a thousand.\n\nI wrote more about how this refinery works and what may come after it.\n\nveda.ng/attention-refinery",
+    "postedAt": "2026-04-12T11:58:26.843Z",
+    "tweetId": "2043297690377683215"
   },
   {
     "id": "cognitive-load",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/cognitive_load.png",
-    "text": "Your brain was built for scarcity. It now lives in abundance.\n\nWorking memory is finite. It can hold roughly four to seven items at once. Every notification, every tab, every unread message occupies a slot.\n\nEvery time you switch context, your brain pays a tax. It takes time to disengage from one task and load the next one. Do this dozens of times a day and your cognitive capacity drops significantly before you even start the real work.\n\nThis is not a willpower problem. It is an architecture problem. The tools we use are designed to interrupt us because interruption drives engagement.\n\nThe result is continuous partial attention. Aware of everything. Focused on nothing. We skim more and understand less.\n\nThe smartphone on the dinner table reduces empathy in the conversation even when it is turned off. Its presence is enough. It represents a portal to somewhere else.\n\nThe solution is not to unplug entirely. It is to design your environment for focus instead of distraction. Prune notifications. Use different devices for different tasks. Treat your attention as a finite resource, because it is.\n\nI explored this in more depth here.\n\nveda.ng/cognitive-load"
+    "text": "Your brain was built for scarcity. It now lives in abundance.\n\nWorking memory is finite. It can hold roughly four to seven items at once. Every notification, every tab, every unread message occupies a slot.\n\nEvery time you switch context, your brain pays a tax. It takes time to disengage from one task and load the next one. Do this dozens of times a day and your cognitive capacity drops significantly before you even start the real work.\n\nThis is not a willpower problem. It is an architecture problem. The tools we use are designed to interrupt us because interruption drives engagement.\n\nThe result is continuous partial attention. Aware of everything. Focused on nothing. We skim more and understand less.\n\nThe smartphone on the dinner table reduces empathy in the conversation even when it is turned off. Its presence is enough. It represents a portal to somewhere else.\n\nThe solution is not to unplug entirely. It is to design your environment for focus instead of distraction. Prune notifications. Use different devices for different tasks. Treat your attention as a finite resource, because it is.\n\nI explored this in more depth here.\n\nveda.ng/cognitive-load",
+    "postedAt": "2026-04-12T11:58:29.560Z",
+    "tweetId": "2043297701803045367"
   },
   {
     "id": "simulation-hypothesis",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/simulation.png",
-    "text": "Physics looks like optimization.\n\nParticles do not have definite properties until measured. Entanglement connects distant objects instantly. Reality is fundamentally uncertain at the quantum level.\n\nThis looks like a simulation making computational tradeoffs. Why calculate particle properties that nobody is measuring? Why store that data? Just use probabilities until someone looks.\n\nThe simulation argument works like this. Either civilizations never reach the ability to run realistic simulations of their ancestors, or they do and run many of them. If the second is true, simulated beings vastly outnumber real ones. Statistically, we are more likely to be inside one.\n\nThe argument does not prove we are in a simulation. It shows that if the premise holds, the probability is high.\n\nVideo games already do this. They only render what the player can see. The rest does not exist until observed. Quantum mechanics behaves the same way.\n\nWhether this is literally true or just a useful metaphor, it changes how you think about the nature of observation and reality.\n\nveda.ng/simulation-hypothesis"
+    "text": "Physics looks like optimization.\n\nParticles do not have definite properties until measured. Entanglement connects distant objects instantly. Reality is fundamentally uncertain at the quantum level.\n\nThis looks like a simulation making computational tradeoffs. Why calculate particle properties that nobody is measuring? Why store that data? Just use probabilities until someone looks.\n\nThe simulation argument works like this. Either civilizations never reach the ability to run realistic simulations of their ancestors, or they do and run many of them. If the second is true, simulated beings vastly outnumber real ones. Statistically, we are more likely to be inside one.\n\nThe argument does not prove we are in a simulation. It shows that if the premise holds, the probability is high.\n\nVideo games already do this. They only render what the player can see. The rest does not exist until observed. Quantum mechanics behaves the same way.\n\nWhether this is literally true or just a useful metaphor, it changes how you think about the nature of observation and reality.\n\nveda.ng/simulation-hypothesis",
+    "postedAt": "2026-04-12T11:58:32.530Z",
+    "tweetId": "2043297713731613104"
   },
   {
     "id": "programmable-trust",
@@ -631,33 +641,41 @@
     "id": "stepwise-ai",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Klarna automated customer service. Saved $60M. Then customer satisfaction collapsed and they hired people back.\n\nThe failure wasn't AI. It was sequence. They skipped straight to the hardest problem — nuanced human interactions — instead of starting where machines already win: invoice matching, log parsing, email routing.\n\n70% of companies that try to automate everything at once fail. Companies that pick one boring, high-frequency task first? Payback in under three months.\n\nDiscipline beats ambition every time.\n\nveda.ng/stepwise-ai"
+    "text": "Klarna automated customer service. Saved $60M. Then customer satisfaction collapsed and they hired people back.\n\nThe failure wasn't AI. It was sequence. They skipped straight to the hardest problem — nuanced human interactions — instead of starting where machines already win: invoice matching, log parsing, email routing.\n\n70% of companies that try to automate everything at once fail. Companies that pick one boring, high-frequency task first? Payback in under three months.\n\nDiscipline beats ambition every time.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-04-12T11:58:35.392Z",
+    "tweetId": "2043297725995696570"
   },
   {
     "id": "universal-text-ui",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "Every dropdown on a dashboard is a question someone predicted you'd ask. Your actual question is almost never one of them.\n\nPostHog replaced their analytics dashboard with a text field. Salesforce did it for CRM — 84% of queries now self-resolve. Cursor did it for code and hit $1B ARR.\n\nThe pattern: a text field backed by an LLM that calls APIs directly. No menus. No navigation. Just ask.\n\nThe dashboard era is ending.\n\nveda.ng/universal-text-ui"
+    "text": "Every dropdown on a dashboard is a question someone predicted you'd ask. Your actual question is almost never one of them.\n\nPostHog replaced their analytics dashboard with a text field. Salesforce did it for CRM — 84% of queries now self-resolve. Cursor did it for code and hit $1B ARR.\n\nThe pattern: a text field backed by an LLM that calls APIs directly. No menus. No navigation. Just ask.\n\nThe dashboard era is ending.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-04-12T11:58:38.244Z",
+    "tweetId": "2043297738083663890"
   },
   {
     "id": "agentic-state",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "In Estonia, only two government services require you to show up in person: marriages and divorces. Everything else is digital. 99% of public services.\n\nSingapore runs AI across 100,000 public officers. UAE hit 97% AI utilization in government.\n\nThese aren't pilots. They're production systems serving millions.\n\nA baby is born. The system detects it, calculates benefits, deposits money. No form. No queue. No portal. The citizen does nothing.\n\nMost governments still make you download a PDF.\n\nveda.ng/agentic-state"
+    "text": "In Estonia, only two government services require you to show up in person: marriages and divorces. Everything else is digital. 99% of public services.\n\nSingapore runs AI across 100,000 public officers. UAE hit 97% AI utilization in government.\n\nThese aren't pilots. They're production systems serving millions.\n\nA baby is born. The system detects it, calculates benefits, deposits money. No form. No queue. No portal. The citizen does nothing.\n\nMost governments still make you download a PDF.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-12T11:58:41.122Z",
+    "tweetId": "2043297749735485892"
   },
   {
     "id": "stepwise-ai-sales",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Lead response time: 4 hours. Contact rates drop 10x after 5 minutes.\n\nOne voice agent. One task: qualify and book. Response time fell to 60 seconds. Conversions tripled. 2,000+ meetings per month, no humans involved.\n\nThe sales team stopped qualifying. They only close now.\n\nveda.ng/stepwise-ai"
+    "text": "Lead response time: 4 hours. Contact rates drop 10x after 5 minutes.\n\nOne voice agent. One task: qualify and book. Response time fell to 60 seconds. Conversions tripled. 2,000+ meetings per month, no humans involved.\n\nThe sales team stopped qualifying. They only close now.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-04-12T11:58:43.835Z",
+    "tweetId": "2043297761479598295"
   },
   {
     "id": "agentic-state-eresidency",
@@ -695,9 +713,11 @@
     "id": "agentic-state-xroad",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia's X-Road: 1 billion+ government queries per year. Birth registered → population registry, health insurance, social services all updated automatically. One notification. Zero forms.\n\nOperational since 2001. 25 years in production. Not a pilot.\n\nMost countries digitized paper forms. Estonia redesigned the process.\n\nveda.ng/agentic-state"
+    "text": "Estonia's X-Road: 1 billion+ government queries per year. Birth registered → population registry, health insurance, social services all updated automatically. One notification. Zero forms.\n\nOperational since 2001. 25 years in production. Not a pilot.\n\nMost countries digitized paper forms. Estonia redesigned the process.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-12T11:58:46.671Z",
+    "tweetId": "2043297772955205807"
   },
   {
     "id": "universal-text-ui-paradigms",

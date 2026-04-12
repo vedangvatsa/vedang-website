@@ -391,33 +391,41 @@
     "id": "bureaucracy-tax",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "You need a permit. Then another permit. Then an inspection. Then more permits.\n\nRules were supposed to create order. They created sophisticated inertia dressed up as responsibility.\n\nInstitutions that survive on friction have no incentive to remove it.\n\nveda.ng/bureaucracy-tax",
-    "image": "scripts/thread-assets/bureaucracy_tax.png"
+    "image": "scripts/thread-assets/bureaucracy_tax.png",
+    "postedAt": "2026-04-12T11:59:30.986Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgonor52q"
   },
   {
     "id": "models-shrinking",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "GPT-3.5 had 175B parameters. Llama 3 matched it with 8B. That is 20x fewer.\n\nPhi-4 has 14B. It outperforms GPT-4o on math and science benchmarks. A laptop model beating a datacenter model.\n\nThe winning strategy shifted from more parameters to better data.\n\nveda.ng/asi-timeline",
-    "image": "scripts/thread-assets/models_shrinking.png"
+    "image": "scripts/thread-assets/models_shrinking.png",
+    "postedAt": "2026-04-12T11:59:31.284Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgowkyk2l"
   },
   {
     "id": "cognitive-load",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Your brain was built for scarcity. It now lives in abundance.\n\nEvery context switch costs you. Every notification occupies a slot in working memory.\n\nThe result is continuous partial attention. Aware of everything. Focused on nothing.\n\nveda.ng/cognitive-load",
-    "image": "scripts/thread-assets/cognitive_load.png"
+    "image": "scripts/thread-assets/cognitive_load.png",
+    "postedAt": "2026-04-12T11:59:31.532Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgp6dzc2l"
   },
   {
     "id": "attention-refinery",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "You are not the customer. You are the raw material.\n\nYour attention enters as crude input. Gets refined into behavioral data. Sold to advertisers.\n\nOutrage is high-octane fuel. Nuance is low-yield crude.\n\nveda.ng/attention-refinery",
-    "image": "scripts/thread-assets/attention_refinery.png"
+    "image": "scripts/thread-assets/attention_refinery.png",
+    "postedAt": "2026-04-12T11:59:32.143Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgpgiug2c"
   },
   {
     "id": "simulation-hypothesis",
@@ -559,29 +567,37 @@
     "id": "stepwise-ai",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "17:00",
-    "posted": false,
-    "text": "Klarna automated support. Saved $60M. Customer satisfaction collapsed. They hired people back.\n\n70% of big-bang AI deployments fail. Companies that pick one boring task first see payback in three months.\n\nveda.ng/stepwise-ai"
+    "posted": true,
+    "text": "Klarna automated support. Saved $60M. Customer satisfaction collapsed. They hired people back.\n\n70% of big-bang AI deployments fail. Companies that pick one boring task first see payback in three months.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-04-12T11:59:32.311Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgpt55e2f"
   },
   {
     "id": "universal-text-ui",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "01:00",
-    "posted": false,
-    "text": "Every dropdown on a dashboard is a predicted question. Your actual question is almost never one of them.\n\nPostHog, Salesforce, Cursor all replaced dashboards with text fields that call APIs directly.\n\nveda.ng/universal-text-ui"
+    "posted": true,
+    "text": "Every dropdown on a dashboard is a predicted question. Your actual question is almost never one of them.\n\nPostHog, Salesforce, Cursor all replaced dashboards with text fields that call APIs directly.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-04-12T11:59:32.709Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgqa7x52q"
   },
   {
     "id": "agentic-state",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "09:00",
-    "posted": false,
-    "text": "Estonia: 99% of government services are digital. Only marriages and divorces require showing up.\n\nBaby born? System detects it, calculates benefits, deposits money. No form. No queue.\n\nMost governments still run on PDFs.\n\nveda.ng/agentic-state"
+    "posted": true,
+    "text": "Estonia: 99% of government services are digital. Only marriages and divorces require showing up.\n\nBaby born? System detects it, calculates benefits, deposits money. No form. No queue.\n\nMost governments still run on PDFs.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-12T11:59:32.774Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgqdv552q"
   },
   {
     "id": "stepwise-ai-sales",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "17:00",
-    "posted": false,
-    "text": "Lead response: 4 hours → 60 seconds. One voice agent, one task. Conversions tripled.\n\nThe sales team stopped qualifying. They only close.\n\nveda.ng/stepwise-ai"
+    "posted": true,
+    "text": "Lead response: 4 hours → 60 seconds. One voice agent, one task. Conversions tripled.\n\nThe sales team stopped qualifying. They only close.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-04-12T11:59:33.410Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgqwtkr2h"
   },
   {
     "id": "agentic-state-eresidency",
@@ -615,8 +631,10 @@
     "id": "agentic-state-xroad",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "01:00",
-    "posted": false,
-    "text": "Estonia's X-Road: 1B+ gov queries/year. Birth registered → all agencies updated. One notification. Zero forms. Running since 2001.\n\nveda.ng/agentic-state"
+    "posted": true,
+    "text": "Estonia's X-Road: 1B+ gov queries/year. Birth registered → all agencies updated. One notification. Zero forms. Running since 2001.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-12T11:59:33.447Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgqyr6j2z"
   },
   {
     "id": "universal-text-ui-paradigms",

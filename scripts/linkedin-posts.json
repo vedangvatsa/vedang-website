@@ -443,33 +443,41 @@
     "id": "hustle-culture",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/hustle_culture.png",
-    "text": "We worship busy.\n\nThe person who sleeps four hours is more dedicated than the one who sleeps eight. Rest is weakness. Stillness is stagnation.\n\nBut the research tells a different story.\n\nStanford found that after 55 hours per week, productivity drops to nearly zero. You are not producing more. You are just present longer.\n\nChronic stress shrinks the hippocampus. That is the part of your brain responsible for memory and learning. It physically gets smaller.\n\nHustle culture sells sacrifice as strategy. But the biological cost is real and measurable.\n\nThe goalpost moves every time you reach it. Six figures feels empty. The promotion just means new problems. The apartment loses its appeal in a month.\n\nThat is not ambition. That may be a treadmill designed to look like a ladder.\n\nveda.ng/hustle-culture"
+    "text": "We worship busy.\n\nThe person who sleeps four hours is more dedicated than the one who sleeps eight. Rest is weakness. Stillness is stagnation.\n\nBut the research tells a different story.\n\nStanford found that after 55 hours per week, productivity drops to nearly zero. You are not producing more. You are just present longer.\n\nChronic stress shrinks the hippocampus. That is the part of your brain responsible for memory and learning. It physically gets smaller.\n\nHustle culture sells sacrifice as strategy. But the biological cost is real and measurable.\n\nThe goalpost moves every time you reach it. Six figures feels empty. The promotion just means new problems. The apartment loses its appeal in a month.\n\nThat is not ambition. That may be a treadmill designed to look like a ladder.\n\nveda.ng/hustle-culture",
+    "postedAt": "2026-04-12T11:58:50.820Z",
+    "postId": "urn:li:share:7449063479912722432"
   },
   {
     "id": "models-shrinking",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/models_shrinking.png",
-    "text": "GPT-3.5 had 175 billion parameters.\n\nLlama 3 matched it with 8 billion. That is 20x fewer.\n\nPhi-4 has 14 billion parameters. It outperforms GPT-4o on math and graduate-level science benchmarks. A model that runs on a laptop beating one that needs a datacenter.\n\nThe pattern is consistent. Models are getting smaller and better at the same time.\n\nThe winning strategy shifted from more parameters to better data. Microsoft trained Phi-4 on curated, textbook-quality synthetic data instead of scraping the entire internet. Quality over quantity.\n\nWhen frontier performance required trillion-parameter models, only a few labs could play. When 14 billion parameters can match that performance in specific domains, the barrier drops by orders of magnitude.\n\n70 to 80 percent of enterprise AI tasks may work better with a focused small model than a giant general one.\n\nThe future of AI may not be one massive model that does everything. It may be many small models, each doing one thing well. Running locally. No API call. No subscription.\n\nThe trillion-parameter era may turn out to be a detour, not a destination.\n\nveda.ng/asi-timeline"
+    "text": "GPT-3.5 had 175 billion parameters.\n\nLlama 3 matched it with 8 billion. That is 20x fewer.\n\nPhi-4 has 14 billion parameters. It outperforms GPT-4o on math and graduate-level science benchmarks. A model that runs on a laptop beating one that needs a datacenter.\n\nThe pattern is consistent. Models are getting smaller and better at the same time.\n\nThe winning strategy shifted from more parameters to better data. Microsoft trained Phi-4 on curated, textbook-quality synthetic data instead of scraping the entire internet. Quality over quantity.\n\nWhen frontier performance required trillion-parameter models, only a few labs could play. When 14 billion parameters can match that performance in specific domains, the barrier drops by orders of magnitude.\n\n70 to 80 percent of enterprise AI tasks may work better with a focused small model than a giant general one.\n\nThe future of AI may not be one massive model that does everything. It may be many small models, each doing one thing well. Running locally. No API call. No subscription.\n\nThe trillion-parameter era may turn out to be a detour, not a destination.\n\nveda.ng/asi-timeline",
+    "postedAt": "2026-04-12T11:58:54.736Z",
+    "postId": "urn:li:share:7449063496153059328"
   },
   {
     "id": "simulation-hypothesis",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/simulation.png",
-    "text": "Physics looks like optimization.\n\nParticles do not have definite properties until measured. Entanglement connects distant objects instantly. Reality is fundamentally uncertain at the quantum level.\n\nThis looks like a simulation making computational tradeoffs. Why calculate particle properties that nobody is measuring? Why store that data? Just use probabilities until someone looks.\n\nThe simulation argument works like this. Either civilizations never reach the ability to run ancestor simulations, or they do and run many. If the second is true, simulated beings vastly outnumber real ones.\n\nVideo games already do this. They only render what the player can see. The rest does not exist until observed. Quantum mechanics behaves the same way.\n\nWhether this is literally true or just a useful metaphor, it may change how you think about observation and reality.\n\nI explored the full argument and what modern AI tells us about it here.\n\nveda.ng/simulation-hypothesis"
+    "text": "Physics looks like optimization.\n\nParticles do not have definite properties until measured. Entanglement connects distant objects instantly. Reality is fundamentally uncertain at the quantum level.\n\nThis looks like a simulation making computational tradeoffs. Why calculate particle properties that nobody is measuring? Why store that data? Just use probabilities until someone looks.\n\nThe simulation argument works like this. Either civilizations never reach the ability to run ancestor simulations, or they do and run many. If the second is true, simulated beings vastly outnumber real ones.\n\nVideo games already do this. They only render what the player can see. The rest does not exist until observed. Quantum mechanics behaves the same way.\n\nWhether this is literally true or just a useful metaphor, it may change how you think about observation and reality.\n\nI explored the full argument and what modern AI tells us about it here.\n\nveda.ng/simulation-hypothesis",
+    "postedAt": "2026-04-12T11:58:58.887Z",
+    "postId": "urn:li:share:7449063513630728192"
   },
   {
     "id": "cognitive-load",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/cognitive_load.png",
-    "text": "Your brain was built for information scarcity. It now lives in information abundance.\n\nWorking memory can hold roughly four to seven items at once. Every notification, every tab, every unread message occupies a slot.\n\nEvery context switch costs you. It takes time and energy to disengage from one task and load the next. Do this dozens of times daily and your capacity drops before the real work even starts.\n\nThis is not a discipline problem. It is a design problem. The tools are built to interrupt you because interruption drives engagement.\n\nThe result is continuous partial attention. Aware of everything. Focused on nothing.\n\nA smartphone on the dinner table reduces empathy in the conversation even when turned off. Its presence alone is enough.\n\nThe solution is not unplugging. It is designing your environment for focus. Prune notifications. Use different devices for different tasks. Treat attention as finite.\n\nI wrote about the full cognitive load crisis and tools for navigating it.\n\nveda.ng/cognitive-load"
+    "text": "Your brain was built for information scarcity. It now lives in information abundance.\n\nWorking memory can hold roughly four to seven items at once. Every notification, every tab, every unread message occupies a slot.\n\nEvery context switch costs you. It takes time and energy to disengage from one task and load the next. Do this dozens of times daily and your capacity drops before the real work even starts.\n\nThis is not a discipline problem. It is a design problem. The tools are built to interrupt you because interruption drives engagement.\n\nThe result is continuous partial attention. Aware of everything. Focused on nothing.\n\nA smartphone on the dinner table reduces empathy in the conversation even when turned off. Its presence alone is enough.\n\nThe solution is not unplugging. It is designing your environment for focus. Prune notifications. Use different devices for different tasks. Treat attention as finite.\n\nI wrote about the full cognitive load crisis and tools for navigating it.\n\nveda.ng/cognitive-load",
+    "postedAt": "2026-04-12T11:59:03.390Z",
+    "postId": "urn:li:share:7449063532190625792"
   },
   {
     "id": "attention-refinery",
@@ -611,33 +619,41 @@
     "id": "stepwise-ai",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing — nuanced human conversations — before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise-ai"
+    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing — nuanced human conversations — before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-04-12T11:59:07.697Z",
+    "postId": "urn:li:share:7449063550729256960"
   },
   {
     "id": "universal-text-ui",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog — analytics via natural language\nSalesforce Agentforce — 12,000+ orgs, 84% self-resolution\nCursor — $1B ARR, entire codebases queryable via text\nGitHub Copilot — 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/universal-text-ui"
+    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog — analytics via natural language\nSalesforce Agentforce — 12,000+ orgs, 84% self-resolution\nCursor — $1B ARR, entire codebases queryable via text\nGitHub Copilot — 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-04-12T11:59:11.780Z",
+    "postId": "urn:li:share:7449063567942873088"
   },
   {
     "id": "agentic-state",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else — 99% of public services — is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/agentic-state"
+    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else — 99% of public services — is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-12T11:59:15.921Z",
+    "postId": "urn:li:share:7449063585378385920"
   },
   {
     "id": "stepwise-ai-sales",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "A B2B firm had a lead response time of four hours. Research shows contact rates drop 10x after the first five minutes. Most leads were dead before a human saw them.\n\nThey didn't rebuild their CRM. They deployed a voice agent on one narrow task: qualify inbound leads and book meetings. Nothing else.\n\nResponse time dropped to under 60 seconds. Conversions tripled. The system now books 2,000+ appointments per month.\n\nThe human sales team stopped qualifying. They only close.\n\nOne task. One integration. The entire bottleneck dissolved.\n\nveda.ng/stepwise-ai"
+    "text": "A B2B firm had a lead response time of four hours. Research shows contact rates drop 10x after the first five minutes. Most leads were dead before a human saw them.\n\nThey didn't rebuild their CRM. They deployed a voice agent on one narrow task: qualify inbound leads and book meetings. Nothing else.\n\nResponse time dropped to under 60 seconds. Conversions tripled. The system now books 2,000+ appointments per month.\n\nThe human sales team stopped qualifying. They only close.\n\nOne task. One integration. The entire bottleneck dissolved.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-04-12T11:59:20.174Z",
+    "postId": "urn:li:share:7449063603225272320"
   },
   {
     "id": "agentic-state-eresidency",
@@ -675,9 +691,11 @@
     "id": "agentic-state-xroad",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "X-Road handles over 1 billion queries per year across Estonia's entire government.\n\nIt's an open-source data exchange layer. When a birth is registered, the record propagates automatically to population registry, health insurance, and social services. One notification. Every relevant agency updated. Zero additional forms.\n\nLaunched in 2001. Operational for 25 years. Not a pilot. Not a proof of concept. Production infrastructure.\n\nMost countries built e-government by putting paper forms on websites. Estonia redesigned the process architecture. Digitizing a bad process produces a fast bad process. Redesigning it changes what the citizen experiences.\n\nveda.ng/agentic-state"
+    "text": "X-Road handles over 1 billion queries per year across Estonia's entire government.\n\nIt's an open-source data exchange layer. When a birth is registered, the record propagates automatically to population registry, health insurance, and social services. One notification. Every relevant agency updated. Zero additional forms.\n\nLaunched in 2001. Operational for 25 years. Not a pilot. Not a proof of concept. Production infrastructure.\n\nMost countries built e-government by putting paper forms on websites. Estonia redesigned the process architecture. Digitizing a bad process produces a fast bad process. Redesigning it changes what the citizen experiences.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-12T11:59:24.306Z",
+    "postId": "urn:li:share:7449063620501716992"
   },
   {
     "id": "universal-text-ui-paradigms",

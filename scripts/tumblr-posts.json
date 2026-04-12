@@ -650,7 +650,7 @@
     "id": "agentic-commerce",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Your next customer is an algorithm.\n\nAI agents search stores, compare options, complete checkout. Brand loyalty weakens when a machine picks your products.\n\nveda.ng/agentic-commerce\n\nThe interface layer is changing too — dashboards are giving way to text fields that call APIs directly: veda.ng/universal-text-ui",
     "tags": [
       "ai",
@@ -658,13 +658,15 @@
       "agents",
       "ecommerce"
     ],
-    "image": "scripts/thread-assets/agentic_commerce.png"
+    "image": "scripts/thread-assets/agentic_commerce.png",
+    "postedAt": "2026-04-12T12:00:21.586Z",
+    "tumblrId": "813689964613206016"
   },
   {
     "id": "ambient-intelligence",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The best interface is no interface.\n\nAmbient intelligence eliminates the command itself. The environment senses and acts. Privacy is the obvious challenge.\n\nveda.ng/ambient-intelligence\n\nBefore no interface, there's a simpler one. The text field is replacing the dashboard: veda.ng/universal-text-ui",
     "tags": [
       "iot",
@@ -672,13 +674,15 @@
       "ai",
       "future"
     ],
-    "image": "scripts/thread-assets/ambient_intelligence.png"
+    "image": "scripts/thread-assets/ambient_intelligence.png",
+    "postedAt": "2026-04-12T12:00:21.893Z",
+    "tumblrId": "813689965572669440"
   },
   {
     "id": "ai-agent-economy",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "The corporation is dissolving.\n\nWhen transaction costs approach zero, the firm stops making sense. AI agents dissolve hierarchy into fluid networks.\n\nveda.ng/ai-agent-economy\n\nThe hard part: getting there without blowing up. 70% of big-bang AI deployments fail. The sequencing matters: veda.ng/stepwise-ai",
     "tags": [
       "ai",
@@ -686,13 +690,15 @@
       "agents",
       "future"
     ],
-    "image": "scripts/thread-assets/ai_agent_economy.png"
+    "image": "scripts/thread-assets/ai_agent_economy.png",
+    "postedAt": "2026-04-12T12:00:22.356Z",
+    "tumblrId": "813689966072938496"
   },
   {
     "id": "api-states",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The nation-state as a platform. API calls instead of office visits. Cryptographic credentials instead of passports.\n\nEstonia already built it.\n\nveda.ng/api-states\n\nEstonia already built this. 99% of services digital. Babies born get benefits automatically. No forms: veda.ng/agentic-state",
     "tags": [
       "governance",
@@ -700,13 +706,15 @@
       "identity",
       "crypto"
     ],
-    "image": "scripts/thread-assets/api_states.png"
+    "image": "scripts/thread-assets/api_states.png",
+    "postedAt": "2026-04-12T12:00:22.801Z",
+    "tumblrId": "813689966379089920"
   },
   {
     "id": "artificial-intuition",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Logic finds answers. Intuition finds questions.\n\nThe next frontier: giving machines a gut feeling. Holistic pattern recognition, not just logical reasoning.\n\nveda.ng/artificial-intuition",
     "tags": [
       "ai",
@@ -714,13 +722,15 @@
       "cognition",
       "philosophy"
     ],
-    "image": "scripts/thread-assets/artificial_intuition.png"
+    "image": "scripts/thread-assets/artificial_intuition.png",
+    "postedAt": "2026-04-12T12:00:23.359Z",
+    "tumblrId": "813689967087910912"
   },
   {
     "id": "asi-timeline",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "When does superintelligence arrive? Nobody knows.\n\nMetaculus: 50% by 2040-2050. Predictions range from 2030 to 2100. The uncertainty demands urgency.\n\nveda.ng/asi-timeline",
     "tags": [
       "ai",
@@ -728,55 +738,65 @@
       "future",
       "prediction"
     ],
-    "image": "scripts/thread-assets/asi_timeline.png"
+    "image": "scripts/thread-assets/asi_timeline.png",
+    "postedAt": "2026-04-12T12:00:24.009Z",
+    "tumblrId": "813689967530377217"
   },
   {
     "id": "stepwise-ai",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
     "tags": [
       "AI",
       "enterprise"
     ],
-    "text": "Klarna automated support. Saved $60M. Satisfaction tanked. They hired people back.\n\n70% of big-bang AI deployments fail. Companies that pick one boring task first see payback in three months.\n\nThe failure is always sequence, not technology.\n\nveda.ng/stepwise-ai"
+    "text": "Klarna automated support. Saved $60M. Satisfaction tanked. They hired people back.\n\n70% of big-bang AI deployments fail. Companies that pick one boring task first see payback in three months.\n\nThe failure is always sequence, not technology.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-04-12T12:00:24.744Z",
+    "tumblrId": "813689968561127424"
   },
   {
     "id": "universal-text-ui",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
     "tags": [
       "AI",
       "design"
     ],
-    "text": "Every dropdown is a predicted question. Your actual question is never one of them.\n\nA text field backed by an LLM that calls APIs directly kills the dashboard. PostHog, Salesforce, and Cursor already proved it.\n\nveda.ng/universal-text-ui"
+    "text": "Every dropdown is a predicted question. Your actual question is never one of them.\n\nA text field backed by an LLM that calls APIs directly kills the dashboard. PostHog, Salesforce, and Cursor already proved it.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-04-12T12:00:25.511Z",
+    "tumblrId": "813689969352835072"
   },
   {
     "id": "agentic-state",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
     "tags": [
       "government",
       "AI"
     ],
-    "text": "Estonia: 99% digital government. Singapore: AI across 100k officers. UAE: 97% utilization.\n\nBaby born? System detects it, calculates benefits, deposits money. No form. No queue.\n\nMost governments still run on PDFs and waiting rooms.\n\nveda.ng/agentic-state"
+    "text": "Estonia: 99% digital government. Singapore: AI across 100k officers. UAE: 97% utilization.\n\nBaby born? System detects it, calculates benefits, deposits money. No form. No queue.\n\nMost governments still run on PDFs and waiting rooms.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-12T12:00:26.688Z",
+    "tumblrId": "813689970460114945"
   },
   {
     "id": "stepwise-ai-sales",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
     "tags": [
       "AI",
       "sales"
     ],
-    "text": "Lead response: 4 hours → 60 seconds. One voice agent. Conversions tripled. 2,000+ meetings/month.\n\nThe sales team stopped qualifying. They only close.\n\nveda.ng/stepwise-ai"
+    "text": "Lead response: 4 hours → 60 seconds. One voice agent. Conversions tripled. 2,000+ meetings/month.\n\nThe sales team stopped qualifying. They only close.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-04-12T12:00:27.048Z",
+    "tumblrId": "813689970955026432"
   },
   {
     "id": "agentic-state-eresidency",
@@ -830,13 +850,15 @@
     "id": "agentic-state-xroad",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
     "tags": [
       "Estonia",
       "e-government"
     ],
-    "text": "X-Road: 1B+ gov queries/year. Birth → all agencies updated automatically. Running 25 years.\n\nveda.ng/agentic-state"
+    "text": "X-Road: 1B+ gov queries/year. Birth → all agencies updated automatically. Running 25 years.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-12T12:00:27.394Z",
+    "tumblrId": "813689971345113088"
   },
   {
     "id": "universal-text-ui-paradigms",
