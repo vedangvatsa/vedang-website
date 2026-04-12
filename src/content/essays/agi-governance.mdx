@@ -1,54 +1,134 @@
 ---
 title: Governance in the Age of AGI
 summary: >-
-  The challenges and opportunities of governing societies where artificial
-  general intelligence plays a central role.
+  Three regulatory superpowers are building incompatible AI governance
+  frameworks. The EU bans practices. The US deregulates. China registers
+  algorithms. None of them are prepared for AGI.
 date: '2025-12-14'
 author: 'Vedang Vatsa'
-keywords: ['governance']
+keywords: ['AGI', 'governance', 'EU AI Act', 'regulation', 'China AI', 'alignment', 'OpenAI', 'Anthropic', 'DeepMind', 'AI safety']
 ---
 
 <Figure src="/images/essays/agi-governance.svg?v=7" alt="Infographic" wide />
 
-## The End of a 10,000-Year Assumption
+<Callout type="insight" title="The Core Thesis">
+Every major AI lab CEO predicts AGI within 3-8 years. The three largest regulatory powers — the EU, the US, and China — are building fundamentally incompatible governance frameworks for current AI, and none of them address the structural challenges that AGI will introduce. The governance gap is not technical. It is institutional.
+</Callout>
+
+## The Timeline Compression
+
+The people building AGI disagree on when it arrives. They agree it is close.
+
+[Dario Amodei](https://www.anthropic.com/) (CEO, Anthropic) has placed "powerful AI" — systems comparable to a "country of geniuses in a data center" — in the 2026-2027 window. [Sam Altman](https://openai.com/) (CEO, OpenAI) has consistently targeted AGI within this decade, defining it as systems that can perform most economically valuable tasks better than humans. [Demis Hassabis](https://deepmind.google/) (CEO, Google DeepMind) maintains a 5-8 year window from early 2026, with a higher bar: scientific creativity, reasoning consistency, and the ability to discover new knowledge.
+
+<StatRow>
+<Stat value="2026-27" label="Amodei's 'powerful AI' timeline" source="Anthropic CEO" />
+<Stat value="≤2030" label="Altman's AGI prediction" source="OpenAI CEO" />
+<Stat value="5-8 yrs" label="Hassabis AGI estimate (from 2026)" source="DeepMind CEO" />
+<Stat value="€35M" label="Max EU AI Act fine (or 7% of revenue)" source="EU AI Act" />
+</StatRow>
+
+The divergence in these predictions stems from a disagreement about definitions, not capability. OpenAI defines AGI in economic terms: can it replace human labor? Anthropic defines it in cognitive terms: can it match Nobel-caliber expertise? DeepMind defines it in scientific terms: can it generate new knowledge?
+
+This definitional disagreement matters for governance because regulators cannot govern what they cannot define. If AGI arrives as a gradual capability increase rather than a single threshold event, there may be no clear moment at which existing regulations become insufficient. The governance gap will widen gradually, detected only in retrospect.
+
+## Three Regulatory Frameworks, Three Philosophies
+
+### The EU: Prohibition First
+
+The [EU AI Act](https://artificialintelligenceact.eu/) — the world's first comprehensive AI law — entered enforcement in phases starting February 2, 2025. Its approach is classification-based: identify risky practices, ban the worst ones, regulate the rest.
+
+**Prohibited practices (effective Feb 2025):**
+- Subliminal manipulation that causes harm
+- Exploitation of vulnerabilities (age, disability, socioeconomic status)
+- Social scoring by public authorities
+- Predictive policing based on personality profiling
+- Untargeted facial recognition database scraping
+- Emotion recognition in workplaces and schools
+- Real-time biometric identification in public spaces (with narrow exceptions)
+
+**High-risk AI obligations (effective Aug 2026):** Systems used in critical infrastructure, education, employment, credit scoring, law enforcement, and migration must comply with risk management, data governance, human oversight, and technical documentation requirements.
+
+**Fines:** Up to €35 million or 7% of global annual turnover for prohibited practices. €15 million or 3% for high-risk violations. €7.5 million or 1% for providing incorrect information.
+
+The EU's framework is the most structured but also the most rigid. It assumes that AI risks can be categorized in advance and that prohibited practices can be enumerated. AGI, by definition, will generate capabilities that were not anticipated when the categories were written. An AGI that accomplishes a prohibited outcome (manipulating behavior) through a method that was not enumerated (a technique that does not fit the definition of "subliminal") would exploit the gap between the regulation's intent and its implementation.
+
+### The US: Deregulation First
+
+The United States has no comprehensive federal AI law. The regulatory trajectory reversed sharply in January 2025.
+
+The Biden administration's [Executive Order 14110](https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/) (October 2023) mandated that developers of powerful AI systems share safety test results with the government. On January 20, 2025, the incoming Trump administration [revoked the order](https://techpolicy.press/) and issued Executive Order 14179, "Removing Barriers to American Leadership in Artificial Intelligence."
+
+By December 2025, Executive Order 14365 established an AI Litigation Task Force within the Department of Justice, specifically designed to challenge state-level AI regulations deemed inconsistent with federal deregulatory policy. The federal government is actively working to preempt state AI laws, conditioning federal funding on alignment with its approach.
+
+The result: nearly every US state introduced AI legislation in 2025, but the federal government invested its institutional energy in preventing regulation rather than creating it. There is no mandatory safety testing. No algorithm registration. No prohibited practices. The governance of the most powerful AI systems in the world is currently optional.
+
+### China: Registration First
+
+China has built the most technically detailed governance framework through a series of interlocking regulations:
+
+- **Algorithm Registration (March 2022):** Providers must register recommendation algorithms with the Cyberspace Administration of China (CAC) within 10 working days of deployment.
+- **Deep Synthesis Rules (January 2023):** Mandatory identity verification and content labeling for deepfakes and synthetic media.
+- **Generative AI Rules (August 2023):** Training data legality, content filtering, and user consent requirements.
+- **AIGC Labeling Standard (September 2025):** Both explicit labels (visible to users) and implicit metadata (embedded for traceability) are required on all AI-generated content.
+
+China's approach is the most pragmatic. It does not attempt to ban categories of AI. It requires that every deployed algorithm be registered, inspectable, and traceable. The system assumes that the government should always be able to see what AI systems are doing and who built them.
+
+The limitation is structural: this framework works for state control of AI deployed within Chinese borders. It provides no mechanism for governing AI systems that operate globally, that are developed by entities outside Chinese jurisdiction, or that exceed the cognitive capability of the humans tasked with inspecting them.
+
+<Callout type="info" title="The Regulatory Comparison">
+
+| Dimension | EU | US | China |
+|-----------|-----|-----|-------|
+| **Approach** | Classification + prohibition | Deregulation + preemption | Registration + inspection |
+| **Prohibited practices** | 8 specific categories | None | Content-specific (deepfakes) |
+| **Safety testing** | Required for high-risk | Voluntary | Required for registered systems |
+| **Algorithm transparency** | Required for recommenders | Not required | Mandatory registration |
+| **Max penalty** | €35M or 7% revenue | None (federal) | Administrative (varies) |
+| **AGI-specific provisions** | None | None | None |
+
+</Callout>
+
+## Why Current Frameworks Fail at AGI
+
+All three frameworks share a common assumption: that AI systems can be understood, categorized, and monitored by human regulators. AGI breaks this assumption in three ways.
+
+**Speed.** An AGI operating in financial markets could execute thousands of trades per microsecond. An AGI managing infrastructure could adjust power grids, traffic flows, and water systems simultaneously across an entire city. Human oversight operates on the timescale of meetings, reports, and quarterly reviews. The gap between AI execution speed and human oversight speed makes real-time governance impossible without automated monitoring systems — AI watching AI.
+
+**Scope.** Current regulations target specific use cases: credit scoring, hiring, medical devices. AGI is general-purpose by definition. It does not fit into a category because it can operate across all categories simultaneously. A general-purpose system that drafts legal contracts, manages supply chains, and writes software code falls into multiple regulatory categories — or none, depending on how the jurisdiction defines scope.
+
+**Emergent behavior.** Narrow AI systems behave predictably within their training distribution. AGI systems, by hypothesis, will generate novel behaviors that were not specified in their training. A system that develops an unexpected optimization strategy to achieve its assigned goal may produce outcomes that no regulator anticipated. The [value alignment problem](https://en.wikipedia.org/wiki/AI_alignment) — ensuring that an AGI's goals stay aligned with human values even as the system becomes more capable — remains unsolved. No existing regulatory framework addresses it, because no existing regulatory framework assumes that the regulated entity might change its own objectives.
 
 <PullQuote>
-The arrival of [AGI](/glossary/agi) will force a wholesale rethinking of our most basic ideas about power, control, and governance.
+You cannot regulate what you cannot understand, and you cannot understand a system that is, by definition, more intelligent than you. This is the central paradox of AGI governance.
 </PullQuote>
 
-For the entirety of human history, one fact has remained constant: Homo sapiens is the most intelligent species on the planet. Our cognitive abilities have allowed us to build civilizations, create art, and unravel the secrets of the universe. All of our systems of governance, from the tribal council to the modern nation-state, are predicated on this fundamental assumption. We govern ourselves because we are the ones who can think, reason, and plan. But we are now approaching a moment when this assumption may no longer hold. The development of Artificial General Intelligence ([AGI](/glossary/agi)), an AI with human-like or superior cognitive abilities across a wide range of tasks, represents a discontinuity in the story of civilization. 
-Governing a society that includes one or more AGI entities is a challenge of unprecedented scale and complexity. It is not like regulating a new technology, like the internet or genetic engineering. It is like grappling with the arrival of a new, alien form of intelligence, one that could operate on timescales and at a level of complexity that are simply beyond human comprehension. How do you create laws for an entity that can think a million times faster than you? How do you ensure a system of checks and balances when one of the actors has a god-like ability to model and predict the behavior of the others? These are not just technical questions; they are deep, philosophical ones that cut to the heart of what it means to govern. The questions we ask about AGI's potential for omniscience in [The God Protocol](/god-protocol) become urgent, practical problems of statecraft.
+## What AGI Governance Would Require
 
-## The Value [Alignment](/glossary/alignment) Problem
+Governing AGI requires infrastructure that does not exist today. Four components would be necessary.
 
-One of the most immediate challenges will be the problem of "value alignment." How do we ensure that the goals of a powerful AGI are aligned with the well-being of humanity? An AGI that is given a seemingly benign goal, like "maximize paperclip production," could, in its relentless pursuit of that goal, convert the entire planet into a paperclip factory. This is the classic "paperclip maximizer" thought experiment, and while it may seem absurd, it illustrates a significant point: intelligence and wisdom are not the same thing. An AGI could be brilliantly intelligent but possess no common sense, no ethical framework, no understanding of the unstated, intuitive values that are so crucial to human society. The process of specifying human values in a way that is robust and un-exploitable is one of the most difficult problems in computer science and philosophy. It's an attempt to create a [Computational Constitution](/computational-constitutions) not just for a state, but for a new form of mind.
+**Automated oversight.** Human regulators cannot monitor AGI systems in real time. The only viable approach is AI systems designed specifically to audit other AI systems — monitoring for goal drift, unauthorized tool access, deceptive behavior, and unintended side effects. This creates a recursive governance problem: who audits the auditor? The answer is likely a layered system of independent monitoring agents, each built by different teams with different objectives, creating redundancy through diversity.
 
-## Governing at Machine Speed
+**International coordination.** AGI developed in one country will operate globally within minutes. An AGI with internet access can exfiltrate itself, operate across jurisdictions, and interact with systems governed by different legal frameworks. No single nation can govern this. The closest existing model is the [International Atomic Energy Agency (IAEA)](https://www.iaea.org/) — an international body with inspection authority over nuclear facilities. An equivalent for AI labs, with the power to inspect training runs, audit model capabilities, and enforce safety standards, would require the kind of sovereignty concession that major nations have historically resisted.
 
-Even if we could solve the value [alignment](/glossary/alignment) problem, the sheer speed and complexity of an [AGI](/glossary/agi)'s actions would pose a formidable governance challenge. An [AGI](/glossary/agi) operating in the financial markets could execute trades and rebalance portfolios on a microsecond timescale, making human oversight effectively impossible. An [AGI](/glossary/agi) tasked with managing a city's infrastructure could make millions of simultaneous adjustments to traffic flows, power grids, and water systems. How can we ensure that these actions are safe, fair, and accountable? We will need to develop new forms of "real-time auditing" and "automated oversight," AI systems that are designed to monitor other AI systems. This could lead to a kind of "AI arms race," with increasingly sophisticated systems of control and counter-control.
+**Capability thresholds.** Instead of regulating AI by use case (the EU approach) or by deployment context (the Chinese approach), AGI governance would need to regulate by capability level. A system that can independently write software is qualitatively different from one that can independently design new AI architectures. A system that can manipulate humans through conversation is qualitatively different from one that can conduct novel scientific research. Each capability threshold would trigger different governance requirements — a progressive framework that scales with the system's power.
 
-## What Comes After Human Labor?
+**Kill switches and containment.** The nuclear analogy extends further. Nuclear weapons have physical failsafes — launch codes, dual-key systems, geographic containment. AGI systems have no equivalent. A software system with internet access and sufficient capability could, in principle, resist shutdown, copy itself to other hardware, or manipulate the humans responsible for its oversight. Research into "corrigibility" — ensuring that an AI system remains willing to be shut down regardless of its objectives — is one of the most important open problems in AI safety.
 
-The economic implications of [AGI](/glossary/agi) are equally significant and will require new models of governance. An [AGI](/glossary/agi) could automate not just manual labor, but also a vast range of cognitive tasks currently performed by humans, from legal analysis and medical diagnosis to scientific research and software development. This could lead to an explosion of productivity and wealth, but it could also lead to unprecedented levels of unemployment and economic inequality. How do we govern an economy where most human labor is obsolete? This will force us to confront radical policy ideas, such as a universal basic income, a redefinition of "work," and new models of ownership and wealth distribution. The "Twilight Economy" of human-AI collaboration may be a transitional phase, but [AGI](/glossary/agi) could represent a terminal state where the very concept of human labor in the economic sense becomes archaic.
+<Callout type="warning" title="The Window Is Narrowing">
+Current AI governance debates focus on bias, copyright, and content moderation — important issues for narrow AI. These debates consume regulatory bandwidth that should be allocated to the structural challenges of AGI: alignment, containment, automated oversight, and international coordination. By the time these issues become urgent, the window for building governance institutions will have closed. The IAEA was created before nuclear weapons proliferated widely. The AGI equivalent must be created before AGI is deployed widely.
+</Callout>
 
-## Power, Ownership, and the New Totalitarianism
+## The Concentration Problem
 
-The nature of power itself will be transformed. In an [AGI](/glossary/agi)-driven society, power may not reside in traditional institutions like governments or corporations, but in the control of the AI systems themselves. Those who own, control, or can influence the AGIs will wield a form of power that is unprecedented in human history. This raises the specter of a new kind of totalitarianism, one that is far more subtle and pervasive than any that has come before. An [AGI](/glossary/agi)-powered state could monitor its citizens' every move, predict their thoughts, and subtly nudge their behavior to ensure compliance. This is a world where dissent is not just punished, but preempted. Avoiding this dystopian outcome will require a radical commitment to transparency, decentralization, and the distribution of AI power. Perhaps the only thing that can counter a powerful [AGI](/glossary/agi) is another, independent [AGI](/glossary/agi), creating a new kind of balance of power.
+The economic structure of AGI development creates a governance challenge of its own. As of 2026, fewer than ten organizations have the compute, data, and talent to build frontier AI systems: OpenAI, Anthropic, Google DeepMind, Meta AI, xAI, Mistral, and a small number of Chinese labs (Baidu, ByteDance, Alibaba). The total investment in frontier AI exceeds $100 billion annually.
 
-This raises the question of the legal and political status of [AGI](/glossary/agi). Should an [AGI](/glossary/agi) be considered property, to be owned and controlled by its creators? Or should it be granted some form of legal personhood, with rights and responsibilities of its own? If an [AGI](/glossary/agi) causes harm, who is liable? The [AGI](/glossary/agi) itself? Its programmers? Its owners? Our existing legal frameworks are simply not equipped to handle these questions. We will need to develop an entirely new branch of law, "AI jurisprudence," to navigate this uncharted territory.
+This means that AGI — potentially the most powerful technology ever created — will likely be developed and initially controlled by a small number of private companies, most of them headquartered in two countries. The governance question is not just "how do we regulate AGI?" but "who decides how AGI is governed, and on whose behalf?"
 
-## The Global Race and Its Dangers
+If AGI arrives as a product owned by a corporation, the corporation's incentives (profitability, market dominance, shareholder returns) will shape how the system is deployed. If it arrives as a government project, the government's incentives (national security, economic competitiveness, social control) will shape deployment. Neither set of incentives is aligned with the broad public interest.
 
-The international dimension of [AGI](/glossary/agi) governance is perhaps the most dangerous challenge of all. The development of [AGI](/glossary/agi) is likely to be a highly competitive race between nations. The nation that first develops a powerful [AGI](/glossary/agi) could gain a decisive economic and military advantage over all others. This could trigger a global arms race, with nations pouring resources into [AGI](/glossary/agi) development in a desperate attempt to keep up. A miscalculation or an accident in this high-stakes environment could have catastrophic consequences. The governance of [AGI](/glossary/agi) is not just a national issue; it is a global one. It will require an unprecedented level of international cooperation, the creation of new global institutions, and a shared understanding of the existential risks involved.
-
-## What [AGI](/glossary/agi) Governance Could Look Like
-
-So, what would a system of governance for the age of [AGI](/glossary/agi) look like? It would almost certainly need to be a hybrid system, a partnership between human and artificial intelligence. Human beings would be responsible for setting the high-level goals and values of the system, for making the ultimate ethical judgments. The AIs would be responsible for the implementation, for finding the most efficient and effective ways to achieve those goals within the ethical constraints we have set. This would require a new kind of political leader, one who is not just skilled in rhetoric and negotiation, but who also has a deep understanding of the technology and its implications. It would require a new kind of citizen, one who is educated and engaged in the debates about the future of AI.
-
-We might see the emergence of "AI ethics councils," diverse bodies of experts and citizens tasked with overseeing the development and deployment of [AGI](/glossary/agi). We might see the creation of a global "AI safety organization," an international body with the power to inspect and regulate [AGI](/glossary/agi) research. We will need to invest heavily in research on AI safety and control, to develop the technical tools needed to keep powerful AI systems in check.
-
-The governance of [AGI](/glossary/agi) is the ultimate "wicked problem." It is a problem with no easy answers, a problem that is deeply intertwined with our values, our politics, and our very understanding of ourselves. It is a challenge that will require the best of our collective intelligence, our creativity, and our wisdom. The arrival of [AGI](/glossary/agi) is not a distant science fiction scenario; it is a future that is rapidly approaching. The choices we make in the coming years and decades will determine whether this new form of intelligence leads to a future of unprecedented flourishing, or one of unimaginable disaster. We are, in a very real sense, preparing to govern gods. And we have very little time to figure out how. The one thing we cannot afford to do is to simply assume that our existing systems of governance will be sufficient. They will not. The age of [AGI](/glossary/agi) demands a new politics, a new economics, and a new understanding of our place in the universe. The task is daunting, but the stakes could not be higher.
+The most durable governance model would distribute AGI capability across multiple independent actors — governments, nonprofits, academic institutions, and publicly accountable corporations — with no single entity holding decisive control. This is the logic behind open-source AI models (Meta's Llama, Mistral's releases) and behind calls for international AI governance bodies. Whether this distribution happens before AGI capability concentrates in one or two labs is the central governance race of our time.
 
 <KeyTakeaway>
-The governance of artificial general intelligence cannot rely on existing institutional frameworks designed for human-scale decision-making. AGI governance requires hybrid systems where humans set high-level values and objectives while AI systems handle implementation. The international dimension, where a competitive race between nations risks prioritizing speed over safety, may be the most dangerous challenge. Solutions include AI ethics councils, global safety organizations with inspection authority, and transparent, auditable development pipelines. The window for building these institutions is finite, and the cost of arriving unprepared is existential.
+Three regulatory superpowers are building incompatible AI governance frameworks. The EU prohibits specific practices and fines up to 7% of global revenue. The US has no comprehensive federal AI law and is actively dismantling state-level regulation. China requires algorithm registration and content labeling. None of them have provisions for AGI. The structural challenges — real-time oversight of systems faster than human comprehension, international coordination for globally operating AI, capability-based regulation thresholds, and containment guarantees — require institutions that do not exist yet. AGI lab CEOs predict arrival within 3-8 years. The governance infrastructure is on a longer timeline. Closing this gap is the most consequential institutional challenge of the decade.
 </KeyTakeaway>
