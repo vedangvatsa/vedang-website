@@ -112,14 +112,18 @@ async function main() {
   console.log(`🕒 Current Time (IST): ${currentDate} ${currentTime}`);
 
   let modified = false;
-  let postsPublished = 0;
 
-  // Limit to 1 post per run to avoid batch-posting when catching up
-  const MAX_POSTS_PER_RUN = 1;
+  // DAILY COOLDOWN: max 1 post per day on this platform.
+  const alreadyPostedToday = posts.some(p =>
+    p.posted && p.postedAt && p.postedAt.startsWith(currentDate)
+  );
+  if (alreadyPostedToday) {
+    console.log('⏸️ Already posted today — skipping to enforce 1 post/day limit');
+    return;
+  }
 
   for (const post of posts) {
     if (post.posted) continue;
-    if (postsPublished >= MAX_POSTS_PER_RUN) break;
 
     const isDue =
       post.scheduleDate < currentDate ||
@@ -140,14 +144,14 @@ async function main() {
       post.postedAt = new Date().toISOString();
       post.tweetId = result.id;
       delete post.error;
-      postsPublished++;
+      modified = true;
+      break; // Only 1 post per run
     } else {
       console.error(`❌ Failed: ${result.error}`);
       post.error = result.error;
+      modified = true;
+      break; // Stop on failure too
     }
-
-    modified = true;
-    await new Promise(r => setTimeout(r, 2000));
   }
 
   if (modified) {

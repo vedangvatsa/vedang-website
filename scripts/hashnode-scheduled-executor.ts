@@ -134,6 +134,15 @@ async function main() {
   console.log(`📝 Hashnode scheduler running at ${todayIST} ${timeIST} IST`);
   console.log(`📋 Total articles: ${posts.length}, Posted: ${posts.filter(p => p.posted).length}`);
 
+  // DAILY COOLDOWN: max 1 post per day on this platform.
+  const alreadyPostedToday = posts.some(p =>
+    p.posted && p.postedAt && p.postedAt.startsWith(todayIST)
+  );
+  if (alreadyPostedToday) {
+    console.log('⏸️ Already posted today — skipping to enforce 1 post/day limit');
+    return;
+  }
+
   const due = posts.filter(p => {
     if (p.posted) return false;
     if (p.scheduleDate > todayIST) return false;
@@ -148,18 +157,19 @@ async function main() {
     return;
   }
 
-  for (const post of due) {
-    try {
-      console.log(`\n📝 Publishing: ${post.title} (${post.slug})`);
-      const url = await publishArticle(post);
-      post.posted = true;
-      post.postedAt = new Date().toISOString();
-      post.hashnodeUrl = url;
-      console.log(`  ✅ Published: ${url}`);
-    } catch (err: any) {
-      post.error = err.message;
-      console.error(`  ❌ Failed: ${err.message}`);
-    }
+  console.log(`📤 ${due.length} article(s) due — will post 1`);
+
+  const post = due[0]; // Only take the first due article
+  try {
+    console.log(`\n📝 Publishing: ${post.title} (${post.slug})`);
+    const url = await publishArticle(post);
+    post.posted = true;
+    post.postedAt = new Date().toISOString();
+    post.hashnodeUrl = url;
+    console.log(`  ✅ Published: ${url}`);
+  } catch (err: any) {
+    post.error = err.message;
+    console.error(`  ❌ Failed: ${err.message}`);
   }
 
   fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));

@@ -93,6 +93,15 @@ async function main() {
   console.log(`📘 Facebook scheduler running at ${todayIST} ${currentTimeIST} IST`);
   console.log(`📋 Total posts: ${posts.length}, Posted: ${posts.filter(p => p.posted).length}`);
 
+  // DAILY COOLDOWN: max 1 post per day on this platform.
+  const alreadyPostedToday = posts.some(p =>
+    p.posted && p.postedAt && p.postedAt.startsWith(todayIST)
+  );
+  if (alreadyPostedToday) {
+    console.log('⏸️ Already posted today — skipping to enforce 1 post/day limit');
+    return;
+  }
+
   const due = posts.filter(p =>
     !p.posted &&
     (p.scheduleDate < todayIST || (p.scheduleDate === todayIST && p.scheduleTime <= currentTimeIST))
@@ -103,31 +112,24 @@ async function main() {
     return;
   }
 
-  console.log(`📤 ${due.length} post(s) due`);
+  console.log(`📤 ${due.length} post(s) due — will post 1`);
 
-  // Limit to 1 post per run to avoid batch-posting when catching up
-  const MAX_POSTS_PER_RUN = 1;
-  let postsPublished = 0;
-
-  for (const post of due) {
-    if (postsPublished >= MAX_POSTS_PER_RUN) break;
-    try {
-      console.log(`\n📝 Posting: ${post.id}`);
-      let postId: string;
-      if (post.image) {
-        postId = await uploadPhoto(post.image, post.text);
-      } else {
-        postId = await postText(post.text);
-      }
-      post.posted = true;
-      post.postedAt = new Date().toISOString();
-      post.fbPostId = postId;
-      console.log(`  ✅ Posted: ${postId}`);
-      postsPublished++;
-    } catch (err: any) {
-      post.error = err.message;
-      console.error(`  ❌ Failed: ${err.message}`);
+  const post = due[0]; // Only take the first due post
+  try {
+    console.log(`\n📝 Posting: ${post.id}`);
+    let postId: string;
+    if (post.image) {
+      postId = await uploadPhoto(post.image, post.text);
+    } else {
+      postId = await postText(post.text);
     }
+    post.posted = true;
+    post.postedAt = new Date().toISOString();
+    post.fbPostId = postId;
+    console.log(`  ✅ Posted: ${postId}`);
+  } catch (err: any) {
+    post.error = err.message;
+    console.error(`  ❌ Failed: ${err.message}`);
   }
 
   fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
