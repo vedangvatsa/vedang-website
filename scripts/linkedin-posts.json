@@ -473,9 +473,11 @@
     "id": "cognitive-load",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/cognitive_load.png",
-    "text": "Your brain was built for information scarcity. It now lives in information abundance.\n\nWorking memory can hold roughly four to seven items at once. Every notification, every tab, every unread message occupies a slot.\n\nEvery context switch costs you. It takes time and energy to disengage from one task and load the next. Do this dozens of times daily and your capacity drops before the real work even starts.\n\nThis is not a discipline problem. It is a design problem. The tools are built to interrupt you because interruption drives engagement.\n\nThe result is continuous partial attention. Aware of everything. Focused on nothing.\n\nA smartphone on the dinner table reduces empathy in the conversation even when turned off. Its presence alone is enough.\n\nThe solution is not unplugging. It is designing your environment for focus. Prune notifications. Use different devices for different tasks. Treat attention as finite.\n\nI wrote about the full cognitive load crisis and tools for navigating it.\n\nveda.ng/cognitive-load"
+    "text": "Your brain was built for information scarcity. It now lives in information abundance.\n\nWorking memory can hold roughly four to seven items at once. Every notification, every tab, every unread message occupies a slot.\n\nEvery context switch costs you. It takes time and energy to disengage from one task and load the next. Do this dozens of times daily and your capacity drops before the real work even starts.\n\nThis is not a discipline problem. It is a design problem. The tools are built to interrupt you because interruption drives engagement.\n\nThe result is continuous partial attention. Aware of everything. Focused on nothing.\n\nA smartphone on the dinner table reduces empathy in the conversation even when turned off. Its presence alone is enough.\n\nThe solution is not unplugging. It is designing your environment for focus. Prune notifications. Use different devices for different tasks. Treat attention as finite.\n\nI wrote about the full cognitive load crisis and tools for navigating it.\n\nveda.ng/cognitive-load",
+    "postedAt": "2026-04-12T05:35:23.989Z",
+    "postId": "urn:li:share:7448966981812371456"
   },
   {
     "id": "attention-refinery",

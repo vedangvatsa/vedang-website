@@ -714,7 +714,7 @@
     "id": "artificial-intuition",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Logic finds answers. Intuition finds questions.\n\nThe next frontier: giving machines a gut feeling. Holistic pattern recognition, not just logical reasoning.\n\nveda.ng/artificial-intuition",
     "tags": [
       "ai",
@@ -722,7 +722,9 @@
       "cognition",
       "philosophy"
     ],
-    "image": "scripts/thread-assets/artificial_intuition.png"
+    "image": "scripts/thread-assets/artificial_intuition.png",
+    "postedAt": "2026-04-12T05:35:31.032Z",
+    "tumblrId": "813665753076318208"
   },
   {
     "id": "asi-timeline",
