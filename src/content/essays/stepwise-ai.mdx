@@ -1,12 +1,9 @@
 ---
 title: 'The Stepwise Approach to Enterprise AI'
 summary: >-
-  Most enterprise AI projects fail because companies attempt full-scale deployment
-  before proving value. The evidence from Klarna, Salesforce, and hundreds of
-  mid-market firms shows that a stepwise maturity model, starting with narrow
-  high-frequency tasks, produces measurable ROI within months and builds the
-  organizational trust required to scale.
-date: '2026-04-10'
+  Most enterprises fail at AI by deploying it everywhere at once. Evidence shows
+  that starting with narrow, high-frequency tasks produces measurable ROI.
+date: '2026-04-06'
 author: 'Vedang Vatsa'
 keywords: ['stepwise AI', 'maturity model', 'automation', 'enterprise software', 'marketing', 'sales', 'human resources', 'AI ROI', 'Klarna', 'Salesforce']
 ---
@@ -105,6 +102,24 @@ By May 2025, Klarna began rehiring human agents. The company shifted to a hybrid
 
 <Callout type="warning" title="The Governance Gap">
 Only 33% of AI initiatives are currently meeting their ROI targets. The primary blocker is not technology. It is poor data quality, fragmented data architectures, and lack of governance frameworks. Companies that rush to full automation without first building clean data foundations and human-in-the-loop approval systems consistently underperform.
+</Callout>
+
+## The Stage 3 Infrastructure
+
+The gap between a working demo and a production agent is as wide as the gap between a script and an operating system. Google's [Agents Companion](https://www.kaggle.com/whitepaper-agent-companion) research (February 2025) frames this as the central challenge: proof-of-concept agents are trivial to build, but production agents require infrastructure that most organizations have never considered.
+
+Three categories of infrastructure separate Stage 3 from Stage 4.
+
+**Agent evaluation.** When a human employee handles a customer request poorly, a manager reviews the interaction and provides feedback. Agents need the same. A production agent must be evaluated not only on its final output but on the trajectory it took to get there. Did it select the correct tool? Did it query the right database? Did it follow the required approval sequence before sending a response? Companies that skip trajectory evaluation ship agents that produce correct answers via incorrect processes, creating compliance and security risks that surface weeks later.
+
+**Operational monitoring.** Traditional software monitoring tracks uptime, latency, and error rates. Agent monitoring requires tracking task success rates, tool invocation accuracy, cost-per-resolution, and hallucination frequency. This layer — sometimes called AgentOps — sits between standard DevOps and the agent itself. Without it, you cannot answer basic questions: Is the agent actually saving money? Is it resolving issues or just deflecting them? Is its accuracy improving or degrading over time? Klarna could not answer these questions until customer satisfaction scores had already declined.
+
+**Memory and context.** Agents without persistent memory restart from zero every session. An employee who handled a difficult customer yesterday remembers the context today. Most deployed agents do not. Production-grade systems require short-term memory (what happened in this session), long-term memory (what is this customer's history), and a reflection mechanism that decides which short-term observations should become long-term knowledge. This is the infrastructure that transforms an agent from a stateless chatbot into something that can actually manage an ongoing relationship.
+
+These three layers — evaluation, monitoring, and memory — constitute the minimum viable infrastructure for Stage 4. Building them is the actual work of Stage 3. It is not exciting. It does not demo well. It is the reason most companies stall.
+
+<Callout type="info" title="The Multi-Agent Coordination Problem">
+Stage 4 requires agents that work together. A procurement agent that negotiates pricing needs to coordinate with a budget agent that tracks spending limits and a compliance agent that enforces vendor requirements. These agents can be organized sequentially (assembly line), hierarchically (manager delegates to workers), or collaboratively (peer agents share context). The coordination pattern determines the failure mode. Sequential systems break when one agent stalls. Hierarchical systems break when the manager agent makes a poor delegation decision. Collaborative systems break when agents produce conflicting outputs. Choosing the wrong pattern for the wrong task is one of the primary reasons multi-agent deployments fail.
 </Callout>
 
 ## How to Start

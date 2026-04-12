@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #f8fafc; }
+      .title { font-weight: 800; font-size: 20px; fill: #0f172a; text-anchor: middle; }
+      .subtitle { font-weight: 600; font-size: 11px; fill: #64748b; text-anchor: middle; letter-spacing: 0.15em; }
+    </style>
+    <linearGradient id="bar-old" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <linearGradient id="bar-new" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" class="bg" rx="16" />
+  <text x="400" y="38" class="title">AGENTS EATING SAAS</text>
+  <text x="400" y="56" class="subtitle">THE PRICING MODEL COLLAPSE</text>
+
+  <!-- Per-Seat (old) -->
+  <text x="55" y="95" font-weight="600" font-size="10" fill="#64748b" font-family="Inter" text-anchor="start">PER-SEAT (OLD MODEL)</text>
+  <rect x="55" y="105" width="300" height="20" rx="4" fill="url(#bar-old)" opacity="0.6" />
+  <text x="365" y="119" font-weight="700" font-size="11" fill="#475569" font-family="Inter">$125-$550/user/mo</text>
+
+  <!-- Per-Action -->
+  <text x="55" y="150" font-weight="600" font-size="10" fill="#64748b" font-family="Inter" text-anchor="start">PER-ACTION (SALESFORCE)</text>
+  <rect x="55" y="160" width="40" height="20" rx="4" fill="url(#bar-new)" />
+  <text x="105" y="174" font-weight="700" font-size="11" fill="#1d4ed8" font-family="Inter">$0.10/action</text>
+
+  <!-- Per-Resolution -->
+  <text x="55" y="205" font-weight="600" font-size="10" fill="#64748b" font-family="Inter" text-anchor="start">PER-RESOLUTION (INTERCOM)</text>
+  <rect x="55" y="215" width="55" height="20" rx="4" fill="#10b981" />
+  <text x="120" y="229" font-weight="700" font-size="11" fill="#059669" font-family="Inter">$0.99/resolution</text>
+
+  <!-- Per-Lead -->
+  <text x="55" y="260" font-weight="600" font-size="10" fill="#64748b" font-family="Inter" text-anchor="start">PER-LEAD (HUBSPOT)</text>
+  <rect x="55" y="270" width="60" height="20" rx="4" fill="#f59e0b" />
+  <text x="125" y="284" font-weight="700" font-size="11" fill="#d97706" font-family="Inter">$1.00/lead</text>
+
+  <!-- Right side: key stats -->
+  <rect x="500" y="85" width="270" height="60" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1" />
+  <text x="635" y="110" font-weight="800" font-size="22" fill="#1d4ed8" text-anchor="middle" font-family="Inter">$400B+</text>
+  <text x="635" y="130" font-weight="400" font-size="10" fill="#64748b" text-anchor="middle" font-family="Inter">Global SaaS market 2025</text>
+
+  <rect x="500" y="155" width="270" height="60" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1" />
+  <text x="635" y="180" font-weight="800" font-size="22" fill="#dc2626" text-anchor="middle" font-family="Inter">5% → 40%</text>
+  <text x="635" y="200" font-weight="400" font-size="10" fill="#64748b" text-anchor="middle" font-family="Inter">Apps with AI agents (2025 → 2026)</text>
+
+  <rect x="500" y="225" width="270" height="60" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1" />
+  <text x="635" y="250" font-weight="800" font-size="22" fill="#16a34a" text-anchor="middle" font-family="Inter">$10B</text>
+  <text x="635" y="270" font-weight="400" font-size="10" fill="#64748b" text-anchor="middle" font-family="Inter">Sierra AI valuation (Sep 2025)</text>
+
+  <!-- Bottom banner -->
+  <rect x="30" y="325" width="740" height="55" rx="8" fill="#0f172a" />
+  <text x="400" y="350" font-weight="700" font-size="14" fill="#ffffff" text-anchor="middle" font-family="Inter">SaaS sold access. Agents sell outcomes. The dashboard becomes optional.</text>
+  <text x="400" y="368" font-weight="400" font-size="10" fill="#94a3b8" text-anchor="middle" font-family="Inter">The API is the product. The text field is the interface. The seat count drops.</text>
+</svg>

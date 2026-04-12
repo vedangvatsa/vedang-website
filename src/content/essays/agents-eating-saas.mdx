@@ -1,0 +1,179 @@
+---
+title: 'Agents Eating SaaS'
+summary: >-
+  The $400 billion SaaS industry was built on per-seat pricing. AI agents
+  do not sit in seats. The structural consequence is a pricing collapse
+  that will reshape every software category by 2028.
+date: '2026-04-12'
+author: 'Vedang Vatsa'
+keywords: ['SaaS', 'AI agents', 'pricing', 'outcome-based', 'service as software', 'Salesforce Agentforce', 'Intercom Fin', 'Zendesk', 'Sierra AI', 'MCP', 'enterprise software']
+---
+
+<Figure src="/images/essays/agents-eating-saas.svg?v=7" alt="Infographic" wide />
+
+<Callout type="insight" title="The Core Thesis">
+SaaS companies sell seats. AI agents do not need seats. When agents perform the work that seats were priced to enable, the revenue model collapses. The $400 billion SaaS market is not being disrupted by a better product. It is being disrupted by a buyer who does not use the product the way it was priced.
+</Callout>
+
+## The Seat Problem
+
+The SaaS business model is built on a simple equation. More employees using the software means more seats purchased. More seats means more revenue. Enterprise SaaS companies have optimized for two decades around this mechanic: land a department, expand to adjacent teams, grow the seat count, increase the contract value at renewal.
+
+This model assumed that the software's value was delivered through human interaction with a graphical interface. A salesperson logs into the CRM and updates a deal. A support agent opens a ticket in the helpdesk. A marketer configures a campaign in the automation platform. Each action requires a person. Each person requires a seat.
+
+AI agents break this assumption. An agent does not log in. It calls an API. It does not navigate menus. It constructs requests. It does not need a monitor, a browser, or an annual license. When a single agent can update fifty CRM records, resolve thirty support tickets, and generate twelve campaign reports in the time it takes a human to complete one of those tasks, the number of seats a company needs drops. The revenue model that scaled linearly with headcount now inversely correlates with automation.
+
+<StatRow>
+<Stat value="$400B+" label="Global SaaS market (2025)" source="Precedence Research" sourceUrl="https://www.precedenceresearch.com/software-as-a-service-market" />
+<Stat value="<5% → 40%" label="Enterprise apps with embedded agents (2025 → 2026)" source="Gartner" sourceUrl="https://www.gartner.com/en/newsroom/press-releases" />
+<Stat value="30%" label="Enterprise software revenue from agents by 2035" source="Gartner projection" />
+<Stat value="40%+" label="Enterprise SaaS shifting to outcome pricing by 2030" source="Analyst consensus" />
+</StatRow>
+
+[Gartner](https://www.gartner.com/en/newsroom/press-releases) projects that the percentage of enterprise applications embedding task-specific AI agents will grow from under 5% in 2025 to 40% by the end of 2026. This is not a feature addition. This is an architectural change. The application moves from being a tool that humans operate to a platform that agents consume. The interface becomes optional. The API becomes the product.
+
+## The Pricing Collapse
+
+The companies being disrupted fastest are the ones that noticed first.
+
+### Salesforce: Three Pricing Models in Twelve Months
+
+[Salesforce](https://www.salesforce.com/agentforce/) has moved through three distinct pricing models for Agentforce in under a year:
+
+1. **$2 per conversation** — the original model, treating each agent interaction as a billable event.
+2. **$0.10 per action** — the Flex Credits model ($500 per 100,000 credits, 20 credits per action), granular enough to charge for individual record updates, case summarizations, or flow executions.
+3. **$125-$550 per user per month** — the unlimited model, reverting to seat-based pricing for teams that want predictable costs with unrestricted agent access.
+
+This rapid iteration reveals the fundamental uncertainty. Salesforce cannot decide how to price its own agent because the value delivery mechanism has changed. Per-conversation undercounts complex multi-step workflows. Per-action creates unpredictable costs that CFOs refuse to approve. Per-user reverts to the old model that agents were supposed to replace. The company is cycling through pricing structures because none of them map cleanly onto the economics of autonomous work.
+
+### Intercom: $0.99 Per Resolved Ticket
+
+[Intercom](https://www.intercom.com/fin) took the most aggressive position. Fin, its AI support agent, charges [$0.99 per successful resolution](https://www.intercom.com/pricing). You are billed only when the agent fully resolves a customer's issue without human escalation. Unsuccessful attempts are free.
+
+This model is conceptually clean: the customer pays for outcomes, not access. But it transfers risk to Intercom. If Fin's resolution rate drops, revenue drops. If customers game the escalation trigger to avoid charges, the model breaks. If Fin handles trivial inquiries easily but fails on complex ones, the company earns $0.99 for easy tickets and nothing for hard ones. The average revenue per interaction skews toward the least valuable work.
+
+### Zendesk: Resolution Tiers
+
+[Zendesk](https://www.zendesk.com/service/ai/) embeds automated resolutions into its existing seat-based tiers:
+
+- **Team plan:** 5 free resolutions per agent per month
+- **Professional:** 10 per agent per month
+- **Enterprise:** 15 per agent per month
+- **Overage:** $1.50-$2.00 per additional resolution
+
+This creates a hybrid structure where the base cost remains seat-dependent but the marginal cost of automation is resolution-dependent. Zendesk charges for both the human and the agent doing the human's work. As the agent handles more tickets, the resolution overage becomes the dominant cost variable, but the seat cost never goes away.
+
+### HubSpot: The April 2026 Pivot
+
+[HubSpot](https://www.hubspot.com/products/artificial-intelligence) switched its Breeze agents to outcome-based pricing on April 14, 2026:
+
+- **Breeze Customer Agent:** $0.50 per resolved conversation (down from $1.00)
+- **Breeze Prospecting Agent:** $1.00 per lead recommended for outreach
+
+HubSpot reports that its Customer Agent achieves a 65% resolution rate and reduces resolution time by 39%. At $0.50 per resolution, a support team handling 10,000 monthly tickets with a 65% AI resolution rate pays $3,250 for the agent component. A single human support agent costs $4,000-5,000 per month fully loaded. The math becomes a direct substitution calculation. This is the point where SaaS pricing shifts from "software cost" to "labor cost comparison."
+
+<Callout type="info" title="The Pricing Map">
+The SaaS agent pricing market in 2026 shows a clear pattern. Every major platform is experimenting with at least two pricing models simultaneously. None have settled on a single approach.
+
+| Vendor | Per-Seat | Per-Action/Credit | Per-Resolution/Outcome |
+|--------|----------|-------------------|------------------------|
+| **Salesforce** | $125-$550/user/mo | $0.10/action | $2/conversation (legacy) |
+| **Intercom** | Base plan + seat | — | $0.99/resolution |
+| **Zendesk** | Base plan + seat | — | $1.50-$2.00/resolution |
+| **HubSpot** | Base plan + seat | — | $0.50/resolution, $1.00/lead |
+| **ServiceNow** | Pro Plus tier | Per-"Assist" credits | — |
+| **Freshworks** | Base plan + seat | Per-session packs | — |
+</Callout>
+
+## The Service-as-Software Thesis
+
+Venture capital has a name for what is happening. Foundation Capital, Sequoia, and a16z are funding what they call "Service-as-Software" — the inversion of the SaaS model.
+
+Traditional SaaS sells a tool. The customer provides the labor. Service-as-Software sells an outcome. The vendor provides both the tool and the labor (in the form of an agent). The pricing aligns with the result rather than the access.
+
+This distinction matters because it changes which budget the software competes against. SaaS competes against the IT software budget. Service-as-Software competes against the labor budget. The IT software market is approximately $400 billion. The global labor market for the functions these agents target — customer support, sales development, data analysis, financial operations — exceeds $10 trillion. Venture investors see Service-as-Software as a 25x TAM expansion.
+
+[Sierra AI](https://sierra.ai/) is the clearest embodiment of this thesis. Founded by Bret Taylor (former Salesforce co-CEO, current OpenAI board chair) and Clay Bavor (former Google Labs executive), Sierra raised $635 million at a $10 billion valuation by September 2025. The company crossed $100 million ARR by late 2025. Sierra does not sell CRM software. It sells resolved customer conversations. Clients like SoFi, Sonos, ADT, and SiriusXM pay for outcomes, not licenses. The company competes directly against Salesforce Service Cloud, Zendesk, and Intercom — not as a software alternative, but as a staffing alternative.
+
+<StatRow>
+<Stat value="$10B" label="Sierra AI valuation (Sep 2025)" source="Greenoaks" />
+<Stat value="$635M" label="Total capital raised" source="Sierra" />
+<Stat value="$100M+" label="ARR by late 2025" source="Industry reports" />
+<Stat value="$0.99" label="Intercom per-resolution price" source="Intercom" />
+</StatRow>
+
+## What Gets Eaten First
+
+Not all SaaS categories face equal risk. The vulnerability depends on three factors: how structured the task is, how accessible the data is via API, and how directly the output maps to a measurable outcome.
+
+### Tier 1: Already Being Eaten (2025-2026)
+
+**Customer support.** The most advanced battleground. Intercom Fin, Zendesk AI, Sierra, Freshworks Freddy, and HubSpot Breeze are all shipping autonomous agents that handle Tier-1 tickets. The economics are direct: a $0.99 resolution versus a $15-25 fully loaded human interaction. Companies running lean support operations will stop hiring for Tier-1 roles entirely within two years.
+
+**Sales development.** Outbound prospecting is repetitive, data-intensive, and measurable. HubSpot's Breeze Prospecting Agent charges $1.00 per qualified lead. [Apollo.io](https://www.apollo.io/) and [Clay](https://www.clay.com/) have built agent-first prospecting stacks that research accounts, enrich contacts, personalize outreach, and schedule meetings. A human SDR costs $60,000-80,000 per year and books 15-30 meetings per month. An agent stack costs $2,000-5,000 per month and runs continuously.
+
+**Reporting and analytics.** Every analytics platform is adding natural language querying. [PostHog AI](https://posthog.com/docs/ai) generates HogQL from English. [Snowflake Cortex](https://www.snowflake.com/en/data-cloud/cortex/) writes SQL from prompts. [Databricks AI/BI Genie](https://www.databricks.com/product/ai-bi) answers questions against the semantic layer. The junior data analyst who compiled weekly reports is being replaced by a prompt that generates the same report in seconds, backed by the [Google Analytics Data API](https://developers.google.com/analytics/devguides/reporting/data/v1), [Stripe API](https://stripe.com/docs/api), or warehouse connection.
+
+### Tier 2: Active Compression (2026-2027)
+
+**CRM data entry.** AI meeting assistants from [Fireflies.ai](https://fireflies.ai/) and [Gong](https://www.gong.io/) already transcribe calls and update CRM records automatically. The next step is agents that listen to customer interactions across email, Slack, and calls, then update Salesforce or HubSpot records without any human touching the CRM. The number of required CRM seats drops because fewer people need to interact with the interface directly.
+
+**Project management.** [Linear](https://linear.app/) launched Linear Agent in early 2026. It synthesizes project updates, triages bugs, prioritizes backlogs from discussion threads, and creates issues from natural language. The project manager who spent hours maintaining the board becomes the person who reviews what the agent produced.
+
+**Content marketing.** [Jasper](https://www.jasper.ai/), [Writer](https://writer.com/), and HubSpot Breeze Content Agent generate blog posts, social media content, and landing pages from brand guidelines. The marketing coordinator who produced three blog posts per week competes against an agent that produces twenty drafts per day.
+
+### Tier 3: Structural Resistance (2028+)
+
+**Security and compliance.** Regulatory obligations require human accountability. An agent can scan for vulnerabilities and flag policy violations, but a human must own the decision to remediate. The compliance officer's seat remains.
+
+**Infrastructure and DevOps.** Cloud infrastructure management requires agents that can safely modify production environments. The blast radius of an incorrect agent action in infrastructure (deleting a database, misconfiguring a firewall) keeps humans in the loop for longer than other categories.
+
+**Collaboration platforms.** Slack, Notion, and Microsoft Teams are communication layers, not task execution layers. Agents use these platforms as data sources and communication channels, but they do not replace the need for humans to communicate. The seat count in collaboration tools may actually increase as agents generate more notifications, summaries, and updates.
+
+## What Happens to SaaS Moats
+
+Traditional SaaS defended its market position through four moats: user experience, data lock-in, workflow integration, and switching costs. Agents erode three of them.
+
+**User experience becomes irrelevant.** When the primary consumer of the software is an API call from an agent, the quality of the dashboard, the design of the onboarding flow, and the polish of the mobile app stop mattering. The moat that Figma, Linear, and Notion built through exceptional design does not protect against a competitor whose API is easier for agents to consume.
+
+**Data lock-in weakens but persists.** The customer's data remains in the vendor's system. But agents that can read from and write to multiple platforms simultaneously reduce the cost of maintaining parallel systems. An agent connected to both Salesforce and HubSpot via [MCP](https://modelcontextprotocol.io/) can gradually migrate data without a formal migration project.
+
+**Workflow integration inverts.** SaaS companies built moats by becoming deeply embedded in a customer's workflow. The more processes that depend on the tool, the harder it is to remove. But agents can replicate workflows across platforms. If an agent can read your Salesforce automation rules and recreate them in a competitor, the switching cost drops.
+
+**Network effects survive.** Platforms where the value comes from multi-party participation — marketplaces, communication tools, collaboration platforms — retain their moat because agents cannot replicate the network. Slack's value is that your coworkers are there. An agent cannot change that.
+
+<PullQuote>
+SaaS sold access to a tool. The new model sells access to an outcome. The tool becomes invisible. The outcome is what the customer actually wanted all along.
+</PullQuote>
+
+## The Incumbent Dilemma
+
+Every major SaaS company faces the same strategic bind. They must ship agents to remain competitive. But every agent they ship reduces the number of seats their customers need. Internal revenue forecasts built on seat expansion conflict directly with product roadmaps built on agent automation.
+
+Salesforce illustrates this tension. The company employs approximately 72,000 people and generates most of its revenue from per-seat CRM licenses. Agentforce is designed to reduce the number of human workers its customers employ. If it succeeds, customers need fewer CRM seats because fewer humans interact with the CRM. Salesforce must replace per-seat revenue with per-action or per-outcome revenue — but those models are cheaper per unit of work performed. The net effect is revenue compression on a per-customer basis even as the product becomes more valuable.
+
+Marc Benioff has framed this as "digital labor" — a new product category that generates net-new revenue rather than cannibalizing seat revenue. The framing is strategically necessary. Whether it is accurate depends on whether customers adopt agents alongside their existing seats (additive) or instead of additional seats (substitutive). Early evidence from Salesforce's own deployment — where the company reduced its customer support staff from 9,000 to 5,000 while deploying Agentforce — suggests substitution.
+
+## The Protocol Layer
+
+The speed at which agents eat SaaS depends on how easily agents can connect to SaaS platforms. Two protocols are defining this:
+
+**MCP (Model Context Protocol).** Launched by [Anthropic](https://anthropic.com) in November 2024 and donated to the Linux Foundation's Agentic AI Foundation in December 2025. MCP standardizes how LLMs connect to external tools. MCP SDK downloads reached [97 million per month](https://npmjs.com) by March 2026. Over 10,000 public MCP servers are registered. 28% of Fortune 500 companies have integrated MCP. Every SaaS company that publishes an MCP server makes itself easier for agents to consume — and easier for agents to bypass the dashboard.
+
+**A2A (Agent-to-Agent Protocol).** Launched by [Google](https://google.github.io/A2A/) in April 2025. A2A standardizes how agents communicate with each other. While MCP connects agents to tools, A2A connects agents to agents. A procurement agent negotiating with a vendor agent. A scheduling agent coordinating with a meeting agent. A2A enables the multi-agent architectures that [Google's Agents Companion](https://www.kaggle.com/whitepaper-agent-companion) research describes as the next phase of enterprise AI deployment.
+
+Together, MCP and A2A are building the plumbing that allows agents to treat every SaaS product as an API endpoint rather than a destination. The SaaS vendor becomes middleware — infrastructure that agents route through rather than interfaces that humans navigate.
+
+## What Survives
+
+SaaS does not die. It transforms. The vendors that survive will share three characteristics.
+
+**They will become agent-native platforms.** Instead of adding AI features to existing dashboards, they will rebuild as infrastructure that agents consume. The dashboard becomes optional. The API becomes primary. The documentation optimizes for agent consumption, not human reading.
+
+**They will own the data layer.** Companies that control proprietary datasets — Salesforce with CRM data, Snowflake with warehouse data, Bloomberg with financial data — retain value because agents need the data regardless of the interface. The data layer is the durable asset. The interface layer is the disposable one.
+
+**They will price on value, not access.** The vendors that find stable pricing models will be the ones that tie revenue to measurable business outcomes. $0.99 per resolved ticket. $1.00 per qualified lead. $0.10 per CRM action. These models survive because they align the vendor's revenue with the customer's ROI. Per-seat pricing survives only in categories where the human-in-the-loop remains structurally necessary.
+
+<KeyTakeaway>
+The SaaS industry built a $400 billion market by selling access. AI agents are converting that market from access-based to outcome-based economics. The transition is already visible in customer support (Intercom at $0.99/resolution, Zendesk at $1.50/resolution) and sales development (HubSpot at $1.00/lead). The companies at greatest risk are those whose core product is a workflow that an agent can execute via API without ever opening a browser. The companies that survive are those that transform from destinations into infrastructure — platforms that agents consume rather than interfaces that humans navigate. SaaS is not dying. The dashboard is dying. The API is what remains.
+</KeyTakeaway>

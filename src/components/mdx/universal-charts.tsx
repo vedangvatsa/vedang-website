@@ -129,11 +129,10 @@ export function TextUIAdoption() {
 export function PlatformShiftTimeline() {
   const events = [
     { date: 'Nov 2022', title: 'ChatGPT launches', desc: 'Proves natural language can replace search and form-filling for information retrieval.' },
-    { date: 'Mar 2023', title: 'GitHub Copilot Chat', desc: 'Developers begin asking questions about code instead of reading documentation manually.' },
+    { date: 'Dec 2023', title: 'GitHub Copilot Chat GA', desc: 'Developers begin asking questions about code instead of reading documentation manually.' },
+    { date: 'Oct 2024', title: 'Salesforce Agentforce GA', desc: '12,000+ orgs adopt agentic CRM. 380,000 conversations handled with 84% self-resolution.' },
     { date: 'Nov 2024', title: 'MCP by Anthropic', desc: 'Standardizes how LLMs connect to external tools. The text field gains access to live APIs.' },
-    { date: 'Sep 2025', title: 'Salesforce Agentforce GA', desc: '12,000+ orgs adopt agentic CRM. 380,000 conversations handled with 84% self-resolution.' },
-    { date: 'Jan 2026', title: 'PostHog AI ships', desc: 'Product analytics moves from click-to-query to type-to-query. HogQL generated from English.' },
-    { date: 'Mar 2026', title: 'Antigravity IDE', desc: 'Google ships agent-first IDE. Developers orchestrate parallel agents from a text interface.' },
+    { date: 'Nov 2025', title: 'PostHog AI & Antigravity IDE', desc: 'PostHog ships type-to-query analytics. Google ships agent-first IDE with parallel agents.' },
   ];
 
   return (

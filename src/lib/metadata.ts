@@ -112,30 +112,29 @@ export function generateMetadata(params: MetadataParams): Metadata {
     }
   }
 
+  const resolvedImage = ogImage || '/images/icon.png';
+
   const openGraph: any = {
     title,
     description,
     url,
     type,
+    images: [
+      {
+        url: resolvedImage,
+        width: 1200,
+        height: 630,
+        alt: ogImageAlt,
+      },
+    ],
   };
 
   const twitter: any = {
     card: 'summary_large_image',
     title,
     description,
+    images: [resolvedImage],
   };
-
-  if (ogImage) {
-    openGraph.images = [
-      {
-        url: ogImage,
-        width: 1200,
-        height: 630,
-        alt: ogImageAlt,
-      },
-    ];
-    twitter.images = [ogImage];
-  }
 
   return {
     title,

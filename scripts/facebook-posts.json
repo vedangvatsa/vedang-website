@@ -444,41 +444,33 @@
     "id": "ai-economy",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "17:00",
-    "posted": true,
-    "text": "The entry ramp is narrowing.\n\nStanford payroll data: junior workers aged 22-25 in AI-exposed jobs saw a 16% relative employment decline since 2022. Senior workers stayed stable.\n\nSalesforce cut 4,000 support positions. Duolingo stopped using human contractors.\n\nEvery previous technology eventually created broad prosperity. But 'eventually' ranged from one to three generations. The question: will AI be different?\n\nveda.ng/ai-economy",
-    "image": "scripts/thread-assets/ai_economy.png",
-    "postedAt": "2026-04-10T12:06:57.502Z",
-    "fbPostId": "1785048661795414_1254802676829774"
+    "posted": false,
+    "text": "The entry ramp is narrowing.\n\nStanford payroll data: junior workers aged 22-25 in AI-exposed jobs saw a 16% relative employment decline since 2022. Senior workers stayed stable.\n\nSalesforce cut 4,000 support positions. Duolingo stopped using human contractors.\n\nEvery previous technology eventually created broad prosperity. But 'eventually' ranged from one to three generations. The question: will AI be different?\n\nveda.ng/ai-economy\n\nThe companies that get AI deployment right start small. One boring task. Three-month payback. Then scale: veda.ng/stepwise-ai",
+    "image": "scripts/thread-assets/ai_economy.png"
   },
   {
     "id": "ambient-intelligence",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "09:00",
-    "posted": true,
-    "text": "The best interface is no interface.\n\nDesktop to pocket to wrist. Each step more immediate, less obtrusive. But all require a conscious command.\n\nAmbient intelligence is the final step: eliminate the command itself. A meeting room that recognizes participants and pulls up files when everyone sits down.\n\nPrivacy is the obvious challenge. A world that senses constantly collects constantly.\n\nveda.ng/ambient-intelligence",
-    "image": "scripts/thread-assets/ambient_intelligence.png",
-    "postedAt": "2026-04-11T05:13:00.939Z",
-    "fbPostId": "1785048661795414_1255314486778593"
+    "posted": false,
+    "text": "The best interface is no interface.\n\nDesktop to pocket to wrist. Each step more immediate, less obtrusive. But all require a conscious command.\n\nAmbient intelligence is the final step: eliminate the command itself. A meeting room that recognizes participants and pulls up files when everyone sits down.\n\nPrivacy is the obvious challenge. A world that senses constantly collects constantly.\n\nveda.ng/ambient-intelligence\n\nBefore no interface, there's a simpler one. The text field is replacing the dashboard: veda.ng/universal-text-ui",
+    "image": "scripts/thread-assets/ambient_intelligence.png"
   },
   {
     "id": "api-states",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "17:00",
-    "posted": true,
-    "text": "The nation-state as a platform.\n\nInstead of navigating offices, make an API call. Instead of convoluted tax filing, your software talks to the tax authority directly.\n\nCitizenship becomes cryptographic credentials. Prove your age without revealing your date of birth. Self-sovereign identity.\n\nEstonia already built this. E-Residency lets anyone access services from anywhere.\n\nveda.ng/api-states",
-    "image": "scripts/thread-assets/api_states.png",
-    "postedAt": "2026-04-11T11:55:13.425Z",
-    "fbPostId": "1785048661795414_1255532346756807"
+    "posted": false,
+    "text": "The nation-state as a platform.\n\nInstead of navigating offices, make an API call. Instead of convoluted tax filing, your software talks to the tax authority directly.\n\nCitizenship becomes cryptographic credentials. Prove your age without revealing your date of birth. Self-sovereign identity.\n\nEstonia already built this. E-Residency lets anyone access services from anywhere.\n\nveda.ng/api-states\n\nEstonia already built this. 99% of services digital. Babies born get benefits automatically. No forms: veda.ng/agentic-state",
+    "image": "scripts/thread-assets/api_states.png"
   },
   {
     "id": "artificial-intuition",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "01:00",
-    "posted": true,
+    "posted": false,
     "text": "Logic finds answers. Intuition finds questions.\n\nAI has focused on replicating deliberate reasoning. Systems that excel at logic but struggle with ambiguity.\n\nThe next frontier: synthetic intuition. Not consciousness, but holistic pattern recognition. The ability to find novel connections between distant concepts.\n\nA rational approach analyzes incrementally. An intuitive approach connects unrelated trends with unmet needs. Breakthroughs.\n\nveda.ng/artificial-intuition",
-    "image": "scripts/thread-assets/artificial_intuition.png",
-    "postedAt": "2026-04-11T19:57:53.893Z",
-    "fbPostId": "1785048661795414_1255828620060513"
+    "image": "scripts/thread-assets/artificial_intuition.png"
   },
   {
     "id": "asi-timeline",
@@ -487,5 +479,101 @@
     "posted": false,
     "text": "When does superintelligence arrive? The honest answer: nobody knows.\n\nMetaculus: 50% chance of AGI by 2040-2050. But predictions range from 2030 to 2100.\n\nMoore's Law is slowing. But progress now comes from architecture, not hardware. Transformers in 2017. Scaling laws in 2020. Nobody predicted either.\n\nThe uncertainty is not a reason for complacency. It is a reason for urgency.\n\nveda.ng/asi-timeline",
     "image": "scripts/thread-assets/asi_timeline.png"
+  },
+  {
+    "id": "stepwise-ai",
+    "scheduleDate": "2026-04-10",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/stepwise_ai.png",
+    "text": "Klarna automated customer service. Saved $60M. Then satisfaction collapsed and they reversed it.\n\nThe failure was sequence, not technology. They went straight for the hardest problem. Companies that start with one boring, repetitive task — invoice matching, email triage — see payback in three months.\n\n70% of big-bang AI deployments fail. Discipline beats ambition.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "universal-text-ui",
+    "scheduleDate": "2026-04-12",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/universal_text_ui.png",
+    "text": "Every dropdown on a dashboard exists because someone predicted your question. Your actual question is almost never one of them.\n\nPostHog replaced analytics dashboards with a text field. Salesforce did it for CRM — 84% self-resolution. Cursor did it for code — $1B ARR.\n\nThe pattern: text field + LLM + direct API calls. No menus. No navigation.\n\nveda.ng/universal-text-ui"
+  },
+  {
+    "id": "agentic-state",
+    "scheduleDate": "2026-04-11",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "text": "Estonia digitized 99% of public services. Only marriages and divorces require showing up in person.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government.\n\nBaby born? The system detects it, calculates benefits, deposits money. No form. No queue. No portal.\n\nMost governments still make you download a PDF.\n\nveda.ng/agentic-state"
+  },
+  {
+    "id": "stepwise-ai-sales",
+    "scheduleDate": "2026-04-12",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/stepwise_ai.png",
+    "text": "Lead response time was 4 hours. Contact rates drop 10x after the first 5 minutes. Most leads were dead before a human saw them.\n\nOne voice agent. One task: qualify inbound leads and book meetings. Response time fell to 60 seconds. Conversions tripled. 2,000+ meetings per month automatically.\n\nOne task. One integration. The bottleneck dissolved.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "agentic-state-eresidency",
+    "scheduleDate": "2026-04-13",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it. €125M in state revenue last year. 12:1 ROI.\n\nGovernment as infrastructure. Citizenship as credential. Geography as optional.\n\nveda.ng/agentic-state"
+  },
+  {
+    "id": "universal-text-ui-106apps",
+    "scheduleDate": "2026-04-14",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/universal_text_ui.png",
+    "text": "The average company runs 106 SaaS apps. Employees switch between them 1,200 times per day. Only 39% of time is deep focus.\n\n93% of business leaders said they'd perform better asking data questions in plain English. That's not a feature request. That's a structural bottleneck.\n\nveda.ng/universal-text-ui"
+  },
+  {
+    "id": "stepwise-ai-marketing",
+    "scheduleDate": "2026-04-15",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/stepwise_ai.png",
+    "text": "Three-person agency at capacity. Weekly client reports took six hours per person from 10+ data sources.\n\nRouted analytics into an LLM. Twenty hours freed weekly. Client load went from 30 to 50 campaigns. Zero hires.\n\nAI removed the bottleneck. Nobody got replaced.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "agentic-state-singapore",
+    "scheduleDate": "2026-04-16",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "text": "Singapore's AI chatbot handled 50M citizen queries. Their call transcription AI cut admin work by 72%.\n\n100,000 officers save 50 minutes per task with government-built AI.\n\n2026 budget: \"scaled deployment at national speed.\" Most countries are still debating pilots.\n\nveda.ng/agentic-state"
+  },
+  {
+    "id": "agentic-state-xroad",
+    "scheduleDate": "2026-04-10",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "text": "Estonia's X-Road handles over 1 billion government queries per year. Birth registered → population registry, health insurance, and social services all updated. One notification. Zero additional forms.\n\nRunning since 2001. 25 years in production.\n\nMost countries digitized paper forms. Estonia redesigned the process architecture entirely.\n\nveda.ng/agentic-state"
+  },
+  {
+    "id": "universal-text-ui-paradigms",
+    "scheduleDate": "2026-04-17",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/universal_text_ui.png",
+    "text": "Three interface paradigms in fifty years. CLI: user memorizes syntax. GUI: user learns navigation. NLI: system interprets intent.\n\nEach cut adaptation cost by 10x. The GUI replaced the command line. Natural language will replace dashboards.\n\nveda.ng/universal-text-ui"
+  },
+  {
+    "id": "stepwise-ai-gartner",
+    "scheduleDate": "2026-04-19",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/stepwise_ai.png",
+    "text": "Gartner: 40% of agentic AI projects risk cancellation by 2027. Only 33% meet ROI targets. The tech works. The organizational readiness doesn't.\n\nStart with one task that pays for itself in 90 days. Then expand.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "agentic-state-uae",
+    "scheduleDate": "2026-04-20",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "text": "Abu Dhabi: AED 13 billion to become first AI-native government by 2027. 97% AI utilization. 108 HR services automated.\n\nNo legacy systems. No tech debt. Building government from scratch as if AI existed from day one.\n\nveda.ng/agentic-state"
   }
 ]

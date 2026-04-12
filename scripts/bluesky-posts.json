@@ -391,31 +391,25 @@
     "id": "bureaucracy-tax",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "09:00",
-    "posted": true,
+    "posted": false,
     "text": "You need a permit. Then another permit. Then an inspection. Then more permits.\n\nRules were supposed to create order. They created sophisticated inertia dressed up as responsibility.\n\nInstitutions that survive on friction have no incentive to remove it.\n\nveda.ng/bureaucracy-tax",
-    "image": "scripts/thread-assets/bureaucracy_tax.png",
-    "postedAt": "2026-04-10T05:38:28.394Z",
-    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mj4m7hvgn22r"
+    "image": "scripts/thread-assets/bureaucracy_tax.png"
   },
   {
     "id": "models-shrinking",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "09:00",
-    "posted": true,
-    "text": "GPT-3.5 had 175B parameters. Llama 3 matched it with 8B. That is 20x fewer.\n\nPhi-4 has 14B. It outperforms GPT-4o on math and science benchmarks. A laptop model beating a datacenter model.\n\nThe winning strategy shifted from more parameters to better data.",
-    "image": "scripts/thread-assets/models_shrinking.png",
-    "postedAt": "2026-04-11T05:12:53.730Z",
-    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mj73anuhsa2x"
+    "posted": false,
+    "text": "GPT-3.5 had 175B parameters. Llama 3 matched it with 8B. That is 20x fewer.\n\nPhi-4 has 14B. It outperforms GPT-4o on math and science benchmarks. A laptop model beating a datacenter model.\n\nThe winning strategy shifted from more parameters to better data.\n\nveda.ng/asi-timeline",
+    "image": "scripts/thread-assets/models_shrinking.png"
   },
   {
     "id": "cognitive-load",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "01:00",
-    "posted": true,
+    "posted": false,
     "text": "Your brain was built for scarcity. It now lives in abundance.\n\nEvery context switch costs you. Every notification occupies a slot in working memory.\n\nThe result is continuous partial attention. Aware of everything. Focused on nothing.\n\nveda.ng/cognitive-load",
-    "image": "scripts/thread-assets/cognitive_load.png",
-    "postedAt": "2026-04-10T20:02:44.336Z",
-    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mj64ivebce2j"
+    "image": "scripts/thread-assets/cognitive_load.png"
   },
   {
     "id": "attention-refinery",
@@ -510,7 +504,7 @@
     "scheduleDate": "2026-04-17",
     "scheduleTime": "17:00",
     "posted": false,
-    "text": "How do you govern something smarter than you?\n\nEvery governance system assumes humans are the smartest actors. AGI may end that assumption.\n\nveda.ng/agi-governance",
+    "text": "How do you govern something smarter than you?\n\nEvery governance system assumes humans are the smartest actors. AGI may end that assumption.\n\nveda.ng/agi-governance\n\nSome governments aren't waiting. Estonia, Singapore, and the UAE already run AI at production scale across public services: veda.ng/agentic-state",
     "image": "scripts/thread-assets/agi_governance.png"
   },
   {
@@ -518,7 +512,7 @@
     "scheduleDate": "2026-04-18",
     "scheduleTime": "01:00",
     "posted": false,
-    "text": "The entry ramp is narrowing.\n\nStanford data: junior workers in AI-exposed jobs down 16%. Senior workers stable. The gap is widening.\n\nveda.ng/ai-economy",
+    "text": "The entry ramp is narrowing.\n\nStanford data: junior workers in AI-exposed jobs down 16%. Senior workers stable. The gap is widening.\n\nveda.ng/ai-economy\n\nThe companies that get AI deployment right start small. One boring task. Three-month payback. Then scale: veda.ng/stepwise-ai",
     "image": "scripts/thread-assets/ai_economy.png"
   },
   {
@@ -526,7 +520,7 @@
     "scheduleDate": "2026-04-18",
     "scheduleTime": "09:00",
     "posted": false,
-    "text": "The best interface is no interface.\n\nAmbient intelligence eliminates the command itself. The environment senses and acts. You never ask.\n\nveda.ng/ambient-intelligence",
+    "text": "The best interface is no interface.\n\nAmbient intelligence eliminates the command itself. The environment senses and acts. You never ask.\n\nveda.ng/ambient-intelligence\n\nBefore no interface, there's a simpler one. The text field is replacing the dashboard: veda.ng/universal-text-ui",
     "image": "scripts/thread-assets/ambient_intelligence.png"
   },
   {
@@ -534,7 +528,7 @@
     "scheduleDate": "2026-04-18",
     "scheduleTime": "17:00",
     "posted": false,
-    "text": "Your next customer is an algorithm.\n\nAI agents search stores, compare prices, complete checkout. You describe what you want. The machine buys it.\n\nveda.ng/agentic-commerce",
+    "text": "Your next customer is an algorithm.\n\nAI agents search stores, compare prices, complete checkout. You describe what you want. The machine buys it.\n\nveda.ng/agentic-commerce\n\nThe interface layer is changing too — dashboards are giving way to text fields that call APIs directly: veda.ng/universal-text-ui",
     "image": "scripts/thread-assets/agentic_commerce.png"
   },
   {
@@ -558,7 +552,91 @@
     "scheduleDate": "2026-04-19",
     "scheduleTime": "17:00",
     "posted": false,
-    "text": "The corporation is dissolving.\n\nWhen transaction costs approach zero, the firm stops making sense. AI agents dissolve the hierarchy into fluid networks.\n\nveda.ng/ai-agent-economy",
+    "text": "The corporation is dissolving.\n\nWhen transaction costs approach zero, the firm stops making sense. AI agents dissolve the hierarchy into fluid networks.\n\nveda.ng/ai-agent-economy\n\nThe hard part: getting there without blowing up. 70% of big-bang AI deployments fail. The sequencing matters: veda.ng/stepwise-ai",
     "image": "scripts/thread-assets/ai_agent_economy.png"
+  },
+  {
+    "id": "stepwise-ai",
+    "scheduleDate": "2026-04-10",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "Klarna automated support. Saved $60M. Customer satisfaction collapsed. They hired people back.\n\n70% of big-bang AI deployments fail. Companies that pick one boring task first see payback in three months.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "universal-text-ui",
+    "scheduleDate": "2026-04-12",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "Every dropdown on a dashboard is a predicted question. Your actual question is almost never one of them.\n\nPostHog, Salesforce, Cursor all replaced dashboards with text fields that call APIs directly.\n\nveda.ng/universal-text-ui"
+  },
+  {
+    "id": "agentic-state",
+    "scheduleDate": "2026-04-11",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "Estonia: 99% of government services are digital. Only marriages and divorces require showing up.\n\nBaby born? System detects it, calculates benefits, deposits money. No form. No queue.\n\nMost governments still run on PDFs.\n\nveda.ng/agentic-state"
+  },
+  {
+    "id": "stepwise-ai-sales",
+    "scheduleDate": "2026-04-12",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "Lead response: 4 hours → 60 seconds. One voice agent, one task. Conversions tripled.\n\nThe sales team stopped qualifying. They only close.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "agentic-state-eresidency",
+    "scheduleDate": "2026-04-13",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "Estonia lets anyone start an EU company remotely. 135,000 people from 170 countries. €125M in state revenue. 12:1 ROI.\n\nGovernment as infrastructure.\n\nveda.ng/agentic-state"
+  },
+  {
+    "id": "universal-text-ui-106apps",
+    "scheduleDate": "2026-04-14",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "106 SaaS apps per company. 1,200 daily tab switches. 39% deep focus time.\n\n93% of leaders want to ask data questions in plain English. That's a structural bottleneck.\n\nveda.ng/universal-text-ui"
+  },
+  {
+    "id": "stepwise-ai-marketing",
+    "scheduleDate": "2026-04-15",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "3-person agency. 6 hours/person every Friday on reports. Routed analytics to LLM. 20 hours freed. Clients: 30 → 50. Zero hires.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "agentic-state-singapore",
+    "scheduleDate": "2026-04-16",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "Singapore: 50M citizen queries via AI chatbot. 100k officers using government AI tools. 72% less admin work.\n\nMost countries still debating whether to start a pilot.\n\nveda.ng/agentic-state"
+  },
+  {
+    "id": "agentic-state-xroad",
+    "scheduleDate": "2026-04-10",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "Estonia's X-Road: 1B+ gov queries/year. Birth registered → all agencies updated. One notification. Zero forms. Running since 2001.\n\nveda.ng/agentic-state"
+  },
+  {
+    "id": "universal-text-ui-paradigms",
+    "scheduleDate": "2026-04-17",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "CLI → GUI → NLI. Each cut adaptation cost 10x. The GUI replaced the command line. Natural language will replace dashboards.\n\nveda.ng/universal-text-ui"
+  },
+  {
+    "id": "stepwise-ai-gartner",
+    "scheduleDate": "2026-04-19",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "40% of AI projects risk cancellation by 2027. Only 33% meet ROI. Fix: one task, 90-day payback, then expand.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "agentic-state-uae",
+    "scheduleDate": "2026-04-20",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "Abu Dhabi: AED 13B for first AI-native government by 2027. 97% utilization. No legacy systems. Clean-sheet approach.\n\nveda.ng/agentic-state"
   }
 ]

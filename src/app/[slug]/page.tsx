@@ -118,7 +118,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const siteUrl = 'https://veda.ng';
   const essayUrl = `${siteUrl}/${slug}`;
-  const imageUrl = `${siteUrl}/images/icon.png`;
+
+  // Check for essay-specific OG image (prefer WebP, then PNG)
+  const imageExtensions = ['webp', 'png', 'jpg'];
+  let ogImageUrl = `${siteUrl}/images/icon.png`;
+  for (const ext of imageExtensions) {
+    const imagePath = path.join(process.cwd(), 'public', 'images', 'essays', `${slug}.${ext}`);
+    if (fs.existsSync(imagePath)) {
+      ogImageUrl = `${siteUrl}/images/essays/${slug}.${ext}`;
+      break;
+    }
+  }
 
   const publishedTime = essay.frontmatter.date ? new Date(essay.frontmatter.date).toISOString() : new Date().toISOString();
 
@@ -135,11 +145,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: essayUrl,
       type: 'article',
       publishedTime: publishedTime,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: essay.frontmatter.title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: essay.frontmatter.title,
       description: essay.frontmatter.summary,
+      images: [ogImageUrl],
     },
   };
 }

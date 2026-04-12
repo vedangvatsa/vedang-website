@@ -455,41 +455,33 @@
     "id": "models-shrinking",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "17:00",
-    "posted": true,
+    "posted": false,
     "image": "scripts/thread-assets/models_shrinking.png",
-    "text": "GPT-3.5 had 175 billion parameters.\n\nLlama 3 matched it with 8 billion. That is 20x fewer.\n\nPhi-4 has 14 billion parameters. It outperforms GPT-4o on math and graduate-level science benchmarks. A model that runs on a laptop beating one that needs a datacenter.\n\nThe pattern is consistent. Models are getting smaller and better at the same time.\n\nThe winning strategy shifted from more parameters to better data. Microsoft trained Phi-4 on curated, textbook-quality synthetic data instead of scraping the entire internet. Quality over quantity. The same lesson every industry learns eventually.\n\nThis changes who can compete.\n\nWhen frontier performance required trillion-parameter models, only a few labs could play. When 14 billion parameters can match that performance in specific domains, the barrier drops by orders of magnitude.\n\nThe biggest models may still lead on broad general knowledge. But for most real tasks, a smaller model fine-tuned on good data can match or beat them.\n\n70 to 80 percent of enterprise AI tasks may work better with a focused small model than a giant general one.\n\nThe future of AI may not be one massive model that does everything. It may be many small models, each doing one thing well. Running locally. No API call. No subscription.\n\nThe trillion-parameter era may turn out to be a detour, not a destination.",
-    "postedAt": "2026-04-10T12:06:41.133Z",
-    "tweetId": "2042574987840610439"
+    "text": "GPT-3.5 had 175 billion parameters.\n\nLlama 3 matched it with 8 billion. That is 20x fewer.\n\nPhi-4 has 14 billion parameters. It outperforms GPT-4o on math and graduate-level science benchmarks. A model that runs on a laptop beating one that needs a datacenter.\n\nThe pattern is consistent. Models are getting smaller and better at the same time.\n\nThe winning strategy shifted from more parameters to better data. Microsoft trained Phi-4 on curated, textbook-quality synthetic data instead of scraping the entire internet. Quality over quantity. The same lesson every industry learns eventually.\n\nThis changes who can compete.\n\nWhen frontier performance required trillion-parameter models, only a few labs could play. When 14 billion parameters can match that performance in specific domains, the barrier drops by orders of magnitude.\n\nThe biggest models may still lead on broad general knowledge. But for most real tasks, a smaller model fine-tuned on good data can match or beat them.\n\n70 to 80 percent of enterprise AI tasks may work better with a focused small model than a giant general one.\n\nThe future of AI may not be one massive model that does everything. It may be many small models, each doing one thing well. Running locally. No API call. No subscription.\n\nThe trillion-parameter era may turn out to be a detour, not a destination.\n\nveda.ng/asi-timeline"
   },
   {
     "id": "hustle-culture",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "01:00",
-    "posted": true,
+    "posted": false,
     "image": "scripts/thread-assets/hustle_culture.png",
-    "text": "We worship busy.\n\nThe person who sleeps four hours is more dedicated than the one who sleeps eight. Rest is weakness. Stillness is stagnation.\n\nBut the research tells a different story.\n\nStanford found that after 55 hours per week, productivity drops to nearly zero. You are not producing more. You are just present longer.\n\nChronic stress shrinks the hippocampus. That is the part of your brain responsible for memory and learning. It physically gets smaller.\n\nHustle culture sells sacrifice as strategy. But the biological cost is real and measurable.\n\nThe goalpost moves every time you reach it. Six figures feels empty. The promotion just means new problems. The apartment loses its appeal in a month.\n\nThat is not ambition. That may be a treadmill designed to look like a ladder.\n\nveda.ng/hustle-culture",
-    "postedAt": "2026-04-10T20:02:33.540Z",
-    "tweetId": "2042694745093476407"
+    "text": "We worship busy.\n\nThe person who sleeps four hours is more dedicated than the one who sleeps eight. Rest is weakness. Stillness is stagnation.\n\nBut the research tells a different story.\n\nStanford found that after 55 hours per week, productivity drops to nearly zero. You are not producing more. You are just present longer.\n\nChronic stress shrinks the hippocampus. That is the part of your brain responsible for memory and learning. It physically gets smaller.\n\nHustle culture sells sacrifice as strategy. But the biological cost is real and measurable.\n\nThe goalpost moves every time you reach it. Six figures feels empty. The promotion just means new problems. The apartment loses its appeal in a month.\n\nThat is not ambition. That may be a treadmill designed to look like a ladder.\n\nveda.ng/hustle-culture"
   },
   {
     "id": "attention-refinery",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "09:00",
-    "posted": true,
+    "posted": false,
     "image": "scripts/thread-assets/attention_refinery.png",
-    "text": "You are not the customer. You are the raw material.\n\nEvery platform you use for free runs the same business model. Your attention enters as crude input. It gets refined into behavioral data. That data gets sold to advertisers.\n\nThe infinite scroll is not a design choice. It is an extraction tool. It removes the natural stopping point that a page break would create. Push notifications are factory whistles pulling you back to the production line.\n\nLike buttons and share counts are not social features. They are real-time dashboards for the refinery. They measure which stimulus produces the most engagement for the least effort. The algorithm adjusts accordingly.\n\nOutrage is high-octane fuel. Nuance is low-yield crude. In an economy optimized for attention, the most provocative content wins regardless of its truth.\n\nThe consequence is not just wasted time. It is the erosion of collective sensemaking. When the system rewards engagement over accuracy, misinformation travels faster than truth. A lie that generates a million clicks is more valuable than a fact that generates a thousand.\n\nI wrote more about how this refinery works and what may come after it.\n\nveda.ng/attention-refinery",
-    "postedAt": "2026-04-11T05:12:47.278Z",
-    "tweetId": "2042833215019270194"
+    "text": "You are not the customer. You are the raw material.\n\nEvery platform you use for free runs the same business model. Your attention enters as crude input. It gets refined into behavioral data. That data gets sold to advertisers.\n\nThe infinite scroll is not a design choice. It is an extraction tool. It removes the natural stopping point that a page break would create. Push notifications are factory whistles pulling you back to the production line.\n\nLike buttons and share counts are not social features. They are real-time dashboards for the refinery. They measure which stimulus produces the most engagement for the least effort. The algorithm adjusts accordingly.\n\nOutrage is high-octane fuel. Nuance is low-yield crude. In an economy optimized for attention, the most provocative content wins regardless of its truth.\n\nThe consequence is not just wasted time. It is the erosion of collective sensemaking. When the system rewards engagement over accuracy, misinformation travels faster than truth. A lie that generates a million clicks is more valuable than a fact that generates a thousand.\n\nI wrote more about how this refinery works and what may come after it.\n\nveda.ng/attention-refinery"
   },
   {
     "id": "cognitive-load",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "01:00",
-    "posted": true,
+    "posted": false,
     "image": "scripts/thread-assets/cognitive_load.png",
-    "text": "Your brain was built for scarcity. It now lives in abundance.\n\nWorking memory is finite. It can hold roughly four to seven items at once. Every notification, every tab, every unread message occupies a slot.\n\nEvery time you switch context, your brain pays a tax. It takes time to disengage from one task and load the next one. Do this dozens of times a day and your cognitive capacity drops significantly before you even start the real work.\n\nThis is not a willpower problem. It is an architecture problem. The tools we use are designed to interrupt us because interruption drives engagement.\n\nThe result is continuous partial attention. Aware of everything. Focused on nothing. We skim more and understand less.\n\nThe smartphone on the dinner table reduces empathy in the conversation even when it is turned off. Its presence is enough. It represents a portal to somewhere else.\n\nThe solution is not to unplug entirely. It is to design your environment for focus instead of distraction. Prune notifications. Use different devices for different tasks. Treat your attention as a finite resource, because it is.\n\nI explored this in more depth here.\n\nveda.ng/cognitive-load",
-    "postedAt": "2026-04-11T19:57:40.690Z",
-    "tweetId": "2043055904724074528"
+    "text": "Your brain was built for scarcity. It now lives in abundance.\n\nWorking memory is finite. It can hold roughly four to seven items at once. Every notification, every tab, every unread message occupies a slot.\n\nEvery time you switch context, your brain pays a tax. It takes time to disengage from one task and load the next one. Do this dozens of times a day and your cognitive capacity drops significantly before you even start the real work.\n\nThis is not a willpower problem. It is an architecture problem. The tools we use are designed to interrupt us because interruption drives engagement.\n\nThe result is continuous partial attention. Aware of everything. Focused on nothing. We skim more and understand less.\n\nThe smartphone on the dinner table reduces empathy in the conversation even when it is turned off. Its presence is enough. It represents a portal to somewhere else.\n\nThe solution is not to unplug entirely. It is to design your environment for focus instead of distraction. Prune notifications. Use different devices for different tasks. Treat your attention as a finite resource, because it is.\n\nI explored this in more depth here.\n\nveda.ng/cognitive-load"
   },
   {
     "id": "simulation-hypothesis",
@@ -577,7 +569,7 @@
     "scheduleTime": "17:00",
     "posted": false,
     "image": "scripts/thread-assets/agentic_commerce.png",
-    "text": "Your next customer is an algorithm.\n\nYou say \"get me running shoes under $150, good for flat feet, delivered by Friday.\" The agent searches Nike, Amazon, and specialty retailers simultaneously, weighs price against reviews and shipping speed, and completes checkout.\n\nYou went from doing the shopping to describing what you want.\n\nEvery major platform has shipped agent commerce products in the past 12 months. Mastercard Agent Pay. Coinbase x402. ChatGPT in-chat purchasing. Google's Universal Commerce Protocol. Shopify Agentic Storefronts.\n\nThe infrastructure is built. The protocols are live. The payment rails work. What is missing is consumer trust, merchant readiness, and regulatory clarity.\n\nBrand loyalty weakens when your agent switches you to a cheaper product that works just as well. Display ads lose relevance when the buyer is an algorithm.\n\nThe companies building for both humans and agents simultaneously will be in position when adoption accelerates.\n\nveda.ng/agentic-commerce"
+    "text": "Your next customer is an algorithm.\n\nYou say \"get me running shoes under $150, good for flat feet, delivered by Friday.\" The agent searches Nike, Amazon, and specialty retailers simultaneously, weighs price against reviews and shipping speed, and completes checkout.\n\nYou went from doing the shopping to describing what you want.\n\nEvery major platform has shipped agent commerce products in the past 12 months. Mastercard Agent Pay. Coinbase x402. ChatGPT in-chat purchasing. Google's Universal Commerce Protocol. Shopify Agentic Storefronts.\n\nThe infrastructure is built. The protocols are live. The payment rails work. What is missing is consumer trust, merchant readiness, and regulatory clarity.\n\nBrand loyalty weakens when your agent switches you to a cheaper product that works just as well. Display ads lose relevance when the buyer is an algorithm.\n\nThe companies building for both humans and agents simultaneously will be in position when adoption accelerates.\n\nveda.ng/agentic-commerce\n\nThe interface layer is changing too — dashboards are giving way to text fields that call APIs directly: veda.ng/universal-text-ui"
   },
   {
     "id": "ai-agent-economy",
@@ -585,7 +577,7 @@
     "scheduleTime": "01:00",
     "posted": false,
     "image": "scripts/thread-assets/ai_agent_economy.png",
-    "text": "The corporation is dissolving.\n\nThe traditional corporation exists to minimize transaction costs. When AI agents can discover, negotiate, and execute transactions in milliseconds, those costs approach zero.\n\nA company may not consist of thousands of employees in rigid silos. Instead, a core group of human strategists oversees a swarm of AI agents, each rented for specific capabilities. The firm becomes a temporary, task-specific nexus of agentic services.\n\nThe value of human labor shifts toward tasks that are non-reducible: strategic direction, creative ideation, ethical judgment, empathetic connection.\n\nThe web itself will be rebuilt. From an attention economy to an intention economy. Agents do not have attention to be captured. They have objectives. Services will be judged by utility to an agent, not ability to attract eyeballs.\n\nA web built for agents is a web where structured data beats prose. Where cryptographic proof beats claims. Where efficiency beats engagement.\n\nveda.ng/ai-agent-economy"
+    "text": "The corporation is dissolving.\n\nThe traditional corporation exists to minimize transaction costs. When AI agents can discover, negotiate, and execute transactions in milliseconds, those costs approach zero.\n\nA company may not consist of thousands of employees in rigid silos. Instead, a core group of human strategists oversees a swarm of AI agents, each rented for specific capabilities. The firm becomes a temporary, task-specific nexus of agentic services.\n\nThe value of human labor shifts toward tasks that are non-reducible: strategic direction, creative ideation, ethical judgment, empathetic connection.\n\nThe web itself will be rebuilt. From an attention economy to an intention economy. Agents do not have attention to be captured. They have objectives. Services will be judged by utility to an agent, not ability to attract eyeballs.\n\nA web built for agents is a web where structured data beats prose. Where cryptographic proof beats claims. Where efficiency beats engagement.\n\nveda.ng/ai-agent-economy\n\nThe hard part: getting there without blowing up. 70% of big-bang AI deployments fail. The sequencing matters: veda.ng/stepwise-ai"
   },
   {
     "id": "agi-governance",
@@ -593,7 +585,7 @@
     "scheduleTime": "17:00",
     "posted": false,
     "image": "scripts/thread-assets/agi_governance.png",
-    "text": "How do you govern something smarter than you?\n\nEvery system of governance assumes Homo sapiens is the most intelligent actor. That assumption has held for 10,000 years. AGI may end it.\n\nAn AGI operating in financial markets could execute trades on a microsecond timescale. Human oversight becomes impossible. You need AI systems to monitor other AI systems. An arms race of control and counter-control.\n\nThe economic implications are equally profound. An AGI could automate not just manual labor but cognitive tasks: legal analysis, medical diagnosis, scientific research. How do you govern an economy where most human labor is obsolete?\n\nThose who own the AGIs wield unprecedented power. An AGI-powered state could monitor every citizen, predict their thoughts, and preempt dissent. Not punished. Preempted.\n\nWe are preparing to govern gods. And we have very little time to figure out how.\n\nveda.ng/agi-governance"
+    "text": "How do you govern something smarter than you?\n\nEvery system of governance assumes Homo sapiens is the most intelligent actor. That assumption has held for 10,000 years. AGI may end it.\n\nAn AGI operating in financial markets could execute trades on a microsecond timescale. Human oversight becomes impossible. You need AI systems to monitor other AI systems. An arms race of control and counter-control.\n\nThe economic implications are equally profound. An AGI could automate not just manual labor but cognitive tasks: legal analysis, medical diagnosis, scientific research. How do you govern an economy where most human labor is obsolete?\n\nThose who own the AGIs wield unprecedented power. An AGI-powered state could monitor every citizen, predict their thoughts, and preempt dissent. Not punished. Preempted.\n\nWe are preparing to govern gods. And we have very little time to figure out how.\n\nveda.ng/agi-governance\n\nSome governments aren't waiting. Estonia, Singapore, and the UAE already run AI at production scale across public services: veda.ng/agentic-state"
   },
   {
     "id": "ai-economy",
@@ -601,7 +593,7 @@
     "scheduleTime": "09:00",
     "posted": false,
     "image": "scripts/thread-assets/ai_economy.png",
-    "text": "The entry ramp is narrowing.\n\nStanford payroll data covering millions of American workers: early-career workers aged 22-25 in AI-exposed occupations experienced a 16% relative decline in employment since late 2022. Senior workers in the same fields? Stable or growing.\n\nThis held even after excluding the tech sector and remote jobs. A February 2026 update showed the gap widening with no sign of reversal.\n\nSalesforce eliminated 4,000 customer support positions citing AI. Duolingo stopped using human contractors. Anthropic's CEO said nearly half of entry-level white-collar jobs could be replaced.\n\nThe question that matters most: whether economic gains from AI flow broadly or concentrate narrowly. Every previous technology eventually created broad prosperity. But the \"eventually\" ranged from one generation to three.\n\nThe difference with AI: it affects cognitive work. The communities affected are not regional towns. They are entry-level professionals in every major city.\n\nveda.ng/ai-economy"
+    "text": "The entry ramp is narrowing.\n\nStanford payroll data covering millions of American workers: early-career workers aged 22-25 in AI-exposed occupations experienced a 16% relative decline in employment since late 2022. Senior workers in the same fields? Stable or growing.\n\nThis held even after excluding the tech sector and remote jobs. A February 2026 update showed the gap widening with no sign of reversal.\n\nSalesforce eliminated 4,000 customer support positions citing AI. Duolingo stopped using human contractors. Anthropic's CEO said nearly half of entry-level white-collar jobs could be replaced.\n\nThe question that matters most: whether economic gains from AI flow broadly or concentrate narrowly. Every previous technology eventually created broad prosperity. But the \"eventually\" ranged from one generation to three.\n\nThe difference with AI: it affects cognitive work. The communities affected are not regional towns. They are entry-level professionals in every major city.\n\nveda.ng/ai-economy\n\nThe companies that get AI deployment right start small. One boring task. Three-month payback. Then scale: veda.ng/stepwise-ai"
   },
   {
     "id": "ambient-intelligence",
@@ -609,7 +601,7 @@
     "scheduleTime": "17:00",
     "posted": false,
     "image": "scripts/thread-assets/ambient_intelligence.png",
-    "text": "The best interface is no interface.\n\nWe went from desktop to pocket to wrist. Each step made interaction more immediate and less obtrusive. But all still require a conscious act. A tap, a word, a gesture.\n\nAmbient intelligence is the final step: eliminate the command itself.\n\nA kitchen that knows you returned from a run and suggests a hydrating smoothie. A meeting room that recognizes participants, pulls up project files, and starts transcribing when everyone sits down.\n\nThe design goal is not to create an engaging screen. It is to make the interface disappear entirely. The best ambient system is one you do not notice.\n\nThe smartphone era hijacks attention with notifications. Ambient intelligence filters the noise. Only what truly requires your input reaches you.\n\nPrivacy is the obvious challenge. A world that senses constantly is a world that collects constantly. Trust requires local processing, transparent control, and strong encryption.\n\nveda.ng/ambient-intelligence"
+    "text": "The best interface is no interface.\n\nWe went from desktop to pocket to wrist. Each step made interaction more immediate and less obtrusive. But all still require a conscious act. A tap, a word, a gesture.\n\nAmbient intelligence is the final step: eliminate the command itself.\n\nA kitchen that knows you returned from a run and suggests a hydrating smoothie. A meeting room that recognizes participants, pulls up project files, and starts transcribing when everyone sits down.\n\nThe design goal is not to create an engaging screen. It is to make the interface disappear entirely. The best ambient system is one you do not notice.\n\nThe smartphone era hijacks attention with notifications. Ambient intelligence filters the noise. Only what truly requires your input reaches you.\n\nPrivacy is the obvious challenge. A world that senses constantly is a world that collects constantly. Trust requires local processing, transparent control, and strong encryption.\n\nveda.ng/ambient-intelligence\n\nBefore no interface, there's a simpler one. The text field is replacing the dashboard: veda.ng/universal-text-ui"
   },
   {
     "id": "api-states",
@@ -617,7 +609,7 @@
     "scheduleTime": "01:00",
     "posted": false,
     "image": "scripts/thread-assets/api_states.png",
-    "text": "The nation-state as a platform.\n\nInstead of navigating government websites and offices to register a business, you make a single authenticated API call. Instead of convoluted tax filing, your software interfaces directly with the tax authority in real time.\n\nGovernance as a service. Public services become a library of functions. The state becomes a foundational layer, like AWS for civic life.\n\nCitizenship becomes a set of cryptographic credentials in a digital wallet. To prove your age, you reveal only that you are over 18. No date of birth. No other data. Self-sovereign identity.\n\nStates would compete on service quality. A state with an inefficient business registration API loses customers to one with a better offering. A global marketplace for governance.\n\nEstonia already built this. Their e-Residency program lets anyone become a digital resident and access their services from anywhere.\n\nveda.ng/api-states"
+    "text": "The nation-state as a platform.\n\nInstead of navigating government websites and offices to register a business, you make a single authenticated API call. Instead of convoluted tax filing, your software interfaces directly with the tax authority in real time.\n\nGovernance as a service. Public services become a library of functions. The state becomes a foundational layer, like AWS for civic life.\n\nCitizenship becomes a set of cryptographic credentials in a digital wallet. To prove your age, you reveal only that you are over 18. No date of birth. No other data. Self-sovereign identity.\n\nStates would compete on service quality. A state with an inefficient business registration API loses customers to one with a better offering. A global marketplace for governance.\n\nEstonia already built this. Their e-Residency program lets anyone become a digital resident and access their services from anywhere.\n\nveda.ng/api-states\n\nEstonia already built this. 99% of services digital. Babies born get benefits automatically. No forms: veda.ng/agentic-state"
   },
   {
     "id": "artificial-intuition",
@@ -634,5 +626,101 @@
     "posted": false,
     "image": "scripts/thread-assets/asi_timeline.png",
     "text": "When does superintelligence arrive? The honest answer: nobody knows.\n\nMetaculus estimates 50% chance of AGI by 2040-2050. But the distribution is huge. Some predict 2030. Some predict 2100.\n\nMoore's Law is slowing. Transistors can only get so small. But progress now comes from architecture, not hardware. Better algorithms. Better training methods.\n\nWe are running out of high-quality human data. Solutions exist: synthetic data, video modalities, reinforcement learning. Each has tradeoffs but none is a dead end.\n\nThe biggest jumps came from surprises. Transformers in 2017. Scaling laws in 2020. Nobody predicted them exactly.\n\nIf the scaling hypothesis is true, superintelligence is inevitable. If false, we are missing something fundamental. Everything hinges on which is true.\n\nThe uncertainty is not a reason for complacency. It is a reason for urgency.\n\nveda.ng/asi-timeline"
+  },
+  {
+    "id": "stepwise-ai",
+    "scheduleDate": "2026-04-10",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/stepwise_ai.png",
+    "text": "Klarna automated customer service. Saved $60M. Then customer satisfaction collapsed and they hired people back.\n\nThe failure wasn't AI. It was sequence. They skipped straight to the hardest problem — nuanced human interactions — instead of starting where machines already win: invoice matching, log parsing, email routing.\n\n70% of companies that try to automate everything at once fail. Companies that pick one boring, high-frequency task first? Payback in under three months.\n\nDiscipline beats ambition every time.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "universal-text-ui",
+    "scheduleDate": "2026-04-12",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/universal_text_ui.png",
+    "text": "Every dropdown on a dashboard is a question someone predicted you'd ask. Your actual question is almost never one of them.\n\nPostHog replaced their analytics dashboard with a text field. Salesforce did it for CRM — 84% of queries now self-resolve. Cursor did it for code and hit $1B ARR.\n\nThe pattern: a text field backed by an LLM that calls APIs directly. No menus. No navigation. Just ask.\n\nThe dashboard era is ending.\n\nveda.ng/universal-text-ui"
+  },
+  {
+    "id": "agentic-state",
+    "scheduleDate": "2026-04-11",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "text": "In Estonia, only two government services require you to show up in person: marriages and divorces. Everything else is digital. 99% of public services.\n\nSingapore runs AI across 100,000 public officers. UAE hit 97% AI utilization in government.\n\nThese aren't pilots. They're production systems serving millions.\n\nA baby is born. The system detects it, calculates benefits, deposits money. No form. No queue. No portal. The citizen does nothing.\n\nMost governments still make you download a PDF.\n\nveda.ng/agentic-state"
+  },
+  {
+    "id": "stepwise-ai-sales",
+    "scheduleDate": "2026-04-12",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/stepwise_ai.png",
+    "text": "Lead response time: 4 hours. Contact rates drop 10x after 5 minutes.\n\nOne voice agent. One task: qualify and book. Response time fell to 60 seconds. Conversions tripled. 2,000+ meetings per month, no humans involved.\n\nThe sales team stopped qualifying. They only close now.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "agentic-state-eresidency",
+    "scheduleDate": "2026-04-13",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "text": "Estonia lets anyone on earth start an EU company remotely. 135,000 people from 170 countries have.\n\n€125M in state revenue last year. 12:1 ROI. 5,556 new companies from non-citizens.\n\nGovernment as infrastructure. Citizenship as credential. Geography as optional.\n\nveda.ng/agentic-state"
+  },
+  {
+    "id": "universal-text-ui-106apps",
+    "scheduleDate": "2026-04-14",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/universal_text_ui.png",
+    "text": "106 SaaS apps per company. 1,200 daily app switches per employee. 39% of time in deep focus.\n\n93% of business leaders say they'd perform better asking data questions in plain English.\n\nThat's not a preference. It's a structural bottleneck.\n\nveda.ng/universal-text-ui"
+  },
+  {
+    "id": "stepwise-ai-marketing",
+    "scheduleDate": "2026-04-15",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/stepwise_ai.png",
+    "text": "Three-person agency. Six hours per person every Friday compiling client reports from 10+ data sources.\n\nRouted analytics into an LLM. Twenty hours freed weekly. Client load: 30 → 50 campaigns. Zero hires.\n\nAI didn't replace anyone. It removed a bottleneck.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "agentic-state-singapore",
+    "scheduleDate": "2026-04-16",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "text": "Singapore's government AI chatbot: 50M citizen queries handled. AI call transcription: 72% less after-call work.\n\n100,000 officers using Pair, saving 50 min per task.\n\n2026 budget: \"scaled deployment at national speed.\"\n\nMost countries are still debating whether to start a pilot.\n\nveda.ng/agentic-state"
+  },
+  {
+    "id": "agentic-state-xroad",
+    "scheduleDate": "2026-04-10",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "text": "Estonia's X-Road: 1 billion+ government queries per year. Birth registered → population registry, health insurance, social services all updated automatically. One notification. Zero forms.\n\nOperational since 2001. 25 years in production. Not a pilot.\n\nMost countries digitized paper forms. Estonia redesigned the process.\n\nveda.ng/agentic-state"
+  },
+  {
+    "id": "universal-text-ui-paradigms",
+    "scheduleDate": "2026-04-17",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/universal_text_ui.png",
+    "text": "CLI → GUI → NLI. Three paradigms. Each cut adaptation cost by 10x.\n\nThe GUI didn't improve the command line. It replaced it. Natural language won't improve dashboards. Same thing.\n\nveda.ng/universal-text-ui"
+  },
+  {
+    "id": "stepwise-ai-gartner",
+    "scheduleDate": "2026-04-19",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/stepwise_ai.png",
+    "text": "Gartner: 40% of agentic AI projects risk cancellation by 2027. Only 33% meet ROI targets. Only 21% confident in governance.\n\nThe tech works. The organizational readiness doesn't.\n\nFix: one task that pays for itself in 90 days. Then expand.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "agentic-state-uae",
+    "scheduleDate": "2026-04-20",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "text": "Abu Dhabi: AED 13B to become first AI-native government by 2027. 97% AI utilization. 108 HR services automated. One university cut faculty workload 95%.\n\nNo legacy systems. No tech debt. Clean-sheet AI government.\n\nveda.ng/agentic-state"
   }
 ]

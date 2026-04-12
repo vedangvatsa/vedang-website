@@ -650,71 +650,63 @@
     "id": "agentic-commerce",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "09:00",
-    "posted": true,
-    "text": "Your next customer is an algorithm.\n\nAI agents search stores, compare options, complete checkout. Brand loyalty weakens when a machine picks your products.\n\nveda.ng/agentic-commerce",
+    "posted": false,
+    "text": "Your next customer is an algorithm.\n\nAI agents search stores, compare options, complete checkout. Brand loyalty weakens when a machine picks your products.\n\nveda.ng/agentic-commerce\n\nThe interface layer is changing too — dashboards are giving way to text fields that call APIs directly: veda.ng/universal-text-ui",
     "tags": [
       "ai",
       "commerce",
       "agents",
       "ecommerce"
     ],
-    "image": "scripts/thread-assets/agentic_commerce.png",
-    "postedAt": "2026-04-10T05:38:30.457Z",
-    "tumblrId": "813484747256971264"
+    "image": "scripts/thread-assets/agentic_commerce.png"
   },
   {
     "id": "ambient-intelligence",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "17:00",
-    "posted": true,
-    "text": "The best interface is no interface.\n\nAmbient intelligence eliminates the command itself. The environment senses and acts. Privacy is the obvious challenge.\n\nveda.ng/ambient-intelligence",
+    "posted": false,
+    "text": "The best interface is no interface.\n\nAmbient intelligence eliminates the command itself. The environment senses and acts. Privacy is the obvious challenge.\n\nveda.ng/ambient-intelligence\n\nBefore no interface, there's a simpler one. The text field is replacing the dashboard: veda.ng/universal-text-ui",
     "tags": [
       "iot",
       "ambient",
       "ai",
       "future"
     ],
-    "image": "scripts/thread-assets/ambient_intelligence.png",
-    "postedAt": "2026-04-10T12:06:58.739Z",
-    "tumblrId": "813509187777757184"
+    "image": "scripts/thread-assets/ambient_intelligence.png"
   },
   {
     "id": "ai-agent-economy",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "01:00",
-    "posted": true,
-    "text": "The corporation is dissolving.\n\nWhen transaction costs approach zero, the firm stops making sense. AI agents dissolve hierarchy into fluid networks.\n\nveda.ng/ai-agent-economy",
+    "posted": false,
+    "text": "The corporation is dissolving.\n\nWhen transaction costs approach zero, the firm stops making sense. AI agents dissolve hierarchy into fluid networks.\n\nveda.ng/ai-agent-economy\n\nThe hard part: getting there without blowing up. 70% of big-bang AI deployments fail. The sequencing matters: veda.ng/stepwise-ai",
     "tags": [
       "ai",
       "economy",
       "agents",
       "future"
     ],
-    "image": "scripts/thread-assets/ai_agent_economy.png",
-    "postedAt": "2026-04-10T20:02:46.586Z",
-    "tumblrId": "813539122323062784"
+    "image": "scripts/thread-assets/ai_agent_economy.png"
   },
   {
     "id": "api-states",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "17:00",
-    "posted": true,
-    "text": "The nation-state as a platform. API calls instead of office visits. Cryptographic credentials instead of passports.\n\nEstonia already built it.\n\nveda.ng/api-states",
+    "posted": false,
+    "text": "The nation-state as a platform. API calls instead of office visits. Cryptographic credentials instead of passports.\n\nEstonia already built it.\n\nveda.ng/api-states\n\nEstonia already built this. 99% of services digital. Babies born get benefits automatically. No forms: veda.ng/agentic-state",
     "tags": [
       "governance",
       "technology",
       "identity",
       "crypto"
     ],
-    "image": "scripts/thread-assets/api_states.png",
-    "postedAt": "2026-04-11T11:55:14.860Z",
-    "tumblrId": "813599046588628992"
+    "image": "scripts/thread-assets/api_states.png"
   },
   {
     "id": "artificial-intuition",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "09:00",
-    "posted": true,
+    "posted": false,
     "text": "Logic finds answers. Intuition finds questions.\n\nThe next frontier: giving machines a gut feeling. Holistic pattern recognition, not just logical reasoning.\n\nveda.ng/artificial-intuition",
     "tags": [
       "ai",
@@ -722,9 +714,7 @@
       "cognition",
       "philosophy"
     ],
-    "image": "scripts/thread-assets/artificial_intuition.png",
-    "postedAt": "2026-04-12T05:35:31.032Z",
-    "tumblrId": "813665753076318208"
+    "image": "scripts/thread-assets/artificial_intuition.png"
   },
   {
     "id": "asi-timeline",
@@ -739,5 +729,149 @@
       "prediction"
     ],
     "image": "scripts/thread-assets/asi_timeline.png"
+  },
+  {
+    "id": "stepwise-ai",
+    "scheduleDate": "2026-04-10",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/stepwise_ai.png",
+    "tags": [
+      "AI",
+      "enterprise"
+    ],
+    "text": "Klarna automated support. Saved $60M. Satisfaction tanked. They hired people back.\n\n70% of big-bang AI deployments fail. Companies that pick one boring task first see payback in three months.\n\nThe failure is always sequence, not technology.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "universal-text-ui",
+    "scheduleDate": "2026-04-12",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/universal_text_ui.png",
+    "tags": [
+      "AI",
+      "design"
+    ],
+    "text": "Every dropdown is a predicted question. Your actual question is never one of them.\n\nA text field backed by an LLM that calls APIs directly kills the dashboard. PostHog, Salesforce, and Cursor already proved it.\n\nveda.ng/universal-text-ui"
+  },
+  {
+    "id": "agentic-state",
+    "scheduleDate": "2026-04-11",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "tags": [
+      "government",
+      "AI"
+    ],
+    "text": "Estonia: 99% digital government. Singapore: AI across 100k officers. UAE: 97% utilization.\n\nBaby born? System detects it, calculates benefits, deposits money. No form. No queue.\n\nMost governments still run on PDFs and waiting rooms.\n\nveda.ng/agentic-state"
+  },
+  {
+    "id": "stepwise-ai-sales",
+    "scheduleDate": "2026-04-12",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/stepwise_ai.png",
+    "tags": [
+      "AI",
+      "sales"
+    ],
+    "text": "Lead response: 4 hours → 60 seconds. One voice agent. Conversions tripled. 2,000+ meetings/month.\n\nThe sales team stopped qualifying. They only close.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "agentic-state-eresidency",
+    "scheduleDate": "2026-04-13",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "tags": [
+      "Estonia",
+      "government"
+    ],
+    "text": "Estonia lets anyone start an EU company remotely. 135k people, 170 countries. €125M revenue. 12:1 ROI.\n\nGovernment as infrastructure.\n\nveda.ng/agentic-state"
+  },
+  {
+    "id": "universal-text-ui-106apps",
+    "scheduleDate": "2026-04-14",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/universal_text_ui.png",
+    "tags": [
+      "SaaS",
+      "AI"
+    ],
+    "text": "106 apps per company. 1,200 daily switches. 39% deep focus. 93% of leaders want natural language data queries.\n\nThat's a structural bottleneck, not a feature request.\n\nveda.ng/universal-text-ui"
+  },
+  {
+    "id": "stepwise-ai-marketing",
+    "scheduleDate": "2026-04-15",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/stepwise_ai.png",
+    "tags": [
+      "AI",
+      "marketing"
+    ],
+    "text": "3-person agency. 6 hrs/person Fridays on reports. LLM automated it. 20 hours freed. 30→50 clients. Zero hires.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "agentic-state-singapore",
+    "scheduleDate": "2026-04-16",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "tags": [
+      "Singapore",
+      "AI"
+    ],
+    "text": "50M citizen queries via AI. 100k officers using gov AI tools. 72% less admin.\n\nMost countries still debating pilots.\n\nveda.ng/agentic-state"
+  },
+  {
+    "id": "agentic-state-xroad",
+    "scheduleDate": "2026-04-10",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "tags": [
+      "Estonia",
+      "e-government"
+    ],
+    "text": "X-Road: 1B+ gov queries/year. Birth → all agencies updated automatically. Running 25 years.\n\nveda.ng/agentic-state"
+  },
+  {
+    "id": "universal-text-ui-paradigms",
+    "scheduleDate": "2026-04-17",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/universal_text_ui.png",
+    "tags": [
+      "UI",
+      "AI"
+    ],
+    "text": "CLI → GUI → NLI. Each cut adaptation cost 10x. Dashboards are next.\n\nveda.ng/universal-text-ui"
+  },
+  {
+    "id": "stepwise-ai-gartner",
+    "scheduleDate": "2026-04-19",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/stepwise_ai.png",
+    "tags": [
+      "AI",
+      "enterprise"
+    ],
+    "text": "40% of AI projects risk cancellation by 2027. Only 33% meet ROI. One task, 90 days, then expand.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "agentic-state-uae",
+    "scheduleDate": "2026-04-20",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "tags": [
+      "UAE",
+      "AI government"
+    ],
+    "text": "Abu Dhabi: AED 13B for AI-native government. 97% utilization. Clean-sheet, no legacy.\n\nveda.ng/agentic-state"
   }
 ]
