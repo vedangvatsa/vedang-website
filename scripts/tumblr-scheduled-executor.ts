@@ -112,12 +112,14 @@ async function main() {
   console.log(`🟦 Tumblr scheduler running at ${todayIST} ${currentTimeIST} IST`);
   console.log(`📋 Total posts: ${posts.length}, Posted: ${posts.filter(p => p.posted).length}`);
 
-  // DAILY COOLDOWN: max 1 post per day on this platform.
-  const alreadyPostedToday = posts.some(p =>
-    p.posted && p.postedAt && p.postedAt.startsWith(todayIST)
-  );
-  if (alreadyPostedToday) {
-    console.log('⏸️ Already posted today — skipping to enforce 1 post/day limit');
+  // COOLDOWN: max 3 posts/day with 8h gap between each.
+  const COOLDOWN_HOURS = 8;
+  const recentlyPosted = posts.some(p => {
+    if (!p.posted || !p.postedAt) return false;
+    return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;
+  });
+  if (recentlyPosted) {
+    console.log('⏸️ Posted within last 8h — skipping (max 3 posts/day)');
     return;
   }
 
