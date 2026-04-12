@@ -1,55 +1,88 @@
 ---
-title: Computational Social Science at Scale
+title: Computational Social Science
 summary: >-
-  Using AI agents to run massive social simulations, predict collective
-  behavior, and test policy interventions in virtual societies.
-date: '2025-11-21'
+  Twitter's API shutdown disrupted 20 years of social research. Digital twins
+  simulate voter behavior. Algorithmic audits reveal that platforms — not
+  users — drive polarization. The study of society is becoming the study of
+  its data exhaust.
+date: '2025-09-05'
 author: 'Vedang Vatsa'
-keywords: ['computational', 'social', 'science', 'scale']
+keywords: ['computational social science', 'CSS', 'Twitter', 'social media research', 'digital twins', 'algorithmic auditing', 'polarization', 'data science', 'sociology']
 ---
 
 <Figure src="/images/essays/computational-social-science.svg?v=7" alt="Infographic" wide />
 
-## The Laboratory We Never Had
+<Callout type="insight" title="The Core Thesis">
+Social science was built on surveys, interviews, and small-sample experiments. Computational social science (CSS) replaces these with the behavioral traces that billions of people generate daily — posts, clicks, purchases, movements, searches. The instruments are different: machine learning instead of regression, network analysis instead of focus groups, platform data instead of questionnaires. The scale is different: millions of observations instead of hundreds. The constraints are also different: platform API access is gated by corporate interest, algorithmic filtering distorts observed behavior, and the populations studied are not representative. CSS is the most powerful tool social science has ever had — and the most fragile.
+</Callout>
 
-For centuries, the study of human society has been a discipline of observation and post-hoc analysis. Economists, sociologists, and political scientists have developed sophisticated models to understand the complex dynamics of our collective behavior, but they have always been limited by a fundamental constraint: they cannot run experiments on society itself. You cannot, for ethical and practical reasons, reset a country's economy to test a new monetary policy, or create two identical cities to compare different approaches to urban planning. The social sciences have largely been a historical science, analyzing what has already happened to infer what might happen next. But this is beginning to change. We are on the cusp of a new era in social science, one where the laboratory is not the real world, but a virtual one, and the subjects are not humans, but millions of autonomous AI agents. This is the field of computational social science at scale.
+## The Data Source Problem
 
-## Virtual Societies: The Concept
+For two decades, [Twitter](https://x.com/) (now X) was the primary data source for computational social science. Its API provided researchers with near-real-time access to public posts, enabling studies of political polarization, misinformation spread, disaster response, public health sentiment, and social movement dynamics. Thousands of peer-reviewed papers were built on Twitter data.
 
-The core idea is to create vast, high-fidelity simulations of social systems, or "virtual societies." These are not simple spreadsheet models, but complex digital ecosystems populated by AI agents, each with its own set of goals, beliefs, and behaviors. These agents can be designed to be as simple or as complex as necessary. A simple economic model might have agents that are purely rational actors, seeking to maximize their own utility. A more sophisticated sociological model might have agents with complex psychological profiles, capable of learning, adapting, and influencing one another. These agents interact with each other and with their simulated environment, and from these millions of micro-interactions, complex macro-phenomena can emerge, just as they do in the real world. This is the essence of agent-based modeling, but supercharged with the power of modern AI and large-scale computing. The goal is to build a [Simulation Layer](/simulation-layer) for society itself.
+In 2023, following Elon Musk's acquisition, Twitter imposed API pricing that effectively ended free academic access. The academic tier — which had provided researchers with up to 10 million tweets per month — was eliminated. The replacement pricing was prohibitively expensive for most university research budgets.
 
-## Policy Pre-Computation
+<StatRow>
+<Stat value="10M+" label="Monthly tweets accessible via old academic API" source="Twitter Academic Research" />
+<Stat value="$42K/mo" label="Approximate cost of comparable API access (post-2023)" source="X pricing" />
+<Stat value="100K" label="Meta-analysis participants linking short-form content to attention decline" source="Meta-analysis research" />
+<Stat value="20+ yrs" label="Social science research disrupted by API closure" source="Academic community" />
+</StatRow>
 
-The potential applications of this technology are substantial. For policymakers, it could be a revolutionary tool for evidence-based decision-making. Imagine a city council considering a new zoning law. Instead of relying on historical data and educated guesses, they could run the proposed law through a detailed simulation of their city. They could see how it would affect traffic patterns, housing prices, and social segregation, not just in the aggregate, but at the level of individual neighborhoods and even individual households. They could test dozens of variations of the policy, tweaking parameters and observing the results, before ever implementing it in the real world. This would be a form of "policy pre-computation," a way to debug our laws and regulations before they impact real people. It could save billions of dollars and prevent countless unintended consequences. A government could simulate the effects of a universal basic income, a new tax structure, or a public health intervention, observing not just the first-order effects, but the second and third-order ripple effects that are often so difficult to predict.
+The consequences for the field are structural. Longitudinal studies that tracked political behavior, public health attitudes, or information diffusion over years lost their data stream. Replication of prior findings became difficult or impossible. The platform that had served as a public commons for social observation became a private resource available primarily to well-funded corporate and government entities.
 
-## What Economists and Sociologists Gain
+## The Methodological Evolution
 
-For economists, these simulations could provide a way to test economic theories that have, until now, been purely theoretical. They could create virtual economies and subject them to different monetary and fiscal policies, observing how they respond to shocks and crises. They could explore the causes of market bubbles, the dynamics of income inequality, and the long-term effects of automation. The models could be far more realistic than traditional economic models, incorporating the irrational and often unpredictable nature of human behavior. By calibrating the agent's behavior against real-world data, they could create simulations that are not just theoretically interesting, but genuinely predictive.
+The loss of easy API access forced methodological innovation.
+
+**Browser extension studies.** Researchers at [NYU](https://www.nyu.edu/), [Princeton](https://www.princeton.edu/), and other institutions now recruit volunteer participants who install custom browser extensions. These extensions log the content participants actually see in their social media feeds — not just what they post, but what the algorithm surfaces — providing ground truth about algorithmic exposure that API data never offered.
+
+**Data donation.** Platforms like [Data Download (GDPR Article 15)](https://gdpr-info.eu/) and academic protocols now allow participants to export their complete interaction history — likes, saves, dwell time, scroll behavior — and share it with researchers under informed consent. This produces richer individual-level data than API scraping ever provided, though at far smaller scale.
+
+**Digital twins.** Researchers are using [Large Language Models](https://en.wikipedia.org/wiki/Large_language_model) to create synthetic replicas of user personas — "digital twins" trained on real user-generated content that simulate how individuals might respond to different stimuli. These agents can be used to model scenarios (policy changes, platform design modifications, information campaigns) without exposing real users to experimental manipulation.
+
+**Algorithmic auditing.** Rather than studying user behavior, a growing body of research studies algorithm behavior — running controlled experiments to measure what content recommendation systems amplify, suppress, or prioritize. Researchers create identical accounts with different disclosed demographics and measure divergence in algorithmic treatment.
 
 <PullQuote>
-For sociologists and political scientists, these virtual societies could be a laboratory for understanding the dynamics of social change.
+The most important finding in computational social science is not about users. It is about platforms. The algorithm is not a neutral conduit for human behavior. It is an active participant that shapes, filters, amplifies, and distorts the behavior it claims to merely reflect.
 </PullQuote>
 
- They could study how new ideas and social norms spread through a population, how political polarization emerges and hardens, and how social movements gain and lose momentum. They could simulate elections, modeling how different campaign strategies and media environments impact voter behavior. They could explore the long-term consequences of different social structures, from the family unit to the nation-state. This would allow for a level of causal inference that is currently impossible in the social sciences.
+## The Polarization Question
 
-## The Technology Making It Possible
+The largest-scale CSS studies have focused on political polarization, with results that challenge the popular narrative.
 
-The technology to build these large-scale simulations is rapidly advancing. The same AI techniques that are used to power large language models can be used to create more realistic and sophisticated agents. The rise of cloud computing provides the massive computational resources needed to run simulations with millions or even billions of agents. And the explosion of digital data, from social media to financial transactions, provides the raw material needed to calibrate and validate these models against the real world.
+A [2023 study published in *Science*](https://www.science.org/), conducted in partnership with Meta, experimentally modified the Facebook and Instagram feeds of 23,000 users during the 2020 US election. One group saw chronologically ordered content instead of algorithmically ranked content. The result: the algorithmic feed increased exposure to ideologically aligned content and decreased exposure to cross-cutting perspectives. However, switching to chronological feeds did not measurably reduce political polarization in attitudes.
 
-## The Ethical Minefield
+This finding is nuanced and frequently misquoted. It does not show that algorithms "don't cause" polarization. It shows that short-term experimental manipulation of a single platform feature does not rapidly change deeply held political attitudes. The long-term, cumulative effect of years of algorithmic curation — which this study, by design, could not measure — remains an open question.
 
-However, the development of computational social science at scale also raises significant ethical and philosophical questions. The first is the problem of representation. How do we create agents that accurately reflect the diversity and complexity of human beings? If our agents are based on a biased or incomplete understanding of human nature, our simulations will produce biased or incomplete results. There is a danger of creating what has been called a "model monoculture," where a single, flawed model of human behavior becomes the basis for all policy decisions. The models must be transparent, and the assumptions that go into them must be open to public debate. The agents should not just be "rational actors" but should incorporate the messy, emotional, and often contradictory aspects of human psychology.
+A complementary finding from the same research collaboration: **removing reshared content** from Facebook feeds significantly reduced the volume of political news and misinformation that users encountered. The reshare mechanism — which allows content to propagate through networks at low cognitive cost — is a primary vector for both political content amplification and misinformation spread.
 
-This leads to a deeper question: what does it mean for a simulation to be "true"? A virtual society is not the real world. It is a simplified representation of it. How do we know if the results of a simulation are a genuine prediction of future events, or simply an artifact of the model's design? The validation of these models will be a major scientific challenge. It will require a new kind of interdisciplinary science, one that combines the rigor of computer science with the deep domain knowledge of the social sciences. We will need to develop new statistical techniques for comparing simulation results with real-world data, and new ways of quantifying the uncertainty inherent in any prediction about the future.
+## The Representation Problem
 
-There is also the risk of what could be called "sim-washing," where simulations are used to give a false sense of scientific legitimacy to politically motivated policies. A government could design a simulation that is guaranteed to produce the result it wants, and then use that result to justify its actions. To prevent this, the models and the data used to build them must be radically transparent and open to independent audit. There must be a "separation of powers" between the model builders and the policymakers. The scientific community would need to play a vital role as a trusted, independent validator of these simulations.
+A critical limitation of CSS is population representativeness.
 
-## What This Means for Free Will
+Twitter/X's user base skews younger, more male, more urban, more politically engaged, and more socioeconomically advantaged than the general population. Facebook's user base skews older. TikTok's skews younger. None of these platforms constitute representative samples of any national population.
 
-Perhaps the most significant question is how this technology will change our understanding of ourselves. If we can create a simulation of our society that is accurate enough to predict our collective behavior, what does that say about the nature of free will? Are we simply complex biological machines, our actions ultimately predictable if we have enough data and computational power? The rise of computational social science may force us to confront these uncomfortable questions. It may lead to a more humble and more realistic view of our own agency, a recognition of the powerful social and environmental forces that shape our lives. At the same time, it could also empower us, by giving us the tools to understand and consciously shape those forces for the better. This tension between determinism and agency is a recurring theme when we discuss advanced AI and its relationship with humanity, echoing the questions raised in [The Plurality Trap](/plurality-trap) about the nature of the self.
+Research that draws conclusions about "public opinion" from social media data is, in practice, drawing conclusions about the opinions of the subset of the public that uses that platform, in the way that the platform's design incentivizes. "Twitter sentiment" is not public sentiment. It is the sentiment of people who express opinions on Twitter, filtered through an algorithm that amplifies emotionally charged content.
 
-The era of computational social science at scale is just beginning. The first generation of these virtual societies is being built in research labs and at tech companies. The journey will be long and complex. There will be technical hurdles, ethical dilemmas, and fierce political debates. But the potential rewards are immense. The ability to simulate society is a power of almost unimaginable scope. It is a tool that could help us to solve some of the most pressing challenges of our time, from climate change and economic inequality to political instability and public health crises. It could allow us to move from a reactive to a proactive mode of governance, to design a better future rather than just stumbling into it. But like any powerful technology, it is a double-edged sword. In the wrong hands, it could become a tool of unprecedented social control. The task ahead is not just to build these simulations, but to build the social, political, and ethical frameworks needed to ensure they are used wisely and for the benefit of all. It’s about creating a new kind of scientific revolution, one that turns its lens not just on the natural world, but on the human one, and in doing so, gives us the power to write our own future.
+<Callout type="warning" title="The Observer Effect at Scale">
+Social media platforms are not neutral observation environments. Their design incentivizes specific behaviors: brevity (character limits), emotion (engagement algorithms reward outrage), public performance (visibility metrics), and conformity (social proof through likes and shares). Behavior observed on these platforms is behavior shaped by these platforms. This is the observer effect operating at population scale. The instrument of measurement alters what is being measured.
+</Callout>
+
+## The Ethics Infrastructure
+
+CSS raises ethical questions that traditional social science frameworks were not built to handle.
+
+The [Facebook emotional contagion study](https://www.pnas.org/) (2014) — which experimentally manipulated the emotional content in 689,000 users' feeds without informed consent — remains the defining ethical controversy. The study demonstrated that emotional states are contagious through social networks (users exposed to more negative content posted more negatively themselves). The backlash was not about the finding but about the method: manipulating emotional experiences at scale without consent.
+
+Current ethical standards have evolved but remain inconsistent:
+
+**Institutional Review Boards (IRBs)** at universities now require explicit informed consent for social media experiments that involve any form of manipulation or observation of identifiable individuals. But IRB jurisdiction does not extend to corporate research — platform companies can conduct internal experiments on their own users under their Terms of Service.
+
+**Data protection regulations** (GDPR in Europe, CCPA in California) provide individuals with legal rights over their data, including the right to access, export, and delete it. These regulations create a framework for data donation research but do not address the fundamental power asymmetry between platforms and researchers.
+
+**The "do no harm" principle** requires researchers to carefully consider the impact of their work on studied communities. In polarized environments, even publishing research about group behavior can be weaponized — findings about the online behavior of a political or ethnic group can be cited (often out of context) to justify discrimination or surveillance.
 
 <KeyTakeaway>
-Computational social science uses agent-based modeling and large-scale simulation to test social policies before implementation. By populating simulations with AI agents whose behavior is modeled on empirical data, researchers can observe second and third-order effects of policy interventions, from zoning law changes to universal basic income, before they affect real populations. The technology offers a form of "policy pre-computation" that can reduce unintended consequences and save resources. The risks include model monoculture (relying on a single, flawed model of human behavior for all policy decisions), representation bias (agents that do not reflect genuine human diversity), and the philosophical challenge to free will implied by accurate behavioral prediction. Transparency, public auditability, and diverse agent modeling are essential safeguards.
+Computational social science lost its primary data source when Twitter restricted API access (from free academic access to ~$42K/month). The field adapted through browser extension studies (algorithmic exposure tracking), data donation protocols (GDPR-enabled), digital twins (LLM-based behavioral simulation), and algorithmic auditing (controlled platform experiments). The largest studies show that algorithmic feeds increase ideological sorting but short-term manipulation does not rapidly change political attitudes. The reshare mechanism is the primary amplification vector for both political content and misinformation. The fundamental challenge is population representativeness: social media behavior is shaped by platform design, not just user intent, creating an observer effect at population scale. The ethics infrastructure remains inconsistent — corporate platforms can manipulate user experiences under Terms of Service while academic researchers require IRB approval for observation.
 </KeyTakeaway>

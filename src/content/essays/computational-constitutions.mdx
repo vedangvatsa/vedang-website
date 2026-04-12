@@ -1,55 +1,98 @@
 ---
 title: Computational Constitutions
 summary: >-
-  Encoding rights, freedoms, and governance principles into verifiable,
-  executable code that AI systems must respect.
-date: '2025-09-27'
+  Wyoming legalized DAO LLCs in 2021. Smart contracts execute governance
+  rules automatically. $100 billion+ sits in DeFi protocols governed
+  by on-chain voting. The question is no longer whether code can be law.
+  It is whether code should be.
+date: '2025-08-22'
 author: 'Vedang Vatsa'
-keywords: ['computational', 'constitutions']
+keywords: ['smart contracts', 'DAO', 'governance', 'Wyoming', 'Ethereum', 'DeFi', 'on-chain', 'constitutional', 'code is law', 'zero knowledge']
 ---
 
 <Figure src="/images/essays/computational-constitutions.svg?v=7" alt="Infographic" wide />
 
-A constitution is more than a legal document; it is the source code for a society. It defines the fundamental rules, rights, and relationships that govern a nation and its people. For centuries, these foundational texts have been written in natural language, a medium that is inherently ambiguous, open to interpretation, and subject to the political and social currents of the time. The enforcement of these principles relies on a complex and often fallible human apparatus of courts, judges, and law enforcement. But what if the core tenets of a constitution could be expressed with the precision of mathematical logic and the immutability of cryptographic code? This is the radical proposition of a computational constitution.
+<Callout type="insight" title="The Core Thesis">
+A constitution is a set of rules that govern how collective decisions are made, how power is allocated, and how disputes are resolved. A smart contract does the same thing — except enforcement is automatic, amendment requires consensus of token holders, and the judiciary is a block of code. Computational constitutions are already governing billions of dollars in assets. The question is not whether they work technically. The question is whether automatic enforcement without human judgment produces just outcomes.
+</Callout>
 
-## The Source Code for a Society
+## The Legal Status
 
-The idea is to translate the essential principles of a constitution, particularly the constraints on state power and the guarantees of individual rights, into a formal, machine-readable language. This "Code of Rights" would not be a mere digital copy of the text, but an executable specification that directly governs the operation of a state's digital infrastructure. In a world increasingly managed by algorithms and autonomous systems, from automated legal enforcement to AI-driven resource allocation, a computational constitution would serve as a hard-coded, non-negotiable check on power. It would be a firewall for liberty, embedded in the very architecture of governance.
+Smart contracts as governance instruments have achieved formal legal recognition in at least one US jurisdiction.
 
-## Due Process as an Executable Rule
+[Wyoming](https://www.wyoleg.gov/) passed the first DAO LLC statute in 2021, allowing decentralized autonomous organizations to register as limited liability companies with smart contracts serving as their operating agreements. The statute permits "algorithmically managed" LLCs — entities where governance decisions are executed by code rather than human officers.
+
+<StatRow>
+<Stat value="2021" label="Wyoming DAO LLC statute enacted" source="Wyoming Legislature" sourceUrl="https://www.wyoleg.gov/" />
+<Stat value="$100B+" label="Total Value Locked in DeFi protocols" source="DeFiLlama" sourceUrl="https://defillama.com/" />
+<Stat value="1,000+" label="Active DAOs with treasury governance" source="DeepDAO" sourceUrl="https://deepdao.io/" />
+<Stat value="$40B+" label="DAO-managed treasury assets" source="DeepDAO" />
+</StatRow>
+
+The [Wyoming DUNA](https://www.jdsupra.com/) (Decentralized Unincorporated Nonprofit Association) framework, introduced subsequently, provides an additional legal wrapper for non-profit-oriented decentralized communities. These structures allow DAOs to open bank accounts, sign contracts, pay employees, and interact with the traditional legal system — bridging the gap between on-chain governance and off-chain reality.
+
+[Delaware](https://corp.delaware.gov/) — the default incorporation state for US startups — does not have a specific DAO statute. It provides the mature Court of Chancery and extensive legal precedent that venture-backed entities require. The choice between Wyoming (low cost, privacy, smart-contract-native governance) and Delaware (legal predictability, institutional investor familiarity) reflects a fundamental tension: computational constitutions operate most naturally in Wyoming's framework, but the capital they need to attract is most comfortable in Delaware's.
+
+## The Governance Stack
+
+A computational constitution operates on [Ethereum](https://ethereum.org/) or compatible blockchains through a layered governance stack:
+
+**Token-weighted voting.** Governance tokens represent voting power. Holders propose and vote on changes to the protocol — parameter adjustments, treasury allocations, strategic decisions. [Uniswap](https://uniswap.org/) governance, for example, requires a minimum of 2.5 million UNI tokens to submit a proposal and a quorum of 40 million UNI to pass it.
+
+**Smart contract execution.** If a proposal passes, the corresponding smart contract executes automatically. No human intermediary approves or implements the decision. The code enforces the outcome. If the vote approves a treasury transfer, the funds move. If it approves a parameter change, the parameter changes.
+
+**Time locks.** Passed proposals typically enter a time-delay period (24-72 hours) before execution, allowing community members to review and, if necessary, exit the protocol before the change takes effect. This is the computational equivalent of a comment period.
+
+**Multi-signature safeguards.** Critical functions (emergency pauses, contract upgrades) often require multiple designated signers to authorize — distributing control and preventing unilateral action.
 
 <PullQuote>
-This shifts the enforcement of rights from a reactive, human-dependent process to a proactive, automated one.
+A smart contract does not ask whether a decision is just. It asks whether the decision was approved according to the procedures encoded in its logic. Procedural validity and substantive justice are not the same thing — and the gap between them is where computational constitutions face their hardest challenge.
 </PullQuote>
 
-Consider the right to due process. In a traditional system, this is a principle that must be argued for in court, its application dependent on judges and lawyers. In a system governed by a computational constitution, a government agency's software would be programmatically incapable of seizing a citizen's assets without a cryptographically signed warrant from a judicial body. The rule would not be a guideline; it would be a property of the system. An attempt to violate it would not be "illegal"; it would be a failed transaction, a computational impossibility.  It's a move from "trust us not to break the rules" to "we are programmatically incapable of breaking the rules." This is a significant change in the nature of power, a concept that aligns with the core ideas of [Programmable Trust](/programmable-trust).
+## The Amendment Problem
 
-The potential applications are vast. Freedom of speech could be protected by creating digital public squares where censorship is cryptographically impossible without a transparent, auditable process that adheres to predefined constitutional standards. The right to privacy could be enforced by systems that use zero-knowledge proofs to verify a citizen's eligibility for a service without ever accessing their underlying personal data. Fiscal constraints on government spending could be encoded into the treasury's software, making it impossible to issue currency or debt beyond constitutionally mandated limits. This would be a form of "constitutional fintech," where the rules of the economy are baked into the financial infrastructure itself, an idea that resonates with the concept of [API States](/api-states) where government functions become transparent, rule-based services.
+Traditional constitutions are amended through deliberate, slow processes that involve public debate, legislative votes, executive approval, and sometimes popular referendum. The slowness is a feature: it prevents hasty changes driven by temporary majorities or crisis-driven emotion.
 
-## AI Systems and the Need for Constitutional Constraints
+Smart contract governance can be amended far more rapidly. A proposal can be submitted, debated, and voted on within days. If the governance token distribution is concentrated — and in most protocols, it is — a small number of large holders can control outcomes. The 2023 governance crisis at [MakerDAO](https://makerdao.com/), where competing factions of large token holders fought for control of the protocol's direction, illustrated the problem: computational constitutions inherit the plutocratic tendencies of whoever holds the most tokens.
 
-The rise of artificial intelligence makes the need for such a system even more urgent. As we delegate more and more decision making power to AI systems, in areas from criminal justice to social welfare, we are creating a new form of unaccountable power. How do we ensure that these complex, often opaque algorithms respect our fundamental rights? A computational constitution could provide the answer. An AI system used in sentencing, for example, could be required to operate within a "constitutional sandbox." Its code would be cryptographically bound to a set of rules that prevent it from producing discriminatory outcomes or violating principles like the presumption of innocence. The AI would not just be "trained" to be ethical; its operational parameters would be hard-coded to be constitutional. This provides a level of assurance that is impossible to achieve with ethics guidelines or post-hoc audits alone. As we contemplate the theological implications of superintelligence in [The God Protocol](/god-protocol), ensuring that such a power is bound by foundational human values from its inception becomes a critical task.
+The technical response is emerging:
 
-## The Translation Problem
+**Quadratic voting.** Instead of "one token, one vote," quadratic voting makes each additional vote on the same proposal progressively more expensive. This reduces the influence of large holders and gives greater relative weight to smaller participants. [Gitcoin](https://www.gitcoin.co/) uses quadratic funding — a related mechanism — to allocate grants for open-source development.
 
-Of course, the creation of a computational constitution is a monumental undertaking, fraught with both technical and philosophical challenges. The first is the problem of translation. How do you translate the rich, nuanced, and often poetic language of a constitution into the rigid, unambiguous logic of code? Legal concepts like "reasonableness," "proportionality," and "dignity" are notoriously difficult to define in absolute terms. The process of creating a computational constitution would force a society to have a very deep and difficult conversation about what its values truly are. It would require a collaboration between lawyers, philosophers, computer scientists, and the public at large to create a formal language that can capture the spirit, not just the letter, of the law.
+**Conviction voting.** Voters accumulate "conviction" over time by continuously staking their tokens on a proposal. Longer commitment periods produce stronger votes. This mechanism rewards sustained preference over impulsive voting.
 
-This process of formalization, while difficult, could also be incredibly valuable. It would force a level of clarity and precision that is often lacking in traditional legal drafting. Ambiguities would have to be resolved, and loopholes would be much harder to hide. The resulting document, or set of documents, would be a far more transparent and understandable foundation for governance.
+**Zero-knowledge voting.** [Zero-knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof) allow voters to prove they hold governance tokens and cast a vote without revealing their identity or their specific vote. This prevents vote buying, voter intimidation, and retaliatory behavior — the same protections that secret ballots provide in physical elections.
 
-## Amendment and the Risk of Rigidity
+## The $100 Billion Experiment
 
-Another major challenge is the problem of amendment and evolution. A constitution must be a living document, capable of adapting to changing societal values and technological realities. A code-based constitution risks becoming a rigid, unchangeable straitjacket. Any system for a computational constitution must therefore include a robust and transparent mechanism for amendment. This process itself would need to be constitutionally defined, perhaps requiring a supermajority of citizen signatures, a vote by a decentralized autonomous organization ([DAO](/glossary/dao)), or a combination of digital and traditional governance mechanisms. The key is that the process for changing the rules must be as transparent and secure as the rules themselves.
+Over **$100 billion in total value** is locked in DeFi (Decentralized Finance) protocols governed by computational constitutions, according to [DeFiLlama](https://defillama.com/). [DeepDAO](https://deepdao.io/) tracks over 1,000 active DAOs managing more than **$40 billion** in combined treasury assets.
 
-## The Tyranny of the Programmer
+These are not pilot programs. They are production governance systems managing material economic resources. [Aave](https://aave.com/)'s governance controls a lending protocol with billions in deposits. [Compound](https://compound.finance/)'s governance manages interest rate parameters that affect thousands of borrowers and lenders. [ENS DAO](https://ens.domains/) governs the Ethereum Name Service — the DNS-equivalent for blockchain addresses.
 
-There is also the risk of creating a new form of tyranny: the tyranny of the programmer. Who writes the code? Who audits it? How do we ensure that no biases, backdoors, or unintended vulnerabilities are built into the system? The development of a computational constitution would have to be a radically open source project. The code would need to be publicly auditable, and there would need to be a robust ecosystem of independent experts dedicated to finding and fixing flaws. The security of such a system would be essential. A single bug in the constitutional code could have consequences far more severe than a bug in a typical software application.
+The track record is mixed. On-chain governance has proven effective for technical parameter adjustments (interest rates, collateral ratios, fee structures) where the decision space is well-defined and the consequences are measurable. It has proven less effective for strategic direction-setting, conflict resolution, and decisions involving competing values — the domains where human judgment, negotiation, and contextual reasoning are most needed.
 
-Despite these challenges, the idea of a computational constitution is a powerful one. It represents a potential evolution in the technology of governance, a way to build more just, transparent, and accountable systems. It is a response to a world where power is increasingly exercised through code, and where our rights need to be protected in the digital realm as robustly as they are in the physical one.
+<Callout type="info" title="Where Computational Constitutions Work and Where They Don't">
 
-The path toward a computational constitution will be incremental. It will not happen overnight. It may begin with specific, well-defined applications, such as the management of a city's budget or the rules governing a specific government agency. These small-scale experiments could serve as laboratories for developing the technologies and governance models needed for a full-fledged computational constitution. We might see the emergence of "constitutional modules," pieces of executable code that represent specific rights or principles, which could be voluntarily adopted by different jurisdictions.
+| Decision Type | Computational Constitution | Human Governance |
+|---|---|---|
+| Parameter adjustment (rates, fees) | ✅ Effective | ⬜ Unnecessary |
+| Treasury allocation | ⚠️ Works with checks | ✅ Better for complex cases |
+| Strategic direction | ❌ Insufficient | ✅ Required |
+| Dispute resolution | ❌ Cannot assess context | ✅ Required |
+| Emergency response | ⚠️ Multi-sig works | ✅ Faster judgment |
 
-Ultimately, a computational constitution is not a panacea. It will not solve all of our political problems. It is a tool, and like any tool, it can be used for good or for ill. But it is a tool that offers a new way of thinking about the relationship between power and liberty, between the state and the citizen. In an age of autonomous systems and algorithmic governance, it may be the tool we need to ensure that our technology remains subordinate to our values, and that the rights we hold to be self-evident are not just words on a page, but an unbreakable property of the world we are building. It’s about creating a system where justice is not just a concept to be debated, but a function to be executed. The challenge is immense, but the promise of a truly constitutional digital society is a goal worth striving for.
+</Callout>
+
+## The Constitutional Question
+
+The deepest question about computational constitutions is not whether they function technically. They do. It is whether automatic enforcement — "code is law" — produces governance outcomes that are just.
+
+A traditional legal system includes human judges who can exercise discretion: consider mitigating circumstances, interpret ambiguous language, and override the literal application of a rule when it produces an unjust outcome. Smart contracts cannot do this. They execute the rules as written, without judgment, without mercy, and without the ability to recognize when the rules themselves are producing unfair results.
+
+[Lawrence Lessig](https://www.lessig.org/) identified this dynamic in *Code and Other Laws of Cyberspace* (1999): code is a form of regulation, but unlike legislation, it is not subject to democratic deliberation, judicial review, or executive amendment. When code governs, the architecture decides — and the architecture is written by developers, not by the governed.
+
+The hybrid model — smart contracts for procedural execution, human governance for judgment calls and dispute resolution — is the likely trajectory. [Aragon](https://aragon.org/) and [Kleros](https://kleros.io/) are building decentralized courts that combine on-chain evidence, juror selection, and appealable decisions. Whether these systems can replicate the substantive justice that centralized legal systems provide — at lower cost, with greater accessibility — is the open experiment of computational constitutions.
 
 <KeyTakeaway>
-A computational constitution encodes fundamental rights and governance rules in executable code rather than natural language, making them self-enforcing rather than dependent on institutional interpretation and compliance. Potential applications include cryptographically protected speech, zero-knowledge proof based privacy verification, and fiscally constrained government treasuries. The challenges include the risk of programmer tyranny (who writes and audits the code), the difficulty of encoding nuance and context into rigid logical rules, the need for radical open-source transparency, and the security implications of constitutional code bugs. The path forward is incremental: small-scale experiments in specific jurisdictions, modular constitutional code libraries, and gradual expansion as trust and technical maturity develop.
+Wyoming legalized DAO LLCs in 2021, allowing smart contracts to serve as operating agreements. Over $100 billion is locked in DeFi protocols governed by on-chain voting. 1,000+ active DAOs manage $40+ billion in treasury assets. The governance stack includes token-weighted voting, automatic smart contract execution, time locks, and multi-sig safeguards. The main challenges are plutocratic concentration (large token holders dominate outcomes), the amendment problem (rapid governance changes without deliberative process), and the absence of judicial discretion (code cannot assess context or mitigating circumstances). Technical responses include quadratic voting, conviction voting, and zero-knowledge private ballots. The trajectory is hybrid: smart contracts for procedural execution, human governance for judgment, dispute resolution, and strategic direction.
 </KeyTakeaway>

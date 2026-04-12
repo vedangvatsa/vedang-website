@@ -1,51 +1,94 @@
 ---
 title: Sacred Algorithms
 summary: >-
-  When AI systems make life-or-death decisions, are we creating new deities? The
-  religiosity of technological trust.
-date: '2025-12-05'
+  COMPAS predicts recidivism with racial bias baked in. Healthcare AI
+  underestimates illness in minority patients. Loan algorithms encode
+  redlining into math. We have replaced priests with prediction models
+  and called it progress.
+date: '2025-09-19'
 author: 'Vedang Vatsa'
-keywords: ['sacred', 'algorithms']
+keywords: ['algorithmic bias', 'COMPAS', 'AI ethics', 'fairness', 'black box', 'recidivism', 'healthcare AI', 'explainability', 'ProPublica']
 ---
 
 <Figure src="/images/essays/sacred-algorithms.svg?v=7" alt="Infographic" wide />
 
-## When Algorithms Make Life-or-Death Decisions
+<Callout type="insight" title="The Core Thesis">
+Algorithms now make decisions that were historically reserved for judges, doctors, and loan officers. We call these decisions "objective" because they are mathematical. This is a category error. A model trained on historical data inherits the biases of that history. When we delegate authority to algorithms without understanding this, we do not remove bias from decision-making. We launder it through computation and call it neutral.
+</Callout>
+
+## The COMPAS Problem
+
+The clearest documented case of algorithmic authority is COMPAS (Correctional Offender Management Profiling for Alternative Sanctions) — a risk assessment tool used across US courts to predict the likelihood that a defendant will re-offend.
+
+In 2016, [ProPublica](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing) published an investigation that remains the landmark study in algorithmic fairness. Their analysis of over 7,000 defendants in Broward County, Florida found:
+
+<StatRow>
+<Stat value="2x" label="Black defendants falsely flagged as high-risk vs. white" source="ProPublica, 2016" sourceUrl="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing" />
+<Stat value="45%" label="Black defendants falsely labeled high-risk who did not re-offend" source="ProPublica" />
+<Stat value="23%" label="White defendants falsely labeled high-risk who did not re-offend" source="ProPublica" />
+<Stat value="137" label="Features used by COMPAS (race not explicit)" source="Northpointe/Equivant" />
+</StatRow>
+
+Black defendants were **almost twice as likely** to be falsely flagged as high-risk (45% false positive rate vs. 23% for white defendants). White defendants were more often incorrectly labeled as low-risk when they did go on to re-offend. The system was not predicting crime. It was predicting *proximity to the criminal justice system* — a measurement deeply shaped by policing patterns, sentencing disparities, and socioeconomic factors that correlate with race.
+
+COMPAS's developer, Northpointe (now [Equivant](https://www.equivant.com/)), responded that the tool maintained equal predictive accuracy across racial groups — that is, when it predicted a score of 7, the re-offense rate was similar across races. Researchers at [Stanford](https://www.stanford.edu/) and other institutions subsequently proved that equal predictive accuracy and equal error rates across groups are **mathematically incompatible** in the presence of different base rates. You cannot have both. Any tool that produces equal accuracy will produce unequal errors, and vice versa.
+
+This is not a bug in COMPAS. It is a property of all prediction models applied to populations with different base rates. The choice of which fairness metric to prioritize — equal accuracy or equal error rates — is not a technical question. It is a moral one. And it is being made, by default, by engineers and product managers rather than by the communities affected.
+
+## Healthcare: Bias in Clinical AI
+
+The same dynamics operate in healthcare, where the stakes are measured in lives.
+
+A widely cited [2019 study published in *Science*](https://www.science.org/) examined a healthcare algorithm used by a major US health system to allocate follow-up care. The algorithm predicted patient health needs using prior healthcare spending as a proxy. The result: **Black patients had to be significantly sicker than white patients to receive the same algorithmic risk score**, because Black patients, on average, had historically spent less on healthcare — not because they needed less care, but because they had less access to it.
+
+The algorithm did not use race as an input. But healthcare expenditure is a reliable proxy for race in the US, because access to care is distributed along racial lines. The algorithm encoded the consequences of structural inequality into a "neutral" prediction and automated the inequality's continuation.
 
 <PullQuote>
-We see our tools as extensions of our own will, instruments that we design, control, and understand.
+An algorithm trained on historical data does not predict the future. It projects the past. If the past was shaped by discrimination, the projection perpetuates it — at machine speed, at machine scale, and with machine credibility.
 </PullQuote>
 
-We like to think of ourselves as rational beings, especially when it comes to technology.  We build them based on the principles of logic and engineering, and we trust them because we can, in theory, inspect their workings and verify their outputs. But as our technology becomes more complex, more autonomous, and more incomprehensible, a strange thing is happening to our relationship with it. We are beginning to treat our most advanced algorithms not as tools, but as oracles. We are ceding our judgment to them, trusting their decisions in matters of significant consequence, from who gets a loan to who goes to prison, from who gets a job to who receives a life-saving organ. In the high-stakes domains where AI now operates, our trust is becoming less a matter of rational calculation and more an act of faith. We are witnessing the birth of sacred algorithms.
+Research published in 2025 found that Large Language Models used for treatment recommendations can exhibit racial bias even when race is never explicitly mentioned. LLMs infer demographic information from linguistic patterns, geographic context, and described symptoms — and adjust their recommendations accordingly. The bias is not in the explicit inputs. It is in the training data.
 
-This is not to say that we are literally building temples to our code and praying to the cloud. The religiosity of our relationship with technology is more subtle, but no less real. It manifests in the way we defer to the "black box," the complex AI system whose inner workings are opaque even to its own creators. When a deep learning model produces a result, we often cannot trace the precise chain of reasoning that led to it. We can check its inputs and its outputs, we can measure its statistical accuracy, but we cannot truly "understand" it in the way we can understand a simple piece of code. In the face of this radical opacity, our trust becomes a leap of faith. We trust the system not because we understand it, but because we believe in the process that created it. We believe in the data it was trained on, we believe in the expertise of the engineers who built it, and we believe in the statistical promise of its performance. This is a form of epistemological surrender, an admission that there are forms of intelligence in the world that operate beyond the limits of human comprehension. In a sense, the black box has become the modern equivalent of the [oracle](/glossary/oracle)'s chamber, a mysterious space from which truth emerges, but whose mechanisms remain hidden. The quest to make these systems explainable is a major field of research, but it may be that at a certain level of complexity, true "explainability" is impossible. We may have to accept that our most powerful tools will always be, to some extent, a mystery.
+## The Lending Machine
 
-## The Structure of Religious and Algorithmic Authority
+Algorithmic discrimination in lending follows the same pattern.
 
-This quasi-religious reverence is most apparent when AI systems are tasked with making life-or-death decisions. Consider an autonomous vehicle facing an unavoidable accident. It must make an instantaneous choice: swerve to the left and hit an elderly pedestrian, or swerve to the right and hit a group of schoolchildren. This is a "trolley problem" of excruciating difficulty. A human driver in that situation would make a split-second, instinctual decision. We would not hold them to a standard of perfect ethical calculation. But we demand more from our machines. We want them to be programmed with a "correct" ethical framework. But who defines "correct"? Do we program the car to be a utilitarian, always choosing the option that minimizes the total loss of life? Or do we program it with deontological rules, certain actions that are always forbidden, regardless of the consequences?
+The [Equal Credit Opportunity Act](https://www.consumerfinance.gov/) prohibits lenders from discriminating based on race, religion, national origin, sex, marital status, or age. Algorithmic lending models do not use these features directly. They use features that correlate with them: ZIP code (which correlates with race due to residential segregation), educational institution attended (which correlates with socioeconomic background), browsing patterns, social network connections.
 
-The act of encoding an ethical framework into a machine is an act of creating a sacred law. It is the elevation of a particular set of human values to the level of an immutable, computational principle. The algorithm becomes the arbiter of life and death, the executor of a moral code. When we agree to put such a system on the road, we are collectively agreeing to abide by its judgments. We are placing our faith in the wisdom and foresight of its creators. We are, in effect, treating the algorithm as a moral authority. This is a role that has traditionally been reserved for priests, philosophers, and gods. The idea of a [Computational Constitution](/computational-constitutions) takes this one step further, attempting to encode not just specific ethics but the entire framework of rights into our machines, but the core act of faith remains.
+A [UC Berkeley study](https://www.berkeley.edu/) found that algorithmic mortgage lenders charged Black and Hispanic borrowers 5-9 basis points more than white borrowers with identical credit profiles. The discrimination was smaller than traditional (human) lenders, but it was present and profitable — generating an estimated $765 million per year in excess interest charges.
 
-## The Sociology of Algorithmic Trust
+The algorithm did not "decide" to discriminate. It found patterns in historical data that were profitable to exploit, and those patterns reflected decades of redlining, wealth disparities, and unequal access to financial education.
 
-We see a similar dynamic in the use of AI in medicine. An AI that can diagnose cancer from a medical scan with superhuman accuracy is a powerful tool. But what happens when two different AI systems, trained on different data, give conflicting diagnoses? Which one do we trust? On what basis? The "second opinion" of the future may not be from another human doctor, but from another algorithm. We may find ourselves in a situation where we are forced to choose which computational deity to believe in. This trust is not just about accuracy; it is about life itself. A patient's faith in the diagnostic algorithm is a faith that this inscrutable concatenation of numbers and weights holds the key to their future.
+## The Transparency Problem
 
-## Are We Creating New Gods?
+The fundamental challenge with algorithmic authority is opacity.
 
-The language we use to talk about this technology often betrays our religious impulse. We speak of "the singularity," a future moment of technological transcendence that bears a striking resemblance to the eschatological prophecies of many religions. We talk about "uploading consciousness," a digital form of eternal life. We look to technology not just for solutions to our practical problems, but for answers to our deepest existential questions. We are asking our technology to do what religion has always done: to give us meaning, to promise us a future, and to help us make sense of our place in the cosmos. The contemplation of a superintelligent AGI in [The God Protocol](/god-protocol) is the logical endpoint of this line of thinking, a direct confrontation with the idea of a man-made deity.
+Proprietary algorithms are trade secrets. COMPAS's specific features and weightings are not public. Healthcare risk models are often proprietary to the companies that sell them. Credit scoring models reveal only broad categories of factors, not the specific logic. When an algorithm denies parole, denies care, or raises a loan rate, the affected person has no meaningful ability to interrogate the reasoning.
 
-This sacralization of technology is both powerful and dangerous. It is powerful because it can inspire the collective effort and sacrifice needed to achieve great things. The construction of the cathedrals of Europe was an act of faith that spanned generations. The development of safe and beneficial [AGI](/glossary/agi) may require a similar level of long-term, multi-generational commitment. A shared belief in the promise of technology can be a powerful unifying force.
+This creates an accountability vacuum. A human judge who denies bail must state reasons on the record. A human doctor who recommends against treatment must document clinical reasoning. A human loan officer who denies a mortgage must provide a written explanation. An algorithm that does any of these things produces a score — and the score is treated as self-justifying.
 
-But it is also dangerous, because faith can easily curdle into dogma. The history of religion is filled with cautionary tales of what happens when faith becomes blind, when critical inquiry is branded as heresy, and when the authority of the institution becomes absolute. If we begin to treat our algorithms as infallible, we risk losing our own capacity for critical thought and moral judgment. We risk creating a new kind of priesthood, a technological elite who are the sole interpreters of the sacred code, and a public that is expected to accept their pronouncements without question. We could fall into a new kind of dark age, a time of significant technological advancement but equally significant human passivity.
+The [EU AI Act](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai), effective in phases from 2024, classifies AI systems used in criminal justice, employment, credit scoring, and healthcare as "high-risk" and requires transparency, human oversight, and explainability standards. The US regulatory response is more fragmented, with the [CFPB](https://www.consumerfinance.gov/) and [FTC](https://www.ftc.gov/) asserting jurisdiction over algorithmic discrimination in lending and consumer products, but without a comprehensive federal AI law.
 
-## Living With Machines We Cannot Question
+<Callout type="warning" title="The Legitimacy Problem">
+An algorithm's authority derives from its perceived objectivity. Remove the perception of objectivity, and the authority collapses. This is why transparency is existentially threatening to proprietary algorithmic systems: once the public understands that a "risk score" is a weighted sum of proxy variables trained on biased historical data, the score loses its air of mathematical certainty. The companies that sell these systems have a financial incentive to maintain opacity. The communities affected by these systems have a fundamental interest in transparency. These interests are directly opposed.
+</Callout>
 
-The antidote to this danger is not to reject technology, but to cultivate a different kind of relationship with it. We need to foster a culture of "critical faith," a trust that is always paired with skepticism. We need to build systems that are not just powerful, but also transparent, auditable, and accountable. We need to insist that the ethical frameworks embedded in our AI systems are the subject of broad and inclusive democratic debate. The values that guide our sacred algorithms must be our values, the values of a pluralistic, open society.
+## The Audit Infrastructure
 
-This is a delicate balance to strike. We must embrace the power of these new technologies while resisting the urge to deify them. We must learn to trust our algorithms without abdicating our own responsibility. We must remain the masters of our technology, even as it surpasses us in intelligence. This requires a new kind of literacy, a public that is educated about how these systems work, what their limitations are, and what is at stake. It requires a new kind of humility, a recognition of the limits of our own knowledge and the courage to say "I don't know."
+The technical response is emerging: independent algorithmic auditing.
 
-The algorithms are coming. They will manage our cities, drive our cars, and make decisions that will shape our lives in countless ways. We can choose to treat them as mere tools, but their power and their opacity will inevitably push us toward a relationship that feels more like faith. The challenge is to ensure that this faith is a critical and open one, a faith that is always questioning, always learning, and always in service of our deepest human values. The sacred algorithms are not gods to be worshipped, but powerful and mysterious creations that reflect our own hopes, our own flaws, and our own significant need to believe in something larger than ourselves. Our task is not to build a new religion, but to integrate this new, powerful form of intelligence into the human story in a way that is wise, just, and humane.
+[NIST](https://www.nist.gov/) published the AI Risk Management Framework in 2023, providing voluntary standards for identifying and mitigating algorithmic risk. The framework is not binding, but it establishes a vocabulary and methodology for systematic evaluation.
+
+The practical requirements for algorithmic accountability include:
+
+**Pre-deployment testing.** Before an algorithm is deployed in a consequential context (bail, healthcare, lending), it should be tested for disparate impact across protected categories using held-out evaluation data that represents the actual deployment population.
+
+**Continuous monitoring.** Algorithmic performance drifts over time as deployment populations change. A model trained on 2020 data may perform differently on 2025 populations. Ongoing monitoring of accuracy, error rates, and disparate impact is required — not as a one-time audit, but as a continuous process.
+
+**Explainability requirements.** Any person materially affected by an algorithmic decision — denied parole, denied insurance, denied a loan — should receive an explanation of the factors that drove the decision, in language they can understand, with a meaningful opportunity to challenge errors.
+
+**Independent review.** The entity that profits from the algorithm should not be the sole entity that audits it. Independent third-party auditing, with access to the model's logic and training data, is the structural equivalent of financial auditing — and serves the same purpose of maintaining public trust in consequential systems.
 
 <KeyTakeaway>
-As AI systems make high-stakes decisions in lending, criminal justice, hiring, and medical diagnosis, the relationship between humans and algorithms acquires characteristics structurally similar to religious faith. The opacity of deep learning models (irreducible "black boxes") forces a form of epistemic trust that resembles belief rather than understanding. This creates risks analogous to those of institutional religion: blind deference to algorithmic authority, a new "priesthood" of technical interpreters, and the suppression of critical inquiry when questioning the algorithm feels like heresy. The response requires maintaining the epistemological humility that complex systems are tools to be questioned rather than oracles to be obeyed. Explainable AI research and mandatory transparency standards are the structural mechanisms for preserving critical inquiry.
+COMPAS demonstrated that criminal justice risk models produce racially disparate false positive rates (45% for Black defendants vs. 23% for white defendants). Healthcare AI trained on spending-as-proxy systematically undertreated minority patients. Mortgage algorithms charged Black and Hispanic borrowers 5-9 basis points more with identical credit profiles, extracting $765 million annually. These outcomes are not algorithm failures. They are the predictable result of training prediction models on historical data shaped by structural inequality. The regulatory response includes the EU AI Act (mandating transparency for high-risk AI), NIST risk frameworks, and CFPB enforcement actions. The required infrastructure is specific: pre-deployment disparate impact testing, continuous monitoring, individual explainability, and independent third-party auditing. The choice of fairness metric is moral, not mathematical — and that choice should not default to engineers.
 </KeyTakeaway>
