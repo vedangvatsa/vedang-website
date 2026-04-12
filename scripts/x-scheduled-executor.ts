@@ -112,9 +112,14 @@ async function main() {
   console.log(`🕒 Current Time (IST): ${currentDate} ${currentTime}`);
 
   let modified = false;
+  let postsPublished = 0;
+
+  // Limit to 1 post per run to avoid batch-posting when catching up
+  const MAX_POSTS_PER_RUN = 1;
 
   for (const post of posts) {
     if (post.posted) continue;
+    if (postsPublished >= MAX_POSTS_PER_RUN) break;
 
     const isDue =
       post.scheduleDate < currentDate ||
@@ -135,6 +140,7 @@ async function main() {
       post.postedAt = new Date().toISOString();
       post.tweetId = result.id;
       delete post.error;
+      postsPublished++;
     } else {
       console.error(`❌ Failed: ${result.error}`);
       post.error = result.error;

@@ -124,7 +124,12 @@ async function main() {
 
   console.log(`📤 ${due.length} post(s) due`);
 
+  // Limit to 1 post per run to avoid batch-posting when catching up
+  const MAX_POSTS_PER_RUN = 1;
+  let postsPublished = 0;
+
   for (const post of due) {
+    if (postsPublished >= MAX_POSTS_PER_RUN) break;
     try {
       console.log(`\n📝 Posting: ${post.id}`);
       const postId = await publishPost(post);
@@ -132,6 +137,7 @@ async function main() {
       post.postedAt = new Date().toISOString();
       post.tumblrId = postId;
       console.log(`  ✅ Posted: ${postId}`);
+      postsPublished++;
     } catch (err: any) {
       post.error = err.message;
       console.error(`  ❌ Failed: ${err.message}`);
