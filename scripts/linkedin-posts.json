@@ -661,9 +661,11 @@
     "id": "agentic-state-eresidency",
     "scheduleDate": "2026-04-13",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it.\n\nThe e-Residency program generated €125M in state revenue last year. 87% growth. For every euro invested, twelve came back.\n\n5,556 new companies formed by non-citizens in a single year.\n\nThis is what happens when government operates as infrastructure instead of gatekeeping. The state becomes a platform. Citizenship becomes a credential. Geography becomes optional.\n\nveda.ng/agentic-state"
+    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it.\n\nThe e-Residency program generated €125M in state revenue last year. 87% growth. For every euro invested, twelve came back.\n\n5,556 new companies formed by non-citizens in a single year.\n\nThis is what happens when government operates as infrastructure instead of gatekeeping. The state becomes a platform. Citizenship becomes a credential. Geography becomes optional.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-13T06:03:17.563Z",
+    "postId": "urn:li:share:7449336389974007808"
   },
   {
     "id": "universal-text-ui-106apps",

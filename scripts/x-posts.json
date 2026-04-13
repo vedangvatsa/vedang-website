@@ -683,9 +683,11 @@
     "id": "agentic-state-eresidency",
     "scheduleDate": "2026-04-13",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia lets anyone on earth start an EU company remotely. 135,000 people from 170 countries have.\n\n€125M in state revenue last year. 12:1 ROI. 5,556 new companies from non-citizens.\n\nGovernment as infrastructure. Citizenship as credential. Geography as optional.\n\nveda.ng/agentic-state"
+    "text": "Estonia lets anyone on earth start an EU company remotely. 135,000 people from 170 countries have.\n\n€125M in state revenue last year. 12:1 ROI. 5,556 new companies from non-citizens.\n\nGovernment as infrastructure. Citizenship as credential. Geography as optional.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-13T06:03:15.613Z",
+    "tweetId": "2043570692382499240"
   },
   {
     "id": "universal-text-ui-106apps",

@@ -802,13 +802,15 @@
     "id": "agentic-state-eresidency",
     "scheduleDate": "2026-04-13",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
     "tags": [
       "Estonia",
       "government"
     ],
-    "text": "Estonia lets anyone start an EU company remotely. 135k people, 170 countries. €125M revenue. 12:1 ROI.\n\nGovernment as infrastructure.\n\nveda.ng/agentic-state"
+    "text": "Estonia lets anyone start an EU company remotely. 135k people, 170 countries. €125M revenue. 12:1 ROI.\n\nGovernment as infrastructure.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-13T06:03:28.658Z",
+    "tumblrId": "813758109049831424"
   },
   {
     "id": "universal-text-ui-106apps",
