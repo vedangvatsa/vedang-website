@@ -816,13 +816,15 @@
     "id": "universal-text-ui-106apps",
     "scheduleDate": "2026-04-14",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
     "tags": [
       "SaaS",
       "AI"
     ],
-    "text": "106 apps per company. 1,200 daily switches. 39% deep focus. 93% of leaders want natural language data queries.\n\nThat's a structural bottleneck, not a feature request.\n\nveda.ng/universal-text-ui"
+    "text": "106 apps per company. 1,200 daily switches. 39% deep focus. 93% of leaders want natural language data queries.\n\nThat's a structural bottleneck, not a feature request.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-04-14T05:38:19.694Z",
+    "tumblrId": "813847123818840064"
   },
   {
     "id": "stepwise-ai-marketing",
