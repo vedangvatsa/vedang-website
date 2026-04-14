@@ -513,9 +513,11 @@
     "id": "programmable-trust",
     "scheduleDate": "2026-04-14",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/programmable_trust.png",
-    "text": "Trust used to require humans. Banks, lawyers, notaries, governments. Every transaction needed someone in the middle to say this is legitimate.\n\nNow it can be code.\n\nZero-knowledge proofs let you prove something is true without revealing the data. You could prove your income exceeds a bank's threshold without showing your actual income. Mathematical guarantee. Full privacy.\n\nTrusted execution environments create secure hardware enclaves where competitors can pool sensitive data without exposing it. The trust is in the silicon, not a handshake.\n\nThe shift is from \"show me all your data so I can trust you\" to \"give me a mathematical proof.\"\n\nI explored the full landscape of cryptographic trust systems.\n\nveda.ng/programmable-trust"
+    "text": "Trust used to require humans. Banks, lawyers, notaries, governments. Every transaction needed someone in the middle to say this is legitimate.\n\nNow it can be code.\n\nZero-knowledge proofs let you prove something is true without revealing the data. You could prove your income exceeds a bank's threshold without showing your actual income. Mathematical guarantee. Full privacy.\n\nTrusted execution environments create secure hardware enclaves where competitors can pool sensitive data without exposing it. The trust is in the silicon, not a handshake.\n\nThe shift is from \"show me all your data so I can trust you\" to \"give me a mathematical proof.\"\n\nI explored the full landscape of cryptographic trust systems.\n\nveda.ng/programmable-trust",
+    "postedAt": "2026-04-14T20:33:48.757Z",
+    "postId": "urn:li:share:7449917851248803842"
   },
   {
     "id": "twilight-economy",

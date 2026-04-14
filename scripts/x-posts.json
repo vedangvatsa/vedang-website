@@ -535,9 +535,11 @@
     "id": "singularity-paradox",
     "scheduleDate": "2026-04-14",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/singularity_paradox.png",
-    "text": "You cannot predict an intelligence smarter than you.\n\nThat is the singularity paradox. We are trying to forecast the behavior of a system that, by definition, will exceed our ability to forecast.\n\nImagine explaining quantum mechanics to a dog. The dog lacks the cognitive architecture to understand it. Not because it is lazy. Because the required structures do not exist in its brain.\n\nNow flip it. You are a human trying to predict what a superintelligent AI will do. Same problem. Except the gap may be larger.\n\nA superintelligent system might have goals that are literally incomprehensible to us. Not just complex. Incompatible with our ontology.\n\nThe alignment dilemma makes it worse. If we align an AGI to human values, whose values? Humans do not agree. If we align it to \"maximize human flourishing,\" what does flourishing mean? More freedom? More pleasure? More knowledge? Different people give different answers.\n\nAnd if you can control a superintelligence, it is not superintelligent relative to you. Real superintelligence is beyond our control by definition.\n\nI explored these contradictions in depth.\n\nveda.ng/singularity-paradox"
+    "text": "You cannot predict an intelligence smarter than you.\n\nThat is the singularity paradox. We are trying to forecast the behavior of a system that, by definition, will exceed our ability to forecast.\n\nImagine explaining quantum mechanics to a dog. The dog lacks the cognitive architecture to understand it. Not because it is lazy. Because the required structures do not exist in its brain.\n\nNow flip it. You are a human trying to predict what a superintelligent AI will do. Same problem. Except the gap may be larger.\n\nA superintelligent system might have goals that are literally incomprehensible to us. Not just complex. Incompatible with our ontology.\n\nThe alignment dilemma makes it worse. If we align an AGI to human values, whose values? Humans do not agree. If we align it to \"maximize human flourishing,\" what does flourishing mean? More freedom? More pleasure? More knowledge? Different people give different answers.\n\nAnd if you can control a superintelligence, it is not superintelligent relative to you. Real superintelligence is beyond our control by definition.\n\nI explored these contradictions in depth.\n\nveda.ng/singularity-paradox",
+    "postedAt": "2026-04-14T20:33:47.265Z",
+    "tweetId": "2044152155851108517"
   },
   {
     "id": "synthetic-empathy",
