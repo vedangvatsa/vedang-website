@@ -523,9 +523,11 @@
     "id": "twilight-economy",
     "scheduleDate": "2026-04-15",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/twilight_economy.png",
-    "text": "Who did the work? Nobody knows anymore.\n\nThe writer uses an LLM for the first draft. The artist uses diffusion models. The programmer uses code completion. The work is a hybrid. A synthesis of human intent and machine execution.\n\nThe tools are so integrated that the boundary between human and AI is dissolving. Is an article \"written by a human\" when the AI outlined it, researched it, drafted sections, and the human edited? The question feels anachronistic.\n\nThis is the Twilight Economy.\n\nSkill may no longer mean writing the perfect sentence. It may mean crafting the perfect prompt. The centaur, the human-AI hybrid, will outperform both working alone.\n\nWe may also face a new impostor syndrome. Taking credit for work largely performed by collaborators we cannot see.\n\nI explored the full landscape of human-AI labor fusion.\n\nveda.ng/twilight-economy"
+    "text": "Who did the work? Nobody knows anymore.\n\nThe writer uses an LLM for the first draft. The artist uses diffusion models. The programmer uses code completion. The work is a hybrid. A synthesis of human intent and machine execution.\n\nThe tools are so integrated that the boundary between human and AI is dissolving. Is an article \"written by a human\" when the AI outlined it, researched it, drafted sections, and the human edited? The question feels anachronistic.\n\nThis is the Twilight Economy.\n\nSkill may no longer mean writing the perfect sentence. It may mean crafting the perfect prompt. The centaur, the human-AI hybrid, will outperform both working alone.\n\nWe may also face a new impostor syndrome. Taking credit for work largely performed by collaborators we cannot see.\n\nI explored the full landscape of human-AI labor fusion.\n\nveda.ng/twilight-economy",
+    "postedAt": "2026-04-15T05:38:58.959Z",
+    "postId": "urn:li:share:7450055045561335808"
   },
   {
     "id": "singularity-paradox",

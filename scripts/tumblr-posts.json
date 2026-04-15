@@ -830,13 +830,15 @@
     "id": "stepwise-ai-marketing",
     "scheduleDate": "2026-04-15",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
     "tags": [
       "AI",
       "marketing"
     ],
-    "text": "3-person agency. 6 hrs/person Fridays on reports. LLM automated it. 20 hours freed. 30→50 clients. Zero hires.\n\nveda.ng/stepwise-ai"
+    "text": "3-person agency. 6 hrs/person Fridays on reports. LLM automated it. 20 hours freed. 30→50 clients. Zero hires.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-04-15T05:39:09.418Z",
+    "tumblrId": "813937772933087232"
   },
   {
     "id": "agentic-state-singapore",
