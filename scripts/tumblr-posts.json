@@ -844,13 +844,15 @@
     "id": "agentic-state-singapore",
     "scheduleDate": "2026-04-16",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
     "tags": [
       "Singapore",
       "AI"
     ],
-    "text": "50M citizen queries via AI. 100k officers using gov AI tools. 72% less admin.\n\nMost countries still debating pilots.\n\nveda.ng/agentic-state"
+    "text": "50M citizen queries via AI. 100k officers using gov AI tools. 72% less admin.\n\nMost countries still debating pilots.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-15T20:28:40.623Z",
+    "tumblrId": "813993736538324992"
   },
   {
     "id": "agentic-state-xroad",

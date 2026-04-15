@@ -555,9 +555,11 @@
     "id": "twilight-economy",
     "scheduleDate": "2026-04-15",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/twilight_economy.png",
-    "text": "Who did the work? Nobody knows anymore.\n\nThe writer uses an LLM for the first draft. The artist uses diffusion models. The programmer uses code completion. Their work is no longer solely their own. It is a hybrid.\n\nThe tools are so smoothly integrated that the boundary between human and AI is dissolving. A writer starts with an AI outline, uses AI for research, has it draft paragraphs, then edits. Is the result human-written or AI-written? The question feels anachronistic.\n\nThis is the Twilight Economy. Human and AI labor blended indistinguishably.\n\nSkill may no longer mean writing the perfect sentence. It may mean crafting the perfect prompt. Creativity may not mean painting the image but curating the outputs.\n\nThe centaur, the human-AI hybrid, will outperform both humans alone and AIs alone. Those who resist this collaboration will face a competitive disadvantage that grows every quarter.\n\nWe also face a new impostor syndrome. Did I really write that, or did the machine?\n\nveda.ng/twilight-economy"
+    "text": "Who did the work? Nobody knows anymore.\n\nThe writer uses an LLM for the first draft. The artist uses diffusion models. The programmer uses code completion. Their work is no longer solely their own. It is a hybrid.\n\nThe tools are so smoothly integrated that the boundary between human and AI is dissolving. A writer starts with an AI outline, uses AI for research, has it draft paragraphs, then edits. Is the result human-written or AI-written? The question feels anachronistic.\n\nThis is the Twilight Economy. Human and AI labor blended indistinguishably.\n\nSkill may no longer mean writing the perfect sentence. It may mean crafting the perfect prompt. Creativity may not mean painting the image but curating the outputs.\n\nThe centaur, the human-AI hybrid, will outperform both humans alone and AIs alone. Those who resist this collaboration will face a competitive disadvantage that grows every quarter.\n\nWe also face a new impostor syndrome. Did I really write that, or did the machine?\n\nveda.ng/twilight-economy",
+    "postedAt": "2026-04-15T20:28:29.189Z",
+    "tweetId": "2044513209252540812"
   },
   {
     "id": "pseudonymous-agency",

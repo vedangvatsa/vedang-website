@@ -533,9 +533,11 @@
     "id": "singularity-paradox",
     "scheduleDate": "2026-04-15",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/singularity_paradox.png",
-    "text": "You cannot predict an intelligence smarter than you. That is the singularity paradox.\n\nImagine explaining quantum mechanics to a dog. The cognitive architecture does not exist. Same problem when humans try to forecast superintelligent behavior. Except the gap may be larger.\n\nAny detailed prediction about the singularity is epistemically impossible. You cannot forecast the unfathomable.\n\nThe alignment dilemma makes it worse. If we align an AGI to human values, whose values? If we align it to \"maximize flourishing,\" what does flourishing mean? Humans do not agree.\n\nIf you can control a superintelligence, it is not superintelligent. Real superintelligence is beyond our control by definition.\n\nThe question becomes: do we want an AI that is smart enough to be useful and dumb enough to be safe? Because we may not be able to have both.\n\nveda.ng/singularity-paradox"
+    "text": "You cannot predict an intelligence smarter than you. That is the singularity paradox.\n\nImagine explaining quantum mechanics to a dog. The cognitive architecture does not exist. Same problem when humans try to forecast superintelligent behavior. Except the gap may be larger.\n\nAny detailed prediction about the singularity is epistemically impossible. You cannot forecast the unfathomable.\n\nThe alignment dilemma makes it worse. If we align an AGI to human values, whose values? If we align it to \"maximize flourishing,\" what does flourishing mean? Humans do not agree.\n\nIf you can control a superintelligence, it is not superintelligent. Real superintelligence is beyond our control by definition.\n\nThe question becomes: do we want an AI that is smart enough to be useful and dumb enough to be safe? Because we may not be able to have both.\n\nveda.ng/singularity-paradox",
+    "postedAt": "2026-04-15T20:28:31.565Z",
+    "postId": "urn:li:share:7450278906802233344"
   },
   {
     "id": "synthetic-empathy",
