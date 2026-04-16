@@ -553,9 +553,11 @@
     "id": "sacred-algorithms",
     "scheduleDate": "2026-04-16",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/sacred_algorithms.png",
-    "text": "We stopped questioning the algorithm.\n\nWhen a deep learning model produces a result, we cannot trace how it got there. We measure accuracy but cannot understand the reasoning. Trust becomes a leap of faith.\n\nThis is epistemological surrender. The black box is the modern oracle.\n\nIt gets serious when these systems make life-or-death decisions. Autonomous vehicles. Cancer diagnoses. Loan approvals. Encoding an ethical framework into a machine is creating sacred law.\n\nWe treat algorithms as moral authorities. A role reserved for priests, philosophers, and gods.\n\nThe antidote is critical faith. Trust paired with skepticism. Transparency, auditability, and democratic debate over the values encoded in our machines.\n\nveda.ng/sacred-algorithms"
+    "text": "We stopped questioning the algorithm.\n\nWhen a deep learning model produces a result, we cannot trace how it got there. We measure accuracy but cannot understand the reasoning. Trust becomes a leap of faith.\n\nThis is epistemological surrender. The black box is the modern oracle.\n\nIt gets serious when these systems make life-or-death decisions. Autonomous vehicles. Cancer diagnoses. Loan approvals. Encoding an ethical framework into a machine is creating sacred law.\n\nWe treat algorithms as moral authorities. A role reserved for priests, philosophers, and gods.\n\nThe antidote is critical faith. Trust paired with skepticism. Transparency, auditability, and democratic debate over the values encoded in our machines.\n\nveda.ng/sacred-algorithms",
+    "postedAt": "2026-04-16T20:26:11.510Z",
+    "postId": "urn:li:share:7450640708903915520"
   },
   {
     "id": "pseudonymous-agency",

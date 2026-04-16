@@ -575,9 +575,11 @@
     "id": "internet-of-lies",
     "scheduleDate": "2026-04-16",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/internet_of_lies.png",
-    "text": "Truth has no built-in advantage on the internet.\n\nA screenshot of a fake headline travels as fast as a real one. There is no mechanism to verify provenance. The web was built for speed, not for trust.\n\nContent is location-addressed. We access information based on where it is stored. A webpage can be altered or deleted and its history is lost. There is nothing inherent in the architecture that says this is authentic.\n\nDecentralized identifiers could fix this. A journalist signs their article cryptographically. Anyone can verify the signature. If the article is distorted on social media, the original signed version remains checkable.\n\nContent addressing changes the question from \"where is this file?\" to \"what is this file's content?\" A unique hash guarantees data integrity. Any change, no matter how small, produces a completely different hash.\n\nThe fight against misinformation is a fight at the protocol level. Not moderation. Architecture.\n\nveda.ng/internet-of-lies"
+    "text": "Truth has no built-in advantage on the internet.\n\nA screenshot of a fake headline travels as fast as a real one. There is no mechanism to verify provenance. The web was built for speed, not for trust.\n\nContent is location-addressed. We access information based on where it is stored. A webpage can be altered or deleted and its history is lost. There is nothing inherent in the architecture that says this is authentic.\n\nDecentralized identifiers could fix this. A journalist signs their article cryptographically. Anyone can verify the signature. If the article is distorted on social media, the original signed version remains checkable.\n\nContent addressing changes the question from \"where is this file?\" to \"what is this file's content?\" A unique hash guarantees data integrity. Any change, no matter how small, produces a completely different hash.\n\nThe fight against misinformation is a fight at the protocol level. Not moderation. Architecture.\n\nveda.ng/internet-of-lies",
+    "postedAt": "2026-04-16T20:26:09.807Z",
+    "tweetId": "2044875012856074532"
   },
   {
     "id": "sacred-algorithms",
