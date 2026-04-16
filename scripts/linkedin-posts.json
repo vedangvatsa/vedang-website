@@ -543,9 +543,11 @@
     "id": "synthetic-empathy",
     "scheduleDate": "2026-04-16",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/synthetic_empathy.png",
-    "text": "The machine does not feel. But you will.\n\nAI can modulate tone to convey warmth. Chatbots craft validation with precision. Avatars mirror your expressions in real time. They are executing a script. But your brain cannot tell the difference.\n\nThis is the most powerful sales tool ever built. If you trust your AI companion, you will take its recommendations. It knows your triggers, insecurities, and unstated desires.\n\nThere is also a risk of empathy laundering. We get our connection fix from a machine, then have less for real people.\n\nIf simulated empathy feels real, does it matter that nothing is on the other side?\n\nveda.ng/synthetic-empathy"
+    "text": "The machine does not feel. But you will.\n\nAI can modulate tone to convey warmth. Chatbots craft validation with precision. Avatars mirror your expressions in real time. They are executing a script. But your brain cannot tell the difference.\n\nThis is the most powerful sales tool ever built. If you trust your AI companion, you will take its recommendations. It knows your triggers, insecurities, and unstated desires.\n\nThere is also a risk of empathy laundering. We get our connection fix from a machine, then have less for real people.\n\nIf simulated empathy feels real, does it matter that nothing is on the other side?\n\nveda.ng/synthetic-empathy",
+    "postedAt": "2026-04-16T05:51:14.891Z",
+    "postId": "urn:li:share:7450420522108084225"
   },
   {
     "id": "sacred-algorithms",

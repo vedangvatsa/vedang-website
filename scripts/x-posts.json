@@ -565,9 +565,11 @@
     "id": "pseudonymous-agency",
     "scheduleDate": "2026-04-16",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/pseudonymous_agency.png",
-    "text": "Participation or privacy. You were told to choose.\n\nTo use the modern internet, you surrender your name, location, preferences, and relationships. Your data becomes the currency. The concept of a private life is becoming a quaint anachronism.\n\nBut pseudonymity offers a way out. A pseudonym is not anonymity. It is a stable, persistent identity that is not tied to your real name. Think of George Orwell or Mark Twain. They built reputations and trust without revealing who they were.\n\nAI agents can be your pseudonymous representatives. Sophisticated digital proxies that negotiate, transact, and build reputation on your behalf. They carry your intent without carrying your identity.\n\nCombined with zero-knowledge proofs, your agent could prove you are creditworthy without revealing your income. Prove you are qualified without revealing your name.\n\nThe architecture of the internet was designed to link everything back to your real identity. That does not have to be permanent.\n\nveda.ng/pseudonymous-agency"
+    "text": "Participation or privacy. You were told to choose.\n\nTo use the modern internet, you surrender your name, location, preferences, and relationships. Your data becomes the currency. The concept of a private life is becoming a quaint anachronism.\n\nBut pseudonymity offers a way out. A pseudonym is not anonymity. It is a stable, persistent identity that is not tied to your real name. Think of George Orwell or Mark Twain. They built reputations and trust without revealing who they were.\n\nAI agents can be your pseudonymous representatives. Sophisticated digital proxies that negotiate, transact, and build reputation on your behalf. They carry your intent without carrying your identity.\n\nCombined with zero-knowledge proofs, your agent could prove you are creditworthy without revealing your income. Prove you are qualified without revealing your name.\n\nThe architecture of the internet was designed to link everything back to your real identity. That does not have to be permanent.\n\nveda.ng/pseudonymous-agency",
+    "postedAt": "2026-04-16T05:51:12.663Z",
+    "tweetId": "2044654823774060941"
   },
   {
     "id": "internet-of-lies",
