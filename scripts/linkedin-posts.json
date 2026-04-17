@@ -573,9 +573,11 @@
     "id": "internet-of-lies",
     "scheduleDate": "2026-04-17",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/internet_of_lies.png",
-    "text": "Truth has no built-in advantage on the internet.\n\nA fake headline screenshot travels as fast as a real one. There is no mechanism to verify provenance. The web was built for speed, not trust.\n\nDecentralized identifiers could change this. Journalists sign articles cryptographically. Anyone verifies the signature. If content is distorted, the original signed version remains checkable.\n\nContent addressing changes the question from \"where is this file?\" to \"what is this file?\" A unique hash guarantees integrity.\n\nThe fight against misinformation must happen at the protocol level. Not moderation. Architecture.\n\nveda.ng/internet-of-lies"
+    "text": "Truth has no built-in advantage on the internet.\n\nA fake headline screenshot travels as fast as a real one. There is no mechanism to verify provenance. The web was built for speed, not trust.\n\nDecentralized identifiers could change this. Journalists sign articles cryptographically. Anyone verifies the signature. If content is distorted, the original signed version remains checkable.\n\nContent addressing changes the question from \"where is this file?\" to \"what is this file?\" A unique hash guarantees integrity.\n\nThe fight against misinformation must happen at the protocol level. Not moderation. Architecture.\n\nveda.ng/internet-of-lies",
+    "postedAt": "2026-04-17T20:24:15.986Z",
+    "postId": "urn:li:share:7451002612335710209"
   },
   {
     "id": "ai-economy",
