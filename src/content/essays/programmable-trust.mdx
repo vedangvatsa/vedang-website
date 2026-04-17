@@ -4,7 +4,7 @@ summary: >-
   Zero-knowledge proofs verify without revealing. Trusted execution
   environments create hardware-enforced privacy. The internet was
   built for communication, not verification. The trust layer is
-  being retrofitted. and it changes what transactions are possible.
+  being retrofitted, and it changes what transactions are possible.
 date: '2025-07-25'
 author: 'Vedang Vatsa'
 keywords: ['zero knowledge proof', 'ZKP', 'trust', 'TEE', 'MPC', 'privacy', 'verification', 'cryptography', 'homomorphic encryption']
@@ -13,7 +13,7 @@ keywords: ['zero knowledge proof', 'ZKP', 'trust', 'TEE', 'MPC', 'privacy', 'ver
 <Figure src="/images/essays/programmable-trust.svg?v=7" alt="Infographic" wide />
 
 <Callout type="insight" title="The Core Thesis">
-Trust has historically been provided by institutions. banks, courts, notaries, regulators. These institutions verify identity, enforce contracts, and mediate disputes. Each one adds cost, latency, and a point of failure. Programmable trust replaces institutional verification with mathematical proof: cryptographic techniques that allow parties to verify facts about each other without revealing the underlying data and without trusting a third party. The shift is from "show me everything so I can trust you" to "give me a mathematical proof that the relevant fact is true."
+Trust has historically been provided by institutions. Banks, courts, notaries, regulators. These institutions verify identity, enforce contracts, and mediate disputes. Each one adds cost, latency, and a point of failure. Programmable trust replaces institutional verification with mathematical proof: cryptographic techniques that allow parties to verify facts about each other without revealing the underlying data and without trusting a third party. The shift is from "show me everything so I can trust you" to "give me a mathematical proof that the relevant fact is true."
 </Callout>
 
 ## The Three Primitives
@@ -39,22 +39,22 @@ The [Ethereum](https://ethereum.org/) network uses ZK technology at scale throug
 
 ### Trusted Execution Environments (TEEs)
 
-A TEE is a hardware-enforced secure enclave within a processor. a protected area of memory and computation that even the operating system and system administrator cannot access. Data processed inside a TEE is encrypted at rest, in transit, and *in use*.
+A TEE is a hardware-enforced secure enclave within a processor. A protected area of memory and computation that even the operating system and system administrator cannot access. Data processed inside a TEE is encrypted at rest, in transit, and *in use*.
 
-[Intel SGX](https://www.intel.com/content/www/us/en/developer/tools/software-guard-extensions/overview.html), [AMD SEV](https://www.amd.com/en/developer/sev.html), Apple's [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web), and [ARM TrustZone](https://www.arm.com/technologies/trustzone-for-cortex-a) are deployed in billions of devices worldwide. Your iPhone stores biometric data (Face ID, Touch ID) in a Secure Enclave that the main processor cannot access. even Apple cannot extract this data.
+[Intel SGX](https://www.intel.com/content/www/us/en/developer/tools/software-guard-extensions/overview.html), [AMD SEV](https://www.amd.com/en/developer/sev.html), Apple's [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web), and [ARM TrustZone](https://www.arm.com/technologies/trustzone-for-cortex-a) are deployed in billions of devices worldwide. Your iPhone stores biometric data (Face ID, Touch ID) in a Secure Enclave that the main processor cannot access, even Apple cannot extract this data.
 
-The application to programmable trust: competing companies can pool sensitive data inside a TEE, compute joint analytics (e.g., fraud detection across multiple banks), and receive only the aggregate results. without any party seeing the other's raw data. The trust is in the silicon, not in a contract or a handshake.
+The application to programmable trust: competing companies can pool sensitive data inside a TEE, compute joint analytics (e.g., fraud detection across multiple banks), and receive only the aggregate results. Without any party seeing the other's raw data. The trust is in the silicon, not in a contract or a handshake.
 
 ### Multi-Party Computation (MPC)
 
 MPC allows multiple parties to jointly compute a function over their combined inputs without any party learning the other parties' inputs.
 
-Practical application: three hospitals want to determine which has the best treatment outcomes for a specific condition. They cannot share patient data due to privacy regulations. MPC allows them to compute the answer jointly. each hospital provides encrypted inputs, the computation produces the correct ranking, and no hospital sees any other hospital's data.
+Practical application: three hospitals want to determine which has the best treatment outcomes for a specific condition. They cannot share patient data due to privacy regulations. MPC allows them to compute the answer jointly. Each hospital provides encrypted inputs, the computation produces the correct ranking, and no hospital sees any other hospital's data.
 
-[Fireblocks](https://www.fireblocks.com/) and [Curv](https://www.curv.co/) use MPC for institutional cryptocurrency custody. private keys are split across multiple parties and multiple geographic locations, and transactions require the coordinated participation of multiple keyholders. No single party ever possesses the complete key.
+[Fireblocks](https://www.fireblocks.com/) and [Curv](https://www.curv.co/) use MPC for institutional cryptocurrency custody. Private keys are split across multiple parties and multiple geographic locations, and transactions require the coordinated participation of multiple keyholders. No single party ever possesses the complete key.
 
 <PullQuote>
-The shift from institutional trust to programmable trust is not about eliminating intermediaries. It is about replacing intermediaries that require data disclosure with mathematical proofs that require none. The trust is stronger. mathematics is harder to corrupt than institutions. and the privacy cost is zero.
+The shift from institutional trust to programmable trust is not about eliminating intermediaries. It is about replacing intermediaries that require data disclosure with mathematical proofs that require none. The trust is stronger, mathematics is harder to corrupt than institutions, and the privacy cost is zero.
 </PullQuote>
 
 ## The Application Stack
@@ -65,9 +65,9 @@ Programmable trust enables transaction types that are impossible with institutio
 
 **Confidential DeFi.** Current DeFi protocols operate on public blockchains where all transaction data is visible. [Aztec](https://aztec.network/) and [Aleo](https://www.aleo.org/) are building privacy-preserving DeFi protocols where transaction amounts, sender/receiver identities, and asset types are hidden behind ZKPs while maintaining the verifiability that DeFi requires.
 
-**Regulatory compliance without disclosure.** A financial institution can prove to a regulator that it meets capital adequacy requirements, conducts proper KYC/AML screening, and follows sanctions protocols. using ZKPs. without revealing the underlying customer data. The regulator gets the assurance it needs. The customers retain their privacy. The institution reduces its data liability.
+**Regulatory compliance without disclosure.** A financial institution can prove to a regulator that it meets capital adequacy requirements, conducts proper KYC/AML screening, and follows sanctions protocols, using ZKPs, without revealing the underlying customer data. The regulator gets the assurance it needs. The customers retain their privacy. The institution reduces its data liability.
 
-**Supply chain verification.** A manufacturer can prove its supply chain meets environmental or labor standards (through TEE-secured audit data) without revealing supplier identities, contract terms, or production volumes. information that competitors could exploit.
+**Supply chain verification.** A manufacturer can prove its supply chain meets environmental or labor standards (through TEE-secured audit data) without revealing supplier identities, contract terms, or production volumes, information that competitors could exploit.
 
 <Callout type="info" title="Programmable Trust Primitives Compared">
 
@@ -90,10 +90,10 @@ The trajectory is toward a layered trust stack that combines these primitives:
 
 **Layer 3: Protocol coordination.** MPC allows multiple parties to compute joint results without sharing inputs. No single point of failure or disclosure.
 
-**Layer 4: Application logic.** Smart contracts, identity systems, and financial protocols built on top of the trust stack. inheriting its privacy and verification properties.
+**Layer 4: Application logic.** Smart contracts, identity systems, and financial protocols built on top of the trust stack, inheriting its privacy and verification properties.
 
 The collective effect: transactions that currently require extensive data disclosure (mortgage applications, insurance claims, medical referrals, background checks) can be restructured around proof rather than exposure. The applicant does not reveal their entire financial history. They prove specific properties of it, mathematically, and the verifier has higher confidence in the proof than they would in a stack of disclosed documents.
 
 <KeyTakeaway>
-Programmable trust replaces institutional verification (banks, courts, notaries) with mathematical proof. Three primitives enable this: Zero-Knowledge Proofs (prove facts without revealing data. securing $100B+ in DeFi via ZK rollups), Trusted Execution Environments (hardware-enforced secure enclaves. billions of devices via Intel SGX, Apple Secure Enclave), and Multi-Party Computation (joint computation without input disclosure. used by Fireblocks for institutional crypto custody). Applications include private identity verification, confidential DeFi, regulatory compliance without data disclosure, and supply chain auditing. The trajectory is a layered trust stack combining hardware security (TEE), mathematical verification (ZKP), protocol coordination (MPC), and application logic (smart contracts). enabling transactions structured around proof instead of exposure.
+Programmable trust replaces institutional verification (banks, courts, notaries) with mathematical proof. Three primitives enable this: Zero-Knowledge Proofs (prove facts without revealing data, securing $100B+ in DeFi via ZK rollups), Trusted Execution Environments (hardware-enforced secure enclaves, billions of devices via Intel SGX, Apple Secure Enclave), and Multi-Party Computation (joint computation without input disclosure, used by Fireblocks for institutional crypto custody). Applications include private identity verification, confidential DeFi, regulatory compliance without data disclosure, and supply chain auditing. The trajectory is a layered trust stack combining hardware security (TEE), mathematical verification (ZKP), protocol coordination (MPC), and application logic (smart contracts), enabling transactions structured around proof instead of exposure.
 </KeyTakeaway>

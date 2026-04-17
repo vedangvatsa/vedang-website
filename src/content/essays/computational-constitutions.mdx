@@ -13,14 +13,14 @@ keywords: ['smart contracts', 'DAO', 'governance', 'Wyoming', 'Ethereum', 'DeFi'
 <Figure src="/images/essays/computational-constitutions.svg?v=7" alt="Infographic" wide />
 
 <Callout type="insight" title="The Core Thesis">
-A constitution is a set of rules that govern how collective decisions are made, how power is allocated, and how disputes are resolved. A smart contract does the same thing. except enforcement is automatic, amendment requires consensus of token holders, and the judiciary is a block of code. Computational constitutions are already governing billions of dollars in assets. The question is not whether they work technically. The question is whether automatic enforcement without human judgment produces just outcomes.
+A constitution is a set of rules that govern how collective decisions are made, how power is allocated, and how disputes are resolved. A smart contract does the same thing. Except enforcement is automatic, amendment requires consensus of token holders, and the judiciary is a block of code. Computational constitutions are already governing billions of dollars in assets. The question is not whether they work technically. The question is whether automatic enforcement without human judgment produces just outcomes.
 </Callout>
 
 ## The Legal Status
 
 Smart contracts as governance instruments have achieved formal legal recognition in at least one US jurisdiction.
 
-[Wyoming](https://www.wyoleg.gov/) passed the first DAO LLC statute in 2021, allowing decentralized autonomous organizations to register as limited liability companies with smart contracts serving as their operating agreements. The statute permits "algorithmically managed" LLCs. entities where governance decisions are executed by code rather than human officers.
+[Wyoming](https://www.wyoleg.gov/) passed the first DAO LLC statute in 2021, allowing decentralized autonomous organizations to register as limited liability companies with smart contracts serving as their operating agreements. The statute permits "algorithmically managed" LLCs. Entities where governance decisions are executed by code rather than human officers.
 
 <StatRow>
 <Stat value="2021" label="Wyoming DAO LLC statute enacted" source="Wyoming Legislature" sourceUrl="https://www.wyoleg.gov/" />
@@ -29,47 +29,47 @@ Smart contracts as governance instruments have achieved formal legal recognition
 <Stat value="$40B+" label="DAO-managed treasury assets" source="DeepDAO" />
 </StatRow>
 
-The [Wyoming DUNA](https://www.jdsupra.com/) (Decentralized Unincorporated Nonprofit Association) framework, introduced subsequently, provides an additional legal wrapper for non-profit-oriented decentralized communities. These structures allow DAOs to open bank accounts, sign contracts, pay employees, and interact with the traditional legal system. bridging the gap between on-chain governance and off-chain reality.
+The [Wyoming DUNA](https://www.jdsupra.com/) (Decentralized Unincorporated Nonprofit Association) framework, introduced subsequently, provides an additional legal wrapper for non-profit-oriented decentralized communities. These structures allow DAOs to open bank accounts, sign contracts, pay employees, and interact with the traditional legal system, bridging the gap between on-chain governance and off-chain reality.
 
-[Delaware](https://corp.delaware.gov/). the default incorporation state for US startups. does not have a specific DAO statute. It provides the mature Court of Chancery and extensive legal precedent that venture-backed entities require. The choice between Wyoming (low cost, privacy, smart-contract-native governance) and Delaware (legal predictability, institutional investor familiarity) reflects a fundamental tension: computational constitutions operate most naturally in Wyoming's framework, but the capital they need to attract is most comfortable in Delaware's.
+[Delaware](https://corp.delaware.gov/), the default incorporation state for US startups, does not have a specific DAO statute. It provides the mature Court of Chancery and extensive legal precedent that venture-backed entities require. The choice between Wyoming (low cost, privacy, smart-contract-native governance) and Delaware (legal predictability, institutional investor familiarity) reflects a fundamental tension: computational constitutions operate most naturally in Wyoming's framework, but the capital they need to attract is most comfortable in Delaware's.
 
 ## The Governance Stack
 
 A computational constitution operates on [Ethereum](https://ethereum.org/) or compatible blockchains through a layered governance stack:
 
-**Token-weighted voting.** Governance tokens represent voting power. Holders propose and vote on changes to the protocol. parameter adjustments, treasury allocations, strategic decisions. [Uniswap](https://uniswap.org/) governance, for example, requires a minimum of 2.5 million UNI tokens to submit a proposal and a quorum of 40 million UNI to pass it.
+**Token-weighted voting.** Governance tokens represent voting power. Holders propose and vote on changes to the protocol. Parameter adjustments, treasury allocations, strategic decisions. [Uniswap](https://uniswap.org/) governance, for example, requires a minimum of 2.5 million UNI tokens to submit a proposal and a quorum of 40 million UNI to pass it.
 
 **Smart contract execution.** If a proposal passes, the corresponding smart contract executes automatically. No human intermediary approves or implements the decision. The code enforces the outcome. If the vote approves a treasury transfer, the funds move. If it approves a parameter change, the parameter changes.
 
 **Time locks.** Passed proposals typically enter a time-delay period (24-72 hours) before execution, allowing community members to review and, if necessary, exit the protocol before the change takes effect. This is the computational equivalent of a comment period.
 
-**Multi-signature safeguards.** Critical functions (emergency pauses, contract upgrades) often require multiple designated signers to authorize. distributing control and preventing unilateral action.
+**Multi-signature safeguards.** Critical functions (emergency pauses, contract upgrades) often require multiple designated signers to authorize, distributing control and preventing unilateral action.
 
 <PullQuote>
-A smart contract does not ask whether a decision is just. It asks whether the decision was approved according to the procedures encoded in its logic. Procedural validity and substantive justice are not the same thing. and the gap between them is where computational constitutions face their hardest challenge.
+A smart contract does not ask whether a decision is just. It asks whether the decision was approved according to the procedures encoded in its logic. Procedural validity and substantive justice are not the same thing. And the gap between them is where computational constitutions face their hardest challenge.
 </PullQuote>
 
 ## The Amendment Problem
 
 Traditional constitutions are amended through deliberate, slow processes that involve public debate, legislative votes, executive approval, and sometimes popular referendum. The slowness is a feature: it prevents hasty changes driven by temporary majorities or crisis-driven emotion.
 
-Smart contract governance can be amended far more rapidly. A proposal can be submitted, debated, and voted on within days. If the governance token distribution is concentrated. and in most protocols, it is. a small number of large holders can control outcomes. The 2023 governance crisis at [MakerDAO](https://makerdao.com/), where competing factions of large token holders fought for control of the protocol's direction, illustrated the problem: computational constitutions inherit the plutocratic tendencies of whoever holds the most tokens.
+Smart contract governance can be amended far more rapidly. A proposal can be submitted, debated, and voted on within days. If the governance token distribution is concentrated, and in most protocols, it is, a small number of large holders can control outcomes. The 2023 governance crisis at [MakerDAO](https://makerdao.com/), where competing factions of large token holders fought for control of the protocol's direction, illustrated the problem: computational constitutions inherit the plutocratic tendencies of whoever holds the most tokens.
 
 The technical response is emerging:
 
-**Quadratic voting.** Instead of "one token, one vote," quadratic voting makes each additional vote on the same proposal progressively more expensive. This reduces the influence of large holders and gives greater relative weight to smaller participants. [Gitcoin](https://www.gitcoin.co/) uses quadratic funding. a related mechanism. to allocate grants for open-source development.
+**Quadratic voting.** Instead of "one token, one vote," quadratic voting makes each additional vote on the same proposal progressively more expensive. This reduces the influence of large holders and gives greater relative weight to smaller participants. [Gitcoin](https://www.gitcoin.co/) uses quadratic funding, a related mechanism, to allocate grants for open-source development.
 
 **Conviction voting.** Voters accumulate "conviction" over time by continuously staking their tokens on a proposal. Longer commitment periods produce stronger votes. This mechanism rewards sustained preference over impulsive voting.
 
-**Zero-knowledge voting.** [Zero-knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof) allow voters to prove they hold governance tokens and cast a vote without revealing their identity or their specific vote. This prevents vote buying, voter intimidation, and retaliatory behavior. the same protections that secret ballots provide in physical elections.
+**Zero-knowledge voting.** [Zero-knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof) allow voters to prove they hold governance tokens and cast a vote without revealing their identity or their specific vote. This prevents vote buying, voter intimidation, and retaliatory behavior, the same protections that secret ballots provide in physical elections.
 
 ## The $100 Billion Experiment
 
 Over **$100 billion in total value** is locked in DeFi (Decentralized Finance) protocols governed by computational constitutions, according to [DeFiLlama](https://defillama.com/). [DeepDAO](https://deepdao.io/) tracks over 1,000 active DAOs managing more than **$40 billion** in combined treasury assets.
 
-These are not pilot programs. They are production governance systems managing material economic resources. [Aave](https://aave.com/)'s governance controls a lending protocol with billions in deposits. [Compound](https://compound.finance/)'s governance manages interest rate parameters that affect thousands of borrowers and lenders. [ENS DAO](https://ens.domains/) governs the Ethereum Name Service. the DNS-equivalent for blockchain addresses.
+These are not pilot programs. They are production governance systems managing material economic resources. [Aave](https://aave.com/)'s governance controls a lending protocol with billions in deposits. [Compound](https://compound.finance/)'s governance manages interest rate parameters that affect thousands of borrowers and lenders. [ENS DAO](https://ens.domains/) governs the Ethereum Name Service, the DNS-equivalent for blockchain addresses.
 
-The track record is mixed. On-chain governance has proven effective for technical parameter adjustments (interest rates, collateral ratios, fee structures) where the decision space is well-defined and the consequences are measurable. It has proven less effective for strategic direction-setting, conflict resolution, and decisions involving competing values. the domains where human judgment, negotiation, and contextual reasoning are most needed.
+The track record is mixed. On-chain governance has proven effective for technical parameter adjustments (interest rates, collateral ratios, fee structures) where the decision space is well-defined and the consequences are measurable. It has proven less effective for strategic direction-setting, conflict resolution, and decisions involving competing values. The domains where human judgment, negotiation, and contextual reasoning are most needed.
 
 <Callout type="info" title="Where Computational Constitutions Work and Where They Don't">
 
@@ -85,13 +85,13 @@ The track record is mixed. On-chain governance has proven effective for technica
 
 ## The Constitutional Question
 
-The deepest question about computational constitutions is not whether they function technically. They do. It is whether automatic enforcement. "code is law". produces governance outcomes that are just.
+The deepest question about computational constitutions is not whether they function technically. They do. It is whether automatic enforcement, "code is law", produces governance outcomes that are just.
 
 A traditional legal system includes human judges who can exercise discretion: consider mitigating circumstances, interpret ambiguous language, and override the literal application of a rule when it produces an unjust outcome. Smart contracts cannot do this. They execute the rules as written, without judgment, without mercy, and without the ability to recognize when the rules themselves are producing unfair results.
 
-[Lawrence Lessig](https://www.lessig.org/) identified this dynamic in *Code and Other Laws of Cyberspace* (1999): code is a form of regulation, but unlike legislation, it is not subject to democratic deliberation, judicial review, or executive amendment. When code governs, the architecture decides. and the architecture is written by developers, not by the governed.
+[Lawrence Lessig](https://www.lessig.org/) identified this dynamic in *Code and Other Laws of Cyberspace* (1999): code is a form of regulation, but unlike legislation, it is not subject to democratic deliberation, judicial review, or executive amendment. When code governs, the architecture decides, and the architecture is written by developers, not by the governed.
 
-The hybrid model. smart contracts for procedural execution, human governance for judgment calls and dispute resolution. is the likely trajectory. [Aragon](https://aragon.org/) and [Kleros](https://kleros.io/) are building decentralized courts that combine on-chain evidence, juror selection, and appealable decisions. Whether these systems can replicate the substantive justice that centralized legal systems provide. at lower cost, with greater accessibility. is the open experiment of computational constitutions.
+The hybrid model, smart contracts for procedural execution, human governance for judgment calls and dispute resolution, is the likely trajectory. [Aragon](https://aragon.org/) and [Kleros](https://kleros.io/) are building decentralized courts that combine on-chain evidence, juror selection, and appealable decisions. Whether these systems can replicate the substantive justice that centralized legal systems provide, at lower cost, with greater accessibility, is the open experiment of computational constitutions.
 
 <KeyTakeaway>
 Wyoming legalized DAO LLCs in 2021, allowing smart contracts to serve as operating agreements. Over $100 billion is locked in DeFi protocols governed by on-chain voting. 1,000+ active DAOs manage $40+ billion in treasury assets. The governance stack includes token-weighted voting, automatic smart contract execution, time locks, and multi-sig safeguards. The main challenges are plutocratic concentration (large token holders dominate outcomes), the amendment problem (rapid governance changes without deliberative process), and the absence of judicial discretion (code cannot assess context or mitigating circumstances). Technical responses include quadratic voting, conviction voting, and zero-knowledge private ballots. The trajectory is hybrid: smart contracts for procedural execution, human governance for judgment, dispute resolution, and strategic direction.

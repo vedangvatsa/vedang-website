@@ -5,7 +5,7 @@ import React from 'react';
 /* ─── Digital Government Maturity ─── */
 export function DigitalGovMaturity() {
   const countries = [
-    { name: 'Estonia', digital: 99, ai: 'Eesti.ai (2026)', score: 95, highlight: true },
+    { name: 'Estonia', digital: 100, ai: 'Eesti.ai (2026)', score: 95, highlight: true },
     { name: 'Singapore', digital: 97, ai: 'Smart Nation 2.0', score: 93, highlight: false },
     { name: 'UAE', digital: 95, ai: 'AI-native gov by 2027', score: 91, highlight: false },
     { name: 'Denmark', digital: 93, ai: 'MitID (95% adoption)', score: 90, highlight: false },
@@ -52,7 +52,7 @@ export function EResidencyImpact() {
     { year: '2022', companies: 3600, revenue: 42, residents: 9100 },
     { year: '2023', companies: 4200, revenue: 55, residents: 10500 },
     { year: '2024', companies: 4830, revenue: 67, residents: 11500 },
-    { year: '2025', companies: 5556, revenue: 125, residents: 13828 },
+    { year: '2025', companies: 5556, revenue: 124.9, residents: 13828 },
   ];
 
   return (

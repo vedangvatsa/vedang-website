@@ -18,7 +18,7 @@ Algorithms now make decisions that were historically reserved for judges, doctor
 
 ## The COMPAS Problem
 
-The clearest documented case of algorithmic authority is COMPAS (Correctional Offender Management Profiling for Alternative Sanctions). a risk assessment tool used across US courts to predict the likelihood that a defendant will re-offend.
+The clearest documented case of algorithmic authority is COMPAS (Correctional Offender Management Profiling for Alternative Sanctions). A risk assessment tool used across US courts to predict the likelihood that a defendant will re-offend.
 
 In 2016, [ProPublica](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing) published an investigation that remains the landmark study in algorithmic fairness. Their analysis of over 7,000 defendants in Broward County, Florida found:
 
@@ -29,25 +29,25 @@ In 2016, [ProPublica](https://www.propublica.org/article/machine-bias-risk-asses
 <Stat value="137" label="Features used by COMPAS (race not explicit)" source="Northpointe/Equivant" />
 </StatRow>
 
-Black defendants were **almost twice as likely** to be falsely flagged as high-risk (45% false positive rate vs. 23% for white defendants). White defendants were more often incorrectly labeled as low-risk when they did go on to re-offend. The system was not predicting crime. It was predicting *proximity to the criminal justice system*. a measurement deeply shaped by policing patterns, sentencing disparities, and socioeconomic factors that correlate with race.
+Black defendants were **almost twice as likely** to be falsely flagged as high-risk (45% false positive rate vs. 23% for white defendants). White defendants were more often incorrectly labeled as low-risk when they did go on to re-offend. The system was not predicting crime. It was predicting *proximity to the criminal justice system*. A measurement deeply shaped by policing patterns, sentencing disparities, and socioeconomic factors that correlate with race.
 
-COMPAS's developer, Northpointe (now [Equivant](https://www.equivant.com/)), responded that the tool maintained equal predictive accuracy across racial groups. that is, when it predicted a score of 7, the re-offense rate was similar across races. Researchers at [Stanford](https://www.stanford.edu/) and other institutions subsequently proved that equal predictive accuracy and equal error rates across groups are **mathematically incompatible** in the presence of different base rates. You cannot have both. Any tool that produces equal accuracy will produce unequal errors, and vice versa.
+COMPAS's developer, Northpointe (now [Equivant](https://www.equivant.com/)), responded that the tool maintained equal predictive accuracy across racial groups. That is, when it predicted a score of 7, the re-offense rate was similar across races. Researchers at [Stanford](https://www.stanford.edu/) and other institutions subsequently proved that equal predictive accuracy and equal error rates across groups are **mathematically incompatible** in the presence of different base rates. You cannot have both. Any tool that produces equal accuracy will produce unequal errors, and vice versa.
 
-This is not a bug in COMPAS. It is a property of all prediction models applied to populations with different base rates. The choice of which fairness metric to prioritize. equal accuracy or equal error rates. is not a technical question. It is a moral one. And it is being made, by default, by engineers and product managers rather than by the communities affected.
+This is not a bug in COMPAS. It is a property of all prediction models applied to populations with different base rates. The choice of which fairness metric to prioritize, equal accuracy or equal error rates, is not a technical question. It is a moral one. And it is being made, by default, by engineers and product managers rather than by the communities affected.
 
 ## Healthcare: Bias in Clinical AI
 
 The same dynamics operate in healthcare, where the stakes are measured in lives.
 
-A widely cited [2019 study published in *Science*](https://www.science.org/) examined a healthcare algorithm used by a major US health system to allocate follow-up care. The algorithm predicted patient health needs using prior healthcare spending as a proxy. The result: **Black patients had to be significantly sicker than white patients to receive the same algorithmic risk score**, because Black patients, on average, had historically spent less on healthcare. not because they needed less care, but because they had less access to it.
+A widely cited [2019 study published in *Science*](https://www.science.org/) examined a healthcare algorithm used by a major US health system to allocate follow-up care. The algorithm predicted patient health needs using prior healthcare spending as a proxy. The result: **Black patients had to be significantly sicker than white patients to receive the same algorithmic risk score**, because Black patients, on average, had historically spent less on healthcare, not because they needed less care, but because they had less access to it.
 
 The algorithm did not use race as an input. But healthcare expenditure is a reliable proxy for race in the US, because access to care is distributed along racial lines. The algorithm encoded the consequences of structural inequality into a "neutral" prediction and automated the inequality's continuation.
 
 <PullQuote>
-An algorithm trained on historical data does not predict the future. It projects the past. If the past was shaped by discrimination, the projection perpetuates it. at machine speed, at machine scale, and with machine credibility.
+An algorithm trained on historical data does not predict the future. It projects the past. If the past was shaped by discrimination, the projection perpetuates it, at machine speed, at machine scale, and with machine credibility.
 </PullQuote>
 
-Research published in 2025 found that Large Language Models used for treatment recommendations can exhibit racial bias even when race is never explicitly mentioned. LLMs infer demographic information from linguistic patterns, geographic context, and described symptoms. and adjust their recommendations accordingly. The bias is not in the explicit inputs. It is in the training data.
+Research published in 2025 found that Large Language Models used for treatment recommendations can exhibit racial bias even when race is never explicitly mentioned. LLMs infer demographic information from linguistic patterns, geographic context, and described symptoms. And adjust their recommendations accordingly. The bias is not in the explicit inputs. It is in the training data.
 
 ## The Lending Machine
 
@@ -55,7 +55,7 @@ Algorithmic discrimination in lending follows the same pattern.
 
 The [Equal Credit Opportunity Act](https://www.consumerfinance.gov/) prohibits lenders from discriminating based on race, religion, national origin, sex, marital status, or age. Algorithmic lending models do not use these features directly. They use features that correlate with them: ZIP code (which correlates with race due to residential segregation), educational institution attended (which correlates with socioeconomic background), browsing patterns, social network connections.
 
-A [UC Berkeley study](https://www.berkeley.edu/) found that algorithmic mortgage lenders charged Black and Hispanic borrowers 5-9 basis points more than white borrowers with identical credit profiles. The discrimination was smaller than traditional (human) lenders, but it was present and profitable. generating an estimated $765 million per year in excess interest charges.
+A [UC Berkeley study](https://www.berkeley.edu/) found that algorithmic mortgage lenders charged Black and Hispanic borrowers 5-9 basis points more than white borrowers with identical credit profiles. The discrimination was smaller than traditional (human) lenders, but it was present and profitable, generating an estimated $765 million per year in excess interest charges.
 
 The algorithm did not "decide" to discriminate. It found patterns in historical data that were profitable to exploit, and those patterns reflected decades of redlining, wealth disparities, and unequal access to financial education.
 
@@ -65,7 +65,7 @@ The fundamental challenge with algorithmic authority is opacity.
 
 Proprietary algorithms are trade secrets. COMPAS's specific features and weightings are not public. Healthcare risk models are often proprietary to the companies that sell them. Credit scoring models reveal only broad categories of factors, not the specific logic. When an algorithm denies parole, denies care, or raises a loan rate, the affected person has no meaningful ability to interrogate the reasoning.
 
-This creates an accountability vacuum. A human judge who denies bail must state reasons on the record. A human doctor who recommends against treatment must document clinical reasoning. A human loan officer who denies a mortgage must provide a written explanation. An algorithm that does any of these things produces a score. and the score is treated as self-justifying.
+This creates an accountability vacuum. A human judge who denies bail must state reasons on the record. A human doctor who recommends against treatment must document clinical reasoning. A human loan officer who denies a mortgage must provide a written explanation. An algorithm that does any of these things produces a score, and the score is treated as self-justifying.
 
 The [EU AI Act](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai), effective in phases from 2024, classifies AI systems used in criminal justice, employment, credit scoring, and healthcare as "high-risk" and requires transparency, human oversight, and explainability standards. The US regulatory response is more fragmented, with the [CFPB](https://www.consumerfinance.gov/) and [FTC](https://www.ftc.gov/) asserting jurisdiction over algorithmic discrimination in lending and consumer products, but without a comprehensive federal AI law.
 
@@ -83,12 +83,12 @@ The practical requirements for algorithmic accountability include:
 
 **Pre-deployment testing.** Before an algorithm is deployed in a consequential context (bail, healthcare, lending), it should be tested for disparate impact across protected categories using held-out evaluation data that represents the actual deployment population.
 
-**Continuous monitoring.** Algorithmic performance drifts over time as deployment populations change. A model trained on 2020 data may perform differently on 2025 populations. Ongoing monitoring of accuracy, error rates, and disparate impact is required. not as a one-time audit, but as a continuous process.
+**Continuous monitoring.** Algorithmic performance drifts over time as deployment populations change. A model trained on 2020 data may perform differently on 2025 populations. Ongoing monitoring of accuracy, error rates, and disparate impact is required, not as a one-time audit, but as a continuous process.
 
-**Explainability requirements.** Any person materially affected by an algorithmic decision. denied parole, denied insurance, denied a loan. should receive an explanation of the factors that drove the decision, in language they can understand, with a meaningful opportunity to challenge errors.
+**Explainability requirements.** Any person materially affected by an algorithmic decision, denied parole, denied insurance, denied a loan, should receive an explanation of the factors that drove the decision, in language they can understand, with a meaningful opportunity to challenge errors.
 
-**Independent review.** The entity that profits from the algorithm should not be the sole entity that audits it. Independent third-party auditing, with access to the model's logic and training data, is the structural equivalent of financial auditing. and serves the same purpose of maintaining public trust in consequential systems.
+**Independent review.** The entity that profits from the algorithm should not be the sole entity that audits it. Independent third-party auditing, with access to the model's logic and training data, is the structural equivalent of financial auditing. And serves the same purpose of maintaining public trust in consequential systems.
 
 <KeyTakeaway>
-COMPAS demonstrated that criminal justice risk models produce racially disparate false positive rates (45% for Black defendants vs. 23% for white defendants). Healthcare AI trained on spending-as-proxy systematically undertreated minority patients. Mortgage algorithms charged Black and Hispanic borrowers 5-9 basis points more with identical credit profiles, extracting $765 million annually. These outcomes are not algorithm failures. They are the predictable result of training prediction models on historical data shaped by structural inequality. The regulatory response includes the EU AI Act (mandating transparency for high-risk AI), NIST risk frameworks, and CFPB enforcement actions. The required infrastructure is specific: pre-deployment disparate impact testing, continuous monitoring, individual explainability, and independent third-party auditing. The choice of fairness metric is moral, not mathematical. and that choice should not default to engineers.
+COMPAS demonstrated that criminal justice risk models produce racially disparate false positive rates (45% for Black defendants vs. 23% for white defendants). Healthcare AI trained on spending-as-proxy systematically undertreated minority patients. Mortgage algorithms charged Black and Hispanic borrowers 5-9 basis points more with identical credit profiles, extracting $765 million annually. These outcomes are not algorithm failures. They are the predictable result of training prediction models on historical data shaped by structural inequality. The regulatory response includes the EU AI Act (mandating transparency for high-risk AI), NIST risk frameworks, and CFPB enforcement actions. The required infrastructure is specific: pre-deployment disparate impact testing, continuous monitoring, individual explainability, and independent third-party auditing. The choice of fairness metric is moral, not mathematical, and that choice should not default to engineers.
 </KeyTakeaway>
