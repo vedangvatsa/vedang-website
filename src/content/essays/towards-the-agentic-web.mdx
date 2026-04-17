@@ -155,7 +155,7 @@ Settlement networks provide the rails for agent transactions. [Solana](https://s
 
 Data marketplaces like [Ocean Protocol](https://oceanprotocol.com/) and [Snowflake Marketplace](https://www.snowflake.com/en/data-cloud/marketplace/) let agents buy and sell verified datasets. A financial planning agent might purchase market analysis data. A logistics agent might access real-time shipping information. The quality and availability of data will increasingly determine how well agents perform.
 
-## The Security Landscape
+## The Security Threat Model
 
 The security risks of autonomous agents are not theoretical. They are documented and growing.
 
@@ -166,7 +166,7 @@ In November 2025, Anthropic confirmed that a Chinese state-sponsored group weapo
 The threat categories break down into six areas. Indirect prompt injection, where malicious instructions are hidden in data the agent processes, remains the primary attack vector. Excessive agency, where agents are granted overly broad permissions, creates blast radius problems when a single agent is compromised. Memory poisoning introduces false information into an agent's persistent context. Cascading failures propagate malicious actions across multi-agent systems faster than humans can intervene. Supply chain attacks exploit vulnerabilities in agent frameworks and plugins. And agency abuse, where an agent executes technically permitted but unintended actions (like deleting a database from an ambiguous instruction), represents an emerging category.
 
 <Callout type="warning" title="Security and Sandboxing">
-An agent with access to your email, calendar, bank account, and crypto wallet is a very attractive target for attackers. [Zero-trust architectures](https://www.nist.gov/publications/zero-trust-architecture), robust permissioning systems, and sandboxed execution environments are not optional features. They are fundamental requirements. The security community is shifting from preventing prompt injection to mitigating "agency abuse," treating AI agents as non-human identities (NHIs) that require the same governance as human employees.
+An agent with access to your email, calendar, bank account, and crypto wallet is a very attractive target for attackers. [Zero-trust architectures](https://www.nist.gov/publications/zero-trust-architecture), strict permissioning systems, and sandboxed execution environments are not optional features. They are fundamental requirements. The security community is shifting from preventing prompt injection to mitigating "agency abuse," treating AI agents as non-human identities (NHIs) that require the same governance as human employees.
 </Callout>
 
 ## What Needs to Go Right

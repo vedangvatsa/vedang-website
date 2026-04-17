@@ -28,9 +28,9 @@
   <!-- Estonia -->
   <rect x="30" y="85" width="200" height="100" class="country-active" />
   <text x="130" y="115" class="text-blue">Estonia</text>
-  <text x="130" y="133" class="text-stat">99%</text>
-  <text x="130" y="148" class="text-sub">services digital</text>
-  <text x="130" y="168" class="text-sub">Eesti.ai · €125M revenue</text>
+  <text x="130" y="133" class="text-stat">100%</text>
+  <text x="130" y="148" class="text-sub">services online</text>
+  <text x="130" y="168" class="text-sub">Eesti.ai · €124.9M revenue</text>
   <line x1="230" y1="135" x2="300" y2="160" class="dashed" />
   
   <!-- Singapore -->
@@ -44,9 +44,9 @@
   <!-- UAE -->
   <rect x="30" y="230" width="200" height="100" class="country-box" />
   <text x="130" y="260" class="text-dark">UAE</text>
-  <text x="130" y="278" class="text-stat">97%</text>
-  <text x="130" y="293" class="text-sub">AI utilization rate</text>
-  <text x="130" y="313" class="text-sub">AED 13B · AI-native gov by 2027</text>
+  <text x="130" y="278" class="text-stat">AED 13B</text>
+  <text x="130" y="293" class="text-sub">digital strategy committed</text>
+  <text x="130" y="313" class="text-sub">AI-native gov by 2027 · ZGB</text>
   <line x1="230" y1="280" x2="350" y2="190" class="dashed" />
   
   <!-- Denmark -->
