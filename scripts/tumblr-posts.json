@@ -872,13 +872,15 @@
     "id": "universal-text-ui-paradigms",
     "scheduleDate": "2026-04-17",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
     "tags": [
       "UI",
       "AI"
     ],
-    "text": "CLI → GUI → NLI. Each cut adaptation cost 10x. Dashboards are next.\n\nveda.ng/universal-text-ui"
+    "text": "CLI → GUI → NLI. Each cut adaptation cost 10x. Dashboards are next.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-04-17T05:50:59.769Z",
+    "tumblrId": "814119711193350144"
   },
   {
     "id": "stepwise-ai-gartner",

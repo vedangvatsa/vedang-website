@@ -584,9 +584,11 @@
     "id": "universal-text-ui-paradigms",
     "scheduleDate": "2026-04-17",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "Three interface paradigms in fifty years. CLI: user memorizes syntax. GUI: user learns navigation. NLI: system interprets intent.\n\nEach cut adaptation cost by 10x. The GUI replaced the command line. Natural language will replace dashboards.\n\nveda.ng/universal-text-ui"
+    "text": "Three interface paradigms in fifty years. CLI: user memorizes syntax. GUI: user learns navigation. NLI: system interprets intent.\n\nEach cut adaptation cost by 10x. The GUI replaced the command line. Natural language will replace dashboards.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-04-17T05:50:57.850Z",
+    "fbPostId": "1785048661795414_1259971052979603"
   },
   {
     "id": "stepwise-ai-gartner",

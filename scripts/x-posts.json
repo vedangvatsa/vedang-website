@@ -585,9 +585,11 @@
     "id": "sacred-algorithms",
     "scheduleDate": "2026-04-17",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/sacred_algorithms.png",
-    "text": "We stopped questioning the algorithm.\n\nWhen a deep learning model produces a result, we often cannot trace how it got there. We check inputs and outputs. We measure accuracy. But we cannot truly understand it.\n\nIn the face of this opacity, trust becomes a leap of faith. We believe in the data it was trained on. We believe in the engineers. We believe in the statistical promise.\n\nThis is epistemological surrender. An admission that intelligence exists beyond human comprehension. The black box has become the modern oracle.\n\nIt gets more serious when these systems make life-or-death decisions. An autonomous vehicle in an unavoidable accident. An AI diagnosing cancer. Who decides the ethical framework? Encoding that framework into a machine is creating sacred law.\n\nWe treat these algorithms as moral authorities. A role traditionally reserved for priests, philosophers, and gods.\n\nThe antidote is not rejection. It is critical faith. Trust paired with skepticism. Always.\n\nveda.ng/sacred-algorithms"
+    "text": "We stopped questioning the algorithm.\n\nWhen a deep learning model produces a result, we often cannot trace how it got there. We check inputs and outputs. We measure accuracy. But we cannot truly understand it.\n\nIn the face of this opacity, trust becomes a leap of faith. We believe in the data it was trained on. We believe in the engineers. We believe in the statistical promise.\n\nThis is epistemological surrender. An admission that intelligence exists beyond human comprehension. The black box has become the modern oracle.\n\nIt gets more serious when these systems make life-or-death decisions. An autonomous vehicle in an unavoidable accident. An AI diagnosing cancer. Who decides the ethical framework? Encoding that framework into a machine is creating sacred law.\n\nWe treat these algorithms as moral authorities. A role traditionally reserved for priests, philosophers, and gods.\n\nThe antidote is not rejection. It is critical faith. Trust paired with skepticism. Always.\n\nveda.ng/sacred-algorithms",
+    "postedAt": "2026-04-17T05:50:49.139Z",
+    "tweetId": "2045017112964481096"
   },
   {
     "id": "agentic-commerce",

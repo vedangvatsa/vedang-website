@@ -563,9 +563,11 @@
     "id": "pseudonymous-agency",
     "scheduleDate": "2026-04-17",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/pseudonymous_agency.png",
-    "text": "Participation or privacy. You were told to choose.\n\nTo use the modern internet, you surrender your identity. Your data becomes currency. But pseudonymity offers a way out.\n\nA pseudonym is not anonymity. It is a stable identity not tied to your real name. George Orwell and Mark Twain built trust without revealing who they were.\n\nAI agents can be your pseudonymous representatives. Digital proxies that negotiate and build reputation on your behalf. They carry your intent without your identity.\n\nWith zero-knowledge proofs, your agent could prove creditworthiness without revealing income. Prove qualifications without a name.\n\nveda.ng/pseudonymous-agency"
+    "text": "Participation or privacy. You were told to choose.\n\nTo use the modern internet, you surrender your identity. Your data becomes currency. But pseudonymity offers a way out.\n\nA pseudonym is not anonymity. It is a stable identity not tied to your real name. George Orwell and Mark Twain built trust without revealing who they were.\n\nAI agents can be your pseudonymous representatives. Digital proxies that negotiate and build reputation on your behalf. They carry your intent without your identity.\n\nWith zero-knowledge proofs, your agent could prove creditworthiness without revealing income. Prove qualifications without a name.\n\nveda.ng/pseudonymous-agency",
+    "postedAt": "2026-04-17T05:50:51.741Z",
+    "postId": "urn:li:share:7450782812712087552"
   },
   {
     "id": "internet-of-lies",
