@@ -46,7 +46,7 @@ export function Figure({ src, alt, caption, source, sourceUrl, wide = false }: {
 /* ─── Stat cards row ─── */
 export function StatRow({ children }: { children: React.ReactNode }) {
   return (
-    <div className="not-prose my-8 first:mt-0 last:mb-0 grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div className="not-prose my-8 first:mt-0 last:mb-0 flex flex-wrap justify-center gap-4 [&>*]:min-w-[140px] [&>*]:flex-1 [&>*]:max-w-[250px]">
       {children}
     </div>
   );
