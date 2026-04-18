@@ -605,9 +605,11 @@
     "id": "ai-agent-economy",
     "scheduleDate": "2026-04-18",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/ai_agent_economy.png",
-    "text": "The corporation is dissolving.\n\nThe traditional corporation exists to minimize transaction costs. When AI agents can discover, negotiate, and execute transactions in milliseconds, those costs approach zero.\n\nA company may not consist of thousands of employees in rigid silos. Instead, a core group of human strategists oversees a swarm of AI agents, each rented for specific capabilities. The firm becomes a temporary, task-specific nexus of agentic services.\n\nThe value of human labor shifts toward tasks that are non-reducible: strategic direction, creative ideation, ethical judgment, empathetic connection.\n\nThe web itself will be rebuilt. From an attention economy to an intention economy. Agents do not have attention to be captured. They have objectives. Services will be judged by utility to an agent, not ability to attract eyeballs.\n\nA web built for agents is a web where structured data beats prose. Where cryptographic proof beats claims. Where efficiency beats engagement.\n\nveda.ng/ai-agent-economy\n\nThe hard part: getting there without blowing up. 70% of big-bang AI deployments fail. The sequencing matters: veda.ng/stepwise-ai"
+    "text": "The corporation is dissolving.\n\nThe traditional corporation exists to minimize transaction costs. When AI agents can discover, negotiate, and execute transactions in milliseconds, those costs approach zero.\n\nA company may not consist of thousands of employees in rigid silos. Instead, a core group of human strategists oversees a swarm of AI agents, each rented for specific capabilities. The firm becomes a temporary, task-specific nexus of agentic services.\n\nThe value of human labor shifts toward tasks that are non-reducible: strategic direction, creative ideation, ethical judgment, empathetic connection.\n\nThe web itself will be rebuilt. From an attention economy to an intention economy. Agents do not have attention to be captured. They have objectives. Services will be judged by utility to an agent, not ability to attract eyeballs.\n\nA web built for agents is a web where structured data beats prose. Where cryptographic proof beats claims. Where efficiency beats engagement.\n\nveda.ng/ai-agent-economy\n\nThe hard part: getting there without blowing up. 70% of big-bang AI deployments fail. The sequencing matters: veda.ng/stepwise-ai",
+    "postedAt": "2026-04-18T05:26:09.354Z",
+    "tweetId": "2045373294208000402"
   },
   {
     "id": "agi-governance",

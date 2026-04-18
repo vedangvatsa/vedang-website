@@ -583,9 +583,11 @@
     "id": "ai-economy",
     "scheduleDate": "2026-04-18",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/ai_economy.png",
-    "text": "The entry ramp is narrowing.\n\nStanford payroll data: early-career workers aged 22-25 in AI-exposed jobs saw a 16% relative decline in employment since late 2022. Senior workers remained stable.\n\nSalesforce cut 4,000 support positions. Duolingo stopped using human contractors. When the people writing the checks say the workforce is shrinking, the credibility bar is different.\n\nThe question: whether AI gains flow broadly or concentrate narrowly. Every previous technology eventually created broad prosperity. But \"eventually\" ranged from one to three generations.\n\nveda.ng/ai-economy\n\nThe companies that get AI deployment right start small. One boring task. Three-month payback. Then scale: veda.ng/stepwise-ai"
+    "text": "The entry ramp is narrowing.\n\nStanford payroll data: early-career workers aged 22-25 in AI-exposed jobs saw a 16% relative decline in employment since late 2022. Senior workers remained stable.\n\nSalesforce cut 4,000 support positions. Duolingo stopped using human contractors. When the people writing the checks say the workforce is shrinking, the credibility bar is different.\n\nThe question: whether AI gains flow broadly or concentrate narrowly. Every previous technology eventually created broad prosperity. But \"eventually\" ranged from one to three generations.\n\nveda.ng/ai-economy\n\nThe companies that get AI deployment right start small. One boring task. Three-month payback. Then scale: veda.ng/stepwise-ai",
+    "postedAt": "2026-04-18T05:26:11.553Z",
+    "postId": "urn:li:share:7451138992508452865"
   },
   {
     "id": "asi-timeline",
