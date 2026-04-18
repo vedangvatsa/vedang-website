@@ -593,9 +593,11 @@
     "id": "asi-timeline",
     "scheduleDate": "2026-04-18",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/asi_timeline.png",
-    "text": "When does superintelligence arrive?\n\nMetaculus: 50% chance of AGI by 2040-2050. But some predict 2030. Some predict 2100. The distribution is huge.\n\nMoore's Law is slowing, but progress now comes from better algorithms and architectures, not just hardware. Transformers in 2017. Scaling laws in 2020. Nobody predicted either.\n\nIf the scaling hypothesis is true, superintelligence is inevitable. If false, we are missing something fundamental.\n\nThe uncertainty is not a reason for complacency. It is a reason for urgency.\n\nveda.ng/asi-timeline"
+    "text": "When does superintelligence arrive?\n\nMetaculus: 50% chance of AGI by 2040-2050. But some predict 2030. Some predict 2100. The distribution is huge.\n\nMoore's Law is slowing, but progress now comes from better algorithms and architectures, not just hardware. Transformers in 2017. Scaling laws in 2020. Nobody predicted either.\n\nIf the scaling hypothesis is true, superintelligence is inevitable. If false, we are missing something fundamental.\n\nThe uncertainty is not a reason for complacency. It is a reason for urgency.\n\nveda.ng/asi-timeline",
+    "postedAt": "2026-04-18T20:04:38.038Z",
+    "postId": "urn:li:share:7451360059533471744"
   },
   {
     "id": "ai-agent-economy",
