@@ -900,12 +900,14 @@
     "id": "agentic-state-uae",
     "scheduleDate": "2026-04-20",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
     "tags": [
       "UAE",
       "AI government"
     ],
-    "text": "Abu Dhabi: AED 13B for AI-native government. 97% utilization. Clean-sheet, no legacy.\n\nveda.ng/agentic-state"
+    "text": "Abu Dhabi: AED 13B for AI-native government. 97% utilization. Clean-sheet, no legacy.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-19T20:05:22.947Z",
+    "tumblrId": "814354658973958144"
   }
 ]

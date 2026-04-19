@@ -635,9 +635,11 @@
     "id": "ambient-intelligence",
     "scheduleDate": "2026-04-19",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/ambient_intelligence.png",
-    "text": "The best interface is no interface.\n\nWe went from desktop to pocket to wrist. Each step made interaction more immediate and less obtrusive. But all still require a conscious act. A tap, a word, a gesture.\n\nAmbient intelligence is the final step: eliminate the command itself.\n\nA kitchen that knows you returned from a run and suggests a hydrating smoothie. A meeting room that recognizes participants, pulls up project files, and starts transcribing when everyone sits down.\n\nThe design goal is not to create an engaging screen. It is to make the interface disappear entirely. The best ambient system is one you do not notice.\n\nThe smartphone era hijacks attention with notifications. Ambient intelligence filters the noise. Only what truly requires your input reaches you.\n\nPrivacy is the obvious challenge. A world that senses constantly is a world that collects constantly. Trust requires local processing, transparent control, and strong encryption.\n\nveda.ng/ambient-intelligence\n\nBefore no interface, there's a simpler one. The text field is replacing the dashboard: veda.ng/universal-text-ui"
+    "text": "The best interface is no interface.\n\nWe went from desktop to pocket to wrist. Each step made interaction more immediate and less obtrusive. But all still require a conscious act. A tap, a word, a gesture.\n\nAmbient intelligence is the final step: eliminate the command itself.\n\nA kitchen that knows you returned from a run and suggests a hydrating smoothie. A meeting room that recognizes participants, pulls up project files, and starts transcribing when everyone sits down.\n\nThe design goal is not to create an engaging screen. It is to make the interface disappear entirely. The best ambient system is one you do not notice.\n\nThe smartphone era hijacks attention with notifications. Ambient intelligence filters the noise. Only what truly requires your input reaches you.\n\nPrivacy is the obvious challenge. A world that senses constantly is a world that collects constantly. Trust requires local processing, transparent control, and strong encryption.\n\nveda.ng/ambient-intelligence\n\nBefore no interface, there's a simpler one. The text field is replacing the dashboard: veda.ng/universal-text-ui",
+    "postedAt": "2026-04-19T20:05:12.410Z",
+    "tweetId": "2045956902123700615"
   },
   {
     "id": "api-states",

@@ -604,8 +604,10 @@
     "id": "agentic-state-uae",
     "scheduleDate": "2026-04-20",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Abu Dhabi: AED 13 billion to become first AI-native government by 2027. 97% AI utilization. 108 HR services automated.\n\nNo legacy systems. No tech debt. Building government from scratch as if AI existed from day one.\n\nveda.ng/agentic-state"
+    "text": "Abu Dhabi: AED 13 billion to become first AI-native government by 2027. 97% AI utilization. 108 HR services automated.\n\nNo legacy systems. No tech debt. Building government from scratch as if AI existed from day one.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-19T20:05:21.566Z",
+    "fbPostId": "1785048661795414_1261966102780098"
   }
 ]

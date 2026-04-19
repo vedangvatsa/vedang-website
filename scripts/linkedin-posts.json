@@ -613,9 +613,11 @@
     "id": "ambient-intelligence",
     "scheduleDate": "2026-04-19",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/ambient_intelligence.png",
-    "text": "The best interface is no interface.\n\nDesktop to pocket to wrist. Each step more immediate, less obtrusive. But all require a conscious act.\n\nAmbient intelligence eliminates the command itself. A meeting room that recognizes participants and pulls up files when everyone sits down.\n\nThe design goal: make the interface disappear. The smartphone era hijacks attention. Ambient intelligence filters the noise.\n\nThe challenge is privacy. A world that senses constantly collects constantly. Trust requires local processing and transparent control.\n\nveda.ng/ambient-intelligence\n\nBefore no interface, there's a simpler one. The text field is replacing the dashboard: veda.ng/universal-text-ui"
+    "text": "The best interface is no interface.\n\nDesktop to pocket to wrist. Each step more immediate, less obtrusive. But all require a conscious act.\n\nAmbient intelligence eliminates the command itself. A meeting room that recognizes participants and pulls up files when everyone sits down.\n\nThe design goal: make the interface disappear. The smartphone era hijacks attention. Ambient intelligence filters the noise.\n\nThe challenge is privacy. A world that senses constantly collects constantly. Trust requires local processing and transparent control.\n\nveda.ng/ambient-intelligence\n\nBefore no interface, there's a simpler one. The text field is replacing the dashboard: veda.ng/universal-text-ui",
+    "postedAt": "2026-04-19T20:05:14.526Z",
+    "postId": "urn:li:share:7451722600398979072"
   },
   {
     "id": "agi-governance",
