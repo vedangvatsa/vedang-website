@@ -594,9 +594,11 @@
     "id": "stepwise-ai-gartner",
     "scheduleDate": "2026-04-19",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Gartner: 40% of agentic AI projects risk cancellation by 2027. Only 33% meet ROI targets. The tech works. The organizational readiness doesn't.\n\nStart with one task that pays for itself in 90 days. Then expand.\n\nveda.ng/stepwise-ai"
+    "text": "Gartner: 40% of agentic AI projects risk cancellation by 2027. Only 33% meet ROI targets. The tech works. The organizational readiness doesn't.\n\nStart with one task that pays for itself in 90 days. Then expand.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-04-19T05:48:39.902Z",
+    "fbPostId": "1785048661795414_1261478732828835"
   },
   {
     "id": "agentic-state-uae",

@@ -625,9 +625,11 @@
     "id": "ai-economy",
     "scheduleDate": "2026-04-19",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/ai_economy.png",
-    "text": "The entry ramp is narrowing.\n\nStanford payroll data covering millions of American workers: early-career workers aged 22-25 in AI-exposed occupations experienced a 16% relative decline in employment since late 2022. Senior workers in the same fields? Stable or growing.\n\nThis held even after excluding the tech sector and remote jobs. A February 2026 update showed the gap widening with no sign of reversal.\n\nSalesforce eliminated 4,000 customer support positions citing AI. Duolingo stopped using human contractors. Anthropic's CEO said nearly half of entry-level white-collar jobs could be replaced.\n\nThe question that matters most: whether economic gains from AI flow broadly or concentrate narrowly. Every previous technology eventually created broad prosperity. But the \"eventually\" ranged from one generation to three.\n\nThe difference with AI: it affects cognitive work. The communities affected are not regional towns. They are entry-level professionals in every major city.\n\nveda.ng/ai-economy\n\nThe companies that get AI deployment right start small. One boring task. Three-month payback. Then scale: veda.ng/stepwise-ai"
+    "text": "The entry ramp is narrowing.\n\nStanford payroll data covering millions of American workers: early-career workers aged 22-25 in AI-exposed occupations experienced a 16% relative decline in employment since late 2022. Senior workers in the same fields? Stable or growing.\n\nThis held even after excluding the tech sector and remote jobs. A February 2026 update showed the gap widening with no sign of reversal.\n\nSalesforce eliminated 4,000 customer support positions citing AI. Duolingo stopped using human contractors. Anthropic's CEO said nearly half of entry-level white-collar jobs could be replaced.\n\nThe question that matters most: whether economic gains from AI flow broadly or concentrate narrowly. Every previous technology eventually created broad prosperity. But the \"eventually\" ranged from one generation to three.\n\nThe difference with AI: it affects cognitive work. The communities affected are not regional towns. They are entry-level professionals in every major city.\n\nveda.ng/ai-economy\n\nThe companies that get AI deployment right start small. One boring task. Three-month payback. Then scale: veda.ng/stepwise-ai",
+    "postedAt": "2026-04-19T05:48:28.232Z",
+    "tweetId": "2045741297655505265"
   },
   {
     "id": "ambient-intelligence",

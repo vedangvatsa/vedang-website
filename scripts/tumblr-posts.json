@@ -886,13 +886,15 @@
     "id": "stepwise-ai-gartner",
     "scheduleDate": "2026-04-19",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
     "tags": [
       "AI",
       "enterprise"
     ],
-    "text": "40% of AI projects risk cancellation by 2027. Only 33% meet ROI. One task, 90 days, then expand.\n\nveda.ng/stepwise-ai"
+    "text": "40% of AI projects risk cancellation by 2027. Only 33% meet ROI. One task, 90 days, then expand.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-04-19T05:48:41.474Z",
+    "tumblrId": "814300760545329152"
   },
   {
     "id": "agentic-state-uae",

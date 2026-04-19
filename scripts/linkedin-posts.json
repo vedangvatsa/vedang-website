@@ -603,9 +603,11 @@
     "id": "ai-agent-economy",
     "scheduleDate": "2026-04-18",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/ai_agent_economy.png",
-    "text": "The corporation is dissolving.\n\nTraditional firms exist to minimize transaction costs. When AI agents negotiate and execute in milliseconds, those costs approach zero.\n\nA company becomes a core group of strategists overseeing a swarm of AI agents. The firm becomes a temporary nexus of agentic services, dissolving and reforming as needs change.\n\nThe web rebuilds around intention, not attention. Agents have objectives, not eyeballs. Structured data beats prose. Efficiency beats engagement.\n\nThe agent economy is coming. The question is not if, but how we choose to build it.\n\nveda.ng/ai-agent-economy\n\nThe hard part: getting there without blowing up. 70% of big-bang AI deployments fail. The sequencing matters: veda.ng/stepwise-ai"
+    "text": "The corporation is dissolving.\n\nTraditional firms exist to minimize transaction costs. When AI agents negotiate and execute in milliseconds, those costs approach zero.\n\nA company becomes a core group of strategists overseeing a swarm of AI agents. The firm becomes a temporary nexus of agentic services, dissolving and reforming as needs change.\n\nThe web rebuilds around intention, not attention. Agents have objectives, not eyeballs. Structured data beats prose. Efficiency beats engagement.\n\nThe agent economy is coming. The question is not if, but how we choose to build it.\n\nveda.ng/ai-agent-economy\n\nThe hard part: getting there without blowing up. 70% of big-bang AI deployments fail. The sequencing matters: veda.ng/stepwise-ai",
+    "postedAt": "2026-04-19T05:48:30.197Z",
+    "postId": "urn:li:share:7451506995175620608"
   },
   {
     "id": "ambient-intelligence",
