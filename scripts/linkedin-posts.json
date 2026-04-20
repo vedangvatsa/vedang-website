@@ -633,9 +633,11 @@
     "id": "api-states",
     "scheduleDate": "2026-04-20",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/api_states.png",
-    "text": "The nation-state as a platform.\n\nInstead of navigating offices, make an API call. Instead of convoluted tax filing, your software interfaces with the tax authority directly.\n\nCitizenship becomes cryptographic credentials. Prove your age without revealing your date of birth. Self-sovereign identity.\n\nStates compete on service quality. Inefficient APIs lose customers. A global marketplace for governance.\n\nEstonia already built this. E-Residency lets anyone access their services from anywhere.\n\nveda.ng/api-states\n\nEstonia already built this. 99% of services digital. Babies born get benefits automatically. No forms: veda.ng/agentic-state"
+    "text": "The nation-state as a platform.\n\nInstead of navigating offices, make an API call. Instead of convoluted tax filing, your software interfaces with the tax authority directly.\n\nCitizenship becomes cryptographic credentials. Prove your age without revealing your date of birth. Self-sovereign identity.\n\nStates compete on service quality. Inefficient APIs lose customers. A global marketplace for governance.\n\nEstonia already built this. E-Residency lets anyone access their services from anywhere.\n\nveda.ng/api-states\n\nEstonia already built this. 99% of services digital. Babies born get benefits automatically. No forms: veda.ng/agentic-state",
+    "postedAt": "2026-04-20T20:24:18.672Z",
+    "postId": "urn:li:share:7452089787148054528"
   },
   {
     "id": "artificial-intuition",
