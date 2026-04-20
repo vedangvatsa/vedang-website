@@ -645,9 +645,11 @@
     "id": "api-states",
     "scheduleDate": "2026-04-20",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/api_states.png",
-    "text": "The nation-state as a platform.\n\nInstead of navigating government websites and offices to register a business, you make a single authenticated API call. Instead of convoluted tax filing, your software interfaces directly with the tax authority in real time.\n\nGovernance as a service. Public services become a library of functions. The state becomes a foundational layer, like AWS for civic life.\n\nCitizenship becomes a set of cryptographic credentials in a digital wallet. To prove your age, you reveal only that you are over 18. No date of birth. No other data. Self-sovereign identity.\n\nStates would compete on service quality. A state with an inefficient business registration API loses customers to one with a better offering. A global marketplace for governance.\n\nEstonia already built this. Their e-Residency program lets anyone become a digital resident and access their services from anywhere.\n\nveda.ng/api-states\n\nEstonia already built this. 99% of services digital. Babies born get benefits automatically. No forms: veda.ng/agentic-state"
+    "text": "The nation-state as a platform.\n\nInstead of navigating government websites and offices to register a business, you make a single authenticated API call. Instead of convoluted tax filing, your software interfaces directly with the tax authority in real time.\n\nGovernance as a service. Public services become a library of functions. The state becomes a foundational layer, like AWS for civic life.\n\nCitizenship becomes a set of cryptographic credentials in a digital wallet. To prove your age, you reveal only that you are over 18. No date of birth. No other data. Self-sovereign identity.\n\nStates would compete on service quality. A state with an inefficient business registration API loses customers to one with a better offering. A global marketplace for governance.\n\nEstonia already built this. Their e-Residency program lets anyone become a digital resident and access their services from anywhere.\n\nveda.ng/api-states\n\nEstonia already built this. 99% of services digital. Babies born get benefits automatically. No forms: veda.ng/agentic-state",
+    "postedAt": "2026-04-20T06:02:40.261Z",
+    "tweetId": "2046107258862408013"
   },
   {
     "id": "artificial-intuition",

@@ -623,9 +623,11 @@
     "id": "agi-governance",
     "scheduleDate": "2026-04-19",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agi_governance.png",
-    "text": "How do you govern something smarter than you?\n\nEvery governance system assumes humans are the smartest actors. AGI may end that 10,000-year assumption.\n\nAn AGI in financial markets executes trades on microsecond timescales. Human oversight becomes impossible. You need AI monitoring AI.\n\nThose who control AGI systems wield unprecedented power. An AGI state could preempt dissent before it forms.\n\nWe are preparing to govern gods. And we have very little time to figure out how.\n\nveda.ng/agi-governance\n\nSome governments aren't waiting. Estonia, Singapore, and the UAE already run AI at production scale across public services: veda.ng/agentic-state"
+    "text": "How do you govern something smarter than you?\n\nEvery governance system assumes humans are the smartest actors. AGI may end that 10,000-year assumption.\n\nAn AGI in financial markets executes trades on microsecond timescales. Human oversight becomes impossible. You need AI monitoring AI.\n\nThose who control AGI systems wield unprecedented power. An AGI state could preempt dissent before it forms.\n\nWe are preparing to govern gods. And we have very little time to figure out how.\n\nveda.ng/agi-governance\n\nSome governments aren't waiting. Estonia, Singapore, and the UAE already run AI at production scale across public services: veda.ng/agentic-state",
+    "postedAt": "2026-04-20T06:02:42.106Z",
+    "postId": "urn:li:share:7451872956269617152"
   },
   {
     "id": "api-states",
