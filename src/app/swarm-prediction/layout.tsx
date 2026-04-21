@@ -25,20 +25,11 @@ export const metadata: Metadata = {
     url: '/swarm-prediction',
     type: 'website',
     siteName: 'Vedang Vatsa',
-    images: [
-      {
-        url: '/images/swarm/swarm.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Swarm Intelligence Prediction Engine',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Swarm Intelligence Prediction',
     description: 'Multi-agent AI debate engine that forecasts outcomes from any data source.',
-    images: ['/images/swarm/swarm.webp'],
   },
 };
 

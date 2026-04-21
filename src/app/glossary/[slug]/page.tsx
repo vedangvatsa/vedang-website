@@ -53,20 +53,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: truncatedDescription,
       url: `/glossary/${term.slug}`,
       type: 'article',
-      images: [
-        {
-          url: `/images/glossary/${slug}.svg`,
-          width: 800,
-          height: 400,
-          alt: `${term.term} infographic`,
-        },
-      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${term.term} | Glossary`,
       description: truncatedDescription,
-      images: [`/images/glossary/${slug}.svg`],
     },
   };
 }
