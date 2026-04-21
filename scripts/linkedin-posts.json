@@ -703,9 +703,11 @@
     "id": "universal-text-ui-106apps",
     "scheduleDate": "2026-04-14",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "The average company runs 106 SaaS apps. Employees switch between them 1,200 times per day. Only 39% of work time is deep focus. The rest is navigating between dashboards.\n\n40% of users in a 2025 enterprise survey said their dashboards don't support meaningful decisions. Many went back to spreadsheets.\n\n93% of business leaders said they'd perform better if they could ask data questions in plain English.\n\nThat's not a feature request. That's a structural bottleneck being reported by the people trapped inside it.\n\nveda.ng/universal-text-ui"
+    "text": "The average company runs 106 SaaS apps. Employees switch between them 1,200 times per day. Only 39% of work time is deep focus. The rest is navigating between dashboards.\n\n40% of users in a 2025 enterprise survey said their dashboards don't support meaningful decisions. Many went back to spreadsheets.\n\n93% of business leaders said they'd perform better if they could ask data questions in plain English.\n\nThat's not a feature request. That's a structural bottleneck being reported by the people trapped inside it.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-04-21T20:29:14.752Z",
+    "postId": "urn:li:share:7452453416745738240"
   },
   {
     "id": "stepwise-ai-marketing",

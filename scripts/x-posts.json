@@ -725,9 +725,11 @@
     "id": "universal-text-ui-106apps",
     "scheduleDate": "2026-04-14",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "106 SaaS apps per company. 1,200 daily app switches per employee. 39% of time in deep focus.\n\n93% of business leaders say they'd perform better asking data questions in plain English.\n\nThat's not a preference. It's a structural bottleneck.\n\nveda.ng/universal-text-ui"
+    "text": "106 SaaS apps per company. 1,200 daily app switches per employee. 39% of time in deep focus.\n\n93% of business leaders say they'd perform better asking data questions in plain English.\n\nThat's not a preference. It's a structural bottleneck.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-04-21T20:29:12.375Z",
+    "tweetId": "2046687717610643933"
   },
   {
     "id": "stepwise-ai-marketing",
