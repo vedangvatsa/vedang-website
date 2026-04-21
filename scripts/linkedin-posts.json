@@ -643,9 +643,11 @@
     "id": "artificial-intuition",
     "scheduleDate": "2026-04-20",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/artificial_intuition.png",
-    "text": "Logic finds answers. Intuition finds questions.\n\nAI has focused on replicating deliberate reasoning. Systems that excel at logic but struggle with ambiguity and creative leaps.\n\nThe next frontier: synthetic intuition. Not consciousness, but holistic pattern recognition. The ability to find novel connections between distant concepts.\n\nA rational approach analyzes market data incrementally. An intuitive approach connects unrelated trends with unmet needs. Breakthroughs.\n\nveda.ng/artificial-intuition"
+    "text": "Logic finds answers. Intuition finds questions.\n\nAI has focused on replicating deliberate reasoning. Systems that excel at logic but struggle with ambiguity and creative leaps.\n\nThe next frontier: synthetic intuition. Not consciousness, but holistic pattern recognition. The ability to find novel connections between distant concepts.\n\nA rational approach analyzes market data incrementally. An intuitive approach connects unrelated trends with unmet needs. Breakthroughs.\n\nveda.ng/artificial-intuition",
+    "postedAt": "2026-04-21T05:51:08.980Z",
+    "postId": "urn:li:share:7452232436807008256"
   },
   {
     "id": "stepwise-ai",

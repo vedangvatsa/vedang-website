@@ -665,9 +665,11 @@
     "id": "asi-timeline",
     "scheduleDate": "2026-04-20",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/asi_timeline.png",
-    "text": "When does superintelligence arrive? The honest answer: nobody knows.\n\nMetaculus estimates 50% chance of AGI by 2040-2050. But the distribution is huge. Some predict 2030. Some predict 2100.\n\nMoore's Law is slowing. Transistors can only get so small. But progress now comes from architecture, not hardware. Better algorithms. Better training methods.\n\nWe are running out of high-quality human data. Solutions exist: synthetic data, video modalities, reinforcement learning. Each has tradeoffs but none is a dead end.\n\nThe biggest jumps came from surprises. Transformers in 2017. Scaling laws in 2020. Nobody predicted them exactly.\n\nIf the scaling hypothesis is true, superintelligence is inevitable. If false, we are missing something fundamental. Everything hinges on which is true.\n\nThe uncertainty is not a reason for complacency. It is a reason for urgency.\n\nveda.ng/asi-timeline"
+    "text": "When does superintelligence arrive? The honest answer: nobody knows.\n\nMetaculus estimates 50% chance of AGI by 2040-2050. But the distribution is huge. Some predict 2030. Some predict 2100.\n\nMoore's Law is slowing. Transistors can only get so small. But progress now comes from architecture, not hardware. Better algorithms. Better training methods.\n\nWe are running out of high-quality human data. Solutions exist: synthetic data, video modalities, reinforcement learning. Each has tradeoffs but none is a dead end.\n\nThe biggest jumps came from surprises. Transformers in 2017. Scaling laws in 2020. Nobody predicted them exactly.\n\nIf the scaling hypothesis is true, superintelligence is inevitable. If false, we are missing something fundamental. Everything hinges on which is true.\n\nThe uncertainty is not a reason for complacency. It is a reason for urgency.\n\nveda.ng/asi-timeline",
+    "postedAt": "2026-04-21T05:51:06.171Z",
+    "tweetId": "2046466735566385431"
   },
   {
     "id": "stepwise-ai",
