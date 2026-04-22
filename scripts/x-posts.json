@@ -735,9 +735,11 @@
     "id": "stepwise-ai-marketing",
     "scheduleDate": "2026-04-15",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Three-person agency. Six hours per person every Friday compiling client reports from 10+ data sources.\n\nRouted analytics into an LLM. Twenty hours freed weekly. Client load: 30 → 50 campaigns. Zero hires.\n\nAI didn't replace anyone. It removed a bottleneck.\n\nveda.ng/stepwise-ai"
+    "text": "Three-person agency. Six hours per person every Friday compiling client reports from 10+ data sources.\n\nRouted analytics into an LLM. Twenty hours freed weekly. Client load: 30 → 50 campaigns. Zero hires.\n\nAI didn't replace anyone. It removed a bottleneck.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-04-22T05:40:34.642Z",
+    "tweetId": "2046826474343223446"
   },
   {
     "id": "agentic-state-singapore",

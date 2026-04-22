@@ -713,9 +713,11 @@
     "id": "stepwise-ai-marketing",
     "scheduleDate": "2026-04-15",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "A three-person ad agency was at capacity. Compiling weekly performance reports across Google Analytics, six social platforms, and three ad networks took six hours per person every Friday.\n\nThey routed raw analytics into an LLM via API. The model drafted client summaries automatically.\n\nTwenty hours per week freed. Client load went from 30 campaigns to 50. A 50% capacity increase. Zero new hires.\n\nAI didn't replace anyone. It removed the bottleneck that was stopping three people from doing the work of five.\n\nveda.ng/stepwise-ai"
+    "text": "A three-person ad agency was at capacity. Compiling weekly performance reports across Google Analytics, six social platforms, and three ad networks took six hours per person every Friday.\n\nThey routed raw analytics into an LLM via API. The model drafted client summaries automatically.\n\nTwenty hours per week freed. Client load went from 30 campaigns to 50. A 50% capacity increase. Zero new hires.\n\nAI didn't replace anyone. It removed the bottleneck that was stopping three people from doing the work of five.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-04-22T05:40:36.776Z",
+    "postId": "urn:li:share:7452592173033627648"
   },
   {
     "id": "agentic-state-singapore",
