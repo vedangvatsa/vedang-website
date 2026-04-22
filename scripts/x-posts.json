@@ -745,9 +745,11 @@
     "id": "agentic-state-singapore",
     "scheduleDate": "2026-04-16",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Singapore's government AI chatbot: 50M citizen queries handled. AI call transcription: 72% less after-call work.\n\n100,000 officers using Pair, saving 50 min per task.\n\n2026 budget: \"scaled deployment at national speed.\"\n\nMost countries are still debating whether to start a pilot.\n\nveda.ng/agentic-state"
+    "text": "Singapore's government AI chatbot: 50M citizen queries handled. AI call transcription: 72% less after-call work.\n\n100,000 officers using Pair, saving 50 min per task.\n\n2026 budget: \"scaled deployment at national speed.\"\n\nMost countries are still debating whether to start a pilot.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-22T20:32:53.486Z",
+    "tweetId": "2047051032719470638"
   },
   {
     "id": "agentic-state-xroad",
