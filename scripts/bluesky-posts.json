@@ -363,17 +363,19 @@
     "id": "ai-electricity-bottleneck",
     "scheduleDate": "2026-04-08",
     "scheduleTime": "17:00",
-    "posted": false,
-    "text": "NVIDIA doubled its AI revenue forecast from $500B to $1T.\n\nAt the same keynote, they pitched their new chip on throughput per megawatt. Not speed. Not power.\n\nUS datacenter pipeline hit 241 GW. Up 159% in a year. Only a third is active. The grid cannot keep up.\n\nAI may be hitting an electricity bottleneck.",
+    "posted": true,
+    "text": "NVIDIA doubled AI revenue forecasts to T.\n\nThey pitched the new chip on throughput per megawatt. Not speed or power.\n\nUS datacenter pipeline hit 241 GW. Up 159% in a year. The grid cannot keep up.\n\nAI may be hitting an electricity bottleneck.",
     "image": "scripts/thread-assets/ai_electricity.png",
-    "error": "Post failed: 400 {\"error\":\"InvalidRequest\",\"message\":\"Invalid app.bsky.feed.post record: grapheme too big (maximum 300, got 307) at $.record.text\"}"
+    "error": "Post failed: 400 {\"error\":\"InvalidRequest\",\"message\":\"Invalid app.bsky.feed.post record: grapheme too big (maximum 300, got 307) at $.record.text\"}",
+    "postedAt": "2026-04-22T01:15:11.264Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mk2d3px3qi2n"
   },
   {
     "id": "hustle-culture",
     "scheduleDate": "2026-04-09",
     "scheduleTime": "01:00",
     "posted": false,
-    "text": "After 55 hours per week, productivity drops to nearly zero.\n\nYou are not producing more. You are just present longer.\n\nChronic stress shrinks the hippocampus. The part of your brain for memory and learning physically gets smaller.\n\nHustle culture sells sacrifice as strategy. The biological cost is real.",
+    "text": "After 55 hours per week, productivity drops to zero.\n\nYou aren't producing more. You are just present longer.\n\nChronic stress shrinks the hippocampus. The part of the brain for memory physically gets smaller.\n\nHustle culture sells sacrifice as strategy. The biological cost is real.",
     "image": "scripts/thread-assets/hustle_culture.png",
     "error": "Post failed: 400 {\"error\":\"InvalidRequest\",\"message\":\"Invalid app.bsky.feed.post record: grapheme too big (maximum 300, got 304) at $.record.text\"}"
   },
@@ -512,7 +514,7 @@
     "scheduleDate": "2026-04-17",
     "scheduleTime": "17:00",
     "posted": false,
-    "text": "How do you govern something smarter than you?\n\nEvery governance system assumes humans are the smartest actors. AGI may end that assumption.\n\nveda.ng/agi-governance\n\nSome governments aren't waiting. Estonia, Singapore, and the UAE already run AI at production scale across public services: veda.ng/agentic-state",
+    "text": "How do you govern something smarter than you?\n\nGovernance assumes humans are the smartest actors. AGI may end that.\n\nveda.ng/agi-governance\n\nSome nations aren't waiting. Estonia, Singapore & the UAE run AI at scale across public services: veda.ng/agentic-state",
     "image": "scripts/thread-assets/agi_governance.png"
   },
   {
@@ -536,7 +538,7 @@
     "scheduleDate": "2026-04-18",
     "scheduleTime": "17:00",
     "posted": false,
-    "text": "Your next customer is an algorithm.\n\nAI agents search stores, compare prices, complete checkout. You describe what you want. The machine buys it.\n\nveda.ng/agentic-commerce\n\nThe interface layer is changing too — dashboards are giving way to text fields that call APIs directly: veda.ng/universal-text-ui",
+    "text": "Your next customer is an algorithm.\n\nAI agents search, compare, and checkout. You describe what you want. The machine buys it.\n\nveda.ng/agentic-commerce\n\nThe interface is changing too — dashboards give way to text fields calling APIs directly: veda.ng/universal-text-ui",
     "image": "scripts/thread-assets/agentic_commerce.png"
   },
   {
@@ -560,7 +562,7 @@
     "scheduleDate": "2026-04-19",
     "scheduleTime": "17:00",
     "posted": false,
-    "text": "The corporation is dissolving.\n\nWhen transaction costs approach zero, the firm stops making sense. AI agents dissolve the hierarchy into fluid networks.\n\nveda.ng/ai-agent-economy\n\nThe hard part: getting there without blowing up. 70% of big-bang AI deployments fail. The sequencing matters: veda.ng/stepwise-ai",
+    "text": "The corporation is dissolving.\n\nWhen transaction costs hit zero, the firm stops making sense. AI agents dissolve hierarchies into fluid networks.\n\nveda.ng/ai-agent-economy\n\n70% of big-bang AI deployments fail. The sequencing matters: veda.ng/stepwise-ai",
     "image": "scripts/thread-assets/ai_agent_economy.png"
   },
   {
