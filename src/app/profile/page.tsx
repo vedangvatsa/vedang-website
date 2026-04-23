@@ -342,7 +342,7 @@ export default function ProfilePage() {
                         </div>
                         <div>
                             <h4 className="font-semibold text-base">Health Protocol Extraction at Scale</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Downloaded transcripts from 1,200+ Huberman Lab and Bryan Johnson videos, then ran each one through AI running locally on my machine to pull out every actionable health recommendation. Result: 6,300+ protocols in a searchable, categorized database.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Downloaded transcripts from 1,200+ Huberman Lab, Bryan Johnson, and Peter Attia videos, then ran each one through AI running locally on my machine to pull out every actionable health recommendation. Result: 6,300+ protocols in a searchable, categorized database.</p>
                         </div>
                         <div>
                             <h4 className="font-semibold text-base">47 Essays, Auto-Distributed</h4>
