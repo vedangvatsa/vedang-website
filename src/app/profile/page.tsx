@@ -334,7 +334,7 @@ export default function ProfilePage() {
                         </div>
                         <div>
                             <h4 className="font-semibold text-base">Autonomous Social Distribution</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Built a system that auto-publishes content to 7 platforms (LinkedIn, X, Bluesky, Facebook, Tumblr, Dev.to, Hashnode) three times a day without any manual work. 359 posts published so far. It handles scheduling, image uploads, and platform-specific formatting on its own.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Built a system that auto-publishes content to 7 platforms (LinkedIn, X, Bluesky, Facebook, Tumblr, Dev.to, Hashnode) three times a day without any manual work. Deployed across 3 projects (veda.ng, CVin.Bio, hashtagweb3.com). It handles scheduling, image uploads, and platform-specific formatting on its own.</p>
                         </div>
                         <div>
                             <h4 className="font-semibold text-base">Programmatic Video Factory</h4>
