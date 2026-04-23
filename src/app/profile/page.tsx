@@ -326,27 +326,27 @@ export default function ProfilePage() {
                     <CardContent className="p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div>
                             <h4 className="font-semibold text-base">Swarm Intelligence Engine</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Multi-agent AI debate tool where 10-100 LLM-powered agents run structured rounds to produce consensus forecasts with confidence bounds. Supports 8 providers via BYOK.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Built a full-stack prediction tool that spawns 10-100 AI agents across 8 LLM providers (Anthropic, OpenAI, Gemini, Groq, Mistral, Together, OpenRouter, DeepSeek), runs multi-round structured debates, and outputs consensus forecasts with confidence bounds and force-directed knowledge graphs. Shipped live at veda.ng/swarm-prediction.</p>
                         </div>
                         <div>
-                            <h4 className="font-semibold text-base">7-Platform Social Autopilot</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">CI/CD pipeline running 3x daily via GitHub Actions, auto-posting to LinkedIn, X, Bluesky, Facebook, Tumblr, Dev.to, and Hashnode. 350+ posts published hands-off.</p>
+                            <h4 className="font-semibold text-base">Autonomous Social Distribution</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Engineered a zero-touch CI/CD pipeline (GitHub Actions) that auto-publishes 350+ posts across 7 platforms (LinkedIn, X, Bluesky, Facebook, Tumblr, Dev.to, Hashnode) on a 3x/day cron schedule with per-platform rate limiting, image uploads, and link facet detection.</p>
                         </div>
                         <div>
-                            <h4 className="font-semibold text-base">AI Video Generation</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Programmatic short-form video pipeline: script generation via LLM, ElevenLabs voiceover, caption syncing, and batch rendering for YouTube Shorts and LinkedIn.</p>
+                            <h4 className="font-semibold text-base">Programmatic Video Factory</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">End-to-end pipeline: LLM script generation, ElevenLabs TTS, GSAP motion graphics (HyperFrames), automated caption syncing, and FFmpeg compositing. Batch-rendered 25+ data-visualization videos (bar chart races, kinetic typography) for YouTube Shorts and LinkedIn.</p>
                         </div>
                         <div>
-                            <h4 className="font-semibold text-base">Health Protocol Extraction</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Processed 1,200+ podcast transcripts (Huberman Lab, Bryan Johnson) through local LLMs to extract and structure actionable health protocols into a searchable database.</p>
+                            <h4 className="font-semibold text-base">Health Protocol Extraction at Scale</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Scraped and downloaded transcripts from 1,200+ Huberman Lab and Bryan Johnson videos using parallelized yt-dlp workers, then ran batch LLM inference (Ollama, local models) to extract thousands of actionable health protocols into a structured, searchable database.</p>
                         </div>
                         <div>
-                            <h4 className="font-semibold text-base">CVin.Bio</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">AI-powered web app that parses uploaded CVs and generates hosted profile pages with dynamic OpenGraph previews. Built on Next.js and Supabase.</p>
+                            <h4 className="font-semibold text-base">CVin.Bio (AI Resume-to-Website)</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Full-stack Next.js + Supabase app. Users upload a PDF resume; the backend parses it via AI-driven extraction, structures the data into editable profile pages, and auto-generates dynamic 1200x630 OpenGraph previews via Edge Runtime (Satori). Row-level security with GoTrue Auth.</p>
                         </div>
                         <div>
-                            <h4 className="font-semibold text-base">Social Listening &amp; SEO</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Multi-platform social listener (Twitter, Reddit, YouTube, Google News) with sentiment analysis. Automated SEO audits, IndexNow submission, and dynamic OG image generation for 47+ essays.</p>
+                            <h4 className="font-semibold text-base">Multi-Platform Social Listener</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Python-based monitoring engine tracking brand mentions across Twitter, Reddit, YouTube, Google News, and Facebook in real time. Includes sentiment analysis, topic classification, engagement scoring, and outputs to Slack alerts and Elasticsearch for downstream analytics.</p>
                         </div>
                     </CardContent>
                 </Card>
