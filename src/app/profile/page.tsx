@@ -342,8 +342,8 @@ export default function ProfilePage() {
                             <p className="text-muted-foreground mt-0.5 text-sm">6,300+ protocols extracted from 1,200+ Huberman Lab, Bryan Johnson, and Peter Attia videos using local AI inference.</p>
                         </div>
                         <div>
-                            <h4 className="font-semibold text-base">47 Essays, Auto-Distributed</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">47 long-form AI/Web3 essays, auto-repurposed and cross-published to 4 platforms. 80 million yearly organic LinkedIn views.</p>
+                            <h4 className="font-semibold text-base">47 Original Essays</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Authored 47 long-form essays and research reports on AI, Web3, and emerging tech. Built an automated pipeline to cross-publish across 4 platforms.</p>
                         </div>
                     </CardContent>
                 </Card>
