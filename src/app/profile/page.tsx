@@ -248,16 +248,12 @@ export default function ProfilePage() {
                 </h2>
                  <Card>
                     <CardContent className="p-4">
-                        <h3 className="font-semibold text-base mb-3">Recent Research (2024-2026)</h3>
-                        <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground mb-6">
+                        <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground columns-1 md:columns-2 lg:columns-3 md:gap-6">
                             <li><Link href="https://dx.doi.org/10.2139/ssrn.5660270" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Device-to-Device Economics and AI Agent Transactions</Link>; SSRN</li>
                             <li><Link href="https://dx.doi.org/10.2139/ssrn.5325570" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Stablecoin Growth and Market Dynamics</Link>; SSRN</li>
                             <li><Link href="https://dx.doi.org/10.2139/ssrn.5329957" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Stablecoins in the Modern Financial System</Link>; SSRN</li>
                             <li><Link href="https://dx.doi.org/10.2139/ssrn.5386707" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Global Stablecoin Regulations and Policies</Link>; SSRN</li>
                             <li><Link href="https://dx.doi.org/10.2139/ssrn.5357534" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Blockchain Ecosystem Evolution</Link>; SSRN</li>
-                        </ul>
-                        <h3 className="font-semibold text-base mb-3">Earlier Publications</h3>
-                        <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground columns-1 md:columns-2 lg:columns-3 md:gap-4">
                             <li><Link href="https://ieeexplore.ieee.org/document/9515004" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Estonia&apos;s e-governance and public service delivery solution</Link>; IEEE</li>
                             <li><Link href="https://ieeexplore.ieee.org/document/9514979" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Analysis of Global Research Proceedings in Artificial Intelligence</Link>; IEEE</li>
                             <li><Link href="https://dx.doi.org/10.21474/IJAR01/11418" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Identification of Algorithmic Bias Through Policy Instruments</Link>; IJAR</li>
