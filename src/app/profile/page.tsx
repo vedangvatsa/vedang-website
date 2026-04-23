@@ -326,27 +326,27 @@ export default function ProfilePage() {
                     <CardContent className="p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div>
                             <h4 className="font-semibold text-base">Programmatic SEO (hashtagweb3.com)</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Programmatically generated 1,000+ SEO-optimized pages for the Web3 jobs platform, growing Google Search impressions from near-zero to 1 million in 3 months. Automated job ingestion, company pages, and talent reports from Supabase with hourly revalidation.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Generated 1,000+ job listing and company pages automatically from a database, without writing a single page by hand. Grew Google Search impressions from near-zero to 1 million in 3 months. Pages update themselves every hour with fresh data.</p>
                         </div>
                         <div>
                             <h4 className="font-semibold text-base">Swarm Intelligence Engine</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Built and shipped a full-stack prediction tool (veda.ng/swarm-prediction) that spawns 10-100 AI agents across 8 LLM providers, runs multi-round debates, and outputs consensus forecasts with confidence bounds and force-directed knowledge graphs.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Built a prediction tool where you upload any document and AI agents debate each other to forecast outcomes. 10 to 100 agents argue across multiple rounds, then produce a consensus report with confidence scores. Works with 8 different AI providers. Live at veda.ng/swarm-prediction.</p>
                         </div>
                         <div>
                             <h4 className="font-semibold text-base">Autonomous Social Distribution</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">359 posts auto-published across 7 platforms (LinkedIn, X, Bluesky, Facebook, Tumblr, Dev.to, Hashnode) via a zero-touch GitHub Actions pipeline running 3x/day. Per-platform rate limiting, image uploads, and link facet detection. Zero manual intervention since launch.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Built a system that auto-publishes content to 7 platforms (LinkedIn, X, Bluesky, Facebook, Tumblr, Dev.to, Hashnode) three times a day without any manual work. 359 posts published so far. It handles scheduling, image uploads, and platform-specific formatting on its own.</p>
                         </div>
                         <div>
                             <h4 className="font-semibold text-base">Programmatic Video Factory</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">100+ short-form videos rendered end-to-end: LLM script generation, ElevenLabs TTS, GSAP motion graphics via HyperFrames, automated caption syncing, and FFmpeg compositing. Output used for YouTube Shorts and LinkedIn content with data-visualization formats (bar chart races, kinetic typography).</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">100+ short-form videos produced automatically: AI writes the script, generates the voiceover, creates animated data visualizations (bar chart races, kinetic typography), syncs captions, and renders the final video. Used for YouTube Shorts and LinkedIn.</p>
                         </div>
                         <div>
                             <h4 className="font-semibold text-base">Health Protocol Extraction at Scale</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">6,300+ actionable health protocols extracted from 1,200+ Huberman Lab and Bryan Johnson video transcripts. Parallelized scraping via yt-dlp, batch LLM inference on local models (Ollama), and structured output into a searchable, categorized database.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Downloaded transcripts from 1,200+ Huberman Lab and Bryan Johnson videos, then ran each one through AI running locally on my machine to pull out every actionable health recommendation. Result: 6,300+ protocols in a searchable, categorized database.</p>
                         </div>
                         <div>
                             <h4 className="font-semibold text-base">47 Essays, Auto-Distributed</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Wrote 47 long-form research essays on AI and Web3. Each essay is auto-repurposed into platform-specific posts, cross-published to Paragraph, Telegraph, Dev.to, and Hashnode, and gets a dynamically generated OG image via Next.js Edge Runtime (Satori). 80 million yearly organic LinkedIn views.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Wrote 47 long-form research essays on AI and Web3. Each one is automatically repurposed into platform-specific posts and cross-published to Paragraph, Telegraph, Dev.to, and Hashnode. Every essay gets its own auto-generated social preview image. 80 million yearly organic LinkedIn views.</p>
                         </div>
                     </CardContent>
                 </Card>
