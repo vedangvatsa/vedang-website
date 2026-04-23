@@ -16,6 +16,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AsSeenIn } from '@/components/as-seen-in';
+import { TwitterEmbed } from '@/components/twitter-embed';
 import { Button } from '@/components/ui/button';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
@@ -403,6 +404,15 @@ export default function ProfilePage() {
                         </CardContent>
                     </Card>
                  </div>
+            </section>
+
+            <section id="parliament" className="mt-6">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+                    Invited at the Parliament of India
+                </h2>
+                <div className="max-w-sm">
+                    <TwitterEmbed tweetId="1996239975906676795" />
+                </div>
             </section>
           </div>
         </div>
