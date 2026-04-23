@@ -120,7 +120,7 @@ export default function ProfilePage() {
                   </CardHeader>
                   <CardContent className="p-4">
                     <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                        <li>Served as Head of Marketing and Growth Lead for several Web3 companies.</li>
+                        <li>Served as Head of Marketing and Growth Lead for The Hashgraph Group (Hedera), Routespring, Network State, and other Web3 and AI companies.</li>
                         <li>Built a 100k+ member networking community for Web3, a social-messaging-first forum, and one of the largest channels for Web3 jobs - 55 million post views in the first year.</li>
                         <li>Featured among the top 3 Web3 products of the week by Smoothie and supported by Microsoft for Startups.</li>
                         <li>Hosted weekly Twitter Spaces with high-profile guests (including a band member of Pink Floyd, partners of Big4 firms, the father of digital twin technology, and the CSO of Microsoft), attracting 20-30k live attendees.</li>
@@ -313,6 +313,40 @@ export default function ProfilePage() {
                          <div>
                             <h4 className="font-semibold text-base">DELL</h4>
                             <p className="text-muted-foreground mt-0.5 text-sm">Intranet portal for micro project management via team update submission.</p>
+                        </div>
+                    </CardContent>
+                </Card>
+            </section>
+
+            <section id="ai-automation">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+                    AI &amp; Automation
+                </h2>
+                 <Card>
+                    <CardContent className="p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div>
+                            <h4 className="font-semibold text-base">Swarm Intelligence Engine</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Multi-agent AI debate tool where 10-100 LLM-powered agents run structured rounds to produce consensus forecasts with confidence bounds. Supports 8 providers via BYOK.</p>
+                        </div>
+                        <div>
+                            <h4 className="font-semibold text-base">7-Platform Social Autopilot</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">CI/CD pipeline running 3x daily via GitHub Actions, auto-posting to LinkedIn, X, Bluesky, Facebook, Tumblr, Dev.to, and Hashnode. 350+ posts published hands-off.</p>
+                        </div>
+                        <div>
+                            <h4 className="font-semibold text-base">AI Video Generation</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Programmatic short-form video pipeline: script generation via LLM, ElevenLabs voiceover, caption syncing, and batch rendering for YouTube Shorts and LinkedIn.</p>
+                        </div>
+                        <div>
+                            <h4 className="font-semibold text-base">Health Protocol Extraction</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Processed 1,200+ podcast transcripts (Huberman Lab, Bryan Johnson) through local LLMs to extract and structure actionable health protocols into a searchable database.</p>
+                        </div>
+                        <div>
+                            <h4 className="font-semibold text-base">CVin.Bio</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">AI-powered web app that parses uploaded CVs and generates hosted profile pages with dynamic OpenGraph previews. Built on Next.js and Supabase.</p>
+                        </div>
+                        <div>
+                            <h4 className="font-semibold text-base">Social Listening &amp; SEO</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Multi-platform social listener (Twitter, Reddit, YouTube, Google News) with sentiment analysis. Automated SEO audits, IndexNow submission, and dynamic OG image generation for 47+ essays.</p>
                         </div>
                     </CardContent>
                 </Card>
