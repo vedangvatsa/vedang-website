@@ -445,9 +445,11 @@
     "id": "digital-monasticism",
     "scheduleDate": "2026-04-13",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Silence became the new luxury.\n\nEvery era of tech excess creates a counter-movement. Roman complexity made monks. Industrial smoke made Romantics.\n\nNow we retreat to the quiet spaces in our own minds.\n\nveda.ng/digital-monasticism",
-    "image": "scripts/thread-assets/digital_monasticism.png"
+    "image": "scripts/thread-assets/digital_monasticism.png",
+    "postedAt": "2026-04-23T20:35:20.829Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mk6uf6e5qa2h"
   },
   {
     "id": "god-protocol",

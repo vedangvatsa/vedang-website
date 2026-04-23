@@ -753,9 +753,11 @@
     "id": "stepwise-ai-gartner",
     "scheduleDate": "2026-04-19",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Gartner warns 40% of agentic AI projects risk cancellation by 2027. Not because the technology fails. Because companies can't demonstrate ROI, establish governance, or build monitoring frameworks fast enough.\n\nOnly 33% of AI initiatives currently meet their ROI targets. 74% of Salesforce customers struggle with CX improvement from AI. Only 21% feel confident in their AI governance models.\n\nThe technology works. The organizational readiness doesn't.\n\nThe fix: don't start with ambition. Start with one task that pays for itself in 90 days. Then expand.\n\nveda.ng/stepwise-ai"
+    "text": "Gartner warns 40% of agentic AI projects risk cancellation by 2027. Not because the technology fails. Because companies can't demonstrate ROI, establish governance, or build monitoring frameworks fast enough.\n\nOnly 33% of AI initiatives currently meet their ROI targets. 74% of Salesforce customers struggle with CX improvement from AI. Only 21% feel confident in their AI governance models.\n\nThe technology works. The organizational readiness doesn't.\n\nThe fix: don't start with ambition. Start with one task that pays for itself in 90 days. Then expand.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-04-23T20:35:18.408Z",
+    "postId": "urn:li:share:7453179718016835584"
   },
   {
     "id": "agentic-state-uae",
