@@ -435,9 +435,11 @@
     "id": "simulation-hypothesis",
     "scheduleDate": "2026-04-13",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Physics looks like optimization.\n\nParticles have no properties until measured. Like a game that only renders what you look at.\n\nIf civilizations can run ancestor simulations and do, simulated beings outnumber real ones.\n\nveda.ng/simulation-hypothesis",
-    "image": "scripts/thread-assets/simulation.png"
+    "image": "scripts/thread-assets/simulation.png",
+    "postedAt": "2026-04-23T05:53:01.569Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mk5d3hlotg2b"
   },
   {
     "id": "digital-monasticism",

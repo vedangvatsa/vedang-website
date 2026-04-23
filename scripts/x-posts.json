@@ -765,9 +765,11 @@
     "id": "universal-text-ui-paradigms",
     "scheduleDate": "2026-04-17",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "CLI → GUI → NLI. Three paradigms. Each cut adaptation cost by 10x.\n\nThe GUI didn't improve the command line. It replaced it. Natural language won't improve dashboards. Same thing.\n\nveda.ng/universal-text-ui"
+    "text": "CLI → GUI → NLI. Three paradigms. Each cut adaptation cost by 10x.\n\nThe GUI didn't improve the command line. It replaced it. Natural language won't improve dashboards. Same thing.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-04-23T05:52:57.159Z",
+    "tweetId": "2047191977041834057"
   },
   {
     "id": "stepwise-ai-gartner",

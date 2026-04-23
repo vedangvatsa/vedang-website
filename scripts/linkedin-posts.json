@@ -743,9 +743,11 @@
     "id": "universal-text-ui-paradigms",
     "scheduleDate": "2026-04-17",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "Three interface paradigms in fifty years:\n\nCLI (1970s): user memorizes syntax. Computing limited to specialists.\n\nGUI (1984-2024): user learns navigation. Computing goes mainstream. Forty years of dominance.\n\nNLI (2024+): system interprets intent. User describes what they want in plain English.\n\nEach paradigm cut adaptation cost by roughly 10x. The GUI didn't improve the command line. It made it obsolete. Natural language interfaces won't improve dashboards. They'll replace them.\n\nThe question isn't whether this transition happens. It's how fast.\n\nveda.ng/universal-text-ui"
+    "text": "Three interface paradigms in fifty years:\n\nCLI (1970s): user memorizes syntax. Computing limited to specialists.\n\nGUI (1984-2024): user learns navigation. Computing goes mainstream. Forty years of dominance.\n\nNLI (2024+): system interprets intent. User describes what they want in plain English.\n\nEach paradigm cut adaptation cost by roughly 10x. The GUI didn't improve the command line. It made it obsolete. Natural language interfaces won't improve dashboards. They'll replace them.\n\nThe question isn't whether this transition happens. It's how fast.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-04-23T05:52:59.315Z",
+    "postId": "urn:li:share:7452957675513880576"
   },
   {
     "id": "stepwise-ai-gartner",
