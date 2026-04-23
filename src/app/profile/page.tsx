@@ -338,7 +338,7 @@ export default function ProfilePage() {
                         </div>
                         <div>
                             <h4 className="font-semibold text-base">Programmatic Video Factory</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">25+ short-form videos rendered end-to-end: LLM script generation, ElevenLabs TTS, GSAP motion graphics via HyperFrames, automated caption syncing, and FFmpeg compositing. Output used for YouTube Shorts and LinkedIn content with data-visualization formats (bar chart races, kinetic typography).</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">100+ short-form videos rendered end-to-end: LLM script generation, ElevenLabs TTS, GSAP motion graphics via HyperFrames, automated caption syncing, and FFmpeg compositing. Output used for YouTube Shorts and LinkedIn content with data-visualization formats (bar chart races, kinetic typography).</p>
                         </div>
                         <div>
                             <h4 className="font-semibold text-base">Health Protocol Extraction at Scale</h4>
