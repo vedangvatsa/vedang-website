@@ -120,7 +120,7 @@ export default function ProfilePage() {
                   </CardHeader>
                   <CardContent className="p-4">
                     <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                        <li>Served as Head of Marketing and Growth Lead for The Hashgraph Group (Hedera), Routespring, Network State, and other Web3 and AI companies.</li>
+                        <li>Ecosystem Strategist at The Hashgraph Group (Hedera), Head of Marketing at Routespring, and Software Engineer at Network State.</li>
                         <li>Built a 100k+ member networking community for Web3, a social-messaging-first forum, and one of the largest channels for Web3 jobs - 55 million post views in the first year.</li>
                         <li>Featured among the top 3 Web3 products of the week by Smoothie and supported by Microsoft for Startups.</li>
                         <li>Hosted weekly Twitter Spaces with high-profile guests (including a band member of Pink Floyd, partners of Big4 firms, the father of digital twin technology, and the CSO of Microsoft), attracting 20-30k live attendees.</li>
