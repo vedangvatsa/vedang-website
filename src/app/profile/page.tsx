@@ -405,15 +405,6 @@ export default function ProfilePage() {
                     </Card>
                  </div>
             </section>
-
-            <section id="parliament" className="mt-6">
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
-                    Invited at the Parliament of India
-                </h2>
-                <div className="max-w-sm">
-                    <TwitterEmbed tweetId="1996239975906676795" />
-                </div>
-            </section>
           </div>
         </div>
       </div>
