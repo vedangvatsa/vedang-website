@@ -325,28 +325,28 @@ export default function ProfilePage() {
                  <Card>
                     <CardContent className="p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div>
+                            <h4 className="font-semibold text-base">Programmatic SEO (hashtagweb3.com)</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Programmatically generated 1,000+ SEO-optimized pages for the Web3 jobs platform, growing Google Search impressions from near-zero to 1 million in 3 months. Automated job ingestion, company pages, and talent reports from Supabase with hourly revalidation.</p>
+                        </div>
+                        <div>
                             <h4 className="font-semibold text-base">Swarm Intelligence Engine</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Built a full-stack prediction tool that spawns 10-100 AI agents across 8 LLM providers (Anthropic, OpenAI, Gemini, Groq, Mistral, Together, OpenRouter, DeepSeek), runs multi-round structured debates, and outputs consensus forecasts with confidence bounds and force-directed knowledge graphs. Shipped live at veda.ng/swarm-prediction.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Built and shipped a full-stack prediction tool (veda.ng/swarm-prediction) that spawns 10-100 AI agents across 8 LLM providers, runs multi-round debates, and outputs consensus forecasts with confidence bounds and force-directed knowledge graphs.</p>
                         </div>
                         <div>
                             <h4 className="font-semibold text-base">Autonomous Social Distribution</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Engineered a zero-touch CI/CD pipeline (GitHub Actions) that auto-publishes 350+ posts across 7 platforms (LinkedIn, X, Bluesky, Facebook, Tumblr, Dev.to, Hashnode) on a 3x/day cron schedule with per-platform rate limiting, image uploads, and link facet detection.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">359 posts auto-published across 7 platforms (LinkedIn, X, Bluesky, Facebook, Tumblr, Dev.to, Hashnode) via a zero-touch GitHub Actions pipeline running 3x/day. Per-platform rate limiting, image uploads, and link facet detection. Zero manual intervention since launch.</p>
                         </div>
                         <div>
                             <h4 className="font-semibold text-base">Programmatic Video Factory</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">End-to-end pipeline: LLM script generation, ElevenLabs TTS, GSAP motion graphics (HyperFrames), automated caption syncing, and FFmpeg compositing. Batch-rendered 25+ data-visualization videos (bar chart races, kinetic typography) for YouTube Shorts and LinkedIn.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">25+ short-form videos rendered end-to-end: LLM script generation, ElevenLabs TTS, GSAP motion graphics via HyperFrames, automated caption syncing, and FFmpeg compositing. Output used for YouTube Shorts and LinkedIn content with data-visualization formats (bar chart races, kinetic typography).</p>
                         </div>
                         <div>
                             <h4 className="font-semibold text-base">Health Protocol Extraction at Scale</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Scraped and downloaded transcripts from 1,200+ Huberman Lab and Bryan Johnson videos using parallelized yt-dlp workers, then ran batch LLM inference (Ollama, local models) to extract thousands of actionable health protocols into a structured, searchable database.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">6,300+ actionable health protocols extracted from 1,200+ Huberman Lab and Bryan Johnson video transcripts. Parallelized scraping via yt-dlp, batch LLM inference on local models (Ollama), and structured output into a searchable, categorized database.</p>
                         </div>
                         <div>
-                            <h4 className="font-semibold text-base">CVin.Bio (AI Resume-to-Website)</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Full-stack Next.js + Supabase app. Users upload a PDF resume; the backend parses it via AI-driven extraction, structures the data into editable profile pages, and auto-generates dynamic 1200x630 OpenGraph previews via Edge Runtime (Satori). Row-level security with GoTrue Auth.</p>
-                        </div>
-                        <div>
-                            <h4 className="font-semibold text-base">Multi-Platform Social Listener</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Python-based monitoring engine tracking brand mentions across Twitter, Reddit, YouTube, Google News, and Facebook in real time. Includes sentiment analysis, topic classification, engagement scoring, and outputs to Slack alerts and Elasticsearch for downstream analytics.</p>
+                            <h4 className="font-semibold text-base">47 Essays, Auto-Distributed</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Wrote 47 long-form research essays on AI and Web3. Each essay is auto-repurposed into platform-specific posts, cross-published to Paragraph, Telegraph, Dev.to, and Hashnode, and gets a dynamically generated OG image via Next.js Edge Runtime (Satori). 80 million yearly organic LinkedIn views.</p>
                         </div>
                     </CardContent>
                 </Card>
