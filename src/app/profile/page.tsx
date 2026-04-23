@@ -205,11 +205,11 @@ export default function ProfilePage() {
             </section>
 
              <div className="grid md:grid-cols-2 gap-6">
-                <section id="education">
+                <section id="education" className="flex flex-col">
                   <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
                     Education
                   </h2>
-                  <Card className="h-full">
+                  <Card className="flex-1">
                     <CardHeader className="p-4 pb-0">
                       <CardTitle className="text-lg">Computer Engineer &amp; MBA</CardTitle>
                     </CardHeader>
@@ -224,18 +224,18 @@ export default function ProfilePage() {
                   </Card>
                 </section>
 
-                <section id="achievements">
+                <section id="achievements" className="flex flex-col">
                   <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
                     Key Achievements
                   </h2>
-                  <Card className="h-full">
+                  <Card className="flex-1">
                     <CardContent className="p-4">
                       <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
                         <li>Awarded as a Fellow of the Royal Society for the Encouragement of Arts, Manufactures and Commerce (Previous Fellows have included Stephen Hawking, Charles Dickens, Karl Marx and Benjamin Franklin).</li>
-                        <li>Issued Japan’s special visa for Intellectual Figures.</li>
+                        <li>Issued Japan's special visa for Intellectual Figures.</li>
                         <li>Presented my prototype for a low-cost laptop among the top entries at IIT Delhi; appreciated by the Head of MIT Media Labs and Alberto Minetti (Nobel Laureate).</li>
                         <li>Young Researcher Awardee 2020 and Young Achiever Awardee 2020-21.</li>
-                        <li>Felicitated with a medal by the Former Director of India’s Prime Minister's Office for winning the Beat Plastic Hackathon.</li>
+                        <li>Felicitated with a medal by the Former Director of India's Prime Minister's Office for winning the Beat Plastic Hackathon.</li>
                         <li>Represented Indian delegation in the India-Venezuela Youth Dialogue, Harvard Project for Asian & International Relations, India-China Roundtable, India-Norway Youth Conference, India-Azerbaijan Roundtable Dialogue, India-Botswana Dialogue 2018, World Business Dialogue, etc.</li>
                       </ul>
                     </CardContent>
