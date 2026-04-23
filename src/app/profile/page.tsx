@@ -379,7 +379,7 @@ export default function ProfilePage() {
                     <Card>
                         <CardContent className="p-4">
                             <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground">
-                            "I always find his work to be of just the absolute high quality. He is always timely, so easy to work with, responsive to notes and always able to explain things to me when it's hard for me to get things. He has my highest endorsement."
+                            "I always find his work to be of just the absolute high quality. He is always timely, so easy to work with, responsive to notes, and always able to explain things to me when it's hard for me to get them. He has my highest endorsement."
                             </blockquote>
                             <p className="mt-4 font-semibold text-right text-sm">Jack Alison</p>
                             <p className="text-xs text-muted-foreground text-right">Screenwriter for Academy Awards (Oscars)</p>
@@ -388,7 +388,7 @@ export default function ProfilePage() {
                      <Card>
                         <CardContent className="p-4">
                             <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground">
-                            "I am very comfortable to recommend him for any job that requires strict deadlines, taking on new challenges at short notice and dealing with altering priorities, efficient client communication and good analytical capabilities."
+                            "I am very comfortable recommending him for any job that requires strict deadlines, taking on new challenges at short notice, dealing with altering priorities, efficient client communication, and good analytical capabilities."
                             </blockquote>
                             <p className="mt-4 font-semibold text-right text-sm">Bharath Visweswariah</p>
                             <p className="text-xs text-muted-foreground text-right">Director Investments, Omidyar Network</p>
@@ -397,7 +397,7 @@ export default function ProfilePage() {
                      <Card>
                         <CardContent className="p-4">
                             <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground">
-                            "He helped me a lot in working closely with me and understand my requirements even though we had some language barriers between us but Vedang has never let these barriers be the reason of any delay in the work."
+                            "He helped me a lot by working closely with me and understanding my requirements, even though we had some language barriers between us. Vedang has never let these barriers be the reason for any delay in the work."
                             </blockquote>
                             <p className="mt-4 font-semibold text-right text-sm">Eran Malovani</p>
                             <p className="text-xs text-muted-foreground text-right">Founder of CPA+</p>
