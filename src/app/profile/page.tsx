@@ -346,7 +346,7 @@ export default function ProfilePage() {
                         </div>
                         <div>
                             <h4 className="font-semibold text-base">47 Essays, Auto-Distributed</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Wrote 47 long-form research essays on AI and Web3. Each one is automatically repurposed into platform-specific posts and cross-published to Paragraph, Telegraph, Dev.to, and Hashnode. Every essay gets its own auto-generated social preview image. 80 million yearly organic LinkedIn views.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Wrote 47 long-form research essays on AI and Web3. Each one is automatically repurposed into platform-specific posts and cross-published to Paragraph, Telegraph, Dev.to, and Hashnode. 80 million yearly organic LinkedIn views.</p>
                         </div>
                     </CardContent>
                 </Card>
