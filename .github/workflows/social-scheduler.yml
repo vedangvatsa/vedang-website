@@ -30,11 +30,12 @@ jobs:
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
 
-      - name: Post to LinkedIn
-        run: npx tsx scripts/linkedin-scheduled-executor.ts
-        env:
-          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
-          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+      # PAUSED: LinkedIn posting disabled until further notice
+      # - name: Post to LinkedIn
+      #   run: npx tsx scripts/linkedin-scheduled-executor.ts
+      #   env:
+      #     LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+      #     LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
 
       - name: Post to Bluesky
         run: npx tsx scripts/bluesky-scheduled-executor.ts
