@@ -208,7 +208,7 @@ export default function ProfilePage() {
                   <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
                     Education
                   </h2>
-                  <Card>
+                  <Card className="h-full">
                     <CardHeader className="p-4 pb-0">
                       <CardTitle className="text-lg">BE - Computer Engineering &amp; MBA</CardTitle>
                     </CardHeader>
@@ -227,7 +227,7 @@ export default function ProfilePage() {
                   <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
                     Key Achievements
                   </h2>
-                  <Card>
+                  <Card className="h-full">
                     <CardContent className="p-4">
                       <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
                         <li>Awarded as a Fellow of the Royal Society for the Encouragement of Arts, Manufactures and Commerce (Previous Fellows have included Stephen Hawking, Charles Dickens, Karl Marx and Benjamin Franklin).</li>
