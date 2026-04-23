@@ -210,7 +210,7 @@ export default function ProfilePage() {
                   </h2>
                   <Card className="h-full">
                     <CardHeader className="p-4 pb-0">
-                      <CardTitle className="text-lg">BE - Computer Engineering &amp; MBA</CardTitle>
+                      <CardTitle className="text-lg">Computer Engineer &amp; MBA</CardTitle>
                     </CardHeader>
                     <CardContent className="p-4">
                       <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
