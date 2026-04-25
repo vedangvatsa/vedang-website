@@ -146,3 +146,43 @@ export function MediaTrustChart() {
     </figure>
   );
 }
+
+/* ─── Invisible Curation Factors ─── */
+export function CurationFactorsChart() {
+  const factors = [
+    { factor: 'Algorithmic ranking', role: 'Amplifies emotionally charged, identity-reinforcing content', severity: 95, color: 'hsl(0 70% 50%)' },
+    { factor: 'User choice', role: 'People seek confirmation; disconfirmation is cognitively effortful', severity: 80, color: 'hsl(30 80% 50%)' },
+    { factor: 'Search behavior', role: 'Users phrase queries that reflect existing beliefs (PNAS, 2025)', severity: 70, color: 'hsl(30 80% 50%)' },
+    { factor: 'Platform economics', role: 'Engagement-based monetization rewards division over understanding', severity: 90, color: 'hsl(0 70% 50%)' },
+    { factor: 'Content velocity', role: 'False content spreads 6x faster, creating asymmetric advantage', severity: 85, color: 'hsl(350 70% 45%)' },
+    { factor: 'Awareness gap', role: '74% of users don\'t notice algorithmic interventions on feeds', severity: 75, color: 'hsl(30 80% 50%)' },
+  ];
+
+  return (
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-6 md:p-10">
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Invisible Curation</h3>
+        <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Factors driving the plurality trap, ranked by structural impact</p>
+
+        <div className="space-y-3">
+          {factors.map((f) => (
+            <div key={f.factor}>
+              <div className="flex items-baseline justify-between mb-1">
+                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{f.factor}</span>
+                <span className="text-[10px] font-bold" style={{ color: f.color }}>{f.severity}%</span>
+              </div>
+              <div className="w-full h-3 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden mb-1">
+                <div className="h-full rounded-md" style={{ width: `${f.severity}%`, backgroundColor: f.color, opacity: 0.5 }} />
+              </div>
+              <span className="text-[10px] text-muted-foreground">{f.role}</span>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-3 text-[10px] text-muted-foreground/60">
+          Impact ratings are directional estimates based on cited research (MIT/Science 2018, PNAS 2025, Gallup 2025). Not a precise measurement.
+        </p>
+      </div>
+    </figure>
+  );
+}

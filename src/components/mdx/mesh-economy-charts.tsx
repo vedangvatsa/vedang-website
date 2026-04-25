@@ -134,3 +134,46 @@ export function MeshOrgComparison() {
     </figure>
   );
 }
+
+/* ─── Energy Mesh Economics Comparison ─── */
+export function EnergyMeshComparison() {
+  const rows = [
+    { metric: 'Consumer cost', traditional: 'Retail rate ($0.15-0.35/kWh)', mesh: 'P2P clearing price ($0.08-0.20/kWh)', advantage: '↓40-55%' },
+    { metric: 'Producer revenue', traditional: 'Wholesale/feed-in ($0.03-0.08/kWh)', mesh: 'P2P clearing price ($0.08-0.20/kWh)', advantage: '↑2-5x' },
+    { metric: 'Intermediary margin', traditional: '40-60%', mesh: '0-5% (protocol fee)', advantage: '↓90%+' },
+    { metric: 'Settlement', traditional: 'Monthly billing', mesh: 'Real-time or daily', advantage: '30x faster' },
+    { metric: 'Data ownership', traditional: 'Utility owns consumption data', mesh: 'User owns and controls data', advantage: 'Full control' },
+  ];
+
+  return (
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-6 md:p-10">
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Energy Mesh Economics</h3>
+        <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Traditional utility vs. peer-to-peer energy mesh</p>
+
+        <div className="overflow-x-auto">
+          <div className="min-w-[480px]">
+            <div className="grid grid-cols-[110px_1fr_1fr_70px] gap-2 mb-2">
+              <span className="text-[10px] font-bold uppercase text-muted-foreground">Metric</span>
+              <span className="text-[10px] font-bold uppercase text-muted-foreground text-center">Traditional Utility</span>
+              <span className="text-[10px] font-bold uppercase text-center" style={{ color: 'hsl(160 80% 35%)' }}>P2P Mesh</span>
+              <span className="text-[10px] font-bold uppercase text-muted-foreground text-right">Δ</span>
+            </div>
+            {rows.map((r) => (
+              <div key={r.metric} className="grid grid-cols-[110px_1fr_1fr_70px] gap-2 border-t border-[#e3e3e0] dark:border-zinc-800 py-2 items-center">
+                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{r.metric}</span>
+                <span className="text-[11px] text-muted-foreground text-center bg-[#f7f6f3] dark:bg-zinc-800/40 px-2 py-1.5 rounded-md">{r.traditional}</span>
+                <span className="text-[11px] text-center px-2 py-1.5 rounded-md font-medium" style={{ backgroundColor: 'hsl(160 80% 35% / 0.08)', color: 'hsl(160 80% 35%)' }}>{r.mesh}</span>
+                <span className="text-[11px] font-bold text-right" style={{ color: 'hsl(160 80% 35%)' }}>{r.advantage}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <p className="mt-3 text-[10px] text-muted-foreground/60">
+          Pricing data from Power Ledger deployments and European feed-in tariff schedules. Mesh protocol fees based on blockchain transaction costs.
+        </p>
+      </div>
+    </figure>
+  );
+}
