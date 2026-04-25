@@ -67,30 +67,35 @@ export function ZeroUIMarketMap() {
       name: 'Protocol Layer',
       desc: 'Standards for agent-to-service and agent-to-agent communication',
       color: 'hsl(210 90% 40%)',
+
       companies: ['Anthropic (MCP)', 'Google (A2A)', 'Google (UCP)', 'OpenAI (ACP)', 'Coinbase (x402)', 'Stripe (MPP)', 'LangChain (LangGraph)', 'CrewAI', 'Microsoft (AutoGen)'],
     },
     {
       name: 'Headless Commerce Engines',
       desc: 'API-first platforms exposing 100% functionality without a frontend',
       color: 'hsl(160 80% 35%)',
+
       companies: ['Commercetools', 'Fabric', 'Shopify (Storefront API)', 'BigCommerce', 'Medusa', 'Saleor', 'Elastic Path', 'Spryker'],
     },
     {
       name: 'AEO & Semantic Analytics',
       desc: 'Optimizing brand data for LLM ingestion instead of human SEO',
       color: 'hsl(280 60% 45%)',
-      companies: ['Yext', 'Schema App', 'Botify', 'seoClarity', 'BrightEdge', 'Profound (AI search analytics)', 'Perplexity Pages', 'Vectorize'],
+
+      companies: ['Yext', 'Schema App', 'Botify', 'seoClarity', 'BrightEdge', 'Profound (AI search)', 'Perplexity Pages', 'Vectorize'],
     },
     {
       name: 'Identity & Execution',
       desc: 'Agentic wallets, ZKP attestation, and machine-native payments',
       color: 'hsl(30 80% 50%)',
+
       companies: ['Coinbase (Agentic Wallets)', 'Skyfire (KYAPay)', 'Privy', 'Dynamic', 'Crossmint', 'Circle (USDC rails)', 'Worldcoin (World ID)', 'Lit Protocol'],
     },
     {
       name: 'Edge Hardware & Ambient Sensors',
       desc: 'Post-smartphone form factors optimized for context, not screens',
       color: 'hsl(350 70% 45%)',
+
       companies: ['Apple (Secure Enclave)', 'Limitless', 'Humane', 'Oura', 'CTRL-labs (Meta)', 'Rabbit r1', 'Frame (AR glasses)', 'Qualcomm (on-device LLM)'],
     },
   ];
@@ -103,14 +108,17 @@ export function ZeroUIMarketMap() {
 
         <div className="space-y-4">
           {layers.map((layer) => (
-            <div key={layer.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden">
-              <div className="px-4 py-2 border-b border-[#e3e3e0] dark:border-zinc-800" style={{ backgroundColor: layer.color + '10' }}>
-                <span className="text-xs font-bold uppercase tracking-wider" style={{ color: layer.color }}>{layer.name}</span>
-                <p className="text-[10px] text-muted-foreground mt-0.5">{layer.desc}</p>
+            <div key={layer.name} className="rounded-[3px] overflow-hidden border-l-[3px]" style={{ borderLeftColor: layer.color, borderTop: '1px solid', borderRight: '1px solid', borderBottom: '1px solid', borderTopColor: '#e3e3e0', borderRightColor: '#e3e3e0', borderBottomColor: '#e3e3e0' }}>
+              <div className="px-4 py-2.5 border-b border-[#e3e3e0] dark:border-zinc-800 flex items-center justify-between" style={{ backgroundColor: layer.color + '08' }}>
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-wider" style={{ color: layer.color }}>{layer.name}</span>
+                  <p className="text-[10px] text-muted-foreground mt-0.5">{layer.desc}</p>
+                </div>
+                <span className="text-[10px] text-muted-foreground shrink-0 ml-4">{layer.companies.length} companies</span>
               </div>
               <div className="px-4 py-3 flex flex-wrap gap-2">
                 {layer.companies.map((c) => (
-                  <span key={c} className="text-[11px] font-medium px-2 py-1 rounded-sm bg-[#f7f6f3] dark:bg-zinc-800/40 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{c}</span>
+                  <span key={c} className="text-[11px] font-medium px-2.5 py-1.5 rounded-md bg-[#f7f6f3] dark:bg-zinc-800/40 text-[#37352f] dark:text-[rgba(255,255,255,0.81)] border border-[#e3e3e0]/50 dark:border-zinc-700/30">{c}</span>
                 ))}
               </div>
             </div>
@@ -118,7 +126,7 @@ export function ZeroUIMarketMap() {
         </div>
 
         <p className="mt-3 text-[10px] text-muted-foreground/60">
-          Market map compiled from Artemis Analytics, Crunchbase, and public product announcements (Q1 2026).
+          Market map compiled from Crunchbase and public product announcements (Q1 2026). Companies listed are representative, not exhaustive.
         </p>
       </div>
     </figure>
@@ -222,14 +230,14 @@ export function AttentionCollapseChart() {
 /* ─── GUI Timeline ─── */
 export function GUITimeline() {
   const eras = [
-    { year: '1973', event: 'Xerox Alto', desc: 'First GUI: windows, icons, menus', type: 'gui' },
-    { year: '1984', event: 'Macintosh', desc: 'GUI goes mass market via Apple', type: 'gui' },
-    { year: '1993', event: 'Mosaic Browser', desc: 'HTML rendered visually for the first time', type: 'gui' },
-    { year: '2007', event: 'iPhone', desc: 'Touch interface, the GUI goes mobile', type: 'gui' },
-    { year: '2022', event: 'ChatGPT', desc: 'Text replaces clicks for complex tasks', type: 'transition' },
-    { year: '2024', event: 'Bots > Humans', desc: 'Automated traffic hits 51% of all web traffic (Imperva)', type: 'agent' },
-    { year: '2025', event: 'MCP / A2A launched', desc: 'Structured agent protocols replace HTML scraping', type: 'agent' },
-    { year: '2028E', event: '33% enterprise software agentic', desc: 'Gartner: 33% of enterprise apps include agentic AI', type: 'agent' },
+    { year: '1973', event: 'Xerox Alto', desc: 'First GUI: windows, icons, menus', type: 'gui' as const },
+    { year: '1984', event: 'Macintosh', desc: 'GUI goes mass market via Apple', type: 'gui' as const },
+    { year: '1993', event: 'Mosaic Browser', desc: 'HTML rendered visually for the first time', type: 'gui' as const },
+    { year: '2007', event: 'iPhone', desc: 'Touch interface, the GUI goes mobile', type: 'gui' as const },
+    { year: '2022', event: 'ChatGPT', desc: 'Text replaces clicks for complex tasks', type: 'transition' as const },
+    { year: '2024', event: 'Bots > Humans', desc: 'Automated traffic hits 51% of all web traffic', type: 'agent' as const, source: 'Imperva', sourceUrl: 'https://www.imperva.com/resources/resource-library/reports/2025-bad-bot-report/' },
+    { year: '2025', event: 'MCP / A2A launched', desc: 'Structured agent protocols replace HTML scraping', type: 'agent' as const, source: 'Anthropic / Google', sourceUrl: 'https://modelcontextprotocol.io' },
+    { year: '2028E', event: '33% enterprise software agentic', desc: '33% of enterprise apps include agentic AI', type: 'agent' as const, source: 'Gartner', sourceUrl: 'https://www.gartner.com/en/articles/intelligent-agent-in-ai' },
   ];
 
   return (
@@ -251,7 +259,12 @@ export function GUITimeline() {
                     <span className={`text-xs font-bold ${e.type === 'agent' ? 'text-primary' : 'text-[#37352f] dark:text-[rgba(255,255,255,0.81)]'}`}>{e.year}</span>
                     <span className="text-xs font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{e.event}</span>
                   </div>
-                  <p className="text-[11px] text-muted-foreground mt-0.5">{e.desc}</p>
+                  <p className="text-[11px] text-muted-foreground mt-0.5">
+                    {e.desc}
+                    {'source' in e && e.source && (
+                      <> (<a href={e.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground transition-colors">{e.source}</a>)</>
+                    )}
+                  </p>
                 </div>
               </div>
             ))}
@@ -292,7 +305,7 @@ export function FrontendDeclineChart() {
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Capital Reallocation</h3>
-        <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">YC-backed startup hiring trends, indexed to 2024 baseline = 100</p>
+        <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Directional hiring trends across the industry (illustrative, indexed to 2024 = 100)</p>
 
         <div className="space-y-2">
           {data.map((d) => {
@@ -317,7 +330,7 @@ export function FrontendDeclineChart() {
         </div>
 
         <p className="mt-3 text-[10px] text-muted-foreground/60">
-          Sources: Y Combinator batch analysis (W24-W26), Levels.fyi hiring data, a16z infrastructure hiring reports.
+          Illustrative trends based on industry reporting. Frontend contraction per multiple analyst reports (2025-2026); data/agent engineering growth per Levels.fyi and a16z.
         </p>
       </div>
     </figure>
