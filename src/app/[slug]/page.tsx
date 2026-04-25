@@ -33,6 +33,7 @@ import { AINewsSiteGrowth, MisinfoSpreadChart, MediaTrustChart, CurationFactorsC
 import { MeshTransactionCostChart, DAOTreasuryChart, MeshOrgComparison, EnergyMeshComparison } from '@/components/mdx/mesh-economy-charts';
 import { SimulationDomainChart, SimCostComparison, SimulationGapChart } from '@/components/mdx/simulation-layer-charts';
 import { SensoryBandwidthChart, HapticGenerationsChart, SpatialComputingAdoption, BCILandscapeChart, SensoryStackTimeline, PresenceThresholdChart, SensoryStackTable } from '@/components/mdx/sensory-internet-charts';
+import { GodProtocolComparison, TTPEvolutionTimeline, PrivacyTechStack, TTPMarketScale, DistributedArchitectureChart, AlignmentFrameworkChart } from '@/components/mdx/god-protocol-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -362,6 +363,12 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               SensoryStackTimeline,
               PresenceThresholdChart,
               SensoryStackTable,
+              GodProtocolComparison,
+              TTPEvolutionTimeline,
+              PrivacyTechStack,
+              TTPMarketScale,
+              DistributedArchitectureChart,
+              AlignmentFrameworkChart,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
