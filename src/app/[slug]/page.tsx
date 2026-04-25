@@ -34,6 +34,7 @@ import { MeshTransactionCostChart, DAOTreasuryChart, MeshOrgComparison, EnergyMe
 import { SimulationDomainChart, SimCostComparison, SimulationGapChart } from '@/components/mdx/simulation-layer-charts';
 import { SensoryBandwidthChart, HapticGenerationsChart, SpatialComputingAdoption, BCILandscapeChart, SensoryStackTimeline, PresenceThresholdChart, SensoryStackTable } from '@/components/mdx/sensory-internet-charts';
 import { GodProtocolComparison, TTPEvolutionTimeline, PrivacyTechStack, TTPMarketScale, DistributedArchitectureChart, AlignmentFrameworkChart } from '@/components/mdx/god-protocol-charts';
+import { TrustPrimitivesComparison, DeFiSecurityChart, TrustStackArchitecture, TrustComparisonChart, DigitalIdentityTimeline, TrustApplicationDomains } from '@/components/mdx/programmable-trust-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -369,6 +370,12 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               TTPMarketScale,
               DistributedArchitectureChart,
               AlignmentFrameworkChart,
+              TrustPrimitivesComparison,
+              DeFiSecurityChart,
+              TrustStackArchitecture,
+              TrustComparisonChart,
+              DigitalIdentityTimeline,
+              TrustApplicationDomains,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img

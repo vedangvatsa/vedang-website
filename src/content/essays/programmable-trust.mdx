@@ -13,87 +13,126 @@ keywords: ['zero knowledge proof', 'ZKP', 'trust', 'TEE', 'MPC', 'privacy', 'ver
 <Figure src="/images/essays/programmable-trust.svg?v=7" alt="Infographic" wide />
 
 <Callout type="insight" title="The Core Thesis">
-Trust has historically been provided by institutions. Banks, courts, notaries, regulators. These institutions verify identity, enforce contracts, and mediate disputes. Each one adds cost, latency, and a point of failure. Programmable trust replaces institutional verification with mathematical proof: cryptographic techniques that allow parties to verify facts about each other without revealing the underlying data and without trusting a third party. The shift is from "show me everything so I can trust you" to "give me a mathematical proof that the relevant fact is true."
+Trust has historically been provided by institutions: banks, courts, notaries, regulators. These institutions verify identity, enforce contracts, and mediate disputes. Each one adds cost, latency, and a point of failure. Programmable trust replaces institutional verification with mathematical proof: cryptographic techniques that allow parties to verify facts about each other without revealing the underlying data and without trusting a third party. The shift is from "show me everything so I can trust you" to "give me a mathematical proof that the relevant fact is true."
 </Callout>
 
-## The Three Primitives
+## The Verification Problem
 
-Programmable trust is built on three cryptographic primitives, each addressing a different aspect of the verification problem.
-
-### Zero-Knowledge Proofs (ZKPs)
-
-A zero-knowledge proof allows one party (the prover) to convince another party (the verifier) that a statement is true, without revealing any information beyond the truth of the statement itself.
+The internet was built for communication, not verification. TCP/IP, HTTP, and SMTP were designed to move data packets reliably from sender to receiver. They say nothing about whether the sender is who they claim to be, whether the data is true, or whether the transaction is legitimate. Every layer of verification that exists on the internet today, passwords, SSL certificates, KYC checks, credit scores, was retrofitted onto an infrastructure that has no native concept of trust.
 
 <StatRow>
 <Stat value="$0" label="Data revealed in a ZKP transaction" source="Cryptographic property" />
-<Stat value="$100B+" label="DeFi value secured by ZK infrastructure" source="DeFiLlama" sourceUrl="https://defillama.com/" />
-<Stat value="10-100x" label="Ethereum transaction compression via ZK rollups" source="L2Beat" sourceUrl="https://l2beat.com/" />
-<Stat value="$3.5B+" label="Apple secure enclave devices shipped annually" source="Apple" sourceUrl="https://www.apple.com/" />
+<Stat value="$28B" label="TVL in ZK-rollups (late 2025)" source="L2Beat" sourceUrl="https://l2beat.com/" />
+<Stat value="95%" label="Ethereum throughput handled by L2s" source="Binance Research" />
+<Stat value="$1.8B" label="Smart contract audit market (2025)" source="Dataintelo" />
 </StatRow>
+
+The consequences are measurable. To open a bank account, you disclose your full name, address, date of birth, social security number, employment history, and sometimes tax returns. To rent an apartment, you provide pay stubs, bank statements, and employer references. To get a mortgage, you expose your complete financial history going back years. Each disclosure creates a data liability: a record that can be breached, leaked, sold, or subpoenaed. The [Equifax breach of 2017](https://en.wikipedia.org/wiki/2017_Equifax_data_breach) exposed the personal data of 147 million Americans precisely because the institutional trust model requires the aggregation of sensitive data in centralized databases.
+
+Programmable trust inverts this model. Instead of disclosing data and trusting the recipient to protect it, you provide a mathematical proof that a specific property of your data is true, without revealing the data itself. The recipient gets higher-confidence verification (mathematics is harder to forge than documents) with zero data liability (they never possess the underlying information).
+
+The gap between these two models is not marginal. It is structural. And the cryptographic primitives that enable programmable trust have moved from theoretical computer science papers to production systems processing billions of dollars in value.
+
+## The Four Primitives
+
+Programmable trust is built on four cryptographic primitives, each addressing a different aspect of the verification problem.
+
+### Zero-Knowledge Proofs (ZKPs)
+
+A zero-knowledge proof allows one party (the prover) to convince another party (the verifier) that a statement is true, without revealing any information beyond the truth of the statement itself. The concept was formalized by Goldwasser, Micali, and Rackoff in 1985, but practical implementations have only become viable in the last decade.
 
 Practical examples: prove you are over 21 without revealing your date of birth. Prove your bank balance exceeds $100,000 without revealing your actual balance. Prove you hold a valid medical license without revealing your home address. Prove your code executes correctly without revealing the code itself.
 
-[zkSNARKs](https://en.wikipedia.org/wiki/Non-interactive_zero-knowledge_proof) (Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge) and [zkSTARKs](https://en.wikipedia.org/wiki/Non-interactive_zero-knowledge_proof) are the two dominant implementations. zkSNARKs are smaller and faster to verify but require a trusted setup ceremony. zkSTARKs are larger but require no trusted setup and are resistant to quantum computing attacks.
+[zkSNARKs](https://en.wikipedia.org/wiki/Non-interactive_zero-knowledge_proof) (Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge) and [zkSTARKs](https://en.wikipedia.org/wiki/Non-interactive_zero-knowledge_proof) are the two dominant implementations. zkSNARKs produce smaller proofs and verify faster, but require a trusted setup ceremony: a one-time process that generates public parameters using secret randomness that must be destroyed. If the secret randomness is compromised, the entire system can be exploited. zkSTARKs avoid this vulnerability entirely: they require no trusted setup and are resistant to quantum computing attacks, but produce larger proofs.
 
-The [Ethereum](https://ethereum.org/) network uses ZK technology at scale through ZK rollups. Layer 2 scaling solutions that bundle hundreds or thousands of transactions, generate a ZK proof that all transactions are valid, and submit only the proof to the main chain. [zkSync](https://zksync.io/), [StarkNet](https://www.starknet.io/), and [Polygon zkEVM](https://polygon.technology/) process millions of transactions at a fraction of the cost and latency of the base layer.
+The [Ethereum](https://ethereum.org/) network uses ZK technology at scale through ZK-rollups: Layer 2 scaling solutions that bundle hundreds or thousands of transactions, generate a ZK proof that all transactions are valid, and submit only the proof to the main chain. [zkSync](https://zksync.io/), [StarkNet](https://www.starknet.io/), [Polygon zkEVM](https://polygon.technology/), [Scroll](https://scroll.io/), and [Linea](https://linea.build/) collectively held over $28 billion in TVL by late 2025 and handled approximately 95% of Ethereum's total transaction throughput. ZK proof generation costs fell by roughly 90% during 2025, driven by GPU acceleration, specialized hardware for cryptographic operations (MSM/NTT), and competitive third-party proving marketplaces like RISC Zero and Succinct.
 
 ### Trusted Execution Environments (TEEs)
 
-A TEE is a hardware-enforced secure enclave within a processor. A protected area of memory and computation that even the operating system and system administrator cannot access. Data processed inside a TEE is encrypted at rest, in transit, and *in use*.
+A TEE is a hardware-enforced secure enclave within a processor: a protected area of memory and computation that even the operating system and system administrator cannot access. Data processed inside a TEE is encrypted at rest, in transit, and in use. This is the critical distinction: conventional encryption protects data when stored and when transmitted, but requires decryption for processing. TEEs eliminate this gap.
 
-[Intel SGX](https://www.intel.com/content/www/us/en/developer/tools/software-guard-extensions/overview.html), [AMD SEV](https://www.amd.com/en/developer/sev.html), Apple's [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web), and [ARM TrustZone](https://www.arm.com/technologies/trustzone-for-cortex-a) are deployed in billions of devices worldwide. Your iPhone stores biometric data (Face ID, Touch ID) in a Secure Enclave that the main processor cannot access, even Apple cannot extract this data.
+[Intel SGX](https://www.intel.com/content/www/us/en/developer/tools/software-guard-extensions/overview.html), [AMD SEV](https://www.amd.com/en/developer/sev.html), Apple's [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web), and [ARM TrustZone](https://www.arm.com/technologies/trustzone-for-cortex-a) are deployed in billions of devices worldwide. Your iPhone stores biometric data (Face ID, Touch ID) in a Secure Enclave that the main processor cannot access. Even Apple cannot extract this data. AWS Nitro Enclaves extend this model to cloud computing, allowing sensitive workloads to run in isolated environments where even Amazon, the cloud operator, cannot inspect the computation.
 
-The application to programmable trust: competing companies can pool sensitive data inside a TEE, compute joint analytics (e.g., fraud detection across multiple banks), and receive only the aggregate results. Without any party seeing the other's raw data. The trust is in the silicon, not in a contract or a handshake.
+The application to programmable trust is direct: competing companies can pool sensitive data inside a TEE, compute joint analytics (fraud detection across multiple banks, for example), and receive only the aggregate results. No party sees the other's raw data. The trust is in the silicon, not in a contract or a handshake.
 
 ### Multi-Party Computation (MPC)
 
-MPC allows multiple parties to jointly compute a function over their combined inputs without any party learning the other parties' inputs.
+MPC allows multiple parties to jointly compute a function over their combined inputs without any party learning the other parties' inputs. The theoretical foundation was established by Andrew Yao's "Millionaires' Problem" in 1982: two millionaires want to determine who is wealthier without either revealing their net worth.
 
-Practical application: three hospitals want to determine which has the best treatment outcomes for a specific condition. They cannot share patient data due to privacy regulations. MPC allows them to compute the answer jointly. Each hospital provides encrypted inputs, the computation produces the correct ranking, and no hospital sees any other hospital's data.
+Practical application: three hospitals want to determine which has the best treatment outcomes for a specific condition. They cannot share patient data due to HIPAA and GDPR regulations. MPC allows them to compute the answer jointly. Each hospital provides encrypted inputs, the computation produces the correct ranking, and no hospital sees any other hospital's data.
 
-[Fireblocks](https://www.fireblocks.com/) and [Curv](https://www.curv.co/) use MPC for institutional cryptocurrency custody. Private keys are split across multiple parties and multiple geographic locations, and transactions require the coordinated participation of multiple keyholders. No single party ever possesses the complete key.
+[Fireblocks](https://www.fireblocks.com/) uses MPC for institutional cryptocurrency custody, splitting private keys across multiple parties and geographic locations. Transactions require the coordinated participation of multiple keyholders, and no single party ever possesses the complete key. [Chainlink](https://chain.link/)'s DECO protocol combines MPC with ZKPs to allow smart contracts to verify data from standard web servers (bank balances, age, employment status) without revealing the underlying data or user credentials. This "selective disclosure" of off-chain facts to the blockchain is one of the most practically important applications of programmable trust.
+
+### Fully Homomorphic Encryption (FHE)
+
+FHE represents the most ambitious primitive: performing arbitrary computations on encrypted data without ever decrypting it. First demonstrated as theoretically possible by Craig Gentry in his 2009 Stanford PhD thesis, FHE remained impractically slow for over a decade, with encrypted operations running millions of times slower than their plaintext equivalents.
+
+By 2025, companies like [Zama](https://www.zama.ai/) have developed FHE compilers that allow standard code to be converted into FHE-compatible operations, dramatically reducing the engineering complexity. [Microsoft SEAL](https://www.microsoft.com/en-us/research/project/microsoft-seal/), an open-source library supporting BFV, BGV, and CKKS encryption schemes, provides the mathematical foundation. The technology is transitioning from pure research to early commercial deployment in privacy-preserving machine learning (performing model inference on encrypted patient data without the model provider ever seeing the data) and secure cloud analytics.
+
+FHE remains the least mature of the four primitives, with performance orders of magnitude slower than plaintext computation, but the trajectory is encouraging: performance has been improving at roughly 10x per year, and hardware acceleration through FPGAs and ASICs is an active area of development.
+
+<TrustPrimitivesComparison />
 
 <PullQuote>
-The shift from institutional trust to programmable trust is not about eliminating intermediaries. It is about replacing intermediaries that require data disclosure with mathematical proofs that require none. The trust is stronger, mathematics is harder to corrupt than institutions, and the privacy cost is zero.
+The shift from institutional trust to programmable trust is not about eliminating intermediaries. It is about replacing intermediaries that require data disclosure with mathematical proofs that require none. The trust is stronger: mathematics is harder to corrupt than institutions. And the privacy cost is zero.
 </PullQuote>
+
+## The Cost of Code-as-Trust
+
+Programmable trust is not without its own failure modes. When trust is encoded in software, the attack surface shifts from human corruption to code vulnerability. The history of DeFi is a history of this tradeoff.
+
+Between 2020 and 2025, estimated losses from smart contract exploits, bridge hacks, and operational security failures exceeded $12 billion. The year 2025 alone saw an estimated $2.9 to $4 billion in losses, dominated by the Bybit supply-chain attack ($1.4 billion), which compromised signing infrastructure rather than contract code. The Kelp DAO and Drift Protocol exploits in early 2026 further demonstrated that even audited protocols with professional security reviews remain vulnerable to complex, multi-vector attacks.
+
+The smart contract audit market has grown to approximately $1.8 billion (2025), with projections reaching $7.6 billion by 2034. But a recurring pattern in 2025 was that many exploited protocols had previously undergone professional security audits. The lesson is that traditional point-in-time code audits are necessary but insufficient for complex, highly composable DeFi systems. The industry is moving toward continuous, integrated security: real-time monitoring, formal verification, and AI-powered vulnerability detection alongside human expert review.
+
+<DeFiSecurityChart />
+
+<SectionLabel label="The Application Stack" />
 
 ## The Application Stack
 
-Programmable trust enables transaction types that are impossible with institutional trust.
+Programmable trust enables transaction types that are structurally impossible with institutional trust, because they require verification without disclosure.
 
-**Private identity verification.** A credential issuer (government, university, employer) signs a verifiable credential. The holder stores it in a digital wallet. When verification is needed, the holder generates a ZKP proving a specific property (age, degree, employment status) without revealing the credential itself. No central database is queried. No personal data is transmitted.
+**Private identity verification.** A credential issuer (government, university, employer) signs a verifiable credential conforming to the [W3C Verifiable Credentials](https://www.w3.org/TR/vc-data-model-2.0/) specification. The holder stores it in a digital wallet. When verification is needed, the holder generates a ZKP proving a specific property (age, degree, employment status) without revealing the credential itself. No central database is queried. No personal data is transmitted. The EU's eIDAS 2.0 regulation mandates that all 27 Member States provide compliant EUDI Wallets to citizens by December 31, 2026, with regulated private services required to accept them by late 2027. This is the first sovereign mandate for selective-disclosure identity at continental scale: 450 million citizens with ZKP-compatible digital wallets.
 
-**Confidential DeFi.** Current DeFi protocols operate on public blockchains where all transaction data is visible. [Aztec](https://aztec.network/) and [Aleo](https://www.aleo.org/) are building privacy-preserving DeFi protocols where transaction amounts, sender/receiver identities, and asset types are hidden behind ZKPs while maintaining the verifiability that DeFi requires.
+**Confidential DeFi.** Current DeFi protocols operate on public blockchains where all transaction data is visible. [Aztec](https://aztec.network/) and [Aleo](https://www.aleo.org/) are building privacy-preserving DeFi protocols where transaction amounts, sender/receiver identities, and asset types are hidden behind ZKPs while maintaining the verifiability that DeFi requires. This addresses a fundamental barrier to institutional DeFi adoption: no hedge fund will execute a $50 million trade on a ledger where every competitor can see its positions in real time.
 
-**Regulatory compliance without disclosure.** A financial institution can prove to a regulator that it meets capital adequacy requirements, conducts proper KYC/AML screening, and follows sanctions protocols, using ZKPs, without revealing the underlying customer data. The regulator gets the assurance it needs. The customers retain their privacy. The institution reduces its data liability.
+**Regulatory compliance without disclosure.** A financial institution can prove to a regulator that it meets capital adequacy requirements, conducts proper KYC/AML screening, and follows sanctions protocols, all using ZKPs, without revealing the underlying customer data. The regulator gets the assurance it needs. The customers retain their privacy. The institution reduces its data liability. Chainlink's DECO protocol is specifically designed for this use case: proving attestations about off-chain data to on-chain systems.
 
-**Supply chain verification.** A manufacturer can prove its supply chain meets environmental or labor standards (through TEE-secured audit data) without revealing supplier identities, contract terms, or production volumes, information that competitors could exploit.
+**Supply chain verification.** A manufacturer can prove its supply chain meets environmental or labor standards (through TEE-secured audit data) without revealing supplier identities, contract terms, or production volumes: information that competitors could exploit.
 
-<Callout type="info" title="Programmable Trust Primitives Compared">
+**Cross-border payments.** The correspondent banking system processes roughly $28 trillion in annual cross-border payment flows through a chain of intermediaries, each adding cost and delay. Stablecoin transfers with ZKP identity attestations could reduce settlement from days to seconds while maintaining regulatory compliance, without requiring the sender's full financial history to traverse multiple jurisdictions.
 
-| Primitive | Trust Basis | Data Privacy | Speed | Deployment |
-|---|---|---|---|---|
-| **ZKP** | Mathematics | Full | Fast verification, slow proving | ZK rollups, identity, DeFi |
-| **TEE** | Hardware | Hardware-enforced | Near-native speed | Cloud, mobile, IoT |
-| **MPC** | Protocol | Distributed | Slower (communication overhead) | Custody, joint analytics |
-| **FHE** | Mathematics | Full (compute on encrypted data) | Very slow (improving) | Research, early deployment |
+<TrustApplicationDomains />
 
-</Callout>
+## The Regulatory Catalyst
+
+The EU's eIDAS 2.0 regulation represents a paradigm shift in how governments approach digital identity. Rather than building centralized identity databases (the model that produced Equifax-scale breaches), eIDAS 2.0 mandates a decentralized, user-controlled architecture where citizens store credentials in personal wallets and selectively disclose specific properties through cryptographic proofs.
+
+The technical architecture of the EUDI Wallet is designed around the principles of programmable trust. The wallet supports W3C Verifiable Credentials, enabling interoperability across issuers and verifiers. It implements selective disclosure, allowing users to prove specific claims (age verification, nationality, professional qualifications) without revealing unnecessary data. It includes support for Qualified Electronic Signatures (QES), creating legally binding digital signatures from a smartphone.
+
+The regulatory mandate creates a forcing function for adoption that purely market-driven approaches have lacked. When banks, telecoms, and healthcare providers are legally required to accept ZKP-based identity attestations, the infrastructure investment follows. The EU's 450 million citizens represent the first continental-scale deployment of programmable trust principles in a regulated context.
+
+<DigitalIdentityTimeline />
 
 ## The Trust Stack
 
-The trajectory is toward a layered trust stack that combines these primitives:
+The trajectory is toward a layered trust stack that combines all four primitives into a unified verification infrastructure.
 
-**Layer 1: Hardware trust.** TEEs provide the physical security boundary. Data enters and exits encrypted. Processing occurs inside tamper-proof enclaves.
+**Layer 1: Hardware trust.** TEEs provide the physical security boundary. Data enters and exits encrypted. Processing occurs inside tamper-proof enclaves. Intel SGX, AMD SEV, Apple Secure Enclave, and AWS Nitro Enclaves establish the foundation.
 
-**Layer 2: Cryptographic verification.** ZKPs provide mathematical proof of facts. No data is revealed. No third party is required.
+**Layer 2: Cryptographic verification.** ZKPs provide mathematical proof of facts. No data is revealed. No third party is required. FHE enables computation on encrypted data for use cases requiring full data privacy throughout the processing pipeline.
 
-**Layer 3: Protocol coordination.** MPC allows multiple parties to compute joint results without sharing inputs. No single point of failure or disclosure.
+**Layer 3: Protocol coordination.** MPC allows multiple parties to compute joint results without sharing inputs. Cross-chain bridges, sequencers, and data availability layers coordinate state across multiple verification systems.
 
-**Layer 4: Application logic.** Smart contracts, identity systems, and financial protocols built on top of the trust stack, inheriting its privacy and verification properties.
+**Layer 4: Application logic.** Smart contracts, identity wallets, DeFi protocols, and supply chain systems built on top of the trust stack, inheriting its privacy and verification properties.
 
-The collective effect: transactions that currently require extensive data disclosure (mortgage applications, insurance claims, medical referrals, background checks) can be restructured around proof rather than exposure. The applicant does not reveal their entire financial history. They prove specific properties of it, mathematically, and the verifier has higher confidence in the proof than they would in a stack of disclosed documents.
+<TrustStackArchitecture />
+
+The collective effect is transformative: transactions that currently require extensive data disclosure (mortgage applications, insurance claims, medical referrals, background checks, cross-border payments) can be restructured around proof rather than exposure. The applicant does not reveal their entire financial history. They prove specific properties of it, mathematically, and the verifier has higher confidence in the proof than they would in a stack of disclosed documents, because mathematics is harder to forge than paper.
+
+<TrustComparisonChart />
 
 <KeyTakeaway>
-Programmable trust replaces institutional verification (banks, courts, notaries) with mathematical proof. Three primitives enable this: Zero-Knowledge Proofs (prove facts without revealing data, securing $100B+ in DeFi via ZK rollups), Trusted Execution Environments (hardware-enforced secure enclaves, billions of devices via Intel SGX, Apple Secure Enclave), and Multi-Party Computation (joint computation without input disclosure, used by Fireblocks for institutional crypto custody). Applications include private identity verification, confidential DeFi, regulatory compliance without data disclosure, and supply chain auditing. The trajectory is a layered trust stack combining hardware security (TEE), mathematical verification (ZKP), protocol coordination (MPC), and application logic (smart contracts), enabling transactions structured around proof instead of exposure.
+Programmable trust replaces institutional verification (banks, courts, notaries) with mathematical proof. Four primitives enable this: Zero-Knowledge Proofs (verify facts without revealing data, $28B TVL in ZK-rollups), Trusted Execution Environments (hardware-enforced enclaves in billions of devices), Multi-Party Computation (joint computation without input disclosure, used by Fireblocks and Chainlink DECO), and Fully Homomorphic Encryption (compute on encrypted data, early commercial via Zama and Microsoft SEAL). The EU's eIDAS 2.0 mandates ZKP-compatible digital identity wallets for 450 million citizens by December 2026, the first sovereign-scale deployment of programmable trust. The cost of code-as-trust is real: $12B+ lost to smart contract exploits since 2020, driving the audit market to $1.8B. But the structural advantages (millisecond verification, zero data disclosure, 24/7 availability, borderless operation) represent an irreversible shift from trust-through-exposure to trust-through-proof.
 </KeyTakeaway>
