@@ -3,26 +3,53 @@
 ## Brand Visual Identity
 
 ### Color Palette
-- **Primary Background**: Dark navy/charcoal (#0f172a to #1e293b) — used across all infographics
-- **Accent Colors**: Electric blue (#3b82f6), cyan (#06b6d4), violet (#8b5cf6)
-- **Text**: White (#ffffff) for headings, light gray (#94a3b8) for body
-- **Highlights**: Amber (#f59e0b) for emphasis, emerald (#10b981) for positive/success
-- **Avoid**: Pure red, neon green, or any garish primary colors
+- **Primary Background**: Clean white (#ffffff) or light warm gray (#f7f6f3)
+- **Text**: Near-black (#37352f) for headings, muted foreground for body text
+- **Accent Colors**: Primary brand color, plus curated hues per essay (e.g., hsl(210 90% 40%) for blue, hsl(160 80% 35%) for green)
+- **Borders**: Light gray (#e3e3e0) for cards, charts, and separators
+- **Highlights**: Red hsl(0 70% 50%) for negative/decline, green hsl(160 80% 35%) for positive/growth, amber hsl(45 80% 50%) for neutral/transition
+- **Avoid**: Pure neon colors, garish primary colors, dark/black backgrounds
 
 ### Typography
 - **Headings**: Bold, clean sans-serif (Inter, SF Pro, or similar)
-- **Body**: Regular weight, high contrast against dark backgrounds
+- **Body**: Regular weight, high contrast against light backgrounds
 - **Numbers/Stats**: Extra bold, oversized — numbers are visual anchors
-- **Minimum text size**: Always readable at mobile resolution (1080px wide)
+- **Chart labels**: text-xs (12px) for axis labels, text-[10px] for source attribution, text-[11px] for data labels
+- **Minimum text size**: Always readable at mobile resolution
 
 ### Layout Principles
-- **Dark mode always** — every infographic uses a dark background
+- **Light mode always** — every infographic and chart uses a light/white background
 - **Generous whitespace** — never cramped, let elements breathe
 - **Visual hierarchy**: One clear focal point per image
-- **Aspect ratio**: 1:1 (1080×1080) for social posts, 16:9 for X/LinkedIn headers
+- **Aspect ratio**: 800×400 for essay hero SVGs, 1:1 (1080×1080) for social posts
 - **No stock photos** — always custom-generated or data-driven visuals
+- **Colored left borders** (3px) to categorize layers in market maps and multi-section charts
 
-## Infographic Types
+## Chart Component Standards
+
+### React Chart Components (MDX inline)
+All chart components rendered inside essays follow these rules:
+- **File location**: `src/components/mdx/{essay-slug}-charts.tsx`
+- **Directive**: Must include `'use client'` at top
+- **Container**: `<figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">`
+- **Title**: `text-lg md:text-xl font-bold tracking-tight` in `#37352f`
+- **Subtitle**: `text-xs text-muted-foreground uppercase tracking-widest font-semibold`
+- **Source line**: `text-[10px] text-muted-foreground/60` at bottom of chart
+- **Bar fills**: Use `opacity: 0.6` or `0.65` for bar chart fills
+- **Background tints**: Use color + `'08'` or `'10'` suffix for light tinted backgrounds
+- **Registration**: Import in `src/app/[slug]/page.tsx` and add to MDXRemote `components` map
+
+### Chart Types
+| Type | Use For | Example |
+|------|---------|---------|
+| Horizontal bar chart | Growth over time, rankings | AINewsSiteGrowth, ApiTrafficChart |
+| Split comparison card | Binary contrasts (true vs false) | MisinfoSpreadChart |
+| Timeline with dots | Historical arcs, evolution | GUITimeline |
+| Market map with layers | Competitive landscape, stack layers | ZeroUIMarketMap |
+| Stat grid (3-4 cols) | Partisan breakdown, category comparison | MediaTrustChart |
+| Data table in Callout | Multi-dimension comparison | Simulation cost table |
+
+## Infographic Types (Social Media)
 
 ### 1. Data Stat Cards
 **Use for**: Single striking statistic with context
@@ -31,46 +58,24 @@
 - One-line context below
 - Source attribution in bottom corner
 - Brand watermark (veda.ng) discretely placed
-
-**Prompt template**:
-```
-Professional dark-themed infographic card. Large bold statistic "[NUMBER]" 
-prominently displayed in white text. Subtitle: "[CONTEXT]". 
-Dark navy background (#0f172a) with subtle gradient. Modern sans-serif 
-typography. Clean, minimal design. No icons. Source text small at bottom.
-```
+- **Light background** with subtle accent color
 
 ### 2. Comparison/Contrast Cards
 **Use for**: Before/after, old vs new, expectation vs reality
 **Structure**:
 - Split layout (left vs right or top vs bottom)
-- Contrasting colors for each side
+- Contrasting accent colors for each side
 - Clear labels
 - Optional connecting element (arrow, vs symbol)
-
-**Prompt template**:
-```
-Dark-themed split comparison infographic. Left side: "[CONCEPT A]" with 
-[COLOR A] accent. Right side: "[CONCEPT B]" with [COLOR B] accent. 
-Dark background. Clean separation. Modern typography. Professional layout. 
-Minimal design with high contrast text.
-```
+- **Light background** with colored borders
 
 ### 3. List/Framework Cards
-**Use for**: Top 5 reasons, 3-step frameworks, psychological concepts
+**Use for**: Top 5 reasons, 3-step frameworks, key findings
 **Structure**:
 - Numbered or bulleted list
 - Each item has a short title + one-line explanation
 - Consistent formatting across items
 - Header establishing the topic
-
-**Prompt template**:
-```
-Dark-themed infographic showing a numbered list of [N] items about 
-"[TOPIC]". Each item has a bold title and brief description. 
-Dark navy background. Clean modern layout. White and cyan text. 
-Professional and minimal. No decorative elements.
-```
 
 ### 4. Quote/Insight Cards
 **Use for**: Key observations, essay highlights, provocative claims
@@ -80,13 +85,6 @@ Professional and minimal. No decorative elements.
 - Optional subtle background graphic
 - Brand watermark
 
-**Prompt template**:
-```
-Dark-themed quote card. Large text: "[QUOTE]" in white on dark navy 
-background (#0f172a). Subtle blue gradient accent. Author attribution 
-below. Modern sans-serif font. Clean, premium design. Minimal.
-```
-
 ### 5. Process/Flow Diagrams
 **Use for**: How something works, timeline of events, causal chains
 **Structure**:
@@ -94,14 +92,6 @@ below. Modern sans-serif font. Clean, premium design. Minimal.
 - Connected nodes with labels
 - Arrows or lines showing progression
 - Clear start and end points
-
-**Prompt template**:
-```
-Dark-themed process flow diagram showing [N] steps of "[PROCESS]". 
-Connected nodes with arrows. Each step has an icon and label. 
-Dark background with glowing accent lines. Modern, technical aesthetic. 
-Clean typography.
-```
 
 ## Content + Image Pairing Rules
 
@@ -186,12 +176,15 @@ Examples:
 ## Quality Checklist
 
 Before publishing any visual content:
-- [ ] Dark background (not white, not gray)
+- [ ] Light background (white or light gray, NOT dark)
 - [ ] Text is readable at mobile resolution
 - [ ] No spelling errors in image text
 - [ ] No AI slop phrases in image text
-- [ ] Numbers/stats are accurate and sourced
+- [ ] No em-dashes anywhere in text
+- [ ] Numbers/stats are accurate and verified against primary sources
+- [ ] All sources are hyperlinked where possible
 - [ ] veda.ng watermark present (if promoting tools)
 - [ ] Image complements post text, doesn't duplicate it
 - [ ] File size appropriate for target platform
 - [ ] Unique image (not reused from another post)
+- [ ] Chart components registered in page.tsx

@@ -29,6 +29,7 @@ import { UIComplexityComparison, APIAbstractionLayer, TextUIAdoption, PlatformSh
 import { StepwiseMaturityModel, ROIImpactStats } from '@/components/mdx/stepwise-charts';
 import { DigitalGovMaturity, EResidencyImpact, AgenticStateArchitecture } from '@/components/mdx/agentic-state-charts';
 import { ApiTrafficChart, ZeroUIMarketMap, SaaSPricingShift, AttentionCollapseChart, GUITimeline, FrontendDeclineChart, HardwarePivotGrid } from '@/components/mdx/post-interface-charts';
+import { AINewsSiteGrowth, MisinfoSpreadChart, MediaTrustChart } from '@/components/mdx/plurality-trap-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -340,6 +341,9 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               GUITimeline,
               FrontendDeclineChart,
               HardwarePivotGrid,
+              AINewsSiteGrowth,
+              MisinfoSpreadChart,
+              MediaTrustChart,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img

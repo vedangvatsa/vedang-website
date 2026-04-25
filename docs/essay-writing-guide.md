@@ -2,7 +2,7 @@
 
 ## Essay Library Overview
 
-40 essays at `veda.ng/essays/{slug}`, written in MDX format at `src/content/essays/`.
+48 essays at `veda.ng/essays/{slug}`, written in MDX format at `src/content/essays/`.
 
 ## Thematic Categories
 
@@ -21,6 +21,7 @@
 | Synthetic Empathy | synthetic-empathy | When machines simulate genuine emotional understanding |
 | Towards the Agentic Web | towards-the-agentic-web | The internet evolving from pages to agents |
 | Governance in the Age of AGI | agi-governance | How governance structures must adapt for AGI |
+| The Post-Interface Internet | post-interface-internet | The GUI era is ending; agents interact through protocols, not screens |
 
 ### Internet & Digital Society
 | Essay | Slug | Core Argument |
@@ -32,6 +33,7 @@
 | Cognitive Load Crisis | cognitive-load | Modern digital life exceeds human processing capacity |
 | Sensory Internet | sensory-internet | The internet expanding beyond visual/text to all senses |
 | Pseudonymous Agency | pseudonymous-agency | Freedom through strategic identity management |
+| The Plurality Trap | plurality-trap | More information produces less shared understanding |
 
 ### Economics & Geopolitics
 | Essay | Slug | Core Argument |
@@ -39,7 +41,7 @@
 | From Cheap to Competitive | cheap-to-competitive | India's transition from cost arbitrage to genuine quality |
 | Bureaucracy is the friction tax | bureaucracy-tax | Bureaucracy is an invisible drag on everything |
 | Hustle culture is a cage | hustle-culture | Hustle culture exploits workers while pretending to empower them |
-| The Infinity Economy | infinity-economy | Digital goods have zero marginal cost — implications |
+| The Infinity Economy | infinity-economy | Digital goods have zero marginal cost, with implications |
 | The Mesh Economy | mesh-economy | Decentralized, interconnected economic networks |
 | Twilight Economy | twilight-economy | The economy between old systems dying and new ones emerging |
 | Lessons from Singapore's Arc | singapores-arc | What other nations can learn from Singapore's deliberate development |
@@ -69,18 +71,36 @@
 ## Writing Style Rules
 
 ### Structure
-- **Length**: 1500-3000 words. Long enough to develop an argument, short enough to finish in one sitting.
+- **Length**: 3,500-4,500 words. Each essay is a McKinsey-grade research piece with charts, data visualizations, and verified statistics.
 - **Opening**: Start with a concrete observation, historical fact, or provocative claim. NEVER start with a definition or "In today's world..."
-- **Body**: Build the argument through specific examples, data, and analogies. Each section should advance the thesis, not repeat it.
+- **Body**: Build the argument through specific examples, data, and analogies. Each section should advance the thesis, not repeat it. Pair every core claim with a StatRow, chart component, or data table.
 - **Closing**: End with an implication or unanswered question. NOT a summary of what was just said.
 
 ### MDX Components Used
 ```tsx
 <SectionLabel label="Section Title" />     // Section dividers
-<PullQuote quote="Key insight" />          // Highlighted quotes
-<Callout text="Important context" />       // Info callouts
-<KeyTakeaway text="Core lesson" />         // Summary takeaways
+<PullQuote>Key insight text</PullQuote>     // Highlighted quotes (uses children, NOT quote prop)
+<Callout type="insight" title="Title">     // Info callouts with typed variants
+  Content here
+</Callout>
+<KeyTakeaway>Core lesson text</KeyTakeaway> // Summary takeaways (uses children)
+<StatRow>                                   // Data stat rows (McKinsey-style)
+  <Stat value="51%" label="Description" source="Source Name" sourceUrl="https://..." />
+</StatRow>
 ```
+
+### Custom Chart Components
+Each essay should have its own chart file at `src/components/mdx/{essay-slug}-charts.tsx`. Charts must:
+- Use `'use client'` directive
+- Follow light-mode aesthetic (white bg, `#37352f` text, `#e3e3e0` borders)
+- Include source attribution in `text-[10px] text-muted-foreground/60`
+- Be registered in `src/app/[slug]/page.tsx` (import + component mapping)
+- Use verified data with hyperlinked sources where possible
+
+### Formatting Rules
+- **No em-dashes** (`—`). Use commas, colons, semicolons, or restructure the sentence.
+- **No dark backgrounds** in inline components. All charts and infographics use light backgrounds matching the site theme.
+- **Hyperlink all sources**. Every cited organization should link to the source report/page.
 
 ### Voice
 - **First person sparingly** — "The data shows..." not "I believe..."
@@ -90,7 +110,7 @@
 - **Intellectual honesty** — Acknowledge counterarguments and limitations
 
 ### Banned Phrases (AI Slop)
-These phrases have been purged from all 40 essays. Never reintroduce them:
+These phrases have been purged from all essays. Never reintroduce them:
 
 | Banned | Use Instead |
 |--------|-------------|
@@ -127,16 +147,22 @@ description: "One-sentence summary for SEO and social previews"
 ## Research & Citation Standards
 
 - Vedang has **22 academic publications** (IEEE, IOSR, international journals)
-- Essays should reference specific data points, not vague claims
+- **All data must be verified against primary sources** before publication. Never use fabricated statistics or projections presented as fact.
 - When citing research: mention the institution/source, not just "studies show"
-- Preferred citation style: inline with parenthetical source notes
+- Preferred citation style: inline with parenthetical source notes and hyperlinks
 - Original research and primary sources preferred over news articles
+- **Accepted sources**: Gallup, Pew Research, Gartner, McKinsey, Edelman Trust Barometer, Imperva, Reuters Institute, Crunchbase, Tracxn, peer-reviewed journals (Science, Nature, PNAS)
+- **If a statistic cannot be verified**, label it clearly as "illustrative" or "directional estimate" with honest sourcing
 
 ## Essay Pipeline
 
 1. **Ideation**: Identify a counter-narrative or underexplored angle on a trending topic
-2. **Research**: 3-5 specific data points or historical examples to anchor the argument
-3. **Draft**: Write in MDX with components for visual breaks
-4. **Edit**: Run through AI slop filter, ensure every paragraph advances the thesis
-5. **Publish**: Add to `src/content/essays/`, deploy, then schedule cross-posts
-6. **Promote**: Create 2-3 short-form posts across platforms linking to the essay
+2. **Research**: 5-10 specific, verified data points from primary sources to anchor the argument
+3. **Draft**: Write in MDX with StatRows, chart components, and tables for data density
+4. **Chart creation**: Build custom React chart components at `src/components/mdx/{slug}-charts.tsx`
+5. **Registration**: Import and register chart components in `src/app/[slug]/page.tsx`
+6. **Fact-check**: Verify every number against its cited source. Remove or relabel anything unverifiable.
+7. **Style audit**: Check for em-dashes, banned phrases, dark backgrounds, broken component syntax
+8. **Build test**: Run `npx next build` to verify compilation
+9. **Publish**: Deploy, then schedule cross-posts
+10. **Promote**: Create 2-3 short-form posts across platforms linking to the essay
