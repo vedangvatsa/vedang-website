@@ -36,6 +36,7 @@ import { SensoryBandwidthChart, HapticGenerationsChart, SpatialComputingAdoption
 import { GodProtocolComparison, TTPEvolutionTimeline, PrivacyTechStack, TTPMarketScale, DistributedArchitectureChart, AlignmentFrameworkChart } from '@/components/mdx/god-protocol-charts';
 import { TrustPrimitivesComparison, DeFiSecurityChart, TrustStackArchitecture, TrustComparisonChart, DigitalIdentityTimeline, TrustApplicationDomains } from '@/components/mdx/programmable-trust-charts';
 import { IdentitySpectrumChart, PseudonymousSuccessCases, ReputationInfraChart, ParticipationExpansionChart, DecentralizedIdentityMarket } from '@/components/mdx/pseudonymous-agency-charts';
+import { GovernanceEffectivenessChart, DAOVoterParticipation, VotingMechanismChart, GovernanceStackChart } from '@/components/mdx/computational-constitutions-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -382,6 +383,10 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               ReputationInfraChart,
               ParticipationExpansionChart,
               DecentralizedIdentityMarket,
+              GovernanceEffectivenessChart,
+              DAOVoterParticipation,
+              VotingMechanismChart,
+              GovernanceStackChart,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img

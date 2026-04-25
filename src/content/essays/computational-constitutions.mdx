@@ -18,81 +18,107 @@ A constitution is a set of rules that govern how collective decisions are made, 
 
 ## The Legal Status
 
-Smart contracts as governance instruments have achieved formal legal recognition in at least one US jurisdiction.
+Smart contracts as governance instruments have achieved formal legal recognition in multiple jurisdictions.
 
-[Wyoming](https://www.wyoleg.gov/) passed the first DAO LLC statute in 2021, allowing decentralized autonomous organizations to register as limited liability companies with smart contracts serving as their operating agreements. The statute permits "algorithmically managed" LLCs. Entities where governance decisions are executed by code rather than human officers.
+[Wyoming](https://www.wyoleg.gov/) passed the first DAO LLC statute in 2021, allowing decentralized autonomous organizations to register as limited liability companies with smart contracts serving as their operating agreements. The statute permits "algorithmically managed" LLCs: entities where governance decisions are executed by code rather than human officers. The legal innovation was significant: for the first time, a US jurisdiction recognized that a computer program could serve as a valid corporate operating agreement.
 
 <StatRow>
 <Stat value="2021" label="Wyoming DAO LLC statute enacted" source="Wyoming Legislature" sourceUrl="https://www.wyoleg.gov/" />
-<Stat value="$100B+" label="Total Value Locked in DeFi protocols" source="DeFiLlama" sourceUrl="https://defillama.com/" />
+<Stat value="$85B" label="DeFi TVL (April 2026)" source="DeFiLlama" sourceUrl="https://defillama.com/" />
 <Stat value="1,000+" label="Active DAOs with treasury governance" source="DeepDAO" sourceUrl="https://deepdao.io/" />
-<Stat value="$40B+" label="DAO-managed treasury assets" source="DeepDAO" />
+<Stat value="~17%" label="Average DAO voter turnout (2025)" source="DeepDAO, Tally" />
 </StatRow>
 
-The [Wyoming DUNA](https://www.jdsupra.com/) (Decentralized Unincorporated Nonprofit Association) framework, introduced subsequently, provides an additional legal wrapper for non-profit-oriented decentralized communities. These structures allow DAOs to open bank accounts, sign contracts, pay employees, and interact with the traditional legal system, bridging the gap between on-chain governance and off-chain reality.
+The [Wyoming DUNA](https://www.wyoleg.gov/) (Decentralized Unincorporated Nonprofit Association) framework, introduced subsequently, provides an additional legal wrapper for non-profit-oriented decentralized communities. These structures allow DAOs to open bank accounts, sign contracts, pay employees, and interact with the traditional legal system, bridging the gap between on-chain governance and off-chain legal reality.
 
-[Delaware](https://corp.delaware.gov/), the default incorporation state for US startups, does not have a specific DAO statute. It provides the mature Court of Chancery and extensive legal precedent that venture-backed entities require. The choice between Wyoming (low cost, privacy, smart-contract-native governance) and Delaware (legal predictability, institutional investor familiarity) reflects a fundamental tension: computational constitutions operate most naturally in Wyoming's framework, but the capital they need to attract is most comfortable in Delaware's.
+[Delaware](https://corp.delaware.gov/), the default incorporation state for US startups and home to over 60% of Fortune 500 companies, does not have a specific DAO statute but provides the mature Court of Chancery and extensive legal precedent that venture-backed entities require. The choice between Wyoming (low cost, privacy, smart-contract-native governance) and Delaware (legal predictability, institutional investor familiarity) reflects a fundamental tension: computational constitutions operate most naturally in Wyoming's framework, but the capital they need to attract is most comfortable in Delaware's.
+
+In February 2025, [Cardano](https://cardano.org/) ratified the first on-chain blockchain constitution, a document defining core values, decision-making processes, and parameter guardrails enforced by a Constitutional Committee. This was the first instance of a major blockchain protocol formalizing its governance into a ratified constitutional document stored and enforced on-chain, rather than relying on informal social contracts or off-chain governance frameworks.
 
 ## The Governance Stack
 
-A computational constitution operates on [Ethereum](https://ethereum.org/) or compatible blockchains through a layered governance stack:
+A computational constitution operates on [Ethereum](https://ethereum.org/) or compatible blockchains through a layered governance stack that mirrors, in structure, the separation of powers in traditional constitutional systems.
 
-**Token-weighted voting.** Governance tokens represent voting power. Holders propose and vote on changes to the protocol. Parameter adjustments, treasury allocations, strategic decisions. [Uniswap](https://uniswap.org/) governance, for example, requires a minimum of 2.5 million UNI tokens to submit a proposal and a quorum of 40 million UNI to pass it.
+**Token-weighted voting.** Governance tokens represent voting power. Holders propose and vote on changes to the protocol: parameter adjustments, treasury allocations, strategic decisions. [Uniswap](https://uniswap.org/) governance, for example, requires a minimum of 2.5 million UNI tokens to submit a proposal and a quorum of 40 million UNI to pass it. In December 2025, the Uniswap DAO passed the landmark "UNIfication" proposal with over 125 million votes in favor versus only 742 against, authorizing a one-time burn of 100 million UNI tokens and activating a protocol fee switch on the Ethereum mainnet.
 
-**Smart contract execution.** If a proposal passes, the corresponding smart contract executes automatically. No human intermediary approves or implements the decision. The code enforces the outcome. If the vote approves a treasury transfer, the funds move. If it approves a parameter change, the parameter changes.
+**Smart contract execution.** If a proposal passes, the corresponding smart contract executes automatically. No human intermediary approves or implements the decision. The code enforces the outcome. If the vote approves a treasury transfer, the funds move. If it approves a parameter change, the parameter changes. This is the critical distinction from traditional governance: enforcement is not discretionary. It is deterministic.
 
-**Time locks.** Passed proposals typically enter a time-delay period (24-72 hours) before execution, allowing community members to review and, if necessary, exit the protocol before the change takes effect. This is the computational equivalent of a comment period.
+**Time locks.** Passed proposals typically enter a time-delay period (24-72 hours) before execution, allowing community members to review and, if necessary, exit the protocol before the change takes effect. OpenZeppelin's TimelockController is the standard implementation. This is the computational equivalent of a constitutional comment period.
 
-**Multi-signature safeguards.** Critical functions (emergency pauses, contract upgrades) often require multiple designated signers to authorize, distributing control and preventing unilateral action.
+**Multi-signature safeguards.** Critical functions (emergency pauses, contract upgrades) often require multiple designated signers to authorize through [Gnosis Safe](https://safe.global/) or equivalent multi-sig wallets, distributing control and preventing unilateral action. This serves as a rudimentary separation of powers: the legislature (token holders) cannot bypass the executive (multi-sig signers) for emergency actions.
+
+**Dispute resolution.** Increasingly, protocols are adding a human judgment layer for ambiguous cases. [Kleros](https://kleros.io/) provides decentralized arbitration through randomly selected jurors who assess evidence and render appealable decisions. [Aragon Court](https://aragon.org/) offers similar functionality within the Aragon DAO framework. These systems combine on-chain evidence submission with human interpretation, creating a hybrid judiciary.
+
+<GovernanceStackChart />
 
 <PullQuote>
 A smart contract does not ask whether a decision is just. It asks whether the decision was approved according to the procedures encoded in its logic. Procedural validity and substantive justice are not the same thing. And the gap between them is where computational constitutions face their hardest challenge.
 </PullQuote>
 
+## The Participation Crisis
+
+The most uncomfortable fact about computational constitutions in 2025 is that almost nobody votes.
+
+Average voter turnout across the DAO ecosystem hovers around 17% of token holders. Uniswap's voter participation, despite governing over $2.5 billion in treasury assets, averages roughly 17%. ENS DAO, governing the Ethereum Name Service, sees participation around 12%. The exception is Aave, where structured delegate incentive programs have pushed delegate participation rates above 80%, though this measures delegates rather than individual token holders.
+
+The pattern is striking: the most consequential governance systems in crypto, managing billions in assets, are controlled by a small fraction of their stakeholders. While the number of unique individual voters has declined, the total number of votes cast has often increased in major DAOs, indicating that voting power is concentrating in the hands of "mega-delegates" and institutional holders rather than being broadly distributed.
+
+This is not a technical failure. It is a structural consequence of token-weighted governance. When one token equals one vote, and token distribution follows a power law (as nearly all token distributions do), governance outcomes are determined by a small number of large holders. The MakerDAO governance crisis of 2023, where competing factions of large token holders fought for control of the protocol's direction and its subsequent restructuring into the "Sky" protocol under the "Endgame" roadmap, illustrated the problem vividly: computational constitutions inherit the plutocratic tendencies of whoever holds the most tokens.
+
+<DAOVoterParticipation />
+
+<SectionLabel label="The Amendment Problem" />
+
 ## The Amendment Problem
 
-Traditional constitutions are amended through deliberate, slow processes that involve public debate, legislative votes, executive approval, and sometimes popular referendum. The slowness is a feature: it prevents hasty changes driven by temporary majorities or crisis-driven emotion.
+Traditional constitutions are amended through deliberate, slow processes that involve public debate, legislative votes, executive approval, and sometimes popular referendum. The slowness is a feature: it prevents hasty changes driven by temporary majorities or crisis-driven emotion. The US Constitution has been amended only 27 times in 237 years.
 
-Smart contract governance can be amended far more rapidly. A proposal can be submitted, debated, and voted on within days. If the governance token distribution is concentrated, and in most protocols, it is, a small number of large holders can control outcomes. The 2023 governance crisis at [MakerDAO](https://makerdao.com/), where competing factions of large token holders fought for control of the protocol's direction, illustrated the problem: computational constitutions inherit the plutocratic tendencies of whoever holds the most tokens.
+Smart contract governance can be amended far more rapidly. A proposal can be submitted, debated, and voted on within days or even hours. If the governance token distribution is concentrated, and in most protocols it is, a small number of large holders can push through changes without meaningful community deliberation. The speed that makes computational governance efficient also makes it vulnerable to governance attacks: coordinated efforts by well-capitalized actors to seize control of protocol parameters for their own benefit.
 
-The technical response is emerging:
+Flash loan governance attacks represent the most extreme version of this vulnerability: an attacker borrows millions of dollars in governance tokens for a single block, votes to redirect treasury funds, and returns the borrowed tokens, all within a single transaction. The attack exploits the fact that token-weighted voting does not distinguish between committed long-term holders and momentary token borrowers. Protocols have responded with time-locking requirements, vote escrow mechanisms (where tokens must be locked for months or years to gain voting power), and snapshot-based voting that counts token balances at a predetermined block height.
 
-**Quadratic voting.** Instead of "one token, one vote," quadratic voting makes each additional vote on the same proposal progressively more expensive. This reduces the influence of large holders and gives greater relative weight to smaller participants. [Gitcoin](https://www.gitcoin.co/) uses quadratic funding, a related mechanism, to allocate grants for open-source development.
+## Beyond One-Token-One-Vote
 
-**Conviction voting.** Voters accumulate "conviction" over time by continuously staking their tokens on a proposal. Longer commitment periods produce stronger votes. This mechanism rewards sustained preference over impulsive voting.
+The recognized limitations of token-weighted voting have driven a wave of innovation in governance mechanism design.
 
-**Zero-knowledge voting.** [Zero-knowledge proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof) allow voters to prove they hold governance tokens and cast a vote without revealing their identity or their specific vote. This prevents vote buying, voter intimidation, and retaliatory behavior, the same protections that secret ballots provide in physical elections.
+**Quadratic voting.** Instead of "one token, one vote," quadratic voting makes each additional vote on the same proposal progressively more expensive. The cost of casting *n* votes is *n²* tokens. This reduces the influence of large holders: a whale with 1 million tokens gets only 1,000 votes under quadratic rules, while 1,000 small holders with 1 token each collectively get 1,000 votes as well. [Gitcoin](https://www.gitcoin.co/) uses quadratic funding, a related mechanism, to allocate grants for open-source development. The vulnerability is Sybil attacks: one person splitting their holdings across multiple wallets to circumvent the quadratic cost curve.
 
-## The $100 Billion Experiment
+**Conviction voting.** Voters accumulate "conviction" over time by continuously staking their tokens on a proposal. Longer commitment periods produce stronger votes. This mechanism rewards sustained preference over impulsive voting and naturally filters out flash loan attacks. [1Hive](https://1hive.org/) and the Gardens framework pioneered this approach.
 
-Over **$100 billion in total value** is locked in DeFi (Decentralized Finance) protocols governed by computational constitutions, according to [DeFiLlama](https://defillama.com/). [DeepDAO](https://deepdao.io/) tracks over 1,000 active DAOs managing more than **$40 billion** in combined treasury assets.
+**Delegation.** Rather than voting directly, token holders delegate their voting power to specialized delegates who participate actively. Aave's delegate incentive program, which ties delegate compensation to minimum participation requirements (maintaining >80% voting rates), has produced significantly higher engagement than protocols without delegation incentives. The risk is centralization: a small number of "mega-delegates" accumulating disproportionate influence.
 
-These are not pilot programs. They are production governance systems managing material economic resources. [Aave](https://aave.com/)'s governance controls a lending protocol with billions in deposits. [Compound](https://compound.finance/)'s governance manages interest rate parameters that affect thousands of borrowers and lenders. [ENS DAO](https://ens.domains/) governs the Ethereum Name Service, the DNS-equivalent for blockchain addresses.
+**Futarchy.** Proposed by economist Robin Hanson, futarchy separates goal-setting from policy evaluation: "vote on values, bet on beliefs." Community members define desired outcomes (increase TVL, reduce costs, grow user base) and prediction markets determine which policy proposals are most likely to achieve those outcomes. In March 2025, [Optimism](https://optimism.io/) conducted a 21-day futarchy experiment using 500,000 OP tokens. The experiment provided valuable data but highlighted challenges including high user friction, sensitivity to asset price volatility, and the difficulty of designing metrics resistant to manipulation.
 
-The track record is mixed. On-chain governance has proven effective for technical parameter adjustments (interest rates, collateral ratios, fee structures) where the decision space is well-defined and the consequences are measurable. It has proven less effective for strategic direction-setting, conflict resolution, and decisions involving competing values. The domains where human judgment, negotiation, and contextual reasoning are most needed.
+**Zero-knowledge private ballots.** ZKPs allow voters to prove they hold governance tokens and cast a vote without revealing their identity or their specific vote choice. This prevents vote buying, voter intimidation, and retaliatory behavior, the same protections that secret ballots provide in physical elections. [MACI](https://maci.pse.dev/) (Minimum Anti-Collusion Infrastructure), developed by the Ethereum Foundation's Privacy & Scaling Explorations team, implements ZK-based voting with anti-collusion properties.
 
-<Callout type="info" title="Where Computational Constitutions Work and Where They Don't">
+<VotingMechanismChart />
 
-| Decision Type | Computational Constitution | Human Governance |
-|---|---|---|
-| Parameter adjustment (rates, fees) | ✅ Effective | ⬜ Unnecessary |
-| Treasury allocation | ⚠️ Works with checks | ✅ Better for complex cases |
-| Strategic direction | ❌ Insufficient | ✅ Required |
-| Dispute resolution | ❌ Cannot assess context | ✅ Required |
-| Emergency response | ⚠️ Multi-sig works | ✅ Faster judgment |
+## The $85 Billion Experiment
 
-</Callout>
+As of April 2026, approximately $85 billion in total value is locked in DeFi protocols governed by computational constitutions, according to [DeFiLlama](https://defillama.com/). [DeepDAO](https://deepdao.io/) tracks over 1,000 active DAOs managing substantial treasury assets. These figures have fluctuated significantly: DeFi TVL peaked at approximately $277 billion in mid-2025 before contracting sharply following the Kelp DAO and Drift Protocol security exploits.
+
+These are not pilot programs or academic experiments. They are production governance systems managing material economic resources under adversarial conditions. [Aave](https://aave.com/)'s governance controls a lending protocol with billions in deposits and implemented a $50 million annual buyback program funded entirely by protocol revenue. [Compound](https://compound.finance/)'s governance manages interest rate parameters that affect thousands of borrowers and lenders in real time. [ENS DAO](https://ens.domains/) governs the Ethereum Name Service, the DNS-equivalent for blockchain addresses, managing over $600 million in treasury assets.
+
+The track record after several years of operation is instructive. On-chain governance has proven effective for technical parameter adjustments (interest rates, collateral ratios, fee structures) where the decision space is well-defined and the consequences are measurable. It has proven less effective for strategic direction-setting, conflict resolution, and decisions involving competing values: precisely the domains where human judgment, negotiation, and contextual reasoning are most needed.
+
+<GovernanceEffectivenessChart />
 
 ## The Constitutional Question
 
-The deepest question about computational constitutions is not whether they function technically. They do. It is whether automatic enforcement, "code is law", produces governance outcomes that are just.
+The deepest question about computational constitutions is not whether they function technically. They demonstrably do. It is whether automatic enforcement, "code is law," produces governance outcomes that are just.
 
-A traditional legal system includes human judges who can exercise discretion: consider mitigating circumstances, interpret ambiguous language, and override the literal application of a rule when it produces an unjust outcome. Smart contracts cannot do this. They execute the rules as written, without judgment, without mercy, and without the ability to recognize when the rules themselves are producing unfair results.
+A traditional legal system includes human judges who can exercise discretion: consider mitigating circumstances, interpret ambiguous language, apply the "spirit" rather than the "letter" of the law, and override the literal application of a rule when it produces an unjust outcome. Smart contracts cannot do this. They execute the rules as written, without judgment, without mercy, and without the ability to recognize when the rules themselves are producing unfair results.
 
-[Lawrence Lessig](https://www.lessig.org/) identified this dynamic in *Code and Other Laws of Cyberspace* (1999): code is a form of regulation, but unlike legislation, it is not subject to democratic deliberation, judicial review, or executive amendment. When code governs, the architecture decides, and the architecture is written by developers, not by the governed.
+The DAO hack of 2016 remains the canonical illustration. A smart contract governing The DAO, at the time holding $60 million in ETH, was exploited through a reentrancy vulnerability. The attacker did not "break" the smart contract. They used it exactly as programmed, exploiting a logical flaw that the developers had not anticipated. The code worked perfectly. The intent was violated. The Ethereum community responded with a hard fork, essentially a constitutional crisis resolved by community consensus rather than code, demonstrating that even in "code is law" systems, human judgment retains ultimate authority when the stakes are high enough.
 
-The hybrid model, smart contracts for procedural execution, human governance for judgment calls and dispute resolution, is the likely trajectory. [Aragon](https://aragon.org/) and [Kleros](https://kleros.io/) are building decentralized courts that combine on-chain evidence, juror selection, and appealable decisions. Whether these systems can replicate the substantive justice that centralized legal systems provide, at lower cost, with greater accessibility, is the open experiment of computational constitutions.
+[Lawrence Lessig](https://www.lessig.org/) identified this dynamic in *Code and Other Laws of Cyberspace* (1999): code is a form of regulation, but unlike legislation, it is not subject to democratic deliberation, judicial review, or executive amendment. When code governs, the architecture decides. And the architecture is written by developers, not by the governed.
+
+The hybrid model, smart contracts for procedural execution combined with human governance for judgment calls and dispute resolution, is emerging as the dominant trajectory. [Kleros](https://kleros.io/) has processed thousands of disputes through decentralized arbitration, combining on-chain evidence with juror deliberation. [Aragon](https://aragon.org/) provides DAO frameworks with built-in dispute resolution mechanisms. Whether these systems can replicate the substantive justice that centralized legal systems provide, at lower cost and with greater accessibility, is the defining open experiment of computational constitutions.
+
+<Callout type="warning" title="The Regulatory Horizon">
+As DAOs grow in economic significance, regulatory attention increases. The SEC's scrutiny of governance tokens as potential securities, the IRS's interest in DAO treasury taxation, and international efforts to classify DAOs within existing legal frameworks (particularly the EU's MiCA regulation) create an evolving compliance landscape. Computational constitutions that govern billions of dollars cannot operate indefinitely in a regulatory grey zone. The question is whether regulation will adapt to accommodate on-chain governance or require DAOs to conform to traditional corporate structures.
+</Callout>
 
 <KeyTakeaway>
-Wyoming legalized DAO LLCs in 2021, allowing smart contracts to serve as operating agreements. Over $100 billion is locked in DeFi protocols governed by on-chain voting. 1,000+ active DAOs manage $40+ billion in treasury assets. The governance stack includes token-weighted voting, automatic smart contract execution, time locks, and multi-sig safeguards. The main challenges are plutocratic concentration (large token holders dominate outcomes), the amendment problem (rapid governance changes without deliberative process), and the absence of judicial discretion (code cannot assess context or mitigating circumstances). Technical responses include quadratic voting, conviction voting, and zero-knowledge private ballots. The trajectory is hybrid: smart contracts for procedural execution, human governance for judgment, dispute resolution, and strategic direction.
+Wyoming legalized DAO LLCs in 2021; Cardano ratified the first on-chain blockchain constitution in February 2025. Approximately $85 billion (April 2026) is locked in DeFi protocols governed by on-chain voting, with 1,000+ active DAOs. Average voter turnout is ~17%, with governance power concentrating in mega-delegates and institutional holders. The governance stack mirrors constitutional separation of powers: proposals (legislature), timelocks (comment period), multi-sig (executive), and decentralized courts like Kleros (judiciary). Innovation beyond one-token-one-vote includes quadratic voting (Gitcoin), conviction voting (1Hive), delegation (Aave, >80% delegate participation), futarchy (Optimism's 21-day experiment), and ZK private ballots (MACI). The hybrid model, code for procedure, humans for judgment, is the emerging trajectory. The fundamental question remains: procedural validity (did the vote pass?) and substantive justice (was the outcome fair?) are not the same thing.
 </KeyTakeaway>
