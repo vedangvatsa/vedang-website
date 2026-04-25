@@ -31,6 +31,7 @@ import { DigitalGovMaturity, EResidencyImpact, AgenticStateArchitecture } from '
 import { ApiTrafficChart, ZeroUIMarketMap, SaaSPricingShift, AttentionCollapseChart, GUITimeline, FrontendDeclineChart, HardwarePivotGrid } from '@/components/mdx/post-interface-charts';
 import { AINewsSiteGrowth, MisinfoSpreadChart, MediaTrustChart } from '@/components/mdx/plurality-trap-charts';
 import { MeshTransactionCostChart, DAOTreasuryChart, MeshOrgComparison } from '@/components/mdx/mesh-economy-charts';
+import { SimulationDomainChart, SimCostComparison, SimulationGapChart } from '@/components/mdx/simulation-layer-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -348,6 +349,9 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               MeshTransactionCostChart,
               DAOTreasuryChart,
               MeshOrgComparison,
+              SimulationDomainChart,
+              SimCostComparison,
+              SimulationGapChart,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
