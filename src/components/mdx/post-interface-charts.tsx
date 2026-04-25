@@ -5,12 +5,12 @@ import React from 'react';
 /* ─── API Traffic vs Human Traffic ─── */
 export function ApiTrafficChart() {
   const data = [
-    { year: '2018', human: 65, machine: 35 },
-    { year: '2020', human: 58, machine: 42 },
-    { year: '2022', human: 52, machine: 48 },
-    { year: '2024', human: 47, machine: 53 },
-    { year: '2025', human: 42, machine: 58 },
-    { year: '2028E', human: 28, machine: 72 },
+    { year: '2019', human: 63, machine: 37 },
+    { year: '2021', human: 58, machine: 42 },
+    { year: '2023', human: 52, machine: 48 },
+    { year: '2024', human: 49, machine: 51 },
+    { year: '2025', human: 45, machine: 55 },
+    { year: '2028E', human: 35, machine: 65 },
   ];
 
   return (
@@ -53,7 +53,7 @@ export function ApiTrafficChart() {
         </div>
 
         <p className="mt-3 text-[10px] text-muted-foreground/60">
-          Sources: Cloudflare Radar (2024), Akamai State of the Internet (2025), Gartner forecast (2028E).
+          Sources: Imperva Bad Bot Report (2025): 51% automated traffic in 2024. Thales/Imperva historical data (2019-2023). 2028E is author projection.
         </p>
       </div>
     </figure>
@@ -65,28 +65,33 @@ export function ZeroUIMarketMap() {
   const layers = [
     {
       name: 'Protocol Layer',
+      desc: 'Standards for agent-to-service and agent-to-agent communication',
       color: 'hsl(210 90% 40%)',
-      companies: ['Anthropic (MCP)', 'Google (A2A, UCP, AP2)', 'OpenAI (ACP)', 'Coinbase (x402)', 'Stripe (MPP)'],
+      companies: ['Anthropic (MCP)', 'Google (A2A)', 'Google (UCP)', 'OpenAI (ACP)', 'Coinbase (x402)', 'Stripe (MPP)', 'LangChain (LangGraph)', 'CrewAI', 'Microsoft (AutoGen)'],
     },
     {
       name: 'Headless Commerce Engines',
+      desc: 'API-first platforms exposing 100% functionality without a frontend',
       color: 'hsl(160 80% 35%)',
-      companies: ['Commercetools', 'Fabric', 'Shopify (Storefront API)', 'BigCommerce', 'Medusa'],
+      companies: ['Commercetools', 'Fabric', 'Shopify (Storefront API)', 'BigCommerce', 'Medusa', 'Saleor', 'Elastic Path', 'Spryker'],
     },
     {
       name: 'AEO & Semantic Analytics',
+      desc: 'Optimizing brand data for LLM ingestion instead of human SEO',
       color: 'hsl(280 60% 45%)',
-      companies: ['Yext', 'Schema App', 'Botify', 'seoClarity', 'BrightEdge'],
+      companies: ['Yext', 'Schema App', 'Botify', 'seoClarity', 'BrightEdge', 'Profound (AI search analytics)', 'Perplexity Pages', 'Vectorize'],
     },
     {
       name: 'Identity & Execution',
+      desc: 'Agentic wallets, ZKP attestation, and machine-native payments',
       color: 'hsl(30 80% 50%)',
-      companies: ['Coinbase (Agentic Wallets)', 'Skyfire (KYAPay)', 'Privy', 'Dynamic', 'Crossmint'],
+      companies: ['Coinbase (Agentic Wallets)', 'Skyfire (KYAPay)', 'Privy', 'Dynamic', 'Crossmint', 'Circle (USDC rails)', 'Worldcoin (World ID)', 'Lit Protocol'],
     },
     {
       name: 'Edge Hardware & Ambient Sensors',
+      desc: 'Post-smartphone form factors optimized for context, not screens',
       color: 'hsl(350 70% 45%)',
-      companies: ['Apple (Secure Enclave)', 'Limitless', 'Humane', 'Oura', 'CTRL-labs'],
+      companies: ['Apple (Secure Enclave)', 'Limitless', 'Humane', 'Oura', 'CTRL-labs (Meta)', 'Rabbit r1', 'Frame (AR glasses)', 'Qualcomm (on-device LLM)'],
     },
   ];
 
@@ -101,6 +106,7 @@ export function ZeroUIMarketMap() {
             <div key={layer.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden">
               <div className="px-4 py-2 border-b border-[#e3e3e0] dark:border-zinc-800" style={{ backgroundColor: layer.color + '10' }}>
                 <span className="text-xs font-bold uppercase tracking-wider" style={{ color: layer.color }}>{layer.name}</span>
+                <p className="text-[10px] text-muted-foreground mt-0.5">{layer.desc}</p>
               </div>
               <div className="px-4 py-3 flex flex-wrap gap-2">
                 {layer.companies.map((c) => (
@@ -216,14 +222,14 @@ export function AttentionCollapseChart() {
 /* ─── GUI Timeline ─── */
 export function GUITimeline() {
   const eras = [
-    { year: '1973', event: 'Xerox Alto', desc: 'First GUI — windows, icons, menus', type: 'gui' },
+    { year: '1973', event: 'Xerox Alto', desc: 'First GUI: windows, icons, menus', type: 'gui' },
     { year: '1984', event: 'Macintosh', desc: 'GUI goes mass market via Apple', type: 'gui' },
     { year: '1993', event: 'Mosaic Browser', desc: 'HTML rendered visually for the first time', type: 'gui' },
-    { year: '2007', event: 'iPhone', desc: 'Touch interface — the GUI goes mobile', type: 'gui' },
+    { year: '2007', event: 'iPhone', desc: 'Touch interface, the GUI goes mobile', type: 'gui' },
     { year: '2022', event: 'ChatGPT', desc: 'Text replaces clicks for complex tasks', type: 'transition' },
-    { year: '2025', event: 'MCP / A2A / UCP', desc: 'Structured agent protocols replace HTML scraping', type: 'agent' },
-    { year: '2026', event: 'API > Browser traffic', desc: 'Machine traffic surpasses human traffic', type: 'agent' },
-    { year: '2028E', event: 'Screenless commerce', desc: '60% of software transactions occur without a UI', type: 'agent' },
+    { year: '2024', event: 'Bots > Humans', desc: 'Automated traffic hits 51% of all web traffic (Imperva)', type: 'agent' },
+    { year: '2025', event: 'MCP / A2A launched', desc: 'Structured agent protocols replace HTML scraping', type: 'agent' },
+    { year: '2028E', event: '33% enterprise software agentic', desc: 'Gartner: 33% of enterprise apps include agentic AI', type: 'agent' },
   ];
 
   return (

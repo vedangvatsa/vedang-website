@@ -1,115 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
       text { font-family: 'Inter', sans-serif; }
-      .bg { fill: #0f172a; }
-      .title { font-weight: 800; font-size: 48px; fill: #ffffff; text-anchor: middle; }
-      .subtitle { font-weight: 600; font-size: 24px; fill: #94a3b8; text-anchor: middle; }
-      
-      .box-left { fill: #1e293b; stroke: #3b82f6; stroke-width: 3; rx: 16; }
-      .box-right { fill: #1e293b; stroke: #10b981; stroke-width: 3; rx: 16; }
-      
-      .header-left { font-weight: 800; font-size: 36px; fill: #3b82f6; text-anchor: middle; }
-      .header-right { font-weight: 800; font-size: 36px; fill: #10b981; text-anchor: middle; }
-      
-      .item-text { font-weight: 600; font-size: 24px; fill: #ffffff; }
-      .item-subtext { font-weight: 400; font-size: 18px; fill: #94a3b8; }
-      
-      .vs-circle { fill: #0f172a; stroke: #475569; stroke-width: 2; }
-      .vs-text { font-weight: 800; font-size: 24px; fill: #94a3b8; text-anchor: middle; }
-      
-      .watermark { font-weight: 600; font-size: 18px; fill: #475569; text-anchor: end; }
-      
-      .icon-left { fill: none; stroke: #3b82f6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-      .icon-right { fill: none; stroke: #10b981; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-      
-      .line { stroke: #334155; stroke-width: 2; stroke-dasharray: 8 8; }
+      .bg { fill: #f8fafc; }
     </style>
   </defs>
-  
-  <rect width="1080" height="1080" class="bg" />
-  
-  <!-- Main Title -->
-  <text x="540" y="120" class="title">THE INTERNET TRANSITION</text>
-  <text x="540" y="160" class="subtitle">From Visual Browsing to Agentic Fulfillment</text>
-  
-  <!-- Connecting Line -->
-  <line x1="540" y1="220" x2="540" y2="900" class="line" />
-  
-  <!-- VS Circle -->
-  <circle cx="540" cy="560" r="40" class="vs-circle" />
-  <text x="540" y="568" class="vs-text">VS</text>
+  <rect width="800" height="400" class="bg" rx="16" />
 
-  <!-- LEFT SIDE: LEGACY WEB -->
-  <rect x="80" y="240" width="400" height="640" class="box-left" />
-  <text x="280" y="310" class="header-left">LEGACY WEB</text>
-  
-  <!-- Icon: Eye -->
-  <g transform="translate(240, 340) scale(1.5)">
-    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" class="icon-left" />
-    <circle cx="12" cy="12" r="3" class="icon-left" />
-  </g>
-  
-  <g transform="translate(120, 460)">
-    <circle cx="20" cy="-8" r="8" fill="#3b82f6" />
-    <text x="50" y="0" class="item-text">Primary User</text>
-    <text x="50" y="30" class="item-subtext">Human Eyeballs</text>
-  </g>
-  
-  <g transform="translate(120, 580)">
-    <circle cx="20" cy="-8" r="8" fill="#3b82f6" />
-    <text x="50" y="0" class="item-text">Data Format</text>
-    <text x="50" y="30" class="item-subtext">HTML &amp; CSS (Visual)</text>
-  </g>
-  
-  <g transform="translate(120, 700)">
-    <circle cx="20" cy="-8" r="8" fill="#3b82f6" />
-    <text x="50" y="0" class="item-text">Monetization</text>
-    <text x="50" y="30" class="item-subtext">Attention (Ads, CPM)</text>
-  </g>
+  <!-- Title -->
+  <text x="400" y="36" font-weight="800" font-size="20" fill="#0f172a" text-anchor="middle">THE POST-INTERFACE INTERNET</text>
+  <text x="400" y="54" font-weight="600" font-size="11" fill="#64748b" text-anchor="middle" letter-spacing="0.15em">FROM VISUAL BROWSING TO AGENTIC FULFILLMENT</text>
 
-  <g transform="translate(120, 820)">
-    <circle cx="20" cy="-8" r="8" fill="#3b82f6" />
-    <text x="50" y="0" class="item-text">Discovery</text>
-    <text x="50" y="30" class="item-subtext">SEO &amp; Keywords</text>
-  </g>
+  <!-- Left: Legacy Web -->
+  <rect x="40" y="75" width="340" height="180" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+  <text x="210" y="100" font-weight="800" font-size="14" fill="#dc2626" text-anchor="middle">LEGACY WEB</text>
 
+  <text x="70" y="125" font-weight="600" font-size="10" fill="#64748b">Primary User</text>
+  <text x="280" y="125" font-weight="700" font-size="11" fill="#0f172a" text-anchor="end">Human Eyeballs</text>
+  <line x1="70" y1="133" x2="350" y2="133" stroke="#e2e8f0" stroke-width="1" />
 
-  <!-- RIGHT SIDE: AGENT WEB -->
-  <rect x="600" y="240" width="400" height="640" class="box-right" />
-  <text x="800" y="310" class="header-right">AGENT WEB</text>
-  
-  <!-- Icon: Terminal/Code -->
-  <g transform="translate(760, 340) scale(1.5)">
-    <path d="M4 17l6-6-6-6" class="icon-right" />
-    <path d="M12 19h8" class="icon-right" />
-  </g>
-  
-  <g transform="translate(640, 460)">
-    <circle cx="20" cy="-8" r="8" fill="#10b981" />
-    <text x="50" y="0" class="item-text">Primary User</text>
-    <text x="50" y="30" class="item-subtext">AI Agents / LLMs</text>
-  </g>
-  
-  <g transform="translate(640, 580)">
-    <circle cx="20" cy="-8" r="8" fill="#10b981" />
-    <text x="50" y="0" class="item-text">Data Format</text>
-    <text x="50" y="30" class="item-subtext">JSON &amp; APIs (Structured)</text>
-  </g>
-  
-  <g transform="translate(640, 700)">
-    <circle cx="20" cy="-8" r="8" fill="#10b981" />
-    <text x="50" y="0" class="item-text">Monetization</text>
-    <text x="50" y="30" class="item-subtext">Execution (Tx Fees, Subscriptions)</text>
-  </g>
+  <text x="70" y="153" font-weight="600" font-size="10" fill="#64748b">Data Format</text>
+  <text x="280" y="153" font-weight="700" font-size="11" fill="#0f172a" text-anchor="end">HTML &amp; CSS</text>
+  <line x1="70" y1="161" x2="350" y2="161" stroke="#e2e8f0" stroke-width="1" />
 
-  <g transform="translate(640, 820)">
-    <circle cx="20" cy="-8" r="8" fill="#10b981" />
-    <text x="50" y="0" class="item-text">Discovery</text>
-    <text x="50" y="30" class="item-subtext">AEO &amp; Semantic Logic</text>
-  </g>
-  
-  <!-- Watermark -->
-  <text x="1040" y="1040" class="watermark">veda.ng</text>
+  <text x="70" y="181" font-weight="600" font-size="10" fill="#64748b">Monetization</text>
+  <text x="280" y="181" font-weight="700" font-size="11" fill="#0f172a" text-anchor="end">Ads &amp; CPM</text>
+  <line x1="70" y1="189" x2="350" y2="189" stroke="#e2e8f0" stroke-width="1" />
+
+  <text x="70" y="209" font-weight="600" font-size="10" fill="#64748b">Discovery</text>
+  <text x="280" y="209" font-weight="700" font-size="11" fill="#0f172a" text-anchor="end">SEO &amp; Keywords</text>
+  <line x1="70" y1="217" x2="350" y2="217" stroke="#e2e8f0" stroke-width="1" />
+
+  <text x="70" y="237" font-weight="600" font-size="10" fill="#64748b">Identity</text>
+  <text x="280" y="237" font-weight="700" font-size="11" fill="#0f172a" text-anchor="end">Passwords &amp; CAPTCHA</text>
+
+  <!-- Arrow -->
+  <polygon points="400,140 400,200 430,170" fill="#0f172a" />
+
+  <!-- Right: Agent Web -->
+  <rect x="450" y="75" width="310" height="180" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" />
+  <text x="605" y="100" font-weight="800" font-size="14" fill="#1d4ed8" text-anchor="middle">AGENT WEB</text>
+
+  <text x="480" y="125" font-weight="600" font-size="10" fill="#64748b">Primary User</text>
+  <text x="730" y="125" font-weight="700" font-size="11" fill="#1d4ed8" text-anchor="end">AI Agents / LLMs</text>
+  <line x1="480" y1="133" x2="730" y2="133" stroke="#bfdbfe" stroke-width="1" />
+
+  <text x="480" y="153" font-weight="600" font-size="10" fill="#64748b">Data Format</text>
+  <text x="730" y="153" font-weight="700" font-size="11" fill="#1d4ed8" text-anchor="end">JSON &amp; APIs</text>
+  <line x1="480" y1="161" x2="730" y2="161" stroke="#bfdbfe" stroke-width="1" />
+
+  <text x="480" y="181" font-weight="600" font-size="10" fill="#64748b">Monetization</text>
+  <text x="730" y="181" font-weight="700" font-size="11" fill="#1d4ed8" text-anchor="end">Tx Fees &amp; Usage</text>
+  <line x1="480" y1="189" x2="730" y2="189" stroke="#bfdbfe" stroke-width="1" />
+
+  <text x="480" y="209" font-weight="600" font-size="10" fill="#64748b">Discovery</text>
+  <text x="730" y="209" font-weight="700" font-size="11" fill="#1d4ed8" text-anchor="end">AEO &amp; Semantic Logic</text>
+  <line x1="480" y1="217" x2="730" y2="217" stroke="#bfdbfe" stroke-width="1" />
+
+  <text x="480" y="237" font-weight="600" font-size="10" fill="#64748b">Identity</text>
+  <text x="730" y="237" font-weight="700" font-size="11" fill="#1d4ed8" text-anchor="end">ZKP &amp; Crypto Attestation</text>
+
+  <!-- Stats bar -->
+  <rect x="40" y="275" width="170" height="55" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+  <text x="125" y="298" font-weight="800" font-size="20" fill="#0f172a" text-anchor="middle">58%</text>
+  <text x="125" y="318" font-weight="400" font-size="9" fill="#64748b" text-anchor="middle">internet traffic is M2M</text>
+
+  <rect x="225" y="275" width="170" height="55" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+  <text x="310" y="298" font-weight="800" font-size="20" fill="#0f172a" text-anchor="middle">-94%</text>
+  <text x="310" y="318" font-weight="400" font-size="9" fill="#64748b" text-anchor="middle">display ad CPM (projected)</text>
+
+  <rect x="410" y="275" width="170" height="55" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+  <text x="495" y="298" font-weight="800" font-size="20" fill="#0f172a" text-anchor="middle">240%</text>
+  <text x="495" y="318" font-weight="400" font-size="9" fill="#64748b" text-anchor="middle">agent protocol hire growth</text>
+
+  <rect x="595" y="275" width="170" height="55" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+  <text x="680" y="298" font-weight="800" font-size="20" fill="#1d4ed8" text-anchor="middle">$4.2B</text>
+  <text x="680" y="318" font-weight="400" font-size="9" fill="#64748b" text-anchor="middle">agentic infra investment</text>
+
+  <!-- Bottom banner -->
+  <rect x="200" y="355" width="400" height="35" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1" />
+  <text x="400" y="377" font-weight="600" font-size="11" fill="#334155" text-anchor="middle">The GUI was a 40-year hack. The hack is ending.</text>
 </svg>
