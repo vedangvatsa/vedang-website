@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap');
+      text { font-family: 'Inter', sans-serif; }
+      .bg { fill: #0f172a; }
+      .title { font-weight: 800; font-size: 48px; fill: #ffffff; text-anchor: middle; }
+      .subtitle { font-weight: 600; font-size: 24px; fill: #94a3b8; text-anchor: middle; }
+      
+      .box-left { fill: #1e293b; stroke: #3b82f6; stroke-width: 3; rx: 16; }
+      .box-right { fill: #1e293b; stroke: #10b981; stroke-width: 3; rx: 16; }
+      
+      .header-left { font-weight: 800; font-size: 36px; fill: #3b82f6; text-anchor: middle; }
+      .header-right { font-weight: 800; font-size: 36px; fill: #10b981; text-anchor: middle; }
+      
+      .item-text { font-weight: 600; font-size: 24px; fill: #ffffff; }
+      .item-subtext { font-weight: 400; font-size: 18px; fill: #94a3b8; }
+      
+      .vs-circle { fill: #0f172a; stroke: #475569; stroke-width: 2; }
+      .vs-text { font-weight: 800; font-size: 24px; fill: #94a3b8; text-anchor: middle; }
+      
+      .watermark { font-weight: 600; font-size: 18px; fill: #475569; text-anchor: end; }
+      
+      .icon-left { fill: none; stroke: #3b82f6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-right { fill: none; stroke: #10b981; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      
+      .line { stroke: #334155; stroke-width: 2; stroke-dasharray: 8 8; }
+    </style>
+  </defs>
+  
+  <rect width="1080" height="1080" class="bg" />
+  
+  <!-- Main Title -->
+  <text x="540" y="120" class="title">THE INTERNET TRANSITION</text>
+  <text x="540" y="160" class="subtitle">From Visual Browsing to Agentic Fulfillment</text>
+  
+  <!-- Connecting Line -->
+  <line x1="540" y1="220" x2="540" y2="900" class="line" />
+  
+  <!-- VS Circle -->
+  <circle cx="540" cy="560" r="40" class="vs-circle" />
+  <text x="540" y="568" class="vs-text">VS</text>
+
+  <!-- LEFT SIDE: LEGACY WEB -->
+  <rect x="80" y="240" width="400" height="640" class="box-left" />
+  <text x="280" y="310" class="header-left">LEGACY WEB</text>
+  
+  <!-- Icon: Eye -->
+  <g transform="translate(240, 340) scale(1.5)">
+    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" class="icon-left" />
+    <circle cx="12" cy="12" r="3" class="icon-left" />
+  </g>
+  
+  <g transform="translate(120, 460)">
+    <circle cx="20" cy="-8" r="8" fill="#3b82f6" />
+    <text x="50" y="0" class="item-text">Primary User</text>
+    <text x="50" y="30" class="item-subtext">Human Eyeballs</text>
+  </g>
+  
+  <g transform="translate(120, 580)">
+    <circle cx="20" cy="-8" r="8" fill="#3b82f6" />
+    <text x="50" y="0" class="item-text">Data Format</text>
+    <text x="50" y="30" class="item-subtext">HTML &amp; CSS (Visual)</text>
+  </g>
+  
+  <g transform="translate(120, 700)">
+    <circle cx="20" cy="-8" r="8" fill="#3b82f6" />
+    <text x="50" y="0" class="item-text">Monetization</text>
+    <text x="50" y="30" class="item-subtext">Attention (Ads, CPM)</text>
+  </g>
+
+  <g transform="translate(120, 820)">
+    <circle cx="20" cy="-8" r="8" fill="#3b82f6" />
+    <text x="50" y="0" class="item-text">Discovery</text>
+    <text x="50" y="30" class="item-subtext">SEO &amp; Keywords</text>
+  </g>
+
+
+  <!-- RIGHT SIDE: AGENT WEB -->
+  <rect x="600" y="240" width="400" height="640" class="box-right" />
+  <text x="800" y="310" class="header-right">AGENT WEB</text>
+  
+  <!-- Icon: Terminal/Code -->
+  <g transform="translate(760, 340) scale(1.5)">
+    <path d="M4 17l6-6-6-6" class="icon-right" />
+    <path d="M12 19h8" class="icon-right" />
+  </g>
+  
+  <g transform="translate(640, 460)">
+    <circle cx="20" cy="-8" r="8" fill="#10b981" />
+    <text x="50" y="0" class="item-text">Primary User</text>
+    <text x="50" y="30" class="item-subtext">AI Agents / LLMs</text>
+  </g>
+  
+  <g transform="translate(640, 580)">
+    <circle cx="20" cy="-8" r="8" fill="#10b981" />
+    <text x="50" y="0" class="item-text">Data Format</text>
+    <text x="50" y="30" class="item-subtext">JSON &amp; APIs (Structured)</text>
+  </g>
+  
+  <g transform="translate(640, 700)">
+    <circle cx="20" cy="-8" r="8" fill="#10b981" />
+    <text x="50" y="0" class="item-text">Monetization</text>
+    <text x="50" y="30" class="item-subtext">Execution (Tx Fees, Subscriptions)</text>
+  </g>
+
+  <g transform="translate(640, 820)">
+    <circle cx="20" cy="-8" r="8" fill="#10b981" />
+    <text x="50" y="0" class="item-text">Discovery</text>
+    <text x="50" y="30" class="item-subtext">AEO &amp; Semantic Logic</text>
+  </g>
+  
+  <!-- Watermark -->
+  <text x="1040" y="1040" class="watermark">veda.ng</text>
+</svg>

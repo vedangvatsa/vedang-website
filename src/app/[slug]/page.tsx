@@ -28,6 +28,7 @@ import { YCIndustryBreakdown, RecentBatchComposition, AgentLayerTaxonomy, YCGeoC
 import { UIComplexityComparison, APIAbstractionLayer, TextUIAdoption, PlatformShiftTimeline } from '@/components/mdx/universal-charts';
 import { StepwiseMaturityModel, ROIImpactStats } from '@/components/mdx/stepwise-charts';
 import { DigitalGovMaturity, EResidencyImpact, AgenticStateArchitecture } from '@/components/mdx/agentic-state-charts';
+import { ApiTrafficChart, ZeroUIMarketMap, SaaSPricingShift, AttentionCollapseChart, GUITimeline, FrontendDeclineChart, HardwarePivotGrid } from '@/components/mdx/post-interface-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -332,6 +333,13 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               DigitalGovMaturity,
               EResidencyImpact,
               AgenticStateArchitecture,
+              ApiTrafficChart,
+              ZeroUIMarketMap,
+              SaaSPricingShift,
+              AttentionCollapseChart,
+              GUITimeline,
+              FrontendDeclineChart,
+              HardwarePivotGrid,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
