@@ -38,7 +38,7 @@ import { TrustPrimitivesComparison, DeFiSecurityChart, TrustStackArchitecture, T
 import { IdentitySpectrumChart, PseudonymousSuccessCases, ReputationInfraChart, ParticipationExpansionChart, DecentralizedIdentityMarket } from '@/components/mdx/pseudonymous-agency-charts';
 import { GovernanceEffectivenessChart, DAOVoterParticipation, VotingMechanismChart, GovernanceStackChart } from '@/components/mdx/computational-constitutions-charts';
 import { DataSourceDisruption, MethodologicalEvolution, PolarizationFindings, ObserverEffectChart } from '@/components/mdx/computational-social-science-charts';
-import { MonasteryPrincipleChart } from '@/components/mdx/digital-monasticism-charts';
+import { MonasteryPrincipleChart, AttentionSpanDecline, InterruptionCostChart, RetreatMovementsTimeline, SilenceEconomyChart } from '@/components/mdx/digital-monasticism-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -394,6 +394,10 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               PolarizationFindings,
               ObserverEffectChart,
               MonasteryPrincipleChart,
+              AttentionSpanDecline,
+              InterruptionCostChart,
+              RetreatMovementsTimeline,
+              SilenceEconomyChart,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
