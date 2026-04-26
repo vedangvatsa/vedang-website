@@ -37,6 +37,7 @@ import { GodProtocolComparison, TTPEvolutionTimeline, PrivacyTechStack, TTPMarke
 import { TrustPrimitivesComparison, DeFiSecurityChart, TrustStackArchitecture, TrustComparisonChart, DigitalIdentityTimeline, TrustApplicationDomains } from '@/components/mdx/programmable-trust-charts';
 import { IdentitySpectrumChart, PseudonymousSuccessCases, ReputationInfraChart, ParticipationExpansionChart, DecentralizedIdentityMarket } from '@/components/mdx/pseudonymous-agency-charts';
 import { GovernanceEffectivenessChart, DAOVoterParticipation, VotingMechanismChart, GovernanceStackChart } from '@/components/mdx/computational-constitutions-charts';
+import { DataSourceDisruption, MethodologicalEvolution, PolarizationFindings, ObserverEffectChart } from '@/components/mdx/computational-social-science-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -387,6 +388,10 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               DAOVoterParticipation,
               VotingMechanismChart,
               GovernanceStackChart,
+              DataSourceDisruption,
+              MethodologicalEvolution,
+              PolarizationFindings,
+              ObserverEffectChart,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
