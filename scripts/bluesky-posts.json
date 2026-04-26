@@ -505,9 +505,11 @@
     "id": "internet-of-lies",
     "scheduleDate": "2026-04-16",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Truth has no built-in advantage on the internet.\n\nA fake headline travels as fast as a real one. No mechanism to verify provenance. Built for speed, not trust.\n\nThe fix is architectural, not moderation.\n\nveda.ng/internet-of-lies",
-    "image": "scripts/thread-assets/internet_of_lies.png"
+    "image": "scripts/thread-assets/internet_of_lies.png",
+    "postedAt": "2026-04-26T20:07:08.883Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkge7ja52m23"
   },
   {
     "id": "sacred-algorithms",
