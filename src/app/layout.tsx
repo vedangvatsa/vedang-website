@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/icon.png',
-        width: 256,
-        height: 256,
-        alt: 'Vedang Vatsa',
+        url: '/images/og-homepage.png',
+        width: 1200,
+        height: 630,
+        alt: 'Vedang Vatsa — AI & Web3 Thought Leader',
       },
     ]
   },
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     title: 'Vedang Vatsa — AI & Web3 Thought Leader, Founder of Hashtag Web3',
     card: 'summary_large_image',
-    images: ['/images/icon.png'],
+    images: ['/images/og-homepage.png'],
   },
   alternates: {
     canonical: '/',
