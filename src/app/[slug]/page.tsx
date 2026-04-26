@@ -146,6 +146,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: essayUrl,
       type: 'article',
       publishedTime: publishedTime,
+      authors: ['https://veda.ng'],
+      section: 'Technology',
+      ...(essay.frontmatter.keywords && { tags: essay.frontmatter.keywords }),
     },
     twitter: {
       card: 'summary_large_image',

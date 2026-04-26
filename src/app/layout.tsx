@@ -80,9 +80,9 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Hashtag Web3',
-  url: 'https://hashtag.web3',
+  url: 'https://veda.ng',
   logo: 'https://veda.ng/images/icon.png',
-  description: 'A global community of 100,000+ professionals in AI and Web3.',
+  description: 'A global community of 120,000+ professionals in AI and Web3.',
   sameAs: [
     'https://linkedin.com/company/hashtag-web3',
     'https://x.com/hashtagweb3',

@@ -44,24 +44,27 @@ function getEssayRoutes(): MetadataRoute.Sitemap {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Use build-time date so Google sees fresh crawl signals after each deploy
+  const buildDate = new Date();
+
   const staticPages: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/`, lastModified: new Date('2026-03-28') },
-    { url: `${BASE_URL}/writings`, lastModified: new Date('2026-03-28') },
-    { url: `${BASE_URL}/glossary`, lastModified: new Date('2026-03-28') },
-    { url: `${BASE_URL}/profile`, lastModified: new Date('2026-03-28') },
-    { url: `${BASE_URL}/media`, lastModified: new Date('2026-03-28') },
-    { url: `${BASE_URL}/community`, lastModified: new Date('2026-03-28') },
-    { url: `${BASE_URL}/seo`, lastModified: new Date('2026-03-28') },
-    { url: `${BASE_URL}/vibe-coding`, lastModified: new Date('2026-03-28') },
-    { url: `${BASE_URL}/prompt-engineering-101`, lastModified: new Date('2026-03-28') },
-    { url: `${BASE_URL}/web3-101`, lastModified: new Date('2026-03-28') },
-    { url: `${BASE_URL}/agentic-web`, lastModified: new Date('2026-03-28') },
-    { url: `${BASE_URL}/lit`, lastModified: new Date('2026-03-28') },
+    { url: `${BASE_URL}/`, lastModified: buildDate },
+    { url: `${BASE_URL}/writings`, lastModified: buildDate },
+    { url: `${BASE_URL}/glossary`, lastModified: buildDate },
+    { url: `${BASE_URL}/profile`, lastModified: buildDate },
+    { url: `${BASE_URL}/media`, lastModified: buildDate },
+    { url: `${BASE_URL}/community`, lastModified: buildDate },
+    { url: `${BASE_URL}/seo`, lastModified: buildDate },
+    { url: `${BASE_URL}/vibe-coding`, lastModified: buildDate },
+    { url: `${BASE_URL}/prompt-engineering-101`, lastModified: buildDate },
+    { url: `${BASE_URL}/web3-101`, lastModified: buildDate },
+    { url: `${BASE_URL}/agentic-web`, lastModified: buildDate },
+    { url: `${BASE_URL}/lit`, lastModified: buildDate },
   ];
 
   const glossaryRoutes: MetadataRoute.Sitemap = glossaryTerms.map(term => ({
     url: `${BASE_URL}/glossary/${term.slug}`,
-    lastModified: new Date('2026-03-28'),
+    lastModified: buildDate,
   }));
 
   const essayRoutes = getEssayRoutes();
