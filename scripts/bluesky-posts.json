@@ -515,9 +515,11 @@
     "id": "sacred-algorithms",
     "scheduleDate": "2026-04-16",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "We stopped questioning the algorithm.\n\nWhen we cannot explain how it works, trust becomes faith. The black box is the modern oracle.\n\nCritical faith: trust paired with skepticism. Always.\n\nveda.ng/sacred-algorithms",
-    "image": "scripts/thread-assets/sacred_algorithms.png"
+    "image": "scripts/thread-assets/sacred_algorithms.png",
+    "postedAt": "2026-04-27T06:17:08.031Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkhgcawxw62v"
   },
   {
     "id": "pseudonymous-agency",
