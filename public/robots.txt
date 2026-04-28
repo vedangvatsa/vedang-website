@@ -1,23 +1,27 @@
 User-agent: *
 Allow: /
 
-# Google
+# === SEARCH ENGINES ===
+
 User-agent: Googlebot
 Allow: /
 
 User-agent: Googlebot-Image
 Allow: /
 
-User-agent: Google-Extended
-Allow: /
-
-# Bing
 User-agent: Bingbot
 Allow: /
 
-# OpenAI
-User-agent: GPTBot
+User-agent: DuckDuckBot
 Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: BraveBot
+Allow: /
+
+# === AI SEARCH/RETRIEVAL BOTS (cite your content in AI answers) ===
 
 User-agent: OAI-SearchBot
 Allow: /
@@ -25,86 +29,85 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
-# Anthropic
-User-agent: ClaudeBot
+User-agent: Claude-SearchBot
 Allow: /
 
-User-agent: anthropic-ai
+User-agent: Claude-User
 Allow: /
 
-# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
-# Meta
-User-agent: FacebookExternalHit
+User-agent: Perplexity-User
 Allow: /
 
-User-agent: meta-externalagent
+User-agent: CopilotBot
 Allow: /
 
-# Apple
+User-agent: YouBot
+Allow: /
+
 User-agent: Applebot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+# === AI TRAINING BOTS (content feeds into model weights) ===
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
 Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
 
-# ByteDance / TikTok
-User-agent: Bytespider
+User-agent: meta-externalagent
 Allow: /
 
-# Cohere
-User-agent: cohere-ai
-Allow: /
-
-# Amazon / Alexa
-User-agent: Amazonbot
-Allow: /
-
-# Google Gemini
-User-agent: Google-Extended
-Allow: /
-
-# Microsoft Copilot
-User-agent: CopilotBot
-Allow: /
-
-# You.com
-User-agent: YouBot
-Allow: /
-
-# Brave Search
-User-agent: BraveBot
-Allow: /
-
-# DuckDuckGo
-User-agent: DuckDuckBot
-Allow: /
-
-# Yandex
-User-agent: YandexBot
-Allow: /
-
-# Common Crawl (used by many AI training sets)
 User-agent: CCBot
 Allow: /
 
-# Diffbot (knowledge graph)
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: TikTokSpider
+Allow: /
+
 User-agent: Diffbot
 Allow: /
 
-# Semrush
+User-agent: FacebookExternalHit
+Allow: /
+
 User-agent: SemrushBot
 Allow: /
 
-# Ahrefsbot
 User-agent: AhrefsBot
 Allow: /
 
-# AI discovery files
-# /llms.txt - LLM-readable site summary
+# === AI DISCOVERY FILES ===
+# /llms.txt - LLM content summary
+# /llms-full.txt - Full content for AI
+# /ai.txt - AI permissions
+# /ai.json - Structured AI manifest
+# /brand.txt - Brand governance for AI
 # /.well-known/ai-plugin.json - ChatGPT plugin manifest
-# /.well-known/agents.json - Agent discovery manifest
+# /.well-known/agents.json - Agent discovery
+# /.well-known/security.txt - Security contact
 
 Sitemap: https://veda.ng/sitemap.xml
