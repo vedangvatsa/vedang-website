@@ -231,7 +231,7 @@ export default function PromptEngineeringCoursePage() {
                 </CardHeader>
                  <CardContent className="p-6">
                     <AdvancedReasoning />
-                     <p className="text-muted-foreground">For complex problems, you need to guide the model's reasoning process. These techniques unlock the AI's ability to solve multi-step problems that require logic and planning.</p>
+                     <p className="text-muted-foreground">For complex problems, you need to guide the model's reasoning process. These techniques enable the AI to solve multi-step problems that require logic and planning.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg">Chain of Thought (CoT) Prompting</AccordionTrigger>

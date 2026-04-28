@@ -79,7 +79,7 @@ const faqItems = [
   },
   {
     question: "Do I need to be a programmer to understand the Agentic Web?",
-    answer: "Not at all. This course is designed for a broad audience. The concepts are explained in a way that is accessible to everyone, regardless of technical background. It's more about understanding the paradigm shift, similar to how one might learn about the social media revolution without needing to code."
+    answer: "Not at all. This course is designed for a broad audience. The concepts are explained in a way that is accessible to everyone, regardless of technical background. It's more about understanding this fundamental shift, similar to how one might learn about the social media revolution without needing to code."
   },
   {
     question: "What are MCP and A2A, and why do they matter?",
@@ -95,7 +95,7 @@ const faqItems = [
   },
   {
     question: "Can agents communicate with each other across companies?",
-    answer: "Yes, and this is exactly what the A2A protocol enables. Before A2A, an agent built with one vendor's tools could not easily work with an agent from another vendor. A2A creates a common language, Agent Cards, that lets agents discover each other's capabilities and collaborate, regardless of who built them. This interoperability is what will unlock the true potential of multi-agent workflows across organizations."
+    answer: "Yes, and this is exactly what the A2A protocol enables. Before A2A, an agent built with one vendor's tools could not easily work with an agent from another vendor. A2A creates a common language, Agent Cards, that lets agents discover each other's capabilities and collaborate, regardless of who built them. This interoperability is what will enable the true potential of multi-agent workflows across organizations."
   },
 ];
 
@@ -288,7 +288,7 @@ export default function AgenticWebCoursePage() {
                         <AccordionItem value="item-2">
                              <AccordionTrigger className="text-lg text-left">Tool Use: The Agent's Hands</AccordionTrigger>
                             <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>An agent without tools is just a thinker, confined to its own internal knowledge. Tools are what allow an agent to perceive and act upon the external world. An agent's ability to seamlessly select, use, and interpret the output of these tools is what makes it so powerful.</p>
+                                <p>An agent without tools is just a thinker, confined to its own internal knowledge. Tools are what allow an agent to perceive and act upon the external world. An agent's ability to select, use, and interpret the output of these tools is what makes it so powerful.</p>
                                 <p>A "tool" can be almost anything that provides a capability:</p>
                                  <ul className="my-6 space-y-4">
                                     <li><strong>Web Search:</strong> To get real-time, up-to-date information that isn't contained in the LLM's training data.</li>
@@ -374,7 +374,7 @@ export default function AgenticWebCoursePage() {
                                   <li><strong>Agent-to-Agent Communication:</strong> How do agents from different developers and platforms collaborate? This requires protocols (like <strong>A2A or Agent-to-Agent Protocol</strong>) that let agents negotiate, share information, and work together on a shared goal.</li>
                                   <li><strong>Agent-to-Human Communication:</strong> How does an agent communicate its progress, ask for clarification, and present results to the user in an understandable way?</li>
                                 </ul>
-                                <p>This dimension is creating the "HTTP for agents"-a universal language that will allow the entire ecosystem of agents and tools to connect and interoperate seamlessly.</p>
+                                <p>This dimension is creating the "HTTP for agents" — a universal language that will allow the entire ecosystem of agents and tools to connect and interoperate natively.</p>
                             </AccordionContent>
                         </AccordionItem>
                          <AccordionItem value="item-3">
