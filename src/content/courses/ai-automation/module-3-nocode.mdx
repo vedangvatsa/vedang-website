@@ -1,0 +1,113 @@
+---
+title: "No-Code Automation: n8n, Make & Zapier"
+description: "Build powerful automations without writing code. Connect 500+ apps, add AI processing nodes, and deploy workflows that run on autopilot — all through a visual interface."
+---
+
+<NoCodeToolsGrid />
+
+No-code tools are the fastest way to automate. You can go from idea to running automation in minutes, not days. They handle authentication, error handling, and scheduling so you can focus on the workflow logic.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg text-left">n8n: The Developer's No-Code Tool</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p><strong>n8n</strong> is open-source and self-hostable — you control your data and there are no per-task limits. It's the most powerful no-code tool for developers.</p>
+            <p><strong>Key features:</strong></p>
+            <ul>
+                <li><strong>AI Nodes:</strong> Built-in nodes for OpenAI, Anthropic, and local models. Add AI summarization, classification, or generation to any workflow.</li>
+                <li><strong>Code Node:</strong> Drop into JavaScript/Python for custom logic when visual nodes aren't enough.</li>
+                <li><strong>500+ Integrations:</strong> Slack, Gmail, Google Sheets, PostgreSQL, Supabase, Telegram, Discord, GitHub, and more.</li>
+                <li><strong>Self-Hosted:</strong> Run on your own server (Docker, Railway, etc.) — no data leaves your infrastructure.</li>
+            </ul>
+            <p><strong>Example workflow: Daily social media content pipeline</strong></p>
+            <ol>
+                <li><strong>Trigger:</strong> Cron schedule — every day at 8am</li>
+                <li><strong>Fetch:</strong> RSS node pulls latest articles from 10 tech blogs</li>
+                <li><strong>Filter:</strong> IF node checks for AI/Web3-related keywords</li>
+                <li><strong>AI Summarize:</strong> OpenAI node generates a concise summary of each article</li>
+                <li><strong>Format:</strong> Template node creates Twitter/LinkedIn-ready posts</li>
+                <li><strong>Post:</strong> Twitter node publishes the first post, rest go to a review queue in Google Sheets</li>
+                <li><strong>Notify:</strong> Slack message with the day's content queue</li>
+            </ol>
+            <p>This entire workflow runs in 7 visual nodes. No code. Processes 50+ articles daily.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg text-left">Make (formerly Integromat): Visual Complexity</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p><strong>Make</strong> excels at complex branching logic and data transformation. Its visual interface makes it easy to build workflows that would be painful to code.</p>
+            <p><strong>Best for:</strong></p>
+            <ul>
+                <li>Workflows with multiple conditional branches (if/else trees)</li>
+                <li>Data mapping between different formats</li>
+                <li>Multi-step processes with error handling routes</li>
+            </ul>
+            <p><strong>Example: Lead qualification automation</strong></p>
+            <ol>
+                <li><strong>Trigger:</strong> New form submission (Typeform/Fillout webhook)</li>
+                <li><strong>Enrich:</strong> Look up the person's company on LinkedIn API</li>
+                <li><strong>Score:</strong> AI node evaluates fit based on criteria</li>
+                <li><strong>Route (Score &gt; 80):</strong> Send to CRM as "hot lead" + immediate Slack notification</li>
+                <li><strong>Route (Score 50-80):</strong> Add to nurture email sequence</li>
+                <li><strong>Route (Score &lt; 50):</strong> Auto-respond with resources, no sales follow-up</li>
+            </ol>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg text-left">Adding AI to No-Code Workflows</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>The real power of no-code automation emerges when you add AI nodes. Common AI-powered patterns:</p>
+            <p><strong>1. Content Generation Pipeline:</strong></p>
+            <ul>
+                <li>Trigger: New product added to database</li>
+                <li>AI: Generate product description, SEO title, social media posts</li>
+                <li>Output: Update product page + schedule social posts</li>
+            </ul>
+            <p><strong>2. Customer Support Triage:</strong></p>
+            <ul>
+                <li>Trigger: New support ticket email</li>
+                <li>AI: Classify urgency (critical/normal/low), detect language, suggest response</li>
+                <li>Route: Critical → page on-call, Normal → queue + auto-draft, Low → auto-respond</li>
+            </ul>
+            <p><strong>3. Social Media Monitoring:</strong></p>
+            <ul>
+                <li>Trigger: New mention of your brand on Twitter/Reddit</li>
+                <li>AI: Analyze sentiment (positive/negative/neutral)</li>
+                <li>Action: Negative → alert team immediately. Positive → retweet + thank. Neutral → log for report.</li>
+            </ul>
+            <p><strong>4. Research Digest:</strong></p>
+            <ul>
+                <li>Trigger: Weekly schedule (every Monday)</li>
+                <li>Fetch: Pull new papers from arXiv, blog posts from RSS feeds</li>
+                <li>AI: Summarize each, rank by relevance to your interests</li>
+                <li>Output: Send formatted email digest with top 10 finds</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg text-left">When to Graduate from No-Code</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>No-code tools are fantastic, but they have limits. You should switch to code or AI agents when:</p>
+            <ul>
+                <li><strong>Complex data processing:</strong> The transformation logic is too complex for visual nodes — you need real programming constructs (loops, recursion, custom parsing).</li>
+                <li><strong>Custom APIs:</strong> The service you need isn't available as a pre-built integration.</li>
+                <li><strong>Cost at scale:</strong> No-code tools charge per task execution. At high volume (10,000+ tasks/day), self-hosted code or n8n is far cheaper.</li>
+                <li><strong>AI decision-making:</strong> When the automation needs to reason, not just follow rules — this is where AI agents excel.</li>
+                <li><strong>Version control:</strong> No-code workflows are hard to review, diff, and roll back. Code lives in Git.</li>
+            </ul>
+            <p>The best automation engineers use both: no-code for quick wins and prototyping, code/AI agents for mission-critical pipelines.</p>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck
+    question="When should you choose n8n over Zapier for automation?"
+    options={[
+        "When you need the largest app ecosystem possible.",
+        "When you want to self-host, need AI nodes with no per-task limits, and want the ability to drop into custom code when visual nodes aren't enough.",
+        "When you only need simple 2-step automations.",
+        "When you want to avoid learning any new tools."
+    ]}
+    correctAnswerIndex={1}
+    explanation="n8n's key advantages are: self-hosting (full data control, no per-task pricing), built-in AI nodes, and a code node for custom logic. Zapier has a larger pre-built ecosystem but charges per task and has limited AI capabilities."
+/>

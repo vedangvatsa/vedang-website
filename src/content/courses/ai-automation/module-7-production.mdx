@@ -1,0 +1,152 @@
+---
+title: "Production Automation: Scheduling, Monitoring & Scaling"
+description: "Ship your automations to production. Set up cron jobs, monitor health, handle failures, track costs, and scale from hobby project to enterprise-grade infrastructure."
+---
+
+<MonitoringDashboard />
+
+An automation that only works when you're watching isn't really an automation. Production-grade pipelines run reliably 24/7, recover from errors, alert you only when needed, and cost predictably.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg text-left">Scheduling: Cron, GitHub Actions & Serverless</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Every time-triggered automation needs a scheduler. The main options:</p>
+            <p><strong>1. GitHub Actions (Free Tier)</strong></p>
+            <pre><code>{`# .github/workflows/daily-broadcast.yml
+name: Daily Job Broadcast
+on:
+  schedule:
+    - cron: '0 8 * * *'  # Every day at 8am UTC
+  workflow_dispatch: {}   # Manual trigger for testing
+
+jobs:
+  broadcast:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm ci
+      - run: node scripts/broadcast-jobs.mjs
+        env:
+          SUPABASE_URL: \${{ secrets.SUPABASE_URL }}
+          TELEGRAM_BOT_TOKEN: \${{ secrets.TELEGRAM_BOT_TOKEN }}`}</code></pre>
+            <p><strong>2. Vercel Cron Jobs</strong> — For Next.js apps, add cron triggers to API routes:</p>
+            <pre><code>{`// vercel.json
+{
+  "crons": [{
+    "path": "/api/cron/broadcast",
+    "schedule": "0 8 * * *"
+  }]
+}`}</code></pre>
+            <p><strong>3. n8n / Make Schedules</strong> — Built-in scheduling in no-code tools. Best for non-technical teams.</p>
+            <p><strong>4. Railway / Render Cron</strong> — For standalone scripts that need more compute time than GitHub Actions allows (6 hours max).</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg text-left">Monitoring & Alerting</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>You need to know when automations fail — before your users notice.</p>
+            <p><strong>Lightweight monitoring stack:</strong></p>
+            <pre><code>{`// At the end of every pipeline run, send a heartbeat
+async function reportPipelineStatus(pipeline, results) {
+  const status = {
+    pipeline,
+    timestamp: new Date().toISOString(),
+    success: results.successes,
+    failures: results.failures,
+    duration: results.durationMs,
+  };
+
+  // 1. Log to console (GitHub Actions captures this)
+  console.log(JSON.stringify(status));
+
+  // 2. Update monitoring spreadsheet via MCP
+  await updateSheet("Automation Log", status);
+
+  // 3. Alert on failure
+  if (results.failures > 0) {
+    await sendSlackAlert(\`⚠️ Pipeline \${pipeline} had \${results.failures} failures\`);
+  }
+
+  // 4. Heartbeat — external monitoring tools (UptimeRobot, Better Uptime)
+  //    will alert if the heartbeat stops arriving
+  await fetch(\`https://heartbeat.uptimerobot.com/\${HEARTBEAT_ID}\`);
+}`}</code></pre>
+            <p><strong>What to monitor:</strong></p>
+            <ul>
+                <li>✅ Did the pipeline run on time? (Missing heartbeat = alert)</li>
+                <li>✅ How many items were processed vs. failed?</li>
+                <li>✅ How long did it take? (Duration spike = something is wrong)</li>
+                <li>✅ What's the error rate trend? (Gradual increase = API change)</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg text-left">Cost Management</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>AI-powered automations have running costs. Track and optimize them:</p>
+            <p><strong>Cost categories:</strong></p>
+            <ul>
+                <li><strong>AI API calls:</strong> OpenAI, Anthropic — charged per token. Use cheaper models (GPT-4o-mini, Haiku) for simple tasks, expensive models only when quality matters.</li>
+                <li><strong>Hosting:</strong> GitHub Actions (2,000 free minutes/month), Vercel (free hobby tier), Railway ($5/month for always-on).</li>
+                <li><strong>No-code tools:</strong> Zapier charges per task, Make charges per operation. n8n self-hosted = only hosting costs.</li>
+                <li><strong>Database:</strong> Supabase free tier covers most use cases. Neon, PlanetScale also have generous free tiers.</li>
+            </ul>
+            <p><strong>Cost optimization tips:</strong></p>
+            <ul>
+                <li>Cache API responses to avoid redundant calls</li>
+                <li>Use GPT-4o-mini for classification/formatting, reserve Claude/GPT-4 for complex reasoning</li>
+                <li>Batch operations — send 10 messages in one API call instead of 10 separate calls</li>
+                <li>Run compute-heavy tasks during off-peak hours</li>
+                <li>Set billing alerts on all AI API accounts</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg text-left">Scaling Your Automation Portfolio</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>As you build more automations, organization becomes critical:</p>
+            <p><strong>1. Documentation:</strong> Every automation should have a README with: what it does, what triggers it, what services it connects to, what secrets it needs, and how to test it. Future-you (or your team) will thank you.</p>
+            <p><strong>2. Version Control:</strong> Keep all automation code in Git repositories. Use the same workflow you'd use for any software — branches, pull requests, code review. The [Vibe Coding](/vibe-coding) course covers these fundamentals.</p>
+            <p><strong>3. Centralized Secrets:</strong> Use a secrets manager (GitHub Secrets, Vercel Environment Variables, 1Password) instead of scattering API keys across config files.</p>
+            <p><strong>4. Automation Inventory:</strong> Maintain a spreadsheet or dashboard listing all running automations:</p>
+            <div className="grid md:grid-cols-2 gap-4 my-4">
+                <div className="p-4 rounded-lg border">
+                    <h4 className="font-semibold text-sm mb-2">Track for each automation</h4>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>• Name and description</li>
+                        <li>• Schedule (when does it run?)</li>
+                        <li>• Dependencies (what APIs/services?)</li>
+                        <li>• Owner (who maintains it?)</li>
+                        <li>• Last successful run</li>
+                        <li>• Monthly cost estimate</li>
+                    </ul>
+                </div>
+                <div className="p-4 rounded-lg border">
+                    <h4 className="font-semibold text-sm mb-2">Review quarterly</h4>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>• Is this automation still needed?</li>
+                        <li>• Has the cost changed?</li>
+                        <li>• Are there error patterns?</li>
+                        <li>• Can it be consolidated with another?</li>
+                        <li>• Should it be upgraded (rule → AI)?</li>
+                    </ul>
+                </div>
+            </div>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck
+    question="Your daily job broadcast pipeline has been working for 3 months but suddenly starts failing silently. What monitoring practice would have caught this earliest?"
+    options={[
+        "Checking the pipeline code manually every week.",
+        "A heartbeat monitor that alerts you when the daily ping stops arriving — catching failures even when no error is thrown.",
+        "Adding more API calls to the pipeline.",
+        "Running the pipeline more frequently."
+    ]}
+    correctAnswerIndex={1}
+    explanation="A heartbeat monitor (like UptimeRobot or Better Uptime) expects a ping at regular intervals. If the pipeline fails silently — crashes before reaching the error handler, or the cron job stops triggering entirely — the missing heartbeat triggers an alert. This catches failures that even error-handling code would miss."
+/>

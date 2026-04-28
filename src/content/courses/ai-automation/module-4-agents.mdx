@@ -1,0 +1,135 @@
+---
+title: "AI Agents as Automators"
+description: "AI agents don't just follow rules — they reason, plan, and adapt. Learn to use Claude, Antigravity, and GPT as autonomous workflow executors that handle ambiguity and make decisions."
+---
+
+<AgentArchitecture />
+
+Traditional automation follows rigid rules: "if X, then Y." AI agents break this limitation. They observe context, reason about what to do, take action using tools, and learn from the result. This makes them perfect for automations that require judgment, natural language understanding, or handling edge cases.
+
+If you've taken the [Agentic Web](/agentic-web) course, you understand the theory. This module is about putting agents to work as practical automators.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg text-left">The Agent Loop: Observe → Think → Act → Learn</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Every AI agent runs a loop:</p>
+            <ol>
+                <li><strong>Observe:</strong> Read the current context — user request, data from APIs, error messages, previous results.</li>
+                <li><strong>Think:</strong> Plan the next action. The LLM reasons about what tools to call, what order to do things in, and what could go wrong.</li>
+                <li><strong>Act:</strong> Execute the plan — call an API, run a database query, send a message, write a file.</li>
+                <li><strong>Learn:</strong> Evaluate the result. Did it work? If not, adjust and loop again with new context.</li>
+            </ol>
+            <p><strong>Why this matters for automation:</strong> Traditional automation breaks when it encounters something unexpected. An AI agent can handle exceptions, ambiguous data, and novel situations by reasoning about them instead of following a fixed script.</p>
+            <p><strong>Example:</strong> A rule-based automation fails when a job title is in a new format. An AI agent reads the title, understands it's still a "Senior Engineer" role despite unusual formatting, and processes it correctly.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg text-left">Antigravity: Your AI Automation Partner</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p><strong>Antigravity</strong> (the AI assistant powering this conversation) is a powerful automation tool because it can:</p>
+            <ul>
+                <li><strong>Read and write files</strong> — create scripts, edit configurations, update data files</li>
+                <li><strong>Run terminal commands</strong> — execute scripts, install packages, run builds</li>
+                <li><strong>Use MCP servers</strong> — interact with Google Sheets, databases, and any connected service</li>
+                <li><strong>Browse the web</strong> — fetch data, check deployments, scrape information</li>
+                <li><strong>Reason about errors</strong> — read error logs, diagnose issues, implement fixes</li>
+            </ul>
+            <p><strong>Real automation example — daily social media broadcast:</strong></p>
+            <p>Instead of building a complex pipeline from scratch, you can tell Antigravity:</p>
+            <blockquote>"Query the Supabase jobs database for listings posted in the last 24 hours, format the top 10 as a Telegram message with job title, company, and apply link, then POST it to the Telegram Bot API."</blockquote>
+            <p>Antigravity will write the script, run it, verify the output, handle any errors, and confirm the message was sent. What would take an hour to build manually takes 2 minutes of conversation.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg text-left">Claude & GPT: Tool-Calling Agents</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Claude and GPT support <strong>tool calling</strong> — you define functions the model can invoke, and the model decides when to use them based on the conversation.</p>
+            <p><strong>Building an automation agent with tool calling:</strong></p>
+            <pre><code>{`// Define tools the agent can use
+const tools = [
+  {
+    name: "search_jobs",
+    description: "Search the job database by keyword and location",
+    parameters: {
+      keyword: { type: "string" },
+      location: { type: "string" },
+    },
+  },
+  {
+    name: "post_to_telegram",
+    description: "Send a formatted message to the Telegram channel",
+    parameters: {
+      message: { type: "string" },
+    },
+  },
+  {
+    name: "update_spreadsheet",
+    description: "Add a row to the tracking spreadsheet",
+    parameters: {
+      data: { type: "object" },
+    },
+  },
+];
+
+// The agent decides which tools to call
+const response = await anthropic.messages.create({
+  model: "claude-sonnet-4-20250514",
+  tools,
+  messages: [{
+    role: "user",
+    content: "Find all new Solidity jobs posted today, " +
+      "post a summary to Telegram, and log them in the spreadsheet."
+  }],
+});`}</code></pre>
+            <p>The model will call <code>search_jobs</code>, process the results, call <code>post_to_telegram</code> with a formatted message, then call <code>update_spreadsheet</code> — all autonomously.</p>
+            <p>For deeper coverage of how prompting drives agent behavior, see the [Prompt Engineering](/prompt-engineering-101) course.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg text-left">Social Media Automation with AI Agents</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Social media is one of the highest-value automation targets. Here are battle-tested patterns:</p>
+            <p><strong>1. Automated Job Broadcasting (Telegram/Discord)</strong></p>
+            <ul>
+                <li>Cron job triggers daily at 8am</li>
+                <li>Script queries Supabase for new job listings from 50+ company boards</li>
+                <li>AI agent formats each listing with emoji, company name, role, and apply link</li>
+                <li>Posts batched messages to Telegram channel via Bot API</li>
+                <li>Logs posting stats to a dashboard</li>
+            </ul>
+            <p><strong>2. Content Repurposing Pipeline</strong></p>
+            <ul>
+                <li>Trigger: New blog post published (webhook or RSS)</li>
+                <li>AI generates: Twitter thread (5 tweets), LinkedIn post, Instagram caption</li>
+                <li>Each version matches the platform's tone and character limits</li>
+                <li>Posts to a review queue (Google Sheet) or publishes directly via API</li>
+            </ul>
+            <p><strong>3. Community Engagement Automation</strong></p>
+            <ul>
+                <li>Monitor mentions across Twitter, Reddit, Discord</li>
+                <li>AI classifies sentiment and intent (question, complaint, praise)</li>
+                <li>Auto-draft appropriate responses for review</li>
+                <li>Track engagement metrics in a spreadsheet</li>
+            </ul>
+            <p><strong>4. Newsletter Curation</strong></p>
+            <ul>
+                <li>Weekly: fetch top articles from 20+ RSS feeds and Twitter lists</li>
+                <li>AI ranks by relevance, deduplicates, writes summaries</li>
+                <li>Outputs formatted HTML for email (Resend, Mailchimp, Buttondown)</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck
+    question="What makes AI agents better than rule-based automation for social media management?"
+    options={[
+        "AI agents are always faster than rule-based systems.",
+        "AI agents can handle ambiguity, adapt tone for different platforms, generate original content, and make judgment calls on sentiment and relevance — things rigid rules can't do.",
+        "AI agents are cheaper than all no-code tools.",
+        "AI agents don't need any APIs to function."
+    ]}
+    correctAnswerIndex={1}
+    explanation="Rule-based automation breaks when it encounters unexpected formats, sentiment analysis, or content that needs creative adaptation. AI agents reason about context — they can write a LinkedIn post in professional tone and a tweet in casual tone from the same source, handle edge cases in sentiment, and generate original content."
+/>

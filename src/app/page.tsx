@@ -101,6 +101,13 @@ export default function Home() {
                 <MoveUpRight className="h-4 w-4 self-end text-muted-foreground" />
               </div>
             </Link>
+            <Link href="/ai-automation" className="group">
+              <div className="flex h-full flex-col justify-between overflow-hidden rounded-xl border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
+                <h3 className="text-lg font-semibold mb-2">AI Automation</h3>
+                <p className="text-sm text-muted-foreground mb-4">Automate anything with AI agents, APIs, MCP, and no-code tools.</p>
+                <MoveUpRight className="h-4 w-4 self-end text-muted-foreground" />
+              </div>
+            </Link>
             <Link href="/lit" className="group">
               <div className="flex h-full flex-col justify-between overflow-hidden rounded-xl border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
                 <h3 className="text-lg font-semibold mb-2">LinkedIn Translator</h3>

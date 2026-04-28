@@ -95,6 +95,13 @@ export const pageMetadata = {
     url: '/mcp-development',
     keywords: ['MCP', 'Model Context Protocol', 'MCP Server', 'AI Tools', 'Claude MCP', 'Cursor MCP', 'TypeScript MCP', 'Build MCP Server'],
   },
+  aiAutomation: {
+    title: 'AI Automation 101 - Automate Anything with AI',
+    description:
+      'Free course on AI-powered automation. Build pipelines with APIs, MCP servers, AI agents, n8n, and no-code tools.',
+    url: '/ai-automation',
+    keywords: ['AI Automation', 'n8n', 'MCP Automation', 'AI Agents', 'API Automation', 'Workflow Automation', 'No-Code AI', 'Telegram Bot'],
+  },
 };
 
 export function generateMetadata(params: MetadataParams): Metadata {

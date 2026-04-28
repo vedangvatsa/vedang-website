@@ -1,0 +1,111 @@
+---
+title: "The Automation Mindset"
+description: "Before you automate anything, learn to see automation opportunities everywhere. This module teaches you to think in workflows — identifying what to automate, what to leave manual, and how to measure the value."
+---
+
+<AutomationLayers />
+
+Most people think automation means "write a script." That's one layer. The modern automation stack goes much deeper — from simple templates all the way to fully autonomous AI agents that run 24/7 without human intervention.
+
+This course covers the entire spectrum: no-code tools (n8n, Make), raw API integration, AI agents (Claude, Antigravity), and MCP-powered automation. By the end, you'll be able to build pipelines that handle complex, multi-step workflows with zero manual effort.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg text-left">What Should You Automate?</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Not everything should be automated. The best targets share these characteristics:</p>
+            <ul>
+                <li><strong>Repetitive:</strong> You do it more than twice a week in the same way.</li>
+                <li><strong>Rule-based:</strong> The logic can be described as "if X, then Y." Even fuzzy rules work — AI agents handle ambiguity.</li>
+                <li><strong>Time-consuming:</strong> It takes more than 5 minutes each time. Multiply by frequency — a 10-minute daily task is 43 hours per year.</li>
+                <li><strong>Error-prone:</strong> Manual steps that frequently go wrong are perfect automation candidates.</li>
+                <li><strong>Low-creativity:</strong> Copy-pasting, formatting, data entry, status updates — not strategic thinking.</li>
+            </ul>
+            <p><strong>The ROI formula:</strong> If <code>(time per task × frequency × error cost) &gt; (time to automate + maintenance)</code>, automate it.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg text-left">The Five Layers of Automation</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Automation exists on a spectrum. Each layer reduces human effort:</p>
+            <ol>
+                <li><strong>Manual:</strong> You do everything. Copy, paste, click, type. 100% human effort.</li>
+                <li><strong>Templates & Snippets:</strong> Reusable scripts, text expanders, keyboard shortcuts. You still trigger them manually, but execution is faster.</li>
+                <li><strong>No-Code Workflows:</strong> Visual tools like n8n, Make, and Zapier. Connect apps with drag-and-drop. Runs on triggers (webhook, schedule, email). ~30% effort — you design the workflow, the tool runs it.</li>
+                <li><strong>AI Agents:</strong> Claude, Antigravity, GPT with tool access. You describe what you want in natural language, the agent figures out the steps. ~10% effort — you review and approve.</li>
+                <li><strong>Autonomous Pipelines:</strong> AI agents + MCP servers + scheduled triggers. Runs entirely without you. Monitors itself, handles errors, sends alerts only when needed. ~0% ongoing effort.</li>
+            </ol>
+            <p>This course teaches you to build at every layer and choose the right one for each problem.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg text-left">Thinking in Workflows</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Every automation is a workflow with three parts:</p>
+            <ol>
+                <li><strong>Trigger:</strong> What starts the workflow? A schedule (every morning at 9am), an event (new email arrives), a webhook (Stripe payment completed), or a manual click.</li>
+                <li><strong>Steps:</strong> The sequence of actions. Fetch data → Transform it → Make a decision → Take action. Steps can branch, loop, and run in parallel.</li>
+                <li><strong>Output:</strong> The result. Send a message, update a database, create a document, post to social media, or trigger another workflow.</li>
+            </ol>
+            <p><strong>Example — Daily job posting automation:</strong></p>
+            <ul>
+                <li><strong>Trigger:</strong> Cron job at 8am UTC</li>
+                <li><strong>Steps:</strong> Query database for new jobs → Filter by criteria → Format for Telegram → Generate summary with AI</li>
+                <li><strong>Output:</strong> Post to Telegram channel + log results</li>
+            </ul>
+            <p>Once you start seeing tasks as trigger → steps → output, automation opportunities appear everywhere.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg text-left">The Modern Automation Toolkit</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Here's what you'll learn to use across this course:</p>
+            <div className="grid md:grid-cols-2 gap-4 my-4">
+                <div className="p-4 rounded-lg border">
+                    <h4 className="font-semibold text-sm mb-2">🔗 No-Code Layer</h4>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>• n8n (open-source, self-hosted)</li>
+                        <li>• Make (visual, complex branching)</li>
+                        <li>• Zapier (largest ecosystem)</li>
+                    </ul>
+                </div>
+                <div className="p-4 rounded-lg border">
+                    <h4 className="font-semibold text-sm mb-2">🔌 API Layer</h4>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>• REST APIs & webhooks</li>
+                        <li>• Authentication (API keys, OAuth)</li>
+                        <li>• fetch, axios, cURL</li>
+                    </ul>
+                </div>
+                <div className="p-4 rounded-lg border">
+                    <h4 className="font-semibold text-sm mb-2">🤖 AI Agent Layer</h4>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>• Claude / Antigravity / GPT</li>
+                        <li>• Tool calling & function execution</li>
+                        <li>• Conversational automation</li>
+                    </ul>
+                </div>
+                <div className="p-4 rounded-lg border">
+                    <h4 className="font-semibold text-sm mb-2">⚡ MCP Layer</h4>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>• MCP servers for any data source</li>
+                        <li>• Google Sheets, Slack, databases</li>
+                        <li>• Composable tool ecosystem</li>
+                    </ul>
+                </div>
+            </div>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck
+    question="Which of these tasks is the BEST candidate for automation?"
+    options={[
+        "Writing a novel — it's time-consuming but highly creative.",
+        "Copying 50 new job listings from an API into a spreadsheet every morning — repetitive, rule-based, time-consuming, and error-prone.",
+        "Having a one-on-one conversation with a team member — important but not rule-based.",
+        "Deciding the company's product strategy — high-impact but requires human judgment."
+    ]}
+    correctAnswerIndex={1}
+    explanation="The ideal automation target is repetitive (daily), rule-based (fetch → filter → insert), time-consuming (50 listings), and error-prone (manual copy-paste). The other tasks require creativity, empathy, or strategic judgment that humans handle better."
+/>
