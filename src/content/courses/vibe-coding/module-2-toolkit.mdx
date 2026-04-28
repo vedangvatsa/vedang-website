@@ -14,69 +14,128 @@ This module breaks down the modern AI coding toolkit. We categorize tools into t
 
 Your first decision is where the code will live while you work on it. Think of this like choosing a workshop.
 
-### Cloud IDEs (The Online Workshop)
-*Examples: Replit, Firebase Studio, Lovable.dev*
-
-These tools run entirely in your web browser. 
-- **Pros:** Zero setup required. You do not need to install anything. They are perfect for beginners and for quickly testing an idea.
-- **Cons:** You have less control over the underlying system. You need a constant internet connection.
-
-### Local IDEs (Your Own Workshop)
-*Examples: Cursor, VS Code with Extensions*
-
-You install these programs directly on your computer.
-- **Pros:** You have complete control. They are faster for large projects. They do not require an internet connection for basic typing (though the AI features do).
-- **Cons:** You must set up the environment, install programming languages, and configure the system yourself.
+<div className="grid md:grid-cols-2 gap-6 my-6">
+    <Card>
+        <CardHeader>
+            <CardTitle className="text-lg font-semibold">Cloud IDEs (The Online Workshop)</CardTitle>
+        </CardHeader>
+        <CardContent>
+            <p className="text-sm text-muted-foreground mb-4"><em>Examples: Replit, Firebase Studio, Lovable.dev</em></p>
+            <p className="text-sm">These tools run entirely in your web browser.</p>
+            <ul className="text-sm mt-2">
+                <li><strong>Pros:</strong> Zero setup required. Perfect for beginners and quickly testing an idea.</li>
+                <li><strong>Cons:</strong> Less control over the underlying system. Requires constant internet.</li>
+            </ul>
+        </CardContent>
+    </Card>
+    <Card className="border-primary/50">
+        <CardHeader>
+            <CardTitle className="text-lg font-semibold">Local IDEs (Your Own Workshop)</CardTitle>
+        </CardHeader>
+        <CardContent>
+            <p className="text-sm text-muted-foreground mb-4"><em>Examples: Cursor, VS Code, Antigravity</em></p>
+            <p className="text-sm">You install these programs directly on your computer.</p>
+            <ul className="text-sm mt-2">
+                <li><strong>Pros:</strong> Complete control. Faster for large projects.</li>
+                <li><strong>Cons:</strong> You must set up the environment and install languages yourself.</li>
+            </ul>
+        </CardContent>
+    </Card>
+</div>
 
 <SectionLabel label="A Tour of Your Options" />
 
 Here is a breakdown of the most effective tools available right now and when to use them.
 
-### 1. Firebase Studio: The Production Scaler
-**Best For:** Building strong web applications that need to support many users safely.
+<Accordion type="single" collapsible className="w-full mt-4 space-y-4">
+    <AccordionItem value="lovable" className="border rounded-lg bg-card px-4">
+        <AccordionTrigger className="text-lg font-semibold hover:no-underline">
+            1. Lovable.dev & v0 by Vercel: The Visual Builders
+        </AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground pt-2">
+            **Best For:** Fast, beautiful, visual web apps and UI components.
+            
+            **How it works:** You describe what you want in chat, and the AI builds the user interface visually in real-time. Lovable connects easily to databases like Supabase, while v0 specializes in generating clean React components with Tailwind CSS that you can copy-paste into other projects.
+        </AccordionContent>
+    </AccordionItem>
+    
+    <AccordionItem value="firebase" className="border rounded-lg bg-card px-4">
+        <AccordionTrigger className="text-lg font-semibold hover:no-underline">
+            2. Firebase Studio: The Production Scaler
+        </AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground pt-2">
+            **Best For:** Building strong web applications that need to support many users safely.
+            
+            **How it works:** It connects directly to Google Cloud. Before the AI changes any code, it generates a "Blueprint"—a detailed plan of exactly what it intends to change. You review and approve it, preventing the AI from breaking existing code.
+        </AccordionContent>
+    </AccordionItem>
+    
+    <AccordionItem value="replit" className="border rounded-lg bg-card px-4">
+        <AccordionTrigger className="text-lg font-semibold hover:no-underline">
+            3. Replit: The All-in-One Workshop
+        </AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground pt-2">
+            **Best For:** Apps with complex logic, backend services, bots, and learning how code works.
+            
+            **How it works:** Replit gives you a full computer running in the cloud. It includes a code editor, a command line terminal, and a live web preview. Its AI can generate entire projects from a single prompt and deploy them to the internet with one click.
+        </AccordionContent>
+    </AccordionItem>
+    
+    <AccordionItem value="cursor" className="border rounded-lg bg-card px-4">
+        <AccordionTrigger className="text-lg font-semibold hover:no-underline">
+            4. Cursor & GitHub Copilot (Codex): The Native Assistants
+        </AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground pt-2">
+            **Best For:** People who already know how to code and want AI help in their usual local workflow.
+            
+            **How it works:** Cursor is a specialized AI-first fork of VS Code. Copilot (powered by OpenAI Codex models) integrates into existing editors. You can highlight code to rewrite it, find bugs, or auto-complete blocks of logic as you type. They speed up developers rather than replacing them.
+        </AccordionContent>
+    </AccordionItem>
+    
+    <AccordionItem value="agents" className="border rounded-lg bg-card px-4">
+        <AccordionTrigger className="text-lg font-semibold hover:no-underline">
+            5. Claude Code & Antigravity: The Autonomous Agents
+        </AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground pt-2">
+            **Best For:** Making changes across many different files at once or building complex local architectures.
+            
+            **How it works:** These are autonomous agents running in your terminal (Claude Code) or as background systems (Antigravity). They read your entire project folder and can perform large multi-file refactors, execute tests, and commit changes to version control with minimal supervision.
+        </AccordionContent>
+    </AccordionItem>
 
-**How it works:** Firebase Studio connects directly to Google Cloud. Before the AI changes any code, it generates a "Blueprint." This is a detailed plan of exactly what it intends to change. You review the blueprint, approve it, and then the AI executes it. This prevents the AI from breaking existing code.
-
-### 2. Lovable.dev: The Visual App Builder
-**Best For:** Fast, beautiful, visual web apps (like dashboards or portfolios).
-
-**How it works:** You type your instructions into a chat, and the AI builds the user interface visually in real-time. It connects easily to databases like Supabase to handle user accounts and data storage. The output is high-quality React code.
-
-### 3. Replit: The All-in-One Workshop
-**Best For:** Apps with complex logic, backend services, bots, and learning how code works.
-
-**How it works:** Replit gives you a full computer running in the cloud. It includes a code editor, a command line terminal, and a live web preview. Its AI can generate entire projects from a single prompt and deploy them to the internet with one click.
-
-### 4. v0 by Vercel: The UI Component Generator
-**Best For:** Generating polished React UI components quickly.
-
-**How it works:** v0 focuses strictly on the front-end design. You describe a component (like "a pricing table with three tiers") or paste an image of a design you like. v0 generates clean React code using Tailwind CSS. You can then copy this code into any other tool.
-
-### 5. Cursor: The AI-Native Code Editor
-**Best For:** People who already know how to code and want AI help in their usual workflow.
-
-**How it works:** Cursor is a specialized version of the popular VS Code editor. It is built specifically for AI. You can highlight code and press a shortcut to ask the AI to rewrite it, find bugs, or explain what it does. It speeds up developers rather than replacing them.
-
-### 6. Claude Code: The Terminal Agent
-**Best For:** Developers comfortable using the command line who need to make changes across many different files at once.
-
-**How it works:** Claude Code runs directly in your terminal. It reads your entire project folder. You can ask it to perform large refactors, write tests, and commit the changes to your version control system.
+    <AccordionItem value="ollama" className="border rounded-lg bg-card px-4">
+        <AccordionTrigger className="text-lg font-semibold hover:no-underline">
+            6. Ollama: The Local Intelligence
+        </AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground pt-2">
+            **Best For:** Privacy-focused development, offline coding, and fine-tuning custom models.
+            
+            **How it works:** Ollama allows you to run powerful open-source models (like Llama 3, Mistral, or Qwen) locally on your own hardware. Your code never leaves your machine, making it essential for enterprise security and offline vibe coding.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
 
 <SectionLabel label="Knowledge Check" />
 
 Test your understanding of the toolkit. Click the questions to reveal the answers.
 
-<KnowledgeCheck questions={[
-  {
-    q: "If you want to build a beautiful dashboard UI quickly without setting anything up, which tool is best?",
-    a: "**Lovable.dev** or **v0 by Vercel**. Both run in the browser and specialize in generating high-quality visual components quickly."
-  },
-  {
-    q: "What is the main advantage of Firebase Studio's 'Blueprint' feature?",
-    a: "It forces the AI to show you a plan of its changes before it executes them. This gives you control and stops the AI from accidentally breaking code that already works."
-  },
-  {
-    q: "Why would someone choose Cursor over Replit?",
-    a: "Cursor is a Local IDE. A user would choose it if they want complete control over their local environment, are already comfortable setting up their own project folders, and want the AI to assist them rather than build the entire app from scratch online."
-  }
-]} />
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="q1">
+        <AccordionTrigger className="text-lg font-medium text-left">If you want to build a beautiful dashboard UI quickly without setting anything up, which tool is best?</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
+            **Lovable.dev** or **v0 by Vercel**. Both run in the browser and specialize in generating high-quality visual components quickly.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="q2">
+        <AccordionTrigger className="text-lg font-medium text-left">What is the main advantage of Firebase Studio's 'Blueprint' feature?</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
+            It forces the AI to show you a plan of its changes before it executes them. This gives you control and stops the AI from accidentally breaking code that already works.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="q3">
+        <AccordionTrigger className="text-lg font-medium text-left">Why would someone choose Ollama over a cloud model?</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
+            Ollama runs locally on your machine. A user would choose it for strict data privacy (the code never leaves their computer) or to code without an internet connection.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
