@@ -68,7 +68,7 @@ export const pageMetadata = {
     keywords: ['Agentic Web', 'AI Agents Course', 'Autonomous AI', 'Agentic Systems', 'Digital Economy', 'Future of Web'],
   },
   vibeCoding: {
-    title: 'Vibe Coding 101',
+    title: 'Vibe Coding 101 by Vedang Vatsa',
     description:
       'Vibe Coding 101: A free, self-paced course on building real apps with AI. Learn to describe what you want in plain English and let tools like Firebase Studio, Replit, Cursor, and Lovable handle the code. By Vedang Vatsa.',
     url: '/vibe-coding',
@@ -136,7 +136,7 @@ export function generateMetadata(params: MetadataParams): Metadata {
     images: [resolvedImage],
   };
 
-  const isLongTitle = title.length > 45;
+  const isLongTitle = title.length > 45 || title.includes('Vedang Vatsa');
 
   return {
     title: isLongTitle ? { absolute: title } : title,
