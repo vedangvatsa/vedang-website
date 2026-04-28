@@ -30,17 +30,12 @@ This module covers the fundamental techniques every prompt engineer must know. T
         <AccordionTrigger className="text-lg">Structured Output: Controlling the Format</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             <p>For building applications, you often need the AI's response in a specific format, not just plain text. This is called structured output, and it is one of the most practical skills in prompt engineering.</p>
-            <ul>
-                <li><strong>JSON Output:</strong> Ask the model to return data as JSON. This is essential when your code needs to parse the response.
-                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Extract the name, email, and phone number from the following text. Return your answer as a JSON object with keys: name, email, phone."</blockquote>
-                </li>
-                <li><strong>Tables and Lists:</strong> Ask for markdown tables or numbered lists to get organized output.
-                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Compare React, Vue, and Angular. Return a markdown table with columns: Framework, Learning Curve, Performance, Community Size."</blockquote>
-                </li>
-                <li><strong>XML and Custom Formats:</strong> For APIs that need specific schemas, you can provide the exact structure you want the model to follow.
-                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Return your analysis in this exact XML format: &lt;analysis&gt;&lt;sentiment&gt;positive/negative&lt;/sentiment&gt;&lt;confidence&gt;0-100&lt;/confidence&gt;&lt;summary&gt;one sentence&lt;/summary&gt;&lt;/analysis&gt;"</blockquote>
-                </li>
-            </ul>
+            <p><strong>JSON Output:</strong> Ask the model to return data as JSON. This is essential when your code needs to parse the response.</p>
+            <div className="border-l-4 border-primary/50 pl-4 italic my-2"><p>"Extract the name, email, and phone number from the following text. Return your answer as a JSON object with keys: name, email, phone."</p></div>
+            <p><strong>Tables and Lists:</strong> Ask for markdown tables or numbered lists to get organized output.</p>
+            <div className="border-l-4 border-primary/50 pl-4 italic my-2"><p>"Compare React, Vue, and Angular. Return a markdown table with columns: Framework, Learning Curve, Performance, Community Size."</p></div>
+            <p><strong>XML and Custom Formats:</strong> For APIs that need specific schemas, you can provide the exact structure you want the model to follow.</p>
+            <div className="border-l-4 border-primary/50 pl-4 italic my-2"><p>"Return your analysis in this exact XML format: &lt;analysis&gt;&lt;sentiment&gt;positive/negative&lt;/sentiment&gt;&lt;confidence&gt;0-100&lt;/confidence&gt;&lt;summary&gt;one sentence&lt;/summary&gt;&lt;/analysis&gt;"</p></div>
             <p>The key principle: always show the model the exact output shape you want. The more specific the format instruction, the more reliable the result.</p>
         </AccordionContent>
     </AccordionItem>

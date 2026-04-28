@@ -6,10 +6,12 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { PageLayout } from '@/components/page-layout';
-
+import Link from 'next/link';
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Star, ExternalLink } from 'lucide-react';
+import { Star, ExternalLink, ArrowRight } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { pageMetadata, generateMetadata } from '@/lib/metadata';
 import { WebEvolution, BlockchainExplainer, SmartContractExplainer, Web3Ecosystem, Web3Passport, Web3Future } from '@/components/courses/web3-visuals';
 
 const referenceLinks = [
@@ -47,9 +49,7 @@ const referenceLinks = [
         ],
     },
 ];
-import Link from 'next/link';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { pageMetadata, generateMetadata } from '@/lib/metadata';
+
 
 export const metadata: Metadata = generateMetadata({
   title: pageMetadata.web3101.title,
@@ -265,7 +265,6 @@ export default function Web3CoursePage() {
                     </Accordion>
                 </div>
             </section>
-        </div>
     </PageLayout>
   );
 }

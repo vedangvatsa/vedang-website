@@ -10,7 +10,7 @@ import { PredictionEngine, CoreTechniques, AdvancedReasoning, CodePrompting, Bes
 
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Star } from 'lucide-react';
+import { Star, ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Link from 'next/link';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';

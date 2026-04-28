@@ -9,7 +9,7 @@ import { PageLayout } from '@/components/page-layout';
 
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Star, ExternalLink } from 'lucide-react';
+import { Star, ExternalLink, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { ActionWebEvolution, AgentComponents, AgenticDimensions, AgenticApps, AgenticFuture } from '@/components/courses/agentic-visuals';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';

@@ -6,17 +6,12 @@ LLMs are incredibly powerful tools for developers. This module teaches you how t
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg">Writing, Explaining, and Translating Code</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <ul>
-                <li><strong>Writing Code:</strong> Be specific about the language, libraries, and desired functionality. The more context you provide, the better the output.
-                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Write a Python function that takes a URL and returns the text content of the page using the 'requests' and 'BeautifulSoup' libraries. Handle HTTP errors gracefully and return None on failure."</blockquote>
-                </li>
-                <li><strong>Explaining Code:</strong> Paste a snippet of code and ask for an explanation. This is great for understanding legacy code or learning a new language.
-                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Explain this React hook line by line. Assume I am familiar with JavaScript but new to React."</blockquote>
-                </li>
-                <li><strong>Translating Code:</strong> Provide a function in one language and ask for its equivalent in another. Specify whether you want idiomatic code or a direct translation.
-                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Translate the following Bash script into an idiomatic Python script with the same functionality. Use the `pathlib` library for file operations."</blockquote>
-                </li>
-            </ul>
+            <p><strong>Writing Code:</strong> Be specific about the language, libraries, and desired functionality. The more context you provide, the better the output.</p>
+            <div className="border-l-4 border-primary/50 pl-4 italic my-2"><p>"Write a Python function that takes a URL and returns the text content of the page using the 'requests' and 'BeautifulSoup' libraries. Handle HTTP errors gracefully and return None on failure."</p></div>
+            <p><strong>Explaining Code:</strong> Paste a snippet of code and ask for an explanation. This is great for understanding legacy code or learning a new language.</p>
+            <div className="border-l-4 border-primary/50 pl-4 italic my-2"><p>"Explain this React hook line by line. Assume I am familiar with JavaScript but new to React."</p></div>
+            <p><strong>Translating Code:</strong> Provide a function in one language and ask for its equivalent in another. Specify whether you want idiomatic code or a direct translation.</p>
+            <div className="border-l-4 border-primary/50 pl-4 italic my-2"><p>"Translate the following Bash script into an idiomatic Python script with the same functionality. Use the pathlib library for file operations."</p></div>
 
             <div className="grid md:grid-cols-2 gap-6 my-6">
                 <Card>

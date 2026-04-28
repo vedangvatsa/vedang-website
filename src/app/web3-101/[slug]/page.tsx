@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { KnowledgeCheck } from '@/components/mdx/knowledge-check';
 import Image from 'next/image';
 import { WebEvolution, BlockchainExplainer, SmartContractExplainer, Web3Ecosystem, Web3Passport, Web3Future } from '@/components/courses/web3-visuals';
 
@@ -50,6 +51,7 @@ const components = {
   CardContent,
   CardHeader,
   CardTitle,
+  KnowledgeCheck,
   Link,
   WebEvolution,
   BlockchainExplainer,

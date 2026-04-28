@@ -29,15 +29,11 @@ For complex problems, you need to guide the model's reasoning process. These tec
         <AccordionTrigger className="text-lg">Multimodal Prompting: Beyond Text</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             <p>Modern LLMs can process more than just text. Models like GPT-4o, Gemini, and Claude can understand images, audio, video, and documents. This opens up entirely new categories of prompts.</p>
-            <ul>
-                <li><strong>Vision Prompting:</strong> Send an image along with a text prompt. You can ask the model to describe what it sees, extract text from a photo, analyze a chart, or identify errors in a UI screenshot.
-                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Here is a screenshot of my dashboard. What UI problems do you see? Suggest specific fixes for layout, spacing, and color contrast."</blockquote>
-                </li>
-                <li><strong>Document Analysis:</strong> Upload a PDF, spreadsheet, or slide deck and ask the model to summarize it, extract data, or answer questions about its contents.
-                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"I have uploaded a 20-page research paper. Summarize the key findings in 5 bullet points and list the methodology used."</blockquote>
-                </li>
-                <li><strong>Audio and Video:</strong> Some models can transcribe audio, analyze video frames, or answer questions about media content. This is useful for meeting notes, podcast summaries, and content analysis.</li>
-            </ul>
+            <p><strong>Vision Prompting:</strong> Send an image along with a text prompt. You can ask the model to describe what it sees, extract text from a photo, analyze a chart, or identify errors in a UI screenshot.</p>
+            <div className="border-l-4 border-primary/50 pl-4 italic my-2"><p>"Here is a screenshot of my dashboard. What UI problems do you see? Suggest specific fixes for layout, spacing, and color contrast."</p></div>
+            <p><strong>Document Analysis:</strong> Upload a PDF, spreadsheet, or slide deck and ask the model to summarize it, extract data, or answer questions about its contents.</p>
+            <div className="border-l-4 border-primary/50 pl-4 italic my-2"><p>"I have uploaded a 20-page research paper. Summarize the key findings in 5 bullet points and list the methodology used."</p></div>
+            <p><strong>Audio and Video:</strong> Some models can transcribe audio, analyze video frames, or answer questions about media content. This is useful for meeting notes, podcast summaries, and content analysis.</p>
             <p>The principle is the same as text prompting: be specific about what you want the model to focus on in the image, document, or media file.</p>
         </AccordionContent>
     </AccordionItem>

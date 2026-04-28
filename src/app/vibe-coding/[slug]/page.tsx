@@ -9,6 +9,8 @@ import Link from 'next/link';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Callout, SectionLabel, Explainer, KnowledgeCheck, ToolboxExplainer, PromptTechniques, LabWorkflow, ProductPillars } from '@/components/mdx';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 
 const coursesDirectory = path.join(process.cwd(), 'src', 'content', 'courses', 'vibe-coding');
@@ -45,6 +47,12 @@ const components = {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardDescription,
+  Badge,
   Callout,
   SectionLabel,
   Explainer,
