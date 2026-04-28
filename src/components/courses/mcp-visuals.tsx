@@ -48,7 +48,7 @@ export function MCPArchitecture() {
         {[125, 175, 225].map((y) => (
           <line key={y} x1={620} y1={y} x2={700} y2={y} stroke="currentColor" strokeWidth={1} opacity={0.2} strokeDasharray="3 2" />
         ))}
-        <rect x={700} y={100} width={80} height={150} rx={8} fill="currentColor" opacity={0.03} stroke="currentColor" strokeWidth={1} opacity={0.1} />
+        <rect x={700} y={100} width={80} height={150} rx={8} fill="currentColor" opacity={0.05} stroke="currentColor" strokeWidth={1} />
         <text x={740} y={180} textAnchor="middle" fill="currentColor" fontSize={10} opacity={0.4}>Data Sources</text>
       </svg>
     </div>
