@@ -1,0 +1,57 @@
+<AgenticDimensions />
+
+The Agentic Web isn't just one thing; it can be understood through three interconnected layers or dimensions. Each dimension builds on the one before it, showing how agents evolve from simple reasoners to active participants in a new digital economy.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg text-left">The Intelligence Dimension</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>This is the foundation. It's the agent's ability to think, plan, and learn. It encompasses the core cognitive abilities powered by LLMs, such as contextual understanding, long-horizon planning, and adapting based on feedback. This dimension is about making the agent smart.</p>
+            <p>Key capabilities in this dimension include:</p>
+            <ul>
+                <li><strong>Contextual Understanding:</strong> Interpreting user requests, web content, and API responses within a given context.</li>
+                <li><strong>Long-Horizon Planning:</strong> Devising and maintaining multi-step strategies to achieve complex goals over time.</li>
+                <li><strong>Adaptive Learning:</strong> Improving performance by learning from successes and failures, and incorporating user feedback.</li>
+            </ul>
+            <p>Without a strong Intelligence Dimension, an agent is just a simple script, unable to handle ambiguity or recover from errors.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg text-left">The Interaction Dimension</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>This layer is about communication and coordination. If intelligence is what an agent thinks, interaction is how it communicates its thoughts and actions to the digital world. This dimension is about making agents capable of working with others.</p>
+            <p>It includes:</p>
+            <ul>
+                <li><strong>Agent-to-Tool Communication:</strong> How does an agent reliably use any tool or API it encounters? This requires standardized protocols (like the <strong>Model Context Protocol or MCP</strong>) that allow an agent to discover a tool's capabilities and use it correctly without being pre-programmed for that specific tool.</li>
+                <li><strong>Agent-to-Agent Communication:</strong> How do agents from different developers and platforms collaborate? This requires protocols (like <strong>A2A or Agent-to-Agent Protocol</strong>) that let agents negotiate, share information, and work together on a shared goal.</li>
+                <li><strong>Agent-to-Human Communication:</strong> How does an agent communicate its progress, ask for clarification, and present results to the user in an understandable way?</li>
+            </ul>
+            <p>This dimension is creating the "HTTP for agents" — a universal language that will allow the entire ecosystem of agents and tools to connect and interoperate natively.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg text-left">The Economic Dimension</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>This is the most transformative and disruptive layer. Once agents can intelligently interact, they can exchange value. This dimension is about building new economies native to machines.</p>
+            <p>It includes several key shifts:</p>
+            <ul>
+                <li><strong>Agent-as-User:</strong> Agents become the primary "users" of many online services. For example, a restaurant's booking system will be used more by automated agents than by humans.</li>
+                <li><strong>The Agent Attention Economy:</strong> In Web 2.0, companies compete for human clicks and views. In the Agentic Web, services will compete to be chosen by agents. An agent selecting your API to book a flight becomes a valuable economic event, creating a new B2B (Business-to-Agent) marketplace.</li>
+                <li><strong>Autonomous Transactions:</strong> Agents will be able to manage budgets, make purchases, negotiate prices, and even earn value on behalf of their users. This could lead to a world of micro-transactions and value exchange happening at a speed and scale impossible for humans to manage.</li>
+            </ul>
+            <p>The Economic Dimension moves the Agentic Web from a technical curiosity to a powerful new economic engine, fundamentally changing how digital value is created and distributed.</p>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck 
+    question="What is the primary purpose of the Model Context Protocol (MCP) in the Agentic Web?"
+    options={[
+        "To improve the reasoning capabilities of the underlying LLM.",
+        "To provide a standard way for agents to discover and connect with data sources and tools.",
+        "To facilitate financial transactions between autonomous agents.",
+        "To create a marketplace for trading agent attention."
+    ]}
+    correctAnswerIndex={1}
+    explanation="MCP falls under the Interaction Dimension. It acts as a universal connector, standardizing how an agent interacts with external tools and data sources, similar to how HTTP standardized web browsing."
+/>

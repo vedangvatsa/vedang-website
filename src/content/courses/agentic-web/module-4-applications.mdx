@@ -1,0 +1,71 @@
+<AgenticApps />
+
+The Agentic Web is not science fiction; it's being built today. This module explores the three main ways agents are currently being applied, showcasing how they are already changing our digital lives.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg text-left">Informational Agents: Your Personal Researcher</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>These agents are designed to autonomously find, synthesize, and analyze information. They go far beyond a simple web search, acting as tireless researchers that can work for hours or days on a complex query.</p>
+            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
+                <strong>Example: A "Deep Research Agent."</strong> You could give it a high-level task like: "Create a comprehensive report on the current state of quantum computing. The report should cover the top research labs, recent breakthroughs in qubit stability, and the major technical and economic challenges to building a scalable quantum computer. Include a list of key companies and a summary of their approaches."
+            </blockquote>
+            <p>The agent would then:</p>
+            <ol>
+                <li>Decompose the task into sub-queries.</li>
+                <li>Search academic databases (like Arxiv), news articles, and company websites.</li>
+                <li>Parse dozens or hundreds of documents, extracting key information.</li>
+                <li>Synthesize the findings, identifying common themes and conflicting reports.</li>
+                <li>Structure the information into a well-organized report, complete with summaries, tables, and citations.</li>
+            </ol>
+            <p>This turns hours or days of manual research into a single delegated task.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg text-left">Transactional Agents: Your Personal Assistant</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>These agents execute tasks and make transactions on your behalf. They are designed to interact with the web's services to get things done in the real world.</p>
+            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
+                <strong>Example: A "Travel Agent."</strong> You tell it, "Book a round-trip flight to San Francisco for the first week of June. I need to arrive before Monday morning and leave after Friday afternoon. Find a 4-star hotel near the Moscone Center. My total budget for flight and hotel is $1500. I prefer flying with airlines where I have status."
+            </blockquote>
+            <p>The agent would then:</p>
+            <ol>
+                <li>Access your calendar to confirm the exact dates.</li>
+                <li>Query airline APIs, filtering by your preferences and budget.</li>
+                <li>Simultaneously query hotel booking sites, checking for proximity and ratings.</li>
+                <li>Compare different flight and hotel combinations to find the optimal package.</li>
+                <li>Present you with the top 3 options for final approval.</li>
+                <li>Once approved, use your stored payment information to complete the bookings and add the details to your calendar.</li>
+            </ol>
+            <p>This automates a complex, multi-step process that today requires significant manual effort and coordination.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg text-left">Communicational Agents: Your Digital Diplomat</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>These agents excel at coordinating with other agents to achieve a common goal. This is the foundation of complex, multi-agent systems and is where the Agentic Web becomes a truly interconnected network.</p>
+            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
+                <strong>Example: A "Supply Chain Automation System."</strong> In a manufacturing company, multiple agents work together to manage the supply chain.
+            </blockquote>
+            <ol>
+                <li>A supplier's <strong>"Shipment Agent"</strong> detects a delay in raw materials and sends a standardized A2A message to its partners.</li>
+                <li>The manufacturing company's <strong>"Logistics Agent"</strong> receives this message and automatically queries alternative shipping providers to find a faster route.</li>
+                <li>Simultaneously, it communicates with the <strong>"Factory Agent"</strong> to adjust the production schedule to account for the potential delay, minimizing downtime.</li>
+                <li>The "Factory Agent" then notifies the <strong>"Sales Agent"</strong> that the delivery date for a specific customer order might be at risk, allowing the sales team to proactively manage customer expectations.</li>
+            </ol>
+            <p>All of this happens autonomously, in real-time, without any direct human intervention. This kind of inter-agent communication and coordination can create vastly more efficient and resilient systems.</p>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck 
+    question="Which type of agent is primarily responsible for interacting with the web's services to get things done in the real world, such as booking a flight?"
+    options={[
+        "Informational Agents",
+        "Transactional Agents",
+        "Communicational Agents",
+        "Reasoning Agents"
+    ]}
+    correctAnswerIndex={1}
+    explanation="Transactional agents execute tasks and make transactions on your behalf, moving beyond just gathering information to actually completing real-world actions."
+/>

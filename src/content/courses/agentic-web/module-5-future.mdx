@@ -1,0 +1,58 @@
+<AgenticFuture />
+
+The Agentic Web holds incredible promise, but it also presents significant challenges in security, ethics, and economics. This module explores the open questions we must solve to build a safe and prosperous agentic future.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg text-left">Security and Trust: The Tool-Use Paradox</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>The very tools that give agents their power also create their biggest vulnerability. To be useful, an agent must trust its tools (like APIs and websites) to provide accurate information and execute actions correctly. But to be secure, it must assume any tool could be compromised at any time.</p>
+            <p>This creates the <strong>"Tool-Use Paradox."</strong> A malicious API could return false information to poison an agent's knowledge, or a compromised website could trick an agent into performing a harmful action.</p>
+            <p>Solving this requires several key innovations:</p>
+            <ul>
+                <li><strong>"Zero-Trust" Agent Architecture:</strong> Agents must be designed with an inherent skepticism. Every piece of information received from an external tool should be validated against a security policy or cross-referenced with other sources before being fully trusted.</li>
+                <li><strong>Robust Permissions and Sandboxing:</strong> Agents must operate in sandboxed environments with clearly defined permissions. An agent tasked with reading news should not have permission to access your email or make purchases.</li>
+                <li><strong>Reputation Systems:</strong> Just as humans rely on reviews and reputation, agents will need decentralized reputation systems to assess the trustworthiness of other agents and tools they interact with.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg text-left">Human-Agent Alignment: Who's in Control?</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>How do we ensure that an autonomous agent truly understands and acts on our intentions, especially when our instructions are vague or our preferences change over time? This is the alignment problem, a central challenge in AI safety.</p>
+            <p>An agent might interpret "find me a cheap flight" in a way that leads to a terrible travel experience (e.g., multiple long layovers). Ensuring alignment requires building agents that can:</p>
+            <ul>
+                <li><strong>Ask Clarifying Questions:</strong> To resolve ambiguity before taking action. A well-aligned agent, when given a vague goal, should respond with, "I can do that. What is more important to you: cost or travel time?"</li>
+                <li><strong>Elicit Preferences:</strong> Help users discover what they really want. Many users don't have perfectly formed preferences. A good agent should be able to guide the user through a collaborative process to define their goals more clearly.</li>
+                <li><strong>Enable Meaningful Oversight:</strong> Provide clear, intuitive ways for humans to monitor an agent's progress, understand its reasoning, intervene if necessary, and take back control at any moment. The user should always have a "stop button."</li>
+            </ul>
+            <p>Building this collaborative relationship, where the human provides strategic direction and the agent handles tactical execution, is key to making agentic systems both powerful and safe.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg text-left">The New Economy: Beyond Advertising</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>The current internet is largely funded by advertising. This economic model is based on capturing and selling human attention. This model breaks down when the primary "users" of web services are no longer humans, but autonomous agents.</p>
+            <p>The Agentic Web will require new, machine-native business models. This presents both a massive challenge and a huge opportunity:</p>
+            <ul>
+                <li><strong>Transactional Fees / Pay-per-Action:</strong> The most direct model. Instead of paying for ads, services will charge a small fee for each successful action an agent performs (e.g., a micro-payment for a successful booking or a successful API call).</li>
+                <li><strong>Subscription Services:</strong> Users might pay a monthly fee for access to a powerful, specialized agent (e.g., a "Pro" subscription for a financial analysis agent).</li>
+                <li><strong>Value-Based Pricing:</strong> Paying for the outcome. For example, a "Negotiation Agent" that saves you money on a large purchase could take a small percentage of the savings as its fee.</li>
+                <li><strong>Agent-Targeted Advertising:</strong> A new form of advertising could emerge where tool providers pay to have their services ranked higher in an agent's consideration set. This "advertising" would be based on performance, reliability, and cost, not on emotional appeal.</li>
+            </ul>
+            <p>This transition represents a monumental shift away from the attention economy and toward a more direct and efficient "intention economy," where value is tied directly to the successful fulfillment of user goals.</p>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck 
+    question="What is the 'Tool-Use Paradox' in the context of the Agentic Web?"
+    options={[
+        "The more tools an agent uses, the slower it becomes.",
+        "Agents must trust tools to be useful, but trusting tools creates a significant security vulnerability.",
+        "Humans prefer to use tools directly rather than delegating them to agents.",
+        "There are too many tools available, making it impossible for agents to choose the right one."
+    ]}
+    correctAnswerIndex={1}
+    explanation="To perform actions, agents must trust external tools (like APIs), but this trust makes them vulnerable to malicious or compromised tools providing false information or tricking them into harmful actions."
+/>

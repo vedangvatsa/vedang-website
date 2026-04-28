@@ -1,0 +1,94 @@
+<AgentComponents />
+
+To understand the Agentic Web, you need to know its building blocks. This module explores the key components that enable agents to function, from their internal "minds" to the external tools they use to interact with the world.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg text-left">The Agent's Mind: Reasoning and Planning</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>At the heart of every agent is a Large Language Model (LLM) that acts as its cognitive engine. But the agent's intelligence isn't just the LLM; it's the framework around it that enables structured reasoning and memory.</p>
+            <ul>
+                <li>
+                    <strong>Planning Frameworks:</strong> An agent doesn't just improvise. It uses structured techniques to break down a high-level goal into a sequence of executable actions. Common frameworks include:
+                    <ul className="my-2">
+                        <li><strong>Chain of Thought (CoT):</strong> The simplest method, where the agent is prompted to "think step-by-step," verbalizing its reasoning process before taking an action. This significantly improves accuracy on complex tasks.</li>
+                        <li><strong>Tree of Thoughts (ToT):</strong> A more advanced technique where the agent explores multiple reasoning paths simultaneously, like branches of a tree. It can evaluate different approaches and backtrack if a path leads to a dead end, making it more robust for problems with many possible solutions.</li>
+                        <li><strong>ReAct (Reason and Act):</strong> A popular paradigm that interleaves reasoning with action. The agent generates a thought about what to do, an action to take (like searching the web), and an observation of the result. This feedback loop allows it to dynamically adjust its plan based on real-world information.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Memory Architecture:</strong> Since LLMs are stateless, agents need an external memory system to be effective over long tasks. This is often divided into:
+                    <ul className="my-2">
+                        <li><strong>Short-Term Memory (Working Memory):</strong> This holds the context for the current task, like conversation history and recent actions. It's often managed within the LLM's context window.</li>
+                        <li><strong>Long-Term Memory:</strong> This stores information across sessions, such as user preferences, past successful workflows, or key facts. This is typically implemented using vector databases, which allow the agent to retrieve relevant memories based on semantic similarity.</li>
+                    </ul>
+                </li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg text-left">Tool Use: The Agent's Hands</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>An agent without tools is just a thinker, confined to its own internal knowledge. Tools are what allow an agent to perceive and act upon the external world. An agent's ability to select, use, and interpret the output of these tools is what makes it so powerful.</p>
+            <p>A "tool" can be almost anything that provides a capability:</p>
+            <ul className="my-6 space-y-4">
+                <li><strong>Web Search:</strong> To get real-time, up-to-date information that isn't contained in the LLM's training data.</li>
+                <li><strong>APIs (Application Programming Interfaces):</strong> To interact with other software and services in a structured way. This is the most common and reliable way for agents to perform actions like booking a flight, checking the weather, or posting to social media.</li>
+                <li><strong>Code Execution:</strong> To run code (often Python) in a sandboxed environment. This allows the agent to perform complex calculations, data analysis, or file manipulation that would be impossible with text alone.</li>
+                <li><strong>Web Browsing:</strong> To navigate and interact with websites that don't have APIs. This involves parsing HTML, identifying interactive elements, and simulating user actions like clicking buttons and filling out forms. This is a powerful but often brittle method.</li>
+                <li><strong>Database Access:</strong> To query and retrieve information from private or enterprise databases, giving the agent access to specific, proprietary knowledge.</li>
+            </ul>
+            <p>The agent decides which tool to use based on the task at hand. For example, if asked "What's the weather in London?", the agent's reasoning process would be: "The user is asking for real-time information. I should use the Weather API tool."</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg text-left">Multi-Agent Systems: Teamwork Makes the Dream Work</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Just as in human society, complex problems often require a team of specialists rather than a single generalist. In the Agentic Web, this means creating multi-agent systems where different agents with specialized skills collaborate to achieve a common goal.</p>
+            <p><strong>Example:</strong> A high-level "Vacation Planner" agent might act as the project manager. It would decompose the goal and delegate sub-tasks to a team of specialized agents:</p>
+            <ul>
+                <li>A <strong>"Flight Booker" agent</strong> that is an expert at finding the best flights and navigating airline APIs.</li>
+                <li>A <strong>"Hotel Finder" agent</strong> that knows how to compare accommodations and considers user preferences for location and amenities.</li>
+                <li>A <strong>"Local Activities" agent</strong> that can research and suggest things to do at the destination.</li>
+                <li>A <strong>"Budget Manager" agent</strong> that tracks expenses and ensures the entire plan stays within the user's budget.</li>
+            </ul>
+            <p>This collaboration can be organized in different ways:</p>
+            <ul>
+                <li><strong>Hierarchical Architecture:</strong> A "manager" agent directs the workflow and assigns tasks to "worker" agents. This is a common and effective pattern.</li>
+                <li><strong>Peer-to-Peer (Collaborative) Architecture:</strong> Agents work together as equals, debating solutions, sharing information, and arriving at a consensus. This is more complex but can be more robust for creative or open-ended problems.</li>
+            </ul>
+            <p>Multi-agent systems allow for a division of labor, making it possible to tackle incredibly complex, multi-domain problems that would be beyond the capability of any single agent.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg text-left">Real-World Platforms and Frameworks</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>The concepts above are already being built into products and developer tools. Here are the most important ones to know about:</p>
+            <h5>Products You Can Try Today</h5>
+            <ul>
+                <li><strong><Link href="https://openai.com/index/introducing-operator/" target="_blank" rel="noopener noreferrer">ChatGPT Operator (OpenAI)</Link>:</strong> An agent that can use a web browser on your behalf. You give it a task like "order groceries" or "find flights," and it navigates websites, fills out forms, and completes the action.</li>
+                <li><strong><Link href="https://deepmind.google/technologies/project-mariner/" target="_blank" rel="noopener noreferrer">Project Mariner (Google DeepMind)</Link>:</strong> A research prototype that can understand and interact with web pages in your Chrome browser, performing multi-step tasks based on your instructions.</li>
+                <li><strong><Link href="https://www.genspark.ai" target="_blank" rel="noopener noreferrer">Genspark Super Agent</Link>:</strong> An AI search engine where agents perform deep research across multiple sources and return comprehensive, synthesized answers instead of a list of links.</li>
+            </ul>
+            <h5>Frameworks for Developers</h5>
+            <ul>
+                <li><strong><Link href="https://langchain-ai.github.io/langgraph/" target="_blank" rel="noopener noreferrer">LangGraph</Link>:</strong> A framework for building stateful, multi-step agent workflows as graphs. Each node in the graph is a step (like "search the web" or "write a summary"), and edges define the flow between them.</li>
+                <li><strong><Link href="https://docs.crewai.com" target="_blank" rel="noopener noreferrer">CrewAI</Link>:</strong> A framework for building multi-agent teams. You define agents with specific roles ("researcher," "writer," "editor") and they collaborate to complete a task.</li>
+                <li><strong><Link href="https://google.github.io/adk-docs/" target="_blank" rel="noopener noreferrer">Google Agent Development Kit (ADK)</Link>:</strong> Google's open-source toolkit for building, testing, and deploying agents that can use tools and work together.</li>
+                <li><strong><Link href="https://microsoft.github.io/autogen/" target="_blank" rel="noopener noreferrer">AutoGen (Microsoft)</Link>:</strong> A framework for building multi-agent conversations where agents can talk to each other and to humans to solve problems.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck 
+    question="Which of the following is NOT a common framework for an agent's planning and reasoning process?"
+    options={[
+        "ReAct (Reason and Act)",
+        "Chain of Thought (CoT)",
+        "Tree of Thoughts (ToT)",
+        "Hash of Vectors (HoV)"
+    ]}
+    correctAnswerIndex={3}
+    explanation="ReAct, CoT, and ToT are established paradigms for guiding an agent's reasoning process. 'Hash of Vectors' is a made-up term."
+/>
