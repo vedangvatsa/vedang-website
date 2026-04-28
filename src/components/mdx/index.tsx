@@ -193,3 +193,5 @@ export * from './explainer';
 export { KnowledgeCheck } from './knowledge-check';
 export { ToolboxExplainer } from './toolbox-explainer';
 export { PromptTechniques } from './prompt-techniques';
+export { LabWorkflow } from './lab-workflow';
+export { ProductPillars } from './product-pillars';

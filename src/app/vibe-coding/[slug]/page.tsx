@@ -7,7 +7,7 @@ import matter from 'gray-matter';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { Callout, SectionLabel, Explainer, KnowledgeCheck, ToolboxExplainer, PromptTechniques } from '@/components/mdx';
+import { Callout, SectionLabel, Explainer, KnowledgeCheck, ToolboxExplainer, PromptTechniques, LabWorkflow, ProductPillars } from '@/components/mdx';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import Image from 'next/image';
 
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 const components = {
-  Image: (props: any) => <Image {...props} alt={props.alt || ''} />,
+  Image: (props: any) => <Image {...props} alt={props.alt || 'Course module illustration'} />,
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -51,6 +51,8 @@ const components = {
   KnowledgeCheck,
   ToolboxExplainer,
   PromptTechniques,
+  LabWorkflow,
+  ProductPillars,
   Link,
 };
 

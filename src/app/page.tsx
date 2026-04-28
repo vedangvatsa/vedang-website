@@ -25,7 +25,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <Image
             src="/images/icon.png"
-            alt="Vedang Vatsa"
+            alt="Vedang Vatsa — product engineer, educator, and founder based in Singapore"
             width={96}
             height={96}
             className="mx-auto h-24 w-24 rounded-full object-cover"

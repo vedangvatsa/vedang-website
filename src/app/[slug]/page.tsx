@@ -405,7 +405,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   {...props}
-                  alt={props.alt || ''}
+                  alt={props.alt || 'Blog post illustration'}
                   className="rounded-lg shadow-sm border border-border/30"
                   style={{
                     maxWidth: '640px',

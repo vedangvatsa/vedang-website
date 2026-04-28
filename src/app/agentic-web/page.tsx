@@ -9,9 +9,9 @@ import { PageLayout } from '@/components/page-layout';
 
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Star, BookOpen, ExternalLink } from 'lucide-react';
+import { Star, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
+import { ActionWebEvolution, AgentComponents, AgenticDimensions, AgenticApps, AgenticFuture } from '@/components/courses/agentic-visuals';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
@@ -184,13 +184,7 @@ export default function AgenticWebCoursePage() {
                     <CardTitle className="text-2xl">The Core Idea: From Information Web to Action Web</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
-                    <Image
-                        src="/images/courses/AgenticWeb/Agentic_module1.webp"
-                        alt="Infographic showing the evolution from Web 1.0 Read to Web 2.0 Read-Write to Agentic Web Read-Write-Act, plus the four capabilities of an AI Agent: Perception, Reasoning, Action, Learning."
-                        width={1200}
-                        height={675}
-                        className="max-h-72 w-auto mx-auto rounded-lg mb-6"
-                    />
+                    <ActionWebEvolution />
                      <p className="text-muted-foreground">This module introduces the fundamental shift from a human-driven web to an agent-driven one. You'll learn how the internet is evolving from a passive library of information into a dynamic ecosystem where autonomous agents perform complex tasks on your behalf.</p>
                     <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">
@@ -265,13 +259,7 @@ export default function AgenticWebCoursePage() {
                     <CardTitle className="text-2xl">The Core Components of Agentic Systems</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
-                    <Image
-                        src="/images/courses/AgenticWeb/Agentic_module2.webp"
-                        alt="Infographic showing the building blocks of agentic systems: The Mind (Planning and Memory), The Hands (Tools like APIs and Web Search), and The Team (Multi-Agent hierarchical structure)."
-                        width={1200}
-                        height={675}
-                        className="max-h-72 w-auto mx-auto rounded-lg mb-6"
-                    />
+                    <AgentComponents />
                     <p className="text-muted-foreground">To understand the Agentic Web, you need to know its building blocks. This module explores the key components that enable agents to function, from their internal "minds" to the external tools they use to interact with the world.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">
@@ -360,13 +348,7 @@ export default function AgenticWebCoursePage() {
                     <CardTitle className="text-2xl">The Three Dimensions of the Agentic Web</CardTitle>
                 </CardHeader>
                  <CardContent className="p-6">
-                    <Image
-                        src="/images/courses/AgenticWeb/Agentic_module3.webp"
-                        alt="Infographic showing the three dimensions of the Agentic Web as stacked layers: Intelligence Dimension at the base, Interaction Dimension in the middle, Economic Dimension at the top."
-                        width={1200}
-                        height={675}
-                        className="max-h-72 w-auto mx-auto rounded-lg mb-6"
-                    />
+                    <AgenticDimensions />
                      <p className="text-muted-foreground">The Agentic Web isn't just one thing; it can be understood through three interconnected layers or dimensions. Each dimension builds on the one before it, showing how agents evolve from simple reasoners to active participants in a new digital economy.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">
@@ -418,13 +400,7 @@ export default function AgenticWebCoursePage() {
                     <CardTitle className="text-2xl">Applications: The Agentic Web in Action</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
-                    <Image
-                        src="/images/courses/AgenticWeb/Agentic_module4.webp"
-                        alt="Infographic showing Agentic Applications in the Real World: Code Agents, Research Agents, Commerce Agents, and Enterprise Agents."
-                        width={1200}
-                        height={675}
-                        className="max-h-72 w-auto mx-auto rounded-lg mb-6"
-                    />
+                    <AgenticApps />
                     <p className="text-muted-foreground">The Agentic Web is not science fiction; it's being built today. This module explores the three main ways agents are currently being applied, showcasing how they are already changing our digital lives.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                          <AccordionItem value="item-1">
@@ -490,13 +466,7 @@ export default function AgenticWebCoursePage() {
                     <CardTitle className="text-2xl">The Future: Challenges and Opportunities</CardTitle>
                 </CardHeader>
                  <CardContent className="p-6">
-                    <Image
-                        src="/images/courses/AgenticWeb/Agentic_module5.webp"
-                        alt="Infographic showing The Future of the Agentic Web with Safety and Alignment, Agent Identity (KYA), and Agent Economy, plus a timeline from 2024 to 2027+."
-                        width={1200}
-                        height={675}
-                        className="max-h-72 w-auto mx-auto rounded-lg mb-6"
-                    />
+                    <AgenticFuture />
                      <p className="text-muted-foreground">The Agentic Web holds incredible promise, but it also presents significant challenges in security, ethics, and economics. This module explores the open questions we must solve to build a safe and prosperous agentic future.</p>
                      <Accordion type="single" collapsible className="w-full mt-4">
                         <AccordionItem value="item-1">
@@ -545,7 +515,7 @@ export default function AgenticWebCoursePage() {
 
             <section id="references" className="py-16">
                 <div className="text-center">
-                    <BookOpen className="mx-auto h-12 w-12 text-muted-foreground" />
+
                     <h2 className="mt-4 text-2xl md:text-3xl font-semibold tracking-tight">Learn More</h2>
                     <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                         Protocols, frameworks, and platforms for exploring the Agentic Web.
