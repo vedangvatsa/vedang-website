@@ -20,7 +20,6 @@ const referenceLinks = [
         name: 'Protocols and Standards',
         links: [
             { name: 'Model Context Protocol (MCP)', url: 'https://modelcontextprotocol.io' },
-            { name: 'Agent-to-Agent Protocol (A2A)', url: 'https://google.github.io/A2A/' },
         ],
     },
     {
