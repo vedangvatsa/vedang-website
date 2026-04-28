@@ -187,7 +187,7 @@ export default function VibeCodingCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
         <section className="text-left pt-8 pb-12">
-             <div className="max-w-3xl">
+             <div className="max-w-none">
                 <Badge variant="secondary">
                     <Star className="w-3 h-3 mr-1.5" />
                     A Free, Self-Paced Course
@@ -212,7 +212,7 @@ export default function VibeCodingCoursePage() {
                     </Button>
                 </div>
 
-                <div className="mt-12 aspect-video rounded-lg overflow-hidden max-w-3xl border bg-muted">
+                <div className="mt-12 aspect-video rounded-lg overflow-hidden max-w-4xl border bg-muted">
                   <iframe 
                     width="100%" 
                     height="100%" 
@@ -227,7 +227,7 @@ export default function VibeCodingCoursePage() {
         </section>
 
         <section id="curriculum" className="py-16 bg-muted/30 border-y -mx-4 px-4 md:-mx-6 md:px-6">
-            <div className="max-w-3xl">
+            <div className="max-w-none">
                 <div className="text-left mb-8">
                     <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Course Curriculum</h2>
                     <p className="mt-2 text-muted-foreground">Five modules to take you from concept to product.</p>
@@ -290,7 +290,7 @@ export default function VibeCodingCoursePage() {
                 </p>
             </div>
              
-             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl">
+             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {referenceLinks.map((tool) => (
                     <div key={tool.name} className="break-inside-avoid">
                         <h3 className="font-semibold text-lg mb-2">{tool.name}</h3>

@@ -72,7 +72,7 @@ export default async function CourseModulePage({ params }: { params: Promise<{ s
   const nextModule = currentIndex < allModules.length - 1 ? allModules[currentIndex + 1] : null;
 
   return (
-    <div className="max-w-3xl">
+    <div className="max-w-none">
       <div className="mb-8">
         <h1 className="text-3xl font-bold tracking-tight mb-4">{moduleData.frontmatter.title}</h1>
         <p className="text-xl text-muted-foreground">{moduleData.frontmatter.description}</p>
