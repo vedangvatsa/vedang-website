@@ -136,8 +136,10 @@ export function generateMetadata(params: MetadataParams): Metadata {
     images: [resolvedImage],
   };
 
+  const isLongTitle = title.length > 45;
+
   return {
-    title,
+    title: isLongTitle ? { absolute: title } : title,
     description,
     keywords: resolvedKeywords,
     alternates: {
