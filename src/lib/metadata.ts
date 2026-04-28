@@ -112,28 +112,23 @@ export function generateMetadata(params: MetadataParams): Metadata {
     }
   }
 
-  const resolvedImage = ogImage || '/images/icon.png';
-
+  // Only set images if an explicit ogImage is provided.
+  // Otherwise, Next.js will use the dynamic opengraph-image.tsx generator.
   const openGraph: any = {
     title,
     description,
     url,
     type,
-    images: [
-      {
-        url: resolvedImage,
-        width: 1200,
-        height: 630,
-        alt: ogImageAlt,
-      },
-    ],
+    ...(ogImage ? {
+      images: [{ url: ogImage, width: 1200, height: 630, alt: ogImageAlt }],
+    } : {}),
   };
 
   const twitter: any = {
     card: 'summary_large_image',
     title,
     description,
-    images: [resolvedImage],
+    ...(ogImage ? { images: [ogImage] } : {}),
   };
 
   const isLongTitle = title.length > 45 || title.includes('Vedang Vatsa');

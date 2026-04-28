@@ -23,7 +23,7 @@ export const metadata: Metadata = generateMetadata({
   title: pageMetadata.vibeCoding.title,
   description: pageMetadata.vibeCoding.description,
   url: pageMetadata.vibeCoding.url,
-  ogImage: '/images/courses/VibeCoding/VibeCodingPreview.webp',
+
   ogImageAlt: 'Vibe Coding 101 - Engineering Intuition & Creativity',
 });
 

@@ -52,7 +52,7 @@ export const metadata: Metadata = generateMetadata({
   title: pageMetadata.agenticWeb.title,
   description: pageMetadata.agenticWeb.description,
   url: pageMetadata.agenticWeb.url,
-  ogImage: '/agentic-web/AgenticAIPreview.png',
+
   ogImageAlt: 'The Agentic Web - AI Agents & Autonomous Systems',
 });
 

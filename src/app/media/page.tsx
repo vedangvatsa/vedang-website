@@ -15,7 +15,7 @@ export const metadata: Metadata = generateMetadata({
   title: pageMetadata.media.title,
   description: pageMetadata.media.description,
   url: pageMetadata.media.url,
-  ogImage: '/images/speaker/Vedang - speaker1.webp',
+
   ogImageAlt: 'Vedang Vatsa speaking at a conference.',
 });
 
