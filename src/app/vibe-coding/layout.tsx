@@ -23,6 +23,8 @@ export default function CourseLayout({ children }: { children: ReactNode }) {
                         <Link href="/vibe-coding/module-3-prompts" className="block text-sm text-muted-foreground hover:text-primary transition-colors">3. The Art of the Prompt</Link>
                         <Link href="/vibe-coding/module-4-lab" className="block text-sm text-muted-foreground hover:text-primary transition-colors">4. Lab: Name Generator</Link>
                         <Link href="/vibe-coding/module-5-product" className="block text-sm text-muted-foreground hover:text-primary transition-colors">5. To Professional Product</Link>
+                        <Link href="/vibe-coding/module-6-debugging" className="block text-sm text-muted-foreground hover:text-primary transition-colors">6. Debugging & Iteration</Link>
+                        <Link href="/vibe-coding/module-7-deployment" className="block text-sm text-muted-foreground hover:text-primary transition-colors">7. Deployment & Databases</Link>
                         </nav>
                     </CardContent>
                  </Card>

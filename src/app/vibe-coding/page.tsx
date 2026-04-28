@@ -230,7 +230,7 @@ export default function VibeCodingCoursePage() {
             <div className="max-w-none">
                 <div className="text-left mb-8">
                     <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Course Curriculum</h2>
-                    <p className="mt-2 text-muted-foreground">Five modules to take you from concept to product.</p>
+                    <p className="mt-2 text-muted-foreground">Seven modules to take you from concept to deployed product.</p>
                 </div>
                 <div className="space-y-4">
                     <Link href="/vibe-coding/module-1-philosophy" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
@@ -239,7 +239,7 @@ export default function VibeCodingCoursePage() {
                                 <h3 className="font-semibold text-lg">1. The Philosophy</h3>
                                 <p className="text-sm text-muted-foreground mt-1">Shift from coder to creative director. Learn to articulate your vision.</p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
                     <Link href="/vibe-coding/module-2-toolkit" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
@@ -248,7 +248,7 @@ export default function VibeCodingCoursePage() {
                                 <h3 className="font-semibold text-lg">2. The Modern Toolkit</h3>
                                 <p className="text-sm text-muted-foreground mt-1">Explore Firebase Studio, Replit, Cursor, and Lovable.</p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
                     <Link href="/vibe-coding/module-3-prompts" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
@@ -257,7 +257,7 @@ export default function VibeCodingCoursePage() {
                                 <h3 className="font-semibold text-lg">3. The Art of the Prompt</h3>
                                 <p className="text-sm text-muted-foreground mt-1">Master the GCES framework for writing effective instructions.</p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
                     <Link href="/vibe-coding/module-4-lab" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
@@ -266,7 +266,7 @@ export default function VibeCodingCoursePage() {
                                 <h3 className="font-semibold text-lg">4. Lab: Name Generator</h3>
                                 <p className="text-sm text-muted-foreground mt-1">Build your first functional micro-app entirely with AI.</p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
                     <Link href="/vibe-coding/module-5-product" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
@@ -275,7 +275,25 @@ export default function VibeCodingCoursePage() {
                                 <h3 className="font-semibold text-lg">5. To Professional Product</h3>
                                 <p className="text-sm text-muted-foreground mt-1">Implement security rules, databases, and authentication.</p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
+                        </div>
+                    </Link>
+                    <Link href="/vibe-coding/module-6-debugging" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">6. Debugging & Iteration</h3>
+                                <p className="text-sm text-muted-foreground mt-1">Read errors, iterate effectively, and use version control.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
+                        </div>
+                    </Link>
+                    <Link href="/vibe-coding/module-7-deployment" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">7. Deployment & Databases</h3>
+                                <p className="text-sm text-muted-foreground mt-1">Deploy to Vercel, connect a database, and set up a custom domain.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
                 </div>

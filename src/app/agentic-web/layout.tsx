@@ -16,6 +16,8 @@ const courseLinks = [
             { href: "/agentic-web/module-3-dimensions", label: "3. The Three Dimensions", disabled: false },
             { href: "/agentic-web/module-4-applications", label: "4. Applications", disabled: false },
             { href: "/agentic-web/module-5-future", label: "5. Future Challenges", disabled: false },
+            { href: "/agentic-web/module-6-protocols", label: "6. Protocols: MCP & A2A", disabled: false },
+            { href: "/agentic-web/module-7-build-agent", label: "7. Build Your First Agent", disabled: false },
         ]
     }
 ];

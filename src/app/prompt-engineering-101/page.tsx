@@ -122,7 +122,7 @@ export default function PromptEngineeringCoursePage() {
             <div className="max-w-none">
                 <div className="text-left mb-8">
                     <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Course Curriculum</h2>
-                    <p className="mt-2 text-muted-foreground">Five modules to master the art of prompt engineering.</p>
+                    <p className="mt-2 text-muted-foreground">Seven modules to master the art of prompt engineering.</p>
                 </div>
                 <div className="space-y-4">
                     <Link href="/prompt-engineering-101/module-1-core-idea" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
@@ -131,7 +131,7 @@ export default function PromptEngineeringCoursePage() {
                                 <h3 className="font-semibold text-lg">1. The Core Idea: Guiding the Prediction Engine</h3>
                                 <p className="text-sm text-muted-foreground mt-1">Understand LLMs as prediction engines and learn essential configurations.</p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
                     <Link href="/prompt-engineering-101/module-2-core-techniques" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
@@ -140,7 +140,7 @@ export default function PromptEngineeringCoursePage() {
                                 <h3 className="font-semibold text-lg">2. Core Prompting Techniques</h3>
                                 <p className="text-sm text-muted-foreground mt-1">Master Zero-Shot, Few-Shot, Role, System, and Structured prompting.</p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
                     <Link href="/prompt-engineering-101/module-3-advanced-reasoning" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
@@ -149,7 +149,7 @@ export default function PromptEngineeringCoursePage() {
                                 <h3 className="font-semibold text-lg">3. Advanced Reasoning Techniques</h3>
                                 <p className="text-sm text-muted-foreground mt-1">Explore Chain of Thought, Self-Consistency, ReAct, and Multimodal Prompting.</p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
                     <Link href="/prompt-engineering-101/module-4-code-prompting" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
@@ -158,7 +158,7 @@ export default function PromptEngineeringCoursePage() {
                                 <h3 className="font-semibold text-lg">4. Code Prompting: Your AI Pair Programmer</h3>
                                 <p className="text-sm text-muted-foreground mt-1">Use LLMs to write, explain, translate, and debug code effectively.</p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
                     <Link href="/prompt-engineering-101/module-5-best-practices" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
@@ -167,7 +167,25 @@ export default function PromptEngineeringCoursePage() {
                                 <h3 className="font-semibold text-lg">5. Best Practices for Expert Prompting</h3>
                                 <p className="text-sm text-muted-foreground mt-1">Learn to iterate, provide clarity, and defend against prompt injections.</p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
+                        </div>
+                    </Link>
+                    <Link href="/prompt-engineering-101/module-6-rag-functions" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">6. RAG & Function Calling</h3>
+                                <p className="text-sm text-muted-foreground mt-1">Connect LLMs to your own data with embeddings, vector databases, and tool use.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
+                        </div>
+                    </Link>
+                    <Link href="/prompt-engineering-101/module-7-chaining-agents" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">7. Prompt Chaining & Agents</h3>
+                                <p className="text-sm text-muted-foreground mt-1">Orchestrate multi-step workflows and build autonomous agent systems.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
                 </div>

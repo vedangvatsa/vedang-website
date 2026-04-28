@@ -16,6 +16,8 @@ const courseLinks = [
             { href: "/prompt-engineering-101/module-3-advanced-reasoning", label: "3. Advanced Reasoning", disabled: false },
             { href: "/prompt-engineering-101/module-4-code-prompting", label: "4. Code Prompting", disabled: false },
             { href: "/prompt-engineering-101/module-5-best-practices", label: "5. Best Practices", disabled: false },
+            { href: "/prompt-engineering-101/module-6-rag-functions", label: "6. RAG & Functions", disabled: false },
+            { href: "/prompt-engineering-101/module-7-chaining-agents", label: "7. Chaining & Agents", disabled: false },
         ]
     }
 ];

@@ -34,6 +34,8 @@ export default function Web3CourseLayout({ children }: { children: ReactNode }) 
                         <Link href="/web3-101/module-4-ecosystem" className="block text-sm text-muted-foreground hover:text-primary transition-colors">4. The Ecosystem</Link>
                         <Link href="/web3-101/module-5-getting-started" className="block text-sm text-muted-foreground hover:text-primary transition-colors">5. Getting Started</Link>
                         <Link href="/web3-101/module-6-future" className="block text-sm text-muted-foreground hover:text-primary transition-colors">6. The Future</Link>
+                        <Link href="/web3-101/module-7-layer2s" className="block text-sm text-muted-foreground hover:text-primary transition-colors">7. Layer 2s & Scaling</Link>
+                        <Link href="/web3-101/module-8-tokenomics" className="block text-sm text-muted-foreground hover:text-primary transition-colors">8. Tokenomics & Governance</Link>
                         </nav>
                     </CardContent>
                  </Card>

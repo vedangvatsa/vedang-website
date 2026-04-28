@@ -182,7 +182,7 @@ export default function AgenticWebCoursePage() {
             <div className="max-w-none">
                 <div className="text-left mb-8">
                     <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Course Curriculum</h2>
-                    <p className="mt-2 text-muted-foreground">Five modules to understand the Agentic Web.</p>
+                    <p className="mt-2 text-muted-foreground">Seven modules to understand the Agentic Web.</p>
                 </div>
                 <div className="space-y-4">
                     <Link href="/agentic-web/module-1-core-idea" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
@@ -191,7 +191,7 @@ export default function AgenticWebCoursePage() {
                                 <h3 className="font-semibold text-lg">1. The Core Idea: From Information Web to Action Web</h3>
                                 <p className="text-sm text-muted-foreground mt-1">Understand the shift from a human-driven web to an agent-driven one.</p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
                     <Link href="/agentic-web/module-2-components" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
@@ -200,7 +200,7 @@ export default function AgenticWebCoursePage() {
                                 <h3 className="font-semibold text-lg">2. The Core Components of Agentic Systems</h3>
                                 <p className="text-sm text-muted-foreground mt-1">Explore the building blocks that enable agents to function.</p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
                     <Link href="/agentic-web/module-3-dimensions" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
@@ -209,7 +209,7 @@ export default function AgenticWebCoursePage() {
                                 <h3 className="font-semibold text-lg">3. The Three Dimensions of the Agentic Web</h3>
                                 <p className="text-sm text-muted-foreground mt-1">Understand Intelligence, Interaction, and the Economic dimensions.</p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
                     <Link href="/agentic-web/module-4-applications" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
@@ -218,7 +218,7 @@ export default function AgenticWebCoursePage() {
                                 <h3 className="font-semibold text-lg">4. Applications: The Agentic Web in Action</h3>
                                 <p className="text-sm text-muted-foreground mt-1">Discover informational, transactional, and communicational agents.</p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
                     <Link href="/agentic-web/module-5-future" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
@@ -227,7 +227,25 @@ export default function AgenticWebCoursePage() {
                                 <h3 className="font-semibold text-lg">5. The Future: Challenges and Opportunities</h3>
                                 <p className="text-sm text-muted-foreground mt-1">Explore the security, ethics, and economics of the agentic future.</p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
+                        </div>
+                    </Link>
+                    <Link href="/agentic-web/module-6-protocols" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">6. Protocols Deep Dive: MCP & A2A</h3>
+                                <p className="text-sm text-muted-foreground mt-1">The standardized languages that let agents connect to tools and each other.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
+                        </div>
+                    </Link>
+                    <Link href="/agentic-web/module-7-build-agent" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">7. Build Your First Agent</h3>
+                                <p className="text-sm text-muted-foreground mt-1">A practical guide from design document to testing and deployment.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
                 </div>
