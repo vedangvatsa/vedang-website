@@ -1,0 +1,56 @@
+<AdvancedReasoning />
+
+For complex problems, you need to guide the model's reasoning process. These techniques enable the AI to solve multi-step problems that require logic and planning.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg">Chain of Thought (CoT) Prompting</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Chain of Thought is a breakthrough technique for improving an LLM's reasoning. Instead of asking for an answer directly, you ask the model to "think step-by-step." This forces the model to generate intermediate reasoning steps, which dramatically improves its accuracy on math, logic, and multi-step problems.</p>
+            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
+                "When I was 3 years old, my partner was 3 times my age. Now, I am 20 years old. How old is my partner? Let's think step by step."
+            </blockquote>
+            <p>By talking through the problem, the model is less likely to make a simple calculation error.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+            <AccordionTrigger className="text-lg">Self-Consistency</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>This technique builds on CoT. Instead of generating one chain of thought, you generate several by using a higher temperature. Then, you take the most common answer from all the different reasoning paths. This "majority vote" approach significantly boosts accuracy for complex reasoning tasks.</p>
+        </AccordionContent>
+    </AccordionItem>
+        <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg">ReAct (Reason and Act)</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>ReAct is a powerful paradigm for building agents. It allows an LLM to combine reasoning with actions (tools). The model generates a thought about what it needs to do, then an action (like calling an API or searching the web), and then an observation based on the result. This Thought-Action-Observation loop allows the model to solve dynamic problems that require external information.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg">Multimodal Prompting: Beyond Text</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Modern LLMs can process more than just text. Models like GPT-4o, Gemini, and Claude can understand images, audio, video, and documents. This opens up entirely new categories of prompts.</p>
+            <ul>
+                <li><strong>Vision Prompting:</strong> Send an image along with a text prompt. You can ask the model to describe what it sees, extract text from a photo, analyze a chart, or identify errors in a UI screenshot.
+                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Here is a screenshot of my dashboard. What UI problems do you see? Suggest specific fixes for layout, spacing, and color contrast."</blockquote>
+                </li>
+                <li><strong>Document Analysis:</strong> Upload a PDF, spreadsheet, or slide deck and ask the model to summarize it, extract data, or answer questions about its contents.
+                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"I have uploaded a 20-page research paper. Summarize the key findings in 5 bullet points and list the methodology used."</blockquote>
+                </li>
+                <li><strong>Audio and Video:</strong> Some models can transcribe audio, analyze video frames, or answer questions about media content. This is useful for meeting notes, podcast summaries, and content analysis.</li>
+            </ul>
+            <p>The principle is the same as text prompting: be specific about what you want the model to focus on in the image, document, or media file.</p>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck 
+    question="Adding the phrase 'Let's think step by step' to your prompt is an example of what technique?"
+    options={[
+        "Few-Shot Prompting",
+        "Role Prompting",
+        "Chain of Thought (CoT)",
+        "System Prompting"
+    ]}
+    correctAnswerIndex={2}
+    explanation="Chain of Thought (CoT) prompting explicitly asks the model to generate intermediate reasoning steps, which improves performance on complex logic tasks."
+/>

@@ -1,0 +1,57 @@
+<PredictionEngine />
+
+This module introduces the foundational concept of prompt engineering. You'll learn that LLMs are powerful prediction engines and that your prompt is the guide that steers those predictions. We'll cover the essential configurations and the mindset needed to get started.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg">What is Prompt Engineering?</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>At its core, a Large Language Model (LLM) is a powerful prediction engine. It takes a sequence of text (your prompt) and predicts the most likely next word, token by token. Prompt engineering is the art and science of designing high-quality prompts that guide the LLM to produce accurate, relevant, and useful outputs.</p>
+            <div className="grid md:grid-cols-2 gap-6 my-6">
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-lg font-semibold">❌ A Weak Prompt</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground italic">"Tell me about marketing."</p>
+                        <p className="text-sm text-muted-foreground mt-2">This is vague. The AI has no idea what aspect of marketing you care about, what format you want, or who the audience is. The result will be generic and unhelpful.</p>
+                    </CardContent>
+                </Card>
+                <Card className="border-primary/50">
+                    <CardHeader>
+                        <CardTitle className="text-lg font-semibold">✅ A Strong Prompt</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground italic">"You are a senior growth marketer. Create a 5-point email campaign strategy for a B2B SaaS startup targeting CTOs. Focus on cold outreach. Format as a numbered list with one-sentence explanations."</p>
+                        <p className="text-sm text-muted-foreground mt-2">This gives the AI a role, a task, a target audience, constraints, and a format. The output will be specific, actionable, and useful.</p>
+                    </CardContent>
+                </Card>
+            </div>
+            <p>You don't need to be a data scientist. Your job is not to build the model, but to communicate with it effectively. The difference between these two prompts is the difference between a generic response and a brilliant one.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg">Key Model Configurations</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Beyond the words you write, you can control the AI's output with a few key settings:</p>
+            <ul className="my-6">
+                <li><strong>Temperature:</strong> Controls randomness. Low temperature (e.g., 0.2) is deterministic and good for factual answers. High temperature (e.g., 0.9) is more creative and good for brainstorming.</li>
+                <li><strong>Max Output Tokens:</strong> Limits the length of the response. This is crucial for controlling costs and ensuring responses are concise.</li>
+                <li><strong>Top-K and Top-P:</strong> These settings control the sampling of tokens. Top-K limits the model to the 'K' most likely next tokens. Top-P (nucleus sampling) selects from the smallest set of tokens whose cumulative probability exceeds 'P'. They provide another way to tune the creativity versus predictability of the model.</li>
+            </ul>
+            <p>As a general starting point, a temperature of 0.2, Top-P of 0.95, and Top-K of 40 will give you coherent, safe results. For creative tasks, try a temperature of 0.9.</p>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck 
+    question="If you are extracting facts from a legal document, what temperature setting is most appropriate?"
+    options={[
+        "High (e.g., 0.9) to get creative interpretations.",
+        "Medium (e.g., 0.5) for a balance.",
+        "Low (e.g., 0.1) for deterministic, factual outputs.",
+        "Temperature does not affect this type of task."
+    ]}
+    correctAnswerIndex={2}
+    explanation="For factual extraction where accuracy is critical, you want a low temperature to minimize randomness and reduce the chance of the model hallucinating details."
+/>

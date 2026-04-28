@@ -1,0 +1,59 @@
+<CoreTechniques />
+
+This module covers the fundamental techniques every prompt engineer must know. These methods are the building blocks for all advanced prompting strategies.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg">Zero-Shot, One-Shot, and Few-Shot Prompting</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>These techniques refer to how many examples you provide in your prompt.</p>
+            <ul>
+                <li><strong>Zero-Shot:</strong> You provide no examples, only the instruction. This is the simplest form of prompting and works well for straightforward tasks. <br/> <i>Example: "Classify this email as SPAM or NOT SPAM."</i></li>
+                <li><strong>One-Shot:</strong> You provide a single example to show the model the desired output format or pattern. <br/> <i>Example: "Translate 'cat' to French: 'chat'. Now translate 'dog' to French:"</i></li>
+                <li><strong>Few-Shot:</strong> You provide multiple examples (usually 3-5). This is highly effective for complex tasks or when you need the model to follow a very specific pattern. The more examples you provide, the better the model understands your intent.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+            <AccordionTrigger className="text-lg">Role, System, and Contextual Prompting</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>These techniques help you frame the conversation and provide necessary background.</p>
+                <ul>
+                <li><strong>Role Prompting:</strong> You assign a specific persona to the AI. This is incredibly powerful for controlling the tone, style, and expertise of the response. <br/> <i>Example: "You are a world-class travel guide. Suggest three places to visit in Tokyo."</i></li>
+                <li><strong>System Prompting:</strong> You provide overarching instructions that define the AI's purpose or constraints. <br/> <i>Example: "You are a helpful assistant. Only return your answer in JSON format."</i></li>
+                <li><strong>Contextual Prompting:</strong> You give the AI specific background information relevant to the task. This helps the model generate a more tailored and accurate response. <br/> <i>Example: "Context: The user is writing for a blog about retro 80s video games. Suggest three article topics."</i></li>
+            </ul>
+            <p>Combining these techniques is key. A great prompt might assign a role, provide context, and give a few-shot example all at once.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg">Structured Output: Controlling the Format</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>For building applications, you often need the AI's response in a specific format, not just plain text. This is called structured output, and it is one of the most practical skills in prompt engineering.</p>
+            <ul>
+                <li><strong>JSON Output:</strong> Ask the model to return data as JSON. This is essential when your code needs to parse the response.
+                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Extract the name, email, and phone number from the following text. Return your answer as a JSON object with keys: name, email, phone."</blockquote>
+                </li>
+                <li><strong>Tables and Lists:</strong> Ask for markdown tables or numbered lists to get organized output.
+                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Compare React, Vue, and Angular. Return a markdown table with columns: Framework, Learning Curve, Performance, Community Size."</blockquote>
+                </li>
+                <li><strong>XML and Custom Formats:</strong> For APIs that need specific schemas, you can provide the exact structure you want the model to follow.
+                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Return your analysis in this exact XML format: &lt;analysis&gt;&lt;sentiment&gt;positive/negative&lt;/sentiment&gt;&lt;confidence&gt;0-100&lt;/confidence&gt;&lt;summary&gt;one sentence&lt;/summary&gt;&lt;/analysis&gt;"</blockquote>
+                </li>
+            </ul>
+            <p>The key principle: always show the model the exact output shape you want. The more specific the format instruction, the more reliable the result.</p>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck 
+    question="Providing three examples of desired input-output pairs before asking the model a question is called:"
+    options={[
+        "Zero-Shot Prompting",
+        "Role Prompting",
+        "Few-Shot Prompting",
+        "Chain of Thought Prompting"
+    ]}
+    correctAnswerIndex={2}
+    explanation="Few-shot prompting provides a few examples to help the model recognize the pattern and format you expect."
+/>

@@ -1,0 +1,47 @@
+<CodePrompting />
+
+LLMs are incredibly powerful tools for developers. This module teaches you how to use prompts to speed up your coding workflow.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg">Writing, Explaining, and Translating Code</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <ul>
+                <li><strong>Writing Code:</strong> Be specific about the language, libraries, and desired functionality.
+                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Write a Python function that takes a URL and returns the text content of the page using the 'requests' and 'BeautifulSoup' libraries."</blockquote>
+                </li>
+                <li><strong>Explaining Code:</strong> Paste a snippet of code and ask for an explanation. This is great for understanding legacy code or learning a new language.
+                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Explain this React hook line by line."</blockquote>
+                </li>
+                <li><strong>Translating Code:</strong> Provide a function in one language and ask for its equivalent in another.
+                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Translate the following Bash script into a Python script with the same functionality."</blockquote>
+                </li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg">Debugging and Reviewing Code</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>LLMs can be fantastic debuggers. When you have an error, provide the full context:</p>
+            <ol>
+                <li>The code that caused the error.</li>
+                <li>The full error message and traceback.</li>
+                <li>Your intent: what were you trying to do?</li>
+            </ol>
+            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"The Python code below gives a `NameError: name 'toUpperCase' is not defined`. Please debug the code and fix it. Also, suggest any other improvements you see."</blockquote>
+            <p>Often, the model will not only fix the immediate bug but also identify other issues and suggest more robust, efficient code.</p>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck 
+    question="When asking an AI to debug your code, what information is MOST important to include in your prompt?"
+    options={[
+        "Only the line of code that threw the error.",
+        "A description of your emotional state after seeing the error.",
+        "The code snippet, the full error message/traceback, and what you were trying to achieve.",
+        "The entire codebase of your application."
+    ]}
+    correctAnswerIndex={2}
+    explanation="Providing context is key. The AI needs the code, the error it produced, and your original intent to effectively diagnose and solve the problem."
+/>
