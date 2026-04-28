@@ -4,13 +4,6 @@ description: "Good prompts produce good products. This module teaches clear comm
 order: 3
 ---
 
-<Image
-  src="/images/courses/VibeCoding/Vibe_coding_module3_vedang_vatsa.webp"
-  alt="An infographic for Module 3 of the Vibe Coding course, showing a hand icon and titled 'The Art of the Prompt'."
-  width={1200}
-  height={675}
-  className="max-h-72 w-auto mx-auto rounded-lg mb-8 border border-muted"
-/>
 
 Vibe coding is an ongoing conversation. You do not just give one command and walk away. You steer the AI, review its work, and give feedback. This module covers the advanced techniques you need to guide that process effectively.
 
@@ -42,19 +35,9 @@ Be specific. Treat the AI like a junior developer who cannot read your mind.
 
 <SectionLabel label="Advanced Prompting Techniques" />
 
-Once you master basic instructions, use these techniques to get professional-level code from the AI.
+Once you master basic instructions, use these three techniques to get professional-level code from the AI.
 
-### Persona Prompting
-Tell the AI to adopt a specific expert role. This changes the tone and quality of its output.
-*"You are an expert cybersecurity engineer. Review this code for vulnerabilities."*
-
-### Chain of Thought
-If you are asking the AI to solve a complex logic problem or build a difficult feature, tell it to "think step-by-step." This forces the AI to write out its plan before it writes the code, which dramatically reduces logic errors.
-*"I need to connect a payment system. Think step-by-step about what database changes we need before writing the code."*
-
-### Negative Prompts
-Tell the AI exactly what to avoid. 
-*"Generate a list of startup names for a coffee brand. Do not use words like 'bean', 'roast', or 'cup'."*
+<PromptTechniques />
 
 <SectionLabel label="Defense: Version Control" />
 
@@ -68,17 +51,13 @@ Never let the AI make 10 changes before you save. Small, frequent saves are your
 
 <SectionLabel label="Knowledge Check" />
 
-<Accordion type="single" collapsible className="w-full mt-4">
-  <AccordionItem value="q1">
-      <AccordionTrigger className="text-lg">What is an "Anti-Feature" in a PRD and why is it useful?</AccordionTrigger>
-      <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
-          An Anti-Feature is a specific instruction telling the AI what NOT to build. This is useful because AI models often try to be "helpful" by adding complex features (like user profiles or social sharing) that you do not want, which clutters the code.
-      </AccordionContent>
-  </AccordionItem>
-  <AccordionItem value="q2">
-      <AccordionTrigger className="text-lg">How does "Chain of Thought" prompting improve the AI's code?</AccordionTrigger>
-      <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
-          By asking the AI to "think step-by-step," it forces the model to generate intermediate reasoning. This acts as a plan, preventing the AI from rushing into writing code and making simple logic errors.
-      </AccordionContent>
-  </AccordionItem>
-</Accordion>
+<KnowledgeCheck questions={[
+  {
+    q: "What is an 'Anti-Feature' in a PRD and why is it useful?",
+    a: "An Anti-Feature is a specific instruction telling the AI what NOT to build. This is useful because AI models often try to be 'helpful' by adding complex features (like user profiles or social sharing) that you do not want, which clutters the code."
+  },
+  {
+    q: "How does 'Chain of Thought' prompting improve the AI's code?",
+    a: "By asking the AI to 'think step-by-step,' it forces the model to generate intermediate reasoning. This acts as a plan, preventing the AI from rushing into writing code and making simple logic errors."
+  }
+]} />

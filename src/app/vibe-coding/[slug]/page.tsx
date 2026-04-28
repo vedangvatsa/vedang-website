@@ -7,7 +7,7 @@ import matter from 'gray-matter';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { Callout, SectionLabel, Explainer } from '@/components/mdx';
+import { Callout, SectionLabel, Explainer, KnowledgeCheck, ToolboxExplainer, PromptTechniques } from '@/components/mdx';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import Image from 'next/image';
 
@@ -48,6 +48,9 @@ const components = {
   Callout,
   SectionLabel,
   Explainer,
+  KnowledgeCheck,
+  ToolboxExplainer,
+  PromptTechniques,
   Link,
 };
 

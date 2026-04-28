@@ -4,13 +4,7 @@ description: "Tool choice determines development speed. There is no single best 
 order: 2
 ---
 
-<Image
-  src="/images/courses/VibeCoding/Vibe_coding_module2_vedang_vatsa.webp"
-  alt="An infographic for Module 2 of the Vibe Coding course, showing various tool logos and titled 'The Modern Toolkit'."
-  width={1200}
-  height={675}
-  className="max-h-72 w-auto mx-auto rounded-lg mb-8 border border-muted"
-/>
+<ToolboxExplainer />
 
 The tool you choose determines how fast you can build. There is no single perfect tool. There is only the right tool for the specific project you are building right now. 
 
@@ -72,23 +66,17 @@ Here is a breakdown of the most effective tools available right now and when to 
 
 Test your understanding of the toolkit. Click the questions to reveal the answers.
 
-<Accordion type="single" collapsible className="w-full mt-4">
-  <AccordionItem value="q1">
-      <AccordionTrigger className="text-lg">If you want to build a beautiful dashboard UI quickly without setting anything up, which tool is best?</AccordionTrigger>
-      <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
-          **Lovable.dev** or **v0 by Vercel**. Both run in the browser and specialize in generating high-quality visual components quickly.
-      </AccordionContent>
-  </AccordionItem>
-  <AccordionItem value="q2">
-      <AccordionTrigger className="text-lg">What is the main advantage of Firebase Studio's "Blueprint" feature?</AccordionTrigger>
-      <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
-          It forces the AI to show you a plan of its changes before it executes them. This gives you control and stops the AI from accidentally breaking code that already works.
-      </AccordionContent>
-  </AccordionItem>
-  <AccordionItem value="q3">
-      <AccordionTrigger className="text-lg">Why would someone choose Cursor over Replit?</AccordionTrigger>
-      <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
-          Cursor is a Local IDE. A user would choose it if they want complete control over their local environment, are already comfortable setting up their own project folders, and want the AI to assist them rather than build the entire app from scratch online.
-      </AccordionContent>
-  </AccordionItem>
-</Accordion>
+<KnowledgeCheck questions={[
+  {
+    q: "If you want to build a beautiful dashboard UI quickly without setting anything up, which tool is best?",
+    a: "**Lovable.dev** or **v0 by Vercel**. Both run in the browser and specialize in generating high-quality visual components quickly."
+  },
+  {
+    q: "What is the main advantage of Firebase Studio's 'Blueprint' feature?",
+    a: "It forces the AI to show you a plan of its changes before it executes them. This gives you control and stops the AI from accidentally breaking code that already works."
+  },
+  {
+    q: "Why would someone choose Cursor over Replit?",
+    a: "Cursor is a Local IDE. A user would choose it if they want complete control over their local environment, are already comfortable setting up their own project folders, and want the AI to assist them rather than build the entire app from scratch online."
+  }
+]} />

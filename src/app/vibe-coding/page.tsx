@@ -284,7 +284,6 @@ export default function VibeCodingCoursePage() {
 
         <section id="references" className="py-16">
             <div className="text-left mb-8">
-                <BookOpen className="h-10 w-10 text-muted-foreground mb-4" />
                 <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Learn More</h2>
                 <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl">
                     Resources for tools and platforms. Documentation and guides to build deeper knowledge.

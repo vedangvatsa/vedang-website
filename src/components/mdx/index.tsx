@@ -190,3 +190,6 @@ export * from './stepwise-charts';
 export * from './agentic-state-charts';
 export * from './post-interface-charts';
 export * from './explainer';
+export { KnowledgeCheck } from './knowledge-check';
+export { ToolboxExplainer } from './toolbox-explainer';
+export { PromptTechniques } from './prompt-techniques';

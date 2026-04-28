@@ -4,13 +4,6 @@ description: "Building is just the first step. This module explains how to turn 
 order: 5
 ---
 
-<Image
-  src="/images/courses/VibeCoding/Vibe_coding_module5_vedang_vatsa.webp"
-  alt="An infographic for Module 5 of the Vibe Coding course, showing a shield icon and titled 'From Project to Professional Product'."
-  width={1200}
-  height={675}
-  className="max-h-72 w-auto mx-auto rounded-lg mb-8 border border-muted"
-/>
 
 Building an app quickly is impressive. But building an app that is secure, stable, and capable of generating revenue requires discipline. 
 
@@ -51,17 +44,13 @@ The value of simply "knowing how to code" is dropping. The value of "knowing how
 
 <SectionLabel label="Knowledge Check" />
 
-<Accordion type="single" collapsible className="w-full mt-4">
-  <AccordionItem value="q1">
-      <AccordionTrigger className="text-lg">What is the purpose of a rule file (like `.cursorrules`)?</AccordionTrigger>
-      <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
-          A rule file provides permanent instructions that the AI reads before every action. It is essential for enforcing security standards, like telling the AI never to expose secret passwords in the code.
-      </AccordionContent>
-  </AccordionItem>
-  <AccordionItem value="q2">
-      <AccordionTrigger className="text-lg">Why does vibe coding make building SaaS businesses easier?</AccordionTrigger>
-      <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
-          It lowers the cost and time required to test an idea. Instead of spending months and thousands of dollars hiring a team, you can build a prototype yourself in a weekend to see if customers actually want it.
-      </AccordionContent>
-  </AccordionItem>
-</Accordion>
+<KnowledgeCheck questions={[
+  {
+    q: "What is the purpose of a rule file (like .cursorrules)?",
+    a: "A rule file provides permanent instructions that the AI reads before every action. It is essential for enforcing security standards, like telling the AI never to expose secret passwords in the code."
+  },
+  {
+    q: "Why does vibe coding make building SaaS businesses easier?",
+    a: "It lowers the cost and time required to test an idea. Instead of spending months and thousands of dollars hiring a team, you can build a prototype yourself in a weekend to see if customers actually want it."
+  }
+]} />
