@@ -535,9 +535,11 @@
     "id": "agi-governance",
     "scheduleDate": "2026-04-17",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "How do you govern something smarter than you?\n\nGovernance assumes humans are the smartest actors. AGI may end that.\n\nveda.ng/agi-governance\n\nSome nations aren't waiting. Estonia, Singapore & the UAE run AI at scale across public services: veda.ng/agentic-state",
-    "image": "scripts/thread-assets/agi_governance.png"
+    "image": "scripts/thread-assets/agi_governance.png",
+    "postedAt": "2026-04-28T06:19:58.116Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkjwwalp6p2w"
   },
   {
     "id": "ai-economy",
