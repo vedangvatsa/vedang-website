@@ -1,0 +1,70 @@
+---
+title: "The Web3 Ecosystem: dApps, NFTs, and DAOs"
+description: "Explore the applications being built in Web3, covering the three important pillars of the current ecosystem."
+---
+
+<Web3Ecosystem />
+
+With the foundational technologies in place, we can now look at the applications being built in Web3. This module covers three important pillars of the current ecosystem.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg">dApps: Decentralized Applications</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            A dApp is a decentralized application. While its frontend might look and feel like a regular website or mobile app, its backend logic is powered by smart contracts running on a blockchain. This means no single entity controls the app.
+            
+            **Key Differences from Web2 Apps:**
+            
+            * **Decentralized Backend:** Instead of relying on a company's private servers (like AWS), dApps run on a peer-to-peer network.
+            * **Permissionless Login:** You don't sign up with an email and password. You connect your digital wallet, which acts as your secure, self-owned identity.
+            * **Transparency:** All transactions and interactions are recorded on the public blockchain for anyone to verify.
+
+            > **Example: Uniswap.** Uniswap is a decentralized exchange (DEX) for swapping cryptocurrencies. Unlike a centralized exchange like Coinbase, there is no company holding your funds or acting as an intermediary. It's just a set of smart contracts that allow users to trade directly with each other from their own wallets.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg">NFTs: The Ownership Layer of the Internet</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            An NFT (Non-Fungible Token) is a unique digital token on a blockchain that represents and proves ownership of an asset. "Non-fungible" means it's one-of-a-kind and cannot be replaced with another identical token (unlike a dollar bill, which is fungible).
+            
+            NFTs solve a fundamental problem of the internet: the inability to prove ownership of a digital item. Before NFTs, any digital file could be endlessly copied, making the original indistinguishable from a copy. NFTs create verifiable digital scarcity.
+            
+            **Applications of NFTs:**
+            
+            * **Digital Art & Collectibles:** The most famous use case, allowing artists to sell verifiably unique digital works directly to collectors.
+            * **Gaming:** In-game items (like swords, skins, or land) can be NFTs, which means players truly own them and can trade or sell them on open marketplaces, even outside the game.
+            * **Ticketing & Memberships:** An NFT can act as a ticket to an event or a key to a private community, with ownership being easily verifiable.
+            * **Digital Identity:** Your ".eth" name (from the Ethereum Name Service) is an NFT that acts as a human-readable username for your wallet and a decentralized profile.
+
+            NFTs are the building blocks for an economy based on digital ownership, giving power back to creators and users.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg">DAOs: A New Model for Organization</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            A DAO (Decentralized Autonomous Organization) is a community-led entity with no central leadership. It's a new way for people to coordinate and govern themselves over the internet.
+            
+            **How a DAO Works:**
+            
+            1. **Rules as Code:** The organization's rules and governance mechanisms are written into smart contracts.
+            2. **Community Treasury:** DAOs typically have a shared treasury that no single person can access without the group's approval.
+            3. **Governance Tokens:** To make decisions, the DAO issues governance tokens. Members vote on proposals with these tokens, and the outcome is automatically executed by the smart contracts if the vote passes.
+            4. **Proposals:** Any member can make a proposal, such as how to spend treasury funds or whether to approve a new project.
+
+            DAOs are being used to manage everything from DeFi protocols (like MakerDAO) to social clubs (like Friends with Benefits) and investment collectives. They represent a powerful new tool for collective action and governance.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg">DeFi: Decentralized Finance</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            DeFi is one of Web3's most developed use cases. It recreates traditional financial services (lending, borrowing, trading, insurance) using smart contracts instead of banks. Anyone with a wallet can participate, with no application forms, credit checks, or intermediaries.
+            
+            * **Decentralized Exchanges (DEXes):** Platforms like <Link href="https://uniswap.org/" target="_blank" rel="noopener noreferrer">Uniswap</Link> and <Link href="https://curve.fi/" target="_blank" rel="noopener noreferrer">Curve</Link> allow you to swap one cryptocurrency for another directly from your wallet, without a centralized company holding your funds.
+            * **Lending and Borrowing:** Protocols like <Link href="https://aave.com/" target="_blank" rel="noopener noreferrer">Aave</Link> and Compound let you lend your crypto to earn interest, or borrow against your existing holdings. The interest rates are set by supply and demand, not a bank.
+            * **Stablecoins:** Cryptocurrencies pegged to the value of a real-world currency (like the US Dollar). USDC and DAI are common examples. They provide stability in a volatile market and are the most common medium of exchange in DeFi.
+            * **Yield Farming and Liquidity:** Users can provide their tokens to a protocol's "liquidity pool" (used to facilitate trades) and earn fees in return. This is how DEXes work without a traditional order book.
+
+            DeFi is still experimental and carries real financial risk. Smart contract bugs, market volatility, and protocol failures have caused significant losses. Always research thoroughly and never invest more than you can afford to lose.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

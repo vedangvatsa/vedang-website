@@ -1,0 +1,67 @@
+---
+title: "Getting Started: Your Passport to Web3"
+description: "Ready to dive in? This module covers the practical first steps to begin your journey into the world of Web3."
+---
+
+<Web3Passport />
+
+Ready to dive in? This module covers the practical first steps to begin your journey into the world of Web3. It's less technical than you might think, but requires a new mindset around security and self-custody.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg">Step 1: Get a Digital Wallet</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            A digital wallet is your primary tool for interacting with Web3. It's a secure application that lets you store and manage your cryptocurrencies and NFTs. More importantly, it acts as your digital identity, allowing you to log in to dApps without needing a username and password.
+            
+            * **Self-Custodial vs. Custodial:** A self-custodial wallet (like MetaMask or Rainbow) means YOU, and only you, have control over your assets. A custodial wallet (like a Coinbase account) means the company holds your assets for you. For true Web3 participation, you need a self-custodial wallet.
+            * **The Seed Phrase: The Golden Rule of Web3.** When you create a self-custodial wallet, you will be given a "seed phrase" or "recovery phrase"—a unique 12 or 24-word password. This is the master key to all your assets.
+                * **You MUST write it down and store it securely offline.**
+                * **NEVER share it with anyone.**
+                * **NEVER store it digitally (e.g., in a text file, email, or photo).**
+              
+              If you lose your seed phrase, you lose access to your assets forever. If someone else gets it, they can steal all your assets. This is the most important rule of Web3.
+            * **Popular Wallets:** The most common wallets are browser extensions like <Link href="https://metamask.io/" target="_blank" rel="noopener noreferrer">MetaMask</Link> or mobile apps like <Link href="https://www.rainbow.me/" target="_blank" rel="noopener noreferrer">Rainbow</Link> and <Link href="https://phantom.app/" target="_blank" rel="noopener noreferrer">Phantom</Link> (for the Solana ecosystem).
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg">Step 2: Get Some Crypto (The Safe Way)</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            To use most dApps, you'll need a small amount of cryptocurrency to pay for transaction fees (known as "gas"). The process of converting traditional money (like USD or EUR) into cryptocurrency is called an "onramp."
+            
+            1. **Use a Reputable Centralized Exchange:** For beginners, the safest way to buy your first crypto is through a large, regulated exchange like Coinbase, Kraken, or Gemini.
+            2. **Link Your Bank Account:** You can link your bank account or debit card to purchase crypto.
+            3. **Buy a Major Cryptocurrency:** Start with a well-established cryptocurrency like Ether (ETH), which is the native currency of the Ethereum network and is required for most dApp interactions.
+            4. **Withdraw to Your Self-Custodial Wallet:** Once you've bought crypto on the exchange, you need to withdraw it to your own wallet (the one you created in Step 1). This moves it from the exchange's custody to your self-custody. You will need to copy your wallet's public address (a long string of characters starting with '0x') and paste it into the withdrawal form on the exchange. Double-check the address!
+        </AccordionContent>
+    </AccordionItem>
+        <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg">Step 3: Explore the Ecosystem</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            Now that you have a wallet with some funds, you're ready to explore! Here are some things you can do:
+            
+            * **Get a Web3 Username:** Go to the Ethereum Name Service (ENS) and register a ".eth" name for your wallet. This gives you a human-readable username instead of a long address.
+            * **Try a dApp:** Explore a dApp aggregator like DappRadar to find interesting applications. You could try swapping a small amount of tokens on a decentralized exchange like Uniswap.
+            * **Collect an NFT:** Look for a free or low-cost NFT to mint. This will give you first-hand experience of what digital ownership feels like.
+            
+            **Important:** Start small. Only use small amounts of money that you are comfortable losing as you learn. The goal is to learn the mechanics safely.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg">Staying Safe: Scams and Red Flags</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            Web3 gives you more control, but that also means more responsibility. Scams are common, especially targeting beginners. Knowing the patterns is your best defense.
+            
+            * **Phishing:** Fake websites or social media accounts that look like real projects. They ask you to "connect your wallet" or "enter your seed phrase." A legitimate project will never ask for your seed phrase. If a site asks for it, close the tab immediately.
+            * **Rug Pulls:** A team creates a token or NFT project, hypes it up to attract investment, and then disappears with the money. Red flags include anonymous teams, unrealistic promises of returns, and no working product.
+            * **Too-Good-to-Be-True Offers:** Messages promising free tokens, guaranteed returns, or "airdrop" rewards that require you to connect your wallet to an unknown site. These usually drain your wallet once you approve a transaction.
+            
+            **Rules to live by:**
+            
+            1. Never share your seed phrase. Ever. With anyone.
+            2. Always double-check URLs before connecting your wallet.
+            3. Use a separate "burner" wallet with small amounts for trying new projects.
+            4. If something sounds too good to be true, it almost certainly is.
+            5. Research the team, the code, and the community before putting money in.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

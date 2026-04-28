@@ -153,346 +153,70 @@ export default function Web3CoursePage() {
             </div>
         </section>
 
-        <div className="container mx-auto px-4 md:px-6 max-w-5xl py-16 space-y-12">
-            
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
-                <CardHeader className="bg-secondary/30 p-6">
-                    <CardDescription>Module 1</CardDescription>
-                    <CardTitle className="text-2xl">The Vision: Why Web3 Matters</CardTitle>
-                </CardHeader>
-                <CardContent className="p-6">
-                    <WebEvolution />
-                     <p className="text-muted-foreground">Before diving into the technology, it helps to understand the 'why' behind Web3. This module traces the internet's evolution, highlights the problems Web3 aims to solve, and lays out its philosophical foundations: decentralization, user sovereignty, and open protocols.</p>
-                    <Accordion type="single" collapsible className="w-full mt-4">
-                        <AccordionItem value="item-1">
-                            <AccordionTrigger className="text-lg">The Evolution of the Web: From Read to Read-Write-Own</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>The internet has evolved through distinct phases, each defined by how we interact with information:</p>
-                                <ul className="my-6 space-y-4">
-                                    <li>
-                                        <strong>Web1 (The Read-Only Web, ~1990-2004):</strong> This was the era of static websites. Information was presented by creators (companies, institutions) for users to consume. Think of it as a giant, linked digital encyclopedia. Interaction was minimal, and users were passive consumers of content. The protocols (HTTP, SMTP) were open and decentralized.
-                                    </li>
-                                    <li>
-                                        <strong>Web2 (The Read-Write Web, ~2004-Present):</strong> The rise of social media and user-generated content transformed users into creators. Platforms like Facebook, YouTube, and Twitter made it easy to create and share content. However, this came at a cost: centralization. A few large corporations now act as gatekeepers, controlling the platforms, owning user data, and setting the rules. You can create content, but you don't truly own it or your digital identity.
-                                    </li>
-                                    <li>
-                                        <strong>Web3 (The Read-Write-Own Web):</strong> This is the next major shift, aiming to combine the decentralized, open ethos of Web1 with the rich, interactive experience of Web2. Built on technologies like blockchain, Web3 lets users actually own their data, assets, and identity. It's about moving power from centralized platforms back to users and creators.
-                                    </li>
-                                </ul>
-                                <div className="grid md:grid-cols-2 gap-6 my-6">
-                                    <Card>
-                                        <CardHeader>
-                                            <CardTitle className="text-lg font-semibold">Web2 Today</CardTitle>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <p className="text-sm text-muted-foreground">You create content on Instagram, but Meta owns the platform. Your data is sold to advertisers. Your account can be banned without appeal. Platform takes 30-45% of creator revenue. Single point of failure.</p>
-                                        </CardContent>
-                                    </Card>
-                                    <Card className="border-primary/50">
-                                        <CardHeader>
-                                            <CardTitle className="text-lg font-semibold">Web3 Alternative</CardTitle>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <p className="text-sm text-muted-foreground">You create content as NFTs on a decentralized protocol like Lens or Farcaster. You own your social graph. Royalties are enforced by smart contracts. No single entity can censor or de-platform you. Data is portable across apps.</p>
-                                        </CardContent>
-                                    </Card>
-                                </div>
-                            </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="item-2">
-                            <AccordionTrigger className="text-lg">The Core Problem Web3 Addresses: Centralization</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>Web2, for all its benefits, has led to significant issues stemming from centralization:</p>
-                                <ul className="my-6">
-                                    <li><strong>Censorship and Control:</strong> Centralized platforms can unilaterally de-platform users, remove content, or change their rules at any time, often with little recourse.</li>
-                                    <li><strong>Data Exploitation:</strong> Your personal data is the product. It's collected, analyzed, and sold to advertisers, often without your full understanding or consent. You have little control over how it's used.</li>
-                                    <li><strong>Value Extraction:</strong> Platforms take a significant cut of the value created by users. Creators are subject to changing monetization policies and platform fees, making their livelihoods precarious.</li>
-                                    <li><strong>Single Points of Failure:</strong> If a platform's servers go down, the service becomes unavailable for everyone. They are also prime targets for data breaches.</li>
-                                </ul>
-                                <p>Web3 proposes a solution through decentralization, creating systems that are more resilient, transparent, and fair by removing the need for a trusted central intermediary.</p>
-                            </AccordionContent>
-                        </AccordionItem>
-                    </Accordion>
-                </CardContent>
-            </Card>
-
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
-                <CardHeader className="bg-secondary/30 p-6">
-                    <CardDescription>Module 2</CardDescription>
-                    <CardTitle className="text-2xl">The Bedrock: Blockchain and Cryptocurrencies</CardTitle>
-                </CardHeader>
-                <CardContent className="p-6">
-                    <BlockchainExplainer />
-                    <p className="text-muted-foreground">This module explains the core technology behind Web3. We'll break down what a blockchain is, how it works, and the important role cryptocurrencies play in making these decentralized networks function.</p>
-                     <Accordion type="single" collapsible className="w-full mt-4">
-                        <AccordionItem value="item-1">
-                            <AccordionTrigger className="text-lg">What is a Blockchain? (A Simple Analogy)</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>Imagine a shared, digital notebook that is copied and distributed to thousands of people around the world. This is a blockchain.</p>
-                                <ul className="my-6">
-                                    <li><strong>Blocks are Pages:</strong> Each page in the notebook is a "block" that contains a list of transactions. Once a page is full, it's added to the notebook.</li>
-                                    <li><strong>Chain is the Binding:</strong> Each new page is cryptographically "chained" to the previous one, creating a chronological and unbreakable sequence. This cryptographic link makes it impossible to alter a past page without invalidating all the pages that come after it.</li>
-                                    <li><strong>Distributed and Synchronized:</strong> Everyone in the network has a copy of the notebook. When a new page is added, everyone updates their copy. This massive redundancy is what makes it so secure. There's no single "master copy" to attack or corrupt.</li>
-                                </ul>
-                                <p>This creates a shared, immutable ledger-a single source of truth that isn't controlled by any one person or company. It allows people who don't know or trust each other to agree on a set of facts without needing a middleman.</p>
-                            </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="item-2">
-                             <AccordionTrigger className="text-lg">The Role of Cryptocurrencies (e.g., ETH)</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>Cryptocurrencies are not just speculative assets; they are essential for the functioning of a blockchain network. They serve two critical purposes:</p>
-                                 <ul>
-                                    <li><strong>Paying for Computation ("Gas"):</strong> Every action on a blockchain-sending money, minting an NFT, voting in a DAO-requires computational resources from the network. Cryptocurrencies (like Ether, or ETH, on the Ethereum blockchain) are used to pay the network participants ("validators" or "miners") for this computation. This fee is often called "gas."</li>
-                                    <li><strong>Economic Security (Incentives):</strong> Cryptocurrencies are used to reward validators for honestly processing transactions and securing the network. Validators often have to "stake" a large amount of crypto as collateral. If they act dishonestly, they can lose their stake. This powerful economic incentive aligns their interests with the health of the network, removing the need for a central administrator.</li>
-                                </ul>
-                                <p>In essence, crypto provides the economic layer that allows a decentralized network of strangers to coordinate and secure itself.</p>
-                            </AccordionContent>
-                        </AccordionItem>
-                     </Accordion>
-                </CardContent>
-            </Card>
-
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
-                <CardHeader className="bg-secondary/30 p-6">
-                    <CardDescription>Module 3</CardDescription>
-                    <CardTitle className="text-2xl">Smart Contracts: The Brains of Web3</CardTitle>
-                </CardHeader>
-                 <CardContent className="p-6">
-                    <SmartContractExplainer />
-                     <p className="text-muted-foreground">If blockchain is the immutable ledger, smart contracts are what make it programmable and intelligent. This module explores how these pieces of code are transforming blockchain from a simple database into a global, permissionless computer.</p>
-                     <Accordion type="single" collapsible className="w-full mt-4">
-                        <AccordionItem value="item-1">
-                            <AccordionTrigger className="text-lg">What are Smart Contracts?</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>A smart contract is simply a program that runs on the blockchain. It's a self-executing contract where the terms of the agreement between parties are written directly into code. They run exactly as programmed without any possibility of downtime, censorship, fraud, or third-party interference.</p>
-                                <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
-                                  <strong>Analogy: A Vending Machine.</strong> A vending machine is a physical smart contract. You put in money (input), select an item (condition), and the machine automatically dispenses the item (output). There's no cashier needed; the logic is baked into the machine. Smart contracts are digital vending machines for any kind of agreement or application.
-                                </blockquote>
-                            </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="item-2">
-                             <AccordionTrigger className="text-lg">Key Properties and Capabilities</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                 <ul>
-                                    <li><strong>Autonomous:</strong> Once deployed to the blockchain, they run automatically when their conditions are met, without needing anyone to trigger them.</li>
-                                    <li><strong>Immutable:</strong> The code of a smart contract cannot be changed after it's deployed. This ensures that the rules of the game are fixed and cannot be altered by a single party.</li>
-                                    <li><strong>Transparent:</strong> The code is visible to everyone on the blockchain, allowing anyone to verify its logic and functionality.</li>
-                                    <li><strong>Composable ("Money Legos"):</strong> This is one of the most powerful features. Because smart contracts are open and live on the same network, developers can build new applications by combining existing ones, like snapping together Lego blocks. A new DeFi protocol can integrate a pre-existing stablecoin and a decentralized exchange to create a completely new product without asking for permission.</li>
-                                </ul>
-                                <p>This composability accelerates innovation rapidly and is the driving force behind the growth of the Web3 ecosystem.</p>
-                            </AccordionContent>
-                        </AccordionItem>
-                     </Accordion>
-                </CardContent>
-            </Card>
-
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
-                <CardHeader className="bg-secondary/30 p-6">
-                    <CardDescription>Module 4</CardDescription>
-                    <CardTitle className="text-2xl">The Web3 Ecosystem: dApps, NFTs, and DAOs</CardTitle>
-                </CardHeader>
-                 <CardContent className="p-6">
-                    <Web3Ecosystem />
-                     <p className="text-muted-foreground">With the foundational technologies in place, we can now look at the applications being built in Web3. This module covers three important pillars of the current ecosystem.</p>
-                     <Accordion type="single" collapsible className="w-full mt-4">
-                        <AccordionItem value="item-1">
-                            <AccordionTrigger className="text-lg">dApps: Decentralized Applications</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>A dApp is a decentralized application. While its frontend might look and feel like a regular website or mobile app, its backend logic is powered by smart contracts running on a blockchain. This means no single entity controls the app.</p>
-                                <p><strong>Key Differences from Web2 Apps:</strong></p>
-                                <ul>
-                                    <li><strong>Decentralized Backend:</strong> Instead of relying on a company's private servers (like AWS), dApps run on a peer-to-peer network.</li>
-                                    <li><strong>Permissionless Login:</strong> You don't sign up with an email and password. You connect your digital wallet, which acts as your secure, self-owned identity.</li>
-                                    <li><strong>Transparency:</strong> All transactions and interactions are recorded on the public blockchain for anyone to verify.</li>
-                                </ul>
-                                <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
-                                  <strong>Example: Uniswap.</strong> Uniswap is a decentralized exchange (DEX) for swapping cryptocurrencies. Unlike a centralized exchange like Coinbase, there is no company holding your funds or acting as an intermediary. It's just a set of smart contracts that allow users to trade directly with each other from their own wallets.
-                                </blockquote>
-                            </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="item-2">
-                             <AccordionTrigger className="text-lg">NFTs: The Ownership Layer of the Internet</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>An NFT (Non-Fungible Token) is a unique digital token on a blockchain that represents and proves ownership of an asset. "Non-fungible" means it's one-of-a-kind and cannot be replaced with another identical token (unlike a dollar bill, which is fungible).</p>
-                                <p>NFTs solve a fundamental problem of the internet: the inability to prove ownership of a digital item. Before NFTs, any digital file could be endlessly copied, making the original indistinguishable from a copy. NFTs create verifiable digital scarcity.</p>
-                                <p><strong>Applications of NFTs:</strong></p>
-                                 <ul>
-                                    <li><strong>Digital Art & Collectibles:</strong> The most famous use case, allowing artists to sell verifiably unique digital works directly to collectors.</li>
-                                    <li><strong>Gaming:</strong> In-game items (like swords, skins, or land) can be NFTs, which means players truly own them and can trade or sell them on open marketplaces, even outside the game.</li>
-                                    <li><strong>Ticketing & Memberships:</strong> An NFT can act as a ticket to an event or a key to a private community, with ownership being easily verifiable.</li>
-                                    <li><strong>Digital Identity:</strong> Your ".eth" name (from the Ethereum Name Service) is an NFT that acts as a human-readable username for your wallet and a decentralized profile.</li>
-                                </ul>
-                                <p>NFTs are the building blocks for an economy based on digital ownership, giving power back to creators and users.</p>
-                            </AccordionContent>
-                        </AccordionItem>
-                         <AccordionItem value="item-3">
-                            <AccordionTrigger className="text-lg">DAOs: A New Model for Organization</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>A DAO (Decentralized Autonomous Organization) is a community-led entity with no central leadership. It's a new way for people to coordinate and govern themselves over the internet.</p>
-                                <p><strong>How a DAO Works:</strong></p>
-                                <ol>
-                                    <li><strong>Rules as Code:</strong> The organization's rules and governance mechanisms are written into smart contracts.</li>
-                                    <li><strong>Community Treasury:</strong> DAOs typically have a shared treasury that no single person can access without the group's approval.</li>
-                                    <li><strong>Governance Tokens:</strong> To make decisions, the DAO issues governance tokens. Members vote on proposals with these tokens, and the outcome is automatically executed by the smart contracts if the vote passes.</li>
-                                    <li><strong>Proposals:</strong> Any member can make a proposal, such as how to spend treasury funds or whether to approve a new project.</li>
-                                </ol>
-                                <p>DAOs are being used to manage everything from DeFi protocols (like MakerDAO) to social clubs (like Friends with Benefits) and investment collectives. They represent a powerful new tool for collective action and governance.</p>
-                            </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="item-4">
-                            <AccordionTrigger className="text-lg">DeFi: Decentralized Finance</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>DeFi is one of Web3's most developed use cases. It recreates traditional financial services (lending, borrowing, trading, insurance) using smart contracts instead of banks. Anyone with a wallet can participate, with no application forms, credit checks, or intermediaries.</p>
-                                <ul>
-                                    <li><strong>Decentralized Exchanges (DEXes):</strong> Platforms like <Link href="https://uniswap.org/" target="_blank" rel="noopener noreferrer">Uniswap</Link> and <Link href="https://curve.fi/" target="_blank" rel="noopener noreferrer">Curve</Link> allow you to swap one cryptocurrency for another directly from your wallet, without a centralized company holding your funds.</li>
-                                    <li><strong>Lending and Borrowing:</strong> Protocols like <Link href="https://aave.com/" target="_blank" rel="noopener noreferrer">Aave</Link> and Compound let you lend your crypto to earn interest, or borrow against your existing holdings. The interest rates are set by supply and demand, not a bank.</li>
-                                    <li><strong>Stablecoins:</strong> Cryptocurrencies pegged to the value of a real-world currency (like the US Dollar). USDC and DAI are common examples. They provide stability in a volatile market and are the most common medium of exchange in DeFi.</li>
-                                    <li><strong>Yield Farming and Liquidity:</strong> Users can provide their tokens to a protocol's "liquidity pool" (used to facilitate trades) and earn fees in return. This is how DEXes work without a traditional order book.</li>
-                                </ul>
-                                <p>DeFi is still experimental and carries real financial risk. Smart contract bugs, market volatility, and protocol failures have caused significant losses. Always research thoroughly and never invest more than you can afford to lose.</p>
-                            </AccordionContent>
-                        </AccordionItem>
-                     </Accordion>
-                </CardContent>
-            </Card>
-
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
-                <CardHeader className="bg-secondary/30 p-6">
-                    <CardDescription>Module 5</CardDescription>
-                    <CardTitle className="text-2xl">Getting Started: Your Passport to Web3</CardTitle>
-                </CardHeader>
-                <CardContent className="p-6">
-                    <Web3Passport />
-                    <p className="text-muted-foreground">Ready to dive in? This module covers the practical first steps to begin your journey into the world of Web3. It's less technical than you might think, but requires a new mindset around security and self-custody.</p>
-                     <Accordion type="single" collapsible className="w-full mt-4">
-                         <AccordionItem value="item-1">
-                            <AccordionTrigger className="text-lg">Step 1: Get a Digital Wallet</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>A digital wallet is your primary tool for interacting with Web3. It's a secure application that lets you store and manage your cryptocurrencies and NFTs. More importantly, it acts as your digital identity, allowing you to log in to dApps without needing a username and password.</p>
-                                <ul>
-                                    <li><strong>Self-Custodial vs. Custodial:</strong> A self-custodial wallet (like MetaMask or Rainbow) means YOU, and only you, have control over your assets. A custodial wallet (like a Coinbase account) means the company holds your assets for you. For true Web3 participation, you need a self-custodial wallet.</li>
-                                    <li><strong>The Seed Phrase: The Golden Rule of Web3.</strong> When you create a self-custodial wallet, you will be given a "seed phrase" or "recovery phrase"-a unique 12 or 24-word password. This is the master key to all your assets.
-                                      <ul className="my-4">
-                                        <li><strong>You MUST write it down and store it securely offline.</strong></li>
-                                        <li><strong>NEVER share it with anyone.</strong></li>
-                                        <li><strong>NEVER store it digitally (e.g., in a text file, email, or photo).</strong></li>
-                                      </ul>
-                                      If you lose your seed phrase, you lose access to your assets forever. If someone else gets it, they can steal all your assets. This is the most important rule of Web3.
-                                    </li>
-                                    <li><strong>Popular Wallets:</strong> The most common wallets are browser extensions like <Link href="https://metamask.io/" target="_blank" rel="noopener noreferrer">MetaMask</Link> or mobile apps like <Link href="https://www.rainbow.me/" target="_blank" rel="noopener noreferrer">Rainbow</Link> and <Link href="https://phantom.app/" target="_blank" rel="noopener noreferrer">Phantom</Link> (for the Solana ecosystem).</li>
-                                </ul>
-                            </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="item-2">
-                            <AccordionTrigger className="text-lg">Step 2: Get Some Crypto (The Safe Way)</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>To use most dApps, you'll need a small amount of cryptocurrency to pay for transaction fees (known as "gas"). The process of converting traditional money (like USD or EUR) into cryptocurrency is called an "onramp."</p>
-                                <ol>
-                                  <li><strong>Use a Reputable Centralized Exchange:</strong> For beginners, the safest way to buy your first crypto is through a large, regulated exchange like Coinbase, Kraken, or Gemini.</li>
-                                  <li><strong>Link Your Bank Account:</strong> You can link your bank account or debit card to purchase crypto.</li>
-                                  <li><strong>Buy a Major Cryptocurrency:</strong> Start with a well-established cryptocurrency like Ether (ETH), which is the native currency of the Ethereum network and is required for most dApp interactions.</li>
-                                  <li><strong>Withdraw to Your Self-Custodial Wallet:</strong> Once you've bought crypto on the exchange, you need to withdraw it to your own wallet (the one you created in Step 1). This moves it from the exchange's custody to your self-custody. You will need to copy your wallet's public address (a long string of characters starting with '0x') and paste it into the withdrawal form on the exchange. Double-check the address!</li>
-                                </ol>
-                            </AccordionContent>
-                        </AccordionItem>
-                         <AccordionItem value="item-3">
-                            <AccordionTrigger className="text-lg">Step 3: Explore the Ecosystem</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>Now that you have a wallet with some funds, you're ready to explore! Here are some things you can do:</p>
-                                <ul>
-                                  <li><strong>Get a Web3 Username:</strong> Go to the Ethereum Name Service (ENS) and register a ".eth" name for your wallet. This gives you a human-readable username instead of a long address.</li>
-                                  <li><strong>Try a dApp:</strong> Explore a dApp aggregator like DappRadar to find interesting applications. You could try swapping a small amount of tokens on a decentralized exchange like Uniswap.</li>
-                                  <li><strong>Collect an NFT:</strong> Look for a free or low-cost NFT to mint. This will give you first-hand experience of what digital ownership feels like.</li>
-                                </ul>
-                                <p><strong>Important:</strong> Start small. Only use small amounts of money that you are comfortable losing as you learn. The goal is to learn the mechanics safely.</p>
-                            </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="item-4">
-                            <AccordionTrigger className="text-lg">Staying Safe: Scams and Red Flags</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>Web3 gives you more control, but that also means more responsibility. Scams are common, especially targeting beginners. Knowing the patterns is your best defense.</p>
-                                <ul>
-                                    <li><strong>Phishing:</strong> Fake websites or social media accounts that look like real projects. They ask you to "connect your wallet" or "enter your seed phrase." A legitimate project will never ask for your seed phrase. If a site asks for it, close the tab immediately.</li>
-                                    <li><strong>Rug Pulls:</strong> A team creates a token or NFT project, hypes it up to attract investment, and then disappears with the money. Red flags include anonymous teams, unrealistic promises of returns, and no working product.</li>
-                                    <li><strong>Too-Good-to-Be-True Offers:</strong> Messages promising free tokens, guaranteed returns, or "airdrop" rewards that require you to connect your wallet to an unknown site. These usually drain your wallet once you approve a transaction.</li>
-                                </ul>
-                                <p><strong>Rules to live by:</strong></p>
-                                <ol>
-                                    <li>Never share your seed phrase. Ever. With anyone.</li>
-                                    <li>Always double-check URLs before connecting your wallet.</li>
-                                    <li>Use a separate "burner" wallet with small amounts for trying new projects.</li>
-                                    <li>If something sounds too good to be true, it almost certainly is.</li>
-                                    <li>Research the team, the code, and the community before putting money in.</li>
-                                </ol>
-                            </AccordionContent>
-                        </AccordionItem>
-                     </Accordion>
-                </CardContent>
-            </Card>
-
-            <Card className="overflow-hidden border-primary/20 shadow-lg shadow-primary/5">
-                <CardHeader className="bg-secondary/30 p-6">
-                     <CardDescription>Module 6</CardDescription>
-                    <CardTitle className="text-2xl">The Future: Challenges and Opportunities</CardTitle>
-                </CardHeader>
-                 <CardContent className="p-6">
-                    <Web3Future />
-                     <p className="text-muted-foreground">Web3 is not a utopia. It's a young, evolving technology with immense potential but also significant hurdles. This final module explores the open questions and the exciting road ahead.</p>
-                     <Accordion type="single" collapsible className="w-full mt-4">
-                        <AccordionItem value="item-1">
-                            <AccordionTrigger className="text-lg">The Promise: A More Equitable Internet</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                                <p>The potential of Web3 is vast. By building on open, permissionless, and user-owned infrastructure, we can create:</p>
-                                <ul>
-                                    <li><strong>A Fairer Creator Economy:</strong> Artists, musicians, and writers can publish their work as NFTs, capturing more of the value and building a direct relationship with their audience, free from platform intermediaries.</li>
-                                    <li><strong>User-Owned Platforms:</strong> Social media, gaming, and other platforms can be owned and governed by their users through DAOs, ensuring the rules are fair and the value is distributed among those who create it.</li>
-                                    <li><strong>A Global, Open Financial System (DeFi):</strong> Decentralized Finance aims to rebuild the traditional financial system on open rails, providing access to services like lending, borrowing, and trading to anyone with an internet connection, without needing a bank.</li>
-                                    <li><strong>Portable Digital Identity:</strong> Your wallet becomes your universal, self-owned identity, letting you move between applications without giving up control of your data.</li>
-                                </ul>
-                            </AccordionContent>
-                        </AccordionItem>
-                         <AccordionItem value="item-2">
-                             <AccordionTrigger className="text-lg">The Challenges on the Horizon</AccordionTrigger>
-                            <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-                               <p>Despite the promise, Web3 faces significant challenges that need to be solved for mass adoption:</p>
-                               <ul>
-                                    <li><strong>Scalability:</strong> Decentralized networks are inherently slower and more expensive to use than centralized ones. A transaction on Ethereum can sometimes cost several dollars and take seconds to confirm. Solutions like "Layer 2s" (e.g., Arbitrum, Optimism, Base) are being built to address this by processing transactions off-chain, but the technology is still maturing.</li>
-                                    <li><strong>User Experience (UX):</strong> The current UX is too complex for the average user. Managing seed phrases, paying gas fees, and navigating different blockchain networks are major points of friction. Abstracting this complexity away is the single biggest challenge for onboarding the next billion users.</li>
-                                    <li><strong>Regulation:</strong> Governments around the world are still grappling with how to regulate cryptocurrencies, DAOs, and DeFi. This legal and regulatory uncertainty creates risk for builders and users alike.</li>
-                                    <li><strong>Security and Education:</strong> The self-custody model puts a huge burden on the user. Scams are rampant, and without proper education, new users are highly vulnerable. Building safer wallets and better educational resources is paramount.</li>
-                                </ul>
-                                <div className="grid md:grid-cols-2 gap-6 my-6">
-                                    <Card>
-                                        <CardHeader>
-                                            <CardTitle className="text-lg font-semibold">2024-2025 Milestones</CardTitle>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <ul className="text-sm text-muted-foreground space-y-1">
-                                                <li>Bitcoin and Ethereum spot ETFs approved in the US, opening crypto to traditional investors</li>
-                                                <li>Solana ecosystem growth accelerated, competing with Ethereum on speed and cost</li>
-                                                <li>EU's MiCA regulation created the first comprehensive crypto legal framework</li>
-                                            </ul>
-                                        </CardContent>
-                                    </Card>
-                                    <Card className="border-primary/50">
-                                        <CardHeader>
-                                            <CardTitle className="text-lg font-semibold">2026 Trends to Watch</CardTitle>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <ul className="text-sm text-muted-foreground space-y-1">
-                                                <li>Account abstraction making wallets as easy as email login</li>
-                                                <li>AI agents interacting with DeFi protocols autonomously</li>
-                                                <li>Real-world asset tokenization (RWA) reaching mainstream finance</li>
-                                            </ul>
-                                        </CardContent>
-                                    </Card>
-                                </div>
-                                <p>Solving these challenges is the primary focus of the thousands of developers and entrepreneurs building in the Web3 space today. The journey is just beginning.</p>
-                            </AccordionContent>
-                        </AccordionItem>
-                     </Accordion>
-                </CardContent>
-            </Card>
+        <section id="curriculum" className="py-16 bg-muted/30 border-y -mx-4 px-4 md:-mx-6 md:px-6">
+            <div className="max-w-none">
+                <div className="text-left mb-8">
+                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Course Curriculum</h2>
+                    <p className="mt-2 text-muted-foreground">Six modules to understand the decentralized web.</p>
+                </div>
+                <div className="space-y-4">
+                    <Link href="/web3-101/module-1-vision" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">1. The Vision: Why Web3 Matters</h3>
+                                <p className="text-sm text-muted-foreground mt-1">Trace the internet's evolution and the problems Web3 aims to solve.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                        </div>
+                    </Link>
+                    <Link href="/web3-101/module-2-bedrock" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">2. The Bedrock: Blockchain</h3>
+                                <p className="text-sm text-muted-foreground mt-1">Understand the core technology and the role of cryptocurrencies.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                        </div>
+                    </Link>
+                    <Link href="/web3-101/module-3-smart-contracts" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">3. Smart Contracts</h3>
+                                <p className="text-sm text-muted-foreground mt-1">Explore how code transforms blockchain into a global computer.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                        </div>
+                    </Link>
+                    <Link href="/web3-101/module-4-ecosystem" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">4. The Ecosystem</h3>
+                                <p className="text-sm text-muted-foreground mt-1">Discover dApps, NFTs, and DAOs.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                        </div>
+                    </Link>
+                    <Link href="/web3-101/module-5-getting-started" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">5. Getting Started</h3>
+                                <p className="text-sm text-muted-foreground mt-1">Learn how to set up a wallet and navigate Web3 safely.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                        </div>
+                    </Link>
+                    <Link href="/web3-101/module-6-future" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">6. The Future</h3>
+                                <p className="text-sm text-muted-foreground mt-1">Explore the challenges and opportunities ahead for the decentralized web.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                        </div>
+                    </Link>
+                </div>
+            </div>
+        </section>
 
             <section id="references" className="py-16">
                 <div className="text-center">

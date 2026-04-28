@@ -1,0 +1,53 @@
+---
+title: "The Vision: Why Web3 Matters"
+description: "Trace the internet's evolution, understand the problems Web3 aims to solve, and explore its philosophical foundations: decentralization, user sovereignty, and open protocols."
+---
+
+<WebEvolution />
+
+Before diving into the technology, it helps to understand the 'why' behind Web3. This module traces the internet's evolution, highlights the problems Web3 aims to solve, and lays out its philosophical foundations: decentralization, user sovereignty, and open protocols.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg">The Evolution of the Web: From Read to Read-Write-Own</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            The internet has evolved through distinct phases, each defined by how we interact with information:
+            
+            * **Web1 (The Read-Only Web, ~1990-2004):** This was the era of static websites. Information was presented by creators (companies, institutions) for users to consume. Think of it as a giant, linked digital encyclopedia. Interaction was minimal, and users were passive consumers of content. The protocols (HTTP, SMTP) were open and decentralized.
+            * **Web2 (The Read-Write Web, ~2004-Present):** The rise of social media and user-generated content transformed users into creators. Platforms like Facebook, YouTube, and Twitter made it easy to create and share content. However, this came at a cost: centralization. A few large corporations now act as gatekeepers, controlling the platforms, owning user data, and setting the rules. You can create content, but you don't truly own it or your digital identity.
+            * **Web3 (The Read-Write-Own Web):** This is the next major shift, aiming to combine the decentralized, open ethos of Web1 with the rich, interactive experience of Web2. Built on technologies like blockchain, Web3 lets users actually own their data, assets, and identity. It's about moving power from centralized platforms back to users and creators.
+
+            <div className="grid md:grid-cols-2 gap-6 my-6">
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-lg font-semibold">Web2 Today</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground">You create content on Instagram, but Meta owns the platform. Your data is sold to advertisers. Your account can be banned without appeal. Platform takes 30-45% of creator revenue. Single point of failure.</p>
+                    </CardContent>
+                </Card>
+                <Card className="border-primary/50">
+                    <CardHeader>
+                        <CardTitle className="text-lg font-semibold">Web3 Alternative</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground">You create content as NFTs on a decentralized protocol like Lens or Farcaster. You own your social graph. Royalties are enforced by smart contracts. No single entity can censor or de-platform you. Data is portable across apps.</p>
+                    </CardContent>
+                </Card>
+            </div>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg">The Core Problem Web3 Addresses: Centralization</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            Web2, for all its benefits, has led to significant issues stemming from centralization:
+            
+            * **Censorship and Control:** Centralized platforms can unilaterally de-platform users, remove content, or change their rules at any time, often with little recourse.
+            * **Data Exploitation:** Your personal data is the product. It's collected, analyzed, and sold to advertisers, often without your full understanding or consent. You have little control over how it's used.
+            * **Value Extraction:** Platforms take a significant cut of the value created by users. Creators are subject to changing monetization policies and platform fees, making their livelihoods precarious.
+            * **Single Points of Failure:** If a platform's servers go down, the service becomes unavailable for everyone. They are also prime targets for data breaches.
+
+            Web3 proposes a solution through decentralization, creating systems that are more resilient, transparent, and fair by removing the need for a trusted central intermediary.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
