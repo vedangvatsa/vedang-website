@@ -53,6 +53,9 @@ export function Header() {
                 <DropdownMenuItem asChild>
                   <Link href="/swarm-prediction">Swarm Prediction</Link>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/ai-discovery-standards">AI Discovery Standards</Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
