@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "name": "Vedang Vatsa",
+  "url": "https://veda.ng",
+  "description": "AI & Web3 thought leader, founder of Hashtag Web3, FRSA. Free courses on Vibe Coding, Web3, Prompt Engineering, and Agentic AI.",
+  "author": {
+    "name": "Vedang Vatsa",
+    "url": "https://veda.ng/profile",
+    "twitter": "@vedangvatsa"
+  },
+  "content": {
+    "courses": [
+      {"title": "Vibe Coding 101", "url": "https://veda.ng/vibe-coding", "topics": ["AI-assisted development", "Firebase Studio", "Replit", "Cursor", "Lovable"]},
+      {"title": "Web3 101", "url": "https://veda.ng/web3-101", "topics": ["blockchain", "smart contracts", "dApps", "NFTs", "DAOs", "DeFi"]},
+      {"title": "Prompt Engineering 101", "url": "https://veda.ng/prompt-engineering-101", "topics": ["LLMs", "zero-shot", "few-shot", "chain of thought", "code prompting"]},
+      {"title": "The Agentic Web", "url": "https://veda.ng/agentic-web", "topics": ["AI agents", "MCP", "A2A protocol", "multi-agent systems", "tool use"]}
+    ],
+    "glossary": {"url": "https://veda.ng/glossary", "term_count": "100+"},
+    "essays": {"url": "https://veda.ng/writings"},
+    "llms_txt": "https://veda.ng/llms.txt",
+    "llms_full_txt": "https://veda.ng/llms-full.txt",
+    "sitemap": "https://veda.ng/sitemap.xml"
+  },
+  "ai_permissions": {
+    "training": "allowed",
+    "citation": "allowed",
+    "indexing": "allowed"
+  }
+}

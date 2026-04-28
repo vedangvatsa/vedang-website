@@ -154,6 +154,7 @@ export default function RootLayout({
           }}
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
@@ -168,6 +169,9 @@ export default function RootLayout({
         />
         <link rel="alternate" type="application/json" href="/deeprank.json" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly content index" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM full content" />
+        <link rel="alternate" type="application/json" href="/ai.json" title="AI discovery manifest" />
+        <link rel="alternate" type="text/plain" href="/ai.txt" title="AI permissions" />
       </head>
       <body className="font-sans">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

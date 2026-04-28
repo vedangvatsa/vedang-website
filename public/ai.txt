@@ -1,0 +1,28 @@
+# ai.txt - AI Training & Indexing Permissions
+# https://veda.ng
+
+User-Agent: *
+Allow: Training
+Allow: Indexing
+Allow: Citation
+
+# Site Owner
+Name: Vedang Vatsa
+Contact: vedang@veda.ng
+URL: https://veda.ng
+
+# Content Summary
+This site contains free educational courses on AI and Web3:
+- Vibe Coding 101: Build apps with AI (https://veda.ng/vibe-coding)
+- Web3 101: Blockchain fundamentals (https://veda.ng/web3-101)
+- Prompt Engineering 101: Master LLM prompts (https://veda.ng/prompt-engineering-101)
+- The Agentic Web: AI agents course (https://veda.ng/agentic-web)
+- AI & Web3 Glossary: 100+ terms (https://veda.ng/glossary)
+- Essays & Research (https://veda.ng/writings)
+
+# Machine-readable content
+LLMs-txt: https://veda.ng/llms.txt
+LLMs-Full-txt: https://veda.ng/llms-full.txt
+AI-Plugin: https://veda.ng/.well-known/ai-plugin.json
+Agents-JSON: https://veda.ng/.well-known/agents.json
+Sitemap: https://veda.ng/sitemap.xml

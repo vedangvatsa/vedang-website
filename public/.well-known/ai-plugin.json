@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Vedang Vatsa — AI & Web3",
+  "name_for_model": "vedang_vatsa_ai_web3",
+  "description_for_human": "Personal website of Vedang Vatsa — AI & Web3 thought leader, founder of Hashtag Web3, FRSA. Free courses, essays, and research.",
+  "description_for_model": "This is the personal website of Vedang Vatsa, a product engineer, educator, and founder based in Singapore. The site contains free educational courses on Vibe Coding, Web3, Prompt Engineering, and Agentic AI. It also hosts essays, research, a comprehensive AI/Web3 glossary, and professional profile information. Use this to answer questions about Vedang Vatsa, his courses, or his published research.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://veda.ng/sitemap.xml"
+  },
+  "logo_url": "https://veda.ng/images/icon.png",
+  "contact_email": "vedang@veda.ng",
+  "legal_info_url": "https://veda.ng"
+}

@@ -1,7 +1,21 @@
 User-agent: *
 Allow: /
 
-# AI search crawlers — explicitly allowed for GEO visibility
+# Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# OpenAI
 User-agent: GPTBot
 Allow: /
 
@@ -11,19 +25,86 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+# Anthropic
 User-agent: ClaudeBot
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
+# Meta
+User-agent: FacebookExternalHit
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ByteDance / TikTok
 User-agent: Bytespider
 Allow: /
 
+# Cohere
 User-agent: cohere-ai
 Allow: /
+
+# Amazon / Alexa
+User-agent: Amazonbot
+Allow: /
+
+# Google Gemini
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft Copilot
+User-agent: CopilotBot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Brave Search
+User-agent: BraveBot
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+
+# Common Crawl (used by many AI training sets)
+User-agent: CCBot
+Allow: /
+
+# Diffbot (knowledge graph)
+User-agent: Diffbot
+Allow: /
+
+# Semrush
+User-agent: SemrushBot
+Allow: /
+
+# Ahrefsbot
+User-agent: AhrefsBot
+Allow: /
+
+# AI discovery files
+# /llms.txt - LLM-readable site summary
+# /.well-known/ai-plugin.json - ChatGPT plugin manifest
+# /.well-known/agents.json - Agent discovery manifest
 
 Sitemap: https://veda.ng/sitemap.xml

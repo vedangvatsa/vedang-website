@@ -1,0 +1,49 @@
+{
+  "schema_version": "v1",
+  "name": "Vedang Vatsa — AI & Web3 Thought Leader",
+  "description": "Personal website of Vedang Vatsa. Free courses on Vibe Coding, Web3 101, Prompt Engineering, and Agentic AI. Essays, research, and a comprehensive AI/Web3 glossary with 100+ terms.",
+  "url": "https://veda.ng",
+  "capabilities": {
+    "education": {
+      "courses": [
+        {
+          "name": "Vibe Coding 101",
+          "url": "https://veda.ng/vibe-coding",
+          "description": "Build real apps with AI using Firebase Studio, Replit, Cursor, and Lovable"
+        },
+        {
+          "name": "Web3 101",
+          "url": "https://veda.ng/web3-101",
+          "description": "Blockchain fundamentals, smart contracts, dApps, NFTs, DAOs, and DeFi"
+        },
+        {
+          "name": "Prompt Engineering 101",
+          "url": "https://veda.ng/prompt-engineering-101",
+          "description": "Master prompt engineering for LLMs and AI assistants"
+        },
+        {
+          "name": "The Agentic Web",
+          "url": "https://veda.ng/agentic-web",
+          "description": "Autonomous AI agents, MCP, A2A protocols, and agentic systems"
+        }
+      ]
+    },
+    "reference": {
+      "glossary": {
+        "url": "https://veda.ng/glossary",
+        "description": "100+ AI and Web3 terms with detailed definitions"
+      }
+    },
+    "content": {
+      "essays": {
+        "url": "https://veda.ng/writings",
+        "description": "Essays on AI agents, blockchain, stablecoins, and decentralized systems"
+      }
+    }
+  },
+  "contact": {
+    "email": "vedang@veda.ng",
+    "twitter": "@vedangvatsa",
+    "website": "https://veda.ng"
+  }
+}

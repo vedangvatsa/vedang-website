@@ -1,0 +1,18 @@
+# carbon.txt
+# https://veda.ng
+# This file discloses the environmental practices of this website.
+
+# Hosting Provider
+Provider: Google Cloud (Firebase App Hosting)
+Green: Yes
+URL: https://cloud.google.com/sustainability
+
+# Website Practices
+Static-Generation: Yes
+Image-Optimization: Yes (Next.js Image component, WebP)
+JavaScript-Minification: Yes
+CDN: Yes (Firebase CDN / Google Cloud CDN)
+
+# Carbon Reporting
+This site uses static generation and edge caching to minimize server compute.
+No tracking pixels or heavy analytics scripts are loaded.
