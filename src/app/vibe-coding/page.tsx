@@ -195,8 +195,8 @@ export default function VibeCodingCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-        <section className="text-center pt-16 pb-12">
-             <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+        <section className="text-left pt-8 pb-12">
+             <div className="max-w-3xl">
                 <Badge variant="secondary">
                     <Star className="w-3 h-3 mr-1.5" />
                     A Free, Self-Paced Course
@@ -204,16 +204,16 @@ export default function VibeCodingCoursePage() {
                 <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
                     Vibe Coding 101
                 </h1>
-                <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
+                <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl">
                 Build real apps without writing code. Describe what you want in plain English and let AI handle the implementation. For founders, designers, marketers, and anyone with an idea.
                 </p>
 
-                <div className="mt-8 flex justify-center items-center gap-4">
+                <div className="mt-8 flex justify-start items-center gap-4">
                     <Badge variant="outline">By: Vedang Vatsa</Badge>
                     <Badge variant="outline">Prerequisite: None</Badge>
                 </div>
 
-                <div className="mt-8 flex justify-center">
+                <div className="mt-8 flex justify-start">
                     <Button asChild size="lg" className="rounded-full px-8">
                         <Link href="/vibe-coding/module-1-philosophy">
                             Start Course <ArrowRight className="ml-2 w-4 h-4" />
@@ -221,7 +221,7 @@ export default function VibeCodingCoursePage() {
                     </Button>
                 </div>
 
-                <div className="mt-12 aspect-video rounded-lg overflow-hidden max-w-3xl mx-auto border bg-muted">
+                <div className="mt-12 aspect-video rounded-lg overflow-hidden max-w-3xl border bg-muted">
                   <iframe 
                     width="100%" 
                     height="100%" 
@@ -235,9 +235,9 @@ export default function VibeCodingCoursePage() {
             </div>
         </section>
 
-        <section id="curriculum" className="py-16 bg-muted/30 border-y">
-            <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-                <div className="text-center mb-12">
+        <section id="curriculum" className="py-16 bg-muted/30 border-y -mx-4 px-4 md:-mx-6 md:px-6">
+            <div className="max-w-3xl">
+                <div className="text-left mb-8">
                     <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Course Curriculum</h2>
                     <p className="mt-2 text-muted-foreground">Five modules to take you from concept to product.</p>
                 </div>
@@ -292,15 +292,15 @@ export default function VibeCodingCoursePage() {
         </section>
 
         <section id="references" className="py-16">
-            <div className="text-center">
-                <BookOpen className="mx-auto h-12 w-12 text-muted-foreground" />
-                <h2 className="mt-4 text-2xl md:text-3xl font-semibold tracking-tight">Learn More</h2>
-                <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+            <div className="text-left mb-8">
+                <BookOpen className="h-10 w-10 text-muted-foreground mb-4" />
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Learn More</h2>
+                <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl">
                     Resources for tools and platforms. Documentation and guides to build deeper knowledge.
                 </p>
             </div>
              
-             <div className="mt-12 columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6 max-w-5xl mx-auto">
+             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl">
                 {referenceLinks.map((tool) => (
                     <div key={tool.name} className="break-inside-avoid">
                         <h3 className="font-semibold text-lg mb-2">{tool.name}</h3>
