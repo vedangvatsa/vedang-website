@@ -29,26 +29,17 @@ export const metadata: Metadata = generateMetadata({
 
 const referenceLinks = [
     { 
-        name: 'Official Vibe Coding Resources', 
+        name: 'Firebase', 
         links: [
-            { name: 'What is Vibe Coding? (Google Cloud)', url: 'https://cloud.google.com/discover/what-is-vibe-coding' },
-            { name: 'Introduction to Vibe Coding (Microsoft Learn)', url: 'https://learn.microsoft.com/en-us/training/modules/introduction-vibe-coding/' },
-            { name: 'Vibe Coding Fundamentals (Coursera)', url: 'https://www.coursera.org/learn/vibe-coding-fundamentals' },
-            { name: 'Vibe Coding 101 with Replit (DeepLearning.AI)', url: 'https://www.deeplearning.ai/short-courses/vibe-coding-101-with-replit/' },
-        ]
-    },
-    { 
-        name: 'Firebase / Firebase Studio', 
-        links: [
-            { name: 'Firebase Studio Docs', url: 'https://firebase.google.com/docs/studio' },
-            { name: 'Firebase Docs', url: 'https://firebase.google.com/docs' }
+            { name: 'Firebase Docs', url: 'https://firebase.google.com/docs' },
+            { name: 'Firebase App Hosting', url: 'https://firebase.google.com/docs/app-hosting' }
         ]
     },
     { 
         name: 'Replit', 
         links: [
             { name: 'Replit Docs', url: 'https://docs.replit.com' },
-            { name: 'Replit Learn', url: 'https://replit.com/learn' }
+            { name: 'Replit Agent', url: 'https://docs.replit.com/replitai/agent' }
         ]
     },
      { 
@@ -60,7 +51,7 @@ const referenceLinks = [
     {
         name: 'Vercel v0',
         links: [
-            { name: 'v0 Docs', url: 'https://v0.dev' },
+            { name: 'v0 Docs', url: 'https://v0.dev/docs' },
             { name: 'Vercel Docs', url: 'https://vercel.com/docs' },
         ],
     },
@@ -72,17 +63,17 @@ const referenceLinks = [
         ],
     },
     { 
-        name: 'Claude Code', 
+        name: 'Anthropic Claude', 
         links: [
-            { name: 'Overview', url: 'https://code.claude.com/docs/en/overview' },
-            { name: 'Platform Docs', url: 'https://platform.claude.com/docs/en/home' }
+            { name: 'Claude Docs', url: 'https://docs.anthropic.com/en/docs/welcome' },
+            { name: 'System Prompts', url: 'https://docs.anthropic.com/en/docs/system-prompts' }
         ]
     },
     { 
         name: 'Cursor', 
         links: [
-            { name: 'Cursor Docs', url: 'https://cursor.com/docs' },
-            { name: 'Homepage', url: 'https://cursor.com' }
+            { name: 'Cursor Docs', url: 'https://docs.cursor.com' },
+            { name: 'Cursor Directory', url: 'https://cursor.directory' }
         ]
     },
     { 
