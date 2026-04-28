@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+
 
 export function Explainer() {
   return (
@@ -26,15 +26,12 @@ export function Explainer() {
 
         {/* Arrow */}
         <div className="hidden md:flex flex-col items-center justify-center text-muted-foreground">
-          <motion.div
-             animate={{ x: [0, 10, 0] }}
-             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          >
+          <div className="animate-pulse">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14" />
               <path d="M12 5l7 7-7 7" />
             </svg>
-          </motion.div>
+          </div>
         </div>
 
         {/* New Way */}
