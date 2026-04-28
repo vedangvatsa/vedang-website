@@ -32,7 +32,7 @@ const asSeenInLogos = [
 
 export function AsSeenIn() {
   return (
-    <section className="py-12 bg-background">
+    <section className="py-12 bg-background" data-nosnippet>
         <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center mb-6">As Seen In</h2>
             <div className="mx-auto max-w-6xl grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-6 md:gap-8 items-center">
