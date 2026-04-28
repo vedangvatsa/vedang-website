@@ -12,11 +12,12 @@ import { PageLayout } from '@/components/page-layout';
 
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Bot, BrainCircuit, DraftingCompass, ExternalLink, Hand, MonitorPlay, Star, BookOpen } from 'lucide-react';
+import { Bot, BrainCircuit, DraftingCompass, ExternalLink, Hand, MonitorPlay, Star, BookOpen, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
+import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = generateMetadata({
   title: pageMetadata.vibeCoding.title,
@@ -210,10 +211,17 @@ export default function VibeCodingCoursePage() {
                 <div className="mt-8 flex justify-center items-center gap-4">
                     <Badge variant="outline">By: Vedang Vatsa</Badge>
                     <Badge variant="outline">Prerequisite: None</Badge>
-                    
                 </div>
 
-                <div className="mt-8 aspect-video rounded-lg overflow-hidden max-w-3xl mx-auto">
+                <div className="mt-8 flex justify-center">
+                    <Button asChild size="lg" className="rounded-full px-8">
+                        <Link href="/vibe-coding/module-1-philosophy">
+                            Start Course <ArrowRight className="ml-2 w-4 h-4" />
+                        </Link>
+                    </Button>
+                </div>
+
+                <div className="mt-12 aspect-video rounded-lg overflow-hidden max-w-3xl mx-auto border bg-muted">
                   <iframe 
                     width="100%" 
                     height="100%" 
@@ -223,6 +231,62 @@ export default function VibeCodingCoursePage() {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowFullScreen>
                   </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="curriculum" className="py-16 bg-muted/30 border-y">
+            <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+                <div className="text-center mb-12">
+                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Course Curriculum</h2>
+                    <p className="mt-2 text-muted-foreground">Five modules to take you from concept to product.</p>
+                </div>
+                <div className="space-y-4">
+                    <Link href="/vibe-coding/module-1-philosophy" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">1. The Philosophy</h3>
+                                <p className="text-sm text-muted-foreground mt-1">Shift from coder to creative director. Learn to articulate your vision.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                        </div>
+                    </Link>
+                    <Link href="/vibe-coding/module-2-toolkit" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">2. The Modern Toolkit</h3>
+                                <p className="text-sm text-muted-foreground mt-1">Explore Firebase Studio, Replit, Cursor, and Lovable.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                        </div>
+                    </Link>
+                    <Link href="/vibe-coding/module-3-prompts" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">3. The Art of the Prompt</h3>
+                                <p className="text-sm text-muted-foreground mt-1">Master the GCES framework for writing effective instructions.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                        </div>
+                    </Link>
+                    <Link href="/vibe-coding/module-4-lab" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">4. Lab: Name Generator</h3>
+                                <p className="text-sm text-muted-foreground mt-1">Build your first functional micro-app entirely with AI.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                        </div>
+                    </Link>
+                    <Link href="/vibe-coding/module-5-product" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h3 className="font-semibold text-lg">5. To Professional Product</h3>
+                                <p className="text-sm text-muted-foreground mt-1">Implement security rules, databases, and authentication.</p>
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-muted-foreground" />
+                        </div>
+                    </Link>
                 </div>
             </div>
         </section>
