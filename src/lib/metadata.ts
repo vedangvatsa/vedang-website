@@ -88,6 +88,13 @@ export const pageMetadata = {
     url: '/glossary',
     keywords: ['AI Glossary', 'Web3 Glossary', 'Artificial Intelligence Definitions', 'Blockchain Terms', 'Generative AI Terms', 'Crypto Glossary', 'Large Language Model (LLM)', 'DeFi Terms'],
   },
+  mcpDev: {
+    title: 'MCP Development 101 - Build AI Tool Servers',
+    description:
+      'Free course on building MCP servers. Learn the Model Context Protocol to connect AI to databases, APIs, and any data source.',
+    url: '/mcp-development',
+    keywords: ['MCP', 'Model Context Protocol', 'MCP Server', 'AI Tools', 'Claude MCP', 'Cursor MCP', 'TypeScript MCP', 'Build MCP Server'],
+  },
 };
 
 export function generateMetadata(params: MetadataParams): Metadata {

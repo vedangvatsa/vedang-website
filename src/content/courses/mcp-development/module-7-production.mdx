@@ -1,0 +1,178 @@
+---
+title: "Production, Security & Distribution"
+description: "Ship your MCP server to the world. Error handling, security hardening, npm publishing, and monitoring for production deployments."
+---
+
+<ProductionChecklist />
+
+Building a working server is step one. Shipping a reliable, secure server that others can depend on is the real challenge. This module covers the gap between "works on my machine" and "production-ready."
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg text-left">Error Handling Best Practices</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>MCP defines specific error codes in the JSON-RPC response. Using them correctly helps clients handle failures gracefully:</p>
+            <pre><code>{`import { McpError, ErrorCode } from "@modelcontextprotocol/sdk/types.js";
+
+server.tool("get_user", "Get a user by ID", {
+  userId: z.string(),
+}, async ({ userId }) => {
+  // Validate input
+  if (!userId.match(/^[a-zA-Z0-9-]+$/)) {
+    throw new McpError(
+      ErrorCode.InvalidParams,
+      "User ID must be alphanumeric"
+    );
+  }
+
+  // Handle not found
+  const user = await db.findUser(userId);
+  if (!user) {
+    return {
+      content: [{ type: "text", text: "User not found." }],
+      isError: true,
+    };
+  }
+
+  return {
+    content: [{ type: "text", text: JSON.stringify(user) }],
+  };
+});`}</code></pre>
+            <p><strong>Key distinction:</strong></p>
+            <ul>
+                <li><strong>throw McpError</strong> — for protocol-level errors (invalid params, internal server error). These signal to the client that something went wrong with the request itself.</li>
+                <li><strong>isError: true</strong> — for application-level errors (user not found, API returned 404). These tell the LLM that the operation failed and it should adjust its approach.</li>
+            </ul>
+            <p><strong>Never expose internal details:</strong> Don't include stack traces, file paths, or connection strings in error messages. Log them server-side, but return sanitized messages to the client.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg text-left">Security Hardening</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>MCP servers can do powerful things — which makes security critical. Follow these principles:</p>
+            <p><strong>1. Input Validation (Defense in Depth):</strong></p>
+            <p>Zod schemas are your first line of defense, but add manual validation for sensitive operations:</p>
+            <pre><code>{`server.tool("execute_query", "Run a database query", {
+  sql: z.string().max(1000).describe("SQL SELECT query"),
+}, async ({ sql }) => {
+  // Layer 1: Zod validates type and length
+  // Layer 2: Manual SQL injection prevention
+  const forbidden = ["DROP", "DELETE", "INSERT", "UPDATE", "ALTER", "--", ";"];
+  if (forbidden.some(word => sql.toUpperCase().includes(word))) {
+    return {
+      content: [{ type: "text", text: "Query contains forbidden keywords." }],
+      isError: true,
+    };
+  }
+  // Layer 3: Use parameterized queries when possible
+  const results = await db.query(sql);
+  return { content: [{ type: "text", text: JSON.stringify(results) }] };
+});`}</code></pre>
+            <p><strong>2. Principle of Least Privilege:</strong></p>
+            <ul>
+                <li>Give the server's database user read-only access unless writes are essential</li>
+                <li>Use scoped API keys with minimal permissions</li>
+                <li>Sandbox file system access to specific directories</li>
+            </ul>
+            <p><strong>3. Rate Limiting:</strong></p>
+            <p>Prevent runaway costs and abuse by limiting how often tools can be called:</p>
+            <pre><code>{`const callCounts = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT = 100; // calls per minute
+
+function checkRateLimit(toolName: string): boolean {
+  const now = Date.now();
+  const entry = callCounts.get(toolName) || { count: 0, resetAt: now + 60000 };
+  if (now > entry.resetAt) {
+    entry.count = 0;
+    entry.resetAt = now + 60000;
+  }
+  entry.count++;
+  callCounts.set(toolName, entry);
+  return entry.count <= RATE_LIMIT;
+}`}</code></pre>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg text-left">Publishing to npm & the MCP Registry</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Once your server is stable, you can share it with the world:</p>
+            <p><strong>Publishing to npm:</strong></p>
+            <ol>
+                <li>Add a <code>bin</code> field to your <code>package.json</code> pointing to your compiled entry point</li>
+                <li>Add a shebang (<code>#!/usr/bin/env node</code>) to the top of your entry file</li>
+                <li>Run <code>npm publish</code></li>
+            </ol>
+            <pre><code>{`// package.json
+{
+  "name": "@yourorg/mcp-server-weather",
+  "version": "1.0.0",
+  "bin": {
+    "mcp-server-weather": "dist/index.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  }
+}`}</code></pre>
+            <p>Users can then run your server with:</p>
+            <pre><code>{`npx -y @yourorg/mcp-server-weather`}</code></pre>
+            <p><strong>MCP Registry:</strong> The community-maintained registry at <code>mcp.run</code> and <code>smithery.ai</code> are directories where users discover MCP servers. Submit your server for visibility.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg text-left">Monitoring & Logging</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>In production, you need visibility into what your server is doing:</p>
+            <p><strong>Structured Logging:</strong></p>
+            <pre><code>{`// Always log to stderr (never stdout for stdio transport!)
+function log(level: string, message: string, data?: object) {
+  const entry = {
+    timestamp: new Date().toISOString(),
+    level,
+    message,
+    ...data,
+  };
+  console.error(JSON.stringify(entry));
+}
+
+// Log every tool invocation
+server.tool("search", "Search records", { query: z.string() },
+  async ({ query }) => {
+    log("info", "Tool invoked", { tool: "search", query });
+    const start = Date.now();
+    try {
+      const results = await performSearch(query);
+      log("info", "Tool completed", {
+        tool: "search", duration: Date.now() - start, resultCount: results.length,
+      });
+      return { content: [{ type: "text", text: JSON.stringify(results) }] };
+    } catch (error) {
+      log("error", "Tool failed", { tool: "search", error: String(error) });
+      throw error;
+    }
+  }
+);`}</code></pre>
+            <p><strong>Key metrics to track:</strong></p>
+            <ul>
+                <li>Tool invocation count and frequency</li>
+                <li>Response time per tool call</li>
+                <li>Error rate and error types</li>
+                <li>Rate limit hits</li>
+            </ul>
+            <p>For remote servers, integrate with observability platforms (Datadog, Sentry, OpenTelemetry) to get alerts and dashboards.</p>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck
+    question="What's the difference between throwing an McpError and returning isError: true in a tool response?"
+    options={[
+        "There is no difference — they're interchangeable.",
+        "McpError is for protocol-level errors (bad parameters, server crash). isError: true is for application-level errors (not found, validation failed) that the LLM should reason about.",
+        "McpError is for warnings, isError: true is for fatal errors.",
+        "McpError can only be used in production, isError: true is for development."
+    ]}
+    correctAnswerIndex={1}
+    explanation="McpError (thrown as an exception) signals protocol-level problems — the request itself was malformed or the server encountered an internal error. isError: true (in the response) signals application-level problems — the request was valid but the operation failed (e.g., user not found). The LLM uses isError to adjust its strategy."
+/>

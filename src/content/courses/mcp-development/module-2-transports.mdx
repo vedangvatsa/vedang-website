@@ -1,0 +1,95 @@
+---
+title: "Transports & Message Format"
+description: "MCP uses JSON-RPC 2.0 over multiple transport layers. This module covers how messages flow between clients and servers — from local stdio to remote HTTP."
+---
+
+<TransportDiagram />
+
+MCP is transport-agnostic — the same protocol works whether the server runs on your local machine or across the internet. Understanding the transport layer is essential because it determines how you deploy, test, and scale your servers.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg text-left">JSON-RPC 2.0: The Message Format</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Every MCP message is a JSON-RPC 2.0 message. This is a simple, well-established standard for remote procedure calls. There are three types:</p>
+            <p><strong>1. Request</strong> (client → server, expects a response):</p>
+            <pre><code>{`{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "tools/call",
+  "params": {
+    "name": "search_database",
+    "arguments": { "query": "SELECT * FROM users LIMIT 5" }
+  }
+}`}</code></pre>
+            <p><strong>2. Response</strong> (server → client):</p>
+            <pre><code>{`{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "content": [{ "type": "text", "text": "Found 5 users..." }]
+  }
+}`}</code></pre>
+            <p><strong>3. Notification</strong> (either direction, no response expected):</p>
+            <pre><code>{`{
+  "jsonrpc": "2.0",
+  "method": "notifications/progress",
+  "params": { "progressToken": "abc", "progress": 50, "total": 100 }
+}`}</code></pre>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg text-left">stdio Transport: Local Development</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p><strong>stdio</strong> (standard input/output) is the simplest transport. The host launches the MCP server as a child process and communicates through stdin/stdout pipes. Each message is a line of JSON.</p>
+            <p><strong>How it works:</strong></p>
+            <ul>
+                <li>The host spawns the server process (e.g., <code>node my-server.js</code>)</li>
+                <li>Messages go to the server via stdin</li>
+                <li>Responses come back via stdout</li>
+                <li>Errors and logs go to stderr (never stdout — that would corrupt the protocol)</li>
+            </ul>
+            <p><strong>Best for:</strong> Local development, CLI tools, desktop applications like Claude Desktop. Zero network configuration. The server runs on the same machine as the host.</p>
+            <p><strong>Limitation:</strong> Can't work over a network. The server must be a local process.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg text-left">SSE Transport: Remote Servers</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p><strong>Server-Sent Events (SSE)</strong> enables MCP over HTTP, allowing remote servers. The client sends requests via HTTP POST, and the server streams responses back via SSE.</p>
+            <p><strong>How it works:</strong></p>
+            <ul>
+                <li>Server exposes two HTTP endpoints: <code>/sse</code> (for the event stream) and <code>/messages</code> (for receiving requests)</li>
+                <li>Client opens a persistent SSE connection to <code>/sse</code></li>
+                <li>Client sends requests via POST to <code>/messages</code></li>
+                <li>Server responds via the SSE stream</li>
+            </ul>
+            <p><strong>Best for:</strong> Remote/cloud-hosted MCP servers, multi-user environments, servers behind firewalls with HTTP access.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg text-left">Streamable HTTP: The Future</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p><strong>Streamable HTTP</strong> is the newest transport, designed to be the best of both worlds. It uses a single HTTP endpoint and supports both request-response and streaming patterns.</p>
+            <p><strong>Key advantages:</strong></p>
+            <ul>
+                <li><strong>Stateless by default:</strong> No persistent connections needed. Works naturally with serverless platforms (Vercel, AWS Lambda, Cloudflare Workers).</li>
+                <li><strong>Streaming when needed:</strong> Can upgrade to SSE for long-running operations, then drop back to stateless.</li>
+                <li><strong>Simpler infrastructure:</strong> One endpoint instead of two. Standard HTTP semantics. Works with all existing HTTP infrastructure (load balancers, CDNs, proxies).</li>
+            </ul>
+            <p><strong>Best for:</strong> Production deployments, serverless environments, APIs that need to scale.</p>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck
+    question="Why should you never write logs or debug output to stdout in an MCP server using stdio transport?"
+    options={[
+        "stdout is reserved for error messages only.",
+        "stdout is the communication channel for JSON-RPC messages. Any non-JSON output would corrupt the protocol and crash the connection.",
+        "stdout is slower than stderr for logging.",
+        "The MCP specification prohibits all logging."
+    ]}
+    correctAnswerIndex={1}
+    explanation="In stdio transport, stdout is the exclusive channel for JSON-RPC messages between client and server. If you write anything else to stdout (like console.log output), the client will try to parse it as JSON-RPC and fail, breaking the entire connection. Always use stderr for logs."
+/>

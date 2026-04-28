@@ -1,0 +1,154 @@
+---
+title: "Tools, Resources & Prompts: The Three Primitives"
+description: "MCP servers expose three types of capabilities. Understanding when to use each — and who controls them — is the key to building well-designed servers."
+---
+
+<MCPPrimitives />
+
+A common mistake is putting everything into tools. MCP gives you three distinct primitives, each with different control semantics. Using the right one for the right job makes your server more predictable, secure, and useful.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg text-left">Tools: Model-Controlled Actions</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Tools are functions that the <strong>LLM decides when to call</strong>. They're the most common primitive and the one you'll use most often.</p>
+            <p><strong>When to use tools:</strong></p>
+            <ul>
+                <li>Actions that modify state (create, update, delete)</li>
+                <li>Computations or transformations (convert, calculate, format)</li>
+                <li>External API calls (search, fetch, send)</li>
+                <li>Anything the AI should invoke based on user intent</li>
+            </ul>
+            <p><strong>Design principles for great tools:</strong></p>
+            <ul>
+                <li><strong>Single responsibility:</strong> Each tool should do one thing well. <code>search_users</code> and <code>create_user</code> should be separate tools, not a single <code>manage_users</code>.</li>
+                <li><strong>Clear descriptions:</strong> The LLM reads descriptions to decide which tool to use. "Search for users by name or email in the database" is better than "User search."</li>
+                <li><strong>Strict schemas:</strong> Use Zod to validate every parameter. Add <code>.describe()</code> to each field so the LLM knows what to pass.</li>
+                <li><strong>Idempotent when possible:</strong> Calling the same tool twice with the same input should produce the same result. This makes error recovery simple.</li>
+            </ul>
+            <p><strong>Advanced: Annotations</strong></p>
+            <p>Tools can include annotations that hint at their behavior:</p>
+            <pre><code>{`server.tool(
+  "delete_user",
+  { userId: z.string().describe("The user's unique ID") },
+  async ({ userId }) => { /* ... */ },
+  {
+    annotations: {
+      destructive: true,      // This tool modifies data
+      readOnlyHint: false,     // Not a read-only operation
+      openWorldHint: false,    // Doesn't make external requests
+    }
+  }
+);`}</code></pre>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg text-left">Resources: App-Controlled Data</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Resources are data that the <strong>host application decides when to fetch</strong>. Think of them as files or documents the AI can read for context, but can't trigger on its own.</p>
+            <p><strong>When to use resources:</strong></p>
+            <ul>
+                <li>Configuration files and schemas</li>
+                <li>Documentation and knowledge bases</li>
+                <li>Database schemas (not data — that's a tool)</li>
+                <li>Any read-only context the AI needs to do its job well</li>
+            </ul>
+            <p><strong>Resource URIs:</strong> Every resource has a unique URI. You can use any scheme, but common patterns include:</p>
+            <ul>
+                <li><code>file:///path/to/document.md</code> — Local files</li>
+                <li><code>db://mydb/schema</code> — Database schemas</li>
+                <li><code>config://app/settings</code> — Application configuration</li>
+            </ul>
+            <p><strong>Static vs. Dynamic Resources:</strong></p>
+            <ul>
+                <li><strong>Static:</strong> Registered at startup, fixed list. Use <code>server.resource()</code>.</li>
+                <li><strong>Dynamic:</strong> Generated on demand using URI templates. Use <code>server.resource()</code> with a template URI like <code>db://mydb/table/{'{'}tableName{'}'}</code>.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg text-left">Prompts: User-Controlled Templates</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Prompts are reusable message templates that the <strong>user selects</strong>. They appear as slash commands or menu items in the host application.</p>
+            <p><strong>When to use prompts:</strong></p>
+            <ul>
+                <li>Common workflows that users repeat (e.g., "analyze this code," "summarize this document")</li>
+                <li>Templates that combine multiple tools and resources into a single action</li>
+                <li>Guided experiences where the user needs specific output formats</li>
+            </ul>
+            <p><strong>Example: A code review prompt</strong></p>
+            <pre><code>{`server.prompt(
+  "code_review",
+  "Review code for bugs, security issues, and best practices",
+  { code: z.string().describe("The code to review") },
+  async ({ code }) => ({
+    messages: [
+      {
+        role: "user",
+        content: {
+          type: "text",
+          text: \`Please review the following code for:
+1. Bugs and logic errors
+2. Security vulnerabilities
+3. Performance issues
+4. Best practice violations
+
+Code:
+\\\`\\\`\\\`
+\${code}
+\\\`\\\`\\\`\`,
+        },
+      },
+    ],
+  })
+);`}</code></pre>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg text-left">Choosing the Right Primitive</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Use this decision framework:</p>
+            <div className="grid md:grid-cols-2 gap-6 my-6">
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-base font-semibold">Use a Tool when...</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <ul className="text-sm text-muted-foreground space-y-1">
+                            <li>• The AI should decide when to use it</li>
+                            <li>• It performs an action or computation</li>
+                            <li>• It needs parameters from the conversation</li>
+                            <li>• It returns results the AI should reason about</li>
+                        </ul>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-base font-semibold">Use a Resource when...</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <ul className="text-sm text-muted-foreground space-y-1">
+                            <li>• The app should decide when to load it</li>
+                            <li>• It provides static context or documentation</li>
+                            <li>• It's read-only data the AI needs as background</li>
+                            <li>• It should be available before the conversation starts</li>
+                        </ul>
+                    </CardContent>
+                </Card>
+            </div>
+            <p><strong>Use a Prompt when:</strong> the user should explicitly choose to activate a specific workflow template, like a slash command.</p>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck
+    question="Who controls when each MCP primitive is used?"
+    options={[
+        "Tools = user, Resources = model, Prompts = app",
+        "Tools = model, Resources = app, Prompts = user",
+        "All three are controlled by the model.",
+        "All three are controlled by the user."
+    ]}
+    correctAnswerIndex={1}
+    explanation="Tools are model-controlled (the LLM decides when to call them based on conversation context). Resources are app-controlled (the host application decides when to fetch and inject them). Prompts are user-controlled (the user explicitly selects them from a menu or slash command)."
+/>

@@ -1,0 +1,130 @@
+---
+title: "Connecting to Clients"
+description: "Your server is only useful if clients can find and connect to it. This module covers how to configure Claude Desktop, Cursor, VS Code, and custom clients."
+---
+
+<ClientEcosystem />
+
+An MCP server is useless without a client. The good news is that MCP adoption has exploded — all major AI coding tools and assistants now support it. This module covers how to connect your server to each of them.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg text-left">Claude Desktop Configuration</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Claude Desktop is the reference MCP client. It supports all MCP features and is the best environment for testing.</p>
+            <p><strong>Configuration file location:</strong></p>
+            <ul>
+                <li><strong>macOS:</strong> <code>~/Library/Application Support/Claude/claude_desktop_config.json</code></li>
+                <li><strong>Windows:</strong> <code>%APPDATA%\Claude\claude_desktop_config.json</code></li>
+            </ul>
+            <p><strong>Configuration format:</strong></p>
+            <pre><code>{`{
+  "mcpServers": {
+    "my-server": {
+      "command": "node",
+      "args": ["dist/index.js"],
+      "cwd": "/path/to/my-server",
+      "env": {
+        "DATABASE_URL": "postgresql://...",
+        "API_KEY": "sk-..."
+      }
+    },
+    "another-server": {
+      "command": "npx",
+      "args": ["-y", "@some-org/mcp-server-name"]
+    }
+  }
+}`}</code></pre>
+            <p><strong>Key fields:</strong></p>
+            <ul>
+                <li><code>command</code> — The executable to run (node, npx, python, etc.)</li>
+                <li><code>args</code> — Command-line arguments</li>
+                <li><code>cwd</code> — Working directory for the server process</li>
+                <li><code>env</code> — Environment variables (use this for API keys and secrets)</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg text-left">Cursor & Windsurf Integration</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Cursor supports MCP servers natively through its settings. The configuration is similar to Claude Desktop but managed through the UI.</p>
+            <p><strong>Setting up in Cursor:</strong></p>
+            <ol>
+                <li>Open Cursor Settings → Features → MCP</li>
+                <li>Click "Add MCP Server"</li>
+                <li>Provide the server name, command, and arguments</li>
+                <li>Set any required environment variables</li>
+            </ol>
+            <p>Cursor also supports a <code>.cursor/mcp.json</code> file in your project root for per-project MCP configuration:</p>
+            <pre><code>{`{
+  "mcpServers": {
+    "project-db": {
+      "command": "npx",
+      "args": ["tsx", "mcp/db-server.ts"],
+      "env": {
+        "DATABASE_URL": "postgresql://localhost:5432/myapp"
+      }
+    }
+  }
+}`}</code></pre>
+            <p>This means you can ship MCP configurations with your codebase — team members automatically get the same tools when they open the project.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg text-left">VS Code with GitHub Copilot</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>VS Code supports MCP through its GitHub Copilot Chat integration. Configuration uses the <code>.vscode/mcp.json</code> file:</p>
+            <pre><code>{`{
+  "servers": {
+    "my-tools": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["./mcp-server/dist/index.js"]
+    }
+  }
+}`}</code></pre>
+            <p>Once configured, you can reference MCP tools in Copilot Chat using the <code>#</code> symbol to select available tools. Copilot will call the tools as needed during your conversation.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg text-left">Building a Custom MCP Client</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>You can build your own MCP client using the SDK. This is useful for embedding MCP in custom applications, scripts, or automation pipelines.</p>
+            <pre><code>{`import { Client } from "@modelcontextprotocol/sdk/client/index.js";
+import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
+
+// Create a client that connects to a server
+const transport = new StdioClientTransport({
+  command: "node",
+  args: ["path/to/server.js"],
+});
+
+const client = new Client({ name: "my-app", version: "1.0.0" });
+await client.connect(transport);
+
+// List available tools
+const tools = await client.listTools();
+console.log("Available tools:", tools);
+
+// Call a tool
+const result = await client.callTool({
+  name: "count_words",
+  arguments: { text: "Hello world" },
+});
+console.log("Result:", result);`}</code></pre>
+            <p>Custom clients give you full programmatic control. You can build CLI tools, web APIs, cron jobs, or any application that needs to interact with MCP servers.</p>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck
+    question="How can you share MCP server configurations with your development team?"
+    options={[
+        "Each team member must configure servers manually in their global settings.",
+        "Use a per-project configuration file (like .cursor/mcp.json or .vscode/mcp.json) that gets committed to the repository.",
+        "MCP servers automatically discover each other over the network.",
+        "You must publish the server to npm first."
+    ]}
+    correctAnswerIndex={1}
+    explanation="Per-project configuration files like .cursor/mcp.json or .vscode/mcp.json can be committed to your repository. When team members open the project, the MCP servers are automatically available — no manual configuration needed."
+/>

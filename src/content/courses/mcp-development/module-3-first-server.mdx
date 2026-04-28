@@ -1,0 +1,126 @@
+---
+title: "Building Your First MCP Server"
+description: "Set up a TypeScript MCP server from scratch in under 30 minutes. Register a tool, handle requests, connect to Claude Desktop, and test with the MCP Inspector."
+---
+
+<ServerSkeleton />
+
+Theory is over. In this module, you'll build a working MCP server that exposes a custom tool. By the end, you'll have a server running in Claude Desktop that the AI can call on demand.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg text-left">Step 1: Project Setup</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Create a new project and install the MCP SDK:</p>
+            <pre><code>{`mkdir my-mcp-server && cd my-mcp-server
+npm init -y
+npm install @modelcontextprotocol/sdk zod
+npm install -D typescript @types/node tsx`}</code></pre>
+            <p>Create a <code>tsconfig.json</code>:</p>
+            <pre><code>{`{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*"]
+}`}</code></pre>
+            <p><strong>Key dependencies:</strong></p>
+            <ul>
+                <li><code>@modelcontextprotocol/sdk</code> — The official MCP SDK. Handles all protocol details.</li>
+                <li><code>zod</code> — Schema validation library. Used to define tool parameters with type safety.</li>
+                <li><code>tsx</code> — TypeScript runner for development. Run without compiling.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg text-left">Step 2: Write the Server</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Create <code>src/index.ts</code> with a minimal server that has one tool — a word counter:</p>
+            <pre><code>{`import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { z } from "zod";
+
+// 1. Create the server
+const server = new McpServer({
+  name: "word-counter",
+  version: "1.0.0",
+});
+
+// 2. Register a tool
+server.tool(
+  "count_words",                    // Tool name
+  "Count the words in a text",       // Description (LLM reads this!)
+  { text: z.string() },              // Parameter schema
+  async ({ text }) => {              // Handler function
+    const count = text.split(/\\s+/).filter(Boolean).length;
+    return {
+      content: [{
+        type: "text",
+        text: \`The text contains \${count} words.\`,
+      }],
+    };
+  }
+);
+
+// 3. Connect transport and start
+const transport = new StdioServerTransport();
+await server.connect(transport);`}</code></pre>
+            <p><strong>Every tool has four parts:</strong></p>
+            <ol>
+                <li><strong>Name:</strong> A unique identifier the LLM uses to call the tool.</li>
+                <li><strong>Description:</strong> Natural language explanation. The LLM reads this to decide when to use the tool. Write it clearly.</li>
+                <li><strong>Schema:</strong> A Zod schema defining the expected parameters. This provides type safety and automatic validation.</li>
+                <li><strong>Handler:</strong> An async function that does the actual work and returns a result.</li>
+            </ol>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg text-left">Step 3: Test with MCP Inspector</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Before connecting to a real client, test your server with the <strong>MCP Inspector</strong> — a web-based debugging tool:</p>
+            <pre><code>{`npx @modelcontextprotocol/inspector npx tsx src/index.ts`}</code></pre>
+            <p>This opens a browser UI where you can:</p>
+            <ul>
+                <li>See all registered tools, resources, and prompts</li>
+                <li>Manually call tools with test parameters</li>
+                <li>Inspect the JSON-RPC messages being exchanged</li>
+                <li>Verify your server responds correctly before exposing it to an LLM</li>
+            </ul>
+            <p>The Inspector is your best friend during development. Use it before every deployment to catch issues early.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg text-left">Step 4: Connect to Claude Desktop</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>To connect your server to Claude Desktop, edit the configuration file:</p>
+            <p><strong>macOS:</strong> <code>~/Library/Application Support/Claude/claude_desktop_config.json</code></p>
+            <p><strong>Windows:</strong> <code>%APPDATA%\Claude\claude_desktop_config.json</code></p>
+            <pre><code>{`{
+  "mcpServers": {
+    "word-counter": {
+      "command": "npx",
+      "args": ["tsx", "/absolute/path/to/src/index.ts"]
+    }
+  }
+}`}</code></pre>
+            <p>After saving, restart Claude Desktop. You should see a hammer icon (🔨) indicating available tools. Now ask Claude: <em>"Count the words in this sentence: The quick brown fox jumps over the lazy dog."</em></p>
+            <p>Claude will automatically call your <code>count_words</code> tool and return the result.</p>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck
+    question="What are the four parts needed to register a tool in an MCP server?"
+    options={[
+        "URL, method, headers, and body.",
+        "Name, description, parameter schema (Zod), and an async handler function.",
+        "Input, output, middleware, and router.",
+        "Model, controller, view, and route."
+    ]}
+    correctAnswerIndex={1}
+    explanation="Every MCP tool requires: (1) a unique name for the LLM to reference, (2) a natural language description so the LLM knows when to use it, (3) a Zod parameter schema for type-safe validation, and (4) an async handler function that executes the tool's logic."
+/>
