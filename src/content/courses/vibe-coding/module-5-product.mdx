@@ -15,26 +15,55 @@ The AI acts like a junior developer. It builds exactly what you ask for, but it 
 
 An AI might accidentally expose your private API keys or create an insecure login system. To prevent this, you must set strict, global rules.
 
-Most AI coding tools (like Cursor or Claude Code) allow you to create a special file (often named `.cursorrules` or `CLAUDE.md`) in your project folder. The AI reads this file before every single prompt. 
+Most AI coding tools allow you to create a special file in your project folder that the AI reads before every single prompt:
+
+| Tool | Rule File Name | Location |
+|---|---|---|
+| Cursor | `.cursorrules` | Project root |
+| Claude Code | `CLAUDE.md` | Project root |
+| Antigravity | `.gemini/style.md` | Project root |
+| Windsurf | `.windsurfrules` | Project root |
 
 You must define your security standards here.
 
 **Example Security Rules:**
-1.  **Secrets:** *"Never hardcode API keys or passwords in the source code. Always use environment variables."*
-2.  **Passwords:** *"Always hash user passwords before saving them to the database."*
-3.  **Data Access:** *"Never trust data sent from the browser. Always validate data on the backend server before processing it."*
+1.  **Secrets:** *"Never hardcode API keys, database passwords, or any secrets in the source code. Always use environment variables loaded from .env files."*
+2.  **Passwords:** *"Always hash user passwords using bcrypt with at least 12 salt rounds before saving them to the database. Never store plaintext passwords."*
+3.  **Data Access:** *"Never trust data sent from the browser. Always validate and sanitize all input on the backend server before processing it. Use parameterized queries for all database interactions — never concatenate user input into SQL strings."*
+4.  **Authentication:** *"Use established libraries for authentication (e.g., NextAuth.js, Clerk). Never build custom authentication from scratch."*
+5.  **Dependencies:** *"Before adding any npm package, verify it has at least 1,000 weekly downloads and is actively maintained. Never install packages from unknown sources."*
 
-When you set these rules at the beginning, the AI builds safely by default.
+When you set these rules at the beginning, the AI builds safely by default. This is one of the most important habits you can develop as a vibe coder.
+
+<SectionLabel label="Testing and Quality Assurance" />
+
+Before you launch, you need to test your product. AI-generated code often has subtle bugs that only appear in specific conditions.
+
+**The Manual Testing Checklist:**
+- [ ] Does every button and link work?
+- [ ] What happens when you submit empty input?
+- [ ] What happens when you submit extremely long input?
+- [ ] Does the app work on mobile (test in Chrome DevTools)?
+- [ ] What happens when the API is slow or returns an error?
+- [ ] Can a user break the app by clicking the submit button 20 times quickly?
+
+**AI-Assisted Testing:**
+You can also ask the AI to write tests for you: *"Write end-to-end tests for this application using Playwright. Test the happy path (user enters input and gets results) and the error path (API returns an error, user submits empty form)."*
 
 <SectionLabel label="Monetization: From Project to Profit" />
 
 Vibe coding drastically reduces the cost of testing a business idea. You can build and launch a prototype in a weekend instead of hiring an agency for six months. 
 
-Here are three ways to monetize your new skills:
+Here are proven ways to monetize your new skills:
 
-1.  **SaaS (Software as a Service):** Build a tool that solves a specific, painful problem for a small group of people. For example, a specialized invoicing tool for freelance photographers. You can instruct the AI to integrate Stripe for payments and charge a monthly subscription.
-2.  **Marketplace Apps:** Platforms like Shopify, Slack, and the Google Workspace Marketplace already have millions of paying users. Building a plugin for these stores is often easier than marketing a standalone website. 
-3.  **Freelancing and Prototyping:** Your speed is your competitive advantage. You can build initial product versions for clients in days rather than months. 
+1.  **SaaS (Software as a Service):** Build a tool that solves a specific, painful problem for a small group of people. For example, a specialized invoicing tool for freelance photographers, or a social media scheduler for real estate agents. You can instruct the AI to integrate Stripe for payments and charge a monthly subscription.
+    > **Prompt Example:** *"Add Stripe integration. Create a pricing page with two tiers: Free (5 generations/day) and Pro ($9/month for unlimited). Use Stripe Checkout for the payment flow."*
+
+2.  **Marketplace Apps:** Platforms like Shopify, Slack, and the Google Workspace Marketplace already have millions of paying users. Building a plugin for these stores is often easier than marketing a standalone website. You're tapping into an existing audience that's already looking for solutions.
+
+3.  **Freelancing and Prototyping:** Your speed is your competitive advantage. You can build initial product versions for clients in days rather than months. Many non-technical founders will pay $2,000-$10,000 for a working MVP that would have taken a traditional agency months.
+
+4.  **Micro-SaaS:** Build tiny, focused tools that solve one problem. Examples: a PDF-to-invoice converter, a meeting notes summarizer, a custom report generator. These can generate $500-$5,000/month in recurring revenue with minimal ongoing maintenance.
 
 <SectionLabel label="Your New Career: The Product Engineer" />
 
@@ -42,7 +71,20 @@ Vibe coding is creating a new role in the tech industry: the **Product Engineer*
 
 A Product Engineer combines product management, design, and engineering. They do not spend their days typing syntax. They spend their days finding valuable problems, designing solutions, and directing AI agents to build the code.
 
+**The Product Engineer's Skill Stack:**
+- **Product Sense:** Understanding what users actually need (not just what they say they want).
+- **Design Literacy:** Knowing enough about UX and visual design to direct AI effectively.
+- **Technical Direction:** Choosing the right architecture, tools, and AI models for each project.
+- **Prompt Engineering:** The ability to communicate complex requirements to AI tools clearly.
+- **Business Acumen:** Understanding monetization, growth, and market fit.
+
 The value of simply "knowing how to code" is dropping. The value of "knowing how to build a great product with AI" is rising rapidly. You are the architect; the AI is the factory. 
+
+**What to Build Next:**
+- A personal portfolio website showcasing your projects.
+- A tool that solves a problem you personally face every week.
+- A Chrome extension that adds AI features to a website you use daily.
+- An internal tool for a friend's small business (great for practice and testimonials).
 
 <SectionLabel label="Knowledge Check" />
 
@@ -54,5 +96,9 @@ The value of simply "knowing how to code" is dropping. The value of "knowing how
   {
     q: "Why does vibe coding make building SaaS businesses easier?",
     a: "It lowers the cost and time required to test an idea. Instead of spending months and thousands of dollars hiring a team, you can build a prototype yourself in a weekend to see if customers actually want it."
+  },
+  {
+    q: "What is a 'Product Engineer' and how does this role differ from a traditional developer?",
+    a: "A Product Engineer combines product management, design, and engineering. Instead of writing code line-by-line, they find problems, design solutions, and direct AI agents to build the code. The focus is on building great products, not writing syntax."
   }
 ]} />

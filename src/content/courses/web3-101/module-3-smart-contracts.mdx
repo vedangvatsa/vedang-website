@@ -14,17 +14,98 @@ If blockchain is the immutable ledger, smart contracts are what make it programm
             A smart contract is simply a program that runs on the blockchain. It's a self-executing contract where the terms of the agreement between parties are written directly into code. They run exactly as programmed without any possibility of downtime, censorship, fraud, or third-party interference.
             
             > **Analogy: A Vending Machine.** A vending machine is a physical smart contract. You put in money (input), select an item (condition), and the machine automatically dispenses the item (output). There's no cashier needed; the logic is baked into the machine. Smart contracts are digital vending machines for any kind of agreement or application.
+
+            Here's a simplified example of what a smart contract looks like conceptually:
+
+            ```
+            IF user sends 0.1 ETH to this contract
+            AND the item is still available
+            THEN transfer the digital item to the user's wallet
+            AND mark the item as sold
+            ELSE refund the 0.1 ETH to the user
+            ```
+
+            The key insight is that once this logic is deployed to the blockchain, **nobody can change it** — not even the person who created it. The rules are enforced by code, not by trust.
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg">Key Properties and Capabilities</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            * **Autonomous:** Once deployed to the blockchain, they run automatically when their conditions are met, without needing anyone to trigger them.
-            * **Immutable:** The code of a smart contract cannot be changed after it's deployed. This ensures that the rules of the game are fixed and cannot be altered by a single party.
-            * **Transparent:** The code is visible to everyone on the blockchain, allowing anyone to verify its logic and functionality.
+            * **Autonomous:** Once deployed to the blockchain, they run automatically when their conditions are met, without needing anyone to trigger them. A lending protocol will automatically liquidate a loan if the collateral value drops below a threshold — 24/7, with no human intervention.
+            * **Immutable:** The code of a smart contract cannot be changed after it's deployed. This ensures that the rules of the game are fixed and cannot be altered by a single party. (Note: some contracts use "proxy patterns" to allow upgrades, but the original code itself remains on-chain forever.)
+            * **Transparent:** The code is visible to everyone on the blockchain, allowing anyone to verify its logic and functionality. This radical transparency means that anyone can audit a DeFi protocol's code before trusting it with their money.
             * **Composable ("Money Legos"):** This is one of the most powerful features. Because smart contracts are open and live on the same network, developers can build new applications by combining existing ones, like snapping together Lego blocks. A new DeFi protocol can integrate a pre-existing stablecoin and a decentralized exchange to create a completely new product without asking for permission.
 
             This composability accelerates innovation rapidly and is the driving force behind the growth of the Web3 ecosystem.
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg">Real-World Applications of Smart Contracts</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            Smart contracts are not just theoretical — they power billions of dollars in value today across multiple industries:
+
+            <div className="grid md:grid-cols-2 gap-4 my-6">
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-base font-semibold">🏦 Decentralized Finance (DeFi)</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground">Lending, borrowing, and trading without banks. Protocols like Aave let you earn interest on deposits or take out loans using crypto as collateral — all managed by smart contracts.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-base font-semibold">🎨 NFTs and Digital Ownership</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground">Smart contracts define the rules for creating, transferring, and collecting royalties on unique digital assets. Artists can program automatic royalties into their work.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-base font-semibold">🗳️ DAOs (Decentralized Autonomous Organizations)</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground">Organizations governed by smart contracts instead of traditional management. Members vote on proposals, and the results are executed automatically by code.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-base font-semibold">🎮 Gaming and Metaverse</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground">In-game assets (skins, weapons, land) are represented as tokens on the blockchain. Players truly own their items and can trade them freely across platforms.</p>
+                    </CardContent>
+                </Card>
+            </div>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg">Smart Contract Languages and Security</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            Smart contracts are written in specialized programming languages designed for blockchain environments:
+
+            * **Solidity:** The most popular language, used for Ethereum and EVM-compatible chains (Polygon, Arbitrum, Base). Its syntax is similar to JavaScript, making it accessible to web developers.
+            * **Rust:** Used by Solana and other high-performance blockchains. Rust's strong memory safety guarantees help prevent certain classes of bugs.
+            * **Move:** Developed by Facebook's Diem project, now used by Aptos and Sui. It's designed specifically for safe asset handling.
+
+            **Security is critical.** Because smart contracts are immutable and often control large amounts of money, bugs can be catastrophic. The 2016 "DAO Hack" exploited a vulnerability in a smart contract to drain $60 million worth of ETH. Today, the industry has matured significantly with:
+
+            * **Professional Auditing Firms:** Companies like Trail of Bits, OpenZeppelin, and Certora specialize in reviewing smart contract code before deployment.
+            * **Bug Bounty Programs:** Protocols offer rewards (often $100K+) for hackers who find and responsibly disclose vulnerabilities.
+            * **Formal Verification:** Mathematical proofs that a contract's code matches its intended behavior — the highest level of security assurance.
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
+
+<KnowledgeCheck 
+    question="What does 'composability' (or 'Money Legos') mean in the context of smart contracts?"
+    options={[
+        "Smart contracts can be updated and modified after deployment.",
+        "Developers can build new applications by combining existing open smart contracts without needing permission.",
+        "Multiple blockchains can merge into a single, unified chain.",
+        "Users can compose messages to send between different blockchain networks."
+    ]}
+    correctAnswerIndex={1}
+    explanation="Composability is one of Web3's superpowers. Because smart contracts are open and permissionless, developers can build on top of existing protocols like Lego blocks, creating entirely new products by combining existing ones."
+/>

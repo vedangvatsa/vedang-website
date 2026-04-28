@@ -42,6 +42,62 @@ This module introduces the foundational concept of prompt engineering. You'll le
             <p>As a general starting point, a temperature of 0.2, Top-P of 0.95, and Top-K of 40 will give you coherent, safe results. For creative tasks, try a temperature of 0.9.</p>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg">The Anatomy of a Great Prompt</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Every effective prompt, regardless of the task, contains some combination of these building blocks:</p>
+            <ul>
+                <li><strong>Role/Persona:</strong> Who should the AI pretend to be? (e.g., "You are a senior data analyst.")</li>
+                <li><strong>Task/Instruction:</strong> What do you want the AI to do? Be specific with an action verb. (e.g., "Analyze this dataset and identify the top 3 trends.")</li>
+                <li><strong>Context/Background:</strong> What information does the AI need to do this well? (e.g., "The data is from Q1 2025 e-commerce sales in Southeast Asia.")</li>
+                <li><strong>Format/Output:</strong> How should the result look? (e.g., "Present your findings as a numbered list with one sentence per trend.")</li>
+                <li><strong>Constraints:</strong> What are the boundaries? (e.g., "Keep the total response under 200 words. Do not speculate — only state what the data shows.")</li>
+                <li><strong>Examples:</strong> Show the model what a good answer looks like. (e.g., "Here is an example of the format I expect: 1. Trend: Mobile purchases increased by 34%...")</li>
+            </ul>
+            <p>You don't need all six elements in every prompt, but the more complex the task, the more elements you should include. Think of it as a spectrum: simple questions need only a task, while professional-grade outputs need all six.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg">Choosing the Right Model</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Not all AI models are equal. Different models excel at different tasks, and choosing the right one is an important part of prompt engineering:</p>
+            <div className="grid md:grid-cols-2 gap-4 my-6">
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-base font-semibold">🔬 Reasoning & Analysis</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground">GPT-4o, Claude Opus, Gemini 2.5 Pro. Use for complex logic, multi-step reasoning, code generation, and nuanced analysis.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-base font-semibold">⚡ Speed & Cost</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground">GPT-4o Mini, Claude Haiku, Gemini Flash. Use for simple tasks like classification, extraction, and summarization where speed and cost matter more than depth.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-base font-semibold">📝 Long Documents</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground">Claude (200K context), Gemini (1M+ context). Use when you need to process very long documents, codebases, or datasets in a single prompt.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-base font-semibold">🎨 Creative & Writing</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground">Claude Sonnet, GPT-4o. Excellent for creative writing, marketing copy, and tasks requiring nuanced tone and style.</p>
+                    </CardContent>
+                </Card>
+            </div>
+            <p><strong>Pro Tip:</strong> When building a product, start with the most capable (and expensive) model to get your prompts working perfectly, then "downgrade" to a cheaper model and see if the quality is still acceptable. This gives you the best balance of quality and cost.</p>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <KnowledgeCheck 

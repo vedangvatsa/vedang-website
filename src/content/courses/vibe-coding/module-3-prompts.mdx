@@ -16,6 +16,8 @@ A strong PRD contains:
 2.  **The User:** Who will use this? (Example: "Office workers who sit at desks all day.")
 3.  **The Core Features:** List the top 3 features the app must have. Keep it small for the first version.
 4.  **The Anti-Features:** List exactly what the AI should *not* build. (Example: "Do not build a social sharing feature.")
+5.  **The Tech Stack:** Specify your preferred technologies. (Example: "Use Next.js with TypeScript and Tailwind CSS. Use Supabase for the database.")
+6.  **The Design Direction:** Describe the visual style. (Example: "Minimal, dark theme, modern sans-serif font. Inspired by Linear.app's design.")
 
 <Callout type="insight" title="The AI PRD Trick">
 You can ask an AI to write the PRD for you. Go to ChatGPT or Claude and say: *"I want to build a water-tracking app. Act as an expert product manager. Ask me questions one by one to help me define the features, users, and scope. We will compile this into a PRD."* 
@@ -23,15 +25,20 @@ You can ask an AI to write the PRD for you. Go to ChatGPT or Claude and say: *"I
 
 <SectionLabel label="The Iterative Loop" />
 
-Do not expect the AI to get it perfect on the first try. You build great products by making small, repeated corrections.
+Do not expect the AI to get it perfect on the first try. You build great products by making small, repeated corrections. The key is understanding the difference between good and bad feedback.
 
 **How to correct the AI (The Wrong Way):** 
 *"That looks bad. Fix the button."* (The AI does not know what "bad" means).
 
 **How to correct the AI (The Right Way):** 
-*"Make the login button 20% larger. Change the background color to dark blue (#1E3A8A). Move the 'Forgot Password' link below the button."*
+*"Make the login button 20% larger. Change the background color to dark blue (#1E3A8A). Move the 'Forgot Password' link below the button. Add a subtle box-shadow."*
 
 Be specific. Treat the AI like a junior developer who cannot read your mind.
+
+**The Golden Rule of Iteration:**
+- **One change per prompt.** Asking the AI to change the layout, fix a bug, and add a new feature all in one prompt often results in it breaking something.
+- **Test after every change.** Preview the app, click every button, test edge cases. Only move on when the current change works perfectly.
+- **If the AI goes off track, revert.** Don't try to "fix forward" through three broken changes. Go back to the last working version and try a different approach.
 
 <SectionLabel label="Advanced Prompting Techniques" />
 
@@ -39,13 +46,26 @@ Once you master basic instructions, use these three techniques to get profession
 
 <PromptTechniques />
 
+**Additional powerful techniques for vibe coding:**
+
+- **Screenshot Prompting:** Take a screenshot of a UI you admire and send it to the AI: *"Build this UI. Match the layout, spacing, and color scheme as closely as possible. Use React and Tailwind CSS."*
+- **Negative Space Prompting:** Tell the AI what to leave out: *"Build a landing page for a meditation app. Do NOT include a pricing section, testimonials, or an FAQ. Keep it to a hero section and one feature section only."*
+- **Persona Stacking:** Assign multiple personas: *"You are a senior full-stack engineer who specializes in security AND a UX designer who prioritizes accessibility. Build a login form."*
+
 <SectionLabel label="Defense: Version Control" />
 
 AI makes mistakes. Sometimes, it will try to fix a small bug and accidentally break your entire application. If you cannot undo that mistake, you will lose hours of work.
 
 You must save your progress frequently. 
 
-If you use cloud tools like Lovable or Firebase Studio, they have built-in "Checkpoint" or "History" buttons. **Create a checkpoint after every single successful change.** If the AI breaks the app, simply click the previous checkpoint to roll back the code. 
+**For Cloud Tools (Lovable, Firebase Studio, Bolt):**
+They have built-in "Checkpoint" or "History" buttons. **Create a checkpoint after every single successful change.** If the AI breaks the app, simply click the previous checkpoint to roll back the code. 
+
+**For Local Tools (Cursor, Antigravity, Claude Code):**
+Use Git. You don't need to be an expert. Learn these three commands:
+- `git add .` — Stage all changes.
+- `git commit -m "added login page"` — Save a checkpoint with a description.
+- `git checkout .` — Undo all uncommitted changes and go back to the last checkpoint.
 
 Never let the AI make 10 changes before you save. Small, frequent saves are your only safety net.
 
@@ -59,5 +79,9 @@ Never let the AI make 10 changes before you save. Small, frequent saves are your
   {
     q: "How does 'Chain of Thought' prompting improve the AI's code?",
     a: "By asking the AI to 'think step-by-step,' it forces the model to generate intermediate reasoning. This acts as a plan, preventing the AI from rushing into writing code and making simple logic errors."
+  },
+  {
+    q: "Why should you limit each prompt to one change at a time?",
+    a: "When you ask the AI to make multiple changes in one prompt, it often introduces bugs by trying to do too much at once. Making one change per prompt, testing, and then moving on gives you a clean history and makes it easy to identify what broke if something goes wrong."
   }
 ]} />

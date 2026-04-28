@@ -21,14 +21,51 @@ This module explains the core technology behind Web3. We'll break down what a bl
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg">Consensus Mechanisms: How the Network Agrees</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            If there's no central authority, how do thousands of computers agree on which transactions are valid? This is solved by **consensus mechanisms** — the rules the network follows to reach agreement.
+
+            * **Proof of Work (PoW):** The original mechanism used by Bitcoin. Computers called "miners" compete to solve extremely complex math puzzles. The first one to find the solution gets to add the next block and earns a reward. This requires massive amounts of computational power and energy, which is both a security feature (it's extremely expensive to attack) and a drawback (environmental concerns). Bitcoin still uses PoW.
+            * **Proof of Stake (PoS):** A more energy-efficient alternative now used by Ethereum since "The Merge" in September 2022. Instead of competing with computing power, participants "stake" (lock up) their cryptocurrency as collateral. Validators are randomly selected to create new blocks, and if they act dishonestly, their staked crypto is "slashed" (confiscated). PoS uses ~99.95% less energy than PoW.
+            * **Other Mechanisms:** The blockchain space is constantly innovating. Other consensus models include Delegated Proof of Stake (DPoS), Proof of Authority (PoA), and Proof of History (PoH, used by Solana) — each making different trade-offs between speed, security, and decentralization.
+
+            The choice of consensus mechanism fundamentally shapes a blockchain's characteristics: its speed, energy consumption, security guarantees, and degree of decentralization.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg">The Role of Cryptocurrencies (e.g., ETH)</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             Cryptocurrencies are not just speculative assets; they are essential for the functioning of a blockchain network. They serve two critical purposes:
 
-            * **Paying for Computation ("Gas"):** Every action on a blockchain—sending money, minting an NFT, voting in a DAO—requires computational resources from the network. Cryptocurrencies (like Ether, or ETH, on the Ethereum blockchain) are used to pay the network participants ("validators" or "miners") for this computation. This fee is often called "gas."
+            * **Paying for Computation ("Gas"):** Every action on a blockchain—sending money, minting an NFT, voting in a DAO—requires computational resources from the network. Cryptocurrencies (like Ether, or ETH, on the Ethereum blockchain) are used to pay the network participants ("validators" or "miners") for this computation. This fee is often called "gas." Gas prices fluctuate based on network demand — during high-traffic events like popular NFT drops, gas fees can spike dramatically.
             * **Economic Security (Incentives):** Cryptocurrencies are used to reward validators for honestly processing transactions and securing the network. Validators often have to "stake" a large amount of crypto as collateral. If they act dishonestly, they can lose their stake. This powerful economic incentive aligns their interests with the health of the network, removing the need for a central administrator.
+            * **Governance:** Many blockchain protocols use their native token for governance. Token holders can vote on proposals that shape the future direction of the protocol — from technical upgrades to treasury allocation. This creates a more democratic system where the community has a direct say in how the network evolves.
 
-            In essence, crypto provides the economic layer that allows a decentralized network of strangers to coordinate and secure itself.
+            In essence, crypto provides the economic layer that allows a decentralized network of strangers to coordinate and secure itself without a central authority.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg">Wallets: Your Gateway to Web3</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            A **crypto wallet** is not like a physical wallet that stores money. Instead, it stores your cryptographic keys — the digital credentials that prove you own your assets on the blockchain.
+
+            * **Public Key (Your Address):** Think of this like your email address. You can share it with anyone so they can send you crypto or verify your identity. It's derived from your private key.
+            * **Private Key (Your Password):** This is the master secret that controls your wallet. Anyone who has your private key has full control of your assets. You must never share it. Unlike a password, if you lose it, there is no "forgot password" button — your funds are gone forever.
+            * **Seed Phrase (Recovery Phrase):** When you create a wallet, you're given a 12 or 24-word phrase. This phrase can regenerate your private key. Write it down on paper and store it securely offline. Never screenshot it or store it digitally.
+
+            Popular wallets include **MetaMask** (a browser extension), **Rainbow** (mobile-first), and **Ledger** (a hardware device for maximum security). Your wallet is your universal login for Web3 — one wallet can interact with thousands of decentralized applications.
         </AccordionContent>
     </AccordionItem>
 </Accordion>
+
+<KnowledgeCheck 
+    question="Why did Ethereum switch from Proof of Work (PoW) to Proof of Stake (PoS)?"
+    options={[
+        "PoW was too slow to process transactions.",
+        "PoS is dramatically more energy-efficient while maintaining strong security through economic incentives.",
+        "PoW was not secure enough against attacks.",
+        "PoS allows a single entity to control the network more easily."
+    ]}
+    correctAnswerIndex={1}
+    explanation="Ethereum's 'Merge' to Proof of Stake reduced its energy consumption by approximately 99.95%. PoS replaces the energy-intensive mining competition with an economic staking model where validators risk losing their collateral if they act dishonestly."
+/>

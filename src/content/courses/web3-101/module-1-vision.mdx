@@ -42,12 +42,36 @@ Before diving into the technology, it helps to understand the 'why' behind Web3.
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             Web2, for all its benefits, has led to significant issues stemming from centralization:
             
-            * **Censorship and Control:** Centralized platforms can unilaterally de-platform users, remove content, or change their rules at any time, often with little recourse.
-            * **Data Exploitation:** Your personal data is the product. It's collected, analyzed, and sold to advertisers, often without your full understanding or consent. You have little control over how it's used.
-            * **Value Extraction:** Platforms take a significant cut of the value created by users. Creators are subject to changing monetization policies and platform fees, making their livelihoods precarious.
-            * **Single Points of Failure:** If a platform's servers go down, the service becomes unavailable for everyone. They are also prime targets for data breaches.
+            * **Censorship and Control:** Centralized platforms can unilaterally de-platform users, remove content, or change their rules at any time, often with little recourse. In 2021, an entire social media platform was removed from app stores overnight, cutting off millions of users from their communities.
+            * **Data Exploitation:** Your personal data is the product. It's collected, analyzed, and sold to advertisers, often without your full understanding or consent. You have little control over how it's used. The Cambridge Analytica scandal showed how personal data from 87 million Facebook users was harvested without consent and used for political advertising.
+            * **Value Extraction:** Platforms take a significant cut of the value created by users. Creators are subject to changing monetization policies and platform fees, making their livelihoods precarious. Apple's App Store takes a 30% commission on all in-app purchases.
+            * **Single Points of Failure:** If a platform's servers go down, the service becomes unavailable for everyone. They are also prime targets for data breaches. The 2021 Facebook outage took down Facebook, Instagram, WhatsApp, and Messenger for 6+ hours, impacting billions of users globally.
 
             Web3 proposes a solution through decentralization, creating systems that are more resilient, transparent, and fair by removing the need for a trusted central intermediary.
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg">The Three Pillars of Web3</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            Web3 is built on three foundational principles that differentiate it from the current internet:
+
+            * **Decentralization:** Instead of data and services being controlled by a single company, they are distributed across a network of computers. No single entity has full control. This makes the system more resilient to censorship, attacks, and outages. If one node goes down, the network continues to function.
+            * **User Sovereignty (Self-Custody):** Users have true ownership of their digital assets and identity. Instead of your identity being tied to a platform account (e.g., your Google account), you control your identity through a cryptographic wallet. You hold your own keys, and no company can freeze your assets or revoke your access.
+            * **Open Protocols and Composability:** Web3 applications are built on open, permissionless protocols. This means anyone can build on top of existing infrastructure without asking for permission. Think of it like the early web: HTTP and email were open protocols that anyone could build on. Web3 aims to bring that same openness to financial services, social networks, and identity.
+
+            These three pillars work together to create an internet where users are participants and stakeholders, not just products.
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
+
+<KnowledgeCheck 
+    question="What does 'Read-Write-Own' refer to in the context of Web3?"
+    options={[
+        "Users can read websites, write blog posts, and own the servers that host them.",
+        "Users can consume content, create content, and truly own their data, assets, and digital identity.",
+        "Users can read code, write smart contracts, and own cryptocurrency.",
+        "It's a marketing term with no real technical meaning."
+    ]}
+    correctAnswerIndex={1}
+    explanation="Web3 extends the Web2 'read-write' model by adding true ownership. Users can own their data, digital assets, and identity through blockchain technology, rather than having a platform own everything."
+/>

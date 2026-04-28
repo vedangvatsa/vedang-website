@@ -1,35 +1,85 @@
 <CodePrompting />
 
-LLMs are incredibly powerful tools for developers. This module teaches you how to use prompts to speed up your coding workflow.
+LLMs are incredibly powerful tools for developers. This module teaches you how to use prompts to speed up your coding workflow — from writing and debugging code to performing full-scale refactors and generating tests.
 
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg">Writing, Explaining, and Translating Code</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             <ul>
-                <li><strong>Writing Code:</strong> Be specific about the language, libraries, and desired functionality.
-                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Write a Python function that takes a URL and returns the text content of the page using the 'requests' and 'BeautifulSoup' libraries."</blockquote>
+                <li><strong>Writing Code:</strong> Be specific about the language, libraries, and desired functionality. The more context you provide, the better the output.
+                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Write a Python function that takes a URL and returns the text content of the page using the 'requests' and 'BeautifulSoup' libraries. Handle HTTP errors gracefully and return None on failure."</blockquote>
                 </li>
                 <li><strong>Explaining Code:</strong> Paste a snippet of code and ask for an explanation. This is great for understanding legacy code or learning a new language.
-                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Explain this React hook line by line."</blockquote>
+                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Explain this React hook line by line. Assume I am familiar with JavaScript but new to React."</blockquote>
                 </li>
-                <li><strong>Translating Code:</strong> Provide a function in one language and ask for its equivalent in another.
-                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Translate the following Bash script into a Python script with the same functionality."</blockquote>
+                <li><strong>Translating Code:</strong> Provide a function in one language and ask for its equivalent in another. Specify whether you want idiomatic code or a direct translation.
+                    <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Translate the following Bash script into an idiomatic Python script with the same functionality. Use the `pathlib` library for file operations."</blockquote>
                 </li>
             </ul>
+
+            <div className="grid md:grid-cols-2 gap-6 my-6">
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-base font-semibold">❌ Weak Code Prompt</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground italic">"Write a sorting algorithm."</p>
+                        <p className="text-sm text-muted-foreground mt-2">No language, no constraints, no context about what you're sorting. You'll get a generic answer.</p>
+                    </CardContent>
+                </Card>
+                <Card className="border-primary/50">
+                    <CardHeader>
+                        <CardTitle className="text-base font-semibold">✅ Strong Code Prompt</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground italic">"Write a TypeScript function that sorts an array of objects by a 'createdAt' date field, newest first. Use the built-in Array.sort(). Add JSDoc comments."</p>
+                        <p className="text-sm text-muted-foreground mt-2">Specific language, data type, sort order, method preference, and documentation style.</p>
+                    </CardContent>
+                </Card>
+            </div>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg">Debugging and Reviewing Code</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>LLMs can be fantastic debuggers. When you have an error, provide the full context:</p>
+            <p>LLMs can be fantastic debuggers. When you have an error, provide the full context — what you call the "debugging trifecta":</p>
             <ol>
-                <li>The code that caused the error.</li>
-                <li>The full error message and traceback.</li>
-                <li>Your intent: what were you trying to do?</li>
+                <li><strong>The code</strong> that caused the error.</li>
+                <li><strong>The full error message</strong> and traceback.</li>
+                <li><strong>Your intent:</strong> what were you trying to do?</li>
             </ol>
-            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"The Python code below gives a `NameError: name 'toUpperCase' is not defined`. Please debug the code and fix it. Also, suggest any other improvements you see."</blockquote>
+            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"The Python code below gives a `NameError: name 'toUpperCase' is not defined`. I'm trying to convert a string to uppercase. Please debug the code, fix it, and suggest any other improvements you see."</blockquote>
             <p>Often, the model will not only fix the immediate bug but also identify other issues and suggest more robust, efficient code.</p>
+            <p><strong>Code Review Prompts:</strong> You can also use LLMs as a code reviewer by asking it to analyze your code for potential issues:</p>
+            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Review the following Python function for: 1) Security vulnerabilities (SQL injection, etc.), 2) Performance issues, 3) Edge cases that could cause errors. Suggest fixes for each issue found."</blockquote>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg">Test Generation and Refactoring</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Two powerful but underused applications of code prompting are writing tests and refactoring existing code.</p>
+            <p><strong>Generating Tests:</strong></p>
+            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Write unit tests for the following TypeScript function using Jest. Include tests for: 1) Normal input, 2) Empty input, 3) Invalid input types, 4) Edge cases like very large numbers. Use the describe/it pattern."</blockquote>
+            <p>This is one of the highest-ROI uses of code prompting. Writing tests is tedious, and LLMs excel at generating comprehensive test suites.</p>
+            <p><strong>Refactoring:</strong></p>
+            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Refactor the following 200-line function into smaller, well-named helper functions. Follow the Single Responsibility Principle. Maintain the same external behavior. Add TypeScript type annotations."</blockquote>
+            <p><strong>Documentation Generation:</strong></p>
+            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-2">"Add comprehensive JSDoc documentation to every function in the following code. Include @param, @returns, @throws, and @example tags."</blockquote>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg">Modern AI Coding Tools</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Beyond chat interfaces, prompt engineering is embedded directly into modern developer tools:</p>
+            <ul>
+                <li><strong>Cursor:</strong> An AI-native code editor built on VS Code. It understands your entire codebase and can make multi-file edits based on natural language instructions. You can highlight code and press Cmd+K to ask for inline edits.</li>
+                <li><strong>GitHub Copilot:</strong> An AI pair programmer that provides real-time code suggestions as you type. It reads your comments and function names to predict what you want to write next.</li>
+                <li><strong>Antigravity (Google):</strong> An agentic coding assistant that can browse the web, run terminal commands, edit files, and interact with your development environment — all through natural language conversation.</li>
+                <li><strong>Claude Code (Anthropic):</strong> A terminal-based coding agent that can read your codebase, make edits, run commands, and iterate on code based on your feedback.</li>
+                <li><strong>OpenAI Codex CLI:</strong> A command-line tool that translates natural language into shell commands and code, useful for automating DevOps tasks and scripting.</li>
+            </ul>
+            <p>These tools are all powered by the same prompt engineering principles you've learned in this course. The better your instructions, the better the output — regardless of the tool.</p>
         </AccordionContent>
     </AccordionItem>
 </Accordion>
@@ -43,5 +93,5 @@ LLMs are incredibly powerful tools for developers. This module teaches you how t
         "The entire codebase of your application."
     ]}
     correctAnswerIndex={2}
-    explanation="Providing context is key. The AI needs the code, the error it produced, and your original intent to effectively diagnose and solve the problem."
+    explanation="Providing context is key. The AI needs the code, the error it produced, and your original intent to effectively diagnose and solve the problem. This is called the 'debugging trifecta.'"
 />
