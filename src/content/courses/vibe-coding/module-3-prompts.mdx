@@ -1,0 +1,84 @@
+---
+title: "Module 3: The Art of the Prompt"
+description: "Good prompts produce good products. This module teaches clear communication and instruction-writing to guide AI effectively."
+order: 3
+---
+
+<Image
+  src="/images/courses/VibeCoding/Vibe_coding_module3_vedang_vatsa.webp"
+  alt="An infographic for Module 3 of the Vibe Coding course, showing a hand icon and titled 'The Art of the Prompt'."
+  width={1200}
+  height={675}
+  className="max-h-72 w-auto mx-auto rounded-lg mb-8 border border-muted"
+/>
+
+Vibe coding is an ongoing conversation. You do not just give one command and walk away. You steer the AI, review its work, and give feedback. This module covers the advanced techniques you need to guide that process effectively.
+
+<SectionLabel label="The PRD (Product Requirements Document)" />
+
+Never start a project with an empty chat window. You need a plan first. In professional software development, this plan is called a Product Requirements Document (PRD). For us, it is a simple text document that serves as your very first, massive prompt to the AI.
+
+A strong PRD contains:
+1.  **The Problem:** What issue does this app solve? (Example: "Busy people forget to drink water.")
+2.  **The User:** Who will use this? (Example: "Office workers who sit at desks all day.")
+3.  **The Core Features:** List the top 3 features the app must have. Keep it small for the first version.
+4.  **The Anti-Features:** List exactly what the AI should *not* build. (Example: "Do not build a social sharing feature.")
+
+<Callout type="insight" title="The AI PRD Trick">
+You can ask an AI to write the PRD for you. Go to ChatGPT or Claude and say: *"I want to build a water-tracking app. Act as an expert product manager. Ask me questions one by one to help me define the features, users, and scope. We will compile this into a PRD."* 
+</Callout>
+
+<SectionLabel label="The Iterative Loop" />
+
+Do not expect the AI to get it perfect on the first try. You build great products by making small, repeated corrections.
+
+**How to correct the AI (The Wrong Way):** 
+*"That looks bad. Fix the button."* (The AI does not know what "bad" means).
+
+**How to correct the AI (The Right Way):** 
+*"Make the login button 20% larger. Change the background color to dark blue (#1E3A8A). Move the 'Forgot Password' link below the button."*
+
+Be specific. Treat the AI like a junior developer who cannot read your mind.
+
+<SectionLabel label="Advanced Prompting Techniques" />
+
+Once you master basic instructions, use these techniques to get professional-level code from the AI.
+
+### Persona Prompting
+Tell the AI to adopt a specific expert role. This changes the tone and quality of its output.
+*"You are an expert cybersecurity engineer. Review this code for vulnerabilities."*
+
+### Chain of Thought
+If you are asking the AI to solve a complex logic problem or build a difficult feature, tell it to "think step-by-step." This forces the AI to write out its plan before it writes the code, which dramatically reduces logic errors.
+*"I need to connect a payment system. Think step-by-step about what database changes we need before writing the code."*
+
+### Negative Prompts
+Tell the AI exactly what to avoid. 
+*"Generate a list of startup names for a coffee brand. Do not use words like 'bean', 'roast', or 'cup'."*
+
+<SectionLabel label="Defense: Version Control" />
+
+AI makes mistakes. Sometimes, it will try to fix a small bug and accidentally break your entire application. If you cannot undo that mistake, you will lose hours of work.
+
+You must save your progress frequently. 
+
+If you use cloud tools like Lovable or Firebase Studio, they have built-in "Checkpoint" or "History" buttons. **Create a checkpoint after every single successful change.** If the AI breaks the app, simply click the previous checkpoint to roll back the code. 
+
+Never let the AI make 10 changes before you save. Small, frequent saves are your only safety net.
+
+<SectionLabel label="Knowledge Check" />
+
+<Accordion type="single" collapsible className="w-full mt-4">
+  <AccordionItem value="q1">
+      <AccordionTrigger className="text-lg">What is an "Anti-Feature" in a PRD and why is it useful?</AccordionTrigger>
+      <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
+          An Anti-Feature is a specific instruction telling the AI what NOT to build. This is useful because AI models often try to be "helpful" by adding complex features (like user profiles or social sharing) that you do not want, which clutters the code.
+      </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="q2">
+      <AccordionTrigger className="text-lg">How does "Chain of Thought" prompting improve the AI's code?</AccordionTrigger>
+      <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
+          By asking the AI to "think step-by-step," it forces the model to generate intermediate reasoning. This acts as a plan, preventing the AI from rushing into writing code and making simple logic errors.
+      </AccordionContent>
+  </AccordionItem>
+</Accordion>

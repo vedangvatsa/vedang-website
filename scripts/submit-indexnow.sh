@@ -1,50 +1,46 @@
 #!/bin/bash
-# Post-deploy script: Submit all URLs to IndexNow
-# Called automatically after build/deploy via package.json postbuild script
+# Submit all sitemap URLs to IndexNow (Bing, Yandex, Naver, Seznam)
+# Run after Vercel deployment completes
 
-KEY="8e98e43851d7462c9c210ecd4321a7fc"
+KEY="efeb4c9b344b48a9819cd02571aab0ed"
 HOST="veda.ng"
-KEY_URL="https://${HOST}/${KEY}.txt"
 
-echo "📡 IndexNow: Submitting all pages to search engines..."
+# Check if key file is live
+HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "https://${HOST}/${KEY}.txt")
+if [ "$HTTP_CODE" != "200" ]; then
+  echo "❌ Key file not live yet (HTTP $HTTP_CODE). Wait for Vercel deploy and retry."
+  exit 1
+fi
 
-# Build URL list from the build output
-URLS=""
+echo "✅ Key file is live"
 
-# Static pages
-for page in "/" "/writings" "/glossary" "/profile" "/media" "/community" "/seo" "/agentic-web" "/vibe-coding" "/web3-101" "/prompt-engineering-101"; do
-  URLS="${URLS}\"https://${HOST}${page}\","
-done
+# Build payload from sitemap
+URLS=$(curl -s "https://${HOST}/sitemap.xml" | sed -n 's/.*<loc>\(.*\)<\/loc>.*/\1/p')
+COUNT=$(echo "$URLS" | wc -l | tr -d ' ')
+echo "📋 Found $COUNT URLs"
 
-# Essays
-for f in src/content/essays/*.mdx; do
-  slug=$(basename "$f" .mdx)
-  URLS="${URLS}\"https://${HOST}/${slug}\","
-done
+PAYLOAD=$(echo "$URLS" | python3 -c "
+import sys, json
+urls = [l.strip() for l in sys.stdin if l.strip()]
+print(json.dumps({
+    'host': '${HOST}',
+    'key': '${KEY}',
+    'keyLocation': 'https://${HOST}/${KEY}.txt',
+    'urlList': urls
+}))
+")
 
-# Glossary terms (extract slugs from glossary.ts)
-for slug in $(grep -oP "slug:\s*['\"]\\K[^'\"]*" src/lib/glossary.ts 2>/dev/null || grep -oE "slug: '[^']*'" src/lib/glossary.ts | sed "s/slug: '//;s/'//"); do
-  URLS="${URLS}\"https://${HOST}/glossary/${slug}\","
-done
+# Submit to IndexNow
+RESPONSE=$(curl -s -w "\n%{http_code}" -X POST "https://api.indexnow.org/IndexNow" \
+  -H "Content-Type: application/json; charset=utf-8" \
+  -d "$PAYLOAD")
 
-# Remove trailing comma
-URLS="${URLS%,}"
+HTTP_CODE=$(echo "$RESPONSE" | tail -1)
+BODY=$(echo "$RESPONSE" | head -n -1)
 
-PAYLOAD="{\"host\":\"${HOST}\",\"key\":\"${KEY}\",\"keyLocation\":\"${KEY_URL}\",\"urlList\":[${URLS}]}"
-
-# Submit to all engines
-for engine in "https://api.indexnow.org/IndexNow" "https://www.bing.com/IndexNow" "https://yandex.com/indexnow"; do
-  code=$(curl -s -o /dev/null -w "%{http_code}" -X POST "$engine" \
-    -H "Content-Type: application/json; charset=utf-8" \
-    -d "$PAYLOAD" 2>/dev/null)
-  
-  name=$(echo "$engine" | sed 's|https://||;s|/.*||')
-  if [ "$code" = "200" ] || [ "$code" = "202" ]; then
-    echo "  ✅ ${name}: ${code}"
-  else
-    echo "  ⚠️  ${name}: ${code} (may need verification)"
-  fi
-done
-
-URL_COUNT=$(echo "$URLS" | tr ',' '\n' | wc -l | tr -d ' ')
-echo "📊 Submitted ${URL_COUNT} URLs total"
+if [ "$HTTP_CODE" = "200" ] || [ "$HTTP_CODE" = "202" ]; then
+  echo "✅ IndexNow accepted $COUNT URLs (HTTP $HTTP_CODE)"
+else
+  echo "❌ IndexNow returned HTTP $HTTP_CODE"
+  echo "$BODY"
+fi

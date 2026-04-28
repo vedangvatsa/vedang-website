@@ -1,0 +1,84 @@
+---
+title: "Module 1: The Philosophy"
+description: "Shift from coder to creative director. Learn to articulate your vision and guide AI toward the product you want."
+order: 1
+---
+
+<Image
+  src="/images/courses/VibeCoding/Vibe_coding_module1_vedang_vatsa.webp"
+  alt="An infographic for Module 1 of the Vibe Coding course, showing a brain icon and titled 'From Coder to Director'."
+  width={1200}
+  height={675}
+  className="max-h-72 w-auto mx-auto rounded-lg mb-8 border border-muted"
+/>
+
+The term "vibe coding" originated from AI researcher Andrej Karpathy. It describes how humans and AI now build software together. Instead of typing code line-by-line, you write plain English instructions, and the AI generates the application. 
+
+This changes your job. You no longer act as a coder writing syntax. You act as a director guiding a project. You focus on the "what" and the "why." The AI handles the "how."
+
+<SectionLabel label="The Old Way vs. The Vibe Way" />
+
+Software development used to require you to be both the architect and the bricklayer. You designed the application and then spent months writing the JavaScript, Python, or CSS to build it. A single missing semicolon could break the entire system. This technical barrier stopped many people from building their ideas.
+
+Vibe coding changes the model. You now act as the product manager and creative director. 
+
+You provide the vision: *"I need a recipe app with a clean design that lets users filter by dietary restrictions."* 
+
+The AI acts as your tireless junior developer. It writes the code, sets up the database, and styles the buttons. Your value shifts from knowing programming syntax to having a clear idea and knowing how to guide the AI to execute it correctly.
+
+<Callout type="insight" title="The Skill Shift">
+In the past, you spent 90% of your time writing code and 10% thinking about the user. Now, you spend 90% of your time defining the product and 10% reviewing the AI's code. 
+</Callout>
+
+<SectionLabel label="The GCES Framework for Prompting" />
+
+The AI will only build what you tell it to build. If you give a vague instruction, you will get a generic, unusable product. To get good results, you must write clear, structured prompts. 
+
+We use the GCES framework to turn loose ideas into specific instructions.
+
+### 1. Goal: What do you want the AI to do?
+Start your prompt with a specific action verb. Tell the AI its primary task immediately. 
+- **Weak:** *"I want a form."*
+- **Strong:** *"Create a contact form with fields for name, email, and message. Add a submit button."*
+
+### 2. Context: What does the AI need to know?
+Explain who will use the product and why you are building it. Context helps the AI make smart assumptions about tone and layout.
+- **Weak:** *"Make it look nice."*
+- **Strong:** *"This form is for a high-end bakery. The feeling should be elegant and warm. The users are typically older adults."*
+
+### 3. Expectations: What are the strict rules?
+Define the constraints. Tell the AI exactly how the final result must behave and look.
+- **Weak:** *"Make it work on phones."*
+- **Strong:** *"The form must be fully responsive. Use a single-column layout on mobile and a two-column layout on desktop. The submit button must turn green when clicked."*
+
+### 4. Source: Can you show an example?
+AI models learn through pattern recognition. The fastest way to get what you want is to provide a reference.
+- **Weak:** *"Make it look modern."*
+- **Strong:** *"For the design and spacing, reference Stripe.com's checkout page. Use their approach to input field borders."*
+
+When you combine these four elements, your prompt acts as a clear blueprint. You give the AI exactly what it needs to write the right code on the first attempt.
+
+<SectionLabel label="Knowledge Check" />
+
+Test your understanding of the philosophy and prompting framework. Click the questions to reveal the answers.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+  <AccordionItem value="q1">
+      <AccordionTrigger className="text-lg">What is the primary difference between a traditional coder and a "vibe coder"?</AccordionTrigger>
+      <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
+          A traditional coder writes the actual syntax (the "how"). A vibe coder acts as a director, providing the vision and constraints (the "what" and "why") while the AI writes the syntax.
+      </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="q2">
+      <AccordionTrigger className="text-lg">In the GCES framework, why is the "Context" step so important?</AccordionTrigger>
+      <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
+          Context tells the AI who the users are and why the product exists. This stops the AI from making generic assumptions and ensures the tone, design, and logic fit the specific situation.
+      </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="q3">
+      <AccordionTrigger className="text-lg">If you want the AI to build a pricing table, what is the fastest way to ensure it looks exactly the way you want?</AccordionTrigger>
+      <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
+          Use the "Source" step of the GCES framework. Provide a reference image or a link to a website (like Stripe) that has a design you admire. AI models learn fastest from examples.
+      </AccordionContent>
+  </AccordionItem>
+</Accordion>
