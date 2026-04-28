@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { KnowledgeCheck } from '@/components/mdx/knowledge-check';
-import { ActionWebEvolution, AgentComponents, AgenticDimensions, AgenticApps, AgenticFuture } from '@/components/courses/agentic-visuals';
+import { ActionWebEvolution, AgentComponents, AgenticDimensions, AgenticApps, AgenticFuture, ProtocolDiagram, AgentBuildSteps } from '@/components/courses/agentic-visuals';
 
 
 const mdxComponents = {
@@ -29,6 +29,8 @@ const mdxComponents = {
     AgenticDimensions,
     AgenticApps,
     AgenticFuture,
+    ProtocolDiagram,
+    AgentBuildSteps,
     Link,
 };
 
@@ -40,6 +42,8 @@ const modules = [
     { slug: 'module-3-dimensions', title: '3. The Three Dimensions', description: 'Understanding the interconnected layers' },
     { slug: 'module-4-applications', title: '4. Applications', description: 'The Agentic Web in Action' },
     { slug: 'module-5-future', title: '5. Future Challenges', description: 'Security, ethics, and economics' },
+    { slug: 'module-6-protocols', title: '6. Protocols: MCP & A2A', description: 'The standardized languages of the Agentic Web' },
+    { slug: 'module-7-build-agent', title: '7. Build Your First Agent', description: 'A practical guide from design to deployment' },
 ];
 
 export async function generateStaticParams() {

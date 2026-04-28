@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { KnowledgeCheck } from '@/components/mdx/knowledge-check';
-import { PredictionEngine, CoreTechniques, AdvancedReasoning, CodePrompting, BestPractices } from '@/components/courses/pe-visuals';
+import { PredictionEngine, CoreTechniques, AdvancedReasoning, CodePrompting, BestPractices, RAGPipeline, PromptChaining } from '@/components/courses/pe-visuals';
 
 const mdxComponents = {
     Accordion,
@@ -28,6 +28,8 @@ const mdxComponents = {
     AdvancedReasoning,
     CodePrompting,
     BestPractices,
+    RAGPipeline,
+    PromptChaining,
     Link,
 };
 
@@ -39,6 +41,8 @@ const modules = [
     { slug: 'module-3-advanced-reasoning', title: '3. Advanced Reasoning Techniques', description: 'Guide the model\'s reasoning process for complex problems' },
     { slug: 'module-4-code-prompting', title: '4. Code Prompting: Your AI Pair Programmer', description: 'Speed up your coding workflow with LLMs' },
     { slug: 'module-5-best-practices', title: '5. Best Practices for Expert Prompting', description: 'Tips and rules for an iterative learning process' },
+    { slug: 'module-6-rag-functions', title: '6. RAG & Function Calling', description: 'Connect LLMs to your data and the real world' },
+    { slug: 'module-7-chaining-agents', title: '7. Prompt Chaining & Agents', description: 'Orchestrate multi-step workflows and build autonomous systems' },
 ];
 
 export async function generateStaticParams() {

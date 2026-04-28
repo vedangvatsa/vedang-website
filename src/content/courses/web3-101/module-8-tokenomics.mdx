@@ -1,0 +1,92 @@
+---
+title: "Tokenomics & Governance: The Economics of Web3"
+description: "Tokens are the lifeblood of Web3. This module covers how tokens are designed, how their supply is managed, and how they enable decentralized governance."
+---
+
+<TokenomicsVisual />
+
+Every blockchain project has an economic model built around its token. Understanding tokenomics — how tokens are created, distributed, and used — is essential for evaluating any Web3 project, whether you're a user, investor, or builder.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg">Types of Tokens</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Not all tokens are the same. They serve different purposes and have different economic properties:</p>
+            <ul>
+                <li><strong>Utility Tokens:</strong> Used to pay for services within a specific protocol. ETH is the utility token for Ethereum — you need it to pay gas fees. SOL is the utility token for Solana. Without them, the network can't function.</li>
+                <li><strong>Governance Tokens:</strong> Give holders voting rights on protocol decisions. UNI (Uniswap), AAVE, and MKR (MakerDAO) are governance tokens. Holders vote on changes like fee structures, treasury spending, and protocol upgrades.</li>
+                <li><strong>Security Tokens:</strong> Represent ownership in a real-world asset (like equity in a company or a share of real estate). These are subject to securities regulations and are a key part of the "Real World Assets" (RWA) trend.</li>
+                <li><strong>Stablecoins:</strong> Pegged to the value of a fiat currency (usually USD). USDC is backed 1:1 by US dollar reserves. DAI maintains its peg algorithmically through overcollateralized crypto loans. Stablecoins are the primary medium of exchange in DeFi.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg">Token Supply Mechanics</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>The supply model of a token determines its long-term value and inflation characteristics:</p>
+            <ul>
+                <li><strong>Fixed Supply (Deflationary):</strong> Bitcoin has a hard cap of 21 million BTC. No more will ever be created. This scarcity model is designed to be deflationary over time, similar to gold.</li>
+                <li><strong>Inflationary Supply:</strong> New tokens are continuously minted, usually to pay validators/stakers. Ethereum has no hard cap, but its burn mechanism (EIP-1559) destroys a portion of gas fees. When burn rate exceeds issuance rate, ETH becomes deflationary ("ultrasound money").</li>
+                <li><strong>Token Burns:</strong> Permanently removing tokens from circulation. This reduces supply and can increase the value of remaining tokens. Binance periodically burns BNB tokens.</li>
+            </ul>
+            <p><strong>Key Metrics to Evaluate:</strong></p>
+            <ul>
+                <li><strong>Market Cap:</strong> Total value of all circulating tokens (Price × Circulating Supply).</li>
+                <li><strong>Fully Diluted Valuation (FDV):</strong> Total value if ALL tokens were in circulation (Price × Max Supply). If FDV is much higher than Market Cap, there's significant future dilution.</li>
+                <li><strong>Circulating Supply vs. Total Supply:</strong> How many tokens are currently available vs. how many will ever exist? Low circulating supply with high total supply means more tokens will enter the market over time.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg">Token Distribution and Vesting</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>How tokens are initially distributed is one of the most important factors in a project's health and fairness:</p>
+            <ul>
+                <li><strong>Team / Founders:</strong> Typically 15-25% of total supply. These tokens are usually locked with a "vesting schedule" — for example, a 1-year cliff (no tokens released for the first year) followed by a 3-year linear vesting (tokens gradually unlock each month).</li>
+                <li><strong>Investors (VCs):</strong> Early backers who funded the project. Usually 10-20% of supply, also with vesting schedules. Watch for projects where VC tokens unlock soon — this creates selling pressure.</li>
+                <li><strong>Community / Ecosystem:</strong> Allocated for grants, airdrops, liquidity mining, and community rewards. A healthy project allocates 40-60% to the community.</li>
+                <li><strong>Treasury:</strong> A reserve of tokens managed by the DAO or foundation for future development, partnerships, and operations.</li>
+            </ul>
+            <p><strong>Red Flags in Token Distribution:</strong></p>
+            <ul>
+                <li>Team holds more than 30% of total supply.</li>
+                <li>No vesting schedule — insiders can dump tokens immediately.</li>
+                <li>Large "unlock events" where millions of tokens become tradeable at once.</li>
+                <li>Anonymous team with no public accountability.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg">Decentralized Governance: How DAOs Make Decisions</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Governance is how a decentralized protocol makes decisions about its future without a CEO or board of directors. It's one of the most ambitious experiments in Web3.</p>
+            <p><strong>The Governance Lifecycle:</strong></p>
+            <ol>
+                <li><strong>Discussion:</strong> Community members discuss ideas on forums (like Discourse or Commonwealth).</li>
+                <li><strong>Proposal:</strong> A formal proposal is written with specific details — what changes, why, and how it will be implemented.</li>
+                <li><strong>Snapshot / Off-Chain Vote:</strong> A preliminary vote using platforms like Snapshot (gasless, off-chain) to gauge community sentiment.</li>
+                <li><strong>On-Chain Vote:</strong> If the snapshot passes, a binding on-chain vote is held. Token holders vote with their governance tokens. Each token = one vote.</li>
+                <li><strong>Execution:</strong> If the vote passes the quorum and approval threshold, the change is automatically executed by the smart contracts (or by a multi-sig if manual intervention is needed).</li>
+            </ol>
+            <p><strong>Challenges with Token Governance:</strong></p>
+            <ul>
+                <li><strong>Voter Apathy:</strong> Most token holders don't vote. Participation rates are often below 10%.</li>
+                <li><strong>Plutocracy Risk:</strong> Wealthy holders (whales) can dominate votes. One token = one vote means money equals power.</li>
+                <li><strong>Vote Buying:</strong> Governance tokens can be temporarily borrowed (via DeFi lending) to swing a vote, then returned.</li>
+            </ul>
+            <p>New models like quadratic voting (where the cost of additional votes increases quadratically) and delegation (assigning your votes to trusted experts) are being explored to address these challenges.</p>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck
+    question="If a token has a Market Cap of $100M but a Fully Diluted Valuation (FDV) of $1B, what does this indicate?"
+    options={[
+        "The token is overvalued.",
+        "Only 10% of the total supply is currently in circulation, meaning 90% more tokens will enter the market over time, potentially diluting the price.",
+        "The token is deflationary and will increase in value.",
+        "The project is about to shut down."
+    ]}
+    correctAnswerIndex={1}
+    explanation="The large gap between Market Cap and FDV ($100M vs $1B) means that only 10% of tokens are circulating. As the remaining 90% unlock (through vesting, staking rewards, etc.), the increased supply could create significant selling pressure and dilute the value of existing tokens."
+/>

@@ -109,3 +109,75 @@ export function BestPractices() {
     </div>
   );
 }
+
+/* ─── Module 6: RAG & Function Calling ─── */
+export function RAGPipeline() {
+  return (
+    <div className="not-prose my-6">
+      <svg viewBox="0 0 800 160" className="w-full h-auto" role="img" aria-label="RAG Pipeline: Query → Embed → Retrieve → Augment → Generate">
+        {[
+          { x: 10, label: 'User Query', color: '#3b82f6' },
+          { x: 170, label: 'Embed', color: '#8b5cf6' },
+          { x: 330, label: 'Retrieve', color: '#10b981' },
+          { x: 490, label: 'Augment', color: '#f59e0b' },
+          { x: 650, label: 'Generate', color: '#ef4444' },
+        ].map((step, i) => (
+          <g key={step.label}>
+            <rect x={step.x} y={35} width={140} height={70} rx={12} fill={`${step.color}15`} stroke={step.color} strokeWidth={1.5} />
+            <text x={step.x + 70} y={75} textAnchor="middle" fill={step.color} fontSize={13} fontWeight={700}>{step.label}</text>
+            {i < 4 && (
+              <path d={`M${step.x + 145} 70 L${step.x + 165} 70`} stroke="currentColor" strokeWidth={1.5} opacity={0.3} markerEnd="url(#rag-arrow)" />
+            )}
+          </g>
+        ))}
+        {/* Vector DB icon */}
+        <rect x={370} y={115} width={80} height={30} rx={6} fill="#10b98115" stroke="#10b981" strokeWidth={1} />
+        <text x={410} y={135} textAnchor="middle" fill="#10b981" fontSize={10} fontWeight={600}>Vector DB</text>
+        <line x1={400} y1={105} x2={400} y2={115} stroke="#10b981" strokeWidth={1} strokeDasharray="3 2" />
+        <defs>
+          <marker id="rag-arrow" markerWidth={8} markerHeight={6} refX={8} refY={3} orient="auto">
+            <path d="M0 0 L8 3 L0 6 Z" fill="currentColor" opacity={0.4} />
+          </marker>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+/* ─── Module 7: Prompt Chaining & Agents ─── */
+export function PromptChaining() {
+  return (
+    <div className="not-prose my-6">
+      <svg viewBox="0 0 800 180" className="w-full h-auto" role="img" aria-label="Prompt Chain: Step 1 feeds into Step 2 feeds into Step 3, with a gate between each">
+        {[
+          { x: 10, label: 'Step 1', desc: 'Research', color: '#3b82f6' },
+          { x: 200, label: 'Gate', desc: 'Validate', color: '#f59e0b' },
+          { x: 340, label: 'Step 2', desc: 'Draft', color: '#8b5cf6' },
+          { x: 530, label: 'Gate', desc: 'Review', color: '#f59e0b' },
+          { x: 660, label: 'Step 3', desc: 'Polish', color: '#10b981' },
+        ].map((step, i) => {
+          const isGate = step.label === 'Gate';
+          const w = isGate ? 100 : 160;
+          const h = isGate ? 50 : 80;
+          const yOff = isGate ? 50 : 35;
+          return (
+            <g key={`${step.label}-${i}`}>
+              <rect x={step.x} y={yOff} width={w} height={h} rx={isGate ? 25 : 12} fill={`${step.color}15`} stroke={step.color} strokeWidth={1.5} strokeDasharray={isGate ? "4 3" : "none"} />
+              <text x={step.x + w/2} y={yOff + (isGate ? 22 : 35)} textAnchor="middle" fill={step.color} fontSize={isGate ? 11 : 14} fontWeight={700}>{isGate ? '✓ ' + step.desc : step.label}</text>
+              {!isGate && <text x={step.x + w/2} y={yOff + 55} textAnchor="middle" fill="currentColor" fontSize={11} opacity={0.5}>{step.desc}</text>}
+              {i < 4 && (
+                <path d={`M${step.x + w + 5} 75 L${step.x + w + 25} 75`} stroke="currentColor" strokeWidth={1.2} opacity={0.3} markerEnd="url(#chain-arrow)" />
+              )}
+            </g>
+          );
+        })}
+        <text x={400} y={160} textAnchor="middle" fill="currentColor" fontSize={11} opacity={0.4}>Output of each step becomes input for the next</text>
+        <defs>
+          <marker id="chain-arrow" markerWidth={8} markerHeight={6} refX={8} refY={3} orient="auto">
+            <path d="M0 0 L8 3 L0 6 Z" fill="currentColor" opacity={0.4} />
+          </marker>
+        </defs>
+      </svg>
+    </div>
+  );
+}

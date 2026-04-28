@@ -1,0 +1,94 @@
+<PromptChaining />
+
+A single prompt is powerful. But real-world tasks — writing a research report, building a marketing campaign, analyzing a dataset — require multiple steps where the output of one step feeds into the next. This module covers prompt chaining and how it leads to building autonomous agents.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg">Prompt Chaining: Sequential Workflows</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Prompt chaining is the practice of breaking a complex task into a series of smaller prompts, where the output of each prompt becomes the input for the next one. This is more reliable than asking the model to do everything in a single prompt.</p>
+            <p><strong>Example: Writing a Blog Post</strong></p>
+            <ol>
+                <li><strong>Step 1 (Research):</strong> "List the 5 most important trends in AI for 2026. For each, provide a one-sentence summary and a source."</li>
+                <li><strong>Step 2 (Outline):</strong> "Using these 5 trends, create a detailed blog post outline with an introduction, 5 sections (one per trend), and a conclusion."</li>
+                <li><strong>Step 3 (Draft):</strong> "Write the full blog post based on this outline. Target 1500 words, professional tone, aimed at tech executives."</li>
+                <li><strong>Step 4 (Edit):</strong> "Review this draft. Fix any factual errors, improve flow, and ensure each section transitions smoothly to the next."</li>
+            </ol>
+            <p><strong>Why Chaining Works Better:</strong></p>
+            <ul>
+                <li>Each step has a focused, clear objective — easier for the model to execute well.</li>
+                <li>You can inspect and correct intermediate results before they propagate.</li>
+                <li>Errors are contained to a single step, not the entire output.</li>
+                <li>You can use different models for different steps (a cheap model for research, a powerful one for drafting).</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg">Validation Gates: Quality Control Between Steps</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>A <strong>validation gate</strong> is a checkpoint between two steps in a chain that verifies the output meets your criteria before it moves forward. This prevents bad outputs from cascading through the pipeline.</p>
+            <p><strong>Types of Gates:</strong></p>
+            <ul>
+                <li><strong>LLM-as-Judge:</strong> Use a separate prompt to evaluate the output of the previous step. "On a scale of 1-5, rate the factual accuracy of this summary. If below 3, explain why."</li>
+                <li><strong>Schema Validation:</strong> Check that the output matches a specific format (valid JSON, correct number of items, required fields present).</li>
+                <li><strong>Human Review:</strong> For critical applications (legal, medical, financial), insert a human approval step before the chain continues.</li>
+                <li><strong>Automated Tests:</strong> Run the output through programmatic checks (word count, sentiment analysis, keyword presence).</li>
+            </ul>
+            <p>Gates add latency but dramatically improve reliability. In production systems, they are non-negotiable for any output that affects users, finances, or decisions.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg">From Chains to Agents: Adding Autonomy</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>When you add tools and decision-making to a prompt chain, it becomes an <strong>agent</strong>. The key difference: in a chain, the steps are fixed and predetermined. In an agent, the model decides what to do next based on the current situation.</p>
+            <p><strong>The Agent Loop:</strong></p>
+            <ol>
+                <li><strong>Observe:</strong> The agent reads the current state (user request, tool outputs, errors).</li>
+                <li><strong>Think:</strong> The agent reasons about what to do next (which tool to call, what information is missing).</li>
+                <li><strong>Act:</strong> The agent calls a tool or generates a response.</li>
+                <li><strong>Loop:</strong> The agent observes the result and decides whether the task is complete or if more steps are needed.</li>
+            </ol>
+            <p><strong>Key Agent Patterns:</strong></p>
+            <ul>
+                <li><strong>Single Agent:</strong> One LLM with access to multiple tools. Good for focused tasks like customer support or data analysis.</li>
+                <li><strong>Multi-Agent:</strong> Multiple specialized agents that collaborate. A "researcher" agent finds information, a "writer" agent drafts content, and an "editor" agent refines it.</li>
+                <li><strong>Supervisor Pattern:</strong> A "manager" agent coordinates worker agents, assigning tasks and reviewing results.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg">Evaluating Prompt Performance</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>As your prompts move from personal use to production systems, you need a way to systematically measure their quality. This is prompt evaluation (or "evals").</p>
+            <p><strong>Building an Eval Set:</strong></p>
+            <ol>
+                <li>Create a dataset of 20-50 example inputs with their ideal outputs.</li>
+                <li>Run your prompt against all examples.</li>
+                <li>Score each output (manually or with an LLM-as-judge).</li>
+                <li>Calculate metrics: accuracy, consistency, and latency.</li>
+            </ol>
+            <p><strong>Common Metrics:</strong></p>
+            <ul>
+                <li><strong>Accuracy:</strong> Does the output contain the correct information?</li>
+                <li><strong>Faithfulness:</strong> Does the output only use information from the provided context (for RAG)?</li>
+                <li><strong>Relevance:</strong> Does the output actually answer the question that was asked?</li>
+                <li><strong>Toxicity:</strong> Does the output contain harmful or biased content?</li>
+                <li><strong>Latency:</strong> How long does the prompt take to execute?</li>
+                <li><strong>Cost:</strong> How many tokens does the prompt consume?</li>
+            </ul>
+            <p><strong>Tools:</strong> LangSmith, Braintrust, and Promptfoo are popular platforms for running prompt evaluations at scale.</p>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck
+    question="What is the key difference between a prompt chain and an AI agent?"
+    options={[
+        "Agents are faster than chains.",
+        "In a chain, the steps are predetermined. In an agent, the model dynamically decides what step to take next based on the current state.",
+        "Chains use multiple models, agents use only one.",
+        "Agents don't require any prompts."
+    ]}
+    correctAnswerIndex={1}
+    explanation="A prompt chain follows a fixed sequence of steps. An AI agent adds a reasoning loop where the model observes results, thinks about what to do next, and dynamically decides which tool to use or which step to take, making it autonomous."
+/>

@@ -11,7 +11,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { KnowledgeCheck } from '@/components/mdx/knowledge-check';
 import Image from 'next/image';
-import { WebEvolution, BlockchainExplainer, SmartContractExplainer, Web3Ecosystem, Web3Passport, Web3Future } from '@/components/courses/web3-visuals';
+import { WebEvolution, BlockchainExplainer, SmartContractExplainer, Web3Ecosystem, Web3Passport, Web3Future, L2ScalingDiagram, TokenomicsVisual } from '@/components/courses/web3-visuals';
 
 const coursesDirectory = path.join(process.cwd(), 'src', 'content', 'courses', 'web3-101');
 
@@ -59,6 +59,8 @@ const components = {
   Web3Ecosystem,
   Web3Passport,
   Web3Future,
+  L2ScalingDiagram,
+  TokenomicsVisual,
 };
 
 export default async function CourseModulePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -73,6 +75,8 @@ export default async function CourseModulePage({ params }: { params: Promise<{ s
     { slug: 'module-4-ecosystem', title: '4. The Ecosystem' },
     { slug: 'module-5-getting-started', title: '5. Getting Started' },
     { slug: 'module-6-future', title: '6. The Future' },
+    { slug: 'module-7-layer2s', title: '7. Layer 2s & Scaling' },
+    { slug: 'module-8-tokenomics', title: '8. Tokenomics & Governance' },
   ];
   
   const currentIndex = allModules.findIndex(m => m.slug === slug);

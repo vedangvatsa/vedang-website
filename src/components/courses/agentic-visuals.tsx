@@ -121,3 +121,66 @@ export function AgenticFuture() {
     </div>
   );
 }
+
+/* ─── Module 6: Protocols Deep Dive ─── */
+export function ProtocolDiagram() {
+  return (
+    <div className="not-prose my-6">
+      <svg viewBox="0 0 800 220" className="w-full h-auto" role="img" aria-label="MCP connects agents to tools; A2A connects agents to agents">
+        {/* Agent */}
+        <rect x={310} y={10} width={180} height={60} rx={12} fill="#8b5cf615" stroke="#8b5cf6" strokeWidth={2} />
+        <text x={400} y={45} textAnchor="middle" fill="#8b5cf6" fontSize={15} fontWeight={700}>Your Agent</text>
+
+        {/* MCP label + tools */}
+        <text x={150} y={100} textAnchor="middle" fill="#3b82f6" fontSize={12} fontWeight={700}>MCP (Tool Protocol)</text>
+        <line x1={310} y1={70} x2={150} y2={115} stroke="#3b82f6" strokeWidth={1.5} strokeDasharray="4 3" />
+        {[
+          { y: 120, label: '🔍 Search API' },
+          { y: 150, label: '🗄️ Database' },
+          { y: 180, label: '📁 File System' },
+        ].map((t) => (
+          <g key={t.label}>
+            <rect x={60} y={t.y} width={180} height={28} rx={6} fill="#3b82f610" stroke="#3b82f6" strokeWidth={1} />
+            <text x={150} y={t.y + 18} textAnchor="middle" fill="#3b82f6" fontSize={11}>{t.label}</text>
+          </g>
+        ))}
+
+        {/* A2A label + agents */}
+        <text x={650} y={100} textAnchor="middle" fill="#10b981" fontSize={12} fontWeight={700}>A2A (Agent Protocol)</text>
+        <line x1={490} y1={70} x2={650} y2={115} stroke="#10b981" strokeWidth={1.5} strokeDasharray="4 3" />
+        {[
+          { y: 120, label: '🤖 Booking Agent' },
+          { y: 150, label: '🤖 Finance Agent' },
+          { y: 180, label: '🤖 Support Agent' },
+        ].map((t) => (
+          <g key={t.label}>
+            <rect x={560} y={t.y} width={180} height={28} rx={6} fill="#10b98110" stroke="#10b981" strokeWidth={1} />
+            <text x={650} y={t.y + 18} textAnchor="middle" fill="#10b981" fontSize={11}>{t.label}</text>
+          </g>
+        ))}
+      </svg>
+    </div>
+  );
+}
+
+/* ─── Module 7: Build Your First Agent ─── */
+export function AgentBuildSteps() {
+  const steps = [
+    { num: '1', label: 'Define Goal', desc: 'What should the agent accomplish?', color: '#3b82f6' },
+    { num: '2', label: 'Choose Tools', desc: 'Search, APIs, databases, code execution', color: '#8b5cf6' },
+    { num: '3', label: 'Write System Prompt', desc: 'Role, rules, and available tools', color: '#f59e0b' },
+    { num: '4', label: 'Build Loop', desc: 'Observe → Think → Act → Repeat', color: '#10b981' },
+    { num: '5', label: 'Test & Evaluate', desc: 'Run against edge cases, measure quality', color: '#ef4444' },
+  ];
+  return (
+    <div className="not-prose my-6 grid grid-cols-2 md:grid-cols-5 gap-3">
+      {steps.map((s) => (
+        <div key={s.num} className="p-4 rounded-xl border bg-card text-center">
+          <div className="w-8 h-8 rounded-full mx-auto mb-2 flex items-center justify-center text-white font-bold text-sm" style={{ backgroundColor: s.color }}>{s.num}</div>
+          <h4 className="font-semibold text-sm mb-1">{s.label}</h4>
+          <p className="text-xs text-muted-foreground leading-relaxed">{s.desc}</p>
+        </div>
+      ))}
+    </div>
+  );
+}

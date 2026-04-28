@@ -1,0 +1,111 @@
+---
+title: "Module 7: Deployment & Databases"
+description: "Your app works locally. Now make it real. Learn to deploy to the internet, connect a database, manage environment variables, and set up a custom domain."
+order: 7
+---
+
+<DeploymentStack />
+
+Building an app on your computer is only half the job. To share it with the world, you need to deploy it to the internet, connect it to a database for persistent data, and secure your configuration. This module covers the full production stack.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg">Deploying Your App to the Internet</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Deployment means putting your app on a server so anyone with a web browser can access it. Modern platforms make this incredibly easy — often a single command or a git push.</p>
+            <p><strong>The Big Three Hosting Platforms:</strong></p>
+            <ul>
+                <li><strong>Vercel:</strong> The creators of Next.js. The best choice for Next.js and React apps. Connect your GitHub repo, and every push to <code>main</code> automatically deploys a new version. Free tier is generous for personal projects.</li>
+                <li><strong>Netlify:</strong> Similar to Vercel, excellent for static sites, Jamstack apps, and serverless functions. Great for simple landing pages and portfolio sites.</li>
+                <li><strong>Cloudflare Pages:</strong> Fast global CDN with generous free tier. Excellent for performance-critical sites. Also offers Workers for serverless backend logic.</li>
+            </ul>
+            <p><strong>How Deployment Works (Vercel Example):</strong></p>
+            <ol>
+                <li>Push your code to a GitHub repository.</li>
+                <li>Go to <code>vercel.com</code> and click "Import Project."</li>
+                <li>Select your GitHub repo. Vercel automatically detects the framework (Next.js, Vite, etc.).</li>
+                <li>Add your environment variables (API keys, database URLs).</li>
+                <li>Click "Deploy." In about 60 seconds, your app is live at <code>your-project.vercel.app</code>.</li>
+            </ol>
+            <p>Every future push to <code>main</code> triggers an automatic re-deployment. Pull requests get their own preview URLs for testing.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg">Connecting a Database</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>If your app needs to store user data, posts, orders, or any persistent information, you need a database. The most popular options for vibe coders are:</p>
+            <div className="grid md:grid-cols-2 gap-6 my-6">
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-base font-semibold">Supabase (PostgreSQL)</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground">An open-source Firebase alternative. Provides a full Postgres database, authentication, file storage, and real-time subscriptions. Excellent for structured data and complex queries. Has a generous free tier.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-base font-semibold">Firebase (Google)</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground">Google's Backend-as-a-Service. Offers Firestore (NoSQL database), authentication, cloud functions, and hosting. Great for real-time apps like chat or collaboration tools. Deeply integrated with Google Cloud.</p>
+                    </CardContent>
+                </Card>
+            </div>
+            <p><strong>Key Concepts:</strong></p>
+            <ul>
+                <li><strong>SQL vs NoSQL:</strong> SQL databases (like Postgres/Supabase) store data in structured tables with rows and columns. NoSQL databases (like Firestore) store data as flexible JSON documents. For most web apps, SQL is the safer default.</li>
+                <li><strong>ORM (Object-Relational Mapping):</strong> Libraries like Prisma or Drizzle let you interact with your database using JavaScript/TypeScript instead of raw SQL. They make database queries feel like regular code.</li>
+                <li><strong>Migrations:</strong> When you change your database structure (add a column, rename a table), you create a "migration" — a versioned script that updates the database safely.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg">Environment Variables: Keeping Secrets Safe</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Your app will need secret keys — API keys for Stripe, database connection strings, authentication secrets. These must <strong>never</strong> be written directly in your code or pushed to GitHub.</p>
+            <p><strong>How Environment Variables Work:</strong></p>
+            <ol>
+                <li>Create a file called <code>.env.local</code> in your project root.</li>
+                <li>Add your secrets: <code>DATABASE_URL=postgresql://user:pass@host/db</code></li>
+                <li>Access them in code: <code>process.env.DATABASE_URL</code></li>
+                <li>Add <code>.env.local</code> to your <code>.gitignore</code> file so it's never pushed to GitHub.</li>
+                <li>Add the same variables to your hosting platform's settings (Vercel → Settings → Environment Variables).</li>
+            </ol>
+            <p><strong>The Critical Rule:</strong> If you accidentally commit a secret to GitHub, consider it compromised. Rotate the key immediately (generate a new one) and update it everywhere. Bots actively scan GitHub for exposed API keys and can exploit them within minutes.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg">Custom Domains and Going Live</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Your deployed app will start on a platform subdomain (e.g., <code>myapp.vercel.app</code>). To use your own domain (e.g., <code>myapp.com</code>):</p>
+            <ol>
+                <li><strong>Buy a domain:</strong> Use a registrar like Namecheap, Google Domains, or Cloudflare Registrar. Domains cost ~$10-15/year.</li>
+                <li><strong>Add the domain to your hosting platform:</strong> In Vercel, go to Settings → Domains → Add.</li>
+                <li><strong>Update DNS records:</strong> The platform will tell you to add a CNAME or A record in your domain registrar's DNS settings. This points your domain to the hosting platform's servers.</li>
+                <li><strong>Wait for propagation:</strong> DNS changes can take 5 minutes to 48 hours to take effect globally (usually under 30 minutes).</li>
+                <li><strong>SSL is automatic:</strong> Modern platforms automatically provision HTTPS certificates for your custom domain, so your site is secure from day one.</li>
+            </ol>
+            <p><strong>Post-Launch Checklist:</strong></p>
+            <ul>
+                <li>Test all features on the live URL (not just localhost).</li>
+                <li>Check that environment variables are set correctly in production.</li>
+                <li>Submit your site to Google Search Console for SEO indexing.</li>
+                <li>Set up basic analytics (Vercel Analytics, PostHog, or Google Analytics).</li>
+                <li>Add a favicon and proper meta tags for social media sharing.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck
+    question="Why should you NEVER hardcode API keys directly in your source code?"
+    options={[
+        "It makes the code run slower.",
+        "API keys change too frequently to be hardcoded.",
+        "If your code is pushed to GitHub, bots will find and exploit the exposed keys within minutes.",
+        "Hardcoded keys only work on your local machine."
+    ]}
+    correctAnswerIndex={2}
+    explanation="Exposed API keys on public GitHub repositories are actively scanned by malicious bots. They can be exploited within minutes, leading to unauthorized charges, data breaches, or service abuse. Always use environment variables and .gitignore."
+/>

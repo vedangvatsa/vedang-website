@@ -1,0 +1,90 @@
+<RAGPipeline />
+
+LLMs are limited by their training data — they don't know about your company's documents, your personal files, or events that happened after their training cutoff. RAG and function calling are the two techniques that solve this limitation, making LLMs far more useful in production.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg">What is RAG (Retrieval-Augmented Generation)?</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>RAG is a technique that gives an LLM access to external knowledge at inference time. Instead of relying solely on what the model learned during training, you retrieve relevant information from your own data sources and inject it into the prompt.</p>
+            <p><strong>The RAG Pipeline:</strong></p>
+            <ol>
+                <li><strong>Chunk:</strong> Split your documents (PDFs, web pages, knowledge bases) into small, meaningful sections.</li>
+                <li><strong>Embed:</strong> Convert each chunk into a numerical vector (an "embedding") using an embedding model. These vectors capture the semantic meaning of the text.</li>
+                <li><strong>Store:</strong> Save these vectors in a vector database (like Pinecone, Weaviate, or ChromaDB).</li>
+                <li><strong>Retrieve:</strong> When a user asks a question, embed the question and search the vector database for the most semantically similar chunks.</li>
+                <li><strong>Augment:</strong> Insert the retrieved chunks into the prompt as context.</li>
+                <li><strong>Generate:</strong> The LLM generates an answer based on both the user's question and the retrieved context.</li>
+            </ol>
+            <p><strong>Why RAG Matters:</strong> Without RAG, if you ask an LLM "What is our company's refund policy?", it will either hallucinate an answer or say it doesn't know. With RAG, the LLM retrieves your actual refund policy document and answers accurately, with citations.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg">Embeddings and Vector Databases</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>An <strong>embedding</strong> is a list of numbers (a vector) that represents the meaning of a piece of text. Texts with similar meanings have vectors that are close together in the mathematical space. This is how semantic search works — you find documents by meaning, not just by keyword matching.</p>
+            <p><strong>Popular Embedding Models:</strong></p>
+            <ul>
+                <li><strong>OpenAI <code>text-embedding-3-small</code>:</strong> Fast, cheap, and effective for most use cases.</li>
+                <li><strong>Google <code>text-embedding-004</code>:</strong> Strong performance, well-integrated with Vertex AI.</li>
+                <li><strong>Cohere <code>embed-v3</code>:</strong> Excellent multilingual support.</li>
+            </ul>
+            <p><strong>Popular Vector Databases:</strong></p>
+            <ul>
+                <li><strong>Pinecone:</strong> Fully managed, serverless vector database. Easiest to get started with.</li>
+                <li><strong>ChromaDB:</strong> Open-source, runs locally. Great for prototyping and small projects.</li>
+                <li><strong>Supabase pgvector:</strong> Add vector search to your existing Postgres database. No extra infrastructure needed.</li>
+                <li><strong>Weaviate:</strong> Open-source, supports hybrid search (keyword + vector).</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg">Function Calling (Tool Use)</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Function calling is how an LLM interacts with the real world. Instead of just generating text, the model can decide to call a function (a "tool") that you define. This is the foundation for building AI agents.</p>
+            <p><strong>How It Works:</strong></p>
+            <ol>
+                <li>You define a set of functions (tools) with their names, descriptions, and parameters in JSON Schema format.</li>
+                <li>You send a user message along with the tool definitions to the API.</li>
+                <li>The model analyzes the user's request and decides whether to call a tool. If it does, it returns a structured JSON object with the function name and arguments.</li>
+                <li>Your code executes the function with those arguments and sends the result back to the model.</li>
+                <li>The model uses the function result to generate its final response to the user.</li>
+            </ol>
+            <p><strong>Common Use Cases:</strong></p>
+            <ul>
+                <li><strong>Fetching real-time data:</strong> "What's the weather in Tokyo?" → calls <code>get_weather("Tokyo")</code></li>
+                <li><strong>Database operations:</strong> "Show me all orders from last week" → calls <code>query_orders(date_range)</code></li>
+                <li><strong>Sending notifications:</strong> "Email the client about the meeting" → calls <code>send_email(to, subject, body)</code></li>
+                <li><strong>Calculations:</strong> "What's 15% tip on $87.50?" → calls <code>calculate_tip(amount, percentage)</code></li>
+            </ul>
+            <p>Function calling is supported by all major model providers: OpenAI, Anthropic (Claude), and Google (Gemini). The syntax varies slightly, but the concept is identical.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg">Structured Outputs: Guaranteed JSON</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>When building applications, you need the LLM to return data in a predictable, parseable format — not free-form text. Structured outputs ensure the model returns valid JSON that matches a schema you define.</p>
+            <p><strong>Without Structured Outputs:</strong> You ask the model to "return JSON" in your prompt and hope it complies. Sometimes it adds markdown code fences, extra commentary, or returns malformed JSON. Your code breaks.</p>
+            <p><strong>With Structured Outputs:</strong> You provide a JSON Schema, and the model is constrained to only output valid JSON matching that schema. No extra text, no malformed output, guaranteed.</p>
+            <p><strong>When to Use:</strong></p>
+            <ul>
+                <li>Extracting structured data from unstructured text (emails, documents, web pages).</li>
+                <li>Classification tasks where you need a fixed set of labels.</li>
+                <li>Building API responses that your frontend can reliably consume.</li>
+                <li>Data pipelines where the output feeds directly into another system.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck
+    question="In a RAG pipeline, what is the purpose of embedding a user's question?"
+    options={[
+        "To translate the question into a different language.",
+        "To convert the question into a numerical vector so it can be compared against document vectors for semantic similarity.",
+        "To compress the question so it uses fewer API tokens.",
+        "To check the question for prompt injection attacks."
+    ]}
+    correctAnswerIndex={1}
+    explanation="Embedding converts text into a vector (a list of numbers) that captures its semantic meaning. By embedding the user's question and comparing it against document embeddings, you can find the most relevant documents — even if they don't share exact keywords."
+/>

@@ -12,6 +12,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
+import { DebuggingFlow, DeploymentStack } from '@/components/courses/vibe-coding-visuals';
 
 const coursesDirectory = path.join(process.cwd(), 'src', 'content', 'courses', 'vibe-coding');
 
@@ -61,6 +62,8 @@ const components = {
   PromptTechniques,
   LabWorkflow,
   ProductPillars,
+  DebuggingFlow,
+  DeploymentStack,
   Link,
 };
 
@@ -75,6 +78,8 @@ export default async function CourseModulePage({ params }: { params: Promise<{ s
     { slug: 'module-3-prompts', title: '3. The Art of the Prompt' },
     { slug: 'module-4-lab', title: '4. Lab: Name Generator' },
     { slug: 'module-5-product', title: '5. To Professional Product' },
+    { slug: 'module-6-debugging', title: '6. Debugging & Iteration' },
+    { slug: 'module-7-deployment', title: '7. Deployment & Databases' },
   ];
   
   const currentIndex = allModules.findIndex(m => m.slug === slug);

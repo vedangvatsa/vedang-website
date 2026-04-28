@@ -155,3 +155,59 @@ export function Web3Future() {
     </div>
   );
 }
+
+/* ─── Module 7: L2 Scaling ─── */
+export function L2ScalingDiagram() {
+  return (
+    <div className="not-prose my-6">
+      <svg viewBox="0 0 800 250" className="w-full h-auto" role="img" aria-label="Layer 2 scaling diagram showing rollups batching transactions to Layer 1">
+        {/* L1 base */}
+        <rect x={100} y={180} width={600} height={50} rx={10} fill="#f59e0b12" stroke="#f59e0b" strokeWidth={2} />
+        <text x={400} y={210} textAnchor="middle" fill="#f59e0b" fontSize={16} fontWeight={700}>Layer 1 — Ethereum Mainnet</text>
+        <text x={400} y={225} textAnchor="middle" fill="#f59e0b" fontSize={10} opacity={0.6}>Slow, expensive, ultra-secure</text>
+
+        {/* L2s */}
+        {[
+          { x: 110, label: 'Arbitrum', color: '#3b82f6' },
+          { x: 310, label: 'Optimism', color: '#ef4444' },
+          { x: 510, label: 'Base', color: '#3b82f6' },
+        ].map((l2) => (
+          <g key={l2.label}>
+            <rect x={l2.x} y={50} width={170} height={45} rx={8} fill={`${l2.color}12`} stroke={l2.color} strokeWidth={1.5} />
+            <text x={l2.x + 85} y={77} textAnchor="middle" fill={l2.color} fontSize={13} fontWeight={700}>{l2.label}</text>
+            {/* Tx dots */}
+            {[0, 20, 40, 60, 80, 100, 120].map((dx) => (
+              <circle key={dx} cx={l2.x + 25 + dx} cy={25} r={4} fill={`${l2.color}40`} stroke={l2.color} strokeWidth={0.5} />
+            ))}
+            <text x={l2.x + 85} y={18} textAnchor="middle" fill={l2.color} fontSize={9} opacity={0.6}>Transactions</text>
+            {/* Arrow down */}
+            <line x1={l2.x + 85} y1={95} x2={l2.x + 85} y2={175} stroke={l2.color} strokeWidth={1.5} strokeDasharray="4 3" />
+            <text x={l2.x + 95} y={140} fill={l2.color} fontSize={9} opacity={0.7}>Batch</text>
+          </g>
+        ))}
+      </svg>
+    </div>
+  );
+}
+
+/* ─── Module 8: Tokenomics ─── */
+export function TokenomicsVisual() {
+  const types = [
+    { label: 'Utility', desc: 'Pay for services', example: 'ETH for gas', color: '#3b82f6' },
+    { label: 'Governance', desc: 'Vote on proposals', example: 'UNI, AAVE', color: '#8b5cf6' },
+    { label: 'Security', desc: 'Represents ownership', example: 'Tokenized stock', color: '#10b981' },
+    { label: 'Stablecoin', desc: 'Pegged to fiat', example: 'USDC, DAI', color: '#f59e0b' },
+  ];
+  return (
+    <div className="not-prose my-6 grid grid-cols-2 md:grid-cols-4 gap-3">
+      {types.map((t) => (
+        <div key={t.label} className="p-4 rounded-xl border bg-card text-center">
+          <div className="w-10 h-10 rounded-full mx-auto mb-2 flex items-center justify-center text-white font-bold text-xs" style={{ backgroundColor: t.color }}>{t.label[0]}</div>
+          <h4 className="font-semibold text-sm mb-1">{t.label}</h4>
+          <p className="text-xs text-muted-foreground">{t.desc}</p>
+          <p className="text-xs text-muted-foreground/70 italic mt-1">{t.example}</p>
+        </div>
+      ))}
+    </div>
+  );
+}

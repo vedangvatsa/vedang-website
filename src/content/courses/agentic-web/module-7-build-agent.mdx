@@ -1,0 +1,102 @@
+<AgentBuildSteps />
+
+Theory is valuable, but nothing beats building something real. This module walks you through the practical steps of creating an AI agent, from defining its purpose to testing it against edge cases. You don't need to be an expert programmer — modern frameworks handle most of the complexity.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg text-left">Step 1: Define the Agent's Purpose and Constraints</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Before writing any code, you must define exactly what your agent should (and should not) do. A well-defined purpose prevents scope creep and makes the agent predictable and trustworthy.</p>
+            <p><strong>The Agent Design Document:</strong></p>
+            <ul>
+                <li><strong>Goal:</strong> What specific outcome should the agent achieve? Be precise. "Answer customer support questions about our product using our knowledge base" is better than "be a helpful assistant."</li>
+                <li><strong>Persona:</strong> What role should the agent adopt? (e.g., "You are a friendly, concise customer support agent for Acme Corp.")</li>
+                <li><strong>Tools:</strong> What tools does the agent need? (e.g., search the knowledge base, look up order status, escalate to a human.)</li>
+                <li><strong>Guardrails:</strong> What should the agent refuse to do? (e.g., never give medical advice, never share internal pricing, always escalate billing disputes to a human.)</li>
+                <li><strong>Success Criteria:</strong> How will you know the agent is working well? (e.g., 90% of questions answered correctly, average response time under 5 seconds, user satisfaction score above 4.5/5.)</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg text-left">Step 2: Choose Your Framework</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>You don't need to build an agent from scratch. Frameworks provide the scaffolding — the reasoning loop, tool management, memory, and error handling — so you can focus on your agent's unique logic.</p>
+            <p><strong>Framework Comparison:</strong></p>
+            <div className="grid md:grid-cols-2 gap-4 my-4">
+                <Card>
+                    <CardHeader><CardTitle className="text-base font-semibold">LangGraph (LangChain)</CardTitle></CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground"><strong>Best for:</strong> Complex, stateful workflows with branching logic. You define your agent as a graph of nodes (steps) and edges (transitions). Great for production systems that need fine-grained control.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader><CardTitle className="text-base font-semibold">CrewAI</CardTitle></CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground"><strong>Best for:</strong> Multi-agent teams. You define agents with roles ("researcher," "writer") and tasks, and CrewAI orchestrates their collaboration. Ideal for content pipelines and research tasks.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader><CardTitle className="text-base font-semibold">Google ADK</CardTitle></CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground"><strong>Best for:</strong> Building agents in the Google ecosystem. Open-source, supports A2A natively, integrates with Gemini models and Google Cloud services. Great for enterprise deployments.</p>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader><CardTitle className="text-base font-semibold">OpenAI Agents SDK</CardTitle></CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground"><strong>Best for:</strong> Simplicity. Minimal boilerplate, built-in tool calling, and handoff patterns. If you're already using OpenAI models, this is the fastest path to a working agent.</p>
+                    </CardContent>
+                </Card>
+            </div>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg text-left">Step 3: Write the System Prompt and Add Tools</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>The system prompt is the agent's "operating manual." It defines who the agent is, what it knows, what tools it has, and how it should behave. A great system prompt is the single most important factor in agent quality.</p>
+            <p><strong>System Prompt Template:</strong></p>
+            <div className="border-l-4 border-primary/50 pl-4 my-4 text-sm">
+                <p className="font-semibold mb-2">You are [role]. Your goal is to [objective].</p>
+                <p className="mb-2"><strong>TOOLS:</strong> You have access to the following tools: [list tools with descriptions].</p>
+                <p className="mb-2"><strong>RULES:</strong></p>
+                <p>1. Always search the knowledge base before answering a question.</p>
+                <p>2. If you cannot find the answer, say "I don't have that information" — never guess.</p>
+                <p>3. Keep responses under 3 sentences unless the user asks for more detail.</p>
+                <p>4. If a question involves billing, say "Let me connect you with our billing team" and use the escalate_to_human tool.</p>
+            </div>
+            <p><strong>Adding Tools:</strong> Each tool is defined with a name, description, and parameters. The agent's LLM reads these descriptions to decide which tool to use. A well-written tool description is critical — if the LLM doesn't understand what a tool does, it won't use it correctly.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg text-left">Step 4: Test, Evaluate, and Deploy</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>An agent that works in demo mode will break in production. Rigorous testing is essential before exposing your agent to real users.</p>
+            <p><strong>Testing Strategies:</strong></p>
+            <ul>
+                <li><strong>Happy Path Tests:</strong> Verify the agent handles standard, expected requests correctly. "What are your business hours?" should always get the right answer.</li>
+                <li><strong>Edge Case Tests:</strong> Test unusual inputs: very long messages, multiple questions at once, off-topic requests, adversarial prompts.</li>
+                <li><strong>Tool Failure Tests:</strong> What happens when a tool returns an error? The agent should handle failures gracefully, not crash or hallucinate.</li>
+                <li><strong>Guardrail Tests:</strong> Try to make the agent violate its rules. Ask it to share internal data, impersonate a human, or perform actions outside its scope.</li>
+            </ul>
+            <p><strong>Deployment Best Practices:</strong></p>
+            <ul>
+                <li>Start with an internal-only beta. Let your team use it before exposing it to customers.</li>
+                <li>Log all conversations for review. This is your feedback loop for improving the system prompt.</li>
+                <li>Set rate limits to prevent abuse and runaway costs.</li>
+                <li>Always have a human escalation path. Users must be able to reach a real person.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck
+    question="Why is a well-written tool description critical when building an AI agent?"
+    options={[
+        "It determines how fast the tool executes.",
+        "The LLM reads tool descriptions to decide which tool to use for a given task. A poor description means the agent won't select the right tool.",
+        "It is displayed to the end user so they know what tools are available.",
+        "Tool descriptions are used to generate the agent's UI."
+    ]}
+    correctAnswerIndex={1}
+    explanation="The agent's LLM uses tool descriptions to understand what each tool does and when to use it. If a tool is poorly described, the model may ignore it, misuse it, or call the wrong tool — leading to incorrect behavior."
+/>

@@ -1,0 +1,113 @@
+---
+title: "Module 6: Debugging & Iteration"
+description: "AI-generated code will break. Learning to read errors, iterate effectively, and use version control is the difference between a hobby project and a real product."
+order: 6
+---
+
+<DebuggingFlow />
+
+Every vibe coder will hit a wall where the AI generates code that doesn't work. This is not a failure — it's the normal development cycle. The skill that separates beginners from professionals is knowing how to debug effectively and iterate quickly.
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="item-1">
+        <AccordionTrigger className="text-lg">Reading Error Messages: Your Most Important Skill</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>When your app crashes, the terminal or browser console will display an error message. Most beginners panic and immediately ask the AI to "fix it" without reading the message. This is a mistake. Error messages are your best friend — they tell you exactly what went wrong and where.</p>
+            <p><strong>Anatomy of an Error Message:</strong></p>
+            <ul>
+                <li><strong>Error Type:</strong> The name of the error (e.g., <code>TypeError</code>, <code>ReferenceError</code>, <code>SyntaxError</code>). This tells you the category of the problem.</li>
+                <li><strong>Error Message:</strong> A human-readable description (e.g., "Cannot read properties of undefined"). This tells you what happened.</li>
+                <li><strong>Stack Trace:</strong> The list of files and line numbers the code went through before crashing. The first line of the trace is usually the exact location of the problem.</li>
+            </ul>
+            <div className="grid md:grid-cols-2 gap-6 my-6">
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-base font-semibold">❌ Beginner Approach</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground italic">"My app is broken. Fix it."</p>
+                        <p className="text-sm text-muted-foreground mt-2">No error message, no context. The AI has to guess, and it will often guess wrong, introducing new bugs.</p>
+                    </CardContent>
+                </Card>
+                <Card className="border-primary/50">
+                    <CardHeader>
+                        <CardTitle className="text-base font-semibold">✅ Professional Approach</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground italic">"I'm getting this error: `TypeError: Cannot read properties of undefined (reading 'map')` at line 42 in Dashboard.tsx. The `users` variable is supposed to be an array fetched from Supabase."</p>
+                        <p className="text-sm text-muted-foreground mt-2">Full error, location, and context. The AI will fix it instantly.</p>
+                    </CardContent>
+                </Card>
+            </div>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2">
+        <AccordionTrigger className="text-lg">The Debugging Trifecta: What to Give the AI</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>When you need the AI to fix a bug, always provide three things:</p>
+            <ol>
+                <li><strong>The full error message:</strong> Copy and paste the entire error, including the stack trace. Don't paraphrase it.</li>
+                <li><strong>The relevant code:</strong> Paste the file or function where the error is occurring. If you're using a tool like Cursor or Antigravity that can see your codebase, just point it to the file.</li>
+                <li><strong>What you were trying to do:</strong> Explain the intended behavior. "This component should display a list of users fetched from the database." Without your intent, the AI might fix the error in a way that breaks the feature.</li>
+            </ol>
+            <p><strong>Common Error Types and What They Mean:</strong></p>
+            <ul>
+                <li><strong><code>SyntaxError</code>:</strong> You have a typo in your code — a missing bracket, comma, or quotation mark. The AI generated malformed code.</li>
+                <li><strong><code>TypeError</code>:</strong> You're trying to do something to a value that doesn't support it (e.g., calling <code>.map()</code> on <code>undefined</code>). This usually means data hasn't loaded yet.</li>
+                <li><strong><code>ReferenceError</code>:</strong> You're using a variable or function that doesn't exist. This often means a missing import statement.</li>
+                <li><strong><code>404 Not Found</code>:</strong> A URL or API endpoint is wrong. Double-check the path.</li>
+                <li><strong><code>CORS Error</code>:</strong> Your frontend is trying to call a backend on a different domain. This is a server configuration issue, not a frontend bug.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg">Version Control with Git: Your Safety Net</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>The single most important safety practice in vibe coding is committing your code to Git before every major change. Git is a version control system that saves snapshots of your entire project. If the AI breaks something, you can always revert to the last working version.</p>
+            <p><strong>The Golden Rule:</strong> Before you ask the AI to make a big change, always run:</p>
+            <div className="border-l-4 border-primary/50 pl-4 italic my-2"><p><code>git add -A && git commit -m "working state before [describe what you're about to change]"</code></p></div>
+            <p><strong>Essential Git Commands:</strong></p>
+            <ul>
+                <li><strong><code>git init</code>:</strong> Initialize a new Git repository in your project folder.</li>
+                <li><strong><code>git add -A</code>:</strong> Stage all changes for committing.</li>
+                <li><strong><code>git commit -m "message"</code>:</strong> Save a snapshot with a description.</li>
+                <li><strong><code>git log --oneline</code>:</strong> View your commit history.</li>
+                <li><strong><code>git checkout .</code>:</strong> Undo all uncommitted changes and go back to the last commit.</li>
+                <li><strong><code>git push</code>:</strong> Upload your code to GitHub for backup and collaboration.</li>
+            </ul>
+            <p>Think of commits as save points in a video game. You save before the boss fight, so if you die, you don't lose progress.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg">The Iteration Mindset: Small Changes, Fast Feedback</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>The biggest mistake beginner vibe coders make is asking the AI to build everything at once. A prompt like "build me a full SaaS app with authentication, payments, a dashboard, and an admin panel" will almost always produce something that's fundamentally broken.</p>
+            <p><strong>The Professional Workflow:</strong></p>
+            <ol>
+                <li><strong>Build one feature at a time.</strong> Get the login page working before touching the dashboard.</li>
+                <li><strong>Test after every change.</strong> Don't wait until 5 features are built to check if the app works.</li>
+                <li><strong>Commit after every working state.</strong> If it works, save it.</li>
+                <li><strong>Make one change per prompt.</strong> "Add a logout button to the navbar" is better than "add logout, change the theme, and fix the sidebar."</li>
+            </ol>
+            <p><strong>When the AI Gets Stuck in a Loop:</strong></p>
+            <p>Sometimes the AI will try to fix a bug and create a new one, then fix that and create another. This is a "fix loop." When this happens:</p>
+            <ul>
+                <li>Stop and revert to your last working commit (<code>git checkout .</code>).</li>
+                <li>Describe the feature you want from scratch, providing more context this time.</li>
+                <li>Consider switching tools — if Cursor is struggling, try pasting the problem into Claude or ChatGPT for a fresh perspective.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
+
+<KnowledgeCheck
+    question="You get an error: `TypeError: Cannot read properties of undefined (reading 'name')`. What is the most likely cause?"
+    options={[
+        "You have a syntax error like a missing semicolon.",
+        "You're trying to access a property on a variable that hasn't been set or loaded yet.",
+        "Your internet connection is down.",
+        "The AI generated code in the wrong programming language."
+    ]}
+    correctAnswerIndex={1}
+    explanation="A TypeError about 'undefined' means you're trying to access `.name` on something that doesn't exist yet. This commonly happens when data from an API or database hasn't finished loading. The fix is usually to add a loading check (like `if (!data) return null;`)."
+/>
