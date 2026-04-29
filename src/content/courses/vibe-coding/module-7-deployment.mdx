@@ -12,7 +12,7 @@ Building an app on your computer is only half the job. To share it with the worl
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg">Deploying Your App to the Internet</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>Deployment means putting your app on a server so anyone with a web browser can access it. Modern platforms make this incredibly easy — often a single command or a git push.</p>
+            <p>Deployment means putting your app on a server so anyone with a web browser can access it. Modern platforms make this incredibly easy, often a single command or a git push.</p>
             <p><strong>The Big Three Hosting Platforms:</strong></p>
             <ul>
                 <li><strong>Vercel:</strong> The creators of Next.js. The best choice for Next.js and React apps. Connect your GitHub repo, and every push to <code>main</code> automatically deploys a new version. Free tier is generous for personal projects.</li>
@@ -56,14 +56,14 @@ Building an app on your computer is only half the job. To share it with the worl
             <ul>
                 <li><strong>SQL vs NoSQL:</strong> SQL databases (like Postgres/Supabase) store data in structured tables with rows and columns. NoSQL databases (like Firestore) store data as flexible JSON documents. For most web apps, SQL is the safer default.</li>
                 <li><strong>ORM (Object-Relational Mapping):</strong> Libraries like Prisma or Drizzle let you interact with your database using JavaScript/TypeScript instead of raw SQL. They make database queries feel like regular code.</li>
-                <li><strong>Migrations:</strong> When you change your database structure (add a column, rename a table), you create a "migration" — a versioned script that updates the database safely.</li>
+                <li><strong>Migrations:</strong> When you change your database structure (add a column, rename a table), you create a "migration", a versioned script that updates the database safely.</li>
             </ul>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg">Environment Variables: Keeping Secrets Safe</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>Your app will need secret keys — API keys for Stripe, database connection strings, authentication secrets. These must <strong>never</strong> be written directly in your code or pushed to GitHub.</p>
+            <p>Your app will need secret keys, API keys for Stripe, database connection strings, authentication secrets. These must <strong>never</strong> be written directly in your code or pushed to GitHub.</p>
             <p><strong>How Environment Variables Work:</strong></p>
             <ol>
                 <li>Create a file called <code>.env.local</code> in your project root.</li>

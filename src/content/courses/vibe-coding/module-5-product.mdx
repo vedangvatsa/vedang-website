@@ -29,7 +29,7 @@ You must define your security standards here.
 **Example Security Rules:**
 1.  **Secrets:** *"Never hardcode API keys, database passwords, or any secrets in the source code. Always use environment variables loaded from .env files."*
 2.  **Passwords:** *"Always hash user passwords using bcrypt with at least 12 salt rounds before saving them to the database. Never store plaintext passwords."*
-3.  **Data Access:** *"Never trust data sent from the browser. Always validate and sanitize all input on the backend server before processing it. Use parameterized queries for all database interactions — never concatenate user input into SQL strings."*
+3.  **Data Access:** *"Never trust data sent from the browser. Always validate and sanitize all input on the backend server before processing it. Use parameterized queries for all database interactions, never concatenate user input into SQL strings."*
 4.  **Authentication:** *"Use established libraries for authentication (e.g., NextAuth.js, Clerk). Never build custom authentication from scratch."*
 5.  **Dependencies:** *"Before adding any npm package, verify it has at least 1,000 weekly downloads and is actively maintained. Never install packages from unknown sources."*
 

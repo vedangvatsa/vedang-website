@@ -1,6 +1,6 @@
 <AgentBuildSteps />
 
-Theory is valuable, but nothing beats building something real. This module walks you through the practical steps of creating an AI agent, from defining its purpose to testing it against edge cases. You don't need to be an expert programmer — modern frameworks handle most of the complexity.
+Theory is valuable, but nothing beats building something real. This module walks you through the practical steps of creating an AI agent, from defining its purpose to testing it against edge cases. You don't need to be an expert programmer, modern frameworks handle most of the complexity.
 
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
@@ -20,7 +20,7 @@ Theory is valuable, but nothing beats building something real. This module walks
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">Step 2: Choose Your Framework</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>You don't need to build an agent from scratch. Frameworks provide the scaffolding — the reasoning loop, tool management, memory, and error handling — so you can focus on your agent's unique logic.</p>
+            <p>You don't need to build an agent from scratch. Frameworks provide the scaffolding, the reasoning loop, tool management, memory, and error handling, so you can focus on your agent's unique logic.</p>
             <p><strong>Framework Comparison:</strong></p>
             <div className="grid md:grid-cols-2 gap-4 my-4">
                 <Card>
@@ -60,11 +60,11 @@ Theory is valuable, but nothing beats building something real. This module walks
                 <p className="mb-2"><strong>TOOLS:</strong> You have access to the following tools: [list tools with descriptions].</p>
                 <p className="mb-2"><strong>RULES:</strong></p>
                 <p>1. Always search the knowledge base before answering a question.</p>
-                <p>2. If you cannot find the answer, say "I don't have that information" — never guess.</p>
+                <p>2. If you cannot find the answer, say "I don't have that information", never guess.</p>
                 <p>3. Keep responses under 3 sentences unless the user asks for more detail.</p>
                 <p>4. If a question involves billing, say "Let me connect you with our billing team" and use the escalate_to_human tool.</p>
             </div>
-            <p><strong>Adding Tools:</strong> Each tool is defined with a name, description, and parameters. The agent's LLM reads these descriptions to decide which tool to use. A well-written tool description is critical — if the LLM doesn't understand what a tool does, it won't use it correctly.</p>
+            <p><strong>Adding Tools:</strong> Each tool is defined with a name, description, and parameters. The agent's LLM reads these descriptions to decide which tool to use. A well-written tool description is critical, if the LLM doesn't understand what a tool does, it won't use it correctly.</p>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-4">
@@ -98,5 +98,5 @@ Theory is valuable, but nothing beats building something real. This module walks
         "Tool descriptions are used to generate the agent's UI."
     ]}
     correctAnswerIndex={1}
-    explanation="The agent's LLM uses tool descriptions to understand what each tool does and when to use it. If a tool is poorly described, the model may ignore it, misuse it, or call the wrong tool — leading to incorrect behavior."
+    explanation="The agent's LLM uses tool descriptions to understand what each tool does and when to use it. If a tool is poorly described, the model may ignore it, misuse it, or call the wrong tool, leading to incorrect behavior."
 />

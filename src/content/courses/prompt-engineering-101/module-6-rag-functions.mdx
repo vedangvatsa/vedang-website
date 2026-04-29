@@ -1,6 +1,6 @@
 <RAGPipeline />
 
-LLMs are limited by their training data — they don't know about your company's documents, your personal files, or events that happened after their training cutoff. RAG and function calling are the two techniques that solve this limitation, making LLMs far more useful in production.
+LLMs are limited by their training data, they don't know about your company's documents, your personal files, or events that happened after their training cutoff. RAG and function calling are the two techniques that solve this limitation, making LLMs far more useful in production.
 
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
@@ -22,7 +22,7 @@ LLMs are limited by their training data — they don't know about your company's
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg">Embeddings and Vector Databases</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>An <strong>embedding</strong> is a list of numbers (a vector) that represents the meaning of a piece of text. Texts with similar meanings have vectors that are close together in the mathematical space. This is how semantic search works — you find documents by meaning, not just by keyword matching.</p>
+            <p>An <strong>embedding</strong> is a list of numbers (a vector) that represents the meaning of a piece of text. Texts with similar meanings have vectors that are close together in the mathematical space. This is how semantic search works, you find documents by meaning, not just by keyword matching.</p>
             <p><strong>Popular Embedding Models:</strong></p>
             <ul>
                 <li><strong>OpenAI <code>text-embedding-3-small</code>:</strong> Fast, cheap, and effective for most use cases.</li>
@@ -63,7 +63,7 @@ LLMs are limited by their training data — they don't know about your company's
     <AccordionItem value="item-4">
         <AccordionTrigger className="text-lg">Structured Outputs: Guaranteed JSON</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>When building applications, you need the LLM to return data in a predictable, parseable format — not free-form text. Structured outputs ensure the model returns valid JSON that matches a schema you define.</p>
+            <p>When building applications, you need the LLM to return data in a predictable, parseable format, not free-form text. Structured outputs ensure the model returns valid JSON that matches a schema you define.</p>
             <p><strong>Without Structured Outputs:</strong> You ask the model to "return JSON" in your prompt and hope it complies. Sometimes it adds markdown code fences, extra commentary, or returns malformed JSON. Your code breaks.</p>
             <p><strong>With Structured Outputs:</strong> You provide a JSON Schema, and the model is constrained to only output valid JSON matching that schema. No extra text, no malformed output, guaranteed.</p>
             <p><strong>When to Use:</strong></p>
@@ -86,5 +86,5 @@ LLMs are limited by their training data — they don't know about your company's
         "To check the question for prompt injection attacks."
     ]}
     correctAnswerIndex={1}
-    explanation="Embedding converts text into a vector (a list of numbers) that captures its semantic meaning. By embedding the user's question and comparing it against document embeddings, you can find the most relevant documents — even if they don't share exact keywords."
+    explanation="Embedding converts text into a vector (a list of numbers) that captures its semantic meaning. By embedding the user's question and comparing it against document embeddings, you can find the most relevant documents, even if they don't share exact keywords."
 />

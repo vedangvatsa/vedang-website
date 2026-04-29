@@ -132,7 +132,7 @@ export default function Home() {
             <Link href="/glossary" className="group md:col-span-2 lg:col-span-3">
               <div className="flex h-full flex-col justify-between overflow-hidden rounded-xl border bg-card p-6 transition-colors duration-200 hover:border-primary/50">
                 <h3 className="text-lg font-semibold mb-2">The Web3 & AI Glossary</h3>
-                <p className="text-sm text-muted-foreground mb-4">Explore our comprehensive dictionary of 100+ deep-dive technical terms, concepts, and jargon.</p>
+                <p className="text-sm text-muted-foreground mb-4">Explore our dictionary of 100+ technical terms, concepts, and jargon.</p>
                 <MoveUpRight className="h-4 w-4 self-end text-muted-foreground" />
               </div>
             </Link>

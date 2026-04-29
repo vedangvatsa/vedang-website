@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'AI Discovery Standards — Open-Source Reference for AI Web Discoverability',
+    absolute: 'AI Discovery Standards, Open-Source Reference for AI Web Discoverability',
   },
   description: 'Complete reference of every file, protocol, and technique used to make websites discoverable by AI systems. Includes robots.txt, llms.txt, ai.txt, brand.txt, agents.json, structured data, AEO, and GEO. One-command setup via npx.',
   keywords: [

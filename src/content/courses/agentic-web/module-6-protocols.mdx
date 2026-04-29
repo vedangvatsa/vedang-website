@@ -6,12 +6,12 @@ For agents to work across the open internet, they need standardized languages. J
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">MCP (Model Context Protocol): The USB-C for AI</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>MCP, created by Anthropic, is an open standard that lets any AI agent connect to any data source or tool through a single, universal protocol. Think of it as the USB-C port for AI — one standard connector that works with everything.</p>
+            <p>MCP, created by Anthropic, is an open standard that lets any AI agent connect to any data source or tool through a single, universal protocol. Think of it as the USB-C port for AI, one standard connector that works with everything.</p>
             <p><strong>The MCP Architecture:</strong></p>
             <ul>
                 <li><strong>MCP Host:</strong> The AI application (like Claude Desktop, Cursor, or your custom agent) that needs to access tools. It initiates connections to MCP servers.</li>
                 <li><strong>MCP Client:</strong> A lightweight connector inside the host that manages the communication with a specific MCP server. Each host can have many clients.</li>
-                <li><strong>MCP Server:</strong> A lightweight program that exposes a specific set of capabilities — tools, resources, or prompts — through the standard MCP protocol. Anyone can build an MCP server for any data source.</li>
+                <li><strong>MCP Server:</strong> A lightweight program that exposes a specific set of capabilities, tools, resources, or prompts, through the standard MCP protocol. Anyone can build an MCP server for any data source.</li>
             </ul>
             <p><strong>What MCP Servers Expose:</strong></p>
             <ul>
@@ -19,7 +19,7 @@ For agents to work across the open internet, they need standardized languages. J
                 <li><strong>Resources:</strong> Data the agent can read (e.g., files, database schemas, API documentation). These are read-only and provide context.</li>
                 <li><strong>Prompts:</strong> Pre-built prompt templates that guide the agent for specific use cases.</li>
             </ul>
-            <p><strong>Why MCP Matters:</strong> Before MCP, every AI tool integration was custom-built. If you wanted your agent to work with Slack, GitHub, and Google Drive, you had to build three separate integrations. With MCP, you build one client, and it works with any MCP server — present or future.</p>
+            <p><strong>Why MCP Matters:</strong> Before MCP, every AI tool integration was custom-built. If you wanted your agent to work with Slack, GitHub, and Google Drive, you had to build three separate integrations. With MCP, you build one client, and it works with any MCP server, present or future.</p>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
@@ -30,7 +30,7 @@ For agents to work across the open internet, they need standardized languages. J
             <ul>
                 <li><strong>Agent Card:</strong> A JSON manifest hosted at a well-known URL (<code>/.well-known/agent.json</code>) that describes the agent's capabilities, authentication requirements, and supported interaction patterns. Think of it as an agent's "business card" that other agents can read to understand what it does.</li>
                 <li><strong>Tasks:</strong> The fundamental unit of work in A2A. A client agent creates a task for a remote agent, and the remote agent processes it. Tasks have statuses (submitted, working, completed, failed).</li>
-                <li><strong>Messages and Parts:</strong> Communication happens through messages, which can contain multiple parts — text, files, structured data, or even UI components (called "artifacts").</li>
+                <li><strong>Messages and Parts:</strong> Communication happens through messages, which can contain multiple parts, text, files, structured data, or even UI components (called "artifacts").</li>
                 <li><strong>Streaming:</strong> For long-running tasks, A2A supports Server-Sent Events (SSE) so the client agent can receive real-time progress updates instead of waiting for the task to complete.</li>
             </ul>
             <p><strong>Real-World Example:</strong> Your personal agent wants to book a trip. Using A2A, it discovers a "TravelBot" agent (via its Agent Card), sends it a task with your preferences, receives streaming updates as flights are searched, and finally gets back a structured itinerary for your approval.</p>
@@ -39,14 +39,14 @@ For agents to work across the open internet, they need standardized languages. J
     <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg text-left">MCP vs A2A: Complementary, Not Competing</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>A common misconception is that MCP and A2A are competitors. They are complementary — they solve different problems:</p>
+            <p>A common misconception is that MCP and A2A are competitors. They are complementary, they solve different problems:</p>
             <div className="grid md:grid-cols-2 gap-6 my-6">
                 <Card>
                     <CardHeader>
                         <CardTitle className="text-base font-semibold">MCP = Agent ↔ Tool</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p className="text-sm text-muted-foreground">Connects agents to data sources and tools. Think of it as giving an agent "hands" to interact with APIs, databases, and file systems. The tools are passive — they execute what the agent asks.</p>
+                        <p className="text-sm text-muted-foreground">Connects agents to data sources and tools. Think of it as giving an agent "hands" to interact with APIs, databases, and file systems. The tools are passive, they execute what the agent asks.</p>
                     </CardContent>
                 </Card>
                 <Card className="border-primary/50">
@@ -64,7 +64,7 @@ For agents to work across the open internet, they need standardized languages. J
     <AccordionItem value="item-4">
         <AccordionTrigger className="text-lg text-left">Discovery and Trust: How Agents Find Each Other</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>For the Agentic Web to work at scale, agents need to discover each other dynamically — just as web pages are discovered by search engines today.</p>
+            <p>For the Agentic Web to work at scale, agents need to discover each other dynamically, just as web pages are discovered by search engines today.</p>
             <p><strong>Discovery Mechanisms:</strong></p>
             <ul>
                 <li><strong>Agent Cards:</strong> Hosted at well-known URLs, allowing any agent to look up another's capabilities. This is the equivalent of a website's <code>robots.txt</code> or <code>sitemap.xml</code>.</li>
@@ -74,7 +74,7 @@ For agents to work across the open internet, they need standardized languages. J
             <p><strong>Trust and Authentication:</strong></p>
             <ul>
                 <li><strong>OAuth 2.0:</strong> The standard mechanism for agents to authenticate with services and other agents without sharing credentials.</li>
-                <li><strong>Capability-Based Security:</strong> Agents declare their required permissions upfront. A booking agent only asks for "read calendar" and "create booking" — not "full account access."</li>
+                <li><strong>Capability-Based Security:</strong> Agents declare their required permissions upfront. A booking agent only asks for "read calendar" and "create booking", not "full account access."</li>
                 <li><strong>Audit Trails:</strong> All agent actions are logged, creating a verifiable record of what was done, by whom, and why.</li>
             </ul>
         </AccordionContent>
@@ -90,5 +90,5 @@ For agents to work across the open internet, they need standardized languages. J
         "It contains the agent's source code for auditing purposes."
     ]}
     correctAnswerIndex={1}
-    explanation="An Agent Card is hosted at a well-known URL and acts as the agent's 'business card.' It tells other agents what capabilities the agent has, how to authenticate with it, and what types of tasks it can handle — enabling dynamic, cross-organizational agent discovery."
+    explanation="An Agent Card is hosted at a well-known URL and acts as the agent's 'business card.' It tells other agents what capabilities the agent has, how to authenticate with it, and what types of tasks it can handle, enabling dynamic, cross-organizational agent discovery."
 />
