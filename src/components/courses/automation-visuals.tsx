@@ -11,7 +11,7 @@ export function AutomationLayers() {
   ];
   return (
     <div className="not-prose my-6">
-      <svg viewBox="0 0 800 200" className="w-full h-auto" role="img" aria-label="Automation spectrum from manual to autonomous">
+      <svg viewBox="0 0 800 200" className="w-full h-auto hidden sm:block" role="img" aria-label="Automation spectrum from manual to autonomous">
         {layers.map((l, i) => (
           <g key={l.label}>
             <rect x={i * 155 + 10} y={20} width={145} height={120} rx={12} fill={`${l.color}10`} stroke={l.color} strokeWidth={1.5} />
@@ -26,6 +26,24 @@ export function AutomationLayers() {
         ))}
         <text x={400} y={175} textAnchor="middle" fill="currentColor" fontSize={11} opacity={0.4}>← More manual effort · · · More autonomous →</text>
       </svg>
+      {/* Mobile fallback */}
+      <div className="sm:hidden grid grid-cols-1 gap-2">
+        {[
+          { label: 'Manual', desc: 'You do everything by hand', color: '#ef4444', effort: '100%' },
+          { label: 'Templates', desc: 'Reusable scripts', color: '#f59e0b', effort: '60%' },
+          { label: 'No-Code Tools', desc: 'n8n, Make, Zapier', color: '#3b82f6', effort: '30%' },
+          { label: 'AI Agents', desc: 'Claude, GPT', color: '#8b5cf6', effort: '10%' },
+          { label: 'Autonomous', desc: 'MCP + Agents + Cron', color: '#10b981', effort: '~0%' },
+        ].map((l) => (
+          <div key={l.label} className="flex items-center justify-between p-3 rounded-xl border bg-card">
+            <div>
+              <h4 className="font-semibold text-sm" style={{ color: l.color }}>{l.label}</h4>
+              <p className="text-xs text-muted-foreground">{l.desc}</p>
+            </div>
+            <span className="text-sm font-bold shrink-0 ml-3" style={{ color: l.color }}>{l.effort}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -34,7 +52,7 @@ export function AutomationLayers() {
 export function APIFlowDiagram() {
   return (
     <div className="not-prose my-6">
-      <svg viewBox="0 0 750 140" className="w-full h-auto" role="img" aria-label="API request flow: Client sends request, server processes, returns response">
+      <svg viewBox="0 0 750 140" className="w-full h-auto hidden sm:block" role="img" aria-label="API request flow: Client sends request, server processes, returns response">
         <rect x={10} y={30} width={140} height={70} rx={10} fill="#3b82f610" stroke="#3b82f6" strokeWidth={1.5} />
         <text x={80} y={60} textAnchor="middle" fill="#3b82f6" fontSize={12} fontWeight={700}>Your Script</text>
         <text x={80} y={78} textAnchor="middle" fill="currentColor" fontSize={9} opacity={0.5}>or AI Agent</text>
@@ -54,6 +72,22 @@ export function APIFlowDiagram() {
         <text x={570} y={60} textAnchor="middle" fill="#10b981" fontSize={12} fontWeight={700}>Database</text>
         <text x={570} y={78} textAnchor="middle" fill="currentColor" fontSize={9} opacity={0.5}>or External Service</text>
       </svg>
+      {/* Mobile fallback */}
+      <div className="sm:hidden flex flex-col gap-2">
+        {[
+          { label: 'Your Script / Agent', desc: 'Sends API request', color: '#3b82f6' },
+          { label: 'API Server', desc: 'Auth, process, return', color: '#f59e0b' },
+          { label: 'Database', desc: 'Or external service', color: '#10b981' },
+        ].map((item, i) => (
+          <div key={item.label} className="flex items-center gap-3 p-3 rounded-xl border bg-card">
+            <div className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0" style={{ backgroundColor: item.color }}>{i + 1}</div>
+            <div>
+              <h4 className="font-semibold text-sm" style={{ color: item.color }}>{item.label}</h4>
+              <p className="text-xs text-muted-foreground">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -84,7 +118,7 @@ export function NoCodeToolsGrid() {
 export function AgentArchitecture() {
   return (
     <div className="not-prose my-6">
-      <svg viewBox="0 0 800 230" className="w-full h-auto" role="img" aria-label="AI agent loop: Observe, Think, Act, Learn">
+      <svg viewBox="0 0 800 230" className="w-full h-auto hidden sm:block" role="img" aria-label="AI agent loop: Observe, Think, Act, Learn">
         {/* Center circle */}
         <circle cx={400} cy={115} r={50} fill="#8b5cf610" stroke="#8b5cf6" strokeWidth={2} />
         <text x={400} y={110} textAnchor="middle" fill="#8b5cf6" fontSize={14} fontWeight={700}>AI Agent</text>
@@ -110,6 +144,21 @@ export function AgentArchitecture() {
         <path d="M600 155 Q480 200 450 160" fill="none" stroke="#10b981" strokeWidth={1.2} opacity={0.4} />
         <path d="M350 160 Q320 200 250 185" fill="none" stroke="#ef4444" strokeWidth={1.2} opacity={0.4} />
       </svg>
+      {/* Mobile fallback */}
+      <div className="sm:hidden grid grid-cols-2 gap-3">
+        {[
+          { label: '1. Observe', desc: 'Read context and data', color: '#3b82f6', emoji: '👁️' },
+          { label: '2. Think', desc: 'Plan next action', color: '#f59e0b', emoji: '🧠' },
+          { label: '3. Act', desc: 'Call tools and APIs', color: '#10b981', emoji: '⚡' },
+          { label: '4. Learn', desc: 'Evaluate and iterate', color: '#ef4444', emoji: '🔄' },
+        ].map((node) => (
+          <div key={node.label} className="p-4 rounded-xl border bg-card text-center">
+            <div className="text-xl mb-1">{node.emoji}</div>
+            <h4 className="font-semibold text-sm mb-1" style={{ color: node.color }}>{node.label}</h4>
+            <p className="text-xs text-muted-foreground">{node.desc}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -117,14 +166,14 @@ export function AgentArchitecture() {
 /* ─── Module 5: MCP Automation Stack ─── */
 export function MCPAutomationStack() {
   const stack = [
-    { label: 'AI Agent', desc: 'Claude / Antigravity / GPT — decides what to do', color: '#8b5cf6', y: 15 },
+    { label: 'AI Agent', desc: 'Claude / Antigravity / GPT. decides what to do', color: '#8b5cf6', y: 15 },
     { label: 'MCP Client', desc: 'Routes tool calls to the right server', color: '#3b82f6', y: 65 },
     { label: 'MCP Servers', desc: 'Google Sheets · Slack · Database · GitHub · Email', color: '#10b981', y: 115 },
     { label: 'External Services', desc: 'The real-world systems being automated', color: '#f59e0b', y: 165 },
   ];
   return (
     <div className="not-prose my-6">
-      <svg viewBox="0 0 700 215" className="w-full h-auto" role="img" aria-label="MCP automation stack">
+      <svg viewBox="0 0 700 215" className="w-full h-auto hidden sm:block" role="img" aria-label="MCP automation stack">
         {stack.map((l) => (
           <g key={l.label}>
             <rect x={50} y={l.y} width={600} height={40} rx={8} fill={`${l.color}10`} stroke={l.color} strokeWidth={1.5} />
@@ -136,6 +185,23 @@ export function MCPAutomationStack() {
           <line key={y} x1={350} y1={y + 5} x2={350} y2={y + 15} stroke="currentColor" strokeWidth={1.2} opacity={0.15} strokeDasharray="3 2" />
         ))}
       </svg>
+      {/* Mobile fallback */}
+      <div className="sm:hidden flex flex-col gap-2">
+        {[
+          { label: 'AI Agent', desc: 'Decides what to do', color: '#8b5cf6' },
+          { label: 'MCP Client', desc: 'Routes tool calls', color: '#3b82f6' },
+          { label: 'MCP Servers', desc: 'Sheets, Slack, DB, GitHub', color: '#10b981' },
+          { label: 'External Services', desc: 'The systems being automated', color: '#f59e0b' },
+        ].map((l) => (
+          <div key={l.label} className="p-3 rounded-xl border bg-card flex items-center gap-3">
+            <div className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: l.color }} />
+            <div>
+              <h4 className="font-semibold text-sm" style={{ color: l.color }}>{l.label}</h4>
+              <p className="text-xs text-muted-foreground">{l.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -150,7 +216,7 @@ export function PipelineBlueprint() {
     { num: '5', label: 'Report', desc: 'Log, notify, dashboard', color: '#10b981' },
   ];
   return (
-    <div className="not-prose my-6 grid grid-cols-2 md:grid-cols-5 gap-3">
+    <div className="not-prose my-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
       {steps.map((s) => (
         <div key={s.num} className="p-4 rounded-xl border bg-card text-center">
           <div className="w-8 h-8 rounded-full mx-auto mb-2 flex items-center justify-center text-white font-bold text-sm" style={{ backgroundColor: s.color }}>{s.num}</div>

@@ -1,48 +1,47 @@
-import { CourseSidebar } from "@/components/course-sidebar";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { ReactNode } from "react";
+import { PageLayout } from '@/components/page-layout';
+import Link from 'next/link';
+import { Card, CardContent } from '@/components/ui/card';
+import { BookOpen } from 'lucide-react';
 
-const courseLinks = [
-    {
-        title: "Introduction",
-        links: [
-            { href: "/ai-automation", label: "Overview", disabled: false },
-        ]
-    },
-    {
-        title: "Modules",
-        links: [
-            { href: "/ai-automation/module-1-mindset", label: "1. Automation Mindset", disabled: false },
-            { href: "/ai-automation/module-2-apis", label: "2. API Fundamentals", disabled: false },
-            { href: "/ai-automation/module-3-nocode", label: "3. No-Code Tools", disabled: false },
-            { href: "/ai-automation/module-4-agents", label: "4. AI Agents", disabled: false },
-            { href: "/ai-automation/module-5-mcp-automation", label: "5. MCP Automation", disabled: false },
-            { href: "/ai-automation/module-6-pipelines", label: "6. Custom Pipelines", disabled: false },
-            { href: "/ai-automation/module-7-production", label: "7. Production & Monitoring", disabled: false },
-        ]
-    }
+const modules = [
+    { href: "/ai-automation", label: "Course Overview" },
+    { href: "/ai-automation/module-1-mindset", label: "1. Automation Mindset" },
+    { href: "/ai-automation/module-2-apis", label: "2. API Fundamentals" },
+    { href: "/ai-automation/module-3-nocode", label: "3. No-Code Tools" },
+    { href: "/ai-automation/module-4-agents", label: "4. AI Agents" },
+    { href: "/ai-automation/module-5-mcp-automation", label: "5. MCP Automation" },
+    { href: "/ai-automation/module-6-pipelines", label: "6. Custom Pipelines" },
+    { href: "/ai-automation/module-7-production", label: "7. Production & Monitoring" },
 ];
 
-export default function AIAutomationCourseLayout({
-    children,
-}: {
-    children: React.ReactNode;
-}) {
+export default function AIAutomationCourseLayout({ children }: { children: ReactNode }) {
     return (
-        <div className="flex min-h-screen flex-col lg:flex-row">
-            <aside className="hidden lg:block w-64 shrink-0 border-r bg-muted/30">
-                <div className="sticky top-0 h-screen overflow-y-auto py-8">
-                    <CourseSidebar courseName="AI Automation 101" sections={courseLinks} />
-                </div>
-            </aside>
-            <main className="flex-1 w-full max-w-4xl mx-auto px-4 md:px-8 py-8 md:py-12">
-                <div className="absolute top-4 right-4 z-50">
-                   <ThemeToggle />
-                </div>
-                <div className="lg:hidden mb-8 border-b pb-4">
-                    <CourseSidebar courseName="AI Automation 101" sections={courseLinks} />
-                </div>
-                {children}
-            </main>
-        </div>
+        <PageLayout>
+            <div className="container mx-auto px-4 md:px-6 max-w-7xl py-12 flex flex-col md:flex-row gap-12">
+                <aside className="w-full md:w-64 lg:w-72 flex-shrink-0">
+                    <div className="sticky top-1/3 space-y-6">
+                        <Card className="shadow-sm bg-muted/30 border-muted">
+                            <CardContent className="p-6">
+                                <div className="flex items-center gap-2 mb-6 text-muted-foreground">
+                                    <BookOpen className="h-5 w-5" />
+                                    <h4 className="font-semibold text-sm uppercase tracking-wider">AI Automation 101</h4>
+                                </div>
+                                <nav className="space-y-3">
+                                    {modules.map((m, i) => (
+                                        <Link key={m.href} href={m.href} className={`block text-sm ${i === 0 ? 'font-medium' : 'text-muted-foreground'} hover:text-primary transition-colors`}>
+                                            {m.label}
+                                        </Link>
+                                    ))}
+                                </nav>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </aside>
+                <main className="flex-1 min-w-0">
+                    {children}
+                </main>
+            </div>
+        </PageLayout>
     );
 }

@@ -5,7 +5,7 @@ description: "Your server is only useful if clients can find and connect to it. 
 
 <ClientEcosystem />
 
-An MCP server is useless without a client. The good news is that MCP adoption has exploded — all major AI coding tools and assistants now support it. This module covers how to connect your server to each of them.
+An MCP server is useless without a client. The good news is that MCP adoption has exploded. all major AI coding tools and assistants now support it. This module covers how to connect your server to each of them.
 
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
@@ -37,10 +37,10 @@ An MCP server is useless without a client. The good news is that MCP adoption ha
 }`}</code></pre>
             <p><strong>Key fields:</strong></p>
             <ul>
-                <li><code>command</code> — The executable to run (node, npx, python, etc.)</li>
-                <li><code>args</code> — Command-line arguments</li>
-                <li><code>cwd</code> — Working directory for the server process</li>
-                <li><code>env</code> — Environment variables (use this for API keys and secrets)</li>
+                <li><code>command</code>. The executable to run (node, npx, python, etc.)</li>
+                <li><code>args</code>. Command-line arguments</li>
+                <li><code>cwd</code>. Working directory for the server process</li>
+                <li><code>env</code>. Environment variables (use this for API keys and secrets)</li>
             </ul>
         </AccordionContent>
     </AccordionItem>
@@ -67,7 +67,7 @@ An MCP server is useless without a client. The good news is that MCP adoption ha
     }
   }
 }`}</code></pre>
-            <p>This means you can ship MCP configurations with your codebase — team members automatically get the same tools when they open the project.</p>
+            <p>This means you can ship MCP configurations with your codebase. team members automatically get the same tools when they open the project.</p>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-3">
@@ -126,5 +126,5 @@ console.log("Result:", result);`}</code></pre>
         "You must publish the server to npm first."
     ]}
     correctAnswerIndex={1}
-    explanation="Per-project configuration files like .cursor/mcp.json or .vscode/mcp.json can be committed to your repository. When team members open the project, the MCP servers are automatically available — no manual configuration needed."
+    explanation="Per-project configuration files like .cursor/mcp.json or .vscode/mcp.json can be committed to your repository. When team members open the project, the MCP servers are automatically available. no manual configuration needed."
 />

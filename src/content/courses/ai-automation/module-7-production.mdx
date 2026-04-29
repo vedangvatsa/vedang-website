@@ -32,7 +32,7 @@ jobs:
         env:
           SUPABASE_URL: \${{ secrets.SUPABASE_URL }}
           TELEGRAM_BOT_TOKEN: \${{ secrets.TELEGRAM_BOT_TOKEN }}`}</code></pre>
-            <p><strong>2. Vercel Cron Jobs</strong> — For Next.js apps, add cron triggers to API routes:</p>
+            <p><strong>2. Vercel Cron Jobs</strong>. For Next.js apps, add cron triggers to API routes:</p>
             <pre><code>{`// vercel.json
 {
   "crons": [{
@@ -40,14 +40,14 @@ jobs:
     "schedule": "0 8 * * *"
   }]
 }`}</code></pre>
-            <p><strong>3. n8n / Make Schedules</strong> — Built-in scheduling in no-code tools. Best for non-technical teams.</p>
-            <p><strong>4. Railway / Render Cron</strong> — For standalone scripts that need more compute time than GitHub Actions allows (6 hours max).</p>
+            <p><strong>3. n8n / Make Schedules</strong>. Built-in scheduling in no-code tools. Best for non-technical teams.</p>
+            <p><strong>4. Railway / Render Cron</strong>. For standalone scripts that need more compute time than GitHub Actions allows (6 hours max).</p>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">Monitoring & Alerting</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>You need to know when automations fail — before your users notice.</p>
+            <p>You need to know when automations fail. before your users notice.</p>
             <p><strong>Lightweight monitoring stack:</strong></p>
             <pre><code>{`// At the end of every pipeline run, send a heartbeat
 async function reportPipelineStatus(pipeline, results) {
@@ -70,7 +70,7 @@ async function reportPipelineStatus(pipeline, results) {
     await sendSlackAlert(\`⚠️ Pipeline \${pipeline} had \${results.failures} failures\`);
   }
 
-  // 4. Heartbeat — external monitoring tools (UptimeRobot, Better Uptime)
+  // 4. Heartbeat. external monitoring tools (UptimeRobot, Better Uptime)
   //    will alert if the heartbeat stops arriving
   await fetch(\`https://heartbeat.uptimerobot.com/\${HEARTBEAT_ID}\`);
 }`}</code></pre>
@@ -89,7 +89,7 @@ async function reportPipelineStatus(pipeline, results) {
             <p>AI-powered automations have running costs. Track and optimize them:</p>
             <p><strong>Cost categories:</strong></p>
             <ul>
-                <li><strong>AI API calls:</strong> OpenAI, Anthropic — charged per token. Use cheaper models (GPT-4o-mini, Haiku) for simple tasks, expensive models only when quality matters.</li>
+                <li><strong>AI API calls:</strong> OpenAI, Anthropic. charged per token. Use cheaper models (GPT-4o-mini, Haiku) for simple tasks, expensive models only when quality matters.</li>
                 <li><strong>Hosting:</strong> GitHub Actions (2,000 free minutes/month), Vercel (free hobby tier), Railway ($5/month for always-on).</li>
                 <li><strong>No-code tools:</strong> Zapier charges per task, Make charges per operation. n8n self-hosted = only hosting costs.</li>
                 <li><strong>Database:</strong> Supabase free tier covers most use cases. Neon, PlanetScale also have generous free tiers.</li>
@@ -98,7 +98,7 @@ async function reportPipelineStatus(pipeline, results) {
             <ul>
                 <li>Cache API responses to avoid redundant calls</li>
                 <li>Use GPT-4o-mini for classification/formatting, reserve Claude/GPT-4 for complex reasoning</li>
-                <li>Batch operations — send 10 messages in one API call instead of 10 separate calls</li>
+                <li>Batch operations. send 10 messages in one API call instead of 10 separate calls</li>
                 <li>Run compute-heavy tasks during off-peak hours</li>
                 <li>Set billing alerts on all AI API accounts</li>
             </ul>
@@ -109,7 +109,7 @@ async function reportPipelineStatus(pipeline, results) {
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             <p>As you build more automations, organization becomes critical:</p>
             <p><strong>1. Documentation:</strong> Every automation should have a README with: what it does, what triggers it, what services it connects to, what secrets it needs, and how to test it. Future-you (or your team) will thank you.</p>
-            <p><strong>2. Version Control:</strong> Keep all automation code in Git repositories. Use the same workflow you'd use for any software — branches, pull requests, code review. The [Vibe Coding](/vibe-coding) course covers these fundamentals.</p>
+            <p><strong>2. Version Control:</strong> Keep all automation code in Git repositories. Use the same workflow you'd use for any software. branches, pull requests, code review. The [Vibe Coding](/vibe-coding) course covers these fundamentals.</p>
             <p><strong>3. Centralized Secrets:</strong> Use a secrets manager (GitHub Secrets, Vercel Environment Variables, 1Password) instead of scattering API keys across config files.</p>
             <p><strong>4. Automation Inventory:</strong> Maintain a spreadsheet or dashboard listing all running automations:</p>
             <div className="grid md:grid-cols-2 gap-4 my-4">
@@ -143,10 +143,10 @@ async function reportPipelineStatus(pipeline, results) {
     question="Your daily job broadcast pipeline has been working for 3 months but suddenly starts failing silently. What monitoring practice would have caught this earliest?"
     options={[
         "Checking the pipeline code manually every week.",
-        "A heartbeat monitor that alerts you when the daily ping stops arriving — catching failures even when no error is thrown.",
+        "A heartbeat monitor that alerts you when the daily ping stops arriving. catching failures even when no error is thrown.",
         "Adding more API calls to the pipeline.",
         "Running the pipeline more frequently."
     ]}
     correctAnswerIndex={1}
-    explanation="A heartbeat monitor (like UptimeRobot or Better Uptime) expects a ping at regular intervals. If the pipeline fails silently — crashes before reaching the error handler, or the cron job stops triggering entirely — the missing heartbeat triggers an alert. This catches failures that even error-handling code would miss."
+    explanation="A heartbeat monitor (like UptimeRobot or Better Uptime) expects a ping at regular intervals. If the pipeline fails silently. crashes before reaching the error handler, or the cron job stops triggering entirely. the missing heartbeat triggers an alert. This catches failures that even error-handling code would miss."
 />

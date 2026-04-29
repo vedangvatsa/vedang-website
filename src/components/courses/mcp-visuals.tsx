@@ -4,7 +4,7 @@
 export function MCPArchitecture() {
   return (
     <div className="not-prose my-6">
-      <svg viewBox="0 0 800 280" className="w-full h-auto" role="img" aria-label="MCP architecture: Host contains Clients that connect to Servers">
+      <svg viewBox="0 0 800 280" className="w-full h-auto hidden sm:block" role="img" aria-label="MCP architecture: Host contains Clients that connect to Servers">
         {/* Host */}
         <rect x={20} y={10} width={260} height={260} rx={16} fill="#3b82f608" stroke="#3b82f6" strokeWidth={2} strokeDasharray="6 4" />
         <text x={150} y={40} textAnchor="middle" fill="#3b82f6" fontSize={14} fontWeight={700}>MCP Host (e.g. Claude Desktop)</text>
@@ -51,6 +51,19 @@ export function MCPArchitecture() {
         <rect x={700} y={100} width={80} height={150} rx={8} fill="currentColor" opacity={0.05} stroke="currentColor" strokeWidth={1} />
         <text x={740} y={180} textAnchor="middle" fill="currentColor" fontSize={10} opacity={0.4}>Data Sources</text>
       </svg>
+      {/* Mobile fallback */}
+      <div className="sm:hidden grid grid-cols-1 gap-3">
+        {[
+          { label: 'MCP Host', desc: 'Claude Desktop, Cursor, etc.', color: '#3b82f6' },
+          { label: 'MCP Client', desc: 'Routes tool calls via JSON-RPC', color: '#3b82f6' },
+          { label: 'MCP Servers', desc: 'Search, Database, Filesystem', color: '#10b981' },
+        ].map((item) => (
+          <div key={item.label} className="p-4 rounded-xl border bg-card">
+            <h4 className="font-semibold text-sm mb-1" style={{ color: item.color }}>{item.label}</h4>
+            <p className="text-xs text-muted-foreground">{item.desc}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -79,19 +92,19 @@ export function TransportDiagram() {
 /* ─── Module 3: Server Skeleton ─── */
 export function ServerSkeleton() {
   const steps = [
-    { num: '1', label: 'Initialize', desc: 'npm init, install @modelcontextprotocol/sdk', color: '#3b82f6' },
-    { num: '2', label: 'Create Server', desc: 'new McpServer({ name, version })', color: '#8b5cf6' },
-    { num: '3', label: 'Register Tools', desc: 'server.tool(name, schema, handler)', color: '#f59e0b' },
-    { num: '4', label: 'Connect Transport', desc: 'StdioServerTransport or SSE', color: '#10b981' },
-    { num: '5', label: 'Test', desc: 'MCP Inspector or Claude Desktop', color: '#ef4444' },
+    { num: '1', label: 'Initialize', desc: 'Install the MCP SDK', color: '#3b82f6' },
+    { num: '2', label: 'Create Server', desc: 'Instantiate McpServer', color: '#8b5cf6' },
+    { num: '3', label: 'Register Tools', desc: 'Define tool schemas', color: '#f59e0b' },
+    { num: '4', label: 'Transport', desc: 'stdio, SSE, or HTTP', color: '#10b981' },
+    { num: '5', label: 'Test', desc: 'MCP Inspector / Claude', color: '#ef4444' },
   ];
   return (
-    <div className="not-prose my-6 grid grid-cols-2 md:grid-cols-5 gap-3">
+    <div className="not-prose my-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
       {steps.map((s) => (
         <div key={s.num} className="p-4 rounded-xl border bg-card text-center">
           <div className="w-8 h-8 rounded-full mx-auto mb-2 flex items-center justify-center text-white font-bold text-sm" style={{ backgroundColor: s.color }}>{s.num}</div>
           <h4 className="font-semibold text-sm mb-1">{s.label}</h4>
-          <p className="text-xs text-muted-foreground leading-relaxed">{s.desc}</p>
+          <p className="text-xs text-muted-foreground leading-relaxed break-words">{s.desc}</p>
         </div>
       ))}
     </div>
@@ -147,7 +160,7 @@ export function ClientEcosystem() {
 export function DatabaseServerDiagram() {
   return (
     <div className="not-prose my-6">
-      <svg viewBox="0 0 700 160" className="w-full h-auto" role="img" aria-label="MCP Database Server pattern: LLM calls query tool which executes SQL">
+      <svg viewBox="0 0 700 160" className="w-full h-auto hidden sm:block" role="img" aria-label="MCP Database Server pattern: LLM calls query tool which executes SQL">
         <rect x={10} y={40} width={120} height={70} rx={10} fill="#8b5cf615" stroke="#8b5cf6" strokeWidth={1.5} />
         <text x={70} y={80} textAnchor="middle" fill="#8b5cf6" fontSize={13} fontWeight={700}>LLM</text>
 
@@ -169,6 +182,22 @@ export function DatabaseServerDiagram() {
         <line x1={590} y1={75} x2={640} y2={75} stroke="#f59e0b" strokeWidth={1} opacity={0.3} />
         <text x={670} y={80} textAnchor="middle" fill="#f59e0b" fontSize={10}>📊 Data</text>
       </svg>
+      {/* Mobile fallback */}
+      <div className="sm:hidden flex flex-col gap-2">
+        {[
+          { label: 'LLM', desc: 'Calls query tool', color: '#8b5cf6' },
+          { label: 'MCP Server', desc: 'Validates → Executes → Formats', color: '#3b82f6' },
+          { label: 'PostgreSQL', desc: 'Returns data', color: '#10b981' },
+        ].map((item, i) => (
+          <div key={item.label} className="flex items-center gap-3 p-3 rounded-xl border bg-card">
+            <div className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0" style={{ backgroundColor: item.color }}>{i + 1}</div>
+            <div>
+              <h4 className="font-semibold text-sm" style={{ color: item.color }}>{item.label}</h4>
+              <p className="text-xs text-muted-foreground">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -184,7 +213,7 @@ export function ProductionChecklist() {
     { label: 'Testing', desc: 'Unit tests + MCP Inspector integration tests', icon: '✅', color: '#6366f1' },
   ];
   return (
-    <div className="not-prose my-6 grid grid-cols-2 md:grid-cols-3 gap-3">
+    <div className="not-prose my-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
       {items.map((item) => (
         <div key={item.label} className="p-4 rounded-xl border bg-card">
           <div className="text-xl mb-2">{item.icon}</div>

@@ -93,10 +93,10 @@ server.tool(
 );`}</code></pre>
             <p><strong>Best practices for API wrappers:</strong></p>
             <ul>
-                <li>Always handle API errors gracefully — return <code>isError: true</code> with a descriptive message</li>
-                <li>Use environment variables for API keys — never hardcode secrets</li>
+                <li>Always handle API errors gracefully. return <code>isError: true</code> with a descriptive message</li>
+                <li>Use environment variables for API keys. never hardcode secrets</li>
                 <li>Add rate limiting to prevent the LLM from making too many API calls</li>
-                <li>Format responses for readability — the LLM will process them better</li>
+                <li>Format responses for readability. the LLM will process them better</li>
             </ul>
         </AccordionContent>
     </AccordionItem>
@@ -126,7 +126,7 @@ server.resource("projects://active", "List of active projects", ...);`}</code></
     <AccordionItem value="item-4">
         <AccordionTrigger className="text-lg text-left">Pattern 4: Authenticated Servers</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>Many real-world MCP servers need authentication — either to access external APIs or to verify the identity of the connecting client.</p>
+            <p>Many real-world MCP servers need authentication. either to access external APIs or to verify the identity of the connecting client.</p>
             <p><strong>API Key Authentication (Server → External API):</strong></p>
             <ul>
                 <li>Store API keys in environment variables</li>
@@ -143,7 +143,7 @@ server.resource("projects://active", "List of active projects", ...);`}</code></
             <ul>
                 <li>✅ All secrets in environment variables, never in code</li>
                 <li>✅ Input validation on every tool parameter</li>
-                <li>✅ Principle of least privilege — only request permissions you need</li>
+                <li>✅ Principle of least privilege. only request permissions you need</li>
                 <li>✅ Audit logging for all tool invocations</li>
                 <li>✅ Rate limiting to prevent abuse</li>
             </ul>
@@ -155,10 +155,10 @@ server.resource("projects://active", "List of active projects", ...);`}</code></
     question="When building a database MCP server, why should you expose the database schema as a Resource rather than a Tool?"
     options={[
         "Resources are faster to read than tools.",
-        "The schema is static context the host app should pre-load, not something the LLM needs to 'call' — it's read-only background data that helps the LLM generate correct SQL.",
+        "The schema is static context the host app should pre-load, not something the LLM needs to 'call'. it's read-only background data that helps the LLM generate correct SQL.",
         "Resources can handle larger data than tools.",
         "Tools cannot return text content."
     ]}
     correctAnswerIndex={1}
-    explanation="Resources are app-controlled read-only data — perfect for static context like a database schema. The host can pre-load it so the LLM always has schema context available. A tool would require the LLM to explicitly call it, adding unnecessary round-trips and complexity."
+    explanation="Resources are app-controlled read-only data. perfect for static context like a database schema. The host can pre-load it so the LLM always has schema context available. A tool would require the LLM to explicitly call it, adding unnecessary round-trips and complexity."
 />

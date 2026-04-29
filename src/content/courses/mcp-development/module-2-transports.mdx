@@ -1,11 +1,11 @@
 ---
 title: "Transports & Message Format"
-description: "MCP uses JSON-RPC 2.0 over multiple transport layers. This module covers how messages flow between clients and servers — from local stdio to remote HTTP."
+description: "MCP uses JSON-RPC 2.0 over multiple transport layers. This module covers how messages flow between clients and servers. from local stdio to remote HTTP."
 ---
 
 <TransportDiagram />
 
-MCP is transport-agnostic — the same protocol works whether the server runs on your local machine or across the internet. Understanding the transport layer is essential because it determines how you deploy, test, and scale your servers.
+MCP is transport-agnostic. the same protocol works whether the server runs on your local machine or across the internet. Understanding the transport layer is essential because it determines how you deploy, test, and scale your servers.
 
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
@@ -47,7 +47,7 @@ MCP is transport-agnostic — the same protocol works whether the server runs on
                 <li>The host spawns the server process (e.g., <code>node my-server.js</code>)</li>
                 <li>Messages go to the server via stdin</li>
                 <li>Responses come back via stdout</li>
-                <li>Errors and logs go to stderr (never stdout — that would corrupt the protocol)</li>
+                <li>Errors and logs go to stderr (never stdout. that would corrupt the protocol)</li>
             </ul>
             <p><strong>Best for:</strong> Local development, CLI tools, desktop applications like Claude Desktop. Zero network configuration. The server runs on the same machine as the host.</p>
             <p><strong>Limitation:</strong> Can't work over a network. The server must be a local process.</p>

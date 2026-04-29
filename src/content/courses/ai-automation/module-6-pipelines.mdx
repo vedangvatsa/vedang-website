@@ -1,6 +1,6 @@
 ---
 title: "Building Custom Pipelines"
-description: "Combine APIs, AI agents, and MCP servers into end-to-end automated pipelines. From job aggregation to content publishing — build real systems that run on autopilot."
+description: "Combine APIs, AI agents, and MCP servers into end-to-end automated pipelines. From job aggregation to content publishing. build real systems that run on autopilot."
 ---
 
 <PipelineBlueprint />
@@ -13,21 +13,21 @@ Individual automations are useful. Pipelines that chain multiple automations tog
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             <p>Every automation pipeline follows the same five-stage pattern:</p>
             <ol>
-                <li><strong>Trigger:</strong> What starts the pipeline — a cron schedule, a webhook, a database change, or a manual command.</li>
-                <li><strong>Fetch:</strong> Gather the input data — call APIs, read databases, scrape websites, check MCP resources.</li>
-                <li><strong>Transform:</strong> Process the data — filter, deduplicate, enrich with AI, normalize formats, calculate metrics.</li>
-                <li><strong>Act:</strong> Do something with the processed data — write to a database, send messages, publish content, update spreadsheets.</li>
+                <li><strong>Trigger:</strong> What starts the pipeline. a cron schedule, a webhook, a database change, or a manual command.</li>
+                <li><strong>Fetch:</strong> Gather the input data. call APIs, read databases, scrape websites, check MCP resources.</li>
+                <li><strong>Transform:</strong> Process the data. filter, deduplicate, enrich with AI, normalize formats, calculate metrics.</li>
+                <li><strong>Act:</strong> Do something with the processed data. write to a database, send messages, publish content, update spreadsheets.</li>
                 <li><strong>Report:</strong> Log results, send notifications, update dashboards, handle errors.</li>
             </ol>
-            <p>The key to reliable pipelines is making each stage independent and idempotent — if stage 3 fails, you can re-run it without duplicating the work from stages 1-2.</p>
+            <p>The key to reliable pipelines is making each stage independent and idempotent. if stage 3 fails, you can re-run it without duplicating the work from stages 1-2.</p>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">Case Study: Job Aggregation Pipeline</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             <p>A real-world pipeline that aggregates job listings from 50+ company boards and broadcasts them daily:</p>
-            <p><strong>Stage 1 — Trigger:</strong> GitHub Actions cron runs at 6am UTC daily.</p>
-            <p><strong>Stage 2 — Fetch:</strong></p>
+            <p><strong>Stage 1. Trigger:</strong> GitHub Actions cron runs at 6am UTC daily.</p>
+            <p><strong>Stage 2. Fetch:</strong></p>
             <pre><code>{`// Fetch from multiple ATS platforms in parallel
 const sources = [
   // Greenhouse boards
@@ -45,20 +45,20 @@ const sources = [
 ];
 
 const results = await Promise.allSettled(sources);`}</code></pre>
-            <p><strong>Stage 3 — Transform:</strong></p>
+            <p><strong>Stage 3. Transform:</strong></p>
             <ul>
                 <li>Normalize fields (title, company, location, URL) across different API formats</li>
                 <li>AI agent cleans job titles: strips IDs, decodes HTML entities, standardizes formatting</li>
                 <li>Deduplicate against existing database entries</li>
                 <li>Filter for remote-friendly and Web3-relevant positions</li>
             </ul>
-            <p><strong>Stage 4 — Act:</strong></p>
+            <p><strong>Stage 4. Act:</strong></p>
             <ul>
                 <li>Insert new jobs into Supabase database</li>
                 <li>Format top 10 listings as a Telegram message</li>
                 <li>POST to Telegram Bot API for channel broadcast</li>
             </ul>
-            <p><strong>Stage 5 — Report:</strong></p>
+            <p><strong>Stage 5. Report:</strong></p>
             <ul>
                 <li>Log: "Processed 312 listings, 47 new, 265 duplicates"</li>
                 <li>Update metrics spreadsheet via Google Sheets MCP</li>
@@ -114,7 +114,7 @@ const results = await Promise.allSettled(sources);`}</code></pre>
     question="Why is idempotency important in automation pipelines?"
     options={[
         "It makes the pipeline run faster.",
-        "It ensures that running the same step twice with the same input produces the same result — so you can safely retry failed steps without creating duplicates.",
+        "It ensures that running the same step twice with the same input produces the same result. so you can safely retry failed steps without creating duplicates.",
         "It's only needed for database operations.",
         "It's a security feature that prevents unauthorized access."
     ]}

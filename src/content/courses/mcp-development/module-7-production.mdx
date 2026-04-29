@@ -40,8 +40,8 @@ server.tool("get_user", "Get a user by ID", {
 });`}</code></pre>
             <p><strong>Key distinction:</strong></p>
             <ul>
-                <li><strong>throw McpError</strong> — for protocol-level errors (invalid params, internal server error). These signal to the client that something went wrong with the request itself.</li>
-                <li><strong>isError: true</strong> — for application-level errors (user not found, API returned 404). These tell the LLM that the operation failed and it should adjust its approach.</li>
+                <li><strong>throw McpError</strong>. for protocol-level errors (invalid params, internal server error). These signal to the client that something went wrong with the request itself.</li>
+                <li><strong>isError: true</strong>. for application-level errors (user not found, API returned 404). These tell the LLM that the operation failed and it should adjust its approach.</li>
             </ul>
             <p><strong>Never expose internal details:</strong> Don't include stack traces, file paths, or connection strings in error messages. Log them server-side, but return sanitized messages to the client.</p>
         </AccordionContent>
@@ -49,7 +49,7 @@ server.tool("get_user", "Get a user by ID", {
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">Security Hardening</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>MCP servers can do powerful things — which makes security critical. Follow these principles:</p>
+            <p>MCP servers can do powerful things. which makes security critical. Follow these principles:</p>
             <p><strong>1. Input Validation (Defense in Depth):</strong></p>
             <p>Zod schemas are your first line of defense, but add manual validation for sensitive operations:</p>
             <pre><code>{`server.tool("execute_query", "Run a database query", {
@@ -168,11 +168,11 @@ server.tool("search", "Search records", { query: z.string() },
 <KnowledgeCheck
     question="What's the difference between throwing an McpError and returning isError: true in a tool response?"
     options={[
-        "There is no difference — they're interchangeable.",
+        "There is no difference. they're interchangeable.",
         "McpError is for protocol-level errors (bad parameters, server crash). isError: true is for application-level errors (not found, validation failed) that the LLM should reason about.",
         "McpError is for warnings, isError: true is for fatal errors.",
         "McpError can only be used in production, isError: true is for development."
     ]}
     correctAnswerIndex={1}
-    explanation="McpError (thrown as an exception) signals protocol-level problems — the request itself was malformed or the server encountered an internal error. isError: true (in the response) signals application-level problems — the request was valid but the operation failed (e.g., user not found). The LLM uses isError to adjust its strategy."
+    explanation="McpError (thrown as an exception) signals protocol-level problems. the request itself was malformed or the server encountered an internal error. isError: true (in the response) signals application-level problems. the request was valid but the operation failed (e.g., user not found). The LLM uses isError to adjust its strategy."
 />

@@ -1,21 +1,21 @@
 ---
 title: "API Fundamentals for Automation"
-description: "APIs are the building blocks of every automation. Learn REST, authentication, webhooks, and how to make any two services talk to each other — the foundation AI agents build on."
+description: "APIs are the building blocks of every automation. Learn REST, authentication, webhooks, and how to make any two services talk to each other. the foundation AI agents build on."
 ---
 
 <APIFlowDiagram />
 
-Every automation — whether no-code or AI-powered — ultimately works by calling APIs. Understanding how APIs work gives you superpowers: you can connect any two services, even ones that no-code tools don't support yet.
+Every automation. whether no-code or AI-powered. ultimately works by calling APIs. Understanding how APIs work gives you superpowers: you can connect any two services, even ones that no-code tools don't support yet.
 
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">REST APIs: The Universal Language</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>REST APIs use HTTP — the same protocol your browser uses. Every API call has four parts:</p>
+            <p>REST APIs use HTTP. the same protocol your browser uses. Every API call has four parts:</p>
             <ul>
-                <li><strong>Method:</strong> What action to take — <code>GET</code> (read), <code>POST</code> (create), <code>PUT</code> (update), <code>DELETE</code> (remove).</li>
-                <li><strong>URL:</strong> The endpoint address — <code>https://api.example.com/users/123</code></li>
-                <li><strong>Headers:</strong> Metadata — authentication tokens, content type, etc.</li>
+                <li><strong>Method:</strong> What action to take. <code>GET</code> (read), <code>POST</code> (create), <code>PUT</code> (update), <code>DELETE</code> (remove).</li>
+                <li><strong>URL:</strong> The endpoint address. <code>https://api.example.com/users/123</code></li>
+                <li><strong>Headers:</strong> Metadata. authentication tokens, content type, etc.</li>
                 <li><strong>Body:</strong> The data you're sending (for POST/PUT requests).</li>
             </ul>
             <p><strong>Example: Fetching job listings from an API</strong></p>
@@ -26,15 +26,15 @@ const response = await fetch(
 );
 const data = await response.json();
 console.log(\`Found \${data.jobs.length} open positions\`);`}</code></pre>
-            <p>This is exactly how job aggregation pipelines work — they call dozens of company APIs, collect listings, normalize the data, and store it in a database. One script replaces hours of manual searching.</p>
+            <p>This is exactly how job aggregation pipelines work. they call dozens of company APIs, collect listings, normalize the data, and store it in a database. One script replaces hours of manual searching.</p>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">Authentication: API Keys, OAuth, and Tokens</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             <p>Most APIs require authentication. The three common patterns:</p>
-            <p><strong>1. API Keys</strong> — Simple, static tokens. Include in headers or query params.</p>
-            <pre><code>{`// Telegram Bot API — send a message to a channel
+            <p><strong>1. API Keys</strong>. Simple, static tokens. Include in headers or query params.</p>
+            <pre><code>{`// Telegram Bot API. send a message to a channel
 const TELEGRAM_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const CHANNEL_ID = process.env.TELEGRAM_CHANNEL_ID;
 
@@ -47,7 +47,7 @@ await fetch(\`https://api.telegram.org/bot\${TELEGRAM_TOKEN}/sendMessage\`, {
     parse_mode: "HTML",
   }),
 });`}</code></pre>
-            <p><strong>2. Bearer Tokens</strong> — Short-lived tokens, usually from OAuth flows.</p>
+            <p><strong>2. Bearer Tokens</strong>. Short-lived tokens, usually from OAuth flows.</p>
             <pre><code>{`// Using a bearer token with the OpenAI API
 await fetch("https://api.openai.com/v1/chat/completions", {
   method: "POST",
@@ -60,7 +60,7 @@ await fetch("https://api.openai.com/v1/chat/completions", {
     messages: [{ role: "user", content: "Summarize these job listings..." }],
   }),
 });`}</code></pre>
-            <p><strong>3. OAuth 2.0</strong> — For accessing user data (Google Sheets, Twitter, LinkedIn). Involves redirect flows and token refresh. No-code tools handle this for you; for code, libraries like <code>googleapis</code> simplify it.</p>
+            <p><strong>3. OAuth 2.0</strong>. For accessing user data (Google Sheets, Twitter, LinkedIn). Involves redirect flows and token refresh. No-code tools handle this for you; for code, libraries like <code>googleapis</code> simplify it.</p>
             <p><strong>Golden rule:</strong> Never hardcode secrets. Always use environment variables (<code>process.env.API_KEY</code>).</p>
         </AccordionContent>
     </AccordionItem>
@@ -98,14 +98,14 @@ export async function POST(request: Request) {
   
   return Response.json({ success: true });
 }`}</code></pre>
-            <p>This pattern powers automated Telegram channels, Discord bots, email newsletters, and social media feeds — new data arrives via webhook, gets formatted, and broadcasts instantly.</p>
+            <p>This pattern powers automated Telegram channels, Discord bots, email newsletters, and social media feeds. new data arrives via webhook, gets formatted, and broadcasts instantly.</p>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-4">
         <AccordionTrigger className="text-lg text-left">Pagination & Rate Limits</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             <p>When automating API calls, two challenges always appear:</p>
-            <p><strong>Pagination:</strong> APIs don't return all data at once. They paginate — 20 items per page, 100 per page, etc. Your automation must loop through all pages:</p>
+            <p><strong>Pagination:</strong> APIs don't return all data at once. They paginate. 20 items per page, 100 per page, etc. Your automation must loop through all pages:</p>
             <pre><code>{`// Fetch all jobs across all pages
 let allJobs = [];
 let page = 1;
@@ -136,10 +136,10 @@ while (hasMore) {
     question="What's the key difference between polling an API and using a webhook?"
     options={[
         "Webhooks are faster but less reliable.",
-        "Polling means you repeatedly ask 'is there new data?' on a schedule. Webhooks mean the service tells you immediately when something happens — real-time and more efficient.",
+        "Polling means you repeatedly ask 'is there new data?' on a schedule. Webhooks mean the service tells you immediately when something happens. real-time and more efficient.",
         "Polling works with JSON, webhooks work with XML.",
-        "There's no difference — they're the same thing."
+        "There's no difference. they're the same thing."
     ]}
     correctAnswerIndex={1}
-    explanation="Polling requires your automation to check repeatedly ('any new jobs?'), wasting requests when nothing changed. Webhooks invert this — the service pushes data to you the moment something happens, making it real-time and more efficient on both sides."
+    explanation="Polling requires your automation to check repeatedly ('any new jobs?'), wasting requests when nothing changed. Webhooks invert this. the service pushes data to you the moment something happens, making it real-time and more efficient on both sides."
 />

@@ -129,7 +129,7 @@ export default function MCPDevelopmentCoursePage() {
                     MCP Development 101
                 </h1>
                 <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl">
-                Build servers that connect AI to anything. Learn the Model Context Protocol — the open standard that lets AI models use tools, query databases, and interact with APIs. The USB-C port for AI.
+                Build servers that connect AI to anything. Learn the Model Context Protocol. the open standard that lets AI models use tools, query databases, and interact with APIs. The USB-C port for AI.
                 </p>
 
                 <div className="mt-8 flex flex-wrap justify-start items-center gap-4">
@@ -159,7 +159,7 @@ export default function MCPDevelopmentCoursePage() {
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">1. What is MCP?</h3>
-                                <p className="text-sm text-muted-foreground mt-1">The universal connector for AI — understand the problem, architecture, and why it matters now.</p>
+                                <p className="text-sm text-muted-foreground mt-1">The universal connector for AI. understand the problem, architecture, and why it matters now.</p>
                             </div>
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
@@ -168,7 +168,7 @@ export default function MCPDevelopmentCoursePage() {
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">2. Transports & Message Format</h3>
-                                <p className="text-sm text-muted-foreground mt-1">JSON-RPC, stdio, SSE, and Streamable HTTP — how data flows between clients and servers.</p>
+                                <p className="text-sm text-muted-foreground mt-1">JSON-RPC, stdio, SSE, and Streamable HTTP. how data flows between clients and servers.</p>
                             </div>
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
@@ -186,7 +186,7 @@ export default function MCPDevelopmentCoursePage() {
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">4. Tools, Resources & Prompts</h3>
-                                <p className="text-sm text-muted-foreground mt-1">The three MCP primitives — when to use each, who controls them, and design best practices.</p>
+                                <p className="text-sm text-muted-foreground mt-1">The three MCP primitives. when to use each, who controls them, and design best practices.</p>
                             </div>
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>

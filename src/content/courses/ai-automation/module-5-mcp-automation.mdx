@@ -1,11 +1,11 @@
 ---
 title: "MCP-Powered Automation"
-description: "MCP servers turn AI agents into automation powerhouses. Connect Claude or Antigravity to Google Sheets, Slack, databases, and any service — then let the agent orchestrate everything."
+description: "MCP servers turn AI agents into automation powerhouses. Connect Claude or Antigravity to Google Sheets, Slack, databases, and any service. then let the agent orchestrate everything."
 ---
 
 <MCPAutomationStack />
 
-MCP is the bridge between AI agents and real-world services. Without MCP, an AI agent can only generate text. With MCP, it can query your database, update a spreadsheet, send a Slack message, and deploy code — all in a single conversation.
+MCP is the bridge between AI agents and real-world services. Without MCP, an AI agent can only generate text. With MCP, it can query your database, update a spreadsheet, send a Slack message, and deploy code. all in a single conversation.
 
 If you haven't explored MCP yet, the [MCP Development 101](/mcp-development) course covers building servers from scratch. This module focuses on using existing MCP servers as automation building blocks.
 
@@ -17,8 +17,8 @@ If you haven't explored MCP yet, the [MCP Development 101](/mcp-development) cou
             <ol>
                 <li><strong>Connect MCP servers</strong> to your AI agent (Claude Desktop, Cursor, Antigravity)</li>
                 <li><strong>Describe the automation</strong> in natural language: "Every Monday, pull this week's sales data from the database, calculate totals by region, and update the Google Sheet"</li>
-                <li><strong>The agent orchestrates</strong> — it calls the database MCP server to query data, processes the results, then calls the Google Sheets MCP server to update cells</li>
-                <li><strong>Review and refine</strong> — check the output, adjust the instructions, run again</li>
+                <li><strong>The agent orchestrates</strong>. it calls the database MCP server to query data, processes the results, then calls the Google Sheets MCP server to update cells</li>
+                <li><strong>Review and refine</strong>. check the output, adjust the instructions, run again</li>
             </ol>
             <p><strong>The key insight:</strong> Instead of writing a script that calls APIs directly, you give the AI agent access to MCP tools and describe what you want. The agent handles the API calls, data transformation, error handling, and formatting.</p>
         </AccordionContent>
@@ -68,7 +68,7 @@ Update the records in place."
             <p><strong>Pattern 3: Data Pipeline</strong></p>
             <ul>
                 <li>"Check 3 new API sources for job listings. For each new listing, check if it already exists in our database. If not, insert it with normalized fields."</li>
-                <li>Agent handles deduplication logic, field mapping, and conflict resolution — tasks that would require complex code in a traditional pipeline</li>
+                <li>Agent handles deduplication logic, field mapping, and conflict resolution. tasks that would require complex code in a traditional pipeline</li>
             </ul>
         </AccordionContent>
     </AccordionItem>
@@ -98,7 +98,7 @@ Update the records in place."
                     </ul>
                 </div>
             </div>
-            <p>One instruction to the agent. Five services coordinated. Zero custom integration code. This is the future of automation — and it's available today.</p>
+            <p>One instruction to the agent. Five services coordinated. Zero custom integration code. This is the future of automation. and it's available today.</p>
         </AccordionContent>
     </AccordionItem>
 </Accordion>
@@ -107,10 +107,10 @@ Update the records in place."
     question="What's the main advantage of using MCP servers for automation instead of calling APIs directly in a script?"
     options={[
         "MCP servers are faster than direct API calls.",
-        "The AI agent handles API calls, data transformation, and error handling through natural language — you describe what you want, and the agent figures out the implementation.",
+        "The AI agent handles API calls, data transformation, and error handling through natural language. you describe what you want, and the agent figures out the implementation.",
         "MCP servers are free to use, APIs always cost money.",
         "MCP only works with Google products."
     ]}
     correctAnswerIndex={1}
-    explanation="With direct API calls, you write code for every integration — authentication, pagination, error handling, data mapping. With MCP, the AI agent handles all of this through natural language instructions. You describe the outcome, the agent orchestrates the tools. This dramatically reduces development time and makes automations accessible to non-programmers."
+    explanation="With direct API calls, you write code for every integration. authentication, pagination, error handling, data mapping. With MCP, the AI agent handles all of this through natural language instructions. You describe the outcome, the agent orchestrates the tools. This dramatically reduces development time and makes automations accessible to non-programmers."
 />

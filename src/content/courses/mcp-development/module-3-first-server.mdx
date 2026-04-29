@@ -30,16 +30,16 @@ npm install -D typescript @types/node tsx`}</code></pre>
 }`}</code></pre>
             <p><strong>Key dependencies:</strong></p>
             <ul>
-                <li><code>@modelcontextprotocol/sdk</code> — The official MCP SDK. Handles all protocol details.</li>
-                <li><code>zod</code> — Schema validation library. Used to define tool parameters with type safety.</li>
-                <li><code>tsx</code> — TypeScript runner for development. Run without compiling.</li>
+                <li><code>@modelcontextprotocol/sdk</code>. The official MCP SDK. Handles all protocol details.</li>
+                <li><code>zod</code>. Schema validation library. Used to define tool parameters with type safety.</li>
+                <li><code>tsx</code>. TypeScript runner for development. Run without compiling.</li>
             </ul>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">Step 2: Write the Server</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>Create <code>src/index.ts</code> with a minimal server that has one tool — a word counter:</p>
+            <p>Create <code>src/index.ts</code> with a minimal server that has one tool. a word counter:</p>
             <pre><code>{`import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
@@ -81,7 +81,7 @@ await server.connect(transport);`}</code></pre>
     <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg text-left">Step 3: Test with MCP Inspector</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>Before connecting to a real client, test your server with the <strong>MCP Inspector</strong> — a web-based debugging tool:</p>
+            <p>Before connecting to a real client, test your server with the <strong>MCP Inspector</strong>. a web-based debugging tool:</p>
             <pre><code>{`npx @modelcontextprotocol/inspector npx tsx src/index.ts`}</code></pre>
             <p>This opens a browser UI where you can:</p>
             <ul>

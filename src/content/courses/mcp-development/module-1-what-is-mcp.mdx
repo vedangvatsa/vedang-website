@@ -7,14 +7,14 @@ description: "The Model Context Protocol is an open standard that gives AI model
 
 Before MCP, every AI tool integration was a custom, one-off project. Want your AI assistant to search the web? Build a custom integration. Want it to query your database? Build another one. Want it to read your files? Another one. Each integration was different, fragile, and expensive to maintain.
 
-MCP changes this. Created by Anthropic and now adopted across the industry, the **Model Context Protocol** is an open standard that provides a single, universal way for AI models to connect to any data source or tool — present or future.
+MCP changes this. Created by Anthropic and now adopted across the industry, the **Model Context Protocol** is an open standard that provides a single, universal way for AI models to connect to any data source or tool. present or future.
 
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">The Problem: The N×M Integration Nightmare</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             <p>Imagine you have 5 AI applications (Claude, Cursor, VS Code, a custom chatbot, a data pipeline) and 10 data sources (Slack, GitHub, Google Drive, PostgreSQL, Jira, etc.). Without a standard protocol, you'd need to build <strong>5 × 10 = 50 custom integrations</strong>. Each with its own authentication, error handling, and data formatting.</p>
-            <p>Now add one more AI application — you need 10 more integrations. Add one more data source — 5 more. This is the <strong>N×M problem</strong>, and it doesn't scale.</p>
+            <p>Now add one more AI application. you need 10 more integrations. Add one more data source. 5 more. This is the <strong>N×M problem</strong>, and it doesn't scale.</p>
             <p><strong>MCP solves this by reducing it to N+M.</strong> Each AI app implements one MCP client. Each data source implements one MCP server. Now adding a new app means one integration, and adding a new data source means one integration. The protocol handles everything in between.</p>
             <p>Think of it like USB-C. Before USB-C, every device had its own charger. Now, one cable works with everything. MCP is the USB-C port for AI.</p>
         </AccordionContent>
@@ -24,9 +24,9 @@ MCP changes this. Created by Anthropic and now adopted across the industry, the 
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             <p>MCP has three components that work together:</p>
             <ul>
-                <li><strong>MCP Host:</strong> The AI application the user interacts with — Claude Desktop, Cursor, VS Code, or your own app. The host creates and manages MCP clients. It's the "brain" that the user talks to.</li>
-                <li><strong>MCP Client:</strong> A lightweight connector that lives inside the host. Each client maintains a 1:1 connection with a specific MCP server. The host can have many clients — one for each server it connects to.</li>
-                <li><strong>MCP Server:</strong> A lightweight program that exposes specific capabilities (tools, resources, prompts) through the MCP protocol. Servers are where the actual work happens — querying databases, calling APIs, reading files. Anyone can build an MCP server.</li>
+                <li><strong>MCP Host:</strong> The AI application the user interacts with. Claude Desktop, Cursor, VS Code, or your own app. The host creates and manages MCP clients. It's the "brain" that the user talks to.</li>
+                <li><strong>MCP Client:</strong> A lightweight connector that lives inside the host. Each client maintains a 1:1 connection with a specific MCP server. The host can have many clients. one for each server it connects to.</li>
+                <li><strong>MCP Server:</strong> A lightweight program that exposes specific capabilities (tools, resources, prompts) through the MCP protocol. Servers are where the actual work happens. querying databases, calling APIs, reading files. Anyone can build an MCP server.</li>
             </ul>
             <p>The communication flow: User → Host → Client → Server → Data Source. The LLM inside the host decides which tools to use, the client routes the request to the right server, and the server executes the action and returns results.</p>
         </AccordionContent>
@@ -36,8 +36,8 @@ MCP changes this. Created by Anthropic and now adopted across the industry, the 
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             <p>MCP's timing is not accidental. Several trends converged to make it essential:</p>
             <ul>
-                <li><strong>AI Agents Are Going Mainstream:</strong> AI models are moving from "chat" to "do." They need reliable ways to take actions in the real world — search, code, email, book, buy.</li>
-                <li><strong>Tool Calling Standardization:</strong> Every major model (Claude, GPT, Gemini) now supports function/tool calling natively. MCP standardizes the other side — how tools expose themselves.</li>
+                <li><strong>AI Agents Are Going Mainstream:</strong> AI models are moving from "chat" to "do." They need reliable ways to take actions in the real world. search, code, email, book, buy.</li>
+                <li><strong>Tool Calling Standardization:</strong> Every major model (Claude, GPT, Gemini) now supports function/tool calling natively. MCP standardizes the other side. how tools expose themselves.</li>
                 <li><strong>Enterprise Adoption:</strong> Companies want to connect AI to their internal systems (Salesforce, SAP, internal databases) without rebuilding everything for each AI vendor.</li>
                 <li><strong>Community Momentum:</strong> Thousands of MCP servers have been published for everything from Google Sheets to Kubernetes to Figma. The ecosystem is growing faster than any previous AI protocol.</li>
             </ul>
@@ -49,10 +49,10 @@ MCP changes this. Created by Anthropic and now adopted across the industry, the 
             <p>MCP servers can connect AI to virtually anything:</p>
             <ul>
                 <li><strong>Databases:</strong> Let AI query PostgreSQL, MySQL, MongoDB, or Supabase using natural language.</li>
-                <li><strong>APIs:</strong> Wrap any REST or GraphQL API as an MCP server — weather, stocks, social media, CRM.</li>
+                <li><strong>APIs:</strong> Wrap any REST or GraphQL API as an MCP server. weather, stocks, social media, CRM.</li>
                 <li><strong>File Systems:</strong> Give AI read/write access to local or cloud file systems with proper sandboxing.</li>
-                <li><strong>Developer Tools:</strong> GitHub, Jira, Linear, Sentry — let AI manage your development workflow.</li>
-                <li><strong>Communication:</strong> Slack, email, Discord — let AI send messages and read channels.</li>
+                <li><strong>Developer Tools:</strong> GitHub, Jira, Linear, Sentry. let AI manage your development workflow.</li>
+                <li><strong>Communication:</strong> Slack, email, Discord. let AI send messages and read channels.</li>
                 <li><strong>Knowledge Bases:</strong> Connect AI to your documentation, wikis, and internal knowledge.</li>
             </ul>
             <p>By the end of this course, you'll be able to build all of these.</p>
