@@ -1,15 +1,15 @@
 'use client';
 
-import { Flame, Palette, Terminal, ArrowRight } from 'lucide-react';
+import { Palette, Terminal, Code2, ArrowRight } from 'lucide-react';
 
 const options = [
   {
-    icon: Flame,
-    title: 'Firebase Studio',
+    icon: Terminal,
+    title: 'Cursor / Windsurf',
     color: 'text-amber-600 dark:text-amber-400',
     bg: 'bg-amber-500/5 border-amber-500/20',
     iconBg: 'bg-amber-500/10',
-    steps: ['Create project', 'Paste your PRD', 'Review the Blueprint', 'Approve & generate', 'Deploy'],
+    steps: ['Create Next.js project', 'Paste PRD into chat', 'Use Composer for multi-file edits', 'Test locally', 'Deploy to Vercel'],
   },
   {
     icon: Palette,
@@ -20,12 +20,12 @@ const options = [
     steps: ['Start new project', 'Design UI first', 'Add backend logic', 'Iterate on output', 'Publish'],
   },
   {
-    icon: Terminal,
-    title: 'Replit',
+    icon: Code2,
+    title: 'Claude Code / Antigravity',
     color: 'text-blue-600 dark:text-blue-400',
     bg: 'bg-blue-500/5 border-blue-500/20',
     iconBg: 'bg-blue-500/10',
-    steps: ['Create Next.js project', 'Prompt for frontend + API', 'Debug with error logs', 'Deploy with one click'],
+    steps: ['Open terminal agent', 'Describe full project', 'Agent creates all files', 'Debug autonomously', 'Deploy'],
   },
 ];
 
@@ -34,7 +34,7 @@ export function LabWorkflow() {
     <div className="not-prose my-10 p-6 md:p-8 bg-card border rounded-2xl shadow-sm">
       <div className="text-center mb-6">
         <h3 className="text-xl font-bold tracking-tight mb-1">Build Workflow: 3 Paths to Ship</h3>
-        <p className="text-sm text-muted-foreground">Choose any tool — all three produce the same Startup Name Generator app.</p>
+        <p className="text-sm text-muted-foreground">Choose any tool. All three produce the same Startup Name Generator app.</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {options.map((opt) => {

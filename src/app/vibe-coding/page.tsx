@@ -130,7 +130,7 @@ const faqItems = [
   },
   {
     question: "Which tool should I start with?",
-    answer: "If you're a visual person and want to build a web app, start with Lovable.dev. If you're more interested in logic, bots, or backend services, start with Replit. Both are excellent for beginners because they require zero setup. Firebase Studio is fantastic when you're ready to build something that can scale to a large audience."
+    answer: "If you're a visual person and want to build a web app, start with Lovable.dev. If you're more interested in logic, bots, or backend services, start with Replit. Both are excellent for beginners because they require zero setup. For professional projects, Cursor or Windsurf with Antigravity gives you full control and scales well."
   },
   {
     question: "How do I handle errors and bugs?",
@@ -246,7 +246,7 @@ export default function VibeCodingCoursePage() {
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">2. The Modern Toolkit</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Explore Firebase Studio, Replit, Cursor, and Lovable.</p>
+                                <p className="text-sm text-muted-foreground mt-1">Explore Cursor, Replit, Antigravity, and Lovable.</p>
                             </div>
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>

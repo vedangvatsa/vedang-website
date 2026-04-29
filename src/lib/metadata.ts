@@ -70,7 +70,7 @@ export const pageMetadata = {
   vibeCoding: {
     title: 'Vibe Coding 101 by Vedang Vatsa',
     description:
-      'Vibe Coding 101: A free, self-paced course on building real apps with AI. Learn to describe what you want in plain English and let tools like Firebase Studio, Replit, Cursor, and Lovable handle the code. By Vedang Vatsa.',
+      'Vibe Coding 101: A free, self-paced course on building real apps with AI. Learn to describe what you want in plain English and let tools like Cursor, Replit, Antigravity, and Lovable handle the code. By Vedang Vatsa.',
     url: '/vibe-coding',
     keywords: ['Vibe Coding', 'Intuitive Engineering', 'Creative Software Design', 'Technical Excellence', 'Design Engineering'],
   },

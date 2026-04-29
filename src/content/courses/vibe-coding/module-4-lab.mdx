@@ -27,17 +27,16 @@ Before touching any tool, write your PRD. Here's an example:
 
 Copy this PRD and paste it as your very first prompt in whichever tool you choose below.
 
-<SectionLabel label="Option A: Building with Firebase Studio" />
+<SectionLabel label="Option A: Building with Cursor or Windsurf" />
 
-Firebase Studio handles the frontend, backend, and deployment in one place.
+Cursor and Windsurf are AI-native editors forked from VS Code, with built-in chat, inline editing, and multi-file awareness.
 
-1.  **Setup:** Go to Firebase Studio and create a new project.
-2.  **The Initial Prompt:** Paste your PRD into the main chat box.
-    *"Create a startup name generator. It needs a text input field for 'industry' and a 'Generate' button. When the button is clicked, generate a list of 10 creative names and display them below. Use a dark theme with neon green accents. Add a copy-to-clipboard icon next to each name."*
-3.  **Review the Blueprint:** Firebase Studio will stop and show you a "Blueprint" of its plan. Review it carefully. If you want changes (like adding a loading animation), tell the AI to add it now, **before** it writes code.
-4.  **Generate:** Approve the blueprint. The AI will write the code and show you a live preview.
-5.  **Iterate:** Test the preview. If the names are generic, refine: *"Update the AI prompt that generates names. Tell it to act like a branding agency. Names should be one word, memorable, and have an available .com domain extension."*
-6.  **Publish:** Click the "Deploy" button. Your app is now live on the internet.
+1.  **Setup:** Open Cursor (or Windsurf) and create a new Next.js project: `npx create-next-app@latest name-generator`
+2.  **The Initial Prompt:** Open the AI chat panel (Cmd+L in Cursor) and paste your PRD along with the build instructions.
+    *"Create a startup name generator. It needs a text input field for 'industry' and a 'Generate' button. When clicked, call an API route that uses OpenAI to generate 10 creative names. Display them in a grid. Use a dark theme with neon green accents. Add copy-to-clipboard for each name."*
+3.  **Use Composer/Cascade:** For multi-file changes, use Cursor's Composer mode or Windsurf's Cascade flow. These let the AI edit multiple files simultaneously rather than one at a time.
+4.  **Iterate:** Test the app locally with `npm run dev`. If names are generic, refine: *"Update the system prompt to act like a branding agency. Names should be one word, memorable, and modern."*
+5.  **Publish:** Deploy to Vercel: `npx vercel`. Your app is live.
 
 <SectionLabel label="Option B: Building with Lovable.dev" />
 
@@ -52,16 +51,16 @@ Lovable is highly visual and excellent for front-end design. It produces beautif
 5.  **Add Polish:** *"Add a subtle animation where each name card fades in one by one with a 100ms delay. Add a toast notification that says 'Copied!' when the copy button is clicked."*
 6.  **Publish:** Use Lovable's built-in deploy feature to put the site online.
 
-<SectionLabel label="Option C: Building with Cursor + Antigravity" />
+<SectionLabel label="Option C: Building with Claude Code or Antigravity" />
 
-For developers who want full control over the codebase and the ability to use any framework.
+For autonomous, terminal-based agents that handle multi-file architectures with minimal supervision.
 
-1.  **Setup:** Open Cursor or your terminal with Antigravity. Create a new Next.js project: `npx create-next-app@latest name-generator`
-2.  **The Initial Prompt:** Ask the AI to generate the core files.
-    *"Create a Next.js application for a startup name generator. I need: (1) A frontend page with a text input, a submit button, and a grid to display results. (2) A backend API route at /api/generate that takes the industry text, calls the OpenAI API to generate 10 creative startup names, and returns them as a JSON array. Use the App Router and TypeScript."*
-3.  **Configure the API Key:** The AI will likely hardcode your API key. Fix this immediately: *"Move the OpenAI API key to an environment variable called OPENAI_API_KEY. Read it from process.env in the API route. Add a .env.local file to .gitignore."*
-4.  **Debug:** If the code fails to run, you will see a red error message in the console. Copy the entire error message, paste it into the chat, and say: *"I received this error when clicking the Generate button. Here is the full stack trace. Fix it."*
-5.  **Publish:** Deploy to Vercel: `npx vercel`. Follow the prompts. Your app is live.
+1.  **Setup:** Open your terminal. With Claude Code: `claude`. With Antigravity: start a new conversation. Create the project: `npx create-next-app@latest name-generator`
+2.  **The Initial Prompt:** Describe the full project. These agents read your entire codebase, so give them the big picture.
+    *"Build a startup name generator app. Create a frontend with a text input and submit button, a backend API route at /api/generate that calls OpenAI to produce 10 names, and display them in a grid with copy-to-clipboard. Use App Router, TypeScript, dark theme."*
+3.  **Let the agent work:** Unlike editors, these agents will create multiple files, install dependencies, and run the dev server. Review the changes when prompted.
+4.  **Debug:** Paste errors directly. The agent can read terminal output, fix code, and re-run tests autonomously.
+5.  **Publish:** `npx vercel` or let the agent handle it.
 
 <SectionLabel label="Option D: Building with Replit" />
 

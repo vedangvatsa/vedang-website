@@ -137,7 +137,7 @@ export default function SeoProfilePage() {
                   </ul>
                   <ul className="space-y-1 list-disc list-inside">
                     <li><span className="font-semibold text-foreground">Creative & Design:</span> Figma, Canva, Adobe Photoshop, Adobe Express</li>
-                    <li><span className="font-semibold text-foreground">Web & CMS:</span> WordPress, Webflow, HTML/CSS, React, Wix, Shopify, Replit, Firebase Studio</li>
+                    <li><span className="font-semibold text-foreground">Web & CMS:</span> WordPress, Webflow, HTML/CSS, React, Wix, Shopify, Replit, Next.js</li>
                     <li><span className="font-semibold text-foreground">AI Tools:</span> Advanced use of GPT-4, Claude, Midjourney for content and creative workflows</li>
                   </ul>
               </div>
@@ -156,7 +156,7 @@ export default function SeoProfilePage() {
                     <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
                       <li>Established one of the largest global communities for Web3 professionals, growing it to 100,000+ members and creating a powerful organic acquisition channel.</li>
                       <li>Published crash courses and newsletters with 40,000 subscribers, growing a Medium publication to 150,000 subscribers.</li>
-                      <li>Revamped and SEO-optimized website (Firebase Studio), publishing 700 keyword-targeted pages and acquiring 1,500+ backlinks in 4 months, achieving full Google indexation within 30 days.</li>
+                      <li>Revamped and SEO-optimized website, publishing 700 keyword-targeted pages and acquiring 1,500+ backlinks in 4 months, achieving full Google indexation within 30 days.</li>
                       <li>Served as a growth advisor for clients including Zeeve, Talent Protocol, Bobble AI, Bless Network, Cypher (YC), Super Protocol, and Changelly, assisting The Hashgraph Association with social media strategy and organic marketing for portfolio companies, including exchange listings, website setup, and social media management on LinkedIn and X.</li>
                       <li>Hosted Twitter Spaces with up to 32,000 live listeners and partnered with top-tier organizations like Harvard Blockchain Club, ETH Oxford, London Business School, Token 2049, etc.</li>
                       <li>Content strategy results in ~90 million annual impressions, establishing strong thought leadership in the Web3 space.</li>

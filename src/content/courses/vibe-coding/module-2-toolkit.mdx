@@ -20,7 +20,7 @@ Your first decision is where the code will live while you work on it. Think of t
             <CardTitle className="text-lg font-semibold">Cloud IDEs (The Online Workshop)</CardTitle>
         </CardHeader>
         <CardContent>
-            <p className="text-sm text-muted-foreground mb-4"><em>Examples: Replit, Firebase Studio, Lovable.dev</em></p>
+            <p className="text-sm text-muted-foreground mb-4"><em>Examples: Replit, Lovable.dev, v0</em></p>
             <p className="text-sm">These tools run entirely in your web browser.</p>
             <ul className="text-sm mt-2">
                 <li><strong>Pros:</strong> Zero setup required. Perfect for beginners and quickly testing an idea.</li>
@@ -33,7 +33,7 @@ Your first decision is where the code will live while you work on it. Think of t
             <CardTitle className="text-lg font-semibold">Local IDEs (Your Own Workshop)</CardTitle>
         </CardHeader>
         <CardContent>
-            <p className="text-sm text-muted-foreground mb-4"><em>Examples: Cursor, VS Code, Antigravity</em></p>
+            <p className="text-sm text-muted-foreground mb-4"><em>Examples: Cursor, Windsurf, VS Code + Antigravity</em></p>
             <p className="text-sm">You install these programs directly on your computer.</p>
             <ul className="text-sm mt-2">
                 <li><strong>Pros:</strong> Complete control. Faster for large projects.</li>
@@ -59,14 +59,14 @@ Here is a breakdown of the most effective tools available right now and when to 
         </AccordionContent>
     </AccordionItem>
     
-    <AccordionItem value="firebase" className="border rounded-lg bg-card px-4">
+    <AccordionItem value="cursor-windsurf" className="border rounded-lg bg-card px-4">
         <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-            2. Firebase Studio: The Production Scaler
+            2. Cursor & Windsurf: The AI-Native Editors
         </AccordionTrigger>
         <AccordionContent className="text-base text-muted-foreground pt-2">
-            **Best For:** Building strong web applications that need to support many users safely.
+            **Best For:** Developers who want AI integrated directly into their coding environment.
             
-            **How it works:** It connects directly to Google Cloud. Before the AI changes any code, it generates a "Blueprint", a detailed plan of exactly what it intends to change. You review and approve it, preventing the AI from breaking existing code.
+            **How it works:** Both are forks of VS Code with AI built in at every level. Cursor has inline editing (Cmd+K), a chat panel that reads your codebase, and "Composer" mode for multi-file changes. Windsurf offers similar capabilities with its "Cascade" flow for autonomous edits. Both support MCP servers for extending AI capabilities.
         </AccordionContent>
     </AccordionItem>
     
@@ -81,14 +81,14 @@ Here is a breakdown of the most effective tools available right now and when to 
         </AccordionContent>
     </AccordionItem>
     
-    <AccordionItem value="cursor" className="border rounded-lg bg-card px-4">
+    <AccordionItem value="copilot" className="border rounded-lg bg-card px-4">
         <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-            4. Cursor & GitHub Copilot (Codex): The Native Assistants
+            4. GitHub Copilot & Codex: The Inline Assistants
         </AccordionTrigger>
         <AccordionContent className="text-base text-muted-foreground pt-2">
-            **Best For:** People who already know how to code and want AI help in their usual local workflow.
+            **Best For:** Developers who want AI autocomplete inside their existing VS Code or JetBrains setup.
             
-            **How it works:** Cursor is a specialized AI-first fork of VS Code. Copilot (powered by OpenAI Codex models) integrates into existing editors. You can highlight code to rewrite it, find bugs, or auto-complete blocks of logic as you type. They speed up developers rather than replacing them.
+            **How it works:** Copilot predicts and autocompletes code as you type. Codex (the latest iteration) can execute multi-step coding tasks asynchronously in a sandboxed environment. Both integrate into editors you already use without requiring a switch.
         </AccordionContent>
     </AccordionItem>
     
@@ -127,9 +127,9 @@ Test your understanding of the toolkit. Click the questions to reveal the answer
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="q2">
-        <AccordionTrigger className="text-lg font-medium text-left">What is the main advantage of Firebase Studio's 'Blueprint' feature?</AccordionTrigger>
+        <AccordionTrigger className="text-lg font-medium text-left">What makes Claude Code and Antigravity different from Cursor?</AccordionTrigger>
         <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
-            It forces the AI to show you a plan of its changes before it executes them. This gives you control and stops the AI from accidentally breaking code that already works.
+            Claude Code and Antigravity are autonomous agents that run in your terminal and can perform multi-file refactors, execute commands, run tests, and manage git operations with minimal supervision. Cursor is an editor with AI assistance built in, but still requires more manual guidance.
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="q3">
