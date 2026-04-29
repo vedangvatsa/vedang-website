@@ -166,7 +166,7 @@ export function AgentArchitecture() {
 /* ─── Module 5: MCP Automation Stack ─── */
 export function MCPAutomationStack() {
   const stack = [
-    { label: 'AI Agent', desc: 'Claude / Antigravity / GPT. decides what to do', color: '#8b5cf6', y: 15 },
+    { label: 'AI Agent', desc: 'Claude / Antigravity / GPT; decides what to do', color: '#8b5cf6', y: 15 },
     { label: 'MCP Client', desc: 'Routes tool calls to the right server', color: '#3b82f6', y: 65 },
     { label: 'MCP Servers', desc: 'Google Sheets · Slack · Database · GitHub · Email', color: '#10b981', y: 115 },
     { label: 'External Services', desc: 'The real-world systems being automated', color: '#f59e0b', y: 165 },

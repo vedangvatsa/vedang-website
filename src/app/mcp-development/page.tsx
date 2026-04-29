@@ -129,7 +129,7 @@ export default function MCPDevelopmentCoursePage() {
                     MCP Development 101
                 </h1>
                 <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl">
-                Build servers that connect AI to anything. Learn the Model Context Protocol. the open standard that lets AI models use tools, query databases, and interact with APIs. The USB-C port for AI.
+                Build servers that connect AI to anything. Learn the Model Context Protocol, the open standard that lets AI models use tools, query databases, and interact with APIs. The USB-C port for AI.
                 </p>
 
                 <div className="mt-8 flex flex-wrap justify-start items-center gap-4">

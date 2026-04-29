@@ -60,7 +60,7 @@ const referenceLinks = [
 ];
 
 const faqItems = [
-  { question: "Do I need coding experience?", answer: "Modules 1-3 are fully no-code. Modules 4-7 include code examples but are designed to be followed with AI assistance. you can use Vibe Coding techniques to build automations even without deep coding skills." },
+  { question: "Do I need coding experience?", answer: "Modules 1-3 are fully no-code. Modules 4-7 include code examples but are designed to be followed with AI assistance, and you can use Vibe Coding techniques to build automations even without deep coding skills." },
   { question: "Is this course just about n8n and Zapier?", answer: "No. This course covers the full automation spectrum: no-code tools (n8n, Make, Zapier), raw API integration, AI agents (Claude, Antigravity, GPT), and MCP-powered automation. The goal is to know when to use each approach." },
   { question: "What's the difference between this and the MCP Development course?", answer: "MCP Development teaches you to build MCP servers from scratch. This course teaches you to use MCP servers (and other tools) as building blocks for automated workflows. They're complementary. MCP Dev is 'build the tools,' this course is 'use the tools.'" },
   { question: "Can I automate social media posting?", answer: "Yes. Module 4 covers social media automation in detail, including Telegram broadcasting, Twitter/X threads, LinkedIn posts, content repurposing pipelines, and community engagement automation." },
@@ -120,7 +120,7 @@ export default function AIAutomationCoursePage() {
           <div className="space-y-4">
             {[
               { href: 'module-1-mindset', title: '1. The Automation Mindset', desc: 'Identify automation opportunities, think in workflows, and choose the right tool for every job.' },
-              { href: 'module-2-apis', title: '2. API Fundamentals', desc: 'REST APIs, authentication, webhooks, pagination. the building blocks every automation uses.' },
+              { href: 'module-2-apis', title: '2. API Fundamentals', desc: 'REST APIs, authentication, webhooks, pagination: the building blocks every automation uses.' },
               { href: 'module-3-nocode', title: '3. No-Code Automation', desc: 'Build powerful workflows with n8n, Make, and Zapier. add AI nodes for intelligent processing.' },
               { href: 'module-4-agents', title: '4. AI Agents as Automators', desc: 'Use Claude, Antigravity, and GPT as autonomous workflow executors for social media and beyond.' },
               { href: 'module-5-mcp-automation', title: '5. MCP-Powered Automation', desc: 'Connect AI agents to Google Sheets, databases, Slack, and any service via MCP servers.' },
