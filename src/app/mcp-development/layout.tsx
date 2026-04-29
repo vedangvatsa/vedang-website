@@ -19,7 +19,7 @@ export default function MCPDevelopmentCourseLayout({ children }: { children: Rea
     return (
         <PageLayout>
             <div className="container mx-auto px-4 md:px-6 max-w-7xl py-12 flex flex-col md:flex-row gap-12">
-                <aside className="w-full md:w-64 lg:w-72 flex-shrink-0">
+                <aside className="hidden md:block w-64 lg:w-72 flex-shrink-0">
                     <div className="sticky top-1/3 space-y-6">
                         <Card className="shadow-sm bg-muted/30 border-muted">
                             <CardContent className="p-6">

@@ -4,10 +4,10 @@
 export function MCPArchitecture() {
   return (
     <div className="not-prose my-6">
-      <svg viewBox="0 0 800 280" className="w-full h-auto hidden sm:block" role="img" aria-label="MCP architecture: Host contains Clients that connect to Servers">
+      <svg viewBox="0 0 820 280" className="w-full h-auto hidden sm:block" role="img" aria-label="MCP architecture: Host contains Clients that connect to Servers">
         {/* Host */}
         <rect x={20} y={10} width={260} height={260} rx={16} fill="#3b82f608" stroke="#3b82f6" strokeWidth={2} strokeDasharray="6 4" />
-        <text x={150} y={40} textAnchor="middle" fill="#3b82f6" fontSize={14} fontWeight={700}>MCP Host (e.g. Claude Desktop)</text>
+        <text x={150} y={40} textAnchor="middle" fill="#3b82f6" fontSize={13} fontWeight={700}>MCP Host (e.g. Claude Desktop)</text>
 
         {/* LLM inside host */}
         <rect x={60} y={55} width={180} height={40} rx={8} fill="#8b5cf615" stroke="#8b5cf6" strokeWidth={1.5} />
@@ -33,9 +33,9 @@ export function MCPArchitecture() {
 
         {/* Servers */}
         {[
-          { y: 105, label: '🔍 Search Server', desc: 'Web search API', color: '#10b981' },
-          { y: 155, label: '🗄️ Database Server', desc: 'PostgreSQL queries', color: '#f59e0b' },
-          { y: 205, label: '📁 Filesystem Server', desc: 'Read/write files', color: '#ef4444' },
+          { y: 105, label: 'Search Server', desc: 'Web search API', color: '#10b981' },
+          { y: 155, label: 'Database Server', desc: 'PostgreSQL queries', color: '#f59e0b' },
+          { y: 205, label: 'Filesystem Server', desc: 'Read/write files', color: '#ef4444' },
         ].map((s) => (
           <g key={s.label}>
             <rect x={420} y={s.y} width={200} height={40} rx={8} fill={`${s.color}10`} stroke={s.color} strokeWidth={1.5} />
@@ -48,8 +48,8 @@ export function MCPArchitecture() {
         {[125, 175, 225].map((y) => (
           <line key={y} x1={620} y1={y} x2={700} y2={y} stroke="currentColor" strokeWidth={1} opacity={0.2} strokeDasharray="3 2" />
         ))}
-        <rect x={700} y={100} width={80} height={150} rx={8} fill="currentColor" opacity={0.05} stroke="currentColor" strokeWidth={1} />
-        <text x={740} y={180} textAnchor="middle" fill="currentColor" fontSize={10} opacity={0.4}>Data Sources</text>
+        <rect x={700} y={100} width={100} height={150} rx={8} fill="currentColor" opacity={0.05} stroke="currentColor" strokeWidth={1} />
+        <text x={750} y={180} textAnchor="middle" fill="currentColor" fontSize={10} opacity={0.4}>Data Sources</text>
       </svg>
       {/* Mobile fallback */}
       <div className="sm:hidden grid grid-cols-1 gap-3">
@@ -114,15 +114,15 @@ export function ServerSkeleton() {
 /* ─── Module 4: Three Primitives ─── */
 export function MCPPrimitives() {
   const primitives = [
-    { label: 'Tools', emoji: '🔧', desc: 'Functions the LLM can call', detail: 'Model-controlled. The LLM decides when to use them based on context.', color: '#3b82f6', bg: 'bg-blue-500/5 border-blue-500/20' },
-    { label: 'Resources', emoji: '📄', desc: 'Data the app can read', detail: 'App-controlled. The host application decides when to fetch and inject them.', color: '#10b981', bg: 'bg-emerald-500/5 border-emerald-500/20' },
-    { label: 'Prompts', emoji: '💬', desc: 'Reusable prompt templates', detail: 'User-controlled. The user selects which prompt template to use.', color: '#f59e0b', bg: 'bg-amber-500/5 border-amber-500/20' },
+    { label: 'Tools', initial: 'T', desc: 'Functions the LLM can call', detail: 'Model-controlled. The LLM decides when to use them based on context.', color: '#3b82f6', bg: 'bg-blue-500/5 border-blue-500/20' },
+    { label: 'Resources', initial: 'R', desc: 'Data the app can read', detail: 'App-controlled. The host application decides when to fetch and inject them.', color: '#10b981', bg: 'bg-emerald-500/5 border-emerald-500/20' },
+    { label: 'Prompts', initial: 'P', desc: 'Reusable prompt templates', detail: 'User-controlled. The user selects which prompt template to use.', color: '#f59e0b', bg: 'bg-amber-500/5 border-amber-500/20' },
   ];
   return (
     <div className="not-prose my-6 grid grid-cols-1 md:grid-cols-3 gap-4">
       {primitives.map((p) => (
         <div key={p.label} className={`p-5 rounded-xl border ${p.bg}`}>
-          <div className="text-2xl mb-2">{p.emoji}</div>
+          <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-base mb-3" style={{ backgroundColor: p.color }}>{p.initial}</div>
           <h4 className="font-semibold text-base mb-1" style={{ color: p.color }}>{p.label}</h4>
           <p className="text-sm font-medium mb-2">{p.desc}</p>
           <p className="text-xs text-muted-foreground leading-relaxed">{p.detail}</p>
@@ -160,33 +160,33 @@ export function ClientEcosystem() {
 export function DatabaseServerDiagram() {
   return (
     <div className="not-prose my-6">
-      <svg viewBox="0 0 700 160" className="w-full h-auto hidden sm:block" role="img" aria-label="MCP Database Server pattern: LLM calls query tool which executes SQL">
-        <rect x={10} y={40} width={120} height={70} rx={10} fill="#8b5cf615" stroke="#8b5cf6" strokeWidth={1.5} />
-        <text x={70} y={80} textAnchor="middle" fill="#8b5cf6" fontSize={13} fontWeight={700}>LLM</text>
+      <svg viewBox="0 0 660 140" className="w-full h-auto hidden sm:block" role="img" aria-label="MCP Database Server pattern: LLM calls query tool which executes SQL">
+        <rect x={10} y={30} width={110} height={70} rx={10} fill="#8b5cf615" stroke="#8b5cf6" strokeWidth={1.5} />
+        <text x={65} y={70} textAnchor="middle" fill="#8b5cf6" fontSize={13} fontWeight={700}>LLM</text>
 
-        <line x1={130} y1={75} x2={210} y2={75} stroke="#3b82f6" strokeWidth={1.5} strokeDasharray="4 3" />
-        <text x={170} y={65} textAnchor="middle" fill="#3b82f6" fontSize={9}>tool call</text>
+        <line x1={120} y1={65} x2={200} y2={65} stroke="#3b82f6" strokeWidth={1.5} strokeDasharray="4 3" />
+        <text x={160} y={55} textAnchor="middle" fill="#3b82f6" fontSize={9}>tool call</text>
 
-        <rect x={210} y={30} width={180} height={90} rx={10} fill="#3b82f610" stroke="#3b82f6" strokeWidth={1.5} />
-        <text x={300} y={60} textAnchor="middle" fill="#3b82f6" fontSize={12} fontWeight={700}>MCP Server</text>
-        <text x={300} y={80} textAnchor="middle" fill="currentColor" fontSize={10} opacity={0.5}>query_database tool</text>
-        <text x={300} y={100} textAnchor="middle" fill="currentColor" fontSize={9} opacity={0.4}>validates → executes → formats</text>
+        <rect x={200} y={20} width={200} height={90} rx={10} fill="#3b82f610" stroke="#3b82f6" strokeWidth={1.5} />
+        <text x={300} y={50} textAnchor="middle" fill="#3b82f6" fontSize={12} fontWeight={700}>MCP Server</text>
+        <text x={300} y={70} textAnchor="middle" fill="currentColor" fontSize={10} opacity={0.5}>query_database tool</text>
+        <text x={300} y={90} textAnchor="middle" fill="currentColor" fontSize={9} opacity={0.4}>validate &gt; execute &gt; format</text>
 
-        <line x1={390} y1={75} x2={470} y2={75} stroke="#10b981" strokeWidth={1.5} strokeDasharray="4 3" />
-        <text x={430} y={65} textAnchor="middle" fill="#10b981" fontSize={9}>SQL</text>
+        <line x1={400} y1={65} x2={460} y2={65} stroke="#10b981" strokeWidth={1.5} strokeDasharray="4 3" />
+        <text x={430} y={55} textAnchor="middle" fill="#10b981" fontSize={9}>SQL</text>
 
-        <rect x={470} y={40} width={120} height={70} rx={10} fill="#10b98110" stroke="#10b981" strokeWidth={1.5} />
-        <text x={530} y={70} textAnchor="middle" fill="#10b981" fontSize={12} fontWeight={700}>PostgreSQL</text>
-        <text x={530} y={90} textAnchor="middle" fill="currentColor" fontSize={9} opacity={0.4}>Your database</text>
+        <rect x={460} y={30} width={120} height={70} rx={10} fill="#10b98110" stroke="#10b981" strokeWidth={1.5} />
+        <text x={520} y={60} textAnchor="middle" fill="#10b981" fontSize={12} fontWeight={700}>PostgreSQL</text>
+        <text x={520} y={78} textAnchor="middle" fill="currentColor" fontSize={9} opacity={0.4}>Your database</text>
 
-        <line x1={590} y1={75} x2={640} y2={75} stroke="#f59e0b" strokeWidth={1} opacity={0.3} />
-        <text x={670} y={80} textAnchor="middle" fill="#f59e0b" fontSize={10}>📊 Data</text>
+        <line x1={580} y1={65} x2={620} y2={65} stroke="#f59e0b" strokeWidth={1} opacity={0.3} />
+        <text x={645} y={70} textAnchor="middle" fill="#f59e0b" fontSize={10}>Data</text>
       </svg>
       {/* Mobile fallback */}
       <div className="sm:hidden flex flex-col gap-2">
         {[
           { label: 'LLM', desc: 'Calls query tool', color: '#8b5cf6' },
-          { label: 'MCP Server', desc: 'Validates → Executes → Formats', color: '#3b82f6' },
+          { label: 'MCP Server', desc: 'Validates, executes, formats', color: '#3b82f6' },
           { label: 'PostgreSQL', desc: 'Returns data', color: '#10b981' },
         ].map((item, i) => (
           <div key={item.label} className="flex items-center gap-3 p-3 rounded-xl border bg-card">
@@ -205,18 +205,18 @@ export function DatabaseServerDiagram() {
 /* ─── Module 7: Production Checklist ─── */
 export function ProductionChecklist() {
   const items = [
-    { label: 'Input Validation', desc: 'Sanitize all parameters with Zod schemas', icon: '🛡️', color: '#ef4444' },
-    { label: 'Error Handling', desc: 'Return MCP error codes, never expose internals', icon: '⚠️', color: '#f59e0b' },
-    { label: 'Rate Limiting', desc: 'Prevent abuse and runaway costs', icon: '⏱️', color: '#3b82f6' },
-    { label: 'Auth & Secrets', desc: 'Environment variables, never hardcode', icon: '🔑', color: '#8b5cf6' },
-    { label: 'Logging', desc: 'Structured logs for every tool invocation', icon: '📋', color: '#10b981' },
-    { label: 'Testing', desc: 'Unit tests + MCP Inspector integration tests', icon: '✅', color: '#6366f1' },
+    { label: 'Input Validation', desc: 'Sanitize all parameters with Zod schemas', color: '#ef4444' },
+    { label: 'Error Handling', desc: 'Return MCP error codes, never expose internals', color: '#f59e0b' },
+    { label: 'Rate Limiting', desc: 'Prevent abuse and runaway costs', color: '#3b82f6' },
+    { label: 'Auth & Secrets', desc: 'Environment variables, never hardcode', color: '#8b5cf6' },
+    { label: 'Logging', desc: 'Structured logs for every tool invocation', color: '#10b981' },
+    { label: 'Testing', desc: 'Unit tests + MCP Inspector integration tests', color: '#6366f1' },
   ];
   return (
     <div className="not-prose my-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
       {items.map((item) => (
         <div key={item.label} className="p-4 rounded-xl border bg-card">
-          <div className="text-xl mb-2">{item.icon}</div>
+          <div className="w-3 h-3 rounded-full mb-3" style={{ backgroundColor: item.color }} />
           <h4 className="font-semibold text-sm mb-1">{item.label}</h4>
           <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
         </div>
