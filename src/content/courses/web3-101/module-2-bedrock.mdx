@@ -17,7 +17,7 @@ This module explains the core technology behind Web3. We'll break down what a bl
             * **Chain is the Binding:** Each new page is cryptographically "chained" to the previous one, creating a chronological and unbreakable sequence. This cryptographic link makes it impossible to alter a past page without invalidating all the pages that come after it.
             * **Distributed and Synchronized:** Everyone in the network has a copy of the notebook. When a new page is added, everyone updates their copy. This massive redundancy is what makes it so secure. There's no single "master copy" to attack or corrupt.
 
-            This creates a shared, immutable ledger—a single source of truth that isn't controlled by any one person or company. It allows people who don't know or trust each other to agree on a set of facts without needing a middleman.
+            This creates a shared, immutable ledger, a single source of truth that isn't controlled by any one person or company. It allows people who don't know or trust each other to agree on a set of facts without needing a middleman.
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
@@ -25,7 +25,7 @@ This module explains the core technology behind Web3. We'll break down what a bl
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             If there's no central authority, how do thousands of computers agree on which transactions are valid? This is solved by **consensus mechanisms**, the rules the network follows to reach agreement.
 
-            * **Proof of Work (PoW):** The original mechanism used by Bitcoin. Computers called "miners" compete to solve extremely complex math puzzles. The first one to find the solution gets to add the next block and earns a reward. This requires massive amounts of computational power and energy, which is both a security feature (it's extremely expensive to attack) and a drawback (environmental concerns). Bitcoin still uses PoW.
+            * **Proof of Work (PoW):** The original mechanism used by Bitcoin. Computers called "miners" compete to solve complex math puzzles. The first one to find the solution gets to add the next block and earns a reward. This requires massive amounts of computational power and energy, which is both a security feature (it's expensive to attack) and a drawback (environmental concerns). Bitcoin still uses PoW.
             * **Proof of Stake (PoS):** A more energy-efficient alternative now used by Ethereum since "The Merge" in September 2022. Instead of competing with computing power, participants "stake" (lock up) their cryptocurrency as collateral. Validators are randomly selected to create new blocks, and if they act dishonestly, their staked crypto is "slashed" (confiscated). PoS uses ~99.95% less energy than PoW.
             * **Other Mechanisms:** The blockchain space is constantly innovating. Other consensus models include Delegated Proof of Stake (DPoS), Proof of Authority (PoA), and Proof of History (PoH, used by Solana), each making different trade-offs between speed, security, and decentralization.
 
@@ -37,7 +37,7 @@ This module explains the core technology behind Web3. We'll break down what a bl
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             Cryptocurrencies are not just speculative assets; they are essential for the functioning of a blockchain network. They serve two critical purposes:
 
-            * **Paying for Computation ("Gas"):** Every action on a blockchain—sending money, minting an NFT, voting in a DAO—requires computational resources from the network. Cryptocurrencies (like Ether, or ETH, on the Ethereum blockchain) are used to pay the network participants ("validators" or "miners") for this computation. This fee is often called "gas." Gas prices fluctuate based on network demand, during high-traffic events like popular NFT drops, gas fees can spike dramatically.
+            * **Paying for Computation ("Gas"):** Every action on a blockchain (sending money, minting an NFT, voting in a DAO) requires computational resources from the network. Cryptocurrencies (like Ether, or ETH, on the Ethereum blockchain) are used to pay the network participants ("validators" or "miners") for this computation. This fee is often called "gas." Gas prices fluctuate based on network demand, during high-traffic events like popular NFT drops, gas fees can spike dramatically.
             * **Economic Security (Incentives):** Cryptocurrencies are used to reward validators for honestly processing transactions and securing the network. Validators often have to "stake" a large amount of crypto as collateral. If they act dishonestly, they can lose their stake. This powerful economic incentive aligns their interests with the health of the network, removing the need for a central administrator.
             * **Governance:** Many blockchain protocols use their native token for governance. Token holders can vote on proposals that shape the future direction of the protocol, from technical upgrades to treasury allocation. This creates a more democratic system where the community has a direct say in how the network evolves.
 
