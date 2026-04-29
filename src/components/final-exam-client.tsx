@@ -42,7 +42,9 @@ export function FinalExamClient({ courseId, questions }: FinalExamClientProps) {
     return shuffleArray(questions.map((q, originalIdx) => ({ ...q, originalIdx })));
   }, [questions]);
 
-  const passed = score >= 4; // 4/5 = 80%
+  const totalQuestions = questions.length;
+  const passingScore = Math.ceil(totalQuestions * 0.85); // ~85% to pass
+  const passed = score >= passingScore;
   const alreadyPassed = loaded && isExamPassed();
 
   // Gate: must complete all modules
@@ -140,7 +142,7 @@ export function FinalExamClient({ courseId, questions }: FinalExamClientProps) {
     setScore(correct);
     setSubmitted(true);
 
-    if (correct >= 4) {
+    if (correct >= Math.ceil(shuffledQuestions.length * 0.85)) {
       markExamPassed();
     }
   };
@@ -158,7 +160,7 @@ export function FinalExamClient({ courseId, questions }: FinalExamClientProps) {
       <div className="mb-8">
         <h1 className="text-2xl font-bold mb-2">{config.courseTitle}: Final Exam</h1>
         <p className="text-muted-foreground">
-          Answer at least 4 out of 5 questions correctly to earn your certificate.
+          Answer at least {passingScore} out of {totalQuestions} questions correctly to earn your certificate.
         </p>
       </div>
 
@@ -248,8 +250,8 @@ export function FinalExamClient({ courseId, questions }: FinalExamClientProps) {
             </h2>
           </div>
           <p className="text-muted-foreground mb-4">
-            Score: {score}/5 ({Math.round((score / 5) * 100)}%)
-            {!passed && ' — You need at least 80% (4/5) to pass.'}
+            Score: {score}/{totalQuestions} ({Math.round((score / totalQuestions) * 100)}%)
+            {!passed && ` — You need at least ${passingScore}/${totalQuestions} to pass.`}
           </p>
 
           {passed ? (

@@ -111,15 +111,10 @@ export function CertificateGenerator({ studentName, courseTitle, courseId }: Cer
     ctx.fillStyle = accentGrad;
     ctx.fillRect(100, 500, 1000, 2);
 
-    // Issuer
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+    // Credential label
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
     ctx.font = '400 13px Inter, system-ui, sans-serif';
-    ctx.fillText('Issued by Vedang Vatsa', 400, 545);
-
-    // URL
-    ctx.fillStyle = 'rgba(212, 175, 55, 0.5)';
-    ctx.font = '400 13px Inter, system-ui, sans-serif';
-    ctx.fillText('veda.ng', 800, 545);
+    ctx.fillText('Certificate of Professional Achievement', 600, 545);
 
     // Convert to image
     const url = canvas.toDataURL('image/png');
