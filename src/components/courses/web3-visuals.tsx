@@ -211,3 +211,60 @@ export function TokenomicsVisual() {
     </div>
   );
 }
+
+/* ─── DeFi Stack Diagram ─── */
+export function DeFiStackDiagram() {
+  const layers = [
+    { label: 'Yield Aggregators', desc: 'Yearn, Beefy — auto-optimize your returns across protocols', color: '#8b5cf6', bg: 'bg-purple-500/5 border-purple-500/20' },
+    { label: 'Lending & Borrowing', desc: 'Aave, Compound — deposit to earn, borrow against collateral', color: '#3b82f6', bg: 'bg-blue-500/5 border-blue-500/20' },
+    { label: 'Decentralized Exchanges', desc: 'Uniswap, Curve — swap tokens peer-to-peer via liquidity pools', color: '#10b981', bg: 'bg-emerald-500/5 border-emerald-500/20' },
+    { label: 'Stablecoins', desc: 'USDC, DAI — price-stable assets that serve as DeFi\'s unit of account', color: '#f59e0b', bg: 'bg-amber-500/5 border-amber-500/20' },
+    { label: 'Settlement Layer', desc: 'Ethereum, Solana — the base blockchain that secures all transactions', color: '#6b7280', bg: 'bg-gray-500/5 border-gray-500/20' },
+  ];
+  return (
+    <div className="not-prose my-6">
+      <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-3">The DeFi Stack — Bottom to Top</div>
+      <div className="space-y-2">
+        {[...layers].reverse().map((l, i) => (
+          <div key={l.label} className={`p-3 rounded-lg border ${l.bg} flex items-start gap-3`}>
+            <div className="text-xs font-mono font-bold mt-0.5 shrink-0 w-4" style={{ color: l.color }}>{layers.length - i}</div>
+            <div>
+              <div className="font-medium text-sm" style={{ color: l.color }}>{l.label}</div>
+              <p className="text-xs text-muted-foreground leading-relaxed">{l.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ─── Security Red Flags ─── */
+export function SecurityRedFlags() {
+  const flags = [
+    { icon: '🎣', title: 'Phishing Sites', desc: 'Fake websites mimicking real projects. Always check the URL before connecting your wallet.', severity: 'Critical' },
+    { icon: '🏃', title: 'Rug Pulls', desc: 'Team hypes a token, raises money, then disappears. Red flag: anonymous team + unrealistic promises.', severity: 'Critical' },
+    { icon: '🎁', title: '"Free" Airdrops', desc: 'Messages offering free tokens that require wallet connection to unknown sites. These drain your wallet.', severity: 'High' },
+    { icon: '📈', title: 'Pump & Dumps', desc: 'Coordinated buying to inflate price, then insiders sell. If a coin is being shilled everywhere, be skeptical.', severity: 'High' },
+  ];
+  return (
+    <div className="not-prose my-6 p-6 bg-red-500/5 border border-red-500/20 rounded-2xl">
+      <div className="text-xs font-bold uppercase tracking-wider text-red-600 dark:text-red-400 mb-4">Common Scam Patterns</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        {flags.map((f) => (
+          <div key={f.title} className="flex items-start gap-3 p-3 rounded-lg bg-background/50">
+            <span className="text-xl shrink-0">{f.icon}</span>
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="font-medium text-sm">{f.title}</span>
+                <span className={`text-[10px] font-bold uppercase px-1.5 py-0.5 rounded ${f.severity === 'Critical' ? 'bg-red-500/20 text-red-600 dark:text-red-400' : 'bg-amber-500/20 text-amber-600 dark:text-amber-400'}`}>{f.severity}</span>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">{f.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
