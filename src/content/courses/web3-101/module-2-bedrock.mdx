@@ -58,14 +58,31 @@ This module explains the core technology behind Web3. We'll break down what a bl
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck 
-    question="Why did Ethereum switch from Proof of Work (PoW) to Proof of Stake (PoS)?"
-    options={[
-        "PoW was too slow to process transactions.",
-        "PoS is dramatically more energy-efficient while maintaining strong security through economic incentives.",
-        "PoW was not secure enough against attacks.",
-        "PoS allows a single entity to control the network more easily."
-    ]}
-    correctAnswerIndex={1}
-    explanation="Ethereum's 'Merge' to Proof of Stake reduced its energy consumption by approximately 99.95%. PoS replaces the energy-intensive mining competition with an economic staking model where validators risk losing their collateral if they act dishonestly."
-/>
+**Why did Ethereum switch from Proof of Work (PoW) to Proof of Stake (PoS)?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. PoW was too slow to process transactions.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. PoS is dramatically more energy-efficient while maintaining strong security through economic incentives.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** Ethereum's 'Merge' to Proof of Stake reduced its energy consumption by approximately 99.95%. PoS replaces the energy-intensive mining competition with an economic staking model where validators risk losing their collateral if they act dishonestly.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. PoW was not secure enough against attacks.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. PoS allows a single entity to control the network more easily.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

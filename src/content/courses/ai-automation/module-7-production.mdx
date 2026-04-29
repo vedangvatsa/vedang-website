@@ -139,14 +139,31 @@ async function reportPipelineStatus(pipeline, results) {
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck
-    question="Your daily job broadcast pipeline has been working for 3 months but suddenly starts failing silently. What monitoring practice would have caught this earliest?"
-    options={[
-        "Checking the pipeline code manually every week.",
-        "A heartbeat monitor that alerts you when the daily ping stops arriving. catching failures even when no error is thrown.",
-        "Adding more API calls to the pipeline.",
-        "Running the pipeline more frequently."
-    ]}
-    correctAnswerIndex={1}
-    explanation="A heartbeat monitor (like UptimeRobot or Better Uptime) expects a ping at regular intervals. If the pipeline fails silently, crashes before reaching the error handler, or the cron job stops triggering entirely, the missing heartbeat triggers an alert. This catches failures that even error-handling code would miss."
-/>
+**Your daily job broadcast pipeline has been working for 3 months but suddenly starts failing silently. What monitoring practice would have caught this earliest?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. Checking the pipeline code manually every week.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. A heartbeat monitor that alerts you when the daily ping stops arriving. catching failures even when no error is thrown.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** A heartbeat monitor (like UptimeRobot or Better Uptime) expects a ping at regular intervals. If the pipeline fails silently, crashes before reaching the error handler, or the cron job stops triggering entirely, the missing heartbeat triggers an alert. This catches failures that even error-handling code would miss.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. Adding more API calls to the pipeline.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. Running the pipeline more frequently.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

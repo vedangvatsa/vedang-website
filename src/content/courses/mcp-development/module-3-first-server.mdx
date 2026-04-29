@@ -113,14 +113,31 @@ await server.connect(transport);`}</code></pre>
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck
-    question="What are the four parts needed to register a tool in an MCP server?"
-    options={[
-        "URL, method, headers, and body.",
-        "Name, description, parameter schema (Zod), and an async handler function.",
-        "Input, output, middleware, and router.",
-        "Model, controller, view, and route."
-    ]}
-    correctAnswerIndex={1}
-    explanation="Every MCP tool requires: (1) a unique name for the LLM to reference, (2) a natural language description so the LLM knows when to use it, (3) a Zod parameter schema for type-safe validation, and (4) an async handler function that executes the tool's logic."
-/>
+**What are the four parts needed to register a tool in an MCP server?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. URL, method, headers, and body.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. Name, description, parameter schema (Zod), and an async handler function.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** Every MCP tool requires: (1) a unique name for the LLM to reference, (2) a natural language description so the LLM knows when to use it, (3) a Zod parameter schema for type-safe validation, and (4) an async handler function that executes the tool's logic.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. Input, output, middleware, and router.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. Model, controller, view, and route.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

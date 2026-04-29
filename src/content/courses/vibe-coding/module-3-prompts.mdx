@@ -71,17 +71,23 @@ Never let the AI make 10 changes before you save. Small, frequent saves are your
 
 <SectionLabel label="Knowledge Check" />
 
-<KnowledgeCheck questions={[
-  {
-    q: "What is an 'Anti-Feature' in a PRD and why is it useful?",
-    a: "An Anti-Feature is a specific instruction telling the AI what NOT to build. This is useful because AI models often try to be 'helpful' by adding complex features (like user profiles or social sharing) that you do not want, which clutters the code."
-  },
-  {
-    q: "How does 'Chain of Thought' prompting improve the AI's code?",
-    a: "By asking the AI to 'think step-by-step,' it forces the model to generate intermediate reasoning. This acts as a plan, preventing the AI from rushing into writing code and making simple logic errors."
-  },
-  {
-    q: "Why should you limit each prompt to one change at a time?",
-    a: "When you ask the AI to make multiple changes in one prompt, it often introduces bugs by trying to do too much at once. Making one change per prompt, testing, and then moving on gives you a clean history and makes it easy to identify what broke if something goes wrong."
-  }
-]} />
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="q0">
+        <AccordionTrigger className="text-lg font-medium text-left">What is an 'Anti-Feature' in a PRD and why is it useful?</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
+            An Anti-Feature is a specific instruction telling the AI what NOT to build. This is useful because AI models often try to be 'helpful' by adding complex features (like user profiles or social sharing) that you do not want, which clutters the code.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="q1">
+        <AccordionTrigger className="text-lg font-medium text-left">How does 'Chain of Thought' prompting improve the AI's code?</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
+            By asking the AI to 'think step-by-step,' it forces the model to generate intermediate reasoning. This acts as a plan, preventing the AI from rushing into writing code and making simple logic errors.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="q2">
+        <AccordionTrigger className="text-lg font-medium text-left">Why should you limit each prompt to one change at a time?</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
+            When you ask the AI to make multiple changes in one prompt, it often introduces bugs by trying to do too much at once. Making one change per prompt, testing, and then moving on gives you a clean history and makes it easy to identify what broke if something goes wrong.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

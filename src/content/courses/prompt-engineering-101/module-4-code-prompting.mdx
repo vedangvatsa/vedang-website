@@ -79,14 +79,31 @@ LLMs are effective tools for developers. This module teaches you how to use prom
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck 
-    question="When asking an AI to debug your code, what information is MOST important to include in your prompt?"
-    options={[
-        "Only the line of code that threw the error.",
-        "A description of your emotional state after seeing the error.",
-        "The code snippet, the full error message/traceback, and what you were trying to achieve.",
-        "The entire codebase of your application."
-    ]}
-    correctAnswerIndex={2}
-    explanation="Providing context is key. The AI needs the code, the error it produced, and your original intent to effectively diagnose and solve the problem. This is called the 'debugging trifecta.'"
-/>
+**When asking an AI to debug your code, what information is MOST important to include in your prompt?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. Only the line of code that threw the error.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. A description of your emotional state after seeing the error.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. The code snippet, the full error message/traceback, and what you were trying to achieve.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** Providing context is key. The AI needs the code, the error it produced, and your original intent to effectively diagnose and solve the problem. This is called the 'debugging trifecta.'
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. The entire codebase of your application.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

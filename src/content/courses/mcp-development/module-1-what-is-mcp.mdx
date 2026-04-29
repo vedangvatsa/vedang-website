@@ -60,14 +60,31 @@ MCP changes this. Created by Anthropic and now adopted across the industry, the 
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck
-    question="What problem does MCP primarily solve?"
-    options={[
-        "It makes AI models faster at generating text.",
-        "It standardizes how AI models connect to tools and data sources, reducing the N×M integration problem to N+M.",
-        "It provides a way to fine-tune AI models on custom data.",
-        "It encrypts all communication between AI applications."
-    ]}
-    correctAnswerIndex={1}
-    explanation="Without MCP, every AI app needs a custom integration for every data source (N×M). MCP provides a universal protocol so each app needs one client and each data source needs one server (N+M), dramatically reducing integration complexity."
-/>
+**What problem does MCP primarily solve?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. It makes AI models faster at generating text.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. It standardizes how AI models connect to tools and data sources, reducing the N×M integration problem to N+M.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** Without MCP, every AI app needs a custom integration for every data source (N×M). MCP provides a universal protocol so each app needs one client and each data source needs one server (N+M), dramatically reducing integration complexity.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. It provides a way to fine-tune AI models on custom data.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. It encrypts all communication between AI applications.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

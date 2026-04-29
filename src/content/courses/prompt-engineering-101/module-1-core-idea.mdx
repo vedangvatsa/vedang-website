@@ -127,14 +127,31 @@ This module introduces the foundational concept of prompt engineering. LLMs are 
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck 
-    question="If you are extracting facts from a legal document, what temperature setting is most appropriate?"
-    options={[
-        "High (e.g., 0.9) to get creative interpretations.",
-        "Medium (e.g., 0.5) for a balance.",
-        "Low (e.g., 0.1) for deterministic, factual outputs.",
-        "Temperature does not affect this type of task."
-    ]}
-    correctAnswerIndex={2}
-    explanation="For factual extraction where accuracy is critical, you want a low temperature to minimize randomness and reduce the chance of the model hallucinating details."
-/>
+**If you are extracting facts from a legal document, what temperature setting is most appropriate?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. High (e.g., 0.9) to get creative interpretations.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. Medium (e.g., 0.5) for a balance.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. Low (e.g., 0.1) for deterministic, factual outputs.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** For factual extraction where accuracy is critical, you want a low temperature to minimize randomness and reduce the chance of the model hallucinating details.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. Temperature does not affect this type of task.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

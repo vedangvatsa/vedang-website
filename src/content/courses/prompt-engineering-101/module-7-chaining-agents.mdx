@@ -81,14 +81,31 @@ A single prompt is powerful. But real-world tasks, writing a research report, bu
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck
-    question="What is the key difference between a prompt chain and an AI agent?"
-    options={[
-        "Agents are faster than chains.",
-        "In a chain, the steps are predetermined. In an agent, the model dynamically decides what step to take next based on the current state.",
-        "Chains use multiple models, agents use only one.",
-        "Agents don't require any prompts."
-    ]}
-    correctAnswerIndex={1}
-    explanation="A prompt chain follows a fixed sequence of steps. An AI agent adds a reasoning loop where the model observes results, thinks about what to do next, and dynamically decides which tool to use or which step to take, making it autonomous."
-/>
+**What is the key difference between a prompt chain and an AI agent?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. Agents are faster than chains.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. In a chain, the steps are predetermined. In an agent, the model dynamically decides what step to take next based on the current state.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** A prompt chain follows a fixed sequence of steps. An AI agent adds a reasoning loop where the model observes results, thinks about what to do next, and dynamically decides which tool to use or which step to take, making it autonomous.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. Chains use multiple models, agents use only one.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. Agents don't require any prompts.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

@@ -85,14 +85,31 @@ The Agentic Web isn't just one thing; it can be understood through three interco
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck 
-    question="What is the primary purpose of the Model Context Protocol (MCP) in the Agentic Web?"
-    options={[
-        "To improve the reasoning capabilities of the underlying LLM.",
-        "To provide a standard way for agents to discover and connect with data sources and tools.",
-        "To facilitate financial transactions between autonomous agents.",
-        "To create a marketplace for trading agent attention."
-    ]}
-    correctAnswerIndex={1}
-    explanation="MCP falls under the Interaction Dimension. It acts as a universal connector, standardizing how an agent interacts with external tools and data sources, similar to how HTTP standardized web browsing."
-/>
+**What is the primary purpose of the Model Context Protocol (MCP) in the Agentic Web?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. To improve the reasoning capabilities of the underlying LLM.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. To provide a standard way for agents to discover and connect with data sources and tools.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** MCP falls under the Interaction Dimension. It acts as a universal connector, standardizing how an agent interacts with external tools and data sources, similar to how HTTP standardized web browsing.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. To facilitate financial transactions between autonomous agents.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. To create a marketplace for trading agent attention.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

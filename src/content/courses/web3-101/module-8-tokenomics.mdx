@@ -79,14 +79,31 @@ Every blockchain project has an economic model built around its token. Understan
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck
-    question="If a token has a Market Cap of $100M but a Fully Diluted Valuation (FDV) of $1B, what does this indicate?"
-    options={[
-        "The token is overvalued.",
-        "Only 10% of the total supply is currently in circulation, meaning 90% more tokens will enter the market over time, potentially diluting the price.",
-        "The token is deflationary and will increase in value.",
-        "The project is about to shut down."
-    ]}
-    correctAnswerIndex={1}
-    explanation="The large gap between Market Cap and FDV ($100M vs $1B) means that only 10% of tokens are circulating. As the remaining 90% unlock (through vesting, staking rewards, etc.), the increased supply could create significant selling pressure and dilute the value of existing tokens."
-/>
+**If a token has a Market Cap of $100M but a Fully Diluted Valuation (FDV) of $1B, what does this indicate?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. The token is overvalued.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. Only 10% of the total supply is currently in circulation, meaning 90% more tokens will enter the market over time, potentially diluting the price.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** The large gap between Market Cap and FDV ($100M vs $1B) means that only 10% of tokens are circulating. As the remaining 90% unlock (through vesting, staking rewards, etc.), the increased supply could create significant selling pressure and dilute the value of existing tokens.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. The token is deflationary and will increase in value.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. The project is about to shut down.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

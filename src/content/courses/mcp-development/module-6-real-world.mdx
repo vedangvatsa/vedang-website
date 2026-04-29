@@ -151,14 +151,31 @@ server.resource("projects://active", "List of active projects", ...);`}</code></
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck
-    question="When building a database MCP server, why should you expose the database schema as a Resource rather than a Tool?"
-    options={[
-        "Resources are faster to read than tools.",
-        "The schema is static context the host app should pre-load, not something the LLM needs to 'call'. it's read-only background data that helps the LLM generate correct SQL.",
-        "Resources can handle larger data than tools.",
-        "Tools cannot return text content."
-    ]}
-    correctAnswerIndex={1}
-    explanation="Resources are app-controlled read-only data. perfect for static context like a database schema. The host can pre-load it so the LLM always has schema context available. A tool would require the LLM to explicitly call it, adding unnecessary round-trips and complexity."
-/>
+**When building a database MCP server, why should you expose the database schema as a Resource rather than a Tool?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. Resources are faster to read than tools.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. The schema is static context the host app should pre-load, not something the LLM needs to 'call'. it's read-only background data that helps the LLM generate correct SQL.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** Resources are app-controlled read-only data. perfect for static context like a database schema. The host can pre-load it so the LLM always has schema context available. A tool would require the LLM to explicitly call it, adding unnecessary round-trips and complexity.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. Resources can handle larger data than tools.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. Tools cannot return text content.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

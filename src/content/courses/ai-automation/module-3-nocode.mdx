@@ -100,14 +100,31 @@ No-code tools are the fastest way to automate. You can go from idea to running a
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck
-    question="When should you choose n8n over Zapier for automation?"
-    options={[
-        "When you need the largest app ecosystem possible.",
-        "When you want to self-host, need AI nodes with no per-task limits, and want the ability to drop into custom code when visual nodes aren't enough.",
-        "When you only need simple 2-step automations.",
-        "When you want to avoid learning any new tools."
-    ]}
-    correctAnswerIndex={1}
-    explanation="n8n's key advantages are: self-hosting (full data control, no per-task pricing), built-in AI nodes, and a code node for custom logic. Zapier has a larger pre-built ecosystem but charges per task and has limited AI capabilities."
-/>
+**When should you choose n8n over Zapier for automation?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. When you need the largest app ecosystem possible.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. When you want to self-host, need AI nodes with no per-task limits, and want the ability to drop into custom code when visual nodes aren't enough.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** n8n's key advantages are: self-hosting (full data control, no per-task pricing), built-in AI nodes, and a code node for custom logic. Zapier has a larger pre-built ecosystem but charges per task and has limited AI capabilities.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. When you only need simple 2-step automations.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. When you want to avoid learning any new tools.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

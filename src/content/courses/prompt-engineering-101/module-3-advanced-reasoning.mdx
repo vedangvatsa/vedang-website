@@ -39,14 +39,31 @@ For complex problems, you need to guide the model's reasoning process. These tec
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck 
-    question="Adding the phrase 'Let's think step by step' to your prompt is an example of what technique?"
-    options={[
-        "Few-Shot Prompting",
-        "Role Prompting",
-        "Chain of Thought (CoT)",
-        "System Prompting"
-    ]}
-    correctAnswerIndex={2}
-    explanation="Chain of Thought (CoT) prompting explicitly asks the model to generate intermediate reasoning steps, which improves performance on complex logic tasks."
-/>
+**Adding the phrase 'Let's think step by step' to your prompt is an example of what technique?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. Few-Shot Prompting</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. Role Prompting</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. Chain of Thought (CoT)</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** Chain of Thought (CoT) prompting explicitly asks the model to generate intermediate reasoning steps, which improves performance on complex logic tasks.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. System Prompting</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

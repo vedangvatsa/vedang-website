@@ -80,14 +80,31 @@ Becoming an expert prompt engineer is an iterative process. This module consolid
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck 
-    question="Which of the following is a better instruction for an LLM?"
-    options={[
-        "Don't write a long introduction, and avoid using complex words.",
-        "Write a concise 2-sentence introduction. Use simple language suitable for a 5th grader.",
-        "Both are equally effective.",
-        "Neither will work."
-    ]}
-    correctAnswerIndex={1}
-    explanation="Positive instructions (telling the AI what to do) are generally more effective than negative constraints (telling it what not to do). Specifying '2-sentence' and '5th grader' gives the model clear, measurable targets."
-/>
+**Which of the following is a better instruction for an LLM?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. Don't write a long introduction, and avoid using complex words.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. Write a concise 2-sentence introduction. Use simple language suitable for a 5th grader.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** Positive instructions (telling the AI what to do) are generally more effective than negative constraints (telling it what not to do). Specifying '2-sentence' and '5th grader' gives the model clear, measurable targets.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. Both are equally effective.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. Neither will work.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

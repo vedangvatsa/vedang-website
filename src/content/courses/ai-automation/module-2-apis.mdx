@@ -132,14 +132,31 @@ while (hasMore) {
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck
-    question="What's the key difference between polling an API and using a webhook?"
-    options={[
-        "Webhooks are faster but less reliable.",
-        "Polling means you repeatedly ask 'is there new data?' on a schedule. Webhooks mean the service tells you immediately when something happens. real-time and more efficient.",
-        "Polling works with JSON, webhooks work with XML.",
-        "There's no difference. they're the same thing."
-    ]}
-    correctAnswerIndex={1}
-    explanation="Polling requires your automation to check repeatedly ('any new jobs?'), wasting requests when nothing changed. Webhooks invert this: the service pushes data to you the moment something happens, making it real-time and more efficient on both sides."
-/>
+**What's the key difference between polling an API and using a webhook?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. Webhooks are faster but less reliable.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. Polling means you repeatedly ask 'is there new data?' on a schedule. Webhooks mean the service tells you immediately when something happens. real-time and more efficient.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** Polling requires your automation to check repeatedly ('any new jobs?'), wasting requests when nothing changed. Webhooks invert this: the service pushes data to you the moment something happens, making it real-time and more efficient on both sides.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. Polling works with JSON, webhooks work with XML.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. There's no difference. they're the same thing.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

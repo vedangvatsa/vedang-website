@@ -98,14 +98,31 @@ If blockchain is the immutable ledger, smart contracts are what make it programm
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck 
-    question="What does 'composability' (or 'Money Legos') mean in the context of smart contracts?"
-    options={[
-        "Smart contracts can be updated and modified after deployment.",
-        "Developers can build new applications by combining existing open smart contracts without needing permission.",
-        "Multiple blockchains can merge into a single, unified chain.",
-        "Users can compose messages to send between different blockchain networks."
-    ]}
-    correctAnswerIndex={1}
-    explanation="Composability is one of Web3's superpowers. Because smart contracts are open and permissionless, developers can build on top of existing protocols like Lego blocks, creating entirely new products by combining existing ones."
-/>
+**What does 'composability' (or 'Money Legos') mean in the context of smart contracts?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. Smart contracts can be updated and modified after deployment.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. Developers can build new applications by combining existing open smart contracts without needing permission.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** Composability is one of Web3's superpowers. Because smart contracts are open and permissionless, developers can build on top of existing protocols like Lego blocks, creating entirely new products by combining existing ones.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. Multiple blockchains can merge into a single, unified chain.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. Users can compose messages to send between different blockchain networks.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

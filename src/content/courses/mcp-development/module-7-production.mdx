@@ -165,14 +165,31 @@ server.tool("search", "Search records", { query: z.string() },
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck
-    question="What's the difference between throwing an McpError and returning isError: true in a tool response?"
-    options={[
-        "There is no difference. they're interchangeable.",
-        "McpError is for protocol-level errors (bad parameters, server crash). isError: true is for application-level errors (not found, validation failed) that the LLM should reason about.",
-        "McpError is for warnings, isError: true is for fatal errors.",
-        "McpError can only be used in production, isError: true is for development."
-    ]}
-    correctAnswerIndex={1}
-    explanation="McpError (thrown as an exception) signals protocol-level problems. the request itself was malformed or the server encountered an internal error. isError: true (in the response) signals application-level problems. the request was valid but the operation failed (e.g., user not found). The LLM uses isError to adjust its strategy."
-/>
+**What's the difference between throwing an McpError and returning isError: true in a tool response?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. There is no difference. they're interchangeable.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. McpError is for protocol-level errors (bad parameters, server crash). isError: true is for application-level errors (not found, validation failed) that the LLM should reason about.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** McpError (thrown as an exception) signals protocol-level problems. the request itself was malformed or the server encountered an internal error. isError: true (in the response) signals application-level problems. the request was valid but the operation failed (e.g., user not found). The LLM uses isError to adjust its strategy.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. McpError is for warnings, isError: true is for fatal errors.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. McpError can only be used in production, isError: true is for development.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

@@ -89,14 +89,31 @@ Theory is valuable, but nothing beats building something real. This module walks
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck
-    question="Why is a well-written tool description critical when building an AI agent?"
-    options={[
-        "It determines how fast the tool executes.",
-        "The LLM reads tool descriptions to decide which tool to use for a given task. A poor description means the agent won't select the right tool.",
-        "It is displayed to the end user so they know what tools are available.",
-        "Tool descriptions are used to generate the agent's UI."
-    ]}
-    correctAnswerIndex={1}
-    explanation="The agent's LLM uses tool descriptions to understand what each tool does and when to use it. If a tool is poorly described, the model may ignore it, misuse it, or call the wrong tool, leading to incorrect behavior."
-/>
+**Why is a well-written tool description critical when building an AI agent?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. It determines how fast the tool executes.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. The LLM reads tool descriptions to decide which tool to use for a given task. A poor description means the agent won't select the right tool.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** The agent's LLM uses tool descriptions to understand what each tool does and when to use it. If a tool is poorly described, the model may ignore it, misuse it, or call the wrong tool, leading to incorrect behavior.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. It is displayed to the end user so they know what tools are available.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. Tool descriptions are used to generate the agent's UI.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

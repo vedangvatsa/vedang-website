@@ -103,14 +103,31 @@ Update the records in place."
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck
-    question="What's the main advantage of using MCP servers for automation instead of calling APIs directly in a script?"
-    options={[
-        "MCP servers are faster than direct API calls.",
-        "The AI agent handles API calls, data transformation, and error handling through natural language: you describe what you want, and the agent figures out the implementation.",
-        "MCP servers are free to use, APIs always cost money.",
-        "MCP only works with Google products."
-    ]}
-    correctAnswerIndex={1}
-    explanation="With direct API calls, you write code for every integration. authentication, pagination, error handling, data mapping. With MCP, the AI agent handles all of this through natural language instructions. You describe the outcome, the agent orchestrates the tools. This dramatically reduces development time and makes automations accessible to non-programmers."
-/>
+**What's the main advantage of using MCP servers for automation instead of calling APIs directly in a script?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. MCP servers are faster than direct API calls.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. The AI agent handles API calls, data transformation, and error handling through natural language: you describe what you want, and the agent figures out the implementation.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** With direct API calls, you write code for every integration. authentication, pagination, error handling, data mapping. With MCP, the AI agent handles all of this through natural language instructions. You describe the outcome, the agent orchestrates the tools. This dramatically reduces development time and makes automations accessible to non-programmers.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. MCP servers are free to use, APIs always cost money.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. MCP only works with Google products.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

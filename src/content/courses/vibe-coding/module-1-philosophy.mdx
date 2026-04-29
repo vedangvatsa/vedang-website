@@ -57,17 +57,23 @@ When you combine these four elements, your prompt acts as a clear blueprint. You
 
 Test your understanding of the philosophy and prompting framework. Click the questions to reveal the answers.
 
-<KnowledgeCheck questions={[
-  {
-    q: "What is the primary difference between a traditional coder and a 'vibe coder'?",
-    a: "A traditional coder writes the actual syntax (the 'how'). A vibe coder acts as a director, providing the vision and constraints (the 'what' and 'why') while the AI writes the syntax."
-  },
-  {
-    q: "In the GCES framework, why is the 'Context' step so important?",
-    a: "Context tells the AI who the users are and why the product exists. This stops the AI from making generic assumptions and ensures the tone, design, and logic fit the specific situation."
-  },
-  {
-    q: "If you want the AI to build a pricing table, what is the fastest way to ensure it looks exactly the way you want?",
-    a: "Use the 'Source' step of the GCES framework. Provide a reference image or a link to a website (like Stripe) that has a design you admire. AI models learn fastest from examples."
-  }
-]} />
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="q0">
+        <AccordionTrigger className="text-lg font-medium text-left">What is the primary difference between a traditional coder and a 'vibe coder'?</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
+            A traditional coder writes the actual syntax (the 'how'). A vibe coder acts as a director, providing the vision and constraints (the 'what' and 'why') while the AI writes the syntax.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="q1">
+        <AccordionTrigger className="text-lg font-medium text-left">In the GCES framework, why is the 'Context' step so important?</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
+            Context tells the AI who the users are and why the product exists. This stops the AI from making generic assumptions and ensures the tone, design, and logic fit the specific situation.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="q2">
+        <AccordionTrigger className="text-lg font-medium text-left">If you want the AI to build a pricing table, what is the fastest way to ensure it looks exactly the way you want?</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
+            Use the 'Source' step of the GCES framework. Provide a reference image or a link to a website (like Stripe) that has a design you admire. AI models learn fastest from examples.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

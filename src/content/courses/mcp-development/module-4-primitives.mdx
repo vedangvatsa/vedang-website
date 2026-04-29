@@ -141,14 +141,31 @@ Code:
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck
-    question="Who controls when each MCP primitive is used?"
-    options={[
-        "Tools = user, Resources = model, Prompts = app",
-        "Tools = model, Resources = app, Prompts = user",
-        "All three are controlled by the model.",
-        "All three are controlled by the user."
-    ]}
-    correctAnswerIndex={1}
-    explanation="Tools are model-controlled (the LLM decides when to call them based on conversation context). Resources are app-controlled (the host application decides when to fetch and inject them). Prompts are user-controlled (the user explicitly selects them from a menu or slash command)."
-/>
+**Who controls when each MCP primitive is used?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. Tools = user, Resources = model, Prompts = app</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. Tools = model, Resources = app, Prompts = user</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** Tools are model-controlled (the LLM decides when to call them based on conversation context). Resources are app-controlled (the host application decides when to fetch and inject them). Prompts are user-controlled (the user explicitly selects them from a menu or slash command).
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. All three are controlled by the model.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. All three are controlled by the user.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>

@@ -76,14 +76,31 @@ Blockchains like Ethereum can only process about 15-30 transactions per second. 
     </AccordionItem>
 </Accordion>
 
-<KnowledgeCheck
-    question="What is the main difference between Optimistic Rollups and ZK Rollups?"
-    options={[
-        "Optimistic Rollups are faster than ZK Rollups.",
-        "ZK Rollups use a central server, while Optimistic Rollups are decentralized.",
-        "Optimistic Rollups assume transactions are valid unless challenged; ZK Rollups prove validity cryptographically upfront.",
-        "ZK Rollups can only process simple transfers, not smart contract interactions."
-    ]}
-    correctAnswerIndex={2}
-    explanation="Optimistic Rollups are 'optimistic', they assume validity and only check if someone submits a fraud proof. ZK Rollups generate a mathematical proof that transactions are valid, eliminating the need for a challenge period."
-/>
+**What is the main difference between Optimistic Rollups and ZK Rollups?**
+
+<Accordion type="single" collapsible className="w-full mt-4">
+    <AccordionItem value="mc0">
+        <AccordionTrigger className="text-lg font-medium text-left">A. Optimistic Rollups are faster than ZK Rollups.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc1">
+        <AccordionTrigger className="text-lg font-medium text-left">B. ZK Rollups use a central server, while Optimistic Rollups are decentralized.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc2">
+        <AccordionTrigger className="text-lg font-medium text-left">C. Optimistic Rollups assume transactions are valid unless challenged; ZK Rollups prove validity cryptographically upfront.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
+            **Correct.** Optimistic Rollups are 'optimistic', they assume validity and only check if someone submits a fraud proof. ZK Rollups generate a mathematical proof that transactions are valid, eliminating the need for a challenge period.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="mc3">
+        <AccordionTrigger className="text-lg font-medium text-left">D. ZK Rollups can only process simple transfers, not smart contract interactions.</AccordionTrigger>
+        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
+            Not quite. Try again.
+        </AccordionContent>
+    </AccordionItem>
+</Accordion>
