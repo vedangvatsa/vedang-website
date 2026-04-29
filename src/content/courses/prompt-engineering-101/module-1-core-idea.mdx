@@ -58,44 +58,71 @@ This module introduces the foundational concept of prompt engineering. LLMs are 
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-4">
-        <AccordionTrigger className="text-lg">Choosing the Right Model</AccordionTrigger>
+        <AccordionTrigger className="text-lg">The AI Model Landscape</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>Not all AI models are equal. Different models excel at different tasks, and choosing the right one is an important part of prompt engineering:</p>
-            <div className="grid md:grid-cols-2 gap-4 my-6">
-                <Card>
-                    <CardHeader>
-                        <CardTitle className="text-base font-semibold">🔬 Reasoning & Analysis</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p className="text-sm text-muted-foreground">GPT-4o, Claude Opus, Gemini 2.5 Pro. Use for complex logic, multi-step reasoning, code generation, and nuanced analysis.</p>
-                    </CardContent>
-                </Card>
-                <Card>
-                    <CardHeader>
-                        <CardTitle className="text-base font-semibold">⚡ Speed & Cost</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p className="text-sm text-muted-foreground">GPT-4o Mini, Claude Haiku, Gemini Flash. Use for simple tasks like classification, extraction, and summarization where speed and cost matter more than depth.</p>
-                    </CardContent>
-                </Card>
-                <Card>
-                    <CardHeader>
-                        <CardTitle className="text-base font-semibold">📝 Long Documents</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p className="text-sm text-muted-foreground">Claude (200K context), Gemini (1M+ context). Use when you need to process very long documents, codebases, or datasets in a single prompt.</p>
-                    </CardContent>
-                </Card>
-                <Card>
-                    <CardHeader>
-                        <CardTitle className="text-base font-semibold">🎨 Creative & Writing</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p className="text-sm text-muted-foreground">Claude Sonnet, GPT-4o. Excellent for creative writing, marketing copy, and tasks requiring nuanced tone and style.</p>
-                    </CardContent>
-                </Card>
+            <p>Choosing the right model is as important as writing the right prompt. Different models have different strengths, costs, and context windows. Here is the current landscape:</p>
+            
+            <h4>The Major Providers</h4>
+            <div className="overflow-x-auto">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Provider</th>
+                        <th>Flagship Model</th>
+                        <th>Fast/Cheap Model</th>
+                        <th>Context Window</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>OpenAI</strong></td>
+                        <td>GPT-4o, o3</td>
+                        <td>GPT-4o Mini</td>
+                        <td>128K tokens</td>
+                        <td>General purpose, code, vision</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Anthropic</strong></td>
+                        <td>Claude Sonnet 4, Opus</td>
+                        <td>Claude Haiku</td>
+                        <td>200K tokens</td>
+                        <td>Long documents, code, writing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google</strong></td>
+                        <td>Gemini 2.5 Pro</td>
+                        <td>Gemini Flash</td>
+                        <td>1M+ tokens</td>
+                        <td>Massive context, multimodal</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Meta (Open Source)</strong></td>
+                        <td>Llama 4</td>
+                        <td>Llama 4 Scout</td>
+                        <td>128K-10M tokens</td>
+                        <td>Self-hosting, privacy, fine-tuning</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DeepSeek</strong></td>
+                        <td>DeepSeek R1</td>
+                        <td>DeepSeek V3</td>
+                        <td>128K tokens</td>
+                        <td>Reasoning, math, code (low cost)</td>
+                    </tr>
+                </tbody>
+            </table>
             </div>
-            <p><strong>Pro Tip:</strong> When building a product, start with the most capable (and expensive) model to get your prompts working perfectly, then "downgrade" to a cheaper model and see if the quality is still acceptable. This gives you the best balance of quality and cost.</p>
+
+            <h4>How to Choose</h4>
+            <ul>
+                <li><strong>Complex reasoning, code, analysis:</strong> Use a flagship model (GPT-4o, Claude Sonnet 4, Gemini 2.5 Pro). These cost more but produce significantly better results on hard tasks.</li>
+                <li><strong>Simple extraction, classification, summaries:</strong> Use a fast model (GPT-4o Mini, Claude Haiku, Gemini Flash). These are 10-50x cheaper and fast enough for batch processing.</li>
+                <li><strong>Processing long documents or codebases:</strong> Use Gemini (1M+ context) or Claude (200K context). GPT-4o's 128K window is often too small for entire repositories.</li>
+                <li><strong>Privacy or offline use:</strong> Use open-source models via Ollama (Llama 4, Qwen, Mistral). Your data never leaves your machine.</li>
+            </ul>
+
+            <p><strong>The cost optimization strategy:</strong> Start with the most capable model to get your prompts working correctly. Once the output quality is dialed in, test with a cheaper model and see if results hold. Often, a well-written prompt on a fast model outperforms a lazy prompt on a flagship model.</p>
         </AccordionContent>
     </AccordionItem>
 </Accordion>
