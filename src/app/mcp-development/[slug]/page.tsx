@@ -6,23 +6,16 @@ import path from 'path';
 import matter from 'gray-matter';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
+import { MarkComplete } from '@/components/mark-complete';
+import { courseConfigs } from '@/lib/course-config';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { KnowledgeCheck } from '@/components/mdx/knowledge-check';
 import { MCPArchitecture, TransportDiagram, ServerSkeleton, MCPPrimitives, ClientEcosystem, DatabaseServerDiagram, ProductionChecklist } from '@/components/courses/mcp-visuals';
 
+const config = courseConfigs['mcp-development'];
 const coursesDirectory = path.join(process.cwd(), 'src', 'content', 'courses', 'mcp-development');
-
-const modules = [
-    { slug: 'module-1-what-is-mcp', title: '1. What is MCP?', description: 'The universal connector for AI' },
-    { slug: 'module-2-transports', title: '2. Transports & Messages', description: 'How clients and servers communicate' },
-    { slug: 'module-3-first-server', title: '3. Your First Server', description: 'Build a working MCP server from scratch' },
-    { slug: 'module-4-primitives', title: '4. Tools, Resources & Prompts', description: 'The three primitives and when to use each' },
-    { slug: 'module-5-clients', title: '5. Connecting to Clients', description: 'Claude Desktop, Cursor, VS Code, and custom apps' },
-    { slug: 'module-6-real-world', title: '6. Real-World Servers', description: 'Database, API, and multi-tool patterns' },
-    { slug: 'module-7-production', title: '7. Production & Security', description: 'Error handling, hardening, and publishing' },
-];
 
 export async function generateStaticParams() {
     if (!fs.existsSync(coursesDirectory)) return [];
@@ -76,9 +69,9 @@ export default async function CourseModulePage({ params }: { params: Promise<{ s
     const moduleData = getCourseModule(slug);
     if (!moduleData) notFound();
 
-    const currentIndex = modules.findIndex(m => m.slug === slug);
-    const prevModule = currentIndex > 0 ? modules[currentIndex - 1] : null;
-    const nextModule = currentIndex < modules.length - 1 ? modules[currentIndex + 1] : null;
+    const currentIndex = config.modules.findIndex(m => m.slug === slug);
+    const prevModule = currentIndex > 0 ? config.modules[currentIndex - 1] : null;
+    const nextModule = currentIndex < config.modules.length - 1 ? config.modules[currentIndex + 1] : null;
 
     return (
         <div className="max-w-none">
@@ -99,31 +92,20 @@ export default async function CourseModulePage({ params }: { params: Promise<{ s
                 />
             </article>
 
-            <div className="mt-16 pt-8 border-t flex justify-between items-center">
-                {prevModule ? (
-                    <Link href={`/mcp-development/${prevModule.slug}`} className="flex items-center text-sm font-medium hover:text-primary transition-colors">
-                        <ArrowLeft className="mr-2 h-4 w-4" />
-                        Previous: {prevModule.title}
+            {prevModule && (
+                <div className="mt-8">
+                    <Link href={`/mcp-development/${prevModule.slug}`} className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors">
+                        <ArrowLeft className="mr-2 h-4 w-4" />Previous: {prevModule.title}
                     </Link>
-                ) : (
-                    <Link href="/mcp-development" className="flex items-center text-sm font-medium hover:text-primary transition-colors">
-                        <ArrowLeft className="mr-2 h-4 w-4" />
-                        Back to Overview
-                    </Link>
-                )}
-                
-                {nextModule ? (
-                    <Link href={`/mcp-development/${nextModule.slug}`} className="flex items-center text-sm font-medium hover:text-primary transition-colors text-right">
-                        Next: {nextModule.title}
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                ) : (
-                    <Link href="/mcp-development" className="flex items-center text-sm font-medium hover:text-primary transition-colors text-right">
-                        Back to Overview
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                )}
-            </div>
+                </div>
+            )}
+
+            <MarkComplete 
+                courseId={config.courseId} 
+                moduleSlug={slug} 
+                nextModule={nextModule}
+                basePath={config.basePath}
+            />
         </div>
     );
 }

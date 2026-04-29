@@ -1,64 +1,90 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { BookOpen } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { BookOpen, Check } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { useCourseProgress } from '@/hooks/use-course-progress';
 
-interface CourseLink {
-    href: string;
-    label: string;
-    disabled?: boolean;
-}
-
-interface CourseSection {
-    title: string;
-    links: CourseLink[];
+interface ModuleLink {
+  slug: string;
+  title: string;
 }
 
 interface CourseSidebarProps {
-    courseName: string;
-    sections: CourseSection[];
+  courseId: string;
+  courseTitle: string;
+  basePath: string;
+  modules: ModuleLink[];
 }
 
-export function CourseSidebar({ courseName, sections }: CourseSidebarProps) {
-    const pathname = usePathname();
+export function CourseSidebar({ courseId, courseTitle, basePath, modules }: CourseSidebarProps) {
+  const pathname = usePathname();
+  const { isComplete, completedCount, loaded } = useCourseProgress(courseId);
+  const totalModules = modules.length;
+  const progressPercent = totalModules > 0 ? Math.round((completedCount / totalModules) * 100) : 0;
 
-    return (
+  return (
+    <aside className="w-full md:w-64 lg:w-72 flex-shrink-0">
+      <div className="sticky top-1/3 space-y-6">
         <Card className="shadow-sm bg-muted/30 border-muted">
-            <CardContent className="p-6">
-                <div className="flex items-center gap-2 mb-6 text-muted-foreground">
-                    <BookOpen className="h-5 w-5" />
-                    <h4 className="font-semibold text-sm uppercase tracking-wider">{courseName}</h4>
+          <CardContent className="p-6">
+            <div className="flex items-center gap-2 mb-4 text-muted-foreground">
+              <BookOpen className="h-5 w-5" />
+              <h4 className="font-semibold text-sm uppercase tracking-wider">{courseTitle}</h4>
+            </div>
+
+            {/* Progress bar */}
+            {loaded && completedCount > 0 && (
+              <div className="mb-5">
+                <div className="flex justify-between text-xs text-muted-foreground mb-1.5">
+                  <span>{completedCount}/{totalModules} complete</span>
+                  <span>{progressPercent}%</span>
                 </div>
-                <nav className="space-y-4">
-                    {sections.map((section) => (
-                        <div key={section.title}>
-                            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/60 mb-2">
-                                {section.title}
-                            </p>
-                            <div className="space-y-2">
-                                {section.links.map((link) => (
-                                    <Link
-                                        key={link.href}
-                                        href={link.disabled ? "#" : link.href}
-                                        className={cn(
-                                            "block text-sm transition-colors rounded-md px-2 py-1.5 -mx-2",
-                                            pathname === link.href
-                                                ? "text-primary font-medium bg-primary/10"
-                                                : "text-muted-foreground hover:text-primary hover:bg-muted/50",
-                                            link.disabled && "opacity-50 pointer-events-none"
-                                        )}
-                                    >
-                                        {link.label}
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
-                    ))}
-                </nav>
-            </CardContent>
+                <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-primary rounded-full transition-all duration-500 ease-out"
+                    style={{ width: `${progressPercent}%` }}
+                  />
+                </div>
+              </div>
+            )}
+
+            <nav className="space-y-1">
+              <Link 
+                href={basePath} 
+                className={`block text-sm font-medium py-1.5 transition-colors ${pathname === basePath ? 'text-primary' : 'hover:text-primary'}`}
+              >
+                Course Overview
+              </Link>
+              {modules.map((mod) => {
+                const href = `${basePath}/${mod.slug}`;
+                const isActive = pathname === href;
+                const completed = loaded && isComplete(mod.slug);
+
+                return (
+                  <Link 
+                    key={mod.slug} 
+                    href={href} 
+                    className={`flex items-center gap-2 text-sm py-1.5 transition-colors ${
+                      isActive 
+                        ? 'text-primary font-medium' 
+                        : 'text-muted-foreground hover:text-primary'
+                    }`}
+                  >
+                    {completed ? (
+                      <Check className="h-3.5 w-3.5 text-green-500 shrink-0" />
+                    ) : (
+                      <span className="w-3.5 shrink-0" />
+                    )}
+                    {mod.title}
+                  </Link>
+                );
+              })}
+            </nav>
+          </CardContent>
         </Card>
-    );
+      </div>
+    </aside>
+  );
 }

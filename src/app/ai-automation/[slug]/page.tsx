@@ -6,23 +6,16 @@ import path from 'path';
 import matter from 'gray-matter';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { KnowledgeCheck } from '@/components/mdx/knowledge-check';
 import { AutomationLayers, APIFlowDiagram, NoCodeToolsGrid, AgentArchitecture, MCPAutomationStack, PipelineBlueprint, MonitoringDashboard } from '@/components/courses/automation-visuals';
+import { MarkComplete } from '@/components/mark-complete';
+import { courseConfigs } from '@/lib/course-config';
 
+const config = courseConfigs['ai-automation'];
 const coursesDirectory = path.join(process.cwd(), 'src', 'content', 'courses', 'ai-automation');
-
-const modules = [
-    { slug: 'module-1-mindset', title: '1. The Automation Mindset', description: 'See automation opportunities everywhere' },
-    { slug: 'module-2-apis', title: '2. API Fundamentals', description: 'REST, auth, webhooks — the building blocks' },
-    { slug: 'module-3-nocode', title: '3. No-Code Automation', description: 'n8n, Make, Zapier with AI nodes' },
-    { slug: 'module-4-agents', title: '4. AI Agents as Automators', description: 'Claude, Antigravity, GPT for workflows' },
-    { slug: 'module-5-mcp-automation', title: '5. MCP-Powered Automation', description: 'Connect agents to real-world services' },
-    { slug: 'module-6-pipelines', title: '6. Building Custom Pipelines', description: 'End-to-end automated systems' },
-    { slug: 'module-7-production', title: '7. Production & Monitoring', description: 'Scheduling, alerting, and scaling' },
-];
 
 export async function generateStaticParams() {
     if (!fs.existsSync(coursesDirectory)) return [];
@@ -63,9 +56,9 @@ export default async function CourseModulePage({ params }: { params: Promise<{ s
     const moduleData = getCourseModule(slug);
     if (!moduleData) notFound();
 
-    const currentIndex = modules.findIndex(m => m.slug === slug);
-    const prevModule = currentIndex > 0 ? modules[currentIndex - 1] : null;
-    const nextModule = currentIndex < modules.length - 1 ? modules[currentIndex + 1] : null;
+    const currentIndex = config.modules.findIndex(m => m.slug === slug);
+    const prevModule = currentIndex > 0 ? config.modules[currentIndex - 1] : null;
+    const nextModule = currentIndex < config.modules.length - 1 ? config.modules[currentIndex + 1] : null;
 
     return (
         <div className="max-w-none">
@@ -82,26 +75,20 @@ export default async function CourseModulePage({ params }: { params: Promise<{ s
                 />
             </article>
 
-            <div className="mt-16 pt-8 border-t flex justify-between items-center">
-                {prevModule ? (
-                    <Link href={`/ai-automation/${prevModule.slug}`} className="flex items-center text-sm font-medium hover:text-primary transition-colors">
+            {prevModule && (
+                <div className="mt-8">
+                    <Link href={`/ai-automation/${prevModule.slug}`} className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors">
                         <ArrowLeft className="mr-2 h-4 w-4" />Previous: {prevModule.title}
                     </Link>
-                ) : (
-                    <Link href="/ai-automation" className="flex items-center text-sm font-medium hover:text-primary transition-colors">
-                        <ArrowLeft className="mr-2 h-4 w-4" />Back to Overview
-                    </Link>
-                )}
-                {nextModule ? (
-                    <Link href={`/ai-automation/${nextModule.slug}`} className="flex items-center text-sm font-medium hover:text-primary transition-colors text-right">
-                        Next: {nextModule.title}<ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                ) : (
-                    <Link href="/ai-automation" className="flex items-center text-sm font-medium hover:text-primary transition-colors text-right">
-                        Back to Overview<ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                )}
-            </div>
+                </div>
+            )}
+
+            <MarkComplete 
+                courseId={config.courseId} 
+                moduleSlug={slug} 
+                nextModule={nextModule}
+                basePath={config.basePath}
+            />
         </div>
     );
 }

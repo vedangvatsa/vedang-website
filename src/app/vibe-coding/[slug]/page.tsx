@@ -6,14 +6,17 @@ import path from 'path';
 import matter from 'gray-matter';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { Callout, SectionLabel, Explainer, KnowledgeCheck, ToolboxExplainer, PromptTechniques, LabWorkflow, ProductPillars } from '@/components/mdx';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { DebuggingFlow, DeploymentStack } from '@/components/courses/vibe-coding-visuals';
+import { MarkComplete } from '@/components/mark-complete';
+import { courseConfigs } from '@/lib/course-config';
 
+const config = courseConfigs['vibe-coding'];
 const coursesDirectory = path.join(process.cwd(), 'src', 'content', 'courses', 'vibe-coding');
 
 export function generateStaticParams() {
@@ -72,19 +75,9 @@ export default async function CourseModulePage({ params }: { params: Promise<{ s
   const moduleData = getCourseModule(slug);
   if (!moduleData) notFound();
 
-  const allModules = [
-    { slug: 'module-1-philosophy', title: '1. The Philosophy' },
-    { slug: 'module-2-toolkit', title: '2. The Modern Toolkit' },
-    { slug: 'module-3-prompts', title: '3. The Art of the Prompt' },
-    { slug: 'module-4-lab', title: '4. Lab: Name Generator' },
-    { slug: 'module-5-product', title: '5. To Professional Product' },
-    { slug: 'module-6-debugging', title: '6. Debugging & Iteration' },
-    { slug: 'module-7-deployment', title: '7. Deployment & Databases' },
-  ];
-  
-  const currentIndex = allModules.findIndex(m => m.slug === slug);
-  const prevModule = currentIndex > 0 ? allModules[currentIndex - 1] : null;
-  const nextModule = currentIndex < allModules.length - 1 ? allModules[currentIndex + 1] : null;
+  const currentIndex = config.modules.findIndex(m => m.slug === slug);
+  const prevModule = currentIndex > 0 ? config.modules[currentIndex - 1] : null;
+  const nextModule = currentIndex < config.modules.length - 1 ? config.modules[currentIndex + 1] : null;
 
   return (
     <div className="max-w-none">
@@ -105,31 +98,22 @@ export default async function CourseModulePage({ params }: { params: Promise<{ s
         />
       </article>
 
-      <div className="mt-16 pt-8 border-t flex justify-between items-center">
-        {prevModule ? (
-          <Link href={`/vibe-coding/${prevModule.slug}`} className="flex items-center text-sm font-medium hover:text-primary transition-colors">
+      {prevModule && (
+        <div className="mt-8">
+          <Link href={`/vibe-coding/${prevModule.slug}`} className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Previous: {prevModule.title}
           </Link>
-        ) : (
-          <Link href="/vibe-coding" className="flex items-center text-sm font-medium hover:text-primary transition-colors">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Overview
-          </Link>
-        )}
-        
-        {nextModule ? (
-          <Link href={`/vibe-coding/${nextModule.slug}`} className="flex items-center text-sm font-medium hover:text-primary transition-colors text-right">
-            Next: {nextModule.title}
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-        ) : (
-          <Link href="/vibe-coding" className="flex items-center text-sm font-medium hover:text-primary transition-colors text-right">
-            Back to Overview
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-        )}
-      </div>
+        </div>
+      )}
+
+      <MarkComplete 
+        courseId={config.courseId} 
+        moduleSlug={slug} 
+        nextModule={nextModule}
+        basePath={config.basePath}
+      />
     </div>
   );
 }
+
