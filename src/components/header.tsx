@@ -32,29 +32,35 @@ export function Header() {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem asChild>
+                  <Link href="/ai-automation">AI Automation 101</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/mcp-development">MCP Development 101</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <Link href="/agentic-web">Agentic Web</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/vibe-coding">Vibe Coding</Link>
+                  <Link href="/vibe-coding">Vibe Coding 101</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/prompt-engineering-101">Prompt Engineering</Link>
+                  <Link href="/prompt-engineering-101">Prompt Engineering 101</Link>
                 </DropdownMenuItem>
-                 <DropdownMenuItem asChild>
-                  <Link href="/web3-101">Fundamentals of Web3</Link>
+                <DropdownMenuItem asChild>
+                  <Link href="/web3-101">Web3 Fundamentals</Link>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem asChild>
+                  <Link href="/ai-discovery-standards">AI Discovery Standards</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/glossary">Glossary</Link>
                 </DropdownMenuItem>
-                <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <Link href="/lit">LinkedIn Translator</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/swarm-prediction">Swarm Prediction</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/ai-discovery-standards">AI Discovery Standards</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
