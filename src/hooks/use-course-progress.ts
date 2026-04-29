@@ -60,7 +60,25 @@ export function useCourseProgress(courseId: string) {
     return !!progress[moduleSlug];
   }, [progress]);
 
-  const completedCount = Object.values(progress).filter(Boolean).length;
+  const markExamPassed = useCallback(() => {
+    setProgress(prev => {
+      const updated = { ...prev, __exam_passed: true };
+      const all = getProgress();
+      all[courseId] = updated;
+      saveProgress(all);
+      return updated;
+    });
+  }, [courseId]);
 
-  return { progress, loaded, toggleModule, markComplete, isComplete, completedCount };
+  const isExamPassed = useCallback(() => {
+    return !!progress.__exam_passed;
+  }, [progress]);
+
+  // Filter out internal keys from module count
+  const completedCount = Object.entries(progress)
+    .filter(([key, val]) => !key.startsWith('__') && val)
+    .length;
+
+  return { progress, loaded, toggleModule, markComplete, isComplete, completedCount, markExamPassed, isExamPassed };
 }
+

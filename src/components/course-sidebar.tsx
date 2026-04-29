@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BookOpen, Check } from 'lucide-react';
+import { BookOpen, Check, GraduationCap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { useCourseProgress } from '@/hooks/use-course-progress';
 
@@ -20,9 +20,13 @@ interface CourseSidebarProps {
 
 export function CourseSidebar({ courseId, courseTitle, basePath, modules }: CourseSidebarProps) {
   const pathname = usePathname();
-  const { isComplete, completedCount, loaded } = useCourseProgress(courseId);
+  const { isComplete, isExamPassed, completedCount, loaded } = useCourseProgress(courseId);
   const totalModules = modules.length;
   const progressPercent = totalModules > 0 ? Math.round((completedCount / totalModules) * 100) : 0;
+  const allComplete = loaded && completedCount >= totalModules;
+  const examPassed = loaded && isExamPassed();
+  const examHref = `${basePath}/final-exam`;
+  const examActive = pathname === examHref;
 
   return (
     <aside className="w-full md:w-64 lg:w-72 flex-shrink-0">
@@ -81,6 +85,25 @@ export function CourseSidebar({ courseId, courseTitle, basePath, modules }: Cour
                   </Link>
                 );
               })}
+
+              {/* Final Exam link */}
+              {allComplete && (
+                <Link 
+                  href={examHref}
+                  className={`flex items-center gap-2 text-sm py-1.5 mt-2 pt-2 border-t border-muted transition-colors ${
+                    examActive
+                      ? 'text-amber-500 font-medium'
+                      : 'text-muted-foreground hover:text-amber-500'
+                  }`}
+                >
+                  {examPassed ? (
+                    <Check className="h-3.5 w-3.5 text-green-500 shrink-0" />
+                  ) : (
+                    <GraduationCap className="h-3.5 w-3.5 shrink-0" />
+                  )}
+                  Final Exam
+                </Link>
+              )}
             </nav>
           </CardContent>
         </Card>
@@ -88,3 +111,4 @@ export function CourseSidebar({ courseId, courseTitle, basePath, modules }: Cour
     </aside>
   );
 }
+
