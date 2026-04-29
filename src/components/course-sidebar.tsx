@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BookOpen, Check, GraduationCap } from 'lucide-react';
+import { BookOpen, Check, GraduationCap, Lock } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { useCourseProgress } from '@/hooks/use-course-progress';
 
@@ -29,7 +29,7 @@ export function CourseSidebar({ courseId, courseTitle, basePath, modules }: Cour
   const examActive = pathname === examHref;
 
   return (
-    <aside className="w-full md:w-64 lg:w-72 flex-shrink-0">
+    <aside className="hidden md:block w-64 lg:w-72 flex-shrink-0">
       <div className="sticky top-1/3 space-y-6">
         <Card className="shadow-sm bg-muted/30 border-muted">
           <CardContent className="p-6">
@@ -87,23 +87,23 @@ export function CourseSidebar({ courseId, courseTitle, basePath, modules }: Cour
               })}
 
               {/* Final Exam link */}
-              {allComplete && (
-                <Link 
-                  href={examHref}
-                  className={`flex items-center gap-2 text-sm py-1.5 mt-2 pt-2 border-t border-muted transition-colors ${
-                    examActive
-                      ? 'text-amber-500 font-medium'
-                      : 'text-muted-foreground hover:text-amber-500'
-                  }`}
-                >
-                  {examPassed ? (
-                    <Check className="h-3.5 w-3.5 text-green-500 shrink-0" />
-                  ) : (
-                    <GraduationCap className="h-3.5 w-3.5 shrink-0" />
-                  )}
-                  Final Exam
-                </Link>
-              )}
+              <Link 
+                href={examHref}
+                className={`flex items-center gap-2 text-sm py-1.5 mt-2 pt-2 border-t border-muted transition-colors ${
+                  examActive
+                    ? 'text-amber-500 font-medium'
+                    : 'text-muted-foreground hover:text-amber-500'
+                }`}
+              >
+                {examPassed ? (
+                  <Check className="h-3.5 w-3.5 text-green-500 shrink-0" />
+                ) : !allComplete ? (
+                  <Lock className="h-3.5 w-3.5 shrink-0" />
+                ) : (
+                  <GraduationCap className="h-3.5 w-3.5 shrink-0" />
+                )}
+                Final Exam
+              </Link>
             </nav>
           </CardContent>
         </Card>
