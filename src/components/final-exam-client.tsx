@@ -22,29 +22,32 @@ function shuffleArray<T>(arr: T[]): T[] {
   return shuffled;
 }
 
+const EXAM_SIZE = 15;
+const PASSING_SCORE = 13; // 13/15 = 87%
+
 export function FinalExamClient({ courseId, questions }: FinalExamClientProps) {
   const config = courseConfigs[courseId];
   const { completedCount, loaded, markExamPassed, isExamPassed } = useCourseProgress(courseId);
   const totalModules = config.modules.length;
   const allModulesComplete = completedCount >= totalModules;
 
-  const [selectedAnswers, setSelectedAnswers] = useState<(number | null)[]>(
-    new Array(questions.length).fill(null)
-  );
   const [submitted, setSubmitted] = useState(false);
   const [score, setScore] = useState(0);
   const [studentName, setStudentName] = useState('');
   const [showCertificate, setShowCertificate] = useState(false);
   const [nameError, setNameError] = useState('');
 
-  // Shuffle questions on mount (but keep correct answer tracking)
+  // Select EXAM_SIZE random questions from the full bank, then shuffle
   const shuffledQuestions = useMemo(() => {
-    return shuffleArray(questions.map((q, originalIdx) => ({ ...q, originalIdx })));
+    const pool = shuffleArray(questions.map((q, originalIdx) => ({ ...q, originalIdx })));
+    return pool.slice(0, EXAM_SIZE);
   }, [questions]);
 
-  const totalQuestions = questions.length;
-  const passingScore = Math.ceil(totalQuestions * 0.85); // ~85% to pass
-  const passed = score >= passingScore;
+  const [selectedAnswers, setSelectedAnswers] = useState<(number | null)[]>(
+    new Array(EXAM_SIZE).fill(null)
+  );
+
+  const passed = score >= PASSING_SCORE;
   const alreadyPassed = loaded && isExamPassed();
 
   // Gate: must complete all modules
@@ -142,15 +145,17 @@ export function FinalExamClient({ courseId, questions }: FinalExamClientProps) {
     setScore(correct);
     setSubmitted(true);
 
-    if (correct >= Math.ceil(shuffledQuestions.length * 0.85)) {
+    if (correct >= PASSING_SCORE) {
       markExamPassed();
     }
   };
 
   const handleRetry = () => {
-    setSelectedAnswers(new Array(questions.length).fill(null));
+    setSelectedAnswers(new Array(EXAM_SIZE).fill(null));
     setSubmitted(false);
     setScore(0);
+    // Force new question selection on retry by reloading
+    window.location.reload();
   };
 
   const allAnswered = selectedAnswers.every(a => a !== null);
@@ -160,7 +165,8 @@ export function FinalExamClient({ courseId, questions }: FinalExamClientProps) {
       <div className="mb-8">
         <h1 className="text-2xl font-bold mb-2">{config.courseTitle}: Final Exam</h1>
         <p className="text-muted-foreground">
-          Answer at least {passingScore} out of {totalQuestions} questions correctly to earn your certificate.
+          Answer at least {PASSING_SCORE} out of {EXAM_SIZE} questions correctly to earn your certificate.
+          Questions are randomly selected from a larger bank — each attempt is different.
         </p>
       </div>
 
@@ -250,8 +256,8 @@ export function FinalExamClient({ courseId, questions }: FinalExamClientProps) {
             </h2>
           </div>
           <p className="text-muted-foreground mb-4">
-            Score: {score}/{totalQuestions} ({Math.round((score / totalQuestions) * 100)}%)
-            {!passed && ` — You need at least ${passingScore}/${totalQuestions} to pass.`}
+            Score: {score}/{EXAM_SIZE} ({Math.round((score / EXAM_SIZE) * 100)}%)
+            {!passed && ` — You need at least ${PASSING_SCORE}/${EXAM_SIZE} to pass.`}
           </p>
 
           {passed ? (
