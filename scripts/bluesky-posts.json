@@ -555,9 +555,11 @@
     "id": "ambient-intelligence",
     "scheduleDate": "2026-04-18",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The best interface is no interface.\n\nAmbient intelligence eliminates the command itself. The environment senses and acts. You never ask.\n\nveda.ng/ambient-intelligence\n\nBefore no interface, there's a simpler one. The text field is replacing the dashboard: veda.ng/universal-text-ui",
-    "image": "scripts/thread-assets/ambient_intelligence.png"
+    "image": "scripts/thread-assets/ambient_intelligence.png",
+    "postedAt": "2026-04-29T06:14:08.774Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkmh2pcoza2v"
   },
   {
     "id": "agentic-commerce",
