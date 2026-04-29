@@ -52,14 +52,7 @@ export default async function AgenticWebModulePage({ params }: { params: { slug:
             <div className="mt-8">
                 <MDXRemote source={fileContent} components={mdxComponents} />
             </div>
-            {prevModule && (
-                <div className="mt-8">
-                    <Link href={`/agentic-web/${prevModule.slug}`} className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors">
-                        <ArrowLeft className="mr-2 h-4 w-4" />Previous: {prevModule.title}
-                    </Link>
-                </div>
-            )}
-            <MarkComplete courseId={config.courseId} moduleSlug={slug} nextModule={nextModule} basePath={config.basePath} />
+            <MarkComplete courseId={config.courseId} moduleSlug={slug} prevModule={prevModule} nextModule={nextModule} basePath={config.basePath} />
         </article>
     );
 }

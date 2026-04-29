@@ -135,9 +135,9 @@ export function ProtocolDiagram() {
         <text x={150} y={100} textAnchor="middle" fill="#3b82f6" fontSize={12} fontWeight={700}>MCP (Tool Protocol)</text>
         <line x1={310} y1={70} x2={150} y2={115} stroke="#3b82f6" strokeWidth={1.5} strokeDasharray="4 3" />
         {[
-          { y: 120, label: '🔍 Search API' },
-          { y: 150, label: '🗄️ Database' },
-          { y: 180, label: '📁 File System' },
+          { y: 120, label: 'Search API' },
+          { y: 150, label: 'Database' },
+          { y: 180, label: 'File System' },
         ].map((t) => (
           <g key={t.label}>
             <rect x={60} y={t.y} width={180} height={28} rx={6} fill="#3b82f610" stroke="#3b82f6" strokeWidth={1} />
@@ -149,9 +149,9 @@ export function ProtocolDiagram() {
         <text x={650} y={100} textAnchor="middle" fill="#10b981" fontSize={12} fontWeight={700}>A2A (Agent Protocol)</text>
         <line x1={490} y1={70} x2={650} y2={115} stroke="#10b981" strokeWidth={1.5} strokeDasharray="4 3" />
         {[
-          { y: 120, label: '🤖 Booking Agent' },
-          { y: 150, label: '🤖 Finance Agent' },
-          { y: 180, label: '🤖 Support Agent' },
+          { y: 120, label: 'Booking Agent' },
+          { y: 150, label: 'Finance Agent' },
+          { y: 180, label: 'Support Agent' },
         ].map((t) => (
           <g key={t.label}>
             <rect x={560} y={t.y} width={180} height={28} rx={6} fill="#10b98110" stroke="#10b981" strokeWidth={1} />

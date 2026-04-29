@@ -242,18 +242,18 @@ export function DeFiStackDiagram() {
 /* ─── Security Red Flags ─── */
 export function SecurityRedFlags() {
   const flags = [
-    { icon: '🎣', title: 'Phishing Sites', desc: 'Fake websites mimicking real projects. Always check the URL before connecting your wallet.', severity: 'Critical' },
-    { icon: '🏃', title: 'Rug Pulls', desc: 'Team hypes a token, raises money, then disappears. Red flag: anonymous team + unrealistic promises.', severity: 'Critical' },
-    { icon: '🎁', title: '"Free" Airdrops', desc: 'Messages offering free tokens that require wallet connection to unknown sites. These drain your wallet.', severity: 'High' },
-    { icon: '📈', title: 'Pump & Dumps', desc: 'Coordinated buying to inflate price, then insiders sell. If a coin is being shilled everywhere, be skeptical.', severity: 'High' },
+    { title: 'Phishing Sites', desc: 'Fake websites mimicking real projects. Always check the URL before connecting your wallet.', severity: 'Critical' },
+    { title: 'Rug Pulls', desc: 'Team hypes a token, raises money, then disappears. Red flag: anonymous team + unrealistic promises.', severity: 'Critical' },
+    { title: '"Free" Airdrops', desc: 'Messages offering free tokens that require wallet connection to unknown sites. These drain your wallet.', severity: 'High' },
+    { title: 'Pump & Dumps', desc: 'Coordinated buying to inflate price, then insiders sell. If a coin is being shilled everywhere, be skeptical.', severity: 'High' },
   ];
   return (
-    <div className="not-prose my-6 p-6 bg-red-500/5 border border-red-500/20 rounded-2xl">
-      <div className="text-xs font-bold uppercase tracking-wider text-red-600 dark:text-red-400 mb-4">Common Scam Patterns</div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+    <div className="not-prose my-6 p-5 bg-red-500/5 border border-red-500/20 rounded-xl">
+      <div className="text-xs font-bold uppercase tracking-wider text-red-600 dark:text-red-400 mb-3">Common Scam Patterns</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         {flags.map((f) => (
           <div key={f.title} className="flex items-start gap-3 p-3 rounded-lg bg-background/50">
-            <span className="text-xl shrink-0">{f.icon}</span>
+            <Shield className={`w-4 h-4 shrink-0 mt-0.5 ${f.severity === 'Critical' ? 'text-red-500' : 'text-amber-500'}`} />
             <div>
               <div className="flex items-center gap-2 mb-1">
                 <span className="font-medium text-sm">{f.title}</span>

@@ -6,12 +6,32 @@ This module covers the fundamental techniques every prompt engineer must know. T
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg">Zero-Shot, One-Shot, and Few-Shot Prompting</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>These techniques refer to how many examples you provide in your prompt.</p>
+            <p>These techniques refer to how many examples you provide in your prompt. The number of examples dramatically affects output quality.</p>
             <ul>
                 <li><strong>Zero-Shot:</strong> You provide no examples, only the instruction. This is the simplest form of prompting and works well for straightforward tasks. <br/> <i>Example: "Classify this email as SPAM or NOT SPAM."</i></li>
                 <li><strong>One-Shot:</strong> You provide a single example to show the model the desired output format or pattern. <br/> <i>Example: "Translate 'cat' to French: 'chat'. Now translate 'dog' to French:"</i></li>
                 <li><strong>Few-Shot:</strong> You provide multiple examples (usually 3-5). This is highly effective for complex tasks or when you need the model to follow a very specific pattern. The more examples you provide, the better the model understands your intent.</li>
             </ul>
+
+            <Card className="my-4">
+                <CardHeader>
+                    <CardTitle className="text-base">Few-Shot Example: Sentiment Analysis</CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm">
+                    <div className="bg-muted/50 p-4 rounded-lg font-mono text-xs whitespace-pre-wrap">
+{`Classify the sentiment of each review.
+
+Review: "The battery lasts forever, love it!" → Positive
+Review: "Broke after two days." → Negative
+Review: "It's fine, nothing special." → Neutral
+
+Review: "Best purchase I've made this year!"`}
+                    </div>
+                    <p className="mt-2 text-muted-foreground text-xs">The model sees the pattern and responds: → Positive</p>
+                </CardContent>
+            </Card>
+
+            <p><strong>When to use which:</strong> Start with zero-shot. If the output is wrong or inconsistently formatted, add one example. If it's still unreliable, add 3-5 examples. More examples = more tokens = higher cost, so use the minimum needed.</p>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
@@ -23,6 +43,23 @@ This module covers the fundamental techniques every prompt engineer must know. T
                 <li><strong>System Prompting:</strong> You provide overarching instructions that define the AI's purpose or constraints. <br/> <i>Example: "You are a helpful assistant. Only return your answer in JSON format."</i></li>
                 <li><strong>Contextual Prompting:</strong> You give the AI specific background information relevant to the task. This helps the model generate a more tailored and accurate response. <br/> <i>Example: "Context: The user is writing for a blog about retro 80s video games. Suggest three article topics."</i></li>
             </ul>
+
+            <Card className="my-4">
+                <CardHeader>
+                    <CardTitle className="text-base">Combining Techniques: A Real Prompt</CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm">
+                    <div className="bg-muted/50 p-4 rounded-lg font-mono text-xs whitespace-pre-wrap">
+{`System: You are an expert financial analyst writing for retail investors. Be concise. Avoid jargon.
+
+Context: Apple (AAPL) reported Q2 2026 earnings of $1.65/share, beating estimates of $1.58. Revenue was $95.4B, up 8% YoY. Services revenue hit $24.3B, a record.
+
+Task: Write a 3-bullet summary suitable for a newsletter.`}
+                    </div>
+                    <p className="mt-2 text-muted-foreground text-xs">Role + Context + Task = high-quality, targeted output.</p>
+                </CardContent>
+            </Card>
+
             <p>Combining these techniques is key. A great prompt might assign a role, provide context, and give a few-shot example all at once.</p>
         </AccordionContent>
     </AccordionItem>
@@ -37,6 +74,71 @@ This module covers the fundamental techniques every prompt engineer must know. T
             <p><strong>XML and Custom Formats:</strong> For APIs that need specific schemas, you can provide the exact structure you want the model to follow.</p>
             <div className="border-l-4 border-primary/50 pl-4 italic my-2"><p>"Return your analysis in this exact XML format: &lt;analysis&gt;&lt;sentiment&gt;positive/negative&lt;/sentiment&gt;&lt;confidence&gt;0-100&lt;/confidence&gt;&lt;summary&gt;one sentence&lt;/summary&gt;&lt;/analysis&gt;"</p></div>
             <p>The key principle: always show the model the exact output shape you want. The more specific the format instruction, the more reliable the result.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg">Temperature and Parameters: Tuning the Output</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Beyond the text of your prompt, most LLM APIs expose parameters that control how the model generates its response. Understanding these is essential for production use.</p>
+
+            <Card className="my-4">
+                <CardContent className="p-0">
+                    <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border">
+                        <div className="p-4">
+                            <div className="font-semibold text-sm mb-1 text-blue-600 dark:text-blue-400">Temperature: 0.0</div>
+                            <div className="text-xs text-muted-foreground">Deterministic. Always picks the most probable next token. Use for: code generation, data extraction, classification.</div>
+                        </div>
+                        <div className="p-4">
+                            <div className="font-semibold text-sm mb-1 text-amber-600 dark:text-amber-400">Temperature: 0.7</div>
+                            <div className="text-xs text-muted-foreground">Balanced. Good default for most tasks. Some creativity while staying coherent. Use for: writing, brainstorming, summaries.</div>
+                        </div>
+                        <div className="p-4">
+                            <div className="font-semibold text-sm mb-1 text-rose-600 dark:text-rose-400">Temperature: 1.0+</div>
+                            <div className="text-xs text-muted-foreground">Creative/random. Higher variety but more hallucination risk. Use for: poetry, fiction, creative ideation.</div>
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
+
+            <p><strong>Other key parameters:</strong></p>
+            <ul>
+                <li><strong>Max Tokens:</strong> Limits the response length. Set this to avoid paying for unnecessarily long outputs. A paragraph is ~100 tokens; a full page is ~500.</li>
+                <li><strong>Top-P (Nucleus Sampling):</strong> Controls the diversity of token selection. A value of 0.9 means the model only considers the top 90% of probable tokens. Lower = more focused. Generally, tune either temperature OR top-p, not both.</li>
+                <li><strong>Stop Sequences:</strong> Tell the model when to stop generating. Useful for preventing the model from adding unwanted content after your desired output.</li>
+            </ul>
+
+            <p><strong>Rule of thumb:</strong> For factual/structured tasks, use temperature 0. For creative tasks, use 0.7-1.0. Always set max_tokens to a reasonable limit to control cost.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg">Choosing the Right Model</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Not all models are created equal. Choosing the right model for your task is a critical prompt engineering decision that affects quality, speed, and cost.</p>
+
+            <Card className="my-4">
+                <CardContent className="p-0">
+                    <div className="overflow-x-auto">
+                        <table className="w-full text-xs">
+                            <thead>
+                                <tr className="border-b">
+                                    <th className="p-3 text-left font-semibold">Model</th>
+                                    <th className="p-3 text-left font-semibold">Best For</th>
+                                    <th className="p-3 text-left font-semibold">Trade-off</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr className="border-b"><td className="p-3">Claude Sonnet / GPT-4o</td><td className="p-3">Complex reasoning, code, analysis</td><td className="p-3">Slower, more expensive</td></tr>
+                                <tr className="border-b"><td className="p-3">Claude Haiku / GPT-4o-mini</td><td className="p-3">Classification, extraction, simple tasks</td><td className="p-3">Fast, cheap, less nuance</td></tr>
+                                <tr className="border-b"><td className="p-3">Gemini 2.5 Pro</td><td className="p-3">Long context, multi-modal, research</td><td className="p-3">Huge context window (1M tokens)</td></tr>
+                                <tr><td className="p-3">Open source (Llama, Mistral)</td><td className="p-3">Privacy-sensitive, self-hosted, cost at scale</td><td className="p-3">Requires infrastructure</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </CardContent>
+            </Card>
+
+            <p><strong>The cost-quality ladder:</strong> Start with the cheapest model that gives acceptable results. Only upgrade when quality is insufficient. A task that works with GPT-4o-mini at $0.15/M tokens doesn't need Claude Opus at $15/M tokens.</p>
+            <p><strong>Context window matters:</strong> If you need to process entire documents, books, or codebases, choose models with large context windows (Gemini 2.5 Pro at 1M tokens, Claude at 200K). For short prompts, context window is irrelevant.</p>
         </AccordionContent>
     </AccordionItem>
 </Accordion>

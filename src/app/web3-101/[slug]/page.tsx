@@ -96,17 +96,10 @@ export default async function CourseModulePage({ params }: { params: Promise<{ s
         />
       </article>
 
-      {prevModule && (
-        <div className="mt-8">
-          <Link href={`/web3-101/${prevModule.slug}`} className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors">
-            <ArrowLeft className="mr-2 h-4 w-4" />Previous: {prevModule.title}
-          </Link>
-        </div>
-      )}
-
       <MarkComplete 
         courseId={config.courseId} 
         moduleSlug={slug} 
+        prevModule={prevModule}
         nextModule={nextModule}
         basePath={config.basePath}
       />

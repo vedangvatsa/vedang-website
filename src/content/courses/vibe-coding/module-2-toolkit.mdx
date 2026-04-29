@@ -12,12 +12,12 @@ This module breaks down the modern AI coding toolkit. We categorize tools into t
 
 <SectionLabel label="Choosing Your Environment" />
 
-Your first decision is where the code will live while you work on it. Think of this like choosing a workshop.
+Your first decision is where the code will live while you work on it.
 
 <div className="grid md:grid-cols-2 gap-6 my-6">
     <Card>
         <CardHeader>
-            <CardTitle className="text-lg font-semibold">Cloud IDEs (The Online Workshop)</CardTitle>
+            <CardTitle className="text-lg font-semibold">Cloud IDEs</CardTitle>
         </CardHeader>
         <CardContent>
             <p className="text-sm text-muted-foreground mb-4"><em>Examples: Replit, Lovable.dev, v0</em></p>
@@ -30,7 +30,7 @@ Your first decision is where the code will live while you work on it. Think of t
     </Card>
     <Card className="border-primary/50">
         <CardHeader>
-            <CardTitle className="text-lg font-semibold">Local IDEs (Your Own Workshop)</CardTitle>
+            <CardTitle className="text-lg font-semibold">Local IDEs</CardTitle>
         </CardHeader>
         <CardContent>
             <p className="text-sm text-muted-foreground mb-4"><em>Examples: Cursor, Windsurf, VS Code + Antigravity</em></p>
@@ -47,15 +47,15 @@ Your first decision is where the code will live while you work on it. Think of t
 
 Here is a breakdown of the most effective tools available right now and when to use them.
 
-<Accordion type="single" collapsible className="w-full mt-4 space-y-4">
+<Accordion type="single" collapsible className="w-full mt-4 space-y-2">
     <AccordionItem value="lovable" className="border rounded-lg bg-card px-4">
         <AccordionTrigger className="text-lg font-semibold hover:no-underline">
             1. Lovable.dev & v0 by Vercel: The Visual Builders
         </AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground pt-2">
+        <AccordionContent className="text-base text-muted-foreground pt-1">
             **Best For:** Fast, beautiful, visual web apps and UI components.
             
-            **How it works:** You describe what you want in chat, and the AI builds the user interface visually in real-time. Lovable connects easily to databases like Supabase, while v0 specializes in generating clean React components with Tailwind CSS that you can copy-paste into other projects.
+            **How it works:** You describe what you want in natural language, and the AI generates a working UI in real-time. **Lovable** generates full-stack apps with Supabase integration, auth flows, and one-click deployment. **v0 by Vercel** generates production-ready React components with Tailwind CSS — you can copy the code directly into your Next.js project. Both are browser-based, so there's zero local setup. The trade-off: you have less control over architecture decisions compared to local tools.
         </AccordionContent>
     </AccordionItem>
     
@@ -63,10 +63,10 @@ Here is a breakdown of the most effective tools available right now and when to 
         <AccordionTrigger className="text-lg font-semibold hover:no-underline">
             2. Cursor & Windsurf: The AI-Native Editors
         </AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground pt-2">
-            **Best For:** Developers who want AI integrated directly into their coding environment.
+        <AccordionContent className="text-base text-muted-foreground pt-1">
+            **Best For:** Developers who want AI integrated directly into their coding environment with full codebase awareness.
             
-            **How it works:** Both are forks of VS Code with AI built in at every level. Cursor has inline editing (Cmd+K), a chat panel that reads your codebase, and "Composer" mode for multi-file changes. Windsurf offers similar capabilities with its "Cascade" flow for autonomous edits. Both support MCP servers for extending AI capabilities.
+            **How it works:** Both are forks of VS Code with AI deeply integrated. **Cursor** has inline editing (Cmd+K), a chat panel that indexes your entire codebase for context-aware suggestions, and "Composer" mode for coordinated multi-file changes. **Windsurf** offers similar capabilities with its "Cascade" flow for autonomous edits. Both support MCP servers, meaning you can connect them to databases, APIs, and custom tools. The key advantage over cloud IDEs: they run locally, so you get full filesystem access, custom extensions, and no vendor lock-in on your code.
         </AccordionContent>
     </AccordionItem>
     
@@ -74,10 +74,10 @@ Here is a breakdown of the most effective tools available right now and when to 
         <AccordionTrigger className="text-lg font-semibold hover:no-underline">
             3. Replit: The All-in-One Workshop
         </AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground pt-2">
-            **Best For:** Apps with complex logic, backend services, bots, and learning how code works.
+        <AccordionContent className="text-base text-muted-foreground pt-1">
+            **Best For:** Full-stack apps, backend services, bots, and rapid prototyping with instant deployment.
             
-            **How it works:** Replit gives you a full computer running in the cloud. It includes a code editor, a command line terminal, and a live web preview. Its AI can generate entire projects from a single prompt and deploy them to the internet with one click.
+            **How it works:** Replit gives you a full cloud development environment — code editor, terminal, package manager, and live preview in one tab. Its AI agent can generate entire projects from a single prompt and deploy them to a public URL with one click. Replit handles infrastructure (hosting, SSL, domains) so you never touch a server. The trade-off: your code lives on Replit's servers, and the free tier has compute limits.
         </AccordionContent>
     </AccordionItem>
     
@@ -85,10 +85,10 @@ Here is a breakdown of the most effective tools available right now and when to 
         <AccordionTrigger className="text-lg font-semibold hover:no-underline">
             4. GitHub Copilot & Codex: The Inline Assistants
         </AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground pt-2">
-            **Best For:** Developers who want AI autocomplete inside their existing VS Code or JetBrains setup.
+        <AccordionContent className="text-base text-muted-foreground pt-1">
+            **Best For:** Developers who want AI autocomplete inside their existing VS Code or JetBrains setup without switching editors.
             
-            **How it works:** Copilot predicts and autocompletes code as you type. Codex (the latest iteration) can execute multi-step coding tasks asynchronously in a sandboxed environment. Both integrate into editors you already use without requiring a switch.
+            **How it works:** **Copilot** predicts and autocompletes code as you type, trained on billions of lines of open-source code. It's the lowest-friction AI tool — install the extension and it starts suggesting. **Codex** (OpenAI's latest) goes further: it can execute multi-step coding tasks asynchronously in a sandboxed cloud environment, like a remote pair programmer. The key distinction from Cursor: Copilot is an add-on to your existing editor, while Cursor replaces the editor entirely.
         </AccordionContent>
     </AccordionItem>
     
@@ -96,10 +96,10 @@ Here is a breakdown of the most effective tools available right now and when to 
         <AccordionTrigger className="text-lg font-semibold hover:no-underline">
             5. Claude Code & Antigravity: The Autonomous Agents
         </AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground pt-2">
-            **Best For:** Making changes across many different files at once or building complex local architectures.
+        <AccordionContent className="text-base text-muted-foreground pt-1">
+            **Best For:** Large-scale refactors, complex multi-file changes, and autonomous project-level work.
             
-            **How it works:** These are autonomous agents running in your terminal (Claude Code) or as background systems (Antigravity). They read your entire project folder and can perform large multi-file refactors, execute tests, and commit changes to version control with minimal supervision.
+            **How it works:** **Claude Code** (Anthropic) runs in your terminal as an interactive agent. You describe a task, and it reads your codebase, writes code, runs shell commands, and iterates on errors autonomously. **Antigravity** (Google DeepMind) is an agentic coding assistant that operates inside your IDE — it can read your project, edit files, run commands, browse the web, and execute multi-step tasks with deep codebase understanding. Both represent the frontier of AI coding: instead of autocompleting one line, they autonomously execute entire features. The trade-off vs. Cursor: higher autonomy means less granular control over each edit.
         </AccordionContent>
     </AccordionItem>
 
@@ -107,10 +107,10 @@ Here is a breakdown of the most effective tools available right now and when to 
         <AccordionTrigger className="text-lg font-semibold hover:no-underline">
             6. Ollama: The Local Intelligence
         </AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground pt-2">
-            **Best For:** Privacy-focused development, offline coding, and fine-tuning custom models.
+        <AccordionContent className="text-base text-muted-foreground pt-1">
+            **Best For:** Privacy-sensitive projects, offline development, and running AI without API costs.
             
-            **How it works:** Ollama allows you to run powerful open-source models (like Llama 3, Mistral, or Qwen) locally on your own hardware. Your code never leaves your machine, making it essential for enterprise security and offline vibe coding.
+            **How it works:** Ollama lets you download and run open-source models (Llama 3, Mistral, Qwen, DeepSeek) directly on your machine. Your code never leaves your hardware — no API calls, no cloud dependency, no per-token billing. You need decent hardware (16GB+ RAM, Apple Silicon or a good GPU) to run larger models smoothly. Many local IDEs like Cursor and Continue can connect to Ollama as a backend, so you get the same AI-assisted workflow but fully offline and private.
         </AccordionContent>
     </AccordionItem>
 </Accordion>
@@ -123,19 +123,19 @@ Test your understanding of the toolkit. Click the questions to reveal the answer
     <AccordionItem value="q1">
         <AccordionTrigger className="text-lg font-medium text-left">If you want to build a beautiful dashboard UI quickly without setting anything up, which tool is best?</AccordionTrigger>
         <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
-            **Lovable.dev** or **v0 by Vercel**. Both run in the browser and specialize in generating high-quality visual components quickly.
+            **Lovable.dev** or **v0 by Vercel**. Both are cloud-based visual builders that generate UI from natural language — no local install, no terminal, no config files. Lovable is better if you need a full app with auth and database. v0 is better if you just need individual React components to paste into an existing project.
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="q2">
         <AccordionTrigger className="text-lg font-medium text-left">What makes Claude Code and Antigravity different from Cursor?</AccordionTrigger>
         <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
-            Claude Code and Antigravity are autonomous agents that run in your terminal and can perform multi-file refactors, execute commands, run tests, and manage git operations with minimal supervision. Cursor is an editor with AI assistance built in, but still requires more manual guidance.
+            **Autonomy level.** Cursor is an AI-assisted editor — you're still driving, and the AI suggests or edits when asked. Claude Code and Antigravity are autonomous agents: you describe a goal ("add authentication to this app"), and they independently plan the changes, edit multiple files, run tests, fix errors, and iterate until the task is done. Think of Cursor as power steering and Claude Code/Antigravity as self-driving.
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="q3">
         <AccordionTrigger className="text-lg font-medium text-left">Why would someone choose Ollama over a cloud model?</AccordionTrigger>
         <AccordionContent className="text-base text-muted-foreground border-l-4 border-primary/50 pl-4">
-            Ollama runs locally on your machine. A user would choose it for strict data privacy (the code never leaves their computer) or to code without an internet connection.
+            **Privacy and cost.** Cloud models like GPT-4o and Claude send your code to external servers — a non-starter for companies handling sensitive IP, health data, or financial code. Ollama runs everything locally: zero data leaves your machine, zero API costs (after the one-time model download), and zero internet dependency. The trade-off is that local models are typically less capable than frontier cloud models, and you need strong hardware (Apple Silicon Mac or NVIDIA GPU) to run them at usable speeds.
         </AccordionContent>
     </AccordionItem>
 </Accordion>

@@ -142,7 +142,7 @@ export function CertificateGenerator({ studentName, courseTitle, courseId }: Cer
 
   const shareToLinkedIn = () => {
     const text = encodeURIComponent(
-      `I just completed ${courseTitle} on veda.ng and passed the final exam! 🎓\n\nhttps://veda.ng/${courseId}`
+      `I just completed ${courseTitle} on veda.ng and passed the final exam!\n\nhttps://veda.ng/${courseId}`
     );
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=https://veda.ng/${courseId}&text=${text}`, '_blank');
   };

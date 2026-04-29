@@ -43,7 +43,7 @@ await fetch(\`https://api.telegram.org/bot\${TELEGRAM_TOKEN}/sendMessage\`, {
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
     chat_id: CHANNEL_ID,
-    text: "🚀 5 new Web3 jobs posted today!",
+    text: "5 new Web3 jobs posted today!",
     parse_mode: "HTML",
   }),
 });`}</code></pre>
@@ -80,9 +80,9 @@ export async function POST(request: Request) {
   const { job } = await request.json();
   
   // Format the job for Telegram
-  const message = \`🆕 <b>\${job.title}</b>\\n\` +
-    \`🏢 \${job.company}\\n\` +
-    \`📍 \${job.location}\\n\\n\` +
+  const message = \`<b>\${job.title}</b>\\n\` +
+    \`\${job.company}\\n\` +
+    \`\${job.location}\\n\\n\` +
     \`Apply: \${job.url}\`;
   
   // Post to Telegram channel
