@@ -110,31 +110,10 @@ const results = await Promise.allSettled(sources);`}</code></pre>
     </AccordionItem>
 </Accordion>
 
-**Why is idempotency important in automation pipelines?**
+<KnowledgeCheck
+  question="Why is idempotency important in automation pipelines?"
+  options={["It makes the pipeline run faster.", "It ensures that running the same step twice with the same input produces the same result. so you can safely retry failed steps without creating duplicates.", "It's only needed for database operations.", "It's a security feature that prevents unauthorized access."]}
+  correctAnswerIndex={1}
+  explanation="In real-world pipelines, steps fail and need to be re-run. If your 'insert job listing' step isn't idempotent, re-running it creates duplicates. With idempotency (using upserts and unique IDs), you can safely retry any step without side effects."
+/>
 
-<Accordion type="single" collapsible className="w-full mt-4">
-    <AccordionItem value="mc0">
-        <AccordionTrigger className="text-lg font-medium text-left">A. It makes the pipeline run faster.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc1">
-        <AccordionTrigger className="text-lg font-medium text-left">B. It ensures that running the same step twice with the same input produces the same result. so you can safely retry failed steps without creating duplicates.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
-            **Correct.** In real-world pipelines, steps fail and need to be re-run. If your 'insert job listing' step isn't idempotent, re-running it creates duplicates. With idempotency (using upserts and unique IDs), you can safely retry any step without side effects.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc2">
-        <AccordionTrigger className="text-lg font-medium text-left">C. It's only needed for database operations.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc3">
-        <AccordionTrigger className="text-lg font-medium text-left">D. It's a security feature that prevents unauthorized access.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-</Accordion>

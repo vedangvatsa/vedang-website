@@ -98,31 +98,10 @@ Building an app on your computer is only half the job. To share it with the worl
     </AccordionItem>
 </Accordion>
 
-**Why should you NEVER hardcode API keys directly in your source code?**
+<KnowledgeCheck
+  question="Why should you NEVER hardcode API keys directly in your source code?"
+  options={["It makes the code run slower.", "API keys change too frequently to be hardcoded.", "If your code is pushed to GitHub, bots will find and exploit the exposed keys within minutes.", "Hardcoded keys only work on your local machine."]}
+  correctAnswerIndex={2}
+  explanation="Exposed API keys on public GitHub repositories are actively scanned by malicious bots. They can be exploited within minutes, leading to unauthorized charges, data breaches, or service abuse. Always use environment variables and .gitignore."
+/>
 
-<Accordion type="single" collapsible className="w-full mt-4">
-    <AccordionItem value="mc0">
-        <AccordionTrigger className="text-lg font-medium text-left">A. It makes the code run slower.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc1">
-        <AccordionTrigger className="text-lg font-medium text-left">B. API keys change too frequently to be hardcoded.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc2">
-        <AccordionTrigger className="text-lg font-medium text-left">C. If your code is pushed to GitHub, bots will find and exploit the exposed keys within minutes.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
-            **Correct.** Exposed API keys on public GitHub repositories are actively scanned by malicious bots. They can be exploited within minutes, leading to unauthorized charges, data breaches, or service abuse. Always use environment variables and .gitignore.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc3">
-        <AccordionTrigger className="text-lg font-medium text-left">D. Hardcoded keys only work on your local machine.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-</Accordion>

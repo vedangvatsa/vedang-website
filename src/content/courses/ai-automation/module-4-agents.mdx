@@ -122,31 +122,10 @@ const response = await anthropic.messages.create({
     </AccordionItem>
 </Accordion>
 
-**What makes AI agents better than rule-based automation for social media management?**
+<KnowledgeCheck
+  question="What makes AI agents better than rule-based automation for social media management?"
+  options={["AI agents are always faster than rule-based systems.", "AI agents can handle ambiguity, adapt tone for different platforms, generate original content, and make judgment calls on sentiment and relevance. things rigid rules can't do.", "AI agents are cheaper than all no-code tools.", "AI agents don't need any APIs to function."]}
+  correctAnswerIndex={1}
+  explanation="Rule-based automation breaks when it encounters unexpected formats, sentiment analysis, or content that needs creative adaptation. AI agents reason about context: they can write a LinkedIn post in professional tone and a tweet in casual tone from the same source, handle edge cases in sentiment, and generate original content."
+/>
 
-<Accordion type="single" collapsible className="w-full mt-4">
-    <AccordionItem value="mc0">
-        <AccordionTrigger className="text-lg font-medium text-left">A. AI agents are always faster than rule-based systems.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc1">
-        <AccordionTrigger className="text-lg font-medium text-left">B. AI agents can handle ambiguity, adapt tone for different platforms, generate original content, and make judgment calls on sentiment and relevance. things rigid rules can't do.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
-            **Correct.** Rule-based automation breaks when it encounters unexpected formats, sentiment analysis, or content that needs creative adaptation. AI agents reason about context: they can write a LinkedIn post in professional tone and a tweet in casual tone from the same source, handle edge cases in sentiment, and generate original content.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc2">
-        <AccordionTrigger className="text-lg font-medium text-left">C. AI agents are cheaper than all no-code tools.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc3">
-        <AccordionTrigger className="text-lg font-medium text-left">D. AI agents don't need any APIs to function.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-</Accordion>

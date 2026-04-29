@@ -7,12 +7,12 @@ export function PredictionEngine() {
   return (
     <div className="not-prose my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
       <div className="p-5 rounded-xl border bg-red-500/5 border-red-500/20">
-        <div className="text-xs font-bold uppercase tracking-wider text-red-600 dark:text-red-400 mb-2">❌ Weak Prompt</div>
+        <div className="text-xs font-bold uppercase tracking-wider text-red-600 dark:text-red-400 mb-2">Weak Prompt</div>
         <p className="text-sm italic text-muted-foreground">&quot;Write about marketing.&quot;</p>
         <p className="text-xs text-muted-foreground mt-2">Vague → generic output. The AI has no constraints to guide predictions.</p>
       </div>
       <div className="p-5 rounded-xl border bg-emerald-500/5 border-emerald-500/20">
-        <div className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-2">✅ Strong Prompt</div>
+        <div className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-2">Strong Prompt</div>
         <p className="text-sm italic text-muted-foreground">&quot;Write a 200-word LinkedIn post about content marketing for B2B SaaS startups. Use a professional tone and include 3 actionable tips.&quot;</p>
         <p className="text-xs text-muted-foreground mt-2">Specific → focused, useful output. Constraints narrow the prediction space.</p>
       </div>
@@ -163,7 +163,7 @@ export function PromptChaining() {
           return (
             <g key={`${step.label}-${i}`}>
               <rect x={step.x} y={yOff} width={w} height={h} rx={isGate ? 25 : 12} fill={`${step.color}15`} stroke={step.color} strokeWidth={1.5} strokeDasharray={isGate ? "4 3" : "none"} />
-              <text x={step.x + w/2} y={yOff + (isGate ? 22 : 35)} textAnchor="middle" fill={step.color} fontSize={isGate ? 11 : 14} fontWeight={700}>{isGate ? '✓ ' + step.desc : step.label}</text>
+              <text x={step.x + w/2} y={yOff + (isGate ? 22 : 35)} textAnchor="middle" fill={step.color} fontSize={isGate ? 11 : 14} fontWeight={700}>{isGate ? '' + step.desc : step.label}</text>
               {!isGate && <text x={step.x + w/2} y={yOff + 55} textAnchor="middle" fill="currentColor" fontSize={11} opacity={0.5}>{step.desc}</text>}
               {i < 4 && (
                 <path d={`M${step.x + w + 5} 75 L${step.x + w + 25} 75`} stroke="currentColor" strokeWidth={1.2} opacity={0.3} markerEnd="url(#chain-arrow)" />

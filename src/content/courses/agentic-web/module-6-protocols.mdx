@@ -81,31 +81,10 @@ For agents to work across the open internet, they need standardized languages. J
     </AccordionItem>
 </Accordion>
 
-**What is the primary function of an 'Agent Card' in the A2A protocol?**
+<KnowledgeCheck
+  question="What is the primary function of an 'Agent Card' in the A2A protocol?"
+  options={["It stores the agent's memory and conversation history.", "It's a JSON manifest that describes the agent's capabilities, authentication, and interaction patterns so other agents can discover and interact with it.", "It encrypts all communication between two agents.", "It contains the agent's source code for auditing purposes."]}
+  correctAnswerIndex={1}
+  explanation="An Agent Card is hosted at a well-known URL and acts as the agent's 'business card.' It tells other agents what capabilities the agent has, how to authenticate with it, and what types of tasks it can handle, enabling dynamic, cross-organizational agent discovery."
+/>
 
-<Accordion type="single" collapsible className="w-full mt-4">
-    <AccordionItem value="mc0">
-        <AccordionTrigger className="text-lg font-medium text-left">A. It stores the agent's memory and conversation history.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc1">
-        <AccordionTrigger className="text-lg font-medium text-left">B. It's a JSON manifest that describes the agent's capabilities, authentication, and interaction patterns so other agents can discover and interact with it.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
-            **Correct.** An Agent Card is hosted at a well-known URL and acts as the agent's 'business card.' It tells other agents what capabilities the agent has, how to authenticate with it, and what types of tasks it can handle, enabling dynamic, cross-organizational agent discovery.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc2">
-        <AccordionTrigger className="text-lg font-medium text-left">C. It encrypts all communication between two agents.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc3">
-        <AccordionTrigger className="text-lg font-medium text-left">D. It contains the agent's source code for auditing purposes.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-</Accordion>

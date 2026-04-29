@@ -98,31 +98,10 @@ This course covers the entire spectrum: no-code tools (n8n, Make), raw API integ
     </AccordionItem>
 </Accordion>
 
-**Which of these tasks is the BEST candidate for automation?**
+<KnowledgeCheck
+  question="Which of these tasks is the BEST candidate for automation?"
+  options={["Writing a novel. it's time-consuming but highly creative.", "Copying 50 new job listings from an API into a spreadsheet every morning. repetitive, rule-based, time-consuming, and error-prone.", "Having a one-on-one conversation with a team member. important but not rule-based.", "Deciding the company's product strategy. high-impact but requires human judgment."]}
+  correctAnswerIndex={1}
+  explanation="The ideal automation target is repetitive (daily), rule-based (fetch → filter → insert), time-consuming (50 listings), and error-prone (manual copy-paste). The other tasks require creativity, empathy, or strategic judgment that humans handle better."
+/>
 
-<Accordion type="single" collapsible className="w-full mt-4">
-    <AccordionItem value="mc0">
-        <AccordionTrigger className="text-lg font-medium text-left">A. Writing a novel. it's time-consuming but highly creative.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc1">
-        <AccordionTrigger className="text-lg font-medium text-left">B. Copying 50 new job listings from an API into a spreadsheet every morning. repetitive, rule-based, time-consuming, and error-prone.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
-            **Correct.** The ideal automation target is repetitive (daily), rule-based (fetch → filter → insert), time-consuming (50 listings), and error-prone (manual copy-paste). The other tasks require creativity, empathy, or strategic judgment that humans handle better.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc2">
-        <AccordionTrigger className="text-lg font-medium text-left">C. Having a one-on-one conversation with a team member. important but not rule-based.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc3">
-        <AccordionTrigger className="text-lg font-medium text-left">D. Deciding the company's product strategy. high-impact but requires human judgment.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-</Accordion>

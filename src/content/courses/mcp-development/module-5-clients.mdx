@@ -117,31 +117,10 @@ console.log("Result:", result);`}</code></pre>
     </AccordionItem>
 </Accordion>
 
-**How can you share MCP server configurations with your development team?**
+<KnowledgeCheck
+  question="How can you share MCP server configurations with your development team?"
+  options={["Each team member must configure servers manually in their global settings.", "Use a per-project configuration file (like .cursor/mcp.json or .vscode/mcp.json) that gets committed to the repository.", "MCP servers automatically discover each other over the network.", "You must publish the server to npm first."]}
+  correctAnswerIndex={1}
+  explanation="Per-project configuration files like .cursor/mcp.json or .vscode/mcp.json can be committed to your repository. When team members open the project, the MCP servers are automatically available, no manual configuration needed."
+/>
 
-<Accordion type="single" collapsible className="w-full mt-4">
-    <AccordionItem value="mc0">
-        <AccordionTrigger className="text-lg font-medium text-left">A. Each team member must configure servers manually in their global settings.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc1">
-        <AccordionTrigger className="text-lg font-medium text-left">B. Use a per-project configuration file (like .cursor/mcp.json or .vscode/mcp.json) that gets committed to the repository.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
-            **Correct.** Per-project configuration files like .cursor/mcp.json or .vscode/mcp.json can be committed to your repository. When team members open the project, the MCP servers are automatically available, no manual configuration needed.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc2">
-        <AccordionTrigger className="text-lg font-medium text-left">C. MCP servers automatically discover each other over the network.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc3">
-        <AccordionTrigger className="text-lg font-medium text-left">D. You must publish the server to npm first.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-</Accordion>

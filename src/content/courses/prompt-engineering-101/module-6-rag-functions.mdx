@@ -77,31 +77,10 @@ LLMs are limited by their training data, they don't know about your company's do
     </AccordionItem>
 </Accordion>
 
-**In a RAG pipeline, what is the purpose of embedding a user's question?**
+<KnowledgeCheck
+  question="In a RAG pipeline, what is the purpose of embedding a user's question?"
+  options={["To translate the question into a different language.", "To convert the question into a numerical vector so it can be compared against document vectors for semantic similarity.", "To compress the question so it uses fewer API tokens.", "To check the question for prompt injection attacks."]}
+  correctAnswerIndex={1}
+  explanation="Embedding converts text into a vector (a list of numbers) that captures its semantic meaning. By embedding the user's question and comparing it against document embeddings, you can find the most relevant documents, even if they don't share exact keywords."
+/>
 
-<Accordion type="single" collapsible className="w-full mt-4">
-    <AccordionItem value="mc0">
-        <AccordionTrigger className="text-lg font-medium text-left">A. To translate the question into a different language.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc1">
-        <AccordionTrigger className="text-lg font-medium text-left">B. To convert the question into a numerical vector so it can be compared against document vectors for semantic similarity.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
-            **Correct.** Embedding converts text into a vector (a list of numbers) that captures its semantic meaning. By embedding the user's question and comparing it against document embeddings, you can find the most relevant documents, even if they don't share exact keywords.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc2">
-        <AccordionTrigger className="text-lg font-medium text-left">C. To compress the question so it uses fewer API tokens.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc3">
-        <AccordionTrigger className="text-lg font-medium text-left">D. To check the question for prompt injection attacks.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-</Accordion>

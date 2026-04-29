@@ -143,31 +143,10 @@ Task: Write a 3-bullet summary suitable for a newsletter.`}
     </AccordionItem>
 </Accordion>
 
-**Providing three examples of desired input-output pairs before asking the model a question is called:**
+<KnowledgeCheck
+  question="Providing three examples of desired input-output pairs before asking the model a question is called:"
+  options={["Zero-Shot Prompting", "Role Prompting", "Few-Shot Prompting", "Chain of Thought Prompting"]}
+  correctAnswerIndex={2}
+  explanation="Few-shot prompting provides a few examples to help the model recognize the pattern and format you expect."
+/>
 
-<Accordion type="single" collapsible className="w-full mt-4">
-    <AccordionItem value="mc0">
-        <AccordionTrigger className="text-lg font-medium text-left">A. Zero-Shot Prompting</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc1">
-        <AccordionTrigger className="text-lg font-medium text-left">B. Role Prompting</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc2">
-        <AccordionTrigger className="text-lg font-medium text-left">C. Few-Shot Prompting</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
-            **Correct.** Few-shot prompting provides a few examples to help the model recognize the pattern and format you expect.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc3">
-        <AccordionTrigger className="text-lg font-medium text-left">D. Chain of Thought Prompting</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-</Accordion>

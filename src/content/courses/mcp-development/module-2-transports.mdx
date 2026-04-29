@@ -82,31 +82,10 @@ MCP is transport-agnostic: the same protocol works whether the server runs on yo
     </AccordionItem>
 </Accordion>
 
-**Why should you never write logs or debug output to stdout in an MCP server using stdio transport?**
+<KnowledgeCheck
+  question="Why should you never write logs or debug output to stdout in an MCP server using stdio transport?"
+  options={["stdout is reserved for error messages only.", "stdout is the communication channel for JSON-RPC messages. Any non-JSON output would corrupt the protocol and crash the connection.", "stdout is slower than stderr for logging.", "The MCP specification prohibits all logging."]}
+  correctAnswerIndex={1}
+  explanation="In stdio transport, stdout is the exclusive channel for JSON-RPC messages between client and server. If you write anything else to stdout (like console.log output), the client will try to parse it as JSON-RPC and fail, breaking the entire connection. Always use stderr for logs."
+/>
 
-<Accordion type="single" collapsible className="w-full mt-4">
-    <AccordionItem value="mc0">
-        <AccordionTrigger className="text-lg font-medium text-left">A. stdout is reserved for error messages only.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc1">
-        <AccordionTrigger className="text-lg font-medium text-left">B. stdout is the communication channel for JSON-RPC messages. Any non-JSON output would corrupt the protocol and crash the connection.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
-            **Correct.** In stdio transport, stdout is the exclusive channel for JSON-RPC messages between client and server. If you write anything else to stdout (like console.log output), the client will try to parse it as JSON-RPC and fail, breaking the entire connection. Always use stderr for logs.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc2">
-        <AccordionTrigger className="text-lg font-medium text-left">C. stdout is slower than stderr for logging.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc3">
-        <AccordionTrigger className="text-lg font-medium text-left">D. The MCP specification prohibits all logging.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-</Accordion>

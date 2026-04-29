@@ -22,7 +22,7 @@ Every vibe coder will hit a wall where the AI generates code that doesn't work. 
             <div className="grid md:grid-cols-2 gap-6 my-6">
                 <Card>
                     <CardHeader>
-                        <CardTitle className="text-base font-semibold">❌ Beginner Approach</CardTitle>
+                        <CardTitle className="text-base font-semibold">Bad Example</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p className="text-sm text-muted-foreground italic">"My app is broken. Fix it."</p>
@@ -31,7 +31,7 @@ Every vibe coder will hit a wall where the AI generates code that doesn't work. 
                 </Card>
                 <Card className="border-primary/50">
                     <CardHeader>
-                        <CardTitle className="text-base font-semibold">✅ Professional Approach</CardTitle>
+                        <CardTitle className="text-base font-semibold">Good Example</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <p className="text-sm text-muted-foreground italic">"I'm getting this error: `TypeError: Cannot read properties of undefined (reading 'map')` at line 42 in Dashboard.tsx. The `users` variable is supposed to be an array fetched from Supabase."</p>
@@ -100,31 +100,10 @@ Every vibe coder will hit a wall where the AI generates code that doesn't work. 
     </AccordionItem>
 </Accordion>
 
-**You get an error: `TypeError: Cannot read properties of undefined (reading 'name')`. What is the most likely cause?**
+<KnowledgeCheck
+  question="You get an error: `TypeError: Cannot read properties of undefined (reading 'name')`. What is the most likely cause?"
+  options={["You have a syntax error like a missing semicolon.", "You're trying to access a property on a variable that hasn't been set or loaded yet.", "Your internet connection is down.", "The AI generated code in the wrong programming language."]}
+  correctAnswerIndex={1}
+  explanation="A TypeError about 'undefined' means you're trying to access `.name` on something that doesn't exist yet. This commonly happens when data from an API or database hasn't finished loading. The fix is usually to add a loading check (like `if (!data) return null;`)."
+/>
 
-<Accordion type="single" collapsible className="w-full mt-4">
-    <AccordionItem value="mc0">
-        <AccordionTrigger className="text-lg font-medium text-left">A. You have a syntax error like a missing semicolon.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc1">
-        <AccordionTrigger className="text-lg font-medium text-left">B. You're trying to access a property on a variable that hasn't been set or loaded yet.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-green-500 pl-4">
-            **Correct.** A TypeError about 'undefined' means you're trying to access `.name` on something that doesn't exist yet. This commonly happens when data from an API or database hasn't finished loading. The fix is usually to add a loading check (like `if (!data) return null;`).
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc2">
-        <AccordionTrigger className="text-lg font-medium text-left">C. Your internet connection is down.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="mc3">
-        <AccordionTrigger className="text-lg font-medium text-left">D. The AI generated code in the wrong programming language.</AccordionTrigger>
-        <AccordionContent className="text-base text-muted-foreground border-l-4 border-red-500/50 pl-4">
-            Not quite. Try again.
-        </AccordionContent>
-    </AccordionItem>
-</Accordion>
