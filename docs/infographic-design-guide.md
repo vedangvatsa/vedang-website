@@ -3,7 +3,7 @@
 ## Brand Visual Identity
 
 ### Color Palette
-- **Primary Background**: Clean white (#ffffff) or light warm gray (#f7f6f3)
+- **Primary Background**: Clean white (#ffffff)
 - **Text**: Near-black (#37352f) for headings, muted foreground for body text
 - **Accent Colors**: Primary brand color, plus curated hues per essay (e.g., hsl(210 90% 40%) for blue, hsl(160 80% 35%) for green)
 - **Borders**: Light gray (#e3e3e0) for cards, charts, and separators

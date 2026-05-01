@@ -160,7 +160,7 @@ export function Web3Future() {
 export function L2ScalingDiagram() {
   return (
     <div className="not-prose my-6">
-      <svg viewBox="0 0 800 250" className="w-full h-auto" role="img" aria-label="Layer 2 scaling diagram showing rollups batching transactions to Layer 1">
+      <svg viewBox="0 0 800 250" className="w-full h-auto hidden sm:block" role="img" aria-label="Layer 2 scaling diagram showing rollups batching transactions to Layer 1">
         {/* L1 base */}
         <rect x={100} y={180} width={600} height={50} rx={10} fill="#f59e0b12" stroke="#f59e0b" strokeWidth={2} />
         <text x={400} y={210} textAnchor="middle" fill="#f59e0b" fontSize={16} fontWeight={700}>Layer 1 — Ethereum Mainnet</text>
@@ -186,6 +186,26 @@ export function L2ScalingDiagram() {
           </g>
         ))}
       </svg>
+      {/* Mobile fallback */}
+      <div className="sm:hidden flex flex-col gap-3">
+        <div className="p-3 rounded-xl border bg-amber-500/5 border-amber-500/20">
+          <h4 className="font-semibold text-sm text-amber-600 dark:text-amber-400">Layer 1 — Ethereum Mainnet</h4>
+          <p className="text-xs text-muted-foreground">Slow, expensive, ultra-secure</p>
+        </div>
+        <div className="text-center text-muted-foreground text-xs font-mono">↑ Batch Transactions ↑</div>
+        <div className="grid grid-cols-3 gap-2">
+          {[
+            { label: 'Arbitrum', color: '#3b82f6' },
+            { label: 'Optimism', color: '#ef4444' },
+            { label: 'Base', color: '#3b82f6' },
+          ].map((l2) => (
+            <div key={l2.label} className="p-2 rounded-lg border bg-card text-center flex flex-col items-center gap-1">
+              <div className="w-2 h-2 rounded-full" style={{ backgroundColor: l2.color }} />
+              <h4 className="font-semibold text-[10px]" style={{ color: l2.color }}>{l2.label}</h4>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

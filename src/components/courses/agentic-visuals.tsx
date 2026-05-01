@@ -126,7 +126,7 @@ export function AgenticFuture() {
 export function ProtocolDiagram() {
   return (
     <div className="not-prose my-6">
-      <svg viewBox="0 0 800 220" className="w-full h-auto" role="img" aria-label="MCP connects agents to tools; A2A connects agents to agents">
+      <svg viewBox="0 0 800 220" className="w-full h-auto hidden sm:block" role="img" aria-label="MCP connects agents to tools; A2A connects agents to agents">
         {/* Agent */}
         <rect x={310} y={10} width={180} height={60} rx={12} fill="#8b5cf615" stroke="#8b5cf6" strokeWidth={2} />
         <text x={400} y={45} textAnchor="middle" fill="#8b5cf6" fontSize={15} fontWeight={700}>Your Agent</text>
@@ -159,6 +159,30 @@ export function ProtocolDiagram() {
           </g>
         ))}
       </svg>
+      {/* Mobile fallback */}
+      <div className="sm:hidden flex flex-col gap-4">
+        <div className="p-3 rounded-xl border bg-card flex flex-col items-center">
+          <h4 className="font-semibold text-sm text-purple-600 dark:text-purple-400">Your Agent</h4>
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          <div className="p-3 rounded-xl border bg-blue-500/5 border-blue-500/20">
+            <h4 className="font-semibold text-[11px] text-blue-600 dark:text-blue-400 mb-2 text-center">MCP (Tool Protocol)</h4>
+            <div className="space-y-1">
+              {['Search API', 'Database', 'File System'].map(t => (
+                <div key={t} className="text-[10px] text-muted-foreground text-center">{t}</div>
+              ))}
+            </div>
+          </div>
+          <div className="p-3 rounded-xl border bg-emerald-500/5 border-emerald-500/20">
+            <h4 className="font-semibold text-[11px] text-emerald-600 dark:text-emerald-400 mb-2 text-center">A2A (Agent Protocol)</h4>
+            <div className="space-y-1">
+              {['Booking Agent', 'Finance Agent', 'Support Agent'].map(t => (
+                <div key={t} className="text-[10px] text-muted-foreground text-center">{t}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -114,7 +114,7 @@ export function BestPractices() {
 export function RAGPipeline() {
   return (
     <div className="not-prose my-6">
-      <svg viewBox="0 0 800 160" className="w-full h-auto" role="img" aria-label="RAG Pipeline: Query → Embed → Retrieve → Augment → Generate">
+      <svg viewBox="0 0 800 160" className="w-full h-auto hidden sm:block" role="img" aria-label="RAG Pipeline: Query → Embed → Retrieve → Augment → Generate">
         {[
           { x: 10, label: 'User Query', color: '#3b82f6' },
           { x: 170, label: 'Embed', color: '#8b5cf6' },
@@ -140,6 +140,21 @@ export function RAGPipeline() {
           </marker>
         </defs>
       </svg>
+      {/* Mobile fallback */}
+      <div className="sm:hidden flex flex-col gap-2">
+        {[
+          { label: '1. User Query', color: '#3b82f6' },
+          { label: '2. Embed', color: '#8b5cf6' },
+          { label: '3. Retrieve', color: '#10b981' },
+          { label: '4. Augment', color: '#f59e0b' },
+          { label: '5. Generate', color: '#ef4444' },
+        ].map((item) => (
+          <div key={item.label} className="flex items-center gap-3 p-3 rounded-xl border bg-card">
+            <div className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: item.color }} />
+            <h4 className="font-semibold text-sm" style={{ color: item.color }}>{item.label}</h4>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -148,7 +163,7 @@ export function RAGPipeline() {
 export function PromptChaining() {
   return (
     <div className="not-prose my-6">
-      <svg viewBox="0 0 800 180" className="w-full h-auto" role="img" aria-label="Prompt Chain: Step 1 feeds into Step 2 feeds into Step 3, with a gate between each">
+      <svg viewBox="0 0 800 180" className="w-full h-auto hidden sm:block" role="img" aria-label="Prompt Chain: Step 1 feeds into Step 2 feeds into Step 3, with a gate between each">
         {[
           { x: 10, label: 'Step 1', desc: 'Research', color: '#3b82f6' },
           { x: 200, label: 'Gate', desc: 'Validate', color: '#f59e0b' },
@@ -178,6 +193,24 @@ export function PromptChaining() {
           </marker>
         </defs>
       </svg>
+      {/* Mobile fallback */}
+      <div className="sm:hidden flex flex-col gap-2">
+        {[
+          { label: 'Step 1', desc: 'Research', color: '#3b82f6' },
+          { label: 'Gate', desc: 'Validate', color: '#f59e0b' },
+          { label: 'Step 2', desc: 'Draft', color: '#8b5cf6' },
+          { label: 'Gate', desc: 'Review', color: '#f59e0b' },
+          { label: 'Step 3', desc: 'Polish', color: '#10b981' },
+        ].map((item, i) => (
+          <div key={`${item.label}-${i}`} className={`flex items-center gap-3 p-3 rounded-xl border ${item.label === 'Gate' ? 'border-dashed bg-transparent' : 'bg-card'}`}>
+            <div className={`w-3 h-3 rounded-full shrink-0 ${item.label === 'Gate' ? 'border-2' : ''}`} style={{ backgroundColor: item.label === 'Gate' ? 'transparent' : item.color, borderColor: item.color }} />
+            <div>
+              <h4 className="font-semibold text-sm" style={{ color: item.color }}>{item.label}</h4>
+              <p className="text-xs text-muted-foreground">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
