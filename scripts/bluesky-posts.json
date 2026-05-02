@@ -650,8 +650,10 @@
     "id": "universal-text-ui-106apps",
     "scheduleDate": "2026-04-14",
     "scheduleTime": "09:00",
-    "posted": false,
-    "text": "106 SaaS apps per company. 1,200 daily tab switches. 39% deep focus time.\n\n93% of leaders want to ask data questions in plain English. That's a structural bottleneck.\n\nveda.ng/universal-text-ui"
+    "posted": true,
+    "text": "106 SaaS apps per company. 1,200 daily tab switches. 39% deep focus time.\n\n93% of leaders want to ask data questions in plain English. That's a structural bottleneck.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-05-02T05:54:48.236Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mktxewtw5h2o"
   },
   {
     "id": "stepwise-ai-marketing",
