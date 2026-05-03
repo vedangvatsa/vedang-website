@@ -686,8 +686,10 @@
     "id": "universal-text-ui-paradigms",
     "scheduleDate": "2026-04-17",
     "scheduleTime": "09:00",
-    "posted": false,
-    "text": "CLI → GUI → NLI. Each cut adaptation cost 10x. The GUI replaced the command line. Natural language will replace dashboards.\n\nveda.ng/universal-text-ui"
+    "posted": true,
+    "text": "CLI → GUI → NLI. Each cut adaptation cost 10x. The GUI replaced the command line. Natural language will replace dashboards.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-05-03T20:09:12.907Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkxxlo453a2n"
   },
   {
     "id": "stepwise-ai-gartner",
