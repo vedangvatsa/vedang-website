@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3e"/>
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="green-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="500" fill="url(#bg-grad)"/>
+  
+  <!-- Title -->
+  <text x="600" y="55" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">The AI Implementation Stack</text>
+  <text x="600" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">9 layers from brand foundation to autonomous operations</text>
+  
+  <!-- Layer boxes - bottom to top like a stack -->
+  <!-- Layer 1 - Brand -->
+  <rect x="100" y="410" width="1000" height="38" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="100" y="410" width="4" height="38" rx="2" fill="#f59e0b"/>
+  <text x="120" y="434" font-family="system-ui" font-size="13" font-weight="600" fill="#f59e0b">01</text>
+  <text x="155" y="434" font-family="system-ui" font-size="13" font-weight="500" fill="#e2e8f0">Brand Guidelines System</text>
+  <text x="900" y="434" font-family="system-ui" font-size="11" fill="#64748b" text-anchor="end">brand-guidelines.md  ·  .gemini/style.md  ·  CLAUDE.md</text>
+  
+  <!-- Layer 2 - Agent Window -->
+  <rect x="100" y="366" width="1000" height="38" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="100" y="366" width="4" height="38" rx="2" fill="#f97316"/>
+  <text x="120" y="390" font-family="system-ui" font-size="13" font-weight="600" fill="#f97316">02</text>
+  <text x="155" y="390" font-family="system-ui" font-size="13" font-weight="500" fill="#e2e8f0">Single Agent Window</text>
+  <text x="900" y="390" font-family="system-ui" font-size="11" fill="#64748b" text-anchor="end">Antigravity  ·  Claude Code  ·  MCP Protocol</text>
+  
+  <!-- Layer 3 - SEO -->
+  <rect x="100" y="322" width="1000" height="38" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="100" y="322" width="4" height="38" rx="2" fill="#ef4444"/>
+  <text x="120" y="346" font-family="system-ui" font-size="13" font-weight="600" fill="#ef4444">03</text>
+  <text x="155" y="346" font-family="system-ui" font-size="13" font-weight="500" fill="#e2e8f0">SEO + AEO + GEO</text>
+  <text x="900" y="346" font-family="system-ui" font-size="11" fill="#64748b" text-anchor="end">ai-discovery-standards  ·  llms.txt  ·  robots.txt  ·  JSON-LD</text>
+  
+  <!-- Layer 4 - Content -->
+  <rect x="100" y="278" width="1000" height="38" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="100" y="278" width="4" height="38" rx="2" fill="#ec4899"/>
+  <text x="120" y="302" font-family="system-ui" font-size="13" font-weight="600" fill="#ec4899">04</text>
+  <text x="155" y="302" font-family="system-ui" font-size="13" font-weight="500" fill="#e2e8f0">Content and Report Generation</text>
+  <text x="900" y="302" font-family="system-ui" font-size="11" fill="#64748b" text-anchor="end">consulting-report-framework  ·  research-paper-framework  ·  Typst</text>
+  
+  <!-- Layer 5 - Outreach -->
+  <rect x="100" y="234" width="1000" height="38" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="100" y="234" width="4" height="38" rx="2" fill="#a855f7"/>
+  <text x="120" y="258" font-family="system-ui" font-size="13" font-weight="600" fill="#a855f7">05</text>
+  <text x="155" y="258" font-family="system-ui" font-size="13" font-weight="500" fill="#e2e8f0">Automated B2B Outreach</text>
+  <text x="900" y="258" font-family="system-ui" font-size="11" fill="#64748b" text-anchor="end">b2b-outreach  ·  Claude API  ·  Gmail  ·  Google Sheets CRM</text>
+  
+  <!-- Layer 6 - Email -->
+  <rect x="100" y="190" width="1000" height="38" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="100" y="190" width="4" height="38" rx="2" fill="#6366f1"/>
+  <text x="120" y="214" font-family="system-ui" font-size="13" font-weight="600" fill="#6366f1">06</text>
+  <text x="155" y="214" font-family="system-ui" font-size="13" font-weight="500" fill="#e2e8f0">Email Capture and Nurture Cycles</text>
+  <text x="900" y="214" font-family="system-ui" font-size="11" fill="#64748b" text-anchor="end">Resend  ·  AWS SES  ·  SPF/DKIM/DMARC  ·  Drip sequences</text>
+  
+  <!-- Layer 7 - Social -->
+  <rect x="100" y="146" width="1000" height="38" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="100" y="146" width="4" height="38" rx="2" fill="#3b82f6"/>
+  <text x="120" y="170" font-family="system-ui" font-size="13" font-weight="600" fill="#3b82f6">07</text>
+  <text x="155" y="170" font-family="system-ui" font-size="13" font-weight="500" fill="#e2e8f0">Social Media Automation</text>
+  <text x="900" y="170" font-family="system-ui" font-size="11" fill="#64748b" text-anchor="end">Twitter API  ·  LinkedIn API  ·  Telegram Bot  ·  Cron scheduling</text>
+  
+  <!-- Layer 8 - Dashboard -->
+  <rect x="100" y="102" width="1000" height="38" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="100" y="102" width="4" height="38" rx="2" fill="#14b8a6"/>
+  <text x="120" y="126" font-family="system-ui" font-size="13" font-weight="600" fill="#14b8a6">08</text>
+  <text x="155" y="126" font-family="system-ui" font-size="13" font-weight="500" fill="#e2e8f0">Management Dashboard</text>
+  <text x="900" y="126" font-family="system-ui" font-size="11" fill="#64748b" text-anchor="end">Google Sheets  ·  Streamlit  ·  Universal Text UI</text>
+  
+  <!-- Layer 9 - AI Discovery -->
+  <rect x="100" y="102" width="1000" height="38" rx="6" fill="none" stroke="url(#accent-grad)" stroke-width="2"/>
+  <rect x="100" y="102" width="1000" height="38" rx="6" fill="#1e293b" stroke="url(#green-grad)" stroke-width="2" y="58"/>
+  <rect x="100" y="58" width="4" height="38" rx="2" fill="#10b981"/>
+  <text x="120" y="82" font-family="system-ui" font-size="13" font-weight="600" fill="#10b981">09</text>
+  <text x="155" y="82" font-family="system-ui" font-size="13" font-weight="500" fill="#e2e8f0">AI Discovery and Agent-Readiness</text>
+  <text x="900" y="82" font-family="system-ui" font-size="11" fill="#64748b" text-anchor="end">agents.json  ·  ai-plugin.json  ·  ai.json  ·  brand.txt</text>
+  
+  <!-- Right side arrow -->
+  <line x1="1130" y1="430" x2="1130" y2="70" stroke="#334155" stroke-width="2" stroke-dasharray="4,4"/>
+  <polygon points="1125,70 1130,55 1135,70" fill="#334155"/>
+  <text x="1145" y="250" font-family="system-ui" font-size="11" fill="#64748b" transform="rotate(90, 1145, 250)" text-anchor="middle">AUTOMATION MATURITY</text>
+</svg>
