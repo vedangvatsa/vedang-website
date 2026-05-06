@@ -18,9 +18,8 @@ export default function WritingsPage() {
     <PageLayout>
       <BreadcrumbSchema items={[{ name: "Writings", url: "https://veda.ng/writings" }]} />
 
-      <div className="container mx-auto px-4 md:px-6 pt-12 pb-8">
-        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-center">Writings</h1>
-      </div>
+
+
 
       <RecentPapers />
 

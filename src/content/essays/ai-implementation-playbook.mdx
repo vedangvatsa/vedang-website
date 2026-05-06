@@ -76,7 +76,55 @@ The practical effect is that a task like "check if the job sync ran successfully
 
 The deeper shift is philosophical. When you can speak to your entire infrastructure in plain language, the bottleneck moves from "how do I do this technically" to "what should I do strategically." The agent handles execution. You handle direction.
 
-## Step 3. AI-Powered SEO, AEO, and GEO
+## Step 3. The Agent Tooling Landscape
+
+The open-source ecosystem for AI agents has exploded. Before building any pipeline in this playbook, you should know what tools exist. Here is the current landscape, organized by category.
+
+**Agent browsers.** These let AI agents control a web browser autonomously. Instead of writing brittle Selenium scripts, you give the agent a goal and it navigates, clicks, fills forms, and extracts data on its own.
+
+- [Browser Use](https://github.com/browser-use/browser-use) (78k+ GitHub stars). The leading open-source framework. Fully autonomous. You describe a task in plain English and the agent handles everything, including multi-tab navigation, form filling, and screenshot-based reasoning.
+- [Stagehand](https://github.com/browserbase/stagehand) (21k+ stars). A hybrid approach built on Playwright. Three primitives: `act()` to perform actions, `extract()` for structured data, and `observe()` to analyze page state. Preferred for production automations where you want deterministic code for stable parts and AI for dynamic elements.
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp) (29k+ stars). Exposes browser control via Model Context Protocol. Any MCP-compatible agent (Antigravity, Claude Code, Cursor) can control a browser through it. Uses the accessibility tree instead of screenshots, making it extremely fast.
+
+**Agent email.** Tools that give AI agents their own email identity, or let them manage yours.
+
+- [Inbox Zero](https://github.com/elie222/inbox-zero). Open-source AI email assistant. Automated categorization, bulk unsubscribe, smart archiving, and draft generation. Human-in-the-loop by default.
+- [AgenticMail](https://github.com/topics/agentic-mail). Self-hosted system that gives AI agents their own persistent email address. Agents can send, receive, search, and organize emails autonomously. Useful for multi-agent coordination where bots need to communicate with external services via email.
+
+**Agent orchestration frameworks.** When you need multiple agents working together on complex tasks.
+
+- [LangGraph](https://github.com/langchain-ai/langgraph). The production standard for stateful, multi-agent workflows. Models agents as directed graphs with explicit state management, checkpointing, and human-in-the-loop support. Use this when you need reliability and auditability.
+- [CrewAI](https://github.com/crewAIInc/crewAI). Models agents as team members with roles, backstories, and goals. The fastest path from zero to working multi-agent prototype. Ideal when work decomposes cleanly into roles (researcher, writer, reviewer).
+- [AutoGen](https://github.com/microsoft/autogen). Microsoft's framework for conversational multi-agent systems. Agents collaborate through structured dialogue. Best for research experiments and collaborative problem-solving.
+- [smolagents](https://github.com/huggingface/smolagents). HuggingFace's minimalist framework. Agents write and execute Python code directly as their action method. Lightweight, low-abstraction, and fast to build with.
+
+**AI video generation.** Open-source tools for creating video content from text or images.
+
+- [Wan2.1](https://github.com/Wan-Video/Wan2.1). Open-source video generation model from Alibaba. Text-to-video and image-to-video generation. Runs locally or on cloud GPUs.
+- [CogVideo](https://github.com/THUDM/CogVideo). Tsinghua University's video generation model. Supports text-to-video with multiple resolution options.
+- [Open-Sora](https://github.com/hpcaitech/Open-Sora). Community effort to replicate Sora-quality video generation in open source. Active development with regular model releases.
+- [Manim](https://github.com/3b1b/manim). Not AI-generated video, but programmatic animation. The engine behind 3Blue1Brown's math videos. Ideal for generating explainer content, data visualizations, and technical diagrams as video.
+
+**Voice and audio agents.**
+
+- [Kokoro](https://github.com/hexgrad/kokoro). High-quality open-source text-to-speech. Fast inference, multiple voices, natural-sounding output. Useful for generating podcast-style content, video voiceovers, or phone-based customer interactions.
+- [F5-TTS](https://github.com/SWivid/F5-TTS). Zero-shot voice cloning. Record a few seconds of any voice and generate new speech in that voice. Useful for consistent branded audio content.
+- [Whisper](https://github.com/openai/whisper). OpenAI's speech-to-text model. The standard for transcription. Powers meeting transcription, voice note processing, and audio content indexing.
+
+**Data extraction and scraping.**
+
+- [Firecrawl](https://github.com/mendableai/firecrawl). Turns any website into clean, LLM-ready Markdown. Handles JavaScript rendering, pagination, and complex layouts. The standard tool for feeding web content into AI pipelines.
+- [Crawl4AI](https://github.com/unclecode/crawl4ai). Open-source web crawler optimized for AI data extraction. Supports structured extraction with CSS selectors and LLM-based parsing.
+- [Docling](https://github.com/DS4SD/docling). IBM's document parser. Converts PDFs, Word docs, and presentations into structured data that AI agents can process. Handles tables, images, and complex layouts.
+
+**Workflow automation.**
+
+- [n8n](https://github.com/n8n-io/n8n). Open-source, self-hosted workflow automation. The open alternative to Zapier. AI-native, meaning you can plug LLMs into any workflow node. Connect 400+ services without writing code.
+- [Activepieces](https://github.com/activepieces/activepieces). Another open-source Zapier alternative with a focus on simplicity and a growing library of integrations.
+
+The point of listing all of these is not to suggest you use every one. It is to show that the building blocks for full automation now exist as open-source projects. Two years ago, most of these capabilities required expensive proprietary tools or custom engineering. Today, a single developer with the right framework knowledge can assemble an automation stack that would have required a team of ten.
+
+## Step 4. AI-Powered SEO, AEO, and GEO
 
 Traditional SEO is about ranking on Google. That still matters. But in 2026, two new categories have emerged that most companies are ignoring.
 
@@ -106,7 +154,7 @@ This generates `robots.txt`, `llms.txt`, `llms-full.txt`, `ai.txt`, `ai.json`, `
 Most companies are still optimizing exclusively for Google's traditional search results. Meanwhile, Perplexity's traffic grew 858% in 2025. ChatGPT Search is being used by over 400 million people. If your content is not structured for AI citation, you are invisible to a growing share of how people find information.
 </Callout>
 
-## Step 4. Automated Content and Report Generation
+## Step 5. Automated Content and Report Generation
 
 Content is the engine of inbound marketing. But writing four blog posts per week is a full-time job. AI agents can handle the production pipeline while you focus on ideas and strategy.
 
@@ -135,7 +183,7 @@ Publishing one serious report per quarter generates more authority than fifty su
 
 For companies that operate at the intersection of technology and academia, the [Research Paper Framework](https://github.com/vedangvatsa/research-paper-framework) provides a similar pipeline for academic-style publications. Same principle. AI does the heavy lifting on drafting and data gathering. Humans provide the thesis, verify accuracy, and add domain insight.
 
-## Step 5. Automated B2B Outreach
+## Step 6. Automated B2B Outreach
 
 Cold outreach is the most time-intensive part of B2B sales. Most teams spend hours manually researching prospects, writing emails, managing follow-up sequences, and tracking responses. Every step of this pipeline can be automated.
 
@@ -158,7 +206,7 @@ For sending at scale, connect [AWS SES](https://aws.amazon.com/ses/) or [Resend]
 
 The difference between landing in the inbox and landing in spam is entirely in the infrastructure. Proper domain authentication, warm-up, and reputation management matter more than the content of the email.
 
-## Step 6. Email Capture and Automated Nurture Cycles
+## Step 7. Email Capture and Automated Nurture Cycles
 
 Outbound outreach finds prospects. Email capture converts website visitors into leads. Both feed into the same nurture system.
 
@@ -172,7 +220,7 @@ Outbound outreach finds prospects. Email capture converts website visitors into 
 
 All of this runs through Resend or AWS SES, triggered by your automation pipeline. No manual sending. No remembering who needs a follow-up. The system handles timing, personalization, and delivery.
 
-## Step 7. Social Media Automation and Social Listening
+## Step 8. Social Media Automation and Social Listening
 
 Posting consistently across LinkedIn, Twitter/X, Instagram, and Telegram is a full-time job if done manually. Agents reduce it to a review-and-approve workflow.
 
@@ -193,7 +241,7 @@ This is where most companies stop. They post content and never look at what come
 
 The output of all social listening feeds into a single dashboard or Slack channel, categorized by type and priority. You check it once a day. The agent monitors 24/7.
 
-## Step 8. Competitive Intelligence System
+## Step 9. Competitive Intelligence System
 
 Most startups check their competitors manually once a month, if at all. AI agents can run continuous competitive monitoring at near-zero cost.
 
@@ -212,7 +260,7 @@ Build this as a set of scheduled scripts that run daily or weekly. Each script t
 
 The companies that operate with competitive intelligence win not because they have better products, but because they make faster decisions. When your competitor changes their pricing, you know within 24 hours. When they launch a feature, you have a summary the same day. When they start hiring for a new category, you see the signal before the product ships.
 
-## Step 9. Internal Knowledge Base and Institutional Memory
+## Step 10. Internal Knowledge Base and Institutional Memory
 
 Every company loses knowledge. People leave. Slack messages get buried. Google Docs pile up and nobody can find anything. Meeting notes go unread. The same questions get answered over and over.
 
@@ -237,7 +285,7 @@ This eliminates three problems simultaneously. New employees onboard faster beca
 
 Every meeting should be recorded and transcribed automatically. An agent processes the transcript and extracts action items, decisions made, open questions, and follow-ups. These get posted to the relevant Slack channel or project management tool. No more "what did we decide in that meeting last week?" Nobody needs to take manual notes.
 
-## Step 10. Customer Support Automation
+## Step 11. Customer Support Automation
 
 Customer support is one of the highest-leverage areas for AI because the patterns are deeply repetitive. Most support teams answer the same twenty questions repeatedly, just phrased differently each time.
 
@@ -253,7 +301,7 @@ Connect your support inbox (Intercom, Zendesk, email) to an AI triage system. Th
 
 Track deflection rate (percentage of tickets resolved without human involvement) and response quality scores. A well-implemented system should handle 40-60% of tickets automatically within three months.
 
-## Step 11. Automated Proposal and Contract Generation
+## Step 12. Automated Proposal and Contract Generation
 
 Every B2B company writes proposals. Most teams spend hours building each one from scratch, copying sections from previous proposals, updating pricing tables, and customizing case studies.
 
@@ -267,7 +315,7 @@ What used to take four hours takes fifteen minutes. And the output is more consi
 
 The same pipeline works for contracts. Standard terms, NDA templates, and service agreements can be generated from structured inputs and reviewed by legal. The agent handles the assembly. Humans handle the judgment calls.
 
-## Step 12. Management Dashboard
+## Step 13. Management Dashboard
 
 Every pipeline described above generates data. Jobs synced. Emails sent. Reports published. Social posts scheduled. Leads captured. Responses received. Support tickets resolved. Competitor changes detected.
 
@@ -289,7 +337,7 @@ Without a dashboard, this data lives in scattered Google Sheets, terminal logs, 
 - **Streamlit app.** For something more visual, a Python Streamlit dashboard can pull from your database and render real-time charts. The B2B outreach framework includes one.
 - **Agent-queryable data.** The most powerful pattern is making all metrics queryable by your coding agent. Instead of opening a dashboard, you ask "how many impressions did we get last week compared to the week before?" and the agent queries Search Console, runs the comparison, and answers in natural language. This is the [Universal Text UI](https://veda.ng/universal-text-ui) pattern.
 
-## Step 13. AI Discovery and Agent-Readiness
+## Step 14. AI Discovery and Agent-Readiness
 
 This is the step that positions your company for the next wave. Not just search engine traffic. Not just AI citation. Full discoverability by autonomous agents.
 
