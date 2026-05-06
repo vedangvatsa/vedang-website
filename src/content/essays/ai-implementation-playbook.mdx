@@ -356,6 +356,83 @@ Run `npx github:vedangvatsa/ai-discovery-standards` in any project to generate a
 
 The companies that implement these files now will be the ones that autonomous purchasing agents find first. When an AI agent is tasked with "find the best project management tool for a remote team of 50 people," the products with complete discovery files, structured data, and machine-readable pricing will appear in the results. The ones without them will be invisible.
 
+## More Use Cases You Can Implement Today
+
+The 14 steps above cover the core operational infrastructure. But AI agents can automate far more than marketing and sales. Here is a catalog of additional use cases, organized by function, that any startup can deploy.
+
+**Hiring and recruitment**
+
+- **Resume screening.** Feed job descriptions to an agent. It reads incoming resumes, scores each candidate against your requirements, and ranks them. No more spending two hours per role manually scanning applications. The agent flags the top 10% and provides a one-paragraph summary of why each candidate fits.
+- **Candidate sourcing.** An agent browses LinkedIn, GitHub, and niche job boards using [Browser Use](https://github.com/browser-use/browser-use) to find candidates matching your ICP. It pulls public profile data, recent activity, and open-source contributions into a spreadsheet for your recruiter.
+- **Interview scheduling.** Once a candidate is shortlisted, an agent emails them with available time slots (pulled from your calendar API), handles back-and-forth scheduling, sends calendar invites, and posts reminders to Slack.
+- **Rejection and offer emails.** Templated but personalized. The agent drafts rejection emails that reference specific parts of the candidate's application (not generic "after careful consideration" boilerplate). Offer letters get assembled from compensation data and company templates.
+
+**Financial operations**
+
+- **Invoice processing.** Agents read incoming invoices (PDF, email, or scanned), extract line items, match them to purchase orders, flag discrepancies, and prepare them for approval. [Docling](https://github.com/DS4SD/docling) handles the document parsing.
+- **Expense categorization.** Connect your company card feed. An agent categorizes every transaction, flags unusual spending, and generates monthly expense reports by department. No more manual receipt matching.
+- **Investor update generation.** Feed the agent your monthly metrics (MRR, burn rate, runway, key hires, product milestones). It drafts a structured investor update following your template, pulls in relevant charts, and prepares it for your review before sending.
+- **Revenue forecasting.** Based on pipeline data, historical conversion rates, and seasonal patterns, an agent generates weekly revenue forecasts with confidence intervals. It flags when actual performance deviates significantly from projections.
+
+**Legal and compliance**
+
+- **Contract review.** Before signing any vendor contract, an agent reads the full document, flags non-standard terms, identifies unfavorable clauses (auto-renewal, liability caps, IP assignment), and generates a summary with recommended changes. This does not replace legal counsel but it cuts review time from hours to minutes.
+- **Compliance monitoring.** For regulated industries, agents monitor changes to relevant regulations (SEC filings, GDPR updates, industry-specific rules) and flag items that may require action. Weekly digest to your legal team.
+- **Privacy policy and terms updates.** When your product changes, an agent reviews your privacy policy and terms of service against the new feature set and flags sections that need updating.
+
+**Product and engineering**
+
+- **Automated code review.** Beyond what GitHub Copilot does in-editor, agents can review entire pull requests for security vulnerabilities, performance issues, consistency with your codebase patterns, and test coverage gaps. They post review comments directly on the PR.
+- **Test generation.** Point an agent at a function or module and it generates unit tests, edge cases, and integration tests. It reads your existing test patterns and follows the same conventions.
+- **Bug triage.** Incoming bug reports get classified by severity, affected component, and likely root cause. The agent searches your codebase for related code and recent changes, then posts a preliminary analysis for the engineer assigned to the fix.
+- **Documentation generation.** Every time your API changes, an agent diffs the codebase, identifies new or modified endpoints, and updates your API documentation automatically. Same for user guides and changelogs.
+- **Dependency monitoring.** An agent tracks all your dependencies for security vulnerabilities, new major versions, and deprecation notices. Weekly report with recommended actions.
+
+**Localization and translation**
+
+- **Multi-language content.** Every blog post, landing page, and product string gets translated into your target languages automatically. The agent uses your `brand-guidelines.md` to maintain voice consistency across languages. Human reviewers (native speakers) verify the output before publishing.
+- **Market-specific adaptation.** Beyond translation, agents adapt content for cultural context. Pricing examples in local currency. Case studies featuring companies from the target region. Date and number formatting.
+
+**Ad campaign management**
+
+- **Copy generation and A/B testing.** An agent generates dozens of ad copy variants for Google Ads, Facebook, and LinkedIn. Each variant follows your brand voice. You approve and launch. The agent monitors performance and pauses underperforming variants automatically.
+- **Budget optimization.** Based on conversion data, an agent recommends daily budget shifts between campaigns and channels. It identifies which keywords and audiences are converting at the lowest cost per acquisition.
+- **Landing page personalization.** Different traffic sources see different landing pages. An agent generates variants tailored to specific ad campaigns, industries, or buyer personas.
+
+**Podcast and video production**
+
+- **Show notes and transcripts.** After recording, [Whisper](https://github.com/openai/whisper) transcribes the episode. An agent generates structured show notes with timestamps, key quotes, guest bio, and links mentioned. Published automatically to your podcast page.
+- **Clip generation.** An agent reads the transcript, identifies the five most compelling segments (based on information density, emotional resonance, or controversy), and marks timestamps for short-form video clips. A video editing agent (or [Manim](https://github.com/3b1b/manim) for animated content) can assemble the clips with captions.
+- **Distribution.** Episode published to Spotify via RSS. Clips posted to Twitter, LinkedIn, YouTube Shorts, and TikTok. Each platform gets a format-specific caption. All scheduled and dispatched by agents.
+
+**Customer success and churn prevention**
+
+- **Usage monitoring.** Agents track product usage patterns per account. When a customer's usage drops below a threshold (login frequency, feature adoption, API calls), the account gets flagged as at-risk.
+- **Proactive outreach.** At-risk accounts automatically trigger a personalized email from the success team (drafted by an agent) offering help, a training session, or a feature walkthrough. The goal is intervention before the cancellation.
+- **NPS and feedback analysis.** Survey responses get analyzed in aggregate. An agent identifies recurring themes, sentiment trends, and specific feature requests. Monthly summary to the product team with quantified signal strength for each request.
+
+**Reputation and review management**
+
+- **Review monitoring.** Track reviews across G2, Capterra, Trustpilot, Google Business, Product Hunt, and app stores. Agents classify each review by sentiment and topic, then alert you to negative reviews requiring a response.
+- **Response drafting.** For each negative review, an agent drafts a professional, empathetic response that acknowledges the issue and offers a path forward. Human approves before posting. For positive reviews, the agent drafts a thank-you response.
+- **Review solicitation.** After a positive customer interaction (support ticket resolved, successful onboarding, renewal), an automated sequence asks the customer to leave a review on the platform most relevant to your business.
+
+**Customer onboarding automation**
+
+- **Personalized onboarding sequences.** Based on the customer's plan, industry, and stated use case, an agent generates a customized onboarding email sequence with relevant tutorials, templates, and best practices. Not the same generic onboarding for every customer.
+- **Setup assistance.** An agent monitors whether new customers have completed key setup steps (profile completed, first project created, team members invited). It sends targeted nudges for incomplete steps.
+- **Training content delivery.** Based on what features the customer has and has not used, the agent serves targeted training content, whether that is a video walkthrough, documentation link, or an offer to join a live session.
+
+**Event and webinar automation**
+
+- **Promotion.** When you schedule a webinar, an agent generates promotional content for email, social media, and your website. It creates a registration page, sets up reminder emails, and manages the attendee list.
+- **Follow-up.** After the event, attendees receive a recording link, slide deck, and relevant resources. Non-attendees who registered get a "sorry we missed you" email with the recording. All automated, all personalized with the attendee's name and company.
+- **Lead scoring.** Webinar engagement data (attended, asked questions, watched replay, clicked links) feeds into your lead scoring system. High-engagement attendees get routed to sales for direct outreach.
+
+<Callout type="insight" title="The Pattern">
+Every use case above follows the same pattern. Identify a repetitive workflow. Define the inputs and outputs. Build an agent pipeline that handles 80% of it automatically. Route the remaining 20% (judgment calls, exceptions, sensitive decisions) to humans with full context. The agent does the work. The human does the thinking.
+</Callout>
+
 ## The Complete Implementation Timeline
 
 <ImplementationTimeline />
