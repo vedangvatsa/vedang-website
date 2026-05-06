@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a3e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="420" fill="url(#bg1)"/>
+  <text x="600" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">The Discovery Trifecta: SEO + AEO + GEO</text>
+  <text x="600" y="70" font-family="system-ui" font-size="12" fill="#94a3b8" text-anchor="middle">Three layers of discoverability every company needs in 2026</text>
+
+  <!-- SEO Column -->
+  <rect x="50" y="95" width="340" height="290" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="50" y="95" width="340" height="50" rx="12" fill="#3b82f620"/>
+  <text x="220" y="115" font-family="system-ui" font-size="11" font-weight="600" fill="#3b82f6" text-anchor="middle">TRADITIONAL</text>
+  <text x="220" y="135" font-family="system-ui" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">SEO</text>
+  <text x="75" y="170" font-family="system-ui" font-size="11" fill="#94a3b8">Target</text>
+  <text x="75" y="188" font-family="system-ui" font-size="13" font-weight="500" fill="#e2e8f0">Google Search Results</text>
+  <text x="75" y="215" font-family="system-ui" font-size="11" fill="#94a3b8">Key Files</text>
+  <text x="75" y="233" font-family="system-ui" font-size="12" font-weight="500" fill="#e2e8f0">robots.txt, sitemap.xml, meta tags</text>
+  <text x="75" y="260" font-family="system-ui" font-size="11" fill="#94a3b8">Tactics</text>
+  <text x="75" y="278" font-family="system-ui" font-size="12" fill="#cbd5e1">Keyword optimization</text>
+  <text x="75" y="296" font-family="system-ui" font-size="12" fill="#cbd5e1">Backlink building</text>
+  <text x="75" y="314" font-family="system-ui" font-size="12" fill="#cbd5e1">Technical performance</text>
+  <text x="75" y="332" font-family="system-ui" font-size="12" fill="#cbd5e1">Structured data (JSON-LD)</text>
+  <text x="75" y="360" font-family="system-ui" font-size="11" fill="#94a3b8">Maturity</text>
+  <text x="75" y="375" font-family="system-ui" font-size="12" font-weight="600" fill="#3b82f6">Established (20+ years)</text>
+
+  <!-- AEO Column -->
+  <rect x="430" y="95" width="340" height="290" rx="12" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+  <rect x="430" y="95" width="340" height="50" rx="12" fill="#a855f720"/>
+  <text x="600" y="115" font-family="system-ui" font-size="11" font-weight="600" fill="#a855f7" text-anchor="middle">EMERGING</text>
+  <text x="600" y="135" font-family="system-ui" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">AEO</text>
+  <text x="455" y="170" font-family="system-ui" font-size="11" fill="#94a3b8">Target</text>
+  <text x="455" y="188" font-family="system-ui" font-size="13" font-weight="500" fill="#e2e8f0">AI Answer Engines</text>
+  <text x="455" y="215" font-family="system-ui" font-size="11" fill="#94a3b8">Platforms</text>
+  <text x="455" y="233" font-family="system-ui" font-size="12" font-weight="500" fill="#e2e8f0">Perplexity, ChatGPT Search, AI Overviews</text>
+  <text x="455" y="260" font-family="system-ui" font-size="11" fill="#94a3b8">Tactics</text>
+  <text x="455" y="278" font-family="system-ui" font-size="12" fill="#cbd5e1">Question-format headings</text>
+  <text x="455" y="296" font-family="system-ui" font-size="12" fill="#cbd5e1">Concise, quotable answers</text>
+  <text x="455" y="314" font-family="system-ui" font-size="12" fill="#cbd5e1">FAQ schema markup</text>
+  <text x="455" y="332" font-family="system-ui" font-size="12" fill="#cbd5e1">Authority signals</text>
+  <text x="455" y="360" font-family="system-ui" font-size="11" fill="#94a3b8">Maturity</text>
+  <text x="455" y="375" font-family="system-ui" font-size="12" font-weight="600" fill="#a855f7">Early (2-3 years)</text>
+
+  <!-- GEO Column -->
+  <rect x="810" y="95" width="340" height="290" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="810" y="95" width="340" height="50" rx="12" fill="#10b98120"/>
+  <text x="980" y="115" font-family="system-ui" font-size="11" font-weight="600" fill="#10b981" text-anchor="middle">NEXT WAVE</text>
+  <text x="980" y="135" font-family="system-ui" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">GEO</text>
+  <text x="835" y="170" font-family="system-ui" font-size="11" fill="#94a3b8">Target</text>
+  <text x="835" y="188" font-family="system-ui" font-size="13" font-weight="500" fill="#e2e8f0">Autonomous AI Agents</text>
+  <text x="835" y="215" font-family="system-ui" font-size="11" fill="#94a3b8">Key Files</text>
+  <text x="835" y="233" font-family="system-ui" font-size="12" font-weight="500" fill="#e2e8f0">llms.txt, agents.json, ai-plugin.json</text>
+  <text x="835" y="260" font-family="system-ui" font-size="11" fill="#94a3b8">Tactics</text>
+  <text x="835" y="278" font-family="system-ui" font-size="12" fill="#cbd5e1">Machine-readable summaries</text>
+  <text x="835" y="296" font-family="system-ui" font-size="12" fill="#cbd5e1">API-first content access</text>
+  <text x="835" y="314" font-family="system-ui" font-size="12" fill="#cbd5e1">Agent discovery protocols</text>
+  <text x="835" y="332" font-family="system-ui" font-size="12" fill="#cbd5e1">Brand representation files</text>
+  <text x="835" y="360" font-family="system-ui" font-size="11" fill="#94a3b8">Maturity</text>
+  <text x="835" y="375" font-family="system-ui" font-size="12" font-weight="600" fill="#10b981">Nascent (less than 1 year)</text>
+</svg>
