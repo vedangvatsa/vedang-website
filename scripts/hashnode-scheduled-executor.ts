@@ -77,14 +77,6 @@ function extractEssayContent(slug: string): { title: string; body: string } | nu
   return { title, body };
 }
 
-function getCoverImage(slug: string): string | undefined {
-  const webpPath = path.resolve(REPO_ROOT, `public/images/essays/${slug}.webp`);
-  if (fs.existsSync(webpPath)) {
-    return `https://veda.ng/images/essays/${slug}.webp`;
-  }
-  return undefined;
-}
-
 async function gql(query: string, variables: Record<string, any> = {}): Promise<any> {
   const res = await fetch(GQL_URL, {
     method: 'POST',
@@ -106,7 +98,6 @@ async function publishArticle(post: HashnodePost): Promise<string> {
   if (!essay) throw new Error(`Essay not found: ${post.slug}`);
 
   const canonicalUrl = `https://veda.ng/essays/${post.slug}`;
-  const coverImage = getCoverImage(post.slug);
 
   const mutation = `
     mutation PublishPost($input: PublishPostInput!) {
@@ -127,7 +118,6 @@ async function publishArticle(post: HashnodePost): Promise<string> {
     slug: post.slug,
     originalArticleURL: canonicalUrl,
     tags: post.tags.map(t => ({ slug: t, name: t })),
-    ...(coverImage && { coverImageOptions: { coverImageURL: coverImage } })
   };
 
   const data = await gql(mutation, { input });

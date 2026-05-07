@@ -78,15 +78,6 @@ function extractEssayContent(slug: string): { title: string; body: string; descr
 
   body = body.trim();
 
-  return { title, body, description };
-}
-
-function getCoverImage(slug: string): string | undefined {
-  const webpPath = path.resolve(REPO_ROOT, `public/images/essays/${slug}.webp`);
-  if (fs.existsSync(webpPath)) {
-    return `https://veda.ng/images/essays/${slug}.webp`;
-  }
-  return undefined;
 }
 
 async function publishArticle(post: DevToPost): Promise<string> {
@@ -94,7 +85,6 @@ async function publishArticle(post: DevToPost): Promise<string> {
   if (!essay) throw new Error(`Essay not found: ${post.slug}`);
 
   const canonicalUrl = `https://veda.ng/essays/${post.slug}`;
-  const coverImage = getCoverImage(post.slug);
 
   const article = {
     article: {
@@ -104,7 +94,6 @@ async function publishArticle(post: DevToPost): Promise<string> {
       tags: post.tags.slice(0, 4), // Dev.to allows max 4 tags
       canonical_url: canonicalUrl,
       description: essay.description,
-      ...(coverImage && { main_image: coverImage }),
     },
   };
 
