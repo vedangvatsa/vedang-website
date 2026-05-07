@@ -101,6 +101,67 @@ Update the records in place."
             <p>One instruction to the agent. Five services coordinated. Zero custom integration code. This is the future of automation. and it's available today.</p>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">Social Listening and Monitoring via MCP</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Social listening is one of the highest-value automations you can build with MCP. The pattern: monitor public channels for keywords relevant to your business, then act on what you find.</p>
+            <p><strong>What to monitor:</strong></p>
+            <ul>
+                <li><strong>Brand mentions:</strong> Your company name, product names, founder names on Twitter, Reddit, Hacker News, and product review sites</li>
+                <li><strong>Competitor mentions:</strong> Track competitor names, product launches, pricing changes, and customer complaints</li>
+                <li><strong>Industry keywords:</strong> Terms like "looking for a [your category] tool" or "alternative to [competitor]" represent direct buying intent</li>
+                <li><strong>Sentiment shifts:</strong> AI classifies mentions as positive, negative, or neutral. Negative spikes trigger immediate alerts.</li>
+            </ul>
+            <p><strong>MCP-powered implementation:</strong></p>
+            <ol>
+                <li>Agent reads keyword list from Google Sheets via Sheets MCP</li>
+                <li>Agent uses browser tools or Twitter API to search for recent mentions</li>
+                <li>AI classifies each mention: sentiment, intent (question/complaint/praise), urgency</li>
+                <li>Results written back to Sheets MCP with timestamp, URL, classification</li>
+                <li>High-priority items trigger Slack notifications via Slack MCP</li>
+                <li>Weekly: agent generates a summary report from the accumulated data</li>
+            </ol>
+            <p>This replaces expensive social listening tools like Brandwatch or Mention. One agent + MCP servers + a cron schedule = continuous competitive intelligence at near-zero cost.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-6">
+        <AccordionTrigger className="text-lg text-left">Building Slack and Telegram Bots with MCP</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Messaging platforms are natural outputs for automated pipelines. Here's how to build distribution bots:</p>
+            <p><strong>Telegram Bot (most common for public channels):</strong></p>
+            <pre><code>{`// The pattern: fetch data → format → post via Bot API
+const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const CHANNEL_ID = process.env.TELEGRAM_CHANNEL_ID;
+
+async function postToTelegram(message) {
+  await fetch(\`https://api.telegram.org/bot\${BOT_TOKEN}/sendMessage\`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      chat_id: CHANNEL_ID,
+      text: message,
+      parse_mode: 'HTML',
+      disable_web_page_preview: true,
+    }),
+  });
+}
+
+// Usage in a pipeline:
+const jobs = await fetchNewJobs(); // From database MCP
+for (const job of jobs.slice(0, 10)) {
+  const msg = \`<b>\${job.title}</b>\\n\${job.company}\\n\${job.location}\\n\\nApply: \${job.url}\`;
+  await postToTelegram(msg);
+  await new Promise(r => setTimeout(r, 1000)); // Rate limit: 1 msg/sec
+}`}</code></pre>
+            <p><strong>Slack Bot (for internal teams):</strong></p>
+            <ul>
+                <li>Use Slack's Incoming Webhooks for simple notifications</li>
+                <li>Use Slack MCP server for richer interactions: posting to channels, reading messages, reacting to messages</li>
+                <li>Common pattern: pipeline completes → posts summary to #automation-log channel → tags relevant team members if action is needed</li>
+            </ul>
+            <p><strong>Discord Bot:</strong> Similar to Telegram. Use Discord.js or the Discord webhook API. Ideal for community-facing broadcasts.</p>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <KnowledgeCheck

@@ -57,6 +57,71 @@ This course covers the entire spectrum: no-code tools (n8n, Make), raw API integ
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg text-left">Real-World ROI: Calculating the Value of Automation</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Abstract ROI is useless. Here's how to calculate the concrete value of any automation before you build it:</p>
+            <p><strong>Step 1: Measure the manual cost.</strong></p>
+            <ul>
+                <li>How many minutes does this task take? (Be honest. Time yourself.)</li>
+                <li>How often do you do it? (Daily = 260x/year, Weekly = 52x/year)</li>
+                <li>What's the error cost? Each manual mistake costs rework time + reputation damage.</li>
+            </ul>
+            <p><strong>Step 2: Calculate annual cost.</strong></p>
+            <pre><code>{`// Example: Manual social media posting
+Time per post: 15 minutes (research + write + format + post)
+Posts per week: 5 (one per platform per day)
+Annual time: 15 min × 5 × 52 weeks = 3,900 minutes = 65 hours/year
+
+// At $50/hour effective cost:
+Annual cost = $3,250 in human time alone
+// Plus opportunity cost: what could you build with 65 extra hours?`}</code></pre>
+            <p><strong>Step 3: Estimate automation cost.</strong></p>
+            <ul>
+                <li>Build time: How long to set up? (Usually 2-8 hours for most automations)</li>
+                <li>Running cost: API calls, hosting, AI tokens (typically $5-50/month)</li>
+                <li>Maintenance: Budget 1 hour/month for debugging and updates</li>
+            </ul>
+            <p><strong>The math:</strong> If <code>(annual manual cost) &gt; (build time × hourly rate) + (12 × monthly running cost) + (12 × maintenance hours × hourly rate)</code>, build it.</p>
+            <p>For the social media example: $3,250 &gt; (4 hrs × $50) + (12 × $20) + (12 × 1 hr × $50) = $200 + $240 + $600 = $1,040. <strong>Net savings: $2,210/year.</strong> This is a clear build.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">The 80/20 Rule: What Humans Do vs What Agents Do</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>The goal is never 100% automation. The goal is intelligent division of labor:</p>
+            <p><strong>Agents handle the 80%:</strong></p>
+            <ul>
+                <li>Data collection, aggregation, and normalization</li>
+                <li>First-draft content creation following your guidelines</li>
+                <li>Scheduling, posting, and distribution across platforms</li>
+                <li>Monitoring, alerting, and reporting</li>
+                <li>Lead enrichment, scoring, and initial outreach</li>
+                <li>Format conversion, template population, and repetitive formatting</li>
+            </ul>
+            <p><strong>Humans handle the 20%:</strong></p>
+            <ul>
+                <li>Strategy and direction: what to automate, what to build, where to invest</li>
+                <li>Quality review: reading agent output before it goes public</li>
+                <li>Relationship decisions: approving large deals, sensitive communications</li>
+                <li>Creative judgment: brand voice evolution, design direction, narrative</li>
+                <li>Exception handling: edge cases the agent flags for human review</li>
+            </ul>
+            <p><strong>The critical insight:</strong> Most founders get this backwards. They use AI for the 20% (brainstorming, strategy) and do the 80% manually (emailing, posting, data entry). Flip it. Let agents execute the volume. You focus on the decisions that compound.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-6">
+        <AccordionTrigger className="text-lg text-left">Common Automation Anti-Patterns</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Avoid these mistakes that kill most automation projects:</p>
+            <p><strong>1. Automating a broken process.</strong> If your manual workflow is messy and inconsistent, automating it just creates automated chaos. Fix the process first, then automate it.</p>
+            <p><strong>2. Over-engineering day one.</strong> Start with the simplest version that delivers value. A cron job that runs a script is better than an event-driven microservice architecture you spend 3 weeks building.</p>
+            <p><strong>3. No human review gate.</strong> Every automation that touches external communication (emails, social posts, client deliverables) should have a human review step until you trust the output quality. Remove the gate gradually as confidence builds.</p>
+            <p><strong>4. Ignoring monitoring.</strong> An automation that fails silently is worse than no automation. Always add logging, heartbeats, and failure alerts. You'll learn why in Module 7.</p>
+            <p><strong>5. Tool hoarding.</strong> You don't need Zapier AND Make AND n8n AND 4 different AI APIs. Pick one stack and go deep. n8n + Claude + GitHub Actions handles 90% of startup automation needs.</p>
+            <p><strong>6. Not documenting.</strong> If you can't explain how an automation works in a README, it's a liability, not an asset. Future-you or your team will need to debug it at 2am on a Sunday.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-7">
         <AccordionTrigger className="text-lg text-left">The Modern Automation Toolkit</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             <p>Tools covered in this course:</p>

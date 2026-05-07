@@ -108,6 +108,58 @@ const results = await Promise.allSettled(sources);`}</code></pre>
             <p><strong>4. Circuit Breaker:</strong> If an API is consistently failing, stop calling it and alert the team instead of burning through rate limits with retries.</p>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">Case Study: B2B Outreach Pipeline</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>A pipeline that automates lead sourcing, enrichment, personalization, and email delivery. See the full <a href="https://github.com/vedangvatsa/b2b-outreach" target="_blank">B2B Outreach</a> framework.</p>
+            <p><strong>Stage 1. Lead sourcing:</strong></p>
+            <ul>
+                <li>Import CSV from LinkedIn Sales Navigator or Apollo</li>
+                <li>Filter against ICP (Ideal Customer Profile): industry, company size, funding stage, geography</li>
+                <li>Deduplicate against existing leads in CRM spreadsheet</li>
+            </ul>
+            <p><strong>Stage 2. Enrichment:</strong></p>
+            <ul>
+                <li>For each lead, agent browses their company website (via agent browser or Firecrawl)</li>
+                <li>Extracts: recent blog posts, product updates, hiring activity, tech stack</li>
+                <li>Scores lead fit: 0-100 based on ICP alignment</li>
+            </ul>
+            <p><strong>Stage 3. Personalization:</strong></p>
+            <ul>
+                <li>AI writes a custom email for each lead using enrichment data</li>
+                <li>References specific company details: "I saw you just raised your Series A" or "Your engineering team is growing fast. 12 new roles this quarter"</li>
+                <li>Follows brand-guidelines.md for tone and style</li>
+            </ul>
+            <p><strong>Stage 4. Delivery and tracking:</strong></p>
+            <ul>
+                <li>Sends via Resend or SES with rate limiting (10-20/hour for warm domains)</li>
+                <li>Tracks opens and replies via webhook callbacks</li>
+                <li>Updates Google Sheets CRM with delivery status, open events, and reply detection</li>
+                <li>Failed deliveries go to a retry queue</li>
+            </ul>
+            <p>This pipeline replaces a full-time SDR for early-stage outreach. One human reviews the AI-written emails before send. The rest is automated.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-6">
+        <AccordionTrigger className="text-lg text-left">Case Study: Competitive Intelligence Pipeline</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>A pipeline that continuously monitors competitors and surfaces actionable insights:</p>
+            <p><strong>Daily automated checks:</strong></p>
+            <ul>
+                <li><strong>Pricing pages:</strong> Agent browser visits each competitor's pricing page, extracts current tiers and prices, compares to previous snapshot, flags changes</li>
+                <li><strong>Careers pages:</strong> Agent scrapes open positions. A sudden spike in engineering hiring signals a product push. New "AI Engineer" roles signal strategic direction.</li>
+                <li><strong>Changelogs and blogs:</strong> <a href="https://github.com/mendableai/firecrawl" target="_blank">Firecrawl</a> or <a href="https://github.com/unclecode/crawl4ai" target="_blank">Crawl4AI</a> converts competitor blog posts to markdown. AI summarizes key announcements.</li>
+                <li><strong>Social mentions:</strong> Track competitor brand mentions on Twitter, Reddit, and Hacker News. Classify sentiment.</li>
+            </ul>
+            <p><strong>Weekly output:</strong></p>
+            <ul>
+                <li>Auto-generated competitive brief in Google Sheets: pricing changes, new features, hiring trends, public sentiment</li>
+                <li>Slack notification with top 3 most important changes</li>
+                <li>Optional: auto-generated slide deck using the <a href="https://github.com/vedangvatsa/consulting-report-framework" target="_blank">Consulting Report Framework</a></li>
+            </ul>
+            <p>This replaces the "check competitors once a quarter" approach with continuous, automated monitoring. You know about a pricing change the day it happens, not three months later.</p>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <KnowledgeCheck

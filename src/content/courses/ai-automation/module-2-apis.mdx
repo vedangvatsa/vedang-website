@@ -102,6 +102,109 @@ export async function POST(request: Request) {
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg text-left">Error Handling Patterns for API Automation</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>APIs fail. Networks timeout. Services go down. Your automation needs to handle all of this gracefully:</p>
+            <p><strong>Pattern 1: Retry with backoff.</strong> If a request fails with a 5xx error or timeout, wait and try again. Increase the wait time with each retry to avoid hammering a struggling server:</p>
+            <pre><code>{`async function fetchWithRetry(url, options = {}, maxRetries = 3) {
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    try {
+      const response = await fetch(url, {
+        ...options,
+        signal: AbortSignal.timeout(10000), // 10s timeout
+      });
+      
+      if (response.status === 429) {
+        // Rate limited: respect Retry-After header
+        const retryAfter = response.headers.get('Retry-After');
+        const delay = retryAfter ? parseInt(retryAfter) * 1000 : Math.pow(2, attempt) * 1000;
+        console.warn(\`Rate limited. Waiting \${delay}ms...\`);
+        await new Promise(r => setTimeout(r, delay));
+        continue;
+      }
+      
+      if (!response.ok) throw new Error(\`HTTP \${response.status}\`);
+      return await response.json();
+    } catch (error) {
+      if (attempt === maxRetries - 1) {
+        console.error(\`Failed after \${maxRetries} attempts: \${url}\`);
+        return null; // Return null instead of throwing. let the pipeline continue.
+      }
+      await new Promise(r => setTimeout(r, 1000 * Math.pow(2, attempt)));
+    }
+  }
+}`}</code></pre>
+            <p><strong>Pattern 2: Graceful degradation.</strong> If one API source fails, don't kill the entire pipeline. Use <code>Promise.allSettled</code> to run all fetches in parallel and collect whatever succeeds:</p>
+            <pre><code>{`const results = await Promise.allSettled([
+  fetchJobs('greenhouse', slugs),
+  fetchJobs('lever', slugs),
+  fetchJobs('ashby', slugs),
+]);
+
+const succeeded = results.filter(r => r.status === 'fulfilled');
+const failed = results.filter(r => r.status === 'rejected');
+console.log(\`\${succeeded.length} sources OK, \${failed.length} failed\`);`}</code></pre>
+            <p><strong>Pattern 3: Dead letter queue.</strong> When individual items fail processing, don't drop them. Store them for manual review or re-processing later.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">Building a Multi-Source Data Aggregator</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>The most valuable API automations aggregate data from multiple sources into a single, normalized format. Here's the complete pattern:</p>
+            <pre><code>{`// Step 1: Define your sources with a common interface
+const sources = [
+  {
+    name: 'Greenhouse',
+    fetchFn: async (slug) => {
+      const res = await fetchWithRetry(
+        \`https://boards-api.greenhouse.io/v1/boards/\${slug}/jobs\`
+      );
+      return res?.jobs?.map(j => ({
+        title: j.title,
+        company: slug,
+        location: j.location?.name || 'Remote',
+        url: j.absolute_url,
+        source: 'greenhouse',
+      })) || [];
+    },
+    slugs: ['consensys', 'uniswap', 'chainlink'],
+  },
+  {
+    name: 'Lever',
+    fetchFn: async (slug) => {
+      const res = await fetchWithRetry(
+        \`https://api.lever.co/v0/postings/\${slug}?mode=json\`
+      );
+      return res?.map(j => ({
+        title: j.text,
+        company: slug,
+        location: j.categories?.location || 'Remote',
+        url: j.hostedUrl,
+        source: 'lever',
+      })) || [];
+    },
+    slugs: ['figma', 'notion'],
+  },
+];
+
+// Step 2: Fetch all sources in parallel
+const allJobs = [];
+for (const source of sources) {
+  const results = await Promise.allSettled(
+    source.slugs.map(slug => source.fetchFn(slug))
+  );
+  for (const result of results) {
+    if (result.status === 'fulfilled') allJobs.push(...result.value);
+  }
+}
+
+// Step 3: Deduplicate by URL
+const unique = [...new Map(allJobs.map(j => [j.url, j])).values()];
+console.log(\`Aggregated \${unique.length} unique jobs from \${sources.length} sources\`);`}</code></pre>
+            <p>This exact pattern powers job boards, price comparison engines, news aggregators, and competitive intelligence tools. Once you understand it, you can aggregate anything from any set of APIs.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-6">
         <AccordionTrigger className="text-lg text-left">Pagination & Rate Limits</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             <p>When automating API calls, two challenges always appear:</p>

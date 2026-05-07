@@ -137,6 +137,50 @@ async function reportPipelineStatus(pipeline, results) {
             </div>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">AI Discovery: Making Your Automations Findable</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>If your automations produce public-facing content (websites, APIs, data feeds), you should optimize for AI discovery. This means ensuring AI agents and search engines can find, understand, and cite your content.</p>
+            <p><strong>Essential discovery files:</strong></p>
+            <ul>
+                <li><strong><code>llms.txt</code></strong>. A markdown summary of your site designed for LLMs. Describes what your site is, what it offers, and links to key pages. See <a href="https://llmstxt.org" target="_blank">llmstxt.org</a> for the format.</li>
+                <li><strong><code>agents.json</code></strong>. A machine-readable file at <code>/.well-known/agents.json</code> that tells autonomous agents what your site can do, what APIs are available, and how to interact.</li>
+                <li><strong><code>ai-plugin.json</code></strong>. The OpenAI plugin format. Describes your site's capabilities for ChatGPT and other platforms.</li>
+                <li><strong><code>robots.txt</code></strong>. Updated to explicitly welcome AI crawlers: OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended.</li>
+            </ul>
+            <p>Deploy all of these at once with the <a href="https://github.com/vedangvatsa/ai-discovery-standards" target="_blank">AI Discovery Standards</a> framework: <code>npx github:vedangvatsa/ai-discovery-standards</code></p>
+            <p><strong>Why this matters for automation:</strong> If your automated content pipeline publishes blog posts, those posts need to be discoverable by Perplexity, ChatGPT Search, and Google AI Overviews. Without proper discovery files, your automated content is invisible to the fastest-growing search channels.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-6">
+        <AccordionTrigger className="text-lg text-left">Security Best Practices for Automated Systems</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Automated systems have larger attack surfaces than manual processes. Follow these security practices:</p>
+            <p><strong>1. Secret management:</strong></p>
+            <ul>
+                <li>Never commit API keys, tokens, or passwords to Git. Ever. Use <code>.env</code> files locally and GitHub Secrets / Vercel Environment Variables in production.</li>
+                <li>Rotate API keys quarterly. Set calendar reminders.</li>
+                <li>Use separate API keys for development and production.</li>
+            </ul>
+            <p><strong>2. Principle of least privilege:</strong></p>
+            <ul>
+                <li>Your automation should only have the permissions it needs. If it only reads from a database, don't give it write access.</li>
+                <li>Use read-only API keys where possible. Create separate keys for different pipelines.</li>
+                <li>Google Sheets MCP: share sheets with the service account as "Viewer" unless the pipeline needs to write.</li>
+            </ul>
+            <p><strong>3. Input validation:</strong></p>
+            <ul>
+                <li>If your automation processes external data (webhooks, scraped content, user input), validate and sanitize everything before acting on it.</li>
+                <li>Never pass raw external data into system prompts or database queries without sanitization.</li>
+            </ul>
+            <p><strong>4. Audit logging:</strong></p>
+            <ul>
+                <li>Log every action your automation takes: what it did, when, what data it processed, what the outcome was.</li>
+                <li>Store logs in a separate location from the automation itself (Google Sheets tab, a log database, or a file in a protected repo).</li>
+                <li>Review logs weekly. Look for unexpected patterns: unusual volumes, failed auth attempts, or data anomalies.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <KnowledgeCheck

@@ -120,6 +120,67 @@ const response = await anthropic.messages.create({
             </ul>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">Agent Browsers: Automating the Visual Web</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Not every service has an API. Agent browsers let AI agents control a real web browser. navigate pages, click buttons, fill forms, extract data. all autonomously.</p>
+            <p><strong>The top open-source agent browser tools:</strong></p>
+            <ul>
+                <li><strong><a href="https://github.com/browser-use/browser-use" target="_blank">Browser Use</a></strong> (78k stars). Give a goal in natural language, the agent navigates the browser to complete it. Built on Playwright. Works with any LLM.</li>
+                <li><strong><a href="https://github.com/browserbase/stagehand" target="_blank">Stagehand</a></strong> (21k stars). TypeScript-native browser automation with AI. Acts, extracts, and observes web pages. Built by Browserbase.</li>
+                <li><strong><a href="https://github.com/microsoft/playwright-mcp" target="_blank">Playwright MCP</a></strong> (29k stars). Microsoft's MCP server for Playwright. Connect it to Claude or Antigravity and the agent can browse the web as a tool.</li>
+            </ul>
+            <p><strong>Use cases for agent browsers:</strong></p>
+            <ul>
+                <li><strong>Competitive intelligence.</strong> Agent visits competitor pricing pages daily, extracts current pricing, compares to yesterday, and flags changes in a spreadsheet.</li>
+                <li><strong>Lead research.</strong> Agent browses a prospect's LinkedIn, company blog, and recent press releases to build a personalized outreach brief.</li>
+                <li><strong>Form automation.</strong> Agent fills out job application forms, vendor questionnaires, or compliance forms from structured data.</li>
+                <li><strong>Testing.</strong> Agent navigates your own product as a user would, testing checkout flows, form submissions, and page loads.</li>
+            </ul>
+            <p><strong>Important caveat:</strong> Agent browsers are powerful but slow and expensive (each navigation uses LLM tokens). Use them only when there is no API alternative. Always prefer direct API calls when available.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-6">
+        <AccordionTrigger className="text-lg text-left">Email Automation with AI Agents</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Email remains the highest-ROI communication channel. AI agents can automate the entire email lifecycle:</p>
+            <p><strong>Infrastructure setup (one-time):</strong></p>
+            <ol>
+                <li>Set up a sending service: <strong>Resend</strong> (developer-friendly, React email templates) or <strong>AWS SES</strong> (cheapest at scale, $0.10/1,000 emails)</li>
+                <li>Configure DNS records: SPF, DKIM, and DMARC. This prevents your emails from hitting spam.</li>
+                <li>Test deliverability with <a href="https://mail-tester.com" target="_blank">mail-tester.com</a>. Aim for a score of 9+/10.</li>
+            </ol>
+            <p><strong>AI-powered email patterns:</strong></p>
+            <ul>
+                <li><strong>Nurture sequences.</strong> Agent writes a 5-email series: Day 0 welcome, Day 3 value, Day 7 authority, Day 14 soft CTA, Day 21+ newsletter. Each email follows your <code>brand-guidelines.md</code>.</li>
+                <li><strong>Personalized outreach.</strong> Agent researches each prospect (company, role, recent news), then drafts a personalized cold email. See the <a href="https://github.com/vedangvatsa/b2b-outreach" target="_blank">B2B Outreach</a> framework.</li>
+                <li><strong>Inbox triage.</strong> Tools like <a href="https://github.com/elie222/inbox-zero" target="_blank">Inbox Zero</a> use AI to classify incoming emails, auto-archive noise, draft responses to common questions, and flag urgent items.</li>
+                <li><strong>Transactional emails.</strong> Welcome emails, password resets, payment receipts. all templated and triggered by webhooks from your app.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-7">
+        <AccordionTrigger className="text-lg text-left">Brand Guidelines as Agent Configuration</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>The single most important file for AI automation quality is <code>brand-guidelines.md</code>. This is the document that ensures every piece of content your agents produce is consistent.</p>
+            <p><strong>What to include:</strong></p>
+            <ul>
+                <li><strong>Voice and tone:</strong> "We write in declarative sentences. No hedging. No 'I think' or 'maybe.' High information density."</li>
+                <li><strong>Anti-patterns:</strong> "Never use: 'leverage,' 'synergy,' 'game-changer,' 'ecosystem' (unless literally about ecosystems)."</li>
+                <li><strong>Formatting rules:</strong> "Headlines are sentence case. No Oxford comma. Code blocks use 2-space indentation."</li>
+                <li><strong>Visual identity:</strong> Primary colors (hex codes), fonts, logo usage rules.</li>
+                <li><strong>Content structure:</strong> "Blog posts: thesis in first paragraph. No throat-clearing introductions."</li>
+            </ul>
+            <p><strong>Where to place it:</strong></p>
+            <ul>
+                <li><strong>Antigravity:</strong> <code>.gemini/style.md</code> in your repo root</li>
+                <li><strong>Claude Code:</strong> <code>CLAUDE.md</code> in your repo root</li>
+                <li><strong>Cursor:</strong> <code>.cursorrules</code> in your repo root</li>
+                <li><strong>n8n / Make:</strong> Paste the guidelines into the system prompt of every AI node</li>
+            </ul>
+            <p>Every agent in your fleet reads this file before producing any output. One file. Total brand consistency across every channel.</p>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <KnowledgeCheck

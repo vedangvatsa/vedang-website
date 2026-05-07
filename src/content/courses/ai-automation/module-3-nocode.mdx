@@ -85,6 +85,60 @@ No-code tools are the fastest way to automate. You can go from idea to running a
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg text-left">Zapier: The Largest Ecosystem</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p><strong>Zapier</strong> has the largest pre-built integration library: 7,000+ apps. Its strength is breadth. if a service has an API, Zapier probably has a connector for it already.</p>
+            <p><strong>Best for:</strong></p>
+            <ul>
+                <li>Quick, simple automations between common tools (Gmail → Sheets, Typeform → Slack)</li>
+                <li>Teams with no technical members who need self-serve automation</li>
+                <li>Prototyping. test an automation idea in 5 minutes before building it properly</li>
+            </ul>
+            <p><strong>Limitations:</strong></p>
+            <ul>
+                <li><strong>Per-task pricing.</strong> Every execution costs money. A daily job broadcast that processes 100 jobs = 100 tasks/day = 36,500 tasks/year. At Zapier's pricing, this gets expensive fast.</li>
+                <li><strong>Limited AI.</strong> Zapier's AI features exist but are shallow compared to dedicated AI APIs or n8n's AI nodes.</li>
+                <li><strong>No self-hosting.</strong> All data flows through Zapier's infrastructure. Fine for most use cases, but a dealbreaker for sensitive data.</li>
+                <li><strong>5-minute minimum interval.</strong> The fastest trigger is every 5 minutes. For real-time, you need webhooks or a different tool.</li>
+            </ul>
+            <p><strong>Example: CRM lead enrichment.</strong></p>
+            <ol>
+                <li><strong>Trigger:</strong> New row added to Google Sheets "Leads" tab</li>
+                <li><strong>Action 1:</strong> Look up company domain from email address</li>
+                <li><strong>Action 2:</strong> Fetch company data from Clearbit/Apollo</li>
+                <li><strong>Action 3:</strong> Update the Sheets row with company size, industry, funding</li>
+                <li><strong>Action 4:</strong> If company size &gt; 50, send Slack notification to sales team</li>
+            </ol>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">Platform Cost Comparison</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Choosing the right no-code platform depends on your volume and technical needs:</p>
+            <div className="overflow-x-auto my-4">
+                <table className="w-full text-sm">
+                    <thead>
+                        <tr className="border-b-2">
+                            <th className="text-left py-2 pr-4 font-semibold">Feature</th>
+                            <th className="text-left py-2 pr-4 font-semibold">n8n</th>
+                            <th className="text-left py-2 pr-4 font-semibold">Make</th>
+                            <th className="text-left py-2 pr-4 font-semibold">Zapier</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="border-b"><td className="py-2 pr-4">Pricing model</td><td className="py-2 pr-4">Self-host free</td><td className="py-2 pr-4">Per operation</td><td className="py-2 pr-4">Per task</td></tr>
+                        <tr className="border-b"><td className="py-2 pr-4">Free tier</td><td className="py-2 pr-4">Unlimited (self-host)</td><td className="py-2 pr-4">1,000 ops/month</td><td className="py-2 pr-4">100 tasks/month</td></tr>
+                        <tr className="border-b"><td className="py-2 pr-4">AI nodes</td><td className="py-2 pr-4">Built-in (any LLM)</td><td className="py-2 pr-4">OpenAI only</td><td className="py-2 pr-4">Limited</td></tr>
+                        <tr className="border-b"><td className="py-2 pr-4">Custom code</td><td className="py-2 pr-4">JS + Python nodes</td><td className="py-2 pr-4">Limited</td><td className="py-2 pr-4">Code by Zapier</td></tr>
+                        <tr className="border-b"><td className="py-2 pr-4">Self-hosting</td><td className="py-2 pr-4">Yes (Docker)</td><td className="py-2 pr-4">No</td><td className="py-2 pr-4">No</td></tr>
+                        <tr className="border-b"><td className="py-2 pr-4">Best for</td><td className="py-2 pr-4">Developers, AI pipelines</td><td className="py-2 pr-4">Complex branching</td><td className="py-2 pr-4">Simple integrations</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><strong>Recommendation:</strong> Start with n8n if you're technical. Use Zapier for quick prototypes. Use Make for complex visual logic. As your volume grows, migrate everything to n8n self-hosted or custom code.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-6">
         <AccordionTrigger className="text-lg text-left">When to Graduate from No-Code</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             <p>No-code tools are fantastic, but they have limits. You should switch to code or AI agents when:</p>
