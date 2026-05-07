@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const { slug } = await params;
     const moduleData = getCourseModule(slug);
     if (!moduleData) notFound();
-    const title = `${moduleData.frontmatter.title} | AI Automation 101 | Vedang Vatsa`;
+    const title = `${moduleData.frontmatter.title} | AI Automation 101`;
     const description = moduleData.frontmatter.description;
     return {
         title: { absolute: title },

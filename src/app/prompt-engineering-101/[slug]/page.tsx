@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         if (data.title) moduleTitle = data.title;
         if (data.description) moduleDesc = data.description;
     } catch {}
-    const title = `${moduleTitle} | Prompt Engineering 101 | Vedang Vatsa`;
+    const title = `${moduleTitle} | Prompt Engineering 101`;
     return {
         title: { absolute: title },
         description: moduleDesc,

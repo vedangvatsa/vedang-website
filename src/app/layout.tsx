@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://veda.ng'),
   title: {
     default: 'Vedang Vatsa — AI & Web3 Thought Leader, Founder of Hashtag Web3',
-    template: '%s | Vedang Vatsa',
+    template: '%s',
   },
   description:
     'Vedang Vatsa is the founder of Hashtag Web3 (120k+ AI & Web3 professionals), a Fellow of the Royal Society of Arts, and IIT Kanpur alumnus. Explore essays, courses, and tools on AI, blockchain, and decentralized economies.',
