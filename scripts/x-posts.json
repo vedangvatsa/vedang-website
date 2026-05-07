@@ -790,5 +790,29 @@
     "text": "Abu Dhabi: AED 13B to become first AI-native government by 2027. 97% AI utilization. 108 HR services automated. One university cut faculty workload 95%.\n\nNo legacy systems. No tech debt. Clean-sheet AI government.\n\nveda.ng/agentic-state",
     "postedAt": "2026-04-24T05:57:07.354Z",
     "tweetId": "2047555414271701078"
+  },
+  {
+    "id": "stepwise-ai",
+    "scheduleDate": "2026-04-21",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/stepwise_ai.png",
+    "text": "Klarna automated customer service. Saved $60M. Then customer satisfaction collapsed and they hired people back.\n\nThe failure wasn't AI. It was sequence. They skipped straight to the hardest problem — nuanced human interactions — instead of starting where machines already win: invoice matching, log parsing, email routing.\n\n70% of companies that try to automate everything at once fail. Companies that pick one boring, high-frequency task first? Payback in under three months.\n\nDiscipline beats ambition every time.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "universal-text-ui",
+    "scheduleDate": "2026-04-21",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/universal_text_ui.png",
+    "text": "Every dropdown on a dashboard is a question someone predicted you'd ask. Your actual question is almost never one of them.\n\nPostHog replaced their analytics dashboard with a text field. Salesforce did it for CRM — 84% of queries now self-resolve. Cursor did it for code and hit $1B ARR.\n\nThe pattern: a text field backed by an LLM that calls APIs directly. No menus. No navigation. Just ask.\n\nThe dashboard era is ending.\n\nveda.ng/universal-text-ui"
+  },
+  {
+    "id": "agentic-state",
+    "scheduleDate": "2026-04-22",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "text": "In Estonia, only two government services require you to show up in person: marriages and divorces. Everything else is digital. 99% of public services.\n\nSingapore runs AI across 100,000 public officers. UAE hit 97% AI utilization in government.\n\nThese aren't pilots. They're production systems serving millions.\n\nA baby is born. The system detects it, calculates benefits, deposits money. No form. No queue. No portal. The citizen does nothing.\n\nMost governments still make you download a PDF.\n\nveda.ng/agentic-state"
   }
 ]

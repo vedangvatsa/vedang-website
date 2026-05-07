@@ -45,26 +45,44 @@ function extractEssayContent(slug: string): { title: string; body: string } | nu
   let body = raw.replace(/^---\n[\s\S]*?\n---\n*/, '');
   body = body.replace(/^import\s+.*$/gm, '');
   
-  // Extract <Figure> to standard markdown images
-  body = body.replace(/<Figure\s+([^>]+)\/>/g, (match, props) => {
-    const srcMatch = props.match(/src="([^"]+)"/);
-    const altMatch = props.match(/alt="([^"]+)"/);
-    const src = srcMatch ? srcMatch[1] : '';
+  // Extract <Figure> and <Image> to standard markdown images
+  body = body.replace(/<(?:Figure|Image)\s+([^>]+)\/?>/g, (match, props) => {
+    const srcMatch = props.match(/src=["']([^"']+)["']/);
+    const altMatch = props.match(/alt=["']([^"']*)["']/);
+    let src = srcMatch ? srcMatch[1] : '';
     const alt = altMatch ? altMatch[1] : '';
     if (!src) return '';
+    
+    // Dev.to/Hashnode fail on SVGs, convert them to their .webp equivalents
+    if (src.includes('.svg')) {
+      src = src.replace(/\.svg(\?.*)?$/, '.webp');
+    }
+    
     const absoluteSrc = src.startsWith('/') ? `https://veda.ng${src}` : src;
     return `\n![${alt}](${absoluteSrc})\n`;
   });
 
-  body = body.replace(/<SectionLabel[^>]*label="([^"]*)"[^/]*\/>/g, '\n## $1\n');
-  body = body.replace(/<PullQuote[^>]*quote="([^"]*)"[^/]*\/>/g, '\n> $1\n');
-  body = body.replace(/<Callout[^>]*text="([^"]*)"[^/]*\/>/g, '\n> 💡 $1\n');
-  body = body.replace(/<KeyTakeaway[^>]*text="([^"]*)"[^/]*\/>/g, '\n> ✅ $1\n');
-  body = body.replace(/<[A-Z][^>]*\/>/g, '');
-  body = body.replace(/<[A-Z][^>]*>[\s\S]*?<\/[A-Z][^>]*>/g, '');
+  // Convert MDX components to markdown equivalents
+  body = body.replace(/<SectionLabel[^>]*label=["']([^"']*)["'][^>]*\/?>/g, '\n## $1\n');
+  body = body.replace(/<PullQuote[^>]*quote=["']([^"']*)["'][^>]*\/?>/g, '\n> $1\n');
+  body = body.replace(/<Callout[^>]*text=["']([^"']*)["'][^>]*\/?>/g, '\n> 💡 $1\n');
+  body = body.replace(/<KeyTakeaway[^>]*text=["']([^"']*)["'][^>]*\/?>/g, '\n> ✅ $1\n');
+  
+  // Cleanly strip any remaining Next.js/React component tags (starting with Capital letter)
+  // but preserve the text inside them so we don't lose content!
+  body = body.replace(/<\/?([A-Z][A-Za-z0-9]*)[^>]*>/g, '');
+
   body = body.trim();
 
   return { title, body };
+}
+
+function getCoverImage(slug: string): string | undefined {
+  const webpPath = path.resolve(REPO_ROOT, `public/images/essays/${slug}.webp`);
+  if (fs.existsSync(webpPath)) {
+    return `https://veda.ng/images/essays/${slug}.webp`;
+  }
+  return undefined;
 }
 
 async function gql(query: string, variables: Record<string, any> = {}): Promise<any> {
@@ -88,6 +106,7 @@ async function publishArticle(post: HashnodePost): Promise<string> {
   if (!essay) throw new Error(`Essay not found: ${post.slug}`);
 
   const canonicalUrl = `https://veda.ng/essays/${post.slug}`;
+  const coverImage = getCoverImage(post.slug);
 
   const mutation = `
     mutation PublishPost($input: PublishPostInput!) {
@@ -104,10 +123,11 @@ async function publishArticle(post: HashnodePost): Promise<string> {
   const input = {
     publicationId: PUB_ID,
     title: essay.title,
-    contentMarkdown: essay.body,
+    contentMarkdown: essay.body + `\n\n---\n*This essay was originally published on [veda.ng](${canonicalUrl}).*`,
     slug: post.slug,
     originalArticleURL: canonicalUrl,
     tags: post.tags.map(t => ({ slug: t, name: t })),
+    ...(coverImage && { coverImageOptions: { coverImageURL: coverImage } })
   };
 
   const data = await gql(mutation, { input });

@@ -299,5 +299,48 @@
     "scheduleTime": "09:00",
     "postedAt": "2026-03-30T05:38:37.561Z",
     "hashnodeUrl": "https://vedangvatsa.hashnode.dev/ambient-intelligence"
+  },
+  {
+    "id": "hashnode-stepwise-ai",
+    "slug": "stepwise-ai",
+    "title": "Stepwise AI",
+    "tags": [
+      "ai",
+      "automation",
+      "productivity"
+    ],
+    "scheduleDate": "2026-04-22",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "postedAt": "2026-05-07T09:13:02.439Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/stepwise-ai"
+  },
+  {
+    "id": "hashnode-universal-text-ui",
+    "slug": "universal-text-ui",
+    "title": "Universal Text UI",
+    "tags": [
+      "ui",
+      "ux",
+      "ai"
+    ],
+    "scheduleDate": "2026-04-22",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "postedAt": "2026-05-07T09:17:59.049Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/universal-text-ui"
+  },
+  {
+    "id": "hashnode-agentic-state",
+    "slug": "agentic-state",
+    "title": "The Agentic State",
+    "tags": [
+      "government",
+      "ai",
+      "future"
+    ],
+    "scheduleDate": "2026-04-22",
+    "scheduleTime": "17:00",
+    "posted": false
   }
 ]

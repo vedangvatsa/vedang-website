@@ -609,5 +609,29 @@
     "text": "Abu Dhabi: AED 13 billion to become first AI-native government by 2027. 97% AI utilization. 108 HR services automated.\n\nNo legacy systems. No tech debt. Building government from scratch as if AI existed from day one.\n\nveda.ng/agentic-state",
     "postedAt": "2026-04-19T20:05:21.566Z",
     "fbPostId": "1785048661795414_1261966102780098"
+  },
+  {
+    "id": "stepwise-ai",
+    "scheduleDate": "2026-04-21",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/stepwise_ai.png",
+    "text": "Klarna automated customer service. Saved $60M. Then satisfaction collapsed and they reversed it.\n\nThe failure was sequence, not technology. They went straight for the hardest problem. Companies that start with one boring, repetitive task — invoice matching, email triage — see payback in three months.\n\n70% of big-bang AI deployments fail. Discipline beats ambition.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "universal-text-ui",
+    "scheduleDate": "2026-04-21",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/universal_text_ui.png",
+    "text": "Every dropdown on a dashboard exists because someone predicted your question. Your actual question is almost never one of them.\n\nPostHog replaced analytics dashboards with a text field. Salesforce did it for CRM — 84% self-resolution. Cursor did it for code — $1B ARR.\n\nThe pattern: text field + LLM + direct API calls. No menus. No navigation.\n\nveda.ng/universal-text-ui"
+  },
+  {
+    "id": "agentic-state",
+    "scheduleDate": "2026-04-22",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "text": "Estonia digitized 99% of public services. Only marriages and divorces require showing up in person.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government.\n\nBaby born? The system detects it, calculates benefits, deposits money. No form. No queue. No portal.\n\nMost governments still make you download a PDF.\n\nveda.ng/agentic-state"
   }
 ]

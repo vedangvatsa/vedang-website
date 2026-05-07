@@ -909,5 +909,41 @@
     "text": "Abu Dhabi: AED 13B for AI-native government. 97% utilization. Clean-sheet, no legacy.\n\nveda.ng/agentic-state",
     "postedAt": "2026-04-19T20:05:22.947Z",
     "tumblrId": "814354658973958144"
+  },
+  {
+    "id": "stepwise-ai",
+    "scheduleDate": "2026-04-21",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/stepwise_ai.png",
+    "tags": [
+      "AI",
+      "enterprise"
+    ],
+    "text": "Klarna automated support. Saved $60M. Satisfaction tanked. They hired people back.\n\n70% of big-bang AI deployments fail. Companies that pick one boring task first see payback in three months.\n\nThe failure is always sequence, not technology.\n\nveda.ng/stepwise-ai"
+  },
+  {
+    "id": "universal-text-ui",
+    "scheduleDate": "2026-04-21",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "image": "scripts/thread-assets/universal_text_ui.png",
+    "tags": [
+      "AI",
+      "design"
+    ],
+    "text": "Every dropdown is a predicted question. Your actual question is never one of them.\n\nA text field backed by an LLM that calls APIs directly kills the dashboard. PostHog, Salesforce, and Cursor already proved it.\n\nveda.ng/universal-text-ui"
+  },
+  {
+    "id": "agentic-state",
+    "scheduleDate": "2026-04-22",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "image": "scripts/thread-assets/agentic_state.png",
+    "tags": [
+      "government",
+      "AI"
+    ],
+    "text": "Estonia: 99% digital government. Singapore: AI across 100k officers. UAE: 97% utilization.\n\nBaby born? System detects it, calculates benefits, deposits money. No form. No queue.\n\nMost governments still run on PDFs and waiting rooms.\n\nveda.ng/agentic-state"
   }
 ]
