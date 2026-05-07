@@ -39,7 +39,7 @@ import { IdentitySpectrumChart, PseudonymousSuccessCases, ReputationInfraChart, 
 import { GovernanceEffectivenessChart, DAOVoterParticipation, VotingMechanismChart, GovernanceStackChart } from '@/components/mdx/computational-constitutions-charts';
 import { DataSourceDisruption, MethodologicalEvolution, PolarizationFindings, ObserverEffectChart } from '@/components/mdx/computational-social-science-charts';
 import { MonasteryPrincipleChart, AttentionSpanDecline, InterruptionCostChart, RetreatMovementsTimeline, SilenceEconomyChart } from '@/components/mdx/digital-monasticism-charts';
-import { PlaybookHeroCard, AutomationROIChart, ContentPipelineFlow, OutreachPipeline, AIMaturityLevels, ImplementationTimeline, NurtureSequence, ImplementationChecklist, SocialListeningMap, SupportTierChart, DashboardMetricsMap, UseCaseCatalog } from '@/components/mdx/playbook-charts';
+import { PlaybookHeroCard, AgentToolsMap, AutomationROIChart, ContentPipelineFlow, OutreachPipeline, AIMaturityLevels, ImplementationTimeline, NurtureSequence, ImplementationChecklist, SocialListeningMap, SupportTierChart, DashboardMetricsMap, UseCaseCatalog } from '@/components/mdx/playbook-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -403,6 +403,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               RetreatMovementsTimeline,
               SilenceEconomyChart,
               PlaybookHeroCard,
+              AgentToolsMap,
               AutomationROIChart,
               ContentPipelineFlow,
               OutreachPipeline,
