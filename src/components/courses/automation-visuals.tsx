@@ -270,6 +270,283 @@ export function PipelineBlueprint() {
   );
 }
 
+/* ─── Module 1 (B): ROI Calculator Framework ─── */
+export function ROICalculator() {
+  const examples = [
+    { task: 'Social media posting', freq: 'Daily', manual: '15 min', annual: '65 hrs', buildTime: '4 hrs', monthlyCost: '$20', annualSavings: '$2,210', verdict: 'Build' },
+    { task: 'Job board aggregation', freq: '3x/day', manual: '30 min', annual: '390 hrs', buildTime: '8 hrs', monthlyCost: '$10', annualSavings: '$18,880', verdict: 'Build' },
+    { task: 'Invoice processing', freq: 'Weekly', manual: '45 min', annual: '39 hrs', buildTime: '6 hrs', monthlyCost: '$15', annualSavings: '$1,370', verdict: 'Build' },
+    { task: 'Quarterly strategy review', freq: '4x/year', manual: '4 hrs', annual: '16 hrs', buildTime: '12 hrs', monthlyCost: '$0', annualSavings: '-$200', verdict: 'Skip' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Automation ROI Calculator</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">When to automate vs when to stay manual</p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-[11px]">
+            <thead>
+              <tr className="border-b border-[#e3e3e0] dark:border-zinc-800">
+                {['Task', 'Freq', 'Manual', 'Annual Hrs', 'Build', 'Monthly', 'Net Savings', ''].map(h => (
+                  <th key={h} className="text-left px-2 py-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] whitespace-nowrap">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {examples.map(e => (
+                <tr key={e.task} className="border-b border-[#e3e3e0]/40 dark:border-zinc-800/40">
+                  <td className="px-2 py-2 font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{e.task}</td>
+                  <td className="px-2 py-2 text-muted-foreground">{e.freq}</td>
+                  <td className="px-2 py-2 text-muted-foreground">{e.manual}</td>
+                  <td className="px-2 py-2 text-muted-foreground">{e.annual}</td>
+                  <td className="px-2 py-2 text-muted-foreground">{e.buildTime}</td>
+                  <td className="px-2 py-2 text-muted-foreground">{e.monthlyCost}</td>
+                  <td className="px-2 py-2 font-bold" style={{ color: e.verdict === 'Build' ? '#10b981' : '#ef4444' }}>{e.annualSavings}</td>
+                  <td className="px-2 py-2">
+                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: e.verdict === 'Build' ? '#10b98115' : '#ef444415', color: e.verdict === 'Build' ? '#10b981' : '#ef4444' }}>{e.verdict}</span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="mt-4 rounded-[3px] bg-[#f7f6f3] dark:bg-zinc-800/40 px-4 py-2.5">
+          <span className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]"><strong>Formula:</strong> Annual Savings = (Manual Hours x $50/hr) - (Build Hours x $50/hr) - (Monthly Cost x 12) - (Maintenance: 1hr/mo x $50 x 12)</span>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 2 (B): Authentication Patterns ─── */
+export function AuthPatterns() {
+  const patterns = [
+    { method: 'API Key', security: 'Low', setup: 'Instant', use: 'Testing, internal tools', how: 'Header: Authorization: Bearer sk-xxx', color: '#f59e0b' },
+    { method: 'OAuth 2.0', security: 'High', setup: '30 min', use: 'Production, user data', how: 'Token exchange flow with refresh tokens', color: '#10b981' },
+    { method: 'Webhook Secret', security: 'Medium', setup: '5 min', use: 'Incoming webhooks', how: 'HMAC-SHA256 signature verification', color: '#3b82f6' },
+    { method: 'Service Account', security: 'High', setup: '15 min', use: 'Server-to-server', how: 'JSON key file, no user interaction', color: '#8b5cf6' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">API Authentication Patterns</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four methods ranked by security level and setup complexity</p>
+        <div className="space-y-2">
+          {patterns.map(p => (
+            <div key={p.method} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden" style={{ borderLeftWidth: '3px', borderLeftColor: p.color }}>
+              <div className="px-4 py-2.5 flex flex-col md:flex-row md:items-center gap-1 md:gap-4">
+                <div className="flex items-center gap-2 min-w-[120px]">
+                  <span className="text-xs font-bold" style={{ color: p.color }}>{p.method}</span>
+                  <span className="text-[9px] font-mono px-1.5 py-0.5 rounded" style={{ backgroundColor: p.color + '15', color: p.color }}>Security: {p.security}</span>
+                </div>
+                <span className="text-[10px] text-muted-foreground flex-1">{p.how}</span>
+                <span className="text-[10px] text-muted-foreground/60">Best for: {p.use}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 3 (B): Workflow Decision Tree ─── */
+export function WorkflowDecisionTree() {
+  const decisions = [
+    { question: 'Do you need to write custom code?', yes: 'Use n8n (Code Node) or raw scripts', no: 'Any no-code tool works', color: '#3b82f6' },
+    { question: 'Do you need self-hosting / data control?', yes: 'n8n (Docker, Railway, VPS)', no: 'Make or Zapier (cloud-hosted)', color: '#8b5cf6' },
+    { question: 'Do you need complex branching logic?', yes: 'Make (best visual branching)', no: 'Zapier (simplest setup)', color: '#f59e0b' },
+    { question: 'Will you process >1,000 tasks/month?', yes: 'n8n (no per-task pricing)', no: 'Any tool (free tiers suffice)', color: '#10b981' },
+    { question: 'Do you need AI processing in workflows?', yes: 'n8n (best AI node support)', no: 'All three support basic AI', color: '#ef4444' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">No-Code Tool Selection Guide</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Answer these five questions to pick the right platform</p>
+        <div className="space-y-2">
+          {decisions.map((d, i) => (
+            <div key={d.question} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3">
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-5 h-5 rounded-full flex items-center justify-center text-white text-[10px] font-bold shrink-0" style={{ backgroundColor: d.color }}>{i + 1}</div>
+                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{d.question}</span>
+              </div>
+              <div className="grid grid-cols-2 gap-2 ml-7">
+                <div className="text-[10px] rounded-[3px] bg-green-50 dark:bg-green-900/10 px-2.5 py-1.5 border border-green-200/50 dark:border-green-800/30">
+                  <span className="font-bold text-green-700 dark:text-green-400">Yes:</span> <span className="text-green-800/70 dark:text-green-300/70">{d.yes}</span>
+                </div>
+                <div className="text-[10px] rounded-[3px] bg-red-50 dark:bg-red-900/10 px-2.5 py-1.5 border border-red-200/50 dark:border-red-800/30">
+                  <span className="font-bold text-red-700 dark:text-red-400">No:</span> <span className="text-red-800/70 dark:text-red-300/70">{d.no}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 4 (B): Tool Calling Flow ─── */
+export function ToolCallingFlow() {
+  const steps = [
+    { label: 'User Prompt', detail: '"Find all open engineering jobs at Stripe and add them to my spreadsheet"', type: 'input' },
+    { label: 'Agent Reasoning', detail: 'I need to: (1) call the Stripe jobs API, (2) filter for engineering roles, (3) format the data, (4) write to Google Sheets', type: 'think' },
+    { label: 'Tool Call 1', detail: 'fetch("https://api.stripe.com/jobs") → Returns 47 positions', type: 'action' },
+    { label: 'Tool Call 2', detail: 'filter(jobs, department="Engineering") → 12 matches', type: 'action' },
+    { label: 'Tool Call 3', detail: 'sheets.update("Jobs!A2:E13", formattedData) → 12 rows written', type: 'action' },
+    { label: 'Result', detail: '"Done. Added 12 engineering positions from Stripe to your Jobs spreadsheet."', type: 'output' },
+  ];
+  const colors: Record<string, string> = { input: '#3b82f6', think: '#f59e0b', action: '#10b981', output: '#8b5cf6' };
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Tool Calling in Practice</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">How an agent decomposes a natural language request into API calls</p>
+        <div className="relative">
+          <div className="absolute left-[18px] top-0 bottom-0 w-px bg-[#e3e3e0] dark:bg-zinc-800" />
+          <div className="space-y-2">
+            {steps.map(s => (
+              <div key={s.label} className="grid grid-cols-[36px_1fr] gap-3 items-start">
+                <div className="relative flex items-center justify-center pt-2">
+                  <div className="w-[9px] h-[9px] rounded-full" style={{ backgroundColor: colors[s.type] }} />
+                </div>
+                <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-2.5">
+                  <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: colors[s.type] }}>{s.label}</span>
+                  <p className="text-[11px] text-muted-foreground mt-0.5 font-mono">{s.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 5 (B): MCP Server Catalog ─── */
+export function MCPServerCatalog() {
+  const servers = [
+    { name: 'Google Sheets', tools: 8, examples: 'read, write, create, search cells', category: 'Data', color: '#10b981' },
+    { name: 'Slack', tools: 5, examples: 'post message, read channels, react', category: 'Communication', color: '#3b82f6' },
+    { name: 'PostgreSQL', tools: 4, examples: 'query, insert, update, schema', category: 'Database', color: '#8b5cf6' },
+    { name: 'GitHub', tools: 12, examples: 'create PR, read issues, merge, search', category: 'Development', color: '#ef4444' },
+    { name: 'Filesystem', tools: 6, examples: 'read, write, list, search, move files', category: 'System', color: '#f59e0b' },
+    { name: 'Browser', tools: 5, examples: 'navigate, click, screenshot, read page', category: 'Web', color: '#06b6d4' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">MCP Server Catalog</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Production-ready MCP servers for common automation targets</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          {servers.map(s => (
+            <div key={s.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3 flex items-start gap-3">
+              <div className="w-8 h-8 rounded-[3px] flex items-center justify-center text-white text-[10px] font-bold shrink-0" style={{ backgroundColor: s.color }}>{s.tools}</div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{s.name}</span>
+                  <span className="text-[9px] px-1.5 py-0.5 rounded border border-[#e3e3e0] dark:border-zinc-800 text-muted-foreground">{s.category}</span>
+                </div>
+                <p className="text-[10px] text-muted-foreground mt-0.5">Tools: {s.examples}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 rounded-[3px] bg-[#f7f6f3] dark:bg-zinc-800/40 px-4 py-2.5">
+          <span className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]"><strong>Composability:</strong> Chain multiple MCP servers in a single agent session. Query PostgreSQL, transform with AI, write results to Google Sheets, notify via Slack.</span>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 6 (B): Pipeline Case Studies ─── */
+export function PipelineCaseStudies() {
+  const cases = [
+    { name: 'Job Aggregation', trigger: 'Cron 3x/day', fetch: '50+ company APIs', transform: 'Deduplicate, filter roles', act: 'Post to Telegram', report: 'Log to Sheets', stack: 'Node.js + GitHub Actions', color: '#3b82f6' },
+    { name: 'News Digest', trigger: 'Cron daily', fetch: '30 RSS feeds', transform: 'AI summarize, score', act: 'Email via SES', report: 'Slack notification', stack: 'Node.js + AWS SES', color: '#10b981' },
+    { name: 'Lead Enrichment', trigger: 'New Sheets row', fetch: 'LinkedIn + Clearbit', transform: 'ICP scoring, AI personalize', act: 'Add to outreach sequence', report: 'CRM update', stack: 'n8n + Claude', color: '#8b5cf6' },
+    { name: 'Content Publishing', trigger: 'Git push', fetch: 'MDX files', transform: 'Build + optimize images', act: 'Deploy to Vercel', report: 'Social post', stack: 'GitHub Actions + Vercel', color: '#f59e0b' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Pipeline Case Studies</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four production pipelines showing the Trigger-Fetch-Transform-Act-Report pattern</p>
+        <div className="space-y-2">
+          {cases.map(c => (
+            <div key={c.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden">
+              <div className="px-4 py-2 border-b border-[#e3e3e0] dark:border-zinc-800 flex items-center justify-between" style={{ backgroundColor: c.color + '08' }}>
+                <span className="text-xs font-bold" style={{ color: c.color }}>{c.name}</span>
+                <span className="text-[9px] font-mono text-muted-foreground/60">{c.stack}</span>
+              </div>
+              <div className="grid grid-cols-5 divide-x divide-[#e3e3e0]/40 dark:divide-zinc-800/40">
+                {[
+                  { label: 'Trigger', val: c.trigger },
+                  { label: 'Fetch', val: c.fetch },
+                  { label: 'Transform', val: c.transform },
+                  { label: 'Act', val: c.act },
+                  { label: 'Report', val: c.report },
+                ].map(s => (
+                  <div key={s.label} className="px-2.5 py-2">
+                    <div className="text-[9px] font-bold text-muted-foreground/60 uppercase tracking-wider">{s.label}</div>
+                    <div className="text-[10px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)] mt-0.5">{s.val}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 7 (B): Cost Breakdown ─── */
+export function CostBreakdown() {
+  const items = [
+    { service: 'GitHub Actions', free: '2,000 min/mo', paid: '$0.008/min', usage: 'Cron triggers, CI/CD', color: '#37352f' },
+    { service: 'Claude API', free: 'None', paid: '$3/M input, $15/M output', usage: 'AI processing, summarization', color: '#8b5cf6' },
+    { service: 'OpenAI API', free: 'None', paid: '$2.50/M input, $10/M output', usage: 'Embeddings, classification', color: '#10b981' },
+    { service: 'Vercel Cron', free: '1 cron/day', paid: '$20/mo (Pro)', usage: 'Serverless triggers', color: '#37352f' },
+    { service: 'n8n Cloud', free: 'None', paid: '$24/mo starter', usage: 'No-code workflows', color: '#ef4444' },
+    { service: 'AWS SES', free: '3,000 emails/mo', paid: '$0.10 per 1,000', usage: 'Email delivery', color: '#f59e0b' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Automation Cost Breakdown</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Realistic monthly costs for a typical startup automation stack</p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-[11px]">
+            <thead>
+              <tr className="border-b border-[#e3e3e0] dark:border-zinc-800">
+                {['Service', 'Free Tier', 'Paid Pricing', 'Use Case'].map(h => (
+                  <th key={h} className="text-left px-2 py-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {items.map(item => (
+                <tr key={item.service} className="border-b border-[#e3e3e0]/40 dark:border-zinc-800/40">
+                  <td className="px-2 py-2 font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{item.service}</td>
+                  <td className="px-2 py-2 text-muted-foreground">{item.free}</td>
+                  <td className="px-2 py-2 font-mono text-muted-foreground">{item.paid}</td>
+                  <td className="px-2 py-2 text-muted-foreground/60">{item.usage}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="mt-4 rounded-[3px] bg-[#f7f6f3] dark:bg-zinc-800/40 px-4 py-2.5">
+          <span className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]"><strong>Typical startup bill:</strong> $30-80/month for a stack running 5-10 automated pipelines. GitHub Actions free tier covers most scheduling needs. AI API costs scale with volume but stay low for batch processing.</span>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
 /* ─── Module 7: Production Monitoring Dashboard ─── */
 export function MonitoringDashboard() {
   const metrics = [

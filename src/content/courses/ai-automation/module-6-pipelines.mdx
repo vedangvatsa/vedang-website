@@ -7,6 +7,8 @@ description: "Combine APIs, AI agents, and MCP servers into end-to-end automated
 
 Individual automations are useful. Pipelines that chain multiple automations together are transformative. This module teaches you to build complete, end-to-end systems using everything you've learned.
 
+A pipeline is a sequence of stages where the output of each stage feeds into the next. The Trigger-Fetch-Transform-Act-Report pattern provides a universal template. Every production automation, from job aggregation bots to content publishing systems to lead enrichment workflows, follows this five-stage architecture. The key engineering principle is that each stage should be independent and idempotent: if the Transform stage fails, you can re-run it without duplicating the Fetch results. This modularity is what separates hobby automations that break every week from production systems that run for months without intervention.
+
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">Pipeline Architecture: Trigger → Fetch → Transform → Act → Report</AccordionTrigger>
@@ -161,6 +163,8 @@ const results = await Promise.allSettled(sources);`}</code></pre>
         </AccordionContent>
     </AccordionItem>
 </Accordion>
+
+<PipelineCaseStudies />
 
 <KnowledgeCheck
   question="Why is idempotency important in automation pipelines?"

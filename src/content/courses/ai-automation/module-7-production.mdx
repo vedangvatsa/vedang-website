@@ -7,6 +7,8 @@ description: "Ship your automations to production. Set up cron jobs, monitor hea
 
 An automation that only works when you're watching isn't really an automation. Production-grade pipelines run reliably 24/7, recover from errors, alert you only when needed, and cost predictably.
 
+The transition from development to production is where most automation projects fail. A pipeline that works perfectly in testing breaks in production because an API rate-limits you, a cron job overlaps with the previous run, or an edge case in the data causes a silent failure that compounds over days. This module covers the operational infrastructure that prevents these failures: scheduling strategies, heartbeat monitoring, structured error handling, cost tracking, and the observability patterns that let you sleep at night while your automations run.
+
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">Scheduling: Cron, GitHub Actions & Serverless</AccordionTrigger>
@@ -182,6 +184,8 @@ async function reportPipelineStatus(pipeline, results) {
         </AccordionContent>
     </AccordionItem>
 </Accordion>
+
+<CostBreakdown />
 
 <KnowledgeCheck
   question="Your daily job broadcast pipeline has been working for 3 months but suddenly starts failing silently. What monitoring practice would have caught this earliest?"

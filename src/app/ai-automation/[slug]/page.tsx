@@ -10,7 +10,7 @@ import { ArrowLeft } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { KnowledgeCheck } from '@/components/mdx/knowledge-check';
-import { AutomationLayers, APIFlowDiagram, NoCodeToolsGrid, AgentArchitecture, MCPAutomationStack, PipelineBlueprint, MonitoringDashboard } from '@/components/courses/automation-visuals';
+import { AutomationLayers, APIFlowDiagram, NoCodeToolsGrid, AgentArchitecture, MCPAutomationStack, PipelineBlueprint, MonitoringDashboard, ROICalculator, AuthPatterns, WorkflowDecisionTree, ToolCallingFlow, MCPServerCatalog, PipelineCaseStudies, CostBreakdown } from '@/components/courses/automation-visuals';
 import { MarkComplete } from '@/components/mark-complete';
 import { courseConfigs } from '@/lib/course-config';
 
@@ -49,6 +49,8 @@ const mdxComponents = {
     KnowledgeCheck, Link,
     AutomationLayers, APIFlowDiagram, NoCodeToolsGrid, AgentArchitecture,
     MCPAutomationStack, PipelineBlueprint, MonitoringDashboard,
+    ROICalculator, AuthPatterns, WorkflowDecisionTree, ToolCallingFlow,
+    MCPServerCatalog, PipelineCaseStudies, CostBreakdown,
 };
 
 export default async function CourseModulePage({ params }: { params: Promise<{ slug: string }> }) {

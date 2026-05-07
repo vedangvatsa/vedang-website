@@ -5,7 +5,9 @@ description: "APIs are the building blocks of every automation. Learn REST, auth
 
 <APIFlowDiagram />
 
-Every automation. whether no-code or AI-powered. ultimately works by calling APIs. Understanding how APIs work means you can connect any two services, even ones that no-code tools don't support yet.
+Every automation, whether no-code or AI-powered, ultimately works by calling APIs. Understanding how APIs work means you can connect any two services, even ones that no-code tools don't support yet.
+
+The API layer is the foundation of the entire automation stack. No-code platforms like n8n and Make are visual wrappers around API calls. AI agents use tool calling to invoke APIs on your behalf. Even MCP servers are structured API interfaces. When you understand REST, authentication, and webhooks at a fundamental level, you can debug any broken automation, build integrations that no pre-built connector covers, and reason about the data flowing through your pipelines. This module provides that foundation.
 
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
@@ -234,6 +236,8 @@ while (hasMore) {
         </AccordionContent>
     </AccordionItem>
 </Accordion>
+
+<AuthPatterns />
 
 <KnowledgeCheck
   question="What's the key difference between polling an API and using a webhook?"

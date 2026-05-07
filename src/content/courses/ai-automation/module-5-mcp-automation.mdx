@@ -5,9 +5,11 @@ description: "MCP servers turn AI agents into automation powerhouses. Connect Cl
 
 <MCPAutomationStack />
 
-MCP is the bridge between AI agents and real-world services. Without MCP, an AI agent can only generate text. With MCP, it can query your database, update a spreadsheet, send a Slack message, and deploy code. all in a single conversation.
+MCP is the bridge between AI agents and real-world services. Without MCP, an AI agent can only generate text. With MCP, it can query your database, update a spreadsheet, send a Slack message, and deploy code, all in a single conversation.
 
 If you haven't explored MCP yet, the [MCP Development 101](/mcp-development) course covers building servers from scratch. This module focuses on using existing MCP servers as automation building blocks.
+
+The architectural insight behind MCP is composability. Each MCP server exposes a focused set of tools for a single service: Google Sheets, Slack, PostgreSQL, GitHub. An AI agent can discover available tools at runtime and chain them together to accomplish goals that no single tool was designed for. A prompt like "pull last week's signups from the database, calculate conversion rates, update the metrics sheet, and post the summary to the team Slack" requires four MCP servers working in sequence, but the agent orchestrates the entire flow from a single natural language instruction.
 
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
@@ -163,6 +165,8 @@ for (const job of jobs.slice(0, 10)) {
         </AccordionContent>
     </AccordionItem>
 </Accordion>
+
+<MCPServerCatalog />
 
 <KnowledgeCheck
   question="What's the main advantage of using MCP servers for automation instead of calling APIs directly in a script?"

@@ -9,6 +9,8 @@ Traditional automation follows rigid rules: "if X, then Y." AI agents break this
 
 If you've taken the [Agentic Web](/agentic-web) course, you understand the theory. This module is about putting agents to work as practical automators.
 
+The operational difference between a script and an agent is adaptability. A script that processes job listings breaks when the API changes its response format. An agent reads the new format, adjusts its parsing logic, and continues processing. This resilience is why agents are replacing brittle rule-based automation in production workflows. The tradeoff is cost and latency: every agent action involves an LLM inference call. The decision framework is straightforward: use agents for tasks that require reasoning, and use scripts for tasks that are purely mechanical.
+
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">The Agent Loop: Observe → Think → Act → Learn</AccordionTrigger>
@@ -182,6 +184,8 @@ const response = await anthropic.messages.create({
         </AccordionContent>
     </AccordionItem>
 </Accordion>
+
+<ToolCallingFlow />
 
 <KnowledgeCheck
   question="What makes AI agents better than rule-based automation for social media management?"
