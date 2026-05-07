@@ -914,13 +914,15 @@
     "id": "stepwise-ai",
     "scheduleDate": "2026-04-21",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
     "tags": [
       "AI",
       "enterprise"
     ],
-    "text": "Klarna automated support. Saved $60M. Satisfaction tanked. They hired people back.\n\n70% of big-bang AI deployments fail. Companies that pick one boring task first see payback in three months.\n\nThe failure is always sequence, not technology.\n\nveda.ng/stepwise-ai"
+    "text": "Klarna automated support. Saved $60M. Satisfaction tanked. They hired people back.\n\n70% of big-bang AI deployments fail. Companies that pick one boring task first see payback in three months.\n\nThe failure is always sequence, not technology.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-05-07T13:19:58.063Z",
+    "tumblrId": "815959897822904320"
   },
   {
     "id": "universal-text-ui",
