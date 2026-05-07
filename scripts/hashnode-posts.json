@@ -9,8 +9,10 @@
       "automation"
     ],
     "scheduleDate": "2026-03-27",
-    "posted": false,
-    "scheduleTime": "01:00"
+    "posted": true,
+    "scheduleTime": "01:00",
+    "postedAt": "2026-05-07T20:49:54.726Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/agentic-commerce-1"
   },
   {
     "id": "hashnode-dark-forest-internet",

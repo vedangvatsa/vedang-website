@@ -373,6 +373,7 @@
     ],
     "scheduleDate": "2026-04-22",
     "scheduleTime": "09:00",
-    "posted": false
+    "posted": false,
+    "error": "Essay not found: agentic-state"
   }
 ]
