@@ -12,13 +12,15 @@ import Link from 'next/link';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { KnowledgeCheck } from '@/components/mdx/knowledge-check';
-import { ActionWebEvolution, AgentComponents, AgenticDimensions, AgenticApps, AgenticFuture, ProtocolDiagram, AgentBuildSteps } from '@/components/courses/agentic-visuals';
+import { ActionWebEvolution, AgentComponents, AgenticDimensions, AgenticApps, AgenticFuture, ProtocolDiagram, AgentBuildSteps, WebParadigmStats, ToolEcosystem, AutonomySpectrum, AgenticIndustryAdoption, AgentRiskMatrix, AgentProtocolComparison, AgentBuildChecklist } from '@/components/courses/agentic-visuals';
 
 const mdxComponents = {
     Accordion, AccordionItem, AccordionTrigger, AccordionContent,
     Card, CardHeader, CardTitle, CardContent, CardDescription,
     KnowledgeCheck, ActionWebEvolution, AgentComponents, AgenticDimensions,
     AgenticApps, AgenticFuture, ProtocolDiagram, AgentBuildSteps, Link,
+    WebParadigmStats, ToolEcosystem, AutonomySpectrum, AgenticIndustryAdoption,
+    AgentRiskMatrix, AgentProtocolComparison, AgentBuildChecklist,
 };
 
 const config = courseConfigs['agentic-web'];

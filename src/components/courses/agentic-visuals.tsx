@@ -260,3 +260,229 @@ export function AgentBuildSteps() {
     </figure>
   );
 }
+
+/* ─── Module 1 (B): Web Paradigm Stats ─── */
+export function WebParadigmStats() {
+  const stats = [
+    { label: 'API calls/day globally', value: '50B+', source: 'Akamai 2024', color: '#3b82f6' },
+    { label: 'AI agent market (2028)', value: '$65B', source: 'MarketsandMarkets', color: '#8b5cf6' },
+    { label: 'Tasks delegated to agents', value: '35%', source: 'McKinsey 2025', color: '#10b981' },
+    { label: 'MCP servers published', value: '2,500+', source: 'Anthropic Registry', color: '#f59e0b' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Agentic Web in Numbers</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Key metrics indicating the shift from search to action</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+          {stats.map(s => (
+            <div key={s.label} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3 text-center">
+              <div className="text-lg md:text-xl font-bold" style={{ color: s.color }}>{s.value}</div>
+              <div className="text-[10px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] mt-0.5">{s.label}</div>
+              <div className="text-[9px] text-muted-foreground/60 mt-0.5">{s.source}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 2 (B): Tool Ecosystem ─── */
+export function ToolEcosystem() {
+  const categories = [
+    { name: 'Search', tools: ['Perplexity', 'Genspark', 'You.com'], color: '#3b82f6' },
+    { name: 'Code', tools: ['Cursor', 'Claude Code', 'Antigravity'], color: '#8b5cf6' },
+    { name: 'Data', tools: ['MCP Sheets', 'Postgres MCP', 'Browser MCP'], color: '#10b981' },
+    { name: 'Commerce', tools: ['Shopify Agents', 'Stripe MCP', 'Payment APIs'], color: '#f59e0b' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Agent Tool Ecosystem</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">How agents connect to real-world services across domains</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+          {categories.map(c => (
+            <div key={c.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden">
+              <div className="px-3 py-2 border-b border-[#e3e3e0] dark:border-zinc-800" style={{ backgroundColor: c.color + '08' }}>
+                <span className="text-xs font-bold" style={{ color: c.color }}>{c.name}</span>
+              </div>
+              <div className="px-3 py-2">
+                {c.tools.map(t => (
+                  <div key={t} className="text-[10px] text-muted-foreground py-0.5">{t}</div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 3 (B): Autonomy Spectrum ─── */
+export function AutonomySpectrum() {
+  const levels = [
+    { level: 'L1: Copilot', desc: 'AI suggests, human decides and executes', example: 'GitHub Copilot autocomplete', effort: '80% human', color: '#ef4444' },
+    { level: 'L2: Assistant', desc: 'AI drafts, human reviews and approves', example: 'Claude drafting emails for review', effort: '50% human', color: '#f59e0b' },
+    { level: 'L3: Agent', desc: 'AI plans and executes, human monitors', example: 'Antigravity building a feature end-to-end', effort: '20% human', color: '#3b82f6' },
+    { level: 'L4: Autonomous', desc: 'AI runs independently, human sets goals', example: 'Cron-triggered pipeline with error recovery', effort: '5% human', color: '#10b981' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Autonomy Spectrum</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four levels of AI agency, from copilot to fully autonomous</p>
+        <div className="space-y-2">
+          {levels.map(l => (
+            <div key={l.level} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-4" style={{ borderLeftWidth: '3px', borderLeftColor: l.color }}>
+              <div className="min-w-[100px]">
+                <span className="text-xs font-bold" style={{ color: l.color }}>{l.level}</span>
+              </div>
+              <span className="text-[10px] text-muted-foreground flex-1">{l.desc}</span>
+              <span className="text-[10px] text-muted-foreground/60 italic">{l.example}</span>
+              <span className="text-[9px] font-mono px-1.5 py-0.5 rounded" style={{ backgroundColor: l.color + '15', color: l.color }}>{l.effort}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 4 (B): Industry Adoption ─── */
+export function AgenticIndustryAdoption() {
+  const sectors = [
+    { sector: 'Software Dev', adoption: '72%', use: 'Code generation, testing, deployment', leader: 'Cursor, Antigravity', color: '#8b5cf6' },
+    { sector: 'Customer Support', adoption: '58%', use: 'Ticket resolution, knowledge retrieval', leader: 'Intercom, Zendesk AI', color: '#3b82f6' },
+    { sector: 'Finance', adoption: '41%', use: 'Fraud detection, report generation', leader: 'Bloomberg GPT, Stripe', color: '#10b981' },
+    { sector: 'Legal', adoption: '23%', use: 'Contract review, case research', leader: 'Harvey AI, Casetext', color: '#f59e0b' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Agent Adoption by Industry</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Where agentic AI is deployed in production today</p>
+        <div className="space-y-1.5">
+          {sectors.map(s => (
+            <div key={s.sector} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 px-4 py-2.5 flex items-center gap-3">
+              <div className="w-12 text-right">
+                <span className="text-sm font-bold" style={{ color: s.color }}>{s.adoption}</span>
+              </div>
+              <div className="w-16 h-1.5 rounded-full bg-[#e3e3e0] dark:bg-zinc-800 overflow-hidden">
+                <div className="h-full rounded-full" style={{ width: s.adoption, backgroundColor: s.color }} />
+              </div>
+              <span className="text-xs font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] min-w-[120px]">{s.sector}</span>
+              <span className="text-[10px] text-muted-foreground flex-1 hidden md:block">{s.use}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 5 (B): Risk Matrix ─── */
+export function AgentRiskMatrix() {
+  const risks = [
+    { risk: 'Prompt Injection', severity: 'Critical', mitigation: 'Input validation, output filtering, sandboxed execution', color: '#ef4444' },
+    { risk: 'Hallucinated Actions', severity: 'High', mitigation: 'Human-in-the-loop for destructive operations, confirmation gates', color: '#f59e0b' },
+    { risk: 'Data Exfiltration', severity: 'High', mitigation: 'Least-privilege tool access, audit logging, network isolation', color: '#f59e0b' },
+    { risk: 'Cost Runaway', severity: 'Medium', mitigation: 'Token budgets, rate limiting, billing alerts per pipeline', color: '#3b82f6' },
+    { risk: 'Stale Context', severity: 'Low', mitigation: 'Context window management, explicit memory resets', color: '#10b981' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Agent Risk Matrix</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Security and reliability risks in production agent deployments</p>
+        <div className="space-y-1.5">
+          {risks.map(r => (
+            <div key={r.risk} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 px-4 py-2.5 flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
+              <div className="flex items-center gap-2 min-w-[180px]">
+                <span className="text-xs font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{r.risk}</span>
+                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: r.color + '15', color: r.color }}>{r.severity}</span>
+              </div>
+              <span className="text-[10px] text-muted-foreground">{r.mitigation}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 6 (B): Protocol Comparison ─── */
+export function AgentProtocolComparison() {
+  const protocols = [
+    { name: 'MCP', org: 'Anthropic', transport: 'stdio / HTTP', focus: 'Tool calling for AI agents', status: 'Production', color: '#8b5cf6' },
+    { name: 'OpenAPI', org: 'Linux Foundation', transport: 'HTTP REST', focus: 'API documentation and client generation', status: 'Mature', color: '#3b82f6' },
+    { name: 'A2A', org: 'Google', transport: 'HTTP + SSE', focus: 'Agent-to-agent communication', status: 'Early', color: '#10b981' },
+    { name: 'ACP', org: 'Cisco', transport: 'HTTP', focus: 'Enterprise agent collaboration', status: 'Draft', color: '#f59e0b' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Agent Protocol Landscape</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Competing standards for agent interoperability</p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-[11px]">
+            <thead>
+              <tr className="border-b border-[#e3e3e0] dark:border-zinc-800">
+                {['Protocol', 'Org', 'Transport', 'Focus', 'Status'].map(h => (
+                  <th key={h} className="text-left px-2 py-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {protocols.map(p => (
+                <tr key={p.name} className="border-b border-[#e3e3e0]/40 dark:border-zinc-800/40">
+                  <td className="px-2 py-2 font-bold" style={{ color: p.color }}>{p.name}</td>
+                  <td className="px-2 py-2 text-muted-foreground">{p.org}</td>
+                  <td className="px-2 py-2 font-mono text-muted-foreground">{p.transport}</td>
+                  <td className="px-2 py-2 text-muted-foreground">{p.focus}</td>
+                  <td className="px-2 py-2"><span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: p.color + '15', color: p.color }}>{p.status}</span></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 7 (B): Agent Build Checklist ─── */
+export function AgentBuildChecklist() {
+  const phases = [
+    { phase: 'Define', items: ['Write the agent goal in one sentence', 'List required tools and APIs', 'Identify the output format'], color: '#3b82f6' },
+    { phase: 'Build', items: ['Set up MCP servers or tool definitions', 'Write the system prompt with constraints', 'Test with sample inputs'], color: '#f59e0b' },
+    { phase: 'Harden', items: ['Add error handling and retry logic', 'Set token/cost budgets', 'Add human review gates for destructive actions'], color: '#10b981' },
+    { phase: 'Deploy', items: ['Wire to a scheduler (cron, webhook)', 'Set up monitoring and alerting', 'Document the pipeline in a README'], color: '#8b5cf6' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Agent Build Checklist</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four-phase workflow for shipping a production agent</p>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
+          {phases.map(p => (
+            <div key={p.phase} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden">
+              <div className="px-3 py-2 border-b border-[#e3e3e0] dark:border-zinc-800" style={{ backgroundColor: p.color + '08' }}>
+                <span className="text-xs font-bold" style={{ color: p.color }}>{p.phase}</span>
+              </div>
+              <div className="px-3 py-2">
+                {p.items.map(item => (
+                  <div key={item} className="flex items-start gap-2 py-1">
+                    <div className="w-3 h-3 rounded-sm border border-[#e3e3e0] dark:border-zinc-700 shrink-0 mt-0.5" />
+                    <span className="text-[10px] text-muted-foreground">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}

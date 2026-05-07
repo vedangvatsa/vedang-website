@@ -36,7 +36,7 @@ This module introduces the foundational concept of prompt engineering. LLMs are 
             <p>Beyond the words you write, you can control the AI's output with a few key settings:</p>
             <ul className="my-6">
                 <li><strong>Temperature:</strong> Controls randomness. Low temperature (e.g., 0.2) is deterministic and good for factual answers. High temperature (e.g., 0.9) is more creative and good for brainstorming.</li>
-                <li><strong>Max Output Tokens:</strong> Limits the length of the response. This is crucial for controlling costs and ensuring responses are concise.</li>
+                <li><strong>Max Output Tokens:</strong> Limits the length of the response. This matters for controlling costs and ensuring responses are concise.</li>
                 <li><strong>Top-K and Top-P:</strong> These settings control the sampling of tokens. Top-K limits the model to the 'K' most likely next tokens. Top-P (nucleus sampling) selects from the smallest set of tokens whose cumulative probability exceeds 'P'. They provide another way to tune the creativity versus predictability of the model.</li>
             </ul>
             <p>As a general starting point, a temperature of 0.2, Top-P of 0.95, and Top-K of 40 will give you coherent, safe results. For creative tasks, try a temperature of 0.9.</p>
