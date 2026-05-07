@@ -12,7 +12,7 @@ import Link from 'next/link';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { KnowledgeCheck } from '@/components/mdx/knowledge-check';
-import { PredictionEngine, CoreTechniques, AdvancedReasoning, CodePrompting, BestPractices, RAGPipeline, PromptChaining } from '@/components/courses/pe-visuals';
+import { PredictionEngine, CoreTechniques, AdvancedReasoning, CodePrompting, BestPractices, RAGPipeline, PromptChaining, ModelComparison, PromptAnatomy, ReasoningStrategies, CodePromptPatterns, PromptAntiPatterns, RAGArchitecture, ChainTypes } from '@/components/courses/pe-visuals';
 
 const mdxComponents = {
     Accordion,
@@ -32,6 +32,8 @@ const mdxComponents = {
     BestPractices,
     RAGPipeline,
     PromptChaining,
+    ModelComparison, PromptAnatomy, ReasoningStrategies,
+    CodePromptPatterns, PromptAntiPatterns, RAGArchitecture, ChainTypes,
     Link,
 };
 

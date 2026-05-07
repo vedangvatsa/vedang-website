@@ -214,3 +214,228 @@ export function PromptChaining() {
     </figure>
   );
 }
+
+/* ─── Module 1 (B): Model Comparison ─── */
+export function ModelComparison() {
+  const models = [
+    { name: 'Claude Sonnet 4', context: '200K', strengths: 'Coding, instruction following, safety', cost: '$3/$15 per M tokens', color: '#8b5cf6' },
+    { name: 'GPT-4o', context: '128K', strengths: 'Multimodal, speed, tool calling', cost: '$2.50/$10 per M tokens', color: '#10b981' },
+    { name: 'Gemini 2.5 Pro', context: '1M', strengths: 'Long context, multilingual', cost: '$1.25/$10 per M tokens', color: '#3b82f6' },
+    { name: 'Llama 3.3 70B', context: '128K', strengths: 'Open source, self-hosted, free', cost: 'Free (local compute)', color: '#f59e0b' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Model Comparison</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Frontier models and their trade-offs for prompt engineering</p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-[11px]">
+            <thead><tr className="border-b border-[#e3e3e0] dark:border-zinc-800">
+              {['Model', 'Context', 'Strengths', 'Cost'].map(h => (
+                <th key={h} className="text-left px-2 py-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{h}</th>
+              ))}
+            </tr></thead>
+            <tbody>
+              {models.map(m => (
+                <tr key={m.name} className="border-b border-[#e3e3e0]/40 dark:border-zinc-800/40">
+                  <td className="px-2 py-2 font-bold" style={{ color: m.color }}>{m.name}</td>
+                  <td className="px-2 py-2 font-mono text-muted-foreground">{m.context}</td>
+                  <td className="px-2 py-2 text-muted-foreground">{m.strengths}</td>
+                  <td className="px-2 py-2 font-mono text-muted-foreground/60">{m.cost}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 2 (B): Prompt Anatomy ─── */
+export function PromptAnatomy() {
+  const parts = [
+    { name: 'System Prompt', desc: 'Defines role, constraints, and personality', example: '"You are a senior TypeScript engineer..."', color: '#8b5cf6' },
+    { name: 'Context', desc: 'Background information the model needs', example: 'Codebase files, documentation, data', color: '#3b82f6' },
+    { name: 'Task', desc: 'The specific action to perform', example: '"Refactor this function to use async/await"', color: '#10b981' },
+    { name: 'Output Format', desc: 'How the response should be structured', example: '"Return JSON with keys: title, summary, tags"', color: '#f59e0b' },
+    { name: 'Constraints', desc: 'Boundaries and restrictions', example: '"Do not modify the public API surface"', color: '#ef4444' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Anatomy of a High-Quality Prompt</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Five components that separate effective prompts from vague instructions</p>
+        <div className="space-y-1.5">
+          {parts.map(p => (
+            <div key={p.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 px-4 py-2.5 flex flex-col md:flex-row md:items-center gap-1 md:gap-3" style={{ borderLeftWidth: '3px', borderLeftColor: p.color }}>
+              <span className="text-xs font-bold min-w-[110px]" style={{ color: p.color }}>{p.name}</span>
+              <span className="text-[10px] text-muted-foreground flex-1">{p.desc}</span>
+              <span className="text-[10px] font-mono text-muted-foreground/60 hidden md:block">{p.example}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 3 (B): Reasoning Strategies ─── */
+export function ReasoningStrategies() {
+  const strategies = [
+    { name: 'Chain-of-Thought', when: 'Math, logic, multi-step problems', trigger: '"Think step by step"', quality: 'High', color: '#8b5cf6' },
+    { name: 'Few-Shot', when: 'Pattern matching, formatting', trigger: 'Provide 2-3 examples', quality: 'High', color: '#3b82f6' },
+    { name: 'Tree-of-Thought', when: 'Complex decisions, exploration', trigger: '"Consider multiple approaches"', quality: 'Very High', color: '#10b981' },
+    { name: 'Self-Reflection', when: 'Error correction, quality assurance', trigger: '"Review your answer and fix errors"', quality: 'High', color: '#f59e0b' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Reasoning Strategy Selection</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Which reasoning technique to use for different problem types</p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-[11px]">
+            <thead><tr className="border-b border-[#e3e3e0] dark:border-zinc-800">
+              {['Strategy', 'Best For', 'Trigger Phrase', 'Quality'].map(h => (
+                <th key={h} className="text-left px-2 py-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{h}</th>
+              ))}
+            </tr></thead>
+            <tbody>
+              {strategies.map(s => (
+                <tr key={s.name} className="border-b border-[#e3e3e0]/40 dark:border-zinc-800/40">
+                  <td className="px-2 py-2 font-bold" style={{ color: s.color }}>{s.name}</td>
+                  <td className="px-2 py-2 text-muted-foreground">{s.when}</td>
+                  <td className="px-2 py-2 font-mono text-muted-foreground">{s.trigger}</td>
+                  <td className="px-2 py-2"><span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: s.color + '15', color: s.color }}>{s.quality}</span></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 4 (B): Code Prompt Patterns ─── */
+export function CodePromptPatterns() {
+  const patterns = [
+    { pattern: 'Generate', example: '"Write a Node.js function that..."', output: 'New code from spec', color: '#3b82f6' },
+    { pattern: 'Refactor', example: '"Refactor to use async/await"', output: 'Improved existing code', color: '#10b981' },
+    { pattern: 'Debug', example: '"This throws TypeError, fix it"', output: 'Bug fix + explanation', color: '#ef4444' },
+    { pattern: 'Test', example: '"Write Jest tests for this module"', output: 'Test suite', color: '#f59e0b' },
+    { pattern: 'Document', example: '"Add JSDoc to every function"', output: 'Inline documentation', color: '#8b5cf6' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Code Prompt Patterns</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Five patterns for effective code generation and manipulation</p>
+        <div className="space-y-1.5">
+          {patterns.map(p => (
+            <div key={p.pattern} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 px-4 py-2.5 flex items-center gap-3" style={{ borderLeftWidth: '3px', borderLeftColor: p.color }}>
+              <span className="text-xs font-bold min-w-[80px]" style={{ color: p.color }}>{p.pattern}</span>
+              <span className="text-[10px] font-mono text-muted-foreground flex-1">{p.example}</span>
+              <span className="text-[10px] text-muted-foreground/60">{p.output}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 5 (B): Anti-Patterns ─── */
+export function PromptAntiPatterns() {
+  const antipatterns = [
+    { bad: 'Vague instructions', example: '"Make it better"', fix: '"Reduce function length to under 20 lines and add error handling"', color: '#ef4444' },
+    { bad: 'No output format', example: '"Summarize this"', fix: '"Summarize in 3 bullet points, each under 15 words"', color: '#f59e0b' },
+    { bad: 'Context dump', example: 'Pasting 10,000 lines of code', fix: 'Include only the relevant function + its interface', color: '#3b82f6' },
+    { bad: 'Multi-task prompt', example: '"Fix the bug, add tests, and refactor"', fix: 'Split into 3 separate prompts, chain the results', color: '#8b5cf6' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Prompt Anti-Patterns</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Common mistakes and their corrections</p>
+        <div className="space-y-2">
+          {antipatterns.map(a => (
+            <div key={a.bad} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3">
+              <div className="flex items-center gap-2 mb-1.5">
+                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: a.color + '15', color: a.color }}>{a.bad}</span>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="text-[10px] rounded-[3px] bg-red-50 dark:bg-red-900/10 px-2.5 py-1.5"><span className="font-bold text-red-600 dark:text-red-400">Bad: </span><span className="text-red-800/70 dark:text-red-300/70 font-mono">{a.example}</span></div>
+                <div className="text-[10px] rounded-[3px] bg-green-50 dark:bg-green-900/10 px-2.5 py-1.5"><span className="font-bold text-green-600 dark:text-green-400">Fix: </span><span className="text-green-800/70 dark:text-green-300/70">{a.fix}</span></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 6 (B): RAG Architecture ─── */
+export function RAGArchitecture() {
+  const steps = [
+    { step: 'Ingest', desc: 'Split documents into chunks (500-1000 tokens each)', color: '#3b82f6' },
+    { step: 'Embed', desc: 'Convert chunks to vectors using an embedding model', color: '#8b5cf6' },
+    { step: 'Store', desc: 'Index vectors in a vector database (Pinecone, Weaviate)', color: '#10b981' },
+    { step: 'Query', desc: 'Embed the user query, find nearest neighbors', color: '#f59e0b' },
+    { step: 'Generate', desc: 'Pass retrieved chunks as context to the LLM', color: '#ef4444' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">RAG Pipeline Architecture</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Five-stage Retrieval-Augmented Generation flow</p>
+        <div className="relative">
+          <div className="absolute left-[18px] top-0 bottom-0 w-px bg-[#e3e3e0] dark:bg-zinc-800" />
+          <div className="space-y-2">
+            {steps.map((s, i) => (
+              <div key={s.step} className="grid grid-cols-[36px_1fr] gap-3 items-start">
+                <div className="relative flex items-center justify-center pt-2">
+                  <div className="w-[22px] h-[22px] rounded-full flex items-center justify-center text-white text-[10px] font-bold" style={{ backgroundColor: s.color }}>{i + 1}</div>
+                </div>
+                <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-2.5">
+                  <span className="text-xs font-bold" style={{ color: s.color }}>{s.step}</span>
+                  <p className="text-[10px] text-muted-foreground mt-0.5">{s.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 7 (B): Chain Types ─── */
+export function ChainTypes() {
+  const chains = [
+    { name: 'Sequential', desc: 'Output of prompt A feeds into prompt B', example: 'Draft email -> Review tone -> Format', complexity: 'Low', color: '#10b981' },
+    { name: 'Parallel', desc: 'Run multiple prompts simultaneously, merge results', example: 'Analyze from 3 perspectives, combine', complexity: 'Medium', color: '#3b82f6' },
+    { name: 'Conditional', desc: 'Route to different prompts based on classification', example: 'Classify intent -> route to specialist', complexity: 'Medium', color: '#f59e0b' },
+    { name: 'Recursive', desc: 'Output triggers re-evaluation until quality threshold met', example: 'Write -> review -> rewrite loop', complexity: 'High', color: '#8b5cf6' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Prompt Chain Architectures</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four patterns for chaining multiple LLM calls together</p>
+        <div className="space-y-1.5">
+          {chains.map(c => (
+            <div key={c.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 px-4 py-2.5 flex flex-col md:flex-row md:items-center gap-1 md:gap-3" style={{ borderLeftWidth: '3px', borderLeftColor: c.color }}>
+              <span className="text-xs font-bold min-w-[90px]" style={{ color: c.color }}>{c.name}</span>
+              <span className="text-[10px] text-muted-foreground flex-1">{c.desc}</span>
+              <span className="text-[9px] font-mono text-muted-foreground/60 hidden md:block">{c.example}</span>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: c.color + '15', color: c.color }}>{c.complexity}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+

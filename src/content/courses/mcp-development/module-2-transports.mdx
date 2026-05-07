@@ -133,6 +133,8 @@ MCP is transport-agnostic: the same protocol works whether the server runs on yo
     </AccordionItem>
 </Accordion>
 
+<TransportComparison />
+
 <KnowledgeCheck
   question="Why should you never write logs or debug output to stdout in an MCP server using stdio transport?"
   options={["stdout is reserved for error messages only.", "stdout is the communication channel for JSON-RPC messages. Any non-JSON output would corrupt the protocol and crash the connection.", "stdout is slower than stderr for logging.", "The MCP specification prohibits all logging."]}

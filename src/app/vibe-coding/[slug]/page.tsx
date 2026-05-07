@@ -12,7 +12,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
-import { VibeCodingShift, GCESFramework, DebuggingFlow, DeploymentStack } from '@/components/courses/vibe-coding-visuals';
+import { VibeCodingShift, GCESFramework, DebuggingFlow, DeploymentStack, VibeCodingManifesto, ToolSelectionGuide, PromptLibrary, LabProjectIdeas, ProductQualityGates, DebugDecisionTree, DeploymentChecklist } from '@/components/courses/vibe-coding-visuals';
 import { MarkComplete } from '@/components/mark-complete';
 import { courseConfigs } from '@/lib/course-config';
 
@@ -69,6 +69,8 @@ const components = {
   GCESFramework,
   DebuggingFlow,
   DeploymentStack,
+  VibeCodingManifesto, ToolSelectionGuide, PromptLibrary,
+  LabProjectIdeas, ProductQualityGates, DebugDecisionTree, DeploymentChecklist,
   Link,
 };
 

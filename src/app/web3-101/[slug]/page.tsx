@@ -13,7 +13,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { KnowledgeCheck } from '@/components/mdx/knowledge-check';
 import Image from 'next/image';
-import { WebEvolution, BlockchainExplainer, SmartContractExplainer, Web3Ecosystem, Web3Passport, Web3Future, L2ScalingDiagram, TokenomicsVisual, DeFiStackDiagram, SecurityRedFlags } from '@/components/courses/web3-visuals';
+import { WebEvolution, BlockchainExplainer, SmartContractExplainer, Web3Ecosystem, Web3Passport, Web3Future, L2ScalingDiagram, TokenomicsVisual, DeFiStackDiagram, SecurityRedFlags, Web3Timeline, ConsensusComparison, SmartContractPlatforms, NFTUseCases, WalletComparison, RegulationMap, L2Comparison, TokenValueDrivers } from '@/components/courses/web3-visuals';
 
 const config = courseConfigs['web3-101'];
 const coursesDirectory = path.join(process.cwd(), 'src', 'content', 'courses', 'web3-101');
@@ -66,6 +66,8 @@ const components = {
   TokenomicsVisual,
   DeFiStackDiagram,
   SecurityRedFlags,
+  Web3Timeline, ConsensusComparison, SmartContractPlatforms,
+  NFTUseCases, WalletComparison, RegulationMap, L2Comparison, TokenValueDrivers,
 };
 
 export default async function CourseModulePage({ params }: { params: Promise<{ slug: string }> }) {

@@ -243,6 +243,8 @@ await client.close();`}</code></pre>
     </AccordionItem>
 </Accordion>
 
+<ProductionReadiness />
+
 <KnowledgeCheck
   question="What's the difference between throwing an McpError and returning isError: true in a tool response?"
   options={["There is no difference. they're interchangeable.", "McpError is for protocol-level errors (bad parameters, server crash). isError: true is for application-level errors (not found, validation failed) that the LLM should reason about.", "McpError is for warnings, isError: true is for fatal errors.", "McpError can only be used in production, isError: true is for development."]}

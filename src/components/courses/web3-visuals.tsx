@@ -355,3 +355,264 @@ export function SecurityRedFlags() {
     </figure>
   );
 }
+
+/* ─── Module 1 (B): Web3 Timeline ─── */
+export function Web3Timeline() {
+  const eras = [
+    { year: '1991', event: 'Web 1.0: Read-only websites', desc: 'Static HTML pages, one-way information flow', color: '#94a3b8' },
+    { year: '2004', event: 'Web 2.0: Read-write platforms', desc: 'Social media, user-generated content, platform monopolies', color: '#3b82f6' },
+    { year: '2009', event: 'Bitcoin: first blockchain', desc: 'Peer-to-peer money without banks or intermediaries', color: '#f59e0b' },
+    { year: '2015', event: 'Ethereum: programmable blockchain', desc: 'Smart contracts turn blockchains into computers', color: '#8b5cf6' },
+    { year: '2024', event: 'Web3: read-write-own', desc: 'Users own their data, identity, and digital assets', color: '#10b981' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Web3 Timeline</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">35 years from static pages to user ownership</p>
+        <div className="relative">
+          <div className="absolute left-[18px] top-0 bottom-0 w-px bg-[#e3e3e0] dark:bg-zinc-800" />
+          <div className="space-y-2">
+            {eras.map(e => (
+              <div key={e.year} className="grid grid-cols-[36px_1fr] gap-3 items-start">
+                <div className="relative flex items-center justify-center pt-2">
+                  <div className="w-[22px] h-[22px] rounded-full flex items-center justify-center text-white text-[8px] font-bold" style={{ backgroundColor: e.color }}>{e.year}</div>
+                </div>
+                <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-2.5">
+                  <span className="text-xs font-bold" style={{ color: e.color }}>{e.event}</span>
+                  <p className="text-[10px] text-muted-foreground mt-0.5">{e.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 2 (B): Consensus Comparison ─── */
+export function ConsensusComparison() {
+  const mechanisms = [
+    { name: 'Proof of Work', energy: 'Very High', speed: '7-15 TPS', security: 'Very High', used: 'Bitcoin', color: '#f59e0b' },
+    { name: 'Proof of Stake', energy: 'Low', speed: '15-100K TPS', security: 'High', used: 'Ethereum, Solana', color: '#10b981' },
+    { name: 'Delegated PoS', energy: 'Low', speed: '1,000+ TPS', security: 'Medium', used: 'EOS, Tron', color: '#3b82f6' },
+    { name: 'Proof of Authority', energy: 'Minimal', speed: '1,000+ TPS', security: 'Lower', used: 'Private chains', color: '#8b5cf6' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Consensus Mechanism Comparison</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">How different blockchains achieve agreement on truth</p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-[11px]">
+            <thead><tr className="border-b border-[#e3e3e0] dark:border-zinc-800">
+              {['Mechanism', 'Energy', 'Speed', 'Security', 'Used By'].map(h => (
+                <th key={h} className="text-left px-2 py-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{h}</th>
+              ))}
+            </tr></thead>
+            <tbody>
+              {mechanisms.map(m => (
+                <tr key={m.name} className="border-b border-[#e3e3e0]/40 dark:border-zinc-800/40">
+                  <td className="px-2 py-2 font-bold" style={{ color: m.color }}>{m.name}</td>
+                  <td className="px-2 py-2 text-muted-foreground">{m.energy}</td>
+                  <td className="px-2 py-2 font-mono text-muted-foreground">{m.speed}</td>
+                  <td className="px-2 py-2 text-muted-foreground">{m.security}</td>
+                  <td className="px-2 py-2 text-muted-foreground/60">{m.used}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 3 (B): Smart Contract Platforms ─── */
+export function SmartContractPlatforms() {
+  const platforms = [
+    { name: 'Ethereum', lang: 'Solidity', tvl: '$60B+', fees: '$1-50', strength: 'Largest developer ecosystem', color: '#8b5cf6' },
+    { name: 'Solana', lang: 'Rust', tvl: '$8B+', fees: '<$0.01', strength: 'Speed (400ms finality)', color: '#10b981' },
+    { name: 'Base', lang: 'Solidity', tvl: '$10B+', fees: '<$0.01', strength: 'Coinbase distribution + Ethereum security', color: '#3b82f6' },
+    { name: 'Sui', lang: 'Move', tvl: '$1B+', fees: '<$0.01', strength: 'Object-oriented data model', color: '#f59e0b' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Smart Contract Platforms</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Where developers deploy on-chain programs today</p>
+        <div className="space-y-1.5">
+          {platforms.map(p => (
+            <div key={p.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 px-4 py-2.5 flex items-center gap-3" style={{ borderLeftWidth: '3px', borderLeftColor: p.color }}>
+              <span className="text-xs font-bold min-w-[80px]" style={{ color: p.color }}>{p.name}</span>
+              <span className="text-[10px] font-mono text-muted-foreground min-w-[50px]">{p.lang}</span>
+              <span className="text-[10px] text-muted-foreground min-w-[60px]">TVL: {p.tvl}</span>
+              <span className="text-[10px] text-muted-foreground flex-1 hidden md:block">{p.strength}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 4 (B): NFT Use Cases ─── */
+export function NFTUseCases() {
+  const cases = [
+    { category: 'Digital Art', example: 'Art Blocks generative art', market: 'Established', color: '#8b5cf6' },
+    { category: 'Gaming Assets', example: 'In-game items, skins, characters', market: 'Growing', color: '#3b82f6' },
+    { category: 'Identity', example: 'ENS names, on-chain credentials', market: 'Early', color: '#10b981' },
+    { category: 'Real-World Assets', example: 'Tokenized real estate, bonds', market: 'Emerging', color: '#f59e0b' },
+    { category: 'Memberships', example: 'Access passes, community tokens', market: 'Growing', color: '#ef4444' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">NFT Use Cases Beyond Art</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Non-fungible tokens are programmable ownership certificates</p>
+        <div className="space-y-1.5">
+          {cases.map(c => (
+            <div key={c.category} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 px-4 py-2.5 flex items-center gap-3" style={{ borderLeftWidth: '3px', borderLeftColor: c.color }}>
+              <span className="text-xs font-bold min-w-[120px]" style={{ color: c.color }}>{c.category}</span>
+              <span className="text-[10px] text-muted-foreground flex-1">{c.example}</span>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: c.color + '15', color: c.color }}>{c.market}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 5 (B): Wallet Comparison ─── */
+export function WalletComparison() {
+  const wallets = [
+    { name: 'MetaMask', type: 'Browser extension', chains: 'Ethereum + EVMs', best: 'Most dApp compatibility', color: '#f59e0b' },
+    { name: 'Phantom', type: 'Browser extension', chains: 'Solana, Ethereum', best: 'Solana ecosystem', color: '#8b5cf6' },
+    { name: 'Coinbase Wallet', type: 'Mobile + extension', chains: 'Multi-chain', best: 'Beginners, fiat on-ramp', color: '#3b82f6' },
+    { name: 'Ledger', type: 'Hardware device', chains: 'Multi-chain', best: 'Cold storage security', color: '#10b981' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Wallet Comparison</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Choosing the right wallet for your use case</p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-[11px]">
+            <thead><tr className="border-b border-[#e3e3e0] dark:border-zinc-800">
+              {['Wallet', 'Type', 'Chains', 'Best For'].map(h => (
+                <th key={h} className="text-left px-2 py-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{h}</th>
+              ))}
+            </tr></thead>
+            <tbody>
+              {wallets.map(w => (
+                <tr key={w.name} className="border-b border-[#e3e3e0]/40 dark:border-zinc-800/40">
+                  <td className="px-2 py-2 font-bold" style={{ color: w.color }}>{w.name}</td>
+                  <td className="px-2 py-2 text-muted-foreground">{w.type}</td>
+                  <td className="px-2 py-2 text-muted-foreground">{w.chains}</td>
+                  <td className="px-2 py-2 text-muted-foreground/60">{w.best}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 6 (B): Regulation Map ─── */
+export function RegulationMap() {
+  const regions = [
+    { region: 'European Union', framework: 'MiCA (Markets in Crypto-Assets)', status: 'Active', stance: 'Pro-regulation', color: '#3b82f6' },
+    { region: 'United States', framework: 'SEC / CFTC dual oversight', status: 'Evolving', stance: 'Enforcement-driven', color: '#f59e0b' },
+    { region: 'Singapore', framework: 'Payment Services Act', status: 'Active', stance: 'Innovation-friendly', color: '#10b981' },
+    { region: 'UAE (Dubai)', framework: 'VARA (Virtual Assets Regulatory Authority)', status: 'Active', stance: 'Pro-crypto hub', color: '#8b5cf6' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Global Regulatory Landscape</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">How major jurisdictions are approaching crypto regulation</p>
+        <div className="space-y-1.5">
+          {regions.map(r => (
+            <div key={r.region} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 px-4 py-2.5 flex flex-col md:flex-row md:items-center gap-1 md:gap-3" style={{ borderLeftWidth: '3px', borderLeftColor: r.color }}>
+              <span className="text-xs font-bold min-w-[100px]" style={{ color: r.color }}>{r.region}</span>
+              <span className="text-[10px] text-muted-foreground flex-1">{r.framework}</span>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: r.color + '15', color: r.color }}>{r.stance}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 7 (B): L2 Comparison ─── */
+export function L2Comparison() {
+  const l2s = [
+    { name: 'Arbitrum', type: 'Optimistic Rollup', tps: '40,000', tvl: '$15B+', fee: '$0.01-0.10', color: '#3b82f6' },
+    { name: 'Optimism', type: 'Optimistic Rollup', tps: '2,000', tvl: '$7B+', fee: '$0.01-0.10', color: '#ef4444' },
+    { name: 'Base', type: 'Optimistic Rollup', tps: '2,000', tvl: '$10B+', fee: '<$0.01', color: '#3b82f6' },
+    { name: 'zkSync', type: 'ZK Rollup', tps: '2,000', tvl: '$1B+', fee: '$0.01-0.05', color: '#8b5cf6' },
+    { name: 'StarkNet', type: 'ZK Rollup', tps: '500', tvl: '$500M+', fee: '$0.01-0.05', color: '#10b981' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Layer 2 Comparison</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Leading Ethereum scaling solutions by type, speed, and liquidity</p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-[11px]">
+            <thead><tr className="border-b border-[#e3e3e0] dark:border-zinc-800">
+              {['L2', 'Type', 'TPS', 'TVL', 'Avg Fee'].map(h => (
+                <th key={h} className="text-left px-2 py-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{h}</th>
+              ))}
+            </tr></thead>
+            <tbody>
+              {l2s.map(l => (
+                <tr key={l.name} className="border-b border-[#e3e3e0]/40 dark:border-zinc-800/40">
+                  <td className="px-2 py-2 font-bold" style={{ color: l.color }}>{l.name}</td>
+                  <td className="px-2 py-2 text-muted-foreground">{l.type}</td>
+                  <td className="px-2 py-2 font-mono text-muted-foreground">{l.tps}</td>
+                  <td className="px-2 py-2 text-muted-foreground">{l.tvl}</td>
+                  <td className="px-2 py-2 font-mono text-muted-foreground/60">{l.fee}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 8 (B): Token Value Drivers ─── */
+export function TokenValueDrivers() {
+  const drivers = [
+    { driver: 'Utility', desc: 'Token is required to use the protocol (gas, staking, governance)', impact: 'High', color: '#10b981' },
+    { driver: 'Scarcity', desc: 'Token burns, halving events, fixed supply caps', impact: 'High', color: '#f59e0b' },
+    { driver: 'Revenue Share', desc: 'Protocol distributes fees to token holders', impact: 'Very High', color: '#8b5cf6' },
+    { driver: 'Network Effects', desc: 'More users = more value for all participants', impact: 'High', color: '#3b82f6' },
+    { driver: 'Speculation', desc: 'Market sentiment and trading activity', impact: 'Variable', color: '#ef4444' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Token Value Drivers</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Five factors that determine whether a token accrues value</p>
+        <div className="space-y-1.5">
+          {drivers.map(d => (
+            <div key={d.driver} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 px-4 py-2.5 flex items-center gap-3" style={{ borderLeftWidth: '3px', borderLeftColor: d.color }}>
+              <span className="text-xs font-bold min-w-[110px]" style={{ color: d.color }}>{d.driver}</span>
+              <span className="text-[10px] text-muted-foreground flex-1">{d.desc}</span>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: d.color + '15', color: d.color }}>{d.impact}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+

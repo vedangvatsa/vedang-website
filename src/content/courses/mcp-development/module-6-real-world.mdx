@@ -214,6 +214,8 @@ server.tool(
     </AccordionItem>
 </Accordion>
 
+<IntegrationPatterns />
+
 <KnowledgeCheck
   question="When building a database MCP server, why should you expose the database schema as a Resource rather than a Tool?"
   options={["Resources are faster to read than tools.", "The schema is static context the host app should pre-load, not something the LLM needs to 'call'. it's read-only background data that helps the LLM generate correct SQL.", "Resources can handle larger data than tools.", "Tools cannot return text content."]}

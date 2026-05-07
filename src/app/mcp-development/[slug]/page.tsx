@@ -12,7 +12,7 @@ import { courseConfigs } from '@/lib/course-config';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { KnowledgeCheck } from '@/components/mdx/knowledge-check';
-import { MCPArchitecture, TransportDiagram, ServerSkeleton, MCPPrimitives, ClientEcosystem, DatabaseServerDiagram, ProductionChecklist } from '@/components/courses/mcp-visuals';
+import { MCPArchitecture, TransportDiagram, ServerSkeleton, MCPPrimitives, ClientEcosystem, DatabaseServerDiagram, ProductionChecklist, MCPEcosystemMap, TransportComparison, ServerBoilerplate, PrimitiveMatrix, ClientCapabilities, IntegrationPatterns, ProductionReadiness } from '@/components/courses/mcp-visuals';
 
 const config = courseConfigs['mcp-development'];
 const coursesDirectory = path.join(process.cwd(), 'src', 'content', 'courses', 'mcp-development');
@@ -61,6 +61,8 @@ const mdxComponents = {
     ClientEcosystem,
     DatabaseServerDiagram,
     ProductionChecklist,
+    MCPEcosystemMap, TransportComparison, ServerBoilerplate,
+    PrimitiveMatrix, ClientCapabilities, IntegrationPatterns, ProductionReadiness,
     Link,
 };
 
