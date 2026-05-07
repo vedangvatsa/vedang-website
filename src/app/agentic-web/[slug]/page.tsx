@@ -37,15 +37,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const { slug } = await params;
     const filePath = path.join(CONTENT_PATH, `${slug}.mdx`);
     if (!fs.existsSync(filePath)) notFound();
-    const { data } = matter(fs.readFileSync(filePath, 'utf8'));
-    const title = `${data.title} | The Agentic Web | Vedang Vatsa`;
-    const description = data.description;
+    const moduleConfig = config.modules.find(m => m.slug === slug);
+    let moduleTitle = moduleConfig?.title || slug;
+    let moduleDesc = `Learn ${moduleTitle} in The Agentic Web course by Vedang Vatsa.`;
+    try {
+        const { data } = matter(fs.readFileSync(filePath, 'utf8'));
+        if (data.title) moduleTitle = data.title;
+        if (data.description) moduleDesc = data.description;
+    } catch {}
+    const title = `${moduleTitle} | The Agentic Web | Vedang Vatsa`;
     return {
         title: { absolute: title },
-        description,
+        description: moduleDesc,
         alternates: { canonical: `/agentic-web/${slug}` },
-        openGraph: { title, description, url: `https://veda.ng/agentic-web/${slug}` },
-        twitter: { card: 'summary_large_image', title, description },
+        openGraph: { title, description: moduleDesc, url: `https://veda.ng/agentic-web/${slug}` },
+        twitter: { card: 'summary_large_image', title, description: moduleDesc },
     };
 }
 
