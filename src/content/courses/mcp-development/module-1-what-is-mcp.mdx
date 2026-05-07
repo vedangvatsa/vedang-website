@@ -58,6 +58,48 @@ MCP changes this. Created by Anthropic and now adopted across the industry, the 
             <p>By the end of this course, you'll be able to build all of these.</p>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">The MCP Ecosystem in Numbers</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>The MCP ecosystem has exploded since its release. Key milestones:</p>
+            <ul>
+                <li><strong>Thousands of servers</strong> published on npm, GitHub, mcp.run, and smithery.ai</li>
+                <li><strong>Every major AI IDE</strong> adopted MCP: Claude Desktop, Cursor, VS Code (Copilot), Windsurf, Antigravity, Zed</li>
+                <li><strong>Enterprise adoption:</strong> Companies like Block, Apollo, and Replit have built internal MCP servers</li>
+                <li><strong>Community registries:</strong> <a href="https://mcp.run" target="_blank">mcp.run</a> and <a href="https://smithery.ai" target="_blank">smithery.ai</a> catalog and host servers</li>
+            </ul>
+            <p><strong>Popular community servers you can install today:</strong></p>
+            <ul>
+                <li><code>@modelcontextprotocol/server-filesystem</code>. Read/write local files</li>
+                <li><code>@modelcontextprotocol/server-postgres</code>. Query PostgreSQL databases</li>
+                <li>Google Sheets MCP server. Read/write spreadsheets</li>
+                <li>Playwright MCP (Microsoft). Browser automation</li>
+                <li>GitHub MCP. Manage repos, issues, and PRs</li>
+                <li>Slack MCP. Send messages, read channels</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-6">
+        <AccordionTrigger className="text-lg text-left">MCP vs Native Function Calling</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Both MCP and native function calling (Claude's tool_use, GPT's function_calling) let AI invoke external tools. The difference is in scope and portability:</p>
+            <p><strong>Native Function Calling:</strong></p>
+            <ul>
+                <li>Defined per-conversation in the API request</li>
+                <li>Locked to one provider (Claude tools only work with Anthropic API)</li>
+                <li>You implement the execution logic in your application code</li>
+                <li>Best for: custom applications with specific tool needs</li>
+            </ul>
+            <p><strong>MCP:</strong></p>
+            <ul>
+                <li>Defined once in a standalone server</li>
+                <li>Works with any MCP-compatible client (Claude, Cursor, VS Code, custom apps)</li>
+                <li>The server handles execution. the client just routes the call</li>
+                <li>Best for: reusable tools, team-shared infrastructure, ecosystem servers</li>
+            </ul>
+            <p><strong>In practice:</strong> Use native function calling when building a specific AI feature inside your app. Use MCP when building tools that should work across multiple AI environments, be shared with a team, or distributed as open source.</p>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <KnowledgeCheck

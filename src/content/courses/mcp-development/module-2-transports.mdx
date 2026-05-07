@@ -80,6 +80,57 @@ MCP is transport-agnostic: the same protocol works whether the server runs on yo
             <p><strong>Best for:</strong> Production deployments, serverless environments, APIs that need to scale.</p>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">Choosing the Right Transport</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Use this decision tree:</p>
+            <p><strong>Is your server running on the same machine as the client?</strong></p>
+            <ul>
+                <li><strong>Yes → Use stdio.</strong> Zero configuration. No network setup. The host spawns your server as a child process. This is the default for local development and Claude Desktop.</li>
+                <li><strong>No → Is it a serverless environment (Vercel, Lambda, Cloudflare Workers)?</strong>
+                    <ul>
+                        <li><strong>Yes → Use Streamable HTTP.</strong> Stateless by default. Works naturally with serverless architectures. One endpoint. Standard HTTP.</li>
+                        <li><strong>No → Use SSE or Streamable HTTP.</strong> SSE is more established and widely supported. Streamable HTTP is newer but better for production.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong>Common deployment patterns:</strong></p>
+            <ul>
+                <li><strong>Local dev + Claude Desktop:</strong> stdio (always)</li>
+                <li><strong>Shared team server on a VPS:</strong> SSE or Streamable HTTP</li>
+                <li><strong>Public MCP server (npm package):</strong> stdio (user runs locally)</li>
+                <li><strong>SaaS product offering MCP:</strong> Streamable HTTP behind authentication</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-6">
+        <AccordionTrigger className="text-lg text-left">Debugging Transport Issues</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Transport issues are the most common reason MCP connections fail. Here's how to diagnose them:</p>
+            <p><strong>1. "Server not starting" with stdio:</strong></p>
+            <ul>
+                <li>Run the command manually: <code>npx tsx src/index.ts</code>. Does it even start?</li>
+                <li>Check for compilation errors. TypeScript errors will crash before MCP initializes.</li>
+                <li>Verify the absolute path in your config. Relative paths often break.</li>
+            </ul>
+            <p><strong>2. "Connected but no tools showing":</strong></p>
+            <ul>
+                <li>Your tools might be registered after the transport connects. Register tools before calling <code>server.connect(transport)</code>.</li>
+                <li>Use the MCP Inspector to verify tools are listed: <code>npx @modelcontextprotocol/inspector npx tsx src/index.ts</code></li>
+            </ul>
+            <p><strong>3. "Protocol error / corrupted messages" with stdio:</strong></p>
+            <ul>
+                <li>You're writing to stdout. Any <code>console.log()</code> in your server corrupts the JSON-RPC stream. Use <code>console.error()</code> instead.</li>
+                <li>Dependencies might be logging to stdout. Check all imported libraries.</li>
+            </ul>
+            <p><strong>4. "Connection refused" with SSE/HTTP:</strong></p>
+            <ul>
+                <li>Check the port. Is another process using it?</li>
+                <li>Check CORS headers if connecting from a browser-based client.</li>
+                <li>Verify firewall rules allow the connection.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <KnowledgeCheck

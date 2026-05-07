@@ -2,225 +2,331 @@
 
 /* ─── Module 1: MCP Architecture Overview ─── */
 export function MCPArchitecture() {
+  const layers = [
+    { component: 'MCP Host', desc: 'The AI application the user interacts with', examples: 'Claude Desktop, Cursor, VS Code, Antigravity, Windsurf', color: '#3b82f6' },
+    { component: 'MCP Client', desc: 'Lightweight connector inside the host, 1:1 with each server', examples: 'JSON-RPC transport, tool discovery, schema validation', color: '#8b5cf6' },
+    { component: 'MCP Server', desc: 'Exposes tools, resources, and prompts via the protocol', examples: 'Your custom server, community servers, npm packages', color: '#10b981' },
+    { component: 'Data Source', desc: 'The real-world system being connected', examples: 'PostgreSQL, Google Sheets, Slack, GitHub, REST APIs', color: '#f59e0b' },
+  ];
   return (
-    <div className="not-prose my-6">
-      <svg viewBox="0 0 820 280" className="w-full h-auto hidden sm:block" role="img" aria-label="MCP architecture: Host contains Clients that connect to Servers">
-        {/* Host */}
-        <rect x={20} y={10} width={260} height={260} rx={16} fill="#3b82f608" stroke="#3b82f6" strokeWidth={2} strokeDasharray="6 4" />
-        <text x={150} y={40} textAnchor="middle" fill="#3b82f6" fontSize={13} fontWeight={700}>MCP Host (e.g. Claude Desktop)</text>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">MCP Architecture</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">The universal connector between AI models and any data source</p>
 
-        {/* LLM inside host */}
-        <rect x={60} y={55} width={180} height={40} rx={8} fill="#8b5cf615" stroke="#8b5cf6" strokeWidth={1.5} />
-        <text x={150} y={80} textAnchor="middle" fill="#8b5cf6" fontSize={12} fontWeight={600}>LLM (Claude, GPT, Gemini)</text>
-
-        {/* Clients inside host */}
-        {[
-          { y: 115, label: 'MCP Client A' },
-          { y: 160, label: 'MCP Client B' },
-          { y: 205, label: 'MCP Client C' },
-        ].map((c) => (
-          <g key={c.label}>
-            <rect x={60} y={c.y} width={180} height={35} rx={6} fill="#3b82f610" stroke="#3b82f6" strokeWidth={1} />
-            <text x={150} y={c.y + 22} textAnchor="middle" fill="#3b82f6" fontSize={11}>{c.label}</text>
-          </g>
-        ))}
-
-        {/* Arrows */}
-        {[132, 177, 222].map((y) => (
-          <line key={y} x1={240} y1={y} x2={420} y2={y} stroke="#10b981" strokeWidth={1.5} strokeDasharray="4 3" />
-        ))}
-        <text x={330} y={125} textAnchor="middle" fill="#10b981" fontSize={9} fontWeight={600}>JSON-RPC</text>
-
-        {/* Servers */}
-        {[
-          { y: 105, label: 'Search Server', desc: 'Web search API', color: '#10b981' },
-          { y: 155, label: 'Database Server', desc: 'PostgreSQL queries', color: '#f59e0b' },
-          { y: 205, label: 'Filesystem Server', desc: 'Read/write files', color: '#ef4444' },
-        ].map((s) => (
-          <g key={s.label}>
-            <rect x={420} y={s.y} width={200} height={40} rx={8} fill={`${s.color}10`} stroke={s.color} strokeWidth={1.5} />
-            <text x={520} y={s.y + 18} textAnchor="middle" fill={s.color} fontSize={12} fontWeight={600}>{s.label}</text>
-            <text x={520} y={s.y + 32} textAnchor="middle" fill="currentColor" fontSize={9} opacity={0.5}>{s.desc}</text>
-          </g>
-        ))}
-
-        {/* Servers connecting to data */}
-        {[125, 175, 225].map((y) => (
-          <line key={y} x1={620} y1={y} x2={700} y2={y} stroke="currentColor" strokeWidth={1} opacity={0.2} strokeDasharray="3 2" />
-        ))}
-        <rect x={700} y={100} width={100} height={150} rx={8} fill="currentColor" opacity={0.05} stroke="currentColor" strokeWidth={1} />
-        <text x={750} y={180} textAnchor="middle" fill="currentColor" fontSize={10} opacity={0.4}>Data Sources</text>
-      </svg>
-      {/* Mobile fallback */}
-      <div className="sm:hidden grid grid-cols-1 gap-3">
-        {[
-          { label: 'MCP Host', desc: 'Claude Desktop, Cursor, etc.', color: '#3b82f6' },
-          { label: 'MCP Client', desc: 'Routes tool calls via JSON-RPC', color: '#3b82f6' },
-          { label: 'MCP Servers', desc: 'Search, Database, Filesystem', color: '#10b981' },
-        ].map((item) => (
-          <div key={item.label} className="p-4 rounded-xl border bg-card">
-            <h4 className="font-semibold text-sm mb-1" style={{ color: item.color }}>{item.label}</h4>
-            <p className="text-xs text-muted-foreground">{item.desc}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">
+          <div className="rounded-[3px] border-2 border-red-200 dark:border-red-900/40 p-4">
+            <div className="text-xs font-bold text-red-500 dark:text-red-400 uppercase tracking-wider mb-2">Before MCP: N×M Problem</div>
+            <p className="text-[11px] text-muted-foreground">5 AI apps × 10 data sources = <strong className="text-red-500">50 custom integrations</strong>. Each with its own auth, error handling, and data formatting.</p>
           </div>
-        ))}
+          <div className="rounded-[3px] border-2 border-blue-300 dark:border-blue-800/60 p-4">
+            <div className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">After MCP: N+M Solution</div>
+            <p className="text-[11px] text-muted-foreground">5 AI apps + 10 data sources = <strong className="text-blue-600 dark:text-blue-400">15 integrations</strong>. Each app implements one client. Each source implements one server.</p>
+          </div>
+        </div>
+
+        <div className="space-y-1.5">
+          {layers.map((l, i) => (
+            <div key={l.component} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden" style={{ borderLeftWidth: '3px', borderLeftColor: l.color }}>
+              <div className="px-4 py-2.5 flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+                <div>
+                  <span className="text-xs font-bold" style={{ color: l.color }}>{l.component}</span>
+                  <span className="text-[10px] text-muted-foreground ml-2">{l.desc}</span>
+                </div>
+                <span className="text-[10px] text-muted-foreground/60">{l.examples}</span>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </figure>
   );
 }
 
 /* ─── Module 2: Transport Layers ─── */
 export function TransportDiagram() {
   const transports = [
-    { label: 'stdio', desc: 'Local process communication', use: 'CLI tools, local dev', color: '#3b82f6' },
-    { label: 'SSE', desc: 'Server-Sent Events over HTTP', use: 'Remote servers, streaming', color: '#8b5cf6' },
-    { label: 'HTTP', desc: 'Streamable HTTP (newest)', use: 'Production, stateless', color: '#10b981' },
+    {
+      name: 'stdio', desc: 'Standard input/output pipes',
+      how: 'Host spawns server as child process. Messages via stdin/stdout.',
+      best: 'Local development, CLI tools, Claude Desktop',
+      limitation: 'Same machine only, no network',
+      color: '#3b82f6',
+    },
+    {
+      name: 'SSE', desc: 'Server-Sent Events over HTTP',
+      how: 'Client POSTs to /messages, server streams via /sse endpoint.',
+      best: 'Remote servers, multi-user, cloud hosting',
+      limitation: 'Requires persistent connection, two endpoints',
+      color: '#8b5cf6',
+    },
+    {
+      name: 'Streamable HTTP', desc: 'Single HTTP endpoint (newest)',
+      how: 'Single endpoint, stateless by default, streams when needed.',
+      best: 'Production, serverless (Vercel, Lambda, Workers)',
+      limitation: 'Newest transport, some clients still adopting',
+      color: '#10b981',
+    },
   ];
   return (
-    <div className="not-prose my-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-      {transports.map((t) => (
-        <div key={t.label} className="p-5 rounded-xl border bg-card">
-          <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm mb-3" style={{ backgroundColor: t.color }}>{t.label[0]}</div>
-          <h4 className="font-semibold text-base mb-1" style={{ color: t.color }}>{t.label}</h4>
-          <p className="text-sm text-muted-foreground mb-2">{t.desc}</p>
-          <p className="text-xs text-muted-foreground/70 italic">Best for: {t.use}</p>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">MCP Transport Layers</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Same protocol, different delivery mechanisms</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          {transports.map((t) => (
+            <div key={t.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden">
+              <div className="px-4 py-2.5 border-b border-[#e3e3e0] dark:border-zinc-800" style={{ backgroundColor: t.color + '08' }}>
+                <div className="text-sm font-bold" style={{ color: t.color }}>{t.name}</div>
+                <div className="text-[10px] text-muted-foreground">{t.desc}</div>
+              </div>
+              <div className="px-4 py-3 space-y-2">
+                <div><span className="text-[10px] font-bold text-muted-foreground/60 uppercase">How it works</span><p className="text-[10px] text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)] mt-0.5">{t.how}</p></div>
+                <div><span className="text-[10px] font-bold text-green-600 dark:text-green-400 uppercase">Best for</span><p className="text-[10px] text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)] mt-0.5">{t.best}</p></div>
+                <div><span className="text-[10px] font-bold text-red-500 dark:text-red-400 uppercase">Limitation</span><p className="text-[10px] text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)] mt-0.5">{t.limitation}</p></div>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </figure>
   );
 }
 
 /* ─── Module 3: Server Skeleton ─── */
 export function ServerSkeleton() {
   const steps = [
-    { num: '1', label: 'Initialize', desc: 'Install the MCP SDK', color: '#3b82f6' },
-    { num: '2', label: 'Create Server', desc: 'Instantiate McpServer', color: '#8b5cf6' },
-    { num: '3', label: 'Register Tools', desc: 'Define tool schemas', color: '#f59e0b' },
-    { num: '4', label: 'Transport', desc: 'stdio, SSE, or HTTP', color: '#10b981' },
-    { num: '5', label: 'Test', desc: 'MCP Inspector / Claude', color: '#ef4444' },
+    { num: '1', label: 'Project Setup', desc: 'npm init, install @modelcontextprotocol/sdk, zod, tsx', time: '2 min', color: '#3b82f6' },
+    { num: '2', label: 'Create Server', desc: 'Instantiate McpServer with name and version', time: '1 min', color: '#8b5cf6' },
+    { num: '3', label: 'Register Tools', desc: 'Define tool name, description, Zod schema, async handler', time: '10 min', color: '#f59e0b' },
+    { num: '4', label: 'Connect Transport', desc: 'StdioServerTransport for local, SSE/HTTP for remote', time: '1 min', color: '#10b981' },
+    { num: '5', label: 'Test', desc: 'MCP Inspector for debugging, then connect to Claude Desktop', time: '5 min', color: '#ef4444' },
   ];
   return (
-    <div className="not-prose my-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-      {steps.map((s) => (
-        <div key={s.num} className="p-4 rounded-xl border bg-card text-center">
-          <div className="w-8 h-8 rounded-full mx-auto mb-2 flex items-center justify-center text-white font-bold text-sm" style={{ backgroundColor: s.color }}>{s.num}</div>
-          <h4 className="font-semibold text-sm mb-1">{s.label}</h4>
-          <p className="text-xs text-muted-foreground leading-relaxed break-words">{s.desc}</p>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Building an MCP Server in 5 Steps</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">From zero to a working tool in under 20 minutes</p>
+
+        <div className="relative">
+          <div className="absolute left-[18px] top-0 bottom-0 w-px bg-[#e3e3e0] dark:bg-zinc-800" />
+          <div className="space-y-2.5">
+            {steps.map((s) => (
+              <div key={s.num} className="grid grid-cols-[36px_1fr] gap-3 items-start">
+                <div className="relative flex items-center justify-center pt-1">
+                  <div className="w-[9px] h-[9px] rounded-full" style={{ backgroundColor: s.color }} />
+                </div>
+                <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-xs font-bold" style={{ color: s.color }}>Step {s.num}: {s.label}</span>
+                    <span className="text-[10px] font-mono text-muted-foreground/60">{s.time}</span>
+                  </div>
+                  <p className="text-[10px] text-muted-foreground">{s.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
+      </div>
+    </figure>
   );
 }
 
 /* ─── Module 4: Three Primitives ─── */
 export function MCPPrimitives() {
   const primitives = [
-    { label: 'Tools', initial: 'T', desc: 'Functions the LLM can call', detail: 'Model-controlled. The LLM decides when to use them based on context.', color: '#3b82f6', bg: 'bg-blue-500/5 border-blue-500/20' },
-    { label: 'Resources', initial: 'R', desc: 'Data the app can read', detail: 'App-controlled. The host application decides when to fetch and inject them.', color: '#10b981', bg: 'bg-emerald-500/5 border-emerald-500/20' },
-    { label: 'Prompts', initial: 'P', desc: 'Reusable prompt templates', detail: 'User-controlled. The user selects which prompt template to use.', color: '#f59e0b', bg: 'bg-amber-500/5 border-amber-500/20' },
+    {
+      name: 'Tools', controlled: 'Model-controlled', desc: 'Functions the LLM decides when to call',
+      when: ['Actions that modify state (create, update, delete)', 'Computations or transformations', 'External API calls', 'Anything the AI invokes based on user intent'],
+      color: '#3b82f6',
+    },
+    {
+      name: 'Resources', controlled: 'App-controlled', desc: 'Data the host application loads for context',
+      when: ['Configuration files and schemas', 'Documentation and knowledge bases', 'Database schemas (not data)', 'Read-only background context'],
+      color: '#10b981',
+    },
+    {
+      name: 'Prompts', controlled: 'User-controlled', desc: 'Reusable templates the user selects',
+      when: ['Common workflows users repeat', 'Templates combining multiple tools', 'Guided experiences with specific output', 'Slash commands and menu items'],
+      color: '#f59e0b',
+    },
   ];
   return (
-    <div className="not-prose my-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-      {primitives.map((p) => (
-        <div key={p.label} className={`p-5 rounded-xl border ${p.bg}`}>
-          <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-base mb-3" style={{ backgroundColor: p.color }}>{p.initial}</div>
-          <h4 className="font-semibold text-base mb-1" style={{ color: p.color }}>{p.label}</h4>
-          <p className="text-sm font-medium mb-2">{p.desc}</p>
-          <p className="text-xs text-muted-foreground leading-relaxed">{p.detail}</p>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Three MCP Primitives</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Different control semantics for different use cases</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          {primitives.map((p) => (
+            <div key={p.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden">
+              <div className="px-4 py-2.5 border-b border-[#e3e3e0] dark:border-zinc-800" style={{ backgroundColor: p.color + '08' }}>
+                <div className="text-sm font-bold" style={{ color: p.color }}>{p.name}</div>
+                <div className="text-[10px] text-muted-foreground">{p.controlled}</div>
+              </div>
+              <div className="px-4 py-3">
+                <p className="text-[10px] text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)] mb-2">{p.desc}</p>
+                <div className="text-[10px] font-bold text-muted-foreground/60 uppercase mb-1">Use when</div>
+                {p.when.map((w) => (
+                  <div key={w} className="text-[10px] text-muted-foreground py-0.5 border-b border-[#e3e3e0]/30 dark:border-zinc-800/30 last:border-0">{w}</div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </figure>
   );
 }
 
 /* ─── Module 5: Client Ecosystem ─── */
 export function ClientEcosystem() {
   const clients = [
-    { name: 'Claude Desktop', type: 'Chat UI', status: 'Full support', color: '#8b5cf6' },
-    { name: 'Cursor', type: 'Code Editor', status: 'Full support', color: '#3b82f6' },
-    { name: 'VS Code (Copilot)', type: 'Code Editor', status: 'Growing support', color: '#10b981' },
-    { name: 'Antigravity', type: 'AI Agent', status: 'Full support', color: '#f59e0b' },
-    { name: 'Windsurf', type: 'Code Editor', status: 'Full support', color: '#ef4444' },
-    { name: 'Custom App', type: 'Your own', status: 'Build with SDK', color: '#6366f1' },
+    { name: 'Claude Desktop', type: 'Chat UI', config: 'claude_desktop_config.json', support: 'Full (reference client)', color: '#8b5cf6' },
+    { name: 'Cursor', type: 'Code Editor', config: '.cursor/mcp.json', support: 'Full (per-project)', color: '#3b82f6' },
+    { name: 'Antigravity', type: 'AI Agent', config: 'Settings UI', support: 'Full', color: '#f59e0b' },
+    { name: 'VS Code + Copilot', type: 'Code Editor', config: '.vscode/mcp.json', support: 'Growing', color: '#10b981' },
+    { name: 'Windsurf', type: 'Code Editor', config: 'Settings UI', support: 'Full', color: '#ef4444' },
+    { name: 'Custom App', type: 'Your own', config: 'SDK Client class', support: 'Build with SDK', color: '#6366f1' },
   ];
   return (
-    <div className="not-prose my-6 grid grid-cols-2 md:grid-cols-3 gap-3">
-      {clients.map((c) => (
-        <div key={c.name} className="p-4 rounded-xl border bg-card">
-          <div className="w-3 h-3 rounded-full mb-2" style={{ backgroundColor: c.color }} />
-          <h4 className="font-semibold text-sm">{c.name}</h4>
-          <p className="text-xs text-muted-foreground">{c.type}</p>
-          <p className="text-xs mt-1 font-medium" style={{ color: c.color }}>{c.status}</p>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">MCP Client Ecosystem</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Every major AI tool supports MCP</p>
+
+        <div className="overflow-x-auto -mx-2">
+          <table className="w-full text-xs border-collapse min-w-[420px]">
+            <thead>
+              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Client</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Type</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Config File</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Support</th>
+              </tr>
+            </thead>
+            <tbody>
+              {clients.map((c) => (
+                <tr key={c.name} className="border-b border-[#e3e3e0]/60 dark:border-zinc-800/40">
+                  <td className="py-2 px-2 font-bold" style={{ color: c.color }}>{c.name}</td>
+                  <td className="py-2 px-2 text-muted-foreground">{c.type}</td>
+                  <td className="py-2 px-2 font-mono text-[10px] text-muted-foreground/60">{c.config}</td>
+                  <td className="py-2 px-2 text-muted-foreground">{c.support}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-      ))}
-    </div>
+      </div>
+    </figure>
   );
 }
 
-/* ─── Module 6: Real-World Pattern ─── */
+/* ─── Module 6: Real-World Patterns ─── */
 export function DatabaseServerDiagram() {
+  const patterns = [
+    {
+      name: 'Database Server', desc: 'Let AI query your database with natural language',
+      tools: ['query_database (read-only SQL)', 'get_schema (table structure)'],
+      resources: ['db://schema (auto-loaded context)'],
+      tips: 'Start read-only. Expose schema as resource. Block DROP/DELETE.',
+      color: '#3b82f6',
+    },
+    {
+      name: 'API Wrapper', desc: 'Wrap any REST API as an MCP server',
+      tools: ['get_weather, search_users, create_task'],
+      resources: ['api://docs (API documentation)'],
+      tips: 'Handle errors with isError. Rate limit. Use env vars for keys.',
+      color: '#10b981',
+    },
+    {
+      name: 'Multi-Tool Server', desc: 'Group related tools into one coherent server',
+      tools: ['list_projects, get_project, create_task, update_status'],
+      resources: ['projects://active (project list)'],
+      tips: 'Use verb_noun naming. Be specific. Group with common prefixes.',
+      color: '#f59e0b',
+    },
+  ];
   return (
-    <div className="not-prose my-6">
-      <svg viewBox="0 0 660 140" className="w-full h-auto hidden sm:block" role="img" aria-label="MCP Database Server pattern: LLM calls query tool which executes SQL">
-        <rect x={10} y={30} width={110} height={70} rx={10} fill="#8b5cf615" stroke="#8b5cf6" strokeWidth={1.5} />
-        <text x={65} y={70} textAnchor="middle" fill="#8b5cf6" fontSize={13} fontWeight={700}>LLM</text>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Real-World Server Patterns</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Common architectures for production MCP servers</p>
 
-        <line x1={120} y1={65} x2={200} y2={65} stroke="#3b82f6" strokeWidth={1.5} strokeDasharray="4 3" />
-        <text x={160} y={55} textAnchor="middle" fill="#3b82f6" fontSize={9}>tool call</text>
-
-        <rect x={200} y={20} width={200} height={90} rx={10} fill="#3b82f610" stroke="#3b82f6" strokeWidth={1.5} />
-        <text x={300} y={50} textAnchor="middle" fill="#3b82f6" fontSize={12} fontWeight={700}>MCP Server</text>
-        <text x={300} y={70} textAnchor="middle" fill="currentColor" fontSize={10} opacity={0.5}>query_database tool</text>
-        <text x={300} y={90} textAnchor="middle" fill="currentColor" fontSize={9} opacity={0.4}>validate &gt; execute &gt; format</text>
-
-        <line x1={400} y1={65} x2={460} y2={65} stroke="#10b981" strokeWidth={1.5} strokeDasharray="4 3" />
-        <text x={430} y={55} textAnchor="middle" fill="#10b981" fontSize={9}>SQL</text>
-
-        <rect x={460} y={30} width={120} height={70} rx={10} fill="#10b98110" stroke="#10b981" strokeWidth={1.5} />
-        <text x={520} y={60} textAnchor="middle" fill="#10b981" fontSize={12} fontWeight={700}>PostgreSQL</text>
-        <text x={520} y={78} textAnchor="middle" fill="currentColor" fontSize={9} opacity={0.4}>Your database</text>
-
-        <line x1={580} y1={65} x2={620} y2={65} stroke="#f59e0b" strokeWidth={1} opacity={0.3} />
-        <text x={645} y={70} textAnchor="middle" fill="#f59e0b" fontSize={10}>Data</text>
-      </svg>
-      {/* Mobile fallback */}
-      <div className="sm:hidden flex flex-col gap-2">
-        {[
-          { label: 'LLM', desc: 'Calls query tool', color: '#8b5cf6' },
-          { label: 'MCP Server', desc: 'Validates, executes, formats', color: '#3b82f6' },
-          { label: 'PostgreSQL', desc: 'Returns data', color: '#10b981' },
-        ].map((item, i) => (
-          <div key={item.label} className="flex items-center gap-3 p-3 rounded-xl border bg-card">
-            <div className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0" style={{ backgroundColor: item.color }}>{i + 1}</div>
-            <div>
-              <h4 className="font-semibold text-sm" style={{ color: item.color }}>{item.label}</h4>
-              <p className="text-xs text-muted-foreground">{item.desc}</p>
+        <div className="space-y-3">
+          {patterns.map((p) => (
+            <div key={p.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden" style={{ borderLeftWidth: '3px', borderLeftColor: p.color }}>
+              <div className="px-4 py-2 flex items-center justify-between" style={{ backgroundColor: p.color + '08' }}>
+                <span className="text-xs font-bold" style={{ color: p.color }}>{p.name}</span>
+                <span className="text-[10px] text-muted-foreground">{p.desc}</span>
+              </div>
+              <div className="px-4 py-2.5 grid grid-cols-1 md:grid-cols-3 gap-3 text-[10px]">
+                <div>
+                  <span className="text-muted-foreground/60 uppercase font-semibold">Tools exposed</span>
+                  {p.tools.map((t) => <p key={t} className="text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)] mt-0.5 font-mono">{t}</p>)}
+                </div>
+                <div>
+                  <span className="text-muted-foreground/60 uppercase font-semibold">Resources</span>
+                  {p.resources.map((r) => <p key={r} className="text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)] mt-0.5 font-mono">{r}</p>)}
+                </div>
+                <div>
+                  <span className="text-muted-foreground/60 uppercase font-semibold">Key tip</span>
+                  <p className="text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)] mt-0.5">{p.tips}</p>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </figure>
   );
 }
 
 /* ─── Module 7: Production Checklist ─── */
 export function ProductionChecklist() {
-  const items = [
-    { label: 'Input Validation', desc: 'Sanitize all parameters with Zod schemas', color: '#ef4444' },
-    { label: 'Error Handling', desc: 'Return MCP error codes, never expose internals', color: '#f59e0b' },
-    { label: 'Rate Limiting', desc: 'Prevent abuse and runaway costs', color: '#3b82f6' },
-    { label: 'Auth & Secrets', desc: 'Environment variables, never hardcode', color: '#8b5cf6' },
-    { label: 'Logging', desc: 'Structured logs for every tool invocation', color: '#10b981' },
-    { label: 'Testing', desc: 'Unit tests + MCP Inspector integration tests', color: '#6366f1' },
+  const categories = [
+    {
+      name: 'Security', color: '#ef4444',
+      items: ['Input validation (Zod + manual checks)', 'Secrets in env variables only', 'Principle of least privilege', 'Never expose internals in errors'],
+    },
+    {
+      name: 'Reliability', color: '#3b82f6',
+      items: ['Structured error handling (McpError vs isError)', 'Rate limiting on all tools', 'Graceful shutdown handling', 'Timeout on external calls'],
+    },
+    {
+      name: 'Observability', color: '#10b981',
+      items: ['Structured logging to stderr', 'Tool invocation metrics', 'Response time tracking', 'Error rate monitoring'],
+    },
+    {
+      name: 'Distribution', color: '#8b5cf6',
+      items: ['npm package with bin field', 'Shebang in entry file', 'Published to mcp.run / smithery.ai', 'README with usage examples'],
+    },
   ];
   return (
-    <div className="not-prose my-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
-      {items.map((item) => (
-        <div key={item.label} className="p-4 rounded-xl border bg-card">
-          <div className="w-3 h-3 rounded-full mb-3" style={{ backgroundColor: item.color }} />
-          <h4 className="font-semibold text-sm mb-1">{item.label}</h4>
-          <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Production Readiness Checklist</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Ship a reliable, secure MCP server that others can depend on</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {categories.map((cat) => (
+            <div key={cat.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden">
+              <div className="px-4 py-2 border-b border-[#e3e3e0] dark:border-zinc-800" style={{ backgroundColor: cat.color + '08' }}>
+                <span className="text-xs font-bold" style={{ color: cat.color }}>{cat.name}</span>
+              </div>
+              <div className="px-4 py-2.5">
+                {cat.items.map((item) => (
+                  <div key={item} className="flex items-center gap-2 py-1 border-b border-[#e3e3e0]/30 dark:border-zinc-800/30 last:border-0">
+                    <div className="w-3.5 h-3.5 rounded-sm border border-[#e3e3e0] dark:border-zinc-700 shrink-0" />
+                    <span className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </figure>
   );
 }

@@ -149,6 +149,69 @@ server.resource("projects://active", "List of active projects", ...);`}</code></
             </ul>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">Case Study: Google Sheets MCP Server</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>One of the most practical MCP servers is a Google Sheets connector. It turns spreadsheets into a real-time data layer for AI agents:</p>
+            <p><strong>Tools exposed:</strong></p>
+            <ul>
+                <li><code>get_sheet_data</code>. Read data from a specific sheet and range</li>
+                <li><code>update_cells</code>. Write data to specific cells</li>
+                <li><code>search_spreadsheet</code>. Find cells containing specific text</li>
+                <li><code>create_spreadsheet</code>. Create new spreadsheets</li>
+                <li><code>add_chart</code>. Generate visualizations from data</li>
+            </ul>
+            <p><strong>Real-world use cases:</strong></p>
+            <ul>
+                <li><strong>CRM:</strong> "Add this lead to the Sales Pipeline sheet with status 'New'"</li>
+                <li><strong>Reporting:</strong> "Pull last week's revenue from the Finance sheet and calculate the growth rate"</li>
+                <li><strong>Content calendar:</strong> "What blog posts are scheduled for next week? Update the SEO status column."</li>
+                <li><strong>Inventory:</strong> "Flag any products with stock below 10 units"</li>
+            </ul>
+            <p><strong>Why Sheets as a database:</strong> For startups, Google Sheets is the zero-cost, zero-config database. No SQL to learn. No hosting to manage. Every team member can see and edit the data. An MCP server turns it from a static spreadsheet into a programmable backend.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-6">
+        <AccordionTrigger className="text-lg text-left">Pattern 5: File System Server with Sandboxing</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>A file system MCP server gives AI read/write access to files. This is powerful and dangerous. you must sandbox it properly.</p>
+            <p><strong>Implementation pattern:</strong></p>
+            <pre><code>{`import path from 'path';
+
+const ALLOWED_DIR = process.env.WORKSPACE_DIR || '/home/user/workspace';
+
+function validatePath(filePath: string): string {
+  const resolved = path.resolve(ALLOWED_DIR, filePath);
+  // Critical: prevent directory traversal attacks
+  if (!resolved.startsWith(ALLOWED_DIR)) {
+    throw new McpError(
+      ErrorCode.InvalidParams,
+      \`Access denied: path \${filePath} is outside the workspace\`
+    );
+  }
+  return resolved;
+}
+
+server.tool(
+  "read_file",
+  "Read the contents of a file within the workspace directory",
+  { path: z.string().describe("Relative path within the workspace") },
+  async ({ path: filePath }) => {
+    const safePath = validatePath(filePath);
+    const content = await fs.readFile(safePath, 'utf-8');
+    return { content: [{ type: "text", text: content }] };
+  }
+);`}</code></pre>
+            <p><strong>Security rules for file system servers:</strong></p>
+            <ul>
+                <li>Always resolve and validate paths before any file operation</li>
+                <li>Prevent <code>../</code> traversal attacks with <code>path.resolve</code> + <code>startsWith</code> check</li>
+                <li>Set a maximum file size for reads to prevent memory exhaustion</li>
+                <li>Log every file operation for audit purposes</li>
+                <li>Consider making the server read-only unless writes are explicitly needed</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <KnowledgeCheck

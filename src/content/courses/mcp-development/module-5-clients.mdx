@@ -115,6 +115,41 @@ console.log("Result:", result);`}</code></pre>
             <p>Custom clients give you full programmatic control. You can build CLI tools, web APIs, cron jobs, or any application that needs to interact with MCP servers.</p>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">Antigravity Configuration</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Antigravity (Google DeepMind's AI coding agent) supports MCP servers through its settings UI and workspace configuration:</p>
+            <p><strong>Setting up:</strong></p>
+            <ol>
+                <li>Open Antigravity Settings → MCP Servers</li>
+                <li>Add your server with command, args, and environment variables</li>
+                <li>The server's tools become available in your conversations immediately</li>
+            </ol>
+            <p><strong>Key advantage:</strong> Antigravity runs MCP servers alongside its built-in tools (file editing, terminal, browser, image generation). This means your custom MCP server can work in concert with Antigravity's native capabilities.</p>
+            <p><strong>Example workflow:</strong> You build a Google Sheets MCP server. Now you can tell Antigravity: "Read the sales data from the Q4 sheet, analyze it, and write a summary to the README." Antigravity uses the Sheets MCP to read data, its own reasoning to analyze, and its file system tools to write the result.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-6">
+        <AccordionTrigger className="text-lg text-left">Per-Project vs Global Configuration</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>MCP servers can be configured at two levels, and choosing correctly matters for team workflows:</p>
+            <p><strong>Global configuration:</strong></p>
+            <ul>
+                <li>Stored in user-specific locations (<code>~/Library/Application Support/Claude/claude_desktop_config.json</code>)</li>
+                <li>Available in every conversation/project</li>
+                <li>Best for: personal utility servers (weather, calculator, personal notes)</li>
+                <li>Drawback: not shared with team, requires manual setup per machine</li>
+            </ul>
+            <p><strong>Per-project configuration:</strong></p>
+            <ul>
+                <li>Stored in the project repo (<code>.cursor/mcp.json</code>, <code>.vscode/mcp.json</code>)</li>
+                <li>Committed to Git. team members get the same tools automatically</li>
+                <li>Best for: project-specific servers (project database, deployment tools, internal APIs)</li>
+                <li>Security: use environment variable references, not raw secrets in config files</li>
+            </ul>
+            <p><strong>Pattern for teams:</strong> Create a <code>.cursor/mcp.json</code> with your project's servers. Add a <code>.env.example</code> documenting the required environment variables. Team members clone the repo, copy <code>.env.example</code> to <code>.env</code>, fill in their credentials, and they're connected.</p>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <KnowledgeCheck

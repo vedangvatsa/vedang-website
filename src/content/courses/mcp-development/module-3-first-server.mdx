@@ -111,6 +111,58 @@ await server.connect(transport);`}</code></pre>
             <p>Claude will automatically call your <code>count_words</code> tool and return the result.</p>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">Writing Tool Descriptions That Work</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>The tool description is the most underrated part of MCP development. The LLM reads it to decide when and how to use your tool. A bad description means the LLM will use your tool incorrectly or not at all.</p>
+            <p><strong>Bad descriptions:</strong></p>
+            <ul>
+                <li><code>"Search"</code>. Search what? How? What does it return?</li>
+                <li><code>"Database tool"</code>. Does it read? Write? Both? What database?</li>
+                <li><code>"Helper function for data processing"</code>. Tells the LLM nothing actionable.</li>
+            </ul>
+            <p><strong>Good descriptions:</strong></p>
+            <ul>
+                <li><code>"Search for users by name or email in the PostgreSQL database. Returns up to 10 matching records with id, name, email, and created_at."</code></li>
+                <li><code>"Send a message to a Slack channel. Requires channel name (without #) and message text. Supports markdown formatting."</code></li>
+                <li><code>"Fetch the current stock price for a given ticker symbol. Returns price in USD, change percentage, and trading volume."</code></li>
+            </ul>
+            <p><strong>The rule:</strong> Describe WHAT the tool does, WHAT inputs it expects, and WHAT it returns. Be specific enough that a human who has never seen your codebase could use it correctly.</p>
+            <p><strong>Parameter descriptions matter too:</strong></p>
+            <pre><code>{`// Bad: no parameter descriptions
+{ query: z.string() }
+
+// Good: every parameter described
+{
+  query: z.string().describe("SQL SELECT query to execute against the users table"),
+  limit: z.number().default(10).describe("Maximum results to return (1-100)"),
+}`}</code></pre>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-6">
+        <AccordionTrigger className="text-lg text-left">Common First-Server Mistakes</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Every MCP developer hits these issues. Save yourself the debugging time:</p>
+            <p><strong>1. Using console.log instead of console.error.</strong> In stdio transport, stdout is reserved for JSON-RPC messages. Any <code>console.log()</code> corrupts the protocol stream. Always use <code>console.error()</code> for debugging.</p>
+            <p><strong>2. Forgetting to return the right format.</strong> Every tool must return <code>{'{ content: [{ type: "text", text: "..." }] }'}</code>. Returning a raw string or object will cause a protocol error.</p>
+            <p><strong>3. Not handling async errors.</strong> If your tool handler throws an unhandled error, the entire server process may crash. Wrap everything in try/catch:</p>
+            <pre><code>{`server.tool("my_tool", "Does something", { input: z.string() },
+  async ({ input }) => {
+    try {
+      const result = await doSomething(input);
+      return { content: [{ type: "text", text: result }] };
+    } catch (error) {
+      return {
+        content: [{ type: "text", text: \`Error: \${String(error)}\` }],
+        isError: true,
+      };
+    }
+  }
+);`}</code></pre>
+            <p><strong>4. Using relative paths in config.</strong> Claude Desktop and Cursor resolve paths from their own working directory, not your project. Always use absolute paths in <code>claude_desktop_config.json</code>.</p>
+            <p><strong>5. Not restarting the client.</strong> After changing your server code or config, you must restart the MCP client (Claude Desktop, Cursor) for changes to take effect.</p>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <KnowledgeCheck

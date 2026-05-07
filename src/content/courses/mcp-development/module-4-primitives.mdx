@@ -139,6 +139,72 @@ Code:
             <p><strong>Use a Prompt when:</strong> the user should explicitly choose to activate a specific workflow template, like a slash command.</p>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">Advanced Tool Patterns</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Beyond basic request-response, MCP tools support advanced patterns:</p>
+            <p><strong>1. Progress reporting:</strong> For long-running tools, send progress updates so the user (and LLM) know the tool is still working:</p>
+            <pre><code>{`server.tool("process_data", "Process a large dataset",
+  { datasetId: z.string() },
+  async ({ datasetId }, { sendProgress }) => {
+    const records = await loadRecords(datasetId);
+    for (let i = 0; i < records.length; i++) {
+      await processRecord(records[i]);
+      // Report progress to the client
+      await sendProgress({ progress: i + 1, total: records.length });
+    }
+    return {
+      content: [{
+        type: "text",
+        text: \`Processed \${records.length} records successfully.\`,
+      }],
+    };
+  }
+);`}</code></pre>
+            <p><strong>2. Multi-content responses:</strong> Tools can return multiple content blocks of different types:</p>
+            <pre><code>{`return {
+  content: [
+    { type: "text", text: "Analysis complete. Here's the chart:" },
+    { type: "image", data: base64ChartImage, mimeType: "image/png" },
+    { type: "text", text: "Key findings: revenue up 23%, costs down 8%." },
+  ],
+};`}</code></pre>
+            <p><strong>3. Error vs. empty results:</strong> Return <code>isError: true</code> for genuine failures. Return an empty success result for "no data found" cases. The LLM handles these differently.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-6">
+        <AccordionTrigger className="text-lg text-left">Resource Templates and Subscriptions</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Resources become powerful with templates and change notifications:</p>
+            <p><strong>URI Templates:</strong> Instead of registering every possible resource, define a pattern:</p>
+            <pre><code>{`// This single template handles any table name
+server.resource(
+  "db://myapp/table/{tableName}",
+  "Schema and sample data for a database table",
+  async (uri, { tableName }) => ({
+    contents: [{
+      uri: uri.href,
+      mimeType: "text/plain",
+      text: await getTableInfo(tableName),
+    }],
+  })
+);
+
+// Now the client can request:
+// db://myapp/table/users
+// db://myapp/table/orders
+// db://myapp/table/products`}</code></pre>
+            <p><strong>Change Notifications:</strong> If a resource changes (e.g., a config file is updated), notify connected clients:</p>
+            <pre><code>{`// Watch for changes and notify
+fs.watch(configPath, () => {
+  server.notification({
+    method: "notifications/resources/updated",
+    params: { uri: "config://app/settings" },
+  });
+});`}</code></pre>
+            <p>This enables real-time context updates. the LLM always has the latest data without needing to re-fetch manually.</p>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <KnowledgeCheck

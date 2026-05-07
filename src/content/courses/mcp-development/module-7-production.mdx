@@ -163,6 +163,84 @@ server.tool("search", "Search records", { query: z.string() },
             <p>For remote servers, integrate with observability platforms (Datadog, Sentry, OpenTelemetry) to get alerts and dashboards.</p>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">Testing MCP Servers</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>MCP servers need three levels of testing:</p>
+            <p><strong>1. Unit tests for tool handlers:</strong></p>
+            <pre><code>{`import { describe, it, expect } from 'vitest';
+import { countWords } from './tools/count-words.js';
+
+describe('countWords', () => {
+  it('counts words in simple text', () => {
+    expect(countWords('hello world')).toBe(2);
+  });
+
+  it('handles empty string', () => {
+    expect(countWords('')).toBe(0);
+  });
+
+  it('handles multiple spaces', () => {
+    expect(countWords('hello   world   test')).toBe(3);
+  });
+});`}</code></pre>
+            <p>Extract your tool logic into pure functions. Test them independently of the MCP protocol layer.</p>
+            <p><strong>2. Integration tests with MCP Inspector:</strong></p>
+            <pre><code>{`# Start the inspector and test each tool manually
+npx @modelcontextprotocol/inspector npx tsx src/index.ts
+
+# Verify:
+# ✓ All tools appear in the tools list
+# ✓ Each tool accepts valid inputs and returns correct results
+# ✓ Invalid inputs return isError: true with helpful messages
+# ✓ No stdout pollution (only stderr logging)`}</code></pre>
+            <p><strong>3. End-to-end tests with a programmatic client:</strong></p>
+            <pre><code>{`import { Client } from "@modelcontextprotocol/sdk/client/index.js";
+import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
+
+const transport = new StdioClientTransport({
+  command: "npx", args: ["tsx", "src/index.ts"],
+});
+const client = new Client({ name: "test", version: "1.0.0" });
+await client.connect(transport);
+
+const result = await client.callTool({
+  name: "count_words",
+  arguments: { text: "hello world" },
+});
+assert(result.content[0].text.includes("2"));
+await client.close();`}</code></pre>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-6">
+        <AccordionTrigger className="text-lg text-left">Versioning and Breaking Changes</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Once people depend on your MCP server, you need to manage changes carefully:</p>
+            <p><strong>Non-breaking changes (safe):</strong></p>
+            <ul>
+                <li>Adding new tools</li>
+                <li>Adding optional parameters to existing tools</li>
+                <li>Improving tool descriptions</li>
+                <li>Adding new resources or prompts</li>
+                <li>Bug fixes that don't change the API surface</li>
+            </ul>
+            <p><strong>Breaking changes (require major version bump):</strong></p>
+            <ul>
+                <li>Removing a tool</li>
+                <li>Renaming a tool</li>
+                <li>Changing required parameters</li>
+                <li>Changing the return format of a tool</li>
+                <li>Removing a resource URI</li>
+            </ul>
+            <p><strong>Versioning strategy:</strong></p>
+            <ul>
+                <li>Follow semver: <code>1.0.0</code> → <code>1.1.0</code> for new features, <code>2.0.0</code> for breaking changes</li>
+                <li>Include the version in your server's metadata: <code>new McpServer({'{ name: "my-server", version: "1.2.0" }'})</code></li>
+                <li>Document changes in a CHANGELOG.md</li>
+                <li>When removing a tool, deprecate it first (add "(deprecated)" to the description) in one release, then remove in the next major version</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <KnowledgeCheck
