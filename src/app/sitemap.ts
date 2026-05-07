@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { glossaryTerms } from '@/lib/glossary';
+import { courseConfigs } from '@/lib/course-config';
 
 const BASE_URL = 'https://veda.ng';
 
@@ -43,33 +44,70 @@ function getEssayRoutes(): MetadataRoute.Sitemap {
   }
 }
 
+function getCourseModuleRoutes(): MetadataRoute.Sitemap {
+  const buildDate = new Date();
+  const routes: MetadataRoute.Sitemap = [];
+
+  for (const [courseKey, config] of Object.entries(courseConfigs)) {
+    // Course landing page
+    routes.push({
+      url: `${BASE_URL}${config.basePath}`,
+      lastModified: buildDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    });
+
+    // Course final exam page (if it exists)
+    const examPath = path.join(process.cwd(), 'src', 'app', courseKey, 'final-exam');
+    if (fs.existsSync(examPath)) {
+      routes.push({
+        url: `${BASE_URL}${config.basePath}/final-exam`,
+        lastModified: buildDate,
+        changeFrequency: 'monthly',
+        priority: 0.6,
+      });
+    }
+
+    // Individual module pages
+    for (const mod of config.modules) {
+      routes.push({
+        url: `${BASE_URL}${config.basePath}/${mod.slug}`,
+        lastModified: buildDate,
+        changeFrequency: 'weekly',
+        priority: 0.7,
+      });
+    }
+  }
+
+  return routes;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   // Use build-time date so Google sees fresh crawl signals after each deploy
   const buildDate = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/`, lastModified: buildDate },
-    { url: `${BASE_URL}/writings`, lastModified: buildDate },
-    { url: `${BASE_URL}/glossary`, lastModified: buildDate },
-    { url: `${BASE_URL}/profile`, lastModified: buildDate },
-    { url: `${BASE_URL}/media`, lastModified: buildDate },
-    { url: `${BASE_URL}/community`, lastModified: buildDate },
-    { url: `${BASE_URL}/seo`, lastModified: buildDate },
-    { url: `${BASE_URL}/vibe-coding`, lastModified: buildDate },
-    { url: `${BASE_URL}/prompt-engineering-101`, lastModified: buildDate },
-    { url: `${BASE_URL}/web3-101`, lastModified: buildDate },
-    { url: `${BASE_URL}/agentic-web`, lastModified: buildDate },
-    { url: `${BASE_URL}/lit`, lastModified: buildDate },
+    { url: `${BASE_URL}/`, lastModified: buildDate, changeFrequency: 'daily', priority: 1.0 },
+    { url: `${BASE_URL}/writings`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/glossary`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/profile`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/media`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${BASE_URL}/community`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/seo`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.3 },
+    { url: `${BASE_URL}/lit`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.6 },
   ];
 
   const glossaryRoutes: MetadataRoute.Sitemap = glossaryTerms.map(term => ({
     url: `${BASE_URL}/glossary/${term.slug}`,
     lastModified: buildDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.5,
   }));
 
   const essayRoutes = getEssayRoutes();
+  const courseRoutes = getCourseModuleRoutes();
 
-  const allRoutes = [...staticPages, ...glossaryRoutes, ...essayRoutes];
+  const allRoutes = [...staticPages, ...courseRoutes, ...glossaryRoutes, ...essayRoutes];
 
   // Deduplicate by URL
   const seen = new Set<string>();

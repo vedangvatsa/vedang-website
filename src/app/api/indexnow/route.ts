@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { courseConfigs } from '@/lib/course-config';
 
 const INDEXNOW_KEY = '8e98e43851d7462c9c210ecd4321a7fc';
 const SITE_HOST = 'veda.ng';
@@ -46,23 +47,43 @@ async function submitToIndexNow(urls: string[]) {
   });
 }
 
-// GET: Submit all important pages
-export async function GET() {
+function getAllUrls(): string[] {
   // Static pages
-  const staticPages = [
+  const urls = [
     '/', '/writings', '/glossary', '/profile', '/media',
-    '/community', '/seo', '/agentic-web', '/vibe-coding',
-    '/web3-101', '/prompt-engineering-101',
+    '/community', '/seo', '/lit',
   ];
 
-  // Dynamic: glossary terms and essays loaded at build time via sitemap
-  // For a full submit, we send the static pages + sitemap URL
-  const results = await submitToIndexNow(staticPages);
+  // All course landing pages + individual module pages
+  for (const config of Object.values(courseConfigs)) {
+    urls.push(config.basePath);
+    urls.push(`${config.basePath}/final-exam`);
+    for (const mod of config.modules) {
+      urls.push(`${config.basePath}/${mod.slug}`);
+    }
+  }
+
+  return urls;
+}
+
+// GET: Submit all important pages
+export async function GET() {
+  const allUrls = getAllUrls();
+
+  // IndexNow accepts max 10,000 URLs per request, batch if needed
+  const batchSize = 500;
+  const allResults = [];
+
+  for (let i = 0; i < allUrls.length; i += batchSize) {
+    const batch = allUrls.slice(i, i + batchSize);
+    const results = await submitToIndexNow(batch);
+    allResults.push(...results);
+  }
 
   return NextResponse.json({
-    submitted: staticPages.length,
-    urls: staticPages,
-    results,
+    submitted: allUrls.length,
+    urls: allUrls,
+    results: allResults,
   });
 }
 
