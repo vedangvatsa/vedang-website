@@ -56,6 +56,56 @@ The Agentic Web is not science fiction; it's being built today. This module expl
             <p>All of this happens autonomously, in real-time, without any direct human intervention. This kind of inter-agent communication and coordination can create vastly more efficient and resilient systems.</p>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg text-left">Coding Agents: The Developer Multiplier</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Coding agents represent the most mature category of AI agents today. They can read entire codebases, plan multi-file changes, execute commands, and iterate on errors autonomously.</p>
+            <p><strong>How coding agents work:</strong></p>
+            <ol>
+                <li>You describe a feature or bug in natural language ("Add email authentication to this Next.js app")</li>
+                <li>The agent reads your project structure, dependencies, and existing code</li>
+                <li>It plans the changes across multiple files</li>
+                <li>It writes the code, runs it, reads any errors, fixes them, and repeats</li>
+                <li>You review the final result</li>
+            </ol>
+            <p><strong>Current products:</strong></p>
+            <ul>
+                <li><strong>Cursor:</strong> AI-native IDE that autocompletes, generates, and edits code inline. Best for developers who want to stay in control of every edit.</li>
+                <li><strong>Claude Code:</strong> Terminal-based agent that reads your repo, writes code, runs shell commands, and iterates autonomously. Best for larger, multi-file tasks.</li>
+                <li><strong>Antigravity:</strong> Google DeepMind's agentic coding assistant. Operates inside your IDE with access to file editing, terminal, browser, and image generation simultaneously.</li>
+                <li><strong>Devin:</strong> Cognition's fully autonomous software engineer. Operates in a sandboxed cloud environment with its own browser, editor, and terminal.</li>
+            </ul>
+            <p><strong>Key limitation:</strong> Coding agents handle well-defined tasks reliably but struggle with ambiguous requirements. The clearer your instructions, the better the output. Treat them as a very fast junior engineer who needs specific direction.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">Real-World Deployment Patterns</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Agents are not deployed the same way in every context. Three deployment patterns have emerged:</p>
+            <p><strong>1. Copilot Pattern (Human + Agent):</strong></p>
+            <ul>
+                <li>Agent suggests, human approves every action</li>
+                <li>Lowest risk, highest human oversight</li>
+                <li>Example: GitHub Copilot suggesting code completions</li>
+                <li>Best for: high-stakes decisions, regulated industries</li>
+            </ul>
+            <p><strong>2. Delegated Pattern (Agent acts, human reviews):</strong></p>
+            <ul>
+                <li>Agent executes a complete task, human reviews the output</li>
+                <li>Medium risk, medium efficiency</li>
+                <li>Example: "Write a market analysis report, I will review before publishing"</li>
+                <li>Best for: content creation, research, data analysis</li>
+            </ul>
+            <p><strong>3. Autonomous Pattern (Agent acts independently):</strong></p>
+            <ul>
+                <li>Agent operates with full authority within defined boundaries</li>
+                <li>Highest efficiency, requires strong guardrails</li>
+                <li>Example: Supply chain agent automatically reordering inventory when stock drops below threshold</li>
+                <li>Best for: repetitive operational tasks with clear rules</li>
+            </ul>
+            <p>Most organizations start with the Copilot pattern and gradually move toward delegation as trust in the agent increases. The autonomous pattern requires extensive testing and monitoring infrastructure before deployment.</p>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <KnowledgeCheck

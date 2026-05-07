@@ -59,4 +59,75 @@ Web3 is not a utopia. It's a young, evolving technology with immense potential b
             Solving these challenges is the primary focus of the thousands of developers and entrepreneurs building in the Web3 space today. The journey is just beginning.
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg">Web3 + AI: The Convergence</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>AI and Web3 are converging in ways that amplify both technologies:</p>
+            <p><strong>AI agents using DeFi:</strong> Autonomous agents can interact with DeFi protocols to manage treasury operations, execute trades, and optimize yield farming. An AI agent with a crypto wallet can operate 24/7 across global markets without human intervention. Projects like Coinbase's AgentKit and Skyfire provide the infrastructure for agents to hold wallets and transact autonomously.</p>
+            <p><strong>Verifiable AI with blockchain:</strong> One of AI's biggest problems is trust. How do you know an AI generated the output it claims? Blockchain provides verifiable computation: the inputs, model weights, and outputs can be hashed and recorded on-chain. This creates an audit trail for AI decisions, which matters in healthcare, finance, and legal applications.</p>
+            <p><strong>Decentralized AI training:</strong> Projects like Bittensor and Gensyn allow distributed networks of GPU owners to contribute compute for AI training. This decentralizes the AI training process, which today is controlled by a handful of companies with massive data centers.</p>
+            <p><strong>MCP + Crypto wallets:</strong> The Model Context Protocol (covered in the MCP Development course) enables AI agents to interact with any service through standardized tool interfaces. Combined with crypto wallets, this creates agents that can discover, evaluate, and pay for services autonomously.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg">Security Checklist for Web3 Users</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Security in Web3 is entirely your responsibility. There is no customer support to call if you lose your funds. Follow these rules without exception:</p>
+            <p><strong>Wallet security:</strong></p>
+            <ul>
+                <li>Write your seed phrase on paper. Never store it digitally (not in Notes, not in iCloud, not in a screenshot).</li>
+                <li>Use a hardware wallet (Ledger, Trezor) for any amount you cannot afford to lose.</li>
+                <li>Never share your seed phrase with anyone, for any reason. No legitimate service will ever ask for it.</li>
+            </ul>
+            <p><strong>Transaction safety:</strong></p>
+            <ul>
+                <li>Always verify the contract address before interacting with a dApp. Bookmark trusted sites.</li>
+                <li>Start with small test transactions before sending large amounts.</li>
+                <li>Review what you are approving in your wallet popup. Unlimited token approvals are a common attack vector.</li>
+                <li>Revoke old approvals periodically using tools like revoke.cash.</li>
+            </ul>
+            <p><strong>Red flags that signal a scam:</strong></p>
+            <ul>
+                <li>Guaranteed returns (nothing in crypto is guaranteed)</li>
+                <li>Anonymous team with no verifiable track record</li>
+                <li>Pressure to act immediately ("limited time offer")</li>
+                <li>Unsolicited DMs offering investment opportunities</li>
+                <li>Projects that fork existing code without adding meaningful innovation</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg">How to Get Involved</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Web3 is still early enough that newcomers can contribute meaningfully. Here are concrete paths:</p>
+            <p><strong>For developers:</strong></p>
+            <ul>
+                <li>Learn Solidity (Ethereum smart contract language) through CryptoZombies or Alchemy University, both free</li>
+                <li>Build on testnets first (Sepolia for Ethereum). Testnet ETH is free and lets you experiment without risk.</li>
+                <li>Contribute to open-source Web3 projects on GitHub. Most DAOs actively seek contributors.</li>
+                <li>Explore Foundry or Hardhat as your development framework.</li>
+            </ul>
+            <p><strong>For non-developers:</strong></p>
+            <ul>
+                <li>Join a DAO and participate in governance. MakerDAO, Uniswap, and Aave have active governance forums.</li>
+                <li>Write about Web3 topics to build credibility. Mirror.xyz is a decentralized publishing platform.</li>
+                <li>Manage community for Web3 projects. Discord and Telegram community managers are always in demand.</li>
+                <li>Learn on-chain analysis using Dune Analytics. Understanding blockchain data is a valuable skill.</li>
+            </ul>
+            <p><strong>For investors:</strong></p>
+            <ul>
+                <li>Start with Bitcoin and ETH before exploring altcoins. These are the most liquid and well-understood assets.</li>
+                <li>Never invest more than you can afford to lose entirely. Crypto markets can drop 80% in months.</li>
+                <li>Use dollar-cost averaging instead of trying to time the market.</li>
+                <li>Research tokenomics before buying any token. Understand supply schedule, utility, and governance rights.</li>
+            </ul>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
+
+<KnowledgeCheck
+  question="What is the primary security concern with unlimited token approvals in DeFi?"
+  options={["They cost more gas", "They allow contracts to spend your tokens without further permission", "They slow down transactions", "They reveal your identity"]}
+  correctAnswerIndex={1}
+  explanation="Unlimited token approvals give a smart contract permission to spend an unlimited amount of your tokens at any time. If that contract is compromised, an attacker can drain your wallet. Always revoke old approvals and limit approval amounts when possible."
+/>

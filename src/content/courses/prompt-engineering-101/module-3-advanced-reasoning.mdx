@@ -37,6 +37,59 @@ For complex problems, you need to guide the model's reasoning process. These tec
             <p>The principle is the same as text prompting: be specific about what you want the model to focus on in the image, document, or media file.</p>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg">Practical Chain-of-Thought Examples</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Chain-of-Thought becomes most valuable when you apply it to real tasks. Here are concrete patterns:</p>
+            <p><strong>For business analysis:</strong></p>
+            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
+                "Our SaaS product has 10,000 users, 8% monthly churn, and $50 average revenue per user. We spend $120 to acquire each customer. Think step by step: Is this business sustainable? What is the customer lifetime value? At what churn rate does the unit economics break?"
+            </blockquote>
+            <p><strong>For debugging code:</strong></p>
+            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
+                "This React component re-renders infinitely when I open the modal. Here is the code: [paste code]. Think step by step: trace the state changes that occur when the modal opens, identify the dependency that triggers the re-render loop, and suggest the fix."
+            </blockquote>
+            <p><strong>For writing:</strong></p>
+            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
+                "I need a LinkedIn post about remote work productivity. Before writing, think step by step: What is the counterintuitive angle? What data point would make people stop scrolling? What is the one actionable takeaway? Now write the post."
+            </blockquote>
+            <p>The key pattern: describe the problem, provide the relevant data, then explicitly ask the model to reason through it before generating output. This consistently produces higher quality results than a direct request.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-6">
+        <AccordionTrigger className="text-lg">Which Reasoning Strategy to Use?</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Each reasoning strategy fits a different type of problem. Here is a decision guide:</p>
+            <p><strong>Use Chain of Thought when:</strong></p>
+            <ul>
+                <li>The problem requires multi-step math or logic</li>
+                <li>You need to trace through a decision process</li>
+                <li>The task involves comparing multiple options</li>
+                <li>Example: calculating ROI, debugging code, analyzing data</li>
+            </ul>
+            <p><strong>Use Self-Consistency when:</strong></p>
+            <ul>
+                <li>The answer must be factually correct (not creative)</li>
+                <li>You can afford to generate multiple responses (higher cost)</li>
+                <li>The task has one correct answer, not multiple valid answers</li>
+                <li>Example: medical diagnosis reasoning, legal analysis, financial calculations</li>
+            </ul>
+            <p><strong>Use ReAct when:</strong></p>
+            <ul>
+                <li>The task requires external information you do not have</li>
+                <li>The model needs to search, retrieve, and then reason about results</li>
+                <li>The answer depends on current or dynamic data</li>
+                <li>Example: "What is the current stock price of NVIDIA and is it overvalued based on its P/E ratio?"</li>
+            </ul>
+            <p><strong>Use Multimodal prompting when:</strong></p>
+            <ul>
+                <li>You have images, PDFs, screenshots, or audio to analyze</li>
+                <li>Text alone cannot capture the information (UI bugs, chart interpretation, handwritten notes)</li>
+                <li>You need to cross-reference visual and textual data</li>
+            </ul>
+            <p>Start with simple Chain of Thought for most tasks. Escalate to Self-Consistency when accuracy is critical and to ReAct when the model needs live data.</p>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <KnowledgeCheck

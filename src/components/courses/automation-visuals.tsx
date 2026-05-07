@@ -161,7 +161,7 @@ export function AgentArchitecture() {
     <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The AI Agent Loop</h3>
-        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Observe, Think, Act, Learn — the cycle that replaces rigid rule-based automation</p>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Observe, Think, Act, Learn: the cycle that replaces rigid rule-based automation</p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-5">
           {phases.map((p) => (

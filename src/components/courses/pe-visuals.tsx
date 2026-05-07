@@ -1,216 +1,216 @@
 'use client';
 
-import { Brain, Layers, Terminal, Lightbulb, Target } from 'lucide-react';
-
 /* ─── Module 1: Prediction Engine ─── */
 export function PredictionEngine() {
   return (
-    <div className="not-prose my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div className="p-5 rounded-xl border bg-red-500/5 border-red-500/20">
-        <div className="text-xs font-bold uppercase tracking-wider text-red-600 dark:text-red-400 mb-2">Weak Prompt</div>
-        <p className="text-sm italic text-muted-foreground">&quot;Write about marketing.&quot;</p>
-        <p className="text-xs text-muted-foreground mt-2">Vague → generic output. The AI has no constraints to guide predictions.</p>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Weak vs Strong Prompts</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Constraints narrow the prediction space, producing better output</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="rounded-[3px] border-2 border-red-200 dark:border-red-900/40 p-4">
+            <div className="text-xs font-bold text-red-500 dark:text-red-400 uppercase tracking-wider mb-2">Weak Prompt</div>
+            <p className="text-[11px] text-muted-foreground italic mb-2">&quot;Write about marketing.&quot;</p>
+            <p className="text-[10px] text-muted-foreground/60">Vague. The AI has no constraints to guide predictions. Output will be generic and unfocused.</p>
+          </div>
+          <div className="rounded-[3px] border-2 border-green-300 dark:border-green-800/60 p-4">
+            <div className="text-xs font-bold text-green-600 dark:text-green-400 uppercase tracking-wider mb-2">Strong Prompt</div>
+            <p className="text-[11px] text-muted-foreground italic mb-2">&quot;Write a 200-word LinkedIn post about content marketing for B2B SaaS startups. Use a professional tone and include 3 actionable tips.&quot;</p>
+            <p className="text-[10px] text-muted-foreground/60">Specific. Constraints on length, audience, platform, tone, and structure produce focused output.</p>
+          </div>
+        </div>
       </div>
-      <div className="p-5 rounded-xl border bg-emerald-500/5 border-emerald-500/20">
-        <div className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-2">Strong Prompt</div>
-        <p className="text-sm italic text-muted-foreground">&quot;Write a 200-word LinkedIn post about content marketing for B2B SaaS startups. Use a professional tone and include 3 actionable tips.&quot;</p>
-        <p className="text-xs text-muted-foreground mt-2">Specific → focused, useful output. Constraints narrow the prediction space.</p>
-      </div>
-    </div>
+    </figure>
   );
 }
 
 /* ─── Module 2: Core Techniques ─── */
 export function CoreTechniques() {
   const techniques = [
-    { icon: Target, title: 'Zero-Shot', desc: 'Direct instruction with no examples. Works for simple tasks.', color: 'text-blue-600 dark:text-blue-400', bg: 'bg-blue-500/5 border-blue-500/20', iconBg: 'bg-blue-500/10' },
-    { icon: Layers, title: 'Few-Shot', desc: 'Provide 2-3 examples of the desired output format before your request.', color: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-500/5 border-violet-500/20', iconBg: 'bg-violet-500/10' },
-    { icon: Brain, title: 'Role / Persona', desc: 'Assign the AI an expert identity to shift tone and depth of response.', color: 'text-amber-600 dark:text-amber-400', bg: 'bg-amber-500/5 border-amber-500/20', iconBg: 'bg-amber-500/10' },
+    { title: 'Zero-Shot', desc: 'Direct instruction with no examples. Works for simple, well-defined tasks.', example: '"Translate this to French: Hello, how are you?"', color: '#3b82f6' },
+    { title: 'Few-Shot', desc: 'Provide 2-3 examples of the desired output format before your request.', example: 'Show input→output pairs, then give the new input', color: '#8b5cf6' },
+    { title: 'Role / Persona', desc: 'Assign the AI an expert identity to shift tone and depth of response.', example: '"You are a senior data scientist..."', color: '#f59e0b' },
   ];
   return (
-    <div className="not-prose my-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-      {techniques.map((t) => {
-        const Icon = t.icon;
-        return (
-          <div key={t.title} className={`p-5 rounded-xl border ${t.bg}`}>
-            <div className={`${t.iconBg} p-2 rounded-lg ${t.color} inline-block mb-3`}><Icon className="w-5 h-5" /></div>
-            <h4 className="font-semibold text-sm mb-1">{t.title}</h4>
-            <p className="text-xs text-muted-foreground leading-relaxed">{t.desc}</p>
-          </div>
-        );
-      })}
-    </div>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Core Prompting Techniques</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">The three foundational patterns for any AI interaction</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          {techniques.map((t) => (
+            <div key={t.title} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden" style={{ borderTopWidth: '3px', borderTopColor: t.color }}>
+              <div className="p-3">
+                <span className="text-xs font-bold" style={{ color: t.color }}>{t.title}</span>
+                <p className="text-[10px] text-muted-foreground mt-1 mb-2">{t.desc}</p>
+                <p className="text-[10px] text-muted-foreground/60 italic">{t.example}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
   );
 }
 
 /* ─── Module 3: Advanced Reasoning ─── */
 export function AdvancedReasoning() {
   const methods = [
-    { title: 'Chain of Thought', desc: 'Ask AI to think step-by-step. Forces planning before answering, reducing logic errors.', color: 'text-cyan-700 dark:text-cyan-400' },
-    { title: 'Self-Consistency', desc: 'Generate multiple answers and pick the most common. Reduces hallucination on factual tasks.', color: 'text-cyan-700 dark:text-cyan-400' },
-    { title: 'Tree of Thought', desc: 'AI explores multiple reasoning branches in parallel, evaluates each, and picks the best path.', color: 'text-cyan-700 dark:text-cyan-400' },
+    { title: 'Chain of Thought', desc: 'Ask AI to think step-by-step. Forces planning before answering, reducing logic errors.', trigger: '"Think step by step before answering"', color: '#3b82f6' },
+    { title: 'Self-Consistency', desc: 'Generate multiple answers and pick the most common. Reduces hallucination on factual tasks.', trigger: 'Generate 3 answers, then pick consensus', color: '#8b5cf6' },
+    { title: 'Tree of Thought', desc: 'AI explores multiple reasoning branches in parallel, evaluates each, and picks the best path.', trigger: '"Consider 3 approaches, evaluate, choose best"', color: '#10b981' },
   ];
   return (
-    <div className="not-prose my-6 p-6 bg-card border rounded-2xl">
-      <div className="flex items-center gap-3 mb-4">
-        <div className="bg-cyan-500/10 p-2 rounded-lg text-cyan-600 dark:text-cyan-400"><Lightbulb className="w-5 h-5" /></div>
-        <h4 className="font-semibold text-base">Reasoning Strategies</h4>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Reasoning Strategies</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Force the AI to reason before it answers</p>
+
+        <div className="space-y-2">
+          {methods.map((m) => (
+            <div key={m.title} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden" style={{ borderLeftWidth: '3px', borderLeftColor: m.color }}>
+              <div className="px-4 py-2.5">
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-xs font-bold" style={{ color: m.color }}>{m.title}</span>
+                </div>
+                <p className="text-[10px] text-muted-foreground mb-1">{m.desc}</p>
+                <p className="text-[10px] text-muted-foreground/60 italic">Trigger: {m.trigger}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-        {methods.map((m) => (
-          <div key={m.title} className="p-3 rounded-lg bg-cyan-500/5 border border-cyan-500/10">
-            <div className={`font-medium text-sm ${m.color} mb-1`}>{m.title}</div>
-            <p className="text-xs text-muted-foreground leading-relaxed">{m.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
+    </figure>
   );
 }
 
 /* ─── Module 4: Code Prompting ─── */
 export function CodePrompting() {
   const patterns = [
-    { title: 'Describe, Don\'t Dictate', desc: 'Tell the AI what you need, not how to code it. Let it choose the implementation.', color: 'text-green-600 dark:text-green-400', bg: 'bg-green-500/5 border-green-500/20' },
-    { title: 'Error-Paste Debugging', desc: 'Copy the full error trace into chat. Say: "Fix this error." Don\'t interpret it yourself.', color: 'text-orange-600 dark:text-orange-400', bg: 'bg-orange-500/5 border-orange-500/20' },
-    { title: 'Refactor by Intent', desc: '"Make this function more readable" or "Split this into smaller functions" — intent-driven instructions.', color: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-500/5 border-indigo-500/20' },
+    { title: "Describe, Don't Dictate", desc: 'Tell the AI what you need, not how to code it. Let it choose the implementation.', example: '"Build a function that validates email addresses" not "Write a regex for..."', color: '#10b981' },
+    { title: 'Error-Paste Debugging', desc: 'Copy the full error trace into chat. Don\'t interpret it yourself.', example: '"Fix this error: [paste full stack trace]"', color: '#f59e0b' },
+    { title: 'Refactor by Intent', desc: 'Give the AI the outcome you want, not the mechanics.', example: '"Make this function more readable" or "Split into smaller functions"', color: '#8b5cf6' },
   ];
   return (
-    <div className="not-prose my-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-      {patterns.map((p) => (
-        <div key={p.title} className={`p-5 rounded-xl border ${p.bg}`}>
-          <div className="flex items-center gap-2 mb-2">
-            <Terminal className={`w-4 h-4 ${p.color}`} />
-            <h4 className="font-semibold text-sm">{p.title}</h4>
-          </div>
-          <p className="text-xs text-muted-foreground leading-relaxed">{p.desc}</p>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Code Prompting Patterns</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">How to get the best code output from AI</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          {patterns.map((p) => (
+            <div key={p.title} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden" style={{ borderTopWidth: '3px', borderTopColor: p.color }}>
+              <div className="p-3">
+                <span className="text-xs font-bold" style={{ color: p.color }}>{p.title}</span>
+                <p className="text-[10px] text-muted-foreground mt-1 mb-2">{p.desc}</p>
+                <p className="text-[10px] text-muted-foreground/60 italic">{p.example}</p>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </figure>
   );
 }
 
 /* ─── Module 5: Best Practices ─── */
 export function BestPractices() {
   const tips = [
-    { title: 'Be Specific', desc: 'Include word counts, format, audience, and tone in every prompt.' },
-    { title: 'Iterate', desc: 'Treat prompting as a conversation. Refine based on each output.' },
-    { title: 'Use Delimiters', desc: 'Wrap input text in triple quotes or XML tags to separate instructions from data.' },
-    { title: 'Set Constraints', desc: 'Tell the AI what NOT to do. Anti-instructions prevent bloat and hallucination.' },
+    { title: 'Be Specific', desc: 'Include word counts, format, audience, and tone in every prompt.', anti: 'Never say "write something about X"' },
+    { title: 'Iterate', desc: 'Treat prompting as a conversation. Refine based on each output.', anti: 'Never accept first output as final' },
+    { title: 'Use Delimiters', desc: 'Wrap input text in triple quotes or XML tags to separate instructions from data.', anti: 'Never mix instructions with input data' },
+    { title: 'Set Constraints', desc: 'Tell the AI what NOT to do. Anti-instructions prevent bloat and hallucination.', anti: 'Never leave the output format undefined' },
   ];
   return (
-    <div className="not-prose my-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-      {tips.map((t) => (
-        <div key={t.title} className="p-4 rounded-xl border bg-card">
-          <h4 className="font-semibold text-sm mb-1">{t.title}</h4>
-          <p className="text-xs text-muted-foreground leading-relaxed">{t.desc}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Prompt Engineering Best Practices</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Rules that apply to every prompt, every time</p>
 
-/* ─── Module 6: RAG & Function Calling ─── */
-export function RAGPipeline() {
-  return (
-    <div className="not-prose my-6">
-      <svg viewBox="0 0 800 160" className="w-full h-auto hidden sm:block" role="img" aria-label="RAG Pipeline: Query → Embed → Retrieve → Augment → Generate">
-        {[
-          { x: 10, label: 'User Query', color: '#3b82f6' },
-          { x: 170, label: 'Embed', color: '#8b5cf6' },
-          { x: 330, label: 'Retrieve', color: '#10b981' },
-          { x: 490, label: 'Augment', color: '#f59e0b' },
-          { x: 650, label: 'Generate', color: '#ef4444' },
-        ].map((step, i) => (
-          <g key={step.label}>
-            <rect x={step.x} y={35} width={140} height={70} rx={12} fill={`${step.color}15`} stroke={step.color} strokeWidth={1.5} />
-            <text x={step.x + 70} y={75} textAnchor="middle" fill={step.color} fontSize={13} fontWeight={700}>{step.label}</text>
-            {i < 4 && (
-              <path d={`M${step.x + 145} 70 L${step.x + 165} 70`} stroke="currentColor" strokeWidth={1.5} opacity={0.3} markerEnd="url(#rag-arrow)" />
-            )}
-          </g>
-        ))}
-        {/* Vector DB icon */}
-        <rect x={370} y={115} width={80} height={30} rx={6} fill="#10b98115" stroke="#10b981" strokeWidth={1} />
-        <text x={410} y={135} textAnchor="middle" fill="#10b981" fontSize={10} fontWeight={600}>Vector DB</text>
-        <line x1={400} y1={105} x2={400} y2={115} stroke="#10b981" strokeWidth={1} strokeDasharray="3 2" />
-        <defs>
-          <marker id="rag-arrow" markerWidth={8} markerHeight={6} refX={8} refY={3} orient="auto">
-            <path d="M0 0 L8 3 L0 6 Z" fill="currentColor" opacity={0.4} />
-          </marker>
-        </defs>
-      </svg>
-      {/* Mobile fallback */}
-      <div className="sm:hidden flex flex-col gap-2">
-        {[
-          { label: '1. User Query', color: '#3b82f6' },
-          { label: '2. Embed', color: '#8b5cf6' },
-          { label: '3. Retrieve', color: '#10b981' },
-          { label: '4. Augment', color: '#f59e0b' },
-          { label: '5. Generate', color: '#ef4444' },
-        ].map((item) => (
-          <div key={item.label} className="flex items-center gap-3 p-3 rounded-xl border bg-card">
-            <div className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: item.color }} />
-            <h4 className="font-semibold text-sm" style={{ color: item.color }}>{item.label}</h4>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-/* ─── Module 7: Prompt Chaining & Agents ─── */
-export function PromptChaining() {
-  return (
-    <div className="not-prose my-6">
-      <svg viewBox="0 0 800 180" className="w-full h-auto hidden sm:block" role="img" aria-label="Prompt Chain: Step 1 feeds into Step 2 feeds into Step 3, with a gate between each">
-        {[
-          { x: 10, label: 'Step 1', desc: 'Research', color: '#3b82f6' },
-          { x: 200, label: 'Gate', desc: 'Validate', color: '#f59e0b' },
-          { x: 340, label: 'Step 2', desc: 'Draft', color: '#8b5cf6' },
-          { x: 530, label: 'Gate', desc: 'Review', color: '#f59e0b' },
-          { x: 660, label: 'Step 3', desc: 'Polish', color: '#10b981' },
-        ].map((step, i) => {
-          const isGate = step.label === 'Gate';
-          const w = isGate ? 100 : 160;
-          const h = isGate ? 50 : 80;
-          const yOff = isGate ? 50 : 35;
-          return (
-            <g key={`${step.label}-${i}`}>
-              <rect x={step.x} y={yOff} width={w} height={h} rx={isGate ? 25 : 12} fill={`${step.color}15`} stroke={step.color} strokeWidth={1.5} strokeDasharray={isGate ? "4 3" : "none"} />
-              <text x={step.x + w/2} y={yOff + (isGate ? 22 : 35)} textAnchor="middle" fill={step.color} fontSize={isGate ? 11 : 14} fontWeight={700}>{isGate ? '' + step.desc : step.label}</text>
-              {!isGate && <text x={step.x + w/2} y={yOff + 55} textAnchor="middle" fill="currentColor" fontSize={11} opacity={0.5}>{step.desc}</text>}
-              {i < 4 && (
-                <path d={`M${step.x + w + 5} 75 L${step.x + w + 25} 75`} stroke="currentColor" strokeWidth={1.2} opacity={0.3} markerEnd="url(#chain-arrow)" />
-              )}
-            </g>
-          );
-        })}
-        <text x={400} y={160} textAnchor="middle" fill="currentColor" fontSize={11} opacity={0.4}>Output of each step becomes input for the next</text>
-        <defs>
-          <marker id="chain-arrow" markerWidth={8} markerHeight={6} refX={8} refY={3} orient="auto">
-            <path d="M0 0 L8 3 L0 6 Z" fill="currentColor" opacity={0.4} />
-          </marker>
-        </defs>
-      </svg>
-      {/* Mobile fallback */}
-      <div className="sm:hidden flex flex-col gap-2">
-        {[
-          { label: 'Step 1', desc: 'Research', color: '#3b82f6' },
-          { label: 'Gate', desc: 'Validate', color: '#f59e0b' },
-          { label: 'Step 2', desc: 'Draft', color: '#8b5cf6' },
-          { label: 'Gate', desc: 'Review', color: '#f59e0b' },
-          { label: 'Step 3', desc: 'Polish', color: '#10b981' },
-        ].map((item, i) => (
-          <div key={`${item.label}-${i}`} className={`flex items-center gap-3 p-3 rounded-xl border ${item.label === 'Gate' ? 'border-dashed bg-transparent' : 'bg-card'}`}>
-            <div className={`w-3 h-3 rounded-full shrink-0 ${item.label === 'Gate' ? 'border-2' : ''}`} style={{ backgroundColor: item.label === 'Gate' ? 'transparent' : item.color, borderColor: item.color }} />
-            <div>
-              <h4 className="font-semibold text-sm" style={{ color: item.color }}>{item.label}</h4>
-              <p className="text-xs text-muted-foreground">{item.desc}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {tips.map((t) => (
+            <div key={t.title} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3">
+              <span className="text-xs font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{t.title}</span>
+              <p className="text-[10px] text-muted-foreground mt-1">{t.desc}</p>
+              <p className="text-[10px] text-red-500 dark:text-red-400 mt-1">{t.anti}</p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </figure>
+  );
+}
+
+/* ─── Module 6: RAG Pipeline ─── */
+export function RAGPipeline() {
+  const stages = [
+    { num: '1', label: 'User Query', desc: 'The natural language question or request', color: '#3b82f6' },
+    { num: '2', label: 'Embed', desc: 'Convert query to a vector embedding using an embedding model', color: '#8b5cf6' },
+    { num: '3', label: 'Retrieve', desc: 'Search vector database for the most similar document chunks', color: '#10b981' },
+    { num: '4', label: 'Augment', desc: 'Insert retrieved context into the prompt alongside the query', color: '#f59e0b' },
+    { num: '5', label: 'Generate', desc: 'LLM generates answer grounded in the retrieved context', color: '#ef4444' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">RAG Pipeline</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Retrieval-Augmented Generation: ground AI answers in your data</p>
+
+        <div className="relative">
+          <div className="absolute left-[18px] top-0 bottom-0 w-px bg-[#e3e3e0] dark:bg-zinc-800" />
+          <div className="space-y-2.5">
+            {stages.map((s) => (
+              <div key={s.num} className="grid grid-cols-[36px_1fr] gap-3 items-start">
+                <div className="relative flex items-center justify-center pt-1">
+                  <div className="w-[9px] h-[9px] rounded-full" style={{ backgroundColor: s.color }} />
+                </div>
+                <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3">
+                  <span className="text-xs font-bold" style={{ color: s.color }}>Stage {s.num}: {s.label}</span>
+                  <p className="text-[10px] text-muted-foreground mt-0.5">{s.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+/* ─── Module 7: Prompt Chaining ─── */
+export function PromptChaining() {
+  const chain = [
+    { type: 'step', label: 'Step 1: Research', desc: 'Gather information, summarize sources, extract key facts', color: '#3b82f6' },
+    { type: 'gate', label: 'Validate', desc: 'Check: are facts accurate? Is anything missing?', color: '#f59e0b' },
+    { type: 'step', label: 'Step 2: Draft', desc: 'Write first draft using research output as context', color: '#8b5cf6' },
+    { type: 'gate', label: 'Review', desc: 'Check: does it match requirements? Tone? Length?', color: '#f59e0b' },
+    { type: 'step', label: 'Step 3: Polish', desc: 'Refine language, add formatting, finalize output', color: '#10b981' },
+  ];
+  return (
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Prompt Chaining</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Output of each step becomes input for the next</p>
+
+        <div className="space-y-1.5">
+          {chain.map((c, i) => (
+            <div key={`${c.label}-${i}`} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden" style={c.type === 'gate' ? { borderStyle: 'dashed' } : { borderLeftWidth: '3px', borderLeftColor: c.color }}>
+              <div className="px-4 py-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold" style={{ color: c.color }}>{c.label}</span>
+                  {c.type === 'gate' && <span className="text-[9px] font-mono text-muted-foreground/60 uppercase">Quality gate</span>}
+                </div>
+                <p className="text-[10px] text-muted-foreground mt-0.5">{c.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-4 rounded-[3px] bg-[#f7f6f3] dark:bg-zinc-800/40 px-4 py-2.5">
+          <span className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]"><strong>Key principle:</strong> Breaking a complex task into steps with quality gates between them produces dramatically better output than a single monolithic prompt.</span>
+        </div>
+      </div>
+    </figure>
   );
 }

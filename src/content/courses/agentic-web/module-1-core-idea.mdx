@@ -65,6 +65,17 @@ This module introduces the fundamental shift from a human-driven web to an agent
             </div>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg text-left">Why Now? The Confluence of Capabilities</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>AI agents are not new. Researchers have been building autonomous systems for decades. What changed is that four capabilities converged simultaneously in 2024-2025:</p>
+            <p><strong>1. Reasoning models crossed the reliability threshold.</strong> GPT-4, Claude 3.5, and Gemini Pro can now reliably decompose complex tasks into executable steps. Earlier models could generate text but could not plan multi-step workflows consistently. The latest models succeed at multi-step tool use over 90% of the time on benchmarks like SWE-bench.</p>
+            <p><strong>2. Tool-use protocols became standardized.</strong> Before MCP (Model Context Protocol, launched by Anthropic in late 2024), every agent framework had its own way of connecting to external tools. MCP created a universal standard, like USB for AI. Google followed with A2A (Agent-to-Agent Protocol) for inter-agent communication. These open standards mean a tool built once works with every agent.</p>
+            <p><strong>3. Context windows expanded dramatically.</strong> Claude now supports 200K tokens. Gemini supports over 1M tokens. This means agents can ingest entire codebases, legal documents, or financial reports in a single pass, without needing complex chunking or retrieval strategies. Larger context windows directly translate to more capable agents.</p>
+            <p><strong>4. Cost dropped by 100x.</strong> GPT-3.5 cost $60 per million output tokens in early 2023. Claude 3.5 Haiku costs $1 per million output tokens in 2025. This 60x cost reduction makes it economically viable to run agents that make hundreds of API calls per task.</p>
+            <p>These four forces together created the conditions for practical, economically viable AI agents. The technology existed in pieces before. Now it works as a system.</p>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <KnowledgeCheck
