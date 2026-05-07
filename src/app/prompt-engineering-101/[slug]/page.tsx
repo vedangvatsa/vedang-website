@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft } from 'lucide-react';
@@ -36,6 +37,7 @@ const mdxComponents = {
     CodePromptPatterns, PromptAntiPatterns, RAGArchitecture, ChainTypes,
     Link,
 };
+import matter from 'gray-matter';
 
 const config = courseConfigs['prompt-engineering-101'];
 const CONTENT_PATH = path.join(process.cwd(), 'src', 'content', 'courses', 'prompt-engineering-101');
@@ -44,6 +46,22 @@ export async function generateStaticParams() {
     return config.modules.map((module) => ({
         slug: module.slug,
     }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const filePath = path.join(CONTENT_PATH, `${slug}.mdx`);
+    if (!fs.existsSync(filePath)) notFound();
+    const { data } = matter(fs.readFileSync(filePath, 'utf8'));
+    const title = `${data.title} | Prompt Engineering 101 | Vedang Vatsa`;
+    const description = data.description;
+    return {
+        title,
+        description,
+        alternates: { canonical: `/prompt-engineering-101/${slug}` },
+        openGraph: { title, description, url: `https://veda.ng/prompt-engineering-101/${slug}` },
+        twitter: { card: 'summary_large_image', title, description },
+    };
 }
 
 export default async function PromptEngineeringModulePage({ params }: { params: { slug: string } }) {

@@ -39,9 +39,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const moduleData = getCourseModule(slug);
   if (!moduleData) notFound();
+  const title = `${moduleData.frontmatter.title} | Vibe Coding 101 | Vedang Vatsa`;
+  const description = moduleData.frontmatter.description;
   return {
-    title: `${moduleData.frontmatter.title} | Vibe Coding 101`,
-    description: moduleData.frontmatter.description,
+    title,
+    description,
+    alternates: { canonical: `/vibe-coding/${slug}` },
+    openGraph: { title, description, url: `https://veda.ng/vibe-coding/${slug}` },
+    twitter: { card: 'summary_large_image', title, description },
   };
 }
 

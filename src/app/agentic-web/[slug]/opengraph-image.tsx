@@ -4,15 +4,15 @@ import path from 'path';
 import matter from 'gray-matter';
 
 export const runtime = 'nodejs';
-export const alt = 'Vibe Coding 101 Module';
+export const alt = 'The Agentic Web Module';
 export const size = ogSize;
 export const contentType = 'image/png';
 
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const filePath = path.join(process.cwd(), 'src', 'content', 'courses', 'vibe-coding', `${slug}.mdx`);
-  let title = 'Vibe Coding 101';
-  let subtitle = 'Build Real Apps with AI';
+  const filePath = path.join(process.cwd(), 'src', 'content', 'courses', 'agentic-web', `${slug}.mdx`);
+  let title = 'The Agentic Web';
+  let subtitle = 'AI Agents and Autonomous Systems';
   try {
     const raw = fs.readFileSync(filePath, 'utf8');
     const { data } = matter(raw);

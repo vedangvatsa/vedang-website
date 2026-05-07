@@ -37,9 +37,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const { slug } = await params;
     const moduleData = getCourseModule(slug);
     if (!moduleData) notFound();
+    const title = `${moduleData.frontmatter.title} | AI Automation 101 | Vedang Vatsa`;
+    const description = moduleData.frontmatter.description;
     return {
-        title: `${moduleData.frontmatter.title} | AI Automation 101`,
-        description: moduleData.frontmatter.description,
+        title,
+        description,
+        alternates: { canonical: `/ai-automation/${slug}` },
+        openGraph: { title, description, url: `https://veda.ng/ai-automation/${slug}` },
+        twitter: { card: 'summary_large_image', title, description },
     };
 }
 

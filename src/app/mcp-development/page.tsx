@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: 'MCP Development 101 - Build AI Tool Servers | Vedang Vatsa',
   description: 'Free course on building MCP (Model Context Protocol) servers. Learn to create tools that connect AI models to databases, APIs, and any data source.',
   keywords: ['MCP', 'Model Context Protocol', 'MCP Server', 'AI Tools', 'Claude', 'Cursor', 'TypeScript', 'JSON-RPC', 'Anthropic'],
+  alternates: { canonical: '/mcp-development' },
   openGraph: {
     title: 'MCP Development 101 - Build AI Tool Servers',
     description: 'Free course on building MCP servers that connect AI to databases, APIs, and any data source.',

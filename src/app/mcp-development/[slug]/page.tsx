@@ -37,9 +37,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const { slug } = await params;
     const moduleData = getCourseModule(slug);
     if (!moduleData) notFound();
+    const title = `${moduleData.frontmatter.title} | MCP Development 101 | Vedang Vatsa`;
+    const description = moduleData.frontmatter.description;
     return {
-        title: `${moduleData.frontmatter.title} | MCP Development 101`,
-        description: moduleData.frontmatter.description,
+        title,
+        description,
+        alternates: { canonical: `/mcp-development/${slug}` },
+        openGraph: { title, description, url: `https://veda.ng/mcp-development/${slug}` },
+        twitter: { card: 'summary_large_image', title, description },
     };
 }
 
