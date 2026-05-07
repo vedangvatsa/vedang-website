@@ -3,240 +3,320 @@
 /* ─── Module 1: Automation Layers ─── */
 export function AutomationLayers() {
   const layers = [
-    { label: 'Manual', desc: 'You do everything by hand', color: '#ef4444', effort: '100%' },
-    { label: 'Templates', desc: 'Reusable scripts and snippets', color: '#f59e0b', effort: '60%' },
-    { label: 'No-Code', desc: 'n8n, Make, Zapier', color: '#3b82f6', effort: '30%' },
-    { label: 'AI Agents', desc: 'Claude, Antigravity, GPT', color: '#8b5cf6', effort: '10%' },
-    { label: 'Autonomous', desc: 'MCP + Agents + Cron', color: '#10b981', effort: '~0%' },
+    { label: 'Manual', desc: 'You do everything by hand', effort: '100%', examples: 'Copy-paste, manual data entry, typing emails one-by-one', color: '#ef4444' },
+    { label: 'Templates & Snippets', desc: 'Reusable shortcuts', effort: '60%', examples: 'Text expanders, saved replies, shell aliases', color: '#f59e0b' },
+    { label: 'No-Code Workflows', desc: 'n8n, Make, Zapier', effort: '30%', examples: 'Visual automations, drag-and-drop triggers, app connectors', color: '#3b82f6' },
+    { label: 'AI Agents', desc: 'Claude, Antigravity, GPT', effort: '10%', examples: 'Natural language instructions, tool calling, reasoning', color: '#8b5cf6' },
+    { label: 'Autonomous Pipelines', desc: 'MCP + Agents + Cron', effort: '~0%', examples: 'Self-running systems, error recovery, continuous monitoring', color: '#10b981' },
   ];
   return (
-    <div className="not-prose my-6">
-      <svg viewBox="0 0 800 180" className="w-full h-auto hidden sm:block" role="img" aria-label="Automation spectrum from manual to autonomous">
-        {layers.map((l, i) => (
-          <g key={l.label}>
-            <rect x={i * 155 + 10} y={20} width={145} height={110} rx={12} fill={`${l.color}10`} stroke={l.color} strokeWidth={1.5} />
-            <text x={i * 155 + 82} y={50} textAnchor="middle" fill={l.color} fontSize={13} fontWeight={700}>{l.label}</text>
-            <text x={i * 155 + 82} y={72} textAnchor="middle" fill="currentColor" fontSize={9} opacity={0.5}>{l.desc}</text>
-            <text x={i * 155 + 82} y={110} textAnchor="middle" fill={l.color} fontSize={12} fontWeight={600}>Effort: {l.effort}</text>
-            {i < 4 && (
-              <path d={`M${i * 155 + 155} 75 L${(i + 1) * 155 + 10} 75`} stroke="currentColor" strokeWidth={1} opacity={0.15} strokeDasharray="3 2" />
-            )}
-          </g>
-        ))}
-        <text x={400} y={160} textAnchor="middle" fill="currentColor" fontSize={11} opacity={0.3}>More manual · · · More autonomous</text>
-      </svg>
-      {/* Mobile fallback */}
-      <div className="sm:hidden grid grid-cols-1 gap-2">
-        {layers.map((l) => (
-          <div key={l.label} className="flex items-center justify-between p-3 rounded-xl border bg-card">
-            <div>
-              <h4 className="font-semibold text-sm" style={{ color: l.color }}>{l.label}</h4>
-              <p className="text-xs text-muted-foreground">{l.desc}</p>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Five Layers of Automation</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">From manual effort to fully autonomous systems</p>
+
+        <div className="space-y-2">
+          {layers.map((l, i) => (
+            <div key={l.label} className="grid grid-cols-[auto_1fr] gap-3 items-start">
+              <div className="relative flex flex-col items-center pt-1">
+                <div className="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0" style={{ backgroundColor: l.color }}>{i + 1}</div>
+                {i < 4 && <div className="w-px h-full min-h-[16px] mt-1" style={{ backgroundColor: l.color, opacity: 0.2 }} />}
+              </div>
+              <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3">
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-xs font-bold" style={{ color: l.color }}>{l.label}</span>
+                  <span className="text-[10px] font-mono px-1.5 py-0.5 rounded" style={{ backgroundColor: l.color + '15', color: l.color }}>Effort: {l.effort}</span>
+                </div>
+                <p className="text-[11px] text-muted-foreground">{l.desc}. {l.examples}.</p>
+              </div>
             </div>
-            <span className="text-sm font-bold shrink-0 ml-3" style={{ color: l.color }}>{l.effort}</span>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </figure>
   );
 }
 
 /* ─── Module 2: API Request Flow ─── */
 export function APIFlowDiagram() {
+  const flow = [
+    { step: 'Your Script / Agent', detail: 'Sends HTTP request with method, URL, headers, and body', color: '#3b82f6' },
+    { step: 'API Server', detail: 'Authenticates, validates, processes the request, queries data', color: '#f59e0b' },
+    { step: 'Database / Service', detail: 'Stores or retrieves the requested data', color: '#10b981' },
+    { step: 'JSON Response', detail: 'Structured data returned: status code, headers, body', color: '#8b5cf6' },
+  ];
+  const methods = [
+    { method: 'GET', desc: 'Read data', example: 'Fetch job listings' },
+    { method: 'POST', desc: 'Create new', example: 'Send a message' },
+    { method: 'PUT', desc: 'Update existing', example: 'Edit a record' },
+    { method: 'DELETE', desc: 'Remove', example: 'Delete a listing' },
+  ];
   return (
-    <div className="not-prose my-6">
-      <svg viewBox="0 0 700 120" className="w-full h-auto hidden sm:block" role="img" aria-label="API request flow: Client sends request, server processes, returns response">
-        <rect x={10} y={20} width={140} height={70} rx={10} fill="#3b82f610" stroke="#3b82f6" strokeWidth={1.5} />
-        <text x={80} y={50} textAnchor="middle" fill="#3b82f6" fontSize={12} fontWeight={700}>Your Script</text>
-        <text x={80} y={68} textAnchor="middle" fill="currentColor" fontSize={9} opacity={0.5}>or AI Agent</text>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">How APIs Work</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">The request-response cycle that powers every automation</p>
 
-        <line x1={150} y1={45} x2={270} y2={45} stroke="#10b981" strokeWidth={1.5} />
-        <text x={210} y={38} textAnchor="middle" fill="#10b981" fontSize={9}>GET /api/data</text>
-        <text x={210} y={85} textAnchor="middle" fill="#8b5cf6" fontSize={9}>JSON response</text>
-        <line x1={270} y1={65} x2={150} y2={65} stroke="#8b5cf6" strokeWidth={1.5} strokeDasharray="4 3" />
-
-        <rect x={270} y={20} width={140} height={70} rx={10} fill="#f59e0b10" stroke="#f59e0b" strokeWidth={1.5} />
-        <text x={340} y={50} textAnchor="middle" fill="#f59e0b" fontSize={12} fontWeight={700}>API Server</text>
-        <text x={340} y={68} textAnchor="middle" fill="currentColor" fontSize={9} opacity={0.5}>Auth, Process, Return</text>
-
-        <line x1={410} y1={55} x2={480} y2={55} stroke="currentColor" strokeWidth={1} opacity={0.2} strokeDasharray="3 2" />
-
-        <rect x={480} y={20} width={140} height={70} rx={10} fill="#10b98110" stroke="#10b981" strokeWidth={1.5} />
-        <text x={550} y={50} textAnchor="middle" fill="#10b981" fontSize={12} fontWeight={700}>Database</text>
-        <text x={550} y={68} textAnchor="middle" fill="currentColor" fontSize={9} opacity={0.5}>or External Service</text>
-      </svg>
-      {/* Mobile fallback */}
-      <div className="sm:hidden flex flex-col gap-2">
-        {[
-          { label: 'Your Script / Agent', desc: 'Sends API request', color: '#3b82f6' },
-          { label: 'API Server', desc: 'Auth, process, return', color: '#f59e0b' },
-          { label: 'Database', desc: 'Or external service', color: '#10b981' },
-        ].map((item, i) => (
-          <div key={item.label} className="flex items-center gap-3 p-3 rounded-xl border bg-card">
-            <div className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0" style={{ backgroundColor: item.color }}>{i + 1}</div>
-            <div>
-              <h4 className="font-semibold text-sm" style={{ color: item.color }}>{item.label}</h4>
-              <p className="text-xs text-muted-foreground">{item.desc}</p>
-            </div>
+        <div className="relative mb-5">
+          <div className="absolute left-[18px] top-0 bottom-0 w-px bg-[#e3e3e0] dark:bg-zinc-800" />
+          <div className="space-y-2.5">
+            {flow.map((f, i) => (
+              <div key={f.step} className="grid grid-cols-[36px_1fr] gap-3 items-start">
+                <div className="relative flex items-center justify-center pt-1.5">
+                  <div className="w-[9px] h-[9px] rounded-full border-2" style={{ borderColor: f.color, backgroundColor: f.color }} />
+                </div>
+                <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-2.5">
+                  <span className="text-xs font-bold" style={{ color: f.color }}>{f.step}</span>
+                  <p className="text-[10px] text-muted-foreground mt-0.5">{f.detail}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+          {methods.map((m) => (
+            <div key={m.method} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-2.5 text-center">
+              <div className="text-sm font-bold font-mono text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{m.method}</div>
+              <div className="text-[10px] text-muted-foreground">{m.desc}</div>
+              <div className="text-[10px] text-muted-foreground/60 mt-0.5">{m.example}</div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </figure>
   );
 }
 
 /* ─── Module 3: No-Code Tools Grid ─── */
 export function NoCodeToolsGrid() {
   const tools = [
-    { name: 'n8n', desc: 'Open-source, self-hostable', best: 'Full control, AI nodes', color: '#ef4444' },
-    { name: 'Make', desc: 'Visual workflow builder', best: 'Complex branching logic', color: '#8b5cf6' },
-    { name: 'Zapier', desc: 'Largest app ecosystem', best: 'Quick 2-step automations', color: '#f59e0b' },
-    { name: 'Pipedream', desc: 'Code-friendly workflows', best: 'Developer-oriented', color: '#3b82f6' },
+    {
+      name: 'n8n', tagline: 'Open-source, self-hosted',
+      pros: ['Self-host (full data control)', 'AI nodes for any LLM', 'JS/Python code nodes', 'No per-task pricing'],
+      cons: ['Requires hosting setup', 'Smaller integration library'],
+      best: 'AI pipelines, developers', color: '#ef4444',
+    },
+    {
+      name: 'Make', tagline: 'Visual workflow builder',
+      pros: ['Best visual branching logic', 'Great data mapping UI', 'Error handling routes', '1,500+ integrations'],
+      cons: ['Per-operation pricing', 'No self-hosting option'],
+      best: 'Complex multi-branch flows', color: '#8b5cf6',
+    },
+    {
+      name: 'Zapier', tagline: 'Largest ecosystem',
+      pros: ['7,000+ app connectors', 'Fastest setup time', 'Best for non-technical teams', 'Code by Zapier node'],
+      cons: ['Expensive at scale', 'Limited AI features', '5-min minimum trigger interval'],
+      best: 'Quick prototypes, simple zaps', color: '#f59e0b',
+    },
   ];
   return (
-    <div className="not-prose my-6 grid grid-cols-2 md:grid-cols-4 gap-3">
-      {tools.map((t) => (
-        <div key={t.name} className="p-4 rounded-xl border bg-card text-center">
-          <div className="w-10 h-10 rounded-full mx-auto mb-2 flex items-center justify-center text-white font-bold text-sm" style={{ backgroundColor: t.color }}>{t.name[0]}</div>
-          <h4 className="font-semibold text-sm">{t.name}</h4>
-          <p className="text-xs text-muted-foreground mt-1">{t.desc}</p>
-          <p className="text-xs mt-2 font-medium" style={{ color: t.color }}>Best for: {t.best}</p>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">No-Code Automation Platforms</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Choosing the right tool for your automation needs</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          {tools.map((t) => (
+            <div key={t.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden">
+              <div className="px-4 py-2.5 border-b border-[#e3e3e0] dark:border-zinc-800" style={{ backgroundColor: t.color + '08' }}>
+                <div className="text-sm font-bold" style={{ color: t.color }}>{t.name}</div>
+                <div className="text-[10px] text-muted-foreground">{t.tagline}</div>
+              </div>
+              <div className="px-4 py-3">
+                <div className="text-[10px] font-bold text-green-600 dark:text-green-400 uppercase tracking-wider mb-1.5">Strengths</div>
+                {t.pros.map((p) => (
+                  <div key={p} className="text-[10px] text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)] py-0.5">+ {p}</div>
+                ))}
+                <div className="text-[10px] font-bold text-red-500 dark:text-red-400 uppercase tracking-wider mt-2 mb-1.5">Limitations</div>
+                {t.cons.map((c) => (
+                  <div key={c} className="text-[10px] text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)] py-0.5">- {c}</div>
+                ))}
+                <div className="mt-2 pt-2 border-t border-[#e3e3e0]/60 dark:border-zinc-800/40">
+                  <span className="text-[10px] font-bold" style={{ color: t.color }}>Best for: {t.best}</span>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </figure>
   );
 }
 
 /* ─── Module 4: Agent Architecture ─── */
 export function AgentArchitecture() {
+  const phases = [
+    { phase: 'Observe', desc: 'Read current context: user request, data from APIs, error messages, previous results', color: '#3b82f6', icon: '1' },
+    { phase: 'Think', desc: 'Plan the next action. The LLM reasons about tools to call, order of operations, potential failures', color: '#f59e0b', icon: '2' },
+    { phase: 'Act', desc: 'Execute the plan: call an API, run a query, send a message, write a file, browse a page', color: '#10b981', icon: '3' },
+    { phase: 'Learn', desc: 'Evaluate the result. Did it work? If not, adjust the plan and loop again with new context', color: '#ef4444', icon: '4' },
+  ];
+  const capabilities = [
+    { agent: 'Antigravity', features: ['File read/write', 'Terminal commands', 'MCP servers', 'Web browsing', 'Image generation'] },
+    { agent: 'Claude Code', features: ['Code editing', 'Git operations', 'MCP servers', 'File system', 'Web search'] },
+    { agent: 'GPT + Tools', features: ['Function calling', 'Code interpreter', 'Web browsing', 'DALL-E', 'File upload'] },
+  ];
   return (
-    <div className="not-prose my-6">
-      <svg viewBox="0 0 800 220" className="w-full h-auto hidden sm:block" role="img" aria-label="AI agent loop: Observe, Think, Act, Learn">
-        {/* Center circle */}
-        <circle cx={400} cy={110} r={50} fill="#8b5cf610" stroke="#8b5cf6" strokeWidth={2} />
-        <text x={400} y={106} textAnchor="middle" fill="#8b5cf6" fontSize={14} fontWeight={700}>AI Agent</text>
-        <text x={400} y={122} textAnchor="middle" fill="currentColor" fontSize={9} opacity={0.5}>Reasoning Loop</text>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The AI Agent Loop</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Observe, Think, Act, Learn — the cycle that replaces rigid rule-based automation</p>
 
-        {/* Four corners */}
-        {[
-          { x: 100, y: 35, label: '1. Observe', desc: 'Read context, data, errors', color: '#3b82f6' },
-          { x: 570, y: 35, label: '2. Think', desc: 'Plan next action', color: '#f59e0b' },
-          { x: 570, y: 145, label: '3. Act', desc: 'Call tools, APIs, MCP', color: '#10b981' },
-          { x: 100, y: 145, label: '4. Learn', desc: 'Evaluate result, iterate', color: '#ef4444' },
-        ].map((node) => (
-          <g key={node.label}>
-            <rect x={node.x} y={node.y} width={160} height={55} rx={10} fill={`${node.color}10`} stroke={node.color} strokeWidth={1.5} />
-            <text x={node.x + 80} y={node.y + 24} textAnchor="middle" fill={node.color} fontSize={12} fontWeight={700}>{node.label}</text>
-            <text x={node.x + 80} y={node.y + 42} textAnchor="middle" fill="currentColor" fontSize={9} opacity={0.5}>{node.desc}</text>
-          </g>
-        ))}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-5">
+          {phases.map((p) => (
+            <div key={p.phase} className="rounded-[3px] border-t-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3" style={{ borderTopColor: p.color }}>
+              <div className="flex items-center gap-1.5 mb-1">
+                <div className="w-5 h-5 rounded-full flex items-center justify-center text-white text-[10px] font-bold" style={{ backgroundColor: p.color }}>{p.icon}</div>
+                <span className="text-xs font-bold" style={{ color: p.color }}>{p.phase}</span>
+              </div>
+              <p className="text-[10px] text-muted-foreground leading-relaxed">{p.desc}</p>
+            </div>
+          ))}
+        </div>
 
-        {/* Arrows connecting them */}
-        <path d="M260 62 Q330 25 350 65" fill="none" stroke="#3b82f6" strokeWidth={1.2} opacity={0.4} />
-        <path d="M450 65 Q470 25 570 62" fill="none" stroke="#f59e0b" strokeWidth={1.2} opacity={0.4} />
-        <path d="M570 145 Q470 195 450 155" fill="none" stroke="#10b981" strokeWidth={1.2} opacity={0.4} />
-        <path d="M350 155 Q330 195 260 170" fill="none" stroke="#ef4444" strokeWidth={1.2} opacity={0.4} />
-      </svg>
-      {/* Mobile fallback */}
-      <div className="sm:hidden grid grid-cols-2 gap-3">
-        {[
-          { label: '1. Observe', desc: 'Read context and data', color: '#3b82f6' },
-          { label: '2. Think', desc: 'Plan next action', color: '#f59e0b' },
-          { label: '3. Act', desc: 'Call tools and APIs', color: '#10b981' },
-          { label: '4. Learn', desc: 'Evaluate and iterate', color: '#ef4444' },
-        ].map((node) => (
-          <div key={node.label} className="p-4 rounded-xl border bg-card text-center">
-            <h4 className="font-semibold text-sm mb-1" style={{ color: node.color }}>{node.label}</h4>
-            <p className="text-xs text-muted-foreground">{node.desc}</p>
-          </div>
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+          {capabilities.map((c) => (
+            <div key={c.agent} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3">
+              <div className="text-xs font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] mb-2">{c.agent}</div>
+              {c.features.map((f) => (
+                <div key={f} className="text-[10px] text-muted-foreground py-0.5 border-b border-[#e3e3e0]/30 dark:border-zinc-800/30 last:border-0">{f}</div>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </figure>
   );
 }
 
 /* ─── Module 5: MCP Automation Stack ─── */
 export function MCPAutomationStack() {
-  const stack = [
-    { label: 'AI Agent', desc: 'Claude / Antigravity / GPT; decides what to do', color: '#8b5cf6', y: 15 },
-    { label: 'MCP Client', desc: 'Routes tool calls to the right server', color: '#3b82f6', y: 65 },
-    { label: 'MCP Servers', desc: 'Google Sheets, Slack, Database, GitHub, Email', color: '#10b981', y: 115 },
-    { label: 'External Services', desc: 'The real-world systems being automated', color: '#f59e0b', y: 165 },
+  const layers = [
+    { layer: 'Natural Language', desc: 'You describe the automation in plain English', color: '#8b5cf6', examples: '"Pull sales data, calculate totals, update the sheet"' },
+    { layer: 'AI Agent', desc: 'Claude / Antigravity / GPT interprets and plans', color: '#3b82f6', examples: 'Reasons about which tools to call in what order' },
+    { layer: 'MCP Client', desc: 'Routes tool calls to the correct MCP server', color: '#f59e0b', examples: 'JSON-RPC protocol, tool discovery, schema validation' },
+    { layer: 'MCP Servers', desc: 'Google Sheets, Slack, PostgreSQL, GitHub, Filesystem', color: '#10b981', examples: 'Each server exposes tools for one specific service' },
+    { layer: 'External APIs', desc: 'The real-world services being automated', color: '#ef4444', examples: 'Google APIs, Slack API, database connections, file I/O' },
   ];
   return (
-    <div className="not-prose my-6">
-      <svg viewBox="0 0 700 210" className="w-full h-auto hidden sm:block" role="img" aria-label="MCP automation stack">
-        {stack.map((l) => (
-          <g key={l.label}>
-            <rect x={50} y={l.y} width={600} height={40} rx={8} fill={`${l.color}10`} stroke={l.color} strokeWidth={1.5} />
-            <text x={80} y={l.y + 25} fill={l.color} fontSize={13} fontWeight={700}>{l.label}</text>
-            <text x={620} y={l.y + 25} textAnchor="end" fill="currentColor" fontSize={11} opacity={0.5}>{l.desc}</text>
-          </g>
-        ))}
-        {[50, 100, 150].map((y) => (
-          <line key={y} x1={350} y1={y + 5} x2={350} y2={y + 15} stroke="currentColor" strokeWidth={1.2} opacity={0.15} strokeDasharray="3 2" />
-        ))}
-      </svg>
-      {/* Mobile fallback */}
-      <div className="sm:hidden flex flex-col gap-2">
-        {[
-          { label: 'AI Agent', desc: 'Decides what to do', color: '#8b5cf6' },
-          { label: 'MCP Client', desc: 'Routes tool calls', color: '#3b82f6' },
-          { label: 'MCP Servers', desc: 'Sheets, Slack, DB, GitHub', color: '#10b981' },
-          { label: 'External Services', desc: 'The systems being automated', color: '#f59e0b' },
-        ].map((l) => (
-          <div key={l.label} className="p-3 rounded-xl border bg-card flex items-center gap-3">
-            <div className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: l.color }} />
-            <div>
-              <h4 className="font-semibold text-sm" style={{ color: l.color }}>{l.label}</h4>
-              <p className="text-xs text-muted-foreground">{l.desc}</p>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The MCP Automation Stack</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">From natural language to real-world action in five layers</p>
+
+        <div className="space-y-1.5">
+          {layers.map((l, i) => (
+            <div key={l.layer} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden" style={{ borderLeftWidth: '3px', borderLeftColor: l.color }}>
+              <div className="px-4 py-2.5 flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+                <div>
+                  <span className="text-xs font-bold" style={{ color: l.color }}>{l.layer}</span>
+                  <span className="text-[10px] text-muted-foreground ml-2">{l.desc}</span>
+                </div>
+                <span className="text-[10px] text-muted-foreground/60 italic">{l.examples}</span>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        <div className="mt-4 rounded-[3px] bg-[#f7f6f3] dark:bg-zinc-800/40 px-4 py-2.5">
+          <span className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]"><strong>Key insight:</strong> Instead of writing API integration code, you give the agent MCP tools and describe the outcome. The agent handles auth, pagination, error handling, and data transformation.</span>
+        </div>
       </div>
-    </div>
+    </figure>
   );
 }
 
 /* ─── Module 6: Pipeline Blueprint ─── */
 export function PipelineBlueprint() {
-  const steps = [
-    { num: '1', label: 'Trigger', desc: 'Cron, webhook, event', color: '#ef4444' },
-    { num: '2', label: 'Fetch', desc: 'API call or MCP resource', color: '#f59e0b' },
-    { num: '3', label: 'Transform', desc: 'AI processes the data', color: '#3b82f6' },
-    { num: '4', label: 'Act', desc: 'Write, send, update', color: '#8b5cf6' },
-    { num: '5', label: 'Report', desc: 'Log, notify, dashboard', color: '#10b981' },
+  const stages = [
+    { num: '1', label: 'Trigger', desc: 'What starts the pipeline', examples: 'Cron schedule, webhook, database change, manual command', color: '#ef4444' },
+    { num: '2', label: 'Fetch', desc: 'Gather input data', examples: 'API calls, database queries, web scraping, MCP reads', color: '#f59e0b' },
+    { num: '3', label: 'Transform', desc: 'Process and enrich', examples: 'Filter, deduplicate, AI summarize, normalize formats', color: '#3b82f6' },
+    { num: '4', label: 'Act', desc: 'Execute the output', examples: 'Write to DB, send messages, publish content, update sheets', color: '#8b5cf6' },
+    { num: '5', label: 'Report', desc: 'Log and notify', examples: 'Console logs, Slack alerts, dashboard updates, error handling', color: '#10b981' },
   ];
   return (
-    <div className="not-prose my-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-      {steps.map((s) => (
-        <div key={s.num} className="p-4 rounded-xl border bg-card text-center">
-          <div className="w-8 h-8 rounded-full mx-auto mb-2 flex items-center justify-center text-white font-bold text-sm" style={{ backgroundColor: s.color }}>{s.num}</div>
-          <h4 className="font-semibold text-sm mb-1">{s.label}</h4>
-          <p className="text-xs text-muted-foreground leading-relaxed">{s.desc}</p>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Pipeline Architecture</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Every automation pipeline follows this five-stage pattern</p>
+
+        <div className="relative">
+          <div className="absolute left-[18px] top-0 bottom-0 w-px bg-[#e3e3e0] dark:bg-zinc-800" />
+          <div className="space-y-2.5">
+            {stages.map((s) => (
+              <div key={s.num} className="grid grid-cols-[36px_1fr] gap-3 items-start">
+                <div className="relative flex items-center justify-center pt-1">
+                  <div className="w-[9px] h-[9px] rounded-full" style={{ backgroundColor: s.color }} />
+                </div>
+                <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-xs font-bold" style={{ color: s.color }}>Stage {s.num}: {s.label}</span>
+                  </div>
+                  <p className="text-[10px] text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)] mb-1">{s.desc}</p>
+                  <p className="text-[10px] text-muted-foreground/60">{s.examples}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
+
+        <div className="mt-4 rounded-[3px] bg-[#f7f6f3] dark:bg-zinc-800/40 px-4 py-2.5">
+          <span className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]"><strong>Design principle:</strong> Make each stage independent and idempotent. If stage 3 fails, you can re-run it without duplicating the work from stages 1-2.</span>
+        </div>
+      </div>
+    </figure>
   );
 }
 
-/* ─── Module 7: Production Monitoring ─── */
+/* ─── Module 7: Production Monitoring Dashboard ─── */
 export function MonitoringDashboard() {
   const metrics = [
-    { label: 'Uptime', value: '99.9%', color: '#10b981' },
-    { label: 'Tasks / Day', value: '1,247', color: '#3b82f6' },
-    { label: 'Errors', value: '3', color: '#f59e0b' },
-    { label: 'Cost Saved', value: '40h/wk', color: '#8b5cf6' },
+    { label: 'Pipeline Uptime', value: '99.9%', detail: 'Last 30 days', color: '#10b981' },
+    { label: 'Tasks / Day', value: '1,247', detail: 'Across all pipelines', color: '#3b82f6' },
+    { label: 'Error Rate', value: '0.3%', detail: '3 failures / 1,247 tasks', color: '#f59e0b' },
+    { label: 'Time Saved', value: '40h/wk', detail: 'vs manual processing', color: '#8b5cf6' },
+  ];
+  const checklist = [
+    { item: 'Cron schedule configured', tool: 'GitHub Actions / Vercel Cron' },
+    { item: 'Heartbeat monitor active', tool: 'UptimeRobot / Better Uptime' },
+    { item: 'Error alerting wired', tool: 'Slack webhook / email' },
+    { item: 'Secrets in env variables', tool: 'GitHub Secrets / Vercel Env' },
+    { item: 'Audit log configured', tool: 'Google Sheets / database' },
+    { item: 'Cost alerts enabled', tool: 'OpenAI / Anthropic billing' },
   ];
   return (
-    <div className="not-prose my-6 grid grid-cols-2 md:grid-cols-4 gap-3">
-      {metrics.map((m) => (
-        <div key={m.label} className="p-4 rounded-xl border bg-card text-center">
-          <div className="w-3 h-3 rounded-full mx-auto mb-2" style={{ backgroundColor: m.color }} />
-          <div className="text-xl font-bold" style={{ color: m.color }}>{m.value}</div>
-          <p className="text-xs text-muted-foreground mt-1">{m.label}</p>
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-5 md:p-8">
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Production Readiness Dashboard</h3>
+        <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Key metrics and pre-launch checklist for production automation</p>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-5">
+          {metrics.map((m) => (
+            <div key={m.label} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3 text-center">
+              <div className="text-lg md:text-xl font-bold" style={{ color: m.color }}>{m.value}</div>
+              <div className="text-[10px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] mt-0.5">{m.label}</div>
+              <div className="text-[9px] text-muted-foreground/60 mt-0.5">{m.detail}</div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+
+        <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden">
+          <div className="px-4 py-2 border-b border-[#e3e3e0] dark:border-zinc-800 bg-[#f7f6f3] dark:bg-zinc-800/40">
+            <span className="text-[10px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Pre-Launch Checklist</span>
+          </div>
+          {checklist.map((c) => (
+            <div key={c.item} className="flex items-center justify-between px-4 py-2 border-b border-[#e3e3e0]/40 dark:border-zinc-800/40 last:border-0">
+              <div className="flex items-center gap-2">
+                <div className="w-3.5 h-3.5 rounded-sm border border-[#e3e3e0] dark:border-zinc-700 shrink-0" />
+                <span className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{c.item}</span>
+              </div>
+              <span className="text-[10px] text-muted-foreground/60">{c.tool}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
   );
 }
