@@ -47,14 +47,35 @@ async function submitToIndexNow(urls: string[]) {
   });
 }
 
-function getAllUrls(): string[] {
-  // Static pages
+async function getAllUrls(): Promise<string[]> {
+  try {
+    const res = await fetch(`https://${SITE_HOST}/sitemap.xml`, { 
+      // Ensure we get fresh data
+      cache: 'no-store' 
+    });
+    
+    if (res.ok) {
+      const xml = await res.text();
+      const urls: string[] = [];
+      const regex = /<loc>(https:\/\/[^<]+)<\/loc>/g;
+      let match;
+      while ((match = regex.exec(xml)) !== null) {
+        urls.push(match[1]);
+      }
+      if (urls.length > 0) {
+        return [...new Set(urls)]; // Deduplicate
+      }
+    }
+  } catch (err) {
+    console.error('Failed to parse sitemap for IndexNow:', err);
+  }
+
+  // Fallback to static list if sitemap fetch fails
   const urls = [
     '/', '/writings', '/glossary', '/profile', '/media',
     '/community', '/seo', '/lit',
   ];
 
-  // All course landing pages + individual module pages
   for (const config of Object.values(courseConfigs)) {
     urls.push(config.basePath);
     urls.push(`${config.basePath}/final-exam`);
@@ -68,7 +89,7 @@ function getAllUrls(): string[] {
 
 // GET: Submit all important pages
 export async function GET() {
-  const allUrls = getAllUrls();
+  const allUrls = await getAllUrls();
 
   // IndexNow accepts max 10,000 URLs per request, batch if needed
   const batchSize = 500;
