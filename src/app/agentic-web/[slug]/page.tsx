@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const title = `${data.title} | The Agentic Web | Vedang Vatsa`;
     const description = data.description;
     return {
-        title,
+        title: { absolute: title },
         description,
         alternates: { canonical: `/agentic-web/${slug}` },
         openGraph: { title, description, url: `https://veda.ng/agentic-web/${slug}` },

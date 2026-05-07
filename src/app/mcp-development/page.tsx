@@ -14,7 +14,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
-  title: 'MCP Development 101 - Build AI Tool Servers | Vedang Vatsa',
+  title: { absolute: 'MCP Development 101 - Build AI Tool Servers | Vedang Vatsa' },
   description: 'Free course on building MCP (Model Context Protocol) servers. Learn to create tools that connect AI models to databases, APIs, and any data source.',
   keywords: ['MCP', 'Model Context Protocol', 'MCP Server', 'AI Tools', 'Claude', 'Cursor', 'TypeScript', 'JSON-RPC', 'Anthropic'],
   alternates: { canonical: '/mcp-development' },

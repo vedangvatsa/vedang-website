@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Final Exam | Vibe Coding 101',
   description: 'Test your knowledge and earn your Vibe Coding 101 certificate.',
+  alternates: { canonical: '/vibe-coding/final-exam' },
 };
 
 export default function VibeCodingFinalExam() {

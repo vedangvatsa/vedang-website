@@ -50,9 +50,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/images/og-homepage.png'],
   },
-  alternates: {
-    canonical: '/',
-  },
 };
 
 const websiteSchema = {

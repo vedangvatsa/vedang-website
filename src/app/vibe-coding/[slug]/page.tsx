@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const title = `${moduleData.frontmatter.title} | Vibe Coding 101 | Vedang Vatsa`;
   const description = moduleData.frontmatter.description;
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: { canonical: `/vibe-coding/${slug}` },
     openGraph: { title, description, url: `https://veda.ng/vibe-coding/${slug}` },

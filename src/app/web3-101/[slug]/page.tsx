@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const title = `${moduleData.frontmatter.title} | Web3 101 | Vedang Vatsa`;
   const description = moduleData.frontmatter.description;
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: { canonical: `/web3-101/${slug}` },
     openGraph: { title, description, url: `https://veda.ng/web3-101/${slug}` },

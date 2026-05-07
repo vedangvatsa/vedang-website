@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const title = `${moduleData.frontmatter.title} | MCP Development 101 | Vedang Vatsa`;
     const description = moduleData.frontmatter.description;
     return {
-        title,
+        title: { absolute: title },
         description,
         alternates: { canonical: `/mcp-development/${slug}` },
         openGraph: { title, description, url: `https://veda.ng/mcp-development/${slug}` },

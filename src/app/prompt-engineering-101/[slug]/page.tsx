@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const title = `${data.title} | Prompt Engineering 101 | Vedang Vatsa`;
     const description = data.description;
     return {
-        title,
+        title: { absolute: title },
         description,
         alternates: { canonical: `/prompt-engineering-101/${slug}` },
         openGraph: { title, description, url: `https://veda.ng/prompt-engineering-101/${slug}` },

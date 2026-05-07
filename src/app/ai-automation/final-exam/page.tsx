@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Final Exam | AI Automation 101',
   description: 'Test your knowledge and earn your AI Automation 101 certificate.',
+  alternates: { canonical: '/ai-automation/final-exam' },
 };
 
 export default function FinalExam() {

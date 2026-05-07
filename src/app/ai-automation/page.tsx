@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
-  title: 'AI Automation 101 - Automate Anything with AI Agents | Vedang Vatsa',
+  title: { absolute: 'AI Automation 101 - Automate Anything with AI Agents | Vedang Vatsa' },
   description: 'Free course on AI-powered automation. Learn to build pipelines with APIs, MCP servers, AI agents, n8n, and no-code tools. From social media broadcasting to data pipelines.',
   keywords: ['AI Automation', 'n8n', 'MCP Automation', 'AI Agents', 'API Automation', 'Zapier Alternative', 'No-Code AI', 'Workflow Automation', 'Telegram Bot'],
   alternates: { canonical: '/ai-automation' },

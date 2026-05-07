@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const title = `${moduleData.frontmatter.title} | AI Automation 101 | Vedang Vatsa`;
     const description = moduleData.frontmatter.description;
     return {
-        title,
+        title: { absolute: title },
         description,
         alternates: { canonical: `/ai-automation/${slug}` },
         openGraph: { title, description, url: `https://veda.ng/ai-automation/${slug}` },
