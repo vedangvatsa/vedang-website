@@ -87,12 +87,12 @@ MCP is transport-agnostic: the same protocol works whether the server runs on yo
             <p><strong>Is your server running on the same machine as the client?</strong></p>
             <ul>
                 <li><strong>Yes → Use stdio.</strong> Zero configuration. No network setup. The host spawns your server as a child process. This is the default for local development and Claude Desktop.</li>
-                <li><strong>No → Is it a serverless environment (Vercel, Lambda, Cloudflare Workers)?</strong>
-                    <ul>
-                        <li><strong>Yes → Use Streamable HTTP.</strong> Stateless by default. Works naturally with serverless architectures. One endpoint. Standard HTTP.</li>
-                        <li><strong>No → Use SSE or Streamable HTTP.</strong> SSE is more established and widely supported. Streamable HTTP is newer but better for production.</li>
-                    </ul>
-                </li>
+                <li><strong>No → Is it a serverless environment (Vercel, Lambda, Cloudflare Workers)?</strong></li>
+            </ul>
+            <p>If serverless:</p>
+            <ul>
+                <li><strong>Yes → Use Streamable HTTP.</strong> Stateless by default. Works naturally with serverless architectures. One endpoint. Standard HTTP.</li>
+                <li><strong>No → Use SSE or Streamable HTTP.</strong> SSE is more established and widely supported. Streamable HTTP is newer but better for production.</li>
             </ul>
             <p><strong>Common deployment patterns:</strong></p>
             <ul>
