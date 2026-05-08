@@ -1,11 +1,12 @@
-import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-export async function GET() {
-  const ESSAYS_DIR = path.join(process.cwd(), 'src/content/essays');
-  const files = fs.readdirSync(ESSAYS_DIR).filter(f => f.endsWith('.mdx'));
+const REPO_ROOT = path.resolve(process.cwd());
+const ESSAYS_DIR = path.resolve(REPO_ROOT, 'src/content/essays');
+const PUBLIC_DIR = path.resolve(REPO_ROOT, 'public');
 
+function generateRSS() {
+  const files = fs.readdirSync(ESSAYS_DIR).filter(f => f.endsWith('.mdx'));
   let items = '';
 
   for (const file of files) {
@@ -20,7 +21,6 @@ export async function GET() {
     const dateStr = dateMatch ? dateMatch[1] : new Date().toISOString();
     const desc = descMatch ? descMatch[1].replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;') : '';
     
-    // Convert YYYY-MM-DD to RFC-822 date
     const pubDate = new Date(dateStr).toUTCString();
 
     items += `
@@ -45,10 +45,8 @@ export async function GET() {
   </channel>
 </rss>`;
 
-  return new NextResponse(xml, {
-    headers: {
-      'Content-Type': 'application/xml; charset=utf-8',
-      'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
-    },
-  });
+  fs.writeFileSync(path.join(PUBLIC_DIR, 'feed.xml'), xml);
+  console.log('✅ Generated public/feed.xml');
 }
+
+generateRSS();
