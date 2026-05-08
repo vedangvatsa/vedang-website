@@ -61,7 +61,7 @@ async function publishToSteem(slug: string, title: string, markdown: string) {
   const permlink = slug.toLowerCase().replace(/[^a-z0-9-]+/g, '-');
   const tags = ['technology', 'ai', 'programming', 'future'];
   
-  const canonicalUrl = `https://veda.ng/essays/${slug}`;
+  const canonicalUrl = `https://veda.ng/${slug}`;
   const finalMarkdown = `${markdown}\n\n---\n*This essay was originally published on [veda.ng](${canonicalUrl}).*`;
 
   const commentOp: any = [

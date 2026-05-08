@@ -88,7 +88,7 @@ async function publishToTumblr(slug: string, title: string, markdown: string) {
   }
 
   const url = `https://api.tumblr.com/v2/blog/${BLOG_NAME}/post`;
-  const canonicalUrl = `https://veda.ng/essays/${slug}`;
+  const canonicalUrl = `https://veda.ng/${slug}`;
   const finalMarkdown = `${markdown}\n\n---\n*This essay was originally published on [veda.ng](${canonicalUrl}).*`;
 
   const body: Record<string, any> = {

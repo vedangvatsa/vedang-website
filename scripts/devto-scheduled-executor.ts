@@ -84,7 +84,7 @@ async function publishArticle(post: DevToPost): Promise<string> {
   const essay = extractEssayContent(post.slug);
   if (!essay) throw new Error(`Essay not found: ${post.slug}`);
 
-  const canonicalUrl = `https://veda.ng/essays/${post.slug}`;
+  const canonicalUrl = `https://veda.ng/${post.slug}`;
 
   const article = {
     article: {

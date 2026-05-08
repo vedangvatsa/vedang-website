@@ -26,8 +26,8 @@ function generateRSS() {
     items += `
     <item>
       <title>${title}</title>
-      <link>https://veda.ng/essays/${slug}</link>
-      <guid>https://veda.ng/essays/${slug}</guid>
+      <link>https://veda.ng/${slug}</link>
+      <guid>https://veda.ng/${slug}</guid>
       <pubDate>${pubDate}</pubDate>
       <description>${desc}</description>
     </item>`;
