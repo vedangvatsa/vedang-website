@@ -88,7 +88,40 @@ async function uploadMedia(mediaPath: string): Promise<{ asset: string; type: 'I
     return null;
   }
 
-  console.log(`  📸 Media uploaded: ${asset} (${isVideo ? 'VIDEO' : 'IMAGE'})`);
+  if (isVideo) {
+    console.log(`  ⏳ Waiting for video processing for asset: ${asset}`);
+    let ready = false;
+    for (let i = 0; i < 20; i++) {
+      await new Promise(r => setTimeout(r, 5000)); // Wait 5s between checks
+      
+      const statusRes = await fetch(`https://api.linkedin.com/v2/assets/${asset}`, {
+        headers: {
+          Authorization: `Bearer ${ACCESS_TOKEN}`,
+          'X-Restli-Protocol-Version': '2.0.0',
+        },
+      });
+
+      if (statusRes.ok) {
+        const statusData = await statusRes.json() as any;
+        const recipes = statusData.recipes || [];
+        const recipeStatus = recipes.length > 0 ? recipes[0].status : null;
+        
+        if (recipeStatus === 'AVAILABLE') {
+          ready = true;
+          break;
+        } else if (recipeStatus === 'PROCESSING_FAILED') {
+          console.error(`  ❌ Video processing failed: ${JSON.stringify(statusData)}`);
+          return null;
+        }
+      }
+    }
+
+    if (!ready) {
+      console.warn(`  ⚠️ Video processing timed out after 100 seconds. Continuing anyway...`);
+    }
+  }
+
+  console.log(`  📸 Media uploaded and ready: ${asset} (${isVideo ? 'VIDEO' : 'IMAGE'})`);
   return { asset, type: isVideo ? 'VIDEO' : 'IMAGE' };
 }
 
