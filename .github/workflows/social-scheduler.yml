@@ -69,6 +69,18 @@ jobs:
           HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
           HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
 
+      - name: Publish to Hive (Web3)
+        run: npx tsx scripts/hive-scheduled-executor.ts
+        env:
+          HIVE_USERNAME: ${{ secrets.HIVE_USERNAME }}
+          HIVE_POSTING_KEY: ${{ secrets.HIVE_POSTING_KEY }}
+
+      - name: Publish to Steem (Web3)
+        run: npx tsx scripts/steem-scheduled-executor.ts
+        env:
+          STEEM_USERNAME: ${{ secrets.STEEM_USERNAME }}
+          STEEM_POSTING_KEY: ${{ secrets.STEEM_POSTING_KEY }}
+
       - name: Commit updated post files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
