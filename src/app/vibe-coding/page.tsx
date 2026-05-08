@@ -8,7 +8,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { PageLayout } from '@/components/page-layout';
 
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
