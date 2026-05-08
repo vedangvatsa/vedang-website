@@ -28,15 +28,19 @@ interface LinkedInPost {
   error?: string;
 }
 
-async function uploadImage(imagePath: string): Promise<string | null> {
-  const absPath = path.isAbsolute(imagePath)
-    ? imagePath
-    : path.resolve(REPO_ROOT, imagePath);
+async function uploadMedia(mediaPath: string): Promise<{ asset: string; type: 'IMAGE' | 'VIDEO' } | null> {
+  const absPath = path.isAbsolute(mediaPath)
+    ? mediaPath
+    : path.resolve(REPO_ROOT, mediaPath);
 
   if (!fs.existsSync(absPath)) {
-    console.warn(`  ⚠️ Image not found: ${absPath}`);
+    console.warn(`  ⚠️ Media not found: ${absPath}`);
     return null;
   }
+
+  const isVideo = absPath.toLowerCase().endsWith('.mp4') || absPath.toLowerCase().endsWith('.mov');
+  const recipe = isVideo ? 'urn:li:digitalmediaRecipe:feedshare-video' : 'urn:li:digitalmediaRecipe:feedshare-image';
+  const mimeType = isVideo ? 'video/mp4' : 'image/png';
 
   // Step 1: Register upload
   const registerRes = await fetch('https://api.linkedin.com/v2/assets?action=registerUpload', {
@@ -48,7 +52,7 @@ async function uploadImage(imagePath: string): Promise<string | null> {
     },
     body: JSON.stringify({
       registerUploadRequest: {
-        recipes: ['urn:li:digitalmediaRecipe:feedshare-image'],
+        recipes: [recipe],
         owner: PERSON_URN,
         serviceRelationships: [
           { relationshipType: 'OWNER', identifier: 'urn:li:userGeneratedContent' },
@@ -58,7 +62,7 @@ async function uploadImage(imagePath: string): Promise<string | null> {
   });
 
   if (!registerRes.ok) {
-    console.error(`  ❌ Image register failed: ${await registerRes.text()}`);
+    console.error(`  ❌ Media register failed: ${await registerRes.text()}`);
     return null;
   }
 
@@ -69,33 +73,33 @@ async function uploadImage(imagePath: string): Promise<string | null> {
   const asset: string = registerData.value.asset;
 
   // Step 2: Upload binary
-  const imageBuffer = fs.readFileSync(absPath);
+  const mediaBuffer = fs.readFileSync(absPath);
   const uploadRes = await fetch(uploadUrl, {
     method: 'PUT',
     headers: {
       Authorization: `Bearer ${ACCESS_TOKEN}`,
-      'Content-Type': 'image/png',
+      'Content-Type': mimeType,
     },
-    body: imageBuffer,
+    body: mediaBuffer,
   });
 
   if (!uploadRes.ok) {
-    console.error(`  ❌ Image upload failed: ${await uploadRes.text()}`);
+    console.error(`  ❌ Media upload failed: ${await uploadRes.text()}`);
     return null;
   }
 
-  console.log(`  📷 Image uploaded: ${asset}`);
-  return asset;
+  console.log(`  📸 Media uploaded: ${asset} (${isVideo ? 'VIDEO' : 'IMAGE'})`);
+  return { asset, type: isVideo ? 'VIDEO' : 'IMAGE' };
 }
 
 async function postToLinkedIn(
   text: string,
-  imagePath?: string
+  mediaPath?: string
 ): Promise<{ success: boolean; id?: string; error?: string }> {
-  let asset: string | null = null;
+  let mediaObj: { asset: string; type: 'IMAGE' | 'VIDEO' } | null = null;
 
-  if (imagePath) {
-    asset = await uploadImage(imagePath);
+  if (mediaPath) {
+    mediaObj = await uploadMedia(mediaPath);
   }
 
   const body: any = {
@@ -104,13 +108,13 @@ async function postToLinkedIn(
     specificContent: {
       'com.linkedin.ugc.ShareContent': {
         shareCommentary: { text },
-        shareMediaCategory: asset ? 'IMAGE' : 'NONE',
-        ...(asset && {
+        shareMediaCategory: mediaObj ? mediaObj.type : 'NONE',
+        ...(mediaObj && {
           media: [
             {
               status: 'READY',
               description: { text: '' },
-              media: asset,
+              media: mediaObj.asset,
               title: { text: '' },
             },
           ],
