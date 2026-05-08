@@ -5,7 +5,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { PageLayout } from '@/components/page-layout';
 import { PredictionEngine, CoreTechniques, AdvancedReasoning, CodePrompting, BestPractices } from '@/components/courses/pe-visuals';
 
 import { Metadata } from 'next';
@@ -93,7 +92,7 @@ const faqSchema = {
 
 export default function PromptEngineeringCoursePage() {
   return (
-    <PageLayout>
+    <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <section className="text-center pt-16 pb-12">
@@ -261,6 +260,6 @@ export default function PromptEngineeringCoursePage() {
                 </div>
             </section>
         </div>
-    </PageLayout>
+    </>
   );
 }

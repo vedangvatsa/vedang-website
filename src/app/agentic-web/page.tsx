@@ -5,7 +5,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { PageLayout } from '@/components/page-layout';
 
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
@@ -139,7 +138,7 @@ const faqSchema = {
 
 export default function AgenticWebCoursePage() {
   return (
-    <PageLayout>
+    <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -300,6 +299,6 @@ export default function AgenticWebCoursePage() {
                 </div>
             </section>
         </div>
-    </PageLayout>
+    </>
   );
 }
