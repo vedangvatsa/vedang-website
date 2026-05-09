@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import { GlossaryVisualizer } from '@/components/mdx/glossary-visualizer';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft } from 'lucide-react';
@@ -16,6 +17,7 @@ import { KnowledgeCheck } from '@/components/mdx/knowledge-check';
 import { PredictionEngine, CoreTechniques, AdvancedReasoning, CodePrompting, BestPractices, RAGPipeline, PromptChaining, ModelComparison, PromptAnatomy, ReasoningStrategies, CodePromptPatterns, PromptAntiPatterns, RAGArchitecture, ChainTypes } from '@/components/courses/pe-visuals';
 
 const mdxComponents = {
+    GlossaryVisualizer,
     Accordion,
     AccordionItem,
     AccordionTrigger,

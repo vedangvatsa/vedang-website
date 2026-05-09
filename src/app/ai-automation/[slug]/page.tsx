@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { GlossaryVisualizer } from '@/components/mdx/glossary-visualizer';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import fs from 'fs';
@@ -49,6 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 const mdxComponents = {
+    GlossaryVisualizer,
     Accordion, AccordionContent, AccordionItem, AccordionTrigger,
     Card, CardHeader, CardTitle, CardContent, CardDescription,
     KnowledgeCheck, Link,

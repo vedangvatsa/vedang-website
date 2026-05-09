@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { GlossaryVisualizer } from '@/components/mdx/glossary-visualizer';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import fs from 'fs';
@@ -51,6 +52,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 const components = {
+  GlossaryVisualizer,
   Image: (props: any) => <Image {...props} alt={props.alt || 'Course module illustration'} />,
   Accordion,
   AccordionContent,
