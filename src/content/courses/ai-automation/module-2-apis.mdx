@@ -29,6 +29,13 @@ const response = await fetch(
 const data = await response.json();
 console.log(\`Found \${data.jobs.length} open positions\`);`}</code></pre>
             <p>This is exactly how job aggregation pipelines work. they call dozens of company APIs, collect listings, normalize the data, and store it in a database. One script replaces hours of manual searching.</p>
+            
+            <div className="mt-4 border-t border-border/20 pt-4">
+                <p className="text-xs font-semibold mb-2 text-foreground/80">Interactive Concept: How an API Works</p>
+                <div className="scale-90 origin-top-left">
+                    <GlossaryVisualizer term="api" />
+                </div>
+            </div>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
@@ -64,6 +71,13 @@ await fetch("https://api.openai.com/v1/chat/completions", {
 });`}</code></pre>
             <p><strong>3. OAuth 2.0</strong>. For accessing user data (Google Sheets, Twitter, LinkedIn). Involves redirect flows and token refresh. No-code tools handle this for you; for code, libraries like <code>googleapis</code> simplify it.</p>
             <p><strong>Golden rule:</strong> Never hardcode secrets. Always use environment variables (<code>process.env.API_KEY</code>).</p>
+            
+            <div className="mt-4 border-t border-border/20 pt-4">
+                <p className="text-xs font-semibold mb-2 text-foreground/80">Interactive Concept: OAuth 2.0 Authentication</p>
+                <div className="scale-90 origin-top-left">
+                    <GlossaryVisualizer term="oauth" />
+                </div>
+            </div>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-3">
@@ -101,6 +115,13 @@ export async function POST(request: Request) {
   return Response.json({ success: true });
 }`}</code></pre>
             <p>This pattern powers automated Telegram channels, Discord bots, email newsletters, and social media feeds. new data arrives via webhook, gets formatted, and broadcasts instantly.</p>
+            
+            <div className="mt-4 border-t border-border/20 pt-4">
+                <p className="text-xs font-semibold mb-2 text-foreground/80">Interactive Concept: Webhooks</p>
+                <div className="scale-90 origin-top-left">
+                    <GlossaryVisualizer term="webhook" />
+                </div>
+            </div>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-4">

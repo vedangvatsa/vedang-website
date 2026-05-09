@@ -18,6 +18,13 @@ Blockchains like Ethereum can only process about 15-30 transactions per second. 
                 <li><strong>Scalability:</strong> The network can process a high volume of transactions quickly and cheaply.</li>
             </ul>
             <p>Bitcoin and Ethereum chose security and decentralization, sacrificing scalability. This is why transactions can be slow and expensive during high demand. Layer 2 solutions attempt to break this trilemma by handling scalability on a separate layer while inheriting security from the main chain.</p>
+            
+            <div className="mt-4 border-t border-border/20 pt-4">
+                <p className="text-xs font-semibold mb-2 text-foreground/80">Interactive Concept: Layer 2 Scaling</p>
+                <div className="scale-90 origin-top-left">
+                    <GlossaryVisualizer term="layer-2" />
+                </div>
+            </div>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
@@ -44,6 +51,12 @@ Blockchains like Ethereum can only process about 15-30 transactions per second. 
                         <p className="text-sm text-muted-foreground"><strong>How:</strong> Generate a cryptographic "validity proof" that mathematically proves all transactions in the batch are correct. No challenge period needed.</p>
                         <p className="text-sm text-muted-foreground mt-2"><strong>Used by:</strong> zkSync, StarkNet, Polygon zkEVM</p>
                         <p className="text-sm text-muted-foreground mt-2"><strong>Trade-off:</strong> Generating ZK proofs is computationally expensive, but withdrawals are near-instant.</p>
+                        <div className="mt-4 border-t border-border/20 pt-4">
+                            <p className="text-xs font-semibold mb-2 text-foreground/80">Interactive Concept: Zero-Knowledge Proofs</p>
+                            <div className="scale-90 origin-top-left">
+                                <GlossaryVisualizer term="zero-knowledge-proof" />
+                            </div>
+                        </div>
                     </CardContent>
                 </Card>
             </div>
@@ -72,6 +85,13 @@ Blockchains like Ethereum can only process about 15-30 transactions per second. 
                 <li><strong>Wormhole (2022):</strong> $320 million stolen due to a smart contract vulnerability.</li>
             </ul>
             <p><strong>Best Practices:</strong> Use native bridges operated by the L2 teams (like the official Arbitrum Bridge or Base Bridge) whenever possible. Avoid third-party bridges unless they have a strong security track record and multiple audits.</p>
+            
+            <div className="mt-4 border-t border-border/20 pt-4">
+                <p className="text-xs font-semibold mb-2 text-foreground/80">Interactive Concept: Cross-Chain Bridges</p>
+                <div className="scale-90 origin-top-left">
+                    <GlossaryVisualizer term="bridge" />
+                </div>
+            </div>
         </AccordionContent>
     </AccordionItem>
 </Accordion>
