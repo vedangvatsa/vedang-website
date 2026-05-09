@@ -636,6 +636,7 @@
     "scheduleTime": "09:00",
     "posted": false,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia digitized 99% of public services. Only marriages and divorces require showing up in person.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government.\n\nBaby born? The system detects it, calculates benefits, deposits money. No form. No queue. No portal.\n\nMost governments still make you download a PDF.\n\nveda.ng/agentic-state"
+    "text": "Estonia digitized 99% of public services. Only marriages and divorces require showing up in person.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government.\n\nBaby born? The system detects it, calculates benefits, deposits money. No form. No queue. No portal.\n\nMost governments still make you download a PDF.\n\nveda.ng/agentic-state",
+    "error": "Photo upload failed: 500 {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}"
   }
 ]

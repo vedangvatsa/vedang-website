@@ -942,12 +942,14 @@
     "id": "agentic-state",
     "scheduleDate": "2026-04-22",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
     "tags": [
       "government",
       "AI"
     ],
-    "text": "Estonia: 99% digital government. Singapore: AI across 100k officers. UAE: 97% utilization.\n\nBaby born? System detects it, calculates benefits, deposits money. No form. No queue.\n\nMost governments still run on PDFs and waiting rooms.\n\nveda.ng/agentic-state"
+    "text": "Estonia: 99% digital government. Singapore: AI across 100k officers. UAE: 97% utilization.\n\nBaby born? System detects it, calculates benefits, deposits money. No form. No queue.\n\nMost governments still run on PDFs and waiting rooms.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-05-09T12:38:35.351Z",
+    "tumblrId": "816138488432967680"
   }
 ]
