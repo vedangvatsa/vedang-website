@@ -60,7 +60,7 @@ export default function GlossaryPage() {
             Glossary
           </h1>
           <p className="mt-4 text-base md:text-lg text-muted-foreground">
-            Deep dives into the terminology shaping AI, Web3, and deep tech.
+            Definitions of the terminology shaping AI, Web3, and deep tech.
           </p>
         </div>
       </section>
