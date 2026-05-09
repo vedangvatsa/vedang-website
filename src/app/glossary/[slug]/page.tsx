@@ -106,26 +106,17 @@ export default async function GlossaryTermPage({ params }: PageProps) {
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
             {term.term}
           </h1>
-          {(() => {
-            const Visualizer = visualizers[term.slug];
-            return Visualizer ? (
-              <div className="mt-12 mx-auto w-full">
-                <Visualizer />
-              </div>
-            ) : (
-              <div className="mt-6 mx-auto max-w-2xl">
-                <Image
-                  src={`/images/glossary/${term.slug}.svg?v=4`}
-                  alt={`${term.term} infographic`}
-                  width={800}
-                  height={400}
-                  className="w-full h-auto rounded-lg"
-                  unoptimized
-                  priority
-                />
-              </div>
-            );
-          })()}
+          <div className="mt-6 mx-auto max-w-2xl">
+            <Image
+              src={`/images/glossary/${term.slug}.svg?v=4`}
+              alt={`${term.term} infographic`}
+              width={800}
+              height={400}
+              className="w-full h-auto rounded-lg"
+              unoptimized
+              priority
+            />
+          </div>
         </div>
       </section>
 
@@ -164,6 +155,19 @@ export default async function GlossaryTermPage({ params }: PageProps) {
             ));
           })()}
         </div>
+
+        {(() => {
+          const Visualizer = visualizers[term.slug];
+          if (!Visualizer) return null;
+          return (
+            <div className="mb-16 border-t border-border/30 pt-12">
+              <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-6">Interactive Visualizer</h2>
+              <div className="w-full">
+                <Visualizer />
+              </div>
+            </div>
+          );
+        })()}
 
         {relatedTermObjects.length > 0 && (
           <div className="border-t border-border/50 pt-12">
