@@ -39,8 +39,10 @@
       "agents"
     ],
     "scheduleDate": "2026-03-27",
-    "posted": false,
-    "scheduleTime": "17:00"
+    "posted": true,
+    "scheduleTime": "17:00",
+    "postedAt": "2026-05-09T12:38:37.482Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/towards-the-agentic-web-1"
   },
   {
     "id": "hashnode-ai-agent-economy",

@@ -815,8 +815,10 @@
     "id": "agentic-state",
     "scheduleDate": "2026-04-22",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "In Estonia, only two government services require you to show up in person: marriages and divorces. Everything else is digital. 99% of public services.\n\nSingapore runs AI across 100,000 public officers. UAE hit 97% AI utilization in government.\n\nThese aren't pilots. They're production systems serving millions.\n\nA baby is born. The system detects it, calculates benefits, deposits money. No form. No queue. No portal. The citizen does nothing.\n\nMost governments still make you download a PDF.\n\nveda.ng/agentic-state"
+    "text": "In Estonia, only two government services require you to show up in person: marriages and divorces. Everything else is digital. 99% of public services.\n\nSingapore runs AI across 100,000 public officers. UAE hit 97% AI utilization in government.\n\nThese aren't pilots. They're production systems serving millions.\n\nA baby is born. The system detects it, calculates benefits, deposits money. No form. No queue. No portal. The citizen does nothing.\n\nMost governments still make you download a PDF.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-05-09T12:38:20.652Z",
+    "tweetId": "2053092203044786431"
   }
 ]
