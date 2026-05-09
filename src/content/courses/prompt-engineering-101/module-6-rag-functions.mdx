@@ -17,6 +17,13 @@ LLMs are limited by their training data, they don't know about your company's do
                 <li><strong>Generate:</strong> The LLM generates an answer based on both the user's question and the retrieved context.</li>
             </ol>
             <p><strong>Why RAG Matters:</strong> Without RAG, if you ask an LLM "What is our company's refund policy?", it will either hallucinate an answer or say it doesn't know. With RAG, the LLM retrieves your actual refund policy document and answers accurately, with citations.</p>
+            
+            <div className="mt-4 border-t border-border/20 pt-4">
+                <p className="text-xs font-semibold mb-2 text-foreground/80">Interactive Concept: RAG Pipeline</p>
+                <div className="scale-90 origin-top-left">
+                    <GlossaryVisualizer term="rag" />
+                </div>
+            </div>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
@@ -36,6 +43,13 @@ LLMs are limited by their training data, they don't know about your company's do
                 <li><strong>Supabase pgvector:</strong> Add vector search to your existing Postgres database. No extra infrastructure needed.</li>
                 <li><strong>Weaviate:</strong> Open-source, supports hybrid search (keyword + vector).</li>
             </ul>
+            
+            <div className="mt-4 border-t border-border/20 pt-4">
+                <p className="text-xs font-semibold mb-2 text-foreground/80">Interactive Concept: Vector Embeddings</p>
+                <div className="scale-90 origin-top-left">
+                    <GlossaryVisualizer term="embeddings" />
+                </div>
+            </div>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-3">

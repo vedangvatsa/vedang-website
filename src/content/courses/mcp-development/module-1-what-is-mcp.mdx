@@ -29,6 +29,13 @@ MCP changes this. Created by Anthropic and now adopted across the industry, the 
                 <li><strong>MCP Server:</strong> A lightweight program that exposes specific capabilities (tools, resources, prompts) through the MCP protocol. Servers are where the actual work happens. querying databases, calling APIs, reading files. Anyone can build an MCP server.</li>
             </ul>
             <p>The communication flow: User → Host → Client → Server → Data Source. The LLM inside the host decides which tools to use, the client routes the request to the right server, and the server executes the action and returns results.</p>
+            
+            <div className="mt-4 border-t border-border/20 pt-4">
+                <p className="text-xs font-semibold mb-2 text-foreground/80">Interactive Concept: Model Context Protocol (MCP)</p>
+                <div className="scale-90 origin-top-left">
+                    <GlossaryVisualizer term="mcp" />
+                </div>
+            </div>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-3">
