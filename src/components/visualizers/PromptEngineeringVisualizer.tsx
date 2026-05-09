@@ -19,14 +19,14 @@ export function PromptEngineeringVisualizer() {
       title: "With Context",
       text: "You are a literary analyst. Analyze this text for its main themes.",
       techniques: ["Context"],
-      output: "This text explores themes of human resilience and social change through vivid imagery and metaphorical language.",
+      output: "This text explores themes of human strength and social change through vivid imagery and metaphorical language.",
       quality: 60
     },
     {
       title: "With Format",
       text: "You are a literary analyst. Analyze this text and provide:\n1. Main theme\n2. Literary devices\n3. Tone",
       techniques: ["Context", "Format"],
-      output: "1. Main theme: Human resilience in adversity\n2. Literary devices: Metaphor, symbolism, imagery\n3. Tone: Hopeful yet somber",
+      output: "1. Main theme: Human strength in adversity\n2. Literary devices: Metaphor, symbolism, imagery\n3. Tone: Hopeful yet somber",
       quality: 80
     },
     {

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-export function NerVisualizer() {
+export default function NerVisualizer() {
   const [selectedSentence, setSelectedSentence] = useState(0);
   const [hoveredEntity, setHoveredEntity] = useState<number | null>(null);
   const [showLabels, setShowLabels] = useState(false);

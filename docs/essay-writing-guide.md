@@ -114,20 +114,20 @@ These phrases have been purged from all essays. Never reintroduce them:
 
 | Banned | Use Instead |
 |--------|-------------|
-| "delve into" | "examine," "look at," specific verb |
+| "explore into" | "examine," "look at," specific verb |
 | "landscape" | "market," "field," specific noun |
 | "tapestry" | Remove entirely or use specific description |
-| "at its core" | State the thing directly |
+| "" | State the thing directly |
 | "in the realm of" | "in" |
-| "game-changer" | Describe the specific change |
-| "paradigm shift" | Describe what actually shifted |
+| "major shift" | Describe the specific change |
+| "model shift" | Describe what actually shifted |
 | "leverage" (as verb) | "use," "apply," specific verb |
-| "synergy" | Describe the specific benefit |
+| "collaboration" | Describe the specific benefit |
 | "unlock" (potential/value) | Describe what actually happens |
 | "holistic" | "complete," "full," or remove |
-| "robust" | "strong," "reliable," specific adjective |
-| "cutting-edge" | Describe what makes it new |
-| "seamless" | Describe the specific UX improvement |
+| "strong" | "strong," "reliable," specific adjective |
+| "modern" | Describe what makes it new |
+| "smooth" | Describe the specific UX improvement |
 | "ecosystem" (as buzzword) | "market," "community," "network" |
 
 ### Frontmatter Format

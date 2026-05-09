@@ -9,7 +9,7 @@ Traditional automation follows rigid rules: "if X, then Y." AI agents break this
 
 If you've taken the [Agentic Web](/agentic-web) course, you understand the theory. This module is about putting agents to work as practical automators.
 
-The operational difference between a script and an agent is adaptability. A script that processes job listings breaks when the API changes its response format. An agent reads the new format, adjusts its parsing logic, and continues processing. This resilience is why agents are replacing brittle rule-based automation in production workflows. The tradeoff is cost and latency: every agent action involves an LLM inference call. The decision framework is straightforward: use agents for tasks that require reasoning, and use scripts for tasks that are purely mechanical.
+The operational difference between a script and an agent is adaptability. A script that processes job listings breaks when the API changes its response format. An agent reads the new format, adjusts its parsing logic, and continues processing. This strength is why agents are replacing brittle rule-based automation in production workflows. The tradeoff is cost and latency: every agent action involves an LLM inference call. The decision framework is straightforward: use agents for tasks that require reasoning, and use scripts for tasks that are purely mechanical.
 
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
@@ -168,7 +168,7 @@ const response = await anthropic.messages.create({
             <p><strong>What to include:</strong></p>
             <ul>
                 <li><strong>Voice and tone:</strong> "We write in declarative sentences. No hedging. No 'I think' or 'maybe.' High information density."</li>
-                <li><strong>Anti-patterns:</strong> "Never use: 'leverage,' 'synergy,' 'game-changer,' 'ecosystem' (unless literally about ecosystems)."</li>
+                <li><strong>Anti-patterns:</strong> "Never use: 'leverage,' 'collaboration,' 'major shift,' 'ecosystem' (unless literally about ecosystems)."</li>
                 <li><strong>Formatting rules:</strong> "Headlines are sentence case. No Oxford comma. Code blocks use 2-space indentation."</li>
                 <li><strong>Visual identity:</strong> Primary colors (hex codes), fonts, logo usage rules.</li>
                 <li><strong>Content structure:</strong> "Blog posts: thesis in first paragraph. No throat-clearing introductions."</li>

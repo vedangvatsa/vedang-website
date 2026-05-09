@@ -269,7 +269,7 @@ export default function ProfilePage() {
                             <li>A literature review on Internet of Things (IoT); IJCS</li>
                             <li>Current Trends and Approaches of Network Intrusion Detection System; IJCSMC</li>
                             <li>Case Study on Mobile Applications Industry; IJIR</li>
-                            <li>Security in Ubiquitous Computing and Analysis of security threats in MANET; UGC SAP Conference</li>
+                            <li>Security in Common Computing and Analysis of security threats in MANET; UGC SAP Conference</li>
                             <li>A Review on Multi-Modal Biometric Systems; IJCTA</li>
                             <li>Comparative Analysis of Coverage Schemes in Wireless Sensor Network; CAE</li>
                             <li>Raspberry Pi based Implementation of IoT using Telegram</li>

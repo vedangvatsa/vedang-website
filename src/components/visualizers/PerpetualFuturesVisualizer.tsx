@@ -239,8 +239,8 @@ export function PerpetualFuturesVisualizer() {
       <div className="bg-blue-50 p-4 rounded-lg max-w-2xl text-sm text-slate-700">
         <div className="font-semibold mb-2">How it works:</div>
         <ul className="space-y-1 text-xs">
-          <li>• When perp price {'{'>'}'} spot price: positive funding rate, longs pay shorts</li>
-          <li>• When perp price {'{'<'}'} spot price: negative funding rate, shorts pay longs</li>
+          <li>• When perp price > spot price: positive funding rate, longs pay shorts</li>
+          <li>• When perp price < spot price: negative funding rate, shorts pay longs</li>
           <li>• Funding payments occur every 8 hours to keep prices anchored</li>
           <li>• No expiration date - positions can be held indefinitely</li>
         </ul>

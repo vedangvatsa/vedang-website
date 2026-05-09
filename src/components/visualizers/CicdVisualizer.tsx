@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-export function CicdVisualizer() {
+export function CiCdVisualizer() {
   const [currentStage, setCurrentStage] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [testResults, setTestResults] = useState({ passed: 0, failed: 0 });

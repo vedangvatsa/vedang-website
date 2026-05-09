@@ -359,7 +359,7 @@ Ranked by estimated impact on GEO performance:
 
 3. **llms.txt** — The file exists and is well-structured. This is a strong differentiator. Most personal sites do not have this. It should be kept up-to-date as new content is added.
 
-4. **Person + Organization schema** — The dual schema setup in `layout.tsx` with `sameAs` social profiles, `knowsAbout`, `affiliation`, and `award` fields is comprehensive and correctly structured.
+4. **Person + Organization schema** — The dual schema setup in `layout.tsx` with `sameAs` social profiles, `knowsAbout`, `affiliation`, and `award` fields is detailed and correctly structured.
 
 5. **Research paper links on homepage** — The 8 linked SSRN/IEEE papers with full DOI URLs establish academic authority. These citations exist on the homepage but not in individual essays.
 

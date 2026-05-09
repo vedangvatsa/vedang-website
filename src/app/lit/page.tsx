@@ -122,7 +122,7 @@ const PHRASE_SWAPS: [RegExp, string][] = [
   // Failures & mistakes
   [/\bi made a mistake\b/gi, 'I had a powerful learning experience'],
   [/\bwe failed\b/gi, 'We ran a bold experiment and gathered invaluable data'],
-  [/\bi failed\b/gi, 'I earned a masterclass in resilience'],
+  [/\bi failed\b/gi, 'I earned a masterclass in strength'],
   [/\bi (messed|screwed|f[*u]cked) up\b/gi, 'I encountered an unexpected outcome that accelerated my learning curve'],
   [/\bit (didn('t| not) work|went wrong|fell apart|blew up|crashed|broke)\b/gi, 'The initiative surfaced critical learnings that will inform our next iteration'],
   [/\bwe lost (the |)(deal|client|account|contract)\b/gi, 'We made space in our portfolio for higher-alignment partnerships'],

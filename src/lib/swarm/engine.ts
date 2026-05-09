@@ -161,7 +161,7 @@ Rules:
 
 Writing style rules (MANDATORY):
 - NEVER use em-dashes. Use commas, periods, or semicolons instead.
-- NEVER use these words: delve, tapestry, landscape, utilize, leverage, multifaceted, nuanced, paradigm, synergy, holistic, robust, ecosystem, stakeholder, streamline, pivotal, moreover, furthermore, comprehensive, intricate, foster, underscore, realm
+- NEVER use these words: delve, tapestry, landscape, utilize, leverage, complex, nuanced, paradigm, collaboration, holistic, robust, ecosystem, stakeholder, streamline, pivotal, moreover, furthermore, comprehensive, intricate, foster, underscore, realm
 - Write plainly and directly like a journalist, not like a corporate report
 - Short sentences. No filler. Every sentence must add information.`;
 

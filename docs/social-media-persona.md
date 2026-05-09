@@ -42,7 +42,7 @@
 
 ### What Vedang DOES NOT sound like:
 - ❌ "I'm thrilled to announce..." (LinkedIn corporate speak)
-- ❌ "This is a game-changer!" (hype language)
+- ❌ "This is a major shift!" (hype language)
 - ❌ "Leveraging synergies to unlock value" (buzzword salad)
 - ❌ "Follow me for more tips!" (desperate engagement bait)
 - ❌ Excessive emojis, ALL CAPS for emphasis, or hashtag spam
@@ -128,7 +128,7 @@
 
 ## Anti-Patterns (Things to Avoid)
 
-1. **Never use AI slop phrases**: "landscape," "delve," "tapestry," "at its core," "in the realm of"
+1. **Never use AI slop phrases**: "landscape," "explore," "tapestry," "" "in the realm of"
 2. **Never start with "I'm excited..."** or "Thrilled to share..."
 3. **Never use more than 2 hashtags per post** on any platform
 4. **Never post the same content verbatim across platforms** — adapt tone

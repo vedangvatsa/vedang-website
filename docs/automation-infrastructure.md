@@ -138,7 +138,7 @@ npx tsx scripts/[platform]-scheduled-executor.ts
 # Posts will actually publish — use with care
 
 # Quick slop check across essays
-grep -rni "delve\|tapestry\|at its core\|paradigm shift" src/content/essays/
+grep -rni "explore\|tapestry\|\|model shift" src/content/essays/
 ```
 
 ## Future Upgrades
