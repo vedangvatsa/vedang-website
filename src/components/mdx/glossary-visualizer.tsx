@@ -1,10 +1,10 @@
 "use client";
 
-import { visualizers } from '@/components/visualizers/VisualizerMap';
+import { VisualizerMap } from '@/components/visualizers/VisualizerMap';
 import Image from 'next/image';
 
 export function GlossaryVisualizer({ term }: { term: string }) {
-  const Visualizer = visualizers[term];
+  const Visualizer = VisualizerMap[term];
   
   if (!Visualizer) {
     // Fallback to SVG if visualizer doesn't exist
