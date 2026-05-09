@@ -51,6 +51,12 @@ If blockchain is the immutable ledger, smart contracts are what make it programm
                     </CardHeader>
                     <CardContent>
                         <p className="text-sm text-muted-foreground">Lending, borrowing, and trading without banks. Protocols like Aave let you earn interest on deposits or take out loans using crypto as collateral, all managed by smart contracts.</p>
+                        <div className="mt-4 border-t border-border/20 pt-4">
+                            <p className="text-xs font-semibold mb-2 text-foreground/80">Interactive Concept: Automated Market Maker (AMM)</p>
+                            <div className="scale-90 origin-top-left">
+                                <GlossaryVisualizer term="amm" />
+                            </div>
+                        </div>
                     </CardContent>
                 </Card>
                 <Card>
@@ -90,6 +96,8 @@ If blockchain is the immutable ledger, smart contracts are what make it programm
             * **Move:** Developed by Facebook's Diem project, now used by Aptos and Sui. It's designed specifically for safe asset handling.
 
             **Security is critical.** Because smart contracts are immutable and often control large amounts of money, bugs can be catastrophic. The 2016 "DAO Hack" exploited a vulnerability in a smart contract to drain $60 million worth of ETH. Today, the industry has matured significantly with:
+            
+            <GlossaryVisualizer term="reentrancy" />
 
             * **Professional Auditing Firms:** Companies like Trail of Bits, OpenZeppelin, and Certora specialize in reviewing smart contract code before deployment.
             * **Bug Bounty Programs:** Protocols offer rewards (often $100K+) for hackers who find and responsibly disclose vulnerabilities.

@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import { GlossaryVisualizer } from '@/components/mdx/glossary-visualizer';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft } from 'lucide-react';
@@ -16,6 +17,7 @@ import { KnowledgeCheck } from '@/components/mdx/knowledge-check';
 import { ActionWebEvolution, AgentComponents, AgenticDimensions, AgenticApps, AgenticFuture, ProtocolDiagram, AgentBuildSteps, WebParadigmStats, ToolEcosystem, AutonomySpectrum, AgenticIndustryAdoption, AgentRiskMatrix, AgentProtocolComparison, AgentBuildChecklist } from '@/components/courses/agentic-visuals';
 
 const mdxComponents = {
+    GlossaryVisualizer,
     Accordion, AccordionItem, AccordionTrigger, AccordionContent,
     Card, CardHeader, CardTitle, CardContent, CardDescription,
     KnowledgeCheck, ActionWebEvolution, AgentComponents, AgenticDimensions,
