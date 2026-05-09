@@ -928,13 +928,15 @@
     "id": "universal-text-ui",
     "scheduleDate": "2026-04-21",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
     "tags": [
       "AI",
       "design"
     ],
-    "text": "Every dropdown is a predicted question. Your actual question is never one of them.\n\nA text field backed by an LLM that calls APIs directly kills the dashboard. PostHog, Salesforce, and Cursor already proved it.\n\nveda.ng/universal-text-ui"
+    "text": "Every dropdown is a predicted question. Your actual question is never one of them.\n\nA text field backed by an LLM that calls APIs directly kills the dashboard. PostHog, Salesforce, and Cursor already proved it.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-05-09T02:59:08.746Z",
+    "tumblrId": "816102033088266240"
   },
   {
     "id": "agentic-state",
