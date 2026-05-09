@@ -170,7 +170,7 @@ export function ZeroKnowledgeProofVisualizer() {
                   <div className="text-xs font-semibold text-amber-700 mb-1">Response (Public)</div>
                   <div className="font-mono text-sm text-amber-800">0x{proof.response}</div>
                   <div className="text-xs text-amber-600 mt-1">
-                    ✓ Proves income > ${threshold.toLocaleString()} without revealing exact amount
+                    ✓ Proves income {'>'} ${threshold.toLocaleString()} without revealing exact amount
                   </div>
                 </div>
               )}

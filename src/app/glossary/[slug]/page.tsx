@@ -7,7 +7,7 @@ import { notFound } from 'next/navigation';
 import { PageLayout } from '@/components/page-layout';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 import { RelatedEssaysForTerm } from '@/lib/cross-links';
-
+import { visualizers } from '@/components/visualizers/VisualizerMap';
 interface PageProps {
   params: Promise<{
     slug: string;
@@ -106,17 +106,26 @@ export default async function GlossaryTermPage({ params }: PageProps) {
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
             {term.term}
           </h1>
-          <div className="mt-6 mx-auto max-w-2xl">
-            <Image
-              src={`/images/glossary/${term.slug}.svg?v=4`}
-              alt={`${term.term} infographic`}
-              width={800}
-              height={400}
-              className="w-full h-auto rounded-lg"
-              unoptimized
-              priority
-            />
-          </div>
+          {(() => {
+            const Visualizer = visualizers[term.slug];
+            return Visualizer ? (
+              <div className="mt-12 mx-auto w-full">
+                <Visualizer />
+              </div>
+            ) : (
+              <div className="mt-6 mx-auto max-w-2xl">
+                <Image
+                  src={`/images/glossary/${term.slug}.svg?v=4`}
+                  alt={`${term.term} infographic`}
+                  width={800}
+                  height={400}
+                  className="w-full h-auto rounded-lg"
+                  unoptimized
+                  priority
+                />
+              </div>
+            );
+          })()}
         </div>
       </section>
 
@@ -176,7 +185,5 @@ export default async function GlossaryTermPage({ params }: PageProps) {
         <RelatedEssaysForTerm termSlug={slug} />
       </article>
     </PageLayout>
-  );
-}
   );
 }
