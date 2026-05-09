@@ -118,7 +118,7 @@ async function publishViaXmlRpc(title: string, htmlContent: string, thumbnailId:
           ${thumbnailId ? `<member><name>post_thumbnail</name><value><int>${thumbnailId}</int></value></member>` : ''}
           <member><name>custom_fields</name><value><array><data>${customFieldsXml}</data></array></value></member>
           <member>
-            <name>terms</name>
+            <name>terms_names</name>
             <value>
               <struct>
                 <member><name>post_tag</name><value><array><data>${termsXml}</data></array></value></member>
@@ -192,7 +192,7 @@ async function main() {
                     // Set first uploaded image as featured!
                     if (!featuredImageId) featuredImageId = uploaded.id;
                     // Replace the custom tag with standard markdown using the WP hosted URL
-                    body = body.replace(match[0], `\n![${alt}](${uploaded.url})\n`);
+                    body = body.replace(match[0], `\n\n![${alt}](${uploaded.url})\n\n`);
                 }
             } else {
                  body = body.replace(match[0], ''); // Remove broken images
@@ -202,10 +202,9 @@ async function main() {
 
     // Clean up other custom components
     
-    // Callouts with children
-    body = body.replace(/<Callout[^>]*title=["']([^"']*)["'][^>]*>([\s\S]*?)<\/Callout>/g, (match, title, content) => {
-        return `\n\n> **${title}**\n> ${content.trim().replace(/\n/g, '\n> ')}\n\n`;
-    });
+    // Callouts with children (Convert to standard heading + content, NO blockquote wrapping so tables parse correctly)
+    body = body.replace(/<Callout[^>]*title=["']([^"']*)["'][^>]*>([\s\S]*?)<\/Callout>/g, '\n\n### $1\n\n$2\n\n');
+    
     // Callouts with text attribute
     body = body.replace(/<Callout[^>]*text=["']([^"']*)["'][^>]*\/?>/g, '\n\n> 💡 $1\n\n');
     
@@ -219,6 +218,7 @@ async function main() {
     body = body.replace(/<PullQuote[^>]*>([\s\S]*?)<\/PullQuote>/g, '\n\n> $1\n\n');
     body = body.replace(/<KeyTakeaway[^>]*text=["']([^"']*)["'][^>]*\/?>/g, '\n\n> ✅ $1\n\n');
     body = body.replace(/<KeyTakeaway[^>]*>([\s\S]*?)<\/KeyTakeaway>/g, '\n\n> ✅ $1\n\n');
+    body = body.replace(/<Separator[^>]*\/?>/g, '\n\n---\n\n');
     
     // Remove all remaining JSX self-closing tags (charts, etc) and replace with a note
     body = body.replace(/<([A-Z][A-Za-z0-9]*)[^>]*\/>/g, '\n\n*(Interactive chart available on original post)*\n\n');
