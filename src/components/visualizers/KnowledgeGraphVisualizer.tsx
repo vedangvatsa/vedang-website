@@ -67,7 +67,7 @@ export function KnowledgeGraphVisualizer() {
     },
     'relativity': {
       type: 'Scientific Theory',
-      impact: 'Major',
+      impact: 'Revolutionary',
       applications: 'GPS, Nuclear Energy'
     },
     'princeton': {

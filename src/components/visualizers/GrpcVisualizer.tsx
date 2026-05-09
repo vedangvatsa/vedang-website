@@ -297,3 +297,6 @@ export function GrpcVisualizer() {
           </ul>
         </div>
       </div>
+    </div>
+  );
+}
