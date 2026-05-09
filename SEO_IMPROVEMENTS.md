@@ -30,7 +30,7 @@ From GSC data, several queries showed high impressions but zero clicks:
 - **Expected Impact:** Convert some of 557 impressions to clicks
 
 ### 3. **Created /guides Page** (New)
-**Purpose:** Target all high-impression, zero-click queries with a single comprehensive hub
+**Purpose:** Target all high-impression, zero-click queries with a single detailed hub
 - Market making in cryptocurrency (multiple variations)
 - Token economics / tokenomics
 - Taxation of digital economy / digital assets
@@ -118,7 +118,7 @@ To track improvements:
 - `/src/app/prompt-engineering-101/page.tsx` - Updated metadata
 - `/src/app/agentic-web/page.tsx` - Updated metadata
 - `/src/app/vibe-coding/page.tsx` - Updated metadata
-- `/src/app/guides/page.tsx` - **NEW** Comprehensive guides hub
+- `/src/app/guides/page.tsx` - **NEW** Detailed guides hub
 - `/src/app/perspectives/page.tsx` - **NEW** AI/Singularity perspectives
 - `/next.config.mjs` - Added security headers
 - `/src/app/layout.tsx` - Added Person schema + theme colors

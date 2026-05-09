@@ -185,7 +185,7 @@ export function YCGeoConcentration() {
 export function AgentForXPattern() {
   const verticals = [
     { vertical: 'Legal', examples: 'Lexi, Crimson, General Legal, Arcline, Fed10', batches: 'S25-W26' },
-    { vertical: 'Healthcare ops', examples: 'Aegis, Eos AI, Beacon Health, Kaigo, Ruma Care', batches: 'S25-W26' },
+    { vertical: 'Healthcare ops', examples: 'Aegis, Eos AI, Example Health, Kaigo, Ruma Care', batches: 'S25-W26' },
     { vertical: 'Accounting', examples: 'Cranston AI, Minerva, Balance, FullSeam, Copperlane', batches: 'F25-W26' },
     { vertical: 'Construction', examples: 'Foreman, Articulate, Semble AI, BidFlow, Structured AI', batches: 'F25-W26' },
     { vertical: 'Insurance', examples: 'Casey, Panta, Verdex, Acolite, Avallon AI', batches: 'F25-W26' },

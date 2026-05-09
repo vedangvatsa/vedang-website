@@ -138,7 +138,7 @@ export const CACHED_TRANSLATIONS: Record<string, string> = {
     'Participated in an intensive synchronous collaboration marathon that stress-tested our async communication gaps.\n\nThis experience reinforced my thesis: the future of work is written, not spoken.',
 
   'My code broke production.':
-    'Triggered an unplanned resilience test across our production infrastructure today.\n\nThe system held. The team held. Incidents build culture. Grateful for the learning.',
+    'Triggered an unplanned strength test across our production infrastructure today.\n\nThe system held. The team held. Incidents build culture. Grateful for the learning.',
 
   'I copy-pasted from Stack Overflow.':
     'Leveraged community-sourced technical solutions to accelerate delivery velocity.\n\nOpen source is not copying. It is standing on the shoulders of giants. That is how innovation works.',

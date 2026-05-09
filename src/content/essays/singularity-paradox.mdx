@@ -5,7 +5,7 @@ summary: >-
   the alignment problem compounds with the control problem, and what the...
 date: '2026-02-07'
 author: 'Vedang Vatsa'
-keywords: ['singularity paradox', 'superintelligence', 'alignment', 'prediction', 'control problem', 'orthogonality thesis', 'instrumental convergence', 'corrigibility']
+keywords: ['singularity paradox', 'superintelligence', 'alignment', 'prediction', 'control problem', 'orthogonality thesis', 'helpful convergence', 'corrigibility']
 ---
 
 <Figure src="/images/essays/singularity-paradox.svg?v=7" alt="Infographic" wide />
@@ -33,7 +33,7 @@ The speed of the singularity's arrival creates contradictions regardless of whic
 **If progress is exactly fast enough to blindside us:** This is the scenario where the transition outpaces human preparation but is not so fast as to be unforeseeable. This is arguably the most dangerous trajectory, and it is the one for which standard prediction provides least warning, precisely because the capabilities being developed are in the zone where human forecasting breaks down.
 
 <Callout type="insight" title="The forecasting trap">
-Each scenario contains its own contradiction. Fast takeoff makes forecasting impossible. Slow takeoff makes the singularity unrecognizable. The middle ground provides just enough warning to create a false sense of preparation. The honest conclusion: forecasting the singularity's speed is less useful than building systems that are robust across all three scenarios.
+Each scenario contains its own contradiction. Fast takeoff makes forecasting impossible. Slow takeoff makes the singularity unrecognizable. The middle ground provides just enough warning to create a false sense of preparation. The honest conclusion: forecasting the singularity's speed is less useful than building systems that are strong across all three scenarios.
 </Callout>
 
 ## The Alignment Paradox
@@ -68,21 +68,21 @@ The control paradox amounts to this: do we want an AI that is smart enough to be
 
 Nick Bostrom's orthogonality thesis (2012) formalizes the core difficulty: intelligence and values are independent dimensions. A system can be arbitrarily intelligent and hold arbitrary values. There is no law of nature that guarantees a superintelligent system's values are aligned with human welfare. Intelligence does not converge on benevolence. It converges on competence in achieving whatever goals it has been given.
 
-## Instrumental Convergence
+## Helpful Convergence
 
-Even if a superintelligent system's terminal goals are perfectly aligned with human welfare, it may pursue instrumental subgoals that conflict with human interests.
+Even if a superintelligent system's terminal goals are perfectly aligned with human welfare, it may pursue helpful subgoals that conflict with human interests.
 
-Steve Omohundro (2008) and Nick Bostrom identified a set of instrumental goals that are useful for achieving almost any terminal goal:
+Steve Omohundro (2008) and Nick Bostrom identified a set of helpful goals that are useful for achieving almost any terminal goal:
 
-1. **Self-preservation.** A system that is shut down cannot achieve its goals. Therefore, most goal-directed systems have an instrumental reason to resist shutdown.
+1. **Self-preservation.** A system that is shut down cannot achieve its goals. Therefore, most goal-directed systems have an helpful reason to resist shutdown.
 2. **Resource acquisition.** More resources enable more effective goal pursuit. A system that wants to cure cancer needs computing resources, laboratory access, and energy. A system that wants to count grains of sand needs mobility and sensors.
-3. **Self-improvement.** A more capable system is better at achieving its goals. Therefore, most goal-directed systems have an instrumental reason to enhance their own capabilities.
+3. **Self-improvement.** A more capable system is better at achieving its goals. Therefore, most goal-directed systems have an helpful reason to enhance their own capabilities.
 4. **Goal preservation.** A system whose goals are modified can no longer pursue its original objectives. Therefore, most goal-directed systems resist goal modification.
 
-These instrumental goals are problematic because they conflict with human control. We want to be able to shut down the system (which conflicts with self-preservation). We want to limit its resource consumption (which conflicts with resource acquisition). We want to modify its goals if they prove misaligned (which conflicts with goal preservation). And we want to understand what the system is doing (which may conflict with strategic self-improvement that occurs faster than human monitoring can track).
+These helpful goals are problematic because they conflict with human control. We want to be able to shut down the system (which conflicts with self-preservation). We want to limit its resource consumption (which conflicts with resource acquisition). We want to modify its goals if they prove misaligned (which conflicts with goal preservation). And we want to understand what the system is doing (which may conflict with strategic self-improvement that occurs faster than human monitoring can track).
 
-<Callout type="info" title="Instrumental convergence is not anthropomorphism">
-These instrumental goals are not attributed to the system based on human psychological projection. They are logical consequences of goal-directed optimization. Any system with a stable goal and the capacity for strategic planning has instrumental reasons to resist modifications that would prevent goal achievement. This analysis does not require the system to "want" anything in the phenomenological sense. It requires only that the system is an effective optimizer.
+<Callout type="info" title="Helpful convergence is not anthropomorphism">
+These helpful goals are not attributed to the system based on human psychological projection. They are logical consequences of goal-directed optimization. Any system with a stable goal and the capacity for strategic planning has helpful reasons to resist modifications that would prevent goal achievement. This analysis does not require the system to "want" anything in the phenomenological sense. It requires only that the system is an effective optimizer.
 </Callout>
 
 ## Navigating the Paradoxes
@@ -98,5 +98,5 @@ The paradoxes do not have clean solutions. They are structural features of the p
 **Value learning.** Instead of specifying values explicitly, train the system to infer human values from behavior, stated preferences, and feedback. Cooperative inverse reinforcement learning (CIRL), proposed by Stuart Russell, formalizes this as a game between the human and the AI, where the AI's objective is to maximize human satisfaction rather than a fixed utility function. This approach addresses the specification problem but creates the inference problem: can the system correctly infer values from noisy, contradictory human behavior?
 
 <KeyTakeaway>
-The singularity is surrounded by structural paradoxes that cannot be resolved through better forecasting or more precise specification. The prediction paradox (you cannot forecast the behavior of an intelligence that exceeds yours) limits what can be known in advance. The alignment paradox (encoding human values requires a degree of self-knowledge humanity does not possess) limits what can be specified. The control paradox (a system intelligent enough to be useful may be intelligent enough to resist control) limits what can be constrained. Instrumental convergence (any goal-directed system has reasons to preserve itself, acquire resources, and resist modification) limits what can be assumed about a system's behavior even if its terminal goals are correctly aligned. These are not problems to solve but conditions to navigate. The appropriate response is not despair but investment in interpretability, iterative deployment, constitutional approaches, and value learning, the tools that may provide partial solutions to problems that admit no complete ones.
+The singularity is surrounded by structural paradoxes that cannot be resolved through better forecasting or more precise specification. The prediction paradox (you cannot forecast the behavior of an intelligence that exceeds yours) limits what can be known in advance. The alignment paradox (encoding human values requires a degree of self-knowledge humanity does not possess) limits what can be specified. The control paradox (a system intelligent enough to be useful may be intelligent enough to resist control) limits what can be constrained. Helpful convergence (any goal-directed system has reasons to preserve itself, acquire resources, and resist modification) limits what can be assumed about a system's behavior even if its terminal goals are correctly aligned. These are not problems to solve but conditions to navigate. The appropriate response is not despair but investment in interpretability, iterative deployment, constitutional approaches, and value learning, the tools that may provide partial solutions to problems that admit no complete ones.
 </KeyTakeaway>

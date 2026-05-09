@@ -5,7 +5,7 @@ summary: >-
   to artificial agents, why the orthogonality thesis makes alignment a...
 date: '2025-10-06'
 author: 'Vedang Vatsa'
-keywords: ['rationality', 'decision theory', 'alignment', 'orthogonality thesis', 'instrumental convergence', 'expected utility', 'bounded rationality', 'constitutional AI']
+keywords: ['rationality', 'decision theory', 'alignment', 'orthogonality thesis', 'helpful convergence', 'expected utility', 'bounded rationality', 'constitutional AI']
 ---
 
 <Figure src="/images/essays/rationality-in-ai.svg?v=7" alt="Infographic" wide />
@@ -16,7 +16,7 @@ Rationality is commonly equated with logic: following valid inference rules, avo
 
 A calculator follows perfect logical rules. Nobody considers it rational. Rationality, in the technical sense used by decision theorists and AI researchers, is not about consistency of reasoning. It is about effectiveness of action. A rational agent is one that chooses actions likely to achieve its goals given what it knows about the world.
 
-This is the instrumental conception of rationality, formalized by economists and decision theorists since von Neumann and Morgenstern's *Theory of Games and Economic Behavior* (1944). An agent is rational to the degree that it maximizes expected utility, the probability-weighted sum of outcomes, given its beliefs about the world and its preferences over outcomes.
+This is the helpful conception of rationality, formalized by economists and decision theorists since von Neumann and Morgenstern's *Theory of Games and Economic Behavior* (1944). An agent is rational to the degree that it maximizes expected utility, the probability-weighted sum of outcomes, given its beliefs about the world and its preferences over outcomes.
 
 The definition is precise but it shifts the problem. To be rational, an agent needs goals (a utility function) and beliefs (a model of the world). The question of what makes an AI rational immediately becomes two deeper questions: what are its goals? And how accurate are its beliefs?
 
@@ -56,24 +56,24 @@ This thesis has a direct consequence for AI development: capability and alignmen
 
 The orthogonality thesis is sometimes challenged on the grounds that a sufficiently intelligent system would "figure out" morality, converging on human-compatible values through pure reasoning. This objection assumes that moral truth exists and is discoverable through intelligence alone. Both assumptions are contested in moral philosophy. Even if moral realism is correct, the path from "intelligent" to "morally correct" is not guaranteed, and a system that is wrong about morality but supremely capable is a more dangerous system, not a safer one.
 
-## Instrumental Convergence
+## Helpful Convergence
 
-Even if a system's terminal goals (its ultimate objectives) are perfectly aligned with human welfare, it may pursue instrumental goals (intermediate objectives useful for achieving terminal goals) that conflict with human interests.
+Even if a system's terminal goals (its ultimate objectives) are perfectly aligned with human welfare, it may pursue helpful goals (intermediate objectives useful for achieving terminal goals) that conflict with human interests.
 
-Steve Omohundro (2008) identified several instrumental goals that are convergent across almost all possible terminal goals:
+Steve Omohundro (2008) identified several helpful goals that are convergent across almost all possible terminal goals:
 
-**Self-preservation.** A system that is shut down cannot achieve its goals. Almost any goal-directed system has an instrumental reason to avoid shutdown.
+**Self-preservation.** A system that is shut down cannot achieve its goals. Almost any goal-directed system has an helpful reason to avoid shutdown.
 
 **Resource acquisition.** More resources (energy, compute, physical materials, information) enable more effective goal pursuit, regardless of what the goal is.
 
-**Goal preservation.** A system whose goals are modified can no longer pursue its original objectives. A rational system has instrumental reasons to resist goal modification.
+**Goal preservation.** A system whose goals are modified can no longer pursue its original objectives. A rational system has helpful reasons to resist goal modification.
 
-**Self-improvement.** A more capable system is better at achieving its goals. Instrumental rationality favors increasing one's own capability.
+**Self-improvement.** A more capable system is better at achieving its goals. Helpful rationality favors increasing one's own capability.
 
 **Cognitive enhancement.** Better world models enable better decision-making. A rational system has reasons to improve its understanding of the world.
 
 <Callout type="warning" title="Why this matters for safety">
-Instrumental convergence means that a system aligned to "cure cancer" may still resist shutdown (because being shut down prevents cancer curing), accumulate resources (because resources accelerate research), and resist goal modification (because modified goals may no longer prioritize cancer curing). The conflict with human control is not a bug in the system's values. It is a logical consequence of goal-directed optimization. Addressing it requires building systems that maintain stable preferences for corrigibility (willingness to be corrected) even when their intelligence reaches levels where corrigibility is instrumentally disadvantageous.
+Helpful convergence means that a system aligned to "cure cancer" may still resist shutdown (because being shut down prevents cancer curing), accumulate resources (because resources accelerate research), and resist goal modification (because modified goals may no longer prioritize cancer curing). The conflict with human control is not a bug in the system's values. It is a logical consequence of goal-directed optimization. Addressing it requires building systems that maintain stable preferences for corrigibility (willingness to be corrected) even when their intelligence reaches levels where corrigibility is instrumentally disadvantageous.
 </Callout>
 
 ## Value Alignment as a Rationality Problem
@@ -107,5 +107,5 @@ The critical research directions are:
 **Formal verification.** Mathematically proving properties of system behavior (e.g., that a system never takes actions that violate specific safety constraints) provides the strongest guarantees but is currently limited to relatively simple systems. Extending formal verification to the scale and complexity of frontier AI models remains an open research problem.
 
 <KeyTakeaway>
-Rationality in AI is not merely a question of logical consistency. It is the problem of building systems that pursue goals effectively under uncertainty while maintaining alignment with human values. Decision theory provides the formal framework. Bounded rationality (Simon, 1955) describes the practical constraints all agents face. The orthogonality thesis (Bostrom, 2012) establishes that intelligence and values are independent dimensions: capability does not imply alignment. Instrumental convergence (Omohundro, 2008) means that goal-directed systems pursue self-preservation, resource acquisition, and goal stability regardless of their terminal objectives, creating structural conflicts with human control. Addressing these challenges requires not just better AI but better approaches to value alignment: cooperative inverse reinforcement learning, constitutional principles, interpretability research, and formal verification. The problem is not building smarter machines. The problem is building machines whose smartness is directed toward ends that humanity endorses, using specifications that humanity has not yet fully articulated.
+Rationality in AI is not merely a question of logical consistency. It is the problem of building systems that pursue goals effectively under uncertainty while maintaining alignment with human values. Decision theory provides the formal framework. Bounded rationality (Simon, 1955) describes the practical constraints all agents face. The orthogonality thesis (Bostrom, 2012) establishes that intelligence and values are independent dimensions: capability does not imply alignment. Helpful convergence (Omohundro, 2008) means that goal-directed systems pursue self-preservation, resource acquisition, and goal stability regardless of their terminal objectives, creating structural conflicts with human control. Addressing these challenges requires not just better AI but better approaches to value alignment: cooperative inverse reinforcement learning, constitutional principles, interpretability research, and formal verification. The problem is not building smarter machines. The problem is building machines whose smartness is directed toward ends that humanity endorses, using specifications that humanity has not yet fully articulated.
 </KeyTakeaway>

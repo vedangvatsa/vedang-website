@@ -209,7 +209,7 @@ No pages use `noindex`. All pages have `robots: { index: true, follow: true }` v
 | /agentic-web | "The Agentic Web - AI Agents & Autonomous Systems" | 172 chars — border | OK |
 | /vibe-coding | "Vibe Coding - Engineering Intuition & Creativity" | 160 chars ✓ | Good |
 | /guides | "Web3 & Crypto Guides - Market Making, Tokenomics, Taxation" | 165 chars — slightly over | Minor |
-| /glossary | "AI, Web3 & Tech Glossary - Comprehensive Term Reference" | 229 chars — too long | Will truncate |
+| /glossary | "AI, Web3 & Tech Glossary - Detailed Term Reference" | 229 chars — too long | Will truncate |
 | /community | "Community Building & Content Strategy" | 192 chars ✓ | Good |
 | /profile | "Vedang Vatsa - Founder, Speaker, Researcher" | 155 chars ✓ | Good |
 | /seo | "SEO & Growth Marketing Specialist | Vedang Vatsa" | 155 chars ✓ | Good |

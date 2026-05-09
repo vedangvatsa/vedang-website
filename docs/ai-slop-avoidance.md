@@ -16,17 +16,17 @@ These words are NEVER acceptable. If they appear, rewrite the sentence entirely.
 
 | Banned | Why It's Slop | What To Write Instead |
 |--------|---------------|----------------------|
-| delve / delve into | #1 AI tell | "examine," "look at," or just state the topic directly |
+| explore / explore into | #1 AI tell | "examine," "look at," or just state the topic directly |
 | landscape | Vague filler | "market," "field," "industry," or name the specific thing |
 | tapestry | Nobody says this | Remove. Describe what you actually mean |
-| at its core | Throat-clearing | Delete it and state the thing |
+| | Throat-clearing | Delete it and state the thing |
 | in the realm of | Pompous filler | "in" |
-| it's worth noting that | Throat-clearing | Delete. Just state the thing |
+| it's notable that | Throat-clearing | Delete. Just state the thing |
 | it's important to note | Same as above | Delete |
 | in today's world | Generic opener | Name the specific context |
 | in today's rapidly evolving | Double generic | Delete entirely |
-| game-changer / game-changing | Hyperbole | Describe the specific change |
-| paradigm shift | Overused academic | Describe what actually shifted |
+| major shift / important | Hyperbole | Describe the specific change |
+| model shift | Overused academic | Describe what actually shifted |
 | at the end of the day | Cliché filler | Delete or rewrite with actual conclusion |
 | food for thought | Weak ending | End with a specific question or implication |
 | only time will tell | Lazy non-conclusion | State what you actually think will happen |
@@ -40,15 +40,15 @@ These are acceptable only if used precisely (1-2 times max per 2000-word essay, 
 | Word | Problem | Better Alternative |
 |------|---------|-------------------|
 | leverage (verb) | Corporate jargon | "use," "apply," "build on" |
-| synergy | Meaningless | Describe the specific benefit |
+| collaboration | Meaningless | Describe the specific benefit |
 | ecosystem | Overused as buzzword | "market," "community," "network," or name it |
 | unlock (potential/value) | AI-speak | Describe what actually happens |
 | holistic | Vague | "complete," "full," "end-to-end," or remove |
-| robust | Means nothing specific | "strong," "reliable," describe the quality |
-| cutting-edge | Self-congratulatory | Describe what makes it new |
-| seamless | Marketing speak | Describe the specific UX improvement |
+| strong | Means nothing specific | "strong," "reliable," describe the quality |
+| modern | Self-congratulatory | Describe what makes it new |
+| smooth | Marketing speak | Describe the specific UX improvement |
 | scalable | Overused | Describe how it grows or at what scale |
-| innovative | Self-declared, never earned | Describe the innovation specifically |
+| new | Self-declared, never earned | Describe the innovation specifically |
 | disruptive | Post-2015 this is meaningless | Describe what it displaces and how |
 | empower | Patronizing | Describe the specific capability gained |
 | streamline | Vague | Describe what gets faster or simpler |
@@ -66,7 +66,7 @@ potentially outweigh the drawbacks in certain scenarios."
 
 ### ❌ The Triple Adjective Stack
 ```
-"This innovative, groundbreaking, and transformative technology..."
+"This new, groundbreaking, and major technology..."
 ```
 **Fix**: One precise adjective or none. "This technology does [specific thing]."
 
@@ -125,7 +125,7 @@ These are specifically banned in LinkedIn posts (and parodied by the LIT tool at
 Run every piece of content through these checks before publishing:
 
 ### Quick Scan (30 seconds)
-- [ ] Search for "delve," "landscape," "tapestry," "at its core" — delete all
+- [ ] Search for "explore," "landscape," "tapestry," "" — delete all
 - [ ] Check first sentence — does it start with "In today's..." or "In an era..."? Rewrite
 - [ ] Check last sentence — does it say "only time will tell" or "remains to be seen"? Rewrite
 - [ ] Count adjectives in first paragraph — more than 2 per sentence = rewrite
@@ -140,7 +140,7 @@ Run every piece of content through these checks before publishing:
 ### Social Post Scan (15 seconds)
 - [ ] No hashtags beyond 2
 - [ ] No "I'm excited/thrilled/humbled"
-- [ ] No "game-changer/paradigm shift"
+- [ ] No "major shift/model shift"
 - [ ] No engagement bait questions
 - [ ] Under 200 words for short-form platforms
 
@@ -161,7 +161,7 @@ The essay library has been audited for all Tier 1 and Tier 2 terms. Any new cont
 
 ```bash
 # Quick grep for Tier 1 banned phrases across all essays
-grep -rni "delve\|tapestry\|at its core\|in the realm of\|paradigm shift\|game.changer\|it's worth noting\|in today's world\|only time will tell" src/content/essays/
+grep -rni "explore\|tapestry\|\|in the realm of\|model shift\|game.changer\|it's notable\|in today's world\|only time will tell" src/content/essays/
 ```
 
 Zero results = clean. Any matches must be fixed before publishing.
