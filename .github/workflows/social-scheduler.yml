@@ -24,6 +24,7 @@ jobs:
 
       - name: Post to X (Twitter)
         run: npx tsx scripts/x-scheduled-executor.ts
+        continue-on-error: true
         env:
           X_API_KEY: ${{ secrets.X_API_KEY }}
           X_API_KEY_SECRET: ${{ secrets.X_API_KEY_SECRET }}
@@ -32,24 +33,28 @@ jobs:
 
       - name: Post to LinkedIn
         run: npx tsx scripts/linkedin-scheduled-executor.ts
+        continue-on-error: true
         env:
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
 
       - name: Post to Bluesky
         run: npx tsx scripts/bluesky-scheduled-executor.ts
+        continue-on-error: true
         env:
           BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
 
       - name: Post to Facebook
         run: npx tsx scripts/facebook-scheduled-executor.ts
+        continue-on-error: true
         env:
           FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
           FACEBOOK_PAGE_TOKEN: ${{ secrets.FACEBOOK_PAGE_TOKEN }}
 
       - name: Post to Tumblr
         run: npx tsx scripts/tumblr-scheduled-executor.ts
+        continue-on-error: true
         env:
           TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
           TUMBLR_CONSUMER_SECRET: ${{ secrets.TUMBLR_CONSUMER_SECRET }}
@@ -59,6 +64,7 @@ jobs:
 
       - name: Publish to Dev.to
         run: npx tsx scripts/devto-scheduled-executor.ts
+        continue-on-error: true
         env:
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
 
@@ -70,18 +76,21 @@ jobs:
 
       - name: Publish to Hive (Web3)
         run: npx tsx scripts/hive-scheduled-executor.ts
+        continue-on-error: true
         env:
           HIVE_USERNAME: ${{ secrets.HIVE_USERNAME }}
           HIVE_POSTING_KEY: ${{ secrets.HIVE_POSTING_KEY }}
 
       - name: Publish to Steem (Web3)
         run: npx tsx scripts/steem-scheduled-executor.ts
+        continue-on-error: true
         env:
           STEEM_USERNAME: ${{ secrets.STEEM_USERNAME }}
           STEEM_POSTING_KEY: ${{ secrets.STEEM_POSTING_KEY }}
 
       - name: Publish Full Essays to Tumblr
         run: npx tsx scripts/tumblr-essay-executor.ts
+        continue-on-error: true
         env:
           TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
           TUMBLR_CONSUMER_SECRET: ${{ secrets.TUMBLR_CONSUMER_SECRET }}
