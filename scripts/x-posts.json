@@ -805,9 +805,11 @@
     "id": "universal-text-ui",
     "scheduleDate": "2026-04-21",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "Every dropdown on a dashboard is a question someone predicted you'd ask. Your actual question is almost never one of them.\n\nPostHog replaced their analytics dashboard with a text field. Salesforce did it for CRM — 84% of queries now self-resolve. Cursor did it for code and hit $1B ARR.\n\nThe pattern: a text field backed by an LLM that calls APIs directly. No menus. No navigation. Just ask.\n\nThe dashboard era is ending.\n\nveda.ng/universal-text-ui"
+    "text": "Every dropdown on a dashboard is a question someone predicted you'd ask. Your actual question is almost never one of them.\n\nPostHog replaced their analytics dashboard with a text field. Salesforce did it for CRM — 84% of queries now self-resolve. Cursor did it for code and hit $1B ARR.\n\nThe pattern: a text field backed by an LLM that calls APIs directly. No menus. No navigation. Just ask.\n\nThe dashboard era is ending.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-05-09T02:57:12.542Z",
+    "tweetId": "2052945955511562325"
   },
   {
     "id": "agentic-state",

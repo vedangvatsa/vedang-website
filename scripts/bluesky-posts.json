@@ -722,8 +722,10 @@
     "id": "universal-text-ui",
     "scheduleDate": "2026-04-21",
     "scheduleTime": "17:00",
-    "posted": false,
-    "text": "Every dropdown on a dashboard is a predicted question. Your actual question is almost never one of them.\n\nPostHog, Salesforce, Cursor all replaced dashboards with text fields that call APIs directly.\n\nveda.ng/universal-text-ui"
+    "posted": true,
+    "text": "Every dropdown on a dashboard is a predicted question. Your actual question is almost never one of them.\n\nPostHog, Salesforce, Cursor all replaced dashboards with text fields that call APIs directly.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-05-09T02:58:59.698Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mlfasza4ic2y"
   },
   {
     "id": "agentic-state",

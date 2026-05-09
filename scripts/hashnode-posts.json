@@ -24,8 +24,10 @@
       "security"
     ],
     "scheduleDate": "2026-03-27",
-    "posted": false,
-    "scheduleTime": "09:00"
+    "posted": true,
+    "scheduleTime": "09:00",
+    "postedAt": "2026-05-09T02:59:11.039Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/dark-forest-internet-1-1-1-1"
   },
   {
     "id": "hashnode-towards-the-agentic-web",
