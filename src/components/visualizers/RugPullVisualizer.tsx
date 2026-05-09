@@ -194,7 +194,7 @@ export function RugPullVisualizer() {
             <p className="text-rose-700">
               The developers have removed all liquidity from the pool and disappeared. 
               Your tokens are now worthless, and there's no way to sell them. 
-              This is why it's crucial to research projects, verify team identities, and never invest more than you can afford to lose.
+              This is why it's key to research projects, verify team identities, and never invest more than you can afford to lose.
             </p>
           </div>
         )}

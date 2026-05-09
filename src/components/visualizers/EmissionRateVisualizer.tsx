@@ -233,7 +233,7 @@ export function EmissionRateVisualizer() {
         <div className="text-sm text-slate-600">
           <strong>Key Insights:</strong> Emission rates directly affect token inflation. Bitcoin's halving mechanism 
           creates a deflationary pressure over time, while constant emission models maintain steady inflation. 
-          The emission schedule is crucial for balancing network security incentives with token value preservation.
+          The emission schedule is key for balancing network security incentives with token value preservation.
         </div>
       </div>
     </div>

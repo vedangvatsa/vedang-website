@@ -68,7 +68,7 @@ const PHRASE_SWAPS: [RegExp, string][] = [
   [/\bi('m| am) anxious\b/gi, 'I\'m channeling my heightened awareness into forward momentum'],
   [/\bi('m| am) angry\b/gi, 'I\'m passionately advocating for a higher standard'],
   [/\bi('m| am) frustrated\b/gi, 'I\'m encountering creative friction that\'s refining my approach'],
-  [/\bi('m| am) sad\b/gi, 'I\'m processing a profound growth experience'],
+  [/\bi('m| am) sad\b/gi, 'I\'m processing a deep growth experience'],
   [/\bi('m| am) lonely\b/gi, 'I\'m building deeper connections with my own vision'],
   [/\bi('m| am) hungover\b/gi, 'I\'m recovering from a high-energy networking event'],
   [/\bi('m| am) scared\b/gi, 'I\'m feeling the electricity of standing at the edge of something big'],

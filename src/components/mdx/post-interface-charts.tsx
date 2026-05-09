@@ -82,7 +82,7 @@ export function ZeroUIMarketMap() {
       desc: 'Optimizing brand data for LLM ingestion instead of human SEO',
       color: 'hsl(280 60% 45%)',
 
-      companies: ['Yext', 'Schema App', 'Botify', 'seoClarity', 'BrightEdge', 'Profound (AI search)', 'Perplexity Pages', 'Vectorize'],
+      companies: ['Yext', 'Schema App', 'Botify', 'seoClarity', 'BrightEdge', 'Deep (AI search)', 'Perplexity Pages', 'Vectorize'],
     },
     {
       name: 'Identity & Execution',

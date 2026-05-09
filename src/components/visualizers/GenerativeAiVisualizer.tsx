@@ -15,7 +15,7 @@ export function GenerativeAiVisualizer() {
       name: 'Transformer',
       color: 'blue',
       description: 'Attention-based text generation',
-      outputs: ['bright', 'revolutionary', 'transformative', 'promising', 'uncertain']
+      outputs: ['bright', 'major', 'major', 'promising', 'uncertain']
     },
     diffusion: {
       name: 'Diffusion Model',

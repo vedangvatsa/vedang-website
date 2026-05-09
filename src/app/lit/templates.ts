@@ -125,7 +125,7 @@ const TEMPLATES: Record<Topic, string[]> = {
 
     "Here's what I actually did today: {{input}}.\n\nNo productivity hacks involved. No morning routine thread. Just being a person doing a person thing.\n\nAnd it was great.",
 
-    "I did something revolutionary this week: {{input}}.\n\nRevolutionary because I didn't try to turn it into a LinkedIn post about productivity. Oh wait.\n\nBut seriously. Enjoy things. It's allowed.",
+    "I did something major this week: {{input}}.\n\nRevolutionary because I didn't try to turn it into a LinkedIn post about productivity. Oh wait.\n\nBut seriously. Enjoy things. It's allowed.",
 
     "{{Input}}.\n\nNo agenda. No deeper meaning. No networking angle. Just being a human being for a minute.\n\nRemember when we used to do that without feeling guilty?",
 
