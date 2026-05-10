@@ -213,36 +213,3 @@ async function main() {
 }
 
 main().catch(console.error);
-
-    if (!isDue) continue;
-
-    console.log(`🚀 Posting to LinkedIn: "${post.id}"`);
-
-    const result = await postToLinkedIn(post.text, post.image);
-
-    if (result.success) {
-      console.log(`✅ Posted! ID: ${result.id}`);
-      post.posted = true;
-      post.postedAt = new Date().toISOString();
-      post.postId = result.id;
-      delete post.error;
-      modified = true;
-      break; // Only 1 post per run
-    } else {
-      console.error(`❌ Failed: ${result.error}`);
-      post.error = result.error;
-      modified = true;
-      break; // Stop on failure too
-    }
-  }
-
-  if (modified) {
-    fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
-    console.log('📝 Updated linkedin-posts.json');
-    console.log('::set-output name=modified::true');
-  } else {
-    console.log('😴 No LinkedIn posts due at this time');
-  }
-}
-
-main().catch(console.error);
