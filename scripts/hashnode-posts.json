@@ -54,9 +54,11 @@
       "agents"
     ],
     "scheduleDate": "2026-03-27",
-    "posted": false,
+    "posted": true,
     "scheduleTime": "01:00",
-    "error": "Essay not found: ai-agent-economy"
+    "error": "Essay not found: ai-agent-economy",
+    "postedAt": "2026-05-10T01:06:49.160Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/ai-agent-economy-1"
   },
   {
     "id": "hashnode-hustle-culture",
