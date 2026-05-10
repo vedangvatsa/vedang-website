@@ -655,7 +655,7 @@
     "scheduleTime": "17:00",
     "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing \u2014 nuanced human conversations \u2014 before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise-ai",
+    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing — nuanced human conversations — before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise-ai",
     "postedAt": "2026-04-12T11:59:07.697Z",
     "postId": "urn:li:share:7449063550729256960"
   },
@@ -665,7 +665,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog \u2014 analytics via natural language\nSalesforce Agentforce \u2014 12,000+ orgs, 84% self-resolution\nCursor \u2014 $1B ARR, entire codebases queryable via text\nGitHub Copilot \u2014 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/universal-text-ui",
+    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog — analytics via natural language\nSalesforce Agentforce — 12,000+ orgs, 84% self-resolution\nCursor — $1B ARR, entire codebases queryable via text\nGitHub Copilot — 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/universal-text-ui",
     "postedAt": "2026-04-12T11:59:11.780Z",
     "postId": "urn:li:share:7449063567942873088"
   },
@@ -675,7 +675,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else \u2014 99% of public services \u2014 is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/agentic-state",
+    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else — 99% of public services — is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/agentic-state",
     "postedAt": "2026-04-12T11:59:15.921Z",
     "postId": "urn:li:share:7449063585378385920"
   },
@@ -695,7 +695,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it.\n\nThe e-Residency program generated \u20ac125M in state revenue last year. 87% growth. For every euro invested, twelve came back.\n\n5,556 new companies formed by non-citizens in a single year.\n\nThis is what happens when government operates as infrastructure instead of gatekeeping. The state becomes a platform. Citizenship becomes a credential. Geography becomes optional.\n\nveda.ng/agentic-state",
+    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it.\n\nThe e-Residency program generated €125M in state revenue last year. 87% growth. For every euro invested, twelve came back.\n\n5,556 new companies formed by non-citizens in a single year.\n\nThis is what happens when government operates as infrastructure instead of gatekeeping. The state becomes a platform. Citizenship becomes a credential. Geography becomes optional.\n\nveda.ng/agentic-state",
     "postedAt": "2026-04-13T06:03:17.563Z",
     "postId": "urn:li:share:7449336389974007808"
   },
@@ -725,7 +725,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Singapore's Ask Jamie chatbot has handled 50 million citizen queries. Their AI call transcription cut after-call work by 72%.\n\n100,000 public officers use Pair \u2014 a government-built AI tool \u2014 saving 50 minutes per task on average.\n\nIn the 2026 budget, Singapore announced the shift from \"AI pilots\" to \"scaled deployment at national speed.\"\n\nMost countries are still debating whether to start a pilot.\n\nveda.ng/agentic-state",
+    "text": "Singapore's Ask Jamie chatbot has handled 50 million citizen queries. Their AI call transcription cut after-call work by 72%.\n\n100,000 public officers use Pair — a government-built AI tool — saving 50 minutes per task on average.\n\nIn the 2026 budget, Singapore announced the shift from \"AI pilots\" to \"scaled deployment at national speed.\"\n\nMost countries are still debating whether to start a pilot.\n\nveda.ng/agentic-state",
     "postedAt": "2026-04-22T20:32:55.769Z",
     "postId": "urn:li:share:7452816731737198592"
   },
@@ -773,7 +773,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing \u2014 nuanced human conversations \u2014 before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise-ai"
+    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing — nuanced human conversations — before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise-ai"
   },
   {
     "id": "universal-text-ui",
@@ -781,7 +781,7 @@
     "scheduleTime": "17:00",
     "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog \u2014 analytics via natural language\nSalesforce Agentforce \u2014 12,000+ orgs, 84% self-resolution\nCursor \u2014 $1B ARR, entire codebases queryable via text\nGitHub Copilot \u2014 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/universal-text-ui"
+    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog — analytics via natural language\nSalesforce Agentforce — 12,000+ orgs, 84% self-resolution\nCursor — $1B ARR, entire codebases queryable via text\nGitHub Copilot — 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/universal-text-ui"
   },
   {
     "id": "agentic-state",
@@ -789,7 +789,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else \u2014 99% of public services \u2014 is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/agentic-state"
+    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else — 99% of public services — is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/agentic-state"
   },
   {
     "id": "rewritten-post-1",
@@ -805,9 +805,11 @@
     "id": "rewritten-post-2",
     "scheduleDate": "2026-05-09",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "An elderly man taking care of his dog.\nWe spend our entire lives rushing around.\nShow up for the people and animals who depend on you.",
-    "image_backup": "scripts/thread-assets/linkedin-rewrites/post_2.mp4"
+    "image_backup": "scripts/thread-assets/linkedin-rewrites/post_2.mp4",
+    "postedAt": "2026-05-10T01:30:31.323Z",
+    "postId": "urn:li:share:7459052217589997568"
   },
   {
     "id": "rewritten-post-3",
