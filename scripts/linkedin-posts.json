@@ -805,10 +805,11 @@
     "id": "rewritten-post-2",
     "scheduleDate": "2026-05-09",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/linkedin-rewrites/post_2.mp4",
     "text": "An elderly man taking care of his dog.\nWe spend our entire lives rushing around.\nShow up for the people and animals who depend on you.",
-    "error": "{\"status\":426,\"code\":\"NONEXISTENT_VERSION\",\"message\":\"Requested version 20240101 is not active\"}"
+    "postedAt": "2026-05-10T01:24:16.905Z",
+    "postId": "urn:li:share:7459050646990852097"
   },
   {
     "id": "rewritten-post-3",
