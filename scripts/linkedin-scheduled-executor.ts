@@ -38,35 +38,30 @@ async function uploadImage(imagePath: string): Promise<string | null> {
     return null;
   }
 
-  // Step 1: Register upload
-  const registerRes = await fetch('https://api.linkedin.com/v2/assets?action=registerUpload', {
+  // Step 1: Initialize image upload (new API)
+  const initRes = await fetch('https://api.linkedin.com/rest/images?action=initializeUpload', {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${ACCESS_TOKEN}`,
       'Content-Type': 'application/json',
+      'LinkedIn-Version': '202401',
       'X-Restli-Protocol-Version': '2.0.0',
     },
     body: JSON.stringify({
-      registerUploadRequest: {
-        recipes: ['urn:li:digitalmediaRecipe:feedshare-image'],
+      initializeUploadRequest: {
         owner: PERSON_URN,
-        serviceRelationships: [
-          { relationshipType: 'OWNER', identifier: 'urn:li:userGeneratedContent' },
-        ],
       },
     }),
   });
 
-  if (!registerRes.ok) {
-    console.error(`  ❌ Image register failed: ${await registerRes.text()}`);
+  if (!initRes.ok) {
+    console.error(`  ❌ Image init failed: ${await initRes.text()}`);
     return null;
   }
 
-  const registerData = await registerRes.json() as any;
-  const uploadUrl: string = registerData.value.uploadMechanism[
-    'com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest'
-  ].uploadUrl;
-  const asset: string = registerData.value.asset;
+  const initData = await initRes.json() as any;
+  const uploadUrl: string = initData.value.uploadUrl;
+  const imageUrn: string = initData.value.image;
 
   // Step 2: Upload binary
   const imageBuffer = fs.readFileSync(absPath);
@@ -74,7 +69,7 @@ async function uploadImage(imagePath: string): Promise<string | null> {
     method: 'PUT',
     headers: {
       Authorization: `Bearer ${ACCESS_TOKEN}`,
-      'Content-Type': 'image/png',
+      'Content-Type': 'application/octet-stream',
     },
     body: imageBuffer,
   });
@@ -84,49 +79,46 @@ async function uploadImage(imagePath: string): Promise<string | null> {
     return null;
   }
 
-  console.log(`  📷 Image uploaded: ${asset}`);
-  return asset;
+  console.log(`  📷 Image uploaded: ${imageUrn}`);
+  return imageUrn;
 }
 
 async function postToLinkedIn(
   text: string,
   imagePath?: string
 ): Promise<{ success: boolean; id?: string; error?: string }> {
-  let asset: string | null = null;
+  let imageUrn: string | null = null;
 
   if (imagePath) {
-    asset = await uploadImage(imagePath);
+    imageUrn = await uploadImage(imagePath);
   }
 
   const body: any = {
     author: PERSON_URN,
+    commentary: text,
+    visibility: 'PUBLIC',
+    distribution: {
+      feedDistribution: 'MAIN_FEED',
+      targetEntities: [],
+      thirdPartyDistributionChannels: [],
+    },
     lifecycleState: 'PUBLISHED',
-    specificContent: {
-      'com.linkedin.ugc.ShareContent': {
-        shareCommentary: { text },
-        shareMediaCategory: asset ? 'IMAGE' : 'NONE',
-        ...(asset && {
-          media: [
-            {
-              status: 'READY',
-              description: { text: '' },
-              media: asset,
-              title: { text: '' },
-            },
-          ],
-        }),
-      },
-    },
-    visibility: {
-      'com.linkedin.ugc.MemberNetworkVisibility': 'PUBLIC',
-    },
   };
 
-  const res = await fetch('https://api.linkedin.com/v2/ugcPosts', {
+  if (imageUrn) {
+    body.content = {
+      media: {
+        id: imageUrn,
+      },
+    };
+  }
+
+  const res = await fetch('https://api.linkedin.com/rest/posts', {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${ACCESS_TOKEN}`,
       'Content-Type': 'application/json',
+      'LinkedIn-Version': '202401',
       'X-Restli-Protocol-Version': '2.0.0',
     },
     body: JSON.stringify(body),
@@ -137,9 +129,10 @@ async function postToLinkedIn(
     return { success: false, error: errText };
   }
 
-  const postId = res.headers.get('x-restli-id') ?? 'unknown';
-  return { success: true, id: postId };
+  const postUrn = res.headers.get('x-restli-id') ?? 'unknown';
+  return { success: true, id: postUrn };
 }
+
 
 async function main() {
   if (!ACCESS_TOKEN || !PERSON_URN) {
