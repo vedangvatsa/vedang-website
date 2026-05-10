@@ -7,7 +7,7 @@ import { notFound } from 'next/navigation';
 import { PageLayout } from '@/components/page-layout';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 import { RelatedEssaysForTerm } from '@/lib/cross-links';
-import { visualizers } from '@/components/visualizers/VisualizerMap';
+import { VisualizerMap } from '@/components/visualizers/VisualizerMap';
 interface PageProps {
   params: Promise<{
     slug: string;
@@ -157,7 +157,7 @@ export default async function GlossaryTermPage({ params }: PageProps) {
         </div>
 
         {(() => {
-          const Visualizer = visualizers[term.slug];
+          const Visualizer = VisualizerMap[term.slug];
           if (!Visualizer) return null;
           return (
             <div className="mb-16 border-t border-border/30 pt-12">
