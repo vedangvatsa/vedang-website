@@ -2,112 +2,131 @@
   {
     "id": "quote-2052015524549398589",
     "type": "quote",
-    "text": "The gap between junior and senior is not code quality. It is knowing which problems are worth solving carefully and which ones just need to be done.",
+    "text": "The part that gets lost in stories like this is how normal it feels inside the company. Nobody plans to ship bad updates. It just becomes the default when the incentives point that way.",
     "quote_tweet_id": "2052015524549398589",
     "original_author": "@WallStreetApes",
     "original_text_preview": "Former software engineer at Apple is whistleblowing\n\nShe says whenever Apple launches a new phone, they would push an up",
     "scheduleDate": "2026-05-10",
-    "scheduleTime": "07:00",
-    "posted": false,
-    "error": "Request failed with code 401"
+    "scheduleTime": "00:00",
+    "posted": true,
+    "postedAt": "2026-05-10T06:48:14.771Z",
+    "tweetId": "2053366486350389313"
   },
   {
     "id": "quote-2051998675044368540",
     "type": "quote",
-    "text": "Good engineers ask \"what happens when this breaks\" before they ask \"how do I make this work.\" That one habit makes a huge difference.",
+    "text": "This happens more than people realize. Systems designed to detect fraud end up punishing the people who can least afford it. A 150 dollar hold can ruin someone's week.",
     "quote_tweet_id": "2051998675044368540",
     "original_author": "@eleliayub",
     "original_text_preview": "Hey @PayPal @AskPayPal I'm not laundering 150 USD. I'm a software engineer.",
     "scheduleDate": "2026-05-10",
-    "scheduleTime": "08:30",
-    "posted": false
+    "scheduleTime": "00:00",
+    "posted": true,
+    "postedAt": "2026-05-10T06:50:16.324Z",
+    "tweetId": "2053366996109250748"
   },
   {
     "id": "quote-2051259700285481356",
     "type": "quote",
-    "text": "The companies getting real value from AI are not the ones announcing it loudly. They are the ones quietly shipping 3x faster.",
+    "text": "This is a good way to frame it. The moment you stop treating it like magic and start treating it like a probability engine, the design decisions around it become much clearer.",
     "quote_tweet_id": "2051259700285481356",
     "original_author": "@reset_by_peer",
     "original_text_preview": "It is an LLM. \n\nIf you know how LLMs work, this explains it succinctly and thoroughly. If you do not, you should not be ",
     "scheduleDate": "2026-05-10",
-    "scheduleTime": "10:00",
-    "posted": false
+    "scheduleTime": "00:00",
+    "posted": true,
+    "postedAt": "2026-05-10T06:52:17.540Z",
+    "tweetId": "2053367504597299385"
   },
   {
     "id": "quote-2053082207875379314",
     "type": "quote",
-    "text": "Interesting how quickly the conversation moved from \"can AI do this\" to \"how do we live with AI doing this.\" That shift happened in about 18 months.",
+    "text": "The trust gap here is real. People can tell when something was written by a machine even before they finish reading it. That instinct may matter more than the quality of the output.",
     "quote_tweet_id": "2053082207875379314",
     "original_author": "@zellieimani",
     "original_text_preview": "I hate Chat GPT so much that I will stop reading a long post when I realize it’s AI generated. Even if the story itself ",
     "scheduleDate": "2026-05-10",
-    "scheduleTime": "12:00",
-    "posted": false
+    "scheduleTime": "00:00",
+    "posted": true,
+    "postedAt": "2026-05-10T06:54:18.822Z",
+    "tweetId": "2053368013144093072"
   },
   {
     "id": "quote-2050952897333236014",
     "type": "quote",
-    "text": "Open source works because enough people care about the same problem at the same time. That alignment is rarer and more fragile than it looks.",
+    "text": "The framing here is wrong. Knowing how to bypass something has nothing to do with being a good engineer. The best engineers I have worked with spent most of their time thinking, not hacking around things.",
     "quote_tweet_id": "2050952897333236014",
     "original_author": "@TheAhmadOsman",
     "original_text_preview": "If you’re a “Software Engineer” and you don’t know how to bypass this then please pivot to being a Starbucks Barista bec",
     "scheduleDate": "2026-05-10",
-    "scheduleTime": "14:00",
-    "posted": false
+    "scheduleTime": "00:00",
+    "posted": true,
+    "postedAt": "2026-05-10T06:56:19.544Z",
+    "tweetId": "2053368519451099355"
   },
   {
     "id": "quote-2052525906472956367",
     "type": "quote",
-    "text": "The best code I have ever read was written by someone who clearly expected to maintain it for years. You can feel that in the structure.",
+    "text": "Same energy as the people who gatekeep programming languages. The engineers who build things that matter tend to care less about these tests and more about the problems they are solving.",
     "quote_tweet_id": "2052525906472956367",
     "original_author": "@TheAhmadOsman",
     "original_text_preview": "Again, if you’re a “Software Engineer” and you don’t know how to bypass this then please pivot to being a Starbucks Bari",
     "scheduleDate": "2026-05-10",
-    "scheduleTime": "15:30",
-    "posted": false
+    "scheduleTime": "00:00",
+    "posted": true,
+    "postedAt": "2026-05-10T06:58:20.550Z",
+    "tweetId": "2053369027096092703"
   },
   {
     "id": "quote-2053151396288217558",
     "type": "quote",
-    "text": "Most engineering debates are about preferences disguised as principles. The things that actually matter are usually not debated at all.",
+    "text": "Igor Sysoev and NGINX. One person building something that quietly runs a third of the internet. The best infrastructure tends to come from someone scratching their own itch, not a committee.",
     "quote_tweet_id": "2053151396288217558",
     "original_author": "@CaptainInsightX",
     "original_text_preview": "Netflix, Wikipedia, Airbnb, Dropbox ~ all run on the same web server.\nOne quiet Russian engineer wrote it alone. For fre",
     "scheduleDate": "2026-05-10",
-    "scheduleTime": "17:00",
-    "posted": false
+    "scheduleTime": "00:00",
+    "posted": true,
+    "postedAt": "2026-05-10T07:00:21.500Z",
+    "tweetId": "2053369534388879638"
   },
   {
     "id": "quote-2052758642781487237",
     "type": "quote",
-    "text": "The interesting part is not what AI can do today. It is what people assume it cannot do and stop checking.",
+    "text": "The robotics progress in the last two years has been genuinely surprising. The gap between what a robot could do in 2023 and what it can do now feels like a decade of progress compressed.",
     "quote_tweet_id": "2052758642781487237",
     "original_author": "@DrJimFan",
     "original_text_preview": "I promise this will be the best 20 min you spend today! Robotics: Endgame, the sequel to my last year's Sequoia AI Ascen",
     "scheduleDate": "2026-05-10",
-    "scheduleTime": "19:00",
-    "posted": false
+    "scheduleTime": "00:00",
+    "posted": true,
+    "postedAt": "2026-05-10T07:02:23.745Z",
+    "tweetId": "2053370045364060507"
   },
   {
     "id": "quote-2051697176472920359",
     "type": "quote",
-    "text": "People keep asking if AI can replace them. The better question may be whether their job was mostly pattern matching all along.",
+    "text": "The interesting thing is not which model is best at what. It is how quickly the ranking changes every few months. The right move may be to stay flexible rather than pick a favorite.",
     "quote_tweet_id": "2051697176472920359",
     "original_author": "@RoundtableSpace",
     "original_text_preview": "The best LLM setup there is right now:\n\nFrontend: Opus 4.7\nBackend: GPT-5.5\nDebugging: Sonnet 4.6\nResearch: Grok 4.2\nWri",
     "scheduleDate": "2026-05-10",
-    "scheduleTime": "21:00",
-    "posted": false
+    "scheduleTime": "00:00",
+    "posted": true,
+    "postedAt": "2026-05-10T07:04:24.395Z",
+    "tweetId": "2053370553025884240"
   },
   {
     "id": "quote-2052410893607063575",
     "type": "quote",
-    "text": "The people who do well in uncertain job markets tend to be the ones who kept learning when they did not have to.",
+    "text": "Stories like this remind me that the hiring process is still mostly luck and timing. Talent is everywhere. Opportunity is not. The systems we build to find people still miss most of them.",
     "quote_tweet_id": "2052410893607063575",
     "original_author": "@jayhemz",
     "original_text_preview": "Not many know that MS Nigeria once hired a Software Engineer who was still schooling at UNILAG.\n\nMaybe this one is extre",
     "scheduleDate": "2026-05-10",
-    "scheduleTime": "23:00",
-    "posted": false
+    "scheduleTime": "00:00",
+    "posted": true,
+    "postedAt": "2026-05-10T07:06:24.937Z",
+    "tweetId": "2053371058741551602"
   }
 ]
