@@ -19,6 +19,7 @@ const client = new TwitterApi({
 const TIMEZONE_OFFSET_HOURS = 5.5; // IST
 const POSTS_FILE = path.resolve(__dirname, 'x-posts.json');
 const QUOTE_POSTS_FILE = path.resolve(__dirname, 'x-quote-posts.json');
+const REPLY_POSTS_FILE = path.resolve(__dirname, 'x-reply-posts.json');
 
 interface TweetItem {
   text: string;
@@ -27,11 +28,13 @@ interface TweetItem {
 
 interface XPost {
   id: string;
-  type?: 'single' | 'thread' | 'quote';
+  type?: 'single' | 'thread' | 'quote' | 'reply';
   text?: string;
   image?: string;
   tweets?: TweetItem[];
   quote_tweet_id?: string;
+  reply_to_tweet_id?: string;
+  original_author?: string;
   scheduleDate: string;
   scheduleTime: string;
   posted: boolean;
@@ -61,9 +64,27 @@ async function postSingleTweet(text: string, image?: string): Promise<{ success:
   }
 }
 
-async function postQuoteTweet(text: string, quoteTweetId: string): Promise<{ success: boolean; id?: string; error?: string }> {
+async function postQuoteTweet(text: string, quoteTweetId: string, authorHandle?: string): Promise<{ success: boolean; id?: string; error?: string }> {
   try {
-    const { data } = await client.v2.tweet({ text, quote_tweet_id: quoteTweetId } as any);
+    // Use URL embedding because X API restricts quote_tweet_id for non-mentioned users
+    const handle = (authorHandle || '').replace('@', '');
+    const tweetUrl = `https://x.com/${handle}/status/${quoteTweetId}`;
+    const fullText = `${text}\n\n${tweetUrl}`;
+    const { data } = await client.v2.tweet({ text: fullText });
+    return { success: true, id: data.id };
+  } catch (err) {
+    return { success: false, error: err instanceof Error ? err.message : String(err) };
+  }
+}
+
+async function postReply(text: string, replyToId: string, authorHandle?: string): Promise<{ success: boolean; id?: string; error?: string }> {
+  try {
+    // X API blocks direct replies. Instead, post a standalone tweet
+    // with @mention + embedded URL for notification + visibility.
+    const handle = (authorHandle || '').replace('@', '');
+    const tweetUrl = `https://x.com/${handle}/status/${replyToId}`;
+    const fullText = `${text}\n\n${tweetUrl}`;
+    const { data } = await client.v2.tweet({ text: fullText });
     return { success: true, id: data.id };
   } catch (err) {
     return { success: false, error: err instanceof Error ? err.message : String(err) };
@@ -120,11 +141,28 @@ async function main() {
     const quotes = JSON.parse(fs.readFileSync(QUOTE_POSTS_FILE, 'utf-8')) as XPost[];
     posts.push(...quotes);
   }
+  if (fs.existsSync(REPLY_POSTS_FILE)) {
+    const replies = JSON.parse(fs.readFileSync(REPLY_POSTS_FILE, 'utf-8')) as XPost[];
+    posts.push(...replies);
+  }
 
   if (posts.length === 0) {
     console.log('⚠️  No posts files found');
     return;
   }
+
+  // Deduplicate by post ID and text content
+  const seenIds = new Set<string>();
+  const seenText = new Set<string>();
+  posts = posts.filter(p => {
+    if (seenIds.has(p.id)) return false;
+    seenIds.add(p.id);
+    const textKey = (p.text || p.tweets?.map(t => t.text).join('') || '').trim();
+    if (textKey && seenText.has(textKey)) return false;
+    if (textKey) seenText.add(textKey);
+    return true;
+  });
+  console.log(`📋 ${posts.length} unique posts after dedup`);
 
   const now = new Date();
   const localNow = new Date(now.getTime() + TIMEZONE_OFFSET_HOURS * 60 * 60 * 1000);
@@ -157,11 +195,14 @@ async function main() {
 
     const isThread = post.type === 'thread' && post.tweets;
     const isQuote = post.type === 'quote' && post.quote_tweet_id;
-    console.log(`🚀 Posting ${isQuote ? 'quote' : isThread ? 'thread' : 'tweet'}: "${post.id}"`);
+    const isReply = post.type === 'reply' && post.reply_to_tweet_id;
+    console.log(`🚀 Posting ${isReply ? 'reply' : isQuote ? 'quote' : isThread ? 'thread' : 'tweet'}: "${post.id}"`);
 
     let result;
-    if (isQuote) {
-      result = await postQuoteTweet(post.text!, post.quote_tweet_id!);
+    if (isReply) {
+      result = await postReply(post.text!, post.reply_to_tweet_id!, post.original_author);
+    } else if (isQuote) {
+      result = await postQuoteTweet(post.text!, post.quote_tweet_id!, post.original_author);
     } else if (isThread) {
       result = await postThread(post.tweets!);
     } else {
@@ -187,12 +228,16 @@ async function main() {
   if (modified) {
     // Write back to the correct files
     if (fs.existsSync(POSTS_FILE)) {
-      const regular = posts.filter(p => p.type !== 'quote');
+      const regular = posts.filter(p => p.type !== 'quote' && p.type !== 'reply');
       fs.writeFileSync(POSTS_FILE, JSON.stringify(regular, null, 2));
     }
     if (fs.existsSync(QUOTE_POSTS_FILE)) {
       const quotes = posts.filter(p => p.type === 'quote');
       fs.writeFileSync(QUOTE_POSTS_FILE, JSON.stringify(quotes, null, 2));
+    }
+    if (fs.existsSync(REPLY_POSTS_FILE)) {
+      const replies = posts.filter(p => p.type === 'reply');
+      fs.writeFileSync(REPLY_POSTS_FILE, JSON.stringify(replies, null, 2));
     }
     console.log('📝 Updated posts files');
     console.log('::set-output name=modified::true');

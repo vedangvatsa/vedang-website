@@ -84,14 +84,27 @@ async function main() {
     return;
   }
 
-  const posts: FacebookPost[] = JSON.parse(fs.readFileSync(POSTS_FILE, 'utf-8'));
+  let posts: FacebookPost[] = JSON.parse(fs.readFileSync(POSTS_FILE, 'utf-8'));
+  
+  // Deduplicate by ID and text content
+  const seenIds = new Set<string>();
+  const seenText = new Set<string>();
+  posts = posts.filter(p => {
+    if (seenIds.has(p.id)) return false;
+    seenIds.add(p.id);
+    const textKey = p.text.trim().substring(0, 100);
+    if (seenText.has(textKey)) return false;
+    seenText.add(textKey);
+    return true;
+  });
+
   const now = new Date();
   const istNow = new Date(now.getTime() + TIMEZONE_OFFSET_HOURS * 60 * 60 * 1000);
   const todayIST = istNow.toISOString().slice(0, 10);
   const currentTimeIST = istNow.toISOString().slice(11, 16);
 
   console.log(`📘 Facebook scheduler running at ${todayIST} ${currentTimeIST} IST`);
-  console.log(`📋 Total posts: ${posts.length}, Posted: ${posts.filter(p => p.posted).length}`);
+  console.log(`📋 Total posts: ${posts.length} (after dedup), Posted: ${posts.filter(p => p.posted).length}`);
 
   // COOLDOWN: max 3 posts/day with 8h gap between each.
   const COOLDOWN_HOURS = 8;

@@ -36,8 +36,26 @@ jobs:
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
 
+      - name: Discover viral LinkedIn posts
+        run: npx tsx scripts/linkedin-discover-posts.ts
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+
+      - name: Comment on LinkedIn posts
+        run: npx tsx scripts/linkedin-discover-and-comment.ts
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+
       - name: Post to Bluesky
         run: npx tsx scripts/bluesky-scheduled-executor.ts
+        env:
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+
+      - name: Bluesky engagement comments
+        run: npx tsx scripts/bluesky-engagement.ts
         env:
           BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
@@ -48,6 +66,19 @@ jobs:
           FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
           FACEBOOK_PAGE_TOKEN: ${{ secrets.FACEBOOK_PAGE_TOKEN }}
 
+      - name: Post to Instagram
+        run: npx tsx scripts/instagram-scheduled-executor.ts
+        env:
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          FACEBOOK_PAGE_TOKEN: ${{ secrets.FACEBOOK_PAGE_TOKEN }}
+          INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+
+      - name: Post to Threads
+        run: npx tsx scripts/threads-scheduled-executor.ts
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+
       - name: Post to Tumblr
         run: npx tsx scripts/tumblr-scheduled-executor.ts
         env:
@@ -56,6 +87,12 @@ jobs:
           TUMBLR_ACCESS_TOKEN: ${{ secrets.TUMBLR_ACCESS_TOKEN }}
           TUMBLR_ACCESS_SECRET: ${{ secrets.TUMBLR_ACCESS_SECRET }}
           TUMBLR_BLOG_NAME: ${{ secrets.TUMBLR_BLOG_NAME }}
+
+      - name: Post to Mastodon
+        run: npx tsx scripts/mastodon-scheduled-executor.ts
+        env:
+          MASTODON_INSTANCE: ${{ secrets.MASTODON_INSTANCE }}
+          MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
 
       - name: Publish to Dev.to
         run: npx tsx scripts/devto-scheduled-executor.ts
@@ -72,4 +109,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Automated: Social posts status updated [skip ci]"
-          file_pattern: "scripts/*-posts.json"
+          file_pattern: "scripts/*-posts.json scripts/*-comment-log.json scripts/linkedin-targets.json"
