@@ -27,31 +27,20 @@ interface LinkedInPost {
   postId?: string;
   error?: string;
 }
+const VIDEO_EXTS = ['.mp4', '.mov', '.avi', '.webm', '.mkv'];
+const LINKEDIN_HEADERS = {
+  Authorization: `Bearer ${ACCESS_TOKEN}`,
+  'Content-Type': 'application/json',
+  'LinkedIn-Version': '202604',
+  'X-Restli-Protocol-Version': '2.0.0',
+};
 
-async function uploadImage(imagePath: string): Promise<string | null> {
-  const absPath = path.isAbsolute(imagePath)
-    ? imagePath
-    : path.resolve(REPO_ROOT, imagePath);
-
-  if (!fs.existsSync(absPath)) {
-    console.warn(`  ⚠️ Image not found: ${absPath}`);
-    return null;
-  }
-
-  // Step 1: Initialize image upload (new API)
+async function uploadImage(absPath: string): Promise<string | null> {
+  // Step 1: Initialize
   const initRes = await fetch('https://api.linkedin.com/rest/images?action=initializeUpload', {
     method: 'POST',
-    headers: {
-      Authorization: `Bearer ${ACCESS_TOKEN}`,
-      'Content-Type': 'application/json',
-      'LinkedIn-Version': '202604',
-      'X-Restli-Protocol-Version': '2.0.0',
-    },
-    body: JSON.stringify({
-      initializeUploadRequest: {
-        owner: PERSON_URN,
-      },
-    }),
+    headers: LINKEDIN_HEADERS,
+    body: JSON.stringify({ initializeUploadRequest: { owner: PERSON_URN } }),
   });
 
   if (!initRes.ok) {
@@ -64,14 +53,10 @@ async function uploadImage(imagePath: string): Promise<string | null> {
   const imageUrn: string = initData.value.image;
 
   // Step 2: Upload binary
-  const imageBuffer = fs.readFileSync(absPath);
   const uploadRes = await fetch(uploadUrl, {
     method: 'PUT',
-    headers: {
-      Authorization: `Bearer ${ACCESS_TOKEN}`,
-      'Content-Type': 'application/octet-stream',
-    },
-    body: imageBuffer,
+    headers: { Authorization: `Bearer ${ACCESS_TOKEN}`, 'Content-Type': 'application/octet-stream' },
+    body: fs.readFileSync(absPath),
   });
 
   if (!uploadRes.ok) {
@@ -83,14 +68,108 @@ async function uploadImage(imagePath: string): Promise<string | null> {
   return imageUrn;
 }
 
+async function uploadVideo(absPath: string): Promise<string | null> {
+  const fileSizeBytes = fs.statSync(absPath).size;
+  console.log(`  🎬 Video size: ${(fileSizeBytes / 1024 / 1024).toFixed(1)}MB`);
+
+  // Step 1: Initialize video upload
+  const initRes = await fetch('https://api.linkedin.com/rest/videos?action=initializeUpload', {
+    method: 'POST',
+    headers: LINKEDIN_HEADERS,
+    body: JSON.stringify({
+      initializeUploadRequest: {
+        owner: PERSON_URN,
+        fileSizeBytes,
+        uploadCaptions: false,
+        uploadThumbnail: false,
+      },
+    }),
+  });
+
+  if (!initRes.ok) {
+    console.error(`  ❌ Video init failed: ${await initRes.text()}`);
+    return null;
+  }
+
+  const initData = await initRes.json() as any;
+  const videoUrn: string = initData.value.video;
+  const uploadInstructions = initData.value.uploadInstructions;
+  const uploadToken: string = initData.value.uploadToken;
+
+  console.log(`  📤 Uploading ${uploadInstructions.length} chunk(s)...`);
+
+  // Step 2: Upload binary chunk(s)
+  const fileBuffer = fs.readFileSync(absPath);
+  for (const instruction of uploadInstructions) {
+    const { uploadUrl, firstByte, lastByte } = instruction;
+    const chunk = fileBuffer.slice(firstByte, lastByte + 1);
+
+    const uploadRes = await fetch(uploadUrl, {
+      method: 'PUT',
+      headers: {
+        Authorization: `Bearer ${ACCESS_TOKEN}`,
+        'Content-Type': 'application/octet-stream',
+      },
+      body: chunk,
+    });
+
+    if (!uploadRes.ok) {
+      console.error(`  ❌ Video chunk upload failed: ${await uploadRes.text()}`);
+      return null;
+    }
+  }
+
+  // Step 3: Finalize video upload
+  const finalRes = await fetch('https://api.linkedin.com/rest/videos?action=finalizeUpload', {
+    method: 'POST',
+    headers: LINKEDIN_HEADERS,
+    body: JSON.stringify({
+      finalizeUploadRequest: {
+        video: videoUrn,
+        uploadToken,
+      },
+    }),
+  });
+
+  if (!finalRes.ok) {
+    console.error(`  ❌ Video finalize failed: ${await finalRes.text()}`);
+    return null;
+  }
+
+  console.log(`  🎬 Video uploaded: ${videoUrn}`);
+  return videoUrn;
+}
+
+async function uploadMedia(mediaPath: string): Promise<{ urn: string; type: 'image' | 'video' } | null> {
+  const absPath = path.isAbsolute(mediaPath)
+    ? mediaPath
+    : path.resolve(REPO_ROOT, mediaPath);
+
+  if (!fs.existsSync(absPath)) {
+    console.warn(`  ⚠️ Media not found: ${absPath}`);
+    return null;
+  }
+
+  const ext = path.extname(absPath).toLowerCase();
+  const isVideo = VIDEO_EXTS.includes(ext);
+
+  if (isVideo) {
+    const urn = await uploadVideo(absPath);
+    return urn ? { urn, type: 'video' } : null;
+  } else {
+    const urn = await uploadImage(absPath);
+    return urn ? { urn, type: 'image' } : null;
+  }
+}
+
 async function postToLinkedIn(
   text: string,
-  imagePath?: string
+  mediaPath?: string
 ): Promise<{ success: boolean; id?: string; error?: string }> {
-  let imageUrn: string | null = null;
+  let media: { urn: string; type: 'image' | 'video' } | null = null;
 
-  if (imagePath) {
-    imageUrn = await uploadImage(imagePath);
+  if (mediaPath) {
+    media = await uploadMedia(mediaPath);
   }
 
   const body: any = {
@@ -105,22 +184,17 @@ async function postToLinkedIn(
     lifecycleState: 'PUBLISHED',
   };
 
-  if (imageUrn) {
+  if (media) {
     body.content = {
       media: {
-        id: imageUrn,
+        id: media.urn,
       },
     };
   }
 
   const res = await fetch('https://api.linkedin.com/rest/posts', {
     method: 'POST',
-    headers: {
-      Authorization: `Bearer ${ACCESS_TOKEN}`,
-      'Content-Type': 'application/json',
-      'LinkedIn-Version': '202604',
-      'X-Restli-Protocol-Version': '2.0.0',
-    },
+    headers: LINKEDIN_HEADERS,
     body: JSON.stringify(body),
   });
 
