@@ -18,6 +18,7 @@ const client = new TwitterApi({
 
 const TIMEZONE_OFFSET_HOURS = 5.5; // IST
 const POSTS_FILE = path.resolve(__dirname, 'x-posts.json');
+const QUOTE_POSTS_FILE = path.resolve(__dirname, 'x-quote-posts.json');
 
 interface TweetItem {
   text: string;
@@ -26,10 +27,11 @@ interface TweetItem {
 
 interface XPost {
   id: string;
-  type?: 'single' | 'thread';
-  text?: string;           // single tweet
-  image?: string;          // image for single tweet
-  tweets?: TweetItem[];    // thread tweets
+  type?: 'single' | 'thread' | 'quote';
+  text?: string;
+  image?: string;
+  tweets?: TweetItem[];
+  quote_tweet_id?: string;
   scheduleDate: string;
   scheduleTime: string;
   posted: boolean;
@@ -53,6 +55,15 @@ async function postSingleTweet(text: string, image?: string): Promise<{ success:
     }
 
     const { data } = await client.v2.tweet(params as Parameters<typeof client.v2.tweet>[0]);
+    return { success: true, id: data.id };
+  } catch (err) {
+    return { success: false, error: err instanceof Error ? err.message : String(err) };
+  }
+}
+
+async function postQuoteTweet(text: string, quoteTweetId: string): Promise<{ success: boolean; id?: string; error?: string }> {
+  try {
+    const { data } = await client.v2.tweet({ text, quote_tweet_id: quoteTweetId } as any);
     return { success: true, id: data.id };
   } catch (err) {
     return { success: false, error: err instanceof Error ? err.message : String(err) };
@@ -97,12 +108,23 @@ async function postThread(tweets: TweetItem[]): Promise<{ success: boolean; id?:
 }
 
 async function main() {
-  if (!fs.existsSync(POSTS_FILE)) {
-    console.log('⚠️  No posts file found');
-    return;
+  // Load from both post files
+  let posts: XPost[] = [];
+  let postsSource = '';
+
+  if (fs.existsSync(POSTS_FILE)) {
+    const regular = JSON.parse(fs.readFileSync(POSTS_FILE, 'utf-8')) as XPost[];
+    posts.push(...regular);
+  }
+  if (fs.existsSync(QUOTE_POSTS_FILE)) {
+    const quotes = JSON.parse(fs.readFileSync(QUOTE_POSTS_FILE, 'utf-8')) as XPost[];
+    posts.push(...quotes);
   }
 
-  const posts: XPost[] = JSON.parse(fs.readFileSync(POSTS_FILE, 'utf-8'));
+  if (posts.length === 0) {
+    console.log('⚠️  No posts files found');
+    return;
+  }
 
   const now = new Date();
   const localNow = new Date(now.getTime() + TIMEZONE_OFFSET_HOURS * 60 * 60 * 1000);
@@ -134,11 +156,17 @@ async function main() {
     if (!isDue) continue;
 
     const isThread = post.type === 'thread' && post.tweets;
-    console.log(`🚀 Posting ${isThread ? 'thread' : 'tweet'}: "${post.id}"`);
+    const isQuote = post.type === 'quote' && post.quote_tweet_id;
+    console.log(`🚀 Posting ${isQuote ? 'quote' : isThread ? 'thread' : 'tweet'}: "${post.id}"`);
 
-    const result = isThread
-      ? await postThread(post.tweets!)
-      : await postSingleTweet(post.text!, post.image);
+    let result;
+    if (isQuote) {
+      result = await postQuoteTweet(post.text!, post.quote_tweet_id!);
+    } else if (isThread) {
+      result = await postThread(post.tweets!);
+    } else {
+      result = await postSingleTweet(post.text!, post.image);
+    }
 
     if (result.success) {
       console.log(`✅ Posted! First ID: ${result.id}`);
@@ -157,8 +185,16 @@ async function main() {
   }
 
   if (modified) {
-    fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
-    console.log('📝 Updated posts file');
+    // Write back to the correct files
+    if (fs.existsSync(POSTS_FILE)) {
+      const regular = posts.filter(p => p.type !== 'quote');
+      fs.writeFileSync(POSTS_FILE, JSON.stringify(regular, null, 2));
+    }
+    if (fs.existsSync(QUOTE_POSTS_FILE)) {
+      const quotes = posts.filter(p => p.type === 'quote');
+      fs.writeFileSync(QUOTE_POSTS_FILE, JSON.stringify(quotes, null, 2));
+    }
+    console.log('📝 Updated posts files');
     console.log('::set-output name=modified::true');
   } else {
     console.log('😴 No posts due at this time');
