@@ -74,15 +74,16 @@ async function publishPost(post: TumblrPost): Promise<string> {
   // If there's an image, make it a photo post
   if (post.image) {
     const absPath = path.isAbsolute(post.image) ? post.image : path.resolve(REPO_ROOT, post.image);
-    if (fs.existsSync(absPath)) {
-      // For photo posts with local files, use data64
-      const imgBuffer = fs.readFileSync(absPath);
-      body.type = 'photo';
-      body.data64 = imgBuffer.toString('base64');
-      body.caption = post.text.replace(/\n/g, '<br>');
-      delete body.title;
-      delete body.body;
+    if (!fs.existsSync(absPath)) {
+      throw new Error(`Image not found: ${absPath} — aborting (will not post text-only)`);
     }
+    // For photo posts with local files, use data64
+    const imgBuffer = fs.readFileSync(absPath);
+    body.type = 'photo';
+    body.data64 = imgBuffer.toString('base64');
+    body.caption = post.text.replace(/\n/g, '<br>');
+    delete body.title;
+    delete body.body;
   }
 
   const raw = await oauthPostRaw(url, body);
