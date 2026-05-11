@@ -100,8 +100,10 @@
       "india"
     ],
     "scheduleDate": "2026-03-28",
-    "posted": false,
-    "scheduleTime": "01:00"
+    "posted": true,
+    "scheduleTime": "01:00",
+    "postedAt": "2026-05-11T14:07:02.092Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/cheap-to-competitive-1"
   },
   {
     "id": "hashnode-bureaucracy-tax",

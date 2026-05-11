@@ -835,9 +835,11 @@
     "id": "rewritten-post-5",
     "scheduleDate": "2026-05-10",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/linkedin-rewrites/post_5.mp4",
-    "text": "Doing the right thing every day fixes bad processes and builds careers. \nIf you are leading a team, just give it time. \nKeep going even when you do not see immediate results."
+    "text": "Doing the right thing every day fixes bad processes and builds careers. \nIf you are leading a team, just give it time. \nKeep going even when you do not see immediate results.",
+    "postedAt": "2026-05-11T14:06:30.959Z",
+    "postId": "urn:li:share:7459604857482788864"
   },
   {
     "id": "rewritten-post-6",
