@@ -37,12 +37,14 @@ jobs:
           LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
 
       - name: Discover viral LinkedIn posts
+        continue-on-error: true
         run: npx tsx scripts/linkedin-discover-posts.ts
         env:
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
 
       - name: Comment on LinkedIn posts
+        continue-on-error: true
         run: npx tsx scripts/linkedin-discover-and-comment.ts
         env:
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
@@ -55,6 +57,7 @@ jobs:
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
 
       - name: Bluesky engagement comments
+        continue-on-error: true
         run: npx tsx scripts/bluesky-engagement.ts
         env:
           BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
