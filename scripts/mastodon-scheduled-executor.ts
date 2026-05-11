@@ -130,6 +130,9 @@ async function main() {
     if (post.image) {
       console.log('  📤 Uploading media...');
       mediaId = await uploadMedia(post.image);
+      if (!mediaId) {
+        throw new Error(`Media upload failed for: ${post.image} — aborting (will not post text-only)`);
+      }
     }
 
     const statusId = await postStatus(post.text, mediaId);
