@@ -825,9 +825,11 @@
     "id": "rewritten-post-4",
     "scheduleDate": "2026-05-10",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/linkedin-rewrites/post_4.png",
-    "text": "Why there are so many Indian tech CEOs."
+    "text": "Why there are so many Indian tech CEOs.",
+    "postedAt": "2026-05-11T01:41:06.538Z",
+    "postId": "urn:li:share:7459417269383897088"
   },
   {
     "id": "rewritten-post-5",
