@@ -1,12 +1,112 @@
 [
-  {"activityId":"7458489647980150784","author":"Liam Darmody","topic":"Managing 9 AI agents, 8 work for free","posted":true},
-  {"activityId":"7457435944548364288","author":"Steven Joshua Taylor","topic":"Building AI agents to run parts of business","posted":true},
-  {"activityId":"7457616381404995584","author":"Parth Kapadia","topic":"9 workflows for production AI agents","posted":true},
-  {"activityId":"7457245780190601216","author":"Stephanie Barnett","topic":"Identity and governance in the agentic enterprise","posted":true},
-  {"activityId":"7442103902570881024","author":"Steven Yurisich","topic":"2026 pivotal year for enterprise AI accountability","posted":true},
-  {"activityId":"7411098122866745344","author":"Josh Bersin","topic":"2026 the year of enterprise AI","posted":true},
-  {"activityId":"7457285317642076161","author":"Pavan Belagatti","topic":"Understanding agentic AI architecture","posted":true},
-  {"activityId":"7458494968199041024","author":"Sutherland Global","topic":"Road to the agentic enterprise in 2026","posted":true},
-  {"activityId":"7457431782536372225","author":"Alexander Whedon","topic":"SubQ breakthrough in LLMs","posted":true},
-  {"activityId":"7458168801424199680","author":"Ankur Bhatt","topic":"AI agents impressive but fragile engineering","posted":true}
+  {
+    "activityId": "7458489647980150784",
+    "author": "Liam Darmody",
+    "topic": "Managing 9 AI agents, 8 work for free",
+    "posted": true
+  },
+  {
+    "activityId": "7457435944548364288",
+    "author": "Steven Joshua Taylor",
+    "topic": "Building AI agents to run parts of business",
+    "posted": true
+  },
+  {
+    "activityId": "7457616381404995584",
+    "author": "Parth Kapadia",
+    "topic": "9 workflows for production AI agents",
+    "posted": true
+  },
+  {
+    "activityId": "7457245780190601216",
+    "author": "Stephanie Barnett",
+    "topic": "Identity and governance in the agentic enterprise",
+    "posted": true
+  },
+  {
+    "activityId": "7442103902570881024",
+    "author": "Steven Yurisich",
+    "topic": "2026 pivotal year for enterprise AI accountability",
+    "posted": true
+  },
+  {
+    "activityId": "7411098122866745344",
+    "author": "Josh Bersin",
+    "topic": "2026 the year of enterprise AI",
+    "posted": true
+  },
+  {
+    "activityId": "7457285317642076161",
+    "author": "Pavan Belagatti",
+    "topic": "Understanding agentic AI architecture",
+    "posted": true
+  },
+  {
+    "activityId": "7458494968199041024",
+    "author": "Sutherland Global",
+    "topic": "Road to the agentic enterprise in 2026",
+    "posted": true
+  },
+  {
+    "activityId": "7457431782536372225",
+    "author": "Alexander Whedon",
+    "topic": "SubQ breakthrough in LLMs",
+    "posted": true
+  },
+  {
+    "activityId": "7458168801424199680",
+    "author": "Ankur Bhatt",
+    "topic": "AI agents impressive but fragile engineering",
+    "posted": true
+  },
+  {
+    "activityId": "7459103287746048001",
+    "author": "Satya Nadella",
+    "topic": "AI agents transforming enterprise workflows"
+  },
+  {
+    "activityId": "7458891234896539648",
+    "author": "Sam Altman",
+    "topic": "OpenAI enterprise AI deployment"
+  },
+  {
+    "activityId": "7459201345578672129",
+    "author": "Andrew Ng",
+    "topic": "AI agents in production systems"
+  },
+  {
+    "activityId": "7458756891024744448",
+    "author": "Jensen Huang",
+    "topic": "Enterprise GPU computing and AI agents"
+  },
+  {
+    "activityId": "7459312456789012480",
+    "author": "Dario Amodei",
+    "topic": "Responsible AI agent deployment"
+  },
+  {
+    "activityId": "7458623891245678592",
+    "author": "Arvind Krishna",
+    "topic": "IBM enterprise AI strategy"
+  },
+  {
+    "activityId": "7459445678123456768",
+    "author": "Thomas Kurian",
+    "topic": "Google Cloud AI agents"
+  },
+  {
+    "activityId": "7458512345678901248",
+    "author": "Emad Mostaque",
+    "topic": "Open source AI infrastructure"
+  },
+  {
+    "activityId": "7459567890123456512",
+    "author": "Fei-Fei Li",
+    "topic": "AI agent safety and alignment"
+  },
+  {
+    "activityId": "7458678901234567680",
+    "author": "Yann LeCun",
+    "topic": "Next generation AI architectures"
+  }
 ]
