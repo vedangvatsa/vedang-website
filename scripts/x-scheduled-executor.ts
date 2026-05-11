@@ -49,12 +49,11 @@ async function postSingleTweet(text: string, image?: string): Promise<{ success:
 
     if (image) {
       const absImage = path.isAbsolute(image) ? image : path.resolve(REPO_ROOT, image);
-      if (fs.existsSync(absImage)) {
-        const mediaId = await client.v1.uploadMedia(absImage, { mimeType: 'image/png' });
-        params.media = { media_ids: [mediaId] };
-      } else {
-        console.warn(`  ⚠️ Image not found: ${absImage}`);
+      if (!fs.existsSync(absImage)) {
+        return { success: false, error: `Image not found: ${absImage} — aborting (will not post text-only)` };
       }
+      const mediaId = await client.v1.uploadMedia(absImage, { mimeType: 'image/png' });
+      params.media = { media_ids: [mediaId] };
     }
 
     const { data } = await client.v2.tweet(params as Parameters<typeof client.v2.tweet>[0]);
@@ -102,12 +101,11 @@ async function postThread(tweets: TweetItem[]): Promise<{ success: boolean; id?:
 
       if (image) {
         const absImage = path.isAbsolute(image) ? image : path.resolve(REPO_ROOT, image);
-        if (fs.existsSync(absImage)) {
-          const mediaId = await client.v1.uploadMedia(absImage, { mimeType: 'image/png' });
-          params.media = { media_ids: [mediaId] };
-        } else {
-          console.warn(`  ⚠️ Image not found: ${absImage}`);
+        if (!fs.existsSync(absImage)) {
+          return { success: false, error: `Image not found: ${absImage} — aborting thread (will not post text-only)` };
         }
+        const mediaId = await client.v1.uploadMedia(absImage, { mimeType: 'image/png' });
+        params.media = { media_ids: [mediaId] };
       }
 
       if (previousId) {
