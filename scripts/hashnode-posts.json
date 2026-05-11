@@ -85,8 +85,10 @@
       "design"
     ],
     "scheduleDate": "2026-03-28",
-    "posted": false,
-    "scheduleTime": "17:00"
+    "posted": true,
+    "scheduleTime": "17:00",
+    "postedAt": "2026-05-11T01:41:36.996Z",
+    "hashnodeUrl": "https://vedangvatsa.hashnode.dev/cognitive-load-1"
   },
   {
     "id": "hashnode-cheap-to-competitive",
