@@ -31,27 +31,36 @@ interface FarcasterPost {
   error?: string;
 }
 
-async function uploadImage(imagePath: string): Promise<string | null> {
+function getImageUrl(imagePath: string): string | null {
   const absPath = path.isAbsolute(imagePath) ? imagePath : path.resolve(REPO_ROOT, imagePath);
   if (!fs.existsSync(absPath)) {
-    console.warn(`  ⚠️ Image not found: ${absPath}`);
+    console.warn(`  Warning: Image not found: ${absPath}`);
     return null;
   }
 
-  // Upload via Imgur or similar for URL (Farcaster embeds need a URL)
-  // For now, skip image upload since Neynar cast API accepts embed URLs
-  console.log(`  📷 Image: ${absPath} (skipped — Farcaster needs URL embeds)`);
-  return null;
+  // Convert local path to GitHub raw URL
+  const relPath = path.relative(REPO_ROOT, absPath);
+  const rawUrl = `https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/${relPath}`;
+  console.log(`  Image URL: ${rawUrl}`);
+  return rawUrl;
 }
 
 function truncateForFarcaster(text: string): string {
   if (text.length <= MAX_CAST_LENGTH) return text;
-  // Truncate and add ellipsis
   return text.substring(0, MAX_CAST_LENGTH - 3) + '...';
 }
 
-async function postCast(text: string): Promise<{ success: boolean; hash?: string; error?: string }> {
+async function postCast(text: string, imageUrl?: string | null): Promise<{ success: boolean; hash?: string; error?: string }> {
   const castText = truncateForFarcaster(text);
+
+  const body: Record<string, unknown> = {
+    signer_uuid: SIGNER_UUID,
+    text: castText,
+  };
+
+  if (imageUrl) {
+    body.embeds = [{ url: imageUrl }];
+  }
 
   const res = await fetch('https://api.neynar.com/v2/farcaster/cast', {
     method: 'POST',
@@ -59,10 +68,7 @@ async function postCast(text: string): Promise<{ success: boolean; hash?: string
       'x-api-key': NEYNAR_API_KEY,
       'content-type': 'application/json',
     },
-    body: JSON.stringify({
-      signer_uuid: SIGNER_UUID,
-      text: castText,
-    }),
+    body: JSON.stringify(body),
   });
 
   if (!res.ok) {
@@ -118,18 +124,23 @@ async function main() {
   const post = due[0];
 
   try {
-    console.log(`\n📝 Posting: ${post.id}`);
+    console.log(`\n Posting: ${post.id}`);
     console.log(`   Text: ${post.text.substring(0, 80)}...`);
 
-    const result = await postCast(post.text);
+    let imageUrl: string | null = null;
+    if (post.image) {
+      imageUrl = getImageUrl(post.image);
+    }
+
+    const result = await postCast(post.text, imageUrl);
     if (result.success) {
       post.posted = true;
       post.postedAt = new Date().toISOString();
       post.castHash = result.hash;
-      console.log(`  ✅ Posted: ${result.hash}`);
+      console.log(`  Posted: ${result.hash}`);
     } else {
       post.error = result.error;
-      console.error(`  ❌ Failed: ${result.error}`);
+      console.error(`  Failed: ${result.error}`);
     }
   } catch (err: any) {
     post.error = err.message;
