@@ -18,7 +18,7 @@ const HANDLE = process.env.BLUESKY_HANDLE!;
 const APP_PASSWORD = process.env.BLUESKY_APP_PASSWORD!;
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY!;
 const LOG_FILE = path.resolve(__dirname, 'bluesky-comment-log.json');
-const MAX_COMMENTS = 10;
+const MAX_COMMENTS = 20;
 const COOLDOWN_MS = 30000;
 const PDS = 'https://bsky.social';
 
@@ -33,12 +33,13 @@ async function generateReply(postText: string): Promise<string> {
       messages: [{ role: 'user', content: `Write a concise response to this post. MUST be under 250 characters.
 
 Rules:
-- Strongly advocate the OPPOSITE idea of the post in a logically sound way
-- Add criticism that makes people want to argue with you badly
+- Be intellectual, neutral, and positive
+- Add a thoughtful observation or insight that builds on the original idea
+- Share relevant experience or data that enriches the conversation
 - Add one small typo (like "teh" or "becuase" or a missing letter)
 - Only write completely relevant content. No fillers. No questions.
 - Must sound like a real human typed it fast on their phone
-- No AI words: empowering, unleashing, revolutionizing, cutting-edge, seamless, leveraging, innovative, landscape, navigate, unlock
+- No AI words: empowering, unleashing, revolutionizing, cutting-edge, seamless, leveraging, innovative, landscape, navigate, unlock, delve, foster, pivotal, robust, holistic, nuanced, paradigm, synergy, elevate, harness, transform, reimagine, groundbreaking, game-changer, deep dive, unpacking, doubling down, at the end of the day, it's worth noting
 - No emdashes or colons
 - No hashtags or emojis
 - No "Great point" or "This is so true" or "Interesting take"
@@ -52,7 +53,7 @@ Response:` }],
     if (text.length <= 300) return text;
     console.log(`   ⚠️ Too long (${text.length}), retrying...`);
   }
-  return 'Hard disagree here. The data says the exact opposite if you look at it honestly.';
+  return 'Seeing this play out in real time. The companies that move first on this are going to have a serious head start.';
 }
 
 // ─── Dedup ───
