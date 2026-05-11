@@ -91,6 +91,20 @@ jobs:
           TUMBLR_ACCESS_SECRET: ${{ secrets.TUMBLR_ACCESS_SECRET }}
           TUMBLR_BLOG_NAME: ${{ secrets.TUMBLR_BLOG_NAME }}
 
+      - name: Post to Farcaster
+        run: npx tsx scripts/farcaster-scheduled-executor.ts
+        env:
+          NEYNAR_API_KEY: ${{ secrets.NEYNAR_API_KEY }}
+          NEYNAR_SIGNER_UUID: ${{ secrets.NEYNAR_SIGNER_UUID }}
+
+      - name: Farcaster engagement comments
+        continue-on-error: true
+        run: npx tsx scripts/farcaster-engagement.ts
+        env:
+          NEYNAR_API_KEY: ${{ secrets.NEYNAR_API_KEY }}
+          NEYNAR_SIGNER_UUID: ${{ secrets.NEYNAR_SIGNER_UUID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
       - name: Post to Mastodon
         run: npx tsx scripts/mastodon-scheduled-executor.ts
         env:
