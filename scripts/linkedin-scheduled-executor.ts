@@ -170,6 +170,9 @@ async function postToLinkedIn(
 
   if (mediaPath) {
     media = await uploadMedia(mediaPath);
+    if (!media) {
+      return { success: false, error: `Media upload failed for: ${mediaPath} — aborting post (will not post text-only)` };
+    }
   }
 
   const body: any = {

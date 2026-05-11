@@ -134,15 +134,16 @@ async function createPost(session: Session, post: BlueskyPost): Promise<string> 
   // Upload and attach image if present
   if (post.image) {
     const blob = await uploadImage(session, post.image);
-    if (blob) {
-      record.embed = {
-        $type: 'app.bsky.embed.images',
-        images: [{
-          alt: post.id,
-          image: blob,
-        }],
-      };
+    if (!blob) {
+      throw new Error(`Media upload failed for: ${post.image} — aborting (will not post text-only)`);
     }
+    record.embed = {
+      $type: 'app.bsky.embed.images',
+      images: [{
+        alt: post.id,
+        image: blob,
+      }],
+    };
   }
 
   const res = await fetch(`${BLUESKY_SERVICE}/xrpc/com.atproto.repo.createRecord`, {
