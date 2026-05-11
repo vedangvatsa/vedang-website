@@ -96,11 +96,11 @@ async function main() {
 
   const COOLDOWN_HOURS = 8;
   const recentlyPosted = posts.some(p => {
-    if (!p.posted || !p.postedAt) return false;
+    if (!p.posted || !p.postedAt || !p.castHash) return false; // Only count posts actually cast on Farcaster
     return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;
   });
   if (recentlyPosted) {
-    console.log('⏸️ Posted within last 8h — skipping');
+    console.log('⏸️ Posted to Farcaster within last 8h — skipping');
     return;
   }
 
