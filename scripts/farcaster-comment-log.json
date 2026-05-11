@@ -1,0 +1,65 @@
+[
+  {
+    "castHash": "0x4c7a1e2fd876fe4fc8cd3d190f3ab728a5f0d002",
+    "author": "dwr",
+    "replyHash": "0xdaf1e5662287b39b0e357bbbbe75cf7c10d3b5c4",
+    "replyText": "honestly the poasting leaderboards are kinda broken anyway. quality > quantity but the algos just reward volume. you're probably making better content now than when you were grinding for teh top spot. most ppl at #1 are just spamming replies all day",
+    "postedAt": "2026-05-11T05:57:39.633Z"
+  },
+  {
+    "castHash": "0x0718380cf418d73d9be70e2fe634a3385ffbb2c0",
+    "author": "ted",
+    "replyHash": "0x2c34259ab0041719f3e676be206d1b29f660994f",
+    "replyText": "I need to see the original cast or content from two years ago to give you a proper response. Without knowing what \"this\" refers to, I can't write a meaningful 280-character reply that adds value to teh conversation.",
+    "postedAt": "2026-05-11T05:58:12.728Z"
+  },
+  {
+    "castHash": "0xb395af4b8dfe60bf278de90e6096bb8ebcda1204",
+    "author": "ted",
+    "replyHash": "0x42f817983468fdce3220871411453422b965c2a1",
+    "replyText": "Just checked it out - looks like they're trying to make wallet management less painful for devs. The API seems pretty clean but curious how they handle key recovery vs other solutions. Wonder if this will actually get adoption or if devs will stick with teh usual suspects like WalletConnect.",
+    "postedAt": "2026-05-11T05:58:47.048Z"
+  },
+  {
+    "castHash": "0x4391e09ec371a6295855b2333b8fa60970b4d927",
+    "author": "v",
+    "replyHash": "0x3060f73a5f6c08fcf8bbd31cba4db120022f846c",
+    "replyText": "Makes sense he'd be into decentralized social after all the drama with advertisers and content moderation on X. FC gives creators more control without the corporate BS. Wonder if he'll actually start posting here or just lurk tho",
+    "postedAt": "2026-05-11T05:59:21.111Z"
+  },
+  {
+    "castHash": "0x9efef6227f0d7ae4c78a6acaff7ad677d7c7e6f9",
+    "author": "jessepollak",
+    "replyHash": "0xfd261ca990fa9325a846deea0a21edf1cc616635",
+    "replyText": "Not sure if more builders is automatically good tho. Quality matters more than quantity. AI makes building easier but we're already drowning in mediocre apps and content. The real challenge isn't lowering teh barrier to entry, it's figuring out what's actually worth building.",
+    "postedAt": "2026-05-11T05:59:55.004Z"
+  },
+  {
+    "castHash": "0xaf5fc99983de336a5a80302ca42ccb54d7c1c3e4",
+    "author": "0xdesigner",
+    "replyHash": "0x2ee084ed6ff8f44b17ffa52d457d08303aec92d7",
+    "replyText": "lol welcome back to the chaos. a month offline sounds amazing tbh - bet you missed all the usual drama and discourse cycles. probably came back to the same arguments still happening anyway. teh internet never changes much when you're gone",
+    "postedAt": "2026-05-11T06:00:29.473Z"
+  },
+  {
+    "castHash": "0x238f0304ca1e66427aa848d2bb32d2e9b3a81129",
+    "author": "jessepollak",
+    "replyHash": "0x1cb87552de2b1a488f54a0c7aeb3258566d93e27",
+    "replyText": "nice pull on teh rare banner! been grinding for weeks and still stuck with common drops. the townhall rewards seem way better than the garden ones tbh. what level did you hit to get this?",
+    "postedAt": "2026-05-11T06:01:03.443Z"
+  },
+  {
+    "castHash": "0xbab8c106b9660d2a5938d93ccfc040e7f3402595",
+    "author": "0xdesigner",
+    "replyHash": "0xd12b5198146f3eafbf941b4778b329600b8ae186",
+    "replyText": "honestly depends what you're referring to but the native token integration has been pretty solid. finally feels like there's actual utility beyond just posting into teh void. curious what specific feature you mean though",
+    "postedAt": "2026-05-11T06:01:37.679Z"
+  },
+  {
+    "castHash": "0x83512bd190164dc0d67c44b0a1d68bdffe93449f",
+    "author": "0xdesigner",
+    "replyHash": "0x701df20550d08fa19432f0b934036ab30f4fc30c",
+    "replyText": "Yeah that search UX is broken. The X should clear text, not close the modal. Basic stuff. Most users will tap outside to close or expect a dedicated close button. Whoever designed that probably doesn't use thier own product much.",
+    "postedAt": "2026-05-11T06:02:12.764Z"
+  }
+]
