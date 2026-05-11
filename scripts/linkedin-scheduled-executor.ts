@@ -98,8 +98,9 @@ async function uploadVideo(absPath: string): Promise<string | null> {
 
   console.log(`  📤 Uploading ${uploadInstructions.length} chunk(s)...`);
 
-  // Step 2: Upload binary chunk(s)
+  // Step 2: Upload binary chunk(s) and collect ETags
   const fileBuffer = fs.readFileSync(absPath);
+  const uploadedPartIds: string[] = [];
   for (const instruction of uploadInstructions) {
     const { uploadUrl, firstByte, lastByte } = instruction;
     const chunk = fileBuffer.slice(firstByte, lastByte + 1);
@@ -117,6 +118,8 @@ async function uploadVideo(absPath: string): Promise<string | null> {
       console.error(`  ❌ Video chunk upload failed: ${await uploadRes.text()}`);
       return null;
     }
+    const etag = uploadRes.headers.get('etag') || '';
+    uploadedPartIds.push(etag);
   }
 
   // Step 3: Finalize video upload
@@ -127,6 +130,7 @@ async function uploadVideo(absPath: string): Promise<string | null> {
       finalizeUploadRequest: {
         video: videoUrn,
         uploadToken,
+        uploadedPartIds,
       },
     }),
   });
