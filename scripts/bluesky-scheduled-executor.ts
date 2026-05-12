@@ -118,15 +118,26 @@ function detectFacets(text: string): any[] {
 }
 
 async function createPost(session: Session, post: BlueskyPost): Promise<string> {
+  // Enforce 300 grapheme limit for Bluesky
+  const segmenter = new Intl.Segmenter('en', { granularity: 'grapheme' });
+  const segments = Array.from(segmenter.segment(post.text));
+  
+  let finalContent = post.text;
+  if (segments.length > 300) {
+    // Truncate to 298 to leave room for the ellipsis
+    finalContent = segments.slice(0, 298).map(s => s.segment).join('') + '…';
+    console.log(`  ✂️ Text truncated from ${segments.length} to 300 graphemes`);
+  }
+
   const record: any = {
     $type: 'app.bsky.feed.post',
-    text: post.text,
+    text: finalContent,
     createdAt: new Date().toISOString(),
     langs: ['en'],
   };
 
   // Add facets for links
-  const facets = detectFacets(post.text);
+  const facets = detectFacets(finalContent);
   if (facets.length > 0) {
     record.facets = facets;
   }
