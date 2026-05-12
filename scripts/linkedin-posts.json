@@ -845,9 +845,11 @@
     "id": "rewritten-post-6",
     "scheduleDate": "2026-05-10",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/linkedin-rewrites/post_6.mp4",
-    "text": "Jensen Huang pushes his teams to the absolute limit.\nThat standard is exactly why Nvidia owns 80 percent of the AI chip market. \nObsessing over the details separates good companies from great ones."
+    "text": "Jensen Huang pushes his teams to the absolute limit.\nThat standard is exactly why Nvidia owns 80 percent of the AI chip market. \nObsessing over the details separates good companies from great ones.",
+    "postedAt": "2026-05-12T04:48:11.616Z",
+    "postId": "urn:li:ugcPost:7459826738944974848"
   },
   {
     "id": "rewritten-post-7",
