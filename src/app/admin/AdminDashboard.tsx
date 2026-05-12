@@ -7,6 +7,8 @@ export default function AdminDashboard({ platforms }: { platforms: Record<string
   const router = useRouter();
   const platformNames = Object.keys(platforms).sort();
   const [activeTab, setActiveTab] = useState('overview');
+  const [viewMode, setViewMode] = useState<'list' | 'calendar'>('calendar');
+  const [currentDate, setCurrentDate] = useState(new Date());
   
   // State for inline editing
   const [editingPostId, setEditingPostId] = useState<string | null>(null);
@@ -24,8 +26,8 @@ export default function AdminDashboard({ platforms }: { platforms: Record<string
     setEditingPostId(post.id);
     setEditForm({
       text: post.text,
-      scheduleDate: post.scheduleDate,
-      scheduleTime: post.scheduleTime
+      scheduleDate: post.scheduleDate || '',
+      scheduleTime: post.scheduleTime || ''
     });
   };
 
@@ -53,7 +55,7 @@ export default function AdminDashboard({ platforms }: { platforms: Record<string
       }
 
       setEditingPostId(null);
-      router.refresh(); // Reload data from the server
+      router.refresh(); 
     } catch (err) {
       alert('Error saving post. See console.');
       console.error(err);
@@ -62,18 +64,49 @@ export default function AdminDashboard({ platforms }: { platforms: Record<string
     }
   };
 
+  const nextMonth = () => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
+  const prevMonth = () => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
+  const today = () => setCurrentDate(new Date());
+
+  const getDaysInMonth = (date: Date) => new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+  const getFirstDayOfMonth = (date: Date) => new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+
+  const postsToShow = activeTab === 'overview' ? allPosts : platforms[activeTab].map(p => ({...p, platform: activeTab}));
+
   return (
     <div className="min-h-screen bg-background text-foreground py-16 px-4 md:px-6 font-sans">
-      <div className="container mx-auto max-w-6xl">
-        <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
-            Social Media Command Center
-          </h1>
-          <p className="text-muted-foreground text-lg">Detailed overview of your connected social pipelines.</p>
+      <div className="container mx-auto max-w-[1400px]">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
+          <div>
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
+              Social Media Command Center
+            </h1>
+            <p className="text-muted-foreground text-lg">Detailed overview of your connected social pipelines.</p>
+          </div>
+          
+          {/* View Toggle */}
+          <div className="flex bg-secondary rounded-lg p-1 border border-border">
+            <button
+              onClick={() => setViewMode('calendar')}
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                viewMode === 'calendar' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              Calendar
+            </button>
+            <button
+              onClick={() => setViewMode('list')}
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                viewMode === 'list' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              List View
+            </button>
+          </div>
         </div>
 
         {/* Tabs */}
-        <div className="flex flex-wrap gap-3 mb-10">
+        <div className="flex flex-wrap gap-3 mb-8">
           <button
             onClick={() => setActiveTab('overview')}
             className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-colors border ${
@@ -128,33 +161,96 @@ export default function AdminDashboard({ platforms }: { platforms: Record<string
 
         {/* Content Area */}
         <div className="bg-card rounded-xl border border-border p-6 shadow-sm relative overflow-hidden">
-          <div className="space-y-6 relative z-10">
-            <div className="flex justify-between items-end border-b border-border pb-6 mb-6">
-              <div>
-                <h2 className="text-2xl md:text-3xl font-semibold capitalize tracking-tight">
-                  {activeTab === 'overview' ? 'Global Timeline' : `${activeTab.replace('-', ' ')} Queue`}
+          
+          {viewMode === 'calendar' ? (
+            <div className="space-y-6">
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-2xl font-semibold capitalize">
+                  {activeTab === 'overview' ? 'Global Calendar' : `${activeTab.replace('-', ' ')} Calendar`}
                 </h2>
-                <p className="text-muted-foreground mt-2 text-sm">
-                  {activeTab === 'overview' 
-                    ? `Showing all ${allPosts.length} posts across all platforms.` 
-                    : `${platforms[activeTab].filter(p => !p.posted).length} posts remaining in schedule.`}
-                </p>
+                <div className="flex items-center gap-2">
+                  <button onClick={prevMonth} className="p-2 border border-border rounded hover:bg-secondary text-sm">&larr;</button>
+                  <button onClick={today} className="px-4 py-2 border border-border rounded hover:bg-secondary text-sm font-medium">Today</button>
+                  <button onClick={nextMonth} className="p-2 border border-border rounded hover:bg-secondary text-sm">&rarr;</button>
+                </div>
+              </div>
+
+              <div className="text-xl font-medium mb-4 text-center">
+                {currentDate.toLocaleString('default', { month: 'long', year: 'numeric' })}
+              </div>
+
+              <div className="grid grid-cols-7 gap-px bg-border rounded-lg overflow-hidden border border-border">
+                {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
+                  <div key={day} className="bg-secondary/50 p-2 text-center text-xs font-semibold uppercase text-muted-foreground">
+                    {day}
+                  </div>
+                ))}
+
+                {Array.from({ length: getFirstDayOfMonth(currentDate) }).map((_, i) => (
+                  <div key={`empty-${i}`} className="bg-card/50 min-h-[120px] p-2" />
+                ))}
+
+                {Array.from({ length: getDaysInMonth(currentDate) }).map((_, i) => {
+                  const day = i + 1;
+                  const dateStr = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                  
+                  // For posted items, sometimes they lack scheduleDate but have postedAt
+                  const dayPosts = postsToShow.filter(p => {
+                    if (p.scheduleDate === dateStr) return true;
+                    if (p.postedAt && p.postedAt.startsWith(dateStr)) return true;
+                    return false;
+                  });
+
+                  const isToday = new Date().toISOString().split('T')[0] === dateStr;
+
+                  return (
+                    <div key={day} className={`bg-card min-h-[120px] p-2 flex flex-col gap-1 hover:bg-secondary/20 transition-colors ${isToday ? 'ring-2 ring-primary ring-inset' : ''}`}>
+                      <span className={`text-xs font-medium w-6 h-6 flex items-center justify-center rounded-full ${isToday ? 'bg-primary text-primary-foreground' : 'text-muted-foreground'}`}>
+                        {day}
+                      </span>
+                      
+                      <div className="flex-1 flex flex-col gap-1 overflow-y-auto max-h-[150px] custom-scrollbar">
+                        {dayPosts.map((post, idx) => (
+                          <div 
+                            key={idx} 
+                            onClick={() => { setViewMode('list'); handleEditClick(post); }}
+                            className={`text-[10px] p-1.5 rounded border cursor-pointer hover:opacity-80 transition-opacity truncate ${
+                              post.error ? 'bg-destructive/10 border-destructive/30 text-destructive' :
+                              post.posted ? 'bg-secondary/50 border-border text-muted-foreground line-through' :
+                              'bg-primary/10 border-primary/20 text-primary'
+                            }`}
+                            title={`${post.platform.toUpperCase()} - ${post.text}`}
+                          >
+                            <span className="font-semibold uppercase mr-1 opacity-70">{post.platform.substring(0,2)}</span>
+                            {post.scheduleTime || '??:??'} 
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
+          ) : (
+            <div className="space-y-6 relative z-10">
+              <div className="flex justify-between items-end border-b border-border pb-6 mb-6">
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-semibold capitalize tracking-tight">
+                    {activeTab === 'overview' ? 'Global Timeline' : `${activeTab.replace('-', ' ')} Queue`}
+                  </h2>
+                  <p className="text-muted-foreground mt-2 text-sm">
+                    {activeTab === 'overview' 
+                      ? `Showing all ${allPosts.length} posts across all platforms.` 
+                      : `${platforms[activeTab].filter(p => !p.posted).length} posts remaining in schedule.`}
+                  </p>
+                </div>
+              </div>
 
-            {/* List Renderer */}
-            {(() => {
-              const postsToShow = activeTab === 'overview' ? allPosts : platforms[activeTab].map(p => ({...p, platform: activeTab}));
-
-              if (postsToShow.length === 0) {
-                return (
-                  <div className="flex flex-col items-center justify-center py-20 text-muted-foreground bg-secondary/30 rounded-xl border border-dashed border-border">
-                    <p className="text-lg">No posts found.</p>
-                  </div>
-                );
-              }
-
-              return (
+              {postsToShow.length === 0 ? (
+                <div className="flex flex-col items-center justify-center py-20 text-muted-foreground bg-secondary/30 rounded-xl border border-dashed border-border">
+                  <p className="text-lg">No posts found.</p>
+                </div>
+              ) : (
                 <div className="grid gap-4 max-h-[70vh] overflow-y-auto pr-2 custom-scrollbar">
                   {postsToShow
                     .sort((a, b) => {
@@ -280,9 +376,9 @@ export default function AdminDashboard({ platforms }: { platforms: Record<string
                       </div>
                     )})}
                 </div>
-              );
-            })()}
-          </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Find viral posts (300+ replies), generate relatable quotes via Claude, post 5.
+ * Find viral posts (500+ replies), generate relatable quotes via Claude, post 5.
  */
 import dotenv from 'dotenv';
 import path from 'path';
@@ -23,16 +23,26 @@ const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY! });
 const QUOTE_FILE = path.resolve(__dirname, 'x-quote-posts.json');
 
 const QUERIES = [
-  'min_replies:300 -is:retweet lang:en -is:reply',
-  '(AI OR startup OR tech OR software) min_replies:300 -is:retweet lang:en -is:reply',
-  '(hiring OR layoffs OR "remote work" OR career OR "job market") min_replies:300 -is:retweet lang:en -is:reply',
-  '(business OR founder OR SaaS OR product) min_replies:300 -is:retweet lang:en -is:reply',
+  '(AI OR "artificial intelligence" OR LLM OR GPT OR "machine learning") min_replies:500 -is:retweet lang:en -is:reply',
+  '(startup OR SaaS OR "venture capital" OR founder OR product) min_replies:500 -is:retweet lang:en -is:reply',
+  '(tech OR software OR engineering OR developer OR coding) min_replies:500 -is:retweet lang:en -is:reply',
+  '(business OR CEO OR enterprise OR "remote work" OR hiring) min_replies:500 -is:retweet lang:en -is:reply',
 ];
 
 const REJECT = [
   // Spam / engagement bait
   /\bdm\s*me\b/i, /\blink\s*in\s*bio\b/i, /\bgiveaway\b/i, /\bfollow\s*(me|back)\b/i,
   /\b(buy|sell)\s*(now|today)\b/i, /\bairdrop\b/i,
+  // Promo / marketing posts
+  /\bfree\s*(for|access|course|trial)\b/i, /\bpaid\s*course.*free\b/i,
+  /\bfirst\s*\d+\s*(people|users|spots)\b/i,
+  /\b(enroll|register|sign\s*up)\s*(now|today|here)\b/i,
+  /\b(coupon|discount|promo\s*code|limited\s*time)\b/i,
+  /\b(welcome\s*to|introducing\s*our|announcing|warm\s*welcome)\b/i,
+  /\b(join\s*(our|the)|apply\s*now|submit\s*your)\b/i,
+  /\b(thread|bookmark\s*this|save\s*this|retweet)\b/i,
+  /\b(like\s*and|comment\s*and|reply\s*with|drop\s*a)\b/i,
+  /\b(scholars|ambassadors?|reviewers?|winners?)\b/i,
   // Profanity / NSFW
   /\b(fuck|shit|bitch|ass)\b/i, /\b(porn|onlyfans|nsfw)\b/i,
   // Politicians and political figures
@@ -79,7 +89,7 @@ Quote tweet text:` }],
 }
 
 async function main() {
-  console.log('🔎 Finding viral posts (300+ replies)...\n');
+  console.log('🔎 Finding viral tech/business posts (500+ replies)...\n');
 
   // Load existing to avoid dupes
   let existing: any[] = [];
@@ -106,7 +116,7 @@ async function main() {
 
       for (const tweet of result.data?.data || []) {
         const m = tweet.public_metrics!;
-        if (m.reply_count < 300) continue;
+        if (m.reply_count < 500) continue;
         if (alreadyQuoted.has(tweet.id)) continue;
         if (REJECT.some(r => r.test(tweet.text))) continue;
         if (tweet.text.length < 40) continue;
@@ -130,9 +140,9 @@ async function main() {
   const unique = [...new Map(candidates.map(c => [c.id, c])).values()];
   unique.sort((a, b) => b.replies - a.replies);
 
-  console.log(`\n📊 Found ${unique.length} viral posts (300+ replies)\n`);
+  console.log(`\n📊 Found ${unique.length} viral posts (500+ replies)\n`);
   
-  const targets = unique.slice(0, 5);
+  const targets = unique.slice(0, 10);
   if (targets.length === 0) {
     console.log('No eligible posts found.');
     return;
@@ -148,9 +158,9 @@ async function main() {
       console.log(`  📝 "${quoteText}"`);
 
       const tweetUrl = `https://x.com/${t.handle}/status/${t.id}`;
-      const fullText = `${quoteText}\n\n${tweetUrl}`;
-
-      const { data } = await client.v2.tweet({ text: fullText });
+      const { data } = await client.v2.tweet({
+        text: `${quoteText}\n\n${tweetUrl}`,
+      });
       console.log(`  ✅ Posted! ID: ${data.id}\n`);
 
       existing.push({
