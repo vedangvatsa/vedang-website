@@ -9,6 +9,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
+import { triggerBoost } from './smm-boost-trigger.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -228,7 +229,9 @@ async function main() {
     console.error(`  ❌ Failed: ${err.message}`);
   }
 
-  fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
+  
+    try { triggerBoost('instagram', post.postUri || `https://instagram.com/`); } catch(e) {}
+    fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
   console.log('\n💾 Updated instagram-posts.json');
 }
 
