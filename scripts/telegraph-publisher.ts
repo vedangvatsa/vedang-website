@@ -226,7 +226,7 @@ async function main() {
 
   // Load Telegraph data
   const telegraphData: TelegraphData = JSON.parse(fs.readFileSync(TELEGRAPH_URLS_FILE, 'utf-8'));
-  const token = telegraphData._token;
+  const token = process.env.TELEGRAPH_TOKEN || telegraphData._token;
 
   if (!token) {
     console.error('❌ No Telegraph token found');
