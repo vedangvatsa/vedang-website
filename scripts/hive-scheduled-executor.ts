@@ -12,7 +12,7 @@ const HIVE_POSTING_KEY = process.env.HIVE_POSTING_KEY;
 const ESSAYS_DIR = path.resolve(REPO_ROOT, 'src/content/essays');
 const POSTS_FILE = path.resolve(REPO_ROOT, 'scripts/hive-posts.json');
 
-const COOLDOWN_HOURS = 8;
+const COOLDOWN_HOURS = 7;
 const DRY_RUN = process.argv.includes('--dry-run');
 
 function extractEssayContent(slug: string): { title: string; body: string } | null {

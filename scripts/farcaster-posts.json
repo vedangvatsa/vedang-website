@@ -875,9 +875,9 @@
     "image": "scripts/thread-assets/linkedin-rewrites/post_8.mp4",
     "scheduleDate": "2026-05-11",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
-    "castHash": null
+    "posted": true,
+    "postedAt": "2026-05-14T14:51:08.463Z",
+    "castHash": "0x0ffed56d5a4fad76f5f25ef3d80ed0a8ddba9d4f"
   },
   {
     "id": "rewritten-post-9",

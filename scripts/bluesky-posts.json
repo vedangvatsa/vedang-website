@@ -738,42 +738,42 @@
   },
   {
     "id": "reddit-meme-1",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
+    "scheduleDate": "2026-05-13",
+    "scheduleTime": "17:00",
     "posted": true,
     "text": "Business logic vs edge cases.\n\nYour code handles 99% of inputs perfectly.\n\nUsers will always find the 1% you missed.\n\nDesign for failure.",
     "image": "scripts/thread-assets/linkedin-rewrites/game_rules.jpg",
-    "postedAt": "2026-05-14T12:12:08.166Z",
-    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mlss2p5zhl2b"
+    "postedAt": "2026-05-14T14:51:00.501Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mlt2wsc2cw2y"
   },
   {
     "id": "reddit-meme-2",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
+    "scheduleDate": "2026-05-13",
+    "scheduleTime": "01:00",
     "posted": false,
     "text": "When product asks for a \"simple feature\".\n\nThe underlying architecture rarely agrees.\n\nNothing is simple once you look under the hood.",
     "image": "scripts/thread-assets/linkedin-rewrites/simple_feature.gif"
   },
   {
     "id": "reddit-meme-3",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
+    "scheduleDate": "2026-05-14",
+    "scheduleTime": "09:00",
     "posted": false,
     "text": "The most important skill for a senior engineer is not knowing the answer.\n\nIt is knowing exactly how to find it.",
     "image": "scripts/thread-assets/linkedin-rewrites/important_skill.jpg"
   },
   {
     "id": "reddit-meme-4",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
+    "scheduleDate": "2026-05-14",
+    "scheduleTime": "17:00",
     "posted": false,
     "text": "When leadership decides to \"help out\" with a little code cleanup right before the release.\n\nPlease. Stop. Helping.",
     "image": "scripts/thread-assets/linkedin-rewrites/manager_cleanup.png"
   },
   {
     "id": "reddit-meme-5",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
+    "scheduleDate": "2026-05-14",
+    "scheduleTime": "01:00",
     "posted": false,
     "text": "Open source in a nutshell.\n\nWe all build on work done by someone else.\n\nWho probably copied it from a forum post in 2012.",
     "image": "scripts/thread-assets/linkedin-rewrites/steal_stolen.png"
@@ -872,6 +872,55 @@
     "image": "scripts/thread-assets/reddit-memes/reddit-15.jpeg",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
+    "posted": false
+  },
+  {
+    "id": "rewritten-post-8",
+    "text": "I used to think ignoring my feelings meant I was mature. \n\nNow I treat emotions as basic signals that tell me what I actually care about.\n\nPaying attention to them is how you grow.",
+    "scheduleDate": "2026-05-11",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "rewritten-post-9",
+    "text": "Judge Caprio actually took the time to understand this man's situation.\n\nWe all have rules at work, but we still need to use our own judgment.\n\nGood managers know when to ignore the rulebook and treat people like human beings.",
+    "scheduleDate": "2026-05-11",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "rewritten-post-10",
+    "text": "Talking to kids about online safety is hard. \n\nThis campaign uses humor to talk to them instead of just scaring them. \n\nAsk questions, be honest, and stay involved to keep them safe online.",
+    "scheduleDate": "2026-05-12",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "reddit-vid-1",
+    "text": "When microservices fail in production.\n\nOne service goes down.\n\nThen the next.\n\nThen the next.\n\nKeep your blast radius small.",
+    "scheduleDate": "2026-05-12",
+    "scheduleTime": "09:00",
+    "posted": false
+  },
+  {
+    "id": "reddit-vid-2",
+    "text": "Explaining sorting algorithms to non-technical stakeholders.\n\nSometimes a visual is worth 1000 words.\n\nNo slides. No jargon. Just bars moving.",
+    "scheduleDate": "2026-05-12",
+    "scheduleTime": "17:00",
+    "posted": false
+  },
+  {
+    "id": "reddit-vid-3",
+    "text": "Reading legacy documentation.\n\nThe docs say one thing.\n\nThe code does another.\n\nThe only source of truth is the code itself.",
+    "scheduleDate": "2026-05-12",
+    "scheduleTime": "01:00",
+    "posted": false
+  },
+  {
+    "id": "reddit-vid-4",
+    "text": "Algorithmic efficiency, visualized.\n\nWatch Bubble Sort struggle.\n\nThen watch Quick Sort finish in a fraction of the time.\n\nThere is a reason we pick the right tool.",
+    "scheduleDate": "2026-05-13",
+    "scheduleTime": "09:00",
     "posted": false
   }
 ]

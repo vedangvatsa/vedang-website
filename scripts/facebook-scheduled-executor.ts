@@ -28,6 +28,10 @@ interface FacebookPost {
   error?: string;
 }
 
+function isVideo(filePath: string): boolean {
+  return /\.(mp4|mov|webm)$/i.test(filePath);
+}
+
 async function uploadPhoto(imagePath: string, message: string): Promise<string> {
   const absPath = path.isAbsolute(imagePath)
     ? imagePath
@@ -54,6 +58,34 @@ async function uploadPhoto(imagePath: string, message: string): Promise<string> 
 
   const data = await res.json() as any;
   return data.post_id || data.id;
+}
+
+async function uploadVideo(videoPath: string, message: string): Promise<string> {
+  const absPath = path.isAbsolute(videoPath)
+    ? videoPath
+    : path.resolve(REPO_ROOT, videoPath);
+
+  if (!fs.existsSync(absPath)) {
+    console.warn(`  ⚠️ Video not found: ${absPath}`);
+    return await postText(message);
+  }
+
+  const form = new FormData();
+  form.append('source', fs.createReadStream(absPath));
+  form.append('description', message);
+  form.append('access_token', PAGE_TOKEN);
+
+  const res = await fetch(`https://graph.facebook.com/v19.0/${PAGE_ID}/videos`, {
+    method: 'POST',
+    body: form,
+  });
+
+  if (!res.ok) {
+    throw new Error(`Video upload failed: ${res.status} ${await res.text()}`);
+  }
+
+  const data = await res.json() as any;
+  return data.id;
 }
 
 async function postText(message: string): Promise<string> {
@@ -108,7 +140,7 @@ async function main() {
   console.log(`📋 Total posts: ${posts.length} (after dedup), Posted: ${posts.filter(p => p.posted).length}`);
 
   // COOLDOWN: max 3 posts/day with 8h gap between each.
-  const COOLDOWN_HOURS = 8;
+  const COOLDOWN_HOURS = 7;
   const recentlyPosted = posts.some(p => {
     if (!p.posted || !p.postedAt) return false;
     return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;
@@ -134,7 +166,10 @@ async function main() {
   try {
     console.log(`\n📝 Posting: ${post.id}`);
     let postId: string;
-    if (post.image) {
+    if (post.image && isVideo(post.image)) {
+      console.log(`  🎬 Uploading video: ${post.image}`);
+      postId = await uploadVideo(post.image, post.text);
+    } else if (post.image) {
       postId = await uploadPhoto(post.image, post.text);
     } else {
       postId = await postText(post.text);

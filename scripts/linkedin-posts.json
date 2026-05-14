@@ -841,9 +841,11 @@
     "id": "rewritten-post-8",
     "scheduleDate": "2026-05-11",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/linkedin-rewrites/post_8.mp4",
-    "text": "I used to think ignoring my feelings meant I was mature. \n\nNow I treat emotions as basic signals that tell me what I actually care about.\n\nPaying attention to them is how you grow."
+    "text": "I used to think ignoring my feelings meant I was mature. \n\nNow I treat emotions as basic signals that tell me what I actually care about.\n\nPaying attention to them is how you grow.",
+    "postedAt": "2026-05-14T14:50:00.075Z",
+    "postId": "urn:li:ugcPost:7460702964505161728"
   },
   {
     "id": "rewritten-post-9",

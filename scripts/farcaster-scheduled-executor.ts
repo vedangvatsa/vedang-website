@@ -31,6 +31,48 @@ interface FarcasterPost {
   error?: string;
 }
 
+function isVideo(filePath: string): boolean {
+  return /\.(mp4|mov|webm)$/i.test(filePath);
+}
+
+async function uploadToNeynarStorage(filePath: string): Promise<string | null> {
+  const absPath = path.isAbsolute(filePath) ? filePath : path.resolve(REPO_ROOT, filePath);
+  if (!fs.existsSync(absPath)) {
+    console.warn(`  Warning: File not found: ${absPath}`);
+    return null;
+  }
+
+  const fileBuffer = fs.readFileSync(absPath);
+  const ext = path.extname(absPath).toLowerCase();
+  const mimeMap: Record<string, string> = {
+    '.mp4': 'video/mp4', '.mov': 'video/quicktime', '.webm': 'video/webm',
+    '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.gif': 'image/gif',
+  };
+  const mimeType = mimeMap[ext] || 'application/octet-stream';
+  const fileName = path.basename(absPath);
+
+  // Neynar storage upload endpoint
+  const formData = new FormData();
+  formData.append('file', new Blob([fileBuffer], { type: mimeType }), fileName);
+
+  const res = await fetch('https://api.neynar.com/v2/farcaster/storage/upload', {
+    method: 'POST',
+    headers: { 'x-api-key': NEYNAR_API_KEY },
+    body: formData,
+  });
+
+  if (!res.ok) {
+    const errText = await res.text();
+    console.warn(`  Warning: Neynar upload failed (${res.status}): ${errText.substring(0, 150)}`);
+    return null;
+  }
+
+  const data = await res.json() as any;
+  const url = data?.url || data?.urls?.[0] || null;
+  if (url) console.log(`  📤 Uploaded to Neynar CDN: ${url}`);
+  return url;
+}
+
 function getImageUrl(imagePath: string): string | null {
   const absPath = path.isAbsolute(imagePath) ? imagePath : path.resolve(REPO_ROOT, imagePath);
   if (!fs.existsSync(absPath)) {
@@ -38,7 +80,7 @@ function getImageUrl(imagePath: string): string | null {
     return null;
   }
 
-  // Convert local path to GitHub raw URL
+  // Convert local path to GitHub raw URL (works for images, not for video)
   const relPath = path.relative(REPO_ROOT, absPath);
   const rawUrl = `https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/${relPath}`;
   console.log(`  Image URL: ${rawUrl}`);
@@ -100,7 +142,7 @@ async function main() {
   console.log(`🟪 Farcaster scheduler running at ${todayIST} ${currentTimeIST} IST`);
   console.log(`📋 Total posts: ${posts.length}, Posted: ${posts.filter(p => p.posted).length}`);
 
-  const COOLDOWN_HOURS = 8;
+  const COOLDOWN_HOURS = 7;
   const recentlyPosted = posts.some(p => {
     if (!p.posted || !p.postedAt || !p.castHash) return false; // Only count posts actually cast on Farcaster
     return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;
@@ -129,7 +171,14 @@ async function main() {
 
     let imageUrl: string | null = null;
     if (post.image) {
-      imageUrl = getImageUrl(post.image);
+      if (isVideo(post.image)) {
+        // Video: upload to Neynar storage CDN (GitHub raw URLs don't work for video on Warpcast)
+        console.log(`  🎬 Uploading video via Neynar storage...`);
+        imageUrl = await uploadToNeynarStorage(post.image);
+      } else {
+        // Image: GitHub raw URL works fine
+        imageUrl = getImageUrl(post.image);
+      }
     }
 
     const result = await postCast(post.text, imageUrl);
