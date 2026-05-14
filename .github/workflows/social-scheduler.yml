@@ -9,6 +9,11 @@ concurrency:
   group: social-queue
   cancel-in-progress: false
 
+env:
+  SMM_BOOST_ENABLED: 'true'
+  JAP_API_KEY: ${{ secrets.JAP_API_KEY }}
+  PEAKERR_API_KEY: ${{ secrets.PEAKERR_API_KEY }}
+
 jobs:
   post:
     runs-on: ubuntu-latest
