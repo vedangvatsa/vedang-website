@@ -5,6 +5,10 @@ on:
     - cron: "35 3,11,19 * * *" # 09:05, 17:05, 01:05 IST (3 runs/day)
   workflow_dispatch: # Allow manual trigger
 
+concurrency:
+  group: social-queue
+  cancel-in-progress: false
+
 jobs:
   post:
     runs-on: ubuntu-latest
