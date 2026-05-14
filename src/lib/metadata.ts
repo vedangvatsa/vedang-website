@@ -102,6 +102,13 @@ export const pageMetadata = {
     url: '/ai-automation',
     keywords: ['AI Automation', 'n8n', 'MCP Automation', 'AI Agents', 'API Automation', 'Workflow Automation', 'No-Code AI', 'Telegram Bot'],
   },
+  healthProtocols: {
+    title: 'Bryan Johnson Blueprint Protocol - Curated Health Guide',
+    description:
+      'A curated breakdown of Bryan Johnson\'s Blueprint longevity protocol: supplements, diet, exercise, and sleep routines backed by data.',
+    url: '/health-protocols',
+    keywords: ['Bryan Johnson', 'Blueprint Protocol', 'Longevity', 'Anti-Aging', 'Supplements', 'Biohacking', 'Health Optimization', 'Sleep Protocol'],
+  },
 };
 
 export function generateMetadata(params: MetadataParams): Metadata {
