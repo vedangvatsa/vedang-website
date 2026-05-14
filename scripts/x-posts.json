@@ -792,43 +792,15 @@
     "tweetId": "2047555414271701078"
   },
   {
-    "id": "stepwise-ai",
-    "scheduleDate": "2026-04-21",
-    "scheduleTime": "09:00",
-    "posted": true,
-    "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Klarna automated customer service. Saved $60M. Then customer satisfaction collapsed and they hired people back.\n\nThe failure wasn't AI. It was sequence. They skipped straight to the hardest problem — nuanced human interactions — instead of starting where machines already win: invoice matching, log parsing, email routing.\n\n70% of companies that try to automate everything at once fail. Companies that pick one boring, high-frequency task first? Payback in under three months.\n\nDiscipline beats ambition every time.\n\nveda.ng/stepwise-ai",
-    "postedAt": "2026-05-07T13:19:45.861Z",
-    "tweetId": "2052377850968416613"
-  },
-  {
-    "id": "universal-text-ui",
-    "scheduleDate": "2026-04-21",
-    "scheduleTime": "17:00",
-    "posted": true,
-    "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "Every dropdown on a dashboard is a question someone predicted you'd ask. Your actual question is almost never one of them.\n\nPostHog replaced their analytics dashboard with a text field. Salesforce did it for CRM — 84% of queries now self-resolve. Cursor did it for code and hit $1B ARR.\n\nThe pattern: a text field backed by an LLM that calls APIs directly. No menus. No navigation. Just ask.\n\nThe dashboard era is ending.\n\nveda.ng/universal-text-ui",
-    "postedAt": "2026-05-09T02:57:12.542Z",
-    "tweetId": "2052945955511562325"
-  },
-  {
-    "id": "agentic-state",
-    "scheduleDate": "2026-04-22",
-    "scheduleTime": "09:00",
-    "posted": true,
-    "image": "scripts/thread-assets/agentic_state.png",
-    "text": "In Estonia, only two government services require you to show up in person: marriages and divorces. Everything else is digital. 99% of public services.\n\nSingapore runs AI across 100,000 public officers. UAE hit 97% AI utilization in government.\n\nThese aren't pilots. They're production systems serving millions.\n\nA baby is born. The system detects it, calculates benefits, deposits money. No form. No queue. No portal. The citizen does nothing.\n\nMost governments still make you download a PDF.\n\nveda.ng/agentic-state",
-    "postedAt": "2026-05-09T12:38:20.652Z",
-    "tweetId": "2053092203044786431"
-  },
-  {
     "id": "rewritten-post-8",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "I used to think ignoring my feelings meant I was mature. \n\nNow I treat emotions as basic signals that tell me what I actually care about.\n\nPaying attention to them is how you grow.",
-    "image": "scripts/thread-assets/linkedin-rewrites/post_8.mp4"
+    "image": "scripts/thread-assets/linkedin-rewrites/post_8.mp4",
+    "postedAt": "2026-05-14T09:09:02.665Z",
+    "tweetId": "2054851471179751916"
   },
   {
     "id": "rewritten-post-9",
