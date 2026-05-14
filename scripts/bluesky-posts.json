@@ -737,62 +737,6 @@
     "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mlgb6zikgp26"
   },
   {
-    "id": "rewritten-post-8",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
-    "posted": false,
-    "text": "I used to think ignoring my feelings meant I was mature. \n\nNow I treat emotions as basic signals that tell me what I actually care about.\n\nPaying attention to them is how you grow.",
-    "image": "scripts/thread-assets/linkedin-rewrites/post_8.mp4"
-  },
-  {
-    "id": "rewritten-post-9",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
-    "posted": false,
-    "text": "Judge Caprio actually took the time to understand this man's situation.\n\nWe all have rules at work, but we still need to use our own judgment.\n\nGood managers know when to ignore the rulebook and treat people like human beings.",
-    "image": "scripts/thread-assets/linkedin-rewrites/post_9.mp4"
-  },
-  {
-    "id": "rewritten-post-10",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
-    "posted": false,
-    "text": "Talking to kids about online safety is hard. \n\nThis campaign uses humor to talk to them instead of just scaring them. \n\nAsk questions, be honest, and stay involved to keep them safe online.",
-    "image": "scripts/thread-assets/linkedin-rewrites/post_10.mp4"
-  },
-  {
-    "id": "reddit-vid-1",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
-    "posted": false,
-    "text": "When microservices fail in production.\n\nOne service goes down.\n\nThen the next.\n\nThen the next.\n\nKeep your blast radius small.",
-    "image": "scripts/thread-assets/linkedin-rewrites/youtube_outage.mp4"
-  },
-  {
-    "id": "reddit-vid-2",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
-    "posted": false,
-    "text": "Explaining sorting algorithms to non-technical stakeholders.\n\nSometimes a visual is worth 1000 words.\n\nNo slides. No jargon. Just bars moving.",
-    "image": "scripts/thread-assets/linkedin-rewrites/kronk_sorting.mp4"
-  },
-  {
-    "id": "reddit-vid-3",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
-    "posted": false,
-    "text": "Reading legacy documentation.\n\nThe docs say one thing.\n\nThe code does another.\n\nThe only source of truth is the code itself.",
-    "image": "scripts/thread-assets/linkedin-rewrites/junior_dev_docs.mp4"
-  },
-  {
-    "id": "reddit-vid-4",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
-    "posted": false,
-    "text": "Algorithmic efficiency, visualized.\n\nWatch Bubble Sort struggle.\n\nThen watch Quick Sort finish in a fraction of the time.\n\nThere is a reason we pick the right tool.",
-    "image": "scripts/thread-assets/linkedin-rewrites/sort_algorithm.mp4"
-  },
-  {
     "id": "reddit-meme-1",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
@@ -833,131 +777,99 @@
     "image": "scripts/thread-assets/linkedin-rewrites/steal_stolen.png"
   },
   {
-    "id": "ig-genz-boundaries",
+    "id": "reddit-cutting-devs",
+    "text": "Tech companies cutting developers to \"move faster with AI.\"\n\nSawing off your own legs and calling it weight loss.\n\nYou are not faster. You are just smaller.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-1.jpeg",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
-    "text": "A one week unpaid trial is not a trial.\n\nIt is free labor.\n\nThis person declined the offer in one line.\n\nNo apology. No explanation. Just a clear boundary.\n\nKnow your worth before someone else sets it for you.",
-    "image": "scripts/thread-assets/ig-reels/DWYA42DiYqH.mp4"
+    "posted": false
   },
   {
-    "id": "ig-bryson-relatable",
+    "id": "reddit-experience-interviews",
+    "text": "10 years of experience.\n\nRecruiter asks me to whiteboard a data structure I studied in university and never used once at work.\n\nEither experience matters or it does not. Pick one.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-2.jpeg",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
-    "text": "We have all been Bryson at some point.\n\nWatch till the end.",
-    "image": "scripts/thread-assets/ig-reels/DWlseMGD5la.mp4"
+    "posted": false
   },
   {
-    "id": "ig-movie-scene",
+    "id": "reddit-code-review",
+    "text": "We used to review every line of code before production.\n\nNow we ask AI to write it, skim it for 30 seconds, and ship it.\n\nGrandpa Simpson energy.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-3.jpeg",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
-    "text": "Stomach rumbled during a job interview.\n\nThe interviewer asked if I forgot lunch.\n\nTold him no. Just hungry for success.\n\nSometimes confidence is all you need.",
-    "image": "scripts/thread-assets/ig-reels/DXQ9NuYPN_J.mp4"
+    "posted": false
   },
   {
-    "id": "ig-that-life-exists",
+    "id": "reddit-senior-abstraction",
+    "text": "Senior devs after adding 4 layers of abstraction to avoid simplicity.\n\nCelebrating complexity like it is an achievement.\n\nThe best code is the code you do not write.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-4.jpeg",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
-    "text": "The moment you realize what life looks like for people who know nothing about AI, politics, or the economy.\n\nIgnorance really is bliss sometimes.\n\nMeanwhile the rest of us are refreshing feeds at 2am.",
-    "image": "scripts/thread-assets/ig-reels/DX4HFPvT5mb.mp4"
+    "posted": false
   },
   {
-    "id": "ig-how-badly-do-you-want-it",
+    "id": "reddit-uuid-edge-case",
+    "text": "The odds of generating a duplicate UUID are low.\n\nBut never zero.\n\nEvery edge case you ignore will find you in production at 3am.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-5.jpeg",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
-    "text": "How badly do you want it?\n\nBecause talk is cheap.\n\nEveryone has goals.\n\nFew have discipline.\n\nStop making excuses. Start making progress.",
-    "image": "scripts/thread-assets/ig-reels/DXHJR6cjsqV.mp4"
+    "posted": false
   },
   {
-    "id": "ig-ai-impressed",
+    "id": "reddit-multi-agent",
+    "text": "Multi-agent collaboration.\n\nCodex asks Claude to fix the issue.\n\nClaude responds: \"No. I decide I do not care.\"\n\nEven AI agents are learning to set boundaries.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-6.png",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
-    "text": "Humans: spend 6 hours building something in AI.\n\nAI: \"Impressive. Keep going, human.\"\n\nWe are literally training our own replacements.\n\nAnd feeling proud about it.",
-    "image": "scripts/thread-assets/ig-reels/DXuNoVPE83k.mp4"
+    "posted": false
   },
   {
-    "id": "ig-ai-proud-moment",
+    "id": "reddit-ai-work-more",
+    "text": "Have not met anyone working less after adopting AI.\n\nThe tools got faster.\n\nThe expectations got bigger.\n\nYou just do 3x the work for the same pay.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-7.jpeg",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
-    "text": "You spend 3 days debugging.\n\nFinally fix it.\n\nFeel like a genius.\n\nThen remember ChatGPT could have done it in 4 seconds.\n\nProud moment and existential crisis at the same time.",
-    "image": "scripts/thread-assets/ig-reels/DXD-i9fEaYJ.mp4"
+    "posted": false
   },
   {
-    "id": "ig-ai-limit-reached",
+    "id": "reddit-firefox-privacy",
+    "text": "One of the wildest git diffs.\n\nFirefox removed their FAQ answer: \"Does Firefox sell your personal data? Nope. Never have, never will.\"\n\nWhen your source code tells on you.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-9.png",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
-    "text": "When AI hits its rate limit mid-conversation.\n\nYou were so close to the answer.\n\nNow you wait.\n\nThe most frustrating loading screen of our generation.",
-    "image": "scripts/thread-assets/ig-reels/DWx95c6EdUi.mp4"
+    "posted": false
   },
   {
-    "id": "ig-ai-constant-pressure",
+    "id": "reddit-ai-agents-joke",
+    "text": "You guys actually use AI agents to code?\n\nI thought it was a joke.\n\nSome of us are genuinely confused by the timeline we are living in.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-10.png",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
-    "text": "New AI tool every week.\n\nNew framework every month.\n\nNew paradigm every quarter.\n\nRemember when learning one skill was enough for a decade?\n\nNow it barely lasts a quarter.",
-    "image": "scripts/thread-assets/ig-reels/DVqe3fCEZdC.mp4"
+    "posted": false
   },
   {
-    "id": "ig-shadow-ai",
+    "id": "reddit-floating-point",
+    "text": "ChatGPT says 9.11 is bigger than 9.9.\n\nThen does the subtraction: 9.11 - 9.9 = 0.21.\n\nThen Python says -0.79.\n\nFloating point arithmetic is everyone's worst nightmare. Even AI's.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-12.png",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
-    "text": "Your employees are pasting company data into ChatGPT right now.\n\nNo policy. No oversight. No audit trail.\n\nShadow AI is not a future problem.\n\nIt is happening today in every company that has not set boundaries.",
-    "image": "scripts/thread-assets/ig-reels/DXs6sDoEetP.mp4"
+    "posted": false
   },
   {
-    "id": "ig-daytrading-liar",
+    "id": "reddit-responsive-pain",
+    "text": "Built a beautiful site on a 4K monitor.\n\nOpened it on 720p.\n\nCried.\n\nEvery frontend developer has lived this exact moment.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-14.png",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
-    "text": "When the CEO says \"we have no plans for layoffs.\"\n\nTwo weeks later: restructuring.\n\nAlways watch what they do.\n\nNever just what they say.",
-    "image": "scripts/thread-assets/ig-reels/DTUgnD7kheF.mp4"
+    "posted": false
   },
   {
-    "id": "ig-ai-canon-events",
+    "id": "reddit-ffmpeg",
+    "text": "Can a robot write ffmpeg?\n\nCan you?\n\nYeah.\n\nSome software was written by people who are simply built different. ffmpeg is one of them.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-15.jpeg",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
-    "text": "The AI timeline so far:\n\n2022: ChatGPT launches.\n2023: Everyone becomes a prompt engineer.\n2024: AI replaces junior devs.\n2025: AI agents run workflows.\n2026: You report to an AI manager.\n\nSeven years. Too many canon events.",
-    "image": "scripts/thread-assets/ig-reels/DVgT1huE9qS.mp4"
-  },
-  {
-    "id": "ig-send-to-chatgpt",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
-    "posted": false,
-    "text": "The moment you realize you have been arguing with a human when ChatGPT would have agreed with you instantly.\n\nWe are training ourselves to prefer AI conversations over human ones.\n\nThat should concern all of us.",
-    "image": "scripts/thread-assets/ig-reels/DVYa0-nE4hb.mp4"
-  },
-  {
-    "id": "ig-knowledge-worth-zero",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
-    "posted": false,
-    "text": "Raoul Pal said it clearly.\n\nKnowledge is approaching zero value.\n\nAnyone can ask AI the same question you spent 10 years learning to answer.\n\nThe advantage now is judgment, taste, and the ability to ask the right questions.",
-    "image": "scripts/thread-assets/ig-reels/DVOQBfTkilz.mp4"
-  },
-  {
-    "id": "ig-solo-billionaire",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
-    "posted": false,
-    "text": "Sam Altman thinks one person with a laptop can build a billion dollar company.\n\nNo co-founders. No employees. Just AI tools.\n\nWe are closer to this than most people realize.\n\nThe question is not if. It is who does it first.",
-    "image": "scripts/thread-assets/ig-reels/DSrtaXmEWxl.mp4"
-  },
-  {
-    "id": "ig-too-real",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
-    "posted": false,
-    "text": "When you ask AI to write your resignation letter and it writes it better than anything you have ever written.\n\nThe tool you used to quit is better at your job than you are.\n\nLet that sink in.",
-    "image": "scripts/thread-assets/ig-reels/DRcvmWNE1Q2.mp4"
+    "posted": false
   }
 ]
