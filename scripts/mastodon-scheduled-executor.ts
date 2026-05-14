@@ -100,7 +100,7 @@ async function main() {
   console.log(`🐘 Mastodon scheduler running at ${todayIST} ${currentTimeIST} IST`);
   console.log(`📋 Total posts: ${posts.length}, Posted: ${posts.filter(p => p.posted).length}`);
 
-  const COOLDOWN_HOURS = 8;
+  const COOLDOWN_HOURS = 7;
   const recentlyPosted = posts.some(p => {
     if (!p.posted || !p.postedAt) return false;
     return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;

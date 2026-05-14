@@ -53,7 +53,8 @@ async function postSingleTweet(text: string, image?: string): Promise<{ success:
       if (!fs.existsSync(absImage)) {
         return { success: false, error: `Image not found: ${absImage} — aborting (will not post text-only)` };
       }
-      const mediaId = await client.v1.uploadMedia(absImage, { mimeType: 'image/png' });
+      const mimeType = absImage.endsWith('.mp4') ? 'video/mp4' : absImage.endsWith('.gif') ? 'image/gif' : 'image/png';
+      const mediaId = await client.v1.uploadMedia(absImage, { mimeType });
       params.media = { media_ids: [mediaId] };
     }
 
@@ -173,7 +174,7 @@ async function main() {
   let modified = false;
 
   // COOLDOWN: max 3 posts/day with 8h gap between each.
-  const COOLDOWN_HOURS = 8;
+  const COOLDOWN_HOURS = 7;
   const recentlyPosted = posts.some(p => {
     if (!p.posted || !p.postedAt) return false;
     return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;

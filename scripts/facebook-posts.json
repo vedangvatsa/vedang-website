@@ -612,97 +612,98 @@
   },
   {
     "id": "rewritten-post-8",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
-    "posted": false,
+    "scheduleDate": "2026-05-11",
+    "scheduleTime": "09:00",
+    "posted": true,
     "text": "I used to think ignoring my feelings meant I was mature. \n\nNow I treat emotions as basic signals that tell me what I actually care about.\n\nPaying attention to them is how you grow.",
     "image": "scripts/thread-assets/linkedin-rewrites/post_8.mp4",
-    "error": "Photo upload failed: 400 {\"error\":{\"message\":\"Invalid parameter\",\"type\":\"OAuthException\",\"code\":100,\"error_subcode\":1366046,\"is_transient\":false,\"error_user_title\":\"Can't read files\",\"error_user_msg\":\"Your photos couldn't be uploaded. Photos should be less than 10 MB and saved as JPG, PNG, GIF, TIFF, HEIF or WebP files.\",\"fbtrace_id\":\"AsRUKZnYqz53XOreKKUMvHS\"}}"
+    "postedAt": "2026-05-14T14:50:18.217Z",
+    "fbPostId": "1296145479162975"
   },
   {
     "id": "rewritten-post-9",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
+    "scheduleDate": "2026-05-11",
+    "scheduleTime": "17:00",
     "posted": false,
     "text": "Judge Caprio actually took the time to understand this man's situation.\n\nWe all have rules at work, but we still need to use our own judgment.\n\nGood managers know when to ignore the rulebook and treat people like human beings.",
     "image": "scripts/thread-assets/linkedin-rewrites/post_9.mp4"
   },
   {
     "id": "rewritten-post-10",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
+    "scheduleDate": "2026-05-12",
+    "scheduleTime": "01:00",
     "posted": false,
     "text": "Talking to kids about online safety is hard. \n\nThis campaign uses humor to talk to them instead of just scaring them. \n\nAsk questions, be honest, and stay involved to keep them safe online.",
     "image": "scripts/thread-assets/linkedin-rewrites/post_10.mp4"
   },
   {
     "id": "reddit-vid-1",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
+    "scheduleDate": "2026-05-12",
+    "scheduleTime": "09:00",
     "posted": false,
     "text": "When microservices fail in production.\n\nOne service goes down.\n\nThen the next.\n\nThen the next.\n\nKeep your blast radius small.",
     "image": "scripts/thread-assets/linkedin-rewrites/youtube_outage.mp4"
   },
   {
     "id": "reddit-vid-2",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
+    "scheduleDate": "2026-05-12",
+    "scheduleTime": "17:00",
     "posted": false,
     "text": "Explaining sorting algorithms to non-technical stakeholders.\n\nSometimes a visual is worth 1000 words.\n\nNo slides. No jargon. Just bars moving.",
     "image": "scripts/thread-assets/linkedin-rewrites/kronk_sorting.mp4"
   },
   {
     "id": "reddit-vid-3",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
+    "scheduleDate": "2026-05-12",
+    "scheduleTime": "01:00",
     "posted": false,
     "text": "Reading legacy documentation.\n\nThe docs say one thing.\n\nThe code does another.\n\nThe only source of truth is the code itself.",
     "image": "scripts/thread-assets/linkedin-rewrites/junior_dev_docs.mp4"
   },
   {
     "id": "reddit-vid-4",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
+    "scheduleDate": "2026-05-13",
+    "scheduleTime": "09:00",
     "posted": false,
     "text": "Algorithmic efficiency, visualized.\n\nWatch Bubble Sort struggle.\n\nThen watch Quick Sort finish in a fraction of the time.\n\nThere is a reason we pick the right tool.",
     "image": "scripts/thread-assets/linkedin-rewrites/sort_algorithm.mp4"
   },
   {
     "id": "reddit-meme-1",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
+    "scheduleDate": "2026-05-13",
+    "scheduleTime": "17:00",
     "posted": false,
     "text": "Business logic vs edge cases.\n\nYour code handles 99% of inputs perfectly.\n\nUsers will always find the 1% you missed.\n\nDesign for failure.",
     "image": "scripts/thread-assets/linkedin-rewrites/game_rules.jpg"
   },
   {
     "id": "reddit-meme-2",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
+    "scheduleDate": "2026-05-13",
+    "scheduleTime": "01:00",
     "posted": false,
     "text": "When product asks for a \"simple feature\".\n\nThe underlying architecture rarely agrees.\n\nNothing is simple once you look under the hood.",
     "image": "scripts/thread-assets/linkedin-rewrites/simple_feature.gif"
   },
   {
     "id": "reddit-meme-3",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
+    "scheduleDate": "2026-05-14",
+    "scheduleTime": "09:00",
     "posted": false,
     "text": "The most important skill for a senior engineer is not knowing the answer.\n\nIt is knowing exactly how to find it.",
     "image": "scripts/thread-assets/linkedin-rewrites/important_skill.jpg"
   },
   {
     "id": "reddit-meme-4",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
+    "scheduleDate": "2026-05-14",
+    "scheduleTime": "17:00",
     "posted": false,
     "text": "When leadership decides to \"help out\" with a little code cleanup right before the release.\n\nPlease. Stop. Helping.",
     "image": "scripts/thread-assets/linkedin-rewrites/manager_cleanup.png"
   },
   {
     "id": "reddit-meme-5",
-    "scheduleDate": "2026-01-01",
-    "scheduleTime": "00:00",
+    "scheduleDate": "2026-05-14",
+    "scheduleTime": "01:00",
     "posted": false,
     "text": "Open source in a nutshell.\n\nWe all build on work done by someone else.\n\nWho probably copied it from a forum post in 2012.",
     "image": "scripts/thread-assets/linkedin-rewrites/steal_stolen.png"

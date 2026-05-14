@@ -52,6 +52,10 @@ async function createSession(): Promise<Session> {
   return { did: data.did, accessJwt: data.accessJwt };
 }
 
+function isVideo(filePath: string): boolean {
+  return /\.(mp4|mov|webm)$/i.test(filePath);
+}
+
 async function uploadImage(session: Session, imagePath: string): Promise<any | null> {
   const absPath = path.isAbsolute(imagePath)
     ? imagePath
@@ -59,6 +63,12 @@ async function uploadImage(session: Session, imagePath: string): Promise<any | n
 
   if (!fs.existsSync(absPath)) {
     console.warn(`  ⚠️ Image not found: ${absPath}`);
+    return null;
+  }
+
+  // AT Protocol doesn't support video uploads — skip video files
+  if (isVideo(absPath)) {
+    console.warn(`  ⚠️ Bluesky doesn't support video uploads, posting text-only`);
     return null;
   }
 
@@ -143,8 +153,8 @@ async function createPost(session: Session, post: BlueskyPost): Promise<string> 
     record.facets = facets;
   }
 
-  // Upload and attach image if present
-  if (post.image) {
+  // Upload and attach image if present (skip video — AT Protocol doesn't support it)
+  if (post.image && !isVideo(post.image)) {
     const blob = await uploadImage(session, post.image);
     if (!blob) {
       throw new Error(`Media upload failed for: ${post.image} — aborting (will not post text-only)`);
@@ -200,7 +210,7 @@ async function main() {
   console.log(`📋 Total posts: ${posts.length}, Posted: ${posts.filter(p => p.posted).length}`);
 
   // COOLDOWN: max 3 posts/day with 8h gap between each.
-  const COOLDOWN_HOURS = 8;
+  const COOLDOWN_HOURS = 7;
   const recentlyPosted = posts.some(p => {
     if (!p.posted || !p.postedAt) return false;
     return (Date.now() - new Date(p.postedAt).getTime()) < COOLDOWN_HOURS * 60 * 60 * 1000;
