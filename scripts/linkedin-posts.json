@@ -888,7 +888,7 @@
   {
     "id": "reddit-vid-1",
     "image": "scripts/thread-assets/linkedin-rewrites/youtube_outage.mp4",
-    "text": "When microservices fail in production. The domino effect is real.\n\nKeep your blast radius small.",
+    "text": "When microservices fail in production.\n\nOne service goes down.\n\nThen the next.\n\nThen the next.\n\nKeep your blast radius small.",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "09:00",
     "posted": false
@@ -896,7 +896,7 @@
   {
     "id": "reddit-vid-2",
     "image": "scripts/thread-assets/linkedin-rewrites/kronk_sorting.mp4",
-    "text": "Explaining sorting algorithms to non-technical stakeholders.\n\nSometimes visual aids are the only way to get the point across.",
+    "text": "Explaining sorting algorithms to non-technical stakeholders.\n\nSometimes a visual is worth 1000 words.\n\nNo slides. No jargon. Just bars moving.",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "17:00",
     "posted": false
@@ -904,7 +904,7 @@
   {
     "id": "reddit-vid-3",
     "image": "scripts/thread-assets/linkedin-rewrites/junior_dev_docs.mp4",
-    "text": "The reality of reading legacy documentation.\n\nThe map is not the territory. The only source of truth is the code itself.",
+    "text": "Reading legacy documentation.\n\nThe docs say one thing.\n\nThe code does another.\n\nThe only source of truth is the code itself.",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "01:00",
     "posted": false
@@ -912,7 +912,7 @@
   {
     "id": "reddit-vid-4",
     "image": "scripts/thread-assets/linkedin-rewrites/sort_algorithm.mp4",
-    "text": "Algorithmic efficiency visualized.\n\nThere is a reason we don't use Bubble Sort in production.",
+    "text": "Algorithmic efficiency, visualized.\n\nWatch Bubble Sort struggle.\n\nThen watch Quick Sort finish in a fraction of the time.\n\nThere is a reason we pick the right tool.",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "09:00",
     "posted": false
@@ -920,7 +920,7 @@
   {
     "id": "reddit-meme-1",
     "image": "scripts/thread-assets/linkedin-rewrites/game_rules.jpg",
-    "text": "Business logic vs Edge cases.\n\nUsers will always find the one input you didn't account for. Design for failure.",
+    "text": "Business logic vs edge cases.\n\nYour code handles 99% of inputs perfectly.\n\nUsers will always find the 1% you missed.\n\nDesign for failure.",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "17:00",
     "posted": false
@@ -928,7 +928,7 @@
   {
     "id": "reddit-meme-2",
     "image": "scripts/thread-assets/linkedin-rewrites/simple_feature.gif",
-    "text": "When product management asks for a \"simple feature\".\n\nThe underlying architecture rarely agrees.",
+    "text": "When product asks for a \"simple feature\".\n\nThe underlying architecture rarely agrees.\n\nNothing is simple once you look under the hood.",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "01:00",
     "posted": false
@@ -936,7 +936,7 @@
   {
     "id": "reddit-meme-3",
     "image": "scripts/thread-assets/linkedin-rewrites/important_skill.jpg",
-    "text": "The most critical skill for a senior engineer isn't knowing the answer.\n\nIt's knowing exactly how to search for it.",
+    "text": "The most important skill for a senior engineer is not knowing the answer.\n\nIt is knowing exactly how to find it.",
     "scheduleDate": "2026-05-14",
     "scheduleTime": "09:00",
     "posted": false
@@ -944,7 +944,7 @@
   {
     "id": "reddit-meme-4",
     "image": "scripts/thread-assets/linkedin-rewrites/manager_cleanup.png",
-    "text": "When leadership decides to \"help out\" by doing a little code cleanup right before the release...",
+    "text": "When leadership decides to \"help out\" with a little code cleanup right before the release.\n\nPlease. Stop. Helping.",
     "scheduleDate": "2026-05-14",
     "scheduleTime": "17:00",
     "posted": false
@@ -952,7 +952,7 @@
   {
     "id": "reddit-meme-5",
     "image": "scripts/thread-assets/linkedin-rewrites/steal_stolen.png",
-    "text": "Open source in a nutshell.\n\nWe all stand on the shoulders of giants (who probably copied it from a forum in 2012).",
+    "text": "Open source in a nutshell.\n\nWe all build on work done by someone else.\n\nWho probably copied it from a forum post in 2012.",
     "scheduleDate": "2026-05-14",
     "scheduleTime": "01:00",
     "posted": false
