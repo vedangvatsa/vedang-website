@@ -157,13 +157,13 @@ function buildBlogMarkdown(post: SocialPost): string {
 
 function runCLI(args: string): string {
   try {
-    const result = execSync(`PARAGRAPH_API_KEY=***REDACTED_PARAGRAPH_KEY*** NODE_NO_WARNINGS=1 paragraph ${args} 2>&1`, {
+    const result = execSync(`PARAGRAPH_API_KEY=${process.env.PARAGRAPH_API_KEY} NODE_NO_WARNINGS=1 paragraph ${args} 2>&1`, {
       cwd: REPO_ROOT,
       timeout: 30000,
       encoding: 'utf-8',
       env: {
         ...process.env,
-        PARAGRAPH_API_KEY: '***REDACTED_PARAGRAPH_KEY***',
+        PARAGRAPH_API_KEY: process.env.PARAGRAPH_API_KEY || '',
         NODE_NO_WARNINGS: '1',
       },
     });

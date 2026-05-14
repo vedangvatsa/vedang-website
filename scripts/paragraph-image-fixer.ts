@@ -20,7 +20,7 @@ const PARAGRAPH_URLS_FILE = path.resolve(REPO_ROOT, 'paragraph-urls.json');
 const IMAGE_CACHE_FILE = path.resolve(REPO_ROOT, 'catbox-urls.json');
 
 const PARAGRAPH_API = 'https://public.api.paragraph.com/api/v1';
-const PARAGRAPH_TOKEN = '***REDACTED_PARAGRAPH_KEY***';
+const PARAGRAPH_TOKEN = process.env.PARAGRAPH_API_KEY || '';
 const LINKEDIN_URL = 'https://linkedin.com/in/vedangvatsa';
 const X_URL = 'https://x.com/vedangvatsa';
 const WEBSITE_URL = 'https://veda.ng';
