@@ -5,6 +5,7 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 import FormData from 'form-data';
 import fetch from 'node-fetch';
+import { triggerBoost } from './smm-boost-trigger.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -278,6 +279,8 @@ async function main() {
   }
 
   if (modified) {
+    
+    try { triggerBoost('linkedin', post.postUri); } catch(e) {}
     fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
     console.log('📝 Updated linkedin-posts.json');
     console.log('::set-output name=modified::true');

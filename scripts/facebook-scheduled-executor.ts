@@ -5,6 +5,7 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 import fetch from 'node-fetch';
 import FormData from 'form-data';
+import { triggerBoost } from './smm-boost-trigger.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -147,7 +148,9 @@ async function main() {
     console.error(`  ❌ Failed: ${err.message}`);
   }
 
-  fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
+  
+    try { triggerBoost('facebook', post.postUri || `https://facebook.com/`); } catch(e) {}
+    fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
   console.log('\n💾 Updated facebook-posts.json');
 }
 

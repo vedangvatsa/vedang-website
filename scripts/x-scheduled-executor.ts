@@ -4,6 +4,7 @@ import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { TwitterApi } from 'twitter-api-v2';
+import { triggerBoost } from './smm-boost-trigger.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -227,7 +228,9 @@ async function main() {
     // Write back to the correct files
     if (fs.existsSync(POSTS_FILE)) {
       const regular = posts.filter(p => p.type !== 'quote' && p.type !== 'reply');
-      fs.writeFileSync(POSTS_FILE, JSON.stringify(regular, null, 2));
+      
+    try { triggerBoost('twitter', `https://twitter.com/vedangvatsa/status/${post.postUri}`); } catch(e) {}
+    fs.writeFileSync(POSTS_FILE, JSON.stringify(regular, null, 2));
     }
     if (fs.existsSync(QUOTE_POSTS_FILE)) {
       const quotes = posts.filter(p => p.type === 'quote');
