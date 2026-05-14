@@ -86,9 +86,38 @@ async function createMediaContainer(imageUrl: string, caption: string): Promise<
   return data.id;
 }
 
-async function publishContainer(containerId: string): Promise<string> {
-  // Wait for container processing
-  await new Promise(r => setTimeout(r, 10000));
+async function createReelsContainer(videoUrl: string, caption: string): Promise<string> {
+  const params = new URLSearchParams({
+    media_type: 'REELS',
+    video_url: videoUrl,
+    caption,
+    access_token: PAGE_TOKEN,
+  });
+
+  const res = await fetch(
+    `https://graph.facebook.com/${API_VERSION}/${IG_ACCOUNT_ID}/media?${params}`,
+    { method: 'POST' }
+  );
+
+  if (!res.ok) throw new Error(`Reels container failed: ${res.status} ${await res.text()}`);
+  
+  const data = await res.json() as any;
+  return data.id;
+}
+
+function getGitHubUrl(localPath: string): string {
+  const relative = localPath.replace(/^\.?\//, '');
+  return `https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/${relative}`;
+}
+
+function isVideo(filePath: string): boolean {
+  return /\.(mp4|mov|webm)$/i.test(filePath);
+}
+
+async function publishContainer(containerId: string, isReels: boolean = false): Promise<string> {
+  // Reels need longer processing (30s vs 10s for images)
+  const waitTime = isReels ? 30000 : 10000;
+  await new Promise(r => setTimeout(r, waitTime));
 
   const res = await fetch(
     `https://graph.facebook.com/${API_VERSION}/${IG_ACCOUNT_ID}/media_publish`,
@@ -161,26 +190,34 @@ async function main() {
   try {
     console.log(`\n📝 Posting: ${post.id}`);
     
-    let imageUrl = post.imageUrl || '';
-    
-    // If local image, upload to get public URL
-    if (!imageUrl && post.image) {
-      console.log('  📤 Uploading image...');
-      imageUrl = await getPublicImageUrl(post.image);
+    const mediaPath = post.imageUrl || post.image || '';
+    let containerId: string;
+    let isReels = false;
+
+    if (mediaPath && isVideo(mediaPath)) {
+      // Video post -> Instagram Reels
+      const videoUrl = mediaPath.startsWith('http') ? mediaPath : getGitHubUrl(mediaPath);
+      console.log(`  🎬 Creating Reels container: ${videoUrl}`);
+      containerId = await createReelsContainer(videoUrl, post.text);
+      isReels = true;
+    } else {
+      // Image post
+      let imageUrl = post.imageUrl || '';
+      if (!imageUrl && post.image) {
+        console.log('  📤 Uploading image...');
+        imageUrl = await getPublicImageUrl(post.image);
+      }
+      if (!imageUrl) {
+        throw new Error('No media available');
+      }
+      console.log('  📦 Creating media container...');
+      containerId = await createMediaContainer(imageUrl, post.text);
     }
 
-    if (!imageUrl) {
-      throw new Error('No image available — Instagram requires an image');
-    }
-
-    // Step 1: Create container
-    console.log('  📦 Creating media container...');
-    const containerId = await createMediaContainer(imageUrl, post.text);
+    const waitLabel = isReels ? '30s' : '10s';
     console.log(`  📦 Container: ${containerId}`);
-
-    // Step 2: Publish
-    console.log('  ⏳ Publishing (10s processing wait)...');
-    const mediaId = await publishContainer(containerId);
+    console.log(`  ⏳ Publishing (${waitLabel} processing wait)...`);
+    const mediaId = await publishContainer(containerId, isReels);
     
     post.posted = true;
     post.postedAt = new Date().toISOString();
