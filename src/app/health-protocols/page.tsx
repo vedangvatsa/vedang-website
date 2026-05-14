@@ -56,17 +56,15 @@ const quickStartRules = [
   'Do less. Most things don\'t work.',
 ];
 
+// Supplements listed here are pills/capsules only. Items consumed as food
+// (Longevity Mix, EVOO, Collagen, Creatine) appear in the Meals section.
 const supplements = [
-  { name: 'Longevity Mix', dose: '1 scoop', purpose: 'Creatine, Ca-AKG, glycine, taurine, electrolytes', source: 'https://www.youtube.com/watch?v=foa9ZhtyrfM&t=118' },
-  { name: 'Collagen Peptides', dose: '11 g', purpose: 'Skin, joint, connective tissue', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
-  { name: 'Extra Virgin Olive Oil', dose: '1 tbsp/meal', purpose: 'Cardiovascular, anti-inflammatory', source: 'https://www.youtube.com/watch?v=D4wxRgJgKGs&t=169' },
   { name: 'Essential Capsules', dose: '2 caps', purpose: 'Vitamin D3, K2, C, minerals', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
   { name: 'Advanced Antioxidants', dose: '1 cap', purpose: 'Lycopene, astaxanthin, fisetin', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
   { name: 'Ashwagandha + Rhodiola', dose: '1 cap', purpose: 'Cortisol, stress management', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
   { name: 'Omega-3 (EPA/DHA/DPA)', dose: '800 mg', purpose: 'Heart, brain, inflammation', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
   { name: 'NR or NMN', dose: '450–500 mg', purpose: 'NAD+ replenishment', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
   { name: 'Proferrin (Heme Iron)', dose: '10.5 mg', purpose: 'Iron optimization', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
-  { name: 'Creatine', dose: '7.5 g total', purpose: 'Muscle, brain, energy', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
 ];
 
 const meals = [
@@ -75,17 +73,17 @@ const meals = [
   { time: '~11 AM', name: 'Super Veggie', items: 'Black lentils · Broccoli · Cauliflower · Mushrooms · Garlic · Ginger · EVOO', source: 'https://www.youtube.com/watch?v=0bUieoJ6FI4&t=49' },
 ];
 
+// Sleep habits here expand on Quick Start rules with specifics Bryan gives
+// in dedicated sleep videos. No duplication of the Quick Start wording.
 const sleepHabits = [
-  { habit: 'You are a professional sleeper. Make sleep priority #1.', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep' },
-  { habit: '30–60 min wind-down: reading, warm bath, breathing.', source: 'https://www.youtube.com/watch?v=LPzRwzivklA&t=2460' },
-  { habit: 'Morning light within 15–30 min of waking.', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep' },
-  { habit: 'Dim lights 1–2 hours before bed. Use warm lighting.', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep' },
-  { habit: 'Bedroom: 65–68°F. Cool, dark, quiet.', source: 'https://www.youtube.com/watch?v=Wk9p3dhMYdk&t=358' },
-  { habit: 'Consistent bedtime. 7–9 hours. Even on weekends.', source: 'https://www.youtube.com/watch?v=uq1Vzi-52dA&t=128' },
-  { habit: 'Last meal 4+ hours before bed.', source: 'https://www.youtube.com/watch?v=LPzRwzivklA&t=2421' },
-  { habit: 'No caffeine within 8–10 hours of sleep.', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep' },
-  { habit: 'Lower resting heart rate before bed — the #1 metric.', source: 'https://www.youtube.com/watch?v=ev01uC8uUXI&t=610' },
-  { habit: 'Track sleep data. Adjust based on what works.', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep' },
+  { habit: 'Reframe your identity: "I am a professional sleeper."', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep' },
+  { habit: '30–60 min wind-down routine: reading, warm bath, breathing exercises.', source: 'https://www.youtube.com/watch?v=LPzRwzivklA&t=2460' },
+  { habit: 'Regulate evening light: warm/red tones only after sunset. Full blackout in bedroom.', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep' },
+  { habit: 'Temperature-controlled mattress. Bedroom at 65–68°F (18–20°C).', source: 'https://www.youtube.com/watch?v=Wk9p3dhMYdk&t=358' },
+  { habit: 'Reserve bed for sleep only — no work, no scrolling.', source: 'https://www.youtube.com/watch?v=LPzRwzivklA&t=2782' },
+  { habit: 'Lower resting heart rate before bed: eat earlier, avoid alcohol, reduce stress.', source: 'https://www.youtube.com/watch?v=ev01uC8uUXI&t=610' },
+  { habit: 'Use earplugs or a white noise machine. Minimize disturbances.', source: 'https://www.youtube.com/watch?v=LPzRwzivklA&t=2656' },
+  { habit: 'Track sleep with a wearable. Use data to make adjustments.', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep' },
 ];
 
 const faqItems = [
@@ -271,7 +269,7 @@ export default function HealthProtocolsPage() {
             <h2 className="text-2xl font-semibold tracking-tight">Supplements</h2>
             <Src href="https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine">official source</Src>
           </div>
-          <p className="text-muted-foreground text-sm mb-8">Taken with breakfast. Sourced from his official daily routine page.</p>
+          <p className="text-muted-foreground text-sm mb-8">Pills and capsules taken with breakfast. Food-based supplements (Longevity Mix, EVOO, Collagen, Creatine) are listed in the Nutrition section above.</p>
 
           <div className="space-y-px rounded-xl overflow-hidden border">
             {supplements.map(supp => (
@@ -294,7 +292,7 @@ export default function HealthProtocolsPage() {
             <Src href="https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep">official source</Src>
           </div>
           <p className="text-muted-foreground text-sm mb-8">
-            &ldquo;Sleep is the best performance-enhancing drug in the world.&rdquo;
+            Expanding on Quick Start rules 0–4 and 18–19. These are the specific techniques Bryan describes in his sleep videos.
           </p>
 
           <div className="space-y-px rounded-xl overflow-hidden border">
@@ -305,15 +303,6 @@ export default function HealthProtocolsPage() {
                 <Src href={item.source} />
               </div>
             ))}
-          </div>
-
-          <div className="mt-6 p-5 rounded-xl border bg-card">
-            <p className="font-medium text-sm">The #1 Metric</p>
-            <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
-              Lower your resting heart rate before bed. When RHR is low, sleep is better.
-              When sleep is better, you exercise and eat well. A virtuous cycle.{' '}
-              <Src href="https://www.youtube.com/watch?v=ev01uC8uUXI&t=610">Bryan explains</Src>
-            </p>
           </div>
         </section>
 
