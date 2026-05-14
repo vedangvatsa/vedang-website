@@ -809,7 +809,8 @@
     "scheduleTime": "00:00",
     "posted": false,
     "text": "Judge Caprio actually took the time to understand this man's situation.\n\nWe all have rules at work, but we still need to use our own judgment.\n\nGood managers know when to ignore the rulebook and treat people like human beings.",
-    "image": "scripts/thread-assets/linkedin-rewrites/post_9.mp4"
+    "image": "scripts/thread-assets/linkedin-rewrites/post_9.mp4",
+    "error": "Request failed with code 401 - Invalid or expired token (Twitter code 89)"
   },
   {
     "id": "rewritten-post-10",
