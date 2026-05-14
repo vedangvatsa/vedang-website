@@ -7,11 +7,22 @@
 import http from 'http';
 import { URL } from 'url';
 import open from 'open';
+import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const THREADS_APP_ID = '929865946702224';
-const THREADS_APP_SECRET = '***REDACTED_THREADS_SECRET***';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.resolve(__dirname, '..', '.env.local') });
+
+const THREADS_APP_ID = process.env.THREADS_APP_ID || '929865946702224';
+const THREADS_APP_SECRET = process.env.THREADS_APP_SECRET || '';
 const REDIRECT_URI = 'https://veda.ng/api/auth/threads/callback';
 const PORT = 3847;
+
+if (!THREADS_APP_SECRET) {
+  console.error('❌ THREADS_APP_SECRET not set in .env.local');
+  process.exit(1);
+}
 
 // Try localhost redirect instead
 const LOCAL_REDIRECT = `http://localhost:${PORT}/callback`;
