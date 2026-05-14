@@ -261,73 +261,73 @@ function buildOrderQueue(platform: string, context?: string): QueuedOrder[] {
     case 'twitter':
       // Algo: impression-to-engagement ratio. Views first, then engagement.
       if (q.views > 0) queue.push({ action: 'Views', ...svc.views, qty: q.views, delayMin: 0, dripRuns: 3, dripInterval: 20 });
-      queue.push({ action: 'Likes', ...svc.likes, qty: q.likes, delayMin: 10, dripRuns: 4, dripInterval: 15 });
-      if (q.shares > 0) queue.push({ action: 'Retweets', ...svc.shares, qty: q.shares, delayMin: 25 });
-      if (q.saves > 0) queue.push({ action: 'Bookmarks', ...svc.saves, qty: q.saves, delayMin: 35 });
+      queue.push({ action: 'Likes', ...svc.likes, qty: q.likes, delayMin: 2, dripRuns: 4, dripInterval: 15 });
+      if (q.shares > 0) queue.push({ action: 'Retweets', ...svc.shares, qty: q.shares, delayMin: 6 });
+      if (q.saves > 0) queue.push({ action: 'Bookmarks', ...svc.saves, qty: q.saves, delayMin: 1 });
       break;
 
     case 'linkedin':
       // Algo: comments > reactions > shares. Reaction variety matters.
       if (q.views > 0) queue.push({ action: 'Views', ...svc.views, qty: q.views, delayMin: 0 });
-      queue.push({ action: 'Likes', ...svc.likes, qty: q.likes, delayMin: 5, dripRuns: 3, dripInterval: 20 });
+      queue.push({ action: 'Likes', ...svc.likes, qty: q.likes, delayMin: 2, dripRuns: 3, dripInterval: 20 });
       // Split extra reactions into Insightful (60%) and Celebrate (40%)
       if (q.extraReactions > 0) {
         const insightful = Math.round(q.extraReactions * 0.6);
         const celebrate = q.extraReactions - insightful;
-        queue.push({ action: 'Insightful 💡', ...svc.insightful, qty: insightful, delayMin: 10 });
-        if (celebrate > 0) queue.push({ action: 'Celebrate 👏', ...svc.celebrate, qty: celebrate, delayMin: 15 });
+        queue.push({ action: 'Insightful 💡', ...svc.insightful, qty: insightful, delayMin: 2 });
+        if (celebrate > 0) queue.push({ action: 'Celebrate 👏', ...svc.celebrate, qty: celebrate, delayMin: 4 });
       }
       if (q.comments > 0) {
         const commentTexts = pickComments(q.comments, context);
-        queue.push({ action: 'Comments', ...svc.comments, qty: q.comments, delayMin: 30, comments: commentTexts });
+        queue.push({ action: 'Comments', ...svc.comments, qty: q.comments, delayMin: 7, comments: commentTexts });
       }
-      if (q.shares > 0) queue.push({ action: 'Shares', ...svc.shares, qty: q.shares, delayMin: 45 });
+      if (q.shares > 0) queue.push({ action: 'Shares', ...svc.shares, qty: q.shares, delayMin: 10 });
       break;
 
     case 'facebook':
       // Algo: shares > reactions > comments > watch time
       if (q.views > 0) queue.push({ action: 'Views', ...svc.views, qty: q.views, delayMin: 0 });
-      queue.push({ action: 'Likes 👍', ...svc.likes, qty: q.likes, delayMin: 3 });
+      queue.push({ action: 'Likes 👍', ...svc.likes, qty: q.likes, delayMin: 1 });
       if (q.extraReactions > 0) {
         const love = Math.round(q.extraReactions * 0.6);
         const wow = q.extraReactions - love;
-        queue.push({ action: 'Love ❤️', ...svc.loveReact, qty: love, delayMin: 8 });
-        if (wow > 0) queue.push({ action: 'Wow 😲', ...svc.wowReact, qty: wow, delayMin: 12 });
+        queue.push({ action: 'Love ❤️', ...svc.loveReact, qty: love, delayMin: 1 });
+        if (wow > 0) queue.push({ action: 'Wow 😲', ...svc.wowReact, qty: wow, delayMin: 4 });
       }
-      if (q.shares > 0) queue.push({ action: 'Shares', ...svc.shares, qty: q.shares, delayMin: 20 });
+      if (q.shares > 0) queue.push({ action: 'Shares', ...svc.shares, qty: q.shares, delayMin: 2 });
       break;
 
     case 'instagram':
       // Algo: saves > shares > likes. Saves are the secret weapon.
       if (q.saves > 0) queue.push({ action: 'Saves', ...svc.saves, qty: q.saves, delayMin: 0 });
       if (q.views > 0) queue.push({ action: 'Views', ...svc.views, qty: q.views, delayMin: 2 });
-      queue.push({ action: 'Likes', ...svc.likes, qty: q.likes, delayMin: 10, dripRuns: 4, dripInterval: 30 });
-      if (q.shares > 0) queue.push({ action: 'Shares', ...svc.shares, qty: q.shares, delayMin: 20 });
+      queue.push({ action: 'Likes', ...svc.likes, qty: q.likes, delayMin: 2, dripRuns: 4, dripInterval: 30 });
+      if (q.shares > 0) queue.push({ action: 'Shares', ...svc.shares, qty: q.shares, delayMin: 2 });
       break;
 
     case 'telegram':
       if (q.views > 0) queue.push({ action: 'Views', ...svc.views, qty: q.views, delayMin: 0 });
-      queue.push({ action: 'Reactions', ...svc.reactions, qty: q.likes, delayMin: 5 });
+      queue.push({ action: 'Reactions', ...svc.reactions, qty: q.likes, delayMin: 2 });
       break;
 
     case 'threads':
       queue.push({ action: 'Likes', ...svc.likes, qty: q.likes, delayMin: 0, dripRuns: 3, dripInterval: 10 });
-      if (q.shares > 0) queue.push({ action: 'Shares', ...svc.shares, qty: q.shares, delayMin: 15 });
+      if (q.shares > 0) queue.push({ action: 'Shares', ...svc.shares, qty: q.shares, delayMin: 4 });
       break;
 
     case 'bluesky':
       queue.push({ action: 'Likes', ...svc.likes, qty: q.likes, delayMin: 0, dripRuns: 3, dripInterval: 15 });
-      if (q.shares > 0) queue.push({ action: 'Boosts', ...svc.boosts, qty: q.shares, delayMin: 15 });
+      if (q.shares > 0) queue.push({ action: 'Boosts', ...svc.boosts, qty: q.shares, delayMin: 4 });
       break;
 
     case 'tumblr':
       queue.push({ action: 'Likes', ...svc.likes, qty: q.likes, delayMin: 0 });
-      if (q.shares > 0) queue.push({ action: 'Reblogs', ...svc.reblogs, qty: q.shares, delayMin: 15 });
+      if (q.shares > 0) queue.push({ action: 'Reblogs', ...svc.reblogs, qty: q.shares, delayMin: 4 });
       break;
 
     case 'reddit':
       // Reddit is HIGH RISK. Keep quantities tiny, drip very slowly.
-      queue.push({ action: 'Upvotes', ...svc.upvotes, qty: q.likes, delayMin: 5, dripRuns: 3, dripInterval: 30 });
+      queue.push({ action: 'Upvotes', ...svc.upvotes, qty: q.likes, delayMin: 2, dripRuns: 3, dripInterval: 30 });
       break;
 
     case 'tiktok':
@@ -336,8 +336,8 @@ function buildOrderQueue(platform: string, context?: string): QueuedOrder[] {
       // Views create the base. Likes confirm quality.
       if (q.saves > 0) queue.push({ action: 'Saves', ...svc.saves, qty: q.saves, delayMin: 0 });
       if (q.views > 0) queue.push({ action: 'Views', ...svc.views, qty: q.views, delayMin: 2 });
-      queue.push({ action: 'Likes', ...svc.likes, qty: q.likes, delayMin: 8, dripRuns: 3, dripInterval: 20 });
-      if (q.shares > 0) queue.push({ action: 'Shares', ...svc.shares, qty: q.shares, delayMin: 15 });
+      queue.push({ action: 'Likes', ...svc.likes, qty: q.likes, delayMin: 1, dripRuns: 3, dripInterval: 20 });
+      if (q.shares > 0) queue.push({ action: 'Shares', ...svc.shares, qty: q.shares, delayMin: 4 });
       break;
   }
 
