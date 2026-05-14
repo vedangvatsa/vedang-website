@@ -820,5 +820,257 @@
     "text": "In Estonia, only two government services require you to show up in person: marriages and divorces. Everything else is digital. 99% of public services.\n\nSingapore runs AI across 100,000 public officers. UAE hit 97% AI utilization in government.\n\nThese aren't pilots. They're production systems serving millions.\n\nA baby is born. The system detects it, calculates benefits, deposits money. No form. No queue. No portal. The citizen does nothing.\n\nMost governments still make you download a PDF.\n\nveda.ng/agentic-state",
     "postedAt": "2026-05-09T12:38:20.652Z",
     "tweetId": "2053092203044786431"
+  },
+  {
+    "id": "rewritten-post-8",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "I used to think ignoring my feelings meant I was mature. \n\nNow I treat emotions as basic signals that tell me what I actually care about.\n\nPaying attention to them is how you grow.",
+    "image": "scripts/thread-assets/linkedin-rewrites/post_8.mp4"
+  },
+  {
+    "id": "rewritten-post-9",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "Judge Caprio actually took the time to understand this man's situation.\n\nWe all have rules at work, but we still need to use our own judgment.\n\nGood managers know when to ignore the rulebook and treat people like human beings.",
+    "image": "scripts/thread-assets/linkedin-rewrites/post_9.mp4"
+  },
+  {
+    "id": "rewritten-post-10",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "Talking to kids about online safety is hard. \n\nThis campaign uses humor to talk to them instead of just scaring them. \n\nAsk questions, be honest, and stay involved to keep them safe online.",
+    "image": "scripts/thread-assets/linkedin-rewrites/post_10.mp4"
+  },
+  {
+    "id": "reddit-vid-1",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "When microservices fail in production.\n\nOne service goes down.\n\nThen the next.\n\nThen the next.\n\nKeep your blast radius small.",
+    "image": "scripts/thread-assets/linkedin-rewrites/youtube_outage.mp4"
+  },
+  {
+    "id": "reddit-vid-2",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "Explaining sorting algorithms to non-technical stakeholders.\n\nSometimes a visual is worth 1000 words.\n\nNo slides. No jargon. Just bars moving.",
+    "image": "scripts/thread-assets/linkedin-rewrites/kronk_sorting.mp4"
+  },
+  {
+    "id": "reddit-vid-3",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "Reading legacy documentation.\n\nThe docs say one thing.\n\nThe code does another.\n\nThe only source of truth is the code itself.",
+    "image": "scripts/thread-assets/linkedin-rewrites/junior_dev_docs.mp4"
+  },
+  {
+    "id": "reddit-vid-4",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "Algorithmic efficiency, visualized.\n\nWatch Bubble Sort struggle.\n\nThen watch Quick Sort finish in a fraction of the time.\n\nThere is a reason we pick the right tool.",
+    "image": "scripts/thread-assets/linkedin-rewrites/sort_algorithm.mp4"
+  },
+  {
+    "id": "reddit-meme-1",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "Business logic vs edge cases.\n\nYour code handles 99% of inputs perfectly.\n\nUsers will always find the 1% you missed.\n\nDesign for failure.",
+    "image": "scripts/thread-assets/linkedin-rewrites/game_rules.jpg"
+  },
+  {
+    "id": "reddit-meme-2",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "When product asks for a \"simple feature\".\n\nThe underlying architecture rarely agrees.\n\nNothing is simple once you look under the hood.",
+    "image": "scripts/thread-assets/linkedin-rewrites/simple_feature.gif"
+  },
+  {
+    "id": "reddit-meme-3",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "The most important skill for a senior engineer is not knowing the answer.\n\nIt is knowing exactly how to find it.",
+    "image": "scripts/thread-assets/linkedin-rewrites/important_skill.jpg"
+  },
+  {
+    "id": "reddit-meme-4",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "When leadership decides to \"help out\" with a little code cleanup right before the release.\n\nPlease. Stop. Helping.",
+    "image": "scripts/thread-assets/linkedin-rewrites/manager_cleanup.png"
+  },
+  {
+    "id": "reddit-meme-5",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "Open source in a nutshell.\n\nWe all build on work done by someone else.\n\nWho probably copied it from a forum post in 2012.",
+    "image": "scripts/thread-assets/linkedin-rewrites/steal_stolen.png"
+  },
+  {
+    "id": "ig-genz-boundaries",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "A one week unpaid trial is not a trial.\n\nIt is free labor.\n\nThis person declined the offer in one line.\n\nNo apology. No explanation. Just a clear boundary.\n\nKnow your worth before someone else sets it for you.",
+    "image": "scripts/thread-assets/ig-reels/DWYA42DiYqH.mp4"
+  },
+  {
+    "id": "ig-bryson-relatable",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "We have all been Bryson at some point.\n\nWatch till the end.",
+    "image": "scripts/thread-assets/ig-reels/DWlseMGD5la.mp4"
+  },
+  {
+    "id": "ig-movie-scene",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "Stomach rumbled during a job interview.\n\nThe interviewer asked if I forgot lunch.\n\nTold him no. Just hungry for success.\n\nSometimes confidence is all you need.",
+    "image": "scripts/thread-assets/ig-reels/DXQ9NuYPN_J.mp4"
+  },
+  {
+    "id": "ig-that-life-exists",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "The moment you realize what life looks like for people who know nothing about AI, politics, or the economy.\n\nIgnorance really is bliss sometimes.\n\nMeanwhile the rest of us are refreshing feeds at 2am.",
+    "image": "scripts/thread-assets/ig-reels/DX4HFPvT5mb.mp4"
+  },
+  {
+    "id": "ig-how-badly-do-you-want-it",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "How badly do you want it?\n\nBecause talk is cheap.\n\nEveryone has goals.\n\nFew have discipline.\n\nStop making excuses. Start making progress.",
+    "image": "scripts/thread-assets/ig-reels/DXHJR6cjsqV.mp4"
+  },
+  {
+    "id": "ig-ai-impressed",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "Humans: spend 6 hours building something in AI.\n\nAI: \"Impressive. Keep going, human.\"\n\nWe are literally training our own replacements.\n\nAnd feeling proud about it.",
+    "image": "scripts/thread-assets/ig-reels/DXuNoVPE83k.mp4"
+  },
+  {
+    "id": "ig-ai-proud-moment",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "You spend 3 days debugging.\n\nFinally fix it.\n\nFeel like a genius.\n\nThen remember ChatGPT could have done it in 4 seconds.\n\nProud moment and existential crisis at the same time.",
+    "image": "scripts/thread-assets/ig-reels/DXD-i9fEaYJ.mp4"
+  },
+  {
+    "id": "ig-ai-limit-reached",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "When AI hits its rate limit mid-conversation.\n\nYou were so close to the answer.\n\nNow you wait.\n\nThe most frustrating loading screen of our generation.",
+    "image": "scripts/thread-assets/ig-reels/DWx95c6EdUi.mp4"
+  },
+  {
+    "id": "ig-ai-constant-pressure",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "New AI tool every week.\n\nNew framework every month.\n\nNew paradigm every quarter.\n\nRemember when learning one skill was enough for a decade?\n\nNow it barely lasts a quarter.",
+    "image": "scripts/thread-assets/ig-reels/DVqe3fCEZdC.mp4"
+  },
+  {
+    "id": "ig-shadow-ai",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "Your employees are pasting company data into ChatGPT right now.\n\nNo policy. No oversight. No audit trail.\n\nShadow AI is not a future problem.\n\nIt is happening today in every company that has not set boundaries.",
+    "image": "scripts/thread-assets/ig-reels/DXs6sDoEetP.mp4"
+  },
+  {
+    "id": "ig-daytrading-liar",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "When the CEO says \"we have no plans for layoffs.\"\n\nTwo weeks later: restructuring.\n\nAlways watch what they do.\n\nNever just what they say.",
+    "image": "scripts/thread-assets/ig-reels/DTUgnD7kheF.mp4"
+  },
+  {
+    "id": "ig-ai-canon-events",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "The AI timeline so far:\n\n2022: ChatGPT launches.\n2023: Everyone becomes a prompt engineer.\n2024: AI replaces junior devs.\n2025: AI agents run workflows.\n2026: You report to an AI manager.\n\nSeven years. Too many canon events.",
+    "image": "scripts/thread-assets/ig-reels/DVgT1huE9qS.mp4"
+  },
+  {
+    "id": "ig-send-to-chatgpt",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "The moment you realize you have been arguing with a human when ChatGPT would have agreed with you instantly.\n\nWe are training ourselves to prefer AI conversations over human ones.\n\nThat should concern all of us.",
+    "image": "scripts/thread-assets/ig-reels/DVYa0-nE4hb.mp4"
+  },
+  {
+    "id": "ig-knowledge-worth-zero",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "Raoul Pal said it clearly.\n\nKnowledge is approaching zero value.\n\nAnyone can ask AI the same question you spent 10 years learning to answer.\n\nThe advantage now is judgment, taste, and the ability to ask the right questions.",
+    "image": "scripts/thread-assets/ig-reels/DVOQBfTkilz.mp4"
+  },
+  {
+    "id": "ig-solo-billionaire",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "Sam Altman thinks one person with a laptop can build a billion dollar company.\n\nNo co-founders. No employees. Just AI tools.\n\nWe are closer to this than most people realize.\n\nThe question is not if. It is who does it first.",
+    "image": "scripts/thread-assets/ig-reels/DSrtaXmEWxl.mp4"
+  },
+  {
+    "id": "ig-too-real",
+    "type": "single",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "When you ask AI to write your resignation letter and it writes it better than anything you have ever written.\n\nThe tool you used to quit is better at your job than you are.\n\nLet that sink in.",
+    "image": "scripts/thread-assets/ig-reels/DRcvmWNE1Q2.mp4"
   }
 ]
