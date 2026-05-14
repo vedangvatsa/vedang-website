@@ -21,6 +21,11 @@ const AI_TOPICS = {
 };
 
 export function RelatedEssays({ currentSlug }: { currentSlug: string }) {
+  // Do not show related essays at the bottom of legal pages
+  if (currentSlug === 'privacy' || currentSlug === 'terms') {
+    return null;
+  }
+
   // Get related essays based on topic mapping, fallback to recent essays
   const relatedSlugs = AI_TOPICS[currentSlug as keyof typeof AI_TOPICS] || [];
   
@@ -31,7 +36,12 @@ export function RelatedEssays({ currentSlug }: { currentSlug: string }) {
   // If not enough related essays, fill with recent essays
   if (relatedEssays.length < 3) {
     const otherEssays = essays
-      .filter(essay => essay.slug !== currentSlug && !relatedSlugs.includes(essay.slug))
+      .filter(essay => 
+        essay.slug !== currentSlug && 
+        !relatedSlugs.includes(essay.slug) &&
+        essay.slug !== 'privacy' &&
+        essay.slug !== 'terms'
+      )
       .slice(0, 3 - relatedEssays.length);
     relatedEssays = [...relatedEssays, ...otherEssays];
   }
