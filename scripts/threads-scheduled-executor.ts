@@ -66,9 +66,38 @@ async function createImageContainer(text: string, imageUrl: string): Promise<str
   return data.id;
 }
 
-async function publishContainer(containerId: string): Promise<string> {
-  // Wait for server to process the container
-  await new Promise(r => setTimeout(r, 15000));
+async function createVideoContainer(text: string, videoUrl: string): Promise<string> {
+  const params = new URLSearchParams({
+    media_type: 'VIDEO',
+    text,
+    video_url: videoUrl,
+    access_token: THREADS_TOKEN,
+  });
+
+  const res = await fetch(
+    `https://graph.threads.net/v1.0/${THREADS_USER_ID}/threads?${params}`,
+    { method: 'POST' }
+  );
+
+  if (!res.ok) throw new Error(`Video container failed: ${res.status} ${await res.text()}`);
+  const data = await res.json() as any;
+  return data.id;
+}
+
+function getPublicUrl(localPath: string): string {
+  // Convert local repo paths to raw GitHub URLs (repo is public)
+  const relative = localPath.replace(/^\.?\//, '');
+  return `https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/${relative}`;
+}
+
+function isVideo(filePath: string): boolean {
+  return /\.(mp4|mov|webm)$/i.test(filePath);
+}
+
+async function publishContainer(containerId: string, isVideoPost: boolean = false): Promise<string> {
+  // Videos need longer processing time (30s vs 15s for images)
+  const waitTime = isVideoPost ? 30000 : 15000;
+  await new Promise(r => setTimeout(r, waitTime));
 
   const params = new URLSearchParams({
     creation_id: containerId,
@@ -132,18 +161,29 @@ async function main() {
   try {
     console.log(`\n📝 Posting: ${post.id}`);
     let containerId: string;
+    let isVideoPost = false;
 
-    if (post.imageUrl) {
-      console.log('  📦 Creating image container...');
-      containerId = await createImageContainer(post.text, post.imageUrl);
+    // Resolve media URL: use imageUrl if set, otherwise generate from local path
+    const mediaPath = post.imageUrl || post.image;
+
+    if (mediaPath && isVideo(mediaPath)) {
+      const videoUrl = mediaPath.startsWith('http') ? mediaPath : getPublicUrl(mediaPath);
+      console.log(`  🎬 Creating video container: ${videoUrl}`);
+      containerId = await createVideoContainer(post.text, videoUrl);
+      isVideoPost = true;
+    } else if (mediaPath) {
+      const imgUrl = mediaPath.startsWith('http') ? mediaPath : getPublicUrl(mediaPath);
+      console.log(`  📷 Creating image container: ${imgUrl}`);
+      containerId = await createImageContainer(post.text, imgUrl);
     } else {
       console.log('  📦 Creating text container...');
       containerId = await createTextContainer(post.text);
     }
 
+    const waitLabel = isVideoPost ? '30s' : '15s';
     console.log(`  📦 Container: ${containerId}`);
-    console.log('  ⏳ Publishing (15s processing wait)...');
-    const mediaId = await publishContainer(containerId);
+    console.log(`  ⏳ Publishing (${waitLabel} processing wait)...`);
+    const mediaId = await publishContainer(containerId, isVideoPost);
 
     post.posted = true;
     post.postedAt = new Date().toISOString();
