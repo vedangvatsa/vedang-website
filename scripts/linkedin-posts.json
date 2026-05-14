@@ -855,9 +855,11 @@
     "id": "rewritten-post-7",
     "scheduleDate": "2026-05-11",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/linkedin-rewrites/post_7.mp4",
-    "text": "Getting triggered drains your energy. \n\nYou can learn to pause and respond instead of reacting out of anger. \n\nThis video shows exactly how to stay calm during difficult moments."
+    "text": "Getting triggered drains your energy. \n\nYou can learn to pause and respond instead of reacting out of anger. \n\nThis video shows exactly how to stay calm during difficult moments.",
+    "postedAt": "2026-05-14T04:46:57.488Z",
+    "postId": "urn:li:ugcPost:7460551203597291520"
   },
   {
     "id": "rewritten-post-8",
