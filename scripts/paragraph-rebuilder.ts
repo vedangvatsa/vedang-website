@@ -24,7 +24,7 @@ const IMAGE_CACHE_FILE = path.resolve(REPO_ROOT, 'catbox-urls.json');
 const TEMP_DIR = '/tmp/paragraph-posts';
 
 const API_BASE = 'https://public.api.paragraph.com/api/v1';
-const TOKEN = '***REDACTED_PARAGRAPH_KEY***';
+const TOKEN = process.env.PARAGRAPH_API_KEY || '';
 const HEADERS = { 'Authorization': `Bearer ${TOKEN}`, 'Content-Type': 'application/json' };
 
 const LINKEDIN_URL = 'https://linkedin.com/in/vedangvatsa';
