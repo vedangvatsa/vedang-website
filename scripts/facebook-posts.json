@@ -611,43 +611,13 @@
     "fbPostId": "1785048661795414_1261966102780098"
   },
   {
-    "id": "stepwise-ai",
-    "scheduleDate": "2026-04-21",
-    "scheduleTime": "09:00",
-    "posted": true,
-    "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Klarna automated customer service. Saved $60M. Then satisfaction collapsed and they reversed it.\n\nThe failure was sequence, not technology. They went straight for the hardest problem. Companies that start with one boring, repetitive task — invoice matching, email triage — see payback in three months.\n\n70% of big-bang AI deployments fail. Discipline beats ambition.\n\nveda.ng/stepwise-ai",
-    "postedAt": "2026-05-07T13:19:56.591Z",
-    "fbPostId": "1785048661795414_1276200208023354"
-  },
-  {
-    "id": "universal-text-ui",
-    "scheduleDate": "2026-04-21",
-    "scheduleTime": "17:00",
-    "posted": true,
-    "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "Every dropdown on a dashboard exists because someone predicted your question. Your actual question is almost never one of them.\n\nPostHog replaced analytics dashboards with a text field. Salesforce did it for CRM — 84% self-resolution. Cursor did it for code — $1B ARR.\n\nThe pattern: text field + LLM + direct API calls. No menus. No navigation.\n\nveda.ng/universal-text-ui",
-    "postedAt": "2026-05-09T02:59:07.507Z",
-    "fbPostId": "1785048661795414_1277501427893232"
-  },
-  {
-    "id": "agentic-state",
-    "scheduleDate": "2026-04-22",
-    "scheduleTime": "09:00",
-    "posted": true,
-    "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia digitized 99% of public services. Only marriages and divorces require showing up in person.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government.\n\nBaby born? The system detects it, calculates benefits, deposits money. No form. No queue. No portal.\n\nMost governments still make you download a PDF.\n\nveda.ng/agentic-state",
-    "error": "Photo upload failed: 500 {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}",
-    "postedAt": "2026-05-10T01:20:15.632Z",
-    "fbPostId": "1785048661795414_1278273427816032"
-  },
-  {
     "id": "rewritten-post-8",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
     "posted": false,
     "text": "I used to think ignoring my feelings meant I was mature. \n\nNow I treat emotions as basic signals that tell me what I actually care about.\n\nPaying attention to them is how you grow.",
-    "image": "scripts/thread-assets/linkedin-rewrites/post_8.mp4"
+    "image": "scripts/thread-assets/linkedin-rewrites/post_8.mp4",
+    "error": "Photo upload failed: 400 {\"error\":{\"message\":\"Invalid parameter\",\"type\":\"OAuthException\",\"code\":100,\"error_subcode\":1366046,\"is_transient\":false,\"error_user_title\":\"Can't read files\",\"error_user_msg\":\"Your photos couldn't be uploaded. Photos should be less than 10 MB and saved as JPG, PNG, GIF, TIFF, HEIF or WebP files.\",\"fbtrace_id\":\"AsRUKZnYqz53XOreKKUMvHS\"}}"
   },
   {
     "id": "rewritten-post-9",
