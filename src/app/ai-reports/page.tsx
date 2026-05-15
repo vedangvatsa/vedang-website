@@ -91,86 +91,29 @@ export default function AIReportsPage() {
               A comprehensive, concise directory of the latest AI reports, research papers, and industry analyses globally. To map the true trajectory of AI in 2026, we bypassed the marketing hype and performed a deep-text tokenization on the full abstracts of 10,264 documents below.
             </p>
 
-            {/* ─── DATA SCIENCE METRICS SECTION ─── */}
-            <div className="mx-auto max-w-5xl text-left mb-16">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Keywords Chart */}
-                <div className="rounded-2xl border border-border/50 bg-card p-6 md:p-8 shadow-sm relative overflow-hidden">
-                  <div className="absolute top-0 right-0 p-4 opacity-5">
-                    <Cpu className="h-32 w-32" />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Deep-Text Top Priorities</h3>
-                  <p className="text-sm text-muted-foreground mb-6">
-                    Top single keywords extracted from the full abstract body text of 10,264 documents. Shows a pivot toward enterprise deployment.
-                  </p>
-                  <div className="space-y-4">
-                    {[
-                      { label: "systems", value: 5790, color: "bg-blue-500" },
-                      { label: "framework", value: 5423, color: "bg-indigo-500" },
-                      { label: "digital", value: 3254, color: "bg-purple-500" },
-                      { label: "clinical", value: 2621, color: "bg-teal-500" },
-                      { label: "accuracy", value: 2545, color: "bg-emerald-500" }
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-center gap-3">
-                        <div className="w-20 text-right text-sm font-medium text-muted-foreground">
-                          {item.label}
-                        </div>
-                        <div className="flex-1">
-                          <div className="relative h-5 w-full rounded-full bg-secondary overflow-hidden">
-                            <div 
-                              className={`absolute left-0 top-0 h-full rounded-full ${item.color}`}
-                              style={{ width: `${(item.value / 5790) * 100}%` }}
-                            />
-                          </div>
-                        </div>
-                        <div className="w-12 text-xs font-semibold text-foreground text-right">
-                          {item.value}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+            {/* McKinsey Style CTA Banner */}
+            <div className="mx-auto max-w-3xl bg-primary/5 border border-primary/20 rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm mb-12">
+              <div className="text-left flex-1">
+                <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-semibold text-primary mb-3">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                  </span>
+                  Data Science Insight
                 </div>
-
-                {/* Bigrams Chart */}
-                <div className="rounded-2xl border border-border/50 bg-card p-6 md:p-8 shadow-sm relative overflow-hidden">
-                  <div className="absolute top-0 right-0 p-4 opacity-5">
-                    <Globe2 className="h-32 w-32" />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">Emerging Operational Trends</h3>
-                  <p className="text-sm text-muted-foreground mb-6">
-                    Top two-word phrases found within the deep text. Confirms Healthcare and Supply Chain are the dominant investment sectors.
-                  </p>
-                  <div className="space-y-4">
-                    {[
-                      { label: "mental health", value: 310, color: "bg-rose-500" },
-                      { label: "digital transform", value: 298, color: "bg-purple-500" },
-                      { label: "supply chain", value: 287, color: "bg-teal-500" },
-                      { label: "higher education", value: 282, color: "bg-emerald-500" },
-                      { label: "public health", value: 249, color: "bg-orange-500" },
-                      { label: "RAG", value: 228, color: "bg-amber-500" }
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-center gap-3">
-                        <div className="w-28 text-right text-sm font-medium text-muted-foreground">
-                          {item.label}
-                        </div>
-                        <div className="flex-1">
-                          <div className="relative h-5 w-full rounded-full bg-secondary overflow-hidden">
-                            <div 
-                              className={`absolute left-0 top-0 h-full rounded-full ${item.color}`}
-                              style={{ width: `${(item.value / 310) * 100}%` }}
-                            />
-                          </div>
-                        </div>
-                        <div className="w-10 text-xs font-semibold text-foreground text-right">
-                          {item.value}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">State of AI 2026: The Comprehensive Analysis</h3>
+                <p className="text-sm text-muted-foreground">
+                  Read our exclusive 5,000-word McKinsey-style analysis. We extracted and tokenized millions of words from the abstracts of 10,000+ reports below to uncover the true enterprise AI trends.
+                </p>
               </div>
+              <Link 
+                href="/state-of-ai-2026"
+                className="shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-xl font-medium shadow-sm transition-all flex items-center gap-2"
+              >
+                Read Full Essay
+                <MoveUpRight className="h-4 w-4" />
+              </Link>
             </div>
-            {/* ─── END METRICS SECTION ─── */}
 
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-6">
               The 19,000+ Document Archive
