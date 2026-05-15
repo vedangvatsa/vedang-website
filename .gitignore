@@ -54,3 +54,23 @@ kearney.pdf
 visa.pdf
 pdf_text.txt
 scripts/analytics-report.json
+
+# Temp files & scratch scripts
+*.test.js
+*.test.ts
+__pycache__/
+.wp-browser-session/
+.health-protocols-data/
+AutoResearchClaw/
+motion-canvas-sort/
+remotion-sort/
+public_placeholder/
+media/
+data-viz-videos-repo/
+
+# Temp data
+pinterest-bulk*.csv
+*-audit-results.json
+*-urls.json
+anonymous-syndication-report.csv
+boundless-email.html
