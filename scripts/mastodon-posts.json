@@ -651,7 +651,7 @@
   },
   {
     "id": "stepwise-ai",
-    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing \u2014 nuanced human conversations \u2014 before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise-ai",
+    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing — nuanced human conversations — before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise-ai",
     "image": "scripts/thread-assets/stepwise_ai.png",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "17:00",
@@ -661,7 +661,7 @@
   },
   {
     "id": "universal-text-ui",
-    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog \u2014 analytics via natural language\nSalesforce Agentforce \u2014 12,000+ orgs, 84% self-resolution\nCursor \u2014 $1B ARR, entire codebases queryable via text\nGitHub Copilot \u2014 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/universal-text-ui",
+    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog — analytics via natural language\nSalesforce Agentforce — 12,000+ orgs, 84% self-resolution\nCursor — $1B ARR, entire codebases queryable via text\nGitHub Copilot — 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/universal-text-ui",
     "image": "scripts/thread-assets/universal_text_ui.png",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "01:00",
@@ -671,7 +671,7 @@
   },
   {
     "id": "agentic-state",
-    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else \u2014 99% of public services \u2014 is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/agentic-state",
+    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else — 99% of public services — is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/agentic-state",
     "image": "scripts/thread-assets/agentic_state.png",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "09:00",
@@ -691,7 +691,7 @@
   },
   {
     "id": "agentic-state-eresidency",
-    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it.\n\nThe e-Residency program generated \u20ac125M in state revenue last year. 87% growth. For every euro invested, twelve came back.\n\n5,556 new companies formed by non-citizens in a single year.\n\nThis is what happens when government operates as infrastructure instead of gatekeeping. The state becomes a platform. Citizenship becomes a credential. Geography becomes optional.\n\nveda.ng/agentic-state",
+    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it.\n\nThe e-Residency program generated €125M in state revenue last year. 87% growth. For every euro invested, twelve came back.\n\n5,556 new companies formed by non-citizens in a single year.\n\nThis is what happens when government operates as infrastructure instead of gatekeeping. The state becomes a platform. Citizenship becomes a credential. Geography becomes optional.\n\nveda.ng/agentic-state",
     "image": "scripts/thread-assets/agentic_state.png",
     "scheduleDate": "2026-04-13",
     "scheduleTime": "09:00",
@@ -721,7 +721,7 @@
   },
   {
     "id": "agentic-state-singapore",
-    "text": "Singapore's Ask Jamie chatbot has handled 50 million citizen queries. Their AI call transcription cut after-call work by 72%.\n\n100,000 public officers use Pair \u2014 a government-built AI tool \u2014 saving 50 minutes per task on average.\n\nIn the 2026 budget, Singapore announced the shift from \"AI pilots\" to \"scaled deployment at national speed.\"\n\nMost countries are still debating whether to start a pilot.\n\nveda.ng/agentic-state",
+    "text": "Singapore's Ask Jamie chatbot has handled 50 million citizen queries. Their AI call transcription cut after-call work by 72%.\n\n100,000 public officers use Pair — a government-built AI tool — saving 50 minutes per task on average.\n\nIn the 2026 budget, Singapore announced the shift from \"AI pilots\" to \"scaled deployment at national speed.\"\n\nMost countries are still debating whether to start a pilot.\n\nveda.ng/agentic-state",
     "image": "scripts/thread-assets/agentic_state.png",
     "scheduleDate": "2026-04-16",
     "scheduleTime": "01:00",
@@ -771,7 +771,7 @@
   },
   {
     "id": "stepwise-ai",
-    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing \u2014 nuanced human conversations \u2014 before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise-ai",
+    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing — nuanced human conversations — before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise-ai",
     "image": "scripts/thread-assets/stepwise_ai.png",
     "scheduleDate": "2026-04-21",
     "scheduleTime": "09:00",
@@ -781,7 +781,7 @@
   },
   {
     "id": "universal-text-ui",
-    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog \u2014 analytics via natural language\nSalesforce Agentforce \u2014 12,000+ orgs, 84% self-resolution\nCursor \u2014 $1B ARR, entire codebases queryable via text\nGitHub Copilot \u2014 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/universal-text-ui",
+    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog — analytics via natural language\nSalesforce Agentforce — 12,000+ orgs, 84% self-resolution\nCursor — $1B ARR, entire codebases queryable via text\nGitHub Copilot — 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/universal-text-ui",
     "image": "scripts/thread-assets/universal_text_ui.png",
     "scheduleDate": "2026-04-21",
     "scheduleTime": "17:00",
@@ -791,7 +791,7 @@
   },
   {
     "id": "agentic-state",
-    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else \u2014 99% of public services \u2014 is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/agentic-state",
+    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else — 99% of public services — is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/agentic-state",
     "image": "scripts/thread-assets/agentic_state.png",
     "scheduleDate": "2026-04-22",
     "scheduleTime": "09:00",
@@ -846,9 +846,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/post_5.mp4",
     "scheduleDate": "2026-05-10",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "mastodonId": null
+    "mastodonId": null,
+    "error": "Media failed: scripts/thread-assets/linkedin-rewrites/post_5.mp4 — skipped"
   },
   {
     "id": "rewritten-post-6",
@@ -856,9 +857,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/post_6.mp4",
     "scheduleDate": "2026-05-10",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "mastodonId": null
+    "mastodonId": null,
+    "error": "Media failed: scripts/thread-assets/linkedin-rewrites/post_6.mp4 — skipped"
   },
   {
     "id": "rewritten-post-7",
@@ -866,9 +868,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/post_7.mp4",
     "scheduleDate": "2026-05-11",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "mastodonId": null
+    "mastodonId": null,
+    "error": "Media failed: scripts/thread-assets/linkedin-rewrites/post_7.mp4 — skipped"
   },
   {
     "id": "rewritten-post-8",
@@ -876,9 +879,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/post_8.mp4",
     "scheduleDate": "2026-05-11",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "mastodonId": null
+    "mastodonId": null,
+    "error": "Media failed: scripts/thread-assets/linkedin-rewrites/post_8.mp4 — skipped"
   },
   {
     "id": "rewritten-post-9",
@@ -886,9 +890,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/post_9.mp4",
     "scheduleDate": "2026-05-11",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "mastodonId": null
+    "mastodonId": null,
+    "error": "Media failed: scripts/thread-assets/linkedin-rewrites/post_9.mp4 — skipped"
   },
   {
     "id": "rewritten-post-10",
@@ -896,9 +901,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/post_10.mp4",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "mastodonId": null
+    "mastodonId": null,
+    "error": "Media failed: scripts/thread-assets/linkedin-rewrites/post_10.mp4 — skipped"
   },
   {
     "id": "reddit-vid-1",
@@ -906,9 +912,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/youtube_outage.mp4",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "mastodonId": null
+    "mastodonId": null,
+    "error": "Media failed: scripts/thread-assets/linkedin-rewrites/youtube_outage.mp4 — skipped"
   },
   {
     "id": "reddit-vid-2",
@@ -916,9 +923,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/kronk_sorting.mp4",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "mastodonId": null
+    "mastodonId": null,
+    "error": "Media failed: scripts/thread-assets/linkedin-rewrites/kronk_sorting.mp4 — skipped"
   },
   {
     "id": "reddit-vid-3",
@@ -926,9 +934,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/junior_dev_docs.mp4",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "mastodonId": null
+    "mastodonId": null,
+    "error": "Media failed: scripts/thread-assets/linkedin-rewrites/junior_dev_docs.mp4 — skipped"
   },
   {
     "id": "reddit-vid-4",
@@ -936,9 +945,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/sort_algorithm.mp4",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "mastodonId": null
+    "mastodonId": null,
+    "error": "Media failed: scripts/thread-assets/linkedin-rewrites/sort_algorithm.mp4 — skipped"
   },
   {
     "id": "reddit-meme-1",
@@ -946,9 +956,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/game_rules.jpg",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "mastodonId": null
+    "mastodonId": null,
+    "error": "Media failed: scripts/thread-assets/linkedin-rewrites/game_rules.jpg — skipped"
   },
   {
     "id": "reddit-meme-2",
@@ -956,9 +967,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/simple_feature.gif",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "mastodonId": null
+    "mastodonId": null,
+    "error": "Media failed: scripts/thread-assets/linkedin-rewrites/simple_feature.gif — skipped"
   },
   {
     "id": "reddit-meme-3",
@@ -966,9 +978,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/important_skill.jpg",
     "scheduleDate": "2026-05-14",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "mastodonId": null
+    "mastodonId": null,
+    "error": "Media failed: scripts/thread-assets/linkedin-rewrites/important_skill.jpg — skipped"
   },
   {
     "id": "reddit-meme-4",
@@ -976,9 +989,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/manager_cleanup.png",
     "scheduleDate": "2026-05-14",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "mastodonId": null
+    "mastodonId": null,
+    "error": "Media failed: scripts/thread-assets/linkedin-rewrites/manager_cleanup.png — skipped"
   },
   {
     "id": "reddit-meme-5",
@@ -986,9 +1000,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/steal_stolen.png",
     "scheduleDate": "2026-05-14",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "mastodonId": null
+    "mastodonId": null,
+    "error": "Media failed: scripts/thread-assets/linkedin-rewrites/steal_stolen.png — skipped"
   },
   {
     "id": "ig-genz-boundaries",
@@ -996,7 +1011,8 @@
     "image": "scripts/thread-assets/ig-reels/DWYA42DiYqH.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Media failed: scripts/thread-assets/ig-reels/DWYA42DiYqH.mp4 — skipped"
   },
   {
     "id": "ig-bryson-relatable",
@@ -1004,7 +1020,8 @@
     "image": "scripts/thread-assets/ig-reels/DWlseMGD5la.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Media failed: scripts/thread-assets/ig-reels/DWlseMGD5la.mp4 — skipped"
   },
   {
     "id": "ig-movie-scene",
@@ -1012,7 +1029,8 @@
     "image": "scripts/thread-assets/ig-reels/DXQ9NuYPN_J.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Media failed: scripts/thread-assets/ig-reels/DXQ9NuYPN_J.mp4 — skipped"
   },
   {
     "id": "ig-that-life-exists",
@@ -1020,7 +1038,8 @@
     "image": "scripts/thread-assets/ig-reels/DX4HFPvT5mb.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Media failed: scripts/thread-assets/ig-reels/DX4HFPvT5mb.mp4 — skipped"
   },
   {
     "id": "ig-how-badly-do-you-want-it",
@@ -1028,7 +1047,8 @@
     "image": "scripts/thread-assets/ig-reels/DXHJR6cjsqV.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Media failed: scripts/thread-assets/ig-reels/DXHJR6cjsqV.mp4 — skipped"
   },
   {
     "id": "ig-ai-impressed",
@@ -1036,7 +1056,8 @@
     "image": "scripts/thread-assets/ig-reels/DXuNoVPE83k.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Media failed: scripts/thread-assets/ig-reels/DXuNoVPE83k.mp4 — skipped"
   },
   {
     "id": "ig-ai-proud-moment",
@@ -1044,7 +1065,8 @@
     "image": "scripts/thread-assets/ig-reels/DXD-i9fEaYJ.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Media failed: scripts/thread-assets/ig-reels/DXD-i9fEaYJ.mp4 — skipped"
   },
   {
     "id": "ig-ai-limit-reached",
@@ -1052,7 +1074,8 @@
     "image": "scripts/thread-assets/ig-reels/DWx95c6EdUi.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Media failed: scripts/thread-assets/ig-reels/DWx95c6EdUi.mp4 — skipped"
   },
   {
     "id": "ig-ai-constant-pressure",
@@ -1060,7 +1083,8 @@
     "image": "scripts/thread-assets/ig-reels/DVqe3fCEZdC.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Media failed: scripts/thread-assets/ig-reels/DVqe3fCEZdC.mp4 — skipped"
   },
   {
     "id": "ig-shadow-ai",
@@ -1068,7 +1092,8 @@
     "image": "scripts/thread-assets/ig-reels/DXs6sDoEetP.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Media failed: scripts/thread-assets/ig-reels/DXs6sDoEetP.mp4 — skipped"
   },
   {
     "id": "ig-daytrading-liar",
@@ -1076,7 +1101,8 @@
     "image": "scripts/thread-assets/ig-reels/DTUgnD7kheF.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Media failed: scripts/thread-assets/ig-reels/DTUgnD7kheF.mp4 — skipped"
   },
   {
     "id": "ig-ai-canon-events",
@@ -1084,7 +1110,8 @@
     "image": "scripts/thread-assets/ig-reels/DVgT1huE9qS.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Media failed: scripts/thread-assets/ig-reels/DVgT1huE9qS.mp4 — skipped"
   },
   {
     "id": "ig-send-to-chatgpt",
@@ -1092,7 +1119,8 @@
     "image": "scripts/thread-assets/ig-reels/DVYa0-nE4hb.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Media failed: scripts/thread-assets/ig-reels/DVYa0-nE4hb.mp4 — skipped"
   },
   {
     "id": "ig-knowledge-worth-zero",
@@ -1100,7 +1128,8 @@
     "image": "scripts/thread-assets/ig-reels/DVOQBfTkilz.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Media failed: scripts/thread-assets/ig-reels/DVOQBfTkilz.mp4 — skipped"
   },
   {
     "id": "ig-solo-billionaire",
@@ -1108,7 +1137,8 @@
     "image": "scripts/thread-assets/ig-reels/DSrtaXmEWxl.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Media failed: scripts/thread-assets/ig-reels/DSrtaXmEWxl.mp4 — skipped"
   },
   {
     "id": "ig-too-real",
@@ -1116,6 +1146,7 @@
     "image": "scripts/thread-assets/ig-reels/DRcvmWNE1Q2.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Media failed: scripts/thread-assets/ig-reels/DRcvmWNE1Q2.mp4 — skipped"
   }
 ]
