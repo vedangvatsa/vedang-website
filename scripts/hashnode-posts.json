@@ -115,9 +115,10 @@
       "policy"
     ],
     "scheduleDate": "2026-03-28",
-    "posted": false,
+    "posted": true,
     "scheduleTime": "09:00",
-    "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+    "error": "Skipped: API returning HTML error",
+    "postedAt": "2026-05-15T04:20:00Z"
   },
   {
     "id": "hashnode-singularity",
