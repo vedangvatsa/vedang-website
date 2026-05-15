@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Badge } from '@/components/ui/badge';
+
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Accordion,
@@ -127,23 +127,17 @@ export default function HealthProtocolsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* ── Hero ── */}
-      <section className="pb-16 text-center max-w-3xl mx-auto">
-        <Badge variant="secondary" className="mb-4">Curated Guide</Badge>
+      <section className="pb-16 max-w-3xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight">
-          Bryan Johnson&apos;s<br />Blueprint Protocol
+          Bryan Johnson&apos;s Blueprint Protocol
         </h1>
         <p className="mt-5 text-muted-foreground leading-relaxed">
           327 protocols extracted from 900+ YouTube transcripts, ranked by mention frequency.
           Every claim links to a timestamped video or the official protocol page.
         </p>
-        <div className="mt-6 flex justify-center gap-3 flex-wrap">
-          <Badge variant="outline">Curated by Vedang Vatsa</Badge>
-          <Badge variant="outline">
-            <Link href="https://blueprint.bryanjohnson.com/pages/blueprint-protocol" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-              Primary source <ExternalLink className="h-3 w-3" />
-            </Link>
-          </Badge>
-        </div>
+        <p className="mt-4 text-xs text-muted-foreground">
+          By Vedang Vatsa · <Link href="https://blueprint.bryanjohnson.com/pages/blueprint-protocol" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">Primary source</Link>
+        </p>
       </section>
 
       <div className="space-y-24">
