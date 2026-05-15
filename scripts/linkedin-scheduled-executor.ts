@@ -176,7 +176,7 @@ async function postToLinkedIn(
   if (mediaPath) {
     media = await uploadMedia(mediaPath);
     if (!media) {
-      return { success: false, error: `Media upload failed for: ${mediaPath} — aborting post (will not post text-only)` };
+      return { success: false, error: `Media failed: ${mediaPath} — skipped` };
     }
   }
 
@@ -271,11 +271,17 @@ async function main() {
       modified = true;
       try { triggerBoost('linkedin', result.id); } catch(e) { console.warn('⚠️ Boost trigger failed:', e); }
       break; // Only 1 post per run
+    } else if (result.error?.includes('skipped')) {
+      console.warn(`⏭️ Skipped: ${result.error}`);
+      post.posted = true;
+      post.error = result.error;
+      modified = true;
+      continue; // Try next post
     } else {
       console.error(`❌ Failed: ${result.error}`);
       post.error = result.error;
       modified = true;
-      break; // Stop on failure too
+      break; // Stop on real failure
     }
   }
 
