@@ -40,6 +40,7 @@ import { GovernanceEffectivenessChart, DAOVoterParticipation, VotingMechanismCha
 import { DataSourceDisruption, MethodologicalEvolution, PolarizationFindings, ObserverEffectChart } from '@/components/mdx/computational-social-science-charts';
 import { MonasteryPrincipleChart, AttentionSpanDecline, InterruptionCostChart, RetreatMovementsTimeline, SilenceEconomyChart } from '@/components/mdx/digital-monasticism-charts';
 import { PlaybookHeroCard, AgentToolsMap, AutomationROIChart, ContentPipelineFlow, OutreachPipeline, AIMaturityLevels, ImplementationTimeline, NurtureSequence, ImplementationChecklist, SocialListeningMap, SupportTierChart, DashboardMetricsMap, UseCaseCatalog } from '@/components/mdx/playbook-charts';
+import { StateOfAiKeywordsChart, StateOfAiBigramsChart } from '@/components/mdx/state-of-ai-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -415,6 +416,8 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               SupportTierChart,
               DashboardMetricsMap,
               UseCaseCatalog,
+              StateOfAiKeywordsChart,
+              StateOfAiBigramsChart,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
