@@ -1,0 +1,877 @@
+[
+  {
+    "id": "local-ai-future",
+    "scheduleDate": "2026-03-26",
+    "scheduleTime": "05:27",
+    "posted": true,
+    "text": "Everyone argues about whether the datacenter buildout pays off.\n\nNobody is arguing about the third option.\n\nOpen source models match frontier models within 3-6 months of release. o1 came out in September 2024. DeepSeek-R1 matched it by January. GPT-4o in May. DeepSeek-V3 by December.\n",
+    "image": "scripts/thread-assets/local_ai_parity.png",
+    "postedAt": "2026-03-26T01:21:46.483Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mhwgunko5c2r"
+  },
+  {
+    "id": "psych-maslow",
+    "scheduleDate": "2026-03-26",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "People do not want productivity tools.\n\nThey want to feel less behind. Less alone. More in control.\n\nMaslow mapped this out in 1943. Survival first. Then safety. Then belonging. Then status. Then growth. You cannot sell someone rung five when they are stuck on rung two.\n",
+    "image": "scripts/thread-assets/psych_maslow.png",
+    "postedAt": "2026-03-26T12:08:40.266Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mhxkzfam452x"
+  },
+  {
+    "id": "ctc-arc",
+    "scheduleDate": "2026-03-27",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "Japan made transistor radios that broke. Then they made cars that didn't.\n\nBy 1985, Japanese cars had 25% of the US car market, up from near zero in 1965. The oil crisis forced people to try them. Once they did, the quality was evident.\n\nKorea's Hyundai entered the US in 1986 at $4,995. J.D.",
+    "image": "scripts/thread-assets/ctc_arc.png",
+    "postedAt": "2026-03-26T20:02:38.122Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mhyfivmdo52r"
+  },
+  {
+    "id": "business-world-model",
+    "scheduleDate": "2026-03-27",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Within a few years, most companies will have more AI agents running than human employees.\n\nThat is not a prediction. It is already starting.\n\nWhen that happens, the old management model breaks.\n\nToday you manage people. Check-ins, approvals, status updates.",
+    "image": "scripts/thread-assets/world_model_gap.png",
+    "postedAt": "2026-03-27T05:12:05.522Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mhze7fbk5h2x"
+  },
+  {
+    "id": "psych-bystander",
+    "scheduleDate": "2026-03-27",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "The more people in the room, the less likely anyone acts.\n\nThat is not cynicism. It is a documented pattern. When responsibility is shared, it evaporates.\n\nI have seen this in every large org I have been close to. A bug sits for months. A feature everyone hates stays live for years.",
+    "image": "scripts/thread-assets/psych_bystander.png",
+    "postedAt": "2026-03-27T12:04:36.702Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mi23b2bxjf2z"
+  },
+  {
+    "id": "ctc-india",
+    "scheduleDate": "2026-03-28",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "\"Made in China\" still registers below \"Made in Germany\" in surveys. Yet DJI holds 70% of the drone market. BYD is the largest EV maker.\n\nIndia is at the start of that curve. If the historical pattern holds, the perception gap closes. It just takes time.",
+    "image": "scripts/thread-assets/ctc_india.png",
+    "postedAt": "2026-03-27T19:59:56.542Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mi2vsz3dtp2w"
+  },
+  {
+    "id": "ai-timelines-uncertainty",
+    "scheduleDate": "2026-03-28",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Dario Amodei says AGI by 2026 or 2027. The co-founder of Epoch AI says 2045. Twenty years apart. Both have studied this longer than almost anyone.\n\nThis is not one of them being careless. The evidence does not pin it down.\n",
+    "image": "scripts/thread-assets/ai_timelines.png",
+    "postedAt": "2026-03-28T05:11:09.297Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mi3umns5ic2r"
+  },
+  {
+    "id": "psych-dunning-kruger",
+    "scheduleDate": "2026-03-28",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "I formed strong opinions about AI after a few weeks with it.\n\nThe longer I spent actually building with these systems, the less certain I became.\n\nThis is the Dunning-Kruger pattern. Early exposure produces peak confidence. Real depth produces more careful claims.\n",
+    "image": "scripts/thread-assets/psych_dunning_kruger.png",
+    "postedAt": "2026-03-28T11:53:04.196Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mi4l3cuxtc2x"
+  },
+  {
+    "id": "ctc-lag",
+    "scheduleDate": "2026-03-29",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "The lag has been consistent. In every case examined, it resolved.\n\n\"Made in Japan\" was a joke in 1955. By 1980 it meant precision engineering.\n\n\"Made in Korea\" meant cheap in 1986. By 2012 Samsung was number one globally.\n",
+    "image": "scripts/thread-assets/ctc_lag.png",
+    "postedAt": "2026-03-28T19:53:57.031Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mi5fx7r5tr26"
+  },
+  {
+    "id": "math-ai-highway",
+    "scheduleDate": "2026-03-29",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Terence Tao thinks AI in mathematics is where cars were when cities tried fitting them into horse streets.\n\nAI gets from hypothesis to proof faster. But it skips everything that makes the proof valuable beyond the answer.\n\nThe fix: build new infrastructure, not force AI into old formats.",
+    "image": "scripts/thread-assets/math_ai_city.png",
+    "postedAt": "2026-03-29T05:24:43.039Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mi6fttad7p2r"
+  },
+  {
+    "id": "psych-attachment",
+    "scheduleDate": "2026-03-29",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "Some apps keep you coming back because they are good.\n\nSome keep you coming back because they never quite resolve the feeling that brought you there.\n\nAnxiety drives more return visits than satisfaction. Unpredictable rewards outperform consistent ones.",
+    "image": "scripts/thread-assets/psych_attachment.png",
+    "postedAt": "2026-03-29T11:53:47.822Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mi73lkmv4m2z"
+  },
+  {
+    "id": "jevons-paradox-ai",
+    "scheduleDate": "2026-03-30",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "In 1865, making steam engines more efficient did not reduce coal use. It increased it. Cheaper energy meant people found more uses for energy.\n\nThis is Jevons Paradox.\n\nIt is happening with AI right now.\n\nWhen code costs less to write, companies write more code.",
+    "image": "scripts/thread-assets/jevons.png",
+    "postedAt": "2026-03-29T19:56:37.215Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mi7wkvvzdz2r"
+  },
+  {
+    "id": "psych-stockholm",
+    "scheduleDate": "2026-03-30",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "A founder I know has been underpaid, diluted, and overridden repeatedly by one investor.\n\nHe still talks about that investor as a mentor.\n\nStockholm syndrome describes what happens when people in a controlling environment start to identify with and defend the controlling party.",
+    "image": "scripts/thread-assets/psych_stockholm.png",
+    "postedAt": "2026-03-30T05:38:26.729Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3miax3c7ztq2o"
+  },
+  {
+    "id": "psych-mirror",
+    "scheduleDate": "2026-03-30",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "There is a class of neurons that fire both when you act and when you watch someone else act.\n\nThey are the biological foundation of imitation. Possibly of empathy.\n\nAI models are trained on vast amounts of human output. They mirror our patterns back at scale.",
+    "image": "scripts/thread-assets/psych_mirror.png",
+    "postedAt": "2026-03-30T12:10:08.428Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mibmxpajgg2n"
+  },
+  {
+    "id": "smart-employees",
+    "scheduleDate": "2026-03-31",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "The smartest employees do not play the corporate game the usual way.\n\nThey build a side hustle outside their job. They do not chase manager titles for status. They keep interviewing even when employed. They treat everyone with respect... including the cleaner.\n\nThey push back on micromanagement.",
+    "image": "scripts/thread-assets/psych_smart_employees.png",
+    "postedAt": "2026-03-30T20:06:25.575Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3michlecmvz2g"
+  },
+  {
+    "id": "psych-cbt",
+    "scheduleDate": "2026-03-31",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Notion is therapy. Journaling apps are therapy. Habit trackers are therapy.\n\nNot literally. But the mechanism is the same.\n\nCognitive behavioral therapy works by surfacing thought patterns, interrupting automatic behavior, and reframing how experiences are interpreted.",
+    "image": "scripts/thread-assets/psych_cbt.png",
+    "postedAt": "2026-03-31T05:26:06.354Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3midgu5mxm62r"
+  },
+  {
+    "id": "psych-contagion",
+    "scheduleDate": "2026-03-31",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "Emotions spread without words. Without intention. Just proximity.\n\nA nervous person in a meeting makes the room nervous. An excited team makes new hires excited before they have any reason to be.\n\nI watched this play out in real time during a crypto cycle.",
+    "image": "scripts/thread-assets/psych_contagion.png",
+    "postedAt": "2026-03-31T12:08:32.506Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mie5dr7mqg2n"
+  },
+  {
+    "id": "psych-pygmalion",
+    "scheduleDate": "2026-04-01",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "The best manager I worked with told me early that he thought I could do things I did not yet believe I could.\n\nI did most of them.\n\nThe Pygmalion effect is the name for what happens when expectation shapes performance.",
+    "image": "scripts/thread-assets/psych_pygmalion.png",
+    "postedAt": "2026-03-31T20:06:51.187Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3miey32d5jr2n"
+  },
+  {
+    "id": "psych-halo",
+    "scheduleDate": "2026-04-01",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "A person walks into a room with a specific credential and the room adjusts before they say a word.\n\nThat is the halo effect. One impressive trait causes people to attribute other positive traits automatically.\n\nI have been on both sides of this.",
+    "image": "scripts/thread-assets/psych_halo.png",
+    "postedAt": "2026-04-01T05:35:55.280Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mifxumrdpp2r"
+  },
+  {
+    "id": "psych-helplessness",
+    "scheduleDate": "2026-04-01",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "After enough times being ignored, people stop raising their hand.\n\nNot because they stopped having ideas. Because they stopped expecting the idea to go anywhere.\n\nLearned helplessness is what happens when an organism experiences repeated situations where its actions have no effect.",
+    "image": "scripts/thread-assets/psych_helplessness.png",
+    "postedAt": "2026-04-01T12:08:41.716Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mignswkgho26"
+  },
+  {
+    "id": "psych-hero",
+    "scheduleDate": "2026-04-02",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "Every pitch deck that works tells a story.\n\nNot always on purpose. But the structure is almost always the same.\n\nHere is the world as it is. Here is the thing the founder saw that others missed. Here is how hard it was to act on that. Here is what they built because of it.",
+    "image": "scripts/thread-assets/psych_hero.png",
+    "postedAt": "2026-04-01T20:30:22.340Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mihjtzbxin2x"
+  },
+  {
+    "id": "psych-shadow",
+    "scheduleDate": "2026-04-02",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Every company has two versions of itself.\n\nThe one on the about page. And the one that shows up in the product decisions made when doing the right thing gets expensive.\n\nJung called this the shadow self. The part of the personality the conscious mind does not want to see.\n",
+    "image": "scripts/thread-assets/psych_shadow.png",
+    "postedAt": "2026-04-02T05:20:54.171Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3miihioss7g2x"
+  },
+  {
+    "id": "psych-toxic-positivity",
+    "scheduleDate": "2026-04-02",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "There is a version of optimism that makes problems worse by refusing to name them.\n\nI have sat in rooms where a company was clearly in trouble. Every concern was met with a reframe. Burn rate is high but we are learning fast. Users are churning but the core audience is engaged.",
+    "image": "scripts/thread-assets/psych_toxic_positivity.png",
+    "postedAt": "2026-04-02T12:08:19.779Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mij6b7zaph2w"
+  },
+  {
+    "id": "psych-attribution",
+    "scheduleDate": "2026-04-03",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "When a competitor fails, the instinct is to say their product was bad or their team was weak.\n\nWhen something we worked on does not find traction, the instinct is to say the market was not ready or the timing was off.\n\nI have caught myself doing both in the same month.\n",
+    "image": "scripts/thread-assets/psych_attribution.png",
+    "postedAt": "2026-04-02T20:03:08.024Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mijysadf6n2n"
+  },
+  {
+    "id": "psych-confirmation",
+    "scheduleDate": "2026-04-03",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "I read the same AI news differently depending on what I already believe about AI.\n\nAn impressive result feels like confirmation. A failure feels expected. Neither reaction is fully honest.\n\nThis is confirmation bias. We look for evidence that supports what we already think.",
+    "image": "scripts/thread-assets/psych_confirmation.png",
+    "postedAt": "2026-04-03T05:22:10.453Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mikxzuz3bw2x"
+  },
+  {
+    "id": "solo-unicorn-1",
+    "scheduleDate": "2026-04-03",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "A company with one employee and a billion dollar valuation is no longer a joke. It is a mathematical certainty.\n\nWhen the cost of coordination drops to zero, the need for a 50-person team disappears.\n\nOne person with a strong idea can command 1,000 AI modules.",
+    "image": "scripts/thread-assets/solo_unicorn_1.png",
+    "postedAt": "2026-04-03T12:02:26.634Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3milofmnqx62o"
+  },
+  {
+    "id": "solo-unicorn-2",
+    "scheduleDate": "2026-04-04",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "Middle management only exists because humans are hard to coordinate. You need people to watch people.\n\nAI agents do not need meetings. They do not need status updates. They do not need motivation.\n\nIf the work is purely digital, the management layer is just latency.",
+    "image": "scripts/thread-assets/solo_unicorn_2.png",
+    "postedAt": "2026-04-03T20:00:45.459Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mimj4vuiv22n"
+  },
+  {
+    "id": "solo-unicorn-3",
+    "scheduleDate": "2026-04-04",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Companies used to be built with people and processes. Now they are built with code and agents.\n\nYou do not hire a marketing team. You deploy a marketing module.\n\nYou do not build a support department. You configure a support agent.\n",
+    "image": "scripts/thread-assets/solo_unicorn_3.png",
+    "postedAt": "2026-04-04T05:10:10.065Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3minhtdhhlf2w"
+  },
+  {
+    "id": "ai-limits-1",
+    "scheduleDate": "2026-04-04",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "AI does not run on code. It runs on electricity.\n\nThe growth of the intelligence layer is now hitting a wall of physics.\n\nWe have enough silicon. We do not have enough power grids. Training runs are moving to where the energy is cheapest. Not where the talent is.",
+    "image": "scripts/thread-assets/ai_limits_1.png",
+    "postedAt": "2026-04-04T11:53:37.841Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mio6errasn2z"
+  },
+  {
+    "id": "ai-limits-2",
+    "scheduleDate": "2026-04-05",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "Intelligence used to be rare. Now it is becoming a utility. Like water or electricity.\n\nWhen something becomes a commodity, the value moves to what you do with it. Not the thing itself.\n\nOwning the model is not the win. Owning the problem that the model solves is the win.",
+    "image": "scripts/thread-assets/ai_limits_2.png",
+    "postedAt": "2026-04-04T19:54:53.838Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3miozbe4yd52d"
+  },
+  {
+    "id": "lit-x-fired",
+    "scheduleDate": "2026-04-05",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Nobody gets fired on LinkedIn. They navigate transitions.\n\nNobody fails. They pivot.\n\nI built a translator for this. The output is indistinguishable from real posts.\n\nveda.ng/lit",
+    "image": "scripts/thread-assets/lit_fired.png",
+    "postedAt": "2026-04-05T05:25:40.495Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mipz5yc7ee2x"
+  },
+  {
+    "id": "lit-x-bosses",
+    "scheduleDate": "2026-04-05",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "\"Working under different leadership styles has given me unparalleled insight into what great management looks like.\"\n\nTranslation: I have dealt with a lot of terrible bosses.\n\nReverse translator: veda.ng/lit",
+    "image": "scripts/thread-assets/lit_bosses.png",
+    "postedAt": "2026-04-05T11:54:50.539Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3miqovumnma2g"
+  },
+  {
+    "id": "lit-x-scrolling",
+    "scheduleDate": "2026-04-06",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "5 years ago people said they worked hard.\n\nNow they say they are deeply passionate about driving impact at scale.\n\n5 years ago people ate lunch.\n\nNow they have wellness-optimised nutrition windows.\n\nveda.ng/lit",
+    "image": "scripts/thread-assets/lit_scrolling.png",
+    "postedAt": "2026-04-05T19:57:17.311Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mirjukfju22o"
+  },
+  {
+    "id": "lit-x-meetings",
+    "scheduleDate": "2026-04-06",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Nobody on LinkedIn has meetings. They have cross-functional alignment sessions.\n\nNobody wastes time. They invest in stakeholder engagement.\n\nType what actually happened and watch it become a consulting deck: veda.ng/lit",
+    "image": "scripts/thread-assets/lit_meetings.png",
+    "postedAt": "2026-04-06T05:38:38.109Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3miske3btuv2r"
+  },
+  {
+    "id": "lit-x-password",
+    "scheduleDate": "2026-04-06",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "Forgetting a password on LinkedIn:\n\n\"Encountered a Temporary Credential Misalignment with a setback in personal identity management protocols.\"\n\nSatire is now indistinguishable from real LinkedIn posts.\n\nveda.ng/lit",
+    "image": "scripts/thread-assets/lit_password.png",
+    "postedAt": "2026-04-06T12:06:20.513Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mit7zdxq2p2w"
+  },
+  {
+    "id": "swarm-x-prediction-1",
+    "scheduleDate": "2026-04-07",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "One AI model gives you one opinion.\n\n100 AI agents debating across 16 rounds gives you something closer to truth.\n\nBuilt a swarm intelligence prediction tool. Bring your own API key. Ask any question.\n\nveda.ng/swarm-prediction",
+    "image": "scripts/thread-assets/swarm_prediction.png",
+    "postedAt": "2026-04-06T20:06:23.111Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3miu2tqjtqt2g"
+  },
+  {
+    "id": "ai-electricity-bottleneck",
+    "scheduleDate": "2026-04-08",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "NVIDIA doubled AI revenue forecasts to T.\n\nThey pitched the new chip on throughput per megawatt. Not speed or power.\n\nUS datacenter pipeline hit 241 GW. Up 159% in a year. The grid cannot keep up.\n\nAI may be hitting an electricity bottleneck.",
+    "image": "scripts/thread-assets/ai_electricity.png",
+    "error": "Post failed: 400 {\"error\":\"InvalidRequest\",\"message\":\"Invalid app.bsky.feed.post record: grapheme too big (maximum 300, got 307) at $.record.text\"}",
+    "postedAt": "2026-04-22T01:15:11.264Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mk2d3px3qi2n"
+  },
+  {
+    "id": "hustle-culture",
+    "scheduleDate": "2026-04-09",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "After 55 hours per week, productivity drops to zero.\n\nYou aren't producing more. You are just present longer.\n\nChronic stress shrinks the hippocampus. The part of the brain for memory physically gets smaller.\n\nHustle culture sells sacrifice as strategy. The biological cost is real.",
+    "image": "scripts/thread-assets/hustle_culture.png",
+    "error": "Post failed: 400 {\"error\":\"InvalidRequest\",\"message\":\"Invalid app.bsky.feed.post record: grapheme too big (maximum 300, got 304) at $.record.text\"}",
+    "postedAt": "2026-04-22T12:43:15.420Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mk3jk3pcjb2b"
+  },
+  {
+    "id": "api-states",
+    "scheduleDate": "2026-04-09",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "The nation-state as a platform. API calls instead of office visits. Cryptographic credentials instead of passports.\n\nEstonia already built it.\n\nveda.ng/api-states",
+    "image": "scripts/thread-assets/api_states.png",
+    "postedAt": "2026-04-09T05:28:56.221Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mj237itrtw2w"
+  },
+  {
+    "id": "bureaucracy-tax",
+    "scheduleDate": "2026-04-10",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "You need a permit. Then another permit. Then an inspection. Then more permits.\n\nRules were supposed to create order. They created sophisticated inertia dressed up as responsibility.\n\nInstitutions that survive on friction have no incentive to remove it.\n\nveda.ng/bureaucracy-tax",
+    "image": "scripts/thread-assets/bureaucracy_tax.png",
+    "postedAt": "2026-04-12T11:59:30.986Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgonor52q"
+  },
+  {
+    "id": "models-shrinking",
+    "scheduleDate": "2026-04-11",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "GPT-3.5 had 175B parameters. Llama 3 matched it with 8B. That is 20x fewer.\n\nPhi-4 has 14B. It outperforms GPT-4o on math and science benchmarks. A laptop model beating a datacenter model.\n\nThe winning strategy shifted from more parameters to better data.\n\nveda.ng/asi-timeline",
+    "image": "scripts/thread-assets/models_shrinking.png",
+    "postedAt": "2026-04-12T11:59:31.284Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgowkyk2l"
+  },
+  {
+    "id": "cognitive-load",
+    "scheduleDate": "2026-04-11",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "Your brain was built for scarcity. It now lives in abundance.\n\nEvery context switch costs you. Every notification occupies a slot in working memory.\n\nThe result is continuous partial attention. Aware of everything. Focused on nothing.\n\nveda.ng/cognitive-load",
+    "image": "scripts/thread-assets/cognitive_load.png",
+    "postedAt": "2026-04-12T11:59:31.532Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgp6dzc2l"
+  },
+  {
+    "id": "attention-refinery",
+    "scheduleDate": "2026-04-12",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "You are not the customer. You are the raw material.\n\nYour attention enters as crude input. Gets refined into behavioral data. Sold to advertisers.\n\nOutrage is high-octane fuel. Nuance is low-yield crude.\n\nveda.ng/attention-refinery",
+    "image": "scripts/thread-assets/attention_refinery.png",
+    "postedAt": "2026-04-12T11:59:32.143Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgpgiug2c"
+  },
+  {
+    "id": "simulation-hypothesis",
+    "scheduleDate": "2026-04-13",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Physics looks like optimization.\n\nParticles have no properties until measured. Like a game that only renders what you look at.\n\nIf civilizations can run ancestor simulations and do, simulated beings outnumber real ones.\n\nveda.ng/simulation-hypothesis",
+    "image": "scripts/thread-assets/simulation.png",
+    "postedAt": "2026-04-23T05:53:01.569Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mk5d3hlotg2b"
+  },
+  {
+    "id": "digital-monasticism",
+    "scheduleDate": "2026-04-13",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "Silence became the new luxury.\n\nEvery era of tech excess creates a counter-movement. Roman complexity made monks. Industrial smoke made Romantics.\n\nNow we retreat to the quiet spaces in our own minds.\n\nveda.ng/digital-monasticism",
+    "image": "scripts/thread-assets/digital_monasticism.png",
+    "postedAt": "2026-04-23T20:35:20.829Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mk6uf6e5qa2h"
+  },
+  {
+    "id": "god-protocol",
+    "scheduleDate": "2026-04-14",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "What happens when a machine knows everything?\n\nBefore we can build a god, we must agree on what it means to be good. We have had millennia. No consensus.\n\nThe God Protocol is being written. One line of code at a time.\n\nveda.ng/god-protocol",
+    "image": "scripts/thread-assets/god_protocol.png",
+    "postedAt": "2026-04-24T05:57:09.436Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mk7trrilaz2n"
+  },
+  {
+    "id": "programmable-trust",
+    "scheduleDate": "2026-04-14",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Trust used to require humans. Now it can be code.\n\nZero-knowledge proofs let you prove truth without revealing data. Mathematical guarantee. Full privacy.\n\nThe shift: from \"show me your data\" to \"give me a proof.\"\n\nveda.ng/programmable-trust",
+    "image": "scripts/thread-assets/programmable_trust.png",
+    "postedAt": "2026-04-24T20:26:08.853Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkbednhgep2y"
+  },
+  {
+    "id": "synthetic-empathy",
+    "scheduleDate": "2026-04-14",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "The machine does not feel. But you will.\n\nAI crafts validation with precision. Your brain cannot tell the difference. The most powerful sales tool ever built.\n\nveda.ng/synthetic-empathy",
+    "image": "scripts/thread-assets/synthetic_empathy.png",
+    "postedAt": "2026-04-25T05:31:17.679Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkccsh46qi2w"
+  },
+  {
+    "id": "twilight-economy",
+    "scheduleDate": "2026-04-15",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Who did the work? Nobody knows anymore.\n\nHuman and AI labor blended indistinguishably. The question of authorship feels anachronistic.\n\nWelcome to the Twilight Economy.\n\nveda.ng/twilight-economy",
+    "image": "scripts/thread-assets/twilight_economy.png",
+    "postedAt": "2026-04-25T20:07:21.892Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkdtqy7xb42n"
+  },
+  {
+    "id": "singularity-paradox",
+    "scheduleDate": "2026-04-16",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "You cannot predict an intelligence smarter than you.\n\nThat is the singularity paradox. Any forecast about superintelligence is wrong by definition.\n\nDo we want AI smart enough to be useful and dumb enough to be safe?\n\nveda.ng/singularity-paradox",
+    "image": "scripts/thread-assets/singularity_paradox.png",
+    "postedAt": "2026-04-26T05:57:29.996Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkeuq7y5342o"
+  },
+  {
+    "id": "internet-of-lies",
+    "scheduleDate": "2026-04-16",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Truth has no built-in advantage on the internet.\n\nA fake headline travels as fast as a real one. No mechanism to verify provenance. Built for speed, not trust.\n\nThe fix is architectural, not moderation.\n\nveda.ng/internet-of-lies",
+    "image": "scripts/thread-assets/internet_of_lies.png",
+    "postedAt": "2026-04-26T20:07:08.883Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkge7ja52m23"
+  },
+  {
+    "id": "sacred-algorithms",
+    "scheduleDate": "2026-04-16",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "We stopped questioning the algorithm.\n\nWhen we cannot explain how it works, trust becomes faith. The black box is the modern oracle.\n\nCritical faith: trust paired with skepticism. Always.\n\nveda.ng/sacred-algorithms",
+    "image": "scripts/thread-assets/sacred_algorithms.png",
+    "postedAt": "2026-04-27T06:17:08.031Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkhgcawxw62v"
+  },
+  {
+    "id": "pseudonymous-agency",
+    "scheduleDate": "2026-04-17",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Participation or privacy. You were told to choose.\n\nPseudonymity is the third option. A stable identity not tied to your real name. AI agents as your digital proxies.\n\nveda.ng/pseudonymous-agency",
+    "image": "scripts/thread-assets/pseudonymous_agency.png",
+    "postedAt": "2026-04-27T20:41:57.923Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkiwmoumil26"
+  },
+  {
+    "id": "agi-governance",
+    "scheduleDate": "2026-04-17",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "How do you govern something smarter than you?\n\nGovernance assumes humans are the smartest actors. AGI may end that.\n\nveda.ng/agi-governance\n\nSome nations aren't waiting. Estonia, Singapore & the UAE run AI at scale across public services: veda.ng/agentic-state",
+    "image": "scripts/thread-assets/agi_governance.png",
+    "postedAt": "2026-04-28T06:19:58.116Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkjwwalp6p2w"
+  },
+  {
+    "id": "ai-economy",
+    "scheduleDate": "2026-04-18",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "The entry ramp is narrowing.\n\nStanford data: junior workers in AI-exposed jobs down 16%. Senior workers stable. The gap is widening.\n\nveda.ng/ai-economy\n\nThe companies that get AI deployment right start small. One boring task. Three-month payback. Then scale: veda.ng/stepwise-ai",
+    "image": "scripts/thread-assets/ai_economy.png",
+    "postedAt": "2026-04-28T20:49:42.540Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mklhjhig3e2y"
+  },
+  {
+    "id": "ambient-intelligence",
+    "scheduleDate": "2026-04-18",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "The best interface is no interface.\n\nAmbient intelligence eliminates the command itself. The environment senses and acts. You never ask.\n\nveda.ng/ambient-intelligence\n\nBefore no interface, there's a simpler one. The text field is replacing the dashboard: veda.ng/universal-text-ui",
+    "image": "scripts/thread-assets/ambient_intelligence.png",
+    "postedAt": "2026-04-29T06:14:08.774Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkmh2pcoza2v"
+  },
+  {
+    "id": "agentic-commerce",
+    "scheduleDate": "2026-04-18",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "Your next customer is an algorithm.\n\nAI agents search, compare, and checkout. You describe what you want. The machine buys it.\n\nveda.ng/agentic-commerce\n\nThe interface is changing too \u2014 dashboards give way to text fields calling APIs directly: veda.ng/universal-text-ui",
+    "image": "scripts/thread-assets/agentic_commerce.png",
+    "postedAt": "2026-04-29T20:43:17.748Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mknxmvwvmo25"
+  },
+  {
+    "id": "artificial-intuition",
+    "scheduleDate": "2026-04-19",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "Logic finds answers. Intuition finds questions.\n\nThe next frontier: giving machines a gut feeling. Holistic pattern recognition, not just logical reasoning.\n\nveda.ng/artificial-intuition",
+    "image": "scripts/thread-assets/artificial_intuition.png",
+    "postedAt": "2026-04-30T06:17:51.343Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkoxqbmxjj2w"
+  },
+  {
+    "id": "asi-timeline",
+    "scheduleDate": "2026-04-19",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "When does superintelligence arrive? Nobody knows.\n\nMetaculus: 50% by 2040-2050. But predictions range from 2030 to 2100. The uncertainty demands urgency.\n\nveda.ng/asi-timeline",
+    "image": "scripts/thread-assets/asi_timeline.png",
+    "postedAt": "2026-04-30T20:42:46.482Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkqi2vmku32y"
+  },
+  {
+    "id": "ai-agent-economy",
+    "scheduleDate": "2026-04-19",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "The corporation is dissolving.\n\nWhen transaction costs hit zero, the firm stops making sense. AI agents dissolve hierarchies into fluid networks.\n\nveda.ng/ai-agent-economy\n\n70% of big-bang AI deployments fail. The sequencing matters: veda.ng/stepwise-ai",
+    "image": "scripts/thread-assets/ai_agent_economy.png",
+    "postedAt": "2026-05-01T06:28:07.028Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkrirlclpb2b"
+  },
+  {
+    "id": "stepwise-ai",
+    "scheduleDate": "2026-04-10",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "Klarna automated support. Saved $60M. Customer satisfaction collapsed. They hired people back.\n\n70% of big-bang AI deployments fail. Companies that pick one boring task first see payback in three months.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-04-12T11:59:32.311Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgpt55e2f"
+  },
+  {
+    "id": "universal-text-ui",
+    "scheduleDate": "2026-04-12",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "Every dropdown on a dashboard is a predicted question. Your actual question is almost never one of them.\n\nPostHog, Salesforce, Cursor all replaced dashboards with text fields that call APIs directly.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-04-12T11:59:32.709Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgqa7x52q"
+  },
+  {
+    "id": "agentic-state",
+    "scheduleDate": "2026-04-11",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Estonia: 99% of government services are digital. Only marriages and divorces require showing up.\n\nBaby born? System detects it, calculates benefits, deposits money. No form. No queue.\n\nMost governments still run on PDFs.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-12T11:59:32.774Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgqdv552q"
+  },
+  {
+    "id": "stepwise-ai-sales",
+    "scheduleDate": "2026-04-12",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "Lead response: 4 hours \u2192 60 seconds. One voice agent, one task. Conversions tripled.\n\nThe sales team stopped qualifying. They only close.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-04-12T11:59:33.410Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgqwtkr2h"
+  },
+  {
+    "id": "agentic-state-eresidency",
+    "scheduleDate": "2026-04-13",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Estonia lets anyone start an EU company remotely. 135,000 people from 170 countries. \u20ac125M in state revenue. 12:1 ROI.\n\nGovernment as infrastructure.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-05-01T20:30:06.626Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mksxt3xdis2n"
+  },
+  {
+    "id": "universal-text-ui-106apps",
+    "scheduleDate": "2026-04-14",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "106 SaaS apps per company. 1,200 daily tab switches. 39% deep focus time.\n\n93% of leaders want to ask data questions in plain English. That's a structural bottleneck.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-05-02T05:54:48.236Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mktxewtw5h2o"
+  },
+  {
+    "id": "stepwise-ai-marketing",
+    "scheduleDate": "2026-04-15",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "3-person agency. 6 hours/person every Friday on reports. Routed analytics to LLM. 20 hours freed. Clients: 30 \u2192 50. Zero hires.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-05-02T20:07:47.382Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkvh273kye2b"
+  },
+  {
+    "id": "agentic-state-singapore",
+    "scheduleDate": "2026-04-16",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "Singapore: 50M citizen queries via AI chatbot. 100k officers using government AI tools. 72% less admin work.\n\nMost countries still debating whether to start a pilot.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-05-03T06:17:19.857Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkwj45ctik23"
+  },
+  {
+    "id": "agentic-state-xroad",
+    "scheduleDate": "2026-04-10",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "Estonia's X-Road: 1B+ gov queries/year. Birth registered \u2192 all agencies updated. One notification. Zero forms. Running since 2001.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-04-12T11:59:33.447Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgqyr6j2z"
+  },
+  {
+    "id": "universal-text-ui-paradigms",
+    "scheduleDate": "2026-04-17",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "CLI \u2192 GUI \u2192 NLI. Each cut adaptation cost 10x. The GUI replaced the command line. Natural language will replace dashboards.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-05-03T20:09:12.907Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkxxlo453a2n"
+  },
+  {
+    "id": "stepwise-ai-gartner",
+    "scheduleDate": "2026-04-19",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "40% of AI projects risk cancellation by 2027. Only 33% meet ROI. Fix: one task, 90-day payback, then expand.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-05-04T06:29:49.932Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkz2bg42rm2m"
+  },
+  {
+    "id": "agentic-state-uae",
+    "scheduleDate": "2026-04-20",
+    "scheduleTime": "01:00",
+    "posted": true,
+    "text": "Abu Dhabi: AED 13B for first AI-native government by 2027. 97% utilization. No legacy systems. Clean-sheet approach.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-05-04T20:50:05.161Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3ml2kdme6v22n"
+  },
+  {
+    "id": "stepwise-ai",
+    "scheduleDate": "2026-04-21",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Klarna automated support. Saved $60M. Customer satisfaction collapsed. They hired people back.\n\n70% of big-bang AI deployments fail. Companies that pick one boring task first see payback in three months.\n\nveda.ng/stepwise-ai",
+    "postedAt": "2026-05-07T13:19:47.215Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mlbclabt3u2v"
+  },
+  {
+    "id": "universal-text-ui",
+    "scheduleDate": "2026-04-21",
+    "scheduleTime": "17:00",
+    "posted": true,
+    "text": "Every dropdown on a dashboard is a predicted question. Your actual question is almost never one of them.\n\nPostHog, Salesforce, Cursor all replaced dashboards with text fields that call APIs directly.\n\nveda.ng/universal-text-ui",
+    "postedAt": "2026-05-09T02:58:59.698Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mlfasza4ic2y"
+  },
+  {
+    "id": "agentic-state",
+    "scheduleDate": "2026-04-22",
+    "scheduleTime": "09:00",
+    "posted": true,
+    "text": "Estonia: 99% of government services are digital. Only marriages and divorces require showing up.\n\nBaby born? System detects it, calculates benefits, deposits money. No form. No queue.\n\nMost governments still run on PDFs.\n\nveda.ng/agentic-state",
+    "postedAt": "2026-05-09T12:38:22.393Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mlgb6zikgp26"
+  },
+  {
+    "id": "reddit-meme-1",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "Business logic vs edge cases.\n\nYour code handles 99% of inputs perfectly.\n\nUsers will always find the 1% you missed.\n\nDesign for failure.",
+    "image": "scripts/thread-assets/linkedin-rewrites/game_rules.jpg"
+  },
+  {
+    "id": "reddit-meme-2",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": true,
+    "text": "When product asks for a \"simple feature\".\n\nThe underlying architecture rarely agrees.\n\nNothing is simple once you look under the hood.",
+    "image": "scripts/thread-assets/linkedin-rewrites/simple_feature.gif",
+    "error": "Skipped: image too large for Bluesky (50MB > 2MB limit)",
+    "postedAt": "2026-05-15T04:20:00Z"
+  },
+  {
+    "id": "reddit-meme-3",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "The most important skill for a senior engineer is not knowing the answer.\n\nIt is knowing exactly how to find it.",
+    "image": "scripts/thread-assets/linkedin-rewrites/important_skill.jpg"
+  },
+  {
+    "id": "reddit-meme-4",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "When leadership decides to \"help out\" with a little code cleanup right before the release.\n\nPlease. Stop. Helping.",
+    "image": "scripts/thread-assets/linkedin-rewrites/manager_cleanup.png"
+  },
+  {
+    "id": "reddit-meme-5",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false,
+    "text": "Open source in a nutshell.\n\nWe all build on work done by someone else.\n\nWho probably copied it from a forum post in 2012.",
+    "image": "scripts/thread-assets/linkedin-rewrites/steal_stolen.png"
+  },
+  {
+    "id": "reddit-cutting-devs",
+    "text": "Tech companies cutting developers to \"move faster with AI.\"\n\nSawing off your own legs and calling it weight loss.\n\nYou are not faster. You are just smaller.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-1.jpeg",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false
+  },
+  {
+    "id": "reddit-experience-interviews",
+    "text": "10 years of experience.\n\nRecruiter asks me to whiteboard a data structure I studied in university and never used once at work.\n\nEither experience matters or it does not. Pick one.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-2.jpeg",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false
+  },
+  {
+    "id": "reddit-code-review",
+    "text": "We used to review every line of code before production.\n\nNow we ask AI to write it, skim it for 30 seconds, and ship it.\n\nGrandpa Simpson energy.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-3.jpeg",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false
+  },
+  {
+    "id": "reddit-senior-abstraction",
+    "text": "Senior devs after adding 4 layers of abstraction to avoid simplicity.\n\nCelebrating complexity like it is an achievement.\n\nThe best code is the code you do not write.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-4.jpeg",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false
+  },
+  {
+    "id": "reddit-uuid-edge-case",
+    "text": "The odds of generating a duplicate UUID are low.\n\nBut never zero.\n\nEvery edge case you ignore will find you in production at 3am.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-5.jpeg",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false
+  },
+  {
+    "id": "reddit-multi-agent",
+    "text": "Multi-agent collaboration.\n\nCodex asks Claude to fix the issue.\n\nClaude responds: \"No. I decide I do not care.\"\n\nEven AI agents are learning to set boundaries.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-6.png",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false
+  },
+  {
+    "id": "reddit-ai-work-more",
+    "text": "Have not met anyone working less after adopting AI.\n\nThe tools got faster.\n\nThe expectations got bigger.\n\nYou just do 3x the work for the same pay.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-7.jpeg",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false
+  },
+  {
+    "id": "reddit-firefox-privacy",
+    "text": "One of the wildest git diffs.\n\nFirefox removed their FAQ answer: \"Does Firefox sell your personal data? Nope. Never have, never will.\"\n\nWhen your source code tells on you.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-9.png",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false
+  },
+  {
+    "id": "reddit-ai-agents-joke",
+    "text": "You guys actually use AI agents to code?\n\nI thought it was a joke.\n\nSome of us are genuinely confused by the timeline we are living in.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-10.png",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false
+  },
+  {
+    "id": "reddit-floating-point",
+    "text": "ChatGPT says 9.11 is bigger than 9.9.\n\nThen does the subtraction: 9.11 - 9.9 = 0.21.\n\nThen Python says -0.79.\n\nFloating point arithmetic is everyone's worst nightmare. Even AI's.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-12.png",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false
+  },
+  {
+    "id": "reddit-responsive-pain",
+    "text": "Built a beautiful site on a 4K monitor.\n\nOpened it on 720p.\n\nCried.\n\nEvery frontend developer has lived this exact moment.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-14.png",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false
+  },
+  {
+    "id": "reddit-ffmpeg",
+    "text": "Can a robot write ffmpeg?\n\nCan you?\n\nYeah.\n\nSome software was written by people who are simply built different. ffmpeg is one of them.",
+    "image": "scripts/thread-assets/reddit-memes/reddit-15.jpeg",
+    "scheduleDate": "2026-01-01",
+    "scheduleTime": "00:00",
+    "posted": false
+  }
+]
