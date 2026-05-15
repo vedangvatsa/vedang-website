@@ -1,0 +1,732 @@
+[
+  {
+    "timestamp": "2026-05-14T06:54:49.713Z",
+    "platform": "twitter",
+    "postUrl": "https://x.com/vedangvatsa/status/test123",
+    "orders": []
+  },
+  {
+    "timestamp": "2026-05-14T06:55:03.448Z",
+    "platform": "linkedin",
+    "postUrl": "https://linkedin.com/feed/update/test456",
+    "orders": [
+      {
+        "action": "Views",
+        "panel": "jap",
+        "serviceId": 6227,
+        "quantity": 857,
+        "scheduledAt": "2026-05-14T06:55:03.450Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Likes",
+        "panel": "jap",
+        "serviceId": 2062,
+        "quantity": 48,
+        "scheduledAt": "2026-05-14T07:00:03.450Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Insightful 💡",
+        "panel": "paytosmm",
+        "serviceId": 3543,
+        "quantity": 14,
+        "scheduledAt": "2026-05-14T07:05:03.450Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Celebrate 👏",
+        "panel": "paytosmm",
+        "serviceId": 3539,
+        "quantity": 8,
+        "scheduledAt": "2026-05-14T07:10:03.450Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Comments",
+        "panel": "paytosmm",
+        "serviceId": 3538,
+        "quantity": 3,
+        "scheduledAt": "2026-05-14T07:25:03.450Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Shares",
+        "panel": "paytosmm",
+        "serviceId": 3537,
+        "quantity": 5,
+        "scheduledAt": "2026-05-14T07:40:03.450Z",
+        "error": "DRY_RUN"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T06:55:15.321Z",
+    "platform": "twitter",
+    "postUrl": "https://example.com/twitter/test-1778741711",
+    "orders": [
+      {
+        "action": "Views",
+        "panel": "peakerr",
+        "serviceId": 15430,
+        "quantity": 1495,
+        "scheduledAt": "2026-05-14T06:55:15.323Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Likes",
+        "panel": "jap",
+        "serviceId": 9531,
+        "quantity": 41,
+        "scheduledAt": "2026-05-14T07:05:15.323Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Retweets",
+        "panel": "paytosmm",
+        "serviceId": 3791,
+        "quantity": 14,
+        "scheduledAt": "2026-05-14T07:20:15.323Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Bookmarks",
+        "panel": "paytosmm",
+        "serviceId": 3812,
+        "quantity": 3,
+        "scheduledAt": "2026-05-14T07:30:15.323Z",
+        "error": "DRY_RUN"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T06:55:19.216Z",
+    "platform": "linkedin",
+    "postUrl": "https://example.com/linkedin/test-1778741715",
+    "orders": [
+      {
+        "action": "Views",
+        "panel": "jap",
+        "serviceId": 6227,
+        "quantity": 524,
+        "scheduledAt": "2026-05-14T06:55:19.218Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Likes",
+        "panel": "jap",
+        "serviceId": 2062,
+        "quantity": 32,
+        "scheduledAt": "2026-05-14T07:00:19.218Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Insightful 💡",
+        "panel": "paytosmm",
+        "serviceId": 3543,
+        "quantity": 21,
+        "scheduledAt": "2026-05-14T07:05:19.218Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Celebrate 👏",
+        "panel": "paytosmm",
+        "serviceId": 3539,
+        "quantity": 7,
+        "scheduledAt": "2026-05-14T07:10:19.218Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Comments",
+        "panel": "paytosmm",
+        "serviceId": 3538,
+        "quantity": 4,
+        "scheduledAt": "2026-05-14T07:25:19.218Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Shares",
+        "panel": "paytosmm",
+        "serviceId": 3537,
+        "quantity": 4,
+        "scheduledAt": "2026-05-14T07:40:19.218Z",
+        "error": "DRY_RUN"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T06:55:23.007Z",
+    "platform": "facebook",
+    "postUrl": "https://example.com/facebook/test-1778741719",
+    "orders": [
+      {
+        "action": "Reactions 👍",
+        "panel": "paytosmm",
+        "serviceId": 4113,
+        "quantity": 93,
+        "scheduledAt": "2026-05-14T06:55:23.009Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Reactions ❤️",
+        "panel": "paytosmm",
+        "serviceId": 4114,
+        "quantity": 23,
+        "scheduledAt": "2026-05-14T07:00:23.009Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Reactions 😲",
+        "panel": "paytosmm",
+        "serviceId": 4115,
+        "quantity": 22,
+        "scheduledAt": "2026-05-14T07:05:23.009Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Shares",
+        "panel": "paytosmm",
+        "serviceId": 3537,
+        "quantity": 5,
+        "scheduledAt": "2026-05-14T07:15:23.009Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Video Views 10s+",
+        "panel": "paytosmm",
+        "serviceId": 4049,
+        "quantity": 912,
+        "scheduledAt": "2026-05-14T07:00:23.009Z",
+        "error": "DRY_RUN"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T06:55:26.723Z",
+    "platform": "instagram",
+    "postUrl": "https://example.com/instagram/test-1778741723",
+    "orders": [
+      {
+        "action": "Saves",
+        "panel": "peakerr",
+        "serviceId": 30763,
+        "quantity": 22,
+        "scheduledAt": "2026-05-14T06:55:26.725Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Views",
+        "panel": "jap",
+        "serviceId": 5994,
+        "quantity": 1260,
+        "scheduledAt": "2026-05-14T06:57:26.725Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Likes",
+        "panel": "paytosmm",
+        "serviceId": 4261,
+        "quantity": 77,
+        "scheduledAt": "2026-05-14T07:05:26.725Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Shares + Reach",
+        "panel": "paytosmm",
+        "serviceId": 4152,
+        "quantity": 22,
+        "scheduledAt": "2026-05-14T07:15:26.725Z",
+        "error": "DRY_RUN"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T06:55:30.399Z",
+    "platform": "telegram",
+    "postUrl": "https://example.com/telegram/test-1778741726",
+    "orders": [
+      {
+        "action": "Views",
+        "panel": "peakerr",
+        "serviceId": 31146,
+        "quantity": 2353,
+        "scheduledAt": "2026-05-14T06:55:30.400Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Reactions (mix positive)",
+        "panel": "paytosmm",
+        "serviceId": 2711,
+        "quantity": 62,
+        "scheduledAt": "2026-05-14T07:00:30.400Z",
+        "error": "DRY_RUN"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T06:55:34.065Z",
+    "platform": "threads",
+    "postUrl": "https://example.com/threads/test-1778741730",
+    "orders": [
+      {
+        "action": "Likes",
+        "panel": "jap",
+        "serviceId": 2133,
+        "quantity": 26,
+        "scheduledAt": "2026-05-14T06:55:34.067Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Shares",
+        "panel": "jap",
+        "serviceId": 2135,
+        "quantity": 10,
+        "scheduledAt": "2026-05-14T07:10:34.067Z",
+        "error": "DRY_RUN"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T06:55:37.787Z",
+    "platform": "bluesky",
+    "postUrl": "https://example.com/bluesky/test-1778741734",
+    "orders": [
+      {
+        "action": "Likes",
+        "panel": "jap",
+        "serviceId": 9531,
+        "quantity": 46,
+        "scheduledAt": "2026-05-14T06:55:37.791Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Boosts",
+        "panel": "peakerr",
+        "serviceId": 31698,
+        "quantity": 7,
+        "scheduledAt": "2026-05-14T07:10:37.791Z",
+        "error": "DRY_RUN"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T06:55:41.676Z",
+    "platform": "tumblr",
+    "postUrl": "https://example.com/tumblr/test-1778741737",
+    "orders": [
+      {
+        "action": "Likes",
+        "panel": "peakerr",
+        "serviceId": 31635,
+        "quantity": 20,
+        "scheduledAt": "2026-05-14T06:55:41.678Z",
+        "error": "DRY_RUN"
+      },
+      {
+        "action": "Reblogs",
+        "panel": "peakerr",
+        "serviceId": 31636,
+        "quantity": 10,
+        "scheduledAt": "2026-05-14T07:10:41.678Z",
+        "error": "DRY_RUN"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T06:55:45.733Z",
+    "platform": "reddit",
+    "postUrl": "https://example.com/reddit/test-1778741741",
+    "orders": [
+      {
+        "action": "Upvotes",
+        "panel": "jap",
+        "serviceId": 3471,
+        "quantity": 9,
+        "scheduledAt": "2026-05-14T07:00:45.735Z",
+        "error": "DRY_RUN"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T06:59:53.253Z",
+    "platform": "linkedin",
+    "postUrl": "https://linkedin.com/test-ratio-check",
+    "seed": {
+      "likes": 38,
+      "views": 396,
+      "shares": 2,
+      "comments": 3,
+      "saves": 1,
+      "extraReactions": 19
+    },
+    "orders": [
+      {
+        "action": "Views",
+        "panel": "jap",
+        "serviceId": 6227,
+        "qty": 660,
+        "delayMin": 0,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Likes",
+        "panel": "jap",
+        "serviceId": 2062,
+        "qty": 65,
+        "delayMin": 5,
+        "dripRuns": 3,
+        "dripInterval": 20,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Insightful 💡",
+        "panel": "paytosmm",
+        "serviceId": 3543,
+        "qty": 50,
+        "delayMin": 10,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Celebrate 👏",
+        "panel": "paytosmm",
+        "serviceId": 3539,
+        "qty": 50,
+        "delayMin": 15,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Comments",
+        "panel": "paytosmm",
+        "serviceId": 3538,
+        "qty": 10,
+        "delayMin": 30,
+        "comments": [
+          "worth noting that adoption curves tend to compress over time",
+          "the data backs this up too",
+          "been saying something similar but you laid it out better",
+          "makes sense when you look at how the industry has shifted",
+          "worth the read",
+          "the part about coordination costs is underrated"
+        ],
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Shares",
+        "panel": "paytosmm",
+        "serviceId": 3537,
+        "qty": 50,
+        "delayMin": 45,
+        "status": "DRY_RUN"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T07:00:00.694Z",
+    "platform": "twitter",
+    "postUrl": "https://example.com/twitter/ratio-test-1778742000",
+    "seed": {
+      "likes": 39,
+      "views": 450,
+      "shares": 8,
+      "comments": 2,
+      "saves": 2,
+      "extraReactions": 1
+    },
+    "orders": [
+      {
+        "action": "Views",
+        "panel": "peakerr",
+        "serviceId": 15430,
+        "qty": 538,
+        "delayMin": 0,
+        "dripRuns": 3,
+        "dripInterval": 20,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Likes",
+        "panel": "jap",
+        "serviceId": 9531,
+        "qty": 71,
+        "delayMin": 10,
+        "dripRuns": 4,
+        "dripInterval": 15,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Retweets",
+        "panel": "paytosmm",
+        "serviceId": 3791,
+        "qty": 10,
+        "delayMin": 25,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Bookmarks",
+        "panel": "paytosmm",
+        "serviceId": 3812,
+        "qty": 50,
+        "delayMin": 35,
+        "status": "DRY_RUN"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T07:00:01.013Z",
+    "platform": "instagram",
+    "postUrl": "https://example.com/instagram/ratio-test-1778742000",
+    "seed": {
+      "likes": 71,
+      "views": 673,
+      "shares": 2,
+      "comments": 3,
+      "saves": 6,
+      "extraReactions": 1
+    },
+    "orders": [
+      {
+        "action": "Saves",
+        "panel": "peakerr",
+        "serviceId": 30763,
+        "qty": 10,
+        "delayMin": 0,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Views",
+        "panel": "jap",
+        "serviceId": 5994,
+        "qty": 1105,
+        "delayMin": 2,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Likes",
+        "panel": "paytosmm",
+        "serviceId": 4261,
+        "qty": 104,
+        "delayMin": 10,
+        "dripRuns": 4,
+        "dripInterval": 30,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Shares",
+        "panel": "paytosmm",
+        "serviceId": 4152,
+        "qty": 10,
+        "delayMin": 20,
+        "status": "DRY_RUN"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T07:00:01.298Z",
+    "platform": "reddit",
+    "postUrl": "https://example.com/reddit/ratio-test-1778742001",
+    "seed": {
+      "likes": 7,
+      "views": 1,
+      "shares": 1,
+      "comments": 1,
+      "saves": 1,
+      "extraReactions": 1
+    },
+    "orders": [
+      {
+        "action": "Upvotes",
+        "panel": "jap",
+        "serviceId": 3471,
+        "qty": 10,
+        "delayMin": 5,
+        "dripRuns": 3,
+        "dripInterval": 30,
+        "status": "DRY_RUN"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T07:00:01.565Z",
+    "platform": "bluesky",
+    "postUrl": "https://example.com/bluesky/ratio-test-1778742001",
+    "seed": {
+      "likes": 18,
+      "views": 1,
+      "shares": 3,
+      "comments": 1,
+      "saves": 1,
+      "extraReactions": 1
+    },
+    "orders": [
+      {
+        "action": "Likes",
+        "panel": "jap",
+        "serviceId": 9531,
+        "qty": 40,
+        "delayMin": 0,
+        "dripRuns": 3,
+        "dripInterval": 15,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Boosts",
+        "panel": "peakerr",
+        "serviceId": 31698,
+        "qty": 20,
+        "delayMin": 15,
+        "status": "DRY_RUN"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T07:06:22.222Z",
+    "platform": "tiktok",
+    "postUrl": "https://tiktok.com/@vedang/video/test123",
+    "seed": {
+      "likes": 81,
+      "views": 1097,
+      "shares": 7,
+      "comments": 1,
+      "saves": 10,
+      "extraReactions": 1
+    },
+    "orders": [
+      {
+        "action": "Saves",
+        "panel": "jap",
+        "serviceId": 10257,
+        "qty": 100,
+        "delayMin": 0,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Views",
+        "panel": "jap",
+        "serviceId": 10266,
+        "qty": 679,
+        "delayMin": 2,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Likes",
+        "panel": "jap",
+        "serviceId": 10061,
+        "qty": 56,
+        "delayMin": 8,
+        "dripRuns": 3,
+        "dripInterval": 20,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Shares",
+        "panel": "jap",
+        "serviceId": 10260,
+        "qty": 100,
+        "delayMin": 15,
+        "status": "DRY_RUN"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T09:09:25.276Z",
+    "platform": "twitter",
+    "postUrl": "https://twitter.com/vedangvatsa/status/2054851471179751916",
+    "seed": {
+      "likes": 31,
+      "views": 284,
+      "shares": 5,
+      "comments": 2,
+      "saves": 2,
+      "extraReactions": 1
+    },
+    "orders": [
+      {
+        "action": "Views",
+        "panel": "peakerr",
+        "serviceId": 15430,
+        "qty": 507,
+        "delayMin": 0,
+        "dripRuns": 3,
+        "dripInterval": 20,
+        "orderId": 78502660
+      },
+      {
+        "action": "Likes",
+        "panel": "jap",
+        "serviceId": 9531,
+        "qty": 52,
+        "delayMin": 10,
+        "dripRuns": 4,
+        "dripInterval": 15,
+        "orderId": 959132770
+      },
+      {
+        "action": "Retweets",
+        "panel": "jap",
+        "serviceId": 8860,
+        "qty": 10,
+        "delayMin": 25,
+        "orderId": 959139611
+      },
+      {
+        "action": "Bookmarks",
+        "panel": "jap",
+        "serviceId": 2174,
+        "qty": 100,
+        "delayMin": 35,
+        "orderId": 959149389
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T14:31:11.817Z",
+    "platform": "twitter",
+    "postUrl": "https://x.com/vedangvatsa/status/2054851471179751916?s=20",
+    "seed": {
+      "likes": 47,
+      "views": 390,
+      "shares": 6,
+      "comments": 2,
+      "saves": 2,
+      "extraReactions": 1
+    },
+    "orders": [
+      {
+        "action": "Views",
+        "panel": "peakerr",
+        "serviceId": 15430,
+        "qty": 545,
+        "delayMin": 0,
+        "dripRuns": 3,
+        "dripInterval": 20,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Likes",
+        "panel": "jap",
+        "serviceId": 9531,
+        "qty": 67,
+        "delayMin": 2,
+        "dripRuns": 4,
+        "dripInterval": 15,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Retweets",
+        "panel": "jap",
+        "serviceId": 8860,
+        "qty": 10,
+        "delayMin": 6,
+        "status": "DRY_RUN"
+      },
+      {
+        "action": "Bookmarks",
+        "panel": "jap",
+        "serviceId": 2174,
+        "qty": 100,
+        "delayMin": 1,
+        "status": "DRY_RUN"
+      }
+    ]
+  }
+]

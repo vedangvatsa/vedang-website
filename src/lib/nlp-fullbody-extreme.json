@@ -1,0 +1,90 @@
+{
+  "documentsScraped": 1002,
+  "pdfsParsed": 0,
+  "htmlsParsed": 1002,
+  "failedOrTimeout": 18173,
+  "topKeywords": [
+    [
+      "media",
+      145700
+    ],
+    [
+      "min-width",
+      135965
+    ],
+    [
+      "font-size",
+      114436
+    ],
+    [
+      "important",
+      92036
+    ],
+    [
+      "display",
+      75542
+    ],
+    [
+      "color",
+      53281
+    ],
+    [
+      "line-height",
+      43159
+    ],
+    [
+      "font-weight",
+      39380
+    ],
+    [
+      "width",
+      37801
+    ],
+    [
+      "pagelead__subtitle",
+      35952
+    ]
+  ],
+  "topBigrams": [
+    [
+      "media min-width",
+      131176
+    ],
+    [
+      "font-size media",
+      63840
+    ],
+    [
+      "min-width 768px",
+      28864
+    ],
+    [
+      "pagelead--withbackgroundimage pagelead__subtitle",
+      23016
+    ],
+    [
+      "min-width 1024px",
+      22512
+    ],
+    [
+      "min-width 1440px",
+      21168
+    ],
+    [
+      "min-width 1920px",
+      21000
+    ],
+    [
+      "wp-block-cg-blocks-intro-para section--intro",
+      18540
+    ],
+    [
+      "min-width 390px",
+      16632
+    ],
+    [
+      "line-height media",
+      14768
+    ]
+  ]
+}

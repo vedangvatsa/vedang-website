@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeFi AMM Token Swap</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        body {
+            margin: 0; padding: 0; background-color: #f8fafc; color: #0f172a;
+            font-family: 'Inter', sans-serif; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; height: 100vh; overflow: hidden;
+        }
+
+        .header { position: absolute; top: 40px; text-align: center; }
+        h1 { font-size: 2.5rem; margin: 0; color: #0f172a; letter-spacing: -0.025em; font-weight: 700; }
+        p { color: #64748b; font-size: 1.2rem; margin-top: 10px; }
+
+        .container {
+            display: flex; gap: 60px; padding: 60px; background: #ffffff;
+            border-radius: 24px; border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08); align-items: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .pool {
+            display: flex; flex-direction: column; align-items: center; gap: 15px;
+        }
+        
+        .pool-label { font-weight: 600; font-size: 1.2rem; }
+        .pool-amount { font-family: monospace; font-size: 1.1rem; color: #64748b; }
+
+        .bar-container {
+            width: 100px; height: 300px; background: #f1f5f9; border-radius: 12px;
+            display: flex; align-items: flex-end; overflow: hidden; position: relative;
+        }
+
+        .bar {
+            width: 100%; border-radius: 12px 12px 0 0;
+            transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #eth-bar { background: #0A66C2; }
+        #usdc-bar { background: #10B981; }
+
+        .controls { display: flex; gap: 20px; }
+        button {
+            padding: 12px 30px; font-size: 1.1rem; font-family: 'Inter', sans-serif;
+            font-weight: 600; border-radius: 12px; cursor: pointer; transition: all 0.2s ease;
+        }
+        
+        button.primary { background: #0f172a; color: #ffffff; border: none; }
+        button.primary:hover { background: #1e293b; transform: translateY(-2px); }
+        button.secondary { background: #ffffff; color: #0f172a; border: 1px solid #e2e8f0; }
+        button.secondary:hover { background: #f8fafc; transform: translateY(-2px); }
+        
+        .equation {
+            position: absolute; bottom: 140px; font-family: monospace; font-size: 1.5rem;
+            background: #ffffff; padding: 10px 20px; border-radius: 12px; border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .highlight { color: #E11D48; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AMM Liquidity Pool</h1>
+        <p>Constant Product Formula (x * y = k)</p>
+    </div>
+    
+    <div class="container">
+        <div class="pool">
+            <div class="pool-label">ETH Reserve (x)</div>
+            <div class="bar-container"><div id="eth-bar" class="bar" style="height: 50%;"></div></div>
+            <div id="eth-amount" class="pool-amount">100 ETH</div>
+        </div>
+        
+        <div class="pool">
+            <div class="pool-label">USDC Reserve (y)</div>
+            <div class="bar-container"><div id="usdc-bar" class="bar" style="height: 50%;"></div></div>
+            <div id="usdc-amount" class="pool-amount">400,000 USDC</div>
+        </div>
+    </div>
+    
+    <div class="equation" id="equation">
+        100 * 400,000 = <span class="highlight">40,000,000 (k)</span>
+    </div>
+
+    <div class="controls">
+        <button class="secondary" onclick="resetPool()">Reset Pool</button>
+        <button class="primary" onclick="swapToken()">Swap 50 ETH for USDC</button>
+    </div>
+
+    <script>
+        let eth = 100;
+        let usdc = 400000;
+        const k = 40000000;
+        
+        const ethBar = document.getElementById('eth-bar');
+        const usdcBar = document.getElementById('usdc-bar');
+        const ethAmount = document.getElementById('eth-amount');
+        const usdcAmount = document.getElementById('usdc-amount');
+        const equation = document.getElementById('equation');
+
+        function updateUI() {
+            // max eth we show is 300, max usdc is 1,200,000 for height scaling
+            ethBar.style.height = `${(eth / 300) * 100}%`;
+            usdcBar.style.height = `${(usdc / 1200000) * 100}%`;
+            
+            ethAmount.innerText = `${Math.round(eth)} ETH`;
+            usdcAmount.innerText = `${Math.round(usdc).toLocaleString()} USDC`;
+            
+            equation.innerHTML = `${Math.round(eth)} * ${Math.round(usdc).toLocaleString()} = <span class="highlight">40,000,000 (k)</span>`;
+        }
+
+        function swapToken() {
+            if(eth >= 250) return; // Prevent going off chart
+            const ethAdded = 50;
+            eth += ethAdded;
+            
+            // k = x * y => y = k / x
+            const newUsdc = k / eth;
+            usdc = newUsdc;
+            
+            updateUI();
+        }
+
+        function resetPool() {
+            eth = 100;
+            usdc = 400000;
+            updateUI();
+        }
+    </script>
+</body>
+</html>
