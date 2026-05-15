@@ -906,9 +906,9 @@
     "image": "scripts/thread-assets/linkedin-rewrites/youtube_outage.mp4",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
-    "castHash": null
+    "posted": true,
+    "postedAt": "2026-05-15T20:06:58.420Z",
+    "castHash": "0x58d8875deb332d824ad26b1698de6f4a7070a81c"
   },
   {
     "id": "reddit-vid-2",

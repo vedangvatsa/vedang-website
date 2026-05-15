@@ -873,7 +873,9 @@
     "text": "When microservices fail in production.\n\nOne service goes down.\n\nThen the next.\n\nThen the next.\n\nKeep your blast radius small.",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "09:00",
-    "posted": false
+    "posted": true,
+    "postedAt": "2026-05-15T20:06:37.152Z",
+    "postId": "urn:li:ugcPost:7461145031723098112"
   },
   {
     "id": "reddit-vid-2",
