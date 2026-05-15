@@ -56,6 +56,42 @@ function isVideo(filePath: string): boolean {
   return /\.(mp4|mov|webm)$/i.test(filePath);
 }
 
+async function compressImage(absPath: string): Promise<{ buffer: Buffer; mimeType: string }> {
+  const sharp = (await import('sharp')).default;
+  const MAX_BYTES = 900_000; // 900KB — safe margin under Bluesky's 1MB blob limit
+  const ext = path.extname(absPath).toLowerCase();
+
+  // GIFs: extract first frame and convert to JPEG
+  if (ext === '.gif') {
+    console.log(`  🔄 Converting GIF → JPEG (first frame)`);
+    let buf = await sharp(absPath, { animated: false, pages: 1 })
+      .jpeg({ quality: 80 })
+      .toBuffer();
+    if (buf.length > MAX_BYTES) {
+      buf = await sharp(buf).resize({ width: 1200, withoutEnlargement: true }).jpeg({ quality: 70 }).toBuffer();
+    }
+    return { buffer: buf, mimeType: 'image/jpeg' };
+  }
+
+  let buf = fs.readFileSync(absPath);
+  if (buf.length <= MAX_BYTES) {
+    const mimeType = ext === '.png' ? 'image/png' : 'image/jpeg';
+    return { buffer: buf, mimeType };
+  }
+
+  // Oversized: progressively resize as JPEG until under limit
+  console.log(`  🔄 Compressing ${(buf.length / 1024 / 1024).toFixed(1)}MB → <900KB`);
+  let quality = 80;
+  let width = 1600;
+  while (buf.length > MAX_BYTES && quality >= 40) {
+    buf = await sharp(absPath).resize({ width, withoutEnlargement: true }).jpeg({ quality }).toBuffer();
+    quality -= 10;
+    width -= 200;
+  }
+  console.log(`  ✅ Compressed to ${(buf.length / 1024).toFixed(0)}KB`);
+  return { buffer: buf, mimeType: 'image/jpeg' };
+}
+
 async function uploadImage(session: Session, imagePath: string): Promise<any | null> {
   const absPath = path.isAbsolute(imagePath)
     ? imagePath
@@ -72,8 +108,7 @@ async function uploadImage(session: Session, imagePath: string): Promise<any | n
     return null;
   }
 
-  const imageBuffer = fs.readFileSync(absPath);
-  const mimeType = absPath.endsWith('.png') ? 'image/png' : 'image/jpeg';
+  const { buffer, mimeType } = await compressImage(absPath);
 
   const res = await fetch(`${BLUESKY_SERVICE}/xrpc/com.atproto.repo.uploadBlob`, {
     method: 'POST',
@@ -81,7 +116,7 @@ async function uploadImage(session: Session, imagePath: string): Promise<any | n
       Authorization: `Bearer ${session.accessJwt}`,
       'Content-Type': mimeType,
     },
-    body: imageBuffer,
+    body: buffer,
   });
 
   if (!res.ok) {
@@ -157,7 +192,7 @@ async function createPost(session: Session, post: BlueskyPost): Promise<string> 
   if (post.image && !isVideo(post.image)) {
     const blob = await uploadImage(session, post.image);
     if (!blob) {
-      throw new Error(`Media upload failed for: ${post.image} — aborting (will not post text-only)`);
+      throw new Error(`Media failed: ${post.image} — skipped`);
     }
     record.embed = {
       $type: 'app.bsky.embed.images',
@@ -230,27 +265,37 @@ async function main() {
     return;
   }
 
-  console.log(`📤 ${due.length} post(s) due — will post 1`);
+  console.log(`📤 ${due.length} post(s) due`);
 
   const session = await createSession();
   console.log(`🔑 Authenticated as ${session.did}`);
 
-  const post = due[0]; // Only take the first due post
-  try {
-    console.log(`\n📝 Posting: ${post.id}`);
-    const uri = await createPost(session, post);
-    post.posted = true;
-    post.postedAt = new Date().toISOString();
-    post.postUri = uri;
-    console.log(`  ✅ Posted: ${uri}`);
-  } catch (err: any) {
-    post.error = err.message;
-    console.error(`  ❌ Failed: ${err.message}`);
+  let posted = false;
+  for (const post of due) {
+    try {
+      console.log(`\n📝 Posting: ${post.id}`);
+      const uri = await createPost(session, post);
+      post.posted = true;
+      post.postedAt = new Date().toISOString();
+      post.postUri = uri;
+      console.log(`  ✅ Posted: ${uri}`);
+      try { triggerBoost('bluesky', uri); } catch(e) { console.warn('⚠️ Boost failed:', e); }
+      posted = true;
+      break; // Only 1 successful post per run
+    } catch (err: any) {
+      if (err.message?.includes('skipped')) {
+        console.warn(`  ⏭️ ${err.message}`);
+        post.posted = true;
+        post.error = err.message;
+        continue; // Try next post
+      }
+      post.error = err.message;
+      console.error(`  ❌ Failed: ${err.message}`);
+      break; // Stop on real failure
+    }
   }
 
-  
-    try { triggerBoost('bluesky', uri); } catch(e) {}
-    fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
+  fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
   console.log('\n💾 Updated bluesky-posts.json');
 }
 

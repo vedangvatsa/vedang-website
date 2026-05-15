@@ -120,30 +120,39 @@ async function main() {
     return;
   }
 
-  console.log(`📤 ${due.length} post(s) due — will post 1`);
-  const post = due[0];
+  console.log(`📤 ${due.length} post(s) due`);
 
-  try {
-    console.log(`\n📝 Posting: ${post.id}`);
-    
-    let mediaId: string | null = null;
-    if (post.image) {
-      console.log('  📤 Uploading media...');
-      mediaId = await uploadMedia(post.image);
-      if (!mediaId) {
-        throw new Error(`Media upload failed for: ${post.image} — aborting (will not post text-only)`);
+  for (const post of due) {
+    try {
+      console.log(`\n📝 Posting: ${post.id}`);
+
+      let mediaId: string | null = null;
+      if (post.image) {
+        console.log('  📤 Uploading media...');
+        mediaId = await uploadMedia(post.image);
+        if (!mediaId) {
+          throw new Error(`Media failed: ${post.image} — skipped`);
+        }
       }
-    }
 
-    const statusId = await postStatus(post.text, mediaId);
-    post.posted = true;
-    post.postedAt = new Date().toISOString();
-    post.mastodonId = statusId;
-    console.log(`  ✅ Posted: ${statusId}`);
-    console.log(`  🔗 ${MASTODON_INSTANCE}/@vedangvatsa/${statusId}`);
-  } catch (err: any) {
-    post.error = err.message;
-    console.error(`  ❌ Failed: ${err.message}`);
+      const statusId = await postStatus(post.text, mediaId);
+      post.posted = true;
+      post.postedAt = new Date().toISOString();
+      post.mastodonId = statusId;
+      console.log(`  ✅ Posted: ${statusId}`);
+      console.log(`  🔗 ${MASTODON_INSTANCE}/@vedangvatsa/${statusId}`);
+      break; // Only 1 successful post per run
+    } catch (err: any) {
+      if (err.message?.includes('skipped')) {
+        console.warn(`  ⏭️ ${err.message}`);
+        post.posted = true;
+        post.error = err.message;
+        continue; // Try next post
+      }
+      post.error = err.message;
+      console.error(`  ❌ Failed: ${err.message}`);
+      break;
+    }
   }
 
   fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));

@@ -748,11 +748,9 @@
     "id": "reddit-meme-2",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": true,
+    "posted": false,
     "text": "When product asks for a \"simple feature\".\n\nThe underlying architecture rarely agrees.\n\nNothing is simple once you look under the hood.",
-    "image": "scripts/thread-assets/linkedin-rewrites/simple_feature.gif",
-    "error": "Skipped: image too large for Bluesky (50MB > 2MB limit)",
-    "postedAt": "2026-05-15T04:20:00Z"
+    "image": "scripts/thread-assets/linkedin-rewrites/simple_feature.gif"
   },
   {
     "id": "reddit-meme-3",
