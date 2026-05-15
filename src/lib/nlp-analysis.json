@@ -1,0 +1,271 @@
+{
+  "totalAnalyzed": 19175,
+  "topKeywords": [
+    [
+      "detection",
+      803
+    ],
+    [
+      "study",
+      801
+    ],
+    [
+      "optimization",
+      611
+    ],
+    [
+      "digital",
+      554
+    ],
+    [
+      "language",
+      463
+    ],
+    [
+      "management",
+      432
+    ],
+    [
+      "risk",
+      407
+    ],
+    [
+      "impact",
+      384
+    ],
+    [
+      "roi",
+      379
+    ],
+    [
+      "control",
+      374
+    ]
+  ],
+  "topBigrams": [
+    [
+      "large language",
+      237
+    ],
+    [
+      "case study",
+      137
+    ],
+    [
+      "supply chain",
+      134
+    ],
+    [
+      "public sector",
+      117
+    ],
+    [
+      "transformation public",
+      111
+    ],
+    [
+      "digital transformation",
+      110
+    ],
+    [
+      "neural networks",
+      110
+    ],
+    [
+      "risk mitigation",
+      108
+    ],
+    [
+      "drug discovery",
+      108
+    ],
+    [
+      "governance risk",
+      105
+    ]
+  ],
+  "categoryHighlights": [
+    {
+      "category": "Legal & Justice",
+      "topTrend": [
+        "legal contract",
+        85
+      ]
+    },
+    {
+      "category": "Retail & E-Commerce",
+      "topTrend": [
+        "conversational commerce",
+        90
+      ]
+    },
+    {
+      "category": "Telecom & Connectivity",
+      "topTrend": [
+        "telecom network",
+        87
+      ]
+    },
+    {
+      "category": "Supply Chain & Manufacturing",
+      "topTrend": [
+        "supply chain",
+        112
+      ]
+    },
+    {
+      "category": "Government & Public Sector",
+      "topTrend": [
+        "public sector",
+        113
+      ]
+    },
+    {
+      "category": "AI Ethics & Governance",
+      "topTrend": [
+        "governance risk",
+        105
+      ]
+    },
+    {
+      "category": "Healthcare & Biotech",
+      "topTrend": [
+        "drug discovery",
+        108
+      ]
+    },
+    {
+      "category": "Creative Industries",
+      "topTrend": [
+        "marketing automation",
+        84
+      ]
+    },
+    {
+      "category": "Finance & Banking",
+      "topTrend": [
+        "algorithmic trading",
+        90
+      ]
+    },
+    {
+      "category": "Enterprise & Strategy",
+      "topTrend": [
+        "roi genai",
+        88
+      ]
+    },
+    {
+      "category": "Cybersecurity & Defense",
+      "topTrend": [
+        "cybersecurity age",
+        95
+      ]
+    },
+    {
+      "category": "Insurance",
+      "topTrend": [
+        "insurance claims",
+        90
+      ]
+    },
+    {
+      "category": "Emerging Markets",
+      "topTrend": [
+        "leapfrogging slms",
+        101
+      ]
+    },
+    {
+      "category": "Workforce & Labor",
+      "topTrend": [
+        "work augmentation",
+        103
+      ]
+    },
+    {
+      "category": "Semiconductors & Infrastructure",
+      "topTrend": [
+        "silicon bottlenecks",
+        84
+      ]
+    },
+    {
+      "category": "VC & Startup Funding",
+      "topTrend": [
+        "investment strategies",
+        93
+      ]
+    },
+    {
+      "category": "Climate & Energy",
+      "topTrend": [
+        "climate tech",
+        104
+      ]
+    },
+    {
+      "category": "State of AI",
+      "topTrend": [
+        "case study",
+        38
+      ]
+    },
+    {
+      "category": "Education",
+      "topTrend": [
+        "higher education",
+        59
+      ]
+    },
+    {
+      "category": "AI Safety & Alignment",
+      "topTrend": [
+        "efficacy safety",
+        11
+      ]
+    },
+    {
+      "category": "Real Estate & Construction",
+      "topTrend": [
+        "comparative study",
+        5
+      ]
+    },
+    {
+      "category": "LLMs & Benchmarks",
+      "topTrend": [
+        "large language",
+        163
+      ]
+    },
+    {
+      "category": "Privacy & Data Protection",
+      "topTrend": [
+        "differential privacy",
+        12
+      ]
+    },
+    {
+      "category": "Agriculture & Food",
+      "topTrend": [
+        "smart agriculture",
+        5
+      ]
+    },
+    {
+      "category": "Robotics & Embodied AI",
+      "topTrend": [
+        "humanoid robots",
+        21
+      ]
+    },
+    {
+      "category": "Quantum Computing",
+      "topTrend": [
+        "quantum computing",
+        13
+      ]
+    }
+  ]
+}

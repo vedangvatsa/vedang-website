@@ -1,0 +1,2234 @@
+[
+  {
+    "id": "1883648534345646574",
+    "text": "🧵 Hidden Gems in DeepSeek-R1’s Paper https://t.co/xyBElmrcQb",
+    "views": 611509,
+    "likes": 1007,
+    "retweets": 144,
+    "replies": 14,
+    "date": "2025-01-26"
+  },
+  {
+    "id": "1884298077504176239",
+    "text": "Liang Wenfeng - Founder of DeepSeek\n\nLiang was born in 1985 in Guangdong, China, to a modest family.\n\nHis father was a school teacher, and his values ",
+    "views": 320297,
+    "likes": 1273,
+    "retweets": 204,
+    "replies": 27,
+    "date": "2025-01-28"
+  },
+  {
+    "id": "1884729771268952397",
+    "text": "The global economic center is shifting east.\n\nFor much of history, the West reigned supreme.\n\nEurope and North America were the engines of economic gr",
+    "views": 155253,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-29"
+  },
+  {
+    "id": "1884373844019839166",
+    "text": "Top countries of origin for U.S. immigrants:\n\n🇲🇽 Mexico: 23%\n🇮🇳 India: 6%\n🇨🇳 China: 5%\n🇵🇭 Philippines: 4%\n🇸🇻 El Salvador: 3%\n🇨🇺 Cuba: 2.8%",
+    "views": 112034,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-28"
+  },
+  {
+    "id": "1885409130979946811",
+    "text": "🧵 Hidden Gems in the OpenAI o3-mini System Card paper https://t.co/GwFIiQYcQ0",
+    "views": 102612,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-31"
+  },
+  {
+    "id": "1885271452041326877",
+    "text": "Insights from the Economic Survey on India's Tech Sector:\n\nThe Indian IT industry reached $254 billion in revenue.\n\nExports contributed $200 billion, ",
+    "views": 57783,
+    "likes": 155,
+    "retweets": 6,
+    "replies": 5,
+    "date": "2025-01-31"
+  },
+  {
+    "id": "1884547753457373406",
+    "text": "🧵15 recent AI breakthroughs\n\nFrom long-context models to next-gen reasoning and image generation👇",
+    "views": 55961,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-29"
+  },
+  {
+    "id": "1883870599124324636",
+    "text": "🧵Hidden Gems in Qwen2.5-1M Technical Report https://t.co/rjQ4ecs0Pz",
+    "views": 51635,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1886221825795129628",
+    "text": "🧵OpenAI’s \"Deep Research\"",
+    "views": 40653,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-03"
+  },
+  {
+    "id": "1883648539248751040",
+    "text": "The “Aha Moment”: AI’s First Glimpse of Self-Awareness?\n\nSec 2.2.4 &amp; Table 3: DeepSeek-R1-Zero spontaneously rethought its reasoning steps. No scr",
+    "views": 35046,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-26"
+  },
+  {
+    "id": "1892300017005650411",
+    "text": "🧵 Hidden Gems in Evo 2’s Paper\n\nA groundbreaking biological foundation model trained on 9.3 trillion DNA base pairs. https://t.co/yD56xlJrtp",
+    "views": 32566,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-19"
+  },
+  {
+    "id": "1883648544382595530",
+    "text": "Language Mixing: When AI Gets Lost in Translation\n\nSec 2.3.2: The model mixed languages mid-reasoning.\nFix: Add a linguistic consistency reward.\n\nDomi",
+    "views": 31308,
+    "likes": 58,
+    "retweets": 3,
+    "replies": 2,
+    "date": "2025-01-26"
+  },
+  {
+    "id": "1885092409949786241",
+    "text": "🧵 Deepseek R1 is NOT as smart as ChatGPT-o1\n\nDeepSeek R1 gets about ~90 IQ on an offline test by @maximlott \n\n👇 https://t.co/fP7ZZaPpbo",
+    "views": 28776,
+    "likes": 134,
+    "retweets": 13,
+    "replies": 7,
+    "date": "2025-01-30"
+  },
+  {
+    "id": "1883648549445083324",
+    "text": "Distillation: Big Brother AI Teaching Its Siblings\n\nSec 4.1: Distilled 32B model outperformed RL-trained Qwen-32B by ~25% on AIME. Big models find pat",
+    "views": 28136,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-26"
+  },
+  {
+    "id": "1883648554386002100",
+    "text": "The Cold-Start Data: A Little Human Touch Goes a Long Way\n\nSec 2.3.1: Cold-start data (human templates) fixed readability issues in RL-trained models.",
+    "views": 27006,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-26"
+  },
+  {
+    "id": "1883648559201005952",
+    "text": "Prompt Sensitivity: When AI Prefers Simplicity\n\nSec 5: DeepSeek-R1 struggled with few-shot prompts but excelled with zero-shot instructions.\n\nWhen tal",
+    "views": 25726,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-26"
+  },
+  {
+    "id": "1883990909983076464",
+    "text": "DeepSeek’s Janus-Pro-7B is here.\n\nOutperforms DALL-E 3 &amp; Stable Diffusion on GenEval/DPG-Bench\n\nSeparates understanding/generation, scales data/mo",
+    "views": 25358,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1884752707635802117",
+    "text": "LLMs (OpenAI, DeepSeek, etc.) pull from Media Outlets.\n\nMedia Outlets rely on News Agencies.\n\nNews Agencies source from Government Reports.\n\nGovernmen",
+    "views": 24645,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-29"
+  },
+  {
+    "id": "1883648563823210934",
+    "text": "Why Fancy Methods Failed: Simplicity Wins\n\nSec 4.2: Complicated techniques like process rewards and tree search didn’t work. Simple rule-based rewards",
+    "views": 23271,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-26"
+  },
+  {
+    "id": "1883648569460277256",
+    "text": "Open Source: Sharing the AI Love\n\nSec 1 &amp; App A: DeepSeek shared its models (1.5B to 70B) with the world. Smaller models can now learn from the bi",
+    "views": 23244,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-26"
+  },
+  {
+    "id": "1883648574204076071",
+    "text": "DeepSeek-R1 Benchmarks:\n\nAIME 2024: 79.8% Pass@1 (&gt; OpenAI-o1-1217’s 79.2%)\n\nMATH-500: 97.3% Pass@1 (= OpenAI-o1-1217)\n\nCodeforces: 96.3% percentil",
+    "views": 22524,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-26"
+  },
+  {
+    "id": "1883648579132375064",
+    "text": "🧵 That’s a wrap.\n\nJoin this AI discussion group: https://t.co/5ttkCdCXjH\n\nFollow @vedangvatsa for more AI insights and deep dives. https://t.co/jyQ9n",
+    "views": 21910,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-26"
+  },
+  {
+    "id": "1883648832007020784",
+    "text": "Full text: DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning\n\nhttps://t.co/VG4Pl2AgJh",
+    "views": 21205,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-26"
+  },
+  {
+    "id": "1885066969331663084",
+    "text": "• Canva – Designer\n• ChatGPT – Content Creator\n• DeepSeek – Strategy Consultant\n• Synthesia – Video Producer\n• Jasper AI – Copywriter\n• Grammarly – Pr",
+    "views": 19969,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-30"
+  },
+  {
+    "id": "1884343582212927879",
+    "text": "P2P Payment Apps Worldwide:\n\n🇸🇬 Singapore – PayNow\n🇯🇵 Japan – PayPay\n🇮🇳 India – Paytm/UPI\n🇸🇪 Sweden – Swish\n🇧🇷 Brazil – Pix\n🇦🇪 UAE – Ziina",
+    "views": 19566,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-28"
+  },
+  {
+    "id": "1883914835341226071",
+    "text": "Jevons Paradox\n\nEfficiency doesn’t save us. It accelerates us.\n\nWhen tech makes energy/ resources cheaper, we don’t conserve—we expand use.\n\nSteam eng",
+    "views": 19026,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1884303425888035160",
+    "text": "Hidden Gems in DeepSeek-R1’s Paper: https://t.co/228ujdhhLV",
+    "views": 18306,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-28"
+  },
+  {
+    "id": "1885466170670686596",
+    "text": "In a room of 100 people, 99% are left-handed. How many left-handed people have to leave the room to bring that percentage down to 98%?",
+    "views": 16778,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-31"
+  },
+  {
+    "id": "1887777075320271286",
+    "text": "There’s a story about Elon Musk and Bill Gates.\n\nBill Gates shorted Tesla.\n\nElon asked, “I thought you cared about electric cars and climate change?”\n",
+    "views": 15325,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-07"
+  },
+  {
+    "id": "1885072640546664652",
+    "text": "China leads in several industries:\n\nManufacturing: Largest global producer, contributing 24.86% of GDP.\n\nAI: DeepSeek is advancing AI, competing with ",
+    "views": 14114,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-30"
+  },
+  {
+    "id": "1886905814574580003",
+    "text": "🧵Apple Invites is a new app that allows iPhone users to create custom invitations to gather family and friends for any occasion. https://t.co/UI08nn6",
+    "views": 13140,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-04"
+  },
+  {
+    "id": "1883876219399410024",
+    "text": "Hidden Gems in Alibaba's Qwen2.5-1M: https://t.co/RkGouppoTt",
+    "views": 12793,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1883991009014710773",
+    "text": "https://t.co/Rm15ZvuNuX",
+    "views": 12439,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1886175760391520500",
+    "text": "AI can predict sex from retinal photos with 86.5% accuracy.\n\nTrained on 84K+ eye images, it performed better on healthy eyes but struggled with eye di",
+    "views": 12294,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-02"
+  },
+  {
+    "id": "1885315534843203695",
+    "text": "A worm lives in darkness—not because light isn’t real, but because it lacks the senses to detect it. Then, with a tiny mutation, vision appears, and a",
+    "views": 11748,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-31"
+  },
+  {
+    "id": "1887253045299343620",
+    "text": "🧵In 2025, the digital world is more connected than ever. \n\nWith 8.2B people on Earth and 5.56B internet users, digital tech now shapes almost every p",
+    "views": 11634,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-05"
+  },
+  {
+    "id": "1884363936163848598",
+    "text": "Join AI &amp; Web3 community: https://t.co/FNL0dznAOH\n\n•⁠ ⁠Find remote jobs\n•⁠ ⁠Network with VCs, Founders, etc.\n•⁠ ⁠Promote your products &amp; servi",
+    "views": 11310,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-28"
+  },
+  {
+    "id": "1943758216661270553",
+    "text": "🧵Grok 4\n\nYes, if you judge by the benchmarks. Right now, it is probably the best model in the world on paper.\n\n👇👇👇 https://t.co/74m5zgs2Bg",
+    "views": 9831,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-07-11"
+  },
+  {
+    "id": "1883969963444289880",
+    "text": "Jevons Paradox: https://t.co/AM31CzGKY6\n\nDeepSeek’s AI makes tech cheaper and faster—this could increase energy use, not cut it.\n\nEfficiency leads to ",
+    "views": 9777,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1885665745759076832",
+    "text": "Looking for your next startup idea? Explore:\n\nProduct Hunt\nY Combinator\nDeFiLlama\nDappRadar\nAppSumo\nFutureTools\nMicroAcquire\nPitchWall\nCapterra\nG2\nInd",
+    "views": 9177,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-01"
+  },
+  {
+    "id": "1950567751762010390",
+    "text": "Our delegation from India’s Web3 ecosystem met with Sh. Bhartruhari Mahtab (@BhartruhariM), Chairperson of the Parliamentary Standing Committee on Fin",
+    "views": 8217,
+    "likes": 97,
+    "retweets": 8,
+    "replies": 0,
+    "date": "2025-07-30"
+  },
+  {
+    "id": "1887892078358573220",
+    "text": "🧵 What I’ve Learned About Languages from Running Global Online Communities\n\nDifferent cultures, different languages, different ways of communicating.",
+    "views": 7962,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-07"
+  },
+  {
+    "id": "1885409135472046198",
+    "text": "Hallucination Rate Drops by 67%\n\nSection 4.1.3: o3-mini’s hallucination rate is 14.8%, down from GPT-4o’s 52.4%.\n\nFewer fake facts = more trustworthy ",
+    "views": 7602,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-31"
+  },
+  {
+    "id": "1884022947867943357",
+    "text": "KuCoin has pleaded guilty to operating an unlicensed money transmitting business in the US.\n\nTwo of its co-founders have also entered into deferred pr",
+    "views": 7235,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1883981135354683571",
+    "text": "China's approach to AI:\nhttps://t.co/2hECbThwwS",
+    "views": 6918,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1902988391526043818",
+    "text": "A Thread on How to Find a Job in Web3 https://t.co/fRerZKx2eE",
+    "views": 6836,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-21"
+  },
+  {
+    "id": "1900779737745944924",
+    "text": "Is human intelligence declining?\n\nNew studies suggest our ability to process information and solve problems has been falling since the mid-2010s.\n\nThe",
+    "views": 6446,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-15"
+  },
+  {
+    "id": "1884303523430707614",
+    "text": "Read about Liang Wenfeng, the Chinese entrepreneur behind DeepSeek: https://t.co/2XlOC36zXW",
+    "views": 6331,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-28"
+  },
+  {
+    "id": "1885092414538297516",
+    "text": "Public IQ tests suggest Deepseek matches or beats all free AI models, including ChatGPT-4o and Gemini Advanced.\n\nHowever, it falls short of OpenAI’s p",
+    "views": 6096,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-30"
+  },
+  {
+    "id": "1885409144594743453",
+    "text": "Developer Tricks Can’t Jailbreak It\n\nSection 4.2: Even if devs try to trick it, o3-mini follows safety rules first. It won’t reveal a password, no mat",
+    "views": 5882,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-31"
+  },
+  {
+    "id": "1885092424466174125",
+    "text": "Deepseek V3, designed for versatility, scored just 70 on offline IQ questions, suggesting it may have relied on the internet for answers in the Mensa ",
+    "views": 5764,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-30"
+  },
+  {
+    "id": "1885409164140089582",
+    "text": "o3-mini Benchmarks:\n\n• Science (GPQA): 77% vs GPT-4o’s 51%\n• Math (AIME): 80% vs GPT-4o’s 10%\n• Coding (Codeforces): 2036 ELO vs GPT-4o’s 900 https://",
+    "views": 5617,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-31"
+  },
+  {
+    "id": "1892300021715918991",
+    "text": "It autonomously detects exons, transcription factor sites, and even protein structures—without being told. This is self-supervised learning at the DNA",
+    "views": 5539,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-19"
+  },
+  {
+    "id": "1885409149766246483",
+    "text": "Refuses to Help Create Bioweapons\n\nSection 5.4: Post-mitigation o3-mini refuses to assist in biological threat creation.\n\nSafety training turns off hi",
+    "views": 5538,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-31"
+  },
+  {
+    "id": "1887253054489043152",
+    "text": "Online behavior is evolving.\n\nToday, adults spend about 6.5 hours online daily, discovering brands through search, TV ads, and social media.\n\nMarketer",
+    "views": 5536,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-05"
+  },
+  {
+    "id": "1886221830869983531",
+    "text": "Deep Research is OpenAI’s new AI tool that acts like a super-smart assistant. It can browse the web, analyze data, and create detailed reports in minu",
+    "views": 5477,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-03"
+  },
+  {
+    "id": "1904307343917269135",
+    "text": "AI-generated code is growing.\n\nYC's latest cohort reported that 25% of teams generate 95% of their code with AI.\n\n@karpathy calls this \"vibe coding\"—t",
+    "views": 5457,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-24"
+  },
+  {
+    "id": "1885409139997671920",
+    "text": "Refuses Harmful Requests Without Overblocking\n\nSection 4.1.1: o3-mini refuses harmful requests (e.g., bomb-making) but doesn’t overblock harmless ones",
+    "views": 5429,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-31"
+  },
+  {
+    "id": "1885409154136699167",
+    "text": "OpenAI’s Honesty: \"Lower Bound\" Risks\n\nSection 5.1: OpenAI admits their tests are a \"lower bound\" of risks—real dangers could be higher. Transparency ",
+    "views": 5279,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-31"
+  },
+  {
+    "id": "1887253064098455554",
+    "text": "Global ad spend hits over US$1.1 trillion, with 72.7% invested in digital channels.\n\nMobile ads, programmatic buying, and search platforms lead the wa",
+    "views": 5194,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-05"
+  },
+  {
+    "id": "1892300025994027217",
+    "text": "Darwin saw evolution as blind trial and error. Now, AI models like Evo 2 are compressing evolution into a mathematical representation. Is nature itsel",
+    "views": 5132,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-19"
+  },
+  {
+    "id": "1885409158599467205",
+    "text": "Multimodal Virology Troubleshooting\n\no3-mini scores 53% on SecureBio’s MCQ eval, outperforming GPT-4o (45%) but still below PhD baselines (80%).\n\nComp",
+    "views": 5097,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-31"
+  },
+  {
+    "id": "1943706722125689106",
+    "text": "Repository of 1000+ web3 reports\n\nCurated into 5 folders::\n1. Blockchain\n2. Crypto\n3. Metaverse &amp; NFTs\n4. Whitepapers\n5. Academic Research\n\nTo get",
+    "views": 5045,
+    "likes": 62,
+    "retweets": 51,
+    "replies": 57,
+    "date": "2025-07-11"
+  },
+  {
+    "id": "1915182807405470005",
+    "text": "🧵: Hiring Strategy for Web3 Projects\n\n👇👇👇",
+    "views": 5035,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-23"
+  },
+  {
+    "id": "1886221834867130485",
+    "text": "It was trained using end-to-end reinforcement learning on complex browsing &amp; reasoning tasks.\n\nIt plans multi-step searches, backtracks when neede",
+    "views": 5009,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-03"
+  },
+  {
+    "id": "1887253069190046015",
+    "text": "Social media isn’t one-size-fits-all.\n\nWhile platforms like YouTube and Instagram dominate, preferences vary by age and region.\n\nYoung users favor fas",
+    "views": 4925,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-05"
+  },
+  {
+    "id": "1918071642846273975",
+    "text": "🧵 How to find a job in web3 https://t.co/55VHJGZJZI",
+    "views": 4924,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-01"
+  },
+  {
+    "id": "1885409168447652193",
+    "text": "🧵That’s a wrap.\n\nFull text: OpenAI o3-mini System Card: https://t.co/Qt5bGTBoWs\n\nAI &amp; Web3 community: https://t.co/FNL0dzn2Z9\n\nFollow @vedangvats",
+    "views": 4863,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-31"
+  },
+  {
+    "id": "1900935512099352691",
+    "text": "40 years ago today, the first .com domain was registered.\n\nOn March 15, 1985, symbolic (dot) com became the first-ever .COM domain.\n\nSymbolics, a pion",
+    "views": 4783,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-15"
+  },
+  {
+    "id": "1892300029781823554",
+    "text": "Instead of Transformers, it blends short, medium, and long-range operators, making it way more efficient for genomic sequences. https://t.co/0gfu1WWFT",
+    "views": 4776,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-19"
+  },
+  {
+    "id": "1886221848150454448",
+    "text": "GAIA Benchmark\n\nOn GAIA—a public real-world question benchmark—Deep Research tops leaderboards by excelling in reasoning, multi-modal fluency, web bro",
+    "views": 4641,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-03"
+  },
+  {
+    "id": "1886909805215846758",
+    "text": "Humans make up 50.4% of internet traffic, while 49.6% is non-human (bots, crawlers, scrapers, etc.).",
+    "views": 4622,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-04"
+  },
+  {
+    "id": "1885092418938081473",
+    "text": "@maximlott described each IQ question verbally to the AIs, as if administering the test to a blind person.\n\nOn IQ questions that only exist offline, D",
+    "views": 4595,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-30"
+  },
+  {
+    "id": "1885092428744364354",
+    "text": "OpenAI remains ahead for now, but the competition is fierce.\n\nRead more: https://t.co/T5DMoF9ijR",
+    "views": 4557,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-30"
+  },
+  {
+    "id": "1884032592774836494",
+    "text": "AI's Sputnik Moment https://t.co/228ujdhhLV",
+    "views": 4554,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-28"
+  },
+  {
+    "id": "1886221839531385276",
+    "text": "It asks clarifying queries before starting, then transparently shows its reasoning and sources as it works. https://t.co/rE2lH08cBz",
+    "views": 4551,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-03"
+  },
+  {
+    "id": "1887253080460444027",
+    "text": "Device use is shifting: desktop usage declines as mobile takes center stage.\n\nHowever, desktops still drive nearly 57% of online time—especially for w",
+    "views": 4549,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-05"
+  },
+  {
+    "id": "1886221843922632865",
+    "text": "Humanity’s Last Exam\n\nIn a test of 3000+ expert questions across 100+ subjects, Deep Research scored 26.6% accuracy—gains in chemistry, humanities, an",
+    "views": 4505,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-03"
+  },
+  {
+    "id": "1892300056323125722",
+    "text": "🧵 That’s a wrap.\n\nFollow @vedangvatsa for AI insights and deep dives.\n\nAI &amp; Web3 Community: https://t.co/FNL0dzn2Z9",
+    "views": 4397,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-19"
+  },
+  {
+    "id": "1903835113311600899",
+    "text": "Thank you for joining Hashtag Web3's (@hashtag_web3) Delhi meetup yesterday! Around 35 attendees participated.\n\nSpecial thanks to @AdityaYOLOgram for ",
+    "views": 4363,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-23"
+  },
+  {
+    "id": "1892300037826498783",
+    "text": "Evo 2 was used to \"write\" encoded messages into epigenomes by guiding DNA generation.\n\nCould AI one day encode full functional languages into biology?",
+    "views": 4356,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-19"
+  },
+  {
+    "id": "1887253049892331800",
+    "text": "Mobile phones dominate our lives: 70.5% of the world uses mobile phones and 87% use smartphones.\n\nThis rapid mobile adoption fuels internet access, so",
+    "views": 4339,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-05"
+  },
+  {
+    "id": "1887253059018899954",
+    "text": "AI is making big waves—from ChatGPT’s massive app downloads to DeepSeek’s rapid growth.\n\nIntegrated AI tools are increasingly woven into everyday apps",
+    "views": 4299,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-05"
+  },
+  {
+    "id": "1883870604555862464",
+    "text": "The Long-Context Revolution\n\nQwen2.5-1M extends context length to 1M tokens. It enables complex tasks like code generation and research across massive",
+    "views": 4276,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1887253101305827749",
+    "text": "Concerns about online privacy are slowly declining, yet they vary by region and age.\n\nWhile younger users are less worried, older adults remain cautio",
+    "views": 4262,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-05"
+  },
+  {
+    "id": "1887253075183771795",
+    "text": "Despite streaming’s rise, traditional TV remains strong.\n\nLinear TV still delivers the bulk of viewing hours, especially for older audiences, proving ",
+    "views": 4257,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-05"
+  },
+  {
+    "id": "1892300042007933274",
+    "text": "It generates bacterial genomes, yeast chromosomes, and even synthetic mitochondria—with structures that match real-world biology. https://t.co/wdf4UrG",
+    "views": 4243,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-19"
+  },
+  {
+    "id": "1887253106448064745",
+    "text": "Amid all the data, one interesting insight stands out:\n\nDespite billions of pages on cats, people still search and engage more with dogs on social med",
+    "views": 4235,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-05"
+  },
+  {
+    "id": "1887253111414157323",
+    "text": "🧵That's a wrap. Follow @vedangvatsa for tech updates.\n\nJoin this AI &amp; Web3 community: https://t.co/FNL0dzn2Z9\n\nRead the full report by @eskimon: ",
+    "views": 4190,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-05"
+  },
+  {
+    "id": "1886221852751859885",
+    "text": "Expert Tasks\n\nDomain experts rate Deep Research as automating hours of difficult manual investigation across various fields—handling expert-level task",
+    "views": 4116,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-03"
+  },
+  {
+    "id": "1892300033950687426",
+    "text": "Evo 2 predicts the effects of mutations across all life—without any task-specific tuning.\n\nIt correctly spots lethal mutations in bacteria, plants, an",
+    "views": 4107,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-19"
+  },
+  {
+    "id": "1886221863564489053",
+    "text": "It hallucinates less than existing models but can misinterpret facts, struggle with credibility, and miscalibrate confidence. Early issues like format",
+    "views": 4033,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-03"
+  },
+  {
+    "id": "1887892091843338376",
+    "text": "Emojis Fill the Gaps\n\nText lacks tone, body language, and facial expressions.\nThat’s why emojis are so powerful.\n\n✔ A simple 🙂softens a direct messag",
+    "views": 3985,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-07"
+  },
+  {
+    "id": "1887253090677444971",
+    "text": "Ecommerce keeps booming.\n\nWith online shopping revenues soaring and over 2.5B consumers buying online, even categories like groceries and DIY have see",
+    "views": 3979,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-05"
+  },
+  {
+    "id": "1901383340051370064",
+    "text": "If this man can show up every day and put in the work, what’s stopping you? Stop complaining. https://t.co/e3nUgYp3xs",
+    "views": 3975,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-16"
+  },
+  {
+    "id": "1887253096562037194",
+    "text": "Seniors are a growing digital force.\n\nMore than 30% of adults online are 50+, yet they’re often overlooked in marketing.\n\nThey actively shop, stream T",
+    "views": 3953,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-05"
+  },
+  {
+    "id": "1887253085585875327",
+    "text": "Internet speeds are soaring: Mobile download speeds jumped over 25% year-on-year and fixed networks still offer significant advantages.\n\nFaster speeds",
+    "views": 3947,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-05"
+  },
+  {
+    "id": "1887892082519379996",
+    "text": "Thai, Japanese, and Korean speakers are often extra polite in words. They use honorifics and softening words that don’t directly translate into Englis",
+    "views": 3810,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-07"
+  },
+  {
+    "id": "1886221858208686405",
+    "text": "Deep Research tackles expert-level tasks with varying success rates. Higher economic value tasks have lower pass rates, while shorter tasks (1-3 hours",
+    "views": 3786,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-03"
+  },
+  {
+    "id": "1887892085593763880",
+    "text": "Languages don’t just have different words; they function differently. How a language is structured affects how people think and communicate.\n\nJapanese",
+    "views": 3783,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-07"
+  },
+  {
+    "id": "1883860449890087135",
+    "text": "Teaching math with creative visuals makes complex ideas easier to understand.\n\nI wish I had access to creative visuals like this in my childhood. http",
+    "views": 3778,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1883870610117595488",
+    "text": "Progressive Training\n\nQwen2.5-1M uses progressive context extension:\n- Starts at 4k tokens\n- Scales to 262k tokens\n- 75% long, 25% short sequences\n\nRe",
+    "views": 3770,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1886221868174364867",
+    "text": "🧵 That’s a wrap.\n\nJoin this AI &amp; Web3 community: https://t.co/FNL0dznAOH\n\nFollow @vedangvatsa for more AI insights and deep dives. https://t.co/k",
+    "views": 3765,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-03"
+  },
+  {
+    "id": "1887892088693395493",
+    "text": "What's the universal formula?\n\nAfter years of trial and error, I’ve learned a few things to bridge some of the language gaps:\n\n✔ Use small sentences.\n",
+    "views": 3756,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-07"
+  },
+  {
+    "id": "1884363704491467065",
+    "text": "AI &amp; Web3 community: https://t.co/FNL0dznAOH\n\n•⁠ ⁠Find remote jobs\n•⁠ ⁠Network with VCs, Founders, etc.\n•⁠ ⁠Promote your products &amp; services\n•",
+    "views": 3710,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-28"
+  },
+  {
+    "id": "1892300046277722278",
+    "text": "Evo 2’s ability to design and interpret genomes could lead to programmable synthetic life.\n\nWe’re entering an era where AI can modify, repair, and eve",
+    "views": 3654,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-19"
+  },
+  {
+    "id": "1887892601820348546",
+    "text": "Follow @vedangvatsa for more such insights.\n\nNot everyone speaks English fluently.\n\nNot every sentence translates correctly.\n\nNot every culture commun",
+    "views": 3652,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-07"
+  },
+  {
+    "id": "1901414134560035265",
+    "text": "Baidu has launched two AI models that significantly undercut existing options:\n\n• ERNIE 4.5 delivers performance comparable to GPT-4.5 at just 1% of t",
+    "views": 3605,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-16"
+  },
+  {
+    "id": "1886175943992996262",
+    "text": "Read: Predicting sex from retinal fundus photographs using automated deep learning\nhttps://t.co/qv3Mc29wpp",
+    "views": 3585,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-02"
+  },
+  {
+    "id": "1915182809339035918",
+    "text": "(1/10)  Start With Core Roles and Prepare Detailed Job Description\n\n• KRA: Build a strong foundation\n\n• Tasks: Prioritize hires in dev, community, and",
+    "views": 3567,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-23"
+  },
+  {
+    "id": "1892300053873566195",
+    "text": "Paper link: Genome modeling and design across all domains of life with Evo 2\n\nhttps://t.co/sper95sWtw",
+    "views": 3517,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-19"
+  },
+  {
+    "id": "1888123468811571510",
+    "text": "Showcase your Web3 skills through real projects, content, and community engagement on the right platforms. https://t.co/itZC4RMetj",
+    "views": 3456,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-08"
+  },
+  {
+    "id": "1886222222110462446",
+    "text": "https://t.co/vBhFi4s78L",
+    "views": 3450,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-03"
+  },
+  {
+    "id": "1892300050887270537",
+    "text": "Evo 2 excludes viral genomes that infect humans to prevent misuse.\n\nThey also tested it—Evo 2 can’t generate human viruses properly.\n\nBut, will future",
+    "views": 3448,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-19"
+  },
+  {
+    "id": "1925602081668571357",
+    "text": "Happy Bitcoin Pizza Day 🎉 https://t.co/cBviEdQVGJ",
+    "views": 3421,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-22"
+  },
+  {
+    "id": "1941358651895337302",
+    "text": "Stablecoins in the Modern Financial System: https://t.co/1Bq320kAIy\n\nMy new paper unpacks how stablecoins are disrupting $27 trillion in global paymen",
+    "views": 3333,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-07-05"
+  },
+  {
+    "id": "1886222111045206494",
+    "text": "Details: https://t.co/GaodIexkrl",
+    "views": 3333,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-03"
+  },
+  {
+    "id": "1885672983752040824",
+    "text": "Tagging a few AI accounts to invite their comments:\n\n@Synced_Global\n@aiforanyone\n@KhizerAbbaas\n@guidetoai\n@OliverRochford\n@superhuman_ai\n@Theprohumana",
+    "views": 3261,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-01"
+  },
+  {
+    "id": "1890661235118498081",
+    "text": "Is it true?\nIs it kind?\nIs it necessary?\n\n— Gatekeepers of mouth",
+    "views": 3217,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-15"
+  },
+  {
+    "id": "1915182811335532884",
+    "text": "(2/10)  Hire From Within the Ecosystem\n\n• KRA: Ensure Web3 context fit\n\n• Tasks: Scout contributors in DAOs, GitHub, Telegram, and Twitter \n\n• Metrics",
+    "views": 3181,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-23"
+  },
+  {
+    "id": "1885673857530609782",
+    "text": "Tagging some accounts to invite their comments:\n\n@rowancheung\n@TheRundownAI\n@tldrnewsletter\n@TechWithLucy\n@heykahn\n@geertjansloos\n@LiorOnAI\n@tetumemo\n",
+    "views": 3175,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-01"
+  },
+  {
+    "id": "1907204287127556427",
+    "text": "Apple celebrates its 49th anniversary.\n\nIt was founded in 1976 by Steve Jobs, Steve Wozniak, and Ronald Wayne in a garage.\n\nNow, it's a $3.6 trillion ",
+    "views": 3170,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-01"
+  },
+  {
+    "id": "1883870620968239285",
+    "text": "Training-Free Extrapolation\n\nDCA splits sequences into chunks. Remaps positions to avoid untrained RoPE distances. Combined with YaRN, it allows 4x+ e",
+    "views": 3167,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1899590478229864660",
+    "text": "Developed economies built cashless payment systems around credit cards decades ago but this legacy slowed adoption of newer solutions that growing eco",
+    "views": 3115,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-11"
+  },
+  {
+    "id": "1920067689252618336",
+    "text": "Give a man a mask, and he’ll tell you the truth.\n\nThis line sums up why the Cypherpunk movement mattered.\n\nThey weren’t just hackers. They fought for ",
+    "views": 3106,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-07"
+  },
+  {
+    "id": "1883870615322714212",
+    "text": "Synthetic Data\n\nNatural text lacks long-range dependencies. Qwen2.5-1M uses synthetic data to teach the model. Tasks include:\n- Fill-in-the-Middle\n- P",
+    "views": 3049,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "2053371058741551602",
+    "text": "Stories like this remind me that the hiring process is still mostly luck and timing. Talent is everywhere. Opportunity is not. The systems we build to",
+    "views": 3005,
+    "likes": 39,
+    "retweets": 11,
+    "replies": 1,
+    "date": "2026-05-10"
+  },
+  {
+    "id": "1886905823621751020",
+    "text": "Use Image Playground to generate custom visuals from your photo library or ideas, and refine your message with Writing Tools.\n\nIt’s AI-powered creativ",
+    "views": 2973,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-04"
+  },
+  {
+    "id": "1886905818962124928",
+    "text": "It lets you create invitations using personal photos or curated themes.\n\nWith Maps &amp; Weather integrations, guests get directions + forecasts. http",
+    "views": 2957,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-04"
+  },
+  {
+    "id": "1886905827564322903",
+    "text": "Apple Invites gives hosts full control: create, share, and track RSVPs with ease.\n\nGuests can respond via app or web—no Apple account needed.\n\nPrivacy",
+    "views": 2880,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-04"
+  },
+  {
+    "id": "1925849398010958257",
+    "text": "Sandeep, a rare founder from India on the global stage, says the key isn’t more hustle, it’s better strategy.\n\nIndia has the talent, grit, and chaos-h",
+    "views": 2857,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-23"
+  },
+  {
+    "id": "1886905831691837804",
+    "text": "🧵That's a wrap. Follow @vedangvatsa for tech updates.\n\nJoin this AI &amp; Web3 community: https://t.co/FNL0dznAOH\n\nPress release: https://t.co/blUYVQ",
+    "views": 2814,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-04"
+  },
+  {
+    "id": "1886731083892265020",
+    "text": "How NOT to reach out https://t.co/2hmfFi1fHD",
+    "views": 2802,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-04"
+  },
+  {
+    "id": "1886611692282376258",
+    "text": "Prison as a service https://t.co/w6miylrdSj",
+    "views": 2741,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-04"
+  },
+  {
+    "id": "2003735538860458151",
+    "text": "Vibe Coding 101\n\nBuild real apps without writing code. Just use plain English and work with AI.\n\nPerfect for founders and builders to turn ideas into ",
+    "views": 2688,
+    "likes": 41,
+    "retweets": 7,
+    "replies": 0,
+    "date": "2025-12-24"
+  },
+  {
+    "id": "1915182813558776289",
+    "text": "(3/10)  Bounty-to-Hire Funnel\n\n• KRA: Test talent before committing\n\n• Tasks: Launch small paid tasks as filters\n\n• Metrics: Task-to-hire conversion r",
+    "views": 2640,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-23"
+  },
+  {
+    "id": "1890047440285483066",
+    "text": "Nothing pairs better with a Mocha Frappe than a side of totally genuine Windows alerts https://t.co/vPsUikoBKI",
+    "views": 2575,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-13"
+  },
+  {
+    "id": "1885665757863780463",
+    "text": "Post-launch? Time to scale.\n\nGrowth Hacking – Leverage referrals, affiliate programs, airdrops\n\nCommunity Building – Engage on Twitter, Discord, Reddi",
+    "views": 2563,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-01"
+  },
+  {
+    "id": "1885665749743931643",
+    "text": "Need tools to build &amp; grow?\n\nLLMs &amp; AI APIs: OpenAI, Hugging Face, Replicate\n\nNo-Code/Low-Code: Bubble, Zapier, Make\n\nBlockchain Dev: Alchemy,",
+    "views": 2544,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-01"
+  },
+  {
+    "id": "1883870626324390380",
+    "text": "Speed Without Sacrifice\n\nMInference identifies critical tokens. Reduces compute by 10x. At 1M tokens, they:\n- Recover continuous positions\n- Refine sp",
+    "views": 2489,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1906151852707926409",
+    "text": "It’s not just about information anymore; it’s about VALUE.\n\nBlockchain creates immutable records of ownership and transactions.\n\nValue flows globally ",
+    "views": 2466,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-30"
+  },
+  {
+    "id": "1915182815857303932",
+    "text": "(4/10)  Crypto-Native Communities\n\n• KRA: Find aligned talent faster\n\n• Tasks: Post on https://t.co/ZuS45FmsVy and https://t.co/4yEmDVDBoB\n\n• Metrics:",
+    "views": 2464,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-23"
+  },
+  {
+    "id": "1885665752163754074",
+    "text": "Got your idea? Now, validate:\n\nMarket Research – Check trends on Product Hunt, Messari, CoinGecko\n\nCustomer Feedback – Engage on Indie Hackers, Twitte",
+    "views": 2451,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-01"
+  },
+  {
+    "id": "1883870631022018622",
+    "text": "Short Samples, Long Gains\n\nReinforcement Learning (using DPO) on short samples (≤8k tokens) improved long-context alignment. Human preferences on brev",
+    "views": 2434,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1885665754931994646",
+    "text": "Ready to launch?\n\nHype it up – Tease on Twitter, LinkedIn, Discord\n\nBeta testers – Get early users from Indie Hackers, Product Hunt\n\nSEO &amp; Content",
+    "views": 2400,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-01"
+  },
+  {
+    "id": "1883870648679989588",
+    "text": "Efficiency Over Size\n\nQwen2.5-14B-1M outperforms GPT-4 on RULER (128k). Matches GPT-4o-mini in short tasks.\n\nArchitecture + training &gt; raw paramete",
+    "views": 2366,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1883870641767772266",
+    "text": "Open-Source Inference Framework\n\nAlibaba open-sourced its inference framework. Integrated into vLLM, it enables:\n- 3-7x prefill speedups\n- Chunked pro",
+    "views": 2358,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1883870659329298461",
+    "text": "🧵 That’s a wrap.\n\nJoin this AI discussion group: https://t.co/5ttkCdCXjH\n\nFollow @vedangvatsa for more AI insights and deep dives.\n\nHere's a similar ",
+    "views": 2329,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1950568547115233291",
+    "text": "@BhartruhariM Details: https://t.co/3P7PhR6vfN",
+    "views": 2283,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-07-30"
+  },
+  {
+    "id": "1888887041041080528",
+    "text": "Estonia has achieved 100% digital government services, eliminating bureaucracy through seamless online solutions. Its e-government model is scalable a",
+    "views": 2160,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-10"
+  },
+  {
+    "id": "1919935218313744520",
+    "text": "What if the speed of light is constrained to enable the universe to compute and render everything you observe in real-time? https://t.co/2Ggk4n7kkZ",
+    "views": 2105,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-07"
+  },
+  {
+    "id": "1883870636352946640",
+    "text": "MoE’s Hidden Advantage: Qwen2.5-Turbo\n\nQwen2.5-Turbo, an MoE model, achieves 3.4 TB/s memory throughput. BladeLLM’s optimizations make it cost-effecti",
+    "views": 2089,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1920640423111881080",
+    "text": "A historic week for crypto: infrastructure, adoption, and price action all moved at once. https://t.co/hwWJIZTrC7",
+    "views": 2081,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-09"
+  },
+  {
+    "id": "1896246997939827092",
+    "text": "Trump names cryptocurrencies to be in strategic reserve https://t.co/kmMhqMiFch",
+    "views": 2077,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-02"
+  },
+  {
+    "id": "1970011953339810261",
+    "text": "After a long time, I took the Delhi Metro.\n\nAt first, I felt frustrated by people cutting lines, playing loud music and speaking loudly on the phone.\n",
+    "views": 2059,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-09-22"
+  },
+  {
+    "id": "1915182818151579730",
+    "text": "(5/10)  Flexible, Token-Based Compensation\n\n• KRA: Attract global, committed contributors\n\n• Tasks: Offer tokens + optional stable salary mix\n\n• Metri",
+    "views": 2005,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-23"
+  },
+  {
+    "id": "1885666332575707354",
+    "text": "Bootstrapping to $10K/month? Game plan:\n\n- Pick a niche\n- Solve one key problem\n- Launch within a month\n- Delegate UI/UX design\n- Use no-code tools\n- ",
+    "views": 1995,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-01"
+  },
+  {
+    "id": "1913031015586750519",
+    "text": "Web3 Developer Activity\n\nDeveloper activity in Web3 closely tracks crypto market trends. Rising prices attract more devs, while downturns see declines",
+    "views": 1990,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-18"
+  },
+  {
+    "id": "1883870655550296520",
+    "text": "Qwen2.5-1M hints at future trends:\n- Curriculum learning for context\n- Inference-time adaptability (DCA)\n- Sparse attention as standard\n\nNext frontier",
+    "views": 1980,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1910094102223274183",
+    "text": "🧵State of AI\n\nThe 2025 AI Index Report by @Stanford shows improvements in AI optimization and a growing saturation of use - and abuse - of this techn",
+    "views": 1973,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-09"
+  },
+  {
+    "id": "1902988430809895351",
+    "text": "Join this AI &amp; Web3 community: https://t.co/FNL0dznAOH\n\n•⁠ ⁠Find remote jobs \n•⁠ ⁠Network with HRs, VCs, Founders, etc.\n•⁠ ⁠Promote your products ",
+    "views": 1967,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-21"
+  },
+  {
+    "id": "1919060864277135814",
+    "text": "AI is evolving fast. One day, it may begin improving itself learning from vast data, adapting without human input.\n\nThat moment is called the Singular",
+    "views": 1934,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-04"
+  },
+  {
+    "id": "1904304278644396304",
+    "text": "Airdrops now favor big investors as protocols prioritize liquidity over transaction counts, leaving small users with fewer rewards.\n\nInstead, yield fa",
+    "views": 1921,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-24"
+  },
+  {
+    "id": "1990921068605853869",
+    "text": "🧵Google just dropped Gemini 3 Pro and it's a pretty big deal for developers. Here's a breakdown: https://t.co/yJvDfGEzFA",
+    "views": 1910,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-11-18"
+  },
+  {
+    "id": "1897885827243348246",
+    "text": "Excited to be speaking about blockchain at ISB Hyderabad today.\n\nLooking forward to insightful discussions on Web3 and innovation. \n\nSee you there!\n\n#",
+    "views": 1903,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-07"
+  },
+  {
+    "id": "1948743633085366551",
+    "text": "New Paper Alert!\n\nI analyzed blockchain evolution (2008–2025) using search trends, dev data, and commits: https://t.co/66LgN63dvJ\n\nDev growth trails p",
+    "views": 1892,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-07-25"
+  },
+  {
+    "id": "1889391900496650649",
+    "text": "The crypto market is constantly evolving, balancing fundamentals with speculative trends like meme coins. \n\nWith exchanges racing to list trending tok",
+    "views": 1860,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-11"
+  },
+  {
+    "id": "1915327126477164894",
+    "text": "Zero-knowledge proofs are like solving a riddle without saying the answer, just proving you know it.\n\nYou reveal nothing, but still earn trust.\n\nShowi",
+    "views": 1858,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-24"
+  },
+  {
+    "id": "1915183764331810855",
+    "text": "Liked this thread? Follow @vedangvatsa for more.\n\nJoin this AI &amp; Web3 Community: https://t.co/FNL0dzn2Z9",
+    "views": 1847,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-23"
+  },
+  {
+    "id": "1883871242123669605",
+    "text": "Full text: Qwen2.5-1M Technical Report by Qwen Team, Alibaba Group: https://t.co/UmSCdL31Dm",
+    "views": 1837,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-27"
+  },
+  {
+    "id": "1905419684067115236",
+    "text": "🧵Bitcoin's price reacts to more than just crypto news.\n\nIt moves with inflation, interest rates, stock markets, money supply, investor sentiment, etc",
+    "views": 1828,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-28"
+  },
+  {
+    "id": "1902977566199386532",
+    "text": "Most blockchains grow like a tree—constantly pruning alternate branches to maintain a single chain of truth.\n\nHashgraph takes a new approach.\n\nInstead",
+    "views": 1825,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-21"
+  },
+  {
+    "id": "1883490087570133392",
+    "text": "For years, companies played the SEO game. Write a blog. Rank on Google. Capture leads.\n\nNow, ChatGPT answers “What is CRM?” in seconds. No clicks. No ",
+    "views": 1822,
+    "likes": 21,
+    "retweets": 2,
+    "replies": 2,
+    "date": "2025-01-26"
+  },
+  {
+    "id": "1996582464891052440",
+    "text": "Grateful to the Standing Committee on Finance for offering me, on behalf of @Hashtag_Web3, the opportunity to participate in an extensive discussion a",
+    "views": 1816,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-12-04"
+  },
+  {
+    "id": "1919669265965449302",
+    "text": "Crypto mistakes can be costly.\n\nSent to the wrong address? It's likely gone.\n\nTransactions are final. No undo button.\n\nLearn the basics.\nDouble-check ",
+    "views": 1787,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-06"
+  },
+  {
+    "id": "1925345103193022977",
+    "text": "ERC-7946 proposes that dApps suggest transactions via QR codes or NFC without accessing the user’s wallet address.\n\nBy decoupling identity, it prevent",
+    "views": 1769,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-22"
+  },
+  {
+    "id": "1888547895273513309",
+    "text": "Web3 careers focus on flexibility, remote work, and building a reputation through online communities and public contributions.\n\nIn contrast, tradition",
+    "views": 1766,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-09"
+  },
+  {
+    "id": "1884547821057064970",
+    "text": "Alibaba's Qwen2.5-1M: A breakthrough in long-context AI, handling 1M-token inputs efficiently. It maintains strong short-task performance while achiev",
+    "views": 1754,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-29"
+  },
+  {
+    "id": "1985665412382564578",
+    "text": "🧵Device-to-Device Economics and AI Agent Transactions\n\nAI agents can now buy and sell without humans. Google's AP2 protocol, Coinbase's x402 system, ",
+    "views": 1739,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-11-04"
+  },
+  {
+    "id": "1914287572248940967",
+    "text": "A network state is like a country that begins online.\n\nPeople with the same values connect first digitally.\n\nThey organize, build trust, and act toget",
+    "views": 1705,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-21"
+  },
+  {
+    "id": "1915182822496882993",
+    "text": "(7/10)  Founder-Led Talent Outreach\n\n• KRA: Build credibility with top-tier candidates\n\n• Tasks: Founders DM or meet talent directly\n\n• Metrics: Respo",
+    "views": 1670,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-23"
+  },
+  {
+    "id": "1922086455997796435",
+    "text": "Systems evolve.\n\nWhen intent seeks freedom, progress, or truth, even imperfect systems become vessels for transformation.\n\nProgress isn’t born from pe",
+    "views": 1669,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-13"
+  },
+  {
+    "id": "1919687862884479303",
+    "text": "Higher education is evolving.\nFrom central institutions to connected communities.\nUniversities still matter.\nBut new models are emerging.\n\nNetwork sch",
+    "views": 1653,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-06"
+  },
+  {
+    "id": "1902988395867209824",
+    "text": "Here are the steps https://t.co/xgvRPvi3Pr",
+    "views": 1651,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-21"
+  },
+  {
+    "id": "1926165508555973041",
+    "text": "Sometimes your life calling is to be a goose farmer.\n\nDon't spend 22 years figuring that out. https://t.co/gvMsGyjVfL",
+    "views": 1650,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-24"
+  },
+  {
+    "id": "1907741355071402468",
+    "text": "Recent tariffs have impacted financial markets, contributing to a decline in Bitcoin’s value.\n\nThis highlights how Bitcoin responds to broader economi",
+    "views": 1631,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-03"
+  },
+  {
+    "id": "1915182824623051004",
+    "text": "(8/10)  Community as Talent Pool \n\n• KRA: Source organically \n\n• Tasks: Track contributors, event participants, Discord mods \n\n• Metrics: Hires from c",
+    "views": 1581,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-23"
+  },
+  {
+    "id": "1886590273750221269",
+    "text": "1. Talk slowly.\n2. Speak clearly.\n3. Let others finish.\n4. Listen more.\n5. Stay patient.",
+    "views": 1581,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-04"
+  },
+  {
+    "id": "1915182826799890892",
+    "text": "(9/10)  Remote-Ready Infrastructure\n\n• KRA: Enable seamless async collaboration\n\n• Tasks: Set up tools like Notion, Slack, Figma, Google Workspace\n\n• ",
+    "views": 1555,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-23"
+  },
+  {
+    "id": "2035746661394473383",
+    "text": "LinkedIn is a parallel universe. Nobody fails, misses a deadline, or takes a nap. Every disaster is just a strategic pivot.\n\n🧵Here's a LinkedIn Trans",
+    "views": 1553,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2026-03-22"
+  },
+  {
+    "id": "1924460107850768459",
+    "text": "El Salvador’s Bitcoin profits may signal that digital assets can help build national wealth.\n\nBut with low public adoption, such bold economic steps m",
+    "views": 1538,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-19"
+  },
+  {
+    "id": "1885715062343557493",
+    "text": "A donkey carrying gold can even unlock the gates of fortress.",
+    "views": 1530,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-01"
+  },
+  {
+    "id": "1920639275529540008",
+    "text": "OpenAI’s CPO says in the future, AI agents will use smart contracts to spend money on their own.\n\nThis could bring billions of new users onchain. AI a",
+    "views": 1522,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-09"
+  },
+  {
+    "id": "1915182820336586878",
+    "text": "(6/10)  Referral-Driven Recruiting\n\n• KRA: Reduce hiring cost\n\n• Tasks: Incentivize referrals from team + community\n\n• Metrics: Referrals, quality of ",
+    "views": 1520,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-23"
+  },
+  {
+    "id": "1883463564767396046",
+    "text": "Healthcare is another focus. AI is being used for diagnostics, drug discovery, and even elderly care. For example, iFlytek’s voice recognition tech is",
+    "views": 1519,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-26"
+  },
+  {
+    "id": "1915000240823734377",
+    "text": "Bitcoin’s rise past $88K signals growing investor confidence, boosted by a weaker U.S. dollar at a 3-year low due to Fed pressure.\n\nGold also hit a re",
+    "views": 1507,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-23"
+  },
+  {
+    "id": "1902988400208306433",
+    "text": "Find your interest https://t.co/kck2DZpNAJ",
+    "views": 1498,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-21"
+  },
+  {
+    "id": "1949753604505747542",
+    "text": "I'm an alum of Network School...Balaji’s island startup society for tech believers.\n\nSome friends helped with my application, so paying it forward.\n\nI",
+    "views": 1489,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-07-28"
+  },
+  {
+    "id": "1902988405824426060",
+    "text": "Build your portfolio https://t.co/1zIFTLVViB",
+    "views": 1488,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-21"
+  },
+  {
+    "id": "1883463491966910701",
+    "text": "China’s AI strategy is guided by two key plans: the New Generation AI Development Plan (2017) and Made in China 2025.\n\nThese emphasize reducing relian",
+    "views": 1466,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-26"
+  },
+  {
+    "id": "1915182829107110228",
+    "text": "(10/10)  Show, Don’t Just Tell\n\n• KRA: Strengthen employer brand\n\n• Tasks: Share team updates, async culture, hiring stories\n\n• Metrics: Social reach,",
+    "views": 1451,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-23"
+  },
+  {
+    "id": "1906491888603210108",
+    "text": "Early exposure compounds.\n\nTeaching kids AI at 10 means innovators at 20.\n\nChina is building global AI leadership from the ground up.\n\nMeanwhile, most",
+    "views": 1447,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-30"
+  },
+  {
+    "id": "1902988410098434172",
+    "text": "Find open roles https://t.co/MJ8LlHEGif",
+    "views": 1425,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-21"
+  },
+  {
+    "id": "2000869603090817400",
+    "text": "X402 🧵 - Making Internet Payments Actually Work\n\nAI agents can write code, analyze data, and make decisions...\n\nBut to BUY an API call or pay for dat",
+    "views": 1421,
+    "likes": 13,
+    "retweets": 1,
+    "replies": 1,
+    "date": "2025-12-16"
+  },
+  {
+    "id": "1926625632361836587",
+    "text": "Meanwhile altcoin holders... https://t.co/L5KIkVGuH9",
+    "views": 1421,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-25"
+  },
+  {
+    "id": "1889389022818263332",
+    "text": "Pantera’s latest newsletter highlights that “the crypto industry’s fundamentals are strong.”\n\n• L1s’ Economic Value: $6B annualized transaction fees (",
+    "views": 1366,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-11"
+  },
+  {
+    "id": "1883463504415560090",
+    "text": "China is also leading in AI patents. From 2014-2023, it filed over 38,210 generative AI patents, dwarfing the US’s 6,276.\n\nThis shows China’s focus on",
+    "views": 1362,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-26"
+  },
+  {
+    "id": "1918071646306615743",
+    "text": "The Internet’s Evolution:\n\n• Web1: Static, centralized, minimal interaction.\n\n• Web2: Interactive, user-generated content, but platforms own the data.",
+    "views": 1337,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-01"
+  },
+  {
+    "id": "1902988416721059957",
+    "text": "How not to apply https://t.co/RuRdriYuCW",
+    "views": 1319,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-21"
+  },
+  {
+    "id": "1895081905688895636",
+    "text": "India’s Central Bureau of Investigation (CBI) has conducted raids at 60 locations across the country as part of its investigation into the $800 millio",
+    "views": 1310,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-02-27"
+  },
+  {
+    "id": "1937715045233836324",
+    "text": "Crypto is digital money...no banks, no borders.\n\nIt lives on the blockchain, moves wallet to wallet, with no middlemen.\n\nFast. Borderless. Programmabl",
+    "views": 1299,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-06-25"
+  },
+  {
+    "id": "1902988423000101149",
+    "text": "Ways to reach out https://t.co/674aS2NJzg",
+    "views": 1295,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-21"
+  },
+  {
+    "id": "1884547756917711202",
+    "text": "A global team of 1000 experts from 500+ institutions creates Humanity's Last Exam, a tough AI test with advanced academic questions.\n\nEven top AI mode",
+    "views": 1285,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-29"
+  },
+  {
+    "id": "1910021976640610537",
+    "text": "Next is: Hosting 2 meetups this weekend and connecting them virtually:\n\nDelhi Web3 Meetup: https://t.co/yHwAjCBewm\n\nBengaluru Web3 Meetup: https://t.c",
+    "views": 1284,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-09"
+  },
+  {
+    "id": "1931176150056767782",
+    "text": "🧵Lifecycle of a Web3 Startup https://t.co/MtkAKgeWmR",
+    "views": 1276,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-06-07"
+  },
+  {
+    "id": "1898217082837516720",
+    "text": "The NFT market isn't just about digital assets—it’s about perceived value.\n\nWhat makes one NFT sell for thousands while another remains unnoticed? htt",
+    "views": 1260,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-08"
+  },
+  {
+    "id": "2038507953058349084",
+    "text": "🧵 AI Agents are the most in-demand skill in tech right now.\n\nCourses from Google, OpenAI, Anthropic, Microsoft, NVIDIA, and more. https://t.co/lknyAV",
+    "views": 1227,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2026-03-30"
+  },
+  {
+    "id": "1911426071842484682",
+    "text": "Peter Schiff, a staunch advocate for gold, frequently compares Bitcoin unfavorably to precious metals.\n\nHowever, over the past decade, Bitcoin has out",
+    "views": 1220,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-13"
+  },
+  {
+    "id": "1903206213560815816",
+    "text": "We did a small web3 meetup in Noida last weekend.\n\nBased on feedback, we’re hosting another one today in Delhi. \n\nSee you there: https://t.co/IL9JgfX5",
+    "views": 1204,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-21"
+  },
+  {
+    "id": "1918071650886860938",
+    "text": "Unlike Web2’s attention economy, Web3 is built on:\n\n• Cryptocurrencies\n• NFTs (Non-Fungible Tokens)\n• DAOs (Decentralized Autonomous Organizations)\n\nT",
+    "views": 1199,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-01"
+  },
+  {
+    "id": "1918071662672789515",
+    "text": "Understanding Web3\n\nhttps://t.co/515bqGOvqM",
+    "views": 1182,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-01"
+  },
+  {
+    "id": "1902988427207008557",
+    "text": "Write effective emails https://t.co/ncuqEhBvJ5",
+    "views": 1167,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-21"
+  },
+  {
+    "id": "1950661090888826954",
+    "text": "🧵 Hidden Gems in the \"Strengthening American Leadership in Digital Financial Technology\" Report https://t.co/9RV9SNZWyG",
+    "views": 1155,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-07-30"
+  },
+  {
+    "id": "2024138399481839768",
+    "text": "Mobility → exit pressure → better incentives\n\nIteration → faster improvement cycles\n\nProtection + rigidity → locked-in inefficiency\n\nAI → lowers cost ",
+    "views": 1153,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2026-02-18"
+  },
+  {
+    "id": "1941358656249004414",
+    "text": "The total market capitalization reached $227.4 billion by March 2025, representing an increase from $132 billion in January 2024.\n\nIncreasing recognit",
+    "views": 1153,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-07-05"
+  },
+  {
+    "id": "2035746665450361054",
+    "text": "A bad manager is never the problem. They are just an involuntary mentorship program in what not to do. Stay positive out there. https://t.co/8mZtSJ3qZ",
+    "views": 1152,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2026-03-22"
+  },
+  {
+    "id": "1884547761254658155",
+    "text": "Stanford and CMU introduce Mixture-of-Mamba, a new AI model that learns from text, images, and speech more efficiently.\n\nBy focusing only on important",
+    "views": 1129,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-29"
+  },
+  {
+    "id": "1941119327576760369",
+    "text": "Had some amazing meetups in Mumbai this week....finally got to meet some wonderful people from our @hashtag_web3 community.\n\nLoved the positive energy",
+    "views": 1125,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-07-04"
+  },
+  {
+    "id": "1906549514921771196",
+    "text": "Earlier this month, I shared my views on India's Web3 ecosystem at the 5th Edition of I-Connect @ISBedu, hosted by one of India's top B-schools\n\nAn in",
+    "views": 1123,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-31"
+  },
+  {
+    "id": "1932315459506131140",
+    "text": "Average IQ\n\nAccording to a study of 1.39 million people worldwide who took the same test, India's average IQ is higher than Israel, Sweden, Norway, UA",
+    "views": 1114,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-06-10"
+  },
+  {
+    "id": "2036831607038877820",
+    "text": "Shopping used to mean: open browser, search, compare, click, form, checkout.\n\nAI agents cut that to one step. You describe. They buy.\n\nThe agent is no",
+    "views": 1110,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2026-03-25"
+  },
+  {
+    "id": "1883463498229072170",
+    "text": "In 2024, China’s AI sector saw massive growth. The core AI industry reached $81 billion, up 13.9% from 2023.\n\nOver 4,500 AI companies are now operatin",
+    "views": 1109,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-26"
+  },
+  {
+    "id": "1884548516233564527",
+    "text": "🧵 That’s a wrap.\n\nJoin this AI &amp; Web3 community on telegram: https://t.co/FNL0dzn2Z9\n\nFollow @vedangvatsa for more AI insights and deep dives.",
+    "views": 1099,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-29"
+  },
+  {
+    "id": "1918071703605035130",
+    "text": "Join 75,000+ HRs, VCs, Founders, etc. in this AI &amp; Web3 community: https://t.co/ur9QtHzG2X to\n\n•⁠ ⁠Find remote jobs\n•⁠ ⁠Network with VCs &amp; Fou",
+    "views": 1089,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-01"
+  },
+  {
+    "id": "1902988434764943360",
+    "text": "Web3 careers prioritize contributions over degrees, with fast, informal hiring via communities. Less stable but high-reward, salaries come in crypto, ",
+    "views": 1071,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-21"
+  },
+  {
+    "id": "1918071654527508480",
+    "text": "Web3 vs Web2 jobs\n\n• Proof of expertise via public work (not just resumes)\n• Lesser formalities (DMs, communities)\n• High-risk but flexible, remote wo",
+    "views": 1064,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-01"
+  },
+  {
+    "id": "1936431603057573983",
+    "text": "A blockchain is like a public notebook: everyone has a copy, all entries are verified, and once added...they can’t be changed.\n\nEach block links to th",
+    "views": 1058,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-06-21"
+  },
+  {
+    "id": "1933505271478779962",
+    "text": "“If a human can learn it, AI can too.” \n- Ilya Sutskever, co-founder of OpenAI, speaking to the University of Toronto Class of 2025.\n\nWe are living in",
+    "views": 1055,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-06-13"
+  },
+  {
+    "id": "1918071696202055912",
+    "text": "Ways to reach out https://t.co/atGZXLZL1R",
+    "views": 1055,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-01"
+  },
+  {
+    "id": "1918683828639658314",
+    "text": "Despite claims that memecoins are “dead,” Solana tells a different story.\n\nPumpdotfun sees $1.5M–$2M daily volume, with 150K wallets trading and 20K–4",
+    "views": 1039,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-05-03"
+  },
+  {
+    "id": "1884547766111687125",
+    "text": "Microsoft and Renmin University introduce CoRAG, a new AI framework that helps language models retrieve information in multiple steps. It improves acc",
+    "views": 1035,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-01-29"
+  },
+  {
+    "id": "1904580563110944985",
+    "text": "As I shared with @theoutlookmoney, fear is a major barrier for investors—but so are lack of knowledge, regulatory uncertainty &amp; volatility.\n\nOverc",
+    "views": 1031,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-03-25"
+  },
+  {
+    "id": "2001558136356995194",
+    "text": "Grateful to the Parliamentary Standing Committee on Finance for inviting me earlier this month to take part in a discussion on Virtual Digital Assets ",
+    "views": 1022,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-12-18"
+  },
+  {
+    "id": "1933102282863727016",
+    "text": "What Is Not a Jail?\n\nA jail is not always a cell with bars.\nSometimes it's a calendar full of meetings.\nA job that pays well but dulls the spirit.\nA d",
+    "views": 1011,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-06-12"
+  },
+  {
+    "id": "2029695187098947854",
+    "text": "Most people fail the question: “Why should we hire you?”\n\nThey talk about themselves.\n\nThe right answer talks about the company’s problem.\n\nHere’s a s",
+    "views": 1009,
+    "likes": 34,
+    "retweets": 6,
+    "replies": 3,
+    "date": "2026-03-05"
+  },
+  {
+    "id": "1956220237868884119",
+    "text": "The Parliamentary Standing Committee on Finance has selected Virtual Digital Assets (VDA) for a detailed examination: https://t.co/3waL2C2mst https://",
+    "views": 1006,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-08-15"
+  },
+  {
+    "id": "1941358661634551874",
+    "text": "USDT dominates in Asia and Europe, while USDC sees higher adoption in North America.\n\nThis geographic segmentation suggests different regulatory envir",
+    "views": 1006,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-07-05"
+  },
+  {
+    "id": "1907465257083126048",
+    "text": "The structured process of sitting down with a laptop also reinforces deliberate decision-making over impulsive spending. https://t.co/HWsOr87dgl",
+    "views": 1006,
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "date": "2025-04-02"
+  }
+]

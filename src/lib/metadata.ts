@@ -109,6 +109,13 @@ export const pageMetadata = {
     url: '/health-protocols',
     keywords: ['Bryan Johnson', 'Blueprint Protocol', 'Longevity', 'Anti-Aging', 'Supplements', 'Biohacking', 'Health Optimization', 'Sleep Protocol'],
   },
+  aiReports: {
+    title: 'AI Reports & Research Library — 2025–2026',
+    description:
+      'Curated collection of 1000+ AI reports, research papers, and industry analyses from Stanford, McKinsey, Deloitte, OpenAI, and more.',
+    url: '/ai-reports',
+    keywords: ['AI Reports', 'AI Research Papers', 'State of AI', 'McKinsey AI', 'Stanford AI Index', 'AI Industry Reports', 'AI Governance', 'Generative AI Reports'],
+  },
 };
 
 export function generateMetadata(params: MetadataParams): Metadata {

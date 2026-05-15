@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reentrancy Attack Visualizer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            margin: 0; padding: 0; background-color: #f8fafc; color: #0f172a;
+            font-family: 'Inter', sans-serif; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; height: 100vh; overflow: hidden;
+        }
+        .header { position: absolute; top: 40px; text-align: center; }
+        h1 { font-size: 2.5rem; margin: 0; color: #0f172a; letter-spacing: -0.025em; }
+        p { color: #64748b; font-size: 1.2rem; margin-top: 10px; }
+        
+        .container {
+            display: flex; gap: 80px; align-items: center; justify-content: center;
+            background: #ffffff; padding: 60px; border-radius: 24px;
+            border: 1px solid #e2e8f0; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .contract {
+            display: flex; flex-direction: column; align-items: center;
+            width: 200px; padding: 30px; border-radius: 16px; border: 2px solid;
+            background: #ffffff; z-index: 2; transition: all 0.3s;
+        }
+        
+        #vault { border-color: #0A66C2; box-shadow: 0 4px 20px rgba(10, 102, 194, 0.15); }
+        #attacker { border-color: #E11D48; box-shadow: 0 4px 20px rgba(225, 29, 72, 0.15); }
+
+        .contract h2 { margin: 0 0 20px 0; font-size: 1.2rem; }
+        .balance { font-size: 2.5rem; font-weight: 700; font-family: monospace; }
+        
+        .code-block {
+            margin-top: 20px; font-family: monospace; font-size: 0.8rem;
+            background: #f1f5f9; padding: 15px; border-radius: 8px; width: 100%;
+            color: #475569;
+        }
+
+        .active-line { color: #E11D48; font-weight: bold; }
+
+        .arrow {
+            position: absolute; height: 4px; background: #E11D48;
+            top: 50%; left: 300px; right: 300px; z-index: 1; opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .arrow::after {
+            content: ''; position: absolute; right: -10px; top: -8px;
+            border-top: 10px solid transparent; border-bottom: 10px solid transparent;
+            border-left: 15px solid #E11D48;
+        }
+
+        .controls { position: absolute; bottom: 40px; display: flex; gap: 20px; }
+        button {
+            padding: 12px 30px; font-size: 1.1rem; font-weight: 600;
+            border-radius: 12px; cursor: pointer; transition: all 0.2s ease;
+        }
+        button.primary { background: #E11D48; color: #ffffff; border: none; }
+        button.primary:hover { background: #be123c; transform: translateY(-2px); }
+        button.secondary { background: #ffffff; color: #0f172a; border: 1px solid #e2e8f0; }
+
+        @keyframes shoot {
+            0% { transform: translateX(-50px); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateX(50px); opacity: 0; }
+        }
+        .animating-arrow { animation: shoot 0.5s ease; opacity: 1; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Smart Contract Reentrancy</h1>
+        <p>Visualizing the fallback loop vulnerability</p>
+    </div>
+    
+    <div class="container">
+        <div class="contract" id="vault">
+            <h2 style="color: #0A66C2">Target Vault</h2>
+            <div class="balance" id="vault-bal">10 ETH</div>
+            <div class="code-block" id="vault-code">
+                function withdraw() {<br>
+                &nbsp;&nbsp;<span id="line1">require(bal > 0);</span><br>
+                &nbsp;&nbsp;<span id="line2">msg.sender.call{value}("");</span><br>
+                &nbsp;&nbsp;<span id="line3">bal = 0;</span><br>
+                }
+            </div>
+        </div>
+
+        <div class="arrow" id="attack-arrow"></div>
+
+        <div class="contract" id="attacker">
+            <h2 style="color: #E11D48">Attacker Contract</h2>
+            <div class="balance" id="attacker-bal">0 ETH</div>
+            <div class="code-block" id="attack-code">
+                fallback() payable {<br>
+                &nbsp;&nbsp;<span id="line4">if(vault.bal > 0) {</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span id="line5">vault.withdraw();</span><br>
+                &nbsp;&nbsp;}<br>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="secondary" onclick="reset()">Reset</button>
+        <button class="primary" onclick="attack()" id="atk-btn">Execute Attack</button>
+    </div>
+
+    <script>
+        let vBal = 10;
+        let aBal = 0;
+        const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+        function updateUI() {
+            document.getElementById('vault-bal').innerText = vBal + ' ETH';
+            document.getElementById('attacker-bal').innerText = aBal + ' ETH';
+        }
+
+        function highlight(id, active) {
+            document.getElementById(id).className = active ? 'active-line' : '';
+        }
+
+        async function attack() {
+            document.getElementById('atk-btn').disabled = true;
+            
+            while(vBal > 0) {
+                // Attacker calls withdraw
+                highlight('line5', true); await sleep(400); highlight('line5', false);
+                
+                // Vault checks balance
+                highlight('line1', true); await sleep(400); highlight('line1', false);
+                
+                // Vault sends ETH
+                highlight('line2', true); 
+                document.getElementById('attack-arrow').classList.add('animating-arrow');
+                await sleep(300);
+                vBal -= 1;
+                aBal += 1;
+                updateUI();
+                await sleep(300);
+                document.getElementById('attack-arrow').classList.remove('animating-arrow');
+                highlight('line2', false);
+                
+                // Attacker fallback triggers
+                highlight('line4', true); await sleep(400); highlight('line4', false);
+            }
+            
+            // Vault tries to update balance but it's empty
+            highlight('line3', true); await sleep(600); highlight('line3', false);
+            document.getElementById('atk-btn').disabled = false;
+        }
+
+        function reset() {
+            vBal = 10; aBal = 0; updateUI();
+        }
+    </script>
+</body>
+</html>
