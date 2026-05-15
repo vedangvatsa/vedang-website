@@ -752,7 +752,8 @@
     "scheduleTime": "01:00",
     "posted": false,
     "text": "When product asks for a \"simple feature\".\n\nThe underlying architecture rarely agrees.\n\nNothing is simple once you look under the hood.",
-    "image": "scripts/thread-assets/linkedin-rewrites/simple_feature.gif"
+    "image": "scripts/thread-assets/linkedin-rewrites/simple_feature.gif",
+    "error": "Post failed: 400 {\"error\":\"InvalidRequest\",\"message\":\"Invalid app.bsky.feed.post record: blob too big (maximum 2000000, got 52822447) at $.record.embed.images[0].image\"}"
   },
   {
     "id": "reddit-meme-3",

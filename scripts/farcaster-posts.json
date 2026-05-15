@@ -887,7 +887,8 @@
     "scheduleTime": "17:00",
     "posted": false,
     "postedAt": null,
-    "castHash": null
+    "castHash": null,
+    "error": "fetch failed"
   },
   {
     "id": "rewritten-post-10",

@@ -851,9 +851,11 @@
     "id": "rewritten-post-9",
     "scheduleDate": "2026-05-11",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "image": "scripts/thread-assets/linkedin-rewrites/post_9.mp4",
-    "text": "Judge Caprio actually took the time to understand this man's situation.\n\nWe all have rules at work, but we still need to use our own judgment.\n\nGood managers know when to ignore the rulebook and treat people like human beings."
+    "text": "Judge Caprio actually took the time to understand this man's situation.\n\nWe all have rules at work, but we still need to use our own judgment.\n\nGood managers know when to ignore the rulebook and treat people like human beings.",
+    "postedAt": "2026-05-15T04:18:00.855Z",
+    "postId": "urn:li:ugcPost:7460906307290779648"
   },
   {
     "id": "rewritten-post-10",
