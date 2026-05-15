@@ -644,9 +644,11 @@
     "id": "reddit-vid-1",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "When microservices fail in production.\n\nOne service goes down.\n\nThen the next.\n\nThen the next.\n\nKeep your blast radius small.",
-    "image": "scripts/thread-assets/linkedin-rewrites/youtube_outage.mp4"
+    "image": "scripts/thread-assets/linkedin-rewrites/youtube_outage.mp4",
+    "postedAt": "2026-05-15T20:06:55.111Z",
+    "fbPostId": "1483662179972716"
   },
   {
     "id": "reddit-vid-2",
