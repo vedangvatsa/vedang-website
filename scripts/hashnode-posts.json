@@ -131,7 +131,8 @@
     ],
     "scheduleDate": "2026-03-28",
     "posted": false,
-    "scheduleTime": "17:00"
+    "scheduleTime": "17:00",
+    "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
   },
   {
     "id": "hashnode-ai-economy",

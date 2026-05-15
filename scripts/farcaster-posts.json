@@ -896,9 +896,9 @@
     "image": "scripts/thread-assets/linkedin-rewrites/post_10.mp4",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "01:00",
-    "posted": false,
-    "postedAt": null,
-    "castHash": null
+    "posted": true,
+    "postedAt": "2026-05-15T12:16:29.530Z",
+    "castHash": "0x1e82e2b64dfcacb9af6d44bbb114c4d91502cff9"
   },
   {
     "id": "reddit-vid-1",

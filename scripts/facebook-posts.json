@@ -634,9 +634,11 @@
     "id": "rewritten-post-10",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Talking to kids about online safety is hard. \n\nThis campaign uses humor to talk to them instead of just scaring them. \n\nAsk questions, be honest, and stay involved to keep them safe online.",
-    "image": "scripts/thread-assets/linkedin-rewrites/post_10.mp4"
+    "image": "scripts/thread-assets/linkedin-rewrites/post_10.mp4",
+    "postedAt": "2026-05-15T12:16:26.580Z",
+    "fbPostId": "2185787565516019"
   },
   {
     "id": "reddit-vid-1",
