@@ -87,9 +87,33 @@ export default function AIReportsPage() {
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
               AI Reports & Research Library
             </h1>
-            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground mb-8">
               A comprehensive, concise directory of the latest AI reports, research papers, and industry analyses globally.
             </p>
+
+            {/* McKinsey Style CTA Banner */}
+            <div className="mx-auto max-w-3xl bg-primary/5 border border-primary/20 rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm mb-12">
+              <div className="text-left flex-1">
+                <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-semibold text-primary mb-3">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                  </span>
+                  Data Science Insight
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">State of AI 2026 Meta-Analysis</h3>
+                <p className="text-sm text-muted-foreground">
+                  Read our exclusive McKinsey-style analysis. We extracted and tokenized millions of words from the abstracts of 10,000+ reports below to uncover the true enterprise AI trends.
+                </p>
+              </div>
+              <Link 
+                href="/state-of-ai-2026"
+                className="shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-xl font-medium shadow-sm transition-all flex items-center gap-2"
+              >
+                Read Findings
+                <MoveUpRight className="h-4 w-4" />
+              </Link>
+            </div>
           </div>
 
           {/* Search */}
