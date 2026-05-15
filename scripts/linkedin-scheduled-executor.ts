@@ -269,6 +269,7 @@ async function main() {
       post.postId = result.id;
       delete post.error;
       modified = true;
+      try { triggerBoost('linkedin', result.id); } catch(e) { console.warn('⚠️ Boost trigger failed:', e); }
       break; // Only 1 post per run
     } else {
       console.error(`❌ Failed: ${result.error}`);
@@ -279,8 +280,6 @@ async function main() {
   }
 
   if (modified) {
-    
-    try { triggerBoost('linkedin', post.postUri); } catch(e) {}
     fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
     console.log('📝 Updated linkedin-posts.json');
     console.log('::set-output name=modified::true');
