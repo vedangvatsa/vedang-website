@@ -41,6 +41,7 @@ import { DataSourceDisruption, MethodologicalEvolution, PolarizationFindings, Ob
 import { MonasteryPrincipleChart, AttentionSpanDecline, InterruptionCostChart, RetreatMovementsTimeline, SilenceEconomyChart } from '@/components/mdx/digital-monasticism-charts';
 import { PlaybookHeroCard, AgentToolsMap, AutomationROIChart, ContentPipelineFlow, OutreachPipeline, AIMaturityLevels, ImplementationTimeline, NurtureSequence, ImplementationChecklist, SocialListeningMap, SupportTierChart, DashboardMetricsMap, UseCaseCatalog } from '@/components/mdx/playbook-charts';
 import { StateOfAiKeywordsChart, StateOfAiBigramsChart } from '@/components/mdx/state-of-ai-charts';
+import { StateOfWeb3KeywordsChart, StateOfWeb3BigramsChart } from '@/components/mdx/state-of-web3-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -418,6 +419,8 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               UseCaseCatalog,
               StateOfAiKeywordsChart,
               StateOfAiBigramsChart,
+              StateOfWeb3KeywordsChart,
+              StateOfWeb3BigramsChart,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img

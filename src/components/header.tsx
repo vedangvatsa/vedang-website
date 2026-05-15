@@ -69,6 +69,9 @@ export function Header() {
                 <DropdownMenuItem asChild>
                   <Link href="/ai-reports">AI Reports Archive</Link>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/web3-reports">Web3 Reports Archive</Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
