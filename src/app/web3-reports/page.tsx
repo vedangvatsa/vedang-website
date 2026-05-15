@@ -54,7 +54,7 @@ export default function Web3ReportsPage() {
             Web3 Research & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Reports Archive</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8">
-            A comprehensive, concise directory of the latest Web3 reports, whitepapers, and on-chain analyses globally. To map the true trajectory of crypto in 2026, we bypassed retail hype and performed a deep-text tokenization on the full abstracts of 18,423 documents below.
+            A comprehensive, concise directory of the latest Web3 reports, whitepapers, and on-chain analyses globally. To map the true trajectory of crypto in 2026, we bypassed retail hype and performed a deep-text tokenization on the full abstracts of 23,000+ documents below.
           </p>
 
           {/* McKinsey Style CTA Banner */}
@@ -69,7 +69,7 @@ export default function Web3ReportsPage() {
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">State of Web3 2026: The Comprehensive Analysis</h3>
               <p className="text-sm text-muted-foreground">
-                Read our exclusive 5,000-word McKinsey-style analysis. We extracted and tokenized millions of words from the abstracts of 18,000+ reports below to uncover the true institutional Web3 trends.
+                Read our exclusive 5,000-word McKinsey-style analysis. We extracted and tokenized millions of words from the abstracts of 23,000+ reports below to uncover the true institutional Web3 trends.
               </p>
             </div>
             <Link 
@@ -82,7 +82,7 @@ export default function Web3ReportsPage() {
           </div>
 
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-6">
-            The 18,000+ Document Archive
+            The 23,000+ Document Archive
           </h2>
 
           {/* SEARCH & FILTERS */}
