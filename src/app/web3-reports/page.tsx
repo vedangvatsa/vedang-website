@@ -7,7 +7,7 @@ import { web3Reports, CATEGORIES } from '@/lib/web3-reports-data';
 import { ReportSearch } from '@/components/report-search';
 
 export const metadata: Metadata = {
-  title: 'Web3 Reports & Research Data Archive | Vedang Vatsa',
+  title: 'Web3 Reports Library | Vedang Vatsa',
   description: 'A comprehensive, searchable database of 23,000+ Web3 reports, white papers, institutional research, and regulatory frameworks.',
 };
 
@@ -57,10 +57,13 @@ export default async function Web3ReportsPage({
       <section className="text-center pt-16 pb-12 border-b border-border/30">
         <div className="container mx-auto px-4 md:px-6 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
-            Web3 Reports & Research Library
+            Web3 Reports Library
           </h1>
           <p className="mt-4 text-base md:text-lg text-muted-foreground">
             {web3Reports.length.toLocaleString()}+ research papers, institutional reports, and on-chain analyses. Each entry links directly to a verified DOI or academic repository.
+          </p>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Read the full synthesis: <Link href="/state-of-web3-2026" className="text-primary hover:underline font-medium">The State of Web3 in 2026 →</Link>
           </p>
         </div>
       </section>
