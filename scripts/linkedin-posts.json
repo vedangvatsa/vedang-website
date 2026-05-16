@@ -893,7 +893,9 @@
     "text": "Reading legacy documentation.\n\nThe docs say one thing.\n\nThe code does another.\n\nThe only source of truth is the code itself.",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "01:00",
-    "posted": false
+    "posted": true,
+    "postedAt": "2026-05-16T11:56:27.942Z",
+    "postId": "urn:li:ugcPost:7461384068455305216"
   },
   {
     "id": "reddit-vid-4",

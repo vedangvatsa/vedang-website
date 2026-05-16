@@ -926,9 +926,9 @@
     "image": "scripts/thread-assets/linkedin-rewrites/junior_dev_docs.mp4",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "01:00",
-    "posted": false,
-    "postedAt": null,
-    "castHash": null
+    "posted": true,
+    "postedAt": "2026-05-16T11:56:48.697Z",
+    "castHash": "0xab2d8990faadcd1aa3344ca776b15c7eb35cf031"
   },
   {
     "id": "reddit-vid-4",
