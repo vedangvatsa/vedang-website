@@ -1,11 +1,65 @@
 [
-  {"activityId":"7458489647980150784","author":"Liam Darmody","commentId":"7459159550881980416","commentText":"...","postedAt":"2026-05-10T08:37:00Z"},
-  {"activityId":"7457435944548364288","author":"Steven Joshua Taylor","commentId":"7459159696063610881","commentText":"...","postedAt":"2026-05-10T08:37:30Z"},
-  {"activityId":"7457616381404995584","author":"Parth Kapadia","commentId":"7459159838732746752","commentText":"...","postedAt":"2026-05-10T08:38:00Z"},
-  {"activityId":"7457245780190601216","author":"Stephanie Barnett","commentId":"7459159973558738944","commentText":"...","postedAt":"2026-05-10T08:38:30Z"},
-  {"activityId":"7442103902570881024","author":"Steven Yurisich","commentId":"7459160111383724032","commentText":"...","postedAt":"2026-05-10T08:39:00Z"},
-  {"activityId":"7411098122866745344","author":"Josh Bersin","commentId":"7459160251318214656","commentText":"...","postedAt":"2026-05-10T08:39:30Z"},
-  {"activityId":"7458494968199041024","author":"Sutherland Global","commentId":"7459160393551319040","commentText":"...","postedAt":"2026-05-10T08:40:00Z"},
-  {"activityId":"7457431782536372225","author":"Alexander Whedon","commentId":"7459160535499051008","commentText":"...","postedAt":"2026-05-10T08:40:30Z"},
-  {"activityId":"7458168801424199680","author":"Ankur Bhatt","commentId":"7459160676297707520","commentText":"...","postedAt":"2026-05-10T08:41:00Z"}
+  {
+    "activityId": "7458489647980150784",
+    "author": "Liam Darmody",
+    "commentId": "7461050160639291392",
+    "commentText": "A structural reality most overlook:\n\nSaaS economics rely heavily on human constraints—per-seat pricing assumes human operators. When the operator is a script running continuously, the pricing model collapses.\n\nThe vendors who recognize this early will survive the transition.\nhttps://veda.ng/stepwise-ai",
+    "postedAt": "2026-05-15T13:49:37.975Z"
+  },
+  {
+    "activityId": "7457435944548364288",
+    "author": "Steven Joshua Taylor",
+    "commentId": "7461050358581182464",
+    "commentText": "Accountability remains the unresolved tension here.\n\nWhen a system executes a decision autonomously, the liability does not disappear—it just shifts.\n\nWe are building the technical capacity faster than the legal frameworks required to govern it.\nhttps://veda.ng/universal-text-ui",
+    "postedAt": "2026-05-15T13:50:25.202Z"
+  },
+  {
+    "activityId": "7457616381404995584",
+    "author": "Parth Kapadia",
+    "commentId": "7461050556845957120",
+    "commentText": "Implementation is fundamentally an operations problem, not an engineering one.\n\nIf you do not map the entire organizational logic before deploying the system, you are just moving the friction from one department to another.\n\nhttps://veda.ng/ai-implementation-playbook",
+    "postedAt": "2026-05-15T13:51:12.460Z"
+  },
+  {
+    "activityId": "7457245780190601216",
+    "author": "Stephanie Barnett",
+    "commentId": "7461050752799698944",
+    "commentText": "Governments have a surprising advantage here.\n\nThose that invested early in robust digital identity primitives—like Estonia or Singapore—can deploy these autonomous systems with immediate cryptographic trust.\n\nIdentity is the prerequisite for autonomy.\nhttps://veda.ng/stepwise-ai",
+    "postedAt": "2026-05-15T13:51:59.173Z"
+  },
+  {
+    "activityId": "7442103902570881024",
+    "author": "Steven Yurisich",
+    "commentId": "7461050950909284352",
+    "commentText": "The bottleneck is rarely compute.\n\nIt is institutional inertia. Organizations spend millions on infrastructure, yet refuse to redesign the underlying workflows that made them slow in the first place.\n\nYou cannot automate a broken process and expect velocity.\nhttps://veda.ng/stepwise-ai",
+    "postedAt": "2026-05-15T13:52:46.425Z"
+  },
+  {
+    "activityId": "7411098122866745344",
+    "author": "Josh Bersin",
+    "commentId": "7461051149069131778",
+    "commentText": "The true cost of these systems is rarely in the deployment.\n\nIt is in the maintenance of the orchestration layer. Edge cases compound exponentially when systems interact with the physical world.\n\nRobust error handling is where the actual engineering happens.\nhttps://veda.ng/stepwise-ai",
+    "postedAt": "2026-05-15T13:53:33.667Z"
+  },
+  {
+    "activityId": "7458494968199041024",
+    "author": "Sutherland Global",
+    "commentId": "7461051346872619009",
+    "commentText": "We are approaching a point where the marginal cost of intelligence trends toward zero.\n\nThe implications for software engineering are obvious. The implications for macroeconomic structure and labor markets are barely being discussed.\n\nhttps://veda.ng/stepwise-ai",
+    "postedAt": "2026-05-15T13:54:20.829Z"
+  },
+  {
+    "activityId": "7457431782536372225",
+    "author": "Alexander Whedon",
+    "commentId": "7461051543556005888",
+    "commentText": "The obsession with general-purpose systems is a distraction.\n\nReal economic value is being captured by teams building narrow, highly deterministic tools for specific vertical problems.\n\nPrecision scales better than general competence.\nhttps://veda.ng/stepwise-ai",
+    "postedAt": "2026-05-15T13:55:07.678Z"
+  },
+  {
+    "activityId": "7458168801424199680",
+    "author": "Ankur Bhatt",
+    "commentId": "7461051741913051137",
+    "commentText": "We built the internet for human consumption.\n\nNow we are forcing machine-readable systems to parse human-centric interfaces. The next foundational shift is not better parsing—it is native infrastructure built exclusively for algorithmic access.\n\nhttps://veda.ng/stepwise-ai",
+    "postedAt": "2026-05-15T13:55:55.048Z"
+  }
 ]

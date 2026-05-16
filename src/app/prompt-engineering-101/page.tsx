@@ -9,7 +9,8 @@ import { PredictionEngine, CoreTechniques, AdvancedReasoning, CodePrompting, Bes
 
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Star, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Link from 'next/link';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
@@ -18,7 +19,7 @@ export const metadata: Metadata = generateMetadata({
   title: pageMetadata.promptEngineering.title,
   description: pageMetadata.promptEngineering.description,
   url: pageMetadata.promptEngineering.url,
-  ogImageAlt: 'Prompt Engineering 101 Course - Master AI Interactions',
+  ogImageAlt: 'Prompt Engineering Course - Master AI Interactions',
 });
 
 const faqItems = [
@@ -67,7 +68,7 @@ const faqItems = [
 const courseSchema = {
   '@context': 'https://schema.org',
   '@type': 'Course',
-  name: 'Prompt Engineering 101',
+  name: 'Prompt Engineering',
   description: 'A free, self-paced course on crafting effective prompts for AI models: zero-shot, few-shot, chain of thought, and code prompting.',
   url: 'https://veda.ng/prompt-engineering-101',
   provider: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
@@ -97,12 +98,8 @@ export default function PromptEngineeringCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <section className="text-center pt-16 pb-12">
              <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-                <Badge variant="secondary">
-                    <Star className="w-3 h-3 mr-1.5" />
-                    A Free, Self-Paced Course
-                </Badge>
                 <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
-                    Prompt Engineering 101
+                    Prompt Engineering
                 </h1>
                 <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
                 Learn the art and science of communicating with Large Language Models. This course will teach you how to craft prompts that guide AI to generate accurate, creative, and useful results, turning you into an expert communicator for the new age of technology.
@@ -111,6 +108,14 @@ export default function PromptEngineeringCoursePage() {
                 <div className="mt-8 flex justify-center items-center gap-4">
                     <Badge variant="outline">By: Vedang Vatsa</Badge>
                     <Badge variant="outline">Prerequisite: Curiosity</Badge>
+                </div>
+
+                <div className="mt-8 flex justify-center">
+                    <Button asChild size="lg" className="rounded-full px-8">
+                        <Link href="/prompt-engineering-101/module-1-core-idea">
+                            Start Course <ArrowRight className="ml-2 w-4 h-4" />
+                        </Link>
+                    </Button>
                 </div>
             </div>
         </section>

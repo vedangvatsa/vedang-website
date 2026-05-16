@@ -8,7 +8,8 @@ import {
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Star, ExternalLink, ArrowRight } from 'lucide-react';
+import { ExternalLink, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
 import { WebEvolution, BlockchainExplainer, SmartContractExplainer, Web3Ecosystem, Web3Passport, Web3Future } from '@/components/courses/web3-visuals';
@@ -134,10 +135,6 @@ export default function Web3CoursePage() {
 
         <section className="text-center pt-16 pb-12">
              <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-                <Badge variant="secondary">
-                    <Star className="w-3 h-3 mr-1.5" />
-                    A Free, Self-Paced Course
-                </Badge>
                 <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
                     Fundamentals of Web3
                 </h1>
@@ -148,6 +145,14 @@ export default function Web3CoursePage() {
                 <div className="mt-8 flex justify-center items-center gap-4">
                     <Badge variant="outline">By: Vedang Vatsa</Badge>
                     <Badge variant="outline">Prerequisite: An open mind</Badge>
+                </div>
+
+                <div className="mt-8 flex justify-center">
+                    <Button asChild size="lg" className="rounded-full px-8">
+                        <Link href="/web3-101/module-1-vision">
+                            Start Course <ArrowRight className="ml-2 w-4 h-4" />
+                        </Link>
+                    </Button>
                 </div>
             </div>
         </section>

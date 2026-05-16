@@ -106,7 +106,8 @@ async function postThread(tweets: TweetItem[]): Promise<{ success: boolean; id?:
         if (!fs.existsSync(absImage)) {
           return { success: false, error: `Image not found: ${absImage} — aborting thread (will not post text-only)` };
         }
-        const mediaId = await client.v1.uploadMedia(absImage, { mimeType: 'image/png' });
+        const mimeType = absImage.endsWith('.mp4') ? 'video/mp4' : absImage.endsWith('.gif') ? 'image/gif' : 'image/png';
+        const mediaId = await client.v1.uploadMedia(absImage, { mimeType });
         params.media = { media_ids: [mediaId] };
       }
 
