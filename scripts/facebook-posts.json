@@ -664,9 +664,11 @@
     "id": "reddit-vid-3",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Reading legacy documentation.\n\nThe docs say one thing.\n\nThe code does another.\n\nThe only source of truth is the code itself.",
-    "image": "scripts/thread-assets/linkedin-rewrites/junior_dev_docs.mp4"
+    "image": "scripts/thread-assets/linkedin-rewrites/junior_dev_docs.mp4",
+    "postedAt": "2026-05-16T11:56:45.463Z",
+    "fbPostId": "972505208760408"
   },
   {
     "id": "reddit-vid-4",
