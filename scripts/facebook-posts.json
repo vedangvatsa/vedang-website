@@ -674,9 +674,11 @@
     "id": "reddit-vid-4",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Algorithmic efficiency, visualized.\n\nWatch Bubble Sort struggle.\n\nThen watch Quick Sort finish in a fraction of the time.\n\nThere is a reason we pick the right tool.",
-    "image": "scripts/thread-assets/linkedin-rewrites/sort_algorithm.mp4"
+    "image": "scripts/thread-assets/linkedin-rewrites/sort_algorithm.mp4",
+    "postedAt": "2026-05-16T19:59:07.110Z",
+    "fbPostId": "1636837150936595"
   },
   {
     "id": "reddit-meme-1",
