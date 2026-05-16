@@ -1038,6 +1038,29 @@ Trust, security, concentration risk, and governance are the key challenges. When
 
 ---
 
+## The State of AI in 2026
+URL: https://veda.ng/state-of-ai-2026
+Summary: An empirical analysis of 19,175 AI research papers, enterprise reports, and regulatory frameworks. N-gram frequency analysis across millions of words reveals the true trajectory of enterprise AI.
+
+Over 19,175 distinct research documents, corporate filings, and regulatory guidelines published since 2025 were compiled. The OpenAlex API was queried to extract the inverted indices of 10,264 academic abstracts. The text was reconstructed and a rigorous n-gram frequency analysis was run across millions of words. The data confirms a structural pivot away from experimental chatbot features toward infrastructure scaling, operational efficiency, and clinical diagnostics. Healthcare emerges as the primary target for advanced AI integration, with "clinical" appearing 2,621 times and "mental health" at 310 mentions. Supply chain restructuring, RAG architecture adoption, agentic AI workflows, regulatory compliance (EU AI Act, NIST AI RMF), the education learning-performance paradox, emerging market leapfrog opportunities, the open-source model competition, cybersecurity in the agent era, and the talent market transformation are all covered with verifiable data points and real industry metrics.
+
+---
+
+## The State of Web3 in 2026
+URL: https://veda.ng/state-of-web3-2026
+Summary: An empirical analysis of 18,423 institutional reports, academic papers, and on-chain analytics to determine the true state of Web3 and decentralized infrastructure.
+
+A total of 18,423 distinct research documents, corporate filings, and regulatory guidelines published since 2025 were compiled. The data confirms a structural pivot away from retail-driven tokenomics toward zero-knowledge infrastructure, institutional adoption, and decentralized identity. BlackRock's BUIDL fund surpassed $500 million in AUM. Tokenized Real World Assets exceeded $17 billion. The stablecoin market capitalization exceeded $230 billion, settling over $15 trillion in on-chain transaction volume in 2025. The essay covers RWA tokenization, decentralized identity (W3C, Polygon ID, Worldcoin), ZK-rollup infrastructure, modular blockchain architecture, sustainable tokenomics, the stablecoin economy, regulatory compliance (GENIUS Act, MiCA), Bitcoin ETF institutional mainstreaming, DeFi maturation, geographic market fragmentation, and the NFT evolution.
+
+---
+
+## Research Data Archives
+
+- [AI Reports and Research Library](https://veda.ng/ai-reports): Searchable database of 19,000+ AI reports, research papers, and industry analyses.
+- [Web3 Reports and Research Library](https://veda.ng/web3-reports): Searchable database of 18,000+ Web3 reports, whitepapers, institutional research, and regulatory frameworks.
+
+---
+
 ## Glossary
 URL: https://veda.ng/glossary
 
