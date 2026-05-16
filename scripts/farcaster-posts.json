@@ -916,9 +916,9 @@
     "image": "scripts/thread-assets/linkedin-rewrites/kronk_sorting.mp4",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "17:00",
-    "posted": false,
-    "postedAt": null,
-    "castHash": null
+    "posted": true,
+    "postedAt": "2026-05-16T04:45:06.656Z",
+    "castHash": "0x908768092a750ad2758c64584abd97957a442144"
   },
   {
     "id": "reddit-vid-3",
