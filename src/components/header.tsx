@@ -67,10 +67,10 @@ export function Header() {
                   <Link href="/health-protocols">Health Protocols</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/ai-reports">AI Reports Archive</Link>
+                  <Link href="/ai-reports">AI Reports Library</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/web3-reports">Web3 Reports Archive</Link>
+                  <Link href="/web3-reports">Web3 Reports Library</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
