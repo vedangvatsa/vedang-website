@@ -1,1 +1,251 @@
-{}
+{
+  "Bangkok": {
+    "library": 85,
+    "hostel": 396,
+    "wifi_cafe": 294,
+    "laundry": 267,
+    "gym": 167,
+    "coworking": 5
+  },
+  "Chiang Mai": {
+    "laundry": 137,
+    "wifi_cafe": 261,
+    "hostel": 223,
+    "library": 23,
+    "coworking": 10,
+    "gym": 83
+  },
+  "Bali (Canggu/Ubud)": {
+    "wifi_cafe": 177,
+    "laundry": 120,
+    "hostel": 174,
+    "library": 17,
+    "gym": 73,
+    "coworking": 3
+  },
+  "Ho Chi Minh City": {
+    "wifi_cafe": 298,
+    "library": 20,
+    "laundry": 54,
+    "gym": 75,
+    "hostel": 159
+  },
+  "Kuala Lumpur": {
+    "laundry": 195,
+    "wifi_cafe": 65,
+    "library": 41,
+    "hostel": 45,
+    "gym": 87,
+    "coworking": 5
+  },
+  "Singapore": {
+    "wifi_cafe": 88,
+    "library": 60,
+    "laundry": 131,
+    "gym": 297,
+    "hostel": 95,
+    "coworking": 6
+  },
+  "Phnom Penh": {
+    "library": 8,
+    "hostel": 47,
+    "wifi_cafe": 108,
+    "laundry": 70,
+    "gym": 37
+  },
+  "Da Nang": {
+    "wifi_cafe": 150,
+    "hostel": 69,
+    "gym": 26,
+    "laundry": 34,
+    "library": 3
+  },
+  "Lisbon": {
+    "wifi_cafe": 110,
+    "hostel": 105,
+    "library": 84,
+    "laundry": 185,
+    "gym": 124,
+    "coworking": 3
+  },
+  "Barcelona": {
+    "library": 106,
+    "wifi_cafe": 245,
+    "hostel": 153,
+    "gym": 180,
+    "laundry": 153,
+    "coworking": 9
+  },
+  "Berlin": {
+    "library": 124,
+    "wifi_cafe": 320,
+    "hostel": 113,
+    "laundry": 232,
+    "gym": 411,
+    "coworking": 34
+  },
+  "Budapest": {
+    "wifi_cafe": 118,
+    "library": 65,
+    "gym": 218,
+    "hostel": 96,
+    "laundry": 66,
+    "coworking": 13
+  },
+  "Prague": {
+    "library": 63,
+    "hostel": 95,
+    "wifi_cafe": 203,
+    "laundry": 49,
+    "coworking": 4,
+    "gym": 102
+  },
+  "Tbilisi": {
+    "wifi_cafe": 119,
+    "hostel": 108,
+    "library": 26,
+    "gym": 66,
+    "laundry": 31,
+    "coworking": 5
+  },
+  "Split": {
+    "wifi_cafe": 30,
+    "laundry": 12,
+    "library": 7,
+    "hostel": 35,
+    "gym": 12,
+    "coworking": 1
+  },
+  "Tallinn": {
+    "wifi_cafe": 35,
+    "library": 17,
+    "hostel": 32,
+    "laundry": 28,
+    "gym": 33,
+    "coworking": 1
+  },
+  "Athens": {
+    "gym": 133,
+    "wifi_cafe": 100,
+    "laundry": 147,
+    "library": 40,
+    "hostel": 34,
+    "coworking": 4
+  },
+  "Madeira (Funchal)": {
+    "hostel": 6,
+    "wifi_cafe": 23,
+    "laundry": 22,
+    "library": 6,
+    "gym": 17
+  },
+  "Gran Canaria (Las Palmas)": {
+    "hostel": 35,
+    "gym": 27,
+    "library": 14,
+    "laundry": 18,
+    "wifi_cafe": 4,
+    "coworking": 1
+  },
+  "Mexico City": {
+    "wifi_cafe": 109,
+    "laundry": 207,
+    "library": 131,
+    "hostel": 44,
+    "gym": 209,
+    "coworking": 2
+  },
+  "Playa del Carmen": {
+    "laundry": 24,
+    "gym": 10,
+    "hostel": 24,
+    "wifi_cafe": 14,
+    "coworking": 1,
+    "library": 2
+  },
+  "Medellin": {
+    "hostel": 115,
+    "library": 58,
+    "laundry": 14,
+    "wifi_cafe": 43,
+    "gym": 73,
+    "coworking": 1
+  },
+  "Bogota": {
+    "hostel": 94,
+    "gym": 219,
+    "laundry": 357,
+    "library": 65,
+    "wifi_cafe": 67
+  },
+  "Buenos Aires": {
+    "wifi_cafe": 247,
+    "hostel": 79,
+    "laundry": 284,
+    "library": 90,
+    "gym": 292,
+    "coworking": 6
+  },
+  "Lima": {
+    "library": 52,
+    "hostel": 404,
+    "gym": 96,
+    "wifi_cafe": 50,
+    "laundry": 282
+  },
+  "Sao Paulo": {
+    "gym": 263,
+    "library": 72,
+    "laundry": 81,
+    "hostel": 51,
+    "wifi_cafe": 48,
+    "coworking": 1
+  },
+  "Dubai": {
+    "library": 16,
+    "laundry": 416,
+    "gym": 120,
+    "wifi_cafe": 79,
+    "hostel": 45,
+    "coworking": 2
+  },
+  "Cape Town": {
+    "library": 47,
+    "wifi_cafe": 58,
+    "gym": 36,
+    "laundry": 30,
+    "hostel": 36
+  },
+  "Nairobi": {
+    "library": 34,
+    "laundry": 24,
+    "gym": 25,
+    "hostel": 42,
+    "wifi_cafe": 10,
+    "coworking": 1
+  },
+  "Seoul": {
+    "library": 367,
+    "gym": 236,
+    "hostel": 68,
+    "wifi_cafe": 297,
+    "laundry": 206,
+    "coworking": 2
+  },
+  "Tokyo": {
+    "wifi_cafe": 506,
+    "hostel": 130,
+    "library": 264,
+    "laundry": 1372,
+    "gym": 411,
+    "coworking": 20
+  },
+  "Taipei": {
+    "wifi_cafe": 266,
+    "hostel": 63,
+    "laundry": 217,
+    "library": 175,
+    "gym": 111,
+    "coworking": 15
+  }
+}
