@@ -654,9 +654,11 @@
     "id": "reddit-vid-2",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Explaining sorting algorithms to non-technical stakeholders.\n\nSometimes a visual is worth 1000 words.\n\nNo slides. No jargon. Just bars moving.",
-    "image": "scripts/thread-assets/linkedin-rewrites/kronk_sorting.mp4"
+    "image": "scripts/thread-assets/linkedin-rewrites/kronk_sorting.mp4",
+    "postedAt": "2026-05-16T04:45:03.373Z",
+    "fbPostId": "1223359433042932"
   },
   {
     "id": "reddit-vid-3",

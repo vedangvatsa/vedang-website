@@ -781,9 +781,11 @@
     "id": "reddit-meme-5",
     "scheduleDate": "2026-05-14",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Open source in a nutshell.\n\nWe all build on work done by someone else.\n\nWho probably copied it from a forum post in 2012.",
-    "image": "scripts/thread-assets/linkedin-rewrites/steal_stolen.png"
+    "image": "scripts/thread-assets/linkedin-rewrites/steal_stolen.png",
+    "postedAt": "2026-05-16T04:44:52.823Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mlwzyrvtw72y"
   },
   {
     "id": "reddit-cutting-devs",
