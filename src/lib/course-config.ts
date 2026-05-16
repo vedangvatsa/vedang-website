@@ -1,7 +1,7 @@
 export const courseConfigs = {
   'vibe-coding': {
     courseId: 'vibe-coding',
-    courseTitle: 'Vibe Coding 101',
+    courseTitle: 'Vibe Coding',
     basePath: '/vibe-coding',
     modules: [
       { slug: 'module-1-philosophy', title: '1. The Philosophy' },
@@ -15,7 +15,7 @@ export const courseConfigs = {
   },
   'prompt-engineering-101': {
     courseId: 'prompt-engineering-101',
-    courseTitle: 'Prompt Engineering 101',
+    courseTitle: 'Prompt Engineering',
     basePath: '/prompt-engineering-101',
     modules: [
       { slug: 'module-1-core-idea', title: '1. The Core Idea' },
@@ -29,7 +29,7 @@ export const courseConfigs = {
   },
   'ai-automation': {
     courseId: 'ai-automation',
-    courseTitle: 'AI Automation 101',
+    courseTitle: 'AI Automation',
     basePath: '/ai-automation',
     modules: [
       { slug: 'module-1-mindset', title: '1. The Automation Mindset' },
@@ -43,7 +43,7 @@ export const courseConfigs = {
   },
   'mcp-development': {
     courseId: 'mcp-development',
-    courseTitle: 'MCP Development 101',
+    courseTitle: 'MCP Development',
     basePath: '/mcp-development',
     modules: [
       { slug: 'module-1-what-is-mcp', title: '1. What is MCP' },
@@ -71,7 +71,7 @@ export const courseConfigs = {
   },
   'web3-101': {
     courseId: 'web3-101',
-    courseTitle: 'Web3 101',
+    courseTitle: 'Web3 Fundamentals',
     basePath: '/web3-101',
     modules: [
       { slug: 'module-1-vision', title: '1. The Vision' },

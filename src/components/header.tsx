@@ -32,19 +32,19 @@ export function Header() {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem asChild>
-                  <Link href="/ai-automation">AI Automation 101</Link>
+                  <Link href="/ai-automation">AI Automation</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/mcp-development">MCP Development 101</Link>
+                  <Link href="/mcp-development">MCP Development</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/agentic-web">Agentic Web</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/vibe-coding">Vibe Coding 101</Link>
+                  <Link href="/vibe-coding">Vibe Coding</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/prompt-engineering-101">Prompt Engineering 101</Link>
+                  <Link href="/prompt-engineering-101">Prompt Engineering</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/web3-101">Web3 Fundamentals</Link>
