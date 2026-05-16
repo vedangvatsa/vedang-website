@@ -23,7 +23,7 @@ export const metadata: Metadata = generateMetadata({
   description: pageMetadata.vibeCoding.description,
   url: pageMetadata.vibeCoding.url,
 
-  ogImageAlt: 'Vibe Coding 101 - Engineering Intuition & Creativity',
+  ogImageAlt: 'Vibe Coding - Engineering Intuition & Creativity',
 });
 
 const referenceLinks = [
@@ -156,7 +156,7 @@ const faqItems = [
 const courseSchema = {
   '@context': 'https://schema.org',
   '@type': 'Course',
-  name: 'Vibe Coding 101',
+  name: 'Vibe Coding',
   description: 'A free, self-paced course on building software with AI. Learn to describe what you want in plain English and let AI handle the code.',
   url: 'https://veda.ng/vibe-coding',
   provider: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
@@ -187,12 +187,8 @@ export default function VibeCodingCoursePage() {
 
         <section className="text-left pt-8 pb-12">
              <div className="max-w-none">
-                <Badge variant="secondary">
-                    <Star className="w-3 h-3 mr-1.5" />
-                    A Free, Self-Paced Course
-                </Badge>
                 <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
-                    Vibe Coding 101
+                    Vibe Coding
                 </h1>
                 <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl">
                 Build real apps without writing code. Describe what you want in plain English and let AI handle the implementation. For founders, designers, marketers, and anyone with an idea.

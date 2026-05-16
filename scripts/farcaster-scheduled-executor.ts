@@ -171,12 +171,14 @@ async function main() {
 
     let imageUrl: string | null = null;
     if (post.image) {
-      if (isVideo(post.image)) {
-        // Video: upload to Neynar storage CDN (GitHub raw URLs don't work for video on Warpcast)
-        console.log(`  🎬 Uploading video via Neynar storage...`);
-        imageUrl = await uploadToNeynarStorage(post.image);
-      } else {
-        // Image: GitHub raw URL works fine
+      // Try Neynar CDN first (required for video, preferred for images)
+      const mediaType = isVideo(post.image) ? '🎬 video' : '📷 image';
+      console.log(`  ${mediaType}: Uploading via Neynar storage...`);
+      imageUrl = await uploadToNeynarStorage(post.image);
+      
+      // Fallback: use GitHub raw URL for images if CDN upload failed (e.g. free plan 402)
+      if (!imageUrl && !isVideo(post.image)) {
+        console.log(`  📷 CDN failed, falling back to GitHub raw URL...`);
         imageUrl = getImageUrl(post.image);
       }
     }

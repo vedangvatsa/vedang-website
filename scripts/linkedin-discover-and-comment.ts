@@ -36,41 +36,25 @@ const ESSAYS: Record<string, { url: string; desc: string }> = {
 
 // ─── Thought templates (human, no slop, with line breaks) ───
 const THOUGHTS: string[] = [
-  `Talked to three CTOs last month who tried this.\n\nTwo failed because they gave the agent five jobs at once. The third picked invoice reconciliation, nothing else, and saved 40 hours a week.\n\nNarrow wins. Wrote more on it here.\n{url}`,
+  `The bottleneck is rarely compute.\n\nIt is institutional inertia. Organizations spend millions on infrastructure, yet refuse to redesign the underlying workflows that made them slow in the first place.\n\nYou cannot automate a broken process and expect velocity.\n{url}`,
 
-  `Nobody wants to admit this part.\n\nThe hard work is not picking a model. It is sitting down with ops people and understanding why the current process has 11 steps when it should have 3.\n\nThat is where the real savings come from.\n{url}`,
+  `Accountability remains the unresolved tension here.\n\nWhen a system executes a decision autonomously, the liability does not disappear—it just shifts.\n\nWe are building the technical capacity faster than the legal frameworks required to govern it.\n{url}`,
 
-  `Seen this play out a dozen times now.\n\nThe demo works perfectly. Everyone claps. Then it hits production and chokes on a PDF that has a table formatted slightly differently.\n\nRobustness is boring but it is everything.\n{url}`,
+  `A structural reality most overlook:\n\nSaaS economics rely heavily on human constraints—per-seat pricing assumes human operators. When the operator is a script running continuously, the pricing model collapses.\n\nThe vendors who recognize this early will survive the transition.\n{url}`,
 
-  `Something people miss in these conversations.\n\nThe companies winning are not spending the most on compute. They are the ones that figured out which 20% of work actually needs a human.\n\n{url}`,
+  `The obsession with general-purpose systems is a distraction.\n\nReal economic value is being captured by teams building narrow, highly deterministic tools for specific vertical problems.\n\nPrecision scales better than general competence.\n{url}`,
 
-  `Worth noting that accountability is where most of these projects quietly die.\n\nNobody got fired for launching a pilot. But nobody got promoted for a pilot that went nowhere either.\n\nThe bar is shifting from "did it launch" to "did it move a number."\n{url}`,
+  `We built the internet for human consumption.\n\nNow we are forcing machine-readable systems to parse human-centric interfaces. The next foundational shift is not better parsing—it is native infrastructure built exclusively for algorithmic access.\n\n{url}`,
 
-  `One underrated angle here.\n\nWhen the agent can pull the answer from three different databases in 2 seconds, nobody needs a dashboard anymore. A text box and a good prompt does more.\n\nThat feels like where things are heading.\n{url}`,
+  `The dashboard was always a compromise.\n\nIt was a way to compress complex database structures into something a human eye could scan. As natural language becomes the default query mechanism, the dashboard becomes obsolete.\n\nThe text field is the new canvas.\n{url}`,
 
-  `Every SaaS company charges per seat.\n\nAgents do not need seats. They do not take lunch breaks. They do not go on PTO.\n\nThe pricing models we all grew up with are not built for this. That reckoning is coming fast.\n{url}`,
+  `Implementation is fundamentally an operations problem, not an engineering one.\n\nIf you do not map the entire organizational logic before deploying the system, you are just moving the friction from one department to another.\n\n{url}`,
 
-  `The models keep getting better but the real problem has not changed.\n\nMost company data lives in messy spreadsheets, random Notion pages, and someone's Slack DMs. No model fixes that.\n\nThe plumbing matters more than the brain.\n{url}`,
+  `Governments have a surprising advantage here.\n\nThose that invested early in robust digital identity primitives—like Estonia or Singapore—can deploy these autonomous systems with immediate cryptographic trust.\n\nIdentity is the prerequisite for autonomy.\n{url}`,
 
-  `Refreshing to see someone say this out loud.\n\nHalf the "AI transformations" I see announced on this platform are a chatbot wrapper on GPT-4 with a new logo. That is not transformation, that is a weekend project.\n\nActual production deployment is a different sport.\n{url}`,
+  `The true cost of these systems is rarely in the deployment.\n\nIt is in the maintenance of the orchestration layer. Edge cases compound exponentially when systems interact with the physical world.\n\nRobust error handling is where the actual engineering happens.\n{url}`,
 
-  `Governments that built digital identity infrastructure years ago are going to have a massive head start here.\n\nEstonia and Singapore did not build that stuff for agents. But it turns out the same infrastructure works perfectly.\n\nFunny how that happens.\n{url}`,
-
-  `18 months of watching companies try this and the pattern is always the same.\n\nStart too broad, get mediocre results, blame the technology. Start too narrow, get great results, then scale.\n\nEveryone wants to skip step one.\n{url}`,
-
-  `Here is what nobody wants to hear.\n\nMost enterprise software exists because humans are slow at moving data between systems. When that bottleneck disappears, a lot of $50M ARR companies are going to have an existential quarter.\n{url}`,
-
-  `The founders I respect most right now are building for problems that look boring.\n\nInsurance claims processing. Freight logistics. Compliance checks.\n\nNone of that trends on Twitter but all of it prints money when you get it right.\n{url}`,
-
-  `The liability question is going to define the next wave of regulation.\n\nIf an agent sends a wrong invoice to a customer, who pays? The company, the vendor, or the person who set up the prompt?\n\nNobody has a good answer yet.\n{url}`,
-
-  `We built the entire internet around the assumption that a human would be reading the page.\n\nThat assumption is breaking. Agents need APIs, not pretty UIs. Machine-readable data, not marketing copy.\n\nThe shift is structural.\n{url}`,
-
-  `Real question that nobody seems to ask.\n\nIf your AI implementation needs a 30-page strategy document, is it really saving time? Or did you just move the complexity from one place to another?\n\nSimple wins. Always has.\n{url}`,
-
-  `Spoke at a conference last month and asked the room who had an agent in production. Three hands out of two hundred.\n\nThen asked who had an agent in a slide deck. Every hand went up.\n\nThat gap tells you everything.\n{url}`,
-
-  `The YC batch data from this year is telling.\n\nHalf the B2B companies are building what used to be a feature inside Salesforce or HubSpot. But they are building it agent-first, which changes everything about the architecture.\n{url}`,
+  `We are approaching a point where the marginal cost of intelligence trends toward zero.\n\nThe implications for software engineering are obvious. The implications for macroeconomic structure and labor markets are barely being discussed.\n\n{url}`
 ];
 
 // ─── Topic detection ───

@@ -197,7 +197,7 @@ async function createPost(session: Session, post: BlueskyPost): Promise<string> 
     record.embed = {
       $type: 'app.bsky.embed.images',
       images: [{
-        alt: post.id,
+        alt: post.text.substring(0, 100).replace(/\n/g, ' ').trim(),
         image: blob,
       }],
     };

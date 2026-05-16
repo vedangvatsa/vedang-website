@@ -30,7 +30,7 @@ interface MastodonPost {
   error?: string;
 }
 
-async function uploadMedia(imagePath: string): Promise<string | null> {
+async function uploadMedia(imagePath: string, altText: string): Promise<string | null> {
   const absPath = path.isAbsolute(imagePath) ? imagePath : path.resolve(REPO_ROOT, imagePath);
   
   if (!fs.existsSync(absPath)) {
@@ -41,6 +41,7 @@ async function uploadMedia(imagePath: string): Promise<string | null> {
   const FormData = (await import('form-data')).default;
   const form = new FormData();
   form.append('file', fs.createReadStream(absPath));
+  form.append('description', altText.substring(0, 100).replace(/\n/g, ' ').trim());
 
   const res = await fetch(`${MASTODON_INSTANCE}/api/v2/media`, {
     method: 'POST',
@@ -129,7 +130,7 @@ async function main() {
       let mediaId: string | null = null;
       if (post.image) {
         console.log('  📤 Uploading media...');
-        mediaId = await uploadMedia(post.image);
+        mediaId = await uploadMedia(post.image, post.text);
         if (!mediaId) {
           throw new Error(`Media failed: ${post.image} — skipped`);
         }
