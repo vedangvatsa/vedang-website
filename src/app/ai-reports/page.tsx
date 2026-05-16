@@ -7,7 +7,7 @@ import { aiReports, CATEGORIES } from '@/lib/ai-reports-data';
 import { ReportSearch } from '@/components/report-search';
 
 export const metadata: Metadata = {
-  title: 'AI Reports & Research Library | Vedang Vatsa',
+  title: 'AI Reports Library | Vedang Vatsa',
   description: 'A comprehensive, searchable database of 21,000+ AI reports, research papers, and industry analyses published since 2022.',
 };
 
@@ -59,10 +59,13 @@ export default async function AIReportsPage({
       <section className="text-center pt-16 pb-12 border-b border-border/30">
         <div className="container mx-auto px-4 md:px-6 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
-            AI Reports & Research Library
+            AI Reports Library
           </h1>
           <p className="mt-4 text-base md:text-lg text-muted-foreground">
             {aiReports.length.toLocaleString()}+ research papers, institutional reports, and industry analyses. Each entry links directly to a verified DOI or academic repository.
+          </p>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Read the full synthesis: <Link href="/state-of-ai-2026" className="text-primary hover:underline font-medium">The State of AI in 2026 →</Link>
           </p>
         </div>
       </section>
