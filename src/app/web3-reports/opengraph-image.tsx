@@ -6,5 +6,5 @@ export const size = ogSize;
 export const contentType = 'image/png';
 
 export default async function Image() {
-  return generateOgImage('Web3 Reports Archive', '23,000+ Research Papers & Industry Reports');
+  return generateOgImage('Web3 Reports Library', '23,000+ Research Papers & Industry Reports');
 }

@@ -6,5 +6,5 @@ export const size = ogSize;
 export const contentType = 'image/png';
 
 export default async function Image() {
-  return generateOgImage('AI Reports Archive', '21,000+ Research Papers & Industry Reports');
+  return generateOgImage('AI Reports Library', '21,000+ Research Papers & Industry Reports');
 }
