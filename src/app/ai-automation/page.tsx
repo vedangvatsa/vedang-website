@@ -5,17 +5,17 @@ import {
 } from '@/components/ui/accordion';
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Star, ArrowRight, ExternalLink } from 'lucide-react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
-  title: { absolute: 'AI Automation 101 - Automate Anything with AI Agents | Vedang Vatsa' },
+  title: { absolute: 'AI Automation - Automate Anything with AI Agents | Vedang Vatsa' },
   description: 'Free course on AI-powered automation. Learn to build pipelines with APIs, MCP servers, AI agents, n8n, and no-code tools. From social media broadcasting to data pipelines.',
   keywords: ['AI Automation', 'n8n', 'MCP Automation', 'AI Agents', 'API Automation', 'Zapier Alternative', 'No-Code AI', 'Workflow Automation', 'Telegram Bot'],
   alternates: { canonical: '/ai-automation' },
   openGraph: {
-    title: 'AI Automation 101 - Automate Anything with AI',
+    title: 'AI Automation - Automate Anything with AI',
     description: 'Free course on building automated pipelines with AI agents, APIs, MCP servers, and no-code tools.',
     url: 'https://veda.ng/ai-automation',
     type: 'website',
@@ -52,9 +52,9 @@ const referenceLinks = [
     {
         name: 'Related Courses',
         links: [
-            { name: 'MCP Development 101', url: '/mcp-development' },
-            { name: 'Prompt Engineering 101', url: '/prompt-engineering-101' },
-            { name: 'Vibe Coding 101', url: '/vibe-coding' },
+            { name: 'MCP Development', url: '/mcp-development' },
+            { name: 'Prompt Engineering', url: '/prompt-engineering-101' },
+            { name: 'Vibe Coding', url: '/vibe-coding' },
             { name: 'The Agentic Web', url: '/agentic-web' },
         ]
     },
@@ -71,7 +71,7 @@ const faqItems = [
 
 const courseSchema = {
   '@context': 'https://schema.org', '@type': 'Course',
-  name: 'AI Automation 101',
+  name: 'AI Automation',
   description: 'A free, self-paced course on building AI-powered automations with agents, APIs, MCP servers, and no-code tools.',
   url: 'https://veda.ng/ai-automation',
   provider: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
@@ -92,19 +92,19 @@ export default function AIAutomationCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <section className="text-left pt-8 pb-12">
-        <div className="max-w-none">
-          <Badge variant="secondary"><Star className="w-3 h-3 mr-1.5" />A Free, Self-Paced Course</Badge>
-          <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">AI Automation 101</h1>
-          <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl">
+      <section className="text-center pt-16 pb-12">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+                <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
+                    AI Automation
+                </h1>
+          <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
             Automate anything with AI agents, APIs, MCP servers, and no-code tools. From social media broadcasting to data pipelines. build systems that run 24/7 without you.
           </p>
-          <div className="mt-8 flex flex-wrap justify-start items-center gap-4">
+          <div className="mt-8 flex justify-center items-center gap-4">
             <Badge variant="outline">By: Vedang Vatsa</Badge>
             <Badge variant="outline">Prerequisite: None</Badge>
-            <Badge variant="outline">7 Modules</Badge>
           </div>
-          <div className="mt-8 flex justify-start">
+          <div className="mt-8 flex justify-center">
             <Button asChild size="lg" className="rounded-full px-8">
               <Link href="/ai-automation/module-1-mindset">Start Course <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
