@@ -3,7 +3,7 @@
 import { useEffect, useState, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import { Badge } from '@/components/ui/badge';
-import { MapPin, Coffee, BookOpen, Dumbbell, Shirt, Building2, Bed } from 'lucide-react';
+import { MapPin, Building2, Bed, Home, Hotel, Users } from 'lucide-react';
 
 // Leaflet must be loaded client-side only
 const MapContainer = dynamic(() => import('react-leaflet').then(m => m.MapContainer), { ssr: false });
@@ -25,25 +25,27 @@ interface POI {
   website: string;
   opening_hours: string;
   wifi: string;
+  quality: number;
+  cost_tier: number;
+  timezone: string;
+  visa: string;
   osm_url: string;
 }
 
 const CATEGORY_CONFIG: Record<string, { label: string; color: string; icon: typeof MapPin }> = {
   coworking: { label: 'Coworking', color: '#3b82f6', icon: Building2 },
+  coliving: { label: 'Coliving', color: '#8b5cf6', icon: Users },
   hostel: { label: 'Hostels', color: '#f59e0b', icon: Bed },
-  wifi_cafe: { label: 'Wifi Cafes', color: '#8b5cf6', icon: Coffee },
-  library: { label: 'Libraries', color: '#10b981', icon: BookOpen },
-  gym: { label: 'Gyms', color: '#ef4444', icon: Dumbbell },
-  laundry: { label: 'Laundry', color: '#6b7280', icon: Shirt },
+  apartment: { label: 'Apartments', color: '#10b981', icon: Home },
+  guesthouse: { label: 'Guesthouses', color: '#ec4899', icon: Hotel },
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
   coworking: '#3b82f6',
+  coliving: '#8b5cf6',
   hostel: '#f59e0b',
-  wifi_cafe: '#8b5cf6',
-  library: '#10b981',
-  gym: '#ef4444',
-  laundry: '#6b7280',
+  apartment: '#10b981',
+  guesthouse: '#ec4899',
 };
 
 export function NomadMap({ data }: { data: POI[] }) {
@@ -252,6 +254,7 @@ export function NomadMap({ data }: { data: POI[] }) {
                 <th className="text-left px-4 py-3 font-medium">Name</th>
                 <th className="text-left px-4 py-3 font-medium">Type</th>
                 <th className="text-left px-4 py-3 font-medium">City</th>
+                <th className="text-left px-4 py-3 font-medium">Quality</th>
                 <th className="text-left px-4 py-3 font-medium">Links</th>
               </tr>
             </thead>
@@ -269,6 +272,16 @@ export function NomadMap({ data }: { data: POI[] }) {
                     </span>
                   </td>
                   <td className="px-4 py-2.5 text-muted-foreground">{poi.city}</td>
+                  <td className="px-4 py-2.5">
+                    <div className="flex gap-0.5">
+                      {Array.from({ length: Math.min(Math.round(poi.quality / 2), 5) }).map((_, i) => (
+                        <span key={i} className="w-2 h-2 rounded-full bg-emerald-500" />
+                      ))}
+                      {Array.from({ length: 5 - Math.min(Math.round(poi.quality / 2), 5) }).map((_, i) => (
+                        <span key={i} className="w-2 h-2 rounded-full bg-muted" />
+                      ))}
+                    </div>
+                  </td>
                   <td className="px-4 py-2.5">
                     <div className="flex gap-2">
                       {poi.website && (
