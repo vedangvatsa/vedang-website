@@ -9,17 +9,17 @@ import {
 
 import { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
-import { Star, ArrowRight, ExternalLink } from 'lucide-react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
-  title: { absolute: 'MCP Development 101 - Build AI Tool Servers | Vedang Vatsa' },
+  title: { absolute: 'MCP Development - Build AI Tool Servers | Vedang Vatsa' },
   description: 'Free course on building MCP (Model Context Protocol) servers. Learn to create tools that connect AI models to databases, APIs, and any data source.',
   keywords: ['MCP', 'Model Context Protocol', 'MCP Server', 'AI Tools', 'Claude', 'Cursor', 'TypeScript', 'JSON-RPC', 'Anthropic'],
   alternates: { canonical: '/mcp-development' },
   openGraph: {
-    title: 'MCP Development 101 - Build AI Tool Servers',
+    title: 'MCP Development - Build AI Tool Servers',
     description: 'Free course on building MCP servers that connect AI to databases, APIs, and any data source.',
     url: 'https://veda.ng/mcp-development',
     type: 'website',
@@ -91,7 +91,7 @@ const faqItems = [
 const courseSchema = {
   '@context': 'https://schema.org',
   '@type': 'Course',
-  name: 'MCP Development 101',
+  name: 'MCP Development',
   description: 'A free, self-paced course on building MCP (Model Context Protocol) servers. Learn to create tools that connect AI models to databases, APIs, and any data source.',
   url: 'https://veda.ng/mcp-development',
   provider: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
@@ -120,26 +120,21 @@ export default function MCPDevelopmentCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-        <section className="text-left pt-8 pb-12">
-             <div className="max-w-none">
-                <Badge variant="secondary">
-                    <Star className="w-3 h-3 mr-1.5" />
-                    A Free, Self-Paced Course
-                </Badge>
+        <section className="text-center pt-16 pb-12">
+             <div className="container mx-auto px-4 md:px-6 max-w-4xl">
                 <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
-                    MCP Development 101
+                    MCP Development
                 </h1>
-                <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl">
+                <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
                 Build servers that connect AI to anything. Learn the Model Context Protocol, the open standard that lets AI models use tools, query databases, and interact with APIs. The USB-C port for AI.
                 </p>
 
-                <div className="mt-8 flex flex-wrap justify-start items-center gap-4">
+                <div className="mt-8 flex justify-center items-center gap-4">
                     <Badge variant="outline">By: Vedang Vatsa</Badge>
                     <Badge variant="outline">Prerequisite: Basic TypeScript</Badge>
-                    <Badge variant="outline">7 Modules</Badge>
                 </div>
 
-                <div className="mt-8 flex justify-start">
+                <div className="mt-8 flex justify-center">
                     <Button asChild size="lg" className="rounded-full px-8">
                         <Link href="/mcp-development/module-1-what-is-mcp">
                             Start Course <ArrowRight className="ml-2 w-4 h-4" />
