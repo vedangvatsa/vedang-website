@@ -696,7 +696,8 @@
     "scheduleTime": "01:00",
     "posted": false,
     "text": "When product asks for a \"simple feature\".\n\nThe underlying architecture rarely agrees.\n\nNothing is simple once you look under the hood.",
-    "image": "scripts/thread-assets/linkedin-rewrites/simple_feature.gif"
+    "image": "scripts/thread-assets/linkedin-rewrites/simple_feature.gif",
+    "error": "Photo upload failed: 500 {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}"
   },
   {
     "id": "reddit-meme-3",

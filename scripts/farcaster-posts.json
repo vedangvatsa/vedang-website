@@ -25,8 +25,9 @@
     "image": "scripts/thread-assets/agentic_2.png",
     "scheduleDate": "2026-03-26",
     "scheduleTime": "08:57",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x4c05998a10f153d9b64ddec71ab2903a97806f76",
+    "postedAt": "2026-05-17T11:58:55.778Z"
   },
   {
     "id": "psych-cbt",
