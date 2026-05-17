@@ -4,13 +4,13 @@ import { PageLayout } from '@/components/page-layout';
 import nomadData from '@/lib/nomad-data.json';
 
 export const metadata: Metadata = {
-  title: 'Digital Nomad Directory — Coworking, Coliving & Stays in 70 Cities',
-  description: 'Interactive directory of 4,400+ coworking spaces, coliving houses, hostels, apartments, and guesthouses across 70 digital nomad cities worldwide. Quality-scored, open-source data.',
+  title: 'Digital Nomad Directory — Coworking, Coliving & Stays in 74 Cities',
+  description: 'Interactive directory of 3,600+ coworking spaces, coliving houses, hostels, apartments, and guesthouses across 74 digital nomad cities in 47 countries. Quality-scored, open-source data.',
   keywords: ['digital nomad', 'coworking spaces', 'coliving', 'remote work', 'nomad directory', 'hostel', 'apartment'],
   alternates: { canonical: '/nomad' },
   openGraph: {
     title: 'Digital Nomad Directory',
-    description: '4,400+ coworking spaces, coliving, hostels, and apartments across 70 cities worldwide.',
+    description: '3,600+ coworking spaces, coliving, hostels, and apartments across 74 cities in 47 countries.',
     url: 'https://veda.ng/nomad',
     type: 'website',
   },
@@ -25,7 +25,7 @@ export default function NomadMapPage() {
             Digital Nomad Directory
           </h1>
           <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-            4,400+ coworking spaces, coliving houses, hostels, apartments, and guesthouses across 70 cities worldwide. Quality-scored and sorted by data completeness.
+            3,600+ coworking spaces, coliving houses, hostels, apartments, and guesthouses across 74 cities in 47 countries. Quality-scored and sorted by data completeness.
           </p>
         </div>
       </section>
