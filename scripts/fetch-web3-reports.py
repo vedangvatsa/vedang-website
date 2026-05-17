@@ -251,7 +251,7 @@ def categorize(title: str) -> str:
     return "State of Crypto"
 
 
-def fetch_openalex(query: str, page: int = 1, per_page: int = 200) -> tuple:
+def fetch_openalex(query: str, page: int = 1, per_page: int = 200, _retry: int = 0) -> tuple:
     """Fetch from OpenAlex API. Returns (results, total_count)."""
     params = {
         "search": query,
@@ -288,9 +288,11 @@ def fetch_openalex(query: str, page: int = 1, per_page: int = 200) -> tuple:
         return results, total
     except HTTPError as e:
         if e.code == 429:
-            print(f"    429 — waiting 10s")
-            time.sleep(10)
-            return fetch_openalex(query, page, per_page)
+            print(f"    429 — waiting 30s (retry {_retry+1}/3)")
+            time.sleep(30)
+            if _retry < 3:
+                return fetch_openalex(query, page, per_page, _retry+1)
+            return [], 0
         print(f"    HTTP {e.code}")
         return [], 0
     except Exception as e:
