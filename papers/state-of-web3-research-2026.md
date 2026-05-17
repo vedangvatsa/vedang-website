@@ -190,7 +190,7 @@ Additionally, the 2026 cohort (6,885 papers through May) is incomplete. The year
 
 Analysis of 100,024 documents reveals a field that has matured beyond its speculative origins. Blockchain research in 2026 is dominated by applied infrastructure work: supply chain traceability, IoT device management, smart contract security, and central bank digital currencies. The convergence with federated learning (1,712 mentions) represents a new and growing research frontier. The rising emphasis on transparency (5.4x growth) and quantum resistance (15x growth) points to a field preparing for regulatory compliance and long-term cryptographic durability.
 
-The complete dataset and analysis scripts are available at [https://vedangvatsa.com/web3-reports](https://vedangvatsa.com/web3-reports).
+The complete dataset and analysis scripts are available at [https://veda.ng/web3-reports](https://veda.ng/web3-reports).
 
 ## References
 

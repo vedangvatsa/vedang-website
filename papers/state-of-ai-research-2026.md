@@ -202,7 +202,7 @@ The 2026 cohort covers only January through May. Annualized, the 2026 output app
 
 137,068 documents reveal an AI research field in a specific phase of maturity. The foundational architectures (CNNs, RNNs, transformers) are established. The current growth is concentrated in three areas: large language models and few-shot learning methods (combined 8,915 bigram occurrences), agentic AI systems (457x growth), and retrieval-augmented generation (149x growth). Healthcare (4,702 papers) and AI ethics (4,056 papers) have established themselves as dedicated application and governance domains. The raw numbers suggest that the field's center of gravity is moving from "building better models" to "building systems that use models to do things in the world."
 
-The complete dataset and analysis code are available at [https://vedangvatsa.com/ai-reports](https://vedangvatsa.com/ai-reports).
+The complete dataset and analysis code are available at [https://veda.ng/ai-reports](https://veda.ng/ai-reports).
 
 ## References
 
