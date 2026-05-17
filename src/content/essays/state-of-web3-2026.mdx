@@ -7,7 +7,7 @@ summary: "A data-driven analysis of 83,000+ research papers, whitepapers, consul
 ---
 
 <Callout type="insight" title="Methodology">
-This report is built on a dataset of **83,770 academic papers, whitepapers, consulting reports, standards, and regulatory filings** indexed from Crossref, arXiv, Europe PMC, OpenAlex, and curated institutional sources including McKinsey, Deloitte, a16z, Chainalysis, BIS, and NIST. N-gram frequency analysis was performed across all document titles to surface dominant themes. Every statistic cited references publicly verifiable sources — SEC filings, on-chain data from Dune Analytics and DefiLlama, or official company disclosures.
+This report draws from a dataset of **83,770 academic papers, whitepapers, consulting reports, standards, and regulatory filings** indexed from Crossref, arXiv, Europe PMC, OpenAlex, and curated institutional sources including McKinsey, Deloitte, a16z, Chainalysis, BIS, and NIST. N-gram frequency analysis was performed across all document titles to surface dominant themes. Every statistic cited references publicly verifiable sources: SEC filings, on-chain data from Dune Analytics and DefiLlama, or official company disclosures.
 </Callout>
 
 ## 1. Where the Research Focus Is
@@ -18,7 +18,7 @@ Before interpreting what is happening in Web3, it is worth looking at what resea
 
 <StateOfWeb3KeywordsChart />
 
-The dominance of **"blockchain"** (35,093 mentions) over more specific terms like "cryptocurrency" (4,467) or "bitcoin" (5,919) is notable. Researchers are studying the underlying technology — its applications to supply chain, healthcare, identity, and IoT — rather than the speculative financial instruments that dominated 2021–2022 discourse. **"Smart contracts"** (6,723 including "smart" as keyword) and **"decentralized"** (8,088) confirm that programmable execution layers and distributed architectures are now standard research subjects, not emerging concepts.
+**"Blockchain"** (35,093 mentions) dominates over more specific terms like "cryptocurrency" (4,467) or "bitcoin" (5,919). Researchers are studying the underlying technology, its applications to supply chain, healthcare, identity, and IoT, rather than the speculative financial instruments that dominated 2021 and 2022 discourse. **"Smart contracts"** (6,723 including "smart" as keyword) and **"decentralized"** (8,088) confirm that programmable execution layers and distributed architectures are now standard research subjects.
 
 **Two-word phrase frequency:**
 
@@ -32,10 +32,10 @@ The dominance of **"blockchain"** (35,093 mentions) over more specific terms lik
 
 Three patterns stand out from the bigram data:
 
-- **"Blockchain technology"** (5,224) is the single most frequent bigram, followed by **"blockchain enabled"** (1,401). The phrasing implies integration — researchers are studying blockchain as a component within larger systems, not as a standalone product.
+- **"Blockchain technology"** (5,224) is the most frequent bigram, followed by **"blockchain enabled"** (1,401). The phrasing points to integration. Researchers are studying blockchain as a component within larger systems, not as a standalone product.
 - **"Smart contract(s)"** (4,606 combined) as a bigram confirms the maturation of the execution layer from experimental to production infrastructure.
-- **"Supply chain"** (3,775) is the single largest non-financial application vector, reflecting enterprise adoption driven by traceability, provenance, and anti-counterfeiting use cases. Walmart, Maersk (through TradeLens, now sunset), and De Beers (through Tracr) are among the enterprises that piloted blockchain-based supply chain tracking.
-- **"Zero knowledge"** (1,874) has emerged as a major research theme — reflecting the explosive growth of ZK-rollups and privacy-preserving protocols since 2023.
+- **"Supply chain"** (3,775) is the largest non-financial application vector, reflecting enterprise adoption driven by traceability, provenance, and anti-counterfeiting use cases. Walmart, Maersk (through TradeLens, now sunset), and De Beers (through Tracr) are among the enterprises that piloted blockchain-based supply chain tracking.
+- **"Zero knowledge"** (1,874) has emerged as a major research theme, reflecting the growth of ZK-rollups and privacy-preserving protocols since 2023.
 - **"Central bank"** (1,026) and **"digital currency"** (1,251) together highlight the institutional pivot toward CBDCs and regulated digital money.
 
 ---
@@ -50,15 +50,15 @@ If there is one area where Web3 has achieved undeniable product-market fit, it i
   <Stat label="Largest Issuer" value="Tether ($140B)" />
 </StatRow>
 
-The more important figure is transaction volume. Stablecoins settled over **$15 trillion** in on-chain volume during 2025, according to data from Visa's on-chain analytics dashboard and Brevan Howard's research arm. To put this in context: Visa's global payment network processed approximately $14.8 trillion in the same period. Stablecoin settlement volume has, for the first time, exceeded the world's largest card network.
+The more telling figure is transaction volume. Stablecoins settled over **$15 trillion** in on-chain volume during 2025, according to data from Visa's on-chain analytics dashboard and Brevan Howard's research arm. For context, Visa's global payment network processed approximately $14.8 trillion in the same period. Stablecoin settlement volume has, for the first time, exceeded the world's largest card network.
 
-The majority of this volume is not retail speculation. It is composed of:
+The majority of this volume is not retail speculation. It breaks down into:
 
 - **Cross-border remittances.** Circle's CEO Jeremy Allaire has publicly stated that USDC processes more cross-border payment volume between the US and Latin America than the traditional correspondent banking system. The World Bank estimates that remittance fees average 6.2% through traditional channels; stablecoin transfers cost fractions of a cent.
 - **Institutional settlement.** JPMorgan's Onyx platform has processed over $700 billion in tokenized repo transactions since launch, using JPM Coin for intraday settlement between institutional counterparties.
 - **Treasury management.** Corporate treasuries increasingly hold stablecoin positions for instant liquidity, particularly in markets where banking hours create settlement delays.
 
-The regulatory framework for stablecoins is converging globally. The **GENIUS Act** (Guiding and Establishing National Innovation for US Stablecoins), passed in the United States, establishes a federal framework requiring full reserve backing and regular audits. Critically, it allows stablecoin reserves to be held in tokenized assets, creating a direct on-ramp for institutions to park reserves in tokenized treasuries.
+The regulatory framework for stablecoins is converging globally. The **GENIUS Act** (Guiding and Establishing National Innovation for US Stablecoins), passed in the United States, establishes a federal framework requiring full reserve backing and regular audits. It allows stablecoin reserves to be held in tokenized assets, creating a direct on-ramp for institutions to park reserves in tokenized treasuries.
 
 In Europe, **MiCA** (Markets in Crypto-Assets) requires stablecoin issuers to maintain full reserves in regulated European banks and obtain authorization as electronic money institutions. Circle has obtained an Electronic Money Institution (EMI) license in France. Japan's revised Payment Services Act and Singapore's MAS framework under its Payment Services Act are establishing parallel regimes. The combined effect is a global regulatory baseline that gives institutional treasurers the legal clarity required for adoption at scale.
 
@@ -66,7 +66,7 @@ In Europe, **MiCA** (Markets in Crypto-Assets) requires stablecoin issuers to ma
 "Stablecoins are not a crypto product. They are a better version of the dollar, running on open internet infrastructure."
 </PullQuote>
 
-Stripe's acquisition of Bridge, a stablecoin infrastructure company, for **$1.1 billion** in late 2024 signaled that mainstream fintech views stablecoins as core payment infrastructure. Visa's Tokenized Asset Platform (VTAP) allows banks to issue and manage stablecoins on Ethereum — BBVA became the first bank to pilot the platform.
+Stripe's acquisition of Bridge, a stablecoin infrastructure company, for **$1.1 billion** in late 2024 signaled that mainstream fintech views stablecoins as core payment infrastructure. Visa's Tokenized Asset Platform (VTAP) allows banks to issue and manage stablecoins on Ethereum. BBVA became the first bank to pilot the platform.
 
 ---
 
@@ -82,25 +82,25 @@ The total value of tokenized Real-World Assets (excluding stablecoins) surpassed
 
 ### What is being tokenized
 
-**US Treasuries** account for over $3 billion in tokenized value. BlackRock's BUIDL fund (launched March 2024 on Ethereum) became the largest tokenized money market fund, surpassing $500 million in assets under management within 12 months. Franklin Templeton's BENJI fund, operating on both Stellar and Polygon, crossed $400 million. These are not startup experiments — they are production financial products managed by the world's two largest asset managers.
+**US Treasuries** account for over $3 billion in tokenized value. BlackRock's BUIDL fund (launched March 2024 on Ethereum) became the largest tokenized money market fund, surpassing $500 million in assets under management within 12 months. Franklin Templeton's BENJI fund, operating on both Stellar and Polygon, crossed $400 million. These are not startup experiments. They are production financial products managed by the world's two largest asset managers.
 
 **Private credit** protocols like Centrifuge, Maple Finance, and Goldfinch have collectively originated over $4.5 billion in loans, connecting DeFi liquidity to real-world borrowers including fintech companies, trade finance operations, and emerging market businesses.
 
 ### How institutional RWA works in practice
 
-Institutions do not interact with permissionless DeFi pools directly. The operating model relies on **permissioned liquidity pools** — whitelisted, KYC/AML-compliant environments where counterparties are verified. The final state settles on a public ledger (typically Ethereum), but the trading happens within a gated environment. This architecture satisfies both SEC and MiCA compliance requirements while still leveraging the settlement efficiency and transparency of blockchain infrastructure.
+Institutions do not interact with permissionless DeFi pools directly. The operating model relies on **permissioned liquidity pools**, whitelisted, KYC/AML-compliant environments where counterparties are verified. The final state settles on a public ledger (typically Ethereum), but the trading happens within a gated environment. This architecture satisfies both SEC and MiCA compliance requirements while still using the settlement efficiency and transparency of blockchain infrastructure.
 
 <PullQuote author="Larry Fink" role="CEO, BlackRock">
 "The next generation for markets, the next generation for securities, will be tokenization of securities."
 </PullQuote>
 
-The implications for capital markets efficiency are significant. Traditional securities settlement takes T+1 (one business day after trade date, as of May 2024 in the US). Tokenized settlement is effectively T+0 — instant and atomic. For institutional desks managing billions in daily flow, eliminating overnight counterparty risk represents a material improvement.
+The implications for capital markets efficiency are real. Traditional securities settlement takes T+1 (one business day after trade date, as of May 2024 in the US). Tokenized settlement is effectively T+0, instant and atomic. For institutional desks managing billions in daily flow, eliminating overnight counterparty risk is a material improvement.
 
 ---
 
 ## 4. Bitcoin's Institutional Moment
 
-The approval and launch of spot Bitcoin ETFs in January 2024 was the most structurally significant event in crypto's 15-year history.
+The approval and launch of spot Bitcoin ETFs in January 2024 was the most structurally important event in crypto's 15-year history.
 
 <StatRow>
   <Stat label="IBIT AUM (12 months)" value="$50B+" trend="up" />
@@ -108,11 +108,11 @@ The approval and launch of spot Bitcoin ETFs in January 2024 was the most struct
   <Stat label="MicroStrategy BTC Holdings" value="500,000+" />
 </StatRow>
 
-BlackRock's iShares Bitcoin Trust (IBIT) accumulated over **$50 billion** in assets within its first 12 months — making it the fastest-growing ETF launch in history by a factor of four. For comparison, the previous record holder (BlackRock's own iShares Core S&P 500 ETF, IVVB) took three years to reach $50 billion.
+BlackRock's iShares Bitcoin Trust (IBIT) accumulated over **$50 billion** in assets within its first 12 months, making it the fastest-growing ETF launch in history by a factor of four. For comparison, the previous record holder (BlackRock's own iShares Core S&P 500 ETF, IVVB) took three years to reach $50 billion.
 
 Spot Ethereum ETFs followed in mid-2024 with more modest inflows ($8-10 billion in the first year), reflecting lower institutional familiarity with ETH as an investment thesis compared to Bitcoin's "digital gold" positioning.
 
-The structural impact goes beyond the ETFs themselves. **CME Bitcoin futures open interest** — a reliable proxy for institutional participation — now consistently exceeds open interest on retail-dominated offshore exchanges (Binance, Bybit). The investor base has fundamentally shifted from retail-speculative to institutionally-allocated.
+The structural impact goes beyond the ETFs themselves. **CME Bitcoin futures open interest**, a reliable proxy for institutional participation, now consistently exceeds open interest on retail-dominated offshore exchanges (Binance, Bybit). The investor base has shifted from retail-speculative to institutionally-allocated.
 
 **MicroStrategy** (now Strategy), under Michael Saylor's leadership, holds over 500,000 BTC on its balance sheet, acquired through cash purchases and convertible note issuances. The company's treasury strategy has been replicated by over 70 publicly traded companies globally, including Metaplanet (Japan) and Semler Scientific (US).
 
@@ -132,7 +132,7 @@ Decentralized Finance survived its speculative phase and entered a period define
 
 ### The revenue-generating protocols
 
-**Uniswap** processes approximately $1-2 billion in daily trading volume across Ethereum, Polygon, Arbitrum, Base, and BNB Chain. The protocol has generated over $3 billion in cumulative trading fees, distributed entirely to liquidity providers. Uniswap v4 (released late 2025) introduced "hooks" — customizable pool logic enabling TWAP orders, dynamic fees, and on-chain limit orders without centralized intermediaries.
+**Uniswap** processes approximately $1-2 billion in daily trading volume across Ethereum, Polygon, Arbitrum, Base, and BNB Chain. The protocol has generated over $3 billion in cumulative trading fees, distributed entirely to liquidity providers. Uniswap v4 (released late 2025) introduced "hooks," customizable pool logic enabling TWAP orders, dynamic fees, and on-chain limit orders without centralized intermediaries.
 
 **Aave** manages over $25 billion in deposits across 12 blockchain networks and has processed over $50 billion in cumulative borrowing without a single protocol-level insolvency event. This track record increasingly invites institutional comparison to traditional money markets. Aave's GHO stablecoin (launched 2023) has grown to over $500 million in circulation, evolving the protocol from a pure lending market to a full-service decentralized banking platform.
 
@@ -140,15 +140,15 @@ Decentralized Finance survived its speculative phase and entered a period define
 
 ### The institutional on-ramp
 
-The access layer is being built by firms like **Fireblocks** (valued at $8 billion), **Copper**, and **Anchorage Digital**. These provide institutional-grade custody, MPC wallet infrastructure, and compliance tools that allow hedge funds, family offices, and banks to interact with DeFi protocols through a regulated interface. The technology abstracts away private key management, gas fee optimization, and multi-chain complexity — making DeFi accessible to organizations that would never instruct their treasury desks to use MetaMask.
+The access layer is being built by firms like **Fireblocks** (valued at $8 billion), **Copper**, and **Anchorage Digital**. These provide institutional-grade custody, MPC wallet infrastructure, and compliance tools that allow hedge funds, family offices, and banks to interact with DeFi protocols through a regulated interface. The technology abstracts away private key management, gas fee optimization, and multi-chain complexity. It makes DeFi accessible to organizations that would never instruct their treasury desks to use MetaMask.
 
-The on-chain derivatives market has seen equally significant growth. **dYdX** (operating on its own Cosmos-based appchain) processes over $1 billion in daily perpetual futures volume. **Hyperliquid** has captured significant market share with sub-second trade execution on a purpose-built L1. Combined on-chain derivatives volume now represents 5-8% of the total crypto derivatives market, up from less than 1% in 2022.
+The on-chain derivatives market has grown substantially. **dYdX** (operating on its own Cosmos-based appchain) processes over $1 billion in daily perpetual futures volume. **Hyperliquid** has captured market share with sub-second trade execution on a purpose-built L1. Combined on-chain derivatives volume now represents 5-8% of the total crypto derivatives market, up from less than 1% in 2022.
 
 ---
 
 ## 6. Zero-Knowledge Infrastructure
 
-The ZK ecosystem has matured from academic research to production infrastructure. **zkSync Era, StarkNet, Polygon zkEVM, and Scroll** are all live on Ethereum mainnet, collectively processing millions of transactions daily. Total value locked across ZK-rollups surpassed **$10 billion** in Q1 2026.
+The ZK space has matured from academic research to production infrastructure. **zkSync Era, StarkNet, Polygon zkEVM, and Scroll** are all live on Ethereum mainnet, collectively processing millions of transactions daily. Total value locked across ZK-rollups surpassed **$10 billion** in Q1 2026.
 
 <StatRow>
   <Stat label="ZK-Rollup TVL" value="$10B+" trend="up" />
@@ -161,21 +161,21 @@ The technical distinction between rollup architectures matters for understanding
 - **Optimistic rollups** (Arbitrum, Optimism, Base) assume transactions are valid and allow a 7-day challenge period for fraud proofs. They are simpler to build but have longer finality times.
 - **ZK-rollups** prove validity cryptographically before posting to mainnet, enabling near-instant finality. The trade-off has historically been computational cost for proof generation.
 
-That cost gap is closing. **Cysic, Ingonyama, and Ulvetanna** have collectively raised over $100 million to build dedicated ZK proof generation hardware — FPGAs and custom ASICs that accelerate proof computation by orders of magnitude. This hardware acceleration is what moves ZK technology from "technically superior but impractically expensive" to "practically deployable at scale."
+That cost gap is closing. **Cysic, Ingonyama, and Ulvetanna** have collectively raised over $100 million to build dedicated ZK proof generation hardware, FPGAs and custom ASICs that accelerate proof computation by orders of magnitude. This hardware acceleration is what moves ZK technology from "technically superior but impractically expensive" to "practically deployable at scale."
 
 ### Modular architecture
 
-The blockchain stack is fragmenting into specialized layers — data availability, execution, and consensus — each handled by purpose-built networks.
+The blockchain stack is splitting into specialized layers: data availability, execution, and consensus, each handled by purpose-built networks.
 
 **Celestia** (launched October 2023) is the first dedicated data availability layer, now processing data for over 50 rollups. **EigenDA** (built on EigenLayer's restaking infrastructure) offers an alternative backed by over $15 billion in restaked ETH security. **Avail** (spun out of Polygon) provides a third option. This competitive DA market has driven data availability costs down by over 90% compared to posting directly to Ethereum.
 
-The "rollup-as-a-service" model has become operational. **Caldera, Conduit, and AltLayer** allow developers to deploy custom rollups with a few configuration parameters. Coinbase's **Base** (built on the OP Stack) processes over 15 million transactions per week and serves as a case study for how major consumer brands can operate their own L2 networks. The blockchain landscape increasingly resembles cloud computing: standardized infrastructure, pay-per-use pricing, and abstraction of underlying complexity.
+The "rollup-as-a-service" model has become operational. **Caldera, Conduit, and AltLayer** allow developers to deploy custom rollups with a few configuration parameters. Coinbase's **Base** (built on the OP Stack) processes over 15 million transactions per week and serves as a case study for how major consumer brands can operate their own L2 networks. The blockchain market increasingly resembles cloud computing: standardized infrastructure, pay-per-use pricing, and abstraction of underlying complexity.
 
 ---
 
 ## 7. Decentralized Identity
 
-The phrase **"decentralized identity"** appeared 295 times across the document corpus — a striking frequency for what sounds like a narrow technical concept. The volume reflects a fundamental shift: the industry is moving from pseudo-anonymous wallet addresses to persistent, verifiable credentials.
+The phrase **"decentralized identity"** appeared 295 times across the document corpus, a striking frequency for what sounds like a narrow technical concept. The volume reflects a real shift: the industry is moving from pseudo-anonymous wallet addresses to persistent, verifiable credentials.
 
 The practical implementation is being driven by the **W3C's Verifiable Credentials standard** and the **Decentralized Identity Foundation (DIF)**. The systems work by linking zero-knowledge proofs of identity attributes (proving a user is over 18 without revealing their birth date, for example) to wallet addresses. This enables Sybil resistance and compliance enforcement before transactions execute.
 
@@ -183,8 +183,8 @@ Several implementations are in production:
 
 - **Polygon ID** uses ZK-proof technology to allow users to prove attributes about themselves without revealing underlying personal data.
 - The EU's **eIDAS 2.0 regulation** mandates that all EU member states offer citizens a digital identity wallet by 2026. Germany's and Spain's implementations incorporate blockchain-based credential verification.
-- **Worldcoin** (now World), Sam Altman's biometric identity project, has enrolled over 10 million verified users across 40 countries using iris-scanning Orb devices. Despite significant privacy concerns, the project demonstrates market demand for a globally portable, sybil-resistant identity layer.
-- **Gitcoin Passport** uses a non-biometric approach — stacking multiple identity attestations (GitHub activity, Twitter history, ENS ownership) — and has been adopted by over 200 DeFi protocols for airdrop eligibility and governance access.
+- **Worldcoin** (now World), Sam Altman's biometric identity project, has enrolled over 10 million verified users across 40 countries using iris-scanning Orb devices. Despite notable privacy concerns, the project demonstrates market demand for a globally portable, sybil-resistant identity layer.
+- **Gitcoin Passport** uses a non-biometric approach, stacking multiple identity attestations (GitHub activity, Twitter history, ENS ownership), and has been adopted by over 200 DeFi protocols for airdrop eligibility and governance access.
 
 The transition from anonymity to verifiable privacy is technically and politically complex, which explains why "identity" is a research hotspot.
 
@@ -196,7 +196,7 @@ The high frequency of **"governance"** in the dataset (3,105 mentions) reflects 
 
 ### The compliance industry
 
-**Chainalysis, Elliptic, and TRM Labs** have collectively built a $5+ billion compliance industry around blockchain forensics. Every major cryptocurrency exchange, every institutional custodian, and every regulated DeFi protocol integrates transaction monitoring from at least one of these providers. The **Travel Rule** — requiring financial institutions to share sender and recipient information for transactions above $3,000 — is now enforced across 29 FATF member jurisdictions.
+**Chainalysis, Elliptic, and TRM Labs** have collectively built a $5+ billion compliance industry around blockchain forensics. Every major cryptocurrency exchange, every institutional custodian, and every regulated DeFi protocol integrates transaction monitoring from at least one of these providers. The **Travel Rule**, requiring financial institutions to share sender and recipient information for transactions above $3,000, is now enforced across 29 FATF member jurisdictions.
 
 ### DAO governance evolution
 
@@ -204,13 +204,13 @@ The amateur governance experiments of 2021-2022 are being replaced by profession
 
 - **Arbitrum DAO** manages a treasury exceeding $3 billion, has implemented a Security Council with emergency powers, and runs a structured grants program with professional evaluation criteria.
 - **Uniswap, Aave, and MakerDAO** have evolved from direct token voting (where participation rates averaged 2-5% of token supply) toward delegate systems and specialized governance committees.
-- The emergence of the "Protocol Politician" role — entities that provide professional governance review, ensuring autonomous smart contract decisions comply with legal requirements — reflects the professionalization of the space.
+- The emergence of the "Protocol Politician" role, entities that provide professional governance review and ensure smart contract decisions comply with legal requirements, reflects the professionalization of the space.
 
 ---
 
 ## 9. Geographic Fragmentation
 
-The regulatory and market landscape for Web3 is fragmenting along geographic lines in ways that will define the industry's structure for the next decade.
+The regulatory and market picture for Web3 is splitting along geographic lines in ways that will define the industry's structure for the next decade.
 
 **United States.** The post-Gensler SEC has begun issuing clearer guidance on token classification. The GENIUS Act provides the stablecoin framework the industry demanded. Coinbase's institutional trading volume has tripled year-over-year.
 
@@ -236,11 +236,11 @@ Monthly NFT trading volumes collapsed from a peak of $5 billion (January 2022) t
 
 ### Where NFTs survived
 
-**Gaming** is the most promising application. Immutable, the leading Web3 gaming platform, has partnered with over 300 game studios and processed millions of NFT transactions on its zkEVM chain. The critical insight: successful Web3 games have stopped marketing themselves as "blockchain games" and instead focus on gameplay quality, integrating NFT ownership as a background feature.
+**Gaming** is the most promising application. Immutable, the leading Web3 gaming platform, has partnered with over 300 game studios and processed millions of NFT transactions on its zkEVM chain. The key insight: successful Web3 games have stopped marketing themselves as "blockchain games" and instead focus on gameplay quality, integrating NFT ownership as a background feature.
 
-**Brand provenance** continues through Nike's .SWOOSH platform and Adidas's Web3 initiatives — using on-chain provenance for combating counterfeits and enabling secondary market royalties.
+**Brand provenance** continues through Nike's .SWOOSH platform and Adidas's Web3 initiatives, using on-chain provenance for combating counterfeits and enabling secondary market royalties.
 
-**ERC-6551 (Token Bound Accounts)** is the most significant technical development. It allows NFTs to own other assets and interact with smart contracts autonomously — transforming NFTs from static images into programmable, composable digital objects that can accumulate reputation, hold inventory, and execute transactions. The long-term implication: every digital identity, gaming character, and brand membership could function as a self-sovereign smart contract wallet.
+**ERC-6551 (Token Bound Accounts)** is the most notable technical development. It allows NFTs to own other assets and interact with smart contracts autonomously. This transforms NFTs from static images into programmable, composable digital objects that can accumulate reputation, hold inventory, and execute transactions. The long-term implication: every digital identity, gaming character, and brand membership could function as a self-sovereign smart contract wallet.
 
 ---
 
@@ -258,8 +258,8 @@ Monthly NFT trading volumes collapsed from a peak of $5 billion (January 2022) t
   <Stat label="DeFi TVL" value="$180B" trend="up" />
 </StatRow>
 
-Across 20,000+ documents, the data points in one direction: blockchain infrastructure is being absorbed into enterprise and financial systems. Stablecoins have reached payment volume parity with Visa. Tokenized assets are managed by the world's largest asset managers. Bitcoin has a regulated ETF product. DeFi protocols generate auditable revenue.
+Across 83,770 documents, the data points in one direction: blockchain infrastructure is being absorbed into enterprise and financial systems. Stablecoins have reached payment volume parity with Visa. Tokenized assets are managed by the world's largest asset managers. Bitcoin has a regulated ETF product. DeFi protocols generate auditable revenue.
 
-The research corpus tells a story about integration, not disruption. "Blockchain based" — the single most frequent bigram — is a phrase that implies blockchain as a component within existing systems, not a replacement for them.
+The research corpus tells a story about integration, not disruption. "Blockchain technology," the most frequent bigram, is a phrase that places blockchain as a component within existing systems, not a replacement for them.
 
 *The full dataset is available in the [Web3 Reports Library](/web3-reports).*
