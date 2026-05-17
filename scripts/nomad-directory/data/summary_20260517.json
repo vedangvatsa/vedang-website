@@ -1,393 +1,383 @@
 {
   "Bangkok": {
-    "hostel": 306,
-    "guesthouse": 230,
+    "guesthouse": 68,
+    "hostel": 114,
     "coworking": 5,
-    "apartment": 151
+    "apartment": 31
   },
   "Chiang Mai": {
-    "guesthouse": 466,
-    "hostel": 169,
-    "coworking": 9,
-    "apartment": 26
+    "guesthouse": 181,
+    "hostel": 72,
+    "coworking": 5,
+    "apartment": 8
   },
   "Phuket": {
-    "guesthouse": 107,
-    "hostel": 41,
-    "apartment": 50,
+    "guesthouse": 41,
+    "hostel": 8,
+    "apartment": 22,
     "coworking": 1
   },
   "Bali (Canggu/Ubud)": {
-    "guesthouse": 629,
-    "hostel": 166,
-    "apartment": 146,
-    "coworking": 3
+    "guesthouse": 188,
+    "hostel": 56,
+    "apartment": 100,
+    "coworking": 1
   },
   "Ho Chi Minh City": {
-    "guesthouse": 40,
-    "hostel": 106,
-    "apartment": 66
+    "hostel": 47,
+    "guesthouse": 11,
+    "apartment": 8
   },
   "Hanoi": {
-    "hostel": 110,
-    "guesthouse": 37,
-    "apartment": 27
+    "hostel": 42,
+    "guesthouse": 11,
+    "apartment": 14
   },
   "Kuala Lumpur": {
-    "guesthouse": 38,
-    "hostel": 41,
-    "apartment": 57,
-    "coworking": 5
-  },
-  "Penang": {
-    "guesthouse": 38,
-    "hostel": 37,
-    "apartment": 10
-  },
-  "Singapore": {
-    "guesthouse": 19,
-    "hostel": 90,
-    "apartment": 30,
-    "coworking": 6
-  },
-  "Phnom Penh": {
-    "guesthouse": 73,
-    "hostel": 29,
-    "apartment": 12
-  },
-  "Siem Reap": {
-    "guesthouse": 91,
-    "hostel": 41,
-    "apartment": 9
-  },
-  "Da Nang": {
-    "hostel": 59,
-    "guesthouse": 21,
-    "apartment": 75
-  },
-  "Manila": {
-    "hostel": 84,
-    "guesthouse": 58,
-    "apartment": 113,
-    "coworking": 5
-  },
-  "Cebu": {
-    "hostel": 46,
-    "guesthouse": 66,
-    "apartment": 47,
+    "hostel": 30,
+    "guesthouse": 18,
+    "apartment": 28,
     "coworking": 3
   },
+  "Penang": {
+    "guesthouse": 17,
+    "hostel": 11,
+    "apartment": 1
+  },
+  "Singapore": {
+    "hostel": 48,
+    "apartment": 9,
+    "guesthouse": 2,
+    "coworking": 2
+  },
+  "Phnom Penh": {
+    "guesthouse": 9,
+    "hostel": 13,
+    "apartment": 5
+  },
+  "Siem Reap": {
+    "guesthouse": 21,
+    "hostel": 15,
+    "apartment": 3
+  },
+  "Da Nang": {
+    "hostel": 39,
+    "guesthouse": 10,
+    "apartment": 10
+  },
+  "Manila": {
+    "apartment": 10,
+    "guesthouse": 6,
+    "hostel": 22,
+    "coworking": 2
+  },
+  "Cebu": {
+    "guesthouse": 8,
+    "hostel": 14,
+    "apartment": 13,
+    "coworking": 2
+  },
   "Goa": {
-    "hostel": 21,
-    "guesthouse": 207,
-    "apartment": 11
+    "guesthouse": 112,
+    "hostel": 4,
+    "apartment": 1
   },
   "Bangalore": {
-    "guesthouse": 47,
-    "hostel": 166,
-    "apartment": 70,
-    "coworking": 63,
+    "apartment": 9,
+    "guesthouse": 12,
+    "coworking": 52,
+    "hostel": 25,
     "coliving": 1
   },
   "Delhi": {
-    "guesthouse": 57,
-    "hostel": 101,
-    "apartment": 26,
-    "coworking": 2
+    "guesthouse": 19,
+    "hostel": 24,
+    "coworking": 1
   },
   "Kathmandu": {
-    "guesthouse": 189,
-    "hostel": 159,
-    "apartment": 13
+    "guesthouse": 53,
+    "hostel": 26,
+    "apartment": 1
   },
   "Colombo": {
-    "hostel": 24,
-    "guesthouse": 23,
-    "apartment": 7
+    "hostel": 10,
+    "guesthouse": 11
   },
   "Lisbon": {
-    "guesthouse": 90,
-    "hostel": 104,
-    "apartment": 102,
-    "coworking": 3
+    "guesthouse": 45,
+    "hostel": 80,
+    "apartment": 43,
+    "coworking": 2
   },
   "Porto": {
-    "guesthouse": 163,
-    "hostel": 96,
-    "apartment": 62,
+    "hostel": 46,
+    "apartment": 15,
+    "guesthouse": 35,
     "coworking": 3
   },
   "Barcelona": {
-    "apartment": 58,
-    "hostel": 143,
-    "guesthouse": 32,
-    "coworking": 8
+    "hostel": 52,
+    "guesthouse": 12,
+    "apartment": 29,
+    "coworking": 4
   },
   "Valencia": {
-    "hostel": 28,
-    "guesthouse": 7,
-    "apartment": 16
+    "hostel": 16,
+    "guesthouse": 2,
+    "apartment": 10
   },
   "Malaga": {
-    "hostel": 24,
-    "coworking": 6,
-    "guesthouse": 15,
-    "apartment": 31
+    "hostel": 16,
+    "coworking": 5,
+    "guesthouse": 7,
+    "apartment": 12
   },
   "Berlin": {
-    "hostel": 110,
-    "apartment": 61,
-    "guesthouse": 71,
-    "coworking": 28
+    "hostel": 78,
+    "guesthouse": 43,
+    "apartment": 38,
+    "coworking": 24
   },
   "Amsterdam": {
-    "hostel": 38,
-    "guesthouse": 35,
-    "apartment": 29,
-    "coworking": 9
+    "hostel": 32,
+    "guesthouse": 25,
+    "apartment": 20,
+    "coworking": 6
   },
   "London": {
-    "hostel": 85,
-    "guesthouse": 28,
-    "apartment": 88,
-    "coworking": 18
+    "hostel": 62,
+    "apartment": 58,
+    "guesthouse": 11,
+    "coworking": 11
   },
   "Paris": {
-    "hostel": 41,
-    "apartment": 33,
-    "coworking": 39,
-    "guesthouse": 21
+    "hostel": 33,
+    "apartment": 20,
+    "coworking": 24,
+    "guesthouse": 6
   },
   "Madeira (Funchal)": {
-    "guesthouse": 36,
-    "hostel": 6,
-    "apartment": 22
+    "guesthouse": 17,
+    "apartment": 9,
+    "hostel": 3
   },
   "Gran Canaria (Las Palmas)": {
+    "hostel": 11,
+    "coworking": 1,
+    "apartment": 2
+  },
+  "Tenerife": {
+    "hostel": 1,
+    "coworking": 2,
+    "guesthouse": 4,
+    "apartment": 6
+  },
+  "Budapest": {
+    "guesthouse": 24,
+    "hostel": 61,
+    "apartment": 27,
+    "coworking": 10
+  },
+  "Prague": {
+    "hostel": 59,
+    "apartment": 24,
+    "coworking": 4,
+    "guesthouse": 29
+  },
+  "Warsaw": {
     "hostel": 34,
-    "apartment": 13,
+    "coworking": 6,
+    "guesthouse": 6,
+    "apartment": 13
+  },
+  "Krakow": {
+    "hostel": 45,
+    "guesthouse": 19,
+    "apartment": 23
+  },
+  "Bucharest": {
+    "hostel": 15,
+    "apartment": 12,
     "guesthouse": 1,
     "coworking": 1
   },
-  "Tenerife": {
-    "hostel": 5,
-    "guesthouse": 8,
-    "coworking": 3,
-    "apartment": 13
-  },
-  "Budapest": {
-    "hostel": 96,
-    "guesthouse": 38,
-    "apartment": 45,
-    "coworking": 13
-  },
-  "Prague": {
-    "hostel": 90,
-    "apartment": 35,
-    "coworking": 4,
-    "guesthouse": 63
-  },
-  "Warsaw": {
-    "hostel": 57,
-    "guesthouse": 11,
-    "coworking": 6,
-    "apartment": 20
-  },
-  "Krakow": {
-    "hostel": 84,
-    "apartment": 66,
-    "guesthouse": 29
-  },
-  "Bucharest": {
-    "guesthouse": 4,
-    "hostel": 28,
-    "apartment": 31,
-    "coworking": 1
-  },
   "Sofia": {
-    "guesthouse": 11,
-    "hostel": 24,
-    "apartment": 15,
-    "coworking": 4
+    "hostel": 12,
+    "guesthouse": 4,
+    "coworking": 3,
+    "apartment": 5
   },
   "Belgrade": {
-    "hostel": 51,
-    "apartment": 21,
-    "guesthouse": 20
+    "hostel": 28,
+    "guesthouse": 6,
+    "apartment": 11
   },
   "Tallinn": {
-    "hostel": 32,
-    "guesthouse": 8,
-    "apartment": 12,
-    "coworking": 1
+    "hostel": 19,
+    "apartment": 7,
+    "guesthouse": 4
   },
   "Vilnius": {
-    "guesthouse": 11,
-    "apartment": 8,
-    "hostel": 23
+    "guesthouse": 7,
+    "apartment": 3,
+    "hostel": 15
   },
   "Tbilisi": {
-    "guesthouse": 54,
-    "hostel": 76,
-    "apartment": 43,
-    "coworking": 4
+    "guesthouse": 29,
+    "hostel": 26,
+    "apartment": 12,
+    "coworking": 2
   },
   "Split": {
-    "hostel": 28,
-    "guesthouse": 27,
-    "apartment": 38,
+    "apartment": 19,
+    "guesthouse": 9,
+    "hostel": 8,
     "coworking": 1
   },
   "Athens": {
-    "hostel": 29,
-    "guesthouse": 13,
-    "apartment": 28,
-    "coworking": 4
+    "hostel": 20,
+    "guesthouse": 3,
+    "apartment": 9,
+    "coworking": 3
   },
   "Istanbul": {
-    "hostel": 71,
-    "guesthouse": 53,
-    "apartment": 32,
-    "coworking": 1
+    "guesthouse": 9,
+    "hostel": 30,
+    "apartment": 5
   },
   "Antalya": {
-    "guesthouse": 28,
-    "hostel": 11,
-    "apartment": 3
+    "guesthouse": 9,
+    "hostel": 4,
+    "apartment": 1
   },
   "Mexico City": {
-    "hostel": 39,
-    "guesthouse": 15,
-    "apartment": 21,
+    "guesthouse": 6,
+    "hostel": 17,
+    "apartment": 1,
     "coworking": 2
   },
   "Playa del Carmen": {
-    "apartment": 33,
-    "guesthouse": 15,
-    "hostel": 20,
+    "guesthouse": 3,
+    "hostel": 3,
+    "apartment": 9,
     "coworking": 1
   },
   "Tulum": {
-    "hostel": 21,
-    "guesthouse": 4,
-    "apartment": 11
+    "hostel": 5,
+    "apartment": 2,
+    "guesthouse": 1
   },
   "Oaxaca": {
-    "guesthouse": 14,
-    "hostel": 36,
-    "coworking": 1,
-    "apartment": 2
+    "guesthouse": 6,
+    "hostel": 17
   },
   "Guadalajara": {
-    "guesthouse": 12,
-    "hostel": 12,
-    "apartment": 4
+    "guesthouse": 4,
+    "hostel": 8,
+    "apartment": 2
   },
   "Medellin": {
-    "hostel": 104,
-    "guesthouse": 41,
-    "coworking": 1,
-    "apartment": 44
-  },
-  "Bogota": {
-    "hostel": 88,
-    "guesthouse": 19,
-    "apartment": 41
+    "hostel": 51,
+    "guesthouse": 6,
+    "apartment": 6
   },
   "Cartagena": {
-    "guesthouse": 27,
-    "hostel": 55,
-    "apartment": 3,
+    "guesthouse": 6,
+    "hostel": 26,
+    "apartment": 1,
     "coworking": 2
   },
   "Buenos Aires": {
-    "hostel": 69,
-    "guesthouse": 20,
-    "apartment": 19,
-    "coworking": 6
+    "hostel": 33,
+    "apartment": 8,
+    "guesthouse": 6,
+    "coworking": 2
   },
   "Lima": {
-    "hostel": 267,
-    "guesthouse": 69,
-    "apartment": 27
+    "hostel": 68,
+    "guesthouse": 23,
+    "apartment": 5
   },
   "Santiago": {
-    "hostel": 62,
-    "guesthouse": 11,
-    "apartment": 9
+    "hostel": 21,
+    "guesthouse": 4,
+    "apartment": 5
   },
   "Montevideo": {
-    "hostel": 24,
-    "guesthouse": 9,
-    "apartment": 2,
+    "hostel": 11,
+    "guesthouse": 2,
     "coworking": 1
   },
   "Sao Paulo": {
-    "hostel": 41,
-    "guesthouse": 6,
-    "apartment": 26,
+    "hostel": 12,
+    "guesthouse": 2,
+    "apartment": 6,
     "coworking": 1
   },
   "Rio de Janeiro": {
-    "hostel": 79,
-    "guesthouse": 10,
-    "apartment": 7
-  },
-  "Florianopolis": {
-    "coworking": 4,
-    "guesthouse": 18,
-    "hostel": 32,
+    "hostel": 47,
+    "guesthouse": 3,
     "apartment": 2
   },
+  "Florianopolis": {
+    "coworking": 3,
+    "guesthouse": 12,
+    "hostel": 17
+  },
   "Dubai": {
-    "hostel": 40,
-    "guesthouse": 19,
-    "apartment": 58,
+    "guesthouse": 5,
+    "hostel": 13,
+    "apartment": 18,
     "coworking": 2
   },
   "Cape Town": {
-    "guesthouse": 115,
-    "hostel": 35,
-    "apartment": 23
+    "guesthouse": 63,
+    "hostel": 25,
+    "apartment": 6
   },
   "Nairobi": {
-    "guesthouse": 137,
-    "hostel": 40,
-    "apartment": 83,
+    "guesthouse": 16,
+    "hostel": 6,
+    "apartment": 9,
     "coworking": 1
   },
   "Marrakech": {
-    "guesthouse": 411,
-    "hostel": 40,
-    "apartment": 12
+    "guesthouse": 205,
+    "hostel": 15,
+    "apartment": 2
   },
   "Zanzibar": {
-    "guesthouse": 16,
-    "hostel": 8,
-    "apartment": 3
+    "guesthouse": 5,
+    "hostel": 4,
+    "apartment": 1
   },
   "Accra": {
-    "guesthouse": 38,
-    "hostel": 18,
-    "apartment": 11,
+    "guesthouse": 10,
+    "hostel": 5,
+    "apartment": 3,
     "coworking": 1
   },
   "Lagos": {
-    "hostel": 13,
+    "hostel": 7,
     "coworking": 1,
     "guesthouse": 2,
     "apartment": 1
   },
+  "Seoul": {
+    "guesthouse": 23,
+    "hostel": 19,
+    "apartment": 4,
+    "coworking": 1
+  },
   "Tokyo": {
-    "hostel": 116,
-    "guesthouse": 43,
-    "coworking": 19,
-    "apartment": 57
+    "hostel": 75,
+    "guesthouse": 14,
+    "coworking": 10,
+    "apartment": 16
   },
   "Taipei": {
-    "hostel": 61,
-    "coworking": 15,
-    "apartment": 6,
-    "guesthouse": 1
+    "hostel": 30,
+    "coworking": 7,
+    "apartment": 2
   }
 }
