@@ -15,8 +15,9 @@
     "image": "scripts/thread-assets/agentic_1.png",
     "scheduleDate": "2026-03-25",
     "scheduleTime": "20:57",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x326299cdca06167fcc2aa55624e5237812781e2f",
+    "postedAt": "2026-05-17T04:56:36.044Z"
   },
   {
     "id": "agentic-commerce-2",

@@ -684,9 +684,11 @@
     "id": "reddit-meme-1",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Business logic vs edge cases.\n\nYour code handles 99% of inputs perfectly.\n\nUsers will always find the 1% you missed.\n\nDesign for failure.",
-    "image": "scripts/thread-assets/linkedin-rewrites/game_rules.jpg"
+    "image": "scripts/thread-assets/linkedin-rewrites/game_rules.jpg",
+    "postedAt": "2026-05-17T04:56:32.814Z",
+    "fbPostId": "1785048661795414_1284171453892896"
   },
   {
     "id": "reddit-meme-2",
