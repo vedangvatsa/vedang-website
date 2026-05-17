@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { NomadMap } from '@/components/nomad-map';
+import { PageLayout } from '@/components/page-layout';
 import nomadData from '@/lib/nomad-data.json';
 
 export const metadata: Metadata = {
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function NomadMapPage() {
   return (
-    <>
+    <PageLayout>
       <section className="text-center pt-12 pb-8">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
@@ -32,6 +33,6 @@ export default function NomadMapPage() {
       <div className="container mx-auto px-4 md:px-6 max-w-[1600px] pb-16">
         <NomadMap data={nomadData as any} />
       </div>
-    </>
+    </PageLayout>
   );
 }
