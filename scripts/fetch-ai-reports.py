@@ -157,7 +157,7 @@ def fetch(query, page=1, per_page=200, _retry=0):
         "sort": "cited_by_count:desc",
     }
     url = f"https://api.openalex.org/works?{urlencode(params)}"
-    req = Request(url, headers={"User-Agent": "AIReports/1.0 (mailto:v@example.com)", "Accept": "application/json"})
+    req = Request(url, headers={"User-Agent": "AIReports/1.0 (mailto:vedang@veda.ng)", "Accept": "application/json"})
     try:
         with urlopen(req, timeout=30, context=SSL_CTX) as resp:
             data = json.loads(resp.read().decode("utf-8"))
@@ -177,8 +177,9 @@ def fetch(query, page=1, per_page=200, _retry=0):
         return results
     except HTTPError as e:
         if e.code == 429:
-            print(f"    429 — waiting 30s (retry {_retry+1}/3)")
-            time.sleep(30)
+            wait = 60 * (_retry + 1)
+            print(f"    429 — waiting {wait}s (retry {_retry+1}/3)")
+            time.sleep(wait)
             if _retry < 3:
                 return fetch(query, page, per_page, _retry+1)
             print(f"    Giving up after 3 retries")
@@ -224,7 +225,7 @@ def main():
                     new += 1
                     added += 1
             print(f"    Page {page}: {len(results)} fetched, {added} new (total: {len(papers)})")
-            time.sleep(1)
+            time.sleep(3)
             if len(results) < 200 or len(papers) >= 20000:
                 break
         if (i + 1) % 5 == 0:

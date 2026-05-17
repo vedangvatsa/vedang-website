@@ -1,23 +1,32 @@
 #!/usr/bin/env node
 /**
  * Instagram Scheduled Executor
- * Posts images with captions to Instagram via Graph API.
- * Requires: Instagram Business Account linked to Facebook Page.
- * Uses the Facebook Page Token with instagram_content_publish permission.
+ * Posts images/videos to Instagram.
+ * 
+ * Strategy:
+ *   1. Try Graph API (requires Business/Creator account + instagram_content_publish)
+ *   2. Fallback to instagrapi Python script (works with any account type)
+ * 
+ * Env vars:
+ *   FACEBOOK_PAGE_TOKEN, INSTAGRAM_ACCOUNT_ID - for Graph API
+ *   IG_USERNAME, IG_PASSWORD - for instagrapi fallback
  */
 import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 import { triggerBoost } from './smm-boost-trigger.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
 dotenv.config({ path: path.resolve(REPO_ROOT, '.env.local') });
 
-const PAGE_TOKEN = process.env.FACEBOOK_PAGE_TOKEN!;
-const PAGE_ID = process.env.FACEBOOK_PAGE_ID!;
-const IG_ACCOUNT_ID = process.env.INSTAGRAM_ACCOUNT_ID!;
+const PAGE_TOKEN = process.env.FACEBOOK_PAGE_TOKEN || '';
+const PAGE_ID = process.env.FACEBOOK_PAGE_ID || '';
+const IG_ACCOUNT_ID = process.env.INSTAGRAM_ACCOUNT_ID || '';
+const IG_USERNAME = process.env.IG_USERNAME || '';
+const IG_PASSWORD = process.env.IG_PASSWORD || '';
 const TIMEZONE_OFFSET_HOURS = 5.5;
 const POSTS_FILE = path.resolve(__dirname, 'instagram-posts.json');
 const API_VERSION = 'v21.0';
@@ -26,7 +35,7 @@ interface InstaPost {
   id: string;
   text: string;
   image?: string;
-  imageUrl?: string; // Public URL for Instagram (required)
+  imageUrl?: string;
   scheduleDate: string;
   scheduleTime: string;
   posted: boolean;
@@ -35,16 +44,12 @@ interface InstaPost {
   error?: string;
 }
 
-// Instagram requires a publicly accessible image URL.
-// If we only have a local file, we upload to Facebook first to get a URL.
+// ─── Graph API methods (Business/Creator accounts) ───
+
 async function getPublicImageUrl(localPath: string): Promise<string> {
   const absPath = path.isAbsolute(localPath) ? localPath : path.resolve(REPO_ROOT, localPath);
-  
-  if (!fs.existsSync(absPath)) {
-    throw new Error(`Image not found: ${absPath}`);
-  }
+  if (!fs.existsSync(absPath)) throw new Error(`Image not found: ${absPath}`);
 
-  // Upload to Facebook Page as unpublished photo to get URL
   const FormData = (await import('form-data')).default;
   const form = new FormData();
   form.append('source', fs.createReadStream(absPath));
@@ -55,55 +60,142 @@ async function getPublicImageUrl(localPath: string): Promise<string> {
     method: 'POST',
     body: form as any,
   });
-
   if (!res.ok) throw new Error(`Photo upload failed: ${res.status} ${await res.text()}`);
-  
   const data = await res.json() as any;
-  
-  // Get the image URL from the uploaded photo
+
   const photoRes = await fetch(
     `https://graph.facebook.com/${API_VERSION}/${data.id}?fields=images&access_token=${PAGE_TOKEN}`
   );
   const photoData = await photoRes.json() as any;
-  
   return photoData.images?.[0]?.source || '';
 }
 
 async function createMediaContainer(imageUrl: string, caption: string): Promise<string> {
-  const params = new URLSearchParams({
-    image_url: imageUrl,
-    caption,
-    access_token: PAGE_TOKEN,
-  });
-
+  const params = new URLSearchParams({ image_url: imageUrl, caption, access_token: PAGE_TOKEN });
   const res = await fetch(
     `https://graph.facebook.com/${API_VERSION}/${IG_ACCOUNT_ID}/media?${params}`,
     { method: 'POST' }
   );
-
   if (!res.ok) throw new Error(`Container creation failed: ${res.status} ${await res.text()}`);
-  
   const data = await res.json() as any;
   return data.id;
 }
 
 async function createReelsContainer(videoUrl: string, caption: string): Promise<string> {
-  const params = new URLSearchParams({
-    media_type: 'REELS',
-    video_url: videoUrl,
-    caption,
-    access_token: PAGE_TOKEN,
-  });
-
+  const params = new URLSearchParams({ media_type: 'REELS', video_url: videoUrl, caption, access_token: PAGE_TOKEN });
   const res = await fetch(
     `https://graph.facebook.com/${API_VERSION}/${IG_ACCOUNT_ID}/media?${params}`,
     { method: 'POST' }
   );
-
   if (!res.ok) throw new Error(`Reels container failed: ${res.status} ${await res.text()}`);
-  
   const data = await res.json() as any;
   return data.id;
+}
+
+async function publishContainer(containerId: string, isReels: boolean = false): Promise<string> {
+  const waitTime = isReels ? 30000 : 10000;
+  await new Promise(r => setTimeout(r, waitTime));
+  const res = await fetch(
+    `https://graph.facebook.com/${API_VERSION}/${IG_ACCOUNT_ID}/media_publish`,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ creation_id: containerId, access_token: PAGE_TOKEN }),
+    }
+  );
+  if (!res.ok) throw new Error(`Publish failed: ${res.status} ${await res.text()}`);
+  const data = await res.json() as any;
+  return data.id;
+}
+
+// ─── Graph API posting (tries official API first) ───
+
+async function postViaGraphAPI(mediaPath: string, caption: string, isVid: boolean): Promise<string> {
+  let containerId: string;
+  let isReels = false;
+
+  if (isVid) {
+    const videoUrl = mediaPath.startsWith('http') ? mediaPath : getGitHubUrl(mediaPath);
+    console.log(`  🎬 Graph API: Reels container: ${videoUrl}`);
+    containerId = await createReelsContainer(videoUrl, caption);
+    isReels = true;
+  } else {
+    let imageUrl = mediaPath.startsWith('http') ? mediaPath : '';
+    if (!imageUrl) {
+      imageUrl = await getPublicImageUrl(mediaPath);
+    }
+    if (!imageUrl) throw new Error('No media available');
+    console.log('  📦 Graph API: Creating media container...');
+    containerId = await createMediaContainer(imageUrl, caption);
+  }
+
+  const waitLabel = isReels ? '30s' : '10s';
+  console.log(`  ⏳ Publishing (${waitLabel} wait)...`);
+  return await publishContainer(containerId, isReels);
+}
+
+// ─── Instagrapi fallback (works with any account) ───
+
+async function downloadFile(url: string, dest: string): Promise<void> {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Download failed: ${res.status}`);
+  const buffer = Buffer.from(await res.arrayBuffer());
+  fs.writeFileSync(dest, buffer);
+}
+
+async function postViaInstagrapi(mediaPath: string, caption: string, isVid: boolean): Promise<string> {
+  console.log('  🐍 Fallback: Using instagrapi (private API)...');
+
+  // Resolve media to a local file
+  let localFile = mediaPath;
+  if (mediaPath.startsWith('http')) {
+    const ext = isVid ? '.mp4' : '.jpg';
+    localFile = path.resolve(__dirname, `_ig_temp${ext}`);
+    console.log(`  📥 Downloading media...`);
+    await downloadFile(mediaPath, localFile);
+  } else if (!path.isAbsolute(mediaPath)) {
+    localFile = path.resolve(REPO_ROOT, mediaPath);
+  }
+
+  if (!fs.existsSync(localFile)) {
+    throw new Error(`Media file not found: ${localFile}`);
+  }
+
+  const mediaFlag = isVid ? '--video' : '--image';
+  const scriptPath = path.resolve(__dirname, 'ig-post.py');
+  
+  // Escape caption for shell
+  const escapedCaption = caption.replace(/'/g, "'\\''");
+
+  // Build command — ig-post.py uses saved session from ~/.ig_session.json
+  // Only pass username/password if explicitly set
+  let authArgs = '';
+  if (IG_USERNAME && IG_PASSWORD) {
+    authArgs = `--username "${IG_USERNAME}" --password "${IG_PASSWORD}"`;
+  }
+  const cmd = `python3 "${scriptPath}" ${authArgs} ${mediaFlag} "${localFile}" --caption '${escapedCaption}'`;
+  
+  try {
+    const output = execSync(cmd, { timeout: 120000, encoding: 'utf-8' });
+    const result = JSON.parse(output.trim());
+    
+    if (result.error) {
+      throw new Error(result.error);
+    }
+
+    // Clean up temp file
+    if (mediaPath.startsWith('http') && fs.existsSync(localFile)) {
+      fs.unlinkSync(localFile);
+    }
+
+    console.log(`  ✅ Posted: ${result.url}`);
+    return result.media_id || result.media_pk;
+  } catch (err: any) {
+    // Clean up temp file on error
+    const tempFile = path.resolve(__dirname, isVid ? '_ig_temp.mp4' : '_ig_temp.jpg');
+    if (fs.existsSync(tempFile)) fs.unlinkSync(tempFile);
+    throw new Error(`Instagrapi failed: ${err.message}`);
+  }
 }
 
 function getGitHubUrl(localPath: string): string {
@@ -115,38 +207,13 @@ function isVideo(filePath: string): boolean {
   return /\.(mp4|mov|webm)$/i.test(filePath);
 }
 
-async function publishContainer(containerId: string, isReels: boolean = false): Promise<string> {
-  // Reels need longer processing (30s vs 10s for images)
-  const waitTime = isReels ? 30000 : 10000;
-  await new Promise(r => setTimeout(r, waitTime));
-
-  const res = await fetch(
-    `https://graph.facebook.com/${API_VERSION}/${IG_ACCOUNT_ID}/media_publish`,
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        creation_id: containerId,
-        access_token: PAGE_TOKEN,
-      }),
-    }
-  );
-
-  if (!res.ok) throw new Error(`Publish failed: ${res.status} ${await res.text()}`);
-  
-  const data = await res.json() as any;
-  return data.id;
-}
-
-async function postTextOnly(caption: string): Promise<string> {
-  // Instagram doesn't support text-only posts via API
-  // Fall back to skip
-  throw new Error('Instagram requires an image for every post');
-}
-
 async function main() {
-  if (!PAGE_TOKEN || !IG_ACCOUNT_ID) {
-    console.log('⏭️ Instagram credentials not set (FACEBOOK_PAGE_TOKEN, INSTAGRAM_ACCOUNT_ID)');
+  const hasGraphAPI = !!(PAGE_TOKEN && IG_ACCOUNT_ID);
+  const hasSessionFile = fs.existsSync(path.join(process.env.HOME || '', '.ig_session.json'));
+  const hasPrivateAPI = !!(IG_USERNAME && IG_PASSWORD) || hasSessionFile;
+
+  if (!hasGraphAPI && !hasPrivateAPI) {
+    console.log('⏭️ Instagram: No credentials. Need FACEBOOK_PAGE_TOKEN+INSTAGRAM_ACCOUNT_ID, IG_USERNAME+IG_PASSWORD, or ~/.ig_session.json');
     return;
   }
 
@@ -163,6 +230,7 @@ async function main() {
 
   console.log(`📸 Instagram scheduler running at ${todayIST} ${currentTimeIST} IST`);
   console.log(`📋 Total posts: ${posts.length}, Posted: ${posts.filter(p => p.posted).length}`);
+  console.log(`🔧 Graph API: ${hasGraphAPI ? '✅' : '❌'} | Private API: ${hasPrivateAPI ? '✅' : '❌'}${hasSessionFile ? ' (session)' : ''}`);
 
   // Cooldown: max 3 posts/day
   const COOLDOWN_HOURS = 7;
@@ -192,34 +260,27 @@ async function main() {
     console.log(`\n📝 Posting: ${post.id}`);
     
     const mediaPath = post.imageUrl || post.image || '';
-    let containerId: string;
-    let isReels = false;
+    if (!mediaPath) throw new Error('No media available — Instagram requires an image or video');
 
-    if (mediaPath && isVideo(mediaPath)) {
-      // Video post -> Instagram Reels
-      const videoUrl = mediaPath.startsWith('http') ? mediaPath : getGitHubUrl(mediaPath);
-      console.log(`  🎬 Creating Reels container: ${videoUrl}`);
-      containerId = await createReelsContainer(videoUrl, post.text);
-      isReels = true;
+    const isVid = isVideo(mediaPath);
+    let mediaId = '';
+
+    // Strategy: Try Graph API first, fallback to instagrapi
+    if (hasGraphAPI) {
+      try {
+        mediaId = await postViaGraphAPI(mediaPath, post.text, isVid);
+      } catch (graphErr: any) {
+        console.log(`  ⚠️ Graph API failed: ${graphErr.message}`);
+        if (hasPrivateAPI) {
+          mediaId = await postViaInstagrapi(mediaPath, post.text, isVid);
+        } else {
+          throw graphErr;
+        }
+      }
     } else {
-      // Image post
-      let imageUrl = post.imageUrl || '';
-      if (!imageUrl && post.image) {
-        console.log('  📤 Uploading image...');
-        imageUrl = await getPublicImageUrl(post.image);
-      }
-      if (!imageUrl) {
-        throw new Error('No media available');
-      }
-      console.log('  📦 Creating media container...');
-      containerId = await createMediaContainer(imageUrl, post.text);
+      mediaId = await postViaInstagrapi(mediaPath, post.text, isVid);
     }
 
-    const waitLabel = isReels ? '30s' : '10s';
-    console.log(`  📦 Container: ${containerId}`);
-    console.log(`  ⏳ Publishing (${waitLabel} processing wait)...`);
-    const mediaId = await publishContainer(containerId, isReels);
-    
     post.posted = true;
     post.postedAt = new Date().toISOString();
     post.igMediaId = mediaId;
@@ -229,9 +290,8 @@ async function main() {
     console.error(`  ❌ Failed: ${err.message}`);
   }
 
-  
-    try { triggerBoost('instagram', post.postUri || `https://instagram.com/`); } catch(e) {}
-    fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
+  try { triggerBoost('instagram', post.postUri || `https://instagram.com/`); } catch(e) {}
+  fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
   console.log('\n💾 Updated instagram-posts.json');
 }
 

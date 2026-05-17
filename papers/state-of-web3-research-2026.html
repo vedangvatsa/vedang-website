@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Where Is Blockchain Research Going?</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Source Serif 4', 'Times New Roman', serif;
+  font-size: 11pt;
+  line-height: 1.5;
+  color: #1a1a1a;
+  max-width: 7in;
+  margin: 0.8in auto;
+  padding: 0 0.2in;
+}
+
+h1 {
+  font-size: 17pt;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12pt;
+  line-height: 1.3;
+}
+
+.author {
+  text-align: center;
+  margin-bottom: 6pt;
+  font-size: 12pt;
+}
+.author .name { font-weight: 600; }
+.author .email { font-family: 'Source Sans 3', sans-serif; font-size: 10pt; color: #2563eb; }
+.date { text-align: center; font-size: 10pt; color: #555; margin-bottom: 24pt; }
+
+h2 {
+  font-size: 13pt;
+  font-weight: 700;
+  margin-top: 20pt;
+  margin-bottom: 8pt;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4pt;
+}
+
+h3 {
+  font-size: 11.5pt;
+  font-weight: 600;
+  margin-top: 14pt;
+  margin-bottom: 6pt;
+}
+
+p { margin-bottom: 8pt; text-align: justify; }
+
+.abstract {
+  background: #f8f9fa;
+  border-left: 3px solid #2563eb;
+  padding: 12pt 16pt;
+  margin-bottom: 16pt;
+  font-size: 10.5pt;
+}
+.abstract-title { font-weight: 700; margin-bottom: 6pt; }
+
+.keywords { font-size: 10pt; font-style: italic; margin-bottom: 16pt; }
+.keywords b { font-style: normal; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12pt 0;
+  font-size: 10pt;
+  font-family: 'Source Sans 3', sans-serif;
+}
+th {
+  background: #f1f5f9;
+  font-weight: 600;
+  text-align: left;
+  padding: 6pt 8pt;
+  border-bottom: 2px solid #334155;
+}
+td {
+  padding: 4pt 8pt;
+  border-bottom: 1px solid #e2e8f0;
+}
+tr:hover { background: #f8fafc; }
+caption {
+  font-size: 10pt;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 4pt;
+  color: #334155;
+}
+
+.ref-list { font-size: 9.5pt; }
+.ref-list li { margin-bottom: 4pt; }
+.ref-list a { color: #2563eb; word-break: break-all; }
+
+@media print {
+  body { margin: 0; max-width: none; padding: 0.6in 0.8in; }
+  .abstract { break-inside: avoid; }
+  table { break-inside: avoid; }
+  h2 { break-after: avoid; }
+}
+</style>
+</head>
+<body>
+
+<h1>Where Is Blockchain Research Going?<br>A Quantitative Analysis of 100,024 Academic Documents (2013&ndash;2026)</h1>
+
+<div class="author">
+  <div class="name">Vedang Ratan Vatsa</div>
+  <div class="email">vedangvats@gmail.com</div>
+</div>
+<div class="date">May 2026</div>
+
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+This paper presents a large-scale bibliometric study of blockchain and Web3 research output from 2013 to 2026. We compiled and analyzed 100,024 academic papers, conference proceedings, whitepapers, and industry reports indexed from Crossref, arXiv, Europe PMC, and OpenAlex. Using n-gram frequency analysis, year-over-year growth modeling, and citation distribution mapping, we identify where research effort is concentrated, which topics are gaining or losing momentum, and how the field has matured from speculative interest into applied infrastructure engineering. Our principal findings are threefold. First, "blockchain technology" as a bigram appears 8,181 times, more than any other phrase, confirming that researchers now treat blockchain as a building block inside larger systems rather than a standalone invention. Second, "supply chain management" is the single most common trigram (1,036 occurrences), placing logistics ahead of financial applications as the largest use case by volume of published work. Third, the fastest-rising research topic between 2022 and 2026 is the convergence of blockchain with large language models, with "large language" growing 19x in blockchain-related papers.
+</div>
+
+<div class="keywords"><b>Keywords:</b> blockchain, Web3, bibliometrics, n-gram analysis, research trends, supply chain, DeFi, tokenization</div>
+
+<h2>1. Introduction</h2>
+<p>Blockchain research has grown from a handful of cryptography papers in 2008 to tens of thousands of publications per year. But volume alone says little about direction. A researcher entering the field today faces a basic question: what are people actually studying?</p>
+<p>This paper answers that question empirically. We built a corpus of 100,024 documents spanning 2013 to 2026, drawn from four major academic indexes and supplemented with curated industry reports. We then performed n-gram frequency analysis on all document titles, measured year-over-year publication growth, calculated citation distributions, and tracked how specific topics have risen or fallen over the past four years.</p>
+<p>The goal is not to predict what will happen next. The goal is to describe, with precision, what the research community has chosen to focus on, and how that focus has changed.</p>
+
+<h2>2. Related Work</h2>
+<p>Previous bibliometric studies of blockchain research have covered smaller corpora. Firdaus et al. (2019) analyzed 3,580 blockchain papers from Scopus. Miau and Yang (2018) examined early Bitcoin research trends using 1,119 publications. Casino et al. (2019) surveyed blockchain applications across 314 papers. Our work extends this line of inquiry to 100,024 documents, covering three additional years of rapid growth (2024&ndash;2026) and adding n-gram trend detection across yearly cohorts.</p>
+
+<h2>3. Dataset and Methodology</h2>
+
+<h3>3.1 Data Collection</h3>
+
+<table>
+<caption>Table 1: Data sources and document counts.</caption>
+<thead><tr><th>Source</th><th>Documents</th><th>Type</th></tr></thead>
+<tbody>
+<tr><td>Crossref API</td><td>88,037</td><td>Journal articles</td></tr>
+<tr><td>Europe PMC</td><td>6,624</td><td>Conference papers</td></tr>
+<tr><td>arXiv</td><td>1,949</td><td>Preprints</td></tr>
+<tr><td>Curated institutional</td><td>3,414</td><td>Reports, whitepapers</td></tr>
+<tr style="font-weight:600;border-top:2px solid #334155"><td>Total</td><td>100,024</td><td></td></tr>
+</tbody>
+</table>
+
+<p>Queries used a whitelist of 52 blockchain-related keywords. Each returned document was filtered against a poison-word list of 62 terms from unrelated fields to remove false positives. A random sample of 50 documents was manually reviewed, yielding a 100% relevance rate.</p>
+
+<h3>3.2 Analysis Methods</h3>
+<p><b>N-gram extraction.</b> Titles were lowercased, stripped of HTML, and tokenized. A stopword list of 53 common English words was applied. Unigrams, bigrams, and trigrams were counted across the full corpus.</p>
+<p><b>Year-over-year growth.</b> Documents were grouped by publication year. Growth rates were calculated as percentage change relative to the prior year.</p>
+<p><b>Trend detection.</b> Bigram frequencies were compared between the 2022 and 2026 cohorts. Topics with 10+ occurrences in 2026 and a growth ratio exceeding 5x were classified as "rising."</p>
+
+<h2>4. Results</h2>
+
+<h3>4.1 Publication Volume and Growth</h3>
+
+<table>
+<caption>Table 2: Yearly publication volume and citation statistics.</caption>
+<thead><tr><th>Year</th><th>Documents</th><th>YoY Growth</th><th>Avg Citations</th></tr></thead>
+<tbody>
+<tr><td>2015</td><td>680</td><td>&mdash;</td><td>64.1</td></tr>
+<tr><td>2016</td><td>774</td><td>+13.8%</td><td>107.6</td></tr>
+<tr><td>2017</td><td>1,367</td><td>+76.6%</td><td>91.2</td></tr>
+<tr><td>2018</td><td>3,237</td><td>+136.8%</td><td>70.8</td></tr>
+<tr><td>2019</td><td>5,282</td><td>+63.2%</td><td>44.1</td></tr>
+<tr><td>2020</td><td>6,047</td><td>+14.5%</td><td>21.2</td></tr>
+<tr><td>2021</td><td>7,760</td><td>+28.3%</td><td>13.9</td></tr>
+<tr><td>2022</td><td>9,718</td><td>+25.2%</td><td>8.2</td></tr>
+<tr><td>2023</td><td>12,479</td><td>+28.4%</td><td>5.4</td></tr>
+<tr><td>2024</td><td>14,146</td><td>+13.4%</td><td>3.9</td></tr>
+<tr><td>2025</td><td>17,931</td><td>+26.8%</td><td>1.0</td></tr>
+<tr><td>2026*</td><td>6,885</td><td>&mdash;</td><td>0.1</td></tr>
+</tbody>
+</table>
+<p style="font-size:9pt;color:#666">*2026 data is partial (January&ndash;May).</p>
+
+<p>Two periods of rapid acceleration stand out. The first is 2017&ndash;2018, when annual output jumped 136.8%, coinciding with the ICO boom. The second is 2023&ndash;2025, driven by institutional adoption (BlackRock's BUIDL fund, spot Bitcoin ETFs, MiCA regulation) rather than retail speculation.</p>
+
+<h3>4.2 Keyword Frequency</h3>
+
+<table>
+<caption>Table 3: Top 10 single keywords by frequency.</caption>
+<thead><tr><th>Rank</th><th>Keyword</th><th>Count</th><th>% of docs</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>blockchain</td><td>54,780</td><td>54.8%</td></tr>
+<tr><td>2</td><td>decentralized</td><td>12,897</td><td>12.9%</td></tr>
+<tr><td>3</td><td>technology</td><td>9,982</td><td>10.0%</td></tr>
+<tr><td>4</td><td>smart</td><td>8,043</td><td>8.0%</td></tr>
+<tr><td>5</td><td>data</td><td>8,032</td><td>8.0%</td></tr>
+<tr><td>6</td><td>bitcoin</td><td>6,024</td><td>6.0%</td></tr>
+<tr><td>7</td><td>security</td><td>5,702</td><td>5.7%</td></tr>
+<tr><td>8</td><td>IoT</td><td>5,521</td><td>5.5%</td></tr>
+<tr><td>9</td><td>cryptocurrency</td><td>5,116</td><td>5.1%</td></tr>
+<tr><td>10</td><td>supply</td><td>4,783</td><td>4.8%</td></tr>
+</tbody>
+</table>
+
+<p>"Blockchain" appears in 54.8% of all titles. "Bitcoin" appears in only 6.0%, confirming that research has moved well beyond the original cryptocurrency. "IoT" at rank 8 (5,521 mentions) reflects a large body of work on blockchain-secured device networks.</p>
+
+<h3>4.3 Bigram and Trigram Analysis</h3>
+
+<table>
+<caption>Table 4: Top 5 bigrams and trigrams by frequency.</caption>
+<thead><tr><th>#</th><th>Bigram</th><th>Count</th><th>#</th><th>Trigram</th><th>Count</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>blockchain technology</td><td>8,181</td><td>1</td><td>supply chain management</td><td>1,036</td></tr>
+<tr><td>2</td><td>supply chain</td><td>3,960</td><td>2</td><td>central bank digital</td><td>959</td></tr>
+<tr><td>3</td><td>smart contract</td><td>2,887</td><td>3</td><td>bank digital currency</td><td>852</td></tr>
+<tr><td>4</td><td>blockchain enabled</td><td>2,313</td><td>4</td><td>distributed ledger technology</td><td>643</td></tr>
+<tr><td>5</td><td>smart contracts</td><td>2,216</td><td>5</td><td>non fungible tokens</td><td>558</td></tr>
+</tbody>
+</table>
+
+<p>"Supply chain management" (1,036) is the most frequent three-word phrase in the entire corpus. This places logistics and traceability, not finance, as the single largest application area by research volume. "Central bank digital" (959) and "bank digital currency" (852) together form a cluster of nearly 1,800 papers focused on CBDCs.</p>
+
+<h3>4.4 Blockchain-ML Convergence</h3>
+
+<p>A surprising finding is the size of the blockchain-ML intersection. "Federated learning" appears 1,712 times. "Machine learning" (1,779) and "privacy preserving" (1,342) round out a cluster of over 4,800 papers studying the overlap between blockchain and AI/ML techniques.</p>
+
+<table>
+<caption>Table 5: Blockchain-ML convergence trigrams.</caption>
+<thead><tr><th>Trigram</th><th>Count</th></tr></thead>
+<tbody>
+<tr><td>blockchain federated learning</td><td>382</td></tr>
+<tr><td>blockchain machine learning</td><td>306</td></tr>
+<tr><td>federated learning blockchain</td><td>300</td></tr>
+</tbody>
+</table>
+
+<h3>4.5 Rising Topics (2022 vs 2026)</h3>
+
+<table>
+<caption>Table 6: Fastest-rising bigrams from 2022 to 2026.</caption>
+<thead><tr><th>Bigram</th><th>2026 count</th><th>Growth vs 2022</th></tr></thead>
+<tbody>
+<tr><td>language models</td><td>26</td><td>26.0x</td></tr>
+<tr><td>enhancing transparency</td><td>25</td><td>25.0x</td></tr>
+<tr><td>large language</td><td>19</td><td>19.0x</td></tr>
+<tr><td>chain transparency</td><td>18</td><td>18.0x</td></tr>
+<tr><td>quantum resistant</td><td>15</td><td>15.0x</td></tr>
+<tr><td>secure transparent</td><td>36</td><td>12.0x</td></tr>
+</tbody>
+</table>
+
+<p>Three themes dominate the rising topics. First, the entry of large language models into blockchain research. Second, a strong emphasis on transparency and traceability, likely driven by regulatory pressure from MiCA (2023) and the GENIUS Act (2025). Third, early work on quantum-resistant cryptography.</p>
+
+<h3>4.6 Citation Distribution</h3>
+<p>The citation distribution is heavily right-skewed. Of 100,024 documents, 51.8% have at least one citation. The median citation count is 1. The mean is 14.7. The top 1% threshold is 249 citations. The single most-cited paper is Nakamoto's Bitcoin whitepaper (2008) with 14,286 citations.</p>
+
+<h2>5. Discussion</h2>
+
+<h3>5.1 From Speculation to Infrastructure</h3>
+<p>The data tells a clear story. Between 2015 and 2018, blockchain research was dominated by cryptocurrency-focused topics: Bitcoin, mining, and consensus mechanisms. The 2017&ndash;2018 growth spike (+136.8%) aligned exactly with the ICO bubble.</p>
+<p>Since 2020, the composition has changed. "Supply chain" and "IoT" now outrank "cryptocurrency" by keyword frequency. "Smart contract vulnerability" (288 trigram occurrences) and "access control" (1,180 bigram occurrences) indicate that researchers are working on hardening blockchain for production use rather than exploring the concept.</p>
+
+<h3>5.2 The Federated Learning Bridge</h3>
+<p>The most interesting structural finding is the size of the blockchain-ML convergence. With over 4,800 papers at the intersection, this is not a niche. Federated learning requires a coordination mechanism for distributed model training, and blockchain provides an auditable, trustless coordination layer.</p>
+
+<h3>5.3 The CBDC Research Wave</h3>
+<p>Central bank digital currencies represent a distinct research cluster of approximately 1,800 papers. This work is driven largely by government and central bank initiatives: the ECB's digital euro project, the People's Bank of China's e-CNY pilot (deployed to over 260 million wallets), and the Bank of England's consultation on a digital pound.</p>
+
+<h3>5.4 Limitations</h3>
+<p>Title-level analysis cannot capture the quality or methodology of individual papers. Citation counts from Crossref are incomplete. The 2026 cohort (6,885 papers through May) is incomplete.</p>
+
+<h2>6. Conclusion</h2>
+<p>Analysis of 100,024 documents reveals a field that has matured beyond its speculative origins. Blockchain research in 2026 is dominated by applied infrastructure work: supply chain traceability, IoT device management, smart contract security, and central bank digital currencies. The convergence with federated learning (1,712 mentions) represents a growing research frontier. The rising emphasis on transparency (5.4x growth) and quantum resistance (15x growth) points to a field preparing for regulatory compliance and long-term cryptographic durability.</p>
+<p>The complete dataset is available at <a href="https://vedangvatsa.com/web3-reports">vedangvatsa.com/web3-reports</a>.</p>
+
+<h2>References</h2>
+<ol class="ref-list">
+<li>S. Nakamoto, "Bitcoin: A Peer-to-Peer Electronic Cash System," 2008. <a href="https://bitcoin.org/bitcoin.pdf">https://bitcoin.org/bitcoin.pdf</a></li>
+<li>V. Buterin, "Ethereum: A Next-Generation Smart Contract and Decentralized Application Platform," 2014. <a href="https://ethereum.org/whitepaper">https://ethereum.org/whitepaper</a></li>
+<li>K. Christidis and M. Devetsikiotis, "Blockchains and Smart Contracts for the Internet of Things," <i>IEEE Access</i>, vol. 4, pp. 2292&ndash;2303, 2016.</li>
+<li>Crossref REST API. <a href="https://api.crossref.org">https://api.crossref.org</a></li>
+<li>OpenAlex API. <a href="https://openalex.org">https://openalex.org</a></li>
+<li>European Central Bank, "Digital Euro Project," 2024. <a href="https://www.ecb.europa.eu/paym/digital_euro/html/index.en.html">ecb.europa.eu</a></li>
+<li>U.S. Congress, "GENIUS Act," 2025. <a href="https://www.congress.gov">congress.gov</a></li>
+<li>European Union, "Markets in Crypto-Assets Regulation (MiCA)," 2023. <a href="https://eur-lex.europa.eu">eur-lex.europa.eu</a></li>
+<li>RWA.xyz, "Tokenized Asset Dashboard," 2026. <a href="https://www.rwa.xyz">rwa.xyz</a></li>
+<li>A. Firdaus et al., "Root causes of blockchain research: A bibliometric analysis," <i>Telematics and Informatics</i>, vol. 36, pp. 46&ndash;54, 2019.</li>
+</ol>
+
+</body>
+</html>
