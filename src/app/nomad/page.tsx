@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { NomadMap } from '@/components/nomad-map';
+import { NomadMapWrapper } from '@/components/nomad-map-wrapper';
 import { PageLayout } from '@/components/page-layout';
 import nomadData from '@/lib/nomad-data.json';
 
@@ -31,7 +31,7 @@ export default function NomadMapPage() {
       </section>
 
       <div className="container mx-auto px-4 md:px-6 max-w-[1600px] pb-16">
-        <NomadMap data={nomadData as any} />
+        <NomadMapWrapper data={nomadData as any} />
       </div>
     </PageLayout>
   );
