@@ -1,16 +1,15 @@
 'use client';
 
-import { useEffect, useState, useMemo } from 'react';
-import dynamic from 'next/dynamic';
+import { useState, useMemo, useCallback, useRef } from 'react';
+import {
+  Map,
+  MapClusterLayer,
+  MapPopup,
+  MapControls,
+  type MapRef,
+} from '@/components/ui/map';
 import { Badge } from '@/components/ui/badge';
-import { MapPin, Building2, Bed, Home, Hotel, Users } from 'lucide-react';
-
-// Leaflet must be loaded client-side only
-const MapContainer = dynamic(() => import('react-leaflet').then(m => m.MapContainer), { ssr: false });
-const TileLayer = dynamic(() => import('react-leaflet').then(m => m.TileLayer), { ssr: false });
-const Marker = dynamic(() => import('react-leaflet').then(m => m.Marker), { ssr: false });
-const Popup = dynamic(() => import('react-leaflet').then(m => m.Popup), { ssr: false });
-const CircleMarker = dynamic(() => import('react-leaflet').then(m => m.CircleMarker), { ssr: false });
+import { Building2, Bed, Home, Hotel, Users, ExternalLink, Star } from 'lucide-react';
 
 interface POI {
   osm_id: number;
@@ -30,9 +29,12 @@ interface POI {
   timezone: string;
   visa: string;
   osm_url: string;
+  google_rating?: number;
+  google_review_count?: number;
+  review_summary?: string;
 }
 
-const CATEGORY_CONFIG: Record<string, { label: string; color: string; icon: typeof MapPin }> = {
+const CATEGORY_CONFIG: Record<string, { label: string; color: string; icon: typeof Building2 }> = {
   coworking: { label: 'Coworking', color: '#3b82f6', icon: Building2 },
   coliving: { label: 'Coliving', color: '#8b5cf6', icon: Users },
   hostel: { label: 'Hostels', color: '#f59e0b', icon: Bed },
@@ -48,17 +50,17 @@ const CATEGORY_COLORS: Record<string, string> = {
   guesthouse: '#ec4899',
 };
 
+interface SelectedPoint {
+  coordinates: [number, number];
+  properties: POI;
+}
+
 export function NomadMap({ data }: { data: POI[] }) {
   const [selectedCity, setSelectedCity] = useState<string>('all');
   const [selectedCategories, setSelectedCategories] = useState<Set<string>>(new Set(Object.keys(CATEGORY_CONFIG)));
-  const [mounted, setMounted] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-
-  useEffect(() => {
-    setMounted(true);
-    // Import leaflet CSS
-    import('leaflet/dist/leaflet.css');
-  }, []);
+  const [selectedPoint, setSelectedPoint] = useState<SelectedPoint | null>(null);
+  const mapRef = useRef<MapRef>(null);
 
   const cities = useMemo(() => {
     const citySet = new Map<string, { country: string; count: number; lat: number; lon: number }>();
@@ -88,6 +90,19 @@ export function NomadMap({ data }: { data: POI[] }) {
     return filtered;
   }, [data, selectedCity, selectedCategories, searchQuery]);
 
+  // Convert filtered data to GeoJSON for the cluster layer
+  const geojsonData = useMemo((): GeoJSON.FeatureCollection<GeoJSON.Point, POI> => ({
+    type: 'FeatureCollection',
+    features: filteredData.map(poi => ({
+      type: 'Feature' as const,
+      geometry: {
+        type: 'Point' as const,
+        coordinates: [poi.lon, poi.lat],
+      },
+      properties: poi,
+    })),
+  }), [filteredData]);
+
   const categoryCounts = useMemo(() => {
     const counts: Record<string, number> = {};
     const source = selectedCity === 'all' ? data : data.filter(p => p.city === selectedCity);
@@ -109,23 +124,46 @@ export function NomadMap({ data }: { data: POI[] }) {
     });
   };
 
-  const mapCenter = useMemo(() => {
+  const mapCenter = useMemo((): [number, number] => {
     if (selectedCity !== 'all') {
       const city = cities.find(c => c.name === selectedCity);
-      if (city) return [city.lat, city.lon] as [number, number];
+      if (city) return [city.lon, city.lat]; // mapcn uses [lng, lat]
     }
-    return [20, 20] as [number, number];
+    return [20, 20];
   }, [selectedCity, cities]);
 
   const mapZoom = selectedCity === 'all' ? 2 : 13;
 
-  if (!mounted) {
-    return (
-      <div className="w-full h-[600px] bg-muted rounded-xl flex items-center justify-center">
-        <p className="text-muted-foreground">Loading map...</p>
-      </div>
-    );
-  }
+  const handlePointClick = useCallback((
+    feature: GeoJSON.Feature<GeoJSON.Point, POI>,
+    coordinates: [number, number],
+  ) => {
+    setSelectedPoint({
+      coordinates,
+      properties: feature.properties,
+    });
+  }, []);
+
+  const handleCityChange = useCallback((city: string) => {
+    setSelectedCity(city);
+    setSelectedPoint(null);
+    if (city !== 'all') {
+      const cityInfo = cities.find(c => c.name === city);
+      if (cityInfo && mapRef.current) {
+        mapRef.current.flyTo({
+          center: [cityInfo.lon, cityInfo.lat],
+          zoom: 13,
+          duration: 1200,
+        });
+      }
+    } else if (mapRef.current) {
+      mapRef.current.flyTo({
+        center: [20, 20],
+        zoom: 2,
+        duration: 1200,
+      });
+    }
+  }, [cities]);
 
   return (
     <div className="space-y-6">
@@ -148,7 +186,7 @@ export function NomadMap({ data }: { data: POI[] }) {
         <div className="flex-1">
           <select
             value={selectedCity}
-            onChange={(e) => setSelectedCity(e.target.value)}
+            onChange={(e) => handleCityChange(e.target.value)}
             className="w-full md:w-auto px-4 py-2.5 rounded-lg border bg-card text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
           >
             <option value="all">All Cities ({data.length.toLocaleString()} places)</option>
@@ -196,52 +234,125 @@ export function NomadMap({ data }: { data: POI[] }) {
 
       {/* Map */}
       <div className="w-full h-[600px] rounded-xl overflow-hidden border shadow-sm">
-        <MapContainer
+        <Map
+          ref={mapRef}
           center={mapCenter}
           zoom={mapZoom}
-          className="w-full h-full"
           key={`${selectedCity}-${mapZoom}`}
         >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+          <MapClusterLayer<POI>
+            data={geojsonData}
+            clusterRadius={50}
+            clusterMaxZoom={14}
+            clusterColors={['#3b82f6', '#8b5cf6', '#ef4444']}
+            clusterThresholds={[50, 200]}
+            pointColor="#3b82f6"
+            onPointClick={handlePointClick}
           />
-          {filteredData.map((poi) => (
-            <CircleMarker
-              key={poi.osm_id}
-              center={[poi.lat, poi.lon]}
-              radius={6}
-              pathOptions={{
-                color: CATEGORY_COLORS[poi.category] || '#666',
-                fillColor: CATEGORY_COLORS[poi.category] || '#666',
-                fillOpacity: 0.8,
-                weight: 1,
-              }}
+
+          {selectedPoint && (
+            <MapPopup
+              key={`${selectedPoint.coordinates[0]}-${selectedPoint.coordinates[1]}`}
+              longitude={selectedPoint.coordinates[0]}
+              latitude={selectedPoint.coordinates[1]}
+              onClose={() => setSelectedPoint(null)}
+              closeOnClick={false}
+              focusAfterOpen={false}
+              closeButton
+              className="w-72"
             >
-              <Popup>
-                <div className="text-sm min-w-[200px]">
-                  <p className="font-semibold text-base">{poi.name}</p>
-                  <p className="text-muted-foreground text-xs mt-1">
-                    {CATEGORY_CONFIG[poi.category]?.label} · {poi.city}, {poi.country}
+              <div className="space-y-2">
+                <div>
+                  <p className="font-semibold text-foreground text-base leading-tight">
+                    {selectedPoint.properties.name}
                   </p>
-                  {poi.address && <p className="mt-2 text-xs">{poi.address}</p>}
-                  {poi.opening_hours && <p className="text-xs mt-1">Hours: {poi.opening_hours}</p>}
-                  {poi.phone && <p className="text-xs mt-1">Phone: {poi.phone}</p>}
-                  <div className="mt-2 flex gap-2">
-                    {poi.website && (
-                      <a href={poi.website} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-500 hover:underline">
-                        Website
-                      </a>
-                    )}
-                    <a href={poi.osm_url} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-500 hover:underline">
-                      OpenStreetMap
-                    </a>
+                  <div className="flex items-center gap-1.5 mt-1">
+                    <span
+                      className="inline-block px-2 py-0.5 rounded-full text-[10px] font-medium text-white"
+                      style={{ backgroundColor: CATEGORY_COLORS[selectedPoint.properties.category] || '#666' }}
+                    >
+                      {CATEGORY_CONFIG[selectedPoint.properties.category]?.label || selectedPoint.properties.category}
+                    </span>
+                    <span className="text-muted-foreground text-xs">
+                      {selectedPoint.properties.city}, {selectedPoint.properties.country}
+                    </span>
                   </div>
                 </div>
-              </Popup>
-            </CircleMarker>
-          ))}
-        </MapContainer>
+
+                {/* Google rating */}
+                {selectedPoint.properties.google_rating && (
+                  <div className="flex items-center gap-1.5">
+                    <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                    <span className="text-sm font-medium">{selectedPoint.properties.google_rating}</span>
+                    {selectedPoint.properties.google_review_count && (
+                      <span className="text-muted-foreground text-xs">
+                        ({selectedPoint.properties.google_review_count.toLocaleString()} reviews)
+                      </span>
+                    )}
+                  </div>
+                )}
+
+                {/* AI review summary */}
+                {selectedPoint.properties.review_summary && (
+                  <p className="text-xs text-muted-foreground italic border-l-2 border-primary/30 pl-2">
+                    {selectedPoint.properties.review_summary}
+                  </p>
+                )}
+
+                {selectedPoint.properties.address && (
+                  <p className="text-xs text-muted-foreground">{selectedPoint.properties.address}</p>
+                )}
+
+                {selectedPoint.properties.opening_hours && (
+                  <p className="text-xs text-muted-foreground">
+                    Hours: {selectedPoint.properties.opening_hours}
+                  </p>
+                )}
+
+                {selectedPoint.properties.phone && (
+                  <p className="text-xs text-muted-foreground">
+                    Phone: {selectedPoint.properties.phone}
+                  </p>
+                )}
+
+                {/* Quality dots */}
+                <div className="flex items-center gap-1">
+                  <span className="text-xs text-muted-foreground mr-1">Quality:</span>
+                  {Array.from({ length: Math.min(Math.round(selectedPoint.properties.quality / 2), 5) }).map((_, i) => (
+                    <span key={i} className="w-2 h-2 rounded-full bg-emerald-500" />
+                  ))}
+                  {Array.from({ length: 5 - Math.min(Math.round(selectedPoint.properties.quality / 2), 5) }).map((_, i) => (
+                    <span key={i} className="w-2 h-2 rounded-full bg-muted" />
+                  ))}
+                </div>
+
+                <div className="flex gap-2 pt-1">
+                  {selectedPoint.properties.website && (
+                    <a
+                      href={selectedPoint.properties.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-blue-500 hover:underline"
+                    >
+                      <ExternalLink className="w-3 h-3" />
+                      Website
+                    </a>
+                  )}
+                  <a
+                    href={selectedPoint.properties.osm_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-blue-500 hover:underline"
+                  >
+                    OpenStreetMap
+                  </a>
+                </div>
+              </div>
+            </MapPopup>
+          )}
+
+          <MapControls showZoom showLocate />
+        </Map>
       </div>
 
       {/* Listings table */}
@@ -254,6 +365,7 @@ export function NomadMap({ data }: { data: POI[] }) {
                 <th className="text-left px-4 py-3 font-medium">Name</th>
                 <th className="text-left px-4 py-3 font-medium">Type</th>
                 <th className="text-left px-4 py-3 font-medium">City</th>
+                <th className="text-left px-4 py-3 font-medium">Rating</th>
                 <th className="text-left px-4 py-3 font-medium">Quality</th>
                 <th className="text-left px-4 py-3 font-medium">Links</th>
               </tr>
@@ -272,6 +384,21 @@ export function NomadMap({ data }: { data: POI[] }) {
                     </span>
                   </td>
                   <td className="px-4 py-2.5 text-muted-foreground">{poi.city}</td>
+                  <td className="px-4 py-2.5">
+                    {poi.google_rating ? (
+                      <div className="flex items-center gap-1">
+                        <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+                        <span className="text-xs font-medium">{poi.google_rating}</span>
+                        {poi.google_review_count && (
+                          <span className="text-muted-foreground text-[10px]">
+                            ({poi.google_review_count})
+                          </span>
+                        )}
+                      </div>
+                    ) : (
+                      <span className="text-muted-foreground text-xs">—</span>
+                    )}
+                  </td>
                   <td className="px-4 py-2.5">
                     <div className="flex gap-0.5">
                       {Array.from({ length: Math.min(Math.round(poi.quality / 2), 5) }).map((_, i) => (
