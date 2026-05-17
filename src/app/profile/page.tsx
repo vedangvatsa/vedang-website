@@ -343,7 +343,7 @@ export default function ProfilePage() {
                         </div>
                         <div>
                             <h4 className="font-semibold text-base">AI Content Generation Engine</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Built an AI-powered content engine that produces long-form research reports on AI, Web3, and emerging tech, and distributes them across 4 platforms.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Built an AI-powered content engine that produces long-form research reports on AI, Web3, and emerging tech, and distributes them across 10 platforms.</p>
                         </div>
                     </CardContent>
                 </Card>
