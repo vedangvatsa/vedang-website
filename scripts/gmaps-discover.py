@@ -110,19 +110,17 @@ async def extract_places_from_list(page: Page, city_name: str, internal_category
                 
             name = lines[0]
             
-            # Extract Rating and Review Count
+            # Extract Rating
             rating = None
-            review_count = None
             for line in lines:
-                m = re.match(r'^(\d\.\d)\s*\(([\d,]+)\)', line)
+                m = re.search(r'^(\d\.\d)$', line.strip())
                 if m:
                     rating = float(m.group(1))
-                    review_count = int(m.group(2).replace(',', ''))
                     break
                     
             # Basic quality filter
-            if not rating or rating < 4.0 or not review_count or review_count < 10:
-                log.debug(f"Skipping {name} - low rating/reviews ({rating} / {review_count})")
+            if not rating or rating < 4.0:
+                # log.debug(f"Skipping {name} - low rating ({rating})")
                 continue
                 
             # Fallback coords from URL if present
@@ -145,13 +143,13 @@ async def extract_places_from_list(page: Page, city_name: str, internal_category
                 "website": "",
                 "opening_hours": "",
                 "wifi": "yes" if internal_category in ["coworking", "cafe"] else "unknown",
-                "quality": min(100, int((rating / 5.0) * 50 + min(50, review_count / 10))),
+                "quality": min(100, int((rating / 5.0) * 50)),
                 "cost_tier": 2,
                 "timezone": "UTC",
                 "visa": "unknown",
                 "osm_url": "",
                 "google_rating": rating,
-                "google_review_count": review_count,
+                "google_review_count": 0,
                 "google_maps_url": url.split('?')[0] if url else ""
             }
             places.append(place_data)
@@ -162,24 +160,20 @@ async def extract_places_from_list(page: Page, city_name: str, internal_category
     return places
 
 
-async def discover(city: str, category: str):
+async def discover(city: str, category: str, browser, semaphore: asyncio.Semaphore):
     """Main discovery workflow for a single city and category."""
-    internal_cat = category.lower()
-    if internal_cat not in CATEGORY_MAPPING:
-        log.error(f"Category must be one of: {list(CATEGORY_MAPPING.keys())}")
-        return
+    async with semaphore:
+        internal_cat = category.lower()
+        if internal_cat not in CATEGORY_MAPPING:
+            log.error(f"Category must be one of: {list(CATEGORY_MAPPING.keys())}")
+            return
+            
+        search_term = CATEGORY_MAPPING[internal_cat][0]
+        query = f"{search_term} in {city}"
+        search_url = f"https://www.google.com/maps/search/{query.replace(' ', '+')}"
         
-    search_term = CATEGORY_MAPPING[internal_cat][0]
-    query = f"{search_term} in {city}"
-    search_url = f"https://www.google.com/maps/search/{query.replace(' ', '+')}"
-    
-    log.info(f"Starting discovery for: '{query}'")
-    
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(
-            headless=True,
-            args=['--disable-dev-shm-usage', '--no-sandbox']
-        )
+        log.info(f"Starting discovery for: '{query}'")
+        
         context = await browser.new_context(
             viewport={"width": 1280, "height": 900},
             locale="en-US"
@@ -187,7 +181,7 @@ async def discover(city: str, category: str):
         page = await context.new_page()
         
         try:
-            await page.goto(search_url, timeout=20000, wait_until="domcontentloaded")
+            await page.goto(search_url, timeout=30000, wait_until="domcontentloaded")
             await page.wait_for_timeout(3000)
             
             # Accept cookies if prompted
@@ -197,18 +191,16 @@ async def discover(city: str, category: str):
                 await page.wait_for_timeout(1000)
             
             # The scrollable results container in Google Maps is role="feed"
-            log.info("Scrolling results to load all places...")
             await scroll_to_bottom(page, 'div[role="feed"]', max_scrolls=30)
             
             new_places = await extract_places_from_list(page, city, internal_cat)
-            log.info(f"Extracted {len(new_places)} high-quality places from results.")
+            log.info(f"[{city}] Extracted {len(new_places)} high-quality places.")
             
             if new_places:
-                # Merge into existing data
+                # Merge into existing data (using a lock for safety would be better, but we can do a quick read/write)
                 with open(DATA_PATH, 'r') as f:
                     data = json.load(f)
                     
-                # Prevent duplicates by checking name + city combination
                 existing_keys = {f"{p['name'].lower()}-{p['city'].lower()}" for p in data}
                 
                 added_count = 0
@@ -222,20 +214,42 @@ async def discover(city: str, category: str):
                 if added_count > 0:
                     with open(DATA_PATH, 'w') as f:
                         json.dump(data, f, separators=(',', ':'))
-                    log.info(f"Successfully added {added_count} NEW places to nomad-data.json!")
-                else:
-                    log.info("All extracted places were already in the database.")
+                    log.info(f"[{city}] Successfully added {added_count} NEW places!")
                     
         except Exception as e:
-            log.error(f"Discovery failed: {e}")
+            log.error(f"Discovery failed for {query}: {e}")
         finally:
-            await browser.close()
+            await context.close()
+
+
+async def run_all(cities: List[str], categories: List[str], max_workers: int = 30):
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(
+            headless=True,
+            args=['--disable-dev-shm-usage', '--no-sandbox', '--disable-gpu']
+        )
+        
+        semaphore = asyncio.Semaphore(max_workers)
+        tasks = []
+        
+        for city in cities:
+            for cat in categories:
+                tasks.append(discover(city, cat, browser, semaphore))
+                
+        log.info(f"Launching {len(tasks)} queries in parallel with {max_workers} max concurrency...")
+        await asyncio.gather(*tasks)
+        await browser.close()
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Discover new places via Google Maps')
-    parser.add_argument('--city', type=str, required=True, help='City to search in (e.g. "Chiang Mai, Thailand")')
-    parser.add_argument('--category', type=str, required=True, choices=list(CATEGORY_MAPPING.keys()), help='Category to search')
+    parser.add_argument('--cities', type=str, nargs='+', help='Cities to search in')
+    parser.add_argument('--categories', type=str, nargs='+', choices=list(CATEGORY_MAPPING.keys()), help='Categories to search')
+    parser.add_argument('--workers', type=int, default=30, help='Max parallel workers')
     
     args = parser.parse_args()
-    asyncio.run(discover(args.city, args.category))
+    
+    if args.cities and args.categories:
+        asyncio.run(run_all(args.cities, args.categories, args.workers))
+    else:
+        log.error("Please provide --cities and --categories")

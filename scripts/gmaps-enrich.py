@@ -268,7 +268,7 @@ def load_checkpoint() -> tuple[dict, set]:
     if CHECKPOINT_PATH.exists():
         with open(CHECKPOINT_PATH) as f:
             data = json.load(f)
-        results = {int(k): v for k, v in data.get('results', {}).items()}
+        results = {str(k): v for k, v in data.get('results', {}).items()}
         log.info(f"Resumed checkpoint: {len(results)} matches from previous run")
         return results, set(results.keys())
     return {}, set()
