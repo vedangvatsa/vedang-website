@@ -35,7 +35,6 @@ interface POI {
 }
 
 const CATEGORY_CONFIG: Record<string, { label: string; color: string; icon: typeof Building2 }> = {
-  coworking: { label: 'Coworking', color: '#3b82f6', icon: Building2 },
   coliving: { label: 'Coliving', color: '#8b5cf6', icon: Users },
   hostel: { label: 'Hostels', color: '#f59e0b', icon: Bed },
   apartment: { label: 'Apartments', color: '#10b981', icon: Home },
@@ -43,7 +42,6 @@ const CATEGORY_CONFIG: Record<string, { label: string; color: string; icon: type
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
-  coworking: '#3b82f6',
   coliving: '#8b5cf6',
   hostel: '#f59e0b',
   apartment: '#10b981',
