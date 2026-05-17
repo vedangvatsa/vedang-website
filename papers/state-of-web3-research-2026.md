@@ -1,7 +1,7 @@
 # Where Is Blockchain Research Going? A Quantitative Analysis of 100,024 Academic Documents (2013-2026)
 
-**Vedang Vatsa**
-vedang@vedangvatsa.com
+**Vedang Ratan Vatsa**
+vedangvats@gmail.com
 
 ## Abstract
 

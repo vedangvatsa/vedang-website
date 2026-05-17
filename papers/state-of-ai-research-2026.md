@@ -1,7 +1,7 @@
 # What 137,068 Papers Tell Us About the Direction of AI Research (2013-2026)
 
-**Vedang Vatsa**
-vedang@vedangvatsa.com
+**Vedang Ratan Vatsa**
+vedangvats@gmail.com
 
 ## Abstract
 
