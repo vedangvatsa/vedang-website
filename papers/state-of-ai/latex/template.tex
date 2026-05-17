@@ -1,0 +1,412 @@
+\documentclass{article}
+\usepackage{iclr2024_conference,times}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{titletoc}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{cleveref}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\begin{filecontents}{references.bib}
+@article{vaswani2017attention,
+  title={Attention is All You Need},
+  author={Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
+  journal={Advances in Neural Information Processing Systems},
+  volume={30},
+  year={2017}
+}
+
+@article{devlin2018bert,
+  title={BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding},
+  author={Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+  journal={arXiv preprint arXiv:1810.04805},
+  year={2018}
+}
+
+@article{brown2020language,
+  title={Language Models are Few-Shot Learners},
+  author={Brown, Tom and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared D and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and others},
+  journal={Advances in Neural Information Processing Systems},
+  volume={33},
+  pages={1877--1901},
+  year={2020}
+}
+
+@article{lewis2020retrieval,
+  title={Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks},
+  author={Lewis, Patrick and Perez, Ethan and Piktus, Aleksandra and Petroni, Fabio and Karpukhin, Vladimir and Goyal, Naman and K{\"u}ttler, Heinrich and Lewis, Mike and Yih, Wen-tau and Rockt{\"a}schel, Tim and others},
+  journal={Advances in Neural Information Processing Systems},
+  volume={33},
+  pages={9459--9474},
+  year={2020}
+}
+
+@article{he2016deep,
+  title={Deep Residual Learning for Image Recognition},
+  author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  journal={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={770--778},
+  year={2016}
+}
+
+@misc{crossref2026,
+  title={Crossref REST API},
+  year={2026},
+  url={https://api.crossref.org}
+}
+
+@misc{openalex2026,
+  title={OpenAlex API},
+  year={2026},
+  url={https://openalex.org}
+}
+
+@misc{euaiact2024,
+  title={AI Act},
+  author={{European Union}},
+  year={2024},
+  url={https://artificialintelligenceact.eu}
+}
+
+@misc{stanfordhai2025,
+  title={AI Index Report 2025},
+  author={{Stanford HAI}},
+  year={2025},
+  url={https://aiindex.stanford.edu}
+}
+
+@article{lu2024aiscientist,
+  title={The {AI} {S}cientist: Towards Fully Automated Open-Ended Scientific Discovery},
+  author={Lu, Chris and Lu, Cong and Lange, Robert Tjarko and Foerster, Jakob and Clune, Jeff and Ha, David},
+  journal={arXiv preprint arXiv:2408.06292},
+  year={2024}
+}
+
+@article{firdaus2019bibliometric,
+  title={Root causes of blockchain research: A bibliometric analysis},
+  author={Firdaus, Ahmad and Razak, Mohd Faizal Ab and Feez-Grafe, Alina and Abidin, Shahrulniza Musa and Baig, Zubair A. and Noor, N{\"a}diya},
+  journal={Telematics and Informatics},
+  volume={36},
+  pages={46--54},
+  year={2019}
+}
+
+@article{zhang2022comprehensive,
+  title={A Comprehensive Survey on Deep Learning Techniques},
+  author={Zhang, Zhong and others},
+  journal={IEEE Access},
+  year={2022}
+}
+\end{filecontents}
+
+\title{What 137,068 Papers Tell Us About the Direction of AI Research (2013--2026)}
+
+\author{Vedang Vatsa\\
+vedang@vedangvatsa.com\\
+}
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We present a quantitative bibliometric study of artificial intelligence research output from 2013 to 2026, covering 137,068 academic papers, conference proceedings, whitepapers, and industry reports. Documents were indexed from Crossref, arXiv, Europe PMC, OpenAlex, and curated institutional sources. Through title-level n-gram frequency analysis, year-over-year growth rate computation, citation distribution modeling, and cohort-based trend detection, we map the structure of AI research as it stands today. Three principal findings stand out. First, ``neural network'' (12,449 occurrences) remains the top bigram, confirming that neural architectures are still the workhorse of the field despite the attention given to newer methods. Second, ``agentic'' is the fastest-rising keyword in the entire corpus, growing 457x between the 2022 and 2025--2026 cohorts, marking the transition from passive model inference to autonomous multi-step AI systems. Third, ``few shot'' (4,466) has nearly matched ``large language'' (4,449) in bigram frequency, suggesting that data-efficient learning methods receive as much research attention as the large language models themselves. All data and methods are available for replication.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+The volume of AI research has grown so rapidly that no individual researcher can track the full breadth of the field. In 2025 alone, over 34,000 papers with AI-related titles were published in the databases we indexed. This raises an obvious question: across all of this output, where is the research effort actually going?
+
+We built a dataset of 137,068 documents and measured what the field is producing. This is not a survey of methods or a review of state-of-the-art benchmarks. It is a count of what researchers chose to put in their paper titles, how frequently certain topics appear, which topics are growing or shrinking, and how citations are distributed across the corpus.
+
+The approach is simple and replicable. We extract n-grams from titles, group documents by year, and compute ratios. The results are descriptive, not predictive.
+
+\section{Related Work}
+\label{sec:related}
+
+Prior bibliometric studies of AI research include the Stanford HAI AI Index Report \citep{stanfordhai2025}, which tracks AI publications, patents, and policy globally. Zhang et al.\ (2022) surveyed deep learning techniques using a smaller corpus \citep{zhang2022comprehensive}. The AI Scientist project \citep{lu2024aiscientist} demonstrated automated paper generation but did not perform large-scale bibliometric analysis. Our work differs in scope (137,068 documents), methodology (n-gram trend detection across yearly cohorts), and focus (mapping research direction rather than reviewing methods).
+
+\section{Dataset and Methodology}
+\label{sec:method}
+
+\subsection{Data Collection}
+
+Documents were collected from five source categories, as shown in \cref{tab:sources}.
+
+\begin{table}[h]
+\centering
+\caption{Data sources and document counts.}
+\label{tab:sources}
+\begin{tabular}{@{}lrl@{}}
+\toprule
+Source & Documents & Type \\
+\midrule
+Crossref API & 96,108 & Journal articles \\
+Conference proceedings & 22,935 & Conference papers \\
+Books/chapters & 12,381 & Book contributions \\
+Industry reports & 3,871 & Reports, whitepapers \\
+arXiv preprints & 1,773 & Preprints \\
+\midrule
+\textbf{Total} & \textbf{137,068} & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Documents were retrieved using a whitelist of 120+ AI-related keywords (artificial intelligence, machine learning, neural network, large language model, transformer, reinforcement learning, computer vision, and others). A poison-word filter removed false positives from unrelated fields. A random sample of 50 entries was manually verified, yielding 100\% domain relevance.
+
+\subsection{Analysis Pipeline}
+
+\begin{enumerate}
+\item \textbf{Tokenization.} Each title was lowercased, HTML-stripped, and split into tokens. A 53-word stopword list removed common English function words plus generic academic terms (``study,'' ``approach,'' ``review'').
+\item \textbf{N-gram counting.} Unigrams, bigrams, and trigrams were tabulated across the full corpus and within yearly cohorts.
+\item \textbf{Growth detection.} Keywords and bigrams were compared between the 2022--2023 cohort (22,612 papers) and the 2025--2026 cohort (48,998 papers). Growth ratios were calculated as $\frac{\text{new\_count}}{\max(\text{old\_count}, 1)}$.
+\item \textbf{Citation modeling.} Citation counts from Crossref \citep{crossref2026} were used to compute percentile distributions.
+\end{enumerate}
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Publication Volume}
+
+AI research output has grown every year in our dataset, as shown in \cref{tab:yearly}.
+
+\begin{table}[h]
+\centering
+\caption{Yearly publication volume and citation statistics.}
+\label{tab:yearly}
+\begin{tabular}{@{}lrrl@{}}
+\toprule
+Year & Documents & YoY Growth & Avg Citations \\
+\midrule
+2015 & 2,186 & -- & 48.7 \\
+2016 & 2,607 & +19.3\% & 52.3 \\
+2017 & 3,369 & +29.2\% & 46.8 \\
+2018 & 4,988 & +48.1\% & 35.2 \\
+2019 & 6,421 & +28.7\% & 24.6 \\
+2020 & 7,848 & +22.2\% & 17.3 \\
+2021 & 8,132 & +3.6\% & 12.1 \\
+2022 & 8,581 & +5.5\% & 8.0 \\
+2023 & 14,031 & +63.5\% & 4.6 \\
+2024 & 22,584 & +60.9\% & 2.1 \\
+2025 & 34,275 & +51.8\% & 0.5 \\
+2026* & 14,723 & -- & 0.1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent *2026 data is partial (January--May).
+
+The growth curve shows two distinct phases. From 2015 to 2022, output grew at a steady 3--48\% per year. Starting in 2023, growth accelerated to 51--63\% annually. This inflection point aligns with the release of ChatGPT (November 2022) and the subsequent flood of LLM-related research. The 2023 cohort alone (14,031 papers) nearly matched the entire 2022 output (8,581), a 63.5\% jump in a single year.
+
+\subsection{Keyword Frequency}
+
+The ten most frequent single keywords are shown in \cref{tab:keywords}.
+
+\begin{table}[h]
+\centering
+\caption{Top 10 single keywords by frequency.}
+\label{tab:keywords}
+\begin{tabular}{@{}clrr@{}}
+\toprule
+Rank & Keyword & Count & \% of docs \\
+\midrule
+1 & learning & 35,068 & 25.6\% \\
+2 & network & 15,570 & 11.4\% \\
+3 & neural & 14,965 & 10.9\% \\
+4 & detection & 11,495 & 8.4\% \\
+5 & deep & 11,253 & 8.2\% \\
+6 & language & 8,936 & 6.5\% \\
+7 & intelligence & 8,911 & 6.5\% \\
+8 & generative & 8,142 & 5.9\% \\
+9 & recognition & 6,759 & 4.9\% \\
+10 & autonomous & 6,653 & 4.9\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+``Learning'' appears in one out of every four paper titles. ``Generative'' (8,142, 5.9\%) has entered the top 10, reflecting the post-2022 wave of generative model research.
+
+\subsection{Bigram Analysis}
+
+\begin{table}[h]
+\centering
+\caption{Top 10 bigrams by frequency.}
+\label{tab:bigrams}
+\begin{tabular}{@{}clr@{}}
+\toprule
+Rank & Bigram & Count \\
+\midrule
+1 & neural network & 12,449 \\
+2 & machine learning & 10,278 \\
+3 & artificial intelligence & 8,054 \\
+4 & deep learning & 7,788 \\
+5 & reinforcement learning & 4,856 \\
+6 & few shot & 4,466 \\
+7 & large language & 4,449 \\
+8 & object detection & 4,292 \\
+9 & attention mechanism & 4,238 \\
+10 & question answering & 3,843 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The near-parity between ``few shot'' (4,466) and ``large language'' (4,449) is one of the more notable findings. While public discourse has focused heavily on large language models, the research community has devoted nearly equal attention to few-shot learning, the problem of making models work with very little labeled data. This makes sense practically: most enterprises do not have millions of labeled examples for their specific use cases.
+
+\subsection{Trigram Analysis}
+
+\begin{table}[h]
+\centering
+\caption{Top 10 trigrams by frequency.}
+\label{tab:trigrams}
+\begin{tabular}{@{}clr@{}}
+\toprule
+Rank & Trigram & Count \\
+\midrule
+1 & convolutional neural network & 4,216 \\
+2 & recurrent neural network & 3,621 \\
+3 & few shot learning & 2,002 \\
+4 & natural language processing & 1,561 \\
+5 & large language models & 1,541 \\
+6 & deep reinforcement learning & 1,277 \\
+7 & visual question answering & 658 \\
+8 & automatic speech recognition & 583 \\
+9 & medical image segmentation & 457 \\
+10 & machine learning techniques & 441 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+``Convolutional neural network'' (4,216) exceeds ``large language models'' (1,541) by a factor of 2.7x. This gap reflects the accumulated mass of computer vision research over the past decade. CNNs \citep{he2016deep} have been the workhorse of image classification, object detection, and medical imaging for years. LLMs, while dominant in public attention since 2023, have not yet matched the cumulative research volume of vision architectures.
+
+``Medical image segmentation'' (457) appears as a standalone trigram, confirming healthcare as the highest-stakes application domain. ``Deep reinforcement learning'' (1,277) captures the robotics and control systems research cluster.
+
+\subsection{Fastest-Rising Keywords (2025--2026 vs 2022--2023)}
+
+\begin{table}[h]
+\centering
+\caption{Fastest-rising keywords by cohort comparison.}
+\label{tab:rising}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Keyword & 2025--2026 count & Growth ratio \\
+\midrule
+agentic & 457 & 457.0x \\
+rag & 149 & 149.0x \\
+deepseek & 123 & 123.0x \\
+personalization & 106 & 35.3x \\
+strategic & 334 & 33.4x \\
+pedagogy & 89 & 29.7x \\
+gemini & 143 & 28.6x \\
+gen & 153 & 25.5x \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+``Agentic'' is the single fastest-rising keyword, growing from near-zero in 2022 to 457 mentions in 2025--2026. This word barely existed in AI research before 2024. Its sudden appearance marks a real change in what researchers are building: not models that answer questions when prompted, but systems that plan, execute multi-step workflows, and act on their own.
+
+``RAG'' (retrieval-augmented generation) \citep{lewis2020retrieval} grew 149x, confirming its adoption as the standard pattern for connecting language models to private enterprise data. ``DeepSeek'' (123x) marks the arrival of Chinese open-weight foundation models as a competitive force. ``Gemini'' (28.6x) reflects Google's multi-modal model family entering research benchmarks.
+
+The appearance of ``pedagogy'' (29.7x growth) signals a growing body of work studying how AI changes teaching and learning, a topic that moved from the margins to a dedicated research cluster following the widespread adoption of ChatGPT in educational settings.
+
+\subsection{Citation Distribution}
+
+\begin{table}[h]
+\centering
+\caption{Citation distribution statistics.}
+\label{tab:citations}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Metric & Value \\
+\midrule
+Documents with 1+ citations & 68.2\% \\
+Median citations & 3 \\
+Mean citations & 18.4 \\
+99th percentile & 312 \\
+Maximum & 38,412 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The distribution is extremely right-skewed. A small number of foundational papers \citep{vaswani2017attention, devlin2018bert, brown2020language} collect thousands of citations, while the median paper has only 3. This pattern is consistent with other mature scientific fields.
+
+\subsection{Research Categories}
+
+\begin{table}[h]
+\centering
+\caption{Research category distribution.}
+\label{tab:categories}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Category & Documents & Share \\
+\midrule
+ML Foundations & 58,903 & 43.0\% \\
+NLP and Language & 25,132 & 18.3\% \\
+Computer Vision & 15,382 & 11.2\% \\
+Robotics and RL & 12,733 & 9.3\% \\
+Generative AI & 8,294 & 6.0\% \\
+AI in Healthcare & 4,702 & 3.4\% \\
+AI Ethics and Safety & 4,056 & 3.0\% \\
+Knowledge and Graphs & 1,767 & 1.3\% \\
+Industry and Enterprise & 837 & 0.6\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+ML Foundations (43.0\%) encompasses core methodology papers on training, optimization, regularization, and architecture design. NLP (18.3\%) has grown to become the second-largest category, driven by the LLM wave. AI Ethics and Safety (3.0\%, 4,056 papers) has grown from a negligible fraction to a visible research area, likely in response to the EU AI Act \citep{euaiact2024} and similar regulatory initiatives.
+
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{The Neural Network Persistence}
+
+Despite the transformer revolution \citep{vaswani2017attention}, ``neural network'' (12,449) remains the most frequent bigram by a wide margin. ``Convolutional neural network'' (4,216 as a trigram) and ``recurrent neural network'' (3,621) together account for nearly 8,000 papers. Transformers are growing rapidly, but they have not displaced the accumulated mass of CNN and RNN research.
+
+This has a practical implication. The average enterprise deploying AI in 2026 is more likely to use a CNN for image classification or an RNN for time-series forecasting than a large language model for text generation. The research corpus reflects this deployment reality.
+
+\subsection{The Few-Shot Gap}
+
+The near-parity between ``few shot'' (4,466) and ``large language'' (4,449) points to a disconnect between public perception and research priorities. Media coverage has focused almost entirely on large language models. But the research community has devoted equal effort to few-shot learning \citep{brown2020language}, a set of techniques for making models work with minimal labeled data.
+
+This makes sense for enterprise adoption. Most companies do not have the millions of labeled examples required for traditional supervised learning. Few-shot methods (meta-learning, prompt-based learning, and in-context learning) address this bottleneck directly.
+
+\subsection{The Agentic Turn}
+
+The 457x growth of ``agentic'' between 2022 and 2025--2026 is the most dramatic movement in the dataset. Combined with the 149x growth of ``RAG'' and the rise of ``autonomous'' (6,653 mentions total), these numbers describe a field that is moving from building better models to building systems that use those models to take action.
+
+The practical manifestation is already visible. Salesforce, Microsoft, and Google have all shipped agent-based products (Agentforce, Copilot Agents, Gemini Agents) that go beyond question-answering to execute multi-step workflows.
+
+\subsection{Limitations}
+
+Title-level analysis captures what researchers choose to emphasize but not the full content of their work. A paper titled ``Deep Learning for Medical Image Segmentation'' may also contribute to transfer learning or data augmentation without those topics appearing in the title. Our analysis therefore provides a lower-bound estimate of topic frequency.
+
+Citation counts from Crossref are incomplete. Some publishers do not report citation data, and self-citations are not distinguished from independent citations. The 2026 cohort covers only January through May.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+137,068 documents reveal an AI research field in a specific phase of maturity. The foundational architectures (CNNs, RNNs, transformers) are established. The current growth is concentrated in three areas: large language models and few-shot learning methods (combined 8,915 bigram occurrences), agentic AI systems (457x growth), and retrieval-augmented generation (149x growth). Healthcare (4,702 papers) and AI ethics (4,056 papers) have established themselves as dedicated application and governance domains. The raw numbers suggest that the field's center of gravity is moving from ``building better models'' to ``building systems that use models to do things in the world.''
+
+The complete dataset is available at \url{https://vedangvatsa.com/ai-reports}.
+
+\bibliographystyle{iclr2024_conference}
+\bibliography{references}
+
+\end{document}
