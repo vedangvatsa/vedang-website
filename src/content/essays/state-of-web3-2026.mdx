@@ -3,40 +3,50 @@ title: "The State of Web3 in 2026"
 date: "2026-05-15"
 author: "Vedang Vatsa"
 category: "Web3"
-summary: "A data-driven analysis of 98,000+ research papers, whitepapers, consulting reports, and regulatory filings tracking the trajectory of blockchain, DeFi, and decentralized infrastructure in 2026."
+summary: "A data-driven analysis of 100,000+ research papers, whitepapers, consulting reports, and regulatory filings tracking the trajectory of blockchain, DeFi, and decentralized infrastructure in 2026."
 ---
 
 <Callout type="insight" title="Methodology">
-This report draws from a dataset of **98,960 academic papers, whitepapers, consulting reports, standards, and regulatory filings** indexed from Crossref, arXiv, Europe PMC, OpenAlex, and curated institutional sources including McKinsey, Deloitte, a16z, Chainalysis, BIS, and NIST. N-gram frequency analysis was performed across all document titles to surface dominant themes. Every statistic cited references publicly verifiable sources: SEC filings, on-chain data from Dune Analytics and DefiLlama, or official company disclosures.
+This report draws from a dataset of **100,044 academic papers, whitepapers, consulting reports, standards, and regulatory filings** indexed from Crossref, arXiv, Europe PMC, OpenAlex, and curated institutional sources including McKinsey, Deloitte, a16z, Chainalysis, BIS, and NIST. N-gram frequency analysis was performed across all document titles to surface dominant themes. Every statistic cited references publicly verifiable sources: SEC filings, on-chain data from Dune Analytics and DefiLlama, or official company disclosures.
 </Callout>
 
 ## 1. Where the Research Focus Is
 
-Before interpreting what is happening in Web3, it is worth looking at what researchers and analysts are actually writing about. The title-level keyword analysis across the full 98,960-document corpus reveals clear priorities.
+Before interpreting what is happening in Web3, it is worth looking at what researchers and analysts are actually writing about. The title-level keyword analysis across the full 100,044-document corpus reveals clear priorities.
 
 **Single keyword frequency across document titles:**
 
 <StateOfWeb3KeywordsChart />
 
-**"Blockchain"** (53,951 mentions) dominates over more specific terms like "bitcoin" (6,022) or "digital" (5,572). Researchers are studying the underlying technology, its applications to supply chain, healthcare, identity, and IoT, rather than the speculative financial instruments that dominated 2021 and 2022 discourse. **"Smart contracts"** (7,910 including "smart" as keyword) and **"decentralized"** (12,897) confirm that programmable execution layers and distributed architectures are now standard research subjects.
+**"Blockchain"** (54,780 mentions) dominates over more specific terms like "bitcoin" (6,024) or "cryptocurrency" (5,116). Researchers are studying the underlying technology, its applications to supply chain, healthcare, identity, and IoT, rather than the speculative financial instruments that dominated 2021 and 2022 discourse. **"Smart"** (8,043, primarily "smart contracts") and **"decentralized"** (12,897) confirm that programmable execution layers and distributed architectures are now standard research subjects. **"IoT"** (5,521) and **"security"** (5,702) round out the top tier, pointing to blockchain's growing role in device networks and data integrity.
 
 **Two-word phrase frequency:**
 
 <StateOfWeb3BigramsChart />
 
 <StatRow>
-  <Stat label="Documents Analyzed" value="98,960" trend="up" />
+  <Stat label="Documents Analyzed" value="100,044" trend="up" />
   <Stat label="Top Bigram" value="Blockchain Technology" />
   <Stat label="Top Application" value="Supply Chain" />
 </StatRow>
 
-Three patterns stand out from the bigram data:
+Five patterns stand out from the bigram and trigram data:
 
-- **"Blockchain technology"** (7,971) is the most frequent bigram, followed by **"blockchain enabled"** (2,236). The phrasing points to integration. Researchers are studying blockchain as a component within larger systems, not as a standalone product.
-- **"Smart contract(s)"** (5,065 combined) as a bigram confirms the maturation of the execution layer from experimental to production infrastructure.
-- **"Supply chain"** (3,973) is the largest non-financial application vector, reflecting enterprise adoption driven by traceability, provenance, and anti-counterfeiting use cases. Walmart, Maersk (through TradeLens, now sunset), and De Beers (through Tracr) are among the enterprises that piloted blockchain-based supply chain tracking.
-- **"Zero knowledge"** (1,874) has emerged as a major research theme, reflecting the growth of ZK-rollups and privacy-preserving protocols since 2023.
-- **"Central bank"** (1,026) and **"digital currency"** (1,251) together highlight the institutional pivot toward CBDCs and regulated digital money.
+- **"Blockchain technology"** (8,181) is the most frequent bigram, followed by **"blockchain enabled"** (2,313). The phrasing points to integration. Researchers treat blockchain as a component within larger systems, not as a standalone product.
+- **"Smart contract(s)"** (5,103 combined) as a bigram confirms the maturation of the execution layer from experimental to production infrastructure. **"Smart contract vulnerability"** (288 as a trigram) shows that security auditing of contract code is now a dedicated research subfield.
+- **"Supply chain"** (3,960) is the largest non-financial application vector. The trigram **"supply chain management"** (1,036) is the single most frequent three-word phrase in the entire corpus. Walmart, Maersk (through TradeLens, now sunset), and De Beers (through Tracr) are among the enterprises that piloted blockchain-based supply chain tracking.
+- **"Privacy preserving"** (1,342) and **"federated learning"** (1,712) reveal a convergence between blockchain and privacy-aware machine learning. The trigram **"blockchain federated learning"** (382) shows researchers are building systems where blockchain coordinates distributed ML training without centralizing data.
+- **"Central bank digital"** (959 as a trigram) and **"digital currency"** (1,275) together highlight the institutional pivot toward CBDCs. The complete phrase **"central bank digital currency"** appears as a distinct research category across the corpus.
+
+### Emerging trends (2025-2026 vs 2022-2023)
+
+Comparing keyword frequency between the 2025-2026 papers and the 2022-2023 papers reveals which topics are accelerating:
+
+- **"Tokenized"** grew 5.6x, reflecting the real-world asset tokenization wave.
+- **"Transparency"** grew 5.4x (701 mentions in 2025-2026 alone), driven by regulatory demand and on-chain auditing.
+- **"Resilient"** grew 5.8x (152 mentions), indicating a shift from performance optimization to fault tolerance and security hardening.
+- **"LLM"** in Web3 contexts grew 50x (100 mentions), showing early-stage convergence between large language models and blockchain applications.
+- **"Transformer"** grew 5.8x (81 mentions), as attention-based architectures enter blockchain analytics and smart contract analysis.
 
 ---
 
@@ -258,8 +268,8 @@ Monthly NFT trading volumes collapsed from a peak of $5 billion (January 2022) t
   <Stat label="DeFi TVL" value="$180B" trend="up" />
 </StatRow>
 
-Across 98,960 documents, the data points in one direction: blockchain infrastructure is being absorbed into enterprise and financial systems. Stablecoins have reached payment volume parity with Visa. Tokenized assets are managed by the world's largest asset managers. Bitcoin has a regulated ETF product. DeFi protocols generate auditable revenue.
+Across 100,044 documents, the data points in one direction: blockchain infrastructure is being absorbed into enterprise and financial systems. Stablecoins have reached payment volume parity with Visa. Tokenized assets are managed by the world's largest asset managers. Bitcoin has a regulated ETF product. DeFi protocols generate auditable revenue.
 
-The research corpus tells a story about integration, not disruption. "Blockchain technology," the most frequent bigram, is a phrase that places blockchain as a component within existing systems, not a replacement for them.
+The research corpus tells a story about integration, not disruption. "Blockchain technology" (8,181 occurrences) is the most frequent bigram, a phrasing that places blockchain as a component within existing systems. The fastest-growing research areas, tokenized assets (5.6x growth), transparency frameworks (5.4x), and resilient infrastructure (5.8x), all point to institutional absorption rather than disruption. The convergence of blockchain with federated learning (1,712 mentions) and privacy-preserving computation (1,342 mentions) indicates a maturing stack where data sovereignty and compliance are engineered into the protocol layer.
 
 *The full dataset is available in the [Web3 Reports Library](/web3-reports).*

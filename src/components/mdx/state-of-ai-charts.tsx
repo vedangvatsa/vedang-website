@@ -1,36 +1,32 @@
+'use client';
+
 export function StateOfAiKeywordsChart() {
-  const data = [
-    { label: "systems", value: 5790, color: "bg-blue-500" },
-    { label: "framework", value: 5423, color: "bg-indigo-500" },
-    { label: "digital", value: 3254, color: "bg-purple-500" },
-    { label: "clinical", value: 2621, color: "bg-teal-500" },
-    { label: "accuracy", value: 2545, color: "bg-emerald-500" },
-  ];
-
-  const max = Math.max(...data.map(d => d.value));
-
   return (
-    <div className="my-8 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-6 shadow-sm">
-      <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-slate-50">Deep-Text Keyword Frequency</h3>
-      <p className="mb-6 text-sm text-slate-500 dark:text-slate-400">
-        Top single keywords extracted from the full abstract body text of 10,264 documents.
-      </p>
-      
+    <div className="my-8 rounded-xl border border-border/50 bg-card p-6 shadow-sm overflow-hidden">
       <div className="space-y-4">
-        {data.map((item, i) => (
-          <div key={i} className="flex items-center gap-4">
-            <div className="w-24 text-right text-sm font-medium text-slate-700 dark:text-slate-300">
+        {[
+          { label: "learning", value: 35068, color: "bg-blue-500" },
+          { label: "network", value: 15570, color: "bg-indigo-500" },
+          { label: "neural", value: 14965, color: "bg-purple-500" },
+          { label: "detection", value: 11495, color: "bg-teal-500" },
+          { label: "deep", value: 11253, color: "bg-emerald-500" },
+          { label: "language", value: 8936, color: "bg-cyan-500" },
+          { label: "intelligence", value: 8911, color: "bg-rose-500" },
+          { label: "generative", value: 8142, color: "bg-amber-500" },
+        ].map((item, i) => (
+          <div key={i} className="flex items-center gap-3">
+            <div className="w-28 text-right text-sm font-medium text-muted-foreground">
               {item.label}
             </div>
             <div className="flex-1">
-              <div className="relative h-6 w-full rounded-full bg-slate-100 dark:bg-slate-900 overflow-hidden">
+              <div className="relative h-6 w-full rounded-full bg-secondary overflow-hidden">
                 <div 
                   className={`absolute left-0 top-0 h-full rounded-full ${item.color} transition-all duration-1000 ease-out`}
-                  style={{ width: `${(item.value / max) * 100}%` }}
+                  style={{ width: `${(item.value / 35068) * 100}%` }}
                 />
               </div>
             </div>
-            <div className="w-16 text-xs font-semibold text-slate-600 dark:text-slate-400">
+            <div className="w-16 text-xs font-semibold text-foreground text-right tabular-nums">
               {item.value.toLocaleString()}
             </div>
           </div>
@@ -41,42 +37,33 @@ export function StateOfAiKeywordsChart() {
 }
 
 export function StateOfAiBigramsChart() {
-  const data = [
-    { label: "Large Language", value: 750, color: "bg-blue-500" },
-    { label: "Mental Health", value: 310, color: "bg-indigo-500" },
-    { label: "Digital Transform", value: 298, color: "bg-purple-500" },
-    { label: "Supply Chain", value: 287, color: "bg-teal-500" },
-    { label: "Higher Education", value: 282, color: "bg-emerald-500" },
-    { label: "Natural Language", value: 277, color: "bg-cyan-500" },
-    { label: "Public Health", value: 249, color: "bg-rose-500" },
-    { label: "RAG", value: 228, color: "bg-amber-500" },
-  ];
-
-  const max = Math.max(...data.map(d => d.value));
-
   return (
-    <div className="my-8 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-6 shadow-sm">
-      <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-slate-50">Emerging Operational Trends (Bigrams)</h3>
-      <p className="mb-6 text-sm text-slate-500 dark:text-slate-400">
-        Top two-word phrases found within the deep text of the 10,264 documents analyzed.
-      </p>
-      
+    <div className="my-8 rounded-xl border border-border/50 bg-card p-6 shadow-sm overflow-hidden">
       <div className="space-y-4">
-        {data.map((item, i) => (
-          <div key={i} className="flex items-center gap-4">
-            <div className="w-32 text-right text-sm font-medium text-slate-700 dark:text-slate-300">
+        {[
+          { label: "neural network", value: 12449, color: "bg-blue-500" },
+          { label: "machine learning", value: 10278, color: "bg-indigo-500" },
+          { label: "artificial intelligence", value: 8054, color: "bg-purple-500" },
+          { label: "deep learning", value: 7788, color: "bg-teal-500" },
+          { label: "reinforcement learning", value: 4856, color: "bg-emerald-500" },
+          { label: "few shot", value: 4466, color: "bg-cyan-500" },
+          { label: "large language", value: 4449, color: "bg-rose-500" },
+          { label: "object detection", value: 4292, color: "bg-amber-500" },
+        ].map((item, i) => (
+          <div key={i} className="flex items-center gap-3">
+            <div className="w-44 text-right text-sm font-medium text-muted-foreground">
               {item.label}
             </div>
             <div className="flex-1">
-              <div className="relative h-6 w-full rounded-full bg-slate-100 dark:bg-slate-900 overflow-hidden">
+              <div className="relative h-6 w-full rounded-full bg-secondary overflow-hidden">
                 <div 
                   className={`absolute left-0 top-0 h-full rounded-full ${item.color} transition-all duration-1000 ease-out`}
-                  style={{ width: `${(item.value / max) * 100}%` }}
+                  style={{ width: `${(item.value / 12449) * 100}%` }}
                 />
               </div>
             </div>
-            <div className="w-12 text-xs font-semibold text-slate-600 dark:text-slate-400">
-              {item.value}
+            <div className="w-16 text-xs font-semibold text-foreground text-right tabular-nums">
+              {item.value.toLocaleString()}
             </div>
           </div>
         ))}
