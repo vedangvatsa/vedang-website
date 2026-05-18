@@ -131,6 +131,9 @@ jobs:
           HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
           HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
 
+      - name: Pull latest changes before commit
+        run: git pull --rebase origin main || true
+
       - name: Commit updated post files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
