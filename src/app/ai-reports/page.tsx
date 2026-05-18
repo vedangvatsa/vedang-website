@@ -44,7 +44,7 @@ export default async function AIReportsPage({
             {aiReports.length.toLocaleString()}+ research papers, institutional reports, and industry analyses. Each entry links directly to a verified DOI or academic repository.
           </p>
           <p className="mt-4 text-sm text-muted-foreground">
-            Read the full synthesis: <Link href="/state-of-ai-2026" className="text-primary hover:underline font-medium">The State of AI in 2026 →</Link>
+            Read the full synthesis: <Link href="/state-of-ai" className="text-primary hover:underline font-medium">The State of AI →</Link>
           </p>
         </div>
       </section>
