@@ -55,8 +55,9 @@
     "image": "scripts/thread-assets/psych_pygmalion.png",
     "scheduleDate": "2026-03-27",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x3170bc89956c1a986673a7a509a2140937caf2fa",
+    "postedAt": "2026-05-18T20:13:18.811Z"
   },
   {
     "id": "psych-halo",

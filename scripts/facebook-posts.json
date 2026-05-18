@@ -705,9 +705,11 @@
     "id": "reddit-meme-3",
     "scheduleDate": "2026-05-14",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The most important skill for a senior engineer is not knowing the answer.\n\nIt is knowing exactly how to find it.",
-    "image": "scripts/thread-assets/linkedin-rewrites/important_skill.jpg"
+    "image": "scripts/thread-assets/linkedin-rewrites/important_skill.jpg",
+    "postedAt": "2026-05-18T20:13:15.564Z",
+    "fbPostId": "1785048661795414_1285560940420614"
   },
   {
     "id": "reddit-meme-4",
