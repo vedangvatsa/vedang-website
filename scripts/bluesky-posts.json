@@ -843,7 +843,9 @@
     "image": "scripts/thread-assets/reddit-memes/reddit-6.png",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "postedAt": "2026-05-18T12:49:00.248Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mm4vyckmry2y"
   },
   {
     "id": "reddit-ai-work-more",

@@ -45,8 +45,9 @@
     "image": "scripts/thread-assets/psych_contagion.png",
     "scheduleDate": "2026-03-26",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0xeb2156fce0eb223afad1a1476c7838baac1988fe",
+    "postedAt": "2026-05-18T12:49:15.772Z"
   },
   {
     "id": "psych-pygmalion",
