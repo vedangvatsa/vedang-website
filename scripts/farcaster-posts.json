@@ -35,8 +35,9 @@
     "image": "scripts/thread-assets/psych_cbt.png",
     "scheduleDate": "2026-03-26",
     "scheduleTime": "04:57",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x80baf37aa01b6310d7b14696b3d9650b196fff1a",
+    "postedAt": "2026-05-18T05:01:00.714Z"
   },
   {
     "id": "psych-contagion",
