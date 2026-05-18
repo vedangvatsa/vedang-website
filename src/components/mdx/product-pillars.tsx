@@ -11,7 +11,7 @@ const pillars = [
     bg: 'bg-red-500/5 border-red-500/20',
     iconBg: 'bg-red-500/10',
     items: [
-      'Never hardcode API keys — use env variables',
+      'Never hardcode API keys - use env variables',
       'Always hash passwords before storing',
       'Validate all data on the server, never trust the browser',
     ],
@@ -24,9 +24,9 @@ const pillars = [
     bg: 'bg-emerald-500/5 border-emerald-500/20',
     iconBg: 'bg-emerald-500/10',
     items: [
-      'SaaS — Solve a niche problem, charge monthly',
-      'Marketplace — Build plugins for Shopify, Slack, etc.',
-      'Freelancing — Ship prototypes in days, not months',
+      'SaaS - Solve a niche problem, charge monthly',
+      'Marketplace - Build plugins for Shopify, Slack, etc.',
+      'Freelancing - Ship prototypes in days, not months',
     ],
   },
   {

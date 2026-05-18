@@ -94,7 +94,7 @@ export function PullQuote({ children, author }: { children: React.ReactNode; aut
       <blockquote className="text-lg md:text-xl font-medium italic text-foreground/80 leading-relaxed">
         {children}
       </blockquote>
-      {author && <cite className="mt-2 block text-sm text-muted-foreground not-italic">— {author}</cite>}
+      {author && <cite className="mt-2 block text-sm text-muted-foreground not-italic"> - {author}</cite>}
     </div>
   );
 }

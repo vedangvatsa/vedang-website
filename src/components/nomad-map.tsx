@@ -394,7 +394,7 @@ export function NomadMap({ data }: { data: POI[] }) {
                         )}
                       </div>
                     ) : (
-                      <span className="text-muted-foreground text-xs">—</span>
+                      <span className="text-muted-foreground text-xs"> - </span>
                     )}
                   </td>
                   <td className="px-4 py-2.5">

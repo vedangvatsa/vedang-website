@@ -4,7 +4,7 @@ import { PageLayout } from '@/components/page-layout';
 import nomadData from '@/lib/nomad-data.json';
 
 export const metadata: Metadata = {
-  title: 'Digital Nomad Directory — Coliving & Stays in 74 Cities',
+  title: 'Digital Nomad Directory - Coliving & Stays in 74 Cities',
   description: 'Interactive directory of 3,400+ coliving houses, hostels, apartments, and guesthouses across 74 digital nomad cities in 47 countries. Quality-scored, open-source data.',
   keywords: ['digital nomad', 'coliving', 'remote work', 'nomad directory', 'hostel', 'apartment'],
   alternates: { canonical: '/nomad' },

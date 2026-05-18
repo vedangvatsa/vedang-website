@@ -22,7 +22,7 @@ export function InternetOfThingsIotVisualizer() {
           ))}
         </div>
         <div className="mt-6 bg-slate-100 rounded-xl p-4 text-center text-sm text-slate-600">
-          {activeNode !== null ? `${nodes[activeNode]} communicates directly with all other peers — no central server needed.` : "Click a node to see its peer connections."}
+          {activeNode !== null ? `${nodes[activeNode]} communicates directly with all other peers - no central server needed.` : "Click a node to see its peer connections."}
         </div>
       </div>
     </div>

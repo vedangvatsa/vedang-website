@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 export function DepinNetworksVisualizer() {
   const [step, setStep] = useState(0);
-  const steps = ["A protocol needs physical infrastructure (WiFi hotspots, sensors, GPUs).","Token rewards incentivize individuals to deploy and maintain hardware.","The network grows organically — each contributor earns proportional rewards.","Examples: Helium (wireless), Render (GPU), Hivemapper (maps)."];
+  const steps = ["A protocol needs physical infrastructure (WiFi hotspots, sensors, GPUs).","Token rewards incentivize individuals to deploy and maintain hardware.","The network grows organically - each contributor earns proportional rewards.","Examples: Helium (wireless), Render (GPU), Hivemapper (maps)."];
 
   return (
     <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">

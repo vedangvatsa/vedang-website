@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 export function ProofOfHistoryPohVisualizer() {
   const [step, setStep] = useState(0);
-  const steps = ["Hash₁ = SHA256(\"genesis\")","Hash₂ = SHA256(Hash₁) — provably created AFTER Hash₁","Hash₃ = SHA256(Hash₂) — the chain proves ordering without timestamps","Each hash is a cryptographic proof that time has passed."];
+  const steps = ["Hash₁ = SHA256(\"genesis\")","Hash₂ = SHA256(Hash₁) - provably created AFTER Hash₁","Hash₃ = SHA256(Hash₂) - the chain proves ordering without timestamps","Each hash is a cryptographic proof that time has passed."];
 
   return (
     <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">

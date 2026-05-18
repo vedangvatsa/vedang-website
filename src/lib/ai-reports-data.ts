@@ -81,7 +81,7 @@ const curatedReports: AIReport[] = [
   {title:'International AI Safety Report',source:'AI Seoul Summit',url:'https://www.gov.uk/government/publications/international-ai-safety-report',date:'May 2025',category:'AI Research',type:'Report'},
 
   // ── Workforce & Labor ──
-  {title:'Future of Jobs Report 2025',source:'World Economic Forum',url:'https://www.weforum.org/publications/the-future-of-jobs-report-2025/',date:'Jan 2025',category:'Society & Labor',type:'Report',description:'92M jobs displaced, 170M created by 2030 — net gain of 78M.'},
+  {title:'Future of Jobs Report 2025',source:'World Economic Forum',url:'https://www.weforum.org/publications/the-future-of-jobs-report-2025/',date:'Jan 2025',category:'Society & Labor',type:'Report',description:'92M jobs displaced, 170M created by 2030 - net gain of 78M.'},
   {title:'Generative AI and the Future of Work',source:'ILO',url:'https://www.ilo.org/publications',date:'2025',category:'Society & Labor',type:'Paper'},
   {title:'The Agent Revolution: Workforce Impact',source:'McKinsey Global Institute',url:'https://www.mckinsey.com/mgi/overview',date:'Mar 2026',category:'Society & Labor',type:'Report'},
   {title:'Work Trend Index 2026',source:'Microsoft',url:'https://www.microsoft.com/en-us/worklab/work-trend-index/',date:'May 2026',category:'Society & Labor',type:'Report'},

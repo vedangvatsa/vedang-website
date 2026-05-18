@@ -15,7 +15,7 @@ export function DnsVisualizer() {
     { label: 'Root Server', x: 500, y: 80, desc: 'Directs to the right TLD server (.com, .org)', color: '#d946ef' },
     { label: 'TLD Server', x: 500, y: 200, desc: 'Knows which nameserver handles .com domains', color: '#ec4899' },
     { label: 'Authoritative NS', x: 500, y: 320, desc: 'Has the actual IP address for this domain', color: '#f43f5e' },
-    { label: 'IP Returned!', x: 300, y: 320, desc: '93.184.216.34 — Browser connects directly', color: '#22c55e' },
+    { label: 'IP Returned!', x: 300, y: 320, desc: '93.184.216.34 - Browser connects directly', color: '#22c55e' },
   ];
 
   const connections = [

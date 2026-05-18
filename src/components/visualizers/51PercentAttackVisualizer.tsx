@@ -77,7 +77,7 @@ export function FiftyOnePercentAttackVisualizer() {
           <div className="h-full bg-red-500 transition-all duration-300" style={{ width: `${attackerPower}%` }} />
         </div>
         <div className="text-center mt-2 text-sm font-medium" style={{ color: canAttackSucceed ? '#dc2626' : '#16a34a' }}>
-          {canAttackSucceed ? '⚠️ Attacker has majority — attack likely succeeds' : '✅ Honest majority — network is secure'}
+          {canAttackSucceed ? '⚠️ Attacker has majority - attack likely succeeds' : '✅ Honest majority - network is secure'}
         </div>
       </div>
 
@@ -145,8 +145,8 @@ export function FiftyOnePercentAttackVisualizer() {
                 stroke={attackChain.length > blocks.length - forkPoint ? '#fca5a5' : '#86efac'} />
               <text textAnchor="middle" y={5} fontSize="10" fill="#334155" fontWeight="600">
                 {attackChain.length > blocks.length - forkPoint
-                  ? '❌ Attacker chain is longer — history rewritten!'
-                  : '✅ Honest chain wins — attack failed'}
+                  ? '❌ Attacker chain is longer - history rewritten!'
+                  : '✅ Honest chain wins - attack failed'}
               </text>
             </g>
           )}

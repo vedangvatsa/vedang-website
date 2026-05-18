@@ -129,7 +129,7 @@ export function ColdStorageVisualizer() {
             {mode === 'cold' && (
               <>
                 <text y={-95} textAnchor="middle" fontSize="10" fill="#1e40af" fontWeight="600">
-                  AIR-GAPPED — No Internet
+                  AIR-GAPPED - No Internet
                 </text>
                 {[0, 60, 120, 180, 240, 300].map((angle, i) => {
                   const rad = (angle * Math.PI) / 180;

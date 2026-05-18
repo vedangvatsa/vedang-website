@@ -73,7 +73,7 @@ export function FinalExamClient({ courseId, questions }: FinalExamClientProps) {
     );
   }
 
-  // Already passed — go straight to certificate
+  // Already passed - go straight to certificate
   if (alreadyPassed && !showCertificate && !submitted) {
     return (
       <div className="max-w-2xl mx-auto text-center py-16">
@@ -166,7 +166,7 @@ export function FinalExamClient({ courseId, questions }: FinalExamClientProps) {
         <h1 className="text-2xl font-bold mb-2">{config.courseTitle}: Final Exam</h1>
         <p className="text-muted-foreground">
           Answer at least {PASSING_SCORE} out of {EXAM_SIZE} questions correctly to earn your certificate.
-          Questions are randomly selected from a larger bank — each attempt is different.
+          Questions are randomly selected from a larger bank - each attempt is different.
         </p>
       </div>
 
@@ -257,7 +257,7 @@ export function FinalExamClient({ courseId, questions }: FinalExamClientProps) {
           </div>
           <p className="text-muted-foreground mb-4">
             Score: {score}/{EXAM_SIZE} ({Math.round((score / EXAM_SIZE) * 100)}%)
-            {!passed && ` — You need at least ${PASSING_SCORE}/${EXAM_SIZE} to pass.`}
+            {!passed && ` - You need at least ${PASSING_SCORE}/${EXAM_SIZE} to pass.`}
           </p>
 
           {passed ? (

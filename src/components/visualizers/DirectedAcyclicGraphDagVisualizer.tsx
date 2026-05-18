@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 export function DirectedAcyclicGraphDagVisualizer() {
   const [step, setStep] = useState(0);
-  const steps = ["Tx₁ is submitted and confirms genesis.","Tx₂ confirms Tx₁. Tx₃ also confirms Tx₁.","Tx₄ confirms both Tx₂ and Tx₃ — no single chain needed.","Each new transaction validates 2+ prior ones. No miners, no blocks — just a web of confirmations."];
+  const steps = ["Tx₁ is submitted and confirms genesis.","Tx₂ confirms Tx₁. Tx₃ also confirms Tx₁.","Tx₄ confirms both Tx₂ and Tx₃ - no single chain needed.","Each new transaction validates 2+ prior ones. No miners, no blocks - just a web of confirmations."];
 
   return (
     <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">

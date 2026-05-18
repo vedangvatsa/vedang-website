@@ -334,7 +334,7 @@ function contextualRewrite(text: string): string {
       return replacement(match);
     }
   }
-  // No rewrite matched — return as-is
+  // No rewrite matched - return as-is
   return trimmed;
 }
 

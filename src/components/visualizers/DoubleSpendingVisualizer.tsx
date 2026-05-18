@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 export function DoubleSpendingVisualizer() {
   const [step, setStep] = useState(0);
-  const steps = ["Alice has 1 BTC and sends it to Bob.","Alice broadcasts a conflicting tx sending the same BTC to herself.","The network must decide which transaction is valid — only one can be confirmed."];
+  const steps = ["Alice has 1 BTC and sends it to Bob.","Alice broadcasts a conflicting tx sending the same BTC to herself.","The network must decide which transaction is valid - only one can be confirmed."];
 
   return (
     <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
