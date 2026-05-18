@@ -52,7 +52,7 @@ export function ZeroKnowledgeProofsZkpsVisualizer() {
           <button onClick={handleChallenge} className="px-6 py-3 rounded-xl font-semibold bg-indigo-600 text-white hover:bg-indigo-700 transition-all">Send Challenge</button>
         </div>
         <div className="bg-slate-100 rounded-xl p-4 text-center text-sm text-slate-600">
-          After {challenges.length} challenge{challenges.length !== 1 ? 's' : ''}, the verifier is {challenges.length === 0 ? 'not yet' : challenges.length < 3 ? 'somewhat' : 'highly'} confident the prover knows the secret — without ever learning what it is.
+          After {challenges.length} challenge{challenges.length !== 1 ? 's' : ''}, the verifier is {challenges.length === 0 ? 'not yet' : challenges.length < 3 ? 'somewhat' : 'highly'} confident the prover knows the secret - without ever learning what it is.
         </div>
       </div>
     </div>

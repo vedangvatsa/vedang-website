@@ -136,7 +136,7 @@ export function BeamSearchVisualizer() {
       <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-4 max-w-lg text-center">
         <p className="text-indigo-800 text-sm">
           <strong>Beam width = {beamWidth}</strong> means the model keeps the top {beamWidth} most promising sequences at each step.
-          {beamWidth === 1 && ' This is greedy search — only the single best option survives.'}
+          {beamWidth === 1 && ' This is greedy search - only the single best option survives.'}
           {beamWidth >= 3 && ' More beams explore more possibilities but use more memory and computation.'}
         </p>
       </div>

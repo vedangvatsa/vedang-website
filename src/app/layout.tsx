@@ -11,14 +11,14 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swa
 export const metadata: Metadata = {
   metadataBase: new URL('https://veda.ng'),
   title: {
-    default: 'Vedang Vatsa — AI & Web3 Thought Leader, Founder of Hashtag Web3',
+    default: 'Vedang Vatsa - AI & Web3 Thought Leader, Founder of Hashtag Web3',
     template: '%s',
   },
   description:
     'Vedang Vatsa is the founder of Hashtag Web3 (120k+ AI & Web3 professionals), a Fellow of the Royal Society of Arts, and IIT Kanpur alumnus. Explore essays, courses, and tools on AI, blockchain, and decentralized economies.',
   keywords: ['Vedang Vatsa', 'AI', 'Blockchain', 'Web3', 'Growth Marketing', 'Founder', 'AI Researcher', 'DeFi'],
   openGraph: {
-    title: 'Vedang Vatsa — AI & Web3 Thought Leader, Founder of Hashtag Web3',
+    title: 'Vedang Vatsa - AI & Web3 Thought Leader, Founder of Hashtag Web3',
     description: 'Vedang Vatsa is the founder of Hashtag Web3 (120k+ AI & Web3 professionals), Fellow of the Royal Society of Arts, and IIT Kanpur alumnus. Essays, courses, and tools on AI, blockchain, and decentralized economies.',
     url: '/',
     siteName: 'Vedang Vatsa',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         url: '/images/og-homepage.png',
         width: 1200,
         height: 630,
-        alt: 'Vedang Vatsa — AI & Web3 Thought Leader',
+        alt: 'Vedang Vatsa - AI & Web3 Thought Leader',
       },
     ]
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: 'Vedang Vatsa — AI & Web3 Thought Leader, Founder of Hashtag Web3',
+    title: 'Vedang Vatsa - AI & Web3 Thought Leader, Founder of Hashtag Web3',
     card: 'summary_large_image',
     images: ['/images/og-homepage.png'],
   },
@@ -57,7 +57,7 @@ const websiteSchema = {
   '@type': 'WebSite',
   name: 'Vedang Vatsa',
   url: 'https://veda.ng',
-  description: 'Official website of Vedang Vatsa — AI & Web3 thought leader, founder of Hashtag Web3.',
+  description: 'Official website of Vedang Vatsa - AI & Web3 thought leader, founder of Hashtag Web3.',
   publisher: {
     '@type': 'Person',
     name: 'Vedang Vatsa',

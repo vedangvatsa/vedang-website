@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const content = `# Vedang Vatsa — veda.ng
+  const content = `# Vedang Vatsa - veda.ng
 > Personal research hub covering AI, Web3, technology strategy, and institutional analysis.
 
 ## About
@@ -14,8 +14,8 @@ Vedang Vatsa is a researcher and builder focused on AI infrastructure, Web3 inst
 - [Media](https://veda.ng/media)
 
 ## Research Archives
-- [AI Reports Library — 21,000+ Papers](https://veda.ng/ai-reports)
-- [Web3 Reports Library — 23,000+ Papers](https://veda.ng/web3-reports)
+- [AI Reports Library - 21,000+ Papers](https://veda.ng/ai-reports)
+- [Web3 Reports Library - 23,000+ Papers](https://veda.ng/web3-reports)
 
 ## Featured Analysis
 - [State of AI](https://veda.ng/state-of-ai)
@@ -53,7 +53,6 @@ Vedang Vatsa is a researcher and builder focused on AI infrastructure, Web3 inst
 - [The Plurality Trap](https://veda.ng/plurality-trap)
 - [Post-Interface Internet](https://veda.ng/post-interface-internet)
 - [Post-Scarcity Technology](https://veda.ng/post-scarcity-technology)
-- [Privacy](https://veda.ng/privacy)
 - [Programmable Trust](https://veda.ng/programmable-trust)
 - [Pseudonymous Agency](https://veda.ng/pseudonymous-agency)
 - [Rationality in AI](https://veda.ng/rationality-in-ai)

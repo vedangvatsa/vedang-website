@@ -80,7 +80,7 @@ const sleepHabits = [
   { habit: '30–60 min wind-down routine: reading, warm bath, breathing exercises.', source: 'https://www.youtube.com/watch?v=LPzRwzivklA&t=2460' },
   { habit: 'Regulate evening light: warm/red tones only after sunset. Full blackout in bedroom.', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep' },
   { habit: 'Temperature-controlled mattress. Bedroom at 65–68°F (18–20°C).', source: 'https://www.youtube.com/watch?v=Wk9p3dhMYdk&t=358' },
-  { habit: 'Reserve bed for sleep only — no work, no scrolling.', source: 'https://www.youtube.com/watch?v=LPzRwzivklA&t=2782' },
+  { habit: 'Reserve bed for sleep only - no work, no scrolling.', source: 'https://www.youtube.com/watch?v=LPzRwzivklA&t=2782' },
   { habit: 'Lower resting heart rate before bed: eat earlier, avoid alcohol, reduce stress.', source: 'https://www.youtube.com/watch?v=ev01uC8uUXI&t=610' },
   { habit: 'Use earplugs or a white noise machine. Minimize disturbances.', source: 'https://www.youtube.com/watch?v=LPzRwzivklA&t=2656' },
   { habit: 'Track sleep with a wearable. Use data to make adjustments.', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep' },
@@ -90,7 +90,7 @@ const faqItems = [
   { question: 'Is this page affiliated with Bryan Johnson?', answer: 'No. Independent summary based on public sources. Not endorsed by or affiliated with Bryan Johnson, Blueprint, or Kernel.' },
   { question: 'Should I follow the full protocol?', answer: 'No. Bryan himself advises against copying it. Start with sleep, exercise, and diet. Consult a professional before adding supplements.' },
   { question: 'How much does it cost?', answer: 'Supplement stack: ~$11/day. Full protocol with devices, testing, and prep: significantly more.' },
-  { question: 'Where is the official protocol?', answer: 'blueprint.bryanjohnson.com/pages/blueprint-protocol — updated regularly based on biomarker data.' },
+  { question: 'Where is the official protocol?', answer: 'blueprint.bryanjohnson.com/pages/blueprint-protocol - updated regularly based on biomarker data.' },
 ];
 
 const articleSchema = {

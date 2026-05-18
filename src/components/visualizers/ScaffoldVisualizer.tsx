@@ -7,7 +7,7 @@ export function ScaffoldVisualizer() {
   const steps = [
     "Start with a complex problem: the AI breaks it into smaller, manageable sub-tasks.",
     "Each sub-task gets its own focused prompt with clear instructions and context.",
-    "Sub-task outputs are chained together — output of step 1 feeds into step 2.",
+    "Sub-task outputs are chained together - output of step 1 feeds into step 2.",
     "The final result is assembled from all sub-task outputs into a coherent answer."
   ];
 

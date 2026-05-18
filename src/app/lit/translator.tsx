@@ -9,9 +9,9 @@ import { composeNarrative } from './templates';
 // ── LinkedIn transformation engine ─────────────────────────────────────────────
 //
 // Three-layer approach:
-//   1. Phrase-level swaps  — known multi-word patterns → LinkedIn equivalents
-//   2. Word-level swaps    — individual word substitutions
-//   3. General framing     — wraps the (possibly already-swapped) text in a
+//   1. Phrase-level swaps - known multi-word patterns → LinkedIn equivalents
+//   2. Word-level swaps - individual word substitutions
+//   3. General framing - wraps the (possibly already-swapped) text in a
 //                            LinkedIn-style opener + closer so that even totally
 //                            unknown input still sounds like a LinkedIn post.
 
@@ -265,12 +265,12 @@ const PHRASE_SWAPS: [RegExp, string][] = [
 
 // ── Layer 2: word-level swaps ──────────────────────────────────────────────────
 //
-// These are intentionally selective — only swap words where the LinkedIn
+// These are intentionally selective - only swap words where the LinkedIn
 // version sounds natural in a sentence. The structural framing layers do
 // the real heavy lifting. Over-swapping produces robotic jargon.
 
 const WORD_SWAPS: [RegExp, string][] = [
-  // Verbs — natural LinkedIn upgrades
+  // Verbs - natural LinkedIn upgrades
   [/\bfinished\b/gi, 'wrapped up'],
   [/\bcompleted\b/gi, 'successfully completed'],
   [/\bbuilt\b/gi, 'built and shipped'],
@@ -290,7 +290,7 @@ const WORD_SWAPS: [RegExp, string][] = [
   [/\bsold\b/gi, 'successfully closed'],
   [/\bbought\b/gi, 'invested in'],
 
-  // Nouns — only the clearly funny/corporate ones
+  // Nouns - only the clearly funny/corporate ones
   [/\bjob\b/gi, 'role'],
   [/\bboss\b/gi, 'leadership'],
   [/\boffice\b/gi, 'workspace'],
@@ -310,7 +310,7 @@ const WORD_SWAPS: [RegExp, string][] = [
   [/\bidea\b/gi, 'vision'],
   [/\bideas\b/gi, 'insights'],
 
-  // Adjectives — subtle upgrades
+  // Adjectives - subtle upgrades
   [/\bgood\b/gi, 'amazing'],
   [/\bgreat\b/gi, 'exceptional'],
   [/\bbad\b/gi, 'challenging'],
@@ -347,7 +347,7 @@ const WORD_SWAPS: [RegExp, string][] = [
   [/\blunch\b/gi, 'midday reset'],
   [/\bnap\b/gi, 'power reset'],
   [/\bvacation\b/gi, 'time to recharge'],
-  [/\bweekend\b/gi, 'weekend'],  // keep as-is — LinkedIn people say weekend
+  [/\bweekend\b/gi, 'weekend'],  // keep as-is - LinkedIn people say weekend
   [/\bhomework\b/gi, 'assignment'],
   [/\bexam\b/gi, 'assessment'],
 ];
@@ -482,13 +482,13 @@ function translateToLinkedIn(text: string): string {
   const changeRatio = 1 - (similarity(original.toLowerCase(), result.toLowerCase()));
 
   if (changeRatio < 0.25) {
-    // Path A: swaps barely changed it — use complete narrative templates
+    // Path A: swaps barely changed it - use complete narrative templates
     const composed = composeNarrative(result, composeIndex);
     composeIndex++;
     return composed;
   }
 
-  // Path B: swaps changed it significantly — build a full post
+  // Path B: swaps changed it significantly - build a full post
   const isNegative = isNegativeSentiment(original);
 
   // Pick opener
@@ -912,11 +912,11 @@ export default function LinkedInTranslatorPage() {
 
   function handleShareWhatsApp() {
     const hooks = [
-      'This English to LinkedIn Translator is hilarious — type anything honest and watch it become peak LinkedIn',
+      'This English to LinkedIn Translator is hilarious - type anything honest and watch it become peak LinkedIn',
       'Found an English to LinkedIn Translator that turns normal sentences into corporate fluff and it is too accurate',
       'Type "I got fired" into this and see what LinkedIn would say instead',
       'This tool translates normal English into LinkedIn speak and the results are unreal',
-      'You need to try this English to LinkedIn Translator — it nails the corporate tone perfectly',
+      'You need to try this English to LinkedIn Translator - it nails the corporate tone perfectly',
       'Someone built an English to LinkedIn Translator and honestly it is the funniest thing I have seen all week',
     ];
     const hook = hooks[Math.floor(Math.random() * hooks.length)];

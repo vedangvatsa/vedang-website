@@ -74,7 +74,7 @@ export function QuantumComputingVisualizer() {
             // Quantum qubits
             <>
               <text x={250} y={30} textAnchor="middle" fontSize="12" fill="#334155" fontWeight="600">
-                {measured ? 'Measured! Superposition collapsed.' : 'Qubits in superposition — both 0 AND 1'}
+                {measured ? 'Measured! Superposition collapsed.' : 'Qubits in superposition - both 0 AND 1'}
               </text>
               {qubits.map((q, i) => {
                 const x = 80 + i * 100;

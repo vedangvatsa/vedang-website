@@ -6,8 +6,8 @@ const SITE_HOST = 'veda.ng';
 
 /**
  * IndexNow API Route
- * POST /api/indexnow — Submit URLs to Bing, Yandex, and other IndexNow-compatible engines
- * GET  /api/indexnow — Submit all important URLs at once
+ * POST /api/indexnow - Submit URLs to Bing, Yandex, and other IndexNow-compatible engines
+ * GET  /api/indexnow - Submit all important URLs at once
  *
  * Usage:
  *   curl -X GET https://veda.ng/api/indexnow           (submit all pages)

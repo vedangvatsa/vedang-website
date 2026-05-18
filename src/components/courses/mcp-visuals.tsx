@@ -493,7 +493,7 @@ export function ClientCapabilities() {
                 <tr key={c.name} className="border-b border-[#e3e3e0]/40 dark:border-zinc-800/40">
                   <td className="px-2 py-2 font-bold" style={{ color: c.color }}>{c.name}</td>
                   {[c.tools, c.resources, c.prompts, c.sampling].map((v, i) => (
-                    <td key={i} className="px-2 py-2 text-center">{v ? '✓' : '—'}</td>
+                    <td key={i} className="px-2 py-2 text-center">{v ? '✓' : ' - '}</td>
                   ))}
                 </tr>
               ))}

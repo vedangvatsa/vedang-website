@@ -216,7 +216,7 @@ export function FewShotPromptingVisualizer() {
         <div className="max-w-2xl text-center p-4 bg-amber-50 rounded-lg border border-amber-200">
           <h4 className="font-semibold text-amber-800 mb-2">🎯 Few-Shot Learning Complete!</h4>
           <p className="text-sm text-amber-700">
-            The AI learned the pattern from just {currentTask.examples.length} examples and applied it to new input—no training required!
+            The AI learned the pattern from just {currentTask.examples.length} examples and applied it to new input - no training required!
           </p>
         </div>
       )}

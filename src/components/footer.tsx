@@ -10,9 +10,7 @@ export function Footer() {
           <Link href="/#learn" className="hover:text-primary transition-colors">Resources</Link>
           <Link href="/glossary" className="hover:text-primary transition-colors">Glossary</Link>
           <Link href="/profile" className="hover:text-primary transition-colors">Profile</Link>
-          <Link href="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
-          <Link href="/terms" className="hover:text-primary transition-colors">Terms</Link>
-        </div>
+          </div>
         <div className="flex items-center space-x-4">
           <Link href="https://x.com/vedangvatsa" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
             <Twitter className="h-5 w-5" />

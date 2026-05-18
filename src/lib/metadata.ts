@@ -12,9 +12,9 @@ interface MetadataParams {
 
 export const pageMetadata = {
   home: {
-    title: 'Vedang Vatsa — AI & Web3 Thought Leader',
+    title: 'Vedang Vatsa - AI & Web3 Thought Leader',
     description:
-      'Vedang Vatsa — Founder of Hashtag Web3 (120k+ professionals), FRSA, IIT Kanpur alumnus. Essays, research, and free courses on AI agents and Web3.',
+      'Vedang Vatsa - Founder of Hashtag Web3 (120k+ professionals), FRSA, IIT Kanpur alumnus. Essays, research, and free courses on AI agents and Web3.',
     url: '/',
     keywords: ['AI Thought Leader', 'Web3 Expert', 'Blockchain Technology', 'Generative AI', 'Future of AI', 'Decentralized Finance', 'DeFi', 'Digital Assets', 'Web3 Ecosystem'],
   },
@@ -110,7 +110,7 @@ export const pageMetadata = {
     keywords: ['Bryan Johnson', 'Blueprint Protocol', 'Longevity', 'Anti-Aging', 'Supplements', 'Biohacking', 'Health Optimization', 'Sleep Protocol'],
   },
   aiReports: {
-    title: 'AI Reports & Research Library — 2025–2026',
+    title: 'AI Reports & Research Library - 2025–2026',
     description:
       'Curated collection of 1000+ AI reports, research papers, and industry analyses from Stanford, McKinsey, Deloitte, OpenAI, and more.',
     url: '/ai-reports',

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 export function DigitalTwinVisualizer() {
   const [step, setStep] = useState(0);
-  const steps = ["Physical asset (factory, engine, city) is instrumented with sensors.","Sensor data streams to a digital model in real-time.","Engineers simulate changes on the twin before applying them physically.","Predictive maintenance, optimization, and what-if scenarios — all risk-free."];
+  const steps = ["Physical asset (factory, engine, city) is instrumented with sensors.","Sensor data streams to a digital model in real-time.","Engineers simulate changes on the twin before applying them physically.","Predictive maintenance, optimization, and what-if scenarios - all risk-free."];
 
   return (
     <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
