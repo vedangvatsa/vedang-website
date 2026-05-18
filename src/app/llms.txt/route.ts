@@ -18,8 +18,8 @@ Vedang Vatsa is a researcher and builder focused on AI infrastructure, Web3 inst
 - [Web3 Reports Library — 23,000+ Papers](https://veda.ng/web3-reports)
 
 ## Featured Analysis
-- [State of AI 2026](https://veda.ng/state-of-ai-2026)
-- [State of Web3 2026](https://veda.ng/state-of-web3-2026)
+- [State of AI](https://veda.ng/state-of-ai)
+- [State of Web3](https://veda.ng/state-of-web3)
 
 ## Essays
 - [The Agentic Web](https://veda.ng/towards-the-agentic-web)

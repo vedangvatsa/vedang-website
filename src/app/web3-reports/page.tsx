@@ -44,7 +44,7 @@ export default async function Web3ReportsPage({
             {web3Reports.length.toLocaleString()}+ research papers, institutional reports, and on-chain analyses. Each entry links directly to a verified DOI or academic repository.
           </p>
           <p className="mt-4 text-sm text-muted-foreground">
-            Read the full synthesis: <Link href="/state-of-web3-2026" className="text-primary hover:underline font-medium">The State of Web3 in 2026 →</Link>
+            Read the full synthesis: <Link href="/state-of-web3" className="text-primary hover:underline font-medium">The State of Web3 →</Link>
           </p>
         </div>
       </section>

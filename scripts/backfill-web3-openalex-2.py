@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Backfill Web3 dataset using Crossref API (more generous rate limits than OpenAlex).
-Target: push dataset from ~96k to 101k+ entries."""
+"""Fetch Web3/blockchain/crypto papers from OpenAlex API.
+Target: push dataset from ~89k to 101k+ entries.
+Uses strict validation to avoid biology/physics papers."""
 
 import json
 import time
@@ -16,83 +17,6 @@ SSL_CTX.verify_mode = ssl.CERT_NONE
 
 OUTPUT_PATH = Path(__file__).parent.parent / "src/lib/web3-reports-data-generated.json"
 TARGET = 101000
-
-CROSSREF_QUERIES = [
-    "blockchain whitepaper",
-    "blockchain protocol design",
-    "cryptocurrency market",
-    "smart contract verification",
-    "decentralized application",
-    "tokenized asset",
-    "blockchain scalability solution",
-    "distributed ledger technology",
-    "blockchain consensus algorithm",
-    "cross-chain interoperability",
-    "zero knowledge proof blockchain",
-    "blockchain privacy",
-    "blockchain IoT integration",
-    "supply chain blockchain",
-    "blockchain healthcare system",
-    "decentralized identity management",
-    "blockchain energy trading",
-    "blockchain voting system",
-    "NFT digital asset",
-    "metaverse blockchain",
-    "DeFi protocol",
-    "stablecoin mechanism",
-    "CBDC central bank digital",
-    "blockchain regulation compliance",
-    "smart contract audit",
-    "layer 2 scaling",
-    "rollup blockchain",
-    "proof of stake consensus",
-    "blockchain data integrity",
-    "federated learning blockchain",
-    "blockchain carbon credit",
-    "blockchain real estate",
-    "tokenization securities",
-    "blockchain game",
-    "decentralized exchange",
-    "blockchain oracle",
-    "blockchain governance",
-    "blockchain insurance",
-    "decentralized storage",
-    "blockchain trust management",
-    "blockchain access control",
-    "blockchain food traceability",
-    "blockchain pharmaceutical",
-    "blockchain crowdfunding",
-    "blockchain digital twin",
-    "blockchain agriculture",
-    "blockchain logistics",
-    "blockchain trade finance",
-    "Ethereum smart contract",
-    "Bitcoin network analysis",
-    "Solana blockchain",
-    "Polkadot interoperability",
-    "Cardano proof of stake",
-    "Hyperledger enterprise",
-    "blockchain machine learning",
-    "blockchain artificial intelligence",
-    "blockchain anomaly detection",
-    "blockchain cybersecurity",
-    "blockchain authentication",
-    "blockchain edge computing",
-]
-
-POISON_PHRASES = [
-    'elastic scattering', 'inelastic scattering', 'proton scattering',
-    'neutron scattering', 'deuteron scattering', 'alpha particle',
-    'pion-proton', 'optical-model', 'optical model analysis',
-    'phase-shift analysis', 'partial-wave analysis', 'nucleon-nucleon',
-    'van de graaff', 'synchrotron', 'spallation', 'fission induced',
-    'neutrino', 'baryogenesis', 'dark matter', 'supersymmetric',
-    'muonic hydrogen', 'charmonium',
-    'simian immunodeficiency', 'immunodeficiency virus',
-    'plasma viremia', 'cd8+ t cell', 'cd4+ t cell', 'macaque',
-    'human immunodeficiency virus', 'semeval-20', 'semeval 20',
-    'cropland-sparing', 'high-yield farming',
-]
 
 STRONG_WEB3 = [
     'blockchain', 'bitcoin', 'btc', 'ethereum', 'solidity',
@@ -140,16 +64,30 @@ STRONG_WEB3 = [
     'dao governance', 'dao token',
 ]
 
+POISON_PHRASES = [
+    'cryptococcus', 'cryptococcal', 'cryptochrome', 'cryptosporidium',
+    'cryptorchid', 'cryptogam', 'solanaceae', 'solanum',
+    'elastic scattering', 'inelastic scattering', 'proton scattering',
+    'neutron scattering', 'deuteron scattering', 'alpha particle',
+    'pion-proton', 'optical-model', 'optical model analysis',
+    'phase-shift analysis', 'partial-wave analysis', 'nucleon-nucleon',
+    'van de graaff', 'synchrotron', 'spallation', 'fission induced',
+    'neutrino', 'baryogenesis', 'dark matter', 'supersymmetric',
+    'muonic hydrogen', 'charmonium',
+    'simian immunodeficiency', 'immunodeficiency virus',
+    'plasma viremia', 'cd8+ t cell', 'cd4+ t cell', 'macaque',
+    'human immunodeficiency virus', 'semeval-20', 'semeval 20',
+    'cropland-sparing', 'high-yield farming',
+]
 
-def is_web3(title):
+def is_web3(title: str) -> bool:
     t = title.lower()
     for pp in POISON_PHRASES:
         if pp in t:
             return False
     return any(kw in t for kw in STRONG_WEB3)
 
-
-def categorize(title):
+def categorize(title: str) -> str:
     t = title.lower()
     if any(k in t for k in ["defi", "decentralized finance", "yield", "lending", "liquidity", "amm", "dex", "stablecoin", "swap"]):
         return "DeFi & Finance"
@@ -167,89 +105,80 @@ def categorize(title):
         return "Institutional & Enterprise"
     return "State of Crypto"
 
-
-def fetch_crossref(query, offset=0, rows=100, _retry=0):
-    """Fetch from Crossref API. Returns list of results."""
+def fetch_openalex(query: str, page: int = 1, per_page: int = 200, _retry: int = 0) -> tuple:
     params = {
-        "query": query,
-        "rows": rows,
-        "offset": offset,
-        "sort": "relevance",
-        "order": "desc",
-        "mailto": "vedangvats@gmail.com",
+        "search": query,
+        "page": page,
+        "per_page": per_page,
+        "select": "title,doi,publication_year,cited_by_count,id",
+        "sort": "cited_by_count:desc",
     }
-    url = f"https://api.crossref.org/works?{urlencode(params)}"
+    url = f"https://api.openalex.org/works?{urlencode(params)}"
     req = Request(url, headers={
-        "User-Agent": "Web3Reports/1.0 (mailto:vedangvats@gmail.com)",
+        "User-Agent": "Web3Reports/2.0 (mailto:vedang@example.com)",
         "Accept": "application/json",
     })
     try:
         with urlopen(req, timeout=30, context=SSL_CTX) as resp:
             data = json.loads(resp.read().decode("utf-8"))
-        items = data.get("message", {}).get("items", [])
+        total = data.get("meta", {}).get("count", 0)
         results = []
-        for item in items:
-            titles = item.get("title", [])
-            if not titles:
+        for w in data.get("results", []):
+            title = w.get("title")
+            if not title:
                 continue
-            title = titles[0]
-            doi = item.get("DOI", "")
-            url_link = f"https://doi.org/{doi}" if doi else ""
-            
-            # Extract year
-            date_parts = item.get("published-print", {}).get("date-parts", [[]])
-            if not date_parts or not date_parts[0]:
-                date_parts = item.get("published-online", {}).get("date-parts", [[]])
-            year = str(date_parts[0][0]) if date_parts and date_parts[0] else ""
-            
-            citations = item.get("is-referenced-by-count", 0) or 0
-            
+            doi = w.get("doi", "")
+            url_link = doi if doi else w.get("id", "")
             results.append({
                 "title": title,
-                "source": "Crossref",
+                "source": "OpenAlex",
                 "url": url_link,
-                "date": year,
+                "date": str(w.get("publication_year", "")),
                 "category": categorize(title),
                 "type": "Paper",
-                "citations": citations,
+                "citations": w.get("cited_by_count", 0) or 0,
             })
-        return results
+        return results, total
     except HTTPError as e:
-        if e.code == 429 and _retry < 3:
-            wait = 10 * (_retry + 1)
-            print(f"    429 — waiting {wait}s (retry {_retry+1}/3)")
-            time.sleep(wait)
-            return fetch_crossref(query, offset, rows, _retry + 1)
+        if e.code == 429:
+            print(f"    429 — waiting 30s (retry {_retry+1}/3)")
+            time.sleep(30)
+            if _retry < 3:
+                return fetch_openalex(query, page, per_page, _retry+1)
+            return [], 0
         print(f"    HTTP {e.code}")
-        return []
+        return [], 0
     except Exception as e:
         print(f"    Error: {e}")
-        return []
-
+        return [], 0
 
 def main():
-    with open(OUTPUT_PATH) as f:
-        all_papers = json.load(f)
-
+    all_papers = []
     seen = set()
-    for r in all_papers:
-        seen.add(r["title"].lower().strip())
 
-    print(f"Current: {len(all_papers)} papers")
-    print(f"Target: {TARGET}")
-    print(f"Need: {TARGET - len(all_papers)} more\n")
+    if OUTPUT_PATH.exists():
+        with open(OUTPUT_PATH) as f:
+            existing = json.load(f)
+        for r in existing:
+            seen.add(r["title"].lower().strip())
+            all_papers.append(r)
+        print(f"Loaded {len(existing)} existing reports")
 
     new_count = 0
+    total_queries = len(STRONG_WEB3)
+    
+    print(f"Target: {TARGET}, Need: {TARGET - len(all_papers)} more")
 
-    for i, q in enumerate(CROSSREF_QUERIES):
+    for i, q in enumerate(STRONG_WEB3):
         if len(all_papers) >= TARGET:
-            print(f"\n✅ Reached target!")
+            print(f"  Reached {TARGET} target!")
             break
 
-        print(f"[{i+1}/{len(CROSSREF_QUERIES)}] \"{q}\" (total: {len(all_papers)})")
+        print(f"[{i+1}/{total_queries}] {q}")
 
-        for offset in range(0, 1000, 100):  # Up to 1000 per query
-            results = fetch_crossref(q, offset=offset, rows=100)
+        # Up to 20 pages (4000 items per query)
+        for page in range(1, 21):
+            results, total = fetch_openalex(q, page=page, per_page=200)
             if not results:
                 break
 
@@ -262,28 +191,25 @@ def main():
                     new_count += 1
                     added += 1
 
-            print(f"    offset={offset}: {len(results)} fetched, {added} new")
-            time.sleep(1.0)  # Polite rate
+            print(f"    Page {page}: {len(results)} fetched, {added} new (total: {len(all_papers)})")
+            time.sleep(0.5)
 
-            if len(results) < 100:
+            if len(results) < 200:
                 break
             if len(all_papers) >= TARGET:
                 break
 
-        # Checkpoint every 5 queries
         if (i + 1) % 5 == 0:
             print(f"  → Checkpoint: {len(all_papers)} total ({new_count} new)")
             all_papers.sort(key=lambda x: (x.get("citations", 0), x.get("date", "")), reverse=True)
             with open(OUTPUT_PATH, "w") as f:
                 json.dump(all_papers, f, indent=None)
 
-    # Final save
     all_papers.sort(key=lambda x: (x.get("citations", 0), x.get("date", "")), reverse=True)
     with open(OUTPUT_PATH, "w") as f:
         json.dump(all_papers, f, indent=None)
 
     print(f"\nDone! Total: {len(all_papers)} ({new_count} new)")
-
 
 if __name__ == "__main__":
     main()
