@@ -163,7 +163,7 @@ export default function ProfilePage() {
                       <h4 className="font-semibold text-base">Program Management (Minister's Office, Ministry of Electronics and IT, India):</h4>
                       <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground mt-1">
                         <li>Served as Program Manager for Digital-India products and projects under the Ministry.</li>
-                        <li>Worked on the Minister's social media strategy, created a personal website, and liaised with scientists, state officials, startup founders, CXOs, and bureaucrats. I gathered data, built dashboards, led growth initiatives, and facilitated high-level reviews.</li>
+                        <li>Worked on the Minister's social media strategy, created a personal website, and liaised with scientists, state officials, startup founders, CXOs, and bureaucrats. I gathered data, built dashboards, led growth initiatives, and coordinated high-level reviews.</li>
                         <li>Served as an evaluation committee member for a government innovation challenge.</li>
                       </ul>
                     </div>

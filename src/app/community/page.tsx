@@ -121,7 +121,7 @@ export default function CommunityProfilePage() {
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Growth Marketing & Advisory</h3>
-                        <p className="text-muted-foreground mt-1 text-sm">Served as Head of Marketing and Growth Lead for multiple Web3 startups, leveraging community and content as primary organic acquisition channels.</p>
+                        <p className="text-muted-foreground mt-1 text-sm">Served as Head of Marketing and Growth Lead for multiple Web3 startups, using community and content as primary organic acquisition channels.</p>
                     </div>
                 </div>
             </section>

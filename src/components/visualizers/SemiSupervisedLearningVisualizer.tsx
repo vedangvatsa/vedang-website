@@ -77,7 +77,7 @@ export function SemiSupervisedLearningVisualizer() {
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Semi-Supervised Learning</h3>
         <p className="text-slate-600 max-w-2xl">
-          Watch how a model leverages both labeled and unlabeled data to improve performance by generating pseudo-labels
+          Watch how a model uses both labeled and unlabeled data to improve performance by generating pseudo-labels
         </p>
       </div>
 

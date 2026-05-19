@@ -53,7 +53,7 @@ const faqItems = [
   },
   {
     question: "Will prompt engineering become obsolete as AI improves?",
-    answer: "The opposite is happening. As models become more capable, the leverage from a well-crafted prompt increases. What is changing is the style of prompting. Early prompting was about tricking models into performing. Modern prompting is about clear, structured communication, which is a skill that becomes more valuable over time, not less."
+    answer: "The opposite is happening. As models become more capable, the value of a well-crafted prompt increases. What is changing is the style of prompting. Early prompting was about tricking models into performing. Modern prompting is about clear, structured communication, which is a skill that becomes more valuable over time, not less."
   },
   {
     question: "What are hallucinations and how do I prevent them?",

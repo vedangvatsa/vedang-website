@@ -62,7 +62,7 @@ export function ZeroShotLearningVisualizer() {
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">Zero-Shot Learning</h3>
         <p className="text-slate-600 max-w-2xl">
-          AI systems can perform tasks they were never explicitly trained on by leveraging learned patterns. 
+          AI systems can perform tasks they were never explicitly trained on by using learned patterns. 
           Click on zero-shot tasks to see how training patterns enable new capabilities.
         </p>
       </div>
