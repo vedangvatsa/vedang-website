@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { PageLayout } from '@/components/page-layout';
 
 export const metadata: Metadata = {
   title: {
@@ -131,7 +132,13 @@ export default function AiDiscoveryStandardsLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      {children}
+      <PageLayout>
+        <div className="container mx-auto px-4 md:px-6 max-w-5xl py-12">
+          <main className="flex-1 min-w-0">
+            {children}
+          </main>
+        </div>
+      </PageLayout>
     </>
   );
 }
