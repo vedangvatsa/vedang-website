@@ -85,8 +85,9 @@
     "image": "scripts/thread-assets/psych_helplessness.png",
     "scheduleDate": "2026-03-28",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x905d05d1614a121bcea2b9bc8eb6e9cd649d9a48",
+    "postedAt": "2026-05-19T20:14:14.012Z"
   },
   {
     "id": "psych-hero",
