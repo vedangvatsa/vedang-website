@@ -148,7 +148,7 @@ const biomarkers = [
   { marker: 'DunedinPACE', value: '0.64-0.67', context: 'Aging at ~64-67% normal speed', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#biomarkers' },
   { marker: 'Biological Age Reduction', value: '5.1 years', context: 'Cumulative vs chronological age', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#biomarkers' },
   { marker: 'hs-CRP (Inflammation)', value: '<0.15 mg/L', context: 'Near undetectable systemic inflammation', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#biomarkers' },
-  { marker: 'Blood Panels', value: '100+ markers', context: 'Monthly testing, algorithmic interpretation', source: 'https://blueprint.bryanjohnson.com/products/blueprint-panel' },
+  { marker: 'Blood Panels', value: '100+ markers', context: 'Monthly testing, data-driven adjustments', source: 'https://blueprint.bryanjohnson.com/products/blueprint-panel' },
   { marker: 'Epigenetic Testing', value: '2x/year', context: 'TruDiagnostic DNA methylation clocks', source: 'https://www.trudiagnostic.com' },
   { marker: 'Whole-body MRI', value: 'Annual', context: 'Full organ and vessel imaging', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#biomarkers' },
 ];
@@ -169,13 +169,13 @@ const faqItems = [
   { question: 'How much does it cost?', answer: 'Supplement stack: ~$11/day. Full protocol with devices, testing, and prep: significantly more. Prescription medications, blood panels, and MRIs add thousands per year.' },
   { question: 'Where are the sources from?', answer: 'All data is cross-referenced against 327 Bryan Johnson protocols extracted from 1,876 analyzed YouTube videos with timestamped transcripts. Official protocol: blueprint.bryanjohnson.com' },
   { question: 'What changed in 2026?', answer: 'NMN/NR reduced to 6 days/week. Rapamycin discontinued. Low-dose Lithium added. Longevity Mix reformulated. Simplified from 100+ pills to consolidated Blueprint-branded blends.' },
-  { question: 'What is the "Don\'t Die" philosophy?', answer: 'Bryan treats the body as a "self-driving" system. Biological data overrides emotional impulses. AI analyzes biomarkers and dictates adjustments to supplements and lifestyle in real-time.' },
+  { question: 'What is the "Don\'t Die" philosophy?', answer: 'Bryan lets his biomarker data make the decisions instead of impulses. Blood and urine results determine what supplements to take, what to eat, and what to change.' },
   { question: 'Are prescription medications required?', answer: 'No. The prescription stack (Metformin, Acarbose, etc.) is specific to Bryan\'s physiology and requires medical supervision. The supplement and lifestyle protocols can be adopted independently.' },
 ];
 
 const articleSchema = {
   '@context': 'https://schema.org', '@type': 'Article',
-  headline: 'Bryan Johnson Blueprint Protocol – Curated Health Guide',
+  headline: 'Bryan Johnson Blueprint Protocol – Full Reference Guide',
   url: 'https://veda.ng/health-protocols',
   author: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
   datePublished: '2025-05-15',
@@ -454,7 +454,7 @@ export default function HealthProtocolsPage() {
             <h2 className="text-2xl font-semibold tracking-tight">Biomarkers</h2>
             <Src href="https://blueprint.bryanjohnson.com/pages/blueprint-protocol#biomarkers">official source</Src>
           </div>
-          <p className="text-muted-foreground text-sm mb-8">The protocol is a closed-loop system. Diet, exercise, and supplements are adjusted based on real-time biomarker feedback. AI analyzes blood and urine markers to dictate changes.</p>
+          <p className="text-muted-foreground text-sm mb-8">Diet, exercise, and supplements are adjusted based on monthly blood and urine results. Nothing is static – every variable is re-evaluated against the latest data.</p>
 
           <div className="space-y-px rounded-xl overflow-hidden border">
             {biomarkers.map(item => (
