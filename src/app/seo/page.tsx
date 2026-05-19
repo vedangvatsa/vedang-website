@@ -116,7 +116,7 @@ export default function SeoProfilePage() {
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Community & Content Marketing</h3>
-                        <p className="text-muted-foreground mt-1 text-sm">Founded and scaled a 100,000+ member Web3 professional community, leveraging a content strategy that generates ~90 million annual impressions to drive organic user acquisition.</p>
+                        <p className="text-muted-foreground mt-1 text-sm">Founded and scaled a 100,000+ member Web3 professional community, using a content strategy that generates ~90 million annual impressions to drive organic user acquisition.</p>
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Cross-Functional Leadership</h3>

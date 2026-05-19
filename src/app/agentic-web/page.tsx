@@ -75,7 +75,7 @@ const faqItems = [
   },
   {
     question: "Is this secure? What are the risks?",
-    answer: "This is one of the most critical challenges. Security and alignment are key. An agent with access to your digital life could be misused if not properly constrained. Module 5 of this course is dedicated to these challenges, discussing the need for robust permissions, monitoring, and ensuring agents act ethically and in your best interest."
+    answer: "This is one of the most critical challenges. Security and alignment are key. An agent with access to your digital life could be misused if not properly constrained. Module 5 of this course is dedicated to these challenges, discussing the need for strict permissions, monitoring, and ensuring agents act ethically and in your best interest."
   },
   {
     question: "Do I need to be a programmer to understand the Agentic Web?",

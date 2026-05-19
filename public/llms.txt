@@ -92,7 +92,7 @@ Individual definitions for AI, Web3, and technical terms at `/glossary/[slug]`. 
 - [Blockchain](https://veda.ng/glossary/blockchain): A distributed, immutable ledger that records transactions across a decentralized network.
 - [Bridge](https://veda.ng/glossary/bridge): A protocol that enables asset transfers between different blockchain networks.
 - [CDN](https://veda.ng/glossary/cdn): Geographically distributed server network delivering web content from locations close to users.
-- [CI/CD](https://veda.ng/glossary/ci-cd): Continuous Integration and Continuous Deployment — automated pipelines for building and releasing software.
+- [CI/CD](https://veda.ng/glossary/ci-cd): Continuous Integration and Continuous Deployment - automated pipelines for building and releasing software.
 - [Chain-of-Thought Prompting](https://veda.ng/glossary/chain-of-thought-prompting): A technique instructing a language model to reason step by step before giving a final answer.
 - [Cold Wallet](https://veda.ng/glossary/cold-wallet): Offline cryptocurrency storage keeping private keys disconnected from the internet for maximum security.
 - [Consensus Mechanism](https://veda.ng/glossary/consensus-mechanism): The protocol by which blockchain nodes agree on the valid state of the ledger.
@@ -128,7 +128,7 @@ Individual definitions for AI, Web3, and technical terms at `/glossary/[slug]`. 
 - [Model Context Protocol (MCP)](https://veda.ng/glossary/model-context-protocol-mcp): An open standard by Anthropic defining how AI models connect to external tools and services.
 - [Model Distillation](https://veda.ng/glossary/model-distillation): A technique for creating a smaller, faster model that approximates the behavior of a larger one.
 - [Monorepo](https://veda.ng/glossary/monorepo): Development strategy storing multiple projects in a single repository for shared tooling and atomic changes.
-- [Multimodal AI](https://veda.ng/glossary/multimodal-ai): AI systems that process and generate multiple types of data — text, images, audio, video.
+- [Multimodal AI](https://veda.ng/glossary/multimodal-ai): AI systems that process and generate multiple types of data - text, images, audio, video.
 - [Non-Fungible Token (NFT)](https://veda.ng/glossary/non-fungible-token-nft): A unique digital asset verified on a blockchain.
 - [OAuth](https://veda.ng/glossary/oauth): Authorization framework enabling third-party app access to user resources without sharing passwords.
 - [Oracle](https://veda.ng/glossary/oracle): A service that supplies real-world data to smart contracts on a blockchain.
@@ -149,7 +149,7 @@ Individual definitions for AI, Web3, and technical terms at `/glossary/[slug]`. 
 - [Stablecoin](https://veda.ng/glossary/stablecoin): A cryptocurrency designed to maintain a stable value, typically pegged to a fiat currency.
 - [Synthetic Data](https://veda.ng/glossary/synthetic-data): Artificially generated training data used to scale AI development beyond real-world data constraints.
 - [Temperature](https://veda.ng/glossary/temperature): A parameter controlling the randomness of a language model's output.
-- [Token](https://veda.ng/glossary/token): The basic unit of text processed by an LLM — roughly a word or word fragment.
+- [Token](https://veda.ng/glossary/token): The basic unit of text processed by an LLM - roughly a word or word fragment.
 - [Tokenization](https://veda.ng/glossary/tokenization): Representing ownership of real-world or digital assets as tokens on a blockchain.
 - [Tokenomics](https://veda.ng/glossary/tokenomics): The economic design of a cryptocurrency system governing how tokens are created, distributed, used, and destroyed.
 - [Transformer](https://veda.ng/glossary/transformer): The neural network architecture underlying modern LLMs, using self-attention mechanisms.

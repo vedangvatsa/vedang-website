@@ -75,7 +75,7 @@ export function AiSafetyVisualizer() {
         <h3 className="text-2xl font-bold text-slate-800 mb-2">AI Safety Interactive Lab</h3>
         <p className="text-slate-600 max-w-2xl">
           Adjust safety measures for different AI systems and observe how they affect risk levels. 
-          See how comprehensive safety practices reduce the likelihood of harmful incidents.
+          See how thorough safety practices reduce the likelihood of harmful incidents.
         </p>
       </div>
 
@@ -197,7 +197,7 @@ export function AiSafetyVisualizer() {
           <div className="mt-4 p-4 bg-indigo-50 rounded-lg border border-indigo-200">
             <p className="text-sm text-indigo-800">
               <strong>Safety Tip:</strong> AI safety requires a multi-layered approach. 
-              No single measure is sufficient - comprehensive safety comes from combining 
+              No single measure is sufficient - thorough safety comes from combining 
               testing, monitoring, controls, and verification.
             </p>
           </div>
