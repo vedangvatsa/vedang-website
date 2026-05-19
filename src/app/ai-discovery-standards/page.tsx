@@ -111,6 +111,113 @@ export default function AiDiscoveryStandardsPage() {
 
       <div className="space-y-24">
 
+        {/* ── The Problem ── */}
+        <section className="prose dark:prose-invert max-w-none">
+          <h2 className="text-2xl font-semibold tracking-tight !mb-4">The Visibility Problem</h2>
+          <p className="text-muted-foreground leading-relaxed">
+            Search changed. In 2025, nearly 60% of queries ended without a click — the user got their answer
+            directly from an AI summary. Google AI Overviews, ChatGPT Search, Perplexity, and Copilot now
+            synthesize answers from multiple sources and present them as a single response. The &quot;ten blue links&quot;
+            page is fading. If your content isn&apos;t structured for extraction and citation by these systems,
+            you&apos;re invisible to a growing share of your audience.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            This page documents every file, protocol, and technique that determines whether AI systems can find,
+            understand, and cite your website. It&apos;s the result of building and testing these standards across
+            production sites — not theory.
+          </p>
+        </section>
+
+        {/* ── What the Data Shows ── */}
+        <section>
+          <h2 className="text-2xl font-semibold tracking-tight mb-2">What the Data Shows</h2>
+          <p className="text-sm text-muted-foreground mb-8">Numbers from 2025–2026 industry research on AI crawler behavior, blocking rates, and adoption.</p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="rounded-xl border bg-card p-6">
+              <p className="text-3xl font-semibold tracking-tight">~28%</p>
+              <p className="text-sm text-muted-foreground mt-2">of websites now block at least one major AI crawler via robots.txt, CDN, or WAF rules.</p>
+            </div>
+            <div className="rounded-xl border bg-card p-6">
+              <p className="text-3xl font-semibold tracking-tight">79%</p>
+              <p className="text-sm text-muted-foreground mt-2">of top news publishers block AI training bots. GPTBot is the most blocked crawler (17–62% depending on dataset).</p>
+            </div>
+            <div className="rounded-xl border bg-card p-6">
+              <p className="text-3xl font-semibold tracking-tight">~10%</p>
+              <p className="text-sm text-muted-foreground mt-2">of domains have adopted llms.txt. Among the top 1,000 sites, it drops to 0.3%. No major AI provider officially uses it as a ranking signal.</p>
+            </div>
+          </div>
+
+          <div className="mt-8 prose dark:prose-invert max-w-none">
+            <p className="text-muted-foreground leading-relaxed">
+              The blocking numbers reveal a market that hasn&apos;t settled on a strategy. Most publishers are
+              reacting to AI crawlers the same way they reacted to early search engines in the 2000s — with blanket
+              blocks. The problem: blocking search bots (OAI-SearchBot, Claude-SearchBot) removes you from AI-generated
+              answers entirely. Blocking training bots (GPTBot, ClaudeBot) stops your content from being absorbed
+              into model weights without attribution. These are different decisions with different consequences,
+              and most sites are treating them as the same thing.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              The llms.txt adoption curve is interesting for what it reveals about the standard&apos;s actual utility.
+              No major AI provider — Google, OpenAI, Anthropic, Meta — has committed to using it as a retrieval
+              signal. Its real value has shifted toward B2A (Business-to-Agent) communication: giving coding
+              assistants, IDE agents, and documentation crawlers a structured entry point into your site. That&apos;s
+              a narrower use case than the original pitch, but it&apos;s a real one.
+            </p>
+          </div>
+        </section>
+
+        {/* ── The Training vs Retrieval Split ── */}
+        <section className="prose dark:prose-invert max-w-none">
+          <h2 className="text-2xl font-semibold tracking-tight !mb-4">The Training vs. Retrieval Split</h2>
+          <p className="text-muted-foreground leading-relaxed">
+            The most important distinction in AI discoverability is between <strong className="text-foreground">training crawlers</strong> and{' '}
+            <strong className="text-foreground">retrieval crawlers</strong>. They look similar in your access logs,
+            but they do fundamentally different things with your content.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Training crawlers (GPTBot, ClaudeBot, Google-Extended, CCBot) ingest your content into model weights.
+            Once absorbed, your words become part of the model&apos;s knowledge but are never attributed back to you.
+            There is no referral traffic. No citation. Your content improves someone else&apos;s product.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Retrieval crawlers (OAI-SearchBot, Claude-SearchBot, PerplexityBot) fetch your content at query time
+            to include in AI-generated answers. These crawlers <em>do</em> cite you. They <em>do</em> send traffic.
+            AI-referred visitors convert at roughly 14% versus 3% for traditional organic — five times higher —
+            because they arrive with specific intent already formed by the AI summary.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            The strategic play: allow all retrieval bots, selectively manage training bots. The robots.txt
+            strategy section below shows exactly how to do this.
+          </p>
+        </section>
+
+        {/* ── New Metrics ── */}
+        <section>
+          <h2 className="text-2xl font-semibold tracking-tight mb-2">Measuring AI Visibility</h2>
+          <p className="text-sm text-muted-foreground mb-8">
+            Traditional SEO metrics (clicks, impressions, keyword rankings) don&apos;t capture AI performance. These are the metrics that matter now.
+          </p>
+          <div className="space-y-px rounded-xl overflow-hidden border">
+            {[
+              { metric: 'Citation Frequency', what: 'How often AI systems cite your domain when answering questions in your topic area.', status: 'Primary' },
+              { metric: 'Share of AI Voice', what: 'Your brand\'s presence as a percentage of all citations in AI-generated answers for core queries.', status: 'Primary' },
+              { metric: 'AI Referral Traffic', what: 'Visits from ChatGPT, Perplexity, Claude, and Copilot. Track via UTM params or referrer headers.', status: 'Measurable' },
+              { metric: 'AI Conversion Rate', what: 'Conversion rate of AI-referred visitors vs. organic. Industry benchmarks: ~14% vs. ~3%.', status: 'Measurable' },
+              { metric: 'Brand Mention Accuracy', what: 'Whether AI systems correctly describe your brand, products, and positioning. Reduced by brand.txt.', status: 'Qualitative' },
+              { metric: 'Answer Selection Rate', what: 'How often your content is chosen as the direct answer (not just cited) in AI Overviews and snippets.', status: 'AEO-specific' },
+            ].map((row) => (
+              <div key={row.metric} className="bg-card flex items-start gap-4 p-4">
+                <div className="shrink-0 w-48">
+                  <span className="font-medium text-sm">{row.metric}</span>
+                  <div className="text-[11px] text-muted-foreground/60 mt-0.5">{row.status}</div>
+                </div>
+                <p className="flex-1 text-sm text-muted-foreground leading-relaxed min-w-0">{row.what}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* ── File Registry ── */}
         <section>
           <h2 className="text-2xl font-semibold tracking-tight mb-2">File Registry</h2>
@@ -193,6 +300,38 @@ export default function AiDiscoveryStandardsPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* ── Content Strategy ── */}
+        <section className="prose dark:prose-invert max-w-none">
+          <h2 className="text-2xl font-semibold tracking-tight !mb-4">Content That Gets Cited</h2>
+          <p className="text-muted-foreground leading-relaxed">
+            AI systems don&apos;t rank content. They extract it. The difference matters. A page that ranks #1 on Google
+            can be completely ignored by ChatGPT if it&apos;s structured poorly. What LLMs actually favor:
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            <strong className="text-foreground">Answer-first formatting.</strong> Put the answer in the first 2–3 sentences
+            after a heading, then explain. AI systems extract the answer block and move on. If your answer is
+            buried in paragraph four, it won&apos;t be found.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            <strong className="text-foreground">Evidence density.</strong> Research shows that LLMs are biased toward
+            content that reads as &quot;evidentiary&quot; — numbers, citations, specific claims with sources.
+            Pages with original data, named experts, and precise figures get cited at significantly higher
+            rates than opinion pieces or generic overviews.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            <strong className="text-foreground">Entity consistency.</strong> AI models work with entities, not keywords.
+            If you call your product &quot;DataSync&quot; on one page and &quot;Data Sync Platform&quot; on another,
+            the model can&apos;t confidently attribute information to you. Use the same terminology everywhere.
+            brand.txt exists to enforce this at the AI layer.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            <strong className="text-foreground">Structured data as ground truth.</strong> JSON-LD schema (Organization,
+            Person, Article, FAQPage) gives AI systems a machine-readable source of truth about who you are and
+            what your content is about. It&apos;s the most underrated signal in AI discoverability — most sites
+            either skip it or implement it incorrectly.
+          </p>
         </section>
 
         {/* ── robots.txt Strategy ── */}
