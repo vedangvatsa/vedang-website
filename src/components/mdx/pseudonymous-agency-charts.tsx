@@ -49,12 +49,12 @@ export function IdentitySpectrumChart() {
 /* ─── Pseudonymous Success Cases ─── */
 export function PseudonymousSuccessCases() {
   const cases = [
-    { name: 'Satoshi Nakamoto', domain: 'Protocol design', achievement: 'Built Bitcoin ($1.56T market cap)', duration: '2008–2010', status: 'Never revealed', value: 1560, color: 'hsl(30 80% 50%)' },
-    { name: 'Banksy', domain: 'Art', achievement: 'Sotheby\'s auctions ($25M+ record)', duration: '1990s–present', status: 'Never confirmed', value: 25, color: 'hsl(350 70% 45%)' },
-    { name: '@PlanB', domain: 'Quantitative finance', achievement: 'Stock-to-Flow model, 1.8M followers', duration: '2019–present', status: 'Revealed voluntarily', value: 0, color: 'hsl(210 90% 40%)' },
-    { name: 'Bored Ape creators', domain: 'NFT / IP', achievement: '$4B+ valuation (Yuga Labs)', duration: '2021–2022', status: 'Doxxed by BuzzFeed', value: 4000, color: 'hsl(160 80% 35%)' },
+    { name: 'Satoshi Nakamoto', domain: 'Protocol design', achievement: 'Built Bitcoin ($1.56T market cap)', duration: '2008-2010', status: 'Never revealed', value: 1560, color: 'hsl(30 80% 50%)' },
+    { name: 'Banksy', domain: 'Art', achievement: 'Sotheby\'s auctions ($25M+ record)', duration: '1990s-present', status: 'Never confirmed', value: 25, color: 'hsl(350 70% 45%)' },
+    { name: '@PlanB', domain: 'Quantitative finance', achievement: 'Stock-to-Flow model, 1.8M followers', duration: '2019-present', status: 'Revealed voluntarily', value: 0, color: 'hsl(210 90% 40%)' },
+    { name: 'Bored Ape creators', domain: 'NFT / IP', achievement: '$4B+ valuation (Yuga Labs)', duration: '2021-2022', status: 'Doxxed by BuzzFeed', value: 4000, color: 'hsl(160 80% 35%)' },
     { name: 'Chef Nomi', domain: 'DeFi', achievement: 'SushiSwap ($1B+ TVL)', duration: '2020', status: 'Revealed after controversy', value: 1000, color: 'hsl(280 60% 45%)' },
-    { name: 'Elena Ferrante', domain: 'Literature', achievement: 'Neapolitan Novels, global bestseller', duration: '1992–present', status: 'Never confirmed', value: 0, color: 'hsl(0 0% 55%)' },
+    { name: 'Elena Ferrante', domain: 'Literature', achievement: 'Neapolitan Novels, global bestseller', duration: '1992-present', status: 'Never confirmed', value: 0, color: 'hsl(0 0% 55%)' },
   ];
 
   return (

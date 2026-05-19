@@ -243,7 +243,7 @@ export function GUITimeline() {
   return (
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Interface Arc: 1973–2028</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Interface Arc: 1973-2028</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">From the first GUI to Zero-UI</p>
 
         <div className="relative">

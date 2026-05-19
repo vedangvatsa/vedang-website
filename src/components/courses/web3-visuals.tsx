@@ -10,8 +10,8 @@ export function WebEvolution() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {[
-            { era: 'Web1', period: '~1990–2004', model: 'Read-Only', desc: 'Static pages, open protocols', who: 'Users consume content', color: '#6b7280' },
-            { era: 'Web2', period: '~2004–Now', model: 'Read-Write', desc: 'Social media, user-generated content', who: 'Platforms own your data', color: '#3b82f6' },
+            { era: 'Web1', period: '~1990-2004', model: 'Read-Only', desc: 'Static pages, open protocols', who: 'Users consume content', color: '#6b7280' },
+            { era: 'Web2', period: '~2004-Now', model: 'Read-Write', desc: 'Social media, user-generated content', who: 'Platforms own your data', color: '#3b82f6' },
             { era: 'Web3', period: 'Emerging', model: 'Read-Write-Own', desc: 'Blockchain-based, decentralized', who: 'Users own data & assets', color: '#8b5cf6' },
           ].map((e) => (
             <div key={e.era} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden" style={{ borderTopWidth: '3px', borderTopColor: e.color }}>

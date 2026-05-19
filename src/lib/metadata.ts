@@ -110,7 +110,7 @@ export const pageMetadata = {
     keywords: ['Bryan Johnson', 'Blueprint Protocol', 'Longevity', 'Anti-Aging', 'Supplements', 'Biohacking', 'Health Optimization', 'Sleep Protocol'],
   },
   aiReports: {
-    title: 'AI Reports & Research Library - 2025–2026',
+    title: 'AI Reports & Research Library - 2025-2026',
     description:
       '1000+ AI reports, research papers, and industry analyses from Stanford, McKinsey, Deloitte, OpenAI, and more.',
     url: '/ai-reports',

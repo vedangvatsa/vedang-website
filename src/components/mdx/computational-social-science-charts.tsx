@@ -46,12 +46,12 @@ export function DataSourceDisruption() {
 /* ─── Methodological Evolution ─── */
 export function MethodologicalEvolution() {
   const methods = [
-    { name: 'API Scraping (traditional)', era: '2006–2023', scale: 'Millions of posts', privacy: 'Public data', limitation: 'Platform-dependent, shut down', maturity: 90, declining: true, color: 'hsl(0 0% 55%)' },
-    { name: 'Browser Extension Studies', era: '2020–present', scale: 'Thousands of participants', privacy: 'Informed consent', limitation: 'Small sample, self-selection bias', maturity: 65, declining: false, color: 'hsl(210 90% 40%)' },
-    { name: 'Data Donation (GDPR Art. 15)', era: '2021–present', scale: 'Hundreds to thousands', privacy: 'User-controlled export', limitation: 'Very small scale, labor-intensive', maturity: 45, declining: false, color: 'hsl(160 80% 35%)' },
-    { name: 'LLM Digital Twins', era: '2023–present', scale: 'Unlimited synthetic agents', privacy: 'No real users exposed', limitation: 'Validity of synthetic behavior', maturity: 30, declining: false, color: 'hsl(280 60% 45%)' },
-    { name: 'Algorithmic Auditing', era: '2019–present', scale: 'Controlled experiments', privacy: 'Researcher-created accounts', limitation: 'Platform detection, ToS violations', maturity: 55, declining: false, color: 'hsl(30 80% 50%)' },
-    { name: 'Platform Partnerships', era: '2018–present', scale: 'Millions (platform-controlled)', privacy: 'NDA-governed', limitation: 'Corporate veto on findings', maturity: 40, declining: false, color: 'hsl(350 70% 45%)' },
+    { name: 'API Scraping (traditional)', era: '2006-2023', scale: 'Millions of posts', privacy: 'Public data', limitation: 'Platform-dependent, shut down', maturity: 90, declining: true, color: 'hsl(0 0% 55%)' },
+    { name: 'Browser Extension Studies', era: '2020-present', scale: 'Thousands of participants', privacy: 'Informed consent', limitation: 'Small sample, self-selection bias', maturity: 65, declining: false, color: 'hsl(210 90% 40%)' },
+    { name: 'Data Donation (GDPR Art. 15)', era: '2021-present', scale: 'Hundreds to thousands', privacy: 'User-controlled export', limitation: 'Very small scale, labor-intensive', maturity: 45, declining: false, color: 'hsl(160 80% 35%)' },
+    { name: 'LLM Digital Twins', era: '2023-present', scale: 'Unlimited synthetic agents', privacy: 'No real users exposed', limitation: 'Validity of synthetic behavior', maturity: 30, declining: false, color: 'hsl(280 60% 45%)' },
+    { name: 'Algorithmic Auditing', era: '2019-present', scale: 'Controlled experiments', privacy: 'Researcher-created accounts', limitation: 'Platform detection, ToS violations', maturity: 55, declining: false, color: 'hsl(30 80% 50%)' },
+    { name: 'Platform Partnerships', era: '2018-present', scale: 'Millions (platform-controlled)', privacy: 'NDA-governed', limitation: 'Corporate veto on findings', maturity: 40, declining: false, color: 'hsl(350 70% 45%)' },
   ];
 
   return (
