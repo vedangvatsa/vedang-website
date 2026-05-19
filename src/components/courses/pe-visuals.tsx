@@ -1,4 +1,4 @@
-'use client';
+
 
 /* ─── Module 1: Prediction Engine ─── */
 export function PredictionEngine() {

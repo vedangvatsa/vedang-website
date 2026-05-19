@@ -1,4 +1,4 @@
-'use client';
+
 
 /* ─── Web Evolution ─── */
 export function WebEvolution() {

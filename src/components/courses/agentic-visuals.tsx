@@ -1,4 +1,4 @@
-'use client';
+
 
 /* ─── Module 1: Information Web → Action Web ─── */
 export function ActionWebEvolution() {
