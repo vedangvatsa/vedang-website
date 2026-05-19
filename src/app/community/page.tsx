@@ -101,7 +101,7 @@ export default function CommunityProfilePage() {
                 <div className="grid md:grid-cols-2 gap-x-6 gap-y-4">
                     <div>
                         <h3 className="font-semibold text-lg">Community Building & Engagement</h3>
-                        <p className="text-muted-foreground mt-1 text-sm">Architected and scaled a 100k+ member professional Web3 community from scratch, fostering a highly engaged network of executives, developers, and enthusiasts.</p>
+                        <p className="text-muted-foreground mt-1 text-sm">Built and scaled a 100k+ member professional Web3 community from scratch, creating a highly engaged network of executives, developers, and enthusiasts.</p>
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Content Strategy & Creation</h3>

@@ -8,7 +8,7 @@ import { InfiniteReportList } from '@/components/infinite-report-list';
 
 export const metadata: Metadata = {
   title: 'AI Reports Library | Vedang Vatsa',
-  description: 'A comprehensive, searchable database of 21,000+ AI reports, research papers, and industry analyses published since 2022.',
+  description: 'A searchable database of 21,000+ AI reports, research papers, and industry analyses published since 2022.',
 };
 
 export default async function AIReportsPage({

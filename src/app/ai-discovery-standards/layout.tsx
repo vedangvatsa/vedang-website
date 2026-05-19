@@ -44,7 +44,7 @@ const softwareSchema = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareSourceCode',
   name: 'AI Discovery Standards',
-  description: 'A comprehensive reference of every file, protocol, and technique used to make websites discoverable by AI systems, search engines, and autonomous agents. Includes ready-to-use templates and a CLI tool.',
+  description: 'A complete reference of every file, protocol, and technique used to make websites discoverable by AI systems, search engines, and autonomous agents. Includes ready-to-use templates and a CLI tool.',
   url: 'https://veda.ng/ai-discovery-standards',
   codeRepository: 'https://github.com/vedangvatsa/ai-discovery-standards',
   programmingLanguage: 'JavaScript',
@@ -66,7 +66,7 @@ const faqSchema = {
       name: 'What is llms.txt?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'llms.txt is a Markdown file placed at the root of a website (/llms.txt) that provides LLMs a curated summary of the site content. It includes an H1 title, a blockquote description, and organized links to key pages. Created by Jeremy Howard (Answer.AI) in 2024, it is widely adopted by companies like Anthropic, Stripe, and Vercel but is not an IETF or W3C standard.'
+        text: 'llms.txt is a Markdown file placed at the root of a website (/llms.txt) that provides LLMs a structured summary of the site content. It includes an H1 title, a blockquote description, and organized links to key pages. Created by Jeremy Howard (Answer.AI) in 2024, it is widely adopted by companies like Anthropic, Stripe, and Vercel but is not an IETF or W3C standard.'
       }
     },
     {
