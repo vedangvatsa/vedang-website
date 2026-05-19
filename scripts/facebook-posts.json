@@ -715,9 +715,11 @@
     "id": "reddit-meme-4",
     "scheduleDate": "2026-05-14",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "When leadership decides to \"help out\" with a little code cleanup right before the release.\n\nPlease. Stop. Helping.",
-    "image": "scripts/thread-assets/linkedin-rewrites/manager_cleanup.png"
+    "image": "scripts/thread-assets/linkedin-rewrites/manager_cleanup.png",
+    "postedAt": "2026-05-19T04:58:37.758Z",
+    "fbPostId": "1785048661795414_1285837890392919"
   },
   {
     "id": "reddit-meme-5",
