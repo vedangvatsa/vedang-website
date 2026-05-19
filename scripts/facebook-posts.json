@@ -725,9 +725,11 @@
     "id": "reddit-meme-5",
     "scheduleDate": "2026-05-14",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Open source in a nutshell.\n\nWe all build on work done by someone else.\n\nWho probably copied it from a forum post in 2012.",
-    "image": "scripts/thread-assets/linkedin-rewrites/steal_stolen.png"
+    "image": "scripts/thread-assets/linkedin-rewrites/steal_stolen.png",
+    "postedAt": "2026-05-19T12:33:04.842Z",
+    "fbPostId": "1785048661795414_1286116343698407"
   },
   {
     "id": "ig-genz-boundaries",

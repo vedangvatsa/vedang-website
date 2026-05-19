@@ -75,8 +75,9 @@
     "image": "scripts/thread-assets/agentic_3.png",
     "scheduleDate": "2026-03-27",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x1a880a394e5344312d7c6409c31e6ca412519735",
+    "postedAt": "2026-05-19T12:33:08.510Z"
   },
   {
     "id": "psych-helplessness",
