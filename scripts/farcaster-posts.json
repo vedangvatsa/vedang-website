@@ -65,8 +65,9 @@
     "image": "scripts/thread-assets/psych_halo.png",
     "scheduleDate": "2026-03-27",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x7f1c3ec666a21a4482db74f19d26a2bcd5235963",
+    "postedAt": "2026-05-19T04:58:40.587Z"
   },
   {
     "id": "agentic-commerce-3",
