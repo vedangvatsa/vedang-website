@@ -43,7 +43,7 @@ export function InfiniteReportList({ items }: { items: ReportEntry[] }) {
 
   return (
     <>
-      <div className="columns-1 md:columns-2 gap-6 bg-card border border-border/60 rounded-xl p-4 md:p-6">
+      <div className="columns-1 md:columns-2 xl:columns-3 gap-6 bg-card border border-border/60 rounded-xl p-4 md:p-6">
         {shown.map((report, i) => (
           <Link
             key={i}
