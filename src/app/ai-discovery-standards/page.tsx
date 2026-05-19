@@ -89,22 +89,24 @@ export default function AiDiscoveryStandardsPage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="pb-16 max-w-3xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight">
-          AI Discovery Standards
-        </h1>
-        <p className="mt-5 text-muted-foreground leading-relaxed">
-          {DISCOVERY_FILES.length} files across {CATEGORIES.length} categories. Every protocol and metadata
-          standard used to make websites discoverable by AI systems, search engines, and autonomous agents.
-        </p>
-        <p className="mt-4 text-xs text-muted-foreground">
-          By Vedang Vatsa ·{' '}
-          <Link href="https://github.com/vedangvatsa/ai-discovery-standards" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">
-            GitHub
-          </Link>
-          {' · '}
-          <code className="text-xs">npx ai-discovery-standards</code>
-        </p>
+      <section className="text-center pt-16 pb-12 border-b border-border/30">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
+            AI Discovery Standards
+          </h1>
+          <p className="mt-4 text-base md:text-lg text-muted-foreground">
+            {DISCOVERY_FILES.length} files across {CATEGORIES.length} categories. Every protocol and metadata
+            standard used to make websites discoverable by AI systems, search engines, and autonomous agents.
+          </p>
+          <p className="mt-4 text-sm text-muted-foreground">
+            By Vedang Vatsa ·{' '}
+            <Link href="https://github.com/vedangvatsa/ai-discovery-standards" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary font-medium">
+              GitHub →
+            </Link>
+            {' · '}
+            <code className="text-sm">npx ai-discovery-standards</code>
+          </p>
+        </div>
       </section>
 
       <div className="space-y-24">

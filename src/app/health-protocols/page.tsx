@@ -127,17 +127,19 @@ export default function HealthProtocolsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* ── Hero ── */}
-      <section className="pb-16 max-w-3xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight">
-          Bryan Johnson&apos;s Blueprint Protocol
-        </h1>
-        <p className="mt-5 text-muted-foreground leading-relaxed">
-          327 protocols extracted from 900+ YouTube transcripts, ranked by mention frequency.
-          Every claim links to a timestamped video or the official protocol page.
-        </p>
-        <p className="mt-4 text-xs text-muted-foreground">
-          By Vedang Vatsa · <Link href="https://blueprint.bryanjohnson.com/pages/blueprint-protocol" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">Primary source</Link>
-        </p>
+      <section className="text-center pt-16 pb-12 border-b border-border/30">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
+            Bryan Johnson&apos;s Blueprint Protocol
+          </h1>
+          <p className="mt-4 text-base md:text-lg text-muted-foreground">
+            327 protocols extracted from 900+ YouTube transcripts, ranked by mention frequency.
+            Every claim links to a timestamped video or the official protocol page.
+          </p>
+          <p className="mt-4 text-sm text-muted-foreground">
+            By Vedang Vatsa · <Link href="https://blueprint.bryanjohnson.com/pages/blueprint-protocol" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary font-medium">Primary source →</Link>
+          </p>
+        </div>
       </section>
 
       <div className="space-y-24">
