@@ -195,7 +195,7 @@ const manualReports: AIReport[] = [
   // ── Agriculture & Food ──
   {title:'Artificial Intelligence for Food Safety',source:'FAO / Wageningen',url:'https://www.fao.org/',date:'2025',category:'Healthcare & Science',type:'Report'},
   {title:'Digital Agriculture and AI Innovation Roadmap',source:'FAO',url:'https://www.fao.org/',date:'2025',category:'Healthcare & Science',type:'Framework'},
-  {title:'USDA AI Strategy FY 2025–2026',source:'USDA',url:'https://www.usda.gov/',date:'2025',category:'Healthcare & Science',type:'Framework'},
+  {title:'USDA AI Strategy FY 2025-2026',source:'USDA',url:'https://www.usda.gov/',date:'2025',category:'Healthcare & Science',type:'Framework'},
 
   // ── More Enterprise & Strategy (additional) ──
   {title:'Global AI Diffusion Report H2 2025',source:'Microsoft',url:'https://blogs.microsoft.com/on-the-issues/',date:'2025',category:'Industry & Enterprise',type:'Report'},

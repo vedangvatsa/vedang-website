@@ -1,46 +1,83 @@
+---
+title: "The Future of the Agentic Web"
+description: "Open problems in agent security, human-agent alignment, new economic models, regulatory gaps, and unsolved technical challenges."
+---
+
 <AgenticFuture />
 
-The Agentic Web holds incredible promise, but it also presents significant challenges in security, ethics, and economics. This module explores the open questions we must solve to build a safe and prosperous agentic future.
+The Agentic Web has real promise, but it also has real problems. Security, economics, regulation, and alignment are all unresolved. This module covers what's working, what's broken, and what's still being figured out.
 
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">Security and Trust: The Tool-Use Paradox</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>The very tools that give agents their power also create their biggest vulnerability. To be useful, an agent must trust its tools (like APIs and websites) to provide accurate information and execute actions correctly. But to be secure, it must assume any tool could be compromised at any time.</p>
-            <p>This creates the <strong>"Tool-Use Paradox."</strong> A malicious API could return false information to poison an agent's knowledge, or a compromised website could trick an agent into performing a harmful action.</p>
-            <p>Solving this requires several key innovations:</p>
+            <p>The very tools that give agents their power also create their biggest weakness. To be useful, an agent must trust its tools (APIs, websites, databases) to return accurate information and execute actions correctly. But to be safe, it must assume any tool could be compromised at any time.</p>
+            <p>This is the <strong>"Tool-Use Paradox."</strong> A bad API could return false information to poison an agent's reasoning. A compromised website could trick an agent into performing a harmful action.</p>
+            <p>Solving this requires several things:</p>
             <ul>
-                <li><strong>"Zero-Trust" Agent Architecture:</strong> Agents must be designed with an inherent skepticism. Every piece of information received from an external tool should be validated against a security policy or cross-referenced with other sources before being fully trusted.</li>
-                <li><strong>Strong Permissions and Sandboxing:</strong> Agents must operate in sandboxed environments with clearly defined permissions. An agent tasked with reading news should not have permission to access your email or make purchases.</li>
-                <li><strong>Reputation Systems:</strong> Just as humans rely on reviews and reputation, agents will need decentralized reputation systems to assess the trustworthiness of other agents and tools they interact with.</li>
+                <li><strong>"Zero-Trust" Agent Architecture:</strong> Agents must be built with built-in skepticism. Every piece of data received from an external tool should be validated against a security policy or cross-checked with other sources before being fully trusted.</li>
+                <li><strong>Strong Permissions and Sandboxing:</strong> Agents must run in sandboxed environments with clearly defined permissions. An agent tasked with reading news should not have permission to access your email or make purchases.</li>
+                <li><strong>Reputation Systems:</strong> Just as humans rely on reviews and word of mouth, agents will need decentralized reputation systems to assess the trustworthiness of other agents and tools they interact with.</li>
             </ul>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">Human-Agent Alignment: Who's in Control?</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>How do we ensure that an autonomous agent understands and acts on our intentions, especially when our instructions are vague or our preferences change over time? This is the alignment problem, a central challenge in AI safety.</p>
-            <p>An agent might interpret "find me a cheap flight" in a way that leads to a terrible travel experience (e.g., multiple long layovers). Ensuring alignment requires building agents that can:</p>
+            <p>How do we make sure an autonomous agent understands and acts on our intentions, especially when our instructions are vague or our preferences change? This is the alignment problem.</p>
+            <p>An agent might interpret "find me a cheap flight" in a way that leads to a terrible travel experience (multiple long layovers, no baggage). Ensuring alignment requires building agents that can:</p>
             <ul>
-                <li><strong>Ask Clarifying Questions:</strong> To resolve ambiguity before taking action. A well-aligned agent, when given a vague goal, should respond with, "I can do that. What is more important to you: cost or travel time?"</li>
-                <li><strong>Elicit Preferences:</strong> Help users discover what they really want. Many users don't have perfectly formed preferences. A good agent should be able to guide the user through a collaborative process to define their goals more clearly.</li>
-                <li><strong>Enable Meaningful Oversight:</strong> Provide clear, intuitive ways for humans to monitor an agent's progress, understand its reasoning, intervene if necessary, and take back control at any moment. The user should always have a "stop button."</li>
+                <li><strong>Ask Clarifying Questions:</strong> To resolve ambiguity before taking action. A well-aligned agent should respond with, "I can do that. What matters more to you: cost or travel time?"</li>
+                <li><strong>Help Users Define Preferences:</strong> Many users don't have perfectly formed preferences. A good agent should be able to guide a user through a quick process to define their goals more clearly.</li>
+                <li><strong>Enable Oversight:</strong> Provide clear, simple ways for humans to monitor an agent's progress, understand its reasoning, step in if needed, and take back control at any moment. The user should always have a "stop button."</li>
             </ul>
-            <p>Building this collaborative relationship, where the human provides strategic direction and the agent handles tactical execution, is key to making agentic systems both powerful and safe.</p>
+            <p>Building this collaborative relationship, where the human sets direction and the agent handles execution, is how agentic systems become both powerful and safe.</p>
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg text-left">The New Economy: Beyond Advertising</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            <p>The current internet is largely funded by advertising. This economic model is based on capturing and selling human attention. This model breaks down when the primary "users" of web services are no longer humans, but autonomous agents.</p>
-            <p>The Agentic Web will require new, machine-native business models. This presents both a massive challenge and a huge opportunity:</p>
+            <p>The current internet runs on advertising. That model is built on capturing and selling human attention. It breaks down when the primary "users" of web services are no longer humans, but autonomous agents.</p>
+            <p>The Agentic Web will need new, machine-native business models:</p>
             <ul>
-                <li><strong>Transactional Fees / Pay-per-Action:</strong> The most direct model. Instead of paying for ads, services will charge a small fee for each successful action an agent performs (e.g., a micro-payment for a successful booking or a successful API call).</li>
-                <li><strong>Subscription Services:</strong> Users might pay a monthly fee for access to a powerful, specialized agent (e.g., a "Pro" subscription for a financial analysis agent).</li>
-                <li><strong>Value-Based Pricing:</strong> Paying for the outcome. For example, a "Negotiation Agent" that saves you money on a large purchase could take a small percentage of the savings as its fee.</li>
-                <li><strong>Agent-Targeted Advertising:</strong> A new form of advertising could emerge where tool providers pay to have their services ranked higher in an agent's consideration set. This "advertising" would be based on performance, reliability, and cost, not on emotional appeal.</li>
+                <li><strong>Pay-per-Action:</strong> The most direct model. Instead of paying for ads, services charge a small fee for each action an agent completes (a micro-payment for a successful booking or API call).</li>
+                <li><strong>Subscription Services:</strong> Users pay a monthly fee for access to a specialized agent (a "Pro" tier for a financial analysis agent, for example).</li>
+                <li><strong>Value-Based Pricing:</strong> Paying for the outcome. A "Negotiation Agent" that saves you money on a purchase could take a small percentage of the savings as its fee.</li>
+                <li><strong>Agent-Targeted Advertising:</strong> A new form of advertising where tool providers pay to have their services ranked higher in an agent's consideration set. This "advertising" is based on performance and reliability, not emotional appeal.</li>
             </ul>
-            <p>This transition represents a monumental shift away from the attention economy and toward a more direct and efficient "intention economy," where value is tied directly to the successful fulfillment of user goals.</p>
+            <p>This transition moves the internet away from the attention economy and toward what you could call an "intention economy," where value is tied directly to getting things done.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg text-left">The Regulation Gap</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Governments are still figuring out how to regulate AI systems, and autonomous agents create problems that existing laws don't cover.</p>
+            <p><strong>Unanswered liability questions:</strong></p>
+            <ul>
+                <li>If an agent books the wrong flight and costs you $2,000, who is liable? The agent developer? The platform? The airline's API?</li>
+                <li>If an agent makes a purchase on your behalf that you didn't explicitly authorize, is that a valid transaction?</li>
+                <li>If an agent negotiates a contract, is the contract legally binding?</li>
+            </ul>
+            <p><strong>Identity and authentication:</strong></p>
+            <ul>
+                <li>How does a website know if it's interacting with a human or an agent? Should agents be required to identify themselves?</li>
+                <li>If an agent acts on your behalf, how does the receiving service verify that the agent has your authorization?</li>
+                <li>The EU AI Act (effective 2026) requires "high-risk" AI systems to be transparent about their automated decision-making. Many agent use cases may fall under this category.</li>
+            </ul>
+            <p>These aren't theoretical questions. They're real blockers for enterprise adoption. Companies are hesitant to deploy agents that can make purchases, sign agreements, or access sensitive data without a clear legal framework.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">Open Problems Worth Watching</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>These are the technical problems that will determine how fast the Agentic Web develops:</p>
+            <ul>
+                <li><strong>Multi-Agent Coordination:</strong> When multiple agents interact (your travel agent talking to an airline's booking agent), how do they negotiate, resolve conflicts, and avoid deadlocks? The A2A protocol is one answer, but coordination at scale is still an open research problem.</li>
+                <li><strong>Intent Specification:</strong> Humans are bad at describing exactly what they want. "Plan a nice trip" is hopelessly vague. We need better interfaces for translating fuzzy human preferences into precise agent instructions.</li>
+                <li><strong>Memory and Drift:</strong> Long-running agents accumulate context and make decisions based on earlier interactions. Over time, small errors compound. An agent that misunderstands one preference early on will make increasingly wrong decisions as it builds on that mistake. How do you detect and correct drift?</li>
+                <li><strong>Cost Control:</strong> Agents that call APIs, use LLM tokens, and perform web searches can get expensive fast. A research agent that recursively follows links could burn through $50 in API credits in minutes. Predictable cost models and hard budget limits are essential.</li>
+                <li><strong>Verification:</strong> When an agent says "I booked your flight," how do you verify that it actually did, at the price it claims, with the details it reports? Trust-but-verify patterns are needed for any agent that handles money or commitments.</li>
+            </ul>
         </AccordionContent>
     </AccordionItem>
 </Accordion>
@@ -51,6 +88,7 @@ The Agentic Web holds incredible promise, but it also presents significant chall
   question="What is the 'Tool-Use Paradox' in the context of the Agentic Web?"
   options={["The more tools an agent uses, the slower it becomes.", "Agents must trust tools to be useful, but trusting tools creates a significant security vulnerability.", "Humans prefer to use tools directly rather than delegating them to agents.", "There are too many tools available, making it impossible for agents to choose the right one."]}
   correctAnswerIndex={1}
-  explanation="To perform actions, agents must trust external tools (like APIs), but this trust makes them vulnerable to malicious or compromised tools providing false information or tricking them into harmful actions."
+  explanation="To perform actions, agents must trust external tools (like APIs), but this trust makes them vulnerable to bad or compromised tools providing false information or tricking them into harmful actions."
 />
+
 

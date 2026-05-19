@@ -55,7 +55,7 @@ const softwareSchema = {
     'Multi-agent AI debate simulation',
     'Knowledge graph extraction',
     'Support for 8 LLM providers (BYOK)',
-    'Configurable depth: 10–100 agents, 4–16 rounds',
+    'Configurable depth: 10-100 agents, 4-16 rounds',
     'Consensus report with confidence bounds',
     'Follow-up Q&A on simulation results',
     'Force-directed graph visualisation',

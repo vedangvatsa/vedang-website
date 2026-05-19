@@ -87,6 +87,44 @@ Theory is valuable, but nothing beats building something real. This module walks
             </ul>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg text-left">Step 5: A Working Code Example</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            <p>Here's a minimal agent you can run right now using the OpenAI Agents SDK. It has one tool (get the current weather) and a system prompt. This is a complete, working script.</p>
+            <p><strong>Setup:</strong></p>
+            <pre><code>{`pip install openai-agents
+export OPENAI_API_KEY="your-key-here"`}</code></pre>
+            <p><strong>The agent (agent.py):</strong></p>
+            <pre><code>{`from agents import Agent, Runner, function_tool
+
+# Define a tool the agent can use
+@function_tool
+def get_weather(city: str) -> str:
+    """Get the current weather for a city."""
+    # In production, this would call a real weather API
+    return f"The weather in {city} is 22°C and sunny."
+
+# Create the agent with a system prompt and tools
+agent = Agent(
+    name="Weather Assistant",
+    instructions="You are a helpful weather assistant. When asked about weather, use the get_weather tool. Keep responses short.",
+    tools=[get_weather],
+)
+
+# Run the agent
+result = Runner.run_sync(agent, "What's the weather like in Tokyo?")
+print(result.final_output)
+# Output: "The weather in Tokyo is 22°C and sunny."
+`}</code></pre>
+            <p><strong>What's happening in this code:</strong></p>
+            <ol>
+                <li><code>@function_tool</code> turns a regular Python function into a tool the agent can call. The docstring becomes the tool description that the LLM reads.</li>
+                <li><code>Agent()</code> creates the agent with a name, system prompt (instructions), and list of tools.</li>
+                <li><code>Runner.run_sync()</code> starts the agent loop: the LLM reads the user message, decides to call <code>get_weather</code>, reads the result, and generates a final response.</li>
+            </ol>
+            <p>This is 15 lines of real code. From here, you can add more tools (database lookups, API calls, file operations), chain multiple agents together, or add guardrails. The pattern stays the same.</p>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <AgentBuildChecklist />

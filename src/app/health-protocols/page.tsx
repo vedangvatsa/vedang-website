@@ -56,9 +56,9 @@ const quickStartRules = [
 ];
 
 // Supplements: pills/capsules taken with breakfast
-// Sources: vedangvatsa7/health-protocols repo – timestamped YouTube transcripts
+// Sources: vedangvatsa7/health-protocols repo - timestamped YouTube transcripts
 const supplements = [
-  { name: 'Essential Capsules', dose: '3 servings/day', purpose: 'Vitamin D3, B-complex, Zinc (15 mg), Selenium, Iodine – "26 critical nutrients"', source: 'https://www.youtube.com/watch?v=foa9ZhtyrfM&t=182' },
+  { name: 'Essential Capsules', dose: '3 servings/day', purpose: 'Vitamin D3, B-complex, Zinc (15 mg), Selenium, Iodine - "26 critical nutrients"', source: 'https://www.youtube.com/watch?v=foa9ZhtyrfM&t=182' },
   { name: 'Advanced Antioxidants', dose: '1 softgel', purpose: 'Vitamin K1 (1,500 mcg), K2-MK4 (5 mg), K2-MK7 (600 mcg), Lycopene, Lutein (20 mg), Zeaxanthin', source: 'https://www.youtube.com/watch?v=58rZylfxnjE&t=280' },
   { name: 'NAC (N-Acetyl Cysteine)', dose: '3 caps', purpose: 'Glutathione precursor, liver support, manage reactive oxygen species', source: 'https://www.youtube.com/watch?v=rioVRj7uSRk&t=13' },
   { name: 'Ginger + Cumin', dose: 'per stack', purpose: 'Anti-inflammatory, digestive support', source: 'https://www.youtube.com/watch?v=rioVRj7uSRk&t=13' },
@@ -175,7 +175,7 @@ const faqItems = [
 
 const articleSchema = {
   '@context': 'https://schema.org', '@type': 'Article',
-  headline: 'Bryan Johnson Blueprint Protocol – Full Reference Guide',
+  headline: 'Bryan Johnson Blueprint Protocol - Full Reference Guide',
   url: 'https://veda.ng/health-protocols',
   author: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
   datePublished: '2025-05-15',
@@ -454,7 +454,7 @@ export default function HealthProtocolsPage() {
             <h2 className="text-2xl font-semibold tracking-tight">Biomarkers</h2>
             <Src href="https://blueprint.bryanjohnson.com/pages/blueprint-protocol#biomarkers">official source</Src>
           </div>
-          <p className="text-muted-foreground text-sm mb-8">Diet, exercise, and supplements are adjusted based on monthly blood and urine results. Nothing is static – every variable is re-evaluated against the latest data.</p>
+          <p className="text-muted-foreground text-sm mb-8">Diet, exercise, and supplements are adjusted based on monthly blood and urine results. Nothing is static. Every variable is re-evaluated against the latest data.</p>
 
           <div className="space-y-px rounded-xl overflow-hidden border">
             {biomarkers.map(item => (

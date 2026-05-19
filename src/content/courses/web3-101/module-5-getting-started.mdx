@@ -1,69 +1,122 @@
 ---
 title: "Getting Started: Your Passport to Web3"
-description: "This module covers the practical first steps for working with Web3 technology."
+description: "A hands-on module that walks you through setting up a wallet, getting testnet ETH, and making your first on-chain transaction - step by step."
 ---
 
 <Web3Passport />
 
-This module covers the practical first steps for working with Web3 technology. It's less technical than you might think, but requires a new mindset around security and self-custody.
+This module is entirely hands-on. By the end, you will have installed a wallet, received free testnet cryptocurrency, and executed your first on-chain transaction. No real money required - we start on a test network so you can learn the mechanics safely before touching real assets.
 
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
-        <AccordionTrigger className="text-lg">Step 1: Get a Digital Wallet</AccordionTrigger>
+        <AccordionTrigger className="text-lg">Step 1: Install MetaMask (10 minutes)</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            A digital wallet is your primary tool for interacting with Web3. It's a secure application that lets you store and manage your cryptocurrencies and NFTs. More importantly, it acts as your digital identity, allowing you to log in to dApps without needing a username and password.
-            
-            * **Self-Custodial vs. Custodial:** A self-custodial wallet (like MetaMask or Rainbow) means YOU, and only you, have control over your assets. A custodial wallet (like a Coinbase account) means the company holds your assets for you. For true Web3 participation, you need a self-custodial wallet.
-            * **The Seed Phrase: The Golden Rule of Web3.** When you create a self-custodial wallet, you will be given a "seed phrase" or "recovery phrase": a unique 12 or 24-word password. This is the master key to all your assets.
-                * **You MUST write it down and store it securely offline.**
-                * **NEVER share it with anyone.**
-                * **NEVER store it digitally (e.g., in a text file, email, or photo).**
-              
-              If you lose your seed phrase, you lose access to your assets forever. If someone else gets it, they can steal all your assets. This is the most important rule of Web3.
-            * **Popular Wallets:** The most common wallets are browser extensions like <Link href="https://metamask.io/" target="_blank" rel="noopener noreferrer">MetaMask</Link> or mobile apps like <Link href="https://www.rainbow.me/" target="_blank" rel="noopener noreferrer">Rainbow</Link> and <Link href="https://phantom.app/" target="_blank" rel="noopener noreferrer">Phantom</Link> (for the Solana ecosystem).
+            A digital wallet is your primary tool for interacting with Web3. It stores your crypto, acts as your login for dApps, and signs transactions. We'll use MetaMask - the most widely used wallet with over 30 million monthly users.
+
+            **Installation:**
+
+            1. Open your browser (Chrome, Firefox, or Brave) and go to <Link href="https://metamask.io/download/" target="_blank" rel="noopener noreferrer">metamask.io/download</Link>.
+            2. Click "Install MetaMask for [your browser]." It installs as a browser extension.
+            3. Click "Create a new wallet." Agree to the terms.
+            4. Create a strong password. This is for your local device only - it is NOT your seed phrase.
+            5. **The Seed Phrase - READ THIS CAREFULLY:** MetaMask will show you a 12-word "Secret Recovery Phrase." This is the master key to your wallet.
+                * **Write it down on paper.** Not in a text file, not in a screenshot, not in your notes app. Paper.
+                * **Store the paper somewhere safe.** A locked drawer, a safe, or a safety deposit box.
+                * **Never share it with anyone.** No legitimate service, person, or website will ever ask for your seed phrase. If someone asks for it, they are trying to steal your assets.
+                * **If you lose your seed phrase, you lose access to your wallet permanently.** There is no "forgot password" button. There is no customer support to call. This is the trade-off of self-custody.
+            6. Confirm the seed phrase by selecting the words in the correct order.
+            7. Done. You now have a Web3 wallet. Your wallet address (starting with `0x`) is your public identity on the blockchain.
+
+            **Self-Custodial vs. Custodial:** MetaMask is a *self-custodial* wallet - you hold the keys, you control the assets. A *custodial* wallet (like a Coinbase account) means the company holds your keys for you. For learning and true Web3 participation, self-custodial is the way.
+
+            <WalletComparison />
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
-        <AccordionTrigger className="text-lg">Step 2: Get Some Crypto (The Safe Way)</AccordionTrigger>
+        <AccordionTrigger className="text-lg">Step 2: Get Free Testnet ETH (5 minutes)</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            To use most dApps, you'll need a small amount of cryptocurrency to pay for transaction fees (known as "gas"). The process of converting traditional money (like USD or EUR) into cryptocurrency is called an "onramp."
-            
-            1. **Use a Reputable Centralized Exchange:** For beginners, the safest way to buy your first crypto is through a large, regulated exchange like Coinbase, Kraken, or Gemini.
-            2. **Link Your Bank Account:** You can link your bank account or debit card to purchase crypto.
-            3. **Buy a Major Cryptocurrency:** Start with a well-established cryptocurrency like Ether (ETH), which is the native currency of the Ethereum network and is required for most dApp interactions.
-            4. **Withdraw to Your Self-Custodial Wallet:** Once you've bought crypto on the exchange, you need to withdraw it to your own wallet (the one you created in Step 1). This moves it from the exchange's custody to your self-custody. You will need to copy your wallet's public address (a long string of characters starting with '0x') and paste it into the withdrawal form on the exchange. Double-check the address!
+            Before spending real money, you should practice on a **test network** (testnet). Testnets are exact copies of the Ethereum blockchain, but the ETH on them has no real value. You can get it for free from a "faucet."
+
+            **Getting Sepolia Testnet ETH:**
+
+            1. **Switch MetaMask to the Sepolia network:** Click the network dropdown at the top of MetaMask (it says "Ethereum Mainnet" by default). Click "Show test networks" in settings if you don't see them. Select **"Sepolia test network."**
+            2. **Copy your wallet address:** Click your account name in MetaMask to copy your `0x...` address to your clipboard.
+            3. **Visit a faucet:** Go to <Link href="https://cloud.google.com/application/web3/faucet/ethereum/sepolia" target="_blank" rel="noopener noreferrer">Google Cloud Web3 Faucet</Link> or <Link href="https://www.alchemy.com/faucets/ethereum-sepolia" target="_blank" rel="noopener noreferrer">Alchemy Sepolia Faucet</Link>.
+            4. **Paste your address** into the faucet and click "Send." You'll receive 0.05-0.5 Sepolia ETH within a few seconds.
+            5. **Check MetaMask:** You should now see a balance in your MetaMask wallet on the Sepolia network. This ETH is free and has no real value - it's purely for learning.
+
+            **Why testnet first?** Every mistake on a testnet is free. Wrong address? No loss. Approved a bad contract? No loss. Once you're confident with the mechanics, you can switch to mainnet with real assets.
         </AccordionContent>
     </AccordionItem>
-        <AccordionItem value="item-3">
-        <AccordionTrigger className="text-lg">Step 3: Explore the Ecosystem</AccordionTrigger>
+    <AccordionItem value="item-3">
+        <AccordionTrigger className="text-lg">Step 3: Your First On-Chain Transaction (10 minutes)</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
-            Now that you have a wallet with some funds, you're ready to explore! Here are some things you can do:
-            
-            * **Get a Web3 Username:** Go to the Ethereum Name Service (ENS) and register a ".eth" name for your wallet. This gives you a human-readable username instead of a long address.
-            * **Try a dApp:** Explore a dApp aggregator like DappRadar to find interesting applications. You could try swapping a small amount of tokens on a decentralized exchange like Uniswap.
-            * **Collect an NFT:** Look for a free or low-cost NFT to mint. This will give you first-hand experience of what digital ownership feels like.
-            
-            **Important:** Start small. Only use small amounts of money that you are comfortable losing as you learn. The goal is to learn the mechanics safely.
+            Now let's do something real - swap one token for another on a decentralized exchange. This is the most fundamental Web3 action: a trustless, peer-to-peer trade with no intermediary.
+
+            **Making Your First Swap on Uniswap (Testnet):**
+
+            1. Go to <Link href="https://app.uniswap.org/" target="_blank" rel="noopener noreferrer">app.uniswap.org</Link>.
+            2. Click **"Connect Wallet"** in the top right. Select MetaMask. A popup will appear - click "Connect." This is how you "log in" to Web3: no email, no password, just your wallet.
+            3. Make sure you're on the **Sepolia network** (Uniswap should detect it automatically from MetaMask).
+            4. In the swap interface, set the "From" token to **ETH** and the "To" token to any available test token (like UNI).
+            5. Enter a small amount (like 0.01 ETH).
+            6. Click **"Swap."** MetaMask will pop up and ask you to confirm the transaction. You'll see:
+                * **Gas fee:** The small fee paid to the network validators to process your transaction. On testnet, this costs nothing real.
+                * **Transaction details:** What you're swapping, how much, and the estimated output.
+            7. Click **"Confirm"** in MetaMask.
+            8. Wait 15-30 seconds. Your transaction is now being processed by the Sepolia network.
+            9. Done! You've just executed a decentralized trade. No bank, no broker, no middleman.
+
+            **What just happened, technically:**
+            * Your wallet signed a transaction with your private key (proving you authorized it).
+            * The transaction was broadcast to the Sepolia network.
+            * Validators included your transaction in a block.
+            * Uniswap's smart contract executed the swap according to its code.
+            * The new tokens appeared in your wallet.
+
+            This entire process - from signing to settlement - happened in under a minute, without any human intermediary approving or processing it.
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-4">
+        <AccordionTrigger className="text-lg">Step 4: Explore the Ecosystem</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+            Now that you've completed your first transaction, here are three things to try next:
+
+            * **Look up your transaction on Etherscan:** Go to <Link href="https://sepolia.etherscan.io/" target="_blank" rel="noopener noreferrer">sepolia.etherscan.io</Link> and paste your wallet address. You'll see your transaction history - every action on the blockchain is public and verifiable. This is what "transparency" means in practice.
+            * **Get a Web3 username:** Go to the <Link href="https://app.ens.domains/" target="_blank" rel="noopener noreferrer">Ethereum Name Service (ENS)</Link> and search for a `.eth` name. On mainnet, you can register one as your human-readable wallet address (e.g., `vedang.eth` instead of `0x7a3b...`).
+            * **Browse dApps:** Visit <Link href="https://dappradar.com/" target="_blank" rel="noopener noreferrer">DappRadar</Link> to see the most popular decentralized applications across DeFi, gaming, and social. Each one connects to your wallet the same way Uniswap did.
+
+            **When you're ready for real assets:** Switch MetaMask back to "Ethereum Mainnet." Buy a small amount of ETH through a regulated exchange (Coinbase, Kraken, or Gemini), withdraw it to your MetaMask wallet address, and repeat the same steps. The interface is identical - the only difference is that the assets are real.
+
+            **Start small.** Only use money you can afford to lose entirely. The goal is to learn the mechanics, not to invest.
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-5">
         <AccordionTrigger className="text-lg">Staying Safe: Scams and Red Flags</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-none text-base">
             <SecurityRedFlags />
 
             Web3 gives you more control, but that also means more responsibility. Scams are common, especially targeting beginners. Knowing the patterns is your best defense.
-            
+
             * **Phishing:** Fake websites or social media accounts that look like real projects. They ask you to "connect your wallet" or "enter your seed phrase." A legitimate project will never ask for your seed phrase. If a site asks for it, close the tab immediately.
             * **Rug Pulls:** A team creates a token or NFT project, hypes it up to attract investment, and then disappears with the money. Red flags include anonymous teams, unrealistic promises of returns, and no working product.
+            * **Malicious Approvals:** Some dApps ask you to "approve" unlimited access to your tokens. This gives the smart contract permission to move your tokens at any time. Only approve the exact amount you need, and revoke old approvals regularly using <Link href="https://revoke.cash/" target="_blank" rel="noopener noreferrer">revoke.cash</Link>.
             * **Too-Good-to-Be-True Offers:** Messages promising free tokens, guaranteed returns, or "airdrop" rewards that require you to connect your wallet to an unknown site. These usually drain your wallet once you approve a transaction.
-            
+
             **Rules to live by:**
-            
+
             1. Never share your seed phrase. Ever. With anyone.
-            2. Always double-check URLs before connecting your wallet.
-            3. Use a separate "burner" wallet with small amounts for trying new projects.
+            2. Always double-check URLs before connecting your wallet. Bookmark the sites you use regularly.
+            3. Use a separate "burner" wallet with small amounts for trying new or unverified projects.
             4. If something sounds too good to be true, it almost certainly is.
             5. Research the team, the code, and the community before putting money in.
         </AccordionContent>
     </AccordionItem>
 </Accordion>
+
+<KnowledgeCheck
+  question="You just received your seed phrase from MetaMask. What is the safest way to store it?"
+  options={["Take a screenshot and save it to your phone's photo gallery.", "Write it down on paper and store the paper in a secure physical location like a locked drawer or safe.", "Email it to yourself so you can access it from anywhere.", "Save it in a password manager like 1Password or LastPass."]}
+  correctAnswerIndex={1}
+  explanation="Your seed phrase should only exist on physical paper (or metal backup), stored in a secure location. Digital storage (screenshots, emails, notes apps, cloud drives) is vulnerable to hacking, malware, and cloud breaches. If anyone gains access to your seed phrase, they can drain your entire wallet instantly."
+/>
