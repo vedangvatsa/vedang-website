@@ -1,4 +1,4 @@
-'use client';
+
 
 /* ─── Module 1: MCP Architecture Overview ─── */
 export function MCPArchitecture() {

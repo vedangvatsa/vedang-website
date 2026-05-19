@@ -1,4 +1,4 @@
-'use client';
+
 
 /* ─── Module 1: Vibe Coding Shift ─── */
 export function VibeCodingShift() {
