@@ -56,20 +56,21 @@ const quickStartRules = [
 ];
 
 // Supplements: pills/capsules taken with breakfast
+// Sources: vedangvatsa7/health-protocols repo – timestamped YouTube transcripts
 const supplements = [
-  { name: 'Essential Capsules', dose: '2 caps', purpose: 'Vitamin D3 (2,000 IU), B-complex, Zinc (15 mg), Selenium, Iodine, Calcium', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
-  { name: 'Advanced Antioxidants', dose: '1 softgel', purpose: 'Vitamin K1 (1,500 mcg), K2-MK4 (5 mg), K2-MK7 (600 mcg), Lycopene, Astaxanthin, Lutein, Zeaxanthin', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
-  { name: 'Ashwagandha (KSM-66)', dose: '600 mg', purpose: 'Cortisol regulation, stress adaptation, hormonal balance', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
-  { name: 'Rhodiola Rosea', dose: '100 mg', purpose: 'Physical and mental fatigue resistance', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
-  { name: 'Omega-3 (EPA/DHA/DPA)', dose: '800 mg', purpose: 'Cardiovascular, neurological, anti-inflammatory. Algae-derived.', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
-  { name: 'NR or NMN', dose: '450-500 mg', purpose: 'NAD+ replenishment. 6 days/week (not daily).', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
-  { name: 'Proferrin (Heme Iron)', dose: '10.5 mg', purpose: 'Iron optimization without GI distress', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
-  { name: 'NAC (N-Acetyl Cysteine)', dose: '600 mg', purpose: 'Glutathione precursor, liver support, antioxidant', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
-  { name: 'Ginger Extract', dose: '250 mg', purpose: 'Anti-inflammatory, digestive support', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
-  { name: 'Curcumin', dose: '500 mg', purpose: 'Systemic inflammation reduction', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
-  { name: 'Red Yeast Rice', dose: '600 mg', purpose: 'Cholesterol management (natural statin)', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
-  { name: 'Garlic Extract', dose: '1.2 g', purpose: 'Cardiovascular, blood pressure support', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
-  { name: 'Low-dose Lithium', dose: '1 mg', purpose: 'Neuroprotection, brain aging (added 2026)', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
+  { name: 'Essential Capsules', dose: '3 servings/day', purpose: 'Vitamin D3, B-complex, Zinc (15 mg), Selenium, Iodine – "26 critical nutrients"', source: 'https://www.youtube.com/watch?v=foa9ZhtyrfM&t=182' },
+  { name: 'Advanced Antioxidants', dose: '1 softgel', purpose: 'Vitamin K1 (1,500 mcg), K2-MK4 (5 mg), K2-MK7 (600 mcg), Lycopene, Lutein (20 mg), Zeaxanthin', source: 'https://www.youtube.com/watch?v=58rZylfxnjE&t=280' },
+  { name: 'NAC (N-Acetyl Cysteine)', dose: '3 caps', purpose: 'Glutathione precursor, liver support, manage reactive oxygen species', source: 'https://www.youtube.com/watch?v=rioVRj7uSRk&t=13' },
+  { name: 'Ginger + Cumin', dose: 'per stack', purpose: 'Anti-inflammatory, digestive support', source: 'https://www.youtube.com/watch?v=rioVRj7uSRk&t=13' },
+  { name: 'Red Yeast Rice', dose: '1 cap', purpose: 'Cholesterol management (natural statin)', source: 'https://www.youtube.com/watch?v=rioVRj7uSRk&t=13' },
+  { name: 'Garlic Extract', dose: '1 softgel', purpose: 'Odor-free, cardiovascular and blood pressure support', source: 'https://www.youtube.com/watch?v=rioVRj7uSRk&t=13' },
+  { name: 'Proferrin (Heme Iron)', dose: '10 mg', purpose: 'Iron optimization; take with 250 mg Vitamin C for absorption', source: 'https://www.youtube.com/watch?v=OJZ4pjzwDLU&t=96' },
+  { name: 'Hyaluronic Acid', dose: '300 mg', purpose: 'Joint health support', source: 'https://www.youtube.com/watch?v=User8_dkz9s&t=136' },
+  { name: 'Collagen Peptides', dose: '20 g', purpose: 'Oral collagen for joint and skin health', source: 'https://www.youtube.com/watch?v=F_3p81GmHEg&t=258' },
+  { name: 'Creatine Monohydrate', dose: '2.5 g + 5 g', purpose: '2.5 g in Longevity Mix + 5 g separate; cognitive and muscle performance', source: 'https://www.youtube.com/watch?v=djiU_pFTEVE&t=1032' },
+  { name: 'DHEA + Melatonin', dose: 'PM', purpose: 'Taken before bed as part of nighttime routine', source: 'https://www.youtube.com/watch?v=User8_dkz9s&t=187' },
+  { name: 'Calcium + Vitamin D', dose: 'daily', purpose: 'Bone health across all life phases', source: 'https://www.youtube.com/watch?v=Y2vpvcMzTVU&t=391' },
+  { name: 'Liquid Iodine', dose: '125-250 mcg', purpose: '125 mcg odd days, 250 mcg even days', source: 'https://www.youtube.com/watch?v=F_3p81GmHEg&t=238' },
 ];
 
 // Longevity Mix ingredients (dissolved in water, pre-workout)
@@ -91,54 +92,54 @@ const longevityMix = [
 ];
 
 const meals = [
-  { time: '5:25 AM', name: 'Pre-Workout Drink', items: 'Longevity Mix (see below) + Creatine (5 g) + Prebiotic fibers (GOS, Inulin, Arabinogalactan)', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine' },
-  { time: '5:35 AM', name: 'Longevity Protein', items: 'Blueberry Nut Mix (macadamias, walnuts) + Collagen peptides (11 g) + EVOO (1 tbsp) + Mixed berries + Pea protein', source: 'https://www.youtube.com/watch?v=LB9ovOjrw6U&t=594' },
-  { time: '~11 AM', name: 'Super Veggie', items: 'Black lentils + Broccoli + Cauliflower + Mushrooms + Garlic + Ginger + Cumin + EVOO + Hemp seeds + Dark leafy greens', source: 'https://www.youtube.com/watch?v=0bUieoJ6FI4&t=49' },
+  { time: '5:25 AM', name: 'Pre-Workout Drink', items: 'Longevity Mix + Collagen peptides + Creatine (5 g) + Prebiotics (GOS, Inulin, Arabinogalactan)', source: 'https://www.youtube.com/watch?v=XSaDL4EO0-g&t=79' },
+  { time: '5:35 AM', name: 'Longevity Protein', items: 'Macadamias, walnuts, flaxseed + Pea protein + EVOO (1 tbsp) + Berries + Pomegranate juice', source: 'https://www.youtube.com/watch?v=LB9ovOjrw6U&t=594' },
+  { time: '~11 AM', name: 'Super Veggie', items: 'Black lentils (300 g) + Broccoli (250 g) + Cauliflower (150 g) + Mushrooms + Garlic + Ginger + Cumin + Hemp seeds + EVOO + ACV', source: 'https://www.youtube.com/watch?v=LB9ovOjrw6U&t=281' },
 ];
 
 const sleepHabits = [
-  { habit: 'Reframe your identity: "I am a professional sleeper." Sleep is non-negotiable infrastructure.', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep' },
-  { habit: '30-60 min wind-down routine: reading, warm bath, breathing exercises. No exceptions.', source: 'https://www.youtube.com/watch?v=LPzRwzivklA&t=2460' },
-  { habit: 'Regulate evening light: warm/red tones only after sunset. Full blackout in bedroom.', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep' },
-  { habit: 'Temperature-controlled mattress (Eight Sleep). Bedroom at 65-68 F (18-20 C).', source: 'https://www.youtube.com/watch?v=Wk9p3dhMYdk&t=358' },
-  { habit: 'Reserve bed for sleep only - no work, no scrolling, no phone in bedroom.', source: 'https://www.youtube.com/watch?v=LPzRwzivklA&t=2782' },
-  { habit: 'Lower resting heart rate before bed: eat earlier (final meal by 11 AM), avoid alcohol.', source: 'https://www.youtube.com/watch?v=ev01uC8uUXI&t=610' },
-  { habit: 'Use earplugs or white noise machine. Eliminate all auditory disturbances.', source: 'https://www.youtube.com/watch?v=LPzRwzivklA&t=2656' },
-  { habit: 'Track sleep with a wearable (WHOOP or Oura). Optimize based on HRV and deep sleep data.', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep' },
-  { habit: 'Same wake time and bedtime every day, including weekends. No social jet lag.', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep' },
-  { habit: 'Target: 8 hours in bed, 6+ hours actual sleep, 1.5+ hours deep sleep.', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep' },
+  { habit: 'Bed by 8:30 PM, wake naturally ~5:00 AM without alarm. Same time every day, no exceptions.', source: 'https://www.youtube.com/watch?v=XSaDL4EO0-g&t=36' },
+  { habit: '30-60 min wind-down routine before bed: reading, warm bath, breathing. Set a bedtime alarm.', source: 'https://www.youtube.com/watch?v=LPzRwzivklA&t=2460' },
+  { habit: 'Finish last meal at least 4 hours before bed to lower resting heart rate during sleep.', source: 'https://www.youtube.com/watch?v=VGY_XMXMSZc&t=327' },
+  { habit: 'Bedroom temp: ~73°F when going to bed, drop to 69°F for deep sleep. Use Eight Sleep mattress.', source: 'https://www.youtube.com/watch?v=3kAiPSEnrHI&t=471' },
+  { habit: 'Reserve bed for sleep and sex only. Create a dedicated sleep environment - no screens, no work.', source: 'https://www.youtube.com/watch?v=LPzRwzivklA&t=2782' },
+  { habit: 'Lower resting heart rate before bed: eat earlier, avoid alcohol, late-night snacks, high stress.', source: 'https://www.youtube.com/watch?v=ev01uC8uUXI&t=610' },
+  { habit: 'Use earplugs, white noise machine, or pink noise. Full blackout in bedroom.', source: 'https://www.youtube.com/watch?v=LPzRwzivklA&t=2656' },
+  { habit: 'Turn off screens 60 minutes before bed. No phone in bedroom.', source: 'https://www.youtube.com/watch?v=LPzRwzivklA&t=2196' },
+  { habit: 'Track sleep with wearable (WHOOP/Oura). Correlate scores with daily performance.', source: 'https://www.youtube.com/watch?v=8_iIB7_fYCg&t=1899' },
+  { habit: 'Take DHEA + melatonin (instant + extended release) before bed.', source: 'https://www.youtube.com/watch?v=User8_dkz9s&t=187' },
 ];
 
-const EXERCISE_SOURCE = 'https://blueprint.bryanjohnson.com/blogs/news/exercise-and-fitness-protocol-for-longevity';
+const EXERCISE_SOURCE = 'https://www.youtube.com/watch?v=sYyVi-H-ozI&t=19';
 const weeklySchedule = [
-  { day: 'Monday', focus: 'Lower Body Strength', detail: 'Squats, leg press, split squats, calf raises' },
-  { day: 'Tuesday', focus: 'Upper Body Strength', detail: 'Push-ups, pull-ups, rows, shoulder press, dips' },
-  { day: 'Wednesday', focus: 'Zone 2 Cardio', detail: '45-60 min at 60-70% max HR (cycling, swimming, brisk walk)' },
-  { day: 'Thursday', focus: 'Full Body Compound', detail: 'Deadlifts, overhead press, weighted carries, core work' },
-  { day: 'Friday', focus: 'HIIT + Mobility', detail: '4x4 min intervals at 85-95% max HR + flexibility drills' },
-  { day: 'Saturday', focus: 'Outdoor Activity', detail: 'Hiking, sports, active play. Unstructured movement.' },
-  { day: 'Sunday', focus: 'Active Recovery', detail: 'Walking, stretching, foam rolling, PEMF therapy' },
+  { day: 'Monday', focus: 'Sled + Lower Body', detail: 'Sled push (95 lbs, 3-4 laps) + split squats (3x10 each leg) + tibialis raises (25 reps)' },
+  { day: 'Tuesday', focus: 'Upper Body + Core', detail: 'Push-ups, pull-ups, tricep extensions (25 reps), reverse push-ups, banded anti-rotation press' },
+  { day: 'Wednesday', focus: 'Zone 2 Cardio', detail: '4.5 hrs/week target at zone 2-4 HR. Cycling, swimming, or brisk walk (45-60 min)' },
+  { day: 'Thursday', focus: 'Power + Compound', detail: 'Medicine ball throws/slams (2x5), power skips (2x5), kettlebell swings, deadlifts' },
+  { day: 'Friday', focus: 'HIIT + Mobility', detail: '4x4 min intervals at 90-100% effort + 5-7 min ground movement routine' },
+  { day: 'Saturday', focus: 'Reactive Activity', detail: 'Tennis, surfing, or sport. Enhances balance and proprioception.' },
+  { day: 'Sunday', focus: 'Active Recovery', detail: 'Walking, stretching, foam rolling. 10-min evening walk to wind down.' },
 ];
 
-const SKIN_SOURCE = 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#skin';
+const SKIN_SOURCE = 'https://www.youtube.com/watch?v=y3uNl3j5c3k&t=112';
 const skincare = [
-  { step: 'Cleanse', detail: 'Wash face morning and night. Gentle, non-stripping cleanser.' },
-  { step: 'Vitamin C Serum', detail: 'Applied morning. Boosts collagen synthesis, photoprotection.' },
-  { step: 'Niacinamide', detail: 'Applied morning and night. Barrier repair, pore refinement.' },
-  { step: 'Hyaluronic Acid', detail: 'Humectant. Applied to damp skin for deep hydration.' },
-  { step: 'Mineral Sunscreen', detail: 'SPF 30+ daily. Reapply every 2 hours in direct sun.' },
-  { step: 'Tretinoin', detail: 'Applied at night. Prescription retinoid for cell turnover.' },
-  { step: 'Red Light Therapy', detail: '6 min, 3x/week. 630-660 nm wavelength. Collagen production.' },
-  { step: 'Collagen Peptides', detail: '20-30 g/day oral. Paired with Vitamin C for absorption.' },
+  { step: 'Red Light (AM)', detail: '30 seconds each side of face every morning for complexion.' },
+  { step: 'Mineral Sunscreen', detail: 'UVA+UVB mineral-based, environmentally friendly. Reapply in sun.' },
+  { step: 'UV Protection', detail: 'Hat, UV umbrella, driving gloves. Avoid peak UV hours.' },
+  { step: 'Tixel Therapy', detail: 'Every 4-8 weeks for skin quality. Exosomes for absorption.' },
+  { step: 'Tretinoin (PM)', detail: 'Prescription retinoid applied at night for cell turnover.' },
+  { step: 'Collagen Peptides', detail: '20 g oral daily. Paired with Vitamin C (250 mg) for absorption.' },
+  { step: 'Red/NIR Light', detail: 'Whole body after sauna. Reduces inflammation, supports collagen.' },
+  { step: 'Low-dose Accutane', detail: '40 mg, 2x/week for sebaceous gland regulation.' },
 ];
 
-const ORAL_SOURCE = 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#oral';
+const ORAL_SOURCE = 'https://www.youtube.com/watch?v=Z7veiyN4LqU&t=853';
 const oralHealth = [
-  { step: '1. Water Flosser', detail: 'High-pressure irrigation to remove plaque from gum line and between teeth.' },
-  { step: '2. Floss', detail: 'Thick floss (DrTung\'s) to remove debris loosened by water flosser.' },
+  { step: '1. Water Pick', detail: 'High-pressure irrigation to remove plaque from gum line and between teeth.' },
+  { step: '2. Floss', detail: 'Thick floss to remove debris loosened by water pick.' },
   { step: '3. Brush', detail: 'Electric toothbrush, soft bristles. Wait 30 min after eating to protect enamel.' },
   { step: '4. Tongue Scrape', detail: 'Stainless steel scraper. Reduces bacterial load and bad breath.' },
-  { step: '5. Tea Tree Rinse', detail: 'Diluted tea tree oil mouthwash. Anti-plaque, anti-inflammatory.' },
+  { step: '5. Tea Tree Oil', detail: 'Applied for gum health. Anti-plaque, anti-inflammatory.' },
 ];
 
 const BIOMARKER_SOURCE = 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#biomarkers';
@@ -152,21 +153,21 @@ const biomarkers = [
   { marker: 'Whole-body MRI', value: 'Annual', context: 'Full organ and vessel imaging', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#biomarkers' },
 ];
 
-const RX_SOURCE = 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine';
+const RX_SOURCE = 'https://www.youtube.com/watch?v=Al-CG7ULYtk&t=877';
 const prescriptions = [
+  { drug: 'Levothyroxine 112mg + Armour Thyroid 30mg', purpose: 'Hypothyroidism management (daily)' },
+  { drug: 'Testosterone 2mg patch (Androderm)', purpose: 'Maintain normal levels (~850) while on caloric restriction' },
+  { drug: 'Tadalafil', purpose: 'Offset bladder enlargement, improve urinary function' },
+  { drug: 'Low-dose Aspirin', purpose: '81 mg daily, cardiovascular protection' },
   { drug: 'Acarbose', purpose: 'Slows carbohydrate absorption, reduces glucose spikes' },
   { drug: 'Metformin', purpose: 'Insulin sensitivity, cellular energy regulation' },
-  { drug: 'Jardiance (Empagliflozin)', purpose: 'SGLT2 inhibitor, cardiovascular + kidney protection' },
-  { drug: 'Candesartan', purpose: 'Blood pressure optimization, organ protection' },
-  { drug: 'Levothyroxine', purpose: 'Thyroid hormone optimization' },
-  { drug: 'Microdose Accutane', purpose: '40 mg/week for sebaceous gland regulation' },
 ];
 
 const faqItems = [
   { question: 'Is this page affiliated with Bryan Johnson?', answer: 'No. Independent summary based on public sources. Not endorsed by or affiliated with Bryan Johnson, Blueprint, or Kernel.' },
   { question: 'Should I follow the full protocol?', answer: 'No. Bryan himself advises against copying it. Start with sleep, exercise, and diet. Consult a professional before adding supplements.' },
   { question: 'How much does it cost?', answer: 'Supplement stack: ~$11/day. Full protocol with devices, testing, and prep: significantly more. Prescription medications, blood panels, and MRIs add thousands per year.' },
-  { question: 'Where is the official protocol?', answer: 'blueprint.bryanjohnson.com/pages/blueprint-protocol - updated regularly based on biomarker data.' },
+  { question: 'Where are the sources from?', answer: 'All data is cross-referenced against 327 Bryan Johnson protocols extracted from 1,876 analyzed YouTube videos with timestamped transcripts. Official protocol: blueprint.bryanjohnson.com' },
   { question: 'What changed in 2026?', answer: 'NMN/NR reduced to 6 days/week. Rapamycin discontinued. Low-dose Lithium added. Longevity Mix reformulated. Simplified from 100+ pills to consolidated Blueprint-branded blends.' },
   { question: 'What is the "Don\'t Die" philosophy?', answer: 'Bryan treats the body as a "self-driving" system. Biological data overrides emotional impulses. AI analyzes biomarkers and dictates adjustments to supplements and lifestyle in real-time.' },
   { question: 'Are prescription medications required?', answer: 'No. The prescription stack (Metformin, Acarbose, etc.) is specific to Bryan\'s physiology and requires medical supervision. The supplement and lifestyle protocols can be adopted independently.' },
