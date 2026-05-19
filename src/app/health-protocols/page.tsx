@@ -73,6 +73,8 @@ const supplements = [
 ];
 
 // Longevity Mix ingredients (dissolved in water, pre-workout)
+// Source: blueprint.bryanjohnson.com/products/blueprint-longevity-mix
+const LONGEVITY_MIX_SOURCE = 'https://blueprint.bryanjohnson.com/products/blueprint-longevity-mix';
 const longevityMix = [
   { ingredient: 'Creatine Monohydrate', amount: '2.5 g', note: '+5 g separate = 7.5 g total' },
   { ingredient: 'Ca-AKG (Calcium Alpha-Ketoglutarate)', amount: '2,000 mg', note: 'Epigenetic aging marker' },
@@ -107,6 +109,7 @@ const sleepHabits = [
   { habit: 'Target: 8 hours in bed, 6+ hours actual sleep, 1.5+ hours deep sleep.', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#sleep' },
 ];
 
+const EXERCISE_SOURCE = 'https://blueprint.bryanjohnson.com/blogs/news/exercise-and-fitness-protocol-for-longevity';
 const weeklySchedule = [
   { day: 'Monday', focus: 'Lower Body Strength', detail: 'Squats, leg press, split squats, calf raises' },
   { day: 'Tuesday', focus: 'Upper Body Strength', detail: 'Push-ups, pull-ups, rows, shoulder press, dips' },
@@ -117,6 +120,7 @@ const weeklySchedule = [
   { day: 'Sunday', focus: 'Active Recovery', detail: 'Walking, stretching, foam rolling, PEMF therapy' },
 ];
 
+const SKIN_SOURCE = 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#skin';
 const skincare = [
   { step: 'Cleanse', detail: 'Wash face morning and night. Gentle, non-stripping cleanser.' },
   { step: 'Vitamin C Serum', detail: 'Applied morning. Boosts collagen synthesis, photoprotection.' },
@@ -128,6 +132,7 @@ const skincare = [
   { step: 'Collagen Peptides', detail: '20-30 g/day oral. Paired with Vitamin C for absorption.' },
 ];
 
+const ORAL_SOURCE = 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#oral';
 const oralHealth = [
   { step: '1. Water Flosser', detail: 'High-pressure irrigation to remove plaque from gum line and between teeth.' },
   { step: '2. Floss', detail: 'Thick floss (DrTung\'s) to remove debris loosened by water flosser.' },
@@ -136,16 +141,18 @@ const oralHealth = [
   { step: '5. Tea Tree Rinse', detail: 'Diluted tea tree oil mouthwash. Anti-plaque, anti-inflammatory.' },
 ];
 
+const BIOMARKER_SOURCE = 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#biomarkers';
 const biomarkers = [
-  { marker: 'VO2 Max', value: '58.7 ml/kg/min', context: 'Top 1% of 18-year-olds' },
-  { marker: 'DunedinPACE', value: '0.64-0.67', context: 'Aging at ~64-67% normal speed' },
-  { marker: 'Biological Age Reduction', value: '5.1 years', context: 'Cumulative reduction vs chronological age' },
-  { marker: 'hs-CRP (Inflammation)', value: '<0.15 mg/L', context: 'Near undetectable systemic inflammation' },
-  { marker: 'Blood Panels', value: '100+ markers', context: 'Monthly testing, algorithmic interpretation' },
-  { marker: 'Epigenetic Testing', value: '2x/year', context: 'TruDiagnostic DNA methylation clocks' },
-  { marker: 'Whole-body MRI', value: 'Annual', context: 'Full organ and vessel imaging' },
+  { marker: 'VO2 Max', value: '58.7 ml/kg/min', context: 'Top 1% of 18-year-olds', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#biomarkers' },
+  { marker: 'DunedinPACE', value: '0.64-0.67', context: 'Aging at ~64-67% normal speed', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#biomarkers' },
+  { marker: 'Biological Age Reduction', value: '5.1 years', context: 'Cumulative vs chronological age', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#biomarkers' },
+  { marker: 'hs-CRP (Inflammation)', value: '<0.15 mg/L', context: 'Near undetectable systemic inflammation', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#biomarkers' },
+  { marker: 'Blood Panels', value: '100+ markers', context: 'Monthly testing, algorithmic interpretation', source: 'https://blueprint.bryanjohnson.com/products/blueprint-panel' },
+  { marker: 'Epigenetic Testing', value: '2x/year', context: 'TruDiagnostic DNA methylation clocks', source: 'https://www.trudiagnostic.com' },
+  { marker: 'Whole-body MRI', value: 'Annual', context: 'Full organ and vessel imaging', source: 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#biomarkers' },
 ];
 
+const RX_SOURCE = 'https://blueprint.bryanjohnson.com/pages/blueprint-protocol#daily-routine';
 const prescriptions = [
   { drug: 'Acarbose', purpose: 'Slows carbohydrate absorption, reduces glucose spikes' },
   { drug: 'Metformin', purpose: 'Insulin sensitivity, cellular energy regulation' },
@@ -292,7 +299,10 @@ export default function HealthProtocolsPage() {
             ))}
           </div>
 
-          <p className="text-xs font-medium text-muted-foreground uppercase tracking-widest mt-8 mb-4">Longevity Mix Ingredients</p>
+          <div className="flex items-baseline justify-between gap-4 mt-8 mb-4">
+            <p className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Longevity Mix Ingredients</p>
+            <Src href={LONGEVITY_MIX_SOURCE}>product page</Src>
+          </div>
           <div className="space-y-px rounded-xl overflow-hidden border">
             {longevityMix.map(item => (
               <div key={item.ingredient} className="bg-card flex items-baseline gap-4 p-4">
@@ -327,7 +337,10 @@ export default function HealthProtocolsPage() {
             ))}
           </div>
 
-          <p className="text-xs font-medium text-muted-foreground uppercase tracking-widest mb-4">Weekly Schedule</p>
+          <div className="flex items-baseline justify-between gap-4 mb-4">
+            <p className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Weekly Schedule</p>
+            <Src href={EXERCISE_SOURCE}>exercise guide</Src>
+          </div>
           <div className="space-y-px rounded-xl overflow-hidden border mb-6">
             {weeklySchedule.map(day => (
               <div key={day.day} className="bg-card flex gap-4 p-4">
@@ -448,6 +461,7 @@ export default function HealthProtocolsPage() {
                 <span className="font-medium text-sm shrink-0 w-44">{item.marker}</span>
                 <span className="text-sm font-mono shrink-0">{item.value}</span>
                 <span className="text-xs text-muted-foreground flex-1 text-right">{item.context}</span>
+                <Src href={item.source} />
               </div>
             ))}
           </div>
@@ -457,6 +471,7 @@ export default function HealthProtocolsPage() {
         <section id="prescriptions">
           <div className="flex items-baseline justify-between gap-4 mb-2">
             <h2 className="text-2xl font-semibold tracking-tight">Prescription Stack</h2>
+            <Src href={RX_SOURCE}>official source</Src>
           </div>
           <p className="text-muted-foreground text-sm mb-8">These are prescription medications specific to Bryan&apos;s medical profile and biomarker targets. They require physician supervision and are not recommended for replication.</p>
 
