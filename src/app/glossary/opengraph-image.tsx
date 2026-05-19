@@ -6,5 +6,5 @@ export const size = ogSize;
 export const contentType = 'image/png';
 
 export default async function Image() {
-  return generateOgImage('AI & Web3 Glossary', 'Comprehensive Terms & Definitions');
+  return generateOgImage('AI & Web3 Glossary', 'Complete Terms & Definitions');
 }

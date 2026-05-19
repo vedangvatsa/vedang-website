@@ -25,7 +25,7 @@ export default function NomadMapPage() {
             Digital Nomad Directory
           </h1>
           <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-            3,400+ coliving houses, hostels, apartments, and guesthouses across 74 cities in 47 countries. Residential properties curated for digital nomads.
+            3,400+ coliving houses, hostels, apartments, and guesthouses across 74 cities in 47 countries. Residential properties picked for digital nomads.
           </p>
         </div>
       </section>

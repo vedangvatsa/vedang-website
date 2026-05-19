@@ -21,7 +21,7 @@ export const CATEGORIES = [
   'NFTs & Culture',
 ];
 
-const curatedReports: Web3Report[] = [
+const manualReports: Web3Report[] = [
   // ── State of Crypto ──
   {title:'State of Crypto 2024',source:'a16z crypto',url:'https://a16zcrypto.com/stateofcrypto/',date:'Oct 2024',category:'State of Crypto',type:'Report',description:'Annual industry report covering blockspace adoption, developer activity, and decentralized identity metrics.'},
   {title:'Crypto Theses 2025',source:'Messari',url:'https://messari.io/report/the-crypto-theses-2025',date:'Dec 2024',category:'State of Crypto',type:'Report',description:'Messari annual outlook covering macro, DeFi, infrastructure, and emerging ecosystems.'},
@@ -83,4 +83,4 @@ const curatedReports: Web3Report[] = [
   {title:'State of Crypto Adoption 2024',source:'Chainalysis',url:'https://www.chainalysis.com/blog/2024-global-crypto-adoption-index/',date:'Sep 2024',category:'State of Crypto',type:'Report',description:'Global crypto adoption index covering 150+ countries.'},
 ];
 
-export const web3Reports: Web3Report[] = [...curatedReports, ...(generatedReports as Web3Report[])];
+export const web3Reports: Web3Report[] = [...manualReports, ...(generatedReports as Web3Report[])];

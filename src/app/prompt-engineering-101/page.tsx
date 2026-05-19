@@ -221,7 +221,7 @@ export default function PromptEngineeringCoursePage() {
                 <div className="text-center">
                     <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Learn More</h2>
                     <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Here’s a curated list of sources to learn about prompt engineering. It covers everything from beginner guides to academic-level surveys and is useful for casual users, developers, and researchers.
+                        Here’s a list of the best sources to learn about prompt engineering. It covers everything from beginner guides to academic-level surveys and is useful for casual users, developers, and researchers.
                     </p>
                 </div>
                 <div className="max-w-5xl mx-auto mt-12 prose dark:prose-invert">
@@ -238,7 +238,7 @@ export default function PromptEngineeringCoursePage() {
                     <ul>
                         <li><Link href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DeepLearning.AI in partnership with OpenAI</Link>: “ChatGPT Prompt Engineering for Developers” a short, practical course.</li>
                         <li><Link href="https://www.coursera.org/learn/prompt-engineering?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Vanderbilt University on Coursera</Link>: “Prompt Engineering for ChatGPT” a beginner-friendly course with structured modules.</li>
-                        <li>Other curated course lists like this one from <Link href="https://www.analyticsvidhya.com/blog/2024/03/free-chatgpt-prompt-engineering-courses-and-resources/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Analytics Vidhya</Link> can highlight a mix of free and paid offerings.</li>
+                        <li>Other course lists like this one from <Link href="https://www.analyticsvidhya.com/blog/2024/03/free-chatgpt-prompt-engineering-courses-and-resources/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Analytics Vidhya</Link> can highlight a mix of free and paid offerings.</li>
                     </ul>
 
                     <h3 className="text-2xl font-semibold tracking-tight mt-12">Academic & Deep-Dive Surveys / Papers</h3>
@@ -260,7 +260,7 @@ export default function PromptEngineeringCoursePage() {
                         <li>If you’re new: start with <strong><Link href="https://learnprompting.org/docs/introduction?srsltid=AfmBOoofk_9KZ9_AF0jWr8FFquJNivbNDE0Zhha-pATc_fHk6MHgZh3o&utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">LearnPrompting.org</Link></strong> or the <strong><Link href="https://github.com/dair-ai/Prompt-Engineering-Guide?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DAIR.AI guide</Link></strong>.</li>
                         <li>If you prefer guided learning: take the <strong><Link href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DeepLearning.AI</Link></strong> or <strong><Link href="https://www.coursera.org/learn/prompt-engineering?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Vanderbilt University</Link></strong> course.</li>
                         <li>Once you’re comfortable: skim one of the academic surveys to get a deeper, principled understanding.</li>
-                        <li>For long-term skill: follow blogs and curated resource lists to stay updated as prompt engineering evolves rapidly.</li>
+                        <li>For long-term skill: follow blogs and resource lists to stay updated as prompt engineering evolves rapidly.</li>
                     </ul>
                 </div>
             </section>

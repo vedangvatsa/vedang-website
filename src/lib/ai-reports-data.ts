@@ -23,7 +23,7 @@ export const CATEGORIES = [
   'Creative & Media',
 ];
 
-const curatedReports: AIReport[] = [
+const manualReports: AIReport[] = [
   // ── State of AI ──
   {title:'Stanford HAI AI Index Report 2026',source:'Stanford HAI',url:'https://aiindex.stanford.edu/report/',date:'Apr 2026',category:'AI Research',type:'Report',description:'Most comprehensive annual assessment of AI technical, economic and societal trends.'},
   {title:'Stanford HAI AI Index Report 2025',source:'Stanford HAI',url:'https://aiindex.stanford.edu/report/',date:'Apr 2025',category:'AI Research',type:'Report'},
@@ -203,4 +203,4 @@ const curatedReports: AIReport[] = [
   {title:'AI Business Trends 2025',source:'Google',url:'https://blog.google/',date:'2025',category:'Industry & Enterprise',type:'Report'},
   {title:'Gensler Design Forecast 2026: AI Tipping Point',source:'Gensler',url:'https://www.gensler.com/',date:'2026',category:'Industry & Enterprise',type:'Report'},
 ];
-export const aiReports: AIReport[] = [...curatedReports, ...(generatedReports as AIReport[])];
+export const aiReports: AIReport[] = [...manualReports, ...(generatedReports as AIReport[])];

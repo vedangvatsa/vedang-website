@@ -84,7 +84,7 @@ export const pageMetadata = {
   glossary: {
     title: 'AI & Web3 Glossary',
     description:
-      'Comprehensive glossary of AI and Web3 terms: blockchain, smart contracts, LLMs, AGI, DeFi, and more.',
+      'Complete glossary of AI and Web3 terms: blockchain, smart contracts, LLMs, AGI, DeFi, and more.',
     url: '/glossary',
     keywords: ['AI Glossary', 'Web3 Glossary', 'Artificial Intelligence Definitions', 'Blockchain Terms', 'Generative AI Terms', 'Crypto Glossary', 'Large Language Model (LLM)', 'DeFi Terms'],
   },
@@ -103,16 +103,16 @@ export const pageMetadata = {
     keywords: ['AI Automation', 'n8n', 'MCP Automation', 'AI Agents', 'API Automation', 'Workflow Automation', 'No-Code AI', 'Telegram Bot'],
   },
   healthProtocols: {
-    title: 'Bryan Johnson Blueprint Protocol - Curated Health Guide',
+    title: 'Bryan Johnson Blueprint Protocol - Full Reference Guide',
     description:
-      'A curated breakdown of Bryan Johnson\'s Blueprint longevity protocol: supplements, diet, exercise, and sleep routines backed by data.',
+      'A detailed breakdown of Bryan Johnson\'s Blueprint longevity protocol: supplements, diet, exercise, and sleep routines backed by transcript data.',
     url: '/health-protocols',
     keywords: ['Bryan Johnson', 'Blueprint Protocol', 'Longevity', 'Anti-Aging', 'Supplements', 'Biohacking', 'Health Optimization', 'Sleep Protocol'],
   },
   aiReports: {
     title: 'AI Reports & Research Library - 2025–2026',
     description:
-      'Curated collection of 1000+ AI reports, research papers, and industry analyses from Stanford, McKinsey, Deloitte, OpenAI, and more.',
+      '1000+ AI reports, research papers, and industry analyses from Stanford, McKinsey, Deloitte, OpenAI, and more.',
     url: '/ai-reports',
     keywords: ['AI Reports', 'AI Research Papers', 'State of AI', 'McKinsey AI', 'Stanford AI Index', 'AI Industry Reports', 'AI Governance', 'Generative AI Reports'],
   },

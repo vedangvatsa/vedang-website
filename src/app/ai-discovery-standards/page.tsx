@@ -17,7 +17,7 @@ const DISCOVERY_FILES: {
   { name: 'tdmrep.json', path: '/.well-known/tdmrep.json', desc: 'Text and Data Mining reservation. EU CDSM Directive Article 4 compliance. Machine-readable opt-out for AI training.', category: 'Access Control', spec: 'W3C TDMRep', specUrl: 'https://www.w3.org/community/tdmrep/', status: 'Standard' },
 
   // Content Discovery
-  { name: 'llms.txt', path: '/llms.txt', desc: 'Curated Markdown summary for LLMs. Title, description, and organized links to key pages. Created by Jeremy Howard (Answer.AI), 2024.', category: 'Content Discovery', spec: 'llmstxt.org', specUrl: 'https://llmstxt.org', status: 'Adopted' },
+  { name: 'llms.txt', path: '/llms.txt', desc: 'Structured Markdown summary for LLMs. Title, description, and organized links to key pages. Created by Jeremy Howard (Answer.AI), 2024.', category: 'Content Discovery', spec: 'llmstxt.org', specUrl: 'https://llmstxt.org', status: 'Adopted' },
   { name: 'llms-full.txt', path: '/llms-full.txt', desc: 'Full-text content export for deep AI ingestion. Extended version of llms.txt with complete page content.', category: 'Content Discovery', spec: 'llmstxt.org', specUrl: 'https://llmstxt.org', status: 'Adopted' },
   { name: 'sitemap.xml', path: '/sitemap.xml', desc: 'URL index with lastmod, changefreq, and priority metadata. Used by Google, Bing, and AI crawlers.', category: 'Content Discovery', spec: 'sitemaps.org', specUrl: 'https://www.sitemaps.org/protocol.html', status: 'Standard' },
   { name: 'feed.xml', path: '/feed.xml', desc: 'RSS/Atom feed for syndication. Chronological content updates consumed by readers and aggregators.', category: 'Content Discovery', spec: 'RSS 2.0 / Atom', status: 'Standard' },

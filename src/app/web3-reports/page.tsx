@@ -8,7 +8,7 @@ import { InfiniteReportList } from '@/components/infinite-report-list';
 
 export const metadata: Metadata = {
   title: 'Web3 Reports Library | Vedang Vatsa',
-  description: 'A comprehensive, searchable database of 23,000+ Web3 reports, white papers, institutional research, and regulatory frameworks.',
+  description: 'A searchable database of 23,000+ Web3 reports, white papers, institutional research, and regulatory frameworks.',
 };
 
 export default async function Web3ReportsPage({

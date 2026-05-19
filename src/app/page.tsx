@@ -132,7 +132,7 @@ export default function Home() {
             <Link href="/ai-reports" className="group">
               <div className="flex h-full flex-col justify-between overflow-hidden rounded-xl border bg-card p-4 transition-colors duration-200 hover:border-primary/50">
                 <h3 className="text-lg font-semibold mb-2">AI Reports Library</h3>
-                <p className="text-sm text-muted-foreground mb-2">Browse 1000+ curated AI reports, papers, and analyses from top institutions.</p>
+                <p className="text-sm text-muted-foreground mb-2">Browse 1000+ AI reports, papers, and analyses from top institutions.</p>
                 <MoveUpRight className="h-4 w-4 self-end text-muted-foreground" />
               </div>
             </Link>
