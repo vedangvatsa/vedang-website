@@ -1,0 +1,43 @@
+{
+  "name": "Vedang Vatsa Research Hub",
+  "description": "Data-driven research on AI, Web3, and agentic systems. 233,000+ indexed academic papers with n-gram analysis and executive reporting.",
+  "url": "https://veda.ng",
+  "version": "1.0.0",
+  "capabilities": [
+    {
+      "name": "research_reports",
+      "description": "Executive reports on AI (133,847 papers) and Web3 (100,000 papers) research trends.",
+      "input_modes": ["text"],
+      "output_modes": ["text"]
+    },
+    {
+      "name": "glossary",
+      "description": "Technical glossary of 100+ AI and Web3 terms with interactive visualizations.",
+      "input_modes": ["text"],
+      "output_modes": ["text"]
+    },
+    {
+      "name": "essays",
+      "description": "50+ long-form essays on AI infrastructure, blockchain, agentic commerce, and digital governance.",
+      "input_modes": ["text"],
+      "output_modes": ["text"]
+    }
+  ],
+  "provider": {
+    "organization": "Vedang Vatsa",
+    "url": "https://veda.ng"
+  },
+  "authentication": {
+    "schemes": ["none"]
+  },
+  "default_input_modes": ["text"],
+  "default_output_modes": ["text"],
+  "skills": [
+    {
+      "id": "search_research",
+      "name": "Search Research Papers",
+      "description": "Browse and discover AI and Web3 research papers indexed from Crossref, OpenAlex, and arXiv.",
+      "tags": ["research", "ai", "web3", "academic"]
+    }
+  ]
+}

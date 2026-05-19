@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Vedang Vatsa",
+  "name_for_model": "vedang_vatsa",
+  "description_for_human": "Research hub covering AI, Web3, and agentic systems with 233,000+ indexed research papers.",
+  "description_for_model": "Access research essays, glossary definitions, and data-driven reports on artificial intelligence, Web3 infrastructure, and autonomous agent systems from veda.ng. The site indexes 133,847 AI papers and 100,000 Web3 papers.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://veda.ng/api/openapi.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://veda.ng/images/icon.png",
+  "contact_email": "vedang@veda.ng",
+  "legal_info_url": "https://veda.ng"
+}
