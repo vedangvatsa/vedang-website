@@ -105,8 +105,9 @@
     "image": "scripts/thread-assets/lit_fired.png",
     "scheduleDate": "2026-03-28",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x793768fdcd3d306eb6237cee730750d6e6bab2c7",
+    "postedAt": "2026-05-20T12:28:01.096Z"
   },
   {
     "id": "agentic-commerce-4",
