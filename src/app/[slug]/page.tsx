@@ -40,7 +40,7 @@ import { GovernanceEffectivenessChart, DAOVoterParticipation, VotingMechanismCha
 import { DataSourceDisruption, MethodologicalEvolution, PolarizationFindings, ObserverEffectChart } from '@/components/mdx/computational-social-science-charts';
 import { MonasteryPrincipleChart, AttentionSpanDecline, InterruptionCostChart, RetreatMovementsTimeline, SilenceEconomyChart } from '@/components/mdx/digital-monasticism-charts';
 import { PlaybookHeroCard, AgentToolsMap, AutomationROIChart, ContentPipelineFlow, OutreachPipeline, AIMaturityLevels, ImplementationTimeline, NurtureSequence, ImplementationChecklist, SocialListeningMap, SupportTierChart, DashboardMetricsMap, UseCaseCatalog } from '@/components/mdx/playbook-charts';
-import { StateOfAiKeywordsChart, StateOfAiBigramsChart } from '@/components/mdx/state-of-ai-charts';
+import { StateOfAiKeywordsChart, StateOfAiBigramsChart, StateOfAiTimeline, StateOfAiNgramAnalyzer, StateOfAiMomentum } from '@/components/mdx/state-of-ai-charts';
 import { StateOfWeb3KeywordsChart, StateOfWeb3BigramsChart, StateOfWeb3Timeline, StateOfWeb3NgramAnalyzer, StateOfWeb3ConvergenceMatrix, StateOfWeb3Momentum, StateOfWeb3Citations } from '@/components/mdx/state-of-web3-charts';
 
 type Props = {
@@ -419,6 +419,9 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               UseCaseCatalog,
               StateOfAiKeywordsChart,
               StateOfAiBigramsChart,
+              StateOfAiTimeline,
+              StateOfAiNgramAnalyzer,
+              StateOfAiMomentum,
               StateOfWeb3KeywordsChart,
               StateOfWeb3BigramsChart,
               StateOfWeb3Timeline,
