@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 export function EmissionRateVisualizer() {
   const [currentBlock, setCurrentBlock] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [selectedNetwork, setSelectedNetwork] = useState('bitcoin');
+  const [selectedNetwork, setSelectedNetwork] = useState<'bitcoin' | 'ethereum' | 'custom'>('bitcoin');
   const [timeSpeed, setTimeSpeed] = useState(1);
 
   const networks = {
@@ -34,7 +34,7 @@ export function EmissionRateVisualizer() {
 
   const network = networks[selectedNetwork];
 
-  const calculateReward = (block) => {
+  const calculateReward = (block: number) => {
     if (selectedNetwork === 'ethereum') {
       return 2; // Simplified constant emission
     }
@@ -45,17 +45,18 @@ export function EmissionRateVisualizer() {
     return network.initialReward / Math.pow(2, halvings);
   };
 
-  const calculateTotalSupply = (block) => {
+  const calculateTotalSupply = (block: number) => {
     if (selectedNetwork === 'ethereum') {
       return block * 2;
     }
     
     let total = 0;
     let currentBlock = 0;
+    const halvingInterval = network.halvingInterval || 1;
     
     while (currentBlock < block) {
       const reward = calculateReward(currentBlock);
-      const blocksInThisEra = Math.min(network.halvingInterval - (currentBlock % network.halvingInterval), block - currentBlock);
+      const blocksInThisEra = Math.min(halvingInterval - (currentBlock % halvingInterval), block - currentBlock);
       total += blocksInThisEra * reward;
       currentBlock += blocksInThisEra;
     }
@@ -88,7 +89,7 @@ export function EmissionRateVisualizer() {
     setIsAnimating(false);
   };
 
-  const getColorClasses = (color) => {
+  const getColorClasses = (color: 'amber' | 'blue' | 'emerald') => {
     const colors = {
       amber: 'bg-amber-500 border-amber-300 text-amber-900',
       blue: 'bg-blue-500 border-blue-300 text-blue-900',
@@ -97,7 +98,7 @@ export function EmissionRateVisualizer() {
     return colors[color] || colors.blue;
   };
 
-  const halvingEvents = [];
+  const halvingEvents: number[] = [];
   for (let i = 1; i <= 5; i++) {
     if (network.halvingInterval) {
       halvingEvents.push(i * network.halvingInterval);
@@ -119,12 +120,12 @@ export function EmissionRateVisualizer() {
           <button
             key={key}
             onClick={() => {
-              setSelectedNetwork(key);
+              setSelectedNetwork(key as 'bitcoin' | 'ethereum' | 'custom');
               resetSimulation();
             }}
             className={`px-4 py-2 rounded-lg border-2 transition-all ${
               selectedNetwork === key 
-                ? getColorClasses(net.color)
+                ? getColorClasses(net.color as 'amber' | 'blue' | 'emerald')
                 : 'bg-slate-100 border-slate-300 text-slate-600 hover:bg-slate-200'
             }`}
           >
@@ -168,7 +169,7 @@ export function EmissionRateVisualizer() {
           <div className="text-sm font-medium text-slate-700 mb-2">Emission Timeline</div>
           <div className="relative h-8 bg-slate-100 rounded-lg overflow-hidden">
             <div 
-              className={`h-full ${getColorClasses(network.color)} transition-all duration-300`}
+              className={`h-full ${getColorClasses(network.color as 'amber' | 'blue' | 'emerald')} transition-all duration-300`}
               style={{ 
                 width: network.halvingInterval 
                   ? `${Math.min((currentBlock % network.halvingInterval) / network.halvingInterval * 100, 100)}%`

@@ -7,7 +7,7 @@ export function ReinforcementLearningVisualizer() {
   const [episode, setEpisode] = useState(1);
   const [totalReward, setTotalReward] = useState(0);
   const [isTraining, setIsTraining] = useState(false);
-  const [qTable, setQTable] = useState({});
+  const [qTable, setQTable] = useState<Record<string, Record<string, number>>>({});
   const [explorationRate, setExplorationRate] = useState(0.9);
   const [learningRate, setLearningRate] = useState(0.1);
   const [stepCount, setStepCount] = useState(0);
@@ -17,16 +17,16 @@ export function ReinforcementLearningVisualizer() {
   const goal = { x: 4, y: 4 };
   const obstacles = [{ x: 1, y: 1 }, { x: 2, y: 3 }, { x: 3, y: 1 }];
   
-  const getStateKey = (x, y) => `${x},${y}`;
+  const getStateKey = (x: number, y: number) => `${x},${y}`;
   
-  const getReward = (x, y) => {
+  const getReward = (x: number, y: number) => {
     if (x === goal.x && y === goal.y) return 100;
     if (obstacles.some(obs => obs.x === x && obs.y === y)) return -50;
     if (x < 0 || x >= gridSize || y < 0 || y >= gridSize) return -10;
     return -1; // Small negative reward for each step
   };
 
-  const getPossibleActions = (x, y) => {
+  const getPossibleActions = (x: number, y: number) => {
     const actions = [];
     if (x > 0) actions.push('left');
     if (x < gridSize - 1) actions.push('right');
@@ -35,7 +35,7 @@ export function ReinforcementLearningVisualizer() {
     return actions;
   };
 
-  const getNextPosition = (x, y, action) => {
+  const getNextPosition = (x: number, y: number, action: string) => {
     switch (action) {
       case 'up': return { x, y: y - 1 };
       case 'down': return { x, y: y + 1 };
@@ -45,7 +45,7 @@ export function ReinforcementLearningVisualizer() {
     }
   };
 
-  const getBestAction = (x, y) => {
+  const getBestAction = (x: number, y: number) => {
     const stateKey = getStateKey(x, y);
     const stateValues = qTable[stateKey] || {};
     const actions = getPossibleActions(x, y);
@@ -64,7 +64,7 @@ export function ReinforcementLearningVisualizer() {
     return bestAction;
   };
 
-  const updateQTable = (state, action, reward, nextState) => {
+  const updateQTable = (state: { x: number, y: number }, action: string, reward: number, nextState: { x: number, y: number }) => {
     const stateKey = getStateKey(state.x, state.y);
     const nextStateKey = getStateKey(nextState.x, nextState.y);
     
@@ -124,7 +124,7 @@ export function ReinforcementLearningVisualizer() {
   };
 
   useEffect(() => {
-    let interval;
+    let interval: NodeJS.Timeout;
     if (isTraining) {
       interval = setInterval(takeAction, 200);
     }
@@ -142,7 +142,7 @@ export function ReinforcementLearningVisualizer() {
     setIsTraining(false);
   };
 
-  const getCellColor = (x, y) => {
+  const getCellColor = (x: number, y: number) => {
     if (x === agentPosition.x && y === agentPosition.y) return 'bg-blue-500';
     if (x === goal.x && y === goal.y) return 'bg-emerald-500';
     if (obstacles.some(obs => obs.x === x && obs.y === y)) return 'bg-slate-800';

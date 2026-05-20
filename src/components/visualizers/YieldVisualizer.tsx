@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 
+type YieldProtocolKey = 'amm' | 'lending' | 'ponzi';
+
 export function YieldVisualizer() {
-  const [selectedProtocol, setSelectedProtocol] = useState('amm');
+  const [selectedProtocol, setSelectedProtocol] = useState<YieldProtocolKey>('amm');
   const [principal, setPrincipal] = useState(1000);
   const [timeElapsed, setTimeElapsed] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -80,7 +82,7 @@ export function YieldVisualizer() {
         {Object.entries(protocols).map(([key, protocol]) => (
           <button
             key={key}
-            onClick={() => setSelectedProtocol(key)}
+            onClick={() => setSelectedProtocol(key as YieldProtocolKey)}
             className={`px-4 py-3 rounded-lg border-2 transition-all ${
               selectedProtocol === key
                 ? `border-${protocol.color}-500 bg-${protocol.color}-50 text-${protocol.color}-700`

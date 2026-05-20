@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from 'react';
 
+type ProtocolKey = 'uniswap' | 'aave' | 'compound';
+
 export function TvlVisualizer() {
-  const [selectedProtocol, setSelectedProtocol] = useState('uniswap');
+  const [selectedProtocol, setSelectedProtocol] = useState<ProtocolKey>('uniswap');
   const [timeframe, setTimeframe] = useState(0);
   const [assetPriceMultiplier, setAssetPriceMultiplier] = useState(1);
   const [showBreakdown, setShowBreakdown] = useState(false);
@@ -44,12 +46,12 @@ export function TvlVisualizer() {
     const growth = getCurrentTimeframe().growthMultiplier;
     
     let totalValue = 0;
-    const breakdown = {};
+    const breakdown: Record<string, { amount: number; price: number; value: number }> = {};
 
     Object.entries(protocol.baseAssets).forEach(([asset, amount]) => {
       const adjustedAmount = amount * growth;
       const priceMultiplier = asset === 'ETH' ? assetPriceMultiplier : 1;
-      const currentPrice = protocol.basePrices[asset] * priceMultiplier;
+      const currentPrice = protocol.basePrices[asset as 'ETH' | 'USDC' | 'DAI'] * priceMultiplier;
       const value = adjustedAmount * currentPrice;
       
       totalValue += value;
@@ -66,17 +68,17 @@ export function TvlVisualizer() {
   const { totalValue, breakdown } = calculateTVL();
   const baseTVL = calculateTVL();
   baseTVL.totalValue = Object.entries(protocols[selectedProtocol].baseAssets).reduce((sum, [asset, amount]) => {
-    return sum + (amount * protocols[selectedProtocol].basePrices[asset]);
+    return sum + (amount * protocols[selectedProtocol].basePrices[asset as 'ETH' | 'USDC' | 'DAI']);
   }, 0);
 
-  const formatCurrency = (value) => {
+  const formatCurrency = (value: number) => {
     if (value >= 1000000) {
       return `$${(value / 1000000).toFixed(1)}M`;
     }
     return `$${(value / 1000).toFixed(0)}K`;
   };
 
-  const getBarHeight = (value, maxValue) => {
+  const getBarHeight = (value: number, maxValue: number) => {
     return Math.max((value / maxValue) * 200, 4);
   };
 
@@ -84,7 +86,7 @@ export function TvlVisualizer() {
     const growth = getCurrentTimeframe().growthMultiplier;
     return Object.entries(p.baseAssets).reduce((sum, [asset, amount]) => {
       const priceMultiplier = asset === 'ETH' ? assetPriceMultiplier : 1;
-      return sum + (amount * growth * p.basePrices[asset] * priceMultiplier);
+      return sum + (amount * growth * p.basePrices[asset as 'ETH' | 'USDC' | 'DAI'] * priceMultiplier);
     }, 0);
   }));
 
@@ -104,7 +106,7 @@ export function TvlVisualizer() {
             {Object.entries(protocols).map(([key, protocol]) => (
               <button
                 key={key}
-                onClick={() => setSelectedProtocol(key)}
+                onClick={() => setSelectedProtocol(key as ProtocolKey)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                   selectedProtocol === key
                     ? `${protocol.color} text-white shadow-md`
@@ -175,7 +177,7 @@ export function TvlVisualizer() {
               const protocolTVL = Object.entries(protocol.baseAssets).reduce((sum, [asset, amount]) => {
                 const growth = getCurrentTimeframe().growthMultiplier;
                 const priceMultiplier = asset === 'ETH' ? assetPriceMultiplier : 1;
-                return sum + (amount * growth * protocol.basePrices[asset] * priceMultiplier);
+                return sum + (amount * growth * protocol.basePrices[asset as 'ETH' | 'USDC' | 'DAI'] * priceMultiplier);
               }, 0);
 
               const isSelected = Object.keys(protocols)[idx] === selectedProtocol;

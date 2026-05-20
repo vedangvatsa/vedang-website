@@ -15,7 +15,7 @@ interface CourseSidebarProps {
   courseId: string;
   courseTitle: string;
   basePath: string;
-  modules: ModuleLink[];
+  modules: readonly ModuleLink[];
 }
 
 export function CourseSidebar({ courseId, courseTitle, basePath, modules }: CourseSidebarProps) {

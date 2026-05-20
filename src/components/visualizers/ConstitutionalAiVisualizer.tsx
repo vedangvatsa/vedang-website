@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 export function ConstitutionalAiVisualizer() {
   const [currentStep, setCurrentStep] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [selectedPrinciple, setSelectedPrinciple] = useState(null);
+  const [selectedPrinciple, setSelectedPrinciple] = useState<number | null>(null);
   const [response, setResponse] = useState("");
   const [critique, setCritique] = useState("");
   const [revision, setRevision] = useState("");

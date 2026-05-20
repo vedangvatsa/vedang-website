@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 
 export function ProtocolRevenueVisualizer() {
-  const [selectedProtocol, setSelectedProtocol] = useState('uniswap');
+  const [selectedProtocol, setSelectedProtocol] = useState<'uniswap' | 'lido' | 'aave' | 'maker'>('uniswap');
   const [timeStep, setTimeStep] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [userVolume, setUserVolume] = useState(1000000);
@@ -99,7 +99,7 @@ export function ProtocolRevenueVisualizer() {
             <button
               key={key}
               onClick={() => {
-                setSelectedProtocol(key);
+                setSelectedProtocol(key as 'uniswap' | 'lido' | 'aave' | 'maker');
                 resetAnimation();
               }}
               className={`px-4 py-2 rounded-lg border-2 transition-all ${

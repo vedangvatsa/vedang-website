@@ -6,13 +6,15 @@ export function RnnVisualizer() {
   const [currentStep, setCurrentStep] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [sequence, setSequence] = useState(['H', 'E', 'L', 'L', 'O']);
-  const [hiddenStates, setHiddenStates] = useState([0]);
-  const [outputs, setOutputs] = useState([]);
+  const [hiddenStates, setHiddenStates] = useState<number[]>([0]);
+  const [outputs, setOutputs] = useState<number[]>([]);
   const [weightInput, setWeightInput] = useState(0.6);
   const [weightHidden, setWeightHidden] = useState(0.8);
-  const [selectedCell, setSelectedCell] = useState(null);
+  const [selectedCell, setSelectedCell] = useState<string | null>(null);
 
-  const processStep = (step) => {
+  const sigmoid = (x: number) => 1 / (1 + Math.exp(-x));
+
+  const processStep = (step: number) => {
     if (step === 0) {
       return { hidden: 0, output: 0 };
     }
@@ -22,7 +24,7 @@ export function RnnVisualizer() {
     
     // Simple RNN computation: tanh(W_input * input + W_hidden * prev_hidden)
     const newHidden = Math.tanh(weightInput * input + weightHidden * prevHidden);
-    const output = Math.sigmoid(newHidden); // Output layer
+    const output = sigmoid(newHidden); // Output layer
     
     return { hidden: newHidden, output };
   };
@@ -42,7 +44,7 @@ export function RnnVisualizer() {
   }, [currentStep, weightInput, weightHidden, sequence]);
 
   useEffect(() => {
-    let interval;
+    let interval: NodeJS.Timeout;
     if (isPlaying && currentStep < sequence.length) {
       interval = setInterval(() => {
         setCurrentStep(prev => {
@@ -65,7 +67,7 @@ export function RnnVisualizer() {
     setSelectedCell(null);
   };
 
-  const updateSequence = (index, value) => {
+  const updateSequence = (index: number, value: string) => {
     const newSeq = [...sequence];
     newSeq[index] = value.toUpperCase();
     setSequence(newSeq);
@@ -148,7 +150,7 @@ export function RnnVisualizer() {
               value={char}
               onChange={(e) => updateSequence(index, e.target.value.slice(-1))}
               className="w-10 h-10 text-center border border-slate-300 rounded-lg bg-white"
-              maxLength="1"
+              maxLength={1}
             />
           ))}
         </div>

@@ -6,7 +6,7 @@ export function FewShotPromptingVisualizer() {
   const [currentStep, setCurrentStep] = useState(0);
   const [userInput, setUserInput] = useState('');
   const [showOutput, setShowOutput] = useState(false);
-  const [selectedTask, setSelectedTask] = useState('sentiment');
+  const [selectedTask, setSelectedTask] = useState<'sentiment' | 'translation' | 'classification'>('sentiment');
 
   const tasks = {
     sentiment: {
@@ -66,7 +66,7 @@ export function FewShotPromptingVisualizer() {
     setUserInput('');
   };
 
-  const handleTaskChange = (taskKey) => {
+  const handleTaskChange = (taskKey: 'sentiment' | 'translation' | 'classification') => {
     setSelectedTask(taskKey);
     resetDemo();
   };
@@ -85,7 +85,7 @@ export function FewShotPromptingVisualizer() {
         {Object.entries(tasks).map(([key, task]) => (
           <button
             key={key}
-            onClick={() => handleTaskChange(key)}
+            onClick={() => handleTaskChange(key as 'sentiment' | 'translation' | 'classification')}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               selectedTask === key
                 ? 'bg-indigo-500 text-white'

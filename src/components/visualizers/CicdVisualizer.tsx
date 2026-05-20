@@ -7,7 +7,12 @@ export function CicdVisualizer() {
   const [isRunning, setIsRunning] = useState(false);
   const [testResults, setTestResults] = useState({ passed: 0, failed: 0 });
   const [deploymentStatus, setDeploymentStatus] = useState('waiting');
-  const [codeChanges, setCodeChanges] = useState([]);
+  const [codeChanges, setCodeChanges] = useState<{
+    id: number;
+    feature: string;
+    author: string;
+    success: boolean;
+  }[]>([]);
 
   const stages = [
     { name: 'Code Commit', status: 'waiting', duration: 1000 },
@@ -51,14 +56,14 @@ export function CicdVisualizer() {
     }, 800);
   };
 
-  const getStageStatus = (index) => {
+  const getStageStatus = (index: number) => {
     if (index < currentStage) return 'completed';
     if (index === currentStage && isRunning) return 'running';
     if (index === 1 && index <= currentStage && testResults.failed > 0) return 'failed';
     return 'waiting';
   };
 
-  const getStatusColor = (status) => {
+  const getStatusColor = (status: string) => {
     switch (status) {
       case 'completed': return 'bg-emerald-500';
       case 'running': return 'bg-blue-500 animate-pulse';

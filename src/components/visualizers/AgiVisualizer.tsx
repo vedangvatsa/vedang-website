@@ -3,9 +3,9 @@
 import React, { useState, useEffect } from 'react';
 
 export function AgiVisualizer() {
-  const [selectedDomain, setSelectedDomain] = useState(null);
+  const [selectedDomain, setSelectedDomain] = useState<any>(null);
   const [aiType, setAiType] = useState('narrow');
-  const [taskProgress, setTaskProgress] = useState({});
+  const [taskProgress, setTaskProgress] = useState<Record<string, number>>({});
   const [isLearning, setIsLearning] = useState(false);
 
   const domains = [
@@ -41,11 +41,12 @@ export function AgiVisualizer() {
         setTaskProgress(prev => {
           const newProgress = { ...prev };
           Object.keys(agiCapabilities).forEach(domain => {
+            const key = domain as keyof typeof agiCapabilities;
             if (!newProgress[domain]) newProgress[domain] = 0;
-            if (newProgress[domain] < agiCapabilities[domain]) {
+            if (newProgress[domain] < agiCapabilities[key]) {
               newProgress[domain] = Math.min(
                 newProgress[domain] + Math.random() * 8 + 2,
-                agiCapabilities[domain]
+                agiCapabilities[key]
               );
             }
           });
@@ -62,16 +63,16 @@ export function AgiVisualizer() {
     }
   }, [isLearning, aiType]);
 
-  const handleDomainClick = (domain) => {
+  const handleDomainClick = (domain: any) => {
     setSelectedDomain(domain);
     if (aiType === 'narrow') {
-      setTaskProgress({ [domain.id]: narrowAICapabilities[domain.id] });
+      setTaskProgress({ [domain.id]: narrowAICapabilities[domain.id as keyof typeof narrowAICapabilities] });
     } else {
       setTaskProgress(agiCapabilities);
     }
   };
 
-  const switchAIType = (type) => {
+  const switchAIType = (type: string) => {
     setAiType(type);
     setSelectedDomain(null);
     setTaskProgress({});
@@ -80,7 +81,7 @@ export function AgiVisualizer() {
     }
   };
 
-  const getPerformanceLevel = (score) => {
+  const getPerformanceLevel = (score: number) => {
     if (score >= 90) return { level: 'Expert', color: 'emerald' };
     if (score >= 70) return { level: 'Advanced', color: 'blue' };
     if (score >= 50) return { level: 'Intermediate', color: 'amber' };
@@ -137,7 +138,7 @@ export function AgiVisualizer() {
           const performance = getPerformanceLevel(progress);
           const isActive = selectedDomain?.id === domain.id;
           const canPerform = aiType === 'agi' || 
-            (aiType === 'narrow' && narrowAICapabilities[domain.id] > 0);
+            (aiType === 'narrow' && narrowAICapabilities[domain.id as keyof typeof narrowAICapabilities] > 0);
 
           return (
             <div

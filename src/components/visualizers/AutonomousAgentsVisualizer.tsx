@@ -6,7 +6,7 @@ export function AutonomousAgentsVisualizer() {
   const [agentType, setAgentType] = useState('traditional');
   const [isRunning, setIsRunning] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
-  const [completedTasks, setCompletedTasks] = useState([]);
+  const [completedTasks, setCompletedTasks] = useState<string[]>([]);
   const [agentThoughts, setAgentThoughts] = useState('');
 
   const traditionalSteps = [
@@ -28,14 +28,14 @@ export function AutonomousAgentsVisualizer() {
   ];
 
   const getCurrentSteps = () => agentType === 'traditional' ? traditionalSteps : autonomousSteps;
-  const getStepColor = (index) => {
+  const getStepColor = (index: number) => {
     if (index < currentStep) return 'bg-emerald-500 text-white';
     if (index === currentStep && isRunning) return 'bg-blue-500 text-white animate-pulse';
     return 'bg-slate-200 text-slate-600';
   };
 
   useEffect(() => {
-    let interval;
+    let interval: any;
     if (isRunning) {
       interval = setInterval(() => {
         const steps = getCurrentSteps();
@@ -69,7 +69,7 @@ export function AutonomousAgentsVisualizer() {
     setAgentThoughts('');
   };
 
-  const handleAgentSwitch = (type) => {
+  const handleAgentSwitch = (type: string) => {
     setAgentType(type);
     handleReset();
   };

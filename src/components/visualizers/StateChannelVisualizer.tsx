@@ -2,11 +2,20 @@
 
 import React, { useState } from 'react';
 
+interface OffChainTx {
+  from: string;
+  to: string;
+  amount: number;
+  timestamp: number;
+  aliceBalance: number;
+  bobBalance: number;
+}
+
 export function StateChannelVisualizer() {
   const [step, setStep] = useState(0);
   const [aliceBalance, setAliceBalance] = useState(50);
   const [bobBalance, setBobBalance] = useState(50);
-  const [offChainTransactions, setOffChainTransactions] = useState([]);
+  const [offChainTransactions, setOffChainTransactions] = useState<OffChainTx[]>([]);
   const [channelState, setChannelState] = useState('closed'); // closed, open, active, disputed, settling
 
   const steps = [
@@ -27,7 +36,7 @@ export function StateChannelVisualizer() {
     setStep(2);
   };
 
-  const handleOffChainTransaction = (amount) => {
+  const handleOffChainTransaction = (amount: number) => {
     const newAliceBalance = aliceBalance - amount;
     const newBobBalance = bobBalance + amount;
     

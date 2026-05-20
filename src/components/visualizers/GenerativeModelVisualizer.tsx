@@ -65,12 +65,13 @@ export function GenerativeModelVisualizer() {
     for (let i = 0; i < 5; i++) {
       // Sample from learned distribution with temperature control
       let x, y, attempts = 0;
+      let adjustedProb = 0;
       do {
         x = Math.random() * 100;
         y = Math.random() * 100;
         const idx = Math.floor(y) * 100 + Math.floor(x);
         const prob = learnedDistribution[idx] || 0;
-        const adjustedProb = Math.pow(prob, 1/temperature);
+        adjustedProb = Math.pow(prob, 1/temperature);
         attempts++;
       } while (Math.random() > adjustedProb && attempts < 50);
 

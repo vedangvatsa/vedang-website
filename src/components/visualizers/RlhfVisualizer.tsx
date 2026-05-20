@@ -2,9 +2,16 @@
 
 import React, { useState } from 'react';
 
+interface ResponseItem {
+  id: number;
+  text: string;
+  quality: number;
+  humanRank: number | null;
+}
+
 export function RlhfVisualizer() {
   const [currentStep, setCurrentStep] = useState(0);
-  const [responses, setResponses] = useState([
+  const [responses, setResponses] = useState<ResponseItem[]>([
     { id: 1, text: "The cat sat on the mat. It was a nice day.", quality: 0.3, humanRank: null },
     { id: 2, text: "The graceful feline settled comfortably upon the woven rug, enjoying the warm afternoon sunlight.", quality: 0.8, humanRank: null },
     { id: 3, text: "Cat mat sit good yes very much so indeed.", quality: 0.1, humanRank: null }

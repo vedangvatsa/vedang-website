@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 export function AlignmentVisualizer() {
-  const [aiGoal, setAiGoal] = useState('maximize_paperclips');
+  const [aiGoal, setAiGoal] = useState<'maximize_paperclips' | 'help_humans' | 'balanced'>('maximize_paperclips');
   const [humanValues, setHumanValues] = useState(['safety', 'happiness', 'environment']);
   const [timeStep, setTimeStep] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
@@ -93,7 +93,7 @@ export function AlignmentVisualizer() {
               <button
                 key={key}
                 onClick={() => {
-                  setAiGoal(key);
+                  setAiGoal(key as 'maximize_paperclips' | 'help_humans' | 'balanced');
                   resetSimulation();
                 }}
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${

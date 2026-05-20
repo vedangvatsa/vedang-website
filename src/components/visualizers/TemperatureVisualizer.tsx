@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export function TemperatureVisualizer() {
   const [temperature, setTemperature] = useState(1.0);
-  const [selectedToken, setSelectedToken] = useState(null);
+  const [selectedToken, setSelectedToken] = useState<string | null>(null);
   
   // Sample logits for common tokens
   const tokens = [
@@ -31,7 +31,7 @@ export function TemperatureVisualizer() {
     scaledLogit: scaledLogits[i]
   })).sort((a, b) => b.probability - a.probability);
 
-  const getBarColor = (index) => {
+  const getBarColor = (index: number) => {
     const colors = ['bg-blue-500', 'bg-indigo-500', 'bg-emerald-500', 'bg-amber-500', 'bg-rose-500', 'bg-slate-500', 'bg-blue-400', 'bg-indigo-400'];
     return colors[index % colors.length];
   };
@@ -104,6 +104,7 @@ export function TemperatureVisualizer() {
             <h4 className="text-lg font-semibold text-blue-800 mb-3">Mathematical Details for "{selectedToken}"</h4>
             {(() => {
               const token = tokensWithProbs.find(t => t.word === selectedToken);
+              if (!token) return null;
               return (
                 <div className="space-y-2 font-mono text-sm">
                   <div>Original logit: <span className="text-blue-600">{token.logit.toFixed(2)}</span></div>

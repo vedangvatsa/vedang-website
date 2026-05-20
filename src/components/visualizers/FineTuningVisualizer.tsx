@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 export function FineTuningVisualizer() {
   const [trainingStep, setTrainingStep] = useState(0);
   const [isTraining, setIsTraining] = useState(false);
-  const [selectedDomain, setSelectedDomain] = useState('medical');
+  const [selectedDomain, setSelectedDomain] = useState<'medical' | 'legal' | 'code'>('medical');
   const [modelAccuracy, setModelAccuracy] = useState({ general: 75, specialized: 45 });
 
   const domains = {
@@ -61,16 +61,16 @@ export function FineTuningVisualizer() {
     setModelAccuracy(prev => ({ ...prev, specialized: 45 }));
   };
 
-  const getColorClasses = (domain) => {
+  const getColorClasses = (domain: 'medical' | 'legal' | 'code') => {
     const colorMap = {
       rose: 'bg-rose-100 border-rose-300 text-rose-800',
       indigo: 'bg-indigo-100 border-indigo-300 text-indigo-800',
       emerald: 'bg-emerald-100 border-emerald-300 text-emerald-800'
     };
-    return colorMap[domains[domain].color];
+    return colorMap[domains[domain].color as 'rose' | 'indigo' | 'emerald'];
   };
 
-  const getAccuracyBarColor = (accuracy) => {
+  const getAccuracyBarColor = (accuracy: number) => {
     if (accuracy >= 90) return 'bg-emerald-500';
     if (accuracy >= 80) return 'bg-amber-500';
     if (accuracy >= 70) return 'bg-blue-500';
@@ -90,12 +90,12 @@ export function FineTuningVisualizer() {
           <button
             key={key}
             onClick={() => {
-              setSelectedDomain(key);
+              setSelectedDomain(key as 'medical' | 'legal' | 'code');
               resetTraining();
             }}
             className={`px-4 py-2 rounded-lg border-2 transition-all ${
               selectedDomain === key 
-                ? getColorClasses(key)
+                ? getColorClasses(key as 'medical' | 'legal' | 'code')
                 : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
             }`}
           >

@@ -7,7 +7,7 @@ import { notFound } from 'next/navigation';
 import { PageLayout } from '@/components/page-layout';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 import { RelatedEssaysForTerm } from '@/lib/cross-links';
-import { VisualizerMap } from '@/components/visualizers/VisualizerMap';
+import { GlossaryVisualizer } from '@/components/mdx/glossary-visualizer';
 interface PageProps {
   params: Promise<{
     slug: string;
@@ -156,18 +156,7 @@ export default async function GlossaryTermPage({ params }: PageProps) {
           })()}
         </div>
 
-        {(() => {
-          const Visualizer = VisualizerMap[term.slug];
-          if (!Visualizer) return null;
-          return (
-            <div className="mb-16 border-t border-border/30 pt-12">
-              <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-6">Interactive Visualizer</h2>
-              <div className="w-full">
-                <Visualizer />
-              </div>
-            </div>
-          );
-        })()}
+        <GlossaryVisualizer term={term.slug} />
 
         {relatedTermObjects.length > 0 && (
           <div className="border-t border-border/50 pt-12">

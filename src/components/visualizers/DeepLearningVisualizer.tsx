@@ -11,7 +11,7 @@ export function DeepLearningVisualizer() {
     [[0.8, 0.2, 0.6, 0.4], [0.3, 0.9, 0.1, 0.7], [0.5, 0.4, 0.8, 0.2]],
     [[0.6, 0.4, 0.8]]
   ]);
-  const [activations, setActivations] = useState([[], [], []]);
+  const [activations, setActivations] = useState<number[][]>([[], [], []]);
   const [targetOutput, setTargetOutput] = useState(0.9);
   const [loss, setLoss] = useState(0);
   const [hoveredLayer, setHoveredLayer] = useState(-1);

@@ -29,6 +29,15 @@ export function TwitterEmbed({ tweetId }: TwitterEmbedProps) {
   useEffect(() => {
     let cancelled = false;
 
+    const loadTwitterScript = () => {
+      if (document.getElementById('twitter-wjs')) return;
+      const script = document.createElement('script');
+      script.id = 'twitter-wjs';
+      script.src = 'https://platform.twitter.com/widgets.js';
+      script.async = true;
+      document.head.appendChild(script);
+    };
+
     const renderTweet = async () => {
       if (!containerRef.current || cancelled) return;
       containerRef.current.innerHTML = '';
@@ -48,7 +57,8 @@ export function TwitterEmbed({ tweetId }: TwitterEmbedProps) {
       if (window.twttr && window.twttr.widgets) {
         renderTweet();
       } else {
-        // Poll until twttr is available (script loaded via layout.tsx lazyOnload)
+        // Dynamically load the script if not present
+        loadTwitterScript();
         let attempts = 0;
         const interval = setInterval(() => {
           attempts++;
