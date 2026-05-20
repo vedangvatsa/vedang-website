@@ -95,8 +95,9 @@
     "image": "scripts/thread-assets/psych_hero.png",
     "scheduleDate": "2026-03-28",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x4173dfbad9d05ef8283530807e8704075f8c39dc",
+    "postedAt": "2026-05-20T04:59:43.590Z"
   },
   {
     "id": "lit-fired",
