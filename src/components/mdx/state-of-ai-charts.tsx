@@ -94,7 +94,7 @@ const momentumData = [
 
 // --- Timeline Component ---
 export function StateOfAiTimeline() {
-  const [selectedIndex, setSelectedIndex] = useState<number>(9);
+  const [selectedIndex, setSelectedIndex] = useState<number>(11);
   const selected = yearlyDataset[selectedIndex];
 
   const padding = 40;
