@@ -115,8 +115,9 @@
     "image": "scripts/thread-assets/agentic_4.png",
     "scheduleDate": "2026-03-29",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0xc77e0a6648c7302133610d38ce16d4118b71b125",
+    "postedAt": "2026-05-20T20:27:00.547Z"
   },
   {
     "id": "psych-shadow",

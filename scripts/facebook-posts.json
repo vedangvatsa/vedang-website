@@ -756,9 +756,11 @@
     "id": "ig-movie-scene",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "Stomach rumbled during a job interview.\n\nThe interviewer asked if I forgot lunch.\n\nTold him no. Just hungry for success.\n\nSometimes confidence is all you need.",
-    "image": "scripts/thread-assets/ig-reels/DXQ9NuYPN_J.mp4"
+    "image": "scripts/thread-assets/ig-reels/DXQ9NuYPN_J.mp4",
+    "postedAt": "2026-05-20T20:26:57.412Z",
+    "fbPostId": "1495680832251592"
   },
   {
     "id": "ig-that-life-exists",
