@@ -9,7 +9,7 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   images: {
     dangerouslyAllowSVG: true,

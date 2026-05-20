@@ -2,12 +2,18 @@
 
 import { useState } from 'react';
 
+interface Trade {
+  price: number;
+  size: number;
+  step: number;
+}
+
 export function MarketOrderVisualizer() {
   const [orderSize, setOrderSize] = useState(100);
   const [marketLiquidity, setMarketLiquidity] = useState(50);
   const [isExecuting, setIsExecuting] = useState(false);
   const [executionStep, setExecutionStep] = useState(0);
-  const [executedTrades, setExecutedTrades] = useState([]);
+  const [executedTrades, setExecutedTrades] = useState<Trade[]>([]);
 
   // Generate order book based on liquidity
   const generateOrderBook = () => {
@@ -37,7 +43,7 @@ export function MarketOrderVisualizer() {
     
     let remainingSize = orderSize;
     let currentStep = 0;
-    const trades = [];
+    const trades: Trade[] = [];
     
     const stepExecution = () => {
       if (remainingSize > 0 && currentStep < orderBook.length) {

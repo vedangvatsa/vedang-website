@@ -4,8 +4,8 @@ import { useState } from 'react';
 
 export function ContextWindowVisualizer() {
   const [tokens, setTokens] = useState(4000);
-  const [selectedModel, setSelectedModel] = useState('gpt-3');
-  const [contentType, setContentType] = useState('conversation');
+  const [selectedModel, setSelectedModel] = useState<'gpt-3' | 'gpt-4' | 'claude' | 'gpt-4-turbo'>('gpt-3');
+  const [contentType, setContentType] = useState<'conversation' | 'document' | 'code'>('conversation');
   const [contentAmount, setContentAmount] = useState(2000);
 
   const models = {
@@ -72,7 +72,7 @@ export function ContextWindowVisualizer() {
               {Object.entries(models).map(([key, model]) => (
                 <button
                   key={key}
-                  onClick={() => setSelectedModel(key)}
+                  onClick={() => setSelectedModel(key as 'gpt-3' | 'gpt-4' | 'claude' | 'gpt-4-turbo')}
                   className={`p-2 rounded-lg text-sm font-medium transition-all ${
                     selectedModel === key
                       ? `${model.color} text-white shadow-md`
@@ -92,7 +92,7 @@ export function ContextWindowVisualizer() {
             <label className="block text-sm font-semibold text-slate-700 mb-2">Content Type</label>
             <select
               value={contentType}
-              onChange={(e) => setContentType(e.target.value)}
+              onChange={(e) => setContentType(e.target.value as 'conversation' | 'document' | 'code')}
               className="w-full p-2 border border-slate-300 rounded-lg bg-white text-slate-700"
             >
               {Object.entries(contentTypes).map(([key, type]) => (

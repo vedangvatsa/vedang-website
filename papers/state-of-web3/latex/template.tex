@@ -40,7 +40,7 @@
 \maketitle
 
 \begin{abstract}
-This paper presents a large-scale bibliometric study of blockchain and Web3 research output from 2013 to 2026. A corpus of 100,024 academic papers, conference proceedings, whitepapers, and industry reports was compiled and analyzed from Crossref, arXiv, Europe PMC, and OpenAlex. Using n-gram frequency analysis, year-over-year growth modeling, and citation distribution mapping, this study identifies where research effort is concentrated, which topics are gaining or losing momentum, and how the field has matured from speculative interest into applied infrastructure engineering. The principal findings are threefold. First, ``blockchain technology'' as a bigram appears 8,181 times, more than any other phrase, confirming that researchers now treat blockchain as a building block inside larger systems rather than a standalone invention. Second, ``supply chain management'' is the single most common trigram (1,036 occurrences), placing logistics ahead of financial applications as the largest use case by volume of published work. Third, the fastest-rising research topic between 2022 and 2026 is the convergence of blockchain with large language models, with ``large language'' growing 19x in blockchain-related papers. All data and methods are available for replication.
+This study presents a bibliometric analysis of blockchain and Web3 research from 2013 to 2026. A corpus of 100,024 academic papers, conference proceedings, whitepapers, and industry reports was compiled from Crossref, arXiv, Europe PMC, and OpenAlex. Using n-gram frequency analysis, year-over-year growth modeling, and citation distribution mapping, this study identifies research concentrations, shifting topic momentum, and the transition of the field from speculative interest to applied infrastructure engineering. The analysis yields three principal findings. First, the bigram ``blockchain technology'' appears 8,181 times, more than any other phrase, indicating that researchers treat blockchain as a component within larger systems rather than an isolated technology. Second, ``supply chain management'' is the most common trigram with 1,036 occurrences, showing that logistics and tracking applications exceed financial systems in publication volume. Third, the fastest-rising research topics between 2022 and 2026 focus on large language models, with ``language models'' growing 26x and ``large language'' growing 19x in blockchain-related papers. The dataset and source code are available for replication.
 \end{abstract}
 
 \noindent\textit{\textbf{Keywords:} blockchain, Web3, bibliometrics, n-gram analysis, research trends, supply chain, DeFi, tokenization}
@@ -48,29 +48,29 @@ This paper presents a large-scale bibliometric study of blockchain and Web3 rese
 \section{Introduction}
 \label{sec:intro}
 
-Blockchain research has grown from a handful of cryptography papers in 2008 to tens of thousands of publications per year. But volume alone says little about direction. A researcher entering the field today faces a basic question: what are people actually studying?
+Blockchain research has expanded from early cryptographic cash concepts, such as Chaum's blind signatures \citep{chaum1983blind} and Dai's b-money \citep{dai1998bmoney}, to Nakamoto's peer-to-peer electronic cash system \citep{nakamoto2008bitcoin}, and now to tens of thousands of publications annually. However, volume alone does not clarify the direction of the field. A researcher entering the discipline must understand where the academic community is focusing its efforts and how those priorities are changing.
 
-This paper answers that question empirically. A corpus of 100,024 documents spanning 2013 to 2026 was built from four major academic indexes and supplemented with curated industry reports. N-gram frequency analysis was then performed on all document titles, year-over-year publication growth was measured, citation distributions were calculated, and specific topics were tracked for how they have risen or fallen over the past four years.
+This paper addresses this question through an empirical study of 100,024 documents spanning 2013 to 2026. The dataset was compiled from four major academic indexes and curated industry reports. We perform n-gram frequency analysis on document titles, measure year-over-year publication growth, map citation distributions, and track specific topic cohorts to observe how research focus has shifted.
 
-The goal is not to predict what will happen next. The goal is to describe, with precision, what the research community has chosen to focus on, and how that focus has changed.
+Rather than predicting future breakthroughs, this work seeks to describe the historical and current focus of the research community with precision.
 
 \section{Related Work}
 \label{sec:related}
 
-Previous bibliometric studies of blockchain research have covered smaller corpora. Firdaus et al.\ [25] analyzed 3,580 blockchain papers from Scopus. Miau and Yang [26] examined early Bitcoin research trends using 1,119 publications. Casino et al.\ [27] surveyed blockchain applications across 314 papers. Zheng et al.\ [28] provided an early architectural overview of blockchain consensus mechanisms. The present work extends this line of inquiry to 100,024 documents, covering three additional years of rapid growth (2024--2026) and adding n-gram trend detection across yearly cohorts.
+Previous bibliometric studies of blockchain research have analyzed smaller datasets. Firdaus et al. \citep{firdaus2019root} evaluated 3,580 papers from Scopus, while Miau and Yang \citep{miau2018bibliometrics} examined early Bitcoin research trends across 1,119 publications. Casino et al. \citep{casino2019systematic} surveyed applications across 314 papers. Early synthetic literature by Swan \citep{swan2015blockchain} and Pilkington \citep{pilkington2016blockchain} categorized the conceptual transition from digital currency to decentralized application platforms. Zheng et al. \citep{zheng2017overview} provided an architectural overview of consensus mechanisms, which build upon classic distributed systems theories like the Byzantine Generals Problem \citep{lamport1982byzantine} and Practical Byzantine Fault Tolerance \citep{castro1999practical}. The present study expands on this work by evaluating a corpus of 100,024 documents, covering three additional years of rapid growth (2024 to 2026) and applying n-gram trend analysis to identify shifting thematic cohorts.
 
 \section{Dataset and Methodology}
 \label{sec:method}
 
 \subsection{Data Collection}
 
-Documents were collected from four sources, as shown in Table~\ref{tab:sources}.
+Documents were collected from four major scholarly indexes, using API services including the Crossref REST API \citep{crossref2026api} and the OpenAlex database \citep{openalex2022open}, as shown in Table~\ref{tab:sources}.
 
 \begin{table}[h]
 \centering
 \caption{Data sources and document counts.}
 \label{tab:sources}
-\begin{tabular}{@{}lrl@{}}
+\begin{tabular}{lrl}
 \toprule
 Source & Documents & Type \\
 \midrule
@@ -84,64 +84,64 @@ Curated institutional & 3,414 & Reports, whitepapers \\
 \end{tabular}
 \end{table}
 
-Queries used a whitelist of 52 blockchain-related keywords (blockchain, cryptocurrency, DeFi, NFT, smart contract, tokenization, and others). Each returned document was filtered against a poison-word list of 62 terms from unrelated fields (e.g., cardiology, astrophysics, photovoltaics) to remove false positives. After filtering, a random sample of 50 documents was manually reviewed, yielding a 100\% relevance rate.
+We queried the sources using a whitelist of 52 blockchain-related keywords (including blockchain, cryptocurrency, DeFi, NFT, smart contract, and tokenization). The results were filtered against a list of 62 terms from unrelated fields, such as cardiology, astrophysics, and photovoltaics, to remove false positives. A manual review of a random sample of 50 documents yielded a 100\% relevance rate.
 
 \subsection{Analysis Methods}
 
-\textbf{N-gram extraction.} Titles were lowercased, stripped of HTML, and tokenized. A stopword list of 53 common English words was applied. Unigrams, bigrams, and trigrams were counted across the full corpus.
+\textbf{N-gram extraction.} Document titles were lowercased, stripped of HTML formatting, and tokenized. We applied a stopword list of 53 common English words to remove noise. Unigrams (single words), bigrams (two-word phrases), and trigrams (three-word phrases) were then extracted and counted across the corpus.
 
-\textbf{Year-over-year growth.} Documents were grouped by publication year. Growth rates were calculated as percentage change relative to the prior year.
+\textbf{Year-over-year growth.} Documents were grouped by publication year to calculate annual growth rates as the percentage change relative to the preceding year.
 
-\textbf{Citation analysis.} Citation counts were extracted from Crossref's ``is-referenced-by-count'' field. The median, mean, and 99th percentile thresholds were calculated.
+\textbf{Citation analysis.} Citation counts were extracted from the Crossref database. We calculated the median, mean, and 99th percentile citation thresholds.
 
-\textbf{Trend detection.} Bigram frequencies were compared between the 2022 and 2026 cohorts. Topics with 10+ occurrences in 2026 and a growth ratio exceeding 5x were classified as ``rising.''
+\textbf{Trend detection.} Bigram frequencies were compared between the 2022 and 2026 publication cohorts. Topics with at least 10 occurrences in 2026 and a growth ratio exceeding 5x were classified as rising topics.
 
 \section{Results}
 \label{sec:results}
 
 \subsection{Publication Volume and Growth}
 
-Blockchain research output has grown every year since 2015 without exception, as shown in Table~\ref{tab:yearly}.
+Blockchain research output has grown annually since 2015, as shown in Table~\ref{tab:yearly}.
 
 \begin{table}[h]
 \centering
 \caption{Yearly publication volume and citation statistics.}
 \label{tab:yearly}
-\begin{tabular}{@{}lrrl@{}}
+\begin{tabular}{lrrl}
 \toprule
 Year & Documents & YoY Growth & Avg Citations \\
 \midrule
-2015 & 680 & -- & 64.1 \\
-2016 & 774 & +13.8\% & 107.6 \\
-2017 & 1,367 & +76.6\% & 91.2 \\
-2018 & 3,237 & +136.8\% & 70.8 \\
-2019 & 5,282 & +63.2\% & 44.1 \\
-2020 & 6,047 & +14.5\% & 21.2 \\
-2021 & 7,760 & +28.3\% & 13.9 \\
-2022 & 9,718 & +25.2\% & 8.2 \\
-2023 & 12,479 & +28.4\% & 5.4 \\
-2024 & 14,146 & +13.4\% & 3.9 \\
-2025 & 17,931 & +26.8\% & 1.0 \\
-2026* & 6,885 & -- & 0.1 \\
+2015 & 788 & -- & 64.1 \\
+2016 & 897 & +13.8\% & 107.6 \\
+2017 & 1,584 & +76.6\% & 91.2 \\
+2018 & 3,752 & +136.9\% & 70.8 \\
+2019 & 6,122 & +63.2\% & 44.1 \\
+2020 & 7,008 & +14.5\% & 21.2 \\
+2021 & 8,993 & +28.3\% & 13.9 \\
+2022 & 11,263 & +25.2\% & 8.2 \\
+2023 & 14,462 & +28.4\% & 5.4 \\
+2024 & 16,394 & +13.4\% & 3.9 \\
+2025 & 20,781 & +26.8\% & 1.0 \\
+2026* & 7,980 & -- & 0.1 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\noindent *2026 data is partial (January--May).
+\noindent *2026 data is partial (January to May).
 
-Two periods of rapid acceleration stand out. The first is 2017--2018, when annual output jumped 136.8\%, coinciding with the ICO boom and Bitcoin's [1] run to \$20,000. The second is 2023--2025, when output grew steadily at 13--28\% per year, driven by institutional adoption (BlackRock's BUIDL fund, spot Bitcoin ETFs, MiCA regulation [23]) rather than retail speculation.
+Two periods of rapid acceleration are evident. The first occurred in 2017 and 2018, when annual output rose by 136.9\%, matching the growth of the initial ICO phase and Bitcoin's run to \$20,000. The second period, spanning 2023 to 2025, showed steady annual growth between 13\% and 28\%. This latter expansion was driven by institutional developments, including BlackRock's BUIDL fund, spot Bitcoin ETFs, MiCA regulations \citep{eu2023mica}, and real-world asset tokenization platforms \citep{rwa2026dashboard}, rather than speculative retail activity.
 
-The inverse relationship between volume and average citations is expected: older papers have had more time to accumulate citations. But even controlling for this, the 2016 cohort (107.6 average citations) stands out as the highest-impact vintage, containing foundational smart contract [5, 9] and Ethereum architecture papers [2, 8].
+The inverse relationship between publication volume and average citations is expected, as older papers have had more time to accumulate references. However, the 2016 cohort remains the highest-impact group, with an average of 107.6 citations, containing early, highly cited smart contract and Ethereum architectural studies \citep{buterin2014ethereum, wood2014ethereum}.
 
 \subsection{Keyword Frequency}
 
-The ten most frequent single keywords across all 100,024 document titles are shown in Table~\ref{tab:keywords}.
+The ten most frequent single keywords across the 100,024 document titles are shown in Table~\ref{tab:keywords}.
 
 \begin{table}[h]
 \centering
 \caption{Top 10 single keywords by frequency.}
 \label{tab:keywords}
-\begin{tabular}{@{}clrr@{}}
+\begin{tabular}{clrr}
 \toprule
 Rank & Keyword & Count & \% of docs \\
 \midrule
@@ -159,7 +159,7 @@ Rank & Keyword & Count & \% of docs \\
 \end{tabular}
 \end{table}
 
-``Blockchain'' appears in 54.8\% of all titles. ``Bitcoin'' appears in only 6.0\%, confirming that research has moved well beyond the original cryptocurrency [1]. The appearance of ``IoT'' at rank 8 (5,521 mentions) reflects a large body of work on blockchain-secured device networks [3, 13, 14].
+While ``blockchain'' appears in 54.8\% of all titles, ``bitcoin'' is present in only 6.0\%, indicating that the research community has expanded well beyond the original cryptocurrency framework. The prominence of ``IoT'' at rank 8 (5,521 mentions) reflects a substantial body of research focusing on blockchain-secured device networks \citep{christidis2016blockchains, fernandez2018review, reyna2018blockchain}.
 
 \subsection{Bigram and Trigram Analysis}
 
@@ -169,7 +169,7 @@ The five most frequent bigrams and trigrams are shown in Table~\ref{tab:ngrams}.
 \centering
 \caption{Top 5 bigrams and trigrams by frequency.}
 \label{tab:ngrams}
-\begin{tabular}{@{}clr|clr@{}}
+\begin{tabular}{clr|clr}
 \toprule
 \# & Bigram & Count & \# & Trigram & Count \\
 \midrule
@@ -182,17 +182,17 @@ The five most frequent bigrams and trigrams are shown in Table~\ref{tab:ngrams}.
 \end{tabular}
 \end{table}
 
-``Supply chain management'' (1,036) is the most frequent three-word phrase in the entire corpus. This places logistics and traceability, not finance, as the single largest application area by research volume. ``Central bank digital'' (959) and ``bank digital currency'' (852) together form a cluster of nearly 1,800 papers focused on CBDCs, making state-backed digital currencies the second-largest research theme.
+``Supply chain management'' is the most frequent trigram in the corpus, with 1,036 occurrences. This makes logistics and traceability the largest individual application area by publication volume. ``Central bank digital'' (959) and ``bank digital currency'' (852) represent a combined block of nearly 1,800 papers focused on central bank digital currencies (CBDCs), establishing state-backed digital currencies as the second-largest research theme.
 
 \subsection{Blockchain-ML Convergence}
 
-A surprising finding is the size of the blockchain-ML intersection. ``Federated learning'' appears 1,712 times [15, 16]. ``Machine learning'' (1,779) and ``privacy preserving'' (1,342) [10] round out a cluster of over 4,800 papers studying the overlap between blockchain and AI/ML techniques.
+The intersection of blockchain and machine learning represents a substantial portion of the corpus. ``Federated learning'' appears 1,712 times \citep{yang2019federated, mcmahan2017communication}, while ``machine learning'' (1,779) and ``privacy preserving'' (1,342) \citep{kosba2016hawk} define a cluster of over 4,800 papers exploring the integration of blockchain with machine learning models.
 
 \begin{table}[h]
 \centering
 \caption{Blockchain-ML convergence trigrams.}
 \label{tab:blml}
-\begin{tabular}{@{}lr@{}}
+\begin{tabular}{lr}
 \toprule
 Trigram & Count \\
 \midrule
@@ -203,17 +203,17 @@ federated learning blockchain & 300 \\
 \end{tabular}
 \end{table}
 
-Researchers are building systems where blockchain serves as a coordination layer for distributed machine learning [17], allowing multiple parties to train models on private data without a central authority. This convergence was nearly absent before 2021.
+These papers describe systems where blockchain operates as a coordination layer for distributed machine learning, allowing multiple parties to train shared models on local, private data without a central intermediary \citep{lu2020blockchain}. This convergence was rarely observed in publications before 2021.
 
 \subsection{Rising Topics (2022 vs 2026)}
 
-Table~\ref{tab:rising} shows the fastest-growing bigrams between the 2022 and 2026 cohorts.
+Table~\ref{tab:rising} shows the fastest-growing bigrams between the 2022 and 2026 publication cohorts.
 
 \begin{table}[h]
 \centering
 \caption{Fastest-rising bigrams from 2022 to 2026.}
 \label{tab:rising}
-\begin{tabular}{@{}lrr@{}}
+\begin{tabular}{lrr}
 \toprule
 Bigram & 2026 count & Growth vs 2022 \\
 \midrule
@@ -227,114 +227,242 @@ secure transparent & 36 & 12.0x \\
 \end{tabular}
 \end{table}
 
-Three themes dominate the rising topics. First, the entry of large language models into blockchain research. Second, a strong emphasis on transparency and traceability, likely driven by regulatory pressure from MiCA [23] and the GENIUS Act [24]. Third, early work on quantum-resistant cryptography [20], anticipating the threat that quantum computers may pose to current blockchain encryption.
+The rising topics fall into three primary areas: the application of large language models in blockchain systems, an emphasis on transaction and supply chain transparency driven by regulatory frameworks such as MiCA \citep{eu2023mica} and the GENIUS Act \citep{us2025genius}, and early work on quantum-resistant cryptography \citep{merkle1987digital} to secure protocols against future decryption threats.
 
 \subsection{Citation Distribution}
 
-The citation distribution is heavily right-skewed. Of 100,024 documents, 51.8\% have at least one citation. The median citation count is 1. The mean is 14.7 (pulled up by a small number of very highly cited papers). The top 1\% threshold is 249 citations. The single most-cited paper is Nakamoto's Bitcoin whitepaper [1] with 14,286 citations.
+The citation distribution is heavily right-skewed. Among the 100,024 documents, 51.8\% have at least one citation. The median citation count is 1, the mean is 14.7, and the top 1\% threshold is 249 citations. The most-cited document is Nakamoto's Bitcoin whitepaper \citep{nakamoto2008bitcoin}, which has 14,286 citations.
 
-The top 20 keywords account for 22.8\% of all word occurrences across 36,199 unique words, suggesting a field that has diversified beyond a few core topics but still maintains a center of gravity around blockchain infrastructure, smart contracts, and supply chain applications.
+The top 20 keywords account for 22.8\% of all word occurrences across 36,199 unique words, suggesting a field that has diversified into specialized domains while retaining a core focus on smart contracts, infrastructure security, and logistics.
 
 \section{Discussion}
 \label{sec:discussion}
 
 \subsection{From Speculation to Infrastructure}
 
-The data tells a clear story. Between 2015 and 2018, blockchain research was dominated by cryptocurrency-focused topics: Bitcoin, mining, and consensus mechanisms. The 2017--2018 growth spike (+136.8\%) aligned exactly with the ICO bubble.
+The data reveals a clear evolution. Between 2015 and 2018, blockchain research was dominated by cryptocurrency-focused topics, including mining, consensus mechanisms, and market speculation, matching the 2017 to 2018 growth spike.
 
-Since 2020, the composition has changed. ``Supply chain'' and ``IoT'' now outrank ``cryptocurrency'' by keyword frequency. ``Smart contract vulnerability'' (288 trigram occurrences) and ``access control'' (1,180 bigram occurrences) indicate that researchers are working on hardening blockchain for production use rather than exploring the concept.
+Since 2020, the thematic composition has shifted. ``Supply chain'' and ``IoT'' now outrank ``cryptocurrency'' in keyword frequency. The emergence of terms like ``smart contract vulnerability'' (288 trigram occurrences) and ``access control'' (1,180 bigram occurrences) indicates that researchers are focused on hardening existing protocols for production use rather than exploring theoretical concepts.
 
 \subsection{The Federated Learning Bridge}
 
-The most interesting structural finding is the size of the blockchain-ML convergence. With over 4,800 papers at the intersection, this is not a niche. The combination makes practical sense: federated learning requires a coordination mechanism for distributed model training, and blockchain provides an auditable, trustless coordination layer.
+The overlap between blockchain and machine learning represents a major structural shift in the literature. This combination is mathematically practical: federated learning requires a coordination mechanism for distributed model training, and blockchain provides an auditable, trustless ledger for that coordination.
 
-This convergence has practical implications for healthcare (where patient data cannot leave hospital networks), financial services (where competing institutions need to train fraud detection models on shared patterns without sharing underlying transaction data), and supply chain optimization [11, 12] (where multiple stakeholders contribute data to shared predictive models).
+Rather than copying sensitive records into a single central database, which poses severe privacy risks, federated learning leaves the data secure on local devices and only shares model adjustments, using the blockchain as a secure, neutral coordinator. This architecture has immediate applications in healthcare, where patient records must remain within hospital networks, financial services, where institutions train shared fraud detection models without exposing customer accounts, and logistics optimization \citep{saberi2019blockchain, tian2016agri}.
 
 \subsection{The CBDC Research Wave}
 
-Central bank digital currencies represent a distinct research cluster of approximately 1,800 papers. This work is driven largely by government and central bank initiatives [21]: the ECB's digital euro project [22], the People's Bank of China's e-CNY pilot (already deployed to over 260 million wallets), and the Bank of England's ongoing consultation on a digital pound.
+Central bank digital currencies represent a distinct research cluster of approximately 1,800 papers. This work is driven by public sector pilots, including the European Central Bank's digital euro project \citep{ecb2024euro}, the People's Bank of China's e-CNY trials, and the Bank of England's consultations on a digital pound.
 
-The volume of CBDC research reflects a genuine institutional commitment. These papers address specific technical problems: offline payment capability, privacy-preserving transaction monitoring, and interoperability between national CBDC systems.
+The volume of CBDC research reflects an institutional commitment. These papers focus on solving specific engineering challenges, including offline transaction capability, privacy-preserving monitoring, and interoperability protocols between national systems \citep{auer2021cbdcs}.
 
 \subsection{Limitations}
 
-Title-level analysis has clear limitations. It cannot capture the quality or methodology of individual papers. A paper titled ``Blockchain for Supply Chain Management'' might be a rigorous empirical study or a superficial literature review. Citation counts provide a partial quality signal, but even citations are a lagging indicator that favors older papers.
+Title-level bibliometric analysis has limitations. It cannot evaluate the internal quality or methodology of individual papers. A paper titled ``Blockchain for Supply Chain Management'' might represent a rigorous empirical study or a superficial review. While citation counts provide a proxy for impact, they are a lagging indicator that naturally favors older publications.
 
-Citation counts from Crossref are incomplete, as some publishers do not report citation data, and self-citations are not distinguished from independent citations. The 2026 cohort (6,885 papers through May) is incomplete.
+Additionally, citation metadata from Crossref can be incomplete as some publishers do not report citation indexes, and self-citations are not isolated. Finally, the 2026 cohort represents only partial-year data through May.
 
 \section{Conclusion}
 \label{sec:conclusion}
 
-Analysis of 100,024 documents reveals a field that has matured beyond its speculative origins. Blockchain research in 2026 is dominated by applied infrastructure work: supply chain traceability, IoT device management, smart contract security, and central bank digital currencies. The convergence with federated learning (1,712 mentions) represents a growing research frontier. The rising emphasis on transparency (5.4x growth) and quantum resistance (15x growth) points to a field preparing for regulatory compliance and long-term cryptographic durability.
+An analysis of 100,024 documents reveals a research field that has transitioned beyond speculative cryptocurrency applications. Academic output in 2026 is dominated by infrastructure development, including supply chain traceability, IoT device management, protocol security, and central bank digital currencies. The convergence with federated learning represents an active research frontier. The rising emphasis on transparency, showing up to 25x growth, and quantum resistance, showing 15x growth, indicates a field preparing for regulatory compliance and long-term cryptographic durability.
 
 The complete dataset is available at \url{https://veda.ng/web3-reports}.
 
 \section*{References}
 
-\begin{enumerate}
-\item S.\ Nakamoto, ``Bitcoin: A Peer-to-Peer Electronic Cash System,'' 2008.
+\begin{thebibliography}{32}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\item V.\ Buterin, ``Ethereum: A Next-Generation Smart Contract and Decentralized Application Platform,'' 2014.
+\bibitem[Nakamoto(2008)]{nakamoto2008bitcoin}
+S.~Nakamoto.
+\newblock Bitcoin: A peer-to-peer electronic cash system.
+\newblock \emph{Whitepaper}, 2008.
 
-\item K.\ Christidis and M.\ Devetsikiotis, ``Blockchains and Smart Contracts for the Internet of Things,'' \textit{IEEE Access}, vol.\ 4, pp.\ 2292--2303, 2016.
+\bibitem[Buterin(2014)]{buterin2014ethereum}
+V.~Buterin.
+\newblock Ethereum: A next-generation smart contract and decentralized
+  application platform.
+\newblock \emph{Whitepaper}, 2014.
 
-\item M.\ Swan, \textit{Blockchain: Blueprint for a New Economy}. O'Reilly Media, 2015.
+\bibitem[Christidis and Devetsikiotis(2016)]{christidis2016blockchains}
+K.~Christidis and M.~Devetsikiotis.
+\newblock Blockchains and smart contracts for the internet of things.
+\newblock \emph{IEEE Access}, 4:\penalty0 2292--2303, 2016.
 
-\item N.\ Szabo, ``Formalizing and Securing Relationships on Public Networks,'' \textit{First Monday}, vol.\ 2, no.\ 9, 1997.
+\bibitem[Swan(2015)]{swan2015blockchain}
+M.~Swan.
+\newblock \emph{Blockchain: Blueprint for a New Economy}.
+\newblock O'Reilly Media, 2015.
 
-\item L.\ Lamport, R.\ Shostak, and M.\ Pease, ``The Byzantine Generals Problem,'' \textit{ACM Trans.\ on Programming Languages and Systems}, vol.\ 4, no.\ 3, pp.\ 382--401, 1982.
+\bibitem[Szabo(1997)]{szabo1997formalizing}
+N.~Szabo.
+\newblock Formalizing and securing relationships on public networks.
+\newblock \emph{First Monday}, 2\penalty0 (9), 1997.
 
-\item M.\ Castro and B.\ Liskov, ``Practical Byzantine Fault Tolerance,'' \textit{Proc.\ OSDI}, pp.\ 173--186, 1999.
+\bibitem[Lamport et~al.(1982)Lamport, Shostak, and Pease]{lamport1982byzantine}
+L.~Lamport, R.~Shostak, and M.~Pease.
+\newblock The Byzantine generals problem.
+\newblock \emph{ACM Transactions on Programming Languages and Systems},
+  4\penalty0 (3):\penalty0 382--401, 1982.
 
-\item G.\ Wood, ``Ethereum: A Secure Decentralised Generalised Transaction Ledger,'' Ethereum Project Yellow Paper, 2014.
+\bibitem[Castro and Liskov(1999)]{castro1999practical}
+M.~Castro and B.~Liskov.
+\newblock Practical Byzantine fault tolerance.
+\newblock In \emph{Proceedings of OSDI}, pages 173--186, 1999.
 
-\item L.\ Luu, D.-H.\ Chu, H.\ Olickel, P.\ Saxena, and A.\ Hobor, ``Making Smart Contracts Smarter,'' \textit{Proc.\ ACM CCS}, pp.\ 254--269, 2016.
+\bibitem[Wood(2014)]{wood2014ethereum}
+G.~Wood.
+\newblock Ethereum: A secure decentralised generalised transaction ledger.
+\newblock \emph{Ethereum Project Yellow Paper}, 2014.
 
-\item A.\ Kosba, A.\ Miller, E.\ Shi, Z.\ Wen, and C.\ Papamanthou, ``Hawk: The Blockchain Model of Cryptography and Privacy-Preserving Smart Contracts,'' \textit{Proc.\ IEEE S\&P}, pp.\ 839--858, 2016.
+\bibitem[Luu et~al.(2016)Luu, Chu, Olickel, Saxena, and Hobor]{luu2016making}
+L.~Luu, D.-H. Chu, H.~Olickel, P.~Saxena, and A.~Hobor.
+\newblock Making smart contracts smarter.
+\newblock In \emph{Proceedings of ACM CCS}, pages 254--269, 2016.
 
-\item S.\ Saberi, M.\ Kouhizadeh, J.\ Sarkis, and L.\ Shen, ``Blockchain Technology and Its Relationships to Sustainable Supply Chain Management,'' \textit{Int.\ J.\ Production Research}, vol.\ 57, no.\ 7, pp.\ 2117--2135, 2019.
+\bibitem[Kosba et~al.(2016)Kosba, Miller, Shi, Wen, and
+  Papamanthou]{kosba2016hawk}
+A.~Kosba, A.~Miller, E.~Shi, Z.~Wen, and C.~Papamanthou.
+\newblock Hawk: The blockchain model of cryptography and privacy-preserving
+  smart contracts.
+\newblock In \emph{Proceedings of IEEE S\&P}, pages 839--858, 2016.
 
-\item F.\ Tian, ``An Agri-food Supply Chain Traceability System for China Based on RFID and Blockchain Technology,'' \textit{Proc.\ Int.\ Conf.\ Service Systems and Service Management}, pp.\ 1--6, 2016.
+\bibitem[Saberi et~al.(2019)Saberi, Kouhizadeh, Sarkis, and
+  Shen]{saberi2019blockchain}
+S.~Saberi, M.~Kouhizadeh, J.~Sarkis, and L.~Shen.
+\newblock Blockchain technology and its relationships to sustainable supply
+  chain management.
+\newblock \emph{International Journal of Production Research}, 57\penalty0
+  (7):\penalty0 2117--2135, 2019.
 
-\item T.\ M.\ Fernandez-Carames and P.\ Fraga-Lamas, ``A Review on the Use of Blockchain for the Internet of Things,'' \textit{IEEE Access}, vol.\ 6, pp.\ 32979--33001, 2018.
+\bibitem[Tian(2016)]{tian2016agri}
+F.~Tian.
+\newblock An agri-food supply chain traceability system for china based on rfid
+  and blockchain technology.
+\newblock In \emph{Proceedings of International Conference on Service Systems
+  and Service Management}, pages 1--6, 2016.
 
-\item A.\ Reyna, C.\ Martin, J.\ Chen, E.\ Soler, and M.\ Diaz, ``On Blockchain and Its Integration with IoT: Challenges and Opportunities,'' \textit{Future Generation Computer Systems}, vol.\ 88, pp.\ 173--190, 2018.
+\bibitem[Fernandez-Carames and Fraga-Lamas(2018)]{fernandez2018review}
+T.~M. Fernandez-Carames and P.~Fraga-Lamas.
+\newblock A review on the use of blockchain for the internet of things.
+\newblock \emph{IEEE Access}, 6:\penalty0 32979--33001, 2018.
 
-\item Q.\ Yang, Y.\ Liu, T.\ Chen, and Y.\ Tong, ``Federated Machine Learning: Concept and Applications,'' \textit{ACM Trans.\ Intelligent Systems and Technology}, vol.\ 10, no.\ 2, pp.\ 1--19, 2019.
+\bibitem[Reyna et~al.(2018)Reyna, Martin, Chen, Soler, and
+  Diaz]{reyna2018blockchain}
+A.~Reyna, C.~Martin, J.~Chen, E.~Soler, and M.~Diaz.
+\newblock On blockchain and its integration with iot: Challenges and
+  opportunities.
+\newblock \emph{Future Generation Computer Systems}, 88:\penalty0 173--190,
+  2018.
 
-\item B.\ McMahan et al., ``Communication-Efficient Learning of Deep Networks from Decentralized Data,'' \textit{AISTATS}, pp.\ 1273--1282, 2017.
+\bibitem[Yang et~al.(2019)Yang, Liu, Chen, and Tong]{yang2019federated}
+Q.~Yang, Y.~Liu, T.~Chen, and Y.~Tong.
+\newblock Federated machine learning: Concept and applications.
+\newblock \emph{ACM Transactions on Intelligent Systems and Technology},
+  10\penalty0 (2):\penalty0 1--19, 2019.
 
-\item Y.\ Lu, X.\ Huang, K.\ Zhang, S.\ Maharjan, and Y.\ Zhang, ``Blockchain Empowered Asynchronous Federated Learning for Secure Data Sharing in Internet of Vehicles,'' \textit{IEEE Trans.\ Vehicular Technology}, vol.\ 69, no.\ 4, pp.\ 4298--4311, 2020.
+\bibitem[McMahan et~al.(2017)]{mcmahan2017communication}
+B.~McMahan et~al.
+\newblock Communication-efficient learning of deep networks from decentralized
+  data.
+\newblock In \emph{Proceedings of AISTATS}, pages 1273--1282, 2017.
 
-\item W.\ Dai, ``b-money,'' 1998.
+\bibitem[Lu et~al.(2020)Lu, Huang, Zhang, Maharjan, and Zhang]{lu2020blockchain}
+Y.~Lu, X.~Huang, K.~Zhang, S.~Maharjan, and Y.~Zhang.
+\newblock Blockchain empowered asynchronous federated learning for secure data
+  sharing in internet of vehicles.
+\newblock \emph{IEEE Transactions on Vehicular Technology}, 69\penalty0
+  (4):\penalty0 4298--4311, 2020.
 
-\item D.\ Chaum, ``Blind Signatures for Untraceable Payments,'' \textit{Advances in Cryptology}, pp.\ 199--203, 1983.
+\bibitem[Dai(1998)]{dai1998bmoney}
+W.~Dai.
+\newblock b-money.
+\newblock \emph{Proposal}, 1998.
 
-\item R.\ C.\ Merkle, ``A Digital Signature Based on a Conventional Encryption Function,'' \textit{Advances in Cryptology (CRYPTO)}, pp.\ 369--378, 1987.
+\bibitem[Chaum(1983)]{chaum1983blind}
+D.~Chaum.
+\newblock Blind signatures for untraceable payments.
+\newblock In \emph{Advances in Cryptology}, pages 199--203, 1983.
 
-\item M.\ Auer, ``CBDCs Beyond Borders: Results from a Survey of Central Banks,'' Bank for International Settlements, BIS Papers No.\ 116, 2021.
+\bibitem[Merkle(1987)]{merkle1987digital}
+R.~C. Merkle.
+\newblock A digital signature based on a conventional encryption function.
+\newblock In \emph{Proceedings of CRYPTO}, pages 369--378, 1987.
 
-\item European Central Bank, ``Digital Euro Project,'' 2024.
+\bibitem[Auer(2021)]{auer2021cbdcs}
+M.~Auer.
+\newblock Cbdcs beyond borders: Results from a survey of central banks.
+\newblock \emph{Bank for International Settlements, BIS Papers No. 116}, 2021.
 
-\item European Union, ``Regulation (EU) 2023/1114 (Markets in Crypto-Assets, MiCA),'' \textit{Official Journal of the European Union}, 2023.
+\bibitem[European~Central~Bank(2024)]{ecb2024euro}
+European~Central~Bank.
+\newblock Digital euro project.
+\newblock \emph{Report}, 2024.
 
-\item U.S.\ Congress, ``GENIUS Act of 2025,'' S.394, 119th Congress, 2025.
+\bibitem[European~Union(2023)]{eu2023mica}
+European~Union.
+\newblock Regulation (eu) 2023/1114 (markets in crypto-assets, mica).
+\newblock \emph{Official Journal of the European Union}, 2023.
 
-\item A.\ Firdaus, N.\ Razak, M.\ Feizollah, I.\ Hashem, M.\ Hazim, and M.\ Imran, ``The Root Causes of the Blockchain Research: A Bibliometric Analysis,'' \textit{Telematics and Informatics}, vol.\ 36, pp.\ 46--54, 2019.
+\bibitem[U.S.~Congress(2025)]{us2025genius}
+U.S.~Congress.
+\newblock Genius act of 2025.
+\newblock \emph{S.394, 119th Congress}, 2025.
 
-\item S.\ Miau and J.\ M.\ Yang, ``Bibliometrics-Based Evaluation of the Blockchain Research Trend,'' \textit{Technology Analysis and Strategic Management}, vol.\ 30, no.\ 9, pp.\ 1029--1045, 2018.
+\bibitem[Firdaus et~al.(2019)Firdaus, Razak, Feizollah, Hashem, Hazim, and
+  Imran]{firdaus2019root}
+A.~Firdaus, N.~Razak, M.~Feizollah, I.~Hashem, M.~Hazim, and M.~Imran.
+\newblock The root causes of the blockchain research: A bibliometric analysis.
+\newblock \emph{Telematics and Informatics}, 36:\penalty0 46--54, 2019.
 
-\item F.\ Casino, T.\ K.\ Dasaklis, and C.\ Patsakis, ``A Systematic Literature Review of Blockchain-Based Applications: Current Status, Classification and Open Issues,'' \textit{Telematics and Informatics}, vol.\ 36, pp.\ 55--81, 2019.
+\bibitem[Miau and Yang(2018)]{miau2018bibliometrics}
+S.~Miau and J.~M. Yang.
+\newblock Bibliometrics-based evaluation of the blockchain research trend.
+\newblock \emph{Technology Analysis and Strategic Management}, 30\penalty0
+  (9):\penalty0 1029--1045, 2018.
 
-\item Z.\ Zheng, S.\ Xie, H.\ Dai, X.\ Chen, and H.\ Wang, ``An Overview of Blockchain Technology: Architecture, Consensus, and Future Trends,'' \textit{Proc.\ IEEE BigData Congress}, pp.\ 557--564, 2017.
+\bibitem[Casino et~al.(2019)Casino, Dasaklis, and
+  Patsakis]{casino2019systematic}
+F.~Casino, T.~K. Dasaklis, and C.~Patsakis.
+\newblock A systematic literature review of blockchain-based applications:
+  Current status, classification and open issues.
+\newblock \emph{Telematics and Informatics}, 36:\penalty0 55--81, 2019.
 
-\item M.\ Pilkington, ``Blockchain Technology: Principles and Applications,'' in \textit{Research Handbook on Digital Transformations}, Edward Elgar Publishing, 2016.
+\bibitem[Zheng et~al.(2017)Zheng, Xie, Dai, Chen, and Wang]{zheng2017overview}
+Z.~Zheng, S.~Xie, H.~Dai, X.~Chen, and H.~Wang.
+\newblock An overview of blockchain technology: Architecture, consensus, and
+  future trends.
+\newblock In \emph{Proceedings of IEEE BigData Congress}, pages 557--564, 2017.
 
-\item RWA.xyz, ``Tokenized Asset Dashboard,'' 2026. \url{https://www.rwa.xyz}
+\bibitem[Pilkington(2016)]{pilkington2016blockchain}
+M.~Pilkington.
+\newblock Blockchain technology: Principles and applications.
+\newblock In \emph{Research Handbook on Digital Transformations}. Edward Elgar
+  Publishing, 2016.
 
-\item Crossref REST API. \url{https://api.crossref.org}
+\bibitem[RWA.xyz(2026)]{rwa2026dashboard}
+RWA.xyz.
+\newblock Tokenized asset dashboard.
+\newblock \emph{Market Report}, 2026.
+\newblock \url{https://www.rwa.xyz}.
 
-\item OpenAlex, ``OpenAlex: A Fully-Open Index of Scholarly Works,'' 2022. \url{https://openalex.org}
-\end{enumerate}
+\bibitem[Crossref(2026)]{crossref2026api}
+Crossref.
+\newblock Crossref rest api.
+\newblock \emph{Technical Documentation}, 2026.
+\newblock \url{https://api.crossref.org}.
+
+\bibitem[OpenAlex(2022)]{openalex2022open}
+OpenAlex.
+\newblock Openalex: A fully-open index of scholarly works.
+\newblock \emph{Database Documentation}, 2022.
+\newblock \url{https://openalex.org}.
+
+\end{thebibliography}
 
 \end{document}

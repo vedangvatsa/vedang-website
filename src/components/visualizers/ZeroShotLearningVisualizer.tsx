@@ -2,12 +2,14 @@
 
 import React, { useState } from 'react';
 
+type PatternKey = 'language-structure' | 'logical-reasoning' | 'narrative-flow' | 'syntax-patterns';
+
 export function ZeroShotLearningVisualizer() {
   const [selectedTask, setSelectedTask] = useState<string | null>(null);
   const [showPrediction, setShowPrediction] = useState(false);
   const [hoveredPattern, setHoveredPattern] = useState<string | null>(null);
 
-  const trainingTasks = [
+  const trainingTasks: { id: string; name: string; pattern: PatternKey }[] = [
     { id: 'translate-es', name: 'Spanish Translation', pattern: 'language-structure' },
     { id: 'translate-fr', name: 'French Translation', pattern: 'language-structure' },
     { id: 'math-basic', name: 'Basic Math', pattern: 'logical-reasoning' },
@@ -15,7 +17,7 @@ export function ZeroShotLearningVisualizer() {
     { id: 'code-python', name: 'Python Coding', pattern: 'syntax-patterns' }
   ];
 
-  const zeroShotTasks = [
+  const zeroShotTasks: { id: string; name: string; pattern: PatternKey; example: string; confidence: number }[] = [
     { 
       id: 'translate-italian', 
       name: 'Italian Translation', 

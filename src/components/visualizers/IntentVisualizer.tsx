@@ -2,12 +2,21 @@
 
 import { useState } from 'react';
 
+interface Solver {
+  id: number;
+  name: string;
+  output: number;
+  fee: number;
+  route: string;
+  time: number;
+}
+
 export function IntentVisualizer() {
   const [currentStep, setCurrentStep] = useState(0);
   const [intentAmount, setIntentAmount] = useState(1);
   const [minOutput, setMinOutput] = useState(2000);
   const [timeLimit, setTimeLimit] = useState(30);
-  const [selectedSolver, setSelectedSolver] = useState(null);
+  const [selectedSolver, setSelectedSolver] = useState<Solver | null>(null);
   const [isExecuting, setIsExecuting] = useState(false);
 
   const solvers = [

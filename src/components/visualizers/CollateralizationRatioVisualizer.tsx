@@ -6,7 +6,7 @@ export function CollateralizationRatioVisualizer() {
   const [collateralValue, setCollateralValue] = useState(150);
   const [borrowedValue, setBorrowedValue] = useState(100);
   const [priceChange, setPriceChange] = useState(0);
-  const [selectedProtocol, setSelectedProtocol] = useState('aave');
+  const [selectedProtocol, setSelectedProtocol] = useState<'aave' | 'compound' | 'makerdao'>('aave');
   const [isAnimating, setIsAnimating] = useState(false);
 
   const protocols = {
@@ -100,7 +100,7 @@ export function CollateralizationRatioVisualizer() {
               <label className="block text-sm font-medium text-slate-700 mb-2">Protocol</label>
               <select
                 value={selectedProtocol}
-                onChange={(e) => setSelectedProtocol(e.target.value)}
+                onChange={(e) => setSelectedProtocol(e.target.value as 'aave' | 'compound' | 'makerdao')}
                 className="w-full p-2 border border-slate-300 rounded-lg bg-white"
               >
                 {Object.entries(protocols).map(([key, protocol]) => (

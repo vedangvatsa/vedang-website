@@ -24,8 +24,8 @@ export function BlockchainVisualizer() {
     return Math.abs(hash).toString(16).substring(0, 6);
   };
 
-  const validateChain = () => {
-    const newBlocks = [...blocks];
+  const validateChain = (blocksToValidate = blocks) => {
+    const newBlocks = [...blocksToValidate];
     let isChainValid = true;
     
     for (let i = 1; i < newBlocks.length; i++) {

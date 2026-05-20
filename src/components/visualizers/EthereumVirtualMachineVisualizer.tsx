@@ -1,12 +1,27 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 
+interface Contract {
+  id: string;
+  name: string;
+  bytecode: string[];
+  gasCost: number;
+  description: string;
+}
+
+interface EvmState {
+  stack: string[];
+  memory: Record<string, string>;
+  storage: Record<string, string>;
+  pc: number;
+}
+
 export function EthereumVirtualMachineVisualizer() {
-  const [selectedContract, setSelectedContract] = useState(null);
+  const [selectedContract, setSelectedContract] = useState<Contract | null>(null);
   const [isExecuting, setIsExecuting] = useState(false);
   const [gasUsed, setGasUsed] = useState(0);
   const [step, setStep] = useState(0);
-  const [evmState, setEvmState] = useState({
+  const [evmState, setEvmState] = useState<EvmState>({
     stack: [],
     memory: {},
     storage: {},
@@ -76,7 +91,7 @@ export function EthereumVirtualMachineVisualizer() {
     }
   }, [isExecuting, selectedContract]);
 
-  const executeContract = (contract) => {
+  const executeContract = (contract: Contract) => {
     setSelectedContract(contract);
     setIsExecuting(true);
     setGasUsed(21000); // Base transaction cost

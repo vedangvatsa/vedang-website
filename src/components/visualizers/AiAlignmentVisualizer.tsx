@@ -6,7 +6,7 @@ export function AiAlignmentVisualizer() {
   const [humanIntent, setHumanIntent] = useState(50);
   const [aiCapability, setAiCapability] = useState(30);
   const [alignmentEffort, setAlignmentEffort] = useState(20);
-  const [scenario, setScenario] = useState('recommendation');
+  const [scenario, setScenario] = useState<'recommendation' | 'hiring' | 'trading'>('recommendation');
   const [isRunning, setIsRunning] = useState(false);
 
   const scenarios = {
@@ -89,18 +89,18 @@ export function AiAlignmentVisualizer() {
           <div className="bg-white p-6 rounded-xl border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">Scenario Selection</h4>
             <div className="grid grid-cols-1 gap-2">
-              {Object.entries(scenarios).map(([key, scenario]) => (
+              {Object.entries(scenarios).map(([key, scen]) => (
                 <button
                   key={key}
-                  onClick={() => setScenario(key)}
+                  onClick={() => setScenario(key as 'recommendation' | 'hiring' | 'trading')}
                   className={`p-3 rounded-lg border text-left transition-colors ${
                     scenario === key
                       ? 'bg-blue-100 border-blue-300 text-blue-800'
                       : 'bg-slate-50 border-slate-200 hover:bg-slate-100'
                   }`}
                 >
-                  <div className="font-medium">{scenario.name}</div>
-                  <div className="text-sm text-slate-600">{scenario.description}</div>
+                  <div className="font-medium">{scen.name}</div>
+                  <div className="text-sm text-slate-600">{scen.description}</div>
                 </button>
               ))}
             </div>

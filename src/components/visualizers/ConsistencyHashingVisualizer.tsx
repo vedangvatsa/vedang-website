@@ -2,13 +2,24 @@
 
 import { useState, useEffect } from 'react';
 
+interface Server {
+  id: string;
+  angle: number;
+  color: string;
+}
+
+interface Key {
+  id: string;
+  angle: number;
+}
+
 export function ConsistencyHashingVisualizer() {
-  const [servers, setServers] = useState([
+  const [servers, setServers] = useState<Server[]>([
     { id: 'S1', angle: 0, color: 'bg-blue-500' },
     { id: 'S2', angle: 120, color: 'bg-emerald-500' },
     { id: 'S3', angle: 240, color: 'bg-rose-500' }
   ]);
-  const [keys, setKeys] = useState([
+  const [keys, setKeys] = useState<Key[]>([
     { id: 'K1', angle: 45 },
     { id: 'K2', angle: 90 },
     { id: 'K3', angle: 180 },
@@ -19,7 +30,7 @@ export function ConsistencyHashingVisualizer() {
   const [showNewServer, setShowNewServer] = useState(false);
   const [animating, setAnimating] = useState(false);
 
-  const getNextServerClockwise = (keyAngle, serverList) => {
+  const getNextServerClockwise = (keyAngle: number, serverList: Server[]) => {
     const sortedServers = [...serverList].sort((a, b) => a.angle - b.angle);
     for (let server of sortedServers) {
       if (server.angle >= keyAngle) return server;
@@ -27,7 +38,7 @@ export function ConsistencyHashingVisualizer() {
     return sortedServers[0];
   };
 
-  const getKeyAssignments = (serverList) => {
+  const getKeyAssignments = (serverList: Server[]) => {
     return keys.map(key => ({
       ...key,
       assignedServer: getNextServerClockwise(key.angle, serverList)
@@ -234,19 +245,19 @@ export function ConsistencyHashingVisualizer() {
             <div className="space-y-2">
               {currentAssignments.map(key => {
                 const newAssignment = newServerAssignments.find(k => k.id === key.id);
-                const willChange = showNewServer && newAssignment.assignedServer.id !== key.assignedServer.id;
+                const willChange = showNewServer && newAssignment && newAssignment.assignedServer.id !== key.assignedServer.id;
                 
                 return (
                   <div key={key.id} className={`flex justify-between items-center p-2 rounded ${willChange ? 'bg-amber-50' : 'bg-slate-50'}`}>
                     <span className="font-mono text-sm">{key.id}</span>
                     <div className="flex items-center gap-2">
-                      <span className="text-sm">{key.assignedServer.id}</span>
-                      {willChange && (
-                        <>
-                          <span className="text-amber-500">→</span>
-                          <span className="text-sm text-amber-600">{newAssignment.assignedServer.id}</span>
-                        </>
-                      )}
+                       <span className="text-sm">{key.assignedServer.id}</span>
+                       {willChange && newAssignment && (
+                         <>
+                           <span className="text-amber-500">→</span>
+                           <span className="text-sm text-amber-600">{newAssignment.assignedServer.id}</span>
+                         </>
+                       )}
                     </div>
                   </div>
                 );

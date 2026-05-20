@@ -42,7 +42,7 @@ export function ArtificialSuperintelligenceAsiVisualizer() {
     }, 1500);
   };
 
-  const getCapabilityValue = (capability, type) => {
+  const getCapabilityValue = (capability: any, type: string) => {
     if (type === 'human') return capability.human;
     if (type === 'current') return capability.current;
     

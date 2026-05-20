@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react';
 
 export function GasFeesVisualizer() {
-  const [selectedTransaction, setSelectedTransaction] = useState('simple');
+  const [selectedTransaction, setSelectedTransaction] = useState<'simple' | 'swap' | 'nft' | 'complex'>('simple');
   const [gasPrice, setGasPrice] = useState(20);
-  const [networkCongestion, setNetworkCongestion] = useState('medium');
+  const [networkCongestion, setNetworkCongestion] = useState<'low' | 'medium' | 'high'>('medium');
   const [isExecuting, setIsExecuting] = useState(false);
   const [executionProgress, setExecutionProgress] = useState(0);
 
@@ -73,10 +73,10 @@ export function GasFeesVisualizer() {
           <div className="bg-white p-6 rounded-xl border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">Transaction Type</h4>
             <div className="grid grid-cols-1 gap-3">
-              {Object.entries(transactions).map(([key, tx]) => (
-                <button
-                  key={key}
-                  onClick={() => setSelectedTransaction(key)}
+            {Object.entries(transactions).map(([key, tx]) => (
+              <button
+                key={key}
+                onClick={() => setSelectedTransaction(key as 'simple' | 'swap' | 'nft' | 'complex')}
                   className={`p-4 rounded-lg border-2 transition-all text-left ${
                     selectedTransaction === key
                       ? `border-${tx.color}-500 bg-${tx.color}-50`
@@ -126,7 +126,7 @@ export function GasFeesVisualizer() {
               {Object.entries(congestionMultipliers).map(([key, data]) => (
                 <button
                   key={key}
-                  onClick={() => setNetworkCongestion(key)}
+                  onClick={() => setNetworkCongestion(key as 'low' | 'medium' | 'high')}
                   className={`flex-1 p-3 rounded-lg border-2 transition-all ${
                     networkCongestion === key
                       ? `border-${data.color}-500 bg-${data.color}-50`

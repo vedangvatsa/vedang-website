@@ -2,8 +2,16 @@
 
 import { useState } from 'react';
 
+interface MedicalCase {
+  id: number;
+  name: string;
+  symptoms: string[];
+  expectedRules: number[];
+  diagnosis: string;
+}
+
 export function ExpertSystemsVisualizer() {
-  const [selectedCase, setSelectedCase] = useState(null);
+  const [selectedCase, setSelectedCase] = useState<MedicalCase | null>(null);
   const [currentStep, setCurrentStep] = useState(0);
   const [inferenceActive, setInferenceActive] = useState(false);
 
@@ -40,7 +48,7 @@ export function ExpertSystemsVisualizer() {
     }
   ];
 
-  const runInference = (caseData) => {
+  const runInference = (caseData: MedicalCase) => {
     setInferenceActive(true);
     setCurrentStep(0);
     

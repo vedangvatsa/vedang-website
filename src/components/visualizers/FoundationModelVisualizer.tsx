@@ -3,9 +3,9 @@
 import { useState } from 'react';
 
 export function FoundationModelVisualizer() {
-  const [selectedModel, setSelectedModel] = useState('GPT-4');
-  const [adaptationMethod, setAdaptationMethod] = useState('fine-tuning');
-  const [hoveredTask, setHoveredTask] = useState(null);
+  const [selectedModel, setSelectedModel] = useState<'GPT-4' | 'Claude' | 'Gemini' | 'LLaMA' | 'BERT'>('GPT-4');
+  const [adaptationMethod, setAdaptationMethod] = useState<'fine-tuning' | 'prompting' | 'few-shot'>('fine-tuning');
+  const [hoveredTask, setHoveredTask] = useState<number | null>(null);
   const [showTrainingCost, setShowTrainingCost] = useState(false);
 
   const foundationModels = {
@@ -59,7 +59,7 @@ export function FoundationModelVisualizer() {
             {Object.entries(foundationModels).map(([name, model]) => (
               <button
                 key={name}
-                onClick={() => setSelectedModel(name)}
+            onClick={() => setSelectedModel(name as 'GPT-4' | 'Claude' | 'Gemini' | 'LLaMA' | 'BERT')}
                 className={`p-4 rounded-lg border-2 transition-all ${
                   selectedModel === name
                     ? 'border-blue-500 bg-blue-50'
@@ -123,7 +123,7 @@ export function FoundationModelVisualizer() {
             {Object.entries(adaptationMethods).map(([method, details]) => (
               <button
                 key={method}
-                onClick={() => setAdaptationMethod(method)}
+                onClick={() => setAdaptationMethod(method as 'fine-tuning' | 'prompting' | 'few-shot')}
                 className={`p-4 rounded-lg border-2 transition-all ${
                   adaptationMethod === method
                     ? 'border-indigo-500 bg-indigo-50'

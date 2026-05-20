@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 export function AcidPropertiesVisualizer() {
-  const [activeProperty, setActiveProperty] = useState('atomicity');
+  const [activeProperty, setActiveProperty] = useState<'atomicity' | 'consistency' | 'isolation' | 'durability'>('atomicity');
   const [simulationStep, setSimulationStep] = useState(0);
   const [accountA, setAccountA] = useState(1000);
   const [accountB, setAccountB] = useState(500);
@@ -79,7 +79,7 @@ export function AcidPropertiesVisualizer() {
   };
 
   const getStepDescription = () => {
-    const steps = {
+    const steps: Record<number, string> = {
       0: 'Ready to start transaction',
       1: 'Transaction initiated',
       2: 'Deducting from Account A',
@@ -106,7 +106,7 @@ export function AcidPropertiesVisualizer() {
           <button
             key={key}
             onClick={() => {
-              setActiveProperty(key);
+              setActiveProperty(key as 'atomicity' | 'consistency' | 'isolation' | 'durability');
               resetSimulation();
             }}
             className={`p-4 rounded-xl border-2 transition-all ${

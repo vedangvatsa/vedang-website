@@ -52,8 +52,14 @@ export function TopPSamplingVisualizer() {
       cumulative: arr.slice(0, index + 1).reduce((sum, t) => sum + t.probability, 0)
     }));
 
+interface TokenInfo {
+  token: string;
+  probability: number;
+  cumulative: number;
+}
+
   // Find tokens included in top-p sampling
-  const includedTokens = [];
+  const includedTokens: TokenInfo[] = [];
   let cumulativeProb = 0;
   for (const token of sortedTokens) {
     if (cumulativeProb < pValue) {

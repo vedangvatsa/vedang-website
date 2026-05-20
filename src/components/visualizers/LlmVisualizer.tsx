@@ -5,7 +5,7 @@ import { useState } from 'react';
 export function LlmVisualizer() {
   const [modelSize, setModelSize] = useState(1);
   const [trainingStep, setTrainingStep] = useState(0);
-  const [selectedWord, setSelectedWord] = useState(null);
+  const [selectedWord, setSelectedWord] = useState<number | null>(null);
   const [isTraining, setIsTraining] = useState(false);
 
   const sampleText = ["The", "cat", "sat", "on", "the", "mat"];

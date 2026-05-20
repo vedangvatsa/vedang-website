@@ -2,20 +2,34 @@
 
 import { useState, useEffect } from 'react';
 
+interface Transaction {
+  id: number;
+  type: string;
+  color: string;
+  fee: number;
+  priority: number;
+}
+
+interface L1Block {
+  id: number;
+  txs: Transaction[];
+  timestamp: number;
+}
+
 export function SequencerVisualizer() {
-  const [transactions, setTransactions] = useState([]);
-  const [batchedTxs, setBatchedTxs] = useState([]);
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
+  const [batchedTxs, setBatchedTxs] = useState<Transaction[]>([]);
   const [isSequencerActive, setIsSequencerActive] = useState(false);
   const [sequencerType, setSequencerType] = useState('centralized');
   const [nextTxId, setNextTxId] = useState(1);
-  const [l1Blocks, setL1Blocks] = useState([]);
-  const [animatingTx, setAnimatingTx] = useState(null);
+  const [l1Blocks, setL1Blocks] = useState<L1Block[]>([]);
+  const [animatingTx, setAnimatingTx] = useState<number | null>(null);
 
   const txTypes = ['Transfer', 'Swap', 'Mint', 'Bridge'];
   const colors = ['bg-blue-400', 'bg-emerald-400', 'bg-amber-400', 'bg-rose-400'];
 
   useEffect(() => {
-    let interval;
+    let interval: NodeJS.Timeout;
     if (isSequencerActive && transactions.length > 0) {
       interval = setInterval(() => {
         setTransactions(prev => {

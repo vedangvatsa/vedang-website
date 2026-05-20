@@ -174,7 +174,6 @@ export default function RootLayout({
           {children}
           <Toaster />
         </ThemeProvider>
-        <Script src="https://platform.twitter.com/widgets.js" strategy="lazyOnload" />
       </body>
     </html>
   );

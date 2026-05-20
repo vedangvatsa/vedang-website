@@ -21,7 +21,12 @@ export function BpeVisualizer() {
   const performBPE = (text: string, maxSteps: number = 5) => {
     let tokens = text.split('');
     let vocabulary = new Set(tokens);
-    const steps = [{ tokens: [...tokens], vocabulary: Array.from(vocabulary), pairs: [], mergedPair: null }];
+    const steps: {
+      tokens: string[];
+      vocabulary: string[];
+      pairs: [string, number][];
+      mergedPair: string | null;
+    }[] = [{ tokens: [...tokens], vocabulary: Array.from(vocabulary), pairs: [], mergedPair: null }];
 
     for (let step = 0; step < maxSteps; step++) {
       // Count pairs

@@ -5,7 +5,7 @@ import { useState } from 'react';
 export function SybilAttackVisualizer() {
   const [step, setStep] = useState(0);
   const [sybilCount, setSybilCount] = useState(1);
-  const [selectedProposal, setSelectedProposal] = useState<number | null>(null);
+  const [selectedProposal, setSelectedProposal] = useState<string | null>(null);
 
   const legitimateUsers = [
     { id: 1, name: 'Alice', vote: 'A' },

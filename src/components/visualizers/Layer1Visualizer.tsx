@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 export function Layer1Visualizer() {
-  const [selectedNetwork, setSelectedNetwork] = useState('ethereum');
+  const [selectedNetwork, setSelectedNetwork] = useState<'bitcoin' | 'ethereum'>('ethereum');
   const [attackProgress, setAttackProgress] = useState(0);
   const [isAttacking, setIsAttacking] = useState(false);
   const [showConsensus, setShowConsensus] = useState(false);
@@ -62,7 +62,7 @@ export function Layer1Visualizer() {
         {Object.entries(networks).map(([key, net]) => (
           <button
             key={key}
-            onClick={() => setSelectedNetwork(key)}
+            onClick={() => setSelectedNetwork(key as 'bitcoin' | 'ethereum')}
             className={`px-4 py-2 rounded-lg font-semibold transition-all ${
               selectedNetwork === key
                 ? `bg-${net.color}-500 text-white`

@@ -13,7 +13,7 @@ export function OptimisticRollupVisualizer() {
   ]);
   const [isRunning, setIsRunning] = useState(false);
   const [fraudDetected, setFraudDetected] = useState(false);
-  const [selectedTx, setSelectedTx] = useState(null);
+  const [selectedTx, setSelectedTx] = useState<number | null>(null);
 
   const steps = [
     'Submit Transactions',
@@ -55,9 +55,9 @@ export function OptimisticRollupVisualizer() {
     return () => clearTimeout(timer);
   }, [isRunning, currentStep, challengePeriodProgress, fraudDetected]);
 
-  const submitFraudProof = (txId) => {
+  const submitFraudProof = (txId: number) => {
     const tx = transactions.find(t => t.id === txId);
-    if (!tx.valid) {
+    if (tx && !tx.valid) {
       setFraudDetected(true);
       setTransactions(prev => prev.map(t => 
         t.id === txId ? { ...t, status: 'reverted' } : t
@@ -75,7 +75,7 @@ export function OptimisticRollupVisualizer() {
     setTransactions(prev => prev.map(tx => ({ ...tx, status: 'pending' })));
   };
 
-  const getStatusColor = (status) => {
+  const getStatusColor = (status: string) => {
     switch (status) {
       case 'pending': return 'bg-slate-200 text-slate-600';
       case 'processed': return 'bg-blue-200 text-blue-800';

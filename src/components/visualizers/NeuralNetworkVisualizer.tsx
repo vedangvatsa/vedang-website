@@ -12,13 +12,13 @@ export function NeuralNetworkVisualizer() {
   const [bias, setBias] = useState(0.1);
   const [inputs, setInputs] = useState({ x1: 0.7, x2: 0.3 });
   const [activationFunction, setActivationFunction] = useState('sigmoid');
-  const [hoveredNeuron, setHoveredNeuron] = useState(null);
+  const [hoveredNeuron, setHoveredNeuron] = useState<string | null>(null);
 
-  const sigmoid = (x) => 1 / (1 + Math.exp(-x));
-  const relu = (x) => Math.max(0, x);
-  const tanh = (x) => Math.tanh(x);
+  const sigmoid = (x: number) => 1 / (1 + Math.exp(-x));
+  const relu = (x: number) => Math.max(0, x);
+  const tanh = (x: number) => Math.tanh(x);
 
-  const getActivation = (x) => {
+  const getActivation = (x: number) => {
     switch (activationFunction) {
       case 'sigmoid': return sigmoid(x);
       case 'relu': return relu(x);
@@ -35,14 +35,14 @@ export function NeuralNetworkVisualizer() {
   const outputNeuron = 0.6 * hiddenActivated1 + 0.4 * hiddenActivated2 + bias;
   const finalOutput = getActivation(outputNeuron);
 
-  const getNodeColor = (value) => {
+  const getNodeColor = (value: number) => {
     const intensity = Math.abs(value);
     if (intensity < 0.3) return 'bg-slate-200';
     if (intensity < 0.6) return 'bg-blue-300';
     return 'bg-indigo-400';
   };
 
-  const getConnectionOpacity = (weight) => {
+  const getConnectionOpacity = (weight: number) => {
     return Math.min(Math.abs(weight), 1);
   };
 

@@ -2,17 +2,23 @@
 
 import { useState, useEffect, useRef } from 'react';
 
+interface RequestItem {
+  id: number;
+  timestamp: number;
+  status: 'allowed' | 'blocked';
+}
+
 export function RateLimitingVisualizer() {
-  const [requests, setRequests] = useState([]);
+  const [requests, setRequests] = useState<RequestItem[]>([]);
   const [rateLimit, setRateLimit] = useState(5);
   const [timeWindow, setTimeWindow] = useState(10);
   const [tokens, setTokens] = useState(5);
   const [isActive, setIsActive] = useState(false);
   const [requestId, setRequestId] = useState(0);
-  const intervalRef = useRef(null);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const sendRequest = () => {
-    const newRequest = {
+    const newRequest: RequestItem = {
       id: requestId,
       timestamp: Date.now(),
       status: tokens > 0 ? 'allowed' : 'blocked'

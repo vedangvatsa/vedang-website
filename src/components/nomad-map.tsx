@@ -61,7 +61,7 @@ export function NomadMap({ data }: { data: POI[] }) {
   const mapRef = useRef<MapRef>(null);
 
   const cities = useMemo(() => {
-    const citySet = new Map<string, { country: string; count: number; lat: number; lon: number }>();
+    const citySet = new globalThis.Map<string, { country: string; count: number; lat: number; lon: number }>();
     for (const poi of data) {
       const existing = citySet.get(poi.city);
       if (existing) {

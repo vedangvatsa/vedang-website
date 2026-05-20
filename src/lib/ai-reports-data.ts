@@ -1,4 +1,18 @@
-import generatedReports from './ai-reports-data-generated.json';
+import fs from 'fs';
+import path from 'path';
+
+// Read and parse the large JSON file from the filesystem dynamically
+const getGeneratedReports = (): AIReport[] => {
+  try {
+    const filePath = path.join(process.cwd(), 'src', 'lib', 'ai-reports-data-generated.json');
+    if (fs.existsSync(filePath)) {
+      return JSON.parse(fs.readFileSync(filePath, 'utf8')) as AIReport[];
+    }
+  } catch (err) {
+    console.error('Failed to load generated AI reports JSON:', err);
+  }
+  return [];
+};
 
 export interface AIReport {
   title: string;
@@ -203,4 +217,4 @@ const manualReports: AIReport[] = [
   {title:'AI Business Trends 2025',source:'Google',url:'https://blog.google/',date:'2025',category:'Industry & Enterprise',type:'Report'},
   {title:'Gensler Design Forecast 2026: AI Tipping Point',source:'Gensler',url:'https://www.gensler.com/',date:'2026',category:'Industry & Enterprise',type:'Report'},
 ];
-export const aiReports: AIReport[] = [...manualReports, ...(generatedReports as AIReport[])];
+export const aiReports: AIReport[] = [...manualReports, ...getGeneratedReports()];

@@ -6,7 +6,7 @@ export function StablecoinVisualizer() {
   const [currentStep, setCurrentStep] = useState(0);
   const [cryptoPrice, setCryptoPrice] = useState(30000);
   const [reserveRatio, setReserveRatio] = useState(100);
-  const [selectedCoin, setSelectedCoin] = useState('bitcoin');
+  const [selectedCoin, setSelectedCoin] = useState<'bitcoin' | 'ethereum' | 'dogecoin'>('bitcoin');
 
   const steps = [
     { title: 'Traditional Crypto Volatility', description: 'See how regular cryptocurrencies fluctuate wildly' },
@@ -66,7 +66,7 @@ export function StablecoinVisualizer() {
               {Object.entries(cryptoData).map(([key, data]) => (
                 <button
                   key={key}
-                  onClick={() => setSelectedCoin(key)}
+                  onClick={() => setSelectedCoin(key as 'bitcoin' | 'ethereum' | 'dogecoin')}
                   className={`px-4 py-2 rounded-lg font-medium ${
                     selectedCoin === key
                       ? `${data.color} text-white`

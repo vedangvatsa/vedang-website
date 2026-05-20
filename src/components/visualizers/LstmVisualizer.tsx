@@ -96,7 +96,7 @@ export function LstmVisualizer() {
                     value={val}
                     onChange={(e) => updateSequence(idx, parseFloat(e.target.value))}
                     className="w-16 h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer"
-                    style={{writingMode: 'bt-lr', WebkitAppearance: 'slider-vertical'}}
+                    style={{writingMode: 'bt-lr' as any, WebkitAppearance: 'slider-vertical'}}
                   />
                   <span className={`text-xs mt-1 px-2 py-1 rounded ${idx === currentStep ? 'bg-blue-500 text-white' : 'bg-slate-100'}`}>
                     {val.toFixed(1)}
