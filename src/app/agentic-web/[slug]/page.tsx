@@ -24,6 +24,8 @@ const customComponents = {
 const config = courseConfigs['agentic-web'];
 const CONTENT_PATH = path.join(process.cwd(), 'src', 'content', 'courses', 'agentic-web');
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return config.modules.map((module) => ({ slug: module.slug }));
 }
