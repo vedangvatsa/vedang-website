@@ -29,6 +29,8 @@ const customComponents = {
 const config = courseConfigs['mcp-development'];
 const CONTENT_PATH = path.join(process.cwd(), 'src', 'content', 'courses', 'mcp-development');
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   if (!fs.existsSync(CONTENT_PATH)) return [];
   const files = fs.readdirSync(CONTENT_PATH);

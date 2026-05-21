@@ -35,6 +35,8 @@ const customComponents = {
 const config = courseConfigs['web3-101'];
 const CONTENT_PATH = path.join(process.cwd(), 'src', 'content', 'courses', 'web3-101');
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   if (!fs.existsSync(CONTENT_PATH)) return [];
   const files = fs.readdirSync(CONTENT_PATH);

@@ -49,6 +49,11 @@ const nextConfig = {
         destination: '/blockchain-journey',
         permanent: true,
       },
+      {
+        source: '/about',
+        destination: '/profile',
+        permanent: true,
+      },
     ];
   },
   async headers() {

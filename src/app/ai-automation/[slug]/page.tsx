@@ -34,6 +34,8 @@ const customComponents = {
 const config = courseConfigs['ai-automation'];
 const CONTENT_PATH = path.join(process.cwd(), 'src', 'content', 'courses', 'ai-automation');
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   if (!fs.existsSync(CONTENT_PATH)) return [];
   const files = fs.readdirSync(CONTENT_PATH);

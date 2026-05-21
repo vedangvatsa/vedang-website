@@ -96,6 +96,8 @@ export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
       <div className="flex justify-center mb-12">
         <div
           ref={tabsRef}
+          role="tablist"
+          aria-label="Glossary categories"
           className="relative inline-flex items-center rounded-lg border border-border/60 bg-secondary/20 p-1"
         >
           {/* Sliding highlight */}
@@ -107,6 +109,10 @@ export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
           {allCategories.map((category) => (
             <button
               key={category}
+              id={`category-tab-${category.toLowerCase().replace(/\s+/g, "-")}`}
+              role="tab"
+              aria-selected={activeCategory === category}
+              aria-controls="glossary-terms-grid"
               ref={(el) => {
                 if (el) buttonRefs.current.set(category, el);
               }}
@@ -136,7 +142,12 @@ export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
       </div>
 
       {/* Terms Grid */}
-      <dl className={`grid gap-4 sm:grid-cols-2 lg:grid-cols-4 transition-opacity duration-150 ${isPending ? 'opacity-60' : 'opacity-100'}`}>
+      <dl
+        id="glossary-terms-grid"
+        role="tabpanel"
+        aria-labelledby={`category-tab-${activeCategory.toLowerCase().replace(/\s+/g, "-")}`}
+        className={`grid gap-4 sm:grid-cols-2 lg:grid-cols-4 transition-opacity duration-150 ${isPending ? 'opacity-60' : 'opacity-100'}`}
+      >
         {filteredTerms.map((item) => (
           <GlossaryCard key={item.slug} item={item} />
         ))}

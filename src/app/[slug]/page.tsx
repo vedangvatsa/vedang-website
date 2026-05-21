@@ -47,6 +47,8 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+export const dynamicParams = false;
+
 const essaysDirectory = path.join(process.cwd(), 'src', 'content', 'essays');
 
 // Maps essay slugs to relevant glossary term slugs for internal linking

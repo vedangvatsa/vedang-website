@@ -14,6 +14,8 @@ interface PageProps {
   }>;
 }
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return glossaryTerms.map((term) => ({
     slug: term.slug,

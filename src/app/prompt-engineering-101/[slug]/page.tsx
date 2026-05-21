@@ -34,6 +34,8 @@ const customComponents = {
 const config = courseConfigs['prompt-engineering-101'];
 const CONTENT_PATH = path.join(process.cwd(), 'src', 'content', 'courses', 'prompt-engineering-101');
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return config.modules.map((module) => ({
     slug: module.slug,

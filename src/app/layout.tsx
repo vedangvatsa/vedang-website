@@ -15,11 +15,11 @@ export const metadata: Metadata = {
     template: '%s',
   },
   description:
-    'Vedang Vatsa is the founder of Hashtag Web3 (120k+ AI & Web3 professionals), a Fellow of the Royal Society of Arts, and IIT Kanpur alumnus. Explore essays, courses, and tools on AI, blockchain, and decentralized economies.',
+    'Explore essays, free courses, and research on AI agents and Web3 by Vedang Vatsa, founder of Hashtag Web3 and Fellow of the Royal Society of Arts (FRSA).',
   keywords: ['Vedang Vatsa', 'AI', 'Blockchain', 'Web3', 'Growth Marketing', 'Founder', 'AI Researcher', 'DeFi'],
   openGraph: {
     title: 'Vedang Vatsa - AI & Web3 Thought Leader, Founder of Hashtag Web3',
-    description: 'Vedang Vatsa is the founder of Hashtag Web3 (120k+ AI & Web3 professionals), Fellow of the Royal Society of Arts, and IIT Kanpur alumnus. Essays, courses, and tools on AI, blockchain, and decentralized economies.',
+    description: 'Explore essays, free courses, and research on AI agents and Web3 by Vedang Vatsa, founder of Hashtag Web3 and Fellow of the Royal Society of Arts (FRSA).',
     url: '/',
     siteName: 'Vedang Vatsa',
     locale: 'en_US',

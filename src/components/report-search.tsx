@@ -34,6 +34,8 @@ export function ReportSearch({
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
         <input 
           type="text" 
+          id="report-search-input"
+          aria-label={placeholder}
           placeholder={placeholder}
           className="w-full pl-10 pr-4 py-3 rounded-xl border border-border bg-card text-foreground focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
           defaultValue={currentQuery}
@@ -51,6 +53,8 @@ export function ReportSearch({
       <div className="relative md:w-64">
         <Filter className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
         <select
+          id="report-category-select"
+          aria-label="Filter reports by category"
           className="w-full pl-10 pr-8 py-3 rounded-xl border border-border bg-card text-foreground focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none"
           defaultValue={currentCategory}
           onChange={(e) => updateParams('category', e.target.value)}
