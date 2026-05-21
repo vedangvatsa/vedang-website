@@ -766,9 +766,11 @@
     "id": "ig-that-life-exists",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "The moment you realize what life looks like for people who know nothing about AI, politics, or the economy.\n\nIgnorance really is bliss sometimes.\n\nMeanwhile the rest of us are refreshing feeds at 2am.",
-    "image": "scripts/thread-assets/ig-reels/DX4HFPvT5mb.mp4"
+    "image": "scripts/thread-assets/ig-reels/DX4HFPvT5mb.mp4",
+    "postedAt": "2026-05-21T05:02:17.368Z",
+    "fbPostId": "987733507181291"
   },
   {
     "id": "ig-how-badly-do-you-want-it",
