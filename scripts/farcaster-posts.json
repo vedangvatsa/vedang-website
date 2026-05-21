@@ -135,8 +135,9 @@
     "image": "scripts/thread-assets/psych_toxic_positivity.png",
     "scheduleDate": "2026-03-29",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0xe46bc07f5c7f1443b6a5f5b02a8758030e0b6678",
+    "postedAt": "2026-05-21T12:36:19.776Z"
   },
   {
     "id": "psych-attribution",

@@ -776,9 +776,11 @@
     "id": "ig-how-badly-do-you-want-it",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "How badly do you want it?\n\nBecause talk is cheap.\n\nEveryone has goals.\n\nFew have discipline.\n\nStop making excuses. Start making progress.",
-    "image": "scripts/thread-assets/ig-reels/DXHJR6cjsqV.mp4"
+    "image": "scripts/thread-assets/ig-reels/DXHJR6cjsqV.mp4",
+    "postedAt": "2026-05-21T12:36:16.568Z",
+    "fbPostId": "26517479341267976"
   },
   {
     "id": "ig-ai-impressed",
