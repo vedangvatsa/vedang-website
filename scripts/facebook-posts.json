@@ -786,9 +786,11 @@
     "id": "ig-ai-impressed",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "Humans: spend 6 hours building something in AI.\n\nAI: \"Impressive. Keep going, human.\"\n\nWe are literally training our own replacements.\n\nAnd feeling proud about it.",
-    "image": "scripts/thread-assets/ig-reels/DXuNoVPE83k.mp4"
+    "image": "scripts/thread-assets/ig-reels/DXuNoVPE83k.mp4",
+    "postedAt": "2026-05-21T20:16:24.837Z",
+    "fbPostId": "1708763643463542"
   },
   {
     "id": "ig-ai-proud-moment",
