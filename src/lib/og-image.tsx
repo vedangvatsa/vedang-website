@@ -40,8 +40,8 @@ export function generateOgImage(title: string, subtitle?: string) {
           justifyContent: 'space-between',
           fontFamily: 'Inter',
           padding: '60px 70px',
-          background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)',
-          color: '#f8fafc',
+          background: '#ffffff',
+          color: '#111111',
           position: 'relative',
           overflow: 'hidden',
         }}
@@ -54,7 +54,7 @@ export function generateOgImage(title: string, subtitle?: string) {
           width: 500,
           height: 500,
           borderRadius: 250,
-          background: 'radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%)',
           display: 'flex',
         }} />
         <div style={{
@@ -64,7 +64,7 @@ export function generateOgImage(title: string, subtitle?: string) {
           width: 400,
           height: 400,
           borderRadius: 200,
-          background: 'radial-gradient(circle, rgba(168,85,247,0.12) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(168,85,247,0.06) 0%, transparent 70%)',
           display: 'flex',
         }} />
 
@@ -78,15 +78,15 @@ export function generateOgImage(title: string, subtitle?: string) {
                 height: 52,
                 borderRadius: 26,
                 overflow: 'hidden',
-                border: '2px solid rgba(255,255,255,0.15)',
+                border: '2px solid rgba(0,0,0,0.08)',
               }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={avatarBase64} width={52} height={52} style={{ objectFit: 'cover' }} alt="Vedang Vatsa avatar" />
               </div>
             ) : null}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-              <div style={{ fontSize: 18, fontWeight: 700, color: '#f1f5f9', display: 'flex' }}>Vedang Vatsa FRSA</div>
-              <div style={{ fontSize: 14, color: '#94a3b8', display: 'flex' }}>veda.ng</div>
+              <div style={{ fontSize: 18, fontWeight: 700, color: '#1e293b', display: 'flex' }}>Vedang Vatsa FRSA</div>
+              <div style={{ fontSize: 14, color: '#64748b', display: 'flex' }}>veda.ng</div>
             </div>
           </div>
           <div style={{
@@ -97,7 +97,7 @@ export function generateOgImage(title: string, subtitle?: string) {
             letterSpacing: '0.12em',
             textTransform: 'uppercase' as const,
             padding: '6px 16px',
-            border: '1px solid rgba(59,130,246,0.3)',
+            border: '1px solid rgba(59,130,246,0.25)',
             borderRadius: 20,
           }}>
             VEDA.NG
@@ -112,7 +112,7 @@ export function generateOgImage(title: string, subtitle?: string) {
               fontWeight: 700,
               lineHeight: 1.15,
               letterSpacing: '-0.03em',
-              color: '#f8fafc',
+              color: '#111111',
               display: 'flex',
             }}
           >
@@ -121,7 +121,7 @@ export function generateOgImage(title: string, subtitle?: string) {
           {subtitle && (
             <div style={{
               fontSize: 24,
-              color: '#94a3b8',
+              color: '#64748b',
               lineHeight: 1.4,
               display: 'flex',
             }}>

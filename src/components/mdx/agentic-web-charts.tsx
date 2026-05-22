@@ -12,14 +12,14 @@ export function WebEvolutionTimeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Four Phases of the Web</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Four Phases of the Web</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold">Each era introduced a new verb</p>
 
         <div className="relative">
           {/* Connecting line: top-7 = 28px, exactly half of w-14/h-14 (56px) circles */}
-          <div className="hidden md:block absolute top-7 left-[8%] right-[8%] h-px bg-[#e3e3e0] dark:bg-zinc-700" />
+          <div className="hidden md:block absolute top-7 left-[8%] right-[8%] h-px bg-[#e3e3e0]" />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 relative">
             {eras.map((e, i) => {
               const isLast = i === eras.length - 1;
@@ -29,12 +29,12 @@ export function WebEvolutionTimeline() {
                     className={`w-14 h-14 rounded-full flex items-center justify-center text-[10px] font-bold mb-3 relative z-10 border-2 ${
                       isLast
                         ? 'bg-primary border-primary text-white shadow-md shadow-primary/20'
-                        : 'bg-[#37352f] dark:bg-zinc-700 border-[#37352f] dark:border-zinc-600 text-white'
+                        : 'bg-[#37352f] border-[#37352f] text-white'
                     }`}
                   >
                     {e.verb}
                   </div>
-                  <div className="text-sm font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{e.label}</div>
+                  <div className="text-sm font-bold text-[#37352f]">{e.label}</div>
                   <div className="text-[10px] text-primary font-semibold mt-0.5">{e.era}</div>
                   <div className="text-[11px] text-muted-foreground mt-1.5 leading-tight max-w-[160px]">{e.desc}</div>
                   <div className="text-[10px] text-muted-foreground/60 mt-1.5 font-medium">{e.users} users</div>
@@ -58,16 +58,16 @@ export function MCPAdoptionChart() {
   const maxD = 100;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">MCP Adoption</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">MCP Adoption</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Monthly SDK downloads (millions)</p>
 
         <div className="space-y-2">
           {data.map((d) => (
             <div key={d.month} className="grid grid-cols-[90px_1fr_70px] gap-3 items-center">
               <span className="text-xs text-muted-foreground font-medium">{d.month}</span>
-              <div className="w-full h-4 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <div className="w-full h-4 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
                   style={{ width: `${(d.downloads / maxD) * 100}%`, backgroundColor: 'hsl(210 90% 40%)', opacity: 0.8 }}
@@ -104,16 +104,16 @@ export function TaskHorizonChart() {
   const max = 480;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">AI Agent Task Horizon</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">AI Agent Task Horizon</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Complexity of tasks agents can complete autonomously (50% success rate)</p>
 
         <div className="space-y-3">
           {data.map((d, i) => (
             <div key={d.year} className="flex items-center gap-3">
               <span className="text-xs w-14 text-right text-muted-foreground font-medium shrink-0">{d.year}</span>
-              <div className="flex-1 h-6 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <div className="flex-1 h-6 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
                   style={{
@@ -123,7 +123,7 @@ export function TaskHorizonChart() {
                   }}
                 />
               </div>
-              <span className={`text-xs font-bold w-12 ${i >= 6 ? 'text-primary' : 'text-[#37352f] dark:text-[rgba(255,255,255,0.81)]'}`}>{d.label}</span>
+              <span className={`text-xs font-bold w-12 ${i >= 6 ? 'text-primary' : 'text-[#37352f]'}`}>{d.label}</span>
             </div>
           ))}
         </div>
@@ -147,9 +147,9 @@ export function ProtocolStackDiagram() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Agentic Web Protocol Stack</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Agentic Web Protocol Stack</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold">Five layers from user intent to final settlement</p>
 
         <div className="flex flex-col gap-2">
@@ -157,7 +157,7 @@ export function ProtocolStackDiagram() {
             <div key={l.name} className={`rounded-[3px] border p-4 ${l.color}`}>
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
                 <div className="flex flex-col gap-0.5">
-                  <span className="text-sm font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{l.name}</span>
+                  <span className="text-sm font-bold text-[#37352f]">{l.name}</span>
                   <span className="text-[11px] text-muted-foreground">{l.desc}</span>
                 </div>
                 <span className="text-xs font-semibold text-primary shrink-0 md:text-right">{l.protocols}</span>
@@ -186,19 +186,19 @@ export function IndustryAdoptionChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">AI Agent Adoption by Industry</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">AI Agent Adoption by Industry</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">% of organizations with production agent deployments, Q1 2026</p>
 
         <div className="space-y-4">
           {industries.map((ind, i) => (
             <div key={ind.name}>
               <div className="flex justify-between mb-1">
-                <span className="text-sm font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{ind.name}</span>
-                <span className={`text-sm font-bold ${i === 0 ? 'text-primary' : 'text-[#37352f] dark:text-[rgba(255,255,255,0.81)]'}`}>{ind.pct}%</span>
+                <span className="text-sm font-medium text-[#37352f]">{ind.name}</span>
+                <span className={`text-sm font-bold ${i === 0 ? 'text-primary' : 'text-[#37352f]'}`}>{ind.pct}%</span>
               </div>
-              <div className="w-full h-6 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <div className="w-full h-6 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
                   style={{ width: `${ind.pct}%`, backgroundColor: i === 0 ? 'hsl(210 90% 40%)' : '#37352f', opacity: i === 0 ? 0.8 : 0.3 + (0.1 * (industries.length - i)) }}
@@ -228,19 +228,19 @@ export function AgentMarketChart() {
   const max = 75;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Market Size Projections</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Market Size Projections</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold">AI agents market estimates by research firm</p>
 
         <div className="space-y-5">
           {projections.filter(p => p.value > 0).map((p, i) => (
             <div key={`${p.firm}-${p.note}`}>
               <div className="flex justify-between mb-1">
-                <span className="text-sm font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{p.firm}</span>
-                <span className={`text-sm font-bold ${i === 0 ? 'text-primary' : 'text-[#37352f] dark:text-[rgba(255,255,255,0.81)]'}`}>{p.range}</span>
+                <span className="text-sm font-medium text-[#37352f]">{p.firm}</span>
+                <span className={`text-sm font-bold ${i === 0 ? 'text-primary' : 'text-[#37352f]'}`}>{p.range}</span>
               </div>
-              <div className="w-full h-7 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <div className="w-full h-7 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
                   style={{ width: `${(p.value / max) * 100}%`, backgroundColor: i === 0 ? 'hsl(210 90% 40%)' : '#37352f', opacity: i === 0 ? 0.8 : 0.5 }}
@@ -254,8 +254,8 @@ export function AgentMarketChart() {
           ))}
         </div>
 
-        <div className="mt-6 rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-[#f7f6f3] dark:bg-zinc-800/30 p-3">
-          <p className="text-xs font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Gartner: Agentic AI could drive 30% of enterprise software revenue by 2035</p>
+        <div className="mt-6 rounded-[3px] border border-[#e3e3e0] bg-[#f7f6f3] p-3">
+          <p className="text-xs font-medium text-[#37352f]">Gartner: Agentic AI could drive 30% of enterprise software revenue by 2035</p>
           <p className="text-[10px] text-muted-foreground mt-0.5">Best-case scenario projection. This would represent a fundamental restructuring of how enterprise software is built and sold.</p>
         </div>
 
@@ -279,35 +279,35 @@ export function SecurityThreatMatrix() {
   ];
 
   const severityColor: Record<string, string> = {
-    'Critical': 'text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950/30',
-    'High': 'text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950/30',
-    'Medium': 'text-yellow-700 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-950/30',
+    'Critical': 'text-red-600 bg-red-50',
+    'High': 'text-orange-600 bg-orange-50',
+    'Medium': 'text-yellow-700 bg-yellow-50',
   };
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Agent Security Threat Landscape</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Agent Security Threat Landscape</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Known attack vectors and documented incidents, 2025-2026</p>
 
         <div className="overflow-x-auto -mx-2">
           <table className="w-full text-xs border-collapse min-w-[600px]">
             <thead>
-              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Threat</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Severity</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Impact</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Real-world example</th>
+              <tr className="border-b-2 border-[#e3e3e0]">
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Threat</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Severity</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Impact</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Real-world example</th>
               </tr>
             </thead>
             <tbody>
               {threats.map((t) => (
-                <tr key={t.name} className="border-b border-[#e3e3e0]/60 dark:border-zinc-800/40">
-                  <td className="py-2.5 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{t.name}</td>
+                <tr key={t.name} className="border-b border-[#e3e3e0]/60">
+                  <td className="py-2.5 px-2 font-bold text-[#37352f]">{t.name}</td>
                   <td className="py-2.5 px-2">
                     <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${severityColor[t.severity]}`}>{t.severity}</span>
                   </td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">{t.impact}</td>
+                  <td className="py-2.5 px-2 text-[#37352f]/80">{t.impact}</td>
                   <td className="py-2.5 px-2 text-muted-foreground">{t.example}</td>
                 </tr>
               ))}
@@ -336,26 +336,26 @@ export function AgentVsChatbot() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Chatbot vs. Agent</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Chatbot vs. Agent</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">The distinction that changes what software can do for you</p>
 
         <div className="overflow-x-auto -mx-2">
           <table className="w-full text-xs border-collapse min-w-[500px]">
             <thead>
-              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider w-28">Dimension</th>
+              <tr className="border-b-2 border-[#e3e3e0]">
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider w-28">Dimension</th>
                 <th className="text-left py-2 px-2 font-bold text-muted-foreground uppercase tracking-wider">Chatbot</th>
                 <th className="text-left py-2 px-2 font-bold text-primary uppercase tracking-wider">Agent</th>
               </tr>
             </thead>
             <tbody>
               {rows.map((r) => (
-                <tr key={r.dimension} className="border-b border-[#e3e3e0]/60 dark:border-zinc-800/40">
-                  <td className="py-2.5 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{r.dimension}</td>
+                <tr key={r.dimension} className="border-b border-[#e3e3e0]/60">
+                  <td className="py-2.5 px-2 font-bold text-[#37352f]">{r.dimension}</td>
                   <td className="py-2.5 px-2 text-muted-foreground">{r.chatbot}</td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">{r.agent}</td>
+                  <td className="py-2.5 px-2 text-[#37352f]/80">{r.agent}</td>
                 </tr>
               ))}
             </tbody>
@@ -406,19 +406,19 @@ export function InfrastructureLandscape() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Infrastructure Landscape</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Infrastructure Landscape</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold">Key players building the Agentic Web</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {categories.map((cat) => (
-            <div key={cat.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-5">
+            <div key={cat.name} className="rounded-[3px] border border-[#e3e3e0] p-5">
               <div className="text-xs font-bold uppercase tracking-widest text-primary mb-3">{cat.name}</div>
               <div className="space-y-2">
                 {cat.players.map((p) => (
                   <div key={p.name} className="flex items-start gap-2">
-                    <span className="text-sm font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] shrink-0">{p.name}</span>
+                    <span className="text-sm font-bold text-[#37352f] shrink-0">{p.name}</span>
                     <span className="text-[11px] text-muted-foreground leading-tight">{p.detail}</span>
                   </div>
                 ))}

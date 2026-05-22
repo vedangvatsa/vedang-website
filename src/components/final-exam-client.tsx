@@ -199,9 +199,9 @@ export function FinalExamClient({ courseId, questions }: FinalExamClientProps) {
                       disabled={submitted}
                       className={`w-full text-left px-4 py-3 rounded-md border text-sm transition-all ${
                         showCorrect
-                          ? 'border-green-500/50 bg-green-500/10 text-green-600 dark:text-green-400'
+                          ? 'border-green-500/50 bg-green-500/10 text-green-600'
                           : showWrong
-                            ? 'border-red-500/50 bg-red-500/10 text-red-600 dark:text-red-400'
+                            ? 'border-red-500/50 bg-red-500/10 text-red-600'
                             : isSelected
                               ? 'border-primary bg-primary/5'
                               : 'border-muted hover:border-primary/50 hover:bg-muted/50'

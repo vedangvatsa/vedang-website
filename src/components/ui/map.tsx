@@ -20,67 +20,9 @@ import { X, Minus, Plus, Locate, Maximize, Loader2 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-const defaultStyles = {
-  dark: "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
-  light: "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
-};
+const defaultStyle = "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json";
 
-type Theme = "light" | "dark";
 
-// Check document class for theme (works with next-themes, etc.)
-function getDocumentTheme(): Theme | null {
-  if (typeof document === "undefined") return null;
-  if (document.documentElement.classList.contains("dark")) return "dark";
-  if (document.documentElement.classList.contains("light")) return "light";
-  return null;
-}
-
-// Get system preference
-function getSystemTheme(): Theme {
-  if (typeof window === "undefined") return "light";
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-}
-
-function useResolvedTheme(themeProp?: "light" | "dark"): Theme {
-  const [detectedTheme, setDetectedTheme] = useState<Theme>(
-    () => getDocumentTheme() ?? getSystemTheme(),
-  );
-
-  useEffect(() => {
-    if (themeProp) return; // Skip detection if theme is provided via prop
-
-    // Watch for document class changes (e.g., next-themes toggling dark class)
-    const observer = new MutationObserver(() => {
-      const docTheme = getDocumentTheme();
-      if (docTheme) {
-        setDetectedTheme(docTheme);
-      }
-    });
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    // Also watch for system preference changes
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleSystemChange = (e: MediaQueryListEvent) => {
-      // Only use system preference if no document class is set
-      if (!getDocumentTheme()) {
-        setDetectedTheme(e.matches ? "dark" : "light");
-      }
-    };
-    mediaQuery.addEventListener("change", handleSystemChange);
-
-    return () => {
-      observer.disconnect();
-      mediaQuery.removeEventListener("change", handleSystemChange);
-    };
-  }, [themeProp]);
-
-  return themeProp ?? detectedTheme;
-}
 
 type MapContextValue = {
   map: MapLibreGL.Map | null;
@@ -118,15 +60,9 @@ type MapProps = {
   /** Additional CSS classes for the map container */
   className?: string;
   /**
-   * Theme for the map. If not provided, automatically detects system preference.
-   * Pass your theme value here.
+   * Custom map style. Overrides the default Carto Positron style.
    */
-  theme?: Theme;
-  /** Custom map styles for light and dark themes. Overrides the default Carto styles. */
-  styles?: {
-    light?: MapStyleOption;
-    dark?: MapStyleOption;
-  };
+  style?: MapStyleOption;
   /** Map projection type. Use `{ type: "globe" }` for 3D globe view. */
   projection?: MapLibreGL.ProjectionSpecification;
   /**
@@ -170,8 +106,7 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
   {
     children,
     className,
-    theme: themeProp,
-    styles,
+    style: styleProp,
     projection,
     viewport,
     onViewportChange,
@@ -187,19 +122,16 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
   const currentStyleRef = useRef<MapStyleOption | null>(null);
   const styleTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const internalUpdateRef = useRef(false);
-  const resolvedTheme = useResolvedTheme(themeProp);
+
 
   const isControlled = viewport !== undefined && onViewportChange !== undefined;
 
   const onViewportChangeRef = useRef(onViewportChange);
   onViewportChangeRef.current = onViewportChange;
 
-  const mapStyles = useMemo(
-    () => ({
-      dark: styles?.dark ?? defaultStyles.dark,
-      light: styles?.light ?? defaultStyles.light,
-    }),
-    [styles],
+  const mapStyle = useMemo(
+    () => styleProp ?? defaultStyle,
+    [styleProp],
   );
 
   // Expose the map instance to the parent component
@@ -216,8 +148,7 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
   useEffect(() => {
     if (!containerRef.current) return;
 
-    const initialStyle =
-      resolvedTheme === "dark" ? mapStyles.dark : mapStyles.light;
+    const initialStyle = mapStyle;
     currentStyleRef.current = initialStyle;
 
     const map = new MapLibreGL.Map({
@@ -299,19 +230,16 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
 
   // Handle style change
   useEffect(() => {
-    if (!mapInstance || !resolvedTheme) return;
+    if (!mapInstance) return;
 
-    const newStyle =
-      resolvedTheme === "dark" ? mapStyles.dark : mapStyles.light;
-
-    if (currentStyleRef.current === newStyle) return;
+    if (currentStyleRef.current === mapStyle) return;
 
     clearStyleTimeout();
-    currentStyleRef.current = newStyle;
+    currentStyleRef.current = mapStyle;
     setIsStyleLoaded(false);
 
-    mapInstance.setStyle(newStyle, { diff: true });
-  }, [mapInstance, resolvedTheme, mapStyles, clearStyleTimeout]);
+    mapInstance.setStyle(mapStyle, { diff: true });
+  }, [mapInstance, mapStyle, clearStyleTimeout]);
 
   const contextValue = useMemo(
     () => ({
@@ -765,7 +693,7 @@ function ControlButton({
       className={cn(
         "flex size-8 items-center justify-center transition-all",
         "first:rounded-t-md last:rounded-b-md",
-        "hover:bg-accent dark:hover:bg-accent/40",
+        "hover:bg-accent",
         "focus-visible:ring-ring focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-inset",
         "disabled:pointer-events-none disabled:opacity-50",
       )}
@@ -1628,7 +1556,7 @@ function MapClusterLayer<
       filter: ["has", "point_count"],
       layout: {
         "text-field": "{point_count_abbreviated}",
-        "text-font": ["Open Sans"],
+        "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
         "text-size": 12,
       },
       paint: {

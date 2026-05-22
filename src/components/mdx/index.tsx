@@ -158,12 +158,12 @@ export function EcosystemDiagram() {
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-between p-5 rounded-xl border border-blue-500/30 bg-blue-500/5">
-            <div className="font-bold text-lg md:text-base md:w-1/3 text-blue-500 dark:text-blue-400 tracking-tight">2. COMMERCE PROTOCOLS</div>
+            <div className="font-bold text-lg md:text-base md:w-1/3 text-blue-500 tracking-tight">2. COMMERCE PROTOCOLS</div>
             <div className="md:w-2/3 text-sm text-foreground/90 md:text-right mt-2 md:mt-0 font-medium">UCP • ACP • MCP • A2A • x402 V2 • MPP (Stripe)</div>
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-between p-5 rounded-xl border border-emerald-500/30 bg-emerald-500/5">
-            <div className="font-bold text-lg md:text-base md:w-1/3 text-emerald-600 dark:text-emerald-400 tracking-tight">3. PAYMENT RAILS</div>
+            <div className="font-bold text-lg md:text-base md:w-1/3 text-emerald-600 tracking-tight">3. PAYMENT RAILS</div>
             <div className="md:w-2/3 text-sm text-foreground/90 md:text-right mt-2 md:mt-0 flex flex-col items-center md:items-end gap-1 font-medium">
               <span><span className="opacity-70">Traditional:</span> Visa, Mastercard, PayPal</span>
               <span><span className="opacity-70">Crypto-Native:</span> Coinbase, Tempo, Solana</span>
@@ -171,7 +171,7 @@ export function EcosystemDiagram() {
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-between p-5 rounded-xl border border-orange-500/30 bg-orange-500/5">
-            <div className="font-bold text-lg md:text-base md:w-1/3 text-orange-600 dark:text-orange-400 tracking-tight">4. RETAIL PLATFORMS</div>
+            <div className="font-bold text-lg md:text-base md:w-1/3 text-orange-600 tracking-tight">4. RETAIL PLATFORMS</div>
             <div className="md:w-2/3 text-sm text-foreground/90 md:text-right mt-2 md:mt-0 font-medium">Shopify • Commercetools • Walmart • Target</div>
           </div>
 

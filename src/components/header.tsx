@@ -2,7 +2,6 @@
 'use client';
 
 import Link from 'next/link';
-import { ThemeToggle } from '@/components/theme-toggle';
 import * as React from 'react';
 import {
   DropdownMenu,
@@ -119,8 +118,6 @@ export function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
           </nav>
-
-          <ThemeToggle />
 
           {/* Mobile hamburger */}
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>

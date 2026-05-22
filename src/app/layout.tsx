@@ -2,7 +2,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '@/app/globals.css';
-import { ThemeProvider } from '@/components/theme-provider';
+
 import { Toaster } from '@/components/ui/toaster';
 import Script from 'next/script';
 
@@ -128,10 +128,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`antialiased ${inter.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`antialiased ${inter.variable}`}>
       <head>
-        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#ffffff" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <Script
@@ -170,10 +169,8 @@ export default function RootLayout({
         <link rel="alternate" type="text/plain" href="/ai.txt" title="AI permissions" />
       </head>
       <body className="font-sans">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
           <Toaster />
-        </ThemeProvider>
       </body>
     </html>
   );

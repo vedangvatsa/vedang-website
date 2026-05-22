@@ -71,10 +71,10 @@ const AI_CRAWLERS = [
 const CATEGORIES = [...new Set(DISCOVERY_FILES.map(f => f.category))];
 
 const STATUS_STYLES: Record<string, string> = {
-  Standard: 'text-emerald-700 dark:text-emerald-400',
-  Adopted: 'text-blue-700 dark:text-blue-400',
-  Emerging: 'text-amber-700 dark:text-amber-400',
-  Proposed: 'text-purple-700 dark:text-purple-400',
+  Standard: 'text-emerald-700',
+  Adopted: 'text-blue-700',
+  Emerging: 'text-amber-700',
+  Proposed: 'text-purple-700',
 };
 
 function Src({ href, children }: { href: string; children?: React.ReactNode }) {
@@ -112,7 +112,7 @@ export default function AiDiscoveryStandardsPage() {
       <div className="space-y-24">
 
         {/* ── The Problem ── */}
-        <section className="prose dark:prose-invert max-w-none">
+        <section className="prose max-w-none">
           <h2 className="text-2xl font-semibold tracking-tight !mb-4">The Visibility Problem</h2>
           <p className="text-muted-foreground leading-relaxed">
             Search changed. In 2025, nearly 60% of queries ended without a click. The user got their answer
@@ -148,7 +148,7 @@ export default function AiDiscoveryStandardsPage() {
             </div>
           </div>
 
-          <div className="mt-8 prose dark:prose-invert max-w-none">
+          <div className="mt-8 prose max-w-none">
             <p className="text-muted-foreground leading-relaxed">
               The blocking numbers reveal a market that hasn&apos;t settled on a strategy. Most publishers are
               reacting to AI crawlers the same way they reacted to early search engines in the 2000s: with blanket
@@ -168,7 +168,7 @@ export default function AiDiscoveryStandardsPage() {
         </section>
 
         {/* ── The Training vs Retrieval Split ── */}
-        <section className="prose dark:prose-invert max-w-none">
+        <section className="prose max-w-none">
           <h2 className="text-2xl font-semibold tracking-tight !mb-4">The Training vs. Retrieval Split</h2>
           <p className="text-muted-foreground leading-relaxed">
             The most important distinction in AI discoverability is between <strong className="text-foreground">training crawlers</strong> and{' '}
@@ -303,7 +303,7 @@ export default function AiDiscoveryStandardsPage() {
         </section>
 
         {/* ── Content Strategy ── */}
-        <section className="prose dark:prose-invert max-w-none">
+        <section className="prose max-w-none">
           <h2 className="text-2xl font-semibold tracking-tight !mb-4">Content That Gets Cited</h2>
           <p className="text-muted-foreground leading-relaxed">
             AI systems don&apos;t rank content. They extract it. The difference matters. A page that ranks #1 on Google

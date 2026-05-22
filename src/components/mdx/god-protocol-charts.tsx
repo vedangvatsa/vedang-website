@@ -13,33 +13,33 @@ export function GodProtocolComparison() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Approximating the God Protocol</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Approximating the God Protocol</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How closely each system approaches Szabo&apos;s ideal TTP</p>
 
         <div className="space-y-4">
           {properties.map((p) => (
             <div key={p.property}>
-              <div className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] mb-1.5">{p.property}</div>
+              <div className="text-[11px] font-bold text-[#37352f] mb-1.5">{p.property}</div>
               <div className="space-y-1">
                 <div className="grid grid-cols-[90px_1fr_30px] gap-2 items-center">
                   <span className="text-[9px] uppercase tracking-wider font-semibold" style={{ color: 'hsl(280 60% 45%)' }}>Ideal</span>
-                  <div className="w-full h-3 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+                  <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden">
                     <div className="h-full rounded-md" style={{ width: `${p.godPct}%`, backgroundColor: 'hsl(280 60% 45%)', opacity: 0.4 }} />
                   </div>
                   <span className="text-[9px] text-muted-foreground text-right">{p.godPct}%</span>
                 </div>
                 <div className="grid grid-cols-[90px_1fr_30px] gap-2 items-center">
                   <span className="text-[9px] uppercase tracking-wider font-semibold" style={{ color: 'hsl(210 90% 40%)' }}>Crypto</span>
-                  <div className="w-full h-3 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+                  <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden">
                     <div className="h-full rounded-md" style={{ width: `${p.cryptoPct}%`, backgroundColor: 'hsl(210 90% 40%)', opacity: 0.5 }} />
                   </div>
                   <span className="text-[9px] text-muted-foreground text-right">{p.cryptoPct}%</span>
                 </div>
                 <div className="grid grid-cols-[90px_1fr_30px] gap-2 items-center">
                   <span className="text-[9px] uppercase tracking-wider font-semibold" style={{ color: 'hsl(0 0% 55%)' }}>Traditional</span>
-                  <div className="w-full h-3 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+                  <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden">
                     <div className="h-full rounded-md" style={{ width: `${p.tradPct}%`, backgroundColor: 'hsl(0 0% 55%)', opacity: 0.4 }} />
                   </div>
                   <span className="text-[9px] text-muted-foreground text-right">{p.tradPct}%</span>
@@ -71,21 +71,21 @@ export function TTPEvolutionTimeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Path Toward the God Protocol</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Path Toward the God Protocol</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">28 years of building trustless infrastructure</p>
 
         <div className="relative">
-          <div className="absolute left-[52px] top-0 bottom-0 w-px bg-[#e3e3e0] dark:bg-zinc-800" />
+          <div className="absolute left-[52px] top-0 bottom-0 w-px bg-[#e3e3e0]" />
           <div className="space-y-3">
             {milestones.map((m) => (
               <div key={m.year} className="grid grid-cols-[42px_20px_1fr] gap-2 items-start">
                 <span className="text-[11px] font-black text-right" style={{ color: m.color }}>{m.year}</span>
                 <div className="flex items-center justify-center pt-0.5">
-                  <div className="w-2.5 h-2.5 rounded-full border-2 bg-white dark:bg-zinc-900" style={{ borderColor: m.color }} />
+                  <div className="w-2.5 h-2.5 rounded-full border-2 bg-white" style={{ borderColor: m.color }} />
                 </div>
-                <span className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{m.event}</span>
+                <span className="text-[11px] text-[#37352f]">{m.event}</span>
               </div>
             ))}
           </div>
@@ -110,9 +110,9 @@ export function PrivacyTechStack() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Privacy Technology Stack</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Privacy Technology Stack</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Closing the confidentiality gap in the God Protocol</p>
 
         <div className="space-y-3">
@@ -120,12 +120,12 @@ export function PrivacyTechStack() {
             <div key={t.abbr}>
               <div className="flex items-baseline justify-between mb-1">
                 <div>
-                  <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{t.name}</span>
+                  <span className="text-[11px] font-bold text-[#37352f]">{t.name}</span>
                   <span className="text-[9px] ml-1.5 px-1.5 py-0.5 rounded-full font-bold" style={{ backgroundColor: t.color + '15', color: t.color }}>{t.abbr}</span>
                 </div>
                 <span className="text-[10px] font-bold" style={{ color: t.color }}>{t.maturity}%</span>
               </div>
-              <div className="w-full h-3.5 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden mb-1">
+              <div className="w-full h-3.5 bg-[#f7f6f3] rounded-md overflow-hidden mb-1">
                 <div className="h-full rounded-md" style={{ width: `${t.maturity}%`, backgroundColor: t.color, opacity: 0.5 }} />
               </div>
               <div className="flex justify-between">
@@ -158,16 +158,16 @@ export function TTPMarketScale() {
   const maxLog = Math.log10(28);
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Trusted Third Party Market</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Trusted Third Party Market</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Traditional intermediaries vs. cryptographic replacements (log scale)</p>
 
         <div className="space-y-2">
           {markets.map((m) => (
             <div key={m.name} className="grid grid-cols-[140px_1fr_65px] gap-2 items-center">
-              <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{m.name}</span>
-              <div className="w-full h-5 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <span className="text-[11px] font-bold text-[#37352f]">{m.name}</span>
+              <div className="w-full h-5 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div className="h-full rounded-md" style={{
                   width: `${Math.max((Math.log10(m.value * 1000) / Math.log10(28000)) * 100, 8)}%`,
                   backgroundColor: m.color,
@@ -181,7 +181,7 @@ export function TTPMarketScale() {
           ))}
         </div>
 
-        <div className="flex items-center gap-4 mt-4 pt-3 border-t border-[#e3e3e0] dark:border-zinc-800">
+        <div className="flex items-center gap-4 mt-4 pt-3 border-t border-[#e3e3e0]">
           <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(0 0% 55%)' }} /><span className="text-[10px] text-muted-foreground">Traditional TTP</span></div>
           <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(210 90% 40%)' }} /><span className="text-[10px] text-muted-foreground">Cryptographic TTP</span></div>
         </div>
@@ -205,21 +205,21 @@ export function DistributedArchitectureChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Distributed God Protocol Architecture</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Distributed God Protocol Architecture</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">No single entity possesses all properties. The network does.</p>
 
         <div className="space-y-3">
           {layers.map((l) => (
-            <div key={l.layer} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3" style={{ borderLeftWidth: '3px', borderLeftColor: l.color }}>
+            <div key={l.layer} className="rounded-[3px] border border-[#e3e3e0] p-3" style={{ borderLeftWidth: '3px', borderLeftColor: l.color }}>
               <div className="flex items-baseline justify-between mb-1.5">
-                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{l.layer}</span>
+                <span className="text-[11px] font-bold text-[#37352f]">{l.layer}</span>
                 <span className="text-[9px] px-2 py-0.5 rounded-full font-bold" style={{ backgroundColor: l.color + '15', color: l.color }}>{l.status}</span>
               </div>
               <div className="flex flex-wrap gap-1.5">
                 {l.components.map((c) => (
-                  <span key={c} className="text-[9px] px-2 py-0.5 rounded-full bg-[#f7f6f3] dark:bg-zinc-800/40 text-muted-foreground font-medium">{c}</span>
+                  <span key={c} className="text-[9px] px-2 py-0.5 rounded-full bg-[#f7f6f3] text-muted-foreground font-medium">{c}</span>
                 ))}
               </div>
             </div>
@@ -245,9 +245,9 @@ export function AlignmentFrameworkChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Alignment Problem as Ethics Selection</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Alignment Problem as Ethics Selection</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Each framework produces a different &quot;God&quot;</p>
 
         <div className="overflow-x-auto">
@@ -259,7 +259,7 @@ export function AlignmentFrameworkChart() {
               <span className="text-[10px] font-bold uppercase text-muted-foreground text-center">Risk</span>
             </div>
             {frameworks.map((f) => (
-              <div key={f.name} className="grid grid-cols-[100px_1fr_1fr_1fr] gap-2 border-t border-[#e3e3e0] dark:border-zinc-800 py-2 items-center">
+              <div key={f.name} className="grid grid-cols-[100px_1fr_1fr_1fr] gap-2 border-t border-[#e3e3e0] py-2 items-center">
                 <span className="text-[11px] font-bold" style={{ color: f.color }}>{f.name}</span>
                 <span className="text-[10px] text-muted-foreground text-center">{f.principle}</span>
                 <span className="text-[10px] text-center px-2 py-1 rounded-md" style={{ backgroundColor: f.color + '08' }}>{f.godProtocol}</span>

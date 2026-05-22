@@ -14,21 +14,21 @@ export function DataSourceDisruption() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Data Access Crisis</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Data Access Crisis</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Platform API access for academic researchers (2025)</p>
 
         <div className="space-y-2">
           {sources.map((s) => (
-            <div key={s.platform} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3" style={{ borderLeftWidth: '3px', borderLeftColor: s.color }}>
+            <div key={s.platform} className="rounded-[3px] border border-[#e3e3e0] p-3" style={{ borderLeftWidth: '3px', borderLeftColor: s.color }}>
               <div className="flex items-baseline justify-between mb-1">
-                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{s.platform}</span>
+                <span className="text-[11px] font-bold text-[#37352f]">{s.platform}</span>
                 <span className="text-[9px] px-2 py-0.5 rounded-full font-bold" style={{ backgroundColor: s.color + '15', color: s.color }}>{s.status}</span>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-1 text-[9px]">
-                <div><span className="text-muted-foreground">Cost:</span> <span className="font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{s.cost}</span></div>
-                <div><span className="text-muted-foreground">Papers built on:</span> <span className="font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{s.papers}</span></div>
+                <div><span className="text-muted-foreground">Cost:</span> <span className="font-medium text-[#37352f]">{s.cost}</span></div>
+                <div><span className="text-muted-foreground">Papers built on:</span> <span className="font-medium text-[#37352f]">{s.papers}</span></div>
                 <div><span className="text-muted-foreground">Impact:</span> <span className="font-medium" style={{ color: s.color }}>{s.impact}</span></div>
               </div>
             </div>
@@ -55,9 +55,9 @@ export function MethodologicalEvolution() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Methodological Evolution</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Methodological Evolution</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How CSS adapted after the API shutdown</p>
 
         <div className="space-y-3">
@@ -65,17 +65,17 @@ export function MethodologicalEvolution() {
             <div key={m.name}>
               <div className="flex items-baseline justify-between mb-1">
                 <div>
-                  <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{m.name}</span>
-                  {m.declining && <span className="text-[8px] ml-1.5 px-1.5 py-0.5 rounded-full font-bold bg-red-50 text-red-500 dark:bg-red-900/20">declining</span>}
+                  <span className="text-[11px] font-bold text-[#37352f]">{m.name}</span>
+                  {m.declining && <span className="text-[8px] ml-1.5 px-1.5 py-0.5 rounded-full font-bold bg-red-50 text-red-500">declining</span>}
                 </div>
                 <span className="text-[9px] text-muted-foreground">{m.era}</span>
               </div>
-              <div className="w-full h-2.5 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden mb-1">
+              <div className="w-full h-2.5 bg-[#f7f6f3] rounded-md overflow-hidden mb-1">
                 <div className="h-full rounded-md" style={{ width: `${m.maturity}%`, backgroundColor: m.color, opacity: 0.5 }} />
               </div>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-1 text-[9px]">
-                <div><span className="text-muted-foreground">Scale:</span> <span className="text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{m.scale}</span></div>
-                <div><span className="text-muted-foreground">Privacy:</span> <span className="text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{m.privacy}</span></div>
+                <div><span className="text-muted-foreground">Scale:</span> <span className="text-[#37352f]">{m.scale}</span></div>
+                <div><span className="text-muted-foreground">Privacy:</span> <span className="text-[#37352f]">{m.privacy}</span></div>
                 <div><span className="text-muted-foreground">Limitation:</span> <span className="text-muted-foreground">{m.limitation}</span></div>
               </div>
             </div>
@@ -97,19 +97,19 @@ export function PolarizationFindings() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">What the Research Actually Shows</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">What the Research Actually Shows</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Landmark CSS studies on algorithmic polarization</p>
 
         <div className="space-y-2.5">
           {findings.map((f) => (
-            <div key={f.study} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3" style={{ borderLeftWidth: '3px', borderLeftColor: f.color }}>
+            <div key={f.study} className="rounded-[3px] border border-[#e3e3e0] p-3" style={{ borderLeftWidth: '3px', borderLeftColor: f.color }}>
               <div className="flex items-baseline justify-between mb-1">
-                <span className="text-[10px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{f.study}</span>
+                <span className="text-[10px] font-bold text-[#37352f]">{f.study}</span>
                 <span className="text-[9px] px-2 py-0.5 rounded-full font-bold" style={{ backgroundColor: f.color + '12', color: f.color }}>n={f.n}</span>
               </div>
-              <p className="text-[10px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)] mb-0.5">{f.finding}</p>
+              <p className="text-[10px] text-[#37352f] mb-0.5">{f.finding}</p>
               <p className="text-[9px] text-muted-foreground italic">{f.implication}</p>
             </div>
           ))}
@@ -133,9 +133,9 @@ export function ObserverEffectChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Observer Effect at Platform Scale</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Observer Effect at Platform Scale</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How platform design distorts the behavior it measures</p>
 
         <div className="overflow-x-auto">
@@ -147,10 +147,10 @@ export function ObserverEffectChart() {
               <span className="text-[10px] font-bold uppercase text-muted-foreground">Population Bias</span>
             </div>
             {biases.map((b) => (
-              <div key={b.platform} className="grid grid-cols-[90px_1fr_1fr_1fr] gap-2 border-t border-[#e3e3e0] dark:border-zinc-800 py-2">
+              <div key={b.platform} className="grid grid-cols-[90px_1fr_1fr_1fr] gap-2 border-t border-[#e3e3e0] py-2">
                 <span className="text-[11px] font-bold" style={{ color: b.color }}>{b.platform}</span>
-                <span className="text-[10px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{b.designBias}</span>
-                <span className="text-[10px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{b.algorithmicBias}</span>
+                <span className="text-[10px] text-[#37352f]">{b.designBias}</span>
+                <span className="text-[10px] text-[#37352f]">{b.algorithmicBias}</span>
                 <span className="text-[10px] text-muted-foreground">{b.populationBias}</span>
               </div>
             ))}

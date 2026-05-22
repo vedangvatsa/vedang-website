@@ -223,14 +223,14 @@ export default function ProjectPage() {
           </div>
           <div className={`transition-all duration-300 overflow-y-auto ${viewMode === 'graph' ? 'hidden' : viewMode === 'report' ? 'w-full' : 'w-1/2'}`}>
             <div className="p-4 sm:p-6 space-y-6">
-              <div className="prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: reportHtml }} />
+              <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: reportHtml }} />
               <div className="border-t border-border pt-6">
                 <h3 className="font-medium mb-3">Ask about the simulation</h3>
                 <div ref={chatRef} className="space-y-3 max-h-60 sm:max-h-80 overflow-y-auto mb-3">
                   {messages.map((m, i) => (
                     <div key={i} className={`text-sm ${m.role === 'user' ? 'text-right' : ''}`}>
                       {m.role === 'assistant' ? (
-                        <div className="prose dark:prose-invert prose-sm max-w-none" dangerouslySetInnerHTML={{ __html: marked(m.content) as string }} />
+                        <div className="prose prose-sm max-w-none" dangerouslySetInnerHTML={{ __html: marked(m.content) as string }} />
                       ) : (
                         <span className="inline-block rounded-lg bg-primary text-primary-foreground px-3 py-1.5">{m.content}</span>
                       )}

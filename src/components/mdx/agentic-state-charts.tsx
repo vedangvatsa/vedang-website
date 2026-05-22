@@ -16,22 +16,22 @@ export function DigitalGovMaturity() {
   const max = 100;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Digital Government Maturity Index</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Digital Government Maturity Index</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Service digitization rate and AI readiness, 2026</p>
 
         <div className="space-y-1.5">
           {countries.map((c) => (
             <div key={c.name} className="grid grid-cols-[90px_1fr_75px] gap-2 items-center">
               <span className={`text-xs truncate ${c.highlight ? 'text-primary font-bold' : 'text-muted-foreground font-medium'}`}>{c.name}</span>
-              <div className="w-full h-3.5 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <div className="w-full h-3.5 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
                   style={{ width: `${(c.digital / max) * 100}%`, backgroundColor: c.highlight ? 'hsl(210 90% 40%)' : '#37352f', opacity: c.highlight ? 0.8 : 0.25 + (c.digital / max) * 0.4 }}
                 />
               </div>
-              <span className={`text-[10px] font-bold text-right ${c.highlight ? 'text-primary' : 'text-[#37352f] dark:text-[rgba(255,255,255,0.81)]'}`}>{c.digital}%</span>
+              <span className={`text-[10px] font-bold text-right ${c.highlight ? 'text-primary' : 'text-[#37352f]'}`}>{c.digital}%</span>
             </div>
           ))}
         </div>
@@ -56,32 +56,32 @@ export function EResidencyImpact() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Estonia e-Residency Growth</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Estonia e-Residency Growth</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Annual company formations, state revenue, and new e-residents, 2020-2025</p>
 
         <div className="overflow-x-auto -mx-2">
           <table className="w-full text-xs border-collapse min-w-[500px]">
             <thead>
-              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Year</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">New Companies</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">State Revenue (€M)</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">New e-Residents</th>
+              <tr className="border-b-2 border-[#e3e3e0]">
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Year</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">New Companies</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">State Revenue (€M)</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">New e-Residents</th>
               </tr>
             </thead>
             <tbody>
               {data.map((d, i) => (
-                <tr key={d.year} className={`border-b border-[#e3e3e0]/60 dark:border-zinc-800/40 ${i === data.length - 1 ? 'font-bold' : ''}`}>
-                  <td className="py-2.5 px-2 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{d.year}</td>
-                  <td className="py-2.5 px-2 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{d.companies.toLocaleString()}</td>
+                <tr key={d.year} className={`border-b border-[#e3e3e0]/60 ${i === data.length - 1 ? 'font-bold' : ''}`}>
+                  <td className="py-2.5 px-2 text-[#37352f]">{d.year}</td>
+                  <td className="py-2.5 px-2 text-[#37352f]">{d.companies.toLocaleString()}</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${i === data.length - 1 ? 'bg-green-50 dark:bg-green-950/30 text-green-600 dark:text-green-400' : 'text-[#37352f] dark:text-[rgba(255,255,255,0.81)]'}`}>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${i === data.length - 1 ? 'bg-green-50 text-green-600' : 'text-[#37352f]'}`}>
                       €{d.revenue}M
                     </span>
                   </td>
-                  <td className="py-2.5 px-2 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{d.residents.toLocaleString()}</td>
+                  <td className="py-2.5 px-2 text-[#37352f]">{d.residents.toLocaleString()}</td>
                 </tr>
               ))}
             </tbody>
@@ -99,28 +99,28 @@ export function EResidencyImpact() {
 /* ─── Agentic State Architecture ─── */
 export function AgenticStateArchitecture() {
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Agentic State Architecture</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Agentic State Architecture</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How AI transforms digital government from reactive services to proactive agents</p>
 
         <div className="flex flex-col gap-2">
           <div className="rounded border border-primary bg-primary/10 p-3 text-center font-bold text-primary text-sm">
             Citizen Intent (Natural Language / Life Event Trigger)
           </div>
-          <div className="mx-auto h-4 border-l-2 border-dashed border-[#e3e3e0] dark:border-zinc-700"></div>
-          <div className="rounded border border-[#e3e3e0] dark:border-zinc-700 bg-[#f7f6f3] dark:bg-zinc-800/40 p-3 text-center text-xs font-semibold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">
+          <div className="mx-auto h-4 border-l-2 border-dashed border-[#e3e3e0]"></div>
+          <div className="rounded border border-[#e3e3e0] bg-[#f7f6f3] p-3 text-center text-xs font-semibold text-[#37352f]">
             Government AI Agent Layer (LLM + Interoperability Backbone)
           </div>
-          <div className="mx-auto h-4 border-l-2 border-dashed border-[#e3e3e0] dark:border-zinc-700"></div>
+          <div className="mx-auto h-4 border-l-2 border-dashed border-[#e3e3e0]"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            <div className="rounded border border-[#e3e3e0] dark:border-zinc-700 p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Population Registry<br/><span className="text-primary">X-Road / SingPass</span></div>
-            <div className="rounded border border-[#e3e3e0] dark:border-zinc-700 p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Tax Authority<br/><span className="text-primary">Auto-assessment</span></div>
-            <div className="rounded border border-[#e3e3e0] dark:border-zinc-700 p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Health Insurance<br/><span className="text-primary">Auto-enrollment</span></div>
-            <div className="rounded border border-[#e3e3e0] dark:border-zinc-700 p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Business Registry<br/><span className="text-primary">Instant formation</span></div>
+            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Population Registry<br/><span className="text-primary">X-Road / SingPass</span></div>
+            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Tax Authority<br/><span className="text-primary">Auto-assessment</span></div>
+            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Health Insurance<br/><span className="text-primary">Auto-enrollment</span></div>
+            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Business Registry<br/><span className="text-primary">Instant formation</span></div>
           </div>
-          <div className="mx-auto h-4 border-l-2 border-dashed border-[#e3e3e0] dark:border-zinc-700"></div>
-          <div className="rounded border border-[#e3e3e0] dark:border-zinc-700 bg-[#f7f6f3] dark:bg-zinc-800/40 p-3 text-center text-[10px] font-semibold text-muted-foreground">
+          <div className="mx-auto h-4 border-l-2 border-dashed border-[#e3e3e0]"></div>
+          <div className="rounded border border-[#e3e3e0] bg-[#f7f6f3] p-3 text-center text-[10px] font-semibold text-muted-foreground">
             Cryptographic Identity Layer (Digital ID + Verifiable Credentials)
           </div>
         </div>

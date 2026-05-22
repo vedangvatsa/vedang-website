@@ -49,7 +49,7 @@ export function ToolboxExplainer() {
         {/* Row 2: Visual Builders */}
         <div className="bg-purple-500/5 p-5 rounded-xl border border-purple-500/20">
           <div className="flex items-center gap-3 mb-3">
-            <div className="bg-purple-500/10 p-2 rounded-lg text-purple-600 dark:text-purple-400">
+            <div className="bg-purple-500/10 p-2 rounded-lg text-purple-600">
               <Paintbrush className="w-5 h-5" />
             </div>
             <h4 className="font-semibold">Visual Builders</h4>
@@ -57,7 +57,7 @@ export function ToolboxExplainer() {
           <p className="text-sm text-muted-foreground mb-3">
             Build visual web apps like dashboards or landing pages instantly. Chat with AI to design UI, generate React code, and connect databases.
           </p>
-          <p className="text-xs font-medium text-purple-700 dark:text-purple-400">
+          <p className="text-xs font-medium text-purple-700">
             Top Pick: Lovable.dev, v0 by Vercel
           </p>
         </div>
@@ -65,14 +65,14 @@ export function ToolboxExplainer() {
         {/* Row 3: Autonomous Agents */}
         <div className="bg-blue-500/5 p-5 rounded-xl border border-blue-500/20">
           <div className="flex items-center gap-3 mb-4">
-            <div className="bg-blue-500/10 p-2 rounded-lg text-blue-600 dark:text-blue-400">
+            <div className="bg-blue-500/10 p-2 rounded-lg text-blue-600">
               <Server className="w-5 h-5" />
             </div>
             <h4 className="font-semibold">Autonomous Agents and Production Tools</h4>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="bg-background p-4 rounded-lg shadow-sm border border-border">
-              <div className="flex items-center gap-2 mb-2 text-blue-600 dark:text-blue-400 font-medium text-sm">
+              <div className="flex items-center gap-2 mb-2 text-blue-600 font-medium text-sm">
                 <Terminal className="w-4 h-4" />
                 Antigravity
               </div>
@@ -81,7 +81,7 @@ export function ToolboxExplainer() {
               </p>
             </div>
             <div className="bg-background p-4 rounded-lg shadow-sm border border-border">
-              <div className="flex items-center gap-2 mb-2 text-blue-600 dark:text-blue-400 font-medium text-sm">
+              <div className="flex items-center gap-2 mb-2 text-blue-600 font-medium text-sm">
                 <Terminal className="w-4 h-4" />
                 Claude Code
               </div>
@@ -90,7 +90,7 @@ export function ToolboxExplainer() {
               </p>
             </div>
             <div className="bg-background p-4 rounded-lg shadow-sm border border-border">
-              <div className="flex items-center gap-2 mb-2 text-blue-600 dark:text-blue-400 font-medium text-sm">
+              <div className="flex items-center gap-2 mb-2 text-blue-600 font-medium text-sm">
                 <Code2 className="w-4 h-4" />
                 Replit
               </div>

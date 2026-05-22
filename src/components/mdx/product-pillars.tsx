@@ -7,7 +7,7 @@ const pillars = [
     icon: Shield,
     title: 'Security',
     subtitle: 'The Rule File',
-    color: 'text-red-600 dark:text-red-400',
+    color: 'text-red-600',
     bg: 'bg-red-500/5 border-red-500/20',
     iconBg: 'bg-red-500/10',
     items: [
@@ -20,7 +20,7 @@ const pillars = [
     icon: DollarSign,
     title: 'Monetization',
     subtitle: 'From Project to Profit',
-    color: 'text-emerald-600 dark:text-emerald-400',
+    color: 'text-emerald-600',
     bg: 'bg-emerald-500/5 border-emerald-500/20',
     iconBg: 'bg-emerald-500/10',
     items: [
@@ -33,7 +33,7 @@ const pillars = [
     icon: Briefcase,
     title: 'Career',
     subtitle: 'The Product Engineer',
-    color: 'text-violet-600 dark:text-violet-400',
+    color: 'text-violet-600',
     bg: 'bg-violet-500/5 border-violet-500/20',
     iconBg: 'bg-violet-500/10',
     items: [

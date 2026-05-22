@@ -13,18 +13,18 @@ export function MonasteryPrincipleChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Monastery Principle Applied to Knowledge Work</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Monastery Principle Applied to Knowledge Work</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">6th-century cognitive science, rediscovered</p>
 
         <div className="space-y-2">
           {mappings.map((m) => (
-            <div key={m.monastic} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3" style={{ borderLeftWidth: '3px', borderLeftColor: m.color }}>
+            <div key={m.monastic} className="rounded-[3px] border border-[#e3e3e0] p-3" style={{ borderLeftWidth: '3px', borderLeftColor: m.color }}>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
                 <div>
                   <span className="text-[9px] uppercase tracking-wider text-muted-foreground font-semibold block mb-0.5">Monastic Practice</span>
-                  <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{m.monastic}</span>
+                  <span className="text-[11px] font-bold text-[#37352f]">{m.monastic}</span>
                 </div>
                 <div>
                   <span className="text-[9px] uppercase tracking-wider text-muted-foreground font-semibold block mb-0.5">Modern Equivalent</span>
@@ -32,7 +32,7 @@ export function MonasteryPrincipleChart() {
                 </div>
                 <div>
                   <span className="text-[9px] uppercase tracking-wider text-muted-foreground font-semibold block mb-0.5">Cognitive Function Protected</span>
-                  <span className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{m.cognitive}</span>
+                  <span className="text-[11px] text-[#37352f]">{m.cognitive}</span>
                 </div>
               </div>
             </div>
@@ -60,16 +60,16 @@ export function AttentionSpanDecline() {
   const max = 150;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Attention Collapse</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Attention Collapse</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Average sustained attention on a single screen (Dr. Gloria Mark, UC Irvine)</p>
 
         <div className="space-y-2">
           {data.map((d) => (
             <div key={d.year} className="grid grid-cols-[45px_1fr_55px] gap-3 items-center">
               <span className="text-[11px] font-medium text-muted-foreground text-right">{d.year}</span>
-              <div className="w-full h-6 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <div className="w-full h-6 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div className="h-full rounded-md flex items-center pl-2" style={{ width: `${(d.seconds / max) * 100}%`, backgroundColor: d.color, opacity: 0.5 }}>
                   {d.seconds >= 60 && <span className="text-[9px] font-bold text-white">{d.label}</span>}
                 </div>
@@ -79,8 +79,8 @@ export function AttentionSpanDecline() {
           ))}
         </div>
 
-        <div className="mt-4 rounded-[3px] bg-[#f7f6f3] dark:bg-zinc-800/40 p-3">
-          <p className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">
+        <div className="mt-4 rounded-[3px] bg-[#f7f6f3] p-3">
+          <p className="text-[11px] text-[#37352f]">
             <span className="font-bold">73% decline in 20 years.</span> This is measured through direct observation and screen-tracking software, not self-reported surveys. The median is even lower: 40 seconds.
           </p>
         </div>
@@ -104,29 +104,29 @@ export function InterruptionCostChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Interruption Tax</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Interruption Tax</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Each notification costs 23 minutes of recovery (Gloria Mark)</p>
 
         <div className="space-y-3">
           {scenarios.map((s) => (
-            <div key={s.label} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3" style={{ borderLeftWidth: '3px', borderLeftColor: s.color }}>
+            <div key={s.label} className="rounded-[3px] border border-[#e3e3e0] p-3" style={{ borderLeftWidth: '3px', borderLeftColor: s.color }}>
               <div className="flex items-baseline justify-between mb-1.5">
-                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{s.label}</span>
+                <span className="text-[11px] font-bold text-[#37352f]">{s.label}</span>
                 <span className="text-[9px] px-2 py-0.5 rounded-full font-bold" style={{ backgroundColor: s.color + '15', color: s.color }}>{s.notifications} notifications</span>
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <span className="text-[9px] uppercase tracking-wider text-muted-foreground block mb-1">Recovery time lost</span>
-                  <div className="w-full h-3 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+                  <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden">
                     <div className="h-full rounded-md" style={{ width: `${Math.min((s.recoveryHrs / 16) * 100, 100)}%`, backgroundColor: s.color, opacity: 0.5 }} />
                   </div>
                   <span className="text-[10px] font-bold mt-0.5 block" style={{ color: s.color }}>{s.recoveryHrs}h</span>
                 </div>
                 <div>
                   <span className="text-[9px] uppercase tracking-wider text-muted-foreground block mb-1">Deep work remaining</span>
-                  <div className="w-full h-3 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+                  <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden">
                     <div className="h-full rounded-md" style={{ width: `${(s.deepWorkHrs / 5) * 100}%`, backgroundColor: 'hsl(160 80% 35%)', opacity: 0.5 }} />
                   </div>
                   <span className="text-[10px] font-bold mt-0.5 block" style={{ color: s.deepWorkHrs > 0 ? 'hsl(160 80% 35%)' : 'hsl(0 70% 50%)' }}>{s.deepWorkHrs > 0 ? `${s.deepWorkHrs}h` : 'None'}</span>
@@ -156,22 +156,22 @@ export function RetreatMovementsTimeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Pattern Repeats</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Pattern Repeats</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Every era of information excess produces structured retreat</p>
 
         <div className="relative">
-          <div className="absolute left-[52px] top-0 bottom-0 w-px bg-[#e3e3e0] dark:bg-zinc-800" />
+          <div className="absolute left-[52px] top-0 bottom-0 w-px bg-[#e3e3e0]" />
           <div className="space-y-3">
             {movements.map((m) => (
               <div key={m.era} className="grid grid-cols-[42px_20px_1fr] gap-2 items-start">
                 <span className="text-[10px] font-black text-right" style={{ color: m.color }}>{m.era}</span>
                 <div className="flex items-center justify-center pt-0.5">
-                  <div className="w-2.5 h-2.5 rounded-full border-2 bg-white dark:bg-zinc-900" style={{ borderColor: m.color }} />
+                  <div className="w-2.5 h-2.5 rounded-full border-2 bg-white" style={{ borderColor: m.color }} />
                 </div>
                 <div>
-                  <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{m.movement}</span>
+                  <span className="text-[11px] font-bold text-[#37352f]">{m.movement}</span>
                   <span className="text-[9px] text-muted-foreground ml-1.5">({m.figure})</span>
                   <p className="text-[9px] text-muted-foreground mt-0.5">Trigger: {m.trigger}</p>
                   <p className="text-[9px] font-medium mt-0.5" style={{ color: m.color }}>{m.practice}</p>
@@ -197,21 +197,21 @@ export function SilenceEconomyChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Silence Economy</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Silence Economy</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Silence as a premium product: $57B+ wellness tech market (2025)</p>
 
         <div className="space-y-2">
           {products.map((p) => (
-            <div key={p.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3" style={{ borderLeftWidth: '3px', borderLeftColor: p.color }}>
+            <div key={p.name} className="rounded-[3px] border border-[#e3e3e0] p-3" style={{ borderLeftWidth: '3px', borderLeftColor: p.color }}>
               <div className="flex items-baseline justify-between mb-1">
-                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{p.name}</span>
+                <span className="text-[11px] font-bold text-[#37352f]">{p.name}</span>
                 <span className="text-[9px] px-2 py-0.5 rounded-full font-bold" style={{ backgroundColor: p.color + '15', color: p.color }}>{p.type}</span>
               </div>
               <div className="grid grid-cols-2 gap-2 text-[9px]">
                 <div><span className="text-muted-foreground">Cost:</span> <span className="font-bold" style={{ color: p.color }}>{p.cost}</span></div>
-                <div><span className="text-muted-foreground">{p.waitlist ? 'Waitlist:' : 'Users:'}</span> <span className="text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{p.waitlist || p.users}</span></div>
+                <div><span className="text-muted-foreground">{p.waitlist ? 'Waitlist:' : 'Users:'}</span> <span className="text-[#37352f]">{p.waitlist || p.users}</span></div>
               </div>
             </div>
           ))}

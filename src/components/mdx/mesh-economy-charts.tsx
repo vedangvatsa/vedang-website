@@ -14,16 +14,16 @@ export function MeshTransactionCostChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Transaction Cost Collapse</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Transaction Cost Collapse</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How protocols eliminate each category of Coasean friction</p>
 
         <div className="space-y-2">
           {costs.map((c) => (
             <div key={c.category} className="grid grid-cols-[110px_1fr_1fr_60px] gap-2 items-center text-[11px]">
-              <span className="font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{c.category}</span>
-              <span className="text-muted-foreground bg-[#f7f6f3] dark:bg-zinc-800/40 px-2 py-1.5 rounded-md text-center">{c.traditional}</span>
+              <span className="font-bold text-[#37352f]">{c.category}</span>
+              <span className="text-muted-foreground bg-[#f7f6f3] px-2 py-1.5 rounded-md text-center">{c.traditional}</span>
               <span className="px-2 py-1.5 rounded-md text-center font-medium" style={{ backgroundColor: c.color + '10', color: c.color }}>{c.protocol}</span>
               <span className="font-bold text-right" style={{ color: c.color }}>↓{c.reduction}</span>
             </div>
@@ -51,9 +51,9 @@ export function DAOTreasuryChart() {
   const total = data.reduce((s, d) => s + d.value, 0);
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">DAO Treasury Concentration</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">DAO Treasury Concentration</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">~$13.6B in total DAO treasuries, heavily concentrated (late 2025)</p>
 
         {/* Stacked horizontal bar */}
@@ -74,7 +74,7 @@ export function DAOTreasuryChart() {
           {data.map((d) => (
             <div key={d.name} className="flex items-center gap-2">
               <div className="w-2.5 h-2.5 rounded-sm shrink-0" style={{ backgroundColor: d.color, opacity: 0.65 }} />
-              <span className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">
+              <span className="text-[11px] text-[#37352f]">
                 {d.name} <span className="text-muted-foreground">(${d.value}B)</span>
               </span>
             </div>
@@ -101,9 +101,9 @@ export function MeshOrgComparison() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Three Models of Economic Organization</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Three Models of Economic Organization</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Firm → Platform → Mesh: the Coasean progression</p>
 
         <div className="overflow-x-auto">
@@ -117,9 +117,9 @@ export function MeshOrgComparison() {
             </div>
             {/* Rows */}
             {dimensions.map((d) => (
-              <div key={d.dim} className="grid grid-cols-[100px_1fr_1fr_1fr] gap-2 border-t border-[#e3e3e0] dark:border-zinc-800 py-2">
-                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{d.dim}</span>
-                <span className="text-[11px] text-muted-foreground text-center bg-[#f7f6f3] dark:bg-zinc-800/40 px-2 py-1 rounded-md">{d.firm}</span>
+              <div key={d.dim} className="grid grid-cols-[100px_1fr_1fr_1fr] gap-2 border-t border-[#e3e3e0] py-2">
+                <span className="text-[11px] font-bold text-[#37352f]">{d.dim}</span>
+                <span className="text-[11px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1 rounded-md">{d.firm}</span>
                 <span className="text-[11px] text-center px-2 py-1 rounded-md" style={{ backgroundColor: 'hsl(30 80% 50% / 0.08)' }}>{d.platform}</span>
                 <span className="text-[11px] text-center px-2 py-1 rounded-md font-medium" style={{ backgroundColor: 'hsl(160 80% 35% / 0.08)', color: 'hsl(160 80% 35%)' }}>{d.mesh}</span>
               </div>
@@ -146,9 +146,9 @@ export function EnergyMeshComparison() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Energy Mesh Economics</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Energy Mesh Economics</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Traditional utility vs. peer-to-peer energy mesh</p>
 
         <div className="overflow-x-auto">
@@ -160,9 +160,9 @@ export function EnergyMeshComparison() {
               <span className="text-[10px] font-bold uppercase text-muted-foreground text-right">Δ</span>
             </div>
             {rows.map((r) => (
-              <div key={r.metric} className="grid grid-cols-[110px_1fr_1fr_70px] gap-2 border-t border-[#e3e3e0] dark:border-zinc-800 py-2 items-center">
-                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{r.metric}</span>
-                <span className="text-[11px] text-muted-foreground text-center bg-[#f7f6f3] dark:bg-zinc-800/40 px-2 py-1.5 rounded-md">{r.traditional}</span>
+              <div key={r.metric} className="grid grid-cols-[110px_1fr_1fr_70px] gap-2 border-t border-[#e3e3e0] py-2 items-center">
+                <span className="text-[11px] font-bold text-[#37352f]">{r.metric}</span>
+                <span className="text-[11px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1.5 rounded-md">{r.traditional}</span>
                 <span className="text-[11px] text-center px-2 py-1.5 rounded-md font-medium" style={{ backgroundColor: 'hsl(160 80% 35% / 0.08)', color: 'hsl(160 80% 35%)' }}>{r.mesh}</span>
                 <span className="text-[11px] font-bold text-right" style={{ color: 'hsl(160 80% 35%)' }}>{r.advantage}</span>
               </div>

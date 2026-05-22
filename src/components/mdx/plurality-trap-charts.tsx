@@ -13,16 +13,16 @@ export function AINewsSiteGrowth() {
   const max = 1200;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">AI-Generated News Sites Tracked by NewsGuard</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">AI-Generated News Sites Tracked by NewsGuard</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Unreliable AI-Generated News Sites (UAINs) identified</p>
 
         <div className="space-y-3">
           {data.map((d) => (
             <div key={d.date} className="grid grid-cols-[80px_1fr_55px] gap-3 items-center">
               <span className="text-xs text-muted-foreground font-medium">{d.date}</span>
-              <div className="w-full h-6 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <div className="w-full h-6 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md flex items-center pl-2"
                   style={{ width: `${(d.count / max) * 100}%`, backgroundColor: 'hsl(0 70% 50%)', opacity: 0.65 }}
@@ -30,7 +30,7 @@ export function AINewsSiteGrowth() {
                   {d.count > 200 && <span className="text-[9px] font-bold text-white">{d.count.toLocaleString()}</span>}
                 </div>
               </div>
-              <span className="text-xs font-bold text-right text-red-600 dark:text-red-400">{d.count.toLocaleString()}</span>
+              <span className="text-xs font-bold text-right text-red-600">{d.count.toLocaleString()}</span>
             </div>
           ))}
         </div>
@@ -51,16 +51,16 @@ export function MisinfoSpreadChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Speed Asymmetry</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Speed Asymmetry</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How fast false vs. true information spreads on social media</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {data.map((d) => (
-            <div key={d.type} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-4 text-center" style={{ borderLeftWidth: '3px', borderLeftColor: d.color }}>
+            <div key={d.type} className="rounded-[3px] border border-[#e3e3e0] p-4 text-center" style={{ borderLeftWidth: '3px', borderLeftColor: d.color }}>
               <div className="text-3xl md:text-4xl font-black mb-1" style={{ color: d.color }}>{d.reach}x</div>
-              <div className="text-xs font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">{d.type}</div>
+              <div className="text-xs font-bold text-[#37352f] uppercase tracking-wider">{d.type}</div>
               <p className="text-[10px] text-muted-foreground mt-1">
                 {d.type === 'True information' ? 'Baseline diffusion speed' : 'Reaches broader audiences, penetrates deeper into networks'}
               </p>
@@ -68,8 +68,8 @@ export function MisinfoSpreadChart() {
           ))}
         </div>
 
-        <div className="mt-4 rounded-[3px] bg-[#f7f6f3] dark:bg-zinc-800/40 p-3">
-          <p className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">
+        <div className="mt-4 rounded-[3px] bg-[#f7f6f3] p-3">
+          <p className="text-[11px] text-[#37352f]">
             <span className="font-bold">Mechanism:</span> False claims tend to be more surprising and emotionally charged. The brain allocates attention to novel, emotionally arousing information preferentially.
           </p>
         </div>
@@ -101,9 +101,9 @@ export function MediaTrustChart() {
   const max = 80;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Trust Collapse</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Trust Collapse</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Americans who trust mass media to report "fully, accurately, and fairly"</p>
 
         {/* Timeline bars */}
@@ -111,7 +111,7 @@ export function MediaTrustChart() {
           {data.map((d) => (
             <div key={d.year} className="grid grid-cols-[45px_1fr_40px] gap-3 items-center">
               <span className="text-xs text-muted-foreground font-medium">{d.year}</span>
-              <div className="w-full h-5 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <div className="w-full h-5 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
                   style={{
@@ -121,17 +121,17 @@ export function MediaTrustChart() {
                   }}
                 />
               </div>
-              <span className="text-xs font-bold text-right text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{d.trust}%</span>
+              <span className="text-xs font-bold text-right text-[#37352f]">{d.trust}%</span>
             </div>
           ))}
         </div>
 
         {/* Partisan breakdown */}
-        <div className="border-t border-[#e3e3e0] dark:border-zinc-800 pt-4">
+        <div className="border-t border-[#e3e3e0] pt-4">
           <p className="text-[10px] text-muted-foreground uppercase tracking-widest font-semibold mb-3">2025 Partisan Breakdown</p>
           <div className="grid grid-cols-3 gap-3">
             {partisan.map((p) => (
-              <div key={p.label} className="text-center rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3" style={{ borderTopWidth: '3px', borderTopColor: p.color }}>
+              <div key={p.label} className="text-center rounded-[3px] border border-[#e3e3e0] p-3" style={{ borderTopWidth: '3px', borderTopColor: p.color }}>
                 <div className="text-2xl font-black" style={{ color: p.color }}>{p.value}%</div>
                 <div className="text-[10px] font-bold text-muted-foreground mt-0.5">{p.label}</div>
               </div>
@@ -159,19 +159,19 @@ export function CurationFactorsChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Invisible Curation</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Invisible Curation</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Factors driving the plurality trap, ranked by structural impact</p>
 
         <div className="space-y-3">
           {factors.map((f) => (
             <div key={f.factor}>
               <div className="flex items-baseline justify-between mb-1">
-                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{f.factor}</span>
+                <span className="text-[11px] font-bold text-[#37352f]">{f.factor}</span>
                 <span className="text-[10px] font-bold" style={{ color: f.color }}>{f.severity}%</span>
               </div>
-              <div className="w-full h-3 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden mb-1">
+              <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden mb-1">
                 <div className="h-full rounded-md" style={{ width: `${f.severity}%`, backgroundColor: f.color, opacity: 0.5 }} />
               </div>
               <span className="text-[10px] text-muted-foreground">{f.role}</span>

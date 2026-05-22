@@ -75,7 +75,7 @@ export function CourseModuleLayout({
         )}
       </div>
 
-      <article className="prose prose-zinc dark:prose-invert max-w-none">
+      <article className="prose prose-zinc max-w-none">
         <MDXRemote
           source={content}
           components={components}

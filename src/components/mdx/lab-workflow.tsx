@@ -6,7 +6,7 @@ const options = [
   {
     icon: Terminal,
     title: 'Cursor / Windsurf',
-    color: 'text-amber-600 dark:text-amber-400',
+    color: 'text-amber-600',
     bg: 'bg-amber-500/5 border-amber-500/20',
     iconBg: 'bg-amber-500/10',
     steps: ['Create Next.js project', 'Paste PRD into chat', 'Use Composer for multi-file edits', 'Test locally', 'Deploy to Vercel'],
@@ -14,7 +14,7 @@ const options = [
   {
     icon: Palette,
     title: 'Lovable.dev',
-    color: 'text-pink-600 dark:text-pink-400',
+    color: 'text-pink-600',
     bg: 'bg-pink-500/5 border-pink-500/20',
     iconBg: 'bg-pink-500/10',
     steps: ['Start new project', 'Design UI first', 'Add backend logic', 'Iterate on output', 'Publish'],
@@ -22,7 +22,7 @@ const options = [
   {
     icon: Code2,
     title: 'Claude Code / Antigravity',
-    color: 'text-blue-600 dark:text-blue-400',
+    color: 'text-blue-600',
     bg: 'bg-blue-500/5 border-blue-500/20',
     iconBg: 'bg-blue-500/10',
     steps: ['Open terminal agent', 'Describe full project', 'Agent creates all files', 'Debug autonomously', 'Deploy'],

@@ -12,22 +12,22 @@ export function AIJobExposure() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">AI Employment Exposure</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">AI Employment Exposure</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Share of jobs exposed to AI, by economy type</p>
 
         <div className="space-y-2">
           {data.map((d, i) => (
             <div key={d.label} className="grid grid-cols-[140px_1fr_40px] gap-3 items-center">
-              <span className="text-xs font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{d.label}</span>
-              <div className="w-full h-4 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <span className="text-xs font-medium text-[#37352f]">{d.label}</span>
+              <div className="w-full h-4 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
                   style={{ width: `${d.pct}%`, backgroundColor: i === 0 ? 'hsl(210 90% 40%)' : '#37352f', opacity: i === 0 ? 0.8 : 0.3 + (0.1 * (data.length - i)) }}
                 />
               </div>
-              <span className={`text-xs font-bold text-right ${i === 0 ? 'text-primary' : 'text-[#37352f] dark:text-[rgba(255,255,255,0.81)]'}`}>{d.pct}%</span>
+              <span className={`text-xs font-bold text-right ${i === 0 ? 'text-primary' : 'text-[#37352f]'}`}>{d.pct}%</span>
             </div>
           ))}
         </div>
@@ -47,23 +47,23 @@ export function JobChurnChart() {
   const net = 78;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Labor Market Churn by 2030</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Labor Market Churn by 2030</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">WEF Future of Jobs Report 2025 (millions of jobs)</p>
 
         <div className="grid grid-cols-3 gap-4 text-center">
-          <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-4">
+          <div className="rounded-[3px] border border-[#e3e3e0] p-4">
             <div className="text-2xl font-bold text-primary">+{created}M</div>
-            <div className="text-xs text-[#37352f] dark:text-[rgba(255,255,255,0.81)] font-medium mt-1">Created</div>
+            <div className="text-xs text-[#37352f] font-medium mt-1">Created</div>
           </div>
-          <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-4">
-            <div className="text-2xl font-bold text-red-600 dark:text-red-400">-{displaced}M</div>
-            <div className="text-xs text-[#37352f] dark:text-[rgba(255,255,255,0.81)] font-medium mt-1">Displaced</div>
+          <div className="rounded-[3px] border border-[#e3e3e0] p-4">
+            <div className="text-2xl font-bold text-red-600">-{displaced}M</div>
+            <div className="text-xs text-[#37352f] font-medium mt-1">Displaced</div>
           </div>
           <div className="rounded-[3px] border border-primary/30 bg-primary/5 p-4">
             <div className="text-2xl font-bold text-primary">+{net}M</div>
-            <div className="text-xs text-[#37352f] dark:text-[rgba(255,255,255,0.81)] font-medium mt-1">Net gain</div>
+            <div className="text-xs text-[#37352f] font-medium mt-1">Net gain</div>
           </div>
         </div>
 
@@ -89,28 +89,28 @@ export function EarlyCareerImpact() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Early-Career Employment Decline</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Early-Career Employment Decline</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Relative decline for ages 22-25 in AI-exposed roles</p>
 
         <div className="space-y-2">
           {roles.map((r, i) => (
             <div key={r.role} className="grid grid-cols-[150px_1fr_40px] gap-3 items-center">
-              <span className="text-xs font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{r.role}</span>
-              <div className="w-full h-4 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <span className="text-xs font-medium text-[#37352f]">{r.role}</span>
+              <div className="w-full h-4 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
                   style={{ width: `${(r.decline / 25) * 100}%`, backgroundColor: i === 0 ? 'hsl(210 90% 40%)' : '#37352f', opacity: i === 0 ? 0.8 : 0.4 + (0.1 * (roles.length - i)) }}
                 />
               </div>
-              <span className="text-xs font-bold text-right text-red-600 dark:text-red-400">-{r.decline}%</span>
+              <span className="text-xs font-bold text-right text-red-600">-{r.decline}%</span>
             </div>
           ))}
         </div>
 
-        <div className="mt-3 rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-[#f7f6f3] dark:bg-zinc-800/30 p-3">
-          <p className="text-xs text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Employment for workers age 30+ in the same roles remained stable or grew. The impact is concentrated in entry-level hiring, not wages.</p>
+        <div className="mt-3 rounded-[3px] border border-[#e3e3e0] bg-[#f7f6f3] p-3">
+          <p className="text-xs text-[#37352f]">Employment for workers age 30+ in the same roles remained stable or grew. The impact is concentrated in entry-level hiring, not wages.</p>
         </div>
 
         <p className="mt-3 text-[10px] text-muted-foreground/60">
@@ -132,32 +132,32 @@ export function ProductivityParadox() {
   ];
 
   const stanceColor: Record<string, string> = {
-    'conservative': 'bg-orange-50 dark:bg-orange-950/30 text-orange-600 dark:text-orange-400',
-    'optimistic': 'bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400',
-    'neutral': 'bg-[#f7f6f3] dark:bg-zinc-800/30 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]',
-    'measured': 'bg-green-50 dark:bg-green-950/30 text-green-600 dark:text-green-400',
-    'paradox': 'bg-red-50 dark:bg-red-950/30 text-red-600 dark:text-red-400',
+    'conservative': 'bg-orange-50 text-orange-600',
+    'optimistic': 'bg-blue-50 text-blue-600',
+    'neutral': 'bg-[#f7f6f3] text-[#37352f]',
+    'measured': 'bg-green-50 text-green-600',
+    'paradox': 'bg-red-50 text-red-600',
   };
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The AI Productivity Paradox</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The AI Productivity Paradox</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Where different analyses land on AI's economic impact</p>
 
         <div className="overflow-x-auto -mx-2">
           <table className="w-full text-xs border-collapse min-w-[450px]">
             <thead>
-              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Source</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Estimate</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Timeframe</th>
+              <tr className="border-b-2 border-[#e3e3e0]">
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Source</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Estimate</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Timeframe</th>
               </tr>
             </thead>
             <tbody>
               {views.map((v) => (
-                <tr key={v.source} className="border-b border-[#e3e3e0]/60 dark:border-zinc-800/40">
-                  <td className="py-2.5 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{v.source}</td>
+                <tr key={v.source} className="border-b border-[#e3e3e0]/60">
+                  <td className="py-2.5 px-2 font-bold text-[#37352f]">{v.source}</td>
                   <td className="py-2.5 px-2">
                     <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${stanceColor[v.stance]}`}>{v.estimate}</span>
                   </td>
@@ -179,31 +179,31 @@ export function ProductivityParadox() {
 /* ─── Gender Impact Chart ─── */
 export function GenderImpact() {
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">AI Automation Risk by Gender</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">AI Automation Risk by Gender</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">US workers in occupations at high risk of AI automation</p>
 
         <div className="grid grid-cols-2 gap-4 mb-4">
-          <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-5">
+          <div className="rounded-[3px] border border-[#e3e3e0] p-5">
             <div className="text-3xl font-bold text-primary">79%</div>
-            <div className="text-sm font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)] mt-1">Women</div>
-            <div className="w-full h-3 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden mt-3">
+            <div className="text-sm font-medium text-[#37352f] mt-1">Women</div>
+            <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden mt-3">
               <div className="h-full rounded-md bg-primary/80" style={{ width: '79%' }} />
             </div>
           </div>
-          <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-5">
-            <div className="text-3xl font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">58%</div>
-            <div className="text-sm font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)] mt-1">Men</div>
-            <div className="w-full h-3 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden mt-3">
-              <div className="h-full rounded-md bg-[#37352f]/50 dark:bg-zinc-400/50" style={{ width: '58%' }} />
+          <div className="rounded-[3px] border border-[#e3e3e0] p-5">
+            <div className="text-3xl font-bold text-[#37352f]">58%</div>
+            <div className="text-sm font-medium text-[#37352f] mt-1">Men</div>
+            <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden mt-3">
+              <div className="h-full rounded-md bg-[#37352f]/50" style={{ width: '58%' }} />
             </div>
           </div>
         </div>
 
-        <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-[#f7f6f3] dark:bg-zinc-800/30 p-3">
-          <p className="text-xs text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">
-            In high-income OECD countries, vulnerable jobs make up <span className="font-bold text-primary">9.6%</span> of female employment vs. <span className="font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">3.2%</span> of male employment (nearly 3x the proportion).
+        <div className="rounded-[3px] border border-[#e3e3e0] bg-[#f7f6f3] p-3">
+          <p className="text-xs text-[#37352f]/80">
+            In high-income OECD countries, vulnerable jobs make up <span className="font-bold text-primary">9.6%</span> of female employment vs. <span className="font-bold text-[#37352f]">3.2%</span> of male employment (nearly 3x the proportion).
           </p>
         </div>
 
@@ -225,32 +225,32 @@ export function UBIPilotResults() {
   ];
 
   const outcomeColor: Record<string, string> = {
-    'positive': 'text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-950/30',
-    'minimal': 'text-yellow-700 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-950/30',
+    'positive': 'text-green-600 bg-green-50',
+    'minimal': 'text-yellow-700 bg-yellow-50',
   };
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">UBI Pilot Results</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">UBI Pilot Results</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Evidence from 160+ pilots across four decades</p>
 
         <div className="overflow-x-auto -mx-2">
           <table className="w-full text-xs border-collapse min-w-[500px]">
             <thead>
-              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Pilot</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Amount</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Finding</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Work impact</th>
+              <tr className="border-b-2 border-[#e3e3e0]">
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Pilot</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Amount</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Finding</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Work impact</th>
               </tr>
             </thead>
             <tbody>
               {pilots.map((p) => (
-                <tr key={p.name} className="border-b border-[#e3e3e0]/60 dark:border-zinc-800/40">
-                  <td className="py-2.5 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{p.name}</td>
+                <tr key={p.name} className="border-b border-[#e3e3e0]/60">
+                  <td className="py-2.5 px-2 font-bold text-[#37352f]">{p.name}</td>
                   <td className="py-2.5 px-2 text-primary font-semibold">{p.amount}</td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">{p.finding}</td>
+                  <td className="py-2.5 px-2 text-[#37352f]/80">{p.finding}</td>
                   <td className="py-2.5 px-2">
                     <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${outcomeColor[p.outcome]}`}>
                       {p.outcome === 'positive' ? 'Positive' : 'Minimal'}

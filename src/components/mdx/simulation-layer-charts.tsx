@@ -15,19 +15,19 @@ export function SimulationDomainChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Simulation Maturity by Domain</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Simulation Maturity by Domain</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How deeply simulation has penetrated each industry (illustrative)</p>
 
         <div className="space-y-3">
           {domains.map((d) => (
             <div key={d.name}>
               <div className="flex items-baseline justify-between mb-1">
-                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{d.name}</span>
+                <span className="text-[11px] font-bold text-[#37352f]">{d.name}</span>
                 <span className="text-[10px] text-muted-foreground">{d.examples}</span>
               </div>
-              <div className="w-full h-4 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <div className="w-full h-4 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md flex items-center justify-end pr-2"
                   style={{ width: `${d.maturity}%`, backgroundColor: d.color, opacity: 0.55 }}
@@ -58,9 +58,9 @@ export function SimCostComparison() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Cost Collapse</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Cost Collapse</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Physical vs. simulated cost per unit of work</p>
 
         <div className="overflow-x-auto">
@@ -72,9 +72,9 @@ export function SimCostComparison() {
               <span className="text-[10px] font-bold uppercase text-muted-foreground text-right">Ratio</span>
             </div>
             {data.map((d) => (
-              <div key={d.activity} className="grid grid-cols-[140px_1fr_1fr_80px] gap-2 border-t border-[#e3e3e0] dark:border-zinc-800 py-2 items-center">
-                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{d.activity}</span>
-                <span className="text-[11px] text-muted-foreground text-center bg-[#f7f6f3] dark:bg-zinc-800/40 px-2 py-1 rounded-md">{d.physical}</span>
+              <div key={d.activity} className="grid grid-cols-[140px_1fr_1fr_80px] gap-2 border-t border-[#e3e3e0] py-2 items-center">
+                <span className="text-[11px] font-bold text-[#37352f]">{d.activity}</span>
+                <span className="text-[11px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1 rounded-md">{d.physical}</span>
                 <span className="text-[11px] text-center px-2 py-1 rounded-md font-medium" style={{ backgroundColor: d.color + '10', color: d.color }}>{d.simulated}</span>
                 <span className="text-[11px] font-bold text-right" style={{ color: d.color }}>{d.ratio}</span>
               </div>
@@ -101,23 +101,23 @@ export function SimulationGapChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Simulation Gap</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Simulation Gap</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Entities with state-of-the-art simulation capabilities</p>
 
         <div className="space-y-2">
           {haves.map((h) => (
-            <div key={h.entity} className="grid grid-cols-[140px_1fr_1fr] gap-2 items-center border-l-[3px] border-l-primary pl-3 py-2 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-r-md">
-              <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{h.entity}</span>
+            <div key={h.entity} className="grid grid-cols-[140px_1fr_1fr] gap-2 items-center border-l-[3px] border-l-primary pl-3 py-2 bg-[#f7f6f3] rounded-r-md">
+              <span className="text-[11px] font-bold text-[#37352f]">{h.entity}</span>
               <span className="text-[11px] text-muted-foreground">{h.capability}</span>
               <span className="text-[10px] text-muted-foreground/70 italic">{h.access}</span>
             </div>
           ))}
         </div>
 
-        <div className="mt-4 rounded-[3px] bg-[#f7f6f3] dark:bg-zinc-800/40 p-3 border-l-[3px] border-l-amber-500">
-          <p className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">
+        <div className="mt-4 rounded-[3px] bg-[#f7f6f3] p-3 border-l-[3px] border-l-amber-500">
+          <p className="text-[11px] text-[#37352f]">
             <span className="font-bold">Democratization in progress:</span> MuJoCo (open-sourced by DeepMind, 2022), AWS IoT TwinMaker, Azure Digital Twins, and NVIDIA Isaac Sim are reducing barriers, but state-of-the-art simulation remains concentrated.
           </p>
         </div>

@@ -14,26 +14,26 @@ export function GovernanceEffectivenessChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Where Computational Constitutions Work</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Where Computational Constitutions Work</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Effectiveness by decision type: code vs. human governance</p>
 
         <div className="space-y-3">
           {decisions.map((d) => (
             <div key={d.type}>
-              <div className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] mb-1.5">{d.type}</div>
+              <div className="text-[11px] font-bold text-[#37352f] mb-1.5">{d.type}</div>
               <div className="space-y-1">
                 <div className="grid grid-cols-[85px_1fr_30px] gap-2 items-center">
                   <span className="text-[9px] uppercase tracking-wider font-semibold" style={{ color: 'hsl(210 90% 40%)' }}>Code</span>
-                  <div className="w-full h-3 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+                  <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden">
                     <div className="h-full rounded-md" style={{ width: `${d.compPct}%`, backgroundColor: 'hsl(210 90% 40%)', opacity: 0.5 }} />
                   </div>
                   <span className="text-[9px] text-muted-foreground text-right">{d.compPct}%</span>
                 </div>
                 <div className="grid grid-cols-[85px_1fr_30px] gap-2 items-center">
                   <span className="text-[9px] uppercase tracking-wider font-semibold" style={{ color: 'hsl(280 60% 45%)' }}>Human</span>
-                  <div className="w-full h-3 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+                  <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden">
                     <div className="h-full rounded-md" style={{ width: `${d.humanPct}%`, backgroundColor: 'hsl(280 60% 45%)', opacity: 0.4 }} />
                   </div>
                   <span className="text-[9px] text-muted-foreground text-right">{d.humanPct}%</span>
@@ -43,7 +43,7 @@ export function GovernanceEffectivenessChart() {
           ))}
         </div>
 
-        <div className="flex items-center gap-4 mt-4 pt-3 border-t border-[#e3e3e0] dark:border-zinc-800">
+        <div className="flex items-center gap-4 mt-4 pt-3 border-t border-[#e3e3e0]">
           <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(210 90% 40%)' }} /><span className="text-[10px] text-muted-foreground">Computational governance</span></div>
           <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(280 60% 45%)' }} /><span className="text-[10px] text-muted-foreground">Human governance</span></div>
         </div>
@@ -68,9 +68,9 @@ export function DAOVoterParticipation() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">DAO Voter Participation (2025)</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">DAO Voter Participation (2025)</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Average voter turnout across major governance DAOs</p>
 
         <div className="space-y-2">
@@ -81,7 +81,7 @@ export function DAOVoterParticipation() {
                 <span className="block text-[9px] text-muted-foreground">{d.treasury}</span>
               </div>
               <div className="w-full">
-                <div className="w-full h-4 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+                <div className="w-full h-4 bg-[#f7f6f3] rounded-md overflow-hidden">
                   <div className="h-full rounded-md flex items-center pl-1.5" style={{ width: `${d.participation}%`, backgroundColor: d.color, opacity: 0.5 }}>
                     {d.participation >= 20 && <span className="text-[8px] font-bold text-white">{d.participation}%</span>}
                   </div>
@@ -113,25 +113,25 @@ export function VotingMechanismChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Voting Mechanism Innovation</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Voting Mechanism Innovation</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Beyond one-token-one-vote: the governance design space</p>
 
         <div className="space-y-3">
           {mechanisms.map((m) => (
-            <div key={m.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3" style={{ borderLeftWidth: '3px', borderLeftColor: m.color }}>
+            <div key={m.name} className="rounded-[3px] border border-[#e3e3e0] p-3" style={{ borderLeftWidth: '3px', borderLeftColor: m.color }}>
               <div className="flex items-baseline justify-between mb-1">
-                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{m.name}</span>
+                <span className="text-[11px] font-bold text-[#37352f]">{m.name}</span>
                 <span className="text-[9px] px-2 py-0.5 rounded-full font-bold" style={{ backgroundColor: m.color + '15', color: m.color }}>{m.maturity}% mature</span>
               </div>
-              <div className="w-full h-2 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden mb-1.5">
+              <div className="w-full h-2 bg-[#f7f6f3] rounded-md overflow-hidden mb-1.5">
                 <div className="h-full rounded-md" style={{ width: `${m.maturity}%`, backgroundColor: m.color, opacity: 0.5 }} />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-1 text-[9px]">
                 <div><span className="text-muted-foreground">Advantage:</span> <span className="font-medium" style={{ color: m.color }}>{m.advantage}</span></div>
-                <div><span className="text-muted-foreground">Risk:</span> <span className="text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{m.risk}</span></div>
-                <div><span className="text-muted-foreground">Adoption:</span> <span className="text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{m.adoption}</span></div>
+                <div><span className="text-muted-foreground">Risk:</span> <span className="text-[#37352f]">{m.risk}</span></div>
+                <div><span className="text-muted-foreground">Adoption:</span> <span className="text-[#37352f]">{m.adoption}</span></div>
               </div>
             </div>
           ))}
@@ -152,18 +152,18 @@ export function GovernanceStackChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Governance Stack</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Governance Stack</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Five layers of on-chain constitutional governance</p>
 
         <div className="space-y-2">
           {layers.map((l, i) => (
-            <div key={l.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3" style={{ borderLeftWidth: '3px', borderLeftColor: l.color }}>
+            <div key={l.name} className="rounded-[3px] border border-[#e3e3e0] p-3" style={{ borderLeftWidth: '3px', borderLeftColor: l.color }}>
               <div className="flex items-baseline justify-between mb-0.5">
                 <div>
                   <span className="text-[9px] font-black uppercase tracking-wider mr-2" style={{ color: l.color }}>L{i + 1}</span>
-                  <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{l.name}</span>
+                  <span className="text-[11px] font-bold text-[#37352f]">{l.name}</span>
                 </div>
               </div>
               <p className="text-[10px] text-muted-foreground mb-1">{l.desc}</p>

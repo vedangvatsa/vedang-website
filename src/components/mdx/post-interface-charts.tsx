@@ -14,16 +14,16 @@ export function ApiTrafficChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Global Internet Traffic Composition</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Global Internet Traffic Composition</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Human browser traffic vs machine-to-machine API traffic</p>
 
         <div className="space-y-3">
           {data.map((d) => (
             <div key={d.year} className="grid grid-cols-[55px_1fr] gap-3 items-center">
               <span className="text-xs text-muted-foreground font-medium">{d.year}</span>
-              <div className="w-full h-6 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden flex">
+              <div className="w-full h-6 bg-[#f7f6f3] rounded-md overflow-hidden flex">
                 <div
                   className="h-full rounded-l-md flex items-center justify-end pr-1.5"
                   style={{ width: `${d.human}%`, backgroundColor: 'hsl(210 90% 40%)', opacity: 0.35 }}
@@ -101,15 +101,15 @@ export function ZeroUIMarketMap() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Zero-UI Market Map</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Zero-UI Market Map</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Five infrastructure layers powering the post-interface internet</p>
 
         <div className="space-y-4">
           {layers.map((layer) => (
             <div key={layer.name} className="rounded-[3px] overflow-hidden border-l-[3px]" style={{ borderLeftColor: layer.color, borderTop: '1px solid', borderRight: '1px solid', borderBottom: '1px solid', borderTopColor: '#e3e3e0', borderRightColor: '#e3e3e0', borderBottomColor: '#e3e3e0' }}>
-              <div className="px-4 py-2.5 border-b border-[#e3e3e0] dark:border-zinc-800 flex items-center justify-between" style={{ backgroundColor: layer.color + '08' }}>
+              <div className="px-4 py-2.5 border-b border-[#e3e3e0] flex items-center justify-between" style={{ backgroundColor: layer.color + '08' }}>
                 <div>
                   <span className="text-xs font-bold uppercase tracking-wider" style={{ color: layer.color }}>{layer.name}</span>
                   <p className="text-[10px] text-muted-foreground mt-0.5">{layer.desc}</p>
@@ -118,7 +118,7 @@ export function ZeroUIMarketMap() {
               </div>
               <div className="px-4 py-3 flex flex-wrap gap-2">
                 {layer.companies.map((c) => (
-                  <span key={c} className="text-[11px] font-medium px-2.5 py-1.5 rounded-md bg-[#f7f6f3] dark:bg-zinc-800/40 text-[#37352f] dark:text-[rgba(255,255,255,0.81)] border border-[#e3e3e0]/50 dark:border-zinc-700/30">{c}</span>
+                  <span key={c} className="text-[11px] font-medium px-2.5 py-1.5 rounded-md bg-[#f7f6f3] text-[#37352f] border border-[#e3e3e0]/50">{c}</span>
                 ))}
               </div>
             </div>
@@ -144,28 +144,28 @@ export function SaaSPricingShift() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">SaaS Pricing Model Transition</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">SaaS Pricing Model Transition</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">How software monetization shifts in the post-interface era</p>
 
         <div className="overflow-x-auto -mx-2">
           <table className="w-full text-xs border-collapse min-w-[500px]">
             <thead>
-              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Pricing model</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Legacy web</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Agent web</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Why</th>
+              <tr className="border-b-2 border-[#e3e3e0]">
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Pricing model</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Legacy web</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Agent web</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Why</th>
               </tr>
             </thead>
             <tbody>
               {models.map((m) => (
-                <tr key={m.model} className="border-b border-[#e3e3e0]/60 dark:border-zinc-800/40">
-                  <td className="py-2.5 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{m.model}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] dark:bg-zinc-800/40 text-[#37352f] dark:text-[rgba(255,255,255,0.65)]">{m.legacy}</span></td>
-                  <td className="py-2.5 px-2"><span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${m.agentic === 'Dominant' || m.agentic === 'Emerging' || m.agentic === 'Growing' ? 'bg-green-50 dark:bg-green-950/30 text-green-600 dark:text-green-400' : 'bg-red-50 dark:bg-red-950/30 text-red-600 dark:text-red-400'}`}>{m.agentic}</span></td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">{m.reason}</td>
+                <tr key={m.model} className="border-b border-[#e3e3e0]/60">
+                  <td className="py-2.5 px-2 font-bold text-[#37352f]">{m.model}</td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f]">{m.legacy}</span></td>
+                  <td className="py-2.5 px-2"><span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${m.agentic === 'Dominant' || m.agentic === 'Emerging' || m.agentic === 'Growing' ? 'bg-green-50 text-green-600' : 'bg-red-50 text-red-600'}`}>{m.agentic}</span></td>
+                  <td className="py-2.5 px-2 text-[#37352f]/80">{m.reason}</td>
                 </tr>
               ))}
             </tbody>
@@ -191,28 +191,28 @@ export function AttentionCollapseChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Attention Economy Collapse</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Attention Economy Collapse</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Legacy marketing metrics in a Zero-UI world (projected)</p>
 
         <div className="overflow-x-auto -mx-2">
           <table className="w-full text-xs border-collapse min-w-[460px]">
             <thead>
-              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Metric</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Visual web</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Agent web</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Change</th>
+              <tr className="border-b-2 border-[#e3e3e0]">
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Metric</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Visual web</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Agent web</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Change</th>
               </tr>
             </thead>
             <tbody>
               {metrics.map((m) => (
-                <tr key={m.metric} className="border-b border-[#e3e3e0]/60 dark:border-zinc-800/40">
-                  <td className="py-2.5 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{m.metric}</td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">{m.before}</td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">{m.after}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-red-50 dark:bg-red-950/30 text-red-600 dark:text-red-400">{m.decline}</span></td>
+                <tr key={m.metric} className="border-b border-[#e3e3e0]/60">
+                  <td className="py-2.5 px-2 font-bold text-[#37352f]">{m.metric}</td>
+                  <td className="py-2.5 px-2 text-[#37352f]/80">{m.before}</td>
+                  <td className="py-2.5 px-2 text-[#37352f]/80">{m.after}</td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-red-50 text-red-600">{m.decline}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -241,23 +241,23 @@ export function GUITimeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Interface Arc: 1973-2028</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Interface Arc: 1973-2028</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">From the first GUI to Zero-UI</p>
 
         <div className="relative">
-          <div className="absolute left-[18px] top-0 bottom-0 w-px bg-[#e3e3e0] dark:bg-zinc-800" />
+          <div className="absolute left-[18px] top-0 bottom-0 w-px bg-[#e3e3e0]" />
           <div className="space-y-4">
             {eras.map((e) => (
               <div key={e.year} className="grid grid-cols-[36px_1fr] gap-3 items-start">
                 <div className="relative flex items-center justify-center">
-                  <div className={`w-[9px] h-[9px] rounded-full border-2 ${e.type === 'agent' ? 'border-primary bg-primary' : e.type === 'transition' ? 'border-amber-500 bg-amber-500' : 'border-[#37352f] dark:border-zinc-400 bg-transparent'}`} />
+                  <div className={`w-[9px] h-[9px] rounded-full border-2 ${e.type === 'agent' ? 'border-primary bg-primary' : e.type === 'transition' ? 'border-amber-500 bg-amber-500' : 'border-[#37352f] bg-transparent'}`} />
                 </div>
                 <div>
                   <div className="flex items-baseline gap-2">
-                    <span className={`text-xs font-bold ${e.type === 'agent' ? 'text-primary' : 'text-[#37352f] dark:text-[rgba(255,255,255,0.81)]'}`}>{e.year}</span>
-                    <span className="text-xs font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{e.event}</span>
+                    <span className={`text-xs font-bold ${e.type === 'agent' ? 'text-primary' : 'text-[#37352f]'}`}>{e.year}</span>
+                    <span className="text-xs font-bold text-[#37352f]">{e.event}</span>
                   </div>
                   <p className="text-[11px] text-muted-foreground mt-0.5">
                     {e.desc}
@@ -273,7 +273,7 @@ export function GUITimeline() {
 
         <div className="flex gap-4 mt-5">
           <div className="flex items-center gap-1.5">
-            <div className="w-2.5 h-2.5 rounded-full border-2 border-[#37352f] dark:border-zinc-400" />
+            <div className="w-2.5 h-2.5 rounded-full border-2 border-[#37352f]" />
             <span className="text-[10px] text-muted-foreground font-medium">GUI era</span>
           </div>
           <div className="flex items-center gap-1.5">
@@ -302,9 +302,9 @@ export function FrontendDeclineChart() {
   const max = 340;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Capital Reallocation</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Capital Reallocation</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Directional hiring trends across the industry (illustrative, indexed to 2024 = 100)</p>
 
         <div className="space-y-2">
@@ -313,7 +313,7 @@ export function FrontendDeclineChart() {
             return (
               <div key={d.category} className="grid grid-cols-[160px_1fr_55px] gap-3 items-center">
                 <span className="text-xs text-muted-foreground font-medium truncate">{d.category}</span>
-                <div className="w-full h-4 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+                <div className="w-full h-4 bg-[#f7f6f3] rounded-md overflow-hidden">
                   <div
                     className="h-full rounded-md"
                     style={{
@@ -323,7 +323,7 @@ export function FrontendDeclineChart() {
                     }}
                   />
                 </div>
-                <span className={`text-xs font-bold text-right ${isGrowing ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>{d.trend}</span>
+                <span className={`text-xs font-bold text-right ${isGrowing ? 'text-green-600' : 'text-red-600'}`}>{d.trend}</span>
               </div>
             );
           })}
@@ -349,23 +349,23 @@ export function HardwarePivotGrid() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Hardware Pivot</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Hardware Pivot</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Smartphone era vs Ambient computation era</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {items.map((item) => (
-            <div key={item.label} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3">
+            <div key={item.label} className="rounded-[3px] border border-[#e3e3e0] p-3">
               <div className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider mb-2">{item.label}</div>
               <div className="grid grid-cols-2 gap-2">
                 <div>
-                  <span className="text-[9px] font-bold text-red-500 dark:text-red-400 uppercase">Legacy</span>
-                  <p className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)] font-medium mt-0.5">{item.legacy}</p>
+                  <span className="text-[9px] font-bold text-red-500 uppercase">Legacy</span>
+                  <p className="text-[11px] text-[#37352f] font-medium mt-0.5">{item.legacy}</p>
                 </div>
                 <div>
-                  <span className="text-[9px] font-bold text-green-600 dark:text-green-400 uppercase">Zero-UI</span>
-                  <p className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)] font-medium mt-0.5">{item.zeroUI}</p>
+                  <span className="text-[9px] font-bold text-green-600 uppercase">Zero-UI</span>
+                  <p className="text-[11px] text-[#37352f] font-medium mt-0.5">{item.zeroUI}</p>
                 </div>
               </div>
             </div>

@@ -224,7 +224,7 @@ export default function PromptEngineeringCoursePage() {
                         Here’s a list of the best sources to learn about prompt engineering. It covers everything from beginner guides to academic-level surveys and is useful for casual users, developers, and researchers.
                     </p>
                 </div>
-                <div className="max-w-5xl mx-auto mt-12 prose dark:prose-invert">
+                <div className="max-w-5xl mx-auto mt-12 prose">
                     
                     <h3 className="text-2xl font-semibold tracking-tight">Starting Guides & Tutorials</h3>
                     <ul>

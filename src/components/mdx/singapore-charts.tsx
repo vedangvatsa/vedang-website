@@ -13,16 +13,16 @@ export function GDPGrowthTimeline() {
   const max = 95000;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">GDP Per Capita Growth</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">GDP Per Capita Growth</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Singapore, current USD, 1965-2024</p>
 
         <div className="space-y-2">
           {data.map((d, i) => (
             <div key={d.year} className="grid grid-cols-[50px_1fr_55px] gap-3 items-center">
               <span className="text-xs text-muted-foreground font-medium">{d.year}</span>
-              <div className="w-full h-4 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <div className="w-full h-4 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
                   style={{
@@ -32,7 +32,7 @@ export function GDPGrowthTimeline() {
                   }}
                 />
               </div>
-              <span className={`text-xs font-bold text-right ${i === data.length - 1 ? 'text-primary' : 'text-[#37352f] dark:text-[rgba(255,255,255,0.81)]'}`}>{d.label}</span>
+              <span className={`text-xs font-bold text-right ${i === data.length - 1 ? 'text-primary' : 'text-[#37352f]'}`}>{d.label}</span>
             </div>
           ))}
         </div>
@@ -56,27 +56,27 @@ export function GovernanceScorecard() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Singapore's Global Rankings</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Singapore's Global Rankings</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Performance across major international indices</p>
 
         <div className="overflow-x-auto -mx-2">
           <table className="w-full text-xs border-collapse min-w-[450px]">
             <thead>
-              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Index</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Rank</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Detail</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Source</th>
+              <tr className="border-b-2 border-[#e3e3e0]">
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Index</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Rank</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Detail</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Source</th>
               </tr>
             </thead>
             <tbody>
               {metrics.map((m) => (
-                <tr key={m.index} className="border-b border-[#e3e3e0]/60 dark:border-zinc-800/40">
-                  <td className="py-2.5 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{m.index}</td>
+                <tr key={m.index} className="border-b border-[#e3e3e0]/60">
+                  <td className="py-2.5 px-2 font-bold text-[#37352f]">{m.index}</td>
                   <td className="py-2.5 px-2 text-primary font-bold">{m.rank}</td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">{m.score}</td>
+                  <td className="py-2.5 px-2 text-[#37352f]/80">{m.score}</td>
                   <td className="py-2.5 px-2 text-muted-foreground">{m.source}</td>
                 </tr>
               ))}
@@ -100,27 +100,27 @@ export function IndustrialEvolution() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Industrial Policy Evolution</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Industrial Policy Evolution</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Six decades of deliberate value-chain migration</p>
 
         <div className="overflow-x-auto -mx-2">
           <table className="w-full text-xs border-collapse min-w-[500px]">
             <thead>
-              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Era</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Focus</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Key sectors</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Driver</th>
+              <tr className="border-b-2 border-[#e3e3e0]">
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Era</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Focus</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Key sectors</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Driver</th>
               </tr>
             </thead>
             <tbody>
               {eras.map((e, i) => (
-                <tr key={e.decade} className={`border-b border-[#e3e3e0]/60 dark:border-zinc-800/40 ${i === eras.length - 1 ? 'bg-primary/5' : ''}`}>
-                  <td className={`py-2.5 px-2 font-bold ${i === eras.length - 1 ? 'text-primary' : 'text-[#37352f] dark:text-[rgba(255,255,255,0.81)]'}`}>{e.decade}</td>
-                  <td className="py-2.5 px-2 font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{e.focus}</td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">{e.detail}</td>
+                <tr key={e.decade} className={`border-b border-[#e3e3e0]/60 ${i === eras.length - 1 ? 'bg-primary/5' : ''}`}>
+                  <td className={`py-2.5 px-2 font-bold ${i === eras.length - 1 ? 'text-primary' : 'text-[#37352f]'}`}>{e.decade}</td>
+                  <td className="py-2.5 px-2 font-medium text-[#37352f]">{e.focus}</td>
+                  <td className="py-2.5 px-2 text-[#37352f]/80">{e.detail}</td>
                   <td className="py-2.5 px-2 text-muted-foreground">{e.driver}</td>
                 </tr>
               ))}
@@ -147,34 +147,34 @@ export function HealthcareComparison() {
   ];
 
   const effColor: Record<string, string> = {
-    'Highest': 'text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-950/30',
-    'High': 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/30',
-    'Moderate': 'text-yellow-700 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-950/30',
-    'Low': 'text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950/30',
+    'Highest': 'text-green-600 bg-green-50',
+    'High': 'text-blue-600 bg-blue-50',
+    'Moderate': 'text-yellow-700 bg-yellow-50',
+    'Low': 'text-red-600 bg-red-50',
   };
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Healthcare Efficiency</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Healthcare Efficiency</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Health spending (% GDP) vs. life expectancy (years)</p>
 
         <div className="overflow-x-auto -mx-2">
           <table className="w-full text-xs border-collapse min-w-[400px]">
             <thead>
-              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Country</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Spending</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Life exp.</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Efficiency</th>
+              <tr className="border-b-2 border-[#e3e3e0]">
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Country</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Spending</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Life exp.</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Efficiency</th>
               </tr>
             </thead>
             <tbody>
               {countries.map((c) => (
-                <tr key={c.name} className="border-b border-[#e3e3e0]/60 dark:border-zinc-800/40">
-                  <td className="py-2.5 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{c.name}</td>
+                <tr key={c.name} className="border-b border-[#e3e3e0]/60">
+                  <td className="py-2.5 px-2 font-bold text-[#37352f]">{c.name}</td>
                   <td className="py-2.5 px-2 text-primary font-semibold">{c.spending}%</td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">{c.lifeExp} yrs</td>
+                  <td className="py-2.5 px-2 text-[#37352f]/80">{c.lifeExp} yrs</td>
                   <td className="py-2.5 px-2">
                     <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${effColor[c.efficiency]}`}>{c.efficiency}</span>
                   </td>
@@ -195,38 +195,38 @@ export function HealthcareComparison() {
 /* ─── Inequality Snapshot ─── */
 export function InequalitySnapshot() {
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Inequality in Singapore</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Inequality in Singapore</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Income vs. wealth distribution, 2024</p>
 
         <div className="grid grid-cols-2 gap-4 mb-4">
-          <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-4 text-center">
+          <div className="rounded-[3px] border border-[#e3e3e0] p-4 text-center">
             <div className="text-2xl font-bold text-primary">0.435</div>
-            <div className="text-xs font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)] mt-1">Gini (before transfers)</div>
+            <div className="text-xs font-medium text-[#37352f] mt-1">Gini (before transfers)</div>
           </div>
           <div className="rounded-[3px] border border-primary/30 bg-primary/5 p-4 text-center">
             <div className="text-2xl font-bold text-primary">0.364</div>
-            <div className="text-xs font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)] mt-1">Gini (after transfers)</div>
+            <div className="text-xs font-medium text-[#37352f] mt-1">Gini (after transfers)</div>
             <div className="text-[10px] text-muted-foreground">Lowest since 2000</div>
           </div>
         </div>
 
         <div className="space-y-2">
           <div className="flex justify-between text-xs">
-            <span className="text-[#37352f] dark:text-[rgba(255,255,255,0.81)] font-medium">Top 1% share of household wealth</span>
-            <span className="font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">14%</span>
+            <span className="text-[#37352f] font-medium">Top 1% share of household wealth</span>
+            <span className="font-bold text-[#37352f]">14%</span>
           </div>
           <div className="flex justify-between text-xs">
-            <span className="text-[#37352f] dark:text-[rgba(255,255,255,0.81)] font-medium">Top 5% share of household wealth</span>
-            <span className="font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">33%</span>
+            <span className="text-[#37352f] font-medium">Top 5% share of household wealth</span>
+            <span className="font-bold text-[#37352f]">33%</span>
           </div>
           <div className="flex justify-between text-xs">
-            <span className="text-[#37352f] dark:text-[rgba(255,255,255,0.81)] font-medium">Wealth Gini coefficient</span>
-            <span className="font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">0.55</span>
+            <span className="text-[#37352f] font-medium">Wealth Gini coefficient</span>
+            <span className="font-bold text-[#37352f]">0.55</span>
           </div>
           <div className="flex justify-between text-xs">
-            <span className="text-[#37352f] dark:text-[rgba(255,255,255,0.81)] font-medium">Home ownership rate</span>
+            <span className="text-[#37352f] font-medium">Home ownership rate</span>
             <span className="font-bold text-primary">90.8%</span>
           </div>
         </div>
@@ -257,29 +257,29 @@ export function TransferabilityGrid() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-center text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">What Can Be Transferred</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-center text-[#37352f]">What Can Be Transferred</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold text-center">Policy lessons from Singapore's development model</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-[#f7f6f3] dark:bg-zinc-800/30 p-5">
+          <div className="rounded-[3px] border border-[#e3e3e0] bg-[#f7f6f3] p-5">
             <div className="text-xs font-bold uppercase tracking-widest text-primary mb-3">Transferable</div>
             <ul className="space-y-2">
               {transferable.map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">
+                <li key={item} className="flex items-start gap-2 text-sm text-[#37352f]/80">
                   <span className="text-primary mt-0.5 shrink-0">&#x2713;</span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
-          <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-[#f7f6f3] dark:bg-zinc-800/30 p-5">
-            <div className="text-xs font-bold uppercase tracking-widest text-[#37352f]/60 dark:text-zinc-400 mb-3">Context-specific</div>
+          <div className="rounded-[3px] border border-[#e3e3e0] bg-[#f7f6f3] p-5">
+            <div className="text-xs font-bold uppercase tracking-widest text-[#37352f]/60 mb-3">Context-specific</div>
             <ul className="space-y-2">
               {nonTransferable.map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">
-                  <span className="text-[#37352f]/40 dark:text-zinc-500 mt-0.5 shrink-0">&#x2715;</span>
+                <li key={item} className="flex items-start gap-2 text-sm text-[#37352f]/80">
+                  <span className="text-[#37352f]/40 mt-0.5 shrink-0">&#x2715;</span>
                   {item}
                 </li>
               ))}

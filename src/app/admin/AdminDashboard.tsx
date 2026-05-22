@@ -285,7 +285,7 @@ export default function AdminDashboard({ platforms }: { platforms: Record<string
                             </span>
                             <span className={`text-[11px] px-2.5 py-1 rounded-full font-semibold tracking-wider uppercase ${
                               post.error ? 'bg-destructive text-destructive-foreground' :
-                              post.posted ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400' :
+                              post.posted ? 'bg-emerald-500/10 text-emerald-600' :
                               'bg-primary/10 text-primary'
                             }`}>
                               {post.error ? 'Error' : post.posted ? 'Posted' : 'Pending'}

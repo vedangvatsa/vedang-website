@@ -16,19 +16,19 @@ export function YCIndustryBreakdown() {
   const max = 3000;
 
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-7">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">YC Portfolio by Industry</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">YC Portfolio by Industry</h3>
         <p className="text-[10px] text-muted-foreground mb-3 uppercase tracking-widest font-semibold">5,818 companies, all-time</p>
 
         <div className="space-y-1.5">
           {data.map((d, i) => (
             <div key={d.industry} className="grid grid-cols-[80px_1fr_50px] gap-2 items-center">
               <span className="text-[11px] text-muted-foreground font-medium">{d.industry}</span>
-              <div className="w-full h-3.5 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-sm overflow-hidden">
+              <div className="w-full h-3.5 bg-[#f7f6f3] rounded-sm overflow-hidden">
                 <div className="h-full rounded-sm" style={{ width: `${(d.count / max) * 100}%`, backgroundColor: d.color }} />
               </div>
-              <span className={`text-[11px] font-bold text-right ${i === 0 ? 'text-primary' : 'text-[#37352f] dark:text-[rgba(255,255,255,0.81)]'}`}>{d.pct}</span>
+              <span className={`text-[11px] font-bold text-right ${i === 0 ? 'text-primary' : 'text-[#37352f]'}`}>{d.pct}</span>
             </div>
           ))}
         </div>
@@ -61,9 +61,9 @@ export function RecentBatchComposition() {
   };
 
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-7">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Batch Composition</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Batch Composition</h3>
         <p className="text-[10px] text-muted-foreground mb-3 uppercase tracking-widest font-semibold">Industry mix, W25 - S26 (est. %)</p>
 
         <div className="space-y-2">
@@ -102,27 +102,27 @@ export function RecentBatchComposition() {
 /* ─── Agent Layer Taxonomy ─── */
 export function AgentLayerTaxonomy() {
   const layers = [
-    { layer: 'Agent Infrastructure', desc: 'Compute, hosting, orchestration, memory, identity', examples: 'Terminal Use, Klaus AI, Cumulus Labs, Chamber, Maven, Moda', count: '~65', badge: 'Foundation', badgeColor: 'bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400' },
-    { layer: 'Agent Development', desc: 'IDEs, testing, evaluation, debugging for agents', examples: 'Canary, Sentrial, Ashr, Lark, Benchspan, Janus', count: '~40', badge: 'Tooling', badgeColor: 'bg-purple-50 dark:bg-purple-950/30 text-purple-600 dark:text-purple-400' },
-    { layer: 'Vertical Agent Apps', desc: 'Domain-specific agent workers (legal, healthcare, finance)', examples: 'Lexi, Aegis, Cranston AI, Eos AI, Wayco, Foreman', count: '~110', badge: 'Application', badgeColor: 'bg-green-50 dark:bg-green-950/30 text-green-600 dark:text-green-400' },
-    { layer: 'Agent Enablement', desc: 'Security, compliance, monitoring, payments for agents', examples: 'Salus, BeeSafe AI, Multifactor, Oximy, Protent, GhostEye', count: '~30', badge: 'Governance', badgeColor: 'bg-amber-50 dark:bg-amber-950/30 text-amber-600 dark:text-amber-400' },
+    { layer: 'Agent Infrastructure', desc: 'Compute, hosting, orchestration, memory, identity', examples: 'Terminal Use, Klaus AI, Cumulus Labs, Chamber, Maven, Moda', count: '~65', badge: 'Foundation', badgeColor: 'bg-blue-50 text-blue-600' },
+    { layer: 'Agent Development', desc: 'IDEs, testing, evaluation, debugging for agents', examples: 'Canary, Sentrial, Ashr, Lark, Benchspan, Janus', count: '~40', badge: 'Tooling', badgeColor: 'bg-purple-50 text-purple-600' },
+    { layer: 'Vertical Agent Apps', desc: 'Domain-specific agent workers (legal, healthcare, finance)', examples: 'Lexi, Aegis, Cranston AI, Eos AI, Wayco, Foreman', count: '~110', badge: 'Application', badgeColor: 'bg-green-50 text-green-600' },
+    { layer: 'Agent Enablement', desc: 'Security, compliance, monitoring, payments for agents', examples: 'Salus, BeeSafe AI, Multifactor, Oximy, Protent, GhostEye', count: '~30', badge: 'Governance', badgeColor: 'bg-amber-50 text-amber-600' },
   ];
 
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-7">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Agent Stack</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Agent Stack</h3>
         <p className="text-[10px] text-muted-foreground mb-3 uppercase tracking-widest font-semibold">YC agent portfolio by infrastructure layer</p>
 
         <div className="space-y-2">
           {layers.map((l) => (
-            <div key={l.layer} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3">
+            <div key={l.layer} className="rounded-[3px] border border-[#e3e3e0] p-3">
               <div className="flex items-center gap-2 mb-1">
                 <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${l.badgeColor}`}>{l.badge}</span>
-                <span className="text-xs font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{l.layer}</span>
+                <span className="text-xs font-bold text-[#37352f]">{l.layer}</span>
                 <span className="ml-auto text-[11px] font-bold text-primary">{l.count}</span>
               </div>
-              <p className="text-[11px] text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)] leading-snug">{l.desc}</p>
+              <p className="text-[11px] text-[#37352f]/80 leading-snug">{l.desc}</p>
               <p className="text-[10px] text-muted-foreground mt-0.5">{l.examples}</p>
             </div>
           ))}
@@ -149,16 +149,16 @@ export function YCGeoConcentration() {
   const max = 55;
 
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-7">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Geographic Distribution</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Geographic Distribution</h3>
         <p className="text-[10px] text-muted-foreground mb-3 uppercase tracking-widest font-semibold">HQ location of YC companies</p>
 
         <div className="space-y-1.5">
           {data.map((d) => (
             <div key={d.region} className="grid grid-cols-[100px_1fr_40px] gap-2 items-center">
               <span className={`text-[11px] font-medium ${d.highlight ? 'text-primary font-bold' : 'text-muted-foreground'}`}>{d.region}</span>
-              <div className="w-full h-3.5 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-sm overflow-hidden">
+              <div className="w-full h-3.5 bg-[#f7f6f3] rounded-sm overflow-hidden">
                 <div
                   className="h-full rounded-sm"
                   style={{
@@ -168,7 +168,7 @@ export function YCGeoConcentration() {
                   }}
                 />
               </div>
-              <span className={`text-[11px] font-bold text-right ${d.highlight ? 'text-primary' : 'text-[#37352f] dark:text-[rgba(255,255,255,0.81)]'}`}>{d.pct}%</span>
+              <span className={`text-[11px] font-bold text-right ${d.highlight ? 'text-primary' : 'text-[#37352f]'}`}>{d.pct}%</span>
             </div>
           ))}
         </div>
@@ -195,26 +195,26 @@ export function AgentForXPattern() {
   ];
 
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-7">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The "Agent for X" Pattern</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The "Agent for X" Pattern</h3>
         <p className="text-[10px] text-muted-foreground mb-3 uppercase tracking-widest font-semibold">Every vertical gets its own agent workforce</p>
 
         <div className="overflow-x-auto -mx-1">
           <table className="w-full text-[11px] border-collapse min-w-[440px]">
             <thead>
-              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
-                <th className="text-left py-1.5 px-1.5 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider text-[10px]">Vertical</th>
-                <th className="text-left py-1.5 px-1.5 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider text-[10px]">YC Companies</th>
-                <th className="text-left py-1.5 px-1.5 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider text-[10px]">Batches</th>
+              <tr className="border-b-2 border-[#e3e3e0]">
+                <th className="text-left py-1.5 px-1.5 font-bold text-[#37352f] uppercase tracking-wider text-[10px]">Vertical</th>
+                <th className="text-left py-1.5 px-1.5 font-bold text-[#37352f] uppercase tracking-wider text-[10px]">YC Companies</th>
+                <th className="text-left py-1.5 px-1.5 font-bold text-[#37352f] uppercase tracking-wider text-[10px]">Batches</th>
               </tr>
             </thead>
             <tbody>
               {verticals.map((v) => (
-                <tr key={v.vertical} className="border-b border-[#e3e3e0]/60 dark:border-zinc-800/40">
-                  <td className="py-2 px-1.5 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{v.vertical}</td>
-                  <td className="py-2 px-1.5 text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">{v.examples}</td>
-                  <td className="py-2 px-1.5"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400">{v.batches}</span></td>
+                <tr key={v.vertical} className="border-b border-[#e3e3e0]/60">
+                  <td className="py-2 px-1.5 font-bold text-[#37352f]">{v.vertical}</td>
+                  <td className="py-2 px-1.5 text-[#37352f]/80">{v.examples}</td>
+                  <td className="py-2 px-1.5"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-blue-50 text-blue-600">{v.batches}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -240,18 +240,18 @@ export function DefenseHardwareSurge() {
   ];
 
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-7">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Hard-Tech Resurgence</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Hard-Tech Resurgence</h3>
         <p className="text-[10px] text-muted-foreground mb-3 uppercase tracking-widest font-semibold">Defense, robotics, energy, space in recent batches</p>
 
         <div className="space-y-2">
           {data.map((d) => (
-            <div key={d.category} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 px-3 py-2">
+            <div key={d.category} className="rounded-[3px] border border-[#e3e3e0] px-3 py-2">
               <div className="flex items-center justify-between">
-                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{d.category}</span>
+                <span className="text-[11px] font-bold text-[#37352f]">{d.category}</span>
                 <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-green-50 dark:bg-green-950/30 text-green-600 dark:text-green-400">{d.trend}</span>
+                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-green-50 text-green-600">{d.trend}</span>
                   <span className="text-[11px] font-bold text-primary">{d.count}</span>
                 </div>
               </div>
@@ -279,26 +279,26 @@ export function TaglineArchaeology() {
   ];
 
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-7">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Language of Ambition</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Language of Ambition</h3>
         <p className="text-[10px] text-muted-foreground mb-3 uppercase tracking-widest font-semibold">How YC taglines reveal the dominant startup strategy per era</p>
 
         <div className="overflow-x-auto -mx-1">
           <table className="w-full text-[11px] border-collapse min-w-[400px]">
             <thead>
-              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
-                <th className="text-left py-1.5 px-1.5 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider text-[10px]">Era</th>
-                <th className="text-left py-1.5 px-1.5 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider text-[10px]">Dominant Pattern</th>
-                <th className="text-left py-1.5 px-1.5 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider text-[10px]">Signal</th>
+              <tr className="border-b-2 border-[#e3e3e0]">
+                <th className="text-left py-1.5 px-1.5 font-bold text-[#37352f] uppercase tracking-wider text-[10px]">Era</th>
+                <th className="text-left py-1.5 px-1.5 font-bold text-[#37352f] uppercase tracking-wider text-[10px]">Dominant Pattern</th>
+                <th className="text-left py-1.5 px-1.5 font-bold text-[#37352f] uppercase tracking-wider text-[10px]">Signal</th>
               </tr>
             </thead>
             <tbody>
               {eras.map((e, i) => (
-                <tr key={e.era} className={`border-b border-[#e3e3e0]/60 dark:border-zinc-800/40 ${i === eras.length - 1 ? 'bg-primary/5' : ''}`}>
-                  <td className="py-2 px-1.5 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{e.era}</td>
-                  <td className="py-2 px-1.5 text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">{e.pattern}</td>
-                  <td className="py-2 px-1.5"><span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${i === eras.length - 1 ? 'bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400' : 'bg-zinc-100 dark:bg-zinc-800/40 text-zinc-600 dark:text-zinc-400'}`}>{e.signal}</span></td>
+                <tr key={e.era} className={`border-b border-[#e3e3e0]/60 ${i === eras.length - 1 ? 'bg-primary/5' : ''}`}>
+                  <td className="py-2 px-1.5 font-bold text-[#37352f]">{e.era}</td>
+                  <td className="py-2 px-1.5 text-[#37352f]/80">{e.pattern}</td>
+                  <td className="py-2 px-1.5"><span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${i === eras.length - 1 ? 'bg-blue-50 text-blue-600' : 'bg-zinc-100 text-zinc-600'}`}>{e.signal}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -335,16 +335,16 @@ export function BatchSizeTimeline() {
   const max = 240;
 
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-7">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Batch Size Evolution</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Batch Size Evolution</h3>
         <p className="text-[10px] text-muted-foreground mb-3 uppercase tracking-widest font-semibold">Companies per batch, 2005-2026</p>
 
         <div className="space-y-1">
           {data.map((d, i) => (
             <div key={d.batch} className="grid grid-cols-[32px_1fr_32px] gap-2 items-center">
               <span className="text-[10px] text-muted-foreground font-medium">{d.batch}</span>
-              <div className="w-full h-2.5 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-sm overflow-hidden">
+              <div className="w-full h-2.5 bg-[#f7f6f3] rounded-sm overflow-hidden">
                 <div
                   className="h-full rounded-sm"
                   style={{
@@ -354,7 +354,7 @@ export function BatchSizeTimeline() {
                   }}
                 />
               </div>
-              <span className="text-[10px] font-bold text-right text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{d.count}</span>
+              <span className="text-[10px] font-bold text-right text-[#37352f]">{d.count}</span>
             </div>
           ))}
         </div>

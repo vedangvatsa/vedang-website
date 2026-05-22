@@ -15,32 +15,32 @@ export function RegulatoryFriction() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Business Registration Speed</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Business Registration Speed</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Time to legally incorporate, selected jurisdictions (2025-2026)</p>
 
         <div className="overflow-x-auto -mx-2">
           <table className="w-full text-xs border-collapse min-w-[520px]">
             <thead>
-              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Jurisdiction</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Time</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Digital-first</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Notes</th>
+              <tr className="border-b-2 border-[#e3e3e0]">
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Jurisdiction</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Time</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Digital-first</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Notes</th>
               </tr>
             </thead>
             <tbody>
               {data.map((d) => (
-                <tr key={d.country} className="border-b border-[#e3e3e0]/60 dark:border-zinc-800/40">
-                  <td className="py-2.5 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{d.country}</td>
+                <tr key={d.country} className="border-b border-[#e3e3e0]/60">
+                  <td className="py-2.5 px-2 font-bold text-[#37352f]">{d.country}</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${d.digital ? 'bg-green-50 dark:bg-green-950/30 text-green-600 dark:text-green-400' : 'bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-400'}`}>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${d.digital ? 'bg-green-50 text-green-600' : 'bg-amber-50 text-amber-700'}`}>
                       {d.time}
                     </span>
                   </td>
-                  <td className="py-2.5 px-2">{d.digital ? <span className="text-green-600 dark:text-green-400 text-[10px] font-bold">Yes</span> : <span className="text-amber-600 dark:text-amber-400 text-[10px] font-bold">Partial</span>}</td>
-                  <td className="py-2.5 px-2 text-[#37352f]/70 dark:text-[rgba(255,255,255,0.55)]">{d.note}</td>
+                  <td className="py-2.5 px-2">{d.digital ? <span className="text-green-600 text-[10px] font-bold">Yes</span> : <span className="text-amber-600 text-[10px] font-bold">Partial</span>}</td>
+                  <td className="py-2.5 px-2 text-[#37352f]/70">{d.note}</td>
                 </tr>
               ))}
             </tbody>
@@ -66,28 +66,28 @@ export function BureaucracyCostChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Friction Tax by Sector</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Friction Tax by Sector</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Regulatory approval cost and time across industries</p>
 
         <div className="overflow-x-auto -mx-2">
           <table className="w-full text-xs border-collapse min-w-[520px]">
             <thead>
-              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Sector</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Process</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Approx. cost</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Timeline</th>
+              <tr className="border-b-2 border-[#e3e3e0]">
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Sector</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Process</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Approx. cost</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Timeline</th>
               </tr>
             </thead>
             <tbody>
               {sectors.map((s) => (
-                <tr key={s.sector} className="border-b border-[#e3e3e0]/60 dark:border-zinc-800/40">
-                  <td className="py-2.5 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{s.sector}</td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">{s.metric}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-red-50 dark:bg-red-950/30 text-red-600 dark:text-red-400">{s.cost}</span></td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-400">{s.time}</span></td>
+                <tr key={s.sector} className="border-b border-[#e3e3e0]/60">
+                  <td className="py-2.5 px-2 font-bold text-[#37352f]">{s.sector}</td>
+                  <td className="py-2.5 px-2 text-[#37352f]/80">{s.metric}</td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-red-50 text-red-600">{s.cost}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-50 text-amber-700">{s.time}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -115,20 +115,20 @@ export function EGovernanceMaturity() {
   const max = 100;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Digital Governance Leaders</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Digital Governance Leaders</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">E-governance maturity, selected countries (UN EGDI-adjacent scoring)</p>
 
         <div className="space-y-3">
           {countries.map((c, i) => (
             <div key={c.country} className="grid grid-cols-[100px_1fr] gap-3 items-start">
               <div>
-                <div className="text-xs font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{c.country}</div>
+                <div className="text-xs font-bold text-[#37352f]">{c.country}</div>
                 <div className="text-[10px] text-muted-foreground">{c.services}</div>
               </div>
               <div>
-                <div className="w-full h-3 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden mb-1">
+                <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden mb-1">
                   <div
                     className="h-full rounded-md"
                     style={{
@@ -138,7 +138,7 @@ export function EGovernanceMaturity() {
                     }}
                   />
                 </div>
-                <div className="text-[10px] text-[#37352f]/60 dark:text-[rgba(255,255,255,0.45)]">{c.highlight}</div>
+                <div className="text-[10px] text-[#37352f]/60">{c.highlight}</div>
               </div>
             </div>
           ))}
@@ -167,16 +167,16 @@ export function RegulatoryGrowth() {
   const max = 110000;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">US Federal Register Growth</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">US Federal Register Growth</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Pages published per year (rules, proposed rules, notices)</p>
 
         <div className="space-y-1.5">
           {data.map((d) => (
             <div key={d.year} className="grid grid-cols-[50px_1fr_80px] gap-2 items-center">
               <span className="text-xs text-muted-foreground font-medium">{d.year}</span>
-              <div className="w-full h-4 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <div className="w-full h-4 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
                   style={{
@@ -187,7 +187,7 @@ export function RegulatoryGrowth() {
                 />
               </div>
               <div className="text-right">
-                <span className={`text-xs font-bold ${d.year === '2024' ? 'text-red-600 dark:text-red-400' : 'text-[#37352f] dark:text-[rgba(255,255,255,0.81)]'}`}>
+                <span className={`text-xs font-bold ${d.year === '2024' ? 'text-red-600' : 'text-[#37352f]'}`}>
                   {(d.pages / 1000).toFixed(1)}K
                 </span>
               </div>

@@ -14,9 +14,9 @@ export function SensoryBandwidthChart() {
   const max = 10000000;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Human Sensory Bandwidth</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Human Sensory Bandwidth</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">~11 million bits per second across all channels</p>
 
         <div className="space-y-3">
@@ -24,9 +24,9 @@ export function SensoryBandwidthChart() {
             <div key={s.name} className="grid grid-cols-[70px_1fr_90px] gap-3 items-center">
               <div className="flex items-center gap-1.5">
                 <div className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: s.covered ? 'hsl(160 80% 35%)' : 'hsl(0 70% 50%)' }} />
-                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{s.name}</span>
+                <span className="text-[11px] font-bold text-[#37352f]">{s.name}</span>
               </div>
-              <div className="w-full h-5 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <div className="w-full h-5 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
                   style={{ width: `${Math.max((Math.log10(s.bps) / Math.log10(max)) * 100, 8)}%`, backgroundColor: s.color, opacity: 0.55 }}
@@ -37,7 +37,7 @@ export function SensoryBandwidthChart() {
           ))}
         </div>
 
-        <div className="flex items-center gap-4 mt-4 pt-3 border-t border-[#e3e3e0] dark:border-zinc-800">
+        <div className="flex items-center gap-4 mt-4 pt-3 border-t border-[#e3e3e0]">
           <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full bg-[hsl(160_80%_35%)]" /><span className="text-[10px] text-muted-foreground">Covered by current internet</span></div>
           <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full bg-[hsl(0_70%_50%)]" /><span className="text-[10px] text-muted-foreground">Not covered</span></div>
         </div>
@@ -59,22 +59,22 @@ export function HapticGenerationsChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Three Generations of Haptic Technology</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Three Generations of Haptic Technology</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">From binary vibration to spatial force feedback</p>
 
         <div className="space-y-4">
           {gens.map((g) => (
-            <div key={g.gen} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-4" style={{ borderLeftWidth: '3px', borderLeftColor: g.color }}>
+            <div key={g.gen} className="rounded-[3px] border border-[#e3e3e0] p-4" style={{ borderLeftWidth: '3px', borderLeftColor: g.color }}>
               <div className="flex items-baseline justify-between mb-2">
                 <div>
                   <span className="text-xs font-bold uppercase tracking-wider" style={{ color: g.color }}>{g.gen}</span>
-                  <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] ml-2">{g.name}</span>
+                  <span className="text-[11px] font-bold text-[#37352f] ml-2">{g.name}</span>
                 </div>
                 <span className="text-[10px] text-muted-foreground">{g.era}</span>
               </div>
-              <div className="w-full h-3 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden mb-2">
+              <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden mb-2">
                 <div className="h-full rounded-md" style={{ width: `${g.width}%`, backgroundColor: g.color, opacity: 0.5 }} />
               </div>
               <div className="flex justify-between">
@@ -101,25 +101,25 @@ export function SpatialComputingAdoption() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Spatial Computing Hardware Adoption</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Spatial Computing Hardware Adoption</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Premium vs. accessible strategies, 2024-2025</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Apple */}
-          <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-4" style={{ borderTopWidth: '3px', borderTopColor: 'hsl(0 0% 20%)' }}>
-            <div className="text-xs font-bold uppercase tracking-wider text-[#37352f] dark:text-[rgba(255,255,255,0.81)] mb-3">Apple Vision Pro</div>
+          <div className="rounded-[3px] border border-[#e3e3e0] p-4" style={{ borderTopWidth: '3px', borderTopColor: 'hsl(0 0% 20%)' }}>
+            <div className="text-xs font-bold uppercase tracking-wider text-[#37352f] mb-3">Apple Vision Pro</div>
             <div className="space-y-2">
-              <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">2024 shipments</span><span className="text-lg font-black text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">390K</span></div>
+              <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">2024 shipments</span><span className="text-lg font-black text-[#37352f]">390K</span></div>
               <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">2025 shipments</span><span className="text-lg font-black text-red-500">45K</span></div>
               <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">Price</span><span className="text-[11px] font-bold">$3,499</span></div>
               <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">Pivot</span><span className="text-[10px]">Enterprise / luxury retail</span></div>
             </div>
           </div>
           {/* Meta */}
-          <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-4" style={{ borderTopWidth: '3px', borderTopColor: 'hsl(210 90% 40%)' }}>
-            <div className="text-xs font-bold uppercase tracking-wider text-[#37352f] dark:text-[rgba(255,255,255,0.81)] mb-3">Meta Quest 3 / 3S</div>
+          <div className="rounded-[3px] border border-[#e3e3e0] p-4" style={{ borderTopWidth: '3px', borderTopColor: 'hsl(210 90% 40%)' }}>
+            <div className="text-xs font-bold uppercase tracking-wider text-[#37352f] mb-3">Meta Quest 3 / 3S</div>
             <div className="space-y-2">
               <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">Market share</span><span className="text-lg font-black" style={{ color: 'hsl(210 90% 40%)' }}>60-80%</span></div>
               <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">2025 users</span><span className="text-[11px] font-bold text-green-600">All-time record</span></div>
@@ -148,15 +148,15 @@ export function BCILandscapeChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Brain-Computer Interface Landscape</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Brain-Computer Interface Landscape</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">$2.3-3B market (2025), projected $13-15B by 2035</p>
 
         <div className="space-y-2">
           {players.map((p) => (
             <div key={p.name} className="grid grid-cols-[100px_1fr_75px_90px] gap-2 items-center border-l-[3px] pl-3 py-2" style={{ borderLeftColor: p.color }}>
-              <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{p.name}</span>
+              <span className="text-[11px] font-bold text-[#37352f]">{p.name}</span>
               <span className="text-[10px] text-muted-foreground">{p.approach}</span>
               <span className="text-[10px] text-muted-foreground text-center">{p.electrodes}</span>
               <span className="text-[10px] font-medium text-right" style={{ color: p.color }}>{p.status}</span>
@@ -183,17 +183,17 @@ export function SensoryStackTimeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Sensory Internet Timeline</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Sensory Internet Timeline</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">From text to full neural bandwidth</p>
 
         <div className="space-y-3">
           {phases.map((p) => (
-            <div key={p.era} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3" style={{ borderLeftWidth: '3px', borderLeftColor: p.color }}>
+            <div key={p.era} className="rounded-[3px] border border-[#e3e3e0] p-3" style={{ borderLeftWidth: '3px', borderLeftColor: p.color }}>
               <div className="flex items-baseline gap-3 mb-1">
                 <span className="text-xs font-black" style={{ color: p.color }}>{p.era}</span>
-                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{p.label}</span>
+                <span className="text-[11px] font-bold text-[#37352f]">{p.label}</span>
               </div>
               <div className="flex flex-wrap gap-1.5">
                 {p.channels.map((c) => (
@@ -225,19 +225,19 @@ export function PresenceThresholdChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Presence Threshold Progress</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Presence Threshold Progress</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How close each requirement is to the perceptual threshold</p>
 
         <div className="space-y-2">
           {reqs.map((r) => (
             <div key={r.metric}>
               <div className="flex items-baseline justify-between mb-1">
-                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{r.metric}</span>
+                <span className="text-[11px] font-bold text-[#37352f]">{r.metric}</span>
                 <span className="text-[10px] text-muted-foreground">Target: {r.threshold}</span>
               </div>
-              <div className="w-full h-4 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden relative">
+              <div className="w-full h-4 bg-[#f7f6f3] rounded-md overflow-hidden relative">
                 <div
                   className="h-full rounded-md flex items-center justify-end pr-2"
                   style={{ width: `${r.pct}%`, backgroundColor: r.color, opacity: 0.5 }}
@@ -271,9 +271,9 @@ export function SensoryStackTable() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Sensory Internet Stack</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Sensory Internet Stack</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Current state → near-term (2028-2030) → long-term (2035+)</p>
 
         <div className="overflow-x-auto">
@@ -285,9 +285,9 @@ export function SensoryStackTable() {
               <span className="text-[10px] font-bold uppercase text-center" style={{ color: 'hsl(160 80% 35%)' }}>Long-Term</span>
             </div>
             {layers.map((l) => (
-              <div key={l.layer} className="grid grid-cols-[90px_1fr_1fr_1fr] gap-2 border-t border-[#e3e3e0] dark:border-zinc-800 py-2 items-center">
+              <div key={l.layer} className="grid grid-cols-[90px_1fr_1fr_1fr] gap-2 border-t border-[#e3e3e0] py-2 items-center">
                 <span className="text-[11px] font-bold" style={{ color: l.color }}>{l.layer}</span>
-                <span className="text-[10px] text-muted-foreground text-center bg-[#f7f6f3] dark:bg-zinc-800/40 px-2 py-1.5 rounded-md">{l.current}</span>
+                <span className="text-[10px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1.5 rounded-md">{l.current}</span>
                 <span className="text-[10px] text-center px-2 py-1.5 rounded-md" style={{ backgroundColor: 'hsl(210 90% 40% / 0.06)' }}>{l.nearTerm}</span>
                 <span className="text-[10px] text-center px-2 py-1.5 rounded-md font-medium" style={{ backgroundColor: 'hsl(160 80% 35% / 0.06)', color: 'hsl(160 80% 35%)' }}>{l.longTerm}</span>
               </div>

@@ -13,19 +13,19 @@ export function MarketProjectionChart() {
   const max = 5000;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Market Size Projections</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Market Size Projections</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold">Agentic commerce estimates by research firm</p>
 
         <div className="flex flex-col gap-5">
           {projections.map((p) => (
             <div key={p.firm} className="flex flex-col gap-1.5">
               <div className="flex items-baseline justify-between">
-                <span className="text-sm font-semibold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{p.firm}</span>
+                <span className="text-sm font-semibold text-[#37352f]">{p.firm}</span>
                 <span className="text-sm font-bold" style={{ color: p.color }}>{p.range}</span>
               </div>
-              <div className="w-full h-7 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden relative">
+              <div className="w-full h-7 bg-[#f7f6f3] rounded-md overflow-hidden relative">
                 {p.low === p.high ? (
                   <div
                     className="h-full rounded-md transition-all"
@@ -66,19 +66,19 @@ export function TrustGapChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Trust Gap</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Trust Gap</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold">% of US adults, 2025-2026</p>
 
         <div className="flex flex-col gap-6">
           {data.map((d) => (
             <div key={d.label} className="flex flex-col gap-1.5">
               <div className="flex items-baseline justify-between">
-                <span className="text-sm font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{d.label}</span>
+                <span className="text-sm font-medium text-[#37352f]">{d.label}</span>
                 <span className="text-xl font-bold" style={{ color: d.color }}>{d.value}%</span>
               </div>
-              <div className="w-full h-8 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <div className="w-full h-8 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md transition-all flex items-center justify-end pr-3"
                   style={{ width: `${d.value}%`, backgroundColor: d.color, opacity: 0.8 }}
@@ -103,16 +103,16 @@ export function ConsumerConcernsChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Top Consumer Concerns</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Top Consumer Concerns</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Why people hesitate to let agents buy for them</p>
 
         <div className="flex flex-col gap-4">
           {concerns.map((c) => (
             <div key={c.label} className="flex items-center gap-4">
-              <span className="text-sm font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)] w-40 shrink-0">{c.label}</span>
-              <div className="flex-1 h-6 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <span className="text-sm font-medium text-[#37352f] w-40 shrink-0">{c.label}</span>
+              <div className="flex-1 h-6 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
                   style={{ width: `${(c.value / 32) * 100}%`, backgroundColor: c.color, opacity: 0.75 }}
@@ -149,28 +149,28 @@ export function ValueShiftGrid() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-center text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">When the Buyer Is an Algorithm</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-center text-[#37352f]">When the Buyer Is an Algorithm</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold text-center">What changes in the value chain</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-[#f7f6f3] dark:bg-zinc-800/30 p-5">
-            <div className="text-xs font-bold uppercase tracking-widest text-[#37352f]/60 dark:text-zinc-400 mb-4">Loses value</div>
+          <div className="rounded-[3px] border border-[#e3e3e0] bg-[#f7f6f3] p-5">
+            <div className="text-xs font-bold uppercase tracking-widest text-[#37352f]/60 mb-4">Loses value</div>
             <ul className="space-y-2.5">
               {loses.map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-sm text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">
-                  <span className="text-[#37352f]/40 dark:text-zinc-500 mt-0.5 shrink-0">&#x2715;</span>
+                <li key={item} className="flex items-start gap-2.5 text-sm text-[#37352f]/80">
+                  <span className="text-[#37352f]/40 mt-0.5 shrink-0">&#x2715;</span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
-          <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-[#f7f6f3] dark:bg-zinc-800/30 p-5">
+          <div className="rounded-[3px] border border-[#e3e3e0] bg-[#f7f6f3] p-5">
             <div className="text-xs font-bold uppercase tracking-widest text-primary mb-4">Gains value</div>
             <ul className="space-y-2.5">
               {gains.map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-sm text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">
+                <li key={item} className="flex items-start gap-2.5 text-sm text-[#37352f]/80">
                   <span className="text-primary mt-0.5 shrink-0">&#x2713;</span>
                   {item}
                 </li>
@@ -210,23 +210,23 @@ export function InteractionModelsVisual() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Three Interaction Models</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Three Interaction Models</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold">McKinsey framework for agent-merchant communication</p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {models.map((m) => (
-            <div key={m.title} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-5 flex flex-col">
+            <div key={m.title} className="rounded-[3px] border border-[#e3e3e0] p-5 flex flex-col">
               <div className="text-sm font-bold mb-3" style={{ color: m.color }}>{m.title}</div>
               {/* Flow diagram */}
               <div className="flex items-center justify-center gap-2 mb-4">
-                <div className="text-[10px] font-semibold text-center px-2 py-1.5 rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-[#f7f6f3] dark:bg-zinc-800/30 leading-tight">{m.left}</div>
+                <div className="text-[10px] font-semibold text-center px-2 py-1.5 rounded-[3px] border border-[#e3e3e0] bg-[#f7f6f3] leading-tight">{m.left}</div>
                 <svg width="40" height="16" viewBox="0 0 40 16" className="shrink-0">
                   <line x1="0" y1="8" x2="32" y2="8" stroke={m.color} strokeWidth="2" />
                   <polygon points="32,3 40,8 32,13" fill={m.color} />
                 </svg>
-                <div className="text-[10px] font-semibold text-center px-2 py-1.5 rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-[#f7f6f3] dark:bg-zinc-800/30 leading-tight">{m.right}</div>
+                <div className="text-[10px] font-semibold text-center px-2 py-1.5 rounded-[3px] border border-[#e3e3e0] bg-[#f7f6f3] leading-tight">{m.right}</div>
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed flex-1">{m.desc}</p>
             </div>
@@ -253,9 +253,9 @@ export function TransactionFlowDiagram() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Anatomy of an Agentic Purchase</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Anatomy of an Agentic Purchase</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold">Six steps from intent to fulfillment</p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
@@ -264,7 +264,7 @@ export function TransactionFlowDiagram() {
               <div className="w-10 h-10 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center text-sm font-bold text-primary mb-2">
                 {s.num}
               </div>
-              <div className="text-xs font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] mb-0.5">{s.label}</div>
+              <div className="text-xs font-bold text-[#37352f] mb-0.5">{s.label}</div>
               <div className="text-[10px] text-muted-foreground leading-tight">{s.desc}</div>
               {i < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-5 -right-2 text-primary/40 text-xs">&#x2192;</div>
@@ -287,14 +287,14 @@ export function CommerceEvolutionTimeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-center text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Retail Evolution</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-center text-[#37352f]">The Retail Evolution</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold text-center">Each wave added a channel. This one removes the human.</p>
 
         <div className="relative">
           {/* Connecting line */}
-          <div className="hidden md:block absolute top-6 left-[10%] right-[10%] h-0.5 bg-[#e3e3e0] dark:bg-zinc-800" />
+          <div className="hidden md:block absolute top-6 left-[10%] right-[10%] h-0.5 bg-[#e3e3e0]" />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 relative">
             {eras.map((e) => (
               <div key={e.era} className="flex flex-col items-center text-center">
@@ -304,7 +304,7 @@ export function CommerceEvolutionTimeline() {
                 >
                   {e.era}
                 </div>
-                <div className="text-sm font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{e.label}</div>
+                <div className="text-sm font-bold text-[#37352f]">{e.label}</div>
                 <div className="text-[11px] text-muted-foreground mt-0.5">{e.desc}</div>
               </div>
             ))}
@@ -327,29 +327,29 @@ export function ProtocolComparisonTable() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Protocol Comparison Matrix</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Protocol Comparison Matrix</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Six standards driving agentic commerce interoperability</p>
 
         <div className="overflow-x-auto -mx-2">
           <table className="w-full text-xs border-collapse min-w-[600px]">
             <thead>
-              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Protocol</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Creator</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Type</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Payment method</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Status</th>
+              <tr className="border-b-2 border-[#e3e3e0]">
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Protocol</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Creator</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Type</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Payment method</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Status</th>
               </tr>
             </thead>
             <tbody>
               {protocols.map((p) => (
-                <tr key={p.name} className="border-b border-[#e3e3e0]/60 dark:border-zinc-800/40">
+                <tr key={p.name} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-primary">{p.name}</td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">{p.creator}</td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">{p.type}</td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80 dark:text-[rgba(255,255,255,0.65)]">{p.payment}</td>
+                  <td className="py-2.5 px-2 text-[#37352f]/80">{p.creator}</td>
+                  <td className="py-2.5 px-2 text-[#37352f]/80">{p.type}</td>
+                  <td className="py-2.5 px-2 text-[#37352f]/80">{p.payment}</td>
                   <td className="py-2.5 px-2 text-muted-foreground">{p.status}</td>
                 </tr>
               ))}
@@ -397,15 +397,15 @@ export function CompetitiveLandscape() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Competitive Landscape</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Competitive Landscape</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold">Who controls the agent controls what gets bought</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {players.map((p) => (
-            <div key={p.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-5">
-              <span className="text-sm font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{p.name}</span>
+            <div key={p.name} className="rounded-[3px] border border-[#e3e3e0] p-5">
+              <span className="text-sm font-bold text-[#37352f]">{p.name}</span>
               <div className="text-xs font-semibold text-muted-foreground mt-1 mb-2">{p.bet}</div>
               <p className="text-[11px] text-muted-foreground leading-relaxed">{p.detail}</p>
             </div>

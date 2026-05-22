@@ -45,7 +45,7 @@ export function AsSeenIn() {
                     height={40}
                     unoptimized={media.logo.endsWith('.svg')}
                     priority={index < 7}
-                    className="w-full h-8 sm:h-10 object-contain dark:brightness-0 dark:invert"
+                    className="w-full h-8 sm:h-10 object-contain"
                   />
                 </div>
               ))}

@@ -48,7 +48,7 @@ export function MarkComplete({ courseId, moduleSlug, prevModule, nextModule, bas
           disabled={completed}
           className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all shrink-0 ${
             completed
-              ? 'bg-green-500/10 text-green-600 dark:text-green-400 border border-green-500/30 cursor-default'
+              ? 'bg-green-500/10 text-green-600 border border-green-500/30 cursor-default'
               : 'bg-primary text-primary-foreground hover:bg-primary/90 cursor-pointer'
           }`}
         >

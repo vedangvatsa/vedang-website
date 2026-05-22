@@ -3,22 +3,22 @@
 /* ─── Module 1: Information Web → Action Web ─── */
 export function ActionWebEvolution() {
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-8">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Paradigm Shift</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Paradigm Shift</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">From searching and reading to instructing and reviewing</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <div className="rounded-[3px] border-2 border-slate-200 dark:border-zinc-700 p-4">
-            <div className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">Information Web (Today)</div>
+          <div className="rounded-[3px] border-2 border-slate-200 p-4">
+            <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Information Web (Today)</div>
             {['You Google a question', 'Read 10 links and compare', 'Make a decision yourself', 'Execute the task manually'].map((item) => (
-              <div key={item} className="text-[11px] text-muted-foreground py-1 border-b border-[#e3e3e0]/30 dark:border-zinc-800/30 last:border-0">{item}</div>
+              <div key={item} className="text-[11px] text-muted-foreground py-1 border-b border-[#e3e3e0]/30 last:border-0">{item}</div>
             ))}
           </div>
-          <div className="rounded-[3px] border-2 border-purple-300 dark:border-purple-800/60 p-4">
-            <div className="text-xs font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider mb-3">Agentic Web (Emerging)</div>
+          <div className="rounded-[3px] border-2 border-purple-300 p-4">
+            <div className="text-xs font-bold text-purple-600 uppercase tracking-wider mb-3">Agentic Web (Emerging)</div>
             {['You describe the goal in natural language', 'Agent researches, compares, decides', 'Agent executes across tools and APIs', 'You review the result and approve'].map((item) => (
-              <div key={item} className="text-[11px] text-muted-foreground py-1 border-b border-[#e3e3e0]/30 dark:border-zinc-800/30 last:border-0">{item}</div>
+              <div key={item} className="text-[11px] text-muted-foreground py-1 border-b border-[#e3e3e0]/30 last:border-0">{item}</div>
             ))}
           </div>
         </div>
@@ -36,14 +36,14 @@ export function AgentComponents() {
     { title: 'Orchestration', desc: 'Planning loops, task decomposition, and self-reflection', role: 'Manager: coordinates multi-step workflows', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-8">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Agent Architecture</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Agent Architecture</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four components that make an AI agent work</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {components.map((c) => (
-            <div key={c.title} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden" style={{ borderLeftWidth: '3px', borderLeftColor: c.color }}>
+            <div key={c.title} className="rounded-[3px] border border-[#e3e3e0] overflow-hidden" style={{ borderLeftWidth: '3px', borderLeftColor: c.color }}>
               <div className="px-4 py-2.5">
                 <span className="text-xs font-bold" style={{ color: c.color }}>{c.title}</span>
                 <p className="text-[10px] text-muted-foreground mt-0.5">{c.desc}</p>
@@ -65,14 +65,14 @@ export function AgenticDimensions() {
     { title: 'Agent-to-Agent', desc: 'Agents across organizations communicate via open protocols', examples: 'Your booking agent talks to airline agent via A2A', complexity: 'Advanced', color: '#ef4444' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-8">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Three Dimensions of Agency</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Three Dimensions of Agency</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">From simple tool use to autonomous agent networks</p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {dims.map((d) => (
-            <div key={d.title} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden" style={{ borderTopWidth: '3px', borderTopColor: d.color }}>
+            <div key={d.title} className="rounded-[3px] border border-[#e3e3e0] overflow-hidden" style={{ borderTopWidth: '3px', borderTopColor: d.color }}>
               <div className="p-3">
                 <span className="text-xs font-bold" style={{ color: d.color }}>{d.title}</span>
                 <p className="text-[10px] text-muted-foreground mt-1 mb-2">{d.desc}</p>
@@ -96,24 +96,24 @@ export function AgenticApps() {
     { title: 'Computer Use', desc: 'Control a full desktop GUI like a human', examples: 'Claude Computer Use, OpenAI Operator', status: 'Early stage', color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-8">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Agent Applications Today</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Agent Applications Today</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Where AI agents are already shipping value</p>
 
         <div className="overflow-x-auto -mx-2">
           <table className="w-full text-xs border-collapse min-w-[420px]">
             <thead>
-              <tr className="border-b-2 border-[#e3e3e0] dark:border-zinc-700">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Category</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">What it does</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Products</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] uppercase tracking-wider">Status</th>
+              <tr className="border-b-2 border-[#e3e3e0]">
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Category</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">What it does</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Products</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Status</th>
               </tr>
             </thead>
             <tbody>
               {apps.map((a) => (
-                <tr key={a.title} className="border-b border-[#e3e3e0]/60 dark:border-zinc-800/40">
+                <tr key={a.title} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2 px-2 font-bold" style={{ color: a.color }}>{a.title}</td>
                   <td className="py-2 px-2 text-muted-foreground">{a.desc}</td>
                   <td className="py-2 px-2 text-muted-foreground/60">{a.examples}</td>
@@ -141,33 +141,33 @@ export function AgenticFuture() {
     { title: 'Ambient Intelligence', desc: 'AI woven into every device and service: proactively acting before you ask.' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-8">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Challenges vs Opportunities</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Challenges vs Opportunities</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">What's holding agents back, and what's pulling them forward</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden">
-            <div className="px-4 py-2 border-b border-[#e3e3e0] dark:border-zinc-800 bg-red-500/5">
-              <span className="text-xs font-bold text-red-500 dark:text-red-400">Challenges</span>
+          <div className="rounded-[3px] border border-[#e3e3e0] overflow-hidden">
+            <div className="px-4 py-2 border-b border-[#e3e3e0] bg-red-500/5">
+              <span className="text-xs font-bold text-red-500">Challenges</span>
             </div>
             <div className="px-4 py-2.5">
               {challenges.map((c) => (
-                <div key={c.title} className="py-1.5 border-b border-[#e3e3e0]/30 dark:border-zinc-800/30 last:border-0">
-                  <span className="text-[11px] font-semibold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{c.title}</span>
+                <div key={c.title} className="py-1.5 border-b border-[#e3e3e0]/30 last:border-0">
+                  <span className="text-[11px] font-semibold text-[#37352f]">{c.title}</span>
                   <p className="text-[10px] text-muted-foreground">{c.desc}</p>
                 </div>
               ))}
             </div>
           </div>
-          <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden">
-            <div className="px-4 py-2 border-b border-[#e3e3e0] dark:border-zinc-800 bg-green-500/5">
-              <span className="text-xs font-bold text-green-600 dark:text-green-400">Opportunities</span>
+          <div className="rounded-[3px] border border-[#e3e3e0] overflow-hidden">
+            <div className="px-4 py-2 border-b border-[#e3e3e0] bg-green-500/5">
+              <span className="text-xs font-bold text-green-600">Opportunities</span>
             </div>
             <div className="px-4 py-2.5">
               {opportunities.map((o) => (
-                <div key={o.title} className="py-1.5 border-b border-[#e3e3e0]/30 dark:border-zinc-800/30 last:border-0">
-                  <span className="text-[11px] font-semibold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{o.title}</span>
+                <div key={o.title} className="py-1.5 border-b border-[#e3e3e0]/30 last:border-0">
+                  <span className="text-[11px] font-semibold text-[#37352f]">{o.title}</span>
                   <p className="text-[10px] text-muted-foreground">{o.desc}</p>
                 </div>
               ))}
@@ -182,35 +182,35 @@ export function AgenticFuture() {
 /* ─── Module 6: Protocol Diagram (MCP + A2A) ─── */
 export function ProtocolDiagram() {
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-8">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Two Protocols</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Two Protocols</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">MCP connects agents to tools; A2A connects agents to agents</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden" style={{ borderLeftWidth: '3px', borderLeftColor: '#3b82f6' }}>
-            <div className="px-4 py-2 border-b border-[#e3e3e0] dark:border-zinc-800 bg-blue-500/5">
-              <div className="text-xs font-bold text-blue-600 dark:text-blue-400">MCP: Model Context Protocol</div>
+          <div className="rounded-[3px] border border-[#e3e3e0] overflow-hidden" style={{ borderLeftWidth: '3px', borderLeftColor: '#3b82f6' }}>
+            <div className="px-4 py-2 border-b border-[#e3e3e0] bg-blue-500/5">
+              <div className="text-xs font-bold text-blue-600">MCP: Model Context Protocol</div>
               <div className="text-[10px] text-muted-foreground">Agent ↔ Tools</div>
             </div>
             <div className="px-4 py-2.5">
               <div className="text-[10px] text-muted-foreground/60 uppercase font-semibold mb-1">Connects to</div>
               {['Search APIs', 'Databases (PostgreSQL, MongoDB)', 'File systems', 'Google Sheets, Slack, GitHub'].map((t) => (
-                <div key={t} className="text-[10px] text-muted-foreground py-0.5 border-b border-[#e3e3e0]/30 dark:border-zinc-800/30 last:border-0">{t}</div>
+                <div key={t} className="text-[10px] text-muted-foreground py-0.5 border-b border-[#e3e3e0]/30 last:border-0">{t}</div>
               ))}
               <div className="text-[10px] text-muted-foreground/60 uppercase font-semibold mt-2 mb-1">Created by</div>
               <div className="text-[10px] text-muted-foreground">Anthropic (open standard)</div>
             </div>
           </div>
-          <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden" style={{ borderLeftWidth: '3px', borderLeftColor: '#10b981' }}>
-            <div className="px-4 py-2 border-b border-[#e3e3e0] dark:border-zinc-800 bg-green-500/5">
-              <div className="text-xs font-bold text-green-600 dark:text-green-400">A2A: Agent-to-Agent Protocol</div>
+          <div className="rounded-[3px] border border-[#e3e3e0] overflow-hidden" style={{ borderLeftWidth: '3px', borderLeftColor: '#10b981' }}>
+            <div className="px-4 py-2 border-b border-[#e3e3e0] bg-green-500/5">
+              <div className="text-xs font-bold text-green-600">A2A: Agent-to-Agent Protocol</div>
               <div className="text-[10px] text-muted-foreground">Agent ↔ Agent</div>
             </div>
             <div className="px-4 py-2.5">
               <div className="text-[10px] text-muted-foreground/60 uppercase font-semibold mb-1">Enables</div>
               {['Your agent hires a booking agent', 'Finance agent negotiates with vendor agent', 'Support agents escalate to specialist agents', 'Cross-organization agent collaboration'].map((t) => (
-                <div key={t} className="text-[10px] text-muted-foreground py-0.5 border-b border-[#e3e3e0]/30 dark:border-zinc-800/30 last:border-0">{t}</div>
+                <div key={t} className="text-[10px] text-muted-foreground py-0.5 border-b border-[#e3e3e0]/30 last:border-0">{t}</div>
               ))}
               <div className="text-[10px] text-muted-foreground/60 uppercase font-semibold mt-2 mb-1">Created by</div>
               <div className="text-[10px] text-muted-foreground">Google (open standard)</div>
@@ -232,20 +232,20 @@ export function AgentBuildSteps() {
     { num: '5', label: 'Test & Evaluate', desc: 'Run against edge cases. Measure quality. Add guardrails for failures.', time: '20 min', color: '#ef4444' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-8">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Build Your First Agent in 5 Steps</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Build Your First Agent in 5 Steps</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">From idea to working agent in about 80 minutes</p>
 
         <div className="relative">
-          <div className="absolute left-[18px] top-0 bottom-0 w-px bg-[#e3e3e0] dark:bg-zinc-800" />
+          <div className="absolute left-[18px] top-0 bottom-0 w-px bg-[#e3e3e0]" />
           <div className="space-y-2.5">
             {steps.map((s) => (
               <div key={s.num} className="grid grid-cols-[36px_1fr] gap-3 items-start">
                 <div className="relative flex items-center justify-center pt-1">
                   <div className="w-[9px] h-[9px] rounded-full" style={{ backgroundColor: s.color }} />
                 </div>
-                <div className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3">
+                <div className="rounded-[3px] border border-[#e3e3e0] p-3">
                   <div className="flex items-center justify-between mb-1">
                     <span className="text-xs font-bold" style={{ color: s.color }}>Step {s.num}: {s.label}</span>
                     <span className="text-[10px] font-mono text-muted-foreground/60">{s.time}</span>
@@ -270,15 +270,15 @@ export function WebParadigmStats() {
     { label: 'MCP servers published', value: '2,500+', source: 'Anthropic Registry', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-8">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Agentic Web in Numbers</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Agentic Web in Numbers</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Key metrics indicating the shift from search to action</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           {stats.map(s => (
-            <div key={s.label} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3 text-center">
+            <div key={s.label} className="rounded-[3px] border border-[#e3e3e0] p-3 text-center">
               <div className="text-lg md:text-xl font-bold" style={{ color: s.color }}>{s.value}</div>
-              <div className="text-[10px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] mt-0.5">{s.label}</div>
+              <div className="text-[10px] font-bold text-[#37352f] mt-0.5">{s.label}</div>
               <div className="text-[9px] text-muted-foreground/60 mt-0.5">{s.source}</div>
             </div>
           ))}
@@ -297,14 +297,14 @@ export function ToolEcosystem() {
     { name: 'Commerce', tools: ['Shopify Agents', 'Stripe MCP', 'Payment APIs'], color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-8">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Agent Tool Ecosystem</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Agent Tool Ecosystem</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">How agents connect to real-world services across domains</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           {categories.map(c => (
-            <div key={c.name} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden">
-              <div className="px-3 py-2 border-b border-[#e3e3e0] dark:border-zinc-800" style={{ backgroundColor: c.color + '08' }}>
+            <div key={c.name} className="rounded-[3px] border border-[#e3e3e0] overflow-hidden">
+              <div className="px-3 py-2 border-b border-[#e3e3e0]" style={{ backgroundColor: c.color + '08' }}>
                 <span className="text-xs font-bold" style={{ color: c.color }}>{c.name}</span>
               </div>
               <div className="px-3 py-2">
@@ -329,13 +329,13 @@ export function AutonomySpectrum() {
     { level: 'L4: Autonomous', desc: 'AI runs independently, human sets goals', example: 'Cron-triggered pipeline with error recovery', effort: '5% human', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-8">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Autonomy Spectrum</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Autonomy Spectrum</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four levels of AI agency, from copilot to fully autonomous</p>
         <div className="space-y-2">
           {levels.map(l => (
-            <div key={l.level} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-4" style={{ borderLeftWidth: '3px', borderLeftColor: l.color }}>
+            <div key={l.level} className="rounded-[3px] border border-[#e3e3e0] p-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-4" style={{ borderLeftWidth: '3px', borderLeftColor: l.color }}>
               <div className="min-w-[100px]">
                 <span className="text-xs font-bold" style={{ color: l.color }}>{l.level}</span>
               </div>
@@ -359,20 +359,20 @@ export function AgenticIndustryAdoption() {
     { sector: 'Legal', adoption: '23%', use: 'Contract review, case research', leader: 'Harvey AI, Casetext', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-8">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Agent Adoption by Industry</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Agent Adoption by Industry</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Where agentic AI is deployed in production today</p>
         <div className="space-y-1.5">
           {sectors.map(s => (
-            <div key={s.sector} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 px-4 py-2.5 flex items-center gap-3">
+            <div key={s.sector} className="rounded-[3px] border border-[#e3e3e0] px-4 py-2.5 flex items-center gap-3">
               <div className="w-12 text-right">
                 <span className="text-sm font-bold" style={{ color: s.color }}>{s.adoption}</span>
               </div>
-              <div className="w-16 h-1.5 rounded-full bg-[#e3e3e0] dark:bg-zinc-800 overflow-hidden">
+              <div className="w-16 h-1.5 rounded-full bg-[#e3e3e0] overflow-hidden">
                 <div className="h-full rounded-full" style={{ width: s.adoption, backgroundColor: s.color }} />
               </div>
-              <span className="text-xs font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)] min-w-[120px]">{s.sector}</span>
+              <span className="text-xs font-bold text-[#37352f] min-w-[120px]">{s.sector}</span>
               <span className="text-[10px] text-muted-foreground flex-1 hidden md:block">{s.use}</span>
             </div>
           ))}
@@ -392,15 +392,15 @@ export function AgentRiskMatrix() {
     { risk: 'Stale Context', severity: 'Low', mitigation: 'Context window management, explicit memory resets', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-8">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Agent Risk Matrix</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Agent Risk Matrix</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Security and reliability risks in production agent deployments</p>
         <div className="space-y-1.5">
           {risks.map(r => (
-            <div key={r.risk} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 px-4 py-2.5 flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
+            <div key={r.risk} className="rounded-[3px] border border-[#e3e3e0] px-4 py-2.5 flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
               <div className="flex items-center gap-2 min-w-[180px]">
-                <span className="text-xs font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{r.risk}</span>
+                <span className="text-xs font-bold text-[#37352f]">{r.risk}</span>
                 <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: r.color + '15', color: r.color }}>{r.severity}</span>
               </div>
               <span className="text-[10px] text-muted-foreground">{r.mitigation}</span>
@@ -421,22 +421,22 @@ export function AgentProtocolComparison() {
     { name: 'ACP', org: 'Cisco', transport: 'HTTP', focus: 'Enterprise agent collaboration', status: 'Draft', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-8">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Agent Protocol Landscape</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Agent Protocol Landscape</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Competing standards for agent interoperability</p>
         <div className="overflow-x-auto">
           <table className="w-full text-[11px]">
             <thead>
-              <tr className="border-b border-[#e3e3e0] dark:border-zinc-800">
+              <tr className="border-b border-[#e3e3e0]">
                 {['Protocol', 'Org', 'Transport', 'Focus', 'Status'].map(h => (
-                  <th key={h} className="text-left px-2 py-2 font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{h}</th>
+                  <th key={h} className="text-left px-2 py-2 font-bold text-[#37352f]">{h}</th>
                 ))}
               </tr>
             </thead>
             <tbody>
               {protocols.map(p => (
-                <tr key={p.name} className="border-b border-[#e3e3e0]/40 dark:border-zinc-800/40">
+                <tr key={p.name} className="border-b border-[#e3e3e0]/40">
                   <td className="px-2 py-2 font-bold" style={{ color: p.color }}>{p.name}</td>
                   <td className="px-2 py-2 text-muted-foreground">{p.org}</td>
                   <td className="px-2 py-2 font-mono text-muted-foreground">{p.transport}</td>
@@ -461,20 +461,20 @@ export function AgentBuildChecklist() {
     { phase: 'Deploy', items: ['Wire to a scheduler (cron, webhook)', 'Set up monitoring and alerting', 'Document the pipeline in a README'], color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-8">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Agent Build Checklist</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Agent Build Checklist</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four-phase workflow for shipping a production agent</p>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
           {phases.map(p => (
-            <div key={p.phase} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 overflow-hidden">
-              <div className="px-3 py-2 border-b border-[#e3e3e0] dark:border-zinc-800" style={{ backgroundColor: p.color + '08' }}>
+            <div key={p.phase} className="rounded-[3px] border border-[#e3e3e0] overflow-hidden">
+              <div className="px-3 py-2 border-b border-[#e3e3e0]" style={{ backgroundColor: p.color + '08' }}>
                 <span className="text-xs font-bold" style={{ color: p.color }}>{p.phase}</span>
               </div>
               <div className="px-3 py-2">
                 {p.items.map(item => (
                   <div key={item} className="flex items-start gap-2 py-1">
-                    <div className="w-3 h-3 rounded-sm border border-[#e3e3e0] dark:border-zinc-700 shrink-0 mt-0.5" />
+                    <div className="w-3 h-3 rounded-sm border border-[#e3e3e0] shrink-0 mt-0.5" />
                     <span className="text-[10px] text-muted-foreground">{item}</span>
                   </div>
                 ))}

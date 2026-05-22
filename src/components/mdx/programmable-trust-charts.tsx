@@ -12,29 +12,29 @@ export function TrustPrimitivesComparison() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Programmable Trust Primitives</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Programmable Trust Primitives</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Four cryptographic technologies replacing institutional trust</p>
 
         <div className="space-y-4">
           {primitives.map((p) => (
-            <div key={p.abbr} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3" style={{ borderLeftWidth: '3px', borderLeftColor: p.color }}>
+            <div key={p.abbr} className="rounded-[3px] border border-[#e3e3e0] p-3" style={{ borderLeftWidth: '3px', borderLeftColor: p.color }}>
               <div className="flex items-baseline justify-between mb-2">
                 <div>
-                  <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{p.name}</span>
+                  <span className="text-[11px] font-bold text-[#37352f]">{p.name}</span>
                   <span className="text-[9px] ml-1.5 px-1.5 py-0.5 rounded-full font-bold" style={{ backgroundColor: p.color + '15', color: p.color }}>{p.abbr}</span>
                 </div>
                 <span className="text-[10px] font-bold" style={{ color: p.color }}>{p.maturity}% mature</span>
               </div>
-              <div className="w-full h-2.5 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden mb-2">
+              <div className="w-full h-2.5 bg-[#f7f6f3] rounded-md overflow-hidden mb-2">
                 <div className="h-full rounded-md" style={{ width: `${p.maturity}%`, backgroundColor: p.color, opacity: 0.5 }} />
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-[9px]">
-                <div><span className="text-muted-foreground">Trust basis:</span> <span className="font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{p.trustBasis}</span></div>
-                <div><span className="text-muted-foreground">Privacy:</span> <span className="font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{p.privacy}</span></div>
-                <div><span className="text-muted-foreground">Speed:</span> <span className="font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{p.speed}</span></div>
-                <div><span className="text-muted-foreground">Deployed:</span> <span className="font-medium text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{p.deployment}</span></div>
+                <div><span className="text-muted-foreground">Trust basis:</span> <span className="font-medium text-[#37352f]">{p.trustBasis}</span></div>
+                <div><span className="text-muted-foreground">Privacy:</span> <span className="font-medium text-[#37352f]">{p.privacy}</span></div>
+                <div><span className="text-muted-foreground">Speed:</span> <span className="font-medium text-[#37352f]">{p.speed}</span></div>
+                <div><span className="text-muted-foreground">Deployed:</span> <span className="font-medium text-[#37352f]">{p.deployment}</span></div>
               </div>
             </div>
           ))}
@@ -61,16 +61,16 @@ export function DeFiSecurityChart() {
   const max = 4;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Cost of Code-as-Trust</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Cost of Code-as-Trust</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Annual losses from smart contract exploits and DeFi hacks ($B)</p>
 
         <div className="space-y-2">
           {years.map((y) => (
             <div key={y.year} className="grid grid-cols-[45px_1fr_55px] gap-3 items-center">
               <span className="text-xs text-muted-foreground font-medium">{y.year}</span>
-              <div className="w-full h-6 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden">
+              <div className="w-full h-6 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div className="h-full rounded-md flex items-center pl-2" style={{ width: `${(y.losses / max) * 100}%`, backgroundColor: y.color, opacity: 0.55 }}>
                   {y.losses >= 1 && <span className="text-[9px] font-bold text-white">${y.losses}B</span>}
                 </div>
@@ -80,8 +80,8 @@ export function DeFiSecurityChart() {
           ))}
         </div>
 
-        <div className="mt-4 rounded-[3px] bg-[#f7f6f3] dark:bg-zinc-800/40 p-3">
-          <p className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">
+        <div className="mt-4 rounded-[3px] bg-[#f7f6f3] p-3">
+          <p className="text-[11px] text-[#37352f]">
             <span className="font-bold">2025 breakdown:</span> Bybit supply-chain attack ($1.4B), Kelp DAO exploit, Drift Protocol hack. DeFi accounted for ~63% of all incidents. The smart contract audit market reached $1.8B.
           </p>
         </div>
@@ -104,18 +104,18 @@ export function TrustStackArchitecture() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Trust Stack</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Trust Stack</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Four layers replacing institutional verification</p>
 
         <div className="space-y-2">
           {layers.map((l) => (
-            <div key={l.layer} className="rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 p-3" style={{ borderLeftWidth: '3px', borderLeftColor: l.color }}>
+            <div key={l.layer} className="rounded-[3px] border border-[#e3e3e0] p-3" style={{ borderLeftWidth: '3px', borderLeftColor: l.color }}>
               <div className="flex items-baseline justify-between mb-1">
                 <div>
                   <span className="text-[9px] font-black uppercase tracking-wider mr-2" style={{ color: l.color }}>L{l.layer}</span>
-                  <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{l.name}</span>
+                  <span className="text-[11px] font-bold text-[#37352f]">{l.name}</span>
                 </div>
               </div>
               <p className="text-[10px] text-muted-foreground mb-1.5">{l.desc}</p>
@@ -148,9 +148,9 @@ export function TrustComparisonChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Institutional vs. Programmable Trust</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Institutional vs. Programmable Trust</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">The structural advantages of mathematical verification</p>
 
         <div className="overflow-x-auto">
@@ -162,9 +162,9 @@ export function TrustComparisonChart() {
               <span className="text-[10px] font-bold uppercase text-muted-foreground text-right">Advantage</span>
             </div>
             {dimensions.map((d) => (
-              <div key={d.dim} className="grid grid-cols-[110px_1fr_1fr_90px] gap-2 border-t border-[#e3e3e0] dark:border-zinc-800 py-2 items-center">
-                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{d.dim}</span>
-                <span className="text-[10px] text-muted-foreground text-center bg-[#f7f6f3] dark:bg-zinc-800/40 px-2 py-1.5 rounded-md">{d.institutional}</span>
+              <div key={d.dim} className="grid grid-cols-[110px_1fr_1fr_90px] gap-2 border-t border-[#e3e3e0] py-2 items-center">
+                <span className="text-[11px] font-bold text-[#37352f]">{d.dim}</span>
+                <span className="text-[10px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1.5 rounded-md">{d.institutional}</span>
                 <span className="text-[10px] text-center px-2 py-1.5 rounded-md font-medium" style={{ backgroundColor: 'hsl(160 80% 35% / 0.08)', color: 'hsl(160 80% 35%)' }}>{d.programmable}</span>
                 <span className="text-[10px] font-bold text-right" style={{ color: d.color }}>{d.advantage}</span>
               </div>
@@ -192,21 +192,21 @@ export function DigitalIdentityTimeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">The Regulatory Path to Programmable Identity</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Regulatory Path to Programmable Identity</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">EU eIDAS 2.0 mandates selective disclosure wallets for 450M citizens</p>
 
         <div className="relative">
-          <div className="absolute left-[52px] top-0 bottom-0 w-px bg-[#e3e3e0] dark:bg-zinc-800" />
+          <div className="absolute left-[52px] top-0 bottom-0 w-px bg-[#e3e3e0]" />
           <div className="space-y-3">
             {milestones.map((m) => (
               <div key={m.year} className="grid grid-cols-[42px_20px_1fr] gap-2 items-start">
                 <span className="text-[11px] font-black text-right" style={{ color: m.color }}>{m.year}</span>
                 <div className="flex items-center justify-center pt-0.5">
-                  <div className="w-2.5 h-2.5 rounded-full border-2 bg-white dark:bg-zinc-900" style={{ borderColor: m.color }} />
+                  <div className="w-2.5 h-2.5 rounded-full border-2 bg-white" style={{ borderColor: m.color }} />
                 </div>
-                <span className="text-[11px] text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{m.event}</span>
+                <span className="text-[11px] text-[#37352f]">{m.event}</span>
               </div>
             ))}
           </div>
@@ -232,19 +232,19 @@ export function TrustApplicationDomains() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">Programmable Trust Application Domains</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Programmable Trust Application Domains</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">From data exposure to proof-based verification</p>
 
         <div className="space-y-3">
           {domains.map((d) => (
             <div key={d.domain}>
               <div className="flex items-baseline justify-between mb-1">
-                <span className="text-[11px] font-bold text-[#37352f] dark:text-[rgba(255,255,255,0.81)]">{d.domain}</span>
+                <span className="text-[11px] font-bold text-[#37352f]">{d.domain}</span>
                 <span className="text-[10px] font-bold" style={{ color: d.color }}>{d.readiness}%</span>
               </div>
-              <div className="w-full h-3 bg-[#f7f6f3] dark:bg-zinc-800/40 rounded-md overflow-hidden mb-1">
+              <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden mb-1">
                 <div className="h-full rounded-md" style={{ width: `${d.readiness}%`, backgroundColor: d.color, opacity: 0.5 }} />
               </div>
               <div className="flex justify-between">
