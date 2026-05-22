@@ -165,8 +165,9 @@
     "image": "scripts/thread-assets/psych_confirmation.png",
     "scheduleDate": "2026-03-30",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x80690673302581670dba9f9a06148dc7535c434c",
+    "postedAt": "2026-05-22T12:27:08.456Z"
   },
   {
     "id": "solo-unicorn-1",
