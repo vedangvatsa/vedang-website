@@ -155,8 +155,9 @@
     "image": "scripts/thread-assets/agentic_5.png",
     "scheduleDate": "2026-03-30",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0xd5baa3c6b6d4b41bbc6b59e55fb83ed9975b48b8",
+    "postedAt": "2026-05-22T04:59:03.602Z"
   },
   {
     "id": "psych-confirmation",

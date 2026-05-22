@@ -798,7 +798,8 @@
     "scheduleTime": "00:00",
     "posted": false,
     "text": "You spend 3 days debugging.\n\nFinally fix it.\n\nFeel like a genius.\n\nThen remember ChatGPT could have done it in 4 seconds.\n\nProud moment and existential crisis at the same time.",
-    "image": "scripts/thread-assets/ig-reels/DXD-i9fEaYJ.mp4"
+    "image": "scripts/thread-assets/ig-reels/DXD-i9fEaYJ.mp4",
+    "error": "Video upload failed: 500 {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}"
   },
   {
     "id": "ig-ai-limit-reached",
