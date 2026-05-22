@@ -175,8 +175,9 @@
     "image": "scripts/thread-assets/solo_unicorn_1.png",
     "scheduleDate": "2026-03-31",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x5aa1939b4530f23f2d07c44a756e6ae2f91d736c",
+    "postedAt": "2026-05-22T20:16:33.394Z"
   },
   {
     "id": "solo-unicorn-2",

@@ -807,9 +807,11 @@
     "id": "ig-ai-limit-reached",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "When AI hits its rate limit mid-conversation.\n\nYou were so close to the answer.\n\nNow you wait.\n\nThe most frustrating loading screen of our generation.",
-    "image": "scripts/thread-assets/ig-reels/DWx95c6EdUi.mp4"
+    "image": "scripts/thread-assets/ig-reels/DWx95c6EdUi.mp4",
+    "postedAt": "2026-05-22T20:16:30.168Z",
+    "fbPostId": "1521554629621420"
   },
   {
     "id": "ig-ai-constant-pressure",
