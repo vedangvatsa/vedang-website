@@ -22,7 +22,7 @@ const departmentData = [
   { dept: 'Sales / BD', cv: '6,245 (13.8%)', hash: '222 (8.1%)', valCv: 13.8, valHash: 8.1 },
   { dept: 'Marketing', cv: '2,125 (4.7%)', hash: '357 (13.1%)', valCv: 4.7, valHash: 13.1 },
   { dept: 'Finance', cv: '1,586 (3.5%)', hash: '147 (5.4%)', valCv: 3.5, valHash: 5.4 },
-  { dept: 'Data Science / AI', cv: '1,413 (3.1%)', hash: '184 (6.7%)', valCv: 3.1, valHash: 6.7 },
+  { dept: 'Data Sci / AI', cv: '1,413 (3.1%)', hash: '184 (6.7%)', valCv: 3.1, valHash: 6.7 },
   { dept: 'Design', cv: '1,323 (2.9%)', hash: '70 (2.6%)', valCv: 2.9, valHash: 2.6 }
 ];
 
@@ -50,7 +50,7 @@ export default function DashboardCharts() {
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={departmentData} margin={{ top: 5, right: 5, left: -15, bottom: 20 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
-              <XAxis dataKey="dept" stroke="#475569" fontSize={11} fontWeight={500} tickLine={false} height={40} />
+              <XAxis dataKey="dept" stroke="#475569" fontSize={11} fontWeight={500} tickLine={false} height={40} interval={0} />
               <YAxis stroke="#475569" fontSize={11} fontWeight={500} tickFormatter={(v) => `${v}%`} tickLine={false} />
               <Tooltip contentStyle={{ fontSize: '12px', borderRadius: '6px' }} formatter={(v) => [`${v}%`, '']} />
               <Legend verticalAlign="top" height={32} iconSize={10} iconType="circle" wrapperStyle={{ fontSize: '12px' }} />
