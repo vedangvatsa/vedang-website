@@ -43,6 +43,7 @@ export default async function Image() {
             height: 600,
             borderRadius: 300,
             background: 'radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(0, 0, 0, 0) 70%)',
+            display: 'flex',
           }}
         />
         <div
@@ -54,6 +55,7 @@ export default async function Image() {
             height: 600,
             borderRadius: 300,
             background: 'radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, rgba(0, 0, 0, 0) 70%)',
+            display: 'flex',
           }}
         />
 
@@ -71,6 +73,7 @@ export default async function Image() {
                 padding: '6px 12px',
                 borderRadius: '6px',
                 border: '1px solid rgba(99, 102, 241, 0.2)',
+                display: 'flex',
               }}
             >
               DATABASE AUDIT & ANALYTICS
@@ -85,6 +88,7 @@ export default async function Image() {
               letterSpacing: '-0.03em',
               lineHeight: 1.1,
               marginTop: 8,
+              display: 'flex',
             }}
           >
             Job Board Comparison
@@ -95,9 +99,13 @@ export default async function Image() {
               fontWeight: 400,
               color: '#A1A1AA', // Zinc-400
               marginTop: 4,
+              display: 'flex',
+              alignItems: 'center',
             }}
           >
-            Hashtag Web3 <span style={{ color: '#F43F5E', fontWeight: 600 }}>vs</span> CV in Bio
+            <span style={{ display: 'flex' }}>Hashtag Web3</span>
+            <span style={{ color: '#F43F5E', fontWeight: 600, marginLeft: 8, marginRight: 8, display: 'flex' }}>vs</span>
+            <span style={{ display: 'flex' }}>CV in Bio</span>
           </div>
         </div>
 
@@ -170,7 +178,7 @@ export default async function Image() {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            borderT: '1px solid rgba(255, 255, 255, 0.08)',
+            borderTop: '1px solid rgba(255, 255, 255, 0.08)',
             paddingTop: '24px',
             marginTop: '32px',
           }}
