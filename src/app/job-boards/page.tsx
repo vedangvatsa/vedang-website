@@ -157,34 +157,19 @@ const skillsHash = [
   { rank: '#5', skill: 'AWS', stats: '388 / 14.2%' }
 ];
 
-// Testimonials Data
-const testimonials = [
-  {
-    quote: "I always find his work to be of just the absolute high quality. He is always timely, so easy to work with, responsive to notes and always able to explain things to me when it's hard for me to get things. He has my highest endorsement.",
-    author: "Jack Alison",
-    title: "Screenwriter for Academy Awards (Oscars)"
-  },
-  {
-    quote: "I am very comfortable to recommend him for any job that requires strict deadlines, taking on new challenges at short notice and dealing with altering priorities, efficient client communication and good analytical capabilities.",
-    author: "Bharath Visweswariah",
-    title: "Director Investments, Omidyar Network"
-  },
-  {
-    quote: "He helped me a lot in working closely with me and understand my requirements even though we had some language barriers between us but Vedang has never let these barriers be the reason of any delay in the work.",
-    author: "Eran Malovani",
-    title: "Founder of CPA+"
-  }
+// Ecosystem Clients Data
+const ecosystemClients = [
+  { name: 'AltLayer', path: '/images/partners/altlayer.png' },
+  { name: 'IEEE', path: '/images/partners/ieee.png' }
 ];
 
-// Partner Logos Data
-const partnerLogos = [
+// Community & University Partners Data
+const communityPartners = [
   { name: 'Harvard Blockchain Club', path: '/images/partners/harvard.png' },
   { name: 'Token 2049', path: '/images/partners/token2049.png' },
   { name: 'ETH Oxford', path: '/images/partners/ETHOxford.png' },
-  { name: 'AltLayer', path: '/images/partners/altlayer.png' },
   { name: 'EDCON', path: '/images/partners/edcon.png' },
-  { name: 'ETH Vietnam', path: '/images/partners/ethvietnam.png' },
-  { name: 'IEEE', path: '/images/partners/ieee.png' }
+  { name: 'ETH Vietnam', path: '/images/partners/ethvietnam.png' }
 ];
 
 export default function Dashboard() {
@@ -295,9 +280,6 @@ export default function Dashboard() {
                 </tbody>
               </table>
             </div>
-            <p className="text-[11px] text-muted-foreground leading-normal">
-              CV in Bio represents broad-scale database volume. Hashtag Web3 targets hyper-focused Web3 hiring circles.
-            </p>
           </div>
 
           {/* Panel 2: Seniority Pictograph */}
@@ -506,45 +488,48 @@ export default function Dashboard() {
 
         </div>
 
-        {/* ROW 6: TESTIMONIALS SECTION (PREMIUM CARDS) */}
+        {/* ROW 6: ECOSYSTEM CLIENTS GRID */}
         <div className="rounded-xl border bg-card p-5 shadow-sm space-y-4">
           <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground flex items-center gap-2">
-            <MessageSquare className="h-4 w-4 text-indigo-600" />
-            Executive Testimonials
+            <Briefcase className="h-4 w-4 text-indigo-600" />
+            Ecosystem Clients & Hiring Partners
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t, idx) => (
-              <div key={idx} className="rounded-xl border bg-white p-5 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
-                <blockquote className="border-l-2 border-indigo-500 pl-4 italic text-xs text-muted-foreground leading-relaxed">
-                  "{t.quote}"
-                </blockquote>
-                <div className="mt-4 text-right">
-                  <span className="block text-xs font-semibold text-foreground">{t.author}</span>
-                  <span className="block text-[10px] text-muted-foreground">{t.title}</span>
-                </div>
+          <p className="text-xs text-muted-foreground">
+            Top Web3 protocols, standard organizations, and technical institutions that actively hire talent through the Hashtag Web3 network:
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center pt-2">
+            {ecosystemClients.map((client, idx) => (
+              <div key={idx} className="relative w-36 h-10 flex flex-col items-center justify-center group px-1">
+                <Image
+                  src={client.path}
+                  alt={client.name}
+                  fill
+                  className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
               </div>
             ))}
           </div>
         </div>
 
-        {/* ROW 7: COMMUNITY PARTNERS & CLIENTS GRID */}
+        {/* ROW 7: COMMUNITY & ACADEMIC PARTNERS */}
         <div className="rounded-xl border bg-white p-5 shadow-sm space-y-4">
           <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground flex items-center gap-2">
             <Globe className="h-4 w-4 text-indigo-600" />
-            Community Partners & Ecosystem Clients
+            Community & University Partners
           </h2>
           <p className="text-xs text-muted-foreground">
-            Hashtag Web3 maintains key strategic alliances and syndication networks with global blockchain networks, developer clubs, and crypto ecosystems:
+            Hashtag Web3 maintains key strategic alliances and syndication networks with global university blockchain clubs and developer conferences:
           </p>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-6 items-center justify-items-center pt-2">
-            {partnerLogos.map((partner, idx) => (
-              <div key={idx} className="relative w-full h-8 md:h-10 flex flex-col items-center justify-center group px-1">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 items-center justify-items-center pt-2">
+            {communityPartners.map((partner, idx) => (
+              <div key={idx} className="relative w-28 h-8 md:h-10 flex flex-col items-center justify-center group px-1">
                 <Image
                   src={partner.path}
                   alt={partner.name}
                   fill
                   className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                  sizes="(max-width: 768px) 30vw, 15vw"
+                  sizes="(max-width: 768px) 40vw, 20vw"
                 />
               </div>
             ))}
