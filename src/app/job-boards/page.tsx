@@ -149,6 +149,33 @@ const skillsHash = [
   { rank: '#5', skill: 'AWS', stats: '388 / 14.2%' }
 ];
 
+const trafficCv = [
+  { rank: '1', page: 'Homepage / Upload Landing Page (Aggregated)', views: '1,179' },
+  { rank: '2', page: 'CV Editor / Resume Creator (/editor)', views: '1,016' },
+  { rank: '3', page: 'CV in Bio Job Feed (/jobs variations)', views: '739' },
+  { rank: '4', page: 'Signup / Authentication Page (/signup)', views: '83' },
+  { rank: '5', page: 'Candidate Profile: Ronald (/ronald)', views: '81' },
+  { rank: '6', page: 'Candidate Profile: Oscar (/oscar)', views: '61' },
+  { rank: '7', page: 'Candidate Profile: Oleksii Borysenko', views: '52' },
+  { rank: '8', page: 'Public Profile Views (Direct referrals)', views: '~50' },
+  { rank: '9', page: 'Internal Auth Redirect Pipelines', views: '~30' },
+  { rank: '10', page: 'Custom Slug User Redirects', views: '~25' }
+];
+
+const trafficHash = [
+  { rank: '1', page: 'Homepage / Job Listings Board (Aggregated)', views: '19,310' },
+  { rank: '2', page: 'Web3 Interview Question Bank', views: '1,596' },
+  { rank: '3', page: 'Web3 Salary Calculator', views: '1,446' },
+  { rank: '4', page: 'How to Be a Good Community Moderator', views: '778' },
+  { rank: '5', page: 'Web3 Resume Builder', views: '660' },
+  { rank: '6', page: 'Web3 Archetype Assessment (Aggregated)', views: '631' },
+  { rank: '7', page: 'What is DeFi? A Beginner\'s Guide', views: '435' },
+  { rank: '8', page: 'How to Become a Web3 Yield Farming Analyst', views: '407' },
+  { rank: '9', page: 'Remote Work in Web3: The New Normal', views: '385' },
+  { rank: '10', page: 'Web3 News Feed', views: '380' }
+];
+
+
 // Ecosystem Clients Data
 const ecosystemClients = [
   { name: 'Alemx', path: '/images/partners/alemx.png' },
@@ -518,6 +545,56 @@ export default function Dashboard() {
                       {/* Hashtag Web3 columns */}
                       <td className="p-3 font-semibold text-foreground">{hashItem.skill}</td>
                       <td className="p-3 text-right font-mono text-muted-foreground">{hashItem.stats}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* ROW 6: TOP 10 HIGH-TRAFFIC PAGES COMPARISON (COMBINED TABLE) */}
+        <div className="rounded-xl border bg-card p-5 shadow-sm space-y-4">
+          <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
+            Top 10 High-Traffic Pages & Tools Comparison
+          </h2>
+          
+          <div className="overflow-x-auto rounded-lg border bg-white">
+            <table className="w-full border-collapse text-left text-xs">
+              <thead>
+                {/* Master Headers */}
+                <tr className="border-b bg-slate-50/50">
+                  <th className="p-3 font-medium text-foreground w-16 border-r text-center">Rank</th>
+                  <th colSpan={2} className="p-3 font-semibold text-emerald-600 text-center border-r bg-emerald-50/10">
+                    CV in Bio <span className="font-normal text-muted-foreground text-[10px]">(via PostHog Analytics)</span>
+                  </th>
+                  <th colSpan={2} className="p-3 font-semibold text-rose-600 text-center bg-rose-50/10">
+                    Hashtag Web3 <span className="font-normal text-muted-foreground text-[10px]">(via Google Analytics)</span>
+                  </th>
+                </tr>
+                {/* Sub Headers */}
+                <tr className="border-b bg-slate-50/30 text-[10px] uppercase text-muted-foreground">
+                  <th className="px-3 py-2 font-medium border-r"></th>
+                  <th className="px-3 py-2 font-medium">Page / Utility Path</th>
+                  <th className="px-3 py-2 font-semibold text-emerald-600 text-right border-r">30-Day Views</th>
+                  <th className="px-3 py-2 font-medium">Page / Utility Path</th>
+                  <th className="px-3 py-2 font-semibold text-rose-600 text-right">30-Day Views</th>
+                </tr>
+              </thead>
+              <tbody>
+                {trafficCv.map((item, idx) => {
+                  const hashItem = trafficHash[idx];
+                  return (
+                    <tr key={idx} className="border-b last:border-b-0 hover:bg-slate-50/20">
+                      <td className="p-3 font-bold text-muted-foreground border-r text-center">{item.rank}</td>
+                      
+                      {/* CV in Bio columns */}
+                      <td className="p-3 font-semibold text-foreground">{item.page}</td>
+                      <td className="p-3 text-right font-mono text-muted-foreground border-r font-semibold">{item.views}</td>
+                      
+                      {/* Hashtag Web3 columns */}
+                      <td className="p-3 font-semibold text-foreground">{hashItem.page}</td>
+                      <td className="p-3 text-right font-mono text-muted-foreground font-semibold">{hashItem.views}</td>
                     </tr>
                   );
                 })}
