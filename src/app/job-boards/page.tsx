@@ -157,9 +157,9 @@ const trafficCv = [
   { rank: '5', page: 'Candidate Profile: Ronald (/ronald)', url: 'https://cvin.bio/ronald', views: '81' },
   { rank: '6', page: 'Candidate Profile: Oscar (/oscar)', url: 'https://cvin.bio/oscar', views: '61' },
   { rank: '7', page: 'Candidate Profile: Oleksii Borysenko', url: 'https://cvin.bio/oleksiiborysenko', views: '52' },
-  { rank: '8', page: 'Public Profile Views (Direct referrals)', url: 'https://cvin.bio/', views: '~50' },
-  { rank: '9', page: 'Internal Auth Redirect Pipelines', url: 'https://cvin.bio/signup', views: '~30' },
-  { rank: '10', page: 'Custom Slug User Redirects', url: 'https://cvin.bio/', views: '~25' }
+  { rank: '8', page: 'Candidate Profile: Yohannes (/yohannes)', url: 'https://cvin.bio/yohannes', views: '38' },
+  { rank: '9', page: 'CV in Bio News Feed (/news)', url: 'https://cvin.bio/news', views: '32' },
+  { rank: '10', page: 'Candidate Profile: Jeremyyza (/jeremyyza)', url: 'https://cvin.bio/jeremyyza', views: '25' }
 ];
 
 const trafficHash = [
