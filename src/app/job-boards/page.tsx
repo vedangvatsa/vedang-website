@@ -86,7 +86,7 @@ const asSeenOnRow2 = [
 ];
 
 const coreMetrics = [
-  { name: 'Total Active Jobs', cvinbio: '45,342', hashtag: '2,736' },
+  { name: 'Total Active Jobs', cvinbio: '73,044', hashtag: '2,736' },
   { name: 'Unique Companies', cvinbio: '2,052', hashtag: '165' },
   { name: 'Disclosed Salary', cvinbio: '6,701 (14.8%)', hashtag: '139 (5.1%)' }
 ];
@@ -523,7 +523,7 @@ export default function Dashboard() {
                 <tr className="border-b bg-slate-50/50">
                   <th className="p-3 font-medium text-foreground w-16 border-r text-center">Rank</th>
                   <th colSpan={2} className="p-3 font-semibold text-emerald-600 text-center border-r bg-emerald-50/10">
-                    CV in Bio <span className="font-normal text-muted-foreground text-[10px]">(Total: 45,342)</span>
+                    CV in Bio <span className="font-normal text-muted-foreground text-[10px]">(Total: 73,044)</span>
                   </th>
                   <th colSpan={2} className="p-3 font-semibold text-rose-600 text-center bg-rose-50/10">
                     Hashtag Web3 <span className="font-normal text-muted-foreground text-[10px]">(Total: 2,736)</span>
