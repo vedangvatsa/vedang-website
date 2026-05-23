@@ -4,15 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { PageLayout } from '@/components/page-layout';
-import { 
-  Briefcase, 
-  Users, 
-  Zap, 
-  ArrowUpRight, 
-  GraduationCap,
-  MessageSquare,
-  Globe
-} from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 // Dynamic import for the entire charting section to prevent HMR and SSR factory errors cleanly
 const DashboardCharts = dynamic(
@@ -176,17 +168,30 @@ const ecosystemClients = [
 // Community & University Partners Data
 const communityPartners = [
   { name: 'AltLayer', path: '/images/partners/altlayer.png' },
+  { name: 'Based in Lisbon', path: '/images/partners/basedinlisbon.png' },
   { name: 'BFF (Blockchain Founders Fund)', path: '/images/partners/bff.png' },
   { name: 'Coinfest Asia', path: '/images/partners/coinfest.png' },
   { name: 'DATE', path: '/images/partners/date.png' },
   { name: 'EDCON', path: '/images/partners/edcon.png' },
   { name: 'ETH Brussels', path: '/images/partners/ethbrussels.png' },
+  { name: 'ETH Enugu', path: '/images/partners/ethenugu.png' },
   { name: 'ETH Oxford', path: '/images/partners/ETHOxford.png' },
   { name: 'ETH Vietnam', path: '/images/partners/ethvietnam.png' },
+  { name: 'Frankfurt Blockchain Society (FBS)', path: '/images/partners/fbs.png' },
   { name: 'Harvard Blockchain Club', path: '/images/partners/harvard.png' },
   { name: 'India Blockchain Week 2024', path: '/images/partners/ibw.png' },
   { name: 'IEEE', path: '/images/partners/ieee.png' },
-  { name: 'Istanbul Blockchain Week', path: '/images/partners/istanbul.png' }
+  { name: 'Istanbul Blockchain Week', path: '/images/partners/istanbul.png' },
+  { name: 'London Blockchain Club (LBC)', path: '/images/partners/LBC_Logo_Black-min.png' },
+  { name: 'London Blockchain Society (LBS)', path: '/images/partners/lbs.png' },
+  { name: 'Malaysia Blockchain Week', path: '/images/partners/malaysiablockchainweek.png' },
+  { name: 'Oxford Blockchain Club (OBC)', path: '/images/partners/obc.png' },
+  { name: 'OnePiece Labs', path: '/images/partners/onepiece.png' },
+  { name: 'Penn Blockchain (PBS)', path: '/images/partners/pbs.png' },
+  { name: 'Taipei Blockchain Week', path: '/images/partners/taipeiblockchainweek.png' },
+  { name: 'The Metaverse Institute', path: '/images/partners/The-Metaverse-Institute-partners-with-Hashtag-Web3.png' },
+  { name: 'Token 2049', path: '/images/partners/token2049.png' },
+  { name: 'Wharton Blockchain Society (WBS)', path: '/images/partners/wbs.png' }
 ];
 
 export default function Dashboard() {
@@ -273,8 +278,7 @@ export default function Dashboard() {
           
           {/* Panel 1: Core Metrics */}
           <div className="rounded-xl border bg-card p-5 shadow-sm space-y-4">
-            <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground flex items-center gap-2">
-              <Briefcase className="h-4 w-4 text-indigo-600" />
+            <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
               Core Database Volume
             </h2>
             <div className="overflow-x-auto rounded-lg border">
@@ -301,8 +305,7 @@ export default function Dashboard() {
 
           {/* Panel 2: Seniority Pictograph */}
           <div className="rounded-xl border bg-white p-5 shadow-sm space-y-4">
-            <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground flex items-center gap-2">
-              <GraduationCap className="h-4 w-4 text-indigo-600" />
+            <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
               Breakdown Within Each Seniority Level
             </h2>
             
@@ -354,8 +357,7 @@ export default function Dashboard() {
           
           {/* Panel 3: Operations Table */}
           <div className="rounded-xl border bg-card p-5 shadow-sm space-y-4">
-            <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground flex items-center gap-2">
-              <Zap className="h-4 w-4 text-indigo-600" />
+            <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
               Platform Operations
             </h2>
             <div className="overflow-x-auto rounded-lg border">
@@ -382,8 +384,7 @@ export default function Dashboard() {
 
           {/* Panel 4: Social Media Table */}
           <div className="rounded-xl border bg-white p-5 shadow-sm space-y-4">
-            <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground flex items-center gap-2">
-              <Users className="h-4 w-4 text-indigo-600" />
+            <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
               Social Media Infrastructure
             </h2>
             <div className="overflow-x-auto rounded-lg border">
@@ -507,9 +508,8 @@ export default function Dashboard() {
 
         {/* ROW 6: ECOSYSTEM CLIENTS GRID */}
         <div className="rounded-xl border bg-card p-5 shadow-sm space-y-4">
-          <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground flex items-center gap-2">
-            <Briefcase className="h-4 w-4 text-indigo-600" />
-            Ecosystem Clients & Hiring Partners
+          <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
+            Clients
           </h2>
           <p className="text-xs text-muted-foreground">
             Top Web3 protocols, standard organizations, and technical institutions that actively hire talent through the Hashtag Web3 network:
@@ -531,9 +531,8 @@ export default function Dashboard() {
 
         {/* ROW 7: COMMUNITY & ACADEMIC PARTNERS */}
         <div className="rounded-xl border bg-white p-5 shadow-sm space-y-4">
-          <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground flex items-center gap-2">
-            <Globe className="h-4 w-4 text-indigo-600" />
-            Community & University Partners
+          <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
+            Partners
           </h2>
           <p className="text-xs text-muted-foreground">
             Hashtag Web3 maintains key strategic alliances and syndication networks with global university blockchain clubs and developer conferences:
