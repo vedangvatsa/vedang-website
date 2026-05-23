@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { PageLayout } from '@/components/page-layout';
 import { ArrowUpRight } from 'lucide-react';
@@ -536,6 +537,140 @@ export default function Dashboard() {
                 />
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* ROW 8: FOUNDER PROFILE SPOTLIGHT */}
+        <div className="rounded-xl border bg-white p-6 md:p-8 shadow-sm space-y-6">
+          <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
+            Founder Spotlight
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+            
+            {/* Left Card */}
+            <div className="rounded-xl border bg-slate-50/30 p-6 flex flex-col items-center text-center space-y-4 shadow-sm md:col-span-1">
+              <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-slate-200">
+                <Image
+                  src="/images/icon.png"
+                  alt="Vedang Vatsa"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              
+              <div className="space-y-1">
+                <h3 className="text-lg font-bold text-foreground">Vedang Vatsa</h3>
+                <p className="text-xs text-muted-foreground font-medium">Founder, CVin.Bio</p>
+              </div>
+              
+              <div className="flex items-center gap-2 text-xs font-semibold text-slate-600">
+                <a 
+                  href="https://linkedin.com/in/vedangvatsa" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-indigo-600 transition-colors flex items-center gap-1"
+                >
+                  <svg className="w-3.5 h-3.5 fill-current text-[#0A66C2]" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  LinkedIn
+                </a>
+                <span className="text-slate-300">•</span>
+                <Link href="/profile" className="hover:text-indigo-600 transition-colors">
+                  Profile
+                </Link>
+              </div>
+              
+              <div className="w-full border-t border-slate-200/60 pt-4 space-y-3">
+                <div className="text-[10px] font-bold text-slate-400 tracking-wider uppercase">
+                  Alumnus of:
+                </div>
+                
+                <div className="flex flex-wrap items-center justify-center gap-4 pt-1">
+                  {/* Hashtag Web3 Typography Logo */}
+                  <div className="font-extrabold text-[11px] tracking-wider text-slate-800 leading-none text-left select-none">
+                    HASHTAG<br />WEB3
+                  </div>
+                  
+                  <span className="h-6 w-px bg-slate-200"></span>
+                  
+                  {/* KPMG Logo */}
+                  <div className="relative w-12 h-6">
+                    <Image
+                      src="/images/kpmg.png"
+                      alt="KPMG"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  
+                  <span className="h-6 w-px bg-slate-200"></span>
+                  
+                  {/* EY Logo */}
+                  <div className="relative w-8 h-6">
+                    <Image
+                      src="/images/ey.png"
+                      alt="EY"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right Bio & Details */}
+            <div className="md:col-span-2 space-y-6">
+              <p className="text-sm text-slate-600 leading-relaxed font-medium text-left">
+                Previously built <a href="https://hashtagweb3.com" target="_blank" rel="noopener noreferrer" className="text-slate-800 font-semibold hover:underline">HashtagWeb3.com</a>: 120K+ community, 55M post views, supported by Microsoft for Startups. Former consultant at KPMG. Fellow of the Royal Society of Arts. 25 research publications in IEEE, SSRN, and others.
+              </p>
+              
+              {/* Core metrics row */}
+              <div className="grid grid-cols-3 gap-2 border-y border-slate-100 py-4 text-center">
+                <div className="space-y-0.5 border-r border-slate-100">
+                  <div className="text-xl md:text-2xl font-extrabold text-slate-800 tracking-tight">120K+</div>
+                  <div className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider">Community built</div>
+                </div>
+                <div className="space-y-0.5 border-r border-slate-100">
+                  <div className="text-xl md:text-2xl font-extrabold text-slate-800 tracking-tight">55M</div>
+                  <div className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider">Views, year one</div>
+                </div>
+                <div className="space-y-0.5">
+                  <div className="text-xl md:text-2xl font-extrabold text-slate-800 tracking-tight">25</div>
+                  <div className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider">Publications</div>
+                </div>
+              </div>
+              
+              {/* Bullet list points */}
+              <ul className="space-y-3 text-xs text-slate-600 leading-normal text-left">
+                <li className="flex gap-2">
+                  <span className="text-slate-300 select-none">•</span>
+                  <span>
+                    <strong className="text-slate-700 font-semibold">Speaker</strong> at Code Arica Conference, IIT Delhi & Kanpur, TUM Munich, ETH Enugu, Premier AI and Web3 Gala, The Responsible AI Forum, ISB Hyderabad
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-slate-300 select-none">•</span>
+                  <span>
+                    Favikon Top 50 Fintech & Crypto Creators. Thinkers360 Top 50 Metaverse Thought Leaders
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-slate-300 select-none">•</span>
+                  <span>
+                    <strong className="text-slate-700 font-semibold">Invited to the Parliament of India</strong> to discuss Virtual Digital Assets
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-slate-300 select-none">•</span>
+                  <span>
+                    Recommendation by <strong className="text-slate-700 font-semibold">Jack Allison</strong> (Screenwriter, Oscars 2017). Medal by former Director of Indian Prime Minister's office
+                  </span>
+                </li>
+              </ul>
+            </div>
+            
           </div>
         </div>
 
