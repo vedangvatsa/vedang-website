@@ -150,29 +150,29 @@ const skillsHash = [
 ];
 
 const trafficCv = [
-  { rank: '1', page: 'Homepage / Upload Landing Page (Aggregated)', views: '1,179' },
-  { rank: '2', page: 'CV Editor / Resume Creator (/editor)', views: '1,016' },
-  { rank: '3', page: 'CV in Bio Job Feed (/jobs variations)', views: '739' },
-  { rank: '4', page: 'Signup / Authentication Page (/signup)', views: '83' },
-  { rank: '5', page: 'Candidate Profile: Ronald (/ronald)', views: '81' },
-  { rank: '6', page: 'Candidate Profile: Oscar (/oscar)', views: '61' },
-  { rank: '7', page: 'Candidate Profile: Oleksii Borysenko', views: '52' },
-  { rank: '8', page: 'Public Profile Views (Direct referrals)', views: '~50' },
-  { rank: '9', page: 'Internal Auth Redirect Pipelines', views: '~30' },
-  { rank: '10', page: 'Custom Slug User Redirects', views: '~25' }
+  { rank: '1', page: 'Homepage / Upload Landing Page (Aggregated)', url: 'https://cvin.bio/', views: '1,179' },
+  { rank: '2', page: 'CV Editor / Resume Creator (/editor)', url: 'https://cvin.bio/editor', views: '1,016' },
+  { rank: '3', page: 'CV in Bio Job Feed (/jobs variations)', url: 'https://cvin.bio/jobs', views: '739' },
+  { rank: '4', page: 'Signup / Authentication Page (/signup)', url: 'https://cvin.bio/signup', views: '83' },
+  { rank: '5', page: 'Candidate Profile: Ronald (/ronald)', url: 'https://cvin.bio/ronald', views: '81' },
+  { rank: '6', page: 'Candidate Profile: Oscar (/oscar)', url: 'https://cvin.bio/oscar', views: '61' },
+  { rank: '7', page: 'Candidate Profile: Oleksii Borysenko', url: 'https://cvin.bio/oleksiiborysenko', views: '52' },
+  { rank: '8', page: 'Public Profile Views (Direct referrals)', url: 'https://cvin.bio/', views: '~50' },
+  { rank: '9', page: 'Internal Auth Redirect Pipelines', url: 'https://cvin.bio/signup', views: '~30' },
+  { rank: '10', page: 'Custom Slug User Redirects', url: 'https://cvin.bio/', views: '~25' }
 ];
 
 const trafficHash = [
-  { rank: '1', page: 'Homepage / Job Listings Board (Aggregated)', views: '19,310' },
-  { rank: '2', page: 'Web3 Interview Question Bank', views: '1,596' },
-  { rank: '3', page: 'Web3 Salary Calculator', views: '1,446' },
-  { rank: '4', page: 'How to Be a Good Community Moderator', views: '778' },
-  { rank: '5', page: 'Web3 Resume Builder', views: '660' },
-  { rank: '6', page: 'Web3 Archetype Assessment (Aggregated)', views: '631' },
-  { rank: '7', page: 'What is DeFi? A Beginner\'s Guide', views: '435' },
-  { rank: '8', page: 'How to Become a Web3 Yield Farming Analyst', views: '407' },
-  { rank: '9', page: 'Remote Work in Web3: The New Normal', views: '385' },
-  { rank: '10', page: 'Web3 News Feed', views: '380' }
+  { rank: '1', page: 'Homepage / Job Listings Board (Aggregated)', url: 'https://hashtagweb3.com/', views: '19,310' },
+  { rank: '2', page: 'Web3 Interview Question Bank', url: 'https://hashtagweb3.com/interview-questions', views: '1,596' },
+  { rank: '3', page: 'Web3 Salary Calculator', url: 'https://hashtagweb3.com/salary-calculator', views: '1,446' },
+  { rank: '4', page: 'How to Be a Good Community Moderator', url: 'https://hashtagweb3.com/how-to-be-a-good-community-moderator', views: '778' },
+  { rank: '5', page: 'Web3 Resume Builder', url: 'https://hashtagweb3.com/resume-builder', views: '660' },
+  { rank: '6', page: 'Web3 Archetype Assessment (Aggregated)', url: 'https://hashtagweb3.com/web3-career-quiz', views: '631' },
+  { rank: '7', page: 'What is DeFi? A Beginner\'s Guide', url: 'https://hashtagweb3.com/what-is-defi', views: '435' },
+  { rank: '8', page: 'Digital Nomad Visa List', url: 'https://hashtagweb3.com/digital-nomad-visas', views: '366' },
+  { rank: '9', page: 'Free Invoice Generator', url: 'https://hashtagweb3.com/invoice-generator', views: '276' },
+  { rank: '10', page: 'Web3 News Feed', url: 'https://hashtagweb3.com/news', views: '380' }
 ];
 
 
@@ -587,10 +587,26 @@ export default function Dashboard() {
                       <td className="p-3 font-bold text-muted-foreground border-r text-center">{item.rank}</td>
                       
                       {/* CV in Bio columns */}
-                      <td className="p-3 font-semibold text-foreground border-r">{item.page}</td>
+                      <td className="p-3 font-semibold text-foreground border-r">
+                        {item.url ? (
+                          <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:underline text-emerald-600 font-medium">
+                            {item.page}
+                          </a>
+                        ) : (
+                          item.page
+                        )}
+                      </td>
                       
                       {/* Hashtag Web3 columns */}
-                      <td className="p-3 font-semibold text-foreground">{hashItem.page}</td>
+                      <td className="p-3 font-semibold text-foreground">
+                        {hashItem.url ? (
+                          <a href={hashItem.url} target="_blank" rel="noopener noreferrer" className="hover:underline text-rose-600 font-medium">
+                            {hashItem.page}
+                          </a>
+                        ) : (
+                          hashItem.page
+                        )}
+                      </td>
                     </tr>
                   );
                 })}
