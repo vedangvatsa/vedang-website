@@ -230,7 +230,7 @@ export default function HealthProtocolsPage() {
           <div className="space-y-2.5">
             {frequencyData.map(d => (
               <div key={d.label} className="flex items-center gap-4">
-                <span className="text-sm w-36 shrink-0 truncate">{d.label}</span>
+                <span className="text-sm w-24 sm:w-36 shrink-0 truncate">{d.label}</span>
                 <div className="flex-1 h-5 rounded bg-muted/40 overflow-hidden">
                   <div className={`h-full rounded ${d.color}`} style={{ width: `${(d.count / maxCount) * 100}%` }} />
                 </div>
@@ -270,7 +270,7 @@ export default function HealthProtocolsPage() {
           </div>
           <p className="text-muted-foreground text-sm mb-8">&ldquo;Every calorie must fight for its life.&rdquo;</p>
 
-          <div className="grid grid-cols-4 gap-px rounded-xl overflow-hidden border mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-xl overflow-hidden border mb-8">
             {[
               { val: '2,250', lab: 'Calories', sub: '10% restriction' },
               { val: '130g', lab: 'Protein', sub: '25%' },
@@ -306,10 +306,12 @@ export default function HealthProtocolsPage() {
           </div>
           <div className="space-y-px rounded-xl overflow-hidden border">
             {longevityMix.map(item => (
-              <div key={item.ingredient} className="bg-card flex items-baseline gap-4 p-4">
-                <span className="font-medium text-sm flex-1 min-w-0">{item.ingredient}</span>
-                <span className="text-xs font-mono text-muted-foreground shrink-0">{item.amount}</span>
-                <span className="text-xs text-muted-foreground/60 shrink-0 w-40 text-right">{item.note}</span>
+              <div key={item.ingredient} className="bg-card flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 p-4">
+                <div className="flex-1 flex justify-between items-baseline min-w-0">
+                  <span className="font-medium text-sm">{item.ingredient}</span>
+                  <span className="text-xs font-mono text-muted-foreground ml-2 shrink-0">{item.amount}</span>
+                </div>
+                <span className="text-xs text-muted-foreground/60 sm:shrink-0 sm:w-40 sm:text-right">{item.note}</span>
               </div>
             ))}
           </div>
@@ -323,7 +325,7 @@ export default function HealthProtocolsPage() {
           </div>
           <p className="text-muted-foreground text-sm mb-8">6 hours per week. 3 strength + 3 cardio. Injury prevention is priority #1.</p>
 
-          <div className="grid grid-cols-4 gap-px rounded-xl overflow-hidden border mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-xl overflow-hidden border mb-8">
             {[
               { val: '6 hrs', lab: 'Weekly Total', sub: '~50 min/day' },
               { val: '150 min', lab: 'Zone 2 Cardio', sub: '60-70% max HR' },
@@ -344,10 +346,10 @@ export default function HealthProtocolsPage() {
           </div>
           <div className="space-y-px rounded-xl overflow-hidden border mb-6">
             {weeklySchedule.map(day => (
-              <div key={day.day} className="bg-card flex gap-4 p-4">
-                <span className="text-xs font-mono text-muted-foreground shrink-0 w-20 pt-0.5">{day.day}</span>
+              <div key={day.day} className="bg-card flex flex-col sm:flex-row gap-2 sm:gap-4 p-4">
+                <span className="text-xs font-mono text-muted-foreground/60 shrink-0 sm:w-20">{day.day}</span>
                 <div className="flex-1 min-w-0">
-                  <span className="font-medium text-sm">{day.focus}</span>
+                  <span className="font-medium text-sm block sm:inline">{day.focus}</span>
                   <p className="text-xs text-muted-foreground mt-0.5">{day.detail}</p>
                 </div>
               </div>
@@ -379,13 +381,15 @@ export default function HealthProtocolsPage() {
 
           <div className="space-y-px rounded-xl overflow-hidden border">
             {supplements.map(supp => (
-              <div key={supp.name} className="bg-card flex items-baseline gap-4 p-4">
+              <div key={supp.name} className="bg-card flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 p-4">
                 <div className="flex-1 min-w-0">
-                  <span className="font-medium text-sm">{supp.name}</span>
-                  <span className="text-xs text-muted-foreground ml-2">{supp.purpose}</span>
+                  <span className="font-medium text-sm block sm:inline">{supp.name}</span>
+                  <span className="text-xs text-muted-foreground block sm:inline sm:ml-2 mt-1 sm:mt-0">{supp.purpose}</span>
                 </div>
-                <span className="text-xs font-mono text-muted-foreground shrink-0">{supp.dose}</span>
-                <Src href={supp.source} />
+                <div className="flex items-center gap-4 justify-between sm:justify-end shrink-0">
+                  <span className="text-xs font-mono text-muted-foreground">{supp.dose}</span>
+                  <Src href={supp.source} />
+                </div>
               </div>
             ))}
           </div>
@@ -422,8 +426,8 @@ export default function HealthProtocolsPage() {
 
           <div className="space-y-px rounded-xl overflow-hidden border">
             {skincare.map((item, idx) => (
-              <div key={idx} className="bg-card flex items-start gap-4 p-4">
-                <span className="font-medium text-sm shrink-0 w-36">{item.step}</span>
+              <div key={idx} className="bg-card flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 p-4">
+                <span className="font-medium text-sm shrink-0 sm:w-36">{item.step}</span>
                 <p className="text-sm text-muted-foreground flex-1">{item.detail}</p>
               </div>
             ))}
@@ -440,8 +444,8 @@ export default function HealthProtocolsPage() {
 
           <div className="space-y-px rounded-xl overflow-hidden border">
             {oralHealth.map((item, idx) => (
-              <div key={idx} className="bg-card flex items-start gap-4 p-4">
-                <span className="font-medium text-sm shrink-0 w-36">{item.step}</span>
+              <div key={idx} className="bg-card flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 p-4">
+                <span className="font-medium text-sm shrink-0 sm:w-36">{item.step}</span>
                 <p className="text-sm text-muted-foreground flex-1">{item.detail}</p>
               </div>
             ))}
@@ -458,11 +462,15 @@ export default function HealthProtocolsPage() {
 
           <div className="space-y-px rounded-xl overflow-hidden border">
             {biomarkers.map(item => (
-              <div key={item.marker} className="bg-card flex items-baseline gap-4 p-4">
-                <span className="font-medium text-sm shrink-0 w-44">{item.marker}</span>
-                <span className="text-sm font-mono shrink-0">{item.value}</span>
-                <span className="text-xs text-muted-foreground flex-1 text-right">{item.context}</span>
-                <Src href={item.source} />
+              <div key={item.marker} className="bg-card flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 p-4">
+                <div className="flex-1 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 min-w-0">
+                  <span className="font-medium text-sm shrink-0 sm:w-44">{item.marker}</span>
+                  <span className="text-sm font-mono text-muted-foreground sm:text-foreground shrink-0">{item.value}</span>
+                </div>
+                <div className="flex items-center gap-3 justify-between sm:justify-end shrink-0 w-full sm:w-auto mt-1 sm:mt-0">
+                  <span className="text-xs text-muted-foreground">{item.context}</span>
+                  <Src href={item.source} />
+                </div>
               </div>
             ))}
           </div>
@@ -478,8 +486,8 @@ export default function HealthProtocolsPage() {
 
           <div className="space-y-px rounded-xl overflow-hidden border">
             {prescriptions.map(item => (
-              <div key={item.drug} className="bg-card flex items-baseline gap-4 p-4">
-                <span className="font-medium text-sm shrink-0 w-52">{item.drug}</span>
+              <div key={item.drug} className="bg-card flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 p-4">
+                <span className="font-medium text-sm shrink-0 sm:w-52">{item.drug}</span>
                 <p className="text-sm text-muted-foreground flex-1">{item.purpose}</p>
               </div>
             ))}
