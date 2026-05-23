@@ -264,7 +264,7 @@ export default function Dashboard() {
             <h1 className="text-3xl font-semibold tracking-tight text-foreground">Platform Comparison Dashboard</h1>
             <p className="text-sm text-muted-foreground mt-1">Unified analytics of Hashtag Web3 & CV in Bio databases and social infrastructure.</p>
             
-            <div className="flex flex-wrap gap-4 mt-3 text-xs">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 mt-3 text-xs">
               <a 
                 href="http://cvin.bio/story" 
                 target="_blank" 
@@ -273,7 +273,7 @@ export default function Dashboard() {
               >
                 CV in Bio Story <ArrowUpRight className="w-3 h-3" />
               </a>
-              <span className="text-slate-300">|</span>
+              <span className="text-slate-300 hidden sm:inline">|</span>
               <a 
                 href="https://hashtagweb3.com/community" 
                 target="_blank" 
@@ -534,7 +534,7 @@ export default function Dashboard() {
           <p className="text-xs text-muted-foreground">
             Top Web3 protocols, standard organizations, and technical institutions that actively hire talent through the Hashtag Web3 network:
           </p>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 items-center justify-items-center pt-2">
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 sm:gap-6 items-center justify-items-center pt-2">
             {ecosystemClients.map((client, idx) => (
               <div key={idx} className="relative w-full h-8 md:h-10 flex flex-col items-center justify-center group px-1">
                 <Image
@@ -558,7 +558,7 @@ export default function Dashboard() {
           <p className="text-xs text-muted-foreground">
             Hashtag Web3 maintains key strategic alliances and syndication networks with global university blockchain clubs and developer conferences:
           </p>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 items-center justify-items-center pt-2">
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 sm:gap-6 items-center justify-items-center pt-2">
             {communityPartners.map((partner, idx) => (
               <div key={idx} className="relative w-full h-8 md:h-10 flex flex-col items-center justify-center group px-1">
                 <Image
