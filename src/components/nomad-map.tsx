@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useCallback, useRef } from 'react';
+import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import {
   Map,
   MapClusterLayer,
@@ -58,7 +58,10 @@ export function NomadMap({ data }: { data: POI[] }) {
   const [selectedCategories, setSelectedCategories] = useState<Set<string>>(new Set(Object.keys(CATEGORY_CONFIG)));
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedPoint, setSelectedPoint] = useState<SelectedPoint | null>(null);
+  const [visibleCount, setVisibleCount] = useState(100);
   const mapRef = useRef<MapRef>(null);
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const cities = useMemo(() => {
     const citySet = new globalThis.Map<string, { country: string; count: number; lat: number; lon: number }>();
@@ -87,6 +90,32 @@ export function NomadMap({ data }: { data: POI[] }) {
     }
     return filtered;
   }, [data, selectedCity, selectedCategories, searchQuery]);
+
+  // Reset visible count when filters change
+  useEffect(() => {
+    setVisibleCount(100);
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = 0;
+    }
+  }, [selectedCity, selectedCategories, searchQuery]);
+
+  // Infinite scroll via IntersectionObserver
+  useEffect(() => {
+    const sentinel = sentinelRef.current;
+    const container = scrollContainerRef.current;
+    if (!sentinel || !container) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleCount(prev => Math.min(prev + 100, filteredData.length));
+        }
+      },
+      { root: container, rootMargin: '200px' }
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, [filteredData.length]);
 
   // Convert filtered data to GeoJSON for the cluster layer
   const geojsonData = useMemo((): GeoJSON.FeatureCollection<GeoJSON.Point, POI> => ({
@@ -355,7 +384,7 @@ export function NomadMap({ data }: { data: POI[] }) {
 
       {/* Listings table */}
       <div className="bg-card border rounded-xl overflow-hidden">
-        <div className="max-h-[800px] overflow-y-auto">
+        <div ref={scrollContainerRef} className="max-h-[800px] overflow-y-auto">
           <table className="w-full text-sm">
             <thead className="bg-muted/50 sticky top-0">
               <tr>
@@ -369,7 +398,7 @@ export function NomadMap({ data }: { data: POI[] }) {
               </tr>
             </thead>
             <tbody>
-              {filteredData.slice(0, 1000).map((poi, i) => (
+              {filteredData.slice(0, visibleCount).map((poi, i) => (
                 <tr key={poi.osm_id} className="border-t border-border/50 hover:bg-muted/30 transition-colors">
                   <td className="px-4 py-2.5 text-muted-foreground text-xs font-mono">{i + 1}</td>
                   <td className="px-4 py-2.5 font-medium">{poi.name}</td>
@@ -423,12 +452,16 @@ export function NomadMap({ data }: { data: POI[] }) {
               ))}
             </tbody>
           </table>
+          {/* Sentinel for infinite scroll */}
+          {visibleCount < filteredData.length && (
+            <div ref={sentinelRef} className="py-4 text-center text-xs text-muted-foreground">
+              Loading more…
+            </div>
+          )}
         </div>
-        {filteredData.length > 1000 && (
-          <p className="text-center text-xs text-muted-foreground py-3 border-t">
-            Showing 1,000 of {filteredData.length.toLocaleString()} results. Use filters to narrow down.
-          </p>
-        )}
+        <p className="text-center text-xs text-muted-foreground py-2 border-t">
+          {Math.min(visibleCount, filteredData.length).toLocaleString()} of {filteredData.length.toLocaleString()} places
+        </p>
       </div>
     </div>
   );
