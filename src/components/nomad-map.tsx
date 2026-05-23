@@ -61,7 +61,6 @@ export function NomadMap({ data }: { data: POI[] }) {
   const [visibleCount, setVisibleCount] = useState(100);
   const mapRef = useRef<MapRef>(null);
   const sentinelRef = useRef<HTMLDivElement>(null);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const cities = useMemo(() => {
     const citySet = new globalThis.Map<string, { country: string; count: number; lat: number; lon: number }>();
@@ -94,16 +93,12 @@ export function NomadMap({ data }: { data: POI[] }) {
   // Reset visible count when filters change
   useEffect(() => {
     setVisibleCount(100);
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollTop = 0;
-    }
   }, [selectedCity, selectedCategories, searchQuery]);
 
-  // Infinite scroll via IntersectionObserver
+  // Infinite scroll via IntersectionObserver on viewport
   useEffect(() => {
     const sentinel = sentinelRef.current;
-    const container = scrollContainerRef.current;
-    if (!sentinel || !container) return;
+    if (!sentinel) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -111,7 +106,7 @@ export function NomadMap({ data }: { data: POI[] }) {
           setVisibleCount(prev => Math.min(prev + 100, filteredData.length));
         }
       },
-      { root: container, rootMargin: '200px' }
+      { rootMargin: '400px' }
     );
     observer.observe(sentinel);
     return () => observer.disconnect();
@@ -384,7 +379,6 @@ export function NomadMap({ data }: { data: POI[] }) {
 
       {/* Listings table */}
       <div className="bg-card border rounded-xl overflow-hidden">
-        <div ref={scrollContainerRef} className="max-h-[800px] overflow-y-auto">
           <table className="w-full text-sm">
             <thead className="bg-muted/50 sticky top-0">
               <tr>
@@ -458,7 +452,6 @@ export function NomadMap({ data }: { data: POI[] }) {
               Loading more…
             </div>
           )}
-        </div>
         <p className="text-center text-xs text-muted-foreground py-2 border-t">
           {Math.min(visibleCount, filteredData.length).toLocaleString()} of {filteredData.length.toLocaleString()} places
         </p>
