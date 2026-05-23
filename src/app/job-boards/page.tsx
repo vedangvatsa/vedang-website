@@ -151,6 +151,19 @@ const skillsHash = [
 
 // Ecosystem Clients Data
 const ecosystemClients = [
+  { name: 'Alemx', path: '/images/partners/alemx.png' },
+  { name: 'Antier', path: '/images/partners/Antier.svg' },
+  { name: 'Binance', path: '/images/partners/binance.png' },
+  { name: 'Bitget', path: '/images/partners/bitget.png' },
+  { name: 'Circle', path: '/images/partners/circle.png' },
+  { name: 'Coinbase', path: '/images/partners/coinbase.png' },
+  { name: 'DePHY', path: '/images/partners/dephy.png' },
+  { name: 'dYdX', path: '/images/partners/dydx.png' },
+  { name: 'Funtoken', path: '/images/partners/funtoken.png' },
+  { name: 'Galxe', path: '/images/partners/galxe.png' },
+  { name: 'Glassnode', path: '/images/partners/glassnode.png' },
+  { name: 'Jaya Talent', path: '/images/partners/jayatalent.png' },
+  { name: 'KCEX', path: '/images/partners/kcex.png' },
   { name: 'LBank', path: '/images/partners/lbank.png' },
   { name: 'LiquidX', path: '/images/partners/liquidx.png' },
   { name: 'Longhash Ventures', path: '/images/partners/longhash.png' },
@@ -162,7 +175,12 @@ const ecosystemClients = [
   { name: 'Scallop', path: '/images/partners/scallop.png' },
   { name: 'Swell', path: '/images/partners/swell.png' },
   { name: 'The Hashgraph Group', path: '/images/partners/THA.avif' },
-  { name: 'Trilitech', path: '/images/partners/trilitech.png' }
+  { name: 'Trilitech', path: '/images/partners/trilitech.png' },
+  { name: 'Truflation', path: '/images/partners/truflation.png' },
+  { name: 'VNTR', path: '/images/partners/vn.png' },
+  { name: 'Watches.io', path: '/images/partners/watches.png' },
+  { name: 'Zeebu', path: '/images/partners/zeebu.png' },
+  { name: 'Zerion', path: '/images/partners/zerion.png' }
 ];
 
 // Community & University Partners Data
@@ -192,6 +210,28 @@ const communityPartners = [
   { name: 'The Metaverse Institute', path: '/images/partners/The-Metaverse-Institute-partners-with-Hashtag-Web3.png' },
   { name: 'Token 2049', path: '/images/partners/token2049.png' },
   { name: 'Wharton Blockchain Society (WBS)', path: '/images/partners/wbs.png' }
+];
+
+// Community Testimonials Data
+const communityTestimonials = [
+  {
+    quote: "Their jobs channel is the most effective Web3 job board I’ve come across. Its real-time updates allow me to apply to new roles the moment they are available on the market, significantly improving the visibility of my applications.",
+    author: "Suki Cheung",
+    title: "Community Lead, Trust Wallet",
+    image: "/images/quotes/suki.png"
+  },
+  {
+    quote: "We’ve got many mails, there’s a new one per 5 mins.",
+    author: "Kris Lai",
+    title: "CEO, Scallop",
+    image: "/images/quotes/kris.png"
+  },
+  {
+    quote: "Our agency has been using the job board for the past year, and we’ve tripled our speed in closing roles thanks to their high-quality talent pool.",
+    author: "Zhanna Manzyk",
+    title: "CEO, Jaya Talent",
+    image: "/images/quotes/zhanna.png"
+  }
 ];
 
 export default function Dashboard() {
@@ -503,6 +543,7 @@ export default function Dashboard() {
                   fill
                   className="object-contain"
                   sizes="(max-width: 768px) 30vw, 15vw"
+                  unoptimized={client.path.endsWith('.svg')}
                 />
               </div>
             ))}
@@ -527,6 +568,36 @@ export default function Dashboard() {
                   className="object-contain"
                   sizes="(max-width: 768px) 30vw, 15vw"
                 />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ROW 8: WHAT OUR COMMUNITY SAYS */}
+        <div className="rounded-xl border bg-slate-50/50 p-6 shadow-sm space-y-6">
+          <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground text-center">
+            What Our Community Says
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {communityTestimonials.map((testimonial, idx) => (
+              <div key={idx} className="bg-white rounded-xl border p-5 shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md transition-shadow">
+                <blockquote className="text-xs md:text-sm text-slate-700 italic leading-relaxed">
+                  &ldquo;{testimonial.quote}&rdquo;
+                </blockquote>
+                <div className="flex items-center gap-3 border-t pt-3">
+                  <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border bg-slate-100">
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.author}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-xs font-semibold text-slate-900">{testimonial.author}</h3>
+                    <p className="text-[10px] text-slate-500">{testimonial.title}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
