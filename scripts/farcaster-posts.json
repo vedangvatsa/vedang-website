@@ -185,8 +185,9 @@
     "image": "scripts/thread-assets/solo_unicorn_2.png",
     "scheduleDate": "2026-03-31",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x878fceb6b2d95235a0a90b7ff9df2a113b4e21e2",
+    "postedAt": "2026-05-23T04:52:57.597Z"
   },
   {
     "id": "lit-bosses",

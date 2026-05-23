@@ -819,7 +819,8 @@
     "scheduleTime": "00:00",
     "posted": false,
     "text": "New AI tool every week.\n\nNew framework every month.\n\nNew paradigm every quarter.\n\nRemember when learning one skill was enough for a decade?\n\nNow it barely lasts a quarter.",
-    "image": "scripts/thread-assets/ig-reels/DVqe3fCEZdC.mp4"
+    "image": "scripts/thread-assets/ig-reels/DVqe3fCEZdC.mp4",
+    "error": "Video upload failed: 500 {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}"
   },
   {
     "id": "ig-shadow-ai",
