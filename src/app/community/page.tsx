@@ -219,35 +219,104 @@ export default function CommunityProfilePage() {
                 <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
                     <MessageSquare className="w-6 h-6 text-primary" /> Testimonials
                 </h2>
-                 <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-4">
+                  <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-4">
                     <Card>
-                        <CardContent className="p-4">
-                            <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground">
+                        <CardContent className="p-4 flex flex-col justify-between h-full">
+                            <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground mb-4">
                             "I always find his work to be of just the absolute high quality. He is always timely, so easy to work with, responsive to notes and always able to explain things to me when it's hard for me to get things. He has my highest endorsement."
                             </blockquote>
-                            <p className="mt-3 font-semibold text-right text-sm">- Jack Alison</p>
-                            <p className="text-xs text-muted-foreground text-right">Screenwriter for Academy Awards (Oscars)</p>
+                            <div className="mt-auto pt-3 border-t text-right">
+                                <p className="font-semibold text-sm text-foreground">- Jack Alison</p>
+                                <p className="text-xs text-muted-foreground">Screenwriter for Academy Awards (Oscars)</p>
+                            </div>
                         </CardContent>
                     </Card>
                      <Card>
-                        <CardContent className="p-4">
-                            <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground">
+                        <CardContent className="p-4 flex flex-col justify-between h-full">
+                            <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground mb-4">
                             "I am very comfortable to recommend him for any job that requires strict deadlines, taking on new challenges at short notice and dealing with altering priorities, efficient client communication and good analytical capabilities."
                             </blockquote>
-                            <p className="mt-3 font-semibold text-right text-sm">- Bharath Visweswariah</p>
-                            <p className="text-xs text-muted-foreground text-right">Director Investments, Omidyar Network</p>
+                            <div className="mt-auto pt-3 border-t text-right">
+                                <p className="font-semibold text-sm text-foreground">- Bharath Visweswariah</p>
+                                <p className="text-xs text-muted-foreground">Director Investments, Omidyar Network</p>
+                            </div>
                         </CardContent>
                     </Card>
                      <Card>
-                        <CardContent className="p-4">
-                            <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground">
+                        <CardContent className="p-4 flex flex-col justify-between h-full">
+                            <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground mb-4">
                             "He helped me a lot in working closely with me and understand my requirements even though we had some language barriers between us but Vedang has never let these barriers be the reason of any delay in the work."
                             </blockquote>
-                            <p className="mt-3 font-semibold text-right text-sm">- Eran Malovani</p>
-                            <p className="text-xs text-muted-foreground text-right">Founder of CPA+</p>
+                            <div className="mt-auto pt-3 border-t text-right">
+                                <p className="font-semibold text-sm text-foreground">- Eran Malovani</p>
+                                <p className="text-xs text-muted-foreground">Founder of CPA+</p>
+                            </div>
                         </CardContent>
                     </Card>
-                 </div>
+                    <Card>
+                        <CardContent className="p-4 flex flex-col justify-between h-full">
+                            <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground mb-4">
+                            "Their jobs channel is the most effective Web3 job board I’ve come across. Its real-time updates allow me to apply to new roles the moment they are available on the market, significantly improving the visibility of my applications."
+                            </blockquote>
+                            <div className="flex items-center gap-3 mt-auto pt-3 border-t">
+                                <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border bg-slate-50">
+                                    <Image
+                                        src="/images/quotes/suki.png"
+                                        alt="Suki Cheung"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                                <div>
+                                    <p className="font-semibold text-xs text-foreground">Suki Cheung</p>
+                                    <p className="text-[10px] text-muted-foreground">Community Lead, Trust Wallet</p>
+                                </div>
+                            </div>
+                        </CardContent>
+                    </Card>
+                     <Card>
+                        <CardContent className="p-4 flex flex-col justify-between h-full">
+                            <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground mb-4">
+                            "We’ve got many mails, there’s a new one per 5 mins."
+                            </blockquote>
+                            <div className="flex items-center gap-3 mt-auto pt-3 border-t">
+                                <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border bg-slate-50">
+                                    <Image
+                                        src="/images/quotes/kris.png"
+                                        alt="Kris Lai"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                                <div>
+                                    <p className="font-semibold text-xs text-foreground">Kris Lai</p>
+                                    <p className="text-[10px] text-muted-foreground">CEO, Scallop</p>
+                                </div>
+                            </div>
+                        </CardContent>
+                    </Card>
+                     <Card>
+                        <CardContent className="p-4 flex flex-col justify-between h-full">
+                            <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground mb-4">
+                            "Our agency has been using the job board for the past year, and we’ve tripled our speed in closing roles thanks to their high-quality talent pool."
+                            </blockquote>
+                            <div className="flex items-center gap-3 mt-auto pt-3 border-t">
+                                <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border bg-slate-50">
+                                    <Image
+                                        src="/images/quotes/zhanna.png"
+                                        alt="Zhanna Manzyk"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                                <div>
+                                    <p className="font-semibold text-xs text-foreground">Zhanna Manzyk</p>
+                                    <p className="text-[10px] text-muted-foreground">CEO, Jaya Talent</p>
+                                </div>
+                            </div>
+                        </CardContent>
+                    </Card>
+                  </div>
             </section>
 
              <section id="writings">
