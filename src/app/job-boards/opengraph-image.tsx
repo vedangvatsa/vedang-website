@@ -26,14 +26,14 @@ export default async function Image() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          backgroundColor: '#09090B', // Zinc-950 elegant deep dark mode
-          color: '#FFFFFF',
+          backgroundColor: '#FFFFFF', // Clean white backdrop following guidelines
+          color: '#18181B', // Zinc-900
           fontFamily: 'Inter',
           padding: '80px 100px',
           position: 'relative',
         }}
       >
-        {/* Subtle decorative glowing background light source */}
+        {/* Subtle decorative glowing background light source with high transparency */}
         <div
           style={{
             position: 'absolute',
@@ -42,7 +42,7 @@ export default async function Image() {
             width: 600,
             height: 600,
             borderRadius: 300,
-            background: 'radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(0, 0, 0, 0) 70%)',
+            background: 'radial-gradient(circle, rgba(99, 102, 241, 0.04) 0%, rgba(255, 255, 255, 0) 70%)',
             display: 'flex',
           }}
         />
@@ -54,7 +54,7 @@ export default async function Image() {
             width: 600,
             height: 600,
             borderRadius: 300,
-            background: 'radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, rgba(0, 0, 0, 0) 70%)',
+            background: 'radial-gradient(circle, rgba(33, 107, 155, 0.03) 0%, rgba(255, 255, 255, 0) 70%)',
             display: 'flex',
           }}
         />
@@ -66,13 +66,13 @@ export default async function Image() {
               style={{
                 fontSize: 14,
                 fontWeight: 700,
-                color: '#6366F1', // Brand violet/indigo accent
+                color: '#71717A', // Zinc-500
                 textTransform: 'uppercase',
                 letterSpacing: '0.2em',
-                backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                backgroundColor: '#F4F4F5', // Zinc-100
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid rgba(99, 102, 241, 0.2)',
+                border: '1px solid #E4E4E7', // Zinc-200
                 display: 'flex',
               }}
             >
@@ -84,7 +84,7 @@ export default async function Image() {
             style={{
               fontSize: 64,
               fontWeight: 700,
-              color: '#FFFFFF',
+              color: '#18181B', // Zinc-900
               letterSpacing: '-0.03em',
               lineHeight: 1.1,
               marginTop: 8,
@@ -97,14 +97,14 @@ export default async function Image() {
             style={{
               fontSize: 28,
               fontWeight: 400,
-              color: '#A1A1AA', // Zinc-400
+              color: '#71717A', // Zinc-500
               marginTop: 4,
               display: 'flex',
               alignItems: 'center',
             }}
           >
             <span style={{ display: 'flex' }}>Hashtag Web3</span>
-            <span style={{ color: '#F43F5E', fontWeight: 600, marginLeft: 8, marginRight: 8, display: 'flex' }}>vs</span>
+            <span style={{ color: '#6366F1', fontWeight: 600, marginLeft: 8, marginRight: 8, display: 'flex' }}>vs</span>
             <span style={{ display: 'flex' }}>CV in Bio</span>
           </div>
         </div>
@@ -116,14 +116,14 @@ export default async function Image() {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              backgroundColor: 'rgba(255, 255, 255, 0.03)',
-              border: '1px solid rgba(255, 255, 255, 0.08)',
+              backgroundColor: '#FAFAFA', // Zinc-50 soft gray-white
+              border: '1px solid #E4E4E7', // Zinc-200
               borderRadius: '16px',
               padding: '24px 40px',
               flex: 1,
             }}
           >
-            <span style={{ fontSize: 44, fontWeight: 700, color: '#10B981', letterSpacing: '-0.02em' }}>
+            <span style={{ fontSize: 44, fontWeight: 700, color: '#216B9B', letterSpacing: '-0.02em' }}>
               48,000+
             </span>
             <span style={{ fontSize: 14, color: '#71717A', marginTop: 4, fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
@@ -136,8 +136,8 @@ export default async function Image() {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              backgroundColor: 'rgba(255, 255, 255, 0.03)',
-              border: '1px solid rgba(255, 255, 255, 0.08)',
+              backgroundColor: '#FAFAFA',
+              border: '1px solid #E4E4E7',
               borderRadius: '16px',
               padding: '24px 40px',
               flex: 1,
@@ -156,14 +156,14 @@ export default async function Image() {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              backgroundColor: 'rgba(255, 255, 255, 0.03)',
-              border: '1px solid rgba(255, 255, 255, 0.08)',
+              backgroundColor: '#FAFAFA',
+              border: '1px solid #E4E4E7',
               borderRadius: '16px',
               padding: '24px 40px',
               flex: 1,
             }}
           >
-            <span style={{ fontSize: 44, fontWeight: 700, color: '#F59E0B', letterSpacing: '-0.02em' }}>
+            <span style={{ fontSize: 44, fontWeight: 700, color: '#18181B', letterSpacing: '-0.02em' }}>
               97,000+
             </span>
             <span style={{ fontSize: 14, color: '#71717A', marginTop: 4, fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
@@ -178,15 +178,15 @@ export default async function Image() {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+            borderTop: '1px solid #E4E4E7', // Zinc-200
             paddingTop: '24px',
             marginTop: '32px',
           }}
         >
-          <span style={{ fontSize: 16, color: '#52525B', fontWeight: 500 }}>
+          <span style={{ fontSize: 16, color: '#A1A1AA', fontWeight: 500 }}>
             Powered by PostHog & Google Analytics
           </span>
-          <span style={{ fontSize: 18, color: '#A1A1AA', fontWeight: 600, letterSpacing: '-0.01em' }}>
+          <span style={{ fontSize: 18, color: '#71717A', fontWeight: 600, letterSpacing: '-0.01em' }}>
             veda.ng/job-boards
           </span>
         </div>
