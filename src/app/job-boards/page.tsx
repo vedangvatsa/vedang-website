@@ -589,7 +589,7 @@ export default function Dashboard() {
                       {/* CV in Bio columns */}
                       <td className="p-3 font-semibold text-foreground border-r">
                         {item.url ? (
-                          <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:underline text-emerald-600 font-medium">
+                          <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-600 hover:text-blue-800 font-medium">
                             {item.page}
                           </a>
                         ) : (
@@ -600,7 +600,7 @@ export default function Dashboard() {
                       {/* Hashtag Web3 columns */}
                       <td className="p-3 font-semibold text-foreground">
                         {hashItem.url ? (
-                          <a href={hashItem.url} target="_blank" rel="noopener noreferrer" className="hover:underline text-rose-600 font-medium">
+                          <a href={hashItem.url} target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-600 hover:text-blue-800 font-medium">
                             {hashItem.page}
                           </a>
                         ) : (
