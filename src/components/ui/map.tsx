@@ -174,7 +174,12 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
         }
       }, 100);
     };
-    const loadHandler = () => setIsLoaded(true);
+    const loadHandler = () => {
+      setIsLoaded(true);
+      if (map.isStyleLoaded()) {
+        setIsStyleLoaded(true);
+      }
+    };
 
     // Viewport change handler - skip if triggered by internal update
     const handleMove = () => {
@@ -184,13 +189,24 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
 
     map.on("load", loadHandler);
     map.on("styledata", styleDataHandler);
+    map.on("style.load", styleDataHandler);
     map.on("move", handleMove);
+
+    // Synchronous initial checks in case of fast or cached loads
+    if (map.loaded()) {
+      setIsLoaded(true);
+    }
+    if (map.isStyleLoaded()) {
+      styleDataHandler();
+    }
+
     setMapInstance(map);
 
     return () => {
       clearStyleTimeout();
       map.off("load", loadHandler);
       map.off("styledata", styleDataHandler);
+      map.off("style.load", styleDataHandler);
       map.off("move", handleMove);
       map.remove();
       setIsLoaded(false);
