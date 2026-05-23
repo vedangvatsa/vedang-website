@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import { NomadMapWrapper } from '@/components/nomad-map-wrapper';
 import { PageLayout } from '@/components/page-layout';
-import nomadData from '@/lib/nomad-data.json';
 
 export const metadata: Metadata = {
   title: 'Digital Nomad Directory - Coliving & Stays in 95 Cities',
@@ -25,13 +24,13 @@ export default function NomadMapPage() {
             Digital Nomad Directory
           </h1>
           <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-            4,400+ coliving houses, hostels, apartments, and guesthouses across 95 cities in 52 countries. Residential properties picked for digital nomads.
+            4,400+ coliving houses, hostels, apartments, and guesthouses across 95 cities in 52 countries.
           </p>
         </div>
       </section>
 
       <div className="container mx-auto px-4 md:px-6 max-w-[1600px] pb-16">
-        <NomadMapWrapper data={nomadData as any} />
+        <NomadMapWrapper />
       </div>
     </PageLayout>
   );
