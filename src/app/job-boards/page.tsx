@@ -98,10 +98,10 @@ const seniorityLevels = [
 ];
 
 const socialMediaMetrics = [
-  { channel: 'LinkedIn Followers', icon: <LinkedInIcon />, hashtag: '37,000', cvinbio: '1,200' },
-  { channel: 'Telegram Networking', icon: <TelegramIcon />, hashtag: '18,000 members', cvinbio: '-' },
-  { channel: 'Telegram Job Alerts', icon: <TelegramIcon />, hashtag: '62,000 subscribers', cvinbio: '3,500 subscribers' },
-  { channel: 'Telegram News Feed', icon: <TelegramIcon />, hashtag: '11,000 subscribers', cvinbio: '-' },
+  { channel: 'LinkedIn Followers', icon: <LinkedInIcon />, hashtag: '37,000', cvinbio: '1,200', hashtagUrl: 'https://www.linkedin.com/company/hashtagweb3', cvinbioUrl: 'https://www.linkedin.com/company/cvinbio' },
+  { channel: 'Telegram Networking', icon: <TelegramIcon />, hashtag: '18,000 members', cvinbio: '-', hashtagUrl: 'https://t.me/hashtagweb3' },
+  { channel: 'Telegram Job Alerts', icon: <TelegramIcon />, hashtag: '62,000 subscribers', cvinbio: '3,500 subscribers', hashtagUrl: 'https://t.me/web3hiring', cvinbioUrl: 'https://t.me/techjobsdaily' },
+  { channel: 'Telegram News Feed', icon: <TelegramIcon />, hashtag: '11,000 subscribers', cvinbio: '-', hashtagUrl: 'https://t.me/web3newsfeed' },
   { channel: 'Telegram Per-Post Avg Views', icon: <TelegramIcon />, hashtag: '3,000', cvinbio: '300' },
   { channel: 'Telegram Alerts Notification Enabled', icon: <TelegramIcon />, hashtag: '45.0%', cvinbio: '50.0%' },
   { channel: 'Email List', icon: <MailIcon />, hashtag: '150,000', cvinbio: '7,000' },
@@ -442,8 +442,16 @@ export default function Dashboard() {
                         {item.icon}
                         <span>{item.channel}</span>
                       </td>
-                      <td className="p-3 text-right font-mono font-semibold text-muted-foreground">{item.hashtag}</td>
-                      <td className="p-3 text-right font-mono font-semibold text-muted-foreground">{item.cvinbio}</td>
+                      <td className="p-3 text-right font-mono font-semibold text-muted-foreground">
+                        {item.hashtagUrl ? (
+                          <a href={item.hashtagUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-dotted underline-offset-2 hover:text-foreground transition-colors">{item.hashtag}</a>
+                        ) : item.hashtag}
+                      </td>
+                      <td className="p-3 text-right font-mono font-semibold text-muted-foreground">
+                        {item.cvinbioUrl ? (
+                          <a href={item.cvinbioUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-dotted underline-offset-2 hover:text-foreground transition-colors">{item.cvinbio}</a>
+                        ) : item.cvinbio}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
