@@ -48,14 +48,14 @@ export default function DashboardCharts() {
         
         <div className="h-64 w-full mt-4">
           <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={departmentData} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
+            <BarChart data={departmentData} margin={{ top: 5, right: 5, left: -15, bottom: 20 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
-              <XAxis dataKey="dept" stroke="#94a3b8" fontSize={8} tickLine={false} />
-              <YAxis stroke="#94a3b8" fontSize={9} tickFormatter={(v) => `${v}%`} tickLine={false} />
-              <Tooltip contentStyle={{ fontSize: '11px', borderRadius: '4px' }} formatter={(v) => [`${v}%`, '']} />
-              <Legend verticalAlign="top" height={28} iconSize={8} iconType="circle" />
-              <Bar name="CV in Bio" dataKey="valCv" fill="#10b981" radius={[3, 3, 0, 0]} />
-              <Bar name="Hashtag Web3" dataKey="valHash" fill="#f43f5e" radius={[3, 3, 0, 0]} />
+              <XAxis dataKey="dept" stroke="#475569" fontSize={11} fontWeight={500} tickLine={false} height={40} />
+              <YAxis stroke="#475569" fontSize={11} fontWeight={500} tickFormatter={(v) => `${v}%`} tickLine={false} />
+              <Tooltip contentStyle={{ fontSize: '12px', borderRadius: '6px' }} formatter={(v) => [`${v}%`, '']} />
+              <Legend verticalAlign="top" height={32} iconSize={10} iconType="circle" wrapperStyle={{ fontSize: '12px' }} />
+              <Bar name="CV in Bio" dataKey="valCv" fill="#10b981" radius={[4, 4, 0, 0]} />
+              <Bar name="Hashtag Web3" dataKey="valHash" fill="#f43f5e" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -76,12 +76,12 @@ export default function DashboardCharts() {
           <ResponsiveContainer width="100%" height="100%">
             <RadarChart cx="50%" cy="50%" outerRadius="75%" data={skillsData}>
               <PolarGrid stroke="#e2e8f0" />
-              <PolarAngleAxis dataKey="subject" stroke="#64748b" fontSize={9} />
-              <PolarRadiusAxis angle={30} domain={[0, 25]} stroke="#cbd5e1" fontSize={7} />
+              <PolarAngleAxis dataKey="subject" stroke="#334155" fontSize={11} fontWeight={500} />
+              <PolarRadiusAxis angle={30} domain={[0, 25]} stroke="#94a3b8" fontSize={9} />
               <Radar name="CV in Bio" dataKey="cvinbio" stroke="#10b981" fill="#10b981" fillOpacity={0.2} />
               <Radar name="Hashtag Web3" dataKey="hashtag" stroke="#f43f5e" fill="#f43f5e" fillOpacity={0.2} />
-              <Tooltip contentStyle={{ fontSize: '11px', borderRadius: '4px' }} />
-              <Legend verticalAlign="top" height={28} iconSize={8} iconType="circle" />
+              <Tooltip contentStyle={{ fontSize: '12px', borderRadius: '6px' }} />
+              <Legend verticalAlign="top" height={32} iconSize={10} iconType="circle" wrapperStyle={{ fontSize: '12px' }} />
             </RadarChart>
           </ResponsiveContainer>
         </div>

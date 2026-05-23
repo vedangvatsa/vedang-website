@@ -251,26 +251,6 @@ export default function Dashboard() {
               Live Audited Data
             </div>
           </div>
-
-          {/* AS SEEN ON STRIPE CONTAINER */}
-          <div className="rounded-xl border bg-white p-4 shadow-sm space-y-3">
-            <div className="text-[10px] font-bold text-slate-400 tracking-widest uppercase">As Seen On</div>
-            
-            <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 md:gap-6 items-center justify-items-center">
-              {[...asSeenOnRow1, ...asSeenOnRow2].map((media, idx) => (
-                <div key={idx} className="relative w-full h-7 md:h-9 flex items-center justify-center px-2">
-                  <Image
-                    src={media.logo}
-                    alt={media.name}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 640px) 45vw, 15vw"
-                    unoptimized={media.logo.endsWith('.svg')}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* ROW 1: CORE DATA & SENIORITY PICTOGRAPH */}
@@ -417,6 +397,26 @@ export default function Dashboard() {
         {/* ROW 3: DEACTIVE PORT CHARTS (DYNAMIC IMPORTED SECTION) */}
         <DashboardCharts />
 
+        {/* AS SEEN ON STRIPE CONTAINER */}
+        <div className="rounded-xl border bg-white p-4 shadow-sm space-y-3">
+          <div className="text-[10px] font-bold text-slate-400 tracking-widest uppercase text-center">As Seen On</div>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 md:gap-6 items-center justify-items-center">
+            {[...asSeenOnRow1, ...asSeenOnRow2].map((media, idx) => (
+              <div key={idx} className="relative w-full h-7 md:h-9 flex items-center justify-center px-2">
+                <Image
+                  src={media.logo}
+                  alt={media.name}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) 45vw, 15vw"
+                  unoptimized={media.logo.endsWith('.svg')}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* ROW 4: DEPARTMENTS SPLIT TABLE */}
         <div className="rounded-xl border bg-card p-5 shadow-sm space-y-4">
           <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Functional Share Splits</h3>
@@ -443,67 +443,54 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* ROW 5: TOP 5 SKILLS COMPARISON */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* ROW 5: TOP 5 SKILLS COMPARISON (COMBINED TABLE) */}
+        <div className="rounded-xl border bg-card p-5 shadow-sm space-y-4">
+          <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
+            Top 5 In-Demand Skills Comparison
+          </h2>
           
-          {/* CV in Bio Skills */}
-          <div className="rounded-xl border bg-card p-5 shadow-sm space-y-4">
-            <h3 className="text-sm font-semibold text-emerald-600 uppercase tracking-wider flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-              CV in Bio (Total: 45,342) - Top Skills
-            </h3>
-            
-            <div className="overflow-x-auto rounded-lg border bg-white">
-              <table className="w-full border-collapse text-left text-xs">
-                <thead>
-                  <tr className="border-b bg-slate-50/50">
-                    <th className="p-3 font-medium text-foreground w-16">Rank</th>
-                    <th className="p-3 font-medium text-foreground">In-Demand Skill</th>
-                    <th className="p-3 font-semibold text-emerald-600 text-right">Job Volume / Share</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {skillsCv.map((item, idx) => (
+          <div className="overflow-x-auto rounded-lg border bg-white">
+            <table className="w-full border-collapse text-left text-xs">
+              <thead>
+                {/* Master Headers */}
+                <tr className="border-b bg-slate-50/50">
+                  <th className="p-3 font-medium text-foreground w-16 border-r text-center">Rank</th>
+                  <th colSpan={2} className="p-3 font-semibold text-emerald-600 text-center border-r bg-emerald-50/10">
+                    CV in Bio <span className="font-normal text-muted-foreground text-[10px]">(Total: 45,342)</span>
+                  </th>
+                  <th colSpan={2} className="p-3 font-semibold text-rose-600 text-center bg-rose-50/10">
+                    Hashtag Web3 <span className="font-normal text-muted-foreground text-[10px]">(Total: 2,736)</span>
+                  </th>
+                </tr>
+                {/* Sub Headers */}
+                <tr className="border-b bg-slate-50/30 text-[10px] uppercase text-muted-foreground">
+                  <th className="px-3 py-2 font-medium border-r"></th>
+                  <th className="px-3 py-2 font-medium">In-Demand Skill</th>
+                  <th className="px-3 py-2 font-semibold text-emerald-600 text-right border-r">Job Volume / Share</th>
+                  <th className="px-3 py-2 font-medium">In-Demand Skill</th>
+                  <th className="px-3 py-2 font-semibold text-rose-600 text-right">Job Volume / Share</th>
+                </tr>
+              </thead>
+              <tbody>
+                {skillsCv.map((item, idx) => {
+                  const hashItem = skillsHash[idx];
+                  return (
                     <tr key={idx} className="border-b last:border-b-0 hover:bg-slate-50/20">
-                      <td className="p-3 font-bold text-muted-foreground">{item.rank}</td>
+                      <td className="p-3 font-bold text-muted-foreground border-r text-center">{item.rank}</td>
+                      
+                      {/* CV in Bio columns */}
                       <td className="p-3 font-semibold text-foreground">{item.skill}</td>
-                      <td className="p-3 text-right font-mono text-muted-foreground">{item.stats}</td>
+                      <td className="p-3 text-right font-mono text-muted-foreground border-r">{item.stats}</td>
+                      
+                      {/* Hashtag Web3 columns */}
+                      <td className="p-3 font-semibold text-foreground">{hashItem.skill}</td>
+                      <td className="p-3 text-right font-mono text-muted-foreground">{hashItem.stats}</td>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                  );
+                })}
+              </tbody>
+            </table>
           </div>
-
-          {/* Hashtag Web3 Skills */}
-          <div className="rounded-xl border bg-card p-5 shadow-sm space-y-4">
-            <h3 className="text-sm font-semibold text-rose-600 uppercase tracking-wider flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
-              Hashtag Web3 (Total: 2,736) - Top Skills
-            </h3>
-            
-            <div className="overflow-x-auto rounded-lg border bg-white">
-              <table className="w-full border-collapse text-left text-xs">
-                <thead>
-                  <tr className="border-b bg-slate-50/50">
-                    <th className="p-3 font-medium text-foreground w-16">Rank</th>
-                    <th className="p-3 font-medium text-foreground">In-Demand Skill</th>
-                    <th className="p-3 font-semibold text-rose-600 text-right">Job Volume / Share</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {skillsHash.map((item, idx) => (
-                    <tr key={idx} className="border-b last:border-b-0 hover:bg-slate-50/20">
-                      <td className="p-3 font-bold text-muted-foreground">{item.rank}</td>
-                      <td className="p-3 font-semibold text-foreground">{item.skill}</td>
-                      <td className="p-3 text-right font-mono text-muted-foreground">{item.stats}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
         </div>
 
         {/* ROW 6: ECOSYSTEM CLIENTS GRID */}
