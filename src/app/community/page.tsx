@@ -220,11 +220,13 @@ export default function CommunityProfilePage() {
                     <MessageSquare className="w-6 h-6 text-primary" /> Testimonials
                 </h2>
                   <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-4">
-                    <Card>
-                        <CardContent className="p-4 flex flex-col justify-between h-full">
-                            <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground mb-4">
-                            "Their jobs channel is the most effective Web3 job board I’ve come across. Its real-time updates allow me to apply to new roles the moment they are available on the market, significantly improving the visibility of my applications."
-                            </blockquote>
+                    <Card className="min-h-[220px] flex flex-col justify-between">
+                        <CardContent className="p-4 flex-1 flex flex-col justify-between h-full">
+                            <div className="flex-1 flex flex-col justify-center py-2">
+                                <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground">
+                                "Their jobs channel is the most effective Web3 job board I’ve come across. Its real-time updates allow me to apply to new roles the moment they are available on the market, significantly improving the visibility of my applications."
+                                </blockquote>
+                            </div>
                             <div className="flex items-center gap-3 mt-auto pt-3 border-t">
                                 <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border bg-slate-50">
                                     <Image
@@ -241,11 +243,13 @@ export default function CommunityProfilePage() {
                             </div>
                         </CardContent>
                     </Card>
-                     <Card>
-                        <CardContent className="p-4 flex flex-col justify-between h-full">
-                            <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground mb-4">
-                            "We’ve got many mails, there’s a new one per 5 mins."
-                            </blockquote>
+                     <Card className="min-h-[220px] flex flex-col justify-between">
+                        <CardContent className="p-4 flex-1 flex flex-col justify-between h-full">
+                            <div className="flex-1 flex flex-col justify-center py-2">
+                                <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground">
+                                "We’ve got so many emails from candidates applying for our jobs—there’s a new one every 5 minutes!"
+                                </blockquote>
+                            </div>
                             <div className="flex items-center gap-3 mt-auto pt-3 border-t">
                                 <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border bg-slate-50">
                                     <Image
@@ -262,11 +266,13 @@ export default function CommunityProfilePage() {
                             </div>
                         </CardContent>
                     </Card>
-                     <Card>
-                        <CardContent className="p-4 flex flex-col justify-between h-full">
-                            <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground mb-4">
-                            "Our agency has been using the job board for the past year, and we’ve tripled our speed in closing roles thanks to their high-quality talent pool."
-                            </blockquote>
+                     <Card className="min-h-[220px] flex flex-col justify-between">
+                        <CardContent className="p-4 flex-1 flex flex-col justify-between h-full">
+                            <div className="flex-1 flex flex-col justify-center py-2">
+                                <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground">
+                                "Our agency has been using the job board for the past year, and we’ve tripled our speed in closing roles thanks to their high-quality talent pool."
+                                </blockquote>
+                            </div>
                             <div className="flex items-center gap-3 mt-auto pt-3 border-t">
                                 <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border bg-slate-50">
                                     <Image

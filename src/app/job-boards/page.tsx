@@ -221,7 +221,7 @@ const communityTestimonials = [
     image: "/images/quotes/suki.png"
   },
   {
-    quote: "We’ve got many mails, there’s a new one per 5 mins.",
+    quote: "We’ve got so many emails from candidates applying for our jobs—there’s a new one every 5 minutes!",
     author: "Kris Lai",
     title: "CEO, Scallop",
     image: "/images/quotes/kris.png"
@@ -580,10 +580,12 @@ export default function Dashboard() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {communityTestimonials.map((testimonial, idx) => (
-              <div key={idx} className="bg-white rounded-xl border p-5 shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md transition-shadow">
-                <blockquote className="text-xs md:text-sm text-slate-700 italic leading-relaxed">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </blockquote>
+              <div key={idx} className="bg-white rounded-xl border p-5 shadow-sm flex flex-col justify-between min-h-[220px] hover:shadow-md transition-shadow">
+                <div className="flex-1 flex flex-col justify-center py-2">
+                  <blockquote className="text-xs md:text-sm text-slate-700 italic leading-relaxed">
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </blockquote>
+                </div>
                 <div className="flex items-center gap-3 border-t pt-3">
                   <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border bg-slate-100">
                     <Image
