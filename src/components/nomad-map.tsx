@@ -355,7 +355,7 @@ export function NomadMap({ data }: { data: POI[] }) {
 
       {/* Listings table */}
       <div className="bg-card border rounded-xl overflow-hidden">
-        <div className="max-h-[500px] overflow-y-auto">
+        <div className="max-h-[800px] overflow-y-auto">
           <table className="w-full text-sm">
             <thead className="bg-muted/50 sticky top-0">
               <tr>
@@ -369,7 +369,7 @@ export function NomadMap({ data }: { data: POI[] }) {
               </tr>
             </thead>
             <tbody>
-              {filteredData.slice(0, 500).map((poi, i) => (
+              {filteredData.slice(0, 1000).map((poi, i) => (
                 <tr key={poi.osm_id} className="border-t border-border/50 hover:bg-muted/30 transition-colors">
                   <td className="px-4 py-2.5 text-muted-foreground text-xs font-mono">{i + 1}</td>
                   <td className="px-4 py-2.5 font-medium">{poi.name}</td>
@@ -424,9 +424,9 @@ export function NomadMap({ data }: { data: POI[] }) {
             </tbody>
           </table>
         </div>
-        {filteredData.length > 500 && (
+        {filteredData.length > 1000 && (
           <p className="text-center text-xs text-muted-foreground py-3 border-t">
-            Showing 500 of {filteredData.length.toLocaleString()} results. Use filters to narrow down.
+            Showing 1,000 of {filteredData.length.toLocaleString()} results. Use filters to narrow down.
           </p>
         )}
       </div>
