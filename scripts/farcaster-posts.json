@@ -205,8 +205,9 @@
     "image": "scripts/thread-assets/solo_unicorn_3.png",
     "scheduleDate": "2026-04-01",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x15a2dcd3015933167b66b7c48b1f1c27221754ba",
+    "postedAt": "2026-05-23T19:59:59.162Z"
   },
   {
     "id": "ai-limits-1",

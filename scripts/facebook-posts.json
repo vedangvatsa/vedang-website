@@ -828,9 +828,11 @@
     "id": "ig-shadow-ai",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "Your employees are pasting company data into ChatGPT right now.\n\nNo policy. No oversight. No audit trail.\n\nShadow AI is not a future problem.\n\nIt is happening today in every company that has not set boundaries.",
-    "image": "scripts/thread-assets/ig-reels/DXs6sDoEetP.mp4"
+    "image": "scripts/thread-assets/ig-reels/DXs6sDoEetP.mp4",
+    "postedAt": "2026-05-23T19:59:55.687Z",
+    "fbPostId": "1696694428344707"
   },
   {
     "id": "ig-daytrading-liar",
