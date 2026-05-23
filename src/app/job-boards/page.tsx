@@ -159,17 +159,34 @@ const skillsHash = [
 
 // Ecosystem Clients Data
 const ecosystemClients = [
-  { name: 'AltLayer', path: '/images/partners/altlayer.png' },
-  { name: 'IEEE', path: '/images/partners/ieee.png' }
+  { name: 'LBank', path: '/images/partners/lbank.png' },
+  { name: 'LiquidX', path: '/images/partners/liquidx.png' },
+  { name: 'Longhash Ventures', path: '/images/partners/longhash.png' },
+  { name: 'Mercuryo', path: '/images/partners/mercuryo.png' },
+  { name: 'Overmind', path: '/images/partners/overmind.png' },
+  { name: 'Peanut Games', path: '/images/partners/peanut.png' },
+  { name: 'Quantstamp', path: '/images/partners/quantstamp.png' },
+  { name: 'Rho Protocol', path: '/images/partners/rho.png' },
+  { name: 'Scallop', path: '/images/partners/scallop.png' },
+  { name: 'Swell', path: '/images/partners/swell.png' },
+  { name: 'The Hashgraph Group', path: '/images/partners/THA.avif' },
+  { name: 'Trilitech', path: '/images/partners/trilitech.png' }
 ];
 
 // Community & University Partners Data
 const communityPartners = [
-  { name: 'Harvard Blockchain Club', path: '/images/partners/harvard.png' },
-  { name: 'Token 2049', path: '/images/partners/token2049.png' },
-  { name: 'ETH Oxford', path: '/images/partners/ETHOxford.png' },
+  { name: 'AltLayer', path: '/images/partners/altlayer.png' },
+  { name: 'BFF (Blockchain Founders Fund)', path: '/images/partners/bff.png' },
+  { name: 'Coinfest Asia', path: '/images/partners/coinfest.png' },
+  { name: 'DATE', path: '/images/partners/date.png' },
   { name: 'EDCON', path: '/images/partners/edcon.png' },
-  { name: 'ETH Vietnam', path: '/images/partners/ethvietnam.png' }
+  { name: 'ETH Brussels', path: '/images/partners/ethbrussels.png' },
+  { name: 'ETH Oxford', path: '/images/partners/ETHOxford.png' },
+  { name: 'ETH Vietnam', path: '/images/partners/ethvietnam.png' },
+  { name: 'Harvard Blockchain Club', path: '/images/partners/harvard.png' },
+  { name: 'India Blockchain Week 2024', path: '/images/partners/ibw.png' },
+  { name: 'IEEE', path: '/images/partners/ieee.png' },
+  { name: 'Istanbul Blockchain Week', path: '/images/partners/istanbul.png' }
 ];
 
 export default function Dashboard() {
@@ -497,15 +514,15 @@ export default function Dashboard() {
           <p className="text-xs text-muted-foreground">
             Top Web3 protocols, standard organizations, and technical institutions that actively hire talent through the Hashtag Web3 network:
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center pt-2">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 items-center justify-items-center pt-2">
             {ecosystemClients.map((client, idx) => (
-              <div key={idx} className="relative w-36 h-10 flex flex-col items-center justify-center group px-1">
+              <div key={idx} className="relative w-full h-8 md:h-10 flex flex-col items-center justify-center group px-1">
                 <Image
                   src={client.path}
                   alt={client.name}
                   fill
                   className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                  sizes="(max-width: 768px) 50vw, 25vw"
+                  sizes="(max-width: 768px) 30vw, 15vw"
                 />
               </div>
             ))}
@@ -521,15 +538,15 @@ export default function Dashboard() {
           <p className="text-xs text-muted-foreground">
             Hashtag Web3 maintains key strategic alliances and syndication networks with global university blockchain clubs and developer conferences:
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 items-center justify-items-center pt-2">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 items-center justify-items-center pt-2">
             {communityPartners.map((partner, idx) => (
-              <div key={idx} className="relative w-28 h-8 md:h-10 flex flex-col items-center justify-center group px-1">
+              <div key={idx} className="relative w-full h-8 md:h-10 flex flex-col items-center justify-center group px-1">
                 <Image
                   src={partner.path}
                   alt={partner.name}
                   fill
                   className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                  sizes="(max-width: 768px) 40vw, 20vw"
+                  sizes="(max-width: 768px) 30vw, 15vw"
                 />
               </div>
             ))}
