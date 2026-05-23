@@ -501,7 +501,7 @@ export default function Dashboard() {
                   src={client.path}
                   alt={client.name}
                   fill
-                  className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  className="object-contain"
                   sizes="(max-width: 768px) 30vw, 15vw"
                 />
               </div>
@@ -524,7 +524,7 @@ export default function Dashboard() {
                   src={partner.path}
                   alt={partner.name}
                   fill
-                  className="object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  className="object-contain"
                   sizes="(max-width: 768px) 30vw, 15vw"
                 />
               </div>
