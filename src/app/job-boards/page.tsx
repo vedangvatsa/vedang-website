@@ -220,35 +220,28 @@ export default function Dashboard() {
         
         {/* HEADER SECTION */}
         <div className="text-center border-b pb-6 space-y-4">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-3">
-            <div className="text-left">
-              <h1 className="text-3xl font-semibold tracking-tight text-foreground">Platform Comparison Dashboard</h1>
-              <p className="text-sm text-muted-foreground mt-1">Unified analytics of Hashtag Web3 & CV in Bio databases and social infrastructure.</p>
-              
-              <div className="flex flex-wrap gap-4 mt-3 text-xs">
-                <a 
-                  href="http://cvin.bio/story" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="inline-flex items-center gap-1 text-emerald-600 hover:text-emerald-700 hover:underline font-medium"
-                >
-                  CV in Bio Story <ArrowUpRight className="w-3 h-3" />
-                </a>
-                <span className="text-slate-300">|</span>
-                <a 
-                  href="https://hashtagweb3.com/community" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="inline-flex items-center gap-1 text-rose-600 hover:text-rose-700 hover:underline font-medium"
-                >
-                  Hashtag Web3 Community <ArrowUpRight className="w-3 h-3" />
-                </a>
-              </div>
-            </div>
+          <div className="text-left">
+            <h1 className="text-3xl font-semibold tracking-tight text-foreground">Platform Comparison Dashboard</h1>
+            <p className="text-sm text-muted-foreground mt-1">Unified analytics of Hashtag Web3 & CV in Bio databases and social infrastructure.</p>
             
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 w-fit">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              Live Audited Data
+            <div className="flex flex-wrap gap-4 mt-3 text-xs">
+              <a 
+                href="http://cvin.bio/story" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center gap-1 text-emerald-600 hover:text-emerald-700 hover:underline font-medium"
+              >
+                CV in Bio Story <ArrowUpRight className="w-3 h-3" />
+              </a>
+              <span className="text-slate-300">|</span>
+              <a 
+                href="https://hashtagweb3.com/community" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center gap-1 text-rose-600 hover:text-rose-700 hover:underline font-medium"
+              >
+                Hashtag Web3 Community <ArrowUpRight className="w-3 h-3" />
+              </a>
             </div>
           </div>
         </div>
