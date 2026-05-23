@@ -232,11 +232,10 @@ const communityPartners = [
   { name: 'Malaysia Blockchain Week', path: '/images/partners/malaysiablockchainweek.png' },
   { name: 'Oxford Blockchain Club (OBC)', path: '/images/partners/obc.png' },
   { name: 'OnePiece Labs', path: '/images/partners/onepiece.png' },
-  { name: 'Penn Blockchain (PBS)', path: '/images/partners/pbs.png' },
+  { name: 'World Blockchain Summit (WBS)', path: '/images/partners/wbs.png' },
   { name: 'Taipei Blockchain Week', path: '/images/partners/taipeiblockchainweek.png' },
   { name: 'The Metaverse Institute', path: '/images/partners/The-Metaverse-Institute-partners-with-Hashtag-Web3.png' },
-  { name: 'Token 2049', path: '/images/partners/token2049.png' },
-  { name: 'Wharton Blockchain Society (WBS)', path: '/images/partners/wbs.png' }
+  { name: 'Token 2049', path: '/images/partners/token2049.png' }
 ];
 
 // Community Testimonials Data
