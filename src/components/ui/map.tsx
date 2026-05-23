@@ -260,7 +260,7 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
   const contextValue = useMemo(
     () => ({
       map: mapInstance,
-      isLoaded: isLoaded && isStyleLoaded,
+      isLoaded: isLoaded || isStyleLoaded,
     }),
     [mapInstance, isLoaded, isStyleLoaded],
   );
@@ -271,7 +271,7 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
         ref={containerRef}
         className={cn("relative h-full w-full", className)}
       >
-        {(!isLoaded || loading) && <DefaultLoader />}
+        {(!(isLoaded || isStyleLoaded) || loading) && <DefaultLoader />}
         {/* SSR-safe: children render only when map is loaded on client */}
         {mapInstance && children}
       </div>
@@ -1572,7 +1572,7 @@ function MapClusterLayer<
       filter: ["has", "point_count"],
       layout: {
         "text-field": "{point_count_abbreviated}",
-        "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
+        "text-font": ["Noto Sans Regular"],
         "text-size": 12,
       },
       paint: {
