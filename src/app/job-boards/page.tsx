@@ -531,9 +531,7 @@ export default function Dashboard() {
           <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
             Clients
           </h2>
-          <p className="text-xs text-muted-foreground">
-            Top Web3 protocols, standard organizations, and technical institutions that actively hire talent through the Hashtag Web3 network:
-          </p>
+
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 sm:gap-6 items-center justify-items-center pt-2">
             {ecosystemClients.map((client, idx) => (
               <div key={idx} className="relative w-full h-8 md:h-10 flex flex-col items-center justify-center group px-1">
@@ -555,9 +553,7 @@ export default function Dashboard() {
           <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
             Partners
           </h2>
-          <p className="text-xs text-muted-foreground">
-            Hashtag Web3 maintains key strategic alliances and syndication networks with global university blockchain clubs and developer conferences:
-          </p>
+
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 sm:gap-6 items-center justify-items-center pt-2">
             {communityPartners.map((partner, idx) => (
               <div key={idx} className="relative w-full h-8 md:h-10 flex flex-col items-center justify-center group px-1">
