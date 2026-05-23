@@ -565,20 +565,18 @@ export default function Dashboard() {
                 {/* Master Headers */}
                 <tr className="border-b bg-slate-50/50">
                   <th className="p-3 font-medium text-foreground w-16 border-r text-center">Rank</th>
-                  <th colSpan={2} className="p-3 font-semibold text-emerald-600 text-center border-r bg-emerald-50/10">
+                  <th className="p-3 font-semibold text-emerald-600 text-center border-r bg-emerald-50/10">
                     CV in Bio <span className="font-normal text-muted-foreground text-[10px]">(via PostHog Analytics)</span>
                   </th>
-                  <th colSpan={2} className="p-3 font-semibold text-rose-600 text-center bg-rose-50/10">
+                  <th className="p-3 font-semibold text-rose-600 text-center bg-rose-50/10">
                     Hashtag Web3 <span className="font-normal text-muted-foreground text-[10px]">(via Google Analytics)</span>
                   </th>
                 </tr>
                 {/* Sub Headers */}
                 <tr className="border-b bg-slate-50/30 text-[10px] uppercase text-muted-foreground">
                   <th className="px-3 py-2 font-medium border-r"></th>
+                  <th className="px-3 py-2 font-medium border-r">Page / Utility Path</th>
                   <th className="px-3 py-2 font-medium">Page / Utility Path</th>
-                  <th className="px-3 py-2 font-semibold text-emerald-600 text-right border-r">30-Day Views</th>
-                  <th className="px-3 py-2 font-medium">Page / Utility Path</th>
-                  <th className="px-3 py-2 font-semibold text-rose-600 text-right">30-Day Views</th>
                 </tr>
               </thead>
               <tbody>
@@ -589,12 +587,10 @@ export default function Dashboard() {
                       <td className="p-3 font-bold text-muted-foreground border-r text-center">{item.rank}</td>
                       
                       {/* CV in Bio columns */}
-                      <td className="p-3 font-semibold text-foreground">{item.page}</td>
-                      <td className="p-3 text-right font-mono text-muted-foreground border-r font-semibold">{item.views}</td>
+                      <td className="p-3 font-semibold text-foreground border-r">{item.page}</td>
                       
                       {/* Hashtag Web3 columns */}
                       <td className="p-3 font-semibold text-foreground">{hashItem.page}</td>
-                      <td className="p-3 text-right font-mono text-muted-foreground font-semibold">{hashItem.views}</td>
                     </tr>
                   );
                 })}
