@@ -225,8 +225,9 @@
     "image": "scripts/thread-assets/ai_limits_2.png",
     "scheduleDate": "2026-04-01",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x9ddf0058d78ff71feeb2473714a35f80b6bacc96",
+    "postedAt": "2026-05-24T20:00:00.997Z"
   },
   {
     "id": "psych-maslow",

@@ -848,9 +848,11 @@
     "id": "ig-ai-canon-events",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "The AI timeline so far:\n\n2022: ChatGPT launches.\n2023: Everyone becomes a prompt engineer.\n2024: AI replaces junior devs.\n2025: AI agents run workflows.\n2026: You report to an AI manager.\n\nSeven years. Too many canon events.",
-    "image": "scripts/thread-assets/ig-reels/DVgT1huE9qS.mp4"
+    "image": "scripts/thread-assets/ig-reels/DVgT1huE9qS.mp4",
+    "postedAt": "2026-05-24T19:59:57.662Z",
+    "fbPostId": "956536190548104"
   },
   {
     "id": "ig-send-to-chatgpt",
