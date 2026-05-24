@@ -215,8 +215,9 @@
     "image": "scripts/thread-assets/ai_limits_1.png",
     "scheduleDate": "2026-04-01",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x69d57b95a58e643fcb3b5d3962c90805fa5384dd",
+    "postedAt": "2026-05-24T04:59:18.790Z"
   },
   {
     "id": "ai-limits-2",
