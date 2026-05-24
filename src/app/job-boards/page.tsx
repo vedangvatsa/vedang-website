@@ -166,7 +166,7 @@ const trafficHash = [
   { rank: '1', page: 'Homepage / Job Listings Board (Aggregated)', url: 'https://hashtagweb3.com/', views: '19,310' },
   { rank: '2', page: 'Web3 Interview Question Bank', url: 'https://hashtagweb3.com/interview-questions', views: '1,596' },
   { rank: '3', page: 'Web3 Salary Calculator', url: 'https://hashtagweb3.com/salary-calculator', views: '1,446' },
-  { rank: '4', page: 'How to Be a Good Community Moderator', url: 'https://hashtagweb3.com/how-to-be-a-good-community-moderator', views: '778' },
+  { rank: '4', page: 'How to Be a Good Community Moderator', url: 'https://hashtagweb3.com/web3-community-manager-career', views: '778' },
   { rank: '5', page: 'Web3 Resume Builder', url: 'https://hashtagweb3.com/resume-builder', views: '660' },
   { rank: '6', page: 'Web3 Archetype Assessment', url: 'https://hashtagweb3.com/web3-career-quiz', views: '631' },
   { rank: '7', page: 'What is DeFi? A Beginner\'s Guide', url: 'https://hashtagweb3.com/what-is-defi', views: '435' },
