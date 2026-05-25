@@ -202,3 +202,5 @@ export * from '../courses/mcp-visuals';
 export * from '../courses/agentic-visuals';
 export * from '../courses/web3-visuals';
 export * from './playbook-charts';
+export * from './funding-charts';
+

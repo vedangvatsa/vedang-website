@@ -1,0 +1,398 @@
+{
+  "global_overview": [
+    {
+      "year": 2015,
+      "rounds": 41352,
+      "total_raised": 311483436554.0,
+      "avg_round": 10378975.59408217,
+      "med_round": 972500.0,
+      "gini": 0.8824090519659223
+    },
+    {
+      "year": 2016,
+      "rounds": 43525,
+      "total_raised": 378697580574.0,
+      "avg_round": 12644748.758689772,
+      "med_round": 1100000.0,
+      "gini": 0.8960434892576352
+    },
+    {
+      "year": 2017,
+      "rounds": 46432,
+      "total_raised": 528457356304.0,
+      "avg_round": 16529272.037283788,
+      "med_round": 1300000.0,
+      "gini": 0.9032236079066104
+    },
+    {
+      "year": 2018,
+      "rounds": 52781,
+      "total_raised": 783662410923.0,
+      "avg_round": 21684673.370126456,
+      "med_round": 1500000.0,
+      "gini": 0.9110569187114103
+    },
+    {
+      "year": 2019,
+      "rounds": 53799,
+      "total_raised": 695179166228.0,
+      "avg_round": 19544523.77710928,
+      "med_round": 1400000.0,
+      "gini": 0.8999349624350675
+    },
+    {
+      "year": 2020,
+      "rounds": 54693,
+      "total_raised": 892170057565.0,
+      "avg_round": 24696748.9983391,
+      "med_round": 1300000.0,
+      "gini": 0.9129191698486416
+    },
+    {
+      "year": 2021,
+      "rounds": 68757,
+      "total_raised": 1416814479686.0,
+      "avg_round": 30066942.822588176,
+      "med_round": 2000000.0,
+      "gini": 0.8856627193670948
+    },
+    {
+      "year": 2022,
+      "rounds": 69271,
+      "total_raised": 1333333842793.0,
+      "avg_round": 27523198.80259681,
+      "med_round": 1800000.0,
+      "gini": 0.8972183149230113
+    },
+    {
+      "year": 2023,
+      "rounds": 68578,
+      "total_raised": 1751449408081.0,
+      "avg_round": 37691516.91660928,
+      "med_round": 1300000.0,
+      "gini": 0.9308584130731758
+    },
+    {
+      "year": 2024,
+      "rounds": 62060,
+      "total_raised": 2840376897428.0,
+      "avg_round": 64151614.812268496,
+      "med_round": 2000000.0,
+      "gini": 0.9235549048319666
+    },
+    {
+      "year": 2025,
+      "rounds": 58770,
+      "total_raised": 4231414412542.0,
+      "avg_round": 98524131.79989755,
+      "med_round": 3000000.0,
+      "gini": 0.9131288960682353
+    },
+    {
+      "year": 2026,
+      "rounds": 18897,
+      "total_raised": 1839847251965.0,
+      "avg_round": 139477465.8452733,
+      "med_round": 5000000.0,
+      "gini": 0.9164623819934082
+    }
+  ],
+  "stages": {
+    "Pre-Seed": [
+      {
+        "year": 2015,
+        "rounds": 1004,
+        "total_raised": 279914501.0,
+        "med_round": 120000.0
+      },
+      {
+        "year": 2016,
+        "rounds": 1353,
+        "total_raised": 446954700.0,
+        "med_round": 120000.0
+      },
+      {
+        "year": 2017,
+        "rounds": 2104,
+        "total_raised": 734113582.0,
+        "med_round": 120000.0
+      },
+      {
+        "year": 2018,
+        "rounds": 3496,
+        "total_raised": 1163198501.0,
+        "med_round": 123600.0
+      },
+      {
+        "year": 2019,
+        "rounds": 4583,
+        "total_raised": 1719245787.0,
+        "med_round": 150000.0
+      },
+      {
+        "year": 2020,
+        "rounds": 5183,
+        "total_raised": 2259318766.0,
+        "med_round": 150000.0
+      },
+      {
+        "year": 2021,
+        "rounds": 7142,
+        "total_raised": 4013595293.0,
+        "med_round": 232750.0
+      },
+      {
+        "year": 2022,
+        "rounds": 7298,
+        "total_raised": 4601325503.0,
+        "med_round": 250000.0
+      },
+      {
+        "year": 2023,
+        "rounds": 6470,
+        "total_raised": 3816577472.0,
+        "med_round": 200000.0
+      },
+      {
+        "year": 2024,
+        "rounds": 5515,
+        "total_raised": 3835204752.0,
+        "med_round": 300000.0
+      },
+      {
+        "year": 2025,
+        "rounds": 4472,
+        "total_raised": 3815934638.0,
+        "med_round": 474600.0
+      },
+      {
+        "year": 2026,
+        "rounds": 1110,
+        "total_raised": 1220350225.0,
+        "med_round": 500000.0
+      }
+    ],
+    "Seed": [
+      {
+        "year": 2015,
+        "rounds": 8821,
+        "total_raised": 8281556033.0,
+        "med_round": 439900.0
+      },
+      {
+        "year": 2016,
+        "rounds": 8276,
+        "total_raised": 9012202563.0,
+        "med_round": 500000.0
+      },
+      {
+        "year": 2017,
+        "rounds": 8207,
+        "total_raised": 10323797697.0,
+        "med_round": 625000.0
+      },
+      {
+        "year": 2018,
+        "rounds": 9092,
+        "total_raised": 13920798909.0,
+        "med_round": 750000.0
+      },
+      {
+        "year": 2019,
+        "rounds": 8768,
+        "total_raised": 15242199713.0,
+        "med_round": 968700.0
+      },
+      {
+        "year": 2020,
+        "rounds": 9276,
+        "total_raised": 17795536906.0,
+        "med_round": 1000000.0
+      },
+      {
+        "year": 2021,
+        "rounds": 12469,
+        "total_raised": 34059350880.0,
+        "med_round": 1500000.0
+      },
+      {
+        "year": 2022,
+        "rounds": 12409,
+        "total_raised": 39960940876.0,
+        "med_round": 1700000.0
+      },
+      {
+        "year": 2023,
+        "rounds": 9634,
+        "total_raised": 28461781847.0,
+        "med_round": 1600000.0
+      },
+      {
+        "year": 2024,
+        "rounds": 8817,
+        "total_raised": 30745723177.0,
+        "med_round": 1800000.0
+      },
+      {
+        "year": 2025,
+        "rounds": 7665,
+        "total_raised": 34971757546.0,
+        "med_round": 2200000.0
+      },
+      {
+        "year": 2026,
+        "rounds": 2402,
+        "total_raised": 16688772500.0,
+        "med_round": 2800000.0
+      }
+    ],
+    "Series A": [
+      {
+        "year": 2015,
+        "rounds": 3473,
+        "total_raised": 28815603000.0,
+        "med_round": 3800000.0
+      },
+      {
+        "year": 2016,
+        "rounds": 3702,
+        "total_raised": 32400163000.0,
+        "med_round": 3700000.0
+      },
+      {
+        "year": 2017,
+        "rounds": 3905,
+        "total_raised": 38323500800.0,
+        "med_round": 4099999.9999999995
+      },
+      {
+        "year": 2018,
+        "rounds": 4253,
+        "total_raised": 48924395600.0,
+        "med_round": 5000000.0
+      },
+      {
+        "year": 2019,
+        "rounds": 3872,
+        "total_raised": 48156564809.0,
+        "med_round": 6000000.0
+      },
+      {
+        "year": 2020,
+        "rounds": 3597,
+        "total_raised": 50040268900.0,
+        "med_round": 7000000.0
+      },
+      {
+        "year": 2021,
+        "rounds": 5248,
+        "total_raised": 103180455900.0,
+        "med_round": 10000000.0
+      },
+      {
+        "year": 2022,
+        "rounds": 4770,
+        "total_raised": 84931215302.0,
+        "med_round": 10500000.0
+      },
+      {
+        "year": 2023,
+        "rounds": 3475,
+        "total_raised": 52244672800.0,
+        "med_round": 9500000.0
+      },
+      {
+        "year": 2024,
+        "rounds": 3303,
+        "total_raised": 55928040400.0,
+        "med_round": 10000000.0
+      },
+      {
+        "year": 2025,
+        "rounds": 3260,
+        "total_raised": 58605765426.0,
+        "med_round": 11000000.0
+      },
+      {
+        "year": 2026,
+        "rounds": 1064,
+        "total_raised": 29798328400.0,
+        "med_round": 14500000.0
+      }
+    ],
+    "Series B": [
+      {
+        "year": 2015,
+        "rounds": 1425,
+        "total_raised": 29008082300.0,
+        "med_round": 12000000.0
+      },
+      {
+        "year": 2016,
+        "rounds": 1504,
+        "total_raised": 36288146800.0,
+        "med_round": 10300000.0
+      },
+      {
+        "year": 2017,
+        "rounds": 1802,
+        "total_raised": 36306054400.0,
+        "med_round": 10500000.0
+      },
+      {
+        "year": 2018,
+        "rounds": 2062,
+        "total_raised": 51013234100.0,
+        "med_round": 14000000.0
+      },
+      {
+        "year": 2019,
+        "rounds": 1769,
+        "total_raised": 48035846300.0,
+        "med_round": 15000000.0
+      },
+      {
+        "year": 2020,
+        "rounds": 1719,
+        "total_raised": 51057717900.0,
+        "med_round": 17200000.0
+      },
+      {
+        "year": 2021,
+        "rounds": 2651,
+        "total_raised": 122321613163.0,
+        "med_round": 27500000.0
+      },
+      {
+        "year": 2022,
+        "rounds": 2200,
+        "total_raised": 87520735058.0,
+        "med_round": 25000000.0
+      },
+      {
+        "year": 2023,
+        "rounds": 1429,
+        "total_raised": 45976908300.0,
+        "med_round": 18200000.0
+      },
+      {
+        "year": 2024,
+        "rounds": 1430,
+        "total_raised": 57446544000.0,
+        "med_round": 20000000.0
+      },
+      {
+        "year": 2025,
+        "rounds": 1401,
+        "total_raised": 59372724900.0,
+        "med_round": 25000000.0
+      },
+      {
+        "year": 2026,
+        "rounds": 482,
+        "total_raised": 29405700000.0,
+        "med_round": 30000000.0
+      }
+    ]
+  }
+}

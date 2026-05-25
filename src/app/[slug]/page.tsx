@@ -16,6 +16,7 @@ import { RelatedGlossaryTerms } from '@/lib/cross-links';
 import { glossaryTerms } from '@/lib/glossary';
 import { Columns, Column, Figure, StatRow, Stat, Callout, PullQuote, Timeline, TimelineItem, SectionLabel, KeyTakeaway, EcosystemDiagram } from '@/components/mdx';
 import { MarketProjectionChart, TrustGapChart, ConsumerConcernsChart, ValueShiftGrid, InteractionModelsVisual, TransactionFlowDiagram, CommerceEvolutionTimeline, ProtocolComparisonTable, CompetitiveLandscape } from '@/components/mdx/charts';
+import { VCValuationExpansionChart, VCGiniConcentrationChart, VCDeathValleyTimeline, VCSectorSemanticAnalysis, VCStrategicFrameworkDiagram, VCEquationBoxSVG, VCBarbellSystemVisual, VCBarbellVectorDiagram } from '@/components/mdx/funding-charts';
 import { WebEvolutionTimeline, MCPAdoptionChart, TaskHorizonChart, ProtocolStackDiagram, IndustryAdoptionChart, AgentMarketChart, SecurityThreatMatrix, AgentVsChatbot, InfrastructureLandscape } from '@/components/mdx/agentic-web-charts';
 import { ScarcitySpectrum, DataCenterEnergyChart, TrainingCostChart, MaterialConstraints, PlatformConcentration, RealityCheckGrid, DualEconomyFramework } from '@/components/mdx/infinity-charts';
 import { AIJobExposure, JobChurnChart, EarlyCareerImpact, ProductivityParadox, GenderImpact, UBIPilotResults } from '@/components/mdx/ai-economy-charts';
@@ -431,6 +432,14 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               StateOfWeb3ConvergenceMatrix,
               StateOfWeb3Momentum,
               StateOfWeb3Citations,
+              VCValuationExpansionChart,
+              VCGiniConcentrationChart,
+              VCDeathValleyTimeline,
+              VCSectorSemanticAnalysis,
+              VCStrategicFrameworkDiagram,
+              VCEquationBoxSVG,
+              VCBarbellSystemVisual,
+              VCBarbellVectorDiagram,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
