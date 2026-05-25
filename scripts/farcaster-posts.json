@@ -235,8 +235,9 @@
     "image": "scripts/thread-assets/psych_maslow.png",
     "scheduleDate": "2026-04-02",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0xc64143b0671b44d24e4f50b62c366d02ba308798",
+    "postedAt": "2026-05-25T05:10:03.340Z"
   },
   {
     "id": "ctc-arc",
