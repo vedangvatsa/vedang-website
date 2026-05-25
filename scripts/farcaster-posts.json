@@ -245,8 +245,9 @@
     "image": "scripts/thread-assets/ctc_arc.png",
     "scheduleDate": "2026-04-02",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x92402835b21cbff4b8104a90ce2ba95a345bfe4c",
+    "postedAt": "2026-05-25T12:47:50.239Z"
   },
   {
     "id": "business-world-model",
