@@ -255,8 +255,9 @@
     "image": "scripts/thread-assets/world_model_gap.png",
     "scheduleDate": "2026-04-02",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x647e3dca799d8ea7a5da308daf8921ddf99d6019",
+    "postedAt": "2026-05-25T20:11:53.222Z"
   },
   {
     "id": "lit-scrolling",

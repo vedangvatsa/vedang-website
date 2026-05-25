@@ -868,10 +868,12 @@
     "id": "ig-knowledge-worth-zero",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "Raoul Pal said it clearly.\n\nKnowledge is approaching zero value.\n\nAnyone can ask AI the same question you spent 10 years learning to answer.\n\nThe advantage now is judgment, taste, and the ability to ask the right questions.",
     "image": "scripts/thread-assets/ig-reels/DVOQBfTkilz.mp4",
-    "error": "Video upload failed: 500 {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}"
+    "error": "Video upload failed: 500 {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}",
+    "postedAt": "2026-05-25T20:11:49.485Z",
+    "fbPostId": "2167619730740833"
   },
   {
     "id": "ig-solo-billionaire",
