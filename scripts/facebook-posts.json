@@ -889,8 +889,10 @@
     "id": "ig-too-real",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "When you ask AI to write your resignation letter and it writes it better than anything you have ever written.\n\nThe tool you used to quit is better at your job than you are.\n\nLet that sink in.",
-    "image": "scripts/thread-assets/ig-reels/DRcvmWNE1Q2.mp4"
+    "image": "scripts/thread-assets/ig-reels/DRcvmWNE1Q2.mp4",
+    "postedAt": "2026-05-26T20:25:17.768Z",
+    "fbPostId": "3268796369987226"
   }
 ]
