@@ -265,8 +265,9 @@
     "image": "scripts/thread-assets/lit_scrolling.png",
     "scheduleDate": "2026-04-03",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x5544effaa9ae4ce2267d43d2f6a0470f84bdde68",
+    "postedAt": "2026-05-26T04:58:59.856Z"
   },
   {
     "id": "psych-bystander",
