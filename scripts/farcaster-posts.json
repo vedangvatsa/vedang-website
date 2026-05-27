@@ -295,8 +295,9 @@
     "image": "scripts/thread-assets/ai_timelines.png",
     "scheduleDate": "2026-04-04",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x797d5857b7c43fee1cfd568aa1a113546fef97fd",
+    "postedAt": "2026-05-27T20:26:47.294Z"
   },
   {
     "id": "swarm-prediction-1",
