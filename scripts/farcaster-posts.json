@@ -285,8 +285,9 @@
     "image": "scripts/thread-assets/ctc_india.png",
     "scheduleDate": "2026-04-03",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0xdcd5173909c7645863675756c3a62fab00e09bf5",
+    "postedAt": "2026-05-27T05:05:17.214Z"
   },
   {
     "id": "ai-timelines-uncertainty",
