@@ -74,3 +74,6 @@ pinterest-bulk*.csv
 *-urls.json
 anonymous-syndication-report.csv
 boundless-email.html
+
+# Research papers (separate project)
+papers/
