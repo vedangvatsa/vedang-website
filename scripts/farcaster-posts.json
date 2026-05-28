@@ -305,8 +305,9 @@
     "image": "scripts/thread-assets/swarm_prediction.png",
     "scheduleDate": "2026-04-04",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x8367a3525f6e1afe2d56ee510ad76245da32a31a",
+    "postedAt": "2026-05-28T05:02:07.454Z"
   },
   {
     "id": "ctc-lag",
