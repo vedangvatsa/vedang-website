@@ -1,0 +1,210 @@
+---
+title: 'The Agent Infrastructure Stack'
+summary: >-
+  Over $5 billion in venture capital has been deployed into the eight layers of
+  infrastructure that AI agents need to function. This is the map.
+date: '2026-05-28'
+author: 'Vedang Vatsa'
+keywords: ['AI agents', 'infrastructure', 'developer tools', 'Vercel Marketplace', 'Browserbase', 'Firecrawl', 'Together AI', 'Modal', 'Cerebras', 'Braintrust', 'Temporal', 'Inngest', 'Pinecone', 'E2B', 'agent security', 'compute inference', 'vector database', 'agent evaluation']
+---
+
+<Figure src="/images/essays/agent-infrastructure-stack.svg?v=1" alt="The Agent Infrastructure Stack: Eight layers of infrastructure, $5B+ in venture capital" wide />
+
+In 2024, building an AI agent meant stitching together fifteen different services by hand, including a model API, a headless browser, a web scraper, a workflow engine, a vector database, an evaluation harness, a secrets manager, and a sandbox for code execution. Each required a separate account, a separate billing page, and a separate integration effort. By mid-2026, a developer can provision every one of these from a single marketplace page with unified billing. Vercel added a dedicated "Agents" category to its marketplace in 2025. It now contains sixteen integrations. Cloudflare hosts 78 AI models at the edge with function calling built in. HuggingFace Spaces operates as an app directory for ML applications. The picks-and-shovels companies that made this consolidation possible have raised over $5 billion collectively.
+
+This essay maps them.
+
+<SectionLabel>Perception</SectionLabel>
+
+## How Agents See the Web
+
+An autonomous agent that cannot read a webpage is blind. The perception layer converts the visual, interactive web into structured data that language models can process.
+
+[Browserbase](https://www.browserbase.com/) provides headless browser infrastructure purpose-built for AI agents. It raised [$67.5 million](https://www.crunchbase.com/organization/browserbase) from Kleiner Perkins and CRV, reports over 50 million browser sessions served in 2025, and counts both Perplexity and Vercel among its customers. Rather than scraping HTML, Browserbase lets agents interact with websites the way a human would: clicking, scrolling, filling forms, and reading rendered content.
+
+[Firecrawl](https://www.firecrawl.dev/) approaches perception differently. Instead of running a full browser session, it crawls URLs and converts them into clean, LLM-ready markdown. The company raised [$16.2 million](https://www.crunchbase.com/organization/firecrawl) through Y Combinator, and its output is now consumed by over 1 million developers, including teams at Apple, Canva, and Shopify. Where Browserbase provides interactive sessions, Firecrawl provides static extraction at scale.
+
+Two newer entrants have emerged. [Parallel](https://www.parallel.ai/), founded by former Twitter CEO Parag Agrawal, raised [$230 million](https://www.crunchbase.com/organization/parallel-ai) across three rounds (most recently a $100 million Series B led by Sequoia at a $2 billion valuation) to build LLM-optimized web search and extraction APIs. [Kernel](https://kernel.sh/) raised [$22 million](https://www.crunchbase.com/organization/kernel-sh) (backed by Accel and Y Combinator) for browser-as-a-service infrastructure with sub-150ms spin-up times. And [Apify](https://apify.com/), the older player, runs 30,000+ pre-built web scrapers and generates $13.3 million in annual recurring revenue on only $3 million in external funding.
+
+<StatRow>
+  <Stat value="$339M" label="Combined funding into perception companies" source="Company disclosures, SEC filings" />
+  <Stat value="50M+" label="Browserbase sessions served (2025)" source="Browserbase" />
+  <Stat value="1M+" label="Developers using Firecrawl" source="Firecrawl" />
+  <Stat value="$2B" label="Parallel valuation (Series B, Apr 2026)" source="Sequoia" />
+</StatRow>
+
+<SectionLabel>Orchestration</SectionLabel>
+
+## How Agents Execute Multi-Step Tasks
+
+A language model generates text. An orchestration engine turns that text into a sequence of durable, retryable actions that survive failures, timeouts, and restarts. Without orchestration, an agent that crashes mid-task has no way to resume.
+
+[Temporal](https://temporal.io/) raised approximately [$650 million](https://www.crunchbase.com/organization/temporal-technologies) at a $5 billion valuation and operates the most widely adopted durable execution platform. OpenAI uses Temporal to run Codex. Snap, Netflix, and Stripe use it for backend workflows. It is infrastructure-heavy: self-hosted or cloud-hosted, designed for teams with dedicated platform engineers.
+
+[Inngest](https://www.inngest.com/) raised approximately [$30 million](https://www.crunchbase.com/organization/inngest) from a16z and Altimeter and takes the opposite approach: serverless-first, zero-infrastructure orchestration that runs on Vercel and other platforms without dedicated ops teams. Its AgentKit product adds multi-agent coordination and human-in-the-loop approval flows, explicitly targeting the agent use case that Temporal serves more generally.
+
+[Composio](https://composio.dev/) raised [$29 million](https://www.crunchbase.com/organization/composio) and provides a different kind of orchestration: tool integrations. Rather than managing execution state, Composio gives agents access to 100,000+ external tools (APIs, databases, SaaS products) through a single integration layer. Over 100,000 developers have adopted it.
+
+<SectionLabel>Evaluation and Observability</SectionLabel>
+
+## How Agents Are Measured
+
+A chatbot that hallucinates costs you credibility. An agent that hallucinates costs you money. The evaluation layer exists because agents make decisions with real consequences, and the teams deploying them need to measure accuracy, latency, cost, and failure modes before those decisions hit production.
+
+[Braintrust](https://www.braintrustdata.com/) raised over [$120 million](https://www.crunchbase.com/organization/braintrust-data) (at an $800 million valuation, led by ICONIQ) and provides evaluation, logging, tracing, and prompt management for AI applications. Stripe, Notion, and Airtable run their AI systems through Braintrust. It is listed on the Vercel Marketplace.
+
+[Langfuse](https://langfuse.com/) took the open-source route. The company raised only [$4.5 million](https://www.crunchbase.com/organization/langfuse) before being acquired by ClickHouse in January 2026. By acquisition, 19 of the Fortune 50 were using it. The acquisition signals a pattern: observability is collapsing into database platforms.
+
+[Arize AI](https://arize.com/) raised [$131 million](https://www.crunchbase.com/organization/arize-ai) and covers both traditional ML monitoring and LLM-specific evaluation. Booking.com, Uber, and Duolingo are customers. Where Braintrust focuses exclusively on LLM/agent evaluation, Arize spans the full ML stack.
+
+One notable exit: [Helicone](https://helicone.ai/), an LLM observability proxy, was acquired by Mintlify in March 2026 and is now in maintenance mode.
+
+<InfraFundingByLayer />
+
+<SectionLabel>Compute and Inference</SectionLabel>
+
+## How Agents Think
+
+Every agent call requires an inference pass. The compute layer provides the GPU infrastructure, model hosting, and API endpoints that turn prompts into responses. This is the largest value pool in the entire stack.
+
+<ComputeValuationTable />
+
+[Cerebras](https://cerebras.ai/) IPO'd on NASDAQ in May 2026 and trades at approximately $95 billion in market capitalization. It holds an OpenAI compute contract worth over $20 billion. The company builds custom wafer-scale chips designed for inference, not training, positioning it as purpose-built for the agentic workload pattern (many small, fast inference calls rather than months-long training runs).
+
+[Together AI](https://www.together.ai/) raised approximately [$1.5 billion](https://www.crunchbase.com/organization/together-ai) at an $8.5 billion valuation, reports roughly $1 billion in annual recurring revenue, and provides both inference and open-source model training. [Modal](https://modal.com/) raised [$442 million](https://www.crunchbase.com/organization/modal-labs) at a $4.65 billion valuation and achieved 5x revenue growth in eight months during 2025-2026, hitting approximately $300 million ARR. [Fireworks AI](https://fireworks.ai/) raised over [$327 million](https://www.crunchbase.com/organization/fireworks-ai) and processes more than 15 trillion tokens per day for customers including Samsung, Uber, and Cursor. [Groq](https://groq.com/) raised approximately [$1.75 billion](https://www.crunchbase.com/organization/groq) for its custom LPU inference chips, and Nvidia subsequently licensed the LPU architecture for a reported $20 billion.
+
+A significant new entrant is [fal.ai](https://fal.ai/) raised over [$400 million](https://www.crunchbase.com/organization/fal-ai) (most recently a $140 million Series D led by Sequoia at a $4.5 billion valuation) for serverless media generation infrastructure. Adobe, Canva, Shopify, and Perplexity are customers. fal processes billions of generative assets monthly across 600+ models.
+
+And then there is Cloudflare. Workers AI now hosts [78 models](https://developers.cloudflare.com/workers-ai/models/) from Meta, Google, OpenAI, Qwen, Mistral, NVIDIA, and others, with function calling, LoRA fine-tuning, vision inputs, and batch processing built in. A CDN company running inference at 300+ edge locations globally represents a structural shift: compute is moving from centralized GPU clusters to the edge, closer to the applications that consume it.
+
+<SectionLabel>Memory, State, and Retrieval</SectionLabel>
+
+## How Agents Remember
+
+A stateless agent forgets everything between calls. Memory infrastructure provides persistent context, including what the agent has done, what the user prefers, and what documents are relevant to the current task.
+
+[Mem0](https://www.mem0.ai/) raised [$24 million](https://www.crunchbase.com/organization/mem0) and provides memory management purpose-built for AI agents and assistants. It is the exclusive memory provider in the [AWS Agent SDK](https://aws.amazon.com/bedrock/agents/).
+
+[Upstash](https://upstash.com/) raised [$11.9 million](https://www.crunchbase.com/organization/upstash) from a16z and provides serverless Redis, Kafka, and vector storage. It sits on the Vercel Marketplace and is widely used for session state, rate limiting, and lightweight vector search in agent architectures.
+
+For retrieval, the vector database category attracted heavy funding in 2022-2023 and has been quiet since. [Pinecone](https://www.pinecone.io/) raised [$138 million](https://www.crunchbase.com/organization/pinecone) and reports 9,000+ customers and 800,000 developers. [Qdrant](https://qdrant.tech/) raised [$87.8 million](https://www.crunchbase.com/organization/qdrant) (the only vector database to raise a new round since 2023) and counts Disney, Microsoft, and Deloitte as customers. [Weaviate](https://weaviate.io/) raised [$67.7 million](https://www.crunchbase.com/organization/weaviate). [Chroma](https://www.trychroma.com/) raised [$18 million](https://www.crunchbase.com/organization/chroma-ai). The funding pause suggests either market saturation or a recognition that vector search is becoming a feature of general-purpose databases (Postgres with pgvector, Redis with vector modules) rather than a standalone category.
+
+<SectionLabel>Sandboxed Execution</SectionLabel>
+
+## How Agents Run Code Safely
+
+An agent that writes code needs somewhere to run it. Executing untrusted, LLM-generated code on your production servers is a security breach waiting to happen. The sandboxed execution layer provides isolated environments where agents can run arbitrary code without risk.
+
+[E2B](https://e2b.dev/) raised [$32 million](https://www.crunchbase.com/organization/e2b-dev) and provides cloud-based sandboxed environments (micro-VMs) specifically designed for AI-generated code execution. Hugging Face, Perplexity, and Groq integrate E2B into their products, and the company reports that 88% of Fortune 100 companies have signed up. Each sandbox is an isolated, ephemeral micro-VM with its own filesystem, network, and process tree, created on demand and destroyed when the task completes.
+
+<SecurityConsolidation />
+
+<SectionLabel>Security</SectionLabel>
+
+## How Agents Are Defended
+
+The security layer has undergone the fastest consolidation in the entire stack. Three of four pure-play agent security companies were acquired within eighteen months.
+
+[Lakera](https://www.lakera.ai/), which built prompt injection detection, raised [$30 million](https://www.crunchbase.com/organization/lakera) and was [acquired by Check Point](https://www.checkpoint.com/press-releases/check-point-acquires-lakera/) for approximately $300 million in September 2025. [Robust Intelligence](https://www.robustintelligence.com/), which built AI model validation, raised [$44 million](https://www.crunchbase.com/organization/robust-intelligence) and was [acquired by Cisco](https://blogs.cisco.com/security/cisco-acquires-robust-intelligence) in October 2024. [Galileo AI](https://www.rungalileo.io/), which built LLM hallucination detection, raised [$68 million](https://www.crunchbase.com/organization/galileo-ai) and was [acquired by Cisco](https://blogs.cisco.com/security/cisco-acquires-galileo) in April 2026. Cisco alone absorbed two agent security companies in eighteen months.
+
+The sole independent survivor is [Patronus AI](https://www.patronus.ai/), which raised [$40 million](https://www.crunchbase.com/organization/patronus-ai) at approximately $80.5 million valuation.
+
+Two newer security entrants are approaching the problem differently. [Corridor](https://corridor.dev/) raised [$30.4 million](https://www.crunchbase.com/organization/corridor-security) (including a $25 million Series A at $200 million valuation) for "agentic coding security," scanning PRs generated by AI coding agents for vulnerabilities. Its founders (Jack Cable and Ashwin Ramaswami) came from CISA, the federal cybersecurity agency. [Arcjet](https://arcjet.com/) raised [$12.1 million](https://www.crunchbase.com/organization/arcjet) for in-code rate limiting and bot protection, embedding security directly into application logic rather than sitting at the network perimeter. [Descope](https://www.descope.com/) raised [$88 million](https://www.crunchbase.com/organization/descope) for authentication infrastructure that now includes an Agentic Identity Hub with OAuth 2.1 for AI agents, used by Databricks, MongoDB, and GoodRx.
+
+The pattern is clear. Standalone agent security is being absorbed into larger platform companies (Cisco, Check Point), while the next generation of security companies are embedding themselves directly into the developer workflow.
+
+<AgentProductValuations />
+
+<SectionLabel>The End State: Agents as Products</SectionLabel>
+
+## Who Ships Autonomous Agents
+
+The infrastructure stack exists to support the companies that ship agents as finished products. The valuations at this layer dwarf every infrastructure category combined.
+
+[Cognition](https://cognition.ai/) (Devin) has raised over [$2.5 billion](https://www.crunchbase.com/organization/cognition-ai) at a $26 billion valuation and reports $492 million in annual recurring revenue from its autonomous software engineering agent. [Sierra AI](https://sierra.ai/), co-founded by former Salesforce CEO Bret Taylor, raised approximately [$1.475 billion](https://www.crunchbase.com/organization/sierra-ai) at a $15 billion valuation for customer experience agents deployed by WeightWatchers, ADT, and Sonos. [Harvey AI](https://www.harvey.ai/) raised over [$1.22 billion](https://www.crunchbase.com/organization/harvey-ai) at an $11 billion valuation for legal agents, with 25,000+ agents running on its platform. [Decagon](https://decagon.ai/) raised approximately [$481 million](https://www.crunchbase.com/organization/decagon-ai) at a $4.5 billion valuation for customer support agents used by Cash App, Notion, and Duolingo. [Factory AI](https://factory.ai/) raised approximately [$200 million](https://www.crunchbase.com/organization/factory-ai) at a $1.5 billion valuation for software development agents used by NVIDIA, Adobe, and MongoDB. [CodeRabbit](https://coderabbit.ai/) raised [$88 million](https://www.crunchbase.com/organization/coderabbit) at a $550 million valuation, operates the #1 AI application on the GitHub Marketplace, and has over 8,000 paying organizations.
+
+Combined, these six companies represent over $63 billion in valuation on roughly $6 billion in capital raised. The coding vertical alone (Cognition + Factory + CodeRabbit) accounts for $28 billion.
+
+<SectionLabel>The Money</SectionLabel>
+
+## What Funding Data Reveals About Agent Infrastructure
+
+<Figure src="/images/essays/agent-funding-landscape.svg?v=1" alt="Agentic AI Funding Landscape: $1.5B (2024) to $2.9B (2025), top 10 deals capture 78% of capital" wide />
+
+Disclosed equity funding for pure-play agentic AI companies nearly doubled from $1.5 billion in 2024 to $2.9 billion in 2025. The number of disclosed deals grew from 31 to 50. Between January and May 2026, the market raised another $1.1 billion across 29 deals, putting it on pace for approximately $2.6 billion annualized. The raw capital growth is real. What the headline numbers obscure is where that capital actually lands.
+
+<FundingVelocityChart />
+
+### Capital Concentrates Violently
+
+The distribution is not normal. In early 2026, the top 3 deals captured 44% of total agentic AI capital. The top 10 captured 78%. The bottom half of all deals split 11.5% among themselves. This is the defining structural feature of the agent funding market. A small number of companies absorb most of the money, and the rest compete for scraps.
+
+<CapitalConcentrationChart />
+
+This concentration exists at every stage. The median AI seed round in 2026 sits at approximately $4.6 million, up from around $3 million for the broader market. But the upper quartile of AI seed deals now exceeds $8 to $10 million, and outlier rounds (Parallel's $30 million seed, for example) distort the average further. Investors increasingly expect $500K to $1 million in ARR at seed stage, a bar that would have been Series A territory three years ago.
+
+At Series A and beyond, the bar is higher still. Investors are moving away from generic agent builders toward "control planes" and "operating systems" for agents, companies that lock in durable workflow integration. The shift from 2025 to 2026 is visible. 2025 was dominated by mega-rounds for foundation model companies. 2026 is more deal-driven, with renewed interest in the operating stack required to deploy agents safely.
+
+### Who Is Funding What
+
+<TopInvestorsTable />
+
+The investor thesis splits along clear lines. Sequoia leads growth-stage rounds for vertical agents (Sierra) and compute (fal.ai), with a newer bet on perception (Parallel). a16z funds horizontal infrastructure, including orchestration (Inngest), storage (Upstash), and the development environments that agents run in. Kleiner Perkins straddles both, leading the largest perception deal (Browserbase at $67.5M) while backing vertical players like Harvey and Glean. Y Combinator operates as the primary seed pipeline for agent infrastructure, with Firecrawl, Kernel, E2B, Cubic, and Meticulous all passing through its batches.
+
+The geographic distribution is lopsided. The United States captures approximately 82% of all agentic AI venture capital. Europe accounts for roughly 10 to 12%, with France (Mistral), the UK, and Germany producing the majority of European agent companies. Israel punches above its weight in agent security specifically (Robust Intelligence, Patronus AI). India and Southeast Asia remain underrepresented in the infrastructure layer, though vertical agent companies in healthcare and fintech are growing in both regions.
+
+### What the Category Split Looks Like
+
+Funding data segments the market into three broad categories. Vertical AI agents, companies building agents for specific industries (legal, healthcare, customer support, coding), accounted for approximately 55% of agentic AI capital and 48% of deals in early 2026. Agent execution infrastructure, the picks-and-shovels layer, drew a smaller share of total dollars but showed the highest growth rate in deal count. Agent development platforms (orchestration, frameworks, SDKs) experienced fluctuations throughout 2025 but rebounded in 2026 as teams moved from prototype to production.
+
+The pattern aligns with what the company-level data shows. Vertical agents attract the biggest checks (Cognition, Harvey, Sierra), while infrastructure companies raise smaller rounds but grow faster in deal volume. Investors are placing large bets on a few vertical winners while spreading smaller bets across the infrastructure stack, hedging on which layers will consolidate.
+
+### The Failure Rate Nobody Discusses
+
+Industry analysts estimate that 80 to 90% of early-stage AI agent startups face closure or consolidation during the current shakeout. The primary failure mode is thin wrappers around foundation model APIs. Companies that offer single-purpose tools with no proprietary model, data, or workflow advantage are being commoditized by the model providers themselves. OpenAI, Anthropic, and Google are shipping native features (function calling, tool use, code execution) that eliminate the value proposition of dozens of wrapper startups simultaneously.
+
+The companies that survive share a common trait. They own a piece of the workflow that the model provider cannot replicate. Browserbase owns the browser session. E2B owns the sandbox. Temporal owns the execution state. Inngest owns the serverless orchestration layer. Braintrust owns the evaluation data. None of these can be replaced by adding a feature to GPT-5.
+
+### The M&A Signal
+
+Nine acquisitions in the agent infrastructure space between October 2024 and May 2026 reveal where platform companies see gaps. Cisco acquired both Robust Intelligence and Galileo AI, spending over $400 million to build an agent security division. Check Point acquired Lakera for approximately $300 million. IBM acquired Confluent for $11 billion (real-time data streaming for agents) and HashiCorp for $6.4 billion (infrastructure provisioning). Meta acquired Manus for approximately $2 billion (autonomous agent platform). ClickHouse acquired Langfuse (open-source observability). Mintlify acquired Helicone (observability proxy).
+
+The acquiring companies are not startups. They are Cisco, IBM, Meta, Check Point, and ClickHouse, infrastructure incumbents that missed the initial agent wave and are buying their way in. The pattern is consistent. Security, observability, and data infrastructure companies get acquired. Compute and perception companies do not, because those layers are harder to replicate through acquisition.
+
+### The Bootstrapped Counterexample
+
+Not every successful agent company raised venture capital. [Chatbase](https://www.chatbase.co/) reached $10 million ARR with 8,000 to 10,000 paying customers and 18 employees, entirely bootstrapped. [Apify](https://apify.com/) generates $13.3 million ARR on only $3 million in external funding. [DebugBear](https://debugbear.com/), a web performance monitoring tool on the Vercel Marketplace, serves 2,000+ customers and was primarily bootstrapped with a TinySeed accelerator investment. These companies share a trait: they sell to individual developers and small teams with credit-card-accessible pricing, avoiding the enterprise sales cycle that burns cash.
+
+The bootstrapped path works for tools in the perception, monitoring, and developer experience layers. It does not work for compute (capital-intensive), security (enterprise sales required), or orchestration (infrastructure complexity). The funding data confirms the obvious. Some layers require venture capital to exist, and others can be built profitably from day one.
+
+<MarketplaceComposition />
+
+<SectionLabel>The Marketplace Signal</SectionLabel>
+
+## Developer Platforms Are Productizing the Stack
+
+The clearest evidence that agent infrastructure has matured from GitHub repositories to managed services is the Vercel Marketplace. It contains 97+ integrations across 22 categories. The "Agents" category, added in 2025, now includes Browserbase, Firecrawl, Braintrust, CodeRabbit, Inngest, Parallel, Profound, Corridor, and others. Each can be provisioned with one click, billed through a single invoice, and connected to a Vercel project with automatic API key injection.
+
+<Figure src="/images/essays/vercel-marketplace-map.svg?v=7" alt="Vercel Marketplace: 97+ integrations across 22 categories" caption="The Vercel Marketplace as of May 2026" wide />
+
+This is not limited to Vercel. Cloudflare Workers AI serves 78 models at the edge with OpenAI-compatible endpoints. HuggingFace Spaces operates as the largest ML application directory. LangChain's LangSmith provides a hub for reusable agent chains, prompts, and evaluation datasets. The infrastructure stack is being absorbed into platforms the same way databases, storage, and compute were absorbed into AWS in the 2010s.
+
+Two companies from the Vercel Marketplace illustrate how quickly new categories form. [Profound](https://www.profound.com/), which monitors how brands appear in AI-generated search results (ChatGPT, Perplexity, Google AI Overviews), reached unicorn status ($1 billion valuation on $155 million raised) within 18 months of founding. [Chatbase](https://www.chatbase.co/), which lets businesses create custom support agents trained on their own data, reached $10 million ARR while fully bootstrapped with 18 employees.
+
+<SectionLabel>Structural Observations</SectionLabel>
+
+## What the Data Shows
+
+**Security is consolidating into platforms.** Three of four independent agent security companies were acquired in eighteen months. Cisco alone bought two. The next generation (Corridor, Arcjet, Descope) is embedding security into code and identity workflows rather than selling standalone products, likely to avoid the same fate.
+
+**Compute produced the largest tech IPO of 2026.** Cerebras trades at approximately $95 billion. Groq's LPU architecture was licensed by Nvidia for a reported $20 billion. fal.ai reached a $4.5 billion valuation processing media generation for Adobe and Canva. The inference layer is where the most capital concentrates because every other layer depends on it.
+
+**Vector databases stopped raising.** Pinecone, Weaviate, and Chroma have not announced new rounds since 2023. Qdrant is the exception. The signal is that vector search is becoming a feature of Postgres, Redis, and MongoDB, not a standalone product category.
+
+**The perception layer attracted a $2 billion valuation.** Parallel, founded by a former Twitter CEO with $230 million in funding, is the highest-valued pure-play perception company. This suggests the market believes web comprehension for agents is as structurally important as search was for the browser era.
+
+**Coding agents are the hottest vertical.** Cognition ($26B), Factory ($1.5B), and CodeRabbit ($550M) represent $28 billion in combined valuation. No other agent-as-product vertical comes close.
+
+**Edge inference is arriving.** Cloudflare hosting 78 models with function calling at 300+ global locations, and Fireworks processing 15 trillion tokens per day, point to a future where inference is not a centralized API call but a distributed, edge-native operation.
+
+The infrastructure layer is settling. Compute will remain the largest value pool. Security will live inside platforms rather than beside them. Orchestration split into two camps, industrial (Temporal at $5B) and serverless (Inngest at $30M). Memory remains early, with the largest standalone company (Mem0) at only $24 million raised. The question that remains open is whether these layers stay independent or collapse into platform bundles, the way AWS absorbed databases, compute, storage, and monitoring into a single bill two decades ago. Vercel, Cloudflare, and HuggingFace are each making their case.

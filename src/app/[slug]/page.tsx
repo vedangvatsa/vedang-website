@@ -43,6 +43,7 @@ import { MonasteryPrincipleChart, AttentionSpanDecline, InterruptionCostChart, R
 import { PlaybookHeroCard, AgentToolsMap, AutomationROIChart, ContentPipelineFlow, OutreachPipeline, AIMaturityLevels, ImplementationTimeline, NurtureSequence, ImplementationChecklist, SocialListeningMap, SupportTierChart, DashboardMetricsMap, UseCaseCatalog } from '@/components/mdx/playbook-charts';
 import { StateOfAiKeywordsChart, StateOfAiBigramsChart, StateOfAiTimeline, StateOfAiNgramAnalyzer, StateOfAiMomentum } from '@/components/mdx/state-of-ai-charts';
 import { StateOfWeb3KeywordsChart, StateOfWeb3BigramsChart, StateOfWeb3Timeline, StateOfWeb3NgramAnalyzer, StateOfWeb3ConvergenceMatrix, StateOfWeb3Momentum, StateOfWeb3Citations } from '@/components/mdx/state-of-web3-charts';
+import { InfraFundingByLayer, SecurityConsolidation, ComputeValuationTable, AgentProductValuations, MarketplaceComposition, FundingVelocityChart, CapitalConcentrationChart, TopInvestorsTable } from '@/components/mdx/agent-infrastructure-stack-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -89,6 +90,7 @@ const ESSAY_GLOSSARY_LINKS: Record<string, string[]> = {
   'agentic-commerce': ['agent', 'llm', 'api'],
   'towards-the-agentic-web': ['agent', 'llm', 'rag', 'api'],
   'yc-landscape': ['agent', 'llm', 'api'],
+  'agent-infrastructure-stack': ['agent', 'llm', 'api', 'edge-computing'],
 };
 
 const GLOSSARY_LABELS: Record<string, string> = {
@@ -440,6 +442,14 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               VCEquationBoxSVG,
               VCBarbellSystemVisual,
               VCBarbellVectorDiagram,
+              InfraFundingByLayer,
+              SecurityConsolidation,
+              ComputeValuationTable,
+              AgentProductValuations,
+              MarketplaceComposition,
+              FundingVelocityChart,
+              CapitalConcentrationChart,
+              TopInvestorsTable,
               img: (props: any) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img

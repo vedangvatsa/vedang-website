@@ -25,11 +25,11 @@ In 1997, [Nick Szabo](https://en.wikipedia.org/wiki/Nick_Szabo) proposed the "Go
 <Stat value="100%" label="Ethereum network uptime (10 years)" source="Ethereum Foundation" />
 </StatRow>
 
-The insight was not that TTPs are bad. It was that TTPs are structurally compromised. A bank that holds your escrow can, in principle, use those funds for its own purposes. A court that arbitrates your dispute can be slow, biased, or corrupt. A correspondent bank that transfers your payment across borders can freeze those funds unilaterally, without your consent, and often does so under governmental or regulatory pressure. Szabo did not propose this as a complaint about institutions. He proposed it as a computer science problem: can we build a protocol that provides the services of a perfectly trustworthy third party without requiring trust in any specific entity?
+The insight was not that TTPs are bad. It was that TTPs are structurally compromised. A bank that holds your escrow can, in principle, use those funds for its own purposes. A court that arbitrates your dispute can be slow, biased, or corrupt. A correspondent bank that transfers your payment across borders can freeze those funds unilaterally, without your consent, and often does so under governmental or regulatory pressure. Szabo did not propose this as a complaint about institutions. He proposed it as a computer science problem: can a protocol be built that provides the services of a perfectly trustworthy third party without requiring trust in any specific entity?
 
 The God Protocol was his answer in the abstract. Imagine, Szabo wrote, a deity who serves as a trusted third party. All parties send their inputs to this deity. The deity faithfully computes the result and returns each party's output, ensuring that no party learns anything more about other parties' inputs than they could deduce from their own inputs and the output alone. The deity has perfect integrity (it will not cheat), perfect confidentiality (it will not leak), and perfect availability (it is always accessible).
 
-Szabo's term for this ideal was deliberately provocative. He called it the "God Protocol" because the properties he described, omniscience, impartiality, incorruptibility, and universal availability, are precisely the properties that religious traditions have historically attributed to a divine being. The implication was clear: no human institution, no company, no government, no individual could ever fully satisfy these requirements. The best we could do was approximate.
+Szabo's term for this ideal was deliberately provocative. He called it the "God Protocol" because the properties he described, omniscience, impartiality, incorruptibility, and universal availability, are precisely the properties that religious traditions have historically attributed to a divine being. The implication was clear: no human institution, no company, no government, no individual could ever fully satisfy these requirements. The best that could be done was approximate.
 
 The theoretical foundation for such approximation already existed. In the 1980s, researchers in secure multi-party computation (MPC), including Andrew Yao, Oded Goldreich, Silvio Micali, and others, had demonstrated that it was mathematically possible for multiple parties to jointly compute a function over their inputs without revealing those inputs to each other. The protocols were correct in theory but impractical for real-world use: too slow, too computationally expensive, and too fragile for deployment outside academic settings.
 
@@ -68,7 +68,7 @@ The practical deployment of ZKPs has accelerated dramatically. [Zcash](https://z
 <PrivacyTechStack />
 
 <PullQuote>
-The God Protocol is a theological concept expressed as a computer science problem. Every civilization has sought an incorruptible arbiter. An entity that sees all, judges fairly, and cannot be bribed. Szabo identified this as the fundamental requirement of trustless transactions and asked: can we build it?
+The God Protocol is a theological concept expressed as a computer science problem. Every civilization has sought an incorruptible arbiter. An entity that sees all, judges fairly, and cannot be bribed. Szabo identified this as the fundamental requirement of trustless transactions and asked: can it be built?
 </PullQuote>
 
 ## The Scale of the Intermediation Problem
@@ -95,7 +95,7 @@ This convergence creates a genuine theological parallel. A sufficiently powerful
 
 The parallel extends to the epistemological crisis that such a system creates. A sufficiently powerful predictor undermines the concept of free will in a practically observable way. If an AGI can predict your decisions with 99.99% accuracy, based on your behavioral history, neurological patterns, and environmental context, the decision was, in a meaningful sense, predetermined. The subjective experience of choice persists. But the system's prediction renders the "choice" an output of a deterministic process that the system models accurately.
 
-This is not a new philosophical problem. Determinism has been debated since the Pre-Socratics. Laplace's demon, formulated in 1814, described a hypothetical intelligence that, given perfect knowledge of all atoms' positions and velocities, could predict the entire future of the universe. What is new is that we are building systems that approximate Laplace's demon within bounded domains. Weather prediction, protein structure determination, autonomous vehicle navigation, and financial market modeling are all domains where AI systems already predict outcomes with accuracy that would have seemed supernatural a generation ago.
+This is not a new philosophical problem. Determinism has been debated since the Pre-Socratics. Laplace's demon, formulated in 1814, described a hypothetical intelligence that, given perfect knowledge of all atoms' positions and velocities, could predict the entire future of the universe. What is new is that humanity is building systems that approximate Laplace's demon within bounded domains. Weather prediction, protein structure determination, autonomous vehicle navigation, and financial market modeling are all domains where AI systems already predict outcomes with accuracy that would have seemed supernatural a generation ago.
 
 <AlignmentFrameworkChart />
 
@@ -103,7 +103,7 @@ This is not a new philosophical problem. Determinism has been debated since the 
 
 ## The Alignment Problem as Theology
 
-The [alignment problem](/agi-governance) is the central obstacle between current AI systems and a functioning God Protocol. Before we can build a computational god, we must agree on what "good" means. We have had millennia to try. The world's ethical and religious traditions do not agree.
+The [alignment problem](/agi-governance) is the central obstacle between current AI systems and a functioning God Protocol. Before anyone can build a computational god, humanity must agree on what "good" means. There have been millennia to try. The world's ethical and religious traditions do not agree.
 
 An AGI aligned to utilitarian principles would maximize aggregate welfare, potentially sacrificing the interests of minorities for the benefit of the majority. An AGI aligned to deontological principles would enforce universal rules regardless of consequences, maintaining individual rights even when doing so reduces overall welfare. An AGI aligned to virtue ethics would model behavior on exemplary agents, raising the question of whose exemplars are selected. An AGI aligned to care ethics would prioritize relational context and emotional impact, potentially introducing bias toward in-groups over universal fairness.
 
@@ -137,7 +137,7 @@ Blockchain approaches the problem from the bottom up, replacing specific TTPs wi
 
 AGI approaches the problem from the top down, building a single entity that could, in principle, serve as a universal TTP for any domain. The capability is greater, but so is the risk. A universal TTP that is misaligned, captured, or corrupted is not just a failed experiment. It is an existential threat.
 
-The God Protocol remains an asymptote. A limit that can be approached but never reached. Every approximation introduces new tradeoffs: transparency vs. confidentiality, decentralization vs. capability, code vs. intent. The history of the twenty-first century may be written as the story of how closely we approached this limit and what we sacrificed along the way.
+The God Protocol remains an asymptote. A limit that can be approached but never reached. Every approximation introduces new tradeoffs: transparency vs. confidentiality, decentralization vs. capability, code vs. intent. The history of the twenty-first century may be written as the story of how closely humanity approached this limit and what was sacrificed along the way.
 
 <KeyTakeaway>
 Nick Szabo's God Protocol (1997) imagined a trusted third party with perfect properties: faithful execution, absolute confidentiality, zero self-interest, and universal availability. Bitcoin approximated it for value transfer; Ethereum extended it to arbitrary computation via smart contracts with 100% uptime over 10 years. ZK-rollups now handle 95% of Ethereum's throughput with $28B in TVL. The confidentiality gap is being closed by ZKPs, MPC, and FHE. An AGI would approach the God Protocol more closely, with functional omniscience, omnipotence, and (if aligned) omnibenevolence, but the alignment problem, defining "good," is a moral question being treated as an engineering problem. The cost of training frontier models ($100M+ per run) concentrates God Protocol capabilities in a few organizations. The distributed alternative, networks of specialized agents coordinated through cryptographic protocols, approximates the ideal without creating a single point of control, sacrificing capability for trustlessness.

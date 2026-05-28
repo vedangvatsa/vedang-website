@@ -1,0 +1,526 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1060" font-family="'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1060" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#0c0c14"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#a1a1aa"/>
+    </linearGradient>
+    <linearGradient id="vercelMark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff"/>
+      <stop offset="100%" stop-color="#888"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="1060" fill="url(#bg)" rx="16"/>
+
+  <!-- Subtle grid pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.02" stroke-width="0.5"/>
+  </pattern>
+  <rect width="1200" height="1060" fill="url(#grid)"/>
+
+  <!-- Header -->
+  <g transform="translate(600, 38)">
+    <!-- Vercel triangle logo -->
+    <polygon points="-12,-12 12,-12 0,6" fill="white" transform="translate(-140, -2)"/>
+    <text x="-120" y="2" fill="url(#titleGrad)" font-size="22" font-weight="700" letter-spacing="-0.3">Vercel Marketplace</text>
+  </g>
+  <text x="600" y="60" text-anchor="middle" fill="#52525b" font-size="12" letter-spacing="0.3">22 categories · 97+ native integrations · unified billing · one-click install</text>
+
+  <!-- Divider line -->
+  <line x1="40" y1="76" x2="1160" y2="76" stroke="#27272a" stroke-width="0.5"/>
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- AGENTS (Vercel's official "agents" category)            -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <g transform="translate(30, 92)">
+    <rect width="555" height="234" rx="12" fill="#7c3aed" fill-opacity="0.04" stroke="#7c3aed" stroke-opacity="0.2"/>
+    <!-- Header bar -->
+    <rect width="555" height="32" rx="12" fill="#7c3aed" fill-opacity="0.08"/>
+    <rect y="20" width="555" height="12" fill="#7c3aed" fill-opacity="0.08"/>
+    <text x="16" y="22" fill="#c4b5fd" font-size="11" font-weight="700" letter-spacing="1">⬡ AGENTS</text>
+    <text x="120" y="22" fill="#52525b" font-size="10">16 integrations — Vercel's curated AI agent category</text>
+
+    <!-- Row 1 -->
+    <g transform="translate(16, 50)">
+      <circle cx="8" cy="-4" r="8" fill="#7c3aed" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#c4b5fd" font-size="7" font-weight="700">B</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Browserbase</text>
+      <text x="115" y="0" fill="#71717a" font-size="9.5">Headless browsers for agents · $67.5M</text>
+    </g>
+    <g transform="translate(16, 70)">
+      <circle cx="8" cy="-4" r="8" fill="#7c3aed" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#c4b5fd" font-size="7" font-weight="700">F</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Firecrawl</text>
+      <text x="115" y="0" fill="#71717a" font-size="9.5">Web → LLM-ready markdown · $16.2M</text>
+    </g>
+    <g transform="translate(16, 90)">
+      <circle cx="8" cy="-4" r="8" fill="#7c3aed" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#c4b5fd" font-size="7" font-weight="700">C</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">CodeRabbit</text>
+      <text x="115" y="0" fill="#71717a" font-size="9.5">Autonomous code review · $88M · $550M val</text>
+    </g>
+    <g transform="translate(16, 110)">
+      <circle cx="8" cy="-4" r="8" fill="#7c3aed" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#c4b5fd" font-size="7" font-weight="700">B</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Braintrust</text>
+      <text x="115" y="0" fill="#71717a" font-size="9.5">AI eval &amp; observability · $120M+ · $800M val</text>
+    </g>
+    <g transform="translate(16, 130)">
+      <circle cx="8" cy="-4" r="8" fill="#7c3aed" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#c4b5fd" font-size="7" font-weight="700">A</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Autonoma AI</text>
+      <text x="115" y="0" fill="#71717a" font-size="9.5">Visual browser testing agent</text>
+    </g>
+    <g transform="translate(16, 150)">
+      <circle cx="8" cy="-4" r="8" fill="#7c3aed" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#c4b5fd" font-size="7" font-weight="700">D</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Descope MCP Auth</text>
+      <text x="135" y="0" fill="#71717a" font-size="9.5">Auth infrastructure for AI agents</text>
+    </g>
+    <g transform="translate(16, 170)">
+      <circle cx="8" cy="-4" r="8" fill="#7c3aed" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#c4b5fd" font-size="7" font-weight="700">S</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Sourcery</text>
+      <text x="115" y="0" fill="#71717a" font-size="9.5">AI code review &amp; refactoring</text>
+    </g>
+    <g transform="translate(16, 190)">
+      <circle cx="8" cy="-4" r="8" fill="#7c3aed" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#c4b5fd" font-size="7" font-weight="700">C</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Chatbase</text>
+      <text x="115" y="0" fill="#71717a" font-size="9.5">Custom AI chatbot builder</text>
+    </g>
+
+    <!-- Overflow -->
+    <text x="16" y="218" fill="#7c3aed" fill-opacity="0.6" font-size="10">+ Assistloop · Corridor · Cubic · Kernel · Kubiks · Mixedbread · Parallel · Program</text>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- AI INFRASTRUCTURE (inference, voice, media)             -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <g transform="translate(600, 92)">
+    <rect width="570" height="234" rx="12" fill="#2563eb" fill-opacity="0.04" stroke="#2563eb" stroke-opacity="0.2"/>
+    <rect width="570" height="32" rx="12" fill="#2563eb" fill-opacity="0.08"/>
+    <rect y="20" width="570" height="12" fill="#2563eb" fill-opacity="0.08"/>
+    <text x="16" y="22" fill="#93c5fd" font-size="11" font-weight="700" letter-spacing="1">◆ AI INFRASTRUCTURE</text>
+    <text x="175" y="22" fill="#52525b" font-size="10">Inference · Voice · Media · Search</text>
+
+    <g transform="translate(16, 50)">
+      <circle cx="8" cy="-4" r="8" fill="#2563eb" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#93c5fd" font-size="7" font-weight="700">R</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Replicate</text>
+      <text x="115" y="0" fill="#71717a" font-size="9.5">Run open-source models via API</text>
+    </g>
+    <g transform="translate(16, 70)">
+      <circle cx="8" cy="-4" r="8" fill="#2563eb" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#93c5fd" font-size="7" font-weight="700">T</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Together AI</text>
+      <text x="115" y="0" fill="#71717a" font-size="9.5">Fast inference, open models</text>
+    </g>
+    <g transform="translate(16, 90)">
+      <circle cx="8" cy="-4" r="8" fill="#2563eb" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#93c5fd" font-size="7" font-weight="700">D</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">DeepInfra</text>
+      <text x="115" y="0" fill="#71717a" font-size="9.5">Serverless model inference</text>
+    </g>
+    <g transform="translate(16, 110)">
+      <circle cx="8" cy="-4" r="8" fill="#2563eb" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#93c5fd" font-size="7" font-weight="700">f</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">fal</text>
+      <text x="115" y="0" fill="#71717a" font-size="9.5">Media generation models (image/video)</text>
+    </g>
+    <g transform="translate(16, 130)">
+      <circle cx="8" cy="-4" r="8" fill="#2563eb" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#93c5fd" font-size="7" font-weight="700">E</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">ElevenLabs</text>
+      <text x="115" y="0" fill="#71717a" font-size="9.5">AI voice synthesis &amp; cloning</text>
+    </g>
+    <g transform="translate(16, 150)">
+      <circle cx="8" cy="-4" r="8" fill="#2563eb" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#93c5fd" font-size="7" font-weight="700">L</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">LMNT</text>
+      <text x="115" y="0" fill="#71717a" font-size="9.5">Low-latency AI speech</text>
+    </g>
+    <g transform="translate(16, 170)">
+      <circle cx="8" cy="-4" r="8" fill="#2563eb" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#93c5fd" font-size="7" font-weight="700">P</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Perplexity API</text>
+      <text x="115" y="0" fill="#71717a" font-size="9.5">AI-powered search API</text>
+    </g>
+    <g transform="translate(16, 190)">
+      <circle cx="8" cy="-4" r="8" fill="#2563eb" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#93c5fd" font-size="7" font-weight="700">M</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Mux</text>
+      <text x="115" y="0" fill="#71717a" font-size="9.5">Video streaming infrastructure</text>
+    </g>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- DATABASES (Vercel's "database" category)                -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <g transform="translate(30, 342)">
+    <rect width="740" height="254" rx="12" fill="#059669" fill-opacity="0.04" stroke="#059669" stroke-opacity="0.2"/>
+    <rect width="740" height="32" rx="12" fill="#059669" fill-opacity="0.08"/>
+    <rect y="20" width="740" height="12" fill="#059669" fill-opacity="0.08"/>
+    <text x="16" y="22" fill="#6ee7b7" font-size="11" font-weight="700" letter-spacing="1">● DATABASES &amp; STORAGE</text>
+    <text x="195" y="22" fill="#52525b" font-size="10">27 integrations — SQL · NoSQL · Vector · Realtime · Edge</text>
+
+    <!-- Column 1: Primary -->
+    <g transform="translate(16, 50)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">N</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Neon</text>
+      <text x="100" y="0" fill="#71717a" font-size="9.5">Serverless Postgres · acq. Databricks ~$1B</text>
+    </g>
+    <g transform="translate(16, 68)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">S</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Supabase</text>
+      <text x="100" y="0" fill="#71717a" font-size="9.5">Postgres + Auth + Realtime + Storage</text>
+    </g>
+    <g transform="translate(16, 86)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">U</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Upstash</text>
+      <text x="100" y="0" fill="#71717a" font-size="9.5">Serverless Redis &amp; Vector · $11.9M (a16z)</text>
+    </g>
+    <g transform="translate(16, 104)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">P</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Pinecone</text>
+      <text x="100" y="0" fill="#71717a" font-size="9.5">Vector database for RAG</text>
+    </g>
+    <g transform="translate(16, 122)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">C</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Convex</text>
+      <text x="100" y="0" fill="#71717a" font-size="9.5">Reactive backend platform</text>
+    </g>
+    <g transform="translate(16, 140)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">M</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">MongoDB Atlas</text>
+      <text x="120" y="0" fill="#71717a" font-size="9.5">Document database</text>
+    </g>
+    <g transform="translate(16, 158)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">T</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Turso</text>
+      <text x="100" y="0" fill="#71717a" font-size="9.5">Edge SQLite (libSQL)</text>
+    </g>
+    <g transform="translate(16, 176)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">R</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Redis</text>
+      <text x="100" y="0" fill="#71717a" font-size="9.5">In-memory data store</text>
+    </g>
+    <g transform="translate(16, 194)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">P</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Prisma</text>
+      <text x="100" y="0" fill="#71717a" font-size="9.5">ORM &amp; connection pooling</text>
+    </g>
+
+    <!-- Column 2 -->
+    <g transform="translate(380, 50)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">T</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">TiDB Cloud</text>
+      <text x="105" y="0" fill="#71717a" font-size="9.5">Distributed SQL</text>
+    </g>
+    <g transform="translate(380, 68)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">D</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">DataStax Astra</text>
+      <text x="125" y="0" fill="#71717a" font-size="9.5">Cassandra-as-a-service</text>
+    </g>
+    <g transform="translate(380, 86)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">A</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Azure Cosmos DB</text>
+      <text x="140" y="0" fill="#71717a" font-size="9.5">Multi-model DB</text>
+    </g>
+    <g transform="translate(380, 104)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">C</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Couchbase Capella</text>
+      <text x="145" y="0" fill="#71717a" font-size="9.5">NoSQL cloud DB</text>
+    </g>
+    <g transform="translate(380, 122)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">S</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">SingleStore</text>
+      <text x="105" y="0" fill="#71717a" font-size="9.5">Real-time analytics DB</text>
+    </g>
+    <g transform="translate(380, 140)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">M</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">MotherDuck</text>
+      <text x="105" y="0" fill="#71717a" font-size="9.5">Serverless DuckDB</text>
+    </g>
+    <g transform="translate(380, 158)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">X</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Xata</text>
+      <text x="105" y="0" fill="#71717a" font-size="9.5">Serverless data platform</text>
+    </g>
+    <g transform="translate(380, 176)">
+      <circle cx="8" cy="-4" r="8" fill="#059669" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#6ee7b7" font-size="7" font-weight="700">T</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Tigris</text>
+      <text x="105" y="0" fill="#71717a" font-size="9.5">Object storage</text>
+    </g>
+
+    <text x="16" y="238" fill="#059669" fill-opacity="0.5" font-size="9.5">+ AWS · Hasura · Nile · StepZen · Tinybird · Meilisearch · Mixedbread</text>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- OBSERVABILITY (Vercel's "observability" category)       -->
+  <!-- ════════════════════════════════════════════════════════ -->
+  <g transform="translate(785, 342)">
+    <rect width="385" height="254" rx="12" fill="#d97706" fill-opacity="0.04" stroke="#d97706" stroke-opacity="0.2"/>
+    <rect width="385" height="32" rx="12" fill="#d97706" fill-opacity="0.08"/>
+    <rect y="20" width="385" height="12" fill="#d97706" fill-opacity="0.08"/>
+    <text x="16" y="22" fill="#fcd34d" font-size="11" font-weight="700" letter-spacing="1">◉ OBSERVABILITY</text>
+    <text x="155" y="22" fill="#52525b" font-size="10">14 integrations</text>
+
+    <g transform="translate(16, 50)">
+      <circle cx="8" cy="-4" r="8" fill="#d97706" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fcd34d" font-size="7" font-weight="700">D</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Datadog</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Full-stack monitoring</text>
+    </g>
+    <g transform="translate(16, 68)">
+      <circle cx="8" cy="-4" r="8" fill="#d97706" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fcd34d" font-size="7" font-weight="700">S</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Sentry</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Error tracking &amp; perf</text>
+    </g>
+    <g transform="translate(16, 86)">
+      <circle cx="8" cy="-4" r="8" fill="#d97706" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fcd34d" font-size="7" font-weight="700">N</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">New Relic</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">APM &amp; infrastructure</text>
+    </g>
+    <g transform="translate(16, 104)">
+      <circle cx="8" cy="-4" r="8" fill="#d97706" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fcd34d" font-size="7" font-weight="700">C</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Checkly</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">API &amp; browser monitoring</text>
+    </g>
+    <g transform="translate(16, 122)">
+      <circle cx="8" cy="-4" r="8" fill="#d97706" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fcd34d" font-size="7" font-weight="700">H</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Highlight</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Session replay + errors</text>
+    </g>
+    <g transform="translate(16, 140)">
+      <circle cx="8" cy="-4" r="8" fill="#d97706" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fcd34d" font-size="7" font-weight="700">H</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">HyperDX</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">OpenTelemetry platform</text>
+    </g>
+    <g transform="translate(16, 158)">
+      <circle cx="8" cy="-4" r="8" fill="#d97706" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fcd34d" font-size="7" font-weight="700">S</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Statsig</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Feature flags &amp; analytics</text>
+    </g>
+    <g transform="translate(16, 176)">
+      <circle cx="8" cy="-4" r="8" fill="#d97706" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fcd34d" font-size="7" font-weight="700">R</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Rollbar</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Error monitoring</text>
+    </g>
+
+    <text x="16" y="220" fill="#d97706" fill-opacity="0.5" font-size="9.5">+ Middleware · Ship Shape · Dash0 · Kubiks</text>
+    <text x="16" y="238" fill="#d97706" fill-opacity="0.5" font-size="9.5">+ Axiom · BetterStack · PostHog · Logflare</text>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- ROW 3: Auth · CMS · Commerce                           -->
+  <!-- ════════════════════════════════════════════════════════ -->
+
+  <!-- Auth & Security -->
+  <g transform="translate(30, 612)">
+    <rect width="370" height="185" rx="12" fill="#dc2626" fill-opacity="0.04" stroke="#dc2626" stroke-opacity="0.2"/>
+    <rect width="370" height="32" rx="12" fill="#dc2626" fill-opacity="0.08"/>
+    <rect y="20" width="370" height="12" fill="#dc2626" fill-opacity="0.08"/>
+    <text x="16" y="22" fill="#fca5a5" font-size="11" font-weight="700" letter-spacing="1">◼ AUTH &amp; SECURITY</text>
+
+    <g transform="translate(16, 50)">
+      <circle cx="8" cy="-4" r="8" fill="#dc2626" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fca5a5" font-size="7" font-weight="700">C</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Clerk</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">User auth &amp; management</text>
+    </g>
+    <g transform="translate(16, 68)">
+      <circle cx="8" cy="-4" r="8" fill="#dc2626" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fca5a5" font-size="7" font-weight="700">A</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Auth0</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Identity platform (Okta)</text>
+    </g>
+    <g transform="translate(16, 86)">
+      <circle cx="8" cy="-4" r="8" fill="#dc2626" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fca5a5" font-size="7" font-weight="700">A</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Arcjet</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Rate limiting &amp; bot protection</text>
+    </g>
+    <g transform="translate(16, 104)">
+      <circle cx="8" cy="-4" r="8" fill="#dc2626" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fca5a5" font-size="7" font-weight="700">D</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Doppler</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Secrets management</text>
+    </g>
+    <g transform="translate(16, 122)">
+      <circle cx="8" cy="-4" r="8" fill="#dc2626" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fca5a5" font-size="7" font-weight="700">D</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Descope</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">MCP Auth for AI agents</text>
+    </g>
+  </g>
+
+  <!-- CMS -->
+  <g transform="translate(415, 612)">
+    <rect width="370" height="185" rx="12" fill="#0891b2" fill-opacity="0.04" stroke="#0891b2" stroke-opacity="0.2"/>
+    <rect width="370" height="32" rx="12" fill="#0891b2" fill-opacity="0.08"/>
+    <rect y="20" width="370" height="12" fill="#0891b2" fill-opacity="0.08"/>
+    <text x="16" y="22" fill="#67e8f9" font-size="11" font-weight="700" letter-spacing="1">◇ CONTENT MANAGEMENT</text>
+
+    <g transform="translate(16, 50)">
+      <circle cx="8" cy="-4" r="8" fill="#0891b2" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#67e8f9" font-size="7" font-weight="700">S</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Sanity</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Structured content platform</text>
+    </g>
+    <g transform="translate(16, 68)">
+      <circle cx="8" cy="-4" r="8" fill="#0891b2" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#67e8f9" font-size="7" font-weight="700">C</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Contentful</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Enterprise headless CMS</text>
+    </g>
+    <g transform="translate(16, 86)">
+      <circle cx="8" cy="-4" r="8" fill="#0891b2" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#67e8f9" font-size="7" font-weight="700">D</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">DatoCMS</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">API-first headless CMS</text>
+    </g>
+    <g transform="translate(16, 104)">
+      <circle cx="8" cy="-4" r="8" fill="#0891b2" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#67e8f9" font-size="7" font-weight="700">M</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Makeswift</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Visual page builder</text>
+    </g>
+    <text x="16" y="168" fill="#0891b2" fill-opacity="0.5" font-size="9.5">+ ButterCMS · Agility CMS · Wix</text>
+  </g>
+
+  <!-- Commerce & Payments -->
+  <g transform="translate(800, 612)">
+    <rect width="370" height="185" rx="12" fill="#be185d" fill-opacity="0.04" stroke="#be185d" stroke-opacity="0.2"/>
+    <rect width="370" height="32" rx="12" fill="#be185d" fill-opacity="0.08"/>
+    <rect y="20" width="370" height="12" fill="#be185d" fill-opacity="0.08"/>
+    <text x="16" y="22" fill="#f9a8d4" font-size="11" font-weight="700" letter-spacing="1">▲ COMMERCE &amp; PAYMENTS</text>
+
+    <g transform="translate(16, 50)">
+      <circle cx="8" cy="-4" r="8" fill="#be185d" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#f9a8d4" font-size="7" font-weight="700">S</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Stripe</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Payment processing</text>
+    </g>
+    <g transform="translate(16, 68)">
+      <circle cx="8" cy="-4" r="8" fill="#be185d" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#f9a8d4" font-size="7" font-weight="700">S</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Swell</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Headless e-commerce</text>
+    </g>
+    <g transform="translate(16, 86)">
+      <circle cx="8" cy="-4" r="8" fill="#be185d" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#f9a8d4" font-size="7" font-weight="700">O</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">OrderCloud</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">B2B/B2C commerce APIs</text>
+    </g>
+    <g transform="translate(16, 104)">
+      <circle cx="8" cy="-4" r="8" fill="#be185d" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#f9a8d4" font-size="7" font-weight="700">F</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Formspree</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Form backend service</text>
+    </g>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════ -->
+  <!-- ROW 4: DevTools · Messaging · Infra                    -->
+  <!-- ════════════════════════════════════════════════════════ -->
+
+  <!-- Dev Tools & Feature Flags -->
+  <g transform="translate(30, 813)">
+    <rect width="370" height="230" rx="12" fill="#4f46e5" fill-opacity="0.04" stroke="#4f46e5" stroke-opacity="0.2"/>
+    <rect width="370" height="32" rx="12" fill="#4f46e5" fill-opacity="0.08"/>
+    <rect y="20" width="370" height="12" fill="#4f46e5" fill-opacity="0.08"/>
+    <text x="16" y="22" fill="#c7d2fe" font-size="11" font-weight="700" letter-spacing="1">⚙ DEV TOOLS &amp; FLAGS</text>
+
+    <g transform="translate(16, 50)">
+      <circle cx="8" cy="-4" r="8" fill="#4f46e5" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#c7d2fe" font-size="7" font-weight="700">L</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">LaunchDarkly</text>
+      <text x="125" y="0" fill="#71717a" font-size="9.5">Feature management</text>
+    </g>
+    <g transform="translate(16, 68)">
+      <circle cx="8" cy="-4" r="8" fill="#4f46e5" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#c7d2fe" font-size="7" font-weight="700">S</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Split</text>
+      <text x="125" y="0" fill="#71717a" font-size="9.5">Feature delivery</text>
+    </g>
+    <g transform="translate(16, 86)">
+      <circle cx="8" cy="-4" r="8" fill="#4f46e5" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#c7d2fe" font-size="7" font-weight="700">D</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">DevCycle</text>
+      <text x="125" y="0" fill="#71717a" font-size="9.5">Feature flag mgmt</text>
+    </g>
+    <g transform="translate(16, 104)">
+      <circle cx="8" cy="-4" r="8" fill="#4f46e5" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#c7d2fe" font-size="7" font-weight="700">G</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">GrowthBook</text>
+      <text x="125" y="0" fill="#71717a" font-size="9.5">Open-source A/B testing</text>
+    </g>
+    <g transform="translate(16, 122)">
+      <circle cx="8" cy="-4" r="8" fill="#4f46e5" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#c7d2fe" font-size="7" font-weight="700">H</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Hypertune</text>
+      <text x="125" y="0" fill="#71717a" font-size="9.5">Type-safe feature flags</text>
+    </g>
+    <g transform="translate(16, 140)">
+      <circle cx="8" cy="-4" r="8" fill="#4f46e5" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#c7d2fe" font-size="7" font-weight="700">K</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Kameleoon</text>
+      <text x="125" y="0" fill="#71717a" font-size="9.5">Experimentation platform</text>
+    </g>
+    <text x="16" y="210" fill="#4f46e5" fill-opacity="0.5" font-size="9.5">+ Raycast · Terraform · DebugBear · Zeitgeist</text>
+  </g>
+
+  <!-- Messaging & Notifications -->
+  <g transform="translate(415, 813)">
+    <rect width="370" height="230" rx="12" fill="#ea580c" fill-opacity="0.04" stroke="#ea580c" stroke-opacity="0.2"/>
+    <rect width="370" height="32" rx="12" fill="#ea580c" fill-opacity="0.08"/>
+    <rect y="20" width="370" height="12" fill="#ea580c" fill-opacity="0.08"/>
+    <text x="16" y="22" fill="#fdba74" font-size="11" font-weight="700" letter-spacing="1">✉ MESSAGING &amp; WORKFLOW</text>
+
+    <g transform="translate(16, 50)">
+      <circle cx="8" cy="-4" r="8" fill="#ea580c" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fdba74" font-size="7" font-weight="700">I</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Inngest</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Durable workflows · ~$30M (a16z)</text>
+    </g>
+    <g transform="translate(16, 68)">
+      <circle cx="8" cy="-4" r="8" fill="#ea580c" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fdba74" font-size="7" font-weight="700">R</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Resend</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Email API for developers</text>
+    </g>
+    <g transform="translate(16, 86)">
+      <circle cx="8" cy="-4" r="8" fill="#ea580c" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fdba74" font-size="7" font-weight="700">K</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Knock</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Notification infrastructure</text>
+    </g>
+    <g transform="translate(16, 104)">
+      <circle cx="8" cy="-4" r="8" fill="#ea580c" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fdba74" font-size="7" font-weight="700">N</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Novu</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Open-source notifications</text>
+    </g>
+    <g transform="translate(16, 122)">
+      <circle cx="8" cy="-4" r="8" fill="#ea580c" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fdba74" font-size="7" font-weight="700">S</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Svix</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Webhook delivery</text>
+    </g>
+    <g transform="translate(16, 140)">
+      <circle cx="8" cy="-4" r="8" fill="#ea580c" fill-opacity="0.3"/><text x="8" y="-1" text-anchor="middle" fill="#fdba74" font-size="7" font-weight="700">S</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Slack</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Deploy notifications</text>
+    </g>
+    <text x="16" y="210" fill="#ea580c" fill-opacity="0.5" font-size="9.5">+ Jira · Linear · Upstash QStash</text>
+  </g>
+
+  <!-- Cloud Infrastructure -->
+  <g transform="translate(800, 813)">
+    <rect width="370" height="230" rx="12" fill="#52525b" fill-opacity="0.08" stroke="#52525b" stroke-opacity="0.2"/>
+    <rect width="370" height="32" rx="12" fill="#52525b" fill-opacity="0.12"/>
+    <rect y="20" width="370" height="12" fill="#52525b" fill-opacity="0.12"/>
+    <text x="16" y="22" fill="#a1a1aa" font-size="11" font-weight="700" letter-spacing="1">☁ CLOUD &amp; INFRA</text>
+
+    <g transform="translate(16, 50)">
+      <circle cx="8" cy="-4" r="8" fill="#52525b" fill-opacity="0.4"/><text x="8" y="-1" text-anchor="middle" fill="#a1a1aa" font-size="7" font-weight="700">A</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">AWS</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Amazon Web Services</text>
+    </g>
+    <g transform="translate(16, 68)">
+      <circle cx="8" cy="-4" r="8" fill="#52525b" fill-opacity="0.4"/><text x="8" y="-1" text-anchor="middle" fill="#a1a1aa" font-size="7" font-weight="700">R</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Railway</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">App hosting &amp; deploy</text>
+    </g>
+    <g transform="translate(16, 86)">
+      <circle cx="8" cy="-4" r="8" fill="#52525b" fill-opacity="0.4"/><text x="8" y="-1" text-anchor="middle" fill="#a1a1aa" font-size="7" font-weight="700">T</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Terraform</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Infrastructure as code</text>
+    </g>
+    <g transform="translate(16, 104)">
+      <circle cx="8" cy="-4" r="8" fill="#52525b" fill-opacity="0.4"/><text x="8" y="-1" text-anchor="middle" fill="#a1a1aa" font-size="7" font-weight="700">K</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Kernel</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Cloud GPU infrastructure</text>
+    </g>
+    <g transform="translate(16, 122)">
+      <circle cx="8" cy="-4" r="8" fill="#52525b" fill-opacity="0.4"/><text x="8" y="-1" text-anchor="middle" fill="#a1a1aa" font-size="7" font-weight="700">P</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">PostHog</text>
+      <text x="110" y="0" fill="#71717a" font-size="9.5">Product analytics &amp; session replay</text>
+    </g>
+    <g transform="translate(16, 140)">
+      <circle cx="8" cy="-4" r="8" fill="#52525b" fill-opacity="0.4"/><text x="8" y="-1" text-anchor="middle" fill="#a1a1aa" font-size="7" font-weight="700">V</text>
+      <text x="22" y="0" fill="#e4e4e7" font-size="11" font-weight="600">Vercel Analytics</text>
+      <text x="130" y="0" fill="#71717a" font-size="9.5">Web vitals &amp; speed insights</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <line x1="40" y1="1048" x2="1160" y2="1048" stroke="#27272a" stroke-width="0.5"/>
+  <text x="600" y="1055" text-anchor="middle" fill="#3f3f46" font-size="9">Source: vercel.com/marketplace — Live data as of May 2026 · Funding figures from verified sources (Tracxn, PitchBook, company announcements)</text>
+</svg>
