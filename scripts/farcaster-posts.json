@@ -325,8 +325,9 @@
     "image": "scripts/thread-assets/math_ai_city.png",
     "scheduleDate": "2026-04-05",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x958dddc3c6642c5c621002d01cc2d174789e011a",
+    "postedAt": "2026-05-28T20:27:30.862Z"
   },
   {
     "id": "lit-meetings",
