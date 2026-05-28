@@ -20,7 +20,7 @@ import { X, Minus, Plus, Locate, Maximize, Loader2 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-const defaultStyle = "https://tiles.openfreemap.org/styles/positron";
+const defaultStyle = "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json";
 
 
 
