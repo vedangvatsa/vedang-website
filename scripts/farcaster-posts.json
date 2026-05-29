@@ -345,8 +345,9 @@
     "image": "scripts/thread-assets/psych_attachment.png",
     "scheduleDate": "2026-04-05",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0xebff7bb871f0fc8f271ed3eff93885560cf5addb",
+    "postedAt": "2026-05-29T12:36:25.712Z"
   },
   {
     "id": "jevons-paradox-ai",
