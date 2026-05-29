@@ -355,8 +355,9 @@
     "image": "scripts/thread-assets/jevons.png",
     "scheduleDate": "2026-04-06",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x97576ee262327bafe0ab0ca7182de7364f4d5956",
+    "postedAt": "2026-05-29T20:27:49.586Z"
   },
   {
     "id": "psych-stockholm",
