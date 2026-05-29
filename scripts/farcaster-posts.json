@@ -335,8 +335,9 @@
     "image": "scripts/thread-assets/lit_meetings.png",
     "scheduleDate": "2026-04-05",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x29b963c521bc80d6bbe687a72e68fe4868ed1622",
+    "postedAt": "2026-05-29T05:02:52.484Z"
   },
   {
     "id": "psych-attachment",
