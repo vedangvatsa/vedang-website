@@ -52,10 +52,10 @@ export default function Home() {
             priority
           />
           <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
-          <p className="mx-auto mt-4 max-w-3xl text-base md:text-lg text-muted-foreground leading-relaxed">
+          <p className="mx-auto mt-4 max-w-3xl text-base md:text-lg leading-relaxed">
             Founder, <Link href="https://hashtagweb3.com" className="underline hover:text-foreground">Hashtag Web3</Link> (120k community of AI & Web3 professionals)
           </p>
-          <p className="mx-auto mt-2 max-w-3xl text-sm text-muted-foreground">
+          <p className="mx-auto mt-2 max-w-3xl text-sm">
             MTech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
           </p>
           <div className="mt-6 flex justify-center">

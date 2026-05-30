@@ -282,7 +282,7 @@ export default function Dashboard() {
 
   return (
     <PageLayout>
-      <div className="py-8 md:py-12 max-w-6xl space-y-8 animate-in fade-in duration-300">
+      <div className="py-8 md:py-12 max-w-6xl mx-auto space-y-8 animate-in fade-in duration-300">
         
         {/* HEADER SECTION */}
         <div className="text-center border-b pb-6 space-y-4">

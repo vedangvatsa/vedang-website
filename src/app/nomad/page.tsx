@@ -19,7 +19,7 @@ export default function NomadMapPage() {
   return (
     <PageLayout>
       <section className="text-center pt-12 pb-8">
-        <div className=" max-w-4xl">
+        <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
             Digital Nomad Directory
           </h1>
@@ -29,7 +29,7 @@ export default function NomadMapPage() {
         </div>
       </section>
 
-      <div className=" max-w-[1600px] pb-16">
+      <div className="max-w-[1600px] mx-auto pb-16">
         <NomadMapWrapper />
       </div>
     </PageLayout>
