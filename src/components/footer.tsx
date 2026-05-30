@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="border-t border-border/30 py-6">
       <div className="w-full md:w-[61.8%] mx-auto px-4 md:px-6">
-        <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground/60">
+        <div className="flex flex-wrap items-center justify-center gap-3 text-sm font-medium text-muted-foreground/60">
           <Link href="/writings" className="hover:text-foreground transition-colors">Writings</Link>
           <span>·</span>
           <Link href="/#learn" className="hover:text-foreground transition-colors">Resources</Link>
