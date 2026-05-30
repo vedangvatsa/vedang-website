@@ -1,4 +1,4 @@
-import React from 'react';
+import { ZoomableImage } from '@/components/zoomable-image';
 
 /* ─── Two-column layout: text + image side by side ─── */
 export function Columns({ children, reverse = false }: { children: React.ReactNode; reverse?: boolean }) {
@@ -24,8 +24,7 @@ export function Figure({ src, alt, caption, source, sourceUrl, wide = false }: {
 }) {
   return (
     <figure className={`not-prose my-8 first:mt-0 last:mb-0 ${wide ? '' : 'max-w-xl mx-auto'}`}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      <ZoomableImage
         src={src}
         alt={alt}
         className="w-full rounded-lg border border-border/40 shadow-sm"

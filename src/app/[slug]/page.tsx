@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import { PageLayout } from '@/components/page-layout';
+import { ZoomableImage } from '@/components/zoomable-image';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 import fs from 'fs';
 import path from 'path';
@@ -460,20 +461,10 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               CapitalConcentrationChart,
               TopInvestorsTable,
               img: (props: any) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  {...props}
+                <ZoomableImage
+                  src={props.src}
                   alt={props.alt || 'Blog post illustration'}
-                  className="rounded-lg shadow-sm border border-border/30"
-                  style={{
-                    maxWidth: '640px',
-                    width: '100%',
-                    height: 'auto',
-                    marginLeft: 'auto',
-                    marginRight: 'auto',
-                    display: 'block',
-                    ...props.style,
-                  }}
+                  className="rounded-lg shadow-sm border border-border/30 mx-auto block"
                 />
               ),
             }}
