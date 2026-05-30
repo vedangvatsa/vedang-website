@@ -11,7 +11,7 @@ export function PageLayout({ children, className = '', wide = false }: PageLayou
   return (
     <div className={`flex min-h-screen flex-col bg-background text-foreground ${className}`}>
       <Header />
-      <main className="flex-grow">
+      <main id="main" className="flex-grow">
         <div className={wide ? 'w-full mx-auto px-4 md:px-6' : 'content-width'}>
           {children}
         </div>

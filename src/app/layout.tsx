@@ -163,12 +163,14 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
         <link rel="alternate" type="application/json" href="/deeprank.json" />
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly content index" />
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM full content" />
         <link rel="alternate" type="application/json" href="/ai.json" title="AI discovery manifest" />
         <link rel="alternate" type="text/plain" href="/ai.txt" title="AI permissions" />
       </head>
       <body className="font-sans">
+          <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:text-sm focus:font-medium">Skip to main content</a>
           {children}
           <Toaster />
       </body>
