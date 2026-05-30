@@ -1,18 +1,5 @@
-import fs from 'fs';
-import path from 'path';
-
-// Read and parse the large JSON file from the filesystem dynamically
-const getGeneratedReports = (): Web3Report[] => {
-  try {
-    const filePath = path.join(process.cwd(), 'src', 'lib', 'web3-reports-data-generated.json');
-    if (fs.existsSync(filePath)) {
-      return JSON.parse(fs.readFileSync(filePath, 'utf8')) as Web3Report[];
-    }
-  } catch (err) {
-    console.error('Failed to load generated Web3 reports JSON:', err);
-  }
-  return [];
-};
+// Generated reports are now served from public/web3-reports-data.json
+// and loaded client-side by the ReportLibrary component.
 
 export interface Web3Report {
   title: string;
@@ -97,4 +84,4 @@ const manualReports: Web3Report[] = [
   {title:'State of Crypto Adoption 2024',source:'Chainalysis',url:'https://www.chainalysis.com/blog/2024-global-crypto-adoption-index/',date:'Sep 2024',category:'State of Crypto',type:'Report',description:'Global crypto adoption index covering 150+ countries.'},
 ];
 
-export const web3Reports: Web3Report[] = [...manualReports, ...getGeneratedReports()];
+export const web3Reports: Web3Report[] = manualReports;
