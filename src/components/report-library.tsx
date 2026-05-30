@@ -109,15 +109,6 @@ export function ReportLibrary({ dataUrl, categories, manualReports = [] }: Repor
         </div>
       </div>
 
-      {/* Count */}
-      <div className="mb-4">
-        <p className="text-sm text-muted-foreground">
-          {loading ? 'Loading...' : `${filtered.length.toLocaleString()} entries`}
-          {query && <> matching <span className="font-semibold text-foreground">&quot;{query}&quot;</span></>}
-          {category && <> in <span className="font-semibold text-foreground">{category}</span></>}
-        </p>
-      </div>
-
       {/* Report List */}
       {visibleItems.length === 0 && !loading ? (
         <div className="py-20 text-center">
@@ -125,23 +116,22 @@ export function ReportLibrary({ dataUrl, categories, manualReports = [] }: Repor
           <p className="text-muted-foreground">No reports found. Try a different search.</p>
         </div>
       ) : (
-        <ul className="divide-y divide-border/40">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-0">
           {visibleItems.map((item, i) => (
-            <li key={`${item.url}-${i}`}>
-              <Link
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between py-2.5 px-1 -mx-1 rounded-md hover:bg-muted/50 transition-colors group"
-              >
-                <span className="text-sm truncate pr-4 group-hover:text-primary transition-colors">
-                  {item.title}
-                </span>
-                <MoveUpRight className="w-3.5 h-3.5 text-muted-foreground shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </Link>
-            </li>
+            <Link
+              key={`${item.url}-${i}`}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between py-2.5 px-2 rounded-md hover:bg-muted/50 transition-colors group border-b border-border/40"
+            >
+              <span className="text-sm truncate pr-4 group-hover:text-primary transition-colors">
+                {item.title}
+              </span>
+              <MoveUpRight className="w-3.5 h-3.5 text-muted-foreground shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </Link>
           ))}
-        </ul>
+        </div>
       )}
 
       {/* Infinite scroll sentinel */}
