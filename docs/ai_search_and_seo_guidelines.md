@@ -202,3 +202,44 @@ To keep `veda.ng` at the absolute cutting edge of agentic search optimization, m
 1.  **Maintain `llms.txt` Syncing:** Automate updating `llms.txt` and `llms-full.txt` whenever new essays are published or glossary terms are added. (Integrate a post-build or pre-commit hook that parses Markdown files and compiles the root sitemaps and text lists).
 2.  **Continuous Accessibility Testing:** Run standard accessibility evaluations on all dynamic interactive states using Lighthouse. Ensure that interactive visual components are always mapped using equivalent programmatic state nodes in the accessibility tree.
 3.  **Layout Shifts Mitigation:** Enforce explicit width/height parameters on dynamic widgets (such as the nomad map wrapper, swarm graphs, and video visualizers) to keep CLS strictly at `0.0`, eliminating accidental misclicks by rapid agent bots.
+
+---
+
+## 8. Content-Security-Policy Management
+
+The site's CSP is configured in `next.config.mjs` under `headers()`. When adding new client-side features that fetch external resources, the CSP must be updated.
+
+### Current CSP Directives (as of May 2026)
+
+| Directive | Allowed Origins | Purpose |
+|-----------|----------------|---------|
+| `default-src` | `'self'` | Baseline for all resource types |
+| `script-src` | `'self'`, `'unsafe-inline'`, GTM, Twitter | Analytics + embedded tweets |
+| `img-src` | `'self'`, `data:`, `https:` | Allow all HTTPS images |
+| `style-src` | `'self'`, `'unsafe-inline'` | Inline styles for components |
+| `font-src` | `'self'`, `data:`, `basemaps.cartocdn.com` | System fonts + Carto map glyphs |
+| `connect-src` | `'self'`, GA, Twitter, `basemaps.cartocdn.com`, `*.basemaps.cartocdn.com` | API calls + MapLibre tile fetches |
+| `worker-src` | `'self'`, `blob:` | MapLibre web workers for tile rendering |
+| `frame-src` | YouTube, Twitter | Embedded videos + tweets |
+
+### When To Update CSP
+
+Update `connect-src` (and related directives) whenever you add a feature that:
+- Fetches tiles, fonts, or data from a new CDN (e.g., Mapbox, Carto, Stadia)
+- Loads web workers (`worker-src: blob:` is required for MapLibre)
+- Embeds content from new third-party domains
+
+### Common CSP Debugging
+
+If a feature works locally but fails in production:
+1. Open browser DevTools Console — look for `Refused to connect to` errors
+2. Check the `Content-Security-Policy` response header
+3. Add the blocked domain to the appropriate directive in `next.config.mjs`
+
+### Permissions-Policy
+
+Also managed in `next.config.mjs`. Currently:
+- `geolocation=(self)` — enabled for the nomad map's locate button
+- `microphone=()` — disabled
+- `camera=()` — disabled
+

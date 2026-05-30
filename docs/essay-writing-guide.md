@@ -2,7 +2,7 @@
 
 ## Essay Library Overview
 
-48 essays at `veda.ng/essays/{slug}`, written in MDX format at `src/content/essays/`.
+52 essays at `veda.ng/{slug}` (root-level routing), written in MDX format at `src/content/essays/`.
 
 ## Thematic Categories
 
@@ -109,6 +109,13 @@ Each essay should have its own chart file at `src/components/mdx/{essay-slug}-ch
 - **Historical anchoring** — Connect new ideas to historical precedents
 - **Intellectual honesty** — Acknowledge counterarguments and limitations
 
+### Data Integrity
+- **Verify all funding/valuation numbers** against Crunchbase, SEC filings, or company disclosures before publishing
+- **Use qualified language** for unconfirmed data: "reportedly in discussions" or "according to [source]"
+- **Track verification dates** — numbers go stale fast (e.g., market caps change daily)
+- **Internal consistency** — numbers in prose, SVGs, and StatRows must match. When one number changes, recalculate all derived numbers (e.g., "combined valuation")
+- **Cross-reference across essays** — if Cerebras appears in 3 essays, the market cap must be consistent in all 3
+
 ### Banned Phrases (AI Slop)
 These phrases have been purged from all essays. Never reintroduce them:
 
@@ -116,6 +123,7 @@ These phrases have been purged from all essays. Never reintroduce them:
 |--------|-------------|
 | "explore into" | "examine," "look at," specific verb |
 | "landscape" | "market," "field," specific noun |
+| "reshape" / "redefine" | AI transformation cliché | "alter," "change," describe the specific change |
 | "tapestry" | Remove entirely or use specific description |
 | "" | State the thing directly |
 | "in the realm of" | "in" |
@@ -129,6 +137,9 @@ These phrases have been purged from all essays. Never reintroduce them:
 | "modern" | Describe what makes it new |
 | "smooth" | Describe the specific UX improvement |
 | "ecosystem" (as buzzword) | "market," "community," "network" |
+| "shift" (as noun) | Vague transition word | Describe the specific change |
+| "foster" / "facilitate" | Corporate speak | "enable," "create," "support," or describe specifically |
+| "paradigm" (in non-technical context) | Academic buzzword | OK in technical use ("programming paradigm"); banned in prose ("paradigm shift") |
 
 ### Frontmatter Format
 ```yaml
@@ -140,7 +151,7 @@ description: "One-sentence summary for SEO and social previews"
 ```
 
 ### Cross-Posting Context
-- **Dev.to**: Full essay with `canonical_url: https://veda.ng/essays/{slug}`. Tags limited to 4.
+- **Dev.to**: Full essay with `canonical_url: https://veda.ng/{slug}`. Tags limited to 4.
 - **Hashnode**: Full essay with `originalArticleURL`. Published to `vedangvatsa.hashnode.dev`.
 - **Social media**: Short 50-100 word hooks derived from the essay, with link to full version.
 
@@ -162,7 +173,20 @@ description: "One-sentence summary for SEO and social previews"
 4. **Chart creation**: Build custom React chart components at `src/components/mdx/{slug}-charts.tsx`
 5. **Registration**: Import and register chart components in `src/app/[slug]/page.tsx`
 6. **Fact-check**: Verify every number against its cited source. Remove or relabel anything unverifiable.
-7. **Style audit**: Check for em-dashes, banned phrases, dark backgrounds, broken component syntax
+7. **Style audit**: Run all 4 checks:
+   - `grep -r '—\|–' src/content/essays/` — Zero em-dashes
+   - `grep -rn 'landscape\|tapestry\|leverage\|unlock\|holistic\|foster\|facilitate\|reshape\|redefine' src/content/essays/` — Zero AI slop in prose
+   - `find public/images -name "*.svg" -exec xmllint --noout {} \;` — All SVGs valid XML
+   - Verify internal consistency: prose numbers match SVG numbers
 8. **Build test**: Run `npx next build` to verify compilation
 9. **Publish**: Deploy, then schedule cross-posts
 10. **Promote**: Create 2-3 short-form posts across platforms linking to the essay
+
+## SVG Requirements
+
+All SVGs in `public/images/essays/` must:
+- Have explicit `width` and `height` attributes on the root `<svg>` element (browsers require these for `<img>` tag rendering)
+- Pass `xmllint --noout` validation with zero errors
+- Use `&amp;` instead of `&` in all text elements and attributes (unescaped `&` breaks XML parsing)
+- Have no duplicate attributes on any element
+- Follow light-mode aesthetic (white backgrounds, `#37352f` text)

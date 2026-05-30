@@ -188,3 +188,35 @@ Before publishing any visual content:
 - [ ] File size appropriate for target platform
 - [ ] Unique image (not reused from another post)
 - [ ] Chart components registered in page.tsx
+- [ ] SVG has explicit width and height attributes
+- [ ] SVG passes `xmllint --noout` validation
+- [ ] No unescaped `&` in SVG text elements
+
+## SVG Technical Requirements
+
+All SVGs in `public/images/essays/` must meet these technical standards:
+
+### Mandatory Attributes
+- **Root `<svg>` element** must include explicit `width` and `height` attributes matching the viewBox dimensions
+- Example: `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">`
+- Without these, browsers that load SVGs via `<img>` tags may not render them
+
+### XML Validation
+- All SVGs must pass `xmllint --noout` with zero errors
+- **No unescaped `&`** in text elements — use `&amp;` instead (e.g., `COMPUTE &amp; INFERENCE`)
+- **No duplicate attributes** on any element (e.g., two `y` attributes on a `<rect>`)
+- Unescaped `&` in XML comments is technically valid but should be avoided for consistency
+
+### Validation Command
+```bash
+find public/images -name "*.svg" -exec xmllint --noout {} \;
+```
+Zero output = all valid. Any errors must be fixed before committing.
+
+### Common Pitfalls
+| Issue | Symptom | Fix |
+|-------|---------|-----|
+| Missing width/height | SVG renders as 0×0 or tiny in some browsers | Add width/height matching viewBox |
+| Unescaped `&` | Broken image icon in browser | Replace `&` with `&amp;` |
+| Duplicate attributes | Browser uses first value, ignores second | Remove the duplicate |
+| Google Fonts @import in SVG | Fonts fail when loaded via `<img>` (sandboxed) | Use system fonts or embed font data |

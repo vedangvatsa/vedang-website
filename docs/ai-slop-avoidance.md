@@ -18,6 +18,8 @@ These words are NEVER acceptable. If they appear, rewrite the sentence entirely.
 |--------|---------------|----------------------|
 | explore / explore into | #1 AI tell | "examine," "look at," or just state the topic directly |
 | landscape | Vague filler | "market," "field," "industry," or name the specific thing |
+| reshape / redefine | AI transformation cliché | "alter," "change," or describe the specific change |
+| foster / facilitate | Corporate AI speak | "enable," "create," "support," or describe specifically |
 | tapestry | Nobody says this | Remove. Describe what you actually mean |
 | | Throat-clearing | Delete it and state the thing |
 | in the realm of | Pompous filler | "in" |
@@ -52,6 +54,17 @@ These are acceptable only if used precisely (1-2 times max per 2000-word essay, 
 | disruptive | Post-2015 this is meaningless | Describe what it displaces and how |
 | empower | Patronizing | Describe the specific capability gained |
 | streamline | Vague | Describe what gets faster or simpler |
+| paradigm | Academic buzzword | OK in technical context ("programming paradigm"); banned in general prose ("paradigm shift") |
+| synergy | Peak corporate | Describe the specific benefit of combining |
+| democratize | Patronizing tech speak | Describe what becomes accessible and to whom |
+
+### Contextual Exceptions
+Some Tier 2 words are acceptable in specific technical contexts:
+- "paradigm" — OK when referring to programming paradigms, computation paradigms
+- "ecosystem" — OK when referring to a named ecosystem ("the Vercel ecosystem")
+- "democratize" — OK when quoting a specific person or critiquing the concept itself
+
+The test: would a human expert in this field naturally use this word? If yes, it stays. If it reads like AI filler, it goes.
 
 ## Tier 3: AI Sentence Patterns
 
@@ -160,8 +173,8 @@ When you remove AI slop, follow these rules:
 The essay library has been audited for all Tier 1 and Tier 2 terms. Any new content must pass the same audit before merge. The slop detection can be automated:
 
 ```bash
-# Quick grep for Tier 1 banned phrases across all essays
-grep -rni "explore\|tapestry\|\|in the realm of\|model shift\|game.changer\|it's notable\|in today's world\|only time will tell" src/content/essays/
+# Quick grep for Tier 1 and Tier 2 banned phrases across all essays
+grep -rni "explore\|tapestry\|\|in the realm of\|model shift\|game.changer\|it's notable\|in today's world\|only time will tell\|reshape\|redefine\|foster\|facilitate" src/content/essays/
 ```
 
 Zero results = clean. Any matches must be fixed before publishing.
