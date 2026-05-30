@@ -121,7 +121,7 @@ export default function MCPDevelopmentCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
         <section className="text-center pt-16 pb-12">
-             <div className="content-width">
+             <div className="">
                 <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
                     MCP Development
                 </h1>
@@ -252,7 +252,7 @@ export default function MCPDevelopmentCoursePage() {
                     Common questions about MCP development answered directly.
                 </p>
             </div>
-            <div className="content-width mt-12">
+            <div className="mt-12">
                 <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
                    {faqItems.map((item, index) => (
                      <AccordionItem key={index} value={`faq-${index + 1}`}>

@@ -63,7 +63,7 @@ export default function ProfilePage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
       <div className="py-8">
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+        <div className=" max-w-7xl">
           <section className="text-center">
             
               <Image

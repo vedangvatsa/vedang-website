@@ -24,7 +24,7 @@ export default function WritingsPage() {
       <RecentPapers />
 
       <section id="essays" className="py-12">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="">
           <h1 className="mb-8 text-center text-2xl md:text-3xl font-semibold tracking-tight">Essays</h1>
           <EssaysList />
         </div>

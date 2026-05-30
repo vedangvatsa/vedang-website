@@ -136,7 +136,7 @@ export default function WikiPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(wikiBreadcrumbSchema) }}
         />
-        <article className="container mx-auto max-w-3xl px-4 md:px-6 py-12">
+        <article className=" max-w-3xl px-4 md:px-6 py-12">
           <Link href="/swarm-prediction" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             &larr; Back
           </Link>

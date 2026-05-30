@@ -93,7 +93,7 @@ export default function AIAutomationCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <section className="text-center pt-16 pb-12">
-        <div className="content-width">
+        <div className="">
                 <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
                     AI Automation
                 </h1>
@@ -171,7 +171,7 @@ export default function AIAutomationCoursePage() {
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
           <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">Common questions about AI automation answered directly.</p>
         </div>
-        <div className="content-width mt-12">
+        <div className="mt-12">
           <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
             {faqItems.map((item, index) => (
               <AccordionItem key={index} value={`faq-${index + 1}`}>

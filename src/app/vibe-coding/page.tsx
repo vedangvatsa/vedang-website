@@ -329,7 +329,7 @@ export default function VibeCodingCoursePage() {
                     Common questions about Vibe Coding answered directly.
                 </p>
             </div>
-            <div className="content-width mt-12">
+            <div className="mt-12">
                 <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
                    {faqItems.map((item, index) => (
                      <AccordionItem key={index} value={`faq-${index + 1}`}>

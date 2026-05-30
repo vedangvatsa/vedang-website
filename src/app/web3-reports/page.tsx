@@ -36,7 +36,7 @@ export default async function Web3ReportsPage({
       <BreadcrumbSchema items={[{ name: "Web3 Reports", url: "https://veda.ng/web3-reports" }]} />
 
       <section className="text-center pt-16 pb-12 border-b border-border/30">
-        <div className="content-width">
+        <div className="">
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
             Web3 Reports Library
           </h1>
@@ -49,7 +49,7 @@ export default async function Web3ReportsPage({
         </div>
       </section>
 
-      <div className="container mx-auto px-4 md:px-6 max-w-[1600px] py-12">
+      <div className=" max-w-[1600px] py-12">
         <ReportSearch
           placeholder={`Search ${web3Reports.length.toLocaleString()}+ reports by title or source...`}
           categories={CATEGORIES}

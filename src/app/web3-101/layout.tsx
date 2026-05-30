@@ -17,7 +17,7 @@ const config = courseConfigs['web3-101'];
 export default function Web3CourseLayout({ children }: { children: ReactNode }) {
   return (
     <PageLayout>
-      <div className="container mx-auto px-4 md:px-6 max-w-7xl py-12 flex flex-col md:flex-row gap-12">
+      <div className=" max-w-7xl py-12 flex flex-col md:flex-row gap-12">
          <CourseSidebar {...config} />
          <main className="flex-1 min-w-0">
             {children}

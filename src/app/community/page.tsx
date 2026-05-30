@@ -42,7 +42,7 @@ export default function CommunityProfilePage() {
       <BreadcrumbSchema items={[{ name: "Content & Community", url: "https://veda.ng/community" }]} />
 
       <div className="py-8">
-        <div className="container mx-auto max-w-7xl px-4 md:px-6">
+        <div className="">
           <section className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
               <Image
                 src="/images/icon.png"
@@ -213,7 +213,7 @@ export default function CommunityProfilePage() {
       <AsSeenIn />
 
       <div className="py-8">
-        <div className="container mx-auto max-w-7xl px-4 md:px-6">
+        <div className="">
           <div className="space-y-8">
             <section id="testimonials">
                 <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">

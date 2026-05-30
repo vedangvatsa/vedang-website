@@ -36,7 +36,7 @@ export default async function AIReportsPage({
       <BreadcrumbSchema items={[{ name: "AI Reports", url: "https://veda.ng/ai-reports" }]} />
 
       <section className="text-center pt-16 pb-12 border-b border-border/30">
-        <div className="content-width">
+        <div className="">
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
             AI Reports Library
           </h1>
@@ -49,7 +49,7 @@ export default async function AIReportsPage({
         </div>
       </section>
 
-      <div className="container mx-auto px-4 md:px-6 max-w-[1600px] py-12">
+      <div className=" max-w-[1600px] py-12">
         <ReportSearch
           placeholder={`Search ${aiReports.length.toLocaleString()}+ reports by title, source, or topic...`}
           categories={CATEGORIES}

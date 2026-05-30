@@ -75,7 +75,7 @@ export default function AdminDashboard({ platforms }: { platforms: Record<string
 
   return (
     <div className="min-h-screen bg-background text-foreground py-16 px-4 md:px-6 font-sans">
-      <div className="container mx-auto max-w-[1400px]">
+      <div className=" max-w-[1400px]">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
           <div>
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">

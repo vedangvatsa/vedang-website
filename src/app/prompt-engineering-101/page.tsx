@@ -97,7 +97,7 @@ export default function PromptEngineeringCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <section className="text-center pt-16 pb-12">
-             <div className="content-width">
+             <div className="">
                 <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
                     Prompt Engineering
                 </h1>
@@ -120,7 +120,7 @@ export default function PromptEngineeringCoursePage() {
             </div>
         </section>
 
-        <div className="content-width py-16 space-y-12">
+        <div className="py-16 space-y-12">
             
         <section id="curriculum" className="py-16 bg-muted/30 border-y -mx-4 px-4 md:-mx-6 md:px-6">
             <div className="max-w-none">
@@ -203,7 +203,7 @@ export default function PromptEngineeringCoursePage() {
                         Your common questions about prompt engineering, answered.
                     </p>
                 </div>
-                <div className="content-width mt-12">
+                <div className="mt-12">
                     <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
                        {faqItems.map((item, index) => (
                          <AccordionItem key={index} value={`faq-${index + 1}`}>
@@ -224,7 +224,7 @@ export default function PromptEngineeringCoursePage() {
                         Here’s a list of the best sources to learn about prompt engineering. It covers everything from beginner guides to academic-level surveys and is useful for casual users, developers, and researchers.
                     </p>
                 </div>
-                <div className="content-width mt-12 prose">
+                <div className="mt-12 prose">
                     
                     <h3 className="text-2xl font-semibold tracking-tight">Starting Guides & Tutorials</h3>
                     <ul>

@@ -270,7 +270,7 @@ export default function Dashboard() {
   if (!mounted) {
     return (
       <PageLayout>
-        <div className="container mx-auto px-4 py-24 text-center">
+        <div className=" px-4 py-24 text-center">
           <div className="animate-pulse space-y-3">
             <div className="h-6 w-48 bg-muted rounded mx-auto"></div>
             <div className="h-4 w-72 bg-muted rounded mx-auto"></div>
@@ -282,7 +282,7 @@ export default function Dashboard() {
 
   return (
     <PageLayout>
-      <div className="container mx-auto px-4 py-8 md:py-12 max-w-6xl space-y-8 animate-in fade-in duration-300">
+      <div className="py-8 md:py-12 max-w-6xl space-y-8 animate-in fade-in duration-300">
         
         {/* HEADER SECTION */}
         <div className="text-center border-b pb-6 space-y-4">
