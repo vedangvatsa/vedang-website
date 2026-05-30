@@ -242,11 +242,6 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
       {/* ─── Essay Header ─── */}
       <header className="pt-12 md:pt-20 pb-10 md:pb-14">
         <div className="mx-auto max-w-3xl px-4 md:px-6 text-center">
-          <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground mb-6">
-            <Link href="/writings" className="hover:text-foreground transition-colors">Essays</Link>
-            <span>/</span>
-            <span className="text-foreground">{essay.frontmatter.title}</span>
-          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
             {essay.frontmatter.title}
           </h1>
