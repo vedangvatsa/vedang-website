@@ -1,10 +1,34 @@
 
 import Link from 'next/link';
 import { Separator } from './ui/separator';
+import { MoveUpRight } from 'lucide-react';
 import { essays } from '@/lib/essays';
 
-export function EssaysList({ limit }: { limit?: number }) {
+export function EssaysList({ limit, variant = 'list' }: { limit?: number; variant?: 'list' | 'grid' }) {
   const essaysToShow = limit ? essays.slice(0, limit) : essays;
+
+  if (variant === 'grid') {
+    return (
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+        {essaysToShow.map((essay) => (
+          <Link href={essay.url} key={essay.slug} className="group">
+            <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-4 transition-colors duration-200 hover:border-primary/50">
+              <div>
+                <p className="font-medium text-foreground group-hover:text-primary transition-colors">
+                  {essay.title}
+                </p>
+                {essay.date && (
+                  <p className="mt-2 text-xs text-muted-foreground">
+                    {new Date(essay.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                  </p>
+                )}
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    );
+  }
 
   return (
     <div className="mx-auto max-w-6xl">
