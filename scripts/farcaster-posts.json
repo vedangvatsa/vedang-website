@@ -375,8 +375,9 @@
     "image": "scripts/thread-assets/psych_mirror.png",
     "scheduleDate": "2026-04-06",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0x728a40321b9688e0304bd766adffe9aabcc9089f",
+    "postedAt": "2026-05-30T11:59:54.839Z"
   },
   {
     "id": "smart-employees",
