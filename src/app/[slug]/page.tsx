@@ -247,7 +247,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
             <span>/</span>
             <span className="text-foreground">{essay.frontmatter.title}</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]" style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
             {essay.frontmatter.title}
           </h1>
           {essay.frontmatter.summary && (
