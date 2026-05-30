@@ -129,7 +129,7 @@ export default function PromptEngineeringCoursePage() {
 
         <CourseHero
           title="Prompt Engineering"
-          subtitle="Learn the art and science of communicating with Large Language Models. This course will teach you how to craft prompts that guide AI to generate accurate, creative, and useful results, turning you into an expert communicator for the new age of technology."
+          subtitle="Write prompts that get results. Techniques for clear, structured communication with any LLM."
         />
 
         <div className="py-16 space-y-12">

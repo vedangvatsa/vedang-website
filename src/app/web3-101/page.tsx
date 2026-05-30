@@ -170,7 +170,7 @@ export default function Web3CoursePage() {
 
         <CourseHero
           title="Fundamentals of Web3"
-          subtitle="Go beyond the buzzwords and understand the next evolution of the internet. This course breaks down Web3, including blockchain, decentralization, and digital ownership, into clear, practical concepts. Learn what it means to build and participate in a user-owned web."
+          subtitle="Blockchain, decentralization, and digital ownership explained without the hype. What Web3 actually is and why it matters."
         />
 
         <CurriculumSection

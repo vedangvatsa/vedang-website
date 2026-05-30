@@ -212,9 +212,8 @@ export default function HealthProtocolsPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
             Bryan Johnson&apos;s Blueprint Protocol
           </h1>
-          <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             327 protocols extracted from 900+ YouTube transcripts, ranked by mention frequency.
-            Every claim links to a timestamped video or the official protocol page.
           </p>
           <div className="mt-8 flex items-center justify-center gap-3">
             <Link href="/profile">

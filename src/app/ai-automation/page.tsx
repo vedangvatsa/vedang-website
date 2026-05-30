@@ -101,7 +101,7 @@ export default function AIAutomationCoursePage() {
 
       <CourseHero
         title="AI Automation"
-        subtitle="Automate anything with AI agents, APIs, MCP servers, and no-code tools. From social media broadcasting to data pipelines. build systems that run 24/7 without you."
+        subtitle="Build pipelines that run without you. APIs, MCP servers, n8n, and AI agents working together."
       />
 
       <CurriculumSection

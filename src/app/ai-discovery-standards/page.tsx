@@ -95,8 +95,7 @@ export default function AiDiscoveryStandardsPage() {
             AI Discovery Standards
           </h1>
           <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            {DISCOVERY_FILES.length} files across {CATEGORIES.length} categories. Every protocol and metadata
-            standard used to make websites discoverable by AI systems, search engines, and autonomous agents.
+            {DISCOVERY_FILES.length} files across {CATEGORIES.length} categories. How to make your site visible to AI crawlers, search engines, and agents.
           </p>
           <div className="mt-8 flex items-center justify-center gap-3">
             <Link href="/profile">
@@ -115,8 +114,6 @@ export default function AiDiscoveryStandardsPage() {
               <Link href="https://github.com/vedangvatsa/ai-discovery-standards" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 GitHub
               </Link>
-              <span className="mx-2 text-muted-foreground">|</span>
-              <code className="text-sm text-muted-foreground">npx ai-discovery-standards</code>
             </div>
           </div>
         </div>

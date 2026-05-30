@@ -1034,7 +1034,7 @@ export default function LinkedInTranslatorPage() {
         <div>
           <div className="mx-auto max-w-5xl space-y-4">
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-center">
               {direction === 'en-to-li' ? 'English to LinkedIn Translator' : 'LinkedIn to English Translator'}
             </h1>
 
