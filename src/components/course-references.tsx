@@ -14,7 +14,7 @@ interface CourseReferencesProps {
   align?: 'center' | 'left';
 }
 
-export function CourseReferences({ title = 'Learn More', subtitle, categories, layout = 'grid-4', align = 'left' }: CourseReferencesProps) {
+export function CourseReferences({ title = 'Learn More', subtitle, categories, layout = 'grid-4', align = 'center' }: CourseReferencesProps) {
   const isCenter = align === 'center';
   const gridClass = layout === 'columns'
     ? 'columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6'

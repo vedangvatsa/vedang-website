@@ -126,8 +126,6 @@ export default function MCPDevelopmentCoursePage() {
       <CourseHero
         title="MCP Development"
         subtitle="Build servers that connect AI to anything. Learn the Model Context Protocol, the open standard that lets AI models use tools, query databases, and interact with APIs. The USB-C port for AI."
-        prerequisite="Basic TypeScript"
-        startHref="/mcp-development/module-1-what-is-mcp"
       />
 
       <CurriculumSection

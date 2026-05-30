@@ -185,11 +185,8 @@ export default function VibeCodingCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <CourseHero
-        align="left"
         title="Vibe Coding"
         subtitle="Build real apps without writing code. Describe what you want in plain English and let AI handle the implementation. For founders, designers, marketers, and anyone with an idea."
-        prerequisite="None"
-        startHref="/vibe-coding/module-1-philosophy"
         youtubeUrl="https://www.youtube.com/embed/m6rhnlaNjDY"
         youtubeMaxWidth="max-w-4xl"
       />

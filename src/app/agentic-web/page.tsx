@@ -177,10 +177,7 @@ export default function AgenticWebCoursePage() {
         <CourseHero
           title="The Agentic Web"
           subtitle="The internet is evolving. It's no longer just a place to find information-it's becoming a platform for autonomous AI agents to get things done. This course demystifies the Agentic Web, where you delegate goals, and AI handles the execution."
-          prerequisite="Curiosity"
-          startHref="/agentic-web/what-is-agentic-web"
           youtubeUrl="https://www.youtube.com/embed/Gqgk25SOIMM"
-          youtubeMaxWidth="max-w-3xl"
         />
 
         <div className="py-16 space-y-12">
