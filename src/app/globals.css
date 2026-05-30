@@ -172,14 +172,6 @@
   width: 100%;
 }
 
-/* Wide figures: break out of prose column, center at up to 1200px */
-.notion-article .wide-figure {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90vw;
-  max-width: 1200px;
-}
 
 /* Blockquotes */
 .notion-article blockquote {

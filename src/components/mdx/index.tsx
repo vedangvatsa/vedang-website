@@ -23,7 +23,7 @@ export function Figure({ src, alt, caption, source, sourceUrl, wide = false }: {
   wide?: boolean;
 }) {
   return (
-    <figure className={`not-prose my-8 first:mt-0 last:mb-0 ${wide ? 'wide-figure' : 'max-w-xl mx-auto'}`}>
+    <figure className={`not-prose my-8 first:mt-0 last:mb-0 ${wide ? '' : 'max-w-xl mx-auto'}`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={src}
