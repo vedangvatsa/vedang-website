@@ -12,9 +12,6 @@ keywords: ['AI agents', 'infrastructure', 'developer tools', 'Vercel Marketplace
 
 In 2024, building an AI agent meant stitching together fifteen different services by hand, including a model API, a headless browser, a web scraper, a workflow engine, a vector database, an evaluation harness, a secrets manager, and a sandbox for code execution. Each required a separate account, a separate billing page, and a separate integration effort. By mid-2026, a developer can provision every one of these from a single marketplace page with unified billing. Vercel added a dedicated "Agents" category to its marketplace in 2025. It now contains sixteen integrations. Cloudflare hosts 78 AI models at the edge with function calling built in. HuggingFace Spaces operates as an app directory for ML applications. The picks-and-shovels companies that made this consolidation possible have raised over $5 billion collectively.
 
-
-<SectionLabel>Perception</SectionLabel>
-
 ## How Agents See the Web
 
 An autonomous agent that cannot read a webpage is blind. The perception layer converts the visual, interactive web into structured data that language models can process.
@@ -32,8 +29,6 @@ Two newer entrants have emerged. [Parallel](https://www.parallel.ai/), founded b
   <Stat value="$2B" label="Parallel valuation (Series B, Apr 2026)" source="Sequoia" />
 </StatRow>
 
-<SectionLabel>Orchestration</SectionLabel>
-
 ## How Agents Execute Multi-Step Tasks
 
 A language model generates text. An orchestration engine turns that text into a sequence of durable, retryable actions that survive failures, timeouts, and restarts. Without orchestration, an agent that crashes mid-task has no way to resume.
@@ -43,8 +38,6 @@ A language model generates text. An orchestration engine turns that text into a 
 [Inngest](https://www.inngest.com/) raised approximately [$30 million](https://www.crunchbase.com/organization/inngest) from a16z and Altimeter and takes the opposite approach: serverless-first, zero-infrastructure orchestration that runs on Vercel and other platforms without dedicated ops teams. Its AgentKit product adds multi-agent coordination and human-in-the-loop approval flows, explicitly targeting the agent use case that Temporal serves more generally.
 
 [Composio](https://composio.dev/) raised [$29 million](https://www.crunchbase.com/organization/composio) and provides a different kind of orchestration: tool integrations. Rather than managing execution state, Composio gives agents access to 100,000+ external tools (APIs, databases, SaaS products) through a single integration layer. Over 100,000 developers have adopted it.
-
-<SectionLabel>Evaluation and Observability</SectionLabel>
 
 ## How Agents Are Measured
 
@@ -60,8 +53,6 @@ One notable exit: [Helicone](https://helicone.ai/), an LLM observability proxy, 
 
 <InfraFundingByLayer />
 
-<SectionLabel>Compute and Inference</SectionLabel>
-
 ## How Agents Think
 
 Every agent call requires an inference pass. The compute layer provides the GPU infrastructure, model hosting, and API endpoints that turn prompts into responses. This is the largest value pool in the entire stack.
@@ -76,8 +67,6 @@ Every agent call requires an inference pass. The compute layer provides the GPU 
 
 And then there is Cloudflare. Workers AI hosts a [rotating catalog of 50+ production models](https://developers.cloudflare.com/workers-ai/models/) from Meta, Google, OpenAI, Qwen, Mistral, NVIDIA, and others, with function calling, LoRA fine-tuning, vision inputs, and batch processing built in. Older models are regularly deprecated as newer architectures arrive. A CDN company running inference at 300+ edge locations globally represents a structural change in how compute is distributed, moving from centralized GPU clusters to the edge, closer to the applications that consume it.
 
-<SectionLabel>Memory, State, and Retrieval</SectionLabel>
-
 ## How Agents Remember
 
 A stateless agent forgets everything between calls. Memory infrastructure provides persistent context, including what the agent has done, what the user prefers, and what documents are relevant to the current task.
@@ -88,8 +77,6 @@ A stateless agent forgets everything between calls. Memory infrastructure provid
 
 For retrieval, the vector database category attracted heavy funding in 2022-2023 and has been quiet since. [Pinecone](https://www.pinecone.io/) raised [$138 million](https://www.crunchbase.com/organization/pinecone) and reports 9,000+ customers and 800,000 developers. [Qdrant](https://qdrant.tech/) raised [$87.8 million](https://www.crunchbase.com/organization/qdrant) (the only vector database to raise a new round since 2023) and counts Disney, Microsoft, and Deloitte as customers. [Weaviate](https://weaviate.io/) raised [$67.7 million](https://www.crunchbase.com/organization/weaviate). [Chroma](https://www.trychroma.com/) raised [$18 million](https://www.crunchbase.com/organization/chroma-ai). The funding pause suggests either market saturation or a recognition that vector search is becoming a feature of general-purpose databases (Postgres with pgvector, Redis with vector modules) rather than a standalone category.
 
-<SectionLabel>Sandboxed Execution</SectionLabel>
-
 ## How Agents Run Code Safely
 
 An agent that writes code needs somewhere to run it. Executing untrusted, LLM-generated code on your production servers is a security breach waiting to happen. The sandboxed execution layer provides isolated environments where agents can run arbitrary code without risk.
@@ -97,8 +84,6 @@ An agent that writes code needs somewhere to run it. Executing untrusted, LLM-ge
 [E2B](https://e2b.dev/) raised [$32 million](https://www.crunchbase.com/organization/e2b-dev) and provides cloud-based sandboxed environments (micro-VMs) specifically designed for AI-generated code execution. Hugging Face, Perplexity, and Groq integrate E2B into their products, and the company reports that 88% of Fortune 100 companies have signed up. Each sandbox is an isolated, ephemeral micro-VM with its own filesystem, network, and process tree, created on demand and destroyed when the task completes.
 
 <SecurityConsolidation />
-
-<SectionLabel>Security</SectionLabel>
 
 ## How Agents Are Defended
 
@@ -114,8 +99,6 @@ The pattern is clear. Standalone agent security is being absorbed into larger pl
 
 <AgentProductValuations />
 
-<SectionLabel>The End State: Agents as Products</SectionLabel>
-
 ## Who Ships Autonomous Agents
 
 The infrastructure stack exists to support the companies that ship agents as finished products. The valuations at this layer dwarf every infrastructure category combined.
@@ -123,8 +106,6 @@ The infrastructure stack exists to support the companies that ship agents as fin
 [Cognition](https://cognition.ai/) (Devin) has raised over [$2.5 billion](https://www.crunchbase.com/organization/cognition-ai) at a $26 billion valuation and reports $492 million in annual recurring revenue from its autonomous software engineering agent. [Sierra AI](https://sierra.ai/), co-founded by former Salesforce CEO Bret Taylor, raised approximately [$1.58 billion](https://www.crunchbase.com/organization/sierra-ai) at a $15.8 billion valuation for customer experience agents deployed by WeightWatchers, ADT, and Sonos, reaching $150 million ARR within its first eight quarters. [Harvey AI](https://www.harvey.ai/) raised over [$1.22 billion](https://www.crunchbase.com/organization/harvey-ai) at an $11 billion valuation for legal agents, with 25,000+ agents running on its platform. [Decagon](https://decagon.ai/) raised approximately [$481 million](https://www.crunchbase.com/organization/decagon-ai) at a $4.5 billion valuation for customer support agents used by Cash App, Notion, and Duolingo. [Factory AI](https://factory.ai/) raised approximately [$200 million](https://www.crunchbase.com/organization/factory-ai) at a $1.5 billion valuation for software development agents used by NVIDIA, Adobe, and MongoDB. [CodeRabbit](https://coderabbit.ai/) raised [$88 million](https://www.crunchbase.com/organization/coderabbit) at a $550 million valuation, operates the #1 AI application on the GitHub Marketplace, and has over 8,000 paying organizations.
 
 Combined, these six companies represent over $59 billion in valuation on roughly $6 billion in capital raised. The coding vertical alone (Cognition + Factory + CodeRabbit) accounts for $28 billion.
-
-<SectionLabel>The Money</SectionLabel>
 
 ## What Funding Data Reveals About Agent Infrastructure
 
@@ -178,8 +159,6 @@ The bootstrapped path works for tools in the perception, monitoring, and develop
 
 <MarketplaceComposition />
 
-<SectionLabel>The Marketplace Signal</SectionLabel>
-
 ## Developer Platforms Are Productizing the Stack
 
 The clearest evidence that agent infrastructure has matured from GitHub repositories to managed services is the Vercel Marketplace. It contains 97+ integrations across 22 categories. The "Agents" category, added in 2025, now includes Browserbase, Firecrawl, Braintrust, CodeRabbit, Inngest, Parallel, Profound, Corridor, and others. Each can be provisioned with one click, billed through a single invoice, and connected to a Vercel project with automatic API key injection.
@@ -189,8 +168,6 @@ The clearest evidence that agent infrastructure has matured from GitHub reposito
 This is not limited to Vercel. Cloudflare Workers AI serves 50+ production models at the edge with OpenAI-compatible endpoints. HuggingFace Spaces operates as the largest ML application directory. LangChain's LangSmith provides a hub for reusable agent chains, prompts, and evaluation datasets. The infrastructure stack is being absorbed into platforms the same way databases, storage, and compute were absorbed into AWS in the 2010s.
 
 Two companies from the Vercel Marketplace illustrate how quickly new categories form. [Profound](https://www.profound.com/), which monitors how brands appear in AI-generated search results (ChatGPT, Perplexity, Google AI Overviews), reached unicorn status ($1 billion valuation on $155 million raised) within 18 months of founding. [Chatbase](https://www.chatbase.co/), which lets businesses create custom support agents trained on their own data, reached $10 million ARR while fully bootstrapped with 18 employees.
-
-<SectionLabel>Structural Observations</SectionLabel>
 
 ## What the Data Shows
 
