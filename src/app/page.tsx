@@ -40,7 +40,7 @@ export default function Home() {
   }));
 
   return (
-    <PageLayout>
+    <PageLayout wide={true}>
       <section className="py-8 md:py-12 text-center">
         <div>
           <Image

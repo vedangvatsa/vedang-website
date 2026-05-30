@@ -16,7 +16,7 @@ export const metadata: Metadata = generateMetadata({
 
 export default function WritingsPage() {
   return (
-    <PageLayout>
+    <PageLayout wide={true}>
       <BreadcrumbSchema items={[{ name: "Writings", url: "https://veda.ng/writings" }]} />
 
       <CardGrid
