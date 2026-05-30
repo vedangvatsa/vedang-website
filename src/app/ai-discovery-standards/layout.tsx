@@ -133,10 +133,8 @@ export default function AiDiscoveryStandardsLayout({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <PageLayout>
-        <div className="max-w-4xl mx-auto py-12">
-          <main className="flex-1 min-w-0">
-            {children}
-          </main>
+        <div className="py-12">
+          {children}
         </div>
       </PageLayout>
     </>

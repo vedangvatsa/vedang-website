@@ -39,3 +39,17 @@ When working on this project, you MUST read and follow these guidelines before m
 - Domain: `veda.ng`
 - Hosting: Firebase App Hosting (backend: `studio`, project: `vedang-fig5b`)
 - Essays use `[slug]` routing at root level (e.g., `veda.ng/agent-infrastructure-stack`, NOT `veda.ng/essays/...`)
+
+## Layout & Components
+- **Content width**: All pages use `content-width` class (61.8% on desktop, 80% tablet, 100% mobile). No page should override this with `wide={true}` unless it has a genuinely full-width layout (maps, dashboards).
+- **PageLayout**: Every page wraps in `<PageLayout>`. Header and footer are automatic.
+- **Course pages**: Use shared components (`CourseHero`, `CurriculumSection`, `CourseReferences`, `CourseFAQ`). No sidebars. No "Start Course" button. No prerequisite badges.
+- **CourseHero**: Matches essay header pattern: centered h1, subtitle, avatar + author name. No badges or buttons.
+- **CourseReferences**: Default alignment is `center`. Do NOT pass `align="left"`.
+- **Header pattern**: All content pages (essays, courses, tools) use the same centered h1 + subtitle + avatar byline pattern.
+
+## Accessibility
+- **Skip link**: First focusable element in `<body>` links to `<main id="main">`. Invisible to mouse users, visible on keyboard Tab. Do NOT remove.
+- **RSS feed discovery**: `<link rel="alternate" type="application/rss+xml">` in `<head>` for `/feed.xml`. Do NOT remove.
+- **Semantic landmarks**: `<header>`, `<nav>`, `<main id="main">`, `<footer>` are required on every page.
+- **Image alt text**: Every `<img>` must have an `alt` attribute. Zero exceptions.
