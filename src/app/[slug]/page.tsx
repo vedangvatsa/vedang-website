@@ -239,29 +239,43 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
         { name: essay.frontmatter.title, url: `https://veda.ng/${slug}` },
       ]} />
 
-      {/* ─── Report Hero ─── */}
-      <header className="border-b border-border/40 bg-secondary/20">
-        <div className="mx-auto max-w-6xl px-4 md:px-6 py-10 md:py-16">
-          <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">
+      {/* ─── Essay Header ─── */}
+      <header className="pt-12 md:pt-20 pb-10 md:pb-14">
+        <div className="mx-auto max-w-3xl px-4 md:px-6 text-center">
+          <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground mb-6">
             <Link href="/writings" className="hover:text-foreground transition-colors">Essays</Link>
             <span>/</span>
             <span className="text-foreground">{essay.frontmatter.title}</span>
           </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]" style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}>
             {essay.frontmatter.title}
           </h1>
           {essay.frontmatter.summary && (
-            <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl leading-relaxed">
+            <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               {essay.frontmatter.summary}
             </p>
           )}
-          <div className="mt-6 flex flex-wrap items-center gap-x-2 gap-y-2 text-sm text-muted-foreground">
-            <Link href="/profile" className="font-medium text-foreground hover:text-primary transition-colors">Vedang Vatsa</Link>
-            <span>·</span>
-            {essay.frontmatter.date && (
-              <><span>{new Date(essay.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span><span>·</span></>
-            )}
-            <span>{readingTime} min read</span>
+          <div className="mt-8 flex items-center justify-center gap-3">
+            <Link href="/profile">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/icon.png"
+                alt="Vedang Vatsa"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+            </Link>
+            <div className="flex items-center gap-0 text-sm">
+              <Link href="/profile" className="font-medium text-foreground hover:text-primary transition-colors">Vedang Vatsa</Link>
+              <div className="flex items-center text-muted-foreground ml-3">
+                {essay.frontmatter.date && (
+                  <span>{new Date(essay.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                )}
+                <span className="mx-2">|</span>
+                <span>{readingTime} min read</span>
+              </div>
+            </div>
           </div>
         </div>
       </header>
