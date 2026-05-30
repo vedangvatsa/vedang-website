@@ -4,7 +4,7 @@ import path from 'path';
 
 export async function GET() {
   try {
-    const filePath = path.join(process.cwd(), 'public', 'llms.txt');
+    const filePath = path.join(process.cwd(), 'public', 'llms-full.txt');
     const content = fs.readFileSync(filePath, 'utf8');
     return new NextResponse(content, {
       headers: {
@@ -12,6 +12,6 @@ export async function GET() {
       },
     });
   } catch (error) {
-    return new NextResponse('llms.txt not found. Run a build to generate it.', { status: 404 });
+    return new NextResponse('llms-full.txt not found. Run a build to generate it.', { status: 404 });
   }
 }

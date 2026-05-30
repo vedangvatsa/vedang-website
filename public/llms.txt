@@ -16,48 +16,58 @@ This file provides a structured overview of the site's content for Large Languag
 
 ## Essays
 
-- [The Revision Gap](https://veda.ng/revision-gap): Why the journey from first draft to final version reveals the real difference between how humans and machines write.
-- [Bureaucracy is the Friction Tax We All Pay](https://veda.ng/bureaucracy-tax): Why traditional institutions fail and why technology, not more rules, is the escape from institutional sclerosis.
-- [Computational Constitutions](https://veda.ng/computational-constitutions): Encoding rights, freedoms, and governance principles into verifiable, executable code that AI systems must respect.
-- [What is the Singularity?](https://veda.ng/singularity): Exploring the technological singularity, when AI surpasses human intelligence, and implications for humanity.
-- [The Singularity Paradox](https://veda.ng/singularity-paradox): Examining the fundamental contradictions in singularity predictions and what we can know about post-singularity futures.
-- [AI Superintelligence Timeline](https://veda.ng/asi-timeline): Analyzing expert predictions on when superintelligence emerges and the technological factors that determine timelines.
-- [Rationality in AI](https://veda.ng/rationality-in-ai): What it means for AI systems to be rational, decision theory, value alignment, and the philosophy of artificial reasoning.
-- [Are We in a Computer Simulation?](https://veda.ng/simulation-hypothesis): Examining the simulation hypothesis, philosophical arguments, and what modern AI tells us about this possibility.
-- [API States](https://veda.ng/api-states): How nation-states become platforms: programmable governance, composable public services, and citizenship as a set of cryptographic credentials.
-- [Pseudonymous Agency](https://veda.ng/pseudonymous-agency): How AI agents enable true privacy: conducting business, building reputation, and participating in society without revealing human identity.
-- [Computational Social Science at Scale](https://veda.ng/computational-social-science): Using AI agents to run massive social simulations, predict collective behavior, and test policy interventions in virtual societies.
-- [The Simulation Layer](https://veda.ng/simulation-layer): Using AI agents to create perfect digital twins of systems, people, and societies for testing and prediction.
-- [The God Protocol](https://veda.ng/god-protocol): What happens when AGI achieves something indistinguishable from omniscience? Exploring the theological implications of artificial superintelligence.
-- [The Plurality Trap](https://veda.ng/plurality-trap): As brain-computer interfaces advance, exploring whether the unified self is an illusion we'll be forced to abandon when our minds directly merge with multiple information streams.
-- [Digital Monasticism](https://veda.ng/digital-monasticism): The emerging movement of radical disconnection as a spiritual practice in an age of total technological immersion.
-- [The Twilight Economy](https://veda.ng/twilight-economy): Exploring the gray zones where human and AI labor blend indistinguishably, and no one can tell who did what anymore.
-- [The In-Between State](https://veda.ng/in-between-state): Exploring transhumanism's awkward adolescence: the decades where we're enhanced but not transformed, stuck between human and post-human.
-- [Sacred Algorithms](https://veda.ng/sacred-algorithms): When AI systems make life-or-death decisions, are we creating new deities? The religiosity of technological trust.
-- [The Attention Refinery](https://veda.ng/attention-refinery): How modern platforms have industrialized human attention extraction, and what post-attention economies might look like.
-- [The Dark Forest Internet](https://veda.ng/dark-forest-internet): As bots outnumber humans online, exploring the shift toward private, cryptographically verified communication channels and the death of the open web.
-- [Programmable Trust](https://veda.ng/programmable-trust): Beyond blockchain: exploring zero-knowledge proofs, trusted execution environments, and cryptographic systems that make truth verifiable without revealing everything.
-- [The Substrate Shift](https://veda.ng/substrate-shift): We're moving from silicon to biological computing, photonic chips, and DNA storage.
-- [Ambient Intelligence](https://veda.ng/ambient-intelligence): Exploring the shift from devices to environments as computational substrates dissolve into the fabric of physical space.
-- [Synthetic Empathy](https://veda.ng/synthetic-empathy): Can machines truly understand human emotion, or are we headed toward a future of perfectly convincing but hollow emotional intelligence?
-- [The Cognitive Load Crisis](https://veda.ng/cognitive-load): How information abundance is fundamentally rewiring human attention, and what tools we need to navigate the flood without drowning.
-- [The Sensory Internet](https://veda.ng/sensory-internet): The evolution from visual interfaces to multi-sensory digital experiences through haptics, spatial audio, and eventually direct neural interfaces.
-- [The Mesh Economy](https://veda.ng/mesh-economy): How peer-to-peer networks are replacing centralized platforms, creating a new topology of value exchange that's resilient, distributed, and radically efficient.
-- [An Internet of Lies](https://veda.ng/internet-of-lies): The Internet has become a playground for misinformation, where trust is broken and truth is elusive. Building a verifiable web.
-- [The Intuitive Singularity](https://veda.ng/intuitive-singularity): How AI augments human intuition and the partnership required to navigate the coming transformation.
-- [Tracing Blockchain's Journey](https://veda.ng/blockchain-journey): The evolution of blockchain technology from Bitcoin to decentralized systems.
-- [Governance in the Age of AGI](https://veda.ng/agi-governance): How governance structures must evolve to handle artificial general intelligence.
-- [Hustle Culture is a Cage](https://veda.ng/hustle-culture): Rethinking productivity culture and the human cost of constant optimization.
-- [Artificial Intuition](https://veda.ng/artificial-intuition): Exploring how AI systems develop pattern recognition that resembles human intuition and what this means for decision-making.
-- [The AI Agent Economy](https://veda.ng/ai-agent-economy): How autonomous AI agents are creating new economic structures, marketplaces, and value exchange systems without human intermediaries.
-- [The AI Economy](https://veda.ng/ai-economy): Job displacement, market concentration, and what a balanced AI transition actually requires.
-- [From Cheap to Competitive](https://veda.ng/cheap-to-competitive): How national product quality perception follows income growth with a predictable lag, and where India sits on that arc today.
-- [Lessons from Singapore's Arc](https://veda.ng/singapores-arc): How a fishing village became one of the richest countries on earth, and what the development economics literature says about why.
+- [The Agent Infrastructure Stack](https://veda.ng/agent-infrastructure-stack): Over $5 billion in venture capital has been deployed into the eight layers of infrastructure that AI agents need to function.
+- [The Great Funding Realignment](https://veda.ng/great-funding-realignment): An empirical study of global venture capital cycles from 2015 to 2026, analyzing capital concentration, the expansion of median check sizes, and the Seed-to-Series A transition bottleneck.
+- [The State of AI](https://veda.ng/state-of-ai): A data-driven executive analysis of 133,000+ research papers, whitepapers, consulting reports, and regulatory frameworks tracking the structural transition of Artificial Intelligence from theoretical capabilities to enterprise integration.
+- [The State of Web3](https://veda.ng/state-of-web3): A data-driven executive analysis of 100,000+ research papers, whitepapers, consulting reports, and regulatory filings tracking the trajectory of blockchain, DeFi, and decentralized infrastructure.
+- [The AI Implementation Playbook](https://veda.ng/ai-implementation-playbook): A complete, step-by-step framework for implementing AI agents across every function of a startup. From brand consistency to automated outreach to SEO that runs itself.
+- [The Post-Interface Internet](https://veda.ng/post-interface-internet): The GUI was a 40-year hack for human-computer impedance matching.
+- [Agents Eating SaaS](https://veda.ng/agents-eating-saas): The $400 billion SaaS industry was built on per-seat pricing. AI agents do not sit in seats.
+- [The Agentic State](https://veda.ng/agentic-state): Estonia claims 100% of government services are online. Singapore deployed AI across its public service at scale.
+- [The Text Field is the New Dashboard](https://veda.ng/universal-text-ui): When a text field backed by an LLM can answer any question by calling internal APIs directly, the dashboard becomes redundant.
+- [The Stepwise Approach to Enterprise AI](https://veda.ng/stepwise-ai): Most enterprises fail at AI by deploying it everywhere at once. Evidence shows that starting with narrow, high-frequency tasks produces measurable ROI.
+- [The YC Portfolio, Decoded](https://veda.ng/yc-landscape): An analysis of Y Combinator's 5,818 companies reveals five structural shifts: B2B dominance at 51%, the rise of the AI employee, defense tech at scale,...
+- [Post-Scarcity Technology](https://veda.ng/post-scarcity-technology): When the marginal cost of intelligence, energy, and digital goods trends toward zero, the economic frameworks built on scarcity face structural pressure.
+- [Agentic Commerce](https://veda.ng/agentic-commerce): When algorithms start shopping on behalf of consumers, traditional e-commerce breaks.
+- [Towards the Agentic Web](https://veda.ng/towards-the-agentic-web): How the internet is shifting from a place where humans find information to  a platform where autonomous AI agents get things done on your behalf.
 - [The Infinity Economy](https://veda.ng/infinity-economy): Can AI and decentralized systems make scarcity obsolete, or does the physical world have something to say about that?
-- [Towards the Agentic Web](https://veda.ng/agentic-web): How the internet is shifting from a place where humans find information to a platform where autonomous AI agents get things done on your behalf.
-- [Agentic Commerce](https://veda.ng/agentic-commerce): When algorithms start shopping on our behalf, traditional e-commerce breaks. How the protocols, payment rails, and business impacts of machine-to-machine retail will actually play out.
-- [The State of AI](https://veda.ng/state-of-ai): An empirical analysis of 19,175 AI research papers, enterprise reports, and regulatory frameworks. N-gram frequency analysis across millions of words reveals the true trajectory of enterprise AI.
-- [The State of Web3](https://veda.ng/state-of-web3): An empirical analysis of 18,423 institutional reports, academic papers, and on-chain analytics to determine the true state of Web3 and decentralized infrastructure.
+- [The AI Economy](https://veda.ng/ai-economy): Job displacement, market concentration, and what a balanced AI transition actually requires.
+- [Lessons from Singapore's Arc](https://veda.ng/singapores-arc): How a fishing village became one of the richest countries on earth, and what the development economics literature says about why.
+- [From Cheap to Competitive](https://veda.ng/cheap-to-competitive): How national product quality perception follows income growth with a predictable lag, and where India sits on that arc today.
+- [The Revision Gap](https://veda.ng/revision-gap): Why the difference between mediocre and effective writing is not first-draft quality but revision depth, how AI systems can be structured to close this...
+- [Twilight Economy](https://veda.ng/twilight-economy): The zone where human and AI labor blend indistinguishably, where attribution becomes indeterminate, and where the legal, economic, and psychological...
+- [Are We in a Computer Simulation?](https://veda.ng/simulation-hypothesis): A structured examination of the simulation hypothesis: Bostrom's trilemma, the computational constraints, the consciousness dependency, and what modern...
+- [The Singularity Paradox](https://veda.ng/singularity-paradox): Why every prediction about post-singularity futures is self-defeating, how the alignment problem compounds with the control problem, and what the...
+- [Synthetic Empathy](https://veda.ng/synthetic-empathy): A clinical trial showed AI therapy reduced depression symptoms by 51%. The WHO reports 1 in 6 people experience loneliness.
+- [The AI Agent Economy](https://veda.ng/ai-agent-economy): When software starts acting as an economic agent, sourcing suppliers, executing trades, managing projects, the corporation as it exists today faces...
+- [AI Superintelligence Timeline](https://veda.ng/asi-timeline): Why expert predictions for artificial superintelligence range from 2027 to 2100+, what the key bottlenecks are (compute, data, architecture,...
+- [The In-Between State](https://veda.ng/in-between-state): Transhumanism's actual near-term trajectory: not dramatic transcendence but a multi-decade period of partial, uneven, and socially disruptive...
+- [The Hustle Trap](https://veda.ng/hustle-culture): After 55 hours per week, productivity drops to nearly zero.
+- [An Internet of Lies](https://veda.ng/internet-of-lies): Deepfake incidents increased 900% year-over-year. Only 0.1% of users can distinguish real from synthetic media.
+- [Intuitive Singularity](https://veda.ng/intuitive-singularity): When AI systems transition from tools that execute commands to systems that anticipate intent, the interface between human and machine cognition...
+- [Governance in the Age of AGI](https://veda.ng/agi-governance): Three regulatory superpowers are building incompatible AI governance frameworks. The EU bans practices. The US deregulates. China registers algorithms.
+- [The Substrate Shift](https://veda.ng/substrate-shift): Silicon is hitting physical limits at the atomic scale. DNA stores 455 exabytes per gram.
+- [The World as an Interface](https://veda.ng/ambient-intelligence): The smart home market will reach $175 billion in 2025. Device shipments approach 1.25 billion units.
+- [What is the Singularity?](https://veda.ng/singularity): A structured examination of the technological singularity: its formal definition, the alignment problem it creates, the hard versus soft trajectories,...
+- [API States](https://veda.ng/api-states): Estonia runs 99% of public services digitally and saves 2% of GDP annually. India's UPI processes billions of transactions monthly.
+- [Cognitive Load Crisis](https://veda.ng/cognitive-load): The average attention span on a screen is 47 seconds. Humans check their phones 200 times per day.
+- [Artificial Intuition](https://veda.ng/artificial-intuition): How machines may develop synthetic analogues to human intuition through pattern recognition at scale, what Kahneman's dual-process theory reveals about...
+- [Bureaucracy is the friction tax everyone pays](https://veda.ng/bureaucracy-tax): Why institutional complexity accumulates faster than it resolves, what the measurable costs are across sectors, and where digital-first governance...
+- [The Dark Forest Internet](https://veda.ng/dark-forest-internet): Bots now generate 51% of all web traffic. 74% of new web pages contain AI-generated text.
+- [Rationality in AI](https://veda.ng/rationality-in-ai): What it means for an AI system to be rational, how decision theory applies to artificial agents, why the orthogonality thesis makes alignment a...
+- [Digital Monasticism](https://veda.ng/digital-monasticism): Silence is the new luxury. The average person spends 7 hours on screens daily. Attention spans dropped from 2.5 minutes to 40 seconds in twenty years.
+- [Attention Refinery](https://veda.ng/attention-refinery): The five largest technology companies generate over $600 billion per year by extracting and reselling human attention.
+- [Tracing Blockchain's Journey](https://veda.ng/blockchain-journey): An analysis of blockchain's evolution from cryptographic experiment to institutional infrastructure, examining what survived the hype cycles, where the...
+- [Sacred Algorithms](https://veda.ng/sacred-algorithms): COMPAS predicts recidivism with racial bias baked in. Healthcare AI underestimates illness in minority patients.
+- [Computational Social Science](https://veda.ng/computational-social-science): Twitter's API shutdown disrupted 20 years of social research. Digital twins simulate voter behavior.
+- [Computational Constitutions](https://veda.ng/computational-constitutions): Wyoming legalized DAO LLCs in 2021. Smart contracts execute governance rules automatically.
+- [Pseudonymous Agency](https://veda.ng/pseudonymous-agency): Satoshi Nakamoto built a $1 trillion protocol without revealing an identity. Banksy generates $25M+ per auction without a face.
+- [Programmable Trust](https://veda.ng/programmable-trust): Zero-knowledge proofs verify without revealing. Trusted execution environments create hardware-enforced privacy.
+- [The God Protocol](https://veda.ng/god-protocol): Nick Szabo imagined a trusted third party with infinite integrity, no self-interest, and perfect confidentiality. Bitcoin approximated it.
+- [The Sensory Internet](https://veda.ng/sensory-internet): The haptic technology market reaches $4-12 billion in 2025. Apple shipped 390,000 Vision Pro units. Neuralink implanted its first human BCI.
+- [The Mesh Economy](https://veda.ng/mesh-economy): DeFi protocols execute billions in daily volume with zero employees. DAOs manage tens of billions in treasury assets through on-chain governance.
+- [The Plurality Trap](https://veda.ng/plurality-trap): More information was supposed to produce better understanding. Instead, it produced more ways to be wrong confidently.
+- [The Simulation Layer](https://veda.ng/simulation-layer): Digital twins save Boeing over $1 billion in manufacturing. Waymo has driven 20+ billion simulated miles.
 
 ## Research Data Archives
 
@@ -79,244 +89,292 @@ Selected peer-reviewed research on AI, Web3, and economic systems:
 
 ## Glossary
 
-Individual definitions for AI, Web3, and technical terms at `/glossary/[slug]`. All 81 terms:
+Individual definitions for AI, Web3, and technical terms at `/glossary/[slug]`. All 287 terms:
 
-- [API (Application Programming Interface)](https://veda.ng/glossary/api-application-programming-interface): A contract defining how software components communicate.
-- [Agent](https://veda.ng/glossary/agent): An autonomous system that perceives its environment and takes actions to achieve goals.
-- [Agentic Loop](https://veda.ng/glossary/agentic-loop): The perceive-reason-act-observe cycle that AI agents repeat to accomplish complex multi-step tasks.
-- [Airdrop](https://veda.ng/glossary/airdrop): A token distribution method sending free tokens to wallet addresses as rewards for early users.
-- [Alignment](https://veda.ng/glossary/alignment): The challenge of ensuring AI systems pursue goals beneficial and consistent with human values.
-- [Artificial General Intelligence (AGI)](https://veda.ng/glossary/artificial-general-intelligence-agi): AI that matches or exceeds human-level performance across any intellectual task.
-- [Attention Mechanism](https://veda.ng/glossary/attention-mechanism): The core transformer innovation that weights token relationships, enabling contextual understanding in LLMs.
-- [Automated Market Maker (AMM)](https://veda.ng/glossary/automated-market-maker-amm): A decentralized exchange protocol using liquidity pools and mathematical formulas to facilitate trades.
-- [Blockchain](https://veda.ng/glossary/blockchain): A distributed, immutable ledger that records transactions across a decentralized network.
-- [Bridge](https://veda.ng/glossary/bridge): A protocol that enables asset transfers between different blockchain networks.
-- [CDN](https://veda.ng/glossary/cdn): Geographically distributed server network delivering web content from locations close to users.
-- [CI/CD](https://veda.ng/glossary/ci-cd): Continuous Integration and Continuous Deployment - automated pipelines for building and releasing software.
-- [Chain-of-Thought Prompting](https://veda.ng/glossary/chain-of-thought-prompting): A technique instructing a language model to reason step by step before giving a final answer.
-- [Cold Wallet](https://veda.ng/glossary/cold-wallet): Offline cryptocurrency storage keeping private keys disconnected from the internet for maximum security.
-- [Consensus Mechanism](https://veda.ng/glossary/consensus-mechanism): The protocol by which blockchain nodes agree on the valid state of the ledger.
-- [Constitutional AI](https://veda.ng/glossary/constitutional-ai): Anthropic's method for training AI systems using a set of principles rather than human feedback alone.
-- [Context Window](https://veda.ng/glossary/context-window): The maximum amount of text a language model can process in a single interaction, measured in tokens.
-- [DePIN](https://veda.ng/glossary/depin): Decentralized Physical Infrastructure Networks that incentivize individuals to deploy hardware via token rewards.
-- [Decentralized Autonomous Organization (DAO)](https://veda.ng/glossary/decentralized-autonomous-organization-dao): A community governed by on-chain voting rules and smart contracts.
-- [Decentralized Finance (DeFi)](https://veda.ng/glossary/decentralized-finance-defi): Financial services built on blockchain without traditional intermediaries.
-- [Docker](https://veda.ng/glossary/docker): A platform for building, shipping, and running applications in portable containers.
-- [Edge Computing](https://veda.ng/glossary/edge-computing): Processing data closer to the source rather than in centralized cloud data centers.
-- [Embeddings](https://veda.ng/glossary/embeddings): Vector representations of text or data that capture semantic meaning in numeric form.
-- [Fine-Tuning](https://veda.ng/glossary/fine-tuning): Adapting a pre-trained model to a specific task using additional training on a smaller, targeted dataset.
-- [Flash Loan](https://veda.ng/glossary/flash-loan): Uncollateralized DeFi loan borrowed and repaid within a single blockchain transaction.
-- [Gas Fees](https://veda.ng/glossary/gas-fees): Transaction fees paid to validators on blockchain networks like Ethereum.
-- [Governance Token](https://veda.ng/glossary/governance-token): A token that grants holders voting rights over a protocol's decisions.
-- [GraphQL](https://veda.ng/glossary/graphql): A query language for APIs that allows clients to request exactly the data they need.
-- [Grounding](https://veda.ng/glossary/grounding): Connecting AI outputs to verifiable external sources to reduce hallucination and enable fact-checking.
-- [Hallucination](https://veda.ng/glossary/hallucination): When an AI model confidently generates false or fabricated information not supported by its training data.
-- [IPFS (InterPlanetary File System)](https://veda.ng/glossary/ipfs-interplanetary-file-system): A peer-to-peer protocol for distributed, content-addressed file storage.
-- [Inference](https://veda.ng/glossary/inference): The process of running a trained AI model to generate predictions or outputs.
-- [Kubernetes](https://veda.ng/glossary/kubernetes): An open-source system for automating deployment and scaling of containerized applications.
-- [Large Language Model (LLM)](https://veda.ng/glossary/large-language-model-llm): Neural network trained on massive text datasets to generate and understand human language.
-- [Layer 1](https://veda.ng/glossary/layer-1): The base blockchain protocol providing security, consensus, and settlement finality for the ecosystem.
-- [Layer 2](https://veda.ng/glossary/layer-2): Scaling solutions built on top of a base blockchain to increase speed and reduce fees.
-- [Liquid Staking](https://veda.ng/glossary/liquid-staking): Staking cryptocurrency while retaining liquidity through derivative tokens.
-- [Liquidity Pool](https://veda.ng/glossary/liquidity-pool): Smart contract holding token reserves enabling decentralized trading through automated market makers.
-- [Load Balancer](https://veda.ng/glossary/load-balancer): System distributing network traffic across multiple servers for scalability and fault tolerance.
-- [Maximal Extractable Value (MEV)](https://veda.ng/glossary/maximal-extractable-value-mev): Profit extracted by block producers through strategic transaction ordering in a blockchain.
-- [Merkle Tree](https://veda.ng/glossary/merkle-tree): A hash-based data structure used in blockchains to efficiently verify large datasets.
-- [Message Queue](https://veda.ng/glossary/message-queue): A communication method where messages are stored until a consumer processes them asynchronously.
-- [Microservices](https://veda.ng/glossary/microservices): An architectural pattern where applications are composed of small, independently deployable services.
-- [Mixture of Experts (MoE)](https://veda.ng/glossary/mixture-of-experts-moe): Architecture routing each token to specialized sub-networks, enabling large capacity at lower compute cost.
-- [Model Context Protocol (MCP)](https://veda.ng/glossary/model-context-protocol-mcp): An open standard by Anthropic defining how AI models connect to external tools and services.
-- [Model Distillation](https://veda.ng/glossary/model-distillation): A technique for creating a smaller, faster model that approximates the behavior of a larger one.
-- [Monorepo](https://veda.ng/glossary/monorepo): Development strategy storing multiple projects in a single repository for shared tooling and atomic changes.
-- [Multimodal AI](https://veda.ng/glossary/multimodal-ai): AI systems that process and generate multiple types of data - text, images, audio, video.
-- [Non-Fungible Token (NFT)](https://veda.ng/glossary/non-fungible-token-nft): A unique digital asset verified on a blockchain.
-- [OAuth](https://veda.ng/glossary/oauth): Authorization framework enabling third-party app access to user resources without sharing passwords.
-- [Oracle](https://veda.ng/glossary/oracle): A service that supplies real-world data to smart contracts on a blockchain.
-- [Prompt Engineering](https://veda.ng/glossary/prompt-engineering): The craft of designing inputs to AI systems to elicit accurate, useful, and safe outputs.
-- [Prompt Injection](https://veda.ng/glossary/prompt-injection): Security attack embedding malicious instructions in content processed by AI systems.
-- [Proof of Stake](https://veda.ng/glossary/proof-of-stake): Consensus mechanism selecting validators based on staked collateral rather than computational work.
-- [Proof of Work](https://veda.ng/glossary/proof-of-work): Bitcoin's consensus mechanism requiring computational energy expenditure to add blocks and secure the chain.
-- [Quantization](https://veda.ng/glossary/quantization): Model compression technique reducing weight precision to make LLMs smaller and faster for deployment.
-- [Rate Limiting](https://veda.ng/glossary/rate-limiting): Controlling how often a user or system can make requests to an API within a given timeframe.
-- [Reasoning Model](https://veda.ng/glossary/reasoning-model): A class of AI model that thinks before responding using an internal chain-of-thought process.
-- [Reinforcement Learning from Human Feedback (RLHF)](https://veda.ng/glossary/reinforcement-learning-from-human-feedback-rlhf): Training AI using human preference ratings.
-- [Restaking](https://veda.ng/glossary/restaking): Reusing staked ETH as cryptoeconomic security for additional protocols beyond Ethereum.
-- [Retrieval-Augmented Generation (RAG)](https://veda.ng/glossary/retrieval-augmented-generation-rag): Combining LLMs with external knowledge retrieval to improve accuracy and reduce hallucination.
-- [Seed Phrase](https://veda.ng/glossary/seed-phrase): A sequence of 12 or 24 words serving as the master backup for a cryptocurrency wallet.
-- [Serverless](https://veda.ng/glossary/serverless): A cloud execution model where infrastructure is fully managed and functions run on demand.
-- [Sharding](https://veda.ng/glossary/sharding): A database partitioning technique used in blockchains to increase transaction throughput.
-- [Smart Contract](https://veda.ng/glossary/smart-contract): Self-executing code on a blockchain that enforces agreement terms automatically.
-- [Stablecoin](https://veda.ng/glossary/stablecoin): A cryptocurrency designed to maintain a stable value, typically pegged to a fiat currency.
-- [Synthetic Data](https://veda.ng/glossary/synthetic-data): Artificially generated training data used to scale AI development beyond real-world data constraints.
-- [Temperature](https://veda.ng/glossary/temperature): A parameter controlling the randomness of a language model's output.
-- [Token](https://veda.ng/glossary/token): The basic unit of text processed by an LLM - roughly a word or word fragment.
-- [Tokenization](https://veda.ng/glossary/tokenization): Representing ownership of real-world or digital assets as tokens on a blockchain.
-- [Tokenomics](https://veda.ng/glossary/tokenomics): The economic design of a cryptocurrency system governing how tokens are created, distributed, used, and destroyed.
-- [Transformer](https://veda.ng/glossary/transformer): The neural network architecture underlying modern LLMs, using self-attention mechanisms.
-- [Validator](https://veda.ng/glossary/validator): A node that participates in blockchain consensus by verifying and proposing blocks.
-- [Vector Database](https://veda.ng/glossary/vector-database): A database optimized for storing and searching high-dimensional numerical vectors for semantic search.
-- [Wallet](https://veda.ng/glossary/wallet): Software or hardware that stores private keys and manages cryptocurrency assets.
-- [WebAssembly (Wasm)](https://veda.ng/glossary/webassembly-wasm): A binary instruction format enabling high-performance code execution in web browsers.
-- [WebSocket](https://veda.ng/glossary/websocket): Protocol providing persistent bidirectional connections for real-time applications like chat and live data feeds.
-- [Wrapped Token](https://veda.ng/glossary/wrapped-token): A token representing another cryptocurrency on a different blockchain, maintaining a 1:1 peg.
-- [Yield Farming](https://veda.ng/glossary/yield-farming): Strategy of deploying crypto across DeFi protocols to maximize returns through fees and token rewards.
-- [Zero-Knowledge Proof](https://veda.ng/glossary/zero-knowledge-proof): A cryptographic method to prove a statement is true without revealing any underlying information.
-- [Zero-Shot Learning](https://veda.ng/glossary/zero-shot-learning): An AI model's ability to perform tasks it was never explicitly trained on.
-
-- [Artificial General Intelligence (AGI)](https://veda.ng/glossary/agi): Artificial General Intelligence represents a threshold in AI development where a system matches or exceeds human-leve....
+- [Artificial General Intelligence (AGI)](https://veda.ng/glossary/agi): Artificial General Intelligence represents a threshold in AI development where a system matches or exceeds human-level performance across any intellectual task.
 - [Large Language Model (LLM)](https://veda.ng/glossary/llm): A Large Language Model is a neural network trained on massive text datasets to predict and generate human-like text.
+- [Prompt Engineering](https://veda.ng/glossary/prompt-engineering): Prompt engineering is the craft of designing inputs to AI systems to produce desired outputs.
+- [Fine-Tuning](https://veda.ng/glossary/fine-tuning): Fine-tuning is the process of taking a pre-trained model and continuing its training on a specialized dataset.
 - [Retrieval-Augmented Generation (RAG)](https://veda.ng/glossary/rag): Retrieval-Augmented Generation is a technique where an LLM queries external knowledge bases before generating responses.
-- [Reinforcement Learning from Human Feedback (RLHF)](https://veda.ng/glossary/rlhf): Reinforcement Learning from Human Feedback is a training technique where humans rank model outputs and the model lear....
+- [Hallucination](https://veda.ng/glossary/hallucination): Hallucination is when an AI system generates plausible-sounding but completely false information.
+- [Alignment](https://veda.ng/glossary/alignment): Alignment is the problem of making AI systems pursue goals compatible with human values.
+- [Constitutional AI](https://veda.ng/glossary/constitutional-ai): Constitutional AI is a training approach where an AI system evaluates its own outputs against a set of principles, a constitution, and improves through self-critique and revision.
+- [Zero-Shot Learning](https://veda.ng/glossary/zero-shot-learning): Zero-shot learning is when an AI system performs tasks it was never explicitly trained on, using only natural language instructions.
+- [Reinforcement Learning from Human Feedback (RLHF)](https://veda.ng/glossary/rlhf): Reinforcement Learning from Human Feedback is a training technique where humans rank model outputs and the model learns to maximize human preferences.
+- [Transformer](https://veda.ng/glossary/transformer): The Transformer is a neural network architecture introduced in the 2017 paper 'Attention Is All You Need.' It's the foundation of modern LLMs.
+- [Token](https://veda.ng/glossary/token): A token is the smallest unit of text that an LLM processes.
+- [Embeddings](https://veda.ng/glossary/embeddings): Embeddings are vector representations of text, images, or other data in high-dimensional space.
+- [Agent](https://veda.ng/glossary/agent): An Agent is an AI system that perceives its environment, makes decisions, and takes actions to achieve goals.
+- [Multimodal AI](https://veda.ng/glossary/multimodal-ai): Multimodal AI is a category of models that process multiple data types, text, images, audio, video, in a single system.
+- [Blockchain](https://veda.ng/glossary/blockchain): A blockchain is a distributed ledger maintained by a network of nodes.
+- [Smart Contract](https://veda.ng/glossary/smart-contract): A smart contract is self-executing code deployed on a blockchain.
 - [Decentralized Finance (DeFi)](https://veda.ng/glossary/defi): Decentralized Finance is a category of financial services built on blockchain without traditional intermediaries.
 - [Non-Fungible Token (NFT)](https://veda.ng/glossary/nft): An NFT is a unique cryptographic token representing ownership of a specific digital or physical asset.
 - [Decentralized Autonomous Organization (DAO)](https://veda.ng/glossary/dao): A DAO is an organization governed by smart contracts and token holders rather than traditional hierarchy.
+- [Consensus Mechanism](https://veda.ng/glossary/consensus-mechanism): A consensus mechanism is a protocol that lets nodes agree on the state of a blockchain without a central authority.
+- [Gas Fees](https://veda.ng/glossary/gas-fees): Gas fees are transaction fees paid to validators for executing operations on a blockchain.
+- [Layer 2](https://veda.ng/glossary/layer-2): Layer 2 refers to secondary blockchains built on top of a Layer 1 chain like Ethereum to improve scalability.
+- [Wallet](https://veda.ng/glossary/wallet): A wallet is software that stores private keys and allows interaction with blockchains.
+- [Governance Token](https://veda.ng/glossary/governance-token): A governance token is a digital asset that grants voting rights in a decentralized autonomous organization.
+- [Stablecoin](https://veda.ng/glossary/stablecoin): A stablecoin is a cryptocurrency pegged to a stable asset like USD.
+- [Bridge](https://veda.ng/glossary/bridge): A bridge is a protocol for transferring assets between different blockchains.
+- [Oracle](https://veda.ng/glossary/oracle): An oracle is a service providing external data to smart contracts.
+- [Validator](https://veda.ng/glossary/validator): A validator is a node that proposes and verifies new blocks on a Proof of Stake blockchain.
+- [Liquid Staking](https://veda.ng/glossary/liquid-staking): Liquid staking lets you stake tokens while maintaining liquidity through derivative tokens.
 - [API (Application Programming Interface)](https://veda.ng/glossary/api): An API is an interface for software to communicate with other software.
+- [Microservices](https://veda.ng/glossary/microservices): Microservices is an architecture pattern where applications are built as independent, loosely coupled services.
+- [Kubernetes](https://veda.ng/glossary/kubernetes): Kubernetes is a container orchestration platform for deploying, scaling, and managing containerized applications.
+- [Serverless](https://veda.ng/glossary/serverless): Serverless is a cloud execution model where providers manage infrastructure.
 - [CI/CD](https://veda.ng/glossary/cicd): CI/CD stands for Continuous Integration and Continuous Deployment.
+- [Edge Computing](https://veda.ng/glossary/edge-computing): Edge computing means processing data near the source rather than sending it to a centralized cloud data center.
+- [Zero-Knowledge Proof](https://veda.ng/glossary/zero-knowledge-proof): A zero-knowledge proof is a cryptographic method to prove knowledge of information without revealing the information itself.
+- [Merkle Tree](https://veda.ng/glossary/merkle-tree): A Merkle tree is a data structure for efficiently verifying the integrity of large datasets.
+- [Sharding](https://veda.ng/glossary/sharding): Sharding is a horizontal scaling technique that partitions data across multiple independent database instances (shards), enabling systems to handle vastly more data and traffic than any single machine could manage.
 - [IPFS (InterPlanetary File System)](https://veda.ng/glossary/ipfs): IPFS is a peer-to-peer protocol for storing and sharing files.
 - [WebAssembly (Wasm)](https://veda.ng/glossary/webassembly): WebAssembly is a binary instruction format for a stack-based virtual machine.
-- [Chain-of-Thought Prompting](https://veda.ng/glossary/chain-of-thought): Chain-of-thought prompting is a technique where you instruct a language model to reason step by step before giving a ....
-- [Model Context Protocol (MCP)](https://veda.ng/glossary/mcp): Model Context Protocol is an open standard developed by Anthropic that defines how AI models connect to external tool....
-- [Automated Market Maker (AMM)](https://veda.ng/glossary/amm): An automated market maker is a type of decentralized exchange protocol that uses mathematical formulas and liquidity ....
-- [Maximal Extractable Value (MEV)](https://veda.ng/glossary/mev): Maximal Extractable Value is the profit that block producers (validators or miners) can extract by strategically orde....
-- [Mixture of Experts (MoE)](https://veda.ng/glossary/mixture-of-experts): Mixture of Experts is a neural network architecture where only a fraction of the model's parameters are active for an....
-- [Attention Head](https://veda.ng/glossary/attention-head): An attention head is one of multiple parallel attention mechanisms within a transformer layer, each independently lea....
-- [Positional Encoding](https://veda.ng/glossary/positional-encoding): Positional encoding is a technique for injecting sequence position information into transformer models, which otherwi....
-- [Batch Normalization](https://veda.ng/glossary/batch-normalization): Batch normalization is a technique for stabilizing and accelerating neural network training by normalizing layer inpu....
-- [Beam Search](https://veda.ng/glossary/beam-search): Beam search is a decoding algorithm for language models that maintains multiple candidate sequences in parallel, expl....
-- [Latency](https://veda.ng/glossary/latency): Latency measures the time delay between initiating a request and receiving a response, a critical metric for user exp....
-- [Perplexity](https://veda.ng/glossary/perplexity): Perplexity is a metric measuring how well a language model predicts a test dataset, calculated as the exponentiated a....
-- [Activation Function](https://veda.ng/glossary/activation-function): An activation function is a mathematical transformation applied to each neuron's output in a neural network, introduc....
-- [Softmax](https://veda.ng/glossary/softmax): Softmax is a mathematical function that transforms a vector of arbitrary real numbers into a probability distribution....
-- [Cross-Entropy Loss](https://veda.ng/glossary/cross-entropy-loss): Cross-entropy loss is the standard objective function for training classification and language models, measuring the ....
-- [Perplexity Trap](https://veda.ng/glossary/perplexity-trap): The perplexity trap describes the dangerous assumption that lower perplexity on benchmark datasets automatically tran....
-- [Throughput](https://veda.ng/glossary/throughput): Throughput measures the rate at which a system processes work over time, typically expressed as requests per second, ....
-- [Protocol Buffer](https://veda.ng/glossary/protobuf): Protocol Buffers (protobuf) is a language-neutral, platform-neutral data serialization format developed by Google tha....
-- [gRPC](https://veda.ng/glossary/grpc): gRPC is a high-performance, open-source remote procedure call (RPC) framework that uses Protocol Buffers for serializ....
-- [Idempotency](https://veda.ng/glossary/idempotency): Idempotency is the property where performing an operation multiple times produces the same result as performing it on....
-- [Circuit Breaker](https://veda.ng/glossary/circuit-breaker): A circuit breaker is a software design pattern that prevents cascading failures in distributed systems by detecting w....
-- [Database Index](https://veda.ng/glossary/database-index): A database index is a data structure that accelerates query performance by maintaining sorted pointers to table rows,....
-- [ACID Properties](https://veda.ng/glossary/acid-properties): ACID properties are the four guarantees that define reliable database transactions: Atomicity, Consistency, Isolation....
-- [Consistency Hashing](https://veda.ng/glossary/consistency-hashing): Consistency hashing is a technique for distributing keys across a dynamic set of servers, like in caching systems and....
-- [CORS](https://veda.ng/glossary/cors): Cross-Origin Resource Sharing (CORS) is a browser security mechanism that controls which web pages can make requests ....
-- [Database Sharding](https://veda.ng/glossary/database-sharding): Database sharding horizontally partitions data across multiple database instances based on a shard key, enabling syst....
-- [Caching Strategy](https://veda.ng/glossary/caching-strategy): Caching strategies determine how data flows between cache and underlying storage, optimizing for different tradeoffs ....
-- [Yield](https://veda.ng/glossary/yield): Yield in DeFi represents the returns earned from deploying capital into protocols, typically expressed as Annual Perc....
-- [Impermanent Loss](https://veda.ng/glossary/impermanent-loss): Impermanent loss is the loss liquidity providers suffer when the price ratio of paired assets diverges from when they....
-- [Slashing](https://veda.ng/glossary/slashing): Slashing is an economic penalty mechanism in Proof of Stake blockchains that automatically confiscates a portion of a....
-- [MEV Burn](https://veda.ng/glossary/mev-burn): MEV burn is a proposed mechanism that would destroy Maximum Extractable Value rather than allowing it to accrue to va....
-- [Composability](https://veda.ng/glossary/composability): Composability in DeFi is the property that allows smart contracts to interact with each other seamlessly, enabling co....
-- [Cross-Chain Bridge](https://veda.ng/glossary/cross-chain-bridge): A cross-chain bridge enables transferring tokens, data, or messages between separate blockchains that otherwise canno....
-- [State Channel](https://veda.ng/glossary/state-channel): A state channel enables participants to exchange arbitrary state updates off-chain with blockchain-level security gua....
-- [Payment Channel](https://veda.ng/glossary/payment-channel): A payment channel is a Layer 2 scaling technique that enables unlimited instant transactions between two parties by l....
-- [Atomic Swap](https://veda.ng/glossary/atomic-swap): An atomic swap is a trustless peer-to-peer exchange of cryptocurrencies across different blockchains using cryptograp....
-- [Rug Pull](https://veda.ng/glossary/rug-pull): A rug pull is a cryptocurrency scam where project creators abandon a project after extracting investor funds, typical....
-- [Sparse Expert](https://veda.ng/glossary/sparse-expert): A sparse expert is an individual specialized neural network module within a Mixture of Experts (MoE) architecture, wh....
-- [Knowledge Distillation](https://veda.ng/glossary/knowledge-distillation): Knowledge distillation is a model compression technique where a smaller student model learns to replicate the behavio....
-- [Scaling Law](https://veda.ng/glossary/scaling-law): Scaling laws are empirical relationships that predict how neural network performance improves as you increase model p....
-- [Reward Model](https://veda.ng/glossary/reward-model): A reward model is a neural network trained to predict human preferences, serving as the learned objective function in....
-- [Scaffold](https://veda.ng/glossary/scaffold): A scaffold in AI prompting is a structured template that guides models through complex reasoning by decomposing probl....
-- [Few-Shot Prompting](https://veda.ng/glossary/few-shot-prompting): Few-shot prompting is a technique where you provide a small number of input-output examples before presenting the act....
-- [Hyperparameter](https://veda.ng/glossary/hyperparameter): A hyperparameter is a configuration value set before training begins that controls the learning process but is not le....
-- [Dropout](https://veda.ng/glossary/dropout): Dropout is a regularization technique that randomly deactivates a fraction of neurons during each training step, forc....
-- [Overfitting](https://veda.ng/glossary/overfitting): Overfitting is a fundamental machine learning failure mode where a model memorizes training examples rather than lear....
-- [Generalization](https://veda.ng/glossary/generalization): Generalization is the ability of a machine learning model to perform well on new, previously unseen data drawn from t....
-- [Sybil Attack](https://veda.ng/glossary/sybil-attack): A Sybil attack exploits systems that grant power or resources based on identity count by having a single adversary cr....
-- [Double Spend](https://veda.ng/glossary/double-spend): Double spending is the fundamental problem of digital currency: spending the same digital token twice before the syst....
-- [Dust Attack](https://veda.ng/glossary/dust-attack): A dust attack is a privacy-breaking technique where attackers send tiny amounts of cryptocurrency ('dust') to thousan....
-- [51% Attack](https://veda.ng/glossary/51-percent-attack): A 51% attack occurs when a single entity gains majority control of a blockchain's consensus mechanism, over 50% of ha....
-- [Liquidity Pool Volume](https://veda.ng/glossary/liquidity-pool-volume): Liquidity pool volume measures the total dollar value of swaps executed through a pool over a given period, typically....
-- [Slippage](https://veda.ng/glossary/slippage): Slippage is the difference between the expected price of a trade when you initiate it and the actual executed price, ....
-- [Value at Risk](https://veda.ng/glossary/value-at-risk): Value at Risk (VaR) quantifies the maximum expected loss on a portfolio over a specific time horizon at a given confi....
-- [APY vs APR](https://veda.ng/glossary/apy-vs-apr): APR (Annual Percentage Rate) and APY (Annual Percentage Yield) both express yearly interest rates, but APR ignores co....
-- [Time-Weighted Average Price](https://veda.ng/glossary/twap): Time-Weighted Average Price (TWAP) calculates the average price of an asset over a specified time period, weighted by....
-- [Backpropagation](https://veda.ng/glossary/backpropagation): Backpropagation is the algorithm that makes deep learning possible by efficiently computing how each weight in a neur....
-- [Gradient Descent](https://veda.ng/glossary/gradient-descent): Gradient descent is the optimization algorithm that trains neural networks by iteratively adjusting parameters in the....
-- [Neural Network](https://veda.ng/glossary/neural-network): A neural network is a computational system loosely inspired by biological neurons, consisting of interconnected layer....
-- [Convolutional Neural Network](https://veda.ng/glossary/cnn): A convolutional neural network is a neural architecture designed for processing grid-structured data like images by u....
-- [Recurrent Neural Network](https://veda.ng/glossary/rnn): A recurrent neural network processes sequential data by maintaining a hidden state that carries information across ti....
-- [LSTM](https://veda.ng/glossary/lstm): Long Short-Term Memory is a recurrent neural network architecture designed to capture long-range dependencies in sequ....
-- [Autoencoder](https://veda.ng/glossary/autoencoder): An autoencoder is a neural network trained to reconstruct its input through a compressed intermediate representation ....
-- [Variational Autoencoder](https://veda.ng/glossary/vae): A variational autoencoder is a generative model that learns a probabilistic latent space where similar inputs map to ....
-- [Generative Adversarial Network](https://veda.ng/glossary/gan): A generative adversarial network trains two neural networks in competition: a generator that creates synthetic sample....
-- [Diffusion Model](https://veda.ng/glossary/diffusion-model): A diffusion model generates data by learning to reverse a gradual noising process, iteratively denoising random noise....
-- [Generative Model](https://veda.ng/glossary/generative-model): A generative model learns the probability distribution of training data, enabling it to create new samples that resem....
-- [Transfer Learning](https://veda.ng/glossary/transfer-learning): Transfer learning is a machine learning paradigm where knowledge gained from training on one task is applied to a dif....
-- [Foundation Model](https://veda.ng/glossary/foundation-model): A foundation model is a large AI model trained on broad data at massive scale that serves as the base for many downst....
-- [BERT](https://veda.ng/glossary/bert): BERT (Bidirectional Encoder Representations from Transformers) is a transformer-based language model that transformed....
-- [Attention Score](https://veda.ng/glossary/attention-score): An attention score quantifies how much one position in a sequence should attend to another position when computing it....
-- [Self-Attention](https://veda.ng/glossary/self-attention): Self-attention is an attention mechanism where a sequence attends to itself, allowing each position to gather informa....
-- [Cross-Attention](https://veda.ng/glossary/cross-attention): Cross-attention is an attention mechanism where one sequence attends to a different sequence, enabling information fl....
-- [Layer Normalization](https://veda.ng/glossary/layer-normalization): Layer normalization is a technique that stabilizes neural network training by normalizing activations across the feat....
-- [Residual Connection](https://veda.ng/glossary/residual-connection): A residual connection, also called a skip connection, adds the input of a layer directly to its output, allowing info....
-- [Feedforward Network](https://veda.ng/glossary/feedforward-network): A feedforward network in the transformer architecture is a simple two-layer neural network applied independently and ....
-- [Causal Masking](https://veda.ng/glossary/causal-masking): Causal masking is an attention mechanism constraint that prevents each position from attending to future positions, e....
-- [Tokenizer](https://veda.ng/glossary/tokenizer): A tokenizer is a preprocessing system that converts raw text into a sequence of discrete tokens that a language model....
-- [Byte-Pair Encoding](https://veda.ng/glossary/bpe): Byte-pair encoding is a subword tokenization algorithm that iteratively builds a vocabulary by merging the most frequ....
-- [Vocabulary](https://veda.ng/glossary/vocabulary): Vocabulary in language models is the complete set of tokens the model recognizes, with each token mapping to a learna....
-- [Logit](https://veda.ng/glossary/logit): Logits are the raw, unnormalized scores output by a neural network's final layer before softmax converts them into pr....
-- [Top-k Sampling](https://veda.ng/glossary/top-k-sampling): Top-k sampling is a text generation strategy that restricts the model's next token choice to the k most probable toke....
-- [Top-p Sampling](https://veda.ng/glossary/top-p-sampling): Top-p sampling, also called nucleus sampling, dynamically selects the smallest set of tokens whose cumulative probabi....
-- [Speculative Decoding](https://veda.ng/glossary/speculative-decoding): Speculative decoding is an inference acceleration technique that uses a smaller, faster draft model to propose multip....
-- [KV Cache](https://veda.ng/glossary/kv-cache): KV cache (Key-Value cache) stores the computed Key and Value vectors from previous tokens during autoregressive gener....
-- [Prefix Tuning](https://veda.ng/glossary/prefix-tuning): Prefix tuning is a parameter-efficient fine-tuning method that adapts a frozen language model by learning a small set....
-- [LoRA](https://veda.ng/glossary/lora): LoRA (Low-Rank Adaptation) is a parameter-efficient fine-tuning technique that adds small trainable low-rank matrices....
-- [Adapter](https://veda.ng/glossary/adapter): An adapter is a small trainable module inserted into a frozen pretrained model, enabling task-specific adaptation whi....
-- [Prompt Tuning](https://veda.ng/glossary/prompt-tuning): Prompt tuning is a parameter-efficient adaptation method that learns continuous 'soft prompt' embeddings prepended to....
-- [Instruction Tuning](https://veda.ng/glossary/instruction-tuning): Instruction tuning is a fine-tuning approach that trains language models on diverse instruction-response pairs, teach....
-- [Direct Preference Optimization](https://veda.ng/glossary/dpo): Direct Preference Optimization is an alignment technique that fine-tunes language models directly on preference data ....
-- [Contrastive Learning](https://veda.ng/glossary/contrastive-learning): Contrastive learning is a self-supervised training approach that learns representations by pulling similar items toge....
-- [CLIP](https://veda.ng/glossary/clip): CLIP (Contrastive Language-Image Pre-training) is a multimodal model from OpenAI that learns to connect images and te....
-- [Vision Transformer](https://veda.ng/glossary/vit): Vision Transformer (ViT) applies the transformer architecture to images by splitting images into fixed-size patches a....
-- [Object Detection](https://veda.ng/glossary/object-detection): Object detection is a computer vision task that identifies and localizes objects within images by outputting both cla....
-- [Image Segmentation](https://veda.ng/glossary/image-segmentation): Image segmentation assigns a class label to every pixel in an image, providing dense, pixel-level understanding rathe....
-- [SAM](https://veda.ng/glossary/sam): SAM (Segment Anything Model) is a foundation model for image segmentation from Meta AI that can segment any object in....
-- [Optical Character Recognition](https://veda.ng/glossary/ocr): OCR (Optical Character Recognition) is the technology that converts images of text, scanned documents, photos of sign....
-- [Computer Vision](https://veda.ng/glossary/computer-vision): Computer vision is the field of artificial intelligence that enables machines to interpret and understand visual info....
-- [Speech Recognition](https://veda.ng/glossary/speech-recognition): Speech recognition (Automatic Speech Recognition, ASR) converts spoken language into text, enabling voice interfaces,....
-- [Text-to-Speech](https://veda.ng/glossary/tts): Text-to-Speech (TTS) synthesizes natural-sounding speech from written text, enabling voice interfaces, audiobook gene....
-- [Named Entity Recognition](https://veda.ng/glossary/ner): Named Entity Recognition (NER) identifies and classifies named entities in text, people, organizations, locations, da....
-- [Sentiment Analysis](https://veda.ng/glossary/sentiment-analysis): Sentiment analysis determines the emotional tone or opinion expressed in text, classifying content as positive, negat....
-- [Question Answering](https://veda.ng/glossary/question-answering): Question Answering (QA) systems automatically answer natural language questions, either by extracting answers from pr....
-- [Machine Translation](https://veda.ng/glossary/machine-translation): Machine Translation (MT) automatically translates text or speech between languages, a foundational NLP task that has ....
-- [Semantic Similarity](https://veda.ng/glossary/semantic-similarity): Semantic similarity measures how alike two pieces of text are in meaning, beyond surface-level word overlap, enabling....
-- [Document Retrieval](https://veda.ng/glossary/document-retrieval): Document retrieval finds relevant documents from a corpus given a query, forming the foundation of search engines and....
-- [Re-ranking](https://veda.ng/glossary/re-ranking): Re-ranking is a two-stage retrieval approach where an initial fast retriever generates candidate documents, then a mo....
-- [Chunking](https://veda.ng/glossary/chunking): Chunking is the process of splitting documents into smaller segments for embedding and retrieval in RAG systems, repr....
-- [Market Cap](https://veda.ng/glossary/market-cap): Market capitalization represents the total value of a cryptocurrency, calculated by multiplying the current price by ....
-- [Circulating Supply](https://veda.ng/glossary/circulating-supply): Circulating supply counts the number of tokens currently available for trading in the market, excluding locked alloca....
-- [Vesting Schedule](https://veda.ng/glossary/vesting-schedule): A vesting schedule releases tokens to recipients gradually over time rather than all at once, creating alignment betw....
-- [Token Burn](https://veda.ng/glossary/token-burn): Token burning permanently removes tokens from circulation by sending them to an inaccessible address with no private ....
-- [Emission Rate](https://veda.ng/glossary/emission-rate): Emission rate measures the speed at which new tokens enter circulation, typically expressed as annual inflation perce....
-- [Order Book](https://veda.ng/glossary/order-book): An order book is a real-time ledger of buy and sell orders for an asset on an exchange, displaying the quantities tra....
-- [Limit Order](https://veda.ng/glossary/limit-order): A limit order specifies the exact price at which you're willing to trade, providing price certainty at the cost of ex....
+- [GraphQL](https://veda.ng/glossary/graphql): GraphQL is a query language for APIs.
+- [Docker](https://veda.ng/glossary/docker): Docker is a platform for packaging applications and dependencies into containers.
+- [Message Queue](https://veda.ng/glossary/message-queue): A message queue is an asynchronous communication pattern where services send messages to a queue for later processing.
+- [Rate Limiting](https://veda.ng/glossary/rate-limiting): Rate limiting is controlling the number of requests a client can make to a service in a time period.
+- [Context Window](https://veda.ng/glossary/context-window): A context window is the maximum amount of text a language model can process in a single interaction, measured in tokens.
+- [Temperature](https://veda.ng/glossary/temperature): Temperature is a parameter controlling the randomness of language model output by scaling the logits (pre-softmax scores) before sampling the next token, directly shaping the creativity-accuracy tradeoff in generation.
+- [Inference](https://veda.ng/glossary/inference): Inference is the process of running a trained AI model to generate predictions or outputs.
+- [Chain-of-Thought Prompting](https://veda.ng/glossary/chain-of-thought): Chain-of-thought prompting is a technique where you instruct a language model to reason step by step before giving a final answer.
+- [Reasoning Model](https://veda.ng/glossary/reasoning-model): A reasoning model is a class of AI model designed to think before responding, using an internal chain-of-thought process to work through complex problems.
+- [Model Context Protocol (MCP)](https://veda.ng/glossary/mcp): Model Context Protocol is an open standard developed by Anthropic that defines how AI models connect to external tools, data sources, and services.
+- [Vector Database](https://veda.ng/glossary/vector-database): A vector database is a database optimized for storing and searching high-dimensional numerical vectors, which are how AI models represent the meaning of text, images, and other data.
+- [Model Distillation](https://veda.ng/glossary/model-distillation): Model distillation is a technique for creating a smaller, faster model that approximates the behavior of a larger, more capable one.
+- [Tokenization](https://veda.ng/glossary/tokenization): Tokenization, in the Web3 context, is the process of representing ownership of a real-world or digital asset as a token on a blockchain.
+- [Automated Market Maker (AMM)](https://veda.ng/glossary/amm): An automated market maker is a type of decentralized exchange protocol that uses mathematical formulas and liquidity pools to price and facilitate trades, replacing the traditional order book model.
+- [Seed Phrase](https://veda.ng/glossary/seed-phrase): A seed phrase, also called a recovery phrase or mnemonic phrase, is a sequence of 12 or 24 randomly generated words that serves as the master backup for a cryptocurrency wallet.
+- [Maximal Extractable Value (MEV)](https://veda.ng/glossary/mev): Maximal Extractable Value is the profit that block producers (validators or miners) can extract by strategically ordering, inserting, or censoring transactions within the blocks they produce.
+- [DePIN](https://veda.ng/glossary/depin): Decentralized Physical Infrastructure Networks are blockchain projects that incentivize individuals to deploy and operate real-world physical hardware by rewarding them with tokens.
+- [Restaking](https://veda.ng/glossary/restaking): Restaking is a mechanism that allows ETH stakers to reuse their staked ETH as cryptoeconomic security for additional protocols beyond Ethereum itself.
+- [Airdrop](https://veda.ng/glossary/airdrop): An airdrop is a token distribution method where a project sends free tokens directly to wallet addresses, typically as a reward for early users, community members, or holders of a related token.
+- [Tokenomics](https://veda.ng/glossary/tokenomics): Tokenomics is the economic design of a cryptocurrency or token system, the rules governing how tokens are created, distributed, used, and destroyed.
+- [Attention Mechanism](https://veda.ng/glossary/attention-mechanism): The attention mechanism is the core innovation inside transformer models that allows them to weigh the importance of different parts of an input sequence when generating each output token.
+- [Quantization](https://veda.ng/glossary/quantization): Quantization is a model compression technique that reduces the precision of a neural network's numerical weights, making models smaller, faster, and cheaper to run.
+- [Agentic Loop](https://veda.ng/glossary/agentic-loop): An agentic loop is the core execution pattern of AI agent systems: the repeated cycle of perceiving the environment, reasoning about the situation, selecting and taking an action, observing results, and repeating.
+- [Synthetic Data](https://veda.ng/glossary/synthetic-data): Synthetic data is artificially generated data created to train, test, or evaluate AI systems, as opposed to data collected from real-world observations.
+- [Prompt Injection](https://veda.ng/glossary/prompt-injection): Prompt injection is a security attack where malicious instructions are embedded in content that an AI system processes, causing the model to follow attacker-controlled commands instead of legitimate user or system instructions.
+- [Mixture of Experts (MoE)](https://veda.ng/glossary/mixture-of-experts): Mixture of Experts is a neural network architecture where only a fraction of the model's parameters are active for any given input, routing each token to the subset of 'expert' networks most relevant to it.
+- [Grounding](https://veda.ng/glossary/grounding): Grounding in AI refers to connecting model outputs to verifiable external reality, ensuring that claims made by the model are supported by specific, retrievable sources rather than patterns learned during training.
+- [Liquidity Pool](https://veda.ng/glossary/liquidity-pool): A liquidity pool is a smart contract holding reserves of two or more tokens, enabling decentralized trading without traditional order books.
+- [Yield Farming](https://veda.ng/glossary/yield-farming): Yield farming is the practice of deploying cryptocurrency across DeFi protocols to maximize returns through combinations of trading fees, interest, and token rewards.
+- [Flash Loan](https://veda.ng/glossary/flash-loan): A flash loan is an uncollateralized DeFi loan that must be borrowed and repaid within a single blockchain transaction.
+- [Layer 1](https://veda.ng/glossary/layer-1): Layer 1 refers to the base blockchain protocol, the foundational network that provides security, consensus, and settlement finality.
+- [Proof of Work](https://veda.ng/glossary/proof-of-work): Proof of Work is the original blockchain consensus mechanism, used by Bitcoin, that requires network participants to expend computational energy to add blocks to the chain.
+- [Proof of Stake](https://veda.ng/glossary/proof-of-stake): Proof of Stake is a blockchain consensus mechanism where validators are chosen to propose and attest to blocks based on how much cryptocurrency they have staked as collateral, rather than through computational work.
+- [Cold Wallet](https://veda.ng/glossary/cold-wallet): A cold wallet is a cryptocurrency storage method where private keys are kept offline, completely disconnected from the internet.
+- [Wrapped Token](https://veda.ng/glossary/wrapped-token): A wrapped token is a cryptocurrency that represents another cryptocurrency on a different blockchain, maintaining a 1:1 peg with the original asset.
+- [WebSocket](https://veda.ng/glossary/websocket): WebSocket is a communication protocol that provides full-duplex, persistent connections between clients and servers over a single TCP connection.
+- [OAuth](https://veda.ng/glossary/oauth): OAuth is an authorization framework that allows third-party applications to access user resources on another service without requiring users to share their passwords.
+- [Load Balancer](https://veda.ng/glossary/load-balancer): A load balancer is a system that distributes incoming network traffic across multiple servers to prevent any single server from becoming overwhelmed.
+- [Monorepo](https://veda.ng/glossary/monorepo): A monorepo is a software development strategy where multiple projects, packages, or services are stored in a single version control repository, rather than separate repositories per project.
+- [Attention Head](https://veda.ng/glossary/attention-head): An attention head is one of multiple parallel attention mechanisms within a transformer layer, each independently learning different types of relationships between tokens in a sequence.
+- [Positional Encoding](https://veda.ng/glossary/positional-encoding): Positional encoding is a technique for injecting sequence position information into transformer models, which otherwise process all tokens in parallel with no inherent notion of order.
+- [Batch Normalization](https://veda.ng/glossary/batch-normalization): Batch normalization is a technique for stabilizing and accelerating neural network training by normalizing layer inputs to have zero mean and unit variance across each mini-batch.
+- [Beam Search](https://veda.ng/glossary/beam-search): Beam search is a decoding algorithm for language models that maintains multiple candidate sequences in parallel, exploring the k most promising options at each generation step rather than greedily committing to the single best token.
+- [Latency](https://veda.ng/glossary/latency): Latency measures the time delay between initiating a request and receiving a response, a critical metric for user experience and system design.
+- [Perplexity](https://veda.ng/glossary/perplexity): Perplexity is a metric measuring how well a language model predicts a test dataset, calculated as the exponentiated average negative log-likelihood per token.
+- [Activation Function](https://veda.ng/glossary/activation-function): An activation function is a mathematical transformation applied to each neuron's output in a neural network, introducing the non-linearity required for learning complex patterns.
+- [Softmax](https://veda.ng/glossary/softmax): Softmax is a mathematical function that transforms a vector of arbitrary real numbers into a probability distribution, where all values are positive and sum to exactly 1.
+- [Cross-Entropy Loss](https://veda.ng/glossary/cross-entropy-loss): Cross-entropy loss is the standard objective function for training classification and language models, measuring the discrepancy between predicted probability distributions and true labels.
+- [Perplexity Trap](https://veda.ng/glossary/perplexity-trap): The perplexity trap describes the dangerous assumption that lower perplexity on benchmark datasets automatically translates to better real-world performance, when in fact the relationship between perplexity and task utility is often weak or nonexistent.
+- [Throughput](https://veda.ng/glossary/throughput): Throughput measures the rate at which a system processes work over time, typically expressed as requests per second, tokens per second, or transactions per minute.
+- [Protocol Buffer](https://veda.ng/glossary/protobuf): Protocol Buffers (protobuf) is a language-neutral, platform-neutral data serialization format developed by Google that encodes structured data into a compact binary format, significantly smaller and faster than text-based formats like JSON or XML.
+- [gRPC](https://veda.ng/glossary/grpc): gRPC is a high-performance, open-source remote procedure call (RPC) framework that uses Protocol Buffers for serialization and HTTP/2 for transport, enabling efficient communication between services.
+- [Idempotency](https://veda.ng/glossary/idempotency): Idempotency is the property where performing an operation multiple times produces the same result as performing it once, making the operation safe to retry without causing unintended side effects.
+- [Circuit Breaker](https://veda.ng/glossary/circuit-breaker): A circuit breaker is a software design pattern that prevents cascading failures in distributed systems by detecting when a service is failing and temporarily stopping requests to it, allowing time for recovery.
+- [Database Index](https://veda.ng/glossary/database-index): A database index is a data structure that accelerates query performance by maintaining sorted pointers to table rows, enabling the database to locate data without scanning every row.
+- [ACID Properties](https://veda.ng/glossary/acid-properties): ACID properties are the four guarantees that define reliable database transactions: Atomicity, Consistency, Isolation, and Durability.
+- [Consistency Hashing](https://veda.ng/glossary/consistency-hashing): Consistency hashing is a technique for distributing keys across a dynamic set of servers, like in caching systems and distributed databases.
+- [CORS](https://veda.ng/glossary/cors): Cross-Origin Resource Sharing (CORS) is a browser security mechanism that controls which web pages can make requests to different domains, selectively relaxing the Same-Origin Policy that otherwise blocks cross-domain API calls.
+- [Database Sharding](https://veda.ng/glossary/database-sharding): Database sharding horizontally partitions data across multiple database instances based on a shard key, enabling systems to scale beyond single-machine capacity by distributing load across independent servers.
+- [Caching Strategy](https://veda.ng/glossary/caching-strategy): Caching strategies determine how data flows between cache and underlying storage, optimizing for different tradeoffs between consistency, performance, and complexity.
+- [Yield](https://veda.ng/glossary/yield): Yield in DeFi represents the returns earned from deploying capital into protocols, typically expressed as Annual Percentage Yield (APY), the annualized return accounting for compounding.
+- [Impermanent Loss](https://veda.ng/glossary/impermanent-loss): Impermanent loss is the loss liquidity providers suffer when the price ratio of paired assets diverges from when they provided liquidity.
+- [Slashing](https://veda.ng/glossary/slashing): Slashing is an economic penalty mechanism in Proof of Stake blockchains that automatically confiscates a portion of a validator's staked tokens when they violate protocol rules, providing cryptoeconomic security through the threat of financial loss.
+- [MEV Burn](https://veda.ng/glossary/mev-burn): MEV burn is a proposed mechanism that would destroy Maximum Extractable Value rather than allowing it to accrue to validators, block builders, or searchers, potentially reducing harmful MEV extraction behaviors like sandwich attacks by removing their profit motive.
+- [Composability](https://veda.ng/glossary/composability): Composability in DeFi is the property that allows smart contracts to interact with each other smoothly, enabling complex financial operations to be built by combining simpler protocols like building blocks without requiring permission or custom integration.
+- [Cross-Chain Bridge](https://veda.ng/glossary/cross-chain-bridge): A cross-chain bridge enables transferring tokens, data, or messages between separate blockchains that otherwise cannot directly communicate, creating interoperability across the fragmented multi-chain environment.
+- [State Channel](https://veda.ng/glossary/state-channel): A state channel enables participants to exchange arbitrary state updates off-chain with blockchain-level security guarantees, only settling on-chain when the channel closes or disputes arise.
+- [Payment Channel](https://veda.ng/glossary/payment-channel): A payment channel is a Layer 2 scaling technique that enables unlimited instant transactions between two parties by locking funds in an on-chain smart contract and exchanging signed off-chain messages that update the balance distribution without touching the blockchain until final settlement.
+- [Atomic Swap](https://veda.ng/glossary/atomic-swap): An atomic swap is a trustless peer-to-peer exchange of cryptocurrencies across different blockchains using cryptographic hash locks and time locks, ensuring that either both parties receive their assets or neither does, no intermediary required.
+- [Rug Pull](https://veda.ng/glossary/rug-pull): A rug pull is a cryptocurrency scam where project creators abandon a project after extracting investor funds, typically by removing liquidity from trading pools or exploiting smart contract backdoors, leaving token holders with worthless assets.
+- [Sparse Expert](https://veda.ng/glossary/sparse-expert): A sparse expert is an individual specialized neural network module within a Mixture of Experts (MoE) architecture, where only a subset of experts activate for any given input rather than all parameters participating in every computation.
+- [Knowledge Distillation](https://veda.ng/glossary/knowledge-distillation): Knowledge distillation is a model compression technique where a smaller student model learns to replicate the behavior of a larger teacher model by training on the teacher's output probability distributions rather than just hard labels.
+- [Scaling Law](https://veda.ng/glossary/scaling-law): Scaling laws are empirical relationships that predict how neural network performance improves as you increase model parameters, training data, and compute budget.
+- [Reward Model](https://veda.ng/glossary/reward-model): A reward model is a neural network trained to predict human preferences, serving as the learned objective function in reinforcement learning from human feedback.
+- [Scaffold](https://veda.ng/glossary/scaffold): A scaffold in AI prompting is a structured template that guides models through complex reasoning by decomposing problems into explicit steps.
+- [Few-Shot Prompting](https://veda.ng/glossary/few-shot-prompting): Few-shot prompting is a technique where you provide a small number of input-output examples before presenting the actual task, enabling language models to learn the pattern and apply it to new inputs without any parameter updates.
+- [Hyperparameter](https://veda.ng/glossary/hyperparameter): A hyperparameter is a configuration value set before training begins that controls the learning process but is not learned from data.
+- [Dropout](https://veda.ng/glossary/dropout): Dropout is a regularization technique that randomly deactivates a fraction of neurons during each training step, forcing the network to learn redundant representations that generalize better.
+- [Overfitting](https://veda.ng/glossary/overfitting): Overfitting is a core machine learning failure mode where a model memorizes training examples rather than learning generalizable patterns, performing excellently on training data but poorly on new data.
+- [Generalization](https://veda.ng/glossary/generalization): Generalization is the ability of a machine learning model to perform well on new, previously unseen data drawn from the same distribution as the training data.
+- [Sybil Attack](https://veda.ng/glossary/sybil-attack): A Sybil attack exploits systems that grant power or resources based on identity count by having a single adversary create thousands or millions of fake identities.
+- [Double Spend](https://veda.ng/glossary/double-spend): Double spending is the core problem of digital currency: spending the same digital token twice before the system detects the duplication.
+- [Dust Attack](https://veda.ng/glossary/dust-attack): A dust attack is a privacy-breaking technique where attackers send tiny amounts of cryptocurrency ('dust') to thousands of addresses, then monitor the blockchain to trace how these dust amounts are spent, potentially linking multiple wallets to the same owner.
+- [51% Attack](https://veda.ng/glossary/51-percent-attack): A 51% attack occurs when a single entity gains majority control of a blockchain's consensus mechanism, over 50% of hash power in Proof of Work or over 50% of stake in Proof of Stake, enabling them to manipulate the blockchain's canonical history.
+- [Liquidity Pool Volume](https://veda.ng/glossary/liquidity-pool-volume): Liquidity pool volume measures the total dollar value of swaps executed through a pool over a given period, typically 24 hours, serving as the primary indicator of pool activity and the basis for fee revenue calculations.
+- [Slippage](https://veda.ng/glossary/slippage): Slippage is the difference between the expected price of a trade when you initiate it and the actual executed price, representing one of the primary costs of trading beyond explicit fees.
+- [Value at Risk](https://veda.ng/glossary/value-at-risk): Value at Risk (VaR) quantifies the maximum expected loss on a portfolio over a specific time horizon at a given confidence level, providing a single number that captures downside risk.
+- [APY vs APR](https://veda.ng/glossary/apy-vs-apr): APR (Annual Percentage Rate) and APY (Annual Percentage Yield) both express yearly interest rates, but APR ignores compounding while APY includes it, making APY always equal to or higher than APR for the same underlying rate.
+- [Time-Weighted Average Price](https://veda.ng/glossary/twap): Time-Weighted Average Price (TWAP) calculates the average price of an asset over a specified time period, weighted by how long the asset spent at each price level rather than by trading volume.
+- [Backpropagation](https://veda.ng/glossary/backpropagation): Backpropagation is the algorithm that makes deep learning possible by efficiently computing how each weight in a neural network should change to reduce prediction error.
+- [Gradient Descent](https://veda.ng/glossary/gradient-descent): Gradient descent is the optimization algorithm that trains neural networks by iteratively adjusting parameters in the direction that reduces the loss function.
+- [Neural Network](https://veda.ng/glossary/neural-network): A neural network is a computational system loosely inspired by biological neurons, consisting of interconnected layers of mathematical units that transform input data through learned weighted connections and nonlinear activation functions.
+- [Convolutional Neural Network](https://veda.ng/glossary/cnn): A convolutional neural network is a neural architecture designed for processing grid-structured data like images by using learned filters that slide across the input to detect local patterns.
+- [Recurrent Neural Network](https://veda.ng/glossary/rnn): A recurrent neural network processes sequential data by maintaining a hidden state that carries information across time steps, enabling the network to model temporal dependencies.
+- [LSTM](https://veda.ng/glossary/lstm): Long Short-Term Memory is a recurrent neural network architecture designed to capture long-range dependencies in sequential data by using gating mechanisms that control information flow through a persistent cell state.
+- [Autoencoder](https://veda.ng/glossary/autoencoder): An autoencoder is a neural network trained to reconstruct its input through a compressed intermediate representation called the latent space, learning efficient data encodings in an unsupervised manner.
+- [Variational Autoencoder](https://veda.ng/glossary/vae): A variational autoencoder is a generative model that learns a probabilistic latent space where similar inputs map to nearby regions, enabling generation of new samples by sampling from and decoding points in that space.
+- [Generative Adversarial Network](https://veda.ng/glossary/gan): A generative adversarial network trains two neural networks in competition: a generator that creates synthetic samples and a discriminator that distinguishes real samples from generated ones, with each network improving to defeat the other.
+- [Diffusion Model](https://veda.ng/glossary/diffusion-model): A diffusion model generates data by learning to reverse a gradual noising process, iteratively denoising random noise into coherent samples through many small refinement steps.
+- [Generative Model](https://veda.ng/glossary/generative-model): A generative model learns the probability distribution of training data, enabling it to create new samples that resemble the training examples without copying them directly.
+- [Transfer Learning](https://veda.ng/glossary/transfer-learning): Transfer learning is a machine learning approach where knowledge gained from training on one task is applied to a different but related task, significantly reducing the data and compute required to achieve good performance.
+- [Foundation Model](https://veda.ng/glossary/foundation-model): A foundation model is a large AI model trained on broad data at massive scale that serves as the base for many downstream applications through fine-tuning, prompting, or other adaptation techniques.
+- [BERT](https://veda.ng/glossary/bert): BERT (Bidirectional Encoder Representations from Transformers) is a transformer-based language model that transformed natural language processing in 2018 by learning deep bidirectional representations through masked language modeling.
+- [Attention Score](https://veda.ng/glossary/attention-score): An attention score quantifies how much one position in a sequence should attend to another position when computing its output representation.
+- [Self-Attention](https://veda.ng/glossary/self-attention): Self-attention is an attention mechanism where a sequence attends to itself, allowing each position to gather information from all other positions in the same sequence to compute a context-aware representation.
+- [Cross-Attention](https://veda.ng/glossary/cross-attention): Cross-attention is an attention mechanism where one sequence attends to a different sequence, enabling information flow between distinct representations like a translated sentence attending to its source or an image caption attending to image features.
+- [Layer Normalization](https://veda.ng/glossary/layer-normalization): Layer normalization is a technique that stabilizes neural network training by normalizing activations across the feature dimension for each individual sample, ensuring activations have consistent mean and variance regardless of the input.
+- [Residual Connection](https://veda.ng/glossary/residual-connection): A residual connection, also called a skip connection, adds the input of a layer directly to its output, allowing information and gradients to flow through the network without passing through every transformation.
+- [Feedforward Network](https://veda.ng/glossary/feedforward-network): A feedforward network in the transformer architecture is a simple two-layer neural network applied independently and identically to each position in the sequence after the attention mechanism has mixed information across positions.
+- [Causal Masking](https://veda.ng/glossary/causal-masking): Causal masking is an attention mechanism constraint that prevents each position from attending to future positions, enforcing left-to-right information flow required for autoregressive language generation.
+- [Tokenizer](https://veda.ng/glossary/tokenizer): A tokenizer is a preprocessing system that converts raw text into a sequence of discrete tokens that a language model can process, serving as the bridge between human-readable text and numerical model inputs.
+- [Byte-Pair Encoding](https://veda.ng/glossary/bpe): Byte-pair encoding is a subword tokenization algorithm that iteratively builds a vocabulary by merging the most frequently occurring pairs of characters or tokens, balancing vocabulary size against sequence compression.
+- [Vocabulary](https://veda.ng/glossary/vocabulary): Vocabulary in language models is the complete set of tokens the model recognizes, with each token mapping to a learnable embedding vector and an entry in the output prediction layer.
+- [Logit](https://veda.ng/glossary/logit): Logits are the raw, unnormalized scores output by a neural network's final layer before softmax converts them into probabilities.
+- [Top-k Sampling](https://veda.ng/glossary/top-k-sampling): Top-k sampling is a text generation strategy that restricts the model's next token choice to the k most probable tokens, preventing selection of unlikely tokens that could derail coherent generation.
+- [Top-p Sampling](https://veda.ng/glossary/top-p-sampling): Top-p sampling, also called nucleus sampling, dynamically selects the smallest set of tokens whose cumulative probability exceeds a threshold p, adapting the candidate pool size based on the model's confidence distribution.
+- [Speculative Decoding](https://veda.ng/glossary/speculative-decoding): Speculative decoding is an inference acceleration technique that uses a smaller, faster draft model to propose multiple tokens that a larger target model verifies in parallel, reducing the number of expensive forward passes required for generation.
+- [KV Cache](https://veda.ng/glossary/kv-cache): KV cache (Key-Value cache) stores the computed Key and Value vectors from previous tokens during autoregressive generation, avoiding redundant computation and greatly speeding up inference.
+- [Prefix Tuning](https://veda.ng/glossary/prefix-tuning): Prefix tuning is a parameter-efficient fine-tuning method that adapts a frozen language model by learning a small set of continuous vectors prepended to the input, steering model behavior without updating any of the original model weights.
+- [LoRA](https://veda.ng/glossary/lora): LoRA (Low-Rank Adaptation) is a parameter-efficient fine-tuning technique that adds small trainable low-rank matrices to frozen model weights, enabling task-specific adaptation at a fraction of the cost of full fine-tuning.
+- [Adapter](https://veda.ng/glossary/adapter): An adapter is a small trainable module inserted into a frozen pretrained model, enabling task-specific adaptation while keeping the vast majority of parameters fixed.
+- [Prompt Tuning](https://veda.ng/glossary/prompt-tuning): Prompt tuning is a parameter-efficient adaptation method that learns continuous 'soft prompt' embeddings prepended to model inputs while keeping all model weights frozen, bridging the gap between manual prompt engineering and full fine-tuning.
+- [Instruction Tuning](https://veda.ng/glossary/instruction-tuning): Instruction tuning is a fine-tuning approach that trains language models on diverse instruction-response pairs, teaching the model to follow natural language instructions across many task types.
+- [Direct Preference Optimization](https://veda.ng/glossary/dpo): Direct Preference Optimization is an alignment technique that fine-tunes language models directly on preference data without requiring a separate reward model, simplifying the RLHF pipeline while achieving comparable results.
+- [Contrastive Learning](https://veda.ng/glossary/contrastive-learning): Contrastive learning is a self-supervised training approach that learns representations by pulling similar items together and pushing dissimilar items apart in embedding space, without requiring labeled data.
+- [CLIP](https://veda.ng/glossary/clip): CLIP (Contrastive Language-Image Pre-training) is a multimodal model from OpenAI that learns to connect images and text in a shared embedding space through contrastive learning on 400 million image-text pairs scraped from the internet.
+- [Vision Transformer](https://veda.ng/glossary/vit): Vision Transformer (ViT) applies the transformer architecture to images by splitting images into fixed-size patches and treating each patch as a token, demonstrating that the attention mechanism developed for language can match or exceed CNNs for computer vision.
+- [Object Detection](https://veda.ng/glossary/object-detection): Object detection is a computer vision task that identifies and localizes objects within images by outputting both class labels and bounding box coordinates for each detected object.
+- [Image Segmentation](https://veda.ng/glossary/image-segmentation): Image segmentation assigns a class label to every pixel in an image, providing dense, pixel-level understanding rather than image-level or box-level predictions.
+- [SAM](https://veda.ng/glossary/sam): SAM (Segment Anything Model) is a foundation model for image segmentation from Meta AI that can segment any object in any image given a point, box, or text prompt, generalizing across domains without task-specific training.
+- [Optical Character Recognition](https://veda.ng/glossary/ocr): OCR (Optical Character Recognition) is the technology that converts images of text, scanned documents, photos of signs, handwritten notes, into machine-readable text that can be searched, edited, and processed.
+- [Computer Vision](https://veda.ng/glossary/computer-vision): Computer vision is the field of artificial intelligence that enables machines to interpret and understand visual information from images and video, extracting structured knowledge from pixel data the way humans extract meaning from sight.
+- [Speech Recognition](https://veda.ng/glossary/speech-recognition): Speech recognition (Automatic Speech Recognition, ASR) converts spoken language into text, enabling voice interfaces, transcription services, and accessibility tools.
+- [Text-to-Speech](https://veda.ng/glossary/tts): Text-to-Speech (TTS) synthesizes natural-sounding speech from written text, enabling voice interfaces, audiobook generation, accessibility tools, and voice cloning applications.
+- [Named Entity Recognition](https://veda.ng/glossary/ner): Named Entity Recognition (NER) identifies and classifies named entities in text, people, organizations, locations, dates, monetary values, and other specific items, enabling structured information extraction from unstructured text.
+- [Sentiment Analysis](https://veda.ng/glossary/sentiment-analysis): Sentiment analysis determines the emotional tone or opinion expressed in text, classifying content as positive, negative, or neutral, with more advanced systems detecting specific emotions, aspect-level sentiment, or intensity gradations.
+- [Question Answering](https://veda.ng/glossary/question-answering): Question Answering (QA) systems automatically answer natural language questions, either by extracting answers from provided documents (extractive QA) or generating answers from learned knowledge (generative QA).
+- [Machine Translation](https://veda.ng/glossary/machine-translation): Machine Translation (MT) automatically translates text or speech between languages, a foundational NLP task that has evolved from rule-based systems through statistical methods to neural approaches that achieve near-human quality for many language pairs.
+- [Semantic Similarity](https://veda.ng/glossary/semantic-similarity): Semantic similarity measures how alike two pieces of text are in meaning, beyond surface-level word overlap, enabling applications like duplicate detection, paraphrase identification, and search relevance scoring.
+- [Document Retrieval](https://veda.ng/glossary/document-retrieval): Document retrieval finds relevant documents from a corpus given a query, forming the foundation of search engines and retrieval-augmented generation systems.
+- [Re-ranking](https://veda.ng/glossary/re-ranking): Re-ranking is a two-stage retrieval approach where an initial fast retriever generates candidate documents, then a more powerful but slower model re-scores and reorders them by relevance, greatly improving search quality without the cost of running expensive models over entire corpora.
+- [Chunking](https://veda.ng/glossary/chunking): Chunking is the process of splitting documents into smaller segments for embedding and retrieval in RAG systems, representing a critical design decision that significantly impacts retrieval quality and generation accuracy.
+- [Market Cap](https://veda.ng/glossary/market-cap): Market capitalization represents the total value of a cryptocurrency, calculated by multiplying the current price by the circulating supply.
+- [Circulating Supply](https://veda.ng/glossary/circulating-supply): Circulating supply counts the number of tokens currently available for trading in the market, excluding locked allocations, unvested team tokens, foundation reserves, and tokens permanently removed through burns.
+- [Vesting Schedule](https://veda.ng/glossary/vesting-schedule): A vesting schedule releases tokens to recipients gradually over time rather than all at once, creating alignment between stakeholders and long-term project success.
+- [Token Burn](https://veda.ng/glossary/token-burn): Token burning permanently removes tokens from circulation by sending them to an inaccessible address with no private key (a 'burn address'), reducing total supply and creating deflationary pressure.
+- [Emission Rate](https://veda.ng/glossary/emission-rate): Emission rate measures the speed at which new tokens enter circulation, typically expressed as annual inflation percentage or tokens per time period.
+- [Order Book](https://veda.ng/glossary/order-book): An order book is a real-time ledger of buy and sell orders for an asset on an exchange, displaying the quantities traders want to buy or sell at various price levels.
+- [Limit Order](https://veda.ng/glossary/limit-order): A limit order specifies the exact price at which you're willing to trade, providing price certainty at the cost of execution uncertainty.
 - [Market Order](https://veda.ng/glossary/market-order): A market order executes immediately at the best available price, prioritizing speed of execution over price certainty.
-- [Liquidity Provider](https://veda.ng/glossary/liquidity-provider): A liquidity provider (LP) deposits assets into trading pools or order books, enabling others to trade by providing th....
-- [Concentrated Liquidity](https://veda.ng/glossary/concentrated-liquidity): Concentrated liquidity allows liquidity providers to specify price ranges for their capital rather than spreading it ....
-- [Total Value Locked](https://veda.ng/glossary/tvl): Total Value Locked (TVL) measures the aggregate dollar value of all assets deposited in a DeFi protocol, serving as a....
-- [Protocol Revenue](https://veda.ng/glossary/protocol-revenue): Protocol revenue is the income a DeFi protocol generates from fees and services, representing actual economic value c....
-- [Collateralization Ratio](https://veda.ng/glossary/collateralization-ratio): Collateralization ratio measures the value of deposited collateral relative to borrowed assets, expressed as a percen....
-- [Liquidation](https://veda.ng/glossary/liquidation): Liquidation in DeFi is the forced closure of an undercollateralized position, protecting protocols from bad debt by s....
-- [Borrow Rate](https://veda.ng/glossary/borrow-rate): Borrow rate is the interest rate paid to borrow assets from a DeFi lending protocol, dynamically adjusting based on s....
-- [Supply Rate](https://veda.ng/glossary/supply-rate): Supply rate is the interest rate earned by depositing assets into a DeFi lending protocol, representing the yield len....
-- [Utilization Rate](https://veda.ng/glossary/utilization-rate): Utilization rate measures the percentage of deposited assets currently borrowed in a lending protocol, serving as the....
-- [Perpetual Futures](https://veda.ng/glossary/perpetual-futures): Perpetual futures are derivative contracts that track an underlying asset's price without expiration dates, invented ....
-- [Funding Rate](https://veda.ng/glossary/funding-rate): Funding rate is a periodic payment exchanged between long and short perpetual futures holders that anchors the perpet....
-- [Leverage](https://veda.ng/glossary/leverage): Leverage amplifies trading exposure beyond your actual capital, multiplying both potential gains and losses by the le....
-- [Margin](https://veda.ng/glossary/margin): Margin is collateral deposited to open and maintain a leveraged trading position, serving as a security buffer that p....
-- [Delta Neutral](https://veda.ng/glossary/delta-neutral): Delta neutral describes a portfolio or position structured to have zero net directional exposure to price movement, a....
-- [Basis Trade](https://veda.ng/glossary/basis-trade): Basis trade profits from the price difference between spot and futures markets, exploiting the spread that exists bec....
-- [Rollup](https://veda.ng/glossary/rollup): A rollup is a Layer 2 scaling solution that executes transactions off-chain for speed and cost efficiency while posti....
-- [Optimistic Rollup](https://veda.ng/glossary/optimistic-rollup): Optimistic rollups assume all transactions are valid by default (hence 'optimistic'), posting state updates to Layer ....
-- [ZK Rollup](https://veda.ng/glossary/zk-rollup): ZK rollups (Zero-Knowledge rollups) post cryptographic validity proofs to Layer 1 that mathematically guarantee all t....
-- [Data Availability](https://veda.ng/glossary/data-availability): Data availability (DA) ensures that transaction data is accessible to anyone who needs to verify the blockchain state....
-- [Sequencer](https://veda.ng/glossary/sequencer): A sequencer orders and batches transactions on a rollup before posting them to Layer 1, playing a critical role in de....
-- [Account Abstraction](https://veda.ng/glossary/account-abstraction): Account abstraction allows smart contracts to serve as user accounts with programmable authentication and transaction....
-- [Social Recovery](https://veda.ng/glossary/social-recovery): Social recovery is a wallet security mechanism that enables account recovery through trusted contacts (guardians) rat....
-- [Intent](https://veda.ng/glossary/intent): An intent is a signed message expressing what a user wants to achieve without specifying exactly how to achieve it, s....
-
-## Profile Pages
-
-- [Full Profile](https://veda.ng/profile): A comprehensive overview of my professional experience, education, and achievements.
-- [Community & Speaking](https://veda.ng/community): A profile detailing my work in building and scaling online communities.
-- [Media & Speaking](https://veda.ng/media): A collection of media features, speaking engagements, and public appearances.
-- [SEO Services](https://veda.ng/seo): SEO consulting and optimization services for Web3 and tech companies.
+- [Liquidity Provider](https://veda.ng/glossary/liquidity-provider): A liquidity provider (LP) deposits assets into trading pools or order books, enabling others to trade by providing the other side of transactions.
+- [Concentrated Liquidity](https://veda.ng/glossary/concentrated-liquidity): Concentrated liquidity allows liquidity providers to specify price ranges for their capital rather than spreading it across all possible prices, greatly improving capital efficiency but increasing complexity and risk.
+- [Total Value Locked](https://veda.ng/glossary/tvl): Total Value Locked (TVL) measures the aggregate dollar value of all assets deposited in a DeFi protocol, serving as a rough proxy for protocol adoption, trust, and liquidity depth.
+- [Protocol Revenue](https://veda.ng/glossary/protocol-revenue): Protocol revenue is the income a DeFi protocol generates from fees and services, representing actual economic value capture rather than just capital deployment.
+- [Collateralization Ratio](https://veda.ng/glossary/collateralization-ratio): Collateralization ratio measures the value of deposited collateral relative to borrowed assets, expressed as a percentage that determines position safety in DeFi lending.
+- [Liquidation](https://veda.ng/glossary/liquidation): Liquidation in DeFi is the forced closure of an undercollateralized position, protecting protocols from bad debt by selling collateral to repay outstanding loans.
+- [Borrow Rate](https://veda.ng/glossary/borrow-rate): Borrow rate is the interest rate paid to borrow assets from a DeFi lending protocol, dynamically adjusting based on supply and demand within each lending pool.
+- [Supply Rate](https://veda.ng/glossary/supply-rate): Supply rate is the interest rate earned by depositing assets into a DeFi lending protocol, representing the yield lenders receive for providing capital that borrowers can access.
+- [Utilization Rate](https://veda.ng/glossary/utilization-rate): Utilization rate measures the percentage of deposited assets currently borrowed in a lending protocol, serving as the key input for dynamic interest rate adjustments.
+- [Perpetual Futures](https://veda.ng/glossary/perpetual-futures): Perpetual futures are derivative contracts that track an underlying asset's price without expiration dates, invented by BitMEX and now dominating crypto derivatives trading.
+- [Funding Rate](https://veda.ng/glossary/funding-rate): Funding rate is a periodic payment exchanged between long and short perpetual futures holders that anchors the perpetual price to the underlying spot price through incentive alignment.
+- [Leverage](https://veda.ng/glossary/leverage): Leverage amplifies trading exposure beyond your actual capital, multiplying both potential gains and losses by the leverage factor.
+- [Margin](https://veda.ng/glossary/margin): Margin is collateral deposited to open and maintain a leveraged trading position, serving as a security buffer that protects the counterparty (exchange or protocol) from losses exceeding your equity.
+- [Delta Neutral](https://veda.ng/glossary/delta-neutral): Delta neutral describes a portfolio or position structured to have zero net directional exposure to price movement, allowing traders to profit from factors other than price direction.
+- [Basis Trade](https://veda.ng/glossary/basis-trade): Basis trade profits from the price difference between spot and futures markets, exploiting the spread that exists because futures embed expectations about future prices, funding costs, and supply-demand imbalances.
+- [Rollup](https://veda.ng/glossary/rollup): A rollup is a Layer 2 scaling solution that executes transactions off-chain for speed and cost efficiency while posting transaction data or proofs to Layer 1 (typically Ethereum) for security inheritance.
+- [Optimistic Rollup](https://veda.ng/glossary/optimistic-rollup): Optimistic rollups assume all transactions are valid by default (hence 'optimistic'), posting state updates to Layer 1 without immediate proof of correctness.
+- [ZK Rollup](https://veda.ng/glossary/zk-rollup): ZK rollups (Zero-Knowledge rollups) post cryptographic validity proofs to Layer 1 that mathematically guarantee all transactions in a batch are correct, eliminating the need for fraud proofs or challenge periods.
+- [Data Availability](https://veda.ng/glossary/data-availability): Data availability (DA) guarantees that transaction data is accessible to anyone who needs to verify the blockchain state, reconstruct history, or detect fraud.
+- [Sequencer](https://veda.ng/glossary/sequencer): A sequencer orders and batches transactions on a rollup before posting them to Layer 1, playing a critical role in determining transaction inclusion, ordering, and timing.
+- [Account Abstraction](https://veda.ng/glossary/account-abstraction): Account abstraction allows smart contracts to serve as user accounts with programmable authentication and transaction logic, replacing the rigid externally owned account (EOA) model that requires specific cryptographic signatures.
+- [Social Recovery](https://veda.ng/glossary/social-recovery): Social recovery is a wallet security mechanism that enables account recovery through trusted contacts (guardians) rather than seed phrases, solving the core tension between security and usability in self-custody.
+- [Intent](https://veda.ng/glossary/intent): An intent is a signed message expressing what a user wants to achieve without specifying exactly how to achieve it, shifting complexity from users to specialized solvers who compete to fulfill requests optimally.
+- [Modular Blockchain](https://veda.ng/glossary/modular-blockchain): A modular blockchain abandons the monolithic architecture where a single network attempts to handle execution, settlement, consensus, and data availability simultaneously.
+- [Liquid Restaking](https://veda.ng/glossary/liquid-restaking): Liquid Restaking takes the capital efficiency of liquid staking to its logical and arguably risky extreme.
+- [Agentic Workflow](https://veda.ng/glossary/agentic-workflow): An agentic workflow shifts AI interactions from single-shot prompts to iterative, autonomous problem-solving loops.
+- [Real World Assets (RWA)](https://veda.ng/glossary/real-world-assets): Real World Assets (RWAs) represent the tokenization of off-chain, tangible, or traditional financial assets - like real estate, treasury bills, private credit, or physical art - bringing them onto a blockchain.
+- [Ethereum Virtual Machine (EVM)](https://veda.ng/glossary/ethereum-virtual-machine): The Ethereum Virtual Machine (EVM) is the core computation engine at the center of the Ethereum network, acting as a global, decentralized computer.
+- [Decentralized Identity (DID)](https://veda.ng/glossary/decentralized-identity): Decentralized Identity (DID) is an architectural change in how identity, credentials, and reputation are managed, moving control away from centralized tech companies and back into the hands of the individual user.
+- [Soulbound Token (SBT)](https://veda.ng/glossary/soulbound-token): Soulbound Tokens (SBTs) are non-transferable, identity-centric digital tokens that uniquely represent the traits, credentials, and affiliations of a person or entity on a blockchain.
+- [Zero-Knowledge EVM (zkEVM)](https://veda.ng/glossary/zkevm): A Zero-Knowledge Ethereum Virtual Machine (zkEVM) represents the holy grail of blockchain scaling: generating cryptographically secure mathematical proofs for standard Ethereum smart contract execution.
+- [Self-Sovereign Identity (SSI)](https://veda.ng/glossary/self-sovereign-identity): Self-Sovereign Identity (SSI) is a model for managing digital identity where individuals own and control their own data directly, rather than renting it from platforms.
+- [Federated Learning](https://veda.ng/glossary/federated-learning): Federated Learning is an advanced machine learning technique that trains an artificial intelligence model across multiple decentralized edge devices or servers holding local data samples, without actively exchanging them.
+- [Autonomous Agents](https://veda.ng/glossary/autonomous-agents): Autonomous Agents are AI systems designed to pursue complex, multi-step goals with virtually zero human intervention.
+- [Reinforcement Learning](https://veda.ng/glossary/reinforcement-learning): Reinforcement Learning (RL) is a branch of machine learning where an AI learns to make decisions by interacting with an environment and receiving feedback.
+- [Supervised Learning](https://veda.ng/glossary/supervised-learning): Supervised Learning is the most widely used approach in machine learning.
+- [Deep Learning](https://veda.ng/glossary/deep-learning): Deep learning is a subfield of machine learning that uses neural networks with many layers to learn patterns directly from raw data.
+- [Generative AI](https://veda.ng/glossary/generative-ai): Generative AI refers to machine-learning models that create new content, text, images, audio, video, or code, by learning patterns from large datasets.
+- [Transformer Architecture](https://veda.ng/glossary/transformer-architecture): The Transformer is a neural-network design introduced in 2017 that processes sequences of data without relying on recurrent connections.
+- [Semi-Supervised Learning](https://veda.ng/glossary/semi-supervised-learning): Semi-supervised learning uses both labeled and unlabeled data to build models.
+- [Expert Systems](https://veda.ng/glossary/expert-systems): An expert system is a computer program that replicates the decision-making ability of a human specialist in a specific domain.
+- [AI Alignment](https://veda.ng/glossary/ai-alignment): AI alignment is the research field focused on making AI systems pursue goals that match human intentions, values, and safety requirements.
+- [Artificial Superintelligence (ASI)](https://veda.ng/glossary/artificial-superintelligence-asi): Artificial Superintelligence (ASI) refers to a hypothetical form of machine intelligence that exceeds the full range of human cognitive abilities across every domain.
+- [AI Safety](https://veda.ng/glossary/ai-safety): AI safety studies how to design, build, test, and operate AI systems so they behave as intended and do not cause unintended harm.
+- [Feature Extraction](https://veda.ng/glossary/feature-extraction): Feature extraction transforms raw data into a set of measurable characteristics that algorithms can use for decisions or predictions.
+- [Support Vector Machine (SVM)](https://veda.ng/glossary/support-vector-machine-svm): Support Vector Machine (SVM) is a supervised learning algorithm for classification and regression.
+- [Random Forest](https://veda.ng/glossary/random-forest): Random Forest is an ensemble method that builds many decision trees and aggregates their predictions.
+- [Cluster Analysis](https://veda.ng/glossary/cluster-analysis): Cluster analysis groups a collection of items so that members of the same group are more similar to each other than to members of other groups.
+- [Word Embeddings](https://veda.ng/glossary/word-embeddings): Word embeddings are numeric representations of words that capture meaning and relationships in a continuous vector space.
+- [Algorithmic Bias](https://veda.ng/glossary/algorithmic-bias): Algorithmic bias is when a computer-based decision-making process produces systematically unfair outcomes for certain groups of people.
+- [Explainable AI (XAI)](https://veda.ng/glossary/explainable-ai-xai): Explainable AI (XAI) is a set of techniques and design principles that make machine-learning decisions understandable to humans.
+- [Knowledge Graph](https://veda.ng/glossary/knowledge-graph): A knowledge graph stores information as a network of entities connected by typed relationships.
+- [Predictive Analytics](https://veda.ng/glossary/predictive-analytics): Predictive analytics turns past and present data into forecasts about future outcomes.
+- [Low-Rank Adaptation (LoRA)](https://veda.ng/glossary/low-rank-adaptation-lora): Low-Rank Adaptation (LoRA) is a technique for fine-tuning large neural networks cheaply.
+- [Model Quantization](https://veda.ng/glossary/model-quantization): Model quantization converts a neural network's numerical representations from high-precision formats (like 32-bit floating point) to lower-precision formats (like 8-bit integers or even binary values).
+- [Multi-Agent Systems](https://veda.ng/glossary/multi-agent-systems): Multi-Agent Systems (MAS) are collections of autonomous software entities that interact within a shared environment to achieve goals.
+- [Edge AI](https://veda.ng/glossary/edge-ai): Edge AI runs artificial intelligence algorithms directly on devices at the periphery of a network, smartphones, industrial sensors, cameras, drones, instead of sending data to a distant server.
+- [Hyperparameter Tuning](https://veda.ng/glossary/hyperparameter-tuning): Hyperparameter tuning is the process of selecting the best settings for the knobs that control how a machine-learning model learns.
+- [Pattern Recognition](https://veda.ng/glossary/pattern-recognition): Pattern recognition is the process of identifying regularities, structures, or repeated elements within data.
+- [Vision Transformers (ViT)](https://veda.ng/glossary/vision-transformers-vit): Vision Transformers (ViT) adapt the transformer architecture, originally built for text, to analyze images.
+- [Delegated Proof of Stake (DPoS)](https://veda.ng/glossary/delegated-proof-of-stake-dpos): Delegated Proof of Stake (DPoS) is a consensus mechanism where token holders elect a limited number of representatives (delegates or witnesses) to validate blocks on their behalf.
+- [Cryptocurrency Wallet](https://veda.ng/glossary/cryptocurrency-wallet): A cryptocurrency wallet stores the private and public cryptographic keys needed to send, receive, and manage digital assets on a blockchain.
+- [Public-Key Cryptography](https://veda.ng/glossary/public-key-cryptography): Public-key cryptography secures digital information using two mathematically linked keys, a public key that anyone can see and a private key kept secret by the owner.
+- [Cryptographic Hash Function](https://veda.ng/glossary/cryptographic-hash-function): A cryptographic hash function takes an input of any size and produces a fixed-length string of characters called a hash or digest.
+- [Mining Pool](https://veda.ng/glossary/mining-pool): A mining pool is a cooperative arrangement where individual cryptocurrency miners combine computing power to increase the chance of solving a block and earning the reward.
+- [Genesis Block](https://veda.ng/glossary/genesis-block): The Genesis Block is the very first block in a blockchain.
+- [Hard Fork](https://veda.ng/glossary/hard-fork): A hard fork is a blockchain protocol upgrade that is not backwards-compatible.
+- [Soft Fork](https://veda.ng/glossary/soft-fork): A soft fork changes a blockchain's rules in a way that remains backward-compatible with older software.
+- [Zero-Knowledge Proofs (ZKPs)](https://veda.ng/glossary/zero-knowledge-proofs-zkps): Zero-knowledge proofs (ZKPs) are cryptographic protocols that let one party (the prover) convince another party (the verifier) that a statement is true without revealing any information beyond the truth of the statement itself.
+- [Peer-to-Peer (P2P)](https://veda.ng/glossary/peer-to-peer-p2p): Peer-to-Peer (P2P) is a network architecture where each node acts as both client and server, sharing resources directly with other participants without a central coordinator.
+- [Double-Spending](https://veda.ng/glossary/double-spending): Double-spending is the act of using the same unit of digital currency more than once.
+- [Cold Storage](https://veda.ng/glossary/cold-storage): In cryptocurrency, cold storage means keeping private keys on a device that is completely disconnected from the internet.
+- [Hot Wallet](https://veda.ng/glossary/hot-wallet): A hot wallet is cryptocurrency storage that stays connected to the internet.
+- [Proof of History (PoH)](https://veda.ng/glossary/proof-of-history-poh): Proof of History (PoH) is a cryptographic clock that creates a verifiable sequence of events without requiring nodes to agree on timestamps.
+- [Directed Acyclic Graph (DAG)](https://veda.ng/glossary/directed-acyclic-graph-dag): A Directed Acyclic Graph (DAG) is a data structure made of nodes connected by edges that have a direction and never form loops.
+- [Decentralized Physical Infrastructure Networks (DePIN)](https://veda.ng/glossary/depin-networks): Decentralized Physical Infrastructure Networks (DePIN) combine real-world hardware assets, like wireless towers, storage nodes, or sensor arrays, with blockchain protocols that coordinate ownership, usage, and payment.
+- [Intent-Centric Architecture](https://veda.ng/glossary/intent-centric-architecture): Intent-Centric Architecture is a design approach where the user's desired outcome, called the intent, becomes the core object that every system component operates on.
+- [Parallelized EVM](https://veda.ng/glossary/parallelized-evm): A Parallelized EVM distributes Ethereum smart-contract execution across multiple CPU cores instead of running every instruction sequentially on one core.
+- [Decentralized Sequencer](https://veda.ng/glossary/decentralized-sequencer): A decentralized sequencer orders transactions in a distributed ledger without relying on a single trusted authority.
+- [Data Availability Sampling (DAS)](https://veda.ng/glossary/data-availability-sampling-das): Data Availability Sampling (DAS) is a protocol that lets nodes verify a block's data is fully available without downloading the entire block.
+- [Decentralized Exchange (DEX)](https://veda.ng/glossary/decentralized-exchange-dex): A decentralized exchange (DEX) lets users trade cryptocurrencies directly with each other through smart contracts, without a central company controlling order flow or holding customer funds.
+- [Web2](https://veda.ng/glossary/web2): Web2 describes the second generation of the World Wide Web that emerged in the early 2000s.
+- [Internet of Things (IoT)](https://veda.ng/glossary/internet-of-things-iot): The Internet of Things (IoT) refers to a network of physical objects, sensors, appliances, vehicles, wearables, industrial machines, equipped with embedded computing and communication capabilities.
+- [Quantum Computing](https://veda.ng/glossary/quantum-computing): Quantum computing uses quantum mechanics to process information in ways that classical computers cannot.
+- [Serverless Architecture](https://veda.ng/glossary/serverless-architecture): Serverless architecture is a cloud-computing model where developers deploy code without managing servers.
+- [Continuous Integration / Continuous Deployment (CI/CD)](https://veda.ng/glossary/ci-cd): Continuous Integration / Continuous Deployment (CI/CD) automates the pipeline from writing code to delivering it to users.
+- [Containerization (Docker)](https://veda.ng/glossary/containerization): Containerization packages software so it runs identically on any machine with the container runtime.
+- [Spatial Computing](https://veda.ng/glossary/spatial-computing): Spatial computing is a collection of technologies that let digital information exist and interact within three-dimensional physical space.
+- [Digital Twin](https://veda.ng/glossary/digital-twin): A digital twin is a virtual replica of a physical object, process, or system that updates in real time from sensor data.
+- [DNS (Domain Name System)](https://veda.ng/glossary/dns): The Domain Name System is the phone book of the internet.
+- [REST API](https://veda.ng/glossary/rest-api): A REST API is a way for two computer systems to communicate over the internet using standard HTTP methods.
+- [TCP/IP](https://veda.ng/glossary/tcp-ip): TCP/IP is the pair of protocols that form the foundation of how data travels across the internet.
+- [CDN (Content Delivery Network)](https://veda.ng/glossary/cdn): A Content Delivery Network is a group of servers spread across many locations around the world that work together to deliver web content faster by serving it from the server closest to each user.
+- [SSL/TLS](https://veda.ng/glossary/ssl-tls): SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic protocols that encrypt data sent between a web browser and a server, preventing anyone in between from reading or tampering with it.
+- [Git](https://veda.ng/glossary/git): Git is a distributed version control system that tracks changes to files over time, letting multiple people work on the same codebase without overwriting each other's work.
+- [Webhook](https://veda.ng/glossary/webhook): A webhook is a way for one application to send real-time data to another application the moment something happens, instead of the second application having to keep checking for updates.

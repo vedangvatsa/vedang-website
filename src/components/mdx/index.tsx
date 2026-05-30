@@ -90,7 +90,7 @@ export function Callout({ children, type = 'info', title }: { children: React.Re
 export function PullQuote({ children, author }: { children: React.ReactNode; author?: string }) {
   return (
     <div className="not-prose my-8 first:mt-0 last:mb-0 border-l-4 border-primary/40 pl-6 py-2">
-      <blockquote className="text-lg md:text-xl font-medium italic text-foreground/80 leading-relaxed">
+      <blockquote className="text-lg md:text-xl font-medium italic text-foreground/80 leading-relaxed !border-none !pl-0">
         {children}
       </blockquote>
       {author && <cite className="mt-2 block text-sm text-muted-foreground not-italic"> - {author}</cite>}
