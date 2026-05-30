@@ -11,7 +11,7 @@ interface SharedCourseLayoutProps {
 export function SharedCourseLayout({ courseId, children }: SharedCourseLayoutProps) {
   const config = courseConfigs[courseId];
   return (
-    <PageLayout>
+    <PageLayout wide>
       <div className="py-12 flex flex-col md:flex-row gap-12">
         <CourseSidebar {...config} />
         <main className="flex-1 min-w-0">{children}</main>
