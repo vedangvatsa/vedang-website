@@ -45,7 +45,7 @@ export function KvCacheVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">KV Cache Visualization</h3>
         <p className="text-slate-600">See how caching Key-Value vectors reduces computation during autoregressive generation</p>
@@ -79,7 +79,7 @@ export function KvCacheVisualizer() {
       <div className="w-full max-w-4xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Token Generation Visualization */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Token Generation</h4>
             <div className="space-y-3">
               {tokens.slice(0, currentStep + 1).map((token, index) => (
@@ -100,7 +100,7 @@ export function KvCacheVisualizer() {
           </div>
 
           {/* Attention Computation */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Attention Computation</h4>
             <div className="space-y-2">
               {Array.from({ length: currentStep }, (_, step) => (
@@ -131,7 +131,7 @@ export function KvCacheVisualizer() {
 
         {/* Cache Visualization */}
         {useCache && (
-          <div className="bg-white p-6 rounded-xl border border-slate-200 mt-6">
+          <div className="bg-white p-6 rounded-lg border border-slate-200 mt-6">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">KV Cache Contents</h4>
             <div className="grid grid-cols-2 gap-6">
               <div>
@@ -159,7 +159,7 @@ export function KvCacheVisualizer() {
         )}
 
         {/* Performance Metrics */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200 mt-6">
+        <div className="bg-white p-6 rounded-lg border border-slate-200 mt-6">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Performance Impact</h4>
           <div className="grid grid-cols-3 gap-6">
             <div className="text-center">

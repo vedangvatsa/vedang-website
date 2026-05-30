@@ -121,7 +121,7 @@ export default function MCPDevelopmentCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
         <section className="text-center pt-16 pb-12">
-             <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+             <div className="content-width">
                 <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
                     MCP Development
                 </h1>
@@ -151,7 +151,7 @@ export default function MCPDevelopmentCoursePage() {
                     <p className="mt-2 text-muted-foreground">Seven modules to go from zero to production MCP server.</p>
                 </div>
                 <div className="space-y-4">
-                    <Link href="/mcp-development/module-1-what-is-mcp" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/mcp-development/module-1-what-is-mcp" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">1. What is MCP?</h3>
@@ -160,7 +160,7 @@ export default function MCPDevelopmentCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/mcp-development/module-2-transports" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/mcp-development/module-2-transports" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">2. Transports & Message Format</h3>
@@ -169,7 +169,7 @@ export default function MCPDevelopmentCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/mcp-development/module-3-first-server" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/mcp-development/module-3-first-server" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">3. Building Your First MCP Server</h3>
@@ -178,7 +178,7 @@ export default function MCPDevelopmentCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/mcp-development/module-4-primitives" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/mcp-development/module-4-primitives" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">4. Tools, Resources & Prompts</h3>
@@ -187,7 +187,7 @@ export default function MCPDevelopmentCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/mcp-development/module-5-clients" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/mcp-development/module-5-clients" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">5. Connecting to Clients</h3>
@@ -196,7 +196,7 @@ export default function MCPDevelopmentCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/mcp-development/module-6-real-world" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/mcp-development/module-6-real-world" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">6. Real-World MCP Servers</h3>
@@ -205,7 +205,7 @@ export default function MCPDevelopmentCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/mcp-development/module-7-production" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/mcp-development/module-7-production" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">7. Production, Security & Distribution</h3>
@@ -252,7 +252,7 @@ export default function MCPDevelopmentCoursePage() {
                     Common questions about MCP development answered directly.
                 </p>
             </div>
-            <div className="max-w-5xl mx-auto mt-12">
+            <div className="content-width mt-12">
                 <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
                    {faqItems.map((item, index) => (
                      <AccordionItem key={index} value={`faq-${index + 1}`}>

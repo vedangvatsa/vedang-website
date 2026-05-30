@@ -43,7 +43,7 @@ export function BridgeVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Bridge Protocol Visualizer</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -72,7 +72,7 @@ export function BridgeVisualizer() {
 
       {/* Amount Selector */}
       {step === 0 && (
-        <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+        <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
           <h4 className="text-lg font-semibold text-slate-700 mb-4">Select BTC Amount to Bridge</h4>
           <div className="flex items-center gap-4">
             <input
@@ -93,7 +93,7 @@ export function BridgeVisualizer() {
       <div className="flex items-center gap-12">
         {/* Bitcoin Chain */}
         <div className="flex flex-col items-center gap-4">
-          <div className="bg-amber-100 border-2 border-amber-300 rounded-xl p-6 w-48 text-center">
+          <div className="bg-amber-100 border-2 border-amber-300 rounded-lg p-6 w-48 text-center">
             <h4 className="text-lg font-bold text-amber-800 mb-2">Bitcoin Chain</h4>
             <div className="text-sm text-amber-700 mb-3">Your Wallet</div>
             <div className="bg-amber-200 rounded-lg p-3 mb-3">
@@ -126,7 +126,7 @@ export function BridgeVisualizer() {
 
         {/* Ethereum Chain */}
         <div className="flex flex-col items-center gap-4">
-          <div className="bg-indigo-100 border-2 border-indigo-300 rounded-xl p-6 w-48 text-center">
+          <div className="bg-indigo-100 border-2 border-indigo-300 rounded-lg p-6 w-48 text-center">
             <h4 className="text-lg font-bold text-indigo-800 mb-2">Ethereum Chain</h4>
             <div className="text-sm text-indigo-700 mb-3">Your Wallet</div>
             <div className={`rounded-lg p-3 transition-all duration-500 ${

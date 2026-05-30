@@ -97,7 +97,7 @@ export function RewardModelVisualizer() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Reward Model Training</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -129,7 +129,7 @@ export function RewardModelVisualizer() {
       {/* Step 1: Human Preference Collection */}
       {currentStep === 0 && (
         <div className="w-full max-w-4xl">
-          <div className="bg-white p-6 rounded-xl border border-slate-200 mb-6">
+          <div className="bg-white p-6 rounded-lg border border-slate-200 mb-6">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Compare Model Outputs</h4>
             <p className="text-slate-600 mb-4">Which response do you prefer? Click to indicate your preference.</p>
             
@@ -166,7 +166,7 @@ export function RewardModelVisualizer() {
 
           {/* Preference History */}
           {humanPreferences.length > 0 && (
-            <div className="bg-white p-4 rounded-xl border border-slate-200">
+            <div className="bg-white p-4 rounded-lg border border-slate-200">
               <h5 className="font-medium text-slate-800 mb-3">Preference History</h5>
               <div className="space-y-2 max-h-40 overflow-y-auto">
                 {humanPreferences.map((pref) => (
@@ -183,7 +183,7 @@ export function RewardModelVisualizer() {
       {/* Step 2: Training */}
       {currentStep === 1 && (
         <div className="w-full max-w-2xl">
-          <div className="bg-white p-6 rounded-xl border border-slate-200 text-center">
+          <div className="bg-white p-6 rounded-lg border border-slate-200 text-center">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Training Reward Model</h4>
             
             {!isTraining && trainingProgress === 0 && (
@@ -222,7 +222,7 @@ export function RewardModelVisualizer() {
       {/* Step 3: Evaluation */}
       {currentStep === 2 && (
         <div className="w-full max-w-4xl">
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Reward Model Scores</h4>
             <p className="text-slate-600 mb-6">The trained model now assigns scores to outputs based on learned preferences:</p>
             

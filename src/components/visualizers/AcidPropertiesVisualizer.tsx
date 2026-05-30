@@ -94,7 +94,7 @@ export function AcidPropertiesVisualizer() {
   const getCurrentColor = () => properties[activeProperty].color;
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">ACID Properties Database Simulator</h3>
         <p className="text-slate-600">Interactive demonstration of database transaction guarantees</p>
@@ -109,7 +109,7 @@ export function AcidPropertiesVisualizer() {
               setActiveProperty(key as 'atomicity' | 'consistency' | 'isolation' | 'durability');
               resetSimulation();
             }}
-            className={`p-4 rounded-xl border-2 transition-all ${
+            className={`p-4 rounded-lg border-2 transition-all ${
               activeProperty === key
                 ? `bg-${prop.color}-100 border-${prop.color}-500 text-${prop.color}-700`
                 : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
@@ -122,7 +122,7 @@ export function AcidPropertiesVisualizer() {
       </div>
 
       {/* Active Property Details */}
-      <div className={`w-full max-w-4xl bg-${getCurrentColor()}-50 border border-${getCurrentColor()}-200 rounded-xl p-6`}>
+      <div className={`w-full max-w-4xl bg-${getCurrentColor()}-50 border border-${getCurrentColor()}-200 rounded-lg p-6`}>
         <h4 className={`text-xl font-bold text-${getCurrentColor()}-700 mb-4`}>
           {properties[activeProperty].title} Demonstration
         </h4>

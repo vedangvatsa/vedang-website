@@ -46,14 +46,14 @@ export function WebhookVisualizer() {
   const getEventConfig = (type: string) => eventTypes.find(e => e.type === type) || eventTypes[0];
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Webhooks in Action</h3>
         <p className="text-slate-600 max-w-2xl">Watch events get pushed to your endpoint in real-time instead of polling</p>
       </div>
 
       <div className="w-full max-w-3xl">
-        <svg viewBox="0 0 700 300" className="w-full border border-slate-200 rounded-xl bg-white">
+        <svg viewBox="0 0 700 300" className="w-full border border-slate-200 rounded-lg bg-white">
           {/* Source server */}
           <g transform="translate(120, 150)">
             <rect x={-80} y={-60} width={160} height={120} rx={12} fill="#f1f5f9" stroke="#cbd5e1" strokeWidth="2" />
@@ -115,7 +115,7 @@ export function WebhookVisualizer() {
 
       {/* Event log */}
       {events.length > 0 && (
-        <div className="w-full max-w-2xl bg-slate-900 rounded-xl p-4 font-mono text-xs overflow-hidden">
+        <div className="w-full max-w-2xl bg-slate-900 rounded-lg p-4 font-mono text-xs overflow-hidden">
           <div className="text-slate-400 mb-2">Webhook Event Log</div>
           {events.slice(0, 5).map(event => {
             const config = getEventConfig(event.type);

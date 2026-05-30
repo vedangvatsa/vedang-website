@@ -53,7 +53,7 @@ export function LiquidityPoolVolumeVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Liquidity Pool Volume</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -82,7 +82,7 @@ export function LiquidityPoolVolumeVisualizer() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <div className="text-sm text-slate-500 mb-2">Total Value Locked (TVL)</div>
           <div className="text-2xl font-bold text-slate-800">{formatCurrency(currentPool.tvl)}</div>
           <div className="w-full bg-slate-200 rounded-full h-3 mt-3">
@@ -90,7 +90,7 @@ export function LiquidityPoolVolumeVisualizer() {
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <div className="text-sm text-slate-500 mb-2">24h Volume Target</div>
           <div className="text-2xl font-bold text-blue-600">{formatCurrency(currentPool.dailyVolume)}</div>
           <div className="w-full bg-slate-200 rounded-full h-3 mt-3">
@@ -104,7 +104,7 @@ export function LiquidityPoolVolumeVisualizer() {
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <div className="text-sm text-slate-500 mb-2">Fees Accumulated</div>
           <div className="text-2xl font-bold text-emerald-600">{formatCurrency(currentFees)}</div>
           <div className="w-full bg-slate-200 rounded-full h-3 mt-3">
@@ -119,7 +119,7 @@ export function LiquidityPoolVolumeVisualizer() {
         </div>
       </div>
 
-      <div className="w-full max-w-4xl bg-white p-6 rounded-xl border border-slate-200">
+      <div className="w-full max-w-4xl bg-white p-6 rounded-lg border border-slate-200">
         <div className="flex justify-between items-center mb-4">
           <div className="text-lg font-semibold text-slate-800">24-Hour Volume Simulation</div>
           <div className="flex items-center gap-4">

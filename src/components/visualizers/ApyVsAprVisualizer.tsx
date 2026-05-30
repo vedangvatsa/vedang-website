@@ -43,14 +43,14 @@ export function ApyVsAprVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">APY vs APR Interactive Calculator</h3>
         <p className="text-slate-600">Explore how compounding frequency affects your actual returns. APR ignores compounding, APY includes it.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Controls</h4>
           
           <div className="space-y-4">
@@ -95,7 +95,7 @@ export function ApyVsAprVisualizer() {
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Results Comparison</h4>
           
           <div className="space-y-4">
@@ -121,7 +121,7 @@ export function ApyVsAprVisualizer() {
       </div>
 
       {showAnimation && (
-        <div className="w-full max-w-4xl bg-white p-6 rounded-xl border border-slate-200">
+        <div className="w-full max-w-4xl bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">
             Monthly Compounding Animation ($1,000 initial)
           </h4>
@@ -167,7 +167,7 @@ export function ApyVsAprVisualizer() {
         </div>
       )}
 
-      <div className="w-full max-w-4xl bg-white p-6 rounded-xl border border-slate-200">
+      <div className="w-full max-w-4xl bg-white p-6 rounded-lg border border-slate-200">
         <h4 className="text-lg font-semibold text-slate-800 mb-4">Formula Breakdown</h4>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

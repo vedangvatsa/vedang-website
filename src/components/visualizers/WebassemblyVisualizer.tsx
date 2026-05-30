@@ -52,7 +52,7 @@ export function WebassemblyVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">WebAssembly Interactive Demo</h3>
         <p className="text-lg text-slate-600">
@@ -72,7 +72,7 @@ export function WebassemblyVisualizer() {
                   setSelectedLanguage(key);
                   resetDemo();
                 }}
-                className={`p-4 rounded-xl border-2 transition-all ${
+                className={`p-4 rounded-lg border-2 transition-all ${
                   selectedLanguage === key 
                     ? 'border-slate-400 bg-white shadow-md' 
                     : 'border-slate-200 bg-slate-100 hover:bg-white'
@@ -107,7 +107,7 @@ export function WebassemblyVisualizer() {
             <div className="flex items-center justify-between">
               {compilationSteps.map((step, index) => (
                 <div key={step} className="flex items-center">
-                  <div className={`p-4 rounded-xl border-2 transition-all ${
+                  <div className={`p-4 rounded-lg border-2 transition-all ${
                     index <= compilationStep 
                       ? 'border-blue-400 bg-blue-50' 
                       : 'border-slate-200 bg-slate-100'
@@ -131,7 +131,7 @@ export function WebassemblyVisualizer() {
         {/* Performance Comparison */}
         <div className="mb-8">
           <h4 className="text-xl font-semibold text-slate-700 mb-4">Performance Comparison</h4>
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <div className="grid grid-cols-2 gap-8">
               <div>
                 <div className="text-lg font-medium text-slate-700 mb-3">JavaScript (Baseline)</div>
@@ -180,19 +180,19 @@ export function WebassemblyVisualizer() {
 
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-blue-50 p-4 rounded-xl border border-blue-200">
+          <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
             <div className="w-8 h-8 bg-blue-500 rounded-full mb-3"></div>
             <h5 className="font-semibold text-slate-800 mb-2">Near-Native Speed</h5>
             <p className="text-sm text-slate-600">Binary format executes 3-4x faster than JavaScript</p>
           </div>
           
-          <div className="bg-indigo-50 p-4 rounded-xl border border-indigo-200">
+          <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
             <div className="w-8 h-8 bg-indigo-500 rounded-full mb-3"></div>
             <h5 className="font-semibold text-slate-800 mb-2">Language Flexibility</h5>
             <p className="text-sm text-slate-600">Compile C++, Rust, Go, and more to run in browsers</p>
           </div>
           
-          <div className="bg-emerald-50 p-4 rounded-xl border border-emerald-200">
+          <div className="bg-emerald-50 p-4 rounded-lg border border-emerald-200">
             <div className="w-8 h-8 bg-emerald-500 rounded-full mb-3"></div>
             <h5 className="font-semibold text-slate-800 mb-2">Universal Runtime</h5>
             <p className="text-sm text-slate-600">Runs securely in any modern browser environment</p>

@@ -38,7 +38,7 @@ export function McpVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Model Context Protocol (MCP)</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -74,7 +74,7 @@ export function McpVisualizer() {
                 <button
                   key={model.id}
                   onClick={() => setSelectedModel(model.id)}
-                  className={`w-20 h-20 rounded-xl flex flex-col items-center justify-center text-white font-semibold transition-all hover:scale-105 ${
+                  className={`w-20 h-20 rounded-lg flex flex-col items-center justify-center text-white font-semibold transition-all hover:scale-105 ${
                     model.color
                   } ${
                     selectedModel === model.id ? 'ring-4 ring-blue-300 scale-105' : ''
@@ -91,7 +91,7 @@ export function McpVisualizer() {
         {/* MCP Layer */}
         {showMcp && (
           <div className="flex justify-center mb-8">
-            <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-8 py-4 rounded-xl shadow-lg">
+            <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-8 py-4 rounded-lg shadow-lg">
               <div className="text-center">
                 <div className="text-2xl mb-2">🔄</div>
                 <div className="font-bold">MCP Protocol</div>
@@ -118,7 +118,7 @@ export function McpVisualizer() {
                 <button
                   key={tool.id}
                   onClick={() => setSelectedTool(tool.id)}
-                  className={`w-24 h-24 rounded-xl flex flex-col items-center justify-center text-white font-semibold transition-all hover:scale-105 ${
+                  className={`w-24 h-24 rounded-lg flex flex-col items-center justify-center text-white font-semibold transition-all hover:scale-105 ${
                     tool.color
                   } ${
                     selectedTool === tool.id ? 'ring-4 ring-emerald-300 scale-105' : ''

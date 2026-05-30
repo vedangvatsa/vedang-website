@@ -61,7 +61,7 @@ export function ColdWalletVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Cold Wallet Security</h3>
         <p className="text-slate-600">Interact with this simulation to understand how cold wallets keep your crypto secure offline</p>
@@ -84,7 +84,7 @@ export function ColdWalletVisualizer() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Internet/Computer Side */}
-          <div className="bg-white rounded-xl p-6 border-2 border-rose-200">
+          <div className="bg-white rounded-lg p-6 border-2 border-rose-200">
             <h4 className="font-semibold text-rose-700 mb-4 flex items-center gap-2">
               <div className="w-3 h-3 bg-rose-500 rounded-full animate-pulse"></div>
               Internet-Connected Computer
@@ -162,7 +162,7 @@ export function ColdWalletVisualizer() {
           </div>
 
           {/* Cold Wallet Device */}
-          <div className="bg-white rounded-xl p-6 border-2 border-indigo-200">
+          <div className="bg-white rounded-lg p-6 border-2 border-indigo-200">
             <h4 className="font-semibold text-indigo-700 mb-4 flex items-center gap-2">
               <div className={`w-3 h-3 rounded-full transition-colors ${
                 isConnected ? 'bg-emerald-500' : 'bg-slate-400'

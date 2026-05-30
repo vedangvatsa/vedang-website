@@ -4,13 +4,13 @@
 
 export function Explainer() {
   return (
-    <div className="my-12 p-8 border rounded-2xl bg-card text-card-foreground shadow-sm overflow-hidden relative">
+    <div className="my-12 p-8 border rounded-lg bg-card text-card-foreground shadow-sm overflow-hidden relative">
       <h3 className="text-xl font-semibold mb-8 text-center">The Vibe Coding Shift</h3>
       
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
         
         {/* Old Way */}
-        <div className="flex-1 w-full p-6 rounded-xl border bg-muted/30">
+        <div className="flex-1 w-full p-6 rounded-lg border bg-muted/30">
           <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4 text-center">The Old Way</h4>
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -35,7 +35,7 @@ export function Explainer() {
         </div>
 
         {/* New Way */}
-        <div className="flex-1 w-full p-6 rounded-xl border bg-primary/5 border-primary/20">
+        <div className="flex-1 w-full p-6 rounded-lg border bg-primary/5 border-primary/20">
           <h4 className="text-sm font-semibold uppercase tracking-wider text-primary mb-4 text-center">The Vibe Way</h4>
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-4 shadow-lg shadow-primary/20">

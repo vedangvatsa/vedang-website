@@ -74,7 +74,7 @@ export function DeepLearningVisualizer() {
   const layerColors = ['bg-blue-100 border-blue-300', 'bg-indigo-100 border-indigo-300', 'bg-rose-100 border-rose-300'];
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Deep Learning Neural Network</h3>
         <p className="text-slate-600">Interactive visualization showing how data flows through multiple layers of artificial neurons</p>

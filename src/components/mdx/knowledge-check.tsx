@@ -57,7 +57,7 @@ function MultipleChoice({ question, options, correctAnswerIndex, explanation }: 
   const isCorrect = selected === correctAnswerIndex;
 
   return (
-    <div className="not-prose my-8 p-6 rounded-xl border bg-card">
+    <div className="not-prose my-8 p-6 rounded-lg border bg-card">
       <h4 className="font-semibold text-base mb-4">{question}</h4>
       <div className="space-y-2">
         {options.map((opt, i) => {

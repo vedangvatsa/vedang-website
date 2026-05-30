@@ -56,7 +56,7 @@ export function BeamSearchVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Beam Search Decoding</h3>
         <p className="text-slate-600 max-w-2xl">Watch how language models explore multiple word sequences simultaneously</p>
@@ -78,7 +78,7 @@ export function BeamSearchVisualizer() {
       </div>
 
       <div className="w-full max-w-3xl overflow-x-auto">
-        <svg viewBox="0 0 700 350" className="w-full border border-slate-200 rounded-xl bg-white" style={{minWidth: 600}}>
+        <svg viewBox="0 0 700 350" className="w-full border border-slate-200 rounded-lg bg-white" style={{minWidth: 600}}>
           <text x={20} y={25} fontSize="10" fill="#64748b">Step</text>
           {[0, 1, 2, 3].map(d => (
             <text key={d} x={100 + d * 160} y={25} textAnchor="middle" fontSize="10" fill="#64748b" fontWeight="600">
@@ -133,7 +133,7 @@ export function BeamSearchVisualizer() {
         {isSearching ? '🔍 Searching...' : '▶ Run Beam Search'}
       </button>
 
-      <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-4 max-w-lg text-center">
+      <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4 max-w-lg text-center">
         <p className="text-indigo-800 text-sm">
           <strong>Beam width = {beamWidth}</strong> means the model keeps the top {beamWidth} most promising sequences at each step.
           {beamWidth === 1 && ' This is greedy search - only the single best option survives.'}

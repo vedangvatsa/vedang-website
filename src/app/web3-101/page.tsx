@@ -134,7 +134,7 @@ export default function Web3CoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
         <section className="text-center pt-16 pb-12">
-             <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+             <div className="content-width">
                 <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
                     Fundamentals of Web3
                 </h1>
@@ -164,7 +164,7 @@ export default function Web3CoursePage() {
                     <p className="mt-2 text-muted-foreground">Eight modules to understand the decentralized web.</p>
                 </div>
                 <div className="space-y-4">
-                    <Link href="/web3-101/module-1-vision" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/web3-101/module-1-vision" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">1. The Vision: Why Web3 Matters</h3>
@@ -173,7 +173,7 @@ export default function Web3CoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/web3-101/module-2-bedrock" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/web3-101/module-2-bedrock" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">2. The Bedrock: Blockchain</h3>
@@ -182,7 +182,7 @@ export default function Web3CoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/web3-101/module-3-smart-contracts" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/web3-101/module-3-smart-contracts" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">3. Smart Contracts</h3>
@@ -191,7 +191,7 @@ export default function Web3CoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/web3-101/module-4-ecosystem" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/web3-101/module-4-ecosystem" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">4. The Ecosystem</h3>
@@ -200,7 +200,7 @@ export default function Web3CoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/web3-101/module-5-getting-started" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/web3-101/module-5-getting-started" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">5. Getting Started</h3>
@@ -209,7 +209,7 @@ export default function Web3CoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/web3-101/module-6-future" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/web3-101/module-6-future" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">6. The Future</h3>
@@ -218,7 +218,7 @@ export default function Web3CoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/web3-101/module-7-layer2s" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/web3-101/module-7-layer2s" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">7. Layer 2s & Scaling</h3>
@@ -227,7 +227,7 @@ export default function Web3CoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/web3-101/module-8-tokenomics" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/web3-101/module-8-tokenomics" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">8. Tokenomics & Governance</h3>
@@ -274,7 +274,7 @@ export default function Web3CoursePage() {
                         Some common questions about Web3, answered.
                     </p>
                 </div>
-                <div className="max-w-5xl mx-auto mt-12">
+                <div className="content-width mt-12">
                     <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
                        {faqItems.map((item, index) => (
                          <AccordionItem key={index} value={`faq-${index + 1}`}>

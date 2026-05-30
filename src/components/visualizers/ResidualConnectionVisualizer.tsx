@@ -48,7 +48,7 @@ export function ResidualConnectionVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Residual Connection Visualizer</h3>
         <p className="text-slate-600">Interactive comparison of networks with and without skip connections</p>
@@ -56,7 +56,7 @@ export function ResidualConnectionVisualizer() {
 
       <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl">
         {/* Controls */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+        <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
           <h4 className="font-semibold text-slate-800 mb-4">Controls</h4>
           
           <div className="space-y-4">
@@ -112,7 +112,7 @@ export function ResidualConnectionVisualizer() {
         {/* Visualizations */}
         <div className="flex-1 space-y-6">
           {/* Without Residual */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+          <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
             <h4 className="font-semibold text-rose-600 mb-4">Without Residual Connections</h4>
             <div className="flex items-center gap-4 overflow-x-auto pb-4">
               {withoutResidual.map((value, index) => (
@@ -150,7 +150,7 @@ export function ResidualConnectionVisualizer() {
           </div>
 
           {/* With Residual */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+          <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
             <h4 className="font-semibold text-emerald-600 mb-4">With Residual Connections</h4>
             <div className="space-y-4">
               {Array.from({ length: selectedLayer + 2 }).map((_, layerIndex) => (

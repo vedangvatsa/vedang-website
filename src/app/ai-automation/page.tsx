@@ -93,7 +93,7 @@ export default function AIAutomationCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <section className="text-center pt-16 pb-12">
-        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+        <div className="content-width">
                 <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
                     AI Automation
                 </h1>
@@ -128,7 +128,7 @@ export default function AIAutomationCoursePage() {
               { href: 'module-6-pipelines', title: '6. Building Custom Pipelines', desc: 'Combine APIs + AI + MCP into end-to-end systems: job aggregation, content publishing, data quality.' },
               { href: 'module-7-production', title: '7. Production & Monitoring', desc: 'Scheduling with cron/GitHub Actions, monitoring, alerting, cost management, and scaling.' },
             ].map((m) => (
-              <Link key={m.href} href={`/ai-automation/${m.href}`} className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+              <Link key={m.href} href={`/ai-automation/${m.href}`} className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="font-semibold text-lg">{m.title}</h3>
@@ -171,7 +171,7 @@ export default function AIAutomationCoursePage() {
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
           <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">Common questions about AI automation answered directly.</p>
         </div>
-        <div className="max-w-5xl mx-auto mt-12">
+        <div className="content-width mt-12">
           <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
             {faqItems.map((item, index) => (
               <AccordionItem key={index} value={`faq-${index + 1}`}>

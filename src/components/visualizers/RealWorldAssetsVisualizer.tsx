@@ -67,7 +67,7 @@ export function RealWorldAssetsVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">Real World Assets (RWA)</h3>
         <p className="text-slate-600 max-w-3xl">
@@ -77,7 +77,7 @@ export function RealWorldAssetsVisualizer() {
 
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Asset Selection */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-xl font-semibold text-slate-800 mb-4">Select Real World Asset</h4>
           <div className="grid grid-cols-2 gap-4">
             {realWorldAssets.map((asset) => (
@@ -103,7 +103,7 @@ export function RealWorldAssetsVisualizer() {
         </div>
 
         {/* Tokenization Process */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-xl font-semibold text-slate-800 mb-4">Tokenization Process</h4>
           <div className="space-y-4">
             {tokenizationSteps.map((step, index) => (
@@ -146,7 +146,7 @@ export function RealWorldAssetsVisualizer() {
 
       {/* Asset Details & DeFi Integration */}
       {selectedAssetData && tokenizationStep >= 4 && (
-        <div className="w-full max-w-6xl bg-white rounded-xl p-6 border border-slate-200">
+        <div className="w-full max-w-6xl bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-xl font-semibold text-slate-800 mb-6">DeFi Integration Dashboard</h4>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

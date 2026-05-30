@@ -174,7 +174,7 @@ export default function MediaPage() {
                     alt={`Vedang Vatsa speaking at engagement ${index + 1}`}
                     width={500}
                     height={500}
-                    className="rounded-xl object-cover w-full h-auto"
+                    className="rounded-lg object-cover w-full h-auto"
                     data-ai-hint="person speaking"
                   />
                 </div>
@@ -191,7 +191,7 @@ export default function MediaPage() {
                     href={mention.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group rounded-xl border bg-card text-card-foreground transition-shadow duration-300 block hover:bg-muted/50 p-4"
+                    className="group rounded-lg border bg-card text-card-foreground transition-shadow duration-300 block hover:bg-muted/50 p-4"
                   >
                     <div className="flex items-start justify-between">
                         <div>

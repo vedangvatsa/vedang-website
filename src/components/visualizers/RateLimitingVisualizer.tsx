@@ -72,7 +72,7 @@ export function RateLimitingVisualizer() {
   const blockedRequests = requests.filter(req => req.status === 'blocked').length;
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Rate Limiting Visualizer</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -81,7 +81,7 @@ export function RateLimitingVisualizer() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-700 mb-4">Rate Limit Configuration</h4>
           
           <div className="space-y-4">
@@ -134,7 +134,7 @@ export function RateLimitingVisualizer() {
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-700 mb-4">Request Controls</h4>
           
           <div className="space-y-4">
@@ -170,7 +170,7 @@ export function RateLimitingVisualizer() {
         </div>
       </div>
 
-      <div className="w-full max-w-4xl bg-white p-6 rounded-xl border border-slate-200">
+      <div className="w-full max-w-4xl bg-white p-6 rounded-lg border border-slate-200">
         <h4 className="text-lg font-semibold text-slate-700 mb-4">Request Timeline</h4>
         
         <div className="space-y-2 max-h-48 overflow-y-auto">

@@ -97,7 +97,7 @@ export default function PromptEngineeringCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <section className="text-center pt-16 pb-12">
-             <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+             <div className="content-width">
                 <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
                     Prompt Engineering
                 </h1>
@@ -120,7 +120,7 @@ export default function PromptEngineeringCoursePage() {
             </div>
         </section>
 
-        <div className="container mx-auto px-4 md:px-6 max-w-5xl py-16 space-y-12">
+        <div className="content-width py-16 space-y-12">
             
         <section id="curriculum" className="py-16 bg-muted/30 border-y -mx-4 px-4 md:-mx-6 md:px-6">
             <div className="max-w-none">
@@ -129,7 +129,7 @@ export default function PromptEngineeringCoursePage() {
                     <p className="mt-2 text-muted-foreground">Seven modules to master the art of prompt engineering.</p>
                 </div>
                 <div className="space-y-4">
-                    <Link href="/prompt-engineering-101/module-1-core-idea" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/prompt-engineering-101/module-1-core-idea" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">1. The Core Idea: Guiding the Prediction Engine</h3>
@@ -138,7 +138,7 @@ export default function PromptEngineeringCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/prompt-engineering-101/module-2-core-techniques" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/prompt-engineering-101/module-2-core-techniques" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">2. Core Prompting Techniques</h3>
@@ -147,7 +147,7 @@ export default function PromptEngineeringCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/prompt-engineering-101/module-3-advanced-reasoning" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/prompt-engineering-101/module-3-advanced-reasoning" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">3. Advanced Reasoning Techniques</h3>
@@ -156,7 +156,7 @@ export default function PromptEngineeringCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/prompt-engineering-101/module-4-code-prompting" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/prompt-engineering-101/module-4-code-prompting" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">4. Code Prompting: Your AI Pair Programmer</h3>
@@ -165,7 +165,7 @@ export default function PromptEngineeringCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/prompt-engineering-101/module-5-best-practices" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/prompt-engineering-101/module-5-best-practices" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">5. Best Practices for Expert Prompting</h3>
@@ -174,7 +174,7 @@ export default function PromptEngineeringCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/prompt-engineering-101/module-6-rag-functions" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/prompt-engineering-101/module-6-rag-functions" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">6. RAG & Function Calling</h3>
@@ -183,7 +183,7 @@ export default function PromptEngineeringCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/prompt-engineering-101/module-7-chaining-agents" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/prompt-engineering-101/module-7-chaining-agents" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">7. Prompt Chaining & Agents</h3>
@@ -203,7 +203,7 @@ export default function PromptEngineeringCoursePage() {
                         Your common questions about prompt engineering, answered.
                     </p>
                 </div>
-                <div className="max-w-5xl mx-auto mt-12">
+                <div className="content-width mt-12">
                     <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
                        {faqItems.map((item, index) => (
                          <AccordionItem key={index} value={`faq-${index + 1}`}>
@@ -224,7 +224,7 @@ export default function PromptEngineeringCoursePage() {
                         Here’s a list of the best sources to learn about prompt engineering. It covers everything from beginner guides to academic-level surveys and is useful for casual users, developers, and researchers.
                     </p>
                 </div>
-                <div className="max-w-5xl mx-auto mt-12 prose">
+                <div className="content-width mt-12 prose">
                     
                     <h3 className="text-2xl font-semibold tracking-tight">Starting Guides & Tutorials</h3>
                     <ul>

@@ -72,7 +72,7 @@ export function SpeculativeDecodingVisualizer() {
   const speedup = step > 0 ? (standardPasses / Math.max(speculativePasses, 1)).toFixed(1) : "1.0";
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Speculative Decoding</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -142,7 +142,7 @@ export function SpeculativeDecodingVisualizer() {
         {mode === 'standard' ? (
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-slate-700">Standard Autoregressive Generation</h4>
-            <div className="bg-white p-6 rounded-xl border border-slate-200">
+            <div className="bg-white p-6 rounded-lg border border-slate-200">
               <div className="flex flex-wrap gap-2 mb-4">
                 {targetSequence.slice(0, step).map((token, i) => (
                   <div
@@ -171,7 +171,7 @@ export function SpeculativeDecodingVisualizer() {
         ) : (
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-slate-700">Speculative Decoding</h4>
-            <div className="bg-white p-6 rounded-xl border border-slate-200 space-y-4">
+            <div className="bg-white p-6 rounded-lg border border-slate-200 space-y-4">
               <div className="flex flex-wrap gap-2">
                 {targetSequence.slice(0, step).map((token, i) => (
                   <div
@@ -229,7 +229,7 @@ export function SpeculativeDecodingVisualizer() {
         )}
       </div>
 
-      <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 max-w-2xl">
+      <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 max-w-2xl">
         <div className="text-sm text-amber-800">
           <strong>Key Insight:</strong> Speculative decoding trades draft model computation (cheap) for target model sequential passes (expensive), 
           achieving speedups when the draft model's proposals have reasonable acceptance rates.

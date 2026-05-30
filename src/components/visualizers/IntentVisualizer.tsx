@@ -47,7 +47,7 @@ export function IntentVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-900 mb-2">Intent-Based Trading</h3>
         <p className="text-lg text-slate-600">Express what you want, let solvers figure out how to get it</p>
@@ -69,7 +69,7 @@ export function IntentVisualizer() {
       </div>
 
       {currentStep === 0 && (
-        <div className="bg-white rounded-xl p-6 border border-slate-200 w-full max-w-md">
+        <div className="bg-white rounded-lg p-6 border border-slate-200 w-full max-w-md">
           <h4 className="text-xl font-semibold mb-4 text-slate-800">Create Your Intent</h4>
           
           <div className="space-y-4">
@@ -135,7 +135,7 @@ export function IntentVisualizer() {
       )}
 
       {currentStep === 1 && (
-        <div className="bg-white rounded-xl p-6 border border-slate-200 w-full max-w-2xl">
+        <div className="bg-white rounded-lg p-6 border border-slate-200 w-full max-w-2xl">
           <h4 className="text-xl font-semibold mb-4 text-slate-800">Solvers Competing</h4>
           <p className="text-slate-600 mb-6">Multiple solvers analyze your intent and propose solutions:</p>
           
@@ -177,7 +177,7 @@ export function IntentVisualizer() {
       )}
 
       {currentStep === 2 && selectedSolver && (
-        <div className="bg-white rounded-xl p-6 border border-slate-200 w-full max-w-md">
+        <div className="bg-white rounded-lg p-6 border border-slate-200 w-full max-w-md">
           <h4 className="text-xl font-semibold mb-4 text-slate-800">Best Solution Found</h4>
           
           <div className="space-y-3">
@@ -225,7 +225,7 @@ export function IntentVisualizer() {
       )}
 
       {currentStep === 3 && selectedSolver && (
-        <div className="bg-white rounded-xl p-6 border border-slate-200 w-full max-w-md">
+        <div className="bg-white rounded-lg p-6 border border-slate-200 w-full max-w-md">
           <h4 className="text-xl font-semibold mb-4 text-slate-800">Trade Completed!</h4>
           
           <div className="text-center">

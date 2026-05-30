@@ -52,7 +52,7 @@ export function MessageQueueVisualizer() {
   }, [isAutoMode, messages.length, processing, producerSpeed, consumerSpeed]);
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Message Queue</h3>
         <p className="text-slate-600">Interactive demonstration of asynchronous message processing with producer-consumer decoupling</p>
@@ -60,7 +60,7 @@ export function MessageQueueVisualizer() {
 
       <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl">
         <div className="flex flex-col gap-6">
-          <div className="bg-blue-100 p-6 rounded-xl border border-blue-200">
+          <div className="bg-blue-100 p-6 rounded-lg border border-blue-200">
             <h4 className="font-semibold text-blue-800 mb-4">Producer (Service A)</h4>
             <button 
               onClick={addMessage}
@@ -87,7 +87,7 @@ export function MessageQueueVisualizer() {
         </div>
 
         <div className="flex-1 flex flex-col items-center gap-4">
-          <div className="bg-indigo-100 p-6 rounded-xl border border-indigo-200 w-full">
+          <div className="bg-indigo-100 p-6 rounded-lg border border-indigo-200 w-full">
             <h4 className="font-semibold text-indigo-800 mb-4 text-center">Message Queue</h4>
             <div className="min-h-32 bg-white rounded-lg border-2 border-dashed border-indigo-300 p-4">
               {messages.length === 0 ? (
@@ -118,7 +118,7 @@ export function MessageQueueVisualizer() {
           </div>
 
           {processing && (
-            <div className="bg-amber-100 p-4 rounded-xl border border-amber-200 w-full animate-pulse">
+            <div className="bg-amber-100 p-4 rounded-lg border border-amber-200 w-full animate-pulse">
               <h5 className="font-semibold text-amber-800 mb-2 text-center">Processing...</h5>
               <div className="bg-amber-200 p-3 rounded-lg border border-amber-300">
                 <div className="text-sm font-medium text-amber-800">#{processing.id} {processing.content}</div>
@@ -129,7 +129,7 @@ export function MessageQueueVisualizer() {
         </div>
 
         <div className="flex flex-col gap-6">
-          <div className="bg-emerald-100 p-6 rounded-xl border border-emerald-200">
+          <div className="bg-emerald-100 p-6 rounded-lg border border-emerald-200">
             <h4 className="font-semibold text-emerald-800 mb-4">Consumer (Service B)</h4>
             <button 
               onClick={processMessage}
@@ -156,7 +156,7 @@ export function MessageQueueVisualizer() {
         </div>
       </div>
 
-      <div className="bg-rose-100 p-4 rounded-xl border border-rose-200 w-full max-w-2xl">
+      <div className="bg-rose-100 p-4 rounded-lg border border-rose-200 w-full max-w-2xl">
         <h5 className="font-semibold text-rose-800 mb-3 text-center">Processed Messages</h5>
         <div className="space-y-2 max-h-32 overflow-y-auto">
           {processed.length === 0 ? (

@@ -57,7 +57,7 @@ export function EdgeComputingVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Edge Computing Visualizer</h3>
         <p className="text-slate-600">Compare cloud vs edge processing performance interactively</p>
@@ -101,7 +101,7 @@ export function EdgeComputingVisualizer() {
         />
       </div>
 
-      <div className="relative w-full max-w-4xl h-64 bg-white rounded-xl border-2 border-slate-200 p-6">
+      <div className="relative w-full max-w-4xl h-64 bg-white rounded-lg border-2 border-slate-200 p-6">
         {/* User Device */}
         <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
           <div className="w-16 h-12 bg-slate-700 rounded-lg flex items-center justify-center">

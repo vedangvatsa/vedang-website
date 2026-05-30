@@ -45,7 +45,7 @@ export function AdapterVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Adapter Architecture</h3>
         <p className="text-slate-600">Interactive visualization of adapter modules in pretrained models</p>
@@ -54,7 +54,7 @@ export function AdapterVisualizer() {
       <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl">
         {/* Model Architecture */}
         <div className="flex-1">
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Pretrained Model</h4>
             
             <div className="flex flex-col gap-3">
@@ -105,7 +105,7 @@ export function AdapterVisualizer() {
 
         {/* Controls */}
         <div className="flex-1">
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Adapter Configuration</h4>
             
             <div className="space-y-6">

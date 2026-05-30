@@ -71,7 +71,7 @@ export function AccountAbstractionVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">Account Abstraction</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -156,7 +156,7 @@ export function AccountAbstractionVisualizer() {
       )}
 
       <div className="w-full max-w-4xl">
-        <div className={`p-6 rounded-xl border-2 transition-all ${
+        <div className={`p-6 rounded-lg border-2 transition-all ${
           selectedAccount === 'traditional' 
             ? 'border-rose-300 bg-rose-50' 
             : 'border-blue-300 bg-blue-50'

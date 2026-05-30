@@ -45,7 +45,7 @@ export function PerplexityTrapVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">The Perplexity Trap</h3>
         <p className="text-slate-600">Explore how lower benchmark perplexity doesn't guarantee better real-world performance</p>
@@ -56,7 +56,7 @@ export function PerplexityTrapVisualizer() {
           {Object.entries(models).map(([key, model]) => (
             <div 
               key={key}
-              className={`p-6 rounded-xl border-2 cursor-pointer transition-all ${
+              className={`p-6 rounded-lg border-2 cursor-pointer transition-all ${
                 selectedModel === key 
                   ? 'border-blue-500 bg-blue-50' 
                   : 'border-slate-200 bg-white hover:border-slate-300'
@@ -77,7 +77,7 @@ export function PerplexityTrapVisualizer() {
           ))}
         </div>
 
-        <div className="bg-white p-6 rounded-xl border border-slate-200 mb-6">
+        <div className="bg-white p-6 rounded-lg border border-slate-200 mb-6">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Real-World Task Performance</h4>
           
           <div className="flex flex-wrap gap-3 mb-6">
@@ -127,7 +127,7 @@ export function PerplexityTrapVisualizer() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-rose-50 to-amber-50 p-6 rounded-xl border border-rose-200">
+        <div className="bg-gradient-to-r from-rose-50 to-amber-50 p-6 rounded-lg border border-rose-200">
           <div className="flex items-start gap-3">
             <div className="text-2xl">⚠️</div>
             <div>

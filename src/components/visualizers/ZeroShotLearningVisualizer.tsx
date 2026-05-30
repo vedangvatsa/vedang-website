@@ -60,7 +60,7 @@ export function ZeroShotLearningVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">Zero-Shot Learning</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -71,7 +71,7 @@ export function ZeroShotLearningVisualizer() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full max-w-6xl">
         {/* Training Data */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-xl font-semibold text-slate-800 mb-4">Training Tasks</h4>
           <div className="space-y-3">
             {trainingTasks.map((task) => (
@@ -89,7 +89,7 @@ export function ZeroShotLearningVisualizer() {
         </div>
 
         {/* Learned Patterns */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-xl font-semibold text-slate-800 mb-4">Learned Patterns</h4>
           <div className="space-y-4">
             {Object.entries(patterns).map(([patternId, pattern]) => {
@@ -123,7 +123,7 @@ export function ZeroShotLearningVisualizer() {
         </div>
 
         {/* Zero-Shot Tasks */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-xl font-semibold text-slate-800 mb-4">Zero-Shot Tasks</h4>
           <div className="space-y-3">
             {zeroShotTasks.map((task) => (

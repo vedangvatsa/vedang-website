@@ -49,7 +49,7 @@ export function BorrowRateVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">DeFi Borrow Rate Dynamics</h3>
         <p className="text-slate-600">Interactive demonstration of how utilization affects borrowing costs in lending protocols</p>
@@ -57,7 +57,7 @@ export function BorrowRateVisualizer() {
 
       <div className="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Pool Visualization */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Lending Pool Status</h4>
           
           {/* Pool Visual */}
@@ -92,7 +92,7 @@ export function BorrowRateVisualizer() {
         </div>
 
         {/* Interest Rate Curve */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Interest Rate Curve</h4>
           
           <div className="relative w-full h-48 mb-4">
@@ -138,7 +138,7 @@ export function BorrowRateVisualizer() {
 
       {/* Controls */}
       <div className="w-full max-w-2xl">
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Utilization Control</h4>
           
           <div className="mb-6">

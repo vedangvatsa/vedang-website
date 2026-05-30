@@ -56,7 +56,7 @@ export function RugPullVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">Rug Pull Simulator</h3>
         <p className="text-slate-600 max-w-2xl">Experience how cryptocurrency scams unfold as project creators abandon investors after extracting funds from liquidity pools.</p>
@@ -88,7 +88,7 @@ export function RugPullVisualizer() {
         {/* Main Visualization */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           {/* Liquidity Pool Visualization */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold mb-4 text-slate-800">Liquidity Pool</h4>
             <div className="relative">
               <div className="w-full h-40 bg-slate-100 rounded-lg overflow-hidden relative">
@@ -115,7 +115,7 @@ export function RugPullVisualizer() {
           </div>
 
           {/* Token Metrics */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold mb-4 text-slate-800">Token Metrics</h4>
             <div className="space-y-4">
               <div className="flex justify-between items-center">
@@ -143,7 +143,7 @@ export function RugPullVisualizer() {
         </div>
 
         {/* Interactive Controls */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200 mb-6">
+        <div className="bg-white p-6 rounded-lg border border-slate-200 mb-6">
           <h4 className="text-lg font-semibold mb-4 text-slate-800">{steps[step].title}</h4>
           <p className="text-slate-600 mb-4">{steps[step].desc}</p>
           

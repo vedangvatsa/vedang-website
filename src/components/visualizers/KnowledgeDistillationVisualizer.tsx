@@ -72,7 +72,7 @@ export function KnowledgeDistillationVisualizer() {
   );
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Knowledge Distillation</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -83,7 +83,7 @@ export function KnowledgeDistillationVisualizer() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full max-w-6xl">
         {/* Input Sample Selection */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="font-semibold text-slate-800 mb-4">Input Sample</h4>
           <div className="flex gap-2 mb-4">
             {samples.map((sample, idx) => (
@@ -107,7 +107,7 @@ export function KnowledgeDistillationVisualizer() {
         </div>
 
         {/* Teacher Model */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="font-semibold text-slate-800 mb-4">🎓 Teacher Model (Large)</h4>
           <div className="space-y-3">
             <div className="text-sm font-medium text-slate-700 mb-2">Confident Predictions:</div>
@@ -149,7 +149,7 @@ export function KnowledgeDistillationVisualizer() {
         </div>
 
         {/* Student Model */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="font-semibold text-slate-800 mb-4">🎒 Student Model (Small)</h4>
           <div className="space-y-3 mb-6">
             <div className="text-sm font-medium text-slate-700 mb-2">Learning Progress:</div>

@@ -51,7 +51,7 @@ export function BasisTradeVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Basis Trade Visualizer</h3>
         <p className="text-slate-600">Explore how traders profit from spot-futures price differences through convergence</p>
@@ -59,7 +59,7 @@ export function BasisTradeVisualizer() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
         {/* Controls */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Market Parameters</h4>
           
           <div className="space-y-4">
@@ -130,7 +130,7 @@ export function BasisTradeVisualizer() {
         </div>
 
         {/* Visualization */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Price Convergence</h4>
           
           <div className="relative h-64 bg-slate-50 rounded-lg p-4 mb-4">
@@ -227,7 +227,7 @@ export function BasisTradeVisualizer() {
       </div>
 
       {/* Trade Strategy */}
-      <div className="w-full max-w-4xl bg-white p-6 rounded-xl border border-slate-200">
+      <div className="w-full max-w-4xl bg-white p-6 rounded-lg border border-slate-200">
         <h4 className="text-lg font-semibold text-slate-800 mb-4">Current Strategy</h4>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

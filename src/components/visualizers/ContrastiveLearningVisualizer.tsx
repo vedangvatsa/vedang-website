@@ -110,7 +110,7 @@ export function ContrastiveLearningVisualizer() {
   const currentLoss = selectedAnchor !== null ? contrastiveLoss(selectedAnchor) : 0;
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">Contrastive Learning</h3>
         <p className="text-lg text-slate-600">Learn representations by pulling similar items together and pushing dissimilar items apart</p>
@@ -118,7 +118,7 @@ export function ContrastiveLearningVisualizer() {
 
       <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl">
         <div className="flex flex-col gap-4">
-          <div className="bg-white p-4 rounded-xl border border-slate-200">
+          <div className="bg-white p-4 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-700 mb-3">Controls</h4>
             
             <div className="space-y-4">
@@ -189,7 +189,7 @@ export function ContrastiveLearningVisualizer() {
             </div>
           </div>
 
-          <div className="bg-white p-4 rounded-xl border border-slate-200">
+          <div className="bg-white p-4 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-700 mb-2">Training Stats</h4>
             <div className="space-y-2 text-sm">
               <div>Epoch: <span className="font-mono">{epoch}</span></div>
@@ -200,7 +200,7 @@ export function ContrastiveLearningVisualizer() {
             </div>
           </div>
 
-          <div className="bg-white p-4 rounded-xl border border-slate-200">
+          <div className="bg-white p-4 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-700 mb-2">Legend</h4>
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2">
@@ -220,7 +220,7 @@ export function ContrastiveLearningVisualizer() {
         </div>
 
         <div className="flex-1">
-          <div className="bg-white p-4 rounded-xl border border-slate-200">
+          <div className="bg-white p-4 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-700 mb-4 text-center">Embedding Space Visualization</h4>
             <div className="relative w-full h-96 bg-slate-50 border border-slate-200 rounded-lg overflow-hidden">
               <svg width="100%" height="100%" viewBox="0 0 400 384">

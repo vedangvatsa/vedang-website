@@ -144,7 +144,7 @@ export default function AgenticWebCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <section className="text-center pt-16 pb-12">
-             <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+             <div className="content-width">
                 <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
                     The Agentic Web
                 </h1>
@@ -180,7 +180,7 @@ export default function AgenticWebCoursePage() {
             </div>
         </section>
 
-        <div className="container mx-auto px-4 md:px-6 max-w-5xl py-16 space-y-12">
+        <div className="content-width py-16 space-y-12">
             
         <section id="curriculum" className="py-16 bg-muted/30 border-y -mx-4 px-4 md:-mx-6 md:px-6">
             <div className="max-w-none">
@@ -189,7 +189,7 @@ export default function AgenticWebCoursePage() {
                     <p className="mt-2 text-muted-foreground">Seven modules to understand the Agentic Web.</p>
                 </div>
                 <div className="space-y-4">
-                    <Link href="/agentic-web/module-1-core-idea" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/agentic-web/module-1-core-idea" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">1. The Core Idea: From Information Web to Action Web</h3>
@@ -198,7 +198,7 @@ export default function AgenticWebCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/agentic-web/module-2-components" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/agentic-web/module-2-components" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">2. The Core Components of Agentic Systems</h3>
@@ -207,7 +207,7 @@ export default function AgenticWebCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/agentic-web/module-3-dimensions" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/agentic-web/module-3-dimensions" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">3. The Three Dimensions of the Agentic Web</h3>
@@ -216,7 +216,7 @@ export default function AgenticWebCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/agentic-web/module-4-applications" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/agentic-web/module-4-applications" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">4. Applications: The Agentic Web in Action</h3>
@@ -225,7 +225,7 @@ export default function AgenticWebCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/agentic-web/module-5-future" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/agentic-web/module-5-future" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">5. The Future: Challenges and Opportunities</h3>
@@ -234,7 +234,7 @@ export default function AgenticWebCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/agentic-web/module-6-protocols" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/agentic-web/module-6-protocols" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">6. Protocols Deep Dive: MCP & A2A</h3>
@@ -243,7 +243,7 @@ export default function AgenticWebCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/agentic-web/module-7-build-agent" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/agentic-web/module-7-build-agent" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">7. Build Your First Agent</h3>
@@ -290,7 +290,7 @@ export default function AgenticWebCoursePage() {
                         Your common questions about the Agentic Web, answered.
                     </p>
                 </div>
-                <div className="max-w-5xl mx-auto mt-12">
+                <div className="content-width mt-12">
                     <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
                        {faqItems.map((item, index) => (
                          <AccordionItem key={index} value={`faq-${index + 1}`}>

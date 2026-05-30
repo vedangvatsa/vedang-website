@@ -65,7 +65,7 @@ export function YieldFarmingVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Yield Farming Simulator</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -75,7 +75,7 @@ export function YieldFarmingVisualizer() {
 
       <div className="w-full max-w-4xl space-y-6">
         {/* Investment Amount Slider */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <label className="block text-sm font-semibold text-slate-700 mb-2">
             Investment Amount: ${stakedAmount.toLocaleString()}
           </label>
@@ -99,7 +99,7 @@ export function YieldFarmingVisualizer() {
                 setSelectedProtocol(protocol.id);
                 resetAnimation();
               }}
-              className={`p-6 rounded-xl border-2 transition-all duration-300 ${
+              className={`p-6 rounded-lg border-2 transition-all duration-300 ${
                 selectedProtocol === protocol.id
                   ? `border-${protocol.color}-400 bg-${protocol.color}-50`
                   : 'border-slate-200 bg-white hover:border-slate-300'
@@ -129,7 +129,7 @@ export function YieldFarmingVisualizer() {
 
         {/* Yield Simulation */}
         {selectedProtocol && (
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="flex-1">
                 <h4 className="font-semibold text-slate-800 mb-4">Yield Generation</h4>

@@ -77,7 +77,7 @@ export function DoubleSpendVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Double Spend Problem</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -109,7 +109,7 @@ export function DoubleSpendVisualizer() {
       </div>
 
       <div className="w-full max-w-4xl">
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <div className="flex justify-between items-center mb-6">
             <div className="text-center">
               <div className="text-3xl mb-2">💰</div>

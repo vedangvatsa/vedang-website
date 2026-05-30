@@ -58,7 +58,7 @@ export function OracleVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Oracle Networks</h3>
         <p className="text-slate-600">Interactive visualization of how oracles bring external data to blockchain smart contracts</p>
@@ -103,7 +103,7 @@ export function OracleVisualizer() {
       <div className="w-full max-w-4xl">
         <div className="grid grid-cols-5 gap-4 items-center">
           {/* External World */}
-          <div className={`p-6 rounded-xl text-center transition-all ${
+          <div className={`p-6 rounded-lg text-center transition-all ${
             getStepColor(0) === 'indigo' ? 'bg-indigo-100 border-2 border-indigo-300 scale-105' :
             getStepColor(0) === 'emerald' ? 'bg-emerald-100 border-2 border-emerald-300' :
             'bg-slate-100 border-2 border-slate-200'
@@ -127,7 +127,7 @@ export function OracleVisualizer() {
           </div>
 
           {/* Oracle Nodes */}
-          <div className={`p-6 rounded-xl text-center transition-all ${
+          <div className={`p-6 rounded-lg text-center transition-all ${
             getStepColor(1) === 'indigo' ? 'bg-indigo-100 border-2 border-indigo-300 scale-105' :
             getStepColor(1) === 'emerald' ? 'bg-emerald-100 border-2 border-emerald-300' :
             'bg-slate-100 border-2 border-slate-200'
@@ -155,7 +155,7 @@ export function OracleVisualizer() {
           </div>
 
           {/* Blockchain */}
-          <div className={`p-6 rounded-xl text-center transition-all ${
+          <div className={`p-6 rounded-lg text-center transition-all ${
             getStepColor(4) === 'indigo' ? 'bg-indigo-100 border-2 border-indigo-300 scale-105' :
             getStepColor(4) === 'emerald' ? 'bg-emerald-100 border-2 border-emerald-300' :
             'bg-slate-100 border-2 border-slate-200'

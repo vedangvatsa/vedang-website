@@ -53,7 +53,7 @@ export function SlashingVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Slashing Mechanism</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -63,7 +63,7 @@ export function SlashingVisualizer() {
 
       <div className="flex flex-col gap-6 w-full max-w-4xl">
         {/* Controls */}
-        <div className="flex flex-wrap gap-4 justify-center items-center bg-white p-4 rounded-xl border border-slate-200">
+        <div className="flex flex-wrap gap-4 justify-center items-center bg-white p-4 rounded-lg border border-slate-200">
           <div className="flex flex-col gap-2">
             <label className="text-sm font-medium text-slate-700">Select Validator</label>
             <div className="flex gap-2">
@@ -113,14 +113,14 @@ export function SlashingVisualizer() {
         </div>
 
         {/* Network Visualization */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Validator Network</h4>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {validators.map((validator, index) => (
               <div
                 key={validator.id}
-                className={`relative p-4 rounded-xl border-2 transition-all duration-500 ${
+                className={`relative p-4 rounded-lg border-2 transition-all duration-500 ${
                   validator.slashed ? 'border-rose-300 bg-rose-50' : 'border-slate-200 bg-slate-50'
                 } ${selectedValidator === index ? 'ring-2 ring-amber-400' : ''}`}
               >
@@ -158,7 +158,7 @@ export function SlashingVisualizer() {
 
         {/* Scenario Description */}
         {slashingScenario !== 'none' && (
-          <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
             <h5 className="font-semibold text-blue-800 mb-2">Slashing Rule</h5>
             <p className="text-blue-700 text-sm">
               {slashingRules[slashingScenario].description}
@@ -171,21 +171,21 @@ export function SlashingVisualizer() {
 
         {/* Network Stats */}
         <div className="grid grid-cols-3 gap-4">
-          <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 text-center">
+          <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4 text-center">
             <div className="text-2xl font-bold text-emerald-700">
               {validators.filter(v => v.honest).length}
             </div>
             <div className="text-sm text-emerald-600">Honest Validators</div>
           </div>
           
-          <div className="bg-rose-50 border border-rose-200 rounded-xl p-4 text-center">
+          <div className="bg-rose-50 border border-rose-200 rounded-lg p-4 text-center">
             <div className="text-2xl font-bold text-rose-700">
               {validators.filter(v => v.slashed).length}
             </div>
             <div className="text-sm text-rose-600">Slashed Validators</div>
           </div>
           
-          <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 text-center">
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
             <div className="text-2xl font-bold text-blue-700">
               {validators.reduce((sum, v) => sum + v.stake, 0)}
             </div>

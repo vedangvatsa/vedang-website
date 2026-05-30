@@ -65,7 +65,7 @@ export function KubernetesVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Kubernetes Container Orchestration</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -75,7 +75,7 @@ export function KubernetesVisualizer() {
 
       <div className="flex flex-col items-center gap-6 w-full max-w-4xl">
         {/* Control Panel */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200 w-full">
+        <div className="bg-white p-6 rounded-lg border border-slate-200 w-full">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Kubernetes Control Plane</h4>
           
           <div className="flex flex-wrap items-center gap-4">
@@ -124,7 +124,7 @@ export function KubernetesVisualizer() {
         </div>
 
         {/* Cluster Visualization */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200 w-full">
+        <div className="bg-white p-6 rounded-lg border border-slate-200 w-full">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Kubernetes Cluster</h4>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

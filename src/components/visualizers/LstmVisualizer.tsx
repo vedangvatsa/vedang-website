@@ -74,7 +74,7 @@ export function LstmVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">LSTM Cell Interactive</h3>
         <p className="text-slate-600">Explore how gates control information flow through an LSTM cell</p>
@@ -83,7 +83,7 @@ export function LstmVisualizer() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl">
         {/* Controls */}
         <div className="space-y-6">
-          <div className="bg-white p-4 rounded-xl border border-slate-200">
+          <div className="bg-white p-4 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-700 mb-3">Input Sequence</h4>
             <div className="flex gap-2 mb-3">
               {sequence.map((val, idx) => (
@@ -121,7 +121,7 @@ export function LstmVisualizer() {
             </div>
           </div>
 
-          <div className="bg-white p-4 rounded-xl border border-slate-200">
+          <div className="bg-white p-4 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-700 mb-3">Gate Weights</h4>
             <div className="space-y-3">
               <div>
@@ -165,7 +165,7 @@ export function LstmVisualizer() {
         </div>
 
         {/* LSTM Visualization */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="font-semibold text-slate-700 mb-4">LSTM Cell State</h4>
           
           {/* Current Input */}

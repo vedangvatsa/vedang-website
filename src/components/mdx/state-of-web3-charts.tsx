@@ -149,7 +149,7 @@ export function StateOfWeb3Timeline() {
   const areaD = `${pathD} L ${points[points.length - 1].x} ${height - padding} L ${points[0].x} ${height - padding} Z`;
 
   return (
-    <div className="my-8 rounded-xl border border-border/50 bg-card p-6 shadow-sm overflow-hidden space-y-6">
+    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm overflow-hidden space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h4 className="text-base font-bold text-foreground flex items-center gap-2">
@@ -167,7 +167,7 @@ export function StateOfWeb3Timeline() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-3">
-          <div className="relative bg-muted/20 border border-border/50 rounded-xl p-3">
+          <div className="relative bg-muted/20 border border-border/50 rounded-lg p-3">
             <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto overflow-visible select-none">
               <defs>
                 <linearGradient id="areaGradWeb3" x1="0" y1="0" x2="0" y2="1">
@@ -253,7 +253,7 @@ export function StateOfWeb3Timeline() {
           </div>
         </div>
 
-        <div className="bg-muted/30 border border-border/50 rounded-xl p-4 flex flex-col justify-between space-y-4">
+        <div className="bg-muted/30 border border-border/50 rounded-lg p-4 flex flex-col justify-between space-y-4">
           <div className="space-y-3">
             <div className="flex justify-between items-center pb-2 border-b border-border">
               <span className="text-xl font-bold tracking-tight text-foreground font-mono">
@@ -302,7 +302,7 @@ export function StateOfWeb3NgramAnalyzer() {
   const maxNgramCount = Math.max(...activeNgrams.map(item => item.count));
 
   return (
-    <div className="my-8 rounded-xl border border-border/50 bg-card p-6 shadow-sm space-y-6">
+    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h4 className="text-base font-bold text-foreground">
@@ -385,7 +385,7 @@ export function StateOfWeb3ConvergenceMatrix() {
   const selectedNode = convergenceNodes.find(node => node.id === selectedNodeId) || convergenceNodes[0];
 
   return (
-    <div className="my-8 rounded-xl border border-border/50 bg-card p-6 shadow-sm space-y-6">
+    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm space-y-6">
       <div>
         <h4 className="text-base font-bold text-foreground">
           The Blockchain-Machine Learning Convergence Matrix
@@ -420,11 +420,11 @@ export function StateOfWeb3ConvergenceMatrix() {
           })}
         </div>
 
-        <div className="bg-muted/20 border border-border/50 rounded-xl p-5 flex flex-col justify-center items-center text-center relative overflow-hidden min-h-[180px]">
+        <div className="bg-muted/20 border border-border/50 rounded-lg p-5 flex flex-col justify-center items-center text-center relative overflow-hidden min-h-[180px]">
           <div className="absolute w-40 h-40 border border-primary/10 rounded-full animate-ping opacity-20" />
           
           <div className="relative space-y-4">
-            <div className="w-12 h-12 mx-auto rounded-xl bg-primary flex items-center justify-center shadow-md">
+            <div className="w-12 h-12 mx-auto rounded-lg bg-primary flex items-center justify-center shadow-md">
               <svg className="w-6 h-6 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
@@ -436,7 +436,7 @@ export function StateOfWeb3ConvergenceMatrix() {
           </div>
         </div>
 
-        <div className="bg-muted/30 border border-border/50 rounded-xl p-4 flex flex-col justify-between space-y-4">
+        <div className="bg-muted/30 border border-border/50 rounded-lg p-4 flex flex-col justify-between space-y-4">
           <div className="space-y-2">
             <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Conceptual Strategy</p>
             <p className="text-xs text-muted-foreground leading-relaxed">
@@ -465,7 +465,7 @@ export function StateOfWeb3Momentum() {
   const filteredMomentum = momentumData.filter(item => item.growth >= momentumThreshold);
 
   return (
-    <div className="my-8 rounded-xl border border-border/50 bg-card p-6 shadow-sm space-y-6">
+    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h4 className="text-base font-bold text-foreground">
@@ -540,7 +540,7 @@ export function StateOfWeb3Citations() {
   };
 
   return (
-    <div className="my-8 rounded-xl border border-border/50 bg-card p-6 shadow-sm space-y-6">
+    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h4 className="text-base font-bold text-foreground">
@@ -556,7 +556,7 @@ export function StateOfWeb3Citations() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-        <div className="bg-muted/20 border border-border/40 rounded-xl p-4 flex flex-col justify-center space-y-3">
+        <div className="bg-muted/20 border border-border/40 rounded-lg p-4 flex flex-col justify-center space-y-3">
           <p className="text-[10px] text-muted-foreground uppercase font-mono tracking-wider">Distribution Segment Selector</p>
           <input 
             type="range" 
@@ -576,7 +576,7 @@ export function StateOfWeb3Citations() {
           </div>
         </div>
 
-        <div className="bg-muted/30 border border-border/50 rounded-xl p-5 text-center flex flex-col justify-center items-center relative overflow-hidden">
+        <div className="bg-muted/30 border border-border/50 rounded-lg p-5 text-center flex flex-col justify-center items-center relative overflow-hidden">
           {isNakamotoHighlight ? (
             <div className="space-y-1">
               <p className="text-[9px] uppercase font-mono tracking-widest text-destructive font-bold">Absolute Extreme Outlier</p>

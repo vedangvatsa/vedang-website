@@ -95,7 +95,7 @@ export function SequencerVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Rollup Sequencer</h3>
         <p className="text-slate-600">
@@ -129,7 +129,7 @@ export function SequencerVisualizer() {
       <div className="w-full max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Transaction Pool */}
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="font-bold text-slate-800 mb-4">Transaction Pool</h4>
             <div className="space-y-2 min-h-[200px]">
               {transactions.map(tx => (
@@ -159,7 +159,7 @@ export function SequencerVisualizer() {
           </div>
 
           {/* Sequencer */}
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="font-bold text-slate-800 mb-4">
               {sequencerType === 'centralized' ? 'Centralized' : 'Decentralized'} Sequencer
             </h4>
@@ -219,7 +219,7 @@ export function SequencerVisualizer() {
           </div>
 
           {/* Layer 1 */}
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="font-bold text-slate-800 mb-4">Layer 1 (Ethereum)</h4>
             <div className="space-y-3 min-h-[300px] overflow-y-auto">
               {l1Blocks.slice(-5).map(block => (

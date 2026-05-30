@@ -79,7 +79,7 @@ export function ExpertSystemsVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Expert Systems</h3>
         <p className="text-slate-600">Interactive medical diagnosis system showing knowledge base and inference engine</p>
@@ -87,7 +87,7 @@ export function ExpertSystemsVisualizer() {
 
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Patient Cases */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Patient Cases</h4>
           <div className="space-y-3">
             {medicalCases.map((case_) => (
@@ -119,7 +119,7 @@ export function ExpertSystemsVisualizer() {
         </div>
 
         {/* Knowledge Base */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Knowledge Base</h4>
           <div className="space-y-3">
             {rules.map((rule) => (
@@ -150,7 +150,7 @@ export function ExpertSystemsVisualizer() {
         </div>
 
         {/* Inference Engine & Results */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Inference Engine</h4>
           
           {!selectedCase ? (

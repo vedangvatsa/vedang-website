@@ -40,14 +40,14 @@ export function ChunkingVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">Chunking Strategy Visualizer</h3>
         <p className="text-lg text-slate-600">Explore how chunk size affects retrieval precision and context in RAG systems</p>
       </div>
 
       <div className="w-full max-w-4xl space-y-6">
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-2">
@@ -91,7 +91,7 @@ export function ChunkingVisualizer() {
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Document Chunks</h4>
           <div className="grid gap-3">
             {chunks.map((chunk, index) => {
@@ -126,7 +126,7 @@ export function ChunkingVisualizer() {
         </div>
 
         {showRelevance && (
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Retrieval Analysis</h4>
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center p-4 bg-emerald-50 rounded-lg">

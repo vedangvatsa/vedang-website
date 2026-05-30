@@ -54,14 +54,14 @@ export function GitVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Git Branching and Merging</h3>
         <p className="text-slate-600 max-w-2xl">Visualize how branches diverge and merge in version control</p>
       </div>
 
       <div className="w-full max-w-2xl">
-        <svg viewBox="0 0 600 320" className="w-full border border-slate-200 rounded-xl bg-white">
+        <svg viewBox="0 0 600 320" className="w-full border border-slate-200 rounded-lg bg-white">
           {/* Branch labels */}
           <text x={20} y={125} fontSize="11" fill="#8b5cf6" fontWeight="600">feature</text>
           <text x={20} y={205} fontSize="11" fill="#3b82f6" fontWeight="600">main</text>
@@ -145,7 +145,7 @@ export function GitVisualizer() {
       </div>
 
       {selectedCommit && (
-        <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-4 max-w-md">
+        <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4 max-w-md">
           <div className="font-mono text-sm text-indigo-800 font-semibold">
             commit {selectedCommit}
           </div>

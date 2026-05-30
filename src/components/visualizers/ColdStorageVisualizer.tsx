@@ -44,7 +44,7 @@ export function ColdStorageVisualizer() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Cold Storage vs Hot Wallet</h3>
         <p className="text-slate-600 max-w-2xl">See how offline storage protects crypto assets from online threats</p>
@@ -66,7 +66,7 @@ export function ColdStorageVisualizer() {
       </div>
 
       <div className="w-full max-w-2xl">
-        <svg viewBox="0 0 600 400" className="w-full border border-slate-200 rounded-xl bg-white">
+        <svg viewBox="0 0 600 400" className="w-full border border-slate-200 rounded-lg bg-white">
           {/* Central wallet */}
           <g transform="translate(300, 200)">
             {/* Shield / vault */}
@@ -207,7 +207,7 @@ export function ColdStorageVisualizer() {
       {mode === 'cold' && (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-2xl">
           {coldFeatures.map((f, i) => (
-            <div key={i} className="bg-blue-50 border border-blue-200 rounded-xl p-4 text-center">
+            <div key={i} className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
               <div className="text-2xl mb-2">{f.icon}</div>
               <div className="font-semibold text-blue-900 text-sm">{f.label}</div>
               <div className="text-blue-700 text-xs mt-1">{f.desc}</div>

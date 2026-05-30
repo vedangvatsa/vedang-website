@@ -97,7 +97,7 @@ export default async function GlossaryTermPage({ params }: PageProps) {
       ]} />
 
       <section className="text-center pt-12 pb-8 border-b border-border/30">
-        <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+        <div className="content-width">
           <Link 
             href="/glossary" 
             className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-6"
@@ -122,7 +122,7 @@ export default async function GlossaryTermPage({ params }: PageProps) {
         </div>
       </section>
 
-      <article className="container mx-auto px-4 md:px-6 max-w-3xl py-16">
+      <article className="content-width py-16">
         <div className="space-y-6 mb-12">
           {(() => {
             // Split on explicit paragraph breaks first

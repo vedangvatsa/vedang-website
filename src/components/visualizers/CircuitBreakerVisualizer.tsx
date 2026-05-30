@@ -76,7 +76,7 @@ export function CircuitBreakerVisualizer() {
   };
   
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Circuit Breaker Pattern</h3>
         <p className="text-slate-600">Interactive visualization showing how circuit breakers prevent cascading failures in distributed systems</p>
@@ -84,7 +84,7 @@ export function CircuitBreakerVisualizer() {
       
       <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl">
         <div className="flex-1 space-y-6">
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-700 mb-4">Service Health Control</h4>
             <div className="space-y-4">
               <div>
@@ -131,7 +131,7 @@ export function CircuitBreakerVisualizer() {
             </div>
           </div>
           
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-700 mb-4">Circuit State</h4>
             <div className="flex items-center gap-4">
               <div className={`w-16 h-16 rounded-full bg-${getCircuitColor()}-100 border-4 border-${getCircuitColor()}-500 flex items-center justify-center`}>
@@ -163,7 +163,7 @@ export function CircuitBreakerVisualizer() {
         </div>
         
         <div className="flex-1 space-y-6">
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-700 mb-4">System Architecture</h4>
             <div className="flex items-center justify-between">
               <div className="text-center">
@@ -200,7 +200,7 @@ export function CircuitBreakerVisualizer() {
             </div>
           </div>
           
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-700 mb-4">Recent Requests</h4>
             <div className="space-y-2">
               {requests.length === 0 ? (

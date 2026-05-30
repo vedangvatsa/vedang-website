@@ -91,7 +91,7 @@ export function ThroughputVisualizer() {
   const avgLatency = completedCount > 0 ? (processingLatency / 1000).toFixed(2) : '0.00';
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">Throughput vs Latency</h3>
         <p className="text-slate-600 text-lg">
@@ -167,7 +167,7 @@ export function ThroughputVisualizer() {
         </button>
       </div>
 
-      <div className="w-full max-w-4xl bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+      <div className="w-full max-w-4xl bg-white rounded-lg p-6 shadow-sm border border-slate-200">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           <div className="text-center p-4 bg-slate-100 rounded-lg">
             <div className="text-2xl font-bold text-slate-800">{throughput}</div>

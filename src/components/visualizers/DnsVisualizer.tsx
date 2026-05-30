@@ -43,7 +43,7 @@ export function DnsVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">DNS Resolution Journey</h3>
         <p className="text-slate-600 max-w-2xl">Follow a domain name as it gets translated into an IP address</p>
@@ -70,7 +70,7 @@ export function DnsVisualizer() {
       </div>
 
       <div className="w-full max-w-3xl">
-        <svg viewBox="0 0 600 400" className="w-full border border-slate-200 rounded-xl bg-white">
+        <svg viewBox="0 0 600 400" className="w-full border border-slate-200 rounded-lg bg-white">
           {/* Connection arrows */}
           {connections.map(([from, to], i) => {
             const f = steps[from];
@@ -129,13 +129,13 @@ export function DnsVisualizer() {
       </div>
 
       {step >= 0 && step < steps.length && (
-        <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-4 max-w-lg text-center">
+        <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4 max-w-lg text-center">
           <p className="text-indigo-800 text-sm font-medium">{steps[step].desc}</p>
         </div>
       )}
 
       {Object.keys(cache).length > 0 && (
-        <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 max-w-lg">
+        <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4 max-w-lg">
           <h4 className="font-semibold text-emerald-900 text-sm mb-2">DNS Cache</h4>
           {Object.entries(cache).map(([d, ip]) => (
             <div key={d} className="flex justify-between text-sm text-emerald-700">

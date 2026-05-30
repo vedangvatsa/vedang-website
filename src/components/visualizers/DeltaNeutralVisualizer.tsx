@@ -37,7 +37,7 @@ export function DeltaNeutralVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Delta Neutral Strategy</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -47,7 +47,7 @@ export function DeltaNeutralVisualizer() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl">
         {/* Controls */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200 space-y-4">
+        <div className="bg-white p-6 rounded-lg border border-slate-200 space-y-4">
           <h4 className="font-semibold text-slate-700 mb-4">Market Parameters</h4>
           
           <div>
@@ -97,7 +97,7 @@ export function DeltaNeutralVisualizer() {
         </div>
 
         {/* Position Visualization */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="font-semibold text-slate-700 mb-4">Portfolio Positions</h4>
           
           {/* Spot Position */}
@@ -139,7 +139,7 @@ export function DeltaNeutralVisualizer() {
         </div>
 
         {/* Funding Payment Visualization */}
-        <div className="lg:col-span-2 bg-white p-6 rounded-xl border border-slate-200">
+        <div className="lg:col-span-2 bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="font-semibold text-slate-700 mb-4">Funding Rate Payments</h4>
           
           <div className="flex items-center justify-between mb-4">

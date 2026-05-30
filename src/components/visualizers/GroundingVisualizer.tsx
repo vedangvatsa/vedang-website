@@ -64,7 +64,7 @@ export function GroundingVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">AI Grounding Visualization</h3>
         <p className="text-slate-600 max-w-2xl">Compare how ungrounded vs grounded AI models respond to queries. Grounded models verify claims against external sources.</p>
@@ -93,7 +93,7 @@ export function GroundingVisualizer() {
         </button>
       </div>
 
-      <div className="w-full max-w-4xl bg-white rounded-xl p-6 shadow-lg">
+      <div className="w-full max-w-4xl bg-white rounded-lg p-6 shadow-lg">
         <div className="mb-6">
           <h4 className="text-lg font-semibold text-slate-700 mb-3">Select a Query:</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">

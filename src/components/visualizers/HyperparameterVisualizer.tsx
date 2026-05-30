@@ -108,7 +108,7 @@ export function HyperparameterVisualizer() {
   const status = getTrainingStatus();
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">Hyperparameter Explorer</h3>
         <p className="text-slate-600 text-lg">
@@ -117,7 +117,7 @@ export function HyperparameterVisualizer() {
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <label className="block text-sm font-semibold text-slate-700 mb-2">
             Learning Rate: {learningRate.toFixed(3)}
           </label>
@@ -135,7 +135,7 @@ export function HyperparameterVisualizer() {
           </div>
         </div>
         
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <label className="block text-sm font-semibold text-slate-700 mb-2">
             Batch Size: {batchSize}
           </label>
@@ -153,7 +153,7 @@ export function HyperparameterVisualizer() {
           </div>
         </div>
         
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <label className="block text-sm font-semibold text-slate-700 mb-2">
             Hidden Layers: {hiddenLayers}
           </label>
@@ -172,7 +172,7 @@ export function HyperparameterVisualizer() {
         </div>
       </div>
       
-      <div className="bg-white p-6 rounded-xl border border-slate-200 w-full max-w-4xl">
+      <div className="bg-white p-6 rounded-lg border border-slate-200 w-full max-w-4xl">
         <h4 className="text-lg font-semibold text-slate-800 mb-4">Network Architecture</h4>
         <div className="flex justify-center mb-6">
           {getNetworkVisualization()}

@@ -81,7 +81,7 @@ export function WebsocketVisualizer() {
   );
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">WebSocket vs HTTP Communication</h3>
         <p className="text-slate-600">Compare persistent WebSocket connections with traditional HTTP request-response cycles</p>
@@ -110,7 +110,7 @@ export function WebsocketVisualizer() {
         </button>
       </div>
 
-      <div className="w-full max-w-4xl bg-white rounded-xl border border-slate-200 p-6">
+      <div className="w-full max-w-4xl bg-white rounded-lg border border-slate-200 p-6">
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">

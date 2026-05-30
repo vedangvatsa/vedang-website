@@ -71,7 +71,7 @@ export function ValueAtRiskVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Value at Risk (VaR) Calculator</h3>
         <p className="text-slate-600">Adjust parameters to see how VaR quantifies maximum expected loss at different confidence levels</p>
@@ -79,7 +79,7 @@ export function ValueAtRiskVisualizer() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
         {/* Controls */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200 space-y-6">
+        <div className="bg-white p-6 rounded-lg border border-slate-200 space-y-6">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Portfolio Parameters</h4>
           
           <div className="space-y-4">
@@ -157,7 +157,7 @@ export function ValueAtRiskVisualizer() {
         </div>
 
         {/* VaR Results */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">VaR Calculation</h4>
           
           <div className="space-y-4">
@@ -202,7 +202,7 @@ export function ValueAtRiskVisualizer() {
       </div>
 
       {/* Distribution Visualization */}
-      <div className="bg-white p-6 rounded-xl border border-slate-200 w-full max-w-6xl">
+      <div className="bg-white p-6 rounded-lg border border-slate-200 w-full max-w-6xl">
         <h4 className="text-lg font-semibold text-slate-800 mb-4">Return Distribution & VaR Threshold</h4>
         
         <div className="relative h-64 bg-slate-50 rounded-lg p-4">

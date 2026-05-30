@@ -26,7 +26,7 @@ export function WalletVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Web3 Wallet</h3>
         <p className="text-slate-600 text-sm max-w-2xl">
@@ -59,7 +59,7 @@ export function WalletVisualizer() {
 
       <div className="w-full max-w-4xl">
         {walletType === 'custodial' ? (
-          <div className="bg-white rounded-xl p-6 border border-blue-200">
+          <div className="bg-white rounded-lg p-6 border border-blue-200">
             <h4 className="text-lg font-semibold text-blue-800 mb-4 flex items-center gap-2">
               <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
               Custodial Wallet (Exchange)
@@ -88,7 +88,7 @@ export function WalletVisualizer() {
             </div>
           </div>
         ) : (
-          <div className="bg-white rounded-xl p-6 border border-emerald-200">
+          <div className="bg-white rounded-lg p-6 border border-emerald-200">
             <h4 className="text-lg font-semibold text-emerald-800 mb-4 flex items-center gap-2">
               <div className="w-3 h-3 bg-emerald-500 rounded-full"></div>
               Non-Custodial Wallet (Self-Custody)
@@ -124,7 +124,7 @@ export function WalletVisualizer() {
       </div>
 
       <div className="w-full max-w-4xl">
-        <div className="bg-white rounded-xl p-6 border border-indigo-200">
+        <div className="bg-white rounded-lg p-6 border border-indigo-200">
           <h4 className="text-lg font-semibold text-indigo-800 mb-4">Transaction Signing Process</h4>
           
           <button

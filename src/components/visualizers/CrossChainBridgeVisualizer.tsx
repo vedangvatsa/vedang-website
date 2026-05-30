@@ -65,7 +65,7 @@ export function CrossChainBridgeVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Cross-Chain Bridge Visualizer</h3>
         <p className="text-slate-600">See how tokens are locked on one chain and wrapped tokens are minted on another</p>
@@ -123,7 +123,7 @@ export function CrossChainBridgeVisualizer() {
       <div className="flex items-center gap-12 w-full max-w-4xl">
         {/* Source Chain */}
         <div className="flex-1">
-          <div className={`${chains[selectedSourceChain].color} rounded-xl p-6 text-white text-center relative`}>
+          <div className={`${chains[selectedSourceChain].color} rounded-lg p-6 text-white text-center relative`}>
             <h4 className="text-xl font-bold mb-4">{chains[selectedSourceChain].name}</h4>
             
             <div className="space-y-3">
@@ -139,7 +139,7 @@ export function CrossChainBridgeVisualizer() {
             </div>
 
             {bridgeStep === 1 && (
-              <div className="absolute inset-0 bg-white/20 rounded-xl flex items-center justify-center">
+              <div className="absolute inset-0 bg-white/20 rounded-lg flex items-center justify-center">
                 <div className="text-center">
                   <div className="animate-spin w-8 h-8 border-2 border-white border-t-transparent rounded-full mx-auto mb-2"></div>
                   <p className="text-sm">Locking tokens...</p>
@@ -174,7 +174,7 @@ export function CrossChainBridgeVisualizer() {
 
         {/* Destination Chain */}
         <div className="flex-1">
-          <div className={`${chains[selectedDestChain].color} rounded-xl p-6 text-white text-center relative`}>
+          <div className={`${chains[selectedDestChain].color} rounded-lg p-6 text-white text-center relative`}>
             <h4 className="text-xl font-bold mb-4">{chains[selectedDestChain].name}</h4>
             
             <div className="space-y-3">
@@ -190,7 +190,7 @@ export function CrossChainBridgeVisualizer() {
             </div>
 
             {bridgeStep === 3 && (
-              <div className="absolute inset-0 bg-white/20 rounded-xl flex items-center justify-center">
+              <div className="absolute inset-0 bg-white/20 rounded-lg flex items-center justify-center">
                 <div className="text-center">
                   <div className="animate-spin w-8 h-8 border-2 border-white border-t-transparent rounded-full mx-auto mb-2"></div>
                   <p className="text-sm">Minting wrapped tokens...</p>

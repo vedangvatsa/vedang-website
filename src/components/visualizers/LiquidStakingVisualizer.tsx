@@ -49,7 +49,7 @@ export function LiquidStakingVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Liquid Staking Visualization</h3>
         <p className="text-slate-600">Stake tokens while maintaining liquidity through derivative tokens</p>
@@ -86,7 +86,7 @@ export function LiquidStakingVisualizer() {
         ))}
       </div>
 
-      <div className="relative w-full max-w-4xl h-80 bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <div className="relative w-full max-w-4xl h-80 bg-white rounded-lg border border-slate-200 overflow-hidden">
         {step === 0 && (
           <div className="flex items-center justify-center h-full gap-12">
             <div className="flex flex-col items-center">

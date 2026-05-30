@@ -84,7 +84,7 @@ export function DaoVisualizer() {
   const noPercentage = totalVotes > 0 ? (currentProposal.noVotes / totalVotes) * 100 : 0;
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-4">
           Decentralized Autonomous Organization (DAO)
@@ -113,7 +113,7 @@ export function DaoVisualizer() {
 
       {/* Step Content */}
       {currentStep === 0 && (
-        <div className="w-full max-w-4xl bg-white rounded-xl p-6 border border-slate-200">
+        <div className="w-full max-w-4xl bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-xl font-semibold text-slate-800 mb-4">Token Distribution</h4>
           <div className="grid grid-cols-5 gap-4 mb-6">
             {members.map(member => (
@@ -149,7 +149,7 @@ export function DaoVisualizer() {
       )}
 
       {currentStep === 1 && (
-        <div className="w-full max-w-4xl bg-white rounded-xl p-6 border border-slate-200">
+        <div className="w-full max-w-4xl bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-xl font-semibold text-slate-800 mb-4">Active Proposals</h4>
           <div className="grid gap-4">
             {proposals.map((proposal, index) => (
@@ -178,7 +178,7 @@ export function DaoVisualizer() {
       )}
 
       {currentStep === 2 && (
-        <div className="w-full max-w-4xl bg-white rounded-xl p-6 border border-slate-200">
+        <div className="w-full max-w-4xl bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-xl font-semibold text-slate-800 mb-4">Voting on: {currentProposal.title}</h4>
           
           <div className="grid grid-cols-2 gap-6 mb-6">
@@ -235,7 +235,7 @@ export function DaoVisualizer() {
       )}
 
       {currentStep === 3 && (
-        <div className="w-full max-w-4xl bg-white rounded-xl p-6 border border-slate-200">
+        <div className="w-full max-w-4xl bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-xl font-semibold text-slate-800 mb-4">Smart Contract Execution</h4>
           
           <div className="bg-slate-50 p-4 rounded-lg border mb-6">

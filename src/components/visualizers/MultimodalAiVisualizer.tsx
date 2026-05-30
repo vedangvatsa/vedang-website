@@ -62,7 +62,7 @@ export function MultimodalAiVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Multimodal AI System</h3>
         <p className="text-slate-600">Select different data modalities to see how AI processes them together</p>
@@ -77,7 +77,7 @@ export function MultimodalAiVisualizer() {
             <button
               key={modality.id}
               onClick={() => toggleInput(modality.id)}
-              className={`p-4 rounded-xl border-2 transition-all hover:shadow-md ${colorClass}`}
+              className={`p-4 rounded-lg border-2 transition-all hover:shadow-md ${colorClass}`}
             >
               <div className="text-2xl mb-2">{modality.icon}</div>
               <div className="font-semibold text-slate-800">{modality.name}</div>
@@ -105,7 +105,7 @@ export function MultimodalAiVisualizer() {
             </button>
           </div>
 
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <div className="flex justify-between items-center mb-6">
               {processingSteps.map((step, index) => (
                 <div key={step} className="flex flex-col items-center">

@@ -70,7 +70,7 @@ export function AiSafetyVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">AI Safety Interactive Lab</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -80,7 +80,7 @@ export function AiSafetyVisualizer() {
       </div>
 
       <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl">
-        <div className="flex-1 bg-white rounded-xl p-6 border border-slate-200">
+        <div className="flex-1 bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Select AI System</h4>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
             {Object.entries(systems).map(([key, system]) => (
@@ -140,7 +140,7 @@ export function AiSafetyVisualizer() {
           </button>
         </div>
 
-        <div className="flex-1 bg-white rounded-xl p-6 border border-slate-200">
+        <div className="flex-1 bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Risk Assessment</h4>
           
           <div className="mb-6">

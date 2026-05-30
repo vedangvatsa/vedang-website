@@ -40,7 +40,7 @@ export function GrpcVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">gRPC vs REST Communication</h3>
         <p className="text-slate-600">Interactive comparison of gRPC and REST protocols with animated request flows</p>
@@ -94,7 +94,7 @@ export function GrpcVisualizer() {
 
       <div className="w-full max-w-4xl">
         {selectedProtocol === 'grpc' ? (
-          <div className="bg-white rounded-xl p-6 border border-blue-200">
+          <div className="bg-white rounded-lg p-6 border border-blue-200">
             <div className="text-center mb-6">
               <h4 className="text-xl font-bold text-blue-700 mb-2">gRPC Communication Flow</h4>
               <div className="text-sm text-slate-600 bg-blue-50 p-3 rounded-lg">
@@ -172,7 +172,7 @@ export function GrpcVisualizer() {
             </div>
           </div>
         ) : (
-          <div className="bg-white rounded-xl p-6 border border-emerald-200">
+          <div className="bg-white rounded-lg p-6 border border-emerald-200">
             <div className="text-center mb-6">
               <h4 className="text-xl font-bold text-emerald-700 mb-2">REST Communication Flow</h4>
               <div className="text-sm text-slate-600 bg-emerald-50 p-3 rounded-lg">
@@ -253,7 +253,7 @@ export function GrpcVisualizer() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
-        <div className="bg-white p-6 rounded-xl border border-blue-200">
+        <div className="bg-white p-6 rounded-lg border border-blue-200">
           <h5 className="font-bold text-blue-700 mb-3">gRPC Advantages</h5>
           <ul className="text-sm text-slate-600 space-y-2">
             <li className="flex items-center gap-2">
@@ -275,7 +275,7 @@ export function GrpcVisualizer() {
           </ul>
         </div>
         
-        <div className="bg-white p-6 rounded-xl border border-emerald-200">
+        <div className="bg-white p-6 rounded-lg border border-emerald-200">
           <h5 className="font-bold text-emerald-700 mb-3">REST Advantages</h5>
           <ul className="text-sm text-slate-600 space-y-2">
             <li className="flex items-center gap-2">

@@ -63,7 +63,7 @@ export function EdgeAiVisualizer() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Edge AI Processing</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -120,7 +120,7 @@ export function EdgeAiVisualizer() {
         </div>
 
         {/* Visualization */}
-        <div className="relative bg-white rounded-xl border border-slate-200 p-6 h-96">
+        <div className="relative bg-white rounded-lg border border-slate-200 p-6 h-96">
           {/* Devices */}
           {devices.map((device, index) => (
             <div

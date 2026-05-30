@@ -40,7 +40,7 @@ export function LiquidRestakingVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Liquid Restaking Visualizer</h3>
         <p className="text-slate-600">Explore how ETH can be staked multiple times across different networks for enhanced yields and risks</p>
@@ -82,7 +82,7 @@ export function LiquidRestakingVisualizer() {
         </div>
 
         {/* Visualization Area */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200 min-h-96">
+        <div className="bg-white rounded-lg p-6 border border-slate-200 min-h-96">
           {currentStep === 0 && (
             <div className="flex flex-col items-center justify-center h-full">
               <div className="w-24 h-24 bg-indigo-500 rounded-full flex items-center justify-center mb-4">

@@ -40,7 +40,7 @@ export default function DashboardCharts() {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
       
       {/* Department share */}
-      <div className="rounded-xl border bg-white p-5 shadow-sm flex flex-col justify-between">
+      <div className="rounded-lg border bg-white p-5 shadow-sm flex flex-col justify-between">
         <div>
           <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Departmental Distribution (%)</h3>
           <p className="text-[10px] text-muted-foreground mt-1">Side-by-side percentage split comparison across core tech nodes.</p>
@@ -66,7 +66,7 @@ export default function DashboardCharts() {
       </div>
 
       {/* Top Skills radar */}
-      <div className="rounded-xl border bg-white p-5 shadow-sm flex flex-col justify-between">
+      <div className="rounded-lg border bg-white p-5 shadow-sm flex flex-col justify-between">
         <div>
           <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Top Tech Skills Focus (%)</h3>
           <p className="text-[10px] text-muted-foreground mt-1">Radar overlay showing comparative skill tag densities.</p>

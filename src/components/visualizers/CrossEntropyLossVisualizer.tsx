@@ -60,7 +60,7 @@ export function CrossEntropyLossVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Cross-Entropy Loss Visualizer</h3>
         <p className="text-slate-600">Explore how prediction confidence affects loss values in classification</p>
@@ -69,7 +69,7 @@ export function CrossEntropyLossVisualizer() {
       <div className="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Left Panel - Interactive Controls */}
         <div className="space-y-6">
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+          <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Model Predictions</h4>
             
             {classes.map((className, index) => (
@@ -120,7 +120,7 @@ export function CrossEntropyLossVisualizer() {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+          <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Quick Examples</h4>
             <div className="grid grid-cols-1 gap-3">
               <button
@@ -152,7 +152,7 @@ export function CrossEntropyLossVisualizer() {
 
         {/* Right Panel - Results */}
         <div className="space-y-6">
-          <div className={`bg-white p-6 rounded-xl shadow-sm border border-slate-200 transition-all duration-300 ${animating ? 'scale-105' : ''}`}>
+          <div className={`bg-white p-6 rounded-lg shadow-sm border border-slate-200 transition-all duration-300 ${animating ? 'scale-105' : ''}`}>
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Cross-Entropy Loss</h4>
             
             <div className="text-center mb-6">
@@ -176,7 +176,7 @@ export function CrossEntropyLossVisualizer() {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+          <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Loss Visualization</h4>
             
             {/* Loss meter */}

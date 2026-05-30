@@ -59,7 +59,7 @@ export function IpfsVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">IPFS vs HTTP File Sharing</h3>
         <p className="text-slate-600">Compare location-based HTTP with content-addressed IPFS protocols</p>
@@ -86,7 +86,7 @@ export function IpfsVisualizer() {
       </div>
 
       {/* Network Visualization */}
-      <div className="w-full max-w-4xl bg-white rounded-xl border border-slate-200 p-6">
+      <div className="w-full max-w-4xl bg-white rounded-lg border border-slate-200 p-6">
         {mode === 'http' ? (
           <div className="flex flex-col items-center gap-8">
             <div className="flex justify-between items-center w-full">

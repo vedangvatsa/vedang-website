@@ -41,7 +41,7 @@ export function ClipVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">CLIP: Contrastive Language-Image Pre-training</h3>
         <p className="text-slate-600">Interactive visualization of how CLIP learns to align images and text in a shared embedding space</p>
@@ -49,7 +49,7 @@ export function ClipVisualizer() {
 
       <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl">
         {/* Image Encoder */}
-        <div className="flex-1 bg-white p-6 rounded-xl border border-slate-200">
+        <div className="flex-1 bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-700 mb-4">Image Encoder (Vision Transformer)</h4>
           <div className="grid grid-cols-2 gap-3">
             {imageData.map((img) => (
@@ -70,7 +70,7 @@ export function ClipVisualizer() {
         </div>
 
         {/* Embedding Space */}
-        <div className="flex-1 bg-white p-6 rounded-xl border border-slate-200">
+        <div className="flex-1 bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-700 mb-4">Shared Embedding Space</h4>
           <div className="relative h-64 bg-slate-100 rounded-lg border">
             <svg className="w-full h-full">
@@ -151,7 +151,7 @@ export function ClipVisualizer() {
         </div>
 
         {/* Text Encoder */}
-        <div className="flex-1 bg-white p-6 rounded-xl border border-slate-200">
+        <div className="flex-1 bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-700 mb-4">Text Encoder (Transformer)</h4>
           <div className="space-y-3">
             {textData.map((txt) => (
@@ -172,7 +172,7 @@ export function ClipVisualizer() {
       </div>
 
       {/* Contrastive Learning Demo */}
-      <div className="w-full max-w-4xl bg-white p-6 rounded-xl border border-slate-200">
+      <div className="w-full max-w-4xl bg-white p-6 rounded-lg border border-slate-200">
         <h4 className="text-lg font-semibold text-slate-700 mb-4">Contrastive Learning Process</h4>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
           {imageData.map((img, imgIdx) => 

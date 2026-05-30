@@ -270,7 +270,7 @@ export default function HealthProtocolsPage() {
           </div>
           <p className="text-muted-foreground text-sm mb-8">&ldquo;Every calorie must fight for its life.&rdquo;</p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-xl overflow-hidden border mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-lg overflow-hidden border mb-8">
             {[
               { val: '2,250', lab: 'Calories', sub: '10% restriction' },
               { val: '130g', lab: 'Protein', sub: '25%' },
@@ -285,7 +285,7 @@ export default function HealthProtocolsPage() {
             ))}
           </div>
 
-          <div className="space-y-px rounded-xl overflow-hidden border">
+          <div className="space-y-px rounded-lg overflow-hidden border">
             {meals.map(meal => (
               <div key={meal.name} className="bg-card flex gap-4 p-4">
                 <span className="text-xs font-mono text-muted-foreground shrink-0 w-16 pt-0.5">{meal.time}</span>
@@ -304,7 +304,7 @@ export default function HealthProtocolsPage() {
             <p className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Longevity Mix Ingredients</p>
             <Src href={LONGEVITY_MIX_SOURCE}>product page</Src>
           </div>
-          <div className="space-y-px rounded-xl overflow-hidden border">
+          <div className="space-y-px rounded-lg overflow-hidden border">
             {longevityMix.map(item => (
               <div key={item.ingredient} className="bg-card flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 p-4">
                 <div className="flex-1 flex justify-between items-baseline min-w-0">
@@ -325,7 +325,7 @@ export default function HealthProtocolsPage() {
           </div>
           <p className="text-muted-foreground text-sm mb-8">6 hours per week. 3 strength + 3 cardio. Injury prevention is priority #1.</p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-xl overflow-hidden border mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-lg overflow-hidden border mb-8">
             {[
               { val: '6 hrs', lab: 'Weekly Total', sub: '~50 min/day' },
               { val: '150 min', lab: 'Zone 2 Cardio', sub: '60-70% max HR' },
@@ -344,7 +344,7 @@ export default function HealthProtocolsPage() {
             <p className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Weekly Schedule</p>
             <Src href={EXERCISE_SOURCE}>exercise guide</Src>
           </div>
-          <div className="space-y-px rounded-xl overflow-hidden border mb-6">
+          <div className="space-y-px rounded-lg overflow-hidden border mb-6">
             {weeklySchedule.map(day => (
               <div key={day.day} className="bg-card flex flex-col sm:flex-row gap-2 sm:gap-4 p-4">
                 <span className="text-xs font-mono text-muted-foreground/60 shrink-0 sm:w-20">{day.day}</span>
@@ -379,7 +379,7 @@ export default function HealthProtocolsPage() {
           </div>
           <p className="text-muted-foreground text-sm mb-8">Pills and capsules taken with breakfast. Food-based supplements (Longevity Mix, EVOO, Collagen, Creatine) are listed in the Nutrition section. Consolidated from 100+ pills into Blueprint-branded blends in 2026.</p>
 
-          <div className="space-y-px rounded-xl overflow-hidden border">
+          <div className="space-y-px rounded-lg overflow-hidden border">
             {supplements.map(supp => (
               <div key={supp.name} className="bg-card flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 p-4">
                 <div className="flex-1 min-w-0">
@@ -405,7 +405,7 @@ export default function HealthProtocolsPage() {
             &ldquo;Sleep is the world&apos;s most powerful drug.&rdquo; Bryan treats sleep as the single highest-ROI health investment.
           </p>
 
-          <div className="space-y-px rounded-xl overflow-hidden border">
+          <div className="space-y-px rounded-lg overflow-hidden border">
             {sleepHabits.map((item, idx) => (
               <div key={idx} className="bg-card flex items-start gap-4 p-4">
                 <span className="text-xs font-mono text-muted-foreground/50 shrink-0 w-5 text-right mt-0.5">{idx + 1}</span>
@@ -424,7 +424,7 @@ export default function HealthProtocolsPage() {
           </div>
           <p className="text-muted-foreground text-sm mb-8">Protection-first approach. Prevent sun damage, support collagen, use targeted actives.</p>
 
-          <div className="space-y-px rounded-xl overflow-hidden border">
+          <div className="space-y-px rounded-lg overflow-hidden border">
             {skincare.map((item, idx) => (
               <div key={idx} className="bg-card flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 p-4">
                 <span className="font-medium text-sm shrink-0 sm:w-36">{item.step}</span>
@@ -442,7 +442,7 @@ export default function HealthProtocolsPage() {
           </div>
           <p className="text-muted-foreground text-sm mb-8">Oral microbiome health is linked to cardiovascular disease, dementia, and systemic inflammation. This 5-step routine is performed morning, after lunch, and evening.</p>
 
-          <div className="space-y-px rounded-xl overflow-hidden border">
+          <div className="space-y-px rounded-lg overflow-hidden border">
             {oralHealth.map((item, idx) => (
               <div key={idx} className="bg-card flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 p-4">
                 <span className="font-medium text-sm shrink-0 sm:w-36">{item.step}</span>
@@ -460,7 +460,7 @@ export default function HealthProtocolsPage() {
           </div>
           <p className="text-muted-foreground text-sm mb-8">Diet, exercise, and supplements are adjusted based on monthly blood and urine results. Nothing is static. Every variable is re-evaluated against the latest data.</p>
 
-          <div className="space-y-px rounded-xl overflow-hidden border">
+          <div className="space-y-px rounded-lg overflow-hidden border">
             {biomarkers.map(item => (
               <div key={item.marker} className="bg-card flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 p-4">
                 <div className="flex-1 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 min-w-0">
@@ -484,7 +484,7 @@ export default function HealthProtocolsPage() {
           </div>
           <p className="text-muted-foreground text-sm mb-8">These are prescription medications specific to Bryan&apos;s medical profile and biomarker targets. They require physician supervision and are not recommended for replication.</p>
 
-          <div className="space-y-px rounded-xl overflow-hidden border">
+          <div className="space-y-px rounded-lg overflow-hidden border">
             {prescriptions.map(item => (
               <div key={item.drug} className="bg-card flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 p-4">
                 <span className="font-medium text-sm shrink-0 sm:w-52">{item.drug}</span>
@@ -510,7 +510,7 @@ export default function HealthProtocolsPage() {
               { title: 'Don\'t Die (Philosophy)', url: 'https://dontdie.com', desc: 'The governing philosophy behind Blueprint.' },
               { title: 'Blueprint Blood Panel', url: 'https://blueprint.bryanjohnson.com/products/blueprint-panel', desc: '100+ biomarker testing, commercial offering.' },
             ].map(s => (
-              <Link key={s.title} href={s.url} target="_blank" rel="noopener noreferrer" className="flex items-start justify-between gap-3 p-4 rounded-xl border bg-card hover:border-primary/30 transition-colors group">
+              <Link key={s.title} href={s.url} target="_blank" rel="noopener noreferrer" className="flex items-start justify-between gap-3 p-4 rounded-lg border bg-card hover:border-primary/30 transition-colors group">
                 <div>
                   <p className="font-medium text-sm group-hover:text-primary transition-colors">{s.title}</p>
                   <p className="text-xs text-muted-foreground mt-0.5">{s.desc}</p>

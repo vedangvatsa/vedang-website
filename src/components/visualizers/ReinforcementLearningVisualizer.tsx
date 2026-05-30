@@ -163,7 +163,7 @@ export function ReinforcementLearningVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Reinforcement Learning Agent</h3>
         <p className="text-slate-600">Watch an AI agent learn to navigate to the goal through trial and error</p>
@@ -171,7 +171,7 @@ export function ReinforcementLearningVisualizer() {
 
       <div className="flex flex-col lg:flex-row items-start gap-8">
         <div className="flex flex-col items-center gap-4">
-          <div className="grid grid-cols-5 gap-1 p-4 bg-white rounded-xl border border-slate-300">
+          <div className="grid grid-cols-5 gap-1 p-4 bg-white rounded-lg border border-slate-300">
             {Array.from({ length: gridSize }, (_, y) =>
               Array.from({ length: gridSize }, (_, x) => (
                 <div
@@ -215,7 +215,7 @@ export function ReinforcementLearningVisualizer() {
         </div>
 
         <div className="flex flex-col gap-4 min-w-64">
-          <div className="bg-white p-4 rounded-xl border border-slate-300">
+          <div className="bg-white p-4 rounded-lg border border-slate-300">
             <h4 className="font-semibold text-slate-800 mb-3">Training Statistics</h4>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
@@ -241,7 +241,7 @@ export function ReinforcementLearningVisualizer() {
             </div>
           </div>
 
-          <div className="bg-white p-4 rounded-xl border border-slate-300">
+          <div className="bg-white p-4 rounded-lg border border-slate-300">
             <h4 className="font-semibold text-slate-800 mb-3">Hyperparameters</h4>
             <div className="space-y-3">
               <div>
@@ -275,7 +275,7 @@ export function ReinforcementLearningVisualizer() {
             </div>
           </div>
 
-          <div className="bg-white p-4 rounded-xl border border-slate-300">
+          <div className="bg-white p-4 rounded-lg border border-slate-300">
             <h4 className="font-semibold text-slate-800 mb-2">Legend</h4>
             <div className="space-y-1 text-xs">
               <div className="flex items-center gap-2">

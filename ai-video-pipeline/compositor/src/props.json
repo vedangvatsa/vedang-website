@@ -1,0 +1,655 @@
+{
+  "fps": 25,
+  "durationInFrames": 1148,
+  "audioFile": "narration.wav",
+  "captions": [
+    {
+      "word": "Wait,",
+      "start": 0.16,
+      "end": 0.4
+    },
+    {
+      "word": "did",
+      "start": 0.74,
+      "end": 0.84
+    },
+    {
+      "word": "you",
+      "start": 0.84,
+      "end": 1.02
+    },
+    {
+      "word": "see",
+      "start": 1.02,
+      "end": 1.24
+    },
+    {
+      "word": "this?",
+      "start": 1.24,
+      "end": 1.44
+    },
+    {
+      "word": "All",
+      "start": 2.6,
+      "end": 2.72
+    },
+    {
+      "word": "of",
+      "start": 2.72,
+      "end": 2.82
+    },
+    {
+      "word": "the",
+      "start": 2.82,
+      "end": 2.94
+    },
+    {
+      "word": "updates",
+      "start": 2.94,
+      "end": 3.22
+    },
+    {
+      "word": "from",
+      "start": 3.22,
+      "end": 3.56
+    },
+    {
+      "word": "Elon",
+      "start": 3.56,
+      "end": 3.72
+    },
+    {
+      "word": "Musk",
+      "start": 3.72,
+      "end": 4.08
+    },
+    {
+      "word": "and",
+      "start": 4.08,
+      "end": 4.3
+    },
+    {
+      "word": "Sam",
+      "start": 4.3,
+      "end": 4.52
+    },
+    {
+      "word": "Altman's",
+      "start": 4.52,
+      "end": 5.06
+    },
+    {
+      "word": "battle",
+      "start": 5.06,
+      "end": 5.32
+    },
+    {
+      "word": "over",
+      "start": 5.32,
+      "end": 5.64
+    },
+    {
+      "word": "OpenAI",
+      "start": 5.64,
+      "end": 6.14
+    },
+    {
+      "word": "this",
+      "start": 6.14,
+      "end": 6.32
+    },
+    {
+      "word": "just",
+      "start": 6.32,
+      "end": 6.54
+    },
+    {
+      "word": "dropped",
+      "start": 6.54,
+      "end": 6.78
+    },
+    {
+      "word": "from",
+      "start": 6.78,
+      "end": 7.02
+    },
+    {
+      "word": "the",
+      "start": 7.02,
+      "end": 7.18
+    },
+    {
+      "word": "verge,",
+      "start": 7.18,
+      "end": 7.42
+    },
+    {
+      "word": "and",
+      "start": 7.72,
+      "end": 7.82
+    },
+    {
+      "word": "it's",
+      "start": 7.82,
+      "end": 7.98
+    },
+    {
+      "word": "a",
+      "start": 7.98,
+      "end": 8.04
+    },
+    {
+      "word": "big",
+      "start": 8.04,
+      "end": 8.2
+    },
+    {
+      "word": "deal.",
+      "start": 8.2,
+      "end": 8.48
+    },
+    {
+      "word": "Here's",
+      "start": 9.6,
+      "end": 9.86
+    },
+    {
+      "word": "what",
+      "start": 9.86,
+      "end": 10.0
+    },
+    {
+      "word": "happened.",
+      "start": 10.0,
+      "end": 10.36
+    },
+    {
+      "word": "Sam",
+      "start": 11.56,
+      "end": 11.68
+    },
+    {
+      "word": "Altman",
+      "start": 11.68,
+      "end": 12.0
+    },
+    {
+      "word": "and",
+      "start": 12.0,
+      "end": 12.12
+    },
+    {
+      "word": "Elon",
+      "start": 12.12,
+      "end": 12.38
+    },
+    {
+      "word": "Musk",
+      "start": 12.38,
+      "end": 12.68
+    },
+    {
+      "word": "are",
+      "start": 12.68,
+      "end": 12.86
+    },
+    {
+      "word": "facing",
+      "start": 12.86,
+      "end": 13.16
+    },
+    {
+      "word": "off",
+      "start": 13.16,
+      "end": 13.4
+    },
+    {
+      "word": "in",
+      "start": 13.4,
+      "end": 13.56
+    },
+    {
+      "word": "a",
+      "start": 13.56,
+      "end": 13.66
+    },
+    {
+      "word": "high",
+      "start": 13.66,
+      "end": 13.82
+    },
+    {
+      "word": "stakes",
+      "start": 13.82,
+      "end": 13.98
+    },
+    {
+      "word": "trial",
+      "start": 13.98,
+      "end": 14.32
+    },
+    {
+      "word": "that",
+      "start": 14.32,
+      "end": 14.58
+    },
+    {
+      "word": "could",
+      "start": 14.58,
+      "end": 14.72
+    },
+    {
+      "word": "alter",
+      "start": 14.72,
+      "end": 14.98
+    },
+    {
+      "word": "the",
+      "start": 14.98,
+      "end": 15.16
+    },
+    {
+      "word": "future",
+      "start": 15.36,
+      "end": 15.46
+    },
+    {
+      "word": "of",
+      "start": 15.46,
+      "end": 15.64
+    },
+    {
+      "word": "OpenAI",
+      "start": 15.64,
+      "end": 16.14
+    },
+    {
+      "word": "and",
+      "start": 16.14,
+      "end": 16.4
+    },
+    {
+      "word": "its",
+      "start": 16.4,
+      "end": 16.56
+    },
+    {
+      "word": "most",
+      "start": 16.56,
+      "end": 16.8
+    },
+    {
+      "word": "well",
+      "start": 16.86,
+      "end": 17.02
+    },
+    {
+      "word": "-known",
+      "start": 17.02,
+      "end": 17.16
+    },
+    {
+      "word": "product,",
+      "start": 17.16,
+      "end": 17.54
+    },
+    {
+      "word": "ChatGPT.",
+      "start": 17.86,
+      "end": 18.46
+    },
+    {
+      "word": "In",
+      "start": 19.64,
+      "end": 19.74
+    },
+    {
+      "word": "2024,",
+      "start": 19.74,
+      "end": 20.36
+    },
+    {
+      "word": "Musk",
+      "start": 21.0,
+      "end": 21.18
+    },
+    {
+      "word": "filed",
+      "start": 21.18,
+      "end": 21.44
+    },
+    {
+      "word": "a",
+      "start": 21.44,
+      "end": 21.62
+    },
+    {
+      "word": "lawsuit",
+      "start": 21.62,
+      "end": 21.92
+    },
+    {
+      "word": "accusing",
+      "start": 22.14,
+      "end": 22.24
+    },
+    {
+      "word": "OpenAI",
+      "start": 22.24,
+      "end": 22.94
+    },
+    {
+      "word": "of.",
+      "start": 22.94,
+      "end": 23.24
+    },
+    {
+      "word": "Honestly?",
+      "start": 24.38,
+      "end": 24.62
+    },
+    {
+      "word": "This",
+      "start": 25.92,
+      "end": 26.04
+    },
+    {
+      "word": "could",
+      "start": 26.04,
+      "end": 26.22
+    },
+    {
+      "word": "change",
+      "start": 26.22,
+      "end": 26.56
+    },
+    {
+      "word": "everything.",
+      "start": 26.56,
+      "end": 27.0
+    },
+    {
+      "word": "Keep",
+      "start": 28.28,
+      "end": 28.32
+    },
+    {
+      "word": "your",
+      "start": 28.32,
+      "end": 28.46
+    },
+    {
+      "word": "eyes",
+      "start": 28.46,
+      "end": 28.68
+    },
+    {
+      "word": "on",
+      "start": 28.68,
+      "end": 28.9
+    },
+    {
+      "word": "this",
+      "start": 28.9,
+      "end": 29.1
+    },
+    {
+      "word": "one.",
+      "start": 29.1,
+      "end": 29.2
+    },
+    {
+      "word": "Imagine",
+      "start": 30.36,
+      "end": 30.72
+    },
+    {
+      "word": "what",
+      "start": 30.72,
+      "end": 31.0
+    },
+    {
+      "word": "this",
+      "start": 31.0,
+      "end": 31.18
+    },
+    {
+      "word": "looks",
+      "start": 31.18,
+      "end": 31.42
+    },
+    {
+      "word": "like",
+      "start": 31.42,
+      "end": 31.68
+    },
+    {
+      "word": "in",
+      "start": 31.68,
+      "end": 31.86
+    },
+    {
+      "word": "practice.",
+      "start": 31.86,
+      "end": 32.16
+    },
+    {
+      "word": "It's",
+      "start": 33.42,
+      "end": 33.62
+    },
+    {
+      "word": "wild.",
+      "start": 33.62,
+      "end": 33.98
+    },
+    {
+      "word": "This",
+      "start": 35.08,
+      "end": 35.24
+    },
+    {
+      "word": "affects",
+      "start": 35.24,
+      "end": 35.48
+    },
+    {
+      "word": "creators,",
+      "start": 35.48,
+      "end": 36.0
+    },
+    {
+      "word": "developers,",
+      "start": 36.34,
+      "end": 36.72
+    },
+    {
+      "word": "and",
+      "start": 37.16,
+      "end": 37.26
+    },
+    {
+      "word": "everyday",
+      "start": 37.26,
+      "end": 37.62
+    },
+    {
+      "word": "users.",
+      "start": 37.62,
+      "end": 38.0
+    },
+    {
+      "word": "What",
+      "start": 39.22,
+      "end": 39.32
+    },
+    {
+      "word": "do",
+      "start": 39.32,
+      "end": 39.46
+    },
+    {
+      "word": "you",
+      "start": 39.46,
+      "end": 39.54
+    },
+    {
+      "word": "think",
+      "start": 39.54,
+      "end": 39.74
+    },
+    {
+      "word": "about",
+      "start": 39.74,
+      "end": 40.04
+    },
+    {
+      "word": "this?",
+      "start": 40.04,
+      "end": 40.34
+    },
+    {
+      "word": "Drop",
+      "start": 41.5,
+      "end": 41.6
+    },
+    {
+      "word": "your",
+      "start": 41.6,
+      "end": 41.84
+    },
+    {
+      "word": "take",
+      "start": 41.84,
+      "end": 42.08
+    },
+    {
+      "word": "in",
+      "start": 42.08,
+      "end": 42.28
+    },
+    {
+      "word": "the",
+      "start": 42.28,
+      "end": 42.38
+    },
+    {
+      "word": "comments.",
+      "start": 42.38,
+      "end": 42.74
+    },
+    {
+      "word": "Link",
+      "start": 43.96,
+      "end": 44.18
+    },
+    {
+      "word": "in",
+      "start": 44.18,
+      "end": 44.38
+    },
+    {
+      "word": "the",
+      "start": 44.38,
+      "end": 44.5
+    },
+    {
+      "word": "captions",
+      "start": 44.5,
+      "end": 44.84
+    },
+    {
+      "word": "for",
+      "start": 44.86,
+      "end": 45.18
+    },
+    {
+      "word": "the",
+      "start": 45.2,
+      "end": 45.3
+    },
+    {
+      "word": "full",
+      "start": 45.3,
+      "end": 45.52
+    },
+    {
+      "word": "story.",
+      "start": 45.52,
+      "end": 45.92
+    }
+  ],
+  "emphasisPhrases": [
+    {
+      "text": "Game Changer",
+      "startFrame": 687,
+      "endFrame": 774
+    },
+    {
+      "text": "Full story in captions \ud83d\udc47",
+      "startFrame": 978,
+      "endFrame": 1138
+    }
+  ],
+  "segments": [
+    {
+      "type": "split_screen",
+      "startFrame": 0,
+      "endFrame": 146,
+      "splitRatio": 0.55
+    },
+    {
+      "type": "screenshot",
+      "startFrame": 146,
+      "endFrame": 243,
+      "zoomStart": 1.0,
+      "zoomEnd": 1.12
+    },
+    {
+      "type": "screen_recording",
+      "startFrame": 243,
+      "endFrame": 682,
+      "highlights": [
+        {
+          "y": 400,
+          "height": 44,
+          "startFrame": 273,
+          "endFrame": 303
+        },
+        {
+          "y": 460,
+          "height": 44,
+          "startFrame": 303,
+          "endFrame": 333
+        },
+        {
+          "y": 520,
+          "height": 44,
+          "startFrame": 333,
+          "endFrame": 363
+        }
+      ]
+    },
+    {
+      "type": "full_screen_avatar",
+      "startFrame": 682,
+      "endFrame": 779
+    },
+    {
+      "type": "split_screen",
+      "startFrame": 779,
+      "endFrame": 876,
+      "splitRatio": 0.55
+    },
+    {
+      "type": "broll",
+      "startFrame": 876,
+      "endFrame": 973
+    },
+    {
+      "type": "full_screen_avatar",
+      "startFrame": 973,
+      "endFrame": 1143
+    }
+  ]
+}

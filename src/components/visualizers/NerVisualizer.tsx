@@ -96,7 +96,7 @@ export function NerVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-4">Named Entity Recognition (NER)</h3>
         <p className="text-lg text-slate-600">
@@ -137,7 +137,7 @@ export function NerVisualizer() {
         </div>
 
         {/* Text Display */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+        <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
           <div className="text-xl leading-relaxed">
             {renderTextWithEntities(sentences[selectedSentence])}
           </div>

@@ -1039,7 +1039,7 @@ export default function LinkedInTranslatorPage() {
             </h1>
 
             {/* Translator Card - Google Translate style */}
-            <div ref={cardRef} className="rounded-xl border border-border bg-card shadow-sm overflow-hidden">
+            <div ref={cardRef} className="rounded-lg border border-border bg-card shadow-sm overflow-hidden">
               {/* Language tabs header */}
               <div className="grid grid-cols-[1fr_auto_1fr] items-center border-b border-border">
                 <div className="px-5 py-2.5">

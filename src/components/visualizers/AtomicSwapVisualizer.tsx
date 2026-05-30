@@ -77,7 +77,7 @@ export function AtomicSwapVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Atomic Swap Visualization</h3>
         <p className="text-slate-600">Interactive demonstration of trustless cross-chain cryptocurrency exchange using Hash Time-Locked Contracts (HTLCs)</p>
@@ -85,7 +85,7 @@ export function AtomicSwapVisualizer() {
 
       <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl">
         {/* Alice Side */}
-        <div className="flex-1 bg-white rounded-xl p-6 border border-slate-200">
+        <div className="flex-1 bg-white rounded-lg p-6 border border-slate-200">
           <div className="text-center mb-6">
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
               <span className="text-blue-600 font-bold text-xl">A</span>
@@ -155,7 +155,7 @@ export function AtomicSwapVisualizer() {
         </div>
 
         {/* Bob Side */}
-        <div className="flex-1 bg-white rounded-xl p-6 border border-slate-200">
+        <div className="flex-1 bg-white rounded-lg p-6 border border-slate-200">
           <div className="text-center mb-6">
             <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3">
               <span className="text-indigo-600 font-bold text-xl">B</span>

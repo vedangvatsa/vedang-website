@@ -29,7 +29,7 @@ export function ZkevmVisualizer() {
   const savings = ((mainnetGasCost - zkevmGasCost) / mainnetGasCost * 100).toFixed(1);
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Zero-Knowledge EVM (zkEVM)</h3>
         <p className="text-slate-600">Interactive demonstration of ZK-Rollup batch processing and proof generation</p>
@@ -52,7 +52,7 @@ export function ZkevmVisualizer() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">zkEVM Process</h4>
             <div className="space-y-4">
               {steps.map((step, index) => (
@@ -87,7 +87,7 @@ export function ZkevmVisualizer() {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Transaction Visualization</h4>
             <div className="relative">
               <div className="bg-slate-100 p-4 rounded-lg mb-4">
@@ -162,7 +162,7 @@ export function ZkevmVisualizer() {
         </div>
 
         {showComparison && (
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Gas Cost Comparison</h4>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="bg-rose-50 p-4 rounded-lg border border-rose-200">

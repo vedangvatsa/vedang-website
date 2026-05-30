@@ -85,7 +85,7 @@ export function DiffusionModelVisualizer() {
   const currentImage = getCurrentImage();
   
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Diffusion Model Visualization</h3>
         <p className="text-slate-600">Watch how diffusion models learn to add or remove noise through iterative steps</p>

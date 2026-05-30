@@ -38,7 +38,7 @@ export function PromptTechniques() {
       {techniques.map((t) => {
         const Icon = t.icon;
         return (
-          <div key={t.title} className={`p-5 rounded-xl border ${t.bg} flex flex-col`}>
+          <div key={t.title} className={`p-5 rounded-lg border ${t.bg} flex flex-col`}>
             <div className="flex items-center gap-3 mb-3">
               <div className={`${t.iconBg} p-2 rounded-lg ${t.color}`}>
                 <Icon className="w-5 h-5" />

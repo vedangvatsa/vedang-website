@@ -77,7 +77,7 @@ export function AiAlignmentVisualizer() {
   const outcome = getOutcome();
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">AI Alignment Interactive Simulator</h3>
         <p className="text-slate-600">Explore how AI capability, human intent clarity, and alignment effort affect outcomes</p>
@@ -86,7 +86,7 @@ export function AiAlignmentVisualizer() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl">
         {/* Controls Panel */}
         <div className="space-y-6">
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">Scenario Selection</h4>
             <div className="grid grid-cols-1 gap-2">
               {Object.entries(scenarios).map(([key, scen]) => (
@@ -106,7 +106,7 @@ export function AiAlignmentVisualizer() {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl border border-slate-200 space-y-4">
+          <div className="bg-white p-6 rounded-lg border border-slate-200 space-y-4">
             <h4 className="font-semibold text-slate-800">Parameters</h4>
             
             <div>
@@ -166,7 +166,7 @@ export function AiAlignmentVisualizer() {
 
         {/* Visualization Panel */}
         <div className="space-y-6">
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">Current Scenario</h4>
             <div className="space-y-3">
               <div className="font-medium text-slate-700">{scenarios[scenario].name}</div>
@@ -176,7 +176,7 @@ export function AiAlignmentVisualizer() {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">Alignment Meter</h4>
             <div className="relative">
               <div className="w-full h-8 bg-slate-200 rounded-lg overflow-hidden">
@@ -195,7 +195,7 @@ export function AiAlignmentVisualizer() {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">System Outcome</h4>
             <div className={`p-4 rounded-lg border-l-4 ${
               outcome.color === 'emerald' ? 'bg-emerald-50 border-emerald-500' :

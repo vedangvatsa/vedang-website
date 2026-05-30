@@ -56,7 +56,7 @@ export function PromptTuningVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Prompt Tuning Visualization</h3>
         <p className="text-slate-600">Learn continuous soft prompt embeddings while keeping model weights frozen</p>
@@ -91,7 +91,7 @@ export function PromptTuningVisualizer() {
 
       {stage === 'manual' && (
         <div className="w-full max-w-4xl">
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Manual Prompt Engineering</h4>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
@@ -120,7 +120,7 @@ export function PromptTuningVisualizer() {
 
       {stage === 'soft' && (
         <div className="w-full max-w-4xl">
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Soft Prompt Embeddings</h4>
             <div className="space-y-6">
               <div className="flex items-center gap-4">
@@ -193,7 +193,7 @@ export function PromptTuningVisualizer() {
 
       {stage === 'training' && (
         <div className="w-full max-w-4xl">
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Training Process</h4>
             
             <div className="space-y-6">

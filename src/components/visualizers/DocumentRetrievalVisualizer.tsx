@@ -60,7 +60,7 @@ export function DocumentRetrievalVisualizer() {
   const maxScore = Math.max(...scoredDocs.map(d => d.score));
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Document Retrieval Visualizer</h3>
         <p className="text-slate-600">Compare TF-IDF lexical matching vs dense vector retrieval methods</p>

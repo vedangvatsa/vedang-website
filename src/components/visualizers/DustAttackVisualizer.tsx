@@ -76,7 +76,7 @@ export function DustAttackVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Dust Attack Privacy Breach</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -115,7 +115,7 @@ export function DustAttackVisualizer() {
             <div
               key={wallet.id}
               onClick={() => simulateSpending(wallet.id)}
-              className={`p-4 rounded-xl border-2 transition-all cursor-pointer ${
+              className={`p-4 rounded-lg border-2 transition-all cursor-pointer ${
                 wallet.spent
                   ? "bg-rose-100 border-rose-300"
                   : wallet.dustReceived
@@ -147,7 +147,7 @@ export function DustAttackVisualizer() {
         </div>
 
         {showLinks && step === 3 && (
-          <div className="mt-6 p-4 bg-rose-50 border border-rose-200 rounded-xl">
+          <div className="mt-6 p-4 bg-rose-50 border border-rose-200 rounded-lg">
             <h4 className="font-bold text-rose-800 mb-2">Privacy Compromised!</h4>
             <p className="text-rose-700 text-sm mb-3">
               Attacker has linked these addresses by tracking dust usage:
@@ -186,7 +186,7 @@ export function DustAttackVisualizer() {
       </div>
 
       {step === 3 && (
-        <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-4 max-w-2xl">
+        <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4 max-w-2xl">
           <h4 className="font-bold text-indigo-800 mb-2">Defense Strategies:</h4>
           <ul className="text-indigo-700 text-sm space-y-1">
             <li>• Use coin control features to avoid spending dust</li>

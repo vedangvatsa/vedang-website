@@ -36,7 +36,7 @@ export default async function Web3ReportsPage({
       <BreadcrumbSchema items={[{ name: "Web3 Reports", url: "https://veda.ng/web3-reports" }]} />
 
       <section className="text-center pt-16 pb-12 border-b border-border/30">
-        <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+        <div className="content-width">
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
             Web3 Reports Library
           </h1>

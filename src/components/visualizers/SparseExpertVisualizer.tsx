@@ -42,7 +42,7 @@ export function SparseExpertVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Sparse Expert Routing</h3>
         <p className="text-slate-600">See how a gating network routes inputs to the most relevant expert modules</p>
@@ -50,7 +50,7 @@ export function SparseExpertVisualizer() {
 
       <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl">
         {/* Input Selection */}
-        <div className="flex-1 bg-white p-6 rounded-xl border border-slate-200">
+        <div className="flex-1 bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="font-semibold text-slate-800 mb-4">Input Selection</h4>
           <div className="grid grid-cols-2 gap-3">
             {inputs.map((input, idx) => (
@@ -91,7 +91,7 @@ export function SparseExpertVisualizer() {
         </div>
 
         {/* Gating Network */}
-        <div className="flex-1 bg-white p-6 rounded-xl border border-slate-200">
+        <div className="flex-1 bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="font-semibold text-slate-800 mb-4">Gating Network Scores</h4>
           <div className="space-y-3">
             {expertScores.map((score, idx) => (
@@ -116,7 +116,7 @@ export function SparseExpertVisualizer() {
         </div>
 
         {/* Expert Modules */}
-        <div className="flex-1 bg-white p-6 rounded-xl border border-slate-200">
+        <div className="flex-1 bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="font-semibold text-slate-800 mb-4">Expert Modules</h4>
           
           <div className="mb-4">

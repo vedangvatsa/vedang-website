@@ -66,7 +66,7 @@ export function ModelDistillationVisualizer() {
   const classes = ["Cat", "Dog", "Fox"];
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Model Distillation</h3>
         <p className="text-slate-600">Interactive visualization of knowledge transfer from teacher to student model</p>
@@ -130,7 +130,7 @@ export function ModelDistillationVisualizer() {
         </div>
 
         {/* Teacher Model */}
-        <div className="flex-1 bg-white rounded-xl p-6 border border-slate-200">
+        <div className="flex-1 bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-lg font-semibold text-emerald-700 mb-4 flex items-center gap-2">
             <div className="w-3 h-3 bg-emerald-500 rounded-full"></div>
             Teacher Model (Large)
@@ -170,7 +170,7 @@ export function ModelDistillationVisualizer() {
         </div>
 
         {/* Student Model */}
-        <div className="flex-1 bg-white rounded-xl p-6 border border-slate-200">
+        <div className="flex-1 bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-lg font-semibold text-rose-700 mb-4 flex items-center gap-2">
             <div className="w-3 h-3 bg-rose-500 rounded-full"></div>
             Student Model (Small)

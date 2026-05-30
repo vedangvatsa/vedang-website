@@ -61,7 +61,7 @@ export function ConstitutionalAiVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-900 mb-2">Constitutional AI</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -93,7 +93,7 @@ export function ConstitutionalAiVisualizer() {
         </div>
 
         {/* Main Content Area */}
-        <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 mb-6">
+        <div className="bg-white rounded-lg p-6 shadow-sm border border-slate-200 mb-6">
           <div className="mb-4">
             <div className="text-sm font-semibold text-slate-700 mb-2">User Prompt:</div>
             <div className="bg-slate-100 p-3 rounded-lg text-slate-800">

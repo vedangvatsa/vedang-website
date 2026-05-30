@@ -52,7 +52,7 @@ export function ArtificialSuperintelligenceAsiVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">
           Artificial Superintelligence (ASI) Explorer
@@ -65,7 +65,7 @@ export function ArtificialSuperintelligenceAsiVisualizer() {
 
       <div className="w-full max-w-4xl space-y-6">
         {/* Capability Comparison */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Cognitive Capabilities Comparison</h4>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -148,7 +148,7 @@ export function ArtificialSuperintelligenceAsiVisualizer() {
         </div>
 
         {/* Evolution Timeline */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <div className="flex justify-between items-center mb-4">
             <h4 className="text-lg font-semibold text-slate-800">Intelligence Evolution Timeline</h4>
             <button
@@ -212,7 +212,7 @@ export function ArtificialSuperintelligenceAsiVisualizer() {
         </div>
 
         {/* Key Properties */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">ASI Key Properties</h4>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="text-center p-4 bg-emerald-50 rounded-lg">

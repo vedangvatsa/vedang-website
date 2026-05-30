@@ -47,7 +47,7 @@ export function DepinVisualizer() {
   const selectedNodeData = selectedNode ? nodes.find(n => n.id === selectedNode) : null;
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">DePIN: Decentralized Physical Infrastructure Networks</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -57,7 +57,7 @@ export function DepinVisualizer() {
 
       <div className="flex gap-8 w-full max-w-4xl">
         <div className="flex-1">
-          <div className="relative bg-white rounded-xl p-6 border border-slate-200 h-80">
+          <div className="relative bg-white rounded-lg p-6 border border-slate-200 h-80">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Network Map</h4>
             
             {/* Coverage area visualization */}
@@ -114,7 +114,7 @@ export function DepinVisualizer() {
 
         <div className="w-80 space-y-4">
           {/* Node details */}
-          <div className="bg-white rounded-xl p-4 border border-slate-200">
+          <div className="bg-white rounded-lg p-4 border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-3">Node Details</h4>
             {selectedNodeData ? (
               <div className="space-y-2">
@@ -149,7 +149,7 @@ export function DepinVisualizer() {
           </div>
 
           {/* Network metrics */}
-          <div className="bg-white rounded-xl p-4 border border-slate-200">
+          <div className="bg-white rounded-lg p-4 border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-3">Network Metrics</h4>
             <div className="space-y-3">
               <div>

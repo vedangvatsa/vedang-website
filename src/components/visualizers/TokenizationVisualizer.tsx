@@ -73,7 +73,7 @@ export function TokenizationVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Tokenization Process</h3>
         <p className="text-slate-600 text-lg">Convert real-world assets into blockchain tokens for fractional ownership</p>
@@ -102,7 +102,7 @@ export function TokenizationVisualizer() {
               <div
                 key={asset.id}
                 onClick={() => handleAssetSelect(asset.id)}
-                className="cursor-pointer p-6 bg-white rounded-xl border-2 border-slate-200 hover:border-slate-400 transition-all hover:shadow-md"
+                className="cursor-pointer p-6 bg-white rounded-lg border-2 border-slate-200 hover:border-slate-400 transition-all hover:shadow-md"
               >
                 <div className="text-center">
                   <div className="text-4xl mb-3">{asset.icon}</div>
@@ -119,7 +119,7 @@ export function TokenizationVisualizer() {
       {tokenizationStep === 1 && selectedAssetData && (
         <div className="w-full max-w-4xl text-center">
           <h4 className="text-xl font-semibold text-slate-700 mb-6">Creating Tokens</h4>
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <div className="text-6xl mb-4">{selectedAssetData.icon}</div>
             <h5 className="text-xl font-bold text-slate-800 mb-2">{selectedAssetData.name}</h5>
             <p className="text-2xl font-bold text-slate-800 mb-4">${selectedAssetData.value.toLocaleString()}</p>
@@ -143,7 +143,7 @@ export function TokenizationVisualizer() {
       {tokenizationStep === 2 && selectedAssetData && (
         <div className="w-full max-w-4xl">
           <h4 className="text-xl font-semibold text-slate-700 mb-6 text-center">Fractional Ownership</h4>
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <div className="mb-6">
               <label className="block text-lg font-medium text-slate-700 mb-3">
                 Number of Owners: {fractionValue}
@@ -186,7 +186,7 @@ export function TokenizationVisualizer() {
       {tokenizationStep === 3 && selectedAssetData && (
         <div className="w-full max-w-4xl">
           <h4 className="text-xl font-semibold text-slate-700 mb-6 text-center">Blockchain Trading</h4>
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <div className="text-center mb-6">
               <div className="text-4xl mb-2">⛓️</div>
               <p className="text-lg text-slate-700">Tokens are now tradeable on the blockchain!</p>

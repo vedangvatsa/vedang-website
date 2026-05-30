@@ -50,7 +50,7 @@ export function ProductPillars() {
       {pillars.map((p) => {
         const Icon = p.icon;
         return (
-          <div key={p.title} className={`p-5 rounded-xl border ${p.bg} flex flex-col`}>
+          <div key={p.title} className={`p-5 rounded-lg border ${p.bg} flex flex-col`}>
             <div className="flex items-center gap-3 mb-1">
               <div className={`${p.iconBg} p-2 rounded-lg ${p.color}`}>
                 <Icon className="w-5 h-5" />

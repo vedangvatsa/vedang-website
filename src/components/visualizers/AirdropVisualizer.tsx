@@ -65,7 +65,7 @@ export function AirdropVisualizer() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Airdrop Distribution Simulator</h3>
         <p className="text-slate-600">Design and execute a token airdrop campaign by selecting eligibility criteria</p>
@@ -85,7 +85,7 @@ export function AirdropVisualizer() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl">
         <div className="space-y-6">
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">1. Eligibility Criteria</h4>
             <div className="space-y-3">
               {criteria.map(criterion => (
@@ -111,7 +111,7 @@ export function AirdropVisualizer() {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">2. Distribution Parameters</h4>
             <div className="space-y-4">
               <div className="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
@@ -139,7 +139,7 @@ export function AirdropVisualizer() {
         </div>
 
         <div className="space-y-6">
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">3. Live Distribution Status</h4>
             
             {distributionStarted && (
@@ -196,7 +196,7 @@ export function AirdropVisualizer() {
       </div>
 
       {tokensDistributed === totalEligible && tokensDistributed > 0 && (
-        <div className="bg-emerald-100 border border-emerald-200 rounded-xl p-6 text-center">
+        <div className="bg-emerald-100 border border-emerald-200 rounded-lg p-6 text-center">
           <div className="text-emerald-800 font-bold text-lg">🎉 Airdrop Complete!</div>
           <div className="text-emerald-700 mt-2">
             Successfully distributed {(totalEligible * tokensPerUser).toLocaleString()} tokens to {totalEligible.toLocaleString()} recipients

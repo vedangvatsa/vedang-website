@@ -88,7 +88,7 @@ export function ConsistencyHashingVisualizer() {
   const changedKeys = getChangedKeys();
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Consistency Hashing</h3>
         <p className="text-slate-600 max-w-3xl">
@@ -192,7 +192,7 @@ export function ConsistencyHashingVisualizer() {
 
         {/* Controls */}
         <div className="flex flex-col gap-6 min-w-72">
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+          <div className="bg-white rounded-lg p-6 shadow-sm border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">Add New Server</h4>
             
             <div className="space-y-4">
@@ -239,7 +239,7 @@ export function ConsistencyHashingVisualizer() {
           </div>
 
           {/* Key Assignments */}
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+          <div className="bg-white rounded-lg p-6 shadow-sm border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">Key Assignments</h4>
             
             <div className="space-y-2">

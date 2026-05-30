@@ -114,7 +114,7 @@ export function StateOfAiTimeline() {
   const areaD = `${pathD} L ${points[points.length - 1].x} ${height - padding} L ${points[0].x} ${height - padding} Z`;
 
   return (
-    <div className="my-8 rounded-xl border border-border/50 bg-card p-6 shadow-sm overflow-hidden space-y-6">
+    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm overflow-hidden space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h4 className="text-base font-bold text-foreground flex items-center gap-2">
@@ -132,7 +132,7 @@ export function StateOfAiTimeline() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-3">
-          <div className="relative bg-muted/20 border border-border/50 rounded-xl p-3">
+          <div className="relative bg-muted/20 border border-border/50 rounded-lg p-3">
             <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto overflow-visible select-none">
               <defs>
                 <linearGradient id="areaGradAI" x1="0" y1="0" x2="0" y2="1">
@@ -160,12 +160,12 @@ export function StateOfAiTimeline() {
           </div>
         </div>
         <div className="space-y-3">
-          <div className="bg-muted/30 rounded-xl p-4 border border-border/50 space-y-2">
+          <div className="bg-muted/30 rounded-lg p-4 border border-border/50 space-y-2">
             <div className="text-3xl font-black tabular-nums text-foreground">{selected.docs.toLocaleString()}</div>
             <div className="text-xs text-muted-foreground">Documents Published{selected.year === '2026' ? ' (Jan–May)' : ''}</div>
             <div className="text-xs font-mono font-bold text-blue-500">{selected.growth !== '--' && selected.growth !== 'Partial' ? `YoY: ${selected.growth}` : selected.growth === 'Partial' ? 'Partial Year' : 'Baseline Year'}</div>
           </div>
-          <div className="bg-muted/30 rounded-xl p-4 border border-border/50">
+          <div className="bg-muted/30 rounded-lg p-4 border border-border/50">
             <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1">Milestone</p>
             <p className="text-xs text-foreground leading-relaxed">{selected.milestone}</p>
           </div>
@@ -188,7 +188,7 @@ export function StateOfAiNgramAnalyzer() {
   const maxCount = activeData[0].count;
 
   return (
-    <div className="my-8 rounded-xl border border-border/50 bg-card p-6 shadow-sm overflow-hidden space-y-5">
+    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm overflow-hidden space-y-5">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div>
           <h4 className="text-base font-bold text-foreground flex items-center gap-2">
@@ -236,7 +236,7 @@ export function StateOfAiNgramAnalyzer() {
 export function StateOfAiMomentum() {
   const maxGrowth = momentumData[0].growth;
   return (
-    <div className="my-8 rounded-xl border border-border/50 bg-card p-6 shadow-sm overflow-hidden space-y-5">
+    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm overflow-hidden space-y-5">
       <div>
         <h4 className="text-base font-bold text-foreground flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />

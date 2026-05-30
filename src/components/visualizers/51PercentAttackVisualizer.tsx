@@ -53,7 +53,7 @@ export function FiftyOnePercentAttackVisualizer() {
   const canAttackSucceed = attackerPower > 50;
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">51% Attack Simulation</h3>
         <p className="text-slate-600 max-w-2xl">See what happens when one miner controls more than half the network power</p>
@@ -83,7 +83,7 @@ export function FiftyOnePercentAttackVisualizer() {
 
       {/* Chain visualization */}
       <div className="w-full max-w-3xl">
-        <svg viewBox="0 0 650 250" className="w-full border border-slate-200 rounded-xl bg-white">
+        <svg viewBox="0 0 650 250" className="w-full border border-slate-200 rounded-lg bg-white">
           {/* Main chain label */}
           <text x={20} y={145} fontSize="10" fill="#3b82f6" fontWeight="600">Honest Chain</text>
 

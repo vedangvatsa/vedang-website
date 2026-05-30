@@ -53,7 +53,7 @@ export function GenesisBlockVisualizer() {
   const genesisHash = calculateSimpleHash(genesisData.data + genesisData.timestamp + genesisData.nonce);
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Genesis Block Visualizer</h3>
         <p className="text-slate-600">Explore how the first block in a blockchain is created without a predecessor</p>
@@ -96,7 +96,7 @@ export function GenesisBlockVisualizer() {
             </div>
           )}
 
-          <div className={`bg-white border-2 rounded-xl p-6 transition-all duration-500 ${
+          <div className={`bg-white border-2 rounded-lg p-6 transition-all duration-500 ${
             currentStep >= 1 ? 'border-blue-400 shadow-lg' : 'border-slate-200'
           } ${animating ? 'scale-105' : 'scale-100'}`}>
             <div className="text-center font-bold text-lg mb-4 text-slate-800">
@@ -140,13 +140,13 @@ export function GenesisBlockVisualizer() {
 
           {currentStep >= 4 && (
             <div className="flex items-center gap-4">
-              <div className="bg-indigo-100 border-2 border-indigo-300 rounded-xl p-4 opacity-50">
+              <div className="bg-indigo-100 border-2 border-indigo-300 rounded-lg p-4 opacity-50">
                 <div className="text-center font-bold text-indigo-800">Block #1</div>
                 <div className="text-sm text-indigo-600 mt-2">Previous Hash: {genesisHash}</div>
                 <div className="text-sm text-indigo-600">← References Genesis Block</div>
               </div>
               <div className="text-slate-400">→</div>
-              <div className="bg-indigo-100 border-2 border-indigo-300 rounded-xl p-4 opacity-30">
+              <div className="bg-indigo-100 border-2 border-indigo-300 rounded-lg p-4 opacity-30">
                 <div className="text-center font-bold text-indigo-800">Block #2</div>
                 <div className="text-sm text-indigo-600 mt-2">Previous Hash: ...</div>
               </div>

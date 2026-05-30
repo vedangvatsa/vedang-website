@@ -28,7 +28,7 @@ const NomadMap = dynamic(
           <div className="h-8 w-28 rounded-full bg-muted animate-pulse" />
         </div>
         {/* Skeleton map */}
-        <div className="w-full h-[600px] rounded-xl bg-muted flex items-center justify-center">
+        <div className="w-full h-[600px] rounded-lg bg-muted flex items-center justify-center">
           <p className="text-muted-foreground">Loading map…</p>
         </div>
       </div>
@@ -68,7 +68,7 @@ export function NomadMapWrapper() {
           <div className="h-8 w-28 rounded-full bg-muted animate-pulse" />
         </div>
         {/* Skeleton map */}
-        <div className="w-full h-[600px] rounded-xl bg-muted flex items-center justify-center">
+        <div className="w-full h-[600px] rounded-lg bg-muted flex items-center justify-center">
           <p className="text-muted-foreground">Loading 4,400+ places…</p>
         </div>
       </div>

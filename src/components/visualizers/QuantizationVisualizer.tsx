@@ -36,7 +36,7 @@ export function QuantizationVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Neural Network Quantization</h3>
         <p className="text-slate-600">Reduce model size by lowering numerical precision of weights</p>
@@ -69,7 +69,7 @@ export function QuantizationVisualizer() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Neural Network Weights</h4>
             <div className="grid grid-cols-2 gap-2">
               {originalWeights.map((weight, index) => {
@@ -103,7 +103,7 @@ export function QuantizationVisualizer() {
           </div>
 
           <div className="space-y-4">
-            <div className="bg-white p-6 rounded-xl border border-slate-200">
+            <div className="bg-white p-6 rounded-lg border border-slate-200">
               <h4 className="text-lg font-semibold text-slate-800 mb-4">Model Statistics</h4>
               <div className="space-y-3">
                 <div className="flex justify-between">
@@ -129,7 +129,7 @@ export function QuantizationVisualizer() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl border border-slate-200">
+            <div className="bg-white p-6 rounded-lg border border-slate-200">
               <h4 className="text-lg font-semibold text-slate-800 mb-4">Precision Impact</h4>
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">
@@ -157,7 +157,7 @@ export function QuantizationVisualizer() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200">
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">
           <h4 className="text-lg font-semibold text-blue-800 mb-2">Selected Weight Analysis</h4>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
             <div>

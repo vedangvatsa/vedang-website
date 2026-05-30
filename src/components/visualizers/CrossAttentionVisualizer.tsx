@@ -31,7 +31,7 @@ export function CrossAttentionVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Cross-Attention Mechanism</h3>
         <p className="text-slate-600">Click a target word (Query) to see how it attends to source words (Keys & Values)</p>
@@ -55,7 +55,7 @@ export function CrossAttentionVisualizer() {
         </div>
 
         {/* Visualization Area */}
-        <div className="relative bg-white rounded-xl p-8 border border-slate-200">
+        <div className="relative bg-white rounded-lg p-8 border border-slate-200">
           {/* Source Sequence (Keys & Values) */}
           <div className="mb-12">
             <div className="text-sm font-semibold text-slate-600 mb-3">Source Sequence (English) - Keys & Values</div>
@@ -133,7 +133,7 @@ export function CrossAttentionVisualizer() {
 
         {/* Attention Matrix */}
         {showAttentionWeights && (
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4 text-center">Attention Weight Matrix</h4>
             <div className="grid grid-cols-5 gap-2 max-w-md mx-auto">
               <div></div>
@@ -166,7 +166,7 @@ export function CrossAttentionVisualizer() {
 
         {/* Explanation */}
         {selectedQuery !== null && (
-          <div className="bg-indigo-50 rounded-xl p-6 border border-indigo-200">
+          <div className="bg-indigo-50 rounded-lg p-6 border border-indigo-200">
             <h4 className="font-semibold text-indigo-800 mb-2">
               Cross-Attention for "{targetSequence[selectedQuery]}"
             </h4>

@@ -255,7 +255,7 @@ export function NomadMap({ data }: { data: POI[] }) {
       </div>
 
       {/* Map */}
-      <div className="w-full h-[600px] rounded-xl overflow-hidden border shadow-sm">
+      <div className="w-full h-[600px] rounded-lg overflow-hidden border shadow-sm">
         <Map
           ref={mapRef}
           center={mapCenter}
@@ -378,7 +378,7 @@ export function NomadMap({ data }: { data: POI[] }) {
       </div>
 
       {/* Listings table */}
-      <div className="bg-card border rounded-xl overflow-hidden">
+      <div className="bg-card border rounded-lg overflow-hidden">
           <table className="w-full text-sm">
             <thead className="bg-muted/50 sticky top-0">
               <tr>

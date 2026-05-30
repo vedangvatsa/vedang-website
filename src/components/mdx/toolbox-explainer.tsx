@@ -4,7 +4,7 @@ import { Cloud, Laptop, Paintbrush, Terminal, Code2, Server } from 'lucide-react
 
 export function ToolboxExplainer() {
   return (
-    <div className="my-10 p-6 md:p-8 bg-card border rounded-2xl shadow-sm">
+    <div className="my-10 p-6 md:p-8 bg-card border rounded-lg shadow-sm">
       <div className="text-center mb-8">
         <h3 className="text-2xl font-bold tracking-tight mb-2">Vibe Coding Toolbox</h3>
         <p className="text-muted-foreground text-sm max-w-lg mx-auto">
@@ -16,7 +16,7 @@ export function ToolboxExplainer() {
 
         {/* Row 1: Environment types */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-primary/5 p-5 rounded-xl border border-primary/10">
+          <div className="bg-primary/5 p-5 rounded-lg border border-primary/10">
             <div className="flex items-center gap-3 mb-3">
               <div className="bg-primary/10 p-2 rounded-lg text-primary">
                 <Cloud className="w-5 h-5" />
@@ -30,7 +30,7 @@ export function ToolboxExplainer() {
               Examples: Replit, Lovable.dev, v0
             </p>
           </div>
-          <div className="bg-muted p-5 rounded-xl border border-border">
+          <div className="bg-muted p-5 rounded-lg border border-border">
             <div className="flex items-center gap-3 mb-3">
               <div className="bg-background p-2 rounded-lg text-foreground shadow-sm">
                 <Laptop className="w-5 h-5" />
@@ -47,7 +47,7 @@ export function ToolboxExplainer() {
         </div>
 
         {/* Row 2: Visual Builders */}
-        <div className="bg-purple-500/5 p-5 rounded-xl border border-purple-500/20">
+        <div className="bg-purple-500/5 p-5 rounded-lg border border-purple-500/20">
           <div className="flex items-center gap-3 mb-3">
             <div className="bg-purple-500/10 p-2 rounded-lg text-purple-600">
               <Paintbrush className="w-5 h-5" />
@@ -63,7 +63,7 @@ export function ToolboxExplainer() {
         </div>
 
         {/* Row 3: Autonomous Agents */}
-        <div className="bg-blue-500/5 p-5 rounded-xl border border-blue-500/20">
+        <div className="bg-blue-500/5 p-5 rounded-lg border border-blue-500/20">
           <div className="flex items-center gap-3 mb-4">
             <div className="bg-blue-500/10 p-2 rounded-lg text-blue-600">
               <Server className="w-5 h-5" />

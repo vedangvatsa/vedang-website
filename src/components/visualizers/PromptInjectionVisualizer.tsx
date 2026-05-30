@@ -40,7 +40,7 @@ export function PromptInjectionVisualizer() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">Prompt Injection Attack Simulator</h3>
         <p className="text-slate-600 text-lg max-w-2xl">

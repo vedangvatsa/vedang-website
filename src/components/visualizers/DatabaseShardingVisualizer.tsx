@@ -58,7 +58,7 @@ export function DatabaseShardingVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Database Sharding</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -67,7 +67,7 @@ export function DatabaseShardingVisualizer() {
       </div>
 
       {/* Query Controls */}
-      <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm w-full max-w-4xl">
+      <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm w-full max-w-4xl">
         <h4 className="text-lg font-semibold text-slate-800 mb-4">Query Interface</h4>
         
         <div className="flex flex-col lg:flex-row gap-4 items-end">
@@ -133,7 +133,7 @@ export function DatabaseShardingVisualizer() {
             return (
               <div
                 key={shard.id}
-                className={`p-4 rounded-xl border-2 transition-all duration-500 ${
+                className={`p-4 rounded-lg border-2 transition-all duration-500 ${
                   isActive ? shard.activeColor : shard.color
                 } ${shouldPulse ? 'animate-pulse' : ''}`}
               >
@@ -170,7 +170,7 @@ export function DatabaseShardingVisualizer() {
 
       {/* Query Result */}
       {queryResult && (
-        <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-4 w-full max-w-4xl">
+        <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4 w-full max-w-4xl">
           <h5 className="font-semibold text-indigo-800 mb-2">Query Result</h5>
           <p className="text-indigo-700">{queryResult}</p>
           
@@ -190,7 +190,7 @@ export function DatabaseShardingVisualizer() {
       )}
 
       {/* Key Concepts */}
-      <div className="bg-slate-100 rounded-xl p-6 w-full max-w-4xl">
+      <div className="bg-slate-100 rounded-lg p-6 w-full max-w-4xl">
         <h4 className="text-lg font-semibold text-slate-800 mb-3">Key Sharding Concepts</h4>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
           <div className="bg-white p-3 rounded-lg">

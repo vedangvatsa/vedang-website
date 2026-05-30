@@ -134,15 +134,15 @@ export default function AiDiscoveryStandardsPage() {
           <p className="text-sm text-muted-foreground mb-8">Numbers from 2025-2026 industry research on AI crawler behavior, blocking rates, and adoption.</p>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="rounded-xl border bg-card p-6">
+            <div className="rounded-lg border bg-card p-6">
               <p className="text-3xl font-semibold tracking-tight">~28%</p>
               <p className="text-sm text-muted-foreground mt-2">of websites now block at least one major AI crawler via robots.txt, CDN, or WAF rules.</p>
             </div>
-            <div className="rounded-xl border bg-card p-6">
+            <div className="rounded-lg border bg-card p-6">
               <p className="text-3xl font-semibold tracking-tight">79%</p>
               <p className="text-sm text-muted-foreground mt-2">of top news publishers block AI training bots. GPTBot is the most blocked crawler (17-62% depending on dataset).</p>
             </div>
-            <div className="rounded-xl border bg-card p-6">
+            <div className="rounded-lg border bg-card p-6">
               <p className="text-3xl font-semibold tracking-tight">~10%</p>
               <p className="text-sm text-muted-foreground mt-2">of domains have adopted llms.txt. Among the top 1,000 sites, it drops to 0.3%. No major AI provider officially uses it as a ranking signal.</p>
             </div>
@@ -198,7 +198,7 @@ export default function AiDiscoveryStandardsPage() {
           <p className="text-sm text-muted-foreground mb-8">
             Traditional SEO metrics (clicks, impressions, keyword rankings) don&apos;t capture AI performance. These are the metrics that matter now.
           </p>
-          <div className="space-y-px rounded-xl overflow-hidden border">
+          <div className="space-y-px rounded-lg overflow-hidden border">
             {[
               { metric: 'Citation Frequency', what: 'How often AI systems cite your domain when answering questions in your topic area.', status: 'Primary' },
               { metric: 'Share of AI Voice', what: 'Your brand\'s presence as a percentage of all citations in AI-generated answers for core queries.', status: 'Primary' },
@@ -234,7 +234,7 @@ export default function AiDiscoveryStandardsPage() {
               return (
                 <div key={category}>
                   <p className="text-xs font-medium text-muted-foreground uppercase tracking-widest mb-4">{category}</p>
-                  <div className="space-y-px rounded-xl overflow-hidden border">
+                  <div className="space-y-px rounded-lg overflow-hidden border">
                     {files.map((file) => (
                       <div key={file.name} className="bg-card flex gap-4 p-4">
                         <div className="shrink-0 w-40">
@@ -263,7 +263,7 @@ export default function AiDiscoveryStandardsPage() {
           <p className="text-sm text-muted-foreground mb-8">
             All known AI crawler user-agent strings as of Q2 2026. Separate <strong className="text-foreground">training bots</strong> (content absorbed into model weights, no attribution) from <strong className="text-foreground">search bots</strong> (content cited in AI-generated answers).
           </p>
-          <div className="space-y-px rounded-xl overflow-hidden border">
+          <div className="space-y-px rounded-lg overflow-hidden border">
             {AI_CRAWLERS.map((group) => (
               <div key={group.company} className="bg-card flex items-start gap-4 p-4">
                 <span className="font-medium text-sm shrink-0 w-28">{group.company}</span>
@@ -285,7 +285,7 @@ export default function AiDiscoveryStandardsPage() {
           <p className="text-sm text-muted-foreground mb-8">
             Answer Engine Optimization targets direct answer selection. Generative Engine Optimization targets citation frequency across AI platforms. You need both.
           </p>
-          <div className="space-y-px rounded-xl overflow-hidden border">
+          <div className="space-y-px rounded-lg overflow-hidden border">
             {[
               { label: 'Goal', aeo: 'Be selected as the direct answer', geo: 'Be cited as a source across AI platforms' },
               { label: 'Targets', aeo: 'Perplexity, ChatGPT Search, Google AI Overviews', geo: 'Claude, ChatGPT, Gemini recommendations' },
@@ -339,7 +339,7 @@ export default function AiDiscoveryStandardsPage() {
           <h2 className="text-2xl font-semibold tracking-tight mb-2">robots.txt Strategy</h2>
           <p className="text-sm text-muted-foreground mb-8">Separate training bots from search bots. Allow what you want cited, block what you want protected.</p>
 
-          <div className="space-y-px rounded-xl overflow-hidden border">
+          <div className="space-y-px rounded-lg overflow-hidden border">
             <div className="bg-card p-4">
               <span className="font-medium text-sm">Search bots</span>
               <span className="text-xs text-muted-foreground ml-2">(OAI-SearchBot, Claude-SearchBot, PerplexityBot)</span>

@@ -316,7 +316,7 @@ export default function Dashboard() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           
           {/* Panel 1: Core Metrics */}
-          <div className="rounded-xl border bg-card p-5 shadow-sm space-y-4">
+          <div className="rounded-lg border bg-card p-5 shadow-sm space-y-4">
             <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
               Core Database Volume
             </h2>
@@ -343,7 +343,7 @@ export default function Dashboard() {
           </div>
 
           {/* Panel 2: Seniority Pictograph */}
-          <div className="rounded-xl border bg-white p-5 shadow-sm space-y-4">
+          <div className="rounded-lg border bg-white p-5 shadow-sm space-y-4">
             <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
               Breakdown Within Each Seniority Level
             </h2>
@@ -395,7 +395,7 @@ export default function Dashboard() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           
           {/* Panel 3: Operations Table */}
-          <div className="rounded-xl border bg-card p-5 shadow-sm space-y-4">
+          <div className="rounded-lg border bg-card p-5 shadow-sm space-y-4">
             <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
               Platform Operations
             </h2>
@@ -422,7 +422,7 @@ export default function Dashboard() {
           </div>
 
           {/* Panel 4: Social Media Table */}
-          <div className="rounded-xl border bg-white p-5 shadow-sm space-y-4">
+          <div className="rounded-lg border bg-white p-5 shadow-sm space-y-4">
             <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
               Social Media Infrastructure
             </h2>
@@ -465,7 +465,7 @@ export default function Dashboard() {
         <DashboardCharts />
 
         {/* AS SEEN ON STRIPE CONTAINER */}
-        <div className="rounded-xl border bg-white p-4 shadow-sm space-y-3">
+        <div className="rounded-lg border bg-white p-4 shadow-sm space-y-3">
           <div className="text-[10px] font-bold text-slate-400 tracking-widest uppercase text-center">As Seen On</div>
           
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 md:gap-6 items-center justify-items-center">
@@ -485,7 +485,7 @@ export default function Dashboard() {
         </div>
 
         {/* ROW 4: DEPARTMENTS SPLIT TABLE */}
-        <div className="rounded-xl border bg-card p-5 shadow-sm space-y-4">
+        <div className="rounded-lg border bg-card p-5 shadow-sm space-y-4">
           <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Functional Share Splits</h3>
           
           <div className="overflow-x-auto rounded-lg border">
@@ -511,7 +511,7 @@ export default function Dashboard() {
         </div>
 
         {/* ROW 5: TOP 5 SKILLS COMPARISON (COMBINED TABLE) */}
-        <div className="rounded-xl border bg-card p-5 shadow-sm space-y-4">
+        <div className="rounded-lg border bg-card p-5 shadow-sm space-y-4">
           <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
             Top 5 In-Demand Skills Comparison
           </h2>
@@ -561,7 +561,7 @@ export default function Dashboard() {
         </div>
 
         {/* ROW 6: TOP 10 HIGH-TRAFFIC PAGES COMPARISON (COMBINED TABLE) */}
-        <div className="rounded-xl border bg-card p-5 shadow-sm space-y-4">
+        <div className="rounded-lg border bg-card p-5 shadow-sm space-y-4">
           <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
             Top 10 High-Traffic Pages & Tools Comparison
           </h2>
@@ -623,7 +623,7 @@ export default function Dashboard() {
         </div>
 
         {/* ROW 6: ECOSYSTEM CLIENTS GRID */}
-        <div className="rounded-xl border bg-card p-5 shadow-sm space-y-4">
+        <div className="rounded-lg border bg-card p-5 shadow-sm space-y-4">
           <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
             Clients
           </h2>
@@ -645,7 +645,7 @@ export default function Dashboard() {
         </div>
 
         {/* ROW 7: COMMUNITY & ACADEMIC PARTNERS */}
-        <div className="rounded-xl border bg-white p-5 shadow-sm space-y-4">
+        <div className="rounded-lg border bg-white p-5 shadow-sm space-y-4">
           <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground">
             Partners
           </h2>
@@ -666,13 +666,13 @@ export default function Dashboard() {
         </div>
 
         {/* ROW 8: WHAT OUR COMMUNITY SAYS */}
-        <div className="rounded-xl border bg-slate-50/50 p-6 shadow-sm space-y-6">
+        <div className="rounded-lg border bg-slate-50/50 p-6 shadow-sm space-y-6">
           <h2 className="text-sm font-semibold tracking-tight uppercase text-muted-foreground text-center">
             What Our Community Says
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {communityTestimonials.map((testimonial, idx) => (
-              <div key={idx} className="bg-white rounded-xl border p-5 shadow-sm flex flex-col justify-between min-h-[220px] hover:shadow-md transition-shadow">
+              <div key={idx} className="bg-white rounded-lg border p-5 shadow-sm flex flex-col justify-between min-h-[220px] hover:shadow-md transition-shadow">
                 <div className="flex-1 flex flex-col justify-center py-2">
                   <blockquote className="text-xs md:text-sm text-slate-700 italic leading-relaxed">
                     &ldquo;{testimonial.quote}&rdquo;

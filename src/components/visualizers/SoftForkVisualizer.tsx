@@ -47,7 +47,7 @@ export function SoftForkVisualizer() {
   const currentStepData = steps[currentStep];
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Soft Fork Visualization</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -81,7 +81,7 @@ export function SoftForkVisualizer() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Old Node */}
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-4 h-4 bg-amber-400 rounded-full"></div>
               <h5 className="text-lg font-semibold text-slate-800">Old Node (v1)</h5>
@@ -122,7 +122,7 @@ export function SoftForkVisualizer() {
           </div>
 
           {/* New Node */}
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
               <h5 className="text-lg font-semibold text-slate-800">New Node (v2)</h5>
@@ -164,7 +164,7 @@ export function SoftForkVisualizer() {
         </div>
 
         {/* Blockchain Visualization */}
-        <div className="mt-8 bg-white rounded-xl p-6 border border-slate-200">
+        <div className="mt-8 bg-white rounded-lg p-6 border border-slate-200">
           <h5 className="text-lg font-semibold text-slate-800 mb-4">Blockchain State</h5>
           <div className="flex items-center justify-center gap-2">
             {[1, 2, 3].map((blockNum) => (

@@ -37,14 +37,14 @@ export function MarketCapVisualizer() {
   const customTierInfo = getTierInfo(customMarketCap);
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Market Cap Calculator</h3>
         <p className="text-slate-600">Explore how price × circulating supply determines cryptocurrency market capitalization and risk tiers</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl">
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Real Cryptocurrencies</h4>
           <div className="space-y-3">
             {cryptos.map((crypto, index) => {
@@ -100,7 +100,7 @@ export function MarketCapVisualizer() {
           )}
         </div>
 
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Custom Calculator</h4>
           
           <div className="space-y-6">
@@ -165,7 +165,7 @@ export function MarketCapVisualizer() {
         </div>
       </div>
 
-      <div className="w-full max-w-6xl bg-white p-6 rounded-xl border border-slate-200">
+      <div className="w-full max-w-6xl bg-white p-6 rounded-lg border border-slate-200">
         <h4 className="text-lg font-semibold text-slate-800 mb-4">Market Cap Tiers & Risk Levels</h4>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
           {[

@@ -4,7 +4,7 @@ import Link from 'next/link';
 export function Footer() {
   return (
     <footer className="border-t border-border/30 py-6">
-      <div className="w-full md:w-[61.8%] mx-auto px-4 md:px-6">
+      <div className="content-width">
         <div className="flex items-center justify-center gap-4 text-muted-foreground/50">
           <Link href="https://x.com/vedangvatsa" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-foreground transition-colors">
             <Twitter className="h-4 w-4" />

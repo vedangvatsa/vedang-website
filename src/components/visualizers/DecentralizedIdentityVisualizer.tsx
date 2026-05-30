@@ -36,7 +36,7 @@ export function DecentralizedIdentityVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Decentralized Identity (DID) Visualization</h3>
         <p className="text-slate-600">Compare centralized vs decentralized identity management by switching modes and triggering actions</p>
@@ -65,7 +65,7 @@ export function DecentralizedIdentityVisualizer() {
         </button>
       </div>
 
-      <div className="w-full max-w-4xl h-96 relative bg-white rounded-xl border border-slate-300 p-6">
+      <div className="w-full max-w-4xl h-96 relative bg-white rounded-lg border border-slate-300 p-6">
         {selectedIdentity === 'centralized' ? (
           <div className="flex items-center justify-between h-full">
             {/* User */}

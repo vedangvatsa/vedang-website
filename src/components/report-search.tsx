@@ -37,7 +37,7 @@ export function ReportSearch({
           id="report-search-input"
           aria-label={placeholder}
           placeholder={placeholder}
-          className="w-full pl-10 pr-4 py-3 rounded-xl border border-border bg-card text-foreground focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+          className="w-full pl-10 pr-4 py-3 rounded-lg border border-border bg-card text-foreground focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
           defaultValue={currentQuery}
           onChange={(e) => {
             const timeout = setTimeout(() => updateParams('q', e.target.value), 300);
@@ -55,7 +55,7 @@ export function ReportSearch({
         <select
           id="report-category-select"
           aria-label="Filter reports by category"
-          className="w-full pl-10 pr-8 py-3 rounded-xl border border-border bg-card text-foreground focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none"
+          className="w-full pl-10 pr-8 py-3 rounded-lg border border-border bg-card text-foreground focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all appearance-none"
           defaultValue={currentCategory}
           onChange={(e) => updateParams('category', e.target.value)}
         >

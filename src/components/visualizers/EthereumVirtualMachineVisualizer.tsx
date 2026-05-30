@@ -108,7 +108,7 @@ export function EthereumVirtualMachineVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Ethereum Virtual Machine (EVM)</h3>
         <p className="text-slate-600 text-lg">Interactive demonstration of how smart contracts execute on the EVM</p>
@@ -116,7 +116,7 @@ export function EthereumVirtualMachineVisualizer() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl">
         {/* Contract Selection */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Smart Contracts</h4>
           <div className="space-y-3">
             {contracts.map(contract => (
@@ -148,7 +148,7 @@ export function EthereumVirtualMachineVisualizer() {
         </div>
 
         {/* EVM State Visualization */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">EVM State</h4>
           
           {/* Gas Meter */}

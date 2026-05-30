@@ -43,7 +43,7 @@ export function IdempotencyVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">HTTP Idempotency Interactive Demo</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -54,7 +54,7 @@ export function IdempotencyVisualizer() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
         {/* GET Request */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+        <div className="bg-white rounded-lg p-6 border border-slate-200 shadow-sm">
           <div className="flex items-center justify-between mb-4">
             <span className="text-sm font-semibold text-emerald-700 bg-emerald-100 px-2 py-1 rounded">GET</span>
             <span className="text-xs text-slate-500">Idempotent ✓</span>
@@ -79,7 +79,7 @@ export function IdempotencyVisualizer() {
         </div>
 
         {/* DELETE Request */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+        <div className="bg-white rounded-lg p-6 border border-slate-200 shadow-sm">
           <div className="flex items-center justify-between mb-4">
             <span className="text-sm font-semibold text-rose-700 bg-rose-100 px-2 py-1 rounded">DELETE</span>
             <span className="text-xs text-slate-500">Idempotent ✓</span>
@@ -103,7 +103,7 @@ export function IdempotencyVisualizer() {
         </div>
 
         {/* PUT Request */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+        <div className="bg-white rounded-lg p-6 border border-slate-200 shadow-sm">
           <div className="flex items-center justify-between mb-4">
             <span className="text-sm font-semibold text-blue-700 bg-blue-100 px-2 py-1 rounded">PUT</span>
             <span className="text-xs text-slate-500">Idempotent ✓</span>
@@ -128,7 +128,7 @@ export function IdempotencyVisualizer() {
         </div>
 
         {/* POST Request */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+        <div className="bg-white rounded-lg p-6 border border-slate-200 shadow-sm">
           <div className="flex items-center justify-between mb-4">
             <span className="text-sm font-semibold text-amber-700 bg-amber-100 px-2 py-1 rounded">POST</span>
             <span className="text-xs text-slate-500">Not Idempotent ✗</span>
@@ -152,7 +152,7 @@ export function IdempotencyVisualizer() {
         </div>
       </div>
 
-      <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-6 max-w-4xl">
+      <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-6 max-w-4xl">
         <h4 className="text-lg font-semibold text-indigo-800 mb-3">Observation</h4>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
           <div>

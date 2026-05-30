@@ -47,7 +47,7 @@ export function QuestionAnsweringVisualizer() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Question Answering Systems</h3>
         <p className="text-slate-600">Explore how AI systems extract or generate answers from text passages</p>
@@ -77,7 +77,7 @@ export function QuestionAnsweringVisualizer() {
       </div>
 
       <div className="w-full max-w-4xl space-y-6">
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Source Passage</h4>
           <div className="flex flex-wrap gap-1">
             {tokens.map((token, index) => (
@@ -93,7 +93,7 @@ export function QuestionAnsweringVisualizer() {
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Question</h4>
           <div className="flex flex-wrap gap-2 mb-4">
             {sampleData.questions.map((q, index) => (
@@ -116,7 +116,7 @@ export function QuestionAnsweringVisualizer() {
           <p className="text-slate-700 text-lg">{currentQuestion.text}</p>
         </div>
 
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <div className="flex items-center justify-between mb-4">
             <h4 className="text-lg font-semibold text-slate-800">
               {qaMode === 'extractive' ? 'Extractive Answer' : 'Generative Answer'}
@@ -152,7 +152,7 @@ export function QuestionAnsweringVisualizer() {
           )}
         </div>
 
-        <div className="bg-amber-50 border border-amber-200 p-4 rounded-xl">
+        <div className="bg-amber-50 border border-amber-200 p-4 rounded-lg">
           <div className="flex items-start gap-3">
             <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
             <div>

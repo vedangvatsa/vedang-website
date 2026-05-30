@@ -63,7 +63,7 @@ export function LimitOrderVisualizer() {
   const sellCanExecute = currentPrice >= sellLimitPrice;
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Limit Order Trading</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -73,7 +73,7 @@ export function LimitOrderVisualizer() {
 
       <div className="w-full max-w-4xl space-y-6">
         {/* Price Chart */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <div className="flex justify-between items-center mb-4">
             <h4 className="text-lg font-semibold text-slate-800">Market Price: ${currentPrice.toFixed(2)}</h4>
             <button
@@ -127,7 +127,7 @@ export function LimitOrderVisualizer() {
         {/* Order Controls */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Buy Order */}
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-lg font-semibold text-emerald-700 mb-4">Buy Limit Order</h4>
             <div className="space-y-4">
               <div>
@@ -169,7 +169,7 @@ export function LimitOrderVisualizer() {
           </div>
 
           {/* Sell Order */}
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-lg font-semibold text-rose-700 mb-4">Sell Limit Order</h4>
             <div className="space-y-4">
               <div>
@@ -214,7 +214,7 @@ export function LimitOrderVisualizer() {
         </div>
 
         {/* Status Panel */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <div className="grid grid-cols-3 gap-6 text-center">
             <div>
               <h5 className="text-sm font-medium text-slate-600 mb-1">Current Position</h5>

@@ -57,7 +57,7 @@ export function ModularBlockchainVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Modular Blockchain Architecture</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -92,7 +92,7 @@ export function ModularBlockchainVisualizer() {
 
           <div className={`transition-all duration-300 ${animating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'}`}>
             {architecture === 'monolithic' ? (
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
+              <div className="bg-white rounded-lg p-6 border border-slate-200">
                 <h5 className="text-lg font-semibold text-slate-800 mb-4">Monolithic Blockchain</h5>
                 <div className="relative">
                   <div className="h-48 bg-slate-300 rounded-lg flex items-center justify-center border-4 border-rose-400">
@@ -120,7 +120,7 @@ export function ModularBlockchainVisualizer() {
                 </div>
               </div>
             ) : (
-              <div className="bg-white rounded-xl p-6 border border-slate-200">
+              <div className="bg-white rounded-lg p-6 border border-slate-200">
                 <h5 className="text-lg font-semibold text-slate-800 mb-4">Modular Blockchain</h5>
                 <div className="space-y-3">
                   {Object.entries(layers).map(([key, layer]) => (
@@ -148,7 +148,7 @@ export function ModularBlockchainVisualizer() {
         <div className="flex-1">
           <h5 className="text-lg font-semibold text-slate-800 mb-4">Performance Comparison</h5>
           
-          <div className="bg-white rounded-xl p-6 border border-slate-200 space-y-6">
+          <div className="bg-white rounded-lg p-6 border border-slate-200 space-y-6">
             <div>
               <div className="flex justify-between items-center mb-2">
                 <span className="text-sm font-medium text-slate-700">Monolithic</span>
@@ -205,7 +205,7 @@ export function ModularBlockchainVisualizer() {
       </div>
 
       {activeLayer && (
-        <div className="w-full max-w-2xl bg-white rounded-xl p-6 border border-slate-200">
+        <div className="w-full max-w-2xl bg-white rounded-lg p-6 border border-slate-200">
           <h6 className={`text-lg font-semibold ${layers[activeLayer as keyof typeof layers].textColor} mb-3`}>
             {layers[activeLayer as keyof typeof layers].name}
           </h6>

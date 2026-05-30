@@ -41,7 +41,7 @@ export function MevBurnVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">MEV Burn Mechanism</h3>
         <p className="text-lg text-slate-600">Explore how burning MEV can reduce harmful extraction behaviors</p>
@@ -86,7 +86,7 @@ export function MevBurnVisualizer() {
         </div>
       )}
 
-      <div className="relative w-full max-w-4xl bg-white rounded-xl p-6 shadow-lg">
+      <div className="relative w-full max-w-4xl bg-white rounded-lg p-6 shadow-lg">
         <button
           onClick={startAnimation}
           className="absolute top-4 right-4 px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors"

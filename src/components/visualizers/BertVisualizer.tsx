@@ -43,7 +43,7 @@ export function BertVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">BERT: Bidirectional Language Understanding</h3>
         <p className="text-slate-600 text-lg">Explore how BERT uses context from both directions and masked language modeling</p>
@@ -51,7 +51,7 @@ export function BertVisualizer() {
 
       <div className="w-full max-w-4xl space-y-8">
         {/* Bidirectional Context Visualization */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-xl font-semibold text-slate-800 mb-4">Bidirectional Context Processing</h4>
           <div className="flex items-center justify-center gap-4 mb-4">
             {sentence.map((word, index) => (
@@ -89,7 +89,7 @@ export function BertVisualizer() {
         </div>
 
         {/* Masked Language Modeling */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-xl font-semibold text-slate-800 mb-4">Masked Language Modeling (15% masking)</h4>
           <div className="flex items-center gap-4 mb-6">
             <button
@@ -147,7 +147,7 @@ export function BertVisualizer() {
         </div>
 
         {/* Attention Matrix */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <div className="flex items-center justify-between mb-4">
             <h4 className="text-xl font-semibold text-slate-800">Attention Weights Matrix</h4>
             <button

@@ -41,7 +41,7 @@ export function ServerlessVisualizer() {
   const utilizationPercentage = Math.min((requestsPerSecond / maxCapacity) * 100, 100);
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Serverless vs Traditional Architecture</h3>
         <p className="text-slate-600">Compare auto-scaling serverless functions with always-on traditional servers</p>
@@ -49,7 +49,7 @@ export function ServerlessVisualizer() {
 
       <div className="flex flex-col gap-6 w-full max-w-4xl">
         {/* Controls */}
-        <div className="flex flex-col gap-4 bg-white p-6 rounded-xl border border-slate-200">
+        <div className="flex flex-col gap-4 bg-white p-6 rounded-lg border border-slate-200">
           <div className="flex items-center justify-between">
             <label className="text-sm font-medium text-slate-700">
               Traffic Load: {requestsPerSecond} requests/second
@@ -90,7 +90,7 @@ export function ServerlessVisualizer() {
         {/* Architecture Visualization */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Current Architecture */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold mb-4 text-slate-800">
               {isTraditional ? 'Traditional Server' : 'Serverless Functions'}
             </h4>
@@ -136,7 +136,7 @@ export function ServerlessVisualizer() {
           </div>
 
           {/* Stats */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold mb-4 text-slate-800">Performance & Cost</h4>
             
             <div className="space-y-4">
@@ -185,7 +185,7 @@ export function ServerlessVisualizer() {
         </div>
 
         {/* Key Benefits */}
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
           <h5 className="font-semibold text-blue-800 mb-3">Serverless Benefits</h5>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
             <div className="flex items-center gap-2">

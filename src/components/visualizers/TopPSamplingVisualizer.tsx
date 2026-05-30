@@ -74,7 +74,7 @@ interface TokenInfo {
   const totalIncludedProb = includedTokens.reduce((sum, t) => sum + t.probability, 0);
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Top-p Sampling (Nucleus Sampling)</h3>
         <p className="text-slate-600">
@@ -107,7 +107,7 @@ interface TokenInfo {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Token Probabilities */}
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Token Probabilities</h4>
             <div className="space-y-3">
               {sortedTokens.map((token, index) => {
@@ -159,7 +159,7 @@ interface TokenInfo {
           </div>
 
           {/* Cumulative Probability Visualization */}
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Nucleus Formation</h4>
             
             {/* Summary Stats */}

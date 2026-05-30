@@ -55,14 +55,14 @@ export function CollateralizationRatioVisualizer() {
   const barWidth = Math.min(100, (currentRatio / maxRatio) * 100);
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Collateralization Ratio Visualizer</h3>
         <p className="text-slate-600">Explore how collateral and borrowed asset values affect your DeFi lending position safety</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="font-semibold text-slate-800 mb-4">Position Setup</h4>
           
           <div className="space-y-4">
@@ -111,7 +111,7 @@ export function CollateralizationRatioVisualizer() {
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="font-semibold text-slate-800 mb-4">Current Ratio</h4>
           
           <div className="text-center mb-6">
@@ -148,7 +148,7 @@ export function CollateralizationRatioVisualizer() {
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="font-semibold text-slate-800 mb-4">Price Impact Simulation</h4>
           
           <div className="space-y-4">

@@ -96,7 +96,7 @@ export function GeneralizationVisualizer() {
   };
   
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Generalization in Machine Learning</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -107,7 +107,7 @@ export function GeneralizationVisualizer() {
       <div className="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Controls */}
         <div className="space-y-6">
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">Model Configuration</h4>
             
             <div className="space-y-4">
@@ -151,7 +151,7 @@ export function GeneralizationVisualizer() {
           </div>
           
           {/* Performance Metrics */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">Performance Metrics</h4>
             
             <div className="space-y-3">
@@ -178,7 +178,7 @@ export function GeneralizationVisualizer() {
             </div>
           </div>
           
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-3">Training Progress</h4>
             <div className="w-full bg-slate-200 rounded-full h-3">
               <div
@@ -191,7 +191,7 @@ export function GeneralizationVisualizer() {
         </div>
         
         {/* Visualization */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="font-semibold text-slate-800 mb-4">Model Fit Visualization</h4>
           
           <div className="relative w-full h-80 bg-slate-50 border border-slate-200 rounded-lg overflow-hidden">

@@ -31,7 +31,7 @@ const options = [
 
 export function LabWorkflow() {
   return (
-    <div className="not-prose my-10 p-6 md:p-8 bg-card border rounded-2xl shadow-sm">
+    <div className="not-prose my-10 p-6 md:p-8 bg-card border rounded-lg shadow-sm">
       <div className="text-center mb-6">
         <h3 className="text-xl font-bold tracking-tight mb-1">Build Workflow: 3 Paths to Ship</h3>
         <p className="text-sm text-muted-foreground">Choose any tool. All three produce the same Startup Name Generator app.</p>
@@ -40,7 +40,7 @@ export function LabWorkflow() {
         {options.map((opt) => {
           const Icon = opt.icon;
           return (
-            <div key={opt.title} className={`p-5 rounded-xl border ${opt.bg} flex flex-col`}>
+            <div key={opt.title} className={`p-5 rounded-lg border ${opt.bg} flex flex-col`}>
               <div className="flex items-center gap-3 mb-4">
                 <div className={`${opt.iconBg} p-2 rounded-lg ${opt.color}`}>
                   <Icon className="w-5 h-5" />

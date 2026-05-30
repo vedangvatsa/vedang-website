@@ -83,7 +83,7 @@ export function MarketOrderVisualizer() {
     executedTrades.reduce((sum, trade) => sum + trade.price * trade.size, 0) / totalExecuted : 0;
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Market Order Execution</h3>
         <p className="text-slate-600">Adjust order size and market liquidity to see how market orders execute against the order book</p>
@@ -91,7 +91,7 @@ export function MarketOrderVisualizer() {
 
       <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl">
         <div className="flex-1 space-y-6">
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-700 mb-4">Order Parameters</h4>
             
             <div className="space-y-4">
@@ -136,7 +136,7 @@ export function MarketOrderVisualizer() {
           </div>
 
           {executedTrades.length > 0 && (
-            <div className="bg-white p-6 rounded-xl border border-slate-200">
+            <div className="bg-white p-6 rounded-lg border border-slate-200">
               <h4 className="text-lg font-semibold text-slate-700 mb-4">Execution Results</h4>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="p-3 bg-slate-50 rounded-lg">
@@ -161,7 +161,7 @@ export function MarketOrderVisualizer() {
         </div>
 
         <div className="flex-1">
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-700 mb-4">Order Book (Ask Side)</h4>
             <div className="space-y-2">
               {orderBook.map((order, index) => {
@@ -202,7 +202,7 @@ export function MarketOrderVisualizer() {
         </div>
       </div>
 
-      <div className="w-full max-w-4xl bg-indigo-50 p-6 rounded-xl border border-indigo-200">
+      <div className="w-full max-w-4xl bg-indigo-50 p-6 rounded-lg border border-indigo-200">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
           <div>
             <h5 className="font-semibold text-indigo-800 mb-2">High Liquidity</h5>

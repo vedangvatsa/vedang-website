@@ -1,0 +1,147 @@
+# ============================================================================
+# AI Video Pipeline — Default Configuration
+# ============================================================================
+# Copy this to config/local.yaml and override values for your environment.
+# The pipeline loads default.yaml first, then merges local.yaml on top.
+# ============================================================================
+
+# --- Pipeline Settings ---
+pipeline:
+  # Where all generated assets land
+  output_dir: "output"
+  temp_dir: "temp"
+  # Set to true to keep intermediate files after a successful run
+  keep_temp: false
+  # Maximum stories to fetch per run
+  max_stories: 5
+  # Log level: DEBUG, INFO, WARNING, ERROR
+  log_level: "INFO"
+
+# --- Video Settings ---
+video:
+  width: 1080
+  height: 1920
+  fps: 30
+  # Total target duration in seconds
+  target_duration: 25
+  format: "mp4"
+
+# --- RSS Feed Sources ---
+feeds:
+  - name: "TechCrunch"
+    url: "https://techcrunch.com/feed/"
+    category: "tech"
+    priority: 1
+
+  - name: "The Verge"
+    url: "https://www.theverge.com/rss/index.xml"
+    category: "tech"
+    priority: 1
+
+  - name: "Hacker News (Best)"
+    url: "https://hnrss.org/best"
+    category: "tech"
+    priority: 2
+
+  - name: "Ars Technica"
+    url: "https://feeds.arstechnica.com/arstechnica/index"
+    category: "tech"
+    priority: 1
+
+  - name: "Wired"
+    url: "https://www.wired.com/feed/rss"
+    category: "tech"
+    priority: 3
+
+# --- LLM Settings (Ollama) ---
+llm:
+  # Ollama base URL
+  base_url: "http://localhost:11434"
+  # Model to use for script generation
+  model: "llama3.1:8b"
+  # Fallback model if primary is unavailable
+  fallback_model: "mistral:7b"
+  # Temperature for creative script writing
+  temperature: 0.7
+  # Max tokens for response
+  max_tokens: 2048
+  # Timeout in seconds
+  timeout: 120
+
+# --- Voice Generation (TTS) ---
+voice:
+  # Primary engine: "chatterbox", "f5tts", "edge-tts"
+  engine: "edge-tts"
+  # Path to reference voice audio file (for voice cloning)
+  reference_audio: "assets/reference_voice.wav"
+  # Edge-TTS voice name (fallback)
+  edge_voice: "en-US-GuyNeural"
+  # Output sample rate
+  sample_rate: 24000
+  # Chatterbox specific settings
+  chatterbox:
+    # "mps" for Apple Silicon GPU, "cpu" for CPU-only
+    device: "cpu"
+    # Exaggeration parameter (0.0-1.0, higher = more expressive)
+    exaggeration: 0.5
+    # CFG/Pace weight
+    cfg_weight: 0.5
+  # F5-TTS specific settings
+  f5tts:
+    model: "F5-TTS"
+    # Use MLX backend on Apple Silicon
+    use_mlx: true
+
+# --- Timestamp Generation ---
+timestamps:
+  # Engine: "stable-ts", "faster-whisper"
+  engine: "stable-ts"
+  # Whisper model size: "tiny", "base", "small", "medium", "large-v3"
+  model_size: "base"
+  # Device: "cpu" or "mps" (Apple Silicon)
+  device: "cpu"
+  # Language
+  language: "en"
+
+# --- Screenshot Capture ---
+screenshots:
+  # Viewport dimensions (mobile-first for vertical video)
+  viewport_width: 375
+  viewport_height: 812
+  # Device scale factor
+  device_scale_factor: 2
+  # Wait time in ms after page load
+  wait_ms: 3000
+  # Max screenshots per run
+  max_screenshots: 10
+  # Node.js path (auto-detected if not set)
+  node_path: ""
+
+# --- Avatar Generation ---
+avatar:
+  # Strategy: "static", "musetalk", "liveportrait", "echomimic"
+  strategy: "static"
+  # Photo for static/lip-sync avatar
+  photo_path: "assets/avatar_photo.png"
+  # Base video for MuseTalk re-lip-sync (Option A)
+  base_video_path: "assets/avatar_base.mp4"
+  # Cloud GPU settings (for strategies needing CUDA)
+  cloud:
+    provider: "runpod"
+    # RunPod API key (set in environment: RUNPOD_API_KEY)
+    api_key_env: "RUNPOD_API_KEY"
+    # GPU type
+    gpu_type: "NVIDIA RTX A5000"
+    # Docker image for avatar generation
+    docker_image: "vedang/avatar-pipeline:latest"
+
+# --- Remotion Integration ---
+remotion:
+  # Path to the Remotion project root
+  project_path: "../remotion-video"
+  # Composition ID in Remotion
+  composition_id: "AINewsReel"
+  # Props output filename
+  props_filename: "video-props.json"
+  # Render concurrency
+  concurrency: 4

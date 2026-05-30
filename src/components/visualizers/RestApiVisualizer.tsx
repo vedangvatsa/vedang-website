@@ -57,7 +57,7 @@ export function RestApiVisualizer() {
   const getMethodColor = () => methods.find(m => m.name === method)?.color || '#64748b';
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">REST API Explorer</h3>
         <p className="text-slate-600 max-w-2xl">Build and send HTTP requests to see how REST APIs work</p>
@@ -101,7 +101,7 @@ export function RestApiVisualizer() {
 
       {/* Visual */}
       <div className="w-full max-w-2xl">
-        <svg viewBox="0 0 600 200" className="w-full border border-slate-200 rounded-xl bg-white">
+        <svg viewBox="0 0 600 200" className="w-full border border-slate-200 rounded-lg bg-white">
           {/* Client */}
           <g transform="translate(100, 100)">
             <rect x={-60} y={-40} width={120} height={80} rx={10} fill="#f8fafc" stroke="#e2e8f0" strokeWidth="2" />
@@ -172,7 +172,7 @@ export function RestApiVisualizer() {
 
       {/* Response body */}
       {response && (
-        <div className="w-full max-w-xl bg-slate-900 rounded-xl p-4 font-mono text-xs">
+        <div className="w-full max-w-xl bg-slate-900 rounded-lg p-4 font-mono text-xs">
           <div className="flex justify-between text-slate-400 mb-2">
             <span>Response Body</span>
             <span className={response.status < 300 ? 'text-emerald-400' : 'text-red-400'}>

@@ -28,7 +28,7 @@ export function SoulboundTokenVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Soulbound Token (SBT) Visualizer</h3>
         <p className="text-slate-600 max-w-3xl">
@@ -61,7 +61,7 @@ export function SoulboundTokenVisualizer() {
 
       {!showComparison ? (
         <div className="w-full max-w-4xl">
-          <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+          <div className="bg-white rounded-lg p-6 border border-slate-200 shadow-sm">
             <h4 className="text-lg font-semibold text-slate-700 mb-4 flex items-center gap-2">
               <span className="w-3 h-3 bg-indigo-500 rounded-full"></span>
               Your Soulbound Tokens
@@ -126,7 +126,7 @@ export function SoulboundTokenVisualizer() {
         </div>
       ) : (
         <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+          <div className="bg-white rounded-lg p-6 border border-slate-200 shadow-sm">
             <h4 className="text-lg font-semibold text-slate-700 mb-4 flex items-center gap-2">
               <span className="w-3 h-3 bg-indigo-500 rounded-full"></span>
               Soulbound Tokens
@@ -157,7 +157,7 @@ export function SoulboundTokenVisualizer() {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+          <div className="bg-white rounded-lg p-6 border border-slate-200 shadow-sm">
             <h4 className="text-lg font-semibold text-slate-700 mb-4 flex items-center gap-2">
               <span className="w-3 h-3 bg-rose-500 rounded-full"></span>
               Regular NFTs

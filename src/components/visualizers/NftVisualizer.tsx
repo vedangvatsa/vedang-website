@@ -41,7 +41,7 @@ export function NftVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">Non-Fungible Token (NFT) Explorer</h3>
         <p className="text-slate-600 text-lg">Discover how NFTs provide unique, provable ownership of digital assets</p>
@@ -88,7 +88,7 @@ export function NftVisualizer() {
               <div
                 key={asset.id}
                 onClick={() => setSelectedAsset(selectedAsset === asset.id ? null : asset.id)}
-                className={`${asset.color} border-2 rounded-xl p-6 cursor-pointer transition-all hover:scale-105 ${
+                className={`${asset.color} border-2 rounded-lg p-6 cursor-pointer transition-all hover:scale-105 ${
                   selectedAsset === asset.id ? 'ring-4 ring-indigo-300 scale-105' : ''
                 }`}
               >
@@ -123,7 +123,7 @@ export function NftVisualizer() {
             {assets.map((asset) => {
               const currentOwner = getCurrentOwner(asset.id);
               return (
-                <div key={asset.id} className={`${asset.color} border-2 rounded-xl p-6`}>
+                <div key={asset.id} className={`${asset.color} border-2 rounded-lg p-6`}>
                   <div className="text-center">
                     <div className="text-2xl mb-2">
                       {asset.type === 'Art' ? '🎨' : asset.type === 'Gaming' ? '⚔️' : '🌐'}
@@ -152,7 +152,7 @@ export function NftVisualizer() {
             {assets.map((asset) => {
               const history = ownershipHistory[asset.id] || [];
               return (
-                <div key={asset.id} className={`${asset.color} border-2 rounded-xl p-6`}>
+                <div key={asset.id} className={`${asset.color} border-2 rounded-lg p-6`}>
                   <div className="text-center mb-4">
                     <div className="text-xl mb-1">
                       {asset.type === 'Art' ? '🎨' : asset.type === 'Gaming' ? '⚔️' : '🌐'}

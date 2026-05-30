@@ -74,7 +74,7 @@ export function DropoutVisualizer() {
   const totalNeurons = layerSizes.reduce((sum, size) => sum + size, 0);
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Dropout Regularization</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -84,7 +84,7 @@ export function DropoutVisualizer() {
       
       <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl">
         <div className="flex-1">
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <div className="flex justify-between items-center mb-4">
               <h4 className="font-semibold text-slate-700">Neural Network</h4>
               <div className="text-sm text-slate-500">
@@ -180,7 +180,7 @@ export function DropoutVisualizer() {
         </div>
         
         <div className="w-full lg:w-80">
-          <div className="bg-white p-6 rounded-xl border border-slate-200 space-y-6">
+          <div className="bg-white p-6 rounded-lg border border-slate-200 space-y-6">
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-2">
                 Dropout Rate: {(dropoutRate * 100).toFixed(0)}%

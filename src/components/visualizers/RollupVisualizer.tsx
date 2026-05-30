@@ -36,7 +36,7 @@ export function RollupVisualizer() {
   const gasReduction = Math.floor(((l1Cost - rollupCost) / l1Cost) * 100);
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Rollup Scaling Solution</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -69,7 +69,7 @@ export function RollupVisualizer() {
 
       <div className="w-full max-w-4xl">
         <div className="grid grid-cols-2 gap-8 mb-8">
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Layer 2 (Rollup)</h4>
             <div className="space-y-3">
               {Array.from({ length: 6 }).map((_, i) => (
@@ -95,7 +95,7 @@ export function RollupVisualizer() {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Layer 1 (Ethereum)</h4>
             <div className="space-y-3">
               <div className={`h-16 rounded-lg border-2 border-dashed transition-all duration-500 flex items-center justify-center ${
@@ -130,7 +130,7 @@ export function RollupVisualizer() {
           </button>
         </div>
 
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Cost Comparison</h4>
           
           <div className="mb-4">

@@ -55,7 +55,7 @@ export function AttentionHeadVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Multi-Head Attention Visualization</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -140,7 +140,7 @@ export function AttentionHeadVisualizer() {
         )}
         
         {/* Attention Matrix */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+        <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
           <div className="text-center font-medium text-slate-700 mb-4">
             Attention Weights for Head {selectedHead + 1}
           </div>

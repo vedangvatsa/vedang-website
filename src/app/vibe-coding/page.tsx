@@ -228,7 +228,7 @@ export default function VibeCodingCoursePage() {
                     <p className="mt-2 text-muted-foreground">Seven modules to take you from concept to deployed product.</p>
                 </div>
                 <div className="space-y-4">
-                    <Link href="/vibe-coding/module-1-philosophy" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/vibe-coding/module-1-philosophy" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">1. The Philosophy</h3>
@@ -237,7 +237,7 @@ export default function VibeCodingCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/vibe-coding/module-2-toolkit" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/vibe-coding/module-2-toolkit" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">2. The Modern Toolkit</h3>
@@ -246,7 +246,7 @@ export default function VibeCodingCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/vibe-coding/module-3-prompts" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/vibe-coding/module-3-prompts" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">3. The Art of the Prompt</h3>
@@ -255,7 +255,7 @@ export default function VibeCodingCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/vibe-coding/module-4-lab" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/vibe-coding/module-4-lab" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">4. Lab: Name Generator</h3>
@@ -264,7 +264,7 @@ export default function VibeCodingCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/vibe-coding/module-5-product" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/vibe-coding/module-5-product" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">5. To Professional Product</h3>
@@ -273,7 +273,7 @@ export default function VibeCodingCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/vibe-coding/module-6-debugging" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/vibe-coding/module-6-debugging" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">6. Debugging & Iteration</h3>
@@ -282,7 +282,7 @@ export default function VibeCodingCoursePage() {
                             <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
                         </div>
                     </Link>
-                    <Link href="/vibe-coding/module-7-deployment" className="block p-6 rounded-xl border bg-card hover:border-primary/50 transition-colors shadow-sm">
+                    <Link href="/vibe-coding/module-7-deployment" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-lg">7. Deployment & Databases</h3>
@@ -329,7 +329,7 @@ export default function VibeCodingCoursePage() {
                     Common questions about Vibe Coding answered directly.
                 </p>
             </div>
-            <div className="max-w-5xl mx-auto mt-12">
+            <div className="content-width mt-12">
                 <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
                    {faqItems.map((item, index) => (
                      <AccordionItem key={index} value={`faq-${index + 1}`}>

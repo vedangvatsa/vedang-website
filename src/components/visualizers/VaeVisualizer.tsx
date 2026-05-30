@@ -58,7 +58,7 @@ export function VaeVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Variational Autoencoder</h3>
         <p className="text-slate-600 text-lg">Interactive exploration of probabilistic encoding and latent space generation</p>
@@ -66,7 +66,7 @@ export function VaeVisualizer() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full max-w-6xl">
         {/* Encoder Section */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-blue-700 mb-4">1. Encoder</h4>
           <div className="space-y-4">
             <div>
@@ -110,7 +110,7 @@ export function VaeVisualizer() {
         </div>
 
         {/* Latent Space Section */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-indigo-700 mb-4">2. Latent Space</h4>
           <div className="relative h-64 bg-slate-100 rounded-lg border-2 border-dashed border-slate-300 cursor-crosshair"
                onClick={(e) => {
@@ -180,7 +180,7 @@ export function VaeVisualizer() {
         </div>
 
         {/* Decoder Section */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-rose-700 mb-4">3. Decoder</h4>
           <div className="space-y-4">
             {selectedPoint ? (

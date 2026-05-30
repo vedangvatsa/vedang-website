@@ -29,7 +29,7 @@ export function SelfSovereignIdentityVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Self-Sovereign Identity (SSI)</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -87,7 +87,7 @@ export function SelfSovereignIdentityVisualizer() {
                     }`}
                     onClick={() => setSelectedIdentity(selectedIdentity === platform.id ? null : platform.id)}
                   >
-                    <div className={`${platform.color} p-4 rounded-xl text-white shadow-lg`}>
+                    <div className={`${platform.color} p-4 rounded-lg text-white shadow-lg`}>
                       <div className="font-semibold mb-2">{platform.name}</div>
                       <div className="text-sm opacity-90">Controls Your Data</div>
                       {selectedIdentity === platform.id && (
@@ -142,7 +142,7 @@ export function SelfSovereignIdentityVisualizer() {
           <div className="relative flex items-center justify-between">
             {/* User's Digital Wallet */}
             <div className="relative">
-              <div className="w-48 bg-gradient-to-br from-indigo-500 to-blue-600 p-6 rounded-2xl text-white shadow-xl">
+              <div className="w-48 bg-gradient-to-br from-indigo-500 to-blue-600 p-6 rounded-lg text-white shadow-xl">
                 <div className="font-bold text-lg mb-4 text-center">Your Digital Wallet</div>
                 <div className="space-y-3">
                   {ssiCredentials.map((cred) => (
@@ -198,7 +198,7 @@ export function SelfSovereignIdentityVisualizer() {
 
             {/* Service Provider */}
             <div className="relative">
-              <div className={`w-48 bg-slate-100 border-2 border-slate-300 p-6 rounded-2xl transition-all ${
+              <div className={`w-48 bg-slate-100 border-2 border-slate-300 p-6 rounded-lg transition-all ${
                 animationStep >= 2 ? 'border-blue-500 bg-blue-50' : ''
               }`}>
                 <div className="font-bold text-lg mb-4 text-center text-slate-700">Job Portal</div>

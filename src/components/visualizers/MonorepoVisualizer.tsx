@@ -53,7 +53,7 @@ export function MonorepoVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Monorepo Architecture</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -115,7 +115,7 @@ export function MonorepoVisualizer() {
           </div>
         ) : (
           <div className="relative">
-            <div className="bg-white border-4 border-indigo-300 rounded-2xl p-8 shadow-lg">
+            <div className="bg-white border-4 border-indigo-300 rounded-lg p-8 shadow-lg">
               <div className="text-center mb-6">
                 <div className="text-lg font-bold text-indigo-700">Single Monorepo</div>
                 <div className="text-sm text-slate-600">All projects in one repository</div>

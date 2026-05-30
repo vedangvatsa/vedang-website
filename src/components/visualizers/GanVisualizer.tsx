@@ -81,7 +81,7 @@ export function GanVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">
           Generative Adversarial Network (GAN)
@@ -93,7 +93,7 @@ export function GanVisualizer() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl">
         {/* Training Visualization */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Data Distribution</h4>
           <div className="relative w-full h-64 bg-slate-100 rounded-lg border-2 border-slate-200 overflow-hidden">
             {/* Real samples */}
@@ -135,7 +135,7 @@ export function GanVisualizer() {
         </div>
 
         {/* Controls and Metrics */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Training Control</h4>
           
           <div className="space-y-4">
@@ -241,7 +241,7 @@ export function GanVisualizer() {
       </div>
 
       {/* Network Architecture */}
-      <div className="bg-white p-6 rounded-xl border border-slate-200 w-full max-w-4xl">
+      <div className="bg-white p-6 rounded-lg border border-slate-200 w-full max-w-4xl">
         <h4 className="text-lg font-semibold text-slate-800 mb-4 text-center">GAN Architecture</h4>
         <div className="flex items-center justify-between">
           {/* Noise Input */}

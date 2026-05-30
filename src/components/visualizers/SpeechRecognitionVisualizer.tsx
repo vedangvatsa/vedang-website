@@ -46,7 +46,7 @@ export function SpeechRecognitionVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Speech Recognition Pipeline</h3>
         <p className="text-slate-600">Interactive visualization of how speech is converted to text through neural networks</p>
@@ -54,7 +54,7 @@ export function SpeechRecognitionVisualizer() {
 
       <div className="flex flex-col gap-6 w-full max-w-4xl">
         {/* Controls */}
-        <div className="flex gap-6 justify-center items-center bg-white p-4 rounded-xl border border-slate-200">
+        <div className="flex gap-6 justify-center items-center bg-white p-4 rounded-lg border border-slate-200">
           <div className="flex flex-col gap-2">
             <label className="text-sm font-medium text-slate-700">Confidence: {confidence.toFixed(2)}</label>
             <input
@@ -94,7 +94,7 @@ export function SpeechRecognitionVisualizer() {
         {/* Pipeline Stages */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* Audio Input */}
-          <div className={`bg-white p-4 rounded-xl border-2 transition-colors ${
+          <div className={`bg-white p-4 rounded-lg border-2 transition-colors ${
             processingStage === 'audio' && isProcessing ? 'border-blue-400 bg-blue-50' : 'border-slate-200'
           }`}>
             <h4 className="font-semibold text-slate-800 mb-3">1. Audio Signal</h4>
@@ -114,7 +114,7 @@ export function SpeechRecognitionVisualizer() {
           </div>
 
           {/* Feature Extraction */}
-          <div className={`bg-white p-4 rounded-xl border-2 transition-colors ${
+          <div className={`bg-white p-4 rounded-lg border-2 transition-colors ${
             processingStage === 'features' && isProcessing ? 'border-indigo-400 bg-indigo-50' : 'border-slate-200'
           }`}>
             <h4 className="font-semibold text-slate-800 mb-3">2. Features</h4>
@@ -134,7 +134,7 @@ export function SpeechRecognitionVisualizer() {
           </div>
 
           {/* Neural Network */}
-          <div className={`bg-white p-4 rounded-xl border-2 transition-colors ${
+          <div className={`bg-white p-4 rounded-lg border-2 transition-colors ${
             processingStage === 'neural' && isProcessing ? 'border-emerald-400 bg-emerald-50' : 'border-slate-200'
           }`}>
             <h4 className="font-semibold text-slate-800 mb-3">3. Neural Net</h4>
@@ -156,7 +156,7 @@ export function SpeechRecognitionVisualizer() {
           </div>
 
           {/* Text Output */}
-          <div className={`bg-white p-4 rounded-xl border-2 transition-colors ${
+          <div className={`bg-white p-4 rounded-lg border-2 transition-colors ${
             processingStage === 'text' && isProcessing ? 'border-amber-400 bg-amber-50' : 'border-slate-200'
           }`}>
             <h4 className="font-semibold text-slate-800 mb-3">4. Text Output</h4>
@@ -184,7 +184,7 @@ export function SpeechRecognitionVisualizer() {
 
         {/* Word Analysis */}
         {selectedWord !== null && (
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">
               Word Analysis: "{words[selectedWord]}"
             </h4>

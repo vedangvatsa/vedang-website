@@ -33,7 +33,7 @@ export function DockerVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">Docker Container Platform</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -63,7 +63,7 @@ export function DockerVisualizer() {
       {!showComparison ? (
         <div className="w-full max-w-5xl">
           {/* Docker Host */}
-          <div className="bg-slate-800 p-6 rounded-xl text-white mb-6">
+          <div className="bg-slate-800 p-6 rounded-lg text-white mb-6">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-4 h-4 bg-blue-500 rounded"></div>
               <h4 className="text-xl font-semibold">Docker Host (Operating System)</h4>
@@ -128,7 +128,7 @@ export function DockerVisualizer() {
 
           {/* Container Details */}
           {selectedApp && (
-            <div className="bg-white border-2 border-blue-200 rounded-xl p-6">
+            <div className="bg-white border-2 border-blue-200 rounded-lg p-6">
               <h4 className="text-lg font-semibold text-slate-800 mb-4">
                 Container: {applications.find(a => a.id === selectedApp)?.name}
               </h4>
@@ -159,7 +159,7 @@ export function DockerVisualizer() {
       ) : (
         <div className="w-full max-w-6xl grid grid-cols-2 gap-8">
           {/* Containers */}
-          <div className="bg-slate-800 p-6 rounded-xl text-white">
+          <div className="bg-slate-800 p-6 rounded-lg text-white">
             <h4 className="text-xl font-semibold mb-4 text-center">Docker Containers</h4>
             <div className="space-y-2">
               <div className="bg-slate-700 p-3 rounded text-center text-sm">Host Operating System</div>
@@ -179,7 +179,7 @@ export function DockerVisualizer() {
           </div>
 
           {/* Virtual Machines */}
-          <div className="bg-slate-800 p-6 rounded-xl text-white">
+          <div className="bg-slate-800 p-6 rounded-lg text-white">
             <h4 className="text-xl font-semibold mb-4 text-center">Virtual Machines</h4>
             <div className="space-y-2">
               <div className="bg-slate-700 p-2 rounded text-center text-xs">Host Operating System</div>

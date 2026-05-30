@@ -1,0 +1,12 @@
+{
+  "name": "ai-video-pipeline-screenshots",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Puppeteer screenshot tool for the AI video pipeline",
+  "scripts": {
+    "screenshot": "node scripts/screenshot.js"
+  },
+  "dependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}

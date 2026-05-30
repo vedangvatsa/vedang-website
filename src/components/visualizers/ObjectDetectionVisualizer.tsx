@@ -44,7 +44,7 @@ export function ObjectDetectionVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">Object Detection</h3>
         <p className="text-lg text-slate-600">Interactive visualization showing how AI identifies and localizes multiple objects with bounding boxes and confidence scores</p>
@@ -52,7 +52,7 @@ export function ObjectDetectionVisualizer() {
 
       {/* Controls */}
       <div className="flex flex-col lg:flex-row gap-6 w-full max-w-4xl">
-        <div className="flex flex-col gap-4 bg-white p-4 rounded-xl border border-slate-200">
+        <div className="flex flex-col gap-4 bg-white p-4 rounded-lg border border-slate-200">
           <h4 className="font-semibold text-slate-700">Detection Settings</h4>
           
           <div className="flex flex-col gap-2">
@@ -91,7 +91,7 @@ export function ObjectDetectionVisualizer() {
         </div>
 
         {/* Image Canvas */}
-        <div className="flex-1 bg-white p-4 rounded-xl border border-slate-200">
+        <div className="flex-1 bg-white p-4 rounded-lg border border-slate-200">
           <div className="relative w-full h-64 bg-gradient-to-br from-blue-100 to-emerald-100 rounded-lg overflow-hidden border border-slate-300">
             {isProcessing && (
               <div className="absolute inset-0 bg-blue-500 bg-opacity-20 flex items-center justify-center">
@@ -126,7 +126,7 @@ export function ObjectDetectionVisualizer() {
 
       {/* Detection Results */}
       <div className="w-full max-w-4xl">
-        <div className="bg-white p-4 rounded-xl border border-slate-200">
+        <div className="bg-white p-4 rounded-lg border border-slate-200">
           <h4 className="font-semibold text-slate-700 mb-3">
             Detection Results ({filteredDetections.length} objects found)
           </h4>
@@ -155,7 +155,7 @@ export function ObjectDetectionVisualizer() {
       </div>
 
       {/* Model Info */}
-      <div className="w-full max-w-4xl bg-white p-4 rounded-xl border border-slate-200">
+      <div className="w-full max-w-4xl bg-white p-4 rounded-lg border border-slate-200">
         <h4 className="font-semibold text-slate-700 mb-3">Model Characteristics</h4>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="text-center">

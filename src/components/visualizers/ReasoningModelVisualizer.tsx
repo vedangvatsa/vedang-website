@@ -52,7 +52,7 @@ export function ReasoningModelVisualizer() {
   const currentSteps = modelType === 'standard' ? standardSteps : reasoningSteps;
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Reasoning Model vs Standard LLM</h3>
         <p className="text-slate-600">Compare how different AI models approach problem-solving</p>
@@ -61,7 +61,7 @@ export function ReasoningModelVisualizer() {
       <div className="flex gap-4 mb-4">
         <button
           onClick={() => setModelType('standard')}
-          className={`px-6 py-3 rounded-xl font-semibold transition-all ${
+          className={`px-6 py-3 rounded-lg font-semibold transition-all ${
             modelType === 'standard'
               ? 'bg-blue-500 text-white shadow-lg'
               : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
@@ -71,7 +71,7 @@ export function ReasoningModelVisualizer() {
         </button>
         <button
           onClick={() => setModelType('reasoning')}
-          className={`px-6 py-3 rounded-xl font-semibold transition-all ${
+          className={`px-6 py-3 rounded-lg font-semibold transition-all ${
             modelType === 'reasoning'
               ? 'bg-indigo-500 text-white shadow-lg'
               : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
@@ -96,7 +96,7 @@ export function ReasoningModelVisualizer() {
           </select>
         </div>
 
-        <div className="bg-white rounded-xl p-6 border border-slate-200 min-h-80">
+        <div className="bg-white rounded-lg p-6 border border-slate-200 min-h-80">
           <div className="flex items-center justify-between mb-4">
             <h4 className="font-semibold text-lg text-slate-800">
               {modelType === 'standard' ? 'Standard LLM Process' : 'Reasoning Model Process'}

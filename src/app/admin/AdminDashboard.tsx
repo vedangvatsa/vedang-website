@@ -160,7 +160,7 @@ export default function AdminDashboard({ platforms }: { platforms: Record<string
         </div>
 
         {/* Content Area */}
-        <div className="bg-card rounded-xl border border-border p-6 shadow-sm relative overflow-hidden">
+        <div className="bg-card rounded-lg border border-border p-6 shadow-sm relative overflow-hidden">
           
           {viewMode === 'calendar' ? (
             <div className="space-y-6">
@@ -247,7 +247,7 @@ export default function AdminDashboard({ platforms }: { platforms: Record<string
               </div>
 
               {postsToShow.length === 0 ? (
-                <div className="flex flex-col items-center justify-center py-20 text-muted-foreground bg-secondary/30 rounded-xl border border-dashed border-border">
+                <div className="flex flex-col items-center justify-center py-20 text-muted-foreground bg-secondary/30 rounded-lg border border-dashed border-border">
                   <p className="text-lg">No posts found.</p>
                 </div>
               ) : (
@@ -270,7 +270,7 @@ export default function AdminDashboard({ platforms }: { platforms: Record<string
                       return (
                       <div
                         key={idx}
-                        className={`p-5 rounded-xl border transition-colors ${
+                        className={`p-5 rounded-lg border transition-colors ${
                           post.error
                             ? 'bg-destructive/10 border-destructive/30'
                             : post.posted

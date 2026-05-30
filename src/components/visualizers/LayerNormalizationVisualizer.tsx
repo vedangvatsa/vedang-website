@@ -44,7 +44,7 @@ export function LayerNormalizationVisualizer() {
   const minValue = Math.min(...samples.flat(), ...scaled);
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Layer Normalization</h3>
         <p className="text-slate-600">Normalizes activations across features for each sample independently</p>
@@ -69,7 +69,7 @@ export function LayerNormalizationVisualizer() {
         </div>
 
         {/* Visualization */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <div className="flex justify-between items-center mb-6">
             <h4 className="text-lg font-semibold text-slate-800">
               Sample {selectedSample + 1} Features
@@ -129,7 +129,7 @@ export function LayerNormalizationVisualizer() {
         </div>
 
         {/* Parameters */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Learned Parameters</h4>
           <div className="grid grid-cols-2 gap-6">
             <div>
@@ -164,7 +164,7 @@ export function LayerNormalizationVisualizer() {
         </div>
 
         {/* Formula */}
-        <div className="bg-indigo-50 rounded-xl p-6 border border-indigo-200">
+        <div className="bg-indigo-50 rounded-lg p-6 border border-indigo-200">
           <h4 className="text-lg font-semibold text-indigo-800 mb-3">Layer Norm Formula</h4>
           <div className="text-center font-mono text-indigo-700">
             y = γ × (x - μ) / σ + β

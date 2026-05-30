@@ -40,14 +40,14 @@ export function SslTlsVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">TLS Handshake and Encryption</h3>
         <p className="text-slate-600 max-w-2xl">Watch how browsers establish a secure connection before sending data</p>
       </div>
 
       <div className="w-full max-w-2xl">
-        <svg viewBox="0 0 600 350" className="w-full border border-slate-200 rounded-xl bg-white">
+        <svg viewBox="0 0 600 350" className="w-full border border-slate-200 rounded-lg bg-white">
           {/* Client */}
           <g transform="translate(100, 60)">
             <rect x={-60} y={-35} width={120} height={70} rx={12} fill="#eff6ff" stroke="#93c5fd" strokeWidth="2" />
@@ -128,7 +128,7 @@ export function SslTlsVisualizer() {
       </div>
 
       {step >= 0 && step < handshakeSteps.length && (
-        <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-4 max-w-lg text-center">
+        <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4 max-w-lg text-center">
           <p className="text-indigo-800 text-sm font-medium">{handshakeSteps[step].desc}</p>
         </div>
       )}

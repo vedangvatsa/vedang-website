@@ -72,7 +72,7 @@ export function YieldVisualizer() {
   const currentAPY = timeElapsed > 0 ? ((currentValue / principal) ** (365 / timeElapsed) - 1) * 100 : 0;
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">DeFi Yield Visualization</h3>
         <p className="text-slate-600">Compare sustainable vs unsustainable yield sources and their long-term performance</p>
@@ -110,7 +110,7 @@ export function YieldVisualizer() {
         />
       </div>
 
-      <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 w-full max-w-2xl">
+      <div className="bg-white rounded-lg p-6 shadow-sm border border-slate-200 w-full max-w-2xl">
         <div className="flex justify-between items-center mb-4">
           <h4 className="text-lg font-semibold text-slate-800">
             {protocols[selectedProtocol].name} Performance

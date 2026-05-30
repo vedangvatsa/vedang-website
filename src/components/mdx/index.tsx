@@ -141,7 +141,7 @@ export function KeyTakeaway({ children }: { children: React.ReactNode }) {
 /* ─── Custom Essay Diagrams ─── */
 export function EcosystemDiagram() {
   return (
-    <figure className="not-prose my-10 w-full overflow-hidden rounded-xl border border-border shadow-sm">
+    <figure className="not-prose my-10 w-full overflow-hidden rounded-lg border border-border shadow-sm">
       <div className="bg-card p-6 md:p-10 flex flex-col items-center">
         <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-1 text-center text-foreground uppercase">Agentic Commerce Ecosystem</h3>
         <p className="text-xs md:text-sm font-semibold text-muted-foreground tracking-widest text-center mb-10 uppercase">
@@ -152,17 +152,17 @@ export function EcosystemDiagram() {
           {/* Vertical connecting line */}
           <div className="absolute left-[50%] top-4 bottom-4 w-px border-l-2 border-dashed border-border -z-10 hidden md:block" />
           
-          <div className="flex flex-col md:flex-row items-center justify-between p-5 rounded-xl border border-primary/30 bg-primary/5">
+          <div className="flex flex-col md:flex-row items-center justify-between p-5 rounded-lg border border-primary/30 bg-primary/5">
             <div className="font-bold text-lg md:text-base md:w-1/3 text-primary tracking-tight">1. AI PLATFORMS</div>
             <div className="md:w-2/3 text-sm text-foreground/90 md:text-right mt-2 md:mt-0 font-medium">OpenAI (ChatGPT) • Google (Gemini) • Anthropic (Claude) • Microsoft</div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between p-5 rounded-xl border border-blue-500/30 bg-blue-500/5">
+          <div className="flex flex-col md:flex-row items-center justify-between p-5 rounded-lg border border-blue-500/30 bg-blue-500/5">
             <div className="font-bold text-lg md:text-base md:w-1/3 text-blue-500 tracking-tight">2. COMMERCE PROTOCOLS</div>
             <div className="md:w-2/3 text-sm text-foreground/90 md:text-right mt-2 md:mt-0 font-medium">UCP • ACP • MCP • A2A • x402 V2 • MPP (Stripe)</div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between p-5 rounded-xl border border-emerald-500/30 bg-emerald-500/5">
+          <div className="flex flex-col md:flex-row items-center justify-between p-5 rounded-lg border border-emerald-500/30 bg-emerald-500/5">
             <div className="font-bold text-lg md:text-base md:w-1/3 text-emerald-600 tracking-tight">3. PAYMENT RAILS</div>
             <div className="md:w-2/3 text-sm text-foreground/90 md:text-right mt-2 md:mt-0 flex flex-col items-center md:items-end gap-1 font-medium">
               <span><span className="opacity-70">Traditional:</span> Visa, Mastercard, PayPal</span>
@@ -170,12 +170,12 @@ export function EcosystemDiagram() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between p-5 rounded-xl border border-orange-500/30 bg-orange-500/5">
+          <div className="flex flex-col md:flex-row items-center justify-between p-5 rounded-lg border border-orange-500/30 bg-orange-500/5">
             <div className="font-bold text-lg md:text-base md:w-1/3 text-orange-600 tracking-tight">4. RETAIL PLATFORMS</div>
             <div className="md:w-2/3 text-sm text-foreground/90 md:text-right mt-2 md:mt-0 font-medium">Shopify • Commercetools • Walmart • Target</div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between p-5 rounded-xl border border-border bg-secondary/20">
+          <div className="flex flex-col md:flex-row items-center justify-between p-5 rounded-lg border border-border bg-secondary/20">
             <div className="font-bold text-lg md:text-base md:w-1/3 text-foreground tracking-tight">5. AGENT STARTUPS</div>
             <div className="md:w-2/3 text-sm text-foreground/90 md:text-right mt-2 md:mt-0 font-medium">Wildcard • Sierra • Skyfire • Cloudflare • Openx402</div>
           </div>

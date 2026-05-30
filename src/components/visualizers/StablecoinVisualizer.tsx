@@ -29,7 +29,7 @@ export function StablecoinVisualizer() {
   const stablecoinValue = reserveRatio >= 100 ? 1.00 : reserveRatio / 100;
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-900 mb-2">Stablecoin Mechanics</h3>
         <p className="text-lg text-slate-600">Interactive exploration of how stablecoins maintain price stability</p>
@@ -82,7 +82,7 @@ export function StablecoinVisualizer() {
           <div className="grid grid-cols-2 gap-8">
             <div className="text-center">
               <h5 className="text-lg font-semibold text-slate-800 mb-4">{cryptoData[selectedCoin].name} Price</h5>
-              <div className="bg-white p-6 rounded-xl border-2 border-slate-200">
+              <div className="bg-white p-6 rounded-lg border-2 border-slate-200">
                 <div className={`w-24 h-24 ${cryptoData[selectedCoin].color} rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold text-xl animate-pulse`}>
                   ${Math.floor(getVolatilePrice(cryptoPrice, cryptoData[selectedCoin].volatility)).toLocaleString()}
                 </div>
@@ -92,7 +92,7 @@ export function StablecoinVisualizer() {
 
             <div className="text-center">
               <h5 className="text-lg font-semibold text-slate-800 mb-4">USDC Stablecoin</h5>
-              <div className="bg-white p-6 rounded-xl border-2 border-emerald-200">
+              <div className="bg-white p-6 rounded-lg border-2 border-emerald-200">
                 <div className="w-24 h-24 bg-emerald-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold text-xl">
                   $1.00
                 </div>
@@ -106,7 +106,7 @@ export function StablecoinVisualizer() {
       {/* Step 1: Stablecoin Pegging */}
       {currentStep === 1 && (
         <div className="w-full max-w-4xl">
-          <div className="bg-white p-6 rounded-xl border-2 border-slate-200">
+          <div className="bg-white p-6 rounded-lg border-2 border-slate-200">
             <h5 className="text-lg font-semibold text-center text-slate-800 mb-6">1:1 USD Backing Mechanism</h5>
             
             <div className="flex items-center justify-between">
@@ -168,7 +168,7 @@ export function StablecoinVisualizer() {
           <div className="grid grid-cols-3 gap-6">
             <div className="text-center">
               <h6 className="font-semibold text-slate-800 mb-3">Circulating Supply</h6>
-              <div className="bg-white p-4 rounded-xl border-2 border-slate-200">
+              <div className="bg-white p-4 rounded-lg border-2 border-slate-200">
                 <div className="text-3xl font-bold text-emerald-600">1M</div>
                 <p className="text-sm text-slate-600">USDC Tokens</p>
               </div>
@@ -176,7 +176,7 @@ export function StablecoinVisualizer() {
 
             <div className="text-center">
               <h6 className="font-semibold text-slate-800 mb-3">USD Reserves</h6>
-              <div className="bg-white p-4 rounded-xl border-2 border-slate-200">
+              <div className="bg-white p-4 rounded-lg border-2 border-slate-200">
                 <div className={`text-3xl font-bold ${reserveRatio >= 100 ? 'text-emerald-600' : 'text-rose-600'}`}>
                   ${(reserveRatio * 10000).toLocaleString()}
                 </div>
@@ -186,7 +186,7 @@ export function StablecoinVisualizer() {
 
             <div className="text-center">
               <h6 className="font-semibold text-slate-800 mb-3">Token Value</h6>
-              <div className="bg-white p-4 rounded-xl border-2 border-slate-200">
+              <div className="bg-white p-4 rounded-lg border-2 border-slate-200">
                 <div className={`text-3xl font-bold ${reserveRatio >= 100 ? 'text-emerald-600' : 'text-rose-600'}`}>
                   ${stablecoinValue.toFixed(2)}
                 </div>
@@ -212,7 +212,7 @@ export function StablecoinVisualizer() {
       {currentStep === 3 && (
         <div className="w-full max-w-4xl">
           <div className="grid grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-xl border-2 border-emerald-200">
+            <div className="bg-white p-6 rounded-lg border-2 border-emerald-200">
               <h5 className="text-lg font-semibold text-emerald-800 mb-4">✅ Trusted Issuer (USDC)</h5>
               <div className="space-y-3">
                 <div className="flex justify-between">
@@ -237,7 +237,7 @@ export function StablecoinVisualizer() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl border-2 border-rose-200">
+            <div className="bg-white p-6 rounded-lg border-2 border-rose-200">
               <h5 className="text-lg font-semibold text-rose-800 mb-4">❌ Failed Issuer (Terra/UST)</h5>
               <div className="space-y-3">
                 <div className="flex justify-between">
@@ -263,7 +263,7 @@ export function StablecoinVisualizer() {
             </div>
           </div>
 
-          <div className="mt-8 p-6 bg-amber-50 rounded-xl border-2 border-amber-200">
+          <div className="mt-8 p-6 bg-amber-50 rounded-lg border-2 border-amber-200">
             <h6 className="font-semibold text-amber-800 mb-2">🔍 Key Lesson: Trust is Critical</h6>
             <p className="text-amber-700">
               Stablecoins require trust in the issuer to maintain proper reserves. 

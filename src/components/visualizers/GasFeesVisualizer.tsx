@@ -60,7 +60,7 @@ export function GasFeesVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Gas Fees Interactive Calculator</h3>
         <p className="text-slate-600">Explore how transaction type, gas price, and network congestion affect blockchain fees</p>
@@ -70,7 +70,7 @@ export function GasFeesVisualizer() {
         {/* Controls */}
         <div className="space-y-6">
           {/* Transaction Type */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">Transaction Type</h4>
             <div className="grid grid-cols-1 gap-3">
             {Object.entries(transactions).map(([key, tx]) => (
@@ -94,7 +94,7 @@ export function GasFeesVisualizer() {
           </div>
 
           {/* Gas Price Slider */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">Gas Price (Gwei)</h4>
             <div className="space-y-4">
               <input
@@ -120,7 +120,7 @@ export function GasFeesVisualizer() {
           </div>
 
           {/* Network Congestion */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">Network Congestion</h4>
             <div className="flex gap-2">
               {Object.entries(congestionMultipliers).map(([key, data]) => (
@@ -144,7 +144,7 @@ export function GasFeesVisualizer() {
         {/* Visualization */}
         <div className="space-y-6">
           {/* Gas Calculation Breakdown */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">Gas Calculation</h4>
             <div className="space-y-4">
               <div className="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
@@ -180,7 +180,7 @@ export function GasFeesVisualizer() {
           </div>
 
           {/* Execution Simulation */}
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-800 mb-4">Transaction Execution</h4>
             <button
               onClick={executeTransaction}

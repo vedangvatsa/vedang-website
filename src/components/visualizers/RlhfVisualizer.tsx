@@ -78,7 +78,7 @@ export function RlhfVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">
           Reinforcement Learning from Human Feedback (RLHF)
@@ -108,7 +108,7 @@ export function RlhfVisualizer() {
       {/* Step Content */}
       <div className="w-full max-w-4xl">
         {currentStep === 0 && (
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-xl font-bold text-slate-800 mb-4">Step 1: Generate Multiple Outputs</h4>
             <p className="text-slate-600 mb-4">The model generates multiple responses to the same prompt:</p>
             <div className="space-y-4">
@@ -136,7 +136,7 @@ export function RlhfVisualizer() {
         )}
 
         {currentStep === 1 && (
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-xl font-bold text-slate-800 mb-4">Step 2: Human Ranking</h4>
             <p className="text-slate-600 mb-4">Rank these responses from best (1) to worst (3):</p>
             <div className="space-y-4">
@@ -177,7 +177,7 @@ export function RlhfVisualizer() {
         )}
 
         {currentStep === 2 && (
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-xl font-bold text-slate-800 mb-4">Step 3: Train Reward Model</h4>
             <p className="text-slate-600 mb-4">A reward model learns to predict human preferences:</p>
             
@@ -234,7 +234,7 @@ export function RlhfVisualizer() {
         )}
 
         {currentStep === 3 && (
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-xl font-bold text-slate-800 mb-4">Step 4: Fine-tune Original Model</h4>
             <p className="text-slate-600 mb-4">Use the reward model to improve the original model:</p>
             

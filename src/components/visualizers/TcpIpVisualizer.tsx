@@ -67,14 +67,14 @@ export function TcpIpVisualizer() {
   }, [packets.length]);
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">TCP/IP Layer Model</h3>
         <p className="text-slate-600 max-w-2xl">Watch data travel through the network stack from application to wire and back</p>
       </div>
 
       <div className="w-full max-w-3xl">
-        <svg viewBox="0 0 700 380" className="w-full border border-slate-200 rounded-xl bg-white">
+        <svg viewBox="0 0 700 380" className="w-full border border-slate-200 rounded-lg bg-white">
           {/* Sender stack */}
           <text x={150} y={30} textAnchor="middle" fontSize="13" fill="#334155" fontWeight="bold">Sender</text>
           {layers.map((layer, i) => {
@@ -150,7 +150,7 @@ export function TcpIpVisualizer() {
       </div>
 
       {currentLayer >= 0 && currentLayer < layers.length && (
-        <div className="bg-purple-50 border border-purple-200 rounded-xl p-4 max-w-lg text-center">
+        <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 max-w-lg text-center">
           <div className="font-semibold text-purple-900 text-sm">{layers[currentLayer].name} Layer</div>
           <p className="text-purple-700 text-sm mt-1">{layers[currentLayer].desc}</p>
         </div>

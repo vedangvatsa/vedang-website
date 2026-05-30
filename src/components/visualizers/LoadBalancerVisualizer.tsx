@@ -28,12 +28,12 @@ export function LoadBalancerVisualizer() {
   const total = requests.reduce((a, b) => a + b, 0);
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-900 tracking-tight">Load Balancer</h3>
         <p className="text-slate-500 mt-2">Distributing requests across multiple servers.</p>
       </div>
-      <div className="w-full max-w-2xl bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col gap-6">
+      <div className="w-full max-w-2xl bg-white p-8 rounded-lg border border-slate-200 shadow-sm flex flex-col gap-6">
         <div className="flex gap-3 justify-center">
           {(['round-robin', 'least-connections', 'random'] as const).map(alg => (
             <button key={alg} onClick={() => { setAlgorithm(alg); reset(); }}
@@ -45,7 +45,7 @@ export function LoadBalancerVisualizer() {
 
         <div className="grid grid-cols-3 gap-4">
           {requests.map((count, i) => (
-            <div key={i} className="p-4 rounded-xl border-2 border-slate-200 bg-slate-50 text-center">
+            <div key={i} className="p-4 rounded-lg border-2 border-slate-200 bg-slate-50 text-center">
               <div className="text-sm font-semibold text-slate-500">Server {i + 1}</div>
               <div className="text-3xl font-bold text-indigo-600 mt-2">{count}</div>
               <div className="text-xs text-slate-400 mt-1">requests</div>
@@ -57,11 +57,11 @@ export function LoadBalancerVisualizer() {
         </div>
 
         <div className="flex gap-4 justify-center">
-          <button onClick={reset} className="px-6 py-3 rounded-xl font-semibold bg-white text-slate-900 border border-slate-200 hover:bg-slate-50 transition-all">Reset</button>
-          <button onClick={sendRequest} className="px-6 py-3 rounded-xl font-semibold bg-indigo-600 text-white hover:bg-indigo-700 transition-all">Send Request</button>
+          <button onClick={reset} className="px-6 py-3 rounded-lg font-semibold bg-white text-slate-900 border border-slate-200 hover:bg-slate-50 transition-all">Reset</button>
+          <button onClick={sendRequest} className="px-6 py-3 rounded-lg font-semibold bg-indigo-600 text-white hover:bg-indigo-700 transition-all">Send Request</button>
         </div>
 
-        <div className="bg-slate-100 rounded-xl p-4 text-center text-sm text-slate-600">
+        <div className="bg-slate-100 rounded-lg p-4 text-center text-sm text-slate-600">
           {algorithm === 'round-robin' && 'Round Robin: Each server gets a turn in order. Simple and fair.'}
           {algorithm === 'least-connections' && 'Least Connections: Sends to the server handling the fewest requests.'}
           {algorithm === 'random' && 'Random: Picks a server at random for each request.'}

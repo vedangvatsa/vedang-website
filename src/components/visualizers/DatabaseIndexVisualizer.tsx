@@ -83,7 +83,7 @@ export function DatabaseIndexVisualizer() {
   const scannedRows = useIndex ? Math.log2(tableData.length) : tableData.length;
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Database Index Visualization</h3>
         <p className="text-slate-600 max-w-2xl">

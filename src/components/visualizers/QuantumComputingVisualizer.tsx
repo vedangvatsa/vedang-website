@@ -28,7 +28,7 @@ export function QuantumComputingVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Classical Bits vs Quantum Qubits</h3>
         <p className="text-slate-600 max-w-2xl">See how qubits exist in superposition until measured</p>
@@ -46,7 +46,7 @@ export function QuantumComputingVisualizer() {
       </div>
 
       <div className="w-full max-w-2xl">
-        <svg viewBox="0 0 500 300" className="w-full border border-slate-200 rounded-xl bg-white">
+        <svg viewBox="0 0 500 300" className="w-full border border-slate-200 rounded-lg bg-white">
           {mode === 'classical' ? (
             // Classical bits
             <>

@@ -73,7 +73,7 @@ export function CicdVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">CI/CD Pipeline Visualizer</h3>
         <p className="text-slate-600">Watch how Continuous Integration and Continuous Deployment automate code delivery</p>
@@ -81,7 +81,7 @@ export function CicdVisualizer() {
 
       <div className="w-full max-w-4xl space-y-6">
         {/* Pipeline Flow */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <div className="flex items-center justify-between mb-4">
             <h4 className="text-lg font-semibold text-slate-800">Pipeline Stages</h4>
             <button
@@ -120,7 +120,7 @@ export function CicdVisualizer() {
 
         {/* Test Results */}
         {isRunning && currentStage >= 1 && (
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">CI Test Results</h4>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
@@ -142,7 +142,7 @@ export function CicdVisualizer() {
 
         {/* Deployment Status */}
         {deploymentStatus !== 'waiting' && (
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-800 mb-4">Deployment Status</h4>
             <div className={`p-4 rounded-lg border ${
               deploymentStatus === 'success' 
@@ -157,7 +157,7 @@ export function CicdVisualizer() {
         )}
 
         {/* Recent Changes */}
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-800 mb-4">Recent Code Changes</h4>
           {codeChanges.length === 0 ? (
             <div className="text-slate-500 text-center py-4">No commits yet - push some code to see the CI/CD pipeline in action!</div>

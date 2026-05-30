@@ -68,7 +68,7 @@ export function ScalingLawVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-900 mb-2">Scaling Laws</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -102,7 +102,7 @@ export function ScalingLawVisualizer() {
 
       <div className="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="space-y-6">
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="text-lg font-semibold text-slate-900 mb-4">Scaling Factors</h4>
             
             <div className="space-y-4">
@@ -176,7 +176,7 @@ export function ScalingLawVisualizer() {
           </div>
 
           {selectedLaw === "chinchilla" && (
-            <div className="bg-white p-6 rounded-xl border border-slate-200">
+            <div className="bg-white p-6 rounded-lg border border-slate-200">
               <h4 className="text-lg font-semibold text-slate-900 mb-2">Optimal Ratio</h4>
               <p className="text-sm text-slate-600 mb-3">
                 Chinchilla: Parameters and data should scale proportionally
@@ -196,7 +196,7 @@ export function ScalingLawVisualizer() {
           )}
         </div>
 
-        <div className="bg-white p-6 rounded-xl border border-slate-200">
+        <div className="bg-white p-6 rounded-lg border border-slate-200">
           <h4 className="text-lg font-semibold text-slate-900 mb-4">Performance Metrics</h4>
           
           <div className="space-y-6">
@@ -240,7 +240,7 @@ export function ScalingLawVisualizer() {
         </div>
       </div>
 
-      <div className="bg-white p-4 rounded-xl border border-slate-200 w-full max-w-4xl">
+      <div className="bg-white p-4 rounded-lg border border-slate-200 w-full max-w-4xl">
         <div className="text-sm text-slate-600 leading-relaxed">
           <strong className="text-slate-900">
             {selectedLaw === "openai" ? "OpenAI Scaling Law:" : "Chinchilla Scaling Law:"}

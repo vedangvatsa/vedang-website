@@ -34,13 +34,13 @@ export function ImpermanentLossVisualizer() {
   const impermanentLossPercent = (impermanentLossUSD / hodlValue) * 100;
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-900 tracking-tight">Impermanent Loss Visualizer</h3>
         <p className="text-slate-500 mt-2">Compare HODLing vs providing liquidity in an AMM.</p>
       </div>
 
-      <div className="flex flex-col gap-6 w-full max-w-2xl bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+      <div className="flex flex-col gap-6 w-full max-w-2xl bg-white p-8 rounded-lg border border-slate-200 shadow-sm">
         
         <div className="flex justify-between items-center mb-4">
           <div className="font-semibold text-slate-700">Change ETH Price:</div>
@@ -63,7 +63,7 @@ export function ImpermanentLossVisualizer() {
         </div>
 
         <div className="grid grid-cols-2 gap-8 mt-6">
-          <div className="flex flex-col gap-2 p-6 bg-slate-50 rounded-xl border border-slate-200">
+          <div className="flex flex-col gap-2 p-6 bg-slate-50 rounded-lg border border-slate-200">
             <h4 className="font-semibold text-slate-500 uppercase text-xs tracking-wider">HODL Value</h4>
             <div className="text-3xl font-bold text-slate-900">${hodlValue.toFixed(2)}</div>
             <div className="text-sm font-mono text-slate-500 mt-2">
@@ -71,7 +71,7 @@ export function ImpermanentLossVisualizer() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 p-6 bg-blue-50 rounded-xl border border-blue-100">
+          <div className="flex flex-col gap-2 p-6 bg-blue-50 rounded-lg border border-blue-100">
             <h4 className="font-semibold text-blue-500 uppercase text-xs tracking-wider">Pool Value</h4>
             <div className="text-3xl font-bold text-blue-700">${poolValue.toFixed(2)}</div>
             <div className="text-sm font-mono text-blue-600 mt-2">
@@ -80,7 +80,7 @@ export function ImpermanentLossVisualizer() {
           </div>
         </div>
 
-        <div className="mt-4 p-6 bg-rose-50 rounded-xl border border-rose-100 flex justify-between items-center transition-all duration-300">
+        <div className="mt-4 p-6 bg-rose-50 rounded-lg border border-rose-100 flex justify-between items-center transition-all duration-300">
           <div>
             <h4 className="font-semibold text-rose-600 uppercase text-xs tracking-wider">Impermanent Loss</h4>
             <p className="text-sm text-rose-500 mt-1">Value "lost" compared to just holding.</p>

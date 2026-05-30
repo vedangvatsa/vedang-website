@@ -62,7 +62,7 @@ export function CorsVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">CORS (Cross-Origin Resource Sharing)</h3>
         <p className="text-slate-600 text-lg">Browser security mechanism controlling cross-domain requests</p>
@@ -87,7 +87,7 @@ export function CorsVisualizer() {
       <div className="w-full max-w-4xl">
         <div className="flex items-center justify-between mb-8">
           <div className="text-center">
-            <div className="w-24 h-24 bg-indigo-100 rounded-xl flex items-center justify-center mb-2">
+            <div className="w-24 h-24 bg-indigo-100 rounded-lg flex items-center justify-center mb-2">
               <div className="text-2xl">🌐</div>
             </div>
             <div className="font-medium text-slate-700">Browser</div>
@@ -131,7 +131,7 @@ export function CorsVisualizer() {
           </div>
 
           <div className="text-center">
-            <div className="w-24 h-24 bg-amber-100 rounded-xl flex items-center justify-center mb-2">
+            <div className="w-24 h-24 bg-amber-100 rounded-lg flex items-center justify-center mb-2">
               <div className="text-2xl">🖥️</div>
             </div>
             <div className="font-medium text-slate-700">Server</div>
@@ -139,7 +139,7 @@ export function CorsVisualizer() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl p-6 border border-slate-200">
+        <div className="bg-white rounded-lg p-6 border border-slate-200">
           <div className="grid grid-cols-2 gap-6">
             <div>
               <h4 className="font-semibold text-slate-700 mb-3">Request Headers</h4>

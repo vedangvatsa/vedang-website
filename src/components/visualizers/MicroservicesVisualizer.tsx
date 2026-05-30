@@ -37,7 +37,7 @@ export function MicroservicesVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">Microservices Architecture</h3>
         <p className="text-lg text-slate-600">Click services to see API communication vs monolithic structure</p>
@@ -82,7 +82,7 @@ export function MicroservicesVisualizer() {
                     isSelected ? 'scale-105' : 'hover:scale-102'
                   }`}
                 >
-                  <div className={`p-6 rounded-xl border-2 transition-all duration-300 ${
+                  <div className={`p-6 rounded-lg border-2 transition-all duration-300 ${
                     isSelected 
                       ? 'border-blue-400 shadow-xl' 
                       : isConnected
@@ -131,7 +131,7 @@ export function MicroservicesVisualizer() {
         </div>
       ) : (
         <div className="text-center">
-          <div className="p-8 bg-rose-100 border-2 border-rose-300 rounded-xl max-w-md mx-auto">
+          <div className="p-8 bg-rose-100 border-2 border-rose-300 rounded-lg max-w-md mx-auto">
             <div className="w-6 h-6 bg-rose-500 rounded-full mx-auto mb-4"></div>
             <h4 className="text-xl font-bold text-rose-800 mb-3">Monolithic Application</h4>
             <p className="text-rose-700 mb-4">Single codebase handling all functions:</p>

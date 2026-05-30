@@ -54,7 +54,7 @@ export function ExplainableAiXaiVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Explainable AI (XAI) Visualizer</h3>
         <p className="text-slate-600 text-lg">Explore how AI decisions become transparent and interpretable</p>
@@ -85,7 +85,7 @@ export function ExplainableAiXaiVisualizer() {
         <div className="space-y-6">
           <h4 className="text-xl font-semibold text-slate-800 text-center">AI Decision Process</h4>
           
-          <div className="bg-white rounded-xl p-6 border border-slate-200">
+          <div className="bg-white rounded-lg p-6 border border-slate-200">
             <div className="text-center mb-4">
               <span className="text-lg font-medium text-slate-700">Input Data</span>
             </div>
@@ -131,7 +131,7 @@ export function ExplainableAiXaiVisualizer() {
           </h4>
           
           {showExplanation && (
-            <div className="bg-white rounded-xl p-6 border border-slate-200">
+            <div className="bg-white rounded-lg p-6 border border-slate-200">
               <div className="space-y-4">
                 {currentCaseData.features
                   .sort((a, b) => b.importance - a.importance)
@@ -187,7 +187,7 @@ export function ExplainableAiXaiVisualizer() {
       </div>
 
       {showExplanation && (
-        <div className="w-full max-w-4xl bg-indigo-50 border border-indigo-200 rounded-xl p-6">
+        <div className="w-full max-w-4xl bg-indigo-50 border border-indigo-200 rounded-lg p-6">
           <h5 className="font-semibold text-indigo-900 mb-2">XAI Benefits:</h5>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
             <div className="flex items-center gap-2">

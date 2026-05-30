@@ -61,7 +61,7 @@ export function Layer2Visualizer() {
   const layer2TPS = totalTime > 0 ? (layer2Count / (totalTime / 1000)).toFixed(1) : '0';
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Layer 2 Scaling Solutions</h3>
         <p className="text-slate-600">Interactive visualization of how Layer 2 improves blockchain scalability through batching</p>
@@ -69,7 +69,7 @@ export function Layer2Visualizer() {
 
       <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl">
         {/* Controls */}
-        <div className="flex flex-col gap-4 bg-white p-6 rounded-xl border border-slate-200 min-w-64">
+        <div className="flex flex-col gap-4 bg-white p-6 rounded-lg border border-slate-200 min-w-64">
           <h4 className="font-semibold text-slate-800">Simulation Controls</h4>
           
           <div className="flex flex-col gap-2">
@@ -139,7 +139,7 @@ export function Layer2Visualizer() {
         {/* Visualization */}
         <div className="flex-1 space-y-6">
           {/* Layer 1 */}
-          <div className="bg-white p-6 rounded-xl border border-blue-200">
+          <div className="bg-white p-6 rounded-lg border border-blue-200">
             <div className="flex items-center justify-between mb-4">
               <h4 className="font-semibold text-blue-800">Layer 1 (Ethereum)</h4>
               <div className="text-sm text-blue-600">
@@ -159,7 +159,7 @@ export function Layer2Visualizer() {
           </div>
 
           {/* Layer 2 Processing */}
-          <div className="bg-white p-6 rounded-xl border border-indigo-200">
+          <div className="bg-white p-6 rounded-lg border border-indigo-200">
             <div className="flex items-center justify-between mb-4">
               <h4 className="font-semibold text-indigo-800">Layer 2 Processing</h4>
               <div className="text-sm text-indigo-600">
@@ -222,7 +222,7 @@ export function Layer2Visualizer() {
         </div>
       </div>
 
-      <div className="text-center max-w-4xl text-sm text-slate-600 bg-white p-4 rounded-xl border border-slate-200">
+      <div className="text-center max-w-4xl text-sm text-slate-600 bg-white p-4 rounded-lg border border-slate-200">
         <strong>How it works:</strong> Layer 2 processes transactions quickly off-chain, batches them together, 
         then submits the entire batch to Layer 1 for security. This dramatically increases throughput while 
         maintaining the security guarantees of the main blockchain.

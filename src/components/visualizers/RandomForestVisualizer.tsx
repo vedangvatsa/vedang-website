@@ -89,7 +89,7 @@ export function RandomForestVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-3xl font-bold text-slate-800 mb-2">Random Forest Classifier</h3>
         <p className="text-slate-600 max-w-2xl">
@@ -99,7 +99,7 @@ export function RandomForestVisualizer() {
 
       <div className="flex flex-col lg:flex-row gap-8 items-start w-full max-w-6xl">
         {/* Controls */}
-        <div className="flex flex-col gap-4 bg-white p-6 rounded-xl border border-slate-200 min-w-64">
+        <div className="flex flex-col gap-4 bg-white p-6 rounded-lg border border-slate-200 min-w-64">
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-2">
               Number of Trees: {numTrees}
@@ -156,7 +156,7 @@ export function RandomForestVisualizer() {
 
         {/* Visualization */}
         <div className="flex-1">
-          <div className="bg-white p-6 rounded-xl border border-slate-200">
+          <div className="bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="font-medium text-slate-700 mb-4">Data Visualization</h4>
             
             <div className="relative w-full h-96 border-2 border-slate-200 rounded-lg overflow-hidden">
@@ -216,7 +216,7 @@ export function RandomForestVisualizer() {
           </div>
 
           {/* Forest visualization */}
-          <div className="mt-6 bg-white p-6 rounded-xl border border-slate-200">
+          <div className="mt-6 bg-white p-6 rounded-lg border border-slate-200">
             <h4 className="font-medium text-slate-700 mb-4">Decision Trees</h4>
             <div className="grid grid-cols-5 gap-4">
               {Array.from({ length: numTrees }).map((_, idx) => (

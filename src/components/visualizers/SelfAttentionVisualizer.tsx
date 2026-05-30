@@ -20,13 +20,13 @@ export function SelfAttentionVisualizer() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-900 tracking-tight">Self-Attention Mechanism</h3>
         <p className="text-slate-500 mt-2">Hover over a word to see how it "attends" to context.</p>
       </div>
 
-      <div className="flex flex-col gap-10 w-full max-w-2xl bg-white p-10 rounded-2xl border border-slate-200 shadow-sm">
+      <div className="flex flex-col gap-10 w-full max-w-2xl bg-white p-10 rounded-lg border border-slate-200 shadow-sm">
         
         <div className="flex justify-center gap-4 relative py-12">
           {sentence.map((word, i) => (
@@ -34,7 +34,7 @@ export function SelfAttentionVisualizer() {
               key={i}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className={`text-2xl font-bold p-4 rounded-xl cursor-pointer transition-all duration-300 z-10 
+              className={`text-2xl font-bold p-4 rounded-lg cursor-pointer transition-all duration-300 z-10 
                 ${hoveredIndex === i ? 'bg-indigo-600 text-white shadow-lg scale-110' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}
             >
               {word}
@@ -66,7 +66,7 @@ export function SelfAttentionVisualizer() {
           </div>
         </div>
 
-        <div className="bg-slate-100 rounded-xl p-4 text-center font-mono text-sm text-slate-600 min-h-[60px] flex items-center justify-center">
+        <div className="bg-slate-100 rounded-lg p-4 text-center font-mono text-sm text-slate-600 min-h-[60px] flex items-center justify-center">
           {hoveredIndex === null 
             ? "Notice how the model understands which 'bank' is meant."
             : hoveredIndex === 1 
