@@ -17,13 +17,22 @@ export default function AIReportsPage() {
 
       <section className="text-center pt-16 pb-12 border-b border-border/30">
         <div>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
             AI Reports Library
           </h1>
-          <p className="mt-4 text-base md:text-lg text-muted-foreground">
+          <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             21,000+ research papers, institutional reports, and industry analyses. Each entry links directly to a verified DOI or academic repository.
           </p>
-          <p className="mt-4 text-sm text-muted-foreground">
+          <div className="mt-8 flex items-center justify-center gap-3">
+            <Link href="/profile">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/ved.png" alt="Vedang Vatsa" width={40} height={40} className="rounded-full" />
+            </Link>
+            <div className="text-sm">
+              <Link href="/profile" className="font-medium text-foreground hover:text-primary transition-colors">Vedang Vatsa</Link>
+            </div>
+          </div>
+          <p className="mt-6 text-sm text-muted-foreground">
             Read the full synthesis: <Link href="/state-of-ai" className="text-primary hover:underline font-medium">The State of AI →</Link>
           </p>
         </div>
