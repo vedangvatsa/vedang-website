@@ -134,7 +134,7 @@ export default function Web3CoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
         <section className="text-center pt-16 pb-12">
-             <div className="">
+             <div>
                 <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
                     Fundamentals of Web3
                 </h1>

@@ -36,7 +36,7 @@ export default async function AIReportsPage({
       <BreadcrumbSchema items={[{ name: "AI Reports", url: "https://veda.ng/ai-reports" }]} />
 
       <section className="text-center pt-16 pb-12 border-b border-border/30">
-        <div className="">
+        <div>
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
             AI Reports Library
           </h1>

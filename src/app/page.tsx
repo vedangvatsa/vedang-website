@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <PageLayout>
       <section className="py-8 md:py-12 text-center">
-        <div className="">
+        <div>
           <Image
             src="/images/icon.png"
             alt="Vedang Vatsa - product engineer, educator, and founder based in Singapore"
@@ -49,7 +49,7 @@ export default function Home() {
       <RecentPapers />
 
       <section id="essays" className="py-12">
-        <div className="">
+        <div>
           <h2 className="mb-8 text-center text-2xl md:text-3xl font-semibold tracking-tight">Recent Essays</h2>
           <EssaysList limit={10} />
           <div className="mt-8 flex justify-center">
@@ -63,7 +63,7 @@ export default function Home() {
       <AsSeenIn />
 
       <section id="learn" className="py-12 bg-secondary/30">
-        <div className="">
+        <div>
           <h2 className="mb-8 text-center text-2xl md:text-3xl font-semibold tracking-tight">Resources</h2>
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             <Link href="/web3-101" className="group">
@@ -148,7 +148,7 @@ export default function Home() {
       </section>
 
       <section className="py-12 text-center">
-        <div className="">
+        <div>
           <div className="flex justify-center">
             <Button asChild size="lg" className="min-w-64 px-8">
               <Link href="/media">Speaking Engagements & Media Mentions</Link>

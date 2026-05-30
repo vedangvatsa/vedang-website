@@ -123,7 +123,7 @@ export default function MediaPage() {
     <PageLayout>
       <BreadcrumbSchema items={[{ name: "Media & Speaking", url: "https://veda.ng/media" }]} />
       <div className="py-8">
-        <div className="">
+        <div>
           <section className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">Speaker on Emerging Technologies</h1>
             <p className="mt-3 text-base md:text-lg text-muted-foreground">
@@ -163,7 +163,7 @@ export default function MediaPage() {
       <AsSeenIn />
 
       <div className="py-8">
-        <div className="">
+        <div>
           <section className="py-8">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-center mb-6">Speaking Engagements</h2>
             <div className="columns-2 sm:columns-3 md:columns-4 gap-4">

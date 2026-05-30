@@ -97,7 +97,7 @@ export default async function GlossaryTermPage({ params }: PageProps) {
       ]} />
 
       <section className="text-center pt-12 pb-8 border-b border-border/30">
-        <div className="">
+        <div>
           <Link 
             href="/glossary" 
             className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-6"

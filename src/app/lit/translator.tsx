@@ -934,7 +934,7 @@ export default function LinkedInTranslatorPage() {
     <>
     <PageLayout>
       <section aria-label="LinkedIn Translator Tool" className="py-6 md:py-10">
-        <div className="">
+        <div>
           <div className="mx-auto max-w-5xl space-y-5">
             {/* Title */}
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-center">

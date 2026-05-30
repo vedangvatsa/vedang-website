@@ -55,7 +55,7 @@ export default function GlossaryPage() {
       <BreadcrumbSchema items={[{ name: "Glossary", url: "https://veda.ng/glossary" }]} />
 
       <section className="text-center pt-16 pb-12 border-b border-border/30">
-        <div className="">
+        <div>
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
             Glossary
           </h1>
