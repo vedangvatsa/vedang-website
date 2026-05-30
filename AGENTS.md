@@ -19,7 +19,7 @@ When working on this project, you MUST read and follow these guidelines before m
 
 ## Quality Checks (Run Before Every Commit)
 1. `grep -r '—\|–' src/content/essays/` — Zero em-dashes
-2. `grep -rn 'landscape\|tapestry\|leverage\|unlock\|holistic\|foster\|facilitate' src/content/essays/` — Zero AI slop in prose
+2. `grep -rn 'landscape\|tapestry\|leverage\|unlock\|holistic\|foster\|facilitate\|paradigm shift\|reshape\|redefine\|synergy\|empower\|streamline' src/ --include='*.tsx' --include='*.ts' --include='*.mdx' | grep -v node_modules | grep -v ai-slop-avoidance` — Zero AI slop in prose (scans all src/, not just essays)
 3. `find public/images -name "*.svg" -exec xmllint --noout {} \;` — All SVGs valid XML
 4. `npx next build` — Build passes
 
