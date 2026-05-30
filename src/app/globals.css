@@ -159,17 +159,16 @@
   font-size: 0.875rem;
 }
 
-/* Breakout: charts and custom components should span wider than the 720px prose column */
+/* Charts and custom components: center within the prose column */
 .notion-article .not-prose {
-  margin-left: calc(-1 * min(8vw, 140px));
-  margin-right: calc(-1 * min(8vw, 140px));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-@media (max-width: 768px) {
-  .notion-article .not-prose {
-    margin-left: 0;
-    margin-right: 0;
-  }
+.notion-article .not-prose > * {
+  width: 100%;
 }
 
 /* Blockquotes */
