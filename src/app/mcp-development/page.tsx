@@ -138,7 +138,6 @@ export default function MCPDevelopmentCoursePage() {
         subtitle="Official documentation, SDKs, and community resources for MCP development."
         categories={referenceLinks}
         layout="grid-4"
-        align="left"
       />
 
       <CourseFAQ

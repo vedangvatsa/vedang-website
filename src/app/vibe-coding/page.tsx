@@ -201,7 +201,6 @@ export default function VibeCodingCoursePage() {
         subtitle="Resources for tools and platforms. Documentation and guides to build deeper knowledge."
         categories={referenceLinks}
         layout="grid-3"
-        align="left"
       />
 
       <CourseFAQ

@@ -114,7 +114,6 @@ export default function AIAutomationCoursePage() {
         subtitle="Platforms, APIs, and related courses referenced throughout the curriculum."
         categories={referenceLinks}
         layout="grid-4"
-        align="left"
       />
 
       <CourseFAQ
