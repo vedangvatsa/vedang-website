@@ -24,7 +24,6 @@ export function CourseHero({ title, subtitle, prerequisite, startHref, align = '
         </p>
         <div className={`mt-8 flex ${isCenter ? 'justify-center' : 'justify-start'} items-center gap-4`}>
           <Badge variant="outline">By: Vedang Vatsa</Badge>
-          <Badge variant="outline">Prerequisite: {prerequisite}</Badge>
         </div>
         <div className={`mt-8 flex ${isCenter ? 'justify-center' : 'justify-start'}`}>
           <Button asChild size="lg" className="px-8">
