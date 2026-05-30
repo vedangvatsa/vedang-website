@@ -280,9 +280,9 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
         </div>
       </header>
 
-      {/* ─── Report Body ─── */}
+      {/* ─── Essay Body ─── */}
       <div className="py-10 md:py-14">
-        <article className="report-article prose prose-neutral prose-img:rounded-lg prose-table:w-full prose-headings:tracking-tight prose-headings:font-semibold prose-p:leading-relaxed prose-p:text-[#37352f] prose-li:text-[#37352f] prose-a:text-[#37352f] prose-strong:text-[#37352f] max-w-6xl mx-auto px-4 md:px-6">
+        <article className="notion-article prose prose-lg prose-neutral max-w-[720px] mx-auto px-4 md:px-6">
           <MDXRemote
             source={essay.content}
             options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
@@ -485,7 +485,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
           />
         </article>
 
-        <div className="mx-auto max-w-6xl px-4 md:px-6 mt-16">
+        <div className="mx-auto max-w-4xl px-4 md:px-6 mt-16">
             <RelatedGlossaryTerms
               essaySlug={slug}
               terms={glossaryTerms.map(t => ({ slug: t.slug, term: t.term }))}

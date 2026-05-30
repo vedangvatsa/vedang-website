@@ -66,24 +66,118 @@
   }
 }
 
-/* Report article styles */
-.report-article h2 {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid hsl(var(--border) / 0.4);
+/* ═══ Notion-style article typography ═══ */
+.notion-article {
+  color: #37352f;
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.8;
+  letter-spacing: -0.003em;
 }
 
-.report-article h2:first-of-type {
+/* Paragraphs */
+.notion-article p {
+  color: #37352f;
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+
+/* Headings */
+.notion-article h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #37352f;
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e3e3e0;
+}
+
+.notion-article h2:first-of-type {
   border-top: none;
   padding-top: 0;
+  margin-top: 0;
 }
 
-/* Default standalone images in reports: medium width, centered */
-.report-article > p > img {
+.notion-article h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: #37352f;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Lists */
+.notion-article li {
+  color: #37352f;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.notion-article ul,
+.notion-article ol {
+  margin-top: 0.5em;
+  margin-bottom: 1.25em;
+  padding-left: 1.5em;
+}
+
+/* Links */
+.notion-article a {
+  color: #37352f;
+  text-decoration: underline;
+  text-decoration-color: #37352f40;
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.15s;
+}
+
+.notion-article a:hover {
+  text-decoration-color: #37352f;
+}
+
+/* Strong / Bold */
+.notion-article strong {
+  color: #37352f;
+  font-weight: 600;
+}
+
+/* Images */
+.notion-article img {
+  border-radius: 0.5rem;
+}
+
+.notion-article > p > img {
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+/* Tables */
+.notion-article table {
+  width: 100%;
+  font-size: 0.875rem;
+}
+
+/* Breakout: charts and custom components should span wider than the 720px prose column */
+.notion-article .not-prose {
+  margin-left: calc(-1 * min(8vw, 140px));
+  margin-right: calc(-1 * min(8vw, 140px));
+}
+
+@media (max-width: 768px) {
+  .notion-article .not-prose {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Blockquotes */
+.notion-article blockquote {
+  border-left: 3px solid #37352f;
+  padding-left: 1em;
+  color: #37352f;
+  font-style: normal;
 }
 
 /* Style raw <pre><code> blocks in MDX accordion content */
