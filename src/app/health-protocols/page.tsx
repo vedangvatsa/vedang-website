@@ -208,16 +208,25 @@ export default function HealthProtocolsPage() {
 
       {/* ── Hero ── */}
       <section className="text-center pt-16 pb-12 border-b border-border/30">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
+        <div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
             Bryan Johnson&apos;s Blueprint Protocol
           </h1>
-          <p className="mt-4 text-base md:text-lg text-muted-foreground">
+          <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             327 protocols extracted from 900+ YouTube transcripts, ranked by mention frequency.
             Every claim links to a timestamped video or the official protocol page.
           </p>
-          <p className="mt-4 text-sm text-muted-foreground">
-            By Vedang Vatsa · <Link href="https://blueprint.bryanjohnson.com/pages/blueprint-protocol" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary font-medium">Primary source →</Link>
+          <div className="mt-8 flex items-center justify-center gap-3">
+            <Link href="/profile">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/ved.png" alt="Vedang Vatsa" width={40} height={40} className="rounded-full" />
+            </Link>
+            <div className="text-sm">
+              <Link href="/profile" className="font-medium text-foreground hover:text-primary transition-colors">Vedang Vatsa</Link>
+            </div>
+          </div>
+          <p className="mt-6 text-sm text-muted-foreground">
+            Primary source: <Link href="https://blueprint.bryanjohnson.com/pages/blueprint-protocol" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">blueprint.bryanjohnson.com →</Link>
           </p>
         </div>
       </section>
