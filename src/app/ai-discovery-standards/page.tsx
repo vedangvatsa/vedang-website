@@ -88,28 +88,44 @@ function Src({ href, children }: { href: string; children?: React.ReactNode }) {
 export default function AiDiscoveryStandardsPage() {
   return (
     <>
-      {/* ── Hero ── */}
-      <section className="text-center pt-16 pb-12 border-b border-border/30">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
+      {/* ── Header ── */}
+      <header className="pt-12 md:pt-20 pb-10 md:pb-14">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
             AI Discovery Standards
           </h1>
-          <p className="mt-4 text-base md:text-lg text-muted-foreground">
+          <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {DISCOVERY_FILES.length} files across {CATEGORIES.length} categories. Every protocol and metadata
             standard used to make websites discoverable by AI systems, search engines, and autonomous agents.
           </p>
-          <p className="mt-4 text-sm text-muted-foreground">
-            By Vedang Vatsa ·{' '}
-            <Link href="https://github.com/vedangvatsa/ai-discovery-standards" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary font-medium">
-              GitHub →
+          <div className="mt-8 flex items-center justify-center gap-3">
+            <Link href="/profile">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/ved.png"
+                alt="Vedang Vatsa"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
             </Link>
-            {' · '}
-            <code className="text-sm">npx ai-discovery-standards</code>
-          </p>
+            <div className="flex items-center gap-0 text-sm">
+              <Link href="/profile" className="font-medium text-foreground hover:text-primary transition-colors">Vedang Vatsa</Link>
+              <span className="mx-2 text-muted-foreground">|</span>
+              <Link href="https://github.com/vedangvatsa/ai-discovery-standards" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                GitHub
+              </Link>
+              <span className="mx-2 text-muted-foreground">|</span>
+              <code className="text-sm text-muted-foreground">npx ai-discovery-standards</code>
+            </div>
+          </div>
         </div>
-      </section>
+      </header>
 
-      <div className="space-y-24">
+      <div className="py-10 md:py-14">
+        <article className="notion-article prose prose-lg prose-neutral max-w-none">
+
+      <div className="space-y-24 not-prose">
 
         {/* ── The Problem ── */}
         <section className="prose max-w-none">
@@ -377,6 +393,8 @@ export default function AiDiscoveryStandardsPage() {
           Standards evolve. Last updated May 2026. File an issue on GitHub if something is missing or outdated.
         </p>
 
+      </div>
+        </article>
       </div>
     </>
   );
