@@ -20,7 +20,7 @@ export function CardGrid({ title, items, cta, id }: CardGridProps) {
     <section id={id} className="py-12">
       <div>
         <h2 className="mb-8 text-center text-2xl md:text-3xl font-semibold tracking-tight">{title}</h2>
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {items.map((item, i) => (
             <Link
               href={item.url}
