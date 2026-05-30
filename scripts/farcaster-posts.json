@@ -365,8 +365,9 @@
     "image": "scripts/thread-assets/psych_stockholm.png",
     "scheduleDate": "2026-04-06",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": "0xd1084eace0a3c50d7d4ba5e27e98363b825cdf0f",
+    "postedAt": "2026-05-30T04:56:35.842Z"
   },
   {
     "id": "psych-mirror",
