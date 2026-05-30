@@ -10,7 +10,7 @@
 
   <!-- Layer 1: Compute -->
   <rect x="60" y="75" width="780" height="28" rx="4" fill="#2563eb" opacity="0.08" stroke="#2563eb" stroke-opacity="0.2"/>
-  <text x="80" y="94" fill="#2563eb" font-size="10" font-weight="700">COMPUTE & INFERENCE</text>
+  <text x="80" y="94" fill="#2563eb" font-size="10" font-weight="700">COMPUTE &amp; INFERENCE</text>
   <text x="440" y="94" fill="#37352f" opacity="0.5" font-size="9">Together AI · Modal · Fireworks · Groq · Cerebras</text>
   <text x="820" y="94" text-anchor="end" fill="#2563eb" font-size="9" font-weight="700">$4B+</text>
 
@@ -28,7 +28,7 @@
 
   <!-- Layer 4: Evaluation -->
   <rect x="60" y="171" width="780" height="28" rx="4" fill="#d97706" opacity="0.08" stroke="#d97706" stroke-opacity="0.2"/>
-  <text x="80" y="190" fill="#d97706" font-size="10" font-weight="700">EVALUATION & OBSERVABILITY</text>
+  <text x="80" y="190" fill="#d97706" font-size="10" font-weight="700">EVALUATION &amp; OBSERVABILITY</text>
   <text x="440" y="190" fill="#37352f" opacity="0.5" font-size="9">Braintrust · Langfuse · Arize AI</text>
   <text x="820" y="190" text-anchor="end" fill="#d97706" font-size="9" font-weight="700">$256M</text>
 
@@ -44,9 +44,9 @@
   <text x="440" y="254" fill="#37352f" opacity="0.5" font-size="9">Browserbase · Firecrawl · Apify</text>
   <text x="820" y="254" text-anchor="end" fill="#0891b2" font-size="9" font-weight="700">$87M</text>
 
-  <!-- Layer 7: Memory & State -->
+  <!-- Layer 7: Memory &amp; State -->
   <rect x="60" y="267" width="380" height="28" rx="4" fill="#4f46e5" opacity="0.08" stroke="#4f46e5" stroke-opacity="0.2"/>
-  <text x="80" y="286" fill="#4f46e5" font-size="10" font-weight="700">MEMORY & STATE</text>
+  <text x="80" y="286" fill="#4f46e5" font-size="10" font-weight="700">MEMORY &amp; STATE</text>
   <text x="240" y="286" fill="#37352f" opacity="0.5" font-size="9">Mem0 · Upstash · Pinecone</text>
   <text x="425" y="286" text-anchor="end" fill="#4f46e5" font-size="9" font-weight="700">$36M</text>
 

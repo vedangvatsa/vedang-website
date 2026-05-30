@@ -78,7 +78,7 @@
   
   <!-- Layer 9 - AI Discovery -->
   <rect x="100" y="102" width="1000" height="38" rx="6" fill="none" stroke="url(#accent-grad)" stroke-width="2"/>
-  <rect x="100" y="102" width="1000" height="38" rx="6" fill="#1e293b" stroke="url(#green-grad)" stroke-width="2" y="58"/>
+  <rect x="100" y="102" width="1000" height="38" rx="6" fill="#1e293b" stroke="url(#green-grad)" stroke-width="2"/>
   <rect x="100" y="58" width="4" height="38" rx="2" fill="#10b981"/>
   <text x="120" y="82" font-family="system-ui" font-size="13" font-weight="600" fill="#10b981">09</text>
   <text x="155" y="82" font-family="system-ui" font-size="13" font-weight="500" fill="#e2e8f0">AI Discovery and Agent-Readiness</text>
