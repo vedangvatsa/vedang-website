@@ -259,7 +259,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
             <Link href="/profile">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/icon.png"
+                src="/images/ved.png"
                 alt="Vedang Vatsa"
                 width={40}
                 height={40}
