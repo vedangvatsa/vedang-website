@@ -1042,18 +1042,18 @@ export default function LinkedInTranslatorPage() {
             <div ref={cardRef} className="rounded-lg border border-border bg-card shadow-sm overflow-hidden">
               {/* Language tabs header */}
               <div className="grid grid-cols-[1fr_auto_1fr] items-center border-b border-border">
-                <div className="px-5 py-2.5">
-                  <span className="text-sm font-semibold text-primary">
+                <div className="px-3 py-2 sm:px-5 sm:py-2.5">
+                  <span className="text-xs sm:text-sm font-semibold text-primary">
                     {direction === 'en-to-li' ? 'Human Language' : 'LinkedIn Language'}
                   </span>
                 </div>
-                <div className="flex items-center justify-center px-2">
+                <div className="flex items-center justify-center px-1">
                   <button onClick={handleSwapDirection} className="rounded-full border border-border p-1.5 bg-background hover:bg-secondary transition-colors" title="Swap languages">
                     <ArrowRightLeft className="h-3.5 w-3.5 text-muted-foreground" />
                   </button>
                 </div>
-                <div className="px-5 py-2.5">
-                  <span className="text-sm font-semibold text-primary">
+                <div className="px-3 py-2 sm:px-5 sm:py-2.5 text-right sm:text-left">
+                  <span className="text-xs sm:text-sm font-semibold text-primary">
                     {direction === 'en-to-li' ? 'LinkedIn Language' : 'Human Language'}
                   </span>
                 </div>

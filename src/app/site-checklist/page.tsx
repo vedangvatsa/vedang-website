@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { AuthorByline } from '@/components/author-byline';
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -286,17 +287,7 @@ export default function WebsiteSpecificationPage() {
             {TOTAL_ITEMS} requirements. Each one tells you what to do, how to do it, and where the standard lives.
             Copy the code. Run the checks. Feed the whole thing to an AI and let it audit your site.
           </p>
-          <div className="mt-8 flex items-center justify-center gap-3">
-            <Link href="/profile">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/ved.png" alt="Vedang Vatsa" width={40} height={40} className="rounded-full" />
-            </Link>
-            <div className="flex items-center gap-0 text-sm">
-              <Link href="/profile" className="font-medium text-foreground hover:text-primary transition-colors">Vedang Vatsa</Link>
-              <span className="mx-2 text-muted-foreground">|</span>
-              <span className="text-muted-foreground">May 2026</span>
-            </div>
-          </div>
+          <AuthorByline links={[{ label: 'May 2026' }]} />
         </div>
       </header>
 

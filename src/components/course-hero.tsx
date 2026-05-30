@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { AuthorByline } from '@/components/author-byline';
 
 interface CourseHeroProps {
   title: string;
@@ -17,15 +17,7 @@ export function CourseHero({ title, subtitle, youtubeUrl, youtubeMaxWidth = 'max
         <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
           {subtitle}
         </p>
-        <div className="mt-8 flex items-center justify-center gap-3">
-          <Link href="/profile">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/ved.png" alt="Vedang Vatsa" width={40} height={40} className="rounded-full" />
-          </Link>
-          <div className="flex items-center gap-0 text-sm">
-            <Link href="/profile" className="font-medium text-foreground hover:text-primary transition-colors">Vedang Vatsa</Link>
-          </div>
-        </div>
+        <AuthorByline />
         {youtubeUrl && (
           <div className={`mt-8 aspect-video rounded-lg overflow-hidden shadow-2xl border ${youtubeMaxWidth} mx-auto`}>
             <iframe

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { PageLayout } from '@/components/page-layout';
+import { AuthorByline } from '@/components/author-byline';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 import { CATEGORIES } from '@/lib/ai-reports-data';
 import { ReportLibrary } from '@/components/report-library';
@@ -23,15 +24,7 @@ export default function AIReportsPage() {
           <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             21,000+ research papers, institutional reports, and industry analyses. Each entry links directly to a verified DOI or academic repository.
           </p>
-          <div className="mt-8 flex items-center justify-center gap-3">
-            <Link href="/profile">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/ved.png" alt="Vedang Vatsa" width={40} height={40} className="rounded-full" />
-            </Link>
-            <div className="text-sm">
-              <Link href="/profile" className="font-medium text-foreground hover:text-primary transition-colors">Vedang Vatsa</Link>
-            </div>
-          </div>
+          <AuthorByline />
           <p className="mt-6 text-sm text-muted-foreground">
             Read the full synthesis: <Link href="/state-of-ai" className="text-primary hover:underline font-medium">The State of AI →</Link>
           </p>

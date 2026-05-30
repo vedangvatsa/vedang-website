@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
+import { AuthorByline } from '@/components/author-byline';
 
 // ─── Complete Discovery File Registry ───
 const DISCOVERY_FILES: {
@@ -97,25 +98,7 @@ export default function AiDiscoveryStandardsPage() {
           <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {DISCOVERY_FILES.length} files across {CATEGORIES.length} categories. How to make your site visible to AI crawlers, search engines, and agents.
           </p>
-          <div className="mt-8 flex items-center justify-center gap-3">
-            <Link href="/profile">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/ved.png"
-                alt="Vedang Vatsa"
-                width={40}
-                height={40}
-                className="rounded-full"
-              />
-            </Link>
-            <div className="flex items-center gap-0 text-sm">
-              <Link href="/profile" className="font-medium text-foreground hover:text-primary transition-colors">Vedang Vatsa</Link>
-              <span className="mx-2 text-muted-foreground">|</span>
-              <Link href="https://github.com/vedangvatsa/ai-discovery-standards" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                GitHub
-              </Link>
-            </div>
-          </div>
+          <AuthorByline links={[{ label: 'GitHub', href: 'https://github.com/vedangvatsa/ai-discovery-standards' }]} />
         </div>
       </header>
 

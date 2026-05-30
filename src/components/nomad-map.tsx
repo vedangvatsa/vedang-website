@@ -379,6 +379,7 @@ export function NomadMap({ data }: { data: POI[] }) {
 
       {/* Listings table */}
       <div className="bg-card border rounded-lg overflow-hidden">
+        <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead className="bg-muted/50 sticky top-0">
               <tr>
@@ -446,12 +447,13 @@ export function NomadMap({ data }: { data: POI[] }) {
               ))}
             </tbody>
           </table>
-          {/* Sentinel for infinite scroll */}
-          {visibleCount < filteredData.length && (
-            <div ref={sentinelRef} className="py-4 text-center text-xs text-muted-foreground">
-              Loading more…
-            </div>
-          )}
+        </div>
+        {/* Sentinel for infinite scroll */}
+        {visibleCount < filteredData.length && (
+          <div ref={sentinelRef} className="py-4 text-center text-xs text-muted-foreground">
+            Loading more…
+          </div>
+        )}
         <p className="text-center text-xs text-muted-foreground py-2 border-t">
           {Math.min(visibleCount, filteredData.length).toLocaleString()} of {filteredData.length.toLocaleString()} places
         </p>

@@ -9,6 +9,7 @@ import {
 import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
+import { AuthorByline } from '@/components/author-byline';
 
 export const metadata: Metadata = generateMetadata({
   title: pageMetadata.healthProtocols.title,
@@ -215,15 +216,7 @@ export default function HealthProtocolsPage() {
           <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             327 protocols extracted from 900+ YouTube transcripts, ranked by mention frequency.
           </p>
-          <div className="mt-8 flex items-center justify-center gap-3">
-            <Link href="/profile">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/ved.png" alt="Vedang Vatsa" width={40} height={40} className="rounded-full" />
-            </Link>
-            <div className="text-sm">
-              <Link href="/profile" className="font-medium text-foreground hover:text-primary transition-colors">Vedang Vatsa</Link>
-            </div>
-          </div>
+          <AuthorByline />
           <p className="mt-6 text-sm text-muted-foreground">
             Primary source: <Link href="https://blueprint.bryanjohnson.com/pages/blueprint-protocol" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">blueprint.bryanjohnson.com →</Link>
           </p>
