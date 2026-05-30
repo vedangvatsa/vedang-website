@@ -3,12 +3,12 @@ import { PageLayout } from '@/components/page-layout';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'The Website Specification - HTML, Accessibility, Security, SEO, Agent Readiness',
+    absolute: 'The Site Checklist - HTML, Accessibility, Security, SEO, Agent Readiness',
   },
-  description: 'A complete, platform-agnostic specification of every technical feature a modern website needs. Covers HTML foundations, SEO, accessibility, security, well-known URIs, AI agent readiness, performance, privacy, resilience, and internationalisation. 120+ requirements, sourced and categorized.',
+  description: 'Actionable checklist for building modern websites. Covers HTML foundations, SEO, accessibility, security, AI agent readiness, performance, privacy, resilience, and internationalisation. Code examples, verification commands, and a master prompt to audit any site.',
   keywords: [
-    'website specification',
-    'web standards',
+    'web standards checklist',
+    'site audit checklist',
     'HTML best practices',
     'WCAG accessibility',
     'web security headers',
@@ -17,39 +17,34 @@ export const metadata: Metadata = {
     'SEO checklist',
     'robots.txt',
     'structured data JSON-LD',
-    'well-known URIs',
     'AI agent readiness',
     'llms.txt',
-    'MCP server',
     'web performance',
     'privacy compliance',
-    'GDPR',
-    'hreflang',
-    'internationalisation',
     'Vedang Vatsa',
   ],
-  alternates: { canonical: '/website-specification' },
+  alternates: { canonical: '/site-checklist' },
   openGraph: {
-    title: 'The Website Specification',
-    description: '120+ requirements across 10 categories. Everything a modern website needs, from doctype to agent readiness.',
-    url: '/website-specification',
+    title: 'The Site Checklist',
+    description: 'Actionable requirements for modern websites. Code examples, verification commands, and a master AI prompt to audit your site.',
+    url: '/site-checklist',
     type: 'website',
     siteName: 'Vedang Vatsa',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The Website Specification',
-    description: '120+ requirements across 10 categories. Everything a modern website needs.',
+    title: 'The Site Checklist',
+    description: 'Actionable requirements for modern websites. Code, verification, and a master AI audit prompt.',
   },
 };
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'TechArticle',
-  name: 'The Website Specification',
-  headline: 'The Website Specification',
-  description: 'A complete, platform-agnostic specification of every technical feature a modern website needs. 120+ requirements across 10 categories.',
-  url: 'https://veda.ng/website-specification',
+  name: 'The Site Checklist',
+  headline: 'The Site Checklist',
+  description: 'Actionable checklist for building modern websites. Code examples, verification commands, and a master prompt to audit any site.',
+  url: 'https://veda.ng/site-checklist',
   author: {
     '@type': 'Person',
     name: 'Vedang Vatsa',
@@ -108,11 +103,11 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://veda.ng' },
-    { '@type': 'ListItem', position: 2, name: 'Website Specification', item: 'https://veda.ng/website-specification' },
+    { '@type': 'ListItem', position: 2, name: 'Site Checklist', item: 'https://veda.ng/site-checklist' },
   ],
 };
 
-export default function WebsiteSpecificationLayout({
+export default function SiteChecklistLayout({
   children,
 }: {
   children: React.ReactNode;

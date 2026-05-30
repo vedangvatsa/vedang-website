@@ -280,7 +280,7 @@ export default function WebsiteSpecificationPage() {
       <header className="pt-12 md:pt-20 pb-10 md:pb-14">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
-            The Website Specification
+            The Site Checklist
           </h1>
           <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {TOTAL_ITEMS} requirements. Each one tells you what to do, how to do it, and where the standard lives.
