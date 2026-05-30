@@ -78,7 +78,6 @@
 
 ### MDX Components Used
 ```tsx
-<SectionLabel label="Section Title" />     // Section dividers
 <PullQuote>Key insight text</PullQuote>     // Highlighted quotes (uses children, NOT quote prop)
 <Callout type="insight" title="Title">     // Info callouts with typed variants
   Content here
@@ -88,6 +87,9 @@
   <Stat value="51%" label="Description" source="Source Name" sourceUrl="https://..." />
 </StatRow>
 ```
+
+### Banned Components
+- **`<SectionLabel>`** — Do NOT use. It renders as an all-caps, light-blue, non-semantic `<span>` that duplicates the `##` heading below it. Use standard `##` markdown headings for all section dividers.
 
 ### Custom Chart Components
 Each essay should have its own chart file at `src/components/mdx/{essay-slug}-charts.tsx`. Charts must:
