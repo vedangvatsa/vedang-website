@@ -4,12 +4,12 @@ import { PageLayout } from '@/components/page-layout';
 
 export const metadata: Metadata = {
   title: 'Digital Nomad Directory - Coliving & Stays in 95 Cities',
-  description: 'Interactive directory of 4,400+ coliving houses, hostels, apartments, and guesthouses across 95 digital nomad cities in 52 countries. Quality-scored, open-source data.',
+  description: 'Interactive directory of 4,300+ coliving houses, hostels, apartments, and guesthouses across 95 digital nomad cities in 52 countries. Quality-scored, open-source data.',
   keywords: ['digital nomad', 'coliving', 'remote work', 'nomad directory', 'hostel', 'apartment'],
   alternates: { canonical: '/nomad' },
   openGraph: {
     title: 'Digital Nomad Directory',
-    description: '4,400+ coliving, hostels, and apartments across 95 cities in 52 countries.',
+    description: '4,300+ coliving, hostels, and apartments across 95 cities in 52 countries.',
     url: 'https://veda.ng/nomad',
     type: 'website',
   },
@@ -24,7 +24,7 @@ export default function NomadMapPage() {
             Digital Nomad Directory
           </h1>
           <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-            4,400+ coliving houses, hostels, apartments, and guesthouses across 95 cities in 52 countries.
+            4,300+ coliving houses, hostels, apartments, and guesthouses across 95 cities in 52 countries.
           </p>
         </div>
       </section>
