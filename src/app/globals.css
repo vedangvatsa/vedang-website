@@ -159,15 +159,16 @@
   font-size: 0.875rem;
 }
 
-/* Charts and custom components: center within the prose column */
+/* Charts and custom components: full width within the prose column */
 .notion-article .not-prose {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: none !important;
   width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .notion-article .not-prose > * {
+  max-width: none;
   width: 100%;
 }
 
