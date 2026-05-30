@@ -77,3 +77,16 @@ boundless-email.html
 
 # Research papers (separate project)
 papers/
+
+# Separate projects (moved to own repos)
+ai-video-pipeline/
+linkedin-post-scraper/
+video-factory/
+video-analysis-frames/
+
+# Don't commit large data files
+*.pdf
+*.xlsx
+*.vtt
+scripts/thread-assets/
+scripts/video-retalking/
