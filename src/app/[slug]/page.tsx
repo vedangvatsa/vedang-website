@@ -241,7 +241,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
 
       {/* ─── Essay Header ─── */}
       <header className="pt-12 md:pt-20 pb-10 md:pb-14">
-        <div className="mx-auto max-w-3xl px-4 md:px-6 text-center">
+        <div className="w-full md:w-[61.8%] mx-auto px-4 md:px-6 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
             {essay.frontmatter.title}
           </h1>
@@ -482,7 +482,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
         </article>
         </div>
 
-        <div className="mx-auto max-w-4xl px-4 md:px-6 mt-16">
+        <div className="w-full md:w-[61.8%] mx-auto px-4 md:px-6 mt-16">
             <RelatedGlossaryTerms
               essaySlug={slug}
               terms={glossaryTerms.map(t => ({ slug: t.slug, term: t.term }))}
