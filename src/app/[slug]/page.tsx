@@ -277,7 +277,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
 
       {/* ─── Essay Body ─── */}
       <div className="py-10 md:py-14">
-        <article className="notion-article prose prose-lg prose-neutral max-w-5xl mx-auto px-4 md:px-6">
+        <article className="notion-article prose prose-lg prose-neutral w-3/4 max-w-none mx-auto px-4 md:px-6">
           <MDXRemote
             source={essay.content}
             options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
