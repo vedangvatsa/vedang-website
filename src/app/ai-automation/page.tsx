@@ -1,13 +1,10 @@
 export const dynamic = 'force-dynamic';
 
-import {
-  Accordion, AccordionContent, AccordionItem, AccordionTrigger,
-} from '@/components/ui/accordion';
 import { Metadata } from 'next';
-import { Badge } from '@/components/ui/badge';
-import { ArrowRight, ExternalLink } from 'lucide-react';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { CourseHero } from '@/components/course-hero';
+import { CurriculumSection } from '@/components/curriculum-section';
+import { CourseFAQ } from '@/components/course-faq';
+import { CourseReferences } from '@/components/course-references';
 
 export const metadata: Metadata = {
   title: { absolute: 'AI Automation - Automate Anything with AI Agents | Vedang Vatsa' },
@@ -21,6 +18,16 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
+
+const curriculumItems = [
+  { href: '/ai-automation/module-1-mindset', title: '1. The Automation Mindset', description: 'Identify automation opportunities, think in workflows, and choose the right tool for every job.' },
+  { href: '/ai-automation/module-2-apis', title: '2. API Fundamentals', description: 'REST APIs, authentication, webhooks, pagination: the building blocks every automation uses.' },
+  { href: '/ai-automation/module-3-nocode', title: '3. No-Code Automation', description: 'Build powerful workflows with n8n, Make, and Zapier. add AI nodes for intelligent processing.' },
+  { href: '/ai-automation/module-4-agents', title: '4. AI Agents as Automators', description: 'Use Claude, Antigravity, and GPT as autonomous workflow executors for social media and beyond.' },
+  { href: '/ai-automation/module-5-mcp-automation', title: '5. MCP-Powered Automation', description: 'Connect AI agents to Google Sheets, databases, Slack, and any service via MCP servers.' },
+  { href: '/ai-automation/module-6-pipelines', title: '6. Building Custom Pipelines', description: 'Combine APIs + AI + MCP into end-to-end systems: job aggregation, content publishing, data quality.' },
+  { href: '/ai-automation/module-7-production', title: '7. Production & Monitoring', description: 'Scheduling with cron/GitHub Actions, monitoring, alerting, cost management, and scaling.' },
+];
 
 const referenceLinks = [
     {
@@ -92,96 +99,30 @@ export default function AIAutomationCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <section className="text-center pt-16 pb-12">
-        <div>
-                <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
-                    AI Automation
-                </h1>
-          <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-            Automate anything with AI agents, APIs, MCP servers, and no-code tools. From social media broadcasting to data pipelines. build systems that run 24/7 without you.
-          </p>
-          <div className="mt-8 flex justify-center items-center gap-4">
-            <Badge variant="outline">By: Vedang Vatsa</Badge>
-            <Badge variant="outline">Prerequisite: None</Badge>
-          </div>
-          <div className="mt-8 flex justify-center">
-            <Button asChild size="lg" className="rounded-full px-8">
-              <Link href="/ai-automation/module-1-mindset">Start Course <ArrowRight className="ml-2 w-4 h-4" /></Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CourseHero
+        title="AI Automation"
+        subtitle="Automate anything with AI agents, APIs, MCP servers, and no-code tools. From social media broadcasting to data pipelines. build systems that run 24/7 without you."
+        prerequisite="None"
+        startHref="/ai-automation/module-1-mindset"
+      />
 
-      <section id="curriculum" className="py-16 bg-muted/30 border-y -mx-4 px-4 md:-mx-6 md:px-6">
-        <div className="max-w-none">
-          <div className="text-left mb-8">
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Course Curriculum</h2>
-            <p className="mt-2 text-muted-foreground">Seven modules covering no-code, APIs, AI agents, MCP, and production pipelines.</p>
-          </div>
-          <div className="space-y-4">
-            {[
-              { href: 'module-1-mindset', title: '1. The Automation Mindset', desc: 'Identify automation opportunities, think in workflows, and choose the right tool for every job.' },
-              { href: 'module-2-apis', title: '2. API Fundamentals', desc: 'REST APIs, authentication, webhooks, pagination: the building blocks every automation uses.' },
-              { href: 'module-3-nocode', title: '3. No-Code Automation', desc: 'Build powerful workflows with n8n, Make, and Zapier. add AI nodes for intelligent processing.' },
-              { href: 'module-4-agents', title: '4. AI Agents as Automators', desc: 'Use Claude, Antigravity, and GPT as autonomous workflow executors for social media and beyond.' },
-              { href: 'module-5-mcp-automation', title: '5. MCP-Powered Automation', desc: 'Connect AI agents to Google Sheets, databases, Slack, and any service via MCP servers.' },
-              { href: 'module-6-pipelines', title: '6. Building Custom Pipelines', desc: 'Combine APIs + AI + MCP into end-to-end systems: job aggregation, content publishing, data quality.' },
-              { href: 'module-7-production', title: '7. Production & Monitoring', desc: 'Scheduling with cron/GitHub Actions, monitoring, alerting, cost management, and scaling.' },
-            ].map((m) => (
-              <Link key={m.href} href={`/ai-automation/${m.href}`} className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="font-semibold text-lg">{m.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-1">{m.desc}</p>
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CurriculumSection
+        description="Seven modules covering no-code, APIs, AI agents, MCP, and production pipelines."
+        items={curriculumItems}
+      />
 
-      <section id="references" className="py-16">
-        <div className="text-left mb-8">
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Tools & Resources</h2>
-          <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl">Platforms, APIs, and related courses referenced throughout the curriculum.</p>
-        </div>
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {referenceLinks.map((tool) => (
-            <div key={tool.name} className="break-inside-avoid">
-              <h3 className="font-semibold text-lg mb-2">{tool.name}</h3>
-              <ul className="space-y-2">
-                {tool.links.map((link) => (
-                  <li key={link.name}>
-                    <Link href={link.url} target={link.url.startsWith('/') ? undefined : '_blank'} rel={link.url.startsWith('/') ? undefined : 'noopener noreferrer'} className="flex items-center text-sm text-muted-foreground hover:text-primary group">
-                      {link.name}
-                      {!link.url.startsWith('/') && <ExternalLink className="ml-1.5 h-3 w-3 opacity-70 group-hover:opacity-100" />}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
+      <CourseReferences
+        title="Tools & Resources"
+        subtitle="Platforms, APIs, and related courses referenced throughout the curriculum."
+        categories={referenceLinks}
+        layout="grid-4"
+        align="left"
+      />
 
-      <section id="faq" className="py-16">
-        <div className="text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
-          <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">Common questions about AI automation answered directly.</p>
-        </div>
-        <div className="mt-12">
-          <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
-            {faqItems.map((item, index) => (
-              <AccordionItem key={index} value={`faq-${index + 1}`}>
-                <AccordionTrigger className="text-left">{item.question}</AccordionTrigger>
-                <AccordionContent>{item.answer}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
+      <CourseFAQ
+        subtitle="Common questions about AI automation answered directly."
+        items={faqItems}
+      />
     </div>
   );
 }

@@ -1,17 +1,9 @@
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
-import { PredictionEngine, CoreTechniques, AdvancedReasoning, CodePrompting, BestPractices } from '@/components/courses/pe-visuals';
+import { CourseHero } from '@/components/course-hero';
+import { CurriculumSection } from '@/components/curriculum-section';
+import { CourseFAQ } from '@/components/course-faq';
 
 import { Metadata } from 'next';
-import { Badge } from '@/components/ui/badge';
-import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Link from 'next/link';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
@@ -21,6 +13,44 @@ export const metadata: Metadata = generateMetadata({
   url: pageMetadata.promptEngineering.url,
   ogImageAlt: 'Prompt Engineering Course - Master AI Interactions',
 });
+
+const curriculumItems = [
+  {
+    href: '/prompt-engineering-101/module-1-core-idea',
+    title: '1. The Core Idea: Guiding the Prediction Engine',
+    description: 'Understand LLMs as prediction engines and learn essential configurations.',
+  },
+  {
+    href: '/prompt-engineering-101/module-2-core-techniques',
+    title: '2. Core Prompting Techniques',
+    description: 'Master Zero-Shot, Few-Shot, Role, System, and Structured prompting.',
+  },
+  {
+    href: '/prompt-engineering-101/module-3-advanced-reasoning',
+    title: '3. Advanced Reasoning Techniques',
+    description: 'Explore Chain of Thought, Self-Consistency, ReAct, and Multimodal Prompting.',
+  },
+  {
+    href: '/prompt-engineering-101/module-4-code-prompting',
+    title: '4. Code Prompting: Your AI Pair Programmer',
+    description: 'Use LLMs to write, explain, translate, and debug code effectively.',
+  },
+  {
+    href: '/prompt-engineering-101/module-5-best-practices',
+    title: '5. Best Practices for Expert Prompting',
+    description: 'Learn to iterate, provide clarity, and defend against prompt injections.',
+  },
+  {
+    href: '/prompt-engineering-101/module-6-rag-functions',
+    title: '6. RAG & Function Calling',
+    description: 'Connect LLMs to your own data with embeddings, vector databases, and tool use.',
+  },
+  {
+    href: '/prompt-engineering-101/module-7-chaining-agents',
+    title: '7. Prompt Chaining & Agents',
+    description: 'Orchestrate multi-step workflows and build autonomous agent systems.',
+  },
+];
 
 const faqItems = [
   {
@@ -96,132 +126,31 @@ export default function PromptEngineeringCoursePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <section className="text-center pt-16 pb-12">
-             <div>
-                <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
-                    Prompt Engineering
-                </h1>
-                <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-                Learn the art and science of communicating with Large Language Models. This course will teach you how to craft prompts that guide AI to generate accurate, creative, and useful results, turning you into an expert communicator for the new age of technology.
-                </p>
 
-                <div className="mt-8 flex justify-center items-center gap-4">
-                    <Badge variant="outline">By: Vedang Vatsa</Badge>
-                    <Badge variant="outline">Prerequisite: Curiosity</Badge>
-                </div>
-
-                <div className="mt-8 flex justify-center">
-                    <Button asChild size="lg" className="rounded-full px-8">
-                        <Link href="/prompt-engineering-101/module-1-core-idea">
-                            Start Course <ArrowRight className="ml-2 w-4 h-4" />
-                        </Link>
-                    </Button>
-                </div>
-            </div>
-        </section>
+        <CourseHero
+          title="Prompt Engineering"
+          subtitle="Learn the art and science of communicating with Large Language Models. This course will teach you how to craft prompts that guide AI to generate accurate, creative, and useful results, turning you into an expert communicator for the new age of technology."
+          prerequisite="Curiosity"
+          startHref="/prompt-engineering-101/what-is-prompt-engineering"
+        />
 
         <div className="py-16 space-y-12">
             
-        <section id="curriculum" className="py-16 bg-muted/30 border-y -mx-4 px-4 md:-mx-6 md:px-6">
-            <div className="max-w-none">
-                <div className="text-left mb-8">
-                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Course Curriculum</h2>
-                    <p className="mt-2 text-muted-foreground">Seven modules to master the art of prompt engineering.</p>
-                </div>
-                <div className="space-y-4">
-                    <Link href="/prompt-engineering-101/module-1-core-idea" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">1. The Core Idea: Guiding the Prediction Engine</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Understand LLMs as prediction engines and learn essential configurations.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/prompt-engineering-101/module-2-core-techniques" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">2. Core Prompting Techniques</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Master Zero-Shot, Few-Shot, Role, System, and Structured prompting.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/prompt-engineering-101/module-3-advanced-reasoning" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">3. Advanced Reasoning Techniques</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Explore Chain of Thought, Self-Consistency, ReAct, and Multimodal Prompting.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/prompt-engineering-101/module-4-code-prompting" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">4. Code Prompting: Your AI Pair Programmer</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Use LLMs to write, explain, translate, and debug code effectively.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/prompt-engineering-101/module-5-best-practices" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">5. Best Practices for Expert Prompting</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Learn to iterate, provide clarity, and defend against prompt injections.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/prompt-engineering-101/module-6-rag-functions" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">6. RAG & Function Calling</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Connect LLMs to your own data with embeddings, vector databases, and tool use.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/prompt-engineering-101/module-7-chaining-agents" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">7. Prompt Chaining & Agents</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Orchestrate multi-step workflows and build autonomous agent systems.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                </div>
-            </div>
-        </section>
+        <CurriculumSection
+          description="Seven modules to master the art of prompt engineering."
+          items={curriculumItems}
+        />
 
-            <section id="faq" className="py-16">
-                <div className="text-center">
-                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
-                    <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Your common questions about prompt engineering, answered.
-                    </p>
-                </div>
-                <div className="mt-12">
-                    <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
-                       {faqItems.map((item, index) => (
-                         <AccordionItem key={index} value={`faq-${index + 1}`}>
-                            <AccordionTrigger className="text-left">{item.question}</AccordionTrigger>
-                            <AccordionContent>
-                                {item.answer}
-                            </AccordionContent>
-                        </AccordionItem>
-                       ))}
-                    </Accordion>
-                </div>
-            </section>
+            <CourseFAQ
+              subtitle="Your common questions about prompt engineering, answered."
+              items={faqItems}
+            />
 
              <section id="learn-more" className="pb-16">
                 <div className="text-center">
                     <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Learn More</h2>
                     <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Here’s a list of the best sources to learn about prompt engineering. It covers everything from beginner guides to academic-level surveys and is useful for casual users, developers, and researchers.
+                        Here's a list of the best sources to learn about prompt engineering. It covers everything from beginner guides to academic-level surveys and is useful for casual users, developers, and researchers.
                     </p>
                 </div>
                 <div className="mt-12 prose">
@@ -231,13 +160,13 @@ export default function PromptEngineeringCoursePage() {
                         <li><Link href="https://github.com/dair-ai/Prompt-Engineering-Guide?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DAIR.AI Prompt Engineering Guide</Link>: A community-driven guide that collects many of the latest papers, tutorials, tools and best practices.</li>
                         <li><Link href="https://learnprompting.org/docs/introduction?srsltid=AfmBOoofk_9KZ9_AF0jWr8FFquJNivbNDE0Zhha-pATc_fHk6MHgZh3o&utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">LearnPrompting.org</Link>: A free, well-structured online guide to generative AI and prompt engineering.</li>
                         <li><Link href="https://platform.openai.com/docs/guides/prompt-engineering?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">OpenAI Prompt Engineering Documentation / Guide</Link>: This official guide lays out core principles and best practices.</li>
-                        <li><Link href="https://developers.google.com/machine-learning/resources/prompt-eng?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Google Prompt Engineering Guide</Link>: A practical guide for developers using Google’s AI services.</li>
+                        <li><Link href="https://developers.google.com/machine-learning/resources/prompt-eng?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Google Prompt Engineering Guide</Link>: A practical guide for developers using Google's AI services.</li>
                     </ul>
 
                     <h3 className="text-2xl font-semibold tracking-tight mt-12">Courses & Structured Learning Paths</h3>
                     <ul>
-                        <li><Link href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DeepLearning.AI in partnership with OpenAI</Link>: “ChatGPT Prompt Engineering for Developers” a short, practical course.</li>
-                        <li><Link href="https://www.coursera.org/learn/prompt-engineering?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Vanderbilt University on Coursera</Link>: “Prompt Engineering for ChatGPT” a beginner-friendly course with structured modules.</li>
+                        <li><Link href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DeepLearning.AI in partnership with OpenAI</Link>: "ChatGPT Prompt Engineering for Developers" a short, practical course.</li>
+                        <li><Link href="https://www.coursera.org/learn/prompt-engineering?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Vanderbilt University on Coursera</Link>: "Prompt Engineering for ChatGPT" a beginner-friendly course with structured modules.</li>
                         <li>Other course lists like this one from <Link href="https://www.analyticsvidhya.com/blog/2024/03/free-chatgpt-prompt-engineering-courses-and-resources/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Analytics Vidhya</Link> can highlight a mix of free and paid offerings.</li>
                     </ul>
 
@@ -257,9 +186,9 @@ export default function PromptEngineeringCoursePage() {
 
                     <h3 className="text-2xl font-semibold tracking-tight mt-12">Recommendations on What to Read / Do First</h3>
                     <ul>
-                        <li>If you’re new: start with <strong><Link href="https://learnprompting.org/docs/introduction?srsltid=AfmBOoofk_9KZ9_AF0jWr8FFquJNivbNDE0Zhha-pATc_fHk6MHgZh3o&utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">LearnPrompting.org</Link></strong> or the <strong><Link href="https://github.com/dair-ai/Prompt-Engineering-Guide?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DAIR.AI guide</Link></strong>.</li>
+                        <li>If you're new: start with <strong><Link href="https://learnprompting.org/docs/introduction?srsltid=AfmBOoofk_9KZ9_AF0jWr8FFquJNivbNDE0Zhha-pATc_fHk6MHgZh3o&utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">LearnPrompting.org</Link></strong> or the <strong><Link href="https://github.com/dair-ai/Prompt-Engineering-Guide?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DAIR.AI guide</Link></strong>.</li>
                         <li>If you prefer guided learning: take the <strong><Link href="https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">DeepLearning.AI</Link></strong> or <strong><Link href="https://www.coursera.org/learn/prompt-engineering?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Vanderbilt University</Link></strong> course.</li>
-                        <li>Once you’re comfortable: skim one of the academic surveys to get a deeper, principled understanding.</li>
+                        <li>Once you're comfortable: skim one of the academic surveys to get a deeper, principled understanding.</li>
                         <li>For long-term skill: follow blogs and resource lists to stay updated as prompt engineering evolves rapidly.</li>
                     </ul>
                 </div>

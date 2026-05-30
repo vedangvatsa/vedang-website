@@ -1,17 +1,10 @@
 export const dynamic = 'force-dynamic';
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
-
 import { Metadata } from 'next';
-import { Badge } from '@/components/ui/badge';
-import { ArrowRight, ExternalLink } from 'lucide-react';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { CourseHero } from '@/components/course-hero';
+import { CurriculumSection } from '@/components/curriculum-section';
+import { CourseFAQ } from '@/components/course-faq';
+import { CourseReferences } from '@/components/course-references';
 
 export const metadata: Metadata = {
   title: { absolute: 'MCP Development - Build AI Tool Servers | Vedang Vatsa' },
@@ -25,6 +18,16 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
+
+const curriculumItems = [
+  { href: '/mcp-development/module-1-what-is-mcp', title: '1. What is MCP?', description: 'The universal connector for AI. understand the problem, architecture, and why it matters now.' },
+  { href: '/mcp-development/module-2-transports', title: '2. Transports & Message Format', description: 'JSON-RPC, stdio, SSE, and Streamable HTTP. how data flows between clients and servers.' },
+  { href: '/mcp-development/module-3-first-server', title: '3. Building Your First MCP Server', description: 'Set up a TypeScript project, register a tool, test with MCP Inspector, connect to Claude Desktop.' },
+  { href: '/mcp-development/module-4-primitives', title: '4. Tools, Resources & Prompts', description: 'The three MCP primitives. when to use each, who controls them, and design best practices.' },
+  { href: '/mcp-development/module-5-clients', title: '5. Connecting to Clients', description: 'Configure Claude Desktop, Cursor, VS Code, and build your own custom MCP client.' },
+  { href: '/mcp-development/module-6-real-world', title: '6. Real-World MCP Servers', description: 'Build database, API wrapper, multi-tool, and authenticated server patterns.' },
+  { href: '/mcp-development/module-7-production', title: '7. Production, Security & Distribution', description: 'Error handling, security hardening, npm publishing, monitoring, and the MCP registry.' },
+];
 
 const referenceLinks = [
     { 
@@ -120,151 +123,30 @@ export default function MCPDevelopmentCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-        <section className="text-center pt-16 pb-12">
-             <div>
-                <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
-                    MCP Development
-                </h1>
-                <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-                Build servers that connect AI to anything. Learn the Model Context Protocol, the open standard that lets AI models use tools, query databases, and interact with APIs. The USB-C port for AI.
-                </p>
+      <CourseHero
+        title="MCP Development"
+        subtitle="Build servers that connect AI to anything. Learn the Model Context Protocol, the open standard that lets AI models use tools, query databases, and interact with APIs. The USB-C port for AI."
+        prerequisite="Basic TypeScript"
+        startHref="/mcp-development/module-1-what-is-mcp"
+      />
 
-                <div className="mt-8 flex justify-center items-center gap-4">
-                    <Badge variant="outline">By: Vedang Vatsa</Badge>
-                    <Badge variant="outline">Prerequisite: Basic TypeScript</Badge>
-                </div>
+      <CurriculumSection
+        description="Seven modules to go from zero to production MCP server."
+        items={curriculumItems}
+      />
 
-                <div className="mt-8 flex justify-center">
-                    <Button asChild size="lg" className="rounded-full px-8">
-                        <Link href="/mcp-development/module-1-what-is-mcp">
-                            Start Course <ArrowRight className="ml-2 w-4 h-4" />
-                        </Link>
-                    </Button>
-                </div>
-            </div>
-        </section>
+      <CourseReferences
+        title="Learn More"
+        subtitle="Official documentation, SDKs, and community resources for MCP development."
+        categories={referenceLinks}
+        layout="grid-4"
+        align="left"
+      />
 
-        <section id="curriculum" className="py-16 bg-muted/30 border-y -mx-4 px-4 md:-mx-6 md:px-6">
-            <div className="max-w-none">
-                <div className="text-left mb-8">
-                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Course Curriculum</h2>
-                    <p className="mt-2 text-muted-foreground">Seven modules to go from zero to production MCP server.</p>
-                </div>
-                <div className="space-y-4">
-                    <Link href="/mcp-development/module-1-what-is-mcp" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">1. What is MCP?</h3>
-                                <p className="text-sm text-muted-foreground mt-1">The universal connector for AI. understand the problem, architecture, and why it matters now.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/mcp-development/module-2-transports" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">2. Transports & Message Format</h3>
-                                <p className="text-sm text-muted-foreground mt-1">JSON-RPC, stdio, SSE, and Streamable HTTP. how data flows between clients and servers.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/mcp-development/module-3-first-server" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">3. Building Your First MCP Server</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Set up a TypeScript project, register a tool, test with MCP Inspector, connect to Claude Desktop.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/mcp-development/module-4-primitives" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">4. Tools, Resources & Prompts</h3>
-                                <p className="text-sm text-muted-foreground mt-1">The three MCP primitives. when to use each, who controls them, and design best practices.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/mcp-development/module-5-clients" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">5. Connecting to Clients</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Configure Claude Desktop, Cursor, VS Code, and build your own custom MCP client.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/mcp-development/module-6-real-world" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">6. Real-World MCP Servers</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Build database, API wrapper, multi-tool, and authenticated server patterns.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/mcp-development/module-7-production" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">7. Production, Security & Distribution</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Error handling, security hardening, npm publishing, monitoring, and the MCP registry.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                </div>
-            </div>
-        </section>
-
-        <section id="references" className="py-16">
-            <div className="text-left mb-8">
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Learn More</h2>
-                <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl">
-                    Official documentation, SDKs, and community resources for MCP development.
-                </p>
-            </div>
-             
-             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {referenceLinks.map((tool) => (
-                    <div key={tool.name} className="break-inside-avoid">
-                        <h3 className="font-semibold text-lg mb-2">{tool.name}</h3>
-                        <ul className="space-y-2">
-                            {tool.links.map((link) => (
-                                <li key={link.name}>
-                                    <Link href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-muted-foreground hover:text-primary group">
-                                        {link.name}
-                                        <ExternalLink className="ml-1.5 h-3 w-3 opacity-70 group-hover:opacity-100" />
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
-            </div>
-        </section>
-
-        <section id="faq" className="py-16">
-            <div className="text-center">
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
-                <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-                    Common questions about MCP development answered directly.
-                </p>
-            </div>
-            <div className="mt-12">
-                <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
-                   {faqItems.map((item, index) => (
-                     <AccordionItem key={index} value={`faq-${index + 1}`}>
-                        <AccordionTrigger className="text-left">{item.question}</AccordionTrigger>
-                        <AccordionContent>
-                            {item.answer}
-                        </AccordionContent>
-                    </AccordionItem>
-                   ))}
-                </Accordion>
-            </div>
-        </section>
+      <CourseFAQ
+        subtitle="Common questions about MCP development answered directly."
+        items={faqItems}
+      />
     </div>
   );
 }

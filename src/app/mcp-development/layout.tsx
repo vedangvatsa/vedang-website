@@ -1,19 +1,6 @@
-import { ReactNode } from "react";
-import { PageLayout } from '@/components/page-layout';
-import { CourseSidebar } from '@/components/course-sidebar';
-import { courseConfigs } from '@/lib/course-config';
+import { ReactNode } from 'react';
+import { SharedCourseLayout } from '@/components/shared-course-layout';
 
-const config = courseConfigs['mcp-development'];
-
-export default function MCPDevelopmentCourseLayout({ children }: { children: ReactNode }) {
-    return (
-        <PageLayout>
-            <div className=" max-w-7xl py-12 flex flex-col md:flex-row gap-12">
-                <CourseSidebar {...config} />
-                <main className="flex-1 min-w-0">
-                    {children}
-                </main>
-            </div>
-        </PageLayout>
-    );
+export default function Layout({ children }: { children: ReactNode }) {
+  return <SharedCourseLayout courseId="mcp-development">{children}</SharedCourseLayout>;
 }

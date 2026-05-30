@@ -1,22 +1,11 @@
 export const dynamic = 'force-dynamic';
 
-
-
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
-
 import { Metadata } from 'next';
-import { Badge } from '@/components/ui/badge';
-import { Bot, BrainCircuit, DraftingCompass, ExternalLink, Hand, MonitorPlay, Star, BookOpen, ArrowRight } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
-import { Button } from '@/components/ui/button';
+import { CourseHero } from '@/components/course-hero';
+import { CurriculumSection } from '@/components/curriculum-section';
+import { CourseFAQ } from '@/components/course-faq';
+import { CourseReferences } from '@/components/course-references';
 
 export const metadata: Metadata = generateMetadata({
   title: pageMetadata.vibeCoding.title,
@@ -25,6 +14,16 @@ export const metadata: Metadata = generateMetadata({
 
   ogImageAlt: 'Vibe Coding - Engineering Intuition & Creativity',
 });
+
+const curriculumItems = [
+  { href: '/vibe-coding/module-1-philosophy', title: '1. The Philosophy', description: 'Shift from coder to creative director. Learn to articulate your vision.' },
+  { href: '/vibe-coding/module-2-toolkit', title: '2. The Modern Toolkit', description: 'Explore Cursor, Replit, Antigravity, and Lovable.' },
+  { href: '/vibe-coding/module-3-prompts', title: '3. The Art of the Prompt', description: 'Master the GCES framework for writing effective instructions.' },
+  { href: '/vibe-coding/module-4-lab', title: '4. Lab: Name Generator', description: 'Build your first functional micro-app entirely with AI.' },
+  { href: '/vibe-coding/module-5-product', title: '5. To Professional Product', description: 'Implement security rules, databases, and authentication.' },
+  { href: '/vibe-coding/module-6-debugging', title: '6. Debugging & Iteration', description: 'Read errors, iterate effectively, and use version control.' },
+  { href: '/vibe-coding/module-7-deployment', title: '7. Deployment & Databases', description: 'Deploy to Vercel, connect a database, and set up a custom domain.' },
+];
 
 const referenceLinks = [
     { 
@@ -185,164 +184,33 @@ export default function VibeCodingCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-        <section className="text-left pt-8 pb-12">
-             <div className="max-w-none">
-                <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
-                    Vibe Coding
-                </h1>
-                <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl">
-                Build real apps without writing code. Describe what you want in plain English and let AI handle the implementation. For founders, designers, marketers, and anyone with an idea.
-                </p>
+      <CourseHero
+        align="left"
+        title="Vibe Coding"
+        subtitle="Build real apps without writing code. Describe what you want in plain English and let AI handle the implementation. For founders, designers, marketers, and anyone with an idea."
+        prerequisite="None"
+        startHref="/vibe-coding/module-1-philosophy"
+        youtubeUrl="https://www.youtube.com/embed/m6rhnlaNjDY"
+        youtubeMaxWidth="max-w-4xl"
+      />
 
-                <div className="mt-8 flex justify-start items-center gap-4">
-                    <Badge variant="outline">By: Vedang Vatsa</Badge>
-                    <Badge variant="outline">Prerequisite: None</Badge>
-                </div>
+      <CurriculumSection
+        description="Seven modules to take you from concept to deployed product."
+        items={curriculumItems}
+      />
 
-                <div className="mt-8 flex justify-start">
-                    <Button asChild size="lg" className="rounded-full px-8">
-                        <Link href="/vibe-coding/module-1-philosophy">
-                            Start Course <ArrowRight className="ml-2 w-4 h-4" />
-                        </Link>
-                    </Button>
-                </div>
+      <CourseReferences
+        title="Learn More"
+        subtitle="Resources for tools and platforms. Documentation and guides to build deeper knowledge."
+        categories={referenceLinks}
+        layout="grid-3"
+        align="left"
+      />
 
-                <div className="mt-12 aspect-video rounded-lg overflow-hidden max-w-4xl border bg-muted">
-                  <iframe 
-                    width="100%" 
-                    height="100%" 
-                    src="https://www.youtube.com/embed/m6rhnlaNjDY" 
-                    title="YouTube video player" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowFullScreen>
-                  </iframe>
-                </div>
-            </div>
-        </section>
-
-        <section id="curriculum" className="py-16 bg-muted/30 border-y -mx-4 px-4 md:-mx-6 md:px-6">
-            <div className="max-w-none">
-                <div className="text-left mb-8">
-                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Course Curriculum</h2>
-                    <p className="mt-2 text-muted-foreground">Seven modules to take you from concept to deployed product.</p>
-                </div>
-                <div className="space-y-4">
-                    <Link href="/vibe-coding/module-1-philosophy" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">1. The Philosophy</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Shift from coder to creative director. Learn to articulate your vision.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/vibe-coding/module-2-toolkit" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">2. The Modern Toolkit</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Explore Cursor, Replit, Antigravity, and Lovable.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/vibe-coding/module-3-prompts" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">3. The Art of the Prompt</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Master the GCES framework for writing effective instructions.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/vibe-coding/module-4-lab" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">4. Lab: Name Generator</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Build your first functional micro-app entirely with AI.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/vibe-coding/module-5-product" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">5. To Professional Product</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Implement security rules, databases, and authentication.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/vibe-coding/module-6-debugging" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">6. Debugging & Iteration</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Read errors, iterate effectively, and use version control.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/vibe-coding/module-7-deployment" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">7. Deployment & Databases</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Deploy to Vercel, connect a database, and set up a custom domain.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                </div>
-            </div>
-        </section>
-
-        <section id="references" className="py-16">
-            <div className="text-left mb-8">
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Learn More</h2>
-                <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl">
-                    Resources for tools and platforms. Documentation and guides to build deeper knowledge.
-                </p>
-            </div>
-             
-             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {referenceLinks.map((tool) => (
-                    <div key={tool.name} className="break-inside-avoid">
-                        <h3 className="font-semibold text-lg mb-2">{tool.name}</h3>
-                        <ul className="space-y-2">
-                            {tool.links.map((link) => (
-                                <li key={link.name}>
-                                    <Link href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-muted-foreground hover:text-primary group">
-                                        {link.name}
-                                        <ExternalLink className="ml-1.5 h-3 w-3 opacity-70 group-hover:opacity-100" />
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
-            </div>
-        </section>
-
-        <section id="faq" className="py-16">
-            <div className="text-center">
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
-                <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-                    Common questions about Vibe Coding answered directly.
-                </p>
-            </div>
-            <div className="mt-12">
-                <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
-                   {faqItems.map((item, index) => (
-                     <AccordionItem key={index} value={`faq-${index + 1}`}>
-                        <AccordionTrigger className="text-left">{item.question}</AccordionTrigger>
-                        <AccordionContent>
-                            {item.answer}
-                        </AccordionContent>
-                    </AccordionItem>
-                   ))}
-                </Accordion>
-            </div>
-        </section>
+      <CourseFAQ
+        subtitle="Common questions about Vibe Coding answered directly."
+        items={faqItems}
+      />
     </div>
   );
 }
-

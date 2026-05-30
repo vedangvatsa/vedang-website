@@ -5,7 +5,7 @@ export function ActionWebEvolution() {
   return (
     <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-8">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Paradigm Shift</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Core Difference</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">From searching and reading to instructing and reviewing</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">

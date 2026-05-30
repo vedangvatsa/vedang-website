@@ -1,9 +1,7 @@
-import { ReactNode } from "react";
-import { PageLayout } from '@/components/page-layout';
-import { CourseSidebar } from '@/components/course-sidebar';
-import { courseConfigs } from '@/lib/course-config';
+import { ReactNode } from 'react';
 import { Metadata } from 'next';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
+import { SharedCourseLayout } from '@/components/shared-course-layout';
 
 export const metadata: Metadata = generateMetadata({
   title: pageMetadata.web3101.title,
@@ -12,17 +10,6 @@ export const metadata: Metadata = generateMetadata({
   ogImageAlt: 'Web3 Fundamentals Course - Learn Blockchain & Decentralization',
 });
 
-const config = courseConfigs['web3-101'];
-
 export default function Web3CourseLayout({ children }: { children: ReactNode }) {
-  return (
-    <PageLayout>
-      <div className=" max-w-7xl py-12 flex flex-col md:flex-row gap-12">
-         <CourseSidebar {...config} />
-         <main className="flex-1 min-w-0">
-            {children}
-         </main>
-      </div>
-    </PageLayout>
-  );
+  return <SharedCourseLayout courseId="web3-101">{children}</SharedCourseLayout>;
 }

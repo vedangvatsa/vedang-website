@@ -1,18 +1,11 @@
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
-import Link from 'next/link';
+import { CourseHero } from '@/components/course-hero';
+import { CurriculumSection } from '@/components/curriculum-section';
+import { CourseFAQ } from '@/components/course-faq';
+import { CourseReferences } from '@/components/course-references';
+
 import { Metadata } from 'next';
-import { Badge } from '@/components/ui/badge';
-import { ExternalLink, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
-import { WebEvolution, BlockchainExplainer, SmartContractExplainer, Web3Ecosystem, Web3Passport, Web3Future } from '@/components/courses/web3-visuals';
 
 const referenceLinks = [
     {
@@ -50,6 +43,48 @@ const referenceLinks = [
     },
 ];
 
+const curriculumItems = [
+    {
+        href: '/web3-101/module-1-vision',
+        title: '1. The Vision: Why Web3 Matters',
+        description: 'Trace the internet\'s evolution and the problems Web3 aims to solve.',
+    },
+    {
+        href: '/web3-101/module-2-bedrock',
+        title: '2. The Bedrock: Blockchain',
+        description: 'Understand the core technology and the role of cryptocurrencies.',
+    },
+    {
+        href: '/web3-101/module-3-smart-contracts',
+        title: '3. Smart Contracts',
+        description: 'Explore how code transforms blockchain into a global computer.',
+    },
+    {
+        href: '/web3-101/module-4-ecosystem',
+        title: '4. The Ecosystem',
+        description: 'Discover dApps, NFTs, and DAOs.',
+    },
+    {
+        href: '/web3-101/module-5-getting-started',
+        title: '5. Getting Started',
+        description: 'Learn how to set up a wallet and navigate Web3 safely.',
+    },
+    {
+        href: '/web3-101/module-6-future',
+        title: '6. The Future',
+        description: 'Explore the challenges and opportunities ahead for the decentralized web.',
+    },
+    {
+        href: '/web3-101/module-7-layer2s',
+        title: '7. Layer 2s & Scaling',
+        description: 'Understand rollups, L2 ecosystems, and cross-chain bridges.',
+    },
+    {
+        href: '/web3-101/module-8-tokenomics',
+        title: '8. Tokenomics & Governance',
+        description: 'Learn how tokens are designed, distributed, and govern protocols.',
+    },
+];
 
 export const metadata: Metadata = generateMetadata({
   title: pageMetadata.web3101.title,
@@ -133,162 +168,29 @@ export default function Web3CoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-        <section className="text-center pt-16 pb-12">
-             <div>
-                <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
-                    Fundamentals of Web3
-                </h1>
-                <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-                Go beyond the buzzwords and understand the next evolution of the internet. This course breaks down Web3, including blockchain, decentralization, and digital ownership, into clear, practical concepts. Learn what it means to build and participate in a user-owned web.
-                </p>
+        <CourseHero
+          title="Fundamentals of Web3"
+          subtitle="Go beyond the buzzwords and understand the next evolution of the internet. This course breaks down Web3, including blockchain, decentralization, and digital ownership, into clear, practical concepts. Learn what it means to build and participate in a user-owned web."
+          prerequisite="An open mind"
+          startHref="/web3-101/web-evolution"
+        />
 
-                <div className="mt-8 flex justify-center items-center gap-4">
-                    <Badge variant="outline">By: Vedang Vatsa</Badge>
-                    <Badge variant="outline">Prerequisite: An open mind</Badge>
-                </div>
+        <CurriculumSection
+          description="Eight modules to understand the decentralized web."
+          items={curriculumItems}
+        />
 
-                <div className="mt-8 flex justify-center">
-                    <Button asChild size="lg" className="rounded-full px-8">
-                        <Link href="/web3-101/module-1-vision">
-                            Start Course <ArrowRight className="ml-2 w-4 h-4" />
-                        </Link>
-                    </Button>
-                </div>
-            </div>
-        </section>
+            <CourseReferences
+              subtitle="Wallets, protocols, and resources to start your Web3 journey."
+              categories={referenceLinks}
+              layout="columns"
+              align="center"
+            />
 
-        <section id="curriculum" className="py-16 bg-muted/30 border-y -mx-4 px-4 md:-mx-6 md:px-6">
-            <div className="max-w-none">
-                <div className="text-left mb-8">
-                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Course Curriculum</h2>
-                    <p className="mt-2 text-muted-foreground">Eight modules to understand the decentralized web.</p>
-                </div>
-                <div className="space-y-4">
-                    <Link href="/web3-101/module-1-vision" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">1. The Vision: Why Web3 Matters</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Trace the internet's evolution and the problems Web3 aims to solve.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/web3-101/module-2-bedrock" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">2. The Bedrock: Blockchain</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Understand the core technology and the role of cryptocurrencies.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/web3-101/module-3-smart-contracts" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">3. Smart Contracts</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Explore how code transforms blockchain into a global computer.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/web3-101/module-4-ecosystem" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">4. The Ecosystem</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Discover dApps, NFTs, and DAOs.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/web3-101/module-5-getting-started" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">5. Getting Started</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Learn how to set up a wallet and navigate Web3 safely.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/web3-101/module-6-future" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">6. The Future</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Explore the challenges and opportunities ahead for the decentralized web.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/web3-101/module-7-layer2s" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">7. Layer 2s & Scaling</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Understand rollups, L2 ecosystems, and cross-chain bridges.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/web3-101/module-8-tokenomics" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">8. Tokenomics & Governance</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Learn how tokens are designed, distributed, and govern protocols.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                </div>
-            </div>
-        </section>
-
-            <section id="references" className="py-16">
-                <div className="text-center">
-
-                    <h2 className="mt-4 text-2xl md:text-3xl font-semibold tracking-tight">Learn More</h2>
-                    <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Wallets, protocols, and resources to start your Web3 journey.
-                    </p>
-                </div>
-                 <div className="mt-12 columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-                    {referenceLinks.map((tool) => (
-                        <div key={tool.name} className="break-inside-avoid">
-                            <h3 className="font-semibold text-lg mb-2">{tool.name}</h3>
-                            <ul className="space-y-2">
-                                {tool.links.map((link) => (
-                                    <li key={link.name}>
-                                        <Link href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-muted-foreground hover:text-primary group">
-                                            {link.name}
-                                            <ExternalLink className="ml-1.5 h-3 w-3 opacity-70 group-hover:opacity-100" />
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            <section id="faq" className="py-16">
-                <div className="text-center">
-                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
-                    <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Some common questions about Web3, answered.
-                    </p>
-                </div>
-                <div className="mt-12">
-                    <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
-                       {faqItems.map((item, index) => (
-                         <AccordionItem key={index} value={`faq-${index + 1}`}>
-                            <AccordionTrigger className="text-left">{item.question}</AccordionTrigger>
-                            <AccordionContent>
-                                {item.answer}
-                            </AccordionContent>
-                        </AccordionItem>
-                       ))}
-                    </Accordion>
-                </div>
-            </section>
+            <CourseFAQ
+              subtitle="Some common questions about Web3, answered."
+              items={faqItems}
+            />
     </>
   );
 }
-
-    

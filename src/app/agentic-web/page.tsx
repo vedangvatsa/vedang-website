@@ -1,18 +1,10 @@
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
+import { CourseHero } from '@/components/course-hero';
+import { CurriculumSection } from '@/components/curriculum-section';
+import { CourseFAQ } from '@/components/course-faq';
+import { CourseReferences } from '@/components/course-references';
 
 import { Metadata } from 'next';
-import { Badge } from '@/components/ui/badge';
-import { ExternalLink, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { ActionWebEvolution, AgentComponents, AgenticDimensions, AgenticApps, AgenticFuture } from '@/components/courses/agentic-visuals';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
 const referenceLinks = [
@@ -45,6 +37,44 @@ const referenceLinks = [
             { name: 'Google Cloud: What are AI Agents?', url: 'https://cloud.google.com/discover/what-are-ai-agents' },
             { name: 'Anthropic: Building Effective Agents', url: 'https://www.anthropic.com/engineering/building-effective-agents' },
         ],
+    },
+];
+
+const curriculumItems = [
+    {
+        href: '/agentic-web/module-1-core-idea',
+        title: '1. The Core Idea: From Information Web to Action Web',
+        description: 'Understand the shift from a human-driven web to an agent-driven one.',
+    },
+    {
+        href: '/agentic-web/module-2-components',
+        title: '2. The Core Components of Agentic Systems',
+        description: 'Explore the building blocks that enable agents to function.',
+    },
+    {
+        href: '/agentic-web/module-3-dimensions',
+        title: '3. The Three Dimensions of the Agentic Web',
+        description: 'Understand Intelligence, Interaction, and the Economic dimensions.',
+    },
+    {
+        href: '/agentic-web/module-4-applications',
+        title: '4. Applications: The Agentic Web in Action',
+        description: 'Discover informational, transactional, and communicational agents.',
+    },
+    {
+        href: '/agentic-web/module-5-future',
+        title: '5. The Future: Challenges and Opportunities',
+        description: 'Explore the security, ethics, and economics of the agentic future.',
+    },
+    {
+        href: '/agentic-web/module-6-protocols',
+        title: '6. Protocols Deep Dive: MCP & A2A',
+        description: 'The standardized languages that let agents connect to tools and each other.',
+    },
+    {
+        href: '/agentic-web/module-7-build-agent',
+        title: '7. Build Your First Agent',
+        description: 'A practical guide from design document to testing and deployment.',
     },
 ];
 
@@ -143,166 +173,34 @@ export default function AgenticWebCoursePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-        <section className="text-center pt-16 pb-12">
-             <div>
-                <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">
-                    The Agentic Web
-                </h1>
-                <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-                    The internet is evolving. It's no longer just a place to find information-it's becoming a platform for autonomous AI agents to get things done. This course demystifies the Agentic Web, where you delegate goals, and AI handles the execution.
-                </p>
 
-                <div className="mt-8 flex justify-center items-center gap-4">
-                    <Badge variant="outline">By: Vedang Vatsa</Badge>
-                    <Badge variant="outline">Prerequisite: Curiosity</Badge>
-                </div>
-
-                <div className="mt-8 flex justify-center">
-                    <Button asChild size="lg" className="rounded-full px-8">
-                        <Link href="/agentic-web/module-1-core-idea">
-                            Start Course <ArrowRight className="ml-2 w-4 h-4" />
-                        </Link>
-                    </Button>
-                </div>
-                
-                <div className="mt-8 aspect-video rounded-lg overflow-hidden shadow-2xl border max-w-3xl mx-auto">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/Gqgk25SOIMM"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    loading="lazy"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen>
-                  </iframe>
-                </div>
-            </div>
-        </section>
+        <CourseHero
+          title="The Agentic Web"
+          subtitle="The internet is evolving. It's no longer just a place to find information-it's becoming a platform for autonomous AI agents to get things done. This course demystifies the Agentic Web, where you delegate goals, and AI handles the execution."
+          prerequisite="Curiosity"
+          startHref="/agentic-web/what-is-agentic-web"
+          youtubeUrl="https://www.youtube.com/embed/Gqgk25SOIMM"
+          youtubeMaxWidth="max-w-3xl"
+        />
 
         <div className="py-16 space-y-12">
             
-        <section id="curriculum" className="py-16 bg-muted/30 border-y -mx-4 px-4 md:-mx-6 md:px-6">
-            <div className="max-w-none">
-                <div className="text-left mb-8">
-                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Course Curriculum</h2>
-                    <p className="mt-2 text-muted-foreground">Seven modules to understand the Agentic Web.</p>
-                </div>
-                <div className="space-y-4">
-                    <Link href="/agentic-web/module-1-core-idea" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">1. The Core Idea: From Information Web to Action Web</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Understand the shift from a human-driven web to an agent-driven one.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/agentic-web/module-2-components" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">2. The Core Components of Agentic Systems</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Explore the building blocks that enable agents to function.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/agentic-web/module-3-dimensions" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">3. The Three Dimensions of the Agentic Web</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Understand Intelligence, Interaction, and the Economic dimensions.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/agentic-web/module-4-applications" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">4. Applications: The Agentic Web in Action</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Discover informational, transactional, and communicational agents.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/agentic-web/module-5-future" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">5. The Future: Challenges and Opportunities</h3>
-                                <p className="text-sm text-muted-foreground mt-1">Explore the security, ethics, and economics of the agentic future.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/agentic-web/module-6-protocols" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">6. Protocols Deep Dive: MCP & A2A</h3>
-                                <p className="text-sm text-muted-foreground mt-1">The standardized languages that let agents connect to tools and each other.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                    <Link href="/agentic-web/module-7-build-agent" className="block p-6 rounded-lg border bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h3 className="font-semibold text-lg">7. Build Your First Agent</h3>
-                                <p className="text-sm text-muted-foreground mt-1">A practical guide from design document to testing and deployment.</p>
-                            </div>
-                            <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 ml-4" />
-                        </div>
-                    </Link>
-                </div>
-            </div>
-        </section>
+        <CurriculumSection
+          description="Seven modules to understand the Agentic Web."
+          items={curriculumItems}
+        />
 
-            <section id="references" className="py-16">
-                <div className="text-center">
+            <CourseReferences
+              subtitle="Protocols, frameworks, and platforms for exploring the Agentic Web."
+              categories={referenceLinks}
+              layout="columns"
+              align="center"
+            />
 
-                    <h2 className="mt-4 text-2xl md:text-3xl font-semibold tracking-tight">Learn More</h2>
-                    <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Protocols, frameworks, and platforms for exploring the Agentic Web.
-                    </p>
-                </div>
-                 <div className="mt-12 columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-                    {referenceLinks.map((tool) => (
-                        <div key={tool.name} className="break-inside-avoid">
-                            <h3 className="font-semibold text-lg mb-2">{tool.name}</h3>
-                            <ul className="space-y-2">
-                                {tool.links.map((link) => (
-                                    <li key={link.name}>
-                                        <Link href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-muted-foreground hover:text-primary group">
-                                            {link.name}
-                                            <ExternalLink className="ml-1.5 h-3 w-3 opacity-70 group-hover:opacity-100" />
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            <section id="faq" className="py-16">
-                <div className="text-center">
-                    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Frequently Asked Questions</h2>
-                    <p className="mt-2 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Your common questions about the Agentic Web, answered.
-                    </p>
-                </div>
-                <div className="mt-12">
-                    <Accordion type="single" collapsible className="w-full grid md:grid-cols-2 gap-x-8">
-                       {faqItems.map((item, index) => (
-                         <AccordionItem key={index} value={`faq-${index + 1}`}>
-                            <AccordionTrigger className="text-left">{item.question}</AccordionTrigger>
-                            <AccordionContent>
-                                {item.answer}
-                            </AccordionContent>
-                        </AccordionItem>
-                       ))}
-                    </Accordion>
-                </div>
-            </section>
+            <CourseFAQ
+              subtitle="Your common questions about the Agentic Web, answered."
+              items={faqItems}
+            />
         </div>
     </>
   );
