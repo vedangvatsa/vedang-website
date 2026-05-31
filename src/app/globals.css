@@ -24,11 +24,6 @@
       width: 61.8%;
     }
   }
-  @media (min-width: 1536px) {
-    .content-width {
-      max-width: 950px;
-    }
-  }
 }
 
 @layer base {
