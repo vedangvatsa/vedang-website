@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function NomadMapPage() {
   return (
-    <PageLayout wide={true}>
+    <PageLayout>
       <section className="text-center pt-12 pb-8">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">

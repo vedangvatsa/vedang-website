@@ -57,7 +57,7 @@ const personSchema = {
 export default function ProfilePage() {
   
   return (
-    <PageLayout wide={true}>
+    <PageLayout>
       <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

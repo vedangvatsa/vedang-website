@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function AIReportsPage() {
   return (
-    <PageLayout wide={true}>
+    <PageLayout>
       <BreadcrumbSchema items={[{ name: "AI Reports", url: "https://veda.ng/ai-reports" }]} />
 
       <section className="text-center pt-16 pb-12 border-b border-border/30">

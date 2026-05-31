@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Web3ReportsPage() {
   return (
-    <PageLayout wide={true}>
+    <PageLayout>
       <BreadcrumbSchema items={[{ name: "Web3 Reports", url: "https://veda.ng/web3-reports" }]} />
 
       <section className="text-center pt-16 pb-12 border-b border-border/30">
