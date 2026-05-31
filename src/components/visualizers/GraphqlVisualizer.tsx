@@ -14,7 +14,7 @@ export function GraphqlVisualizer() {
     address: "123 Main St, City, State",
     avatar: "profile.jpg",
     phone: "+1-555-0123",
-    bio: "Software developer passionate about web technologies"
+    bio: "Software developer focused on web technologies"
   };
 
   const availableFields = Object.keys(userData);

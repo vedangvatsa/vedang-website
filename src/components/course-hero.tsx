@@ -1,8 +1,9 @@
+import { ReactNode } from 'react';
 import { AuthorByline } from '@/components/author-byline';
 
 interface CourseHeroProps {
   title: string;
-  subtitle: string;
+  subtitle: ReactNode;
   youtubeUrl?: string;
   youtubeMaxWidth?: string;
 }

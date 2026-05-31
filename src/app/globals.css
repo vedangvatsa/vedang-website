@@ -2,7 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Golden ratio content width — single source of truth */
+/*
+ * Golden Ratio Design System
+ *
+ * Spacing scale (each step ≈ ×1.618):
+ *   Level 1 — 1.25rem  (mt-5 / mb-5 / gap-5)  → within sections: heading→content, content→CTA
+ *   Level 2 — 2rem     (py-8)                  → between sections
+ *   Level 3 — 5rem     (py-20)                 → hero / prominent sections (desktop only)
+ *
+ * Content width — single source of truth:
+ *   Mobile:  100%   with 1.25rem padding
+ *   Tablet:  80%    with 1.5rem padding
+ *   Desktop: 66.66% (2/3)
+ */
 @layer utilities {
   .content-width {
     width: 100%;

@@ -14,9 +14,9 @@ interface CurriculumSectionProps {
 
 export function CurriculumSection({ description, items }: CurriculumSectionProps) {
   return (
-    <section id="curriculum" className="py-16 bg-muted/30 border-y -mx-4 px-4 md:-mx-6 md:px-6">
+    <section id="curriculum" className="py-8 bg-muted/30 border-y -mx-4 px-4 md:-mx-6 md:px-6">
       <div className="max-w-none">
-        <div className="text-left mb-8">
+        <div className="text-left mb-5">
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Course Curriculum</h2>
           <p className="mt-2 text-muted-foreground">{description}</p>
         </div>

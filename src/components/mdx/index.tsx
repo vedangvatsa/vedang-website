@@ -76,7 +76,7 @@ export function Callout({ children, type = 'info', title }: { children: React.Re
   const styles = {
     info: 'border-primary/30 bg-primary/5',
     warning: 'border-destructive/30 bg-destructive/5',
-    insight: 'border-accent/40 bg-accent/10',
+    insight: 'border-indigo-400/50 bg-indigo-50/40',
   };
   return (
     <div className={`not-prose my-6 first:mt-0 last:mb-0 rounded-lg border-l-4 ${styles[type]} p-4 md:p-5`}>

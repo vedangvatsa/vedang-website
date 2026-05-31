@@ -125,7 +125,7 @@ export default function MCPDevelopmentCoursePage() {
 
       <CourseHero
         title="MCP Development"
-        subtitle="The open standard that connects AI models to tools, databases, and APIs. Build your own MCP server from scratch."
+        subtitle={<>The open standard that connects AI models to tools, databases, and APIs.<br />Build your own MCP server from scratch.</>}
       />
 
       <CurriculumSection
@@ -134,14 +134,10 @@ export default function MCPDevelopmentCoursePage() {
       />
 
       <CourseReferences
-        title="Learn More"
-        subtitle="Official documentation, SDKs, and community resources for MCP development."
         categories={referenceLinks}
-        layout="grid-4"
       />
 
       <CourseFAQ
-        subtitle="Common questions about MCP development answered directly."
         items={faqItems}
       />
     </div>

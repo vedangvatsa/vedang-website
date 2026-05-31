@@ -101,7 +101,7 @@ export default function AIAutomationCoursePage() {
 
       <CourseHero
         title="AI Automation"
-        subtitle="Build pipelines that run without you. APIs, MCP servers, n8n, and AI agents working together."
+        subtitle={<>Build pipelines that run without you.<br />APIs, MCP servers, n8n, and AI agents working together.</>}
       />
 
       <CurriculumSection
@@ -110,14 +110,10 @@ export default function AIAutomationCoursePage() {
       />
 
       <CourseReferences
-        title="Tools & Resources"
-        subtitle="Platforms, APIs, and related courses referenced throughout the curriculum."
         categories={referenceLinks}
-        layout="grid-4"
       />
 
       <CourseFAQ
-        subtitle="Common questions about AI automation answered directly."
         items={faqItems}
       />
     </div>

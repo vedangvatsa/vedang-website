@@ -51,7 +51,7 @@ export function RelatedEssays({ currentSlug }: { currentSlug: string }) {
   }
 
   return (
-    <section className="py-12">
+    <section className="py-8">
       <h2 className="text-2xl font-semibold tracking-tight mb-6">Related Essays</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {relatedEssays.map((essay) => (

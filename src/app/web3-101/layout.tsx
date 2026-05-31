@@ -11,5 +11,5 @@ export const metadata: Metadata = generateMetadata({
 });
 
 export default function Web3CourseLayout({ children }: { children: ReactNode }) {
-  return <SharedCourseLayout courseId="web3-101">{children}</SharedCourseLayout>;
+  return <SharedCourseLayout>{children}</SharedCourseLayout>;
 }

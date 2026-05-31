@@ -186,7 +186,7 @@ export default function VibeCodingCoursePage() {
 
       <CourseHero
         title="Vibe Coding"
-        subtitle="Describe what you want in plain English. AI writes the code. Ship real apps without being a developer."
+        subtitle={<>Describe what you want in plain English. AI writes the code.<br />Ship real apps without being a developer.</>}
         youtubeUrl="https://www.youtube.com/embed/m6rhnlaNjDY"
         youtubeMaxWidth="max-w-4xl"
       />
@@ -197,14 +197,10 @@ export default function VibeCodingCoursePage() {
       />
 
       <CourseReferences
-        title="Learn More"
-        subtitle="Resources for tools and platforms. Documentation and guides to build deeper knowledge."
         categories={referenceLinks}
-        layout="grid-3"
       />
 
       <CourseFAQ
-        subtitle="Common questions about Vibe Coding answered directly."
         items={faqItems}
       />
     </div>

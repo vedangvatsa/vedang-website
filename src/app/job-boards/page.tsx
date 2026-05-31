@@ -247,7 +247,7 @@ const communityTestimonials = [
     image: "/images/quotes/suki.png"
   },
   {
-    quote: "We’ve got so many emails from candidates applying for our jobs—there’s a new one every 5 minutes!",
+    quote: "We've got so many emails from candidates applying for our jobs, there's a new one every 5 minutes!",
     author: "Kris Lai",
     title: "CEO, Scallop",
     image: "/images/quotes/kris.png"
@@ -282,7 +282,7 @@ export default function Dashboard() {
 
   return (
     <PageLayout>
-      <div className="py-8 md:py-12 max-w-6xl mx-auto space-y-8 animate-in fade-in duration-300">
+      <div className="py-8 w-full space-y-8 animate-in fade-in duration-300">
         
         {/* HEADER SECTION */}
         <div className="text-center border-b pb-6 space-y-4">

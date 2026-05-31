@@ -12,7 +12,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   const { slug } = await params;
   const filePath = path.join(process.cwd(), 'src', 'content', 'courses', 'prompt-engineering-101', `${slug}.mdx`);
   let title = 'Prompt Engineering 101';
-  let subtitle = 'Master the Art of AI Prompting';
+  let subtitle = 'Learn to write effective AI prompts';
   try {
     const raw = fs.readFileSync(filePath, 'utf8');
     const { data } = matter(raw);

@@ -9,7 +9,7 @@ export function EssaysList({ limit, variant = 'list' }: { limit?: number; varian
 
   if (variant === 'grid') {
     return (
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
         {essaysToShow.map((essay) => (
           <Link href={essay.url} key={essay.slug} className="group">
             <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-4 transition-colors duration-200 hover:border-primary/50">
@@ -31,7 +31,7 @@ export function EssaysList({ limit, variant = 'list' }: { limit?: number; varian
   }
 
   return (
-    <div className="mx-auto max-w-6xl">
+    <div className="w-full">
       <div className="flex flex-col gap-6">
         {essaysToShow.map((essay, index) => (
           <div key={essay.slug}>

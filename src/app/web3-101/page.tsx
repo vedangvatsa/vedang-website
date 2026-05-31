@@ -164,31 +164,27 @@ const faqSchema = {
 
 export default function Web3CoursePage() {
   return (
-    <>
+    <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-        <CourseHero
-          title="Fundamentals of Web3"
-          subtitle="Blockchain, decentralization, and digital ownership explained without the hype. What Web3 actually is and why it matters."
-        />
+      <CourseHero
+        title="Fundamentals of Web3"
+        subtitle={<>Blockchain, decentralization, and digital ownership explained without the hype.<br />What Web3 actually is and why it matters.</>}
+      />
 
-        <CurriculumSection
-          description="Eight modules to understand the decentralized web."
-          items={curriculumItems}
-        />
+      <CurriculumSection
+        description="Eight modules to understand the decentralized web."
+        items={curriculumItems}
+      />
 
-            <CourseReferences
-              subtitle="Wallets, protocols, and resources to start your Web3 journey."
-              categories={referenceLinks}
-              layout="columns"
-              align="center"
-            />
+      <CourseReferences
+        categories={referenceLinks}
+      />
 
-            <CourseFAQ
-              subtitle="Some common questions about Web3, answered."
-              items={faqItems}
-            />
-    </>
+      <CourseFAQ
+        items={faqItems}
+      />
+    </div>
   );
 }

@@ -284,8 +284,8 @@ export default function WebsiteSpecificationPage() {
             The Site Checklist
           </h1>
           <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            {TOTAL_ITEMS} requirements. Each one tells you what to do, how to do it, and where the standard lives.
-            Copy the code. Run the checks. Feed the whole thing to an AI and let it audit your site.
+            {TOTAL_ITEMS} requirements across {SPEC.length} categories.<br />
+            What to do, how to do it, and where the standard lives.
           </p>
           <AuthorByline links={[{ label: 'May 2026' }]} />
         </div>
@@ -425,13 +425,13 @@ dig CAA example.com +short
             <Link href="/ai-discovery-standards" className="rounded-lg border bg-card p-5 hover:border-primary/50 transition-colors block">
               <span className="font-medium text-sm">AI Discovery Standards</span>
               <p className="text-sm text-muted-foreground mt-1">
-                Deep dive into llms.txt, structured data for agents, robots.txt AI crawler rules, MCP endpoints, and agent skill files.
+                llms.txt, structured data for agents, robots.txt AI crawler rules, MCP endpoints, and agent skill files.
               </p>
             </Link>
-            <Link href="/seo" className="rounded-lg border bg-card p-5 hover:border-primary/50 transition-colors block">
-              <span className="font-medium text-sm">SEO Auditor</span>
+            <Link href="/agentic-web" className="rounded-lg border bg-card p-5 hover:border-primary/50 transition-colors block">
+              <span className="font-medium text-sm">The Agentic Web</span>
               <p className="text-sm text-muted-foreground mt-1">
-                Live audit tool checking your pages against Google ranking signals, structured data, and crawlability.
+                How autonomous AI agents interact with the web, and what your site needs to be ready for them.
               </p>
             </Link>
           </div>

@@ -2,5 +2,5 @@ import { ReactNode } from 'react';
 import { SharedCourseLayout } from '@/components/shared-course-layout';
 
 export default function Layout({ children }: { children: ReactNode }) {
-  return <SharedCourseLayout courseId="mcp-development">{children}</SharedCourseLayout>;
+  return <SharedCourseLayout>{children}</SharedCourseLayout>;
 }

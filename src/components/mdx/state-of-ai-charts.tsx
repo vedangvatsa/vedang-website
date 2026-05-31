@@ -22,7 +22,7 @@ interface TermFrequency {
   context: string;
 }
 
-// Fresh yearly distribution from corpus (2015–2026 focus window)
+// Fresh yearly distribution from corpus (2015-2026 focus window)
 const yearlyDataset: YearlyData[] = [
   { year: '2015', docs: 916, growth: '--', milestone: 'Early deep learning publications. ResNet introduced.' },
   { year: '2016', docs: 1229, growth: '+34.2%', milestone: 'AlphaGo victory. GAN research accelerates.' },
@@ -35,7 +35,7 @@ const yearlyDataset: YearlyData[] = [
   { year: '2023', docs: 13841, growth: '+64.1%', milestone: 'GPT-4, Llama. Post-ChatGPT research explosion (+64%).' },
   { year: '2024', docs: 22289, growth: '+61.0%', milestone: 'Agentic frameworks emerge. MCP and A2A protocols.' },
   { year: '2025', docs: 33647, growth: '+50.9%', milestone: 'DeepSeek disrupts. Over 33K papers in a single year.' },
-  { year: '2026', docs: 14234, growth: 'Partial', milestone: 'Jan–May partial. Autonomous agent deployment accelerates.' },
+  { year: '2026', docs: 14234, growth: 'Partial', milestone: 'Jan-May partial. Autonomous agent deployment accelerates.' },
 ];
 
 // Fresh unigram analysis (minimal stop words: function words only)
@@ -119,7 +119,7 @@ export function StateOfAiTimeline() {
         <div>
           <h4 className="text-base font-bold text-foreground flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse" />
-            Publication Volume &amp; Milestone Timeline (2015–2026)
+            Publication Volume &amp; Milestone Timeline (2015-2026)
           </h4>
           <p className="text-xs text-muted-foreground mt-0.5">
             Click chart nodes to scrub years. Corpus: 133,847 documents from Crossref, arXiv, OpenAlex.
@@ -162,7 +162,7 @@ export function StateOfAiTimeline() {
         <div className="space-y-3">
           <div className="bg-muted/30 rounded-lg p-4 border border-border/50 space-y-2">
             <div className="text-3xl font-black tabular-nums text-foreground">{selected.docs.toLocaleString()}</div>
-            <div className="text-xs text-muted-foreground">Documents Published{selected.year === '2026' ? ' (Jan–May)' : ''}</div>
+            <div className="text-xs text-muted-foreground">Documents Published{selected.year === '2026' ? ' (Jan-May)' : ''}</div>
             <div className="text-xs font-mono font-bold text-blue-500">{selected.growth !== '--' && selected.growth !== 'Partial' ? `YoY: ${selected.growth}` : selected.growth === 'Partial' ? 'Partial Year' : 'Baseline Year'}</div>
           </div>
           <div className="bg-muted/30 rounded-lg p-4 border border-border/50">
@@ -240,9 +240,9 @@ export function StateOfAiMomentum() {
       <div>
         <h4 className="text-base font-bold text-foreground flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-          Fastest-Rising Keywords (2025–2026 vs 2022–2023)
+          Fastest-Rising Keywords (2025-2026 vs 2022-2023)
         </h4>
-        <p className="text-xs text-muted-foreground mt-0.5">Growth ratio = count in 2025–2026 cohort ÷ max(count in 2022–2023, 1). Minimum 50 mentions.</p>
+        <p className="text-xs text-muted-foreground mt-0.5">Growth ratio = count in 2025-2026 cohort ÷ max(count in 2022-2023, 1). Minimum 50 mentions.</p>
       </div>
       <div className="space-y-3">
         {momentumData.map((item) => (

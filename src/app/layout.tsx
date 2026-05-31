@@ -128,7 +128,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`antialiased ${inter.variable}`}>
+    <html lang="en" className={`antialiased ${inter.variable} overflow-x-hidden`}>
       <head>
         <meta name="theme-color" content="#ffffff" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
@@ -169,7 +169,7 @@ export default function RootLayout({
         <link rel="alternate" type="application/json" href="/ai.json" title="AI discovery manifest" />
         <link rel="alternate" type="text/plain" href="/ai.txt" title="AI permissions" />
       </head>
-      <body className="font-sans">
+      <body className="font-sans overflow-x-hidden">
           <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:text-sm focus:font-medium">Skip to main content</a>
           {children}
           <Toaster />

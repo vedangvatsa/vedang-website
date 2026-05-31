@@ -41,8 +41,7 @@ export default function Home() {
 
   return (
     <PageLayout>
-      <section className="py-8 md:py-12 text-center">
-        <div>
+      <section className="pt-12 md:pt-20 pb-8 text-center">
           <Image
             src="/images/icon.png"
             alt="Vedang Vatsa - product engineer, educator, and founder based in Singapore"
@@ -51,19 +50,12 @@ export default function Home() {
             className="mx-auto h-24 w-24 rounded-full object-cover"
             priority
           />
-          <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
-          <p className="mx-auto mt-4 max-w-3xl text-base md:text-lg leading-relaxed">
-            Founder, <Link href="https://hashtagweb3.com" className="underline hover:text-foreground">Hashtag Web3</Link> (120k community of AI & Web3 professionals)
+          <h1 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
+          <p className="mx-auto mt-3 max-w-3xl text-base md:text-lg leading-relaxed">
+            Founder: <Link href="https://hashtagweb3.com?utm_source=veda.ng&utm_medium=website&utm_campaign=homepage" className="underline hover:text-foreground">Hashtag Web3</Link> and <Link href="https://cvin.bio?utm_source=veda.ng&utm_medium=website&utm_campaign=homepage" className="underline hover:text-foreground">CvinBio</Link>
+            <span className="mx-2 text-muted-foreground">|</span>
+            <Link href="/profile" className="text-primary hover:text-primary/80 transition-colors">Profile →</Link>
           </p>
-          <p className="mx-auto mt-2 max-w-3xl text-sm">
-            MTech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
-          </p>
-          <div className="mt-6 flex justify-center">
-            <Button asChild className="min-w-64 px-8">
-              <Link href="/profile">View Full Profile</Link>
-            </Button>
-          </div>
-        </div>
       </section>
 
       <CardGrid
@@ -82,21 +74,19 @@ export default function Home() {
 
       <AsSeenIn />
 
+      <section className="py-8 text-center">
+        <div className="flex justify-center">
+          <Button variant="outline" asChild size="lg" className="w-full md:max-w-sm">
+            <Link href="/media">Speaking Engagements & Media Mentions</Link>
+          </Button>
+        </div>
+      </section>
+
       <CardGrid
         id="learn"
         title="Resources"
         items={resources}
       />
-
-      <section className="py-12 text-center">
-        <div>
-          <div className="flex justify-center">
-            <Button asChild size="lg" className="min-w-64 px-8">
-              <Link href="/media">Speaking Engagements & Media Mentions</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
     </PageLayout>
   );
 }

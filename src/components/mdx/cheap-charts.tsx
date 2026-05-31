@@ -7,8 +7,8 @@ export function PerceptionArcTimeline() {
   const countries = [
     { name: 'Japan', start: 1960, onset: 1975, premium: 1995, gdpAtOnset: '$9.3K', gdpAtPremium: '$38.5K', anchor: 'Automobiles' },
     { name: 'South Korea', start: 1970, onset: 1990, premium: 2010, gdpAtOnset: '$6.5K', gdpAtPremium: '$22K', anchor: 'Smartphones' },
-    { name: 'China', start: 2000, onset: 2018, premium: '2030s*', gdpAtOnset: '$10K', gdpAtPremium: 'TBD', anchor: 'EVs, drones' },
-    { name: 'India', start: 2020, onset: '2030-35*', premium: '2040s*', gdpAtOnset: '$5K*', gdpAtPremium: 'TBD', anchor: 'Consumer tech' },
+    { name: 'China', start: 2000, onset: 2018, premium: '2030s*', gdpAtOnset: '$10K', gdpAtPremium: 'Projected', anchor: 'EVs, drones' },
+    { name: 'India', start: 2020, onset: '2030-35*', premium: '2040s*', gdpAtOnset: '$5K*', gdpAtPremium: 'Projected', anchor: 'Consumer tech' },
   ];
 
   return (

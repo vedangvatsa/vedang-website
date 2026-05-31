@@ -26,9 +26,9 @@ export default function WritingsPage() {
         cta={{ label: 'More on Google Scholar', url: 'https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en', external: true }}
       />
 
-      <section id="essays" className="py-12">
+      <section id="essays" className="py-8">
         <div>
-          <h1 className="mb-8 text-center text-2xl md:text-3xl font-semibold tracking-tight">Essays</h1>
+          <h1 className="mb-5 text-center text-2xl md:text-3xl font-semibold tracking-tight">Essays</h1>
           <EssaysList />
         </div>
       </section>

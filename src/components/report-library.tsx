@@ -81,7 +81,7 @@ export function ReportLibrary({ dataUrl, categories, manualReports = [] }: Repor
   const visibleItems = filtered.slice(0, visible);
 
   return (
-    <div className="py-12">
+    <div className="py-8">
       {/* Search and Filter */}
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
         <div className="relative flex-1">

@@ -363,8 +363,8 @@ export function VCStrategicFrameworkDiagram() {
           </div>
 
           {/* Complication Box */}
-          <div className="flex-1 rounded-[3px] border border-accent/40 bg-accent/5 p-5 flex flex-col">
-            <div className="text-[10px] font-bold uppercase tracking-wider text-accent mb-2">2. The Complication</div>
+          <div className="flex-1 rounded-[3px] border border-amber-300/60 bg-amber-50/50 p-5 flex flex-col">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-amber-600 mb-2">2. The Complication</div>
             <div className="text-sm font-bold text-[#37352f] mb-3">The Structural Barbell & Gini Moat</div>
             <p className="text-xs text-muted-foreground leading-relaxed flex-1">
               Macro reset and cost-of-capital increases hollowed out the software mid-market. Capital polarized into a barbell system: extreme concentration (0.916 Gini) in mega-rounds vs. lean early stages.

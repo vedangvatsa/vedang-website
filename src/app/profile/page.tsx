@@ -63,7 +63,7 @@ export default function ProfilePage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
       <div className="py-8">
-        <div className="max-w-7xl mx-auto">
+        <div>
           <section className="text-center">
             
               <Image
@@ -75,11 +75,11 @@ export default function ProfilePage() {
                 priority
               />
             
-            <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
-            <p className="mx-auto mt-2 max-w-3xl text-base md:text-lg text-muted-foreground">
+            <h1 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
+            <p className="mx-auto mt-3 max-w-3xl text-base md:text-lg text-muted-foreground">
              Computer Engineer, MBA, Chartered Engineer | Young Researcher 2020 Awardee (22 publications) & Young Achiever 2020-21 Awardee
             </p>
-            <div className="mt-4 flex justify-center items-center space-x-4">
+            <div className="mt-5 flex justify-center items-center space-x-4">
               <Link href="mailto:vedangvatsa.2019@iitkalumni.org" className="text-[#EA4335] hover:text-[#D93025] transition-colors" aria-label="Email">
                 <Mail className="h-5 w-5" />
               </Link>
@@ -101,11 +101,11 @@ export default function ProfilePage() {
             </div>
           </section>
 
-          <Separator className="my-6" />
+          <Separator className="my-5" />
 
           <div className="space-y-6">
             <section id="experience">
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-5">
                 Professional Experience
               </h2>
               <div className="space-y-4">
@@ -357,12 +357,9 @@ export default function ProfilePage() {
                     <CardContent className="p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div>
                             <h4 className="font-semibold text-base">Traveling & Photography</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Selected among a few photographers to cover the world's largest festival by gathering. Solo-traveled to 17 countries.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Selected among a few photographers to cover the world's largest festival by gathering.</p>
                         </div>
-                         <div>
-                            <h4 className="font-semibold text-base">Adventure Sports</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">World's highest canyon swing, National Mountain Biking Expedition.</p>
-                        </div>
+
                          <div>
                             <h4 className="font-semibold text-base">Public Speaking</h4>
                             <p className="text-muted-foreground mt-0.5 text-sm">Workshops on Computational Social Science, China’s Approach to AI, Citizens of the Metaverse, Digital Payments in India, Data Privacy, Blockchain use-cases, e-Governance in Estonia, Network States, Responsible AI, etc.</p>
@@ -412,7 +409,7 @@ export default function ProfilePage() {
       <AsSeenIn />
 
       <section id="media-link" className="text-center pb-16">
-          <Button asChild size="lg" className="min-w-64 px-8">
+          <Button variant="outline" asChild size="lg" className="w-full md:max-w-sm">
               <Link href="/media">Speaking Engagements &amp; Media Mentions</Link>
           </Button>
       </section>

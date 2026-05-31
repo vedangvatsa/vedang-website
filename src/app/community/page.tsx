@@ -247,7 +247,7 @@ export default function CommunityProfilePage() {
                         <CardContent className="p-4 flex-1 flex flex-col justify-between h-full">
                             <div className="flex-1 flex flex-col justify-center py-2">
                                 <blockquote className="border-l-2 pl-4 italic text-sm text-muted-foreground">
-                                "We’ve got so many emails from candidates applying for our jobs—there’s a new one every 5 minutes!"
+                                "We've got so many emails from candidates applying for our jobs, there's a new one every 5 minutes!"
                                 </blockquote>
                             </div>
                             <div className="flex items-center gap-3 mt-auto pt-3 border-t">

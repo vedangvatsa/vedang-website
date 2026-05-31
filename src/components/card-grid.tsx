@@ -17,10 +17,10 @@ interface CardGridProps {
 
 export function CardGrid({ title, items, cta, id }: CardGridProps) {
   return (
-    <section id={id} className="py-12">
+    <section id={id} className="py-8">
       <div>
-        <h2 className="mb-8 text-center text-2xl md:text-3xl font-semibold tracking-tight">{title}</h2>
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <h2 className="mb-5 text-center text-2xl md:text-3xl font-semibold tracking-tight">{title}</h2>
+        <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {items.map((item, i) => (
             <Link
               href={item.url}
@@ -29,7 +29,7 @@ export function CardGrid({ title, items, cta, id }: CardGridProps) {
               target={item.external ? '_blank' : undefined}
               rel={item.external ? 'noopener noreferrer' : undefined}
             >
-              <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-4 transition-colors duration-200 hover:border-primary/50">
+              <div className="flex h-full flex-col justify-between overflow-hidden rounded-lg border bg-card p-4 text-center md:text-left transition-colors duration-200 hover:border-primary/50">
                 <p className="font-medium text-foreground group-hover:text-primary transition-colors">
                   {item.title}
                 </p>
@@ -43,8 +43,8 @@ export function CardGrid({ title, items, cta, id }: CardGridProps) {
           ))}
         </div>
         {cta && (
-          <div className="mt-8 flex justify-center">
-            <Button variant="outline" asChild className="min-w-64 px-8">
+          <div className="mt-5 flex justify-center">
+            <Button variant="outline" asChild className="w-full md:max-w-sm">
               <Link
                 href={cta.url}
                 target={cta.external ? '_blank' : undefined}

@@ -68,7 +68,7 @@ const curriculumItems = [
     },
     {
         href: '/agentic-web/module-6-protocols',
-        title: '6. Protocols Deep Dive: MCP & A2A',
+        title: '6. Protocols: MCP & A2A',
         description: 'The standardized languages that let agents connect to tools and each other.',
     },
     {
@@ -149,36 +149,29 @@ const faqSchema = {
 
 export default function AgenticWebCoursePage() {
   return (
-    <>
+    <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-        <CourseHero
-          title="The Agentic Web"
-          subtitle="How autonomous AI agents are turning the web from a place you browse into a platform that acts on your behalf."
-          youtubeUrl="https://www.youtube.com/embed/Gqgk25SOIMM"
-        />
+      <CourseHero
+        title="The Agentic Web"
+        subtitle={<>How autonomous AI agents are turning the web from a place you browse<br />into a platform that acts on your behalf.</>}
+        youtubeUrl="https://www.youtube.com/embed/Gqgk25SOIMM"
+      />
 
-        <div className="py-16 space-y-12">
-            
-        <CurriculumSection
-          description="Seven modules to understand the Agentic Web."
-          items={curriculumItems}
-        />
+      <CurriculumSection
+        description="Seven modules to understand the Agentic Web."
+        items={curriculumItems}
+      />
 
-            <CourseReferences
-              subtitle="Protocols, frameworks, and platforms for exploring the Agentic Web."
-              categories={referenceLinks}
-              layout="columns"
-              align="center"
-            />
+      <CourseReferences
+        categories={referenceLinks}
+      />
 
-            <CourseFAQ
-              subtitle="Your common questions about the Agentic Web, answered."
-              items={faqItems}
-            />
-        </div>
-    </>
+      <CourseFAQ
+        items={faqItems}
+      />
+    </div>
   );
 }
