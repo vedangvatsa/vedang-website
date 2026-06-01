@@ -349,7 +349,7 @@ export function NomadMap({ data }: { data: POI[] }) {
                 </div>
 
                 <div className="flex gap-2 pt-1">
-                  {selectedPoint.properties.website && (
+                  {selectedPoint.properties.website && selectedPoint.properties.website !== 'https://' && selectedPoint.properties.website !== 'http://' && (
                     <a
                       href={selectedPoint.properties.website}
                       target="_blank"
@@ -433,7 +433,7 @@ export function NomadMap({ data }: { data: POI[] }) {
                   </td>
                   <td className="px-4 py-2.5">
                     <div className="flex gap-2">
-                      {poi.website && (
+                      {poi.website && poi.website !== 'https://' && poi.website !== 'http://' && (
                         <a href={poi.website} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-500 hover:underline">
                           Web
                         </a>
