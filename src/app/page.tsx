@@ -47,7 +47,7 @@ export default function Home() {
         showAvatar
         subtitle={
           <>
-            Founder: <Link href="https://hashtagweb3.com?utm_source=veda.ng&utm_medium=website&utm_campaign=homepage" className="underline hover:text-foreground">Hashtag Web3</Link> and <Link href="https://cvin.bio?utm_source=veda.ng&utm_medium=website&utm_campaign=homepage" className="underline hover:text-foreground">CvinBio</Link>
+            Founder: <Link href="https://hashtagweb3.com?utm_source=veda.ng&utm_medium=website&utm_campaign=homepage" className="underline hover:text-foreground">Hashtag Web3</Link> and <Link href="https://cvin.bio?utm_source=veda.ng&utm_medium=website&utm_campaign=homepage" className="underline hover:text-foreground">CVinBio</Link>
             <span className="mx-2 text-muted-foreground">|</span>
             <Link href="/profile" className="text-primary hover:text-primary/80 transition-colors">Profile →</Link>
           </>
