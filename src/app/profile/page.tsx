@@ -3,7 +3,7 @@
 import { PageLayout } from '@/components/page-layout';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
+
 import {
   BookOpen,
   Instagram,
@@ -100,8 +100,6 @@ export default function ProfilePage() {
               </Link>
             </div>
           </section>
-
-          <Separator className="my-5" />
 
           <div className="space-y-6">
             <section id="experience">
