@@ -31,7 +31,7 @@ function replacePosts(posts, newPosts) {
 const xPosts = loadPosts('x-posts.json');
 const newXPosts = [
   {
-    id: 'stepwise-ai',
+    id: 'stepwise',
     scheduleDate: '2026-04-21',
     scheduleTime: '09:00',
     posted: false,
@@ -44,10 +44,10 @@ The failure wasn't AI. It was sequence. They skipped straight to the hardest pro
 
 Discipline beats ambition every time.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
   },
   {
-    id: 'universal-text-ui',
+    id: 'textui',
     scheduleDate: '2026-04-21',
     scheduleTime: '17:00',
     posted: false,
@@ -60,10 +60,10 @@ The pattern: a text field backed by an LLM that calls APIs directly. No menus. N
 
 The dashboard era is ending.
 
-veda.ng/universal-text-ui`
+veda.ng/textui`
   },
   {
-    id: 'agentic-state',
+    id: 'stateagents',
     scheduleDate: '2026-04-22',
     scheduleTime: '09:00',
     posted: false,
@@ -78,7 +78,7 @@ A baby is born. The system detects it, calculates benefits, deposits money. No f
 
 Most governments still make you download a PDF.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
   },
 ];
 savePosts('x-posts.json', replacePosts(xPosts, newXPosts));
@@ -87,7 +87,7 @@ savePosts('x-posts.json', replacePosts(xPosts, newXPosts));
 const linkedinPosts = loadPosts('linkedin-posts.json');
 const newLinkedinPosts = [
   {
-    id: 'stepwise-ai',
+    id: 'stepwise',
     scheduleDate: '2026-04-21',
     scheduleTime: '09:00',
     posted: false,
@@ -106,10 +106,10 @@ Full autonomy comes last, if ever. And only after the organization has built eno
 
 70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
   },
   {
-    id: 'universal-text-ui',
+    id: 'textui',
     scheduleDate: '2026-04-21',
     scheduleTime: '17:00',
     posted: false,
@@ -131,10 +131,10 @@ GitHub Copilot — 46% of code written by AI across 20M users
 
 The advantage shifts from who builds the best UI to who exposes the best tools.
 
-veda.ng/universal-text-ui`
+veda.ng/textui`
   },
   {
-    id: 'agentic-state',
+    id: 'stateagents',
     scheduleDate: '2026-04-22',
     scheduleTime: '09:00',
     posted: false,
@@ -153,7 +153,7 @@ Estonia's X-Road protocol handles over 1 billion queries per year across every g
 
 Most governments are still asking citizens to download PDFs and visit offices during business hours.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
   },
 ];
 savePosts('linkedin-posts.json', replacePosts(linkedinPosts, newLinkedinPosts));
@@ -162,7 +162,7 @@ savePosts('linkedin-posts.json', replacePosts(linkedinPosts, newLinkedinPosts));
 const bskyPosts = loadPosts('bluesky-posts.json');
 const newBskyPosts = [
   {
-    id: 'stepwise-ai',
+    id: 'stepwise',
     scheduleDate: '2026-04-21',
     scheduleTime: '09:00',
     posted: false,
@@ -170,10 +170,10 @@ const newBskyPosts = [
 
 70% of big-bang AI deployments fail. Companies that pick one boring task first see payback in three months.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
   },
   {
-    id: 'universal-text-ui',
+    id: 'textui',
     scheduleDate: '2026-04-21',
     scheduleTime: '17:00',
     posted: false,
@@ -181,10 +181,10 @@ veda.ng/stepwise-ai`
 
 PostHog, Salesforce, Cursor all replaced dashboards with text fields that call APIs directly.
 
-veda.ng/universal-text-ui`
+veda.ng/textui`
   },
   {
-    id: 'agentic-state',
+    id: 'stateagents',
     scheduleDate: '2026-04-22',
     scheduleTime: '09:00',
     posted: false,
@@ -194,7 +194,7 @@ Baby born? System detects it, calculates benefits, deposits money. No form. No q
 
 Most governments still run on PDFs.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
   },
 ];
 savePosts('bluesky-posts.json', replacePosts(bskyPosts, newBskyPosts));
@@ -203,7 +203,7 @@ savePosts('bluesky-posts.json', replacePosts(bskyPosts, newBskyPosts));
 const fbPosts = loadPosts('facebook-posts.json');
 const newFbPosts = [
   {
-    id: 'stepwise-ai',
+    id: 'stepwise',
     scheduleDate: '2026-04-21',
     scheduleTime: '09:00',
     posted: false,
@@ -214,10 +214,10 @@ The failure was sequence, not technology. They went straight for the hardest pro
 
 70% of big-bang AI deployments fail. Discipline beats ambition.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
   },
   {
-    id: 'universal-text-ui',
+    id: 'textui',
     scheduleDate: '2026-04-21',
     scheduleTime: '17:00',
     posted: false,
@@ -228,10 +228,10 @@ PostHog replaced analytics dashboards with a text field. Salesforce did it for C
 
 The pattern: text field + LLM + direct API calls. No menus. No navigation.
 
-veda.ng/universal-text-ui`
+veda.ng/textui`
   },
   {
-    id: 'agentic-state',
+    id: 'stateagents',
     scheduleDate: '2026-04-22',
     scheduleTime: '09:00',
     posted: false,
@@ -244,7 +244,7 @@ Baby born? The system detects it, calculates benefits, deposits money. No form. 
 
 Most governments still make you download a PDF.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
   },
 ];
 savePosts('facebook-posts.json', replacePosts(fbPosts, newFbPosts));
@@ -253,7 +253,7 @@ savePosts('facebook-posts.json', replacePosts(fbPosts, newFbPosts));
 const tumblrPosts = loadPosts('tumblr-posts.json');
 const newTumblrPosts = [
   {
-    id: 'stepwise-ai',
+    id: 'stepwise',
     scheduleDate: '2026-04-21',
     scheduleTime: '09:00',
     posted: false,
@@ -265,10 +265,10 @@ const newTumblrPosts = [
 
 The failure is always sequence, not technology.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
   },
   {
-    id: 'universal-text-ui',
+    id: 'textui',
     scheduleDate: '2026-04-21',
     scheduleTime: '17:00',
     posted: false,
@@ -278,10 +278,10 @@ veda.ng/stepwise-ai`
 
 A text field backed by an LLM that calls APIs directly kills the dashboard. PostHog, Salesforce, and Cursor already proved it.
 
-veda.ng/universal-text-ui`
+veda.ng/textui`
   },
   {
-    id: 'agentic-state',
+    id: 'stateagents',
     scheduleDate: '2026-04-22',
     scheduleTime: '09:00',
     posted: false,
@@ -293,7 +293,7 @@ Baby born? System detects it, calculates benefits, deposits money. No form. No q
 
 Most governments still run on PDFs and waiting rooms.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
   },
 ];
 savePosts('tumblr-posts.json', replacePosts(tumblrPosts, newTumblrPosts));

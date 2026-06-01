@@ -37,7 +37,7 @@ Launched in 2001. Operational for 25 years. Not a pilot. Not a proof of concept.
 
 Most countries built e-government by putting paper forms on websites. Estonia redesigned the process architecture. Digitizing a bad process produces a fast bad process. Redesigning it changes what the citizen experiences.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
     {
       id: 'universal-text-ui-paradigms',
@@ -57,7 +57,7 @@ Each paradigm cut adaptation cost by roughly 10x. The GUI didn't improve the com
 
 The question isn't whether this transition happens. It's how fast.
 
-veda.ng/universal-text-ui`
+veda.ng/textui`
     },
     {
       id: 'stepwise-ai-gartner',
@@ -73,7 +73,7 @@ The technology works. The organizational readiness doesn't.
 
 The fix: don't start with ambition. Start with one task that pays for itself in 90 days. Then expand.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
     },
     {
       id: 'agentic-state-uae',
@@ -89,7 +89,7 @@ The UAE isn't digitizing forms. It's building government from scratch as if AI e
 
 No legacy systems to modernize. No decades of technical debt to unwind. A clean-sheet approach.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
   ],
   x: [
@@ -105,7 +105,7 @@ Operational since 2001. 25 years in production. Not a pilot.
 
 Most countries digitized paper forms. Estonia redesigned the process.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
     {
       id: 'universal-text-ui-paradigms',
@@ -117,7 +117,7 @@ veda.ng/agentic-state`
 
 The GUI didn't improve the command line. It replaced it. Natural language won't improve dashboards. Same thing.
 
-veda.ng/universal-text-ui`
+veda.ng/textui`
     },
     {
       id: 'stepwise-ai-gartner',
@@ -131,7 +131,7 @@ The tech works. The organizational readiness doesn't.
 
 Fix: one task that pays for itself in 90 days. Then expand.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
     },
     {
       id: 'agentic-state-uae',
@@ -143,7 +143,7 @@ veda.ng/stepwise-ai`
 
 No legacy systems. No tech debt. Clean-sheet AI government.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
   ],
   bluesky: [
@@ -154,7 +154,7 @@ veda.ng/agentic-state`
       posted: false,
       text: `Estonia's X-Road: 1B+ gov queries/year. Birth registered → all agencies updated. One notification. Zero forms. Running since 2001.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
     {
       id: 'universal-text-ui-paradigms',
@@ -163,7 +163,7 @@ veda.ng/agentic-state`
       posted: false,
       text: `CLI → GUI → NLI. Each cut adaptation cost 10x. The GUI replaced the command line. Natural language will replace dashboards.
 
-veda.ng/universal-text-ui`
+veda.ng/textui`
     },
     {
       id: 'stepwise-ai-gartner',
@@ -172,7 +172,7 @@ veda.ng/universal-text-ui`
       posted: false,
       text: `40% of AI projects risk cancellation by 2027. Only 33% meet ROI. Fix: one task, 90-day payback, then expand.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
     },
     {
       id: 'agentic-state-uae',
@@ -181,7 +181,7 @@ veda.ng/stepwise-ai`
       posted: false,
       text: `Abu Dhabi: AED 13B for first AI-native government by 2027. 97% utilization. No legacy systems. Clean-sheet approach.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
   ],
   facebook: [
@@ -197,7 +197,7 @@ Running since 2001. 25 years in production.
 
 Most countries digitized paper forms. Estonia redesigned the process architecture entirely.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
     {
       id: 'universal-text-ui-paradigms',
@@ -209,7 +209,7 @@ veda.ng/agentic-state`
 
 Each cut adaptation cost by 10x. The GUI replaced the command line. Natural language will replace dashboards.
 
-veda.ng/universal-text-ui`
+veda.ng/textui`
     },
     {
       id: 'stepwise-ai-gartner',
@@ -221,7 +221,7 @@ veda.ng/universal-text-ui`
 
 Start with one task that pays for itself in 90 days. Then expand.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
     },
     {
       id: 'agentic-state-uae',
@@ -233,7 +233,7 @@ veda.ng/stepwise-ai`
 
 No legacy systems. No tech debt. Building government from scratch as if AI existed from day one.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
   ],
   tumblr: [
@@ -246,7 +246,7 @@ veda.ng/agentic-state`
       tags: ['Estonia', 'e-government'],
       text: `X-Road: 1B+ gov queries/year. Birth → all agencies updated automatically. Running 25 years.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
     {
       id: 'universal-text-ui-paradigms',
@@ -257,7 +257,7 @@ veda.ng/agentic-state`
       tags: ['UI', 'AI'],
       text: `CLI → GUI → NLI. Each cut adaptation cost 10x. Dashboards are next.
 
-veda.ng/universal-text-ui`
+veda.ng/textui`
     },
     {
       id: 'stepwise-ai-gartner',
@@ -268,7 +268,7 @@ veda.ng/universal-text-ui`
       tags: ['AI', 'enterprise'],
       text: `40% of AI projects risk cancellation by 2027. Only 33% meet ROI. One task, 90 days, then expand.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
     },
     {
       id: 'agentic-state-uae',
@@ -279,7 +279,7 @@ veda.ng/stepwise-ai`
       tags: ['UAE', 'AI government'],
       text: `Abu Dhabi: AED 13B for AI-native government. 97% utilization. Clean-sheet, no legacy.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
   ],
 };
@@ -291,7 +291,7 @@ for (const [platform, fillers] of Object.entries(gapFillers)) {
   // Fix models-shrinking: add CTA link
   for (const p of posts) {
     if (p.id === 'models-shrinking' && p.text && !p.text.includes('veda.ng')) {
-      p.text += '\n\nveda.ng/asi-timeline';
+      p.text += '\n\nveda.ng/asi';
     }
   }
   
@@ -307,4 +307,4 @@ for (const [platform, fillers] of Object.entries(gapFillers)) {
 }
 
 console.log('\n✅ All gaps filled. Every day now has 3 posts (01:00, 09:00, 17:00)');
-console.log('✅ models-shrinking now has CTA link to veda.ng/asi-timeline');
+console.log('✅ models-shrinking now has CTA link to veda.ng/asi');

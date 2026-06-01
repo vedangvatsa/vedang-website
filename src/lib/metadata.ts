@@ -127,7 +127,7 @@ export const pageMetadata = {
     title: 'The State of Blockchain Research (2013-2026) | Vedang Vatsa',
     description:
       'An interactive bibliometric analysis of 100,024 blockchain and Web3 research documents. Track YoY growth, citation skews, and AI integration trends.',
-    url: '/state-of-web3',
+    url: '/stateofweb3',
     keywords: ['Web3 Research', 'Blockchain Trends', 'Bibliometric Analysis', 'YoY Growth', 'Language Models', 'DeFi', 'RWA', 'Federated Learning'],
   },
 };

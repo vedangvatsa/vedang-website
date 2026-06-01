@@ -20,29 +20,29 @@ function savePosts(file, data) {
 
 // Cross-link additions: { postId → { append text } }
 const crossLinks = {
-  'agentic-commerce': {
+  'agentcommerce': {
     // "Your next customer is an algorithm" → text UI essay is the interface layer
-    append: '\n\nThe interface layer is changing too — dashboards are giving way to text fields that call APIs directly: veda.ng/universal-text-ui'
+    append: '\n\nThe interface layer is changing too — dashboards are giving way to text fields that call APIs directly: veda.ng/textui'
   },
-  'ai-agent-economy': {
+  'agenteconomy': {
     // "The corporation is dissolving" → stepwise is how you actually get there
-    append: '\n\nThe hard part: getting there without blowing up. 70% of big-bang AI deployments fail. The sequencing matters: veda.ng/stepwise-ai'
+    append: '\n\nThe hard part: getting there without blowing up. 70% of big-bang AI deployments fail. The sequencing matters: veda.ng/stepwise'
   },
-  'agi-governance': {
+  'governance': {
     // "How do you govern something smarter than you?" → agentic state is governments already using AI
-    append: '\n\nSome governments aren\'t waiting. Estonia, Singapore, and the UAE already run AI at production scale across public services: veda.ng/agentic-state'
+    append: '\n\nSome governments aren\'t waiting. Estonia, Singapore, and the UAE already run AI at production scale across public services: veda.ng/stateagents'
   },
-  'ai-economy': {
+  'aieconomy': {
     // "The entry ramp is narrowing" → stepwise approach matters for deployment
-    append: '\n\nThe companies that get AI deployment right start small. One boring task. Three-month payback. Then scale: veda.ng/stepwise-ai'
+    append: '\n\nThe companies that get AI deployment right start small. One boring task. Three-month payback. Then scale: veda.ng/stepwise'
   },
-  'ambient-intelligence': {
+  'ambient': {
     // "The best interface is no interface" → text UI is the intermediate step
-    append: '\n\nBefore no interface, there\'s a simpler one. The text field is replacing the dashboard: veda.ng/universal-text-ui'
+    append: '\n\nBefore no interface, there\'s a simpler one. The text field is replacing the dashboard: veda.ng/textui'
   },
-  'api-states': {
+  'apis': {
     // "The nation-state as a platform" → agentic state shows who already built it
-    append: '\n\nEstonia already built this. 99% of services digital. Babies born get benefits automatically. No forms: veda.ng/agentic-state'
+    append: '\n\nEstonia already built this. 99% of services digital. Babies born get benefits automatically. No forms: veda.ng/stateagents'
   },
 };
 

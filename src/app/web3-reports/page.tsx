@@ -24,7 +24,7 @@ export default function Web3ReportsPage() {
             23,000+ research papers, institutional reports, and on-chain analyses. Each entry links directly to a verified DOI or academic repository.
           </p>
           <p className="mt-4 text-sm text-muted-foreground">
-            Read the full synthesis: <Link href="/state-of-web3" className="text-primary hover:underline font-medium">The State of Web3 →</Link>
+            Read the full synthesis: <Link href="/stateofweb3" className="text-primary hover:underline font-medium">The State of Web3 →</Link>
           </p>
         </div>
       </section>

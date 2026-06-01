@@ -6,7 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
 const ESSAYS_DIR = path.resolve(REPO_ROOT, 'src/content/essays');
 
-const slug = 'ai-agent-economy';
+const slug = 'agenteconomy';
 const filePath = path.resolve(ESSAYS_DIR, `${slug}.mdx`);
 
 console.log("__dirname:", __dirname);

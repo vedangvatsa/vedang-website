@@ -58,7 +58,7 @@ The human sales team stopped qualifying. They only close.
 
 One task. One integration. The entire bottleneck dissolved.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
     },
     {
       id: 'agentic-state-eresidency',
@@ -74,7 +74,7 @@ The e-Residency program generated €125M in state revenue last year. 87% growth
 
 This is what happens when government operates as infrastructure instead of gatekeeping. The state becomes a platform. Citizenship becomes a credential. Geography becomes optional.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
     {
       id: 'universal-text-ui-106apps',
@@ -90,7 +90,7 @@ veda.ng/agentic-state`
 
 That's not a feature request. That's a structural bottleneck being reported by the people trapped inside it.
 
-veda.ng/universal-text-ui`
+veda.ng/textui`
     },
     {
       id: 'stepwise-ai-marketing',
@@ -106,7 +106,7 @@ Twenty hours per week freed. Client load went from 30 campaigns to 50. A 50% cap
 
 AI didn't replace anyone. It removed the bottleneck that was stopping three people from doing the work of five.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
     },
     {
       id: 'agentic-state-singapore',
@@ -122,7 +122,7 @@ In the 2026 budget, Singapore announced the shift from "AI pilots" to "scaled de
 
 Most countries are still debating whether to start a pilot.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
   ],
 
@@ -140,7 +140,7 @@ One voice agent. One task: qualify and book. Response time fell to 60 seconds. C
 
 The sales team stopped qualifying. They only close now.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
     },
     {
       id: 'agentic-state-eresidency',
@@ -154,7 +154,7 @@ veda.ng/stepwise-ai`
 
 Government as infrastructure. Citizenship as credential. Geography as optional.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
     {
       id: 'universal-text-ui-106apps',
@@ -168,7 +168,7 @@ veda.ng/agentic-state`
 
 That's not a preference. It's a structural bottleneck.
 
-veda.ng/universal-text-ui`
+veda.ng/textui`
     },
     {
       id: 'stepwise-ai-marketing',
@@ -182,7 +182,7 @@ Routed analytics into an LLM. Twenty hours freed weekly. Client load: 30 → 50 
 
 AI didn't replace anyone. It removed a bottleneck.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
     },
     {
       id: 'agentic-state-singapore',
@@ -198,7 +198,7 @@ veda.ng/stepwise-ai`
 
 Most countries are still debating whether to start a pilot.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
   ],
 
@@ -213,7 +213,7 @@ veda.ng/agentic-state`
 
 The sales team stopped qualifying. They only close.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
     },
     {
       id: 'agentic-state-eresidency',
@@ -224,7 +224,7 @@ veda.ng/stepwise-ai`
 
 Government as infrastructure.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
     {
       id: 'universal-text-ui-106apps',
@@ -235,7 +235,7 @@ veda.ng/agentic-state`
 
 93% of leaders want to ask data questions in plain English. That's a structural bottleneck.
 
-veda.ng/universal-text-ui`
+veda.ng/textui`
     },
     {
       id: 'stepwise-ai-marketing',
@@ -244,7 +244,7 @@ veda.ng/universal-text-ui`
       posted: false,
       text: `3-person agency. 6 hours/person every Friday on reports. Routed analytics to LLM. 20 hours freed. Clients: 30 → 50. Zero hires.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
     },
     {
       id: 'agentic-state-singapore',
@@ -255,7 +255,7 @@ veda.ng/stepwise-ai`
 
 Most countries still debating whether to start a pilot.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
   ],
 
@@ -273,7 +273,7 @@ One voice agent. One task: qualify inbound leads and book meetings. Response tim
 
 One task. One integration. The bottleneck dissolved.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
     },
     {
       id: 'agentic-state-eresidency',
@@ -285,7 +285,7 @@ veda.ng/stepwise-ai`
 
 Government as infrastructure. Citizenship as credential. Geography as optional.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
     {
       id: 'universal-text-ui-106apps',
@@ -297,7 +297,7 @@ veda.ng/agentic-state`
 
 93% of business leaders said they'd perform better asking data questions in plain English. That's not a feature request. That's a structural bottleneck.
 
-veda.ng/universal-text-ui`
+veda.ng/textui`
     },
     {
       id: 'stepwise-ai-marketing',
@@ -311,7 +311,7 @@ Routed analytics into an LLM. Twenty hours freed weekly. Client load went from 3
 
 AI removed the bottleneck. Nobody got replaced.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
     },
     {
       id: 'agentic-state-singapore',
@@ -325,7 +325,7 @@ veda.ng/stepwise-ai`
 
 2026 budget: "scaled deployment at national speed." Most countries are still debating pilots.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
   ],
 
@@ -342,7 +342,7 @@ veda.ng/agentic-state`
 
 The sales team stopped qualifying. They only close.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
     },
     {
       id: 'agentic-state-eresidency',
@@ -355,7 +355,7 @@ veda.ng/stepwise-ai`
 
 Government as infrastructure.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
     {
       id: 'universal-text-ui-106apps',
@@ -368,7 +368,7 @@ veda.ng/agentic-state`
 
 That's a structural bottleneck, not a feature request.
 
-veda.ng/universal-text-ui`
+veda.ng/textui`
     },
     {
       id: 'stepwise-ai-marketing',
@@ -379,7 +379,7 @@ veda.ng/universal-text-ui`
       tags: ['AI', 'marketing'],
       text: `3-person agency. 6 hrs/person Fridays on reports. LLM automated it. 20 hours freed. 30→50 clients. Zero hires.
 
-veda.ng/stepwise-ai`
+veda.ng/stepwise`
     },
     {
       id: 'agentic-state-singapore',
@@ -392,7 +392,7 @@ veda.ng/stepwise-ai`
 
 Most countries still debating pilots.
 
-veda.ng/agentic-state`
+veda.ng/stateagents`
     },
   ],
 };
@@ -404,15 +404,15 @@ for (const [platform, angles] of Object.entries(newAngles)) {
   
   // 1. Move existing essay posts to earlier dates
   for (const p of posts) {
-    if (p.id === 'stepwise-ai' && !p.posted) {
+    if (p.id === 'stepwise' && !p.posted) {
       p.scheduleDate = '2026-04-10';
       p.scheduleTime = '17:00';
     }
-    if (p.id === 'agentic-state' && !p.posted) {
+    if (p.id === 'stateagents' && !p.posted) {
       p.scheduleDate = '2026-04-11';
       p.scheduleTime = '09:00';
     }
-    if (p.id === 'universal-text-ui' && !p.posted) {
+    if (p.id === 'textui' && !p.posted) {
       p.scheduleDate = '2026-04-12';
       p.scheduleTime = '01:00';
     }

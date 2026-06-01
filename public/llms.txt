@@ -16,58 +16,58 @@ This file provides a structured overview of the site's content for Large Languag
 
 ## Essays
 
-- [The Agent Infrastructure Stack](https://veda.ng/agent-infrastructure-stack): Over $5 billion in venture capital has been deployed into the eight layers of infrastructure that AI agents need to function.
-- [The Great Funding Realignment](https://veda.ng/great-funding-realignment): An empirical study of global venture capital cycles from 2015 to 2026, analyzing capital concentration, the expansion of median check sizes, and the Seed-to-Series A transition bottleneck.
-- [The State of AI](https://veda.ng/state-of-ai): A data-driven executive analysis of 133,000+ research papers, whitepapers, consulting reports, and regulatory frameworks tracking the structural transition of Artificial Intelligence from theoretical capabilities to enterprise integration.
-- [The State of Web3](https://veda.ng/state-of-web3): A data-driven executive analysis of 100,000+ research papers, whitepapers, consulting reports, and regulatory filings tracking the trajectory of blockchain, DeFi, and decentralized infrastructure.
-- [The AI Implementation Playbook](https://veda.ng/ai-implementation-playbook): A complete, step-by-step framework for implementing AI agents across every function of a startup. From brand consistency to automated outreach to SEO that runs itself.
-- [The Post-Interface Internet](https://veda.ng/post-interface-internet): The GUI was a 40-year hack for human-computer impedance matching.
-- [Agents Eating SaaS](https://veda.ng/agents-eating-saas): The $400 billion SaaS industry was built on per-seat pricing. AI agents do not sit in seats.
-- [The Agentic State](https://veda.ng/agentic-state): Estonia claims 100% of government services are online. Singapore deployed AI across its public service at scale.
-- [The Text Field is the New Dashboard](https://veda.ng/universal-text-ui): When a text field backed by an LLM can answer any question by calling internal APIs directly, the dashboard becomes redundant.
-- [The Stepwise Approach to Enterprise AI](https://veda.ng/stepwise-ai): Most enterprises fail at AI by deploying it everywhere at once. Evidence shows that starting with narrow, high-frequency tasks produces measurable ROI.
-- [The YC Portfolio, Decoded](https://veda.ng/yc-landscape): An analysis of Y Combinator's 5,818 companies reveals five structural shifts: B2B dominance at 51%, the rise of the AI employee, defense tech at scale,...
-- [Post-Scarcity Technology](https://veda.ng/post-scarcity-technology): When the marginal cost of intelligence, energy, and digital goods trends toward zero, the economic frameworks built on scarcity face structural pressure.
-- [Agentic Commerce](https://veda.ng/agentic-commerce): When algorithms start shopping on behalf of consumers, traditional e-commerce breaks.
-- [Towards the Agentic Web](https://veda.ng/towards-the-agentic-web): How the internet is shifting from a place where humans find information to  a platform where autonomous AI agents get things done on your behalf.
-- [The Infinity Economy](https://veda.ng/infinity-economy): Can AI and decentralized systems make scarcity obsolete, or does the physical world have something to say about that?
-- [The AI Economy](https://veda.ng/ai-economy): Job displacement, market concentration, and what a balanced AI transition actually requires.
-- [Lessons from Singapore's Arc](https://veda.ng/singapores-arc): How a fishing village became one of the richest countries on earth, and what the development economics literature says about why.
-- [From Cheap to Competitive](https://veda.ng/cheap-to-competitive): How national product quality perception follows income growth with a predictable lag, and where India sits on that arc today.
-- [The Revision Gap](https://veda.ng/revision-gap): Why the difference between mediocre and effective writing is not first-draft quality but revision depth, how AI systems can be structured to close this...
-- [Twilight Economy](https://veda.ng/twilight-economy): The zone where human and AI labor blend indistinguishably, where attribution becomes indeterminate, and where the legal, economic, and psychological...
-- [Are We in a Computer Simulation?](https://veda.ng/simulation-hypothesis): A structured examination of the simulation hypothesis: Bostrom's trilemma, the computational constraints, the consciousness dependency, and what modern...
-- [The Singularity Paradox](https://veda.ng/singularity-paradox): Why every prediction about post-singularity futures is self-defeating, how the alignment problem compounds with the control problem, and what the...
-- [Synthetic Empathy](https://veda.ng/synthetic-empathy): A clinical trial showed AI therapy reduced depression symptoms by 51%. The WHO reports 1 in 6 people experience loneliness.
-- [The AI Agent Economy](https://veda.ng/ai-agent-economy): When software starts acting as an economic agent, sourcing suppliers, executing trades, managing projects, the corporation as it exists today faces...
-- [AI Superintelligence Timeline](https://veda.ng/asi-timeline): Why expert predictions for artificial superintelligence range from 2027 to 2100+, what the key bottlenecks are (compute, data, architecture,...
-- [The In-Between State](https://veda.ng/in-between-state): Transhumanism's actual near-term trajectory: not dramatic transcendence but a multi-decade period of partial, uneven, and socially disruptive...
-- [The Hustle Trap](https://veda.ng/hustle-culture): After 55 hours per week, productivity drops to nearly zero.
-- [An Internet of Lies](https://veda.ng/internet-of-lies): Deepfake incidents increased 900% year-over-year. Only 0.1% of users can distinguish real from synthetic media.
-- [Intuitive Singularity](https://veda.ng/intuitive-singularity): When AI systems transition from tools that execute commands to systems that anticipate intent, the interface between human and machine cognition...
-- [Governance in the Age of AGI](https://veda.ng/agi-governance): Three regulatory superpowers are building incompatible AI governance frameworks. The EU bans practices. The US deregulates. China registers algorithms.
-- [The Substrate Shift](https://veda.ng/substrate-shift): Silicon is hitting physical limits at the atomic scale. DNA stores 455 exabytes per gram.
-- [The World as an Interface](https://veda.ng/ambient-intelligence): The smart home market will reach $175 billion in 2025. Device shipments approach 1.25 billion units.
+- [The Agent Infrastructure Stack](https://veda.ng/agentstack): Over $5 billion in venture capital has been deployed into the eight layers of infrastructure that AI agents need to function.
+- [The Great Funding Realignment](https://veda.ng/funding): An empirical study of global venture capital cycles from 2015 to 2026, analyzing capital concentration, the expansion of median check sizes, and the Seed-to-Series A transition bottleneck.
+- [The State of AI](https://veda.ng/stateofai): A data-driven executive analysis of 133,000+ research papers, whitepapers, consulting reports, and regulatory frameworks tracking the structural transition of Artificial Intelligence from theoretical capabilities to enterprise integration.
+- [The State of Web3](https://veda.ng/stateofweb3): A data-driven executive analysis of 100,000+ research papers, whitepapers, consulting reports, and regulatory filings tracking the trajectory of blockchain, DeFi, and decentralized infrastructure.
+- [The AI Implementation Playbook](https://veda.ng/playbook): A complete, step-by-step framework for implementing AI agents across every function of a startup. From brand consistency to automated outreach to SEO that runs itself.
+- [The Post-Interface Internet](https://veda.ng/postinterface): The GUI was a 40-year hack for human-computer impedance matching.
+- [Agents Eating SaaS](https://veda.ng/agentsaas): The $400 billion SaaS industry was built on per-seat pricing. AI agents do not sit in seats.
+- [The Agentic State](https://veda.ng/stateagents): Estonia claims 100% of government services are online. Singapore deployed AI across its public service at scale.
+- [The Text Field is the New Dashboard](https://veda.ng/textui): When a text field backed by an LLM can answer any question by calling internal APIs directly, the dashboard becomes redundant.
+- [The Stepwise Approach to Enterprise AI](https://veda.ng/stepwise): Most enterprises fail at AI by deploying it everywhere at once. Evidence shows that starting with narrow, high-frequency tasks produces measurable ROI.
+- [The YC Portfolio, Decoded](https://veda.ng/yc): An analysis of Y Combinator's 5,818 companies reveals five structural shifts: B2B dominance at 51%, the rise of the AI employee, defense tech at scale,...
+- [Post-Scarcity Technology](https://veda.ng/postscarcity): When the marginal cost of intelligence, energy, and digital goods trends toward zero, the economic frameworks built on scarcity face structural pressure.
+- [Agentic Commerce](https://veda.ng/agentcommerce): When algorithms start shopping on behalf of consumers, traditional e-commerce breaks.
+- [Towards the Agentic Web](https://veda.ng/agenticweb): How the internet is shifting from a place where humans find information to  a platform where autonomous AI agents get things done on your behalf.
+- [The Infinity Economy](https://veda.ng/infinity): Can AI and decentralized systems make scarcity obsolete, or does the physical world have something to say about that?
+- [The AI Economy](https://veda.ng/aieconomy): Job displacement, market concentration, and what a balanced AI transition actually requires.
+- [Lessons from Singapore's Arc](https://veda.ng/singapore): How a fishing village became one of the richest countries on earth, and what the development economics literature says about why.
+- [From Cheap to Competitive](https://veda.ng/competitive): How national product quality perception follows income growth with a predictable lag, and where India sits on that arc today.
+- [The Revision Gap](https://veda.ng/revision): Why the difference between mediocre and effective writing is not first-draft quality but revision depth, how AI systems can be structured to close this...
+- [Twilight Economy](https://veda.ng/twilight): The zone where human and AI labor blend indistinguishably, where attribution becomes indeterminate, and where the legal, economic, and psychological...
+- [Are We in a Computer Simulation?](https://veda.ng/simulation): A structured examination of the simulation hypothesis: Bostrom's trilemma, the computational constraints, the consciousness dependency, and what modern...
+- [The Singularity Paradox](https://veda.ng/paradox): Why every prediction about post-singularity futures is self-defeating, how the alignment problem compounds with the control problem, and what the...
+- [Synthetic Empathy](https://veda.ng/empathy): A clinical trial showed AI therapy reduced depression symptoms by 51%. The WHO reports 1 in 6 people experience loneliness.
+- [The AI Agent Economy](https://veda.ng/agenteconomy): When software starts acting as an economic agent, sourcing suppliers, executing trades, managing projects, the corporation as it exists today faces...
+- [AI Superintelligence Timeline](https://veda.ng/asi): Why expert predictions for artificial superintelligence range from 2027 to 2100+, what the key bottlenecks are (compute, data, architecture,...
+- [The In-Between State](https://veda.ng/liminal): Transhumanism's actual near-term trajectory: not dramatic transcendence but a multi-decade period of partial, uneven, and socially disruptive...
+- [The Hustle Trap](https://veda.ng/hustle): After 55 hours per week, productivity drops to nearly zero.
+- [An Internet of Lies](https://veda.ng/lies): Deepfake incidents increased 900% year-over-year. Only 0.1% of users can distinguish real from synthetic media.
+- [Intuitive Singularity](https://veda.ng/instinct): When AI systems transition from tools that execute commands to systems that anticipate intent, the interface between human and machine cognition...
+- [Governance in the Age of AGI](https://veda.ng/governance): Three regulatory superpowers are building incompatible AI governance frameworks. The EU bans practices. The US deregulates. China registers algorithms.
+- [The Substrate Shift](https://veda.ng/substrate): Silicon is hitting physical limits at the atomic scale. DNA stores 455 exabytes per gram.
+- [The World as an Interface](https://veda.ng/ambient): The smart home market will reach $175 billion in 2025. Device shipments approach 1.25 billion units.
 - [What is the Singularity?](https://veda.ng/singularity): A structured examination of the technological singularity: its formal definition, the alignment problem it creates, the hard versus soft trajectories,...
-- [API States](https://veda.ng/api-states): Estonia runs 99% of public services digitally and saves 2% of GDP annually. India's UPI processes billions of transactions monthly.
-- [Cognitive Load Crisis](https://veda.ng/cognitive-load): The average attention span on a screen is 47 seconds. Humans check their phones 200 times per day.
-- [Artificial Intuition](https://veda.ng/artificial-intuition): How machines may develop synthetic analogues to human intuition through pattern recognition at scale, what Kahneman's dual-process theory reveals about...
-- [Bureaucracy is the friction tax everyone pays](https://veda.ng/bureaucracy-tax): Why institutional complexity accumulates faster than it resolves, what the measurable costs are across sectors, and where digital-first governance...
-- [The Dark Forest Internet](https://veda.ng/dark-forest-internet): Bots now generate 51% of all web traffic. 74% of new web pages contain AI-generated text.
-- [Rationality in AI](https://veda.ng/rationality-in-ai): What it means for an AI system to be rational, how decision theory applies to artificial agents, why the orthogonality thesis makes alignment a...
-- [Digital Monasticism](https://veda.ng/digital-monasticism): Silence is the new luxury. The average person spends 7 hours on screens daily. Attention spans dropped from 2.5 minutes to 40 seconds in twenty years.
-- [Attention Refinery](https://veda.ng/attention-refinery): The five largest technology companies generate over $600 billion per year by extracting and reselling human attention.
-- [Tracing Blockchain's Journey](https://veda.ng/blockchain-journey): An analysis of blockchain's evolution from cryptographic experiment to institutional infrastructure, examining what survived the hype cycles, where the...
-- [Sacred Algorithms](https://veda.ng/sacred-algorithms): COMPAS predicts recidivism with racial bias baked in. Healthcare AI underestimates illness in minority patients.
-- [Computational Social Science](https://veda.ng/computational-social-science): Twitter's API shutdown disrupted 20 years of social research. Digital twins simulate voter behavior.
-- [Computational Constitutions](https://veda.ng/computational-constitutions): Wyoming legalized DAO LLCs in 2021. Smart contracts execute governance rules automatically.
-- [Pseudonymous Agency](https://veda.ng/pseudonymous-agency): Satoshi Nakamoto built a $1 trillion protocol without revealing an identity. Banksy generates $25M+ per auction without a face.
-- [Programmable Trust](https://veda.ng/programmable-trust): Zero-knowledge proofs verify without revealing. Trusted execution environments create hardware-enforced privacy.
-- [The God Protocol](https://veda.ng/god-protocol): Nick Szabo imagined a trusted third party with infinite integrity, no self-interest, and perfect confidentiality. Bitcoin approximated it.
-- [The Sensory Internet](https://veda.ng/sensory-internet): The haptic technology market reaches $4-12 billion in 2025. Apple shipped 390,000 Vision Pro units. Neuralink implanted its first human BCI.
-- [The Mesh Economy](https://veda.ng/mesh-economy): DeFi protocols execute billions in daily volume with zero employees. DAOs manage tens of billions in treasury assets through on-chain governance.
-- [The Plurality Trap](https://veda.ng/plurality-trap): More information was supposed to produce better understanding. Instead, it produced more ways to be wrong confidently.
-- [The Simulation Layer](https://veda.ng/simulation-layer): Digital twins save Boeing over $1 billion in manufacturing. Waymo has driven 20+ billion simulated miles.
+- [API States](https://veda.ng/apis): Estonia runs 99% of public services digitally and saves 2% of GDP annually. India's UPI processes billions of transactions monthly.
+- [Cognitive Load Crisis](https://veda.ng/cognition): The average attention span on a screen is 47 seconds. Humans check their phones 200 times per day.
+- [Artificial Intuition](https://veda.ng/intuition): How machines may develop synthetic analogues to human intuition through pattern recognition at scale, what Kahneman's dual-process theory reveals about...
+- [Bureaucracy is the friction tax everyone pays](https://veda.ng/bureaucracy): Why institutional complexity accumulates faster than it resolves, what the measurable costs are across sectors, and where digital-first governance...
+- [The Dark Forest Internet](https://veda.ng/darkforest): Bots now generate 51% of all web traffic. 74% of new web pages contain AI-generated text.
+- [Rationality in AI](https://veda.ng/rationality): What it means for an AI system to be rational, how decision theory applies to artificial agents, why the orthogonality thesis makes alignment a...
+- [Digital Monasticism](https://veda.ng/monasticism): Silence is the new luxury. The average person spends 7 hours on screens daily. Attention spans dropped from 2.5 minutes to 40 seconds in twenty years.
+- [Attention Refinery](https://veda.ng/attention): The five largest technology companies generate over $600 billion per year by extracting and reselling human attention.
+- [Tracing Blockchain's Journey](https://veda.ng/blockchain): An analysis of blockchain's evolution from cryptographic experiment to institutional infrastructure, examining what survived the hype cycles, where the...
+- [Sacred Algorithms](https://veda.ng/algorithms): COMPAS predicts recidivism with racial bias baked in. Healthcare AI underestimates illness in minority patients.
+- [Computational Social Science](https://veda.ng/socialscience): Twitter's API shutdown disrupted 20 years of social research. Digital twins simulate voter behavior.
+- [Computational Constitutions](https://veda.ng/constitutions): Wyoming legalized DAO LLCs in 2021. Smart contracts execute governance rules automatically.
+- [Pseudonymous Agency](https://veda.ng/pseudonymity): Satoshi Nakamoto built a $1 trillion protocol without revealing an identity. Banksy generates $25M+ per auction without a face.
+- [Programmable Trust](https://veda.ng/trust): Zero-knowledge proofs verify without revealing. Trusted execution environments create hardware-enforced privacy.
+- [The God Protocol](https://veda.ng/godprotocol): Nick Szabo imagined a trusted third party with infinite integrity, no self-interest, and perfect confidentiality. Bitcoin approximated it.
+- [The Sensory Internet](https://veda.ng/sensory): The haptic technology market reaches $4-12 billion in 2025. Apple shipped 390,000 Vision Pro units. Neuralink implanted its first human BCI.
+- [The Mesh Economy](https://veda.ng/mesh): DeFi protocols execute billions in daily volume with zero employees. DAOs manage tens of billions in treasury assets through on-chain governance.
+- [The Plurality Trap](https://veda.ng/plurality): More information was supposed to produce better understanding. Instead, it produced more ways to be wrong confidently.
+- [The Simulation Layer](https://veda.ng/simulayer): Digital twins save Boeing over $1 billion in manufacturing. Waymo has driven 20+ billion simulated miles.
 
 ## Research Data Archives
 

@@ -1,6 +1,6 @@
 {
   "essayToTerms": {
-    "asi-timeline": [
+    "asi": [
       "transformer",
       "constitutional-ai",
       "reinforcement-learning",
@@ -11,65 +11,65 @@
       "agi",
       "neural-network"
     ],
-    "ambient-intelligence": [
+    "ambient": [
       "computer-vision",
       "intent"
     ],
-    "internet-of-lies": [
+    "lies": [
       "ipfs",
       "decentralized-identity"
     ],
-    "api-states": [
+    "apis": [
       "self-sovereign-identity",
       "dao",
       "wallet"
     ],
-    "simulation-hypothesis": [
+    "simulation": [
       "defi"
     ],
-    "artificial-intuition": [
+    "intuition": [
       "pattern-recognition",
       "knowledge-graph",
       "defi"
     ],
-    "bureaucracy-tax": [
+    "bureaucracy": [
       "blockchain",
       "decentralized-identity"
     ],
-    "computational-constitutions": [
+    "constitutions": [
       "dao",
       "zero-knowledge-proofs-zkps",
       "bert",
       "defi",
       "zero-knowledge-proof"
     ],
-    "computational-social-science": [
+    "socialscience": [
       "llm",
       "inference",
       "validator"
     ],
-    "digital-monasticism": [
+    "monasticism": [
       "intent"
     ],
-    "agi-governance": [
+    "governance": [
       "ai-safety",
       "defi",
       "alignment",
       "clip",
       "agi"
     ],
-    "hustle-culture": [
+    "hustle": [
       "leverage",
       "alignment"
     ],
-    "programmable-trust": [
+    "trust": [
       "zero-knowledge-proofs-zkps",
       "bert",
       "blockchain",
       "wallet",
       "zero-knowledge-proof"
     ],
-    "pseudonymous-agency": [
+    "pseudonymity": [
       "proof-of-work",
       "smart-contract",
       "zero-knowledge-proofs-zkps",
@@ -80,40 +80,40 @@
       "wallet",
       "zero-knowledge-proof"
     ],
-    "rationality-in-ai": [
+    "rationality": [
       "constitutional-ai",
       "inference",
       "alignment",
       "clip"
     ],
-    "sacred-algorithms": [
+    "algorithms": [
       "deep-learning",
       "defi"
     ],
-    "ai-agent-economy": [
+    "agenteconomy": [
       "transformer",
       "reinforcement-learning",
       "rlhf",
       "intent",
       "defi"
     ],
-    "attention-refinery": [
+    "attention": [
       "defi",
       "yield",
       "intent",
       "alignment"
     ],
-    "cognitive-load": [
+    "cognition": [
       "intent",
       "defi"
     ],
-    "dark-forest-internet": [
+    "darkforest": [
       "dao",
       "zero-knowledge-proofs-zkps",
       "wallet",
       "zero-knowledge-proof"
     ],
-    "god-protocol": [
+    "godprotocol": [
       "explainable-ai-xai",
       "defi",
       "alignment",
@@ -121,17 +121,17 @@
       "agi",
       "neural-network"
     ],
-    "in-between-state": [
+    "liminal": [
       "defi"
     ],
-    "intuitive-singularity": [
+    "instinct": [
       "intent",
       "explainable-ai-xai",
       "defi",
       "deep-learning",
       "neural-network"
     ],
-    "mesh-economy": [
+    "mesh": [
       "dao",
       "smart-contract",
       "peer-to-peer-p2p",
@@ -140,20 +140,20 @@
       "blockchain",
       "nft"
     ],
-    "plurality-trap": [
+    "plurality": [
       "intent"
     ],
-    "simulation-layer": [
+    "simulayer": [
       "llm",
       "federated-learning",
       "digital-twin"
     ],
-    "singularity-paradox": [
+    "paradox": [
       "defi",
       "alignment",
       "clip"
     ],
-    "substrate-shift": [
+    "substrate": [
       "quantum-computing",
       "defi",
       "neural-network",
@@ -161,12 +161,12 @@
       "leverage",
       "cold-storage"
     ],
-    "twilight-economy": [
+    "twilight": [
       "llm",
       "intent",
       "diffusion-model"
     ],
-    "blockchain-journey": [
+    "blockchain": [
       "stablecoin",
       "smart-contract",
       "real-world-assets",
@@ -188,272 +188,272 @@
   },
   "termToEssays": {
     "agi": [
-      "agi-governance",
-      "asi-timeline",
-      "god-protocol"
+      "governance",
+      "asi",
+      "godprotocol"
     ],
     "alignment": [
-      "rationality-in-ai",
-      "agi-governance",
-      "hustle-culture",
-      "singularity-paradox",
+      "rationality",
+      "governance",
+      "hustle",
+      "paradox",
       "singularity",
-      "asi-timeline"
+      "asi"
     ],
     "constitutional-ai": [
-      "asi-timeline",
-      "rationality-in-ai"
+      "asi",
+      "rationality"
     ],
     "transformer": [
-      "ai-agent-economy",
-      "asi-timeline"
+      "agenteconomy",
+      "asi"
     ],
     "synthetic-data": [
-      "asi-timeline"
+      "asi"
     ],
     "scaling-law": [
-      "asi-timeline"
+      "asi"
     ],
     "neural-network": [
-      "substrate-shift",
+      "substrate",
       "singularity",
-      "god-protocol",
-      "asi-timeline",
-      "intuitive-singularity"
+      "godprotocol",
+      "asi",
+      "instinct"
     ],
     "reinforcement-learning": [
-      "ai-agent-economy",
-      "asi-timeline"
+      "agenteconomy",
+      "asi"
     ],
     "deep-learning": [
-      "asi-timeline",
-      "sacred-algorithms",
-      "intuitive-singularity"
+      "asi",
+      "algorithms",
+      "instinct"
     ],
     "computer-vision": [
-      "ambient-intelligence"
+      "ambient"
     ],
     "intent": [
-      "ambient-intelligence",
-      "plurality-trap",
-      "cognitive-load",
-      "ai-agent-economy",
-      "digital-monasticism",
-      "pseudonymous-agency"
+      "ambient",
+      "plurality",
+      "cognition",
+      "agenteconomy",
+      "monasticism",
+      "pseudonymity"
     ],
     "ipfs": [
-      "internet-of-lies"
+      "lies"
     ],
     "decentralized-identity": [
-      "pseudonymous-agency",
-      "internet-of-lies",
-      "bureaucracy-tax"
+      "pseudonymity",
+      "lies",
+      "bureaucracy"
     ],
     "dao": [
-      "dark-forest-internet",
-      "computational-constitutions",
-      "mesh-economy",
-      "api-states"
+      "darkforest",
+      "constitutions",
+      "mesh",
+      "apis"
     ],
     "wallet": [
-      "dark-forest-internet",
-      "pseudonymous-agency",
-      "programmable-trust",
-      "blockchain-journey",
-      "api-states"
+      "darkforest",
+      "pseudonymity",
+      "trust",
+      "blockchain",
+      "apis"
     ],
     "self-sovereign-identity": [
-      "pseudonymous-agency",
-      "api-states"
+      "pseudonymity",
+      "apis"
     ],
     "defi": [
-      "attention-refinery",
-      "artificial-intuition",
-      "agi-governance",
-      "substrate-shift",
-      "computational-constitutions",
-      "singularity-paradox"
+      "attention",
+      "intuition",
+      "governance",
+      "substrate",
+      "constitutions",
+      "paradox"
     ],
     "knowledge-graph": [
-      "artificial-intuition"
+      "intuition"
     ],
     "pattern-recognition": [
-      "artificial-intuition"
+      "intuition"
     ],
     "blockchain": [
-      "substrate-shift",
-      "mesh-economy",
-      "programmable-trust",
-      "blockchain-journey",
-      "bureaucracy-tax"
+      "substrate",
+      "mesh",
+      "trust",
+      "blockchain",
+      "bureaucracy"
     ],
     "zero-knowledge-proof": [
-      "pseudonymous-agency",
-      "programmable-trust",
-      "computational-constitutions",
-      "dark-forest-internet"
+      "pseudonymity",
+      "trust",
+      "constitutions",
+      "darkforest"
     ],
     "bert": [
-      "programmable-trust",
-      "computational-constitutions"
+      "trust",
+      "constitutions"
     ],
     "zero-knowledge-proofs-zkps": [
-      "pseudonymous-agency",
-      "programmable-trust",
-      "computational-constitutions",
-      "dark-forest-internet"
+      "pseudonymity",
+      "trust",
+      "constitutions",
+      "darkforest"
     ],
     "llm": [
-      "simulation-layer",
-      "computational-social-science",
-      "twilight-economy"
+      "simulayer",
+      "socialscience",
+      "twilight"
     ],
     "validator": [
-      "computational-social-science"
+      "socialscience"
     ],
     "inference": [
-      "rationality-in-ai",
-      "computational-social-science"
+      "rationality",
+      "socialscience"
     ],
     "clip": [
-      "rationality-in-ai",
-      "agi-governance",
-      "singularity-paradox",
+      "rationality",
+      "governance",
+      "paradox",
       "singularity",
-      "god-protocol"
+      "godprotocol"
     ],
     "ai-safety": [
-      "agi-governance"
+      "governance"
     ],
     "leverage": [
-      "hustle-culture",
-      "substrate-shift"
+      "hustle",
+      "substrate"
     ],
     "smart-contract": [
-      "pseudonymous-agency",
-      "blockchain-journey",
-      "mesh-economy"
+      "pseudonymity",
+      "blockchain",
+      "mesh"
     ],
     "proof-of-work": [
-      "pseudonymous-agency",
-      "blockchain-journey"
+      "pseudonymity",
+      "blockchain"
     ],
     "sybil-attack": [
-      "pseudonymous-agency"
+      "pseudonymity"
     ],
     "rlhf": [
-      "ai-agent-economy"
+      "agenteconomy"
     ],
     "yield": [
-      "attention-refinery"
+      "attention"
     ],
     "explainable-ai-xai": [
-      "god-protocol",
-      "intuitive-singularity"
+      "godprotocol",
+      "instinct"
     ],
     "nft": [
-      "mesh-economy"
+      "mesh"
     ],
     "consensus-mechanism": [
-      "blockchain-journey",
-      "mesh-economy"
+      "blockchain",
+      "mesh"
     ],
     "layer-2": [
-      "blockchain-journey",
-      "mesh-economy"
+      "blockchain",
+      "mesh"
     ],
     "peer-to-peer-p2p": [
-      "mesh-economy"
+      "mesh"
     ],
     "federated-learning": [
-      "simulation-layer"
+      "simulayer"
     ],
     "digital-twin": [
-      "simulation-layer"
+      "simulayer"
     ],
     "cold-storage": [
-      "substrate-shift"
+      "substrate"
     ],
     "quantum-computing": [
-      "substrate-shift"
+      "substrate"
     ],
     "diffusion-model": [
-      "twilight-economy"
+      "twilight"
     ],
     "stablecoin": [
-      "blockchain-journey"
+      "blockchain"
     ],
     "tokenization": [
-      "blockchain-journey"
+      "blockchain"
     ],
     "amm": [
-      "blockchain-journey"
+      "blockchain"
     ],
     "liquidity-pool": [
-      "blockchain-journey"
+      "blockchain"
     ],
     "layer-1": [
-      "blockchain-journey"
+      "blockchain"
     ],
     "proof-of-stake": [
-      "blockchain-journey"
+      "blockchain"
     ],
     "throughput": [
-      "blockchain-journey"
+      "blockchain"
     ],
     "double-spend": [
-      "blockchain-journey"
+      "blockchain"
     ],
     "rollup": [
-      "blockchain-journey"
+      "blockchain"
     ],
     "account-abstraction": [
-      "blockchain-journey"
+      "blockchain"
     ],
     "social-recovery": [
-      "blockchain-journey"
+      "blockchain"
     ],
     "real-world-assets": [
-      "blockchain-journey"
+      "blockchain"
     ],
     "artificial-superintelligence-asi": [
       "singularity"
     ]
   },
   "essayTitles": {
-    "asi-timeline": "AI Superintelligence Timeline",
-    "ambient-intelligence": "The World as an Interface",
-    "internet-of-lies": "An Internet of Lies",
-    "api-states": "API States",
-    "simulation-hypothesis": "Are We in a Computer Simulation?",
-    "artificial-intuition": "Artificial Intuition",
-    "bureaucracy-tax": "Bureaucracy is the friction tax we all pay",
-    "computational-constitutions": "Computational Constitutions",
-    "computational-social-science": "Computational Social Science at Scale",
-    "digital-monasticism": "Digital Monasticism",
-    "agi-governance": "Governance in the Age of AGI",
-    "hustle-culture": "Hustle culture is a cage dressed up as ambition",
-    "programmable-trust": "Programmable Trust",
-    "pseudonymous-agency": "Pseudonymous Agency",
-    "rationality-in-ai": "Rationality in AI",
-    "sacred-algorithms": "Sacred Algorithms",
-    "synthetic-empathy": "Synthetic Empathy",
-    "ai-agent-economy": "The AI Agent Economy",
-    "attention-refinery": "Attention Refinery",
-    "cognitive-load": "Cognitive Load Crisis",
-    "dark-forest-internet": "The Dark Forest Internet",
-    "god-protocol": "The God Protocol",
-    "in-between-state": "The In-Between State",
-    "intuitive-singularity": "Intuitive Singularity",
-    "mesh-economy": "The Mesh Economy",
-    "plurality-trap": "Plurality Trap",
-    "revision-gap": "The Revision Gap",
-    "sensory-internet": "Sensory Internet",
-    "simulation-layer": "Simulation Layer",
-    "singularity-paradox": "The Singularity Paradox",
-    "substrate-shift": "The Substrate Shift",
-    "twilight-economy": "Twilight Economy",
-    "blockchain-journey": "Tracing Blockchain's Journey",
+    "asi": "AI Superintelligence Timeline",
+    "ambient": "The World as an Interface",
+    "lies": "An Internet of Lies",
+    "apis": "API States",
+    "simulation": "Are We in a Computer Simulation?",
+    "intuition": "Artificial Intuition",
+    "bureaucracy": "Bureaucracy is the friction tax we all pay",
+    "constitutions": "Computational Constitutions",
+    "socialscience": "Computational Social Science at Scale",
+    "monasticism": "Digital Monasticism",
+    "governance": "Governance in the Age of AGI",
+    "hustle": "Hustle culture is a cage dressed up as ambition",
+    "trust": "Programmable Trust",
+    "pseudonymity": "Pseudonymous Agency",
+    "rationality": "Rationality in AI",
+    "algorithms": "Sacred Algorithms",
+    "empathy": "Synthetic Empathy",
+    "agenteconomy": "The AI Agent Economy",
+    "attention": "Attention Refinery",
+    "cognition": "Cognitive Load Crisis",
+    "darkforest": "The Dark Forest Internet",
+    "godprotocol": "The God Protocol",
+    "liminal": "The In-Between State",
+    "instinct": "Intuitive Singularity",
+    "mesh": "The Mesh Economy",
+    "plurality": "Plurality Trap",
+    "revision": "The Revision Gap",
+    "sensory": "Sensory Internet",
+    "simulayer": "Simulation Layer",
+    "paradox": "The Singularity Paradox",
+    "substrate": "The Substrate Shift",
+    "twilight": "Twilight Economy",
+    "blockchain": "Tracing Blockchain's Journey",
     "singularity": "What is the Singularity?"
   }
 }

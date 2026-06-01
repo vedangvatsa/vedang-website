@@ -5,7 +5,7 @@ const REPO_ROOT = '/Users/vedang/vedang-website';
 const POSTS_FILE = path.resolve(REPO_ROOT, 'scripts/hashnode-posts.json');
 
 const posts = JSON.parse(fs.readFileSync(POSTS_FILE, 'utf-8'));
-const activeSlugs = new Set(['universal-text-ui', 'stepwise-ai', 'ambient-intelligence']);
+const activeSlugs = new Set(['textui', 'stepwise', 'ambient']);
 
 let resetCount = 0;
 for (const post of posts) {

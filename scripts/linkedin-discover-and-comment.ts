@@ -22,16 +22,16 @@ const COOLDOWN_MS = 45000; // 45s between comments
 
 // ─── Essay bank (topic → URL) ───
 const ESSAYS: Record<string, { url: string; desc: string }> = {
-  'stepwise': { url: 'https://veda.ng/stepwise-ai', desc: 'starting with narrow high-frequency tasks' },
-  'playbook': { url: 'https://veda.ng/ai-implementation-playbook', desc: 'step by step AI implementation' },
-  'saas': { url: 'https://veda.ng/agents-eating-saas', desc: 'agents breaking per-seat pricing' },
-  'state': { url: 'https://veda.ng/agentic-state', desc: 'governments deploying AI at scale' },
-  'textui': { url: 'https://veda.ng/universal-text-ui', desc: 'text field replacing dashboards' },
-  'agenticweb': { url: 'https://veda.ng/towards-the-agentic-web', desc: 'internet shifting to agent-friendly' },
-  'commerce': { url: 'https://veda.ng/agentic-commerce', desc: 'algorithms shopping on our behalf' },
-  'postscarcity': { url: 'https://veda.ng/post-scarcity-technology', desc: 'marginal cost of intelligence trending to zero' },
-  'yc': { url: 'https://veda.ng/yc-landscape', desc: 'YC portfolio structural shifts' },
-  'postinterface': { url: 'https://veda.ng/post-interface-internet', desc: 'GUI was a 40 year hack' },
+  'stepwise': { url: 'https://veda.ng/stepwise', desc: 'starting with narrow high-frequency tasks' },
+  'playbook': { url: 'https://veda.ng/playbook', desc: 'step by step AI implementation' },
+  'saas': { url: 'https://veda.ng/agentsaas', desc: 'agents breaking per-seat pricing' },
+  'state': { url: 'https://veda.ng/stateagents', desc: 'governments deploying AI at scale' },
+  'textui': { url: 'https://veda.ng/textui', desc: 'text field replacing dashboards' },
+  'agenticweb': { url: 'https://veda.ng/agenticweb', desc: 'internet shifting to agent-friendly' },
+  'commerce': { url: 'https://veda.ng/agentcommerce', desc: 'algorithms shopping on our behalf' },
+  'postscarcity': { url: 'https://veda.ng/postscarcity', desc: 'marginal cost of intelligence trending to zero' },
+  'yc': { url: 'https://veda.ng/yc', desc: 'YC portfolio structural shifts' },
+  'postinterface': { url: 'https://veda.ng/postinterface', desc: 'GUI was a 40 year hack' },
 };
 
 // ─── Thought templates (human, no slop, with line breaks) ───

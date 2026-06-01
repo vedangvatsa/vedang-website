@@ -4,20 +4,20 @@ import { essays } from '@/lib/essays';
 
 // AI-related topic keywords for intelligent linking
 const AI_TOPICS = {
-  'asi-timeline': ['artificial-intuition', 'simulation-hypothesis', 'agi-governance', 'rationality-in-ai'],
-  'artificial-intuition': ['asi-timeline', 'rationality-in-ai', 'ai-agent-economy'],
-  'simulation-hypothesis': ['asi-timeline', 'artificial-intuition'],
-  'ai-agent-economy': ['artificial-intuition', 'attention-refinery', 'programmable-trust'],
-  'computational-constitutions': ['api-states', 'agi-governance', 'programmable-trust'],
-  'api-states': ['computational-constitutions', 'agi-governance'],
-  'computational-social-science': ['artificial-intuition', 'rationality-in-ai', 'ai-agent-economy'],
-  'agi-governance': ['asi-timeline', 'computational-constitutions', 'api-states'],
-  'programmable-trust': ['computational-constitutions', 'api-states', 'ai-agent-economy'],
-  'rationality-in-ai': ['artificial-intuition', 'asi-timeline', 'computational-social-science'],
-  'ambient-intelligence': ['artificial-intuition', 'ai-agent-economy', 'synthetic-empathy'],
-  'synthetic-empathy': ['ambient-intelligence', 'artificial-intuition'],
-  'attention-refinery': ['ai-agent-economy', 'cognitive-load'],
-  'cognitive-load': ['attention-refinery', 'digital-monasticism'],
+  'asi': ['intuition', 'simulation', 'governance', 'rationality'],
+  'intuition': ['asi', 'rationality', 'agenteconomy'],
+  'simulation': ['asi', 'intuition'],
+  'agenteconomy': ['intuition', 'attention', 'trust'],
+  'constitutions': ['apis', 'governance', 'trust'],
+  'apis': ['constitutions', 'governance'],
+  'socialscience': ['intuition', 'rationality', 'agenteconomy'],
+  'governance': ['asi', 'constitutions', 'apis'],
+  'trust': ['constitutions', 'apis', 'agenteconomy'],
+  'rationality': ['intuition', 'asi', 'socialscience'],
+  'ambient': ['intuition', 'agenteconomy', 'empathy'],
+  'empathy': ['ambient', 'intuition'],
+  'attention': ['agenteconomy', 'cognition'],
+  'cognition': ['attention', 'monasticism'],
 };
 
 export function RelatedEssays({ currentSlug }: { currentSlug: string }) {

@@ -26,7 +26,7 @@ export default function AIReportsPage() {
           </p>
           <AuthorByline />
           <p className="mt-6 text-sm text-muted-foreground">
-            Read the full synthesis: <Link href="/state-of-ai" className="text-primary hover:underline font-medium">The State of AI →</Link>
+            Read the full synthesis: <Link href="/stateofai" className="text-primary hover:underline font-medium">The State of AI →</Link>
           </p>
         </div>
       </section>

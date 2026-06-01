@@ -19,7 +19,7 @@
     "scheduleDate": "2026-03-26",
     "scheduleTime": "17:00",
     "posted": true,
-    "text": "Shopping used to mean: open browser, search, compare, click, form, checkout.\n\nAI agents cut that to one step. You describe what you want. They find it, compare it, and buy it.\n\nThe agent is not a new channel. It is a new buyer. And buyers that are algorithms behave very differently from buyers that are humans.\n\nThey do not respond to packaging. They do not care about your brand story. They read structured data and optimise for price, specs, and reviews.\n\nThe companies that win in this world are not the ones with the best ads. They are the ones with the cleanest data.\n\nFull essay: veda.ng/agentic-commerce",
+    "text": "Shopping used to mean: open browser, search, compare, click, form, checkout.\n\nAI agents cut that to one step. You describe what you want. They find it, compare it, and buy it.\n\nThe agent is not a new channel. It is a new buyer. And buyers that are algorithms behave very differently from buyers that are humans.\n\nThey do not respond to packaging. They do not care about your brand story. They read structured data and optimise for price, specs, and reviews.\n\nThe companies that win in this world are not the ones with the best ads. They are the ones with the cleanest data.\n\nFull essay: veda.ng/agentcommerce",
     "tags": [
       "ai",
       "technology",
@@ -79,7 +79,7 @@
     "scheduleDate": "2026-03-28",
     "scheduleTime": "01:00",
     "posted": true,
-    "text": "The infrastructure is built. The payment rails work. The models are good enough to comparison shop across thousands of products in seconds.\n\nWhat is still missing: only 24% of people trust an agent to spend their money. And legally, in most countries, an AI cannot sign a contract on your behalf.\n\nThe technology is ahead of the trust. And the trust is ahead of the law.\n\nThis gap will close. The question is whether it closes in 2 years or 10.\n\nFull essay: veda.ng/agentic-commerce",
+    "text": "The infrastructure is built. The payment rails work. The models are good enough to comparison shop across thousands of products in seconds.\n\nWhat is still missing: only 24% of people trust an agent to spend their money. And legally, in most countries, an AI cannot sign a contract on your behalf.\n\nThe technology is ahead of the trust. And the trust is ahead of the law.\n\nThis gap will close. The question is whether it closes in 2 years or 10.\n\nFull essay: veda.ng/agentcommerce",
     "tags": [
       "ai",
       "technology",
@@ -615,11 +615,11 @@
     "tumblrId": "813328126522327040"
   },
   {
-    "id": "ai-economy",
+    "id": "aieconomy",
     "scheduleDate": "2026-04-09",
     "scheduleTime": "01:00",
     "posted": true,
-    "text": "The entry ramp is narrowing.\n\nStanford payroll data: junior workers in AI-exposed jobs down 16%. Senior workers stable. The gap is widening.\n\nSalesforce cut 4,000 positions. Duolingo dropped human contractors. The question: will AI gains flow broadly or concentrate narrowly?\n\nveda.ng/ai-economy",
+    "text": "The entry ramp is narrowing.\n\nStanford payroll data: junior workers in AI-exposed jobs down 16%. Senior workers stable. The gap is widening.\n\nSalesforce cut 4,000 positions. Duolingo dropped human contractors. The question: will AI gains flow broadly or concentrate narrowly?\n\nveda.ng/aieconomy",
     "tags": [
       "ai",
       "economy",
@@ -631,11 +631,11 @@
     "tumblrId": "813358560073465856"
   },
   {
-    "id": "agi-governance",
+    "id": "governance",
     "scheduleDate": "2026-04-09",
     "scheduleTime": "17:00",
     "posted": true,
-    "text": "How do you govern something smarter than you?\n\nEvery governance system assumes humans are the smartest actors. AGI may end that assumption. We are preparing to govern gods.\n\nveda.ng/agi-governance",
+    "text": "How do you govern something smarter than you?\n\nEvery governance system assumes humans are the smartest actors. AGI may end that assumption. We are preparing to govern gods.\n\nveda.ng/governance",
     "tags": [
       "agi",
       "governance",
@@ -647,11 +647,11 @@
     "tumblrId": "813418781830479872"
   },
   {
-    "id": "agentic-commerce",
+    "id": "agentcommerce",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "09:00",
     "posted": true,
-    "text": "Your next customer is an algorithm.\n\nAI agents search stores, compare options, complete checkout. Brand loyalty weakens when a machine picks your products.\n\nveda.ng/agentic-commerce\n\nThe interface layer is changing too — dashboards are giving way to text fields that call APIs directly: veda.ng/universal-text-ui",
+    "text": "Your next customer is an algorithm.\n\nAI agents search stores, compare options, complete checkout. Brand loyalty weakens when a machine picks your products.\n\nveda.ng/agentcommerce\n\nThe interface layer is changing too — dashboards are giving way to text fields that call APIs directly: veda.ng/textui",
     "tags": [
       "ai",
       "commerce",
@@ -663,11 +663,11 @@
     "tumblrId": "813689964613206016"
   },
   {
-    "id": "ambient-intelligence",
+    "id": "ambient",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "17:00",
     "posted": true,
-    "text": "The best interface is no interface.\n\nAmbient intelligence eliminates the command itself. The environment senses and acts. Privacy is the obvious challenge.\n\nveda.ng/ambient-intelligence\n\nBefore no interface, there's a simpler one. The text field is replacing the dashboard: veda.ng/universal-text-ui",
+    "text": "The best interface is no interface.\n\nAmbient intelligence eliminates the command itself. The environment senses and acts. Privacy is the obvious challenge.\n\nveda.ng/ambient\n\nBefore no interface, there's a simpler one. The text field is replacing the dashboard: veda.ng/textui",
     "tags": [
       "iot",
       "ambient",
@@ -679,11 +679,11 @@
     "tumblrId": "813689965572669440"
   },
   {
-    "id": "ai-agent-economy",
+    "id": "agenteconomy",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "01:00",
     "posted": true,
-    "text": "The corporation is dissolving.\n\nWhen transaction costs approach zero, the firm stops making sense. AI agents dissolve hierarchy into fluid networks.\n\nveda.ng/ai-agent-economy\n\nThe hard part: getting there without blowing up. 70% of big-bang AI deployments fail. The sequencing matters: veda.ng/stepwise-ai",
+    "text": "The corporation is dissolving.\n\nWhen transaction costs approach zero, the firm stops making sense. AI agents dissolve hierarchy into fluid networks.\n\nveda.ng/agenteconomy\n\nThe hard part: getting there without blowing up. 70% of big-bang AI deployments fail. The sequencing matters: veda.ng/stepwise",
     "tags": [
       "ai",
       "economy",
@@ -695,11 +695,11 @@
     "tumblrId": "813689966072938496"
   },
   {
-    "id": "api-states",
+    "id": "apis",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "17:00",
     "posted": true,
-    "text": "The nation-state as a platform. API calls instead of office visits. Cryptographic credentials instead of passports.\n\nEstonia already built it.\n\nveda.ng/api-states\n\nEstonia already built this. 99% of services digital. Babies born get benefits automatically. No forms: veda.ng/agentic-state",
+    "text": "The nation-state as a platform. API calls instead of office visits. Cryptographic credentials instead of passports.\n\nEstonia already built it.\n\nveda.ng/apis\n\nEstonia already built this. 99% of services digital. Babies born get benefits automatically. No forms: veda.ng/stateagents",
     "tags": [
       "governance",
       "technology",
@@ -711,11 +711,11 @@
     "tumblrId": "813689966379089920"
   },
   {
-    "id": "artificial-intuition",
+    "id": "intuition",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "09:00",
     "posted": true,
-    "text": "Logic finds answers. Intuition finds questions.\n\nThe next frontier: giving machines a gut feeling. Holistic pattern recognition, not just logical reasoning.\n\nveda.ng/artificial-intuition",
+    "text": "Logic finds answers. Intuition finds questions.\n\nThe next frontier: giving machines a gut feeling. Holistic pattern recognition, not just logical reasoning.\n\nveda.ng/intuition",
     "tags": [
       "ai",
       "intuition",
@@ -727,11 +727,11 @@
     "tumblrId": "813689967087910912"
   },
   {
-    "id": "asi-timeline",
+    "id": "asi",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "17:00",
     "posted": true,
-    "text": "When does superintelligence arrive? Nobody knows.\n\nMetaculus: 50% by 2040-2050. Predictions range from 2030 to 2100. The uncertainty demands urgency.\n\nveda.ng/asi-timeline",
+    "text": "When does superintelligence arrive? Nobody knows.\n\nMetaculus: 50% by 2040-2050. Predictions range from 2030 to 2100. The uncertainty demands urgency.\n\nveda.ng/asi",
     "tags": [
       "ai",
       "superintelligence",
@@ -743,7 +743,7 @@
     "tumblrId": "813689967530377217"
   },
   {
-    "id": "stepwise-ai",
+    "id": "stepwise",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "17:00",
     "posted": true,
@@ -752,12 +752,12 @@
       "AI",
       "enterprise"
     ],
-    "text": "Klarna automated support. Saved $60M. Satisfaction tanked. They hired people back.\n\n70% of big-bang AI deployments fail. Companies that pick one boring task first see payback in three months.\n\nThe failure is always sequence, not technology.\n\nveda.ng/stepwise-ai",
+    "text": "Klarna automated support. Saved $60M. Satisfaction tanked. They hired people back.\n\n70% of big-bang AI deployments fail. Companies that pick one boring task first see payback in three months.\n\nThe failure is always sequence, not technology.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-12T12:00:24.744Z",
     "tumblrId": "813689968561127424"
   },
   {
-    "id": "universal-text-ui",
+    "id": "textui",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "01:00",
     "posted": true,
@@ -766,12 +766,12 @@
       "AI",
       "design"
     ],
-    "text": "Every dropdown is a predicted question. Your actual question is never one of them.\n\nA text field backed by an LLM that calls APIs directly kills the dashboard. PostHog, Salesforce, and Cursor already proved it.\n\nveda.ng/universal-text-ui",
+    "text": "Every dropdown is a predicted question. Your actual question is never one of them.\n\nA text field backed by an LLM that calls APIs directly kills the dashboard. PostHog, Salesforce, and Cursor already proved it.\n\nveda.ng/textui",
     "postedAt": "2026-04-12T12:00:25.511Z",
     "tumblrId": "813689969352835072"
   },
   {
-    "id": "agentic-state",
+    "id": "stateagents",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "09:00",
     "posted": true,
@@ -780,7 +780,7 @@
       "government",
       "AI"
     ],
-    "text": "Estonia: 99% digital government. Singapore: AI across 100k officers. UAE: 97% utilization.\n\nBaby born? System detects it, calculates benefits, deposits money. No form. No queue.\n\nMost governments still run on PDFs and waiting rooms.\n\nveda.ng/agentic-state",
+    "text": "Estonia: 99% digital government. Singapore: AI across 100k officers. UAE: 97% utilization.\n\nBaby born? System detects it, calculates benefits, deposits money. No form. No queue.\n\nMost governments still run on PDFs and waiting rooms.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-12T12:00:26.688Z",
     "tumblrId": "813689970460114945"
   },
@@ -794,7 +794,7 @@
       "AI",
       "sales"
     ],
-    "text": "Lead response: 4 hours → 60 seconds. One voice agent. Conversions tripled. 2,000+ meetings/month.\n\nThe sales team stopped qualifying. They only close.\n\nveda.ng/stepwise-ai",
+    "text": "Lead response: 4 hours → 60 seconds. One voice agent. Conversions tripled. 2,000+ meetings/month.\n\nThe sales team stopped qualifying. They only close.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-12T12:00:27.048Z",
     "tumblrId": "813689970955026432"
   },
@@ -808,7 +808,7 @@
       "Estonia",
       "government"
     ],
-    "text": "Estonia lets anyone start an EU company remotely. 135k people, 170 countries. €125M revenue. 12:1 ROI.\n\nGovernment as infrastructure.\n\nveda.ng/agentic-state",
+    "text": "Estonia lets anyone start an EU company remotely. 135k people, 170 countries. €125M revenue. 12:1 ROI.\n\nGovernment as infrastructure.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-13T06:03:28.658Z",
     "tumblrId": "813758109049831424"
   },
@@ -822,7 +822,7 @@
       "SaaS",
       "AI"
     ],
-    "text": "106 apps per company. 1,200 daily switches. 39% deep focus. 93% of leaders want natural language data queries.\n\nThat's a structural bottleneck, not a feature request.\n\nveda.ng/universal-text-ui",
+    "text": "106 apps per company. 1,200 daily switches. 39% deep focus. 93% of leaders want natural language data queries.\n\nThat's a structural bottleneck, not a feature request.\n\nveda.ng/textui",
     "postedAt": "2026-04-14T05:38:19.694Z",
     "tumblrId": "813847123818840064"
   },
@@ -836,7 +836,7 @@
       "AI",
       "marketing"
     ],
-    "text": "3-person agency. 6 hrs/person Fridays on reports. LLM automated it. 20 hours freed. 30→50 clients. Zero hires.\n\nveda.ng/stepwise-ai",
+    "text": "3-person agency. 6 hrs/person Fridays on reports. LLM automated it. 20 hours freed. 30→50 clients. Zero hires.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-15T05:39:09.418Z",
     "tumblrId": "813937772933087232"
   },
@@ -850,7 +850,7 @@
       "Singapore",
       "AI"
     ],
-    "text": "50M citizen queries via AI. 100k officers using gov AI tools. 72% less admin.\n\nMost countries still debating pilots.\n\nveda.ng/agentic-state",
+    "text": "50M citizen queries via AI. 100k officers using gov AI tools. 72% less admin.\n\nMost countries still debating pilots.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-15T20:28:40.623Z",
     "tumblrId": "813993736538324992"
   },
@@ -864,7 +864,7 @@
       "Estonia",
       "e-government"
     ],
-    "text": "X-Road: 1B+ gov queries/year. Birth → all agencies updated automatically. Running 25 years.\n\nveda.ng/agentic-state",
+    "text": "X-Road: 1B+ gov queries/year. Birth → all agencies updated automatically. Running 25 years.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-12T12:00:27.394Z",
     "tumblrId": "813689971345113088"
   },
@@ -878,7 +878,7 @@
       "UI",
       "AI"
     ],
-    "text": "CLI → GUI → NLI. Each cut adaptation cost 10x. Dashboards are next.\n\nveda.ng/universal-text-ui",
+    "text": "CLI → GUI → NLI. Each cut adaptation cost 10x. Dashboards are next.\n\nveda.ng/textui",
     "postedAt": "2026-04-17T05:50:59.769Z",
     "tumblrId": "814119711193350144"
   },
@@ -892,7 +892,7 @@
       "AI",
       "enterprise"
     ],
-    "text": "40% of AI projects risk cancellation by 2027. Only 33% meet ROI. One task, 90 days, then expand.\n\nveda.ng/stepwise-ai",
+    "text": "40% of AI projects risk cancellation by 2027. Only 33% meet ROI. One task, 90 days, then expand.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-19T05:48:41.474Z",
     "tumblrId": "814300760545329152"
   },
@@ -906,12 +906,12 @@
       "UAE",
       "AI government"
     ],
-    "text": "Abu Dhabi: AED 13B for AI-native government. 97% utilization. Clean-sheet, no legacy.\n\nveda.ng/agentic-state",
+    "text": "Abu Dhabi: AED 13B for AI-native government. 97% utilization. Clean-sheet, no legacy.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-19T20:05:22.947Z",
     "tumblrId": "814354658973958144"
   },
   {
-    "id": "stepwise-ai",
+    "id": "stepwise",
     "scheduleDate": "2026-04-21",
     "scheduleTime": "09:00",
     "posted": true,
@@ -920,12 +920,12 @@
       "AI",
       "enterprise"
     ],
-    "text": "Klarna automated support. Saved $60M. Satisfaction tanked. They hired people back.\n\n70% of big-bang AI deployments fail. Companies that pick one boring task first see payback in three months.\n\nThe failure is always sequence, not technology.\n\nveda.ng/stepwise-ai",
+    "text": "Klarna automated support. Saved $60M. Satisfaction tanked. They hired people back.\n\n70% of big-bang AI deployments fail. Companies that pick one boring task first see payback in three months.\n\nThe failure is always sequence, not technology.\n\nveda.ng/stepwise",
     "postedAt": "2026-05-07T13:19:58.063Z",
     "tumblrId": "815959897822904320"
   },
   {
-    "id": "universal-text-ui",
+    "id": "textui",
     "scheduleDate": "2026-04-21",
     "scheduleTime": "17:00",
     "posted": true,
@@ -934,12 +934,12 @@
       "AI",
       "design"
     ],
-    "text": "Every dropdown is a predicted question. Your actual question is never one of them.\n\nA text field backed by an LLM that calls APIs directly kills the dashboard. PostHog, Salesforce, and Cursor already proved it.\n\nveda.ng/universal-text-ui",
+    "text": "Every dropdown is a predicted question. Your actual question is never one of them.\n\nA text field backed by an LLM that calls APIs directly kills the dashboard. PostHog, Salesforce, and Cursor already proved it.\n\nveda.ng/textui",
     "postedAt": "2026-05-09T02:59:08.746Z",
     "tumblrId": "816102033088266240"
   },
   {
-    "id": "agentic-state",
+    "id": "stateagents",
     "scheduleDate": "2026-04-22",
     "scheduleTime": "09:00",
     "posted": true,
@@ -948,7 +948,7 @@
       "government",
       "AI"
     ],
-    "text": "Estonia: 99% digital government. Singapore: AI across 100k officers. UAE: 97% utilization.\n\nBaby born? System detects it, calculates benefits, deposits money. No form. No queue.\n\nMost governments still run on PDFs and waiting rooms.\n\nveda.ng/agentic-state",
+    "text": "Estonia: 99% digital government. Singapore: AI across 100k officers. UAE: 97% utilization.\n\nBaby born? System detects it, calculates benefits, deposits money. No form. No queue.\n\nMost governments still run on PDFs and waiting rooms.\n\nveda.ng/stateagents",
     "postedAt": "2026-05-09T12:38:35.351Z",
     "tumblrId": "816138488432967680"
   }

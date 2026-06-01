@@ -17,4 +17,4 @@ gql(`
       post(slug: $slug) { content { markdown } }
     }
   }
-`, { host: "vedangvatsa.hashnode.dev", slug: "singularity-paradox" }).then(res => console.log(res.data.publication.post.content.markdown.slice(0, 500)));
+`, { host: "vedangvatsa.hashnode.dev", slug: "paradox" }).then(res => console.log(res.data.publication.post.content.markdown.slice(0, 500)));

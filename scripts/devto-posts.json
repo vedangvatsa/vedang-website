@@ -1,7 +1,7 @@
 [
   {
     "id": "devto-agentic-commerce",
-    "slug": "agentic-commerce",
+    "slug": "agentcommerce",
     "title": "Agentic Commerce",
     "tags": [
       "ai",
@@ -12,12 +12,12 @@
     "scheduleDate": "2026-03-26",
     "posted": true,
     "postedAt": "2026-03-26T12:08:47.657Z",
-    "devtoUrl": "https://dev.to/vedangvatsa/agentic-commerce-23ap",
+    "devtoUrl": "https://dev.to/vedangvatsa/agentcommerce-23ap",
     "scheduleTime": "01:00"
   },
   {
     "id": "devto-dark-forest-internet",
-    "slug": "dark-forest-internet",
+    "slug": "darkforest",
     "title": "The Dark Forest Internet",
     "tags": [
       "internet",
@@ -34,7 +34,7 @@
   },
   {
     "id": "devto-towards-the-agentic-web",
-    "slug": "towards-the-agentic-web",
+    "slug": "agenticweb",
     "title": "Towards the Agentic Web",
     "tags": [
       "ai",
@@ -47,11 +47,11 @@
     "error": "Dev.to API error: 429 Retry later\n",
     "scheduleTime": "17:00",
     "postedAt": "2026-03-26T20:02:48.568Z",
-    "devtoUrl": "https://dev.to/vedangvatsa/towards-the-agentic-web-2mcp"
+    "devtoUrl": "https://dev.to/vedangvatsa/agenticweb-2mcp"
   },
   {
     "id": "devto-ai-agent-economy",
-    "slug": "ai-agent-economy",
+    "slug": "agenteconomy",
     "title": "The AI Agent Economy",
     "tags": [
       "ai",
@@ -68,7 +68,7 @@
   },
   {
     "id": "devto-hustle-culture",
-    "slug": "hustle-culture",
+    "slug": "hustle",
     "title": "Hustle culture is a cage dressed up as ambition",
     "tags": [
       "career",
@@ -81,11 +81,11 @@
     "error": "Dev.to API error: 429 Retry later\n",
     "scheduleTime": "09:00",
     "postedAt": "2026-03-27T05:12:15.318Z",
-    "devtoUrl": "https://dev.to/vedangvatsa/hustle-culture-is-a-cage-dressed-up-as-ambition-3h88"
+    "devtoUrl": "https://dev.to/vedangvatsa/hustle-is-a-cage-dressed-up-as-ambition-3h88"
   },
   {
     "id": "devto-cognitive-load",
-    "slug": "cognitive-load",
+    "slug": "cognition",
     "title": "Cognitive Load Crisis",
     "tags": [
       "ux",
@@ -97,11 +97,11 @@
     "posted": true,
     "scheduleTime": "17:00",
     "postedAt": "2026-03-27T12:04:45.623Z",
-    "devtoUrl": "https://dev.to/vedangvatsa/cognitive-load-crisis-7d5"
+    "devtoUrl": "https://dev.to/vedangvatsa/cognition-crisis-7d5"
   },
   {
     "id": "devto-cheap-to-competitive",
-    "slug": "cheap-to-competitive",
+    "slug": "competitive",
     "title": "From Cheap to Competitive",
     "tags": [
       "business",
@@ -118,7 +118,7 @@
   },
   {
     "id": "devto-bureaucracy-tax",
-    "slug": "bureaucracy-tax",
+    "slug": "bureaucracy",
     "title": "Bureaucracy is the friction tax we all pay",
     "tags": [
       "government",
@@ -152,7 +152,7 @@
   },
   {
     "id": "devto-ai-economy",
-    "slug": "ai-economy",
+    "slug": "aieconomy",
     "title": "The AI Economy",
     "tags": [
       "ai",
@@ -169,7 +169,7 @@
   },
   {
     "id": "devto-digital-monasticism",
-    "slug": "digital-monasticism",
+    "slug": "monasticism",
     "title": "Digital Monasticism",
     "tags": [
       "productivity",
@@ -181,11 +181,11 @@
     "posted": true,
     "scheduleTime": "09:00",
     "postedAt": "2026-03-28T05:11:21.751Z",
-    "devtoUrl": "https://dev.to/vedangvatsa/digital-monasticism-2ejc"
+    "devtoUrl": "https://dev.to/vedangvatsa/monasticism-2ejc"
   },
   {
     "id": "devto-simulation-hypothesis",
-    "slug": "simulation-hypothesis",
+    "slug": "simulation",
     "title": "Are We in a Computer Simulation?",
     "tags": [
       "philosophy",
@@ -201,7 +201,7 @@
   },
   {
     "id": "devto-attention-refinery",
-    "slug": "attention-refinery",
+    "slug": "attention",
     "title": "Attention Refinery",
     "tags": [
       "attention",
@@ -213,11 +213,11 @@
     "posted": true,
     "scheduleTime": "01:00",
     "postedAt": "2026-03-27T20:00:07.375Z",
-    "devtoUrl": "https://dev.to/vedangvatsa/attention-refinery-1p40"
+    "devtoUrl": "https://dev.to/vedangvatsa/attention-1p40"
   },
   {
     "id": "devto-internet-of-lies",
-    "slug": "internet-of-lies",
+    "slug": "lies",
     "title": "An Internet of Lies",
     "tags": [
       "internet",
@@ -234,7 +234,7 @@
   },
   {
     "id": "devto-asi-timeline",
-    "slug": "asi-timeline",
+    "slug": "asi",
     "title": "AI Superintelligence Timeline",
     "tags": [
       "ai",
@@ -251,7 +251,7 @@
   },
   {
     "id": "devto-god-protocol",
-    "slug": "god-protocol",
+    "slug": "godprotocol",
     "title": "The God Protocol",
     "tags": [
       "blockchain",
@@ -267,7 +267,7 @@
   },
   {
     "id": "devto-mesh-economy",
-    "slug": "mesh-economy",
+    "slug": "mesh",
     "title": "The Mesh Economy",
     "tags": [
       "economy",
@@ -283,7 +283,7 @@
   },
   {
     "id": "devto-programmable-trust",
-    "slug": "programmable-trust",
+    "slug": "trust",
     "title": "Programmable Trust",
     "tags": [
       "blockchain",
@@ -295,11 +295,11 @@
     "posted": true,
     "scheduleTime": "17:00",
     "postedAt": "2026-03-29T11:53:57.044Z",
-    "devtoUrl": "https://dev.to/vedangvatsa/programmable-trust-2cbl"
+    "devtoUrl": "https://dev.to/vedangvatsa/trust-2cbl"
   },
   {
     "id": "devto-synthetic-empathy",
-    "slug": "synthetic-empathy",
+    "slug": "empathy",
     "title": "Synthetic Empathy",
     "tags": [
       "ai",
@@ -311,11 +311,11 @@
     "posted": true,
     "scheduleTime": "01:00",
     "postedAt": "2026-03-28T19:54:06.315Z",
-    "devtoUrl": "https://dev.to/vedangvatsa/synthetic-empathy-gg5"
+    "devtoUrl": "https://dev.to/vedangvatsa/empathy-gg5"
   },
   {
     "id": "devto-ambient-intelligence",
-    "slug": "ambient-intelligence",
+    "slug": "ambient",
     "title": "The World as an Interface",
     "tags": [
       "iot",
@@ -331,7 +331,7 @@
   },
   {
     "id": "devto-stepwise-ai",
-    "slug": "stepwise-ai",
+    "slug": "stepwise",
     "title": "Stepwise AI",
     "tags": [
       "ai",
@@ -347,7 +347,7 @@
   },
   {
     "id": "devto-universal-text-ui",
-    "slug": "universal-text-ui",
+    "slug": "textui",
     "title": "Universal Text UI",
     "tags": [
       "ui",
@@ -363,7 +363,7 @@
   },
   {
     "id": "devto-agentic-state",
-    "slug": "agentic-state",
+    "slug": "stateagents",
     "title": "The Agentic State",
     "tags": [
       "government",

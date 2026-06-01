@@ -20,31 +20,31 @@ import { MarketProjectionChart, TrustGapChart, ConsumerConcernsChart, ValueShift
 import { VCValuationExpansionChart, VCGiniConcentrationChart, VCDeathValleyTimeline, VCSectorSemanticAnalysis, VCStrategicFrameworkDiagram, VCEquationBoxSVG, VCBarbellSystemVisual, VCBarbellVectorDiagram } from '@/components/mdx/funding-charts';
 import { WebEvolutionTimeline, MCPAdoptionChart, TaskHorizonChart, ProtocolStackDiagram, IndustryAdoptionChart, AgentMarketChart, SecurityThreatMatrix, AgentVsChatbot, InfrastructureLandscape } from '@/components/mdx/agentic-web-charts';
 import { ScarcitySpectrum, DataCenterEnergyChart, TrainingCostChart, MaterialConstraints, PlatformConcentration, RealityCheckGrid, DualEconomyFramework } from '@/components/mdx/infinity-charts';
-import { AIJobExposure, JobChurnChart, EarlyCareerImpact, ProductivityParadox, GenderImpact, UBIPilotResults } from '@/components/mdx/ai-economy-charts';
+import { AIJobExposure, JobChurnChart, EarlyCareerImpact, ProductivityParadox, GenderImpact, UBIPilotResults } from '@/components/mdx/aieconomy-charts';
 import { GDPGrowthTimeline, GovernanceScorecard, IndustrialEvolution, HealthcareComparison, InequalitySnapshot, TransferabilityGrid } from '@/components/mdx/singapore-charts';
 import { PerceptionArcTimeline, IndiaSectorBifurcation, IncomeThresholdChart, COOEffectSize } from '@/components/mdx/cheap-charts';
 import { AgentMarketGrowth, EnterpriseAdoption, CoaseDisruption } from '@/components/mdx/agent-economy-charts';
 import { BlockchainSnapshot, BlockchainPhases, L2ScalingLandscape, StablecoinRegulatory } from '@/components/mdx/blockchain-charts';
 import { RegulatoryFriction, BureaucracyCostChart, EGovernanceMaturity, RegulatoryGrowth } from '@/components/mdx/bureaucracy-charts';
-import { YCIndustryBreakdown, RecentBatchComposition, AgentLayerTaxonomy, YCGeoConcentration, AgentForXPattern, DefenseHardwareSurge, TaglineArchaeology, BatchSizeTimeline } from '@/components/mdx/yc-landscape-charts';
+import { YCIndustryBreakdown, RecentBatchComposition, AgentLayerTaxonomy, YCGeoConcentration, AgentForXPattern, DefenseHardwareSurge, TaglineArchaeology, BatchSizeTimeline } from '@/components/mdx/yc-charts';
 import { UIComplexityComparison, APIAbstractionLayer, TextUIAdoption, PlatformShiftTimeline } from '@/components/mdx/universal-charts';
 import { StepwiseMaturityModel, ROIImpactStats } from '@/components/mdx/stepwise-charts';
-import { DigitalGovMaturity, EResidencyImpact, AgenticStateArchitecture } from '@/components/mdx/agentic-state-charts';
+import { DigitalGovMaturity, EResidencyImpact, AgenticStateArchitecture } from '@/components/mdx/stateagents-charts';
 import { ApiTrafficChart, ZeroUIMarketMap, SaaSPricingShift, AttentionCollapseChart, GUITimeline, FrontendDeclineChart, HardwarePivotGrid } from '@/components/mdx/post-interface-charts';
-import { AINewsSiteGrowth, MisinfoSpreadChart, MediaTrustChart, CurationFactorsChart } from '@/components/mdx/plurality-trap-charts';
-import { MeshTransactionCostChart, DAOTreasuryChart, MeshOrgComparison, EnergyMeshComparison } from '@/components/mdx/mesh-economy-charts';
-import { SimulationDomainChart, SimCostComparison, SimulationGapChart } from '@/components/mdx/simulation-layer-charts';
-import { SensoryBandwidthChart, HapticGenerationsChart, SpatialComputingAdoption, BCILandscapeChart, SensoryStackTimeline, PresenceThresholdChart, SensoryStackTable } from '@/components/mdx/sensory-internet-charts';
-import { GodProtocolComparison, TTPEvolutionTimeline, PrivacyTechStack, TTPMarketScale, DistributedArchitectureChart, AlignmentFrameworkChart } from '@/components/mdx/god-protocol-charts';
-import { TrustPrimitivesComparison, DeFiSecurityChart, TrustStackArchitecture, TrustComparisonChart, DigitalIdentityTimeline, TrustApplicationDomains } from '@/components/mdx/programmable-trust-charts';
-import { IdentitySpectrumChart, PseudonymousSuccessCases, ReputationInfraChart, ParticipationExpansionChart, DecentralizedIdentityMarket } from '@/components/mdx/pseudonymous-agency-charts';
-import { GovernanceEffectivenessChart, DAOVoterParticipation, VotingMechanismChart, GovernanceStackChart } from '@/components/mdx/computational-constitutions-charts';
-import { DataSourceDisruption, MethodologicalEvolution, PolarizationFindings, ObserverEffectChart } from '@/components/mdx/computational-social-science-charts';
-import { MonasteryPrincipleChart, AttentionSpanDecline, InterruptionCostChart, RetreatMovementsTimeline, SilenceEconomyChart } from '@/components/mdx/digital-monasticism-charts';
+import { AINewsSiteGrowth, MisinfoSpreadChart, MediaTrustChart, CurationFactorsChart } from '@/components/mdx/plurality-charts';
+import { MeshTransactionCostChart, DAOTreasuryChart, MeshOrgComparison, EnergyMeshComparison } from '@/components/mdx/mesh-charts';
+import { SimulationDomainChart, SimCostComparison, SimulationGapChart } from '@/components/mdx/simulayer-charts';
+import { SensoryBandwidthChart, HapticGenerationsChart, SpatialComputingAdoption, BCILandscapeChart, SensoryStackTimeline, PresenceThresholdChart, SensoryStackTable } from '@/components/mdx/sensory-charts';
+import { GodProtocolComparison, TTPEvolutionTimeline, PrivacyTechStack, TTPMarketScale, DistributedArchitectureChart, AlignmentFrameworkChart } from '@/components/mdx/godprotocol-charts';
+import { TrustPrimitivesComparison, DeFiSecurityChart, TrustStackArchitecture, TrustComparisonChart, DigitalIdentityTimeline, TrustApplicationDomains } from '@/components/mdx/trust-charts';
+import { IdentitySpectrumChart, PseudonymousSuccessCases, ReputationInfraChart, ParticipationExpansionChart, DecentralizedIdentityMarket } from '@/components/mdx/pseudonymity-charts';
+import { GovernanceEffectivenessChart, DAOVoterParticipation, VotingMechanismChart, GovernanceStackChart } from '@/components/mdx/constitutions-charts';
+import { DataSourceDisruption, MethodologicalEvolution, PolarizationFindings, ObserverEffectChart } from '@/components/mdx/socialscience-charts';
+import { MonasteryPrincipleChart, AttentionSpanDecline, InterruptionCostChart, RetreatMovementsTimeline, SilenceEconomyChart } from '@/components/mdx/monasticism-charts';
 import { PlaybookHeroCard, AgentToolsMap, AutomationROIChart, ContentPipelineFlow, OutreachPipeline, AIMaturityLevels, ImplementationTimeline, NurtureSequence, ImplementationChecklist, SocialListeningMap, SupportTierChart, DashboardMetricsMap, UseCaseCatalog } from '@/components/mdx/playbook-charts';
-import { StateOfAiKeywordsChart, StateOfAiBigramsChart, StateOfAiTimeline, StateOfAiNgramAnalyzer, StateOfAiMomentum } from '@/components/mdx/state-of-ai-charts';
-import { StateOfWeb3KeywordsChart, StateOfWeb3BigramsChart, StateOfWeb3Timeline, StateOfWeb3NgramAnalyzer, StateOfWeb3ConvergenceMatrix, StateOfWeb3Momentum, StateOfWeb3Citations } from '@/components/mdx/state-of-web3-charts';
-import { InfraFundingByLayer, SecurityConsolidation, ComputeValuationTable, AgentProductValuations, MarketplaceComposition, FundingVelocityChart, CapitalConcentrationChart, TopInvestorsTable } from '@/components/mdx/agent-infrastructure-stack-charts';
+import { StateOfAiKeywordsChart, StateOfAiBigramsChart, StateOfAiTimeline, StateOfAiNgramAnalyzer, StateOfAiMomentum } from '@/components/mdx/stateofai-charts';
+import { StateOfWeb3KeywordsChart, StateOfWeb3BigramsChart, StateOfWeb3Timeline, StateOfWeb3NgramAnalyzer, StateOfWeb3ConvergenceMatrix, StateOfWeb3Momentum, StateOfWeb3Citations } from '@/components/mdx/stateofweb3-charts';
+import { InfraFundingByLayer, SecurityConsolidation, ComputeValuationTable, AgentProductValuations, MarketplaceComposition, FundingVelocityChart, CapitalConcentrationChart, TopInvestorsTable } from '@/components/mdx/agentstack-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -56,42 +56,42 @@ const essaysDirectory = path.join(process.cwd(), 'src', 'content', 'essays');
 
 // Maps essay slugs to relevant glossary term slugs for internal linking
 const ESSAY_GLOSSARY_LINKS: Record<string, string[]> = {
-  'asi-timeline': ['agi', 'llm', 'alignment', 'transformer'],
-  'artificial-intuition': ['llm', 'embeddings', 'rlhf', 'agent'],
-  'simulation-hypothesis': ['agi', 'llm'],
-  'ai-agent-economy': ['agent', 'llm', 'defi', 'dao'],
-  'computational-constitutions': ['smart-contract', 'dao', 'zero-knowledge-proof'],
-  'api-states': ['api', 'smart-contract', 'blockchain', 'dao'],
-  'computational-social-science': ['llm', 'agent', 'rag'],
-  'agi-governance': ['agi', 'dao', 'alignment', 'constitutional-ai'],
-  'programmable-trust': ['zero-knowledge-proof', 'smart-contract', 'blockchain', 'oracle'],
-  'rationality-in-ai': ['alignment', 'rlhf', 'constitutional-ai', 'llm'],
-  'ambient-intelligence': ['agent', 'multimodal-ai', 'embeddings'],
-  'synthetic-empathy': ['llm', 'rlhf', 'multimodal-ai'],
-  'attention-refinery': ['agent', 'llm'],
-  'cognitive-load': ['llm', 'rag'],
-  'digital-monasticism': ['agent', 'llm'],
-  'dark-forest-internet': ['zero-knowledge-proof', 'blockchain', 'ipfs'],
-  'internet-of-lies': ['zero-knowledge-proof', 'blockchain', 'merkle-tree'],
-  'pseudonymous-agency': ['zero-knowledge-proof', 'wallet', 'blockchain'],
-  'god-protocol': ['agi', 'alignment', 'constitutional-ai'],
-  'plurality-trap': ['agi', 'multimodal-ai', 'embeddings'],
-  'sacred-algorithms': ['alignment', 'constitutional-ai', 'rlhf'],
-  'substrate-shift': ['ipfs', 'webassembly', 'edge-computing'],
-  'mesh-economy': ['defi', 'dao', 'ipfs', 'blockchain'],
-  'simulation-layer': ['agent', 'llm', 'rag'],
-  'singularity-paradox': ['agi', 'llm', 'alignment'],
+  'asi': ['agi', 'llm', 'alignment', 'transformer'],
+  'intuition': ['llm', 'embeddings', 'rlhf', 'agent'],
+  'simulation': ['agi', 'llm'],
+  'agenteconomy': ['agent', 'llm', 'defi', 'dao'],
+  'constitutions': ['smart-contract', 'dao', 'zero-knowledge-proof'],
+  'apis': ['api', 'smart-contract', 'blockchain', 'dao'],
+  'socialscience': ['llm', 'agent', 'rag'],
+  'governance': ['agi', 'dao', 'alignment', 'constitutional-ai'],
+  'trust': ['zero-knowledge-proof', 'smart-contract', 'blockchain', 'oracle'],
+  'rationality': ['alignment', 'rlhf', 'constitutional-ai', 'llm'],
+  'ambient': ['agent', 'multimodal-ai', 'embeddings'],
+  'empathy': ['llm', 'rlhf', 'multimodal-ai'],
+  'attention': ['agent', 'llm'],
+  'cognition': ['llm', 'rag'],
+  'monasticism': ['agent', 'llm'],
+  'darkforest': ['zero-knowledge-proof', 'blockchain', 'ipfs'],
+  'lies': ['zero-knowledge-proof', 'blockchain', 'merkle-tree'],
+  'pseudonymity': ['zero-knowledge-proof', 'wallet', 'blockchain'],
+  'godprotocol': ['agi', 'alignment', 'constitutional-ai'],
+  'plurality': ['agi', 'multimodal-ai', 'embeddings'],
+  'algorithms': ['alignment', 'constitutional-ai', 'rlhf'],
+  'substrate': ['ipfs', 'webassembly', 'edge-computing'],
+  'mesh': ['defi', 'dao', 'ipfs', 'blockchain'],
+  'simulayer': ['agent', 'llm', 'rag'],
+  'paradox': ['agi', 'llm', 'alignment'],
   'singularity': ['agi', 'llm', 'transformer'],
-  'intuitive-singularity': ['agi', 'llm', 'embeddings'],
-  'blockchain-journey': ['blockchain', 'smart-contract', 'defi', 'consensus-mechanism'],
-  'twilight-economy': ['agent', 'llm', 'dao'],
-  'sensory-internet': ['multimodal-ai', 'agent', 'embeddings'],
-  'in-between-state': ['agi', 'alignment'],
-  'hustle-culture': ['agent', 'dao'],
-  'agentic-commerce': ['agent', 'llm', 'api'],
-  'towards-the-agentic-web': ['agent', 'llm', 'rag', 'api'],
-  'yc-landscape': ['agent', 'llm', 'api'],
-  'agent-infrastructure-stack': ['agent', 'llm', 'api', 'edge-computing'],
+  'instinct': ['agi', 'llm', 'embeddings'],
+  'blockchain': ['blockchain', 'smart-contract', 'defi', 'consensus-mechanism'],
+  'twilight': ['agent', 'llm', 'dao'],
+  'sensory': ['multimodal-ai', 'agent', 'embeddings'],
+  'liminal': ['agi', 'alignment'],
+  'hustle': ['agent', 'dao'],
+  'agentcommerce': ['agent', 'llm', 'api'],
+  'agenticweb': ['agent', 'llm', 'rag', 'api'],
+  'yc': ['agent', 'llm', 'api'],
+  'agentstack': ['agent', 'llm', 'api', 'edge-computing'],
 };
 
 const GLOSSARY_LABELS: Record<string, string> = {

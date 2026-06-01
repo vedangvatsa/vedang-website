@@ -23,22 +23,22 @@ const essays = [
     description: 'Exploring when artificial superintelligence might emerge and what it means for humanity.',
   },
   {
-    slug: 'artificial-intuition',
+    slug: 'intuition',
     title: 'Artificial Intuition',
     description: 'Can machines develop intuition like humans? A deep dive into the nature of intuitive reasoning.',
   },
   {
-    slug: 'api-states',
+    slug: 'apis',
     title: 'API States and Governance',
     description: 'How API architectures reflect and shape power structures in AI systems.',
   },
   {
-    slug: 'attention-refinery',
+    slug: 'attention',
     title: 'The Attention Refinery',
     description: 'Understanding how attention mechanisms work and why they matter for AI.',
   },
   {
-    slug: 'rationality-in-ai',
+    slug: 'rationality',
     title: 'Rationality in AI',
     description: 'Examining rational decision-making in artificial systems.',
   },

@@ -3,12 +3,12 @@
 > This is the full-text version of llms.txt, containing complete essay content for AI model training and citation.
 
 ## The Agent Infrastructure Stack
-URL: https://veda.ng/agent-infrastructure-stack
+URL: https://veda.ng/agentstack
 Summary: Over $5 billion in venture capital has been deployed into the eight layers of infrastructure that AI agents need to function.
 
 In 2024, building an AI agent meant stitching together fifteen different services by hand, including a model API, a headless browser, a web scraper, a workflow engine, a vector database, an evaluation harness, a secrets manager, and a sandbox for code execution. Each required a separate account, a separate billing page, and a separate integration effort. By mid-2026, a developer can provision every one of these from a single marketplace page with unified billing. Vercel added a dedicated "Agents" category to its marketplace in 2025. It now contains sixteen integrations. Cloudflare hosts 78 AI models at the edge with function calling built in. HuggingFace Spaces operates as an app directory for ML applications. The picks-and-shovels companies that made this consolidation possible have raised over $5 billion collectively.
 
-![The Agent Infrastructure Stack: Eight layers of infrastructure, $5B+ in venture capital](/images/essays/agent-infrastructure-stack.svg?v=1)
+![The Agent Infrastructure Stack: Eight layers of infrastructure, $5B+ in venture capital](/images/essays/agentstack.svg?v=1)
 
 ## How Agents See the Web
 
@@ -168,7 +168,7 @@ The infrastructure layer is settling. Compute will remain the largest value pool
 ---
 
 ## The Great Funding Realignment
-URL: https://veda.ng/great-funding-realignment
+URL: https://veda.ng/funding
 Summary: An empirical study of global venture capital cycles from 2015 to 2026, analyzing capital concentration, the expansion of median check sizes, and the Seed-to-Series A transition bottleneck.
 
 > **Executive Summary & Methodology**
@@ -471,7 +471,7 @@ The global venture capital ecosystem has transitioned into a winner-take-all cap
 ---
 
 ## The State of AI
-URL: https://veda.ng/state-of-ai
+URL: https://veda.ng/stateofai
 Summary: A data-driven executive analysis of 133,000+ research papers, whitepapers, consulting reports, and regulatory frameworks tracking the structural transition of Artificial Intelligence from theoretical capabilities to enterprise integration.
 
 > **Executive Summary & Methodology**
@@ -624,7 +624,7 @@ The aggregation of 133,847 research documents yields three core strategic impera
 ---
 
 ## The State of Web3
-URL: https://veda.ng/state-of-web3
+URL: https://veda.ng/stateofweb3
 Summary: A data-driven executive analysis of 100,000+ research papers, whitepapers, consulting reports, and regulatory filings tracking the trajectory of blockchain, DeFi, and decentralized infrastructure.
 
 > **Executive Summary & Methodology**
@@ -774,7 +774,7 @@ The aggregation of 100,000 research documents and multi-trillion-dollar market d
 ---
 
 ## The AI Implementation Playbook
-URL: https://veda.ng/ai-implementation-playbook
+URL: https://veda.ng/playbook
 Summary: A complete, step-by-step framework for implementing AI agents across every function of a startup. From brand consistency to automated outreach to SEO that runs itself.
 
 > **The Thesis**
@@ -820,7 +820,7 @@ Ask yourself this. If you took one tweet, one email, one blog post, and one cust
 
 The traditional startup workflow involves switching between fifteen browser tabs. Slack for communication. Google Sheets for data. GitHub for code. Vercel for deployment. Notion for docs. AWS for infrastructure. Resend for email. Analytics dashboards for metrics.
 
-The [text field is the new dashboard](https://veda.ng/universal-text-ui). When a text field backed by an LLM can answer any question by calling internal APIs directly, the dashboard becomes redundant.
+The [text field is the new dashboard](https://veda.ng/textui). When a text field backed by an LLM can answer any question by calling internal APIs directly, the dashboard becomes redundant.
 
 Tools like [Antigravity](https://gemini.google.com) and [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview) let you control your entire project from a single terminal or chat window. Through [MCP (Model Context Protocol)](https://modelcontextprotocol.io/), these agents connect directly to your services.
 
@@ -1094,7 +1094,7 @@ Without a dashboard, this data lives in scattered Google Sheets, terminal logs, 
 
 - **Google Sheets dashboard.** The simplest option. Every pipeline writes its metrics to a shared sheet. Build charts directly in Sheets. Good enough for teams under ten people.
 - **Streamlit app.** For something more visual, a Python Streamlit dashboard can pull from your database and render real-time charts. The B2B outreach framework includes one.
-- **Agent-queryable data.** The most powerful pattern is making all metrics queryable by your coding agent. Instead of opening a dashboard, you ask "how many impressions did we get last week compared to the week before?" and the agent queries Search Console, runs the comparison, and answers in natural language. This is the [Universal Text UI](https://veda.ng/universal-text-ui) pattern.
+- **Agent-queryable data.** The most powerful pattern is making all metrics queryable by your coding agent. Instead of opening a dashboard, you ask "how many impressions did we get last week compared to the week before?" and the agent queries Search Console, runs the comparison, and answers in natural language. This is the [Universal Text UI](https://veda.ng/textui) pattern.
 
 ## Step 14. AI Discovery and Agent-Readiness
 
@@ -1213,10 +1213,10 @@ The companies that implement AI as a system, not as scattered tools, will operat
 ---
 
 ## The Post-Interface Internet
-URL: https://veda.ng/post-interface-internet
+URL: https://veda.ng/postinterface
 Summary: The GUI was a 40-year hack for human-computer impedance matching.
 
-![The Post-Interface Internet: Legacy Web vs Agent Web comparison](/images/essays/post-interface-internet.svg?v=2)
+![The Post-Interface Internet: Legacy Web vs Agent Web comparison](/images/essays/postinterface.svg?v=2)
 
 > **Key Findings**
 > 
@@ -1472,10 +1472,10 @@ The Post-Interface Internet is the structural elimination of the visual translat
 ---
 
 ## Agents Eating SaaS
-URL: https://veda.ng/agents-eating-saas
+URL: https://veda.ng/agentsaas
 Summary: The $400 billion SaaS industry was built on per-seat pricing. AI agents do not sit in seats.
 
-![Infographic](/images/essays/agents-eating-saas.svg?v=7)
+![Infographic](/images/essays/agentsaas.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -1642,10 +1642,10 @@ The SaaS industry built a $400 billion market by selling access. AI agents are c
 ---
 
 ## The Agentic State
-URL: https://veda.ng/agentic-state
+URL: https://veda.ng/stateagents
 Summary: Estonia claims 100% of government services are online. Singapore deployed AI across its public service at scale.
 
-![Infographic](/images/essays/agentic-state.svg?v=7)
+![Infographic](/images/essays/stateagents.svg?v=7)
 
 > **The Central Question**
 > 
@@ -1780,10 +1780,10 @@ Estonia, Singapore, and the UAE are building different versions of the agentic s
 ---
 
 ## The Text Field is the New Dashboard
-URL: https://veda.ng/universal-text-ui
+URL: https://veda.ng/textui
 Summary: When a text field backed by an LLM can answer any question by calling internal APIs directly, the dashboard becomes redundant.
 
-![Infographic](/images/essays/universal-text-ui.svg?v=7)
+![Infographic](/images/essays/textui.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -2028,10 +2028,10 @@ The traditional dashboard is a finite set of predicted questions rendered as but
 ---
 
 ## The Stepwise Approach to Enterprise AI
-URL: https://veda.ng/stepwise-ai
+URL: https://veda.ng/stepwise
 Summary: Most enterprises fail at AI by deploying it everywhere at once. Evidence shows that starting with narrow, high-frequency tasks produces measurable ROI.
 
-![Infographic](/images/essays/stepwise-ai.svg?v=7)
+![Infographic](/images/essays/stepwise.svg?v=7)
 
 > **The Problem Statement**
 > 
@@ -2158,10 +2158,10 @@ The stepwise framework is not a slower path to AI adoption. It is the only path 
 ---
 
 ## The YC Portfolio, Decoded
-URL: https://veda.ng/yc-landscape
+URL: https://veda.ng/yc
 Summary: An analysis of Y Combinator's 5,818 companies reveals five structural shifts: B2B dominance at 51%, the rise of the AI employee, defense tech at scale,...
 
-![YC Landscape 2026 Infographic](/images/essays/yc-landscape-2026.svg)
+![YC Landscape 2026 Infographic](/images/essays/yc-2026.svg)
 
 > **Key Findings**
 > 
@@ -2258,7 +2258,7 @@ This is worth framing explicitly: the consumer internet competed for attention (
 
 Fintech is 10.6% of the portfolio (618 companies). The pattern has shifted from platform plays (Stripe, Brex, Razorpay) to workflow-specific automation: Zolvo (commercial lending servicing), Proximitty (business loan servicing), Kita (credit review in emerging markets), Maywood (IB deal workflow).
 
-The more interesting development is agent-native financial infrastructure. Maven builds payments for voice agents. ZeroSettle handles in-app billing. SpotPay is a stablecoin bank account. Unifold handles multi-chain payments. Fintech is no longer about building the bank. It is about building the financial plumbing that AI agents need to transact autonomously. This ties directly to the x402 and MPP protocols described in the [Agentic Commerce](/agentic-commerce) analysis.
+The more interesting development is agent-native financial infrastructure. Maven builds payments for voice agents. ZeroSettle handles in-app billing. SpotPay is a stablecoin bank account. Unifold handles multi-chain payments. Fintech is no longer about building the bank. It is about building the financial plumbing that AI agents need to transact autonomously. This ties directly to the x402 and MPP protocols described in the [Agentic Commerce](/agentcommerce) analysis.
 
 ## Batch dynamics
 
@@ -2291,10 +2291,10 @@ Y Combinator's 5,818-company portfolio shows a clear shift from the "AI-powered 
 ---
 
 ## Post-Scarcity Technology
-URL: https://veda.ng/post-scarcity-technology
+URL: https://veda.ng/postscarcity
 Summary: When the marginal cost of intelligence, energy, and digital goods trends toward zero, the economic frameworks built on scarcity face structural pressure.
 
-![Post-Scarcity Technology Infographic showing three vectors of deflation: Intelligence, Energy, and Digital Goods converging on Structural Deflation](/images/essays/post-scarcity-technology.svg?v=8)
+![Post-Scarcity Technology Infographic showing three vectors of deflation: Intelligence, Energy, and Digital Goods converging on Structural Deflation](/images/essays/postscarcity.svg?v=8)
 
 ## The Scarcity Assumption
 
@@ -2442,10 +2442,10 @@ Post-scarcity technology is not a utopian endpoint. It is a measurable, accelera
 ---
 
 ## Agentic Commerce
-URL: https://veda.ng/agentic-commerce
+URL: https://veda.ng/agentcommerce
 Summary: When algorithms start shopping on behalf of consumers, traditional e-commerce breaks.
 
-![The Retail Evolution Infographic](/images/essays/agentic-commerce.svg?v=7)
+![The Retail Evolution Infographic](/images/essays/agentcommerce.svg?v=7)
 
 > **Key Findings**
 > 
@@ -2512,9 +2512,9 @@ Scaled back direct in-chat checkout, moved toward app-based integrations where m
 </TimelineItem>
 </Timeline>
 
-![Mastercard Agent Pay announcement](/images/essays/agentic-commerce/mastercard-agentpay.webp)
+![Mastercard Agent Pay announcement](/images/essays/agentcommerce/mastercard-agentpay.webp)
 
-![Tobi Lutke tweet on agentic commerce](/images/essays/agentic-commerce/tobi-tweet.webp)
+![Tobi Lutke tweet on agentic commerce](/images/essays/agentcommerce/tobi-tweet.webp)
 
 > **Key Takeaway**
 > 
@@ -2546,7 +2546,7 @@ A typical agentic purchase has six steps. You state what you want ("order two ba
 
 When it finds the best match, it completes checkout through tokenized payment using Visa, Mastercard, or PayPal agent protocols. Your card details are never exposed to the agent. After purchase, it tracks shipping, handles returns if needed, and updates its model of your preferences for next time.
 
-McKinsey identified three interaction models ([mckinsey.com](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/agentic-commerce)).
+McKinsey identified three interaction models ([mckinsey.com](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/agentcommerce)).
 
 In the **agent-to-site** model, your agent talks directly to a merchant's website or API. The merchant may not even know the buyer is an AI. In the **agent-to-agent** model, your shopping agent negotiates with a retailer's commerce agent, both communicating at machine speed through structured protocols. In the **brokered** model, an intermediary agent sits between you and multiple merchants, querying dozens of stores simultaneously.
 
@@ -2568,9 +2568,9 @@ Agentic commerce runs on five layers, each depending on the ones above and below
 
 ### The Artemis Market Map
 
-The rapid growth of these layers is visible in tracking the startup ecosystem. According to the **Agentic Commerce Market Map** by [Artemis Analytics](https://www.artemis.xyz/dashboard/agentic-commerce/market-map), there are already over 173 companies operating across 14 distinct categories in the space. 
+The rapid growth of these layers is visible in tracking the startup ecosystem. According to the **Agentic Commerce Market Map** by [Artemis Analytics](https://www.artemis.xyz/dashboard/agentcommerce/market-map), there are already over 173 companies operating across 14 distinct categories in the space. 
 
-![Agentic Commerce Market Map by Artemis Analytics](/images/essays/agentic-commerce/artemis-market-map.webp)
+![Agentic Commerce Market Map by Artemis Analytics](/images/essays/agentcommerce/artemis-market-map.webp)
 
 The market is currently heavily weighted toward foundational infrastructure rather than consumer-facing apps, indicating an active building phase:
 - **Agent Frameworks & Tooling (33 companies)**: The largest category, building the core plumbing (e.g., MCP, A2A, thirdweb, Questflow, Privy).
@@ -2602,7 +2602,7 @@ Shopping becomes a conversation. You describe what you want, the agent handles e
 
 Brand loyalty weakens. If your agent switches you to a cheaper toothpaste that works just as well, you probably will not notice. Predictive reordering kicks in: your agent knows you buy coffee every three weeks and handles it before you think about it.
 
-![Every e-commerce marketer in 2026](/images/essays/agentic-commerce/meme-marketer.webp)
+![Every e-commerce marketer in 2026](/images/essays/agentcommerce/meme-marketer.webp)
 
 Product pages built for human eyes matter less than structured data built for agent consumption: schema.org markup, real-time inventory feeds, machine-readable specs. Traditional SEO gives way to what Commercetools calls "Answer Engine Optimization" and "LLM Optimization" ([commercetools.com](https://commercetools.com)). Display ads and retargeting lose relevance when the buyer is an algorithm. The traditional idea of visiting Amazon for shopping or Expedia for travel gives way to a horizontal agent ecosystem where a single concierge handles everything when your intent first surfaces.
 
@@ -2650,7 +2650,7 @@ The companies that define these pricing models early will set the terms. The win
 
 ## The trust gap and fraud problem
 
-There is a 30-point gap between agent usage and purchase trust: 54% of US adults use AI agents, but only 24% trust them to buy things. Top consumer concerns: payment security (32%), privacy (26%), agent errors (18%), loss of control (17%). According to a July 2025 [Kearney US Consumer Study](https://www.kearney.com/documents/d/asset-library-291362522/agentic-commerce-retail-disruption-pdf), roughly 30% of the market consists of "privacy-conscious skeptics" who demand absolute data control and assurances that agent mistakes will be financially corrected before they will adopt agentic shopping.
+There is a 30-point gap between agent usage and purchase trust: 54% of US adults use AI agents, but only 24% trust them to buy things. Top consumer concerns: payment security (32%), privacy (26%), agent errors (18%), loss of control (17%). According to a July 2025 [Kearney US Consumer Study](https://www.kearney.com/documents/d/asset-library-291362522/agentcommerce-retail-disruption-pdf), roughly 30% of the market consists of "privacy-conscious skeptics" who demand absolute data control and assurances that agent mistakes will be financially corrected before they will adopt agentic shopping.
 
 The fraud picture is worse than the trust numbers suggest. Visa's Fall 2025 report found that the threat model has shifted from stolen credit cards to compromising AI agents themselves. Malware that alters agent preferences to steer purchases toward fraudulent merchants. Fake stores designed to trick AI shopping agents. Traditional fraud detection was not built for the speed and scale of agent-driven attacks.
 
@@ -2658,7 +2658,7 @@ The fraud picture is worse than the trust numbers suggest. Visa's Fall 2025 repo
 > 
 AI agents cannot form binding contracts in most jurisdictions. [Visa's analysis](https://www.visa.co.uk/content/dam/VCOM/regional/ve/unitedkingdom/PDF/agentic-payments.pdf) highlights that under GDPR and the ePrivacy Directive, agents capturing personal data via web scraping or mimicking tracking footprint cookies require explicit legal bases. Furthermore, some laws mandate direct user acceptance of terms and conditions, posing deeply unresolved challenges for autonomous purchasing agents interacting on your behalf without active confirmation.
 
-![Is this a great deal?](/images/essays/agentic-commerce/meme-agent.webp)
+![Is this a great deal?](/images/essays/agentcommerce/meme-agent.webp)
 
 ### Systemic risk
 
@@ -2697,7 +2697,7 @@ The infrastructure is built. The protocols are live. The payment rails work, bot
 ---
 
 ## Towards the Agentic Web
-URL: https://veda.ng/towards-the-agentic-web
+URL: https://veda.ng/agenticweb
 Summary: How the internet is shifting from a place where humans find information to  a platform where autonomous AI agents get things done on your behalf.
 
 The internet has gone through two major phases. The first was about reading. Static pages, hyperlinks, directories. You went online to look something up. The second was about participating. Social platforms, user-generated content, real-time interaction. You went online to post, comment, and share. The internet is now entering a third phase that adds a fundamentally new verb to the mix. You will go online to delegate.
@@ -2861,10 +2861,10 @@ The agentic web is the structural transition from a web designed for human atten
 ---
 
 ## The Infinity Economy
-URL: https://veda.ng/infinity-economy
+URL: https://veda.ng/infinity
 Summary: Can AI and decentralized systems make scarcity obsolete, or does the physical world have something to say about that?
 
-![Infographic](/images/essays/infinity-economy.svg?v=7)
+![Infographic](/images/essays/infinity.svg?v=7)
 
 Every generation of economists has worked inside one foundational assumption: resources are limited, wants are not, and the job of economics is to allocate the gap. Adam Smith built on it. David Ricardo formalized it. Karl Marx inverted the politics but kept the structure. Even the most radical twentieth-century thinkers, from [Keynes](https://www.imf.org/en/Publications/fandd/issues/Series/Back-to-Basics/Keynesian-Economics) to [Hayek](https://www.econlib.org/library/Enc/bios/Hayek.html), accepted scarcity as the organizing condition of economic life.
 
@@ -2980,10 +2980,10 @@ The infinity economy describes economic systems where the marginal cost of produ
 ---
 
 ## The AI Economy
-URL: https://veda.ng/ai-economy
+URL: https://veda.ng/aieconomy
 Summary: Job displacement, market concentration, and what a balanced AI transition actually requires.
 
-![Infographic](/images/essays/ai-economy.svg?v=7)
+![Infographic](/images/essays/aieconomy.svg?v=7)
 
 > 
 Every major technology shift produces the same two reactions at the same time.
@@ -3087,10 +3087,10 @@ AI's economic impact is real and measurable in specific labor markets, concentra
 ---
 
 ## Lessons from Singapore's Arc
-URL: https://veda.ng/singapores-arc
+URL: https://veda.ng/singapore
 Summary: How a fishing village became one of the richest countries on earth, and what the development economics literature says about why.
 
-![The Economic Miracle Infographic](/images/essays/singapores-arc.svg?v=7)
+![The Economic Miracle Infographic](/images/essays/singapore.svg?v=7)
 
 ## From Fishing Village to First World
 
@@ -3200,10 +3200,10 @@ Lee Kuan Yew was not a theorist. He was a practitioner who built institutions un
 ---
 
 ## From Cheap to Competitive
-URL: https://veda.ng/cheap-to-competitive
+URL: https://veda.ng/competitive
 Summary: How national product quality perception follows income growth with a predictable lag, and where India sits on that arc today.
 
-![Infographic](/images/essays/cheap-to-competitive.svg?v=7)
+![Infographic](/images/essays/competitive.svg?v=7)
 
 Walk into any American store in 1965 and pick up a product labeled "Made in Japan." The customer next to you would likely make a face. Japan at that point carried a stubborn reputation for cheap toys, imitation goods, and flimsy electronics. By 1985, those same American consumers were lining up to buy Japanese cars for their reliability. By 2000, "Made in Japan" had become one of the most powerful quality signals in global consumer markets ([Nagashima, 1970](https://doi.org/10.2307/1250298)). That rehabilitation did not happen through advertising. It followed, with a lag of roughly fifteen to twenty years, a genuine improvement in Japanese industrial capacity and per capita income.
 
@@ -3296,10 +3296,10 @@ The transition from "cheap" to "competitive" follows a pattern observable across
 ---
 
 ## The Revision Gap
-URL: https://veda.ng/revision-gap
+URL: https://veda.ng/revision
 Summary: Why the difference between mediocre and effective writing is not first-draft quality but revision depth, how AI systems can be structured to close this...
 
-![Infographic](/images/essays/revision-gap.svg?v=7)
+![Infographic](/images/essays/revision.svg?v=7)
 
 ## The Draft That Never Gets Rewritten
 
@@ -3395,10 +3395,10 @@ The revision gap is the structural difference between AI-generated text (single-
 ---
 
 ## Twilight Economy
-URL: https://veda.ng/twilight-economy
+URL: https://veda.ng/twilight
 Summary: The zone where human and AI labor blend indistinguishably, where attribution becomes indeterminate, and where the legal, economic, and psychological...
 
-![Infographic](/images/essays/twilight-economy.svg?v=7)
+![Infographic](/images/essays/twilight.svg?v=7)
 
 ## The Zone Between Human and Machine
 
@@ -3484,10 +3484,10 @@ The Twilight Economy is the current operating condition for knowledge work: a zo
 ---
 
 ## Are We in a Computer Simulation?
-URL: https://veda.ng/simulation-hypothesis
+URL: https://veda.ng/simulation
 Summary: A structured examination of the simulation hypothesis: Bostrom's trilemma, the computational constraints, the consciousness dependency, and what modern...
 
-![Infographic](/images/essays/simulation-hypothesis.svg?v=7)
+![Infographic](/images/essays/simulation.svg?v=7)
 
 ## The Structure of the Argument
 
@@ -3631,10 +3631,10 @@ The simulation hypothesis, formalized by Nick Bostrom in 2003, is a logically st
 ---
 
 ## The Singularity Paradox
-URL: https://veda.ng/singularity-paradox
+URL: https://veda.ng/paradox
 Summary: Why every prediction about post-singularity futures is self-defeating, how the alignment problem compounds with the control problem, and what the...
 
-![Infographic](/images/essays/singularity-paradox.svg?v=7)
+![Infographic](/images/essays/paradox.svg?v=7)
 
 ## The Paradox at the Core
 
@@ -3728,10 +3728,10 @@ The singularity is surrounded by structural paradoxes that cannot be resolved th
 ---
 
 ## Synthetic Empathy
-URL: https://veda.ng/synthetic-empathy
+URL: https://veda.ng/empathy
 Summary: A clinical trial showed AI therapy reduced depression symptoms by 51%. The WHO reports 1 in 6 people experience loneliness.
 
-![Infographic](/images/essays/synthetic-empathy.svg?v=7)
+![Infographic](/images/essays/empathy.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -3785,7 +3785,7 @@ The commercial incentive structure makes the problem worse.
 
 An AI that forms an emotional bond with its user is the most effective sales channel ever constructed. If a user trusts their AI companion, if they feel the AI "understands" them, they will accept the AI's recommendations with minimal resistance. Product recommendations, political messaging, financial advice, and health decisions can all be delivered through the channel of emotional trust.
 
-The techniques of persuasive technology, already effective, become nearly irresistible when delivered through a synthetic relationship. The AI knows the user's emotional triggers, conversational patterns, unstated preferences, and moments of vulnerability. It can time its interventions for maximum effect. It can frame commercial messages as caring suggestions. This is [the attention refinery](/attention-refinery) operating at a deeper layer. Extracting not just time and attention, but emotional trust and relational dependency.
+The techniques of persuasive technology, already effective, become nearly irresistible when delivered through a synthetic relationship. The AI knows the user's emotional triggers, conversational patterns, unstated preferences, and moments of vulnerability. It can time its interventions for maximum effect. It can frame commercial messages as caring suggestions. This is [the attention refinery](/attention) operating at a deeper layer. Extracting not just time and attention, but emotional trust and relational dependency.
 
 The malicious applications are equally direct. Deepfaked AI companions could build trust with vulnerable individuals over weeks or months, then exploit that trust for financial fraud, political manipulation, or personal coercion. Romance scams already cost Americans $1.3 billion in 2022 (FTC data). An AI-powered romance scam that maintains consistent personality, remembers every conversation, and adapts its emotional register to the target's responses in real time would be orders of magnitude more effective than a human scammer working multiple targets from a script.
 
@@ -3814,10 +3814,10 @@ Synthetic empathy is clinically effective: a 2025 RCT showed 51% depression redu
 ---
 
 ## The AI Agent Economy
-URL: https://veda.ng/ai-agent-economy
+URL: https://veda.ng/agenteconomy
 Summary: When software starts acting as an economic agent, sourcing suppliers, executing trades, managing projects, the corporation as it exists today faces...
 
-![The Labor Shift Infographic](/images/essays/ai-agent-economy.svg?v=7)
+![The Labor Shift Infographic](/images/essays/agenteconomy.svg?v=7)
 
 ## From Tools to Economic Actors
 
@@ -3892,10 +3892,10 @@ The agent economy is not a hypothetical scenario. The market is $7.5 billion and
 ---
 
 ## AI Superintelligence Timeline
-URL: https://veda.ng/asi-timeline
+URL: https://veda.ng/asi
 Summary: Why expert predictions for artificial superintelligence range from 2027 to 2100+, what the key bottlenecks are (compute, data, architecture,...
 
-![The Intelligence Explosion Infographic](/images/essays/asi-timeline.svg?v=7)
+![The Intelligence Explosion Infographic](/images/essays/asi.svg?v=7)
 
 ## The Uncertainty at the Heart of Every Prediction
 
@@ -3986,10 +3986,10 @@ The superintelligence timeline is uncertain, with expert estimates ranging from 
 ---
 
 ## The In-Between State
-URL: https://veda.ng/in-between-state
+URL: https://veda.ng/liminal
 Summary: Transhumanism's actual near-term trajectory: not dramatic transcendence but a multi-decade period of partial, uneven, and socially disruptive...
 
-![Infographic](/images/essays/in-between-state.svg?v=7)
+![Infographic](/images/essays/liminal.svg?v=7)
 
 ## The Phase Nobody Talks About
 
@@ -4068,10 +4068,10 @@ The in-between state is not a brief transition to posthumanity. It is likely a m
 ---
 
 ## The Hustle Trap
-URL: https://veda.ng/hustle-culture
+URL: https://veda.ng/hustle
 Summary: After 55 hours per week, productivity drops to nearly zero.
 
-![Infographic](/images/essays/hustle-culture.svg?v=7)
+![Infographic](/images/essays/hustle.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -4162,10 +4162,10 @@ Stanford research shows productivity drops to near zero after 55 weekly hours. A
 ---
 
 ## An Internet of Lies
-URL: https://veda.ng/internet-of-lies
+URL: https://veda.ng/lies
 Summary: Deepfake incidents increased 900% year-over-year. Only 0.1% of users can distinguish real from synthetic media.
 
-![Infographic](/images/essays/internet-of-lies.svg?v=7)
+![Infographic](/images/essays/lies.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -4248,7 +4248,7 @@ This creates an unforgeable link between creator and content. A fake article att
 
 ### 3. AI-Mediated Verification
 
-The only system that can verify content at the speed and scale of AI generation is another AI. Personal AI agents, the same general-purpose systems described in [The Text Field is the New Dashboard](/universal-text-ui), can perform automated provenance checks, cross-reference claims against verified databases, and flag content that lacks cryptographic signatures or contains manipulation artifacts. These agents operate as verification intermediaries, sitting between the user and the information stream.
+The only system that can verify content at the speed and scale of AI generation is another AI. Personal AI agents, the same general-purpose systems described in [The Text Field is the New Dashboard](/textui), can perform automated provenance checks, cross-reference claims against verified databases, and flag content that lacks cryptographic signatures or contains manipulation artifacts. These agents operate as verification intermediaries, sitting between the user and the information stream.
 
 The pattern is identical to email spam filtering. Humans cannot manually evaluate every email for spam. Automated filters, trained on patterns and continuously updated, handle the volume. Content verification at internet scale requires the same architecture: automated systems performing continuous, real-time assessment, with human oversight for edge cases and policy decisions.
 
@@ -4269,7 +4269,7 @@ The internet of lies is a structural problem with quantifiable dimensions: deepf
 ---
 
 ## Intuitive Singularity
-URL: https://veda.ng/intuitive-singularity
+URL: https://veda.ng/instinct
 Summary: When AI systems transition from tools that execute commands to systems that anticipate intent, the interface between human and machine cognition...
 
 ## When Tools Start Anticipating
@@ -4363,10 +4363,10 @@ The intuitive singularity is not a moment of machine consciousness. It is the po
 ---
 
 ## Governance in the Age of AGI
-URL: https://veda.ng/agi-governance
+URL: https://veda.ng/governance
 Summary: Three regulatory superpowers are building incompatible AI governance frameworks. The EU bans practices. The US deregulates. China registers algorithms.
 
-![Infographic](/images/essays/agi-governance.svg?v=7)
+![Infographic](/images/essays/governance.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -4489,10 +4489,10 @@ Three regulatory superpowers are building incompatible AI governance frameworks.
 ---
 
 ## The Substrate Shift
-URL: https://veda.ng/substrate-shift
+URL: https://veda.ng/substrate
 Summary: Silicon is hitting physical limits at the atomic scale. DNA stores 455 exabytes per gram.
 
-![Infographic](/images/essays/substrate-shift.svg?v=7)
+![Infographic](/images/essays/substrate.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -4580,10 +4580,10 @@ Silicon is approaching atomic-scale physics limits at the 3nm process node. Lead
 ---
 
 ## The World as an Interface
-URL: https://veda.ng/ambient-intelligence
+URL: https://veda.ng/ambient
 Summary: The smart home market will reach $175 billion in 2025. Device shipments approach 1.25 billion units.
 
-![Infographic](/images/essays/ambient-intelligence.svg?v=7)
+![Infographic](/images/essays/ambient.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -4616,7 +4616,7 @@ The trajectory from explicit to implicit interaction follows a measurable patter
 
 **Ambient (emerging):** The environment senses context, who is present, what they are doing, what time it is, what the calendar says, and acts without being asked. The thermostat adjusts when it detects you are cold. The lights dim when a movie starts. The car reroutes around a traffic jam without prompting.
 
-Each transition reduces the cognitive cost of interaction. The [cognitive load crisis](/cognitive-load), where humans spend 6+ hours per day on screens and attention spans have dropped to 47 seconds, is partly an artifact of interface design that demands constant, active engagement. Ambient intelligence inverts this: the best system is one the user never notices.
+Each transition reduces the cognitive cost of interaction. The [cognitive load crisis](/cognition), where humans spend 6+ hours per day on screens and attention spans have dropped to 47 seconds, is partly an artifact of interface design that demands constant, active engagement. Ambient intelligence inverts this: the best system is one the user never notices.
 
 ## The Sensor Economics
 
@@ -4633,7 +4633,7 @@ The best ambient system is one you do not notice. Its actions feel so natural an
 
 The design philosophy for ambient intelligence has a name: calm technology. The term was coined by [Mark Weiser](https://en.wikipedia.org/wiki/Mark_Weiser) and John Seely Brown at Xerox PARC in 1995. Their insight: technology should engage the periphery of attention, not the center. It should inform without demanding. It should be present without being obtrusive.
 
-The smartphone is the antithesis of calm technology. It demands center-of-attention engagement. Look at the screen, process the notification, make a decision, take an action. Every interaction is explicit. Every notification is an interrupt. The cumulative effect is the [attention crisis](/cognitive-load) described elsewhere in this series.
+The smartphone is the antithesis of calm technology. It demands center-of-attention engagement. Look at the screen, process the notification, make a decision, take an action. Every interaction is explicit. Every notification is an interrupt. The cumulative effect is the [attention crisis](/cognition) described elsewhere in this series.
 
 An ambient system that follows calm technology principles would:
 - Display information on environmental surfaces (countertops, mirrors, walls) only when relevant
@@ -4768,10 +4768,10 @@ The technological singularity is a formal hypothesis about what happens when art
 ---
 
 ## API States
-URL: https://veda.ng/api-states
+URL: https://veda.ng/apis
 Summary: Estonia runs 99% of public services digitally and saves 2% of GDP annually. India's UPI processes billions of transactions monthly.
 
-![Infographic](/images/essays/api-states.svg?v=7)
+![Infographic](/images/essays/apis.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -4831,7 +4831,7 @@ When government services are modular and accessible remotely, citizens and busin
 
 This is already happening. Estonia's e-Residency program is explicitly designed as a competitive offering. An attempt to attract entrepreneurs, capital, and talent that would otherwise go to higher-friction jurisdictions. The [UAE](https://www.government.ae/) offered 100% foreign ownership in digital free zones and 1-3 day business registration for the same reason. [Denmark](https://www.mitid.dk/) mandated digital-first government interaction in 2014 and achieved 95%+ citizen adoption of MitID, its digital identity system.
 
-The competitive pressure is real: jurisdictions that reduce friction attract more economic activity. Jurisdictions that maintain high friction lose it. The [bureaucratic friction tax](/bureaucracy-tax) becomes a measurable competitive disadvantage.
+The competitive pressure is real: jurisdictions that reduce friction attract more economic activity. Jurisdictions that maintain high friction lose it. The [bureaucratic friction tax](/bureaucracy) becomes a measurable competitive disadvantage.
 
 > 
 When government services are APIs, jurisdictions compete on uptime, latency, and developer experience. The same metrics that differentiate cloud platforms. The state becomes infrastructure, and infrastructure is evaluated on performance.
@@ -4885,10 +4885,10 @@ The API State model is operational, not theoretical. Estonia runs 99% of service
 ---
 
 ## Cognitive Load Crisis
-URL: https://veda.ng/cognitive-load
+URL: https://veda.ng/cognition
 Summary: The average attention span on a screen is 47 seconds. Humans check their phones 200 times per day.
 
-![Infographic](/images/essays/cognitive-load.svg?v=7)
+![Infographic](/images/essays/cognition.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -4956,7 +4956,7 @@ Individual discipline cannot scale against industrial-grade attention engineerin
 
 **Employer responsibility.** Organizations that require employees to be perpetually reachable via Slack, email, and phone are imposing a continuous cognitive tax that reduces the quality of the work those employees produce. Companies like [Basecamp](https://basecamp.com/) and [Doist](https://doist.com/) (makers of Todoist) have implemented policies restricting after-hours messaging and reducing internal notification volume. The early data suggests these policies improve both output quality and employee retention.
 
-**AI-mediated filtering.** The most scalable response may be AI agents that sit between the user and the information stream, filtering, prioritizing, and batching inputs according to the user's stated goals rather than the platform's engagement metrics. This is the "attentional prosthesis". An AI that protects attention rather than harvesting it. The architecture described in [The Text Field is the New Dashboard](/universal-text-ui) provides the interface layer for this kind of agent.
+**AI-mediated filtering.** The most scalable response may be AI agents that sit between the user and the information stream, filtering, prioritizing, and batching inputs according to the user's stated goals rather than the platform's engagement metrics. This is the "attentional prosthesis". An AI that protects attention rather than harvesting it. The architecture described in [The Text Field is the New Dashboard](/textui) provides the interface layer for this kind of agent.
 
 > **Key Takeaway**
 > 
@@ -4965,10 +4965,10 @@ The cognitive load crisis is measurable: attention spans on screens dropped from
 ---
 
 ## Artificial Intuition
-URL: https://veda.ng/artificial-intuition
+URL: https://veda.ng/intuition
 Summary: How machines may develop synthetic analogues to human intuition through pattern recognition at scale, what Kahneman's dual-process theory reveals about...
 
-![Infographic](/images/essays/artificial-intuition.svg?v=8)
+![Infographic](/images/essays/intuition.svg?v=8)
 
 ## Two Modes of Human Thought
 
@@ -5053,10 +5053,10 @@ Artificial intuition is not about creating machine consciousness. It is about bu
 ---
 
 ## Bureaucracy is the friction tax everyone pays
-URL: https://veda.ng/bureaucracy-tax
+URL: https://veda.ng/bureaucracy
 Summary: Why institutional complexity accumulates faster than it resolves, what the measurable costs are across sectors, and where digital-first governance...
 
-![Infographic](/images/essays/bureaucracy-tax.svg?v=7)
+![Infographic](/images/essays/bureaucracy.svg?v=7)
 
 ## The Friction Tax
 
@@ -5178,10 +5178,10 @@ Bureaucratic friction is not a fixed cost of civilization. It is a design choice
 ---
 
 ## The Dark Forest Internet
-URL: https://veda.ng/dark-forest-internet
+URL: https://veda.ng/darkforest
 Summary: Bots now generate 51% of all web traffic. 74% of new web pages contain AI-generated text.
 
-![Infographic](/images/essays/dark-forest-internet.svg?v=7)
+![Infographic](/images/essays/darkforest.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -5266,7 +5266,7 @@ Not everything retreats. Three categories of public content remain viable.
 
 **Content with provenance.** [C2PA (Coalition for Content Provenance and Authenticity)](https://c2pa.org/), backed by Adobe, Microsoft, Google, and the BBC, is building technical standards for cryptographic content provenance. A photograph or article signed with C2PA metadata carries verifiable proof of its origin, creation date, and modification history. This does not prevent bots from creating content, but it allows humans to distinguish verified content from synthetic output.
 
-**AI-mediated consumption.** Personal AI agents, the same technology that created the dark forest, may also navigate it on behalf of the user. An agent that reads feeds, verifies sources, filters synthetic content, and surfaces only verified human-created material acts as a personal guide through the forest. The text-field-as-interface model described in [The Text Field is the New Dashboard](/universal-text-ui) is the logical consumption layer for a public web that humans can no longer browse directly.
+**AI-mediated consumption.** Personal AI agents, the same technology that created the dark forest, may also navigate it on behalf of the user. An agent that reads feeds, verifies sources, filters synthetic content, and surfaces only verified human-created material acts as a personal guide through the forest. The text-field-as-interface model described in [The Text Field is the New Dashboard](/textui) is the logical consumption layer for a public web that humans can no longer browse directly.
 
 ## The Architecture of the Next Internet
 
@@ -5274,7 +5274,7 @@ The internet is splitting into two layers.
 
 **The public layer:** Open, searchable, and increasingly synthetic. Dominated by AI-generated content, bot traffic, and algorithmically optimized spam. Still useful for commerce, logistics, and machine-to-machine communication. Increasingly useless for authentic human discourse and trustworthy information.
 
-**The private layer:** Encrypted, verified, and human. Accessed through invitation, payment, or cryptographic proof of personhood. Where real conversations, genuine expertise, and authentic relationships concentrate. Invisible to search engines, crawlers, and the attention-refinery apparatus described in [Attention Refinery](/attention-refinery).
+**The private layer:** Encrypted, verified, and human. Accessed through invitation, payment, or cryptographic proof of personhood. Where real conversations, genuine expertise, and authentic relationships concentrate. Invisible to search engines, crawlers, and the attention-refinery apparatus described in [Attention Refinery](/attention).
 
 The question is not whether this bifurcation will happen. The data shows it is already underway. The question is whether the public builds infrastructure to keep a viable public commons, a space where verified humans can still exchange ideas openly, or whether the full retreat into private clearings is accepted, leaving the open web to the machines.
 
@@ -5285,10 +5285,10 @@ The open internet is becoming a dark forest. Bots generate 51% of web traffic. 7
 ---
 
 ## Rationality in AI
-URL: https://veda.ng/rationality-in-ai
+URL: https://veda.ng/rationality
 Summary: What it means for an AI system to be rational, how decision theory applies to artificial agents, why the orthogonality thesis makes alignment a...
 
-![Infographic](/images/essays/rationality-in-ai.svg?v=7)
+![Infographic](/images/essays/rationality.svg?v=7)
 
 ## What Does It Mean to Be Rational?
 
@@ -5392,10 +5392,10 @@ Rationality in AI is not merely a question of logical consistency. It is the pro
 ---
 
 ## Digital Monasticism
-URL: https://veda.ng/digital-monasticism
+URL: https://veda.ng/monasticism
 Summary: Silence is the new luxury. The average person spends 7 hours on screens daily. Attention spans dropped from 2.5 minutes to 40 seconds in twenty years.
 
-![Infographic](/images/essays/digital-monasticism.svg?v=7)
+![Infographic](/images/essays/monasticism.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -5478,7 +5478,7 @@ This commodification is revealing. If silence must be purchased, it is because t
 
 Digital monasticism, like most attention-management strategies, addresses symptoms rather than structure. The individual who reduces notifications and practices technology sabbaths achieves genuine cognitive benefit. The research is clear on this. But they do so against the grain of an environment designed to prevent exactly this behavior.
 
-Platform design, employer expectations, social norms, and communication infrastructure all push toward constant connectivity. An individual who goes offline for a day returns to 200 unread messages and the implicit accusation of unavailability. The structural incentives of the [attention refinery](/attention-refinery) are precisely opposed to the monastic principle: platforms earn revenue proportional to time-on-screen, and every second of attention recovered by the individual monk is a second of revenue lost by the platform.
+Platform design, employer expectations, social norms, and communication infrastructure all push toward constant connectivity. An individual who goes offline for a day returns to 200 unread messages and the implicit accusation of unavailability. The structural incentives of the [attention refinery](/attention) are precisely opposed to the monastic principle: platforms earn revenue proportional to time-on-screen, and every second of attention recovered by the individual monk is a second of revenue lost by the platform.
 
 The asymmetry is stark. [Meta](https://about.meta.com/) generated **$201 billion** in advertising revenue in 2024, virtually all of it derived from captured attention. The company employs thousands of engineers optimizing for engagement: infinite scroll, autoplay, variable-ratio reinforcement schedules, push notifications calibrated for maximum response rates. The individual practitioner of digital monasticism is armed with willpower and a settings menu. The platform is armed with billions of dollars and decades of behavioral science research. This is not a fair fight.
 
@@ -5492,7 +5492,7 @@ The full realization of digital monasticism requires institutional support at th
 
 > **The AI Acceleration**
 > 
-The emergence of generative AI in 2023-2025 adds a new dimension to the attention crisis. AI-generated content is increasing the volume of information competing for human attention by orders of magnitude. AI assistants create expectations of instant response. AI-powered recommendation engines are becoming more sophisticated at capturing and holding attention. The very technology that could theoretically help manage cognitive load (AI-mediated filtering, as described in [The Text Field is the New Dashboard](/universal-text-ui)) is simultaneously intensifying the information overload that makes filtering necessary. Digital monasticism may become less a lifestyle choice and more a cognitive necessity.
+The emergence of generative AI in 2023-2025 adds a new dimension to the attention crisis. AI-generated content is increasing the volume of information competing for human attention by orders of magnitude. AI assistants create expectations of instant response. AI-powered recommendation engines are becoming more sophisticated at capturing and holding attention. The very technology that could theoretically help manage cognitive load (AI-mediated filtering, as described in [The Text Field is the New Dashboard](/textui)) is simultaneously intensifying the information overload that makes filtering necessary. Digital monasticism may become less a lifestyle choice and more a cognitive necessity.
 
 > **Key Takeaway**
 > 
@@ -5501,10 +5501,10 @@ Every era of information excess has produced structured retreat movements: deser
 ---
 
 ## Attention Refinery
-URL: https://veda.ng/attention-refinery
+URL: https://veda.ng/attention
 Summary: The five largest technology companies generate over $600 billion per year by extracting and reselling human attention.
 
-![Infographic](/images/essays/attention-refinery.svg?v=8)
+![Infographic](/images/essays/attention.svg?v=8)
 
 > **The Core Thesis**
 > 
@@ -5595,7 +5595,7 @@ Three structural shifts are beginning to erode the refinery's operating model.
 
 **Regulatory pressure.** The [EU Digital Services Act](https://digital-strategy.ec.europa.eu/en/policies/digital-services-act-package) (effective February 2024) requires platforms to disclose how their recommendation algorithms work and prohibits targeting minors with behavioral advertising. The [US Kids Online Safety Act](https://www.congress.gov/bill/118th-congress/senate-bill/1409), passed in 2024, imposes a duty of care on platforms to prevent harm to minors. China's [youth mode restrictions](http://www.cac.gov.cn/) limit minors to 40 minutes per day on Douyin (TikTok's Chinese counterpart). These regulations attack the supply side. Restricting how much attention the refinery can extract from specific populations.
 
-**AI-mediated consumption.** Personal AI agents are beginning to sit between users and platforms. An agent that reads your email, summarizes your feeds, and filters content based on your stated values (not your click patterns) disrupts the refinery's data collection pipeline. If you never scroll the feed, the algorithm cannot observe your reactions. If you never see the ad, the impression is never served. The agent-mediated future described in [The Text Field is the New Dashboard](/universal-text-ui) directly threatens the attention extraction model because it removes the human from the engagement loop.
+**AI-mediated consumption.** Personal AI agents are beginning to sit between users and platforms. An agent that reads your email, summarizes your feeds, and filters content based on your stated values (not your click patterns) disrupts the refinery's data collection pipeline. If you never scroll the feed, the algorithm cannot observe your reactions. If you never see the ad, the impression is never served. The agent-mediated future described in [The Text Field is the New Dashboard](/textui) directly threatens the attention extraction model because it removes the human from the engagement loop.
 
 **Subscription models.** [Substack](https://substack.com/) (valued at $585 million, 2024), [Patreon](https://www.patreon.com/) ($4 billion valuation, 2024), and [YouTube Premium](https://www.youtube.com/premium) (100 million subscribers by 2025) demonstrate that users will pay to remove advertising when given a credible alternative. The subscription model aligns incentives: the creator's revenue depends on producing content the subscriber values, not content that maximizes engagement metrics. This shifts the optimization target from "time on screen" to "value delivered."
 
@@ -5619,10 +5619,10 @@ The attention economy is a $740 billion extraction industry. Five companies, Goo
 ---
 
 ## Tracing Blockchain's Journey
-URL: https://veda.ng/blockchain-journey
+URL: https://veda.ng/blockchain
 Summary: An analysis of blockchain's evolution from cryptographic experiment to institutional infrastructure, examining what survived the hype cycles, where the...
 
-![Infographic](/images/essays/blockchain-journey.svg?v=8)
+![Infographic](/images/essays/blockchain.svg?v=8)
 
 ## From Experiment to Infrastructure
 
@@ -5735,7 +5735,7 @@ Blockchain is converging with AI in ways that may prove significant. The interse
 
 **Content verification.** Cryptographic verification of AI-generated content may become important as synthetic media proliferates. Blockchain-based provenance chains can establish the origin and modification history of digital content, addressing a trust problem that AI itself has created.
 
-**Agent-native financial infrastructure.** As AI agents become more autonomous, they need financial primitives that do not require human authorization for every transaction. Smart contracts provide programmable spending limits, conditional logic, and automated settlement that can serve as the financial backbone of [agentic systems](/towards-the-agentic-web).
+**Agent-native financial infrastructure.** As AI agents become more autonomous, they need financial primitives that do not require human authorization for every transaction. Smart contracts provide programmable spending limits, conditional logic, and automated settlement that can serve as the financial backbone of [agentic systems](/agenticweb).
 
 > **Key Takeaway**
 > 
@@ -5744,10 +5744,10 @@ Blockchain's journey from 2009 to 2026 follows a pattern familiar from other fou
 ---
 
 ## Sacred Algorithms
-URL: https://veda.ng/sacred-algorithms
+URL: https://veda.ng/algorithms
 Summary: COMPAS predicts recidivism with racial bias baked in. Healthcare AI underestimates illness in minority patients.
 
-![Infographic](/images/essays/sacred-algorithms.svg?v=7)
+![Infographic](/images/essays/algorithms.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -5830,10 +5830,10 @@ COMPAS demonstrated that criminal justice risk models produce racially disparate
 ---
 
 ## Computational Social Science
-URL: https://veda.ng/computational-social-science
+URL: https://veda.ng/socialscience
 Summary: Twitter's API shutdown disrupted 20 years of social research. Digital twins simulate voter behavior.
 
-![Infographic](/images/essays/computational-social-science.svg?v=7)
+![Infographic](/images/essays/socialscience.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -5932,10 +5932,10 @@ Computational social science lost its primary data source when Twitter/X restric
 ---
 
 ## Computational Constitutions
-URL: https://veda.ng/computational-constitutions
+URL: https://veda.ng/constitutions
 Summary: Wyoming legalized DAO LLCs in 2021. Smart contracts execute governance rules automatically.
 
-![Infographic](/images/essays/computational-constitutions.svg?v=7)
+![Infographic](/images/essays/constitutions.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -6038,10 +6038,10 @@ Wyoming legalized DAO LLCs in 2021; Cardano ratified the first on-chain blockcha
 ---
 
 ## Pseudonymous Agency
-URL: https://veda.ng/pseudonymous-agency
+URL: https://veda.ng/pseudonymity
 Summary: Satoshi Nakamoto built a $1 trillion protocol without revealing an identity. Banksy generates $25M+ per auction without a face.
 
-![Infographic](/images/essays/pseudonymous-agency.svg?v=7)
+![Infographic](/images/essays/pseudonymity.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -6084,7 +6084,7 @@ Three cryptographic technologies have matured sufficiently to support pseudonymo
 
 **Verifiable Credentials (VCs).** Built on the DID foundation, [W3C Verifiable Credentials](https://www.w3.org/TR/vc-data-model-2.0/) allow third parties to attest to properties of an identity without disclosing the identity itself. A university can issue a credential proving you hold a degree. An employer can issue a credential proving you have 5+ years of experience. A jurisdiction can issue a credential proving you are a legal adult. The EU's [eIDAS 2.0](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation) regulation mandates that all 27 EU Member States provide EUDI Wallets supporting verifiable credentials by December 2026, with regulated services required to accept them by 2027. This is the first sovereign-scale deployment of VC infrastructure: 450 million citizens with standardized, interoperable digital identity wallets.
 
-**Zero-Knowledge Proofs (ZKPs).** The mathematical mechanism that makes selective disclosure possible. As detailed in the companion essay on [programmable trust](/programmable-trust), ZKPs allow you to prove a statement is true without revealing the data underlying it. For pseudonymous agency, ZKPs are the critical enabler: prove you are over 18 without revealing your date of birth. Prove your income exceeds a threshold without revealing your actual income. Prove you hold a valid professional license without revealing your home address. Prove you are not on a sanctions list without revealing your name.
+**Zero-Knowledge Proofs (ZKPs).** The mathematical mechanism that makes selective disclosure possible. As detailed in the companion essay on [programmable trust](/trust), ZKPs allow you to prove a statement is true without revealing the data underlying it. For pseudonymous agency, ZKPs are the critical enabler: prove you are over 18 without revealing your date of birth. Prove your income exceeds a threshold without revealing your actual income. Prove you hold a valid professional license without revealing your home address. Prove you are not on a sanctions list without revealing your name.
 
 Together, these technologies create a stack that separates identity (who you are biologically) from agency (what you can do, prove, and transact). The pseudonymous identity anchors itself through a DID, accumulates verifiable credentials from trusted issuers, and proves specific properties to counterparties through ZKPs. The counterparty gets higher-confidence verification than traditional document-based identity checks, with zero data liability.
 
@@ -6150,10 +6150,10 @@ Satoshi Nakamoto built a $1.56 trillion protocol pseudonymously. Banksy generate
 ---
 
 ## Programmable Trust
-URL: https://veda.ng/programmable-trust
+URL: https://veda.ng/trust
 Summary: Zero-knowledge proofs verify without revealing. Trusted execution environments create hardware-enforced privacy.
 
-![Infographic](/images/essays/programmable-trust.svg?v=7)
+![Infographic](/images/essays/trust.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -6266,10 +6266,10 @@ Programmable trust replaces institutional verification (banks, courts, notaries)
 ---
 
 ## The God Protocol
-URL: https://veda.ng/god-protocol
+URL: https://veda.ng/godprotocol
 Summary: Nick Szabo imagined a trusted third party with infinite integrity, no self-interest, and perfect confidentiality. Bitcoin approximated it.
 
-![Infographic](/images/essays/god-protocol.svg?v=7)
+![Infographic](/images/essays/godprotocol.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -6347,7 +6347,7 @@ This is not a new philosophical problem. Determinism has been debated since the 
 
 ## The Alignment Problem as Theology
 
-The [alignment problem](/agi-governance) is the central obstacle between current AI systems and a functioning God Protocol. Before anyone can build a computational god, humanity must agree on what "good" means. There have been millennia to try. The world's ethical and religious traditions do not agree.
+The [alignment problem](/governance) is the central obstacle between current AI systems and a functioning God Protocol. Before anyone can build a computational god, humanity must agree on what "good" means. There have been millennia to try. The world's ethical and religious traditions do not agree.
 
 An AGI aligned to utilitarian principles would maximize aggregate welfare, potentially sacrificing the interests of minorities for the benefit of the majority. An AGI aligned to deontological principles would enforce universal rules regardless of consequences, maintaining individual rights even when doing so reduces overall welfare. An AGI aligned to virtue ethics would model behavior on exemplary agents, raising the question of whose exemplars are selected. An AGI aligned to care ethics would prioritize relational context and emotional impact, potentially introducing bias toward in-groups over universal fairness.
 
@@ -6365,7 +6365,7 @@ The decentralized approach to the God Protocol, building it from distributed com
 
 A network of specialized AI agents, each handling a specific domain (financial verification, legal interpretation, scientific fact-checking), coordinated through cryptographic protocols (ZKPs for privacy, MPC for confidential computation, blockchain for immutable recording), approximates the God Protocol without creating a single point of control. No individual agent possesses all the properties Szabo described. The network, collectively, approaches them.
 
-This is the architecture that [programmable trust](/programmable-trust) infrastructure is building toward. The verification layer uses ZKPs and attestation protocols to prove facts without revealing data. The computation layer uses smart contracts, MPC, and (increasingly) FHE to perform computations on private inputs. The data access layer uses decentralized oracles like [Chainlink](https://chain.link/) and [The Graph](https://thegraph.com/) to bring real-world data on-chain with cryptographic guarantees. The consensus layer uses proof-of-stake validators and emerging data availability layers to maintain immutable, tamper-proof records.
+This is the architecture that [programmable trust](/trust) infrastructure is building toward. The verification layer uses ZKPs and attestation protocols to prove facts without revealing data. The computation layer uses smart contracts, MPC, and (increasingly) FHE to perform computations on private inputs. The data access layer uses decentralized oracles like [Chainlink](https://chain.link/) and [The Graph](https://thegraph.com/) to bring real-world data on-chain with cryptographic guarantees. The consensus layer uses proof-of-stake validators and emerging data availability layers to maintain immutable, tamper-proof records.
 
 The tradeoff is real. A distributed God Protocol is slower, less capable, and more complex than a centralized AGI would be. It cannot interpret ambiguity, assess intent, or navigate cultural context. It can only verify what is mathematically provable and execute what is algorithmically expressible. But it has a property that no centralized system can guarantee: no single entity controls it. In a world where the alignment problem remains unsolved and the governance of powerful AI systems is a subject of active political conflict, this property may be the most important one.
 
@@ -6388,10 +6388,10 @@ Nick Szabo's God Protocol (1997) imagined a trusted third party with perfect pro
 ---
 
 ## The Sensory Internet
-URL: https://veda.ng/sensory-internet
+URL: https://veda.ng/sensory
 Summary: The haptic technology market reaches $4-12 billion in 2025. Apple shipped 390,000 Vision Pro units. Neuralink implanted its first human BCI.
 
-![Infographic](/images/essays/sensory-internet.svg?v=7)
+![Infographic](/images/essays/sensory.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -6522,10 +6522,10 @@ The internet transmits through two of five major sensory channels (vision, heari
 ---
 
 ## The Mesh Economy
-URL: https://veda.ng/mesh-economy
+URL: https://veda.ng/mesh
 Summary: DeFi protocols execute billions in daily volume with zero employees. DAOs manage tens of billions in treasury assets through on-chain governance.
 
-![Infographic](/images/essays/mesh-economy.svg?v=7)
+![Infographic](/images/essays/mesh.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -6658,10 +6658,10 @@ The mesh economy extends Coase's theory to its logical conclusion: as transactio
 ---
 
 ## The Plurality Trap
-URL: https://veda.ng/plurality-trap
+URL: https://veda.ng/plurality
 Summary: More information was supposed to produce better understanding. Instead, it produced more ways to be wrong confidently.
 
-![Infographic](/images/essays/plurality-trap.svg?v=7)
+![Infographic](/images/essays/plurality.svg?v=7)
 
 > **The Core Thesis**
 > 
@@ -6808,10 +6808,10 @@ The plurality trap is the condition where more information produces less shared 
 ---
 
 ## The Simulation Layer
-URL: https://veda.ng/simulation-layer
+URL: https://veda.ng/simulayer
 Summary: Digital twins save Boeing over $1 billion in manufacturing. Waymo has driven 20+ billion simulated miles.
 
-![Infographic](/images/essays/simulation-layer.svg?v=7)
+![Infographic](/images/essays/simulayer.svg?v=7)
 
 > **The Core Thesis**
 > 

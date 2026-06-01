@@ -17,4 +17,4 @@ gql(`
       post(slug: $slug) { id slug }
     }
   }
-`, { host: "vedangvatsa.hashnode.dev", slug: "agents-eating-saas" }).then(console.log);
+`, { host: "vedangvatsa.hashnode.dev", slug: "agentsaas" }).then(console.log);
