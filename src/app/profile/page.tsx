@@ -62,9 +62,9 @@ export default function ProfilePage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
-      <div className="py-8">
+      <div>
         <div>
-          <section className="text-center">
+          <section className="pt-12 md:pt-20 pb-8 text-center">
             
               <Image
                 src="/images/icon.png"
@@ -77,7 +77,8 @@ export default function ProfilePage() {
             
             <h1 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
             <p className="mx-auto mt-3 max-w-3xl text-base md:text-lg text-muted-foreground">
-             Computer Engineer, MBA, Chartered Engineer | Young Researcher 2020 Awardee (22 publications) & Young Achiever 2020-21 Awardee
+              Computer Engineer, MBA, Chartered Engineer<br />
+              Young Researcher 2020 Awardee (22 publications) &amp; Young Achiever 2020-21 Awardee
             </p>
             <div className="mt-5 flex justify-center items-center space-x-4">
               <Link href="mailto:vedangvatsa.2019@iitkalumni.org" className="text-[#EA4335] hover:text-[#D93025] transition-colors" aria-label="Email">
