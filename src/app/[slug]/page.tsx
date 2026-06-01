@@ -241,7 +241,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
       ]} />
 
       {/* ─── Essay Header ─── */}
-      <header className="pt-12 md:pt-20 pb-10 md:pb-14">
+      <header className="pt-12 md:pt-20 pb-6 md:pb-8">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
             {essay.frontmatter.title}
@@ -277,7 +277,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
       </header>
 
       {/* ─── Essay Body ─── */}
-      <div className="py-10 md:py-14">
+      <div className="pb-10 md:pb-14">
         <article className="notion-article prose prose-lg prose-neutral max-w-none">
           <MDXRemote
             source={essay.content}
