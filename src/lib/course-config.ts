@@ -1,8 +1,8 @@
 export const courseConfigs = {
-  'vibe-coding': {
-    courseId: 'vibe-coding',
+  'vibecoding': {
+    courseId: 'vibecoding',
     courseTitle: 'Vibe Coding',
-    basePath: '/vibe-coding',
+    basePath: '/vibecoding',
     modules: [
       { slug: 'module-1-philosophy', title: '1. The Philosophy' },
       { slug: 'module-2-toolkit', title: '2. The Modern Toolkit' },
@@ -13,10 +13,10 @@ export const courseConfigs = {
       { slug: 'module-7-deployment', title: '7. Deployment & Databases' },
     ],
   },
-  'prompt-engineering-101': {
-    courseId: 'prompt-engineering-101',
+  'prompt': {
+    courseId: 'prompt',
     courseTitle: 'Prompt Engineering',
-    basePath: '/prompt-engineering-101',
+    basePath: '/prompt',
     modules: [
       { slug: 'module-1-core-idea', title: '1. The Core Idea' },
       { slug: 'module-2-core-techniques', title: '2. Core Techniques' },
@@ -27,10 +27,10 @@ export const courseConfigs = {
       { slug: 'module-7-chaining-agents', title: '7. Chaining & Agents' },
     ],
   },
-  'ai-automation': {
-    courseId: 'ai-automation',
+  'automation': {
+    courseId: 'automation',
     courseTitle: 'AI Automation',
-    basePath: '/ai-automation',
+    basePath: '/automation',
     modules: [
       { slug: 'module-1-mindset', title: '1. The Automation Mindset' },
       { slug: 'module-2-apis', title: '2. API Fundamentals' },
@@ -41,10 +41,10 @@ export const courseConfigs = {
       { slug: 'module-7-production', title: '7. Production' },
     ],
   },
-  'mcp-development': {
-    courseId: 'mcp-development',
+  'mcp': {
+    courseId: 'mcp',
     courseTitle: 'MCP Development',
-    basePath: '/mcp-development',
+    basePath: '/mcp',
     modules: [
       { slug: 'module-1-what-is-mcp', title: '1. What is MCP' },
       { slug: 'module-2-transports', title: '2. Transports' },
@@ -55,10 +55,10 @@ export const courseConfigs = {
       { slug: 'module-7-production', title: '7. Production' },
     ],
   },
-  'agentic-web': {
-    courseId: 'agentic-web',
+  'agentic': {
+    courseId: 'agentic',
     courseTitle: 'The Agentic Web',
-    basePath: '/agentic-web',
+    basePath: '/agentic',
     modules: [
       { slug: 'module-1-core-idea', title: '1. The Core Idea' },
       { slug: 'module-2-components', title: '2. Components' },
@@ -69,10 +69,10 @@ export const courseConfigs = {
       { slug: 'module-7-build-agent', title: '7. Build an Agent' },
     ],
   },
-  'web3-101': {
-    courseId: 'web3-101',
+  'web3': {
+    courseId: 'web3',
     courseTitle: 'Web3 Fundamentals',
-    basePath: '/web3-101',
+    basePath: '/web3',
     modules: [
       { slug: 'module-1-vision', title: '1. The Vision' },
       { slug: 'module-2-bedrock', title: '2. The Bedrock' },

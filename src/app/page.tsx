@@ -19,18 +19,19 @@ export const metadata: Metadata = generateMetadata({
 });
 
 const resources = [
-  { title: 'Learn Web3', url: '/web3-101' },
-  { title: 'Learn Agentic Web', url: '/agentic-web' },
-  { title: 'Learn Prompt Engineering', url: '/prompt-engineering-101' },
-  { title: 'Learn Vibe Coding', url: '/vibe-coding' },
-  { title: 'Learn MCP Development', url: '/mcp-development' },
-  { title: 'Learn AI Automation', url: '/ai-automation' },
+  { title: 'Learn Web3', url: '/web3' },
+  { title: 'Learn Agentic Web', url: '/agentic' },
+  { title: 'Learn Prompt Engineering', url: '/prompt' },
+  { title: 'Learn Vibe Coding', url: '/vibecoding' },
+  { title: 'Learn MCP Development', url: '/mcp' },
+  { title: 'Learn AI Automation', url: '/automation' },
   { title: 'LinkedIn Translator', url: '/lit' },
   { title: 'Swarm Prediction', url: '/swarm-prediction' },
   { title: 'AI Discovery Standards', url: '/ai-discovery-standards' },
   { title: 'AI Reports Library', url: '/ai-reports' },
   { title: 'Web3 & AI Glossary', url: '/glossary' },
 ];
+
 
 export default function Home() {
   const recentEssays = essays.slice(0, 12).map(e => ({

@@ -54,6 +54,67 @@ const nextConfig = {
         destination: '/profile',
         permanent: true,
       },
+      // Course slug migrations
+      {
+        source: '/web3-101',
+        destination: '/web3',
+        permanent: true,
+      },
+      {
+        source: '/web3-101/:path*',
+        destination: '/web3/:path*',
+        permanent: true,
+      },
+      {
+        source: '/mcp-development',
+        destination: '/mcp',
+        permanent: true,
+      },
+      {
+        source: '/mcp-development/:path*',
+        destination: '/mcp/:path*',
+        permanent: true,
+      },
+      {
+        source: '/ai-automation',
+        destination: '/automation',
+        permanent: true,
+      },
+      {
+        source: '/ai-automation/:path*',
+        destination: '/automation/:path*',
+        permanent: true,
+      },
+      {
+        source: '/agentic-web',
+        destination: '/agentic',
+        permanent: true,
+      },
+      {
+        source: '/agentic-web/:path*',
+        destination: '/agentic/:path*',
+        permanent: true,
+      },
+      {
+        source: '/prompt-engineering-101',
+        destination: '/prompt',
+        permanent: true,
+      },
+      {
+        source: '/prompt-engineering-101/:path*',
+        destination: '/prompt/:path*',
+        permanent: true,
+      },
+      {
+        source: '/vibe-coding',
+        destination: '/vibecoding',
+        permanent: true,
+      },
+      {
+        source: '/vibe-coding/:path*',
+        destination: '/vibecoding/:path*',
+        permanent: true,
+      },
     ];
   },
   async headers() {

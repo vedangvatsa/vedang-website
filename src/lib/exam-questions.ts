@@ -5,7 +5,7 @@ export interface ExamQuestion {
 }
 
 export const examQuestions: Record<string, ExamQuestion[]> = {
-  'vibe-coding': [
+  'vibecoding': [
     { question: 'In the GCES framework, what is the purpose of defining "Anti-Features" in your PRD?', options: ['To list features for the next version', 'To explicitly tell the AI what NOT to build, preventing unwanted complexity', 'To document bugs found during testing', 'To define the color scheme and typography'], correctIndex: 1 },
     { question: 'What is the "Golden Rule of Iteration" taught in the course?', options: ['Always use the most expensive AI model', 'Make one change per prompt, test after every change, revert if the AI goes off track', 'Write the entire spec in a single prompt', 'Switch AI tools after every three prompts'], correctIndex: 1 },
     { question: 'When the AI enters a "fix loop" - fixing one bug but creating another - what does the course recommend?', options: ['Keep iterating until the AI figures it out', 'Add more detail to the same prompt', 'Stop, revert to the last working commit, describe the feature from scratch with more context', 'Delete the project and start over'], correctIndex: 2 },
@@ -26,7 +26,7 @@ export const examQuestions: Record<string, ExamQuestion[]> = {
     { question: 'What is the key difference between Supabase and Firebase?', options: ['Supabase is proprietary; Firebase is open-source', 'Supabase provides a SQL/Postgres database; Firebase provides a NoSQL (Firestore) database', 'Firebase is free; Supabase is paid only', 'There is no meaningful difference'], correctIndex: 1 },
   ],
 
-  'prompt-engineering-101': [
+  'prompt': [
     { question: 'What is "Self-Consistency" and how does it build on Chain-of-Thought?', options: ['It verifies grammar before responding', 'It generates multiple reasoning chains at higher temperature, then takes the majority-vote answer', 'It forces the same answer regardless of phrasing', 'It checks answers against a pre-defined database'], correctIndex: 1 },
     { question: 'What temperature should you use for code generation and data extraction?', options: ['1.0+ for creativity', '0.7 as balanced default', '0.0 for deterministic, reproducible output', 'Temperature is irrelevant for code'], correctIndex: 2 },
     { question: 'What does Top-P (Nucleus Sampling) control?', options: ['Response length; always combine with temperature', 'Diversity of token selection by limiting to top P% of probable tokens; tune either temperature OR Top-P, not both', 'Number of paragraphs; use for creative tasks', 'Memory of previous conversations; always 1.0'], correctIndex: 1 },
@@ -45,7 +45,7 @@ export const examQuestions: Record<string, ExamQuestion[]> = {
     { question: 'What is "Constraint Stacking"?', options: ['Adding error handling to your code', 'Layering multiple constraints (format, length, tone, audience, data requirements) to narrow the output space precisely', 'Stacking multiple API calls in sequence', 'Using multiple models simultaneously'], correctIndex: 1 },
   ],
 
-  'ai-automation': [
+  'automation': [
     { question: 'What is the five-stage pipeline architecture pattern?', options: ['Plan → Build → Test → Deploy → Monitor', 'Trigger → Fetch → Transform → Act → Report', 'Input → Process → Output → Log → Archive', 'Connect → Authenticate → Query → Format → Send'], correctIndex: 1 },
     { question: 'What is the key difference between polling and webhooks?', options: ['Polling is real-time; webhooks have delays', 'They are the same thing', 'Polling repeatedly checks for data on a schedule; webhooks push data immediately when events occur - more efficient and real-time', 'Webhooks only work with JSON'], correctIndex: 2 },
     { question: 'Why is idempotency critical in pipelines?', options: ['It makes pipelines faster', 'Running the same step twice with identical input produces the same result - you can safely retry without creating duplicates', 'It encrypts data between stages', 'It auto-scales the pipeline'], correctIndex: 1 },
@@ -63,7 +63,7 @@ export const examQuestions: Record<string, ExamQuestion[]> = {
     { question: 'What monitoring metric indicates an upstream API has likely changed its format?', options: ['Increased response time', 'A gradually increasing error rate trend over days or weeks', 'Higher bandwidth usage', 'More successful responses'], correctIndex: 1 },
   ],
 
-  'mcp-development': [
+  'mcp': [
     { question: 'Who controls when each MCP primitive is invoked?', options: ['Tools = user, Resources = model, Prompts = app', 'Tools = model, Resources = app/host, Prompts = user', 'All three are model-controlled', 'All three are user-controlled'], correctIndex: 1 },
     { question: 'Why must you never write to stdout in an MCP stdio server?', options: ['stdout is for errors only', 'stdout is the exclusive JSON-RPC channel - non-JSON output corrupts the protocol and crashes the connection', 'console.log is too slow', 'The spec prohibits all logging'], correctIndex: 1 },
     { question: 'What is the key advantage of Streamable HTTP over SSE transport?', options: ['It only uses WebSockets', 'It requires two endpoints like SSE', 'It is stateless by default, works with serverless platforms, uses a single endpoint, and upgrades to streaming only when needed', 'It uses a proprietary binary format'], correctIndex: 2 },
@@ -81,7 +81,7 @@ export const examQuestions: Record<string, ExamQuestion[]> = {
     { question: 'What does "openWorldHint: false" in a tool annotation mean?', options: ['The tool only works offline', 'The tool does not make external network requests - it operates within local or controlled boundaries', 'The tool cannot be called by the model', 'The tool is read-only'], correctIndex: 1 },
   ],
 
-  'agentic-web': [
+  'agentic': [
     { question: 'What is an "Agent Card" in A2A and where is it hosted?', options: ['A credit card for agent purchases', 'A JSON manifest at /.well-known/agent.json describing capabilities, auth requirements, and interaction patterns', 'A visual UI component for agent avatars', 'An encrypted certificate in local memory'], correctIndex: 1 },
     { question: 'How do MCP and A2A relate?', options: ['They are competing standards', 'MCP replaced A2A', 'MCP connects agents to tools (agent↔tool); A2A connects agents to other agents (agent↔agent) - they are complementary', 'A2A is a subset of MCP'], correctIndex: 2 },
     { question: 'What makes the "Observation" step critical in the ReAct loop?', options: ['It saves reasoning to a log file', 'It lets the agent observe the actual result of its action, grounding reasoning in real feedback rather than assumptions', 'It pauses for human approval', 'It compresses conversation history'], correctIndex: 1 },
@@ -98,7 +98,7 @@ export const examQuestions: Record<string, ExamQuestion[]> = {
     { question: 'What does "Audit Trail" mean in the Agentic Web context?', options: ['A hiking path for AI agents', 'All agent actions are logged, creating a verifiable record of what was done, by whom, and why', 'A tool for debugging code', 'A performance benchmarking system'], correctIndex: 1 },
   ],
 
-  'web3-101': [
+  'web3': [
     { question: 'What is the "Scalability Trilemma"?', options: ['A blockchain can only support three token types', 'A blockchain can optimize for at most two of: security, decentralization, and scalability - L2s attempt to break this', 'Choosing between three programming languages', 'Choosing between public, private, or consortium'], correctIndex: 1 },
     { question: 'What is the key difference between Optimistic and ZK Rollups?', options: ['Optimistic are decentralized; ZK require a central server', 'Optimistic assume validity with a 7-day fraud proof challenge; ZK prove validity cryptographically upfront with no challenge period', 'ZK can only do simple transfers', 'Optimistic are newer'], correctIndex: 1 },
     { question: 'If Market Cap is $100M and FDV is $1B, what does this indicate?', options: ['The token is undervalued 10x', 'Only 10% of supply is circulating - 90% more will enter the market, potentially creating selling pressure', 'The project has $900M in treasury', 'The token has a burn mechanism'], correctIndex: 1 },

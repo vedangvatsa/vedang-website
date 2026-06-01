@@ -8,22 +8,22 @@
       "courses": [
         {
           "name": "Vibe Coding 101",
-          "url": "https://veda.ng/vibe-coding",
+          "url": "https://veda.ng/vibecoding",
           "description": "Build real apps with AI using Firebase Studio, Replit, Cursor, and Lovable"
         },
         {
           "name": "Web3 101",
-          "url": "https://veda.ng/web3-101",
+          "url": "https://veda.ng/web3",
           "description": "Blockchain fundamentals, smart contracts, dApps, NFTs, DAOs, and DeFi"
         },
         {
           "name": "Prompt Engineering 101",
-          "url": "https://veda.ng/prompt-engineering-101",
+          "url": "https://veda.ng/prompt",
           "description": "Master prompt engineering for LLMs and AI assistants"
         },
         {
           "name": "The Agentic Web",
-          "url": "https://veda.ng/agentic-web",
+          "url": "https://veda.ng/agentic",
           "description": "Autonomous AI agents, MCP, A2A protocols, and agentic systems"
         }
       ]

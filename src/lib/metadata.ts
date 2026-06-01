@@ -29,14 +29,14 @@ export const pageMetadata = {
     title: 'Web3 101 - Blockchain Fundamentals Course',
     description:
       'Free course on blockchain, cryptocurrencies, smart contracts, dApps, NFTs, DAOs, and decentralized systems.',
-    url: '/web3-101',
+    url: '/web3',
     keywords: ['Web3 Course', 'Blockchain Fundamentals', 'Learn Crypto', 'Smart Contracts', 'dApps', 'NFTs', 'DAOs'],
   },
   promptEngineering: {
     title: 'Prompt Engineering 101 - AI Course',
     description:
       'Master prompt engineering fundamentals. Learn to craft effective prompts for LLMs and AI assistants.',
-    url: '/prompt-engineering-101',
+    url: '/prompt',
     keywords: ['Prompt Engineering Course', 'Learn AI Prompts', 'LLM Tutorial', 'AI Assistants', 'Generative AI', 'Prompt Design'],
   },
   community: {
@@ -64,14 +64,14 @@ export const pageMetadata = {
     title: 'The Agentic Web - AI Agents Course',
     description:
       'Learn about autonomous AI agents and agentic systems transforming the web and digital economy.',
-    url: '/agentic-web',
+    url: '/agentic',
     keywords: ['Agentic Web', 'AI Agents Course', 'Autonomous AI', 'Agentic Systems', 'Digital Economy', 'Future of Web'],
   },
   vibeCoding: {
     title: 'Vibe Coding 101 by Vedang Vatsa',
     description:
       'Vibe Coding 101: A free course on building real apps with AI. Learn to build software in plain English using Cursor, Replit, Antigravity, and Lovable.',
-    url: '/vibe-coding',
+    url: '/vibecoding',
     keywords: ['Vibe Coding', 'Intuitive Engineering', 'Creative Software Design', 'Technical Excellence', 'Design Engineering'],
   },
   seo: {
@@ -92,14 +92,14 @@ export const pageMetadata = {
     title: 'MCP Development 101 - Build AI Tool Servers',
     description:
       'Free course on building MCP servers. Learn the Model Context Protocol to connect AI to databases, APIs, and any data source.',
-    url: '/mcp-development',
+    url: '/mcp',
     keywords: ['MCP', 'Model Context Protocol', 'MCP Server', 'AI Tools', 'Claude MCP', 'Cursor MCP', 'TypeScript MCP', 'Build MCP Server'],
   },
   aiAutomation: {
     title: 'AI Automation 101 - Automate Anything with AI',
     description:
       'Free course on AI-powered automation. Build pipelines with APIs, MCP servers, AI agents, n8n, and no-code tools.',
-    url: '/ai-automation',
+    url: '/automation',
     keywords: ['AI Automation', 'n8n', 'MCP Automation', 'AI Agents', 'API Automation', 'Workflow Automation', 'No-Code AI', 'Telegram Bot'],
   },
   healthProtocols: {

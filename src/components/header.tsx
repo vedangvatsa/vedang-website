@@ -61,22 +61,22 @@ export function Header() {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem asChild>
-                  <Link href="/ai-automation">AI Automation</Link>
+                  <Link href="/automation">AI Automation</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/mcp-development">MCP Development</Link>
+                  <Link href="/mcp">MCP Development</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/agentic-web">Agentic Web</Link>
+                  <Link href="/agentic">Agentic Web</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/vibe-coding">Vibe Coding</Link>
+                  <Link href="/vibecoding">Vibe Coding</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/prompt-engineering-101">Prompt Engineering</Link>
+                  <Link href="/prompt">Prompt Engineering</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/web3-101">Web3 Fundamentals</Link>
+                  <Link href="/web3">Web3 Fundamentals</Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
@@ -142,12 +142,12 @@ export function Header() {
                 <Separator className="my-4" />
 
                 <MobileNavSection title="Courses">
-                  <MobileNavLink href="/ai-automation" onClose={closeMobile}>AI Automation</MobileNavLink>
-                  <MobileNavLink href="/mcp-development" onClose={closeMobile}>MCP Development</MobileNavLink>
-                  <MobileNavLink href="/agentic-web" onClose={closeMobile}>Agentic Web</MobileNavLink>
-                  <MobileNavLink href="/vibe-coding" onClose={closeMobile}>Vibe Coding</MobileNavLink>
-                  <MobileNavLink href="/prompt-engineering-101" onClose={closeMobile}>Prompt Engineering</MobileNavLink>
-                  <MobileNavLink href="/web3-101" onClose={closeMobile}>Web3 Fundamentals</MobileNavLink>
+                  <MobileNavLink href="/automation" onClose={closeMobile}>AI Automation</MobileNavLink>
+                  <MobileNavLink href="/mcp" onClose={closeMobile}>MCP Development</MobileNavLink>
+                  <MobileNavLink href="/agentic" onClose={closeMobile}>Agentic Web</MobileNavLink>
+                  <MobileNavLink href="/vibecoding" onClose={closeMobile}>Vibe Coding</MobileNavLink>
+                  <MobileNavLink href="/prompt" onClose={closeMobile}>Prompt Engineering</MobileNavLink>
+                  <MobileNavLink href="/web3" onClose={closeMobile}>Web3 Fundamentals</MobileNavLink>
                 </MobileNavSection>
 
                 <MobileNavSection title="Tools">

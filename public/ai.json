@@ -10,10 +10,10 @@
   },
   "content": {
     "courses": [
-      {"title": "Vibe Coding 101", "url": "https://veda.ng/vibe-coding", "topics": ["AI-assisted development", "Firebase Studio", "Replit", "Cursor", "Lovable"]},
-      {"title": "Web3 101", "url": "https://veda.ng/web3-101", "topics": ["blockchain", "smart contracts", "dApps", "NFTs", "DAOs", "DeFi"]},
-      {"title": "Prompt Engineering 101", "url": "https://veda.ng/prompt-engineering-101", "topics": ["LLMs", "zero-shot", "few-shot", "chain of thought", "code prompting"]},
-      {"title": "The Agentic Web", "url": "https://veda.ng/agentic-web", "topics": ["AI agents", "MCP", "A2A protocol", "multi-agent systems", "tool use"]}
+      {"title": "Vibe Coding 101", "url": "https://veda.ng/vibecoding", "topics": ["AI-assisted development", "Firebase Studio", "Replit", "Cursor", "Lovable"]},
+      {"title": "Web3 101", "url": "https://veda.ng/web3", "topics": ["blockchain", "smart contracts", "dApps", "NFTs", "DAOs", "DeFi"]},
+      {"title": "Prompt Engineering 101", "url": "https://veda.ng/prompt", "topics": ["LLMs", "zero-shot", "few-shot", "chain of thought", "code prompting"]},
+      {"title": "The Agentic Web", "url": "https://veda.ng/agentic", "topics": ["AI agents", "MCP", "A2A protocol", "multi-agent systems", "tool use"]}
     ],
     "glossary": {"url": "https://veda.ng/glossary", "term_count": "100+"},
     "essays": {"url": "https://veda.ng/writings"},
