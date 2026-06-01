@@ -98,6 +98,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/swarm-prediction/wiki`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.6 },
     { url: `${BASE_URL}/profile`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/media`, lastModified: buildDate, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${BASE_URL}/meeting`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/community`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE_URL}/seo`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.3 },
     { url: `${BASE_URL}/lit`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.6 },
