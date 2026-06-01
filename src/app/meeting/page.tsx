@@ -3,9 +3,7 @@ import { PageHero } from '@/components/page-hero';
 import { Metadata } from 'next';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
 import { CalEmbed } from '@/components/cal-embed';
-
 import Link from 'next/link';
-import Script from 'next/script';
 
 export const metadata: Metadata = generateMetadata({
   title: pageMetadata.meeting.title,
@@ -16,14 +14,6 @@ export const metadata: Metadata = generateMetadata({
 
 export default function MeetingPage() {
   return (
-    <>
-      {/* Preconnect to Cal.com for faster embed load */}
-      <link rel="preconnect" href="https://app.cal.com" />
-      <link rel="dns-prefetch" href="https://app.cal.com" />
-      <Script
-        src="https://app.cal.com/embed/embed.js"
-        strategy="beforeInteractive"
-      />
     <PageLayout>
       <PageHero
         title="Book a Meeting"
@@ -47,6 +37,5 @@ export default function MeetingPage() {
         <CalEmbed />
       </section>
     </PageLayout>
-    </>
   );
 }
