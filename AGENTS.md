@@ -5,6 +5,8 @@ When working on this project, you MUST read and follow these guidelines before m
 ## Essay Content
 - **Essay Writing Guide**: `docs/essay-writing-guide.md` — Structure, MDX components, formatting rules, banned phrases, citation standards, and the 10-step essay pipeline.
 - **AI Slop Avoidance**: `docs/ai-slop-avoidance.md` — Comprehensive list of banned AI-generated phrases. Check ALL content against this before committing.
+- **Opening paragraph before hero image**: Every essay MUST have a plain-text opening paragraph BEFORE the `<Figure>` hero infographic. Never put the image first.
+- **No opening Callout boxes**: Do NOT wrap the essay's opening paragraph in a `<Callout>` (e.g., "The Core Thesis", "Key Findings", "Executive Summary"). Callouts are for mid-body asides only.
 
 ## Design & Visuals
 - **Infographic Design Guide**: `docs/infographic-design-guide.md` — Brand colors, typography, SVG/chart standards, light-mode aesthetic.

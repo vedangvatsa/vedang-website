@@ -72,7 +72,7 @@
 
 ### Structure
 - **Length**: 3,500-4,500 words. Each essay is a McKinsey-grade research piece with charts, data visualizations, and verified statistics.
-- **Opening**: Start with a concrete observation, historical fact, or provocative claim. NEVER start with a definition or "In today's world..."
+- **Opening**: Start with a concrete observation, historical fact, or provocative claim. NEVER start with a definition or "In today's world..." The opening paragraph MUST appear as plain text BEFORE the hero `<Figure>` component. Never put the image first.
 - **Body**: Build the argument through specific examples, data, and analogies. Each section should advance the thesis, not repeat it. Pair every core claim with a StatRow, chart component, or data table.
 - **Closing**: End with an implication or unanswered question. NOT a summary of what was just said.
 
@@ -89,7 +89,8 @@
 ```
 
 ### Banned Components
-- **`<SectionLabel>`** — Do NOT use. It renders as an all-caps, light-blue, non-semantic `<span>` that duplicates the `##` heading below it. Use standard `##` markdown headings for all section dividers.
+- **`<SectionLabel>`** — Do NOT use. It renders as an all-caps, light-blue, non-semantic `<span>` that duplicates the `## ` heading below it. Use standard `##` markdown headings for all section dividers.
+- **Opening `<Callout>` boxes** — Do NOT wrap the essay's opening paragraph in a `<Callout>` (e.g., "The Core Thesis", "Key Findings", "Executive Summary"). The opening text must be a plain paragraph. Callouts are reserved for mid-body asides (warnings, supplementary info, inline data tables).
 
 ### Custom Chart Components
 Each essay should have its own chart file at `src/components/mdx/{essay-slug}-charts.tsx`. Charts must:
