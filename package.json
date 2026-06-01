@@ -17,6 +17,7 @@
     "indexnow": "bash scripts/submit-indexnow.sh"
   },
   "dependencies": {
+    "@calcom/embed-react": "^1.5.3",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^16.1.6",

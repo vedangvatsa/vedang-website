@@ -116,6 +116,13 @@ export const pageMetadata = {
     url: '/ai-reports',
     keywords: ['AI Reports', 'AI Research Papers', 'State of AI', 'McKinsey AI', 'Stanford AI Index', 'AI Industry Reports', 'AI Governance', 'Generative AI Reports'],
   },
+  meeting: {
+    title: 'Book a Meeting with Vedang Vatsa',
+    description:
+      'Schedule a 1:1 conversation with Vedang Vatsa. Available for AI strategy, Web3 advisory, speaking engagements, and collaboration.',
+    url: '/meeting',
+    keywords: ['Book Meeting', 'Schedule Call', 'Vedang Vatsa', 'AI Consulting', 'Web3 Advisory', 'Speaking Engagement'],
+  },
   stateOfWeb3: {
     title: 'The State of Blockchain Research (2013-2026) | Vedang Vatsa',
     description:
