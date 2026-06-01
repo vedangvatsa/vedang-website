@@ -2,6 +2,7 @@
 
 
 import { PageLayout } from '@/components/page-layout';
+import { PageHero } from '@/components/page-hero';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
@@ -11,7 +12,7 @@ import {
   Twitter,
 } from 'lucide-react';
 import { Metadata } from 'next';
-import Image from 'next/image';
+
 import Link from 'next/link';
 import { essays } from '@/lib/essays';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
@@ -32,38 +33,26 @@ export default function SeoProfilePage() {
     <PageLayout>
       <BreadcrumbSchema items={[{ name: "SEO & Growth", url: "https://veda.ng/seo" }]} />
 
-      <div className="pt-12 md:pt-20 pb-8">
-        <section className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-          <Image
-            src="/images/icon.png"
-            alt="Headshot of Vedang Vatsa, a growth marketing and SEO specialist."
-            width={128}
-            height={128}
-            className="h-32 w-32 rounded-full object-cover border-4 border-card"
-            priority
-          />
-          <div className="text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">SEO & Growth Marketing Specialist</h1>
-            <p className="mt-2 text-base md:text-lg font-medium text-muted-foreground">Vedang Vatsa | Web3 & FinTech</p>
-            <p className="mx-auto mt-3 max-w-xl text-base text-muted-foreground">
-              Data-driven growth leader with 8+ years of experience scaling organic and paid acquisition channels for high-growth mobile and Web3 products. Proven track record in SEO, ASO, community building, and cross-functional leadership.
-            </p>
-            <div className="mt-5 flex justify-center md:justify-start items-center space-x-4">
-              <Link href="https://linkedin.com/in/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5" />
-              </Link>
-              <Link href="https://x.com/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Twitter">
-                <Twitter className="h-5 w-5" />
-              </Link>
-              <Link href="https://t.me/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Telegram">
-                <Send className="h-5 w-5" />
-              </Link>
-              <Link href="https://www.instagram.com/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Instagram">
-                <Instagram className="h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-        </section>
+      <PageHero
+        title="SEO & Growth Marketing Specialist"
+        showAvatar
+        subtitle="Data-driven growth leader with 8+ years of experience scaling organic and paid acquisition channels for high-growth mobile and Web3 products. Proven track record in SEO, ASO, community building, and cross-functional leadership."
+      >
+        <div className="mt-5 flex justify-center items-center space-x-4">
+          <Link href="https://linkedin.com/in/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="LinkedIn">
+            <Linkedin className="h-5 w-5" />
+          </Link>
+          <Link href="https://x.com/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Twitter">
+            <Twitter className="h-5 w-5" />
+          </Link>
+          <Link href="https://t.me/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Telegram">
+            <Send className="h-5 w-5" />
+          </Link>
+          <Link href="https://www.instagram.com/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Instagram">
+            <Instagram className="h-5 w-5" />
+          </Link>
+        </div>
+      </PageHero>
 
         <section className="my-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
           <Card className="text-center p-4 bg-secondary/30">
@@ -212,7 +201,6 @@ export default function SeoProfilePage() {
             </Card>
           </section>
         </div>
-      </div>
 
       <AsSeenIn />
 
@@ -275,6 +263,7 @@ export default function SeoProfilePage() {
               </div>
             </div>
           </section>
+
 
         </div>
       </div>

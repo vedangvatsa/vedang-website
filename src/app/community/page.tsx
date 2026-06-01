@@ -1,6 +1,7 @@
 
 
 import { PageLayout } from '@/components/page-layout';
+import { PageHero } from '@/components/page-hero';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
@@ -41,39 +42,26 @@ export default function CommunityProfilePage() {
     <PageLayout>
       <BreadcrumbSchema items={[{ name: "Content & Community", url: "https://veda.ng/community" }]} />
 
-      <div className="pt-12 md:pt-20 pb-8">
-        <div>
-          <section className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-              <Image
-                src="/images/icon.png"
-                alt="Headshot of Vedang Vatsa, a content and community strategist."
-                width={128}
-                height={128}
-                className="h-32 w-32 rounded-full object-cover border-4 border-card"
-                priority
-              />
-            <div className="text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">Community Building & Content Strategy</h1>
-              <p className="mt-1 text-base md:text-lg font-medium text-muted-foreground">Vedang Vatsa | Web3 & Tech</p>
-              <p className="mt-2 max-w-xl text-base text-muted-foreground">
-                Community architect and content creator with a proven record of building engaged professional networks from the ground up, driving conversations, and achieving tens of millions in content reach.
-              </p>
-              <div className="mt-4 flex justify-center md:justify-start items-center space-x-4">
-                <Link href="https://linkedin.com/in/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary flex items-center gap-1.5">
-                  <Linkedin className="h-5 w-5" />
-                </Link>
-                <Link href="https://x.com/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary flex items-center gap-1.5">
-                  <Twitter className="h-5 w-5" />
-                </Link>
-                <Link href="https://t.me/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary flex items-center gap-1.5">
-                  <Send className="h-5 w-5" />
-                </Link>
-                <Link href="https://www.instagram.com/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary flex items-center gap-1.5">
-                  <Instagram className="h-5 w-5" />
-                </Link>
-              </div>
-            </div>
-          </section>
+      <PageHero
+        title="Community Building & Content Strategy"
+        showAvatar
+        subtitle="Community architect and content creator with a proven record of building engaged professional networks from the ground up, driving conversations, and achieving tens of millions in content reach."
+      >
+        <div className="mt-5 flex justify-center items-center space-x-4">
+          <Link href="https://linkedin.com/in/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="LinkedIn">
+            <Linkedin className="h-5 w-5" />
+          </Link>
+          <Link href="https://x.com/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Twitter">
+            <Twitter className="h-5 w-5" />
+          </Link>
+          <Link href="https://t.me/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Telegram">
+            <Send className="h-5 w-5" />
+          </Link>
+          <Link href="https://www.instagram.com/vedangvatsa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Instagram">
+            <Instagram className="h-5 w-5" />
+          </Link>
+        </div>
+      </PageHero>
 
           <section className="my-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Card className="text-center p-4 bg-secondary/30">
@@ -207,8 +195,6 @@ export default function CommunityProfilePage() {
                 </Card>
             </section>
           </div>
-        </div>
-      </div>
 
       <AsSeenIn />
 
