@@ -121,6 +121,9 @@ export function Header() {
                 <DropdownMenuItem asChild>
                   <Link href="/media">Media & Speaking</Link>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/meeting">Book a Meeting</Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </nav>
@@ -138,6 +141,7 @@ export function Header() {
                 <MobileNavLink href="/writings" onClose={closeMobile}>Writings</MobileNavLink>
                 <MobileNavLink href="/profile" onClose={closeMobile}>Profile</MobileNavLink>
                 <MobileNavLink href="/media" onClose={closeMobile}>Media & Speaking</MobileNavLink>
+                <MobileNavLink href="/meeting" onClose={closeMobile}>Book a Meeting</MobileNavLink>
 
                 <Separator className="my-4" />
 
