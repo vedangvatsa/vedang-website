@@ -241,7 +241,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
       ]} />
 
       {/* ─── Essay Header ─── */}
-      <header className="pt-12 md:pt-20 pb-6 md:pb-8">
+      <header className="pt-12 md:pt-20 pb-12 md:pb-16">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
             {essay.frontmatter.title}
