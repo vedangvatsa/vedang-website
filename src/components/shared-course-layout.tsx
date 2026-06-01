@@ -8,7 +8,7 @@ interface SharedCourseLayoutProps {
 export function SharedCourseLayout({ children }: SharedCourseLayoutProps) {
   return (
     <PageLayout>
-      <div className="py-8">
+      <div>
         {children}
       </div>
     </PageLayout>

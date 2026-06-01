@@ -1,12 +1,12 @@
 
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { AsSeenIn } from '@/components/as-seen-in';
 import { Metadata } from 'next';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
 import { PageLayout } from '@/components/page-layout';
+import { PageHero } from '@/components/page-hero';
 import { CardGrid } from '@/components/card-grid';
 import { recentPapers } from '@/components/recent-papers';
 import { essays } from '@/lib/essays';
@@ -41,22 +41,17 @@ export default function Home() {
 
   return (
     <PageLayout>
-      <section className="pt-12 md:pt-20 pb-8 text-center">
-          <Image
-            src="/images/icon.png"
-            alt="Vedang Vatsa - product engineer, educator, and founder based in Singapore"
-            width={96}
-            height={96}
-            className="mx-auto h-24 w-24 rounded-full object-cover"
-            priority
-          />
-          <h1 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight">Vedang Vatsa FRSA</h1>
-          <p className="mx-auto mt-3 max-w-3xl text-base md:text-lg leading-relaxed">
+      <PageHero
+        title="Vedang Vatsa FRSA"
+        showAvatar
+        subtitle={
+          <>
             Founder: <Link href="https://hashtagweb3.com?utm_source=veda.ng&utm_medium=website&utm_campaign=homepage" className="underline hover:text-foreground">Hashtag Web3</Link> and <Link href="https://cvin.bio?utm_source=veda.ng&utm_medium=website&utm_campaign=homepage" className="underline hover:text-foreground">CvinBio</Link>
             <span className="mx-2 text-muted-foreground">|</span>
             <Link href="/profile" className="text-primary hover:text-primary/80 transition-colors">Profile →</Link>
-          </p>
-      </section>
+          </>
+        }
+      />
 
       <CardGrid
         id="papers"

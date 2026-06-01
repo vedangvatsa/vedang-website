@@ -32,7 +32,7 @@ export default function SeoProfilePage() {
     <PageLayout>
       <BreadcrumbSchema items={[{ name: "SEO & Growth", url: "https://veda.ng/seo" }]} />
 
-      <div className="py-8">
+      <div className="pt-12 md:pt-20 pb-8">
         <section className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
           <Image
             src="/images/icon.png"

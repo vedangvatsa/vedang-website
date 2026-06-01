@@ -3,6 +3,7 @@ import { pageMetadata, generateMetadata } from '@/lib/metadata';
 import { getAllTermsSorted } from '@/lib/glossary';
 import { GlossaryFilter } from '@/components/glossary-filter';
 import { PageLayout } from '@/components/page-layout';
+import { PageHero } from '@/components/page-hero';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 
 export const metadata: Metadata = generateMetadata({
@@ -54,16 +55,10 @@ export default function GlossaryPage() {
       />
       <BreadcrumbSchema items={[{ name: "Glossary", url: "https://veda.ng/glossary" }]} />
 
-      <section className="text-center pt-16 pb-12 border-b border-border/30">
-        <div>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
-            Glossary
-          </h1>
-          <p className="mt-4 text-base md:text-lg text-muted-foreground">
-            Definitions of the terminology shaping AI, Web3, and deep tech.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Glossary"
+        subtitle="Definitions of the terminology shaping AI, Web3, and deep tech."
+      />
 
       <div className="py-16">
         <GlossaryFilter terms={lightTerms} categories={categories} />

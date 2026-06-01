@@ -16,7 +16,7 @@ export default function AIReportsPage() {
     <PageLayout>
       <BreadcrumbSchema items={[{ name: "AI Reports", url: "https://veda.ng/ai-reports" }]} />
 
-      <section className="text-center pt-16 pb-12 border-b border-border/30">
+      <section className="text-center pt-12 md:pt-20 pb-8 border-b border-border/30">
         <div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
             AI Reports Library

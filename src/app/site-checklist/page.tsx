@@ -278,7 +278,7 @@ export default function WebsiteSpecificationPage() {
   return (
     <>
       {/* ── Header ── */}
-      <header className="pt-12 md:pt-20 pb-10 md:pb-14">
+      <header className="pt-12 md:pt-20 pb-8">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
             The Site Checklist

@@ -41,7 +41,7 @@ export default function CommunityProfilePage() {
     <PageLayout>
       <BreadcrumbSchema items={[{ name: "Content & Community", url: "https://veda.ng/community" }]} />
 
-      <div className="py-8">
+      <div className="pt-12 md:pt-20 pb-8">
         <div>
           <section className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
               <Image

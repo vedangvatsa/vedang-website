@@ -8,6 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { MoveUpRight } from 'lucide-react';
 import { AsSeenIn } from '@/components/as-seen-in';
+import { PageHero } from '@/components/page-hero';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
 import { TwitterEmbed } from '@/components/twitter-embed';
 
@@ -122,17 +123,12 @@ export default function MediaPage() {
   return (
     <PageLayout>
       <BreadcrumbSchema items={[{ name: "Media & Speaking", url: "https://veda.ng/media" }]} />
-      <div className="py-8">
+      <div>
         <div>
-          <section className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">Speaker on Emerging Technologies</h1>
-            <p className="mt-3 text-base md:text-lg text-muted-foreground">
-              As a recognized voice in AI, Web3, and the future of technology, Vedang is a frequent speaker at
-              international conferences, academic institutions, and corporate events. His talks demystify complex
-              topics, including decentralized economies and agentic AI, providing audiences with actionable insights
-              into the forces shaping our world. Below is a glimpse into his media features and speaking engagements.
-            </p>
-          </section>
+          <PageHero
+            title="Speaker on Emerging Technologies"
+            subtitle="As a recognized voice in AI, Web3, and the future of technology, Vedang is a frequent speaker at international conferences, academic institutions, and corporate events. His talks demystify complex topics, including decentralized economies and agentic AI, providing audiences with actionable insights into the forces shaping our world. Below is a glimpse into his media features and speaking engagements."
+          />
 
           <section className="max-w-4xl mx-auto py-8">
             <ul className="space-y-1 text-sm text-muted-foreground text-left md:columns-2 md:gap-4">
@@ -145,7 +141,6 @@ export default function MediaPage() {
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Recommendation by Jack Allison (Screenwriter for Oscars 2017), medal by the former director of Indian Prime Minister’s office</span></li>
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>80 million Linkedin post views & 55 million views on Telegram channel</span></li>
               <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Issued Japan’s special visa for Intellectual people</span></li>
-              <li className="flex items-start gap-2"><span className="text-primary mt-1">◆</span><span>Traveled 18 countries & jumped the world’s highest canyon swing</span></li>
             </ul>
           </section>
           
