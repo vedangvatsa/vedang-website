@@ -1,24 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto">
-  <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap');
-      text { font-family: 'Inter', sans-serif; }
-      .bg { fill: #0f172a; }
-      .title { font-weight: 800; font-size: 24px; fill: #fff; text-anchor: middle; }
-      .ring { fill: none; stroke: #f59e0b; stroke-width: 2; opacity: 0.5; }
-      .core { fill: #f59e0b; }
-      .text-label { font-weight: 800; font-size: 16px; fill: #fff; text-anchor: middle; }
-    </style>
-  </defs>
-  <rect width="800" height="400" class="bg" />
-  <text x="400" y="50" class="title">SACRED ALGORITHMS</text>
-  
-  <circle cx="400" cy="220" r="120" class="ring" />
-  <circle cx="400" cy="220" r="90" class="ring" />
-  <circle cx="400" cy="220" r="60" class="ring" />
-  
-  <circle cx="400" cy="220" r="20" class="core" />
-  <path d="M 400 60 L 400 380 M 240 220 L 560 220" class="ring" stroke-dasharray="4 4" />
-  
-  <text x="400" y="380" class="text-label">The Religiosity of Tech Trust</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#ffffff" />
+
+  <!-- Outer border -->
+  <rect x="0.5" y="0.5" width="799" height="399" rx="12" ry="12" fill="none" stroke="#e3e3e0" stroke-width="1" />
+
+  <!-- Title -->
+  <text x="400" y="42" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="20" fill="#37352f" text-anchor="middle">Algorithmic Bias: The Numbers</text>
+
+  <!-- Divider under title -->
+  <line x1="60" y1="58" x2="740" y2="58" stroke="#e3e3e0" stroke-width="1" />
+
+  <!-- LEFT PANEL: COMPAS Comparison -->
+  <!-- Panel background -->
+  <rect x="40" y="74" width="430" height="280" rx="8" ry="8" fill="#fafafa" stroke="#e3e3e0" stroke-width="1" />
+
+  <!-- Panel header -->
+  <text x="255" y="102" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="600" font-size="14" fill="#37352f" text-anchor="middle">COMPAS Recidivism Algorithm</text>
+  <text x="255" y="120" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">False Positive Rates by Race (ProPublica, 2016)</text>
+
+  <!-- Bar chart area -->
+  <!-- Left bar: Black defendants 45% -->
+  <rect x="100" y="148" width="140" height="160" rx="4" ry="4" fill="#ef4444" opacity="0.12" />
+  <rect x="100" y="236" width="140" height="72" rx="4" ry="4" fill="#ef4444" />
+  <text x="170" y="280" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="28" fill="#ffffff" text-anchor="middle">45%</text>
+  <text x="170" y="328" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="600" font-size="12" fill="#37352f" text-anchor="middle">Black Defendants</text>
+  <text x="170" y="344" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">False Positive Rate</text>
+
+  <!-- Right bar: White defendants 23% -->
+  <rect x="270" y="148" width="140" height="160" rx="4" ry="4" fill="#3b82f6" opacity="0.12" />
+  <rect x="270" y="278" width="140" height="30" rx="4" ry="4" fill="#3b82f6" />
+  <text x="340" y="299" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="20" fill="#ffffff" text-anchor="middle">23%</text>
+  <text x="340" y="328" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="600" font-size="12" fill="#37352f" text-anchor="middle">White Defendants</text>
+  <text x="340" y="344" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">False Positive Rate</text>
+
+  <!-- 2x callout -->
+  <text x="255" y="170" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="16" fill="#ef4444" text-anchor="middle">2x higher rate</text>
+
+  <!-- RIGHT PANEL: Stat cards stacked -->
+  <!-- Lending cost card -->
+  <rect x="500" y="74" width="260" height="130" rx="8" ry="8" fill="#fafafa" stroke="#e3e3e0" stroke-width="1" />
+  <text x="630" y="104" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="600" font-size="12" fill="#787774" text-anchor="middle">Discriminatory Lending Cost</text>
+  <text x="630" y="148" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="36" fill="#ef4444" text-anchor="middle">$765M</text>
+  <text x="630" y="172" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">excess interest charged per year</text>
+  <text x="630" y="192" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">to minority borrowers (5-9 bps more)</text>
+
+  <!-- EU AI Act card -->
+  <rect x="500" y="224" width="260" height="130" rx="8" ry="8" fill="#fafafa" stroke="#e3e3e0" stroke-width="1" />
+  <text x="630" y="254" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="600" font-size="12" fill="#787774" text-anchor="middle">EU AI Act Maximum Fine</text>
+  <text x="630" y="298" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="30" fill="#3b82f6" text-anchor="middle">EUR 35M</text>
+  <text x="630" y="322" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="middle">or 7% of global revenue</text>
+  <text x="630" y="340" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="400" font-size="10" fill="#787774" text-anchor="middle">(whichever is greater)</text>
+
+  <!-- Attribution -->
+  <text x="770" y="388" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="400" font-size="11" fill="#787774" text-anchor="end">@vedangvatsa</text>
 </svg>
