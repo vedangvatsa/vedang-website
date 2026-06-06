@@ -19,6 +19,9 @@ export const metadata: Metadata = {
 export default function NomadMapPage() {
   return (
     <PageLayout>
+      {/* Preload the data file so it starts downloading immediately */}
+      <link rel="preload" href="/nomad-data-slim.json" as="fetch" crossOrigin="anonymous" />
+      
       <PageHero
         title="Digital Nomad Directory"
         subtitle="4,300+ coliving houses, hostels, apartments, and guesthouses across 95 cities in 52 countries."

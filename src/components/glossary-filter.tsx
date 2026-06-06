@@ -98,7 +98,8 @@ export function GlossaryFilter({ terms, categories }: GlossaryFilterProps) {
           ref={tabsRef}
           role="tablist"
           aria-label="Glossary categories"
-          className="relative inline-flex items-center rounded-lg border border-border/60 bg-secondary/20 p-1"
+          className="relative inline-flex items-center rounded-lg border border-border/60 bg-secondary/20 p-1 max-w-full overflow-x-auto scrollbar-hide"
+          style={{ WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {/* Sliding highlight */}
           <div

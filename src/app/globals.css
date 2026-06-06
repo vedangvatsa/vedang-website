@@ -108,6 +108,8 @@
   font-size: 1.125rem; /* 18px */
   line-height: 1.8;
   letter-spacing: -0.003em;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* Paragraphs */
@@ -180,19 +182,29 @@
 /* Images */
 .notion-article img {
   border-radius: 0.5rem;
+  max-width: 100%;
+  height: auto;
 }
 
 .notion-article > p > img {
-  max-width: 640px;
+  max-width: min(640px, 100%);
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
-/* Tables */
+/* Tables — horizontal scroll on mobile */
+.notion-article .table-wrapper,
+.notion-article > table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .notion-article table {
   width: 100%;
   font-size: 0.875rem;
+  min-width: 480px;
 }
 
 /* Charts and custom components: full width within the prose column */
@@ -238,4 +250,25 @@ pre > code {
   white-space: pre;
   word-break: normal;
   overflow-wrap: normal;
+}
+
+/* ═══ Scrollbar-hide utility ═══ */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ═══ Visualizer grid responsive fix ═══ */
+/* Collapse multi-column grids to 2-col on mobile for interactive visualizers.
+   Grids with gap-1 (pixel-art/matrix visualizations) are excluded. */
+@media (max-width: 639px) {
+  .notion-article [class*="grid-cols-3"]:not([class*="gap-1"]),
+  .notion-article [class*="grid-cols-4"]:not([class*="gap-1"]),
+  .notion-article [class*="grid-cols-5"]:not([class*="gap-1"]),
+  .notion-article [class*="grid-cols-6"]:not([class*="gap-1"]) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
 }

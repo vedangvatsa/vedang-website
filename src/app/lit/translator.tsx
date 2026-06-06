@@ -945,16 +945,16 @@ export default function LinkedInTranslatorPage() {
             <div ref={cardRef} className="rounded-lg border border-border bg-card shadow-sm overflow-hidden">
               {/* Language tabs header */}
               <div className="grid grid-cols-[1fr_auto_1fr] items-center border-b border-border">
-                <div className="px-5 py-2.5">
-                  <span className="text-sm font-semibold text-primary border-b-2 border-primary pb-2.5 px-1">Human Language</span>
+                <div className="px-3 sm:px-5 py-2.5">
+                  <span className="text-xs sm:text-sm font-semibold text-primary border-b-2 border-primary pb-2.5 px-0.5 sm:px-1">Human Language</span>
                 </div>
-                <div className="flex items-center justify-center px-2">
-                  <div className="rounded-full border border-border p-1.5 bg-background">
-                    <ArrowRight className="h-3.5 w-3.5 text-muted-foreground" />
+                <div className="flex items-center justify-center px-1 sm:px-2">
+                  <div className="rounded-full border border-border p-1 sm:p-1.5 bg-background">
+                    <ArrowRight className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-muted-foreground" />
                   </div>
                 </div>
-                <div className="px-5 py-2.5">
-                  <span className="text-sm font-semibold text-primary border-b-2 border-primary pb-2.5 px-1">LinkedIn Language</span>
+                <div className="px-3 sm:px-5 py-2.5">
+                  <span className="text-xs sm:text-sm font-semibold text-primary border-b-2 border-primary pb-2.5 px-0.5 sm:px-1">LinkedIn Language</span>
                 </div>
               </div>
 

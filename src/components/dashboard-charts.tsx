@@ -50,7 +50,7 @@ export default function DashboardCharts() {
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={departmentData} margin={{ top: 5, right: 5, left: -15, bottom: 20 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
-              <XAxis dataKey="dept" stroke="#475569" fontSize={11} fontWeight={500} tickLine={false} height={40} interval={0} />
+              <XAxis dataKey="dept" stroke="#475569" fontSize={10} fontWeight={500} tickLine={false} height={60} interval={0} angle={-45} textAnchor="end" />
               <YAxis stroke="#475569" fontSize={11} fontWeight={500} tickFormatter={(v) => `${v}%`} tickLine={false} />
               <Tooltip contentStyle={{ fontSize: '12px', borderRadius: '6px' }} formatter={(v) => [`${v}%`, '']} />
               <Legend verticalAlign="top" height={32} iconSize={10} iconType="circle" wrapperStyle={{ fontSize: '12px' }} />

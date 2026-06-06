@@ -36,13 +36,44 @@ const NomadMap = dynamic(
   }
 );
 
+// Expand short keys from slim JSON back to full field names
+interface SlimPOI {
+  i: string; n: string; c: string; a: number; o: number;
+  t: string; r: string; w: string; q: number; g: number; v: number; d: string;
+}
+
+function expandData(slim: SlimPOI[]) {
+  return slim.map(s => ({
+    osm_id: s.i,
+    name: s.n,
+    category: s.c,
+    lat: s.a,
+    lon: s.o,
+    city: s.t,
+    country: s.r,
+    website: s.w,
+    quality: s.q,
+    google_rating: s.g,
+    google_review_count: s.v,
+    address: s.d,
+    phone: '',
+    opening_hours: '',
+    wifi: '',
+    cost_tier: 0,
+    timezone: '',
+    visa: '',
+    osm_url: '',
+    review_summary: '',
+  }));
+}
+
 export function NomadMapWrapper() {
   const [data, setData] = useState<any[] | null>(null);
 
   useEffect(() => {
-    fetch('/nomad-data.json')
+    fetch('/nomad-data-slim.json')
       .then(res => res.json())
-      .then(setData)
+      .then(slim => setData(expandData(slim)))
       .catch(console.error);
   }, []);
 

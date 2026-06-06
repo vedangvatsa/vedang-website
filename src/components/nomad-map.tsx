@@ -255,7 +255,7 @@ export function NomadMap({ data }: { data: POI[] }) {
       </div>
 
       {/* Map */}
-      <div className="w-full h-[600px] rounded-lg overflow-hidden border shadow-sm">
+      <div className="w-full h-[350px] sm:h-[450px] md:h-[600px] rounded-lg overflow-hidden border shadow-sm">
         <Map
           ref={mapRef}
           center={mapCenter}

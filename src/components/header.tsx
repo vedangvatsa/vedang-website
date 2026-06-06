@@ -23,7 +23,7 @@ import { Separator } from '@/components/ui/separator';
 
 function MobileNavLink({ href, children, onClose }: { href: string; children: React.ReactNode; onClose: () => void }) {
   return (
-    <Link href={href} onClick={onClose} className="block py-2 text-sm text-foreground hover:text-primary transition-colors">
+    <Link href={href} onClick={onClose} className="block py-3 text-sm text-foreground hover:text-primary transition-colors">
       {children}
     </Link>
   );
@@ -135,9 +135,9 @@ export function Header() {
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-72 px-6 pt-8">
+            <SheetContent side="right" className="w-72 px-6 pt-6 overflow-hidden flex flex-col">
               <SheetTitle className="sr-only">Navigation</SheetTitle>
-              <nav className="flex flex-col">
+              <nav className="flex flex-col overflow-y-auto flex-1 pb-6">
                 <MobileNavLink href="/writings" onClose={closeMobile}>Writings</MobileNavLink>
                 <MobileNavLink href="/profile" onClose={closeMobile}>Profile</MobileNavLink>
                 <MobileNavLink href="/media" onClose={closeMobile}>Media & Speaking</MobileNavLink>

@@ -40,7 +40,7 @@ export function LiquidRestakingVisualizer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
+    <div className="flex flex-col items-center justify-center p-4 sm:p-8 bg-slate-50 rounded-lg border border-slate-200 shadow-sm my-12 w-full font-sans gap-8">
       <div className="text-center">
         <h3 className="text-2xl font-bold text-slate-800 mb-2">Liquid Restaking Visualizer</h3>
         <p className="text-slate-600">Explore how ETH can be staked multiple times across different networks for enhanced yields and risks</p>
@@ -63,13 +63,13 @@ export function LiquidRestakingVisualizer() {
         </div>
 
         {/* Step Navigation */}
-        <div className="flex justify-center mb-8">
-          <div className="flex space-x-2">
+        <div className="flex justify-center mb-8 w-full">
+          <div className="flex gap-2 overflow-x-auto max-w-full pb-2" style={{ WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             {steps.map((step, index) => (
               <button
                 key={step}
                 onClick={() => setCurrentStep(index)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                className={`px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors whitespace-nowrap shrink-0 ${
                   currentStep === index
                     ? 'bg-blue-500 text-white'
                     : 'bg-slate-200 text-slate-600 hover:bg-slate-300'
@@ -94,7 +94,7 @@ export function LiquidRestakingVisualizer() {
           )}
 
           {currentStep === 1 && (
-            <div className="flex items-center justify-center h-full space-x-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center h-full gap-6 sm:space-x-8">
               <div className="text-center">
                 <div className="w-24 h-24 bg-indigo-500 rounded-full flex items-center justify-center mb-4">
                   <span className="text-white font-bold text-lg">ETH</span>
@@ -113,7 +113,7 @@ export function LiquidRestakingVisualizer() {
           )}
 
           {currentStep === 2 && (
-            <div className="flex items-center justify-center h-full space-x-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center h-full gap-4 sm:space-x-6">
               <div className="text-center">
                 <div className="w-20 h-20 bg-emerald-500 rounded-full flex items-center justify-center mb-2">
                   <span className="text-white font-bold text-xs">stETH</span>
@@ -138,7 +138,7 @@ export function LiquidRestakingVisualizer() {
           {currentStep === 3 && (
             <div>
               <h4 className="text-lg font-semibold text-slate-800 mb-4">Select Actively Validated Services (AVS)</h4>
-              <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                 {avsOptions.map(avs => (
                   <button
                     key={avs.id}
@@ -186,7 +186,7 @@ export function LiquidRestakingVisualizer() {
                 </button>
               </div>
               
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="bg-emerald-50 p-4 rounded-lg">
                   <h5 className="font-medium text-emerald-800 mb-2">Rewards</h5>
                   <p className="text-2xl font-bold text-emerald-600">{totalReward.toFixed(1)}% APY</p>
