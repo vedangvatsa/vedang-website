@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
-import { Badge } from '@/components/ui/badge';
 import { MarkComplete } from '@/components/mark-complete';
 import { GlossaryVisualizer } from '@/components/mdx/glossary-visualizer';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
@@ -62,9 +61,11 @@ export function CourseModuleLayout({
   return (
     <div className="max-w-none">
       <div className="mb-8">
-        <Badge variant="secondary" className="mb-4">
-          Module {currentModuleIndex + 1} of {totalModules}
-        </Badge>
+        <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground mb-4 font-mono">
+          <Link href={basePath} className="hover:text-foreground transition-colors">{courseTitle}</Link>
+          <span>/</span>
+          <span className="text-foreground">{currentModuleIndex + 1}<span className="text-muted-foreground/50"> / {totalModules}</span></span>
+        </div>
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">
           {moduleTitle}
         </h1>

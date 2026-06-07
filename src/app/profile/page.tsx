@@ -355,6 +355,11 @@ export default function ProfilePage() {
                         </div>
 
                          <div>
+                            <h4 className="font-semibold text-base">Adventure Sports</h4>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Completed the world's highest canyon swing and a National Mountain Biking Expedition.</p>
+                        </div>
+
+                         <div>
                             <h4 className="font-semibold text-base">Public Speaking</h4>
                             <p className="text-muted-foreground mt-0.5 text-sm">Workshops on Computational Social Science, China’s Approach to AI, Citizens of the Metaverse, Digital Payments in India, Data Privacy, Blockchain use-cases, e-Governance in Estonia, Network States, Responsible AI, etc.</p>
                         </div>

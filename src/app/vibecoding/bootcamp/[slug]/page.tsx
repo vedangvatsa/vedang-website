@@ -9,8 +9,17 @@ import { CourseModuleLayout } from '@/components/courses/course-module-layout';
 
 // Components shared with the main vibe-coding course
 import { Callout, SectionLabel, Explainer } from '@/components/mdx';
-// Bootcamp-specific component
+// Bootcamp-specific components
 import { PromptTemplate } from '@/components/courses/prompt-template';
+import {
+  AIToolsLandscape, AICategoryMap, BoringNicheFramework,
+  PositionStatement, SecurityHoles,
+  ToolDecisionTree,
+  DesignChecklist, MultiModalStack,
+  ShipStack,
+  GrowthChannels,
+  PricingModels, RamenMath, PitchDeckStructure,
+} from '@/components/courses/bootcamp-visuals';
 
 const customComponents = {
   Image: (props: any) => <Image {...props} alt={props.alt || 'Bootcamp module illustration'} />,
@@ -18,6 +27,13 @@ const customComponents = {
   SectionLabel,
   Explainer,
   PromptTemplate,
+  AIToolsLandscape, AICategoryMap, BoringNicheFramework,
+  PositionStatement, SecurityHoles,
+  ToolDecisionTree,
+  DesignChecklist, MultiModalStack,
+  ShipStack,
+  GrowthChannels,
+  PricingModels, RamenMath, PitchDeckStructure,
 };
 
 const config = courseConfigs['vibecoding-bootcamp'];

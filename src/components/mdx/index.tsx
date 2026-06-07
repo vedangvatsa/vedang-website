@@ -119,10 +119,10 @@ export function TimelineItem({ date, title, children }: { date: string; title: s
 }
 
 /* ─── Section label / overline for visual hierarchy ─── */
-export function SectionLabel({ children }: { children: React.ReactNode }) {
+export function SectionLabel({ label, children }: { label?: string; children?: React.ReactNode }) {
   return (
     <div className="not-prose mt-12 mb-4">
-      <span className="text-xs font-semibold uppercase tracking-widest text-primary/70">{children}</span>
+      <span className="text-xs font-semibold uppercase tracking-widest text-primary/70">{label || children}</span>
     </div>
   );
 }
