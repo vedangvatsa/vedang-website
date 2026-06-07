@@ -356,7 +356,7 @@ export default function ProfilePage() {
 
                          <div>
                             <h4 className="font-semibold text-base">Adventure Sports</h4>
-                            <p className="text-muted-foreground mt-0.5 text-sm">Completed the world's highest canyon swing and a National Mountain Biking Expedition.</p>
+                            <p className="text-muted-foreground mt-0.5 text-sm">Jumped the world's highest canyon swing and did a National Mountain Biking Expedition.</p>
                         </div>
 
                          <div>
