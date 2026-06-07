@@ -84,6 +84,20 @@ export const courseConfigs = {
       { slug: 'module-8-tokenomics', title: '8. Tokenomics' },
     ],
   },
+  'vibecoding-bootcamp': {
+    courseId: 'vibecoding-bootcamp',
+    courseTitle: 'Vibe Coding Bootcamp',
+    basePath: '/vibecoding/bootcamp',
+    modules: [
+      { slug: 'day-1-ai-foundations', title: 'Day 1 - AI Foundations' },
+      { slug: 'day-2-second-brain', title: 'Day 2 - Second Brain + AI' },
+      { slug: 'day-3-ai-for-organizations', title: 'Day 3 - AI for Organizations' },
+      { slug: 'day-4-vibe-coding', title: 'Day 4 - Build Your First App' },
+      { slug: 'day-5-polish-and-power', title: 'Day 5 - Polish and Power' },
+      { slug: 'day-6-ship-and-grow', title: 'Day 6 - Ship and Grow' },
+      { slug: 'day-7-sell-and-beyond', title: 'Day 7 - Sell and Beyond' },
+    ],
+  },
 } as const;
 
 export type CourseId = keyof typeof courseConfigs;

@@ -1,0 +1,209 @@
+---
+title: "Day 4 - Build Your First App"
+description: "The shift from AI user to AI builder. Pick a tool, describe your app, and get something running in under an hour."
+order: 4
+---
+
+<SectionLabel label="The Mindset Shift" />
+
+For the last three days, you've been using AI tools. Asking questions. Getting answers. Generating content.
+
+Today is different. Today you start **building with AI tools.**
+
+You don't need to know how to code. You don't need a CS degree. You don't need to understand what a "React component" is. You need three things: a clear idea, the right tool, and the willingness to describe what you want in plain English.
+
+The builders making money right now aren't all engineers. They're people who understood a problem, described a solution to an AI, and shipped it before anyone else.
+
+That's what you're doing today.
+
+<Callout type="insight" title="The Real Skill">
+The gap between "person who uses AI" and "person who builds with AI" is smaller than you think. It's about 30 minutes of setup and one good prompt.
+</Callout>
+
+<SectionLabel label="The Toolkit Landscape" />
+
+There are three categories of tools. Pick the one that matches your comfort level.
+
+### Full Apps from English
+
+These tools let you describe what you want and get a working app. No code editor. No terminal. Just words.
+
+- **Lovable** - Best for beginners. Feels like drag-and-drop. You describe your app in plain English, and it generates a full-stack web app with a visual preview. Great for landing pages, dashboards, and simple SaaS tools.
+- **Bolt.new** - Fast prototyping. Spins up a full development environment in your browser. Good for people who want to see the code but don't want to set up a local environment.
+- **Replit Agent** - Good for backend-heavy apps. It handles databases, APIs, and server logic well. The AI agent can install packages, create files, and deploy for you.
+
+### Code with an AI Copilot
+
+These tools give you more control. You see the code. You can edit it. The AI works alongside you.
+
+- **Cursor** - VS Code with AI superpowers. The best option if you want to learn how code works while building. Its Composer mode edits multiple files at once.
+- **Claude Code** - Terminal-based. For power users who prefer typing commands. It reads your entire codebase and makes changes across files autonomously.
+- **GitHub Copilot** - The original AI coding assistant. Lives inside VS Code. Good for autocomplete and inline suggestions.
+
+### UI from Descriptions
+
+- **v0 by Vercel** - Describe a UI, get React components. Perfect for generating individual screens, forms, and layouts. You can paste a screenshot of an app you like and say "recreate this."
+
+### The Decision Tree
+
+Keep it simple:
+
+- **Never coded before?** Start with Lovable. Zero friction.
+- **Want more control over the code?** Use Cursor.
+- **Just need a quick UI mockup?** Use v0.
+- **Building something with a database and API?** Replit Agent or Cursor.
+
+Pick one. Open it. Don't spend more than 5 minutes deciding. The tool matters less than you think.
+
+<SectionLabel label="The One-Feature MVP" />
+
+Here's where most people fail. They don't fail at building. They fail at scoping.
+
+The number one founder killer is building too much. You have 47 feature ideas. You want user accounts, a dashboard, notifications, integrations, an admin panel, analytics, social sharing, and a dark mode toggle.
+
+**Cut your feature list to ONE thing.**
+
+One thing your app does better than anything else. Everything else gets cut. No exceptions.
+
+Instagram launched with photo filters. Nothing else. Twitter launched with 140-character messages. Nothing else. Dropbox launched with file syncing. Nothing else.
+
+Your app should do one thing so well that someone tells their friend about it. If you can't finish the sentence "It's the app that ___" in under 5 seconds, your scope is too big.
+
+<Callout type="warning" title="The Feature Trap">
+Every feature you add doubles your debugging time, doubles your testing surface, and halves the chance you ship this week. Be ruthless. Cut everything that isn't the core action.
+</Callout>
+
+### The Position Statement
+
+Before you write a single prompt, fill in this sentence:
+
+> **For** [WHO], **who** [PAIN POINT], **[PRODUCT]** is a **[CATEGORY]** that **[KEY BENEFIT]**. Unlike **[ALTERNATIVE]**, it **[DIFFERENTIATOR]**.
+
+Examples:
+
+> **For** freelance designers, **who** waste hours writing proposals, **ProposalBot** is an **AI writing tool** that **generates client proposals in 60 seconds**. Unlike **ChatGPT**, it **knows your portfolio and pricing automatically**.
+
+> **For** new parents, **who** can't remember feeding schedules, **FeedTrack** is a **baby care app** that **logs feedings with one tap and predicts the next one**. Unlike **spreadsheets**, it **works with one hand while holding a baby**.
+
+If you can't fill this in, you're not ready to build yet. Spend 10 minutes on this before touching any tool.
+
+<SectionLabel label="Your First Build Session" />
+
+Here's the step-by-step. Follow it exactly.
+
+### Step 1 - Open Your Tool
+
+Open Lovable, Cursor, or whatever you picked. Create a new project.
+
+### Step 2 - Describe Your App in 3 Sentences
+
+Write three sentences:
+1. Who is this for?
+2. What does it do?
+3. What makes it different from existing solutions?
+
+That's your starting brief.
+
+### Step 3 - Apply the GCES Framework
+
+Structure your prompt with GCES:
+
+- **Goal** - What you want the AI to build. Be specific. "Build a landing page with an email signup form" is better than "build my app."
+- **Context** - Who uses this and why. "This is for freelance designers who need to send proposals faster."
+- **Examples** - Show the AI what you mean. "The layout should look like Linear.app - clean, minimal, lots of whitespace." Or paste a screenshot.
+- **Steps** - Break the build into phases. "Start with the landing page header and hero section. Then add the feature grid. Then add the pricing section."
+
+### Step 4 - Build in Order
+
+Follow this sequence:
+
+1. **Landing page** - The first thing users see. Your value prop, a screenshot or demo, and a call to action.
+2. **Core feature screen** - The one screen where the magic happens. The editor, the generator, the dashboard - whatever your ONE thing is.
+3. **The happy path** - The journey from "user arrives" to "user gets value." Sign up, do the thing, see the result. Nothing else.
+
+### Step 5 - Test, Break, Fix, Repeat
+
+Open your app. Try to break it. Click every button. Enter weird inputs. Resize the window. Open it on your phone.
+
+When something breaks, copy the error message and paste it back to the AI. Say "I got this error when I clicked the submit button. Fix it." Don't try to debug it yourself. Let the AI do it.
+
+<SectionLabel label="The Architect Prompt Pattern" />
+
+This is the difference between getting mediocre output and getting production-quality code.
+
+Don't say: *"Build me a proposal generator app."*
+
+Instead, give the AI a role and a process:
+
+> *"You are a senior software architect. I want to build a proposal generator for freelance designers. First, outline the file structure and key components. Then implement them one at a time. Start with the landing page component."*
+
+This pattern works because it forces the AI to plan before it builds. Without this, the AI will dump 500 lines of tangled code into one file. With this, it creates organized, modular code that's easy to change later.
+
+The three parts:
+1. **Role** - "You are a senior software architect"
+2. **Plan first** - "First, outline the structure"
+3. **Build incrementally** - "Then implement them one at a time, starting with X"
+
+<SectionLabel label="Common Mistakes" />
+
+**Building 10 features instead of 1.** You will be tempted. The AI makes it easy to add "just one more thing." Resist. Every feature you add now is a feature you have to maintain, debug, and explain.
+
+**Not testing with a real user in the first 24 hours.** You'll spend 3 days polishing something nobody wants. Get your app in front of one real person within 24 hours of starting. Their confusion will teach you more than another week of building.
+
+**Spending 3 days on the logo.** The logo doesn't matter. The font doesn't matter. The color scheme doesn't matter. The only thing that matters is whether your app solves the problem. Ship with a text logo and move on.
+
+**Prompting too vaguely.** "Make it look nice" tells the AI nothing. "Use Inter font, a blue and white color scheme, 16px body text, and the layout style of Linear.app" tells it everything.
+
+**Not reading the AI's output.** The AI will sometimes make assumptions you didn't ask for. It'll add features you don't want. It'll pick a tech stack you didn't specify. Read what it generates. If something's wrong, say so immediately. The longer you wait, the harder it is to fix.
+
+<SectionLabel label="Prompt Templates" />
+
+<PromptTemplate title="Product Strategist" description="Use this when you have a niche but need specific product ideas.">
+You are a product strategist. I want to build an AI app for [NICHE].
+
+Give me 10 specific product ideas. For each one, include:
+- The target user (be specific - not "businesses" but "solo accountants with 10-50 clients")
+- The exact problem it solves
+- Why AI makes it 10x better than the current solution
+- One-sentence product description
+
+Focus on problems where people currently waste 2+ hours per week on manual work.
+</PromptTemplate>
+
+<PromptTemplate title="PRD Generator" description="Use this to create a focused 1-page product requirements doc before building.">
+You are a product manager. Help me write a 1-page PRD for my app.
+
+Ask me these questions one at a time. Wait for my answer before asking the next one:
+
+1. Who is the target user? (Be specific - age, job, daily routine)
+2. What specific problem does it solve? (What are they doing today that sucks?)
+3. What is the single core feature? (One thing. Not three.)
+4. What does the happy path look like in 3 steps? (User does X, sees Y, gets Z)
+5. What are 3 things this app will NOT do in v1? (Anti-features)
+
+After I answer all 5, generate a clean 1-page PRD with sections for Problem, User, Core Feature, User Flow, Anti-Features, and Success Metric.
+</PromptTemplate>
+
+<PromptTemplate title="Code Architect" description="Use this as your first prompt when starting a build session.">
+You are a senior software architect. I am building [APP DESCRIPTION] using [TOOL - e.g., Next.js, Lovable, Replit].
+
+Before writing any code:
+1. Outline the file structure
+2. List the key components and what each one does
+3. Describe the data flow (where does data come from, where does it go)
+
+Then implement the [FIRST COMPONENT - e.g., landing page, main editor screen] with clean, readable code. Use comments to explain non-obvious decisions.
+
+Keep it simple. No premature optimization. No features I didn't ask for.
+</PromptTemplate>
+
+<SectionLabel label="Today's Exercise" />
+
+1. Fill in the position statement for your app idea. Write it down.
+2. Pick your tool (Lovable, Cursor, or v0).
+3. Open it and paste your first prompt using the Code Architect template.
+4. Build the landing page and core feature screen.
+5. Test it on your phone.
+6. Share a screenshot with your cohort.
+
+You should have something running within 60 minutes. It won't be perfect. That's the point. Perfect is the enemy of shipped.
