@@ -33,7 +33,6 @@ const resources = [
   { title: 'Web3 Reports Library', url: '/web3-reports' },
   { title: 'Web3 & AI Glossary', url: '/glossary' },
   { title: 'Health Protocols', url: '/health-protocols' },
-  { title: 'Digital Nomad Directory', url: '/nomad' },
 ];
 
 

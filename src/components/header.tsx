@@ -99,9 +99,6 @@ export function Header() {
                   <Link href="/health-protocols">Health Protocols</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/nomad">Digital Nomad Directory</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
                   <Link href="/ai-reports">AI Reports Library</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
@@ -166,7 +163,6 @@ export function Header() {
                   <MobileNavLink href="/ai-reports" onClose={closeMobile}>AI Reports</MobileNavLink>
                   <MobileNavLink href="/web3-reports" onClose={closeMobile}>Web3 Reports</MobileNavLink>
                   <MobileNavLink href="/health-protocols" onClose={closeMobile}>Health Protocols</MobileNavLink>
-                  <MobileNavLink href="/nomad" onClose={closeMobile}>Digital Nomad Directory</MobileNavLink>
                 </MobileNavSection>
               </nav>
             </SheetContent>
