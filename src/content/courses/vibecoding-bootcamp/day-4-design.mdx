@@ -1,0 +1,208 @@
+---
+title: "Day 4 - Design and AI Superpowers"
+description: "Make your app look like it came from a top studio, then wire in text, image, voice, and video AI."
+order: 4
+---
+
+<SectionLabel label="Design Without a Designer" />
+
+## The 80/20 of Looking Professional
+
+You don't need a designer. You need 5 rules. Follow them and your app will look better than 90% of what indie builders ship.
+
+### Rule 1 - Use a Real Font
+
+Switch from the system default to **Inter**. It's free, it's on Google Fonts, and it makes everything look 2x more polished. This single change is the highest-ROI design decision you'll make.
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+```
+
+### Rule 2 - Pick 2 Colors, Not 7
+
+One primary color. One neutral. That's your entire palette.
+
+- **Primary:** A single brand color. Blue (#2563EB), green (#16A34A), purple (#7C3AED) - pick one you like.
+- **Neutral:** Grays for text and backgrounds. Use Tailwind's `slate` or `zinc` scale.
+
+When you add a third color, things start clashing. Two colors force consistency.
+
+### Rule 3 - Whitespace Is Your Friend
+
+When something looks cramped or messy, the fix is almost never "add more stuff." It's "add more space."
+
+```css
+/* Too tight */
+padding: 8px;
+
+/* Just right */
+padding: 24px;
+```
+
+When in doubt, double the padding. Seriously.
+
+### Rule 4 - Rounded Corners and Subtle Shadows
+
+Two CSS properties that make everything feel modern:
+
+```css
+border-radius: 12px;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+```
+
+Apply these to cards, buttons, and input fields. Sharp corners and hard borders look dated.
+
+### Rule 5 - Mobile First
+
+60%+ of your users are on their phones. If your app doesn't work on a 375px wide screen, it doesn't work.
+
+Build for mobile first. Then adjust for desktop. Not the other way around.
+
+```css
+/* Mobile first */
+.container {
+  padding: 16px;
+  max-width: 100%;
+}
+
+/* Desktop override */
+@media (min-width: 768px) {
+  .container {
+    padding: 32px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+```
+
+## Your Design Toolkit
+
+**shadcn/ui** - The component library every serious builder uses. It gives you beautiful, accessible buttons, cards, dialogs, forms, and more. Pre-built. Customizable. Free. If you're building with React or Next.js, install it first.
+
+**v0 by Vercel** - Screenshot an app you love. Paste the screenshot into v0. Say "recreate this layout using shadcn/ui and Tailwind CSS." You'll get a working component in seconds. This is the fastest path from "I want it to look like this" to actual code.
+
+<DesignChecklist />
+
+---
+
+<SectionLabel label="Multi-Modal AI" />
+
+## Adding Superpowers to Your App
+
+Your app does one thing well. Now you're going to make it smarter by wiring in AI capabilities. This is where apps go from "useful tool" to "this feels like magic."
+
+### Text Generation
+
+The foundation. Every AI app starts here.
+
+- **Claude** - Best for reasoning, analysis, and following complex instructions. Great for anything that requires thinking through a problem.
+- **GPT-4o** - Good all-around performer. Strong at creative writing and conversation.
+- **Gemini** - Best for multimodal input. It can process images, video, and audio natively in the same request.
+
+### Image Generation
+
+Turn text descriptions into visuals.
+
+- **Flux** - Open source, fast, good quality. Free to run locally, cheap via API.
+- **DALL-E 3** - High quality, easy API, integrated with ChatGPT. Good default choice.
+- **Midjourney** - Best quality for artistic images. No API (Discord-based), so hard to integrate into apps.
+
+### Voice
+
+Give your app ears and a mouth.
+
+- **ElevenLabs** - Text-to-speech. Incredibly realistic voices. Great for narration, assistants, and accessibility.
+- **Whisper by OpenAI** - Speech-to-text. Free and open source. Runs locally or via API. Accurate across languages.
+
+### Video
+
+Still early, but moving fast.
+
+- **Luma** - Dream Machine. Good for short clips from text or image prompts.
+- **Pika** - Quick video generation with good motion.
+- **Runway** - Gen-3. Most control over style and camera movement.
+
+### Music
+
+- **Suno** - Generate full songs from text prompts. Vocals included.
+- **Udio** - Similar to Suno. Good for instrumentals and specific genres.
+
+## The Key Insight
+
+Winning AI apps combine 2 or more modalities. Single-modality apps are easy to copy. Multi-modal apps feel like magic.
+
+**Examples of multi-modal combinations:**
+
+- Photo of your fridge → recipe suggestions → voice instructions while you cook
+- Upload lecture notes → AI generates flashcards → audio quiz reads them to you
+- Describe a product → AI generates marketing copy + product photos + a 15-second ad video
+- Voice memo from a meeting → written summary → action items in your project board
+
+Think about your app. What's the second modality that would make it 10x more useful?
+
+## The Cost Math
+
+Before you wire in 5 APIs, do the math. AI costs scale with usage.
+
+| Service | Cost | Unit |
+|---|---|---|
+| Claude Sonnet | ~$3 | per million input tokens |
+| GPT-4o | ~$2.50 | per million input tokens |
+| Gemini Flash | ~$0.10 | per million input tokens |
+| DALL-E 3 | ~$0.04 | per image (standard) |
+| ElevenLabs | ~$0.18 | per 1,000 characters |
+| Whisper API | ~$0.006 | per minute of audio |
+
+**Do this calculation:** If you have 1,000 users making 10 requests per day, what's your monthly AI bill?
+
+Example for a text app using Claude Sonnet:
+- 1,000 users x 10 requests x 30 days = 300,000 requests
+- Average request: ~500 input tokens + ~500 output tokens
+- Monthly cost: roughly $150-300 input + $450-900 output = ~$600-1,200/month
+
+That's your cost floor before you make a dollar. Price accordingly. If you're charging $29/month per user, 1,000 users = $29,000 revenue against ~$1,000 in AI costs. Healthy margin.
+
+If you're offering a free tier, set aggressive rate limits or use cheaper models (Gemini Flash at $0.10/million tokens is 30x cheaper than Claude Sonnet).
+
+<MultiModalStack />
+
+---
+
+<SectionLabel label="Exercises" />
+
+## Your Day 4 Assignment
+
+### Step 1 - Design Polish (30 minutes)
+
+Open your MVP from yesterday. Apply the 5 rules:
+
+1. Switch to Inter font
+2. Pick your 2-color palette
+3. Add padding everywhere that feels cramped
+4. Add `border-radius: 12px` to cards and buttons
+5. Test on your phone. Fix what breaks.
+
+If you're using v0, screenshot an app you admire and say "recreate this layout style for my [APP TYPE] app."
+
+### Step 2 - Add One AI Feature (30 minutes)
+
+Pick the modality that makes the most sense for your app:
+
+- **If your app processes text:** Wire in Claude or GPT-4o to analyze, summarize, or generate content.
+- **If your app is visual:** Add image generation with DALL-E 3 or Flux.
+- **If your app helps people learn:** Add text-to-speech with ElevenLabs so content can be listened to.
+- **If your app takes user input:** Add speech-to-text with Whisper so users can talk instead of type.
+
+Don't add all of them. Pick one. Make it work. Ship it.
+
+---
+
+<SectionLabel label="Prompt Templates" />
+
+<PromptTemplate title="UI Designer">
+You are a senior UI designer. I am building [APP DESCRIPTION]. Design the main screen using shadcn/ui components and Tailwind CSS. Use Inter font, a 2-color palette (primary: [COLOR], neutral: slate), generous spacing (p-6 minimum), and rounded corners (rounded-xl). Mobile-first layout. Give me the complete React component with all imports. No placeholder comments - write the actual UI code.
+</PromptTemplate>

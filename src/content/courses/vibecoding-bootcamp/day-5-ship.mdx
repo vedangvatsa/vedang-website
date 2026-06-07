@@ -1,0 +1,302 @@
+---
+title: "Day 5 - Ship It Live"
+description: "Auth, payments, deploy. Walk out today with a live URL on your own domain and real users logging in."
+order: 5
+---
+
+<SectionLabel label="No More Localhost" />
+
+## Today Your App Gets Real
+
+No more localhost. No more "it works on my machine." Today you deploy to a real URL, add real logins, and wire up real payments.
+
+By the end of today, you'll have:
+
+- A live URL anyone can visit
+- User authentication (magic links + social login)
+- A database storing real data
+- A Stripe checkout page that accepts real money
+- Error tracking so you know when things break
+
+This is the day your side project becomes a product.
+
+<ShipStack />
+
+---
+
+<SectionLabel label="Auth and Database" />
+
+## Auth + Database in 90 Minutes
+
+You need two things before you can call this a real app: users need to log in, and their data needs to persist. Supabase handles both.
+
+### Why Supabase
+
+Supabase gives you a PostgreSQL database, authentication, and real-time subscriptions in one package. The free tier handles your first 50,000 monthly active users. That's enough to find product-market fit before you spend a dollar.
+
+Other options exist. Firebase, Clerk, Auth0. Supabase wins for indie builders because it's open source, the free tier is generous, and you get a real Postgres database - not a proprietary data store you can't escape from.
+
+### The Setup
+
+**Step 1: Create your Supabase project.**
+
+Go to [supabase.com](https://supabase.com), sign up, create a new project. Save your project URL and anon key. You'll need them in your `.env.local` file.
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=your-project-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+```
+
+**Step 2: Add authentication.**
+
+Supabase supports email magic links and OAuth (Google, GitHub, Discord) out of the box. Magic links are the fastest to set up - no passwords to hash, no reset flows to build.
+
+```javascript
+import { createClient } from '@supabase/supabase-js'
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+)
+
+// Magic link login - that's it
+const { error } = await supabase.auth.signInWithOtp({
+  email: 'user@example.com'
+})
+
+// Google OAuth
+const { error } = await supabase.auth.signInWithOAuth({
+  provider: 'google'
+})
+```
+
+**Step 3: Create your first table.**
+
+Go to the Supabase dashboard, open the SQL editor, and create a table for your core data. Every app needs at least one table tied to authenticated users.
+
+```sql
+create table projects (
+  id uuid default gen_random_uuid() primary key,
+  user_id uuid references auth.users(id) not null,
+  title text not null,
+  content text,
+  created_at timestamptz default now()
+);
+
+-- Row Level Security: users can only see their own data
+alter table projects enable row level security;
+
+create policy "Users see own projects"
+  on projects for select
+  using (auth.uid() = user_id);
+
+create policy "Users insert own projects"
+  on projects for insert
+  with check (auth.uid() = user_id);
+```
+
+**Step 4: Connect to your app.**
+
+```javascript
+// Fetch user's projects
+const { data, error } = await supabase
+  .from('projects')
+  .select('*')
+  .order('created_at', { ascending: false })
+
+// Insert a new project
+const { data, error } = await supabase
+  .from('projects')
+  .insert({ title: 'My First Project', content: '...' })
+```
+
+Row Level Security means users can only read and write their own data. No middleware needed. No auth checks in your API routes. The database enforces it.
+
+---
+
+<SectionLabel label="Payments" />
+
+## Payments with Stripe
+
+You built something useful. People should pay for it. Stripe makes this straightforward.
+
+### Test Mode First
+
+Always start in test mode. Stripe gives you test API keys and test card numbers. Use card number `4242 4242 4242 4242` with any future expiry and any CVC. No real money moves until you flip to live keys.
+
+### Stripe Checkout - Three Lines of Code
+
+Stripe Checkout is a hosted payment page. You don't build a payment form. You don't handle card numbers. You redirect users to Stripe's page, they pay, Stripe redirects them back. Three lines of server code.
+
+```javascript
+// API route: /api/checkout
+import Stripe from 'stripe'
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
+
+export async function POST(req) {
+  const session = await stripe.checkout.sessions.create({
+    mode: 'subscription',
+    line_items: [{ price: 'price_xxx', quantity: 1 }],
+    success_url: 'https://yourapp.com/dashboard?success=true',
+    cancel_url: 'https://yourapp.com/pricing',
+  })
+
+  return Response.json({ url: session.url })
+}
+```
+
+Create your product and price in the Stripe Dashboard. Grab the `price_xxx` ID. Done.
+
+### Webhooks - Know When Someone Pays
+
+Stripe sends webhook events to your server when things happen: payment succeeded, subscription canceled, card declined. You need a webhook endpoint to listen.
+
+```javascript
+// API route: /api/webhooks/stripe
+export async function POST(req) {
+  const event = stripe.webhooks.constructEvent(
+    await req.text(),
+    req.headers.get('stripe-signature'),
+    process.env.STRIPE_WEBHOOK_SECRET
+  )
+
+  if (event.type === 'checkout.session.completed') {
+    const session = event.data.object
+    // Update user's subscription status in your database
+    await supabase
+      .from('users')
+      .update({ plan: 'pro' })
+      .eq('stripe_customer_id', session.customer)
+  }
+
+  return new Response('ok')
+}
+```
+
+Test webhooks locally with the Stripe CLI: `stripe listen --forward-to localhost:3000/api/webhooks/stripe`
+
+---
+
+<SectionLabel label="Deploy to Production" />
+
+## Deploy to Production
+
+### Vercel for Frontend
+
+If you built with Next.js, Vercel is the obvious choice. The free tier gives you unlimited deployments, automatic HTTPS, and edge functions.
+
+1. Push your code to GitHub
+2. Go to [vercel.com](https://vercel.com), import your repo
+3. Add your environment variables (Supabase keys, Stripe keys)
+4. Click Deploy
+
+Every push to `main` triggers a new deployment. Every pull request gets a preview URL. No CI/CD to configure.
+
+### Custom Domain
+
+A custom domain costs $10/year. Buy one on Namecheap or Cloudflare.
+
+In Vercel: Settings → Domains → Add your domain. Vercel gives you DNS records to add at your registrar. Two records, five minutes, done. HTTPS is automatic.
+
+`yourapp.vercel.app` works fine for testing. `yourapp.com` is what you show customers.
+
+### PWA Install
+
+Make your web app installable on phones. Add a `manifest.json` to your public folder:
+
+```json
+{
+  "name": "Your App Name",
+  "short_name": "YourApp",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
+```
+
+Add a `<link rel="manifest" href="/manifest.json">` to your HTML head. Now users can "Add to Home Screen" on their phones. Your web app looks and feels like a native app.
+
+---
+
+<SectionLabel label="Analytics and Monitoring" />
+
+## Analytics and Monitoring
+
+You can't improve what you don't measure. Set up two things before you share your URL with anyone.
+
+### Analytics
+
+**PostHog** (open source, generous free tier) or **Plausible** (privacy-friendly, simple). Both are better than Google Analytics for indie builders - lighter, privacy-respecting, and they tell you what people actually do in your app.
+
+PostHog setup is one script tag:
+
+```html
+<script>
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('YOUR_KEY', {api_host: 'https://app.posthog.com'})
+</script>
+```
+
+Track custom events for the actions that matter: signups, feature usage, upgrades.
+
+### Error Tracking
+
+**Sentry** tells you when things break before your users tell you. The free tier covers 5,000 errors per month - more than enough early on.
+
+```bash
+npm install @sentry/nextjs
+npx @sentry/wizard@latest -i nextjs
+```
+
+Now when a user hits an error, you get a Slack notification with the full stack trace, the user's browser, and the exact steps that led to the crash.
+
+---
+
+<SectionLabel label="Security Audit" />
+
+## Security Audit Checklist
+
+Before you share that live URL, go through this list. These are the holes from Day 2 - verify each one is sealed.
+
+- [ ] **API keys are in environment variables**, not hardcoded in client-side code. Check your browser's Network tab - no secrets should be visible.
+- [ ] **Authentication is enforced** on every API route that touches user data. Test by calling your API without a token. It should return 401.
+- [ ] **Rate limiting is active** on AI endpoints. Without it, one user can burn through your entire API budget in an hour. Use Upstash or Vercel's built-in rate limiting.
+- [ ] **Input validation exists** on all user inputs. Never pass raw user input to an AI prompt without sanitization. This is how prompt injection happens.
+- [ ] **CORS is configured** to only allow requests from your domain. Open CORS means anyone can call your API from their site.
+- [ ] **Row Level Security is enabled** in Supabase. Test by trying to read another user's data. You shouldn't be able to.
+
+Run through this list every time you deploy. It takes five minutes and prevents catastrophic breaches.
+
+---
+
+<SectionLabel label="Exercise" />
+
+## Today's Exercise
+
+1. **Deploy your app to Vercel.** Get a live URL. Test it in an incognito window.
+2. **Set up Supabase auth.** Add magic link login. Test the full flow - sign up, verify email, see your dashboard.
+3. **Add one database table** for your app's core data. Verify Row Level Security works.
+4. **Send the link to 3 people.** Not developers. Regular people. Watch if they can sign up without help.
+
+If you also wire up Stripe, you're ahead of schedule. If not, payments can wait until tomorrow - a live URL with auth is today's win.
+
+---
+
+<SectionLabel label="Prompt Templates" />
+
+## Prompt Templates
+
+<PromptTemplate title="DevOps Guide">
+You are a DevOps engineer. I built my app with [FRAMEWORK] and need to deploy it. Walk me through: (1) Setting up the GitHub repo, (2) Connecting to Vercel, (3) Adding environment variables for [LIST YOUR ENV VARS], (4) Setting up a custom domain. Give me the exact commands and steps. Assume I've never deployed before.
+</PromptTemplate>
+
+<PromptTemplate title="Security Auditor">
+You are a security auditor reviewing a web application before launch. Review this codebase for vulnerabilities. Focus on: exposed API keys, missing authentication checks, prompt injection vectors, rate limiting gaps, and CORS misconfiguration. For each issue found, explain the risk in one sentence and give the exact fix.
+
+[PASTE CODE]
+</PromptTemplate>

@@ -1,0 +1,187 @@
+---
+title: "Day 3 - Build Your First App"
+description: "Pick your weapon, describe your app in 3 sentences, and get something running in under an hour."
+order: 3
+---
+
+<SectionLabel label="The Mindset Shift" />
+
+## Stop Planning. Start Building.
+
+You've done the research. You've talked to users. You've written your PRD and killed your feature list down to one thing.
+
+Now you build.
+
+Here's the truth most people won't tell you: you don't need to know how to code. Not anymore. The tools available today let you describe what you want in plain English and get a working app back. It's not perfect. It's not production-grade on the first try. But it's real, and it's fast, and it's enough to test your idea with actual humans.
+
+The goal today is simple: **get something running in under 60 minutes.**
+
+Not polished. Not perfect. Running.
+
+---
+
+<SectionLabel label="Pick Your Weapon" />
+
+## The Toolkit
+
+There are three categories of tools. Pick the one that matches your skill level.
+
+### Build Full Apps From English
+
+These tools take a description and generate an entire working app - frontend, backend, database, deployment.
+
+- **Lovable** - Best for beginners. Describe your app, get a working prototype with a shareable URL. Great UI out of the box.
+- **Bolt.new** - Fast prototyping. Good for quick experiments. Runs in the browser.
+- **Replit Agent** - Best when you need backend logic, databases, or APIs. It handles the full stack.
+
+### Code With an AI Copilot
+
+These tools help you write code yourself, but AI does the heavy lifting. You need some comfort with code, but not much.
+
+- **Cursor** - VS Code with AI superpowers. You describe what you want, it writes the code. You review and edit. Best balance of control and speed.
+- **Claude Code** - Terminal-based. For power users who live in the command line. Excellent at complex, multi-file changes.
+- **GitHub Copilot** - Autocomplete on steroids. Good if you already use VS Code.
+
+### Generate UI From Descriptions
+
+- **v0 by Vercel** - Describe a UI in words (or paste a screenshot), get React components back. Great for building individual screens fast.
+
+### The Decision Tree
+
+Not sure which to pick? Here's the shortcut:
+
+- **Never written code before?** Start with Lovable.
+- **Want more control over the code?** Use Cursor.
+- **Just need a beautiful UI component?** Use v0.
+- **Need a database and API?** Use Replit Agent.
+
+Pick one. Don't research for 3 hours. Just pick one and start.
+
+<ToolDecisionTree />
+
+---
+
+<SectionLabel label="Your First Build Session" />
+
+## The 60-Minute Sprint
+
+Set a timer. Seriously. Put 60 minutes on your phone. When it goes off, you stop building and start showing.
+
+### Step 1 - Describe Your App in 3 Sentences
+
+Before you touch any tool, write this down:
+
+1. **Who it's for.** "Small landlords with 5-20 rental units."
+2. **What it does.** "Automatically triages tenant maintenance requests and contacts the right vendor."
+3. **What makes it different.** "The landlord doesn't have to do anything - no app to check, no messages to forward."
+
+This is what you'll paste into your builder tool.
+
+### Step 2 - Use the GCES Framework
+
+When prompting your AI builder, structure your request with GCES:
+
+- **Goal** - What you want built. "A web app that lets tenants submit maintenance requests via text message."
+- **Context** - Who uses it and why. "Small landlords who manage properties themselves and lose time playing phone tag with tenants and contractors."
+- **Examples** - What it should look and feel like. "Similar to a simplified Zendesk ticket system, but for property maintenance."
+- **Steps** - Break it into phases. "Phase 1: Landing page. Phase 2: Request submission form. Phase 3: AI categorization and vendor matching."
+
+### Step 3 - Build in This Order
+
+Don't build everything at once. Follow this sequence:
+
+1. **Landing page.** What does a visitor see? What's the headline? What's the call to action?
+2. **Core feature screen.** The ONE thing your app does. Build this screen and make it work.
+3. **The happy path.** Connect landing page to core feature. Make sure a user can go from "I just arrived" to "I got value" without hitting a dead end.
+
+### Step 4 - Test, Break, Fix
+
+Open your app. Try to use it as a real user would. Click every button. Enter weird data. Try to break it.
+
+When it breaks (it will), copy the error message and paste it back to your AI tool. Say: "I got this error when I clicked the submit button. Fix it."
+
+That's the loop. Build. Test. Break. Fix. Repeat.
+
+---
+
+<SectionLabel label="The Architect Prompt Pattern" />
+
+## Don't Just Say "Build Me an App"
+
+The biggest mistake beginners make is pasting a vague description and hoping for the best. You'll get generic slop.
+
+Instead, use the architect pattern. Start with structure, then build piece by piece.
+
+**Bad prompt:**
+```
+Build me an app for landlords to manage maintenance requests.
+```
+
+**Good prompt:**
+```
+You are a senior software architect. I want to build a web app for small
+landlords to manage tenant maintenance requests.
+
+First, outline the file structure and key components. Include:
+- A landing page with value proposition
+- A tenant request form (text + photo upload)
+- An AI categorization engine that sorts requests by urgency and trade type
+- A dashboard for the landlord to see all requests
+
+Don't write any code yet. Just give me the architecture overview.
+```
+
+Once you have the architecture, build one component at a time:
+
+```
+Now implement the tenant request form. Use a clean, simple design.
+Fields: description (text), photo upload, unit number, urgency (dropdown).
+Make it mobile-friendly.
+```
+
+This approach gives you dramatically better results because the AI thinks about the whole system before writing code.
+
+---
+
+<SectionLabel label="Common Mistakes" />
+
+## Things That Will Waste Your Time
+
+**Building 10 features instead of 1.** You crossed out 4 features yesterday. Don't sneak them back in. Build the one thing.
+
+**Not testing with a real user in the first 24 hours.** Your app doesn't need to be pretty. It needs to be in front of a real person who has the problem you're solving. Send them the link tonight.
+
+**Spending 3 days on the logo.** Your logo doesn't matter. Your color scheme doesn't matter (yet). Whether your app solves a real problem matters. Everything else is procrastination disguised as productivity.
+
+**Rewriting from scratch instead of iterating.** When something doesn't work, fix it. Don't start over. The code doesn't need to be perfect. It needs to work.
+
+**Not reading the error messages.** When your build fails, the error message usually tells you exactly what's wrong. Read it. Paste it into your AI tool. Let it fix the problem.
+
+---
+
+<SectionLabel label="Exercises" />
+
+## Your Day 3 Assignment
+
+### The Build Sprint
+
+1. Open your tool (Lovable, Cursor, Bolt, whatever you picked)
+2. Set a 60-minute timer
+3. Build: landing page + core feature + happy path
+4. When the timer goes off, stop
+5. Send the link to one person who has the problem your app solves
+6. Write down their reaction in 2 sentences
+
+The goal isn't a finished product. The goal is a working prototype that a real person can try. Ship ugly. Ship broken. Just ship.
+
+---
+
+<SectionLabel label="Prompt Templates" />
+
+<PromptTemplate title="Code Architect">
+You are a senior architect. I am building [APP DESCRIPTION] using [TOOL - e.g., Lovable, Cursor, Next.js]. Outline the file structure, key components, and data flow. Then implement the [FIRST COMPONENT - e.g., landing page, submission form, dashboard] with clean, readable code. Keep it simple. No unnecessary abstractions. Use comments to explain non-obvious decisions.
+</PromptTemplate>
+
+<PromptTemplate title="Debug Partner">
+You are a senior developer. I am getting this error: [PASTE ERROR MESSAGE]. Here is my code: [PASTE RELEVANT CODE]. Explain what went wrong in one sentence, then give me the fix. Do not rewrite the entire file. Only show me the lines that need to change.
+</PromptTemplate>
