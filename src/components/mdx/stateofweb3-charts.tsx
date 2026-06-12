@@ -36,7 +36,7 @@ const yearlyDataset: YearlyData[] = [
   { year: '2017', docs: 2520, growth: '+163.9%', avgCitations: 45.0, milestone: 'ICO boom triggers academic explosion. ERC-20 standard drives research.' },
   { year: '2018', docs: 6995, growth: '+177.6%', avgCitations: 32.0, milestone: 'Peak YoY growth. Consensus mechanisms, scalability, and security dominate.' },
   { year: '2019', docs: 10591, growth: '+51.4%', avgCitations: 22.0, milestone: 'DeFi primitives appear (7 papers). Supply chain research scales rapidly.' },
-  { year: '2020', docs: 11996, growth: '+13.3%', avgCitations: 15.5, milestone: 'DeFi Summer. Federated learning–blockchain convergence begins (37 papers).' },
+  { year: '2020', docs: 11996, growth: '+13.3%', avgCitations: 15.5, milestone: 'DeFi Summer. Federated learning and blockchain convergence begins (37 papers).' },
   { year: '2021', docs: 13337, growth: '+11.2%', avgCitations: 10.8, milestone: 'NFT research surges. Zero-knowledge proof applications multiply.' },
   { year: '2022', docs: 14979, growth: '+12.3%', avgCitations: 7.2, milestone: 'Layer-2 rollups and cross-chain protocols dominate architecture research.' },
   { year: '2023', docs: 17677, growth: '+18.0%', avgCitations: 4.8, milestone: 'NFT research peaks (426 papers) then declines. Institutional era begins.' },
@@ -48,7 +48,7 @@ const yearlyDataset: YearlyData[] = [
 const unigramData: TermFrequency[] = [
   { term: 'blockchain', count: 87818, percent: 68.5, context: 'The foundational term, appearing in more than two-thirds of all abstracts.' },
   { term: 'data', count: 70208, percent: 54.7, context: 'Storage, integrity, on-chain privacy, and data-sharing architectures.' },
-  { term: 'security', count: 59388, percent: 46.3, context: 'Nearly half of all papers discuss security — central to the value proposition.' },
+  { term: 'security', count: 59388, percent: 46.3, context: 'Nearly half of all papers discuss security, central to the value proposition.' },
   { term: 'decentralized', count: 48670, percent: 37.9, context: 'Decentralized systems, consensus mechanics, and governance models.' },
   { term: 'cryptocurrency', count: 43190, percent: 33.7, context: 'Digital asset economics, exchange mechanics, and monetary theory.' },
   { term: 'trust', count: 39373, percent: 30.7, context: 'Trust-minimized systems, reputation protocols, and verification.' },
@@ -57,7 +57,7 @@ const unigramData: TermFrequency[] = [
 ];
 
 const bigramData: TermFrequency[] = [
-  { term: 'blockchain technology', count: 44102, percent: 34.4, context: 'Dominant bigram — blockchain treated as modular infrastructure component.' },
+  { term: 'blockchain technology', count: 44102, percent: 34.4, context: 'Dominant bigram: blockchain treated as modular infrastructure component.' },
   { term: 'smart contract', count: 21134, percent: 16.5, context: 'Automated execution, formal verification, and vulnerability auditing.' },
   { term: 'blockchain based', count: 18516, percent: 14.4, context: 'Papers proposing blockchain as a solution to problems in other domains.' },
   { term: 'supply chain', count: 11418, percent: 8.9, context: 'Largest non-financial application vertical: provenance and logistics.' },
@@ -68,11 +68,11 @@ const bigramData: TermFrequency[] = [
 ];
 
 const trigramData: TermFrequency[] = [
-  { term: 'Internet of Things', count: 9851, percent: 7.7, context: 'Top trigram — IoT devices generate distributed data secured by blockchain.' },
+  { term: 'Internet of Things', count: 9851, percent: 7.7, context: 'Top trigram: IoT devices generate distributed data secured by blockchain.' },
   { term: 'distributed ledger technology', count: 4058, percent: 3.2, context: 'Enterprise permissioned blockchain frameworks and institutional DLT.' },
   { term: 'supply chain management', count: 3699, percent: 2.9, context: 'Proven logistics automation; largest single non-financial vertical.' },
   { term: 'zero knowledge proof', count: 1472, percent: 1.1, context: 'Fast-rising privacy primitive: zk-SNARKs, zk-STARKs, and rollups.' },
-  { term: 'non fungible token', count: 1121, percent: 0.9, context: 'Digital ownership research — peaked in 2023, now in structural decline.' },
+  { term: 'non fungible token', count: 1121, percent: 0.9, context: 'Digital ownership research: peaked in 2023, now in structural decline.' },
   { term: 'byzantine fault tolerance', count: 1009, percent: 0.8, context: 'Core consensus research: pBFT variants and finality guarantees.' },
   { term: 'central bank digital', count: 867, percent: 0.7, context: 'Sovereign digital currency design: CBDC pilots and monetary policy.' },
   { term: 'bank digital currency', count: 864, percent: 0.7, context: 'Complementary CBDC term: offline settlement and privacy frameworks.' }
@@ -83,7 +83,7 @@ const convergenceNodes: ConceptNode[] = [
     id: 'fed-learn',
     label: 'Federated Learning',
     papers: 664,
-    description: 'Explosive growth from 3 papers in 2018 to 664 in 2025. Blockchain coordinates decentralized AI training, manages parameter updates, calculates rewards, and prevents model poisoning — without centralizing sensitive data.',
+    description: 'Explosive growth from 3 papers in 2018 to 664 in 2025. Blockchain coordinates decentralized AI training, manages parameter updates, calculates rewards, and prevents model poisoning, all without centralizing sensitive data.',
     exemplar: {
       title: 'Blockchain empowered asynchronous federated learning for secure data sharing',
       authors: 'Y. Lu et al.',
@@ -109,7 +109,7 @@ const convergenceNodes: ConceptNode[] = [
     id: 'ai-convergence',
     label: 'AI Convergence',
     papers: 11130,
-    description: 'Machine learning (5,667 papers) and artificial intelligence (5,463 papers) represent the largest technology convergence in the corpus — 11,130 combined mentions. Papers apply AI to blockchain problems (anomaly detection, MEV optimization) or use blockchain for AI governance (decentralized model training, provenance).',
+    description: 'Machine learning (5,667 papers) and artificial intelligence (5,463 papers) represent the largest technology convergence in the corpus: 11,130 combined mentions. Papers apply AI to blockchain problems (anomaly detection, MEV optimization) or use blockchain for AI governance (decentralized model training, provenance).',
     exemplar: {
       title: 'The rise and potential of large language model based agents: A survey',
       authors: 'Z. Xi et al.',
@@ -160,7 +160,7 @@ export function StateOfWeb3Timeline() {
         <div>
           <h4 className="text-base font-bold text-foreground flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse" />
-            Publication Volume & Milestone Timeline (2013–2026)
+            Publication Volume & Milestone Timeline (2013 to 2026)
           </h4>
           <p className="text-xs text-muted-foreground mt-0.5">
             128,286 concept-tagged papers. Click nodes to explore the 118x growth trajectory.
@@ -394,7 +394,7 @@ export function StateOfWeb3ConvergenceMatrix() {
     <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm space-y-6">
       <div>
         <h4 className="text-base font-bold text-foreground">
-          The Blockchain–AI Convergence Matrix
+          The Blockchain-AI Convergence Matrix
         </h4>
         <p className="text-xs text-muted-foreground mt-0.5">
           Select convergence domains to trace how blockchain acts as a decentralized coordination substrate for AI.

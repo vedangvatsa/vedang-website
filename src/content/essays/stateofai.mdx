@@ -1,31 +1,31 @@
 ---
 title: "The State of AI"
-summary: "A data-driven executive analysis of 5,003,783 academic papers — the largest open bibliometric study of AI research ever conducted — tracking the structural transformation of the field from neural network foundations to the LLM inflection, the China-US research crossover, and the 48.9% zero-citation reality."
+summary: "A data-driven executive analysis of 5,003,783 academic papers, the largest open bibliometric study of AI research ever conducted, tracking the structural transformation of the field from neural network foundations to the LLM inflection, the China-US research crossover, and the 48.9% zero-citation reality."
 date: "2026-06-12"
 author: "Vedang Vatsa"
 category: "AI"
 keywords: ["State of AI", "AI Research", "Large Language Models", "Neural Networks", "Bibliometrics", "OpenAlex", "China AI", "RAG", "DeepSeek"]
 ---
 
-Five million papers. That is the size of the AI research corpus indexed through mid-2026 — and **58.8% of it was published in the last four years alone**. In 2025, over 944,000 academic papers mentioned artificial intelligence methods in their abstracts, a 42.6% surge over 2024 and a 10.1x increase since 2013. The first half of 2026 has already logged 812,972 papers, putting the full year on pace to breach 1.6 million — the first time annual output in this corpus will exceed one million publications.
+Five million papers. That is the size of the AI research corpus indexed through mid-2026, and **58.8% of it was published in the last four years alone**. In 2025, over 944,000 academic papers mentioned artificial intelligence methods in their abstracts, a 42.6% surge over 2024 and a 10.1x increase since 2013. The first half of 2026 has already logged 812,972 papers, putting the full year on pace to breach 1.6 million, the first time annual output in this corpus will exceed one million publications.
 
-The data tells a story of concentration, acceleration, and structural shift. Neural networks still dominate — **1,522,612 papers**, or 30.4% of all abstracts — but the fastest-growing category is large language models, which grew **29.9x** from 2018 to 2025. Every single one of the ten fastest-rising keywords is LLM-related. China now produces 21.6% more AI papers than the United States. And nearly half of all papers — **48.9%** — have received zero citations.
+The data tells a story of concentration, acceleration, and structural shift. Neural networks still dominate (**1,522,612 papers**, or 30.4% of all abstracts) but the fastest-growing category is large language models, which grew **29.9x** from 2018 to 2025. Every single one of the ten fastest-rising keywords is LLM-related. China now produces 21.6% more AI papers than the United States. And nearly half of all papers (**48.9%**) have received zero citations.
 
 This is the empirical map of where AI research capital and engineering attention are actually flowing.
 
 ## I. Methodology: 5 Million Papers, One Open API
 
-This analysis is built on a corpus of exactly **5,003,783 academic papers** published between 2013 and mid-2026, queried from the OpenAlex scholarly database using abstract-level search. OpenAlex indexes over 250 million academic works and provides free, structured API access — no proprietary databases required. Every count in this analysis can be independently verified and reproduced.
+This analysis is built on a corpus of exactly **5,003,783 academic papers** published between 2013 and mid-2026, queried from the OpenAlex scholarly database using abstract-level search. OpenAlex indexes over 250 million academic works and provides free, structured API access with no proprietary databases required. Every count in this analysis can be independently verified and reproduced.
 
-The corpus was defined by searching paper abstracts for ten AI-related terms: *artificial intelligence, machine learning, deep learning, neural network, language model, reinforcement learning, computer vision, natural language, generative, autonomous.* Abstract-level search captures cross-disciplinary AI usage that title-only approaches systematically miss — returning **1.5x to 7.7x more papers** per keyword than title search alone.
+The corpus was defined by searching paper abstracts for ten AI-related terms: *artificial intelligence, machine learning, deep learning, neural network, language model, reinforcement learning, computer vision, natural language, generative, autonomous.* Abstract-level search captures cross-disciplinary AI usage that title-only approaches systematically miss, returning **1.5x to 7.7x more papers** per keyword than title search alone.
 
-The resulting corpus is 65.4% journal articles, 13.4% preprints, and 7.7% book chapters. Repositories (primarily arXiv) account for 27.4% of sources, consistent with the AI community's preprint culture. All analyses — keyword frequency, growth detection, citation distribution, geographic output — were performed through direct API count queries. No papers were downloaded. No local text processing was applied.
+The resulting corpus is 65.4% journal articles, 13.4% preprints, and 7.7% book chapters. Repositories (primarily arXiv) account for 27.4% of sources, consistent with the AI community's preprint culture. All analyses (keyword frequency, growth detection, citation distribution, geographic output) were performed through direct API count queries. No papers were downloaded. No local text processing was applied.
 
 <StateOfAiTimeline />
 
 ## II. The Empirical Map: What 5 Million Abstracts Reveal
 
-The n-gram frequency analysis across 5,003,783 paper abstracts reveals the actual priorities of the global AI research enterprise — not what conference keynotes claim matters, but what researchers are building.
+The n-gram frequency analysis across 5,003,783 paper abstracts reveals the actual priorities of the global AI research enterprise: not what conference keynotes claim matters, but what researchers are building.
 
 <StateOfAiKeywordsChart />
 
@@ -35,11 +35,11 @@ The n-gram frequency analysis across 5,003,783 paper abstracts reveals the actua
   <Stat label="Fastest Rising Term" value="DeepSeek (848.7x)" />
 </StatRow>
 
-**The bigram landscape splits cleanly into two tiers.** The top six terms are method-level — neural network, machine learning, deep learning, artificial intelligence, attention mechanism, and large language — totaling **5.37 million abstract mentions**. The bottom four are application-level — image classification, recommendation system, medical imaging, and feature extraction — totaling **1.39 million**. The ratio is 3.9:1. Method vocabulary dominates application vocabulary by nearly four to one.
+**The bigram distribution splits cleanly into two tiers.** The top six terms are method-level: neural network, machine learning, deep learning, artificial intelligence, attention mechanism, and large language, totaling **5.37 million abstract mentions**. The bottom four are application-level: image classification, recommendation system, medical imaging, and feature extraction, totaling **1.39 million**. The ratio is 3.9:1. Method vocabulary dominates application vocabulary by nearly four to one.
 
 **"Neural network"** (1,522,612 mentions) remains the undisputed foundation of AI research, appearing in nearly one of every three abstracts. But the trend line tells a more nuanced story: in 2025, **"deep learning" surpassed "neural network" in annual abstract mentions for the first time** (216,713 vs. 207,140), even as neural network retains the larger cumulative total.
 
-**"Attention mechanism"** (432,079) at rank 5 confirms the transformer's structural dominance across NLP, computer vision, and multimodal tasks since 2017. **"Large language"** (405,166) at rank 6 has already surpassed application-oriented terms like image classification and recommendation systems — a crossover that occurred within the last two years.
+**"Attention mechanism"** (432,079) at rank 5 confirms the transformer's structural dominance across NLP, computer vision, and multimodal tasks since 2017. **"Large language"** (405,166) at rank 6 has already surpassed application-oriented terms like image classification and recommendation systems, a crossover that occurred within the last two years.
 
 ### Trigram Architecture: The Structural DNA
 
@@ -47,13 +47,13 @@ The n-gram frequency analysis across 5,003,783 paper abstracts reveals the actua
 
 The trigram distribution reveals the architectural building blocks of modern AI. **"Deep neural network"** (518,431) leads, followed by **"convolutional neural network"** (394,934). Together they account for over 913,000 abstract mentions.
 
-The critical signal: **"large language model"** (292,873) has overtaken both **"artificial neural network"** (261,355) and **"support vector machine"** (239,347) to claim the #3 position. LLMs are discussed far more broadly than title-only searches suggest — 292,873 abstract mentions versus just 71,469 title mentions, a 4.1x ratio. Five of the ten trigrams end in "network" (deep neural, convolutional neural, artificial neural, recurrent neural, graph neural), reflecting how many research areas have developed their own neural network variant.
+The critical signal: **"large language model"** (292,873) has overtaken both **"artificial neural network"** (261,355) and **"support vector machine"** (239,347) to claim the #3 position. LLMs are discussed far more broadly than title-only searches suggest: 292,873 abstract mentions versus just 71,469 title mentions, a 4.1x ratio. Five of the ten trigrams end in "network" (deep neural, convolutional neural, artificial neural, recurrent neural, graph neural), reflecting how many research areas have developed their own neural network variant.
 
 ## III. The LLM Inflection: 29.9x and Accelerating
 
 The LLM trajectory represents the sharpest inflection in the entire five-million-paper corpus. No other term matches this acceleration profile.
 
-**"Large language model"** abstract mentions grew from 3,248 in 2018 to 96,984 in 2025 — a **29.9x increase**. The growth curve has a clear inflection point: between 2018 and 2022, mentions grew at a modest pace (3,248 to 7,931, or 2.4x over four years). Between 2022 and 2025, they grew **12.2x in three years**. By 2025, LLM papers accounted for 10.3% of all AI papers, up from 1.9% in 2022. The annualized 2026 estimate of ~170,000 papers suggests roughly one in nine AI papers will mention large language models by year-end.
+**"Large language model"** abstract mentions grew from 3,248 in 2018 to 96,984 in 2025, a **29.9x increase**. The growth curve has a clear inflection point: between 2018 and 2022, mentions grew at a modest pace (3,248 to 7,931, or 2.4x over four years). Between 2022 and 2025, they grew **12.2x in three years**. By 2025, LLM papers accounted for 10.3% of all AI papers, up from 1.9% in 2022. The annualized 2026 estimate of ~170,000 papers suggests roughly one in nine AI papers will mention large language models by year-end.
 
 For comparison, from 2022 to 2025: "transformer" grew 3.3x, "reinforcement learning" 2.7x, "deep learning" 2.1x, and "neural network" 1.5x. Nothing else comes close to the LLM growth rate.
 
@@ -61,7 +61,7 @@ For comparison, from 2022 to 2025: "transformer" grew 3.3x, "reinforcement learn
 
 <StateOfAiMomentum />
 
-The ten fastest-rising keywords tell a definitive story about where research attention is shifting — and every single one is related to large language models. Not computer vision. Not reinforcement learning. Not graph methods. All LLM.
+The ten fastest-rising keywords tell a definitive story about where research attention is shifting, and every single one is related to large language models. Not computer vision. Not reinforcement learning. Not graph methods. All LLM.
 
 The data groups into three strategic categories:
 
@@ -69,7 +69,7 @@ The data groups into three strategic categories:
 
 2. **The RAG pipeline.** "Retrieval augmented generation" (52.4x), "retrieval-augmented" (19.2x), and "RAG" (15.4x) collectively account for **58,494 papers** in 2025-2026, making RAG the single largest growth area by absolute volume after "LLM" itself. The enterprise has chosen its architecture: separate the reasoning engine from the knowledge store.
 
-3. **Safety and reliability.** "Jailbreak" (25.5x) and "guardrail" (9.7x) track the growing research investment in making language models safe and reliable. This is no longer a niche concern — it is a research category with thousands of papers.
+3. **Safety and reliability.** "Jailbreak" (25.5x) and "guardrail" (9.7x) track the growing research investment in making language models safe and reliable. This is no longer a niche concern. It is a research category with thousands of papers.
 
 <PullQuote author="Bibliometric Signal" role="Table 4, State of AI Research 2026">
 "All ten of the fastest-rising keywords are related to large language models. None involve computer vision, reinforcement learning, or graph methods."
@@ -77,15 +77,15 @@ The data groups into three strategic categories:
 
 ## IV. The Global Research Race: China Leads by Volume
 
-The geographic distribution of AI research has undergone a structural rebalancing. China now leads with **874,019 publications**, 21.6% more than the United States (718,676). The crossover occurred in 2021, when China produced 71,273 papers to the US's 64,931 — and the gap has widened every year since.
+The geographic distribution of AI research has undergone a structural rebalancing. China now leads with **874,019 publications**, 21.6% more than the United States (718,676). The crossover occurred in 2021, when China produced 71,273 papers to the US's 64,931, and the gap has widened every year since.
 
 The trajectory is striking. In 2013, the two countries started at near-parity (China: 12,074; US: 13,829). Both grew steadily through 2018, but diverged sharply after that. US output actually declined slightly between 2021 and 2022 (64,931 to 64,486), while China accelerated. By 2025, the gap stood at **53.4%** (187,887 vs. 122,449).
 
-The China-US gap is not uniform across research areas. China leads in six of seven term categories — strongest in "transformer" (2.67x) and "neural network" (1.87x). But the US retains the lead in the fastest-growing category: **"large language model"** (47,363 vs. 35,923, or 1.32x). China reached LLM parity with the US only in 2025 (15,008 vs. 14,735).
+The China-US gap is not uniform across research areas. China leads in six of seven term categories, strongest in "transformer" (2.67x) and "neural network" (1.87x). But the US retains the lead in the fastest-growing category: **"large language model"** (47,363 vs. 35,923, or 1.32x). China reached LLM parity with the US only in 2025 (15,008 vs. 14,735).
 
 ### India: The Fastest-Growing Major Producer
 
-India ranks third globally with **369,931 publications** — and its growth trajectory is the steepest of any major producer. Indian AI research output grew **32.3x** from 2013 to 2025 (2,761 to 89,287 papers), a higher growth multiple than both China (15.6x) and the US (8.9x). In 2025, India produced more AI papers than Japan (15,558) and the UK (37,104) combined.
+India ranks third globally with **369,931 publications**, and its growth trajectory is the steepest of any major producer. Indian AI research output grew **32.3x** from 2013 to 2025 (2,761 to 89,287 papers), a higher growth multiple than both China (15.6x) and the US (8.9x). In 2025, India produced more AI papers than Japan (15,558) and the UK (37,104) combined.
 
 <StatRow>
   <Stat label="China Papers" value="874,019" trend="up" />
@@ -93,7 +93,7 @@ India ranks third globally with **369,931 publications** — and its growth traj
   <Stat label="India Growth (2013-2025)" value="32.3x" trend="up" />
 </StatRow>
 
-**Institutional concentration is significant.** The Chinese Academy of Sciences leads all institutions with 74,921 papers — 49.4% more than CNRS (50,145). Six of the top ten institutions globally are Chinese. Harvard (21,529) is the highest-ranked US institution at position 8.
+**Institutional concentration is significant.** The Chinese Academy of Sciences leads all institutions with 74,921 papers, 49.4% more than CNRS (50,145). Six of the top ten institutions globally are Chinese. Harvard (21,529) is the highest-ranked US institution at position 8.
 
 Paper counts measure research volume, not research impact. Citation-weighted metrics, shares of top-1% highly cited papers, and venue prestige may yield different rankings. These figures should be interpreted as measures of where engineering attention is being deployed, not where the highest-impact work is being produced.
 
@@ -101,7 +101,7 @@ Paper counts measure research volume, not research impact. Citation-weighted met
 
 The citation distribution across five million AI papers follows an extreme power law. **48.9% of all papers have received zero citations.** Only 2,475 papers (0.05%) have exceeded 1,000 citations. The median paper in this AI corpus has zero citations.
 
-This figure is partly inflated by recency — papers published in 2024-2026 have had little time to accumulate citations. But the structural pattern is clear: a tiny fraction of papers captures the vast majority of research attention.
+This figure is partly inflated by recency: papers published in 2024-2026 have had little time to accumulate citations. But the structural pattern is clear: a tiny fraction of papers captures the vast majority of research attention.
 
 The most-cited paper is ResNet with **221,202 citations**, approximately 1.9x the next entry. The top-cited papers share a common characteristic: they are all reusable building blocks (ResNet, Adam optimizer, AlexNet, VGGNet, XGBoost). Papers that provide infrastructure accumulate orders of magnitude more citations than application-specific work, because every downstream paper that builds on the tool cites the original, regardless of application domain.
 
@@ -111,7 +111,7 @@ The most-cited paper is ResNet with **221,202 citations**, approximately 1.9x th
 
 ### Open Access Dominance
 
-Of the 5,003,783 papers, **3,043,557 (60.8%) are published as open access** — more than double the 28% baseline across all academic fields. The AI community's preprint culture, anchored by arXiv, drives this premium. This has strategic implications: the barrier to accessing AI research is lower than in almost any other scientific discipline.
+Of the 5,003,783 papers, **3,043,557 (60.8%) are published as open access**, more than double the 28% baseline across all academic fields. The AI community's preprint culture, anchored by arXiv, drives this premium. This has strategic implications: the barrier to accessing AI research is lower than in almost any other scientific discipline.
 
 ## VI. Strategic Implications: Three Imperatives
 
@@ -123,11 +123,11 @@ The aggregation of 5,003,783 research papers yields three core strategic imperat
   <Stat label="Zero-Citation Papers" value="48.9%" />
 </StatRow>
 
-1. **The LLM wave is not slowing — it is becoming the entire ocean.**
-   LLMs grew 29.9x in seven years. Every one of the ten fastest-rising research keywords is LLM-related. RAG is the dominant deployment architecture. Organizations that have not built LLM integration capabilities are not falling behind — they have already fallen behind. The strategic question is no longer whether to adopt, but how to differentiate within an LLM-saturated research and product landscape.
+1. **The LLM wave is not slowing. It is becoming the entire ocean.**
+   LLMs grew 29.9x in seven years. Every one of the ten fastest-rising research keywords is LLM-related. RAG is the dominant deployment architecture. Organizations that have not built LLM integration capabilities are not falling behind; they have already fallen behind. The strategic question is no longer whether to adopt, but how to differentiate within an LLM-saturated research and product environment.
 
 2. **Volume without impact is noise.**
-   With 48.9% of papers receiving zero citations and only 0.05% exceeding 1,000, the AI research ecosystem exhibits a severe signal-to-noise problem. Organizations consuming AI research must develop rigorous filtering mechanisms. Competitive advantage will accrue to teams that can identify the 0.05% of transformative work within the 944,000 papers published each year — and ignore the rest.
+   With 48.9% of papers receiving zero citations and only 0.05% exceeding 1,000, the AI research ecosystem exhibits a severe signal-to-noise problem. Organizations consuming AI research must develop rigorous filtering mechanisms. Competitive advantage will accrue to teams that can identify the 0.05% of transformative work within the 944,000 papers published each year and ignore the rest.
 
 3. **The geography of AI leadership is multipolar.**
    China leads in volume. The US leads in LLMs. India is growing fastest. Six of the top ten institutions are Chinese, but the US retains disproportionate influence in the fastest-growing category. Any strategic assessment that treats "AI leadership" as a single dimension is incomplete. The competition is term-specific, institution-specific, and rapidly shifting.

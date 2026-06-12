@@ -36,8 +36,8 @@ const yearlyDataset: YearlyData[] = [
   { year: '2022', docs: 411098, growth: '+11.2%', milestone: 'ChatGPT launch (Nov). Growth temporarily decelerates to 11.2%.' },
   { year: '2023', docs: 520861, growth: '+26.7%', milestone: 'GPT-4, Llama released. Post-ChatGPT research explosion re-accelerates.' },
   { year: '2024', docs: 662417, growth: '+27.2%', milestone: 'Agentic frameworks emerge. LLM papers reach 10.3% of corpus.' },
-  { year: '2025', docs: 944530, growth: '+42.6%', milestone: 'DeepSeek disrupts. 944K papers — highest annual growth since 2018.' },
-  { year: '2026', docs: 812972, growth: 'Partial', milestone: 'Jan-Jun partial. On pace for 1.6M papers — first year exceeding 1M.' },
+  { year: '2025', docs: 944530, growth: '+42.6%', milestone: 'DeepSeek disrupts. 944K papers, highest annual growth since 2018.' },
+  { year: '2026', docs: 812972, growth: 'Partial', milestone: 'Jan-Jun partial. On pace for 1.6M papers, first year exceeding 1M.' },
 ];
 
 // Top 10 bigrams from Table 3 (abstract-level search, 5M corpus)

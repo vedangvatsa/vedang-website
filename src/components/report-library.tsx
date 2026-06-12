@@ -146,7 +146,7 @@ export function ReportLibrary({ dataUrl, categories, manualReports = [], corpus 
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder={`Search ${localReports.length.toLocaleString()}+ reports — type 3+ characters to search 250M+ papers via OpenAlex...`}
+            placeholder={`Search ${localReports.length.toLocaleString()}+ reports. Type 3+ characters to search 250M+ papers via OpenAlex...`}
             className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
           />
         </div>
