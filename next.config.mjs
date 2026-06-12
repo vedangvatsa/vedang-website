@@ -199,10 +199,6 @@ const nextConfig = {
             value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://platform.twitter.com https://cdn.syndication.twimg.com https://app.cal.com https://*.cal.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data: https://basemaps.cartocdn.com https://*.cal.com; frame-src https://www.youtube.com https://platform.twitter.com https://syndication.twitter.com https://app.cal.com https://*.cal.com; frame-ancestors 'self'; connect-src 'self' https://www.google-analytics.com https://syndication.twitter.com https://cdn.syndication.twimg.com https://basemaps.cartocdn.com https://*.basemaps.cartocdn.com https://app.cal.com https://*.cal.com; worker-src 'self' blob:;",
           },
           {
-            key: 'X-Robots-Tag',
-            value: 'index, follow, max-image-preview:large, max-snippet:300, max-video-preview:-1',
-          },
-          {
             key: 'Last-Modified',
             value: new Date().toUTCString(),
           },
