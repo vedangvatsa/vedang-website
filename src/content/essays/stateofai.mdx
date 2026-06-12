@@ -1,157 +1,135 @@
 ---
 title: "The State of AI"
-summary: "A data-driven executive analysis of 133,000+ research papers, whitepapers, consulting reports, and regulatory frameworks tracking the structural transition of Artificial Intelligence from theoretical capabilities to enterprise integration."
-date: "2026-05-15"
+summary: "A data-driven executive analysis of 5,003,783 academic papers — the largest open bibliometric study of AI research ever conducted — tracking the structural transformation of the field from neural network foundations to the LLM inflection, the China-US research crossover, and the 48.9% zero-citation reality."
+date: "2026-06-12"
 author: "Vedang Vatsa"
 category: "AI"
-keywords: ["State of AI", "AI Research", "Agentic AI", "Generative AI", "AI Enterprise Adoption", "AI Regulation", "Predictive Logistics"]
+keywords: ["State of AI", "AI Research", "Large Language Models", "Neural Networks", "Bibliometrics", "OpenAlex", "China AI", "RAG", "DeepSeek"]
 ---
 
-Two years ago, "generative AI" dominated every corporate earnings call and conference keynote. By mid-2026, the term has nearly disappeared from serious engineering budgets. Across 133,847 research papers, whitepapers, and corporate filings indexed from Crossref, arXiv, Stanford HAI, and Gartner, the signal is clear: capital and engineering resources have moved past experimental generative features. They are flowing almost exclusively toward infrastructure scaling, operational efficiency, autonomous agents, and clinical diagnostics. The AI market has entered its deployment phase.
+Five million papers. That is the size of the AI research corpus indexed through mid-2026 — and **58.8% of it was published in the last four years alone**. In 2025, over 944,000 academic papers mentioned artificial intelligence methods in their abstracts, a 42.6% surge over 2024 and a 10.1x increase since 2013. The first half of 2026 has already logged 812,972 papers, putting the full year on pace to breach 1.6 million — the first time annual output in this corpus will exceed one million publications.
 
-## I. Methodology and Empirical Corpus Construction
+The data tells a story of concentration, acceleration, and structural shift. Neural networks still dominate — **1,522,612 papers**, or 30.4% of all abstracts — but the fastest-growing category is large language models, which grew **29.9x** from 2018 to 2025. Every single one of the ten fastest-rising keywords is LLM-related. China now produces 21.6% more AI papers than the United States. And nearly half of all papers — **48.9%** — have received zero citations.
 
-To ensure the analysis reflects actual capital allocation and engineering effort rather than marketing narratives, this report relies on a massive, empirically verified corpus of published research and corporate filings. 
+This is the empirical map of where AI research capital and engineering attention are actually flowing.
 
-The dataset comprises exactly 133,847 documents published up to Q2 2026. The ingestion pipeline programmatically queried institutional databases (Crossref, OpenAlex) to extract metadata, filtering out low-signal opinion pieces and focusing entirely on peer-reviewed literature, applied whitepapers, and enterprise architecture documentation. 
+## I. Methodology: 5 Million Papers, One Open API
 
-To quantify the shift in engineering priorities, this report executes a rigorous frequency analysis of n-grams (single words, bigrams, and trigrams) across the entire dataset. Stop words (e.g., "and," "the," "for") were stripped, and terminology was normalized to map the exact trajectories of specific technological components over time. This quantitative approach separates speculative noise from the actual, deployed infrastructure being built by the world's largest technology firms.
+This analysis is built on a corpus of exactly **5,003,783 academic papers** published between 2013 and mid-2026, queried from the OpenAlex scholarly database using abstract-level search. OpenAlex indexes over 250 million academic works and provides free, structured API access — no proprietary databases required. Every count in this analysis can be independently verified and reproduced.
 
-## II. The Empirical Foundation: Shifting from Theory to Production
+The corpus was defined by searching paper abstracts for ten AI-related terms: *artificial intelligence, machine learning, deep learning, neural network, language model, reinforcement learning, computer vision, natural language, generative, autonomous.* Abstract-level search captures cross-disciplinary AI usage that title-only approaches systematically miss — returning **1.5x to 7.7x more papers** per keyword than title search alone.
 
-The narrative of previous years focused on theoretical model capabilities and benchmark achievements. The empirical data of 2026 confirms that this theoretical phase has concluded. The market now demands demonstrable Return on Investment (ROI) and direct integration into legacy enterprise architecture.
-
-By extracting n-grams across all 133,847 document titles, the exact operational priorities of the current market were identified.
-
-**Academic Document Acceleration & Output Timeline:**
-Track how AI research expanded from early neural network studies to the current LLM and agentic era.
+The resulting corpus is 65.4% journal articles, 13.4% preprints, and 7.7% book chapters. Repositories (primarily arXiv) account for 27.4% of sources, consistent with the AI community's preprint culture. All analyses — keyword frequency, growth detection, citation distribution, geographic output — were performed through direct API count queries. No papers were downloaded. No local text processing was applied.
 
 <StateOfAiTimeline />
 
-**Dominant Thematic Vectors (Single Keyword Frequency):**
+## II. The Empirical Map: What 5 Million Abstracts Reveal
+
+The n-gram frequency analysis across 5,003,783 paper abstracts reveals the actual priorities of the global AI research enterprise — not what conference keynotes claim matters, but what researchers are building.
 
 <StateOfAiKeywordsChart />
 
-The keyword distribution reveals intense concentration in applied methodologies. **"Learning"** (32,601 mentions) remains the dominant term, appearing in one out of every four document titles. **"Neural"** (14,796) and **"network"** (14,962) confirm that neural architectures are the primary computational framework. **"Detection"** (11,343) and **"deep"** (11,007) point to applied computer vision and pattern recognition as the largest deployment categories, far outpacing theoretical natural language processing research. **"Generative"** (7,858) confirms that generative models have moved from novelty to a core infrastructure pillar, but they are no longer the sole focus of the discipline.
+<StatRow>
+  <Stat label="Total Papers Analyzed" value="5,003,783" trend="up" />
+  <Stat label="Top Bigram" value="Neural Network (1.52M)" />
+  <Stat label="Fastest Rising Term" value="DeepSeek (848.7x)" />
+</StatRow>
 
-### Structural Integration (Two-Word Phrase Frequency)
+**The bigram landscape splits cleanly into two tiers.** The top six terms are method-level — neural network, machine learning, deep learning, artificial intelligence, attention mechanism, and large language — totaling **5.37 million abstract mentions**. The bottom four are application-level — image classification, recommendation system, medical imaging, and feature extraction — totaling **1.39 million**. The ratio is 3.9:1. Method vocabulary dominates application vocabulary by nearly four to one.
+
+**"Neural network"** (1,522,612 mentions) remains the undisputed foundation of AI research, appearing in nearly one of every three abstracts. But the trend line tells a more nuanced story: in 2025, **"deep learning" surpassed "neural network" in annual abstract mentions for the first time** (216,713 vs. 207,140), even as neural network retains the larger cumulative total.
+
+**"Attention mechanism"** (432,079) at rank 5 confirms the transformer's structural dominance across NLP, computer vision, and multimodal tasks since 2017. **"Large language"** (405,166) at rank 6 has already surpassed application-oriented terms like image classification and recommendation systems — a crossover that occurred within the last two years.
+
+### Trigram Architecture: The Structural DNA
 
 <StateOfAiBigramsChart />
 
-<StatRow>
-  <Stat label="Total Documents Analyzed" value="133,847" trend="up" />
-  <Stat label="Top Bigram" value="Neural Network (11,949)" />
-  <Stat label="Fastest Rising Vector" value="Agentic (449x)" />
-</StatRow>
+The trigram distribution reveals the architectural building blocks of modern AI. **"Deep neural network"** (518,431) leads, followed by **"convolutional neural network"** (394,934). Together they account for over 913,000 abstract mentions.
 
-The bigram data reveals five distinct strategic research pillars driving current engineering efforts:
+The critical signal: **"large language model"** (292,873) has overtaken both **"artificial neural network"** (261,355) and **"support vector machine"** (239,347) to claim the #3 position. LLMs are discussed far more broadly than title-only searches suggest — 292,873 abstract mentions versus just 71,469 title mentions, a 4.1x ratio. Five of the ten trigrams end in "network" (deep neural, convolutional neural, artificial neural, recurrent neural, graph neural), reflecting how many research areas have developed their own neural network variant.
 
-1. **Production-Grade ML:** "Machine learning" (9,765) and "deep learning" (7,030) confirm the transition to production deployment. "Object detection" (4,205) remains a massive subfield for industrial applications, tracking logistics, manufacturing defects, and autonomous navigation.
-2. **The LLM Infrastructure Wave:** "Large language" (4,391) shows that LLM research has become one of the dominant bigrams. Enterprises are actively researching how to deploy models with enterprise-grade RAG architectures rather than relying purely on bulk internet scraping.
-3. **Autonomous Navigation & Robotics:** "Autonomous driving" (3,602) and "reinforcement learning" (4,597) form a critical cluster. Deep reinforcement learning is the primary driver for advancements in physical robotics, moving beyond digital text generation into real-world kinetic operations.
-4. **Clinical Diagnostics:** "Medical image segmentation" (454 as a trigram) and "speech recognition" (3,577) validate healthcare as the highest-stakes and most heavily funded deployment domain.
+## III. The LLM Inflection: 29.9x and Accelerating
 
-**Accelerating Trends (2025-2026 vs. 2022-2023):**
+The LLM trajectory represents the sharpest inflection in the entire five-million-paper corpus. No other term matches this acceleration profile.
+
+**"Large language model"** abstract mentions grew from 3,248 in 2018 to 96,984 in 2025 — a **29.9x increase**. The growth curve has a clear inflection point: between 2018 and 2022, mentions grew at a modest pace (3,248 to 7,931, or 2.4x over four years). Between 2022 and 2025, they grew **12.2x in three years**. By 2025, LLM papers accounted for 10.3% of all AI papers, up from 1.9% in 2022. The annualized 2026 estimate of ~170,000 papers suggests roughly one in nine AI papers will mention large language models by year-end.
+
+For comparison, from 2022 to 2025: "transformer" grew 3.3x, "reinforcement learning" 2.7x, "deep learning" 2.1x, and "neural network" 1.5x. Nothing else comes close to the LLM growth rate.
+
+### The Fastest-Rising Keywords: All LLM, All the Time
 
 <StateOfAiMomentum />
 
-- **"Agentic"** grew 449x, the single fastest-rising keyword in the entire corpus, reflecting the transition from passive inference (a human prompting a model) to autonomous, multi-step execution (a model triggering other software).
-- **"RAG"** (Retrieval-Augmented Generation) grew 99x, confirming its position as the standard enterprise deployment architecture.
-- **"DeepSeek"** grew 92x, marking the rapid emergence of high-efficiency, open-weight foundation models as a competitive market force capable of challenging proprietary labs.
+The ten fastest-rising keywords tell a definitive story about where research attention is shifting — and every single one is related to large language models. Not computer vision. Not reinforcement learning. Not graph methods. All LLM.
 
-## III. Enterprise Architecture: The Dominance of RAG
+The data groups into three strategic categories:
 
-In 2023, the assumption was that every Fortune 500 company would train its own proprietary foundation model to protect corporate data. The data indicates this assumption was incorrect. The phrase **"Retrieval-Augmented Generation"** (228 mentions) signifies the victory of a far more efficient architecture: separating the logic engine (the LLM) from the knowledge database (the vector store).
+1. **Named models as research subjects.** "DeepSeek" (848.7x), "Mistral" (16.8x), and "Gemini" (13.6x) are specific commercial models, not architectures. Researchers are spending more time evaluating and benchmarking named products than developing novel architectures.
 
-### The Capital Economics of RAG vs. Foundation Models
+2. **The RAG pipeline.** "Retrieval augmented generation" (52.4x), "retrieval-augmented" (19.2x), and "RAG" (15.4x) collectively account for **58,494 papers** in 2025-2026, making RAG the single largest growth area by absolute volume after "LLM" itself. The enterprise has chosen its architecture: separate the reasoning engine from the knowledge store.
 
-The economics are definitive and dictate corporate strategy. Training a frontier foundation model from scratch requires hundreds of millions of dollars in compute (GPU clusters) and data acquisition costs. The knowledge encoded in a trained model begins decaying immediately upon completion; updating the model requires expensive retraining or fine-tuning.
+3. **Safety and reliability.** "Jailbreak" (25.5x) and "guardrail" (9.7x) track the growing research investment in making language models safe and reliable. This is no longer a niche concern — it is a research category with thousands of papers.
 
-In contrast, a RAG pipeline utilizes an existing, highly capable foundation model via API (or an open-weight model hosted locally) and connects it to an internal vector database containing the company's proprietary documents. The deployment cost drops from hundreds of millions to between $5,000 and $50,000, with marginal per-query costs measured in fractions of a cent. 
-
-### Why RAG Won the Enterprise
-
-Beyond cost, RAG solves three critical enterprise bottlenecks that previously prevented deployment:
-
-1. **Verification and Auditability:** Hallucinations represent unacceptable legal risk for enterprise deployments. By forcing the model to cite retrieved internal documents, RAG provides a clear, traceable audit trail. If the model generates a financial projection, it must point to the specific PDF or spreadsheet that provided the data.
-2. **Access Control and Data Governance:** RAG architectures respect existing enterprise file permissions (e.g., Active Directory). When an entry-level employee queries the system, the vector database only retrieves documents they are authorized to view. A single foundational model cannot easily compartmentalize knowledge in this manner.
-3. **Real-Time Data Injection:** Systems can instantly access new HR policies, product specifications, or compliance regulations simply by dropping a new document into the database. The system is immediately updated without requiring any model retraining.
-
-## IV. The Clinical Singularity: Healthcare as the Primary Vector
-
-Healthcare is the primary target for advanced AI integration, representing the largest single capital inflow outside of pure infrastructure. However, the nature of this integration differs fundamentally from typical enterprise SaaS, focusing heavily on diagnostic precision, FDA compliance, and privacy-preserving architectures.
-
-### Diagnostic Workflows and Medical Imaging
-
-The widespread deployment of models capable of processing Electronic Health Records (EHR) and complex medical imaging simultaneously is evident in the corpus. The term **"clinical"** appears 2,621 times. 
-
-The FDA has cleared over 900 AI-enabled medical devices, primarily concentrated in radiology (75%) and cardiovascular imaging (14%). The economic implications are measurable and immediate: hospitals utilizing AI-assisted radiology workflows report reading times dropping by 30-50% per scan. These are not experimental prototypes; they are production systems processing thousands of clinical decisions daily, flagging anomalies and triaging patient scans before a human doctor reviews them.
-
-### Federated Learning: Bypassing Data Silos
-
-The primary bottleneck in healthcare AI is data access. HIPAA in the US and GDPR in Europe prohibit the centralized aggregation of patient records. To solve this, research institutions and major healthcare networks are heavily reliant on "federated learning."
-
-In a federated architecture, the central model is never exposed to raw patient data. Instead, the model itself is dispatched to local hospital servers. It trains on the local, secure patient data, and only the resulting mathematical updates (the weights and gradients) are sent back to the central server to improve the global model. This architecture bypasses privacy constraints entirely while continuously improving model performance across diverse, multi-hospital demographics.
-
-<PullQuote author="Dr. John Halamka" role="President, Mayo Clinic Platform">
-"The algorithms are relatively easy to write. Getting the clean, curated, and diverse data to train them is the hard part."
+<PullQuote author="Bibliometric Signal" role="Table 4, State of AI Research 2026">
+"All ten of the fastest-rising keywords are related to large language models. None involve computer vision, reinforcement learning, or graph methods."
 </PullQuote>
 
-### Ambient Monitoring and Proactive Care
+## IV. The Global Research Race: China Leads by Volume
 
-The dominance of the phrase **"mental health"** (310 mentions) reveals a shift from reactive to proactive care. The industry is moving toward continuous, objective measurement using vocal tone analysis, typing cadence, and physiological data to detect depressive episodes or cognitive decline before clinical reporting. While this transition introduces complex ethical considerations regarding surveillance, it addresses a $1 trillion global productivity loss associated with anxiety and depression by enabling early intervention.
+The geographic distribution of AI research has undergone a structural rebalancing. China now leads with **874,019 publications**, 21.6% more than the United States (718,676). The crossover occurred in 2021, when China produced 71,273 papers to the US's 64,931 — and the gap has widened every year since.
 
-## V. Supply Chain Restructuring & Predictive Logistics
+The trajectory is striking. In 2013, the two countries started at near-parity (China: 12,074; US: 13,829). Both grew steadily through 2018, but diverged sharply after that. US output actually declined slightly between 2021 and 2022 (64,931 to 64,486), while China accelerated. By 2025, the gap stood at **53.4%** (187,887 vs. 122,449).
 
-Global supply chains have historically been reactive, adjusting only after a disruption occurs. The high frequency of **"supply chain"** (287 mentions) and **"systems"** (5,790 mentions) indicates that logistics networks are now being architected as predictive, dynamic systems.
+The China-US gap is not uniform across research areas. China leads in six of seven term categories — strongest in "transformer" (2.67x) and "neural network" (1.87x). But the US retains the lead in the fastest-growing category: **"large language model"** (47,363 vs. 35,923, or 1.32x). China reached LLM parity with the US only in 2025 (15,008 vs. 14,735).
+
+### India: The Fastest-Growing Major Producer
+
+India ranks third globally with **369,931 publications** — and its growth trajectory is the steepest of any major producer. Indian AI research output grew **32.3x** from 2013 to 2025 (2,761 to 89,287 papers), a higher growth multiple than both China (15.6x) and the US (8.9x). In 2025, India produced more AI papers than Japan (15,558) and the UK (37,104) combined.
 
 <StatRow>
-  <Stat label="Supply Chain Mentions" value="287" />
-  <Stat label="Systems Mentions" value="5,790" />
-  <Stat label="Primary Objective" value="Predictive Routing" />
+  <Stat label="China Papers" value="874,019" trend="up" />
+  <Stat label="US Papers" value="718,676" />
+  <Stat label="India Growth (2013-2025)" value="32.3x" trend="up" />
 </StatRow>
 
-### Digital Twins and Predictive Routing
+**Institutional concentration is significant.** The Chinese Academy of Sciences leads all institutions with 74,921 papers — 49.4% more than CNRS (50,145). Six of the top ten institutions globally are Chinese. Harvard (21,529) is the highest-ranked US institution at position 8.
 
-Major logistics companies now model their entire physical networks as a single integrated digital system, commonly referred to as a "digital twin." By processing thousands of variables simultaneously - weather telemetry, port satellite imagery, geopolitical alerts, and factory output data - these systems predict friction events before they manifest.
+Paper counts measure research volume, not research impact. Citation-weighted metrics, shares of top-1% highly cited papers, and venue prestige may yield different rankings. These figures should be interpreted as measures of where engineering attention is being deployed, not where the highest-impact work is being produced.
 
-When a disruption is predicted (e.g., a port strike or a localized weather event), the system autonomously reroutes shipments within pre-approved risk and cost parameters. Logistics providers utilizing these predictive machine learning models report reducing transit time variability by 15-20%, a massive efficiency gain in a low-margin industry.
+## V. The Citation Economy: Power Law Reality
 
-A parallel transition toward fragmented, API-driven manufacturing is occurring. Firms break down products into constituent parts and bid out manufacturing to specialized micro-factories globally, coordinating final assembly just-in-time. This resilient, highly dynamic supply chain model requires the intelligence layer that autonomous AI systems provide to manage the exponential increase in coordination complexity.
+The citation distribution across five million AI papers follows an extreme power law. **48.9% of all papers have received zero citations.** Only 2,475 papers (0.05%) have exceeded 1,000 citations. The median paper in this AI corpus has zero citations.
 
-## VI. The Autonomous Pivot: Agents and Human-in-the-Loop
+This figure is partly inflated by recency — papers published in 2024-2026 have had little time to accumulate citations. But the structural pattern is clear: a tiny fraction of papers captures the vast majority of research attention.
 
-Beyond simple data retrieval and text generation, models are increasingly executing long-running workflows. The massive spike in "agentic" literature points to a future where software handles discovery, negotiation, and execution autonomously.
+The most-cited paper is ResNet with **221,202 citations**, approximately 1.9x the next entry. The top-cited papers share a common characteristic: they are all reusable building blocks (ResNet, Adam optimizer, AlexNet, VGGNet, XGBoost). Papers that provide infrastructure accumulate orders of magnitude more citations than application-specific work, because every downstream paper that builds on the tool cites the original, regardless of application domain.
 
-### The Rise of Agentic Protocols
-
-Standardization protocols, such as the Model Context Protocol (MCP) and various Agent-to-Agent (A2A) frameworks, are forming the foundational infrastructure for this era. These protocols allow agents from different vendors to securely communicate, share context, and utilize external tools (like databases, APIs, or SaaS applications) in a standardized manner. This moves the ecosystem away from fragmented, isolated chatbots into an interoperable network of autonomous software operators.
-
-### The Human-in-the-Loop (HITL) Requirement
-
-Despite advances in autonomous systems, the data reveals strict limits on full automation. The high frequency of **"accuracy"** (2,545 mentions) points to a reality where technology augments, rather than replaces, human cognitive labor.
-
-<PullQuote author="Marc Benioff" role="CEO, Salesforce">
-"The AI revolution is a trust revolution. If your customers don't trust you, you don't have a business. Autonomy requires trust above all else."
+<PullQuote author="Corpus Analysis" role="5,003,783 Papers, 2013-2026">
+"More papers were published in 2025 alone (944,530) than in the first six years combined (2013-2018: 734,197). The median paper has zero citations."
 </PullQuote>
 
-Enterprises are deploying HITL architectures because legal, financial, and compliance frameworks require human absorption of liability. An autonomous agent can draft a legal brief, analyze a contract, or recommend a stock trade, but a human must click "approve." The bottleneck to enterprise adoption is no longer the intelligence of the models, but legacy data infrastructure, the scarcity of AI-native talent, and entrenched organizational silos that resist algorithmic integration.
+### Open Access Dominance
 
-## VII. Strategic Implications & Actionable Insights
+Of the 5,003,783 papers, **3,043,557 (60.8%) are published as open access** — more than double the 28% baseline across all academic fields. The AI community's preprint culture, anchored by arXiv, drives this premium. This has strategic implications: the barrier to accessing AI research is lower than in almost any other scientific discipline.
+
+## VI. Strategic Implications: Three Imperatives
+
+The aggregation of 5,003,783 research papers yields three core strategic imperatives:
 
 <StatRow>
-  <Stat label="FDA Cleared AI Devices" value="900+" trend="up" />
-  <Stat label="Agentic Keyword Growth" value="457x" trend="up" />
-  <Stat label="RAG Keyword Growth" value="149x" trend="up" />
+  <Stat label="Corpus Size" value="5,003,783" trend="up" />
+  <Stat label="LLM Growth (2018-2025)" value="29.9x" trend="up" />
+  <Stat label="Zero-Citation Papers" value="48.9%" />
 </StatRow>
 
-The aggregation of 133,847 research documents yields three core strategic imperatives for enterprise leaders:
+1. **The LLM wave is not slowing — it is becoming the entire ocean.**
+   LLMs grew 29.9x in seven years. Every one of the ten fastest-rising research keywords is LLM-related. RAG is the dominant deployment architecture. Organizations that have not built LLM integration capabilities are not falling behind — they have already fallen behind. The strategic question is no longer whether to adopt, but how to differentiate within an LLM-saturated research and product landscape.
 
-1. **Adopt RAG and Modular Architectures over Foundation Training.** 
-   Enterprises should avoid the immense capital expenditure of training proprietary foundation models. Competitive advantage will be derived from proprietary data quality, vector database architecture, and strict access control mechanisms using Retrieval-Augmented Generation. Let the major AI labs subsidize the compute costs of foundational intelligence; focus internal resources on applied context.
-2. **Prepare for the Agentic Workflow Transition.** 
-   The fastest-growing vector in AI research is autonomous agents. Organizations must audit their existing software tools for API accessibility to ensure compatibility with emerging agentic protocols (like MCP). The workforce must shift focus toward "Overseer" roles - employees who manage, verify, and route the output of multiple specialized software agents.
-3. **Implement 'Compliance-by-Design' for High-Stakes Deployments.** 
-   With frameworks like the EU AI Act establishing a hardening global regulatory baseline, enterprises must architect AI systems with human-in-the-loop oversight and clear audit trails from day one. Systems deployed in healthcare, finance, and logistics must be entirely explainable, with retrieval systems citing specific source documents to mitigate liability.
+2. **Volume without impact is noise.**
+   With 48.9% of papers receiving zero citations and only 0.05% exceeding 1,000, the AI research ecosystem exhibits a severe signal-to-noise problem. Organizations consuming AI research must develop rigorous filtering mechanisms. Competitive advantage will accrue to teams that can identify the 0.05% of transformative work within the 944,000 papers published each year — and ignore the rest.
 
-*The underlying empirical dataset is available in the [AI Reports Library](/ai-reports).*
+3. **The geography of AI leadership is multipolar.**
+   China leads in volume. The US leads in LLMs. India is growing fastest. Six of the top ten institutions are Chinese, but the US retains disproportionate influence in the fastest-growing category. Any strategic assessment that treats "AI leadership" as a single dimension is incomplete. The competition is term-specific, institution-specific, and rapidly shifting.
+
+*The underlying research paper and methodology are available in the [AI Reports Library](/ai-reports). All results are derived from the free OpenAlex API using abstract-level keyword search. Every count reported can be independently verified and updated.*

@@ -27,61 +27,63 @@ interface ConceptNode {
   exemplar: { title: string; authors: string; year: number; citations: number; url: string };
 }
 
-// 1. Core dataset from latex/template.tex
+// 1. Core dataset from state-of-web3-research-2026 Table 3
 const yearlyDataset: YearlyData[] = [
-  { year: '2015', docs: 788, growth: '--', avgCitations: 64.1, milestone: 'Ethereum network launches; early smart contract concepts emerge.' },
-  { year: '2016', docs: 897, growth: '+13.8%', avgCitations: 107.6, milestone: 'Peak citation impact cohort. Early scalability, sharding, and EVM studies.' },
-  { year: '2017', docs: 1584, growth: '+76.6%', avgCitations: 91.2, milestone: 'ERC-20 token standard scales; initial boom in decentralized publications.' },
-  { year: '2018', docs: 3752, growth: '+136.9%', avgCitations: 70.8, milestone: 'Peak YoY expansion. Cryptographic consensus research explodes globally.' },
-  { year: '2019', docs: 6122, growth: '+63.2%', avgCitations: 44.1, milestone: 'DeFi primitives (MakerDAO, Uniswap v1) draw intense academic interest.' },
-  { year: '2020', docs: 7008, growth: '+14.5%', avgCitations: 21.2, milestone: 'DeFi Summer launches yield-farming and liquidity pool modeling.' },
-  { year: '2021', docs: 8993, growth: '+28.3%', avgCitations: 13.9, milestone: 'NFT standards scale. Access control and zero-knowledge proof applications.' },
-  { year: '2022', docs: 11263, growth: '+25.2%', avgCitations: 8.2, milestone: 'Rollups and layer-2 scaling solutions dominate system architecture.' },
-  { year: '2023', docs: 14462, growth: '+28.4%', avgCitations: 5.4, milestone: 'Transition to institutional research. Cross-chain communication protocols.' },
-  { year: '2024', docs: 16394, growth: '+13.4%', avgCitations: 3.9, milestone: 'Real-world asset (RWA) tokenization and stablecoin utility models scale.' },
-  { year: '2025', docs: 20781, growth: '+26.8%', avgCitations: 1.0, milestone: 'Integration of Decentralized Physical Infrastructure Networks (DePIN).' },
-  { year: '2026', docs: 7980, growth: 'Partial', avgCitations: 0.1, milestone: 'Convergence with artificial intelligence (Large Language Models).' }
+  { year: '2013', docs: 176, growth: '--', avgCitations: 85.0, milestone: 'Genesis era. Bitcoin-only research; 176 papers launched the field.' },
+  { year: '2014', docs: 430, growth: '+144.3%', avgCitations: 72.0, milestone: 'Early cryptographic analyses of Bitcoin mining and transaction graphs.' },
+  { year: '2015', docs: 550, growth: '+27.9%', avgCitations: 64.1, milestone: 'Ethereum launches. Early smart contract and distributed ledger concepts.' },
+  { year: '2016', docs: 955, growth: '+73.6%', avgCitations: 58.0, milestone: 'IoT-blockchain intersection emerges. Peak citation-impact cohort forming.' },
+  { year: '2017', docs: 2520, growth: '+163.9%', avgCitations: 45.0, milestone: 'ICO boom triggers academic explosion. ERC-20 standard drives research.' },
+  { year: '2018', docs: 6995, growth: '+177.6%', avgCitations: 32.0, milestone: 'Peak YoY growth. Consensus mechanisms, scalability, and security dominate.' },
+  { year: '2019', docs: 10591, growth: '+51.4%', avgCitations: 22.0, milestone: 'DeFi primitives appear (7 papers). Supply chain research scales rapidly.' },
+  { year: '2020', docs: 11996, growth: '+13.3%', avgCitations: 15.5, milestone: 'DeFi Summer. Federated learning–blockchain convergence begins (37 papers).' },
+  { year: '2021', docs: 13337, growth: '+11.2%', avgCitations: 10.8, milestone: 'NFT research surges. Zero-knowledge proof applications multiply.' },
+  { year: '2022', docs: 14979, growth: '+12.3%', avgCitations: 7.2, milestone: 'Layer-2 rollups and cross-chain protocols dominate architecture research.' },
+  { year: '2023', docs: 17677, growth: '+18.0%', avgCitations: 4.8, milestone: 'NFT research peaks (426 papers) then declines. Institutional era begins.' },
+  { year: '2024', docs: 17993, growth: '+1.8%', avgCitations: 2.5, milestone: 'Lowest growth year. NIST post-quantum standards catalyze new research.' },
+  { year: '2025', docs: 20668, growth: '+14.9%', avgCitations: 0.8, milestone: 'Record output: 20,668 papers. Post-quantum and regulatory themes surge.' },
+  { year: '2026', docs: 9419, growth: 'Partial', avgCitations: 0.1, milestone: 'On pace for ~18,800. Quantum-resistant and AI convergence accelerate.' }
 ];
 
 const unigramData: TermFrequency[] = [
-  { term: 'blockchain', count: 54780, percent: 54.8, context: 'Standardized baseline of distributed ledger technology.' },
-  { term: 'decentralized', count: 12897, percent: 12.9, context: 'Decentralized systems, consensus mechanics, and governance.' },
-  { term: 'technology', count: 9982, percent: 10.0, context: 'Systems integration and engineering architectural paradigms.' },
-  { term: 'smart', count: 8043, percent: 8.0, context: 'Smart contracts, automated execution, and verification.' },
-  { term: 'data', count: 8032, percent: 8.0, context: 'Storage protocols, integrity, on-chain privacy, and encryption.' },
-  { term: 'bitcoin', count: 6024, percent: 6.0, context: 'The genesis peer-to-peer electronic cash infrastructure.' },
-  { term: 'security', count: 5702, percent: 5.7, context: 'Cryptographic defense, vulnerability analysis, and formal proofs.' },
-  { term: 'IoT', count: 5521, percent: 5.5, context: 'Internet of Things sensor networks coordinated by blockchain.' }
+  { term: 'blockchain', count: 87818, percent: 68.5, context: 'The foundational term, appearing in more than two-thirds of all abstracts.' },
+  { term: 'data', count: 70208, percent: 54.7, context: 'Storage, integrity, on-chain privacy, and data-sharing architectures.' },
+  { term: 'security', count: 59388, percent: 46.3, context: 'Nearly half of all papers discuss security — central to the value proposition.' },
+  { term: 'decentralized', count: 48670, percent: 37.9, context: 'Decentralized systems, consensus mechanics, and governance models.' },
+  { term: 'cryptocurrency', count: 43190, percent: 33.7, context: 'Digital asset economics, exchange mechanics, and monetary theory.' },
+  { term: 'trust', count: 39373, percent: 30.7, context: 'Trust-minimized systems, reputation protocols, and verification.' },
+  { term: 'transaction', count: 38708, percent: 30.2, context: 'Transaction throughput, finality, and fee optimization research.' },
+  { term: 'smart contract', count: 38414, percent: 29.9, context: 'Programmable execution layers now mentioned in 3 of every 10 papers.' }
 ];
 
 const bigramData: TermFrequency[] = [
-  { term: 'blockchain technology', count: 8181, percent: 8.2, context: 'Reflects integration of blockchain as a component of larger systems.' },
-  { term: 'supply chain', count: 3960, percent: 4.0, context: 'Product traceability, logistics provenance, and anti-counterfeiting.' },
-  { term: 'smart contract', count: 2887, percent: 2.9, context: 'Automated digital agreements and protocol logic analysis.' },
-  { term: 'blockchain enabled', count: 2313, percent: 2.3, context: 'System capability expansions using decentralized ledger state.' },
-  { term: 'smart contracts', count: 2216, percent: 2.2, context: 'Plural variations mapping vulnerability audits and execution.' },
-  { term: 'federated learning', count: 1712, percent: 1.7, context: 'Distributed machine learning coordinated by secure smart networks.' },
-  { term: 'machine learning', count: 1779, percent: 1.8, context: 'Algorithmic models trained and validated on blockchain registries.' },
-  { term: 'privacy preserving', count: 1342, percent: 1.3, context: 'Zero-knowledge architectures, homomorphic encryption protocols.' }
+  { term: 'blockchain technology', count: 44102, percent: 34.4, context: 'Dominant bigram — blockchain treated as modular infrastructure component.' },
+  { term: 'smart contract', count: 21134, percent: 16.5, context: 'Automated execution, formal verification, and vulnerability auditing.' },
+  { term: 'blockchain based', count: 18516, percent: 14.4, context: 'Papers proposing blockchain as a solution to problems in other domains.' },
+  { term: 'supply chain', count: 11418, percent: 8.9, context: 'Largest non-financial application vertical: provenance and logistics.' },
+  { term: 'Internet of Things', count: 9851, percent: 7.7, context: 'Strong blockchain-IoT intersection for distributed device authentication.' },
+  { term: 'distributed ledger', count: 7973, percent: 6.2, context: 'Enterprise-grade permissioned frameworks (Hyperledger, R3 Corda).' },
+  { term: 'machine learning', count: 5667, percent: 4.4, context: 'AI methods applied to blockchain: anomaly detection, optimization.' },
+  { term: 'artificial intelligence', count: 5463, percent: 4.3, context: 'Blockchain for AI governance: decentralized training, model provenance.' }
 ];
 
 const trigramData: TermFrequency[] = [
-  { term: 'supply chain management', count: 1036, percent: 1.0, context: 'Proven logistics automation; largest single non-financial vertical.' },
-  { term: 'central bank digital', count: 959, percent: 1.0, context: 'Public sector research on state-backed sovereign currencies (CBDCs).' },
-  { term: 'bank digital currency', count: 852, percent: 0.9, context: 'Algorithmic monetary policy, offline settlement mechanics.' },
-  { term: 'distributed ledger technology', count: 643, percent: 0.6, context: 'Enterprise-grade permissioned frameworks (Hyperledger, R3).' },
-  { term: 'non fungible tokens', count: 558, percent: 0.6, context: 'Digital asset ownership mapping, intellectual property research.' },
-  { term: 'blockchain federated learning', count: 382, percent: 0.4, context: 'Decentralized consensus parameters managing AI weights distribution.' },
-  { term: 'blockchain machine learning', count: 306, percent: 0.3, context: 'On-chain execution of trained artificial intelligence models.' },
-  { term: 'federated learning blockchain', count: 300, percent: 0.3, context: 'Trustless coordination engines preventing poison attacks.' }
+  { term: 'Internet of Things', count: 9851, percent: 7.7, context: 'Top trigram — IoT devices generate distributed data secured by blockchain.' },
+  { term: 'distributed ledger technology', count: 4058, percent: 3.2, context: 'Enterprise permissioned blockchain frameworks and institutional DLT.' },
+  { term: 'supply chain management', count: 3699, percent: 2.9, context: 'Proven logistics automation; largest single non-financial vertical.' },
+  { term: 'zero knowledge proof', count: 1472, percent: 1.1, context: 'Fast-rising privacy primitive: zk-SNARKs, zk-STARKs, and rollups.' },
+  { term: 'non fungible token', count: 1121, percent: 0.9, context: 'Digital ownership research — peaked in 2023, now in structural decline.' },
+  { term: 'byzantine fault tolerance', count: 1009, percent: 0.8, context: 'Core consensus research: pBFT variants and finality guarantees.' },
+  { term: 'central bank digital', count: 867, percent: 0.7, context: 'Sovereign digital currency design: CBDC pilots and monetary policy.' },
+  { term: 'bank digital currency', count: 864, percent: 0.7, context: 'Complementary CBDC term: offline settlement and privacy frameworks.' }
 ];
 
 const convergenceNodes: ConceptNode[] = [
   {
     id: 'fed-learn',
     label: 'Federated Learning',
-    papers: 1712,
-    description: 'AI model training across decentralized networks without centralizing sensitive databases. The blockchain coordinates parameters, calculates rewards, and prevents poisoned weights.',
+    papers: 664,
+    description: 'Explosive growth from 3 papers in 2018 to 664 in 2025. Blockchain coordinates decentralized AI training, manages parameter updates, calculates rewards, and prevents model poisoning — without centralizing sensitive data.',
     exemplar: {
       title: 'Blockchain empowered asynchronous federated learning for secure data sharing',
       authors: 'Y. Lu et al.',
@@ -94,7 +96,7 @@ const convergenceNodes: ConceptNode[] = [
     id: 'privacy',
     label: 'Privacy Preserving',
     papers: 1342,
-    description: 'Combining zero-knowledge proofs (ZKPs), secure multi-party computation (SMPC), and homomorphic encryption to train neural networks on private records without decryption.',
+    description: '1,342 mentions across the corpus. Combines zero-knowledge proofs (ZKPs), secure multi-party computation (SMPC), and homomorphic encryption to train models and verify transactions on private records without decryption.',
     exemplar: {
       title: 'Hawk: The blockchain model of cryptography and privacy-preserving smart contracts',
       authors: 'A. Kosba et al.',
@@ -104,10 +106,10 @@ const convergenceNodes: ConceptNode[] = [
     }
   },
   {
-    id: 'agentic',
-    label: 'Autonomous Agents',
-    papers: 894,
-    description: 'AI agents operating with sovereign crypto wallets. Smart contracts act as the economic playground, allowing agents to trade resources, trigger services, and settle balances instantly.',
+    id: 'ai-convergence',
+    label: 'AI Convergence',
+    papers: 11130,
+    description: 'Machine learning (5,667 papers) and artificial intelligence (5,463 papers) represent the largest technology convergence in the corpus — 11,130 combined mentions. Papers apply AI to blockchain problems (anomaly detection, MEV optimization) or use blockchain for AI governance (decentralized model training, provenance).',
     exemplar: {
       title: 'The rise and potential of large language model based agents: A survey',
       authors: 'Z. Xi et al.',
@@ -119,17 +121,21 @@ const convergenceNodes: ConceptNode[] = [
 ];
 
 const momentumData = [
-  { term: 'language models', growth: 26.0, count2026: 26, category: 'AI Convergence' },
-  { term: 'enhancing transparency', growth: 25.0, count2026: 25, category: 'Regulation & Compliance' },
-  { term: 'large language', growth: 19.0, count2026: 19, category: 'AI Convergence' },
-  { term: 'chain transparency', growth: 18.0, count2026: 18, category: 'Supply Chain' },
-  { term: 'quantum resistant', growth: 15.0, count2026: 15, category: 'Cryptography' },
-  { term: 'secure transparent', growth: 12.0, count2026: 36, category: 'Infrastructure' }
+  { term: 'quantum resistant', growth: 6.6, count2026: 243, category: 'Post-Quantum Security' },
+  { term: 'real world asset', growth: 5.6, count2026: 89, category: 'Institutional Finance' },
+  { term: 'layer 2', growth: 4.2, count2026: 275, category: 'Scalability' },
+  { term: 'post-quantum', growth: 3.9, count2026: 367, category: 'Post-Quantum Security' },
+  { term: 'regulatory', growth: 3.5, count2026: 4529, category: 'Regulation & Compliance' },
+  { term: 'zk rollup', growth: 3.4, count2026: 34, category: 'Scalability' },
+  { term: 'stablecoin', growth: 2.7, count2026: 576, category: 'Institutional Finance' },
+  { term: 'DeFi', growth: 2.6, count2026: 808, category: 'Decentralized Finance' },
+  { term: 'interoperability', growth: 2.2, count2026: 1952, category: 'Infrastructure' },
+  { term: 'zero knowledge', growth: 2.1, count2026: 743, category: 'Cryptography' }
 ];
 
 // --- Timeline Component ---
 export function StateOfWeb3Timeline() {
-  const [selectedTimelineIndex, setSelectedTimelineIndex] = useState<number>(11); // default to 2026
+  const [selectedTimelineIndex, setSelectedTimelineIndex] = useState<number>(13); // default to 2026
   const selectedTimeline = yearlyDataset[selectedTimelineIndex];
 
   const padding = 40;
@@ -154,10 +160,10 @@ export function StateOfWeb3Timeline() {
         <div>
           <h4 className="text-base font-bold text-foreground flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse" />
-            Publication Volume & Milestone Timeline (2015-2026)
+            Publication Volume & Milestone Timeline (2013–2026)
           </h4>
           <p className="text-xs text-muted-foreground mt-0.5">
-            Click chart nodes to scrub years and explore scholarly output acceleration.
+            128,286 concept-tagged papers. Click nodes to explore the 118x growth trajectory.
           </p>
         </div>
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-semibold">
@@ -309,7 +315,7 @@ export function StateOfWeb3NgramAnalyzer() {
             Linguistic N-Gram Frequency Analyzer
           </h4>
           <p className="text-xs text-muted-foreground mt-0.5">
-            Toggle token models to explore raw terminology patterns mined across document titles.
+            Toggle token models to explore terminology patterns across 128,286 paper abstracts.
           </p>
         </div>
         <div className="flex gap-1 bg-muted p-0.5 rounded-lg border border-border">
@@ -388,10 +394,10 @@ export function StateOfWeb3ConvergenceMatrix() {
     <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm space-y-6">
       <div>
         <h4 className="text-base font-bold text-foreground">
-          The Blockchain-Machine Learning Convergence Matrix
+          The Blockchain–AI Convergence Matrix
         </h4>
         <p className="text-xs text-muted-foreground mt-0.5">
-          Select standard technology concepts below to trace how blockchain acts as a decentralized security substrate.
+          Select convergence domains to trace how blockchain acts as a decentralized coordination substrate for AI.
         </p>
       </div>
 
@@ -412,7 +418,7 @@ export function StateOfWeb3ConvergenceMatrix() {
                 <div className="flex justify-between items-center">
                   <span>{node.label}</span>
                   <span className="text-[10px] font-mono font-bold px-1.5 py-0.2 rounded bg-primary/10 border border-primary/20 text-primary">
-                    {node.papers} papers
+                    {node.papers.toLocaleString()} papers
                   </span>
                 </div>
               </button>
@@ -461,7 +467,7 @@ export function StateOfWeb3ConvergenceMatrix() {
 
 // --- Topic Momentum Slider ---
 export function StateOfWeb3Momentum() {
-  const [momentumThreshold, setMomentumThreshold] = useState<number>(12);
+  const [momentumThreshold, setMomentumThreshold] = useState<number>(2.0);
   const filteredMomentum = momentumData.filter(item => item.growth >= momentumThreshold);
 
   return (
@@ -469,10 +475,10 @@ export function StateOfWeb3Momentum() {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h4 className="text-base font-bold text-foreground">
-            Topic Momentum Accelerator (2022 vs 2026)
+            Topic Momentum Accelerator (2025-2026 vs. 2022-2023)
           </h4>
           <p className="text-xs text-muted-foreground mt-0.5">
-            Adjust the range slider to isolate key topics accelerating exponentially.
+            Adjust the threshold to isolate the fastest-rising research keywords.
           </p>
         </div>
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-bold text-primary">
@@ -483,16 +489,16 @@ export function StateOfWeb3Momentum() {
       <div className="bg-muted/20 border border-border/40 rounded-lg p-4 space-y-3">
         <input 
           type="range" 
-          min="10" 
-          max="25" 
-          step="1" 
+          min="2" 
+          max="7" 
+          step="0.1" 
           value={momentumThreshold}
-          onChange={(e) => setMomentumThreshold(parseInt(e.target.value))}
+          onChange={(e) => setMomentumThreshold(parseFloat(e.target.value))}
           className="w-full h-1.5 bg-secondary rounded-lg appearance-none cursor-pointer accent-primary"
         />
         <div className="flex justify-between text-[10px] text-muted-foreground font-mono">
-          <span>10.0x growth limit</span>
-          <span>25.0x absolute limit</span>
+          <span>2.0x minimum</span>
+          <span>7.0x maximum</span>
         </div>
       </div>
 
@@ -515,7 +521,7 @@ export function StateOfWeb3Momentum() {
                 +{item.growth.toFixed(1)}x
               </span>
               <span className="text-[9px] text-muted-foreground font-mono">
-                {item.count2026} mentions
+                {item.count2026.toLocaleString()} papers
               </span>
             </div>
           </div>
@@ -547,7 +553,7 @@ export function StateOfWeb3Citations() {
             Corpus Citation Skewness Distribution
           </h4>
           <p className="text-xs text-muted-foreground mt-0.5">
-            Use the controller slider to explore the right-skew distribution across 100,000+ documents.
+            Use the controller slider to explore the right-skew distribution across 128,286 documents. 43.5% have zero citations.
           </p>
         </div>
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-bold text-primary">
