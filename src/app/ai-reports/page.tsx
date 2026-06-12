@@ -8,7 +8,7 @@ import { ReportLibrary } from '@/components/report-library';
 
 export const metadata: Metadata = {
   title: 'AI Reports Library | Vedang Vatsa',
-  description: 'A searchable database of 21,000+ AI reports, research papers, and industry analyses published since 2022.',
+  description: 'A searchable database of 133,000+ AI research papers and industry analyses, drawn from a 5-million-paper OpenAlex corpus.',
 };
 
 export default function AIReportsPage() {
@@ -22,7 +22,7 @@ export default function AIReportsPage() {
             AI Reports Library
           </h1>
           <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            21,000+ research papers, institutional reports, and industry analyses. Each entry links directly to a verified DOI or academic repository.
+            133,000+ research papers, institutional reports, and industry analyses drawn from a 5-million-paper OpenAlex corpus. Each entry links directly to a verified DOI or academic repository.
           </p>
           <AuthorByline />
           <p className="mt-6 text-sm text-muted-foreground">

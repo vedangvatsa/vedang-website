@@ -7,7 +7,7 @@ import { ReportLibrary } from '@/components/report-library';
 
 export const metadata: Metadata = {
   title: 'Web3 Reports Library | Vedang Vatsa',
-  description: 'A searchable database of 23,000+ Web3 reports, white papers, institutional research, and regulatory frameworks.',
+  description: 'A searchable database of 100,000+ Web3 research papers, white papers, and regulatory frameworks from a 128,000-paper OpenAlex corpus.',
 };
 
 export default function Web3ReportsPage() {
@@ -21,7 +21,7 @@ export default function Web3ReportsPage() {
             Web3 Reports Library
           </h1>
           <p className="mt-4 text-base md:text-lg text-muted-foreground">
-            23,000+ research papers, institutional reports, and on-chain analyses. Each entry links directly to a verified DOI or academic repository.
+            100,000+ research papers, institutional reports, and on-chain analyses from a 128,000-paper OpenAlex corpus. Each entry links directly to a verified DOI or academic repository.
           </p>
           <p className="mt-4 text-sm text-muted-foreground">
             Read the full synthesis: <Link href="/stateofweb3" className="text-primary hover:underline font-medium">The State of Web3 →</Link>
