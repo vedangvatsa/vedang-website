@@ -114,7 +114,7 @@ export default function InvoicePage() {
                   <div className="space-y-1 text-xs sm:text-sm">
                     <MR label="#"><input type="text" value={invoiceNumber} onChange={(e) => setInvoiceNumber(e.target.value)} className="w-full sm:w-28 text-right bg-transparent outline-none tabular-nums" aria-label="Invoice number" /></MR>
                     <MR label="Date"><input type="date" value={invoiceDate} onChange={(e) => setInvoiceDate(e.target.value)} className="w-full sm:w-28 text-right bg-transparent outline-none tabular-nums" aria-label="Invoice date" /></MR>
-                    <MR label="Due"><input type="date" value={dueDate} onChange={(e) => setDueDate(e.target.value)} className="w-full sm:w-28 text-right bg-transparent outline-none tabular-nums" aria-label="Due date" /></MR>
+                    <MR label="Due"><span className="relative inline-flex items-center"><input type="date" value={dueDate} onChange={(e) => setDueDate(e.target.value)} className="w-full sm:w-28 text-right bg-transparent outline-none tabular-nums" aria-label="Due date" />{dueDate && <button onClick={() => setDueDate('')} className="inv-no-print absolute -right-4 text-muted-foreground/40 hover:text-destructive" aria-label="Clear due date"><X className="h-3 w-3" /></button>}</span></MR>
                   </div>
                 </div>
               </div>
