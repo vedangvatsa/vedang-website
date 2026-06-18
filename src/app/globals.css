@@ -272,3 +272,21 @@ pre > code {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 }
+
+/* ═══ Invoice print styles ═══ */
+@media print {
+  header, footer, .inv-no-print { display: none !important; }
+  body { background: white !important; margin: 0 !important; }
+  @page { margin: 0; size: A4; }
+  main { padding: 0 !important; }
+  .content-width { width: 100% !important; max-width: 100% !important; padding: 0 !important; }
+  .inv-sheet { border: none !important; border-radius: 0 !important; box-shadow: none !important; }
+  .inv-body {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 11.69in !important;
+    padding: 0.6in !important;
+    box-sizing: border-box !important;
+  }
+  .inv-footer { margin-top: auto !important; }
+}
