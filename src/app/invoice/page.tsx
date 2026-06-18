@@ -86,7 +86,7 @@ export default function InvoicePage() {
               <Sel value={profileKey} onChange={(v) => switchProfile(v as ProfileKey)} className="flex-1 sm:flex-none sm:w-48">
                 {Object.entries(PROFILES).map(([k, p]) => <option key={k} value={k}>{p.label}</option>)}
               </Sel>
-              <Sel value={currency} onChange={setCurrency} className="w-[72px] sm:w-24">
+              <Sel value={currency} onChange={setCurrency} className="w-[82px] sm:w-24">
                 {CURRENCIES.map((c) => <option key={c.code} value={c.code}>{c.sym} {c.code}</option>)}
               </Sel>
             </div>
