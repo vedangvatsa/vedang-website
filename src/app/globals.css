@@ -284,9 +284,12 @@ pre > code {
   .inv-body {
     display: flex !important;
     flex-direction: column !important;
-    min-height: 11.69in !important;
+    height: 11.69in !important;
     padding: 0.6in !important;
     box-sizing: border-box !important;
+    overflow: hidden !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
   .inv-footer { margin-top: auto !important; }
 }
