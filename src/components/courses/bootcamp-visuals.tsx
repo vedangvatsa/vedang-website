@@ -1,7 +1,7 @@
 
 
-/* ─── Day 1: AI Tools Landscape ─── */
-export function AIToolsLandscape() {
+/* ─── Day 1: AI Tools Overview ─── */
+export function AIToolsOverview() {
   const categories = [
     { name: 'Chatbots', desc: 'Talk to AI, get answers', tools: 'ChatGPT, Claude, Gemini', icon: '💬', color: '#3b82f6' },
     { name: 'Generators', desc: 'Create images, video, music', tools: 'Midjourney, Flux, Suno', icon: '🎨', color: '#8b5cf6' },

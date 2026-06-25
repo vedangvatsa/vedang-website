@@ -137,8 +137,8 @@ export function SpatialComputingAdoption() {
   );
 }
 
-/* ─── BCI Competitive Landscape ─── */
-export function BCILandscapeChart() {
+/* ─── BCI Competitive Field ─── */
+export function BCIMarketChart() {
   const players = [
     { name: 'Neuralink', approach: 'Invasive (motor cortex)', electrodes: '~1,024', status: 'Human trials (PRIME)', valuation: '$9-10B', color: 'hsl(350 70% 45%)' },
     { name: 'Synchron', approach: 'Endovascular (minimally invasive)', electrodes: '~16', status: 'Human trials', valuation: 'Private', color: 'hsl(210 90% 40%)' },
@@ -150,7 +150,7 @@ export function BCILandscapeChart() {
   return (
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Brain-Computer Interface Landscape</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Brain-Computer Interface Market</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">$2.3-3B market (2025), projected $13-15B by 2035</p>
 
         <div className="space-y-2">

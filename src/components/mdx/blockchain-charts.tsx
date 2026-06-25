@@ -99,8 +99,8 @@ export function BlockchainPhases() {
   );
 }
 
-/* ─── Layer 2 Scaling Landscape ─── */
-export function L2ScalingLandscape() {
+/* ─── Layer 2 Scaling Overview ─── */
+export function L2ScalingOverview() {
   const l2s = [
     { name: 'Base', type: 'Optimistic', tvl: '~$5B', focus: 'Consumer apps, social, Coinbase ecosystem', share: '60%+', status: 'dominant' },
     { name: 'Arbitrum', type: 'Optimistic', tvl: '~$18B', focus: 'Institutional DeFi, highest TVL', share: '~20%', status: 'leading' },
@@ -118,7 +118,7 @@ export function L2ScalingLandscape() {
   return (
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Layer 2 Scaling Landscape</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Layer 2 Scaling Overview</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">The three-horse race (early 2026), combined ~2M transactions/day</p>
 
         <div className="overflow-x-auto -mx-2">
@@ -166,7 +166,7 @@ export function StablecoinRegulatory() {
   return (
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Stablecoin Regulatory Landscape</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Stablecoin Regulatory Map</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Major frameworks shaping the $315B stablecoin market</p>
 
         <div className="overflow-x-auto -mx-2">

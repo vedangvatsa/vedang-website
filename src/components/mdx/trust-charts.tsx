@@ -48,7 +48,7 @@ export function TrustPrimitivesComparison() {
   );
 }
 
-/* ─── DeFi Security Landscape ─── */
+/* ─── DeFi Security Overview ─── */
 export function DeFiSecurityChart() {
   const years = [
     { year: '2020', losses: 0.1, color: 'hsl(160 80% 35%)' },

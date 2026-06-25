@@ -131,7 +131,7 @@ This analysis draws on a primary corpus of **128,286 academic papers** tagged as
 
 The corpus was cross-validated against four independent databases: **Crossref** (124,333 papers), **Europe PMC** (61,191), **arXiv** (11,312), and **DBLP** (37,246). The Crossref count closely matches the primary corpus, providing independent confirmation of coverage. Journal articles dominate at **68.9%**, followed by book chapters (13.9%) and preprints (8.2%). A full n-gram frequency analysis (unigrams, bigrams, and trigrams) was executed across all paper abstracts to isolate the specific technical implementations and research domains commanding the field's attention.
 
-## II. The Research Landscape: What 128,286 Papers Reveal
+## II. The Research Map: What 128,286 Papers Reveal
 
 **Publication Volume & Milestone Timeline:**
 Track the 118x growth trajectory from Bitcoin-era genesis to institutional-era maturation.
@@ -330,7 +330,7 @@ Combined, these six companies represent over $59 billion in valuation on roughly
 
 ## What Funding Data Reveals About Agent Infrastructure
 
-![Agentic AI Funding Landscape: $1.5B (2024) to $2.9B (2025), top 10 deals capture 78% of capital](/images/essays/agent-funding-landscape.svg?v=1)
+![Agentic AI Funding Overview: $1.5B (2024) to $2.9B (2025), top 10 deals capture 78% of capital](/images/essays/agent-funding-landscape.svg?v=1)
 
 Disclosed equity funding for pure-play agentic AI companies nearly doubled from $1.5 billion in 2024 to $2.9 billion in 2025. The number of disclosed deals grew from 31 to 50. Between January and May 2026, the market raised another $1.1 billion across 29 deals, putting it on pace for approximately $2.6 billion annualized. The raw capital growth is real. What the headline numbers obscure is where that capital actually lands.
 
@@ -482,7 +482,7 @@ Pre-Seed Median Check Size Trajectory
 - In 2025, the median was $470,000 across 4,472 rounds
 - In 2026, the median reached $500,000 across 1,110 rounds, representing a 4.2x expansion since 2015
 
-This institutional migration has completely redefined the Pre-Seed stage. In 2026, the median Pre-Seed check has reached $500,000, representing a 4.2x expansion since 2015. Underwriting at this stage is no longer casual. Founders are now expected to demonstrate early working software, detailed architectural specifications, and initial customer verification before a professional investor will sign a check. The casual "idea-stage" Pre-Seed round has been systematically erased.
+This institutional migration has completely transformed the Pre-Seed stage. In 2026, the median Pre-Seed check has reached $500,000, representing a 4.2x expansion since 2015. Underwriting at this stage is no longer casual. Founders are now expected to demonstrate early working software, detailed architectural specifications, and initial customer verification before a professional investor will sign a check. The casual "idea-stage" Pre-Seed round has been systematically erased.
 
 ### 2. Seed Financing Dynamics
 
@@ -622,7 +622,7 @@ The structural realignment of the global venture capital market requires a compl
 
 ### 1. Operational Imperatives for Startup Founders (Operators)
 
-For startup operators, the era of raising venture capital as a primary metric of success is officially over. In the modern barbell capital landscape, founders must treat capital as a highly scarce, highly expensive tool. They must build structurally resilient, capital-efficient organizations from day one.
+For startup operators, the era of raising venture capital as a primary metric of success is officially over. In the modern barbell capital structure, founders must treat capital as a highly scarce, highly expensive tool. They must build structurally resilient, capital-efficient organizations from day one.
 
 #### The Capital Efficiency Index (CEI)
 
@@ -655,7 +655,7 @@ Founders must abandon the valuation benchmarks established during the ZIRP peak.
 
 ### 2. Operational Imperatives for Venture Capitalists (Allocators)
 
-For institutional allocators, the modern barbell capital landscape requires a complete transition from speculative, option-value investing to high-conviction, quantitative underwriting. General Partners must manage their portfolios and reserves with exceptional discipline.
+For institutional allocators, the modern barbell capital structure requires a complete transition from speculative, option-value investing to high-conviction, quantitative underwriting. General Partners must manage their portfolios and reserves with exceptional discipline.
 
 #### Transitioning from Option Value to Core Underwriting
 
@@ -671,9 +671,9 @@ Venture funds must maintain exceptionally disciplined reserve ratios to support 
 
 In a highly volatile, highly selective capital market, General Partners must utilize sophisticated structural protections to safeguard their investments. This includes negotiating conservative liquidation preferences (typically 1x non-participating), strict anti-dilution mechanisms (such as broad-based weighted average anti-dilution), and structured governance controls (including key board seats, investor approval rights, and veto powers over major capital transactions). These structural protections ensure that the venture fund is fully insulated against downside risk while retaining significant upside exposure.
 
-#### Embracing the Barbell Capital Landscape
+#### Embracing the Barbell Capital Structure
 
-Professional allocators must design their fund strategies to align with the barbell capital landscape. This requires choosing a clear, highly focused investment mandate. A venture fund must either position itself at the highly efficient, agile, and lean end of the barbell (focusing on Pre-Seed and Seed software investing with small, highly targeted checks) or at the highly concentrated, capital-heavy end of the barbell (focusing on deep tech, infrastructure, and hardware-adjacent mega-rounds with massive, institutional capital pools). Attempting to operate in the hollowed-out middle of the venture capital ecosystem is a recipe for structural underperformance and capital impairment.
+Professional allocators must design their fund strategies to align with the barbell capital structure. This requires choosing a clear, highly focused investment mandate. A venture fund must either position itself at the highly efficient, agile, and lean end of the barbell (focusing on Pre-Seed and Seed software investing with small, highly targeted checks) or at the highly concentrated, capital-heavy end of the barbell (focusing on deep tech, infrastructure, and hardware-adjacent mega-rounds with massive, institutional capital pools). Attempting to operate in the hollowed-out middle of the venture capital ecosystem is a recipe for structural underperformance and capital impairment.
 
 ## VIII. Strategic Synthesis on the Future of Venture Capital
 
@@ -753,7 +753,7 @@ The deeper shift is philosophical. When you can speak to your entire infrastruct
 
 ## Step 3. The Agent Tooling Landscape
 
-The open-source ecosystem for AI agents has exploded. Before building any pipeline in this playbook, you should know what tools exist. Here is the current landscape, organized by category.
+The open-source ecosystem for AI agents has exploded. Before building any pipeline in this playbook, you should know what tools exist. Here is the current overview, organized by category.
 
 **Agent browsers.** These let AI agents control a web browser autonomously. Instead of writing brittle Selenium scripts, you give the agent a goal and it navigates, clicks, fills forms, and extracts data on its own.
 
@@ -844,7 +844,7 @@ Content is the engine of inbound marketing. But writing four blog posts per week
 
 Most startups publish shallow blog posts. The companies that build real authority publish deep, data-driven reports that establish true thought leadership.
 
-The [Consulting Report Framework](https://github.com/vedangvatsa/consulting-report-framework) generates 50-page boardroom-ready PDF reports from Markdown using [Typst](https://typst.app). It follows a 12-section structure that covers historical context, market sizing (TAM/SAM/SOM), competitive landscape, value chain analysis, risk assessment, scenario modeling, and strategic recommendations.
+The [Consulting Report Framework](https://github.com/vedangvatsa/consulting-report-framework) generates 50-page boardroom-ready PDF reports from Markdown using [Typst](https://typst.app). It follows a 12-section structure that covers historical context, market sizing (TAM/SAM/SOM), competitive analysis, value chain analysis, risk assessment, scenario modeling, and strategic recommendations.
 
 The workflow is simple. Define your topic. An AI agent researches and drafts each section, following the Pyramid Principle (lead with the answer, support with data). Python scripts generate charts with a consistent, professional color palette. One command compiles the final PDF.
 
@@ -1649,7 +1649,7 @@ These examples vary widely in legal status and maturity. They do indicate experi
 
 Nation-states are becoming more like networks. Estonia serves non-residents digitally. Singapore exports elements of its Smart Nation model. The UAE is investing in sovereign AI models. Denmark introduced mandatory digital communication for most citizens in 2014 and now operates a widely adopted digital identity system through [MitID](https://www.mitid.dk/). These systems can be understood as platforms.
 
-Network-based communities are moving in the opposite direction. Some are exploring physical presence, legal frameworks, and persistent coordination structures. The two directions are converging.
+Network-based communities are moving in the opposite direction. Some are pursuing physical presence, legal frameworks, and persistent coordination structures. The two directions are converging.
 
 The agentic state and the network state are not competing models. They are two expressions of the same structural change. Government is becoming software. And software can be deployed by a nation-state (Estonia) or by a startup (Praxis) or by a DAO.
 
@@ -2170,7 +2170,7 @@ The composition shift matters more than the size shift. Agent infrastructure and
 
 Five patterns are visible in the data. Each comes with caveats.
 
-**The agent economy is being built like the cloud was.** The full infrastructure stack (compute, tooling, applications, governance) is being assembled simultaneously. Whether the market compresses the typical platform maturation cycle from a decade to two years, or whether premature standardization creates technical debt, remains to be seen.
+**The agent economy is being built like the cloud was.** The full infrastructure stack (compute, tooling, applications, governance) is being assembled simultaneously. Whether the market compresses the typical platform maturation cycle from a decade to two years, or whether premature standardization creates technical debt, is the open question.
 
 **Defense technology has appeared at scale in YC for the first time.** Geopolitical instability, expanded procurement, and successful precedents (Anduril, Shield AI, Palantir) have opened the category. Whether it persists depends on budget cycles, policy shifts, and whether YC-scale companies can navigate government procurement at scale.
 
@@ -2963,7 +2963,7 @@ Most of the AI economy debate focuses on the speed of displacement and the magni
 
 The question that may matter most is whether the economic gains from AI flow broadly or concentrate narrowly. Every previous general-purpose technology, from electricity to the internet, eventually created broad prosperity, but the "eventually" ranged from one generation to three, and the transition periods imposed genuine costs on specific communities. The difference with AI may be that the transition affects cognitive work, which is the category where most of the economic value in advanced economies currently sits. The affected populations are not regional manufacturing towns. They are entry-level professionals in every major city, which changes the political dynamics.
 
-The second question that may matter is whether the entry ramp to skilled careers survives. If AI removes the tasks that junior lawyers, junior analysts, and junior developers used to learn on, the pipeline of experienced professionals could thin over time. This is a slow-moving problem that looks invisible in quarterly data but could reshape entire professions over a decade.
+The second question that may matter is whether the entry ramp to skilled careers survives. If AI removes the tasks that junior lawyers, junior analysts, and junior developers used to learn on, the pipeline of experienced professionals could thin over time. This is a slow-moving problem that looks invisible in quarterly data but could transform entire professions over a decade.
 
 The third question is structural. Automated telephone exchanges were technically possible in the 1920s, yet the last human telephone operator in the United States was not replaced until the 1980s. Adoption lags matter. Organizations are slow, regulation is slower, and people renegotiate their relationship with new tools over decades, not quarters. AI may be genuinely different in its speed of deployment because it requires no physical infrastructure, only software updates. Or it may hit the same organizational friction that every previous technology encountered. Probably both, in different sectors, at different speeds.
 
@@ -3849,7 +3849,7 @@ Training on AI-generated data introduces the risk of "model collapse": performan
 
 **Architecture matters more than scale.** The biggest jumps in AI capability have come from architectural innovations, not simply from more compute:
 
-- **Transformers (2017):** The attention mechanism unlocked language modeling at scale
+- **Transformers (2017):** The attention mechanism enabled language modeling at scale
 - **Scaling laws (2020):** Chinchilla-optimal training formalized the relationship between parameters, data, and compute
 - **RLHF (2022):** Reinforcement learning from human feedback made models useful and controllable
 - **Chain-of-thought / test-time compute (2024-25):** Models that "think longer" at inference time outperform larger models on complex tasks
@@ -3876,7 +3876,7 @@ Each of these was unpredicted. Each accelerated the timeline by years. The next 
 Every detailed prediction about superintelligence carries an internal contradiction. The biggest capability jumps in AI history were unpredicted:
 
 - The transformer architecture (2017) was not on any forecasting platform's radar
-- The discovery that scaling neural networks on text unlocks reasoning was not predicted
+- The discovery that scaling neural networks on text produces reasoning was not predicted
 - The effectiveness of RLHF in making models useful was not anticipated even by its creators
 - The emergence of chain-of-thought reasoning capabilities was a surprise
 
@@ -6184,7 +6184,7 @@ Programmable trust enables transaction types that are structurally impossible wi
 
 ## The Regulatory Driver
 
-The EU's eIDAS 2.0 regulation represents a model shift in how governments approach digital identity. Rather than building centralized identity databases (the model that produced Equifax-scale breaches), eIDAS 2.0 mandates a decentralized, user-controlled architecture where citizens store credentials in personal wallets and selectively disclose specific properties through cryptographic proofs.
+The EU's eIDAS 2.0 regulation represents a fundamental change in how governments approach digital identity. Rather than building centralized identity databases (the model that produced Equifax-scale breaches), eIDAS 2.0 mandates a decentralized, user-controlled architecture where citizens store credentials in personal wallets and selectively disclose specific properties through cryptographic proofs.
 
 The technical architecture of the EUDI Wallet is designed around the principles of programmable trust. The wallet supports W3C Verifiable Credentials, enabling interoperability across issuers and verifiers. It implements selective disclosure, allowing users to prove specific claims (age verification, nationality, professional qualifications) without revealing unnecessary data. It includes support for Qualified Electronic Signatures (QES), creating legally binding digital signatures from a smartphone.
 
@@ -6401,7 +6401,7 @@ The most direct solution to the sensory bandwidth problem is bypassing physical 
 
 [Neuralink](https://neuralink.com/) implanted its first human brain-computer interface (BCI) in January 2024. The N1 implant, placed in the motor cortex, enabled a quadriplegic patient to control a computer cursor through thought alone: moving the cursor, clicking, scrolling, and typing at speeds approaching those of able-bodied users.
 
-The BCI market reached approximately **$2.3-3 billion in 2025**, with projections of **$13-15 billion by 2035**. The competitive landscape is bifurcating:
+The BCI market reached approximately **$2.3-3 billion in 2025**, with projections of **$13-15 billion by 2035**. The competitive field is bifurcating:
 
 **Invasive BCIs** (surgical implantation):
 - **[Neuralink](https://neuralink.com/)**: N1 implant, motor cortex placement, ~1,024 electrodes. PRIME clinical trial expanding across US, Canada, and UK. Received FDA Breakthrough Device designation for "Blindsight" (vision restoration) and speech restoration. Valued at approximately $9-10 billion (mid-2025).

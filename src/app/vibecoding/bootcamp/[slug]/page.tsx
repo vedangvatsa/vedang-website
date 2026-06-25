@@ -12,7 +12,7 @@ import { Callout, SectionLabel, Explainer } from '@/components/mdx';
 // Bootcamp-specific components
 import { PromptTemplate } from '@/components/courses/prompt-template';
 import {
-  AIToolsLandscape, AICategoryMap, BoringNicheFramework,
+  AIToolsOverview, AICategoryMap, BoringNicheFramework,
   PositionStatement, SecurityHoles,
   ToolDecisionTree,
   DesignChecklist, MultiModalStack,
@@ -27,7 +27,7 @@ const customComponents = {
   SectionLabel,
   Explainer,
   PromptTemplate,
-  AIToolsLandscape, AICategoryMap, BoringNicheFramework,
+  AIToolsOverview, AICategoryMap, BoringNicheFramework,
   PositionStatement, SecurityHoles,
   ToolDecisionTree,
   DesignChecklist, MultiModalStack,

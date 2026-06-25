@@ -287,7 +287,7 @@ export function SecurityThreatMatrix() {
   return (
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Agent Security Threat Landscape</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Agent Security Threat Map</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Known attack vectors and documented incidents, 2025-2026</p>
 
         <div className="overflow-x-auto -mx-2">
@@ -366,8 +366,8 @@ export function AgentVsChatbot() {
   );
 }
 
-/* ─── Infrastructure Landscape Grid ─── */
-export function InfrastructureLandscape() {
+/* ─── Infrastructure Overview Grid ─── */
+export function InfrastructureOverview() {
   const categories = [
     {
       name: 'Agent Frameworks',
@@ -408,7 +408,7 @@ export function InfrastructureLandscape() {
   return (
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Infrastructure Landscape</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Infrastructure Overview</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold">Key players building the Agentic Web</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

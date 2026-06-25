@@ -533,7 +533,7 @@ export function RegulationMap() {
   return (
     <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-5 md:p-8">
-        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Global Regulatory Landscape</h3>
+        <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Global Regulatory Map</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">How major jurisdictions are approaching crypto regulation</p>
         <div className="space-y-1.5">
           {regions.map(r => (
