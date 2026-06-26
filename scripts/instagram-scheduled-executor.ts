@@ -46,28 +46,28 @@ interface InstaPost {
 
 // ─── Graph API methods (Business/Creator accounts) ───
 
-async function getPublicImageUrl(localPath: string): Promise<string> {
+async function uploadToCatbox(localPath: string): Promise<string> {
   const absPath = path.isAbsolute(localPath) ? localPath : path.resolve(REPO_ROOT, localPath);
-  if (!fs.existsSync(absPath)) throw new Error(`Image not found: ${absPath}`);
+  if (!fs.existsSync(absPath)) throw new Error(`Media file not found: ${absPath}`);
 
   const FormData = (await import('form-data')).default;
   const form = new FormData();
-  form.append('source', fs.createReadStream(absPath));
-  form.append('published', 'false');
-  form.append('access_token', PAGE_TOKEN);
+  form.append('reqtype', 'fileupload');
+  form.append('fileToUpload', fs.createReadStream(absPath));
 
-  const res = await fetch(`https://graph.facebook.com/${API_VERSION}/${PAGE_ID}/photos`, {
+  const res = await fetch('https://catbox.moe/user/api.php', {
     method: 'POST',
     body: form as any,
   });
-  if (!res.ok) throw new Error(`Photo upload failed: ${res.status} ${await res.text()}`);
-  const data = await res.json() as any;
 
-  const photoRes = await fetch(
-    `https://graph.facebook.com/${API_VERSION}/${data.id}?fields=images&access_token=${PAGE_TOKEN}`
-  );
-  const photoData = await photoRes.json() as any;
-  return photoData.images?.[0]?.source || '';
+  if (!res.ok) throw new Error(`Catbox upload failed: ${res.statusText}`);
+  const url = await res.text();
+  if (!url.startsWith('http')) throw new Error(`Catbox upload failed: ${url}`);
+  return url.trim();
+}
+
+async function getPublicImageUrl(localPath: string): Promise<string> {
+  return await uploadToCatbox(localPath);
 }
 
 async function createMediaContainer(imageUrl: string, caption: string): Promise<string> {
@@ -115,14 +115,14 @@ async function postViaGraphAPI(mediaPath: string, caption: string, isVid: boolea
   let isReels = false;
 
   if (isVid) {
-    const videoUrl = mediaPath.startsWith('http') ? mediaPath : getGitHubUrl(mediaPath);
+    const videoUrl = mediaPath.startsWith('http') ? mediaPath : await uploadToCatbox(mediaPath);
     console.log(`  🎬 Graph API: Reels container: ${videoUrl}`);
     containerId = await createReelsContainer(videoUrl, caption);
     isReels = true;
   } else {
     let imageUrl = mediaPath.startsWith('http') ? mediaPath : '';
     if (!imageUrl) {
-      imageUrl = await getPublicImageUrl(mediaPath);
+      imageUrl = await uploadToCatbox(mediaPath);
     }
     if (!imageUrl) throw new Error('No media available');
     console.log('  📦 Graph API: Creating media container...');

@@ -566,7 +566,7 @@
     "scheduleDate": "2026-04-18",
     "scheduleTime": "17:00",
     "posted": true,
-    "text": "Your next customer is an algorithm.\n\nAI agents search, compare, and checkout. You describe what you want. The machine buys it.\n\nveda.ng/agentcommerce\n\nThe interface is changing too \u2014 dashboards give way to text fields calling APIs directly: veda.ng/textui",
+    "text": "Your next customer is an algorithm.\n\nAI agents search, compare, and checkout. You describe what you want. The machine buys it.\n\nveda.ng/agentcommerce\n\nThe interface is changing too — dashboards give way to text fields calling APIs directly: veda.ng/textui",
     "image": "scripts/thread-assets/agentic_commerce.png",
     "postedAt": "2026-04-29T20:43:17.748Z",
     "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mknxmvwvmo25"
@@ -633,7 +633,7 @@
     "scheduleDate": "2026-04-12",
     "scheduleTime": "17:00",
     "posted": true,
-    "text": "Lead response: 4 hours \u2192 60 seconds. One voice agent, one task. Conversions tripled.\n\nThe sales team stopped qualifying. They only close.\n\nveda.ng/stepwise",
+    "text": "Lead response: 4 hours → 60 seconds. One voice agent, one task. Conversions tripled.\n\nThe sales team stopped qualifying. They only close.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-12T11:59:33.410Z",
     "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgqwtkr2h"
   },
@@ -642,7 +642,7 @@
     "scheduleDate": "2026-04-13",
     "scheduleTime": "09:00",
     "posted": true,
-    "text": "Estonia lets anyone start an EU company remotely. 135,000 people from 170 countries. \u20ac125M in state revenue. 12:1 ROI.\n\nGovernment as infrastructure.\n\nveda.ng/stateagents",
+    "text": "Estonia lets anyone start an EU company remotely. 135,000 people from 170 countries. €125M in state revenue. 12:1 ROI.\n\nGovernment as infrastructure.\n\nveda.ng/stateagents",
     "postedAt": "2026-05-01T20:30:06.626Z",
     "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mksxt3xdis2n"
   },
@@ -660,7 +660,7 @@
     "scheduleDate": "2026-04-15",
     "scheduleTime": "09:00",
     "posted": true,
-    "text": "3-person agency. 6 hours/person every Friday on reports. Routed analytics to LLM. 20 hours freed. Clients: 30 \u2192 50. Zero hires.\n\nveda.ng/stepwise",
+    "text": "3-person agency. 6 hours/person every Friday on reports. Routed analytics to LLM. 20 hours freed. Clients: 30 → 50. Zero hires.\n\nveda.ng/stepwise",
     "postedAt": "2026-05-02T20:07:47.382Z",
     "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkvh273kye2b"
   },
@@ -678,7 +678,7 @@
     "scheduleDate": "2026-04-10",
     "scheduleTime": "01:00",
     "posted": true,
-    "text": "Estonia's X-Road: 1B+ gov queries/year. Birth registered \u2192 all agencies updated. One notification. Zero forms. Running since 2001.\n\nveda.ng/stateagents",
+    "text": "Estonia's X-Road: 1B+ gov queries/year. Birth registered → all agencies updated. One notification. Zero forms. Running since 2001.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-12T11:59:33.447Z",
     "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgqyr6j2z"
   },
@@ -687,7 +687,7 @@
     "scheduleDate": "2026-04-17",
     "scheduleTime": "09:00",
     "posted": true,
-    "text": "CLI \u2192 GUI \u2192 NLI. Each cut adaptation cost 10x. The GUI replaced the command line. Natural language will replace dashboards.\n\nveda.ng/textui",
+    "text": "CLI → GUI → NLI. Each cut adaptation cost 10x. The GUI replaced the command line. Natural language will replace dashboards.\n\nveda.ng/textui",
     "postedAt": "2026-05-03T20:09:12.907Z",
     "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkxxlo453a2n"
   },
@@ -1153,5 +1153,85 @@
     "scheduleDate": "2026-06-23",
     "scheduleTime": "16:00",
     "posted": false
+  },
+  {
+    "id": "li-draft-1",
+    "scheduleDate": "2026-06-27",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "Micromanagers buy physical presence. Leaders buy outcomes.\n\nIf your team delivers results and keeps clients happy, their exact hours or location shouldn't matter.\n\nWe are dealing with adults. Stop watching the clock. Focus on output.",
+    "image": "scripts/linkedin-assets/clean/draft1_micromanagers_v2_1782464292325.jpg"
+  },
+  {
+    "id": "li-draft-2",
+    "scheduleDate": "2026-06-27",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "Ageism in tech is an arbitrage opportunity.\n\nCompanies screen out applicants over 50 using \"culture fit\" as cover. In doing so, they lose decades of troubleshooting experience.\n\nYou can't Google institutional knowledge. Look for capability, not youth.",
+    "image": "scripts/linkedin-assets/clean/draft2_ageism_v2_1782464310753.jpg"
+  },
+  {
+    "id": "li-draft-3",
+    "scheduleDate": "2026-06-28",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "Recruiting pipelines optimize for compliance and call it professionalism.\n\nThe best hires are rarely perfect on paper. Drive and grit don't show up on HR checklists.\n\nIf a candidate shows real hunger to deliver, that beats a spotless resume every time.",
+    "image": "scripts/linkedin-assets/clean/draft3_grit_1782464279318.jpg"
+  },
+  {
+    "id": "li-draft-4",
+    "scheduleDate": "2026-06-28",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "A resume gap is not a competence gap. Life happens.\n\nAutomated tools filter out qualified candidates over arbitrary career breaks. Resumes don't do work. People do.\n\nIf the skills are there, the timeline doesn't matter.",
+    "image": "scripts/linkedin-assets/clean/draft4_resumegaps_1782464328098.jpg"
+  },
+  {
+    "id": "li-draft-5",
+    "scheduleDate": "2026-06-28",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "Abuse is not the price of high performance.\n\nToxic cultures promote toxic people because they hit short-term numbers. If your \"top performer\" destroys team cohesion, they are costing the business money.\n\nPerformance is built on trust, not fear.",
+    "image": "scripts/linkedin-assets/clean/draft5_toxic_culture.jpg"
+  },
+  {
+    "id": "li-draft-6",
+    "scheduleDate": "2026-06-29",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "Counting minutes destroys discretionary effort.\n\nWrite someone up for arriving 10 minutes late, and don't be surprised when they leave exactly on time during a project crisis.\n\nLoyalty cannot be commanded.",
+    "image": "scripts/linkedin-assets/clean/draft6_micromanagertax_1782464343920.jpg"
+  },
+  {
+    "id": "li-draft-7",
+    "scheduleDate": "2026-06-29",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "Net worth and job titles are lagging indicators of privilege, not leading indicators of intelligence or work ethic.\n\nThe systems that keep society running are built by people who rarely get the titles or equity.\n\nDon't confuse prestige with systemic utility.",
+    "image": "scripts/linkedin-assets/clean/draft7_jobtitles_1782464359677.jpg"
+  },
+  {
+    "id": "li-draft-8",
+    "scheduleDate": "2026-06-29",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "In 1994, Bill Gates sat on 330,000 sheets of paper to demonstrate a single CD-ROM's storage.\n\nToday, a 2-million token context window holds four CD-ROMs worth of active LLM memory.\n\n30 years. From physical constraints to real-time cognition.",
+    "image": "scripts/linkedin-assets/clean/draft8_cdrom.jpg"
+  },
+  {
+    "id": "li-draft-9",
+    "scheduleDate": "2026-06-30",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "Expecting employees to work with the passion of a founder is a delusion.\n\nThey don't have your equity. They don't have your upside. It is your business, not theirs.\n\nPay people fairly, trust them, and align incentives. Don't expect founder effort for salary compensation.",
+    "image": "scripts/linkedin-assets/clean/draft9_ceo_expectations.jpg"
+  },
+  {
+    "id": "li-draft-10",
+    "scheduleDate": "2026-06-30",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "Lowballing candidates in salary negotiations is a net-negative strategy.\n\nSqueezing a hire below market might look like a win on HR's spreadsheet.\n\nThey will leave the moment they see the disparity. Rehiring costs will dwarf the initial savings.",
+    "image": "scripts/linkedin-assets/clean/draft10_salarybackfire_1782464377011.jpg"
   }
 ]

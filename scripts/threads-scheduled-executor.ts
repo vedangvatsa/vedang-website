@@ -117,17 +117,41 @@ async function publishContainer(containerId: string, isVideoPost: boolean = fals
 
 // ─── Graph API posting ───
 
+async function uploadToCatbox(localPath: string): Promise<string> {
+  const absPath = path.isAbsolute(localPath) ? localPath : path.resolve(REPO_ROOT, localPath);
+  if (!fs.existsSync(absPath)) throw new Error(`Media file not found: ${absPath}`);
+
+  const FormData = (await import('form-data')).default;
+  const form = new FormData();
+  form.append('reqtype', 'fileupload');
+  form.append('fileToUpload', fs.createReadStream(absPath));
+
+  const res = await fetch('https://catbox.moe/user/api.php', {
+    method: 'POST',
+    body: form as any,
+  });
+
+  if (!res.ok) throw new Error(`Catbox upload failed: ${res.statusText}`);
+  const url = await res.text();
+  if (!url.startsWith('http')) throw new Error(`Catbox upload failed: ${url}`);
+  return url.trim();
+}
+
+async function getPublicUrl(localPath: string): Promise<string> {
+  return await uploadToCatbox(localPath);
+}
+
 async function postViaGraphAPI(text: string, mediaPath?: string): Promise<string> {
   let containerId: string;
   let isVideoPost = false;
 
   if (mediaPath && isVideo(mediaPath)) {
-    const videoUrl = mediaPath.startsWith('http') ? mediaPath : getPublicUrl(mediaPath);
+    const videoUrl = mediaPath.startsWith('http') ? mediaPath : await getPublicUrl(mediaPath);
     console.log(`  🎬 Graph API: Video container: ${videoUrl}`);
     containerId = await createVideoContainer(text, videoUrl);
     isVideoPost = true;
   } else if (mediaPath) {
-    const imgUrl = mediaPath.startsWith('http') ? mediaPath : getPublicUrl(mediaPath);
+    const imgUrl = mediaPath.startsWith('http') ? mediaPath : await getPublicUrl(mediaPath);
     console.log(`  📷 Graph API: Image container: ${imgUrl}`);
     containerId = await createImageContainer(text, imgUrl);
   } else {
@@ -192,11 +216,6 @@ async function postViaPython(text: string, mediaPath?: string): Promise<string> 
     }
     throw new Error(`Python fallback failed: ${err.message}`);
   }
-}
-
-function getPublicUrl(localPath: string): string {
-  const relative = localPath.replace(/^\.?\//, '');
-  return `https://raw.githubusercontent.com/vedangvatsa/vedang-website/main/${relative}`;
 }
 
 function isVideo(filePath: string): boolean {
