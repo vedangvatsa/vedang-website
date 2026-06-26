@@ -46,9 +46,9 @@ These are acceptable only if used precisely (1-2 times max per 2000-word essay, 
 | ecosystem | Overused as buzzword | "market," "community," "network," or name it |
 | unlock (potential/value) | AI-speak | Describe what actually happens |
 | holistic | Vague | "complete," "full," "end-to-end," or remove |
-| strong | Means nothing specific | "strong," "reliable," describe the quality |
-| modern | Self-congratulatory | Describe what makes it new |
-| smooth | Marketing speak | Describe the specific UX improvement |
+| strong | Means nothing specific | "reliable," "capable," or describe the specific quality |
+| modern | Self-congratulatory | Describe what makes it new or different |
+| smooth | Marketing speak | Describe the specific improvement |
 | scalable | Overused | Describe how it grows or at what scale |
 | new | Self-declared, never earned | Describe the innovation specifically |
 | disruptive | Post-2015 this is meaningless | Describe what it displaces and how |
@@ -75,7 +75,24 @@ These aren't individual words but recognizable AI writing structures.
 "While there are certainly challenges, the potential benefits could 
 potentially outweigh the drawbacks in certain scenarios."
 ```
-**Fix**: Pick a side. "The benefits outweigh the costs because [specific reason]."
+**The problem is not hedging itself — it is hedging that replaces a position entirely.**
+
+**When to hedge (correct):**
+- Stating an opinion or subjective observation: "Counting minutes can destroy discretionary effort."
+- Acknowledging a claim is not universal: "In many cases, automated tools filter out good candidates."
+- Softening a strong assertion you can't fully verify: "This often costs more than the savings."
+
+**When NOT to hedge (banned patterns):**
+- Double hedges: `could potentially`, `might possibly` — always collapse to one word or rewrite
+- Hedging a verifiable fact: "2+2 could equal 4" — just state it
+- Hedging to avoid taking any position: "There are pros and cons on both sides" — pick a side
+- Stacking hedges across a whole paragraph so no claim survives — rewrite with one clear stance
+
+**Always banned regardless of context:**
+- `could potentially` / `might possibly` (redundant double hedge)
+- `in certain scenarios` without naming the scenario
+- `while there are certainly challenges` as a throat-clearing opener — delete and start with the point
+- `only time will tell` / `remains to be seen` — make a prediction instead
 
 ### ❌ The Triple Adjective Stack
 ```
@@ -156,6 +173,9 @@ Run every piece of content through these checks before publishing:
 - [ ] No "major shift/model shift"
 - [ ] No engagement bait questions
 - [ ] Under 200 words for short-form platforms
+- [ ] No colons (`:`) — banned in all social posts; restructure the sentence instead
+- [ ] No passive constructions: `is being`, `has been`, `was being`, `were being`, `had been`
+- [ ] Hedging check: single hedge words (`might`, `can`, `often`, `in many cases`) are fine on opinion claims. Double hedges (`could potentially`) and position-avoiding hedges (`pros and cons on both sides`) are banned.
 
 ## Replacement Principles
 
@@ -173,8 +193,18 @@ When you remove AI slop, follow these rules:
 The essay library has been audited for all Tier 1 and Tier 2 terms. Any new content must pass the same audit before merge. The slop detection can be automated:
 
 ```bash
-# Quick grep for Tier 1 and Tier 2 banned phrases across all essays
-grep -rni "explore\|tapestry\|\|in the realm of\|model shift\|game.changer\|it's notable\|in today's world\|only time will tell\|reshape\|redefine\|foster\|facilitate" src/content/essays/
+# Tier 1 and Tier 2 banned phrases across all essays and posts
+grep -rni "explore\|tapestry\|\|in the realm of\|model shift\|game.changer\|it's notable\|in today's world\|only time will tell\|reshape\|redefine\|foster\|facilitate\|synergy\|empower\|streamline\|paradigm shift" src/content/essays/
+
+# Double hedges — always banned
+grep -rni "could potentially\|might possibly\|in certain scenarios" src/content/essays/
+
+# Passive voice constructions
+grep -rni "is being\|are being\|was being\|were being\|has been\|have been\|had been" src/content/essays/
+
+# Social post specific: colons and em-dashes
+grep -n ":" scripts/x-posts.json scripts/bluesky-posts.json scripts/threads-posts.json
+grep -n "—\|–" scripts/x-posts.json scripts/bluesky-posts.json scripts/threads-posts.json scripts/linkedin-posts.json scripts/facebook-posts.json
 ```
 
 Zero results = clean. Any matches must be fixed before publishing.
