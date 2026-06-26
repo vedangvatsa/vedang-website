@@ -655,7 +655,7 @@
     "scheduleTime": "17:00",
     "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing — nuanced human conversations — before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise",
+    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing \u2014 nuanced human conversations \u2014 before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-12T11:59:07.697Z",
     "postId": "urn:li:share:7449063550729256960"
   },
@@ -665,7 +665,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog — analytics via natural language\nSalesforce Agentforce — 12,000+ orgs, 84% self-resolution\nCursor — $1B ARR, entire codebases queryable via text\nGitHub Copilot — 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/textui",
+    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog \u2014 analytics via natural language\nSalesforce Agentforce \u2014 12,000+ orgs, 84% self-resolution\nCursor \u2014 $1B ARR, entire codebases queryable via text\nGitHub Copilot \u2014 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/textui",
     "postedAt": "2026-04-12T11:59:11.780Z",
     "postId": "urn:li:share:7449063567942873088"
   },
@@ -675,7 +675,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else — 99% of public services — is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/stateagents",
+    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else \u2014 99% of public services \u2014 is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-12T11:59:15.921Z",
     "postId": "urn:li:share:7449063585378385920"
   },
@@ -695,7 +695,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it.\n\nThe e-Residency program generated €125M in state revenue last year. 87% growth. For every euro invested, twelve came back.\n\n5,556 new companies formed by non-citizens in a single year.\n\nThis is what happens when government operates as infrastructure instead of gatekeeping. The state becomes a platform. Citizenship becomes a credential. Geography becomes optional.\n\nveda.ng/stateagents",
+    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it.\n\nThe e-Residency program generated \u20ac125M in state revenue last year. 87% growth. For every euro invested, twelve came back.\n\n5,556 new companies formed by non-citizens in a single year.\n\nThis is what happens when government operates as infrastructure instead of gatekeeping. The state becomes a platform. Citizenship becomes a credential. Geography becomes optional.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-13T06:03:17.563Z",
     "postId": "urn:li:share:7449336389974007808"
   },
@@ -725,7 +725,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Singapore's Ask Jamie chatbot has handled 50 million citizen queries. Their AI call transcription cut after-call work by 72%.\n\n100,000 public officers use Pair — a government-built AI tool — saving 50 minutes per task on average.\n\nIn the 2026 budget, Singapore announced the shift from \"AI pilots\" to \"scaled deployment at national speed.\"\n\nMost countries are still debating whether to start a pilot.\n\nveda.ng/stateagents",
+    "text": "Singapore's Ask Jamie chatbot has handled 50 million citizen queries. Their AI call transcription cut after-call work by 72%.\n\n100,000 public officers use Pair \u2014 a government-built AI tool \u2014 saving 50 minutes per task on average.\n\nIn the 2026 budget, Singapore announced the shift from \"AI pilots\" to \"scaled deployment at national speed.\"\n\nMost countries are still debating whether to start a pilot.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-22T20:32:55.769Z",
     "postId": "urn:li:share:7452816731737198592"
   },
@@ -1132,5 +1132,100 @@
     "posted": false,
     "text": "Lowballing candidates in salary negotiations is a net-negative strategy.\n\nSqueezing a hire below their market worth might look like a cost-saving win on HR's spreadsheet.\n\nBut they will leave the moment they see the pay disparity. The rehiring, training, and performance gap costs will dwarf the initial savings.\n\nIf you want to retain top talent, pay them what they are worth.",
     "image": "scripts/linkedin-assets/clean/draft10_salarybackfire_1782464377011.jpg"
+  },
+  {
+    "id": "agent-infrastructure-stack-1",
+    "scheduleDate": "2026-06-30",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "I mapped the entire AI agent infrastructure market. 75+ companies, $14B+ in disclosed funding, 8 infrastructure layers.\n\nMost of the money is going to 2 layers. Bigger platforms are slowly absorbing the other 6.\n\nRead the full analysis and see the complete market map.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/figure_1_market_map.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-2",
+    "scheduleDate": "2026-07-01",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute \u2192 Memory \u2192 Sandboxed Execution \u2192 Perception \u2192 Orchestration \u2192 Evaluation \u2192 Security \u2192 Agents as Products\n\nCheck the full breakdown of the taxonomy.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/table_1_taxonomy.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-3",
+    "scheduleDate": "2026-07-01",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "Compute and vertical agent products capture over 85% of total capital in this market.\n\nCerebras went public at a $95B market cap. Together AI crossed $1B ARR. Modal raised $466M.\n\nThe 6 middle layers split the remaining 15% among themselves.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/table_8_capital_allocation.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-4",
+    "scheduleDate": "2026-07-01",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "Bigger platforms are absorbing observability, security, and vector databases.\n\nClickHouse bought Langfuse. Mintlify bought Helicone. Cisco bought two security companies in 18 months.\n\nLLM observability may not survive as a standalone category.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/table_6_acquisitions.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-5",
+    "scheduleDate": "2026-07-02",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "Every time OpenAI or Anthropic ships a native feature, a cohort of startups loses its value proposition.\n\nFunction calling, code execution, web browsing. Each one killed several companies.\n\nThe survivors own infrastructure that model providers are unlikely to replicate.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/agent_wrapper_problem.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-6",
+    "scheduleDate": "2026-07-02",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "Agent memory is the least solved layer in the stack.\n\nAcademic research identifies 4 types. These are episodic, semantic, working, and procedural. No commercial product addresses all four well.\n\nVector DB funding stalled in 2023. General-purpose databases are eating their lunch.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/table_5_memory.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-7",
+    "scheduleDate": "2026-07-02",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "Sandboxed execution is one of the most defensible layers.\n\nE2B raised $32M and runs untrusted, LLM-generated code in isolated micro-VMs. 88% of Fortune 100 use it.\n\nRunning AI-generated code on production servers is an obvious security risk. Sandboxes solve that.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/agent_sandbox_execution.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-8",
+    "scheduleDate": "2026-07-03",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "8 acquisitions happened in agent infrastructure between Sep 2024 and May 2026.\n\nNone of these acquirers built comparable capabilities in-house. Cisco, Check Point, IBM, Meta. Each chose to buy.\n\nIncumbents missed the initial wave and chose to acquire instead.\n\nveda.ng/agent-infrastructure-stack"
+  },
+  {
+    "id": "agent-infrastructure-stack-9",
+    "scheduleDate": "2026-07-03",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "Incumbents acquire security and observability startups. Compute and perception tend to stay independent.\n\nWafer-scale chip company Cerebras or $1B ARR inference platform Together AI doesn't fold into an existing product line.\n\nTechnical depth creates staying power.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/agent_acquisition_split.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-10",
+    "scheduleDate": "2026-07-03",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "Vercel and Cloudflare are absorbing agent infrastructure functions as platform features.\n\nVercel Marketplace has 22 categories. Cloudflare Workers AI runs 50+ models across 300+ edge points.\n\nThis may compress the middle layers faster than the AWS precedent suggests.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/table_7_vulnerability.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-11",
+    "scheduleDate": "2026-07-04",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "5 open questions the data alone can't resolve.\n\nDo the 8 layers collapse into 3-4 bundles?\nDo wrapper startups die in the next wave of model updates?\nDoes compute scarcity stay permanent?\nCan open protocols prevent lock-in?\nWho bears liability when an agent signs a contract?\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/table_4_protocols.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-12",
+    "scheduleDate": "2026-07-04",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "I wrote this as a proper academic paper referencing 67 sources, funding data from Crunchbase and SEC filings, and a market map of every major company.\n\nRead the full paper on SSRN http://dx.doi.org/10.2139/ssrn.6874178\n\nWould genuinely appreciate reads and feedback.",
+    "image": "scripts/thread-assets/agent_paper_cover.png"
   }
 ]

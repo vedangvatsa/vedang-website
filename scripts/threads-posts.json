@@ -302,5 +302,100 @@
     "posted": false,
     "text": "Lowballing candidates in salary negotiations is a net-negative strategy.\n\nSqueezing a hire below their market worth might look like a cost-saving win on HR's spreadsheet.\n\nBut they will leave the moment they see the pay disparity. The rehiring, training, and performance gap costs will dwarf the initial savings.\n\nIf you want to retain top talent, pay them what they are worth.",
     "image": "scripts/linkedin-assets/clean/draft10_salarybackfire_1782464377011.jpg"
+  },
+  {
+    "id": "agent-infrastructure-stack-1",
+    "scheduleDate": "2026-06-30",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "I mapped the entire AI agent infrastructure market. 75+ companies, $14B+ in disclosed funding, 8 infrastructure layers.\n\nMost of the money is going to 2 layers. Bigger platforms are slowly absorbing the other 6.\n\nRead the full analysis and see the complete market map.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/figure_1_market_map.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-2",
+    "scheduleDate": "2026-07-01",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute \u2192 Memory \u2192 Sandboxed Execution \u2192 Perception \u2192 Orchestration \u2192 Evaluation \u2192 Security \u2192 Agents as Products\n\nCheck the full breakdown of the taxonomy.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/table_1_taxonomy.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-3",
+    "scheduleDate": "2026-07-01",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "Compute and vertical agent products capture over 85% of total capital in this market.\n\nCerebras went public at a $95B market cap. Together AI crossed $1B ARR. Modal raised $466M.\n\nThe 6 middle layers split the remaining 15% among themselves.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/table_8_capital_allocation.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-4",
+    "scheduleDate": "2026-07-01",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "Bigger platforms are absorbing observability, security, and vector databases.\n\nClickHouse bought Langfuse. Mintlify bought Helicone. Cisco bought two security companies in 18 months.\n\nLLM observability may not survive as a standalone category.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/table_6_acquisitions.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-5",
+    "scheduleDate": "2026-07-02",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "Every time OpenAI or Anthropic ships a native feature, a cohort of startups loses its value proposition.\n\nFunction calling, code execution, web browsing. Each one killed several companies.\n\nThe survivors own infrastructure that model providers are unlikely to replicate.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/agent_wrapper_problem.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-6",
+    "scheduleDate": "2026-07-02",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "Agent memory is the least solved layer in the stack.\n\nAcademic research identifies 4 types. These are episodic, semantic, working, and procedural. No commercial product addresses all four well.\n\nVector DB funding stalled in 2023. General-purpose databases are eating their lunch.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/table_5_memory.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-7",
+    "scheduleDate": "2026-07-02",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "Sandboxed execution is one of the most defensible layers.\n\nE2B raised $32M and runs untrusted, LLM-generated code in isolated micro-VMs. 88% of Fortune 100 use it.\n\nRunning AI-generated code on production servers is an obvious security risk. Sandboxes solve that.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/agent_sandbox_execution.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-8",
+    "scheduleDate": "2026-07-03",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "8 acquisitions happened in agent infrastructure between Sep 2024 and May 2026.\n\nNone of these acquirers built comparable capabilities in-house. Cisco, Check Point, IBM, Meta. Each chose to buy.\n\nIncumbents missed the initial wave and chose to acquire instead.\n\nveda.ng/agent-infrastructure-stack"
+  },
+  {
+    "id": "agent-infrastructure-stack-9",
+    "scheduleDate": "2026-07-03",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "Incumbents acquire security and observability startups. Compute and perception tend to stay independent.\n\nWafer-scale chip company Cerebras or $1B ARR inference platform Together AI doesn't fold into an existing product line.\n\nTechnical depth creates staying power.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/agent_acquisition_split.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-10",
+    "scheduleDate": "2026-07-03",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "text": "Vercel and Cloudflare are absorbing agent infrastructure functions as platform features.\n\nVercel Marketplace has 22 categories. Cloudflare Workers AI runs 50+ models across 300+ edge points.\n\nThis may compress the middle layers faster than the AWS precedent suggests.\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/table_7_vulnerability.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-11",
+    "scheduleDate": "2026-07-04",
+    "scheduleTime": "01:00",
+    "posted": false,
+    "text": "5 open questions the data alone can't resolve.\n\nDo the 8 layers collapse into 3-4 bundles?\nDo wrapper startups die in the next wave of model updates?\nDoes compute scarcity stay permanent?\nCan open protocols prevent lock-in?\nWho bears liability when an agent signs a contract?\n\nveda.ng/agent-infrastructure-stack",
+    "image": "scripts/thread-assets/table_4_protocols.png"
+  },
+  {
+    "id": "agent-infrastructure-stack-12",
+    "scheduleDate": "2026-07-04",
+    "scheduleTime": "09:00",
+    "posted": false,
+    "text": "I wrote this as a proper academic paper referencing 67 sources, funding data from Crunchbase and SEC filings, and a market map of every major company.\n\nRead the full paper on SSRN http://dx.doi.org/10.2139/ssrn.6874178\n\nWould genuinely appreciate reads and feedback.",
+    "image": "scripts/thread-assets/agent_paper_cover.png"
   }
 ]

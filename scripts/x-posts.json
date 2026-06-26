@@ -9,7 +9,7 @@
     "tweetId": "2036722749054353704",
     "tweets": [
       {
-        "text": "LinkedIn is not a professional network. It's a language.\n\nI built a translator. Here's what it does. 🧵\n\nveda.ng/lit",
+        "text": "LinkedIn is not a professional network. It's a language.\n\nI built a translator. Here's what it does. \ud83e\uddf5\n\nveda.ng/lit",
         "image": "scripts/thread-assets/lit_1.png"
       },
       {
@@ -38,7 +38,7 @@
     "posted": true,
     "tweets": [
       {
-        "text": "Shopping used to mean: open browser, search, compare, click, form, checkout.\n\nAI agents cut that to one step. You describe. They buy.\n\nThe agent is not a new channel. It is a new buyer. 🧵",
+        "text": "Shopping used to mean: open browser, search, compare, click, form, checkout.\n\nAI agents cut that to one step. You describe. They buy.\n\nThe agent is not a new channel. It is a new buyer. \ud83e\uddf5",
         "image": "scripts/thread-assets/agentic_1.png"
       },
       {
@@ -597,7 +597,7 @@
     "scheduleTime": "17:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_commerce.png",
-    "text": "Your next customer is an algorithm.\n\nYou say \"get me running shoes under $150, good for flat feet, delivered by Friday.\" The agent searches Nike, Amazon, and specialty retailers simultaneously, weighs price against reviews and shipping speed, and completes checkout.\n\nYou went from doing the shopping to describing what you want.\n\nEvery major platform has shipped agent commerce products in the past 12 months. Mastercard Agent Pay. Coinbase x402. ChatGPT in-chat purchasing. Google's Universal Commerce Protocol. Shopify Agentic Storefronts.\n\nThe infrastructure is built. The protocols are live. The payment rails work. What is missing is consumer trust, merchant readiness, and regulatory clarity.\n\nBrand loyalty weakens when your agent switches you to a cheaper product that works just as well. Display ads lose relevance when the buyer is an algorithm.\n\nThe companies building for both humans and agents simultaneously will be in position when adoption accelerates.\n\nveda.ng/agentcommerce\n\nThe interface layer is changing too — dashboards are giving way to text fields that call APIs directly: veda.ng/textui",
+    "text": "Your next customer is an algorithm.\n\nYou say \"get me running shoes under $150, good for flat feet, delivered by Friday.\" The agent searches Nike, Amazon, and specialty retailers simultaneously, weighs price against reviews and shipping speed, and completes checkout.\n\nYou went from doing the shopping to describing what you want.\n\nEvery major platform has shipped agent commerce products in the past 12 months. Mastercard Agent Pay. Coinbase x402. ChatGPT in-chat purchasing. Google's Universal Commerce Protocol. Shopify Agentic Storefronts.\n\nThe infrastructure is built. The protocols are live. The payment rails work. What is missing is consumer trust, merchant readiness, and regulatory clarity.\n\nBrand loyalty weakens when your agent switches you to a cheaper product that works just as well. Display ads lose relevance when the buyer is an algorithm.\n\nThe companies building for both humans and agents simultaneously will be in position when adoption accelerates.\n\nveda.ng/agentcommerce\n\nThe interface layer is changing too \u2014 dashboards are giving way to text fields that call APIs directly: veda.ng/textui",
     "postedAt": "2026-04-17T20:24:13.945Z",
     "tweetId": "2045236914379219034"
   },
@@ -677,7 +677,7 @@
     "scheduleTime": "17:00",
     "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Klarna automated customer service. Saved $60M. Then customer satisfaction collapsed and they hired people back.\n\nThe failure wasn't AI. It was sequence. They skipped straight to the hardest problem — nuanced human interactions — instead of starting where machines already win: invoice matching, log parsing, email routing.\n\n70% of companies that try to automate everything at once fail. Companies that pick one boring, high-frequency task first? Payback in under three months.\n\nDiscipline beats ambition every time.\n\nveda.ng/stepwise",
+    "text": "Klarna automated customer service. Saved $60M. Then customer satisfaction collapsed and they hired people back.\n\nThe failure wasn't AI. It was sequence. They skipped straight to the hardest problem \u2014 nuanced human interactions \u2014 instead of starting where machines already win: invoice matching, log parsing, email routing.\n\n70% of companies that try to automate everything at once fail. Companies that pick one boring, high-frequency task first? Payback in under three months.\n\nDiscipline beats ambition every time.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-12T11:58:35.392Z",
     "tweetId": "2043297725995696570"
   },
@@ -687,7 +687,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "Every dropdown on a dashboard is a question someone predicted you'd ask. Your actual question is almost never one of them.\n\nPostHog replaced their analytics dashboard with a text field. Salesforce did it for CRM — 84% of queries now self-resolve. Cursor did it for code and hit $1B ARR.\n\nThe pattern: a text field backed by an LLM that calls APIs directly. No menus. No navigation. Just ask.\n\nThe dashboard era is ending.\n\nveda.ng/textui",
+    "text": "Every dropdown on a dashboard is a question someone predicted you'd ask. Your actual question is almost never one of them.\n\nPostHog replaced their analytics dashboard with a text field. Salesforce did it for CRM \u2014 84% of queries now self-resolve. Cursor did it for code and hit $1B ARR.\n\nThe pattern: a text field backed by an LLM that calls APIs directly. No menus. No navigation. Just ask.\n\nThe dashboard era is ending.\n\nveda.ng/textui",
     "postedAt": "2026-04-12T11:58:38.244Z",
     "tweetId": "2043297738083663890"
   },
@@ -717,7 +717,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia lets anyone on earth start an EU company remotely. 135,000 people from 170 countries have.\n\n€125M in state revenue last year. 12:1 ROI. 5,556 new companies from non-citizens.\n\nGovernment as infrastructure. Citizenship as credential. Geography as optional.\n\nveda.ng/stateagents",
+    "text": "Estonia lets anyone on earth start an EU company remotely. 135,000 people from 170 countries have.\n\n\u20ac125M in state revenue last year. 12:1 ROI. 5,556 new companies from non-citizens.\n\nGovernment as infrastructure. Citizenship as credential. Geography as optional.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-13T06:03:15.613Z",
     "tweetId": "2043570692382499240"
   },
@@ -737,7 +737,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Three-person agency. Six hours per person every Friday compiling client reports from 10+ data sources.\n\nRouted analytics into an LLM. Twenty hours freed weekly. Client load: 30 → 50 campaigns. Zero hires.\n\nAI didn't replace anyone. It removed a bottleneck.\n\nveda.ng/stepwise",
+    "text": "Three-person agency. Six hours per person every Friday compiling client reports from 10+ data sources.\n\nRouted analytics into an LLM. Twenty hours freed weekly. Client load: 30 \u2192 50 campaigns. Zero hires.\n\nAI didn't replace anyone. It removed a bottleneck.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-22T05:40:34.642Z",
     "tweetId": "2046826474343223446"
   },
@@ -757,7 +757,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia's X-Road: 1 billion+ government queries per year. Birth registered → population registry, health insurance, social services all updated automatically. One notification. Zero forms.\n\nOperational since 2001. 25 years in production. Not a pilot.\n\nMost countries digitized paper forms. Estonia redesigned the process.\n\nveda.ng/stateagents",
+    "text": "Estonia's X-Road: 1 billion+ government queries per year. Birth registered \u2192 population registry, health insurance, social services all updated automatically. One notification. Zero forms.\n\nOperational since 2001. 25 years in production. Not a pilot.\n\nMost countries digitized paper forms. Estonia redesigned the process.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-12T11:58:46.671Z",
     "tweetId": "2043297772955205807"
   },
@@ -767,7 +767,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "CLI → GUI → NLI. Three paradigms. Each cut adaptation cost by 10x.\n\nThe GUI didn't improve the command line. It replaced it. Natural language won't improve dashboards. Same thing.\n\nveda.ng/textui",
+    "text": "CLI \u2192 GUI \u2192 NLI. Three paradigms. Each cut adaptation cost by 10x.\n\nThe GUI didn't improve the command line. It replaced it. Natural language won't improve dashboards. Same thing.\n\nveda.ng/textui",
     "postedAt": "2026-04-23T05:52:57.159Z",
     "tweetId": "2047191977041834057"
   },
@@ -1310,5 +1310,61 @@
     "posted": false,
     "text": "Lowballing candidates in salary negotiations is a net-negative strategy.\n\nThey will leave the moment they see the pay disparity. Rehiring and training costs will dwarf the initial savings.\n\nPay what the role is worth.",
     "image": "scripts/linkedin-assets/clean/draft10_salarybackfire_1782464377011.jpg"
+  },
+  {
+    "id": "agent-infrastructure-stack-thread",
+    "type": "thread",
+    "scheduleDate": "2026-06-30",
+    "scheduleTime": "17:00",
+    "posted": false,
+    "tweets": [
+      {
+        "text": "I mapped the entire AI agent infrastructure market. 75+ companies, $14B+ in disclosed funding, 8 infrastructure layers.\n\nMost of the money is going to 2 layers. Bigger platforms are slowly absorbing the other 6.\n\nA thread on what I found.",
+        "image": "scripts/thread-assets/figure_1_market_map.png"
+      },
+      {
+        "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute \u2192 Memory \u2192 Sandboxed Execution \u2192 Perception \u2192 Orchestration \u2192 Evaluation \u2192 Security \u2192 Agents as Products",
+        "image": "scripts/thread-assets/table_1_taxonomy.png"
+      },
+      {
+        "text": "Compute and vertical agent products capture over 85% of total capital in this market.\n\nCerebras went public at a $95B market cap. Together AI crossed $1B ARR. Modal raised $466M.\n\nThe 6 middle layers split the remaining 15% among themselves.",
+        "image": "scripts/thread-assets/table_8_capital_allocation.png"
+      },
+      {
+        "text": "Bigger platforms are absorbing observability, security, and vector databases.\n\nClickHouse bought Langfuse. Mintlify bought Helicone. Cisco bought two security companies in 18 months.\n\nLLM observability may not survive as a standalone category.",
+        "image": "scripts/thread-assets/table_6_acquisitions.png"
+      },
+      {
+        "text": "Every time OpenAI or Anthropic ships a native feature, a cohort of startups loses its value proposition.\n\nFunction calling, code execution, web browsing. Each one killed several companies.\n\nThe survivors own infrastructure that model providers are unlikely to replicate.",
+        "image": "scripts/thread-assets/agent_wrapper_problem.png"
+      },
+      {
+        "text": "Agent memory is the least solved layer in the stack.\n\nAcademic research identifies 4 types. These are episodic, semantic, working, and procedural. No commercial product addresses all four well.\n\nVector DB funding stalled in 2023. General-purpose databases are eating their lunch.",
+        "image": "scripts/thread-assets/table_5_memory.png"
+      },
+      {
+        "text": "Sandboxed execution is one of the most defensible layers.\n\nE2B raised $32M and runs untrusted, LLM-generated code in isolated micro-VMs. 88% of Fortune 100 use it.",
+        "image": "scripts/thread-assets/agent_sandbox_execution.png"
+      },
+      {
+        "text": "8 acquisitions happened in agent infrastructure between Sep 2024 and May 2026.\n\nNone of these acquirers built comparable capabilities in-house. Cisco, Check Point, IBM, Meta. Each chose to buy.\n\nIncumbents missed the initial wave and chose to acquire instead."
+      },
+      {
+        "text": "Incumbents acquire security and observability startups. Compute and perception tend to stay independent.\n\nWafer-scale chip company Cerebras or $1B ARR inference platform Together AI doesn't fold into an existing product line.\n\nTechnical depth creates staying power.",
+        "image": "scripts/thread-assets/agent_acquisition_split.png"
+      },
+      {
+        "text": "Vercel and Cloudflare are absorbing agent infrastructure functions as platform features.\n\nVercel Marketplace has 22 categories. Cloudflare Workers AI runs 50+ models across 300+ edge points.\n\nThis may compress the middle layers faster than the AWS precedent suggests.",
+        "image": "scripts/thread-assets/table_7_vulnerability.png"
+      },
+      {
+        "text": "5 open questions the data alone can't resolve.\n\nDo the 8 layers collapse into 3-4 bundles?\nDo wrapper startups die in the next wave of model updates?\nDoes compute scarcity stay permanent?\nCan open protocols prevent lock-in?\nWho bears liability when an agent signs a contract?",
+        "image": "scripts/thread-assets/table_4_protocols.png"
+      },
+      {
+        "text": "I wrote this as a proper academic paper referencing 67 sources, funding data from Crunchbase and SEC filings, and a market map of every major company.\n\nRead the full paper on SSRN http://dx.doi.org/10.2139/ssrn.6874178\n\nWould genuinely appreciate reads and feedback.",
+        "image": "scripts/thread-assets/agent_paper_cover.png"
+      }
+    ]
   }
 ]
