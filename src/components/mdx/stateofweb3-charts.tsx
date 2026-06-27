@@ -163,7 +163,7 @@ export function StateOfWeb3Timeline() {
             Publication Volume & Milestone Timeline (2013 to 2026)
           </h4>
           <p className="text-xs text-muted-foreground mt-0.5">
-            128,286 concept-tagged papers. Click nodes to explore the 118x growth trajectory.
+            128,286 concept-tagged papers. Click nodes to explore the 117x growth trajectory.
           </p>
         </div>
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-semibold">

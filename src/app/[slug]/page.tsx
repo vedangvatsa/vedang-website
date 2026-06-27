@@ -42,7 +42,7 @@ import { GovernanceEffectivenessChart, DAOVoterParticipation, VotingMechanismCha
 import { DataSourceDisruption, MethodologicalEvolution, PolarizationFindings, ObserverEffectChart } from '@/components/mdx/socialscience-charts';
 import { MonasteryPrincipleChart, AttentionSpanDecline, InterruptionCostChart, RetreatMovementsTimeline, SilenceEconomyChart } from '@/components/mdx/monasticism-charts';
 import { PlaybookHeroCard, AgentToolsMap, AutomationROIChart, ContentPipelineFlow, OutreachPipeline, AIMaturityLevels, ImplementationTimeline, NurtureSequence, ImplementationChecklist, SocialListeningMap, SupportTierChart, DashboardMetricsMap, UseCaseCatalog } from '@/components/mdx/playbook-charts';
-import { StateOfAiKeywordsChart, StateOfAiBigramsChart, StateOfAiTimeline, StateOfAiNgramAnalyzer, StateOfAiMomentum } from '@/components/mdx/stateofai-charts';
+import { StateOfAiKeywordsChart, StateOfAiBigramsChart, StateOfAiTimeline, StateOfAiNgramAnalyzer, StateOfAiMomentum, StateOfAiGeography, StateOfAiCitations } from '@/components/mdx/stateofai-charts';
 import { StateOfWeb3KeywordsChart, StateOfWeb3BigramsChart, StateOfWeb3Timeline, StateOfWeb3NgramAnalyzer, StateOfWeb3ConvergenceMatrix, StateOfWeb3Momentum, StateOfWeb3Citations } from '@/components/mdx/stateofweb3-charts';
 import { SecurityConsolidation, ComputeValuationTable, AgentProductValuations, MarketplaceComposition, TopInvestorsTable } from '@/components/mdx/agentstack-charts';
 
@@ -418,6 +418,8 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               StateOfAiTimeline,
               StateOfAiNgramAnalyzer,
               StateOfAiMomentum,
+              StateOfAiGeography,
+              StateOfAiCitations,
               StateOfWeb3KeywordsChart,
               StateOfWeb3BigramsChart,
               StateOfWeb3Timeline,

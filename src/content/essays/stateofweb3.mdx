@@ -6,13 +6,13 @@ category: "Web3"
 summary: "A bibliometric analysis of 128,286 academic papers classified as blockchain or cryptocurrency research by OpenAlex, cross-validated against Crossref, Europe PMC, arXiv, and DBLP. Tracking three eras of growth, the DeFi-NFT divergence, post-quantum urgency, and the global research map from 2013 through mid-2026."
 ---
 
-From 176 papers in 2013 to 20,668 in 2025: a **118x increase** in twelve years. Blockchain research has evolved through three distinct eras: a Bitcoin-only genesis (2013 to 2016), an Ethereum-driven explosion (2017 to 2019), and a maturing institutional phase (2020 to present) where annual output now exceeds 20,000 papers. Across **128,286 concept-tagged publications** indexed by OpenAlex through mid-2026, the data reveals a field that has decisively shifted from speculative experimentation to deployment-ready infrastructure, with post-quantum cryptography, regulatory compliance, and AI convergence emerging as the dominant research frontiers.
+From 176 papers in 2013 to 20,668 in 2025: a **117x increase** in twelve years. Blockchain research has evolved through three distinct eras: a Bitcoin-only genesis (2013 to 2016), an Ethereum-driven explosion (2017 to 2019), and a maturing institutional phase (2020 to present) where annual output now exceeds 20,000 papers. Across **128,286 concept-tagged publications** indexed by OpenAlex through mid-2026, the data reveals a field that has decisively shifted from speculative experimentation to deployment-ready infrastructure, with post-quantum cryptography, regulatory compliance, and AI convergence emerging as the dominant research frontiers.
 
 ## I. Methodology: A 128,286-Paper Empirical Corpus
 
 This analysis draws on a primary corpus of **128,286 academic papers** tagged as blockchain (C2779687700) or cryptocurrency (C180706569) by OpenAlex's machine-learning concept classifier, published between 2013 and mid-2026. Unlike title-only keyword searches that systematically undercount papers, the concept tagger evaluates full abstracts, citation networks, and contextual metadata, capturing papers like "Privacy-Preserving Data Sharing for Healthcare Systems" that use blockchain methods without placing "blockchain" in the title.
 
-The corpus was cross-validated against four independent databases: **Crossref** (124,333 papers), **Europe PMC** (61,191), **arXiv** (11,312), and **DBLP** (37,246). The Crossref count closely matches the primary corpus, providing independent confirmation of coverage. Journal articles dominate at **68.9%**, followed by book chapters (13.9%) and preprints (8.2%). A full n-gram frequency analysis (unigrams, bigrams, and trigrams) was executed across all paper abstracts to isolate the specific technical implementations and research domains commanding the field's attention.
+The corpus was cross-validated against four independent databases: **Crossref** (124,333 papers), **Europe PMC** (61,191), **arXiv** (11,312), and **DBLP** (37,246). The Crossref count closely matches the primary corpus, providing independent confirmation of coverage. Journal articles dominate at **68.9%**, followed by book chapters (13.9%) and preprints (8.2%). Approximately half (**50.2%**) of the concept-tagged corpus is published as open access, making it highly accessible compared to standard academic baselines. A full n-gram frequency analysis (unigrams, bigrams, and trigrams) was executed across all paper abstracts to isolate the specific technical implementations and research domains commanding the field's attention.
 
 <ResearchPaper
   title="Blockchain Research Trends: A Bibliometric Analysis of 128,286 Papers (2013-2026)"
@@ -26,7 +26,7 @@ The corpus was cross-validated against four independent databases: **Crossref** 
 ## II. The Research Map: What 128,286 Papers Reveal
 
 **Publication Volume & Milestone Timeline:**
-Track the 118x growth trajectory from Bitcoin-era genesis to institutional-era maturation.
+Track the 117x growth trajectory from Bitcoin-era genesis to institutional-era maturation.
 
 <StateOfWeb3Timeline />
 
@@ -66,7 +66,7 @@ The publication volume data reveals three distinct phases in blockchain's academ
 **The Institutional Era (2020 to present).** Growth decelerated to sustainable rates as the field matured. The 2024 growth of **+1.8%** represents the lowest annual increase in the corpus. Research pivoted to deployment challenges: scalability (layer 2, zero-knowledge proofs), regulation (3.5x growth), institutional finance (stablecoins, real-world assets, CBDCs), and post-quantum security. Papers published from 2020 onward account for **82.7%** of the corpus. More than four in five blockchain papers were published in the last six years.
 
 <StatRow>
-  <Stat label="118x Growth" value="176 → 20,668 papers" trend="up" />
+  <Stat label="117x Growth" value="176 → 20,668 papers" trend="up" />
   <Stat label="Lowest YoY" value="+1.8% (2024)" />
   <Stat label="Post-2020 Share" value="82.7% of corpus" />
 </StatRow>
@@ -122,7 +122,15 @@ Emerging research economies contribute significantly: **Indonesia** (3,106 paper
   <Stat label="United States" value="12,488 papers (9.7%)" />
 </StatRow>
 
-## VII. Strategic Implications: Three Imperatives
+## VII. The Citation Economy
+
+The citation distribution across 128,286 blockchain papers follows an extreme power law. **43.5% of all papers have received zero citations.** The high zero-citation rate is partially explained by the recency of the corpus—82.7% of papers were published from 2020 onward and have had limited time to accumulate citations.
+
+<StateOfWeb3Citations />
+
+Fewer than 0.1% of papers have 1,000+ citations, yet they account for a disproportionate share of the field's total citation volume.
+
+## VIII. Strategic Implications: Three Imperatives
 
 The aggregation of 128,286 research papers yields three strategic imperatives for technology leaders, policymakers, and institutional investors:
 

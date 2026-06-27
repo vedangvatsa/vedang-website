@@ -266,3 +266,140 @@ export function StateOfAiKeywordsChart() {
 export function StateOfAiBigramsChart() {
   return null; // Absorbed into NgramAnalyzer
 }
+
+// --- Geographic Distribution ---
+export function StateOfAiGeography() {
+  const geoData = [
+    { country: 'China', count: 874019 },
+    { country: 'United States', count: 718676 },
+    { country: 'India', count: 369931 },
+    { country: 'Japan', count: 333896 },
+    { country: 'United Kingdom', count: 216177 },
+    { country: 'Germany', count: 163172 },
+    { country: 'Canada', count: 117479 },
+    { country: 'Italy', count: 105094 },
+    { country: 'France', count: 97247 },
+    { country: 'South Korea', count: 95171 },
+  ];
+  
+  const maxCount = geoData[0].count;
+
+  return (
+    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm overflow-hidden space-y-5">
+      <div>
+        <h4 className="text-base font-bold text-foreground flex items-center gap-2">
+          <span className="w-2.5 h-2.5 rounded-full bg-orange-500" />
+          Global Research Output by Country (Top 10)
+        </h4>
+        <p className="text-xs text-muted-foreground mt-0.5">Abstract-level search across 5M+ AI papers, 2013-2026. A single paper with co-authors from multiple countries is counted once per country.</p>
+      </div>
+      <div className="space-y-3 pt-2">
+        {geoData.map((item, i) => (
+          <div key={item.country} className="flex items-center gap-3">
+            <div className="w-6 text-right text-[10px] font-mono text-muted-foreground">{i + 1}</div>
+            <div className="w-32 text-right text-sm font-semibold text-foreground truncate">{item.country}</div>
+            <div className="flex-1 relative">
+              <div className="h-6 w-full rounded-full bg-secondary overflow-hidden">
+                <div 
+                  className="h-full rounded-full transition-all duration-700 ease-out" 
+                  style={{ width: `${(item.count / maxCount) * 100}%`, backgroundColor: i === 0 ? 'hsl(12, 90%, 60%)' : i === 1 ? 'hsl(217, 91%, 60%)' : 'hsl(var(--primary))' }} 
+                />
+              </div>
+            </div>
+            <div className="w-24 text-right text-xs font-bold tabular-nums text-foreground">{item.count.toLocaleString()}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// --- Citation Distribution ---
+export function StateOfAiCitations() {
+  const [percentile, setPercentile] = useState<number>(95);
+  const [isResNetHighlight, setIsResNetHighlight] = useState<boolean>(false);
+
+  // Approximate thresholds based on distribution
+  const getPercentileCitations = (p: number) => {
+    if (p <= 48) return 0;
+    if (p <= 50) return 1;
+    if (p <= 75) return 5;
+    if (p <= 90) return 25;
+    if (p <= 95) return 45;
+    if (p <= 98) return 95;
+    return 480; // 99th
+  };
+
+  return (
+    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm space-y-6">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <h4 className="text-base font-bold text-foreground">
+            Corpus Citation Skewness Distribution
+          </h4>
+          <p className="text-xs text-muted-foreground mt-0.5">
+            Use the controller slider to explore the right-skew distribution across 5M documents. 48.9% have zero citations.
+          </p>
+        </div>
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-bold text-primary">
+          {percentile}th Percentile
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+        <div className="bg-muted/20 border border-border/40 rounded-lg p-4 flex flex-col justify-center space-y-3">
+          <p className="text-[10px] text-muted-foreground uppercase font-mono tracking-wider">Distribution Segment Selector</p>
+          <input 
+            type="range" 
+            min="50" 
+            max="99" 
+            step="1" 
+            value={percentile}
+            onChange={(e) => {
+              setPercentile(parseInt(e.target.value));
+              setIsResNetHighlight(false);
+            }}
+            className="w-full h-1.5 bg-secondary rounded-lg appearance-none cursor-pointer accent-primary"
+          />
+          <div className="flex justify-between text-[10px] text-muted-foreground font-mono">
+            <span>50th (median=0)</span>
+            <span>99th (cutoff=480)</span>
+          </div>
+        </div>
+
+        <div className="bg-muted/30 border border-border/50 rounded-lg p-5 text-center flex flex-col justify-center items-center relative overflow-hidden">
+          {isResNetHighlight ? (
+            <div className="space-y-1">
+              <p className="text-[9px] uppercase font-mono tracking-widest text-destructive font-bold">Absolute Extreme Outlier</p>
+              <p className="text-2xl font-black text-destructive font-mono">221,202 citations</p>
+              <p className="text-xs font-semibold text-foreground font-serif leading-snug mt-1">
+                Kaiming He et al. &ldquo;Deep Residual Learning for Image Recognition (2016)&rdquo;
+              </p>
+            </div>
+          ) : (
+            <div className="space-y-1">
+              <p className="text-[9px] uppercase font-mono tracking-widest text-muted-foreground font-bold">Threshold Cutoff</p>
+              <p className="text-2xl font-black text-primary font-mono">
+                {getPercentileCitations(percentile)} citations
+              </p>
+              <p className="text-[11px] text-muted-foreground leading-relaxed max-w-xs mx-auto">
+                A paper in the <strong className="text-foreground">{percentile}th percentile</strong> of the corpus requires at least {getPercentileCitations(percentile)} citations.
+              </p>
+            </div>
+          )}
+
+          <button 
+            onClick={() => setIsResNetHighlight(!isResNetHighlight)}
+            className={`px-3 py-1 rounded-full text-[10px] font-mono font-bold border transition-all mt-4 ${
+              isResNetHighlight 
+                ? 'bg-destructive/10 border-destructive text-destructive'
+                : 'bg-background border-border hover:border-foreground/50 text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            {isResNetHighlight ? '◀ Reset Slider' : '🔥 Trigger ResNet Outlier Node (221,202 citations)'}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
