@@ -9,7 +9,7 @@
     "tweetId": "2036722749054353704",
     "tweets": [
       {
-        "text": "LinkedIn is not a professional network. It's a language.\n\nI built a translator. Here's what it does. 🧵\n\nveda.ng/lit",
+        "text": "LinkedIn is not a professional network. It's a language.\n\nI built a translator. Here's what it does. \ud83e\uddf5\n\nveda.ng/lit",
         "image": "scripts/thread-assets/lit_1.png"
       },
       {
@@ -38,7 +38,7 @@
     "posted": true,
     "tweets": [
       {
-        "text": "Shopping used to mean: open browser, search, compare, click, form, checkout.\n\nAI agents cut that to one step. You describe. They buy.\n\nThe agent is not a new channel. It is a new buyer. 🧵",
+        "text": "Shopping used to mean: open browser, search, compare, click, form, checkout.\n\nAI agents cut that to one step. You describe. They buy.\n\nThe agent is not a new channel. It is a new buyer. \ud83e\uddf5",
         "image": "scripts/thread-assets/agentic_1.png"
       },
       {
@@ -597,7 +597,7 @@
     "scheduleTime": "17:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_commerce.png",
-    "text": "Your next customer is an algorithm.\n\nYou say \"get me running shoes under $150, good for flat feet, delivered by Friday.\" The agent searches Nike, Amazon, and specialty retailers simultaneously, weighs price against reviews and shipping speed, and completes checkout.\n\nYou went from doing the shopping to describing what you want.\n\nEvery major platform has shipped agent commerce products in the past 12 months. Mastercard Agent Pay. Coinbase x402. ChatGPT in-chat purchasing. Google's Universal Commerce Protocol. Shopify Agentic Storefronts.\n\nThe infrastructure is built. The protocols are live. The payment rails work. What is missing is consumer trust, merchant readiness, and regulatory clarity.\n\nBrand loyalty weakens when your agent switches you to a cheaper product that works just as well. Display ads lose relevance when the buyer is an algorithm.\n\nThe companies building for both humans and agents simultaneously will be in position when adoption accelerates.\n\nveda.ng/agentcommerce\n\nThe interface layer is changing too — dashboards are giving way to text fields that call APIs directly: veda.ng/textui",
+    "text": "Your next customer is an algorithm.\n\nYou say \"get me running shoes under $150, good for flat feet, delivered by Friday.\" The agent searches Nike, Amazon, and specialty retailers simultaneously, weighs price against reviews and shipping speed, and completes checkout.\n\nYou went from doing the shopping to describing what you want.\n\nEvery major platform has shipped agent commerce products in the past 12 months. Mastercard Agent Pay. Coinbase x402. ChatGPT in-chat purchasing. Google's Universal Commerce Protocol. Shopify Agentic Storefronts.\n\nThe infrastructure is built. The protocols are live. The payment rails work. What is missing is consumer trust, merchant readiness, and regulatory clarity.\n\nBrand loyalty weakens when your agent switches you to a cheaper product that works just as well. Display ads lose relevance when the buyer is an algorithm.\n\nThe companies building for both humans and agents simultaneously will be in position when adoption accelerates.\n\nveda.ng/agentcommerce\n\nThe interface layer is changing too \u2014 dashboards are giving way to text fields that call APIs directly: veda.ng/textui",
     "postedAt": "2026-04-17T20:24:13.945Z",
     "tweetId": "2045236914379219034"
   },
@@ -677,7 +677,7 @@
     "scheduleTime": "17:00",
     "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Klarna automated customer service. Saved $60M. Then customer satisfaction collapsed and they hired people back.\n\nThe failure wasn't AI. It was sequence. They skipped straight to the hardest problem — nuanced human interactions — instead of starting where machines already win: invoice matching, log parsing, email routing.\n\n70% of companies that try to automate everything at once fail. Companies that pick one boring, high-frequency task first? Payback in under three months.\n\nDiscipline beats ambition every time.\n\nveda.ng/stepwise",
+    "text": "Klarna automated customer service. Saved $60M. Then customer satisfaction collapsed and they hired people back.\n\nThe failure wasn't AI. It was sequence. They skipped straight to the hardest problem \u2014 nuanced human interactions \u2014 instead of starting where machines already win: invoice matching, log parsing, email routing.\n\n70% of companies that try to automate everything at once fail. Companies that pick one boring, high-frequency task first? Payback in under three months.\n\nDiscipline beats ambition every time.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-12T11:58:35.392Z",
     "tweetId": "2043297725995696570"
   },
@@ -687,7 +687,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "Every dropdown on a dashboard is a question someone predicted you'd ask. Your actual question is almost never one of them.\n\nPostHog replaced their analytics dashboard with a text field. Salesforce did it for CRM — 84% of queries now self-resolve. Cursor did it for code and hit $1B ARR.\n\nThe pattern: a text field backed by an LLM that calls APIs directly. No menus. No navigation. Just ask.\n\nThe dashboard era is ending.\n\nveda.ng/textui",
+    "text": "Every dropdown on a dashboard is a question someone predicted you'd ask. Your actual question is almost never one of them.\n\nPostHog replaced their analytics dashboard with a text field. Salesforce did it for CRM \u2014 84% of queries now self-resolve. Cursor did it for code and hit $1B ARR.\n\nThe pattern: a text field backed by an LLM that calls APIs directly. No menus. No navigation. Just ask.\n\nThe dashboard era is ending.\n\nveda.ng/textui",
     "postedAt": "2026-04-12T11:58:38.244Z",
     "tweetId": "2043297738083663890"
   },
@@ -717,7 +717,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia lets anyone on earth start an EU company remotely. 135,000 people from 170 countries have.\n\n€125M in state revenue last year. 12:1 ROI. 5,556 new companies from non-citizens.\n\nGovernment as infrastructure. Citizenship as credential. Geography as optional.\n\nveda.ng/stateagents",
+    "text": "Estonia lets anyone on earth start an EU company remotely. 135,000 people from 170 countries have.\n\n\u20ac125M in state revenue last year. 12:1 ROI. 5,556 new companies from non-citizens.\n\nGovernment as infrastructure. Citizenship as credential. Geography as optional.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-13T06:03:15.613Z",
     "tweetId": "2043570692382499240"
   },
@@ -737,7 +737,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Three-person agency. Six hours per person every Friday compiling client reports from 10+ data sources.\n\nRouted analytics into an LLM. Twenty hours freed weekly. Client load: 30 → 50 campaigns. Zero hires.\n\nAI didn't replace anyone. It removed a bottleneck.\n\nveda.ng/stepwise",
+    "text": "Three-person agency. Six hours per person every Friday compiling client reports from 10+ data sources.\n\nRouted analytics into an LLM. Twenty hours freed weekly. Client load: 30 \u2192 50 campaigns. Zero hires.\n\nAI didn't replace anyone. It removed a bottleneck.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-22T05:40:34.642Z",
     "tweetId": "2046826474343223446"
   },
@@ -757,7 +757,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia's X-Road: 1 billion+ government queries per year. Birth registered → population registry, health insurance, social services all updated automatically. One notification. Zero forms.\n\nOperational since 2001. 25 years in production. Not a pilot.\n\nMost countries digitized paper forms. Estonia redesigned the process.\n\nveda.ng/stateagents",
+    "text": "Estonia's X-Road: 1 billion+ government queries per year. Birth registered \u2192 population registry, health insurance, social services all updated automatically. One notification. Zero forms.\n\nOperational since 2001. 25 years in production. Not a pilot.\n\nMost countries digitized paper forms. Estonia redesigned the process.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-12T11:58:46.671Z",
     "tweetId": "2043297772955205807"
   },
@@ -767,7 +767,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "CLI → GUI → NLI. Three paradigms. Each cut adaptation cost by 10x.\n\nThe GUI didn't improve the command line. It replaced it. Natural language won't improve dashboards. Same thing.\n\nveda.ng/textui",
+    "text": "CLI \u2192 GUI \u2192 NLI. Three paradigms. Each cut adaptation cost by 10x.\n\nThe GUI didn't improve the command line. It replaced it. Natural language won't improve dashboards. Same thing.\n\nveda.ng/textui",
     "postedAt": "2026-04-23T05:52:57.159Z",
     "tweetId": "2047191977041834057"
   },
@@ -818,235 +818,260 @@
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "Talking to kids about online safety is hard. \n\nThis campaign uses humor to talk to them instead of just scaring them. \n\nAsk questions, be honest, and stay involved to keep them safe online.",
     "image": "scripts/thread-assets/linkedin-rewrites/post_10.mp4",
-    "error": "Request failed with code 401 - Invalid or expired token (Twitter code 89)"
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-vid-1",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "When microservices fail in production.\n\nOne service goes down.\n\nThen the next.\n\nThen the next.\n\nKeep your blast radius small.",
-    "image": "scripts/thread-assets/linkedin-rewrites/youtube_outage.mp4"
+    "image": "scripts/thread-assets/linkedin-rewrites/youtube_outage.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-vid-2",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "Explaining sorting algorithms to non-technical stakeholders.\n\nSometimes a visual is worth 1000 words.\n\nNo slides. No jargon. Just bars moving.",
-    "image": "scripts/thread-assets/linkedin-rewrites/kronk_sorting.mp4"
+    "image": "scripts/thread-assets/linkedin-rewrites/kronk_sorting.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-vid-3",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "Reading legacy documentation.\n\nThe docs say one thing.\n\nThe code does another.\n\nThe only source of truth is the code itself.",
-    "image": "scripts/thread-assets/linkedin-rewrites/junior_dev_docs.mp4"
+    "image": "scripts/thread-assets/linkedin-rewrites/junior_dev_docs.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-vid-4",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "Algorithmic efficiency, visualized.\n\nWatch Bubble Sort struggle.\n\nThen watch Quick Sort finish in a fraction of the time.\n\nThere is a reason we pick the right tool.",
-    "image": "scripts/thread-assets/linkedin-rewrites/sort_algorithm.mp4"
+    "image": "scripts/thread-assets/linkedin-rewrites/sort_algorithm.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-meme-1",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "Business logic vs edge cases.\n\nYour code handles 99% of inputs perfectly.\n\nUsers will always find the 1% you missed.\n\nDesign for failure.",
-    "image": "scripts/thread-assets/linkedin-rewrites/game_rules.jpg"
+    "image": "scripts/thread-assets/linkedin-rewrites/game_rules.jpg",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-meme-2",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "When product asks for a \"simple feature\".\n\nThe underlying architecture rarely agrees.\n\nNothing is simple once you look under the hood.",
-    "image": "scripts/thread-assets/linkedin-rewrites/simple_feature.gif"
+    "image": "scripts/thread-assets/linkedin-rewrites/simple_feature.gif",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-meme-3",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "The most important skill for a senior engineer is not knowing the answer.\n\nIt is knowing exactly how to find it.",
-    "image": "scripts/thread-assets/linkedin-rewrites/important_skill.jpg"
+    "image": "scripts/thread-assets/linkedin-rewrites/important_skill.jpg",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-meme-4",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "When leadership decides to \"help out\" with a little code cleanup right before the release.\n\nPlease. Stop. Helping.",
-    "image": "scripts/thread-assets/linkedin-rewrites/manager_cleanup.png"
+    "image": "scripts/thread-assets/linkedin-rewrites/manager_cleanup.png",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-meme-5",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "Open source in a nutshell.\n\nWe all build on work done by someone else.\n\nWho probably copied it from a forum post in 2012.",
-    "image": "scripts/thread-assets/linkedin-rewrites/steal_stolen.png"
+    "image": "scripts/thread-assets/linkedin-rewrites/steal_stolen.png",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-genz-boundaries",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "A one week unpaid trial is not a trial.\n\nIt is free labor.\n\nThis person declined the offer in one line.\n\nNo apology. No explanation. Just a clear boundary.\n\nKnow your worth before someone else sets it for you.",
-    "image": "scripts/thread-assets/ig-reels/DWYA42DiYqH.mp4"
+    "image": "scripts/thread-assets/ig-reels/DWYA42DiYqH.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-bryson-relatable",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "We have all been Bryson at some point.\n\nWatch till the end.",
-    "image": "scripts/thread-assets/ig-reels/DWlseMGD5la.mp4"
+    "image": "scripts/thread-assets/ig-reels/DWlseMGD5la.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-movie-scene",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "Stomach rumbled during a job interview.\n\nThe interviewer asked if I forgot lunch.\n\nTold him no. Just hungry for success.\n\nSometimes confidence is all you need.",
-    "image": "scripts/thread-assets/ig-reels/DXQ9NuYPN_J.mp4"
+    "image": "scripts/thread-assets/ig-reels/DXQ9NuYPN_J.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-that-life-exists",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "The moment you realize what life looks like for people who know nothing about AI, politics, or the economy.\n\nIgnorance really is bliss sometimes.\n\nMeanwhile the rest of us are refreshing feeds at 2am.",
-    "image": "scripts/thread-assets/ig-reels/DX4HFPvT5mb.mp4"
+    "image": "scripts/thread-assets/ig-reels/DX4HFPvT5mb.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-how-badly-do-you-want-it",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "How badly do you want it?\n\nBecause talk is cheap.\n\nEveryone has goals.\n\nFew have discipline.\n\nStop making excuses. Start making progress.",
-    "image": "scripts/thread-assets/ig-reels/DXHJR6cjsqV.mp4"
+    "image": "scripts/thread-assets/ig-reels/DXHJR6cjsqV.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-ai-impressed",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "Humans: spend 6 hours building something in AI.\n\nAI: \"Impressive. Keep going, human.\"\n\nWe are literally training our own replacements.\n\nAnd feeling proud about it.",
-    "image": "scripts/thread-assets/ig-reels/DXuNoVPE83k.mp4"
+    "image": "scripts/thread-assets/ig-reels/DXuNoVPE83k.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-ai-proud-moment",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "You spend 3 days debugging.\n\nFinally fix it.\n\nFeel like a genius.\n\nThen remember ChatGPT could have done it in 4 seconds.\n\nProud moment and existential crisis at the same time.",
-    "image": "scripts/thread-assets/ig-reels/DXD-i9fEaYJ.mp4"
+    "image": "scripts/thread-assets/ig-reels/DXD-i9fEaYJ.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-ai-limit-reached",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "When AI hits its rate limit mid-conversation.\n\nYou were so close to the answer.\n\nNow you wait.\n\nThe most frustrating loading screen of our generation.",
-    "image": "scripts/thread-assets/ig-reels/DWx95c6EdUi.mp4"
+    "image": "scripts/thread-assets/ig-reels/DWx95c6EdUi.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-ai-constant-pressure",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "New AI tool every week.\n\nNew framework every month.\n\nNew paradigm every quarter.\n\nRemember when learning one skill was enough for a decade?\n\nNow it barely lasts a quarter.",
-    "image": "scripts/thread-assets/ig-reels/DVqe3fCEZdC.mp4"
+    "image": "scripts/thread-assets/ig-reels/DVqe3fCEZdC.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-shadow-ai",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "Your employees are pasting company data into ChatGPT right now.\n\nNo policy. No oversight. No audit trail.\n\nShadow AI is not a future problem.\n\nIt is happening today in every company that has not set boundaries.",
-    "image": "scripts/thread-assets/ig-reels/DXs6sDoEetP.mp4"
+    "image": "scripts/thread-assets/ig-reels/DXs6sDoEetP.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-daytrading-liar",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "When the CEO says \"we have no plans for layoffs.\"\n\nTwo weeks later: restructuring.\n\nAlways watch what they do.\n\nNever just what they say.",
-    "image": "scripts/thread-assets/ig-reels/DTUgnD7kheF.mp4"
+    "image": "scripts/thread-assets/ig-reels/DTUgnD7kheF.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-ai-canon-events",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "The AI timeline so far:\n\n2022: ChatGPT launches.\n2023: Everyone becomes a prompt engineer.\n2024: AI replaces junior devs.\n2025: AI agents run workflows.\n2026: You report to an AI manager.\n\nSeven years. Too many canon events.",
-    "image": "scripts/thread-assets/ig-reels/DVgT1huE9qS.mp4"
+    "image": "scripts/thread-assets/ig-reels/DVgT1huE9qS.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-send-to-chatgpt",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "The moment you realize you have been arguing with a human when ChatGPT would have agreed with you instantly.\n\nWe are training ourselves to prefer AI conversations over human ones.\n\nThat should concern all of us.",
-    "image": "scripts/thread-assets/ig-reels/DVYa0-nE4hb.mp4"
+    "image": "scripts/thread-assets/ig-reels/DVYa0-nE4hb.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-knowledge-worth-zero",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "Raoul Pal said it clearly.\n\nKnowledge is approaching zero value.\n\nAnyone can ask AI the same question you spent 10 years learning to answer.\n\nThe advantage now is judgment, taste, and the ability to ask the right questions.",
-    "image": "scripts/thread-assets/ig-reels/DVOQBfTkilz.mp4"
+    "image": "scripts/thread-assets/ig-reels/DVOQBfTkilz.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-solo-billionaire",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "Sam Altman thinks one person with a laptop can build a billion dollar company.\n\nNo co-founders. No employees. Just AI tools.\n\nWe are closer to this than most people realize.\n\nThe question is not if. It is who does it first.",
-    "image": "scripts/thread-assets/ig-reels/DSrtaXmEWxl.mp4"
+    "image": "scripts/thread-assets/ig-reels/DSrtaXmEWxl.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-too-real",
     "type": "single",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false,
+    "posted": true,
     "text": "When you ask AI to write your resignation letter and it writes it better than anything you have ever written.\n\nThe tool you used to quit is better at your job than you are.\n\nLet that sink in.",
-    "image": "scripts/thread-assets/ig-reels/DRcvmWNE1Q2.mp4"
+    "image": "scripts/thread-assets/ig-reels/DRcvmWNE1Q2.mp4",
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-1",
@@ -1054,7 +1079,8 @@
     "image": "scripts/linkedin-assets/clean/post1_trust_gap.png",
     "scheduleDate": "2026-06-16",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-2",
@@ -1062,7 +1088,8 @@
     "image": "scripts/linkedin-assets/clean/post2_llm_explosion.png",
     "scheduleDate": "2026-06-16",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-3",
@@ -1070,7 +1097,8 @@
     "image": "scripts/linkedin-assets/clean/post14_check_size.png",
     "scheduleDate": "2026-06-17",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-4",
@@ -1078,7 +1106,8 @@
     "image": "scripts/linkedin-assets/clean/post18_agent_funding.png",
     "scheduleDate": "2026-06-17",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-5",
@@ -1086,7 +1115,8 @@
     "image": "scripts/linkedin-assets/clean/post21_blockchain_growth.png",
     "scheduleDate": "2026-06-17",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-6",
@@ -1094,7 +1124,8 @@
     "image": "scripts/linkedin-assets/clean/post7_consumer_concerns.png",
     "scheduleDate": "2026-06-18",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-7",
@@ -1102,7 +1133,8 @@
     "image": "scripts/linkedin-assets/clean/post3_citations.png",
     "scheduleDate": "2026-06-18",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-8",
@@ -1110,7 +1142,8 @@
     "image": "scripts/linkedin-assets/clean/post15_seed_growth.png",
     "scheduleDate": "2026-06-18",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-9",
@@ -1118,7 +1151,8 @@
     "image": "scripts/linkedin-assets/clean/post19_security_acquired.png",
     "scheduleDate": "2026-06-19",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-10",
@@ -1126,7 +1160,8 @@
     "image": "scripts/linkedin-assets/clean/post22_defi_nft.png",
     "scheduleDate": "2026-06-19",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-11",
@@ -1134,7 +1169,8 @@
     "image": "scripts/linkedin-assets/clean/post8_market_projections.png",
     "scheduleDate": "2026-06-19",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-12",
@@ -1142,7 +1178,8 @@
     "image": "scripts/linkedin-assets/clean/post4_china_us.png",
     "scheduleDate": "2026-06-20",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-13",
@@ -1150,7 +1187,8 @@
     "image": "scripts/linkedin-assets/clean/post16_death_valley.png",
     "scheduleDate": "2026-06-20",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-14",
@@ -1158,7 +1196,8 @@
     "image": "scripts/linkedin-assets/clean/post20_coding_agents.png",
     "scheduleDate": "2026-06-20",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-15",
@@ -1166,7 +1205,8 @@
     "image": "scripts/linkedin-assets/clean/post23_quantum_keywords.png",
     "scheduleDate": "2026-06-21",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-16",
@@ -1174,7 +1214,8 @@
     "image": "scripts/linkedin-assets/clean/post9_six_protocols.png",
     "scheduleDate": "2026-06-21",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-17",
@@ -1182,7 +1223,8 @@
     "image": "scripts/linkedin-assets/clean/post5_india_growth.png",
     "scheduleDate": "2026-06-21",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-18",
@@ -1190,7 +1232,8 @@
     "image": "scripts/linkedin-assets/clean/post17_gini.png",
     "scheduleDate": "2026-06-22",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-19",
@@ -1198,7 +1241,8 @@
     "image": "scripts/linkedin-assets/clean/post11_ecosystem.png",
     "scheduleDate": "2026-06-22",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-20",
@@ -1206,7 +1250,8 @@
     "image": "scripts/linkedin-assets/clean/post6_rising_keywords.png",
     "scheduleDate": "2026-06-22",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-21",
@@ -1214,7 +1259,8 @@
     "image": "scripts/linkedin-assets/clean/post13_value_shift.png",
     "scheduleDate": "2026-06-23",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-22",
@@ -1222,7 +1268,8 @@
     "image": "scripts/linkedin-assets/clean/post10_open_access.png",
     "scheduleDate": "2026-06-23",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-23",
@@ -1230,7 +1277,8 @@
     "image": "scripts/linkedin-assets/clean/post12_most_cited.png",
     "scheduleDate": "2026-06-23",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "li-draft-1",
@@ -1324,7 +1372,7 @@
         "image": "scripts/thread-assets/figure_1_market_map.png"
       },
       {
-        "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute → Memory → Sandboxed Execution → Perception → Orchestration → Evaluation → Security → Agents as Products",
+        "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute \u2192 Memory \u2192 Sandboxed Execution \u2192 Perception \u2192 Orchestration \u2192 Evaluation \u2192 Security \u2192 Agents as Products",
         "image": "scripts/thread-assets/table_1_taxonomy.png"
       },
       {

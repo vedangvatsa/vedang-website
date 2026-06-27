@@ -5,7 +5,8 @@
     "image": "scripts/linkedin-assets/clean/post1_trust_gap.png",
     "scheduleDate": "2026-06-16",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-2",
@@ -13,7 +14,8 @@
     "image": "scripts/linkedin-assets/clean/post2_llm_explosion.png",
     "scheduleDate": "2026-06-16",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-3",
@@ -21,7 +23,8 @@
     "image": "scripts/linkedin-assets/clean/post14_check_size.png",
     "scheduleDate": "2026-06-17",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-4",
@@ -29,7 +32,8 @@
     "image": "scripts/linkedin-assets/clean/post18_agent_funding.png",
     "scheduleDate": "2026-06-17",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-5",
@@ -37,7 +41,8 @@
     "image": "scripts/linkedin-assets/clean/post21_blockchain_growth.png",
     "scheduleDate": "2026-06-17",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-6",
@@ -45,7 +50,8 @@
     "image": "scripts/linkedin-assets/clean/post7_consumer_concerns.png",
     "scheduleDate": "2026-06-18",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-7",
@@ -53,7 +59,8 @@
     "image": "scripts/linkedin-assets/clean/post3_citations.png",
     "scheduleDate": "2026-06-18",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-8",
@@ -61,7 +68,8 @@
     "image": "scripts/linkedin-assets/clean/post15_seed_growth.png",
     "scheduleDate": "2026-06-18",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-9",
@@ -69,7 +77,8 @@
     "image": "scripts/linkedin-assets/clean/post19_security_acquired.png",
     "scheduleDate": "2026-06-19",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-10",
@@ -77,7 +86,8 @@
     "image": "scripts/linkedin-assets/clean/post22_defi_nft.png",
     "scheduleDate": "2026-06-19",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-11",
@@ -85,7 +95,8 @@
     "image": "scripts/linkedin-assets/clean/post8_market_projections.png",
     "scheduleDate": "2026-06-19",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-12",
@@ -93,7 +104,8 @@
     "image": "scripts/linkedin-assets/clean/post4_china_us.png",
     "scheduleDate": "2026-06-20",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-13",
@@ -101,7 +113,8 @@
     "image": "scripts/linkedin-assets/clean/post16_death_valley.png",
     "scheduleDate": "2026-06-20",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-14",
@@ -109,7 +122,8 @@
     "image": "scripts/linkedin-assets/clean/post20_coding_agents.png",
     "scheduleDate": "2026-06-20",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-15",
@@ -117,7 +131,8 @@
     "image": "scripts/linkedin-assets/clean/post23_quantum_keywords.png",
     "scheduleDate": "2026-06-21",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-16",
@@ -125,7 +140,8 @@
     "image": "scripts/linkedin-assets/clean/post9_six_protocols.png",
     "scheduleDate": "2026-06-21",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-17",
@@ -133,7 +149,8 @@
     "image": "scripts/linkedin-assets/clean/post5_india_growth.png",
     "scheduleDate": "2026-06-21",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-18",
@@ -141,7 +158,8 @@
     "image": "scripts/linkedin-assets/clean/post17_gini.png",
     "scheduleDate": "2026-06-22",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-19",
@@ -149,7 +167,8 @@
     "image": "scripts/linkedin-assets/clean/post11_ecosystem.png",
     "scheduleDate": "2026-06-22",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-20",
@@ -157,7 +176,8 @@
     "image": "scripts/linkedin-assets/clean/post6_rising_keywords.png",
     "scheduleDate": "2026-06-22",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-21",
@@ -165,7 +185,8 @@
     "image": "scripts/linkedin-assets/clean/post13_value_shift.png",
     "scheduleDate": "2026-06-23",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-22",
@@ -173,7 +194,8 @@
     "image": "scripts/linkedin-assets/clean/post10_open_access.png",
     "scheduleDate": "2026-06-23",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-23",
@@ -181,6 +203,7 @@
     "image": "scripts/linkedin-assets/clean/post12_most_cited.png",
     "scheduleDate": "2026-06-23",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   }
 ]

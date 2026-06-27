@@ -5,7 +5,8 @@
     "image": "scripts/thread-assets/linkedin-rewrites/post_8.mp4",
     "scheduleDate": "2026-05-11",
     "scheduleTime": "09:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "rewritten-post-9",
@@ -13,7 +14,8 @@
     "image": "scripts/thread-assets/linkedin-rewrites/post_9.mp4",
     "scheduleDate": "2026-05-11",
     "scheduleTime": "17:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "rewritten-post-10",
@@ -21,7 +23,8 @@
     "image": "scripts/thread-assets/linkedin-rewrites/post_10.mp4",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "01:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-vid-1",
@@ -29,7 +32,8 @@
     "image": "scripts/thread-assets/linkedin-rewrites/youtube_outage.mp4",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "09:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-vid-2",
@@ -37,7 +41,8 @@
     "image": "scripts/thread-assets/linkedin-rewrites/kronk_sorting.mp4",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "17:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-vid-3",
@@ -45,7 +50,8 @@
     "image": "scripts/thread-assets/linkedin-rewrites/junior_dev_docs.mp4",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "01:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-vid-4",
@@ -53,7 +59,8 @@
     "image": "scripts/thread-assets/linkedin-rewrites/sort_algorithm.mp4",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "09:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-meme-1",
@@ -61,7 +68,8 @@
     "image": "scripts/thread-assets/linkedin-rewrites/game_rules.jpg",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "17:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-meme-2",
@@ -69,7 +77,8 @@
     "image": "scripts/thread-assets/linkedin-rewrites/simple_feature.gif",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "01:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-meme-3",
@@ -77,7 +86,8 @@
     "image": "scripts/thread-assets/linkedin-rewrites/important_skill.jpg",
     "scheduleDate": "2026-05-14",
     "scheduleTime": "09:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-meme-4",
@@ -85,7 +95,8 @@
     "image": "scripts/thread-assets/linkedin-rewrites/manager_cleanup.png",
     "scheduleDate": "2026-05-14",
     "scheduleTime": "17:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-meme-5",
@@ -93,7 +104,8 @@
     "image": "scripts/thread-assets/linkedin-rewrites/steal_stolen.png",
     "scheduleDate": "2026-05-14",
     "scheduleTime": "01:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-genz-boundaries",
@@ -101,7 +113,8 @@
     "image": "scripts/thread-assets/ig-reels/DWYA42DiYqH.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-bryson-relatable",
@@ -109,7 +122,8 @@
     "image": "scripts/thread-assets/ig-reels/DWlseMGD5la.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-movie-scene",
@@ -117,7 +131,8 @@
     "image": "scripts/thread-assets/ig-reels/DXQ9NuYPN_J.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-that-life-exists",
@@ -125,7 +140,8 @@
     "image": "scripts/thread-assets/ig-reels/DX4HFPvT5mb.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-how-badly-do-you-want-it",
@@ -133,7 +149,8 @@
     "image": "scripts/thread-assets/ig-reels/DXHJR6cjsqV.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-ai-impressed",
@@ -141,7 +158,8 @@
     "image": "scripts/thread-assets/ig-reels/DXuNoVPE83k.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-ai-proud-moment",
@@ -149,7 +167,8 @@
     "image": "scripts/thread-assets/ig-reels/DXD-i9fEaYJ.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-ai-limit-reached",
@@ -157,7 +176,8 @@
     "image": "scripts/thread-assets/ig-reels/DWx95c6EdUi.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-ai-constant-pressure",
@@ -165,7 +185,8 @@
     "image": "scripts/thread-assets/ig-reels/DVqe3fCEZdC.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-shadow-ai",
@@ -173,7 +194,8 @@
     "image": "scripts/thread-assets/ig-reels/DXs6sDoEetP.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-daytrading-liar",
@@ -181,7 +203,8 @@
     "image": "scripts/thread-assets/ig-reels/DTUgnD7kheF.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-ai-canon-events",
@@ -189,7 +212,8 @@
     "image": "scripts/thread-assets/ig-reels/DVgT1huE9qS.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-send-to-chatgpt",
@@ -197,7 +221,8 @@
     "image": "scripts/thread-assets/ig-reels/DVYa0-nE4hb.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-knowledge-worth-zero",
@@ -205,7 +230,8 @@
     "image": "scripts/thread-assets/ig-reels/DVOQBfTkilz.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-solo-billionaire",
@@ -213,7 +239,8 @@
     "image": "scripts/thread-assets/ig-reels/DSrtaXmEWxl.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ig-too-real",
@@ -221,7 +248,8 @@
     "image": "scripts/thread-assets/ig-reels/DRcvmWNE1Q2.mp4",
     "scheduleDate": "2026-01-01",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "li-draft-1",

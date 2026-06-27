@@ -395,8 +395,9 @@
     "image": "scripts/thread-assets/lit_password.png",
     "scheduleDate": "2026-04-07",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "psych-dunning-kruger",
@@ -404,8 +405,9 @@
     "image": "scripts/thread-assets/psych_dunning_kruger.png",
     "scheduleDate": "2026-04-07",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ai-electricity-bottleneck",
@@ -413,8 +415,9 @@
     "image": "scripts/thread-assets/ai_electricity.png",
     "scheduleDate": "2026-04-08",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "agentcommerce",
@@ -422,8 +425,9 @@
     "image": "scripts/thread-assets/agentic_commerce.png",
     "scheduleDate": "2026-04-09",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "darkforest",
@@ -431,8 +435,9 @@
     "image": "scripts/thread-assets/dark_forest.png",
     "scheduleDate": "2026-04-09",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "hustle",
@@ -440,8 +445,9 @@
     "image": "scripts/thread-assets/hustle_culture.png",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "models-shrinking",
@@ -449,8 +455,9 @@
     "image": "scripts/thread-assets/models_shrinking.png",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "simulation",
@@ -458,8 +465,9 @@
     "image": "scripts/thread-assets/simulation.png",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "cognition",
@@ -467,8 +475,9 @@
     "image": "scripts/thread-assets/cognitive_load.png",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "attention",
@@ -476,8 +485,9 @@
     "image": "scripts/thread-assets/attention_refinery.png",
     "scheduleDate": "2026-04-13",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "godprotocol",
@@ -485,8 +495,9 @@
     "image": "scripts/thread-assets/god_protocol.png",
     "scheduleDate": "2026-04-13",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "monasticism",
@@ -494,8 +505,9 @@
     "image": "scripts/thread-assets/digital_monasticism.png",
     "scheduleDate": "2026-04-14",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "trust",
@@ -503,8 +515,9 @@
     "image": "scripts/thread-assets/programmable_trust.png",
     "scheduleDate": "2026-04-14",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "twilight",
@@ -512,8 +525,9 @@
     "image": "scripts/thread-assets/twilight_economy.png",
     "scheduleDate": "2026-04-15",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "paradox",
@@ -521,8 +535,9 @@
     "image": "scripts/thread-assets/singularity_paradox.png",
     "scheduleDate": "2026-04-15",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "empathy",
@@ -530,8 +545,9 @@
     "image": "scripts/thread-assets/synthetic_empathy.png",
     "scheduleDate": "2026-04-16",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "algorithms",
@@ -539,8 +555,9 @@
     "image": "scripts/thread-assets/sacred_algorithms.png",
     "scheduleDate": "2026-04-16",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "pseudonymity",
@@ -548,8 +565,9 @@
     "image": "scripts/thread-assets/pseudonymous_agency.png",
     "scheduleDate": "2026-04-17",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "lies",
@@ -557,8 +575,9 @@
     "image": "scripts/thread-assets/internet_of_lies.png",
     "scheduleDate": "2026-04-17",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "aieconomy",
@@ -566,8 +585,9 @@
     "image": "scripts/thread-assets/ai_economy.png",
     "scheduleDate": "2026-04-18",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "asi",
@@ -575,8 +595,9 @@
     "image": "scripts/thread-assets/asi_timeline.png",
     "scheduleDate": "2026-04-18",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "agenteconomy",
@@ -584,8 +605,9 @@
     "image": "scripts/thread-assets/ai_agent_economy.png",
     "scheduleDate": "2026-04-18",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "ambient",
@@ -593,8 +615,9 @@
     "image": "scripts/thread-assets/ambient_intelligence.png",
     "scheduleDate": "2026-04-19",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "governance",
@@ -602,8 +625,9 @@
     "image": "scripts/thread-assets/agi_governance.png",
     "scheduleDate": "2026-04-19",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "apis",
@@ -611,8 +635,9 @@
     "image": "scripts/thread-assets/api_states.png",
     "scheduleDate": "2026-04-20",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "intuition",
@@ -620,35 +645,39 @@
     "image": "scripts/thread-assets/artificial_intuition.png",
     "scheduleDate": "2026-04-20",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "stepwise",
-    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing — nuanced human conversations — before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise",
+    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing \u2014 nuanced human conversations \u2014 before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise",
     "image": "scripts/thread-assets/stepwise_ai.png",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "textui",
-    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog — analytics via natural language\nSalesforce Agentforce — 12,000+ orgs, 84% self-resolution\nCursor — $1B ARR, entire codebases queryable via text\nGitHub Copilot — 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/textui",
+    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog \u2014 analytics via natural language\nSalesforce Agentforce \u2014 12,000+ orgs, 84% self-resolution\nCursor \u2014 $1B ARR, entire codebases queryable via text\nGitHub Copilot \u2014 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/textui",
     "image": "scripts/thread-assets/universal_text_ui.png",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "stateagents",
-    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else — 99% of public services — is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/stateagents",
+    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else \u2014 99% of public services \u2014 is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/stateagents",
     "image": "scripts/thread-assets/agentic_state.png",
     "scheduleDate": "2026-04-11",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "stepwise-ai-sales",
@@ -656,17 +685,19 @@
     "image": "scripts/thread-assets/stepwise_ai.png",
     "scheduleDate": "2026-04-12",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "agentic-state-eresidency",
-    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it.\n\nThe e-Residency program generated €125M in state revenue last year. 87% growth. For every euro invested, twelve came back.\n\n5,556 new companies formed by non-citizens in a single year.\n\nThis is what happens when government operates as infrastructure instead of gatekeeping. The state becomes a platform. Citizenship becomes a credential. Geography becomes optional.\n\nveda.ng/stateagents",
+    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it.\n\nThe e-Residency program generated \u20ac125M in state revenue last year. 87% growth. For every euro invested, twelve came back.\n\n5,556 new companies formed by non-citizens in a single year.\n\nThis is what happens when government operates as infrastructure instead of gatekeeping. The state becomes a platform. Citizenship becomes a credential. Geography becomes optional.\n\nveda.ng/stateagents",
     "image": "scripts/thread-assets/agentic_state.png",
     "scheduleDate": "2026-04-13",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "universal-text-ui-106apps",
@@ -674,8 +705,9 @@
     "image": "scripts/thread-assets/universal_text_ui.png",
     "scheduleDate": "2026-04-14",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "stepwise-ai-marketing",
@@ -683,17 +715,19 @@
     "image": "scripts/thread-assets/stepwise_ai.png",
     "scheduleDate": "2026-04-15",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "agentic-state-singapore",
-    "text": "Singapore's Ask Jamie chatbot has handled 50 million citizen queries. Their AI call transcription cut after-call work by 72%.\n\n100,000 public officers use Pair — a government-built AI tool — saving 50 minutes per task on average.\n\nIn the 2026 budget, Singapore announced the shift from \"AI pilots\" to \"scaled deployment at national speed.\"\n\nMost countries are still debating whether to start a pilot.\n\nveda.ng/stateagents",
+    "text": "Singapore's Ask Jamie chatbot has handled 50 million citizen queries. Their AI call transcription cut after-call work by 72%.\n\n100,000 public officers use Pair \u2014 a government-built AI tool \u2014 saving 50 minutes per task on average.\n\nIn the 2026 budget, Singapore announced the shift from \"AI pilots\" to \"scaled deployment at national speed.\"\n\nMost countries are still debating whether to start a pilot.\n\nveda.ng/stateagents",
     "image": "scripts/thread-assets/agentic_state.png",
     "scheduleDate": "2026-04-16",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "agentic-state-xroad",
@@ -701,8 +735,9 @@
     "image": "scripts/thread-assets/agentic_state.png",
     "scheduleDate": "2026-04-10",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "universal-text-ui-paradigms",
@@ -710,8 +745,9 @@
     "image": "scripts/thread-assets/universal_text_ui.png",
     "scheduleDate": "2026-04-17",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "stepwise-ai-gartner",
@@ -719,8 +755,9 @@
     "image": "scripts/thread-assets/stepwise_ai.png",
     "scheduleDate": "2026-04-19",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "agentic-state-uae",
@@ -728,35 +765,39 @@
     "image": "scripts/thread-assets/agentic_state.png",
     "scheduleDate": "2026-04-20",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "stepwise",
-    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing — nuanced human conversations — before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise",
+    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing \u2014 nuanced human conversations \u2014 before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise",
     "image": "scripts/thread-assets/stepwise_ai.png",
     "scheduleDate": "2026-04-21",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "textui",
-    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog — analytics via natural language\nSalesforce Agentforce — 12,000+ orgs, 84% self-resolution\nCursor — $1B ARR, entire codebases queryable via text\nGitHub Copilot — 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/textui",
+    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog \u2014 analytics via natural language\nSalesforce Agentforce \u2014 12,000+ orgs, 84% self-resolution\nCursor \u2014 $1B ARR, entire codebases queryable via text\nGitHub Copilot \u2014 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/textui",
     "image": "scripts/thread-assets/universal_text_ui.png",
     "scheduleDate": "2026-04-21",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "stateagents",
-    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else — 99% of public services — is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/stateagents",
+    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else \u2014 99% of public services \u2014 is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/stateagents",
     "image": "scripts/thread-assets/agentic_state.png",
     "scheduleDate": "2026-04-22",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "rewritten-post-1",
@@ -764,8 +805,9 @@
     "image": "scripts/thread-assets/linkedin-rewrites/post_1.mp4",
     "scheduleDate": "2026-05-09",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "rewritten-post-2",
@@ -773,8 +815,9 @@
     "image": "scripts/thread-assets/linkedin-rewrites/post_2.mp4",
     "scheduleDate": "2026-05-09",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "rewritten-post-3",
@@ -782,8 +825,9 @@
     "image": "scripts/thread-assets/linkedin-rewrites/post_3.png",
     "scheduleDate": "2026-05-09",
     "scheduleTime": "17:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "rewritten-post-4",
@@ -791,8 +835,9 @@
     "image": "scripts/thread-assets/linkedin-rewrites/post_4.png",
     "scheduleDate": "2026-05-10",
     "scheduleTime": "01:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "rewritten-post-5",
@@ -800,8 +845,9 @@
     "image": "scripts/thread-assets/linkedin-rewrites/post_5.mp4",
     "scheduleDate": "2026-05-10",
     "scheduleTime": "09:00",
-    "posted": false,
-    "castHash": null
+    "posted": true,
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "rewritten-post-6",
@@ -890,9 +936,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/sort_algorithm.mp4",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "castHash": null
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-meme-1",
@@ -900,9 +947,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/game_rules.jpg",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "castHash": null
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-meme-2",
@@ -910,9 +958,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/simple_feature.gif",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "castHash": null
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-meme-3",
@@ -920,9 +969,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/important_skill.jpg",
     "scheduleDate": "2026-05-14",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "castHash": null
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-meme-4",
@@ -930,9 +980,10 @@
     "image": "scripts/thread-assets/linkedin-rewrites/manager_cleanup.png",
     "scheduleDate": "2026-05-14",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "castHash": null
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "reddit-meme-5",
@@ -940,13 +991,14 @@
     "image": "scripts/thread-assets/linkedin-rewrites/steal_stolen.png",
     "scheduleDate": "2026-05-14",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
-    "castHash": null
+    "castHash": null,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "fc-original-shipping-speed",
-    "text": "Most startups die from moving too slow, not from shipping bugs.\n\nI watched a team spend 4 months perfecting their auth flow. By launch, two competitors had already taken the market.\n\nShip the ugly version. Fix it live. Your users will tell you what actually matters — and it's never what you think it is.",
+    "text": "Most startups die from moving too slow, not from shipping bugs.\n\nI watched a team spend 4 months perfecting their auth flow. By launch, two competitors had already taken the market.\n\nShip the ugly version. Fix it live. Your users will tell you what actually matters \u2014 and it's never what you think it is.",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "01:00",
     "posted": true,
@@ -973,7 +1025,7 @@
   },
   {
     "id": "fc-original-remote-work",
-    "text": "Hot take: Remote work didn't kill company culture. Bad managers just lost their only tool — walking around the office looking busy.\n\nThe companies that figured out async communication are now 3x more productive than the ones forcing everyone back to cubicles.",
+    "text": "Hot take: Remote work didn't kill company culture. Bad managers just lost their only tool \u2014 walking around the office looking busy.\n\nThe companies that figured out async communication are now 3x more productive than the ones forcing everyone back to cubicles.",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "01:00",
     "posted": true,
@@ -995,7 +1047,8 @@
     "image": "scripts/thread-assets/fc_post_6.png",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "09:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "fc-original-10x-myth",
@@ -1003,7 +1056,8 @@
     "image": "scripts/thread-assets/fc_post_7.png",
     "scheduleDate": "2026-05-12",
     "scheduleTime": "17:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "fc-original-boring-tech",
@@ -1011,7 +1065,8 @@
     "image": "scripts/thread-assets/fc_post_8.png",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "01:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "fc-original-easy-money",
@@ -1019,7 +1074,8 @@
     "image": "scripts/thread-assets/fc_post_9.png",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "09:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "fc-original-staff-eng",
@@ -1027,7 +1083,8 @@
     "image": "scripts/thread-assets/fc_post_10.png",
     "scheduleDate": "2026-05-13",
     "scheduleTime": "17:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-1",
@@ -1035,7 +1092,8 @@
     "image": "scripts/linkedin-assets/clean/post1_trust_gap.png",
     "scheduleDate": "2026-06-16",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-2",
@@ -1043,7 +1101,8 @@
     "image": "scripts/linkedin-assets/clean/post2_llm_explosion.png",
     "scheduleDate": "2026-06-16",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-3",
@@ -1051,7 +1110,8 @@
     "image": "scripts/linkedin-assets/clean/post14_check_size.png",
     "scheduleDate": "2026-06-17",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-4",
@@ -1059,7 +1119,8 @@
     "image": "scripts/linkedin-assets/clean/post18_agent_funding.png",
     "scheduleDate": "2026-06-17",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-5",
@@ -1067,7 +1128,8 @@
     "image": "scripts/linkedin-assets/clean/post21_blockchain_growth.png",
     "scheduleDate": "2026-06-17",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-6",
@@ -1075,7 +1137,8 @@
     "image": "scripts/linkedin-assets/clean/post7_consumer_concerns.png",
     "scheduleDate": "2026-06-18",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-7",
@@ -1083,7 +1146,8 @@
     "image": "scripts/linkedin-assets/clean/post3_citations.png",
     "scheduleDate": "2026-06-18",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-8",
@@ -1091,7 +1155,8 @@
     "image": "scripts/linkedin-assets/clean/post15_seed_growth.png",
     "scheduleDate": "2026-06-18",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-9",
@@ -1099,7 +1164,8 @@
     "image": "scripts/linkedin-assets/clean/post19_security_acquired.png",
     "scheduleDate": "2026-06-19",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-10",
@@ -1107,7 +1173,8 @@
     "image": "scripts/linkedin-assets/clean/post22_defi_nft.png",
     "scheduleDate": "2026-06-19",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-11",
@@ -1115,7 +1182,8 @@
     "image": "scripts/linkedin-assets/clean/post8_market_projections.png",
     "scheduleDate": "2026-06-19",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-12",
@@ -1123,7 +1191,8 @@
     "image": "scripts/linkedin-assets/clean/post4_china_us.png",
     "scheduleDate": "2026-06-20",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-13",
@@ -1131,7 +1200,8 @@
     "image": "scripts/linkedin-assets/clean/post16_death_valley.png",
     "scheduleDate": "2026-06-20",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-14",
@@ -1139,7 +1209,8 @@
     "image": "scripts/linkedin-assets/clean/post20_coding_agents.png",
     "scheduleDate": "2026-06-20",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-15",
@@ -1147,7 +1218,8 @@
     "image": "scripts/linkedin-assets/clean/post23_quantum_keywords.png",
     "scheduleDate": "2026-06-21",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-16",
@@ -1155,7 +1227,8 @@
     "image": "scripts/linkedin-assets/clean/post9_six_protocols.png",
     "scheduleDate": "2026-06-21",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-17",
@@ -1163,7 +1236,8 @@
     "image": "scripts/linkedin-assets/clean/post5_india_growth.png",
     "scheduleDate": "2026-06-21",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-18",
@@ -1171,7 +1245,8 @@
     "image": "scripts/linkedin-assets/clean/post17_gini.png",
     "scheduleDate": "2026-06-22",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-19",
@@ -1179,7 +1254,8 @@
     "image": "scripts/linkedin-assets/clean/post11_ecosystem.png",
     "scheduleDate": "2026-06-22",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-20",
@@ -1187,7 +1263,8 @@
     "image": "scripts/linkedin-assets/clean/post6_rising_keywords.png",
     "scheduleDate": "2026-06-22",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-21",
@@ -1195,7 +1272,8 @@
     "image": "scripts/linkedin-assets/clean/post13_value_shift.png",
     "scheduleDate": "2026-06-23",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-22",
@@ -1203,7 +1281,8 @@
     "image": "scripts/linkedin-assets/clean/post10_open_access.png",
     "scheduleDate": "2026-06-23",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-23",
@@ -1211,6 +1290,7 @@
     "image": "scripts/linkedin-assets/clean/post12_most_cited.png",
     "scheduleDate": "2026-06-23",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   }
 ]

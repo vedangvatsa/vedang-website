@@ -496,7 +496,7 @@
     "scheduleTime": "17:00",
     "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Klarna automated customer service. Saved $60M. Then satisfaction collapsed and they reversed it.\n\nThe failure was sequence, not technology. They went straight for the hardest problem. Companies that start with one boring, repetitive task — invoice matching, email triage — see payback in three months.\n\n70% of big-bang AI deployments fail. Discipline beats ambition.\n\nveda.ng/stepwise",
+    "text": "Klarna automated customer service. Saved $60M. Then satisfaction collapsed and they reversed it.\n\nThe failure was sequence, not technology. They went straight for the hardest problem. Companies that start with one boring, repetitive task \u2014 invoice matching, email triage \u2014 see payback in three months.\n\n70% of big-bang AI deployments fail. Discipline beats ambition.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-12T12:00:01.013Z",
     "fbPostId": "1785048661795414_1256314586678583"
   },
@@ -506,7 +506,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "Every dropdown on a dashboard exists because someone predicted your question. Your actual question is almost never one of them.\n\nPostHog replaced analytics dashboards with a text field. Salesforce did it for CRM — 84% self-resolution. Cursor did it for code — $1B ARR.\n\nThe pattern: text field + LLM + direct API calls. No menus. No navigation.\n\nveda.ng/textui",
+    "text": "Every dropdown on a dashboard exists because someone predicted your question. Your actual question is almost never one of them.\n\nPostHog replaced analytics dashboards with a text field. Salesforce did it for CRM \u2014 84% self-resolution. Cursor did it for code \u2014 $1B ARR.\n\nThe pattern: text field + LLM + direct API calls. No menus. No navigation.\n\nveda.ng/textui",
     "postedAt": "2026-04-12T12:00:05.110Z",
     "fbPostId": "1785048661795414_1256314676678574"
   },
@@ -536,7 +536,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it. €125M in state revenue last year. 12:1 ROI.\n\nGovernment as infrastructure. Citizenship as credential. Geography as optional.\n\nveda.ng/stateagents",
+    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it. \u20ac125M in state revenue last year. 12:1 ROI.\n\nGovernment as infrastructure. Citizenship as credential. Geography as optional.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-13T06:03:27.009Z",
     "fbPostId": "1785048661795414_1256872369956138"
   },
@@ -576,7 +576,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia's X-Road handles over 1 billion government queries per year. Birth registered → population registry, health insurance, and social services all updated. One notification. Zero additional forms.\n\nRunning since 2001. 25 years in production.\n\nMost countries digitized paper forms. Estonia redesigned the process architecture entirely.\n\nveda.ng/stateagents",
+    "text": "Estonia's X-Road handles over 1 billion government queries per year. Birth registered \u2192 population registry, health insurance, and social services all updated. One notification. Zero additional forms.\n\nRunning since 2001. 25 years in production.\n\nMost countries digitized paper forms. Estonia redesigned the process architecture entirely.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-12T12:00:19.902Z",
     "fbPostId": "1785048661795414_1256314946678547"
   },
@@ -911,7 +911,8 @@
     "image": "scripts/linkedin-assets/clean/post2_llm_explosion.png",
     "scheduleDate": "2026-06-16",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-3",
@@ -919,7 +920,8 @@
     "image": "scripts/linkedin-assets/clean/post14_check_size.png",
     "scheduleDate": "2026-06-17",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-4",
@@ -927,7 +929,8 @@
     "image": "scripts/linkedin-assets/clean/post18_agent_funding.png",
     "scheduleDate": "2026-06-17",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-5",
@@ -935,7 +938,8 @@
     "image": "scripts/linkedin-assets/clean/post21_blockchain_growth.png",
     "scheduleDate": "2026-06-17",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-6",
@@ -943,7 +947,8 @@
     "image": "scripts/linkedin-assets/clean/post7_consumer_concerns.png",
     "scheduleDate": "2026-06-18",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-7",
@@ -951,7 +956,8 @@
     "image": "scripts/linkedin-assets/clean/post3_citations.png",
     "scheduleDate": "2026-06-18",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-8",
@@ -959,7 +965,8 @@
     "image": "scripts/linkedin-assets/clean/post15_seed_growth.png",
     "scheduleDate": "2026-06-18",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-9",
@@ -967,7 +974,8 @@
     "image": "scripts/linkedin-assets/clean/post19_security_acquired.png",
     "scheduleDate": "2026-06-19",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-10",
@@ -975,7 +983,8 @@
     "image": "scripts/linkedin-assets/clean/post22_defi_nft.png",
     "scheduleDate": "2026-06-19",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-11",
@@ -983,7 +992,8 @@
     "image": "scripts/linkedin-assets/clean/post8_market_projections.png",
     "scheduleDate": "2026-06-19",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-12",
@@ -991,7 +1001,8 @@
     "image": "scripts/linkedin-assets/clean/post4_china_us.png",
     "scheduleDate": "2026-06-20",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-13",
@@ -999,7 +1010,8 @@
     "image": "scripts/linkedin-assets/clean/post16_death_valley.png",
     "scheduleDate": "2026-06-20",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-14",
@@ -1007,7 +1019,8 @@
     "image": "scripts/linkedin-assets/clean/post20_coding_agents.png",
     "scheduleDate": "2026-06-20",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-15",
@@ -1015,7 +1028,8 @@
     "image": "scripts/linkedin-assets/clean/post23_quantum_keywords.png",
     "scheduleDate": "2026-06-21",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-16",
@@ -1023,7 +1037,8 @@
     "image": "scripts/linkedin-assets/clean/post9_six_protocols.png",
     "scheduleDate": "2026-06-21",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-17",
@@ -1031,7 +1046,8 @@
     "image": "scripts/linkedin-assets/clean/post5_india_growth.png",
     "scheduleDate": "2026-06-21",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-18",
@@ -1039,7 +1055,8 @@
     "image": "scripts/linkedin-assets/clean/post17_gini.png",
     "scheduleDate": "2026-06-22",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-19",
@@ -1047,7 +1064,8 @@
     "image": "scripts/linkedin-assets/clean/post11_ecosystem.png",
     "scheduleDate": "2026-06-22",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-20",
@@ -1055,7 +1073,8 @@
     "image": "scripts/linkedin-assets/clean/post6_rising_keywords.png",
     "scheduleDate": "2026-06-22",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-21",
@@ -1063,7 +1082,8 @@
     "image": "scripts/linkedin-assets/clean/post13_value_shift.png",
     "scheduleDate": "2026-06-23",
     "scheduleTime": "00:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-22",
@@ -1071,7 +1091,8 @@
     "image": "scripts/linkedin-assets/clean/post10_open_access.png",
     "scheduleDate": "2026-06-23",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "threads-post-23",
@@ -1079,7 +1100,8 @@
     "image": "scripts/linkedin-assets/clean/post12_most_cited.png",
     "scheduleDate": "2026-06-23",
     "scheduleTime": "16:00",
-    "posted": false
+    "posted": true,
+    "error": "Skipped to clear backlog"
   },
   {
     "id": "li-draft-1",
@@ -1174,7 +1196,7 @@
     "scheduleDate": "2026-07-01",
     "scheduleTime": "01:00",
     "posted": false,
-    "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute → Memory → Sandboxed Execution → Perception → Orchestration → Evaluation → Security → Agents as Products\n\nCheck the full breakdown of the taxonomy.\n\nveda.ng/agent-infrastructure-stack",
+    "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute \u2192 Memory \u2192 Sandboxed Execution \u2192 Perception \u2192 Orchestration \u2192 Evaluation \u2192 Security \u2192 Agents as Products\n\nCheck the full breakdown of the taxonomy.\n\nveda.ng/agent-infrastructure-stack",
     "image": "scripts/thread-assets/table_1_taxonomy.png"
   },
   {
