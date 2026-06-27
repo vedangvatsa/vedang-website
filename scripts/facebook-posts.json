@@ -496,7 +496,7 @@
     "scheduleTime": "17:00",
     "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Klarna automated customer service. Saved $60M. Then satisfaction collapsed and they reversed it.\n\nThe failure was sequence, not technology. They went straight for the hardest problem. Companies that start with one boring, repetitive task \u2014 invoice matching, email triage \u2014 see payback in three months.\n\n70% of big-bang AI deployments fail. Discipline beats ambition.\n\nveda.ng/stepwise",
+    "text": "Klarna automated customer service. Saved $60M. Then satisfaction collapsed and they reversed it.\n\nThe failure was sequence, not technology. They went straight for the hardest problem. Companies that start with one boring, repetitive task — invoice matching, email triage — see payback in three months.\n\n70% of big-bang AI deployments fail. Discipline beats ambition.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-12T12:00:01.013Z",
     "fbPostId": "1785048661795414_1256314586678583"
   },
@@ -506,7 +506,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "Every dropdown on a dashboard exists because someone predicted your question. Your actual question is almost never one of them.\n\nPostHog replaced analytics dashboards with a text field. Salesforce did it for CRM \u2014 84% self-resolution. Cursor did it for code \u2014 $1B ARR.\n\nThe pattern: text field + LLM + direct API calls. No menus. No navigation.\n\nveda.ng/textui",
+    "text": "Every dropdown on a dashboard exists because someone predicted your question. Your actual question is almost never one of them.\n\nPostHog replaced analytics dashboards with a text field. Salesforce did it for CRM — 84% self-resolution. Cursor did it for code — $1B ARR.\n\nThe pattern: text field + LLM + direct API calls. No menus. No navigation.\n\nveda.ng/textui",
     "postedAt": "2026-04-12T12:00:05.110Z",
     "fbPostId": "1785048661795414_1256314676678574"
   },
@@ -536,7 +536,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it. \u20ac125M in state revenue last year. 12:1 ROI.\n\nGovernment as infrastructure. Citizenship as credential. Geography as optional.\n\nveda.ng/stateagents",
+    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it. €125M in state revenue last year. 12:1 ROI.\n\nGovernment as infrastructure. Citizenship as credential. Geography as optional.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-13T06:03:27.009Z",
     "fbPostId": "1785048661795414_1256872369956138"
   },
@@ -576,7 +576,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia's X-Road handles over 1 billion government queries per year. Birth registered \u2192 population registry, health insurance, and social services all updated. One notification. Zero additional forms.\n\nRunning since 2001. 25 years in production.\n\nMost countries digitized paper forms. Estonia redesigned the process architecture entirely.\n\nveda.ng/stateagents",
+    "text": "Estonia's X-Road handles over 1 billion government queries per year. Birth registered → population registry, health insurance, and social services all updated. One notification. Zero additional forms.\n\nRunning since 2001. 25 years in production.\n\nMost countries digitized paper forms. Estonia redesigned the process architecture entirely.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-12T12:00:19.902Z",
     "fbPostId": "1785048661795414_1256314946678547"
   },
@@ -901,7 +901,9 @@
     "image": "scripts/linkedin-assets/clean/post1_trust_gap.png",
     "scheduleDate": "2026-06-16",
     "scheduleTime": "08:00",
-    "posted": false
+    "posted": true,
+    "postedAt": "2026-06-27T04:56:25.568Z",
+    "fbPostId": "1785048661795414_1318900823753292"
   },
   {
     "id": "threads-post-2",
@@ -1172,7 +1174,7 @@
     "scheduleDate": "2026-07-01",
     "scheduleTime": "01:00",
     "posted": false,
-    "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute \u2192 Memory \u2192 Sandboxed Execution \u2192 Perception \u2192 Orchestration \u2192 Evaluation \u2192 Security \u2192 Agents as Products\n\nCheck the full breakdown of the taxonomy.\n\nveda.ng/agent-infrastructure-stack",
+    "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute → Memory → Sandboxed Execution → Perception → Orchestration → Evaluation → Security → Agents as Products\n\nCheck the full breakdown of the taxonomy.\n\nveda.ng/agent-infrastructure-stack",
     "image": "scripts/thread-assets/table_1_taxonomy.png"
   },
   {
