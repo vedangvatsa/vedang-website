@@ -9,7 +9,7 @@
     "tweetId": "2036722749054353704",
     "tweets": [
       {
-        "text": "LinkedIn is not a professional network. It's a language.\n\nI built a translator. Here's what it does. \ud83e\uddf5\n\nveda.ng/lit",
+        "text": "LinkedIn is not a professional network. It's a language.\n\nI built a translator. Here's what it does. 🧵\n\nveda.ng/lit",
         "image": "scripts/thread-assets/lit_1.png"
       },
       {
@@ -38,7 +38,7 @@
     "posted": true,
     "tweets": [
       {
-        "text": "Shopping used to mean: open browser, search, compare, click, form, checkout.\n\nAI agents cut that to one step. You describe. They buy.\n\nThe agent is not a new channel. It is a new buyer. \ud83e\uddf5",
+        "text": "Shopping used to mean: open browser, search, compare, click, form, checkout.\n\nAI agents cut that to one step. You describe. They buy.\n\nThe agent is not a new channel. It is a new buyer. 🧵",
         "image": "scripts/thread-assets/agentic_1.png"
       },
       {
@@ -597,7 +597,7 @@
     "scheduleTime": "17:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_commerce.png",
-    "text": "Your next customer is an algorithm.\n\nYou say \"get me running shoes under $150, good for flat feet, delivered by Friday.\" The agent searches Nike, Amazon, and specialty retailers simultaneously, weighs price against reviews and shipping speed, and completes checkout.\n\nYou went from doing the shopping to describing what you want.\n\nEvery major platform has shipped agent commerce products in the past 12 months. Mastercard Agent Pay. Coinbase x402. ChatGPT in-chat purchasing. Google's Universal Commerce Protocol. Shopify Agentic Storefronts.\n\nThe infrastructure is built. The protocols are live. The payment rails work. What is missing is consumer trust, merchant readiness, and regulatory clarity.\n\nBrand loyalty weakens when your agent switches you to a cheaper product that works just as well. Display ads lose relevance when the buyer is an algorithm.\n\nThe companies building for both humans and agents simultaneously will be in position when adoption accelerates.\n\nveda.ng/agentcommerce\n\nThe interface layer is changing too \u2014 dashboards are giving way to text fields that call APIs directly: veda.ng/textui",
+    "text": "Your next customer is an algorithm.\n\nYou say \"get me running shoes under $150, good for flat feet, delivered by Friday.\" The agent searches Nike, Amazon, and specialty retailers simultaneously, weighs price against reviews and shipping speed, and completes checkout.\n\nYou went from doing the shopping to describing what you want.\n\nEvery major platform has shipped agent commerce products in the past 12 months. Mastercard Agent Pay. Coinbase x402. ChatGPT in-chat purchasing. Google's Universal Commerce Protocol. Shopify Agentic Storefronts.\n\nThe infrastructure is built. The protocols are live. The payment rails work. What is missing is consumer trust, merchant readiness, and regulatory clarity.\n\nBrand loyalty weakens when your agent switches you to a cheaper product that works just as well. Display ads lose relevance when the buyer is an algorithm.\n\nThe companies building for both humans and agents simultaneously will be in position when adoption accelerates.\n\nveda.ng/agentcommerce\n\nThe interface layer is changing too — dashboards are giving way to text fields that call APIs directly: veda.ng/textui",
     "postedAt": "2026-04-17T20:24:13.945Z",
     "tweetId": "2045236914379219034"
   },
@@ -677,7 +677,7 @@
     "scheduleTime": "17:00",
     "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Klarna automated customer service. Saved $60M. Then customer satisfaction collapsed and they hired people back.\n\nThe failure wasn't AI. It was sequence. They skipped straight to the hardest problem \u2014 nuanced human interactions \u2014 instead of starting where machines already win: invoice matching, log parsing, email routing.\n\n70% of companies that try to automate everything at once fail. Companies that pick one boring, high-frequency task first? Payback in under three months.\n\nDiscipline beats ambition every time.\n\nveda.ng/stepwise",
+    "text": "Klarna automated customer service. Saved $60M. Then customer satisfaction collapsed and they hired people back.\n\nThe failure wasn't AI. It was sequence. They skipped straight to the hardest problem — nuanced human interactions — instead of starting where machines already win: invoice matching, log parsing, email routing.\n\n70% of companies that try to automate everything at once fail. Companies that pick one boring, high-frequency task first? Payback in under three months.\n\nDiscipline beats ambition every time.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-12T11:58:35.392Z",
     "tweetId": "2043297725995696570"
   },
@@ -687,7 +687,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "Every dropdown on a dashboard is a question someone predicted you'd ask. Your actual question is almost never one of them.\n\nPostHog replaced their analytics dashboard with a text field. Salesforce did it for CRM \u2014 84% of queries now self-resolve. Cursor did it for code and hit $1B ARR.\n\nThe pattern: a text field backed by an LLM that calls APIs directly. No menus. No navigation. Just ask.\n\nThe dashboard era is ending.\n\nveda.ng/textui",
+    "text": "Every dropdown on a dashboard is a question someone predicted you'd ask. Your actual question is almost never one of them.\n\nPostHog replaced their analytics dashboard with a text field. Salesforce did it for CRM — 84% of queries now self-resolve. Cursor did it for code and hit $1B ARR.\n\nThe pattern: a text field backed by an LLM that calls APIs directly. No menus. No navigation. Just ask.\n\nThe dashboard era is ending.\n\nveda.ng/textui",
     "postedAt": "2026-04-12T11:58:38.244Z",
     "tweetId": "2043297738083663890"
   },
@@ -717,7 +717,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia lets anyone on earth start an EU company remotely. 135,000 people from 170 countries have.\n\n\u20ac125M in state revenue last year. 12:1 ROI. 5,556 new companies from non-citizens.\n\nGovernment as infrastructure. Citizenship as credential. Geography as optional.\n\nveda.ng/stateagents",
+    "text": "Estonia lets anyone on earth start an EU company remotely. 135,000 people from 170 countries have.\n\n€125M in state revenue last year. 12:1 ROI. 5,556 new companies from non-citizens.\n\nGovernment as infrastructure. Citizenship as credential. Geography as optional.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-13T06:03:15.613Z",
     "tweetId": "2043570692382499240"
   },
@@ -737,7 +737,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Three-person agency. Six hours per person every Friday compiling client reports from 10+ data sources.\n\nRouted analytics into an LLM. Twenty hours freed weekly. Client load: 30 \u2192 50 campaigns. Zero hires.\n\nAI didn't replace anyone. It removed a bottleneck.\n\nveda.ng/stepwise",
+    "text": "Three-person agency. Six hours per person every Friday compiling client reports from 10+ data sources.\n\nRouted analytics into an LLM. Twenty hours freed weekly. Client load: 30 → 50 campaigns. Zero hires.\n\nAI didn't replace anyone. It removed a bottleneck.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-22T05:40:34.642Z",
     "tweetId": "2046826474343223446"
   },
@@ -757,7 +757,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia's X-Road: 1 billion+ government queries per year. Birth registered \u2192 population registry, health insurance, social services all updated automatically. One notification. Zero forms.\n\nOperational since 2001. 25 years in production. Not a pilot.\n\nMost countries digitized paper forms. Estonia redesigned the process.\n\nveda.ng/stateagents",
+    "text": "Estonia's X-Road: 1 billion+ government queries per year. Birth registered → population registry, health insurance, social services all updated automatically. One notification. Zero forms.\n\nOperational since 2001. 25 years in production. Not a pilot.\n\nMost countries digitized paper forms. Estonia redesigned the process.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-12T11:58:46.671Z",
     "tweetId": "2043297772955205807"
   },
@@ -767,7 +767,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "CLI \u2192 GUI \u2192 NLI. Three paradigms. Each cut adaptation cost by 10x.\n\nThe GUI didn't improve the command line. It replaced it. Natural language won't improve dashboards. Same thing.\n\nveda.ng/textui",
+    "text": "CLI → GUI → NLI. Three paradigms. Each cut adaptation cost by 10x.\n\nThe GUI didn't improve the command line. It replaced it. Natural language won't improve dashboards. Same thing.\n\nveda.ng/textui",
     "postedAt": "2026-04-23T05:52:57.159Z",
     "tweetId": "2047191977041834057"
   },
@@ -1286,7 +1286,8 @@
     "scheduleTime": "09:00",
     "posted": false,
     "text": "Micromanagers buy physical presence. Leaders buy outcomes.\n\nResults and client satisfaction matter. Location doesn't.\n\nStop watching the clock.",
-    "image": "scripts/linkedin-assets/clean/draft1_micromanagers_v2_1782464292325.jpg"
+    "image": "scripts/linkedin-assets/clean/draft1_micromanagers_v2_1782464292325.jpg",
+    "error": "Request failed with code 401 - Invalid or expired token (Twitter code 89)"
   },
   {
     "id": "li-draft-2",
@@ -1372,7 +1373,7 @@
         "image": "scripts/thread-assets/figure_1_market_map.png"
       },
       {
-        "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute \u2192 Memory \u2192 Sandboxed Execution \u2192 Perception \u2192 Orchestration \u2192 Evaluation \u2192 Security \u2192 Agents as Products",
+        "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute → Memory → Sandboxed Execution → Perception → Orchestration → Evaluation → Security → Agents as Products",
         "image": "scripts/thread-assets/table_1_taxonomy.png"
       },
       {

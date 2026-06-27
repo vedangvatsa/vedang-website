@@ -1057,9 +1057,11 @@
     "id": "li-draft-1",
     "scheduleDate": "2026-06-27",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Micromanagers buy physical presence. Leaders buy outcomes.\n\nIf your team has to explain why they are late for a doctor's appointment or why they need to work from home, you have infantilized your workplace.\n\nIf they deliver results and keep clients happy, their physical location or exact hours shouldn't matter.\n\nWe are dealing with adults. Stop watching the clock. Focus on output.",
-    "image": "scripts/linkedin-assets/clean/draft1_micromanagers_v2_1782464292325.jpg"
+    "image": "scripts/linkedin-assets/clean/draft1_micromanagers_v2_1782464292325.jpg",
+    "postedAt": "2026-06-27T12:02:19.972Z",
+    "postId": "urn:li:share:7476605834802683904"
   },
   {
     "id": "li-draft-2",

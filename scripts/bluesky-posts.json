@@ -566,7 +566,7 @@
     "scheduleDate": "2026-04-18",
     "scheduleTime": "17:00",
     "posted": true,
-    "text": "Your next customer is an algorithm.\n\nAI agents search, compare, and checkout. You describe what you want. The machine buys it.\n\nveda.ng/agentcommerce\n\nThe interface is changing too \u2014 dashboards give way to text fields calling APIs directly: veda.ng/textui",
+    "text": "Your next customer is an algorithm.\n\nAI agents search, compare, and checkout. You describe what you want. The machine buys it.\n\nveda.ng/agentcommerce\n\nThe interface is changing too — dashboards give way to text fields calling APIs directly: veda.ng/textui",
     "image": "scripts/thread-assets/agentic_commerce.png",
     "postedAt": "2026-04-29T20:43:17.748Z",
     "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mknxmvwvmo25"
@@ -633,7 +633,7 @@
     "scheduleDate": "2026-04-12",
     "scheduleTime": "17:00",
     "posted": true,
-    "text": "Lead response: 4 hours \u2192 60 seconds. One voice agent, one task. Conversions tripled.\n\nThe sales team stopped qualifying. They only close.\n\nveda.ng/stepwise",
+    "text": "Lead response: 4 hours → 60 seconds. One voice agent, one task. Conversions tripled.\n\nThe sales team stopped qualifying. They only close.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-12T11:59:33.410Z",
     "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgqwtkr2h"
   },
@@ -642,7 +642,7 @@
     "scheduleDate": "2026-04-13",
     "scheduleTime": "09:00",
     "posted": true,
-    "text": "Estonia lets anyone start an EU company remotely. 135,000 people from 170 countries. \u20ac125M in state revenue. 12:1 ROI.\n\nGovernment as infrastructure.\n\nveda.ng/stateagents",
+    "text": "Estonia lets anyone start an EU company remotely. 135,000 people from 170 countries. €125M in state revenue. 12:1 ROI.\n\nGovernment as infrastructure.\n\nveda.ng/stateagents",
     "postedAt": "2026-05-01T20:30:06.626Z",
     "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mksxt3xdis2n"
   },
@@ -660,7 +660,7 @@
     "scheduleDate": "2026-04-15",
     "scheduleTime": "09:00",
     "posted": true,
-    "text": "3-person agency. 6 hours/person every Friday on reports. Routed analytics to LLM. 20 hours freed. Clients: 30 \u2192 50. Zero hires.\n\nveda.ng/stepwise",
+    "text": "3-person agency. 6 hours/person every Friday on reports. Routed analytics to LLM. 20 hours freed. Clients: 30 → 50. Zero hires.\n\nveda.ng/stepwise",
     "postedAt": "2026-05-02T20:07:47.382Z",
     "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkvh273kye2b"
   },
@@ -678,7 +678,7 @@
     "scheduleDate": "2026-04-10",
     "scheduleTime": "01:00",
     "posted": true,
-    "text": "Estonia's X-Road: 1B+ gov queries/year. Birth registered \u2192 all agencies updated. One notification. Zero forms. Running since 2001.\n\nveda.ng/stateagents",
+    "text": "Estonia's X-Road: 1B+ gov queries/year. Birth registered → all agencies updated. One notification. Zero forms. Running since 2001.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-12T11:59:33.447Z",
     "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mjccgqyr6j2z"
   },
@@ -687,7 +687,7 @@
     "scheduleDate": "2026-04-17",
     "scheduleTime": "09:00",
     "posted": true,
-    "text": "CLI \u2192 GUI \u2192 NLI. Each cut adaptation cost 10x. The GUI replaced the command line. Natural language will replace dashboards.\n\nveda.ng/textui",
+    "text": "CLI → GUI → NLI. Each cut adaptation cost 10x. The GUI replaced the command line. Natural language will replace dashboards.\n\nveda.ng/textui",
     "postedAt": "2026-05-03T20:09:12.907Z",
     "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mkxxlo453a2n"
   },
@@ -1182,9 +1182,11 @@
     "id": "li-draft-1",
     "scheduleDate": "2026-06-27",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Micromanagers buy physical presence. Leaders buy outcomes.\n\nIf your team delivers results and keeps clients happy, their exact hours or location shouldn't matter.\n\nWe are dealing with adults. Stop watching the clock. Focus on output.",
-    "image": "scripts/linkedin-assets/clean/draft1_micromanagers_v2_1782464292325.jpg"
+    "image": "scripts/linkedin-assets/clean/draft1_micromanagers_v2_1782464292325.jpg",
+    "postedAt": "2026-06-27T12:02:27.349Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mpbfzvdlas2x"
   },
   {
     "id": "li-draft-2",
@@ -1270,7 +1272,7 @@
     "scheduleDate": "2026-07-01",
     "scheduleTime": "01:00",
     "posted": false,
-    "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute \u2192 Memory \u2192 Sandboxed Execution \u2192 Perception \u2192 Orchestration \u2192 Evaluation \u2192 Security \u2192 Agents as Products\n\nCheck the full breakdown of the taxonomy.\n\nveda.ng/agent-infrastructure-stack"
+    "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute → Memory → Sandboxed Execution → Perception → Orchestration → Evaluation → Security → Agents as Products\n\nCheck the full breakdown of the taxonomy.\n\nveda.ng/agent-infrastructure-stack"
   },
   {
     "id": "agent-infrastructure-stack-3",
