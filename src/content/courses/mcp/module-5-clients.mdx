@@ -10,7 +10,7 @@ An MCP server is useless without a client. The good news is that MCP adoption ha
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">Claude Desktop Configuration</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Claude Desktop is the reference MCP client. It supports all MCP features and is the best environment for testing.</p>
             <p><strong>Configuration file location:</strong></p>
             <ul>
@@ -46,7 +46,7 @@ An MCP server is useless without a client. The good news is that MCP adoption ha
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">Cursor & Windsurf Integration</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Cursor supports MCP servers natively through its settings. The configuration is similar to Claude Desktop but managed through the UI.</p>
             <p><strong>Setting up in Cursor:</strong></p>
             <ol>
@@ -72,7 +72,7 @@ An MCP server is useless without a client. The good news is that MCP adoption ha
     </AccordionItem>
     <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg text-left">VS Code with GitHub Copilot</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>VS Code supports MCP through its GitHub Copilot Chat integration. Configuration uses the <code>.vscode/mcp.json</code> file:</p>
             <pre><code>{`{
   "servers": {
@@ -88,7 +88,7 @@ An MCP server is useless without a client. The good news is that MCP adoption ha
     </AccordionItem>
     <AccordionItem value="item-4">
         <AccordionTrigger className="text-lg text-left">Building a Custom MCP Client</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>You can build your own MCP client using the SDK. This is useful for embedding MCP in custom applications, scripts, or automation pipelines.</p>
             <pre><code>{`import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
@@ -117,7 +117,7 @@ console.log("Result:", result);`}</code></pre>
     </AccordionItem>
     <AccordionItem value="item-5">
         <AccordionTrigger className="text-lg text-left">Antigravity Configuration</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Antigravity (Google DeepMind's AI coding agent) supports MCP servers through its settings UI and workspace configuration:</p>
             <p><strong>Setting up:</strong></p>
             <ol>
@@ -131,7 +131,7 @@ console.log("Result:", result);`}</code></pre>
     </AccordionItem>
     <AccordionItem value="item-6">
         <AccordionTrigger className="text-lg text-left">Per-Project vs Global Configuration</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>MCP servers can be configured at two levels, and choosing correctly matters for team workflows:</p>
             <p><strong>Global configuration:</strong></p>
             <ul>

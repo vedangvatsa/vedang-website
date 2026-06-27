@@ -10,7 +10,7 @@ Theory is over. In this module, you'll build a working MCP server that exposes a
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">Step 1: Project Setup</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Create a new project and install the MCP SDK:</p>
             <pre><code>{`mkdir my-mcp-server && cd my-mcp-server
 npm init -y
@@ -38,7 +38,7 @@ npm install -D typescript @types/node tsx`}</code></pre>
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">Step 2: Write the Server</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Create <code>src/index.ts</code> with a minimal server that has one tool. a word counter:</p>
             <pre><code>{`import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
@@ -80,7 +80,7 @@ await server.connect(transport);`}</code></pre>
     </AccordionItem>
     <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg text-left">Step 3: Test with MCP Inspector</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Before connecting to a real client, test your server with the <strong>MCP Inspector</strong>. a web-based debugging tool:</p>
             <pre><code>{`npx @modelcontextprotocol/inspector npx tsx src/index.ts`}</code></pre>
             <p>This opens a browser UI where you can:</p>
@@ -95,7 +95,7 @@ await server.connect(transport);`}</code></pre>
     </AccordionItem>
     <AccordionItem value="item-4">
         <AccordionTrigger className="text-lg text-left">Step 4: Connect to Claude Desktop</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>To connect your server to Claude Desktop, edit the configuration file:</p>
             <p><strong>macOS:</strong> <code>~/Library/Application Support/Claude/claude_desktop_config.json</code></p>
             <p><strong>Windows:</strong> <code>%APPDATA%\Claude\claude_desktop_config.json</code></p>
@@ -113,7 +113,7 @@ await server.connect(transport);`}</code></pre>
     </AccordionItem>
     <AccordionItem value="item-5">
         <AccordionTrigger className="text-lg text-left">Writing Tool Descriptions That Work</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>The tool description is the most underrated part of MCP development. The LLM reads it to decide when and how to use your tool. A bad description means the LLM will use your tool incorrectly or not at all.</p>
             <p><strong>Bad descriptions:</strong></p>
             <ul>
@@ -141,7 +141,7 @@ await server.connect(transport);`}</code></pre>
     </AccordionItem>
     <AccordionItem value="item-6">
         <AccordionTrigger className="text-lg text-left">Common First-Server Mistakes</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Every MCP developer hits these issues. Save yourself the debugging time:</p>
             <p><strong>1. Using console.log instead of console.error.</strong> In stdio transport, stdout is reserved for JSON-RPC messages. Any <code>console.log()</code> corrupts the protocol stream. Always use <code>console.error()</code> for debugging.</p>
             <p><strong>2. Forgetting to return the right format.</strong> Every tool must return <code>{'{ content: [{ type: "text", text: "..." }] }'}</code>. Returning a raw string or object will cause a protocol error.</p>

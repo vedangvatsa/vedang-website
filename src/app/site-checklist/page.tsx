@@ -292,7 +292,7 @@ export default function WebsiteSpecificationPage() {
       </header>
 
       <div className="py-10 md:py-14">
-        <article className="notion-article prose prose-lg prose-neutral max-w-none">
+        <article className="notion-article prose prose-lg prose-neutral max-w-4xl mx-auto">
           <div className="space-y-20 not-prose">
 
         {/* ── Stats ── */}

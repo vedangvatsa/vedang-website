@@ -10,7 +10,7 @@ This module covers the fundamental techniques every prompt engineer must know. T
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg">Zero-Shot, One-Shot, and Few-Shot Prompting</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>These techniques refer to how many examples you provide in your prompt. The number of examples dramatically affects output quality.</p>
             <ul>
                 <li><strong>Zero-Shot:</strong> You provide no examples, only the instruction. This is the simplest form of prompting and works well for straightforward tasks. <br/> <i>Example: "Classify this email as SPAM or NOT SPAM."</i></li>
@@ -41,7 +41,7 @@ Review: "Best purchase I've made this year!"`}
     </AccordionItem>
     <AccordionItem value="item-2">
             <AccordionTrigger className="text-lg">Role, System, and Contextual Prompting</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>These techniques help you frame the conversation and provide necessary background.</p>
                 <ul>
                 <li><strong>Role Prompting:</strong> You assign a specific persona to the AI. This is effective for controlling the tone, style, and expertise of the response. <br/> <i>Example: "You are a world-class travel guide. Suggest three places to visit in Tokyo."</i></li>
@@ -70,7 +70,7 @@ Task: Write a 3-bullet summary suitable for a newsletter.`}
     </AccordionItem>
     <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg">Structured Output: Controlling the Format</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>For building applications, you often need the AI's response in a specific format, not just plain text. This is called structured output, and it is one of the most practical skills in prompt engineering.</p>
             <p><strong>JSON Output:</strong> Ask the model to return data as JSON. This is essential when your code needs to parse the response.</p>
             <div className="border-l-4 border-primary/50 pl-4 italic my-2"><p>"Extract the name, email, and phone number from the following text. Return your answer as a JSON object with keys: name, email, phone."</p></div>
@@ -83,7 +83,7 @@ Task: Write a 3-bullet summary suitable for a newsletter.`}
     </AccordionItem>
     <AccordionItem value="item-4">
         <AccordionTrigger className="text-lg">Temperature and Parameters: Tuning the Output</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Beyond the text of your prompt, most LLM APIs expose parameters that control how the model generates its response. Understanding these is essential for production use.</p>
 
             <Card className="my-4">
@@ -124,7 +124,7 @@ Task: Write a 3-bullet summary suitable for a newsletter.`}
     </AccordionItem>
     <AccordionItem value="item-5">
         <AccordionTrigger className="text-lg">Choosing the Right Model</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Not all models are created equal. Choosing the right model for your task is a critical prompt engineering decision that affects quality, speed, and cost.</p>
 
             <Card className="my-4">

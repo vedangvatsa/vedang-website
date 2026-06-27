@@ -12,7 +12,7 @@ A pipeline is a sequence of stages where the output of each stage feeds into the
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">Pipeline Architecture: Trigger → Fetch → Transform → Act → Report</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Every automation pipeline follows the same five-stage pattern:</p>
             <ol>
                 <li><strong>Trigger:</strong> What starts the pipeline. a cron schedule, a webhook, a database change, or a manual command.</li>
@@ -26,7 +26,7 @@ A pipeline is a sequence of stages where the output of each stage feeds into the
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">Case Study: Job Aggregation Pipeline</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>A real-world pipeline that aggregates job listings from 50+ company boards and broadcasts them daily:</p>
             <p><strong>Stage 1. Trigger:</strong> GitHub Actions cron runs at 6am UTC daily.</p>
             <p><strong>Stage 2. Fetch:</strong></p>
@@ -70,7 +70,7 @@ const results = await Promise.allSettled(sources);`}</code></pre>
     </AccordionItem>
     <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg text-left">Case Study: Content Publishing Pipeline</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>A pipeline that turns raw ideas into published, cross-platform content:</p>
             <p><strong>Input:</strong> A bullet-point outline in a Google Sheet or Notion doc.</p>
             <p><strong>Pipeline steps:</strong></p>
@@ -86,7 +86,7 @@ const results = await Promise.allSettled(sources);`}</code></pre>
     </AccordionItem>
     <AccordionItem value="item-4">
         <AccordionTrigger className="text-lg text-left">Building Resilient Pipelines</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Production pipelines must handle failures gracefully. Key patterns:</p>
             <p><strong>1. Retry with Exponential Backoff:</strong></p>
             <pre><code>{`async function fetchWithRetry(url, maxRetries = 3) {
@@ -112,7 +112,7 @@ const results = await Promise.allSettled(sources);`}</code></pre>
     </AccordionItem>
     <AccordionItem value="item-5">
         <AccordionTrigger className="text-lg text-left">Case Study: B2B Outreach Pipeline</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>A pipeline that automates lead sourcing, enrichment, personalization, and email delivery. See the full <a href="https://github.com/vedangvatsa/b2b-outreach" target="_blank">B2B Outreach</a> framework.</p>
             <p><strong>Stage 1. Lead sourcing:</strong></p>
             <ul>
@@ -144,7 +144,7 @@ const results = await Promise.allSettled(sources);`}</code></pre>
     </AccordionItem>
     <AccordionItem value="item-6">
         <AccordionTrigger className="text-lg text-left">Case Study: Competitive Intelligence Pipeline</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>A pipeline that continuously monitors competitors and surfaces actionable insights:</p>
             <p><strong>Daily automated checks:</strong></p>
             <ul>

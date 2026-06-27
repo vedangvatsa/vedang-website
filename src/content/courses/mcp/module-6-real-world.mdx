@@ -10,7 +10,7 @@ Now that you understand the fundamentals, let's build real servers that solve ac
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">Pattern 1: Database Server</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>A database MCP server lets AI query your database using natural language. The LLM generates SQL, your server validates and executes it, and returns formatted results.</p>
             <p><strong>Key design decisions:</strong></p>
             <ul>
@@ -56,7 +56,7 @@ server.tool(
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">Pattern 2: API Wrapper Server</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Wrapping a REST API as an MCP server is one of the most common and valuable patterns. It lets AI interact with any web service.</p>
             <p><strong>Example: Weather API server</strong></p>
             <pre><code>{`server.tool(
@@ -102,7 +102,7 @@ server.tool(
     </AccordionItem>
     <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg text-left">Pattern 3: Multi-Tool Servers</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Real servers typically expose multiple related tools. Group tools logically and use consistent naming conventions:</p>
             <pre><code>{`// A project management MCP server
 server.tool("list_projects", "List all active projects", {}, ...);
@@ -125,7 +125,7 @@ server.resource("projects://active", "List of active projects", ...);`}</code></
     </AccordionItem>
     <AccordionItem value="item-4">
         <AccordionTrigger className="text-lg text-left">Pattern 4: Authenticated Servers</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Many real-world MCP servers need authentication. either to access external APIs or to verify the identity of the connecting client.</p>
             <p><strong>API Key Authentication (Server → External API):</strong></p>
             <ul>
@@ -151,7 +151,7 @@ server.resource("projects://active", "List of active projects", ...);`}</code></
     </AccordionItem>
     <AccordionItem value="item-5">
         <AccordionTrigger className="text-lg text-left">Case Study: Google Sheets MCP Server</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>One of the most practical MCP servers is a Google Sheets connector. It turns spreadsheets into a real-time data layer for AI agents:</p>
             <p><strong>Tools exposed:</strong></p>
             <ul>
@@ -173,7 +173,7 @@ server.resource("projects://active", "List of active projects", ...);`}</code></
     </AccordionItem>
     <AccordionItem value="item-6">
         <AccordionTrigger className="text-lg text-left">Pattern 5: File System Server with Sandboxing</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>A file system MCP server gives AI read/write access to files. This is powerful and dangerous. you must sandbox it properly.</p>
             <p><strong>Implementation pattern:</strong></p>
             <pre><code>{`import path from 'path';

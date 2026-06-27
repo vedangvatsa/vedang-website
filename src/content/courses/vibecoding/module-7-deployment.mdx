@@ -11,7 +11,7 @@ Building an app on your computer is only half the job. To share it with the worl
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg">Deploying Your App to the Internet</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Deployment means putting your app on a server so anyone with a web browser can access it. Modern platforms make this easy, often a single command or a git push.</p>
             <p><strong>The Big Three Hosting Platforms:</strong></p>
             <ul>
@@ -39,7 +39,7 @@ Building an app on your computer is only half the job. To share it with the worl
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg">Connecting a Database</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>If your app needs to store user data, posts, orders, or any persistent information, you need a database. The most popular options for vibe coders are:</p>
             <div className="grid md:grid-cols-2 gap-6 my-6">
                 <Card>
@@ -69,7 +69,7 @@ Building an app on your computer is only half the job. To share it with the worl
     </AccordionItem>
     <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg">Environment Variables: Keeping Secrets Safe</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Your app will need secret keys, API keys for Stripe, database connection strings, authentication secrets. These must <strong>never</strong> be written directly in your code or pushed to GitHub.</p>
             <p><strong>How Environment Variables Work:</strong></p>
             <ol>
@@ -84,7 +84,7 @@ Building an app on your computer is only half the job. To share it with the worl
     </AccordionItem>
     <AccordionItem value="item-4">
         <AccordionTrigger className="text-lg">Custom Domains and Going Live</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Your deployed app will start on a platform subdomain (e.g., <code>myapp.vercel.app</code>). To use your own domain (e.g., <code>myapp.com</code>):</p>
             <ol>
                 <li><strong>Buy a domain:</strong> Use a registrar like Namecheap, Google Domains, or Cloudflare Registrar. Domains cost ~$10-15/year.</li>

@@ -12,7 +12,7 @@ The API layer is the foundation of the entire automation stack. No-code platform
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">REST APIs: The Universal Language</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>REST APIs use HTTP. the same protocol your browser uses. Every API call has four parts:</p>
             <ul>
                 <li><strong>Method:</strong> What action to take. <code>GET</code> (read), <code>POST</code> (create), <code>PUT</code> (update), <code>DELETE</code> (remove).</li>
@@ -40,7 +40,7 @@ console.log(\`Found \${data.jobs.length} open positions\`);`}</code></pre>
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">Authentication: API Keys, OAuth, and Tokens</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Most APIs require authentication. The three common patterns:</p>
             <p><strong>1. API Keys</strong>. Simple, static tokens. Include in headers or query params.</p>
             <pre><code>{`// Telegram Bot API. send a message to a channel
@@ -82,7 +82,7 @@ await fetch("https://api.openai.com/v1/chat/completions", {
     </AccordionItem>
     <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg text-left">Webhooks: Real-Time Event Triggers</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>APIs let you <em>pull</em> data on demand. Webhooks let services <em>push</em> data to you when something happens. They're the "trigger" in most automations.</p>
             <p><strong>How webhooks work:</strong></p>
             <ol>
@@ -126,7 +126,7 @@ export async function POST(request: Request) {
     </AccordionItem>
     <AccordionItem value="item-4">
         <AccordionTrigger className="text-lg text-left">Error Handling Patterns for API Automation</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>APIs fail. Networks timeout. Services go down. Your automation needs to handle all of this gracefully:</p>
             <p><strong>Pattern 1: Retry with backoff.</strong> If a request fails with a 5xx error or timeout, wait and try again. Increase the wait time with each retry to avoid hammering a struggling server:</p>
             <pre><code>{`async function fetchWithRetry(url, options = {}, maxRetries = 3) {
@@ -172,7 +172,7 @@ console.log(\`\${succeeded.length} sources OK, \${failed.length} failed\`);`}</c
     </AccordionItem>
     <AccordionItem value="item-5">
         <AccordionTrigger className="text-lg text-left">Building a Multi-Source Data Aggregator</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>The most valuable API automations aggregate data from multiple sources into a single, normalized format. Here's the complete pattern:</p>
             <pre><code>{`// Step 1: Define your sources with a common interface
 const sources = [
@@ -229,7 +229,7 @@ console.log(\`Aggregated \${unique.length} unique jobs from \${sources.length} s
     </AccordionItem>
     <AccordionItem value="item-6">
         <AccordionTrigger className="text-lg text-left">Pagination & Rate Limits</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>When automating API calls, two challenges always appear:</p>
             <p><strong>Pagination:</strong> APIs don't return all data at once. They paginate. 20 items per page, 100 per page, etc. Your automation must loop through all pages:</p>
             <pre><code>{`// Fetch all jobs across all pages

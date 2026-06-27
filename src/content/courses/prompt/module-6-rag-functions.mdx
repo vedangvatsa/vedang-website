@@ -10,7 +10,7 @@ LLMs are limited by their training data, they don't know about your company's do
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg">What is RAG (Retrieval-Augmented Generation)?</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>RAG is a technique that gives an LLM access to external knowledge at inference time. Instead of relying solely on what the model learned during training, you retrieve relevant information from your own data sources and inject it into the prompt.</p>
             <p><strong>The RAG Pipeline:</strong></p>
             <ol>
@@ -33,7 +33,7 @@ LLMs are limited by their training data, they don't know about your company's do
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg">Embeddings and Vector Databases</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>An <strong>embedding</strong> is a list of numbers (a vector) that represents the meaning of a piece of text. Texts with similar meanings have vectors that are close together in the mathematical space. This is how semantic search works, you find documents by meaning, not just by keyword matching.</p>
             <p><strong>Popular Embedding Models:</strong></p>
             <ul>
@@ -59,7 +59,7 @@ LLMs are limited by their training data, they don't know about your company's do
     </AccordionItem>
     <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg">Function Calling (Tool Use)</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Function calling is how an LLM interacts with the real world. Instead of just generating text, the model can decide to call a function (a "tool") that you define. This is the foundation for building AI agents.</p>
             <p><strong>How It Works:</strong></p>
             <ol>
@@ -81,7 +81,7 @@ LLMs are limited by their training data, they don't know about your company's do
     </AccordionItem>
     <AccordionItem value="item-4">
         <AccordionTrigger className="text-lg">Structured Outputs: Guaranteed JSON</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>When building applications, you need the LLM to return data in a predictable, parseable format, not free-form text. Structured outputs ensure the model returns valid JSON that matches a schema you define.</p>
             <p><strong>Without Structured Outputs:</strong> You ask the model to "return JSON" in your prompt and hope it complies. Sometimes it adds markdown code fences, extra commentary, or returns malformed JSON. Your code breaks.</p>
             <p><strong>With Structured Outputs:</strong> You provide a JSON Schema, and the model is constrained to only output valid JSON matching that schema. No extra text, no malformed output, guaranteed.</p>

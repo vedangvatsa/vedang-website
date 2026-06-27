@@ -12,7 +12,7 @@ MCP changes this. Created by Anthropic and now adopted across the industry, the 
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">The Problem: The N×M Integration Nightmare</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Imagine you have 5 AI applications (Claude, Cursor, VS Code, a custom chatbot, a data pipeline) and 10 data sources (Slack, GitHub, Google Drive, PostgreSQL, Jira, etc.). Without a standard protocol, you'd need to build <strong>5 × 10 = 50 custom integrations</strong>. Each with its own authentication, error handling, and data formatting.</p>
             <p>Now add one more AI application. you need 10 more integrations. Add one more data source. 5 more. This is the <strong>N×M problem</strong>, and it doesn't scale.</p>
             <p><strong>MCP solves this by reducing it to N+M.</strong> Each AI app implements one MCP client. Each data source implements one MCP server. Now adding a new app means one integration, and adding a new data source means one integration. The protocol handles everything in between.</p>
@@ -21,7 +21,7 @@ MCP changes this. Created by Anthropic and now adopted across the industry, the 
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">The Architecture: Host, Client, Server</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>MCP has three components that work together:</p>
             <ul>
                 <li><strong>MCP Host:</strong> The AI application the user interacts with. Claude Desktop, Cursor, VS Code, or your own app. The host creates and manages MCP clients. It's the "brain" that the user talks to.</li>
@@ -40,7 +40,7 @@ MCP changes this. Created by Anthropic and now adopted across the industry, the 
     </AccordionItem>
     <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg text-left">Why MCP Matters Now</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>MCP's timing is not accidental. Several trends converged to make it essential:</p>
             <ul>
                 <li><strong>AI Agents Are Going Mainstream:</strong> AI models are moving from "chat" to "do." They need reliable ways to take actions in the real world. search, code, email, book, buy.</li>
@@ -52,7 +52,7 @@ MCP changes this. Created by Anthropic and now adopted across the industry, the 
     </AccordionItem>
     <AccordionItem value="item-4">
         <AccordionTrigger className="text-lg text-left">What You Can Build with MCP</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>MCP servers can connect AI to virtually anything:</p>
             <ul>
                 <li><strong>Databases:</strong> Let AI query PostgreSQL, MySQL, MongoDB, or Supabase using natural language.</li>
@@ -67,7 +67,7 @@ MCP changes this. Created by Anthropic and now adopted across the industry, the 
     </AccordionItem>
     <AccordionItem value="item-5">
         <AccordionTrigger className="text-lg text-left">The MCP Ecosystem in Numbers</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>The MCP ecosystem has exploded since its release. Key milestones:</p>
             <ul>
                 <li><strong>Thousands of servers</strong> published on npm, GitHub, mcp.run, and smithery.ai</li>
@@ -88,7 +88,7 @@ MCP changes this. Created by Anthropic and now adopted across the industry, the 
     </AccordionItem>
     <AccordionItem value="item-6">
         <AccordionTrigger className="text-lg text-left">MCP vs Native Function Calling</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Both MCP and native function calling (Claude's tool_use, GPT's function_calling) let AI invoke external tools. The difference is in scope and portability:</p>
             <p><strong>Native Function Calling:</strong></p>
             <ul>

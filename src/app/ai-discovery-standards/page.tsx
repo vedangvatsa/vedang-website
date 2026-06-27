@@ -103,12 +103,12 @@ export default function AiDiscoveryStandardsPage() {
       </header>
 
       <div className="py-10 md:py-14">
-        <article className="notion-article prose prose-lg prose-neutral max-w-none">
+        <article className="notion-article prose prose-lg prose-neutral max-w-4xl mx-auto">
 
       <div className="space-y-24 not-prose">
 
         {/* ── The Problem ── */}
-        <section className="prose max-w-none">
+        <section className="prose max-w-4xl mx-auto">
           <h2 className="text-2xl font-semibold tracking-tight !mb-4">The Visibility Problem</h2>
           <p className="text-muted-foreground leading-relaxed">
             Search changed. In 2025, nearly 60% of queries ended without a click. The user got their answer
@@ -144,7 +144,7 @@ export default function AiDiscoveryStandardsPage() {
             </div>
           </div>
 
-          <div className="mt-8 prose max-w-none">
+          <div className="mt-8 prose max-w-4xl mx-auto">
             <p className="text-muted-foreground leading-relaxed">
               The blocking numbers reveal a market that hasn&apos;t settled on a strategy. Most publishers are
               reacting to AI crawlers the same way they reacted to early search engines in the 2000s: with blanket
@@ -164,7 +164,7 @@ export default function AiDiscoveryStandardsPage() {
         </section>
 
         {/* ── The Training vs Retrieval Split ── */}
-        <section className="prose max-w-none">
+        <section className="prose max-w-4xl mx-auto">
           <h2 className="text-2xl font-semibold tracking-tight !mb-4">The Training vs. Retrieval Split</h2>
           <p className="text-muted-foreground leading-relaxed">
             The most important distinction in AI discoverability is between <strong className="text-foreground">training crawlers</strong> and{' '}
@@ -299,7 +299,7 @@ export default function AiDiscoveryStandardsPage() {
         </section>
 
         {/* ── Content Strategy ── */}
-        <section className="prose max-w-none">
+        <section className="prose max-w-4xl mx-auto">
           <h2 className="text-2xl font-semibold tracking-tight !mb-4">Content That Gets Cited</h2>
           <p className="text-muted-foreground leading-relaxed">
             AI systems don&apos;t rank content. They extract it. The difference matters. A page that ranks #1 on Google

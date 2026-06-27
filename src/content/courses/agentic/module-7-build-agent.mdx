@@ -10,7 +10,7 @@ Theory is valuable, but nothing beats building something real. This module walks
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">Step 1: Define the Agent's Purpose and Constraints</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Before writing any code, you must define exactly what your agent should (and should not) do. A well-defined purpose prevents scope creep and makes the agent predictable and trustworthy.</p>
             <p><strong>The Agent Design Document:</strong></p>
             <ul>
@@ -24,7 +24,7 @@ Theory is valuable, but nothing beats building something real. This module walks
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">Step 2: Choose Your Framework</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>You don't need to build an agent from scratch. Frameworks provide the scaffolding, the reasoning loop, tool management, memory, and error handling, so you can focus on your agent's unique logic.</p>
             <p><strong>Framework Comparison:</strong></p>
             <div className="grid md:grid-cols-2 gap-4 my-4">
@@ -57,7 +57,7 @@ Theory is valuable, but nothing beats building something real. This module walks
     </AccordionItem>
     <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg text-left">Step 3: Write the System Prompt and Add Tools</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>The system prompt is the agent's "operating manual." It defines who the agent is, what it knows, what tools it has, and how it should behave. A great system prompt is the single most important factor in agent quality.</p>
             <p><strong>System Prompt Template:</strong></p>
             <div className="border-l-4 border-primary/50 pl-4 my-4 text-sm">
@@ -74,7 +74,7 @@ Theory is valuable, but nothing beats building something real. This module walks
     </AccordionItem>
     <AccordionItem value="item-4">
         <AccordionTrigger className="text-lg text-left">Step 4: Test, Evaluate, and Deploy</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>An agent that works in demo mode will break in production. Rigorous testing is essential before exposing your agent to real users.</p>
             <p><strong>Testing Strategies:</strong></p>
             <ul>
@@ -94,7 +94,7 @@ Theory is valuable, but nothing beats building something real. This module walks
     </AccordionItem>
     <AccordionItem value="item-5">
         <AccordionTrigger className="text-lg text-left">Step 5: A Working Code Example</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Here's a minimal agent you can run right now using the OpenAI Agents SDK. It has one tool (get the current weather) and a system prompt. This is a complete, working script.</p>
             <p><strong>Setup:</strong></p>
             <pre><code>{`pip install openai-agents

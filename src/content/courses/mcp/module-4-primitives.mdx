@@ -10,7 +10,7 @@ A common mistake is putting everything into tools. MCP gives you three distinct 
 <Accordion type="single" collapsible className="w-full mt-4">
     <AccordionItem value="item-1">
         <AccordionTrigger className="text-lg text-left">Tools: Model-Controlled Actions</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Tools are functions that the <strong>LLM decides when to call</strong>. They're the most common primitive and the one you'll use most often.</p>
             <p><strong>When to use tools:</strong></p>
             <ul>
@@ -44,7 +44,7 @@ A common mistake is putting everything into tools. MCP gives you three distinct 
     </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">Resources: App-Controlled Data</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Resources are data that the <strong>host application decides when to fetch</strong>. Think of them as files or documents the AI can read for context, but can't trigger on its own.</p>
             <p><strong>When to use resources:</strong></p>
             <ul>
@@ -68,7 +68,7 @@ A common mistake is putting everything into tools. MCP gives you three distinct 
     </AccordionItem>
     <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg text-left">Prompts: User-Controlled Templates</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Prompts are reusable message templates that the <strong>user selects</strong>. They appear as slash commands or menu items in the host application.</p>
             <p><strong>When to use prompts:</strong></p>
             <ul>
@@ -106,7 +106,7 @@ Code:
     </AccordionItem>
     <AccordionItem value="item-4">
         <AccordionTrigger className="text-lg text-left">Choosing the Right Primitive</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Use this decision framework:</p>
             <div className="grid md:grid-cols-2 gap-6 my-6">
                 <Card>
@@ -141,7 +141,7 @@ Code:
     </AccordionItem>
     <AccordionItem value="item-5">
         <AccordionTrigger className="text-lg text-left">Advanced Tool Patterns</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Beyond basic request-response, MCP tools support advanced patterns:</p>
             <p><strong>1. Progress reporting:</strong> For long-running tools, send progress updates so the user (and LLM) know the tool is still working:</p>
             <pre><code>{`server.tool("process_data", "Process a large dataset",
@@ -174,7 +174,7 @@ Code:
     </AccordionItem>
     <AccordionItem value="item-6">
         <AccordionTrigger className="text-lg text-left">Resource Templates and Subscriptions</AccordionTrigger>
-        <AccordionContent className="prose dark:prose-invert max-w-none text-base">
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Resources become powerful with templates and change notifications:</p>
             <p><strong>URI Templates:</strong> Instead of registering every possible resource, define a pattern:</p>
             <pre><code>{`// This single template handles any table name
