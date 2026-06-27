@@ -176,7 +176,7 @@ export function StateOfAiNgramAnalyzer() {
     { key: 'rising' as const, label: 'Rising', data: momentumData.map(m => ({ term: m.term, count: m.count2026, percent: m.growth, context: m.context })) },
   ];
   const activeData = tabs.find(t => t.key === activeTab)!.data;
-  const maxCount = activeData[0].count;
+  const maxCount = Math.max(...activeData.map(d => d.count));
 
   return (
     <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm overflow-hidden space-y-5">
