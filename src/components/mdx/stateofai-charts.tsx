@@ -205,8 +205,8 @@ export function StateOfAiNgramAnalyzer() {
                 {item.term}
               </div>
               <div className="flex-1 relative">
-                <div className="h-7 w-full rounded-full bg-secondary/60 overflow-hidden">
-                  <div className="h-full rounded-full bg-gradient-to-r from-blue-500/80 to-indigo-500/80 transition-all duration-700 ease-out" style={{ width: `${(item.count / maxCount) * 100}%` }} />
+                <div className="h-7 w-full rounded-full bg-secondary overflow-hidden">
+                  <div className="h-full rounded-full bg-primary transition-all duration-700 ease-out" style={{ width: `${(item.count / maxCount) * 100}%` }} />
                 </div>
               </div>
               <div className="w-20 text-right text-xs font-bold tabular-nums text-foreground">{item.count.toLocaleString()}</div>
@@ -241,9 +241,9 @@ export function StateOfAiMomentum() {
             <div className="flex items-center gap-3">
               <div className="w-44 text-right text-sm font-bold text-foreground truncate">{item.term}</div>
               <div className="flex-1 relative">
-                <div className="h-8 w-full rounded-full bg-secondary/60 overflow-hidden">
-                  <div className="h-full rounded-full bg-gradient-to-r from-emerald-500/80 to-teal-500/80 transition-all duration-700 ease-out flex items-center justify-end pr-2" style={{ width: `${(item.growth / maxGrowth) * 100}%` }}>
-                    <span className="text-[10px] font-black text-white/90 tabular-nums">{item.growth}x</span>
+                <div className="h-8 w-full rounded-full bg-secondary overflow-hidden">
+                  <div className="h-full rounded-full bg-primary transition-all duration-700 ease-out flex items-center justify-end pr-2" style={{ width: `${(item.growth / maxGrowth) * 100}%` }}>
+                    <span className="text-[10px] font-black text-primary-foreground tabular-nums">{item.growth}x</span>
                   </div>
                 </div>
               </div>
