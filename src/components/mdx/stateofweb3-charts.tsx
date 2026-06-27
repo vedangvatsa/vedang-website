@@ -42,7 +42,7 @@ const yearlyDataset: YearlyData[] = [
   { year: '2023', docs: 17677, growth: '+18.0%', avgCitations: 4.8, milestone: 'NFT research peaks (426 papers) then declines. Institutional era begins.' },
   { year: '2024', docs: 17993, growth: '+1.8%', avgCitations: 2.5, milestone: 'Lowest growth year. NIST post-quantum standards catalyze new research.' },
   { year: '2025', docs: 20668, growth: '+14.9%', avgCitations: 0.8, milestone: 'Record output: 20,668 papers. Post-quantum and regulatory themes surge.' },
-  { year: '2026', docs: 9419, growth: 'Partial', avgCitations: 0.1, milestone: 'On pace for ~18,800. Quantum-resistant and AI convergence accelerate.' }
+  { year: '2026', docs: 18800, growth: 'Estimate', avgCitations: 0.1, milestone: 'On pace for ~18,800. Quantum-resistant and AI convergence accelerate.' }
 ];
 
 const unigramData: TermFrequency[] = [
