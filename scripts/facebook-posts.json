@@ -1117,9 +1117,11 @@
     "id": "li-draft-2",
     "scheduleDate": "2026-06-27",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Ageism in tech is a massive arbitrage opportunity.\n\nCompanies filter out applicants over 50 using \"culture fit\" or \"overqualified\" as excuses to cut costs. In doing so, they lose decades of actual troubleshooting experience.\n\nYou can't Google institutional knowledge or crisis management.\n\nIf you want top-tier talent, stop screening for youth. Look for capability and experience.",
-    "image": "scripts/linkedin-assets/clean/draft2_ageism_v2_1782464310753.jpg"
+    "image": "scripts/linkedin-assets/clean/draft2_ageism_v2_1782464310753.jpg",
+    "postedAt": "2026-06-27T20:00:50.693Z",
+    "fbPostId": "1785048661795414_1319458113697563"
   },
   {
     "id": "li-draft-3",
