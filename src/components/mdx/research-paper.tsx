@@ -1,4 +1,4 @@
-import { FileText, ExternalLink, BookOpen } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 /* ─── Published Research Paper Preview Card ─── */
 export function ResearchPaper({
@@ -24,16 +24,10 @@ export function ResearchPaper({
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="group block rounded-lg border border-border/60 bg-card p-5 md:p-6 hover:border-border/100 hover:shadow-sm transition-all duration-200"
+        className="group block rounded-lg border border-border/60 bg-card p-5 md:p-6 hover:border-border/100 hover:shadow-sm transition-all duration-200 no-underline hover:no-underline"
       >
         <div className="flex items-start gap-3 md:gap-4">
-          <div className="flex-shrink-0 mt-0.5">
-            <BookOpen className="w-5 h-5 text-primary/70 group-hover:text-primary transition-colors" />
-          </div>
           <div className="flex-1 min-w-0">
-            <div className="text-[10px] font-semibold uppercase tracking-widest text-primary/70 mb-1.5">
-              Published Research Paper
-            </div>
             <h4 className="text-base md:text-lg font-bold text-foreground leading-tight group-hover:text-primary transition-colors">
               {title}
             </h4>
