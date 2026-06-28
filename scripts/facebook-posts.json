@@ -1127,9 +1127,11 @@
     "id": "li-draft-3",
     "scheduleDate": "2026-06-28",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Recruiting pipelines optimize for compliance and call it professionalism.\n\nBut the best hires are rarely perfect on paper. They have drive, resilience, and grit, which standard HR checklists fail to measure.\n\nIf a candidate shows extreme effort and hunger to deliver, that outweighs a minor schedule slip or a messy resume.\n\nIf you want top performers, stop looking for perfection. Focus on potential.",
-    "image": "scripts/linkedin-assets/clean/draft3_grit_1782464279318.jpg"
+    "image": "scripts/linkedin-assets/clean/draft3_grit_1782464279318.jpg",
+    "postedAt": "2026-06-28T05:07:28.254Z",
+    "fbPostId": "1785048661795414_1319738253669549"
   },
   {
     "id": "li-draft-4",

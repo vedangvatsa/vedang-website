@@ -1202,9 +1202,11 @@
     "id": "li-draft-3",
     "scheduleDate": "2026-06-28",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Recruiting pipelines optimize for compliance and call it professionalism.\n\nThe best hires are rarely perfect on paper. Drive and grit don't show up on HR checklists.\n\nIf a candidate shows real hunger to deliver, that beats a spotless resume every time.",
-    "image": "scripts/linkedin-assets/clean/draft3_grit_1782464279318.jpg"
+    "image": "scripts/linkedin-assets/clean/draft3_grit_1782464279318.jpg",
+    "postedAt": "2026-06-28T05:07:12.531Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mpd7cc6tyw2u"
   },
   {
     "id": "li-draft-4",
