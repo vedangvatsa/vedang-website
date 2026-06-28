@@ -1097,9 +1097,11 @@
     "id": "li-draft-5",
     "scheduleDate": "2026-06-28",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Abuse is not the price of high performance.\n\nToxic cultures promote toxic people because they hit short-term numbers. But healthy cultures understand that undermining others is a net negative.\n\nIf your \"top performer\" destroys team cohesion, they are actually costing the business money.\n\nTrue performance is built on mutual trust, not fear.",
-    "image": "scripts/linkedin-assets/clean/draft5_toxic_culture.jpg"
+    "image": "scripts/linkedin-assets/clean/draft5_toxic_culture.jpg",
+    "postedAt": "2026-06-28T20:01:45.391Z",
+    "postId": "urn:li:share:7477088873936756736"
   },
   {
     "id": "li-draft-6",
