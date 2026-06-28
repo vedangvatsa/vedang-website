@@ -1212,9 +1212,11 @@
     "id": "li-draft-4",
     "scheduleDate": "2026-06-28",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "A resume gap is not a competence gap. Life happens.\n\nAutomated tools filter out qualified candidates over arbitrary career breaks. Resumes don't do work. People do.\n\nIf the skills are there, the timeline doesn't matter.",
-    "image": "scripts/linkedin-assets/clean/draft4_resumegaps_1782464328098.jpg"
+    "image": "scripts/linkedin-assets/clean/draft4_resumegaps_1782464328098.jpg",
+    "postedAt": "2026-06-28T12:07:27.034Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mpdwrqn3le2p"
   },
   {
     "id": "li-draft-5",
