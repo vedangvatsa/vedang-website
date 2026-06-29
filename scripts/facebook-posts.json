@@ -1177,9 +1177,11 @@
     "id": "li-draft-8",
     "scheduleDate": "2026-06-29",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "In 1994, Bill Gates sat on 330,000 sheets of paper to demonstrate a single CD-ROM's storage capacity.\n\nToday, a 2-million token context window holds the equivalent of four of those CD-ROMs in active LLM memory.\n\nWe went from physical distribution constraints to real-time cognitive synthesis in 30 years.\n\nThe scale of intelligence is outpacing the scale of data.",
-    "image": "scripts/linkedin-assets/clean/draft8_cdrom.jpg"
+    "image": "scripts/linkedin-assets/clean/draft8_cdrom.jpg",
+    "postedAt": "2026-06-29T20:17:51.946Z",
+    "fbPostId": "1785048661795414_1321162136860494"
   },
   {
     "id": "li-draft-9",
