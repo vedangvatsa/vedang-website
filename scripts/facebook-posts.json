@@ -1167,9 +1167,11 @@
     "id": "li-draft-7",
     "scheduleDate": "2026-06-29",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Net worth and job titles are lagging indicators of privilege, not leading indicators of intelligence or work ethic.\n\nThe systems keeping our society running are built by people who rarely get equity or high-paying titles.\n\nNever confuse a prestige title with actual systemic utility. Honest work is honest.",
-    "image": "scripts/linkedin-assets/clean/draft7_jobtitles_1782464359677.jpg"
+    "image": "scripts/linkedin-assets/clean/draft7_jobtitles_1782464359677.jpg",
+    "postedAt": "2026-06-29T12:58:43.681Z",
+    "fbPostId": "1785048661795414_1320865366890171"
   },
   {
     "id": "li-draft-8",
