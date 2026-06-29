@@ -1232,9 +1232,11 @@
     "id": "li-draft-6",
     "scheduleDate": "2026-06-29",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Counting minutes destroys discretionary effort.\n\nWrite someone up for arriving 10 minutes late, and don't be surprised when they leave exactly on time during a project crisis.\n\nLoyalty cannot be commanded.",
-    "image": "scripts/linkedin-assets/clean/draft6_micromanagertax_1782464343920.jpg"
+    "image": "scripts/linkedin-assets/clean/draft6_micromanagertax_1782464343920.jpg",
+    "postedAt": "2026-06-29T05:12:08.192Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mpfpzzojwi2i"
   },
   {
     "id": "li-draft-7",

@@ -1107,9 +1107,11 @@
     "id": "li-draft-6",
     "scheduleDate": "2026-06-29",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Counting minutes destroys discretionary effort.\n\nIf a manager writes up an employee for arriving 10 minutes late, they shouldn't expect that employee to stay late when a project is failing.\n\nYou cannot command loyalty. If you treat work as a strict transaction, your team will do the same.",
-    "image": "scripts/linkedin-assets/clean/draft6_micromanagertax_1782464343920.jpg"
+    "image": "scripts/linkedin-assets/clean/draft6_micromanagertax_1782464343920.jpg",
+    "postedAt": "2026-06-29T05:12:01.111Z",
+    "postId": "urn:li:share:7477227351676854273"
   },
   {
     "id": "li-draft-7",
