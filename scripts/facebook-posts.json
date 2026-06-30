@@ -1207,9 +1207,11 @@
     "id": "agent-infrastructure-stack-1",
     "scheduleDate": "2026-06-30",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "I mapped the entire AI agent infrastructure market. 75+ companies, $14B+ in disclosed funding, 8 infrastructure layers.\n\nMost of the money is going to 2 layers. Bigger platforms are slowly absorbing the other 6.\n\nRead the full analysis and see the complete market map.\n\nveda.ng/agent-infrastructure-stack",
-    "image": "scripts/thread-assets/figure_1_market_map.png"
+    "image": "scripts/thread-assets/figure_1_market_map.png",
+    "postedAt": "2026-06-30T20:19:23.006Z",
+    "fbPostId": "1785048661795414_1322028493440525"
   },
   {
     "id": "agent-infrastructure-stack-2",
