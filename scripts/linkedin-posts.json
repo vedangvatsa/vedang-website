@@ -1147,9 +1147,11 @@
     "id": "li-draft-10",
     "scheduleDate": "2026-06-30",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Lowballing candidates in salary negotiations is a net-negative strategy.\n\nSqueezing a hire below their market worth might look like a cost-saving win on HR's spreadsheet.\n\nBut they will leave the moment they see the pay disparity. The rehiring, training, and performance gap costs will dwarf the initial savings.\n\nIf you want to retain top talent, pay them what they are worth.",
-    "image": "scripts/linkedin-assets/clean/draft10_salarybackfire_1782464377011.jpg"
+    "image": "scripts/linkedin-assets/clean/draft10_salarybackfire_1782464377011.jpg",
+    "postedAt": "2026-06-30T12:22:25.682Z",
+    "postId": "urn:li:share:7477698055849500672"
   },
   {
     "id": "agent-infrastructure-stack-1",
