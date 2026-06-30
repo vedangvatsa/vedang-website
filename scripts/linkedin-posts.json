@@ -1137,9 +1137,11 @@
     "id": "li-draft-9",
     "scheduleDate": "2026-06-30",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Expecting employees to work with the passion of a founder is a delusion.\n\nThey don't have your equity. They don't have your upside. It is your business, not theirs.\n\nPay people fairly, trust them, and align incentives. Don't expect founder effort for salary compensation.",
-    "image": "scripts/linkedin-assets/clean/draft9_ceo_expectations.jpg"
+    "image": "scripts/linkedin-assets/clean/draft9_ceo_expectations.jpg",
+    "postedAt": "2026-06-30T04:58:05.939Z",
+    "postId": "urn:li:share:7477586236744863744"
   },
   {
     "id": "li-draft-10",
