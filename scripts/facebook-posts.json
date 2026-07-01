@@ -1217,9 +1217,11 @@
     "id": "agent-infrastructure-stack-2",
     "scheduleDate": "2026-07-01",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute → Memory → Sandboxed Execution → Perception → Orchestration → Evaluation → Security → Agents as Products\n\nCheck the full breakdown of the taxonomy.\n\nveda.ng/agent-infrastructure-stack",
-    "image": "scripts/thread-assets/table_1_taxonomy.png"
+    "image": "scripts/thread-assets/table_1_taxonomy.png",
+    "postedAt": "2026-07-01T05:09:22.742Z",
+    "fbPostId": "1785048661795414_1322331516743556"
   },
   {
     "id": "agent-infrastructure-stack-3",
