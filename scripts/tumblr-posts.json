@@ -1339,14 +1339,16 @@
     "id": "agent-infrastructure-stack-5",
     "scheduleDate": "2026-07-02",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Every time OpenAI or Anthropic ships a native feature, a cohort of startups loses its value proposition.\n\nFunction calling, code execution, web browsing. Each one killed several companies.\n\nThe survivors own infrastructure that model providers are unlikely to replicate.\n\nveda.ng/agent-infrastructure-stack",
     "image": "scripts/thread-assets/agent_wrapper_problem.png",
     "tags": [
       "AI",
       "infrastructure",
       "agents"
-    ]
+    ],
+    "postedAt": "2026-07-01T20:17:14.994Z",
+    "tumblrId": "820968984023302144"
   },
   {
     "id": "agent-infrastructure-stack-6",

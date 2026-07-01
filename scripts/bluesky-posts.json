@@ -1309,8 +1309,10 @@
     "id": "agent-infrastructure-stack-4",
     "scheduleDate": "2026-07-01",
     "scheduleTime": "17:00",
-    "posted": false,
-    "text": "Bigger platforms are absorbing observability, security, and vector databases.\n\nClickHouse bought Langfuse. Mintlify bought Helicone. Cisco bought two security companies in 18 months.\n\nLLM observability may not survive as a standalone category.\n\nveda.ng/agent-infrastructure-stack"
+    "posted": true,
+    "text": "Bigger platforms are absorbing observability, security, and vector databases.\n\nClickHouse bought Langfuse. Mintlify bought Helicone. Cisco bought two security companies in 18 months.\n\nLLM observability may not survive as a standalone category.\n\nveda.ng/agent-infrastructure-stack",
+    "postedAt": "2026-07-01T20:17:05.227Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mpmdjzqlni23"
   },
   {
     "id": "agent-infrastructure-stack-5",
