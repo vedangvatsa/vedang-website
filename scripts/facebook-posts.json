@@ -1227,9 +1227,11 @@
     "id": "agent-infrastructure-stack-3",
     "scheduleDate": "2026-07-01",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Compute and vertical agent products capture over 85% of total capital in this market.\n\nCerebras went public at a $95B market cap. Together AI crossed $1B ARR. Modal raised $466M.\n\nThe 6 middle layers split the remaining 15% among themselves.\n\nveda.ng/agent-infrastructure-stack",
-    "image": "scripts/thread-assets/table_8_capital_allocation.png"
+    "image": "scripts/thread-assets/table_8_capital_allocation.png",
+    "postedAt": "2026-07-01T12:28:31.342Z",
+    "fbPostId": "1785048661795414_1322604873382887"
   },
   {
     "id": "agent-infrastructure-stack-4",

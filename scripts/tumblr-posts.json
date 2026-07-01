@@ -1324,14 +1324,16 @@
     "id": "agent-infrastructure-stack-4",
     "scheduleDate": "2026-07-01",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Bigger platforms are absorbing observability, security, and vector databases.\n\nClickHouse bought Langfuse. Mintlify bought Helicone. Cisco bought two security companies in 18 months.\n\nLLM observability may not survive as a standalone category.\n\nveda.ng/agent-infrastructure-stack",
     "image": "scripts/thread-assets/table_6_acquisitions.png",
     "tags": [
       "AI",
       "infrastructure",
       "agents"
-    ]
+    ],
+    "postedAt": "2026-07-01T12:28:34.756Z",
+    "tumblrId": "820939497962373120"
   },
   {
     "id": "agent-infrastructure-stack-5",
