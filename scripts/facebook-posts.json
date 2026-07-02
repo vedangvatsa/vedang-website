@@ -1257,9 +1257,11 @@
     "id": "agent-infrastructure-stack-6",
     "scheduleDate": "2026-07-02",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Agent memory is the least solved layer in the stack.\n\nAcademic research identifies 4 types. These are episodic, semantic, working, and procedural. No commercial product addresses all four well.\n\nVector DB funding stalled in 2023. General-purpose databases are eating their lunch.\n\nveda.ng/agent-infrastructure-stack",
-    "image": "scripts/thread-assets/table_5_memory.png"
+    "image": "scripts/thread-assets/table_5_memory.png",
+    "postedAt": "2026-07-02T12:20:55.259Z",
+    "fbPostId": "1785048661795414_1323436399966401"
   },
   {
     "id": "agent-infrastructure-stack-7",
