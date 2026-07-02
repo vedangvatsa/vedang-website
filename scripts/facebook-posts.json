@@ -1267,9 +1267,11 @@
     "id": "agent-infrastructure-stack-7",
     "scheduleDate": "2026-07-02",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Sandboxed execution is one of the most defensible layers.\n\nE2B raised $32M and runs untrusted, LLM-generated code in isolated micro-VMs. 88% of Fortune 100 use it.\n\nRunning AI-generated code on production servers is an obvious security risk. Sandboxes solve that.\n\nveda.ng/agent-infrastructure-stack",
-    "image": "scripts/thread-assets/agent_sandbox_execution.png"
+    "image": "scripts/thread-assets/agent_sandbox_execution.png",
+    "postedAt": "2026-07-02T20:06:35.902Z",
+    "fbPostId": "1785048661795414_1323751966601511"
   },
   {
     "id": "agent-infrastructure-stack-8",
