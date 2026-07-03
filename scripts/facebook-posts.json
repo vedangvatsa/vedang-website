@@ -1286,9 +1286,11 @@
     "id": "agent-infrastructure-stack-9",
     "scheduleDate": "2026-07-03",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Incumbents acquire security and observability startups. Compute and perception tend to stay independent.\n\nWafer-scale chip company Cerebras or $1B ARR inference platform Together AI doesn't fold into an existing product line.\n\nTechnical depth creates staying power.\n\nveda.ng/agent-infrastructure-stack",
-    "image": "scripts/thread-assets/agent_acquisition_split.png"
+    "image": "scripts/thread-assets/agent_acquisition_split.png",
+    "postedAt": "2026-07-03T12:20:10.993Z",
+    "fbPostId": "1785048661795414_1324338056542902"
   },
   {
     "id": "agent-infrastructure-stack-10",
