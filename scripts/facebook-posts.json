@@ -1277,8 +1277,10 @@
     "id": "agent-infrastructure-stack-8",
     "scheduleDate": "2026-07-03",
     "scheduleTime": "01:00",
-    "posted": false,
-    "text": "8 acquisitions happened in agent infrastructure between Sep 2024 and May 2026.\n\nNone of these acquirers built comparable capabilities in-house. Cisco, Check Point, IBM, Meta. Each chose to buy.\n\nIncumbents missed the initial wave and chose to acquire instead.\n\nveda.ng/agent-infrastructure-stack"
+    "posted": true,
+    "text": "8 acquisitions happened in agent infrastructure between Sep 2024 and May 2026.\n\nNone of these acquirers built comparable capabilities in-house. Cisco, Check Point, IBM, Meta. Each chose to buy.\n\nIncumbents missed the initial wave and chose to acquire instead.\n\nveda.ng/agent-infrastructure-stack",
+    "postedAt": "2026-07-03T04:53:25.309Z",
+    "fbPostId": "1785048661795414_1324052783238096"
   },
   {
     "id": "agent-infrastructure-stack-9",
