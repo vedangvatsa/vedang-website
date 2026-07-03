@@ -1363,8 +1363,10 @@
     "id": "agent-infrastructure-stack-10",
     "scheduleDate": "2026-07-03",
     "scheduleTime": "17:00",
-    "posted": false,
-    "text": "Vercel and Cloudflare are absorbing agent infrastructure functions as platform features.\n\nVercel Marketplace has 22 categories. Cloudflare Workers AI runs 50+ models across 300+ edge points.\n\nThis may compress the middle layers faster than the AWS precedent suggests.\n\nveda.ng/agent-infrastructure-stack"
+    "posted": true,
+    "text": "Vercel and Cloudflare are absorbing agent infrastructure functions as platform features.\n\nVercel Marketplace has 22 categories. Cloudflare Workers AI runs 50+ models across 300+ edge points.\n\nThis may compress the middle layers faster than the AWS precedent suggests.\n\nveda.ng/agent-infrastructure-stack",
+    "postedAt": "2026-07-03T20:03:40.561Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mprdpwb4rk26"
   },
   {
     "id": "agent-infrastructure-stack-11",
