@@ -1316,8 +1316,10 @@
     "id": "agent-infrastructure-stack-12",
     "scheduleDate": "2026-07-04",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "I wrote this as a proper academic paper referencing 67 sources, funding data from Crunchbase and SEC filings, and a market map of every major company.\n\nRead the full paper on SSRN http://dx.doi.org/10.2139/ssrn.6874178\n\nWould genuinely appreciate reads and feedback.",
-    "image": "scripts/thread-assets/agent_paper_cover.png"
+    "image": "scripts/thread-assets/agent_paper_cover.png",
+    "postedAt": "2026-07-04T11:59:14.443Z",
+    "fbPostId": "1785048661795414_1325210599788981"
   }
 ]
