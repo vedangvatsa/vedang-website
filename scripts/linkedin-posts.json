@@ -655,7 +655,7 @@
     "scheduleTime": "17:00",
     "posted": true,
     "image": "scripts/thread-assets/stepwise_ai.png",
-    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing \u2014 nuanced human conversations \u2014 before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise",
+    "text": "Klarna automated customer service. Cut costs by $60M. Then customer satisfaction collapsed and they reversed course.\n\nThe problem wasn't AI. It was overreach. They tried to automate the hardest thing — nuanced human conversations — before proving the easy wins.\n\nThe pattern across hundreds of mid-market firms is consistent:\n\nStart with invoice matching. Log parsing. Email triage. Tasks that are repetitive, high-frequency, and low-ambiguity. These pay back in under three months.\n\nThen move up: draft review, report generation, first-pass analysis. Tasks where the human edits the machine's output.\n\nFull autonomy comes last, if ever. And only after the organization has built enough trust to let go.\n\n70% of big-bang AI deployments fail. The companies getting results aren't the most aggressive. They're the ones that know what to automate first and what to leave alone.\n\nveda.ng/stepwise",
     "postedAt": "2026-04-12T11:59:07.697Z",
     "postId": "urn:li:share:7449063550729256960"
   },
@@ -665,7 +665,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/universal_text_ui.png",
-    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog \u2014 analytics via natural language\nSalesforce Agentforce \u2014 12,000+ orgs, 84% self-resolution\nCursor \u2014 $1B ARR, entire codebases queryable via text\nGitHub Copilot \u2014 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/textui",
+    "text": "A \"Filter by Country\" dropdown exists because someone on the product team predicted you'd want geographic segmentation. A \"Date Range\" picker exists because someone predicted you'd compare time periods.\n\nYour actual question is almost never one of the predicted ones.\n\nThis is the fundamental problem with dashboards. They are finite sets of pre-built answers. The moment your question falls outside the set, you file a ticket and wait.\n\nA text field backed by an LLM that calls backend APIs directly eliminates the gap between what you want to know and what the interface allows you to ask.\n\nThis is already at scale:\n\nPostHog — analytics via natural language\nSalesforce Agentforce — 12,000+ orgs, 84% self-resolution\nCursor — $1B ARR, entire codebases queryable via text\nGitHub Copilot — 46% of code written by AI across 20M users\n\nThe advantage shifts from who builds the best UI to who exposes the best tools.\n\nveda.ng/textui",
     "postedAt": "2026-04-12T11:59:11.780Z",
     "postId": "urn:li:share:7449063567942873088"
   },
@@ -675,7 +675,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else \u2014 99% of public services \u2014 is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/stateagents",
+    "text": "In Estonia, only two things require showing up in person: getting married and getting divorced. Everything else — 99% of public services — is digital.\n\nSingapore runs AI across 100,000 officers. UAE hit 97% AI utilization in government entities.\n\nThese aren't experiments. They're production systems serving millions daily.\n\nWhat separates them from every other \"digital government\" project:\n\nThe system doesn't wait for citizens to ask. A baby is born. The government detects the event, calculates parental benefits, and deposits funds. No form. No queue. The citizen does nothing.\n\nEstonia's X-Road protocol handles over 1 billion queries per year across every government agency. Singapore integrated 400+ services through a single digital stack.\n\nMost governments are still asking citizens to download PDFs and visit offices during business hours.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-12T11:59:15.921Z",
     "postId": "urn:li:share:7449063585378385920"
   },
@@ -695,7 +695,7 @@
     "scheduleTime": "09:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it.\n\nThe e-Residency program generated \u20ac125M in state revenue last year. 87% growth. For every euro invested, twelve came back.\n\n5,556 new companies formed by non-citizens in a single year.\n\nThis is what happens when government operates as infrastructure instead of gatekeeping. The state becomes a platform. Citizenship becomes a credential. Geography becomes optional.\n\nveda.ng/stateagents",
+    "text": "Estonia lets anyone on earth start an EU company without setting foot in the country. 135,000 people from 170 countries have done it.\n\nThe e-Residency program generated €125M in state revenue last year. 87% growth. For every euro invested, twelve came back.\n\n5,556 new companies formed by non-citizens in a single year.\n\nThis is what happens when government operates as infrastructure instead of gatekeeping. The state becomes a platform. Citizenship becomes a credential. Geography becomes optional.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-13T06:03:17.563Z",
     "postId": "urn:li:share:7449336389974007808"
   },
@@ -725,7 +725,7 @@
     "scheduleTime": "01:00",
     "posted": true,
     "image": "scripts/thread-assets/agentic_state.png",
-    "text": "Singapore's Ask Jamie chatbot has handled 50 million citizen queries. Their AI call transcription cut after-call work by 72%.\n\n100,000 public officers use Pair \u2014 a government-built AI tool \u2014 saving 50 minutes per task on average.\n\nIn the 2026 budget, Singapore announced the shift from \"AI pilots\" to \"scaled deployment at national speed.\"\n\nMost countries are still debating whether to start a pilot.\n\nveda.ng/stateagents",
+    "text": "Singapore's Ask Jamie chatbot has handled 50 million citizen queries. Their AI call transcription cut after-call work by 72%.\n\n100,000 public officers use Pair — a government-built AI tool — saving 50 minutes per task on average.\n\nIn the 2026 budget, Singapore announced the shift from \"AI pilots\" to \"scaled deployment at national speed.\"\n\nMost countries are still debating whether to start a pilot.\n\nveda.ng/stateagents",
     "postedAt": "2026-04-22T20:32:55.769Z",
     "postId": "urn:li:share:7452816731737198592"
   },
@@ -961,97 +961,129 @@
     "id": "ig-genz-boundaries",
     "text": "A one week unpaid trial is not a trial.\n\nIt is free labor.\n\nThis person declined the offer in one line.\n\nNo apology. No explanation. Just a clear boundary.\n\nKnow your worth before someone else sets it for you.",
     "image": "scripts/thread-assets/ig-reels/DWYA42DiYqH.mp4",
-    "posted": false
+    "posted": false,
+    "scheduleDate": "2026-08-23",
+    "scheduleTime": "09:00"
   },
   {
     "id": "ig-bryson-relatable",
     "text": "We have all been Bryson at some point.\n\nWatch till the end.",
     "image": "scripts/thread-assets/ig-reels/DWlseMGD5la.mp4",
-    "posted": false
+    "posted": false,
+    "scheduleDate": "2026-08-24",
+    "scheduleTime": "09:00"
   },
   {
     "id": "ig-movie-scene",
     "text": "Stomach rumbled during a job interview.\n\nThe interviewer asked if I forgot lunch.\n\nTold him no. Just hungry for success.\n\nSometimes confidence is all you need.",
     "image": "scripts/thread-assets/ig-reels/DXQ9NuYPN_J.mp4",
-    "posted": false
+    "posted": false,
+    "scheduleDate": "2026-08-25",
+    "scheduleTime": "09:00"
   },
   {
     "id": "ig-that-life-exists",
     "text": "The moment you realize what life looks like for people who know nothing about AI, politics, or the economy.\n\nIgnorance really is bliss sometimes.\n\nMeanwhile the rest of us are refreshing feeds at 2am.",
     "image": "scripts/thread-assets/ig-reels/DX4HFPvT5mb.mp4",
-    "posted": false
+    "posted": false,
+    "scheduleDate": "2026-08-26",
+    "scheduleTime": "09:00"
   },
   {
     "id": "ig-how-badly-do-you-want-it",
     "text": "How badly do you want it?\n\nBecause talk is cheap.\n\nEveryone has goals.\n\nFew have discipline.\n\nStop making excuses. Start making progress.",
     "image": "scripts/thread-assets/ig-reels/DXHJR6cjsqV.mp4",
-    "posted": false
+    "posted": false,
+    "scheduleDate": "2026-08-27",
+    "scheduleTime": "09:00"
   },
   {
     "id": "ig-ai-impressed",
-    "text": "Humans: spend 6 hours building something in AI.\n\nAI: \"Impressive. Keep going, human.\"\n\nWe are literally training our own replacements.\n\nAnd feeling proud about it.",
+    "text": "Humans spend six hours building something in AI.\n\nThen the AI says, \"Impressive. Keep going, human.\"\n\nWe are training our own replacements.\n\nAnd feeling proud about it.",
     "image": "scripts/thread-assets/ig-reels/DXuNoVPE83k.mp4",
-    "posted": false
+    "posted": false,
+    "scheduleDate": "2026-08-28",
+    "scheduleTime": "09:00"
   },
   {
     "id": "ig-ai-proud-moment",
     "text": "You spend 3 days debugging.\n\nFinally fix it.\n\nFeel like a genius.\n\nThen remember ChatGPT could have done it in 4 seconds.\n\nProud moment and existential crisis at the same time.",
     "image": "scripts/thread-assets/ig-reels/DXD-i9fEaYJ.mp4",
-    "posted": false
+    "posted": false,
+    "scheduleDate": "2026-08-29",
+    "scheduleTime": "09:00"
   },
   {
     "id": "ig-ai-limit-reached",
     "text": "When AI hits its rate limit mid-conversation.\n\nYou were so close to the answer.\n\nNow you wait.\n\nThe most frustrating loading screen of our generation.",
     "image": "scripts/thread-assets/ig-reels/DWx95c6EdUi.mp4",
-    "posted": false
+    "posted": false,
+    "scheduleDate": "2026-08-30",
+    "scheduleTime": "09:00"
   },
   {
     "id": "ig-ai-constant-pressure",
     "text": "New AI tool every week.\n\nNew framework every month.\n\nNew paradigm every quarter.\n\nRemember when learning one skill was enough for a decade?\n\nNow it barely lasts a quarter.",
     "image": "scripts/thread-assets/ig-reels/DVqe3fCEZdC.mp4",
-    "posted": false
+    "posted": false,
+    "scheduleDate": "2026-08-31",
+    "scheduleTime": "09:00"
   },
   {
     "id": "ig-shadow-ai",
     "text": "Your employees are pasting company data into ChatGPT right now.\n\nNo policy. No oversight. No audit trail.\n\nShadow AI is not a future problem.\n\nIt is happening today in every company that has not set boundaries.",
     "image": "scripts/thread-assets/ig-reels/DXs6sDoEetP.mp4",
-    "posted": false
+    "posted": false,
+    "scheduleDate": "2026-09-01",
+    "scheduleTime": "09:00"
   },
   {
     "id": "ig-daytrading-liar",
-    "text": "When the CEO says \"we have no plans for layoffs.\"\n\nTwo weeks later: restructuring.\n\nAlways watch what they do.\n\nNever just what they say.",
+    "text": "When the CEO says \"we have no plans for layoffs.\"\n\nThen two weeks later, the company restructures.\n\nAlways watch what they do.\n\nNever just what they say.",
     "image": "scripts/thread-assets/ig-reels/DTUgnD7kheF.mp4",
-    "posted": false
+    "posted": false,
+    "scheduleDate": "2026-09-02",
+    "scheduleTime": "09:00"
   },
   {
     "id": "ig-ai-canon-events",
-    "text": "The AI timeline so far:\n\n2022: ChatGPT launches.\n2023: Everyone becomes a prompt engineer.\n2024: AI replaces junior devs.\n2025: AI agents run workflows.\n2026: You report to an AI manager.\n\nSeven years. Too many canon events.",
+    "text": "The AI timeline so far.\n\nIn 2022, ChatGPT launches.\n\nIn 2023, everyone becomes a prompt engineer.\n\nIn 2024, AI replaces junior devs.\n\nIn 2025, AI agents run workflows.\n\nIn 2026, you report to an AI manager.\n\nSeven years. Too many canon events.",
     "image": "scripts/thread-assets/ig-reels/DVgT1huE9qS.mp4",
-    "posted": false
+    "posted": false,
+    "scheduleDate": "2026-09-03",
+    "scheduleTime": "09:00"
   },
   {
     "id": "ig-send-to-chatgpt",
-    "text": "The moment you realize you have been arguing with a human when ChatGPT would have agreed with you instantly.\n\nWe are training ourselves to prefer AI conversations over human ones.\n\nThat should concern all of us.",
+    "text": "The moment you realize you argued with a human for hours when ChatGPT would agree with you instantly.\n\nWe train ourselves to prefer AI conversations over human ones.\n\nThat should concern all of us.",
     "image": "scripts/thread-assets/ig-reels/DVYa0-nE4hb.mp4",
-    "posted": false
+    "posted": false,
+    "scheduleDate": "2026-09-04",
+    "scheduleTime": "09:00"
   },
   {
     "id": "ig-knowledge-worth-zero",
     "text": "Raoul Pal said it clearly.\n\nKnowledge is approaching zero value.\n\nAnyone can ask AI the same question you spent 10 years learning to answer.\n\nThe advantage now is judgment, taste, and the ability to ask the right questions.",
     "image": "scripts/thread-assets/ig-reels/DVOQBfTkilz.mp4",
-    "posted": false
+    "posted": false,
+    "scheduleDate": "2026-09-05",
+    "scheduleTime": "09:00"
   },
   {
     "id": "ig-solo-billionaire",
     "text": "Sam Altman thinks one person with a laptop can build a billion dollar company.\n\nNo co-founders. No employees. Just AI tools.\n\nWe are closer to this than most people realize.\n\nThe question is not if. It is who does it first.",
     "image": "scripts/thread-assets/ig-reels/DSrtaXmEWxl.mp4",
-    "posted": false
+    "posted": false,
+    "scheduleDate": "2026-09-06",
+    "scheduleTime": "09:00"
   },
   {
     "id": "ig-too-real",
     "text": "When you ask AI to write your resignation letter and it writes it better than anything you have ever written.\n\nThe tool you used to quit is better at your job than you are.\n\nLet that sink in.",
     "image": "scripts/thread-assets/ig-reels/DRcvmWNE1Q2.mp4",
-    "posted": false
+    "posted": false,
+    "scheduleDate": "2026-09-07",
+    "scheduleTime": "09:00"
   },
   {
     "id": "li-draft-1",
@@ -1168,7 +1200,7 @@
     "scheduleDate": "2026-07-01",
     "scheduleTime": "01:00",
     "posted": true,
-    "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute \u2192 Memory \u2192 Sandboxed Execution \u2192 Perception \u2192 Orchestration \u2192 Evaluation \u2192 Security \u2192 Agents as Products\n\nCheck the full breakdown of the taxonomy.\n\nveda.ng/agent-infrastructure-stack",
+    "text": "AI agents don't run on model APIs alone. They need a full infrastructure stack.\n\nEach of the 8 layers has distinct buyers, pricing, and failure modes.\n\nCompute → Memory → Sandboxed Execution → Perception → Orchestration → Evaluation → Security → Agents as Products\n\nCheck the full breakdown of the taxonomy.\n\nveda.ng/agent-infrastructure-stack",
     "image": "scripts/thread-assets/table_1_taxonomy.png",
     "postedAt": "2026-07-01T05:09:06.039Z",
     "postId": "urn:li:share:7477951393396375552"
