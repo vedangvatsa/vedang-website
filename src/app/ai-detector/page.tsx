@@ -1,14 +1,15 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { PageLayout } from '@/components/page-layout';
+import { PageHero } from '@/components/page-hero';
+import { Button } from '@/components/ui/button';
 import { 
-  BrainCircuit, 
   Settings, 
   Sparkles, 
   Loader2, 
   AlertCircle, 
   CheckCircle2, 
-  HelpCircle,
   FileText,
   Sliders,
   ChevronDown,
@@ -85,11 +86,8 @@ export default function AIDetector() {
   const [results, setResults] = useState<AnalysisResults | null>(null);
 
   // SVG Gauge Math
-  const radius = 80;
+  const radius = 66;
   const circumference = 2 * Math.PI * radius;
-  const strokeDashoffset = results 
-    ? circumference - (results.ai_probability) * circumference 
-    : circumference;
 
   useEffect(() => {
     if (!text.trim()) {
@@ -141,46 +139,32 @@ export default function AIDetector() {
   };
 
   const getStatusColor = (prob: number) => {
-    if (prob >= 0.7) return { text: 'text-red-500', stroke: '#ef4444', bg: 'bg-red-500/10', border: 'border-red-500/20', badge: 'bg-red-500', label: 'AI Generated' };
+    if (prob >= 0.7) return { text: 'text-destructive', stroke: 'hsl(var(--destructive))', bg: 'bg-destructive/10', border: 'border-destructive/20', badge: 'bg-destructive', label: 'AI Generated' };
     if (prob >= 0.35) return { text: 'text-amber-500', stroke: '#f59e0b', bg: 'bg-amber-500/10', border: 'border-amber-500/20', badge: 'bg-amber-500', label: 'Mixed / Uncertain' };
     return { text: 'text-emerald-500', stroke: '#10b981', bg: 'bg-emerald-500/10', border: 'border-emerald-500/20', badge: 'bg-emerald-500', label: 'Human Written' };
   };
 
   const getSentenceHighlightClass = (prob: number) => {
-    if (prob >= 0.7) return 'bg-red-500/20 hover:bg-red-500/30 text-red-100 border-b-2 border-red-500/60 cursor-help transition-colors duration-150';
-    if (prob >= 0.35) return 'bg-amber-500/25 hover:bg-amber-500/35 text-amber-100 border-b-2 border-amber-500/60 cursor-help transition-colors duration-150';
-    return 'bg-emerald-500/10 hover:bg-emerald-500/15 text-emerald-100 cursor-help transition-colors duration-150';
+    if (prob >= 0.7) return 'bg-destructive/20 hover:bg-destructive/30 text-destructive-foreground dark:text-red-100 border-b-2 border-destructive/60 cursor-help transition-colors duration-150';
+    if (prob >= 0.35) return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-900 dark:text-amber-100 border-b-2 border-amber-500/60 cursor-help transition-colors duration-150';
+    return 'bg-emerald-500/10 hover:bg-emerald-500/15 text-emerald-900 dark:text-emerald-100 cursor-help transition-colors duration-150';
   };
 
   const status = results ? getStatusColor(results.ai_probability) : null;
 
   return (
-    <div className="min-h-screen bg-[#090d16] text-slate-100 font-sans selection:bg-blue-500/30 relative">
-      {/* Background Decorative Glows */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        <div className="absolute -top-[20%] -left-[10%] w-[500px] h-[500px] rounded-full bg-blue-500/5 blur-[100px]" />
-        <div className="absolute -bottom-[20%] -right-[10%] w-[500px] h-[500px] rounded-full bg-purple-500/5 blur-[100px]" />
-      </div>
+    <PageLayout>
+      <PageHero 
+        title="AI Text Detector"
+        subtitle="Verify text authenticity with real-time sentence highlights, model attribution, and calibrated perplexity/burstiness."
+      />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 py-12">
-        {/* Header */}
-        <header className="text-center mb-8">
-          <div className="inline-flex items-center gap-3 mb-3">
-            <BrainCircuit className="w-9 h-9 text-blue-400" />
-            <h1 className="text-3xl sm:text-4xl font-extrabold font-heading bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent tracking-tight">
-              Enterprise AI Detector
-            </h1>
-          </div>
-          <p className="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Verify writing authenticity with real-time sentence-level highlighting, model attribution, and calibrated stylometric + neural signal analysis.
-          </p>
-        </header>
-
+      <div className="space-y-8 pb-12 max-w-4xl mx-auto">
         {/* Settings Panel */}
-        <div className="mb-6">
+        <div className="flex flex-col items-end">
           <button 
             onClick={() => setShowSettings(!showSettings)}
-            className="flex items-center gap-2 text-xs text-slate-400 hover:text-slate-200 transition-colors ml-auto bg-slate-900/40 px-3 py-1.5 rounded-lg border border-slate-800"
+            className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors bg-muted/60 px-3 py-1.5 rounded-lg border border-border"
           >
             <Settings className="w-3.5 h-3.5" />
             <span>API Settings</span>
@@ -188,8 +172,8 @@ export default function AIDetector() {
           </button>
           
           {showSettings && (
-            <div className="mt-2 p-4 bg-slate-900/80 border border-slate-800 rounded-xl animate-in fade-in slide-in-from-top-1 duration-200">
-              <label className="block text-xs font-semibold text-slate-400 mb-1.5 uppercase tracking-wider">
+            <div className="w-full mt-2 p-4 bg-card border border-border rounded-xl shadow-sm animate-in fade-in duration-200">
+              <label className="block text-xs font-semibold text-muted-foreground mb-1.5 uppercase tracking-wider">
                 Detector API Endpoint
               </label>
               <input 
@@ -197,9 +181,9 @@ export default function AIDetector() {
                 value={apiUrl}
                 onChange={(e) => setApiUrl(e.target.value)}
                 placeholder="e.g. http://localhost:8000"
-                className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-slate-200 outline-none focus:border-blue-500 transition-colors"
+                className="w-full bg-background border border-input rounded-lg px-3 py-2 text-sm text-foreground outline-none focus:border-ring transition-colors"
               />
-              <span className="block text-[11px] text-slate-500 mt-1">
+              <span className="block text-[11px] text-muted-foreground mt-1">
                 The FastAPI endpoint that executes the stylometric ensembling and neural models.
               </span>
             </div>
@@ -207,13 +191,13 @@ export default function AIDetector() {
         </div>
 
         {/* Navigation Tabs */}
-        <div className="flex gap-2 mb-4 border-b border-slate-800 pb-px">
+        <div className="flex gap-2 border-b border-border pb-px">
           <button
             onClick={() => setActiveTab('edit')}
             className={`px-4 py-2.5 text-sm font-semibold border-b-2 transition-all flex items-center gap-2 ${
               activeTab === 'edit' 
-                ? 'border-blue-500 text-blue-400' 
-                : 'border-transparent text-slate-400 hover:text-slate-200'
+                ? 'border-primary text-primary' 
+                : 'border-transparent text-muted-foreground hover:text-foreground'
             }`}
           >
             <FileText className="w-4 h-4" />
@@ -224,8 +208,8 @@ export default function AIDetector() {
             disabled={!results}
             className={`px-4 py-2.5 text-sm font-semibold border-b-2 transition-all flex items-center gap-2 ${
               activeTab === 'heatmap' 
-                ? 'border-blue-500 text-blue-400' 
-                : 'border-transparent text-slate-400 hover:text-slate-200 disabled:opacity-40 disabled:cursor-not-allowed'
+                ? 'border-primary text-primary' 
+                : 'border-transparent text-muted-foreground hover:text-foreground disabled:opacity-40 disabled:cursor-not-allowed'
             }`}
           >
             <Activity className="w-4 h-4" />
@@ -234,16 +218,16 @@ export default function AIDetector() {
         </div>
 
         {/* Editor Box / Heatmap display */}
-        <section className="mb-8">
-          <div className="bg-slate-900/30 border border-slate-800/80 rounded-2xl p-5 sm:p-6 backdrop-blur-md shadow-2xl relative">
+        <section>
+          <div className="bg-card border border-border rounded-2xl p-5 sm:p-6 shadow-sm relative">
             {activeTab === 'edit' ? (
               <>
                 <div className="flex justify-between items-center mb-3">
-                  <span className="text-sm font-semibold text-slate-300 flex items-center gap-2">
-                    <FileText className="w-4 h-4 text-blue-400" />
+                  <span className="text-sm font-semibold text-foreground flex items-center gap-2">
+                    <FileText className="w-4 h-4 text-primary" />
                     Input Document
                   </span>
-                  <span className="text-xs text-slate-400 font-medium">
+                  <span className="text-xs text-muted-foreground font-medium">
                     {wordCount} words
                   </span>
                 </div>
@@ -252,17 +236,17 @@ export default function AIDetector() {
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                   placeholder="Paste your text here (minimum 20 words for best accuracy, mixed-style documents supported)..."
-                  className="w-full h-64 bg-slate-950/40 border border-slate-800/80 rounded-xl p-4 text-slate-200 text-sm sm:text-base leading-relaxed outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/20 transition-all resize-none"
+                  className="w-full h-64 bg-background border border-input rounded-xl p-4 text-foreground text-sm sm:text-base leading-relaxed outline-none focus:border-ring focus:ring-1 focus:ring-ring/25 transition-all resize-none"
                 />
 
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-4 gap-4">
-                  <div className="flex items-center gap-2 bg-slate-950/50 px-3 py-1.5 rounded-lg border border-slate-800">
-                    <Sliders className="w-3.5 h-3.5 text-slate-400" />
-                    <span className="text-xs text-slate-400">Register:</span>
+                  <div className="flex items-center gap-2 bg-muted/65 px-3 py-1.5 rounded-lg border border-border">
+                    <Sliders className="w-3.5 h-3.5 text-muted-foreground" />
+                    <span className="text-xs text-muted-foreground">Register:</span>
                     <select
                       value={register}
                       onChange={(e) => setRegister(e.target.value)}
-                      className="bg-transparent text-xs font-semibold text-slate-200 outline-none cursor-pointer"
+                      className="bg-transparent text-xs font-semibold text-foreground outline-none cursor-pointer"
                     >
                       <option value="">Auto-Detect</option>
                       <option value="academic">Academic / Scientific</option>
@@ -272,34 +256,34 @@ export default function AIDetector() {
                     </select>
                   </div>
 
-                  <button
+                  <Button
                     onClick={handleAnalyze}
                     disabled={isLoading}
-                    className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-6 py-2.5 rounded-xl flex items-center justify-center gap-2 hover:opacity-95 active:scale-[0.98] transition-all disabled:opacity-50"
+                    className="w-full sm:w-auto flex items-center justify-center gap-2 font-semibold"
                   >
                     {isLoading ? (
                       <>
                         <Loader2 className="w-4 h-4 animate-spin" />
-                        <span>Analyzing with GPT-2 + Stylometry...</span>
+                        <span>Scanning Text...</span>
                       </>
                     ) : (
                       <>
                         <Sparkles className="w-4 h-4" />
-                        <span>Run Authenticity Scan</span>
+                        <span>Run Scan</span>
                       </>
                     )}
-                  </button>
+                  </Button>
                 </div>
               </>
             ) : (
               // Heatmap view
               <div>
                 <div className="flex justify-between items-center mb-4">
-                  <span className="text-sm font-semibold text-slate-300 flex items-center gap-2">
-                    <BookOpen className="w-4 h-4 text-purple-400" />
+                  <span className="text-sm font-semibold text-foreground flex items-center gap-2">
+                    <BookOpen className="w-4 h-4 text-primary" />
                     Interactive Sentence Heatmap
                   </span>
-                  <div className="flex items-center gap-3 text-xs text-slate-400">
+                  <div className="flex items-center gap-3 text-xs text-muted-foreground">
                     <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-red-500/20 border border-red-500/60 rounded-sm"></span> AI</span>
                     <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-amber-500/20 border border-amber-500/60 rounded-sm"></span> Mixed</span>
                     <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-emerald-500/10 rounded-sm"></span> Human</span>
@@ -307,7 +291,7 @@ export default function AIDetector() {
                 </div>
 
                 {/* Render sentences with highlights */}
-                <div className="w-full min-h-64 bg-slate-950/20 border border-slate-800/60 rounded-xl p-4 text-slate-200 text-sm sm:text-base leading-relaxed overflow-y-auto max-h-[450px]">
+                <div className="w-full min-h-64 bg-background border border-border rounded-xl p-4 text-foreground text-sm sm:text-base leading-relaxed overflow-y-auto max-h-[450px]">
                   {results?.sentences && results.sentences.length > 0 ? (
                     results.sentences.map((sent, idx) => (
                       <span
@@ -320,14 +304,14 @@ export default function AIDetector() {
                       </span>
                     ))
                   ) : (
-                    <span className="text-slate-500 italic">No sentence analysis data available.</span>
+                    <span className="text-muted-foreground italic">No sentence analysis data available.</span>
                   )}
                 </div>
 
                 {/* Floating tooltip for hovered sentence */}
                 {hoveredSentence && (
-                  <div className="absolute top-4 left-6 bg-slate-950/95 border border-slate-800 p-3 rounded-lg shadow-xl backdrop-blur-md flex flex-col gap-1 z-20 animate-in fade-in zoom-in-95 duration-100">
-                    <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Sentence Probability</span>
+                  <div className="absolute top-4 left-6 bg-popover text-popover-foreground border border-border p-3 rounded-lg shadow-md flex flex-col gap-1 z-20 animate-in fade-in duration-100">
+                    <span className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider">Sentence Probability</span>
                     <div className="flex items-center gap-2">
                       <div className={`w-2.5 h-2.5 rounded-full ${
                         hoveredSentence.ai_probability >= 0.7 ? 'bg-red-500' :
@@ -344,44 +328,44 @@ export default function AIDetector() {
 
         {/* Error State */}
         {error && (
-          <div className="mb-8 p-4 bg-red-950/20 border border-red-900/30 rounded-xl text-red-300 text-sm flex items-start gap-3">
-            <AlertCircle className="w-5 h-5 flex-shrink-0 text-red-400 mt-0.5" />
+          <div className="p-4 bg-destructive/10 border border-destructive/20 rounded-xl text-destructive text-sm flex items-start gap-3">
+            <AlertCircle className="w-5 h-5 flex-shrink-0 text-destructive mt-0.5" />
             <span>{error}</span>
           </div>
         )}
 
         {/* Results Sections */}
         {results && status && (
-          <section className="space-y-6 animate-in fade-in slide-in-from-bottom-3 duration-300">
+          <section className="space-y-6 animate-in fade-in duration-300">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               
               {/* Circular Gauge Card */}
-              <div className="bg-slate-900/30 border border-slate-800/80 rounded-2xl p-6 flex flex-col items-center justify-center backdrop-blur-md">
-                <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-6 flex items-center gap-1.5">
-                  <Gauge className="w-4 h-4 text-blue-400" /> Overall Score
+              <div className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center shadow-sm">
+                <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-6 flex items-center gap-1.5">
+                  <Gauge className="w-4 h-4 text-primary" /> Overall Score
                 </h3>
-                <div className="relative w-40 h-40">
+                <div className="relative w-36 h-36">
                   <svg className="w-full h-full transform -rotate-90">
                     <circle 
-                      cx="80" cy="80" r="66" 
-                      className="stroke-slate-800/30 fill-none" 
+                      cx="72" cy="72" r={radius} 
+                      className="stroke-muted fill-none" 
                       strokeWidth="8"
                     />
                     <circle 
-                      cx="80" cy="80" r="66" 
+                      cx="72" cy="72" r={radius} 
                       className="fill-none transition-all duration-700 ease-out" 
                       strokeWidth="8"
-                      strokeDasharray={2 * Math.PI * 66}
-                      strokeDashoffset={2 * Math.PI * 66 - (results.ai_probability) * (2 * Math.PI * 66)}
+                      strokeDasharray={circumference}
+                      strokeDashoffset={circumference - (results.ai_probability) * circumference}
                       strokeLinecap="round"
                       stroke={status.stroke}
                     />
                   </svg>
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <span className="text-3xl font-extrabold font-heading tracking-tight">
+                    <span className="text-3xl font-extrabold tracking-tight text-foreground">
                       {Math.round(results.ai_probability * 100)}%
                     </span>
-                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">
+                    <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest mt-0.5">
                       Probability
                     </span>
                   </div>
@@ -392,71 +376,71 @@ export default function AIDetector() {
               </div>
 
               {/* Model Attribution Card */}
-              <div className="bg-slate-900/30 border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between backdrop-blur-md">
+              <div className="bg-card border border-border rounded-2xl p-6 flex flex-col justify-between shadow-sm">
                 <div>
-                  <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-1.5">
-                    <User className="w-4 h-4 text-indigo-400" /> Model Attribution
+                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 flex items-center gap-1.5">
+                    <User className="w-4 h-4 text-primary" /> Model Attribution
                   </h3>
-                  <p className="text-xs text-slate-500 mb-6">
+                  <p className="text-xs text-muted-foreground mb-6">
                     Matches text stylistic patterns to typical generation outputs.
                   </p>
                 </div>
-                <div className="bg-slate-950/40 border border-slate-800 rounded-xl p-4 flex flex-col gap-2">
-                  <div className="text-xs text-slate-400">Likely Author/Source:</div>
-                  <div className="text-base font-extrabold text-blue-400 tracking-tight">
+                <div className="bg-background border border-border rounded-xl p-4 flex flex-col gap-2">
+                  <div className="text-xs text-muted-foreground">Likely Author/Source:</div>
+                  <div className="text-sm font-extrabold text-primary tracking-tight">
                     {results.model_attribution?.source_model || 'Unknown'}
                   </div>
                   {results.model_attribution && (
-                    <div className="flex justify-between items-center text-xs text-slate-400 mt-2 pt-2 border-t border-slate-850">
+                    <div className="flex justify-between items-center text-xs text-muted-foreground mt-2 pt-2 border-t border-border/60">
                       <span>Attribution Confidence:</span>
-                      <span className="font-bold text-slate-200">
+                      <span className="font-bold text-foreground">
                         {Math.round(results.model_attribution.confidence * 100)}%
                       </span>
                     </div>
                   )}
                 </div>
-                <div className="text-[10px] text-slate-500 italic mt-4">
+                <div className="text-[10px] text-muted-foreground italic mt-4">
                   Powered by RAID multi-class stylometry fingerprints.
                 </div>
               </div>
 
               {/* Neural Signals (Perplexity / Burstiness) Card */}
-              <div className="bg-slate-900/30 border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between backdrop-blur-md">
+              <div className="bg-card border border-border rounded-2xl p-6 flex flex-col justify-between shadow-sm">
                 <div>
-                  <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-1.5">
-                    <Cpu className="w-4 h-4 text-emerald-400" /> Neural Signals
+                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 flex items-center gap-1.5">
+                    <Cpu className="w-4 h-4 text-primary" /> Neural Signals
                   </h3>
-                  <p className="text-xs text-slate-500 mb-6">
+                  <p className="text-xs text-muted-foreground mb-6">
                     Measures text probability and perplexity dynamics using GPT-2.
                   </p>
                 </div>
                 <div className="space-y-4">
                   {results.neural_signals ? (
                     <>
-                      <div className="bg-slate-950/40 border border-slate-800 rounded-xl p-3 flex justify-between items-center">
+                      <div className="bg-background border border-border rounded-xl p-3 flex justify-between items-center">
                         <div className="flex flex-col">
-                          <span className="text-xs text-slate-400">Perplexity (PPL)</span>
-                          <span className="text-[10px] text-slate-500">Lower indicates AI predictability</span>
+                          <span className="text-xs text-foreground font-medium">Perplexity (PPL)</span>
+                          <span className="text-[10px] text-muted-foreground">Lower indicates AI predictability</span>
                         </div>
-                        <span className="text-base font-extrabold text-emerald-400">
+                        <span className="text-sm font-extrabold text-primary">
                           {results.neural_signals.perplexity.toFixed(1)}
                         </span>
                       </div>
-                      <div className="bg-slate-950/40 border border-slate-800 rounded-xl p-3 flex justify-between items-center">
+                      <div className="bg-background border border-border rounded-xl p-3 flex justify-between items-center">
                         <div className="flex flex-col">
-                          <span className="text-xs text-slate-400">Burstiness (token std)</span>
-                          <span className="text-[10px] text-slate-500">Lower implies uniform AI patterns</span>
+                          <span className="text-xs text-foreground font-medium">Burstiness (token std)</span>
+                          <span className="text-[10px] text-muted-foreground">Lower implies uniform AI patterns</span>
                         </div>
-                        <span className="text-base font-extrabold text-emerald-400">
+                        <span className="text-sm font-extrabold text-primary">
                           {results.neural_signals.burstiness.toFixed(2)}
                         </span>
                       </div>
                     </>
                   ) : (
-                    <div className="text-slate-500 text-xs italic">No neural signal metrics computed.</div>
+                    <div className="text-muted-foreground text-xs italic">No neural signal metrics computed.</div>
                   )}
                 </div>
-                <div className="text-[10px] text-slate-500 italic mt-4">
+                <div className="text-[10px] text-muted-foreground italic mt-4">
                   Real-time perplexity surprisal analysis.
                 </div>
               </div>
@@ -464,30 +448,30 @@ export default function AIDetector() {
             </div>
 
             {/* Router & Performance Metadata */}
-            <div className="bg-slate-900/30 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-md grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="bg-card border border-border rounded-2xl p-6 shadow-sm grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="flex items-center gap-3">
-                <Sliders className="w-5 h-5 text-indigo-400 flex-shrink-0" />
+                <Sliders className="w-5 h-5 text-primary flex-shrink-0" />
                 <div className="flex flex-col">
-                  <span className="text-xs text-slate-400">Detected Register</span>
-                  <span className="text-sm font-bold text-slate-200 uppercase tracking-wide">
+                  <span className="text-xs text-muted-foreground">Detected Register</span>
+                  <span className="text-sm font-bold text-foreground uppercase tracking-wide">
                     {results.register}
                   </span>
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <RefreshCw className="w-5 h-5 text-emerald-400 flex-shrink-0 animate-spin-slow" />
+                <RefreshCw className="w-5 h-5 text-primary flex-shrink-0" />
                 <div className="flex flex-col">
-                  <span className="text-xs text-slate-400">Processing Speed</span>
-                  <span className="text-sm font-bold text-slate-200">
+                  <span className="text-xs text-muted-foreground">Processing Speed</span>
+                  <span className="text-sm font-bold text-foreground">
                     {results.processing_time_ms.toFixed(1)} ms
                   </span>
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0" />
                 <div className="flex flex-col">
-                  <span className="text-xs text-slate-400">Confidence Calibration</span>
-                  <span className="text-sm font-bold text-blue-400">
+                  <span className="text-xs text-muted-foreground">Calibration Status</span>
+                  <span className="text-sm font-bold text-emerald-500">
                     Active & Normalised
                   </span>
                 </div>
@@ -496,13 +480,13 @@ export default function AIDetector() {
 
             {/* Stylometric Features Card */}
             {results.features && (
-              <div className="bg-slate-900/30 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-md">
+              <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
                 <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider flex items-center gap-2">
-                    <Sliders className="w-4 h-4 text-purple-400" />
+                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-2">
+                    <Sliders className="w-4 h-4 text-primary" />
                     Linguistic Diagnostics (Stylometrics)
                   </h3>
-                  <p className="text-xs text-slate-500 mt-1">
+                  <p className="text-xs text-muted-foreground mt-1">
                     Features scoring compared to training range benchmarks
                   </p>
                 </div>
@@ -512,14 +496,14 @@ export default function AIDetector() {
                     if (val === undefined || val === null) return null;
                     const percent = Math.min((val / meta.max) * 100, 100);
                     return (
-                      <div key={key} className="bg-slate-950/40 border border-slate-900 rounded-xl p-3.5">
+                      <div key={key} className="bg-background border border-border rounded-xl p-3.5">
                         <div className="flex justify-between items-center mb-2">
-                          <span className="text-xs font-medium text-slate-300">{meta.label}</span>
-                          <span className="text-xs font-bold text-blue-400">{meta.format(val)}</span>
+                          <span className="text-xs font-medium text-foreground">{meta.label}</span>
+                          <span className="text-xs font-bold text-primary">{meta.format(val)}</span>
                         </div>
-                        <div className="w-full h-2 bg-slate-850 rounded-full overflow-hidden">
+                        <div className="w-full h-2 bg-muted rounded-full overflow-hidden">
                           <div 
-                            className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-1000"
+                            className="h-full bg-primary rounded-full transition-all duration-1000"
                             style={{ width: `${percent}%` }}
                           />
                         </div>
@@ -532,6 +516,6 @@ export default function AIDetector() {
           </section>
         )}
       </div>
-    </div>
+    </PageLayout>
   );
 }
