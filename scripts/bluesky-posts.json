@@ -1372,8 +1372,10 @@
     "id": "agent-infrastructure-stack-11",
     "scheduleDate": "2026-07-04",
     "scheduleTime": "01:00",
-    "posted": false,
-    "text": "5 open questions the data alone can't resolve.\n\nDo the 8 layers collapse into 3-4 bundles?\nDo wrapper startups die in the next wave of model updates?\nDoes compute scarcity stay permanent?\nCan open protocols prevent lock-in?\nWho bears liability when an agent signs a contract?\n\nveda.ng/agent-infrastructure-stack"
+    "posted": true,
+    "text": "5 open questions the data alone can't resolve.\n\nDo the 8 layers collapse into 3-4 bundles?\nDo wrapper startups die in the next wave of model updates?\nDoes compute scarcity stay permanent?\nCan open protocols prevent lock-in?\nWho bears liability when an agent signs a contract?\n\nveda.ng/agent-infrastructure-stack",
+    "postedAt": "2026-07-04T04:49:57.015Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mpsb4xwyam2h"
   },
   {
     "id": "agent-infrastructure-stack-12",
