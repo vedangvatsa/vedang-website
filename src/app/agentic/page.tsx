@@ -12,6 +12,8 @@ const referenceLinks = [
         name: 'Protocols and Standards',
         links: [
             { name: 'Model Context Protocol (MCP)', url: 'https://modelcontextprotocol.io' },
+            { name: 'A2A Protocol (Google)', url: 'https://google.github.io/A2A/' },
+            { name: 'A2A Spec on GitHub', url: 'https://github.com/google/A2A' },
         ],
     },
     {
@@ -21,6 +23,10 @@ const referenceLinks = [
             { name: 'CrewAI Docs', url: 'https://docs.crewai.com' },
             { name: 'Google Agent Development Kit', url: 'https://google.github.io/adk-docs/' },
             { name: 'AutoGen (Microsoft)', url: 'https://microsoft.github.io/autogen/' },
+            { name: 'OpenAI Agents SDK', url: 'https://openai.github.io/openai-agents-python/' },
+            { name: 'Pydantic AI', url: 'https://ai.pydantic.dev' },
+            { name: 'Smolagents (HuggingFace)', url: 'https://huggingface.co/docs/smolagents' },
+            { name: 'Agno', url: 'https://docs.agno.com' },
         ],
     },
     {
@@ -28,7 +34,10 @@ const referenceLinks = [
         links: [
             { name: 'ChatGPT Operator', url: 'https://openai.com/index/introducing-operator/' },
             { name: 'Google Project Mariner', url: 'https://deepmind.google/technologies/project-mariner/' },
+            { name: 'Jules (Google)', url: 'https://jules.google' },
+            { name: 'Devin (Cognition AI)', url: 'https://devin.ai' },
             { name: 'Genspark Super Agent', url: 'https://www.genspark.ai' },
+            { name: 'Perplexity AI', url: 'https://www.perplexity.ai' },
         ],
     },
     {
@@ -36,6 +45,8 @@ const referenceLinks = [
         links: [
             { name: 'Google Cloud: What are AI Agents?', url: 'https://cloud.google.com/discover/what-are-ai-agents' },
             { name: 'Anthropic: Building Effective Agents', url: 'https://www.anthropic.com/engineering/building-effective-agents' },
+            { name: 'OpenAI: Practical Guide to Agents', url: 'https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf' },
+            { name: "Lilian Weng: LLM-Powered Agents", url: 'https://lilianweng.github.io/posts/2023-06-23-agent/' },
         ],
     },
 ];

@@ -30,30 +30,36 @@ const curriculumItems = [
 ];
 
 const referenceLinks = [
-    { 
+    {
         name: 'Official MCP',
         links: [
             { name: 'MCP Specification', url: 'https://spec.modelcontextprotocol.io' },
             { name: 'MCP Documentation', url: 'https://modelcontextprotocol.io/docs' },
             { name: 'MCP TypeScript SDK', url: 'https://github.com/modelcontextprotocol/typescript-sdk' },
             { name: 'MCP Python SDK', url: 'https://github.com/modelcontextprotocol/python-sdk' },
-        ]
+            { name: 'MCP Go SDK', url: 'https://github.com/modelcontextprotocol/go-sdk' },
+        ],
     },
-    { 
+    {
         name: 'Tools & Registries',
         links: [
             { name: 'MCP Inspector', url: 'https://github.com/modelcontextprotocol/inspector' },
             { name: 'Smithery (MCP Registry)', url: 'https://smithery.ai' },
+            { name: 'Glama (MCP Registry)', url: 'https://glama.ai/mcp/servers' },
             { name: 'MCP.run', url: 'https://mcp.run' },
-        ]
+        ],
     },
-    { 
+    {
         name: 'Client Documentation',
         links: [
             { name: 'Claude Desktop MCP Guide', url: 'https://modelcontextprotocol.io/quickstart/user' },
+            { name: 'Claude Code MCP Docs', url: 'https://docs.anthropic.com/en/docs/claude-code/mcp' },
             { name: 'Cursor MCP Docs', url: 'https://docs.cursor.com/context/model-context-protocol' },
+            { name: 'Windsurf MCP Docs', url: 'https://docs.windsurf.com/windsurf/mcp' },
             { name: 'VS Code MCP Support', url: 'https://code.visualstudio.com/docs/copilot/chat/mcp-servers' },
-        ]
+            { name: 'Antigravity MCP Docs', url: 'https://antigravity.dev/docs/mcp' },
+            { name: 'Zed MCP Support', url: 'https://zed.dev/docs/assistant/model-context-protocol' },
+        ],
     },
     {
         name: 'Example Servers',

@@ -37,6 +37,8 @@ const referenceLinks = [
             { name: 'Make (Integromat)', url: 'https://make.com' },
             { name: 'Zapier', url: 'https://zapier.com' },
             { name: 'Pipedream', url: 'https://pipedream.com' },
+            { name: 'Activepieces', url: 'https://activepieces.com' },
+            { name: 'Dify', url: 'https://dify.ai' },
         ]
     },
     {
@@ -45,15 +47,29 @@ const referenceLinks = [
             { name: 'Anthropic (Claude)', url: 'https://docs.anthropic.com' },
             { name: 'OpenAI API', url: 'https://platform.openai.com/docs' },
             { name: 'Google Gemini API', url: 'https://ai.google.dev' },
+            { name: 'Groq', url: 'https://console.groq.com' },
+            { name: 'OpenRouter', url: 'https://openrouter.ai' },
         ]
     },
     {
-        name: 'Infrastructure',
+        name: 'Infrastructure & Deploy',
         links: [
             { name: 'GitHub Actions', url: 'https://docs.github.com/en/actions' },
             { name: 'Vercel Cron Jobs', url: 'https://vercel.com/docs/cron-jobs' },
             { name: 'Supabase', url: 'https://supabase.com' },
             { name: 'Resend (Email API)', url: 'https://resend.com' },
+            { name: 'Railway', url: 'https://railway.app' },
+            { name: 'Fly.io', url: 'https://fly.io' },
+            { name: 'Cloudflare Workers', url: 'https://workers.cloudflare.com' },
+        ]
+    },
+    {
+        name: 'Messaging & Data',
+        links: [
+            { name: 'Telegram Bot API', url: 'https://core.telegram.org/bots/api' },
+            { name: 'Twilio', url: 'https://www.twilio.com/docs' },
+            { name: 'Airtable API', url: 'https://airtable.com/developers/web/api/introduction' },
+            { name: 'Redis', url: 'https://redis.io/docs' },
         ]
     },
     {
