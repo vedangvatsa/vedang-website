@@ -26,25 +26,19 @@ const curriculumItems = [
 ];
 
 const referenceLinks = [
-    { 
-        name: 'Firebase', 
+    // Cloud Builders
+    {
+        name: 'Lovable',
         links: [
-            { name: 'Firebase Docs', url: 'https://firebase.google.com/docs' },
-            { name: 'Firebase App Hosting', url: 'https://firebase.google.com/docs/app-hosting' }
-        ]
+            { name: 'Lovable Docs', url: 'https://docs.lovable.dev' },
+        ],
     },
-    { 
-        name: 'Replit', 
+    {
+        name: 'Replit',
         links: [
             { name: 'Replit Docs', url: 'https://docs.replit.com' },
-            { name: 'Replit Agent', url: 'https://docs.replit.com/replitai/agent' }
-        ]
-    },
-     { 
-        name: 'Lovable', 
-        links: [
-            { name: 'Lovable Docs', url: 'https://docs.lovable.dev' }
-        ]
+            { name: 'Replit Agent', url: 'https://docs.replit.com/replitai/agent' },
+        ],
     },
     {
         name: 'Vercel v0',
@@ -53,58 +47,199 @@ const referenceLinks = [
             { name: 'Vercel Docs', url: 'https://vercel.com/docs' },
         ],
     },
-     {
+    {
         name: 'Bolt.new (StackBlitz)',
         links: [
             { name: 'Bolt.new', url: 'https://bolt.new' },
             { name: 'StackBlitz Docs', url: 'https://developer.stackblitz.com' },
         ],
     },
-    { 
-        name: 'Anthropic Claude', 
-        links: [
-            { name: 'Claude Docs', url: 'https://docs.anthropic.com/en/docs/welcome' },
-            { name: 'System Prompts', url: 'https://docs.anthropic.com/en/docs/system-prompts' }
-        ]
-    },
-    { 
-        name: 'Cursor', 
+    // AI-Native Editors
+    {
+        name: 'Cursor',
         links: [
             { name: 'Cursor Docs', url: 'https://docs.cursor.com' },
-            { name: 'Cursor Directory', url: 'https://cursor.directory' }
-        ]
-    },
-    { 
-        name: 'GitHub Copilot', 
-        links: [
-            { name: 'Copilot Docs', url: 'https://docs.github.com/en/copilot' }
-        ]
-    },
-    { 
-        name: 'OpenAI (ChatGPT / APIs)', 
-        links: [
-            { name: 'Platform Docs', url: 'https://platform.openai.com/docs' },
-            { name: 'Cookbook', url: 'https://cookbook.openai.com' }
-        ]
-    },
-    { 
-        name: 'Supabase', 
-        links: [
-            { name: 'Supabase Docs', url: 'https://supabase.com/docs' },
-            { name: 'Learn', url: 'https://supabase.com/learn' }
-        ]
+            { name: 'Cursor Directory', url: 'https://cursor.directory' },
+        ],
     },
     {
-        name: 'VS Code + AI Extensions',
+        name: 'Windsurf (Codeium)',
+        links: [
+            { name: 'Windsurf IDE', url: 'https://windsurf.com' },
+            { name: 'Windsurf Docs', url: 'https://docs.windsurf.com' },
+        ],
+    },
+    {
+        name: 'VS Code + AI',
         links: [
             { name: 'VS Code', url: 'https://code.visualstudio.com/' },
             { name: 'Gemini Code Assist', url: 'https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist' },
         ],
     },
+    // Terminal Agents
     {
-        name: 'Antigravity',
+        name: 'Antigravity (Google)',
         links: [
             { name: 'Antigravity', url: 'https://antigravity.dev' },
+            { name: 'Antigravity Docs', url: 'https://antigravity.dev/docs' },
+        ],
+    },
+    {
+        name: 'Claude Code (Anthropic)',
+        links: [
+            { name: 'Claude Code Docs', url: 'https://docs.anthropic.com/en/docs/claude-code/overview' },
+            { name: 'Getting Started', url: 'https://docs.anthropic.com/en/docs/claude-code/getting-started' },
+        ],
+    },
+    {
+        name: 'Gemini CLI (Google)',
+        links: [
+            { name: 'Gemini CLI', url: 'https://github.com/google-gemini/gemini-cli' },
+            { name: 'Gemini API Docs', url: 'https://ai.google.dev/gemini-api/docs' },
+        ],
+    },
+    {
+        name: 'OpenAI Codex CLI',
+        links: [
+            { name: 'Codex CLI', url: 'https://github.com/openai/codex' },
+            { name: 'Platform Docs', url: 'https://platform.openai.com/docs' },
+        ],
+    },
+    {
+        name: 'OpenCode',
+        links: [
+            { name: 'OpenCode', url: 'https://opencode.ai' },
+            { name: 'GitHub Repo', url: 'https://github.com/sst/opencode' },
+        ],
+    },
+    {
+        name: 'Aider',
+        links: [
+            { name: 'Aider', url: 'https://aider.chat' },
+            { name: 'Aider Docs', url: 'https://aider.chat/docs' },
+        ],
+    },
+    {
+        name: 'Cline',
+        links: [
+            { name: 'Cline', url: 'https://cline.bot' },
+            { name: 'GitHub Repo', url: 'https://github.com/cline/cline' },
+        ],
+    },
+    {
+        name: 'Devin (Cognition AI)',
+        links: [
+            { name: 'Devin', url: 'https://devin.ai' },
+            { name: 'Devin Docs', url: 'https://docs.devin.ai' },
+        ],
+    },
+    {
+        name: 'Kiro (AWS)',
+        links: [
+            { name: 'Kiro', url: 'https://kiro.dev' },
+            { name: 'Kiro Docs', url: 'https://kiro.dev/docs' },
+        ],
+    },
+    // IDE Assistants
+    {
+        name: 'GitHub Copilot',
+        links: [
+            { name: 'Copilot Docs', url: 'https://docs.github.com/en/copilot' },
+            { name: 'Copilot Workspace', url: 'https://githubnext.com/projects/copilot-workspace' },
+        ],
+    },
+    {
+        name: 'Sourcegraph Cody',
+        links: [
+            { name: 'Cody', url: 'https://sourcegraph.com/cody' },
+            { name: 'Cody Docs', url: 'https://docs.sourcegraph.com/cody' },
+        ],
+    },
+    {
+        name: 'JetBrains AI',
+        links: [
+            { name: 'JetBrains AI', url: 'https://www.jetbrains.com/ai' },
+            { name: 'AI Assistant Docs', url: 'https://www.jetbrains.com/help/idea/ai-assistant.html' },
+        ],
+    },
+    {
+        name: 'Zed Editor',
+        links: [
+            { name: 'Zed', url: 'https://zed.dev' },
+            { name: 'Zed Docs', url: 'https://zed.dev/docs' },
+        ],
+    },
+    {
+        name: 'Warp Terminal',
+        links: [
+            { name: 'Warp', url: 'https://warp.dev' },
+            { name: 'Warp Docs', url: 'https://docs.warp.dev' },
+        ],
+    },
+    // Free / Cloud API Providers
+    {
+        name: 'OpenRouter',
+        links: [
+            { name: 'OpenRouter', url: 'https://openrouter.ai' },
+            { name: 'OpenRouter Docs', url: 'https://openrouter.ai/docs' },
+        ],
+    },
+    {
+        name: 'Groq (Free API)',
+        links: [
+            { name: 'Groq Console', url: 'https://console.groq.com' },
+            { name: 'Groq Docs', url: 'https://console.groq.com/docs' },
+        ],
+    },
+    {
+        name: 'NVIDIA NIM (Free API)',
+        links: [
+            { name: 'NVIDIA NIM', url: 'https://build.nvidia.com' },
+            { name: 'NIM Docs', url: 'https://docs.nvidia.com/nim' },
+        ],
+    },
+    {
+        name: 'Anthropic Claude',
+        links: [
+            { name: 'Claude Docs', url: 'https://docs.anthropic.com/en/docs/welcome' },
+            { name: 'System Prompts', url: 'https://docs.anthropic.com/en/docs/system-prompts' },
+        ],
+    },
+    {
+        name: 'OpenAI',
+        links: [
+            { name: 'Platform Docs', url: 'https://platform.openai.com/docs' },
+            { name: 'Cookbook', url: 'https://cookbook.openai.com' },
+        ],
+    },
+    // Local / Private Models
+    {
+        name: 'Ollama',
+        links: [
+            { name: 'Ollama', url: 'https://ollama.com' },
+            { name: 'Model Library', url: 'https://ollama.com/library' },
+        ],
+    },
+    {
+        name: 'LM Studio',
+        links: [
+            { name: 'LM Studio', url: 'https://lmstudio.ai' },
+            { name: 'LM Studio Docs', url: 'https://lmstudio.ai/docs' },
+        ],
+    },
+    // Backend & Deploy
+    {
+        name: 'Supabase',
+        links: [
+            { name: 'Supabase Docs', url: 'https://supabase.com/docs' },
+            { name: 'Learn', url: 'https://supabase.com/learn' },
+        ],
+    },
+    {
+        name: 'Firebase',
+        links: [
+            { name: 'Firebase Docs', url: 'https://firebase.google.com/docs' },
+            { name: 'Firebase App Hosting', url: 'https://firebase.google.com/docs/app-hosting' },
         ],
     },
 ];
