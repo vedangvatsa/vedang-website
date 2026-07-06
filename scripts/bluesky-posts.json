@@ -1528,9 +1528,11 @@
     "id": "viral-rewrite-14",
     "scheduleDate": "2026-07-06",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "You rarely know what someone is carrying outside of work. A small kindness can land on the right day and change everything. The best teams don't require a backstory to be decent. Find teams where kindness is default at cvin.bio/jobs/li.",
-    "image": "scripts/post-images/post_21_1.jpg"
+    "image": "scripts/post-images/post_21_1.jpg",
+    "postedAt": "2026-07-06T20:16:49.053Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mpyvu65hun2c"
   },
   {
     "id": "viral-rewrite-15",
