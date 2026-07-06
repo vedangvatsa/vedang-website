@@ -61,12 +61,17 @@ Here is a breakdown of the most effective tools available right now and when to 
     
     <AccordionItem value="cursor-windsurf" className="border rounded-lg bg-card px-4">
         <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-            2. Cursor & Windsurf: The AI-Native Editors
+            2. Cursor, Windsurf & Trae IDE: The AI-Native Editors
         </AccordionTrigger>
         <AccordionContent className="text-base text-muted-foreground pt-1">
-            **Best For:** Developers who want AI integrated directly into their coding environment with full codebase awareness.
+            **Best For:** AI-first coding with full codebase context, custom extensions, and local system access.
             
-            **How it works:** Both are forks of VS Code with AI deeply integrated. **Cursor** has inline editing (Cmd+K), a chat panel that indexes your entire codebase for context-aware suggestions, and "Composer" mode for coordinated multi-file changes. **Windsurf** offers similar capabilities with its "Cascade" flow for autonomous edits. Both support MCP servers, meaning you can connect them to databases, APIs, and custom tools. The key advantage over cloud IDEs: they run locally, so you get full filesystem access, custom extensions, and no vendor lock-in on your code.
+            **How it works:** These are forks of VS Code with AI native interfaces. 
+            *   **Cursor** provides inline edits (Cmd+K), chat context across your whole project, and Composer mode for multi-file changes.
+            *   **Windsurf** introduces Cascade flow, an agentic system that edits files in sequence.
+            *   **Trae IDE** (by ByteDance) is a free alternative featuring Builder Mode for visual prototyping and Solo Mode for autonomous developer tasks.
+            
+            They all support MCP servers to connect your editor to external databases and APIs.
         </AccordionContent>
     </AccordionItem>
     
@@ -94,12 +99,17 @@ Here is a breakdown of the most effective tools available right now and when to 
     
     <AccordionItem value="agents" className="border rounded-lg bg-card px-4">
         <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-            5. Claude Code & Antigravity: The Autonomous Agents
+            5. Autonomous Agents (Claude Code, Antigravity, Devin, Jules, Aider, Cline)
         </AccordionTrigger>
         <AccordionContent className="text-base text-muted-foreground pt-1">
-            **Best For:** Large-scale refactors, complex multi-file changes, and autonomous project-level work.
+            **Best For:** Large-scale refactors, complex multi-file changes, and autonomous task execution.
             
-            **How it works:** **Claude Code** (Anthropic) runs in your terminal as an interactive agent. You describe a task, and it reads your codebase, writes code, runs shell commands, and iterates on errors autonomously. **Antigravity** (Google DeepMind) is an agentic coding assistant that operates inside your IDE , it can read your project, edit files, run commands, browse the web, and execute multi-step tasks with deep codebase understanding. Both represent the frontier of AI coding: instead of autocompleting one line, they autonomously execute entire features. The trade-off vs. Cursor: higher autonomy means less granular control over each edit.
+            **How it works:** These tools go beyond simple code generation to plan and execute tasks.
+            *   **Claude Code & Antigravity:** Run interactively to read code, write files, run terminal commands, and fix errors. Antigravity operates inside your editor, while Claude Code runs in your terminal.
+            *   **Devin & Jules:** Fully autonomous software agents. Devin works in a sandboxed developer environment to solve GitHub issues, while Jules runs asynchronously in secure cloud environments to maintain and update repositories.
+            *   **Aider & Cline:** Developer-centric CLI agents. Aider integrates git commits directly into the edit flow, while Cline links with local environments to run terminal actions and edit files.
+            
+            Autonomous agents write entire features rather than single lines of code. The trade-off: you lose granular control over every individual line change.
         </AccordionContent>
     </AccordionItem>
 

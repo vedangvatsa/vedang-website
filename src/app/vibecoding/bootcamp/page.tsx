@@ -23,18 +23,92 @@ const curriculumItems = [
   { href: '/vibecoding/bootcamp/day-6-ship-and-grow', title: 'Day 6 - Ship and Grow', description: 'Deploy to a live URL, get 10 real testers, start building in public' },
   { href: '/vibecoding/bootcamp/day-7-sell-and-beyond', title: 'Day 7 - Sell and Beyond', description: 'Pricing, your first paying customer, pitch decks, and the post-bootcamp playbook' },
 ];
-
 const referenceLinks = [
-    { name: 'Anthropic Claude', links: [{ name: 'Claude Docs', url: 'https://docs.anthropic.com/en/docs/welcome' }] },
-    { name: 'Cursor', links: [{ name: 'Cursor Docs', url: 'https://docs.cursor.com' }, { name: 'Cursor Directory', url: 'https://cursor.directory' }] },
-    { name: 'Lovable', links: [{ name: 'Lovable Docs', url: 'https://docs.lovable.dev' }] },
-    { name: 'Vercel v0', links: [{ name: 'v0 Docs', url: 'https://v0.dev/docs' }, { name: 'Vercel Docs', url: 'https://vercel.com/docs' }] },
-    { name: 'Replit', links: [{ name: 'Replit Docs', url: 'https://docs.replit.com' }] },
-    { name: 'Supabase', links: [{ name: 'Supabase Docs', url: 'https://supabase.com/docs' }] },
-    { name: 'Obsidian', links: [{ name: 'Obsidian', url: 'https://obsidian.md' }, { name: 'Obsidian Docs', url: 'https://help.obsidian.md' }] },
-    { name: 'Bolt.new', links: [{ name: 'Bolt.new', url: 'https://bolt.new' }] },
+    // Cloud Builders
+    {
+        name: 'Lovable',
+        links: [
+            { name: 'Lovable Docs', url: 'https://docs.lovable.dev' },
+        ],
+    },
+    {
+        name: 'Replit',
+        links: [
+            { name: 'Replit Docs', url: 'https://docs.replit.com' },
+            { name: 'Replit Agent', url: 'https://docs.replit.com/replitai/agent' },
+        ],
+    },
+    {
+        name: 'Vercel v0',
+        links: [
+            { name: 'v0 Docs', url: 'https://v0.dev/docs' },
+            { name: 'Vercel Docs', url: 'https://vercel.com/docs' },
+        ],
+    },
+    {
+        name: 'Bolt.new (StackBlitz)',
+        links: [
+            { name: 'Bolt.new', url: 'https://bolt.new' },
+            { name: 'StackBlitz Docs', url: 'https://developer.stackblitz.com' },
+        ],
+    },
+    // AI-Native Editors
+    {
+        name: 'Cursor',
+        links: [
+            { name: 'Cursor Docs', url: 'https://docs.cursor.com' },
+            { name: 'Cursor Directory', url: 'https://cursor.directory' },
+        ],
+    },
+    {
+        name: 'Windsurf (Codeium)',
+        links: [
+            { name: 'Windsurf IDE', url: 'https://windsurf.com' },
+            { name: 'Windsurf Docs', url: 'https://docs.windsurf.com' },
+        ],
+    },
+    {
+        name: 'Trae IDE (ByteDance)',
+        links: [
+            { name: 'Trae', url: 'https://www.trae.ai' },
+            { name: 'Trae Docs', url: 'https://docs.trae.ai' },
+        ],
+    },
+    // Terminal Agents
+    {
+        name: 'Antigravity (Google)',
+        links: [
+            { name: 'Antigravity', url: 'https://antigravity.dev' },
+            { name: 'Antigravity Docs', url: 'https://antigravity.dev/docs' },
+        ],
+    },
+    {
+        name: 'Claude Code (Anthropic)',
+        links: [
+            { name: 'Claude Code Docs', url: 'https://docs.anthropic.com/en/docs/claude-code/overview' },
+        ],
+    },
+    {
+        name: 'Devin (Cognition AI)',
+        links: [
+            { name: 'Devin', url: 'https://devin.ai' },
+        ],
+    },
+    // Tools
+    {
+        name: 'Obsidian',
+        links: [
+            { name: 'Obsidian', url: 'https://obsidian.md' },
+            { name: 'Obsidian Docs', url: 'https://help.obsidian.md' },
+        ],
+    },
+    {
+        name: 'Supabase',
+        links: [
+            { name: 'Supabase Docs', url: 'https://supabase.com/docs' },
+        ],
+    },
 ];
-
 const faqItems = [
   {
     question: "How is this different from the Vibe Coding course?",
