@@ -1518,9 +1518,11 @@
     "id": "viral-rewrite-13",
     "scheduleDate": "2026-07-06",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Perks and vacations can't cure a job that demands too much. They're bandages on a system that keeps cutting. The real fix is fewer demands, not better benefits. Find companies that prevent burnout, not just treat it at cvin.bio/jobs/li.",
-    "image": "scripts/post-images/post_131_1.jpg"
+    "image": "scripts/post-images/post_131_1.jpg",
+    "postedAt": "2026-07-06T12:55:33.214Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mpy574x6nc23"
   },
   {
     "id": "viral-rewrite-14",
