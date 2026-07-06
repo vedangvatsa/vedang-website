@@ -70,6 +70,13 @@ const referenceLinks = [
         ],
     },
     {
+        name: 'Trae IDE (ByteDance)',
+        links: [
+            { name: 'Trae', url: 'https://www.trae.ai' },
+            { name: 'Trae Docs', url: 'https://docs.trae.ai' },
+        ],
+    },
+    {
         name: 'VS Code + AI',
         links: [
             { name: 'VS Code', url: 'https://code.visualstudio.com/' },
@@ -140,6 +147,12 @@ const referenceLinks = [
             { name: 'Kiro Docs', url: 'https://kiro.dev/docs' },
         ],
     },
+    {
+        name: 'Jules (Google)',
+        links: [
+            { name: 'Jules', url: 'https://jules.google' },
+        ],
+    },
     // IDE Assistants
     {
         name: 'GitHub Copilot',
@@ -160,6 +173,13 @@ const referenceLinks = [
         links: [
             { name: 'JetBrains AI', url: 'https://www.jetbrains.com/ai' },
             { name: 'AI Assistant Docs', url: 'https://www.jetbrains.com/help/idea/ai-assistant.html' },
+        ],
+    },
+    {
+        name: 'Amazon Q Developer',
+        links: [
+            { name: 'Amazon Q', url: 'https://aws.amazon.com/q/developer' },
+            { name: 'Q Developer Docs', url: 'https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug' },
         ],
     },
     {
