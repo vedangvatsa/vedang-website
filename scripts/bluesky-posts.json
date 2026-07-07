@@ -1538,9 +1538,11 @@
     "id": "viral-rewrite-15",
     "scheduleDate": "2026-07-06",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "The best leaders don't collect power. They remove obstacles. They work for the team, not the other way around. That flip changes everything about retention, trust, and results. Find leaders who serve at cvin.bio/jobs/li.",
-    "image": "scripts/post-images/post_182_1.jpg"
+    "image": "scripts/post-images/post_182_1.jpg",
+    "postedAt": "2026-07-07T04:56:08.267Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mpzsus2hvp2l"
   },
   {
     "id": "viral-rewrite-16",
