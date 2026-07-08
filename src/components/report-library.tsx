@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useMemo, useRef, useCallback } from 'react';
 import Link from 'next/link';
-import { Search, Filter, MoveUpRight, Database, Loader2, BookOpen, GraduationCap, Flame, ArrowUpDown, X } from 'lucide-react';
+import { Search, Filter, MoveUpRight, Database, Loader2, ArrowUpDown, X } from 'lucide-react';
 
 interface ReportEntry {
   title: string;
@@ -148,54 +148,57 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
     setApiLoading(true);
     setPage(1); // Reset page to 1 for new queries
 
-    debounceRef.current = setTimeout(async () => {
+    const executeSearch = async () => {
       try {
-        let fetchUrl = '';
+        let url = '';
         if (searchMode === 'curated') {
-          fetchUrl = `/api/reports/local-search?corpus=${corpus}&q=${encodeURIComponent(query)}&category=${encodeURIComponent(category)}&sort=${sort}&type=${docType}&yearRange=${yearRange}&page=1&limit=50`;
+          url = `/api/reports/local-search?q=${encodeURIComponent(query)}&category=${encodeURIComponent(category)}&type=${encodeURIComponent(docType)}&yearRange=${encodeURIComponent(yearRange)}&sort=${sort}&page=1&limit=${CHUNK}`;
         } else {
-          // OpenAlex search (always sorted by citations on the route side)
-          fetchUrl = `/api/reports/search?corpus=${corpus}&q=${encodeURIComponent(query)}&category=${encodeURIComponent(category)}&page=1&per_page=50`;
+          url = `/api/reports/search?q=${encodeURIComponent(query)}&page=1&limit=${CHUNK}`;
         }
 
-        const res = await fetch(fetchUrl);
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('Search failed');
         const data = await res.json();
         
-        const fetchedResults = data.results || [];
-        setResults(fetchedResults);
-        
-        const total = data.total || 0;
-        setTotalCount(total);
-        
-        setHasMore(fetchedResults.length < total);
+        const newResults = data.results || [];
+        setResults(newResults);
+        setTotalCount(data.total || 0);
+        setHasMore(newResults.length < (data.total || 0));
       } catch (err) {
-        console.error('Search fetch error:', err);
+        console.error('Search error:', err);
+        setResults([]);
+        setTotalCount(0);
+        setHasMore(false);
       } finally {
         setApiLoading(false);
       }
-    }, DEBOUNCE_MS);
+    };
+
+    debounceRef.current = setTimeout(executeSearch, DEBOUNCE_MS);
 
     return () => {
       if (debounceRef.current) clearTimeout(debounceRef.current);
     };
-  }, [query, category, searchMode, corpus, sort, docType, yearRange]);
+  }, [query, category, docType, yearRange, sort, searchMode, dataUrl]);
 
-  // Fetching next page when user scrolls to bottom
+  // Server-side next page loading
   const fetchNextPage = useCallback(async () => {
     if (apiLoading || !hasMore) return;
     
-    const nextPage = page + 1;
     setApiLoading(true);
+    const nextPage = page + 1;
     
     try {
-      let fetchUrl = '';
+      let url = '';
       if (searchMode === 'curated') {
-        fetchUrl = `/api/reports/local-search?corpus=${corpus}&q=${encodeURIComponent(query)}&category=${encodeURIComponent(category)}&sort=${sort}&type=${docType}&yearRange=${yearRange}&page=${nextPage}&limit=50`;
+        url = `/api/reports/local-search?q=${encodeURIComponent(query)}&category=${encodeURIComponent(category)}&type=${encodeURIComponent(docType)}&yearRange=${encodeURIComponent(yearRange)}&sort=${sort}&page=${nextPage}&limit=${CHUNK}`;
       } else {
-        fetchUrl = `/api/reports/search?corpus=${corpus}&q=${encodeURIComponent(query)}&category=${encodeURIComponent(category)}&page=${nextPage}&per_page=50`;
+        url = `/api/reports/search?q=${encodeURIComponent(query)}&page=${nextPage}&limit=${CHUNK}`;
       }
-      
-      const res = await fetch(fetchUrl);
+
+      const res = await fetch(url);
+      if (!res.ok) throw new Error('Failed to load next page');
       const data = await res.json();
       
       const newResults = data.results || [];
@@ -277,8 +280,8 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
   if (defaultLoading) {
     return (
       <div className="flex flex-col items-center justify-center py-24">
-        <Loader2 className="w-8 h-8 animate-spin text-primary mb-4" />
-        <p className="text-muted-foreground text-sm font-medium">Initializing library and metadata...</p>
+        <Loader2 className="w-6 h-6 animate-spin text-muted-foreground/60 mb-3" />
+        <p className="text-muted-foreground text-xs font-medium">Initializing library metadata...</p>
       </div>
     );
   }
@@ -286,98 +289,39 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
   return (
     <div className="py-6">
       {/* Search Mode Tabs */}
-      <div className="flex border-b border-border/50 mb-6 gap-1 md:gap-2">
+      <div className="flex overflow-x-auto whitespace-nowrap scrollbar-none border-b border-[#e3e3e0] dark:border-zinc-800 mb-8 -mx-4 px-4 sm:mx-0 sm:px-0">
         <button
           onClick={() => {
             setSearchMode('curated');
             resetFilters();
           }}
-          className={`flex items-center gap-2 pb-3 px-3 md:px-5 text-sm font-semibold border-b-2 transition-all -mb-px ${
+          className={`pb-3.5 px-1 text-sm font-bold border-b-2 transition-all -mb-px mr-6 shrink-0 ${
             searchMode === 'curated'
               ? 'border-primary text-primary'
               : 'border-transparent text-muted-foreground hover:text-foreground'
           }`}
         >
-          <BookOpen className="w-4 h-4" />
-          <span>Curated Library</span>
-          <span className="text-[10px] md:text-xs px-2 py-0.5 rounded-full bg-secondary text-secondary-foreground font-mono">
-            {corpus === 'ai' ? '133,000+' : '100,000+'}
-          </span>
+          Curated Database <span className="text-xs font-mono font-normal opacity-70">({corpus === 'ai' ? '133k' : '100k'})</span>
         </button>
         <button
           onClick={() => {
             setSearchMode('academic');
             resetFilters();
           }}
-          className={`flex items-center gap-2 pb-3 px-3 md:px-5 text-sm font-semibold border-b-2 transition-all -mb-px ${
+          className={`pb-3.5 px-1 text-sm font-bold border-b-2 transition-all -mb-px shrink-0 ${
             searchMode === 'academic'
               ? 'border-primary text-primary'
               : 'border-transparent text-muted-foreground hover:text-foreground'
           }`}
         >
-          <GraduationCap className="w-4 h-4" />
-          <span>Academic Search</span>
-          <span className="text-[10px] md:text-xs px-2 py-0.5 rounded-full bg-secondary text-secondary-foreground font-mono">
-            250M+
-          </span>
+          Academic Search <span className="text-xs font-mono font-normal opacity-70">(250M+)</span>
         </button>
       </div>
 
-      {/* Stats Summary Banner */}
-      <div className="bg-muted/30 border border-border/50 rounded-2xl p-4.5 mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-        <div>
-          <h4 className="text-sm font-bold text-foreground mb-1">
-            {corpus === 'ai' ? 'Curated AI Research Corpus' : 'Curated Web3 & Blockchain Corpus'}
-          </h4>
-          <p className="text-xs text-muted-foreground leading-relaxed max-w-xl">
-            This collection contains peer-reviewed papers, institutional research reports, and technical outlines. Sorted by academic impact and citation count to surface the most foundational documents first.
-          </p>
-        </div>
-        <div className="flex gap-4.5 shrink-0 text-left">
-          <div className="border-l-2 border-primary/20 pl-3">
-            <span className="block text-[10px] text-muted-foreground uppercase font-bold tracking-wider">Scope</span>
-            <span className="text-xs font-bold text-foreground">1980 – 2026</span>
-          </div>
-          <div className="border-l-2 border-primary/20 pl-3">
-            <span className="block text-[10px] text-muted-foreground uppercase font-bold tracking-wider">Sources</span>
-            <span className="text-xs font-bold text-foreground">OpenAlex, Crossref</span>
-          </div>
-          <div className="border-l-2 border-primary/20 pl-3">
-            <span className="block text-[10px] text-muted-foreground uppercase font-bold tracking-wider">Metrics</span>
-            <span className="text-xs font-bold text-foreground">Citations Tracked</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Category Grid Explorer */}
-      <div className="mb-6">
-        <span className="block text-xs font-bold text-muted-foreground mb-3 px-1">
-          Explore by Category
-        </span>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2">
-          {categories.map((c) => {
-            const isActive = category === c;
-            return (
-              <button
-                key={c}
-                onClick={() => setCategory(isActive ? '' : c)}
-                className={`flex items-center justify-center p-2.5 rounded-xl border text-xs font-semibold transition-all duration-200 ${
-                  isActive
-                    ? 'bg-primary/5 border-primary text-primary shadow-sm'
-                    : 'border-border/60 bg-card hover:bg-muted/40 text-foreground'
-                }`}
-              >
-                <span className="truncate">{c}</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Search and Filter Controls */}
-      <div className="flex flex-col gap-3.5 mb-6">
+      {/* Search & Filter Controls */}
+      <div className="flex flex-col gap-4 mb-8">
         <div className="relative">
-          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/60" />
           <input
             type="text"
             value={query}
@@ -387,7 +331,7 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
                 ? `Search within ${category || 'curated library'}...`
                 : "Search 250M+ papers via OpenAlex..."
             }
-            className="w-full pl-10 pr-10 py-3 rounded-xl border border-border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200"
+            className="w-full pl-10 pr-10 py-2.5 rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/10 text-sm focus:outline-none focus:border-primary transition-colors"
           />
           {query && (
             <button
@@ -400,31 +344,45 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
         </div>
 
         {/* Filter Controls Row */}
-        <div className="flex flex-wrap gap-2.5 items-center">
+        <div className="flex flex-wrap gap-3 items-center">
           {searchMode === 'curated' && (
             <>
+              {/* Category Filter */}
+              <div className="relative w-full sm:w-auto flex-1 min-w-[160px]">
+                <select
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                  className="w-full pl-3.5 pr-8 py-2 rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/10 text-xs font-semibold appearance-none cursor-pointer focus:outline-none focus:border-primary transition-colors"
+                >
+                  <option value="">All Categories</option>
+                  {categories.map((c) => (
+                    <option key={c} value={c}>{c}</option>
+                  ))}
+                </select>
+                <div className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-muted-foreground/60 text-[10px]">▼</div>
+              </div>
+
               {/* Document Type Filter */}
-              <div className="relative flex-1 sm:flex-initial">
-                <Filter className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+              <div className="relative w-full sm:w-auto flex-1 min-w-[160px]">
                 <select
                   value={docType}
                   onChange={(e) => setDocType(e.target.value)}
-                  className="w-full sm:w-auto pl-10 pr-10 py-2.5 rounded-xl border border-border bg-background text-xs font-semibold appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                  className="w-full pl-3.5 pr-8 py-2 rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/10 text-xs font-semibold appearance-none cursor-pointer focus:outline-none focus:border-primary transition-colors"
                 >
                   <option value="">All Document Types</option>
                   <option value="report">Industry Reports & Studies</option>
                   <option value="paper">Academic Papers & Books</option>
                   <option value="framework">Guidelines & Standards</option>
                 </select>
+                <div className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-muted-foreground/60 text-[10px]">▼</div>
               </div>
 
               {/* Year Range Filter */}
-              <div className="relative flex-1 sm:flex-initial">
-                <Filter className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+              <div className="relative w-full sm:w-auto flex-1 min-w-[120px]">
                 <select
                   value={yearRange}
                   onChange={(e) => setYearRange(e.target.value)}
-                  className="w-full sm:w-auto pl-10 pr-10 py-2.5 rounded-xl border border-border bg-background text-xs font-semibold appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                  className="w-full pl-3.5 pr-8 py-2 rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/10 text-xs font-semibold appearance-none cursor-pointer focus:outline-none focus:border-primary transition-colors"
                 >
                   <option value="">All Years</option>
                   <option value="2025-2026">2025 – 2026</option>
@@ -432,19 +390,20 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
                   <option value="2020-2022">2020 – 2022</option>
                   <option value="earlier">Before 2020</option>
                 </select>
+                <div className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-muted-foreground/60 text-[10px]">▼</div>
               </div>
 
               {/* Sort Selector */}
-              <div className="relative flex-1 sm:flex-initial">
-                <ArrowUpDown className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+              <div className="relative w-full sm:w-auto flex-1 min-w-[140px]">
                 <select
                   value={sort}
                   onChange={(e) => setSort(e.target.value as 'citations' | 'date')}
-                  className="w-full sm:w-auto pl-10 pr-10 py-2.5 rounded-xl border border-border bg-background text-xs font-semibold appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                  className="w-full pl-3.5 pr-8 py-2 rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/10 text-xs font-semibold appearance-none cursor-pointer focus:outline-none focus:border-primary transition-colors"
                 >
                   <option value="citations">Sort by Citations</option>
                   <option value="date">Sort by Date (Newest)</option>
                 </select>
+                <div className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-muted-foreground/60 text-[10px]">▼</div>
               </div>
             </>
           )}
@@ -453,7 +412,7 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
           {(query || category || docType || yearRange || sort !== 'citations') && (
             <button
               onClick={resetFilters}
-              className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl border border-border hover:bg-muted/40 text-xs font-bold transition-all shrink-0"
+              className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 hover:bg-muted/40 text-xs font-bold transition-all shrink-0 w-full sm:w-auto"
             >
               <X className="w-3.5 h-3.5 text-muted-foreground" />
               <span>Reset Filters</span>
@@ -463,49 +422,48 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
       </div>
 
       {/* Loading & Results Bar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 mb-5 px-1.5">
-        <span className="text-xs text-muted-foreground font-medium">
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-6 px-1">
+        <span className="text-xs text-muted-foreground font-mono uppercase tracking-wider font-semibold">
           {(isDefaultActive) ? (
-            `Showing top ${visibleItems.length} of ${totalCountDisplay.toLocaleString()} curated reports`
+            `Top ${visibleItems.length} of ${totalCountDisplay.toLocaleString()} curated reports`
           ) : (
             visibleItems.length > 0 && (
-              `Showing ${visibleItems.length} of ${totalCountDisplay.toLocaleString()} matching results`
+              `${visibleItems.length} of ${totalCountDisplay.toLocaleString()} matching results`
             )
           )}
         </span>
 
         {apiLoading && (
-          <div className="flex items-center gap-1.5 text-xs text-muted-foreground animate-pulse">
+          <div className="flex items-center gap-1.5 text-xs text-muted-foreground animate-pulse font-mono">
             <Loader2 className="w-3.5 h-3.5 animate-spin text-primary" />
-            <span>
-              {searchMode === 'curated' ? 'Searching curated database...' : 'Querying OpenAlex global index...'}
-            </span>
+            <span>Searching...</span>
           </div>
         )}
       </div>
 
-      {/* Instructions for Academic Search */}
+      {/* Academic Search Instructions */}
       {searchMode === 'academic' && (!query || query.length < 3) && (
-        <div className="py-20 text-center border border-dashed border-border rounded-xl bg-card">
-          <Search className="mx-auto h-9 w-9 text-muted-foreground/30 mb-3" />
-          <h3 className="text-base font-semibold text-foreground mb-1">Global Academic Search</h3>
+        <div className="py-24 text-center border border-dashed border-[#e3e3e0] dark:border-zinc-800 rounded-[3px] bg-white dark:bg-zinc-900/10">
+          <Database className="mx-auto h-8 w-8 text-muted-foreground/20 mb-3" />
+          <h3 className="text-sm font-bold text-[#37352f] dark:text-zinc-200 mb-1">Global Academic Search</h3>
           <p className="text-muted-foreground text-xs max-w-sm mx-auto leading-relaxed px-4">
-            Search over 250 million academic papers in real-time via OpenAlex. Enter a search query of 3 or more characters above to begin.
+            Search over 250 million academic papers in real-time via OpenAlex. Enter a search query of 3 or more characters above.
           </p>
         </div>
       )}
 
-      {/* Report List Grid */}
+      {/* No Results Fallback */}
       {visibleItems.length === 0 && !apiLoading && (searchMode !== 'academic' || (query && query.length >= 3)) && (
-        <div className="py-20 text-center border border-dashed border-border rounded-xl bg-card">
-          <Database className="mx-auto h-9 w-9 text-muted-foreground/30 mb-3" />
-          <h3 className="text-base font-semibold text-foreground mb-1">No reports found</h3>
+        <div className="py-24 text-center border border-dashed border-[#e3e3e0] dark:border-zinc-800 rounded-[3px] bg-white dark:bg-zinc-900/10">
+          <Database className="mx-auto h-8 w-8 text-muted-foreground/20 mb-3" />
+          <h3 className="text-sm font-bold text-[#37352f] dark:text-zinc-200 mb-1">No results found</h3>
           <p className="text-muted-foreground text-xs leading-relaxed max-w-xs mx-auto px-4">
             We couldn't find any entries matching "{query}". Try checking your spelling or clearing filters.
           </p>
         </div>
       )}
 
+      {/* Report List Grid */}
       {visibleItems.length > 0 && (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {visibleItems.map((item, i) => (
@@ -514,50 +472,46 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col p-4.5 rounded-xl border border-border/60 hover:border-primary/30 hover:bg-muted/15 transition-all duration-200 group bg-card shadow-sm"
+              className="flex flex-col p-5 rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 hover:border-primary/40 bg-white dark:bg-zinc-900/10 transition-colors duration-150 group"
             >
-              <div className="flex items-start justify-between gap-3 mb-2.5">
-                <h3 className="text-sm font-bold text-foreground leading-snug group-hover:text-primary transition-colors duration-150 line-clamp-2">
+              {item.category && (
+                <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-primary mb-2 block">
+                  {item.category}
+                </span>
+              )}
+
+              <div className="flex items-start justify-between gap-3 mb-2">
+                <h3 className="text-sm md:text-base font-bold text-[#37352f] dark:text-zinc-200 group-hover:text-primary transition-colors duration-150 leading-snug line-clamp-2">
                   {item.title}
                 </h3>
-                <MoveUpRight className="w-3.5 h-3.5 text-muted-foreground/50 shrink-0 opacity-0 group-hover:opacity-100 group-hover:text-primary transition-all duration-150" />
+                <MoveUpRight className="w-3.5 h-3.5 text-muted-foreground/40 shrink-0 opacity-0 group-hover:opacity-100 group-hover:text-primary transition-all duration-150 mt-1" />
               </div>
               
               {item.description && (
-                <p className="text-xs text-muted-foreground line-clamp-2 mb-3.5 leading-relaxed">
+                <p className="text-xs md:text-sm text-muted-foreground line-clamp-2 mb-4 leading-relaxed">
                   {item.description}
                 </p>
               )}
 
-              <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-[11px] text-muted-foreground mt-auto">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-muted-foreground mt-auto">
                 {item.date && (
-                  <span className="font-semibold bg-secondary/70 text-secondary-foreground px-2 py-0.5 rounded">
+                  <span className="font-mono font-semibold bg-zinc-100 dark:bg-zinc-800/80 text-zinc-800 dark:text-zinc-300 px-1.5 py-0.5 rounded-[3px]">
                     {item.date}
                   </span>
                 )}
                 {item.source && (
-                  <span className="font-medium text-foreground/80">
+                  <span className="font-semibold text-foreground/85">
                     {item.source}
                   </span>
                 )}
                 {item.type && (
-                  <span className="opacity-70">
-                    • {item.type}
+                  <span className="opacity-70 font-mono text-[11px] uppercase tracking-wider">
+                    {item.type}
                   </span>
                 )}
                 {item.citations !== undefined && item.citations > 0 && (
-                  <span className={`flex items-center gap-0.5 px-2 py-0.5 rounded-full font-bold ${
-                    item.citations >= 1000
-                      ? 'bg-amber-500/10 text-amber-600 dark:text-amber-400'
-                      : 'bg-primary/5 text-primary'
-                  }`}>
-                    {item.citations >= 1000 ? <Flame className="w-3 h-3 fill-current shrink-0" /> : null}
+                  <span className="font-mono font-bold text-primary bg-primary/5 px-2 py-0.5 rounded-[3px]">
                     {item.citations.toLocaleString()} citations
-                  </span>
-                )}
-                {item.category && (
-                  <span className="ml-auto px-2 py-0.5 rounded-full bg-primary/5 text-primary border border-primary/10 font-semibold text-[10px]">
-                    {item.category}
                   </span>
                 )}
               </div>
@@ -569,7 +523,7 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
       {/* Infinite scroll sentinel */}
       {((isDefaultActive && visibleLimit < processedDefaultReports.length) || hasMore) && (
         <div ref={sentinelRef} className="flex justify-center py-10 mt-4">
-          <Loader2 className="w-6 h-6 animate-spin text-muted-foreground/60" />
+          <Loader2 className="w-5 h-5 animate-spin text-muted-foreground/40" />
         </div>
       )}
     </div>
