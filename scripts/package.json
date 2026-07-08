@@ -1,0 +1,14 @@
+{
+  "name": "website-automation-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependencies for local social media and web scraping scripts, isolated from the production website build",
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "oauth": "^0.10.2",
+    "playwright": "^1.61.1",
+    "satori": "^0.26.0",
+    "twitter-api-v2": "^1.29.0",
+    "wav": "^1.0.2"
+  }
+}
