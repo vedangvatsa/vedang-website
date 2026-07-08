@@ -1,521 +1,137 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
 import { PageLayout } from '@/components/page-layout';
 import { PageHero } from '@/components/page-hero';
-import { Button } from '@/components/ui/button';
-import { 
-  Settings, 
-  Sparkles, 
-  Loader2, 
-  AlertCircle, 
-  CheckCircle2, 
-  FileText,
-  Sliders,
-  ChevronDown,
-  Gauge,
-  Activity,
-  User,
-  Cpu,
-  RefreshCw,
-  BookOpen
-} from 'lucide-react';
 
-interface FeatureMeta {
-  label: string;
-  max: number;
-  format: (v: number) => string;
-}
-
-const FEATURE_META: Record<string, FeatureMeta> = {
-  'mtld': { label: 'Lexical Diversity (MTLD)', max: 150, format: (v) => v.toFixed(1) },
-  'sent_cv': { label: 'Sentence Length Variation (CV)', max: 1.5, format: (v) => v.toFixed(2) },
-  'char_entropy': { label: 'Character N-gram Entropy', max: 6.0, format: (v) => v.toFixed(2) },
-  'rep_rate': { label: 'Within-Doc Word Repetition Rate', max: 1.0, format: (v) => `${(v * 100).toFixed(0)}%` },
-  'punct_entropy': { label: 'Punctuation Entropy', max: 4.0, format: (v) => v.toFixed(2) },
-  'self_mention_density': { label: 'First-Person Mentions (per 1k words)', max: 50, format: (v) => v.toFixed(1) },
-  'connector_density': { label: 'Connector Words (per 1k words)', max: 40, format: (v) => v.toFixed(1) },
-  'hedge_density': { label: 'Hedges / Qualifiers (per 1k words)', max: 30, format: (v) => v.toFixed(1) },
-  'boost_density': { label: 'Boosters / Assertions (per 1k words)', max: 20, format: (v) => v.toFixed(1) },
-  'mean_sent_len': { label: 'Mean Sentence Length (words)', max: 40, format: (v) => v.toFixed(1) },
-  'opener_ratio': { label: 'Sentence-Opener Connector Ratio', max: 0.5, format: (v) => `${(v * 100).toFixed(0)}%` }
-};
-
-interface SentenceData {
-  text: string;
-  start: number;
-  end: number;
-  ai_probability: number;
-}
-
-interface NeuralSignals {
-  perplexity: number;
-  burstiness: number;
-}
-
-interface ModelAttribution {
-  source_model: string;
-  confidence: number;
-}
-
-interface AnalysisResults {
-  ai_probability: number;
-  register: string;
-  register_confidence: number | null;
-  is_ai: boolean;
-  features: Record<string, number> | null;
-  processing_time_ms: number;
-  sentences: SentenceData[] | null;
-  neural_signals: NeuralSignals | null;
-  model_attribution: ModelAttribution | null;
-  is_calibrated: boolean;
-}
-
-export default function AIDetector() {
-  const [text, setText] = useState('');
-  const [wordCount, setWordCount] = useState(0);
-  const [register, setRegister] = useState('');
-  const [apiUrl, setApiUrl] = useState('http://localhost:8000');
-  const [showSettings, setShowSettings] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<'edit' | 'heatmap'>('edit');
-  const [hoveredSentence, setHoveredSentence] = useState<SentenceData | null>(null);
-  
-  // Results State
-  const [results, setResults] = useState<AnalysisResults | null>(null);
-
-  // SVG Gauge Math
-  const radius = 66;
-  const circumference = 2 * Math.PI * radius;
-
-  useEffect(() => {
-    if (!text.trim()) {
-      setWordCount(0);
-      return;
-    }
-    const words = text.trim().split(/\s+/).filter(w => w.length > 0);
-    setWordCount(words.length);
-  }, [text]);
-
-  const handleAnalyze = async () => {
-    if (!text.trim()) {
-      setError('Please enter some text to analyze.');
-      return;
-    }
-    if (wordCount < 5) {
-      setError('Text is too short. Please enter at least 5 words.');
-      return;
-    }
-
-    setIsLoading(true);
-    setError(null);
-    setResults(null);
-
-    try {
-      const response = await fetch(`${apiUrl.trim()}/detect`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          text: text,
-          register: register || null,
-          return_features: true
-        })
-      });
-
-      if (!response.ok) {
-        const errData = await response.json().catch(() => ({}));
-        throw new Error(errData.detail || `Server responded with ${response.status}`);
-      }
-
-      const data = await response.json();
-      setResults(data);
-      setActiveTab('heatmap'); // Auto-switch to heatmap view on successful analysis
-    } catch (err: any) {
-      setError(err.message || 'Failed to connect to the AI detector server. Ensure the backend API is running.');
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const getStatusColor = (prob: number) => {
-    if (prob >= 0.7) return { text: 'text-destructive', stroke: 'hsl(var(--destructive))', bg: 'bg-destructive/10', border: 'border-destructive/20', badge: 'bg-destructive', label: 'AI Generated' };
-    if (prob >= 0.35) return { text: 'text-amber-500', stroke: '#f59e0b', bg: 'bg-amber-500/10', border: 'border-amber-500/20', badge: 'bg-amber-500', label: 'Mixed / Uncertain' };
-    return { text: 'text-emerald-500', stroke: '#10b981', bg: 'bg-emerald-500/10', border: 'border-emerald-500/20', badge: 'bg-emerald-500', label: 'Human Written' };
-  };
-
-  const getSentenceHighlightClass = (prob: number) => {
-    if (prob >= 0.7) return 'bg-destructive/20 hover:bg-destructive/30 text-destructive-foreground dark:text-red-100 border-b-2 border-destructive/60 cursor-help transition-colors duration-150';
-    if (prob >= 0.35) return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-900 dark:text-amber-100 border-b-2 border-amber-500/60 cursor-help transition-colors duration-150';
-    return 'bg-emerald-500/10 hover:bg-emerald-500/15 text-emerald-900 dark:text-emerald-100 cursor-help transition-colors duration-150';
-  };
-
-  const status = results ? getStatusColor(results.ai_probability) : null;
-
+export default function AIDetectorEssayPage() {
   return (
     <PageLayout>
-      <PageHero 
-        title="AI Text Detector"
-        subtitle="Verify text authenticity with real-time sentence highlights, model attribution, and calibrated perplexity/burstiness."
+      <PageHero
+        title="How I Built an AI-Text Detector That Actually Works"
+        subtitle="An essay on data, features, models, benchmarks, and honest limits."
       />
+      <article className="mx-auto max-w-2xl px-4 pb-20">
+        <div className="prose prose-lg prose-slate max-w-none">
+          <p>
+            By early 2024 it was already hard to tell if a piece of text was written by a human or by an AI. Tools existed, but most of them fell apart when the text was edited, paraphrased, or came from a model they had never seen. I wanted to build something that was fast enough to run at scale, interpretable enough that I could explain why it flagged something, robust enough to handle real-world tricks, and honest about what it could not do. This essay is the story of how I got there.
+          </p>
 
-      <div className="space-y-8 pb-12 max-w-4xl mx-auto">
-        {/* Settings Panel */}
-        <div className="flex flex-col items-end">
-          <button 
-            onClick={() => setShowSettings(!showSettings)}
-            className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors bg-muted/60 px-3 py-1.5 rounded-lg border border-border"
-          >
-            <Settings className="w-3.5 h-3.5" />
-            <span>API Settings</span>
-            <ChevronDown className={`w-3.5 h-3.5 transition-transform ${showSettings ? 'rotate-180' : ''}`} />
-          </button>
-          
-          {showSettings && (
-            <div className="w-full mt-2 p-4 bg-card border border-border rounded-xl shadow-sm animate-in fade-in duration-200">
-              <label className="block text-xs font-semibold text-muted-foreground mb-1.5 uppercase tracking-wider">
-                Detector API Endpoint
-              </label>
-              <input 
-                type="text" 
-                value={apiUrl}
-                onChange={(e) => setApiUrl(e.target.value)}
-                placeholder="e.g. http://localhost:8000"
-                className="w-full bg-background border border-input rounded-lg px-3 py-2 text-sm text-foreground outline-none focus:border-ring transition-colors"
-              />
-              <span className="block text-[11px] text-muted-foreground mt-1">
-                The FastAPI endpoint that executes the stylometric ensembling and neural models.
-              </span>
-            </div>
-          )}
+          <h2>Start with the data</h2>
+          <p>
+            The first lesson was painful: the model is only as good as the corpus. I collected 2.77 million texts across four registers — academic, news, social media, and creative writing — with roughly 1.85 million AI-generated samples and 920,000 human samples. I split the data by register because the writing signals are different. Academic prose has long sentences and formal connectors. Social media is short, messy, and full of self-mentions. A single model trained on all of it confused those differences with the AI-vs-human signal, so I ended up training one detector per register plus a fallback detector that works across all of them.
+          </p>
+
+          <h2>Why stylometry?</h2>
+          <p>
+            Neural detectors like RoBERTa and GPTZero get the headlines, but they are black boxes, slow, GPU-hungry, and prone to overfitting to the exact model they were trained on. I chose a different path: stylometry. Instead of asking a neural network to memorize patterns, I measured interpretable properties of the text — sentence length variation, repetition, entropy, connector-word density — and fed those into a Random Forest. Random Forests are fast, handle tabular features well, and tell you which features mattered. That last point was important to me. If a detector flags a paragraph, I want to be able to say why.
+          </p>
+
+          <h2>The eleven features that survived</h2>
+          <p>
+            After a lot of experiments, eleven features became the production core: MTLD vocabulary diversity, sentence-length variation, self-mention density, opener ratio, connector density, hedge density, mean sentence length, booster density, character entropy, repetition rate, and punctuation entropy. Together these capture something AI text does consistently: it is more uniform, more predictable, and more balanced than human writing. Humans ramble, change rhythm, and repeat themselves in ways models usually avoid.
+          </p>
+
+          <h2>From eleven to thirty-five features</h2>
+          <p>
+            The eleven-feature model was good, but I wondered if readability, sentiment, syntax, and named-entity density could add signal. I added twenty-four more features and the AUC rose from 0.9645 to 0.9826. Accuracy went from 0.9011 to 0.9361. The gain was real, but I kept the production API on the original eleven features because they are faster, more stable, and easier to explain. The extra features are available for extended experiments, not for the default path. This was the first of many decisions where the best research score did not win. Production needs a different balance.
+          </p>
+
+          <ComparisonChart />
+
+          <h2>What the benchmarks taught me</h2>
+          <p>
+            Testing on public benchmarks brought surprises. Within-register performance looked excellent, with AUCs between 0.933 and 0.978. Academic text was easiest; social and creative were hardest. But the cross-domain test — train on one register, test on another — dropped the mean AUC to 0.728. That was the honest number. It taught me that a detector that looks perfect in one domain can be mediocre in another.
+          </p>
+          <p>
+            Adversarial tests were more encouraging. Humanization attacks, where you remove connectors, swap synonyms, vary length, or add first-person text, only dropped the AUC by about 0.009. Paraphrase attacks on the RAID benchmark dropped it further, to 0.951. The surface-level stylometric signals were fairly robust, but a really good paraphrase could still fool the model.
+          </p>
+
+          <h2>Adding neural signals</h2>
+          <p>
+            I did not want to rely only on stylometry. I added public HuggingFace detectors: roberta-base-openai, Hello-SimpleAI/chatgpt-detector-roberta, roberta-large-openai, and the MAGE Longformer. Each had strengths and weaknesses. The chatgpt-detector was near-perfect on HC3. The roberta-large detector lifted TuringBench from 0.469 to 0.9146. The MAGE Longformer hit 0.9796 on MAGE. No single detector won everywhere, so I built per-benchmark specialized pipelines. HC3 goes to the chatgpt-detector. TuringBench goes to roberta-large. MAGE uses a public detector plus the stylometric ensemble. The final local numbers were 0.9801 on MAGE, 0.9997 on HC3, and 0.9146 on TuringBench.
+          </p>
+
+          <h2>Fine-tuning on TuringBench</h2>
+          <p>
+            The zero-shot roberta-large detector was already strong on TuringBench, but I wanted better. I fine-tuned roberta-large on the full TuringBench nineteen-generator training split — 331,000 texts — on Kaggle. After one epoch the validation AUC jumped to 0.9991 and accuracy to 0.9948. That confirmed something important: when you have enough in-domain data, a fine-tuned transformer beats everything else. But it also confirmed the opposite. Without that data, stylometry is a much cheaper and more generalizable fallback.
+          </p>
+
+          <h2>Turning a notebook into a product</h2>
+          <p>
+            A research notebook is not a product. I hardened the inference API with FastAPI endpoints, register classification, API-key authentication, IP rate limiting, in-memory caching with TTL, adversarial preprocessing, safe fallbacks for neural signals, and calibration for short texts. I also exposed public-detector endpoints so users can choose between the fast stylometric model and the slower but stronger public detectors.
+          </p>
+
+          <h2>The audit</h2>
+          <p>
+            Once the code was working, I did a deep audit of the repository. I wanted every claim to be verifiable and every piece of code to be clean. Marketing numbers in the README did not always match the code, so I corrected feature counts, clarified which benchmark scores came from which model, and documented limitations. Several scripts hardcoded the eleven feature names in multiple places, so I moved them to a single shared constant. The security code in the API was duplicated, so I extracted it into a shared module. The public API had duplicated single and batch logic, so I consolidated it. Some extended features used crude suffix rules, so I added an optional NLTK part-of-speech path while keeping the old behavior as the default. I removed unused imports, cleaned stale notebook references, and added tests for the feature extractor, adversarial defense, and API endpoints.
+          </p>
+          <p>The audit was not about making the code perfect. It was about making every decision explicit and every claim reproducible.</p>
+
+          <h2>What I learned</h2>
+          <p>
+            Interpretability and performance are not enemies. A thirty-five-feature Random Forest can compete with large neural models when the features are chosen carefully. Domain matters more than model size. Ensembles beat single models. Robustness is harder than accuracy. And production is different from research — caching, rate limits, calibration, and graceful fallbacks matter as much as AUC.
+          </p>
+
+          <h2>Limitations I am honest about</h2>
+          <p>
+            The stylometric model is not robust to strong paraphrase or back-translation. It works best on longer texts; very short snippets are unreliable. Cross-register transfer is still only 0.728 AUC. Public detectors are evaluated models, not ones I trained. Calibration and adversarial defense are helpful but not magic.
+          </p>
+
+          <h2>What is next</h2>
+          <p>
+            I want to add a real part-of-speech pipeline and retrain the thirty-five-feature model. A per-sentence heatmap would help users see which parts of a text look most AI-like. I also want to improve low false-positive-rate performance for deployments where false positives are costly, add a Redis-backed cache for multi-worker deployments, and continue benchmarking against new models and attack methods as they appear.
+          </p>
+
+          <h2>Try it</h2>
+          <p>
+            The code, data manifest, and full results are on GitHub at{' '}
+            <a href="https://github.com/vedangvatsa/ai-detection-at-scale" className="text-blue-600 underline">
+              vedangvatsa/ai-detection-at-scale
+            </a>.
+            If you want to run it locally:
+          </p>
+          <pre className="my-4 overflow-x-auto rounded-lg bg-slate-900 p-4 text-sm text-slate-50">
+{`git clone https://github.com/vedangvatsa/ai-detection-at-scale.git
+cd ai-detection-at-scale
+python scripts/download_assets.py
+python scripts/17_api_demo.py`}
+          </pre>
+          <p>
+            The API will start at <code>http://127.0.0.1:8000</code> and you can try <code>/health</code>, <code>/detect</code>, and <code>/detect/public</code>.
+          </p>
         </div>
-
-        {/* Navigation Tabs */}
-        <div className="flex gap-2 border-b border-border pb-px">
-          <button
-            onClick={() => setActiveTab('edit')}
-            className={`px-4 py-2.5 text-sm font-semibold border-b-2 transition-all flex items-center gap-2 ${
-              activeTab === 'edit' 
-                ? 'border-primary text-primary' 
-                : 'border-transparent text-muted-foreground hover:text-foreground'
-            }`}
-          >
-            <FileText className="w-4 h-4" />
-            <span>Edit Text</span>
-          </button>
-          <button
-            onClick={() => results && setActiveTab('heatmap')}
-            disabled={!results}
-            className={`px-4 py-2.5 text-sm font-semibold border-b-2 transition-all flex items-center gap-2 ${
-              activeTab === 'heatmap' 
-                ? 'border-primary text-primary' 
-                : 'border-transparent text-muted-foreground hover:text-foreground disabled:opacity-40 disabled:cursor-not-allowed'
-            }`}
-          >
-            <Activity className="w-4 h-4" />
-            <span>Highlight Heatmap</span>
-          </button>
-        </div>
-
-        {/* Editor Box / Heatmap display */}
-        <section>
-          <div className="bg-card border border-border rounded-2xl p-5 sm:p-6 shadow-sm relative">
-            {activeTab === 'edit' ? (
-              <>
-                <div className="flex justify-between items-center mb-3">
-                  <span className="text-sm font-semibold text-foreground flex items-center gap-2">
-                    <FileText className="w-4 h-4 text-primary" />
-                    Input Document
-                  </span>
-                  <span className="text-xs text-muted-foreground font-medium">
-                    {wordCount} words
-                  </span>
-                </div>
-                
-                <textarea
-                  value={text}
-                  onChange={(e) => setText(e.target.value)}
-                  placeholder="Paste your text here (minimum 20 words for best accuracy, mixed-style documents supported)..."
-                  className="w-full h-64 bg-background border border-input rounded-xl p-4 text-foreground text-sm sm:text-base leading-relaxed outline-none focus:border-ring focus:ring-1 focus:ring-ring/25 transition-all resize-none"
-                />
-
-                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-4 gap-4">
-                  <div className="flex items-center gap-2 bg-muted/65 px-3 py-1.5 rounded-lg border border-border">
-                    <Sliders className="w-3.5 h-3.5 text-muted-foreground" />
-                    <span className="text-xs text-muted-foreground">Register:</span>
-                    <select
-                      value={register}
-                      onChange={(e) => setRegister(e.target.value)}
-                      className="bg-transparent text-xs font-semibold text-foreground outline-none cursor-pointer"
-                    >
-                      <option value="">Auto-Detect</option>
-                      <option value="academic">Academic / Scientific</option>
-                      <option value="news">News / Journalism</option>
-                      <option value="social">Social / Conversational</option>
-                      <option value="creative">Creative / Narrative</option>
-                    </select>
-                  </div>
-
-                  <Button
-                    onClick={handleAnalyze}
-                    disabled={isLoading}
-                    className="w-full sm:w-auto flex items-center justify-center gap-2 font-semibold"
-                  >
-                    {isLoading ? (
-                      <>
-                        <Loader2 className="w-4 h-4 animate-spin" />
-                        <span>Scanning Text...</span>
-                      </>
-                    ) : (
-                      <>
-                        <Sparkles className="w-4 h-4" />
-                        <span>Run Scan</span>
-                      </>
-                    )}
-                  </Button>
-                </div>
-              </>
-            ) : (
-              // Heatmap view
-              <div>
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-sm font-semibold text-foreground flex items-center gap-2">
-                    <BookOpen className="w-4 h-4 text-primary" />
-                    Interactive Sentence Heatmap
-                  </span>
-                  <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                    <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-red-500/20 border border-red-500/60 rounded-sm"></span> AI</span>
-                    <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-amber-500/20 border border-amber-500/60 rounded-sm"></span> Mixed</span>
-                    <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 bg-emerald-500/10 rounded-sm"></span> Human</span>
-                  </div>
-                </div>
-
-                {/* Render sentences with highlights */}
-                <div className="w-full min-h-64 bg-background border border-border rounded-xl p-4 text-foreground text-sm sm:text-base leading-relaxed overflow-y-auto max-h-[450px]">
-                  {results?.sentences && results.sentences.length > 0 ? (
-                    results.sentences.map((sent, idx) => (
-                      <span
-                        key={idx}
-                        className={getSentenceHighlightClass(sent.ai_probability)}
-                        onMouseEnter={() => setHoveredSentence(sent)}
-                        onMouseLeave={() => setHoveredSentence(null)}
-                      >
-                        {sent.text}
-                      </span>
-                    ))
-                  ) : (
-                    <span className="text-muted-foreground italic">No sentence analysis data available.</span>
-                  )}
-                </div>
-
-                {/* Floating tooltip for hovered sentence */}
-                {hoveredSentence && (
-                  <div className="absolute top-4 left-6 bg-popover text-popover-foreground border border-border p-3 rounded-lg shadow-md flex flex-col gap-1 z-20 animate-in fade-in duration-100">
-                    <span className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider">Sentence Probability</span>
-                    <div className="flex items-center gap-2">
-                      <div className={`w-2.5 h-2.5 rounded-full ${
-                        hoveredSentence.ai_probability >= 0.7 ? 'bg-red-500' :
-                        hoveredSentence.ai_probability >= 0.35 ? 'bg-amber-500' : 'bg-emerald-500'
-                      }`} />
-                      <span className="text-sm font-bold">{Math.round(hoveredSentence.ai_probability * 100)}% AI probability</span>
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        </section>
-
-        {/* Error State */}
-        {error && (
-          <div className="p-4 bg-destructive/10 border border-destructive/20 rounded-xl text-destructive text-sm flex items-start gap-3">
-            <AlertCircle className="w-5 h-5 flex-shrink-0 text-destructive mt-0.5" />
-            <span>{error}</span>
-          </div>
-        )}
-
-        {/* Results Sections */}
-        {results && status && (
-          <section className="space-y-6 animate-in fade-in duration-300">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              
-              {/* Circular Gauge Card */}
-              <div className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center shadow-sm">
-                <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-6 flex items-center gap-1.5">
-                  <Gauge className="w-4 h-4 text-primary" /> Overall Score
-                </h3>
-                <div className="relative w-36 h-36">
-                  <svg className="w-full h-full transform -rotate-90">
-                    <circle 
-                      cx="72" cy="72" r={radius} 
-                      className="stroke-muted fill-none" 
-                      strokeWidth="8"
-                    />
-                    <circle 
-                      cx="72" cy="72" r={radius} 
-                      className="fill-none transition-all duration-700 ease-out" 
-                      strokeWidth="8"
-                      strokeDasharray={circumference}
-                      strokeDashoffset={circumference - (results.ai_probability) * circumference}
-                      strokeLinecap="round"
-                      stroke={status.stroke}
-                    />
-                  </svg>
-                  <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <span className="text-3xl font-extrabold tracking-tight text-foreground">
-                      {Math.round(results.ai_probability * 100)}%
-                    </span>
-                    <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest mt-0.5">
-                      Probability
-                    </span>
-                  </div>
-                </div>
-                <div className={`mt-6 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider ${status.bg} ${status.text} border ${status.border}`}>
-                  {status.label}
-                </div>
-              </div>
-
-              {/* Model Attribution Card */}
-              <div className="bg-card border border-border rounded-2xl p-6 flex flex-col justify-between shadow-sm">
-                <div>
-                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 flex items-center gap-1.5">
-                    <User className="w-4 h-4 text-primary" /> Model Attribution
-                  </h3>
-                  <p className="text-xs text-muted-foreground mb-6">
-                    Matches text stylistic patterns to typical generation outputs.
-                  </p>
-                </div>
-                <div className="bg-background border border-border rounded-xl p-4 flex flex-col gap-2">
-                  <div className="text-xs text-muted-foreground">Likely Author/Source:</div>
-                  <div className="text-sm font-extrabold text-primary tracking-tight">
-                    {results.model_attribution?.source_model || 'Unknown'}
-                  </div>
-                  {results.model_attribution && (
-                    <div className="flex justify-between items-center text-xs text-muted-foreground mt-2 pt-2 border-t border-border/60">
-                      <span>Attribution Confidence:</span>
-                      <span className="font-bold text-foreground">
-                        {Math.round(results.model_attribution.confidence * 100)}%
-                      </span>
-                    </div>
-                  )}
-                </div>
-                <div className="text-[10px] text-muted-foreground italic mt-4">
-                  Powered by RAID multi-class stylometry fingerprints.
-                </div>
-              </div>
-
-              {/* Neural Signals (Perplexity / Burstiness) Card */}
-              <div className="bg-card border border-border rounded-2xl p-6 flex flex-col justify-between shadow-sm">
-                <div>
-                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 flex items-center gap-1.5">
-                    <Cpu className="w-4 h-4 text-primary" /> Neural Signals
-                  </h3>
-                  <p className="text-xs text-muted-foreground mb-6">
-                    Measures text probability and perplexity dynamics using GPT-2.
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  {results.neural_signals ? (
-                    <>
-                      <div className="bg-background border border-border rounded-xl p-3 flex justify-between items-center">
-                        <div className="flex flex-col">
-                          <span className="text-xs text-foreground font-medium">Perplexity (PPL)</span>
-                          <span className="text-[10px] text-muted-foreground">Lower indicates AI predictability</span>
-                        </div>
-                        <span className="text-sm font-extrabold text-primary">
-                          {results.neural_signals.perplexity.toFixed(1)}
-                        </span>
-                      </div>
-                      <div className="bg-background border border-border rounded-xl p-3 flex justify-between items-center">
-                        <div className="flex flex-col">
-                          <span className="text-xs text-foreground font-medium">Burstiness (token std)</span>
-                          <span className="text-[10px] text-muted-foreground">Lower implies uniform AI patterns</span>
-                        </div>
-                        <span className="text-sm font-extrabold text-primary">
-                          {results.neural_signals.burstiness.toFixed(2)}
-                        </span>
-                      </div>
-                    </>
-                  ) : (
-                    <div className="text-muted-foreground text-xs italic">No neural signal metrics computed.</div>
-                  )}
-                </div>
-                <div className="text-[10px] text-muted-foreground italic mt-4">
-                  Real-time perplexity surprisal analysis.
-                </div>
-              </div>
-
-            </div>
-
-            {/* Router & Performance Metadata */}
-            <div className="bg-card border border-border rounded-2xl p-6 shadow-sm grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div className="flex items-center gap-3">
-                <Sliders className="w-5 h-5 text-primary flex-shrink-0" />
-                <div className="flex flex-col">
-                  <span className="text-xs text-muted-foreground">Detected Register</span>
-                  <span className="text-sm font-bold text-foreground uppercase tracking-wide">
-                    {results.register}
-                  </span>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <RefreshCw className="w-5 h-5 text-primary flex-shrink-0" />
-                <div className="flex flex-col">
-                  <span className="text-xs text-muted-foreground">Processing Speed</span>
-                  <span className="text-sm font-bold text-foreground">
-                    {results.processing_time_ms.toFixed(1)} ms
-                  </span>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0" />
-                <div className="flex flex-col">
-                  <span className="text-xs text-muted-foreground">Calibration Status</span>
-                  <span className="text-sm font-bold text-emerald-500">
-                    Active & Normalised
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Stylometric Features Card */}
-            {results.features && (
-              <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
-                <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-2">
-                    <Sliders className="w-4 h-4 text-primary" />
-                    Linguistic Diagnostics (Stylometrics)
-                  </h3>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Features scoring compared to training range benchmarks
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {Object.entries(FEATURE_META).map(([key, meta]) => {
-                    const val = results.features?.[key];
-                    if (val === undefined || val === null) return null;
-                    const percent = Math.min((val / meta.max) * 100, 100);
-                    return (
-                      <div key={key} className="bg-background border border-border rounded-xl p-3.5">
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-xs font-medium text-foreground">{meta.label}</span>
-                          <span className="text-xs font-bold text-primary">{meta.format(val)}</span>
-                        </div>
-                        <div className="w-full h-2 bg-muted rounded-full overflow-hidden">
-                          <div 
-                            className="h-full bg-primary rounded-full transition-all duration-1000"
-                            style={{ width: `${percent}%` }}
-                          />
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
-          </section>
-        )}
-      </div>
+      </article>
     </PageLayout>
+  );
+}
+
+function ComparisonChart() {
+  const data = [
+    { label: '11-feature AUC', value: 0.9645, color: '#94a3b8' },
+    { label: '35-feature AUC', value: 0.9826, color: '#2563eb' },
+    { label: '11-feature Accuracy', value: 0.9011, color: '#cbd5e1' },
+    { label: '35-feature Accuracy', value: 0.9361, color: '#60a5fa' },
+  ];
+  return (
+    <figure className="my-8 rounded-lg border bg-slate-50 p-4">
+      <figcaption className="mb-4 text-sm font-semibold text-slate-700">
+        11-feature vs 35-feature model
+      </figcaption>
+      <svg viewBox="0 0 400 160" className="h-auto w-full">
+        {data.map((d, i) => {
+          const y = i * 36 + 20;
+          const width = d.value * 380;
+          return (
+            <g key={i}>
+              <text x="0" y={y + 14} className="text-xs fill-slate-600" style={{ fontSize: 10 }}>
+                {d.label}
+              </text>
+              <rect x="120" y={y} width={width} height={18} rx={4} fill={d.color} />
+              <text x={128 + width} y={y + 14} className="text-xs fill-slate-700" style={{ fontSize: 10 }}>
+                {d.value.toFixed(4)}
+              </text>
+            </g>
+          );
+        })}
+      </svg>
+    </figure>
   );
 }
