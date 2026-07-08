@@ -207,7 +207,7 @@ export function StateOfAiNgramAnalyzer() {
           <div key={item.term} className="group">
             <div className="flex items-center gap-3">
               <div className="w-6 text-right text-[10px] font-mono text-muted-foreground">{i + 1}</div>
-              <div className={`${activeTab === 'rising' ? 'w-52' : activeTab === 'trigrams' ? 'w-52' : 'w-40'} text-right text-sm font-semibold text-foreground truncate`}>
+              <div className={`${activeTab === 'rising' ? 'w-56' : activeTab === 'trigrams' ? 'w-56' : 'w-40'} text-right text-sm font-semibold text-foreground truncate`}>
                 {item.term}
               </div>
               <div className="flex-1 relative">
@@ -218,7 +218,7 @@ export function StateOfAiNgramAnalyzer() {
               <div className="w-20 text-right text-xs font-bold tabular-nums text-foreground">{item.count.toLocaleString()}</div>
               <div className="w-14 text-right text-[10px] font-mono text-muted-foreground">{activeTab === 'rising' ? `${item.percent}x` : `${item.percent}%`}</div>
             </div>
-            <div className="ml-9 pl-28 text-[10px] text-muted-foreground/70 mt-0.5 hidden group-hover:block transition-all">
+            <div className={`ml-9 ${activeTab === 'rising' || activeTab === 'trigrams' ? 'pl-56' : 'pl-40'} text-[10px] text-muted-foreground/70 mt-0.5 hidden group-hover:block transition-all`}>
               {item.context}
             </div>
           </div>
