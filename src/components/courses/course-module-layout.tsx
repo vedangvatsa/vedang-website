@@ -61,11 +61,6 @@ export function CourseModuleLayout({
   return (
     <div className="max-w-none">
       <div className="mb-8">
-        <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground mb-4 font-mono">
-          <Link href={basePath} className="hover:text-foreground transition-colors">{courseTitle}</Link>
-          <span>/</span>
-          <span className="text-foreground">{currentModuleIndex + 1}<span className="text-muted-foreground/50"> / {totalModules}</span></span>
-        </div>
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">
           {moduleTitle}
         </h1>
