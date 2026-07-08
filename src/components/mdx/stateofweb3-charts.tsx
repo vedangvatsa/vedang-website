@@ -151,8 +151,10 @@ export function StateOfWeb3Timeline() {
     return { x, y, ...d };
   });
 
-  const pathD = `M ${points[0].x} ${points[0].y} ` + points.slice(1).map(p => `L ${p.x} ${p.y}`).join(' ');
-  const areaD = `${pathD} L ${points[points.length - 1].x} ${height - padding} L ${points[0].x} ${height - padding} Z`;
+  const solidPoints = points.slice(0, 13);
+  const solidPathD = `M ${solidPoints[0].x} ${solidPoints[0].y} ` + solidPoints.slice(1).map(p => `L ${p.x} ${p.y}`).join(' ');
+  const dashedPathD = `M ${points[12].x} ${points[12].y} L ${points[13].x} ${points[13].y}`;
+  const areaD = `${solidPathD} L ${dashedPathD.split(' L ')[1]} L ${points[points.length - 1].x} ${height - padding} L ${points[0].x} ${height - padding} Z`;
 
   return (
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-6">
@@ -205,10 +207,19 @@ export function StateOfWeb3Timeline() {
               
               {/* Stroke */}
               <path 
-                d={pathD} 
+                d={solidPathD} 
                 fill="none" 
                 stroke="hsl(var(--primary))" 
                 strokeWidth={2.5} 
+                className="transition-all duration-300" 
+              />
+
+              <path 
+                d={dashedPathD} 
+                fill="none" 
+                stroke="hsl(var(--primary))" 
+                strokeWidth={2.5} 
+                strokeDasharray="4 4"
                 className="transition-all duration-300" 
               />
 
@@ -227,6 +238,7 @@ export function StateOfWeb3Timeline() {
               {/* Nodes */}
               {points.map((pt, i) => {
                 const isSelected = selectedTimelineIndex === i;
+                const isEstimate = pt.year === '2026';
                 return (
                   <g 
                     key={i} 
@@ -237,9 +249,10 @@ export function StateOfWeb3Timeline() {
                       cx={pt.x} 
                       cy={pt.y} 
                       r={isSelected ? 7 : 4.5} 
-                      fill={isSelected ? 'hsl(var(--foreground))' : 'hsl(var(--primary))'} 
+                      fill={isSelected ? (isEstimate ? 'hsl(var(--card))' : 'hsl(var(--foreground))') : 'hsl(var(--card))'} 
                       stroke="hsl(var(--primary))"
-                      strokeWidth={isSelected ? 2 : 1}
+                      strokeWidth={isSelected ? 2.5 : 1.5}
+                      strokeDasharray={isEstimate ? "3 1.5" : undefined}
                     />
                     <text 
                       x={pt.x} 
@@ -247,7 +260,7 @@ export function StateOfWeb3Timeline() {
                       textAnchor="middle" 
                       className={`text-[10px] font-mono ${isSelected ? 'fill-foreground font-bold' : 'fill-muted-foreground/60'}`}
                     >
-                      {pt.year.slice(2)}
+                      {pt.year}
                     </text>
                   </g>
                 );

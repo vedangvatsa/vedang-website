@@ -101,8 +101,10 @@ export function StateOfAiTimeline() {
     return { x, y, ...d };
   });
 
-  const pathD = `M ${points[0].x} ${points[0].y} ` + points.slice(1).map(p => `L ${p.x} ${p.y}`).join(' ');
-  const areaD = `${pathD} L ${points[points.length - 1].x} ${height - padding} L ${points[0].x} ${height - padding} Z`;
+  const solidPoints = points.slice(0, 13);
+  const solidPathD = `M ${solidPoints[0].x} ${solidPoints[0].y} ` + solidPoints.slice(1).map(p => `L ${p.x} ${p.y}`).join(' ');
+  const dashedPathD = `M ${points[12].x} ${points[12].y} L ${points[13].x} ${points[13].y}`;
+  const areaD = `${solidPathD} L ${dashedPathD.split(' L ')[1]} L ${points[points.length - 1].x} ${height - padding} L ${points[0].x} ${height - padding} Z`;
 
   return (
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-6">
@@ -136,13 +138,37 @@ export function StateOfAiTimeline() {
                 return <line key={`grid-${i}`} x1={padding} y1={yVal} x2={width - padding} y2={yVal} stroke="currentColor" strokeOpacity="0.08" strokeDasharray="4 4" />;
               })}
               <path d={areaD} fill="url(#areaGradAI)" />
-              <path d={pathD} fill="none" stroke="hsl(217, 91%, 60%)" strokeWidth="2.5" strokeLinejoin="round" />
-              {points.map((p, i) => (
-                <g key={i} onClick={() => setSelectedIndex(i)} className="cursor-pointer">
-                  <circle cx={p.x} cy={p.y} r={i === selectedIndex ? 7 : 4.5} fill={i === selectedIndex ? 'hsl(217, 91%, 60%)' : 'hsl(var(--card))'} stroke="hsl(217, 91%, 60%)" strokeWidth={i === selectedIndex ? 2.5 : 1.5} className="transition-all duration-200" />
-                  <text x={p.x} y={height - padding + 20} textAnchor="middle" fill="currentColor" fillOpacity="0.5" fontSize="10" fontFamily="monospace">{p.year.slice(2)}</text>
-                </g>
-              ))}
+              <path d={solidPathD} fill="none" stroke="hsl(217, 91%, 60%)" strokeWidth="2.5" strokeLinejoin="round" />
+              <path d={dashedPathD} fill="none" stroke="hsl(217, 91%, 60%)" strokeWidth="2.5" strokeDasharray="4 4" strokeLinejoin="round" />
+              {points.map((p, i) => {
+                const isEstimate = p.year === '2026';
+                return (
+                  <g key={i} onClick={() => setSelectedIndex(i)} className="cursor-pointer">
+                    <circle 
+                      cx={p.x} 
+                      cy={p.y} 
+                      r={i === selectedIndex ? 7 : 4.5} 
+                      fill={i === selectedIndex ? (isEstimate ? 'hsl(var(--card))' : 'hsl(217, 91%, 60%)') : 'hsl(var(--card))'} 
+                      stroke="hsl(217, 91%, 60%)" 
+                      strokeWidth={i === selectedIndex ? 2.5 : 1.5}
+                      strokeDasharray={isEstimate ? "3 1.5" : undefined}
+                      className="transition-all duration-200" 
+                    />
+                    <text 
+                      x={p.x} 
+                      y={height - padding + 20} 
+                      textAnchor="middle" 
+                      fill="currentColor" 
+                      fillOpacity={i === selectedIndex ? 0.9 : 0.5} 
+                      fontSize="10" 
+                      fontFamily="monospace"
+                      className={i === selectedIndex ? "font-bold" : ""}
+                    >
+                      {p.year}
+                    </text>
+                  </g>
+                );
+              })}
               {(() => {
                 const sp = points[selectedIndex];
                 return <line x1={sp.x} y1={sp.y + 8} x2={sp.x} y2={height - padding} stroke="hsl(217, 91%, 60%)" strokeWidth="1" strokeDasharray="3 3" strokeOpacity="0.5" />;
