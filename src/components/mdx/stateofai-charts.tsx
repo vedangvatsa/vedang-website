@@ -458,7 +458,7 @@ export function StateOfAiCitations() {
                 : 'bg-background border-border hover:border-foreground/50 text-muted-foreground hover:text-foreground'
             }`}
           >
-            {isResNetHighlight ? '◀ Reset Slider' : '🔥 Trigger ResNet Outlier Node (221,202 citations)'}
+            {isResNetHighlight ? 'Reset Slider' : 'Trigger ResNet Outlier Node (221,202 citations)'}
           </button>
         </div>
       </div>

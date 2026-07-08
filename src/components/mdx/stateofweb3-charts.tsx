@@ -773,7 +773,7 @@ export function StateOfWeb3Citations() {
                 : 'bg-background border-border hover:border-foreground/50 text-muted-foreground hover:text-foreground'
             }`}
           >
-            {isNakamotoHighlight ? '◀ Reset Slider' : '🔥 Trigger Satoshi Outlier Node (14,286 citations)'}
+            {isNakamotoHighlight ? 'Reset Slider' : 'Trigger Satoshi Outlier Node (14,286 citations)'}
           </button>
         </div>
       </div>
