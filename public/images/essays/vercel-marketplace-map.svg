@@ -304,7 +304,7 @@
   <!-- ROW 3: Auth · CMS · Commerce                           -->
   <!-- ════════════════════════════════════════════════════════ -->
 
-  <!-- Auth & Security -->
+  <!-- Auth and Security -->
   <g transform="translate(30, 612)">
     <rect width="370" height="185" rx="12" fill="#dc2626" fill-opacity="0.04" stroke="#dc2626" stroke-opacity="0.2"/>
     <rect width="370" height="32" rx="12" fill="#dc2626" fill-opacity="0.08"/>
@@ -368,7 +368,7 @@
     <text x="16" y="168" fill="#0e7490" fill-opacity="0.8" font-size="10.5">+ ButterCMS · Agility CMS · Wix</text>
   </g>
 
-  <!-- Commerce & Payments -->
+  <!-- Commerce and Payments -->
   <g transform="translate(800, 612)">
     <rect width="370" height="185" rx="12" fill="#be185d" fill-opacity="0.04" stroke="#be185d" stroke-opacity="0.2"/>
     <rect width="370" height="32" rx="12" fill="#be185d" fill-opacity="0.08"/>
@@ -401,7 +401,7 @@
   <!-- ROW 4: DevTools · Messaging · Infra                    -->
   <!-- ════════════════════════════════════════════════════════ -->
 
-  <!-- Dev Tools & Feature Flags -->
+  <!-- Dev Tools and Feature Flags -->
   <g transform="translate(30, 813)">
     <rect width="370" height="230" rx="12" fill="#4f46e5" fill-opacity="0.04" stroke="#4f46e5" stroke-opacity="0.2"/>
     <rect width="370" height="32" rx="12" fill="#4f46e5" fill-opacity="0.08"/>
@@ -441,7 +441,7 @@
     <text x="16" y="210" fill="#4338ca" fill-opacity="0.8" font-size="10.5">+ Raycast · Terraform · DebugBear · Zeitgeist</text>
   </g>
 
-  <!-- Messaging & Notifications -->
+  <!-- Messaging and Notifications -->
   <g transform="translate(415, 813)">
     <rect width="370" height="230" rx="12" fill="#ea580c" fill-opacity="0.04" stroke="#ea580c" stroke-opacity="0.2"/>
     <rect width="370" height="32" rx="12" fill="#ea580c" fill-opacity="0.08"/>

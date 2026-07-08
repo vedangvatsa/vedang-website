@@ -17,7 +17,7 @@
   </defs>
   <rect width="800" height="820" class="bg" />
 
-  <!-- Title & Subtitle -->
+  <!-- Title and Subtitle -->
   <text x="400" y="50" class="title">Post-Scarcity Technology</text>
   <rect x="180" y="70" width="440" height="40" class="pill" />
   <text x="400" y="96" class="subtitle">When marginal costs approach zero</text>
