@@ -75,6 +75,8 @@ export async function GET(request: NextRequest) {
   const category = searchParams.get('category')?.trim() || '';
   const corpus = (searchParams.get('corpus') || 'ai') as 'ai' | 'web3';
   const sort = searchParams.get('sort') || 'citations'; // 'citations' | 'date'
+  const type = searchParams.get('type') || ''; // 'paper' | 'report' | 'framework'
+  const yearRange = searchParams.get('yearRange') || ''; // '2025-2026' | '2023-2024' | '2020-2022' | 'earlier'
   const page = parseInt(searchParams.get('page') || '1', 10);
   const limit = Math.min(parseInt(searchParams.get('limit') || '100', 10), 500);
 
@@ -87,6 +89,41 @@ export async function GET(request: NextRequest) {
     // Filter by category (exact match)
     if (category) {
       results = results.filter(item => item.category === category);
+    }
+
+    // Filter by document type grouping
+    if (type) {
+      const typeLower = type.toLowerCase();
+      if (typeLower === 'paper') {
+        results = results.filter(item => {
+          const itemType = item.type?.toLowerCase() || '';
+          return ['paper', 'preprint', 'thesis', 'book'].includes(itemType);
+        });
+      } else if (typeLower === 'report') {
+        results = results.filter(item => {
+          const itemType = item.type?.toLowerCase() || '';
+          return ['report', 'analysis', 'survey', 'white paper'].includes(itemType);
+        });
+      } else if (typeLower === 'framework') {
+        results = results.filter(item => {
+          const itemType = item.type?.toLowerCase() || '';
+          return ['framework', 'guidance', 'standard'].includes(itemType);
+        });
+      }
+    }
+
+    // Filter by year range
+    if (yearRange) {
+      results = results.filter(item => {
+        const itemYearMatch = item.date.match(/\d{4}/);
+        if (!itemYearMatch) return yearRange === 'earlier';
+        const itemYear = parseInt(itemYearMatch[0], 10);
+        if (yearRange === '2025-2026') return itemYear >= 2025;
+        if (yearRange === '2023-2024') return itemYear >= 2023 && itemYear <= 2024;
+        if (yearRange === '2020-2022') return itemYear >= 2020 && itemYear <= 2022;
+        if (yearRange === 'earlier') return itemYear < 2020;
+        return true;
+      });
     }
 
     // Filter by query (multi-word match)

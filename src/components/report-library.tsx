@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useMemo, useRef, useCallback } from 'react';
 import Link from 'next/link';
-import { Search, Filter, MoveUpRight, Database, Loader2, Zap, BookOpen, GraduationCap, Flame, ArrowUpDown, X } from 'lucide-react';
+import { Search, Filter, MoveUpRight, Database, Loader2, BookOpen, GraduationCap, Flame, ArrowUpDown, X } from 'lucide-react';
 
 interface ReportEntry {
   title: string;
@@ -24,8 +24,6 @@ interface ReportLibraryProps {
 
 const CHUNK = 50;
 const DEBOUNCE_MS = 400;
-
-
 
 const parseClientDate = (dateStr: string): number => {
   if (!dateStr) return 0;
@@ -51,6 +49,8 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
   const [searchMode, setSearchMode] = useState<'curated' | 'academic'>('curated');
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('');
+  const [docType, setDocType] = useState('');
+  const [yearRange, setYearRange] = useState('');
   const [sort, setSort] = useState<'citations' | 'date'>('citations');
   
   // Search pagination states
@@ -80,26 +80,53 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
       });
   }, [dataUrl]);
 
-  // Sort default list client-side based on sort state
-  const sortedDefaultReports = useMemo(() => {
-    const reports = [...defaultReports];
+  // Sort and filter default list client-side
+  const processedDefaultReports = useMemo(() => {
+    let reports = [...defaultReports];
+    
+    // Filter by type
+    if (docType) {
+      const typeLower = docType.toLowerCase();
+      if (typeLower === 'paper') {
+        reports = reports.filter(item => ['paper', 'preprint', 'thesis', 'book'].includes(item.type?.toLowerCase() || ''));
+      } else if (typeLower === 'report') {
+        reports = reports.filter(item => ['report', 'analysis', 'survey', 'white paper'].includes(item.type?.toLowerCase() || ''));
+      } else if (typeLower === 'framework') {
+        reports = reports.filter(item => ['framework', 'guidance', 'standard'].includes(item.type?.toLowerCase() || ''));
+      }
+    }
+    
+    // Filter by year range
+    if (yearRange) {
+      reports = reports.filter(item => {
+        const itemYearMatch = item.date.match(/\d{4}/);
+        if (!itemYearMatch) return yearRange === 'earlier';
+        const itemYear = parseInt(itemYearMatch[0], 10);
+        if (yearRange === '2025-2026') return itemYear >= 2025;
+        if (yearRange === '2023-2024') return itemYear >= 2023 && itemYear <= 2024;
+        if (yearRange === '2020-2022') return itemYear >= 2020 && itemYear <= 2022;
+        if (yearRange === 'earlier') return itemYear < 2020;
+        return true;
+      });
+    }
+
+    // Sort
     if (sort === 'date') {
       return reports.sort((a, b) => parseClientDate(b.date) - parseClientDate(a.date));
     }
-    // Default to citations, fallback to date
     return reports.sort((a, b) => {
       const citDiff = (b.citations || 0) - (a.citations || 0);
       if (citDiff !== 0) return citDiff;
       return parseClientDate(b.date) - parseClientDate(a.date);
     });
-  }, [defaultReports, sort]);
+  }, [defaultReports, sort, docType, yearRange]);
 
   // Debounced search trigger (local or OpenAlex)
   useEffect(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current);
 
-    // If no search query/filter on Curated tab, we don't query the API; just use the default reports
-    if (!query && !category && searchMode === 'curated') {
+    // If no search/filter active on Curated tab, use the default reports
+    if (!query && !category && !docType && !yearRange && searchMode === 'curated') {
       setResults([]);
       setTotalCount(0);
       setPage(1);
@@ -125,7 +152,7 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
       try {
         let fetchUrl = '';
         if (searchMode === 'curated') {
-          fetchUrl = `/api/reports/local-search?corpus=${corpus}&q=${encodeURIComponent(query)}&category=${encodeURIComponent(category)}&sort=${sort}&page=1&limit=50`;
+          fetchUrl = `/api/reports/local-search?corpus=${corpus}&q=${encodeURIComponent(query)}&category=${encodeURIComponent(category)}&sort=${sort}&type=${docType}&yearRange=${yearRange}&page=1&limit=50`;
         } else {
           // OpenAlex search (always sorted by citations on the route side)
           fetchUrl = `/api/reports/search?corpus=${corpus}&q=${encodeURIComponent(query)}&category=${encodeURIComponent(category)}&page=1&per_page=50`;
@@ -151,7 +178,7 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
     return () => {
       if (debounceRef.current) clearTimeout(debounceRef.current);
     };
-  }, [query, category, searchMode, corpus, sort]);
+  }, [query, category, searchMode, corpus, sort, docType, yearRange]);
 
   // Fetching next page when user scrolls to bottom
   const fetchNextPage = useCallback(async () => {
@@ -163,7 +190,7 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
     try {
       let fetchUrl = '';
       if (searchMode === 'curated') {
-        fetchUrl = `/api/reports/local-search?corpus=${corpus}&q=${encodeURIComponent(query)}&category=${encodeURIComponent(category)}&sort=${sort}&page=${nextPage}&limit=50`;
+        fetchUrl = `/api/reports/local-search?corpus=${corpus}&q=${encodeURIComponent(query)}&category=${encodeURIComponent(category)}&sort=${sort}&type=${docType}&yearRange=${yearRange}&page=${nextPage}&limit=50`;
       } else {
         fetchUrl = `/api/reports/search?corpus=${corpus}&q=${encodeURIComponent(query)}&category=${encodeURIComponent(category)}&page=${nextPage}&per_page=50`;
       }
@@ -183,18 +210,21 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
     } finally {
       setApiLoading(false);
     }
-  }, [page, apiLoading, hasMore, query, category, searchMode, corpus, sort, results.length, totalCount]);
+  }, [page, apiLoading, hasMore, query, category, searchMode, corpus, sort, docType, yearRange, results.length, totalCount]);
+
+  // Check if default view is active
+  const isDefaultActive = !query && !category && !docType && !yearRange && searchMode === 'curated';
 
   // Infinite scroll intersection callback
   const loadMore = useCallback(() => {
-    if (!query && !category && searchMode === 'curated') {
+    if (isDefaultActive) {
       // Local slicing for default view
-      setVisibleLimit(prev => Math.min(prev + CHUNK, defaultReports.length));
+      setVisibleLimit(prev => Math.min(prev + CHUNK, processedDefaultReports.length));
     } else {
       // Server-side page fetching for search/filter mode
       fetchNextPage();
     }
-  }, [query, category, searchMode, defaultReports.length, fetchNextPage]);
+  }, [isDefaultActive, processedDefaultReports.length, fetchNextPage]);
 
   // Setup observer for infinite scroll
   useEffect(() => {
@@ -216,29 +246,31 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
 
   // Compute what list to display
   const visibleItems = useMemo(() => {
-    if (!query && !category && searchMode === 'curated') {
-      return sortedDefaultReports.slice(0, visibleLimit);
+    if (isDefaultActive) {
+      return processedDefaultReports.slice(0, visibleLimit);
     }
     return results;
-  }, [query, category, searchMode, sortedDefaultReports, visibleLimit, results]);
+  }, [isDefaultActive, processedDefaultReports, visibleLimit, results]);
 
   // Compute total counts
   const totalCountDisplay = useMemo(() => {
-    if (!query && !category && searchMode === 'curated') {
-      return defaultReports.length;
+    if (isDefaultActive) {
+      return processedDefaultReports.length;
     }
     return totalCount;
-  }, [query, category, searchMode, defaultReports.length, totalCount]);
+  }, [isDefaultActive, processedDefaultReports.length, totalCount]);
 
   // Reset local list pagination on search reset
   useEffect(() => {
     setVisibleLimit(CHUNK);
-  }, [query, category, searchMode]);
+  }, [query, category, searchMode, docType, yearRange]);
 
   // Reset all filters helper
   const resetFilters = () => {
     setQuery('');
     setCategory('');
+    setDocType('');
+    setYearRange('');
     setSort('citations');
   };
 
@@ -342,9 +374,9 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
         </div>
       </div>
 
-      {/* Search and Sort controls */}
-      <div className="flex flex-col sm:flex-row gap-3 mb-6 items-stretch sm:items-center">
-        <div className="relative flex-1">
+      {/* Search and Filter Controls */}
+      <div className="flex flex-col gap-3.5 mb-6">
+        <div className="relative">
           <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
           <input
             type="text"
@@ -367,39 +399,73 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
           )}
         </div>
 
-        {/* Sort Selector */}
-        {searchMode === 'curated' && (
-          <div className="relative shrink-0 flex items-center gap-2">
-            <div className="relative w-full">
-              <ArrowUpDown className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
-              <select
-                value={sort}
-                onChange={(e) => setSort(e.target.value as 'citations' | 'date')}
-                className="w-full sm:w-auto pl-10 pr-10 py-3 rounded-xl border border-border bg-background text-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 font-medium"
-              >
-                <option value="citations">Sort by Citations</option>
-                <option value="date">Sort by Date (Newest)</option>
-              </select>
-            </div>
-          </div>
-        )}
+        {/* Filter Controls Row */}
+        <div className="flex flex-wrap gap-2.5 items-center">
+          {searchMode === 'curated' && (
+            <>
+              {/* Document Type Filter */}
+              <div className="relative flex-1 sm:flex-initial">
+                <Filter className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+                <select
+                  value={docType}
+                  onChange={(e) => setDocType(e.target.value)}
+                  className="w-full sm:w-auto pl-10 pr-10 py-2.5 rounded-xl border border-border bg-background text-xs font-semibold appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                >
+                  <option value="">All Document Types</option>
+                  <option value="report">Industry Reports & Studies</option>
+                  <option value="paper">Academic Papers & Books</option>
+                  <option value="framework">Guidelines & Standards</option>
+                </select>
+              </div>
 
-        {/* Clear Filters Button */}
-        {(query || category || sort !== 'citations') && (
-          <button
-            onClick={resetFilters}
-            className="flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl border border-border hover:bg-muted/40 text-sm font-semibold transition-all shrink-0"
-          >
-            <X className="w-4 h-4 text-muted-foreground" />
-            <span>Reset Filters</span>
-          </button>
-        )}
+              {/* Year Range Filter */}
+              <div className="relative flex-1 sm:flex-initial">
+                <Filter className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+                <select
+                  value={yearRange}
+                  onChange={(e) => setYearRange(e.target.value)}
+                  className="w-full sm:w-auto pl-10 pr-10 py-2.5 rounded-xl border border-border bg-background text-xs font-semibold appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                >
+                  <option value="">All Years</option>
+                  <option value="2025-2026">2025 – 2026</option>
+                  <option value="2023-2024">2023 – 2024</option>
+                  <option value="2020-2022">2020 – 2022</option>
+                  <option value="earlier">Before 2020</option>
+                </select>
+              </div>
+
+              {/* Sort Selector */}
+              <div className="relative flex-1 sm:flex-initial">
+                <ArrowUpDown className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+                <select
+                  value={sort}
+                  onChange={(e) => setSort(e.target.value as 'citations' | 'date')}
+                  className="w-full sm:w-auto pl-10 pr-10 py-2.5 rounded-xl border border-border bg-background text-xs font-semibold appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                >
+                  <option value="citations">Sort by Citations</option>
+                  <option value="date">Sort by Date (Newest)</option>
+                </select>
+              </div>
+            </>
+          )}
+
+          {/* Reset Filters Button */}
+          {(query || category || docType || yearRange || sort !== 'citations') && (
+            <button
+              onClick={resetFilters}
+              className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl border border-border hover:bg-muted/40 text-xs font-bold transition-all shrink-0"
+            >
+              <X className="w-3.5 h-3.5 text-muted-foreground" />
+              <span>Reset Filters</span>
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Loading & Results Bar */}
       <div className="flex flex-wrap items-center justify-between gap-3 mb-5 px-1.5">
         <span className="text-xs text-muted-foreground font-medium">
-          {(!query && !category && searchMode === 'curated') ? (
+          {(isDefaultActive) ? (
             `Showing top ${visibleItems.length} of ${totalCountDisplay.toLocaleString()} curated reports`
           ) : (
             visibleItems.length > 0 && (
@@ -501,7 +567,7 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
       )}
 
       {/* Infinite scroll sentinel */}
-      {((!query && !category && searchMode === 'curated' && visibleLimit < defaultReports.length) || hasMore) && (
+      {((isDefaultActive && visibleLimit < processedDefaultReports.length) || hasMore) && (
         <div ref={sentinelRef} className="flex justify-center py-10 mt-4">
           <Loader2 className="w-6 h-6 animate-spin text-muted-foreground/60" />
         </div>
