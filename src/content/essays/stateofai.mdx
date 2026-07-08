@@ -75,6 +75,23 @@ The data groups into three strategic categories.
 "All ten of the fastest-rising keywords are related to large language models. None involve computer vision, reinforcement learning, or graph methods."
 </PullQuote>
 
+### Method Lifecycles
+
+The time-series data places each value at a different lifecycle stage. Using the compound annual growth rate (CAGR) from 2022 to 2025 as the primary metric, with a corpus-wide baseline of 32.0%, we map 20 values onto an interpretive hype cycle.
+
+- **Innovation trigger and ascending hype.** Chain of thought prompting (64.6% CAGR), coined in 2022, is the newest term. Vision language models (83.9% CAGR, 2,582 to 16,067 papers) and zero-shot learning (68.1%) grew in parallel with LLM adoption. RAG grew from 85 papers in 2022 to 9,329 in 2025 (378.8% CAGR, 110x), and is placed near the peak accordingly.
+- **Peak of inflated expectations.** Large language models have the highest CAGR at 130.4% (7,931 to 96,984 papers). The annualized 2026 estimate (~170,000 papers) suggests continued growth.
+- **Trough of disillusionment.** Vision transformers (60.9% CAGR) still show high growth but have moved from novelty to standard architecture since their 2021 peak. Diffusion models (33.9%) had their breakout in 2022-2023 and are now maturing. GANs (21.8%) and BERT (30.3%) have been largely superseded and sit deeper in the trough.
+- **Slope of enlightenment.** Six values fall in this zone, all above the corpus average: multimodal learning (52.9%), federated learning (52.3%), transformers (48.8%), reinforcement learning (39.2%), contrastive learning (35.8%), and graph neural networks (33.2%). All show steady adoption past their initial growth phase.
+- **Plateau of productivity.** Five values have below-average growth: deep learning (28.3% CAGR, 216,713 papers in 2025), knowledge graphs (25.9%), transfer learning (22.6%), CNNs (16.5%), and neural networks (15.4%). All continue to grow but at or below the corpus rate.
+
+<Figure
+  src="/images/essays/fig_hype_cycle.png"
+  alt="Interpretive hype cycle for AI research terms. Growth rates shown are 2022-2025 CAGR (corpus average 32.0%)."
+  caption="Figure 7: Interpretive hype cycle for AI research terms."
+  wide={true}
+/>
+
 ## IV. The Global Research Race
 
 The geographic distribution of AI research has undergone a structural rebalancing. China now leads with **874,019 publications**, 21.6% more than the United States (718,676). The crossover occurred in 2021, when China produced 71,273 papers to the US's 64,931, and the gap has widened every year since.

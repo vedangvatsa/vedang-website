@@ -24,7 +24,8 @@ export function ResearchPaper({
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="group block rounded-lg border border-border/60 bg-card p-5 md:p-6 hover:border-border/100 hover:shadow-sm transition-all duration-200 no-underline hover:no-underline"
+        style={{ textDecoration: 'none' }}
+        className="group block rounded-lg border border-border/60 bg-card p-5 md:p-6 hover:border-border/100 hover:shadow-sm transition-all duration-200 !no-underline hover:!no-underline"
       >
         <div className="flex items-start gap-3 md:gap-4">
           <div className="flex-1 min-w-0">
