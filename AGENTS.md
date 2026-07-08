@@ -39,7 +39,7 @@ When working on this project, you MUST read and follow these guidelines before m
 
 ## Website
 - Domain: `veda.ng`
-- Hosting: Firebase App Hosting (backend: `studio`, project: `vedang-fig5b`)
+- Hosting: Firebase App Hosting (backend: `studio`, project: `studio-9488916948-c80fb`)
 - Essays use `[slug]` routing at root level (e.g., `veda.ng/agent-infrastructure-stack`, NOT `veda.ng/essays/...`)
 
 ## Layout & Components
