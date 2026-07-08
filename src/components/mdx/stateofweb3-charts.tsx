@@ -1,7 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+import { Database, Search, ArrowRight, Star, Layers, Shield, FileText, ChevronRight, Zap, RefreshCw, BarChart2 } from 'lucide-react';
 
 // --- Data Structures ---
 interface YearlyData {
@@ -23,7 +24,9 @@ interface ConceptNode {
   id: string;
   label: string;
   papers: number;
+  layer: string;
   description: string;
+  dataFlow: string[];
   exemplar: { title: string; authors: string; year: number; citations: number; url: string };
 }
 
@@ -35,11 +38,11 @@ const yearlyDataset: YearlyData[] = [
   { year: '2016', docs: 955, growth: '+73.6%', avgCitations: 58.0, milestone: 'IoT-blockchain intersection emerges. Peak citation-impact cohort forming.' },
   { year: '2017', docs: 2520, growth: '+163.9%', avgCitations: 45.0, milestone: 'ICO boom triggers academic explosion. ERC-20 standard drives research.' },
   { year: '2018', docs: 6995, growth: '+177.6%', avgCitations: 32.0, milestone: 'Peak YoY growth. Consensus mechanisms, scalability, and security dominate.' },
-  { year: '2019', docs: 10591, growth: '+51.4%', avgCitations: 22.0, milestone: 'DeFi primitives appear (7 papers). Supply chain research scales rapidly.' },
-  { year: '2020', docs: 11996, growth: '+13.3%', avgCitations: 15.5, milestone: 'DeFi Summer. Federated learning and blockchain convergence begins (37 papers).' },
+  { year: '2019', docs: 10591, growth: '+51.4%', avgCitations: 22.0, milestone: 'DeFi primitives appear. Supply chain research scales rapidly.' },
+  { year: '2020', docs: 11996, growth: '+13.3%', avgCitations: 15.5, milestone: 'DeFi Summer. Federated learning and blockchain convergence begins.' },
   { year: '2021', docs: 13337, growth: '+11.2%', avgCitations: 10.8, milestone: 'NFT research surges. Zero-knowledge proof applications multiply.' },
   { year: '2022', docs: 14979, growth: '+12.3%', avgCitations: 7.2, milestone: 'Layer-2 rollups and cross-chain protocols dominate architecture research.' },
-  { year: '2023', docs: 17677, growth: '+18.0%', avgCitations: 4.8, milestone: 'NFT research peaks (426 papers) then declines. Institutional era begins.' },
+  { year: '2023', docs: 17677, growth: '+18.0%', avgCitations: 4.8, milestone: 'NFT research peaks then declines. Institutional era begins.' },
   { year: '2024', docs: 17993, growth: '+1.8%', avgCitations: 2.5, milestone: 'Lowest growth year. NIST post-quantum standards catalyze new research.' },
   { year: '2025', docs: 20668, growth: '+14.9%', avgCitations: 0.8, milestone: 'Record output: 20,668 papers. Post-quantum and regulatory themes surge.' },
   { year: '2026', docs: 18800, growth: 'Estimate', avgCitations: 0.1, milestone: 'On pace for ~18,800. Quantum-resistant and AI convergence accelerate.' }
@@ -83,7 +86,14 @@ const convergenceNodes: ConceptNode[] = [
     id: 'fed-learn',
     label: 'Federated Learning',
     papers: 664,
-    description: 'Explosive growth from 3 papers in 2018 to 664 in 2025. Blockchain coordinates decentralized AI training, manages parameter updates, calculates rewards, and prevents model poisoning, all without centralizing sensitive data.',
+    layer: 'Coordination & Incentive Layer',
+    description: 'Blockchain coordinates decentralized AI training across multiple nodes. It manages parameter updates, calculates model accuracy rewards, and prevents malicious model poisoning—all without centralizing raw training data.',
+    dataFlow: [
+      '1. Local nodes train on private data',
+      '2. Encrypted parameters submitted to ledger',
+      '3. Smart contracts aggregate weights',
+      '4. Verified parameter contributors paid in tokens'
+    ],
     exemplar: {
       title: 'Blockchain empowered asynchronous federated learning for secure data sharing',
       authors: 'Y. Lu et al.',
@@ -96,7 +106,14 @@ const convergenceNodes: ConceptNode[] = [
     id: 'privacy',
     label: 'Privacy Preserving',
     papers: 1342,
-    description: '1,342 mentions across the corpus. Combines zero-knowledge proofs (ZKPs), secure multi-party computation (SMPC), and homomorphic encryption to train models and verify transactions on private records without decryption.',
+    layer: 'Cryptography & Security Layer',
+    description: 'Combines Zero-Knowledge Proofs (ZKPs) and Secure Multi-Party Computation (SMPC) to verify training compliance and process transactions on encrypted data. Ensures raw dataset privacy while validating execution.',
+    dataFlow: [
+      '1. Private data masked with ZK proofs',
+      '2. Smart contracts verify proof validity',
+      '3. Homomorphic operations run on-chain',
+      '4. Clean state transition written to database'
+    ],
     exemplar: {
       title: 'Hawk: The blockchain model of cryptography and privacy-preserving smart contracts',
       authors: 'A. Kosba et al.',
@@ -106,10 +123,17 @@ const convergenceNodes: ConceptNode[] = [
     }
   },
   {
-    id: 'ai-convergence',
-    label: 'AI Convergence',
+    id: 'ai-governance',
+    label: 'Decentralized AI Governance',
     papers: 11130,
-    description: 'Machine learning (5,667 papers) and artificial intelligence (5,463 papers) represent the largest technology convergence in the corpus: 11,130 combined mentions. Papers apply AI to blockchain problems (anomaly detection, MEV optimization) or use blockchain for AI governance (decentralized model training, provenance).',
+    layer: 'Data & Provenance Layer',
+    description: 'Applies blockchain audit trails to track AI model lineage, verify training dataset authenticity, and timestamp neural weights. Mitigates AI hallucinations, deepfakes, and unverified data scraping.',
+    dataFlow: [
+      '1. Dataset hashes stored on ledger',
+      '2. Model training steps cryptographically logged',
+      '3. Neural weights hashed & timestamped on-chain',
+      '4. Downstream agents verify model authenticity'
+    ],
     exemplar: {
       title: 'The rise and potential of large language model based agents: A survey',
       authors: 'Z. Xi et al.',
@@ -290,7 +314,7 @@ export function StateOfWeb3Timeline() {
               <div className="bg-background rounded-lg p-2.5 border border-border/50">
                 <p className="text-[10px] text-muted-foreground font-semibold uppercase">Avg Citations</p>
                 <p className="text-base font-extrabold text-primary font-mono mt-0.5">
-                  {selectedTimeline.avgCitations}
+                  {selectedTimeline.avgCitations.toFixed(1)}
                 </p>
               </div>
             </div>
@@ -299,6 +323,23 @@ export function StateOfWeb3Timeline() {
               <p className="text-[10px] text-muted-foreground font-semibold uppercase">Milestone Context</p>
               <p className="text-xs text-muted-foreground leading-relaxed bg-background/50 rounded-lg p-2 border border-border/40 font-light">
                 {selectedTimeline.milestone}
+              </p>
+            </div>
+
+            {/* Citation Decay Insight */}
+            <div className="border-t border-border/50 pt-2 space-y-1.5">
+              <div className="flex justify-between text-[9px] font-bold text-muted-foreground uppercase">
+                <span>Citation Density</span>
+                <span>Avg: {selectedTimeline.avgCitations.toFixed(1)} / paper</span>
+              </div>
+              <div className="h-1.5 w-full bg-secondary rounded-full overflow-hidden">
+                <div 
+                  className="h-full bg-amber-500 transition-all duration-300"
+                  style={{ width: `${(selectedTimeline.avgCitations / 85) * 100}%` }}
+                />
+              </div>
+              <p className="text-[9px] text-muted-foreground/60 leading-snug">
+                As research volume surged 117x, the average citations per paper decayed from 85.0 to 0.1 due to Recency Effect and volume diluting attention.
               </p>
             </div>
           </div>
@@ -315,11 +356,13 @@ export function StateOfWeb3Timeline() {
 // --- N-Gram Frequency Analyzer ---
 export function StateOfWeb3NgramAnalyzer() {
   const [activeNgramTab, setActiveNgramTab] = useState<'unigrams' | 'bigrams' | 'trigrams'>('bigrams');
+  const [activeTermIdx, setActiveTermIdx] = useState<number>(0);
 
   const activeNgrams = 
     activeNgramTab === 'unigrams' ? unigramData :
     activeNgramTab === 'bigrams' ? bigramData : trigramData;
   const maxNgramCount = Math.max(...activeNgrams.map(item => item.count));
+  const activeTerm = activeNgrams[activeTermIdx] || activeNgrams[0];
 
   return (
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-6">
@@ -340,7 +383,10 @@ export function StateOfWeb3NgramAnalyzer() {
           ].map(tab => (
             <button
               key={tab.id}
-              onClick={() => setActiveNgramTab(tab.id as any)}
+              onClick={() => {
+                setActiveNgramTab(tab.id as any);
+                setActiveTermIdx(0);
+              }}
               className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
                 activeNgramTab === tab.id 
                   ? 'bg-background text-foreground shadow-sm' 
@@ -353,51 +399,68 @@ export function StateOfWeb3NgramAnalyzer() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {activeNgrams.map((item, idx) => {
-          const widthPct = (item.count / maxNgramCount) * 100;
-          return (
-            <div 
-              key={idx} 
-              className="bg-muted/20 border border-border/30 hover:border-border/60 rounded-lg p-3.5 space-y-2.5 transition-all duration-200"
-            >
-              <div className="flex justify-between items-start">
-                <div>
-                  <span className="px-1.5 py-0.5 rounded bg-primary/10 border border-primary/20 text-primary text-[10px] font-mono font-bold">
-                    Rank #{idx + 1}
-                  </span>
-                  <p className="text-sm font-bold text-foreground font-mono lowercase tracking-wide mt-1.5">
-                    &ldquo;{item.term}&rdquo;
-                  </p>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+        {/* Term List */}
+        <div className="lg:col-span-2 space-y-2 max-h-[360px] overflow-y-auto pr-1">
+          {activeNgrams.map((item, idx) => {
+            const widthPct = (item.count / maxNgramCount) * 100;
+            const isSelected = activeTermIdx === idx;
+            return (
+              <button 
+                key={idx} 
+                onClick={() => setActiveTermIdx(idx)}
+                className={`w-full text-left bg-muted/20 border rounded-lg p-3 space-y-2 transition-all flex flex-col ${
+                  isSelected 
+                    ? 'border-primary bg-primary/5 shadow-sm'
+                    : 'border-border/40 bg-card hover:bg-muted/40'
+                }`}
+              >
+                <div className="flex justify-between items-center w-full">
+                  <div className="flex items-center gap-2">
+                    <span className={`px-1.5 py-0.5 rounded text-[9px] font-mono font-bold ${isSelected ? 'bg-primary/20 text-primary' : 'bg-secondary text-muted-foreground'}`}>
+                      Rank #{idx + 1}
+                    </span>
+                    <span className="text-sm font-bold text-foreground font-mono lowercase truncate max-w-[180px] sm:max-w-[280px]">
+                      &ldquo;{item.term}&rdquo;
+                    </span>
+                  </div>
+                  <div className="text-right flex items-baseline gap-1.5">
+                    <span className="text-xs font-bold text-foreground font-mono">{item.count.toLocaleString()}</span>
+                    <span className="text-[9px] text-muted-foreground font-mono">({item.percent}%)</span>
+                  </div>
                 </div>
-                <div className="text-right">
-                  <p className="text-xs font-bold text-foreground font-mono">
-                    {item.count.toLocaleString()}
-                  </p>
-                  <p className="text-[10px] text-muted-foreground font-mono">
-                    {item.percent}% of papers
-                  </p>
+                {/* Visual bar fill indicator */}
+                <div className="h-1.5 w-full bg-secondary/80 rounded-full overflow-hidden relative">
+                  <div 
+                    className="h-full bg-primary/65 rounded-full transition-all duration-500 ease-out"
+                    style={{ width: `${widthPct}%` }}
+                  />
                 </div>
-              </div>
+              </button>
+            );
+          })}
+        </div>
 
-              {/* Progress Bar */}
-              <div className="h-1.5 w-full bg-secondary rounded-full overflow-hidden relative">
-                <div 
-                  className="h-full bg-primary/65 rounded-full transition-all duration-500 ease-out"
-                  style={{ width: `${widthPct}%` }}
-                />
-              </div>
-
-              <p className="text-[11px] text-muted-foreground leading-relaxed font-light">
-                {item.context}
-              </p>
-            </div>
-          );
-        })}
+        {/* Selected Term Detail Box */}
+        <div className="bg-muted/30 border border-border/50 rounded-lg p-4.5 space-y-3 lg:sticky lg:top-4 self-stretch flex flex-col justify-between">
+          <div className="space-y-2">
+            <span className="text-[10px] font-semibold uppercase tracking-wider text-primary">Term Insight Detail</span>
+            <h5 className="text-base font-extrabold text-foreground font-mono lowercase">
+              &ldquo;{activeTerm.term}&rdquo;
+            </h5>
+            <p className="text-xs text-muted-foreground leading-relaxed font-light">
+              {activeTerm.context}
+            </p>
+          </div>
+          <div className="border-t border-border/40 pt-3 flex justify-between items-center text-[10px] font-mono text-muted-foreground">
+            <span>Corpus Share:</span>
+            <span className="font-bold text-foreground">{activeTerm.percent}% of abstracts</span>
+          </div>
+        </div>
       </div>
 
       <div className="text-[10px] text-muted-foreground/60 border-t border-border/50 pt-3 mt-4">
-        Source: 128,286 concept-tagged papers via OpenAlex.
+        Source: 128,286 concept-tagged papers via OpenAlex. Click any rank card to view terminology context.
       </div>
     </figure>
   );
@@ -412,10 +475,10 @@ export function StateOfWeb3ConvergenceMatrix() {
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-6">
       <div>
         <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200">
-          The Blockchain-AI Convergence Matrix
+          The Blockchain-AI Convergence Architecture
         </h4>
         <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
-          Trace how blockchain acts as a decentralized coordination substrate for AI
+          Decentralized coordination layers connecting artificial intelligence with cryptography
         </span>
       </div>
 
@@ -427,16 +490,19 @@ export function StateOfWeb3ConvergenceMatrix() {
               <button
                 key={node.id}
                 onClick={() => setSelectedNodeId(node.id)}
-                className={`text-left p-3.5 rounded-lg border transition-all text-sm font-sans ${
+                className={`text-left p-3.5 rounded-lg border transition-all text-sm font-sans relative ${
                   isSelected
                     ? 'border-primary bg-primary/5 text-foreground font-semibold shadow-sm'
                     : 'border-border bg-muted/20 hover:border-border/80 text-muted-foreground hover:text-foreground'
                 }`}
               >
                 <div className="flex justify-between items-center">
-                  <span>{node.label}</span>
+                  <div className="flex items-center gap-2">
+                    <Layers className={`w-4 h-4 ${isSelected ? 'text-primary' : 'text-muted-foreground'}`} />
+                    <span>{node.label}</span>
+                  </div>
                   <span className="text-[10px] font-mono font-bold px-1.5 py-0.2 rounded bg-primary/10 border border-primary/20 text-primary">
-                    {node.papers.toLocaleString()} papers
+                    {node.papers} papers
                   </span>
                 </div>
               </button>
@@ -444,35 +510,38 @@ export function StateOfWeb3ConvergenceMatrix() {
           })}
         </div>
 
-        <div className="bg-muted/20 border border-border/50 rounded-lg p-5 flex flex-col justify-center items-center text-center relative overflow-hidden min-h-[180px]">
-          <div className="absolute w-40 h-40 border border-primary/10 rounded-full animate-ping opacity-20" />
-          
-          <div className="relative space-y-4">
-            <div className="w-12 h-12 mx-auto rounded-lg bg-primary/80 flex items-center justify-center shadow-md">
-              <svg className="w-6 h-6 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
+        {/* Dynamic Architectural Flow Diagram (REPLACES THE SLOP PULSING ICON) */}
+        <div className="bg-muted/20 border border-border/50 rounded-lg p-5 flex flex-col justify-between text-left min-h-[220px]">
+          <div className="space-y-3">
+            <span className="text-[10px] uppercase font-mono tracking-widest text-primary font-bold">{selectedNode.layer}</span>
+            <div className="space-y-2">
+              {selectedNode.dataFlow.map((step, idx) => (
+                <div key={idx} className="flex gap-2 items-start text-[11px] text-muted-foreground leading-snug">
+                  <ChevronRight className="w-3.5 h-3.5 text-primary/80 shrink-0 mt-0.5" />
+                  <span className={idx === 1 || idx === 2 ? "font-mono font-medium text-foreground/80" : ""}>{step}</span>
+                </div>
+              ))}
             </div>
-            <div>
-              <p className="text-[10px] uppercase font-mono tracking-widest text-muted-foreground font-bold">Active Substrate</p>
-              <h5 className="text-sm font-bold text-foreground mt-0.5">{selectedNode.label} Integration</h5>
-            </div>
+          </div>
+          <div className="flex items-center gap-1.5 text-[9px] font-mono text-muted-foreground/60 border-t border-border/30 pt-2.5">
+            <Zap className="w-3 h-3 text-amber-500 fill-current animate-pulse" />
+            <span>Interactive Data Pipeline Flow</span>
           </div>
         </div>
 
         <div className="bg-muted/30 border border-border/50 rounded-lg p-4 flex flex-col justify-between space-y-4">
           <div className="space-y-2">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Conceptual Strategy</p>
+            <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Strategic Rationale</p>
             <p className="text-xs text-muted-foreground leading-relaxed">
               {selectedNode.description}
             </p>
           </div>
           <div className="bg-background rounded-lg p-2.5 border border-border/50 space-y-1">
             <p className="text-[9px] font-semibold uppercase tracking-wider text-muted-foreground">Exemplar Research Document</p>
-            <a href={selectedNode.exemplar.url} target="_blank" rel="noopener noreferrer" className="block text-xs font-bold text-foreground font-serif leading-snug hover:text-primary transition-colors">
+            <a href={selectedNode.exemplar.url} target="_blank" rel="noopener noreferrer" className="block text-xs font-bold text-foreground font-serif leading-snug hover:text-primary transition-colors line-clamp-2">
               &ldquo;{selectedNode.exemplar.title}&rdquo;
             </a>
-            <div className="flex justify-between items-center text-[10px] font-mono text-muted-foreground pt-1">
+            <div className="flex justify-between items-center text-[10px] font-mono text-muted-foreground pt-1.5">
               <span>{selectedNode.exemplar.authors} ({selectedNode.exemplar.year})</span>
               <span className="text-primary font-semibold">{selectedNode.exemplar.citations} cites</span>
             </div>
@@ -481,77 +550,103 @@ export function StateOfWeb3ConvergenceMatrix() {
       </div>
 
       <div className="text-[10px] text-muted-foreground/60 border-t border-border/50 pt-3 mt-4">
-        Source: Co-occurrence analyses of 11,130 AI/ML papers in Web3 database.
+        Source: Co-occurrence analyses of 11,130 AI/ML papers in Web3 database. Click coordination layers on left to scrub pipelines.
       </div>
     </figure>
   );
 }
 
-// --- Topic Momentum Slider ---
+// --- Topic Momentum Analyzer ---
 export function StateOfWeb3Momentum() {
-  const [momentumThreshold, setMomentumThreshold] = useState<number>(2.0);
-  const filteredMomentum = momentumData.filter(item => item.growth >= momentumThreshold);
+  const [activeMetricTab, setActiveMetricTab] = useState<'velocity' | 'volume'>('velocity');
+
+  // Relative growth vs absolute paper counts
+  const sortedMomentum = useMemo(() => {
+    const list = [...momentumData];
+    if (activeMetricTab === 'volume') {
+      return list.sort((a, b) => b.count2026 - a.count2026);
+    }
+    return list.sort((a, b) => b.growth - a.growth);
+  }, [activeMetricTab]);
+
+  const maxVal = useMemo(() => {
+    if (activeMetricTab === 'volume') {
+      return Math.max(...momentumData.map(d => d.count2026));
+    }
+    return Math.max(...momentumData.map(d => d.growth));
+  }, [activeMetricTab]);
 
   return (
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200">
-            Topic Momentum Accelerator (2025-2026 vs. 2022-2023)
+            Topic Momentum Dashboard (2025-2026 vs. 2022-2023)
           </h4>
           <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
-            Filter research keywords by growth velocity threshold
+            Analyzing relative research velocity against absolute document counts
           </span>
         </div>
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-bold text-primary shrink-0 self-start sm:self-auto">
-          {momentumThreshold.toFixed(1)}x Growth Min
-        </div>
-      </div>
-
-      <div className="bg-muted/20 border border-border/40 rounded-lg p-4 space-y-3">
-        <input 
-          type="range" 
-          min="2" 
-          max="7" 
-          step="0.1" 
-          value={momentumThreshold}
-          onChange={(e) => setMomentumThreshold(parseFloat(e.target.value))}
-          className="w-full h-1.5 bg-secondary rounded-lg appearance-none cursor-pointer accent-primary"
-        />
-        <div className="flex justify-between text-[10px] text-muted-foreground font-mono">
-          <span>2.0x minimum</span>
-          <span>7.0x maximum</span>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-        {filteredMomentum.map((item, idx) => (
-          <div 
-            key={idx} 
-            className="flex justify-between items-center p-3 rounded-lg bg-muted/30 border border-border/40"
+        <div className="flex gap-1 bg-muted p-0.5 rounded-lg border border-border shrink-0 self-start sm:self-auto">
+          <button
+            onClick={() => setActiveMetricTab('velocity')}
+            className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
+              activeMetricTab === 'velocity' 
+                ? 'bg-background text-foreground shadow-sm' 
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
           >
-            <div className="space-y-1">
-              <p className="text-xs font-bold text-foreground font-mono lowercase">
-                &ldquo;{item.term}&rdquo;
-              </p>
-              <span className="px-1.5 py-0.2 rounded bg-secondary text-[8px] font-semibold text-muted-foreground font-sans uppercase">
-                {item.category}
-              </span>
-            </div>
-            <div className="text-right">
-              <span className="text-xs font-extrabold text-primary font-mono block">
-                +{item.growth.toFixed(1)}x
-              </span>
-              <span className="text-[9px] text-muted-foreground font-mono">
-                {item.count2026.toLocaleString()} papers
-              </span>
-            </div>
-          </div>
-        ))}
+            Growth Velocity
+          </button>
+          <button
+            onClick={() => setActiveMetricTab('volume')}
+            className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
+              activeMetricTab === 'volume' 
+                ? 'bg-background text-foreground shadow-sm' 
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            Absolute Volume
+          </button>
+        </div>
       </div>
 
-      <div className="text-[10px] text-muted-foreground/60 border-t border-border/50 pt-3 mt-4">
-        Source: 128,286 papers tracked in blockchain corpus. Growth = 2025-2026 vs 2022-2023 volume.
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 pt-2">
+        {sortedMomentum.map((item, idx) => {
+          const val = activeMetricTab === 'volume' ? item.count2026 : item.growth;
+          const widthPct = (val / maxVal) * 100;
+          return (
+            <div key={idx} className="space-y-1.5 flex flex-col justify-center">
+              <div className="flex justify-between items-baseline text-xs font-semibold text-foreground">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
+                  <span className="font-mono lowercase truncate max-w-[160px]">&ldquo;{item.term}&rdquo;</span>
+                  <span className="text-[8px] font-sans font-bold px-1 py-0.2 rounded bg-secondary text-muted-foreground tracking-wider uppercase shrink-0">
+                    {item.category.split(' ')[0]}
+                  </span>
+                </div>
+                <div className="text-right font-mono font-bold text-primary">
+                  {activeMetricTab === 'volume' ? `${item.count2026.toLocaleString()} papers` : `+${item.growth.toFixed(1)}x`}
+                </div>
+              </div>
+              <div className="h-6 w-full bg-secondary rounded-full overflow-hidden relative flex items-center">
+                <div 
+                  className="h-full bg-primary/65 rounded-full transition-all duration-700 ease-out"
+                  style={{ width: `${widthPct}%` }}
+                />
+                {/* Secondary metric helper inside bar container if there's room */}
+                <span className="absolute right-2.5 text-[9px] font-mono text-muted-foreground/80">
+                  {activeMetricTab === 'volume' ? `+${item.growth.toFixed(1)}x velocity` : `${item.count2026.toLocaleString()} papers`}
+                </span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="text-[10px] text-muted-foreground/60 border-t border-border/50 pt-3 mt-4 flex flex-col sm:flex-row justify-between gap-2">
+        <span>Source: 128,286 papers tracked in blockchain corpus. Toggle metric dashboard controls to rebuild ranking lists.</span>
+        <span className="font-bold text-destructive font-mono uppercase text-[9px] self-start sm:self-auto">NFT / Metaverse in contraction (&lt;1.0x)</span>
       </div>
     </figure>
   );
@@ -585,6 +680,47 @@ export function StateOfWeb3Citations() {
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-bold text-primary">
           {percentile}th Percentile
         </div>
+      </div>
+
+      {/* PARETO DISTRIBUTION MULTI-SEGMENT BAR CHART (REPLACES STATIC SLIDER TEXT ONLY) */}
+      <div className="space-y-2 bg-muted/10 border border-border/40 rounded-lg p-4">
+        <div className="flex justify-between text-[10px] text-muted-foreground font-bold uppercase tracking-wider">
+          <span>Corpus Pareto Distribution Curve (Percentiles)</span>
+          <span className="text-primary font-mono">{percentile}% threshold: {getPercentileCitations(percentile)} citations</span>
+        </div>
+        <div className="h-6 w-full rounded-full overflow-hidden flex text-[10px] font-mono font-bold text-white shadow-inner">
+          <div 
+            className={`h-full flex items-center justify-center transition-all ${percentile <= 50 ? 'bg-zinc-500 ring-2 ring-white ring-inset' : 'bg-zinc-300 dark:bg-zinc-800 text-muted-foreground'}`}
+            style={{ width: '43.5%' }}
+            title="Zero Citations (43.5% of papers)"
+          >
+            {percentile <= 50 ? 'Active' : '0 Cites (43.5%)'}
+          </div>
+          <div 
+            className={`h-full flex items-center justify-center transition-all ${percentile > 50 && percentile <= 75 ? 'bg-primary ring-2 ring-white ring-inset text-white' : 'bg-sky-200 dark:bg-sky-950/40 text-sky-800'}`}
+            style={{ width: '31.5%' }}
+            title="Low Citations: 1-13 (31.5% of papers)"
+          >
+            {percentile > 50 && percentile <= 75 ? 'Active' : '1-13 (31.5%)'}
+          </div>
+          <div 
+            className={`h-full flex items-center justify-center transition-all ${percentile > 75 && percentile <= 95 ? 'bg-primary ring-2 ring-white ring-inset text-white' : 'bg-blue-350 dark:bg-blue-900/60 text-blue-100'}`}
+            style={{ width: '20%' }}
+            title="Moderate Citations: 14-41 (20% of papers)"
+          >
+            {percentile > 75 && percentile <= 95 ? 'Active' : '14-41 (20%)'}
+          </div>
+          <div 
+            className={`h-full flex items-center justify-center transition-all ${percentile > 95 ? 'bg-amber-500 ring-2 ring-white ring-inset text-white' : 'bg-amber-100 dark:bg-amber-950/20 text-amber-600'}`}
+            style={{ width: '5%' }}
+            title="Elite Citations: 42+ (5% of papers)"
+          >
+            {percentile > 95 ? 'Active' : '42+ (5%)'}
+          </div>
+        </div>
+        <p className="text-[10px] text-muted-foreground/70 leading-relaxed font-light">
+          Pareto curve colored relative to active slider. As you slide from 50th (median) to 99th percentile, notice how the citation thresholds grow exponentially.
+        </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
