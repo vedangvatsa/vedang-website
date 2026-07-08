@@ -105,16 +105,16 @@ export function StateOfAiTimeline() {
   const areaD = `${pathD} L ${points[points.length - 1].x} ${height - padding} L ${points[0].x} ${height - padding} Z`;
 
   return (
-    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm overflow-hidden space-y-6">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h4 className="text-base font-bold text-foreground flex items-center gap-2">
+          <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200 flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse" />
             Publication Volume &amp; Milestone Timeline (2013-2026)
           </h4>
-          <p className="text-xs text-muted-foreground mt-0.5">
-            Click chart nodes to scrub years. Corpus: 5,003,783 papers via abstract-level search on OpenAlex.
-          </p>
+          <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
+            Annual publication volume and key milestones
+          </span>
         </div>
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-semibold">
           Active Year: {selected.year}{selected.year === '2026' ? '*' : ''}
@@ -124,7 +124,7 @@ export function StateOfAiTimeline() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-3">
           <div className="relative bg-muted/20 border border-border/50 rounded-lg p-3">
-            <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto overflow-visible select-none">
+            <svg viewBox={`0 0 ${width} ${height}`} width={width} height={height} className="w-full h-auto overflow-visible select-none">
               <defs>
                 <linearGradient id="areaGradAI" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stopColor="hsl(217, 91%, 60%)" stopOpacity="0.3" />
@@ -162,7 +162,11 @@ export function StateOfAiTimeline() {
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="text-[10px] text-muted-foreground/60 border-t border-border/50 pt-3 mt-4">
+        Corpus: 5,003,783 papers via abstract-level search on OpenAlex.
+      </div>
+    </figure>
   );
 }
 
@@ -179,14 +183,16 @@ export function StateOfAiNgramAnalyzer() {
   const maxCount = Math.max(...activeData.map(d => d.count));
 
   return (
-    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm overflow-hidden space-y-5">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-5">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div>
-          <h4 className="text-base font-bold text-foreground flex items-center gap-2">
+          <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200 flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-indigo-500" />
             Linguistic N-Gram Corpus Frequency Analyzer
           </h4>
-          <p className="text-xs text-muted-foreground mt-0.5">Toggle between bigrams, trigrams, and fastest-rising terms across 5,003,783 AI paper abstracts (OpenAlex).</p>
+          <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
+            Most frequent bigrams, trigrams, and rising terms
+          </span>
         </div>
         <div className="inline-flex rounded-lg border border-border bg-muted/50 p-0.5">
           {tabs.map(tab => (
@@ -206,7 +212,7 @@ export function StateOfAiNgramAnalyzer() {
               </div>
               <div className="flex-1 relative">
                 <div className="h-7 w-full rounded-full bg-secondary overflow-hidden">
-                  <div className="h-full rounded-full bg-primary transition-all duration-700 ease-out" style={{ width: `${(item.count / maxCount) * 100}%` }} />
+                  <div className="h-full rounded-full bg-primary/65 transition-all duration-700 ease-out" style={{ width: `${(item.count / maxCount) * 100}%` }} />
                 </div>
               </div>
               <div className="w-20 text-right text-xs font-bold tabular-nums text-foreground">{item.count.toLocaleString()}</div>
@@ -218,7 +224,11 @@ export function StateOfAiNgramAnalyzer() {
           </div>
         ))}
       </div>
-    </div>
+
+      <div className="text-[10px] text-muted-foreground/60 border-t border-border/50 pt-3 mt-4">
+        Source: 5,003,783 AI paper abstracts (OpenAlex).
+      </div>
+    </figure>
   );
 }
 
@@ -227,33 +237,53 @@ export function StateOfAiNgramAnalyzer() {
 export function StateOfAiMomentum() {
   const maxGrowth = momentumData[0].growth;
   return (
-    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm overflow-hidden space-y-5">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-5">
       <div>
-        <h4 className="text-base font-bold text-foreground flex items-center gap-2">
+        <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200 flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
           Fastest-Rising Keywords (2025-2026 vs 2022-2023)
         </h4>
-        <p className="text-xs text-muted-foreground mt-0.5">Growth ratio = abstract count in 2025-2026 ÷ abstract count in 2022-2023. Source: 5,003,783 papers (OpenAlex).</p>
+        <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
+          Growth velocity of AI research keywords
+        </span>
       </div>
       <div className="space-y-3">
-        {momentumData.map((item) => (
-          <div key={item.term} className="group">
-            <div className="flex items-center gap-3">
-              <div className="w-44 text-right text-sm font-bold text-foreground truncate">{item.term}</div>
-              <div className="flex-1 relative">
-                <div className="h-8 w-full rounded-full bg-secondary overflow-hidden">
-                  <div className="h-full rounded-full bg-primary transition-all duration-700 ease-out flex items-center justify-end pr-2" style={{ width: `${(item.growth / maxGrowth) * 100}%` }}>
-                    <span className="text-[10px] font-black text-primary-foreground tabular-nums">{item.growth}x</span>
+        {momentumData.map((item) => {
+          const pct = (item.growth / maxGrowth) * 100;
+          const isTooNarrow = pct < 15;
+          return (
+            <div key={item.term} className="group">
+              <div className="flex items-center gap-3">
+                <div className="w-56 text-right text-sm font-bold text-foreground truncate">{item.term}</div>
+                <div className="flex-1 relative flex items-center">
+                  <div className="h-8 w-full rounded-full bg-secondary overflow-hidden relative flex items-center">
+                    <div 
+                      className="h-full rounded-full bg-primary/65 transition-all duration-700 ease-out flex items-center justify-end pr-2" 
+                      style={{ width: `${pct}%` }}
+                    >
+                      {!isTooNarrow && (
+                        <span className="text-[10px] font-black text-primary-foreground tabular-nums">{item.growth}x</span>
+                      )}
+                    </div>
+                    {isTooNarrow && (
+                      <span className="absolute text-[10px] font-black text-foreground tabular-nums" style={{ left: `calc(${pct}% + 8px)` }}>
+                        {item.growth}x
+                      </span>
+                    )}
                   </div>
                 </div>
+                <div className="w-20 text-right text-xs font-mono text-muted-foreground">{item.count2026.toLocaleString()}</div>
               </div>
-              <div className="w-20 text-right text-xs font-mono text-muted-foreground">{item.count2026.toLocaleString()}</div>
+              <div className="ml-9 pl-56 text-[10px] text-muted-foreground/70 mt-0.5 hidden group-hover:block">{item.context}</div>
             </div>
-            <div className="ml-9 pl-44 text-[10px] text-muted-foreground/70 mt-0.5 hidden group-hover:block">{item.context}</div>
-          </div>
-        ))}
+          );
+        })}
       </div>
-    </div>
+
+      <div className="text-[10px] text-muted-foreground/60 border-t border-border/50 pt-3 mt-4">
+        Source: 5,003,783 papers (OpenAlex). Growth ratio = abstract count in 2025-2026 ÷ abstract count in 2022-2023.
+      </div>
+    </figure>
   );
 }
 
@@ -285,13 +315,15 @@ export function StateOfAiGeography() {
   const maxCount = geoData[0].count;
 
   return (
-    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm overflow-hidden space-y-5">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-5">
       <div>
-        <h4 className="text-base font-bold text-foreground flex items-center gap-2">
+        <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200 flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-orange-500" />
           Global Research Output by Country (Top 10)
         </h4>
-        <p className="text-xs text-muted-foreground mt-0.5">Abstract-level search across 5M+ AI papers, 2013-2026. A single paper with co-authors from multiple countries is counted once per country.</p>
+        <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
+          Geographic distribution of AI research publications
+        </span>
       </div>
       <div className="space-y-3 pt-2">
         {geoData.map((item, i) => (
@@ -301,7 +333,7 @@ export function StateOfAiGeography() {
             <div className="flex-1 relative">
               <div className="h-6 w-full rounded-full bg-secondary overflow-hidden">
                 <div 
-                  className="h-full rounded-full transition-all duration-700 ease-out" 
+                  className="h-full rounded-full transition-all duration-700 ease-out opacity-65" 
                   style={{ width: `${(item.count / maxCount) * 100}%`, backgroundColor: i === 0 ? 'hsl(12, 90%, 60%)' : i === 1 ? 'hsl(217, 91%, 60%)' : 'hsl(var(--primary))' }} 
                 />
               </div>
@@ -310,7 +342,11 @@ export function StateOfAiGeography() {
           </div>
         ))}
       </div>
-    </div>
+
+      <div className="text-[10px] text-muted-foreground/60 border-t border-border/50 pt-3 mt-4">
+        Source: 5,003,783 AI papers (2013-2026) via OpenAlex. A single paper with co-authors from multiple countries is counted once per country.
+      </div>
+    </figure>
   );
 }
 
@@ -331,15 +367,15 @@ export function StateOfAiCitations() {
   };
 
   return (
-    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm space-y-6">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h4 className="text-base font-bold text-foreground">
+          <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200">
             Corpus Citation Skewness Distribution
           </h4>
-          <p className="text-xs text-muted-foreground mt-0.5">
-            Use the controller slider to explore the right-skew distribution across 5M documents. 48.9% have zero citations.
-          </p>
+          <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
+            Concentration of academic impact and citations
+          </span>
         </div>
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-bold text-primary">
           {percentile}th Percentile
@@ -400,6 +436,10 @@ export function StateOfAiCitations() {
           </button>
         </div>
       </div>
-    </div>
+
+      <div className="text-[10px] text-muted-foreground/60 border-t border-border/50 pt-3 mt-4">
+        Source: 5,003,783 AI papers via OpenAlex. 48.9% have zero citations.
+      </div>
+    </figure>
   );
 }
