@@ -155,16 +155,16 @@ export function StateOfWeb3Timeline() {
   const areaD = `${pathD} L ${points[points.length - 1].x} ${height - padding} L ${points[0].x} ${height - padding} Z`;
 
   return (
-    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm overflow-hidden space-y-6">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h4 className="text-base font-bold text-foreground flex items-center gap-2">
+          <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200 flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse" />
-            Publication Volume & Milestone Timeline (2013 to 2026)
+            Publication Volume &amp; Milestone Timeline (2013 to 2026)
           </h4>
-          <p className="text-xs text-muted-foreground mt-0.5">
-            128,286 concept-tagged papers. Click nodes to explore the 117x growth trajectory.
-          </p>
+          <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
+            Publication volume and key milestones from genesis to maturation
+          </span>
         </div>
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-semibold">
           Active Year: {selectedTimeline.year}
@@ -174,7 +174,7 @@ export function StateOfWeb3Timeline() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-3">
           <div className="relative bg-muted/20 border border-border/50 rounded-lg p-3">
-            <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto overflow-visible select-none">
+            <svg viewBox={`0 0 ${width} ${height}`} width={width} height={height} className="w-full h-auto overflow-visible select-none">
               <defs>
                 <linearGradient id="areaGradWeb3" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.3" />
@@ -193,7 +193,7 @@ export function StateOfWeb3Timeline() {
                     x2={width - padding} 
                     y2={yVal} 
                     stroke="currentColor" 
-                    strokeOpacity={0.1}
+                    strokeOpacity={0.08}
                     strokeWidth={1} 
                     strokeDasharray="4 4" 
                   />
@@ -208,7 +208,7 @@ export function StateOfWeb3Timeline() {
                 d={pathD} 
                 fill="none" 
                 stroke="hsl(var(--primary))" 
-                strokeWidth={3} 
+                strokeWidth={2.5} 
                 className="transition-all duration-300" 
               />
 
@@ -219,7 +219,9 @@ export function StateOfWeb3Timeline() {
                 x2={points[selectedTimelineIndex].x} 
                 y2={height - padding} 
                 stroke="hsl(var(--primary))" 
-                strokeWidth={1.5} 
+                strokeWidth={1} 
+                strokeDasharray="3 3"
+                strokeOpacity={0.5}
               />
 
               {/* Nodes */}
@@ -234,23 +236,18 @@ export function StateOfWeb3Timeline() {
                     <circle 
                       cx={pt.x} 
                       cy={pt.y} 
-                      r={isSelected ? 7 : 4} 
+                      r={isSelected ? 7 : 4.5} 
                       fill={isSelected ? 'hsl(var(--foreground))' : 'hsl(var(--primary))'} 
-                    />
-                    <circle 
-                      cx={pt.x} 
-                      cy={pt.y} 
-                      r={isSelected ? 14 : 0} 
-                      fill="hsl(var(--primary))" 
-                      fillOpacity={0.2} 
+                      stroke="hsl(var(--primary))"
+                      strokeWidth={isSelected ? 2 : 1}
                     />
                     <text 
                       x={pt.x} 
                       y={height - padding + 18} 
                       textAnchor="middle" 
-                      className={`text-[10px] font-mono ${isSelected ? 'fill-foreground font-bold' : 'fill-muted-foreground'}`}
+                      className={`text-[10px] font-mono ${isSelected ? 'fill-foreground font-bold' : 'fill-muted-foreground/60'}`}
                     >
-                      {pt.year}
+                      {pt.year.slice(2)}
                     </text>
                   </g>
                 );
@@ -294,7 +291,11 @@ export function StateOfWeb3Timeline() {
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="text-[10px] text-muted-foreground/60 border-t border-border/50 pt-3 mt-4">
+        Source: 128,286 concept-tagged papers via OpenAlex database.
+      </div>
+    </figure>
   );
 }
 
@@ -308,17 +309,17 @@ export function StateOfWeb3NgramAnalyzer() {
   const maxNgramCount = Math.max(...activeNgrams.map(item => item.count));
 
   return (
-    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm space-y-6">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h4 className="text-base font-bold text-foreground">
+          <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200">
             Linguistic N-Gram Frequency Analyzer
           </h4>
-          <p className="text-xs text-muted-foreground mt-0.5">
-            Toggle token models to explore terminology patterns across 128,286 paper abstracts.
-          </p>
+          <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
+            Token frequency distribution across 128,286 abstracts
+          </span>
         </div>
-        <div className="flex gap-1 bg-muted p-0.5 rounded-lg border border-border">
+        <div className="flex gap-1 bg-muted p-0.5 rounded-lg border border-border shrink-0 self-start sm:self-auto">
           {[
             { id: 'unigrams', label: 'Unigrams' },
             { id: 'bigrams', label: 'Bigrams' },
@@ -369,7 +370,7 @@ export function StateOfWeb3NgramAnalyzer() {
               {/* Progress Bar */}
               <div className="h-1.5 w-full bg-secondary rounded-full overflow-hidden relative">
                 <div 
-                  className="h-full bg-primary rounded-full transition-all duration-500 ease-out"
+                  className="h-full bg-primary/65 rounded-full transition-all duration-500 ease-out"
                   style={{ width: `${widthPct}%` }}
                 />
               </div>
@@ -381,7 +382,11 @@ export function StateOfWeb3NgramAnalyzer() {
           );
         })}
       </div>
-    </div>
+
+      <div className="text-[10px] text-muted-foreground/60 border-t border-border/50 pt-3 mt-4">
+        Source: 128,286 concept-tagged papers via OpenAlex.
+      </div>
+    </figure>
   );
 }
 
@@ -391,14 +396,14 @@ export function StateOfWeb3ConvergenceMatrix() {
   const selectedNode = convergenceNodes.find(node => node.id === selectedNodeId) || convergenceNodes[0];
 
   return (
-    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm space-y-6">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-6">
       <div>
-        <h4 className="text-base font-bold text-foreground">
+        <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200">
           The Blockchain-AI Convergence Matrix
         </h4>
-        <p className="text-xs text-muted-foreground mt-0.5">
-          Select convergence domains to trace how blockchain acts as a decentralized coordination substrate for AI.
-        </p>
+        <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
+          Trace how blockchain acts as a decentralized coordination substrate for AI
+        </span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
@@ -430,7 +435,7 @@ export function StateOfWeb3ConvergenceMatrix() {
           <div className="absolute w-40 h-40 border border-primary/10 rounded-full animate-ping opacity-20" />
           
           <div className="relative space-y-4">
-            <div className="w-12 h-12 mx-auto rounded-lg bg-primary flex items-center justify-center shadow-md">
+            <div className="w-12 h-12 mx-auto rounded-lg bg-primary/80 flex items-center justify-center shadow-md">
               <svg className="w-6 h-6 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
@@ -461,7 +466,11 @@ export function StateOfWeb3ConvergenceMatrix() {
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="text-[10px] text-muted-foreground/60 border-t border-border/50 pt-3 mt-4">
+        Source: Co-occurrence analyses of 11,130 AI/ML papers in Web3 database.
+      </div>
+    </figure>
   );
 }
 
@@ -471,17 +480,17 @@ export function StateOfWeb3Momentum() {
   const filteredMomentum = momentumData.filter(item => item.growth >= momentumThreshold);
 
   return (
-    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm space-y-6">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h4 className="text-base font-bold text-foreground">
+          <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200">
             Topic Momentum Accelerator (2025-2026 vs. 2022-2023)
           </h4>
-          <p className="text-xs text-muted-foreground mt-0.5">
-            Adjust the threshold to isolate the fastest-rising research keywords.
-          </p>
+          <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
+            Filter research keywords by growth velocity threshold
+          </span>
         </div>
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-bold text-primary">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-bold text-primary shrink-0 self-start sm:self-auto">
           {momentumThreshold.toFixed(1)}x Growth Min
         </div>
       </div>
@@ -527,7 +536,11 @@ export function StateOfWeb3Momentum() {
           </div>
         ))}
       </div>
-    </div>
+
+      <div className="text-[10px] text-muted-foreground/60 border-t border-border/50 pt-3 mt-4">
+        Source: 128,286 papers tracked in blockchain corpus. Growth = 2025-2026 vs 2022-2023 volume.
+      </div>
+    </figure>
   );
 }
 
@@ -546,15 +559,15 @@ export function StateOfWeb3Citations() {
   };
 
   return (
-    <div className="my-8 rounded-lg border border-border/50 bg-card p-6 shadow-sm space-y-6">
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h4 className="text-base font-bold text-foreground">
+          <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200">
             Corpus Citation Skewness Distribution
           </h4>
-          <p className="text-xs text-muted-foreground mt-0.5">
-            Use the controller slider to explore the right-skew distribution across 128,286 documents. 43.5% have zero citations.
-          </p>
+          <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
+            Exploration of academic citations and citation inequality
+          </span>
         </div>
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-bold text-primary">
           {percentile}th Percentile
@@ -615,7 +628,11 @@ export function StateOfWeb3Citations() {
           </button>
         </div>
       </div>
-    </div>
+
+      <div className="text-[10px] text-muted-foreground/60 border-t border-border/50 pt-3 mt-4">
+        Source: Citation aggregates on 128,286 papers. 43.5% of papers have zero citations.
+      </div>
+    </figure>
   );
 }
 
