@@ -1,5 +1,21 @@
 export const recentPapers = [
   {
+    title: 'Emergence of TechFin in the emerging economies',
+    url: 'https://doi.org/10.9790/487X-2207075660',
+  },
+  {
+    title: 'State of AI Research',
+    url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6991218',
+  },
+  {
+    title: 'AI Agent Infrastructure Stack',
+    url: 'http://dx.doi.org/10.2139/ssrn.6874178',
+  },
+  {
+    title: 'Blockchain Research Trends',
+    url: 'https://doi.org/10.5281/zenodo.20832739',
+  },
+  {
     title: 'Device-to-Device Economics and AI Agent Transactions',
     url: 'https://dx.doi.org/10.2139/ssrn.5660270',
   },

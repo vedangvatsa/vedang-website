@@ -63,6 +63,18 @@ The data groups into three strategic categories.
 > 
 "All ten of the fastest-rising keywords are related to large language models. None involve computer vision, reinforcement learning, or graph methods."
 
+### Method Lifecycles
+
+The time-series data places each value at a different lifecycle stage. Using the compound annual growth rate (CAGR) from 2022 to 2025 as the primary metric, with a corpus-wide baseline of 32.0%, we map 20 values onto an interpretive hype cycle.
+
+- **Innovation trigger and ascending hype.** Chain of thought prompting (64.6% CAGR), coined in 2022, is the newest term. Vision language models (83.9% CAGR, 2,582 to 16,067 papers) and zero-shot learning (68.1%) grew in parallel with LLM adoption. RAG grew from 85 papers in 2022 to 9,329 in 2025 (378.8% CAGR, 110x), and is placed near the peak accordingly.
+- **Peak of inflated expectations.** Large language models have the highest CAGR at 130.4% (7,931 to 96,984 papers). The annualized 2026 estimate (~170,000 papers) suggests continued growth.
+- **Trough of disillusionment.** Vision transformers (60.9% CAGR) still show high growth but have moved from novelty to standard architecture since their 2021 peak. Diffusion models (33.9%) had their breakout in 2022-2023 and are now maturing. GANs (21.8%) and BERT (30.3%) have been largely superseded and sit deeper in the trough.
+- **Slope of enlightenment.** Six values fall in this zone, all above the corpus average: multimodal learning (52.9%), federated learning (52.3%), transformers (48.8%), reinforcement learning (39.2%), contrastive learning (35.8%), and graph neural networks (33.2%). All show steady adoption past their initial growth phase.
+- **Plateau of productivity.** Five values have below-average growth: deep learning (28.3% CAGR, 216,713 papers in 2025), knowledge graphs (25.9%), transfer learning (22.6%), CNNs (16.5%), and neural networks (15.4%). All continue to grow but at or below the corpus rate.
+
+![Interpretive hype cycle for AI research terms. Growth rates shown are 2022-2025 CAGR (corpus average 32.0%).](/images/essays/fig_hype_cycle.png)
+
 ## IV. The Global Research Race
 
 The geographic distribution of AI research has undergone a structural rebalancing. China now leads with **874,019 publications**, 21.6% more than the United States (718,676). The crossover occurred in 2021, when China produced 71,273 papers to the US's 64,931, and the gap has widened every year since.
@@ -155,6 +167,18 @@ Five structural findings define the current research map.
 - **The Blockchain-AI Convergence.** **"Machine learning"** (5,667) and **"artificial intelligence"** (5,463) together account for **11,130 combined mentions**, the largest technology convergence in the corpus. Papers apply AI to blockchain problems (anomaly detection, MEV optimization) and use blockchain for AI governance (decentralized model training, data provenance).
 
 - **Sovereign Digital Currencies.** **"Central bank digital"** (867 trigram mentions) and **"bank digital currency"** (864) reflect the institutional pivot toward CBDC infrastructure, with CBDC research growing from 1 paper in 2016 to 205 in 2025 as central banks deploy pilot programs globally.
+
+### Method Lifecycles
+
+To trace the development of different blockchain technologies, we map the relative growth and maturity of key terms onto an interpretive research Hype Cycle. 
+
+- **Innovation trigger and ascending hype.** Emerging topics such as "quantum resistant" and "real world asset" occupy the Innovation Trigger phase due to high growth ratios off small baselines.
+- **Peak of inflated expectations.** Scalability infrastructure like "layer 2" and "zk rollup" are located near the Peak of Inflated Expectations, alongside "regulatory" frameworks.
+- **Trough of disillusionment.** "NFT" and "metaverse" research sit in the Trough of Disillusionment, following a contraction in paper volume.
+- **Slope of enlightenment.** Core DeFi concepts and interoperability protocols are positioned in the Slope of Enlightenment.
+- **Plateau of productivity.** Foundational elements like "smart contract", "consensus", and "supply chain" are in the Plateau of Productivity.
+
+![Blockchain research hype cycle based on keyword growth trajectories. Placement is interpretive, informed by the growth rates and temporal patterns. Data: 128,286 papers from OpenAlex (2013-2026).](/images/essays/fig_web3_hype_cycle.png)
 
 ## III. Three Eras of Blockchain Research
 

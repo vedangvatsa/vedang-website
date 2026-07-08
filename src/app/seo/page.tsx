@@ -17,6 +17,7 @@ import Link from 'next/link';
 import { essays } from '@/lib/essays';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
 import { AsSeenIn } from '@/components/as-seen-in';
+import { recentPapers } from '@/components/recent-papers';
 
 export const metadata: Metadata = generateMetadata({
   title: pageMetadata.seo.title,
@@ -245,10 +246,17 @@ export default function SeoProfilePage() {
               <div>
                 <h3 className="font-semibold text-lg mb-2">Papers</h3>
                 <div className="space-y-2">
-                  <Link href="https://dx.doi.org/10.2139/ssrn.5660270" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary">Device-to-Device Economics and AI Agent Transactions</Link>
-                  <Link href="https://dx.doi.org/10.2139/ssrn.5325570" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary">Stablecoin Growth and Market Dynamics</Link>
-                  <Link href="https://dx.doi.org/10.2139/ssrn.5329957" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary">Stablecoins in the Modern Financial System</Link>
-                  <Link href="https://dx.doi.org/10.2139/ssrn.5386707" target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-primary">Global Stablecoin Regulations and Policies</Link>
+                  {recentPapers.slice(0, 4).map((paper, index) => (
+                    <Link
+                      key={index}
+                      href={paper.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-sm text-muted-foreground hover:text-primary"
+                    >
+                      {paper.title}
+                    </Link>
+                  ))}
                   <Link href="https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline mt-1 inline-block">Read More on Google Scholar</Link>
                 </div>
               </div>
