@@ -301,7 +301,7 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
               : 'border-transparent text-muted-foreground hover:text-foreground'
           }`}
         >
-          Curated Database <span className="text-xs font-mono font-normal opacity-70">({corpus === 'ai' ? '133k' : '100k'})</span>
+          Curated Database <span className="text-xs font-normal opacity-70">({corpus === 'ai' ? '133k' : '100k'})</span>
         </button>
         <button
           onClick={() => {
@@ -314,7 +314,7 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
               : 'border-transparent text-muted-foreground hover:text-foreground'
           }`}
         >
-          Academic Search <span className="text-xs font-mono font-normal opacity-70">(250M+)</span>
+          Academic Search <span className="text-xs font-normal opacity-70">(250M+)</span>
         </button>
       </div>
 
@@ -423,7 +423,7 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
 
       {/* Loading & Results Bar */}
       <div className="flex flex-wrap items-center justify-between gap-3 mb-6 px-1">
-        <span className="text-xs text-muted-foreground font-mono uppercase tracking-wider font-semibold">
+        <span className="text-sm text-muted-foreground font-medium">
           {(isDefaultActive) ? (
             `Top ${visibleItems.length} of ${totalCountDisplay.toLocaleString()} curated reports`
           ) : (
@@ -434,7 +434,7 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
         </span>
 
         {apiLoading && (
-          <div className="flex items-center gap-1.5 text-xs text-muted-foreground animate-pulse font-mono">
+          <div className="flex items-center gap-1.5 text-xs text-muted-foreground animate-pulse">
             <Loader2 className="w-3.5 h-3.5 animate-spin text-primary" />
             <span>Searching...</span>
           </div>
@@ -475,7 +475,7 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
               className="flex flex-col p-5 rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 hover:border-primary/40 bg-white dark:bg-zinc-900/10 transition-colors duration-150 group"
             >
               {item.category && (
-                <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-primary mb-2 block">
+                <span className="text-xs font-medium text-primary mb-2 block">
                   {item.category}
                 </span>
               )}
@@ -495,7 +495,7 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
 
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-muted-foreground mt-auto">
                 {item.date && (
-                  <span className="font-mono font-semibold bg-zinc-100 dark:bg-zinc-800/80 text-zinc-800 dark:text-zinc-300 px-1.5 py-0.5 rounded-[3px]">
+                  <span className="font-medium bg-zinc-100 dark:bg-zinc-800/80 text-zinc-800 dark:text-zinc-300 px-1.5 py-0.5 rounded-[3px]">
                     {item.date}
                   </span>
                 )}
@@ -505,12 +505,12 @@ export function ReportLibrary({ dataUrl, categories, corpus = 'ai' }: ReportLibr
                   </span>
                 )}
                 {item.type && (
-                  <span className="opacity-70 font-mono text-[11px] uppercase tracking-wider">
+                  <span className="opacity-70 text-xs">
                     {item.type}
                   </span>
                 )}
                 {item.citations !== undefined && item.citations > 0 && (
-                  <span className="font-mono font-bold text-primary bg-primary/5 px-2 py-0.5 rounded-[3px]">
+                  <span className="font-bold text-primary bg-primary/5 px-2 py-0.5 rounded-[3px]">
                     {item.citations.toLocaleString()} citations
                   </span>
                 )}
