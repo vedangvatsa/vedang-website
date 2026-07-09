@@ -19,7 +19,7 @@ const SITE_HOST = 'veda.ng';
  *
  * Usage:
  *   curl -X GET https://veda.ng/api/indexnow           (submit all pages)
- *   curl -X POST https://veda.ng/api/indexnow -d '{"urls": ["/writings", "/glossary/llm"]}'
+ *   curl -X POST https://veda.ng/api/indexnow -d '{"urls": ["/essays", "/glossary/llm"]}'
  */
 
 async function submitToIndexNow(urls: string[]) {
@@ -80,7 +80,7 @@ async function getAllUrls(): Promise<string[]> {
 
   // Fallback to static list if sitemap fetch fails
   const urls = [
-    '/', '/writings', '/glossary', '/profile', '/media',
+    '/', '/essays', '/glossary', '/profile', '/media',
     '/community', '/seo', '/lit',
   ];
 

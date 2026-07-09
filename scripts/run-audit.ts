@@ -9,7 +9,7 @@ const TARGET_HOST = 'http://localhost:3000';
 const ROUTES = [
   '/',
   '/profile',
-  '/writings',
+  '/essays',
   '/ai-reports',
   '/web3-reports',
   '/community',

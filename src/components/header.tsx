@@ -51,8 +51,8 @@ export function Header() {
         <div className="flex items-center justify-end gap-2 sm:gap-4 ml-auto">
           {/* Desktop navigation */}
           <nav className="hidden md:flex items-center gap-1 sm:gap-4 text-[13px] sm:text-sm font-medium">
-            <Link href="/writings" className="text-foreground transition-colors hover:text-primary px-1.5 py-1 sm:px-2">
-              Writings
+            <Link href="/essays" className="text-foreground transition-colors hover:text-primary px-1.5 py-1 sm:px-2">
+              Essays
             </Link>
             
             <DropdownMenu>
@@ -138,7 +138,7 @@ export function Header() {
             <SheetContent side="right" className="w-72 px-6 pt-6 overflow-hidden flex flex-col">
               <SheetTitle className="sr-only">Navigation</SheetTitle>
               <nav className="flex flex-col overflow-y-auto flex-1 pb-6">
-                <MobileNavLink href="/writings" onClose={closeMobile}>Writings</MobileNavLink>
+                <MobileNavLink href="/essays" onClose={closeMobile}>Essays</MobileNavLink>
                 <MobileNavLink href="/profile" onClose={closeMobile}>Profile</MobileNavLink>
                 <MobileNavLink href="/media" onClose={closeMobile}>Media & Speaking</MobileNavLink>
                 <MobileNavLink href="/meeting" onClose={closeMobile}>Book a Meeting</MobileNavLink>

@@ -23,7 +23,7 @@ export default function MeetingPage() {
           <Link href="/profile" className="text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4">
             Profile
           </Link>
-          <Link href="/writings" className="text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4">
+          <Link href="/essays" className="text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4">
             Essays
           </Link>
           <Link href="/media" className="text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4">

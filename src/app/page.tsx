@@ -69,7 +69,7 @@ export default function Home() {
         id="essays"
         title="Recent Essays"
         items={recentEssays}
-        cta={{ label: 'View all essays', url: '/writings' }}
+        cta={{ label: 'View all essays', url: '/essays' }}
       />
 
       <AsSeenIn />

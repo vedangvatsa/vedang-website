@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-const REPO_ROOT = path.resolve(process.cwd());
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const REPO_ROOT = path.resolve(__dirname, '..');
 const ESSAYS_DIR = path.resolve(REPO_ROOT, 'src/content/essays');
 const PUBLIC_DIR = path.resolve(REPO_ROOT, 'public');
 
@@ -11,7 +13,7 @@ function generateRSS() {
 
   for (const file of files) {
     const raw = fs.readFileSync(path.join(ESSAYS_DIR, file), 'utf-8');
-    const slug = file.replace('.mdx', '');
+    const slug = file.replace(/\.mdx$/, '');
     
     const titleMatch = raw.match(/title:\s*['"]?(.+?)['"]?\n/);
     const dateMatch = raw.match(/date:\s*['"]?(.+?)['"]?\n/);
@@ -37,7 +39,7 @@ function generateRSS() {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vedang Vatsa | Essays</title>
-    <link>https://veda.ng/writings</link>
+    <link>https://veda.ng/essays</link>
     <description>Essays on AI, technology, and the future by Vedang Vatsa.</description>
     <language>en-us</language>
     <atom:link href="https://veda.ng/feed.xml" rel="self" type="application/rss+xml" />

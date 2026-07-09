@@ -1,9 +1,11 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import matter from 'gray-matter';
 import { glossaryTerms } from '../src/lib/glossary';
 
-const REPO_ROOT = path.resolve(process.cwd());
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const REPO_ROOT = path.resolve(__dirname, '..');
 const ESSAYS_DIR = path.resolve(REPO_ROOT, 'src/content/essays');
 const PUBLIC_DIR = path.resolve(REPO_ROOT, 'public');
 
@@ -50,7 +52,7 @@ function cleanMDX(content: string): string {
 function generateFiles() {
   const mdxFiles = fs.readdirSync(ESSAYS_DIR).filter(f => f.endsWith('.mdx'));
   const essaysData = mdxFiles.map(file => {
-    const slug = file.replace('.mdx', '');
+    const slug = file.replace(/\.mdx$/, '');
     const fullPath = path.join(ESSAYS_DIR, file);
     const rawContent = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(rawContent);
@@ -89,7 +91,7 @@ This file provides a structured overview of the site's content for Large Languag
 ## Guides & Resources
 
 - [Glossary](https://veda.ng/glossary): Comprehensive definitions of AI, Web3, and technical terms. Reference guide for developers and researchers.
-- [Writings & Essays](https://veda.ng/writings): Curated collection of thought pieces on technology, AI, and society.
+- [Essays](https://veda.ng/essays): Curated collection of thought pieces on technology, AI, and society.
 - [Web3 101](https://veda.ng/web3-101): Fundamentals of Web3, blockchain, and decentralized technologies.
 - [Prompt Engineering](https://veda.ng/prompt-engineering-101): Mastering AI through effective prompt design and instruction.
 - [Agentic Web](https://veda.ng/agentic-web): The future of autonomous AI agents and their role in the internet.

@@ -18,11 +18,11 @@ export const pageMetadata = {
     url: '/',
     keywords: ['AI Thought Leader', 'Web3 Expert', 'Blockchain Technology', 'Generative AI', 'Future of AI', 'Decentralized Finance', 'DeFi', 'Digital Assets', 'Web3 Ecosystem'],
   },
-  writings: {
+  essays: {
     title: 'Essays on AI & Web3',
     description:
       'Essays and research papers on AI agents, blockchain systems, stablecoins, and decentralized economies by Vedang Vatsa.',
-    url: '/writings',
+    url: '/essays',
     keywords: ['Essays', 'Research Papers', 'AI Agents', 'Stablecoins', 'Blockchain', 'Decentralized Economies', 'Vedang Vatsa'],
   },
   web3101: {

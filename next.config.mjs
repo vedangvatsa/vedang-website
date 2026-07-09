@@ -28,6 +28,16 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/writings',
+        destination: '/essays',
+        permanent: true,
+      },
+      {
+        source: '/writings/:path*',
+        destination: '/essays/:path*',
+        permanent: true,
+      },
+      {
         source: '/194',
         destination: '/agenticweb',
         permanent: true,

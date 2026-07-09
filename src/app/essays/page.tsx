@@ -8,16 +8,16 @@ import { CardGrid } from '@/components/card-grid';
 import { recentPapers } from '@/components/recent-papers';
 
 export const metadata: Metadata = generateMetadata({
-  title: pageMetadata.writings.title,
-  description: pageMetadata.writings.description,
-  url: pageMetadata.writings.url,
+  title: pageMetadata.essays.title,
+  description: pageMetadata.essays.description,
+  url: pageMetadata.essays.url,
   ogImageAlt: 'Essays & Research Papers - Vedang Vatsa',
 });
 
-export default function WritingsPage() {
+export default function EssaysPage() {
   return (
     <PageLayout>
-      <BreadcrumbSchema items={[{ name: "Writings", url: "https://veda.ng/writings" }]} />
+      <BreadcrumbSchema items={[{ name: "Essays", url: "https://veda.ng/essays" }]} />
 
       <CardGrid
         id="papers"

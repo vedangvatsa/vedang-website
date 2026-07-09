@@ -266,7 +266,7 @@ export default function SeoProfilePage() {
                   {recentEssays.map((essay) => (
                     <Link key={essay.slug} href={essay.url} className="block text-sm text-muted-foreground hover:text-primary">{essay.title}</Link>
                   ))}
-                  <Link href="/writings" className="text-sm text-primary hover:underline mt-1 inline-block">Read More Essays</Link>
+                  <Link href="/essays" className="text-sm text-primary hover:underline mt-1 inline-block">Read More Essays</Link>
                 </div>
               </div>
             </div>

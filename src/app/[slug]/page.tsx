@@ -224,7 +224,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://veda.ng' },
-      { '@type': 'ListItem', position: 2, name: 'Writings', item: 'https://veda.ng/writings' },
+      { '@type': 'ListItem', position: 2, name: 'Essays', item: 'https://veda.ng/essays' },
       { '@type': 'ListItem', position: 3, name: essay.frontmatter.title, item: `https://veda.ng/${slug}` },
     ],
   };
@@ -238,7 +238,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <BreadcrumbSchema items={[
-        { name: "Writings", url: "https://veda.ng/writings" },
+        { name: "Essays", url: "https://veda.ng/essays" },
         { name: essay.frontmatter.title, url: `https://veda.ng/${slug}` },
       ]} />
 

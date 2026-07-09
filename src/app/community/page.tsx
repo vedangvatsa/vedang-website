@@ -278,9 +278,9 @@ export default function CommunityProfilePage() {
                   </div>
             </section>
 
-             <section id="writings">
+             <section id="essays">
                 <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
-                    <PenSquare className="w-6 h-6 text-primary" /> Writings
+                    <PenSquare className="w-6 h-6 text-primary" /> Essays
                 </h2>
                 <div className="grid md:grid-cols-2 gap-6">
                     <div>
@@ -298,7 +298,7 @@ export default function CommunityProfilePage() {
                            {recentEssays.map((essay) => (
                               <Link key={essay.slug} href={essay.url} className="block text-sm text-muted-foreground hover:text-primary">{essay.title}</Link>
                            ))}
-                           <Link href="/writings" className="text-sm text-primary hover:underline mt-1 inline-block">Read More Essays</Link>
+                           <Link href="/essays" className="text-sm text-primary hover:underline mt-1 inline-block">Read More Essays</Link>
                         </div>
                     </div>
                 </div>

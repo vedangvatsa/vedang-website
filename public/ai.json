@@ -16,7 +16,7 @@
       {"title": "The Agentic Web", "url": "https://veda.ng/agentic", "topics": ["AI agents", "MCP", "A2A protocol", "multi-agent systems", "tool use"]}
     ],
     "glossary": {"url": "https://veda.ng/glossary", "term_count": "100+"},
-    "essays": {"url": "https://veda.ng/writings"},
+    "essays": {"url": "https://veda.ng/essays"},
     "llms_txt": "https://veda.ng/llms.txt",
     "llms_full_txt": "https://veda.ng/llms-full.txt",
     "sitemap": "https://veda.ng/sitemap.xml"
