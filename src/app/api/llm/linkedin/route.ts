@@ -1,4 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
+import {
+  forbidden,
+  getClientIp,
+  isAllowedOrigin,
+  isRateLimited,
+  tooManyRequests,
+} from '@/lib/api-auth';
 
 // Claude 3 Haiku + prompt caching + minimal tokens = cheapest possible.
 // System prompt uses cache_control so after the first call, subsequent
@@ -45,44 +52,17 @@ const SYSTEM_PROMPT_LI_TO_EN = [
   'Write ONLY the translation. Never use emojis. No preamble. Make it sound like something someone would say to a close friend over a beer.'
 ].join('\n');
 
-// --- Rate limiter: max 10 requests per IP per 60 seconds ---
-const WINDOW_MS = 60_000;
-const MAX_REQUESTS = 10;
-const ipHits = new Map<string, { count: number; resetAt: number }>();
-
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const entry = ipHits.get(ip);
-
-  if (!entry || now > entry.resetAt) {
-    ipHits.set(ip, { count: 1, resetAt: now + WINDOW_MS });
-    return false;
-  }
-
-  entry.count++;
-  if (entry.count > MAX_REQUESTS) return true;
-  return false;
-}
-
-// Clean up stale entries every 5 minutes
-setInterval(() => {
-  const now = Date.now();
-  for (const [ip, entry] of ipHits) {
-    if (now > entry.resetAt) ipHits.delete(ip);
-  }
-}, 5 * 60_000);
-
 // Max input length (chars)
 const MAX_INPUT_LENGTH = 500;
 
 export async function POST(req: NextRequest) {
   try {
-    // Rate limit by IP
-    const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
-      || req.headers.get('x-real-ip')
-      || 'unknown';
+    if (!isAllowedOrigin(req)) {
+      return forbidden('Origin not allowed');
+    }
 
-    if (isRateLimited(ip)) {
+    const ip = getClientIp(req);
+    if (isRateLimited(`llm-linkedin:${ip}`, 10, 60_000)) {
       return NextResponse.json({ useLocal: true });
     }
 

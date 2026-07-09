@@ -1,5 +1,13 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { courseConfigs } from '@/lib/course-config';
+import {
+  forbidden,
+  getClientIp,
+  isAllowedOrigin,
+  isRateLimited,
+  requireAdminSecret,
+  tooManyRequests,
+} from '@/lib/api-auth';
 
 const INDEXNOW_KEY = '8e98e43851d7462c9c210ecd4321a7fc';
 const SITE_HOST = 'veda.ng';
@@ -88,7 +96,19 @@ async function getAllUrls(): Promise<string[]> {
 }
 
 // GET: Submit all important pages
-export async function GET() {
+export async function GET(req: NextRequest) {
+  const authError = requireAdminSecret(req);
+  if (authError) return authError;
+
+  if (!isAllowedOrigin(req)) {
+    return forbidden('Origin not allowed');
+  }
+
+  const ip = getClientIp(req);
+  if (isRateLimited(`indexnow-get:${ip}`, 5, 60_000)) {
+    return tooManyRequests();
+  }
+
   const allUrls = await getAllUrls();
 
   // IndexNow accepts max 10,000 URLs per request, batch if needed
@@ -109,9 +129,21 @@ export async function GET() {
 }
 
 // POST: Submit specific URLs
-export async function POST(request: Request) {
+export async function POST(req: NextRequest) {
+  const authError = requireAdminSecret(req);
+  if (authError) return authError;
+
+  if (!isAllowedOrigin(req)) {
+    return forbidden('Origin not allowed');
+  }
+
+  const ip = getClientIp(req);
+  if (isRateLimited(`indexnow-post:${ip}`, 10, 60_000)) {
+    return tooManyRequests();
+  }
+
   try {
-    const body = await request.json();
+    const body = await req.json();
     const urls: string[] = body.urls || [];
 
     if (!urls.length) {
