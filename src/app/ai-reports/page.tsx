@@ -9,7 +9,7 @@ import { generateMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = generateMetadata({
   title: 'AI Reports Library',
-  description: 'Search 250M+ academic papers via OpenAlex and browse 133,000+ curated reports.',
+  description: 'Search 250M+ academic papers via OpenAlex and browse 133,000+ curated reports, including consulting, industry, and research reports.',
   url: '/ai-reports',
 });
 
@@ -24,7 +24,7 @@ export default function AIReportsPage() {
             AI Reports Library
           </h1>
           <p className="mt-4 text-sm md:text-base text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Search 250M+ academic papers via OpenAlex and browse 133,000+ curated reports.
+            Search 250M+ academic papers via OpenAlex and browse 133,000+ curated reports, including consulting, industry, and research reports.
           </p>
           <AuthorByline />
           <p className="mt-4 text-sm text-muted-foreground">
