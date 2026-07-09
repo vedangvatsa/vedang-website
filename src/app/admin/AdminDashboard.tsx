@@ -1,11 +1,16 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-export default function AdminDashboard({ platforms }: { platforms: Record<string, any[]> }) {
+export default function AdminDashboard() {
   const router = useRouter();
-  const platformNames = Object.keys(platforms).sort();
+  const [secret, setSecret] = useState(() => (typeof window !== 'undefined' ? localStorage.getItem('admin_secret') || '' : ''));
+  const [platforms, setPlatforms] = useState<Record<string, any[]> | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [passwordInput, setPasswordInput] = useState('');
+
   const [activeTab, setActiveTab] = useState('overview');
   const [viewMode, setViewMode] = useState<'list' | 'calendar'>('calendar');
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -15,12 +20,45 @@ export default function AdminDashboard({ platforms }: { platforms: Record<string
   const [editForm, setEditForm] = useState({ text: '', scheduleDate: '', scheduleTime: '' });
   const [isSaving, setIsSaving] = useState(false);
 
-  const allPosts = Object.entries(platforms).flatMap(([platform, posts]) => 
-    posts.map(post => ({ ...post, platform }))
-  );
+  const fetchPlatforms = async (token: string) => {
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch('/api/admin/social', {
+        headers: {
+          'x-admin-secret': token
+        }
+      });
+      if (!res.ok) {
+        if (res.status === 401 || res.status === 403 || res.status === 503) {
+          throw new Error('Invalid secret or unauthorized');
+        }
+        throw new Error('Failed to fetch platforms');
+      }
+      const data = await res.json();
+      setPlatforms(data.platforms || {});
+      localStorage.setItem('admin_secret', token);
+    } catch (err: any) {
+      setError(err.message || 'Error occurred');
+      setPlatforms(null);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-  const pendingCountTotal = allPosts.filter(p => !p.posted && !p.error).length;
-  const errorCountTotal = allPosts.filter(p => p.error).length;
+  useEffect(() => {
+    if (secret) {
+      fetchPlatforms(secret);
+    } else {
+      setLoading(false);
+    }
+  }, [secret]);
+
+  const handleLogout = () => {
+    setSecret('');
+    setPlatforms(null);
+    localStorage.removeItem('admin_secret');
+  };
 
   const handleEditClick = (post: any) => {
     setEditingPostId(post.id);
@@ -40,7 +78,10 @@ export default function AdminDashboard({ platforms }: { platforms: Record<string
     try {
       const res = await fetch('/api/admin/social', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'x-admin-secret': secret
+        },
         body: JSON.stringify({
           platform,
           postId,
@@ -51,13 +92,18 @@ export default function AdminDashboard({ platforms }: { platforms: Record<string
       });
 
       if (!res.ok) {
+        if (res.status === 401 || res.status === 403) {
+          setSecret('');
+          localStorage.removeItem('admin_secret');
+          throw new Error('Authentication expired or invalid secret');
+        }
         throw new Error('Failed to save');
       }
 
       setEditingPostId(null);
-      router.refresh(); 
-    } catch (err) {
-      alert('Error saving post. See console.');
+      await fetchPlatforms(secret);
+    } catch (err: any) {
+      alert(err.message || 'Error saving post. See console.');
       console.error(err);
     } finally {
       setIsSaving(false);
@@ -71,7 +117,65 @@ export default function AdminDashboard({ platforms }: { platforms: Record<string
   const getDaysInMonth = (date: Date) => new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
   const getFirstDayOfMonth = (date: Date) => new Date(date.getFullYear(), date.getMonth(), 1).getDay();
 
-  const postsToShow = activeTab === 'overview' ? allPosts : platforms[activeTab].map(p => ({...p, platform: activeTab}));
+  if (!secret || error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background text-foreground px-4 font-sans">
+        <div className="w-full max-w-md p-8 bg-card rounded-lg border border-border shadow-lg space-y-6">
+          <div className="space-y-2 text-center">
+            <h1 className="text-3xl font-semibold tracking-tight">Admin Portal</h1>
+            <p className="text-sm text-muted-foreground">Please enter your admin secret key to access the command center.</p>
+          </div>
+          <form onSubmit={(e) => { e.preventDefault(); setSecret(passwordInput); }} className="space-y-4">
+            <div>
+              <input
+                type="password"
+                value={passwordInput}
+                onChange={(e) => setPasswordInput(e.target.value)}
+                placeholder="Admin Secret Key"
+                className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                required
+                autoFocus
+              />
+            </div>
+            {error && (
+              <p className="text-xs text-destructive bg-destructive/10 p-3 rounded-md border border-destructive/20 font-medium">{error}</p>
+            )}
+            <button
+              type="submit"
+              className="w-full rounded-md bg-primary text-primary-foreground py-2.5 text-sm font-medium hover:bg-primary/90 transition-colors"
+            >
+              Verify Secret
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background text-foreground font-sans">
+        <div className="text-center space-y-4">
+          <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto"></div>
+          <p className="text-muted-foreground text-sm font-medium">Loading command center...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!platforms) {
+    return null;
+  }
+
+  const platformNames = Object.keys(platforms).sort();
+  const allPosts = Object.entries(platforms).flatMap(([platform, posts]) => 
+    posts.map(post => ({ ...post, platform }))
+  );
+
+  const pendingCountTotal = allPosts.filter(p => !p.posted && !p.error).length;
+  const errorCountTotal = allPosts.filter(p => p.error).length;
+
+  const postsToShow = activeTab === 'overview' ? allPosts : (platforms[activeTab] || []).map(p => ({...p, platform: activeTab}));
 
   return (
     <div className="min-h-screen bg-background text-foreground py-16 px-4 md:px-6 font-sans">
@@ -84,23 +188,31 @@ export default function AdminDashboard({ platforms }: { platforms: Record<string
             <p className="text-muted-foreground text-lg">Detailed overview of your connected social pipelines.</p>
           </div>
           
-          {/* View Toggle */}
-          <div className="flex bg-secondary rounded-lg p-1 border border-border">
+          {/* View Toggle & Logout */}
+          <div className="flex items-center gap-3 flex-wrap">
+            <div className="flex bg-secondary rounded-lg p-1 border border-border">
+              <button
+                onClick={() => setViewMode('calendar')}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                  viewMode === 'calendar' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                Calendar
+              </button>
+              <button
+                onClick={() => setViewMode('list')}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                  viewMode === 'list' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                List View
+              </button>
+            </div>
             <button
-              onClick={() => setViewMode('calendar')}
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
-                viewMode === 'calendar' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'
-              }`}
+              onClick={handleLogout}
+              className="px-4 py-2 bg-destructive/10 text-destructive border border-destructive/20 hover:bg-destructive/20 rounded-lg text-sm font-medium transition-all"
             >
-              Calendar
-            </button>
-            <button
-              onClick={() => setViewMode('list')}
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
-                viewMode === 'list' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
-              List View
+              Logout
             </button>
           </div>
         </div>

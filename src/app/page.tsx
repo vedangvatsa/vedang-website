@@ -27,7 +27,7 @@ const resources = [
   { title: 'Learn AI Automation', url: '/automation' },
   { title: 'LinkedIn Translator', url: '/lit' },
   { title: 'Swarm Prediction', url: '/swarm-prediction' },
-  { title: 'AI Text Detector', url: '/ai-detector' },
+  { title: 'How I Built an AI-Text Detector', url: '/ai-detector' },
   { title: 'AI Discovery Standards', url: '/ai-discovery-standards' },
   { title: 'Website Checklist', url: '/site-checklist' },
   { title: 'AI Reports Library', url: '/ai-reports' },

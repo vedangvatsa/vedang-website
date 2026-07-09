@@ -66,7 +66,7 @@ export default function CommunityProfilePage() {
           <section className="my-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Card className="text-center p-4 bg-secondary/30">
               <Users className="h-8 w-8 mx-auto text-primary"/>
-              <p className="text-3xl font-bold mt-2">100k+</p>
+              <p className="text-3xl font-bold mt-2">120k+</p>
               <p className="text-sm text-muted-foreground">Web3 Community Founded</p>
             </Card>
             <Card className="text-center p-4 bg-secondary/30">
@@ -89,7 +89,7 @@ export default function CommunityProfilePage() {
                 <div className="grid md:grid-cols-2 gap-x-6 gap-y-4">
                     <div>
                         <h3 className="font-semibold text-lg">Community Building & Engagement</h3>
-                        <p className="text-muted-foreground mt-1 text-sm">Built and scaled a 100k+ member professional Web3 community from scratch, creating a highly engaged network of executives, developers, and enthusiasts.</p>
+                        <p className="text-muted-foreground mt-1 text-sm">Built and scaled a 120k+ member professional Web3 community from scratch, creating a highly engaged network of executives, developers, and enthusiasts.</p>
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg">Content Strategy & Creation</h3>
@@ -141,7 +141,7 @@ export default function CommunityProfilePage() {
                   </CardHeader>
                   <CardContent className="p-4 pt-0">
                     <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm">
-                      <li>Built a 100k+ member networking community for Web3, a social-messaging-first forum, and one of the largest Telegram channels for Web3 jobs.</li>
+                      <li>Built a 120k+ member networking community for Web3, a social-messaging-first forum, and one of the largest Telegram channels for Web3 jobs.</li>
                       <li>Achieved 55 million post views in the first year on Telegram and 80 million annual post views on LinkedIn.</li>
                       <li>Hosted weekly Twitter Spaces with 20-30k live attendees, featuring guests like a Pink Floyd band member, Big4 partners, and the CSO of Microsoft.</li>
                       <li>Published influential crash courses on Web3 topics (NFT, Metaverse, DAO) with 50,000+ accesses in the first month.</li>

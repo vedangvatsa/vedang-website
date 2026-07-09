@@ -45,6 +45,7 @@ import { PlaybookHeroCard, AgentToolsMap, AutomationROIChart, ContentPipelineFlo
 import { StateOfAiKeywordsChart, StateOfAiBigramsChart, StateOfAiTimeline, StateOfAiNgramAnalyzer, StateOfAiMomentum, StateOfAiGeography, StateOfAiCitations } from '@/components/mdx/stateofai-charts';
 import { StateOfWeb3KeywordsChart, StateOfWeb3BigramsChart, StateOfWeb3Timeline, StateOfWeb3NgramAnalyzer, StateOfWeb3ConvergenceMatrix, StateOfWeb3Momentum, StateOfWeb3Citations } from '@/components/mdx/stateofweb3-charts';
 import { SecurityConsolidation, ComputeValuationTable, AgentProductValuations, MarketplaceComposition, TopInvestorsTable } from '@/components/mdx/agentstack-charts';
+import { AIDetectorFeatureComparison } from '@/components/mdx/ai-detector-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -92,6 +93,7 @@ const ESSAY_GLOSSARY_LINKS: Record<string, string[]> = {
   'agenticweb': ['agent', 'llm', 'rag', 'api'],
   'yc': ['agent', 'llm', 'api'],
   'agentstack': ['agent', 'llm', 'api', 'edge-computing'],
+  'ai-detector': ['llm', 'fine-tuning', 'transformer', 'hallucination'],
 };
 
 const GLOSSARY_LABELS: Record<string, string> = {
@@ -440,6 +442,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               AgentProductValuations,
               MarketplaceComposition,
               TopInvestorsTable,
+              AIDetectorFeatureComparison,
               ResearchPaper,
               img: (props: any) => (
                 <ZoomableImage

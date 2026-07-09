@@ -1,4 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
+import {
+  forbidden,
+  getClientIp,
+  isAllowedOrigin,
+  isRateLimited,
+  tooManyRequests,
+} from '@/lib/api-auth';
 
 const PROVIDER_CONFIG: Record<string, { baseUrl: string; model: string }> = {
   anthropic: { baseUrl: 'https://api.anthropic.com', model: 'claude-sonnet-4-20250514' },
@@ -11,25 +18,77 @@ const PROVIDER_CONFIG: Record<string, { baseUrl: string; model: string }> = {
   deepseek: { baseUrl: 'https://api.deepseek.com/v1', model: 'deepseek-chat' },
 };
 
+const MAX_MESSAGES = 40;
+const MAX_MESSAGE_CHARS = 50_000;
+const MAX_TOTAL_CHARS = 120_000;
+const MAX_TOKENS_CAP = 4096;
+const RATE_LIMIT = 60;
+const RATE_WINDOW_MS = 60_000;
+
+type ChatMessage = { role: string; content: string };
+
 export async function POST(req: NextRequest) {
   try {
+    if (!isAllowedOrigin(req)) {
+      return forbidden('Origin not allowed');
+    }
+
+    const ip = getClientIp(req);
+    if (isRateLimited(`llm-proxy:${ip}`, RATE_LIMIT, RATE_WINDOW_MS)) {
+      return tooManyRequests('Rate limit exceeded. Try again shortly.');
+    }
+
     const body = await req.json();
     const { provider, apiKey, messages, temperature = 0.7, maxTokens = 4096 } = body;
 
-    if (!apiKey || !messages) {
-      return NextResponse.json({ error: 'Missing apiKey or messages' }, { status: 400 });
+    if (!apiKey || typeof apiKey !== 'string' || apiKey.length > 500) {
+      return NextResponse.json({ error: 'Missing or invalid apiKey' }, { status: 400 });
     }
 
-    const providerKey = (provider || 'anthropic').toLowerCase();
-    const cfg = PROVIDER_CONFIG[providerKey] || PROVIDER_CONFIG.anthropic;
+    if (!Array.isArray(messages) || messages.length === 0 || messages.length > MAX_MESSAGES) {
+      return NextResponse.json({ error: 'Invalid messages' }, { status: 400 });
+    }
 
-    // Anthropic uses a different API format
+    const normalized: ChatMessage[] = [];
+    let totalChars = 0;
+
+    for (const m of messages) {
+      if (!m || typeof m.role !== 'string' || typeof m.content !== 'string') {
+        return NextResponse.json({ error: 'Invalid message format' }, { status: 400 });
+      }
+      if (!['system', 'user', 'assistant'].includes(m.role)) {
+        return NextResponse.json({ error: 'Invalid message role' }, { status: 400 });
+      }
+      if (m.content.length > MAX_MESSAGE_CHARS) {
+        return NextResponse.json({ error: 'Message too large' }, { status: 400 });
+      }
+      totalChars += m.content.length;
+      if (totalChars > MAX_TOTAL_CHARS) {
+        return NextResponse.json({ error: 'Payload too large' }, { status: 400 });
+      }
+      normalized.push({ role: m.role, content: m.content });
+    }
+
+    const providerKey = String(provider || 'anthropic').toLowerCase();
+    if (!PROVIDER_CONFIG[providerKey]) {
+      return NextResponse.json({ error: 'Unsupported provider' }, { status: 400 });
+    }
+
+    const cfg = PROVIDER_CONFIG[providerKey];
+    const safeTemp =
+      typeof temperature === 'number' && temperature >= 0 && temperature <= 2
+        ? temperature
+        : 0.7;
+    const safeMaxTokens = Math.min(
+      Math.max(1, Number(maxTokens) || 1024),
+      MAX_TOKENS_CAP
+    );
+
     if (providerKey === 'anthropic') {
-      return handleAnthropic(apiKey, cfg.model, messages, temperature, maxTokens);
+      return handleAnthropic(apiKey, cfg.model, normalized, safeTemp, safeMaxTokens);
     }
 
-    // All others use OpenAI-compatible format
-    return handleOpenAI(apiKey, cfg.baseUrl, cfg.model, messages, temperature, maxTokens);
+    return handleOpenAI(apiKey, cfg.baseUrl, cfg.model, normalized, safeTemp, safeMaxTokens);
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : 'Unknown error';
     return NextResponse.json({ error: msg }, { status: 500 });
@@ -37,11 +96,14 @@ export async function POST(req: NextRequest) {
 }
 
 async function handleAnthropic(
-  apiKey: string, model: string, messages: { role: string; content: string }[],
-  temperature: number, maxTokens: number
+  apiKey: string,
+  model: string,
+  messages: ChatMessage[],
+  temperature: number,
+  maxTokens: number
 ) {
   let systemText = '';
-  const chatMessages: { role: string; content: string }[] = [];
+  const chatMessages: ChatMessage[] = [];
 
   for (const m of messages) {
     if (m.role === 'system') {
@@ -86,9 +148,12 @@ async function handleAnthropic(
 }
 
 async function handleOpenAI(
-  apiKey: string, baseUrl: string, model: string,
-  messages: { role: string; content: string }[],
-  temperature: number, maxTokens: number
+  apiKey: string,
+  baseUrl: string,
+  model: string,
+  messages: ChatMessage[],
+  temperature: number,
+  maxTokens: number
 ) {
   const url = `${baseUrl.replace(/\/$/, '')}/chat/completions`;
 
@@ -96,7 +161,7 @@ async function handleOpenAI(
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${apiKey}`,
+      Authorization: `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
       model,

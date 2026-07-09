@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://veda.ng'),
   title: {
     default: 'Vedang Vatsa - AI & Web3 Thought Leader, Founder of Hashtag Web3',
-    template: '%s',
+    template: '%s | Vedang Vatsa',
   },
   description:
     'Explore essays, free courses, and research on AI agents and Web3 by Vedang Vatsa, founder of Hashtag Web3 and Fellow of the Royal Society of Arts (FRSA).',
@@ -77,7 +77,7 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Hashtag Web3',
-  url: 'https://veda.ng',
+  url: 'https://hashtagweb3.com',
   logo: 'https://veda.ng/images/icon.png',
   description: 'A global community of 120,000+ professionals in AI and Web3.',
   sameAs: [

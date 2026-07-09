@@ -105,15 +105,29 @@ const server = http.createServer(async (req, res) => {
       const userInfo = await getUserInfo(finalToken);
       console.log(`\n👤 Threads user: @${userInfo.username} (${userId})`);
 
-      console.log('\n=== ADD THESE TO .env.local ===');
+      // Automatically write to .env.local
+      const envPath = path.resolve(__dirname, '..', '.env.local');
+      let envContent = '';
+      try {
+        envContent = fs.readFileSync(envPath, 'utf-8');
+      } catch (e) {}
+
+      const lines = envContent.split('\n');
+      const newLines = lines.filter(line => !line.startsWith('THREADS_USER_ID=') && !line.startsWith('THREADS_ACCESS_TOKEN=') && line.trim() !== '');
+      newLines.push(`THREADS_USER_ID=${userId}`);
+      newLines.push(`THREADS_ACCESS_TOKEN=${finalToken}`);
+      fs.writeFileSync(envPath, newLines.join('\n').trim() + '\n', 'utf-8');
+      console.log('✅ Saved to .env.local');
+
+      console.log('\n=== ADD THESE TO GITHUB SECRETS ===');
       console.log(`THREADS_USER_ID=${userId}`);
       console.log(`THREADS_ACCESS_TOKEN=${finalToken}`);
-      console.log('================================\n');
+      console.log('===================================\n');
 
       res.writeHead(200, { 'Content-Type': 'text/html' });
       res.end(`<h1>✅ Threads Connected!</h1>
         <p>User: @${userInfo.username} (${userId})</p>
-        <p>Token saved. You can close this tab.</p>`);
+        <p>Token saved to .env.local. You can close this tab.</p>`);
       
       setTimeout(() => process.exit(0), 1000);
     }

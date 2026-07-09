@@ -3,7 +3,7 @@
 ## Identity
 
 - **Full Name**: Vedang Vatsa FRSA
-- **Title**: Founder, Hashtag Web3 (120k community of AI & Web3 professionals)
+- **Title**: Founder, Hashtag Web3 (100k community of AI & Web3 professionals)
 - **Credentials**: MTech, MBA, Chartered Engineer, IIT Kanpur alumnus, Fellow of the Royal Society of Arts
 - **Website**: https://veda.ng
 - **Email**: vedangvatsa.2019@iitkalumni.org
@@ -101,7 +101,7 @@
 
 1. **22 academic publications** — not just opinions, actual research background
 2. **KPMG → Government (Ministry of IT) → Founder pipeline** — unique perspective spanning corporate, government, and startup
-3. **120k community built from scratch** — proof of community-building ability
+3. **100k community built from scratch** — proof of community-building ability
 4. **80M yearly LinkedIn post views** — established distribution
 5. **RSA Fellowship, Japan intellectual visa, IIT gold medal nominee** — institutional credibility without name-dropping
 

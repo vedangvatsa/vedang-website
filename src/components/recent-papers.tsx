@@ -9,7 +9,7 @@ export const recentPapers = [
   },
   {
     title: 'AI Agent Infrastructure Stack',
-    url: 'http://dx.doi.org/10.2139/ssrn.6874178',
+    url: 'https://dx.doi.org/10.2139/ssrn.6874178',
   },
   {
     title: 'Blockchain Research Trends',

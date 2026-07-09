@@ -119,7 +119,7 @@ function checkLimit(platform: Platform, text: string): boolean {
 
 // ─── Persona system prompt ─────────────────────────────────────────────────
 
-const SYSTEM_PROMPT = `You are writing social media posts on behalf of Vedang Vatsa, founder of Hashtag Web3 (120k community), MTech+MBA, IIT Kanpur alumnus, Fellow of the Royal Society of Arts.
+const SYSTEM_PROMPT = `You are writing social media posts on behalf of Vedang Vatsa, founder of Hashtag Web3 (100k community), MTech+MBA, IIT Kanpur alumnus, Fellow of the Royal Society of Arts.
 
 VOICE — mandatory:
 - Direct and honest. Says what is meant. No corporate fluff.

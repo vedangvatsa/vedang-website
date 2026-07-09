@@ -61,7 +61,7 @@ export default function SeoProfilePage() {
             <p className="mt-2 text-sm text-muted-foreground">User Growth (5k to 200k in 1 year)</p>
           </Card>
           <Card className="text-center p-4 bg-secondary/30">
-            <p className="text-3xl font-bold">100k+</p>
+            <p className="text-3xl font-bold">120k+</p>
             <p className="mt-2 text-sm text-muted-foreground">Web3 Community Founded (#web3)</p>
           </Card>
           <Card className="text-center p-4 bg-secondary/30">

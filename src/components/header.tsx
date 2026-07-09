@@ -95,7 +95,7 @@ export function Header() {
                   <Link href="/swarm-prediction">Swarm Prediction</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/ai-detector">AI Text Detector</Link>
+                  <Link href="/ai-detector">AI-Text Detector Essay</Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
@@ -158,7 +158,7 @@ export function Header() {
                   <MobileNavLink href="/glossary" onClose={closeMobile}>Glossary</MobileNavLink>
                   <MobileNavLink href="/lit" onClose={closeMobile}>LinkedIn Translator</MobileNavLink>
                   <MobileNavLink href="/swarm-prediction" onClose={closeMobile}>Swarm Prediction</MobileNavLink>
-                  <MobileNavLink href="/ai-detector" onClose={closeMobile}>AI Text Detector</MobileNavLink>
+                  <MobileNavLink href="/ai-detector" onClose={closeMobile}>AI-Text Detector Essay</MobileNavLink>
                   <MobileNavLink href="/ai-discovery-standards" onClose={closeMobile}>AI Discovery Standards</MobileNavLink>
                   <MobileNavLink href="/site-checklist" onClose={closeMobile}>Site Checklist</MobileNavLink>
                 </MobileNavSection>
