@@ -8,7 +8,7 @@ author: 'Vedang Vatsa'
 keywords: ['AI text detection', 'stylometry', 'random forest', 'LLM', 'benchmarks', 'adversarial robustness', 'FastAPI', 'machine learning']
 ---
 
-By early 2024 it was already hard to tell if a piece of text was written by a human or by an AI. Tools existed, but most of them fell apart when the text was edited, paraphrased, or came from a model they had never seen. I wanted to build something that was fast enough to run at scale, interpretable enough that I could explain why it flagged something, robust enough to handle real-world tricks, and honest about what it could not do. This essay is the story of how I got there.
+By early 2024, distinguishing human-written text from AI-generated content had become remarkably difficult. Existing tools frequently broke down when text was paraphrased, edited, or produced by unfamiliar models. I wanted to build a detector that was fast enough to run at scale, robust against common humanization tricks, honest about its limits, and interpretable enough to explain why it flagged a specific paragraph. Here is how I built it.
 
 <StatRow>
 <Stat value="2.77M" label="Training texts across four registers" />
@@ -19,61 +19,60 @@ By early 2024 it was already hard to tell if a piece of text was written by a hu
 
 ## Start with the data
 
-The first lesson was painful: the model is only as good as the corpus. I collected 2.77 million texts across four registers (academic, news, social media, and creative writing) with roughly 1.85 million AI-generated samples and 920,000 human samples. I split the data by register because the writing signals are different. Academic prose has long sentences and formal connectors. Social media is short, messy, and full of self-mentions. A single model trained on all of it confused those differences with the AI-vs-human signal, so I ended up training one detector per register plus a fallback detector that works across all of them.
+Early on, I realized the model is only as good as the corpus. I collected 2.77 million texts across four registers: academic writing, news, social media, and creative writing. The dataset included roughly 1.85 million AI-generated samples and 920,000 human samples. I split the data by register because the writing signals differ significantly. Academic prose uses long sentences and formal connectors, whereas social media is short, conversational, and filled with self-mentions. Training a single model across all registers confused these stylistic differences with the core AI-vs-human signal. To solve this, I trained one detector per register alongside a general fallback model.
 
 ## Why stylometry?
 
-Neural detectors like RoBERTa and GPTZero get the headlines, but they are black boxes, slow, GPU-hungry, and prone to overfitting to the exact model they were trained on. I chose a different path: stylometry. Instead of asking a neural network to memorize patterns, I measured interpretable properties of the text (sentence length variation, repetition, entropy, connector-word density) and fed those into a Random Forest. Random Forests are fast, handle tabular features well, and tell you which features mattered. That last point was important to me. If a detector flags a paragraph, I want to be able to say why.
+Neural detectors like RoBERTa and GPTZero dominate headlines, but they are slow, GPU-intensive, and prone to overfitting to specific model outputs. I chose a different path by focusing on stylometry. Instead of asking a neural network to memorize abstract patterns, I measured interpretable properties of text, such as sentence length variation, vocabulary repetition, entropy, and connector-word density, then fed them into a Random Forest model. Random Forests are fast, handle tabular features well, and offer clear feature importance. If the detector flags a passage, I want to be able to explain the exact styling features that triggered it.
 
 ## The eleven features that survived
 
-After a lot of experiments, eleven features became the production core: MTLD vocabulary diversity, sentence-length variation, self-mention density, opener ratio, connector density, hedge density, mean sentence length, booster density, character entropy, repetition rate, and punctuation entropy. Together these capture something AI text does consistently: it is more uniform, more predictable, and more balanced than human writing. Humans ramble, change rhythm, and repeat themselves in ways models usually avoid.
+Following extensive experimentation, I selected eleven features for the production core, including MTLD vocabulary diversity, sentence-length variation, self-mention density, opener ratio, connector density, hedge density, mean sentence length, booster density, character entropy, repetition rate, and punctuation entropy. Together, these capture patterns common in AI text. AI-generated content tends to be more uniform, predictable, and balanced than human writing. Humans naturally ramble, change rhythm, and repeat themselves in ways LLMs generally avoid.
 
 ## From eleven to thirty-five features
 
-The eleven-feature model was good, but I wondered if readability, sentiment, syntax, and named-entity density could add signal. I added twenty-four more features and the AUC rose from 0.9645 to 0.9826. Accuracy went from 0.9011 to 0.9361. The gain was real, but I kept the production API on the original eleven features because they are faster, more stable, and easier to explain. The extra features are available for extended experiments, not for the default path. This was the first of many decisions where the best research score did not win. Production needs a different balance.
+While the eleven-feature model performed well, I wondered if adding readability, sentiment, syntax, and named-entity density would improve performance. Expanding the feature set to thirty-five raised the AUC from 0.9645 to 0.9826, and boosted accuracy from 0.9011 to 0.9361. Despite the gain, I kept the production API on the original eleven features because they are faster, more stable, and easier to explain. The additional features remain available for extended experiments. This decision highlighted a common theme: production environments require a different balance of speed and complexity than research benchmarks.
 
 <AIDetectorFeatureComparison />
 
 ## What the benchmarks taught me
 
-Testing on public benchmarks brought surprises. Within-register performance looked excellent, with AUCs between 0.933 and 0.978. Academic text was easiest; social and creative were hardest. But the cross-domain test (train on one register, test on another) dropped the mean AUC to 0.728. That was the honest number. It taught me that a detector that looks perfect in one domain can be mediocre in another.
+Testing on public benchmarks revealed clear limitations. Within-register performance was high, with AUCs between 0.933 and 0.978. Academic text proved the easiest to classify, while social and creative texts were the most challenging. However, cross-domain testing, where I trained the model on one register and tested it on another, dropped the mean AUC to 0.728. This drop showed that a detector that looks perfect in one domain can easily underperform in another.
 
-Adversarial tests were more encouraging. Humanization attacks, where you remove connectors, swap synonyms, vary length, or add first-person text, only dropped the AUC by about 0.009. Paraphrase attacks on the RAID benchmark dropped it further, to 0.951. The surface-level stylometric signals were fairly robust, but a really good paraphrase could still fool the model.
+Adversarial tests were more encouraging. Humanization attacks, such as removing connectors, swapping synonyms, or varying sentence lengths, only reduced the AUC by 0.009. Paraphrase attacks on the RAID benchmark dropped it further to 0.951, showing that while basic stylometric signals are robust, sophisticated paraphrasing can still bypass the model.
 
 ## Adding neural signals
 
-I did not want to rely only on stylometry. I added public HuggingFace detectors: roberta-base-openai, Hello-SimpleAI/chatgpt-detector-roberta, roberta-large-openai, and the MAGE Longformer. Each had strengths and weaknesses. The chatgpt-detector was near-perfect on HC3. The roberta-large detector lifted TuringBench from 0.469 to 0.9146. The MAGE Longformer hit 0.9796 on MAGE. No single detector won everywhere, so I built per-benchmark specialized pipelines. HC3 goes to the chatgpt-detector. TuringBench goes to roberta-large. MAGE uses a public detector plus the stylometric ensemble. The final local numbers were 0.9801 on MAGE, 0.9997 on HC3, and 0.9146 on TuringBench.
+To complement the stylometric features, I integrated public HuggingFace detectors, including roberta-base-openai, Hello-SimpleAI/chatgpt-detector-roberta, roberta-large-openai, and the MAGE Longformer. Each model had distinct strengths. The ChatGPT detector was highly accurate on the HC3 dataset, and the RoBERTa-large detector raised TuringBench performance from 0.469 to 0.9146. Because no single model succeeded everywhere, I built specialized pipelines. The final local benchmarks reached 0.9801 on MAGE, 0.9997 on HC3, and 0.9146 on TuringBench.
 
 ## Fine-tuning on TuringBench
 
-The zero-shot roberta-large detector was already strong on TuringBench, but I wanted better. I fine-tuned roberta-large on the full TuringBench nineteen-generator training split (331,000 texts) on Kaggle. After one epoch the validation AUC jumped to 0.9991 and accuracy to 0.9948. That confirmed something important: when you have enough in-domain data, a fine-tuned transformer beats everything else. But it also confirmed the opposite. Without that data, stylometry is a much cheaper and more generalizable fallback.
+The zero-shot RoBERTa-large detector was already strong on TuringBench, but I wanted to push it further. I fine-tuned RoBERTa-large on the full TuringBench training split of 331,000 texts using Kaggle. After one epoch, validation AUC rose to 0.9991 and accuracy reached 0.9948. This confirmed that with sufficient in-domain data, a fine-tuned transformer outperforms other methods. Conversely, when data is limited, stylometry remains a much cheaper and more generalizable fallback.
 
 ## Turning a notebook into a product
 
-A research notebook is not a product. I hardened the inference API with FastAPI endpoints, register classification, API-key authentication, IP rate limiting, in-memory caching with TTL, adversarial preprocessing, safe fallbacks for neural signals, and calibration for short texts. I also exposed public-detector endpoints so users can choose between the fast stylometric model and the slower but stronger public detectors.
+Hardening the inference API required moving beyond a research notebook. I built FastAPI endpoints, added register classification, integrated API-key authentication, set up IP rate limiting, and implemented in-memory caching with Time-To-Live expiration. I also added adversarial preprocessing, safe fallbacks for the neural models, and calibration for short texts.
 
 ## The audit
 
-Once the code was working, I did a deep audit of the repository. I wanted every claim to be verifiable and every piece of code to be clean. Marketing numbers in the README did not always match the code, so I corrected feature counts, clarified which benchmark scores came from which model, and documented limitations. Several scripts hardcoded the eleven feature names in multiple places, so I moved them to a single shared constant. The security code in the API was duplicated, so I extracted it into a shared module. The public API had duplicated single and batch logic, so I consolidated it. Some extended features used crude suffix rules, so I added an optional NLTK part-of-speech path while keeping the old behavior as the default. I removed unused imports, cleaned stale notebook references, and added tests for the feature extractor, adversarial defense, and API endpoints.
-
-The audit was not about making the code perfect. It was about making every decision explicit and every claim reproducible.
+Once the API was functional, I conducted a thorough audit of the repository to ensure all claims were verifiable. I aligned the metrics in the README with the actual code, consolidated duplicate single and batch logic, and refactored hardcoded feature references into a single shared constant. I also extracted duplicated API security checks into a shared module and cleaned up unused imports and stale notebook references. The goal was to make every architectural decision clear and every claim reproducible.
 
 ## What I learned
 
-Interpretability and performance are not enemies. A thirty-five-feature Random Forest can compete with large neural models when the features are chosen carefully. Domain matters more than model size. Ensembles beat single models. Robustness is harder than accuracy. And production is different from research: caching, rate limits, calibration, and graceful fallbacks matter as much as AUC.
+Interpretability does not have to compromise performance. A thirty-five-feature Random Forest can compete with large neural models when the features are chosen carefully. Furthermore, domain alignment matters more than raw model size, and ensembles consistently beat single models. Robustness is also far harder to maintain than simple accuracy. In production, caching, rate limits, calibration, and graceful fallbacks are just as important as the model's AUC.
 
 <KeyTakeaway>
-The best detector is not the one with the highest benchmark score. It is the one you can explain, deploy cheaply, and trust under the attack patterns your users will actually throw at it.
+The best detector is not the one with the highest benchmark score. It is the one you can explain, deploy cheaply, and trust under the attack patterns your users actually use.
 </KeyTakeaway>
 
-## Limitations I am honest about
+## Limitations
 
-The stylometric model is not robust to strong paraphrase or back-translation. It works best on longer texts; very short snippets are unreliable. Cross-register transfer is still only 0.728 AUC. Public detectors are evaluated models, not ones I trained. Calibration and adversarial defense are helpful but not magic.
+The stylometric model is not robust against strong paraphrase or back-translation. It performs best on longer texts, as very short snippets are unreliable. Cross-register transfer remains limited to 0.728 AUC, and the public detectors are evaluated models rather than ones I trained. Calibration and adversarial defense help but are not complete solutions.
 
-## What is next
+## Next steps
 
-I want to add a real part-of-speech pipeline and retrain the thirty-five-feature model. A per-sentence heatmap would help users see which parts of a text look most AI-like. I also want to improve low false-positive-rate performance for deployments where false positives are costly, add a Redis-backed cache for multi-worker deployments, and continue benchmarking against new models and attack methods as they appear.
+I plan to integrate a part-of-speech pipeline and retrain the thirty-five-feature model. I also want to build a per-sentence heatmap to visualize which parts of a text appear most AI-like, improve performance at low false-positive rates, and add a Redis-backed cache for multi-worker deployments.
+
 
 ## Try it
 
