@@ -90,3 +90,8 @@ video-analysis-frames/
 *.vtt
 scripts/video-retalking/
 media/
+
+# credentials & oauth tokens
+scripts/.*token.json
+scripts/.x-oauth2-*.json
+scripts/.tiktok-token.json
