@@ -83,6 +83,10 @@ export default async function GlossaryTermPage({ params }: PageProps) {
     "description": term.definition,
     "inDefinedTermSet": "https://veda.ng/glossary",
     "url": `https://veda.ng/glossary/${term.slug}`,
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1"],
+    },
   };
 
   return (

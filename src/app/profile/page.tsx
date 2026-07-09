@@ -53,6 +53,10 @@ const personSchema = {
     'https://www.instagram.com/vedangvatsa',
   ],
   knowsAbout: ['Artificial Intelligence', 'Web3', 'Blockchain', 'Cryptocurrency', 'Community Building'],
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    'cssSelector': ['h1'],
+  },
 };
 
 export default function ProfilePage() {

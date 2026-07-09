@@ -73,6 +73,34 @@ const websiteSchema = {
   },
 };
 
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Vedang Vatsa - AI & Web3 Thought Leader',
+  url: 'https://veda.ng',
+  description: 'Explore essays, free courses, and research on AI agents and Web3 by Vedang Vatsa, founder of Hashtag Web3 and Fellow of the Royal Society of Arts (FRSA).',
+  inLanguage: 'en-US',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Vedang Vatsa',
+    url: 'https://veda.ng',
+  },
+  about: {
+    '@type': 'Person',
+    name: 'Vedang Vatsa',
+    url: 'https://veda.ng',
+  },
+  mainEntity: {
+    '@type': 'Person',
+    name: 'Vedang Vatsa',
+    url: 'https://veda.ng',
+  },
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['.text-4xl', 'h1'],
+  },
+};
+
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -161,6 +189,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
         />
         <link rel="alternate" type="application/json" href="/deeprank.json" />
         <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />

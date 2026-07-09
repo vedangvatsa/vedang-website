@@ -14,9 +14,35 @@ export const metadata: Metadata = generateMetadata({
   ogImageAlt: 'Essays & Research Papers - Vedang Vatsa',
 });
 
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Essays on AI & Web3',
+  url: 'https://veda.ng/essays',
+  description: 'Essays and research papers on AI agents, blockchain systems, stablecoins, and decentralized economies by Vedang Vatsa.',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Vedang Vatsa',
+    url: 'https://veda.ng',
+  },
+  about: {
+    '@type': 'Person',
+    name: 'Vedang Vatsa',
+    url: 'https://veda.ng',
+  },
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1'],
+  },
+};
+
 export default function EssaysPage() {
   return (
     <PageLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+      />
       <BreadcrumbSchema items={[{ name: "Essays", url: "https://veda.ng/essays" }]} />
 
       <CardGrid
