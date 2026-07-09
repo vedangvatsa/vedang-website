@@ -9,7 +9,7 @@ import { generateMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = generateMetadata({
   title: 'AI Reports Library',
-  description: 'Search 250M+ AI research papers in real-time via OpenAlex, plus a curated library of 133,000+ reports and analyses.',
+  description: 'Search 250M+ academic papers via OpenAlex and browse 133,000+ curated reports. Every entry links to a verified source.',
   url: '/ai-reports',
 });
 
@@ -18,16 +18,16 @@ export default function AIReportsPage() {
     <PageLayout>
       <BreadcrumbSchema items={[{ name: "AI Reports", url: "https://veda.ng/ai-reports" }]} />
 
-      <section className="text-center pt-12 md:pt-20 pb-8 border-b border-border/30">
+      <section className="text-center pt-8 md:pt-12 pb-6 border-b border-border/30">
         <div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1]">
             AI Reports Library
           </h1>
-          <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Search 250M+ academic papers in real-time via OpenAlex, plus a curated library of 133,000+ reports and industry analyses. Each entry links directly to a verified DOI or academic repository.
+          <p className="mt-4 text-sm md:text-base text-muted-foreground max-w-xl mx-auto leading-relaxed">
+            Search 250M+ academic papers via OpenAlex and browse 133,000+ curated reports. Every entry links to a verified source.
           </p>
           <AuthorByline />
-          <p className="mt-6 text-sm text-muted-foreground">
+          <p className="mt-4 text-sm text-muted-foreground">
             Read the full synthesis: <Link href="/stateofai" className="text-primary hover:underline font-medium">The State of AI →</Link>
           </p>
         </div>

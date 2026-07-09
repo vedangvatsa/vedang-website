@@ -8,7 +8,7 @@ import { generateMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = generateMetadata({
   title: 'Web3 Reports Library',
-  description: 'Search 250M+ Web3 and blockchain research papers in real-time via OpenAlex, plus a curated library of 100,000+ reports.',
+  description: 'Search 250M+ academic papers via OpenAlex and browse 100,000+ curated blockchain and Web3 reports. Every entry links to a verified source.',
   url: '/web3-reports',
 });
 
@@ -17,13 +17,13 @@ export default function Web3ReportsPage() {
     <PageLayout>
       <BreadcrumbSchema items={[{ name: "Web3 Reports", url: "https://veda.ng/web3-reports" }]} />
 
-      <section className="text-center pt-16 pb-12 border-b border-border/30">
+      <section className="text-center pt-8 md:pt-12 pb-6 border-b border-border/30">
         <div>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1]">
             Web3 Reports Library
           </h1>
-          <p className="mt-4 text-base md:text-lg text-muted-foreground">
-            Search 250M+ academic papers in real-time via OpenAlex, plus a curated library of 100,000+ blockchain and Web3 reports. Each entry links directly to a verified DOI or academic repository.
+          <p className="mt-4 text-sm md:text-base text-muted-foreground max-w-xl mx-auto leading-relaxed">
+            Search 250M+ academic papers via OpenAlex and browse 100,000+ curated blockchain and Web3 reports. Every entry links to a verified source.
           </p>
           <p className="mt-4 text-sm text-muted-foreground">
             Read the full synthesis: <Link href="/stateofweb3" className="text-primary hover:underline font-medium">The State of Web3 →</Link>
