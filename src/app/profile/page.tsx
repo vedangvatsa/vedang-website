@@ -105,12 +105,10 @@ export default function ProfilePage() {
               <div className="space-y-4">
                 <Card>
                   <CardHeader className="p-4 pb-0">
-                    <div className="flex justify-between items-start flex-wrap gap-2">
-                      <div>
-                        <CardTitle className="text-lg">Growth Advisory (Founder)</CardTitle>
-                        <p className="text-sm text-muted-foreground">Hashtag Web3</p>
-                      </div>
-                      <p className="text-xs text-muted-foreground flex-shrink-0">Oct 2022 - Present</p>
+                    <div>
+                      <CardTitle className="text-lg">Growth Advisory (Founder)</CardTitle>
+                      <p className="text-sm text-muted-foreground">Hashtag Web3</p>
+                      <p className="text-xs text-muted-foreground mt-1">Oct 2022 - Present</p>
                     </div>
                   </CardHeader>
                   <CardContent className="p-4">
@@ -128,12 +126,10 @@ export default function ProfilePage() {
                 </Card>
                  <Card>
                   <CardHeader className="p-4 pb-0">
-                    <div className="flex justify-between items-start flex-wrap gap-2">
-                      <div>
-                        <CardTitle className="text-lg">Country Head</CardTitle>
-                        <p className="text-sm text-muted-foreground">Prosple</p>
-                      </div>
-                      <p className="text-xs text-muted-foreground flex-shrink-0">Sep 2021 - Oct 2022</p>
+                    <div>
+                      <CardTitle className="text-lg">Country Head</CardTitle>
+                      <p className="text-sm text-muted-foreground">Prosple</p>
+                      <p className="text-xs text-muted-foreground mt-1">Sep 2021 - Oct 2022</p>
                     </div>
                   </CardHeader>
                   <CardContent className="p-4">
@@ -144,12 +140,10 @@ export default function ProfilePage() {
                 </Card>
                 <Card>
                   <CardHeader className="p-4 pb-0">
-                    <div className="flex justify-between items-start flex-wrap gap-2">
-                      <div>
-                        <CardTitle className="text-lg">Consultant</CardTitle>
-                        <p className="text-sm text-muted-foreground">KPMG</p>
-                      </div>
-                      <p className="text-xs text-muted-foreground flex-shrink-0">Sep 2019 - Sep 2021</p>
+                    <div>
+                      <CardTitle className="text-lg">Consultant</CardTitle>
+                      <p className="text-sm text-muted-foreground">KPMG</p>
+                      <p className="text-xs text-muted-foreground mt-1">Sep 2019 - Sep 2021</p>
                     </div>
                   </CardHeader>
                   <CardContent className="p-4 space-y-2">
@@ -181,12 +175,10 @@ export default function ProfilePage() {
                 </Card>
                 <Card>
                   <CardHeader className="p-4 pb-0">
-                    <div className="flex justify-between items-start flex-wrap gap-2">
-                      <div>
-                        <CardTitle className="text-lg">Project Manager (Co-Founder)</CardTitle>
-                        <p className="text-sm text-muted-foreground">Studio Tesseract</p>
-                      </div>
-                      <p className="text-xs text-muted-foreground flex-shrink-0">April 2013 - June 2017</p>
+                    <div>
+                      <CardTitle className="text-lg">Project Manager (Co-Founder)</CardTitle>
+                      <p className="text-sm text-muted-foreground">Studio Tesseract</p>
+                      <p className="text-xs text-muted-foreground mt-1">Apr 2013 - Jun 2017</p>
                     </div>
                   </CardHeader>
                   <CardContent className="p-4">
