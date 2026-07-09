@@ -111,9 +111,9 @@ export function generateStaticParams() {
   if (!fs.existsSync(essaysDirectory)) {
     return [];
   }
-  const files = fs.readdirSync(essaysDirectory);
+  const files = fs.readdirSync(essaysDirectory).filter(file => file.endsWith('.mdx'));
   return files.map(file => ({
-    slug: file.replace('.mdx', ''),
+    slug: file.replace(/\.mdx$/, ''),
   }));
 }
 

@@ -37,7 +37,7 @@ function generateRSS() {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vedang Vatsa | Essays</title>
-    <link>https://veda.ng/essays</link>
+    <link>https://veda.ng/writings</link>
     <description>Essays on AI, technology, and the future by Vedang Vatsa.</description>
     <language>en-us</language>
     <atom:link href="https://veda.ng/feed.xml" rel="self" type="application/rss+xml" />

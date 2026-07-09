@@ -5,11 +5,13 @@ import { AuthorByline } from '@/components/author-byline';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 import { CATEGORIES } from '@/lib/ai-reports-data';
 import { ReportLibrary } from '@/components/report-library';
+import { generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'AI Reports Library | Vedang Vatsa',
+export const metadata: Metadata = generateMetadata({
+  title: 'AI Reports Library',
   description: 'Search 250M+ AI research papers in real-time via OpenAlex, plus a curated library of 133,000+ reports and analyses.',
-};
+  url: '/ai-reports',
+});
 
 export default function AIReportsPage() {
   return (

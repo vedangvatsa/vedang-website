@@ -4,11 +4,13 @@ import { PageLayout } from '@/components/page-layout';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 import { CATEGORIES } from '@/lib/web3-reports-data';
 import { ReportLibrary } from '@/components/report-library';
+import { generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Web3 Reports Library | Vedang Vatsa',
+export const metadata: Metadata = generateMetadata({
+  title: 'Web3 Reports Library',
   description: 'Search 250M+ Web3 and blockchain research papers in real-time via OpenAlex, plus a curated library of 100,000+ reports.',
-};
+  url: '/web3-reports',
+});
 
 export default function Web3ReportsPage() {
   return (
