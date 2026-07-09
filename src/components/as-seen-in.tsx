@@ -44,7 +44,8 @@ export function AsSeenIn() {
                 height={40}
                 unoptimized={media.logo.endsWith('.svg')}
                 priority={index < 7}
-                className="w-full h-8 sm:h-10 object-contain"
+                style={{ width: 'auto', height: 'auto' }}
+                className="w-full h-8 sm:h-10 object-contain mix-blend-multiply opacity-80 hover:opacity-100 transition-all duration-300"
               />
             </div>
           ))}
