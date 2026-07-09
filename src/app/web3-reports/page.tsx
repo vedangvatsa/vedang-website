@@ -8,7 +8,7 @@ import { generateMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = generateMetadata({
   title: 'Web3 Reports Library',
-  description: 'Search 250M+ academic papers via OpenAlex and browse 100,000+ curated blockchain and Web3 reports. Every entry links to a verified source.',
+  description: 'Search 250M+ academic papers via OpenAlex and browse 100,000+ curated blockchain and Web3 reports.',
   url: '/web3-reports',
 });
 
@@ -23,7 +23,7 @@ export default function Web3ReportsPage() {
             Web3 Reports Library
           </h1>
           <p className="mt-4 text-sm md:text-base text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Search 250M+ academic papers via OpenAlex and browse 100,000+ curated blockchain and Web3 reports. Every entry links to a verified source.
+            Search 250M+ academic papers via OpenAlex and browse 100,000+ curated blockchain and Web3 reports.
           </p>
           <p className="mt-4 text-sm text-muted-foreground">
             Read the full synthesis: <Link href="/stateofweb3" className="text-primary hover:underline font-medium">The State of Web3 →</Link>
