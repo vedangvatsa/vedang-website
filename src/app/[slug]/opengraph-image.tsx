@@ -97,7 +97,6 @@ export default async function Image({ params }: { params: Promise<{ slug: string
               boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
            }}>
               {avatarBase64 ? (
-                // eslint-disable-next-line @next/next/no-img-element
                 <img src={avatarBase64} width={120} height={120} style={{ objectFit: 'cover' }} alt="Avatar" />
               ) : (
                 <div style={{ fontSize: 40, fontWeight: 700, color: '#9ca3af' }}>VV</div>

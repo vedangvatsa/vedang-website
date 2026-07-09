@@ -91,6 +91,18 @@ video-analysis-frames/
 scripts/video-retalking/
 media/
 
+# Generated social media assets (large, recreatable by scripts)
+scripts/linkedin-assets/
+scripts/linkedin-assets/clean/
+scripts/post-images/
+scripts/thread-assets/
+scripts/thread-assets/ig-reels/
+scripts/thread-assets/linkedin-rewrites/
+scripts/thread-assets/reddit-memes/
+scripts/nomad-directory/
+scripts/nomad-directory/data/
+scripts/tiktok-demo/
+
 # credentials & oauth tokens
 scripts/.*token.json
 scripts/.x-oauth2-*.json

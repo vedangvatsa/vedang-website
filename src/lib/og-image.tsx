@@ -80,7 +80,6 @@ export function generateOgImage(title: string, subtitle?: string) {
                 overflow: 'hidden',
                 border: '2px solid rgba(0,0,0,0.08)',
               }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={avatarBase64} width={52} height={52} style={{ objectFit: 'cover' }} alt="Vedang Vatsa avatar" />
               </div>
             ) : null}

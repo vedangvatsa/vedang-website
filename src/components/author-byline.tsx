@@ -9,7 +9,6 @@ export function AuthorByline({ links }: AuthorBylineProps) {
   return (
     <div className="mt-8 flex items-center justify-center gap-3">
       <Link href="/profile">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/ved.png"
           alt="Vedang Vatsa"

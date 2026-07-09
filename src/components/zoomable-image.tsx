@@ -32,7 +32,6 @@ export function ZoomableImage({ src, alt = '', width, height, className = '' }: 
   return (
     <>
       {/* Inline image with hover effect */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={src}
         alt={alt}
@@ -54,7 +53,6 @@ export function ZoomableImage({ src, alt = '', width, height, className = '' }: 
           </div>
 
           {/* Zoomed image */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={src}
             alt={alt}

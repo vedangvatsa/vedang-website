@@ -103,7 +103,6 @@ export default function InvoicePage() {
               <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-6 pb-5 sm:pb-8 border-b border-border/50">
                 <div className="flex-1 min-w-0">
                   {fromLogo && (
-                    /* eslint-disable-next-line @next/next/no-img-element */
                     <img src={fromLogo} alt={`${fromName} logo`} className="h-8 sm:h-10 w-auto object-contain mb-2" />
                   )}
                   <input className="block w-full font-semibold text-base sm:text-lg bg-transparent outline-none placeholder:text-muted-foreground/40" value={fromName} onChange={(e) => setFromName(e.target.value)} placeholder="Your name or company" aria-label="From name" />

@@ -62,7 +62,6 @@ export default async function Image() {
               boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
            }}>
               {avatarBase64 ? (
-                // eslint-disable-next-line @next/next/no-img-element
                 <img src={avatarBase64} width={320} height={320} style={{ objectFit: 'cover' }} alt="Avatar" />
               ) : (
                 <div style={{ fontSize: 96, fontWeight: 700, color: '#9ca3af' }}>VV</div>
