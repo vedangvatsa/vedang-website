@@ -110,7 +110,7 @@ export default function ProfilePage() {
                         <CardTitle className="text-lg">Growth Advisory (Founder)</CardTitle>
                         <p className="text-sm text-muted-foreground">Hashtag Web3</p>
                       </div>
-                      <p className="text-xs text-muted-foreground flex-shrink-0">October 2022 - Present</p>
+                      <p className="text-xs text-muted-foreground flex-shrink-0">Oct 2022 - Present</p>
                     </div>
                   </CardHeader>
                   <CardContent className="p-4">
@@ -133,7 +133,7 @@ export default function ProfilePage() {
                         <CardTitle className="text-lg">Country Head</CardTitle>
                         <p className="text-sm text-muted-foreground">Prosple</p>
                       </div>
-                      <p className="text-xs text-muted-foreground flex-shrink-0">September 2021 - October 2022</p>
+                      <p className="text-xs text-muted-foreground flex-shrink-0">Sep 2021 - Oct 2022</p>
                     </div>
                   </CardHeader>
                   <CardContent className="p-4">
@@ -149,7 +149,7 @@ export default function ProfilePage() {
                         <CardTitle className="text-lg">Consultant</CardTitle>
                         <p className="text-sm text-muted-foreground">KPMG</p>
                       </div>
-                      <p className="text-xs text-muted-foreground flex-shrink-0">September 2019 - September 2021</p>
+                      <p className="text-xs text-muted-foreground flex-shrink-0">Sep 2019 - Sep 2021</p>
                     </div>
                   </CardHeader>
                   <CardContent className="p-4 space-y-2">
