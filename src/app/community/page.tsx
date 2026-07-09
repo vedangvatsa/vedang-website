@@ -83,8 +83,11 @@ export default function CommunityProfilePage() {
 
           <div className="space-y-8">
             <section id="competencies">
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
-                    <Star className="w-6 h-6 text-primary" /> Core Competencies
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3.5">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary border border-primary/20 shadow-sm flex-shrink-0">
+                        <Star className="w-5 h-5" />
+                    </div>
+                    <span>Core Competencies</span>
                 </h2>
                 <div className="grid md:grid-cols-2 gap-x-6 gap-y-4">
                     <div>
@@ -115,8 +118,11 @@ export default function CommunityProfilePage() {
             </section>
             
             <section id="toolkit">
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
-                <Wrench className="w-6 h-6 text-primary" /> Platforms & Tools
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3.5">
+                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary border border-primary/20 shadow-sm flex-shrink-0">
+                    <Wrench className="w-5 h-5" />
+                </div>
+                <span>Platforms & Tools</span>
               </h2>
               <div className="grid md:grid-cols-2 gap-x-6 gap-y-3 text-muted-foreground text-sm">
                   <ul className="space-y-1 list-disc list-inside">
@@ -131,8 +137,11 @@ export default function CommunityProfilePage() {
             </section>
 
             <section id="experience">
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
-                <Briefcase className="w-6 h-6 text-primary" /> Community & Content Experience
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3.5">
+                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary border border-primary/20 shadow-sm flex-shrink-0">
+                    <Briefcase className="w-5 h-5" />
+                </div>
+                <span>Community & Content Experience</span>
               </h2>
               <div className="space-y-4">
                 <Card>
@@ -179,8 +188,11 @@ export default function CommunityProfilePage() {
             </section>
             
             <section id="qualifications">
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
-                    <Award className="w-6 h-6 text-primary" /> Recognition & Thought Leadership
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3.5">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary border border-primary/20 shadow-sm flex-shrink-0">
+                        <Award className="w-5 h-5" />
+                    </div>
+                    <span>Recognition & Thought Leadership</span>
                 </h2>
                 <Card>
                     <CardContent className="pt-4">
@@ -202,8 +214,11 @@ export default function CommunityProfilePage() {
         <div>
           <div className="space-y-8">
             <section id="testimonials">
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3">
-                    <MessageSquare className="w-6 h-6 text-primary" /> Testimonials
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4 flex items-center gap-3.5">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary border border-primary/20 shadow-sm flex-shrink-0">
+                        <MessageSquare className="w-5 h-5" />
+                    </div>
+                    <span>Testimonials</span>
                 </h2>
                   <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-4">
                     <Card className="min-h-[220px] flex flex-col justify-between">
@@ -219,6 +234,7 @@ export default function CommunityProfilePage() {
                                         src="/images/quotes/suki.png"
                                         alt="Suki Cheung"
                                         fill
+                                        sizes="32px"
                                         className="object-cover"
                                     />
                                 </div>
@@ -242,6 +258,7 @@ export default function CommunityProfilePage() {
                                         src="/images/quotes/kris.png"
                                         alt="Kris Lai"
                                         fill
+                                        sizes="32px"
                                         className="object-cover"
                                     />
                                 </div>
@@ -265,6 +282,7 @@ export default function CommunityProfilePage() {
                                         src="/images/quotes/zhanna.png"
                                         alt="Zhanna Manzyk"
                                         fill
+                                        sizes="32px"
                                         className="object-cover"
                                     />
                                 </div>

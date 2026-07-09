@@ -475,7 +475,7 @@ export default function Dashboard() {
                   src={media.logo}
                   alt={media.name}
                   fill
-                  className="object-contain"
+                  className="object-contain mix-blend-multiply opacity-80 hover:opacity-100 transition-all duration-300"
                   sizes="(max-width: 640px) 45vw, 15vw"
                   unoptimized={media.logo.endsWith('.svg')}
                 />
@@ -684,6 +684,7 @@ export default function Dashboard() {
                       src={testimonial.image}
                       alt={testimonial.author}
                       fill
+                      sizes="32px"
                       className="object-cover"
                     />
                   </div>
