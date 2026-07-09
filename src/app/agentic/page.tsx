@@ -146,6 +146,17 @@ const courseSchema = {
     courseMode: 'online',
     instructor: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
   },
+  teaches: [
+    'Agentic Web fundamentals',
+    'Core components of agentic systems',
+    'Three dimensions of the Agentic Web',
+    'Agentic applications in practice',
+    'Future challenges and opportunities',
+    'MCP and A2A protocols',
+    'Building your first agent',
+  ],
+  timeRequired: 'PT6H',
+  coursePrerequisites: 'Basic understanding of AI/LLMs helpful.',
 };
 
 const faqSchema = {

@@ -144,6 +144,17 @@ const courseSchema = {
     courseMode: 'online',
     instructor: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
   },
+  teaches: [
+    'Zero-shot and few-shot prompting',
+    'Role and system prompting',
+    'Chain of Thought reasoning',
+    'Self-consistency and ReAct',
+    'Code prompting and debugging',
+    'RAG and function calling',
+    'Prompt chaining and agents',
+  ],
+  timeRequired: 'PT6H',
+  coursePrerequisites: 'None. Familiarity with LLMs helpful but not required.',
 };
 
 const faqSchema = {

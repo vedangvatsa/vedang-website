@@ -311,7 +311,7 @@ const courseSchema = {
   '@context': 'https://schema.org',
   '@type': 'Course',
   name: 'Vibe Coding',
-  description: 'A free, self-paced course on building software with AI. Learn to describe what you want in plain English and let AI handle the code.',
+  description: 'A free course on building real apps with AI. Learn to build software in plain English using Cursor, Replit, Antigravity, and Lovable.',
   url: 'https://veda.ng/vibecoding',
   provider: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
   isAccessibleForFree: true,
@@ -321,6 +321,17 @@ const courseSchema = {
     courseMode: 'online',
     instructor: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
   },
+  teaches: [
+    'Creative director mindset shift',
+    'Modern AI toolkit: Cursor, Replit, Antigravity, Lovable',
+    'GCES framework for prompt engineering',
+    'Building micro-apps entirely with AI',
+    'Security, databases, and authentication',
+    'Debugging and iteration with AI',
+    'Deployment, databases, and custom domains',
+  ],
+  timeRequired: 'PT6H',
+  coursePrerequisites: 'No coding experience required.',
 };
 
 const faqSchema = {

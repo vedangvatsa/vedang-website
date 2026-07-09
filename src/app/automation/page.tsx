@@ -93,13 +93,30 @@ const faqItems = [
 ];
 
 const courseSchema = {
-  '@context': 'https://schema.org', '@type': 'Course',
+  '@context': 'https://schema.org',
+  '@type': 'Course',
   name: 'AI Automation',
   description: 'A free, self-paced course on building AI-powered automations with agents, APIs, MCP servers, and no-code tools.',
   url: 'https://veda.ng/automation',
   provider: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
-  isAccessibleForFree: true, educationalLevel: 'Beginner to Intermediate',
-  hasCourseInstance: { '@type': 'CourseInstance', courseMode: 'online', instructor: { '@type': 'Person', name: 'Vedang Vatsa' } },
+  isAccessibleForFree: true,
+  educationalLevel: 'Beginner to Intermediate',
+  hasCourseInstance: {
+    '@type': 'CourseInstance',
+    courseMode: 'online',
+    instructor: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
+  },
+  teaches: [
+    'Automation mindset and opportunity identification',
+    'REST APIs, authentication, webhooks',
+    'No-code automation with n8n, Make, Zapier',
+    'AI agents as autonomous workflow executors',
+    'MCP-powered automation patterns',
+    'End-to-end production pipelines',
+    'Monitoring, alerting, and cost management',
+  ],
+  timeRequired: 'PT6H',
+  coursePrerequisites: 'No coding required for modules 1-3; basic coding for 4-7.',
 };
 
 const faqSchema = {

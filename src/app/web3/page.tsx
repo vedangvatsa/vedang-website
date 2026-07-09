@@ -150,6 +150,18 @@ const courseSchema = {
     courseMode: 'online',
     instructor: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
   },
+  teaches: [
+    'Blockchain fundamentals',
+    'Cryptocurrencies and digital assets',
+    'Smart contract development',
+    'Decentralized applications (dApps)',
+    'NFTs and token standards',
+    'DAO governance',
+    'Layer 2 scaling solutions',
+    'Tokenomics and governance',
+  ],
+  timeRequired: 'PT8H',
+  coursePrerequisites: 'None. No coding or crypto experience required.',
 };
 
 const faqSchema = {

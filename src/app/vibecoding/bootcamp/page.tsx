@@ -147,6 +147,16 @@ const courseSchema = {
   educationalLevel: 'Beginner',
   numberOfCredits: 7,
   timeRequired: 'P7D',
+  teaches: [
+    'AI fundamentals and tool categories',
+    'AI-powered second brain with Obsidian',
+    'AI applications for organizations',
+    'Building your first app with AI tools',
+    'Professional design and security',
+    'Deployment and user testing',
+    'Selling and scaling your app',
+  ],
+  coursePrerequisites: 'No coding experience required. Just a laptop and internet.',
 };
 
 const faqSchema = {

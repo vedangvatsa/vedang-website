@@ -111,6 +111,17 @@ const courseSchema = {
     courseMode: 'online',
     instructor: { '@type': 'Person', name: 'Vedang Vatsa', url: 'https://veda.ng' },
   },
+  teaches: [
+    'MCP architecture and problem it solves',
+    'Transports: stdio, SSE, Streamable HTTP',
+    'Building MCP servers in TypeScript',
+    'Tools, Resources, and Prompts primitives',
+    'Connecting to Claude, Cursor, VS Code',
+    'Real-world MCP server patterns',
+    'Production security and distribution',
+  ],
+  timeRequired: 'PT6H',
+  coursePrerequisites: 'Basic TypeScript/JavaScript knowledge.',
 };
 
 const faqSchema = {
