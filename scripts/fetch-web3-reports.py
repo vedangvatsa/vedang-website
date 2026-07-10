@@ -3,6 +3,7 @@
 OpenAlex indexes 250M+ academic works. We query by concept/keyword and paginate heavily."""
 
 import json
+import re
 import time
 import ssl
 from urllib.request import Request, urlopen
@@ -210,26 +211,33 @@ OPENALEX_SEARCHES = [
 ]
 
 WEB3_KEYWORDS = [
-    'blockchain', 'crypto', 'defi', 'nft', 'dao', 'web3', 'web 3',
-    'token', 'smart contract', 'ethereum', 'bitcoin', 'solana', 'polygon',
-    'stablecoin', 'cbdc', 'digital asset', 'decentraliz', 'consensus',
-    'ledger', 'staking', 'rollup', 'zk-', 'zero-knowledge', 'zero knowledge',
-    'dapp', 'wallet', 'metaverse', 'dex', 'cross-chain', 'bridge',
-    'distributed ledger', 'cryptocurrency', 'digital currency',
-    'tokeniz', 'on-chain', 'off-chain', 'mainnet', 'mev',
+    'blockchain', 'blockchains', 'crypto', 'defi', 'nft', 'nfts', 'dao', 'daos', 'web3', 'web 3',
+    'token', 'tokens', 'tokenized', 'tokenization', 'tokenised', 'tokenisation',
+    'smart contract', 'smart contracts', 'ethereum', 'bitcoin', 'bitcoins', 'solana', 'polygon',
+    'stablecoin', 'stablecoins', 'cbdc', 'digital asset', 'digital assets',
+    'decentralized', 'decentralised', 'decentralization', 'decentralisation', 'consensus',
+    'ledger', 'staking', 'rollup', 'rollups', 'zk-', 'zero-knowledge', 'zero knowledge',
+    'dapp', 'dapps', 'wallet', 'wallets', 'metaverse', 'dex', 'cross-chain', 'bridge',
+    'distributed ledger', 'cryptocurrency', 'cryptocurrencies', 'digital currency', 'digital currencies',
+    'on-chain', 'off-chain', 'mainnet', 'mev',
     'hyperledger', 'ripple', 'stellar', 'cardano', 'polkadot',
     'cosmos', 'avalanche', 'tezos', 'algorand', 'hedera',
     'fintech', 'proof of work', 'proof of stake', 'mining pool',
-    'chainlink', 'oracle', 'ipfs', 'filecoin', 'arweave',
+    'chainlink', 'oracle', 'oracles', 'ipfs', 'filecoin', 'arweave',
     'depin', 'restaking', 'eigenlayer', 'soulbound',
-    'liquidity', 'yield farming', 'amm', 'flash loan',
+    'liquidity', 'yield farming', 'amm', 'flash loan', 'flash loans',
     'reentrancy', 'front-running', 'sandwich attack',
 ]
 
 
 def is_web3(title: str) -> bool:
     t = title.lower()
-    return any(kw in t for kw in WEB3_KEYWORDS)
+    for kw in WEB3_KEYWORDS:
+        # Use word boundaries so 'defi' does not match 'definition', 'diagnosis', etc.
+        pattern = r'(?<!\w)' + re.escape(kw.lower()) + r'(?!\w)'
+        if re.search(pattern, t):
+            return True
+    return False
 
 
 def categorize(title: str) -> str:
@@ -352,12 +360,12 @@ def main():
             print(f"  → Checkpoint: {len(all_papers)} total ({new_count} new)")
             all_papers.sort(key=lambda x: (x.get("citations", 0), x.get("date", "")), reverse=True)
             with open(OUTPUT_PATH, "w") as f:
-                json.dump(all_papers, f, indent=None)
+                json.dump(all_papers, f, indent=2)
 
     # Final save
     all_papers.sort(key=lambda x: (x.get("citations", 0), x.get("date", "")), reverse=True)
     with open(OUTPUT_PATH, "w") as f:
-        json.dump(all_papers, f, indent=None)
+        json.dump(all_papers, f, indent=2)
 
     print(f"\nDone! Total: {len(all_papers)} ({new_count} new)")
 
