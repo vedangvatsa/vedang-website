@@ -1331,10 +1331,10 @@
     "image": "scripts/post-images/post_131_1.jpg",
     "scheduleDate": "2026-07-06",
     "scheduleTime": "09:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_131_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1343,10 +1343,10 @@
     "image": "scripts/post-images/post_21_1.jpg",
     "scheduleDate": "2026-07-06",
     "scheduleTime": "17:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_21_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1355,10 +1355,10 @@
     "image": "scripts/post-images/post_182_1.jpg",
     "scheduleDate": "2026-07-06",
     "scheduleTime": "01:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_182_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1367,10 +1367,10 @@
     "image": "scripts/post-images/post_25_1.jpg",
     "scheduleDate": "2026-07-07",
     "scheduleTime": "09:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_25_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1379,10 +1379,10 @@
     "image": "scripts/post-images/post_170_1.jpg",
     "scheduleDate": "2026-07-07",
     "scheduleTime": "17:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_170_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1391,10 +1391,10 @@
     "image": "scripts/post-images/post_187_1.jpg",
     "scheduleDate": "2026-07-07",
     "scheduleTime": "01:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_187_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1403,10 +1403,10 @@
     "image": "scripts/post-images/post_167_1.jpg",
     "scheduleDate": "2026-07-08",
     "scheduleTime": "09:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_167_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1415,10 +1415,10 @@
     "image": "scripts/post-images/post_163_1.jpg",
     "scheduleDate": "2026-07-08",
     "scheduleTime": "17:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_163_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1427,10 +1427,10 @@
     "image": "scripts/post-images/post_27_1.jpg",
     "scheduleDate": "2026-07-08",
     "scheduleTime": "01:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_27_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1439,10 +1439,10 @@
     "image": "scripts/post-images/post_34_1.jpg",
     "scheduleDate": "2026-07-09",
     "scheduleTime": "09:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_34_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1451,10 +1451,10 @@
     "image": "scripts/post-images/post_5_1.jpg",
     "scheduleDate": "2026-07-09",
     "scheduleTime": "17:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_5_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1463,10 +1463,10 @@
     "image": "scripts/post-images/post_6_1.jpg",
     "scheduleDate": "2026-07-09",
     "scheduleTime": "01:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_6_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1475,10 +1475,10 @@
     "image": "scripts/post-images/post_139_1.jpg",
     "scheduleDate": "2026-07-10",
     "scheduleTime": "09:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_139_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1487,10 +1487,10 @@
     "image": "scripts/post-images/post_147_1.jpg",
     "scheduleDate": "2026-07-10",
     "scheduleTime": "17:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_147_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1499,10 +1499,10 @@
     "image": "scripts/post-images/post_60_1.jpg",
     "scheduleDate": "2026-07-10",
     "scheduleTime": "01:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_60_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1511,10 +1511,10 @@
     "image": "scripts/post-images/post_49_1.jpg",
     "scheduleDate": "2026-07-11",
     "scheduleTime": "09:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_49_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1523,10 +1523,10 @@
     "image": "scripts/post-images/post_173_1.jpg",
     "scheduleDate": "2026-07-11",
     "scheduleTime": "17:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_173_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1535,10 +1535,10 @@
     "image": "scripts/post-images/post_137_1.jpg",
     "scheduleDate": "2026-07-11",
     "scheduleTime": "01:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_137_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1547,10 +1547,10 @@
     "image": "scripts/post-images/post_132_1.jpg",
     "scheduleDate": "2026-07-12",
     "scheduleTime": "09:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_132_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1570,10 +1570,10 @@
     "image": "scripts/post-images/post_76_1.jpg",
     "scheduleDate": "2026-07-12",
     "scheduleTime": "01:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_76_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
