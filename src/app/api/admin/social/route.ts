@@ -85,12 +85,11 @@ export async function POST(req: NextRequest) {
       };
       posts.push(newPost);
     }
-      return NextResponse.json({ error: 'Post not found' }, { status: 404 });
-    }
 
-    if (text !== undefined) posts[postIndex].text = text;
-    if (scheduleDate !== undefined) posts[postIndex].scheduleDate = scheduleDate;
-    if (scheduleTime !== undefined) posts[postIndex].scheduleTime = scheduleTime;
+    const targetIdx = postIndex === -1 ? posts.length - 1 : postIndex;
+    if (text !== undefined) posts[targetIdx].text = text;
+    if (scheduleDate !== undefined) posts[targetIdx].scheduleDate = scheduleDate;
+    if (scheduleTime !== undefined) posts[targetIdx].scheduleTime = scheduleTime;
 
     if (isObject) {
       data.posts = posts;
