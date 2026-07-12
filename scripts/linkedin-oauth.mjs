@@ -5,7 +5,7 @@
  */
 import http from 'http';
 import { exec } from 'child_process';
-import fetch from 'node-fetch';
+
 
 const CLIENT_ID = '86vq79l9h9uipd';
 const CLIENT_SECRET = 'WPL_AP1.rMmzsUVYNy4Y8JcB.7DXBeA==';
