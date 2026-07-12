@@ -420,7 +420,7 @@ export function StateOfWeb3NgramAnalyzer() {
                     <span className={`px-1.5 py-0.5 rounded text-[9px] font-mono font-bold ${isSelected ? 'bg-primary/20 text-primary' : 'bg-secondary text-muted-foreground'}`}>
                       Rank #{idx + 1}
                     </span>
-                    <span className="text-sm font-bold text-foreground font-mono lowercase truncate max-w-[180px] sm:max-w-[280px]">
+                    <span className="text-sm font-bold text-foreground lowercase truncate max-w-[180px] sm:max-w-[280px]">
                       &ldquo;{item.term}&rdquo;
                     </span>
                   </div>
@@ -445,7 +445,7 @@ export function StateOfWeb3NgramAnalyzer() {
         <div className="bg-muted/30 border border-border/50 rounded-lg p-4.5 space-y-3 lg:sticky lg:top-4 self-stretch flex flex-col justify-between">
           <div className="space-y-2">
             <span className="text-[10px] font-semibold uppercase tracking-wider text-primary">Term Insight Detail</span>
-            <h5 className="text-base font-extrabold text-foreground font-mono lowercase">
+            <h5 className="text-base font-bold text-foreground lowercase">
               &ldquo;{activeTerm.term}&rdquo;
             </h5>
             <p className="text-xs text-muted-foreground leading-relaxed font-light">
