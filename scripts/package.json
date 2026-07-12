@@ -4,6 +4,7 @@
   "private": true,
   "description": "Dependencies for local social media and web scraping scripts, isolated from the production website build",
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.111.0",
     "@resvg/resvg-js": "^2.6.2",
     "oauth": "^0.10.2",
     "playwright": "^1.61.1",

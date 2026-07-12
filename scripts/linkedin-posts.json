@@ -1547,10 +1547,10 @@
     "image": "scripts/post-images/post_132_1.jpg",
     "scheduleDate": "2026-07-12",
     "scheduleTime": "09:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_132_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
@@ -1570,10 +1570,10 @@
     "image": "scripts/post-images/post_76_1.jpg",
     "scheduleDate": "2026-07-12",
     "scheduleTime": "01:00",
-    "posted": true,
+    "posted": false,
     "postedAt": null,
     "postId": null,
-    "error": "Media failed: scripts/post-images/post_76_1.jpg — skipped",
+    "error": null,
     "tweetId": null
   },
   {
