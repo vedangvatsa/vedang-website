@@ -347,28 +347,45 @@ async function main() {
       // Rewrite with retries
       let rewritten = '';
       let success = false;
-      for (let attempt = 1; attempt <= 3; attempt++) {
-        try {
-          rewritten = await rewrite(sourceText, platform, attempt);
 
-          if (!checkLimit(platform, rewritten)) {
-            const len = platform === 'bluesky' ? countGraphemes(rewritten) : rewritten.length;
-            console.log(`  ⚠️  ${platform} attempt ${attempt}: too long (${len}/${LIMITS[platform].chars})`);
-            continue;
+      // Special case: for Farcaster, try to reuse the LinkedIn post if it fits
+      if (platform === 'farcaster') {
+        const linkedinPost = results.linkedin.find(p => p.id === xPost.id);
+        if (linkedinPost && linkedinPost.text && linkedinPost.text.length <= LIMITS.farcaster.chars) {
+          const slopFound = detectSlop(linkedinPost.text);
+          if (slopFound.length === 0) {
+            rewritten = linkedinPost.text;
+            success = true;
+            console.log(`  🔗 farcaster: Reused LinkedIn post text (${rewritten.length} chars)`);
           }
-
-          const slopFound = detectSlop(rewritten);
-          if (slopFound.length > 0) {
-            console.log(`  ⚠️  ${platform} attempt ${attempt}: slop detected [${slopFound.join(', ')}]`);
-            continue;
-          }
-
-          success = true;
-          break;
-        } catch (err) {
-          console.error(`  ❌ ${platform} attempt ${attempt} error:`, err);
         }
       }
+
+      if (!success) {
+        for (let attempt = 1; attempt <= 3; attempt++) {
+          try {
+            rewritten = await rewrite(sourceText, platform, attempt);
+
+            if (!checkLimit(platform, rewritten)) {
+              const len = platform === 'bluesky' ? countGraphemes(rewritten) : rewritten.length;
+              console.log(`  ⚠️  ${platform} attempt ${attempt}: too long (${len}/${LIMITS[platform].chars})`);
+              continue;
+            }
+
+            const slopFound = detectSlop(rewritten);
+            if (slopFound.length > 0) {
+              console.log(`  ⚠️  ${platform} attempt ${attempt}: slop detected [${slopFound.join(', ')}]`);
+              continue;
+            }
+
+            success = true;
+            break;
+          } catch (err) {
+            console.error(`  ❌ ${platform} attempt ${attempt} error:`, err);
+          }
+        }
+      }
+
 
       if (!success) {
         console.error(`  ❌ ${platform}: failed after 3 attempts — keeping original if available`);
