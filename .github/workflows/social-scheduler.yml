@@ -15,6 +15,7 @@ env:
   PEAKERR_API_KEY: ${{ secrets.PEAKERR_API_KEY }}
   LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
   LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+  ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
 
 jobs:
   post:
