@@ -12,8 +12,9 @@ export async function GET(request: Request) {
   const url = new URL(request.url);
   const platform = url.searchParams.get('platform');
   const auth = request.headers.get('authorization');
+  const expectedPassword = process.env.ADMIN_PASSWORD || process.env.ADMIN_SECRET;
 
-  if (!auth || auth !== process.env.ADMIN_PASSWORD) {
+  if (!auth || auth !== expectedPassword) {
     return new NextResponse('Unauthorized', { status: 401 });
   }
   if (!platform) {
@@ -32,8 +33,9 @@ export async function PUT(request: Request) {
   const url = new URL(request.url);
   const platform = url.searchParams.get('platform');
   const auth = request.headers.get('authorization');
+  const expectedPassword = process.env.ADMIN_PASSWORD || process.env.ADMIN_SECRET;
 
-  if (!auth || auth !== process.env.ADMIN_PASSWORD) {
+  if (!auth || auth !== expectedPassword) {
     return new NextResponse('Unauthorized', { status: 401 });
   }
   if (!platform) {
