@@ -51,6 +51,7 @@ const THREADS_POSTS_FILE    = path.resolve(__dirname, 'threads-posts.json');
 const FACEBOOK_POSTS_FILE   = path.resolve(__dirname, 'facebook-posts.json');
 const LINKEDIN_POSTS_FILE   = path.resolve(__dirname, 'linkedin-posts.json');
 const FARCASTER_POSTS_FILE  = path.resolve(__dirname, 'farcaster-posts.json');
+const MASTODON_POSTS_FILE   = path.resolve(__dirname, 'mastodon-posts.json');
 
 const LIMITS = {
   bluesky:  { chars: 300,   label: '300 graphemes',  short: true  },
@@ -58,6 +59,7 @@ const LIMITS = {
   facebook: { chars: 10000, label: '10 000 characters (sanity cap)', short: false },
   linkedin: { chars: 3000,  label: '3 000 characters', short: false },
   farcaster:{ chars: 1024,  label: '1 024 characters', short: true  },
+  mastodon: { chars: 500,   label: '500 characters', short: true  },
 } as const;
 
 type Platform = keyof typeof LIMITS;
@@ -291,6 +293,7 @@ async function main() {
     facebook: new Map(loadPosts<PlatformPost>(FACEBOOK_POSTS_FILE).map(p => [p.id, p])),
     linkedin: new Map(loadPosts<PlatformPost>(LINKEDIN_POSTS_FILE).map(p => [p.id, p])),
     farcaster: new Map(loadPosts<PlatformPost>(FARCASTER_POSTS_FILE).map(p => [p.id, p])),
+    mastodon:  new Map(loadPosts<PlatformPost>(MASTODON_POSTS_FILE).map(p => [p.id, p])),
   };
 
   const results: Record<Platform, PlatformPost[]> = {
@@ -299,6 +302,7 @@ async function main() {
     facebook: [],
     linkedin: [],
     farcaster: [],
+    mastodon:  [],
   };
 
   let processed = 0;
@@ -352,21 +356,21 @@ async function main() {
       let success = false;
       let activeSourceText = sourceText;
 
-      // Special case: for Farcaster, try to reuse the LinkedIn post verbatim if it fits
-      if (platform === 'farcaster') {
+      // Special case: for Farcaster and Mastodon, try to reuse the LinkedIn post verbatim if it fits
+      if (platform === 'farcaster' || platform === 'mastodon') {
         const linkedinPost = results.linkedin.find(p => p.id === xPost.id) || existing.linkedin.get(xPost.id);
         if (linkedinPost && linkedinPost.text) {
-          if (linkedinPost.text.length <= LIMITS.farcaster.chars) {
+          if (linkedinPost.text.length <= LIMITS[platform].chars) {
             const slopFound = detectSlop(linkedinPost.text);
             if (slopFound.length === 0) {
               rewritten = linkedinPost.text;
               success = true;
-              console.log(`  🔗 farcaster: Reused LinkedIn post verbatim (${rewritten.length} chars)`);
+              console.log(`  🔗 ${platform}: Reused LinkedIn post verbatim (${rewritten.length} chars)`);
             }
           } else {
             // LinkedIn post is too long; rewrite it using Claude instead of X post
             activeSourceText = linkedinPost.text;
-            console.log(`  📝 farcaster: LinkedIn post is too long. Rewriting LinkedIn text for Farcaster.`);
+            console.log(`  📝 ${platform}: LinkedIn post is too long. Rewriting LinkedIn text for ${platform}.`);
           }
         }
       }
@@ -423,7 +427,7 @@ async function main() {
 
       // Preserve any platform-specific fields from existing entry
       if (existingPost) {
-        const preservedKeys = ['postId', 'postUri', 'fbPostId', 'threadsMediaId', 'castHash', 'error'];
+        const preservedKeys = ['postId', 'postUri', 'fbPostId', 'threadsMediaId', 'castHash', 'mastodonId', 'error'];
         for (const key of preservedKeys) {
           if (existingPost[key] !== undefined) {
             platformPost[key] = existingPost[key];
@@ -443,6 +447,7 @@ async function main() {
   savePosts(FACEBOOK_POSTS_FILE, results.facebook);
   savePosts(LINKEDIN_POSTS_FILE, results.linkedin);
   savePosts(FARCASTER_POSTS_FILE, results.farcaster);
+  savePosts(MASTODON_POSTS_FILE,  results.mastodon);
 
   console.log(`\n✅ Done.`);
   console.log(`   Processed : ${processed} rewrites`);
