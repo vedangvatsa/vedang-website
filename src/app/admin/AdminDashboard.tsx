@@ -30,10 +30,16 @@ export default function AdminDashboard() {
         }
       });
       if (!res.ok) {
+        let errMsg = 'Failed to fetch platforms';
+        try {
+          const errData = await res.json();
+          if (errData.error) errMsg = errData.error;
+        } catch (e) {}
+        
         if (res.status === 401 || res.status === 403 || res.status === 503) {
-          throw new Error('Invalid secret or unauthorized');
+          throw new Error(errMsg || 'Invalid secret or unauthorized');
         }
-        throw new Error('Failed to fetch platforms');
+        throw new Error(errMsg);
       }
       const data = await res.json();
       setPlatforms(data.platforms || {});

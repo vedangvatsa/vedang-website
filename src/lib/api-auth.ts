@@ -63,7 +63,7 @@ export function requireAdminSecret(req: NextRequest): NextResponse | null {
     req.headers.get('x-admin-secret') ||
     req.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
 
-  if (!header || header !== secret) {
+  if (!header || !validSecrets.includes(header)) {
     return unauthorized('Invalid or missing admin secret');
   }
 
