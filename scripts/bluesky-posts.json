@@ -1581,13 +1581,14 @@
     "id": "viral-rewrite-19",
     "scheduleDate": "2026-07-08",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Some workplaces punish honesty. Healthy ones let people name their stress. The teams that handle hard feelings openly move faster than the ones that hide them.",
     "image": "scripts/post-images/post_167_1.jpg",
     "error": null,
-    "postedAt": null,
+    "postedAt": "2026-07-12T13:36:37.028Z",
     "postId": null,
-    "tweetId": null
+    "tweetId": null,
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mqhcc3c22f2m"
   },
   {
     "id": "viral-rewrite-20",
