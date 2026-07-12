@@ -1360,17 +1360,19 @@
     "id": "viral-rewrite-32",
     "scheduleDate": "2026-07-12",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Great managers don't hoard talent. They grow it, even if it means you outgrow them. The best leaders measure success by where their people go next, not how long they stay. Find managers who invest in your future at cvin.bio/jobs/li.",
-    "image": "scripts/post-images/post_2_1.jpg"
+    "image": "scripts/post-images/post_2_1.jpg",
+    "error": "Media failed: scripts/post-images/post_2_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-33",
     "scheduleDate": "2026-07-12",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Kindness is the most underrated skill in business. It's not weakness. It's the discipline of treating people well under pressure. The best teams run on it. The worst teams pretend it doesn't matter. Find teams that know it does at cvin.bio/jobs/li.",
-    "image": "scripts/post-images/post_76_1.jpg"
+    "image": "scripts/post-images/post_76_1.jpg",
+    "error": "Media failed: scripts/post-images/post_76_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-34",
@@ -1392,9 +1394,10 @@
     "id": "viral-rewrite-36",
     "scheduleDate": "2026-07-13",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Greatness rarely comes from one type of mind. It happens when the dreamer finds the doer. The best teams pair vision with execution. Look for places where both are valued, not just one. Find them at cvin.bio/jobs/li.",
-    "image": "scripts/post-images/post_143_1.jpg"
+    "image": "scripts/post-images/post_143_1.jpg",
+    "error": "Media failed: scripts/post-images/post_143_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-37",
