@@ -18,6 +18,7 @@ const ALLOWED_PLATFORMS = new Set([
   'instagram',
   'youtube',
   'telegram',
+  'farcaster',
 ]);
 
 export async function POST(req: NextRequest) {

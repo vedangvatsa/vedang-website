@@ -50,12 +50,14 @@ const BLUESKY_POSTS_FILE    = path.resolve(__dirname, 'bluesky-posts.json');
 const THREADS_POSTS_FILE    = path.resolve(__dirname, 'threads-posts.json');
 const FACEBOOK_POSTS_FILE   = path.resolve(__dirname, 'facebook-posts.json');
 const LINKEDIN_POSTS_FILE   = path.resolve(__dirname, 'linkedin-posts.json');
+const FARCASTER_POSTS_FILE  = path.resolve(__dirname, 'farcaster-posts.json');
 
 const LIMITS = {
   bluesky:  { chars: 300,   label: '300 graphemes',  short: true  },
   threads:  { chars: 500,   label: '500 characters', short: true  },
   facebook: { chars: 10000, label: '10 000 characters (sanity cap)', short: false },
   linkedin: { chars: 3000,  label: '3 000 characters', short: false },
+  farcaster:{ chars: 1024,  label: '1 024 characters', short: true  },
 } as const;
 
 type Platform = keyof typeof LIMITS;
@@ -163,6 +165,7 @@ async function rewrite(
     threads: `Threads: Same energy as X — short and sharp. Under 200 words. Max ${limit.chars} characters. One central idea, clear ending.`,
     facebook: `Facebook: Same tone as LinkedIn — slightly more structured, line breaks for readability, can lean into professional context when relevant. Still avoids all corporate-speak. Max ${limit.chars} characters. Images work well here.`,
     linkedin: `LinkedIn: Slightly more structured than X. Use line breaks for readability. Can reference professional context (KPMG, IIT, RSA Fellowship) when genuinely relevant — not as name-dropping. Still avoids ALL corporate-speak. Max ${limit.chars} characters.`,
+    farcaster: `Farcaster: Same energy as X/Bluesky — short and sharp. Direct, data-driven, conversational. Max ${limit.chars} characters.`,
   };
 
   const wordsGuidance = shortForm
@@ -284,6 +287,7 @@ async function main() {
     threads:  new Map(loadPosts<PlatformPost>(THREADS_POSTS_FILE).map(p => [p.id, p])),
     facebook: new Map(loadPosts<PlatformPost>(FACEBOOK_POSTS_FILE).map(p => [p.id, p])),
     linkedin: new Map(loadPosts<PlatformPost>(LINKEDIN_POSTS_FILE).map(p => [p.id, p])),
+    farcaster: new Map(loadPosts<PlatformPost>(FARCASTER_POSTS_FILE).map(p => [p.id, p])),
   };
 
   const results: Record<Platform, PlatformPost[]> = {
@@ -291,6 +295,7 @@ async function main() {
     threads:  [],
     facebook: [],
     linkedin: [],
+    farcaster: [],
   };
 
   let processed = 0;
@@ -391,7 +396,7 @@ async function main() {
 
       // Preserve any platform-specific fields from existing entry
       if (existingPost) {
-        const preservedKeys = ['postId', 'postUri', 'fbPostId', 'threadsMediaId', 'error'];
+        const preservedKeys = ['postId', 'postUri', 'fbPostId', 'threadsMediaId', 'castHash', 'error'];
         for (const key of preservedKeys) {
           if (existingPost[key] !== undefined) {
             platformPost[key] = existingPost[key];
@@ -410,6 +415,7 @@ async function main() {
   savePosts(THREADS_POSTS_FILE,  results.threads);
   savePosts(FACEBOOK_POSTS_FILE, results.facebook);
   savePosts(LINKEDIN_POSTS_FILE, results.linkedin);
+  savePosts(FARCASTER_POSTS_FILE, results.farcaster);
 
   console.log(`\n✅ Done.`);
   console.log(`   Processed : ${processed} rewrites`);
