@@ -114,31 +114,7 @@ function countGraphemes(text: string): number {
   return text.length;
 }
 
-function truncateToLimit(text: string, maxLen: number): string {
-  if (text.length <= maxLen) return text;
-  
-  // Try to truncate at the last sentence boundary (., !, ?) within maxLen - 4
-  const sub = text.substring(0, maxLen - 4);
-  const lastIndex = Math.max(
-    sub.lastIndexOf('. '),
-    sub.lastIndexOf('! '),
-    sub.lastIndexOf('? '),
-    sub.lastIndexOf('\n')
-  );
-  
-  if (lastIndex > 0) {
-    return text.substring(0, lastIndex + 1) + ' ...';
-  }
-  
-  // Fallback: truncate at the last space within maxLen - 4
-  const lastSpace = sub.lastIndexOf(' ');
-  if (lastSpace > 0) {
-    return text.substring(0, lastSpace) + ' ...';
-  }
-  
-  // Absolute fallback: hard truncate
-  return sub + ' ...';
-}
+
 
 function checkLimit(platform: Platform, text: string): boolean {
   if (platform === 'bluesky') return countGraphemes(text) <= LIMITS[platform].chars;
@@ -374,27 +350,31 @@ async function main() {
       // Rewrite with retries
       let rewritten = '';
       let success = false;
+      let activeSourceText = sourceText;
 
-      // Special case: for Farcaster, copy and truncate the LinkedIn post locally (no API call fallback)
+      // Special case: for Farcaster, try to reuse the LinkedIn post verbatim if it fits
       if (platform === 'farcaster') {
         const linkedinPost = results.linkedin.find(p => p.id === xPost.id) || existing.linkedin.get(xPost.id);
-        const baseText = (linkedinPost && linkedinPost.text) ? linkedinPost.text : sourceText;
-        if (baseText) {
-          rewritten = truncateToLimit(baseText, LIMITS.farcaster.chars);
-          success = true;
-          if (rewritten.length === baseText.length) {
-            console.log(`  🔗 farcaster: Reused LinkedIn post verbatim (${rewritten.length} chars)`);
+        if (linkedinPost && linkedinPost.text) {
+          if (linkedinPost.text.length <= LIMITS.farcaster.chars) {
+            const slopFound = detectSlop(linkedinPost.text);
+            if (slopFound.length === 0) {
+              rewritten = linkedinPost.text;
+              success = true;
+              console.log(`  🔗 farcaster: Reused LinkedIn post verbatim (${rewritten.length} chars)`);
+            }
           } else {
-            console.log(`  ✂️  farcaster: Truncated LinkedIn post to fit 1024 chars (${rewritten.length} chars)`);
+            // LinkedIn post is too long; rewrite it using Claude instead of X post
+            activeSourceText = linkedinPost.text;
+            console.log(`  📝 farcaster: LinkedIn post is too long. Rewriting LinkedIn text for Farcaster.`);
           }
         }
       }
 
-
       if (!success) {
         for (let attempt = 1; attempt <= 3; attempt++) {
           try {
-            rewritten = await rewrite(sourceText, platform, attempt);
+            rewritten = await rewrite(activeSourceText, platform, attempt);
 
             if (!checkLimit(platform, rewritten)) {
               const len = platform === 'bluesky' ? countGraphemes(rewritten) : rewritten.length;
