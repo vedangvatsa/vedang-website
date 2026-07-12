@@ -30,14 +30,16 @@ function main() {
       continue;
     }
 
+    const cleanedText = post.text.replace(/\s+([^\.]*cvin\.bio[^\.]*\.?)$/i, '').trim();
     const bskyPost = {
       id: post.id,
       scheduleDate: post.scheduleDate,
       scheduleTime: post.scheduleTime,
       posted: false,
-      text: post.text,
+      text: cleanedText,
       ...(post.image && { image: post.image }),
     };
+
 
     blueskyPosts.push(bskyPost);
     existingBskyIds.add(post.id);
