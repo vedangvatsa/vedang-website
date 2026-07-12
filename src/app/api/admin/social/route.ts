@@ -73,6 +73,18 @@ export async function POST(req: NextRequest) {
 
     const postIndex = posts.findIndex((p: { id?: string }) => p.id === postId);
     if (postIndex === -1) {
+      // Create new post if not found
+      const newPost = {
+        id: postId,
+        text: text ?? '',
+        scheduleDate: scheduleDate ?? '',
+        scheduleTime: scheduleTime ?? '',
+        posted: false,
+        postedAt: null,
+        error: null,
+      };
+      posts.push(newPost);
+    }
       return NextResponse.json({ error: 'Post not found' }, { status: 404 });
     }
 
@@ -87,7 +99,7 @@ export async function POST(req: NextRequest) {
       fs.writeFileSync(filePath, JSON.stringify(posts, null, 2));
     }
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, created: postIndex === -1 });
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : 'Unknown error';
     console.error('Error saving post:', message);

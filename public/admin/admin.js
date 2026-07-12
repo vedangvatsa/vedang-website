@@ -75,7 +75,11 @@ function postsToEvents(posts) {
     id: p.id,
     title: p.text,
     start: `${p.scheduleDate}T${p.scheduleTime}`,
-    extendedProps: { platform: p.platform || 'linkedin' },
+    extendedProps: { 
+      platform: p.platform || 'linkedin',
+      image: p.image,
+      video: p.video 
+    },
   }));
 }
 

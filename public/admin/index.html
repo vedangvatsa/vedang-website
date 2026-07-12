@@ -5,16 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin – Scheduled Posts</title>
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.13/index.global.min.css" rel="stylesheet" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background: #f5f7fa; }
-    #calendar { max-width: 1200px; margin: 40px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-    .fc-toolbar { justify-content: space-between; }
-    .admin-controls { display: flex; gap: 10px; margin-bottom: 10px; }
-    button { background: #0066ff; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; }
-    button:hover { background: #0052cc; }
+    :root {
+      --bg-gradient: linear-gradient(135deg, #e0e7ff, #cfe9ff);
+      --glass-bg: rgba(255, 255, 255, 0.15);
+      --glass-border: rgba(255, 255, 255, 0.3);
+      --primary: #0066ff;
+      --primary-dark: #0052cc;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-gradient);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      overflow-x: hidden;
+    }
+    header {
+      width: 100%;
+      padding: 1rem 2rem;
+      backdrop-filter: blur(12px);
+      background: var(--glass-bg);
+      border-bottom: 1px solid var(--glass-border);
+      text-align: center;
+      color: #111;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    h1 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 1.8rem;
+      background: linear-gradient(90deg, #0066ff, #00c6ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .controls {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    select {
+      padding: 0.4rem 0.8rem;
+      border: none;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(4px);
+      font-size: 0.95rem;
+    }
+    #calendar {
+      width: 100%;
+      max-width: 1200px;
+      margin: 1.5rem auto;
+      background: var(--glass-bg);
+      border-radius: 12px;
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      padding: 1rem;
+    }
+    .fc .fc-toolbar-title {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+    button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    button:hover {
+      background: var(--primary-dark);
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Social Media Scheduler</h1>
+    <div class="controls">
+      <label for="platformSelect">Platform:</label>
+      <select id="platformSelect">
+        <option value="all">All Platforms</option>
+        <option value="linkedin">LinkedIn</option>
+        <option value="x">X / Twitter</option>
+        <option value="bluesky">Bluesky</option>
+        <option value="facebook">Facebook</option>
+        <option value="instagram">Instagram</option>
+        <option value="threads">Threads</option>
+        <option value="tumblr">Tumblr</option>
+        <option value="farcaster">Farcaster</option>
+        <option value="mastodon">Mastodon</option>
+        <option value="devto">Dev.to</option>
+        <option value="hashnode">Hashnode</option>
+      </select>
+    </div>
+  </header>
   <div id="calendar"></div>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.13/index.global.min.js"></script>
   <script src="/admin/admin.js"></script>
