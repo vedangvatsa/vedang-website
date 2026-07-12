@@ -29,7 +29,9 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
+          npm install --prefix scripts
 
       - name: Post to X (Twitter)
         run: npx tsx scripts/x-scheduled-executor.ts
