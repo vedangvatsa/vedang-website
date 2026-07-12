@@ -49,7 +49,7 @@ export function tooManyRequests(message = 'Rate limit exceeded'): NextResponse {
 }
 
 export function requireAdminSecret(req: NextRequest): NextResponse | null {
-  const secret = process.env.ADMIN_SECRET;
+  const secret = process.env.ADMIN_SECRET || process.env.ADMIN_PASSWORD;
   if (!secret) {
     return NextResponse.json(
       { error: 'Admin API is not configured' },
