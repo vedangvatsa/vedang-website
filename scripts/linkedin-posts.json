@@ -1547,10 +1547,9 @@
     "image": "scripts/post-images/post_132_1.jpg",
     "scheduleDate": "2026-07-12",
     "scheduleTime": "09:00",
-    "posted": false,
-    "postedAt": null,
-    "postId": null,
-    "error": null,
+    "posted": true,
+    "postedAt": "2026-07-12T11:03:19.832Z",
+    "postId": "urn:li:share:7482026804728188928",
     "tweetId": null
   },
   {
