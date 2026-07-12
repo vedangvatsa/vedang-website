@@ -125,7 +125,11 @@ export default function AdminDashboard() {
             <h1 className="text-3xl font-semibold tracking-tight">Admin Portal</h1>
             <p className="text-sm text-muted-foreground">Please enter your admin secret key to access the command center.</p>
           </div>
-          <form onSubmit={(e) => { e.preventDefault(); setSecret(passwordInput); }} className="space-y-4">
+          <form onSubmit={(e) => { 
+            e.preventDefault(); 
+            setSecret(passwordInput); 
+            fetchPlatforms(passwordInput); 
+          }} className="space-y-4">
             <div>
               <input
                 type="password"
@@ -138,7 +142,7 @@ export default function AdminDashboard() {
               />
             </div>
             {error && (
-              <p className="text-xs text-destructive bg-destructive/10 p-3 rounded-md border border-destructive/20 font-medium">{error}</p>
+              <p className="text-xs text-destructive bg-destructive/10 p-3 rounded-md border border-destructive/20 font-medium">Error: {error}</p>
             )}
             <button
               type="submit"

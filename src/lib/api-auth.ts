@@ -49,10 +49,12 @@ export function tooManyRequests(message = 'Rate limit exceeded'): NextResponse {
 }
 
 export function requireAdminSecret(req: NextRequest): NextResponse | null {
-  const secret = process.env.ADMIN_SECRET || process.env.ADMIN_PASSWORD;
-  if (!secret) {
+  // Use filter(Boolean) to ignore empty strings
+  const validSecrets = [process.env.ADMIN_SECRET, process.env.ADMIN_PASSWORD].filter(Boolean);
+  
+  if (validSecrets.length === 0) {
     return NextResponse.json(
-      { error: 'Admin API is not configured' },
+      { error: 'Admin API is not configured (Server missing env variables)' },
       { status: 503 }
     );
   }
