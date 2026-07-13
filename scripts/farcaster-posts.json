@@ -1435,9 +1435,11 @@
     "id": "viral-rewrite-33",
     "scheduleDate": "2026-07-12",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Kindness is the most underrated skill in business. It's not weakness. It's the discipline of treating people well under pressure. The best teams run on it. The worst teams pretend it doesn't matter. Find teams that know it does at cvin.bio/jobs/li.",
-    "image": "scripts/post-images/post_76_1.jpg"
+    "image": "scripts/post-images/post_76_1.jpg",
+    "postedAt": "2026-07-13T04:48:23.624Z",
+    "castHash": "0x9b491628c5ff098e6430e1f50f35e8b0a0d71ac6"
   },
   {
     "id": "viral-rewrite-34",

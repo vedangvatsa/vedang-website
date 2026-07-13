@@ -1581,10 +1581,10 @@
     "image": "scripts/post-images/post_68_1.jpg",
     "scheduleDate": "2026-07-13",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "postedAt": null,
     "postId": null,
-    "error": null
+    "error": "Media failed: scripts/post-images/post_68_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-35",

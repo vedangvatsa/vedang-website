@@ -1378,9 +1378,10 @@
     "id": "viral-rewrite-34",
     "scheduleDate": "2026-07-13",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Brainstorming meetings often kill good ideas before they reach air. Pressure, noise, and ego make people hold back. Better ideas come from thinking alone first, then refining together. Find teams that design meetings for honesty at cvin.bio/jobs/li.",
-    "image": "scripts/post-images/post_68_1.jpg"
+    "image": "scripts/post-images/post_68_1.jpg",
+    "error": "Media failed: scripts/post-images/post_68_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-35",
