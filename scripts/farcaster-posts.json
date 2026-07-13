@@ -1455,9 +1455,11 @@
     "id": "viral-rewrite-35",
     "scheduleDate": "2026-07-13",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The best advice doesn't pick your path. It shows you the blind spots in your thinking. Most people don't want to be told what to do. They want clarity on what they're missing. Find mentors who ask the right questions at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_142_1.jpg"
+    "image": "scripts/post-images/post_142_1.jpg",
+    "postedAt": "2026-07-13T20:03:47.352Z",
+    "castHash": "0xcba3c22a15a32566beb8ae844a266ffd3dee9ad7"
   },
   {
     "id": "viral-rewrite-36",

@@ -1483,9 +1483,11 @@
     "id": "ig-bryson-relatable",
     "text": "We've all had that moment at work where we just want to run.\n\nWatch till the end.\n\nWhen you're ready to find a role that actually fits, check cvin.bio",
     "image": "scripts/thread-assets/ig-reels/DWlseMGD5la.mp4",
-    "posted": false,
+    "posted": true,
     "scheduleDate": "2026-07-14",
-    "scheduleTime": "01:00"
+    "scheduleTime": "01:00",
+    "postedAt": "2026-07-13T20:03:34.075Z",
+    "postId": "urn:li:ugcPost:7482525147799781376"
   },
   {
     "id": "ig-movie-scene",

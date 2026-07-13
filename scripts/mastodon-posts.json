@@ -1421,9 +1421,10 @@
     "id": "viral-rewrite-39",
     "scheduleDate": "2026-07-14",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "The best measure of a leader is what happens to the people around them. Do they grow, take risks, and lead others? If not, it's just management. Find leaders who multiply at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_56_1.jpg"
+    "image": "scripts/post-images/post_56_1.jpg",
+    "error": "Media failed: scripts/post-images/post_56_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-40",
