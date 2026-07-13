@@ -1475,7 +1475,8 @@
     "image": "scripts/thread-assets/ig-reels/DWYA42DiYqH.mp4",
     "posted": false,
     "scheduleDate": "2026-07-13",
-    "scheduleTime": "17:00"
+    "scheduleTime": "17:00",
+    "error": "Video upload API failed"
   },
   {
     "id": "ig-bryson-relatable",

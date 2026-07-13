@@ -160,10 +160,12 @@ async function uploadMedia(mediaPath: string): Promise<{ urn: string; type: 'ima
 
   if (isVideo) {
     const urn = await uploadVideo(absPath);
-    return urn ? { urn, type: 'video' } : null;
+    if (!urn) throw new Error("Video upload API failed");
+    return { urn, type: 'video' };
   } else {
     const urn = await uploadImage(absPath);
-    return urn ? { urn, type: 'image' } : null;
+    if (!urn) throw new Error("Image upload API failed");
+    return { urn, type: 'image' };
   }
 }
 
@@ -174,9 +176,13 @@ async function postToLinkedIn(
   let media: { urn: string; type: 'image' | 'video' } | null = null;
 
   if (mediaPath) {
-    media = await uploadMedia(mediaPath);
+    try {
+      media = await uploadMedia(mediaPath);
+    } catch (e: any) {
+      return { success: false, error: e.message };
+    }
     if (!media) {
-      return { success: false, error: `Media failed: ${mediaPath} — skipped` };
+      return { success: false, error: `Media missing: ${mediaPath} — skipped` };
     }
   }
 
