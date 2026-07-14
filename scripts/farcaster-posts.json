@@ -1475,9 +1475,11 @@
     "id": "viral-rewrite-37",
     "scheduleDate": "2026-07-14",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Critics tear you down. Cheerleaders keep you comfortable. Coaches build you up. The best managers and colleagues are coaches. They see your potential and help you reach it. Find teams that coach, not just cheer or criticize at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_66_1.jpg"
+    "image": "scripts/post-images/post_66_1.jpg",
+    "postedAt": "2026-07-14T12:02:57.104Z",
+    "castHash": "0x1bbc9a8b95d224378f04c87e746517686fd11c5d"
   },
   {
     "id": "viral-rewrite-38",

@@ -1503,9 +1503,11 @@
     "id": "ig-that-life-exists",
     "text": "It's easy to envy people who don't track AI, tech cycles, or the economy.\n\nThey sleep. The rest of us refresh feeds at 2 AM.\n\nThe constant noise is exhausting. I wrote about escaping this cognitive overload here: veda.ng/cognition",
     "image": "scripts/thread-assets/ig-reels/DX4HFPvT5mb.mp4",
-    "posted": false,
+    "posted": true,
     "scheduleDate": "2026-07-14",
-    "scheduleTime": "17:00"
+    "scheduleTime": "17:00",
+    "postedAt": "2026-07-14T12:02:43.702Z",
+    "postId": "urn:li:ugcPost:7482766528288002049"
   },
   {
     "id": "ig-how-badly-do-you-want-it",

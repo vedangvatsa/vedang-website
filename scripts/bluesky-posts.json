@@ -1646,13 +1646,14 @@
     "id": "viral-rewrite-24",
     "scheduleDate": "2026-07-09",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Working while sick isn't dedication. It's a symptom of a culture that doesn't trust rest. The healthiest teams don't celebrate martyrs. They protect people so they can do better work.",
     "image": "scripts/post-images/post_6_1.jpg",
     "error": null,
-    "postedAt": null,
+    "postedAt": "2026-07-14T12:02:52.738Z",
     "postId": null,
-    "tweetId": null
+    "tweetId": null,
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mqm5ycazx62p"
   },
   {
     "id": "viral-rewrite-25",
