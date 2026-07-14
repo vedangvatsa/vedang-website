@@ -1485,9 +1485,11 @@
     "id": "viral-rewrite-38",
     "scheduleDate": "2026-07-14",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "A company isn't a family. Families don't fire people. A better model is a community with shared values, real voice, and respect for the person. That kind of workplace earns loyalty without pretending to be something it's not. Find communities at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_3_1.jpg"
+    "image": "scripts/post-images/post_3_1.jpg",
+    "postedAt": "2026-07-14T20:00:49.942Z",
+    "castHash": "0xd742d19f7470299fac78c47bbce8c62c1dbb2334"
   },
   {
     "id": "viral-rewrite-39",

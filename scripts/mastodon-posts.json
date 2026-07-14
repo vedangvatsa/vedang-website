@@ -1448,9 +1448,10 @@
     "id": "viral-rewrite-42",
     "scheduleDate": "2026-07-15",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "The right leader doesn't disappear when the work gets hard. They show up more. Hard times reveal who was actually leading and who was just holding a title. Find leaders who stay when it matters at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_94_1.jpg"
+    "image": "scripts/post-images/post_94_1.jpg",
+    "error": "Media failed: scripts/post-images/post_94_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-43",

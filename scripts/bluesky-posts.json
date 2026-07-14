@@ -1659,13 +1659,14 @@
     "id": "viral-rewrite-25",
     "scheduleDate": "2026-07-10",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Listening is the most underrated leadership skill. Most people wait for their turn to talk. The best leaders listen for what's underneath the words.",
     "image": "scripts/post-images/post_139_1.jpg",
     "error": null,
-    "postedAt": null,
+    "postedAt": "2026-07-14T20:00:44.713Z",
     "postId": null,
-    "tweetId": null
+    "tweetId": null,
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mqmyorxgq22d"
   },
   {
     "id": "viral-rewrite-26",
