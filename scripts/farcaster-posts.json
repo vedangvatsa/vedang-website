@@ -1465,9 +1465,11 @@
     "id": "viral-rewrite-36",
     "scheduleDate": "2026-07-13",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Greatness rarely comes from one type of mind. It happens when the dreamer finds the doer. The best teams pair vision with execution. Look for places where both are valued, not just one. Find them at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_143_1.jpg"
+    "image": "scripts/post-images/post_143_1.jpg",
+    "postedAt": "2026-07-14T04:34:46.644Z",
+    "castHash": "0x6ac98028f714c1f6a25cb6b0ed0a632e0e2f1de3"
   },
   {
     "id": "viral-rewrite-37",

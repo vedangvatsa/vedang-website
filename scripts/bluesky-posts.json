@@ -1633,13 +1633,14 @@
     "id": "viral-rewrite-23",
     "scheduleDate": "2026-07-09",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "A bad boss holds you back. A good one propels you forward. The manager you report to might matter more than the company you join. Their job isn't just performance. It's your growth.",
     "image": "scripts/post-images/post_5_1.jpg",
     "error": null,
-    "postedAt": null,
+    "postedAt": "2026-07-14T04:34:41.581Z",
     "postId": null,
-    "tweetId": null
+    "tweetId": null,
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mqlewuznmc2l"
   },
   {
     "id": "viral-rewrite-24",

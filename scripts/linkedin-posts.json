@@ -1493,9 +1493,11 @@
     "id": "ig-movie-scene",
     "text": "Your stomach rumbles during an interview. The interviewer asks if you missed lunch.\n\n\"No, just hungry for success.\"\n\nPlease don't actually say this in a job interview.\n\nIf you want to find teams that value real skills over cringe interview lines, check cvin.bio",
     "image": "scripts/thread-assets/ig-reels/DXQ9NuYPN_J.mp4",
-    "posted": false,
+    "posted": true,
     "scheduleDate": "2026-07-14",
-    "scheduleTime": "09:00"
+    "scheduleTime": "09:00",
+    "postedAt": "2026-07-14T04:34:34.476Z",
+    "postId": "urn:li:ugcPost:7482653746855038976"
   },
   {
     "id": "ig-that-life-exists",
