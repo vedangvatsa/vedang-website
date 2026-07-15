@@ -1505,9 +1505,11 @@
     "id": "viral-rewrite-40",
     "scheduleDate": "2026-07-15",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Leaders who shut down criticism stop learning. The higher they climb, the fewer people challenge them. That's how good teams become stagnant. The best leaders reward the person brave enough to speak. Find teams with a culture of voice at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_127_1.jpg"
+    "image": "scripts/post-images/post_127_1.jpg",
+    "postedAt": "2026-07-15T12:05:47.756Z",
+    "castHash": "0xad8bf777b4b48d61d1f388757fffdb57c64731b4"
   },
   {
     "id": "viral-rewrite-41",

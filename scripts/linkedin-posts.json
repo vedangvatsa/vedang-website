@@ -1533,9 +1533,11 @@
     "id": "ig-ai-proud-moment",
     "text": "Spending three days debugging makes you feel like a genius when you finally fix it.\n\nThen you realize ChatGPT could have solved it in seconds.\n\nAI can write code, but systems still need human engineers who understand the architecture. Build your profile: cvin.bio",
     "image": "scripts/thread-assets/ig-reels/DXD-i9fEaYJ.mp4",
-    "posted": false,
+    "posted": true,
     "scheduleDate": "2026-07-15",
-    "scheduleTime": "17:00"
+    "scheduleTime": "17:00",
+    "postedAt": "2026-07-15T12:05:37.400Z",
+    "postId": "urn:li:ugcPost:7483129644976599040"
   },
   {
     "id": "ig-ai-limit-reached",
