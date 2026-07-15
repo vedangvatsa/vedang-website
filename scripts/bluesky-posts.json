@@ -1672,13 +1672,14 @@
     "id": "viral-rewrite-26",
     "scheduleDate": "2026-07-10",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Time off shouldn't be a trophy you earn by burning out. It's part of a healthy life, not a reward for suffering. Companies that treat rest as a privilege reveal how they see people.",
     "image": "scripts/post-images/post_147_1.jpg",
     "error": null,
-    "postedAt": null,
+    "postedAt": "2026-07-15T04:34:17.522Z",
     "postId": null,
-    "tweetId": null
+    "tweetId": null,
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mqnvf3mbu624"
   },
   {
     "id": "viral-rewrite-27",

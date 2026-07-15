@@ -1523,9 +1523,11 @@
     "id": "ig-ai-impressed",
     "text": "We spend six hours building a system in AI, only for the AI to tell us \"good job, human.\"\n\nIt feels like we're training the exact tools that will replace us. And we're proud of it.\n\nI analyzed the blur between human and machine labor in my essay: veda.ng/twilight",
     "image": "scripts/thread-assets/ig-reels/DXuNoVPE83k.mp4",
-    "posted": false,
+    "posted": true,
     "scheduleDate": "2026-07-15",
-    "scheduleTime": "09:00"
+    "scheduleTime": "09:00",
+    "postedAt": "2026-07-15T04:34:10.988Z",
+    "postId": "urn:li:ugcPost:7483016036087275520"
   },
   {
     "id": "ig-ai-proud-moment",
