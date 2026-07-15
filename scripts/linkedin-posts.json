@@ -1543,9 +1543,11 @@
     "id": "ig-ai-limit-reached",
     "text": "Hitting an AI rate limit mid-conversation is the most frustrating loading screen today.\n\nYou're minutes away from solving a problem, and now you wait.\n\nThis is why running open-source models locally is becoming the obvious path: veda.ng/asi",
     "image": "scripts/thread-assets/ig-reels/DWx95c6EdUi.mp4",
-    "posted": false,
+    "posted": true,
     "scheduleDate": "2026-07-16",
-    "scheduleTime": "01:00"
+    "scheduleTime": "01:00",
+    "postedAt": "2026-07-15T19:59:07.043Z",
+    "postId": "urn:li:ugcPost:7483248803412869121"
   },
   {
     "id": "ig-ai-constant-pressure",

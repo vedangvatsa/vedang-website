@@ -1515,9 +1515,11 @@
     "id": "viral-rewrite-41",
     "scheduleDate": "2026-07-15",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Burnout isn't a motivation problem. It's a capacity problem. You can be excited about the work and still have too much of it. The question isn't whether you care. It's whether you have bandwidth. Find teams that respect limits at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_118_1.jpg"
+    "image": "scripts/post-images/post_118_1.jpg",
+    "postedAt": "2026-07-15T19:59:20.049Z",
+    "castHash": "0x78d67d28be6711d0e530d76c1ebb20fbb94c5128"
   },
   {
     "id": "viral-rewrite-42",
