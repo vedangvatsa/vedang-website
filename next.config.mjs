@@ -113,6 +113,36 @@ const nextConfig = {
         destination: '/vibecoding/:path*',
         permanent: true,
       },
+      {
+        source: '/ai-reports',
+        destination: '/ailib',
+        permanent: true,
+      },
+      {
+        source: '/ai-reports/:path*',
+        destination: '/ailib/:path*',
+        permanent: true,
+      },
+      {
+        source: '/aireports',
+        destination: '/ailib',
+        permanent: true,
+      },
+      {
+        source: '/aireports/:path*',
+        destination: '/ailib/:path*',
+        permanent: true,
+      },
+      {
+        source: '/web3-reports',
+        destination: '/web3lib',
+        permanent: true,
+      },
+      {
+        source: '/web3-reports/:path*',
+        destination: '/web3lib/:path*',
+        permanent: true,
+      },
       // Essay slug migrations
       { source: '/agent-infrastructure-stack', destination: '/agentstack', permanent: true },
       { source: '/agentic-commerce', destination: '/agentcommerce', permanent: true },

@@ -29,8 +29,8 @@ const resources = [
   { title: 'Swarm Prediction', url: '/swarm-prediction' },
   { title: 'AI Discovery Standards', url: '/ai-discovery-standards' },
   { title: 'Website Checklist', url: '/site-checklist' },
-  { title: 'AI Reports Library', url: '/ai-reports' },
-  { title: 'Web3 Reports Library', url: '/web3-reports' },
+  { title: 'AI Reports Library', url: '/ailib' },
+  { title: 'Web3 Reports Library', url: '/web3lib' },
   { title: 'Web3 & AI Glossary', url: '/glossary' },
   { title: 'Health Protocols', url: '/health-protocols' },
 ];

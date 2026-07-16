@@ -104,8 +104,8 @@ ${essayLinks}
 
 ## Research Data Archives
 
-- [AI Reports and Research Library](https://veda.ng/ai-reports): Searchable database of 19,000+ AI reports, research papers, and industry analyses from Stanford, McKinsey, Deloitte, OpenAI, and more.
-- [Web3 Reports and Research Library](https://veda.ng/web3-reports): Searchable database of 18,000+ Web3 reports, whitepapers, institutional research, and regulatory frameworks.
+- [AI Reports and Research Library](https://veda.ng/ailib): Searchable database of 19,000+ AI reports, research papers, and industry analyses from Stanford, McKinsey, Deloitte, OpenAI, and more.
+- [Web3 Reports and Research Library](https://veda.ng/web3lib): Searchable database of 18,000+ Web3 reports, whitepapers, institutional research, and regulatory frameworks.
 
 ## Research Papers
 
@@ -150,8 +150,8 @@ ${fullTextSections}
 
 ## Research Data Archives
 
-- [AI Reports and Research Library](https://veda.ng/ai-reports): Searchable database of 19,000+ AI reports, research papers, and industry analyses.
-- [Web3 Reports and Research Library](https://veda.ng/web3-reports): Searchable database of 18,000+ Web3 reports, whitepapers, institutional research, and regulatory frameworks.
+- [AI Reports and Research Library](https://veda.ng/ailib): Searchable database of 19,000+ AI reports, research papers, and industry analyses.
+- [Web3 Reports and Research Library](https://veda.ng/web3lib): Searchable database of 18,000+ Web3 reports, whitepapers, institutional research, and regulatory frameworks.
 
 ---
 

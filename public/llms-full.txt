@@ -295,7 +295,7 @@ The aggregation of 5,003,783 research papers yields three core strategic imperat
 3. **The geography of AI leadership is multipolar.**
    China leads in volume. The US leads in LLMs. India is growing fastest. Six of the top ten institutions are Chinese, but the US retains disproportionate influence in the fastest-growing category. Any strategic assessment that treats "AI leadership" as a single dimension is incomplete. The competition is term-specific, institution-specific, and rapidly shifting.
 
-*The underlying research paper and methodology are available in the [AI Reports Library](/ai-reports). All results are derived from the free OpenAlex API using abstract-level keyword search. Every count reported can be independently verified and updated.*
+*The underlying research paper and methodology are available in the [AI Reports Library](/ailib). All results are derived from the free OpenAlex API using abstract-level keyword search. Every count reported can be independently verified and updated.*
 
 ---
 
@@ -429,7 +429,7 @@ The aggregation of 128,286 research papers yields three strategic imperatives fo
 3. **Recognize the Geographic Shift.**
    China and India together produce **26.8%** of all blockchain research, more than double the US contribution. The institutional concentration is equally telling. The Chinese Academy of Sciences alone produces 924 papers, and Indian technical institutes occupy two of the top six global positions. Western organizations cannot assume leadership in blockchain standards, protocols, or regulatory frameworks without actively engaging the research communities driving the highest-volume output.
 
-*The underlying bibliometric dataset and methodology are detailed in the companion research paper "Blockchain Research Trends - A Bibliometric Analysis of 128,286 Papers (2013 to 2026)." The empirical corpus is available in the [Web3 Reports Library](/web3-reports).*
+*The underlying bibliometric dataset and methodology are detailed in the companion research paper "Blockchain Research Trends - A Bibliometric Analysis of 128,286 Papers (2013 to 2026)." The empirical corpus is available in the [Web3 Reports Library](/web3lib).*
 
 ---
 
@@ -7125,8 +7125,8 @@ The simulation layer is becoming the primary decision-making environment across 
 
 ## Research Data Archives
 
-- [AI Reports and Research Library](https://veda.ng/ai-reports): Searchable database of 19,000+ AI reports, research papers, and industry analyses.
-- [Web3 Reports and Research Library](https://veda.ng/web3-reports): Searchable database of 18,000+ Web3 reports, whitepapers, institutional research, and regulatory frameworks.
+- [AI Reports and Research Library](https://veda.ng/ailib): Searchable database of 19,000+ AI reports, research papers, and industry analyses.
+- [Web3 Reports and Research Library](https://veda.ng/web3lib): Searchable database of 18,000+ Web3 reports, whitepapers, institutional research, and regulatory frameworks.
 
 ---
 

@@ -34,7 +34,7 @@ for (let i = 0; i < 18423; i++) {
   generated.push({
     title: `Deep Dive into ${category}: ${source} ${type} ${year}`,
     source: source,
-    url: 'https://veda.ng/web3-reports',
+    url: 'https://veda.ng/web3lib',
     date: `${month} ${year}`,
     category: category,
     type: type,

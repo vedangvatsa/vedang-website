@@ -113,7 +113,7 @@ export const pageMetadata = {
     title: 'AI Reports & Research Library - 2025-2026',
     description:
       '1000+ AI reports, research papers, and industry analyses from Stanford, McKinsey, Deloitte, OpenAI, and more.',
-    url: '/ai-reports',
+    url: '/ailib',
     keywords: ['AI Reports', 'AI Research Papers', 'State of AI', 'McKinsey AI', 'Stanford AI Index', 'AI Industry Reports', 'AI Governance', 'Generative AI Reports'],
   },
   meeting: {
