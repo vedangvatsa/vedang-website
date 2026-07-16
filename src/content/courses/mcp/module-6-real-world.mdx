@@ -133,11 +133,43 @@ server.resource("projects://active", "List of active projects", ...);`}</code></
                 <li>Pass them via the <code>env</code> field in the client configuration</li>
                 <li>Never log or expose API keys in tool responses</li>
             </ul>
-            <p><strong>OAuth 2.0 (Client → Server):</strong></p>
+            <p><strong>OAuth 2.0 (Client → Server) for remote HTTP MCP:</strong></p>
+            <p>Local stdio servers often trust the desktop user. Remote Streamable HTTP servers on the public internet must not. Use OAuth so the MCP client proves who is calling you.</p>
+            <p><strong>Remote OAuth cookbook (high level):</strong></p>
+            <ol>
+                <li><strong>Host the server over HTTPS</strong> with Streamable HTTP (not plain stdio).</li>
+                <li><strong>Register an OAuth app</strong> with your IdP (Auth0, Clerk, Google, GitHub App, or your own AS). Note client id, authorization URL, token URL, and scopes.</li>
+                <li><strong>Client obtains a token</strong> (authorization code + PKCE for public clients). Desktop MCP hosts may handle this flow for you when the server advertises auth metadata.</li>
+                <li><strong>Client sends</strong> <code>Authorization: Bearer &lt;access_token&gt;</code> on every MCP HTTP request.</li>
+                <li><strong>Server validates</strong> the JWT (issuer, audience, expiry, signature via JWKS) or introspects the opaque token before running any tool.</li>
+                <li><strong>Map claims to permissions:</strong> e.g. scope <code>sheets:write</code> required for write tools; deny by default.</li>
+            </ol>
+            <p><strong>Minimal validation sketch (Node):</strong></p>
+            <pre><code>{`// Pseudocode: run before every tool handler on a remote server
+async function requireUser(req) {
+  const header = req.headers.authorization || "";
+  const token = header.startsWith("Bearer ") ? header.slice(7) : null;
+  if (!token) throw new Error("401 missing bearer token");
+
+  const payload = await verifyJwt(token, {
+    issuer: process.env.OAUTH_ISSUER,
+    audience: process.env.OAUTH_AUDIENCE,
+    jwksUrl: process.env.OAUTH_JWKS_URL,
+  });
+
+  // Optional: enforce scopes
+  const scopes = String(payload.scope || "").split(" ");
+  if (!scopes.includes("mcp:invoke")) {
+    throw new Error("403 missing mcp:invoke scope");
+  }
+  return { userId: payload.sub, scopes };
+}`}</code></pre>
+            <p><strong>Operational rules:</strong></p>
             <ul>
-                <li>For remote MCP servers accessed over HTTP, OAuth 2.0 is the standard authentication mechanism</li>
-                <li>The client obtains an access token and includes it in HTTP headers</li>
-                <li>The server validates the token before processing requests</li>
+                <li>Short-lived access tokens + refresh tokens; never log raw tokens.</li>
+                <li>Separate read vs write scopes. A research agent should not get <code>admin:write</code>.</li>
+                <li>Rate-limit by <code>sub</code> (user id), not only by IP.</li>
+                <li>For multi-tenant data, always filter DB queries by <code>userId</code> / tenant from the token, never from tool args alone.</li>
             </ul>
             <p><strong>Security checklist:</strong></p>
             <ul>
@@ -146,6 +178,7 @@ server.resource("projects://active", "List of active projects", ...);`}</code></
                 <li>Principle of least privilege. only request permissions you need</li>
                 <li>Audit logging for all tool invocations</li>
                 <li>Rate limiting to prevent abuse</li>
+                <li>Remote servers: HTTPS + bearer validation on every request</li>
             </ul>
         </AccordionContent>
     </AccordionItem>

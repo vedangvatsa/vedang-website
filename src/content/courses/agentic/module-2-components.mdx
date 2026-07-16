@@ -37,6 +37,49 @@ To understand the Agentic Web, you need to know its building blocks. This module
             </div>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-1b">
+        <AccordionTrigger className="text-lg text-left">Memory Systems: Short-Term, Long-Term, and Beyond</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
+            <p>LLMs are stateless by default. Everything the agent "remembers" must live in the prompt, a store you attach, or both. Weak memory is the main reason agents feel dumb across long tasks.</p>
+            <p><strong>Four memory layers production agents actually use:</strong></p>
+            <ul>
+                <li><strong>Working memory (context window):</strong> The live transcript of the current run: user goal, recent tool results, scratchpad notes. Cap it with summarization when it grows past a token budget.</li>
+                <li><strong>Episodic memory:</strong> Past sessions and outcomes ("last time this customer asked about refunds, we escalated"). Store as embeddings or structured event logs and retrieve by similarity or filters.</li>
+                <li><strong>Semantic memory:</strong> Stable facts: product docs, policies, user preferences. Usually a vector store or RAG index over your knowledge base.</li>
+                <li><strong>Procedural memory:</strong> How the agent should act: playbooks, successful tool sequences, and "recipes" that worked before. Often implemented as prompts, skill files, or retrieved workflow templates.</li>
+            </ul>
+            <p><strong>Implementation patterns:</strong></p>
+            <ul>
+                <li><strong>Sliding window + summary:</strong> Keep the last N turns raw; compress older turns into a rolling summary.</li>
+                <li><strong>Vector retrieval:</strong> Embed past notes and docs; inject only top-k relevant chunks each step.</li>
+                <li><strong>Structured state:</strong> Keep a JSON state object (goal, plan, open tasks, facts) that you rewrite after every step. Easier to debug than pure chat history.</li>
+                <li><strong>Write-back rules:</strong> Only persist high-value memories (preferences, confirmed facts). Do not store every tool dump forever.</li>
+            </ul>
+            <p><strong>Failure modes to design for:</strong> context bloat, stale preferences, retrieving the wrong episode, and leaking one user's memory into another user's session. Always key memory by user/tenant and expire sensitive data.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-1c">
+        <AccordionTrigger className="text-lg text-left">Human-in-the-Loop (HITL): Approval Gates and Escalation</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
+            <p>Autonomy without control is a liability. Human-in-the-loop means the agent can propose or prepare actions, but certain steps require a human before they become irreversible.</p>
+            <p><strong>When to require a human:</strong></p>
+            <ul>
+                <li>Payments, refunds, contract changes, or legal commitments</li>
+                <li>Deleting data, mass emails, or publishing public content</li>
+                <li>Low confidence or conflicting tool results</li>
+                <li>First-time actions for a new user, merchant, or policy class</li>
+            </ul>
+            <p><strong>HITL patterns:</strong></p>
+            <ul>
+                <li><strong>Approval gate:</strong> Agent prepares a draft (email, PR, SQL). UI shows diff. Human clicks Approve / Edit / Reject.</li>
+                <li><strong>Policy gate:</strong> Automated rules block disallowed tools. Human can override with audit log.</li>
+                <li><strong>Escalation:</strong> Agent detects out-of-scope request and hands off to a person with full transcript context.</li>
+                <li><strong>Sampling review:</strong> Even "safe" paths get random human review (for example 5% of runs) to catch silent failures.</li>
+            </ul>
+            <p><strong>Design rule:</strong> Separate <em>read tools</em> (search, fetch) from <em>write tools</em> (send, delete, charge). Auto-allow reads; gate writes. Log who approved what, when, and why.</p>
+            <p><strong>When not to use multi-agent:</strong> If a single tool-calling agent with clear steps solves the task, multi-agent overhead adds latency, cost, and failure modes. Add specialists only when roles truly diverge (research vs write vs review) or when parallel work saves wall-clock time.</p>
+        </AccordionContent>
+    </AccordionItem>
     <AccordionItem value="item-2">
         <AccordionTrigger className="text-lg text-left">Tool Use: The Agent's Hands</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">

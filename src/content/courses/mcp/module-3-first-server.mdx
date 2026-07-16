@@ -163,6 +163,44 @@ await server.connect(transport);`}</code></pre>
             <p><strong>5. Not restarting the client.</strong> After changing your server code or config, you must restart the MCP client (Claude Desktop, Cursor) for changes to take effect.</p>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-7">
+        <AccordionTrigger className="text-lg text-left">Python Track: Same Server with the Official Python SDK</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
+            <p>TypeScript is common for MCP tutorials, but many data and ML teams prefer Python. The official Python SDK exposes the same tools/resources/prompts model.</p>
+            <p><strong>Setup:</strong></p>
+            <pre><code>{`pip install "mcp[cli]"
+# or: uv add "mcp[cli]"`}</code></pre>
+            <p><strong>Minimal server (<code>server.py</code>):</strong></p>
+            <pre><code>{`from mcp.server.fastmcp import FastMCP
+
+mcp = FastMCP("hello-python")
+
+@mcp.tool()
+def add(a: int, b: int) -> int:
+    """Add two numbers and return the sum."""
+    return a + b
+
+@mcp.resource("greeting://{name}")
+def greeting(name: str) -> str:
+    """Return a personalized greeting as a resource."""
+    return f"Hello, {name}!"
+
+if __name__ == "__main__":
+    mcp.run()  # stdio transport by default`}</code></pre>
+            <p><strong>Claude Desktop / Cursor config (stdio):</strong></p>
+            <pre><code>{`{
+  "mcpServers": {
+    "hello-python": {
+      "command": "python",
+      "args": ["/absolute/path/to/server.py"]
+    }
+  }
+}`}</code></pre>
+            <p><strong>Test:</strong> Run <code>mcp dev server.py</code> (CLI) or point MCP Inspector at the same command. Call the <code>add</code> tool with <code>a=2, b=3</code> and confirm you get <code>5</code>.</p>
+            <p><strong>When to choose Python vs TypeScript:</strong> use Python when the tools wrap data science stacks, existing FastAPI services, or pandas pipelines. Use TypeScript when the server lives next to a Next.js app or Node automation. Protocol behavior is the same; only the SDK syntax changes.</p>
+            <p>Full reference: <a href="https://github.com/modelcontextprotocol/python-sdk" target="_blank" rel="noopener noreferrer">modelcontextprotocol/python-sdk</a>.</p>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <ServerBoilerplate />

@@ -428,7 +428,7 @@ dig CAA example.com +short
                 llms.txt, structured data for agents, robots.txt AI crawler rules, MCP endpoints, and agent skill files.
               </p>
             </Link>
-            <Link href="/agentic-web" className="rounded-lg border bg-card p-5 hover:border-primary/50 transition-colors block">
+            <Link href="/agentic" className="rounded-lg border bg-card p-5 hover:border-primary/50 transition-colors block">
               <span className="font-medium text-sm">The Agentic Web</span>
               <p className="text-sm text-muted-foreground mt-1">
                 How autonomous AI agents interact with the web, and what your site needs to be ready for them.

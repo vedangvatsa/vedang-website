@@ -103,6 +103,39 @@ Building an app on your computer is only half the job. To share it with the worl
             </ul>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-5">
+        <AccordionTrigger className="text-lg">Auth, Security, and CI Before You Share the Link</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
+            <p>Deployment is not done when the green checkmark appears. Production needs the same security habits as a real product.</p>
+            <p><strong>Environment and secrets:</strong></p>
+            <ul>
+                <li>Set production env vars in the host dashboard (Vercel/Netlify/Railway). Never commit <code>.env</code>.</li>
+                <li>Use different API keys for local vs production.</li>
+                <li>Confirm <code>NEXT_PUBLIC_*</code> (or equivalent) values never contain secret keys.</li>
+            </ul>
+            <p><strong>Auth in production:</strong></p>
+            <ul>
+                <li>Configure the auth provider's production callback URLs (for example <code>https://yourdomain.com/api/auth/callback</code>).</li>
+                <li>Test sign-in, sign-out, and a protected page on the live domain, not only localhost.</li>
+                <li>If using Supabase RLS, test with two users: user A must not read user B's rows.</li>
+            </ul>
+            <p><strong>Minimal CI pipeline (copy this intent into your AI prompt):</strong></p>
+            <pre><code>{`# On every push:
+# 1. npm ci
+# 2. npm run lint
+# 3. npm test
+# 4. npm run build
+# Optional: Playwright smoke test against preview URL`}</code></pre>
+            <p><strong>Security smoke test after deploy:</strong></p>
+            <ol>
+                <li>Open the site in a private window. Protected routes should redirect to login.</li>
+                <li>Try a forged ID in a URL or API call. You should get 401/403, not another user's data.</li>
+                <li>Check response headers: HTTPS works, no stack traces on errors.</li>
+                <li>Scan the repo for accidentally committed secrets (<code>gh secret scanning</code> or GitHub's secret alerts).</li>
+            </ol>
+            <p>If any of these fail, fix before sharing the product link publicly. Speed without security is just a faster way to create an incident.</p>
+        </AccordionContent>
+    </AccordionItem>
 </Accordion>
 
 <DeploymentChecklist />

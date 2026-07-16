@@ -50,6 +50,41 @@ Before you launch, you need to test your product. AI-generated code often has su
 **AI-Assisted Testing:**
 You can also ask the AI to write tests for you: *"Write end-to-end tests for this application using Playwright. Test the happy path (user enters input and gets results) and the error path (API returns an error, user submits empty form)."*
 
+**Automated tests you should actually ship:**
+
+1. **Unit tests** for pure logic (pricing, permission checks, parsers). Prompt: *"Write Vitest unit tests for this function. Cover empty input, max length, and invalid IDs."*
+2. **API/route tests** for auth and validation. Prompt: *"Add tests that unauthenticated requests get 401 and invalid body gets 400."*
+3. **One Playwright smoke test** that signs in (or uses a test user), hits the main flow, and asserts a visible success state. Run it in CI on every push.
+4. **AI security review pass** before launch: *"Review this auth and data-access code for OWASP Top 10 issues: injection, broken access control, secrets in client, missing rate limits. List findings by severity."*
+
+Do not trust AI-written tests blindly. Read assertions. Delete tests that only check mocks and never touch real behavior.
+
+<SectionLabel label="Authentication That Is Not a Trap" />
+
+AI will happily invent a custom login system. That is how accounts get stolen. Prefer battle-tested providers and enforce rules in your rule file.
+
+**Default stack choices:**
+- **Clerk, Auth.js (NextAuth), Supabase Auth, or Firebase Auth** for email/OAuth. Do not roll your own password reset, session cookies, or JWT signing.
+- **Row Level Security (RLS)** if you use Supabase/Postgres: every table that stores user data must restrict rows by `auth.uid()`.
+- **Server-only secrets:** API keys stay in environment variables and server routes. Never put service-role keys in client components.
+- **Session checks on the server:** protect API routes and server actions, not just the UI. Hiding a button is not security.
+
+**Prompt the AI correctly:**
+> "Add Clerk authentication. Protect /dashboard and all /api/user/* routes. Unauthenticated users redirect to sign-in. Do not invent a custom password table."
+
+**Payment safety (when you add Stripe):**
+- Use Stripe Checkout or Payment Element; never store card numbers.
+- Verify webhooks with the Stripe signing secret on the server.
+- Entitlements (what the user paid for) live in your DB, updated only by verified webhooks.
+
+**Pre-launch auth checklist:**
+1. Can I access another user's data by changing an ID in the URL?
+2. Are service keys only on the server?
+3. Does logout actually invalidate the session?
+4. Are rate limits on login and password reset endpoints?
+
+If the AI generated auth that fails any of these, revert and re-prompt with a named provider.
+
 <SectionLabel label="Monetization: From Project to Profit" />
 
 Vibe coding drastically reduces the cost of testing a business idea. You can build and launch a prototype in a weekend instead of hiring an agency for six months. 

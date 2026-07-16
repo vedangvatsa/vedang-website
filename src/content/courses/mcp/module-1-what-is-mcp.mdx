@@ -87,7 +87,7 @@ MCP changes this. Created by Anthropic and now adopted across the industry, the 
         </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-6">
-        <AccordionTrigger className="text-lg text-left">MCP vs Native Function Calling</AccordionTrigger>
+        <AccordionTrigger className="text-lg text-left">MCP vs Native Function Calling vs OpenAPI Tools</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>Both MCP and native function calling (Claude's tool_use, GPT's function_calling) let AI invoke external tools. The difference is in scope and portability:</p>
             <p><strong>Native Function Calling:</strong></p>
@@ -104,7 +104,20 @@ MCP changes this. Created by Anthropic and now adopted across the industry, the 
                 <li>The server handles execution. the client just routes the call</li>
                 <li>Best for: reusable tools, team-shared infrastructure, ecosystem servers</li>
             </ul>
-            <p><strong>In practice:</strong> Use native function calling when building a specific AI feature inside your app. Use MCP when building tools that should work across multiple AI environments, be shared with a team, or distributed as open source.</p>
+            <p><strong>OpenAPI / REST tools:</strong></p>
+            <ul>
+                <li>Your existing HTTP API documented with OpenAPI/Swagger</li>
+                <li>Some hosts can import OpenAPI and expose operations as tools without a custom MCP server</li>
+                <li>Great when the surface area is already a stable product API</li>
+                <li>Weaker when you need rich agent UX: curated tool descriptions, multi-step workflows, resources, or prompt templates that MCP primitives provide</li>
+            </ul>
+            <p><strong>Decision tree:</strong></p>
+            <ul>
+                <li><strong>Single app, few tools, one model provider:</strong> native function calling is simplest.</li>
+                <li><strong>Same tools in Claude Desktop, Cursor, and your product:</strong> build MCP once.</li>
+                <li><strong>Large existing REST surface for humans/apps:</strong> keep OpenAPI; wrap only agent-critical operations in MCP if hosts need better tool UX or local stdio access.</li>
+            </ul>
+            <p><strong>In practice:</strong> Use native function calling when building a specific AI feature inside your app. Use MCP when building tools that should work across multiple AI environments, be shared with a team, or distributed as open source. Use OpenAPI as the system of record for public HTTP APIs, and MCP as the agent-facing adapter when needed.</p>
         </AccordionContent>
     </AccordionItem>
 </Accordion>

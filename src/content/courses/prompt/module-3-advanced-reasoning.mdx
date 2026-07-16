@@ -31,6 +31,32 @@ For complex problems, you need to guide the model's reasoning process. These tec
             <p>This technique builds on CoT. Instead of generating one chain of thought, you generate several by using a higher temperature. Then, you take the most common answer from all the different reasoning paths. This "majority vote" approach significantly boosts accuracy for complex reasoning tasks.</p>
         </AccordionContent>
     </AccordionItem>
+    <AccordionItem value="item-2b">
+        <AccordionTrigger className="text-lg">Tree of Thoughts (ToT)</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
+            <p>Tree of Thoughts extends Chain of Thought from a single linear path into a search tree. Instead of one reasoning chain, the model explores multiple intermediate "thoughts," evaluates which branches look promising, and can backtrack when a path fails.</p>
+            <p><strong>How ToT works (conceptually):</strong></p>
+            <ol>
+                <li><strong>Decompose:</strong> Break the problem into intermediate steps that can branch (options, hypotheses, or sub-plans).</li>
+                <li><strong>Expand:</strong> Generate several candidate thoughts at each step (for example, three different strategies).</li>
+                <li><strong>Evaluate:</strong> Score each branch: "Is this path likely to solve the problem?" Use a separate judge prompt or the same model as evaluator.</li>
+                <li><strong>Search:</strong> Keep the best branches (breadth-first or best-first). Prune dead ends early.</li>
+                <li><strong>Conclude:</strong> Follow the winning path to a final answer, or synthesize across top branches.</li>
+            </ol>
+            <p><strong>When ToT beats plain CoT:</strong></p>
+            <ul>
+                <li>Problems with many possible approaches (planning, game strategy, creative design with hard constraints)</li>
+                <li>Tasks where early mistakes compound and you need the option to backtrack</li>
+                <li>Search-like problems: "find a sequence of steps that satisfies all constraints"</li>
+            </ul>
+            <p><strong>Example prompt pattern:</strong></p>
+            <blockquote className="border-l-4 border-primary/50 pl-4 italic my-4">
+                "We need a go-to-market plan for a B2B API product. Generate three distinct strategies (product-led, sales-led, community-led). For each strategy, list 4 steps, risks, and a 0-10 viability score. Then pick the best strategy and expand only that branch into a detailed 30-day plan."
+            </blockquote>
+            <p><strong>Cost tradeoff:</strong> ToT uses many more tokens than single-path CoT because it explores and evaluates multiple branches. Use it when accuracy matters more than latency or cost. For simple multi-step math or one correct answer, CoT or self-consistency is usually enough.</p>
+            <p><strong>Practical shortcut:</strong> You do not need a full research implementation of ToT. A "manual ToT" prompt that forces the model to propose alternatives, score them, then expand the winner captures most of the benefit for product and planning work.</p>
+        </AccordionContent>
+    </AccordionItem>
         <AccordionItem value="item-3">
         <AccordionTrigger className="text-lg">ReAct (Reason and Act)</AccordionTrigger>
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
@@ -93,13 +119,33 @@ For complex problems, you need to guide the model's reasoning process. These tec
                 <li>The answer depends on current or dynamic data</li>
                 <li>Example: "What is the current stock price of NVIDIA and is it overvalued based on its P/E ratio?"</li>
             </ul>
+            <p><strong>Use Tree of Thoughts when:</strong></p>
+            <ul>
+                <li>The problem has many valid intermediate paths and early choices matter</li>
+                <li>You need exploration, comparison, and backtracking (planning, strategy, constraint satisfaction)</li>
+                <li>You can afford higher token cost for better solutions</li>
+            </ul>
             <p><strong>Use Multimodal prompting when:</strong></p>
             <ul>
                 <li>You have images, PDFs, screenshots, or audio to analyze</li>
                 <li>Text alone cannot capture the information (UI bugs, chart interpretation, handwritten notes)</li>
                 <li>You need to cross-reference visual and textual data</li>
             </ul>
-            <p>Start with simple Chain of Thought for most tasks. Escalate to Self-Consistency when accuracy is critical and to ReAct when the model needs live data.</p>
+            <p>Start with simple Chain of Thought for most tasks. Escalate to Self-Consistency when accuracy is critical, ToT when you need search over plans, and ReAct when the model needs live data.</p>
+        </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-7">
+        <AccordionTrigger className="text-lg">Reasoning Models (o-series, DeepSeek-R1, and friends)</AccordionTrigger>
+        <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
+            <p>A new class of models does much of the "think step by step" work internally before answering. Examples include OpenAI's o-series, DeepSeek-R1, and similar reasoning-focused models. They are optimized for multi-step math, coding, and hard logic rather than pure chat speed.</p>
+            <p><strong>How they change prompting:</strong></p>
+            <ul>
+                <li><strong>Less scaffolding needed:</strong> You often do not need long CoT instructions. A clear problem statement and constraints work better than "think step by step" padded with fluff.</li>
+                <li><strong>More compute, more cost/latency:</strong> Reasoning models may run long internal chains. Use them for hard problems; use fast chat models for classification, formatting, and simple Q&amp;A.</li>
+                <li><strong>Structure still wins:</strong> Specify output format, success criteria, and what to refuse. Reasoning does not replace clear requirements.</li>
+                <li><strong>Verify, do not worship:</strong> They still hallucinate. For high-stakes answers, require citations, unit tests, or an independent check step.</li>
+            </ul>
+            <p><strong>Decision rule:</strong> Use a reasoning model when the task is hard and wrong answers are expensive (architecture design, complex debugging, multi-constraint planning). Use a standard model with CoT/ToT when you need speed, cheap batching, or full control over the visible reasoning trace for evals.</p>
         </AccordionContent>
     </AccordionItem>
 </Accordion>

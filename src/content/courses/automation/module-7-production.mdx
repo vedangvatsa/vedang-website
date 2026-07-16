@@ -111,7 +111,7 @@ async function reportPipelineStatus(pipeline, results) {
         <AccordionContent className="prose dark:prose-invert max-w-4xl mx-auto text-base">
             <p>As you build more automations, organization becomes critical:</p>
             <p><strong>1. Documentation:</strong> Every automation should have a README with: what it does, what triggers it, what services it connects to, what secrets it needs, and how to test it. Future-you (or your team) will thank you.</p>
-            <p><strong>2. Version Control:</strong> Keep all automation code in Git repositories. Use the same workflow you'd use for any software. branches, pull requests, code review. The [Vibe Coding](/vibe-coding) course covers these fundamentals.</p>
+            <p><strong>2. Version Control:</strong> Keep all automation code in Git repositories. Use the same workflow you'd use for any software. branches, pull requests, code review. The [Vibe Coding](/vibecoding) course covers these fundamentals.</p>
             <p><strong>3. Centralized Secrets:</strong> Use a secrets manager (GitHub Secrets, Vercel Environment Variables, 1Password) instead of scattering API keys across config files.</p>
             <p><strong>4. Automation Inventory:</strong> Maintain a spreadsheet or dashboard listing all running automations:</p>
             <div className="grid md:grid-cols-2 gap-4 my-4">
@@ -150,7 +150,7 @@ async function reportPipelineStatus(pipeline, results) {
                 <li><strong><code>ai-plugin.json</code></strong>. The OpenAI plugin format. Describes your site's capabilities for ChatGPT and other platforms.</li>
                 <li><strong><code>robots.txt</code></strong>. Updated to explicitly welcome AI crawlers: OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended.</li>
             </ul>
-            <p>Deploy all of these at once with the <a href="https://github.com/vedangvatsa/ai-discovery-standards" target="_blank">AI Discovery Standards</a> framework: <code>npx github:vedangvatsa/ai-discovery-standards</code></p>
+            <p>Deploy all of these at once with the <a href="/aistandards">AI Discovery Standards</a> framework: <code>npx github:vedangvatsa/ai-discovery-standards</code></p>
             <p><strong>Why this matters for automation:</strong> If your automated content pipeline publishes blog posts, those posts need to be discoverable by Perplexity, ChatGPT Search, and Google AI Overviews. Without proper discovery files, your automated content is invisible to the fastest-growing search channels.</p>
         </AccordionContent>
     </AccordionItem>

@@ -82,6 +82,21 @@ A single prompt is powerful. But real-world tasks, writing a research report, bu
                 <li><strong>Cost:</strong> How many tokens does the prompt consume?</li>
             </ul>
             <p><strong>Tools:</strong> LangSmith, Braintrust, and Promptfoo are popular platforms for running prompt evaluations at scale.</p>
+            <p><strong>Production eval habits:</strong></p>
+            <ul>
+                <li><strong>Version every prompt.</strong> Treat system prompts like code: name them, version them (<code>support-v3</code>), and record which version produced each log line.</li>
+                <li><strong>Split offline vs online.</strong> Offline: run your fixed eval set on every prompt change before deploy. Online: sample live traffic, score with LLM-as-judge or human review, and alert on regression.</li>
+                <li><strong>Regression gates.</strong> Fail CI if accuracy or faithfulness drops more than a threshold (for example, -3%) versus the previous version.</li>
+                <li><strong>Stratify hard cases.</strong> Keep a "nightmare set" of adversarial, ambiguous, and multilingual examples that historically broke you.</li>
+                <li><strong>Track cost and latency as first-class metrics.</strong> A prompt that is 2% more accurate but 10x more expensive may not be a win.</li>
+            </ul>
+            <p><strong>Minimal eval loop you can run this week:</strong></p>
+            <ol>
+                <li>Export 30 real user inputs (anonymized) plus the output you wanted.</li>
+                <li>Run current prompt + candidate prompt on all 30.</li>
+                <li>Score with a rubric (correct / partial / wrong) or LLM-as-judge with a fixed judge prompt.</li>
+                <li>Ship only if the candidate wins on accuracy without blowing the cost budget.</li>
+            </ol>
         </AccordionContent>
     </AccordionItem>
 </Accordion>
