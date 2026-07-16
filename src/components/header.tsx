@@ -80,10 +80,10 @@ export function Header() {
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
-                  <Link href="/ai-discovery-standards">AI Discovery Standards</Link>
+                  <Link href="/aistandards">AI Discovery Standards</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/site-checklist">Site Checklist</Link>
+                  <Link href="/sitecheck">Site Checklist</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/glossary">Glossary</Link>
@@ -155,8 +155,8 @@ export function Header() {
                   <MobileNavLink href="/glossary" onClose={closeMobile}>Glossary</MobileNavLink>
                   <MobileNavLink href="/lit" onClose={closeMobile}>LinkedIn Translator</MobileNavLink>
                   <MobileNavLink href="/swarm-prediction" onClose={closeMobile}>Swarm Prediction</MobileNavLink>
-                  <MobileNavLink href="/ai-discovery-standards" onClose={closeMobile}>AI Discovery Standards</MobileNavLink>
-                  <MobileNavLink href="/site-checklist" onClose={closeMobile}>Site Checklist</MobileNavLink>
+                  <MobileNavLink href="/aistandards" onClose={closeMobile}>AI Discovery Standards</MobileNavLink>
+                  <MobileNavLink href="/sitecheck" onClose={closeMobile}>Site Checklist</MobileNavLink>
                 </MobileNavSection>
 
                 <MobileNavSection title="Libraries">

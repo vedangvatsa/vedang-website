@@ -25,11 +25,11 @@ export const metadata: Metadata = {
     'AI visibility',
     'Vedang Vatsa',
   ],
-  alternates: { canonical: '/ai-discovery-standards' },
+  alternates: { canonical: '/aistandards' },
   openGraph: {
     title: 'AI Discovery Standards',
     description: 'Every file, protocol, and technique for AI web discoverability. One command to set up all 13 discovery files.',
-    url: '/ai-discovery-standards',
+    url: '/aistandards',
     type: 'website',
     siteName: 'Vedang Vatsa',
   },
@@ -45,7 +45,7 @@ const softwareSchema = {
   '@type': 'SoftwareSourceCode',
   name: 'AI Discovery Standards',
   description: 'A complete reference of every file, protocol, and technique used to make websites discoverable by AI systems, search engines, and autonomous agents. Includes ready-to-use templates and a CLI tool.',
-  url: 'https://veda.ng/ai-discovery-standards',
+  url: 'https://veda.ng/aistandards',
   codeRepository: 'https://github.com/vedangvatsa/ai-discovery-standards',
   programmingLanguage: 'JavaScript',
   runtimePlatform: 'Node.js',
@@ -109,7 +109,7 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://veda.ng' },
-    { '@type': 'ListItem', position: 2, name: 'AI Discovery Standards', item: 'https://veda.ng/ai-discovery-standards' },
+    { '@type': 'ListItem', position: 2, name: 'AI Discovery Standards', item: 'https://veda.ng/aistandards' },
   ],
 };
 

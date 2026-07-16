@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     'privacy compliance',
     'Vedang Vatsa',
   ],
-  alternates: { canonical: '/site-checklist' },
+  alternates: { canonical: '/sitecheck' },
   openGraph: {
     title: 'The Site Checklist',
     description: 'Actionable requirements for modern websites. Code examples, verification commands, and a master AI prompt to audit your site.',
-    url: '/site-checklist',
+    url: '/sitecheck',
     type: 'website',
     siteName: 'Vedang Vatsa',
   },
@@ -44,7 +44,7 @@ const articleSchema = {
   name: 'The Site Checklist',
   headline: 'The Site Checklist',
   description: 'Actionable checklist for building modern websites. Code examples, verification commands, and a master prompt to audit any site.',
-  url: 'https://veda.ng/site-checklist',
+  url: 'https://veda.ng/sitecheck',
   author: {
     '@type': 'Person',
     name: 'Vedang Vatsa',
@@ -103,7 +103,7 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://veda.ng' },
-    { '@type': 'ListItem', position: 2, name: 'Site Checklist', item: 'https://veda.ng/site-checklist' },
+    { '@type': 'ListItem', position: 2, name: 'Site Checklist', item: 'https://veda.ng/sitecheck' },
   ],
 };
 

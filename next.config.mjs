@@ -143,6 +143,26 @@ const nextConfig = {
         destination: '/web3lib/:path*',
         permanent: true,
       },
+      {
+        source: '/ai-discovery-standards',
+        destination: '/aistandards',
+        permanent: true,
+      },
+      {
+        source: '/ai-discovery-standards/:path*',
+        destination: '/aistandards/:path*',
+        permanent: true,
+      },
+      {
+        source: '/site-checklist',
+        destination: '/sitecheck',
+        permanent: true,
+      },
+      {
+        source: '/site-checklist/:path*',
+        destination: '/sitecheck/:path*',
+        permanent: true,
+      },
       // Essay slug migrations
       { source: '/agent-infrastructure-stack', destination: '/agentstack', permanent: true },
       { source: '/agentic-commerce', destination: '/agentcommerce', permanent: true },

@@ -422,7 +422,7 @@ dig CAA example.com +short
         <section>
           <h2 className="text-2xl font-semibold tracking-tight mb-4">Related</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/ai-discovery-standards" className="rounded-lg border bg-card p-5 hover:border-primary/50 transition-colors block">
+            <Link href="/aistandards" className="rounded-lg border bg-card p-5 hover:border-primary/50 transition-colors block">
               <span className="font-medium text-sm">AI Discovery Standards</span>
               <p className="text-sm text-muted-foreground mt-1">
                 llms.txt, structured data for agents, robots.txt AI crawler rules, MCP endpoints, and agent skill files.
