@@ -1468,9 +1468,10 @@
     "id": "viral-rewrite-44",
     "scheduleDate": "2026-07-16",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Peak performance isn't about constant motion. Athletes know that growth happens in recovery. The same is true for knowledge work. Find teams that respect recovery at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_16_1.jpg"
+    "image": "scripts/post-images/post_16_1.jpg",
+    "error": "Media failed: scripts/post-images/post_16_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-45",

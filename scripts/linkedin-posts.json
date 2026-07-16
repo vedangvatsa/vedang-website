@@ -1563,9 +1563,11 @@
     "id": "ig-shadow-ai",
     "text": "Your team is pasting sensitive company data into ChatGPT right now.\n\nWithout a policy or audit trail, shadow AI is already a massive risk.\n\nIf you want to deploy AI without breaking things, you need a stepwise strategy: veda.ng/stepwise",
     "image": "scripts/thread-assets/ig-reels/DXs6sDoEetP.mp4",
-    "posted": false,
+    "posted": true,
     "scheduleDate": "2026-07-16",
-    "scheduleTime": "17:00"
+    "scheduleTime": "17:00",
+    "postedAt": "2026-07-16T12:06:38.231Z",
+    "postId": "urn:li:ugcPost:7483492287851716609"
   },
   {
     "id": "ig-daytrading-liar",

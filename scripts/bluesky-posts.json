@@ -1724,13 +1724,14 @@
     "id": "viral-rewrite-30",
     "scheduleDate": "2026-07-11",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "You don't have to be the smartest or hardest worker in the room. You need to be thoughtful and dependable. In most teams, reliability and reflection beat brilliance and hustle. Be the person people trust.",
     "image": "scripts/post-images/post_137_1.jpg",
     "error": null,
-    "postedAt": null,
+    "postedAt": "2026-07-16T12:06:45.247Z",
     "postId": null,
-    "tweetId": null
+    "tweetId": null,
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mqr753746v2t"
   },
   {
     "id": "viral-rewrite-31",
