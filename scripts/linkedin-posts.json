@@ -1553,9 +1553,11 @@
     "id": "ig-ai-constant-pressure",
     "text": "A new AI tool every week. A new framework every month.\n\nWe used to learn one skill and use it for a decade. Now skills barely last a year.\n\nDon't chase the buzzwords. Focus on building real projects and showcase them: cvin.bio",
     "image": "scripts/thread-assets/ig-reels/DVqe3fCEZdC.mp4",
-    "posted": false,
+    "posted": true,
     "scheduleDate": "2026-07-16",
-    "scheduleTime": "09:00"
+    "scheduleTime": "09:00",
+    "postedAt": "2026-07-16T04:41:12.919Z",
+    "postId": "urn:li:ugcPost:7483380193433235456"
   },
   {
     "id": "ig-shadow-ai",

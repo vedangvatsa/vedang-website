@@ -1459,9 +1459,10 @@
     "id": "viral-rewrite-43",
     "scheduleDate": "2026-07-16",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "You can't control what others think, what happens, or how people treat you. You can control who you spend time with, your attitude, and your response. Focus there. The rest is noise. Find teams that respect your boundaries at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_159_1.jpg"
+    "image": "scripts/post-images/post_159_1.jpg",
+    "error": "Media failed: scripts/post-images/post_159_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-44",
