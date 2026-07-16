@@ -60,7 +60,7 @@ const curriculumItems = [
     {
         href: '/agentic/module-2-components',
         title: '2. The Core Components of Agentic Systems',
-        description: 'Explore the building blocks that enable agents to function.',
+        description: 'Building blocks that enable agents to function: reasoning, tools, and memory.',
     },
     {
         href: '/agentic/module-3-dimensions',
@@ -70,12 +70,12 @@ const curriculumItems = [
     {
         href: '/agentic/module-4-applications',
         title: '4. Applications: The Agentic Web in Action',
-        description: 'Discover informational, transactional, and communicational agents.',
+        description: 'Informational, transactional, communicational, and coding agents in practice.',
     },
     {
         href: '/agentic/module-5-future',
         title: '5. The Future: Challenges and Opportunities',
-        description: 'Explore the security, ethics, and economics of the agentic future.',
+        description: 'Security, ethics, and economics of the agentic future.',
     },
     {
         href: '/agentic/module-6-protocols',
@@ -85,7 +85,7 @@ const curriculumItems = [
     {
         href: '/agentic/module-7-build-agent',
         title: '7. Build Your First Agent',
-        description: 'A practical guide from design document to testing and deployment.',
+        description: 'Design document to multi-tool agent, HITL gates, testing, and deployment.',
     },
 ];
 

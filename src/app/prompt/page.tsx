@@ -27,7 +27,7 @@ const curriculumItems = [
   {
     href: '/prompt/module-3-advanced-reasoning',
     title: '3. Advanced Reasoning Techniques',
-    description: 'Explore Chain of Thought, Self-Consistency, ReAct, and Multimodal Prompting.',
+    description: 'Chain of Thought, Tree of Thoughts, Self-Consistency, ReAct, and Multimodal Prompting.',
   },
   {
     href: '/prompt/module-4-code-prompting',

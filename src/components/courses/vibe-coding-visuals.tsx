@@ -264,8 +264,9 @@ export function ProductQualityGates() {
   const gates = [
     { gate: 'Visual', checks: ['Responsive on mobile, tablet, desktop', 'Dark mode works correctly', 'No layout shifts on load'], color: '#3b82f6' },
     { gate: 'Functional', checks: ['All user flows work end-to-end', 'Error states handled gracefully', 'Forms validate input'], color: '#10b981' },
+    { gate: 'Security', checks: ['Named auth provider (not custom passwords)', 'No secrets in client code', 'Users cannot read other users data'], color: '#ef4444' },
     { gate: 'Performance', checks: ['Lighthouse score > 90', 'No unnecessary re-renders', 'Images optimized'], color: '#f59e0b' },
-    { gate: 'Shipping', checks: ['SEO meta tags present', 'Analytics tracking live', 'Deployed to production URL'], color: '#8b5cf6' },
+    { gate: 'Shipping', checks: ['SEO meta tags present', 'CI tests pass on main', 'Deployed to production URL'], color: '#8b5cf6' },
   ];
   return (
     <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">

@@ -17,7 +17,7 @@ export const metadata: Metadata = generateMetadata({
 
 const curriculumItems = [
   { href: '/vibecoding/module-1-philosophy', title: '1. The Philosophy', description: 'Shift from coder to creative director. Learn to articulate your vision.' },
-  { href: '/vibecoding/module-2-toolkit', title: '2. The Modern Toolkit', description: 'Explore Cursor, Replit, Antigravity, and Lovable.' },
+  { href: '/vibecoding/module-2-toolkit', title: '2. The Modern Toolkit', description: 'Cursor, Replit, Antigravity, Lovable, and when to use each.' },
   { href: '/vibecoding/module-3-prompts', title: '3. The Art of the Prompt', description: 'Master the GCES framework for writing effective instructions.' },
   { href: '/vibecoding/module-4-lab', title: '4. Lab: Name Generator', description: 'Build your first functional micro-app entirely with AI.' },
   { href: '/vibecoding/module-5-product', title: '5. To Professional Product', description: 'Implement security rules, databases, and authentication.' },

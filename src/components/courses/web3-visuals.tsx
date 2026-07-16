@@ -124,7 +124,7 @@ export function Web3Passport() {
     { num: '1', title: 'Get a Wallet', desc: 'Install MetaMask, Rainbow, or Phantom. This is your Web3 identity and login.', warning: '', color: '#3b82f6' },
     { num: '2', title: 'Secure Seed Phrase', desc: 'Write down your 12-24 word phrase offline. NEVER share it.', warning: 'Lose it = lose everything', color: '#ef4444' },
     { num: '3', title: 'Get Crypto', desc: 'Buy ETH on Coinbase/Kraken, then withdraw to your own wallet.', warning: 'Start with small amounts', color: '#f59e0b' },
-    { num: '4', title: 'Explore', desc: 'Get an ENS name, try Uniswap, mint an NFT. Start small.', warning: 'Only risk what you can lose', color: '#10b981' },
+    { num: '4', title: 'Try', desc: 'Get an ENS name, try Uniswap, mint an NFT. Start small.', warning: 'Only risk what you can lose', color: '#10b981' },
   ];
   return (
     <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
