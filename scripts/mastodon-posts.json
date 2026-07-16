@@ -1502,9 +1502,10 @@
     "id": "viral-rewrite-48",
     "scheduleDate": "2026-07-17",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Recovery time might be a requirement, not a luxury. Athletes know this. They train hard and recover hard. Business professionals train hard and recover never. The result is burnout, not peak performance. Find companies that respect recovery at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_156_1.jpg"
+    "image": "scripts/post-images/post_156_1.jpg",
+    "error": "Media failed: scripts/post-images/post_156_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-49",

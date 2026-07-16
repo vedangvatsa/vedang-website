@@ -1573,9 +1573,11 @@
     "id": "ig-daytrading-liar",
     "text": "The CEO announces \"no plans for layoffs,\" and two weeks later the company restructures.\n\nWatch what leaders do, not what they say.\n\nIf you're looking for a team that actually values transparency, check cvin.bio",
     "image": "scripts/thread-assets/ig-reels/DTUgnD7kheF.mp4",
-    "posted": false,
+    "posted": true,
     "scheduleDate": "2026-07-17",
-    "scheduleTime": "01:00"
+    "scheduleTime": "01:00",
+    "postedAt": "2026-07-16T19:57:54.771Z",
+    "postId": "urn:li:ugcPost:7483610888139079680"
   },
   {
     "id": "ig-ai-canon-events",
