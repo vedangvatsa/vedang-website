@@ -1486,9 +1486,10 @@
     "id": "viral-rewrite-46",
     "scheduleDate": "2026-07-17",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Business is about people. If you don't understand what drives them, you won't understand what drives results. The best leaders and teams invest in that understanding. Find companies that put people first at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_145_1.jpg"
+    "image": "scripts/post-images/post_145_1.jpg",
+    "error": "Media failed: scripts/post-images/post_145_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-47",

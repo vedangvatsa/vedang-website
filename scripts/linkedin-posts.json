@@ -1583,9 +1583,11 @@
     "id": "ig-ai-canon-events",
     "text": "The AI timeline:\n2022: ChatGPT launches.\n2023: Everyone is a prompt engineer.\n2024: AI replaces junior devs.\n2025: AI agents run workflows.\n2026: You report to an AI manager.\n\nThe shift is happening too fast. I wrote about how the agentic economy is restructuring firms here: veda.ng/agenteconomy",
     "image": "scripts/thread-assets/ig-reels/DVgT1huE9qS.mp4",
-    "posted": false,
+    "posted": true,
     "scheduleDate": "2026-07-17",
-    "scheduleTime": "09:00"
+    "scheduleTime": "09:00",
+    "postedAt": "2026-07-17T04:41:40.330Z",
+    "postId": "urn:li:ugcPost:7483742696646410240"
   },
   {
     "id": "ig-send-to-chatgpt",

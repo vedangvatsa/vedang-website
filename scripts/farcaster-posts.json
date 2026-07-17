@@ -1555,9 +1555,11 @@
     "id": "viral-rewrite-45",
     "scheduleDate": "2026-07-16",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Busyness is a bad metric. Output matters less than impact. A day with one meaningful result beats a day with ten forgettable ones. The best teams measure what matters, not what moves. Find teams that value quality at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_113_1.jpg"
+    "image": "scripts/post-images/post_113_1.jpg",
+    "postedAt": "2026-07-17T04:41:51.818Z",
+    "castHash": "0x21944f4af7d826b67b13b626bccd7a716db41ef1"
   },
   {
     "id": "viral-rewrite-46",

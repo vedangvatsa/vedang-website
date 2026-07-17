@@ -1750,9 +1750,11 @@
     "id": "viral-rewrite-32",
     "scheduleDate": "2026-07-12",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Great managers don't hoard talent. They grow it, even if it means you outgrow them. The best leaders measure success by where their people go next, not how long they stay.",
-    "image": "scripts/post-images/post_2_1.jpg"
+    "image": "scripts/post-images/post_2_1.jpg",
+    "postedAt": "2026-07-17T04:41:46.989Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mqswqd56qt2k"
   },
   {
     "id": "viral-rewrite-33",
