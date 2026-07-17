@@ -1529,9 +1529,10 @@
     "id": "viral-rewrite-51",
     "scheduleDate": "2026-07-18",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Founders shouldn't expect employees to work as hard as they do. The business isn't theirs. The upside isn't theirs. The risk isn't theirs. A healthy team respects that difference. Find roles with fair expectations at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_20_1.jpg"
+    "image": "scripts/post-images/post_20_1.jpg",
+    "error": "Media failed: scripts/post-images/post_20_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-52",
