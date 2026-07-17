@@ -1495,9 +1495,10 @@
     "id": "viral-rewrite-47",
     "scheduleDate": "2026-07-17",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Sharing your work isn't bragging. It's letting others benefit from what you've built. The people who hide their ideas out of modesty often slow their own progress. Find teams that celebrate contribution without calling it arrogance at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_119_1.jpg"
+    "image": "scripts/post-images/post_119_1.jpg",
+    "error": "Media failed: scripts/post-images/post_119_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-48",

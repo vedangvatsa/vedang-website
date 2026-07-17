@@ -1593,9 +1593,11 @@
     "id": "ig-send-to-chatgpt",
     "text": "It's wild that people argue with a human for hours, then go to ChatGPT for instant validation.\n\nWe are slowly training ourselves to prefer machine conversations over human ones.\n\nI wrote about this rise of simulated empathy and why it matters: veda.ng/empathy",
     "image": "scripts/thread-assets/ig-reels/DVYa0-nE4hb.mp4",
-    "posted": false,
+    "posted": true,
     "scheduleDate": "2026-07-17",
-    "scheduleTime": "17:00"
+    "scheduleTime": "17:00",
+    "postedAt": "2026-07-17T12:00:33.992Z",
+    "postId": "urn:li:ugcPost:7483853148126842880"
   },
   {
     "id": "ig-knowledge-worth-zero",
