@@ -12,7 +12,6 @@ interface DiscoveryFile {
   path: string;
   what: string;
   why: string;
-  basis: string;
   category: string;
   priority: Priority;
   maturity: Maturity;
@@ -25,8 +24,7 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'robots.txt',
     path: '/robots.txt',
     what: 'A text file at the site root that tells automated bots which paths they may crawl.',
-    why: 'Primary practical control for AI companies that honor robots.txt. Search bots and training bots can be allowed or blocked independently.',
-    basis: 'OpenAI, Anthropic, Google, and Perplexity publish bot names and document robots.txt behavior. Strongest for automatic crawlers; weaker for some user-triggered fetches.',
+    why: 'Primary practical control for AI companies that honor robots.txt. Search bots and training bots can be allowed or blocked independently. Some vendors say a one-off page fetch during chat may not fully apply robots.txt.',
     category: 'Crawl control',
     priority: 'Start here',
     maturity: 'Standard',
@@ -38,7 +36,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/sitemap.xml',
     what: 'A list of important site URLs, often with last-modified dates.',
     why: 'Helps search engines and many AI retrieval crawlers find pages without guessing the URL graph.',
-    basis: 'Long-standing crawl discovery protocol used across search engines. Improves URL discoverability; does not guarantee AI citations by itself.',
     category: 'Content discovery',
     priority: 'Start here',
     maturity: 'Standard',
@@ -49,8 +46,7 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'llms.txt',
     path: '/llms.txt',
     what: 'A short Markdown summary of the site: identity plus links to the most important pages.',
-    why: 'Gives language models a clean map instead of noisy HTML. Useful when an agent lands on the domain and needs orientation.',
-    basis: 'Widely adopted in tech; token-efficient site map. Not a proven ranking factor. Google states llms.txt is not required for its generative search features.',
+    why: 'Gives language models a clean map instead of noisy HTML. Useful when an agent lands on the domain and needs orientation. Google has said llms.txt is not required for its generative search features.',
     category: 'Content discovery',
     priority: 'Start here',
     maturity: 'Adopted',
@@ -62,7 +58,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: 'Inside HTML pages',
     what: 'Structured labels that declare entities such as Organization, Article, or FAQ on a page.',
     why: 'Machines extract facts more reliably from typed data than from prose alone.',
-    basis: 'Schema.org is standard for machine-readable page meaning and supports many search features. For AI answers, clearer structure helps; it is not a documented citation guarantee from major chat products.',
     category: 'Content structure',
     priority: 'Start here',
     maturity: 'Standard',
@@ -74,7 +69,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/.well-known/security.txt',
     what: 'Contact details for reporting security issues.',
     why: 'Operational hygiene. Not AI-specific; signals that the property is maintained.',
-    basis: 'RFC 9116. Included for production completeness, not AI ranking.',
     category: 'Operations',
     priority: 'Start here',
     maturity: 'Standard',
@@ -86,7 +80,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/llms-full.txt',
     what: 'Markdown with fuller text of key pages, not only links.',
     why: 'Useful for documentation and reference sites that want fewer follow-up fetches.',
-    basis: 'Extension of the llms.txt convention. Same evidence limits: helpful when read, not a universal ranking lever.',
     category: 'Content discovery',
     priority: 'When it applies',
     maturity: 'Adopted',
@@ -98,7 +91,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/.well-known/tdmrep.json',
     what: 'Machine-readable notice that mining rights are reserved or not, under EU text-and-data-mining rules.',
     why: 'Relevant for formal opt-out signaling around mining and training, especially in EU copyright context. Complements robots.txt. Not legal advice.',
-    basis: 'Documented technical response to EU CDSM Art. 4. A rights signal, not a technical lock. Effect depends on whether miners respect machine-readable reservations.',
     category: 'Crawl control',
     priority: 'When it applies',
     maturity: 'Adopted',
@@ -110,7 +102,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/agents.txt',
     what: 'Plain text that announces agent protocols the site supports (MCP, A2A card URLs, skills, payments).',
     why: 'Relevant when the site exposes tools or agent endpoints, not only articles.',
-    basis: 'Community discovery format for agent capabilities. Valuable when agents look for it; low value for pure content sites.',
     category: 'Agent products',
     priority: 'When it applies',
     maturity: 'Emerging',
@@ -121,8 +112,7 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'agents.json',
     path: '/agents.json',
     what: 'Structured companion to agents.txt at the site root (not the A2A card path).',
-    why: 'Same role as agents.txt with richer machine fields.',
-    basis: 'Paired with agents.txt. Same early-adoption caveat. Must not be confused with /.well-known/agent-card.json.',
+    why: 'Same role as agents.txt with richer machine fields. Do not confuse with /.well-known/agent-card.json (A2A).',
     category: 'Agent products',
     priority: 'When it applies',
     maturity: 'Emerging',
@@ -134,7 +124,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/.well-known/agent-card.json',
     what: 'A2A Protocol agent card: identity, skills, transports, security.',
     why: 'Only publish when a real A2A agent is running. Fake cards mislead other agents.',
-    basis: 'A2A v1 defines this well-known path. Value is interoperability with A2A clients, not search ranking.',
     category: 'Agent products',
     priority: 'When it applies',
     maturity: 'Adopted',
@@ -146,7 +135,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/openapi.json or /openapi.yaml',
     what: 'Machine contract for an HTTP API: paths, parameters, responses.',
     why: 'Required when agents should call the product over HTTP without human documentation.',
-    basis: 'Default industry contract for HTTP APIs. Any OpenAPI-capable client can use it. Engineering standard, not an AI-marketing claim.',
     category: 'Agent products',
     priority: 'When it applies',
     maturity: 'Standard',
@@ -158,7 +146,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/.well-known/mcp/server-card.json',
     what: 'Draft discovery document for Model Context Protocol servers.',
     why: 'Only when an MCP server is operated. Path and schema remain in flux across proposals.',
-    basis: 'MCP is widely used for tool access; server cards are the proposed discovery layer. Draft maturity; list carefully.',
     category: 'Agent products',
     priority: 'When it applies',
     maturity: 'Proposed',
@@ -170,7 +157,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: 'Inside robots.txt',
     what: 'Optional preference line for search, AI input, and training after content is accessed.',
     why: 'Complement to Allow/Disallow when finer usage policy is needed. Track AIPREF and Content Signals.',
-    basis: 'Direction of travel for preference vocabularies beyond crawl allow/deny. Not a replacement for vendor robots tokens today.',
     category: 'Crawl control',
     priority: 'When it applies',
     maturity: 'Proposed',
@@ -182,7 +168,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/feed.xml or /feed.json',
     what: 'RSS, Atom, or JSON Feed of new or updated posts.',
     why: 'Useful for regularly published content and freshness signals.',
-    basis: 'Proven change-notification pattern for readers and aggregators. Not AI-specific.',
     category: 'Content discovery',
     priority: 'When it applies',
     maturity: 'Standard',
@@ -194,7 +179,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/manifest.json',
     what: 'PWA metadata: name, icons, theme, display mode.',
     why: 'Browser install behavior. Not AI citation.',
-    basis: 'Common root web file the installer can emit. Not selected for AI answer impact.',
     category: 'Operations',
     priority: 'When it applies',
     maturity: 'Standard',
@@ -206,7 +190,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/ads.txt',
     what: 'Public list of authorized digital ad sellers for the domain.',
     why: 'Ad fraud prevention when inventory is sold or to discourage unauthorized claims.',
-    basis: 'IAB Tech Lab standard. Unrelated to AI training or citations.',
     category: 'Operations',
     priority: 'When it applies',
     maturity: 'Standard',
@@ -218,7 +201,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/ai.txt and /ai.json',
     what: 'Informal permissions summary and content map in text or JSON.',
     why: 'Optional documentation. Major model providers do not uniformly document honor of these files the way they document robots.txt tokens.',
-    basis: 'Map completeness and custom-agent convenience. Weak evidence that large public chatbots systematically load them.',
     category: 'Optional',
     priority: 'Optional',
     maturity: 'Emerging',
@@ -229,7 +211,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/brand.txt',
     what: 'Preferred spelling, product names, and tone for brand description.',
     why: 'Useful for agents under operator control. Not a reliable control for consumer chatbots by default.',
-    basis: 'Optional brand guidance. No strong public evidence that major consumer models fetch /brand.txt on every mention.',
     category: 'Optional',
     priority: 'Optional',
     maturity: 'Emerging',
@@ -240,7 +221,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/carbon.txt',
     what: 'TOML links to sustainability disclosures (carbontxt.org format).',
     why: 'Environmental transparency reporting.',
-    basis: 'Documented carbontxt.org convention. Not an AI discovery mechanism.',
     category: 'Optional',
     priority: 'Optional',
     maturity: 'Adopted',
@@ -252,7 +232,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/humans.txt',
     what: 'Credits for people and tools behind the site.',
     why: 'Human-readable provenance. Low machine criticality.',
-    basis: 'Long-running web convention for credits. Negligible AI crawl effect.',
     category: 'Optional',
     priority: 'Optional',
     maturity: 'Adopted',
@@ -264,7 +243,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/.well-known/ai-plugin.json',
     what: 'Historical ChatGPT plugin manifest format.',
     why: 'Legacy. Prefer OpenAPI plus current tool integrations (MCP and current app patterns).',
-    basis: 'Documented so broken plugin setups are not reinvented. Not recommended for new work.',
     category: 'Optional',
     priority: 'Optional',
     maturity: 'Legacy',
@@ -275,7 +253,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/browserconfig.xml',
     what: 'Windows tile config for pinned sites.',
     why: 'Legacy browser chrome. Not AI discovery.',
-    basis: 'Sometimes emitted with other root assets. No AI relevance.',
     category: 'Optional',
     priority: 'Optional',
     maturity: 'Legacy',
@@ -286,7 +263,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/.well-known/dnt-policy.txt',
     what: 'EFF Do Not Track policy file.',
     why: 'Browser DNT is effectively obsolete. Keep only for a specific compliance reason.',
-    basis: 'Map completeness. Not used for AI crawl control.',
     category: 'Optional',
     priority: 'Optional',
     maturity: 'Legacy',
@@ -297,7 +273,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: '/.well-known/ai',
     what: 'IETF draft for a single JSON AI discovery document.',
     why: 'Watch-list until an RFC exists. Not required for ordinary sites today.',
-    basis: 'Draft existence only. No RFC; not a deployment requirement.',
     category: 'Optional',
     priority: 'Optional',
     maturity: 'Proposed',
@@ -309,7 +284,6 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     path: 'Inside a code repository',
     what: 'Instructions for coding assistants working on the codebase.',
     why: 'Developer tooling, not public web discovery.',
-    basis: 'Coding agents load these files by product design. Separate problem from public AI search.',
     category: 'Software repositories',
     priority: 'When it applies',
     maturity: 'Adopted',
@@ -497,7 +471,7 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
             <section id="registry">
               <h2 className="text-2xl font-semibold tracking-tight mb-2">Catalog</h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                Expand a card for why it matters, evidence, and the official source.
+                Expand a card for more detail and the official source when one exists.
               </p>
               <div className="flex flex-wrap gap-1.5 mb-6">
                 {CATEGORIES.map((category) => {
@@ -546,7 +520,6 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
                           </summary>
                           <div className="px-3 pb-3 pt-0 space-y-1.5 border-t border-border/60">
                             <p className="text-xs text-muted-foreground leading-snug pt-2">{file.why}</p>
-                            <p className="text-xs text-muted-foreground leading-snug">{file.basis}</p>
                             {file.specUrl ? (
                               <Link
                                 href={file.specUrl}
