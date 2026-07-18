@@ -391,9 +391,6 @@ export default function AiDiscoveryStandardsPage() {
             <a href="#training-vs-search" className="hover:text-primary transition-colors">
               Training vs search
             </a>
-            <a href="#mistakes" className="hover:text-primary transition-colors">
-              Common mistakes
-            </a>
             <a href="#registry" className="hover:text-primary transition-colors">
               Catalog
             </a>
@@ -539,49 +536,6 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
                     </p>
                   </div>
                 ))}
-              </div>
-            </section>
-
-            <section id="mistakes">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Common mistakes</h2>
-              <div className="space-y-px rounded-lg overflow-hidden border">
-                <div className="bg-card p-4 sm:p-5">
-                  <p className="text-sm font-medium text-foreground mb-1">One switch for all AI bots</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Blocking every AI-related token also blocks search/retrieval bots that can cite a site.
-                    Training and search tokens are separate decisions.
-                  </p>
-                </div>
-                <div className="bg-card p-4 sm:p-5">
-                  <p className="text-sm font-medium text-foreground mb-1">Wrong agents path</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Root <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">/agents.json</code> is the
-                    agents-txt.com catalog. The A2A agent card is{' '}
-                    <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">/.well-known/agent-card.json</code>.
-                    Mixing them breaks interoperability.
-                  </p>
-                </div>
-                <div className="bg-card p-4 sm:p-5">
-                  <p className="text-sm font-medium text-foreground mb-1">Advertising fake capabilities</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Publishing an A2A card or MCP endpoint URL without a live service misleads agents. The installer
-                    skips those stubs unless explicitly requested or detected.
-                  </p>
-                </div>
-                <div className="bg-card p-4 sm:p-5">
-                  <p className="text-sm font-medium text-foreground mb-1">Files never reach the live domain</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Writing into <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">public/</code> is not
-                    enough if the host or framework does not serve those paths at the site root after deploy.
-                  </p>
-                </div>
-                <div className="bg-card p-4 sm:p-5">
-                  <p className="text-sm font-medium text-foreground mb-1">Treating every catalog file as mandatory</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Optional and legacy items exist so the map is complete. Most content sites only need the start-here set
-                    plus situational files (feeds, APIs, EU mining signals).
-                  </p>
-                </div>
               </div>
             </section>
 

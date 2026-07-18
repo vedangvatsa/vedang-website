@@ -53,53 +53,6 @@ const softwareSchema = {
   },
 };
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is AI Discovery Standards?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A free open-source project that explains the website files related to AI crawlers and agents, and provides a command-line tool that can add the practical set (robots.txt, llms.txt, agents files, security.txt, schema, and more) to a project automatically.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Does blocking GPTBot remove me from ChatGPT search?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. GPTBot is associated with training-related crawling. ChatGPT search indexing is controlled separately with OAI-SearchBot. These are independent choices in OpenAI documentation.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do I add AI discovery files to my website?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'From your website project root, run: npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.com. Use --deny-training if you want to block training crawlers. Review llms.txt after the tool finishes.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What does Standard vs Adopted vs Emerging mean?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'These labels describe how solid the underlying rule is, not a score for your site. Standard means a formal RFC or W3C recommendation. Adopted means written down and used in practice. Emerging means a community convention with uneven support. Proposed means a draft. Legacy means low impact or superseded.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is there evidence these files work?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Evidence varies by file. robots.txt has the strongest support because major AI companies publish bot names and robots behavior. Sitemaps and OpenAPI work because they are long-standing machine contracts. llms.txt is widely adopted and useful for agent-readable maps, but Google has said it is not required for its generative search features. Informal files like brand.txt have weaker evidence that large public chatbots load them by default.',
-      },
-    },
-  ],
-};
-
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -119,10 +72,6 @@ export default function AiDiscoveryStandardsLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <script
         type="application/ld+json"
