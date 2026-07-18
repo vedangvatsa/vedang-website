@@ -212,12 +212,12 @@ const PRIORITY_STYLES: Record<Priority, string> = {
 export default function AiDiscoveryStandardsPage() {
   return (
     <>
-      <header className="pt-12 md:pt-20 pb-8">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
+      <header className="pt-10 sm:pt-12 md:pt-20 pb-6 sm:pb-8">
+        <div className="text-center min-w-0 px-0">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.15] break-words">
             AI Discovery Standards
           </h1>
-          <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 sm:mt-5 text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-0">
             Reference files and an installer for declaring identity, content maps, and crawl preferences that AI systems
             may use. Outcomes vary by product and are not guaranteed.
           </p>
@@ -226,7 +226,7 @@ export default function AiDiscoveryStandardsPage() {
           />
           <nav
             aria-label="On this page"
-            className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-muted-foreground"
+            className="mt-5 sm:mt-6 flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-4 gap-y-2 text-xs sm:text-sm text-muted-foreground"
           >
             <a href="#install" className="hover:text-primary transition-colors">
               Install
@@ -247,80 +247,82 @@ export default function AiDiscoveryStandardsPage() {
         </div>
       </header>
 
-      <div className="py-10 md:py-14">
-        <article className="notion-article prose prose-lg prose-neutral max-w-5xl mx-auto">
-          <div className="space-y-14 not-prose">
+      <div className="py-8 sm:py-10 md:py-14 min-w-0">
+        <article className="notion-article prose prose-neutral max-w-5xl w-full min-w-0 mx-auto">
+          <div className="space-y-12 sm:space-y-14 not-prose min-w-0">
 
-            <section id="install">
-              <h2 className="text-2xl font-semibold tracking-tight mb-3">Install</h2>
+            <section id="install" className="min-w-0 scroll-mt-20">
+              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Install</h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 Run from the website project root. Pass the live production URL.
               </p>
-              <div className="terminal-chrome rounded-lg overflow-hidden border mb-3">
-                <div className="terminal-chrome-bar px-4 py-2 flex items-center gap-2">
-                  <span className="inline-flex gap-1" aria-hidden>
+              <div className="terminal-chrome rounded-lg overflow-hidden border mb-3 max-w-full min-w-0">
+                <div className="terminal-chrome-bar px-3 sm:px-4 py-2 flex items-center gap-2 min-w-0">
+                  <span className="inline-flex gap-1 shrink-0" aria-hidden>
                     <span className="h-2 w-2 rounded-full bg-zinc-600" />
                     <span className="h-2 w-2 rounded-full bg-zinc-600" />
                     <span className="h-2 w-2 rounded-full bg-zinc-600" />
                   </span>
-                  <span className="text-xs font-medium">Terminal</span>
+                  <span className="text-xs font-medium truncate">Terminal</span>
                 </div>
-                <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed">
-                  <code>{`# Full auto
-npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.com
+                <pre className="p-3 sm:p-4 overflow-x-auto max-w-full text-[11px] sm:text-[12px] leading-relaxed overscroll-x-contain">
+                  <code className="!whitespace-pre">{`# Full auto
+npx --yes github:vedangvatsa/aistandards --yes --scan \\
+  --url=https://your-domain.com
 
 # Block training crawlers
-npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.com --deny-training`}</code>
+npx --yes github:vedangvatsa/aistandards --yes --scan \\
+  --url=https://your-domain.com --deny-training`}</code>
                 </pre>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed break-words">
                 Tries to write files into{' '}
-                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">public/</code> or{' '}
-                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">static/</code>, wire head tags when a
+                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded break-all">public/</code> or{' '}
+                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded break-all">static/</code>, wire head tags when a
                 safe injection point exists, and leave existing files unless{' '}
-                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">--force</code>. Review{' '}
-                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">llms.txt</code> and confirm the host
+                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded break-all">--force</code>. Review{' '}
+                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded break-all">llms.txt</code> and confirm the host
                 serves them at the domain root. Does not invent A2A, MCP, or payment endpoints.
               </p>
             </section>
 
-            <section id="training-vs-search">
-              <h2 className="text-2xl font-semibold tracking-tight mb-3">Training vs search</h2>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+            <section id="training-vs-search" className="min-w-0 scroll-mt-20">
+              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Training vs search</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4 break-words">
                 Many vendors publish separate bot names for different jobs. Prefer setting them separately in{' '}
-                <code className="text-xs font-mono bg-muted px-1.5 py-0.5 rounded">robots.txt</code>. OpenAI documents{' '}
-                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">GPTBot</code> (training-related) and{' '}
-                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">OAI-SearchBot</code> (search) as
+                <code className="text-xs font-mono bg-muted px-1.5 py-0.5 rounded break-all">robots.txt</code>. OpenAI documents{' '}
+                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded break-all">GPTBot</code> (training-related) and{' '}
+                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded break-all">OAI-SearchBot</code> (search) as
                 independent choices. Some chat-time fetches may not fully honor robots.txt.
               </p>
-              <div className="grid sm:grid-cols-2 gap-3">
-                <div className="rounded-lg border bg-card p-3.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 min-w-0">
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
                   <p className="text-sm font-medium text-foreground mb-1.5">Training-related</p>
                   <p className="text-xs text-muted-foreground mb-2 leading-snug">
                     Often associated with model training. Citations from this path alone are uncommon.
                   </p>
                   <div className="flex flex-wrap gap-1">
                     {['GPTBot', 'ClaudeBot', 'CCBot', 'Google-Extended'].map((bot) => (
-                      <code key={bot} className="text-[11px] font-mono bg-muted px-1.5 py-0.5 rounded">{bot}</code>
+                      <code key={bot} className="text-[11px] font-mono bg-muted px-1.5 py-0.5 rounded break-all">{bot}</code>
                     ))}
                   </div>
                 </div>
-                <div className="rounded-lg border bg-card p-3.5">
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
                   <p className="text-sm font-medium text-foreground mb-1.5">Search and answers</p>
                   <p className="text-xs text-muted-foreground mb-2 leading-snug">
                     Often used for indexing or retrieval that may cite or link to a source.
                   </p>
                   <div className="flex flex-wrap gap-1">
                     {['OAI-SearchBot', 'Claude-SearchBot', 'PerplexityBot'].map((bot) => (
-                      <code key={bot} className="text-[11px] font-mono bg-muted px-1.5 py-0.5 rounded">{bot}</code>
+                      <code key={bot} className="text-[11px] font-mono bg-muted px-1.5 py-0.5 rounded break-all">{bot}</code>
                     ))}
                   </div>
                 </div>
               </div>
             </section>
 
-            <section id="registry">
-              <h2 className="text-2xl font-semibold tracking-tight mb-3">Catalog</h2>
+            <section id="registry" className="min-w-0 scroll-mt-20">
+              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Catalog</h2>
               <div className="flex flex-wrap gap-1.5 mb-5">
                 {CATEGORIES.map((category) => {
                   const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
@@ -340,34 +342,34 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
                 const items = DISCOVERY_FILES.filter((f) => f.category === category);
                 const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
                 return (
-                  <div key={category} id={slug} className="mb-8 last:mb-0">
-                    <h3 className="text-base font-semibold tracking-tight mb-2.5 text-foreground">{category}</h3>
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                  <div key={category} id={slug} className="mb-8 last:mb-0 min-w-0 scroll-mt-20">
+                    <h3 className="text-base font-semibold tracking-tight mb-2.5 text-foreground break-words">{category}</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 min-w-0">
                       {items.map((file) => (
                         <details
                           key={file.name}
-                          className="rounded-lg border bg-card group open:ring-1 open:ring-border"
+                          className="rounded-lg border bg-card group open:ring-1 open:ring-border min-w-0"
                         >
-                          <summary className="p-3 cursor-pointer select-none hover:bg-muted/40 transition-colors list-none [&::-webkit-details-marker]:hidden">
+                          <summary className="p-3 cursor-pointer select-none hover:bg-muted/40 transition-colors list-none [&::-webkit-details-marker]:hidden min-w-0">
                             <div className="flex flex-wrap items-center gap-1 mb-1.5">
                               <span className={`inline-flex items-center text-[10px] font-medium px-1.5 py-0.5 rounded border ${PRIORITY_STYLES[file.priority]}`}>
                                 {file.priority}
                               </span>
                             </div>
-                            <p className="text-sm font-medium text-foreground leading-snug">{file.name}</p>
-                            <p className="text-[11px] font-mono text-muted-foreground truncate mt-0.5">{file.path}</p>
-                            <p className="text-xs text-muted-foreground leading-snug mt-1.5 line-clamp-2 group-open:line-clamp-none">
+                            <p className="text-sm font-medium text-foreground leading-snug break-words">{file.name}</p>
+                            <p className="text-[11px] font-mono text-muted-foreground truncate mt-0.5" title={file.path}>{file.path}</p>
+                            <p className="text-xs text-muted-foreground leading-snug mt-1.5 line-clamp-2 group-open:line-clamp-none break-words">
                               {file.what}
                             </p>
                           </summary>
-                          <div className="px-3 pb-3 pt-0 space-y-1.5 border-t border-border/60">
-                            <p className="text-xs text-muted-foreground leading-snug pt-2">{file.why}</p>
+                          <div className="px-3 pb-3 pt-0 space-y-1.5 border-t border-border/60 min-w-0">
+                            <p className="text-xs text-muted-foreground leading-snug pt-2 break-words">{file.why}</p>
                             {file.specUrl ? (
                               <Link
                                 href={file.specUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-block text-[11px] text-muted-foreground hover:text-primary transition-colors"
+                                className="inline-block max-w-full text-[11px] text-muted-foreground hover:text-primary transition-colors break-all"
                               >
                                 {file.spec}
                               </Link>
@@ -381,19 +383,19 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
               })}
             </section>
 
-            <section id="crawlers">
-              <h2 className="text-2xl font-semibold tracking-tight mb-3">Crawler names</h2>
+            <section id="crawlers" className="min-w-0 scroll-mt-20">
+              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Crawler names</h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                 Common tokens that may appear in logs and robots.txt. Roles can change; check each vendor&apos;s docs
                 when the stakes are high.
               </p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 min-w-0">
                 {AI_CRAWLERS.map((group) => (
-                  <div key={group.company} className="rounded-lg border bg-card p-3">
-                    <p className="text-sm font-medium text-foreground mb-1.5">{group.company}</p>
+                  <div key={group.company} className="rounded-lg border bg-card p-3 min-w-0">
+                    <p className="text-sm font-medium text-foreground mb-1.5 break-words">{group.company}</p>
                     <div className="flex flex-wrap gap-1">
                       {group.bots.map((bot) => (
-                        <code key={bot} className="text-[11px] font-mono bg-muted px-1.5 py-0.5 rounded">
+                        <code key={bot} className="text-[11px] font-mono bg-muted px-1.5 py-0.5 rounded break-all">
                           {bot}
                         </code>
                       ))}
@@ -403,18 +405,18 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
               </div>
             </section>
 
-            <section id="verify">
-              <h2 className="text-2xl font-semibold tracking-tight mb-3">Check after deploy</h2>
+            <section id="verify" className="min-w-0 scroll-mt-20">
+              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Check after deploy</h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                 After deploy, these paths usually need to return 200 at the domain root if the host is serving the
                 static directory correctly.
               </p>
-              <div className="terminal-chrome rounded-lg overflow-hidden border">
-                <div className="terminal-chrome-bar px-4 py-2 flex items-center gap-2">
+              <div className="terminal-chrome rounded-lg overflow-hidden border max-w-full min-w-0">
+                <div className="terminal-chrome-bar px-3 sm:px-4 py-2 flex items-center gap-2">
                   <span className="text-xs font-medium">Terminal</span>
                 </div>
-                <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed">
-                  <code>{`curl -sI https://your-domain.com/robots.txt | head -1
+                <pre className="p-3 sm:p-4 overflow-x-auto max-w-full text-[11px] sm:text-[12px] leading-relaxed overscroll-x-contain">
+                  <code className="!whitespace-pre">{`curl -sI https://your-domain.com/robots.txt | head -1
 curl -sI https://your-domain.com/llms.txt | head -1
 curl -sI https://your-domain.com/sitemap.xml | head -1
 curl -sI https://your-domain.com/agents.txt | head -1
@@ -423,14 +425,14 @@ curl -sI https://your-domain.com/.well-known/security.txt | head -1`}</code>
               </div>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-3">Prompt for a coding agent</h2>
-              <div className="terminal-chrome rounded-lg overflow-hidden border">
-                <div className="terminal-chrome-bar px-4 py-2">
+            <section className="min-w-0">
+              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Prompt for a coding agent</h2>
+              <div className="terminal-chrome rounded-lg overflow-hidden border max-w-full min-w-0">
+                <div className="terminal-chrome-bar px-3 sm:px-4 py-2">
                   <span className="text-xs font-medium">Prompt</span>
                 </div>
-                <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed whitespace-pre-wrap">
-                  <code>{`Set up AI discovery for this project using:
+                <pre className="p-3 sm:p-4 overflow-x-auto max-w-full text-[11px] sm:text-[12px] leading-relaxed whitespace-pre-wrap break-words [overflow-wrap:anywhere] overscroll-x-contain">
+                  <code className="!whitespace-pre-wrap !break-words [overflow-wrap:anywhere]">{`Set up AI discovery for this project using:
 https://github.com/vedangvatsa/aistandards
 
 Run:
@@ -441,8 +443,8 @@ Review llms.txt, confirm training allow/deny, and do not advertise fake A2A or M
               </div>
             </section>
 
-            <section>
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
+            <section className="min-w-0">
+              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-2 text-sm text-muted-foreground">
                 <Link
                   href="/sitecheck"
                   className="underline hover:text-primary"

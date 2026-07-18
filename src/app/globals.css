@@ -256,20 +256,46 @@ pre > code {
 .terminal-chrome {
   border-color: #27272a;
   background-color: #09090b;
+  max-width: 100%;
+  min-width: 0;
 }
 .terminal-chrome > .terminal-chrome-bar {
   background-color: #18181b;
   border-bottom: 1px solid #27272a;
   color: #a1a1aa;
 }
-.terminal-chrome pre,
-.terminal-chrome pre > code {
+.terminal-chrome pre {
   background-color: #09090b !important;
   background: #09090b !important;
   color: #fafafa !important;
   border: none !important;
   margin: 0 !important;
   border-radius: 0 !important;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.terminal-chrome pre > code {
+  background-color: transparent !important;
+  background: transparent !important;
+  color: #fafafa !important;
+  border: none !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  font-size: inherit;
+  /* Keep commands on one visual line when possible; parent pre scrolls */
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+/* Prompt blocks that set whitespace-pre-wrap should still wrap long URLs */
+.terminal-chrome pre.whitespace-pre-wrap,
+.terminal-chrome pre.whitespace-pre-wrap > code {
+  white-space: pre-wrap !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
 }
 
 /* ═══ Scrollbar-hide utility ═══ */
