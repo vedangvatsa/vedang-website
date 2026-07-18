@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { AuthorByline } from '@/components/author-byline';
-import { PageHero } from '@/components/page-hero';
 
 // Keep aligned with https://github.com/vedangvatsa/ai-discovery-standards (verified Q3 2026)
 
@@ -82,123 +81,131 @@ const AI_CRAWLERS: { company: string; bots: string[]; note?: string }[] = [
 
 const CATEGORIES = [...new Set(DISCOVERY_FILES.map((f) => f.category))];
 
-const STATUS_BADGE: Record<Status, string> = {
-  Standard: 'border-emerald-200 bg-emerald-50 text-emerald-800 dark:border-emerald-900/40 dark:bg-emerald-950/30 dark:text-emerald-300',
-  Adopted: 'border-blue-200 bg-blue-50 text-blue-800 dark:border-blue-900/40 dark:bg-blue-950/30 dark:text-blue-300',
-  Emerging: 'border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-900/40 dark:bg-amber-950/30 dark:text-amber-300',
-  Proposed: 'border-purple-200 bg-purple-50 text-purple-800 dark:border-purple-900/40 dark:bg-purple-950/30 dark:text-purple-300',
-  Legacy: 'border-border bg-muted text-muted-foreground',
+// Match Site Checklist: muted status chips, no rainbow dashboard palette
+const STATUS_STYLES: Record<Status, string> = {
+  Standard: 'bg-gray-100 text-gray-800 border-gray-200',
+  Adopted: 'bg-gray-100 text-gray-800 border-gray-200',
+  Emerging: 'bg-gray-50 text-gray-600 border-gray-200',
+  Proposed: 'bg-gray-50 text-gray-600 border-gray-200',
+  Legacy: 'bg-gray-50 text-gray-500 border-gray-200',
 };
 
-const statusCounts = (Object.keys(STATUS_BADGE) as Status[]).reduce(
-  (acc, status) => {
-    acc[status] = DISCOVERY_FILES.filter((f) => f.status === status).length;
-    return acc;
-  },
-  {} as Record<Status, number>
-);
+const STATUS_DOT: Record<Status, string> = {
+  Standard: 'bg-gray-800',
+  Adopted: 'bg-gray-700',
+  Emerging: 'bg-gray-400',
+  Proposed: 'bg-gray-400',
+  Legacy: 'bg-gray-300',
+};
+
+const STATUS_ORDER: Status[] = ['Standard', 'Adopted', 'Emerging', 'Proposed', 'Legacy'];
 
 export default function AiDiscoveryStandardsPage() {
+  const statusCounts = STATUS_ORDER.reduce(
+    (acc, status) => {
+      acc[status] = DISCOVERY_FILES.filter((f) => f.status === status).length;
+      return acc;
+    },
+    {} as Record<Status, number>
+  );
+
   return (
     <>
-      <PageHero
-        title="AI Discovery Standards"
-        subtitle={`${DISCOVERY_FILES.length} files across ${CATEGORIES.length} categories: the files, protocols, and crawler tokens that affect whether AI systems can find, understand, and cite your site.`}
-      >
-        <AuthorByline
-          links={[{ label: 'GitHub', href: 'https://github.com/vedangvatsa/ai-discovery-standards' }]}
-        />
-      </PageHero>
+      <header className="pt-12 md:pt-20 pb-8">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
+            AI Discovery Standards
+          </h1>
+          <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            {DISCOVERY_FILES.length} files across {CATEGORIES.length} categories.
+            <br />
+            Paths, maturity, and crawler tokens for AI web discoverability.
+          </p>
+          <AuthorByline
+            links={[{ label: 'GitHub', href: 'https://github.com/vedangvatsa/ai-discovery-standards' }]}
+          />
+        </div>
+      </header>
 
-      <div className="pb-12 md:pb-16">
-        <article className="notion-article prose prose-lg prose-neutral max-w-none">
-          <div className="space-y-16 not-prose">
+      <div className="py-10 md:py-14">
+        <article className="notion-article prose prose-lg prose-neutral max-w-4xl mx-auto">
+          <div className="space-y-20 not-prose">
 
-            {/* ── What this page covers (clear inventory, not mystery stats) ── */}
+            {/* Counts by maturity */}
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-2">What this page covers</h2>
-              <p className="text-sm text-muted-foreground mb-6">
-                Counts for this reference only. They describe the catalog on this page, not the whole web.
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="rounded-lg border bg-card p-5">
-                  <p className="text-3xl font-semibold tracking-tight">{DISCOVERY_FILES.length}</p>
-                  <p className="text-sm font-medium mt-1">Discovery files</p>
-                  <p className="text-xs text-muted-foreground mt-1">Listed below with path and maturity</p>
-                </div>
-                <div className="rounded-lg border bg-card p-5">
-                  <p className="text-3xl font-semibold tracking-tight">{CATEGORIES.length}</p>
-                  <p className="text-sm font-medium mt-1">Categories</p>
-                  <p className="text-xs text-muted-foreground mt-1">Access, content, agents, trust, and more</p>
-                </div>
-                <div className="rounded-lg border bg-card p-5">
-                  <p className="text-3xl font-semibold tracking-tight">{AI_CRAWLERS.length}</p>
-                  <p className="text-sm font-medium mt-1">Operator groups</p>
-                  <p className="text-xs text-muted-foreground mt-1">Vendor-documented crawler tokens</p>
-                </div>
-                <div className="rounded-lg border bg-card p-5">
-                  <p className="text-3xl font-semibold tracking-tight">{statusCounts.Standard + statusCounts.Adopted}</p>
-                  <p className="text-sm font-medium mt-1">Stable entries</p>
-                  <p className="text-xs text-muted-foreground mt-1">Standard or Adopted maturity</p>
-                </div>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                {STATUS_ORDER.map((status) => (
+                  <div key={status} className="rounded-lg border bg-card p-5">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className={`w-2.5 h-2.5 rounded-full ${STATUS_DOT[status]}`} />
+                      <span className="text-sm font-medium">{status}</span>
+                    </div>
+                    <p className="text-3xl font-semibold tracking-tight">{statusCounts[status]}</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      {status === 'Standard' && 'RFC or W3C Recommendation'}
+                      {status === 'Adopted' && 'Published spec, real use'}
+                      {status === 'Emerging' && 'Community convention'}
+                      {status === 'Proposed' && 'Active draft'}
+                      {status === 'Legacy' && 'Low impact or superseded'}
+                    </p>
+                  </div>
+                ))}
               </div>
             </section>
 
-            {/* ── Training vs retrieval ── */}
+            {/* Training vs search */}
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-2">Training vs search is a separate decision</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-2">Training vs search</h2>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                Many vendors expose different robots.txt tokens for model training and for search/retrieval.
-                Blocking training does not automatically remove you from AI search results, and allowing search
-                does not mean you consented to training.
+                Many vendors use different robots.txt tokens for model training and for search or retrieval.
+                Blocking training does not automatically remove you from AI search. Allowing search does not mean you consented to training.
               </p>
               <div className="grid md:grid-cols-2 gap-4 mb-4">
                 <div className="rounded-lg border bg-card p-5">
-                  <p className="text-sm font-medium mb-2">Training crawlers</p>
+                  <p className="text-sm font-medium mb-2">Training</p>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                    Fetch content that may be used to train or improve models. Usually little or no citation back to your site.
+                    Content may be used to train or improve models. Little or no citation back to your site.
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     {['GPTBot', 'ClaudeBot', 'CCBot', 'Google-Extended'].map((bot) => (
-                      <code key={bot} className="text-xs font-mono bg-muted/60 px-2 py-0.5 rounded">{bot}</code>
+                      <code key={bot} className="text-xs font-mono bg-muted px-2 py-0.5 rounded">{bot}</code>
                     ))}
                   </div>
                 </div>
                 <div className="rounded-lg border bg-card p-5">
-                  <p className="text-sm font-medium mb-2">Search and retrieval crawlers</p>
+                  <p className="text-sm font-medium mb-2">Search and retrieval</p>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                    Index content for AI search answers. More likely to cite or link your pages when relevant.
+                    Content may be indexed for AI search answers and citations.
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     {['OAI-SearchBot', 'Claude-SearchBot', 'PerplexityBot'].map((bot) => (
-                      <code key={bot} className="text-xs font-mono bg-muted/60 px-2 py-0.5 rounded">{bot}</code>
+                      <code key={bot} className="text-xs font-mono bg-muted px-2 py-0.5 rounded">{bot}</code>
                     ))}
                   </div>
                 </div>
               </div>
               <div className="rounded-lg border bg-card p-4">
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Example: disallowing <code className="text-xs font-mono bg-muted/60 px-1 py-0.5 rounded">GPTBot</code> signals
-                  OpenAI not to use crawled content for foundation-model training. Disallowing{' '}
-                  <code className="text-xs font-mono bg-muted/60 px-1 py-0.5 rounded">OAI-SearchBot</code> affects ChatGPT search
-                  indexing. Those are independent choices in OpenAI&apos;s docs.
+                  Example: disallowing <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">GPTBot</code> affects
+                  OpenAI training use of crawled content. Disallowing{' '}
+                  <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">OAI-SearchBot</code> affects ChatGPT search
+                  indexing. OpenAI documents these as independent choices.
                 </p>
               </div>
             </section>
 
-            {/* ── Field context (sourced, full sentences) ── */}
+            {/* Measured context */}
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-2">Field context (with sources)</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-2">Measured context</h2>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                Earlier versions of this page showed bare percentages without saying who was measured.
-                Below are the claims that can be stated carefully. Each line includes the population and source.
+                Figures only mean something when the sample is named. These are dated readings, not universal rates.
               </p>
               <div className="space-y-px rounded-lg overflow-hidden border">
                 <div className="bg-card p-4">
-                  <p className="text-sm font-medium">About 14% of top domains with a robots.txt file name AI bots explicitly</p>
+                  <p className="text-sm font-medium">About 14% of top domains with robots.txt name AI bots</p>
                   <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
-                    Cloudflare Radar (June 2025): of about 3,800 domains in the top 10,000 that had a parseable robots.txt,
-                    roughly 546 had allow or disallow rules aimed at AI bots. That is not &quot;28% of the whole web.&quot;
+                    Cloudflare Radar (June 2025): among roughly 3,800 domains in the top 10,000 with a parseable robots.txt,
+                    about 546 had allow or disallow rules aimed at AI bots.
                   </p>
                   <Link
                     href="https://blog.cloudflare.com/from-googlebot-to-gptbot-whos-crawling-your-site-in-2025/"
@@ -206,15 +213,15 @@ export default function AiDiscoveryStandardsPage() {
                     rel="noopener noreferrer"
                     className="inline-block mt-2 text-xs text-muted-foreground hover:text-primary transition-colors"
                   >
-                    Cloudflare blog, July 2025 ↗
+                    Cloudflare blog, July 2025
                   </Link>
                 </div>
                 <div className="bg-card p-4">
-                  <p className="text-sm font-medium">News publishers block training bots more often than the average site</p>
+                  <p className="text-sm font-medium">News publishers block training bots more often than average sites</p>
                   <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
-                    Industry summaries report that on the order of three-quarters of major news publishers block at least
-                    one AI training crawler, while only about half block Google-Extended (because Google ties search and
-                    Gemini controls differently). Treat this as a news-publisher pattern, not &quot;79% of all publishers.&quot;
+                    Industry summaries put major news publishers in a high-blocking band for at least one training crawler,
+                    with lower rates for Google-Extended because Google couples search and Gemini controls differently.
+                    That pattern is about news sites, not every publisher.
                   </p>
                   <Link
                     href="https://www.digitalapplied.com/blog/ai-crawler-bot-traffic-statistics-2026-data-reference"
@@ -222,24 +229,24 @@ export default function AiDiscoveryStandardsPage() {
                     rel="noopener noreferrer"
                     className="inline-block mt-2 text-xs text-muted-foreground hover:text-primary transition-colors"
                   >
-                    Secondary synthesis of Cloudflare and related data, 2026 ↗
+                    Industry synthesis of Cloudflare and related data, 2026
                   </Link>
                 </div>
                 <div className="bg-card p-4">
-                  <p className="text-sm font-medium">llms.txt is still uncommon, and it is not a ranking switch</p>
+                  <p className="text-sm font-medium">llms.txt remains uncommon</p>
                   <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
-                    One 2026 survey of roughly 300,000 domains put llms.txt adoption near 10%. That means about one in ten
-                    surveyed sites publish the file, not that 10% of AI traffic uses it. Google has also stated you do not
-                    need llms.txt for Google&apos;s generative search features; the file is a convenience map for agents, not a SERP boost.
+                    One 2026 survey of roughly 300,000 domains put adoption near 10% of that sample.
+                    Google states you do not need llms.txt for its generative search features.
+                    The file is a content map for agents, not a ranking signal.
                   </p>
-                  <div className="mt-2 flex flex-wrap gap-3">
+                  <div className="mt-2 flex flex-wrap gap-4">
                     <Link
                       href="https://www.digitalapplied.com/blog/ai-crawler-bot-traffic-statistics-2026-data-reference"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-xs text-muted-foreground hover:text-primary transition-colors"
                     >
-                      Adoption figure cited in 2026 industry write-ups ↗
+                      Adoption figure in 2026 industry write-ups
                     </Link>
                     <Link
                       href="https://developers.google.com/search/docs"
@@ -247,43 +254,18 @@ export default function AiDiscoveryStandardsPage() {
                       rel="noopener noreferrer"
                       className="text-xs text-muted-foreground hover:text-primary transition-colors"
                     >
-                      Google Search Central docs ↗
+                      Google Search Central
                     </Link>
                   </div>
                 </div>
               </div>
             </section>
 
-            {/* ── Maturity legend ── */}
-            <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-2">Maturity labels</h2>
-              <p className="text-sm text-muted-foreground mb-6">
-                Same vocabulary as the GitHub reference. Status describes the file type, not your site&apos;s score.
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-                {(Object.keys(STATUS_BADGE) as Status[]).map((status) => (
-                  <div key={status} className="rounded-lg border bg-card p-4">
-                    <span className={`inline-flex items-center text-[11px] font-medium px-2 py-0.5 rounded-full border ${STATUS_BADGE[status]}`}>
-                      {status}
-                    </span>
-                    <p className="text-2xl font-semibold tracking-tight mt-3">{statusCounts[status]}</p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      {status === 'Standard' && 'RFC or W3C Recommendation'}
-                      {status === 'Adopted' && 'Published spec or CG report, real use'}
-                      {status === 'Emerging' && 'Community convention'}
-                      {status === 'Proposed' && 'Active draft'}
-                      {status === 'Legacy' && 'Superseded or low impact'}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* ── Category nav ── */}
+            {/* Category index */}
             <section>
               <h2 className="text-2xl font-semibold tracking-tight mb-2">File registry</h2>
               <p className="text-sm text-muted-foreground mb-6">
-                {CATEGORIES.length} categories. Jump to a group, or read top to bottom.
+                {CATEGORIES.length} categories. Click a group or scroll.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {CATEGORIES.map((cat) => {
@@ -303,7 +285,7 @@ export default function AiDiscoveryStandardsPage() {
               </div>
             </section>
 
-            {/* ── Files by category (sitecheck-style rows) ── */}
+            {/* Files by category */}
             {CATEGORIES.map((category) => {
               const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
               const items = DISCOVERY_FILES.filter((f) => f.category === category);
@@ -315,7 +297,7 @@ export default function AiDiscoveryStandardsPage() {
                       <details key={file.name} className="bg-card group">
                         <summary className="flex items-start gap-4 p-4 cursor-pointer select-none hover:bg-muted/30 transition-colors list-none [&::-webkit-details-marker]:hidden">
                           <div className="shrink-0 mt-0.5">
-                            <span className={`inline-flex items-center text-[11px] font-medium px-2 py-0.5 rounded-full border ${STATUS_BADGE[file.status]}`}>
+                            <span className={`inline-flex items-center text-[11px] font-medium px-2 py-0.5 rounded-full border ${STATUS_STYLES[file.status]}`}>
                               {file.status}
                             </span>
                           </div>
@@ -343,7 +325,7 @@ export default function AiDiscoveryStandardsPage() {
                               rel="noopener noreferrer"
                               className="text-xs text-muted-foreground hover:text-primary transition-colors"
                             >
-                              {file.spec} ↗
+                              Official specification
                             </Link>
                           ) : (
                             <span className="text-xs text-muted-foreground/60">{file.spec}</span>
@@ -356,12 +338,11 @@ export default function AiDiscoveryStandardsPage() {
               );
             })}
 
-            {/* ── Crawlers ── */}
+            {/* Crawlers */}
             <section>
               <h2 className="text-2xl font-semibold tracking-tight mb-2">AI crawler tokens</h2>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
                 Prefer vendor documentation and published IP lists. User-triggered fetchers may ignore robots.txt.
-                Tokens without official docs are marked.
               </p>
               <div className="space-y-px rounded-lg overflow-hidden border">
                 {AI_CRAWLERS.map((group) => (
@@ -371,7 +352,7 @@ export default function AiDiscoveryStandardsPage() {
                       <div className="min-w-0 flex-1">
                         <div className="flex flex-wrap gap-1.5">
                           {group.bots.map((bot) => (
-                            <code key={bot} className="text-xs font-mono bg-muted/60 px-2 py-0.5 rounded">
+                            <code key={bot} className="text-xs font-mono bg-muted px-2 py-0.5 rounded">
                               {bot}
                             </code>
                           ))}
@@ -386,19 +367,18 @@ export default function AiDiscoveryStandardsPage() {
               </div>
             </section>
 
-            {/* ── Setup ── */}
+            {/* Setup */}
             <section>
               <h2 className="text-2xl font-semibold tracking-tight mb-2">Setup</h2>
               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                Generate common discovery files for a project. Existing files are never overwritten.
+                Generate common discovery files. Existing files are never overwritten.
               </p>
               <div className="rounded-lg overflow-hidden border">
                 <div className="bg-muted px-4 py-2 border-b">
                   <span className="text-xs font-medium text-muted-foreground">Terminal</span>
                 </div>
                 <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed bg-card">
-                  <code>{`# If published on npm:
-npx ai-discovery-standards
+                  <code>{`npx ai-discovery-standards
 
 # GitHub fallback:
 npx github:vedangvatsa/ai-discovery-standards`}</code>
@@ -412,12 +392,12 @@ npx github:vedangvatsa/ai-discovery-standards`}</code>
                   rel="noopener noreferrer"
                   className="underline hover:text-primary"
                 >
-                  Full documentation on GitHub
+                  Documentation on GitHub
                 </Link>
               </p>
             </section>
 
-            {/* ── Related ── */}
+            {/* Related */}
             <section>
               <h2 className="text-2xl font-semibold tracking-tight mb-4">Related</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -427,7 +407,7 @@ npx github:vedangvatsa/ai-discovery-standards`}</code>
                 >
                   <span className="font-medium text-sm">Site Checklist</span>
                   <p className="text-sm text-muted-foreground mt-1">
-                    Foundations, SEO, accessibility, security, and agent readiness in one checklist.
+                    Foundations, SEO, accessibility, security, and agent readiness.
                   </p>
                 </Link>
                 <Link
@@ -438,16 +418,15 @@ npx github:vedangvatsa/ai-discovery-standards`}</code>
                 >
                   <span className="font-medium text-sm">GitHub repository</span>
                   <p className="text-sm text-muted-foreground mt-1">
-                    Templates, CLI, and the long-form reference for every file above.
+                    Templates, CLI, and the long-form file reference.
                   </p>
                 </Link>
               </div>
             </section>
 
-            <p className="text-xs text-muted-foreground/60 text-center pb-4">
-              Last verified July 2026. A2A lives at <code className="font-mono">/.well-known/agent-card.json</code>;
-              root <code className="font-mono">/agents.json</code> is the agents-txt.com companion.
-              File an issue on GitHub if something is missing or outdated.
+            <p className="text-xs text-muted-foreground/60 text-center">
+              Last verified July 2026. A2A: <code className="font-mono">/.well-known/agent-card.json</code>.
+              agents-txt companion: <code className="font-mono">/agents.json</code>.
             </p>
           </div>
         </article>
