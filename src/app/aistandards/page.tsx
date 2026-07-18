@@ -468,8 +468,8 @@ export default function AiDiscoveryStandardsPage() {
                   </span>
                   <span className="text-xs font-medium text-zinc-400">Terminal</span>
                 </div>
-                <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed bg-zinc-950 text-zinc-100">
-                  <code>{`# Full auto
+                <pre className="!m-0 !rounded-none !border-0 p-4 overflow-x-auto text-[12px] leading-relaxed !bg-zinc-950 !text-zinc-100">
+                  <code className="!bg-transparent !p-0 !text-zinc-100 font-mono">{`# Full auto
 npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.com
 
 # Block training crawlers
@@ -778,8 +778,8 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
                 <div className="bg-zinc-900 px-4 py-2 border-b border-zinc-800 flex items-center gap-2">
                   <span className="text-xs font-medium text-zinc-400">Terminal</span>
                 </div>
-                <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed bg-zinc-950 text-zinc-100">
-                  <code>{`curl -sI https://your-domain.com/robots.txt | head -1
+                <pre className="!m-0 !rounded-none !border-0 p-4 overflow-x-auto text-[12px] leading-relaxed !bg-zinc-950 !text-zinc-100">
+                  <code className="!bg-transparent !p-0 !text-zinc-100 font-mono">{`curl -sI https://your-domain.com/robots.txt | head -1
 curl -sI https://your-domain.com/llms.txt | head -1
 curl -sI https://your-domain.com/sitemap.xml | head -1
 curl -sI https://your-domain.com/agents.txt | head -1
@@ -802,8 +802,8 @@ curl -sI https://your-domain.com/.well-known/security.txt | head -1`}</code>
                 <div className="bg-zinc-900 px-4 py-2 border-b border-zinc-800">
                   <span className="text-xs font-medium text-zinc-400">Prompt</span>
                 </div>
-                <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed bg-zinc-950 text-zinc-100 whitespace-pre-wrap">
-                  <code>{`Set up AI discovery for this project using:
+                <pre className="!m-0 !rounded-none !border-0 p-4 overflow-x-auto text-[12px] leading-relaxed !bg-zinc-950 !text-zinc-100 whitespace-pre-wrap">
+                  <code className="!bg-transparent !p-0 !text-zinc-100 font-mono">{`Set up AI discovery for this project using:
 https://github.com/vedangvatsa/aistandards
 
 Run:
