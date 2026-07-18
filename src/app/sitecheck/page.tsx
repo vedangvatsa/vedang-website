@@ -338,8 +338,11 @@ export default function WebsiteSpecificationPage() {
           <p className="text-sm text-muted-foreground mb-4">
             Run against your live site. Replace example.com with your domain.
           </p>
-          <div className="rounded-lg overflow-hidden border">
-            <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed bg-card">
+          <div className="terminal-chrome rounded-lg overflow-hidden border">
+            <div className="terminal-chrome-bar px-4 py-2 flex items-center gap-2">
+              <span className="text-xs font-medium">Terminal</span>
+            </div>
+            <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed">
               <code>{`# Security headers
 curl -sI https://example.com | grep -iE "strict-transport|content-security|x-content-type|referrer-policy|permissions-policy"
 
