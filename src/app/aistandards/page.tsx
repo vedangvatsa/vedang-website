@@ -406,54 +406,47 @@ export default function AiDiscoveryStandardsPage() {
           <div className="space-y-20 not-prose">
 
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">The problem</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">
+                Search traffic and training traffic are different
+              </h2>
               <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
                 <p>
-                  Products such as ChatGPT, Claude, Perplexity, and Gemini pull information from the public web.
-                  Automated crawlers and fetchers request pages. Some traffic supports{' '}
+                  ChatGPT, Claude, Perplexity, Gemini, and similar products pull from the public web.
+                  Some crawlers support{' '}
                   <strong className="text-foreground font-medium">search and answers</strong>
-                  {' '}(where a site may be cited). Other traffic supports{' '}
+                  , where a site can be cited. Others support{' '}
                   <strong className="text-foreground font-medium">model training</strong>
-                  {' '}(where text may be absorbed without a link back).
+                  , where text may be absorbed with no link back.
                 </p>
                 <p>
-                  Those outcomes differ. Treating &quot;AI bots&quot; as a single switch is usually wrong.
-                  Allowing a search bot while blocking a training bot (or the reverse) is a policy decision.
+                  Treating every AI bot as one switch is usually wrong. Allowing a search bot while blocking a training
+                  bot (or the reverse) is a deliberate policy choice.
                 </p>
                 <p>
-                  A second shift: software increasingly acts as an{' '}
-                  <strong className="text-foreground font-medium">agent</strong>, calling APIs and tools rather than only reading HTML.
-                  Content sites and tool-exposing products need different discovery files.
+                  Agents that call APIs and tools need different discovery files than sites that only publish HTML.
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">What this provides</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Catalog and installer</h2>
               <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
-                <ol className="list-decimal pl-5 space-y-2">
-                  <li>
-                    <strong className="text-foreground font-medium">A catalog</strong>
-                    {' '}of discovery files and crawler tokens: purpose, priority, maturity, and evidence strength.
-                  </li>
-                  <li>
-                    <strong className="text-foreground font-medium">A command-line installer</strong>
-                    {' '}that scans a codebase, writes the practical file set into the static output directory, and wires
-                    layout head tags when a safe injection point exists.
-                  </li>
-                </ol>
                 <p>
-                  This does not guarantee rankings or citations. It reduces wrong paths, mixed-up standards,
-                  and half-finished setups.
+                  The catalog lists discovery files and crawler tokens with purpose, priority, maturity, and how strong
+                  the evidence is. The installer scans a codebase, writes the practical file set into the static output
+                  directory, and wires layout head tags when a safe injection point exists.
+                </p>
+                <p>
+                  Neither guarantees rankings or citations. Both cut down wrong paths, mixed-up standards, and
+                  half-finished setups.
                 </p>
               </div>
             </section>
 
             <section id="install">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Installer</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Install</h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                Run from the website project root (the folder that already holds the application code). Pass the public
-                production URL so generated links resolve correctly.
+                Run from the website project root. Pass the public production URL so generated links resolve correctly.
               </p>
               <div className="terminal-chrome rounded-lg overflow-hidden border mb-4">
                 <div className="terminal-chrome-bar px-4 py-2 flex items-center gap-2">
@@ -474,25 +467,24 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
               </div>
               <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  <strong className="text-foreground font-medium">Behavior:</strong> detects project type; reads package.json
-                  when present; scans routes and content files; writes discovery files into{' '}
+                  The tool detects project type, reads package.json when present, scans routes and content, writes
+                  discovery files into{' '}
                   <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">public/</code> or{' '}
-                  <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">static/</code>; injects discovery link tags
-                  and Organization JSON-LD into the root layout when safe.
+                  <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">static/</code>, and injects discovery
+                  link tags plus Organization JSON-LD into the root layout when safe.
                 </p>
                 <p>
-                  <strong className="text-foreground font-medium">Does not invent:</strong> live A2A endpoints, MCP servers,
-                  or payment rails. Existing files are left alone unless{' '}
+                  It does not invent live A2A endpoints, MCP servers, or payment rails. Existing files stay unless{' '}
                   <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">--force</code> is passed.
                 </p>
                 <p>
-                  <strong className="text-foreground font-medium">After the run:</strong> review{' '}
+                  After it finishes, review{' '}
                   <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">llms.txt</code> for raw slug titles,
-                  confirm the training policy, deploy so root paths resolve on the live domain, and add FAQ or Article
-                  schema on individual content pages where appropriate.
+                  confirm training policy, deploy so root paths resolve on the live domain, and add FAQ or Article schema
+                  on content pages where those types fit.
                 </p>
                 <p>
-                  Source and flags:{' '}
+                  Source and flags on{' '}
                   <Link
                     href="https://github.com/vedangvatsa/aistandards"
                     target="_blank"
@@ -501,15 +493,15 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
                   >
                     github.com/vedangvatsa/aistandards
                   </Link>
+                  .
                 </p>
               </div>
             </section>
 
             <section id="first-five">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Five files that cover most content sites</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Five files most content sites need</h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                For a typical public content site, these five items address the majority of crawl-control and
-                machine-readable identity needs.
+                On a typical public content site, these five cover most crawl control and machine-readable identity.
               </p>
               <div className="space-y-px rounded-lg overflow-hidden border">
                 {startHere.map((file, i) => (
@@ -522,45 +514,37 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
                       </p>
                     </div>
                     <p className="text-sm text-muted-foreground leading-relaxed sm:pl-9">{file.what}</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed mt-2 sm:pl-9">
-                      <span className="text-foreground font-medium">Why it matters: </span>
-                      {file.why}
-                    </p>
-                    <p className="text-sm text-muted-foreground leading-relaxed mt-2 sm:pl-9">
-                      <span className="text-foreground font-medium">Evidence: </span>
-                      {file.basis}
-                    </p>
+                    <p className="text-sm text-muted-foreground leading-relaxed mt-2 sm:pl-9">{file.why}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed mt-2 sm:pl-9">{file.basis}</p>
                   </div>
                 ))}
               </div>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">How entries are chosen</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">What makes the catalog</h2>
               <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
-                <p>An entry appears in the catalog when at least one of the following holds:</p>
-                <ol className="list-decimal pl-5 space-y-2">
-                  <li>A primary source exists (vendor documentation, RFC, W3C report, or public community specification).</li>
-                  <li>A clear technical role exists (for example OpenAPI as an HTTP API contract).</li>
-                  <li>The file is a common root-site asset people already emit, so optional and legacy items stay labeled honestly.</li>
-                </ol>
                 <p>
-                  Evidence is strongest when a vendor publishes bot names and robots rules that can be verified in logs.
-                  Evidence is weaker for informal files that major chat products have not promised to fetch.
-                  The installer focuses on strong and medium cases; weak cases stay optional.
+                  A file lands in the catalog when there is a primary source (vendor docs, RFC, W3C report, or public
+                  community spec), a clear technical role (OpenAPI as an HTTP API contract is a good example), or it is a
+                  common root-site asset people already ship, so optional and legacy items can stay labeled honestly.
                 </p>
                 <p>
-                  The catalog does not claim that adding any file guarantees citations, traffic, or model behavior.
-                  These files reduce ambiguity and enable documented controls. Content quality and crawl access still
-                  drive most outcomes.
+                  Vendor-published bot names and robots rules that show up in logs are the strongest evidence. Informal
+                  files that major chat products have not promised to fetch are weaker. The installer leans on the strong
+                  and medium cases and leaves weak ones optional.
+                </p>
+                <p>
+                  No file here guarantees citations, traffic, or model behavior. These surfaces reduce ambiguity and
+                  document controls. Content quality and crawl access still drive most outcomes.
                 </p>
               </div>
             </section>
 
             <section id="training-vs-search">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Training is not the same as search</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Training vs search</h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                Many AI companies publish different bot names for different jobs. Configure them separately in{' '}
+                Many AI companies publish different bot names for different jobs. Set them separately in{' '}
                 <code className="text-xs font-mono bg-muted px-1.5 py-0.5 rounded">robots.txt</code>.
               </p>
               <div className="grid md:grid-cols-2 gap-4 mb-4">
@@ -589,24 +573,23 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
               </div>
               <div className="rounded-lg border bg-card p-5 text-sm text-muted-foreground leading-relaxed space-y-2">
                 <p>
-                  <strong className="text-foreground font-medium">Example (OpenAI):</strong> Disallowing{' '}
+                  On OpenAI, disallowing{' '}
                   <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">GPTBot</code> signals that crawled
                   content should not feed foundation-model training. Disallowing{' '}
                   <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">OAI-SearchBot</code> affects ChatGPT
-                  search indexing. OpenAI documents these as independent choices.
+                  search indexing. The company documents these as independent choices.
                 </p>
                 <p>
-                  <strong className="text-foreground font-medium">Caveat:</strong> When a person is chatting and the product
-                  fetches one page for that request, some vendors state that robots.txt may not fully apply.
+                  When a person is chatting and the product fetches one page for that request, some vendors say robots.txt
+                  may not fully apply.
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Label meanings</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Priority and maturity tags</h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                Each catalog row carries two tags. They describe the file type, not a score for any particular site,
-                and not a ranking of the open web.
+                Each catalog row has two tags. They describe the file, not a score for any particular site.
               </p>
 
               <h3 className="text-lg font-semibold tracking-tight mb-3">Priority</h3>
@@ -621,15 +604,14 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
                 <div className="bg-card p-4">
                   <p className="text-sm font-medium text-foreground mb-1">When it applies</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Relevant only in specific situations: heavy publishing, EU mining opt-out needs, public APIs or agents,
-                    advertising inventory, and similar cases.
+                    Relevant only in specific situations such as heavy publishing, EU mining opt-out, public APIs or agents,
+                    or advertising inventory.
                   </p>
                 </div>
                 <div className="bg-card p-4">
                   <p className="text-sm font-medium text-foreground mb-1">Optional</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Documentation, legacy browser assets, or experiments. Safe to skip for AI visibility unless a specific
-                    reason exists.
+                    Documentation, legacy browser assets, or experiments. Safe to skip unless there is a specific reason.
                   </p>
                 </div>
               </div>
@@ -639,39 +621,38 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
                 <div className="bg-card p-4">
                   <p className="text-sm font-medium text-foreground mb-1">Standard</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Formal standard (RFC or W3C Recommendation). Example: robots.txt, security.txt, OpenAPI.
+                    Formal standard (RFC or W3C Recommendation). Includes robots.txt, security.txt, and OpenAPI.
                   </p>
                 </div>
                 <div className="bg-card p-4">
                   <p className="text-sm font-medium text-foreground mb-1">Adopted</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Written and used in practice without necessarily being a formal internet standard. Example: llms.txt,
-                    A2A agent cards.
+                    Written and used in practice without a formal internet standard. Includes llms.txt and A2A agent cards.
                   </p>
                 </div>
                 <div className="bg-card p-4">
                   <p className="text-sm font-medium text-foreground mb-1">Emerging</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Community convention with uneven support. Example: agents.txt, brand.txt.
+                    Community convention with uneven support. Includes agents.txt and brand.txt.
                   </p>
                 </div>
                 <div className="bg-card p-4">
                   <p className="text-sm font-medium text-foreground mb-1">Proposed</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Active draft. Spec or path may change. Example: some MCP discovery cards.
+                    Active draft. Spec or path may change. Includes some MCP discovery cards.
                   </p>
                 </div>
                 <div className="bg-card p-4">
                   <p className="text-sm font-medium text-foreground mb-1">Legacy</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Superseded or low impact. Example: old plugin manifests, browser DNT policy files.
+                    Superseded or low impact. Includes old plugin manifests and browser DNT policy files.
                   </p>
                 </div>
               </div>
             </section>
 
             <section id="registry">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Catalog</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Full catalog</h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-4">
                 Grouped by purpose. Expand a row for evidence notes and the official source when one exists.
               </p>
@@ -711,16 +692,10 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
                             <p className="text-base font-medium text-foreground">{file.name}</p>
                             <p className="text-xs font-mono text-muted-foreground mt-0.5">{file.path}</p>
                             <p className="text-sm text-muted-foreground leading-relaxed mt-2">{file.what}</p>
-                            <p className="text-sm text-muted-foreground leading-relaxed mt-2">
-                              <span className="text-foreground font-medium">Why: </span>
-                              {file.why}
-                            </p>
+                            <p className="text-sm text-muted-foreground leading-relaxed mt-2">{file.why}</p>
                           </summary>
                           <div className="px-4 sm:px-5 pb-4 pt-0 space-y-2">
-                            <p className="text-sm text-muted-foreground leading-relaxed">
-                              <span className="text-foreground font-medium">Evidence: </span>
-                              {file.basis}
-                            </p>
+                            <p className="text-sm text-muted-foreground leading-relaxed">{file.basis}</p>
                             {file.specUrl ? (
                               <Link
                                 href={file.specUrl}
@@ -743,9 +718,9 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Major crawler tokens</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Common crawler names</h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                Names appear in server logs and in robots.txt. Prefer each company documentation when stakes are high.
+                These show up in server logs and robots.txt. Check each company&apos;s own docs when the stakes are high.
               </p>
               <div className="space-y-px rounded-lg overflow-hidden border">
                 {AI_CRAWLERS.map((group) => (
@@ -765,10 +740,10 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
             </section>
 
             <section id="verify">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Verify after deploy</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Check after deploy</h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-4">
-                Files written to a local static folder only matter if they are reachable at the live domain root.
-                Replace the domain, then check status codes.
+                Local files only help if they are reachable at the live domain root. Swap in the domain and check status
+                codes.
               </p>
               <div className="terminal-chrome rounded-lg overflow-hidden border mb-4">
                 <div className="terminal-chrome-bar px-4 py-2 flex items-center gap-2">
@@ -790,9 +765,9 @@ curl -sI https://your-domain.com/.well-known/security.txt | head -1`}</code>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Coding-agent setup prompt</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Prompt for a coding agent</h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-4">
-                Sample instruction for a coding agent so it runs the installer instead of inventing formats:
+                Paste this so the agent runs the installer instead of inventing formats.
               </p>
               <div className="terminal-chrome rounded-lg overflow-hidden border">
                 <div className="terminal-chrome-bar px-4 py-2">
@@ -811,12 +786,11 @@ Review llms.txt, confirm training allow/deny, and do not advertise fake A2A or M
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Repository and contributions</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Contribute</h2>
               <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
                 <p>
-                  The GitHub repository is public. External contributors open issues or pull requests. Changes reach
-                  the main branch only when a maintainer with write access merges them. Outside accounts cannot push
-                  directly to main.
+                  The GitHub repo is public. Open issues or pull requests. Only maintainers with write access merge to
+                  main.
                 </p>
                 <p>
                   Prefer contributions that cite a primary source (vendor docs, RFC, or published specification).
@@ -853,7 +827,7 @@ Review llms.txt, confirm training allow/deny, and do not advertise fake A2A or M
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Related</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Also useful</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Link
                   href="/sitecheck"
@@ -872,7 +846,7 @@ Review llms.txt, confirm training allow/deny, and do not advertise fake A2A or M
                 >
                   <span className="font-medium text-sm text-foreground">Source on GitHub</span>
                   <p className="text-sm text-muted-foreground mt-1">
-                    CLI, templates, and long technical reference.
+                    CLI, templates, and longer technical notes.
                   </p>
                 </Link>
               </div>
