@@ -378,6 +378,29 @@ export default function AiDiscoveryStandardsPage() {
           <AuthorByline
             links={[{ label: 'GitHub', href: 'https://github.com/vedangvatsa/ai-discovery-standards' }]}
           />
+          <nav
+            aria-label="On this page"
+            className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-muted-foreground"
+          >
+            <a href="#install" className="hover:text-primary transition-colors">
+              Install
+            </a>
+            <a href="#first-five" className="hover:text-primary transition-colors">
+              First five files
+            </a>
+            <a href="#training-vs-search" className="hover:text-primary transition-colors">
+              Training vs search
+            </a>
+            <a href="#mistakes" className="hover:text-primary transition-colors">
+              Common mistakes
+            </a>
+            <a href="#registry" className="hover:text-primary transition-colors">
+              Catalog
+            </a>
+            <a href="#verify" className="hover:text-primary transition-colors">
+              Verify
+            </a>
+          </nav>
         </div>
       </header>
 
@@ -429,103 +452,6 @@ export default function AiDiscoveryStandardsPage() {
                 <p>
                   The project does not guarantee rankings or citations. It reduces wrong paths, mixed-up standards,
                   and half-finished setups.
-                </p>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Five files that cover most content sites</h2>
-              <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                For a typical public content site, these five items address the majority of crawl-control and
-                machine-readable identity needs.
-              </p>
-              <div className="space-y-px rounded-lg overflow-hidden border">
-                {startHere.map((file, i) => (
-                  <div key={file.name} className="bg-card p-4 sm:p-5">
-                    <div className="flex items-baseline gap-3 mb-2">
-                      <span className="text-sm font-medium text-muted-foreground tabular-nums w-6 shrink-0">{i + 1}.</span>
-                      <p className="text-base font-medium text-foreground min-w-0">
-                        {file.name}{' '}
-                        <span className="font-mono text-xs font-normal text-muted-foreground">{file.path}</span>
-                      </p>
-                    </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed sm:pl-9">{file.what}</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed mt-2 sm:pl-9">
-                      <span className="text-foreground font-medium">Why it matters: </span>
-                      {file.why}
-                    </p>
-                    <p className="text-sm text-muted-foreground leading-relaxed mt-2 sm:pl-9">
-                      <span className="text-foreground font-medium">Evidence: </span>
-                      {file.basis}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">How entries are chosen</h2>
-              <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
-                <p>An entry appears in the catalog when at least one of the following holds:</p>
-                <ol className="list-decimal pl-5 space-y-2">
-                  <li>A primary source exists (vendor documentation, RFC, W3C report, or public community specification).</li>
-                  <li>A clear technical role exists (for example OpenAPI as an HTTP API contract).</li>
-                  <li>The file is a common root-site asset people already emit, so optional and legacy items stay labeled honestly.</li>
-                </ol>
-                <p>
-                  Evidence is strongest when a vendor publishes bot names and robots rules that can be verified in logs.
-                  Evidence is weaker for informal files that major chat products have not promised to fetch.
-                  The installer focuses on strong and medium cases; weak cases stay optional.
-                </p>
-                <p>
-                  The catalog does not claim that adding any file guarantees citations, traffic, or model behavior.
-                  These files reduce ambiguity and enable documented controls. Content quality and crawl access still
-                  drive most outcomes.
-                </p>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Training is not the same as search</h2>
-              <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                Many AI companies publish different bot names for different jobs. Configure them separately in{' '}
-                <code className="text-xs font-mono bg-muted px-1.5 py-0.5 rounded">robots.txt</code>.
-              </p>
-              <div className="grid md:grid-cols-2 gap-4 mb-4">
-                <div className="rounded-lg border bg-card p-5">
-                  <p className="text-base font-medium text-foreground mb-2">Training-related bots</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                    Collect text that may improve future models. Citation or click-through is uncommon from this path alone.
-                  </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {['GPTBot', 'ClaudeBot', 'CCBot', 'Google-Extended'].map((bot) => (
-                      <code key={bot} className="text-xs font-mono bg-muted px-2 py-0.5 rounded">{bot}</code>
-                    ))}
-                  </div>
-                </div>
-                <div className="rounded-lg border bg-card p-5">
-                  <p className="text-base font-medium text-foreground mb-2">Search and answer bots</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                    Build indexes or fetch pages so a product can answer a question and sometimes link to the source.
-                  </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {['OAI-SearchBot', 'Claude-SearchBot', 'PerplexityBot'].map((bot) => (
-                      <code key={bot} className="text-xs font-mono bg-muted px-2 py-0.5 rounded">{bot}</code>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-lg border bg-card p-5 text-sm text-muted-foreground leading-relaxed space-y-2">
-                <p>
-                  <strong className="text-foreground font-medium">Example (OpenAI):</strong> Disallowing{' '}
-                  <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">GPTBot</code> signals that crawled
-                  content should not feed foundation-model training. Disallowing{' '}
-                  <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">OAI-SearchBot</code> affects ChatGPT
-                  search indexing. OpenAI documents these as independent choices.
-                </p>
-                <p>
-                  <strong className="text-foreground font-medium">Caveat:</strong> When a person is chatting and the product
-                  fetches one page for that request, some vendors state that robots.txt may not fully apply.
                 </p>
               </div>
             </section>
@@ -582,6 +508,146 @@ npx --yes github:vedangvatsa/ai-discovery-standards --yes --scan --url=https://y
                   >
                     github.com/vedangvatsa/ai-discovery-standards
                   </Link>
+                </p>
+              </div>
+            </section>
+
+            <section id="first-five">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Five files that cover most content sites</h2>
+              <p className="text-base text-muted-foreground leading-relaxed mb-6">
+                For a typical public content site, these five items address the majority of crawl-control and
+                machine-readable identity needs.
+              </p>
+              <div className="space-y-px rounded-lg overflow-hidden border">
+                {startHere.map((file, i) => (
+                  <div key={file.name} className="bg-card p-4 sm:p-5">
+                    <div className="flex items-baseline gap-3 mb-2">
+                      <span className="text-sm font-medium text-muted-foreground tabular-nums w-6 shrink-0">{i + 1}.</span>
+                      <p className="text-base font-medium text-foreground min-w-0">
+                        {file.name}{' '}
+                        <span className="font-mono text-xs font-normal text-muted-foreground">{file.path}</span>
+                      </p>
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed sm:pl-9">{file.what}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed mt-2 sm:pl-9">
+                      <span className="text-foreground font-medium">Why it matters: </span>
+                      {file.why}
+                    </p>
+                    <p className="text-sm text-muted-foreground leading-relaxed mt-2 sm:pl-9">
+                      <span className="text-foreground font-medium">Evidence: </span>
+                      {file.basis}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section id="mistakes">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Common mistakes</h2>
+              <div className="space-y-px rounded-lg overflow-hidden border">
+                <div className="bg-card p-4 sm:p-5">
+                  <p className="text-sm font-medium text-foreground mb-1">One switch for all AI bots</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Blocking every AI-related token also blocks search/retrieval bots that can cite a site.
+                    Training and search tokens are separate decisions.
+                  </p>
+                </div>
+                <div className="bg-card p-4 sm:p-5">
+                  <p className="text-sm font-medium text-foreground mb-1">Wrong agents path</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Root <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">/agents.json</code> is the
+                    agents-txt.com catalog. The A2A agent card is{' '}
+                    <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">/.well-known/agent-card.json</code>.
+                    Mixing them breaks interoperability.
+                  </p>
+                </div>
+                <div className="bg-card p-4 sm:p-5">
+                  <p className="text-sm font-medium text-foreground mb-1">Advertising fake capabilities</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Publishing an A2A card or MCP endpoint URL without a live service misleads agents. The installer
+                    skips those stubs unless explicitly requested or detected.
+                  </p>
+                </div>
+                <div className="bg-card p-4 sm:p-5">
+                  <p className="text-sm font-medium text-foreground mb-1">Files never reach the live domain</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Writing into <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">public/</code> is not
+                    enough if the host or framework does not serve those paths at the site root after deploy.
+                  </p>
+                </div>
+                <div className="bg-card p-4 sm:p-5">
+                  <p className="text-sm font-medium text-foreground mb-1">Treating every catalog file as mandatory</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Optional and legacy items exist so the map is complete. Most content sites only need the start-here set
+                    plus situational files (feeds, APIs, EU mining signals).
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">How entries are chosen</h2>
+              <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
+                <p>An entry appears in the catalog when at least one of the following holds:</p>
+                <ol className="list-decimal pl-5 space-y-2">
+                  <li>A primary source exists (vendor documentation, RFC, W3C report, or public community specification).</li>
+                  <li>A clear technical role exists (for example OpenAPI as an HTTP API contract).</li>
+                  <li>The file is a common root-site asset people already emit, so optional and legacy items stay labeled honestly.</li>
+                </ol>
+                <p>
+                  Evidence is strongest when a vendor publishes bot names and robots rules that can be verified in logs.
+                  Evidence is weaker for informal files that major chat products have not promised to fetch.
+                  The installer focuses on strong and medium cases; weak cases stay optional.
+                </p>
+                <p>
+                  The catalog does not claim that adding any file guarantees citations, traffic, or model behavior.
+                  These files reduce ambiguity and enable documented controls. Content quality and crawl access still
+                  drive most outcomes.
+                </p>
+              </div>
+            </section>
+
+            <section id="training-vs-search">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Training is not the same as search</h2>
+              <p className="text-base text-muted-foreground leading-relaxed mb-6">
+                Many AI companies publish different bot names for different jobs. Configure them separately in{' '}
+                <code className="text-xs font-mono bg-muted px-1.5 py-0.5 rounded">robots.txt</code>.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4 mb-4">
+                <div className="rounded-lg border bg-card p-5">
+                  <p className="text-base font-medium text-foreground mb-2">Training-related bots</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                    Collect text that may improve future models. Citation or click-through is uncommon from this path alone.
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {['GPTBot', 'ClaudeBot', 'CCBot', 'Google-Extended'].map((bot) => (
+                      <code key={bot} className="text-xs font-mono bg-muted px-2 py-0.5 rounded">{bot}</code>
+                    ))}
+                  </div>
+                </div>
+                <div className="rounded-lg border bg-card p-5">
+                  <p className="text-base font-medium text-foreground mb-2">Search and answer bots</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                    Build indexes or fetch pages so a product can answer a question and sometimes link to the source.
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {['OAI-SearchBot', 'Claude-SearchBot', 'PerplexityBot'].map((bot) => (
+                      <code key={bot} className="text-xs font-mono bg-muted px-2 py-0.5 rounded">{bot}</code>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-lg border bg-card p-5 text-sm text-muted-foreground leading-relaxed space-y-2">
+                <p>
+                  <strong className="text-foreground font-medium">Example (OpenAI):</strong> Disallowing{' '}
+                  <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">GPTBot</code> signals that crawled
+                  content should not feed foundation-model training. Disallowing{' '}
+                  <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">OAI-SearchBot</code> affects ChatGPT
+                  search indexing. OpenAI documents these as independent choices.
+                </p>
+                <p>
+                  <strong className="text-foreground font-medium">Caveat:</strong> When a person is chatting and the product
+                  fetches one page for that request, some vendors state that robots.txt may not fully apply.
                 </p>
               </div>
             </section>
@@ -656,9 +722,23 @@ npx --yes github:vedangvatsa/ai-discovery-standards --yes --scan --url=https://y
 
             <section id="registry">
               <h2 className="text-2xl font-semibold tracking-tight mb-4">Catalog</h2>
-              <p className="text-base text-muted-foreground leading-relaxed mb-6">
+              <p className="text-base text-muted-foreground leading-relaxed mb-4">
                 Grouped by purpose. Expand a row for evidence notes and the official source when one exists.
               </p>
+              <div className="flex flex-wrap gap-2 mb-8">
+                {CATEGORIES.map((category) => {
+                  const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                  return (
+                    <a
+                      key={category}
+                      href={`#${slug}`}
+                      className="rounded-md border bg-card px-3 py-1.5 text-xs font-medium text-muted-foreground hover:border-primary/50 hover:text-foreground transition-colors"
+                    >
+                      {category}
+                    </a>
+                  );
+                })}
+              </div>
 
               {CATEGORIES.map((category) => {
                 const items = DISCOVERY_FILES.filter((f) => f.category === category);
@@ -732,6 +812,31 @@ npx --yes github:vedangvatsa/ai-discovery-standards --yes --scan --url=https://y
                   </div>
                 ))}
               </div>
+            </section>
+
+            <section id="verify">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Verify after deploy</h2>
+              <p className="text-base text-muted-foreground leading-relaxed mb-4">
+                Files written to a local static folder only matter if they are reachable at the live domain root.
+                Replace the domain, then check status codes.
+              </p>
+              <div className="rounded-lg overflow-hidden border border-zinc-800 mb-4">
+                <div className="bg-zinc-900 px-4 py-2 border-b border-zinc-800 flex items-center gap-2">
+                  <span className="text-xs font-medium text-zinc-400">Terminal</span>
+                </div>
+                <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed bg-zinc-950 text-zinc-100">
+                  <code>{`curl -sI https://your-domain.com/robots.txt | head -1
+curl -sI https://your-domain.com/llms.txt | head -1
+curl -sI https://your-domain.com/sitemap.xml | head -1
+curl -sI https://your-domain.com/agents.txt | head -1
+curl -sI https://your-domain.com/.well-known/security.txt | head -1`}</code>
+                </pre>
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Expect <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">HTTP/2 200</code> (or 200 on HTTP/1.1).
+                A 404 after a successful local install almost always means the host is not serving the static directory
+                at the domain root.
+              </p>
             </section>
 
             <section>
