@@ -1522,9 +1522,10 @@
     "id": "viral-rewrite-50",
     "scheduleDate": "2026-07-18",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Open offices were supposed to help us talk more. Instead they made it harder to think. Sickness spreads, focus breaks, and real conversations get replaced by noise. Find companies that give you space to do deep work at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_140_1.jpg"
+    "image": "scripts/post-images/post_140_1.jpg",
+    "error": "Media failed: scripts/post-images/post_140_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-51",
