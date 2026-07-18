@@ -1613,9 +1613,11 @@
     "id": "ig-solo-billionaire",
     "text": "Sam Altman expects a one-person, billion-dollar company to exist soon.\n\nNo employees, no co-founders. Just a laptop and a swarm of AI tools.\n\nYou no longer need a big team to build massive things. Read my analysis on solo enterprise: veda.ng/agenteconomy",
     "image": "scripts/thread-assets/ig-reels/DSrtaXmEWxl.mp4",
-    "posted": false,
+    "posted": true,
     "scheduleDate": "2026-07-18",
-    "scheduleTime": "09:00"
+    "scheduleTime": "09:00",
+    "postedAt": "2026-07-18T04:32:50.133Z",
+    "postId": "urn:li:ugcPost:7484102860721283072"
   },
   {
     "id": "ig-too-real",

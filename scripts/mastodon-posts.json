@@ -1513,9 +1513,10 @@
     "id": "viral-rewrite-49",
     "scheduleDate": "2026-07-18",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The people who truly care about you will tell you hard truths. Comfort today can cost you tomorrow. The best teams value candor over flattery. Find teams that value candor at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_178_1.jpg"
+    "image": "scripts/post-images/post_178_1.jpg",
+    "error": "Media failed: scripts/post-images/post_178_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-50",
