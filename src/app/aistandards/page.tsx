@@ -3,6 +3,7 @@ import { ExternalLink, ArrowRight, Database, Search, Eye, EyeOff, FileText, Brai
 import { AuthorByline } from '@/components/author-byline';
 
 // ─── Complete Discovery File Registry ───
+// Keep aligned with https://github.com/vedangvatsa/ai-discovery-standards (verified Q3 2026)
 const DISCOVERY_FILES: {
   name: string;
   path: string;
@@ -10,75 +11,79 @@ const DISCOVERY_FILES: {
   category: string;
   spec: string;
   specUrl?: string;
-  status: 'Standard' | 'Adopted' | 'Emerging' | 'Proposed';
+  status: 'Standard' | 'Adopted' | 'Emerging' | 'Proposed' | 'Legacy';
 }[] = [
   // Access Control
-  { name: 'robots.txt', path: '/robots.txt', desc: 'Crawler access directives for 30+ AI bots. Separates training bots (GPTBot, ClaudeBot) from search bots (OAI-SearchBot, PerplexityBot).', category: 'Access Control', spec: 'RFC 9309', specUrl: 'https://www.rfc-editor.org/rfc/rfc9309', status: 'Standard' },
-  { name: 'ai.txt', path: '/ai.txt', desc: 'AI-specific usage permissions: training, citation, indexing, summarization. Granular control beyond robots.txt.', category: 'Access Control', spec: 'Community', status: 'Emerging' },
-  { name: 'tdmrep.json', path: '/.well-known/tdmrep.json', desc: 'Text and Data Mining reservation. EU CDSM Directive Article 4 compliance. Machine-readable opt-out for AI training.', category: 'Access Control', spec: 'W3C TDMRep', specUrl: 'https://www.w3.org/community/tdmrep/', status: 'Standard' },
+  { name: 'robots.txt', path: '/robots.txt', desc: 'Crawler access control (RFC 9309). Primary practical lever for AI bots. Training tokens (GPTBot, ClaudeBot) are independent from search tokens (OAI-SearchBot, PerplexityBot, Claude-SearchBot).', category: 'Access Control', spec: 'RFC 9309', specUrl: 'https://www.rfc-editor.org/rfc/rfc9309', status: 'Standard' },
+  { name: 'Content-Signal', path: '/robots.txt (directive)', desc: 'Optional usage preferences for search vs AI input vs training (Cloudflare Content Signals; related IETF AIPREF work). Complements robots Allow/Disallow.', category: 'Access Control', spec: 'AIPREF / Content Signals', specUrl: 'https://datatracker.ietf.org/wg/aipref/about/', status: 'Proposed' },
+  { name: 'ai.txt', path: '/ai.txt', desc: 'Informal AI usage preferences (training, citation, indexing, summarization). Not a formal standard; does not replace robots.txt, TDMRep, or AIPREF.', category: 'Access Control', spec: 'Community', status: 'Emerging' },
+  { name: 'tdmrep.json', path: '/.well-known/tdmrep.json', desc: 'W3C TDMRep site file: JSON array of {location, tdm-reservation, tdm-policy?}. EU CDSM Art. 4 opt-out signal. Also supports HTTP headers and HTML meta.', category: 'Access Control', spec: 'W3C TDMRep CG', specUrl: 'https://www.w3.org/community/tdmrep/', status: 'Adopted' },
 
   // Content Discovery
-  { name: 'llms.txt', path: '/llms.txt', desc: 'Structured Markdown summary for LLMs. Title, description, and organized links to key pages. Created by Jeremy Howard (Answer.AI), 2024.', category: 'Content Discovery', spec: 'llmstxt.org', specUrl: 'https://llmstxt.org', status: 'Adopted' },
-  { name: 'llms-full.txt', path: '/llms-full.txt', desc: 'Full-text content export for deep AI ingestion. Extended version of llms.txt with complete page content.', category: 'Content Discovery', spec: 'llmstxt.org', specUrl: 'https://llmstxt.org', status: 'Adopted' },
-  { name: 'sitemap.xml', path: '/sitemap.xml', desc: 'URL index with lastmod, changefreq, and priority metadata. Used by Google, Bing, and AI crawlers.', category: 'Content Discovery', spec: 'sitemaps.org', specUrl: 'https://www.sitemaps.org/protocol.html', status: 'Standard' },
-  { name: 'feed.xml', path: '/feed.xml', desc: 'RSS/Atom feed for syndication. Chronological content updates consumed by readers and aggregators.', category: 'Content Discovery', spec: 'RSS 2.0 / Atom', status: 'Standard' },
-  { name: 'feed.json', path: '/feed.json', desc: 'JSON Feed (jsonfeed.org). Machine-readable alternative to RSS/Atom. Easier for AI agents to parse.', category: 'Content Discovery', spec: 'JSON Feed 1.1', specUrl: 'https://jsonfeed.org/version/1.1', status: 'Adopted' },
+  { name: 'llms.txt', path: '/llms.txt', desc: 'Community Markdown summary for LLMs: H1, blockquote blurb, curated links. Not IETF/W3C. Created by Jeremy Howard (Answer.AI), 2024.', category: 'Content Discovery', spec: 'llmstxt.org', specUrl: 'https://llmstxt.org', status: 'Adopted' },
+  { name: 'llms-full.txt', path: '/llms-full.txt', desc: 'Optional full-text companion to llms.txt for deep ingestion of key pages.', category: 'Content Discovery', spec: 'llmstxt.org', specUrl: 'https://llmstxt.org', status: 'Adopted' },
+  { name: 'sitemap.xml', path: '/sitemap.xml', desc: 'URL inventory with lastmod and related hints. Used by search engines and many AI retrieval crawlers.', category: 'Content Discovery', spec: 'sitemaps.org', specUrl: 'https://www.sitemaps.org/protocol.html', status: 'Standard' },
+  { name: 'feed.xml', path: '/feed.xml', desc: 'RSS/Atom syndication feed for chronological updates.', category: 'Content Discovery', spec: 'RSS 2.0 / Atom', status: 'Standard' },
+  { name: 'feed.json', path: '/feed.json', desc: 'JSON Feed 1.1 — machine-friendly alternative to RSS/Atom.', category: 'Content Discovery', spec: 'JSON Feed 1.1', specUrl: 'https://jsonfeed.org/version/1.1', status: 'Adopted' },
 
   // Agent Discovery
-  { name: 'ai-plugin.json', path: '/ai-plugin.json', desc: 'ChatGPT plugin manifest. Declares site capabilities, API endpoints, and authentication for OpenAI agents.', category: 'Agent Discovery', spec: 'OpenAI Plugin', specUrl: 'https://platform.openai.com/docs/plugins', status: 'Adopted' },
-  { name: 'agents.json', path: '/agents.json', desc: 'Agent-to-Agent (A2A) capability advertisement. Declares skills, I/O modes, and authentication for autonomous agents.', category: 'Agent Discovery', spec: 'A2A Protocol', status: 'Emerging' },
-  { name: 'agents.txt', path: '/agents.txt', desc: 'Agent protocol capability declaration. Declares MCP endpoints, A2A cards, skill packages, payment protocols, and auth flows in robots.txt-like syntax.', category: 'Agent Discovery', spec: 'agents-txt.com', specUrl: 'https://agents-txt.com', status: 'Emerging' },
-  { name: 'MCP Server Card', path: '/.well-known/mcp/server-card.json', desc: 'MCP Server Card (SEP-2127). Exposes transport config, capabilities, and auth requirements for MCP clients.', category: 'Agent Discovery', spec: 'MCP / AAIF', specUrl: 'https://modelcontextprotocol.io', status: 'Proposed' },
-  { name: 'openapi.json', path: '/api/openapi.json', desc: 'OpenAPI 3.x specification. Machine-readable API contract. Foundation for agent tool discovery.', category: 'Agent Discovery', spec: 'OpenAPI 3.1', specUrl: 'https://spec.openapis.org/oas/v3.1.0', status: 'Standard' },
+  { name: 'agents.txt', path: '/agents.txt', desc: 'agents-txt.com capability announcement: MCP, A2A card URLs, skills, payments, auth, UCP, WebMCP. Plain-text, robots-like syntax.', category: 'Agent Discovery', spec: 'agents-txt.com', specUrl: 'https://agents-txt.com', status: 'Emerging' },
+  { name: 'agents.json', path: '/agents.json', desc: 'agents-txt.com JSON companion at site root (not A2A). Structured catalog of MCP/A2A/skills/payments metadata.', category: 'Agent Discovery', spec: 'agents-txt.com', specUrl: 'https://agents-txt.com', status: 'Emerging' },
+  { name: 'agent-card.json', path: '/.well-known/agent-card.json', desc: 'A2A Protocol Agent Card (Linux Foundation). Canonical path is agent-card.json — not agents.json. Identity, transports, skills, security.', category: 'Agent Discovery', spec: 'A2A Protocol', specUrl: 'https://a2a-protocol.org/latest/specification/', status: 'Adopted' },
+  { name: 'ai-plugin.json', path: '/.well-known/ai-plugin.json', desc: 'Legacy OpenAI ChatGPT plugin manifest. Prefer OpenAPI + MCP / Apps SDK for new integrations. api.url must be OpenAPI, never sitemap.xml.', category: 'Agent Discovery', spec: 'OpenAI (legacy)', specUrl: 'https://developers.openai.com/api/docs/bots', status: 'Legacy' },
+  { name: 'MCP Server Card', path: '/.well-known/mcp/server-card.json', desc: 'Draft MCP Server Card (SEP-2127 family). Pre-connection transport/capability metadata. Path still in flux across SEPs.', category: 'Agent Discovery', spec: 'MCP (draft)', specUrl: 'https://modelcontextprotocol.io', status: 'Proposed' },
+  { name: 'openapi.json', path: '/openapi.json or /openapi.yaml', desc: 'OpenAPI 3.x HTTP API contract. Foundation for agent tool use when you expose endpoints.', category: 'Agent Discovery', spec: 'OpenAPI 3.1', specUrl: 'https://spec.openapis.org/oas/v3.1.0', status: 'Standard' },
+  { name: '/.well-known/ai', path: '/.well-known/ai', desc: 'IETF draft AI Discovery Endpoint (draft-aiendpoint-ai-discovery-00). Structured service/capability JSON for agents. Not an RFC yet.', category: 'Agent Discovery', spec: 'IETF draft', specUrl: 'https://www.ietf.org/archive/id/draft-aiendpoint-ai-discovery-00.html', status: 'Proposed' },
 
   // Structured Data
-  { name: 'JSON-LD', path: 'Embedded in HTML <head>', desc: 'Schema.org structured data (Organization, Article, FAQPage, WebSite with SearchAction). Primary signal for AI entity recognition.', category: 'Structured Data', spec: 'Schema.org', specUrl: 'https://schema.org', status: 'Standard' },
+  { name: 'JSON-LD', path: 'Embedded in HTML <head>', desc: 'Schema.org JSON-LD (Organization, Person, Article, FAQPage, HowTo, WebSite). Strong structure for machines; citation lift is best-effort, not a vendor guarantee.', category: 'Structured Data', spec: 'Schema.org', specUrl: 'https://schema.org', status: 'Standard' },
 
   // Brand & Identity
-  { name: 'brand.txt', path: '/brand.txt', desc: 'Brand governance for AI systems: name capitalization, preferred terminology, prohibited terms, tone, competitor disambiguation.', category: 'Brand & Identity', spec: 'Community', status: 'Emerging' },
-  { name: 'ai.json', path: '/ai.json', desc: 'Structured content map for AI agents. JSON metadata declaring site sections, topics, and content types.', category: 'Brand & Identity', spec: 'Community', status: 'Emerging' },
+  { name: 'brand.txt', path: '/brand.txt', desc: 'Informal brand naming/tone guidance for agents. Optional; major models do not uniformly load /brand.txt on every mention.', category: 'Brand & Identity', spec: 'Community', status: 'Emerging' },
+  { name: 'ai.json', path: '/ai.json', desc: 'Informal structured content map and permission hints. Community convention only.', category: 'Brand & Identity', spec: 'Community', status: 'Emerging' },
 
   // Trust & Security
-  { name: 'security.txt', path: '/.well-known/security.txt', desc: 'Vulnerability reporting policy. Contact, encryption key, and disclosure timeline per RFC 9116.', category: 'Trust & Security', spec: 'RFC 9116', specUrl: 'https://www.rfc-editor.org/rfc/rfc9116', status: 'Standard' },
-  { name: 'humans.txt', path: '/humans.txt', desc: 'Team credits, technologies used, and acknowledgments. Human-readable provenance signal.', category: 'Trust & Security', spec: 'humanstxt.org', specUrl: 'https://humanstxt.org', status: 'Adopted' },
-  { name: 'dnt-policy.txt', path: '/.well-known/dnt-policy.txt', desc: 'Do Not Track compliance declaration. EFF standard format. Privacy-respecting signal for browsers and extensions.', category: 'Trust & Security', spec: 'EFF DNT', specUrl: 'https://www.eff.org/dnt-policy', status: 'Adopted' },
+  { name: 'security.txt', path: '/.well-known/security.txt', desc: 'Vulnerability reporting contacts per RFC 9116. Not AI-specific.', category: 'Trust & Security', spec: 'RFC 9116', specUrl: 'https://www.rfc-editor.org/rfc/rfc9116', status: 'Standard' },
+  { name: 'humans.txt', path: '/humans.txt', desc: 'Team credits and tech stack (humanstxt.org). Optional provenance.', category: 'Trust & Security', spec: 'humanstxt.org', specUrl: 'https://humanstxt.org', status: 'Adopted' },
+  { name: 'dnt-policy.txt', path: '/.well-known/dnt-policy.txt', desc: 'EFF Do Not Track policy file. Low practical impact in 2026; browser DNT is effectively deprecated.', category: 'Trust & Security', spec: 'EFF DNT', specUrl: 'https://www.eff.org/dnt-policy', status: 'Legacy' },
 
   // Sustainability
-  { name: 'carbon.txt', path: '/carbon.txt', desc: 'Sustainability disclosure: hosting provider, energy sources, carbon offsets. Green Web Foundation standard.', category: 'Sustainability', spec: 'carbontxt.org', specUrl: 'https://carbontxt.org', status: 'Adopted' },
+  { name: 'carbon.txt', path: '/carbon.txt', desc: 'TOML sustainability disclosures (carbontxt.org v0.5+): version, org.disclosures[{doc_type, url}]. Not freeform key-value text.', category: 'Sustainability', spec: 'carbontxt.org', specUrl: 'https://carbontxt.org', status: 'Adopted' },
 
   // Platform
-  { name: 'manifest.json', path: '/manifest.json', desc: 'PWA metadata: app name, icons, theme colors, display mode. Required for installable web apps.', category: 'Platform', spec: 'W3C Web App Manifest', specUrl: 'https://www.w3.org/TR/appmanifest/', status: 'Standard' },
-  { name: 'browserconfig.xml', path: '/browserconfig.xml', desc: 'Windows tile configuration for pinned sites. Tile images and background colors.', category: 'Platform', spec: 'Microsoft', status: 'Standard' },
-  { name: 'ads.txt', path: '/ads.txt', desc: 'Authorized Digital Sellers. Declares which ad networks are authorized to sell inventory on your domain.', category: 'Platform', spec: 'IAB Tech Lab', specUrl: 'https://iabtechlab.com/ads-txt/', status: 'Standard' },
+  { name: 'manifest.json', path: '/manifest.json', desc: 'W3C Web App Manifest: name, icons, theme, display mode for PWAs.', category: 'Platform', spec: 'W3C Web App Manifest', specUrl: 'https://www.w3.org/TR/appmanifest/', status: 'Standard' },
+  { name: 'browserconfig.xml', path: '/browserconfig.xml', desc: 'Legacy Microsoft tile config for pinned sites. Not AI-relevant.', category: 'Platform', spec: 'Microsoft', status: 'Legacy' },
+  { name: 'ads.txt', path: '/ads.txt', desc: 'IAB Authorized Digital Sellers list for ad inventory authorization.', category: 'Platform', spec: 'IAB Tech Lab', specUrl: 'https://iabtechlab.com/ads-txt/', status: 'Standard' },
 
   // Developer Agent Context
-  { name: 'AGENTS.md', path: 'Repository root', desc: 'Cross-tool project context for coding agents. Build commands, architecture, conventions. Emerging universal standard.', category: 'Developer Agent', spec: 'agents.md', specUrl: 'https://agents.md', status: 'Emerging' },
-  { name: 'CLAUDE.md', path: 'Repository root', desc: 'Claude Code project context. Architecture, workflows, and coding conventions for Anthropic agents.', category: 'Developer Agent', spec: 'Anthropic', status: 'Adopted' },
-  { name: '.cursorrules', path: 'Repository root', desc: 'Cursor IDE agent rules. Modular .mdc files in .cursor/rules/ for context-aware coding assistance.', category: 'Developer Agent', spec: 'Cursor', status: 'Adopted' },
+  { name: 'AGENTS.md', path: 'Repository root', desc: 'Cross-tool project context for coding agents (build, conventions, architecture).', category: 'Developer Agent', spec: 'agents.md', specUrl: 'https://agents.md', status: 'Emerging' },
+  { name: 'CLAUDE.md', path: 'Repository root', desc: 'Claude Code project instructions (Anthropic).', category: 'Developer Agent', spec: 'Anthropic', status: 'Adopted' },
+  { name: '.cursorrules', path: 'Repository root / .cursor/rules/', desc: 'Cursor IDE rules; often modular .mdc files under .cursor/rules/.', category: 'Developer Agent', spec: 'Cursor', status: 'Adopted' },
 ];
 
-const AI_CRAWLERS = [
-  { company: 'OpenAI', bots: ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User'] },
-  { company: 'Anthropic', bots: ['ClaudeBot', 'Claude-SearchBot', 'Claude-User'] },
-  { company: 'Google', bots: ['Googlebot', 'Google-Extended', 'GoogleOther', 'Gemini-Deep-Research', 'Google-NotebookLM'] },
-  { company: 'Perplexity', bots: ['PerplexityBot', 'Perplexity-User'] },
+const AI_CRAWLERS: { company: string; bots: string[]; note?: string }[] = [
+  { company: 'OpenAI', bots: ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'OAI-AdsBot'], note: 'Vendor-documented. ChatGPT-User may ignore robots.txt.' },
+  { company: 'Anthropic', bots: ['ClaudeBot', 'Claude-SearchBot', 'Claude-User'], note: 'Vendor-documented; honors robots.txt including Claude-User.' },
+  { company: 'Google', bots: ['Googlebot', 'Google-Extended', 'GoogleOther', 'Gemini-Deep-Research', 'Google-NotebookLM'], note: 'Google-Extended is a control token (Gemini train/ground), not a separate crawler UA.' },
+  { company: 'Perplexity', bots: ['PerplexityBot', 'Perplexity-User'], note: 'Perplexity-User generally ignores robots.txt.' },
   { company: 'Meta', bots: ['meta-externalagent', 'meta-externalfetcher'] },
   { company: 'Apple', bots: ['Applebot', 'Applebot-Extended'] },
   { company: 'Amazon', bots: ['Amazonbot'] },
-  { company: 'ByteDance', bots: ['Bytespider', 'TikTokSpider'] },
-  { company: 'xAI', bots: ['GrokBot', 'xAI-Bot'] },
+  { company: 'ByteDance', bots: ['Bytespider'] },
+  { company: 'xAI', bots: ['(no official UA)'], note: 'No official crawler docs; third-party tokens like GrokBot are unverified.' },
   { company: 'Mistral', bots: ['MistralAI-User'] },
-  { company: 'Microsoft', bots: ['bingbot', 'CopilotBot'] },
-  { company: 'Others', bots: ['CCBot', 'cohere-ai', 'YouBot', 'Diffbot', 'SemrushBot', 'AhrefsBot', 'DuckAssistBot', 'TavilyBot', 'KagiBot', 'PhindBot'] },
+  { company: 'Microsoft', bots: ['Bingbot'] },
+  { company: 'Others', bots: ['CCBot', 'cohere-ai', 'YouBot', 'Diffbot', 'DuckDuckBot'], note: 'Directory-listed bots (TavilyBot, KagiBot, etc.) need operator docs before relying on the token.' },
 ];
 
 const CATEGORIES = [...new Set(DISCOVERY_FILES.map(f => f.category))];
 
 const STATUS_STYLES: Record<string, string> = {
-  Standard: 'text-emerald-700',
-  Adopted: 'text-blue-700',
-  Emerging: 'text-amber-700',
-  Proposed: 'text-purple-700',
+  Standard: 'text-emerald-700 dark:text-emerald-400',
+  Adopted: 'text-blue-700 dark:text-blue-400',
+  Emerging: 'text-amber-700 dark:text-amber-400',
+  Proposed: 'text-purple-700 dark:text-purple-400',
+  Legacy: 'text-muted-foreground',
 };
 
 function Src({ href, children }: { href: string; children?: React.ReactNode }) {
@@ -213,7 +218,7 @@ export default function AiDiscoveryStandardsPage() {
                 </div>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <Eye className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
-                  <span>Referral traffic (~14% conversion)</span>
+                  <span>Possible referral traffic</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <Eye className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
@@ -238,10 +243,11 @@ export default function AiDiscoveryStandardsPage() {
         <section>
           <h2 className="text-2xl font-semibold tracking-tight mb-2">File Registry</h2>
           <p className="text-sm text-muted-foreground mb-6">
-            <span className={STATUS_STYLES.Standard}>Standard</span> = ratified RFC or W3C spec.{' '}
-            <span className={STATUS_STYLES.Adopted}>Adopted</span> = widely used convention.{' '}
-            <span className={STATUS_STYLES.Emerging}>Emerging</span> = growing adoption, no formal spec.{' '}
-            <span className={STATUS_STYLES.Proposed}>Proposed</span> = draft or specification proposal.
+            <span className={STATUS_STYLES.Standard}>Standard</span> = RFC or W3C Recommendation.{' '}
+            <span className={STATUS_STYLES.Adopted}>Adopted</span> = widely used with a published spec or CG report.{' '}
+            <span className={STATUS_STYLES.Emerging}>Emerging</span> = community convention, incomplete compliance.{' '}
+            <span className={STATUS_STYLES.Proposed}>Proposed</span> = active draft.{' '}
+            <span className={STATUS_STYLES.Legacy}>Legacy</span> = superseded or low practical impact.
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -265,19 +271,24 @@ export default function AiDiscoveryStandardsPage() {
         <section>
           <h2 className="text-2xl font-semibold tracking-tight mb-2">AI Crawler Registry</h2>
           <p className="text-sm text-muted-foreground mb-6">
-            All known AI crawler user-agent strings as of Q3 2026.
+            Vendor-documented and commonly observed AI-related robots tokens as of Q3 2026. Prefer official docs and published IP lists over third-party directories. User-triggered fetchers may ignore robots.txt.
           </p>
           <div className="space-y-px rounded-lg overflow-hidden border">
             {AI_CRAWLERS.map((group) => (
-              <div key={group.company} className="bg-card flex items-center gap-4 p-3">
-                <span className="font-medium text-sm shrink-0 w-24">{group.company}</span>
-                <div className="flex flex-wrap gap-1.5">
-                  {group.bots.map((bot) => (
-                    <code key={bot} className="text-xs font-mono bg-muted/60 px-2 py-0.5 rounded">
-                      {bot}
-                    </code>
-                  ))}
+              <div key={group.company} className="bg-card p-3 space-y-1.5">
+                <div className="flex items-start gap-4">
+                  <span className="font-medium text-sm shrink-0 w-24 pt-0.5">{group.company}</span>
+                  <div className="flex flex-wrap gap-1.5 min-w-0">
+                    {group.bots.map((bot) => (
+                      <code key={bot} className="text-xs font-mono bg-muted/60 px-2 py-0.5 rounded">
+                        {bot}
+                      </code>
+                    ))}
+                  </div>
                 </div>
+                {group.note ? (
+                  <p className="text-[11px] text-muted-foreground/80 pl-28 leading-relaxed">{group.note}</p>
+                ) : null}
               </div>
             ))}
           </div>
@@ -287,9 +298,16 @@ export default function AiDiscoveryStandardsPage() {
         <section>
           <div className="rounded-lg border bg-card p-6 text-center">
             <h2 className="text-xl font-semibold tracking-tight mb-2">Setup</h2>
-            <p className="text-sm text-muted-foreground mb-4">One command generates all discovery files. Existing files are never overwritten.</p>
-            <div className="inline-flex items-center gap-2 rounded-md border bg-muted/50 px-4 py-2 font-mono text-sm">
-              <span className="text-muted-foreground">$</span> npx ai-discovery-standards
+            <p className="text-sm text-muted-foreground mb-4">
+              One command generates discovery files (robots, llms.txt, agents.txt, agent-card stub, TDMRep, and more). Existing files are never overwritten.
+            </p>
+            <div className="inline-flex flex-col items-center gap-2">
+              <div className="inline-flex items-center gap-2 rounded-md border bg-muted/50 px-4 py-2 font-mono text-sm">
+                <span className="text-muted-foreground">$</span> npx ai-discovery-standards
+              </div>
+              <div className="inline-flex items-center gap-2 rounded-md border bg-muted/50 px-4 py-2 font-mono text-xs text-muted-foreground">
+                <span>$</span> npx github:vedangvatsa/ai-discovery-standards
+              </div>
             </div>
             <p className="mt-4 text-xs text-muted-foreground">
               Works with Next.js, React, Vue, Hugo, Gatsby, and any static site.{' '}
@@ -302,7 +320,7 @@ export default function AiDiscoveryStandardsPage() {
 
         {/* ── Disclaimer ── */}
         <p className="text-xs text-muted-foreground/60 text-center pb-4">
-          Standards evolve. Last updated July 2026. File an issue on GitHub if something is missing or outdated.
+          Standards evolve. Last verified July 2026 against vendor docs and primary specs. A2A lives at <code className="font-mono">/.well-known/agent-card.json</code>; root <code className="font-mono">/agents.json</code> is the agents-txt.com companion. File an issue on GitHub if something is missing or outdated.
         </p>
 
       </div>
