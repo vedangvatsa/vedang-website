@@ -402,15 +402,15 @@ export default function AiDiscoveryStandardsPage() {
       </header>
 
       <div className="py-10 md:py-14">
-        <article className="notion-article prose prose-lg prose-neutral max-w-4xl mx-auto">
-          <div className="space-y-20 not-prose">
+        <article className="notion-article prose prose-lg prose-neutral max-w-5xl mx-auto">
+          <div className="space-y-14 not-prose">
 
             <section id="install">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Install</h2>
-              <p className="text-base text-muted-foreground leading-relaxed mb-6">
+              <h2 className="text-2xl font-semibold tracking-tight mb-3">Install</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 Run from the website project root. Pass the live production URL.
               </p>
-              <div className="terminal-chrome rounded-lg overflow-hidden border mb-4">
+              <div className="terminal-chrome rounded-lg overflow-hidden border mb-3">
                 <div className="terminal-chrome-bar px-4 py-2 flex items-center gap-2">
                   <span className="inline-flex gap-1" aria-hidden>
                     <span className="h-2 w-2 rounded-full bg-zinc-600" />
@@ -427,94 +427,86 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
 npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.com --deny-training`}</code>
                 </pre>
               </div>
-              <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
-                <p>
-                  Scans the project, writes discovery files to{' '}
-                  <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">public/</code> or{' '}
-                  <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">static/</code>, and wires head tags plus
-                  Organization JSON-LD when safe. Existing files stay unless{' '}
-                  <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">--force</code> is passed. It will not
-                  invent A2A, MCP, or payment endpoints.
-                </p>
-                <p>
-                  After the run, review{' '}
-                  <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">llms.txt</code>, confirm training
-                  policy, and deploy so the files resolve at the domain root.
-                </p>
-              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Writes files to{' '}
+                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">public/</code> or{' '}
+                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">static/</code>, wires head tags when
+                safe, leaves existing files unless{' '}
+                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">--force</code>. Review{' '}
+                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">llms.txt</code> and deploy to the domain
+                root. Does not invent A2A, MCP, or payment endpoints.
+              </p>
             </section>
 
             <section id="training-vs-search">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Training vs search</h2>
-              <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                Search crawlers can help a site get cited. Training crawlers collect text for models, often with no
-                link back. Set them separately in{' '}
-                <code className="text-xs font-mono bg-muted px-1.5 py-0.5 rounded">robots.txt</code>.
+              <h2 className="text-2xl font-semibold tracking-tight mb-3">Training vs search</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                Set bots separately in{' '}
+                <code className="text-xs font-mono bg-muted px-1.5 py-0.5 rounded">robots.txt</code>. OpenAI treats{' '}
+                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">GPTBot</code> (training) and{' '}
+                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">OAI-SearchBot</code> (search) as
+                independent. Some chat fetches may ignore robots.txt.
               </p>
-              <div className="grid md:grid-cols-2 gap-4 mb-4">
-                <div className="rounded-lg border bg-card p-5">
-                  <p className="text-base font-medium text-foreground mb-2">Training</p>
-                  <div className="flex flex-wrap gap-1.5 mb-3">
+              <div className="grid sm:grid-cols-2 gap-3">
+                <div className="rounded-lg border bg-card p-3.5">
+                  <p className="text-sm font-medium text-foreground mb-1.5">Training</p>
+                  <p className="text-xs text-muted-foreground mb-2 leading-snug">
+                    Model training. Citations uncommon from this path alone.
+                  </p>
+                  <div className="flex flex-wrap gap-1">
                     {['GPTBot', 'ClaudeBot', 'CCBot', 'Google-Extended'].map((bot) => (
-                      <code key={bot} className="text-xs font-mono bg-muted px-2 py-0.5 rounded">{bot}</code>
+                      <code key={bot} className="text-[11px] font-mono bg-muted px-1.5 py-0.5 rounded">{bot}</code>
                     ))}
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Future model training. Citations from this path alone are uncommon.
-                  </p>
                 </div>
-                <div className="rounded-lg border bg-card p-5">
-                  <p className="text-base font-medium text-foreground mb-2">Search and answers</p>
-                  <div className="flex flex-wrap gap-1.5 mb-3">
+                <div className="rounded-lg border bg-card p-3.5">
+                  <p className="text-sm font-medium text-foreground mb-1.5">Search and answers</p>
+                  <p className="text-xs text-muted-foreground mb-2 leading-snug">
+                    Indexing and retrieval that can cite and link to the site.
+                  </p>
+                  <div className="flex flex-wrap gap-1">
                     {['OAI-SearchBot', 'Claude-SearchBot', 'PerplexityBot'].map((bot) => (
-                      <code key={bot} className="text-xs font-mono bg-muted px-2 py-0.5 rounded">{bot}</code>
+                      <code key={bot} className="text-[11px] font-mono bg-muted px-1.5 py-0.5 rounded">{bot}</code>
                     ))}
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Indexing and retrieval that can surface and link to the site.
-                  </p>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                OpenAI treats{' '}
-                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">GPTBot</code> (training) and{' '}
-                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">OAI-SearchBot</code> (ChatGPT search)
-                as separate choices. Some vendors also say a one-off page fetch during chat may ignore robots.txt.
-              </p>
             </section>
 
             <section id="first-five">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Five files most content sites need</h2>
-              <div className="space-y-px rounded-lg overflow-hidden border">
+              <h2 className="text-2xl font-semibold tracking-tight mb-3">Five files most content sites need</h2>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {startHere.map((file, i) => (
-                  <div key={file.name} className="bg-card p-4 sm:p-5">
-                    <div className="flex items-baseline gap-3 mb-2">
-                      <span className="text-sm font-medium text-muted-foreground tabular-nums w-6 shrink-0">{i + 1}.</span>
-                      <p className="text-base font-medium text-foreground min-w-0">
-                        {file.name}{' '}
-                        <span className="font-mono text-xs font-normal text-muted-foreground">{file.path}</span>
-                      </p>
+                  <div key={file.name} className="rounded-lg border bg-card p-3.5 flex flex-col min-h-0">
+                    <div className="flex items-start gap-2 mb-1.5">
+                      <span className="text-xs font-medium text-muted-foreground tabular-nums shrink-0 mt-0.5">
+                        {i + 1}.
+                      </span>
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium text-foreground leading-snug">{file.name}</p>
+                        <p className="text-[11px] font-mono text-muted-foreground truncate">{file.path}</p>
+                      </div>
                     </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed sm:pl-9">{file.what}</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed mt-2 sm:pl-9">{file.why}</p>
+                    <p className="text-xs text-muted-foreground leading-snug line-clamp-3">{file.what}</p>
+                    <p className="text-xs text-muted-foreground leading-snug mt-1.5 line-clamp-2">{file.why}</p>
                   </div>
                 ))}
               </div>
             </section>
 
             <section id="registry">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Catalog</h2>
-              <p className="text-base text-muted-foreground leading-relaxed mb-4">
-                Expand a row for evidence notes and the official source when one exists.
+              <h2 className="text-2xl font-semibold tracking-tight mb-2">Catalog</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                Expand a card for why it matters, evidence, and the official source.
               </p>
-              <div className="flex flex-wrap gap-2 mb-8">
+              <div className="flex flex-wrap gap-1.5 mb-6">
                 {CATEGORIES.map((category) => {
                   const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
                   return (
                     <a
                       key={category}
                       href={`#${slug}`}
-                      className="rounded-md border bg-card px-3 py-1.5 text-xs font-medium text-muted-foreground hover:border-primary/50 hover:text-foreground transition-colors"
+                      className="rounded-md border bg-card px-2.5 py-1 text-[11px] font-medium text-muted-foreground hover:border-primary/50 hover:text-foreground transition-colors"
                     >
                       {category}
                     </a>
@@ -526,38 +518,46 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
                 const items = DISCOVERY_FILES.filter((f) => f.category === category);
                 const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
                 return (
-                  <div key={category} id={slug} className="mb-12 last:mb-0">
-                    <h3 className="text-xl font-semibold tracking-tight mb-4">{category}</h3>
-                    <div className="space-y-px rounded-lg overflow-hidden border">
+                  <div key={category} id={slug} className="mb-8 last:mb-0">
+                    <h3 className="text-base font-semibold tracking-tight mb-2.5 text-foreground">{category}</h3>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
                       {items.map((file) => (
-                        <details key={file.name} className="bg-card group">
-                          <summary className="p-4 sm:p-5 cursor-pointer select-none hover:bg-muted/30 transition-colors list-none [&::-webkit-details-marker]:hidden">
-                            <div className="flex flex-wrap items-center gap-2 mb-2">
-                              <span className={`inline-flex items-center text-[11px] font-medium px-2 py-0.5 rounded-full border ${PRIORITY_STYLES[file.priority]}`}>
+                        <details
+                          key={file.name}
+                          className="rounded-lg border bg-card group open:ring-1 open:ring-border"
+                        >
+                          <summary className="p-3 cursor-pointer select-none hover:bg-muted/40 transition-colors list-none [&::-webkit-details-marker]:hidden">
+                            <div className="flex flex-wrap items-center gap-1 mb-1.5">
+                              <span className={`inline-flex items-center text-[10px] font-medium px-1.5 py-0.5 rounded border ${PRIORITY_STYLES[file.priority]}`}>
                                 {file.priority}
                               </span>
-                              <span className={`inline-flex items-center text-[11px] font-medium px-2 py-0.5 rounded-full border ${MATURITY_STYLES[file.maturity]}`}>
+                              <span className={`inline-flex items-center text-[10px] font-medium px-1.5 py-0.5 rounded border ${MATURITY_STYLES[file.maturity]}`}>
                                 {file.maturity}
                               </span>
                             </div>
-                            <p className="text-base font-medium text-foreground">{file.name}</p>
-                            <p className="text-xs font-mono text-muted-foreground mt-0.5">{file.path}</p>
-                            <p className="text-sm text-muted-foreground leading-relaxed mt-2">{file.what}</p>
-                            <p className="text-sm text-muted-foreground leading-relaxed mt-2">{file.why}</p>
+                            <p className="text-sm font-medium text-foreground leading-snug">{file.name}</p>
+                            <p className="text-[11px] font-mono text-muted-foreground truncate mt-0.5">{file.path}</p>
+                            <p className="text-xs text-muted-foreground leading-snug mt-1.5 line-clamp-2 group-open:line-clamp-none">
+                              {file.what}
+                            </p>
+                            <p className="text-[10px] text-muted-foreground/70 mt-1.5 group-open:hidden">
+                              Expand for details
+                            </p>
                           </summary>
-                          <div className="px-4 sm:px-5 pb-4 pt-0 space-y-2">
-                            <p className="text-sm text-muted-foreground leading-relaxed">{file.basis}</p>
+                          <div className="px-3 pb-3 pt-0 space-y-1.5 border-t border-border/60">
+                            <p className="text-xs text-muted-foreground leading-snug pt-2">{file.why}</p>
+                            <p className="text-xs text-muted-foreground leading-snug">{file.basis}</p>
                             {file.specUrl ? (
                               <Link
                                 href={file.specUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-block text-xs text-muted-foreground hover:text-primary transition-colors"
+                                className="inline-block text-[11px] text-muted-foreground hover:text-primary transition-colors"
                               >
-                                Official specification ({file.spec})
+                                {file.spec}
                               </Link>
                             ) : (
-                              <span className="text-xs text-muted-foreground/60">{file.spec}</span>
+                              <span className="text-[11px] text-muted-foreground/60">{file.spec}</span>
                             )}
                           </div>
                         </details>
@@ -569,30 +569,31 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Crawler names by company</h2>
-              <div className="space-y-px rounded-lg overflow-hidden border">
+              <h2 className="text-2xl font-semibold tracking-tight mb-3">Crawler names by company</h2>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
                 {AI_CRAWLERS.map((group) => (
-                  <div key={group.company} className="bg-card p-4 sm:p-5">
-                    <p className="text-sm font-medium text-foreground mb-2">{group.company}</p>
-                    <div className="flex flex-wrap gap-1.5 mb-2">
+                  <div key={group.company} className="rounded-lg border bg-card p-3.5">
+                    <p className="text-sm font-medium text-foreground mb-1.5">{group.company}</p>
+                    <div className="flex flex-wrap gap-1 mb-2">
                       {group.bots.map((bot) => (
-                        <code key={bot} className="text-xs font-mono bg-muted px-2 py-0.5 rounded">
+                        <code key={bot} className="text-[11px] font-mono bg-muted px-1.5 py-0.5 rounded">
                           {bot}
                         </code>
                       ))}
                     </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{group.plain}</p>
+                    <p className="text-xs text-muted-foreground leading-snug line-clamp-3">{group.plain}</p>
                   </div>
                 ))}
               </div>
             </section>
 
             <section id="verify">
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Check after deploy</h2>
-              <p className="text-base text-muted-foreground leading-relaxed mb-4">
-                Confirm the files respond at the live domain root.
+              <h2 className="text-2xl font-semibold tracking-tight mb-3">Check after deploy</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                Confirm the files respond at the live domain root. Look for 200; a 404 usually means static files are
+                not served at the root.
               </p>
-              <div className="terminal-chrome rounded-lg overflow-hidden border mb-4">
+              <div className="terminal-chrome rounded-lg overflow-hidden border">
                 <div className="terminal-chrome-bar px-4 py-2 flex items-center gap-2">
                   <span className="text-xs font-medium">Terminal</span>
                 </div>
@@ -604,13 +605,10 @@ curl -sI https://your-domain.com/agents.txt | head -1
 curl -sI https://your-domain.com/.well-known/security.txt | head -1`}</code>
                 </pre>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Look for 200. A 404 usually means the host is not serving the static directory at the domain root.
-              </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">Prompt for a coding agent</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-3">Prompt for a coding agent</h2>
               <div className="terminal-chrome rounded-lg overflow-hidden border">
                 <div className="terminal-chrome-bar px-4 py-2">
                   <span className="text-xs font-medium">Prompt</span>
