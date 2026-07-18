@@ -373,7 +373,7 @@ export default function AiDiscoveryStandardsPage() {
           </h1>
           <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Reference and installer for the small website files that declare identity, content maps,
-            and crawl policy to AI systems. Maintained by Vedang Vatsa.
+            and crawl policy to AI systems.
           </p>
           <AuthorByline
             links={[{ label: 'GitHub', href: 'https://github.com/vedangvatsa/aistandards' }]}
@@ -429,12 +429,8 @@ export default function AiDiscoveryStandardsPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-4">What the project provides</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">What this provides</h2>
               <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
-                <p>
-                  <strong className="text-foreground font-medium">AI Discovery Standards</strong> is an open-source
-                  project by Vedang Vatsa with two parts:
-                </p>
                 <ol className="list-decimal pl-5 space-y-2">
                   <li>
                     <strong className="text-foreground font-medium">A catalog</strong>
@@ -447,7 +443,7 @@ export default function AiDiscoveryStandardsPage() {
                   </li>
                 </ol>
                 <p>
-                  The project does not guarantee rankings or citations. It reduces wrong paths, mixed-up standards,
+                  This does not guarantee rankings or citations. It reduces wrong paths, mixed-up standards,
                   and half-finished setups.
                 </p>
               </div>
@@ -883,7 +879,7 @@ Review llms.txt, confirm training allow/deny, and do not advertise fake A2A or M
             </section>
 
             <p className="text-xs text-muted-foreground/60 text-center">
-              MIT license. Maintained by Vedang Vatsa. Last updated July 2026.
+              MIT license. Last updated July 2026.
             </p>
           </div>
         </article>
