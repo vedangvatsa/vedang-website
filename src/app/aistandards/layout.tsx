@@ -89,6 +89,14 @@ const faqSchema = {
         text: 'These labels describe how solid the underlying rule is, not a score for your site. Standard means a formal RFC or W3C recommendation. Adopted means written down and used in practice. Emerging means a community convention with uneven support. Proposed means a draft. Legacy means low impact or superseded.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Is there evidence these files work?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Evidence varies by file. robots.txt has the strongest support because major AI companies publish bot names and robots behavior. Sitemaps and OpenAPI work because they are long-standing machine contracts. llms.txt is widely adopted and useful for agent-readable maps, but Google has said it is not required for its generative search features. Informal files like brand.txt have weaker evidence that large public chatbots load them by default.',
+      },
+    },
   ],
 };
 
