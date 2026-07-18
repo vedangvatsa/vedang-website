@@ -1556,9 +1556,10 @@
     "id": "viral-rewrite-54",
     "scheduleDate": "2026-07-19",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "If two people always agree, one of them isn't thinking. Disagreement isn't a threat. It's how blind spots get filled. The best teams argue well and stay aligned. Find teams that welcome honest debate at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_29_1.jpg"
+    "image": "scripts/post-images/post_29_1.jpg",
+    "error": "Media failed: scripts/post-images/post_29_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-55",
