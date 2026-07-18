@@ -4,7 +4,6 @@ import { AuthorByline } from '@/components/author-byline';
 // Landing page for https://github.com/vedangvatsa/aistandards
 // Voice: third person. No first-person plural. Follows AGENTS.md / ai-slop rules.
 
-type Maturity = 'Standard' | 'Adopted' | 'Emerging' | 'Proposed' | 'Legacy';
 type Priority = 'Start here' | 'When it applies' | 'Optional';
 
 interface DiscoveryFile {
@@ -14,7 +13,6 @@ interface DiscoveryFile {
   why: string;
   category: string;
   priority: Priority;
-  maturity: Maturity;
   spec: string;
   specUrl?: string;
 }
@@ -23,11 +21,10 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
   {
     name: 'robots.txt',
     path: '/robots.txt',
-    what: 'A text file at the site root that tells automated bots which paths they may crawl.',
-    why: 'Main control for crawl policy. Training and search bots can differ. Some chat fetches may ignore robots.txt.',
+    what: 'A text file at the site root that requests which paths automated bots may crawl.',
+    why: 'Often the main practical crawl control when bots honor it. Training and search bots can be set differently. Some chat-time fetches may ignore robots.txt.',
     category: 'Crawl control',
     priority: 'Start here',
-    maturity: 'Standard',
     spec: 'RFC 9309',
     specUrl: 'https://www.rfc-editor.org/rfc/rfc9309',
   },
@@ -35,10 +32,9 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'sitemap.xml',
     path: '/sitemap.xml',
     what: 'A list of important site URLs, often with last-modified dates.',
-    why: 'Helps crawlers find important URLs without guessing the graph.',
+    why: 'Can help crawlers that use sitemaps find URLs without guessing the full graph. Does not guarantee indexing or citations.',
     category: 'Content discovery',
     priority: 'Start here',
-    maturity: 'Standard',
     spec: 'sitemaps.org',
     specUrl: 'https://www.sitemaps.org/protocol.html',
   },
@@ -46,10 +42,9 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'llms.txt',
     path: '/llms.txt',
     what: 'A short Markdown summary of the site: identity plus links to the most important pages.',
-    why: 'A clean site map for agents. Google has said it is not required for generative search.',
+    why: 'Can give agents a cleaner map when they look for it. Not a proven ranking factor; Google has said it is not required for its generative search features.',
     category: 'Content discovery',
     priority: 'Start here',
-    maturity: 'Adopted',
     spec: 'llmstxt.org',
     specUrl: 'https://llmstxt.org',
   },
@@ -57,10 +52,9 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'JSON-LD (schema)',
     path: 'Inside HTML pages',
     what: 'Structured labels that declare entities such as Organization, Article, or FAQ on a page.',
-    why: 'Typed facts for machines (Organization, Article, FAQ, and similar).',
+    why: 'May help machines extract typed facts more reliably than prose alone. Not a documented citation guarantee from major chat products.',
     category: 'Content structure',
     priority: 'Start here',
-    maturity: 'Standard',
     spec: 'Schema.org',
     specUrl: 'https://schema.org',
   },
@@ -68,10 +62,9 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'security.txt',
     path: '/.well-known/security.txt',
     what: 'Contact details for reporting security issues.',
-    why: 'Security contact. Not AI-specific.',
+    why: 'Operational contact file. Not AI-specific and not an AI ranking lever.',
     category: 'Operations',
     priority: 'Optional',
-    maturity: 'Standard',
     spec: 'RFC 9116',
     specUrl: 'https://www.rfc-editor.org/rfc/rfc9116',
   },
@@ -79,10 +72,9 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'llms-full.txt',
     path: '/llms-full.txt',
     what: 'Markdown with fuller text of key pages, not only links.',
-    why: 'Useful for documentation and reference sites that want fewer follow-up fetches.',
+    why: 'May reduce follow-up fetches for docs-heavy sites if something actually reads it. Same evidence limits as llms.txt.',
     category: 'Content discovery',
     priority: 'When it applies',
-    maturity: 'Adopted',
     spec: 'llmstxt.org',
     specUrl: 'https://llmstxt.org',
   },
@@ -90,21 +82,19 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'tdmrep.json',
     path: '/.well-known/tdmrep.json',
     what: 'Machine-readable notice that mining rights are reserved or not, under EU text-and-data-mining rules.',
-    why: 'EU mining opt-out signal. Complements robots.txt. Not legal advice.',
+    why: 'May help signal mining preferences in an EU context. Complements robots.txt; effect depends on whether miners honor it. Not legal advice.',
     category: 'Crawl control',
     priority: 'When it applies',
-    maturity: 'Adopted',
     spec: 'W3C TDMRep',
     specUrl: 'https://www.w3.org/community/tdmrep/',
   },
   {
     name: 'agents.txt',
     path: '/agents.txt',
-    what: 'Plain text that announces agent protocols the site supports (MCP, A2A card URLs, skills, payments).',
-    why: 'Relevant when the site exposes tools or agent endpoints, not only articles.',
+    what: 'Plain text that can announce agent protocols the site supports (MCP, A2A card URLs, skills, payments).',
+    why: 'Most relevant when the site actually exposes tools or agent endpoints, not only articles. Early community convention.',
     category: 'Agent products',
     priority: 'When it applies',
-    maturity: 'Emerging',
     spec: 'agents-txt.com',
     specUrl: 'https://agents-txt.com',
   },
@@ -112,10 +102,9 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'agents.json',
     path: '/agents.json',
     what: 'Structured companion to agents.txt at the site root (not the A2A card path).',
-    why: 'Richer machine fields for agents.txt. Not the A2A agent-card path.',
+    why: 'Richer machine fields for the agents.txt convention. Distinct from /.well-known/agent-card.json (A2A).',
     category: 'Agent products',
     priority: 'When it applies',
-    maturity: 'Emerging',
     spec: 'agents-txt.com',
     specUrl: 'https://agents-txt.com',
   },
@@ -123,10 +112,9 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'agent-card.json',
     path: '/.well-known/agent-card.json',
     what: 'A2A Protocol agent card: identity, skills, transports, security.',
-    why: 'Only publish when a real A2A agent is running. Fake cards mislead other agents.',
+    why: 'Only worth publishing when a real A2A agent is running. Fake cards can mislead other agents.',
     category: 'Agent products',
     priority: 'When it applies',
-    maturity: 'Adopted',
     spec: 'A2A Protocol',
     specUrl: 'https://a2a-protocol.org/latest/specification/',
   },
@@ -134,10 +122,9 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'openapi.json / openapi.yaml',
     path: '/openapi.json or /openapi.yaml',
     what: 'Machine contract for an HTTP API: paths, parameters, responses.',
-    why: 'Required when agents should call the product over HTTP without human documentation.',
+    why: 'Useful when clients or agents should call the product over HTTP without relying only on human docs.',
     category: 'Agent products',
     priority: 'When it applies',
-    maturity: 'Standard',
     spec: 'OpenAPI 3.1',
     specUrl: 'https://spec.openapis.org/oas/v3.1.0',
   },
@@ -145,10 +132,9 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'MCP Server Card',
     path: '/.well-known/mcp/server-card.json',
     what: 'Draft discovery document for Model Context Protocol servers.',
-    why: 'Only when an MCP server is operated. Path and schema remain in flux across proposals.',
+    why: 'Only when an MCP server is actually operated. Path and schema may still change across proposals.',
     category: 'Agent products',
     priority: 'When it applies',
-    maturity: 'Proposed',
     spec: 'MCP',
     specUrl: 'https://modelcontextprotocol.io',
   },
@@ -156,10 +142,9 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'Content-Signal',
     path: 'Inside robots.txt',
     what: 'Optional preference line for search, AI input, and training after content is accessed.',
-    why: 'Finer usage preference after access (AIPREF / Content Signals). Still early.',
+    why: 'Emerging way to express finer usage preferences (AIPREF / Content Signals). Support is still limited and evolving.',
     category: 'Crawl control',
     priority: 'When it applies',
-    maturity: 'Proposed',
     spec: 'AIPREF / Content Signals',
     specUrl: 'https://datatracker.ietf.org/wg/aipref/about/',
   },
@@ -167,35 +152,30 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'feed.xml / feed.json',
     path: '/feed.xml or /feed.json',
     what: 'RSS, Atom, or JSON Feed of new or updated posts.',
-    why: 'Useful for regularly published content and freshness signals.',
+    why: 'Can help readers and some systems notice updates on regularly published sites. Not AI-specific.',
     category: 'Content discovery',
     priority: 'When it applies',
-    maturity: 'Standard',
     spec: 'RSS / JSON Feed',
     specUrl: 'https://jsonfeed.org/version/1.1',
   },
-
   {
     name: 'ai.txt / ai.json',
     path: '/ai.txt and /ai.json',
     what: 'Informal permissions summary and content map in text or JSON.',
-    why: 'Optional. Not documented the way robots.txt tokens are.',
+    why: 'Optional documentation. Major providers do not document these the way they document robots.txt tokens.',
     category: 'Optional',
     priority: 'Optional',
-    maturity: 'Emerging',
     spec: 'Community',
   },
   {
     name: 'brand.txt',
     path: '/brand.txt',
     what: 'Preferred spelling, product names, and tone for brand description.',
-    why: 'Useful for agents under operator control. Not a reliable control for consumer chatbots by default.',
+    why: 'May help agents under operator control. Little public evidence that major consumer chatbots load it by default.',
     category: 'Optional',
     priority: 'Optional',
-    maturity: 'Emerging',
     spec: 'Community',
   },
-
 ];
 
 const AI_CRAWLERS: { company: string; bots: string[] }[] = [
@@ -238,7 +218,8 @@ export default function AiDiscoveryStandardsPage() {
             AI Discovery Standards
           </h1>
           <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Files and installer for identity, content maps, and crawl policy for AI systems.
+            Reference files and an installer for declaring identity, content maps, and crawl preferences that AI systems
+            may use. Outcomes vary by product and are not guaranteed.
           </p>
           <AuthorByline
             links={[{ label: 'GitHub', href: 'https://github.com/vedangvatsa/aistandards' }]}
@@ -293,30 +274,30 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
                 </pre>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Writes files to{' '}
+                Tries to write files into{' '}
                 <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">public/</code> or{' '}
-                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">static/</code>, wires head tags when
-                safe, leaves existing files unless{' '}
+                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">static/</code>, wire head tags when a
+                safe injection point exists, and leave existing files unless{' '}
                 <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">--force</code>. Review{' '}
-                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">llms.txt</code> and deploy to the domain
-                root. Does not invent A2A, MCP, or payment endpoints.
+                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">llms.txt</code> and confirm the host
+                serves them at the domain root. Does not invent A2A, MCP, or payment endpoints.
               </p>
             </section>
 
             <section id="training-vs-search">
               <h2 className="text-2xl font-semibold tracking-tight mb-3">Training vs search</h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Set bots separately in{' '}
-                <code className="text-xs font-mono bg-muted px-1.5 py-0.5 rounded">robots.txt</code>. OpenAI treats{' '}
-                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">GPTBot</code> (training) and{' '}
+                Many vendors publish separate bot names for different jobs. Prefer setting them separately in{' '}
+                <code className="text-xs font-mono bg-muted px-1.5 py-0.5 rounded">robots.txt</code>. OpenAI documents{' '}
+                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">GPTBot</code> (training-related) and{' '}
                 <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">OAI-SearchBot</code> (search) as
-                independent. Some chat fetches may ignore robots.txt.
+                independent choices. Some chat-time fetches may not fully honor robots.txt.
               </p>
               <div className="grid sm:grid-cols-2 gap-3">
                 <div className="rounded-lg border bg-card p-3.5">
-                  <p className="text-sm font-medium text-foreground mb-1.5">Training</p>
+                  <p className="text-sm font-medium text-foreground mb-1.5">Training-related</p>
                   <p className="text-xs text-muted-foreground mb-2 leading-snug">
-                    Model training. Citations uncommon from this path alone.
+                    Often associated with model training. Citations from this path alone are uncommon.
                   </p>
                   <div className="flex flex-wrap gap-1">
                     {['GPTBot', 'ClaudeBot', 'CCBot', 'Google-Extended'].map((bot) => (
@@ -327,7 +308,7 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
                 <div className="rounded-lg border bg-card p-3.5">
                   <p className="text-sm font-medium text-foreground mb-1.5">Search and answers</p>
                   <p className="text-xs text-muted-foreground mb-2 leading-snug">
-                    Indexing and retrieval that can cite and link to the site.
+                    Often used for indexing or retrieval that may cite or link to a source.
                   </p>
                   <div className="flex flex-wrap gap-1">
                     {['OAI-SearchBot', 'Claude-SearchBot', 'PerplexityBot'].map((bot) => (
@@ -402,6 +383,10 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
 
             <section id="crawlers">
               <h2 className="text-2xl font-semibold tracking-tight mb-3">Crawler names</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                Common tokens that may appear in logs and robots.txt. Roles can change; check each vendor&apos;s docs
+                when the stakes are high.
+              </p>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
                 {AI_CRAWLERS.map((group) => (
                   <div key={group.company} className="rounded-lg border bg-card p-3">
@@ -421,7 +406,8 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
             <section id="verify">
               <h2 className="text-2xl font-semibold tracking-tight mb-3">Check after deploy</h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                Files should return 200 at the domain root.
+                After deploy, these paths usually need to return 200 at the domain root if the host is serving the
+                static directory correctly.
               </p>
               <div className="terminal-chrome rounded-lg overflow-hidden border">
                 <div className="terminal-chrome-bar px-4 py-2 flex items-center gap-2">

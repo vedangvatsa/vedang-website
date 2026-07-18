@@ -6,5 +6,5 @@ export const size = ogSize;
 export const contentType = 'image/png';
 
 export default async function Image() {
-  return generateOgImage('AI Discovery Standards', 'Open-Source Reference for AI Web Discoverability');
+  return generateOgImage('AI Discovery Standards', 'Files and installer for AI crawl and agent discovery');
 }

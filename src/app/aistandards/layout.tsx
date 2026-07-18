@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     absolute: 'AI Discovery Standards: Make Your Site Readable to AI Crawlers and Agents',
   },
   description:
-    'Catalog and installer for website files used by AI crawlers and agents: robots.txt, llms.txt, agents files, schema, and related surfaces. Training vs search explained.',
+    'Catalog and installer for website files that may help AI crawlers and agents: robots.txt, llms.txt, agents files, schema, and related surfaces. Training vs search, with no guaranteed outcomes.',
   keywords: [
     'AI Discovery Standards',
     'llms.txt',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Discovery Standards',
     description:
-      'What files make a site readable to AI systems, why training differs from search, and how to install them with one command.',
+      'Files that may help AI systems find and understand a site, how training often differs from search, and a one-command installer.',
     url: '/aistandards',
     type: 'website',
     siteName: 'Vedang Vatsa',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'AI Discovery Standards',
-    description: 'Plain-language guide and auto-implementer for AI discovery files.',
+    description: 'Plain-language guide and installer for AI discovery files. Outcomes vary by product.',
   },
 };
 
@@ -40,7 +40,7 @@ const softwareSchema = {
   '@type': 'SoftwareSourceCode',
   name: 'AI Discovery Standards',
   description:
-    'Open-source guide and CLI for AI discovery files that help crawlers and agents find and understand a website.',
+    'Open-source guide and CLI for website discovery files that may help crawlers and agents find and understand a site.',
   url: 'https://veda.ng/aistandards',
   codeRepository: 'https://github.com/vedangvatsa/aistandards',
   programmingLanguage: 'JavaScript',
