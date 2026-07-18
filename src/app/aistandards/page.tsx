@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { AuthorByline } from '@/components/author-byline';
 
-// Landing page for https://github.com/vedangvatsa/ai-discovery-standards
+// Landing page for https://github.com/vedangvatsa/aistandards
 // Voice: third person. No first-person plural. Follows AGENTS.md / ai-slop rules.
 
 type Maturity = 'Standard' | 'Adopted' | 'Emerging' | 'Proposed' | 'Legacy';
@@ -376,7 +376,7 @@ export default function AiDiscoveryStandardsPage() {
             and crawl policy to AI systems. Maintained by Vedang Vatsa.
           </p>
           <AuthorByline
-            links={[{ label: 'GitHub', href: 'https://github.com/vedangvatsa/ai-discovery-standards' }]}
+            links={[{ label: 'GitHub', href: 'https://github.com/vedangvatsa/aistandards' }]}
           />
           <nav
             aria-label="On this page"
@@ -473,10 +473,10 @@ export default function AiDiscoveryStandardsPage() {
                 </div>
                 <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed bg-zinc-950 text-zinc-100">
                   <code>{`# Full auto
-npx --yes github:vedangvatsa/ai-discovery-standards --yes --scan --url=https://your-domain.com
+npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.com
 
 # Block training crawlers
-npx --yes github:vedangvatsa/ai-discovery-standards --yes --scan --url=https://your-domain.com --deny-training`}</code>
+npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.com --deny-training`}</code>
                 </pre>
               </div>
               <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
@@ -501,12 +501,12 @@ npx --yes github:vedangvatsa/ai-discovery-standards --yes --scan --url=https://y
                 <p>
                   Source and flags:{' '}
                   <Link
-                    href="https://github.com/vedangvatsa/ai-discovery-standards"
+                    href="https://github.com/vedangvatsa/aistandards"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline hover:text-primary"
                   >
-                    github.com/vedangvatsa/ai-discovery-standards
+                    github.com/vedangvatsa/aistandards
                   </Link>
                 </p>
               </div>
@@ -850,10 +850,10 @@ curl -sI https://your-domain.com/.well-known/security.txt | head -1`}</code>
                 </div>
                 <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed bg-zinc-950 text-zinc-100 whitespace-pre-wrap">
                   <code>{`Set up AI discovery for this project using:
-https://github.com/vedangvatsa/ai-discovery-standards
+https://github.com/vedangvatsa/aistandards
 
 Run:
-npx --yes github:vedangvatsa/ai-discovery-standards --yes --scan --url=https://YOUR_DOMAIN
+npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://YOUR_DOMAIN
 
 Review llms.txt, confirm training allow/deny, and do not advertise fake A2A or MCP endpoints.`}</code>
                 </pre>
@@ -873,7 +873,7 @@ Review llms.txt, confirm training allow/deny, and do not advertise fake A2A or M
                 </p>
                 <p>
                   <Link
-                    href="https://github.com/vedangvatsa/ai-discovery-standards"
+                    href="https://github.com/vedangvatsa/aistandards"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline hover:text-primary"
@@ -882,7 +882,7 @@ Review llms.txt, confirm training allow/deny, and do not advertise fake A2A or M
                   </Link>
                   {' · '}
                   <Link
-                    href="https://github.com/vedangvatsa/ai-discovery-standards/issues"
+                    href="https://github.com/vedangvatsa/aistandards/issues"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline hover:text-primary"
@@ -891,7 +891,7 @@ Review llms.txt, confirm training allow/deny, and do not advertise fake A2A or M
                   </Link>
                   {' · '}
                   <Link
-                    href="https://github.com/vedangvatsa/ai-discovery-standards/pulls"
+                    href="https://github.com/vedangvatsa/aistandards/pulls"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline hover:text-primary"
@@ -915,7 +915,7 @@ Review llms.txt, confirm training allow/deny, and do not advertise fake A2A or M
                   </p>
                 </Link>
                 <Link
-                  href="https://github.com/vedangvatsa/ai-discovery-standards"
+                  href="https://github.com/vedangvatsa/aistandards"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-lg border bg-card p-5 hover:border-primary/50 transition-colors block"

@@ -41,7 +41,7 @@ const softwareSchema = {
   description:
     'Open-source guide and CLI for AI discovery files that help crawlers and agents find and understand a website.',
   url: 'https://veda.ng/aistandards',
-  codeRepository: 'https://github.com/vedangvatsa/ai-discovery-standards',
+  codeRepository: 'https://github.com/vedangvatsa/aistandards',
   programmingLanguage: 'JavaScript',
   runtimePlatform: 'Node.js',
   license: 'https://opensource.org/licenses/MIT',
@@ -78,7 +78,7 @@ const faqSchema = {
       name: 'How do I add AI discovery files to my website?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'From your website project root, run: npx --yes github:vedangvatsa/ai-discovery-standards --yes --scan --url=https://your-domain.com. Use --deny-training if you want to block training crawlers. Review llms.txt after the tool finishes.',
+        text: 'From your website project root, run: npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.com. Use --deny-training if you want to block training crawlers. Review llms.txt after the tool finishes.',
       },
     },
     {

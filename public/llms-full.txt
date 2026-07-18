@@ -1013,10 +1013,10 @@ Traditional SEO is about ranking on Google. That still matters. But in 2026, two
 
 **The implementation steps**
 
-1. **Deploy AI discovery files.** These are static files you place on your web server that tell AI crawlers who you are, what your content covers, and how they should interact with it. The [AI Discovery Standards](https://github.com/vedangvatsa/ai-discovery-standards) repository provides templates for all 13 files. Run one command to generate them all:
+1. **Deploy AI discovery files.** These are static files you place on your web server that tell AI crawlers who you are, what your content covers, and how they should interact with it. The [AI Discovery Standards](https://github.com/vedangvatsa/aistandards) repository provides templates for all 13 files. Run one command to generate them all:
 
 ```
-npx github:vedangvatsa/ai-discovery-standards
+npx github:vedangvatsa/aistandards
 ```
 
 This generates `robots.txt`, `llms.txt`, `llms-full.txt`, `ai.txt`, `ai.json`, `brand.txt`, `.well-known/ai-plugin.json`, `.well-known/agents.json`, and more.
@@ -1218,7 +1218,7 @@ This is the step that positions your company for the next wave. Not just search 
 
 In 2026, AI agents are starting to browse the web autonomously. They look for services, compare products, negotiate APIs, and make purchasing decisions. Your website needs to be readable not just by humans, but by machines that make decisions.
 
-The [AI Discovery Standards](https://github.com/vedangvatsa/ai-discovery-standards) repository documents every file and protocol for this. The key files:
+The [AI Discovery Standards](https://github.com/vedangvatsa/aistandards) repository documents every file and protocol for this. The key files:
 
 - **`robots.txt`** with nuanced AI crawler policies (60+ user agents documented)
 - **`llms.txt`** for machine-readable site summaries
@@ -1227,7 +1227,7 @@ The [AI Discovery Standards](https://github.com/vedangvatsa/ai-discovery-standar
 - **`.well-known/ai-plugin.json`** for ChatGPT plugin-style integration
 - **`brand.txt`** so AI systems represent your brand correctly
 
-Run `npx github:vedangvatsa/ai-discovery-standards` in any project to generate all 13 files with one command.
+Run `npx github:vedangvatsa/aistandards` in any project to generate all 13 files with one command.
 
 The companies that implement these files now will be the ones that autonomous purchasing agents find first. When an AI agent is tasked with "find the best project management tool for a remote team of 50 people," the products with complete discovery files, structured data, and machine-readable pricing will appear in the results. The ones without them will be invisible.
 
@@ -1308,7 +1308,7 @@ Every use case above follows the same pattern. Identify a repetitive workflow. D
 
 ## The Complete Implementation Timeline
 
-**Week 1.** Write your `brand-guidelines.md`. Set up your coding agent (Antigravity or Claude Code) with your guidelines file. Deploy [AI discovery files](https://github.com/vedangvatsa/ai-discovery-standards).
+**Week 1.** Write your `brand-guidelines.md`. Set up your coding agent (Antigravity or Claude Code) with your guidelines file. Deploy [AI discovery files](https://github.com/vedangvatsa/aistandards).
 
 **Week 2.** Set up email infrastructure (Resend or AWS SES). Implement email capture on your site. Build your first nurture sequence.
 

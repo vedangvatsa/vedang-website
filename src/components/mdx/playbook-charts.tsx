@@ -490,7 +490,7 @@ export function ImplementationChecklist() {
         {
           day: 'Day 3-4',
           tasks: [
-            { id: 'w1d3t1', task: 'Deploy AI discovery files', detail: 'Run: npx github:vedangvatsa/ai-discovery-standards', time: '30 min' },
+            { id: 'w1d3t1', task: 'Deploy AI discovery files', detail: 'Run: npx github:vedangvatsa/aistandards', time: '30 min' },
             { id: 'w1d3t2', task: 'Add JSON-LD structured data to key pages', detail: 'Organization, Person, Article, FAQ schemas. Use schema.org validator.', time: '2 hrs' },
             { id: 'w1d3t3', task: 'Write llms.txt', detail: 'Markdown summary of your site for AI systems. See llmstxt.org for format.', time: '1 hr' },
           ],
