@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'ClaudeBot',
     'PerplexityBot',
     'agents.json',
+    'agents.txt',
     'ai-plugin.json',
     'structured data JSON-LD',
     'schema.org',
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/aistandards' },
   openGraph: {
     title: 'AI Discovery Standards',
-    description: 'Every file, protocol, and technique for AI web discoverability. One command to set up all 13 discovery files.',
+    description: 'Every file, protocol, and technique for AI web discoverability. One command to set up all 14 discovery files.',
     url: '/aistandards',
     type: 'website',
     siteName: 'Vedang Vatsa',
@@ -82,7 +83,7 @@ const faqSchema = {
       name: 'What AI crawlers should I allow in robots.txt?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'As of 2026, the major AI crawlers are: GPTBot, OAI-SearchBot, ChatGPT-User (OpenAI), ClaudeBot, Claude-SearchBot, Claude-User (Anthropic), Google-Extended (Gemini), PerplexityBot, Perplexity-User, meta-externalagent, Applebot-Extended, Amazonbot, CCBot, Bytespider, and cohere-ai. Search/retrieval bots cite your content in AI answers, while training bots absorb content into model weights.'
+        text: 'As of 2026, the major AI crawlers are: GPTBot, OAI-SearchBot, ChatGPT-User (OpenAI), ClaudeBot, Claude-SearchBot, Claude-User (Anthropic), Google-Extended, Gemini-Deep-Research, Google-NotebookLM (Google), PerplexityBot, Perplexity-User, meta-externalagent, Applebot-Extended, Amazonbot, CCBot, Bytespider, GrokBot, xAI-Bot (xAI), MistralAI-User (Mistral), and cohere-ai. Search/retrieval bots cite your content in AI answers, while training bots absorb content into model weights.'
       }
     },
     {
@@ -91,6 +92,14 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'brand.txt is a plain-text file placed at the root of a website that provides AI systems with explicit instructions on how to represent a brand. It defines the canonical brand name with exact capitalization, preferred and prohibited terminology, product names, tone guidance, and competitor disambiguation. It reduces AI hallucinations about your brand identity.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'What is agents.txt?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'agents.txt is a plain-text file placed at the root of a website that declares agent-interaction protocols and capabilities. It uses robots.txt-like syntax to announce supported MCP endpoints, A2A AgentCard URLs, skill packages, payment protocols, and authentication flows. The companion agents.json provides the same information in machine-parseable JSON. It is a community standard maintained at agents-txt.com.'
       }
     },
     {

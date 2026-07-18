@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ArrowRight, Database, Search, Eye, EyeOff, FileText, Brain, Link2, AlertTriangle } from 'lucide-react';
 import { AuthorByline } from '@/components/author-byline';
 
 // ─── Complete Discovery File Registry ───
@@ -13,7 +13,7 @@ const DISCOVERY_FILES: {
   status: 'Standard' | 'Adopted' | 'Emerging' | 'Proposed';
 }[] = [
   // Access Control
-  { name: 'robots.txt', path: '/robots.txt', desc: 'Crawler access directives for 25+ AI bots. Separates training bots (GPTBot, ClaudeBot) from search bots (OAI-SearchBot, PerplexityBot).', category: 'Access Control', spec: 'RFC 9309', specUrl: 'https://www.rfc-editor.org/rfc/rfc9309', status: 'Standard' },
+  { name: 'robots.txt', path: '/robots.txt', desc: 'Crawler access directives for 30+ AI bots. Separates training bots (GPTBot, ClaudeBot) from search bots (OAI-SearchBot, PerplexityBot).', category: 'Access Control', spec: 'RFC 9309', specUrl: 'https://www.rfc-editor.org/rfc/rfc9309', status: 'Standard' },
   { name: 'ai.txt', path: '/ai.txt', desc: 'AI-specific usage permissions: training, citation, indexing, summarization. Granular control beyond robots.txt.', category: 'Access Control', spec: 'Community', status: 'Emerging' },
   { name: 'tdmrep.json', path: '/.well-known/tdmrep.json', desc: 'Text and Data Mining reservation. EU CDSM Directive Article 4 compliance. Machine-readable opt-out for AI training.', category: 'Access Control', spec: 'W3C TDMRep', specUrl: 'https://www.w3.org/community/tdmrep/', status: 'Standard' },
 
@@ -27,7 +27,8 @@ const DISCOVERY_FILES: {
   // Agent Discovery
   { name: 'ai-plugin.json', path: '/ai-plugin.json', desc: 'ChatGPT plugin manifest. Declares site capabilities, API endpoints, and authentication for OpenAI agents.', category: 'Agent Discovery', spec: 'OpenAI Plugin', specUrl: 'https://platform.openai.com/docs/plugins', status: 'Adopted' },
   { name: 'agents.json', path: '/agents.json', desc: 'Agent-to-Agent (A2A) capability advertisement. Declares skills, I/O modes, and authentication for autonomous agents.', category: 'Agent Discovery', spec: 'A2A Protocol', status: 'Emerging' },
-  { name: 'MCP Server Card', path: '/.well-known/mcp/server-card.json', desc: 'MCP Server Card (SEP-1649). Exposes transport config, capabilities, and auth requirements for MCP clients.', category: 'Agent Discovery', spec: 'MCP / AAIF', specUrl: 'https://modelcontextprotocol.io', status: 'Proposed' },
+  { name: 'agents.txt', path: '/agents.txt', desc: 'Agent protocol capability declaration. Declares MCP endpoints, A2A cards, skill packages, payment protocols, and auth flows in robots.txt-like syntax.', category: 'Agent Discovery', spec: 'agents-txt.com', specUrl: 'https://agents-txt.com', status: 'Emerging' },
+  { name: 'MCP Server Card', path: '/.well-known/mcp/server-card.json', desc: 'MCP Server Card (SEP-2127). Exposes transport config, capabilities, and auth requirements for MCP clients.', category: 'Agent Discovery', spec: 'MCP / AAIF', specUrl: 'https://modelcontextprotocol.io', status: 'Proposed' },
   { name: 'openapi.json', path: '/api/openapi.json', desc: 'OpenAPI 3.x specification. Machine-readable API contract. Foundation for agent tool discovery.', category: 'Agent Discovery', spec: 'OpenAPI 3.1', specUrl: 'https://spec.openapis.org/oas/v3.1.0', status: 'Standard' },
 
   // Structured Data
@@ -59,14 +60,16 @@ const DISCOVERY_FILES: {
 const AI_CRAWLERS = [
   { company: 'OpenAI', bots: ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User'] },
   { company: 'Anthropic', bots: ['ClaudeBot', 'Claude-SearchBot', 'Claude-User'] },
-  { company: 'Google', bots: ['Googlebot', 'Google-Extended', 'GoogleOther'] },
+  { company: 'Google', bots: ['Googlebot', 'Google-Extended', 'GoogleOther', 'Gemini-Deep-Research', 'Google-NotebookLM'] },
   { company: 'Perplexity', bots: ['PerplexityBot', 'Perplexity-User'] },
   { company: 'Meta', bots: ['meta-externalagent', 'meta-externalfetcher'] },
   { company: 'Apple', bots: ['Applebot', 'Applebot-Extended'] },
   { company: 'Amazon', bots: ['Amazonbot'] },
   { company: 'ByteDance', bots: ['Bytespider', 'TikTokSpider'] },
+  { company: 'xAI', bots: ['GrokBot', 'xAI-Bot'] },
+  { company: 'Mistral', bots: ['MistralAI-User'] },
   { company: 'Microsoft', bots: ['bingbot', 'CopilotBot'] },
-  { company: 'Others', bots: ['CCBot', 'cohere-ai', 'YouBot', 'Diffbot', 'SemrushBot', 'AhrefsBot'] },
+  { company: 'Others', bots: ['CCBot', 'cohere-ai', 'YouBot', 'Diffbot', 'SemrushBot', 'AhrefsBot', 'DuckAssistBot', 'TavilyBot', 'KagiBot', 'PhindBot'] },
 ];
 
 const CATEGORIES = [...new Set(DISCOVERY_FILES.map(f => f.category))];
@@ -90,179 +93,184 @@ export default function AiDiscoveryStandardsPage() {
   return (
     <>
       {/* ── Header ── */}
-      <header className="pt-12 md:pt-20 pb-8">
+      <header className="pt-12 md:pt-16 pb-6">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
             AI Discovery Standards
           </h1>
-          <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            {DISCOVERY_FILES.length} files across {CATEGORIES.length} categories. How to make your site visible to AI crawlers, search engines, and agents.
+          <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            {DISCOVERY_FILES.length} files across {CATEGORIES.length} categories. Every file, protocol, and crawler that determines whether AI systems can find, understand, and cite your website.
           </p>
           <AuthorByline links={[{ label: 'GitHub', href: 'https://github.com/vedangvatsa/ai-discovery-standards' }]} />
         </div>
+
+        {/* Inline stats */}
+        <div className="max-w-4xl mx-auto mt-8 grid grid-cols-3 gap-3 md:gap-6">
+          <div className="rounded-lg border bg-card p-3 md:p-5 text-center">
+            <p className="text-2xl md:text-3xl font-semibold tracking-tight">~28%</p>
+            <p className="text-xs md:text-sm text-muted-foreground mt-1">block at least one AI crawler</p>
+          </div>
+          <div className="rounded-lg border bg-card p-3 md:p-5 text-center">
+            <p className="text-2xl md:text-3xl font-semibold tracking-tight">79%</p>
+            <p className="text-xs md:text-sm text-muted-foreground mt-1">of publishers block training bots</p>
+          </div>
+          <div className="rounded-lg border bg-card p-3 md:p-5 text-center">
+            <p className="text-2xl md:text-3xl font-semibold tracking-tight">~10%</p>
+            <p className="text-xs md:text-sm text-muted-foreground mt-1">have adopted llms.txt</p>
+          </div>
+        </div>
       </header>
 
-      <div className="py-10 md:py-14">
+      <div className="py-6 md:py-10">
         <article className="notion-article prose prose-lg prose-neutral max-w-4xl mx-auto">
 
-      <div className="space-y-24 not-prose">
-
-        {/* ── The Problem ── */}
-        <section className="prose max-w-4xl mx-auto">
-          <h2 className="text-2xl font-semibold tracking-tight !mb-4">The Visibility Problem</h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Search changed. In 2025, nearly 60% of queries ended without a click. The user got their answer
-            directly from an AI summary. Google AI Overviews, ChatGPT Search, Perplexity, and Copilot now
-            synthesize answers from multiple sources and present them as a single response. The &quot;ten blue links&quot;
-            page is fading. If your content isn&apos;t structured for extraction and citation by these systems,
-            you&apos;re invisible to a growing share of your audience.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            This page documents every file, protocol, and technique that determines whether AI systems can find,
-            understand, and cite your website. It&apos;s the result of building and testing these standards across
-            production sites, not theory.
-          </p>
-        </section>
-
-        {/* ── What the Data Shows ── */}
-        <section>
-          <h2 className="text-2xl font-semibold tracking-tight mb-2">What the Data Shows</h2>
-          <p className="text-sm text-muted-foreground mb-8">Numbers from 2025-2026 industry research on AI crawler behavior, blocking rates, and adoption.</p>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="rounded-lg border bg-card p-6">
-              <p className="text-3xl font-semibold tracking-tight">~28%</p>
-              <p className="text-sm text-muted-foreground mt-2">of websites now block at least one major AI crawler via robots.txt, CDN, or WAF rules.</p>
-            </div>
-            <div className="rounded-lg border bg-card p-6">
-              <p className="text-3xl font-semibold tracking-tight">79%</p>
-              <p className="text-sm text-muted-foreground mt-2">of top news publishers block AI training bots. GPTBot is the most blocked crawler (17-62% depending on dataset).</p>
-            </div>
-            <div className="rounded-lg border bg-card p-6">
-              <p className="text-3xl font-semibold tracking-tight">~10%</p>
-              <p className="text-sm text-muted-foreground mt-2">of domains have adopted llms.txt. Among the top 1,000 sites, it drops to 0.3%. No major AI provider officially uses it as a ranking signal.</p>
-            </div>
-          </div>
-
-          <div className="mt-8 prose max-w-4xl mx-auto">
-            <p className="text-muted-foreground leading-relaxed">
-              The blocking numbers reveal a market that hasn&apos;t settled on a strategy. Most publishers are
-              reacting to AI crawlers the same way they reacted to early search engines in the 2000s: with blanket
-              blocks. The problem: blocking search bots (OAI-SearchBot, Claude-SearchBot) removes you from AI-generated
-              answers entirely. Blocking training bots (GPTBot, ClaudeBot) stops your content from being absorbed
-              into model weights without attribution. These are different decisions with different consequences,
-              and most sites are treating them as the same thing.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              The llms.txt adoption curve is interesting for what it reveals about the standard&apos;s actual utility.
-              No major AI provider (Google, OpenAI, Anthropic, Meta) has committed to using it as a retrieval
-              signal. Its real value has shifted toward B2A (Business-to-Agent) communication: giving coding
-              assistants, IDE agents, and documentation crawlers a structured entry point into your site. That&apos;s
-              a narrower use case than the original pitch, but it&apos;s a real one.
-            </p>
-          </div>
-        </section>
+      <div className="space-y-16 not-prose">
 
         {/* ── The Training vs Retrieval Split ── */}
-        <section className="prose max-w-4xl mx-auto">
+        <section className="not-prose max-w-4xl mx-auto">
           <h2 className="text-2xl font-semibold tracking-tight !mb-4">The Training vs. Retrieval Split</h2>
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-muted-foreground leading-relaxed mb-8">
             The most important distinction in AI discoverability is between <strong className="text-foreground">training crawlers</strong> and{' '}
             <strong className="text-foreground">retrieval crawlers</strong>. They look similar in your access logs,
             but they do fundamentally different things with your content.
           </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Training crawlers (GPTBot, ClaudeBot, Google-Extended, CCBot) ingest your content into model weights.
-            Once absorbed, your words become part of the model&apos;s knowledge but are never attributed back to you.
-            There is no referral traffic. No citation. Your content improves someone else&apos;s product.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Retrieval crawlers (OAI-SearchBot, Claude-SearchBot, PerplexityBot) fetch your content at query time
-            to include in AI-generated answers. These crawlers <em>do</em> cite you. They <em>do</em> send traffic.
-            AI-referred visitors convert at roughly 14% versus 3% for traditional organic, five times higher,
-            because they arrive with specific intent already formed by the AI summary.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            The strategic play: allow all retrieval bots, selectively manage training bots. The robots.txt
-            strategy section below shows exactly how to do this.
-          </p>
-        </section>
 
-        {/* ── New Metrics ── */}
-        <section>
-          <h2 className="text-2xl font-semibold tracking-tight mb-2">Measuring AI Visibility</h2>
-          <p className="text-sm text-muted-foreground mb-8">
-            Traditional SEO metrics (clicks, impressions, keyword rankings) don&apos;t capture AI performance. These are the metrics that matter now.
-          </p>
-          <div className="space-y-px rounded-lg overflow-hidden border">
-            {[
-              { metric: 'Citation Frequency', what: 'How often AI systems cite your domain when answering questions in your topic area.', status: 'Primary' },
-              { metric: 'Share of AI Voice', what: 'Your brand\'s presence as a percentage of all citations in AI-generated answers for core queries.', status: 'Primary' },
-              { metric: 'AI Referral Traffic', what: 'Visits from ChatGPT, Perplexity, Claude, and Copilot. Track via UTM params or referrer headers.', status: 'Measurable' },
-              { metric: 'AI Conversion Rate', what: 'Conversion rate of AI-referred visitors vs. organic. Industry benchmarks: ~14% vs. ~3%.', status: 'Measurable' },
-              { metric: 'Brand Mention Accuracy', what: 'Whether AI systems correctly describe your brand, products, and positioning. Reduced by brand.txt.', status: 'Qualitative' },
-              { metric: 'Answer Selection Rate', what: 'How often your content is chosen as the direct answer (not just cited) in AI Overviews and snippets.', status: 'AEO-specific' },
-            ].map((row) => (
-              <div key={row.metric} className="bg-card flex items-start gap-4 p-4">
-                <div className="shrink-0 w-48">
-                  <span className="font-medium text-sm">{row.metric}</span>
-                  <div className="text-[11px] text-muted-foreground/60 mt-0.5">{row.status}</div>
+          {/* Two-path diagram */}
+          <div className="grid md:grid-cols-2 gap-4 mb-6">
+            {/* Training path */}
+            <div className="rounded-lg border border-amber-200 dark:border-amber-900/40 bg-amber-50/50 dark:bg-amber-950/10 p-5">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-amber-100 dark:bg-amber-900/30">
+                  <Database className="h-4 w-4 text-amber-600 dark:text-amber-400" />
                 </div>
-                <p className="flex-1 text-sm text-muted-foreground leading-relaxed min-w-0">{row.what}</p>
+                <span className="font-medium text-sm">Training Crawlers</span>
               </div>
-            ))}
+
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <FileText className="h-3.5 w-3.5 shrink-0" />
+                  <span>Your content</span>
+                </div>
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <ArrowRight className="h-3.5 w-3.5" />
+                  <code className="text-[11px] font-mono bg-muted/60 px-1.5 py-0.5 rounded">GPTBot</code>
+                  <code className="text-[11px] font-mono bg-muted/60 px-1.5 py-0.5 rounded">ClaudeBot</code>
+                  <code className="text-[11px] font-mono bg-muted/60 px-1.5 py-0.5 rounded">CCBot</code>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <ArrowRight className="h-3.5 w-3.5" />
+                  <Brain className="h-3.5 w-3.5 shrink-0" />
+                  <span>Absorbed into model weights</span>
+                </div>
+              </div>
+
+              <div className="mt-4 pt-4 border-t border-amber-200 dark:border-amber-900/30 space-y-1.5">
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <EyeOff className="h-3.5 w-3.5 text-amber-600 dark:text-amber-400" />
+                  <span>No citation</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <EyeOff className="h-3.5 w-3.5 text-amber-600 dark:text-amber-400" />
+                  <span>No referral traffic</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <EyeOff className="h-3.5 w-3.5 text-amber-600 dark:text-amber-400" />
+                  <span>No attribution</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Retrieval path */}
+            <div className="rounded-lg border border-emerald-200 dark:border-emerald-900/40 bg-emerald-50/50 dark:bg-emerald-950/10 p-5">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30">
+                  <Search className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+                </div>
+                <span className="font-medium text-sm">Retrieval Crawlers</span>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <FileText className="h-3.5 w-3.5 shrink-0" />
+                  <span>Your content</span>
+                </div>
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <ArrowRight className="h-3.5 w-3.5" />
+                  <code className="text-[11px] font-mono bg-muted/60 px-1.5 py-0.5 rounded">OAI-SearchBot</code>
+                  <code className="text-[11px] font-mono bg-muted/60 px-1.5 py-0.5 rounded">PerplexityBot</code>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <ArrowRight className="h-3.5 w-3.5" />
+                  <Link2 className="h-3.5 w-3.5 shrink-0" />
+                  <span>Cited in AI-generated answers</span>
+                </div>
+              </div>
+
+              <div className="mt-4 pt-4 border-t border-emerald-200 dark:border-emerald-900/30 space-y-1.5">
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <Eye className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
+                  <span>Citation with link</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <Eye className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
+                  <span>Referral traffic (~14% conversion)</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <Eye className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
+                  <span>Attribution preserved</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Strategy callout */}
+          <div className="rounded-lg border bg-card p-4 flex items-start gap-3">
+            <AlertTriangle className="h-4 w-4 text-amber-500 shrink-0 mt-0.5" />
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Blocking a training bot (e.g., <code className="text-xs font-mono bg-muted/60 px-1 py-0.5 rounded">GPTBot</code>) does not affect
+              your visibility in AI search results. Blocking a search bot (e.g., <code className="text-xs font-mono bg-muted/60 px-1 py-0.5 rounded">OAI-SearchBot</code>)
+              removes you from that AI&apos;s search entirely. These are separate decisions.
+            </p>
           </div>
         </section>
 
         {/* ── File Registry ── */}
         <section>
           <h2 className="text-2xl font-semibold tracking-tight mb-2">File Registry</h2>
-          <p className="text-sm text-muted-foreground mb-8">
+          <p className="text-sm text-muted-foreground mb-6">
             <span className={STATUS_STYLES.Standard}>Standard</span> = ratified RFC or W3C spec.{' '}
             <span className={STATUS_STYLES.Adopted}>Adopted</span> = widely used convention.{' '}
             <span className={STATUS_STYLES.Emerging}>Emerging</span> = growing adoption, no formal spec.{' '}
             <span className={STATUS_STYLES.Proposed}>Proposed</span> = draft or specification proposal.
           </p>
 
-          <div className="space-y-12">
-            {CATEGORIES.map((category) => {
-              const files = DISCOVERY_FILES.filter(f => f.category === category);
-              return (
-                <div key={category}>
-                  <p className="text-xs font-medium text-muted-foreground uppercase tracking-widest mb-4">{category}</p>
-                  <div className="space-y-px rounded-lg overflow-hidden border">
-                    {files.map((file) => (
-                      <div key={file.name} className="bg-card flex gap-4 p-4">
-                        <div className="shrink-0 w-40">
-                          <span className="font-medium text-sm">{file.name}</span>
-                          <div className="text-[11px] text-muted-foreground font-mono mt-0.5">{file.path}</div>
-                        </div>
-                        <p className="flex-1 text-sm text-muted-foreground leading-relaxed min-w-0">{file.desc}</p>
-                        <div className="shrink-0 flex flex-col items-end gap-1">
-                          <span className={`text-[11px] font-medium ${STATUS_STYLES[file.status]}`}>{file.status}</span>
-                          {file.specUrl ? <Src href={file.specUrl}>{file.spec}</Src> : <span className="text-[11px] text-muted-foreground/50">{file.spec}</span>}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {DISCOVERY_FILES.map((file) => (
+              <div key={file.name} className="rounded-lg border bg-card p-3.5 flex flex-col gap-1.5">
+                <div className="flex items-start justify-between gap-2">
+                  <span className="font-medium text-sm leading-tight">{file.name}</span>
+                  <span className={`text-[10px] font-medium shrink-0 ${STATUS_STYLES[file.status]}`}>{file.status}</span>
                 </div>
-              );
-            })}
+                <div className="text-[11px] text-muted-foreground font-mono leading-tight">{file.path}</div>
+                <p className="text-xs text-muted-foreground/80 leading-relaxed line-clamp-2">{file.desc}</p>
+                <div className="mt-auto pt-1">
+                  {file.specUrl ? <Src href={file.specUrl}>{file.spec}</Src> : <span className="text-[10px] text-muted-foreground/50">{file.spec}</span>}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
         {/* ── AI Crawler Registry ── */}
         <section>
-          <div className="flex items-baseline justify-between gap-4 mb-2">
-            <h2 className="text-2xl font-semibold tracking-tight">AI Crawler Registry</h2>
-          </div>
-          <p className="text-sm text-muted-foreground mb-8">
-            All known AI crawler user-agent strings as of Q2 2026. Separate <strong className="text-foreground">training bots</strong> (content absorbed into model weights, no attribution) from <strong className="text-foreground">search bots</strong> (content cited in AI-generated answers).
+          <h2 className="text-2xl font-semibold tracking-tight mb-2">AI Crawler Registry</h2>
+          <p className="text-sm text-muted-foreground mb-6">
+            All known AI crawler user-agent strings as of Q3 2026.
           </p>
           <div className="space-y-px rounded-lg overflow-hidden border">
             {AI_CRAWLERS.map((group) => (
-              <div key={group.company} className="bg-card flex items-start gap-4 p-4">
-                <span className="font-medium text-sm shrink-0 w-28">{group.company}</span>
+              <div key={group.company} className="bg-card flex items-center gap-4 p-3">
+                <span className="font-medium text-sm shrink-0 w-24">{group.company}</span>
                 <div className="flex flex-wrap gap-1.5">
                   {group.bots.map((bot) => (
                     <code key={bot} className="text-xs font-mono bg-muted/60 px-2 py-0.5 rounded">
@@ -275,102 +283,26 @@ export default function AiDiscoveryStandardsPage() {
           </div>
         </section>
 
-        {/* ── AEO vs GEO ── */}
-        <section>
-          <h2 className="text-2xl font-semibold tracking-tight mb-2">AEO vs GEO</h2>
-          <p className="text-sm text-muted-foreground mb-8">
-            Answer Engine Optimization targets direct answer selection. Generative Engine Optimization targets citation frequency across AI platforms. You need both.
-          </p>
-          <div className="space-y-px rounded-lg overflow-hidden border">
-            {[
-              { label: 'Goal', aeo: 'Be selected as the direct answer', geo: 'Be cited as a source across AI platforms' },
-              { label: 'Targets', aeo: 'Perplexity, ChatGPT Search, Google AI Overviews', geo: 'Claude, ChatGPT, Gemini recommendations' },
-              { label: 'Content pattern', aeo: 'H2 headings as literal questions, 2-3 sentence answer below', geo: 'Consistent terminology, clear authorship, JSON-LD, llms.txt' },
-              { label: 'Key schema', aeo: 'FAQPage, HowTo', geo: 'Organization, Person, WebSite + SearchAction, sameAs' },
-              { label: 'Metric', aeo: 'Answer selection rate', geo: 'Share of AI Voice (citation frequency)' },
-            ].map((row) => (
-              <div key={row.label} className="bg-card grid grid-cols-[120px_1fr_1fr] gap-4 p-4">
-                <span className="font-medium text-sm">{row.label}</span>
-                <span className="text-sm text-muted-foreground">{row.aeo}</span>
-                <span className="text-sm text-muted-foreground">{row.geo}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ── Content Strategy ── */}
-        <section className="prose max-w-4xl mx-auto">
-          <h2 className="text-2xl font-semibold tracking-tight !mb-4">Content That Gets Cited</h2>
-          <p className="text-muted-foreground leading-relaxed">
-            AI systems don&apos;t rank content. They extract it. The difference matters. A page that ranks #1 on Google
-            can be completely ignored by ChatGPT if it&apos;s structured poorly. What LLMs actually favor:
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            <strong className="text-foreground">Answer-first formatting.</strong> Put the answer in the first 2-3 sentences
-            after a heading, then explain. AI systems extract the answer block and move on. If your answer is
-            buried in paragraph four, it won&apos;t be found.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            <strong className="text-foreground">Evidence density.</strong> Research shows that LLMs are biased toward
-            content that reads as &quot;evidentiary&quot;: numbers, citations, specific claims with sources.
-            Pages with original data, named experts, and precise figures get cited at significantly higher
-            rates than opinion pieces or generic overviews.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            <strong className="text-foreground">Entity consistency.</strong> AI models work with entities, not keywords.
-            If you call your product &quot;DataSync&quot; on one page and &quot;Data Sync Platform&quot; on another,
-            the model can&apos;t confidently attribute information to you. Use the same terminology everywhere.
-            brand.txt exists to enforce this at the AI layer.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            <strong className="text-foreground">Structured data as ground truth.</strong> JSON-LD schema (Organization,
-            Person, Article, FAQPage) gives AI systems a machine-readable source of truth about who you are and
-            what your content is about. It&apos;s the most underrated signal in AI discoverability. Most sites
-            either skip it or implement it incorrectly.
-          </p>
-        </section>
-
-        {/* ── robots.txt Strategy ── */}
-        <section>
-          <h2 className="text-2xl font-semibold tracking-tight mb-2">robots.txt Strategy</h2>
-          <p className="text-sm text-muted-foreground mb-8">Separate training bots from search bots. Allow what you want cited, block what you want protected.</p>
-
-          <div className="space-y-px rounded-lg overflow-hidden border">
-            <div className="bg-card p-4">
-              <span className="font-medium text-sm">Search bots</span>
-              <span className="text-xs text-muted-foreground ml-2">(OAI-SearchBot, Claude-SearchBot, PerplexityBot)</span>
-              <p className="text-sm text-muted-foreground mt-1">Crawl your site to include content in AI-generated answers. Blocking them removes you from AI search results entirely.</p>
-            </div>
-            <div className="bg-card p-4">
-              <span className="font-medium text-sm">Training bots</span>
-              <span className="text-xs text-muted-foreground ml-2">(GPTBot, ClaudeBot, Google-Extended)</span>
-              <p className="text-sm text-muted-foreground mt-1">Ingest content into model weights. Your content becomes part of the model but is not attributed to you.</p>
-            </div>
-            <div className="bg-card p-4">
-              <span className="font-medium text-sm">Recommended strategy</span>
-              <p className="text-sm text-muted-foreground mt-1">Allow all search bots (you want citations). Selectively allow or block training bots. Always allow Googlebot. For EU sites, add /.well-known/tdmrep.json for CDSM Directive Article 4 compliance.</p>
-            </div>
-          </div>
-        </section>
-
         {/* ── Setup ── */}
         <section>
-          <h2 className="text-2xl font-semibold tracking-tight mb-2">Setup</h2>
-          <p className="text-sm text-muted-foreground mb-6">One command generates all discovery files. Auto-detects public/ or static/ directories. Existing files are never overwritten.</p>
-          <div className="rounded-lg border bg-card p-4 font-mono text-sm max-w-lg">
-            <span className="text-muted-foreground">$</span> npx ai-discovery-standards
+          <div className="rounded-lg border bg-card p-6 text-center">
+            <h2 className="text-xl font-semibold tracking-tight mb-2">Setup</h2>
+            <p className="text-sm text-muted-foreground mb-4">One command generates all discovery files. Existing files are never overwritten.</p>
+            <div className="inline-flex items-center gap-2 rounded-md border bg-muted/50 px-4 py-2 font-mono text-sm">
+              <span className="text-muted-foreground">$</span> npx ai-discovery-standards
+            </div>
+            <p className="mt-4 text-xs text-muted-foreground">
+              Works with Next.js, React, Vue, Hugo, Gatsby, and any static site.{' '}
+              <Link href="https://github.com/vedangvatsa/ai-discovery-standards" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">
+                Full documentation on GitHub
+              </Link>
+            </p>
           </div>
-          <p className="mt-4 text-xs text-muted-foreground">
-            Works with Next.js, React, Vue, Hugo, Gatsby, and any static site.{' '}
-            <Link href="https://github.com/vedangvatsa/ai-discovery-standards" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">
-              Full documentation on GitHub
-            </Link>
-          </p>
         </section>
 
         {/* ── Disclaimer ── */}
         <p className="text-xs text-muted-foreground/60 text-center pb-4">
-          Standards evolve. Last updated May 2026. File an issue on GitHub if something is missing or outdated.
+          Standards evolve. Last updated July 2026. File an issue on GitHub if something is missing or outdated.
         </p>
 
       </div>
