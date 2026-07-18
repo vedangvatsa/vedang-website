@@ -24,7 +24,7 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'robots.txt',
     path: '/robots.txt',
     what: 'A text file at the site root that tells automated bots which paths they may crawl.',
-    why: 'Primary practical control for AI companies that honor robots.txt. Search bots and training bots can be allowed or blocked independently. Some vendors say a one-off page fetch during chat may not fully apply robots.txt.',
+    why: 'Main control for crawl policy. Training and search bots can differ. Some chat fetches may ignore robots.txt.',
     category: 'Crawl control',
     priority: 'Start here',
     maturity: 'Standard',
@@ -35,7 +35,7 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'sitemap.xml',
     path: '/sitemap.xml',
     what: 'A list of important site URLs, often with last-modified dates.',
-    why: 'Helps search engines and many AI retrieval crawlers find pages without guessing the URL graph.',
+    why: 'Helps crawlers find important URLs without guessing the graph.',
     category: 'Content discovery',
     priority: 'Start here',
     maturity: 'Standard',
@@ -46,7 +46,7 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'llms.txt',
     path: '/llms.txt',
     what: 'A short Markdown summary of the site: identity plus links to the most important pages.',
-    why: 'Gives language models a clean map instead of noisy HTML. Useful when an agent lands on the domain and needs orientation. Google has said llms.txt is not required for its generative search features.',
+    why: 'A clean site map for agents. Google has said it is not required for generative search.',
     category: 'Content discovery',
     priority: 'Start here',
     maturity: 'Adopted',
@@ -57,7 +57,7 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'JSON-LD (schema)',
     path: 'Inside HTML pages',
     what: 'Structured labels that declare entities such as Organization, Article, or FAQ on a page.',
-    why: 'Machines extract facts more reliably from typed data than from prose alone.',
+    why: 'Typed facts for machines (Organization, Article, FAQ, and similar).',
     category: 'Content structure',
     priority: 'Start here',
     maturity: 'Standard',
@@ -68,9 +68,9 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'security.txt',
     path: '/.well-known/security.txt',
     what: 'Contact details for reporting security issues.',
-    why: 'Operational hygiene. Not AI-specific; signals that the property is maintained.',
+    why: 'Security contact. Not AI-specific.',
     category: 'Operations',
-    priority: 'Start here',
+    priority: 'Optional',
     maturity: 'Standard',
     spec: 'RFC 9116',
     specUrl: 'https://www.rfc-editor.org/rfc/rfc9116',
@@ -90,7 +90,7 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'tdmrep.json',
     path: '/.well-known/tdmrep.json',
     what: 'Machine-readable notice that mining rights are reserved or not, under EU text-and-data-mining rules.',
-    why: 'Relevant for formal opt-out signaling around mining and training, especially in EU copyright context. Complements robots.txt. Not legal advice.',
+    why: 'EU mining opt-out signal. Complements robots.txt. Not legal advice.',
     category: 'Crawl control',
     priority: 'When it applies',
     maturity: 'Adopted',
@@ -112,7 +112,7 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'agents.json',
     path: '/agents.json',
     what: 'Structured companion to agents.txt at the site root (not the A2A card path).',
-    why: 'Same role as agents.txt with richer machine fields. Do not confuse with /.well-known/agent-card.json (A2A).',
+    why: 'Richer machine fields for agents.txt. Not the A2A agent-card path.',
     category: 'Agent products',
     priority: 'When it applies',
     maturity: 'Emerging',
@@ -156,7 +156,7 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     name: 'Content-Signal',
     path: 'Inside robots.txt',
     what: 'Optional preference line for search, AI input, and training after content is accessed.',
-    why: 'Complement to Allow/Disallow when finer usage policy is needed. Track AIPREF and Content Signals.',
+    why: 'Finer usage preference after access (AIPREF / Content Signals). Still early.',
     category: 'Crawl control',
     priority: 'When it applies',
     maturity: 'Proposed',
@@ -174,33 +174,12 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     spec: 'RSS / JSON Feed',
     specUrl: 'https://jsonfeed.org/version/1.1',
   },
-  {
-    name: 'manifest.json',
-    path: '/manifest.json',
-    what: 'PWA metadata: name, icons, theme, display mode.',
-    why: 'Browser install behavior. Not AI citation.',
-    category: 'Operations',
-    priority: 'When it applies',
-    maturity: 'Standard',
-    spec: 'W3C Web App Manifest',
-    specUrl: 'https://www.w3.org/TR/appmanifest/',
-  },
-  {
-    name: 'ads.txt',
-    path: '/ads.txt',
-    what: 'Public list of authorized digital ad sellers for the domain.',
-    why: 'Ad fraud prevention when inventory is sold or to discourage unauthorized claims.',
-    category: 'Operations',
-    priority: 'When it applies',
-    maturity: 'Standard',
-    spec: 'IAB Tech Lab',
-    specUrl: 'https://iabtechlab.com/ads-txt/',
-  },
+
   {
     name: 'ai.txt / ai.json',
     path: '/ai.txt and /ai.json',
     what: 'Informal permissions summary and content map in text or JSON.',
-    why: 'Optional documentation. Major model providers do not uniformly document honor of these files the way they document robots.txt tokens.',
+    why: 'Optional. Not documented the way robots.txt tokens are.',
     category: 'Optional',
     priority: 'Optional',
     maturity: 'Emerging',
@@ -216,118 +195,33 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     maturity: 'Emerging',
     spec: 'Community',
   },
-  {
-    name: 'carbon.txt',
-    path: '/carbon.txt',
-    what: 'TOML links to sustainability disclosures (carbontxt.org format).',
-    why: 'Environmental transparency reporting.',
-    category: 'Optional',
-    priority: 'Optional',
-    maturity: 'Adopted',
-    spec: 'carbontxt.org',
-    specUrl: 'https://carbontxt.org',
-  },
-  {
-    name: 'humans.txt',
-    path: '/humans.txt',
-    what: 'Credits for people and tools behind the site.',
-    why: 'Human-readable provenance. Low machine criticality.',
-    category: 'Optional',
-    priority: 'Optional',
-    maturity: 'Adopted',
-    spec: 'humanstxt.org',
-    specUrl: 'https://humanstxt.org',
-  },
-  {
-    name: 'ai-plugin.json',
-    path: '/.well-known/ai-plugin.json',
-    what: 'Historical ChatGPT plugin manifest format.',
-    why: 'Legacy. Prefer OpenAPI plus current tool integrations (MCP and current app patterns).',
-    category: 'Optional',
-    priority: 'Optional',
-    maturity: 'Legacy',
-    spec: 'OpenAI (legacy)',
-  },
-  {
-    name: 'browserconfig.xml',
-    path: '/browserconfig.xml',
-    what: 'Windows tile config for pinned sites.',
-    why: 'Legacy browser chrome. Not AI discovery.',
-    category: 'Optional',
-    priority: 'Optional',
-    maturity: 'Legacy',
-    spec: 'Microsoft',
-  },
-  {
-    name: 'dnt-policy.txt',
-    path: '/.well-known/dnt-policy.txt',
-    what: 'EFF Do Not Track policy file.',
-    why: 'Browser DNT is effectively obsolete. Keep only for a specific compliance reason.',
-    category: 'Optional',
-    priority: 'Optional',
-    maturity: 'Legacy',
-    spec: 'EFF DNT',
-  },
-  {
-    name: '/.well-known/ai',
-    path: '/.well-known/ai',
-    what: 'IETF draft for a single JSON AI discovery document.',
-    why: 'Watch-list until an RFC exists. Not required for ordinary sites today.',
-    category: 'Optional',
-    priority: 'Optional',
-    maturity: 'Proposed',
-    spec: 'IETF draft',
-    specUrl: 'https://www.ietf.org/archive/id/draft-aiendpoint-ai-discovery-00.html',
-  },
-  {
-    name: 'AGENTS.md / CLAUDE.md / Cursor rules',
-    path: 'Inside a code repository',
-    what: 'Instructions for coding assistants working on the codebase.',
-    why: 'Developer tooling, not public web discovery.',
-    category: 'Software repositories',
-    priority: 'When it applies',
-    maturity: 'Adopted',
-    spec: 'Tool-specific',
-  },
+
 ];
 
-const AI_CRAWLERS: { company: string; bots: string[]; plain: string }[] = [
+const AI_CRAWLERS: { company: string; bots: string[] }[] = [
   {
     company: 'OpenAI',
     bots: ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'OAI-AdsBot'],
-    plain: 'GPTBot: training-related crawl. OAI-SearchBot: ChatGPT search indexing. ChatGPT-User: fetch when a person asks. OAI-AdsBot: ad landing-page checks.',
   },
   {
     company: 'Anthropic',
     bots: ['ClaudeBot', 'Claude-SearchBot', 'Claude-User'],
-    plain: 'Training, search indexing, and user-triggered fetches. Anthropic documents that these honor robots.txt.',
   },
   {
     company: 'Google',
     bots: ['Googlebot', 'Google-Extended', 'GoogleOther'],
-    plain: 'Googlebot powers Search (including surfaces that may appear in AI Overviews). Google-Extended is a control token for Gemini training and grounding, not always a separate crawler UA in logs.',
   },
   {
     company: 'Perplexity',
     bots: ['PerplexityBot', 'Perplexity-User'],
-    plain: 'PerplexityBot builds the search index. Perplexity-User fetches when a person asks and generally ignores robots.txt.',
   },
   {
     company: 'Others',
     bots: ['Applebot', 'Amazonbot', 'meta-externalagent', 'CCBot', 'Bytespider', 'Bingbot'],
-    plain: 'Apple, Amazon, Meta, Common Crawl, ByteDance, and Microsoft each run crawlers with distinct purposes. Prefer each vendor documentation and IP lists when certainty matters.',
   },
 ];
 
 const CATEGORIES = [...new Set(DISCOVERY_FILES.map((f) => f.category))];
-
-const MATURITY_STYLES: Record<Maturity, string> = {
-  Standard: 'bg-gray-100 text-gray-800 border-gray-200',
-  Adopted: 'bg-gray-100 text-gray-800 border-gray-200',
-  Emerging: 'bg-gray-50 text-gray-600 border-gray-200',
-  Proposed: 'bg-gray-50 text-gray-600 border-gray-200',
-  Legacy: 'bg-gray-50 text-gray-500 border-gray-200',
-};
 
 const PRIORITY_STYLES: Record<Priority, string> = {
   'Start here': 'bg-gray-900 text-white border-gray-900',
@@ -336,8 +230,6 @@ const PRIORITY_STYLES: Record<Priority, string> = {
 };
 
 export default function AiDiscoveryStandardsPage() {
-  const startHere = DISCOVERY_FILES.filter((f) => f.priority === 'Start here');
-
   return (
     <>
       <header className="pt-12 md:pt-20 pb-8">
@@ -346,8 +238,7 @@ export default function AiDiscoveryStandardsPage() {
             AI Discovery Standards
           </h1>
           <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Reference and installer for the small website files that declare identity, content maps,
-            and crawl policy to AI systems.
+            Files and installer for identity, content maps, and crawl policy for AI systems.
           </p>
           <AuthorByline
             links={[{ label: 'GitHub', href: 'https://github.com/vedangvatsa/aistandards' }]}
@@ -359,14 +250,14 @@ export default function AiDiscoveryStandardsPage() {
             <a href="#install" className="hover:text-primary transition-colors">
               Install
             </a>
-            <a href="#first-five" className="hover:text-primary transition-colors">
-              First five files
-            </a>
             <a href="#training-vs-search" className="hover:text-primary transition-colors">
               Training vs search
             </a>
             <a href="#registry" className="hover:text-primary transition-colors">
               Catalog
+            </a>
+            <a href="#crawlers" className="hover:text-primary transition-colors">
+              Crawlers
             </a>
             <a href="#verify" className="hover:text-primary transition-colors">
               Verify
@@ -447,33 +338,9 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
               </div>
             </section>
 
-            <section id="first-five">
-              <h2 className="text-2xl font-semibold tracking-tight mb-3">Five files most content sites need</h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {startHere.map((file, i) => (
-                  <div key={file.name} className="rounded-lg border bg-card p-3.5 flex flex-col min-h-0">
-                    <div className="flex items-start gap-2 mb-1.5">
-                      <span className="text-xs font-medium text-muted-foreground tabular-nums shrink-0 mt-0.5">
-                        {i + 1}.
-                      </span>
-                      <div className="min-w-0">
-                        <p className="text-sm font-medium text-foreground leading-snug">{file.name}</p>
-                        <p className="text-[11px] font-mono text-muted-foreground truncate">{file.path}</p>
-                      </div>
-                    </div>
-                    <p className="text-xs text-muted-foreground leading-snug line-clamp-3">{file.what}</p>
-                    <p className="text-xs text-muted-foreground leading-snug mt-1.5 line-clamp-2">{file.why}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
             <section id="registry">
-              <h2 className="text-2xl font-semibold tracking-tight mb-2">Catalog</h2>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                Expand a card for more detail and the official source when one exists.
-              </p>
-              <div className="flex flex-wrap gap-1.5 mb-6">
+              <h2 className="text-2xl font-semibold tracking-tight mb-3">Catalog</h2>
+              <div className="flex flex-wrap gap-1.5 mb-5">
                 {CATEGORIES.map((category) => {
                   const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
                   return (
@@ -505,17 +372,11 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
                               <span className={`inline-flex items-center text-[10px] font-medium px-1.5 py-0.5 rounded border ${PRIORITY_STYLES[file.priority]}`}>
                                 {file.priority}
                               </span>
-                              <span className={`inline-flex items-center text-[10px] font-medium px-1.5 py-0.5 rounded border ${MATURITY_STYLES[file.maturity]}`}>
-                                {file.maturity}
-                              </span>
                             </div>
                             <p className="text-sm font-medium text-foreground leading-snug">{file.name}</p>
                             <p className="text-[11px] font-mono text-muted-foreground truncate mt-0.5">{file.path}</p>
                             <p className="text-xs text-muted-foreground leading-snug mt-1.5 line-clamp-2 group-open:line-clamp-none">
                               {file.what}
-                            </p>
-                            <p className="text-[10px] text-muted-foreground/70 mt-1.5 group-open:hidden">
-                              Expand for details
                             </p>
                           </summary>
                           <div className="px-3 pb-3 pt-0 space-y-1.5 border-t border-border/60">
@@ -529,9 +390,7 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
                               >
                                 {file.spec}
                               </Link>
-                            ) : (
-                              <span className="text-[11px] text-muted-foreground/60">{file.spec}</span>
-                            )}
+                            ) : null}
                           </div>
                         </details>
                       ))}
@@ -541,20 +400,19 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
               })}
             </section>
 
-            <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-3">Crawler names by company</h2>
+            <section id="crawlers">
+              <h2 className="text-2xl font-semibold tracking-tight mb-3">Crawler names</h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
                 {AI_CRAWLERS.map((group) => (
-                  <div key={group.company} className="rounded-lg border bg-card p-3.5">
+                  <div key={group.company} className="rounded-lg border bg-card p-3">
                     <p className="text-sm font-medium text-foreground mb-1.5">{group.company}</p>
-                    <div className="flex flex-wrap gap-1 mb-2">
+                    <div className="flex flex-wrap gap-1">
                       {group.bots.map((bot) => (
                         <code key={bot} className="text-[11px] font-mono bg-muted px-1.5 py-0.5 rounded">
                           {bot}
                         </code>
                       ))}
                     </div>
-                    <p className="text-xs text-muted-foreground leading-snug line-clamp-3">{group.plain}</p>
                   </div>
                 ))}
               </div>
@@ -563,8 +421,7 @@ npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://your-domain.
             <section id="verify">
               <h2 className="text-2xl font-semibold tracking-tight mb-3">Check after deploy</h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                Confirm the files respond at the live domain root. Look for 200; a 404 usually means static files are
-                not served at the root.
+                Files should return 200 at the domain root.
               </p>
               <div className="terminal-chrome rounded-lg overflow-hidden border">
                 <div className="terminal-chrome-bar px-4 py-2 flex items-center gap-2">
