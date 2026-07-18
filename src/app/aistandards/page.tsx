@@ -2,69 +2,328 @@ import Link from 'next/link';
 import { AuthorByline } from '@/components/author-byline';
 
 // Landing page for https://github.com/vedangvatsa/ai-discovery-standards
+// Written for mixed audiences: site owners, marketers, and engineers.
 
-type Status = 'Standard' | 'Adopted' | 'Emerging' | 'Proposed' | 'Legacy';
+type Maturity = 'Standard' | 'Adopted' | 'Emerging' | 'Proposed' | 'Legacy';
+type Priority = 'Start here' | 'When it applies' | 'Optional';
 
 interface DiscoveryFile {
   name: string;
   path: string;
-  desc: string;
+  /** Plain-language purpose */
+  what: string;
+  /** Why a site owner might care */
+  why: string;
   category: string;
+  priority: Priority;
+  maturity: Maturity;
   spec: string;
   specUrl?: string;
-  status: Status;
 }
 
 const DISCOVERY_FILES: DiscoveryFile[] = [
-  { name: 'robots.txt', path: '/robots.txt', desc: 'Crawler access control (RFC 9309). Training tokens are independent from search tokens.', category: 'Access Control', spec: 'RFC 9309', specUrl: 'https://www.rfc-editor.org/rfc/rfc9309', status: 'Standard' },
-  { name: 'Content-Signal', path: '/robots.txt (directive)', desc: 'Optional search vs AI-input vs training preferences (Cloudflare Content Signals; IETF AIPREF).', category: 'Access Control', spec: 'AIPREF', specUrl: 'https://datatracker.ietf.org/wg/aipref/about/', status: 'Proposed' },
-  { name: 'ai.txt', path: '/ai.txt', desc: 'Informal AI usage preferences. Not a formal standard.', category: 'Access Control', spec: 'Community', status: 'Emerging' },
-  { name: 'tdmrep.json', path: '/.well-known/tdmrep.json', desc: 'W3C TDMRep: JSON array of location rules for EU CDSM Art. 4 opt-out.', category: 'Access Control', spec: 'W3C TDMRep CG', specUrl: 'https://www.w3.org/community/tdmrep/', status: 'Adopted' },
-  { name: 'llms.txt', path: '/llms.txt', desc: 'Markdown site map for LLMs (llmstxt.org). Not IETF/W3C.', category: 'Content Discovery', spec: 'llmstxt.org', specUrl: 'https://llmstxt.org', status: 'Adopted' },
-  { name: 'llms-full.txt', path: '/llms-full.txt', desc: 'Full-text companion to llms.txt when you want bulk content in one file.', category: 'Content Discovery', spec: 'llmstxt.org', specUrl: 'https://llmstxt.org', status: 'Adopted' },
-  { name: 'sitemap.xml', path: '/sitemap.xml', desc: 'URL inventory for search and retrieval crawlers.', category: 'Content Discovery', spec: 'sitemaps.org', specUrl: 'https://www.sitemaps.org/protocol.html', status: 'Standard' },
-  { name: 'feed.xml', path: '/feed.xml', desc: 'RSS/Atom feed for chronological updates.', category: 'Content Discovery', spec: 'RSS 2.0 / Atom', status: 'Standard' },
-  { name: 'feed.json', path: '/feed.json', desc: 'JSON Feed 1.1 alternative to RSS/Atom.', category: 'Content Discovery', spec: 'JSON Feed 1.1', specUrl: 'https://jsonfeed.org/version/1.1', status: 'Adopted' },
-  { name: 'agents.txt', path: '/agents.txt', desc: 'agents-txt.com capability announcement (MCP, A2A URLs, skills, payments).', category: 'Agent Discovery', spec: 'agents-txt.com', specUrl: 'https://agents-txt.com', status: 'Emerging' },
-  { name: 'agents.json', path: '/agents.json', desc: 'agents-txt.com JSON companion at site root. Not the A2A Agent Card.', category: 'Agent Discovery', spec: 'agents-txt.com', specUrl: 'https://agents-txt.com', status: 'Emerging' },
-  { name: 'agent-card.json', path: '/.well-known/agent-card.json', desc: 'A2A Protocol Agent Card. Only if you run an A2A agent.', category: 'Agent Discovery', spec: 'A2A Protocol', specUrl: 'https://a2a-protocol.org/latest/specification/', status: 'Adopted' },
-  { name: 'ai-plugin.json', path: '/.well-known/ai-plugin.json', desc: 'Legacy OpenAI plugin manifest. Prefer OpenAPI + MCP for new work.', category: 'Agent Discovery', spec: 'OpenAI (legacy)', status: 'Legacy' },
-  { name: 'MCP Server Card', path: '/.well-known/mcp/server-card.json', desc: 'Draft MCP pre-connection metadata (path still in flux).', category: 'Agent Discovery', spec: 'MCP (draft)', specUrl: 'https://modelcontextprotocol.io', status: 'Proposed' },
-  { name: 'openapi.json', path: '/openapi.json or /openapi.yaml', desc: 'HTTP API contract for agent tool use.', category: 'Agent Discovery', spec: 'OpenAPI 3.1', specUrl: 'https://spec.openapis.org/oas/v3.1.0', status: 'Standard' },
-  { name: '/.well-known/ai', path: '/.well-known/ai', desc: 'IETF draft AI Discovery Endpoint. Not an RFC yet.', category: 'Agent Discovery', spec: 'IETF draft', specUrl: 'https://www.ietf.org/archive/id/draft-aiendpoint-ai-discovery-00.html', status: 'Proposed' },
-  { name: 'JSON-LD', path: 'HTML head', desc: 'Schema.org typed facts (Organization, Person, Article, FAQPage).', category: 'Structured Data', spec: 'Schema.org', specUrl: 'https://schema.org', status: 'Standard' },
-  { name: 'brand.txt', path: '/brand.txt', desc: 'Informal brand naming guidance. Optional.', category: 'Brand & Identity', spec: 'Community', status: 'Emerging' },
-  { name: 'ai.json', path: '/ai.json', desc: 'Informal structured content map. Optional.', category: 'Brand & Identity', spec: 'Community', status: 'Emerging' },
-  { name: 'security.txt', path: '/.well-known/security.txt', desc: 'Vulnerability reporting contacts (RFC 9116).', category: 'Trust & Security', spec: 'RFC 9116', specUrl: 'https://www.rfc-editor.org/rfc/rfc9116', status: 'Standard' },
-  { name: 'humans.txt', path: '/humans.txt', desc: 'Team credits (humanstxt.org).', category: 'Trust & Security', spec: 'humanstxt.org', specUrl: 'https://humanstxt.org', status: 'Adopted' },
-  { name: 'dnt-policy.txt', path: '/.well-known/dnt-policy.txt', desc: 'EFF DNT policy. Low practical impact in 2026.', category: 'Trust & Security', spec: 'EFF DNT', status: 'Legacy' },
-  { name: 'carbon.txt', path: '/carbon.txt', desc: 'TOML sustainability disclosures (carbontxt.org v0.5+).', category: 'Sustainability', spec: 'carbontxt.org', specUrl: 'https://carbontxt.org', status: 'Adopted' },
-  { name: 'manifest.json', path: '/manifest.json', desc: 'W3C Web App Manifest.', category: 'Platform', spec: 'W3C', specUrl: 'https://www.w3.org/TR/appmanifest/', status: 'Standard' },
-  { name: 'browserconfig.xml', path: '/browserconfig.xml', desc: 'Legacy Microsoft tile config.', category: 'Platform', spec: 'Microsoft', status: 'Legacy' },
-  { name: 'ads.txt', path: '/ads.txt', desc: 'IAB authorized ad sellers.', category: 'Platform', spec: 'IAB Tech Lab', specUrl: 'https://iabtechlab.com/ads-txt/', status: 'Standard' },
-  { name: 'AGENTS.md', path: 'Repo root', desc: 'Cross-tool project context for coding agents.', category: 'Developer Agent', spec: 'agents.md', specUrl: 'https://agents.md', status: 'Emerging' },
-  { name: 'CLAUDE.md', path: 'Repo root', desc: 'Claude Code project instructions.', category: 'Developer Agent', spec: 'Anthropic', status: 'Adopted' },
-  { name: '.cursorrules', path: 'Repo root / .cursor/rules/', desc: 'Cursor IDE rules.', category: 'Developer Agent', spec: 'Cursor', status: 'Adopted' },
+  {
+    name: 'robots.txt',
+    path: '/robots.txt',
+    what: 'A small text file at the root of your site that tells automated bots which pages they may crawl.',
+    why: 'This is the main practical switch for AI companies that honor robots.txt. You can allow search bots and block training bots separately.',
+    category: 'Control who may crawl you',
+    priority: 'Start here',
+    maturity: 'Standard',
+    spec: 'RFC 9309',
+    specUrl: 'https://www.rfc-editor.org/rfc/rfc9309',
+  },
+  {
+    name: 'sitemap.xml',
+    path: '/sitemap.xml',
+    what: 'A list of the important URLs on your site, often with last-updated dates.',
+    why: 'Helps search engines and many AI search crawlers find your pages without guessing.',
+    category: 'Help machines find your pages',
+    priority: 'Start here',
+    maturity: 'Standard',
+    spec: 'sitemaps.org',
+    specUrl: 'https://www.sitemaps.org/protocol.html',
+  },
+  {
+    name: 'llms.txt',
+    path: '/llms.txt',
+    what: 'A short Markdown summary of your site: who you are and links to the pages that matter most.',
+    why: 'Gives language models a clean map instead of forcing them to parse every HTML page. Useful when an agent or researcher lands on your domain.',
+    category: 'Help machines find your pages',
+    priority: 'Start here',
+    maturity: 'Adopted',
+    spec: 'llmstxt.org',
+    specUrl: 'https://llmstxt.org',
+  },
+  {
+    name: 'JSON-LD (schema)',
+    path: 'Inside your HTML pages',
+    what: 'Structured labels in the page that say “this is an Organization,” “this is an Article,” “this is a FAQ,” and so on.',
+    why: 'Search engines and many AI systems extract facts more reliably from structured data than from free-form prose alone.',
+    category: 'Help machines understand your content',
+    priority: 'Start here',
+    maturity: 'Standard',
+    spec: 'Schema.org',
+    specUrl: 'https://schema.org',
+  },
+  {
+    name: 'security.txt',
+    path: '/.well-known/security.txt',
+    what: 'Contact details for people who find security issues on your site.',
+    why: 'Not AI-specific. Signals that the site is maintained professionally.',
+    category: 'Trust and operations',
+    priority: 'Start here',
+    maturity: 'Standard',
+    spec: 'RFC 9116',
+    specUrl: 'https://www.rfc-editor.org/rfc/rfc9116',
+  },
+  {
+    name: 'llms-full.txt',
+    path: '/llms-full.txt',
+    what: 'A longer Markdown file with fuller text of key pages, not just links.',
+    why: 'Useful for documentation and reference sites that want agents to ingest core content in fewer requests.',
+    category: 'Help machines find your pages',
+    priority: 'When it applies',
+    maturity: 'Adopted',
+    spec: 'llmstxt.org',
+    specUrl: 'https://llmstxt.org',
+  },
+  {
+    name: 'tdmrep.json',
+    path: '/.well-known/tdmrep.json',
+    what: 'A machine-readable notice that you reserve (or do not reserve) rights for text and data mining under EU rules.',
+    why: 'Relevant if you need a formal opt-out signal for mining and training, especially for EU copyright context. Complements robots.txt; it is not a substitute for legal advice.',
+    category: 'Control who may crawl you',
+    priority: 'When it applies',
+    maturity: 'Adopted',
+    spec: 'W3C TDMRep',
+    specUrl: 'https://www.w3.org/community/tdmrep/',
+  },
+  {
+    name: 'agents.txt',
+    path: '/agents.txt',
+    what: 'A plain-text file that announces what agent protocols your site supports (for example MCP tools or an A2A agent card).',
+    why: 'Useful only if your site can do something for agents, not only publish articles. Empty or commented files are fine until you have real endpoints.',
+    category: 'If your site is a product agents can use',
+    priority: 'When it applies',
+    maturity: 'Emerging',
+    spec: 'agents-txt.com',
+    specUrl: 'https://agents-txt.com',
+  },
+  {
+    name: 'agents.json',
+    path: '/agents.json',
+    what: 'The structured companion to agents.txt (same idea, richer machine-readable detail). Lives at the site root.',
+    why: 'Same as agents.txt. Do not confuse this with the A2A Agent Card path below.',
+    category: 'If your site is a product agents can use',
+    priority: 'When it applies',
+    maturity: 'Emerging',
+    spec: 'agents-txt.com',
+    specUrl: 'https://agents-txt.com',
+  },
+  {
+    name: 'agent-card.json',
+    path: '/.well-known/agent-card.json',
+    what: 'A business card for an autonomous agent under the A2A protocol: name, skills, how to talk to it.',
+    why: 'Only publish this if you actually run an A2A-compatible agent. Advertising a fake card misleads other agents.',
+    category: 'If your site is a product agents can use',
+    priority: 'When it applies',
+    maturity: 'Adopted',
+    spec: 'A2A Protocol',
+    specUrl: 'https://a2a-protocol.org/latest/specification/',
+  },
+  {
+    name: 'openapi.json / openapi.yaml',
+    path: '/openapi.json or /openapi.yaml',
+    what: 'A precise description of your HTTP API: endpoints, parameters, responses.',
+    why: 'If agents should call your product over HTTP, this is the contract they can follow without human docs.',
+    category: 'If your site is a product agents can use',
+    priority: 'When it applies',
+    maturity: 'Standard',
+    spec: 'OpenAPI 3.1',
+    specUrl: 'https://spec.openapis.org/oas/v3.1.0',
+  },
+  {
+    name: 'MCP Server Card',
+    path: '/.well-known/mcp/server-card.json',
+    what: 'A draft discovery document for Model Context Protocol servers (tools an AI host can connect to).',
+    why: 'Only if you operate an MCP server. The exact path and format are still settling across proposals.',
+    category: 'If your site is a product agents can use',
+    priority: 'When it applies',
+    maturity: 'Proposed',
+    spec: 'MCP',
+    specUrl: 'https://modelcontextprotocol.io',
+  },
+  {
+    name: 'Content-Signal',
+    path: 'Inside robots.txt',
+    what: 'An optional line that states preferences for search, AI input, and training after content is accessed.',
+    why: 'Emerging complement to Allow/Disallow. Track IETF AIPREF and Cloudflare Content Signals if you need finer policy language.',
+    category: 'Control who may crawl you',
+    priority: 'When it applies',
+    maturity: 'Proposed',
+    spec: 'AIPREF / Content Signals',
+    specUrl: 'https://datatracker.ietf.org/wg/aipref/about/',
+  },
+  {
+    name: 'feed.xml / feed.json',
+    path: '/feed.xml or /feed.json',
+    what: 'A feed of new or updated posts in RSS, Atom, or JSON Feed form.',
+    why: 'Good if you publish regularly and want updates discoverable without full-site crawls.',
+    category: 'Help machines find your pages',
+    priority: 'When it applies',
+    maturity: 'Standard',
+    spec: 'RSS / JSON Feed',
+    specUrl: 'https://jsonfeed.org/version/1.1',
+  },
+  {
+    name: 'manifest.json',
+    path: '/manifest.json',
+    what: 'App name, icons, and theme for installable web apps (PWA).',
+    why: 'Browser and mobile install behavior, not AI citation. Still part of a complete site package.',
+    category: 'Trust and operations',
+    priority: 'When it applies',
+    maturity: 'Standard',
+    spec: 'W3C Web App Manifest',
+    specUrl: 'https://www.w3.org/TR/appmanifest/',
+  },
+  {
+    name: 'ads.txt',
+    path: '/ads.txt',
+    what: 'Public list of who is allowed to sell ads on your domain.',
+    why: 'Ad fraud prevention. Include a declarative file even if you do not sell ads if you want to discourage unauthorized inventory claims.',
+    category: 'Trust and operations',
+    priority: 'When it applies',
+    maturity: 'Standard',
+    spec: 'IAB Tech Lab',
+    specUrl: 'https://iabtechlab.com/ads-txt/',
+  },
+  {
+    name: 'ai.txt / ai.json',
+    path: '/ai.txt and /ai.json',
+    what: 'Informal files that restate AI permissions and a content map in plain text or JSON.',
+    why: 'Optional documentation. Major model providers do not uniformly promise to honor these the way they document robots.txt tokens.',
+    category: 'Optional conventions',
+    priority: 'Optional',
+    maturity: 'Emerging',
+    spec: 'Community',
+  },
+  {
+    name: 'brand.txt',
+    path: '/brand.txt',
+    what: 'Preferred spelling, product names, and tone for how you want to be described.',
+    why: 'Helpful for agents you control. Do not assume ChatGPT or Claude automatically load this file on every brand mention.',
+    category: 'Optional conventions',
+    priority: 'Optional',
+    maturity: 'Emerging',
+    spec: 'Community',
+  },
+  {
+    name: 'carbon.txt',
+    path: '/carbon.txt',
+    what: 'A TOML file with links to sustainability disclosures (carbontxt.org format).',
+    why: 'Transparency for environmental reporting, not AI ranking.',
+    category: 'Optional conventions',
+    priority: 'Optional',
+    maturity: 'Adopted',
+    spec: 'carbontxt.org',
+    specUrl: 'https://carbontxt.org',
+  },
+  {
+    name: 'humans.txt',
+    path: '/humans.txt',
+    what: 'Credits for people and tools behind the site.',
+    why: 'Human-readable provenance. Low machine criticality.',
+    category: 'Optional conventions',
+    priority: 'Optional',
+    maturity: 'Adopted',
+    spec: 'humanstxt.org',
+    specUrl: 'https://humanstxt.org',
+  },
+  {
+    name: 'ai-plugin.json',
+    path: '/.well-known/ai-plugin.json',
+    what: 'Old ChatGPT plugin manifest format.',
+    why: 'Legacy. Prefer a real OpenAPI document and modern tool integrations (MCP / current OpenAI app patterns).',
+    category: 'Optional conventions',
+    priority: 'Optional',
+    maturity: 'Legacy',
+    spec: 'OpenAI (legacy)',
+  },
+  {
+    name: 'browserconfig.xml',
+    path: '/browserconfig.xml',
+    what: 'Windows tile images for pinned sites.',
+    why: 'Legacy browser chrome. Not related to AI discovery.',
+    category: 'Optional conventions',
+    priority: 'Optional',
+    maturity: 'Legacy',
+    spec: 'Microsoft',
+  },
+  {
+    name: 'dnt-policy.txt',
+    path: '/.well-known/dnt-policy.txt',
+    what: 'EFF Do Not Track policy file.',
+    why: 'Browser DNT is effectively obsolete. Keep only if you have a specific compliance reason.',
+    category: 'Optional conventions',
+    priority: 'Optional',
+    maturity: 'Legacy',
+    spec: 'EFF DNT',
+  },
+  {
+    name: '/.well-known/ai',
+    path: '/.well-known/ai',
+    what: 'Draft IETF idea for a single JSON discovery document for AI agents.',
+    why: 'Watch-list only until it becomes an RFC. Not required for normal sites today.',
+    category: 'Optional conventions',
+    priority: 'Optional',
+    maturity: 'Proposed',
+    spec: 'IETF draft',
+    specUrl: 'https://www.ietf.org/archive/id/draft-aiendpoint-ai-discovery-00.html',
+  },
+  {
+    name: 'AGENTS.md / CLAUDE.md / Cursor rules',
+    path: 'Inside your code repository',
+    what: 'Instructions for coding assistants working on your codebase.',
+    why: 'Developer tooling, not public web discovery. Useful if you ship software, not for ranking in ChatGPT.',
+    category: 'For software repositories',
+    priority: 'When it applies',
+    maturity: 'Adopted',
+    spec: 'Tool-specific',
+  },
 ];
 
-const AI_CRAWLERS: { company: string; bots: string[]; note?: string }[] = [
-  { company: 'OpenAI', bots: ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'OAI-AdsBot'], note: 'ChatGPT-User may ignore robots.txt.' },
-  { company: 'Anthropic', bots: ['ClaudeBot', 'Claude-SearchBot', 'Claude-User'], note: 'Honors robots.txt including Claude-User.' },
-  { company: 'Google', bots: ['Googlebot', 'Google-Extended', 'GoogleOther', 'Gemini-Deep-Research', 'Google-NotebookLM'], note: 'Google-Extended is a control token, not a separate crawler UA.' },
-  { company: 'Perplexity', bots: ['PerplexityBot', 'Perplexity-User'], note: 'Perplexity-User generally ignores robots.txt.' },
-  { company: 'Meta', bots: ['meta-externalagent', 'meta-externalfetcher'] },
-  { company: 'Apple', bots: ['Applebot', 'Applebot-Extended'] },
-  { company: 'Amazon', bots: ['Amazonbot'] },
-  { company: 'ByteDance', bots: ['Bytespider'] },
-  { company: 'xAI', bots: ['(no official UA)'], note: 'No official crawler docs; third-party tokens are unverified.' },
-  { company: 'Mistral', bots: ['MistralAI-User'] },
-  { company: 'Microsoft', bots: ['Bingbot'] },
-  { company: 'Others', bots: ['CCBot', 'cohere-ai', 'YouBot', 'Diffbot', 'DuckDuckBot'] },
+const AI_CRAWLERS: { company: string; bots: string[]; plain: string }[] = [
+  {
+    company: 'OpenAI',
+    bots: ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'OAI-AdsBot'],
+    plain: 'GPTBot is about training data. OAI-SearchBot is about ChatGPT search. ChatGPT-User fetches a page when a person asks. OAI-AdsBot checks ad landing pages.',
+  },
+  {
+    company: 'Anthropic',
+    bots: ['ClaudeBot', 'Claude-SearchBot', 'Claude-User'],
+    plain: 'Same split as OpenAI: training, search indexing, and user-triggered fetches. Anthropic documents that these honor robots.txt.',
+  },
+  {
+    company: 'Google',
+    bots: ['Googlebot', 'Google-Extended', 'GoogleOther'],
+    plain: 'Googlebot powers Search (including features that may appear in AI Overviews). Google-Extended is a control token for Gemini training and grounding, not a separate crawler you will always see in logs.',
+  },
+  {
+    company: 'Perplexity',
+    bots: ['PerplexityBot', 'Perplexity-User'],
+    plain: 'PerplexityBot builds their search index. Perplexity-User fetches when a person asks and generally ignores robots.txt.',
+  },
+  {
+    company: 'Others',
+    bots: ['Applebot', 'Amazonbot', 'meta-externalagent', 'CCBot', 'Bytespider', 'Bingbot'],
+    plain: 'Apple, Amazon, Meta, Common Crawl, ByteDance, and Microsoft each run crawlers with their own purposes. Prefer each vendor’s documentation and IP lists when you need certainty.',
+  },
 ];
 
 const CATEGORIES = [...new Set(DISCOVERY_FILES.map((f) => f.category))];
 
-const STATUS_STYLES: Record<Status, string> = {
+const MATURITY_STYLES: Record<Maturity, string> = {
   Standard: 'bg-gray-100 text-gray-800 border-gray-200',
   Adopted: 'bg-gray-100 text-gray-800 border-gray-200',
   Emerging: 'bg-gray-50 text-gray-600 border-gray-200',
@@ -72,41 +331,14 @@ const STATUS_STYLES: Record<Status, string> = {
   Legacy: 'bg-gray-50 text-gray-500 border-gray-200',
 };
 
-const STATUS_DOT: Record<Status, string> = {
-  Standard: 'bg-gray-800',
-  Adopted: 'bg-gray-700',
-  Emerging: 'bg-gray-400',
-  Proposed: 'bg-gray-400',
-  Legacy: 'bg-gray-300',
+const PRIORITY_STYLES: Record<Priority, string> = {
+  'Start here': 'bg-gray-900 text-white border-gray-900',
+  'When it applies': 'bg-gray-100 text-gray-800 border-gray-200',
+  Optional: 'bg-gray-50 text-gray-600 border-gray-200',
 };
 
-const STATUS_ORDER: Status[] = ['Standard', 'Adopted', 'Emerging', 'Proposed', 'Legacy'];
-
-const AUTO_IMPL = [
-  { title: 'Detect', body: 'Framework and static output dir (public/, static/, …).' },
-  { title: 'Read', body: 'package.json for name, description, author, homepage.' },
-  { title: 'Scan', body: 'App routes, pages router, and MD/MDX content for llms.txt (and llms-full when sources exist).' },
-  { title: 'Write', body: 'robots.txt, agents files, TDMRep, security.txt, manifest, carbon.txt, ai.txt/json, brand.txt, schema-org.json, sitemap when needed.' },
-  { title: 'Wire', body: 'Discovery link tags and Organization JSON-LD into layout.tsx or index.html when a safe injection point exists.' },
-  { title: 'Avoid fakes', body: 'No A2A card unless --with-a2a. No plugin unless OpenAPI is found or --with-plugin.' },
-];
-
-const NOT_AUTO = [
-  'Correct production domain if package homepage is wrong',
-  'Training allow/deny for legal or business reasons',
-  'Real MCP or A2A endpoints (do not invent live capabilities)',
-  'Per-page FAQ/Article schema and content quality',
-  'Host or CDN so files are served at the domain root',
-];
-
 export default function AiDiscoveryStandardsPage() {
-  const statusCounts = STATUS_ORDER.reduce(
-    (acc, status) => {
-      acc[status] = DISCOVERY_FILES.filter((f) => f.status === status).length;
-      return acc;
-    },
-    {} as Record<Status, number>
-  );
+  const startHere = DISCOVERY_FILES.filter((f) => f.priority === 'Start here');
 
   return (
     <>
@@ -116,36 +348,13 @@ export default function AiDiscoveryStandardsPage() {
             AI Discovery Standards
           </h1>
           <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Open-source reference and auto-implementer for files that make a site readable to AI crawlers and agents.
-            {DISCOVERY_FILES.length} documented surfaces. One command to wire a project.
+            A practical guide to the small files on your website that tell AI systems who you are,
+            what you publish, and whether they may crawl or train on it, plus a free tool that adds
+            them for you.
           </p>
           <AuthorByline
-            links={[
-              { label: 'GitHub', href: 'https://github.com/vedangvatsa/ai-discovery-standards' },
-            ]}
+            links={[{ label: 'GitHub', href: 'https://github.com/vedangvatsa/ai-discovery-standards' }]}
           />
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href="https://github.com/vedangvatsa/ai-discovery-standards"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center rounded-md border bg-card px-4 py-2 text-sm font-medium hover:border-primary/50 transition-colors"
-            >
-              Repository
-            </Link>
-            <Link
-              href="#install"
-              className="inline-flex items-center rounded-md border bg-card px-4 py-2 text-sm font-medium hover:border-primary/50 transition-colors"
-            >
-              Install
-            </Link>
-            <Link
-              href="#registry"
-              className="inline-flex items-center rounded-md border bg-card px-4 py-2 text-sm font-medium hover:border-primary/50 transition-colors"
-            >
-              File registry
-            </Link>
-          </div>
         </div>
       </header>
 
@@ -153,170 +362,100 @@ export default function AiDiscoveryStandardsPage() {
         <article className="notion-article prose prose-lg prose-neutral max-w-4xl mx-auto">
           <div className="space-y-20 not-prose">
 
-            {/* What */}
+            {/* The situation */}
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-2">What this is</h2>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                A single place that documents the discovery files, crawler tokens, and agent protocols that matter for AI visibility,
-                plus a CLI that applies the practical subset to a codebase.
-              </p>
-              <div className="grid md:grid-cols-3 gap-4">
-                <div className="rounded-lg border bg-card p-5">
-                  <p className="text-sm font-medium mb-1">Reference</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Paths, formats, maturity, and primary sources for robots.txt, llms.txt, agents.txt, A2A agent-card, TDMRep, schema, and related files.
-                  </p>
-                </div>
-                <div className="rounded-lg border bg-card p-5">
-                  <p className="text-sm font-medium mb-1">Auto-implementer</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">npx</code> scans a project, writes discovery files, and wires layout head tags when safe.
-                  </p>
-                </div>
-                <div className="rounded-lg border bg-card p-5">
-                  <p className="text-sm font-medium mb-1">Agent skill</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Claude Code command that runs the same full-auto procedure so coding agents do not invent wrong paths.
-                  </p>
-                </div>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">The situation in plain terms</h2>
+              <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
+                <p>
+                  When people use ChatGPT, Claude, Perplexity, Gemini, or similar tools, those systems often need
+                  fresh information from the public web. They send automated programs (crawlers and fetchers) to
+                  read pages. Some of that activity is for <strong className="text-foreground font-medium">search and answers</strong>
+                  {' '}(where your site might be cited). Some of it is for <strong className="text-foreground font-medium">model training</strong>
+                  {' '}(where your words may be absorbed without a link back to you).
+                </p>
+                <p>
+                  Those are different outcomes. Blocking “AI” as if it were one switch usually is not accurate.
+                  Allowing a search bot and blocking a training bot (or the reverse) is a business and policy choice,
+                  not a technical accident.
+                </p>
+                <p>
+                  Separately, more software is starting to act as an <strong className="text-foreground font-medium">agent</strong>:
+                  not only reading your pages, but calling your APIs or tools. That needs different files than a blog needs.
+                  This project separates “publish content for humans and AI readers” from “expose tools for agents.”
+                </p>
               </div>
             </section>
 
-            {/* Why */}
+            {/* What this project is */}
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-2">Why it exists</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">What this project is</h2>
+              <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
+                <p>
+                  <strong className="text-foreground font-medium">AI Discovery Standards</strong> is an open-source
+                  project with two jobs:
+                </p>
+                <ol className="list-decimal pl-5 space-y-2">
+                  <li>
+                    <strong className="text-foreground font-medium">Explain the map</strong> — which files exist,
+                    what each one is for, how reliable the underlying rule is, and which ones most sites should care about first.
+                  </li>
+                  <li>
+                    <strong className="text-foreground font-medium">Implement the practical set</strong> — a command-line
+                    tool that scans your project and writes the common files into the right folders, then hooks them into
+                    your site layout when it safely can.
+                  </li>
+                </ol>
+                <p>
+                  It does not make your content “rank” by magic. It reduces confusion, wrong paths, and half-finished
+                  setups when people (or coding agents) try to make a site ready for AI crawlers and tools.
+                </p>
+              </div>
+            </section>
+
+            {/* What to do first */}
+            <section>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">What most sites should do first</h2>
+              <p className="text-base text-muted-foreground leading-relaxed mb-6">
+                If you only do five things, do these. They cover the majority of real-world AI crawl and citation behavior
+                for content sites.
+              </p>
               <div className="space-y-px rounded-lg overflow-hidden border">
-                <div className="bg-card p-4">
-                  <p className="text-sm font-medium">Training and search are different decisions</p>
-                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
-                    Blocking <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">GPTBot</code> does not remove you from ChatGPT search.
-                    Blocking <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">OAI-SearchBot</code> does.
-                    Most sites still treat AI bots as one switch.
-                  </p>
-                </div>
-                <div className="bg-card p-4">
-                  <p className="text-sm font-medium">Paths and names collide</p>
-                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
-                    Root <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">/agents.json</code> is the agents-txt.com catalog.
-                    A2A lives at <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">/.well-known/agent-card.json</code>.
-                    Mixing them breaks interoperability.
-                  </p>
-                </div>
-                <div className="bg-card p-4">
-                  <p className="text-sm font-medium">Not every file is a standard</p>
-                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
-                    RFCs, community conventions, and drafts are labeled separately so you do not treat brand.txt like robots.txt.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* How install */}
-            <section id="install">
-              <h2 className="text-2xl font-semibold tracking-tight mb-2">How to install</h2>
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                Run from your website project root (not from a random folder). Pass your real domain.
-              </p>
-              <div className="rounded-lg overflow-hidden border mb-4">
-                <div className="bg-muted px-4 py-2 border-b">
-                  <span className="text-xs font-medium text-muted-foreground">Full auto (agents and CI)</span>
-                </div>
-                <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed bg-card">
-                  <code>{`npx --yes github:vedangvatsa/ai-discovery-standards --yes --scan --url=https://your-domain.com
-
-# Deny AI training crawlers:
-npx --yes github:vedangvatsa/ai-discovery-standards --yes --scan --url=https://your-domain.com --deny-training
-
-# Dry run:
-npx --yes github:vedangvatsa/ai-discovery-standards --yes --scan --url=https://your-domain.com --dry-run`}</code>
-                </pre>
-              </div>
-              <div className="rounded-lg overflow-hidden border mb-4">
-                <div className="bg-muted px-4 py-2 border-b">
-                  <span className="text-xs font-medium text-muted-foreground">Interactive</span>
-                </div>
-                <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed bg-card">
-                  <code>{`npx github:vedangvatsa/ai-discovery-standards`}</code>
-                </pre>
-              </div>
-              <div className="rounded-lg overflow-hidden border">
-                <div className="bg-muted px-4 py-2 border-b">
-                  <span className="text-xs font-medium text-muted-foreground">Claude Code skill</span>
-                </div>
-                <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed bg-card">
-                  <code>{`mkdir -p .claude/commands
-curl -o .claude/commands/setup-ai-discovery.md \\
-  https://raw.githubusercontent.com/vedangvatsa/ai-discovery-standards/main/.claude/commands/setup-ai-discovery.md
-
-# Then: /setup-ai-discovery`}</code>
-                </pre>
-              </div>
-            </section>
-
-            {/* What auto does */}
-            <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-2">What full auto does</h2>
-              <div className="space-y-px rounded-lg overflow-hidden border mb-6">
-                {AUTO_IMPL.map((step) => (
-                  <div key={step.title} className="bg-card p-4 flex gap-4">
-                    <span className="text-sm font-medium shrink-0 w-24">{step.title}</span>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{step.body}</p>
+                {startHere.map((file, i) => (
+                  <div key={file.name} className="bg-card p-4 sm:p-5">
+                    <div className="flex items-baseline gap-3 mb-2">
+                      <span className="text-sm font-medium text-muted-foreground tabular-nums w-6 shrink-0">{i + 1}.</span>
+                      <div className="min-w-0">
+                        <p className="text-base font-medium text-foreground">
+                          {file.name}{' '}
+                          <span className="font-mono text-xs font-normal text-muted-foreground">{file.path}</span>
+                        </p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed sm:pl-9">{file.what}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed mt-2 sm:pl-9">
+                      <span className="text-foreground font-medium">Why it matters: </span>
+                      {file.why}
+                    </p>
                   </div>
                 ))}
-              </div>
-              <h3 className="text-lg font-semibold tracking-tight mb-2">Still needs your judgment</h3>
-              <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">
-                {NOT_AUTO.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </section>
-
-            {/* Flags */}
-            <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-2">CLI flags</h2>
-              <div className="rounded-lg overflow-hidden border">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b bg-muted/40 text-left">
-                      <th className="p-3 font-medium">Flag</th>
-                      <th className="p-3 font-medium">Purpose</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      ['--yes / -y', 'Non-interactive'],
-                      ['--scan', 'Scan routes and content (default with --yes)'],
-                      ['--url=https://…', 'Canonical site URL'],
-                      ['--name --email --owner', 'Identity overrides'],
-                      ['--deny-training / --allow-training', 'Training crawler policy'],
-                      ['--with-a2a', 'Emit A2A agent-card stub'],
-                      ['--with-plugin', 'Force legacy ai-plugin.json'],
-                      ['--force', 'Overwrite existing files'],
-                      ['--dry-run', 'Print actions only'],
-                      ['--out=public', 'Force output directory'],
-                    ].map(([flag, purpose]) => (
-                      <tr key={flag} className="border-b last:border-0 bg-card">
-                        <td className="p-3 font-mono text-xs whitespace-nowrap">{flag}</td>
-                        <td className="p-3 text-muted-foreground">{purpose}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
               </div>
             </section>
 
             {/* Training vs search */}
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-2">Training vs search</h2>
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                Configure these separately in robots.txt. User-triggered fetchers may ignore robots.txt.
-              </p>
-              <div className="grid md:grid-cols-2 gap-4">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Training is not the same as search</h2>
+              <div className="space-y-4 text-base text-muted-foreground leading-relaxed mb-6">
+                <p>
+                  Many AI companies publish different bot names for different jobs. You configure them separately in{' '}
+                  <code className="text-xs font-mono bg-muted px-1.5 py-0.5 rounded">robots.txt</code>.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-4 mb-4">
                 <div className="rounded-lg border bg-card p-5">
-                  <p className="text-sm font-medium mb-2">Training</p>
+                  <p className="text-base font-medium text-foreground mb-2">Training-related bots</p>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                    Content may train or improve models. Little or no citation.
+                    Collect text that may improve future models. You usually will not get a citation or click from this
+                    activity alone.
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     {['GPTBot', 'ClaudeBot', 'CCBot', 'Google-Extended'].map((bot) => (
@@ -325,9 +464,9 @@ curl -o .claude/commands/setup-ai-discovery.md \\
                   </div>
                 </div>
                 <div className="rounded-lg border bg-card p-5">
-                  <p className="text-sm font-medium mb-2">Search and retrieval</p>
+                  <p className="text-base font-medium text-foreground mb-2">Search and answer bots</p>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                    Content may appear in AI search answers and citations.
+                    Build indexes or fetch pages so the product can answer a user’s question and sometimes link to you.
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     {['OAI-SearchBot', 'Claude-SearchBot', 'PerplexityBot'].map((bot) => (
@@ -336,153 +475,281 @@ curl -o .claude/commands/setup-ai-discovery.md \\
                   </div>
                 </div>
               </div>
+              <div className="rounded-lg border bg-card p-5 text-sm text-muted-foreground leading-relaxed">
+                <p className="mb-2">
+                  <strong className="text-foreground font-medium">Example (OpenAI):</strong> Disallowing{' '}
+                  <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">GPTBot</code> signals that crawled
+                  content should not be used for foundation-model training. Disallowing{' '}
+                  <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">OAI-SearchBot</code> affects whether
+                  you appear in ChatGPT search results. OpenAI documents these as independent choices.
+                </p>
+                <p>
+                  <strong className="text-foreground font-medium">Caveat:</strong> When a human is actively chatting and
+                  the product fetches one page for that person (user-triggered fetchers), some vendors say robots.txt
+                  may not fully apply. Treat those cases as imperfect control.
+                </p>
+              </div>
             </section>
 
-            {/* Maturity counts */}
+            {/* How to run the tool */}
+            <section id="install">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">How to add the files automatically</h2>
+              <div className="space-y-4 text-base text-muted-foreground leading-relaxed mb-6">
+                <p>
+                  From the root of your website project (the folder that already has your code), run one command.
+                  Prefer your real public URL so generated links are correct.
+                </p>
+              </div>
+              <div className="rounded-lg overflow-hidden border mb-4">
+                <div className="bg-muted px-4 py-2 border-b">
+                  <span className="text-xs font-medium text-muted-foreground">Recommended</span>
+                </div>
+                <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed bg-card text-foreground">
+                  <code>{`npx --yes github:vedangvatsa/ai-discovery-standards --yes --scan --url=https://your-domain.com`}</code>
+                </pre>
+              </div>
+              <div className="rounded-lg overflow-hidden border mb-6">
+                <div className="bg-muted px-4 py-2 border-b">
+                  <span className="text-xs font-medium text-muted-foreground">If you want to block training crawlers</span>
+                </div>
+                <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed bg-card text-foreground">
+                  <code>{`npx --yes github:vedangvatsa/ai-discovery-standards --yes --scan --url=https://your-domain.com --deny-training`}</code>
+                </pre>
+              </div>
+              <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+                <p>
+                  <strong className="text-foreground font-medium">What the tool does:</strong> it looks at your project
+                  type, reads basic metadata from package.json when present, scans pages and content files, writes
+                  discovery files into <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">public/</code> or{' '}
+                  <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">static/</code>, and when possible
+                  adds link tags and Organization structured data to your root layout.
+                </p>
+                <p>
+                  <strong className="text-foreground font-medium">What it will not invent:</strong> a live agent API,
+                  an MCP server, or payment flows. It will not overwrite files you already have unless you pass{' '}
+                  <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">--force</code>.
+                </p>
+                <p>
+                  <strong className="text-foreground font-medium">After it runs:</strong> open{' '}
+                  <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">llms.txt</code> and fix titles that
+                  look like raw folder names, confirm the training policy, deploy so files are reachable at your domain
+                  root, and add FAQ or Article schema on individual content pages where that fits.
+                </p>
+                <p>
+                  Full source and flags:{' '}
+                  <Link
+                    href="https://github.com/vedangvatsa/ai-discovery-standards"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-primary"
+                  >
+                    github.com/vedangvatsa/ai-discovery-standards
+                  </Link>
+                </p>
+              </div>
+            </section>
+
+            {/* Maturity explained without fake scoreboard */}
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-2">Maturity of documented files</h2>
-              <p className="text-sm text-muted-foreground mb-6">
-                Counts for this registry only.
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                {STATUS_ORDER.map((status) => (
-                  <div key={status} className="rounded-lg border bg-card p-5">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className={`w-2.5 h-2.5 rounded-full ${STATUS_DOT[status]}`} />
-                      <span className="text-sm font-medium">{status}</span>
-                    </div>
-                    <p className="text-3xl font-semibold tracking-tight">{statusCounts[status]}</p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      {status === 'Standard' && 'RFC or W3C Recommendation'}
-                      {status === 'Adopted' && 'Published spec, real use'}
-                      {status === 'Emerging' && 'Community convention'}
-                      {status === 'Proposed' && 'Active draft'}
-                      {status === 'Legacy' && 'Low impact or superseded'}
-                    </p>
-                  </div>
-                ))}
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">What the small labels on each file mean</h2>
+              <div className="space-y-4 text-base text-muted-foreground leading-relaxed mb-6">
+                <p>
+                  In the list below, every file has two kinds of tags. They are <strong className="text-foreground font-medium">not scores</strong>,
+                  and the numbers of files in each bucket are not rankings of the internet. They only describe how we
+                  classify the files documented in this project.
+                </p>
+              </div>
+
+              <h3 className="text-lg font-semibold tracking-tight mb-3">Priority: should you bother?</h3>
+              <div className="space-y-px rounded-lg overflow-hidden border mb-8">
+                <div className="bg-card p-4">
+                  <p className="text-sm font-medium text-foreground mb-1">Start here</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Worth doing for almost any public site that wants sane AI crawl behavior and basic machine-readable identity.
+                    The automated tool focuses on these first.
+                  </p>
+                </div>
+                <div className="bg-card p-4">
+                  <p className="text-sm font-medium text-foreground mb-1">When it applies</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Important only in certain situations: you publish a lot, you need EU mining opt-out signaling,
+                    you expose an API or agent, you run ads, and so on. Skip if that situation is not yours.
+                  </p>
+                </div>
+                <div className="bg-card p-4">
+                  <p className="text-sm font-medium text-foreground mb-1">Optional</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Nice documentation, legacy browser files, or experiments. Safe to ignore for AI visibility unless you
+                    have a specific reason.
+                  </p>
+                </div>
+              </div>
+
+              <h3 className="text-lg font-semibold tracking-tight mb-3">Maturity: how solid is the underlying rule?</h3>
+              <div className="space-y-px rounded-lg overflow-hidden border">
+                <div className="bg-card p-4">
+                  <p className="text-sm font-medium text-foreground mb-1">Standard</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Formal standard from a standards body (for example an RFC or W3C Recommendation). Example: robots.txt,
+                    security.txt, OpenAPI. Expect clear documentation and broad tooling support.
+                  </p>
+                </div>
+                <div className="bg-card p-4">
+                  <p className="text-sm font-medium text-foreground mb-1">Adopted</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Written down and used in the wild, but not necessarily a formal internet standard. Example: llms.txt,
+                    A2A agent cards, TDMRep community report. Real, but still evolving.
+                  </p>
+                </div>
+                <div className="bg-card p-4">
+                  <p className="text-sm font-medium text-foreground mb-1">Emerging</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Community convention with incomplete or uneven support. Example: agents.txt, brand.txt.
+                    Fine to use; do not treat as guaranteed compliance.
+                  </p>
+                </div>
+                <div className="bg-card p-4">
+                  <p className="text-sm font-medium text-foreground mb-1">Proposed</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Active draft. Spec or path may change. Example: some MCP discovery cards, IETF AI discovery endpoint.
+                    Watch, do not bet a legal strategy on the draft alone.
+                  </p>
+                </div>
+                <div className="bg-card p-4">
+                  <p className="text-sm font-medium text-foreground mb-1">Legacy</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Superseded, low impact, or historical. Example: old ChatGPT plugin manifests, browser DNT policy files.
+                    Usually skip for new work.
+                  </p>
+                </div>
               </div>
             </section>
 
-            {/* Registry nav */}
+            {/* Full catalog by category */}
             <section id="registry">
-              <h2 className="text-2xl font-semibold tracking-tight mb-2">File registry</h2>
-              <p className="text-sm text-muted-foreground mb-6">
-                {DISCOVERY_FILES.length} files in {CATEGORIES.length} categories.
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Full catalog</h2>
+              <p className="text-base text-muted-foreground leading-relaxed mb-6">
+                Grouped by purpose. Expand a row for the official source when one exists.
               </p>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                {CATEGORIES.map((cat) => {
-                  const count = DISCOVERY_FILES.filter((f) => f.category === cat).length;
-                  const slug = cat.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-                  return (
-                    <a
-                      key={cat}
-                      href={`#${slug}`}
-                      className="rounded-lg border bg-card p-3 hover:border-primary/50 transition-colors text-center"
-                    >
-                      <span className="text-sm font-medium">{cat}</span>
-                      <span className="block text-xs text-muted-foreground mt-0.5">{count} files</span>
-                    </a>
-                  );
-                })}
-              </div>
-            </section>
 
-            {CATEGORIES.map((category) => {
-              const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-              const items = DISCOVERY_FILES.filter((f) => f.category === category);
-              return (
-                <section key={category} id={slug}>
-                  <h2 className="text-2xl font-semibold tracking-tight mb-6">{category}</h2>
-                  <div className="space-y-px rounded-lg overflow-hidden border">
-                    {items.map((file) => (
-                      <details key={file.name} className="bg-card group">
-                        <summary className="flex items-start gap-4 p-4 cursor-pointer select-none hover:bg-muted/30 transition-colors list-none [&::-webkit-details-marker]:hidden">
-                          <div className="shrink-0 mt-0.5">
-                            <span className={`inline-flex items-center text-[11px] font-medium px-2 py-0.5 rounded-full border ${STATUS_STYLES[file.status]}`}>
-                              {file.status}
-                            </span>
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <span className="font-medium text-sm">{file.name}</span>
+              {CATEGORIES.map((category) => {
+                const items = DISCOVERY_FILES.filter((f) => f.category === category);
+                const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                return (
+                  <div key={category} id={slug} className="mb-12 last:mb-0">
+                    <h3 className="text-xl font-semibold tracking-tight mb-2">{category}</h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      {items.length} {items.length === 1 ? 'item' : 'items'}
+                    </p>
+                    <div className="space-y-px rounded-lg overflow-hidden border">
+                      {items.map((file) => (
+                        <details key={file.name} className="bg-card group">
+                          <summary className="p-4 sm:p-5 cursor-pointer select-none hover:bg-muted/30 transition-colors list-none [&::-webkit-details-marker]:hidden">
+                            <div className="flex flex-wrap items-center gap-2 mb-2">
+                              <span className={`inline-flex items-center text-[11px] font-medium px-2 py-0.5 rounded-full border ${PRIORITY_STYLES[file.priority]}`}>
+                                {file.priority}
+                              </span>
+                              <span className={`inline-flex items-center text-[11px] font-medium px-2 py-0.5 rounded-full border ${MATURITY_STYLES[file.maturity]}`}>
+                                {file.maturity}
+                              </span>
+                            </div>
+                            <p className="text-base font-medium text-foreground">
+                              {file.name}
+                            </p>
                             <p className="text-xs font-mono text-muted-foreground mt-0.5">{file.path}</p>
-                            <p className="text-sm text-muted-foreground leading-relaxed mt-1">{file.desc}</p>
+                            <p className="text-sm text-muted-foreground leading-relaxed mt-2">{file.what}</p>
+                            <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+                              <span className="text-foreground font-medium">Why: </span>
+                              {file.why}
+                            </p>
+                          </summary>
+                          <div className="px-4 sm:px-5 pb-4 pt-0">
+                            {file.specUrl ? (
+                              <Link
+                                href={file.specUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-xs text-muted-foreground hover:text-primary transition-colors"
+                              >
+                                Official specification ({file.spec})
+                              </Link>
+                            ) : (
+                              <span className="text-xs text-muted-foreground/60">{file.spec}</span>
+                            )}
                           </div>
-                          <svg
-                            className="w-4 h-4 shrink-0 mt-1 text-muted-foreground/40 transition-transform group-open:rotate-90"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            strokeWidth={2}
-                            aria-hidden
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                          </svg>
-                        </summary>
-                        <div className="px-4 pb-4 pt-0 sm:pl-[6.5rem]">
-                          {file.specUrl ? (
-                            <Link
-                              href={file.specUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-xs text-muted-foreground hover:text-primary transition-colors"
-                            >
-                              Official specification
-                            </Link>
-                          ) : (
-                            <span className="text-xs text-muted-foreground/60">{file.spec}</span>
-                          )}
-                        </div>
-                      </details>
-                    ))}
+                        </details>
+                      ))}
+                    </div>
                   </div>
-                </section>
-              );
-            })}
+                );
+              })}
+            </section>
 
             {/* Crawlers */}
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-2">AI crawler tokens</h2>
-              <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                Prefer vendor docs and published IP lists over third-party directories.
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Who the major bots are</h2>
+              <p className="text-base text-muted-foreground leading-relaxed mb-6">
+                Bot names appear in your server logs and in robots.txt. Prefer each company’s own documentation
+                when the stakes are high.
               </p>
               <div className="space-y-px rounded-lg overflow-hidden border">
                 {AI_CRAWLERS.map((group) => (
-                  <div key={group.company} className="bg-card p-4">
-                    <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
-                      <span className="font-medium text-sm shrink-0 sm:w-28">{group.company}</span>
-                      <div className="min-w-0 flex-1">
-                        <div className="flex flex-wrap gap-1.5">
-                          {group.bots.map((bot) => (
-                            <code key={bot} className="text-xs font-mono bg-muted px-2 py-0.5 rounded">
-                              {bot}
-                            </code>
-                          ))}
-                        </div>
-                        {group.note ? (
-                          <p className="text-xs text-muted-foreground mt-2 leading-relaxed">{group.note}</p>
-                        ) : null}
-                      </div>
+                  <div key={group.company} className="bg-card p-4 sm:p-5">
+                    <p className="text-sm font-medium text-foreground mb-2">{group.company}</p>
+                    <div className="flex flex-wrap gap-1.5 mb-2">
+                      {group.bots.map((bot) => (
+                        <code key={bot} className="text-xs font-mono bg-muted px-2 py-0.5 rounded">
+                          {bot}
+                        </code>
+                      ))}
                     </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{group.plain}</p>
                   </div>
                 ))}
+              </div>
+            </section>
+
+            {/* Agent prompt */}
+            <section>
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">If you hand this to a coding agent</h2>
+              <p className="text-base text-muted-foreground leading-relaxed mb-4">
+                Paste something like this so the agent runs the tool instead of inventing file formats:
+              </p>
+              <div className="rounded-lg overflow-hidden border">
+                <pre className="p-4 overflow-x-auto text-[12px] leading-relaxed bg-card text-foreground whitespace-pre-wrap">
+                  <code>{`Set up AI discovery for this project using:
+https://github.com/vedangvatsa/ai-discovery-standards
+
+Run:
+npx --yes github:vedangvatsa/ai-discovery-standards --yes --scan --url=https://YOUR_DOMAIN
+
+Then review llms.txt, confirm training allow/deny, and do not advertise fake A2A or MCP endpoints.`}</code>
+                </pre>
               </div>
             </section>
 
             {/* Contribute */}
             <section>
-              <h2 className="text-2xl font-semibold tracking-tight mb-2">Contribute</h2>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                The project is public on GitHub. External contributors open pull requests.
-                Merges require a maintainer with write access. Random users cannot push to{' '}
-                <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">main</code>.
-              </p>
-              <div className="rounded-lg border bg-card p-5 text-sm text-muted-foreground leading-relaxed space-y-2">
+              <h2 className="text-2xl font-semibold tracking-tight mb-4">Contributing and control of the repo</h2>
+              <div className="space-y-4 text-base text-muted-foreground leading-relaxed">
                 <p>
-                  Prefer PRs with a primary source link (vendor docs, RFC, or published spec).
-                  Directory-only crawler claims are not enough.
+                  The repository is public. Anyone can open an issue or a pull request. Changes only land on the main
+                  branch if a maintainer with write access merges them. Strangers cannot push code into the project
+                  without that merge step.
                 </p>
                 <p>
+                  Prefer contributions that cite a primary source (vendor docs, RFC, or published specification).
+                </p>
+                <p>
+                  <Link
+                    href="https://github.com/vedangvatsa/ai-discovery-standards"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-primary"
+                  >
+                    Repository
+                  </Link>
+                  {' · '}
                   <Link
                     href="https://github.com/vedangvatsa/ai-discovery-standards/issues"
                     target="_blank"
@@ -512,9 +779,9 @@ curl -o .claude/commands/setup-ai-discovery.md \\
                   href="/sitecheck"
                   className="rounded-lg border bg-card p-5 hover:border-primary/50 transition-colors block"
                 >
-                  <span className="font-medium text-sm">Site Checklist</span>
+                  <span className="font-medium text-sm text-foreground">Site Checklist</span>
                   <p className="text-sm text-muted-foreground mt-1">
-                    Foundations, SEO, accessibility, security, and agent readiness.
+                    Broader production checklist: security, accessibility, SEO, and agent readiness.
                   </p>
                 </Link>
                 <Link
@@ -523,18 +790,16 @@ curl -o .claude/commands/setup-ai-discovery.md \\
                   rel="noopener noreferrer"
                   className="rounded-lg border bg-card p-5 hover:border-primary/50 transition-colors block"
                 >
-                  <span className="font-medium text-sm">GitHub repository</span>
+                  <span className="font-medium text-sm text-foreground">Source on GitHub</span>
                   <p className="text-sm text-muted-foreground mt-1">
-                    CLI source, templates, and long-form reference.
+                    CLI, templates, and the long technical reference.
                   </p>
                 </Link>
               </div>
             </section>
 
             <p className="text-xs text-muted-foreground/60 text-center">
-              MIT license. Last verified July 2026. A2A:{' '}
-              <code className="font-mono">/.well-known/agent-card.json</code>. agents-txt companion:{' '}
-              <code className="font-mono">/agents.json</code>.
+              MIT license. Last updated July 2026.
             </p>
           </div>
         </article>

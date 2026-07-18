@@ -3,32 +3,26 @@ import { PageLayout } from '@/components/page-layout';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'AI Discovery Standards: Reference and Auto-Implementer for AI Web Discoverability',
+    absolute: 'AI Discovery Standards: Make Your Site Readable to AI Crawlers and Agents',
   },
   description:
-    'Landing page for the open-source AI Discovery Standards project: what to publish for AI crawlers and agents, why training differs from search, and how to auto-implement with one npx command.',
+    'Plain-language guide to robots.txt, llms.txt, agents files, and related AI discovery tools, plus a free command that adds them to your project. Training vs search explained.',
   keywords: [
     'AI Discovery Standards',
     'llms.txt',
     'robots.txt AI crawlers',
+    'GPTBot vs OAI-SearchBot',
     'agents.txt',
     'agent-card.json',
-    'A2A protocol',
-    'TDMRep',
+    'AI visibility',
     'npx ai-discovery-standards',
-    'GPTBot',
-    'OAI-SearchBot',
-    'ClaudeBot',
-    'PerplexityBot',
-    'AEO',
-    'GEO',
     'Vedang Vatsa',
   ],
   alternates: { canonical: '/aistandards' },
   openGraph: {
     title: 'AI Discovery Standards',
     description:
-      'Reference and full auto-implementer for AI discovery files. One command to scan a project and wire robots, llms.txt, agents, and schema.',
+      'What files make your site readable to AI systems, why training differs from search, and how to add them with one command.',
     url: '/aistandards',
     type: 'website',
     siteName: 'Vedang Vatsa',
@@ -36,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'AI Discovery Standards',
-    description: 'Reference and auto-implementer for AI web discoverability files.',
+    description: 'Plain-language guide and auto-implementer for AI discovery files.',
   },
 };
 
@@ -45,7 +39,7 @@ const softwareSchema = {
   '@type': 'SoftwareSourceCode',
   name: 'AI Discovery Standards',
   description:
-    'Open-source reference and CLI that auto-implements AI discovery files (robots.txt, llms.txt, agents.txt, TDMRep, schema) for websites.',
+    'Open-source guide and CLI for AI discovery files that help crawlers and agents find and understand a website.',
   url: 'https://veda.ng/aistandards',
   codeRepository: 'https://github.com/vedangvatsa/ai-discovery-standards',
   programmingLanguage: 'JavaScript',
@@ -68,23 +62,7 @@ const faqSchema = {
       name: 'What is AI Discovery Standards?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'An open-source reference of files and crawler tokens for AI web discoverability, plus a CLI that scans a project and writes discovery files (robots.txt, llms.txt, agents.txt, TDMRep, security.txt, schema, and more) and wires layout head tags when safe.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do I install AI discovery files on my site?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'From your website project root run: npx --yes github:vedangvatsa/ai-discovery-standards --yes --scan --url=https://your-domain.com. Pass --deny-training to block training crawlers. Existing files are not overwritten unless you pass --force.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the difference between agents.json and agent-card.json?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Root /agents.json is the agents-txt.com capability catalog. The A2A Protocol Agent Card is at /.well-known/agent-card.json and is only needed if you run an A2A agent.',
+        text: 'A free open-source project that explains the website files related to AI crawlers and agents, and provides a command-line tool that can add the practical set (robots.txt, llms.txt, agents files, security.txt, schema, and more) to a project automatically.',
       },
     },
     {
@@ -92,7 +70,23 @@ const faqSchema = {
       name: 'Does blocking GPTBot remove me from ChatGPT search?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. GPTBot is for training-related crawling. ChatGPT search indexing is controlled separately via OAI-SearchBot. These are independent decisions in OpenAI documentation.',
+        text: 'No. GPTBot is associated with training-related crawling. ChatGPT search indexing is controlled separately with OAI-SearchBot. These are independent choices in OpenAI documentation.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I add AI discovery files to my website?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'From your website project root, run: npx --yes github:vedangvatsa/ai-discovery-standards --yes --scan --url=https://your-domain.com. Use --deny-training if you want to block training crawlers. Review llms.txt after the tool finishes.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What does Standard vs Adopted vs Emerging mean?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'These labels describe how solid the underlying rule is, not a score for your site. Standard means a formal RFC or W3C recommendation. Adopted means written down and used in practice. Emerging means a community convention with uneven support. Proposed means a draft. Legacy means low impact or superseded.',
       },
     },
   ],
