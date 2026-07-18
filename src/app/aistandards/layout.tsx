@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     absolute: 'AI Discovery Standards: Make Your Site Readable to AI Crawlers and Agents',
   },
   description:
-    'Plain-language guide to robots.txt, llms.txt, agents files, and related AI discovery tools, plus a free command that adds them to your project. Training vs search explained.',
+    'Catalog and installer for website files used by AI crawlers and agents: robots.txt, llms.txt, agents files, schema, and related surfaces. Training vs search explained.',
   keywords: [
     'AI Discovery Standards',
     'llms.txt',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Discovery Standards',
     description:
-      'What files make your site readable to AI systems, why training differs from search, and how to add them with one command.',
+      'What files make a site readable to AI systems, why training differs from search, and how to install them with one command.',
     url: '/aistandards',
     type: 'website',
     siteName: 'Vedang Vatsa',
