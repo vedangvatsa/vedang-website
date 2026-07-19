@@ -1813,9 +1813,11 @@
     "id": "viral-rewrite-38",
     "scheduleDate": "2026-07-14",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "A company isn't a family. Families don't fire people. A better model is a community with shared values, real voice, and respect for the person. That kind of workplace earns loyalty without pretending to be something it's not.",
-    "image": "scripts/post-images/post_3_1.jpg"
+    "image": "scripts/post-images/post_3_1.jpg",
+    "postedAt": "2026-07-19T04:43:31.698Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mqxxrbz2ce2m"
   },
   {
     "id": "viral-rewrite-39",

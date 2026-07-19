@@ -1540,9 +1540,10 @@
     "id": "viral-rewrite-52",
     "scheduleDate": "2026-07-19",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Remote work during a crisis isn't normal remote work. Health comes first. Productivity doesn't. The teams that survived were the ones that lowered expectations and raised empathy. Find teams that put people first at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_194_1.jpg"
+    "image": "scripts/post-images/post_194_1.jpg",
+    "error": "Media failed: scripts/post-images/post_194_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-53",
