@@ -1635,9 +1635,11 @@
     "id": "viral-rewrite-53",
     "scheduleDate": "2026-07-19",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Promotions signal what you actually value. Promote the wrong person and your best people start updating their resumes. Promote the right one and they start recruiting for you. Find companies that get this right at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_32_1.jpg"
+    "image": "scripts/post-images/post_32_1.jpg",
+    "postedAt": "2026-07-19T19:59:09.622Z",
+    "castHash": "0x3da2f666f5cda5cac70f7e6dfe2637060fa9c3f3"
   },
   {
     "id": "viral-rewrite-54",

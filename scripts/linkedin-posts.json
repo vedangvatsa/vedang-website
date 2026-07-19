@@ -1665,10 +1665,9 @@
     "image": "scripts/post-images/post_3_1.jpg",
     "scheduleDate": "2026-07-20",
     "scheduleTime": "01:00",
-    "posted": false,
-    "postedAt": null,
-    "postId": null,
-    "error": null
+    "posted": true,
+    "postedAt": "2026-07-19T19:58:58.202Z",
+    "postId": "urn:li:share:7484698318019653632"
   },
   {
     "id": "viral-rewrite-42",
