@@ -1610,9 +1610,10 @@
     "id": "viral-rewrite-60",
     "scheduleDate": "2026-07-21",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Asking about pay isn't greedy. It's responsible. People want to know they can support themselves and be treated fairly. Managers who punish this question are hiding something. Find companies that answer it upfront at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_82_1.jpg"
+    "image": "scripts/post-images/post_82_1.jpg",
+    "error": "Media failed: scripts/post-images/post_82_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-61",

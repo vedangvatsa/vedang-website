@@ -1665,9 +1665,11 @@
     "id": "viral-rewrite-56",
     "scheduleDate": "2026-07-20",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Toxic stars aren't a people problem. They're a reward system problem. If bad behavior gets promoted, bad behavior spreads. The fix isn't a workshop. It's who you pay, praise, and promote. Find companies that reward impact on people at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_104_1.jpg"
+    "image": "scripts/post-images/post_104_1.jpg",
+    "postedAt": "2026-07-20T20:09:28.707Z",
+    "castHash": "0x05fce7ff1b3ba3a79d8b1d6d7159434aa43c160d"
   },
   {
     "id": "viral-rewrite-57",
