@@ -1567,9 +1567,10 @@
     "id": "viral-rewrite-55",
     "scheduleDate": "2026-07-20",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Toxic cultures reward people for stabbing others in the back. Healthy cultures reward people for having others' backs. The people who elevate others are the ones worth elevating. Find companies that reward that at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_91_1.jpg"
+    "image": "scripts/post-images/post_91_1.jpg",
+    "error": "Media failed: scripts/post-images/post_91_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-56",
