@@ -1675,9 +1675,11 @@
     "id": "viral-rewrite-57",
     "scheduleDate": "2026-07-20",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Meetings have doubled, but work hasn't gotten better. Talking about work isn't the same as doing it. The best teams protect time for deep work. The worst ones turn every question into a meeting. Find teams that respect your time at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_197_1.jpg"
+    "image": "scripts/post-images/post_197_1.jpg",
+    "postedAt": "2026-07-21T04:43:04.561Z",
+    "castHash": "0x1129a6fd60523e94076d32238bbfe7ced90063aa"
   },
   {
     "id": "viral-rewrite-58",
