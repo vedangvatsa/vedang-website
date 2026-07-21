@@ -237,6 +237,15 @@ export default function AiDiscoveryStandardsPage() {
             <a href="#registry" className="hover:text-primary transition-colors">
               Catalog
             </a>
+            <a href="#content-techniques" className="hover:text-primary transition-colors">
+              Content techniques
+            </a>
+            <a href="#developer-agent-files" className="hover:text-primary transition-colors">
+              Agent files
+            </a>
+            <a href="#standards-landscape" className="hover:text-primary transition-colors">
+              Standards
+            </a>
             <a href="#crawlers" className="hover:text-primary transition-colors">
               Crawlers
             </a>
@@ -381,6 +390,132 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
                   </div>
                 );
               })}
+            </section>
+
+            <section id="content-techniques" className="min-w-0 scroll-mt-20">
+              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Content techniques</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                Files alone are not enough. How content is written affects whether answer engines can extract and cite it.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 min-w-0">
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">Answer-first writing</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Lead each section with a concise direct answer. Put context after. This matches how people ask and how extractors pull snippets.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">Question-shaped headings</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Match how people actually ask. "How do I block AI training bots" works better than "Bot configuration overview".
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">Factual density</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Prefer dates, numbers, and named entities over vague claims. Specifics get picked up. Generalities get skipped.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">FAQ and HowTo schema</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Schema helps machines map questions to answers. Rich result eligibility is separate and not guaranteed.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">Person and Organization schema</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Link to authoritative profiles with sameAs. Helps verify identity across sources.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">Multi-format presentation</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Prose plus tables plus schema gives extractors multiple paths to the same fact. Reduces ambiguity.
+                  </p>
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground/70 leading-relaxed mt-3">
+                These are industry heuristics, not guarantees from any model vendor.
+              </p>
+            </section>
+
+            <section id="developer-agent-files" className="min-w-0 scroll-mt-20">
+              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Developer agent files</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                These are not public web discovery files. They live in your code repository and tell coding agents about your project.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 min-w-0">
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1">AGENTS.md</p>
+                  <p className="text-[11px] font-mono text-muted-foreground mb-1.5">/AGENTS.md</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Repository-level instructions for coding agents. Keep it short. Prefer facts agents cannot infer from the file tree.
+                  </p>
+                  <Link href="https://agents.md" target="_blank" rel="noopener noreferrer" className="inline-block text-[11px] text-muted-foreground hover:text-primary transition-colors mt-1.5">
+                    agents.md
+                  </Link>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1">.cursorrules</p>
+                  <p className="text-[11px] font-mono text-muted-foreground mb-1.5">/.cursor/rules/*.mdc</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Cursor-specific rules. Use AGENTS.md as the source of truth and symlink or include from tool-specific files to avoid drift.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section id="standards-landscape" className="min-w-0 scroll-mt-20">
+              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Standards landscape</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                Several IETF drafts are competing to become the standard way AI systems discover sites. None are RFCs yet. Track them if this space matters to your work.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 min-w-0">
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1">AI Endpoint Discovery</p>
+                  <p className="text-[11px] font-mono text-muted-foreground mb-1.5">/.well-known/ai</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Published 2026-03-23. One of several competing IETF discovery ideas.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1">Agent Discovery Protocol</p>
+                  <p className="text-[11px] font-mono text-muted-foreground mb-1.5">draft-pro-adp-agent-discovery</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Proposes a protocol-level approach to agent discovery.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1">DNS-AID</p>
+                  <p className="text-[11px] font-mono text-muted-foreground mb-1.5">draft-mozleywilliams-dnsop-dnsaid</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    DNS-based approach to agent identity and discovery.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1">MCP Discovery URI</p>
+                  <p className="text-[11px] font-mono text-muted-foreground mb-1.5">draft-serra-mcp-discovery-uri</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Proposes mcp:// URIs for discovering MCP servers.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1">AI Preferences (AIPREF)</p>
+                  <p className="text-[11px] font-mono text-muted-foreground mb-1.5">draft-ietf-aipref-vocab / -attach</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Standards-track vocabulary for expressing AI usage preferences. May become the preferred web attachment path over time.
+                  </p>
+                </div>
+              </div>
+              <Link
+                href="https://datatracker.ietf.org/doc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-[11px] text-muted-foreground hover:text-primary transition-colors mt-3"
+              >
+                IETF Datatracker
+              </Link>
             </section>
 
             <section id="crawlers" className="min-w-0 scroll-mt-20">
