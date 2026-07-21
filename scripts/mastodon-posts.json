@@ -1637,9 +1637,10 @@
     "id": "viral-rewrite-63",
     "scheduleDate": "2026-07-22",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "People do better work when they can say they don't know, made a mistake, or disagree. Without that safety, teams hide problems and repeat them. With it, they fix problems faster. Find teams where honesty is safe at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_141_1.jpg"
+    "image": "scripts/post-images/post_141_1.jpg",
+    "error": "Media failed: scripts/post-images/post_141_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-64",

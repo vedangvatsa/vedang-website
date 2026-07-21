@@ -1695,9 +1695,11 @@
     "id": "viral-rewrite-59",
     "scheduleDate": "2026-07-21",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Leadership starts with mission over ego. Then people over mission. If you don't care about your people, they won't care about your goal. The best leaders don't need to be told this. They live it. Find leaders who do at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_61_1.jpg"
+    "image": "scripts/post-images/post_61_1.jpg",
+    "postedAt": "2026-07-21T20:05:54.829Z",
+    "castHash": "0xd2c81aeb4b27a2813d2c57e19e7e356f8524e30b"
   },
   {
     "id": "viral-rewrite-60",
