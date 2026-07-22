@@ -28,7 +28,7 @@ export default function NoSlopPage() {
         <Card className='mx-auto w-full max-w-2xl'>
           <CardHeader className='text-center'>
             <CardTitle>Add to your agent</CardTitle>
-            <CardDescription>Paste this into your terminal.</CardDescription>
+            <CardDescription>Paste this into your terminal for Claude Code. For other agents, download noslop.md and add it to your system prompt.</CardDescription>
           </CardHeader>
           <CardContent className='space-y-4 text-center'>
             <pre className='overflow-x-auto rounded-lg bg-muted p-4 text-sm font-mono text-center'>
