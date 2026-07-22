@@ -1903,9 +1903,11 @@
     "id": "viral-rewrite-47",
     "scheduleDate": "2026-07-17",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Sharing your work isn't bragging. It's letting others benefit from what you've built. The people who hide their ideas out of modesty often slow their own progress.",
-    "image": "scripts/post-images/post_119_1.jpg"
+    "image": "scripts/post-images/post_119_1.jpg",
+    "postedAt": "2026-07-22T04:43:15.346Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mr7j5kwz272p"
   },
   {
     "id": "viral-rewrite-48",

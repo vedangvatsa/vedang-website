@@ -1621,9 +1621,10 @@
     "id": "viral-rewrite-61",
     "scheduleDate": "2026-07-22",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Power reveals character. Some people use authority to control. Others use it to remove obstacles. The difference is whether people grow under them or shrink. Find leaders, not bosses, at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_196_1.jpg"
+    "image": "scripts/post-images/post_196_1.jpg",
+    "error": "Media failed: scripts/post-images/post_196_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-62",
