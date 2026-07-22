@@ -5,6 +5,7 @@ import { AuthorByline } from '@/components/author-byline';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { CopyButton } from './copy-button';
+import { CommandBlock } from './command-block';
 
 export const metadata: Metadata = {
   title: 'NoSlop',
@@ -32,9 +33,7 @@ export default function NoSlopPage() {
             <CardDescription>Run this in your project root, then point your agent at noslop.md.</CardDescription>
           </CardHeader>
           <CardContent className='space-y-4 text-center'>
-            <pre className='overflow-x-auto rounded-lg bg-muted p-4 text-sm font-mono text-center'>
-              curl -fsSL https://veda.ng/noslop.md -o noslop.md
-            </pre>
+            <CommandBlock command='curl -fsSL https://veda.ng/noslop.md -o noslop.md' />
             <div className='flex flex-wrap justify-center gap-3'>
               <Button asChild>
                 <a href='/noslop.md' download>Download noslop.md</a>
