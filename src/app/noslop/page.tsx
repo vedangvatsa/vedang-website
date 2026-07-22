@@ -28,15 +28,12 @@ export default function NoSlopPage() {
         <Card className='mx-auto w-full max-w-2xl'>
           <CardHeader className='text-center'>
             <CardTitle>Add to your agent</CardTitle>
-            <CardDescription>Pick your agent and run the matching command in your project root.</CardDescription>
+            <CardDescription>Run this anywhere, then paste the output into your agent's system prompt.</CardDescription>
           </CardHeader>
           <CardContent className='space-y-4 text-center'>
-            <pre className='overflow-x-auto rounded-lg bg-muted p-4 text-sm font-mono text-left'>{`
-Claude Code:  curl -fsSL https://veda.ng/noslop.md >> ~/.claude/CLAUDE.md
-Cursor:       curl -fsSL https://veda.ng/noslop.md > .cursorrules
-Windsurf:     curl -fsSL https://veda.ng/noslop.md > .windsurfrules
-Aider:        curl -fsSL https://veda.ng/noslop.md > .aider-instructions.md
-            `}</pre>
+            <pre className='overflow-x-auto rounded-lg bg-muted p-4 text-sm font-mono text-center'>
+              curl -fsSL https://veda.ng/noslop.md
+            </pre>
             <Button asChild>
               <a href='/noslop.md' download>Download noslop.md</a>
             </Button>
