@@ -1,10 +1,21 @@
-import { generateOgImage, ogSize } from '@/lib/og-image';
+import { generateTerminalOgImage, ogSize } from '@/lib/og-image';
 
 export const runtime = 'nodejs';
-export const alt = 'AI Reports & Research Library - 21,000+ Papers';
+export const alt = 'AI Reports & Research Library - 250M+ Papers';
 export const size = ogSize;
 export const contentType = 'image/png';
 
 export default async function Image() {
-  return generateOgImage('AI Reports Library', '21,000+ Research Papers & Industry Reports');
+  return generateTerminalOgImage(
+    'AI Reports',
+    'Library',
+    'veda.ng/ailib',
+    [
+      { text: 'searching...', color: 'command' },
+      { text: '', color: 'success' },
+      { text: '250M+ papers', color: 'success' },
+      { text: '133K+ reports', color: 'success' },
+      { text: 'OpenAlex indexed', color: 'success' },
+    ],
+  );
 }

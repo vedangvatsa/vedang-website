@@ -150,3 +150,117 @@ export function generateOgImage(title: string, subtitle?: string) {
     }
   );
 }
+
+export interface TerminalLine {
+  text: string;
+  color: 'command' | 'success';
+}
+
+export function generateTerminalOgImage(
+  titleLine1: string,
+  titleLine2: string,
+  url: string,
+  terminalLines: TerminalLine[],
+) {
+  const { interBold, interRegular } = loadOgAssets();
+
+  const colorMap = {
+    command: '#6366f1',
+    success: '#16a34a',
+  };
+
+  return new ImageResponse(
+    (
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          fontFamily: 'Inter',
+          padding: '60px 70px',
+          background: '#f8fafc',
+          color: '#0f172a',
+          position: 'relative',
+        }}
+      >
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: 8,
+          height: '100%',
+          background: '#4f46e5',
+          display: 'flex',
+        }} />
+
+        <div style={{ display: 'flex', flexDirection: 'column', maxWidth: '580px' }}>
+          <div style={{
+            fontSize: 82,
+            fontWeight: 700,
+            lineHeight: 1.05,
+            letterSpacing: '-0.03em',
+            color: '#0f172a',
+            display: 'flex',
+          }}>
+            {titleLine1}
+          </div>
+          <div style={{
+            fontSize: 82,
+            fontWeight: 700,
+            lineHeight: 1.05,
+            letterSpacing: '-0.03em',
+            color: '#6366f1',
+            display: 'flex',
+          }}>
+            {titleLine2}
+          </div>
+          <div style={{
+            fontSize: 26,
+            fontWeight: 700,
+            color: '#6366f1',
+            display: 'flex',
+            marginTop: 60,
+          }}>
+            {url}
+          </div>
+        </div>
+
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          width: 440,
+          height: 420,
+          borderRadius: 16,
+          background: '#f1f5f9',
+          border: '2px solid #cbd5e1',
+          padding: '24px 28px',
+        }}>
+          <div style={{ display: 'flex', gap: 10, marginBottom: 28 }}>
+            <div style={{ width: 16, height: 16, borderRadius: 8, background: '#ff5f56', display: 'flex' }} />
+            <div style={{ width: 16, height: 16, borderRadius: 8, background: '#ffbd2e', display: 'flex' }} />
+            <div style={{ width: 16, height: 16, borderRadius: 8, background: '#27c93f', display: 'flex' }} />
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            {terminalLines.map((line, i) => (
+              <div key={i} style={{ fontSize: 24, color: colorMap[line.color], display: 'flex' }}>
+                {line.text}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    ),
+    {
+      ...ogSize,
+      ...(interBold && interRegular ? {
+        fonts: [
+          { name: 'Inter', data: interRegular, weight: 400 as const, style: 'normal' as const },
+          { name: 'Inter', data: interBold, weight: 700 as const, style: 'normal' as const }
+        ]
+      } : {})
+    }
+  );
+}
