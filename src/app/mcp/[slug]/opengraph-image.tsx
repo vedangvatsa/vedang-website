@@ -1,4 +1,4 @@
-import { generateOgImage, ogSize } from '@/lib/og-image';
+import { generateTerminalOgImage, ogSize } from '@/lib/og-image';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -12,12 +12,17 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   const { slug } = await params;
   const filePath = path.join(process.cwd(), 'src', 'content', 'courses', 'mcp', `${slug}.mdx`);
   let title = 'MCP Development 101';
-  let subtitle = 'Build AI Tool Servers';
   try {
     const raw = fs.readFileSync(filePath, 'utf8');
     const { data } = matter(raw);
     title = data.title || title;
-    subtitle = data.description || subtitle;
   } catch {}
-  return generateOgImage(title, subtitle);
+  return generateTerminalOgImage(
+    'MCP',
+    'Development 101',
+    `veda.ng/mcp/${slug}`,
+    [
+      { text: title, color: 'success' },
+    ],
+  );
 }
