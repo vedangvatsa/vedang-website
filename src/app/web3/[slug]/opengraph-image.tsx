@@ -1,4 +1,4 @@
-import { generateOgImage, ogSize } from '@/lib/og-image';
+import { generateTerminalOgImage, ogSize } from '@/lib/og-image';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -12,12 +12,6 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   const { slug } = await params;
   const filePath = path.join(process.cwd(), 'src', 'content', 'courses', 'web3', `${slug}.mdx`);
   let title = 'Web3 101';
-  let subtitle = 'Blockchain Fundamentals';
-  try {
-    const raw = fs.readFileSync(filePath, 'utf8');
-    const { data } = matter(raw);
-    title = data.title || title;
-    subtitle = data.description || subtitle;
-  } catch {}
-  return generateOgImage(title, subtitle);
+  try { const raw = fs.readFileSync(filePath, 'utf8'); const { data } = matter(raw); title = data.title || title; } catch {}
+  return generateTerminalOgImage('Web3', '101', `veda.ng/web3/${slug}`, [{ text: title, color: 'success' }]);
 }
