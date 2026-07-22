@@ -1630,9 +1630,10 @@
     "id": "viral-rewrite-62",
     "scheduleDate": "2026-07-22",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Transparency isn't dumping every detail. It's giving people the context behind decisions. Context builds trust. Secrecy breeds rumor. Find teams that share what matters, even when it's hard, at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_46_1.jpg"
+    "image": "scripts/post-images/post_46_1.jpg",
+    "error": "Media failed: scripts/post-images/post_46_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-63",
