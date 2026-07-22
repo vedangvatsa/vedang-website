@@ -21,7 +21,7 @@ export default function NoSlopPage() {
     <PageLayout>
       <PageHero
         title='NoSlop'
-        subtitle='Install taste. Your agent will never generate slop.'
+        subtitle='A prompt that keeps your agent from writing generic AI prose.'
       />
       <AuthorByline />
       <div className='space-y-8 pb-20'>
@@ -31,7 +31,7 @@ export default function NoSlopPage() {
             <CardDescription>Paste this into your terminal.</CardDescription>
           </CardHeader>
           <CardContent className='space-y-4'>
-            <pre className='overflow-x-auto rounded-lg border border-input bg-muted p-4 text-sm font-mono'>
+            <pre className='overflow-x-auto rounded-lg bg-muted p-4 text-sm font-mono'>
               curl -fsSL https://veda.ng/noslop.md {'>>'} ~/.claude/CLAUDE.md
             </pre>
             <Button asChild>

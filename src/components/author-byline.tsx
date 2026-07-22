@@ -14,7 +14,7 @@ export function AuthorByline({ links }: AuthorBylineProps) {
           alt="Vedang Vatsa"
           width={40}
           height={40}
-          className="rounded-full"
+          className="h-10 w-10 rounded-full object-cover"
         />
       </Link>
       <div className="flex items-center gap-0 text-sm">
