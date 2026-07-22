@@ -9,7 +9,8 @@ When working on this project, you MUST read and follow these guidelines before m
 - **No opening Callout boxes**: Do NOT wrap the essay's opening paragraph in a `<Callout>` (e.g., "The Core Thesis", "Key Findings", "Executive Summary"). Callouts are for mid-body asides only.
 
 ## Design & Visuals
-- **Infographic Design Guide**: `docs/infographic-design-guide.md` — Brand colors, typography, SVG/chart standards, light-mode aesthetic.
+- **Infographic Design Guide**: `docs/infographic-design-guide.md` — Brand colors, typography, SVG/chart standards, light-mode aesthetic, OG image design guidelines.
+- **OG Image Pattern**: Tool and project pages use a split layout with large title on the left and a terminal card on the right. Light background (#f8fafc), indigo accent (#6366f1), Inter font. See `docs/infographic-design-guide.md` OG Image Design Guidelines section for full spec.
 - **SVG Requirements**: All SVGs MUST have explicit `width` and `height` attributes. All SVGs MUST pass `xmllint --noout` validation (no unescaped `&`, no duplicate attributes).
 
 ## SEO & Discovery

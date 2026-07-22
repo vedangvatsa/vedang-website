@@ -192,6 +192,53 @@ Before publishing any visual content:
 - [ ] SVG passes `xmllint --noout` validation
 - [ ] No unescaped `&` in SVG text elements
 
+## OG Image Design Guidelines
+
+### General Pattern
+OG images for tool and project pages should follow a split-layout pattern with a terminal or product card on the right.
+
+### Layout
+- **Size**: 1200x630px (Next.js `opengraph-image` convention)
+- **Background**: Light off-white (#f8fafc), never dark
+- **Left accent bar**: 8px wide, indigo (#4f46e5), full height
+- **Left side**: Large title (82px bold), subtitle (30px gray), URL (26px indigo bold)
+- **Right side**: Terminal or product card (440px wide, 400px tall, rounded 16px, light gray fill #f1f5f9, 2px border #cbd5e1)
+
+### Terminal Card
+- Traffic light dots (red #ff5f56, yellow #ffbd2e, green #27c93f) at top
+- Command line in indigo (#6366f1)
+- Output lines in green (#16a34a) to show success
+- Font size 26px for readability at small previews
+
+### Typography
+- Use Inter Bold for titles, Inter Regular for subtitles
+- Title in two lines if long (e.g., "AI Discovery" / "Standards")
+- Second line of title in accent color (#6366f1)
+- Subtitle in muted gray (#64748b)
+
+### Color Palette
+- Background: #f8fafc
+- Title: #0f172a (near-black)
+- Accent: #6366f1 (indigo)
+- Subtitle: #64748b (gray)
+- Success: #16a34a (green)
+- Card fill: #f1f5f9
+- Card border: #cbd5e1
+- Accent bar: #4f46e5
+
+### Implementation
+- Each page has its own `opengraph-image.tsx` in its route directory
+- Uses `next/og` `ImageResponse` for dynamic generation
+- Fonts loaded from `public/fonts/Inter-Bold.ttf` and `public/fonts/Inter-Regular.ttf`
+- No external font dependencies (keeps OG generation fast and reliable)
+
+### What to Avoid
+- No dark backgrounds
+- No small text (everything must be readable at 200px width)
+- No complex graphics that break at small sizes
+- No em-dashes or colons in OG image text
+- No AI slop phrases
+
 ## SVG Technical Requirements
 
 All SVGs in `public/images/essays/` must meet these technical standards:
