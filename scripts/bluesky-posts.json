@@ -1923,9 +1923,11 @@
     "id": "viral-rewrite-49",
     "scheduleDate": "2026-07-18",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The people who truly care about you will tell you hard truths. Comfort today can cost you tomorrow. The best teams value candor over flattery.",
-    "image": "scripts/post-images/post_178_1.jpg"
+    "image": "scripts/post-images/post_178_1.jpg",
+    "postedAt": "2026-07-22T20:01:33.980Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mrb4hmubs52b"
   },
   {
     "id": "viral-rewrite-50",
