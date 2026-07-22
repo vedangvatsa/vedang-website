@@ -32,7 +32,7 @@ export default function NoSlopPage() {
         </div>
       </header>
       <div className='space-y-6 pb-12'>
-        <Card className='mx-auto w-full max-w-2xl'>
+        <Card className='mx-auto w-full max-w-2xl border-0 shadow-none'>
           <CardHeader className='text-center'>
             <CardTitle>Add to your agent</CardTitle>
             <CardDescription>Run this in your project root, then point your agent at noslop.md.</CardDescription>
