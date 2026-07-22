@@ -6,7 +6,7 @@ A client-side, no-repo-needed tool to detect and strip AI slop from prose. Inspi
 
 - `noslop.md` — agent prompt / anti-slop law. Install with `curl` into `~/.claude/CLAUDE.md`, `.cursorrules`, or any system prompt.
 - `noslop.js` — the analyzer engine (browser + Node-friendly).
-- `index.html` — the `veda.ng/noslop` page with a paste-and-check UI.
+- `index.html` — the static paste-and-check UI fallback.
 - `noslop.user.js` — Tampermonkey/Greasemonkey userscript to scan any page.
 
 ## Use the analyzer page locally
@@ -19,12 +19,12 @@ Open `http://localhost:8080`.
 
 ## Deploy to veda.ng/noslop
 
-Upload these files to the path `noslop/` on your `veda.ng` host:
+Upload these files to your `veda.ng` host:
 
 - `index.html` as `noslop/index.html`
 - `noslop.js` as `noslop/noslop.js`
-- `noslop.md` as `noslop/noslop.md`
 - `noslop.user.js` as `noslop/noslop.user.js`
+- `noslop.md` at the root as `noslop.md`
 
 Then the install command is:
 

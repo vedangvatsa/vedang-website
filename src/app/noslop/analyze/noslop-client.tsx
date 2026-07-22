@@ -112,7 +112,7 @@ export function NoSlopClient() {
           userscript
         </a>
         {' '}on any page, or read the{' '}
-        <a href='/noslop/noslop.md' className='underline hover:text-primary'>
+        <a href='/noslop.md' className='underline hover:text-primary'>
           agent prompt
         </a>
         .
