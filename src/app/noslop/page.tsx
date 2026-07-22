@@ -26,12 +26,12 @@ export default function NoSlopPage() {
       <AuthorByline />
       <div className='space-y-8 pb-20'>
         <Card>
-          <CardHeader>
+          <CardHeader className='text-center'>
             <CardTitle>Add to your agent</CardTitle>
             <CardDescription>Paste this into your terminal.</CardDescription>
           </CardHeader>
-          <CardContent className='space-y-4'>
-            <pre className='overflow-x-auto rounded-lg bg-muted p-4 text-sm font-mono'>
+          <CardContent className='space-y-4 text-center'>
+            <pre className='overflow-x-auto rounded-lg bg-muted p-4 text-sm font-mono text-left'>
               curl -fsSL https://veda.ng/noslop.md {'>>'} ~/.claude/CLAUDE.md
             </pre>
             <Button asChild>
