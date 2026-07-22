@@ -47,11 +47,12 @@ jobs:
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
 
-      - name: Post to LinkedIn
-        run: npx tsx scripts/linkedin-scheduled-executor.ts
-        env:
-          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
-          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+      # Temporarily disabled during job-list cross-post test
+      # - name: Post to LinkedIn
+      #   run: npx tsx scripts/linkedin-scheduled-executor.ts
+      #   env:
+      #     LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+      #     LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
 
       - name: Discover viral LinkedIn posts
         continue-on-error: true
