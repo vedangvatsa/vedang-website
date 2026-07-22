@@ -4,6 +4,7 @@ import { PageHero } from '@/components/page-hero';
 import { AuthorByline } from '@/components/author-byline';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { CopyButton } from './copy-button';
 
 export const metadata: Metadata = {
   title: 'NoSlop',
@@ -34,9 +35,12 @@ export default function NoSlopPage() {
             <pre className='overflow-x-auto rounded-lg bg-muted p-4 text-sm font-mono text-center'>
               curl -fsSL https://veda.ng/noslop.md -o noslop.md
             </pre>
-            <Button asChild>
-              <a href='/noslop.md' download>Download noslop.md</a>
-            </Button>
+            <div className='flex flex-wrap justify-center gap-3'>
+              <Button asChild>
+                <a href='/noslop.md' download>Download noslop.md</a>
+              </Button>
+              <CopyButton />
+            </div>
           </CardContent>
         </Card>
       </div>
