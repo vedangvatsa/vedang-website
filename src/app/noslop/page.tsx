@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { PageLayout } from '@/components/page-layout';
 import { PageHero } from '@/components/page-hero';
 import { AuthorByline } from '@/components/author-byline';
@@ -8,10 +7,10 @@ import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: 'NoSlop',
-  description: 'Install the anti-slop agent prompt and use the browser-based analyzer.',
+  description: 'Install the anti-slop agent prompt for Claude, Cursor, and other agents.',
   openGraph: {
     title: 'NoSlop',
-    description: 'Install the anti-slop agent prompt and use the browser-based analyzer.',
+    description: 'Install the anti-slop agent prompt for Claude, Cursor, and other agents.',
     url: 'https://veda.ng/noslop',
     type: 'website',
   },
@@ -37,18 +36,6 @@ export default function NoSlopPage() {
             </pre>
             <Button asChild>
               <a href='/noslop.md' download>Download noslop.md</a>
-            </Button>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Try the analyzer</CardTitle>
-            <CardDescription>Paste prose and check the slop score in your browser.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Button asChild variant='outline'>
-              <Link href='/noslop/analyze'>Open the analyzer</Link>
             </Button>
           </CardContent>
         </Card>
