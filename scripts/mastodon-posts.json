@@ -1648,9 +1648,10 @@
     "id": "viral-rewrite-64",
     "scheduleDate": "2026-07-23",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The best managers don't just allow time off. They protect it. They know a rested person produces better work than a depleted one. Find teams that protect your rest at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_23_1.jpg"
+    "image": "scripts/post-images/post_23_1.jpg",
+    "error": "Media failed: scripts/post-images/post_23_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-65",
