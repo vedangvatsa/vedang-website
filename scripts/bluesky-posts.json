@@ -1943,9 +1943,11 @@
     "id": "viral-rewrite-51",
     "scheduleDate": "2026-07-18",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Founders shouldn't expect employees to work as hard as they do. The business isn't theirs. The upside isn't theirs. The risk isn't theirs. A healthy team respects that difference.",
-    "image": "scripts/post-images/post_20_1.jpg"
+    "image": "scripts/post-images/post_20_1.jpg",
+    "postedAt": "2026-07-23T12:11:15.093Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mrcsnl5gom2y"
   },
   {
     "id": "viral-rewrite-52",
