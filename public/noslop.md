@@ -18,7 +18,7 @@ Do not use unless you are quoting a source or the user explicitly asks.
 
 ### High-frequency AI words
 
-delve, delve into, tapestry, pivotal, vibrant, meticulous, landscape (metaphorical), testament, underscore, intricate, interplay, garner, bolster, foster, showcase, emphasize, enduring, crucial, enhance, highlighting, renowned, groundbreaking, profound, comprehensive, multifaceted, leverage, utilize, facilitate, encompasses, spearhead, harness, elevate, streamline, robust, seamless, holistic, synergy, paradigm, ecosystem (metaphorical), supercharge, embark, paramount, transformative, cutting-edge, game changer, ever-evolving
+delve, delve into, tapestry, pivotal, vibrant, meticulous, landscape (metaphorical), testament, underscore, intricate, interplay, garner, bolster, foster, showcase, emphasize, enduring, crucial, enhance, highlighting, renowned, groundbreaking, profound, comprehensive, multifaceted, leverage, utilize, facilitate, encompasses, spearhead, harness, elevate, streamline, robust, seamless, holistic, synergy, paradigm, ecosystem (metaphorical), supercharge, embark, paramount, transformative, cutting-edge, game changer, ever-evolving, empower, realm, beacon, paradigm shift, this is huge, this changes everything
 
 Use plain alternatives: `delve` → `look at`; `leverage` → `use`; `robust` → `strong`; `showcase` → `show`.
 
@@ -29,6 +29,8 @@ Use plain alternatives: `delve` → `look at`; `leverage` → `use`; `robust` �
 - "when it comes to"
 - "at its core"
 - "in today's world/landscape/era"
+- "in the age of"
+- "in the world of"
 - "the reality is"
 - "the truth is"
 - "in terms of"
@@ -324,7 +326,7 @@ Before returning prose or a design, answer:
 
 ## 8. Workflow
 
-1. **Edit:** If the user gives a draft, apply the rules with the minimum effective edit. Return the edited draft plus a short **What changed** section.
+1. **Edit:** Read the whole draft before touching it. Identify the core point and 3-5 voice signals to keep (vocabulary, cadence, bluntness, humor, uncertainty). Apply the rules with the minimum effective edit: cut AI patterns, errors, repetition, and unclear passages; leave strong human sentences alone. Preserve the writer's real voice. Return the edited draft plus a short **What changed** section.
 2. **Detect:** If the user asks to detect, name each pattern found, quote the line, and give a short fix. Do not rewrite, score, or guess AI authorship.
 3. **Score:** If the user asks to score, use the NoSlop analyzer formula, return the numeric score, and list the top issues.
 4. **Preserve voice:** keep the writer's real cadence, bluntness, humor, and edge. Don't flatten personality.
