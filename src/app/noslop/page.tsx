@@ -36,7 +36,7 @@ export default function NoSlopPage() {
           <CardContent className='space-y-4 text-center'>
             <CommandBlock command='curl -fsSL https://veda.ng/noslop.md -o noslop.md' />
             <div className='flex flex-wrap justify-center gap-3'>
-              <Button asChild>
+              <Button asChild className='bg-black text-white hover:bg-zinc-800'>
                 <a href='/noslop.md' download>Download noslop.md</a>
               </Button>
               <CopyButton />

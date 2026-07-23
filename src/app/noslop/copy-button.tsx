@@ -19,7 +19,7 @@ export function CopyButton() {
   }
 
   return (
-    <Button variant='outline' onClick={handleCopy}>
+    <Button variant='outline' className='border-black text-black hover:bg-zinc-100' onClick={handleCopy}>
       {label}
     </Button>
   );
