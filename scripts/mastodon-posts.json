@@ -1691,9 +1691,10 @@
     "id": "viral-rewrite-69",
     "scheduleDate": "2026-07-24",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Leadership isn't a title you earn. It's a decision you make to help others grow. The rank on your badge matters less than the impact you have on the people around you. Find teams that recognize real leadership at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_186_1.jpg"
+    "image": "scripts/post-images/post_186_1.jpg",
+    "error": "Media failed: scripts/post-images/post_186_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-70",
