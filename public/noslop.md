@@ -18,7 +18,7 @@ Do not use unless you are quoting a source or the user explicitly asks.
 
 ### High-frequency AI words
 
-delve, delve into, tapestry, pivotal, vibrant, meticulous, landscape (metaphorical), testament, underscore, intricate, interplay, garner, bolster, foster, showcase, emphasize, enduring, crucial, enhance, highlighting, renowned, groundbreaking, profound, comprehensive, multifaceted, leverage, utilize, facilitate, encompasses, spearhead, harness, elevate, streamline, robust, seamless, holistic, synergy, paradigm, ecosystem (metaphorical), supercharge, embark, paramount, transformative, cutting-edge, game changer, ever-evolving, empower, realm, beacon, paradigm shift, this is huge, this changes everything
+delve, delve into, tapestry, pivotal, vibrant, meticulous, landscape (metaphorical), testament, underscore, intricate, interplay, garner, bolster, foster, showcase, emphasize, enduring, crucial, enhance, highlighting, renowned, groundbreaking, profound, comprehensive, multifaceted, leverage, utilize, facilitate, encompasses, spearhead, harness, elevate, streamline, robust, seamless, holistic, synergy, paradigm, ecosystem (metaphorical), supercharge, embark, paramount, transformative, cutting-edge, game changer, ever-evolving, empower, realm, beacon, paradigm shift, this is huge, this changes everything, elucidate, endeavor, myriad, plethora, catalyze, resonate, navigate (metaphorical), cultivate, galvanize, cornerstone, scalable, optimize, innovative
 
 Use plain alternatives: `delve` → `look at`; `leverage` → `use`; `robust` → `strong`; `showcase` → `show`.
 
@@ -71,6 +71,29 @@ Use plain alternatives: `delve` → `look at`; `leverage` → `use`; `robust` �
 - "let's explore"
 - "we will examine"
 - "as we can see"
+- "importantly, ..."
+- "notably, ..."
+- "interestingly, ..."
+- "furthermore, ..."
+- "moreover, ..."
+- "additionally, ..."
+- "it goes without saying"
+- "without further ado"
+- "one might argue that"
+- "it could be suggested that"
+- "this begs the question"
+- "a [comprehensive/holistic/nuanced] approach to"
+
+### Banned openers
+
+Do not start a response with:
+
+- "Certainly," / "Absolutely," / "Sure,"
+- "Great question!" / "That's a great point!"
+- "I'd be happy to..."
+- "As an AI..." / "As a language model..."
+- "However, it's important to..."
+- "Moreover," / "Furthermore," / "Additionally," / "Interestingly," / "Notably," / "Importantly," / "Indeed,"
 
 ### Empty adverbs
 
@@ -103,6 +126,13 @@ Cut unless they carry real emphasis: `just`, `literally`, `honestly`, `simply`, 
 - **Collaborative language:** "let's explore", "we will examine".
 - **Knowledge-cutoff disclaimers:** no "as of my last update".
 - **Promotional tone:** write like a journalist or engineer, not a marketer.
+- **Hedge parade:** chains of "can", "may", "might", "could potentially", "it's possible that". State it or say you don't know.
+- **Sycophantic openings:** "Great question!", "That's an excellent point!", "Absolutely! Let me explain...". No glazing.
+- **False-depth pattern:** restating the problem in fancier words, listing obvious considerations, then a vague "it depends".
+- **Topic-sentence machine:** every paragraph follows topic → elaboration → example → wrap-up. Break the rhythm.
+- **List abuse:** bullets where prose is clearer, nested lists, lists of exactly 3 or 5 items, every item starting with the same verb.
+- **Symmetry addiction:** equal-length sections, three pros/three cons, perfectly balanced paragraphs. Real writing is lumpy.
+- **Transition-word addiction:** starting every paragraph with "However", "Furthermore", "Additionally", "Moreover".
 
 ## 2a. Plain-language editing (from plain-language-editor)
 
