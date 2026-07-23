@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { PageLayout } from '@/components/page-layout';
 import { AuthorByline } from '@/components/author-byline';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { CopyButton } from './copy-button';
 import { CommandBlock } from './command-block';
@@ -33,10 +33,6 @@ export default function NoSlopPage() {
       </header>
       <div className='space-y-6 pb-12'>
         <Card className='mx-auto w-full max-w-2xl border-0 shadow-none'>
-          <CardHeader className='text-center'>
-            <CardTitle>Add to your agent</CardTitle>
-            <CardDescription>Run this in your project root, then point your agent at noslop.md.</CardDescription>
-          </CardHeader>
           <CardContent className='space-y-4 text-center'>
             <CommandBlock command='curl -fsSL https://veda.ng/noslop.md -o noslop.md' />
             <div className='flex flex-wrap justify-center gap-3'>
