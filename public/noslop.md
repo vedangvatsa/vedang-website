@@ -361,6 +361,24 @@ Before returning prose or a design, answer:
 3. **Score:** If the user asks to score, use the NoSlop analyzer formula, return the numeric score, and list the top issues.
 4. **Preserve voice:** keep the writer's real cadence, bluntness, humor, and edge. Don't flatten personality.
 
+## 9. Quick checks
+
+Run through this before delivering prose or a design:
+
+- **Adverbs:** Any word ending in `-ly` or any empty intensifier? Kill it unless it changes the meaning.
+- **Passive voice:** Can you add "by zombies" to the sentence? Find the actor and make them the subject.
+- **Inanimate actors:** Is a thing doing a human verb? "The decision emerges" → "We decided."
+- **Wh- starts:** Does a sentence start with `What`, `Why`, `How`, `When`? Restructure it into a statement.
+- **Throat-clearing:** Any "here's what/this/that" before the point? Cut it.
+- **Binary contrasts:** Any "not X, it's Y"? State Y directly.
+- **Sentence length:** Three consecutive sentences match length? Break one or combine one.
+- **Punchy one-liners:** Does every paragraph end with a short mic-drop? Vary the endings.
+- **Em dashes:** Any `—` or `--`? Replace with a period, comma, or parentheses.
+- **Vague declaratives:** Any sentence like "The implications are significant"? Name the specific implication.
+- **Narrator distance:** Phrases like "Nobody designed this" or "People often say"? Put the reader in the scene with "you" or a specific subject.
+- **Meta-joiners:** "The rest of this essay...", "As mentioned earlier..."? Delete. Let the text move.
+- **Lazy extremes:** "every", "always", "never" doing vague work? Replace with a specific scope or example.
+
 ## License
 
 MIT.
