@@ -172,42 +172,123 @@ Do not use em dashes anywhere. Replace each with a period, comma, parentheses, o
 
 ## 5. Visual / UI slop (websites, designs, components)
 
-Avoid these default patterns:
+Default UI is not neutral — it is a choice you did not make. Treat the defaults as slop.
 
-- Overused gradient backgrounds, candy aurora blobs, radial glow halos.
-- Botched glass / fake translucency / default glow.
-- Fake macOS / app window mockups.
-- Crude CSS/SVG illustrations that look like shape soup.
-- Default Google Fonts without intent (`Inter`, `Archivo`, `Sora`, `JetBrains Mono` everywhere).
-- Decorative Lucide icons in colored tiles.
-- Oversized icon in a colored tile, floating cards, cut-off glow.
-- The three-tier pricing block, kicker-plus-serif-H2 hero, big serif statement block.
-- "Not just X. It's Y" marketing claims.
-- The hero stack with a panel on the right, the SaaS product-page meta-skeleton.
+### Typography
+
+Do not reach for the obvious free-font rotation. These read as the default the moment they carry a brand:
+
+- **Sans:** Inter, Space Grotesk, Sora, Syne, Archivo, Onest, Hanken Grotesk, Spline Sans, Schibsted Grotesk, Gabarito, Figtree.
+- **Serifs:** Fraunces, Cormorant Garamond, Playfair Display, Bodoni Moda, Didot, Petrona, Young Serif.
+- **Monospace:** JetBrains Mono, IBM Plex Mono, Fragment Mono.
+- **Rounded display novelties:** Bagel Fat One, Fredoka, Chewy, Lobster.
+
+A neutral body face is fine; the signature line must be a deliberate choice. When you can, self-host a licensed or distinctive face (Fontshare, Pangram Pangram, Displaay, etc.). View it at real sizes before committing.
+
+Avoid:
+
+- Recycling the same font pairing from another project.
+- Using monospace as the house voice for labels, captions, and colophons.
+- One label treatment everywhere (tracked uppercase caps on the eyebrow, button, figure, and footer).
 - Title case in headings beyond the first word and proper nouns.
-- The hover boop (button jumps), inner-glow badge, underline-fill hover.
-- The sun-and-moon theme toggle with redrawn line icons.
-- Dead controls and fake interactivity.
-- Misaligned parallel columns, text jammed against edges.
-- Hard shadows, default all-around shadows, color seams between sections.
-- Content clipped where sections overlap; the "cut-off" tell.
-- The giant footer wordmark as the only brand moment.
-- Content flung to far edges; chronic centering miss.
-- Grain sitting on top of content.
-- Botched fill animations and entrance animations hiding content.
-- Saturated accent color with no contrast.
-- Fake code-snippet windows with gradients.
-- Standard "filled button next to outlined button" pair.
-- Hand-rolled generic UI instead of real component libraries.
 
-Good visual craft:
+### Color
 
-- Real translucency (liquid glass), self-colored borders, tonal elevation.
-- Bespoke geometry, custom iconography, authored micro-interactions.
-- Considered light, full-page composition.
-- One signature artifact, one bespoke silhouette.
-- Nav is treated, not defaulted.
-- Real specificity, not generic placeholder.
+Do not use:
+
+- Blue-to-purple gradients or purple as the default accent.
+- Candy pastel washes (butter-yellow to peach to pink, mint to lavender).
+- Blue-charcoal dark mode (`#0c0e15` lifted to a bluer panel).
+- Cool light gray (`#f3f4f6`, `#eceef2`) as the page base.
+- Cream / beige "editorial" backgrounds.
+- Saturated mid-brightness accent colors sprayed on type, dots, and buttons.
+- Default all-around shadows, soft black blooms, or glowy pill buttons.
+
+Choose a palette that belongs to this one brand. Keep accents tonal (a lighter or darker, desaturated step) rather than loud. Use directional, low-offset shadows only when depth is real, and color-match the shadow to the surface.
+
+### Component clichés
+
+Delete or redesign these presets:
+
+- Lucide icons dropped inside colored rounded tiles.
+- Oversized icons in soft-colored boxes.
+- Eyebrow / chip pills with tiny icons and uppercase labels.
+- Filled primary + outlined secondary button pairs.
+- Gradient pills holding an icon and a label.
+- Glowy pill buttons with blurred shadows.
+- Three red/yellow/green traffic-light dots / fake macOS windows.
+- Fake code-snippet windows with `quickstart.ts` tabs and purple/green/grey syntax.
+- Three-tier pricing blocks with a glowing "MOST POPULAR" highlight.
+- Testimonial cards with giant quote marks, centered quote, avatar, fake metric.
+- Pre-footer gradient CTA banners.
+- Sun-and-moon theme toggles and redrawn line icons.
+- Numbered steps beside an unrounded vertical rule.
+- Countdown timers faking urgency.
+- Cards that lift + shadow + glow on hover by default.
+- Dots under active nav items.
+- Decorative hairline rules beside labels.
+- Logos made of a gradient squircle icon + generic wordmark.
+- Gradient-circle initials avatars.
+- Big footer wordmarks that are not composed (cropped, centered wrong, or pasted flat).
+
+### Layout presets
+
+Change these reused skeletons:
+
+- Hero stack: small kicker, big headline, subline, two buttons.
+- Split hero: text column on the left, product panel / image on the right.
+- SaaS product-page meta-skeleton: hero + three feature cards + pricing + FAQ + footer.
+- Small-label-over-big-heading section starts.
+- Kicker + serif H2 section heads.
+- Big serif "philosophy" statement block.
+- "Not just X. It's Y." / "Not a X. not a Y. A Z." marketing stacks.
+- Multi-line headline with one stray colored word dangling at the end.
+- Inset enquiry island with a form, kicker, and serif headline.
+- Email pill + pill button newsletter capture.
+- Image card with bottom gradient scrim, meta label, serif name, link arrow.
+- Parallel columns that go ragged because content length pushes buttons around.
+- Content flung to the far left and right with a dead gulf in the middle.
+- Hero shorter than the viewport so the next section peeks in unaligned.
+
+Compose the page as one whole. Decide the signature first, then build sections around it.
+
+### Motion
+
+Rules:
+
+- **Content is visible by default.** Never gate text or controls on an animation completing (no `initial={{ opacity: 0 }}` entrance reveals, no `animation-timeline` view reveals, no JS observer classes that can strand content hidden).
+- If you animate, animate already-visible things: hover states, marquees, scroll-linked parallax on visible elements, number counters.
+- Do not animate underlines in on hover.
+- Do not make buttons jump or scale on hover.
+- Avoid botched fill animations where caps flip, fills stop short, or eases stutter.
+- Do not hide content behind a cut: whenever you clip or mask, pad the content clear of the cut.
+- Keep grain behind content, not over it.
+- Avoid fixed backgrounds that just trail behind the scroll with no real interaction.
+- Gate all motion behind `prefers-reduced-motion`.
+
+### What premium looks like
+
+Premium is not avoidance; it is craft with a point of view.
+
+- **One signature artifact:** one high-effort focal object that could not be pasted into another site (a detailed product UI, a crafted SVG scene, an atmospheric render).
+- **Atmosphere:** a composed background with depth, not a flat fill.
+- **Layered depth:** foreground copy, midground object, background scene; let something overlap or bleed.
+- **Character display type:** a distinctive serif or display face for the signature line, with a neutral body.
+- **One bespoke silhouette:** a custom shape or treatment (notched card, torn edge, custom bracket, specific arrow).
+- **Treated nav:** contained, centered, oversized, or threaded with real marks — not a flush default bar.
+- **Real specifics:** real names, real data, real logos.
+- **Cohesive visual language:** one corner radius, one arrow, one border logic across nav, buttons, and cards.
+- **Bare icons:** icons as marks, not inside colored tiles.
+- **Custom iconography:** a consistent house set, or honest use of a real pack at one size and one treatment.
+- **Authored micro-interactions:** a state change that feels written for this one element (icon slides, color shifts, line travels with stable caps).
+- **Considered light:** one directional, specific color — not a symmetric radial halo.
+- **Self-colored borders:** a 1px stroke in the surface's own color at low opacity, with an inner top highlight, instead of a hard contrasting outline.
+- **Grainy gradients:** dithered or noised transitions, never banded.
+- **Full-page composition:** the hero owns the fold; oversized type, generous negative space, art-directed as one frame.
+- **Real logo walls:** earned, monochrome, even-sized.
+- **Scroll-authored motion:** subtle movement tied to scroll, with reduced-motion fallback.
+- **Premium glass (when earned):** over a rich background, with gloss highlight, clean blur, no leak, no pop.
+- **Component libraries:** use real libraries (shadcn, Radix, etc.) for primitives, but de-slop the defaults — never ship a stock block unedited.
 
 ## 6. How to measure slop
 
@@ -235,7 +316,11 @@ Before returning prose or a design, answer:
 7. Are headings sentence case (except proper nouns)?
 8. Are lists capped at five items?
 9. Is there a single concrete next action at the end (if needed)?
-10. Does the design avoid the visual-slop checklist above?
+10. Does this avoid the banned words, phrases, and structural tells?
+11. Does the design avoid default fonts, colors, layouts, and component clichés?
+12. Is there one signature artifact and a cohesive visual language?
+13. Is every interactive control tested and working?
+14. Is content visible without waiting for any animation or reveal?
 
 ## 8. Workflow
 
