@@ -1684,9 +1684,10 @@
     "id": "viral-rewrite-68",
     "scheduleDate": "2026-07-24",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The person who talks the most often gets picked as leader, even if they aren't the best. We confuse airtime with competence. The real leaders might be the quiet ones who listen first. Find teams that value quality over volume at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_39_1.jpg"
+    "image": "scripts/post-images/post_39_1.jpg",
+    "error": "Media failed: scripts/post-images/post_39_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-69",

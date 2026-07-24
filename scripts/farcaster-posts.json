@@ -1775,9 +1775,11 @@
     "id": "viral-rewrite-67",
     "scheduleDate": "2026-07-24",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Happiness isn't a summit you reach. It's how you spend most days. Success gives you a moment. Joy gives you a routine. The best job isn't the one with the highest peak. It's the one with the best average day. Find that at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_150_1.jpg"
+    "image": "scripts/post-images/post_150_1.jpg",
+    "postedAt": "2026-07-24T12:06:19.415Z",
+    "castHash": "0x18a0a34dedaaa93f0567277e884821f3ef608b11"
   },
   {
     "id": "viral-rewrite-68",
