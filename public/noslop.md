@@ -379,6 +379,131 @@ Run through this before delivering prose or a design:
 - **Meta-joiners:** "The rest of this essay...", "As mentioned earlier..."? Delete. Let the text move.
 - **Lazy extremes:** "every", "always", "never" doing vague work? Replace with a specific scope or example.
 
+## 10. Extended visual, UX, and premium-design reference
+
+The following items expand the visual and design checklists. They are drawn from the pols.dev anti-slop design law and included here so this file can stand alone.
+
+### More component clichés
+
+- Oversized icon sitting inside a filled, rounded square or circle as a hero visual or feature bullet.
+- Floating cards that bob or parallax over a hero with no real purpose.
+- Cut-off glow: a soft light clipped hard by `overflow: hidden` or a section edge.
+- Kitchen-sink cards that stack an icon tile, category pill, tags, divider, price, and glowy button.
+- Fake macOS or app window mockups with traffic-light dots and made-up UI.
+- Fake code-snippet windows with a `quickstart.ts` tab, purple/green/grey syntax, and a toy SDK call.
+- Floating tag or info chip pinned to a corner of an image.
+- Pre-footer CTA banner: a full-width gradient slab with centered headline, byline, and buttons.
+- Logo lockup: gradient squircle icon plus generic wordmark.
+- Gradient-circle initials avatars, especially blue-to-purple.
+- Gradient-filled headline text via `background-clip: text`.
+- Hairline light border on every card or box.
+- Countdown timers faking urgency.
+- Cards that lift, shadow, and glow on hover by default.
+- Decorative unrounded hairline rules beside labels or between blocks.
+- Little rule beside a label (the eyebrow tick).
+- Sun-and-moon theme toggles and redrawn thin-line "custom" icons.
+- Dots under active nav items.
+- Tinted pill chips wrapped around every tag, status, or metadata scrap.
+- Controls that look interactive but do nothing when clicked.
+- Inner-glow boxes or pulsing status dots.
+- Off-center strike or cut lines through text.
+- Multi-line headlines that wrap into three or four short stacked rows, especially with one colored word dangling at the end.
+- Filled primary button beside an outlined "ghost" secondary button.
+- Numbered steps beside a vertical unrounded rail.
+- Oversized footer wordmark that is not composed: off-center, clipped, gradient-clashing, or pasted flat.
+
+### More layout and surface tells
+
+- Split hero: text column on one side, product panel or image on the other, reused everywhere.
+- Grid or graph-paper backgrounds, faint or full-bleed.
+- Crude CSS/SVG "illustrations": rounded bar charts, floating spheres, orbit rings, mock stat cards.
+- Background glow blobs bleeding from corners or centers.
+- Fixed background layers that simply trail behind the scroll with no real interaction.
+- Hard image seams where a full-bleed photo butts against a flat section. Feather the image itself over a tall section with many gradient stops and continuous page color.
+- Content flung to the far edges with a dead gulf in the middle.
+- Text jammed against the rim of the viewport or container.
+- Content sliced by a `clip-path`, notch, or `overflow: hidden` without padding clear of the cut.
+- Parallel columns that go ragged because content length pushes buttons around.
+- Misaligned centered glyphs or numbers inside circles, pills, or buttons.
+- Faking a shadow with a literal second offset box behind the element.
+- Grain sitting over text or icons instead of behind them.
+- Blue-charcoal dark mode (`#0c0e15`) with a lilac or periwinkle accent.
+- Cream / beige "editorial" backgrounds.
+- Cool light gray (`#f3f4f6`, `#eceef2`) as footer band, card fill, or page base.
+- Saturated mid-brightness accent sprayed on type, dots, and buttons. Prefer tonal shifts.
+
+### Deeper tells that survive the checklist
+
+- The "tasteful" font swap: reaching for the known-good free font (Big Shoulders, Newsreader, Instrument Serif, Bricolage) instead of picking for the brief.
+- The same skeleton, recolored: documenting a layout as slop then rebuilding it in new colors.
+- The "correct" footer with no idea.
+- No icons at all: over-correcting to a flat, lifeless interface.
+- Avoiding the list is not design. A checklist only makes work less wrong; it does not make it good. Start from a point of view.
+
+### Premium craft reference
+
+Premium is not absence of slop. It is craft, restraint, and uniqueness.
+
+- Real translucency: glass over a real backdrop, with refraction, chromatic dispersion at edges, a bright top highlight, frost, and tight shadows.
+- Self-colored borders: shift surface value slightly and use a 1px stroke in the surface's own color at low opacity plus a soft inner top highlight.
+- Bespoke geometry: invented silhouettes for dividers, corners, and connectors instead of straight rectangles.
+- Bare icons as marks, not inside tiles.
+- Say less: cut every line that is not load-bearing.
+- Custom, in-house iconography: one consistent stroke, corner, and grid.
+- Authored micro-interactions: state changes that feel written for one element, with stable caps and smooth easing.
+- Considered light: a specific, directional color and falloff, not a symmetric bloom.
+- Premium noise: very low opacity film grain or Perlin noise on substrates, never over text.
+- Liquid-glass button recipe (over a real background):
+  - Thin pill: fill `#2575FF`, 20% opacity hairlines tinted cyan `#22BBFD` and white `#FFFFFF`, white inner top highlight `1px 0 32px` at 20% opacity, fill-tinted drop shadow `#2575FF` `0 3px 3px` at 6% opacity, `backdrop-filter: blur(6px)` with `saturate()`/`contrast()` lensing, optional 1px cyan/magenta edge offsets for dispersion.
+  - Type: Geist Medium, 20px, white label, 8px icon gap, 20px horizontal / 14px vertical padding.
+- Premium type usually means licensed or self-hosted faces (Perfectly Nineties, Matter, Soehne, GT America, Tiempos, Klim; free Fontshare options). Pair with one neutral body.
+- Full-page composition: the hero owns the fold with big scale, generous negative space, and one signature artifact.
+- Real logo walls: earned, monochrome, even-sized.
+- Blueprint / canvas backgrounds: fine grids, ruler ticks, corner marks, dashed guides, kept subtle and monochrome.
+- Inset "island" sections: rounded panel with consistent margin on all sides, floating on a different surface.
+- Crafted custom SVG renders: detailed, correct proportions, considered color and light.
+- The good grid: a fine textured micro-grid as a printed substrate, not graph paper.
+- Grainy gradients: dither or noise any large color transition so it does not band.
+- Scroll-authored motion: subtle movement tied to scroll, with `prefers-reduced-motion` fallback.
+- Oversized footer wordmark placed right: anchored flush to the bottom edge, on top of any background texture.
+
+### The signature formula
+
+A page can pass every rule and still be boring if it has no signature. Uniqueness needs:
+
+1. One signature artifact that could not be pasted into another site.
+2. Atmosphere: a composed background with depth, not a flat fill.
+3. Layered depth: foreground, midground, background, with something overlapping or bleeding.
+4. The product as a real, populated artifact (only when there is one).
+5. Character in the display type.
+6. One bespoke silhouette.
+7. A treated nav.
+8. Real specifics: names, data, logos, copy.
+
+`uniqueness = one signature artifact + atmosphere + layered depth + character display type + one bespoke silhouette + treated nav + real specifics`.
+
+### Field notes
+
+- Cohesion is the whole game: one palette, one type voice, one signature artifact, one world.
+- "Creative" is not "realistic": choose one authored medium (cyanotype, riso, pixel art, painted sky) instead of literal stock realism.
+- Type without the Google slop shelf: self-host Fontshare (General Sans, Cabinet Grotesk, Satoshi, Switzer, etc.) or licensed faces via `next/font/local`.
+- Product-as-artifact is a signature when the UI is real, populated, and interactive; a fake dashboard for a non-existent product is a copied template.
+- Take the design language from references, never the content.
+- Distinctive fonts keep moving; the known free grotesques now read generic. Reach further (Pally, Gambarino, Sentient, Tanker, Velvetyne) and pair with a true neutral body like `system-ui`.
+- Dead-looking is a fail on its own. Add authored, purposeful motion; do not gate content on entrance reveals.
+
+### Standing toolkit
+
+Use real component libraries for primitives, then art-direct hard:
+
+- `motion` (motion.dev): springs, scroll transforms, animated numbers, marquees.
+- `shadcn/ui` (ui.shadcn.com): accessible Radix + Tailwind primitives.
+- `tailark` (tailark.com): marketing blocks.
+- `motion-primitives` (motion-primitives.com): animated text, tabs, accordions, sliders.
+- `kokonutui` (kokonutui.com): Tailwind v4 + Motion components, AI states.
+
+In non-Tailwind projects, install `motion` for animation and adapt the structure, not the classes. Strip out any default slop from prebuilt blocks.
+
 ## License
 
 MIT.
