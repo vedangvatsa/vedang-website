@@ -1765,9 +1765,11 @@
     "id": "viral-rewrite-66",
     "scheduleDate": "2026-07-23",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Salary and title are easy to measure. Mental health, free time, and liking what you do are harder but more important. A successful life isn't a longer resume. It's a better daily life. Find roles that build both at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_188_1.jpg"
+    "image": "scripts/post-images/post_188_1.jpg",
+    "postedAt": "2026-07-24T04:43:29.919Z",
+    "castHash": "0x0a99efb3ebd359c4bebd565f1b0ad7e331734f33"
   },
   {
     "id": "viral-rewrite-67",
