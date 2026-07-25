@@ -18,14 +18,14 @@ export function CommandBlock({ command }: { command: string }) {
   }
 
   return (
-    <div className='relative'>
-      <pre className='overflow-x-auto rounded-lg bg-black p-4 pr-12 text-sm font-mono text-white'>
+    <div className='relative w-full'>
+      <pre className='overflow-x-auto rounded-lg bg-black px-12 py-4 text-center text-sm font-mono text-white'>
         {command}
       </pre>
       <Button
         variant='ghost'
         size='icon'
-        className='absolute top-2 right-2 h-8 w-8 text-zinc-400 hover:bg-white/10 hover:text-white'
+        className='absolute top-1/2 right-2 h-8 w-8 -translate-y-1/2 text-zinc-400 hover:bg-white/10 hover:text-white'
         onClick={handleCopy}
         aria-label='Copy command'
       >
