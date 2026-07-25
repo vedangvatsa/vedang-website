@@ -2013,9 +2013,11 @@
     "id": "viral-rewrite-58",
     "scheduleDate": "2026-07-21",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Introverts often make better leaders than the stereotype suggests. They listen more, talk less, and create space for others. The best hiring process doesn't confuse volume with leadership.",
-    "image": "scripts/post-images/post_117_1.jpg"
+    "image": "scripts/post-images/post_117_1.jpg",
+    "postedAt": "2026-07-25T20:01:16.073Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mrintudjk62z"
   },
   {
     "id": "viral-rewrite-59",

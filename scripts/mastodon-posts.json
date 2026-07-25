@@ -1745,9 +1745,10 @@
     "id": "viral-rewrite-75",
     "scheduleDate": "2026-07-26",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Procrastination isn't laziness. It's avoiding the feeling a task gives you. Fear, boredom, self-doubt. The task you keep putting off might be the one that matters most. Find roles where the hard work feels meaningful at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_161_1.jpg"
+    "image": "scripts/post-images/post_161_1.jpg",
+    "error": "Media failed: scripts/post-images/post_161_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-76",
