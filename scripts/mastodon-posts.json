@@ -1711,9 +1711,10 @@
     "id": "viral-rewrite-71",
     "scheduleDate": "2026-07-25",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Impostor syndrome says 'I'll be found out.' Growth mindset says 'I'll figure it out.' The difference isn't confidence. It's the belief that you can learn. Find teams that reward growth over perfection at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_19_1.jpg"
+    "image": "scripts/post-images/post_19_1.jpg",
+    "error": "Media failed: scripts/post-images/post_19_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-72",
