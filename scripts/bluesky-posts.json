@@ -2033,9 +2033,11 @@
     "id": "viral-rewrite-60",
     "scheduleDate": "2026-07-21",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Asking about pay isn't greedy. It's responsible. People want to know they can support themselves and be treated fairly. Managers who punish this question are hiding something.",
-    "image": "scripts/post-images/post_82_1.jpg"
+    "image": "scripts/post-images/post_82_1.jpg",
+    "postedAt": "2026-07-26T11:57:50.733Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mrkdce7wzj2t"
   },
   {
     "id": "viral-rewrite-61",

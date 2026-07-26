@@ -1738,9 +1738,10 @@
     "id": "viral-rewrite-74",
     "scheduleDate": "2026-07-26",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Titles give you authority. Impact gives you influence. The day you start growing people, not just numbers, is the day you become a real leader. Find leaders who grow people at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_7_1.jpg"
+    "image": "scripts/post-images/post_7_1.jpg",
+    "error": "Media failed: scripts/post-images/post_7_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-75",
