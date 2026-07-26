@@ -1729,9 +1729,10 @@
     "id": "viral-rewrite-73",
     "scheduleDate": "2026-07-26",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "In toxic relationships, honesty feels like betrayal. In healthy ones, honesty is loyalty. The people who care about you will tell you the truth. Find teams where candor is care at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_79_1.jpg"
+    "image": "scripts/post-images/post_79_1.jpg",
+    "error": "Media failed: scripts/post-images/post_79_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-74",

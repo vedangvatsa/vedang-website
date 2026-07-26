@@ -1825,9 +1825,11 @@
     "id": "viral-rewrite-72",
     "scheduleDate": "2026-07-25",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Changing your mind isn't weakness. It's how you get smarter. The people who stick to wrong opinions out of pride cost themselves more than they save. Find teams that reward learning over being right at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_130_1.jpg"
+    "image": "scripts/post-images/post_130_1.jpg",
+    "postedAt": "2026-07-26T04:46:55.483Z",
+    "castHash": "0x834e439b317d341085c536c232e141bfb052b342"
   },
   {
     "id": "viral-rewrite-73",
