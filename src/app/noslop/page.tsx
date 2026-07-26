@@ -13,6 +13,20 @@ export const metadata: Metadata = {
     description: 'Standing agent law against AI slop in prose, UI, and code.',
     url: 'https://veda.ng/noslop',
     type: 'website',
+    images: [
+      {
+        url: '/noslop/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'NoSlop: standing agent law against AI slop',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NoSlop',
+    description: 'Standing agent law against AI slop in prose, UI, and code.',
+    images: ['/noslop/opengraph-image.png'],
   },
 };
 
