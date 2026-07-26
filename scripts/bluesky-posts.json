@@ -2043,9 +2043,11 @@
     "id": "viral-rewrite-61",
     "scheduleDate": "2026-07-22",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Power reveals character. Some people use authority to control. Others use it to remove obstacles. The difference is whether people grow under them or shrink.",
-    "image": "scripts/post-images/post_196_1.jpg"
+    "image": "scripts/post-images/post_196_1.jpg",
+    "postedAt": "2026-07-26T20:00:18.088Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mrl6b2hw2i2z"
   },
   {
     "id": "viral-rewrite-62",

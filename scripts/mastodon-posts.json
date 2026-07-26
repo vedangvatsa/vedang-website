@@ -1772,9 +1772,10 @@
     "id": "viral-rewrite-78",
     "scheduleDate": "2026-07-27",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Impostor syndrome is strange. You trust your negative self-view but not the positive view of others. If you're going to doubt something, doubt your own doubt. The people who believe in you might be seeing something you can't. Find teams that see your potential at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_144_1.jpg"
+    "image": "scripts/post-images/post_144_1.jpg",
+    "error": "Media failed: scripts/post-images/post_144_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-79",
