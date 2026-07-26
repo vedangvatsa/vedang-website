@@ -1,11 +1,14 @@
 import Link from 'next/link';
+import { Linkedin, Twitter } from 'lucide-react';
 
 interface AuthorBylineProps {
   /** Optional extra links or labels shown after the author name, e.g. { label: 'GitHub', href: '...' } */
   links?: { label: string; href?: string }[];
+  /** Show X and LinkedIn icons after the name */
+  socials?: boolean;
 }
 
-export function AuthorByline({ links }: AuthorBylineProps) {
+export function AuthorByline({ links, socials = false }: AuthorBylineProps) {
   return (
     <div className="mt-8 flex items-center justify-center gap-3">
       <Link href="/profile">
@@ -41,6 +44,28 @@ export function AuthorByline({ links }: AuthorBylineProps) {
             )}
           </span>
         ))}
+        {socials && (
+          <span className="ml-2 inline-flex items-center gap-1 text-muted-foreground">
+            <Link
+              href="https://x.com/vedangvatsa"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X"
+              className="p-1.5 hover:text-foreground transition-colors"
+            >
+              <Twitter className="h-4 w-4" />
+            </Link>
+            <Link
+              href="https://linkedin.com/in/vedangvatsa"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="p-1.5 hover:text-foreground transition-colors"
+            >
+              <Linkedin className="h-4 w-4" />
+            </Link>
+          </span>
+        )}
       </div>
     </div>
   );

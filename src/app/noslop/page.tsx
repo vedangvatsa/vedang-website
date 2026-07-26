@@ -26,7 +26,7 @@ export default function NoSlopPage() {
         <p className='mt-4 sm:mt-5 text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed'>
           Standing agent law against AI slop in prose, UI, and code.
         </p>
-        <AuthorByline links={[{ label: 'GitHub', href: 'https://github.com/vedangvatsa/vedang-website' }]} />
+        <AuthorByline socials />
         <div className='mt-8 w-full space-y-4'>
           <CommandBlock command='curl -fsSL https://veda.ng/noslop.md -o noslop.md' />
           <div className='flex flex-wrap items-center justify-center gap-3'>
