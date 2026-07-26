@@ -59,8 +59,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: { absolute: title },
     description,
     alternates: { canonical: `/web3/${slug}` },
-    openGraph: { title, description, url: `https://veda.ng/web3/${slug}` },
-    twitter: { card: 'summary_large_image', title, description },
+    openGraph: { title, description, url: `https://veda.ng/web3/${slug}`,
+      images: [{ url: `/web3/${slug}/opengraph-image.png`, width: 1200, height: 630 }],
+    },
+    twitter: { card: 'summary_large_image', title, description,
+      images: [`/web3/${slug}/opengraph-image.png`],
+    },
   };
 }
 

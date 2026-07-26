@@ -50,8 +50,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: { absolute: title },
     description: moduleDesc,
     alternates: { canonical: `/agentic/${slug}` },
-    openGraph: { title, description: moduleDesc, url: `https://veda.ng/agentic/${slug}` },
-    twitter: { card: 'summary_large_image', title, description: moduleDesc },
+    openGraph: { title, description: moduleDesc, url: `https://veda.ng/agentic/${slug}`,
+      images: [{ url: `/agentic/${slug}/opengraph-image.png`, width: 1200, height: 630 }],
+    },
+    twitter: { card: 'summary_large_image', title, description: moduleDesc,
+      images: [`/agentic/${slug}/opengraph-image.png`],
+    },
   };
 }
 

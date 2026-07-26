@@ -160,11 +160,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       authors: ['https://veda.ng'],
       section: 'Technology',
       ...(essay.frontmatter.keywords && { tags: essay.frontmatter.keywords }),
+      images: [{ url: `/${slug}/opengraph-image.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: essay.frontmatter.title,
       description: essay.frontmatter.summary,
+      images: [`/${slug}/opengraph-image.png`],
     },
   };
 }

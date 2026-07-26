@@ -60,8 +60,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: { absolute: title },
     description,
     alternates: { canonical: `/vibecoding/${slug}` },
-    openGraph: { title, description, url: `https://veda.ng/vibecoding/${slug}` },
-    twitter: { card: 'summary_large_image', title, description },
+    openGraph: { title, description, url: `https://veda.ng/vibecoding/${slug}`,
+      images: [{ url: `/vibecoding/${slug}/opengraph-image.png`, width: 1200, height: 630 }],
+    },
+    twitter: { card: 'summary_large_image', title, description,
+      images: [`/vibecoding/${slug}/opengraph-image.png`],
+    },
   };
 }
 

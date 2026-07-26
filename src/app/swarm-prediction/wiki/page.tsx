@@ -23,11 +23,13 @@ export const metadata: Metadata = {
     description: 'Five-stage pipeline: document ingestion, knowledge graph, agent generation, multi-round debate, and consensus report.',
     url: '/swarm-prediction/wiki',
     type: 'article',
+    images: [{ url: '/swarm-prediction/wiki/opengraph-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary',
     title: 'How Swarm Prediction Works',
     description: 'Technical architecture of the swarm intelligence prediction engine.',
+    images: ['/swarm-prediction/wiki/opengraph-image.png'],
   },
 };
 

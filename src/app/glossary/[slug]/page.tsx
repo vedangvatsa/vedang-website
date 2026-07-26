@@ -55,11 +55,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: truncatedDescription,
       url: `/glossary/${term.slug}`,
       type: 'article',
+      images: [{ url: `/glossary/${slug}/opengraph-image.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${term.term} | Glossary`,
       description: truncatedDescription,
+      images: [`/glossary/${slug}/opengraph-image.png`],
     },
   };
 }
