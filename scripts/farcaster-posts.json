@@ -1865,9 +1865,11 @@
     "id": "viral-rewrite-76",
     "scheduleDate": "2026-07-27",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Meetings have tripled, but most don't serve any real purpose. Meet only to decide, learn, bond, or do. If none of those apply, cancel it. Time is the one resource you can't get back. Find teams that protect it at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_80_1.jpg"
+    "image": "scripts/post-images/post_80_1.jpg",
+    "postedAt": "2026-07-27T12:42:12.072Z",
+    "castHash": "0x196fe1f88050d180a800ff8b16c20feb2d366d5e"
   },
   {
     "id": "viral-rewrite-77",

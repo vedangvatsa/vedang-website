@@ -2063,9 +2063,11 @@
     "id": "viral-rewrite-63",
     "scheduleDate": "2026-07-22",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "People do better work when they can say they don't know, made a mistake, or disagree. Without that safety, teams hide problems and repeat them. With it, they fix problems faster.",
-    "image": "scripts/post-images/post_141_1.jpg"
+    "image": "scripts/post-images/post_141_1.jpg",
+    "postedAt": "2026-07-27T12:42:06.976Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mrmwagong32m"
   },
   {
     "id": "viral-rewrite-64",
