@@ -1875,9 +1875,11 @@
     "id": "viral-rewrite-77",
     "scheduleDate": "2026-07-27",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The best leaders don't start by speaking. They start by listening. You can't lead people you don't understand. Listening isn't passive. It's how you gather the truth before you make decisions. Find leaders who listen first at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_136_1.jpg"
+    "image": "scripts/post-images/post_136_1.jpg",
+    "postedAt": "2026-07-27T20:07:54.964Z",
+    "castHash": "0xc54cb4e4cad90b95b006ffe25d3cff7556712675"
   },
   {
     "id": "viral-rewrite-78",
