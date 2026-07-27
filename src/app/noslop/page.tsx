@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/noslop/opengraph-image.png',
+        url: '/noslop/opengraph-image',
         width: 1200,
         height: 630,
         alt: 'NoSlop: standing agent law against AI slop',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NoSlop',
     description: 'Standing agent law against AI slop in prose, UI, and code.',
-    images: ['/noslop/opengraph-image.png'],
+    images: ['/noslop/opengraph-image'],
   },
 };
 
