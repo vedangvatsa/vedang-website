@@ -3,16 +3,17 @@
 import { useState } from 'react';
 import { Copy, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { copyText } from '@/lib/copy-text';
 
 export function CommandBlock({ command }: { command: string }) {
   const [copied, setCopied] = useState(false);
 
   async function handleCopy() {
     try {
-      await navigator.clipboard.writeText(command);
+      await copyText(command);
       setCopied(true);
     } catch {
-      // ignore
+      // keep UI quiet; user can still select the command manually
     }
     setTimeout(() => setCopied(false), 2000);
   }
@@ -23,6 +24,7 @@ export function CommandBlock({ command }: { command: string }) {
         {command}
       </pre>
       <Button
+        type='button'
         variant='ghost'
         size='icon'
         className='absolute top-1/2 right-2 h-8 w-8 -translate-y-1/2 text-zinc-400 hover:bg-white/10 hover:text-white'

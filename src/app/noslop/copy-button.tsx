@@ -2,15 +2,16 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { copyText } from '@/lib/copy-text';
 
-export function CopyButton() {
+export function CopyButton({ text }: { text: string }) {
   const [label, setLabel] = useState('Copy prompt');
 
   async function handleCopy() {
     try {
-      const res = await fetch('/noslop.md');
-      const text = await res.text();
-      await navigator.clipboard.writeText(text);
+      // Text is already in memory (passed from the server) so we never
+      // `await fetch` inside the click — Safari keeps user activation.
+      await copyText(text);
       setLabel('Copied');
     } catch {
       setLabel('Failed');
@@ -19,7 +20,12 @@ export function CopyButton() {
   }
 
   return (
-    <Button variant='outline' className='border-black text-black hover:bg-zinc-100' onClick={handleCopy}>
+    <Button
+      type='button'
+      variant='outline'
+      className='border-black text-black hover:bg-zinc-100'
+      onClick={handleCopy}
+    >
       {label}
     </Button>
   );

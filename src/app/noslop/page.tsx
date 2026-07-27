@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import { readFile } from 'fs/promises';
+import path from 'path';
 import { PageLayout } from '@/components/page-layout';
 import { AuthorByline } from '@/components/author-byline';
 import { Button } from '@/components/ui/button';
@@ -30,7 +32,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function NoSlopPage() {
+export default async function NoSlopPage() {
+  // Load prompt at request/build time so the client copy handler never has to
+  // fetch first (Safari drops clipboard permission after await fetch).
+  const prompt = await readFile(
+    path.join(process.cwd(), 'public', 'noslop.md'),
+    'utf8',
+  );
+
   return (
     <PageLayout wide center>
       <div className='mx-auto flex w-full max-w-2xl flex-col items-center py-8 text-center'>
@@ -47,7 +56,7 @@ export default function NoSlopPage() {
             <Button asChild className='bg-black text-white hover:bg-zinc-800'>
               <a href='/noslop.md' download>Download noslop.md</a>
             </Button>
-            <CopyButton />
+            <CopyButton text={prompt} />
           </div>
         </div>
       </div>
