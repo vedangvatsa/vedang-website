@@ -20,7 +20,7 @@ export function CommandBlock({ command }: { command: string }) {
 
   return (
     <div className='relative w-full'>
-      <pre className='overflow-x-auto rounded-lg bg-black px-12 py-4 text-center text-sm font-mono text-white'>
+      <pre className='whitespace-pre-wrap break-words rounded-lg bg-black px-4 py-4 pr-10 text-left text-xs font-mono text-white sm:px-12 sm:text-center sm:text-sm'>
         {command}
       </pre>
       <Button
