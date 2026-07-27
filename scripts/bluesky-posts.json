@@ -2053,9 +2053,11 @@
     "id": "viral-rewrite-62",
     "scheduleDate": "2026-07-22",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Transparency isn't dumping every detail. It's giving people the context behind decisions. Context builds trust. Secrecy breeds rumor.",
-    "image": "scripts/post-images/post_46_1.jpg"
+    "image": "scripts/post-images/post_46_1.jpg",
+    "postedAt": "2026-07-27T04:50:34.207Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mrm3vanoa22y"
   },
   {
     "id": "viral-rewrite-63",
