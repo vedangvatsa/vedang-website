@@ -2083,9 +2083,11 @@
     "id": "viral-rewrite-65",
     "scheduleDate": "2026-07-23",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The people who climb for power rarely become the leaders people want. The ones who climb to serve do. Leadership isn't a status that lightens your load. It's a commitment to carry more of it for others.",
-    "image": "scripts/post-images/post_106_1.jpg"
+    "image": "scripts/post-images/post_106_1.jpg",
+    "postedAt": "2026-07-28T04:42:04.807Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mroluxhj5t2g"
   },
   {
     "id": "viral-rewrite-66",

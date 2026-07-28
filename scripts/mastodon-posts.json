@@ -1783,9 +1783,10 @@
     "id": "viral-rewrite-79",
     "scheduleDate": "2026-07-28",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The wrong career is often the one you chose to look impressive. The right one is the one that makes you feel alive. Prestige fades. Meaning compounds. Find work that expresses your values, not just your image, at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_28_1.jpg"
+    "image": "scripts/post-images/post_28_1.jpg",
+    "error": "Media failed: scripts/post-images/post_28_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-80",
