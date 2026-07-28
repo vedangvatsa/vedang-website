@@ -2093,9 +2093,11 @@
     "id": "viral-rewrite-66",
     "scheduleDate": "2026-07-23",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Salary and title are easy to measure. Mental health, free time, and liking what you do are harder but more important. A successful life isn't a longer resume. It's a better daily life.",
-    "image": "scripts/post-images/post_188_1.jpg"
+    "image": "scripts/post-images/post_188_1.jpg",
+    "postedAt": "2026-07-28T12:16:44.932Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mrpfbyjgx72o"
   },
   {
     "id": "viral-rewrite-67",

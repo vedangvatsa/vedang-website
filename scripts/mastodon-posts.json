@@ -1792,9 +1792,10 @@
     "id": "viral-rewrite-80",
     "scheduleDate": "2026-07-28",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "You are not a machine. Your best will look different each day. Some days you'll produce. Some days you'll recover. Both are part of the job. The teams that understand this get better long-term output. Find teams that don't expect you to run at max speed every day at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_77_1.jpg"
+    "image": "scripts/post-images/post_77_1.jpg",
+    "error": "Media failed: scripts/post-images/post_77_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-81",
