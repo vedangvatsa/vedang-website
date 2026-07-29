@@ -2133,9 +2133,11 @@
     "id": "viral-rewrite-70",
     "scheduleDate": "2026-07-25",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Don't wait until you're exhausted to care for your mental health. Good habits aren't for emergencies. They're prevention. The teams that thrive long-term are the ones that treat mental health as normal maintenance, not a crisis response.",
-    "image": "scripts/post-images/post_162_1.jpg"
+    "image": "scripts/post-images/post_162_1.jpg",
+    "postedAt": "2026-07-29T20:03:29.840Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mrsptjidcs2b"
   },
   {
     "id": "viral-rewrite-71",
