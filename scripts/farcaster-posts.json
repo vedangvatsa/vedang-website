@@ -1925,9 +1925,11 @@
     "id": "viral-rewrite-82",
     "scheduleDate": "2026-07-29",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "It shouldn't take a crisis to put your well-being above your career. The choice between success and health is a false one. The best work comes from people who are energized, not drained. Find roles that invigorate you at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_116_1.jpg"
+    "image": "scripts/post-images/post_116_1.jpg",
+    "postedAt": "2026-07-29T12:20:16.503Z",
+    "castHash": "0x394f403a77338dcf2abae0369bbade88f22d5ad3"
   },
   {
     "id": "viral-rewrite-83",

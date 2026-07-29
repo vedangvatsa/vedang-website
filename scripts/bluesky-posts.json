@@ -2123,9 +2123,11 @@
     "id": "viral-rewrite-69",
     "scheduleDate": "2026-07-24",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Leadership isn't a title you earn. It's a decision you make to help others grow. The rank on your badge matters less than the impact you have on the people around you.",
-    "image": "scripts/post-images/post_186_1.jpg"
+    "image": "scripts/post-images/post_186_1.jpg",
+    "postedAt": "2026-07-29T12:20:11.570Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mrrvx2zf4e27"
   },
   {
     "id": "viral-rewrite-70",

@@ -1819,9 +1819,10 @@
     "id": "viral-rewrite-83",
     "scheduleDate": "2026-07-29",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The biggest asset you have is your mindset. Skills can be taught. Circumstances change. But the way you interpret setbacks, handle uncertainty, and keep going determines what you can build. Find teams that build mindsets at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_177_1.jpg"
+    "image": "scripts/post-images/post_177_1.jpg",
+    "error": "Media failed: scripts/post-images/post_177_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-84",
