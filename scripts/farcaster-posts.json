@@ -1915,9 +1915,11 @@
     "id": "viral-rewrite-81",
     "scheduleDate": "2026-07-28",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Honesty doesn't happen in environments where people are punished for speaking. Real listening means hearing things you don't want to hear and not reacting. Find teams where honesty is safe at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_168_1.jpg"
+    "image": "scripts/post-images/post_168_1.jpg",
+    "postedAt": "2026-07-29T04:43:05.141Z",
+    "castHash": "0x48b5b2f0aebe576a256f2d672586740c2e08e273"
   },
   {
     "id": "viral-rewrite-82",
