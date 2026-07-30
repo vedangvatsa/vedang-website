@@ -1955,9 +1955,11 @@
     "id": "viral-rewrite-85",
     "scheduleDate": "2026-07-30",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Staying loyal shouldn't cost you money. New hires often earn more than people who stayed. The people who stuck around end up paying a loyalty tax. Companies should reward retention, not just recruitment. Find teams that reward commitment at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_18_1.jpg"
+    "image": "scripts/post-images/post_18_1.jpg",
+    "postedAt": "2026-07-30T12:12:35.327Z",
+    "castHash": "0x959d6e34ce227f04ecd18ba794a06397ce936e78"
   },
   {
     "id": "viral-rewrite-86",

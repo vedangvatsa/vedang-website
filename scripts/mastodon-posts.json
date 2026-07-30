@@ -1846,9 +1846,10 @@
     "id": "viral-rewrite-86",
     "scheduleDate": "2026-07-30",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Good leaders trust their people. Bad leaders micromanage. Good leaders motivate through empathy. Bad leaders use fear. The difference isn't training. It's character. Find leaders who lead with trust and care at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_125_1.jpg"
+    "image": "scripts/post-images/post_125_1.jpg",
+    "error": "Media failed: scripts/post-images/post_125_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-87",
