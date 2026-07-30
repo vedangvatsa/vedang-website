@@ -2163,9 +2163,11 @@
     "id": "viral-rewrite-73",
     "scheduleDate": "2026-07-26",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "In toxic relationships, honesty feels like betrayal. In healthy ones, honesty is loyalty. The people who care about you will tell you the truth.",
-    "image": "scripts/post-images/post_79_1.jpg"
+    "image": "scripts/post-images/post_79_1.jpg",
+    "postedAt": "2026-07-30T20:05:35.852Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mrvag762um27"
   },
   {
     "id": "viral-rewrite-74",

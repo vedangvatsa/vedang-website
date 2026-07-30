@@ -1880,9 +1880,10 @@
     "id": "viral-rewrite-90",
     "scheduleDate": "2026-07-31",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Wisdom isn't about years lived. It's about lessons learned. Two people can have the same experience and learn completely different things. The difference is reflection. Find teams that learn from experience at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_169_1.jpg"
+    "image": "scripts/post-images/post_169_1.jpg",
+    "error": "Media failed: scripts/post-images/post_169_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-91",
