@@ -1945,9 +1945,11 @@
     "id": "viral-rewrite-84",
     "scheduleDate": "2026-07-29",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Intelligence is knowing. Wisdom is connecting. Smart people advance their own ideas. Wise people integrate everyone's. The best teams don't need the smartest person in the room. They need the person who can make the room smarter. Find teams that value wisdom at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_175_1.jpg"
+    "image": "scripts/post-images/post_175_1.jpg",
+    "postedAt": "2026-07-30T04:39:17.071Z",
+    "castHash": "0xb2a7c32e2497b4e1aea7d9858330c67984851e91"
   },
   {
     "id": "viral-rewrite-85",
