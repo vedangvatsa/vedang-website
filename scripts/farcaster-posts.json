@@ -1985,9 +1985,11 @@
     "id": "viral-rewrite-88",
     "scheduleDate": "2026-07-31",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Work-life balance sets the bar too low. We shouldn't hope work doesn't interfere with life. We should hope work enriches it. A toxic job drains you. A decent one sustains you. A healthy one invigorates you. Find the third kind at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_120_1.jpg"
+    "image": "scripts/post-images/post_120_1.jpg",
+    "postedAt": "2026-07-31T12:18:18.135Z",
+    "castHash": "0x35a2002bc8e7c7df777f2dd7005313461f960df3"
   },
   {
     "id": "viral-rewrite-89",

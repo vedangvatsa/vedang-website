@@ -1873,9 +1873,10 @@
     "id": "viral-rewrite-89",
     "scheduleDate": "2026-07-31",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Hard times hurt, but they also shake loose old habits. The teams that come out stronger are the ones that use the mess as a reason to rebuild. Find teams that turn setbacks into something better at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_72_1.jpg"
+    "image": "scripts/post-images/post_72_1.jpg",
+    "error": "Media failed: scripts/post-images/post_72_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-90",
