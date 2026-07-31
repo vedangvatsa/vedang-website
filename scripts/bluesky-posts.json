@@ -2193,9 +2193,11 @@
     "id": "viral-rewrite-76",
     "scheduleDate": "2026-07-27",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Meetings have tripled, but most don't serve any real purpose. Meet only to decide, learn, bond, or do. If none of those apply, cancel it. Time is the one resource you can't get back.",
-    "image": "scripts/post-images/post_80_1.jpg"
+    "image": "scripts/post-images/post_80_1.jpg",
+    "postedAt": "2026-07-31T20:07:05.207Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mrxqxq3liy2r"
   },
   {
     "id": "viral-rewrite-77",
