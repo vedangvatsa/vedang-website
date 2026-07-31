@@ -1975,9 +1975,11 @@
     "id": "viral-rewrite-87",
     "scheduleDate": "2026-07-30",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Chasing likes turns communication into a performance. The people who build real careers use platforms to share ideas and learn, not to collect approval. Build your network at cvin.bio/li",
-    "image": "scripts/post-images/post_124_1.jpg"
+    "image": "scripts/post-images/post_124_1.jpg",
+    "postedAt": "2026-07-31T04:46:41.969Z",
+    "castHash": "0x088c4c13b6078ffef5a83b5ef5a6b57849cfbc27"
   },
   {
     "id": "viral-rewrite-88",
