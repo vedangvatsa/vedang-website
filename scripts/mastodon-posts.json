@@ -1900,9 +1900,10 @@
     "id": "viral-rewrite-92",
     "scheduleDate": "2026-08-01",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The best leaders measure their height by how many people they helped rise. Status without service is just a title. Find leaders who grow people at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_179_1.jpg"
+    "image": "scripts/post-images/post_179_1.jpg",
+    "error": "Media failed: scripts/post-images/post_179_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-93",
