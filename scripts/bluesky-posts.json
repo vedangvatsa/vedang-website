@@ -2203,9 +2203,11 @@
     "id": "viral-rewrite-77",
     "scheduleDate": "2026-07-27",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The best leaders don't start by speaking. They start by listening. You can't lead people you don't understand. Listening isn't passive. It's how you gather the truth before you make decisions.",
-    "image": "scripts/post-images/post_136_1.jpg"
+    "image": "scripts/post-images/post_136_1.jpg",
+    "postedAt": "2026-08-01T04:44:17.648Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mrynums37a2q"
   },
   {
     "id": "viral-rewrite-78",

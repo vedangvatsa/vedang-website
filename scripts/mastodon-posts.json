@@ -1891,9 +1891,10 @@
     "id": "viral-rewrite-91",
     "scheduleDate": "2026-08-01",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "People don't stop caring overnight. They stop caring after their effort goes unnoticed. That's not laziness. It's a sign the work, respect, or pay isn't matching the effort. Find teams that offer all three at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_154_1.jpg"
+    "image": "scripts/post-images/post_154_1.jpg",
+    "error": "Media failed: scripts/post-images/post_154_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-92",
