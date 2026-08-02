@@ -2045,9 +2045,11 @@
     "id": "viral-rewrite-94",
     "scheduleDate": "2026-08-02",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Toxic cultures promote people who deliver results but destroy relationships. No level of individual success justifies harming the team. The people who matter most lift everyone around them. Find teams that reward both results and relationships at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_8_1.jpg"
+    "image": "scripts/post-images/post_8_1.jpg",
+    "postedAt": "2026-08-02T11:58:13.889Z",
+    "castHash": "0x2b6f11ab6b3ce26591209339b7ac177f85cda632"
   },
   {
     "id": "viral-rewrite-95",

@@ -1927,9 +1927,10 @@
     "id": "viral-rewrite-95",
     "scheduleDate": "2026-08-02",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "A culture that treats rest as a reward is a culture that expects exhaustion. The healthiest teams build recovery into the system, not the incentive structure. Find teams that do at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_38_1.jpg"
+    "image": "scripts/post-images/post_38_1.jpg",
+    "error": "Media failed: scripts/post-images/post_38_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-96",
