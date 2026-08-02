@@ -1961,9 +1961,10 @@
     "id": "viral-rewrite-99",
     "scheduleDate": "2026-08-03",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "When you want a job, also want a workplace that won't burn you out. The role matters, but the environment matters more. A good job in a toxic place becomes a bad job quickly. Find healthy workplaces at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_153_1.jpg"
+    "image": "scripts/post-images/post_153_1.jpg",
+    "error": "Media failed: scripts/post-images/post_153_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-100",
