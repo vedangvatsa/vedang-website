@@ -1954,9 +1954,10 @@
     "id": "viral-rewrite-98",
     "scheduleDate": "2026-08-03",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Personality is how you act on a good day. Character is how you act on a bad one. The people you want to work with aren't the ones who are charming when things are easy. They're the ones who stay fair when things are hard. Find teams that value character at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_110_1.jpg"
+    "image": "scripts/post-images/post_110_1.jpg",
+    "error": "Media failed: scripts/post-images/post_110_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-99",

@@ -2273,9 +2273,11 @@
     "id": "viral-rewrite-84",
     "scheduleDate": "2026-07-29",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Intelligence is knowing. Wisdom is connecting. Smart people advance their own ideas. Wise people integrate everyone's. The best teams don't need the smartest person in the room. They need the person who can make the room smarter.",
-    "image": "scripts/post-images/post_175_1.jpg"
+    "image": "scripts/post-images/post_175_1.jpg",
+    "postedAt": "2026-08-03T12:42:19.735Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3ms6jjasxzi2t"
   },
   {
     "id": "viral-rewrite-85",
