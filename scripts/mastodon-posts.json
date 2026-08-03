@@ -1988,9 +1988,10 @@
     "id": "viral-rewrite-102",
     "scheduleDate": "2026-08-04",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "The best discussions don't end with everyone agreeing. They end with everyone smarter. Consensus is comfortable. Dissent is useful. The teams that value different views make better decisions. Find teams that welcome disagreement at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_148_1.jpg"
+    "image": "scripts/post-images/post_148_1.jpg",
+    "error": "Media failed: scripts/post-images/post_148_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-103",
