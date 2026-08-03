@@ -2065,9 +2065,11 @@
     "id": "viral-rewrite-96",
     "scheduleDate": "2026-08-02",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Making people feel valued is the simplest thing a leader can do. It costs nothing and changes everything. Yet it gets forgotten when everything moves fast. Find teams that slow down enough to appreciate people at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_53_1.jpg"
+    "image": "scripts/post-images/post_53_1.jpg",
+    "postedAt": "2026-08-03T04:48:19.266Z",
+    "castHash": "0xc05d7a8801c74618b6d2ce17edf5c056a444ce9e"
   },
   {
     "id": "viral-rewrite-97",

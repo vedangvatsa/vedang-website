@@ -1945,9 +1945,10 @@
     "id": "viral-rewrite-97",
     "scheduleDate": "2026-08-03",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Burnout cultures celebrate sacrifice. Hobbies, family, rest are seen as distractions. Healthy cultures celebrate commitments kept and passions outside work. Your life outside work isn't a weakness. It's what makes you whole. Find teams that see it that way at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_100_1.jpg"
+    "image": "scripts/post-images/post_100_1.jpg",
+    "error": "Media failed: scripts/post-images/post_100_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-98",
