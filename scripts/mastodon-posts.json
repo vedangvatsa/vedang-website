@@ -2015,9 +2015,10 @@
     "id": "viral-rewrite-105",
     "scheduleDate": "2026-08-05",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Soft skills are often the hardest to master. Leadership, communication, collaboration, creativity. These aren't optional anymore. They're what make humans irreplaceable. Find teams that value them at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_90_1.jpg"
+    "image": "scripts/post-images/post_90_1.jpg",
+    "error": "Media failed: scripts/post-images/post_90_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-106",

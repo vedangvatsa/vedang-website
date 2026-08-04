@@ -2115,9 +2115,11 @@
     "id": "viral-rewrite-101",
     "scheduleDate": "2026-08-04",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The right leader stays kind when the going gets tough. Toughness without kindness is just pressure. Kindness under pressure is real leadership. Find leaders who don't lose their humanity when things get hard at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_45_1.jpg"
+    "image": "scripts/post-images/post_45_1.jpg",
+    "postedAt": "2026-08-04T20:10:23.858Z",
+    "castHash": "0x4b10f2ad08a28c8d303904a123e3b0a5b06e50b8"
   },
   {
     "id": "viral-rewrite-102",
