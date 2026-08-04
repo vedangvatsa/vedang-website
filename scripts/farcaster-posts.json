@@ -2105,9 +2105,11 @@
     "id": "viral-rewrite-100",
     "scheduleDate": "2026-08-04",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Big career decisions don't come with a map. You only need a compass. In an uncertain world, the right move is the one that brings you closer to your values. Find work that points in your direction at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_123_1.jpg"
+    "image": "scripts/post-images/post_123_1.jpg",
+    "postedAt": "2026-08-04T12:19:13.909Z",
+    "castHash": "0xadb7bd3ab51ed9c635f57858f700eff760bee7d5"
   },
   {
     "id": "viral-rewrite-101",
