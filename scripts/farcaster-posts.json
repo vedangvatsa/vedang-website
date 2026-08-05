@@ -2145,9 +2145,11 @@
     "id": "viral-rewrite-104",
     "scheduleDate": "2026-08-05",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Behind most solo success stories is a team that doesn't get enough credit. The best workplaces celebrate wins together and fail together. Find teams that play as a team at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_122_1.jpg"
+    "image": "scripts/post-images/post_122_1.jpg",
+    "postedAt": "2026-08-05T20:46:27.085Z",
+    "castHash": "0x0d329e99c9fbcda435def32a3af7e991cb6da777"
   },
   {
     "id": "viral-rewrite-105",
