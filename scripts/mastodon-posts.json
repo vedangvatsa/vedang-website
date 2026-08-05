@@ -1999,9 +1999,10 @@
     "id": "viral-rewrite-103",
     "scheduleDate": "2026-08-05",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The best teachers are students first. The moment you stop learning, you stop being useful to others. Find teams that keep learning at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_199_1.jpg"
+    "image": "scripts/post-images/post_199_1.jpg",
+    "error": "Media failed: scripts/post-images/post_199_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-104",
