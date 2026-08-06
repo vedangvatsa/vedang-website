@@ -2353,9 +2353,11 @@
     "id": "viral-rewrite-92",
     "scheduleDate": "2026-08-01",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The best leaders measure their height by how many people they helped rise. Status without service is just a title.",
-    "image": "scripts/post-images/post_179_1.jpg"
+    "image": "scripts/post-images/post_179_1.jpg",
+    "postedAt": "2026-08-06T06:13:44.811Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3msff76om6t2u"
   },
   {
     "id": "viral-rewrite-93",
