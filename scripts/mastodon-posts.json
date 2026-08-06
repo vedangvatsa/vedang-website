@@ -2035,9 +2035,10 @@
     "id": "viral-rewrite-107",
     "scheduleDate": "2026-08-06",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Real leadership isn't about pulling people toward your goal. It's about lighting the path so they can find their own. Find leaders who empower at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_103_1.jpg"
+    "image": "scripts/post-images/post_103_1.jpg",
+    "error": "Media failed: scripts/post-images/post_103_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-108",
