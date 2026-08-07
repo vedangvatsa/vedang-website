@@ -2185,9 +2185,11 @@
     "id": "viral-rewrite-108",
     "scheduleDate": "2026-08-06",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "You can feel a strong culture in how quickly help moves across the team. Weak cultures run on politics. Strong ones run on mutual respect. Find teams that work together at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_198_1.jpg"
+    "image": "scripts/post-images/post_198_1.jpg",
+    "postedAt": "2026-08-07T20:17:29.051Z",
+    "castHash": "0x2611fd9ba8f2b67ddfc3c1c0410eacd65b83f5ec"
   },
   {
     "id": "viral-rewrite-109",
