@@ -2363,9 +2363,11 @@
     "id": "viral-rewrite-93",
     "scheduleDate": "2026-08-01",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Being an introvert isn't about disliking people. It's about how you handle stimulation. Introverts can be energized by people. They just need quieter, deeper interactions. The workplace needs both styles.",
-    "image": "scripts/post-images/post_22_1.jpg"
+    "image": "scripts/post-images/post_22_1.jpg",
+    "postedAt": "2026-08-07T00:48:57.805Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mshdjdtmlg2m"
   },
   {
     "id": "viral-rewrite-94",
