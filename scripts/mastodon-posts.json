@@ -2080,9 +2080,10 @@
     "id": "viral-rewrite-112",
     "scheduleDate": "2026-08-08",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Insecure people pretend to know everything. Secure people admit what they don't know. The best colleagues are proactive learners. They don't defend their ignorance. They close the gap. Find teams that reward learning at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_192_1.jpg"
+    "image": "scripts/post-images/post_192_1.jpg",
+    "error": "Media failed: scripts/post-images/post_192_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-113",
