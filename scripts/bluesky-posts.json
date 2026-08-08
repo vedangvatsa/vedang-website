@@ -2413,9 +2413,11 @@
     "id": "viral-rewrite-98",
     "scheduleDate": "2026-08-03",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Personality is how you act on a good day. Character is how you act on a bad one. The people you want to work with aren't the ones who are charming when things are easy. They're the ones who stay fair when things are hard.",
-    "image": "scripts/post-images/post_110_1.jpg"
+    "image": "scripts/post-images/post_110_1.jpg",
+    "postedAt": "2026-08-08T19:58:06.657Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mslu744zps27"
   },
   {
     "id": "viral-rewrite-99",

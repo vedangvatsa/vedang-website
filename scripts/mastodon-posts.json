@@ -2123,9 +2123,10 @@
     "id": "viral-rewrite-117",
     "scheduleDate": "2026-08-09",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "We pay too much attention to confident voices and too little to thoughtful ones. Certainty isn't credibility. Smooth talking isn't deep thinking. The best teams amplify the thinkers, not just the talkers. Find teams that value depth at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_12_1.jpg"
+    "image": "scripts/post-images/post_12_1.jpg",
+    "error": "Media failed: scripts/post-images/post_12_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-118",

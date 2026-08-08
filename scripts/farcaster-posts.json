@@ -2215,9 +2215,11 @@
     "id": "viral-rewrite-111",
     "scheduleDate": "2026-08-07",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Work-life balance only works when you feel safe at home and at work. Safety isn't just physical. It's psychological. Without it, balance is impossible. Find teams where you can actually relax at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_121_1.jpg"
+    "image": "scripts/post-images/post_121_1.jpg",
+    "postedAt": "2026-08-08T19:58:11.782Z",
+    "castHash": "0x6f1e5a7321244a0024aee9b8c678f6b14184ca4e"
   },
   {
     "id": "viral-rewrite-112",
