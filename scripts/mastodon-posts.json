@@ -2089,9 +2089,10 @@
     "id": "viral-rewrite-113",
     "scheduleDate": "2026-08-08",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The best interview answers come from confidence and honesty. 'Where do you see yourself in five years?' is a test of ambition and clarity. The people who ask better questions tend to become better leaders. Find teams that value ambition at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_62_1.jpg"
+    "image": "scripts/post-images/post_62_1.jpg",
+    "error": "Media failed: scripts/post-images/post_62_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-114",

@@ -2205,9 +2205,11 @@
     "id": "viral-rewrite-110",
     "scheduleDate": "2026-08-07",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The loudest voices usually represent the extremes, not the majority. Silence isn't disengagement. Often it's reflection. The best teams invite the quiet voices into the conversation. Find teams that listen for the whole room at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_54_1.jpg"
+    "image": "scripts/post-images/post_54_1.jpg",
+    "postedAt": "2026-08-08T11:58:36.067Z",
+    "castHash": "0xe54bf1b98c0a963eb6a8b72a15e9d3d4ccde9e6f"
   },
   {
     "id": "viral-rewrite-111",
