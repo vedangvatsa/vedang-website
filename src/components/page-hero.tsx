@@ -24,7 +24,7 @@ export function PageHero({ title, subtitle, showAvatar = false, children }: Page
     <section className="pt-12 md:pt-20 pb-8 text-center">
       {showAvatar && (
         <Image
-          src="/images/icon.png"
+          src="/images/icon.webp"
           alt="Vedang Vatsa"
           width={96}
           height={96}

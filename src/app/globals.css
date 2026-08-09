@@ -290,6 +290,13 @@ pre > code {
   word-break: normal;
   overflow-wrap: normal;
 }
+/* Selection inside dark terminal blocks: light bar, dark text, readable on #09090b */
+.terminal-chrome ::selection,
+.terminal-chrome pre ::selection,
+.terminal-chrome code ::selection {
+  background-color: #fafafa;
+  color: #09090b;
+}
 /* Prompt blocks that set whitespace-pre-wrap should still wrap long URLs */
 .terminal-chrome pre.whitespace-pre-wrap,
 .terminal-chrome pre.whitespace-pre-wrap > code {
