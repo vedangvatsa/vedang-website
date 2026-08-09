@@ -2116,9 +2116,10 @@
     "id": "viral-rewrite-116",
     "scheduleDate": "2026-08-09",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The people who grow fastest are the ones who ask for help. It's not weakness. It's a sign that learning matters more than ego. Find teams where asking is encouraged at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_30_1.jpg"
+    "image": "scripts/post-images/post_30_1.jpg",
+    "error": "Media failed: scripts/post-images/post_30_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-117",
