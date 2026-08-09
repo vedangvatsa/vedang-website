@@ -2150,9 +2150,10 @@
     "id": "viral-rewrite-120",
     "scheduleDate": "2026-08-10",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "If people aren't coming to the office, don't blame them. Blame the culture, micromanagers, interruptions, and commute. Make the office worth the trip and people will show up. Find teams that respect your time at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_63_1.jpg"
+    "image": "scripts/post-images/post_63_1.jpg",
+    "error": "Media failed: scripts/post-images/post_63_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-121",
