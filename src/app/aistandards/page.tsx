@@ -41,7 +41,7 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
   {
     name: 'llms.txt',
     path: '/llms.txt',
-    what: 'A short Markdown summary of the site: identity plus links to the most important pages.',
+    what: 'A short Markdown summary of the site, with identity plus links to the most important pages.',
     why: 'Can give agents a cleaner map when they look for it. Not a proven ranking factor; Google has said it is not required for its generative search features.',
     category: 'Content discovery',
     priority: 'Start here',
@@ -111,7 +111,7 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
   {
     name: 'agent-card.json',
     path: '/.well-known/agent-card.json',
-    what: 'A2A Protocol agent card: identity, skills, transports, security.',
+    what: 'A2A Protocol agent card with identity, skills, transports, and security.',
     why: 'Only worth publishing when a real A2A agent is running. Fake cards can mislead other agents.',
     category: 'Agent products',
     priority: 'When it applies',
@@ -121,7 +121,7 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
   {
     name: 'openapi.json / openapi.yaml',
     path: '/openapi.json or /openapi.yaml',
-    what: 'Machine contract for an HTTP API: paths, parameters, responses.',
+    what: 'Machine contract for an HTTP API, covering paths, parameters, and responses.',
     why: 'Useful when clients or agents should call the product over HTTP without relying only on human docs.',
     category: 'Agent products',
     priority: 'When it applies',
@@ -231,6 +231,9 @@ export default function AiDiscoveryStandardsPage() {
             <a href="#install" className="hover:text-primary transition-colors">
               Install
             </a>
+            <a href="#basics" className="hover:text-primary transition-colors">
+              Why it exists
+            </a>
             <a href="#training-vs-search" className="hover:text-primary transition-colors">
               Training vs search
             </a>
@@ -243,7 +246,7 @@ export default function AiDiscoveryStandardsPage() {
             <a href="#developer-agent-files" className="hover:text-primary transition-colors">
               Agent files
             </a>
-            <a href="#standards-landscape" className="hover:text-primary transition-colors">
+            <a href="#standards-progress" className="hover:text-primary transition-colors">
               Standards
             </a>
             <a href="#crawlers" className="hover:text-primary transition-colors">
@@ -267,11 +270,6 @@ export default function AiDiscoveryStandardsPage() {
               </p>
               <div className="terminal-chrome rounded-lg overflow-hidden border mb-3 max-w-full min-w-0">
                 <div className="terminal-chrome-bar px-3 sm:px-4 py-2 flex items-center gap-2 min-w-0">
-                  <span className="inline-flex gap-1 shrink-0" aria-hidden>
-                    <span className="h-2 w-2 rounded-full bg-zinc-600" />
-                    <span className="h-2 w-2 rounded-full bg-zinc-600" />
-                    <span className="h-2 w-2 rounded-full bg-zinc-600" />
-                  </span>
                   <span className="text-xs font-medium truncate">Terminal</span>
                 </div>
                 <pre className="p-3 sm:p-4 overflow-x-auto max-w-full text-[11px] sm:text-[12px] leading-relaxed overscroll-x-contain">
@@ -295,6 +293,42 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
               </p>
             </section>
 
+            <section id="basics" className="min-w-0 scroll-mt-20">
+              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Why these standards exist</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                Websites were built for people who read. AI systems find content differently. Crawlers follow links,
+                fetch pages, and parse HTML. Agents look for machine-readable files that describe what a site offers
+                and how to use it. The standards below are the files, formats, and bot conventions that make this
+                work.
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                Think of the files as three separate jobs. <strong>Access control</strong> files (robots.txt,
+                tdmrep.json) tell documented bots what they may or may not crawl. <strong>Content maps</strong>
+                (sitemap.xml, llms.txt) tell any system that asks which pages matter and what they say.{' '}
+                <strong>Identity and capability</strong> files (agents.txt, agent cards, OpenAPI) tell agents what
+                the site can do and how to call it.
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                A few files carry most of the value. robots.txt is a set of rules for bots. It says which paths they
+                may visit and which they should leave alone. sitemap.xml is a plain list of the pages that exist.
+                llms.txt is a short markdown reading list. It names who runs the site and which pages matter.
+                agents.txt and agent-card.json tell agent software what a site offers and how to reach it. Everything
+                else in the catalog is optional polish.
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                The rules themselves come from different places. Some are finished standards (RFCs and W3C reports),
+                some are drafts still being written at the IETF, some are documented conventions from a single
+                vendor, and some are community ideas with no formal body behind them. Maturity matters. A draft is
+                not a contract, and no file can force any company to read it.
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Start with the pieces that are free and stable, like clear HTML, a sitemap, and robots.txt. Add
+                llms.txt as a concise reading list. Only add agent files, API contracts, or an agent card when the
+                site actually operates the service they describe. None of these files guarantees ranking, citation,
+                or inclusion in any AI product. They reduce friction for systems that choose to look.
+              </p>
+            </section>
+
             <section id="training-vs-search" className="min-w-0 scroll-mt-20">
               <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Training vs search</h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4 break-words">
@@ -303,6 +337,10 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
                 <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded break-all">GPTBot</code> (training-related) and{' '}
                 <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded break-all">OAI-SearchBot</code> (search) as
                 independent choices. Some chat-time fetches may not fully honor robots.txt.
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                The split matters in practice. A site can let the search bots in while telling the training bots to
+                stay out, or the reverse. The two columns below are the common names for each kind.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 min-w-0">
                 <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
@@ -332,6 +370,14 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
 
             <section id="registry" className="min-w-0 scroll-mt-20">
               <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Catalog</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                This catalog lists every file used in AI discovery, grouped by the job it does. The priority labels
+                show a practical order. <strong>Start here</strong> items are stable, widely honored, and useful on
+                almost any site.{' '}
+                <strong>When it applies</strong> items help only when the site matches the condition. <strong>Optional</strong>{' '}
+                items are extras with limited evidence. Open any card for what the file is, where it lives, and the
+                spec that defines it.
+              </p>
               <div className="flex flex-wrap gap-1.5 mb-5">
                 {CATEGORIES.map((category) => {
                   const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
@@ -443,7 +489,13 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
             <section id="developer-agent-files" className="min-w-0 scroll-mt-20">
               <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Developer agent files</h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                These are not public web discovery files. They live in your code repository and tell coding agents about your project.
+                These are not public web discovery files. They live in your code repository and tell coding agents
+                about your project.
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                Keep them short on purpose. A coding agent reads the whole file, so bloat gets ignored and the
+                useful rules drown. AGENTS.md is the shared source of truth; tool-specific files for Cursor or
+                Claude point back to it instead of repeating it.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 min-w-0">
                 <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
@@ -466,10 +518,12 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
               </div>
             </section>
 
-            <section id="standards-landscape" className="min-w-0 scroll-mt-20">
-              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Standards landscape</h2>
+            <section id="standards-progress" className="min-w-0 scroll-mt-20">
+              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Standards in progress</h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Several IETF drafts are competing to become the standard way AI systems discover sites. None are RFCs yet. Track them if this space matters to your work.
+                Several IETF drafts are competing to become the standard way AI systems discover sites. None are
+                RFCs yet. Each one would add a file or a protocol that agents can look for, and the list changes as
+                drafts get merged or dropped.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 min-w-0">
                 <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
@@ -567,13 +621,7 @@ curl -sI https://your-domain.com/.well-known/security.txt | head -1`}</code>
                   <span className="text-xs font-medium">Prompt</span>
                 </div>
                 <pre className="p-3 sm:p-4 overflow-x-auto max-w-full text-[11px] sm:text-[12px] leading-relaxed whitespace-pre-wrap break-words [overflow-wrap:anywhere] overscroll-x-contain">
-                  <code className="!whitespace-pre-wrap !break-words [overflow-wrap:anywhere]">{`Set up AI discovery for this project using:
-https://github.com/vedangvatsa/aistandards
-
-Run:
-npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://YOUR_DOMAIN
-
-Review llms.txt, confirm training allow/deny, and do not advertise fake A2A or MCP endpoints.`}</code>
+                  <code className="!whitespace-pre-wrap !break-words [overflow-wrap:anywhere]">{`Set up AI discovery for this project with https://github.com/vedangvatsa/aistandards. Then run npx --yes github:vedangvatsa/aistandards --yes --scan --url=https://YOUR_DOMAIN. Review llms.txt, confirm training allow/deny, and do not advertise fake A2A or MCP endpoints.`}</code>
                 </pre>
               </div>
             </section>
