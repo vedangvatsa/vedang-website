@@ -2107,9 +2107,10 @@
     "id": "viral-rewrite-115",
     "scheduleDate": "2026-08-09",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Confidence without character is a disappointment waiting to happen. The bigger the ego, the smaller the leadership. Humility, generosity, and honor are underrated. Find principled leaders at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_193_1.jpg"
+    "image": "scripts/post-images/post_193_1.jpg",
+    "error": "Media failed: scripts/post-images/post_193_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-116",
