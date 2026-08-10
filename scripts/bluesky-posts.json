@@ -2463,9 +2463,11 @@
     "id": "viral-rewrite-103",
     "scheduleDate": "2026-08-05",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The best teachers are students first. The moment you stop learning, you stop being useful to others.",
-    "image": "scripts/post-images/post_199_1.jpg"
+    "image": "scripts/post-images/post_199_1.jpg",
+    "postedAt": "2026-08-10T12:27:39.957Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3msq3xidhjn2q"
   },
   {
     "id": "viral-rewrite-104",
