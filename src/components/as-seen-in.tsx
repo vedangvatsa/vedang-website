@@ -6,7 +6,7 @@ const asSeenInLogos = [
     { name: 'KPMG', logo: '/images/press/TheStreetRoundtable_Vedang.webp' },
     { name: 'ANI', logo: '/images/press/Ani-logo-black.webp' },
     { name: 'Business Today', logo: '/images/press/bt_business_today_vedang_vatsa.webp' },
-    { name: 'Business Insider', logo: '/images/press/Business_Insider_2023_logo.webp' },
+    { name: 'Business Insider', logo: '/images/press/Business_Insider_2023_logo.svg.png' },
     { name: 'Business Standard', logo: '/images/press/business-standard-logo-2.webp' },
     { name: 'Dainik Bhaskar', logo: '/images/press/Dainik_Bhaskar_Logo.webp' },
     { name: 'Decrypt', logo: '/images/press/Decrypt_logo.svg' },
