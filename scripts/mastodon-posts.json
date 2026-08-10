@@ -2177,9 +2177,10 @@
     "id": "viral-rewrite-123",
     "scheduleDate": "2026-08-11",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Rank doesn't make you a leader. Service does. The people who help others rise without waiting for permission are the ones worth following. Find teams that recognize real leadership at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_107_1.jpg"
+    "image": "scripts/post-images/post_107_1.jpg",
+    "error": "Media failed: scripts/post-images/post_107_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-124",
