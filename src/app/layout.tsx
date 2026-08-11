@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import '@/app/globals.css';
 
 import { Toaster } from '@/components/ui/toaster';
+import { ClarityAnalytics } from '@/components/clarity-analytics';
 import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
@@ -204,6 +205,7 @@ export default function RootLayout({
       <body className="font-sans overflow-x-hidden">
           <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:text-sm focus:font-medium">Skip to main content</a>
           {children}
+          <ClarityAnalytics />
           <Toaster />
       </body>
     </html>
