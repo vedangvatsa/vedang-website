@@ -2295,9 +2295,11 @@
     "id": "viral-rewrite-119",
     "scheduleDate": "2026-08-10",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "We ask kids what they want to be when they grow up. Maybe we should ask what they want to do and who they want to become. A career isn't one identity. It's a series of choices. Find work that lets you keep choosing at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_160_1.jpg"
+    "image": "scripts/post-images/post_160_1.jpg",
+    "postedAt": "2026-08-11T12:27:03.797Z",
+    "castHash": "0xcad389d7e5957bc3c107f06ca5a263ce5e222a23"
   },
   {
     "id": "viral-rewrite-120",

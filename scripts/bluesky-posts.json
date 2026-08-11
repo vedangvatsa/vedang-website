@@ -2493,9 +2493,11 @@
     "id": "viral-rewrite-106",
     "scheduleDate": "2026-08-06",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Wellness stipends are a bandage, not a cure. Gym memberships and healthy meals don't fix overwork and abusive bosses. Real well-being means fewer demands and better management.",
-    "image": "scripts/post-images/post_111_1.jpg"
+    "image": "scripts/post-images/post_111_1.jpg",
+    "postedAt": "2026-08-11T12:26:58.316Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mssmf62bjq24"
   },
   {
     "id": "viral-rewrite-107",
