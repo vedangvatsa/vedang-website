@@ -37,10 +37,28 @@
       "decentralized-identity"
     ],
     "indiaai": [
-      "llm",
+      "compute",
+      "aidebt",
       "api",
-      "agent",
-      "fine-tuning"
+      "bureaucracy"
+    ],
+    "compute": [
+      "indiaai",
+      "aidebt",
+      "apis",
+      "agentstack"
+    ],
+    "aidebt": [
+      "indiaai",
+      "compute",
+      "funding",
+      "aieconomy"
+    ],
+    "protocols": [
+      "agentstack",
+      "agenticweb",
+      "postinterface",
+      "apis"
     ],
     "constitutions": [
       "dao",
@@ -462,6 +480,9 @@
     "twilight": "Twilight Economy",
     "blockchain": "Tracing Blockchain's Journey",
     "singularity": "What is the Singularity?",
-    "indiaai": "India Approved ₹10,372 Cr for AI. ₹401 Cr Arrived."
+    "indiaai": "IndiaAI: ₹401 Cr of ₹10,372 Cr",
+    "compute": "The National AI Compute Scorecard",
+    "aidebt": "Sovereign AI Debt: Announced, Funded, Spent",
+    "protocols": "MCP and A2A: An Adoption Audit"
   }
 }

@@ -7,19 +7,33 @@ category: "AI Infrastructure"
 keywords: ["MCP", "A2A", "Model Context Protocol", "Agent-to-Agent", "Anthropic", "Google", "adoption audit", "agent protocols"]
 ---
 
-Two protocols claim to do for agents what HTTP did for the web. MCP, Anthropic's Model Context Protocol, connects agents to tools. A2A, Google's Agent-to-Agent Protocol, connects agents to other agents. This piece measures their actual deployment with three data sources: download statistics from npm and pypi, GitHub star counts, and a direct crawl of 28 top web domains for the discovery files each protocol needs.
+Two protocols claim to do for agents what HTTP did for the web. MCP, [Anthropic's Model Context Protocol](https://www.anthropic.com/news/model-context-protocol), connects agents to tools. A2A, [Google's Agent-to-Agent Protocol](https://a2a-protocol.org), connects agents to other agents. This piece measures their actual deployment with three data sources. Download statistics from npm and pypi. GitHub star counts. A direct crawl of 28 top web domains for the discovery files each protocol needs.
+
+The claim that a protocol "won" or "lost" is too coarse for the data. MCP and A2A solve different problems. One standardises how an agent calls tools inside a stack. The other standardises how agents find and talk to each other across organisational boundaries. A fair audit measures each against its own job, then checks whether the public internet shows the discovery layer that cross-agent talk requires.
+
+## Why protocols matter for agents
+
+Agents are software that plan and act. To act, they need tools. File systems, browsers, databases, calendars, payment APIs, internal CRMs. Without a shared way to describe those tools, every vendor invents a private plug. Integration cost rises. Security review multiplies. Switching costs harden.
+
+MCP is an attempt to standardise the tool plug. An MCP server exposes tools and resources. An MCP client, often inside an agent host, calls them. Anthropic released MCP as an open standard in [November 2024](https://www.anthropic.com/news/model-context-protocol). Major model vendors and cloud platforms then shipped SDKs and connectors around it.
+
+A2A is an attempt to standardise agent-to-agent talk. Google [announced it in April 2025](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/) with over 50 partners and [transferred it to the Linux Foundation](https://developers.googleblog.com/en/google-cloud-donates-a2a-to-linux-foundation/) in June 2025. The discovery idea is simple on paper. An organisation publishes an agent card at a well-known path. Another agent reads the card and knows how to start a conversation.
+
+Both protocols can succeed in their own lane. This audit asks a narrower question. What does public evidence show about installs and about discovery on the open web.
 
 ## What was measured
 
 Three sources, all queried in the week of 9 August 2026.
 
-**npm and pypi registries.** Monthly download counts from the npm API and pypistats for the protocol SDK packages. `@modelcontextprotocol/sdk` and `a2a` at npm. `mcp` and `a2a-sdk` at pypi. For context, `anthropic` and `openai-agents` at pypi were also queried.
+**npm and pypi registries.** Monthly download counts from the [npm downloads API](https://github.com/npm/registry/blob/main/docs/download-counts.md) and [pypistats](https://pypistats.org/) for the protocol SDK packages. [`@modelcontextprotocol/sdk`](https://www.npmjs.com/package/@modelcontextprotocol/sdk) and [`a2a`](https://www.npmjs.com/package/a2a) at npm. [`mcp`](https://pypistats.org/packages/mcp) and [`a2a-sdk`](https://pypistats.org/packages/a2a-sdk) at pypi. For context, [`anthropic`](https://pypistats.org/packages/anthropic) and [`openai-agents`](https://pypistats.org/packages/openai-agents) at pypi were also queried.
 
-**GitHub stars.** Star counts from the GitHub API for `modelcontextprotocol/servers`, `modelcontextprotocol/modelcontextprotocol`, and `openai/openai-agents-python`. The `google/A2A` repository was not reachable through the API at the time of query.
+**GitHub stars.** Star counts from the GitHub API for [`modelcontextprotocol/servers`](https://github.com/modelcontextprotocol/servers), [`modelcontextprotocol/modelcontextprotocol`](https://github.com/modelcontextprotocol/modelcontextprotocol), and [`openai/openai-agents-python`](https://github.com/openai/openai-agents-python). The `google/A2A` repository was not reachable through the API at the time of query.
 
-**Direct domain crawl.** A headless browser made GET requests to 28 top-consumer and top-enterprise domains for four discovery files: `/.well-known/agent-card.json` (A2A discovery), `/agents.txt` (agents-txt.com convention), `/.well-known/mcp/server-card.json` (MCP draft), and `/.well-known/ai` (IETF draft). Every status-200 response was verified for actual content, not a soft-404 catch-all page. The crawl also checked `/llms.txt` as a benchmark.
+**Direct domain crawl.** A headless browser made GET requests to 28 top-consumer and top-enterprise domains for four discovery files. `/.well-known/agent-card.json` for A2A discovery. `/agents.txt` for the agents-txt.com convention. `/.well-known/mcp/server-card.json` for an MCP draft path. `/.well-known/ai` for an IETF draft. Every status-200 response was verified for actual content, not a soft-404 catch-all page. The crawl also checked `/llms.txt` as a benchmark.
 
-The crawl is a sample of 28 domains, not a census. The domains are major consumer and enterprise sites. A full internet scan is not practical without a dedicated scanner, and 28 is large enough to show whether the discovery files are deployed on sites people use.
+The crawl is a sample of 28 domains, not a census. The domains are major consumer and enterprise sites. A full internet scan is not practical without a dedicated scanner, and 28 is large enough to show whether the discovery files are deployed on sites people already use. It is not large enough to prove absence everywhere. That limit is stated here so the zero counts later are not over-read.
+
+Package names are another limit. Registry names can collide or under-count. The `a2a` npm package may not capture every A2A-related install if companies vendor code or use differently named packages. Relative order of magnitude is the claim, not a precise census of developers.
 
 ## The download ledger
 
@@ -27,7 +41,7 @@ The numbers cover the 30 days ending 9 August 2026.
 
 | SDK | npm (month) | pypi (month) | GitHub stars |
 | --- | --- | --- | --- |
-| MCP | 198,046,096 | 328,225,460 | 89,448 (servers repo) |
+| MCP | 198,046,096 | 328,225,460 | 89,450 (servers repo) |
 | A2A | 803 | 13,974,727 | unavailable |
 
 | Reference | npm | pypi | GitHub stars |
@@ -35,54 +49,131 @@ The numbers cover the 30 days ending 9 August 2026.
 | anthropic | n/a | 191,820,040 | 3,810 |
 | openai-agents | unavailable | 36,782,780 | 28,563 |
 
-Sources: npm API, pypistats API, GitHub API, queried 9-11 August 2026.
+Sources. [npm downloads API](https://api.npmjs.org/downloads/point/last-month/@modelcontextprotocol/sdk), [pypistats](https://pypistats.org/packages/mcp), [GitHub](https://github.com/modelcontextprotocol/servers), queried 9-11 August 2026.
 
-The MCP npm SDK at over 198 million downloads per month is larger than the entire anthropic SDK at pypi. The A2A npm package had 803 downloads. The pypi numbers are less extreme: MCP at 328 million, A2A at 14 million. The gap between npm and pypi for A2A, 803 versus 14 million, puts A2A's developer base in the Python ecosystem, with almost no Node.js presence.
+The MCP npm SDK at over 198 million downloads per month is larger than the entire anthropic SDK at pypi. The A2A npm package had 803 downloads. The pypi numbers are less extreme. MCP at 328 million. A2A at 14 million. The gap between npm and pypi for A2A, 803 versus 14 million, puts A2A's developer base in the Python stack, with almost no Node.js presence under the package name measured here.
 
-These are download counts, not user counts. They include CI pipelines, automated builds, and cache misses. The relative order of magnitude is what matters.
+These are download counts, not user counts. They include CI pipelines, automated builds, and cache misses. A popular transitive dependency can inflate totals without proving that application developers consciously chose the protocol. The relative order of magnitude is what matters. MCP is in the infrastructure class. A2A, on npm, is not.
 
-Anthropic released MCP as an open standard in [November 2024](https://www.anthropic.com/news/model-context-protocol). Google announced A2A in April 2025 with over 50 partners and [transferred it to the Linux Foundation](https://a2a-protocol.org) in June 2025. The major cloud providers and AI companies ship the MCP SDK as a dependency. Every developer who installs the OpenAI or Anthropic or Google agent SDKs triggers an MCP download count. The volume reflects infrastructure adoption, not necessarily end-user tool creation.
+The volume also reflects how agent SDKs are shipped. The major cloud providers and AI companies ship the MCP SDK as a dependency. Every developer who installs certain OpenAI, Anthropic, or Google agent stacks can trigger an MCP download count. That is real adoption of a dependency graph. It is not the same as a million teams authoring new MCP servers from scratch. Both facts can be true.
 
-## The server gap: zero discovery files on top sites
+Stars are a weaker signal. They measure attention and bookmarking. The MCP servers repository's star count shows community interest in ready-made tool servers. Missing A2A star data is a hole in the table, not evidence against A2A. The hole is disclosed so nobody fills it with a guess.
+
+## The server gap. Zero discovery files on top sites
 
 A protocol that connects agents to tools needs tools to connect to. A2A needs agent cards, JSON files at `/.well-known/agent-card.json`. MCP's draft discovery path is `/.well-known/mcp/server-card.json`.
 
 The crawl of 28 domains found zero real agent cards. Twenty-seven of the 28 returned either 404 or a soft-404 HTML error. LinkedIn and Netflix returned status 200 but delivered HTML, not JSON. Zero agent cards. The `/agents.txt` companion convention similarly returned zero real deployments. Every 200 was an HTML catch-all on content-type verification. The MCP server card and `/.well-known/ai` were zero across all 28 domains.
 
-This does not mean no site on the internet deploys these files. It means that among the largest consumer and enterprise domains sampled, none could be verified.
+Zero real agent cards in the sample does not prove the files are absent from the whole internet. It shows that among the largest consumer and enterprise domains checked here, none could be verified.
 
-## llms.txt: the benchmark with no vendor backing
+That result is less surprising once the product reality is named. Most of the sampled sites do not operate a public agent endpoint for strangers. They operate apps, APIs with keys, and support chat widgets. A2A discovery assumes a willingness to advertise an agent on the open web. Large consumer brands have spent years locking down bots and scrapers. Publishing an agent card is a product and security decision, not a missing semicolon in a config file.
 
-The crawl also checked `/llms.txt` because it asks the same question, whether sites adopt a new machine-readable file, but it has no formal backing from a major vendor.
+MCP's missing well-known cards are less damaging to MCP's thesis. MCP tooling already spreads through registries and GitHub lists. Indexes such as [Smithery](https://smithery.ai) and curated server lists can grow without well-known URLs on brand domains. A2A's thesis leans harder on discovery across organisational boundaries. For A2A, empty well-known paths on top sites are closer to the core claim.
+
+## llms.txt. The benchmark with no vendor backing
+
+The crawl also checked `/llms.txt` because it asks the same question, whether sites adopt a new machine-readable file, but it has no formal backing from a major model vendor.
 
 | Discovery file | Deployments (28-domain sample) | Backing |
 | --- | --- | --- |
-| llms.txt | 12 to 14 | Community convention (llmstxt.org) |
-| agents.txt | 0 | Community draft (agents-txt.com) |
-| agent-card.json | 0 | A2A Protocol (Google, Linux Foundation) |
+| llms.txt | 12 to 14 | Community convention ([llmstxt.org](https://llmstxt.org)) |
+| agents.txt | 0 | Community draft ([agents-txt.com](https://agents-txt.com)) |
+| agent-card.json | 0 | [A2A Protocol](https://a2a-protocol.org) (Google, Linux Foundation) |
 | mcp server-card | 0 | MCP draft |
 | /.well-known/ai | 0 | IETF draft |
 
 The 12-to-14 range reflects text/plain responses starting with a blank line. Confirmed deployments include GitHub, Cloudflare, Atlassian, Stripe, Shopify, Notion, WordPress, MongoDB, Dropbox, Slack, and Vercel.
 
-llms.txt has no vendor backing. It was created by Jeremy Howard of Answer.AI in 2024. A2A has Google, the Linux Foundation, and announced support from over 100 enterprises. The discovery file without vendor backing is the one with observable deployments on top sites.
+llms.txt has no vendor backing. It was created by [Jeremy Howard of Answer.AI](https://llmstxt.org) in 2024. A2A has Google, the Linux Foundation, and [announced support from over 100 enterprises](https://developers.googleblog.com/en/google-cloud-donates-a2a-to-linux-foundation/). The discovery file without vendor backing is the one with observable deployments on top sites.
+
+That contrast is easy to overfit. llms.txt is a simple text file that tells language models how to read a site. It does not require running an agent endpoint. The cost of publishing it is low. The cost of publishing an A2A agent card that points to a live agent is high. Comparing them is still useful. It shows that large sites will adopt a machine-readable convention when the operational burden is small. It does not prove they will adopt A2A discovery next. It proves willingness is possible when the ask is light.
 
 ## What the numbers mean
 
-The download numbers say MCP is widely adopted infrastructure. The discovery files say A2A's discovery layer has not reached consumer-facing production. The two findings are consistent with the protocols solving different problems.
+The download numbers say MCP is widely adopted infrastructure. The discovery files say A2A's discovery layer has not reached consumer-facing production in this sample. The two findings are consistent with the protocols solving different problems.
 
-MCP connects existing software to agents. An agent that searches a database, sends an email, or queries an API calls an MCP server, and thousands of those servers exist. The SDK downloads reflect a protocol that standardises internal tool-calling infrastructure.
+MCP connects existing software to agents. An agent that searches a database, sends an email, or queries an API calls an MCP server, and thousands of those servers exist in registries and repositories. The SDK downloads reflect a protocol that standardises internal tool-calling infrastructure.
 
 A2A asks which agent a site exposes for other agents to talk to. That requires a site to operate an agent endpoint and publish it. Most of the 28 sites in the crawl do not operate a public agent endpoint. The discovery layer has no deployment in the sample. What does exist is the SDK, primarily in Python.
 
-## What would prove either protocol works
+A second reading is timing. MCP had a head start from November 2024. A2A's Linux Foundation move was mid-2025. Protocols can look empty on the public web in year one and dense in year three. The audit date is August 2026. Later crawls can falsify the discovery result quickly if major brands ship cards. The method is repeatable on purpose.
 
-Three observable things.
+A third reading is enterprise private deployment. Companies can run A2A inside VPCs and never publish a public agent card. This crawl would miss that entirely. Private success and public absence can coexist. The piece measures the open web and public registries, not internal mesh traffic.
 
-1. **Consumer-visible agent cards.** If a major consumer or enterprise brand in the crawl served a valid agent card at `/.well-known/agent-card.json`, the sample would register a non-zero count.
-2. **MCP server endpoints on well-known URIs.** The MCP ecosystem uses registries and GitHub repositories rather than well-known paths. If the draft server-card path gets deployed, the crawl could detect it.
-3. **A public registry of A2A agent cards.** If a registry analogous to Smithery for MCP existed for A2A and listed verifiable live endpoints, adoption could be measured without crawling. No such registry was found.
+## Security and product reasons for slow discovery
 
-The developer tools exist. The SDKs have users in the millions. The discovery files, the parts of the protocol that make agents findable on the open web, have no deployments in the sample measured here. That gap is the difference between a protocol that standardises internal infrastructure and a protocol that standardises the internet.
+Publishing an agent card is not free.
 
-Download figures, star counts, and crawl results were collected between 9 and 12 August 2026. The crawl is a sample of 28 domains selected for consumer and enterprise prominence. Soft-404 responses were excluded by content-type verification.
+A public agent endpoint expands attack surface. Prompt injection, tool abuse, data exfiltration, and denial of wallet are live concerns for any agent that can act. Large firms already fight bot traffic on login and search pages. Asking them to advertise an agent that can take actions is a hard sell for security teams.
+
+Product incentives also cut against early public cards. Many firms want agents inside their authenticated product, not agents that other vendors' agents can call on equal footing. A2A's interoperability story is strongest for users. It can be weakest for firms that monetise exclusive assistant surfaces.
+
+None of that means A2A is doomed. It means discovery on the open web is a harder adoption curve than SDK installs. MCP faced an easier first customer. Tooling engineers inside companies already needed a plug format. A2A needs organisational willingness to expose an agent. Different bottlenecks produce different public metrics.
+
+## How HTTP analogies help and mislead
+
+Protocol advocates like the HTTP comparison because everyone understands what a shared request language did for the web. The analogy helps in one way. Tools and agents need shared shapes, or integration stays bespoke.
+
+The analogy misleads in another way. HTTP grew with documents that sites already wanted to publish. The incentive to be readable was aligned with the business of being a site. Agent cards ask firms to publish an actor that can take actions on their behalf or as their delegate. That is closer to opening a customer-service API with side effects than to posting an HTML page. Shared syntax does not create shared willingness.
+
+MCP fits the HTTP analogy better on the internal side. Teams already want agents to call tools. They need a plug format. A2A fits a harder analogy, something closer to public customer-support endpoints that other companies' software can dial. The market for that is real and smaller at the start.
+
+## What "adoption" should mean
+
+Adoption is a baggy word. This audit splits it into four layers.
+
+1. **Spec existence.** A public specification and a governance home.
+2. **SDK installs.** Developers can import a library.
+3. **Server or agent supply.** Someone runs endpoints that speak the protocol.
+4. **Open discovery.** Strangers can find those endpoints without a private sales call.
+
+MCP shows strength on layers 1 to 3 in public evidence. Layer 4 is weak on brand domains, and less necessary if registries carry supply. A2A shows strength on layer 1, partial strength on layer 2 in Python, and no verified strength on layer 4 in the 28-domain sample. Layer 3 may exist privately. This audit cannot see private meshes.
+
+Partner announcements sit beside these layers, not above them. Fifty or a hundred logos on a launch blog are layer-1 politics. They are not layer-4 evidence.
+
+## Registries versus well-known paths
+
+The internet has solved discovery more than once. DNS. Search engines. App stores. Package registries. Well-known URIs.
+
+MCP's early gravity pulled toward registries and GitHub lists. That path matches how developers already install tools. It also centralises curation and trust questions in whoever runs the registry. A2A's agent-card path pulls toward domain-controlled discovery, which matches how organisations already prove ownership of a hostname. That path keeps control with the brand and demands that the brand opt in.
+
+llms.txt succeeded on brand domains partly because it is static and low risk. An agent card that points to a live agent is dynamic and higher risk. Expecting A2A cards to spread at llms.txt speed was never a good prediction. Expecting some brand to ship one card if the product case is clear remains fair. The sample says that case has not cleared production on the measured domains yet.
+
+## False zeros and how this audit avoids them
+
+A naive crawler treats HTTP 200 as success. Many large sites return 200 with an HTML error page for unknown paths. This audit rejected those by checking content type and body shape. LinkedIn and Netflix are the teaching cases in the sample. Status success, document failure.
+
+Another false zero comes from redirects through consent or bot walls. A headless browser can see a different answer than curl. The crawl used a headless browser for that reason. Even then, geo fences and account walls can hide files from a research crawl while showing them to a logged-in partner agent. The method under-counts protected deployments by design.
+
+A false positive is also possible. A site could serve a toy JSON file that matches the path and fails the protocol schema. This pass required real content rather than a full schema validate against every A2A revision. Later audits should pin a schema version and validate strictly.
+
+## What a second pass should add
+
+The August 2026 pass is a baseline. Later passes should keep the same 28 domains for trend, add developer-native domains such as docs sites and cloud consoles, sample any public A2A registry that appears, and try to separate direct MCP imports from transitive installs if registry metadata allows.
+
+## What a practitioner should do with this audit
+
+If you build internal agents, MCP is already part of the default stack in many shops. The practical questions are server quality, auth, logging, and least-privilege tool design. Download counts do not answer those. Threat models do.
+
+If you want agents to talk across companies, do not treat a launch blog as coverage. Ask for a live agent card or a staged directory entry you can call. If the counterparty cannot show either, you are negotiating a partnership, not adopting a public protocol.
+
+If you run a consumer or enterprise domain, llms.txt is the low-cost experiment this sample already validates as common. An A2A card is a product launch with security review. Budget it like an API launch, not like a text file on disk.
+
+If you write policy or standards commentary, keep the layers separate. Spec existence, SDK installs, server supply, open discovery. Collapsing them into "adoption" recreates the announcement problem from the compute and debt pieces on this site.
+
+## Limits of this audit
+
+A2A advocates can fairly say the protocol is young, enterprise meshes are invisible to public crawls, and discovery conventions take years. MCP advocates can fairly say download counts overstate conscious adoption when the SDK is transitive. Both critiques are built into the method notes above.
+
+A harder critique is that open-web agent discovery may never be the main path. Agents may find each other through marketplaces, signed partner directories, or OS-level assistants, not through well-known JSON on consumer domains. If that world arrives, this audit's layer-4 metric becomes historically interesting and currently less decisive. The data would still show what it shows. Public discovery on top sites was empty in August 2026.
+
+## What would change the score on the open web
+
+A major consumer or enterprise brand in the crawl serving a valid agent card at `/.well-known/agent-card.json` would move the A2A count off zero. If MCP's draft server-card path gets deployed on brand domains, the crawl could detect it. Today MCP mostly spreads through registries and GitHub lists rather than well-known paths. A public registry of live A2A agent cards, with endpoints an outsider can call, would let adoption be measured without crawling. No such registry turned up during this pass.
+
+The developer tools exist. The SDKs show large download counts. The discovery files that would make agents findable on the open web had no deployments in this sample. That is the distance between a protocol that standardises internal tooling and a protocol that standardises the public internet.
+
+## Sources and limits
+
+Download figures, star counts, and crawl results were collected between 9 and 12 August 2026. The crawl is a sample of 28 domains selected for consumer and enterprise prominence. Soft-404 responses were excluded by content-type verification. Package-name ambiguity and private deployments are the main blind spots. A repeat of this audit should keep the same domain list for trend, then expand the list in a separate table so old and new samples stay comparable.

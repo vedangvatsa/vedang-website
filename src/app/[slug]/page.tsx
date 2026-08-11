@@ -95,6 +95,9 @@ const ESSAY_GLOSSARY_LINKS: Record<string, string[]> = {
   'agentstack': ['agent', 'llm', 'api', 'edge-computing'],
   'ai-detector': ['llm', 'fine-tuning', 'transformer', 'hallucination'],
   'indiaai': ['llm', 'api', 'agent', 'fine-tuning'],
+  'compute': ['llm', 'api', 'edge-computing', 'agent'],
+  'aidebt': ['llm', 'api', 'defi', 'agent'],
+  'protocols': ['agent', 'api', 'llm', 'rag'],
 };
 
 const GLOSSARY_LABELS: Record<string, string> = {
