@@ -1,99 +1,79 @@
 ---
 title: "The National AI Compute Scorecard"
-summary: "Every major economy has announced national AI compute. The announcements are easy to compare. The delivery is not. This piece builds a scorecard from primary documents, the US NAIRR pilot, the UK's AIRR, the EU's AI Factories, and India's IndiaAI Mission, and asks what each programme actually counts."
+summary: "Four countries took four different approaches to national AI compute. The US donated access, the UK bought a machine, the EU built a federation of sites, and India rented. This piece compares what each programme counts."
 date: "2026-08-12"
 author: "Vedang Vatsa"
 category: "AI Policy"
 keywords: ["AI Compute", "NAIRR", "AI Factories", "EuroHPC", "AIRR", "IndiaAI", "GPUs", "Sovereign AI"]
 ---
 
-Every major economy has announced a national AI compute programme. The United States runs the NAIRR pilot. The United Kingdom announced a £900 million AI Research Resource. The European Union is building AI Factories across 19 sites. India empaneled 38,000 GPUs under IndiaAI. The announcements share the same shape, a big number, a date, and a list of machines.
+Four countries or blocs have national AI compute programmes large enough to compare. Each chose a different model. The metric each one publishes to describe its progress says more about the model than the programme's own claims do.
 
-The delivery records do not share a shape. Each programme counts something different. The US counts research projects supported. The EU counts factory sites selected. India counts GPUs onboarded. None of them publishes the same ledger, hours actually used per rupee or per euro or per dollar of public money, so the race cannot be scored from the published numbers alone.
+## The US: donations routed to researchers
 
-This piece builds the scorecard from the primary documents that do exist, and then lists what would need to be published for the race to be real.
+The United States did not buy a single GPU for its national programme. The National AI Research Resource pilot, launched in January 2024 under the National Science Foundation, coordinates donated compute from private companies and federal agencies and routes researchers and students to the machines.
 
-## The US: a research allocation programme, not a machine programme
+The NSF NAIRR page, [last updated in March 2026](https://www.nsf.gov/focus-areas/artificial-intelligence/nairr), estimates ~$100 million in private-sector in-kind contributions over the pilot's first two years. The largest contributions: NVIDIA ($30 million in compute and software), Microsoft ($20 million in Azure credits), OpenAI ($1 million in model access), and Cerebras (up to four EXAFLOPs of compute). [28 nongovernmental partners](https://www.nsf.gov/focus-areas/artificial-intelligence/nairr) have contributed.
 
-The US did not buy a national supercomputer. It built a research access programme. The NAIRR pilot, led by the National Science Foundation, connects researchers and educators to compute donated or made available by federal agencies and companies. The pilot launched in January 2024, and its own site, [nairrpilot.org](https://nairrpilot.org/), publishes the running tallies.
+Fourteen federal agencies participate, from NASA and DARPA to the FDA and the Department of War. The Department of Energy and the National Institutes of Health co-lead a separate secure allocation track called NAIRR Secure for privacy-sensitive AI research.
 
-| Metric | Count |
-| --- | --- |
-| Research projects supported | 840 |
-| US states, DC, and Puerto Rico represented | 50 |
-| NAIRR Classroom awards | 85 |
-| Infrastructure and data demonstration projects | 23 |
-| Community workshops held | 3 |
+The NAIRR pilot publishes a running tally on its portal, [nairrpilot.org](https://nairrpilot.org). As of August 2026: **840 research projects, 85 NAIRR Classroom awards, 23 infrastructure and data demonstration projects, 3 community workshops**. The NSF page, last updated March 2026, cited more than 600 projects and 6,000 students across all 50 states, Washington, DC, and Puerto Rico.
 
-Counts as published on the [NAIRR pilot site](https://nairrpilot.org/) as of August 2026.
+The US model does not spend public money on GPUs. It does not build data centres. It coordinates donations and routes researchers to them. Its primary output metric is projects supported. The metric reveals the model: the programme measures throughput, not capacity.
 
-Fourteen federal agencies participate, including NASA, DARPA, the Department of Energy, the National Institutes of Health, and the FDA. The private partners include AWS, Anthropic, Cerebras, Google, IBM, Intel, Meta, Microsoft, NVIDIA, OpenAI, and Palantir, among others. The Department of Energy and the NIH are leading a separate secure allocation track called NAIRR Secure.
+## The UK: one machine bought, one cancelled
 
-The US approach has a clear design. It spreads risk across agencies and companies, and it publishes user-facing metrics, 840 projects, 85 classroom awards, 50 states. What it does not publish is a national GPU count, because there is no national GPU pool to count. The compute is a collection of donations and allocations, and the pilot's budget has been modest relative to the programmes below.
+The UK's AI Research Resource was [announced in March 2023](https://www.gov.uk/government/news/initial-1-billion-investment-in-uk-s-semiconductor-sector) with £900 million in funding. The first machine, Isambard-AI at the University of Bristol, was built with 5,000 NVIDIA Grace Hopper GH200 superchips at a cost of about £225 million. A second planned site, expected to be located in Cambridge or Edinburgh, did not proceed. [Reports in early 2025](https://www.bbc.co.uk/news/articles/c5yv0q6mqy8o) said the government scrapped the second machine as part of budget cuts.
 
-## The UK: an announced programme that shrank
+The precise final spend is not published in a single document, so the gap between the announced £900 million and the £225 million or so actually spent on the one built machine cannot be closed from published accounts.
 
-The UK's AI Research Resource was announced in March 2023 with £900 million in funding. The first machine, Isambard-AI at the University of Bristol, was built with 5,000 NVIDIA Grace Hopper GH200 superchips at a cost of about £225 million. A second planned site, expected to be located in Cambridge or Edinburgh, did not proceed. Reports in early 2025 said the government had scrapped the second supercomputer as part of budget cuts, leaving Bristol as the main delivery. The precise final spend was not published in a single document, so the gap between the announced £900 million and the machines that actually ran needs a primary source to close.
+The UK now participates in the EU's AI Factory network as an antenna partner, listed as UKAIFA in the [European Commission's AI Factories catalogue](https://digital-strategy.ec.europa.eu/en/policies/ai-factories). A country that cut its national programme joined a European one.
 
-The UK now participates in the EU's AI Factory network as an antenna partner, listed as UKAIFA in the [European Commission's AI Factories catalogue](https://digital-strategy.ec.europa.eu/en/policies/ai-factories). The country that cut its national programme joined a European one.
+The UK model is straightforward public procurement: buy machines, install them at a university, run them for researchers. Its metric could be machine utilisation. It published the announcement and the machine but not the utilisation.
 
-## The EU: the largest announced build-out
+## The EU: 19 sites, zero published utilisation hours
 
-The EU's AI Factories are the most documented of the national programmes. The [European Commission](https://digital-strategy.ec.europa.eu/en/policies/ai-factories) publishes the selection history in full.
+The EU's AI Factories are the best-documented of the four programmes. The [European Commission](https://digital-strategy.ec.europa.eu/en/policies/ai-factories) publishes the full selection history.
 
 | Wave | Date | Sites |
 | --- | --- | --- |
-| First | December 2024 | 7 consortia, 15 member states: Finland, Germany, Greece, Italy, Luxembourg, Spain, Sweden |
-| Second | March 2025 | 6 more: Austria, Bulgaria, France, Germany, Poland, Slovenia |
-| Third | October 2025 | 6 more: Czechia, Lithuania, Netherlands, Romania, Spain, Poland, plus 13 antennas |
+| First | December 2024 | 7 consortia, 15 member states |
+| Second | March 2025 | 6 more |
+| Third | October 2025 | 6 more, plus 13 antennas |
 
-The network now stands at 19 AI Factories and 13 antennas. The Commission says at least nine new AI-optimised supercomputers will be procured and deployed, which it says will more than triple the EuroHPC AI computing capacity. Total investment in supercomputing and AI Factories through the EuroHPC Joint Undertaking for 2021-2027 is put at €10 billion, counting EU, member state, and associated country money.
+The network now stands at 19 AI Factories and 13 antennas across the EU and partner countries. The Commission says at least nine new AI-optimised supercomputers will be procured, which it says will more than triple the EuroHPC AI computing capacity. Total investment through the EuroHPC Joint Undertaking for the 2021-2027 period is €10 billion, counting EU, member state, and associated country money.
 
-The EU has also opened a call for up to seven AI Gigafactories, industry-led facilities of more than 100,000 advanced AI processors each, supported by up to €10 billion in EU and national funding and an estimated €20 billion in private investment attached to the call.
+The EU has also opened a call for up to seven AI Gigafactories, facilities of more than 100,000 advanced AI processors each, supported by up to €10 billion in public funding and an estimated €20 billion in private investment.
 
-The EU publishes selections and sites. It has not yet published, in a comparable format, the running hours each factory has delivered to startups. The selection count is a commitment metric. The hours would be a delivery metric.
+The EU publishes factory selections, site counts, and partner lists. The [EuroHPC AI Factories page](https://eurohpc-ju.europa.eu/ai-factories_en) says the factories offer "free, customised support" to SMEs and startups. It does not publish running hours delivered to those startups in a comparable format. The factory count is a commitment metric. The hours would be a delivery metric. At 19 factories, the EU has published the most commitments. The delivery ledger is not on the same page.
 
-## India: empaneled machines, slow money
+## India: rented machines, counted but underused
 
-India's IndiaAI Mission, covered in [the companion piece on this site](/indiaai), is the clearest example of the counting problem. MeitY reported more than 38,000 GPUs onboarded by February 2026. The cash released by that date was ₹400.94 crore, 3.9% of the ₹10,371.92 crore outlay. Press reporting put utilised GPUs at 7,418 of 33,099 committed. The programme counts machines. The machines' actual use is reported by a newspaper, not by the programme.
+India's programme is covered fully in [the companion piece on this site](/indiaai). The model is empanelment rental: IndiaAI does not buy machines. It empanels private cloud providers, approves users, and subsidises access. MeitY reported 38,000 GPUs onboarded by February 2026. Cash released by that date: ₹400.94 crore, 3.9% of the ₹10,371.92 crore outlay. Press reporting put utilised GPUs at 7,418 of 33,099 committed.
 
-## France: a private-led commitment, a public-led framework
+India's primary metric is GPUs onboarded. Its secondary metric, utilisation, is reported by a newspaper.
 
-France is the only major economy in this ledger that has its national compute commitment largely anchored in private investment. In January 2025, President Macron announced €109 billion in private AI investment commitments over the coming years, including a reported €50 billion from the UAE. The French government itself committed €2.5 billion, and the country's compute capacity sits largely within private data centres rather than a dedicated national programme in the style of the UK's AIRR or the NAIRR pilot.
+## What each programme counts
 
-The EU AI Factories fill the public-side gap. The first French AI Factory, AI2F, was selected in the second wave of EU factories in March 2025, tied to the Jean Zay supercomputer at GENCI. A second French factory, announced in the third wave in October 2025, is linked to the Jules Verne EuroHPC system. The country also hosts a portion of the MGX- and G42-backed French data centre plans, covered in [the sovereign AI debt companion piece](/aidebt), with pledged investment of up to $52 billion.
-
-The French model tests whether a country can mostly not build and mostly not buy, but regulate, subsidise, and count private investment as national capacity. The answer depends on whether the private pledges convert to running hours the government can audit.
-
-## Japan: the country with the largest announced pipeline, and the most debt behind it
-
-Japan's AI compute programme is not a single named mission with an announced outlay. It is a series of subsidies and joint ventures anchored by SoftBank, the parent company behind ARM. SoftBank is the chairman and the largest equity holder of Stargate, and SoftBank's announced $19 billion equity commitment to Stargate is itself being largely funded through bank borrowing.
-
-Japan's domestic subsidies are substantial but harder to isolate in a single ledger. The government has budgeted over ¥100 billion for AI compute subsidies through 2026, and the Ministry of Economy, Trade and Industry has backed domestic AI infrastructure projects through state-backed lenders. What is available for comparison is the SoftBank structure. A single company with government backing, borrowing from Japanese banks to finance AI data centres in the United States, the UAE, and Europe.
-
-The SoftBank numbers, in the [sovereign AI debt companion piece](/aidebt), show an announced commitment that is not yet spent. Japan's national AI compute is, in practice, SoftBank's balance sheet, and SoftBank's balance sheet is largely debt-financed. That is the Japanese model, and it is not a model any other country has adopted at the same scale.
-
-## What a comparable scorecard would need
-
-The programmes discussed above cannot be ranked on the documents they publish. To make them comparable, each would need to publish three things.
-
-1. **Running hours per unit of public money.** Hours of GPU use actually delivered, divided by released funds, not by announced funds.
-2. **Cost per hour after subsidy.** The published tender prices, as India's PIB did for its L1 bids, with the subsidy applied.
-3. **Allocation wait times.** How long between a researcher or startup applying and getting compute, the metric that determines whether national compute is usable.
-
-| Programme | Commitment | Published delivery metric | Hours published |
+| Programme | Model | Primary metric | Published utilisation |
 | --- | --- | --- | --- |
-| US NAIRR pilot | ~$300M pilot, research allocations | 840 projects supported | No |
-| UK AIRR | £900M announced, main machine at Bristol | Site built; second site cancelled per 2025 reports | No |
-| EU AI Factories | €10B (2021-27), 19 sites, 9 new machines | Sites selected | No |
-| India IndiaAI | ₹10,371.92 Cr, 38,000 GPUs onboarded | GPUs onboarded; cash released | No |
-| France | €2.5B public, €109B private pledges | Private pledges counted as capacity | No |
-| Japan | ¥100B+ subsidies, SoftBank-led | SoftBank balance sheet; Stargate equity | No |
+| US NAIRR | Donation + coordination | 840 projects supported | No |
+| UK AIRR | Public procurement | 1 machine built (of 2) | No |
+| EU AI Factories | Co-federation | 19 sites selected | No |
+| India IndiaAI | Empanelment rental | 38,000 GPUs onboarded | No |
 
-Sources: [NAIRR pilot site](https://nairrpilot.org/), [European Commission AI Factories](https://digital-strategy.ec.europa.eu/en/policies/ai-factories), and the [IndiaAI parliamentary record](/indiaai). The UK figures rely on announcements and 2025 press reporting. The French and Japanese entries rely on government budget statements and reported SoftBank filings.
+None of the four publishes hours of GPU use per unit of public money. The US publishes the metric closest to actual use. The EU publishes the most commitments. The UK cancelled half its programme. India publishes a count that a newspaper has to translate into use.
 
-## The point of the scorecard
+The differences are not accidents. Each programme's metric reflects what it can publish given its model. The US cannot publish a GPU count because it does not buy GPUs. It can publish projects supported. India can publish an onboarded count because it empanels providers and can count what they report. It has not published utilisation because utilisation comes from a letter to providers, not from the programme's own dashboard.
 
-The national AI compute race is being scored on announcements because the delivery data does not exist in comparable form. The US counts projects. The EU counts sites. India counts GPUs. The UK has stopped counting in public. France counts private pledges as national capacity. Japan counts a corporate balance sheet. None publishes hours used per unit of money.
+## What would make the race real
 
-The commitments are enormous and partly real. The EU is building. The US is allocating. India is renting. France is counting pledges. Japan is borrowing. The test will be whether any of them publishes a utilisation ledger as often as it publishes a press release. Until then, the race is measured in promises, and the promise that moves fastest is the one on the announcement.
+Three things would turn the announcements into a scorecard.
+
+1. **Running hours per unit of public money.** GPU-hours delivered, divided by cash released.
+2. **Cost per hour after subsidy.** Published tender prices, as India's PIB did for its L1 bids, with subsidy applied.
+3. **Allocation wait times.** Duration between application and access.
+
+The US programme is closest to publishing the first two because it counts projects and its partners' contributions are public. The UK is furthest, because it counted money it did not spend. Until any of the four publishes all three, the national AI compute race is scored on announcements, and the announcement that moves fastest is the next one.
+
+NAIRR figures come from [nairrpilot.org](https://nairrpilot.org) and [nsf.gov](https://www.nsf.gov/focus-areas/artificial-intelligence/nairr). EU figures come from [digital-strategy.ec.europa.eu](https://digital-strategy.ec.europa.eu/en/policies/ai-factories) and [eurohpc-ju.europa.eu](https://eurohpc-ju.europa.eu/ai-factories_en). UK figures rely on announcements and press reporting until final programme accounts are published. India figures come from the [IndiaAI piece on this site](/indiaai). Verification date August 2026.
