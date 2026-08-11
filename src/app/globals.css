@@ -202,9 +202,16 @@
 }
 
 .notion-article table {
-  width: 100%;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 0.875rem;
   min-width: 480px;
+}
+
+.notion-article table th,
+.notion-article table td {
+  text-align: center;
 }
 
 /* Charts and custom components: full width within the prose column */
