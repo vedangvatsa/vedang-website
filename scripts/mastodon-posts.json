@@ -2161,9 +2161,10 @@
     "id": "viral-rewrite-121",
     "scheduleDate": "2026-08-11",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "We have plenty of hard and tough people in business. What we lack are trust, empathy, and kindness. The soft skills are the hard ones. Find teams that know the difference at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_171_1.jpg"
+    "image": "scripts/post-images/post_171_1.jpg",
+    "error": "Media failed: scripts/post-images/post_171_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-122",

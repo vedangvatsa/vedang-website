@@ -2285,9 +2285,11 @@
     "id": "viral-rewrite-118",
     "scheduleDate": "2026-08-10",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "When you chase outcomes, every setback is a failure. When you focus on the process, every setback is data. Find teams that value how you work at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_166_1.jpg"
+    "image": "scripts/post-images/post_166_1.jpg",
+    "postedAt": "2026-08-11T04:52:23.116Z",
+    "castHash": "0xb146252bf15f7ffe142d8d8e427813f2440d8ecd"
   },
   {
     "id": "viral-rewrite-119",
