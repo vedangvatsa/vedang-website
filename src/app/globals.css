@@ -206,7 +206,6 @@
   margin-left: auto;
   margin-right: auto;
   font-size: 0.875rem;
-  min-width: 480px;
 }
 
 .notion-article table th,
@@ -330,6 +329,12 @@ pre > code {
   .notion-article [class*="grid-cols-5"]:not([class*="gap-1"]),
   .notion-article [class*="grid-cols-6"]:not([class*="gap-1"]) {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  /* Essay tables fit the viewport on mobile so they stay centered;
+     the fixed 480px minimum caused left-anchored horizontal scroll. */
+  .notion-article table {
+    min-width: 0;
+    width: 100%;
   }
 }
 
