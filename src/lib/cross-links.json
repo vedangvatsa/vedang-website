@@ -36,6 +36,12 @@
       "blockchain",
       "decentralized-identity"
     ],
+    "indiaai": [
+      "llm",
+      "api",
+      "agent",
+      "fine-tuning"
+    ],
     "constitutions": [
       "dao",
       "zero-knowledge-proofs-zkps",
@@ -306,7 +312,8 @@
     "llm": [
       "simulayer",
       "socialscience",
-      "twilight"
+      "twilight",
+      "indiaai"
     ],
     "validator": [
       "socialscience"
@@ -454,6 +461,7 @@
     "substrate": "The Substrate Shift",
     "twilight": "Twilight Economy",
     "blockchain": "Tracing Blockchain's Journey",
-    "singularity": "What is the Singularity?"
+    "singularity": "What is the Singularity?",
+    "indiaai": "India's AI Mission: Where the Money Actually Went"
   }
 }
