@@ -46,7 +46,7 @@ import { StateOfAiKeywordsChart, StateOfAiBigramsChart, StateOfAiTimeline, State
 import { StateOfWeb3KeywordsChart, StateOfWeb3BigramsChart, StateOfWeb3Timeline, StateOfWeb3NgramAnalyzer, StateOfWeb3ConvergenceMatrix, StateOfWeb3Momentum, StateOfWeb3Citations } from '@/components/mdx/stateofweb3-charts';
 import { SecurityConsolidation, ComputeValuationTable, AgentProductValuations, MarketplaceComposition, TopInvestorsTable } from '@/components/mdx/agentstack-charts';
 import { AIDetectorFeatureComparison } from '@/components/mdx/ai-detector-charts';
-import { IndiaAIPillarAllocation, IndiaAIFundsReleased, IndiaAIComputeFunnel, IndiaAIUserCounts, IndiaAIGPUPriceTable } from '@/components/mdx/indiaai-charts';
+import { IndiaAIPillarAllocation, IndiaAIFundsReleased, IndiaAIComputeFunnel, IndiaAIUserCounts, IndiaAIGPUPriceTable, IndiaAIClaimsTable } from '@/components/mdx/indiaai-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -451,6 +451,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               IndiaAIComputeFunnel,
               IndiaAIUserCounts,
               IndiaAIGPUPriceTable,
+              IndiaAIClaimsTable,
               ResearchPaper,
               img: (props: any) => (
                 <ZoomableImage

@@ -2,36 +2,27 @@
 
 import React from 'react';
 
-const ink = '#37352f';
-const rule = '#d6d3d1';
-const shortfall = '#9f1239';
-const paper = '#ffffff';
+const INK = '#37352f';
+const SHORTFALL = 'hsl(0 70% 50%)';
 
-function ChartShell({
+function ChartFrame({
   title,
-  children,
+  subtitle,
   source,
+  children,
 }: {
   title: string;
-  children: React.ReactNode;
+  subtitle: string;
   source: React.ReactNode;
+  children: React.ReactNode;
 }) {
   return (
-    <figure
-      className="not-prose my-10 w-full overflow-hidden border bg-white"
-      style={{ borderColor: rule, borderRadius: 0 }}
-    >
-      <div className="border-b px-5 py-4 md:px-8" style={{ borderColor: rule }}>
-        <h3 className="text-base md:text-lg font-semibold tracking-tight" style={{ color: ink }}>
-          {title}
-        </h3>
-      </div>
-      <div className="px-5 py-5 md:px-8 md:py-6">{children}</div>
-      <div
-        className="border-t px-5 py-3 md:px-8 text-[10px] leading-relaxed"
-        style={{ borderColor: rule, color: `${ink}99` }}
-      >
-        {source}
+    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden">
+      <div className="p-6 md:p-10">
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">{title}</h3>
+        <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">{subtitle}</p>
+        {children}
+        <p className="mt-4 text-[10px] text-muted-foreground/60">{source}</p>
       </div>
     </figure>
   );
@@ -39,101 +30,62 @@ function ChartShell({
 
 function SourceLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-70">
+    <a href={href} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
       {children}
     </a>
   );
 }
 
-/* ─── Pillar allocation as ranked ledger rows ─── */
-export function IndiaAIPillarAllocation() {
-  const pillars = [
-    { name: 'Compute Capacity', cr: 4563.36, pct: 44.0 },
-    { name: 'Foundation Models', cr: 1971.37, pct: 19.0 },
-    { name: 'Startup Financing', cr: 1942.5, pct: 18.7 },
-    { name: 'FutureSkills', cr: 882.94, pct: 8.5 },
-    { name: 'Application Development', cr: 689.05, pct: 6.6 },
-    { name: 'Datasets Platform (AIKosh)', cr: 199.55, pct: 1.9 },
-    { name: 'Overheads & Contingency', cr: 102.69, pct: 1.0 },
-    { name: 'Safe & Trusted AI', cr: 20.46, pct: 0.2, alert: true },
-  ];
+const TH = 'text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider';
+const TH_R = 'text-right py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider';
+const TD = 'py-2.5 px-2 text-[#37352f]/80';
+const TD_NAME = 'py-2.5 px-2 font-bold text-[#37352f]';
+const TD_R = 'py-2.5 px-2 text-right tabular-nums text-[#37352f]';
 
+function BarRow({
+  label,
+  value,
+  pct,
+  tone = 'ink',
+}: {
+  label: string;
+  value: string;
+  pct: number;
+  tone?: 'ink' | 'shortfall';
+}) {
+  const fill = tone === 'shortfall' ? SHORTFALL : INK;
   return (
-    <ChartShell
-      title="Pillar outlay (₹10,371.92 Cr total)"
-      source={
-        <>
-          <SourceLink href="https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf">
-            Rajya Sabha Unstarred Q.1668
-          </SourceLink>
-          , answered 13 Feb 2026 (MeitY). Absolute figures sum to ₹10,371.92 Cr.
-        </>
-      }
-    >
-      <div className="space-y-0">
-        {pillars.map((p, i) => (
-          <div
-            key={p.name}
-            className="grid grid-cols-[minmax(0,1.4fr)_minmax(0,2fr)_auto] items-center gap-3 border-b py-2.5 last:border-b-0"
-            style={{ borderColor: `${rule}` }}
-          >
-            <div className="min-w-0">
-              <div className="flex items-baseline gap-2">
-                <span className="text-[10px] tabular-nums" style={{ color: `${ink}66` }}>
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <span
-                  className="truncate text-[13px] font-medium"
-                  style={{ color: p.alert ? shortfall : ink }}
-                >
-                  {p.name}
-                </span>
-              </div>
-            </div>
-            <div className="h-[3px] w-full" style={{ backgroundColor: `${rule}` }}>
-              <div
-                className="h-full"
-                style={{
-                  width: `${p.pct}%`,
-                  backgroundColor: p.alert ? shortfall : ink,
-                  minWidth: p.pct < 1 ? '2px' : undefined,
-                }}
-              />
-            </div>
-            <div className="text-right text-[12px] tabular-nums whitespace-nowrap" style={{ color: ink }}>
-              <span className="font-semibold">₹{p.cr.toLocaleString('en-IN')}</span>
-              <span className="ml-2" style={{ color: `${ink}88` }}>
-                {p.pct}%
-              </span>
-            </div>
-          </div>
-        ))}
+    <div className="grid grid-cols-[minmax(0,10rem)_1fr_7rem] items-center gap-3 h-9">
+      <div className="text-xs font-semibold text-[#37352f] truncate">{label}</div>
+      <div className="h-2.5 w-full rounded-[3px] bg-[#f4f4f0] overflow-hidden">
+        <div
+          className="h-full rounded-[3px]"
+          style={{ width: `${Math.min(Math.max(pct, 0.8), 100)}%`, backgroundColor: fill, opacity: 0.65 }}
+        />
       </div>
-      <p className="mt-4 text-[11px]" style={{ color: `${ink}88` }}>
-        Safe & Trusted AI (₹20.46 Cr) is smaller than overheads (₹102.69 Cr) in the same annex.
-      </p>
-    </ChartShell>
+      <div className="text-xs font-bold tabular-nums text-right text-[#37352f]">{value}</div>
+    </div>
   );
 }
 
-/* ─── Funds. estimate bar vs cash fill ─── */
 export function IndiaAIFundsReleased() {
   const rows = [
-    { year: '2024-25', estimate: 173.0, received: 21.79, label: 'RE', note: '12.6% of RE' },
-    { year: '2025-26', estimate: 800.0, received: 379.15, label: 'RE', note: '47.4% of RE to 9 Feb 2026' },
-    { year: '2026-27', estimate: 1000.0, received: 0, label: 'BE', note: 'None received in reply' },
+    { year: '2024-25', estimate: 173, received: 21.79, share: '12.6%' },
+    { year: '2025-26', estimate: 800, received: 379.15, share: '47.4%' },
+    { year: '2026-27', estimate: 1000, received: 0, share: '0%' },
   ];
-  const maxEst = Math.max(...rows.map((r) => r.estimate));
 
   return (
-    <ChartShell
-      title="Cash received by IndiaAI vs annual estimates"
+    <ChartFrame
+      title="Cash received vs annual estimates"
+      subtitle="Amount received by IndiaAI (₹ Cr) · parliamentary disclosure"
       source={
         <>
+          Source{' '}
           <SourceLink href="https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf">
             Rajya Sabha Unstarred Q.1668 annex
           </SourceLink>{' '}
-          (13 Feb 2026). FY25-26 cut-off 9 Feb 2026. Coverage{' '}
+          (13 Feb 2026). FY 2025-26 cut-off 9 Feb 2026. Coverage{' '}
           <SourceLink href="https://www.medianama.com/2026/04/223-indiaai-mission-400-crore-over-rs-10000-crore-5-year-outlay-released/">
             MediaNama, 4 Apr 2026
           </SourceLink>
@@ -141,121 +93,158 @@ export function IndiaAIFundsReleased() {
         </>
       }
     >
-      <div className="mb-6 flex flex-wrap items-end justify-between gap-4 border-b pb-5" style={{ borderColor: rule }}>
-        <div>
-          <div className="text-[11px]" style={{ color: `${ink}88` }}>
-            Total disclosed to IndiaAI
+      <div className="grid grid-cols-2 gap-3 mb-8">
+        <div className="rounded-[3px] border border-[#e3e3e0] px-4 py-4 text-center">
+          <div className="text-2xl md:text-3xl font-bold tabular-nums tracking-tight" style={{ color: SHORTFALL }}>
+            ₹400.94
           </div>
-          <div className="mt-1 text-4xl font-semibold tabular-nums tracking-tight" style={{ color: shortfall }}>
-            ₹400.94 Cr
-          </div>
+          <div className="mt-1 text-[11px] text-muted-foreground">Total received (₹ Cr)</div>
         </div>
-        <div className="text-right">
-          <div className="text-[11px]" style={{ color: `${ink}88` }}>
-            Share of ₹10,371.92 Cr outlay
-          </div>
-          <div className="mt-1 text-4xl font-semibold tabular-nums tracking-tight" style={{ color: ink }}>
-            3.9%
-          </div>
+        <div className="rounded-[3px] border border-[#e3e3e0] px-4 py-4 text-center">
+          <div className="text-2xl md:text-3xl font-bold tabular-nums tracking-tight text-[#37352f]">3.9%</div>
+          <div className="mt-1 text-[11px] text-muted-foreground">Share of ₹10,371.92 Cr outlay</div>
         </div>
       </div>
 
-      <div className="space-y-5">
-        {rows.map((r) => {
-          const estW = (r.estimate / maxEst) * 100;
-          const recW = r.estimate > 0 ? (r.received / r.estimate) * estW : 0;
-          return (
-            <div key={r.year}>
-              <div className="mb-1.5 flex items-baseline justify-between gap-3 text-[12px]">
-                <span className="font-medium" style={{ color: ink }}>
-                  {r.year}{' '}
-                  <span style={{ color: `${ink}77` }}>
-                    ({r.label} ₹{r.estimate.toLocaleString('en-IN')} Cr)
-                  </span>
-                </span>
-                <span className="tabular-nums font-semibold" style={{ color: shortfall }}>
-                  ₹{r.received.toLocaleString('en-IN', { minimumFractionDigits: 2 })} Cr received
-                </span>
-              </div>
-              <div className="relative h-7 w-full" style={{ backgroundColor: `${ink}12` }}>
-                <div className="absolute inset-y-0 left-0" style={{ width: `${estW}%`, backgroundColor: `${ink}18` }} />
-                <div
-                  className="absolute inset-y-0 left-0"
-                  style={{ width: `${Math.max(recW, r.received > 0 ? 1.2 : 0)}%`, backgroundColor: shortfall }}
-                />
-              </div>
-              <div className="mt-1 text-[10px]" style={{ color: `${ink}77` }}>
-                {r.note}
-              </div>
-            </div>
-          );
-        })}
+      <div className="overflow-x-auto -mx-2">
+        <table className="w-full text-xs border-collapse min-w-[520px] table-fixed">
+          <thead>
+            <tr className="border-b-2 border-[#e3e3e0]">
+              <th className={`${TH} w-[22%]`}>Year</th>
+              <th className={`${TH_R} w-[26%]`}>RE / BE</th>
+              <th className={`${TH_R} w-[26%]`}>Received</th>
+              <th className={`${TH_R} w-[26%]`}>Share of RE</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr key={r.year} className="border-b border-[#e3e3e0]/60">
+                <td className={TD_NAME}>{r.year}</td>
+                <td className={TD_R}>₹{r.estimate.toLocaleString('en-IN')}</td>
+                <td className={`${TD_R} font-bold`} style={{ color: SHORTFALL }}>
+                  ₹{r.received.toLocaleString('en-IN', { minimumFractionDigits: 2 })}
+                </td>
+                <td className={TD_R}>{r.share}</td>
+              </tr>
+            ))}
+            <tr className="border-t-2 border-[#e3e3e0]">
+              <td className={TD_NAME}>Disclosed total</td>
+              <td className={TD_R}>n/a</td>
+              <td className={`${TD_R} font-bold`} style={{ color: SHORTFALL }}>
+                ₹400.94
+              </td>
+              <td className={TD_R}>3.9% of outlay</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-
-      <div className="mt-5 flex gap-5 text-[10px]" style={{ color: `${ink}88` }}>
-        <span className="inline-flex items-center gap-1.5">
-          <span className="inline-block h-2.5 w-4" style={{ backgroundColor: `${ink}18` }} /> Estimate
-        </span>
-        <span className="inline-flex items-center gap-1.5">
-          <span className="inline-block h-2.5 w-4" style={{ backgroundColor: shortfall }} /> Received
-        </span>
-      </div>
-    </ChartShell>
+    </ChartFrame>
   );
 }
 
-/* ─── Compute attrition as nested blocks ─── */
-export function IndiaAIComputeFunnel() {
-  const steps = [
-    { label: 'Committed by CSPs', value: 33099, pct: 100 },
-    { label: 'Assigned by IndiaAI', value: 12638, pct: 38 },
-    { label: 'Utilised by end users', value: 7418, pct: 22 },
+export function IndiaAIPillarAllocation() {
+  const pillars = [
+    { name: 'Compute Capacity', cr: 4563.36, pct: 44.0 },
+    { name: 'Foundation Models', cr: 1971.37, pct: 19.0 },
+    { name: 'Startup Financing', cr: 1942.5, pct: 18.7 },
+    { name: 'FutureSkills', cr: 882.94, pct: 8.5 },
+    { name: 'Application Development', cr: 689.05, pct: 6.6 },
+    { name: 'Datasets Platform', cr: 199.55, pct: 1.9 },
+    { name: 'Overheads', cr: 102.69, pct: 1.0 },
+    { name: 'Safe & Trusted AI', cr: 20.46, pct: 0.2, alert: true },
   ];
 
   return (
-    <ChartShell
-      title="GPU attrition (committed → assigned → used)"
+    <ChartFrame
+      title="Where the ₹10,371.92 Cr was allocated"
+      subtitle="IndiaAI Mission pillar outlay · five-year plan"
       source={
         <>
-          Reported by{' '}
-          <SourceLink href="https://economictimes.indiatimes.com/tech/artificial-intelligence/underused-gpus-raise-questions-about-indiaai-capacity-build-out/articleshow/128981840.cms">
-            The Economic Times
+          Source{' '}
+          <SourceLink href="https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf">
+            Rajya Sabha Unstarred Q.1668
           </SourceLink>
-          , citing an IndiaAI letter to CSPs. Secondary until MeitY reprints the series. Headline
-          &quot;38,000+ GPUs&quot; counts onboarded capacity, not utilisation.
+          , answered 13 Feb 2026 (MeitY). Figures sum to ₹10,371.92 Cr.
         </>
       }
     >
-      <div className="flex flex-col items-stretch gap-0">
-        {steps.map((s, i) => (
-          <div key={s.label} className="flex flex-col items-center">
-            <div
-              className="flex w-full items-center justify-between gap-4 px-4 py-3 md:px-6"
-              style={{
-                width: `${Math.max(s.pct, 28)}%`,
-                backgroundColor: i === 2 ? shortfall : ink,
-                color: paper,
-              }}
-            >
-              <span className="text-[12px] font-medium">{s.label}</span>
-              <span className="text-[12px] tabular-nums font-semibold whitespace-nowrap">
-                {s.value.toLocaleString('en-IN')} · {s.pct}%
-              </span>
-            </div>
-            {i < steps.length - 1 && (
-              <div className="h-3 w-px" style={{ backgroundColor: rule }} />
-            )}
-          </div>
+      <div className="space-y-1">
+        {pillars.map((p) => (
+          <BarRow
+            key={p.name}
+            label={p.name}
+            value={`${p.pct}%`}
+            pct={p.pct}
+            tone={p.alert ? 'shortfall' : 'ink'}
+          />
         ))}
       </div>
-      <p className="mt-5 text-[11px]" style={{ color: `${ink}88` }}>
-        22% of committed GPUs reached end-user utilisation in the reported letter.
-      </p>
-    </ChartShell>
+
+      <div className="overflow-x-auto -mx-2 mt-8">
+        <table className="w-full text-xs border-collapse min-w-[520px] table-fixed">
+          <thead>
+            <tr className="border-b-2 border-[#e3e3e0]">
+              <th className={`${TH} w-[46%]`}>Pillar</th>
+              <th className={`${TH_R} w-[27%]`}>Outlay (₹ Cr)</th>
+              <th className={`${TH_R} w-[27%]`}>Share</th>
+            </tr>
+          </thead>
+          <tbody>
+            {pillars.map((p) => (
+              <tr key={p.name} className="border-b border-[#e3e3e0]/60">
+                <td className={TD_NAME}>{p.name}</td>
+                <td className={TD_R}>₹{p.cr.toLocaleString('en-IN')}</td>
+                <td className={TD_R}>{p.pct}%</td>
+              </tr>
+            ))}
+            <tr className="border-t-2 border-[#e3e3e0]">
+              <td className={TD_NAME}>Total</td>
+              <td className={`${TD_R} font-bold`}>₹10,371.92</td>
+              <td className={`${TD_R} font-bold`}>100%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </ChartFrame>
   );
 }
 
-/* ─── Beneficiaries as numbered census ─── */
+export function IndiaAIComputeFunnel() {
+  const steps = [
+    { label: 'Committed', value: '33,099', pct: 100 },
+    { label: 'Assigned', value: '12,638', pct: 38 },
+    { label: 'Utilised', value: '7,418', pct: 22, alert: true },
+  ];
+
+  return (
+    <ChartFrame
+      title="Compute funnel"
+      subtitle="Committed, assigned, and utilised GPUs · CSP letter reported by ET"
+      source={
+        <>
+          Figures as reported by{' '}
+          <SourceLink href="https://economictimes.indiatimes.com/tech/artificial-intelligence/underused-gpus-raise-questions-about-indiaai-capacity-build-out/articleshow/128981840.cms">
+            The Economic Times
+          </SourceLink>
+          , citing an IndiaAI letter to empanelled providers. Secondary until MeitY reprints the series.
+        </>
+      }
+    >
+      <div className="space-y-1">
+        {steps.map((s) => (
+          <BarRow
+            key={s.label}
+            label={s.label}
+            value={`${s.value} · ${s.pct}%`}
+            pct={s.pct}
+            tone={s.alert ? 'shortfall' : 'ink'}
+          />
+        ))}
+      </div>
+    </ChartFrame>
+  );
+}
+
 export function IndiaAIUserCounts() {
   const users = [
     { group: 'Academic researchers', n: 114 },
@@ -266,127 +255,174 @@ export function IndiaAIUserCounts() {
     { group: 'Early-stage researchers', n: 10 },
     { group: 'IndiaAI Fellows', n: 8 },
   ];
+  const max = Math.max(...users.map((u) => u.n));
   const total = users.reduce((a, u) => a + u.n, 0);
 
   return (
-    <ChartShell
-      title="Who received subsidised compute access"
+    <ChartFrame
+      title="Who is using subsidised compute"
+      subtitle="Beneficiary counts disclosed to Parliament · as on reply date"
       source={
         <>
+          Source{' '}
           <SourceLink href="https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf">
             Rajya Sabha Unstarred Q.1668
           </SourceLink>
-          . Categories as listed by MeitY. Rows may overlap. Sum of listed slots = {total}, not unique
-          organisations.
+          . Categories as listed by MeitY. Rows may overlap. Listed slots sum to {total}.
         </>
       }
     >
-      <div className="mb-4 text-[11px]" style={{ color: `${ink}88` }}>
-        Disclosed beneficiary slots as on the reply date. Against a public figure of 38,000+ onboarded
-        GPUs.
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8">
-        {users.map((u, i) => (
-          <div
-            key={u.group}
-            className="flex items-baseline justify-between gap-4 border-b py-2.5"
-            style={{ borderColor: rule }}
-          >
-            <span className="text-[13px]" style={{ color: ink }}>
-              <span className="mr-2 tabular-nums" style={{ color: `${ink}55` }}>
-                {String(i + 1).padStart(2, '0')}
-              </span>
-              {u.group}
-            </span>
-            <span className="text-[15px] font-semibold tabular-nums" style={{ color: ink }}>
-              {u.n}
-            </span>
-          </div>
+      <div className="space-y-1">
+        {users.map((u) => (
+          <BarRow key={u.group} label={u.group} value={String(u.n)} pct={(u.n / max) * 100} />
         ))}
       </div>
-    </ChartShell>
+    </ChartFrame>
   );
 }
 
-/* ─── GPU prices. highlight ₹65 band vs training SKUs ─── */
 export function IndiaAIGPUPriceTable() {
   const rows = [
-    { sku: 'NVIDIA L4 (1X)', onDemand: 45.07, month: 29.0, bidder: 'Sify / Netmagic', band: 'poster' as const },
-    { sku: 'Intel Gaudi 2 (1X)', onDemand: 57.6, month: 46.8, bidder: 'CyFuture', band: 'poster' as const },
-    { sku: 'NVIDIA L40S (1X)', onDemand: 67.5, month: 49.5, bidder: 'CyFuture', band: 'poster' as const },
-    { sku: 'NVIDIA A100 80GB (1X)', onDemand: 135.9, month: 89.1, bidder: 'CyFuture', band: 'mid' as const },
-    { sku: 'NVIDIA H200 SXM (1X)', onDemand: 140.0, month: 135.0, bidder: 'Netmagic', band: 'train' as const },
-    { sku: 'NVIDIA H100 SXM (1X)', onDemand: 153.0, month: 134.1, bidder: 'CyFuture', band: 'train' as const },
-    { sku: 'NVIDIA B200 SXM (1X)', onDemand: 323.0, month: 308.0, bidder: 'Yotta', band: 'train' as const },
+    { sku: 'NVIDIA L4 (1X)', onDemand: '45.07', month: '29.00', bidder: 'Sify / Netmagic' },
+    { sku: 'Intel Gaudi 2 (1X)', onDemand: '57.60', month: '46.80', bidder: 'CyFuture' },
+    { sku: 'NVIDIA L40S (1X)', onDemand: '67.50', month: '49.50', bidder: 'CyFuture' },
+    { sku: 'NVIDIA A100 80GB (1X)', onDemand: '135.90', month: '89.10', bidder: 'CyFuture' },
+    { sku: 'NVIDIA H200 SXM (1X)', onDemand: '140.00', month: '135.00', bidder: 'Netmagic' },
+    { sku: 'NVIDIA H100 SXM (1X)', onDemand: '153.00', month: '134.10', bidder: 'CyFuture' },
+    { sku: 'NVIDIA B200 SXM (1X)', onDemand: '323.00', month: '308.00', bidder: 'Yotta' },
   ];
 
   return (
-    <ChartShell
-      title="L1 hourly GPU prices (₹). PIB tender table"
+    <ChartFrame
+      title="L1 bid prices for selected GPU SKUs"
+      subtitle="Hourly charges in ₹ · on-demand vs one-month · May 2025 PIB disclosure"
       source={
         <>
+          Source{' '}
           <SourceLink href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132817">
             PIB Press Release ID 2132817
           </SourceLink>{' '}
-          (30 May 2025), Table 1. The ₹65/hour slogan sits near entry-level SKUs. H100/H200/B200 are
-          outside that band. End-user price after subsidy can be lower than these L1 rack rates.
+          (30 May 2025), Table 1. The ₹65/hour figure sits near entry-level SKUs, not H100/H200 clusters.
         </>
       }
     >
-      <div className="mb-4 flex flex-wrap gap-4 text-[10px]" style={{ color: `${ink}88` }}>
-        <span className="inline-flex items-center gap-1.5">
-          <span className="inline-block h-2.5 w-2.5" style={{ backgroundColor: `${ink}22` }} /> Near ₹65 poster
-          band
-        </span>
-        <span className="inline-flex items-center gap-1.5">
-          <span className="inline-block h-2.5 w-2.5" style={{ backgroundColor: shortfall }} /> Training-class
-        </span>
-      </div>
-
-      <div className="overflow-x-auto -mx-1">
-        <table className="w-full min-w-[520px] border-collapse text-[12px]">
+      <div className="overflow-x-auto -mx-2">
+        <table className="w-full text-xs border-collapse min-w-[520px] table-fixed">
           <thead>
-            <tr style={{ borderBottom: `1px solid ${ink}` }}>
-              <th className="py-2 pr-3 text-left font-medium" style={{ color: ink }}>
-                SKU
-              </th>
-              <th className="py-2 px-3 text-right font-medium" style={{ color: ink }}>
-                On-demand
-              </th>
-              <th className="py-2 px-3 text-right font-medium" style={{ color: ink }}>
-                1-month
-              </th>
-              <th className="py-2 pl-3 text-left font-medium" style={{ color: ink }}>
-                L1 bidder
-              </th>
+            <tr className="border-b-2 border-[#e3e3e0]">
+              <th className={`${TH} w-[34%]`}>SKU</th>
+              <th className={`${TH_R} w-[22%]`}>On-demand</th>
+              <th className={`${TH_R} w-[22%]`}>1-month</th>
+              <th className={`${TH} w-[22%]`}>L1 bidder</th>
             </tr>
           </thead>
           <tbody>
             {rows.map((r) => (
-              <tr
-                key={r.sku}
-                style={{
-                  borderBottom: `1px solid ${rule}`,
-                  backgroundColor: r.band === 'train' ? `${shortfall}0d` : r.band === 'poster' ? `${ink}08` : paper,
-                }}
-              >
-                <td className="py-2.5 pr-3 font-medium" style={{ color: ink }}>
-                  {r.sku}
-                </td>
-                <td className="py-2.5 px-3 text-right tabular-nums" style={{ color: ink }}>
-                  ₹{r.onDemand.toFixed(2)}
-                </td>
-                <td className="py-2.5 px-3 text-right tabular-nums font-semibold" style={{ color: ink }}>
-                  ₹{r.month.toFixed(2)}
-                </td>
-                <td className="py-2.5 pl-3" style={{ color: `${ink}99` }}>
-                  {r.bidder}
+              <tr key={r.sku} className="border-b border-[#e3e3e0]/60">
+                <td className={TD_NAME}>{r.sku}</td>
+                <td className={TD_R}>₹{r.onDemand}</td>
+                <td className={`${TD_R} font-semibold`}>₹{r.month}</td>
+                <td className={TD}>{r.bidder}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </ChartFrame>
+  );
+}
+
+export function IndiaAIClaimsTable() {
+  const rows = [
+    {
+      actor: 'Cabinet / PIB',
+      date: 'Mar 2024',
+      claim: 'Outlay over Rs 10,300 crore. Plan for 10,000+ GPUs via PPP.',
+      href: 'https://pib.gov.in/Pressreleaseshare.aspx?PRID=2012375',
+      source: 'PIB 2012375',
+    },
+    {
+      actor: 'PIB',
+      date: '30 May 2025',
+      claim: 'National compute crossed 34,000 GPUs (18,417 + 15,916).',
+      href: 'https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132817',
+      source: 'PIB 2132817',
+    },
+    {
+      actor: 'PIB',
+      date: '12 Oct 2025',
+      claim: 'Over 38,000 GPUs onboarded. Subsidised rate of ₹65 per hour.',
+      href: 'https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092',
+      source: 'PIB 2178092',
+    },
+    {
+      actor: 'MeitY',
+      date: '13 Feb 2026',
+      claim: '₹21.79 Cr received in FY24-25. ₹379.15 Cr in FY25-26 to 9 Feb 2026.',
+      href: 'https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf',
+      source: 'Q.1668 annex',
+    },
+    {
+      actor: 'MeitY',
+      date: '13 Feb 2026',
+      claim: 'More than 38,000 GPUs onboarded. 14 AI service providers empaneled.',
+      href: 'https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf',
+      source: 'Q.1668 annex',
+    },
+    {
+      actor: 'MeitY',
+      date: '13 Feb 2026',
+      claim: 'Users include 114 academic researchers, 47 startups/MSMEs, 58 government entities.',
+      href: 'https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf',
+      source: 'Q.1668 annex',
+    },
+  ];
+
+  return (
+    <ChartFrame
+      title="What officials said"
+      subtitle="Public claims next to the parliamentary cash record"
+      source={
+        <>
+          Primary documents linked in the Source column. Cash figures are from the{' '}
+          <SourceLink href="https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf">
+            13 Feb 2026 Rajya Sabha annex
+          </SourceLink>
+          .
+        </>
+      }
+    >
+      <div className="overflow-x-auto -mx-2">
+        <table className="w-full text-xs border-collapse min-w-[640px] table-fixed">
+          <thead>
+            <tr className="border-b-2 border-[#e3e3e0]">
+              <th className={`${TH} w-[18%]`}>Actor</th>
+              <th className={`${TH} w-[16%]`}>Date</th>
+              <th className={`${TH} w-[48%]`}>Claim</th>
+              <th className={`${TH} w-[18%]`}>Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr key={`${r.actor}-${r.date}-${r.source}-${r.claim.slice(0, 24)}`} className="border-b border-[#e3e3e0]/60 align-top">
+                <td className={TD_NAME}>{r.actor}</td>
+                <td className={`${TD} whitespace-nowrap`}>{r.date}</td>
+                <td className={`${TD} leading-relaxed`}>{r.claim}</td>
+                <td className="py-2.5 px-2">
+                  <a
+                    href={r.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-foreground text-[#37352f]"
+                  >
+                    {r.source}
+                  </a>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-    </ChartShell>
+    </ChartFrame>
   );
 }
