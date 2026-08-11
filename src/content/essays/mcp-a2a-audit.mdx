@@ -59,6 +59,8 @@ The `/agents.txt` companion file, the plain-text convention from agents-txt.com 
 
 This does not mean no site on the internet deploys agent cards. It means that among the 28 largest consumer and enterprise domains sampled, none could be verified as running one. The two protocols that claim to standardise agent discovery have approximately zero observable discovery endpoints on the web.
 
+The SDK download numbers require context. The 198 million monthly npm counts for MCP reflect a protocol integrated into the agent SDKs of OpenAI, which added MCP support in March 2025, Google's Gemini, which followed in April 2025, and Microsoft's Azure AI Foundry and Semantic Kernel, which built MCP into their Copilot stack the same year. The major cloud providers and AI companies ship the MCP SDK as a dependency, which means every developer who installs the OpenAI or Anthropic or Google agent SDKs also triggers an MCP download count. The volume reflects infrastructure adoption, not necessarily end-user tool creation. The A2A numbers, at 14 million pypi downloads against 803 npm downloads, suggest a Python developer base that has not crossed into Node.js at the same scale. A2A's adoption to date appears to be primarily in the Python scientific computing and AI prototyping community, not in production web infrastructure.
+
 ## llms.txt as a benchmark
 
 The crawl also checked `/llms.txt`, the community convention for LLM-readable site summaries, because it measures the same thing, whether sites adopt a new machine-readable file, but it has no formal backing from a major vendor.
