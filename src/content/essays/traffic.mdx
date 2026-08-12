@@ -11,13 +11,13 @@ In August 2026, 35.6% of traffic on Cloudflare's global network came from machin
 
 Three cloud providers originate nearly a third of all bot traffic. Amazon at 14.7% across two AS numbers. Microsoft at 9%. Google at 8.5%. If you want to find the AI that reads the internet, follow the cloud provider AS numbers. The United States originates 42.6% of all bot requests. The infrastructure is concentrated. The consequences are distributed.
 
-![Bot traffic origination by cloud provider, August 2026](/images/essays/traffic-cloud-bots.svg)
+<img src="/images/essays/traffic-cloud-bots.svg" alt="Bot traffic origination by cloud provider" class="w-full my-8" />
 
 These numbers are from [Cloudflare Radar](https://radar.cloudflare.com/bots), measured across a network of 330 cities handling 81 million HTTP requests per second. They are the most current public measurement of bot traffic on the internet.
 
 Most of this traffic is not AI. The [Cloudflare 2025 Year in Review](https://blog.cloudflare.com/radar-2025-year-in-review/) found that search engine crawlers made up 40% of verified bot traffic. AI crawlers accounted for 20%. SEO bots, the commercial scraping infrastructure that monitors rankings and backlinks, made up 13%. Googlebot alone generated more than a quarter of all verified bot traffic and 4.5% of HTML requests. All other AI bots combined generated 4.2%.
 
-![Composition of verified bot traffic, 2025](/images/essays/traffic-composition.svg)
+<img src="/images/essays/traffic-composition.svg" alt="Verified bot traffic composition by category" class="w-full my-8" />
 
 The fastest-growing category is not any of these. It is user-action crawling. A human asks a chatbot a question. The chatbot visits a web page to answer it. The human reads the answer without seeing the page. That category grew 15x in 2025.
 
@@ -71,7 +71,7 @@ AI platforms operated in a different universe. [Anthropic's ratio was 70,900 to 
 
 [Cloudflare's CEO wrote](https://blog.cloudflare.com/content-independence-day-no-ai-crawl-without-compensation/) that getting traffic from OpenAI is 750 times harder than it was from Google in the previous decade. Getting traffic from Anthropic is 30,000 times harder. On 1 July 2025, Cloudflare declared "Content Independence Day" and announced it would default to blocking AI crawlers that do not pay creators.
 
-![Pages crawled per referred visitor, June 2025](/images/essays/traffic-crawl-gap.svg)
+<img src="/images/essays/traffic-crawl-gap.svg" alt="Pages crawled per referred visitor comparison" class="w-full my-8" />
 
 ## What publishers see when the traffic stops
 
@@ -99,7 +99,7 @@ A text crawl fetches 2 or 3 HTTP requests. A browser agent loads every image, ev
 
 The economic relationship is even more one-sided. A traditional crawler indexes content for retrieval. A browser agent consumes content to perform a task: book a flight, file a ticket, check a price. The website serves as infrastructure for the agent. No human visits. No brand impression. No subscription. No ad revenue. The site operator pays the compute bill for a transaction that generates revenue for someone else.
 
-This is not theoretical anymore.
+The agents are already browsing.
 
 ## Who pays for the web when machines do the reading
 
