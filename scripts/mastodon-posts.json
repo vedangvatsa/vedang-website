@@ -2231,9 +2231,10 @@
     "id": "viral-rewrite-129",
     "scheduleDate": "2026-08-13",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "The smartest people in the room are often the ones who ask the most questions. Curiosity is a signal of confidence, not ignorance. Find teams where asking is celebrated at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_155_1.jpg"
+    "image": "scripts/post-images/post_155_1.jpg",
+    "error": "Media failed: scripts/post-images/post_155_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-130",

@@ -2523,9 +2523,11 @@
     "id": "viral-rewrite-109",
     "scheduleDate": "2026-08-07",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The real leader in a room isn't the loudest. It's the one who listens best. They notice what isn't said. They invite dissent. They amplify quiet voices. That's leadership before any title.",
-    "image": "scripts/post-images/post_70_1.jpg"
+    "image": "scripts/post-images/post_70_1.jpg",
+    "postedAt": "2026-08-12T20:19:36.178Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3msvxb7n6fq2j"
   },
   {
     "id": "viral-rewrite-110",

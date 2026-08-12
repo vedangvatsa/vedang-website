@@ -2325,9 +2325,11 @@
     "id": "viral-rewrite-122",
     "scheduleDate": "2026-08-11",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Experience isn't expertise. Facing a problem doesn't mean you solved it. Expertise isn't wisdom. Knowing a lot doesn't mean you know when it applies. The best teams know the difference. Find teams that value wisdom over years at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_108_1.jpg"
+    "image": "scripts/post-images/post_108_1.jpg",
+    "postedAt": "2026-08-12T20:19:41.652Z",
+    "castHash": "0xbaa399d6b57d22dfe774ccf1d45df8da80cab497"
   },
   {
     "id": "viral-rewrite-123",
