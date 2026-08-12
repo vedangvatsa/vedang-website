@@ -142,7 +142,7 @@ MCP's early gravity pulled toward registries and GitHub lists. That path matches
 
 llms.txt succeeded on brand domains partly because it is static and low risk. An agent card that points to a live agent is dynamic and higher risk. Expecting A2A cards to spread at llms.txt speed was never a good prediction. Expecting some brand to ship one card if the product case is clear remains fair. The sample says that case has not cleared production on the measured domains yet.
 
-## False zeros and how this audit avoids them
+## False zeros and how they are avoided
 
 A simple crawler treats HTTP 200 as success. Many large sites return 200 with an HTML error page for unknown paths. Those were rejected by checking content type and body shape. LinkedIn and Netflix are the examples in the sample. Status success, document failure.
 
@@ -164,11 +164,11 @@ If you run a consumer or enterprise domain, llms.txt is the low-cost experiment 
 
 If you write policy or standards commentary, keep the layers separate. Spec existence, SDK installs, server supply, open discovery. Collapsing them into "adoption" recreates the announcement problem from the compute and debt pieces on this site.
 
-## Limits of this audit
+## Limits
 
 A2A advocates can fairly say the protocol is young, enterprise meshes are invisible to public crawls, and discovery conventions take years. MCP advocates can fairly say download counts overstate conscious adoption when the SDK is transitive. Both critiques are built into the method notes above.
 
-A harder critique is that open-web agent discovery may never be the main path. Agents may find each other through marketplaces, signed partner directories, or OS-level assistants, not through well-known JSON on consumer domains. If that world arrives, this audit's layer-4 metric becomes historically interesting and currently less decisive. The data would still show what it shows. Public discovery on top sites was empty in August 2026.
+A harder critique is that open-web agent discovery may never be the main path. Agents may find each other through marketplaces, signed partner directories, or OS-level assistants, not through well-known JSON on consumer domains. If that world arrives, the discovery result becomes historically interesting and currently less decisive.
 
 ## What would change the numbers
 
@@ -176,6 +176,6 @@ A major consumer or enterprise brand in the crawl serving a valid agent card at 
 
 The developer tools exist. The SDKs show large download counts. The discovery files that would make agents findable on the open web had no deployments in this sample. That is the distance between a protocol that standardises internal tooling and a protocol that standardises the public internet.
 
-## Sources and limits
+## Sources
 
-Download figures, star counts, and crawl results were collected between 9 and 12 August 2026. The crawl is a sample of 28 domains selected for consumer and enterprise prominence. Soft-404 responses were excluded by content-type verification. Package-name ambiguity and private deployments are the main blind spots. A repeat of this audit should keep the same domain list for trend, then expand the list in a separate table so old and new samples stay comparable.
+Download figures, star counts, and crawl results were collected between 9 and 12 August 2026. The crawl is a sample of 28 domains selected for consumer and enterprise prominence. Soft-404 responses were excluded by content-type verification. Package-name ambiguity and private deployments are the main blind spots. To repeat the measurement, keep the same domain list for trend, then expand the list in a separate table so old and new samples stay comparable.
