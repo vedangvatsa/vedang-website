@@ -1,9 +1,5 @@
 export const recentPapers = [
   {
-    title: 'Emergence of TechFin in the emerging economies',
-    url: 'https://doi.org/10.9790/487X-2207075660',
-  },
-  {
     title: 'State of AI Research',
     url: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6991218',
   },
@@ -46,5 +42,9 @@ export const recentPapers = [
   {
     title: 'Identification of Algorithmic Bias Through Policy Instruments',
     url: 'https://dx.doi.org/10.21474/IJAR01/11418',
+  },
+  {
+    title: 'Emergence of TechFin in the emerging economies',
+    url: 'https://doi.org/10.9790/487X-2207075660',
   },
 ];
