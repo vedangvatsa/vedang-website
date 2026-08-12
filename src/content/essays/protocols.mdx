@@ -7,7 +7,7 @@ category: "AI Infrastructure"
 keywords: ["MCP", "A2A", "Model Context Protocol", "Agent-to-Agent", "Anthropic", "Google", "adoption audit", "agent protocols"]
 ---
 
-Two protocols claim to do for agents what HTTP did for the web. MCP, [Anthropic's Model Context Protocol](https://www.anthropic.com/news/model-context-protocol), connects agents to tools. A2A, [Google's Agent-to-Agent Protocol](https://a2a-protocol.org), connects agents to other agents. This piece measures their actual deployment with three data sources. Download statistics from npm and pypi. GitHub star counts. A direct crawl of 28 top web domains for the discovery files each protocol needs.
+Two protocols claim to do for agents what HTTP did for the web. MCP, [Anthropic's Model Context Protocol](https://www.anthropic.com/news/model-context-protocol), connects agents to tools. A2A, [Google's Agent-to-Agent Protocol](https://a2a-protocol.org), connects agents to other agents. Three data sources. Download statistics from npm and pypi. GitHub star counts. A direct crawl of 28 top web domains for the discovery files each protocol needs.
 
 The claim that a protocol "won" or "lost" is too coarse for the data. MCP and A2A solve different problems. One standardises how an agent calls tools inside a stack. The other standardises how agents find and talk to each other across organisational boundaries. A fair audit measures each against its own job, then checks whether the public internet shows the discovery layer that cross-agent talk requires.
 
@@ -130,7 +130,7 @@ Adoption splits into four layers.
 3. **Server or agent supply.** Someone runs endpoints that speak the protocol.
 4. **Open discovery.** Strangers can find those endpoints without a private sales call.
 
-MCP shows strength on layers 1 to 3 in public evidence. Layer 4 is weak on brand domains, and less necessary if registries carry supply. A2A shows strength on layer 1, partial strength on layer 2 in Python, and no verified strength on layer 4 in the 28-domain sample. Layer 3 may exist privately. This audit cannot see private meshes.
+MCP shows strength on layers 1 to 3 in public evidence. Layer 4 is weak on brand domains, and less necessary if registries carry supply. A2A shows strength on layer 1, partial strength on layer 2 in Python, and no verified strength on layer 4 in the 28-domain sample. Layer 3 may exist privately. Private meshes are not visible to this method.
 
 Partner announcements sit beside these layers, not above them. Fifty or a hundred logos on a launch blog are layer-1 politics. They are not layer-4 evidence.
 
@@ -144,7 +144,7 @@ llms.txt succeeded on brand domains partly because it is static and low risk. An
 
 ## False zeros and how this audit avoids them
 
-A naive crawler treats HTTP 200 as success. Many large sites return 200 with an HTML error page for unknown paths. This audit rejected those by checking content type and body shape. LinkedIn and Netflix are the teaching cases in the sample. Status success, document failure.
+A simple crawler treats HTTP 200 as success. Many large sites return 200 with an HTML error page for unknown paths. Those were rejected by checking content type and body shape. LinkedIn and Netflix are the examples in the sample. Status success, document failure.
 
 Another false zero comes from redirects through consent or bot walls. A headless browser can see a different answer than curl. The crawl used a headless browser for that reason. Even then, geo fences and account walls can hide files from a research crawl while showing them to a logged-in partner agent. The method under-counts protected deployments by design.
 
@@ -154,7 +154,7 @@ A false positive is also possible. A site could serve a toy JSON file that match
 
 The August 2026 pass is a baseline. Later passes should keep the same 28 domains for trend, add developer-native domains such as docs sites and cloud consoles, sample any public A2A registry that appears, and try to separate direct MCP imports from transitive installs if registry metadata allows.
 
-## What a practitioner should do with this audit
+## What to do with these results
 
 If you build internal agents, MCP is already part of the default stack in many shops. The practical questions are server quality, auth, logging, and least-privilege tool design. Download counts do not answer those. Threat models do.
 
