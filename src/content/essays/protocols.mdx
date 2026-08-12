@@ -11,15 +11,15 @@ Two protocols claim to do for agents what HTTP did for the web. MCP, [Anthropic'
 
 The claim that a protocol "won" or "lost" is too coarse for the data. MCP and A2A solve different problems. One standardises how an agent calls tools inside a stack. The other standardises how agents find and talk to each other across organisational boundaries. A fair audit measures each against its own job, then checks whether the public internet shows the discovery layer that cross-agent talk requires.
 
-## Why protocols matter for agents
+## Why they exist
 
-Agents are software that plan and act. To act, they need tools. File systems, browsers, databases, calendars, payment APIs, internal CRMs. Without a shared way to describe those tools, every vendor invents a private plug. Integration cost rises. Security review multiplies. Switching costs harden.
+Agents need tools to act, and they need other agents to coordinate. Without shared ways to describe tools, every vendor builds a private plug, integration costs rise, switching gets harder. MCP is an attempt to standardise the tool plug. A2A is an attempt to standardise agent-to-agent talk.
 
-MCP is an attempt to standardise the tool plug. An MCP server exposes tools and resources. An MCP client, often inside an agent host, calls them. Anthropic released MCP as an open standard in [November 2024](https://www.anthropic.com/news/model-context-protocol). Major model vendors and cloud platforms then shipped SDKs and connectors around it.
+MCP: An MCP server exposes tools and resources. An MCP client, inside an agent host, calls them. Anthropic released it as an open standard in [November 2024](https://www.anthropic.com/news/model-context-protocol). Major model vendors and cloud platforms shipped SDKs and connectors around it.
 
-A2A is an attempt to standardise agent-to-agent talk. Google [announced it in April 2025](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/) with over 50 partners and [transferred it to the Linux Foundation](https://developers.googleblog.com/en/google-cloud-donates-a2a-to-linux-foundation/) in June 2025. The discovery idea is simple on paper. An organisation publishes an agent card at a well-known path. Another agent reads the card and knows how to start a conversation.
+A2A: An organisation publishes an agent card at a well-known path. Another agent reads the card and knows how to start a conversation. Google [announced it in April 2025](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/) with over 50 partners and [transferred it to the Linux Foundation](https://developers.googleblog.com/en/google-cloud-donates-a2a-to-linux-foundation/) in June 2025. The discovery idea is simple on paper. Publishing a card is a product and security decision.
 
-Both protocols can succeed in their own lane. This audit asks a narrower question. What does public evidence show about installs and about discovery on the open web.
+Both protocols can succeed in their own lane. What the public record shows about installs and open-web discovery is narrower.
 
 ## What was measured
 
@@ -121,7 +121,7 @@ MCP fits the HTTP analogy better on the internal side. Teams already want agents
 
 ## What "adoption" should mean
 
-Adoption is a baggy word. This audit splits it into four layers.
+Adoption splits into four layers.
 
 1. **Spec existence.** A public specification and a governance home.
 2. **SDK installs.** Developers can import a library.
@@ -168,7 +168,7 @@ A2A advocates can fairly say the protocol is young, enterprise meshes are invisi
 
 A harder critique is that open-web agent discovery may never be the main path. Agents may find each other through marketplaces, signed partner directories, or OS-level assistants, not through well-known JSON on consumer domains. If that world arrives, this audit's layer-4 metric becomes historically interesting and currently less decisive. The data would still show what it shows. Public discovery on top sites was empty in August 2026.
 
-## What would change the score on the open web
+## What would change the numbers
 
 A major consumer or enterprise brand in the crawl serving a valid agent card at `/.well-known/agent-card.json` would move the A2A count off zero. If MCP's draft server-card path gets deployed on brand domains, the crawl could detect it. Today MCP mostly spreads through registries and GitHub lists rather than well-known paths. A public registry of live A2A agent cards, with endpoints an outsider can call, would let adoption be measured without crawling. No such registry turned up during this pass.
 
