@@ -2197,9 +2197,10 @@
     "id": "viral-rewrite-125",
     "scheduleDate": "2026-08-12",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The best companies don't expect you to build your life around your job. They design work that fits around your life. That's a bigger retention tool than any perk. Find teams that respect your whole life at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_81_1.jpg"
+    "image": "scripts/post-images/post_81_1.jpg",
+    "error": "Media failed: scripts/post-images/post_81_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-126",
