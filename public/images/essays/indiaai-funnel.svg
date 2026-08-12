@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340">
+  <style>
+    text { font-family: Inter, system-ui, sans-serif; }
+    .title { font-size: 14px; font-weight: 600; fill: #18181b; }
+    .label { font-size: 12px; fill: #18181b; font-weight: 500; }
+    .value { font-size: 11px; fill: #71717a; }
+    .pct { font-size: 10px; fill: #a1a1aa; }
+    .note { font-size: 10px; fill: #a1a1aa; }
+    .marker { font-size: 10px; fill: #71717a; }
+  </style>
+  <!-- Title -->
+  <text x="40" y="30" class="title">IndiaAI Compute: Committed → Assigned → Utilised (GPUs)</text>
+  
+  <!-- Committed -->
+  <rect x="40" y="50" width="540" height="32" rx="3" fill="#d4d4d8"/>
+  <text x="54" y="71" class="label">Committed</text>
+  <text x="170" y="71" class="value">33,099 GPUs</text>
+  <text x="410" y="52" class="marker">100%</text>
+  
+  <!-- Down arrow -->
+  <text x="300" y="100" text-anchor="middle" class="pct">▼</text>
+  
+  <!-- Assigned -->
+  <rect x="40" y="108" width="205" height="32" rx="3" fill="#a1a1aa"/>
+  <text x="54" y="129" class="label">Assigned</text>
+  <text x="140" y="129" class="value">12,638</text>
+  <text x="250" y="110" class="marker">38% of committed</text>
+  
+  <!-- Down arrow -->
+  <text x="300" y="158" text-anchor="middle" class="pct">▼</text>
+  
+  <!-- Utilised -->
+  <rect x="40" y="166" width="120" height="32" rx="3" fill="#18181b"/>
+  <text x="54" y="187" class="label" fill="#fafafa">Utilised</text>
+  <text x="130" y="187" class="value" fill="#fafafa">7,418</text>
+  <text x="165" y="168" class="marker">22% of committed</text>
+  
+  <!-- Source -->
+  <text x="40" y="225" class="note">Source: Economic Times, citing an IndiaAI letter to providers. Figures are press-reported.</text>
+  <text x="40" y="242" class="note">33,099 were committed. 12,638 were assigned to users. 7,418 were utilised.</text>
+  
+  <!-- Context line -->
+  <text x="40" y="270" class="note">38,000+ GPUs were "onboarded" per MeitY's parliamentary reply.</text>
+  <text x="40" y="288" class="note">305 user slots were listed in the same document. One slot for every 108 committed GPUs.</text>
+</svg>
