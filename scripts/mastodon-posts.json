@@ -2188,9 +2188,10 @@
     "id": "viral-rewrite-124",
     "scheduleDate": "2026-08-12",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Directness without kindness is just rudeness. The best feedback is honest and delivered with care. Find teams that know the difference at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_86_1.jpg"
+    "image": "scripts/post-images/post_86_1.jpg",
+    "error": "Media failed: scripts/post-images/post_86_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-125",
@@ -2204,9 +2205,10 @@
     "id": "viral-rewrite-126",
     "scheduleDate": "2026-08-12",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "We talk about remote work as if the benefit is flexibility. The real benefit is hours. Time saved from commuting is time you can spend on anything that matters more. Find teams that value your time at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_43_1.jpg"
+    "image": "scripts/post-images/post_43_1.jpg",
+    "error": "Media failed: scripts/post-images/post_43_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-127",
