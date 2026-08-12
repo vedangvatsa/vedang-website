@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" width="680" height="340">
+  <style>
+    text { font-family: Inter, system-ui, sans-serif; }
+    .title { font-size: 14px; font-weight: 600; fill: #18181b; }
+    .label { font-size: 12px; fill: #18181b; font-weight: 500; }
+    .pct { font-size: 12px; fill: #18181b; font-weight: 600; }
+    .sub { font-size: 11px; fill: #6b7280; }
+    .note { font-size: 10px; fill: #a1a1aa; }
+  </style>
+
+  <text x="40" y="30" class="title">Composition of Verified Bot Traffic, 2025</text>
+
+  <!-- Search engines 40% -->
+  <text x="40" y="68" class="label">Search engine crawlers</text>
+  <rect x="280" y="52" width="360" height="22" rx="3" fill="#18181b" opacity="0.85"/>
+  <text x="648" y="68" class="pct">40%</text>
+  <text x="40" y="85" class="sub">Googlebot, Bingbot, DuckDuckBot. Index pages for search results. Combined with AI training in Googlebot's case.</text>
+
+  <!-- AI crawlers 20% -->
+  <text x="40" y="120" class="label">AI crawlers</text>
+  <rect x="280" y="104" width="180" height="22" rx="3" fill="#18181b" opacity="0.55"/>
+  <text x="468" y="120" class="pct">20%</text>
+  <text x="40" y="137" class="sub">GPTBot, ClaudeBot, Bytespider, PerplexityBot. Train models on web content. User-action crawling grew 15x in 2025.</text>
+
+  <!-- SEO bots 13% -->
+  <text x="40" y="172" class="label">SEO and marketing bots</text>
+  <rect x="280" y="156" width="117" height="22" rx="3" fill="#18181b" opacity="0.35"/>
+  <text x="405" y="172" class="pct">13%</text>
+  <text x="40" y="189" class="sub">Ahrefs, Semrush, Moz. Monitor rankings, backlinks, and competitor content for commercial purposes.</text>
+
+  <!-- Other 27% -->
+  <text x="40" y="224" class="label">Other verified bots</text>
+  <rect x="280" y="208" width="243" height="22" rx="3" fill="#d4d4d8"/>
+  <text x="531" y="224" class="pct" fill="#71717a">27%</text>
+  <text x="40" y="241" class="sub">Site monitoring, uptime checks, archiving (Internet Archive), research crawlers (Common Crawl), feed readers.</text>
+
+  <text x="40" y="280" class="note">Source: Cloudflare 2025 Year in Review, covering January-December 2025. blog.cloudflare.com/radar-2025-year-in-review/</text>
+  <text x="40" y="298" class="note">Googlebot alone originated more than a quarter of all verified bot traffic and 4.5% of all HTML requests.</text>
+</svg>
