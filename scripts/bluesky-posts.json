@@ -2553,9 +2553,11 @@
     "id": "viral-rewrite-112",
     "scheduleDate": "2026-08-08",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Insecure people pretend to know everything. Secure people admit what they don't know. The best colleagues are proactive learners. They don't defend their ignorance. They close the gap.",
-    "image": "scripts/post-images/post_192_1.jpg"
+    "image": "scripts/post-images/post_192_1.jpg",
+    "postedAt": "2026-08-13T20:08:15.993Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3msyh3uazo62f"
   },
   {
     "id": "viral-rewrite-113",

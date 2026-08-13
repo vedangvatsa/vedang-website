@@ -2258,9 +2258,10 @@
     "id": "viral-rewrite-132",
     "scheduleDate": "2026-08-14",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Competing with others creates a zero-sum game. Competing with yourself creates a game you can keep winning. Find teams that reward progress over rankings at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_87_1.jpg"
+    "image": "scripts/post-images/post_87_1.jpg",
+    "error": "Media failed: scripts/post-images/post_87_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-133",
