@@ -9,10 +9,6 @@ export const alt = 'Essay by Vedang Vatsa';
 export const size = ogSize;
 export const contentType = 'image/png';
 
-export function generateStaticParams() {
-  return essays.map((essay) => ({ slug: essay.slug }));
-}
-
 function flatten(text?: string) {
   if (!text) return '';
   return String(text).replace(/\s+/g, ' ').trim();
@@ -20,13 +16,17 @@ function flatten(text?: string) {
 
 function getEssayMeta(slug: string) {
   const filePath = path.join(process.cwd(), 'src', 'content', 'essays', `${slug}.mdx`);
-  if (!fs.existsSync(filePath)) {
-    return { title: 'Vedang Vatsa', summary: '' };
+  if (fs.existsSync(filePath)) {
+    const { data } = matter(fs.readFileSync(filePath, 'utf8'));
+    return {
+      title: flatten(data.title) || 'Vedang Vatsa',
+      summary: flatten(data.summary),
+    };
   }
-  const { data } = matter(fs.readFileSync(filePath, 'utf8'));
+  const essay = essays.find((item) => item.slug === slug);
   return {
-    title: flatten(data.title) || 'Vedang Vatsa',
-    summary: flatten(data.summary),
+    title: flatten(essay?.title) || 'Vedang Vatsa',
+    summary: flatten(essay?.summary),
   };
 }
 
