@@ -30,9 +30,15 @@ function getEssayMeta(slug: string) {
   };
 }
 
+function firstSentence(text: string) {
+  const clean = flatten(text);
+  if (!clean) return '';
+  const match = clean.match(/^(.+?[.!?])(?:\s|$)/);
+  return match ? match[1] : clean;
+}
+
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const { title, summary } = getEssayMeta(slug);
-  const subtitle = summary.length > 180 ? `${summary.slice(0, 177).trimEnd()}...` : summary;
-  return generateOgImage(title, subtitle || undefined);
+  return generateOgImage(title, firstSentence(summary) || undefined, slug);
 }

@@ -24,132 +24,80 @@ export function loadOgAssets() {
   return { avatarBase64, interBold, interRegular };
 }
 
-export function generateOgImage(title: string, subtitle?: string) {
-  const { avatarBase64, interBold, interRegular } = loadOgAssets();
+function stripOgPunctuation(text: string) {
+  return String(text || '')
+    .replace(/[—–]/g, '-')
+    .replace(/:/g, ' -')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
 
-  const titleFontSize = title.length > 50 ? 48 : title.length > 35 ? 56 : title.length > 25 ? 64 : 72;
+function splitTitleTwoLines(title: string): [string, string] {
+  const words = stripOgPunctuation(title).split(' ').filter(Boolean);
+  if (words.length <= 1) return [words[0] || title, ''];
+  if (words.length === 2) return [words[0], words[1]];
 
-  return new ImageResponse(
-    (
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          fontFamily: 'Inter',
-          padding: '60px 70px',
-          background: '#ffffff',
-          color: '#111111',
-          position: 'relative',
-          overflow: 'hidden',
-        }}
-      >
-        {/* Background decoration */}
-        <div style={{
-          position: 'absolute',
-          top: -100,
-          right: -100,
-          width: 500,
-          height: 500,
-          borderRadius: 250,
-          background: 'radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%)',
-          display: 'flex',
-        }} />
-        <div style={{
-          position: 'absolute',
-          bottom: -80,
-          left: -80,
-          width: 400,
-          height: 400,
-          borderRadius: 200,
-          background: 'radial-gradient(circle, rgba(168,85,247,0.06) 0%, transparent 70%)',
-          display: 'flex',
-        }} />
-
-        {/* Top bar */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-            {avatarBase64 ? (
-              <div style={{
-                display: 'flex',
-                width: 52,
-                height: 52,
-                borderRadius: 26,
-                overflow: 'hidden',
-                border: '2px solid rgba(0,0,0,0.08)',
-              }}>
-                <img src={avatarBase64} width={52} height={52} style={{ objectFit: 'cover' }} alt="Vedang Vatsa avatar" />
-              </div>
-            ) : null}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-              <div style={{ fontSize: 18, fontWeight: 700, color: '#1e293b', display: 'flex' }}>Vedang Vatsa FRSA</div>
-              <div style={{ fontSize: 14, color: '#64748b', display: 'flex' }}>veda.ng</div>
-            </div>
-          </div>
-          <div style={{
-            display: 'flex',
-            fontSize: 13,
-            fontWeight: 700,
-            color: '#3b82f6',
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase' as const,
-            padding: '6px 16px',
-            border: '1px solid rgba(59,130,246,0.25)',
-            borderRadius: 20,
-          }}>
-            VEDA.NG
-          </div>
-        </div>
-
-        {/* Title area */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 16, maxWidth: '950px', width: '950px' }}>
-          <div
-            style={{
-              fontSize: titleFontSize,
-              fontWeight: 700,
-              lineHeight: 1.15,
-              letterSpacing: '-0.03em',
-              color: '#111111',
-              display: 'flex',
-              flexWrap: 'wrap',
-            }}
-          >
-            {title}
-          </div>
-          {subtitle && (
-            <div style={{
-              fontSize: 24,
-              color: '#64748b',
-              lineHeight: 1.4,
-              display: 'flex',
-            }}>
-              {subtitle}
-            </div>
-          )}
-        </div>
-
-        {/* Bottom accent line */}
-        <div style={{
-          display: 'flex',
-          width: '100%',
-          height: 4,
-          borderRadius: 2,
-          background: 'linear-gradient(90deg, #3b82f6 0%, #8b5cf6 50%, #3b82f6 100%)',
-        }} />
-      </div>
-    ),
-    {
-      ...ogSize,
-      ...(interBold && interRegular ? {
-        fonts: [
-          { name: 'Inter', data: interRegular, weight: 400 as const, style: 'normal' as const },
-          { name: 'Inter', data: interBold, weight: 700 as const, style: 'normal' as const }
-        ]
-      } : {})
+  const total = words.join(' ').length;
+  let best = 1;
+  let bestScore = Infinity;
+  for (let i = 1; i < words.length; i++) {
+    const left = words.slice(0, i).join(' ');
+    const right = words.slice(i).join(' ');
+    const balance = Math.abs(left.length - right.length);
+    const overflow = Math.max(0, left.length - 22) + Math.max(0, right.length - 22);
+    const preferShortFirst = left.length <= 16 ? -4 : 0;
+    const score = balance + overflow * 3 + preferShortFirst;
+    if (score < bestScore) {
+      bestScore = score;
+      best = i;
     }
-  );
+    if (left.length > total * 0.7) break;
+  }
+  return [words.slice(0, best).join(' '), words.slice(best).join(' ')];
+}
+
+function wrapWords(text: string, maxChars: number, maxLines: number) {
+  const words = stripOgPunctuation(text).split(' ').filter(Boolean);
+  const lines: string[] = [];
+  let current = '';
+  for (const word of words) {
+    const next = current ? `${current} ${word}` : word;
+    if (next.length > maxChars && current) {
+      lines.push(current);
+      current = word;
+      if (lines.length === maxLines - 1) {
+        const rest = [word, ...words.slice(words.indexOf(word) + 1)].join(' ');
+        current = rest.length > maxChars
+          ? rest.slice(0, maxChars).replace(/\s+\S*$/, '').trim()
+          : rest;
+        break;
+      }
+    } else {
+      current = next;
+    }
+  }
+  if (current && lines.length < maxLines) lines.push(current);
+  return lines;
+}
+
+function titleFontSize(line1: string, line2: string) {
+  const longest = Math.max(line1.length, line2.length);
+  if (longest > 26) return 44;
+  if (longest > 20) return 52;
+  if (longest > 16) return 64;
+  if (longest > 12) return 72;
+  return 82;
+}
+
+export function generateOgImage(title: string, subtitle?: string, slug?: string) {
+  const [line1, line2] = splitTitleTwoLines(title);
+  const url = slug ? `veda.ng/${slug}` : 'veda.ng';
+  const cardLines: TerminalLine[] = [
+    { text: `$ ${slug || 'essay'}`, color: 'command' },
+    { text: 'essay', color: 'success' },
+    { text: 'veda.ng', color: 'success' },
+  ];
+  return generateTerminalOgImage(line1, line2, url, cardLines, subtitle);
 }
 
 export interface TerminalLine {
@@ -162,6 +110,7 @@ export function generateTerminalOgImage(
   titleLine2: string,
   url: string,
   terminalLines: TerminalLine[],
+  subtitle?: string,
 ) {
   const { interBold, interRegular } = loadOgAssets();
 
@@ -169,6 +118,14 @@ export function generateTerminalOgImage(
     command: '#6366f1',
     success: '#16a34a',
   };
+
+  const line1 = stripOgPunctuation(titleLine1);
+  const line2 = stripOgPunctuation(titleLine2);
+  const fontSize = titleFontSize(line1, line2);
+  const maxTitleChars = fontSize >= 72 ? 16 : fontSize >= 64 ? 18 : fontSize >= 52 ? 22 : 26;
+  const line1Rows = wrapWords(line1, maxTitleChars, 2);
+  const line2Rows = line2 ? wrapWords(line2, maxTitleChars, 2) : [];
+  const subtitleLines = subtitle ? wrapWords(subtitle, 36, 2) : [];
 
   return new ImageResponse(
     (
@@ -181,7 +138,7 @@ export function generateTerminalOgImage(
           alignItems: 'center',
           justifyContent: 'space-between',
           fontFamily: 'Inter',
-          padding: '60px 70px',
+          padding: '60px 70px 60px 78px',
           background: '#f8fafc',
           color: '#0f172a',
           position: 'relative',
@@ -197,33 +154,60 @@ export function generateTerminalOgImage(
           display: 'flex',
         }} />
 
-        <div style={{ display: 'flex', flexDirection: 'column', maxWidth: '580px' }}>
-          <div style={{
-            fontSize: 82,
-            fontWeight: 700,
-            lineHeight: 1.05,
-            letterSpacing: '-0.03em',
-            color: '#0f172a',
-            display: 'flex',
-          }}>
-            {titleLine1}
-          </div>
-          <div style={{
-            fontSize: 82,
-            fontWeight: 700,
-            lineHeight: 1.05,
-            letterSpacing: '-0.03em',
-            color: '#6366f1',
-            display: 'flex',
-          }}>
-            {titleLine2}
-          </div>
+        <div style={{ display: 'flex', flexDirection: 'column', width: 560 }}>
+          {line1Rows.map((row) => (
+            <div
+              key={`t1-${row}`}
+              style={{
+                fontSize,
+                fontWeight: 700,
+                lineHeight: 1.05,
+                letterSpacing: '-0.03em',
+                color: '#0f172a',
+                display: 'flex',
+              }}
+            >
+              {row}
+            </div>
+          ))}
+          {line2Rows.map((row) => (
+            <div
+              key={`t2-${row}`}
+              style={{
+                fontSize,
+                fontWeight: 700,
+                lineHeight: 1.05,
+                letterSpacing: '-0.03em',
+                color: '#6366f1',
+                display: 'flex',
+              }}
+            >
+              {row}
+            </div>
+          ))}
+          {subtitleLines.length > 0 ? (
+            <div style={{ display: 'flex', flexDirection: 'column', marginTop: 24 }}>
+              {subtitleLines.map((row) => (
+                <div
+                  key={row}
+                  style={{
+                    fontSize: 30,
+                    color: '#64748b',
+                    lineHeight: 1.3,
+                    display: 'flex',
+                  }}
+                >
+                  {row}
+                </div>
+              ))}
+            </div>
+          ) : null}
           <div style={{
             fontSize: 26,
             fontWeight: 700,
             color: '#6366f1',
             display: 'flex',
-            marginTop: 60,
+            marginTop: subtitleLines.length > 0 ? 36 : 60,
           }}>
             {url}
           </div>
