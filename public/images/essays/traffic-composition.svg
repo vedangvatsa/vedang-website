@@ -13,7 +13,7 @@
   <!-- Search engines 40% -->
   <text x="40" y="68" class="label">Search engine crawlers</text>
   <rect x="280" y="52" width="360" height="22" rx="3" fill="#18181b" opacity="0.85"/>
-  <text x="646" y="68" class="pct">40%</text>
+  <text x="628" y="68" class="pct">40%</text>
   <text x="40" y="85" class="sub">Googlebot, Bingbot, DuckDuckBot. Index pages for search results. Combined with AI training in Googlebot's case.</text>
 
   <!-- AI crawlers 20% -->

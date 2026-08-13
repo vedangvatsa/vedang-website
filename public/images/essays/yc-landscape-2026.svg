@@ -41,7 +41,7 @@
   <text x="184" y="142" class="bar-value">15%</text>
 
   <!-- Healthcare bar -->
-  <text x="40" y="166" class="bar-label">Healthcare</text>
+  <text x="40" y="166" class="bar-label">Health</text>
   <rect x="105" y="153" width="54" height="16" rx="2" fill="#7c3aed" opacity="0.7" />
   <text x="165" y="166" class="bar-value">11%</text>
 
@@ -51,7 +51,7 @@
   <text x="163" y="190" class="bar-value">11%</text>
 
   <!-- Industrials bar -->
-  <text x="40" y="214" class="bar-label">Industrials</text>
+  <text x="40" y="214" class="bar-label">Industry</text>
   <rect x="105" y="201" width="29" height="16" rx="2" fill="#d97706" opacity="0.7" />
   <text x="140" y="214" class="bar-value">6%</text>
 

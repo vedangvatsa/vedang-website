@@ -35,7 +35,7 @@
   <!-- Layer 5: Security -->
   <rect x="60" y="203" width="780" height="28" rx="4" fill="#dc2626" opacity="0.08" stroke="#dc2626" stroke-opacity="0.2"/>
   <text x="80" y="222" fill="#dc2626" font-size="10" font-weight="700">SECURITY</text>
-  <text x="440" y="222" fill="#37352f" opacity="0.5" font-size="9">Lakera → Check Point · Robust Intel. → Cisco · Galileo → Cisco · Patronus</text>
+  <text x="380" y="222" fill="#37352f" opacity="0.7" font-size="9">Lakera, Patronus, plus tools sold to Check Point and Cisco</text>
   <text x="820" y="222" text-anchor="end" fill="#dc2626" font-size="9" font-weight="700">$182M</text>
 
   <!-- Layer 6: Perception -->
@@ -58,5 +58,5 @@
 
   <!-- Footer -->
   <line x1="60" y1="305" x2="840" y2="305" stroke="#e3e3e0" stroke-width="0.5"/>
-  <text x="450" y="315" text-anchor="middle" fill="#37352f" opacity="0.3" font-size="8">Sources: Tracxn, PitchBook, Crunchbase, company announcements. Funding = combined capital raised by companies in each layer.</text>
+  <text x="450" y="315" text-anchor="middle" fill="#52525b" font-size="8">Sources: Tracxn, PitchBook, Crunchbase, company announcements. Funding = combined capital raised by companies in each layer.</text>
 </svg>
