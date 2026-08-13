@@ -57,7 +57,7 @@ The numbers cover the 30 days ending 13 August 2026.
 
 </div>
 
-Sources. [npm downloads API](https://api.npmjs.org/downloads/point/last-month/@modelcontextprotocol/sdk), [pypistats](https://pypistats.org/packages/mcp), [GitHub](https://github.com/modelcontextprotocol/servers), queried 13 August 2026.
+The counts are from the [npm downloads API](https://api.npmjs.org/downloads/point/last-month/@modelcontextprotocol/sdk), [pypistats](https://pypistats.org/packages/mcp), and the [MCP servers repo](https://github.com/modelcontextprotocol/servers), queried 13 August 2026.
 
 <img src="/images/essays/sdk-comparison.svg?v=2" alt="npm and pypi monthly download comparison: MCP at 198M and 328M, A2A at 803 and 14M" class="w-full my-8" />
 
@@ -187,7 +187,3 @@ Open-web discovery may never be how agents find each other anyway. Agents may fi
 A major consumer or enterprise brand in the crawl serving a valid agent card at `/.well-known/agent-card.json` would move the A2A count off zero. If MCP's draft server-card path gets deployed on brand domains, the crawl could detect it. Today MCP mostly spreads through registries and GitHub lists rather than well-known paths. A public registry of live A2A agent cards, with endpoints an outsider can call, would let adoption be measured without crawling. No such registry turned up during this pass.
 
 The SDKs are installed. On these 28 sites, nobody published the files that would let a stranger's agent find them. That is an internal tool protocol with a large download count, and a public-internet protocol with no cards I could fetch.
-
-## Sources
-
-Download figures, star counts, and crawl results were collected on 13 August 2026. The crawl is a sample of 28 domains selected for consumer and enterprise prominence. Soft-404 responses were excluded by content-type verification. Package-name ambiguity and private deployments are the main blind spots. To repeat the measurement, keep the same domain list for trend, then expand the list in a separate table so old and new samples stay comparable.

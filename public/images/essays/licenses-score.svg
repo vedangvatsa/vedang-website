@@ -45,5 +45,5 @@
   <text x="580" y="207" class="dim">Not published</text>
   <text x="24" y="236" class="note">Read from Hugging Face model cards and vendor licence files, August 2026. A family can ship more than one licence.</text>
   <text x="24" y="252" class="note">Apache 2.0 and MIT are OSI licences. Llama Community is not. None of these rows publish the training corpus.</text>
-  <text x="24" y="268" class="note">Sources: Hugging Face cards for Qwen, google/gemma, deepseek-ai, openai/gpt-oss, mistralai, meta-llama.</text>
+  <text x="24" y="268" class="note">Cards: Qwen, google/gemma, deepseek-ai, openai/gpt-oss, mistralai, meta-llama. August 2026.</text>
 </svg>
