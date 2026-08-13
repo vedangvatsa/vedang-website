@@ -2345,9 +2345,11 @@
     "id": "viral-rewrite-124",
     "scheduleDate": "2026-08-12",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Directness without kindness is just rudeness. The best feedback is honest and delivered with care. Find teams that know the difference at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_86_1.jpg"
+    "image": "scripts/post-images/post_86_1.jpg",
+    "postedAt": "2026-08-13T12:29:09.841Z",
+    "castHash": "0x1d5e1e980c6a495e930fdccbef508003a74cf1b0"
   },
   {
     "id": "viral-rewrite-125",
