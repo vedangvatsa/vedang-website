@@ -193,6 +193,14 @@
   display: block;
 }
 
+.notion-article img.w-full {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* Tables — full width of the essay column, centered */
 .notion-article .table-wrapper {
   display: block;
