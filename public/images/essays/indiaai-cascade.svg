@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 328" width="720" height="328">
   <style>
     text { font-family: Inter, system-ui, sans-serif; }
     .title { font-size: 14px; font-weight: 600; fill: #18181b; }
-    .label { font-size: 11px; fill: #71717a; }
+    .label { font-size: 11px; fill: #3f3f46; }
     .value { font-size: 11px; font-weight: 600; fill: #18181b; }
-    .note { font-size: 10px; fill: #a1a1aa; }
+    .note { font-size: 10px; fill: #52525b; }
     .axis { stroke: #e4e4e7; stroke-width: 1; }
   </style>
   <!-- Title -->

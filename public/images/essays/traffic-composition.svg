@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" width="680" height="340">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 314" width="680" height="314">
   <style>
     text { font-family: Inter, system-ui, sans-serif; }
     .title { font-size: 14px; font-weight: 600; fill: #18181b; }
     .label { font-size: 12px; fill: #18181b; font-weight: 500; }
     .pct { font-size: 12px; fill: #18181b; font-weight: 600; }
     .sub { font-size: 11px; fill: #6b7280; }
-    .note { font-size: 10px; fill: #a1a1aa; }
+    .note { font-size: 10px; fill: #52525b; }
   </style>
 
   <text x="40" y="30" class="title">Composition of Verified Bot Traffic, 2025</text>
@@ -13,7 +13,7 @@
   <!-- Search engines 40% -->
   <text x="40" y="68" class="label">Search engine crawlers</text>
   <rect x="280" y="52" width="360" height="22" rx="3" fill="#18181b" opacity="0.85"/>
-  <text x="648" y="68" class="pct">40%</text>
+  <text x="646" y="68" class="pct">40%</text>
   <text x="40" y="85" class="sub">Googlebot, Bingbot, DuckDuckBot. Index pages for search results. Combined with AI training in Googlebot's case.</text>
 
   <!-- AI crawlers 20% -->

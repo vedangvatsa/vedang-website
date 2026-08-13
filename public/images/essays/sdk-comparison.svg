@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" width="680" height="340">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 316" width="680" height="316">
   <style>
     text { font-family: Inter, system-ui, sans-serif; }
     .title { font-size: 14px; font-weight: 600; fill: #18181b; }
     .label { font-size: 12px; fill: #18181b; font-weight: 500; }
     .value { font-size: 11px; fill: #18181b; font-weight: 600; }
     .num { font-size: 10px; fill: #71717a; }
-    .note { font-size: 10px; fill: #a1a1aa; }
+    .note { font-size: 10px; fill: #52525b; }
   </style>
   <!-- Title -->
   <text x="40" y="30" class="title">Monthly SDK Downloads (npm and pypi), 30 days to 9 August 2026</text>

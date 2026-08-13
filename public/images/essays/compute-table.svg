@@ -1,67 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 240" width="680" height="240">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 268" width="720" height="268">
   <style>
     text { font-family: Inter, system-ui, sans-serif; }
     .head { font-size: 11px; font-weight: 600; fill: #fafafa; }
     .cell { font-size: 11px; fill: #18181b; }
-    .dim { font-size: 11px; fill: #71717a; }
-    .no { font-size: 11px; fill: #a1a1aa; }
+    .dim { font-size: 11px; fill: #3f3f46; }
+    .no { font-size: 11px; font-weight: 600; fill: #52525b; }
     .title { font-size: 13px; font-weight: 600; fill: #18181b; }
-    .note { font-size: 9px; fill: #a1a1aa; }
+    .note { font-size: 10px; fill: #52525b; }
   </style>
 
-  <text x="40" y="26" class="title">Six Models, Six Metrics, Zero Delivery Ledgers</text>
+  <text x="24" y="24" class="title">Six models, six metrics, zero delivery ledgers</text>
 
-  <!-- Header -->
-  <rect x="40" y="38" width="160" height="26" rx="2" fill="#18181b"/>
-  <text x="50" y="55" class="head">Programme</text>
-  <rect x="200" y="38" width="170" height="26" rx="2" fill="#18181b"/>
-  <text x="210" y="55" class="head">Model</text>
-  <rect x="370" y="38" width="180" height="26" rx="2" fill="#18181b"/>
-  <text x="380" y="55" class="head">Primary metric</text>
-  <rect x="550" y="38" width="90" height="26" rx="2" fill="#18181b"/>
-  <text x="575" y="55" text-anchor="middle" class="head">Hours</text>
+  <rect x="24" y="36" width="672" height="28" fill="#18181b"/>
+  <text x="36" y="54" class="head">Programme</text>
+  <text x="168" y="54" class="head">Model</text>
+  <text x="360" y="54" class="head">Primary metric</text>
+  <text x="620" y="54" class="head">Hours published</text>
 
-  <!-- US -->
-  <rect x="40" y="64" width="160" height="26" rx="1" fill="#fafafa"/>
-  <text x="50" y="81" class="cell" font-weight="600">US NAIRR</text>
-  <text x="210" y="81" class="dim">Donation + coordination</text>
-  <text x="380" y="81" class="cell">840 projects supported</text>
-  <text x="600" y="81" class="no" text-anchor="middle">No</text>
+  <rect x="24" y="64" width="672" height="26" fill="#f4f4f5"/>
+  <text x="36" y="81" class="cell" font-weight="600">US NAIRR</text>
+  <text x="168" y="81" class="dim">Donation + coordination</text>
+  <text x="360" y="81" class="cell">840 projects supported</text>
+  <text x="620" y="81" class="no">No</text>
 
-  <!-- UK -->
-  <rect x="40" y="90" width="160" height="26" rx="1" fill="#fafafa"/>
-  <text x="50" y="107" class="cell" font-weight="600">UK AIRR</text>
-  <text x="210" y="107" class="dim">Public procurement</text>
-  <text x="380" y="107" class="cell">1 machine built (of 2)</text>
-  <text x="600" y="107" class="no" text-anchor="middle">No</text>
+  <rect x="24" y="90" width="672" height="26" fill="#ffffff"/>
+  <text x="36" y="107" class="cell" font-weight="600">UK AIRR</text>
+  <text x="168" y="107" class="dim">Public procurement</text>
+  <text x="360" y="107" class="cell">1 machine built (of 2)</text>
+  <text x="620" y="107" class="no">No</text>
 
-  <!-- EU -->
-  <rect x="40" y="116" width="160" height="26" rx="1" fill="#fafafa"/>
-  <text x="50" y="133" class="cell" font-weight="600">EU AI Factories</text>
-  <text x="210" y="133" class="dim">Co-federation</text>
-  <text x="380" y="133" class="cell">19 sites selected</text>
-  <text x="600" y="133" class="no" text-anchor="middle">No</text>
+  <rect x="24" y="116" width="672" height="26" fill="#f4f4f5"/>
+  <text x="36" y="133" class="cell" font-weight="600">EU AI Factories</text>
+  <text x="168" y="133" class="dim">Co-federation</text>
+  <text x="360" y="133" class="cell">19 sites selected</text>
+  <text x="620" y="133" class="no">No</text>
 
-  <!-- India -->
-  <rect x="40" y="142" width="160" height="26" rx="1" fill="#fafafa"/>
-  <text x="50" y="159" class="cell" font-weight="600">India IndiaAI</text>
-  <text x="210" y="159" class="dim">Empanelment rental</text>
-  <text x="380" y="159" class="cell">38,000 GPUs onboarded</text>
-  <text x="600" y="159" class="no" text-anchor="middle">No</text>
+  <rect x="24" y="142" width="672" height="26" fill="#ffffff"/>
+  <text x="36" y="159" class="cell" font-weight="600">IndiaAI</text>
+  <text x="168" y="159" class="dim">Empanelment rental</text>
+  <text x="360" y="159" class="cell">38,000 GPUs onboarded</text>
+  <text x="620" y="159" class="no">No</text>
 
-  <!-- France -->
-  <rect x="40" y="168" width="160" height="26" rx="1" fill="#fafafa"/>
-  <text x="50" y="185" class="cell" font-weight="600">France</text>
-  <text x="210" y="185" class="dim">Private pledges + EU federation</text>
-  <text x="380" y="185" class="dim">Private investment counted as capacity</text>
-  <text x="600" y="185" class="no" text-anchor="middle">No</text>
+  <rect x="24" y="168" width="672" height="26" fill="#f4f4f5"/>
+  <text x="36" y="185" class="cell" font-weight="600">France</text>
+  <text x="168" y="185" class="dim">Private pledges + EU sites</text>
+  <text x="360" y="185" class="cell">Summit investment counted</text>
+  <text x="620" y="185" class="no">No</text>
 
-  <!-- Japan -->
-  <rect x="40" y="194" width="160" height="26" rx="1" fill="#fafafa"/>
-  <text x="50" y="211" class="cell" font-weight="600">Japan</text>
-  <text x="210" y="211" class="dim">Subsidies + SoftBank debt</text>
-  <text x="380" y="211" class="dim">SoftBank balance sheet</text>
-  <text x="600" y="211" class="no" text-anchor="middle">No</text>
+  <rect x="24" y="194" width="672" height="26" fill="#ffffff"/>
+  <text x="36" y="211" class="cell" font-weight="600">Japan</text>
+  <text x="168" y="211" class="dim">Subsidies + SoftBank debt</text>
+  <text x="360" y="211" class="cell">SoftBank balance sheet</text>
+  <text x="620" y="211" class="no">No</text>
 
-  <text x="40" y="236" class="note">Hours = GPU-hours used per unit of public money. Verified against primary sources August 2026.</text>
+  <text x="24" y="244" class="note">Hours = GPU-hours used per unit of public money. Checked against primary sources, August 2026.</text>
+  <text x="24" y="260" class="note">None of the six programmes publishes that number.</text>
 </svg>
