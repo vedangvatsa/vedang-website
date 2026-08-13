@@ -104,7 +104,7 @@ export function generateOgImage(title: string, subtitle?: string) {
         </div>
 
         {/* Title area */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 16, maxWidth: '950px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16, maxWidth: '950px', width: '950px' }}>
           <div
             style={{
               fontSize: titleFontSize,
@@ -113,6 +113,7 @@ export function generateOgImage(title: string, subtitle?: string) {
               letterSpacing: '-0.03em',
               color: '#111111',
               display: 'flex',
+              flexWrap: 'wrap',
             }}
           >
             {title}

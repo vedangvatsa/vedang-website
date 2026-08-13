@@ -137,6 +137,11 @@ function getEssay(slug: string) {
   };
 }
 
+function flattenMeta(text?: string) {
+  if (!text) return '';
+  return String(text).replace(/\s+/g, ' ').trim();
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const essay = getEssay(slug);
@@ -147,33 +152,62 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const siteUrl = 'https://veda.ng';
   const essayUrl = `${siteUrl}/${slug}`;
-
+  const title = flattenMeta(essay.frontmatter.title);
+  const description = flattenMeta(essay.frontmatter.summary) || title;
   const publishedTime = essay.frontmatter.date ? new Date(essay.frontmatter.date).toISOString() : new Date().toISOString();
+  const modifiedTime = essay.frontmatter.updated
+    ? new Date(essay.frontmatter.updated).toISOString()
+    : publishedTime;
+  const ogImage = {
+    url: `${essayUrl}/opengraph-image`,
+    width: 1200,
+    height: 630,
+    alt: title,
+  };
 
-  // Note: OG image is generated dynamically by the co-located opengraph-image.tsx route
   return {
-    title: essay.frontmatter.title,
-    description: essay.frontmatter.summary,
+    title,
+    description,
     keywords: essay.frontmatter.keywords,
+    authors: [{ name: essay.frontmatter.author || 'Vedang Vatsa', url: `${siteUrl}/profile` }],
+    creator: 'Vedang Vatsa',
+    publisher: 'Vedang Vatsa',
+    category: essay.frontmatter.category || 'Technology',
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+        'max-video-preview': -1,
+      },
+    },
     alternates: {
       canonical: `/${slug}`,
     },
     openGraph: {
-      title: essay.frontmatter.title,
-      description: essay.frontmatter.summary,
+      title,
+      description,
       url: essayUrl,
+      siteName: 'Vedang Vatsa',
+      locale: 'en_US',
       type: 'article',
-      publishedTime: publishedTime,
-      authors: ['https://veda.ng'],
-      section: 'Technology',
+      publishedTime,
+      modifiedTime,
+      authors: [essay.frontmatter.author || 'Vedang Vatsa'],
+      section: essay.frontmatter.category || 'Technology',
       ...(essay.frontmatter.keywords && { tags: essay.frontmatter.keywords }),
-      images: [{ url: `/${slug}/opengraph-image.png`, width: 1200, height: 630 }],
+      images: [ogImage],
     },
     twitter: {
       card: 'summary_large_image',
-      title: essay.frontmatter.title,
-      description: essay.frontmatter.summary,
-      images: [`/${slug}/opengraph-image.png`],
+      title,
+      description,
+      creator: '@vedangvatsa',
+      site: '@vedangvatsa',
+      images: [ogImage.url],
     },
   };
 }
@@ -208,8 +242,15 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
       url: 'https://veda.ng',
       image: 'https://veda.ng/images/icon.png',
     },
-    description: essay.frontmatter.summary,
-    image: 'https://veda.ng/images/icon.png',
+    description: flattenMeta(essay.frontmatter.summary) || essay.frontmatter.title,
+    image: [
+      {
+        '@type': 'ImageObject',
+        url: `https://veda.ng/${slug}/opengraph-image`,
+        width: 1200,
+        height: 630,
+      },
+    ],
     publisher: {
       '@type': 'Organization',
       name: 'Vedang Vatsa',
@@ -225,6 +266,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
     datePublished: datePublished,
     dateModified: dateModified,
     wordCount: wordCount,
+    articleSection: essay.frontmatter.category || 'Technology',
     ...(essay.frontmatter.keywords && { keywords: essay.frontmatter.keywords }),
   };
 

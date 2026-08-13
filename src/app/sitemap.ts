@@ -36,6 +36,8 @@ function getEssayRoutes(): MetadataRoute.Sitemap {
         return {
           url: `${BASE_URL}/${slug}`,
           lastModified,
+          changeFrequency: 'monthly' as const,
+          priority: 0.8,
         };
       });
   } catch (error) {
