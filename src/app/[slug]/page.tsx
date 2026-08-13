@@ -94,10 +94,9 @@ const ESSAY_GLOSSARY_LINKS: Record<string, string[]> = {
   'yc': ['agent', 'llm', 'api'],
   'agentstack': ['agent', 'llm', 'api', 'edge-computing'],
   'ai-detector': ['llm', 'fine-tuning', 'transformer', 'hallucination'],
-  'indiaai': ['llm', 'api', 'agent', 'fine-tuning'],
+  'indiaai': ['llm', 'foundation-model', 'inference', 'multimodal-ai', 'api', 'ai-safety', 'speech-recognition', 'tts', 'machine-translation'],
   'compute': ['llm', 'api', 'edge-computing', 'agent'],
   'aidebt': ['llm', 'api', 'defi', 'agent'],
-  'protocols': ['agent', 'api', 'llm', 'rag'],
 };
 
 const GLOSSARY_LABELS: Record<string, string> = {
@@ -109,6 +108,10 @@ const GLOSSARY_LABELS: Record<string, string> = {
   'defi': 'DeFi', 'ipfs': 'IPFS', 'merkle-tree': 'Merkle Tree', 'wallet': 'Wallet',
   'webassembly': 'WebAssembly', 'edge-computing': 'Edge Computing',
   'consensus-mechanism': 'Consensus Mechanism',
+  'foundation-model': 'Foundation Model', 'inference': 'Inference',
+  'ai-safety': 'AI Safety', 'speech-recognition': 'Speech Recognition',
+  'tts': 'Text-to-Speech', 'machine-translation': 'Machine Translation',
+  'fine-tuning': 'Fine-Tuning',
 };
 
 export function generateStaticParams() {

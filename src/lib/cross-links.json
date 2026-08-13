@@ -37,10 +37,15 @@
       "decentralized-identity"
     ],
     "indiaai": [
-      "compute",
-      "aidebt",
+      "llm",
+      "foundation-model",
+      "inference",
+      "multimodal-ai",
       "api",
-      "bureaucracy"
+      "ai-safety",
+      "speech-recognition",
+      "tts",
+      "machine-translation"
     ],
     "compute": [
       "indiaai",
@@ -53,12 +58,6 @@
       "compute",
       "funding",
       "aieconomy"
-    ],
-    "protocols": [
-      "agentstack",
-      "agenticweb",
-      "postinterface",
-      "apis"
     ],
     "constitutions": [
       "dao",
@@ -338,7 +337,8 @@
     ],
     "inference": [
       "rationality",
-      "socialscience"
+      "socialscience",
+      "indiaai"
     ],
     "clip": [
       "rationality",
@@ -348,7 +348,26 @@
       "godprotocol"
     ],
     "ai-safety": [
-      "governance"
+      "governance",
+      "indiaai"
+    ],
+    "foundation-model": [
+      "indiaai"
+    ],
+    "multimodal-ai": [
+      "indiaai"
+    ],
+    "api": [
+      "indiaai"
+    ],
+    "speech-recognition": [
+      "indiaai"
+    ],
+    "tts": [
+      "indiaai"
+    ],
+    "machine-translation": [
+      "indiaai"
     ],
     "leverage": [
       "hustle",
@@ -456,7 +475,7 @@
     "constitutions": "Computational Constitutions",
     "socialscience": "Computational Social Science at Scale",
     "monasticism": "Digital Monasticism",
-    "governance": "Governance in the Age of AGI",
+    "governance": "Governance for AGI",
     "hustle": "Hustle culture is a cage dressed up as ambition",
     "trust": "Programmable Trust",
     "pseudonymity": "Pseudonymous Agency",
@@ -482,7 +501,6 @@
     "singularity": "What is the Singularity?",
     "indiaai": "IndiaAI: ₹401 Cr of ₹10,372 Cr",
     "compute": "The National AI Compute Scorecard",
-    "aidebt": "Sovereign AI Debt: Announced, Funded, Spent",
-    "protocols": "MCP and A2A: An Adoption Audit"
+    "aidebt": "Sovereign AI Debt: Announced, Funded, Spent"
   }
 }

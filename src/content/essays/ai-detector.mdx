@@ -6,11 +6,11 @@ author: 'Vedang Vatsa'
 keywords: ['AI text detection', 'stylometry', 'random forest', 'LLM', 'benchmarks', 'adversarial robustness', 'FastAPI', 'machine learning']
 ---
 
-By early 2024, telling human writing from AI text was getting messy. Classroom detectors flagged human essays as machine-written. Free online tools claimed 99% accuracy on one model and failed on the next. Paraphrasing, synonym swaps, and light editing broke most of them. The problem was not just accuracy. It was that the tools were black boxes, slow, and marketed with benchmark numbers that had little to do with real use.
+By early 2024, telling human writing from AI text was getting messy. Classroom detectors flagged human essays as machine-written. Free online tools claimed 99% accuracy on one model and failed on the next. Paraphrasing, synonym swaps, and light editing broke most of them. Accuracy was only one failure. It was that the tools were black boxes, slow, and marketed with benchmark numbers that had little to do with real use.
 
 I wanted to build something different: a detector that was fast, interpretable, and honest about where it failed. It should run on cheap CPUs, explain why it flagged a text, and keep working when users tried to trick it. The result is a stylometric detector backed by a large training corpus, a small Random Forest for production, and a set of neural pipelines for hard cases. This essay walks through the engineering choices, the benchmark results, and the production limits that matter more than a leaderboard score.
 
-The project sits at the intersection of three practical problems. First, generative models were becoming default writing tools, so demand for detection was rising. Second, existing detectors were either expensive neural APIs or shallow rule-based checks that broke under minimal editing. Third, most detection research optimized for benchmark scores rather than deployment realities such as latency, cost, and explainability. I started by asking what a useful detector would look like in production, then worked backward to the model and data.
+The project sits on three practical problems. First, generative models were becoming default writing tools, so demand for detection was rising. Second, existing detectors were either expensive neural APIs or shallow rule-based checks that broke under minimal editing. Third, most detection research optimized for benchmark scores rather than deployment realities such as latency, cost, and explainability. I started by asking what a useful detector would look like in production, then worked backward to the model and data.
 
 A useful detector needs five properties. It must be cheap enough to run at scale. It must explain its decisions so users can appeal or verify. It must handle short inputs, long documents, and inputs from different domains. It must degrade gracefully under adversarial editing. And it must be honest about uncertainty, especially when the input is too short or too foreign to the training distribution. Those five properties shaped every decision that follows.
 
@@ -23,7 +23,7 @@ A useful detector needs five properties. It must be cheap enough to run at scale
 
 ## 1. Building a domain-aware training corpus
 
-The first and most important lesson was that the corpus shapes everything. A detector trained on news articles will think academic writing sounds like AI. A detector trained on tweets will mistake formal prose for machine text. Style and authorship overlap, so the model has to learn the difference between human and machine within each domain, not just memorize domain signatures.
+The first and most important lesson was that the corpus shapes everything. A detector trained on news articles will think academic writing sounds like AI. A detector trained on tweets will mistake formal prose for machine text. Style and authorship overlap, so the model has to learn the difference between human and machine within each domain, rather than only memorizing domain signatures.
 
 I built a dataset of 2.77 million texts across four registers: academic writing, news, social media, and creative writing. The split was 1.85 million AI-generated samples and 920,000 human samples. Academic texts came from student essays and research abstracts. News came from wire services and online outlets. Social media covered Reddit posts and short-form comments. Creative writing included fiction and personal narratives. Each domain has a different baseline rhythm. Academic writing leans on formal connectors such as "furthermore" and "in contrast." Social media uses short sentences, self-mentions, and informal punctuation. Creative writing has irregular sentence lengths, deliberate repetition, and idiosyncratic word choice.
 
@@ -43,7 +43,7 @@ The cost issue is real. Running a RoBERTa-large model on every API request requi
 
 Explainability is the deeper issue. When a teacher accuses a student of using AI, the student deserves to know why. When a platform moderates content, the moderator needs to see the reasoning. A transformer output of 0.87 with no explanation is not actionable. It is also hard to debug. If the model starts misclassifying a certain type of text, you cannot easily inspect what changed.
 
-Stylometry takes the opposite approach. Instead of asking a neural network to memorize patterns, I measure interpretable properties of the text: sentence length variance, vocabulary diversity, repetition, punctuation entropy, and other readable signals. These features are fast to compute on a CPU, cheap to run at scale, and stable across model versions. The output is not just a probability. It is a list of reasons: the text has unusually low sentence variance, high connector density, and a vocabulary diversity score that sits in the AI cluster.
+Stylometry takes the opposite approach. Instead of asking a neural network to memorize patterns, I measure interpretable properties of the text: sentence length variance, vocabulary diversity, repetition, punctuation entropy, and other readable signals. These features are fast to compute on a CPU, cheap to run at scale, and stable across model versions. The output is a probability plus a list of reasons: the text has unusually low sentence variance, high connector density, and a vocabulary diversity score that sits in the AI cluster.
 
 I trained a Random Forest on these features. Random Forests handle mixed feature types well, resist overfitting on noisy text, and run in milliseconds. The model is also small enough to deploy anywhere. This is the core of the production API: a lightweight, explainable classifier that fails gracefully and tells you why it decided what it decided.
 
@@ -51,7 +51,7 @@ The trade-off is that stylometry captures surface structure, not semantics. A hu
 
 ## 3. The eleven features that run in production
 
-After testing dozens of candidate features, I kept eleven for the production API. Each one captures a specific difference between human and machine writing. I selected them by training models with different feature subsets and measuring which features improved out-of-domain generalization, not just in-domain accuracy. A feature that helps on the training set but hurts on a new domain is not useful in production.
+After testing dozens of candidate features, I kept eleven for the production API. Each one captures a specific difference between human and machine writing. I selected them by training models with different feature subsets and measuring which features improved out-of-domain generalization, beyond in-domain accuracy. A feature that helps on the training set but hurts on a new domain is not useful in production.
 
 Vocabulary diversity, measured by MTLD, captures how quickly a text exhausts its unique words. AI tends to repeat the same vocabulary even when the text is long. Humans introduce more lexical variety and sudden shifts in register. A long AI essay might use the same conceptual vocabulary across every paragraph, while a human essay will bring in unrelated words, anecdotes, or asides. This feature is especially stable across different models because the repetition problem is inherent to how language models generate text.
 
@@ -91,7 +91,7 @@ I used three main metrics. AUC measures how well the model separates AI and huma
 
 On in-domain test sets, the stylometric models achieved AUCs between 0.933 and 0.978. That range is good enough for many real applications. Academic essays scored at the high end because the register is consistent and the AI training data for that domain was abundant. Creative writing was lower because human fiction is more stylistically diverse and harder to separate from AI imitations.
 
-When I tested the same models on texts from a different domain, the mean AUC fell to 0.728. The drop is not a bug in the model. It is a reminder that style and domain are deeply intertwined. A detector that does not know the domain it is scoring will misread style as authorship. This is why the domain-aware architecture is not an optimization. It is a requirement.
+When I tested the same models on texts from a different domain, the mean AUC fell to 0.728. The drop is a reminder that style and domain are deeply intertwined. A detector that does not know the domain it is scoring will misread style as authorship. Domain-aware scoring is required, not an extra.
 
 Adversarial robustness was more encouraging. Small edits such as synonym swaps and minor sentence-length tweaks only lowered the AUC by 0.009. This means the model is not fragile to light editing. Heavier paraphrasing on the RAID benchmark dropped the AUC to 0.951. That is still strong, but it confirms that determined rewriting can bypass stylometric detection. Translation loops, which send text through multiple languages and back, are another known weakness. The model sees the rewritten surface, not the original generation process.
 
@@ -146,18 +146,16 @@ The fourth principle is that production concerns matter as much as benchmark acc
 The final principle is that honesty about failure is a feature, not a bug. A detector that warns on short inputs, flags out-of-domain text, and explains its top features is more trustworthy than one that claims certainty everywhere. Users can decide how to act when they understand the uncertainty.
 
 <KeyTakeaway>
-The best detector is not the one with the highest benchmark score. It is the one you can explain, deploy cheaply, and trust under the attack patterns your users actually use.
+Pick the detector you can explain, run cheaply, and trust under the attacks your users actually try. Benchmark rank is a press number.
 </KeyTakeaway>
 
-## 10. Limitations and future work
+## Where it fails
 
-Stylometry has real limits. Aggressive paraphrasing and translation loops can strip the surface signals the model relies on. A text that has been rewritten sentence by sentence will look human to a stylometric detector because the human rewrite leaves its own surface marks. This is not a failure of the model. It is a misunderstanding of what the model measures. Stylometry detects the stylistic fingerprint of generation, not the conceptual origin of the content.
+Stylometry has real limits. Aggressive paraphrasing and translation loops can strip the surface signals the model relies on. A text that has been rewritten sentence by sentence will look human to a stylometric detector because the human rewrite leaves its own surface marks. The drop is a domain problem: a misunderstanding of what the model measures. Stylometry detects the stylistic fingerprint of generation, not the conceptual origin of the content.
 
 Short inputs do not contain enough text to measure style reliably. A fifty-word email might have one or two features that look AI-like by chance. The model needs a few hundred words to estimate the distributions of sentence lengths, vocabulary, and punctuation. For short inputs, the API returns a calibrated, less confident score and a warning about input length.
 
 The model is not a plagiarism detector. It cannot prove authorship, only flag statistical patterns. A human writer whose style happens to match AI patterns will get a high score. An AI text that has been heavily edited by a human will get a low score. The output should be treated as evidence, not verdict. Cross-domain classification remains hard, with the AUC dropping to 0.728 when models score text from an unfamiliar register.
-
-I plan three improvements. First, a part-of-speech pipeline to add syntactic features without the overhead of full dependency parsing. POS tags are cheap to compute and can capture syntactic patterns that simple counts miss. Second, a per-sentence heatmap that shows which parts of a text contributed most to the score. This would make the model even more interpretable. Third, threshold tuning for low false-positive environments, where the cost of flagging a human writer as AI is much higher than the cost of missing a machine-generated paragraph. Different applications need different thresholds, and the API should expose that choice to the user.
 
 ## Try it
 

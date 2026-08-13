@@ -27,7 +27,7 @@ The consequences are measurable. To open a bank account, you disclose your full 
 
 Programmable trust inverts this model. Instead of disclosing data and trusting the recipient to protect it, you provide a mathematical proof that a specific property of your data is true, without revealing the data itself. The recipient gets higher-confidence verification (mathematics is harder to forge than documents) with zero data liability (they never possess the underlying information).
 
-The gap between these two models is not marginal. It is structural. And the cryptographic primitives that enable programmable trust have moved from theoretical computer science papers to production systems processing billions of dollars in value.
+The gap between these two models is structural. The cryptographic primitives that enable programmable trust have moved from theoretical computer science papers to production systems processing billions of dollars in value.
 
 <ResearchPaper
   title="Blockchain Research Trends: A Bibliometric Analysis of 128,286 Papers (2013-2026)"
@@ -70,21 +70,21 @@ Practical application: three hospitals want to determine which has the best trea
 
 ### Fully Homomorphic Encryption (FHE)
 
-FHE represents the most ambitious primitive: performing arbitrary computations on encrypted data without ever decrypting it. First demonstrated as theoretically possible by Craig Gentry in his 2009 Stanford PhD thesis, FHE remained impractically slow for over a decade, with encrypted operations running millions of times slower than their plaintext equivalents.
+FHE is the most ambitious primitive: performing arbitrary computations on encrypted data without ever decrypting it. First demonstrated as theoretically possible by Craig Gentry in his 2009 Stanford PhD thesis, FHE remained impractically slow for over a decade, with encrypted operations running millions of times slower than their plaintext equivalents.
 
 By 2025, companies like [Zama](https://www.zama.ai/) have developed FHE compilers that allow standard code to be converted into FHE-compatible operations, dramatically reducing the engineering complexity. [Microsoft SEAL](https://www.microsoft.com/en-us/research/project/microsoft-seal/), an open-source library supporting BFV, BGV, and CKKS encryption schemes, provides the mathematical foundation. The technology is transitioning from pure research to early commercial deployment in privacy-preserving machine learning (performing model inference on encrypted patient data without the model provider ever seeing the data) and secure cloud analytics.
 
-FHE remains the least mature of the four primitives, with performance orders of magnitude slower than plaintext computation, but the trajectory is encouraging: performance has been improving at roughly 10x per year, and hardware acceleration through FPGAs and ASICs is an active area of development.
+FHE remains the least mature of the four primitives, with performance orders of magnitude slower than plaintext computation. Performance has been improving at roughly 10x per year, and hardware acceleration through FPGAs and ASICs is an active area of development.
 
 <TrustPrimitivesComparison />
 
 <PullQuote>
-The shift from institutional trust to programmable trust is not about eliminating intermediaries. It is about replacing intermediaries that require data disclosure with mathematical proofs that require none. The trust is stronger: mathematics is harder to corrupt than institutions. And the privacy cost is zero.
+Programmable trust replaces intermediaries that require data disclosure with mathematical proofs that require none. The trust is stronger: mathematics is harder to corrupt than institutions. And the privacy cost is zero.
 </PullQuote>
 
 ## The Cost of Code-as-Trust
 
-Programmable trust is not without its own failure modes. When trust is encoded in software, the attack surface shifts from human corruption to code vulnerability. The history of DeFi is a history of this tradeoff.
+Programmable trust has its own failure modes. When trust is encoded in software, the attack surface shifts from human corruption to code vulnerability. The history of DeFi is a history of this tradeoff.
 
 Between 2020 and 2025, estimated losses from smart contract exploits, bridge hacks, and operational security failures exceeded $12 billion. The year 2025 alone saw an estimated $2.9 to $4 billion in losses, dominated by the Bybit supply-chain attack ($1.4 billion), which compromised signing infrastructure rather than contract code. The Kelp DAO and Drift Protocol exploits in early 2026 further demonstrated that even audited protocols with professional security reviews remain vulnerable to complex, multi-vector attacks.
 
@@ -110,7 +110,7 @@ Programmable trust enables transaction types that are structurally impossible wi
 
 ## The Regulatory Driver
 
-The EU's eIDAS 2.0 regulation represents a fundamental change in how governments approach digital identity. Rather than building centralized identity databases (the model that produced Equifax-scale breaches), eIDAS 2.0 mandates a decentralized, user-controlled architecture where citizens store credentials in personal wallets and selectively disclose specific properties through cryptographic proofs.
+The EU's eIDAS 2.0 regulation changes how governments approach digital identity. Rather than building centralized identity databases (the model that produced Equifax-scale breaches), eIDAS 2.0 mandates a decentralized, user-controlled architecture where citizens store credentials in personal wallets and selectively disclose specific properties through cryptographic proofs.
 
 The technical architecture of the EUDI Wallet is designed around the principles of programmable trust. The wallet supports W3C Verifiable Credentials, enabling interoperability across issuers and verifiers. It implements selective disclosure, allowing users to prove specific claims (age verification, nationality, professional qualifications) without revealing unnecessary data. It includes support for Qualified Electronic Signatures (QES), creating legally binding digital signatures from a smartphone.
 
@@ -132,10 +132,10 @@ The trajectory is toward a layered trust stack that combines all four primitives
 
 <TrustStackArchitecture />
 
-The collective effect is major: transactions that currently require extensive data disclosure (mortgage applications, insurance claims, medical referrals, background checks, cross-border payments) can be restructured around proof rather than exposure. The applicant does not reveal their entire financial history. They prove specific properties of it, mathematically, and the verifier has higher confidence in the proof than they would in a stack of disclosed documents, because mathematics is harder to forge than paper.
+Transactions that currently require extensive data disclosure (mortgage applications, insurance claims, medical referrals, background checks, cross-border payments) can be restructured around proof rather than exposure. The applicant does not reveal their entire financial history. They prove specific properties of it, mathematically, and the verifier has higher confidence in the proof than they would in a stack of disclosed documents, because mathematics is harder to forge than paper.
 
 <TrustComparisonChart />
 
 <KeyTakeaway>
-Programmable trust replaces institutional verification (banks, courts, notaries) with mathematical proof. Four primitives enable this: Zero-Knowledge Proofs (verify facts without revealing data, $28B TVL in ZK-rollups), Trusted Execution Environments (hardware-enforced enclaves in billions of devices), Multi-Party Computation (joint computation without input disclosure, used by Fireblocks and Chainlink DECO), and Fully Homomorphic Encryption (compute on encrypted data, early commercial via Zama and Microsoft SEAL). The EU's eIDAS 2.0 mandates ZKP-compatible digital identity wallets for 450 million citizens by December 2026, the first sovereign-scale deployment of programmable trust. The cost of code-as-trust is real: $12B+ lost to smart contract exploits since 2020, driving the audit market to $1.8B. But the structural advantages (millisecond verification, zero data disclosure, 24/7 availability, borderless operation) represent an irreversible shift from trust-through-exposure to trust-through-proof.
+By 31 December 2026 every EU member state has to issue an EUDI Wallet. Banks, telecoms, and hospitals then have to accept selective-disclosure proofs. That is 450 million people who can prove age, degree, or employment without handing over the file. Audit the contract anyway. Point-in-time reviews did not stop $12 billion in exploits, and Bybit lost $1.4 billion on signing infrastructure, not on the bytecode. Prove the fact; do not ship the customer's data with it.
 </KeyTakeaway>

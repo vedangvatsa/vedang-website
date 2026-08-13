@@ -1,17 +1,15 @@
 ---
-title: "Open-Weight Licences: What You Can Actually Do"
-summary: "Labs call the weights open. The files say Apache, MIT, Community, or Research. I scored the families people actually run. The download is real. The training data is not. One licence still has a veto."
+title: "Open-Weight Licences"
+summary: "Labs call the weights open. The files are Apache, MIT, Community, or Research. You can run the download. You cannot check the training data. Llama still has a veto at 700 million users."
 date: "2026-08-11"
 author: "Vedang Vatsa"
 category: "AI Infrastructure"
 keywords: ["open weights", "Llama license", "Apache 2.0", "DeepSeek", "Qwen", "Gemma", "Mistral", "gpt-oss", "OSAID"]
 ---
 
-On 5 April 2025, Meta's Llama 4 blog still said [open source](https://ai.meta.com/blog/llama-4-multimodal-intelligence/). The file that actually ships with Scout and Maverick is the [Llama 4 Community License](https://github.com/meta-llama/llama-models/blob/main/models/llama4/LICENSE). It is not Apache. It is not MIT. If your product, or your affiliates', crossed 700 million monthly active users last calendar month, you ask Meta for a second licence. Meta may say no.
+On 5 April 2025, Meta's Llama 4 blog called Scout and Maverick [open-weight](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) in the lede, then talked about a "commitment to open source." The file that ships with Scout and Maverick is the [Llama 4 Community License](https://github.com/meta-llama/llama-models/blob/main/models/llama4/LICENSE). Apache and MIT are other files. If your product, or your affiliates', crossed 700 million monthly active users last calendar month, you ask Meta for a second licence. Meta may say no.
 
-That gap, between the blog and the file, is the whole subject. I read the official cards on 11 August 2026 for the families people actually serve: Llama 4, Qwen 3.x, Gemma 4, DeepSeek from R1 through V4, Mistral's open line, OpenAI's gpt-oss, and Microsoft Phi-4. A later commit can change a row. The method does not.
-
-Four things get sold as one word.
+The blog and the licence file disagree. On 11 August 2026 I read the licence cards for Llama 4, Qwen 3.x, Gemma 4, DeepSeek from R1 through V4, Mistral's open line, OpenAI's gpt-oss, and Microsoft Phi-4. A lab can change a card later. These rows are from that date.
 
 **Weights.** Can you download the parameters and run them without an API key.
 
@@ -21,73 +19,66 @@ Four things get sold as one word.
 
 **Use.** Can you sell a product on top of it, and does that right die at a user count, a geography, or a prohibited-use list.
 
-Apache 2.0 and MIT are a clean yes on use. A community licence with a 700 million user clause is a yes until it is not. A research licence is a no with a download button. None of the seven families publish the corpus. If "open source" still means source, the source is missing.
+All seven families let you download the weights. None publish the training corpus. The code cell is mixed. Use rights usually hold until a user cap, a country bar, or a prohibited-use list. If "open source" still means source, the source is missing. What shipped is a checkpoint you can host and a training set you cannot inspect.
 
 <img src="/images/essays/licenses-score.svg?v=3" alt="Licence scorecard for seven open-weight families" class="w-full my-8" />
 
-The [Open Source Initiative tried to stop the collapse](https://opensource.org/ai/open-source-ai-definition) on 28 October 2024. OSAID 1.0 asks for the four software freedoms on the system: use, study, modify, share. It wants enough "data information" to rebuild, not necessarily every raw token. Meta [objected that week](https://www.axios.com/2024/10/29/meta-osi-definition-open-source-ai-llama). The Software Freedom Conservancy said OSAID was already too soft, because it does not demand the actual dump. So the referee fight is three-sided. Meta wants the phrase without the data. OSI wants a middle. The people who wrote the original definition want the books.
+The [Open Source Initiative](https://opensource.org/ai/open-source-ai-definition) published OSAID 1.0 on 28 October 2024. It asks for the four software freedoms on the system: use, study, modify, share. It wants enough "data information" to rebuild, not necessarily every raw token. Meta [objected that week](https://www.axios.com/2024/10/29/meta-osi-definition-open-source-ai-llama). The Software Freedom Conservancy said OSAID was already too soft, because it does not demand the actual dump. Meta wants the phrase without the data, so Llama stays the default download. OSI wants a definition labs will accept. People who wrote the original open-source definition want the books, which would empty most of the hub's "open" filter.
 
-Almost nobody runs the model that tries the hard version. Allen Institute's [OLMo](https://huggingface.co/allenai) line puts weights, training code, and a documented corpus in public. The models people actually serve skip the data cell. That is the market's vote.
+Almost nobody runs the model that publishes the data. Allen Institute's [OLMo](https://huggingface.co/allenai) line puts weights, training code, and a documented corpus in public. The models people host skip the data cell. A 70B checkpoint you can put behind an API sells. Teams took that and kept calling it open.
 
-## Llama. The veto is the product
+## Llama. The 700 million clause
 
-The 700 million clause is not new. It sat in Llama 2 and 3. [Counsel notes](https://wcr.legal/llama-3-license-700m-mau-limit/) have walked through the text: if products made available by you or your affiliates were used by more than 700 million monthly active users in the preceding calendar month, you request a licence, which Meta may grant in its sole discretion, before any such use. Google, Microsoft, Amazon, and a handful of consumer apps live above that line. A startup does not. The line is not a price list. It is a veto.
+The 700 million clause sat in Llama 2 and 3. [Counsel notes](https://wcr.legal/llama-3-license-700m-mau-limit/) have walked through the text: if products made available by you or your affiliates were used by more than 700 million monthly active users in the preceding calendar month, you request a licence, which Meta may grant in its sole discretion, before any such use. Google, Microsoft, Amazon, and a handful of consumer apps sit above that line. A startup does not.
 
-The same file bans using Llama outputs to train a competing model and attaches an acceptable-use policy. Llama 4 added limits around EU multimodal use that the Llama 3 text did not have. Meta's own wording drifted from "open source" on Llama 2 and 3 to "open-weight" on Llama 4. The weights are real. The OSI label is not.
+The clause is a legal hook on the three companies that could make Llama the default inside a competing cloud. Meta does not need to charge the startup. A veto you never use still shapes who builds their own model and who comes to Menlo Park. The startup spreads the file for free.
 
-For most builders the file is free. For Meta's actual peers it is a commercial negotiation. That is what the number is for.
+The same file bans using Llama outputs to train a competing model and attaches an acceptable-use policy. Llama 4 added a limit the Llama 3 text did not have. The [acceptable use policy](https://github.com/meta-llama/llama-models/blob/main/models/llama4/USE_POLICY.md) says the rights in the community licence are not granted, for the multimodal models, to a person domiciled in the EU or a company with its principal place of business there. Text-only cards are a different sentence. EU end users can still hit a service that wraps Llama 4 if the service sits outside the Union. The person who wants to fine-tune Scout in Berlin cannot. Meta's wording moved from "open source" on Llama 2 and 3 to "open-weight" on Llama 4. The 5 April blog used both. The licence file used neither.
 
-## Qwen and Gemma paid for the OSI word
+The EU multimodal bar is the AI Act written into a licence. Meta did not wait for an Office inspection. It stopped granting those rights. That costs less than documentation, copyright summaries, and a systemic-risk file. It also shows who Meta thinks the Act will touch: people who host the multimodal weights, not people who chat with them.
 
-Alibaba's early Qwen models used a custom Tongyi Qianwen licence. From [Qwen3](https://huggingface.co/Qwen) the team put Apache 2.0 on the open-weight cards. Qwen-Max stays behind an API. The 2026 cards for Qwen3.5 and Qwen3.6, including the 27B and 9B dense builds, stay on Apache.
+For most builders the file is free. For Meta's peers it is a commercial negotiation. That is what 700 million is for.
 
-Google did the same walk. Gemma 1 and 2 sat under Google's own terms. [Gemma 4](https://huggingface.co/google/gemma-4-E2B) cards list Apache 2.0. Hugging Face's [April 2026 write-up](https://huggingface.co/blog/gemma4) called that out on purpose: the family is "truly open with Apache 2 licenses." You can use, modify, and ship without writing to Mountain View and without a user-count veto.
+## Qwen and Gemma switched to Apache
 
-Neither family publishes the corpus. Apache on the weights is not Apache on the books, the crawl, or the synthetic traces. You can fork the file. You cannot audit the diet.
+Alibaba's early Qwen models used a custom Tongyi Qianwen licence. From [Qwen3](https://huggingface.co/Qwen) the team put Apache 2.0 on the open-weight cards. Qwen-Max stays behind an API. The 2026 cards for Qwen3.5 and Qwen3.6, including the 27B dense and 35B-A3B sparse builds, stay on Apache. The [Qwen3.6 repo](https://github.com/QwenLM/Qwen3.6) says so in one line. Qwen3.5-Plus, Qwen3.6-Plus, and the 3.7 Max and Plus variants sit behind Alibaba Cloud. The same company now sells a downloadable line and a closed line under one logo.
+
+Google did the same walk later. Gemma 1 and 2 sat under Google's own terms. [Gemma 4](https://huggingface.co/google/gemma-4-E2B) cards list Apache 2.0. Hugging Face's [2 April 2026 write-up](https://huggingface.co/blog/gemma4) called that out: "truly open with Apache 2 licenses." Google's own [Gemma 4 post](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/) put a number on the funnel: more than 400 million downloads of the family, more than 100,000 variants. Apache on Gemma 4 keeps that funnel from moving to Qwen.
+
+Neither family publishes the corpus. Apache on the weights is not Apache on the books, the crawl, or the synthetic traces. You can fork the file. You cannot check what it was trained on. Labs found they could win developers with a licence change and keep the training set. A competitor cannot copy that set by downloading the card.
+
+Alibaba open-weights the 27B and closes the Plus. Google puts Apache on Gemma and keeps Gemini behind the API. Mistral prints Open and Premier on the same homepage. The open card brings users. The closed card is the paid product. Calling both "the Qwen family" or "Google's open models" mixes the download with the company.
 
 ## DeepSeek switched the file
 
 DeepSeek V3 sat under the DeepSeek Model License: commercial use allowed, not MIT. From [DeepSeek-R1](https://huggingface.co/deepseek-ai) the weights themselves are MIT. [V4-Pro](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro) and the July 2026 [V4-Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731) cards stay on MIT. The code repos were already MIT. For a Western company that wants to host the checkpoint, that is a shorter memo than Llama.
 
-MIT does not give you the data. It does not stop a government from restricting the download. It does not make a trillion-parameter mixture cheap to run. It does make the licence question boring, which is the point.
+MIT still hides the training data. It will not stop a government from blocking the download or make a trillion-parameter mixture cheap to run. It does make the licence memo short enough to vendor. The file got cleaner while the model got close enough to the frontier that [CAISI](https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro) spent April 2026 measuring it.
 
-Capability caught up while the file got cleaner. US CAISI published an [evaluation of DeepSeek V4 Pro](https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro) in April 2026. The [UK AI Security Institute](https://www.aisi.gov.uk/) put GLM-5.2 and DeepSeek V4-Pro a few months behind closed frontier models on cyber, not a year. A permissive file on a frontier-adjacent model is a different object from a permissive file on a 7B toy.
+CAISI put V4 Pro about eight months behind the US frontier on an aggregate, and much further on cyber: 32 percent against GPT-5.5's 71 percent on their unpublished suite. The [UK AI Security Institute](https://www.aisi.gov.uk/) put GLM-5.2 and DeepSeek V4-Pro a few months behind closed frontier models on cyber, not a year. A MIT file on a model eight months off the frontier is something a cloud might host. A 7B MIT file is not. Western labs that spent 2024 calling open weights a safety problem now face a MIT file eight months back and a Llama file with a 700 million veto.
 
-## Mistral keeps two shelves
+## Mistral, gpt-oss, Phi
 
-Mistral's docs split the catalogue into Open and Premier. Open, on the current cards, is Apache 2.0 for 7B, Mixtral, NeMo, Pixtral 12B, Small, Magistral Small, and the Mistral 3 family, including Large 3. Premier stays behind the API. Some older or mid-tier cards still show a Research License or a modified MIT. Read the card, not the homepage. The logo does not change when the file does.
+Mistral's docs split the catalogue into Open and Premier. Open, on the current cards, is Apache 2.0 for 7B, Mixtral, NeMo, Pixtral 12B, Small, Magistral Small, and the Mistral 3 family, including Large 3. Premier stays behind the API. Some older or mid-tier cards still show a Research License or a modified MIT. Read the card, not the homepage. The logo does not change when the file does. Mistral cannot match Meta's 700 million clause, so the open shelf is actually Apache.
 
-## gpt-oss and Phi. Permissive, with a footnote
+OpenAI's [gpt-oss](https://huggingface.co/openai) 120B and 20B weights are Apache 2.0 plus a usage policy. The policy is a prohibited-use list, not a 700 million gate. Lawyers treat that as lighter than Llama and heavier than raw Apache. OpenAI spent years saying weights would not be released. gpt-oss puts a card into the same download funnel Gemma and Qwen already own. The usage policy lets OpenAI cut off marketplace use without a user-count veto.
 
-OpenAI's [gpt-oss](https://huggingface.co/openai) 120B and 20B weights are Apache 2.0 plus a usage policy. The policy is a prohibited-use list, not a 700 million gate. Lawyers treat that as lighter than Llama and heavier than raw Apache.
-
-Microsoft [Phi-4](https://huggingface.co/microsoft) variants are MIT. Small enough to run locally. Clean enough to put in a product without a Meta letter. The catch is quality, not the file.
+Microsoft [Phi-4](https://huggingface.co/microsoft) variants are MIT. Small enough to run locally. Clean enough to put in a product without a Meta letter. The limit is quality. Nobody writes a 3,000-word memo about Phi's terms. They write it about Llama's, because Llama is the one a cloud would ship.
 
 ## What the hub actually sorts
 
-Hugging Face lets you filter by licence tag. The tag is whatever the uploader typed. A Llama derivative often inherits "llama3" or "other." A Qwen fine-tune sometimes keeps Apache and sometimes does not. Fine-tunes inherit the base licence unless the tuner has the right to relicense, which they usually do not. A "Qwen-Llama merge" with an Apache tag is a filing error, not a legal fact.
+Hugging Face lets you filter by licence tag. The tag is whatever the uploader typed. A Llama derivative often inherits "llama3" or "other." A Qwen fine-tune sometimes keeps Apache and sometimes does not. Fine-tunes inherit the base licence unless the tuner has the right to relicense, which they usually do not. A "Qwen-Llama merge" with an Apache tag is a filing error.
 
-Cloud marketplaces add a second contract. AWS, Azure, and Together can cut you off for acceptable-use breaches even when the weight file is MIT. The licence is necessary. It is not sufficient.
+Builders search Apache, pull a merge, and ship. The tag can be wrong. The base file is the licence. Counsel who treat the hub facet as a legal opinion will find out at the first diligence. The facet shows what people want to believe. It does not show what they may do.
 
-I am not using download rank as a licence rank. A two-million pull on a 70B card can be one lab fetching the same shard. I am using the licence file on the official card.
+Cloud marketplaces add a second contract. AWS, Azure, and Together can cut you off for acceptable-use breaches even when the weight file is MIT. A MIT card plus a marketplace AUP can block you even if the file does not. You can leave Together and go to a bare-metal box. Most teams will not. For anyone too small to hit 700 million users and too lazy to own the GPU, that second contract is the restriction that actually binds.
 
-## The Act does not care what the blog says
+## The Act already ignored the blog
 
-The EU AI Act does not treat "open" as a free pass. [Article 2(12)](https://linuxfoundation.eu/newsroom/ai-act-explainer) exempts some free and open-source systems unless they are high-risk, prohibited, or under Article 50 transparency rules. GPAI models with systemic risk stay in scope even if the weights are downloadable. The [Commission's GPAI guidelines](https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers) say it in plainer language: an Apache card does not cancel documentation or copyright duties, and enforcement powers switched on 2 August 2026.
+The EU AI Act does not treat "open" as a free pass. [Article 2(12)](https://linuxfoundation.eu/newsroom/ai-act-explainer) exempts some free and open-source systems unless they are high-risk, prohibited, or under Article 50 transparency rules. GPAI models with systemic risk stay in scope even if the weights are downloadable. The [Commission's GPAI guidelines](https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers) say an Apache card does not cancel documentation or copyright duties. Provider obligations applied from 2 August 2025. [Enforcement powers](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai), including fines of up to the higher of 3 percent of worldwide turnover or €15 million, switched on 2 August 2026.
 
-A Llama Community file is even less likely to count as a "free and open licence" under that text. The 700 million veto is a field-of-use limit.
+A Llama Community file is even less likely to count as a "free and open licence" under that text. The 700 million veto is a field-of-use limit. Field-of-use limits fail the exemption. Meta's EU multimodal withdrawal fits that reading. The company treated the Act as a reason to stop granting rights, not as a reason to publish the training data.
 
-Llama, Gemma, gpt-oss, and several Mistral cards also attach a use policy: no bioweapons, no unsolicited mass persuasion, no child sexual abuse material, sometimes no military. Apache and MIT do not contain those sentences. The policy file does. Breaking it can get you banned from the hub or a marketplace. It is not a statute, and it does not replace one. The AI Office can still fine a GPAI provider. A US company above 700 million MAU still needs Meta's letter.
+Llama, Gemma, gpt-oss, and several Mistral cards also attach a use policy: no bioweapons, no unsolicited mass persuasion, no child sexual abuse material, sometimes no military. Apache and MIT do not contain those sentences. The policy file does. Breaking it can get you banned from the hub or a marketplace. A policy file is not a law. The AI Office can still fine a GPAI provider. A US company above 700 million MAU still needs Meta's letter.
 
-## What a counsel should actually open
-
-Four questions, in this order.
-
-1. Which file is attached to the exact checkpoint we will serve, not the family blog post.
-2. Is that file OSI text, or a community licence with a scale trigger.
-3. Does a use policy or a cloud marketplace add rules the licence does not.
-4. Is any of the training data available, and if not, can we live with a model we cannot reproduce.
-
-If (2) is community, write down the MAU of the product and of every affiliate. If (4) is no, stop calling the stack open source in the security review.
-
-A Llama 5 card that dropped the 700 million clause and used Apache would move Meta into the Qwen column. A published, licensed training corpus for any of the seven would fill the first empty data cell on the table. Today the download is real. The data is not. The word "open" is doing work the files refuse to do.
+On 11 August 2026, none of the seven families had published the training corpus. The cards still said Apache, MIT, Community, or Research.

@@ -76,7 +76,7 @@ The practical effect is that a task like "check if the job sync ran successfully
 
 The deeper shift is philosophical. When you can speak to your entire infrastructure in plain language, the bottleneck moves from "how do I do this technically" to "what should I do strategically." The agent handles execution. You handle direction.
 
-## Step 3. The Agent Tooling Landscape
+## Step 3. Agent tooling
 
 <AgentToolsMap />
 
@@ -148,7 +148,7 @@ This generates `robots.txt`, `llms.txt`, `llms-full.txt`, `ai.txt`, `ai.json`, `
 
 3. **`robots.txt` now requires nuance.** You want to allow AI search bots (they cite you in answers) while potentially blocking AI training bots (they absorb your content into model weights without attribution). `OAI-SearchBot` and `GPTBot` are different user agents with different purposes. The AI Discovery Standards repo documents all 60+ AI crawler user agents.
 
-4. **Structured data (JSON-LD) on every page.** Schema.org markup tells both Google and AI systems exactly what type of content a page contains. Article schema, FAQ schema, Organization schema, Person schema. This is not optional if you want AI citation.
+4. **Structured data (JSON-LD) on every page.** Schema.org markup tells both Google and AI systems exactly what type of content a page contains. Article schema, FAQ schema, Organization schema, Person schema. Skip it and you drop out of AI citation.
 
 5. **AEO content patterns.** Structure key pages with clear question-and-answer formats. Use H2 headings that are literal questions ("What is the best way to..."). Include concise, quotable answer paragraphs immediately after. AI answer engines pull from these patterns preferentially.
 
@@ -185,7 +185,7 @@ Publishing one serious report per quarter generates more authority than fifty su
 
 **Research papers**
 
-For companies that operate at the intersection of technology and academia, the [Research Paper Framework](https://github.com/vedangvatsa/research-paper-framework) provides a similar pipeline for academic-style publications. Same principle. AI does the heavy lifting on drafting and data gathering. Humans provide the thesis, verify accuracy, and add domain insight.
+For companies that sit between technology and academia, the [Research Paper Framework](https://github.com/vedangvatsa/research-paper-framework) provides a similar pipeline for academic-style publications. Same principle. AI does the heavy lifting on drafting and data gathering. Humans provide the thesis, verify accuracy, and add domain insight.
 
 ## Step 6. Automated B2B Outreach
 
@@ -216,7 +216,7 @@ Outbound outreach finds prospects. Email capture converts website visitors into 
 
 **Capture implementation**
 
-- Add email capture forms to your highest-traffic pages. This is not a popup that appears on every page. It is a contextual form at the end of your most valuable content. "Get the full report" after a data-heavy article. "Join 10,000 professionals" on your newsletter page.
+- Add email capture forms to your highest-traffic pages. Use a contextual form at the end of your most valuable content. "Get the full report" after a data-heavy article. "Join 10,000 professionals" on your newsletter page.
 - Store captured emails in your database (Supabase, Postgres) or directly in your email platform.
 - Tag each capture with the source page so you know what content attracted them.
 
@@ -285,7 +285,7 @@ AI agents can build and maintain an institutional knowledge base that makes ever
 
 An indexing agent processes these sources continuously. When a team member asks "what was the reasoning behind our pricing change in Q3?" or "has anyone already tried integrating with Stripe Connect?", the agent searches across all indexed sources and returns the relevant answer with citations.
 
-This eliminates three problems simultaneously. New employees onboard faster because they can query the knowledge base instead of interrupting senior team members. Decisions are never lost because the system captures context, not just conclusions. And repeated questions get answered instantly instead of consuming human time.
+This eliminates three problems simultaneously. New employees onboard faster because they can query the knowledge base instead of interrupting senior team members. Decisions are never lost because the system captures context as well as conclusions. And repeated questions get answered instantly instead of consuming human time.
 
 **Meeting transcription and action items**
 
@@ -295,7 +295,7 @@ Every meeting should be recorded and transcribed automatically. An agent process
 
 <SupportTierChart />
 
-Customer support is one of the highest-utilize areas for AI because the patterns are deeply repetitive. Most support teams answer the same twenty questions repeatedly, just phrased differently each time.
+Customer support is one of the highest-use areas for AI because the patterns are deeply repetitive. Most support teams answer the same twenty questions repeatedly, just phrased differently each time.
 
 **Tiered automation**
 
@@ -349,9 +349,9 @@ Without a dashboard, this data lives in scattered Google Sheets, terminal logs, 
 
 ## Step 14. AI Discovery and Agent-Readiness
 
-This is the step that positions your company for the next wave. Not just search engine traffic. Not just AI citation. Full discoverability by autonomous agents.
+This is the step that positions your company for the next wave. Search traffic and AI citation are the start. Full discoverability by autonomous agents.
 
-In 2026, AI agents are starting to browse the web autonomously. They look for services, compare products, negotiate APIs, and make purchasing decisions. Your website needs to be readable not just by humans, but by machines that make decisions.
+In 2026, AI agents are starting to browse the web autonomously. They look for services, compare products, negotiate APIs, and make purchasing decisions. Your website needs to be readable by humans and by machines that make decisions.
 
 The [AI Discovery Standards](https://github.com/vedangvatsa/aistandards) repository documents every file and protocol for this. The key files:
 
@@ -462,5 +462,5 @@ Every use case above follows the same pattern. Identify a repetitive workflow. D
 **Month 3.** Build your internal knowledge base. Implement proposal generation. Iterate on every pipeline based on performance data. By now, most of your operations should run on agents. Your job shifts from doing the work to reviewing agent output and making strategic decisions.
 
 <KeyTakeaway>
-The companies that implement AI as a system, not as scattered tools, will operate at ten times the output of their competitors with a fraction of the headcount. Every step in this playbook compounds. Brand consistency improves agent output. Better content improves SEO. Better SEO generates more leads. Automated outreach converts those leads. Nurture sequences close them. Social listening surfaces opportunities. Competitive intelligence informs strategy. And the entire loop runs without you touching it. The question is not whether to implement AI. It is how fast you can build the system.
+Wire the tools into one loop: voice, content, outreach, close. Scattered copilots do not compound. The system does.
 </KeyTakeaway>

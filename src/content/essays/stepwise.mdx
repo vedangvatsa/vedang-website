@@ -8,7 +8,7 @@ author: 'Vedang Vatsa'
 keywords: ['stepwise AI', 'maturity model', 'automation', 'enterprise software', 'marketing', 'sales', 'human resources', 'AI ROI', 'Klarna', 'Salesforce']
 ---
 
-[Gartner](https://www.gartner.com/en/newsroom/press-releases) warns that over 40% of agentic AI projects risk cancellation by 2027 if companies fail to establish clear ROI, governance, and monitoring frameworks. The technology works. The organizational readiness often does not. The solution is not a slower approach. It is a structured one.
+[Gartner](https://www.gartner.com/en/newsroom/press-releases) warns that over 40% of agentic AI projects risk cancellation by 2027 if companies fail to establish clear ROI, governance, and monitoring frameworks. The technology works. Organizational readiness often does not. The fix is a structured rollout, with value proven at each stage before the scope grows.
 
 <Figure src="/images/essays/stepwise.svg?v=7" alt="Infographic" wide />
 
@@ -25,7 +25,7 @@ The result is a predictable failure pattern. A company announces a company-wide 
 <Stat value="21%" label="Confident in AI governance models" source="Salesforce, 2026" />
 </StatRow>
 
-The error is treating artificial intelligence as a binary state. A company does not "turn on" AI. It builds capability incrementally, proving value at each stage before expanding scope. This is the stepwise approach.
+The error is treating artificial intelligence as a switch. A company builds capability incrementally, proving value at each stage before expanding scope. This is the stepwise approach.
 
 ## The Stepwise Maturity Model
 
@@ -37,7 +37,7 @@ The model demands that a business start at Stage 1 and systematically clear spec
 
 **Stage 2: Active Pilot.** The company identifies a specific bottleneck and automates it with a targeted integration. A marketing agency connects Google Analytics data to an LLM via API to auto-generate weekly client performance summaries. A sales team deploys a voice agent to handle after-hours lead qualification. The scope is narrow. The results are measurable.
 
-**Stage 3: Operational.** AI is integrated natively into existing tech stacks. Instead of just generating reports, the system reads the CRM, drafts personalized responses, and queues them for human approval. Instead of just transcribing meetings, the system updates [Salesforce](https://salesforce.com) records automatically with action items and next steps. Human-in-the-loop controls remain active.
+**Stage 3: Operational.** AI is integrated natively into existing tech stacks. The system reads the CRM, drafts personalized responses, and queues them for human approval. Meeting transcripts write back into [Salesforce](https://salesforce.com) records with action items and next steps. Human-in-the-loop controls remain active.
 
 **Stage 4: Systemic.** AI transitions from assistant to autonomous worker. Departments coordinate via agent-to-agent protocols. Procurement agents negotiate with vendor agents. Support agents resolve tickets end-to-end. Strategic decisions are informed by real-time, multi-source analysis generated on demand.
 
@@ -55,7 +55,7 @@ A boutique advertising agency with three employees was operating at capacity. Co
 
 The agency applied a Stage 2 integration. They routed raw analytics data directly into an LLM via established APIs. The model interpreted the weekly performance delta and drafted human-readable summaries automatically. Content scheduling was automated using AI-generated recommendations.
 
-This removed twenty hours of manual labor per week across the team. The agency used this recovered capacity to increase their client load from 30 campaigns to 50. A 50% increase in capacity without hiring.
+This removed twenty hours of manual labor per week across the team. The agency used this recovered capacity to increase their client load from 30 campaigns to 50, a 50% increase without hiring.
 
 <Callout type="info" title="Content Production Metrics">
 Marketing teams using generative AI for content creation report an approximately 80% reduction in production time. AI-generated content achieves roughly 30% higher engagement rates in A/B testing. Standard social media automation saves more than six hours weekly. GenAI content optimization saves approximately five additional hours per marketer per week.
@@ -96,10 +96,10 @@ In early 2024, Klarna [reported](https://www.klarna.com/international/press/klar
 
 But Klarna's customer satisfaction scores declined. The company had optimized for cost reduction without maintaining service quality. CEO Sebastian Siemiatkowski [acknowledged](https://economictimes.indiatimes.com/tech/artificial-intelligence/klarnas-ceo-admits-ai-approach-went-too-far/) that the company had "overpivoted" on automation.
 
-By May 2025, Klarna began rehiring human agents. The company shifted to a hybrid model where AI handles repetitive, structured tasks while humans manage complex or emotionally sensitive interactions. The AI did not fail. The deployment strategy did. Klarna jumped from Stage 2 to Stage 4 without building the governance and quality control infrastructure that Stage 3 requires.
+By May 2025, Klarna began rehiring human agents. The company shifted to a hybrid model where AI handles repetitive, structured tasks while humans manage complex or emotionally sensitive interactions. The deployment strategy failed. Klarna jumped from Stage 2 to Stage 4 without building the governance and quality control infrastructure that Stage 3 requires.
 
 <Callout type="warning" title="The Governance Gap">
-Only 33% of AI initiatives are currently meeting their ROI targets. The primary blocker is not technology. It is poor data quality, fragmented data architectures, and lack of governance frameworks. Companies that rush to full automation without first building clean data foundations and human-in-the-loop approval systems consistently underperform.
+Only 33% of AI initiatives are currently meeting their ROI targets. The primary blocker is poor data quality, fragmented data architectures, and missing governance frameworks. Companies that rush to full automation without first building clean data foundations and human-in-the-loop approval systems consistently underperform.
 </Callout>
 
 ## The Stage 3 Infrastructure
@@ -108,13 +108,13 @@ The gap between a working demo and a production agent is as wide as the gap betw
 
 Three categories of infrastructure separate Stage 3 from Stage 4.
 
-**Agent evaluation.** When a human employee handles a customer request poorly, a manager reviews the interaction and provides feedback. Agents need the same. A production agent must be evaluated not only on its final output but on the trajectory it took to get there. Did it select the correct tool? Did it query the right database? Did it follow the required approval sequence before sending a response? Companies that skip trajectory evaluation ship agents that produce correct answers via incorrect processes, creating compliance and security risks that surface weeks later.
+**Agent evaluation.** When a human employee handles a customer request poorly, a manager reviews the interaction and provides feedback. Agents need the same. A production agent must be evaluated on its final output and on the trajectory it took to get there. Did it select the correct tool? Did it query the right database? Did it follow the required approval sequence before sending a response? Companies that skip trajectory evaluation ship agents that produce correct answers via incorrect processes, creating compliance and security risks that surface weeks later.
 
 **Operational monitoring.** Traditional software monitoring tracks uptime, latency, and error rates. Agent monitoring requires tracking task success rates, tool invocation accuracy, cost-per-resolution, and hallucination frequency. This layer, sometimes called AgentOps, sits between standard DevOps and the agent itself. Without it, you cannot answer basic questions: Is the agent actually saving money? Is it resolving issues or just deflecting them? Is its accuracy improving or degrading over time? Klarna could not answer these questions until customer satisfaction scores had already declined.
 
-**Memory and context.** Agents without persistent memory restart from zero every session. An employee who handled a difficult customer yesterday remembers the context today. Most deployed agents do not. Production-grade systems require short-term memory (what happened in this session), long-term memory (what is this customer's history), and a reflection mechanism that decides which short-term observations should become long-term knowledge. This is the infrastructure that transforms an agent from a stateless chatbot into something that can actually manage an ongoing relationship.
+**Memory and context.** Agents without persistent memory restart from zero every session. An employee who handled a difficult customer yesterday remembers the context today. Most deployed agents do not. Production-grade systems require short-term memory (what happened in this session), long-term memory (what is this customer's history), and a reflection mechanism that decides which short-term observations should become long-term knowledge. This is the infrastructure that transforms an agent from a stateless chatbot into something that can manage an ongoing relationship.
 
-These three layers, evaluation, monitoring, and memory, constitute the minimum viable infrastructure for Stage 4. Building them is the actual work of Stage 3. It is not exciting. It does not demo well. It is the reason most companies stall.
+These three layers, evaluation, monitoring, and memory, constitute the minimum viable infrastructure for Stage 4. Building them is the work of Stage 3. That work does not demo well, which is why most companies stall.
 
 <Callout type="info" title="The Multi-Agent Coordination Problem">
 Stage 4 requires agents that work together. A procurement agent that negotiates pricing needs to coordinate with a budget agent that tracks spending limits and a compliance agent that enforces vendor requirements. These agents can be organized sequentially (assembly line), hierarchically (manager delegates to workers), or collaboratively (peer agents share context). The coordination pattern determines the failure mode. Sequential systems break when one agent stalls. Hierarchical systems break when the manager agent makes a poor delegation decision. Collaborative systems break when agents produce conflicting outputs. Choosing the wrong pattern for the wrong task is one of the primary reasons multi-agent deployments fail.
@@ -132,8 +132,8 @@ To find your first stepwise pilot, track team activity for one week and answer t
 
 The highest ROI pilots share three characteristics. They automate high-frequency tasks. They connect to existing data sources. They maintain human approval on the output before it reaches the end user.
 
-Start with reporting. Move to qualification. Expand to internal knowledge management. Each stage builds organizational trust. Each stage produces measurable financial return. Each stage funds the next.
+Start with reporting. Move to qualification. Expand to internal knowledge management. Each stage builds organizational trust, produces a measurable return, and funds the next stage.
 
 <KeyTakeaway>
-The stepwise framework is not a slower path to AI adoption. It is the only path that consistently produces measurable ROI. Companies that automate narrow, high-frequency tasks in marketing (reporting), sales (qualification), and HR (knowledge queries) log immediate wins. These victories produce the financial and organizational capital required for deeper integration. The failure mode is not moving too slowly. It is moving to Stage 4 before Stage 3 is built. Klarna proved this. Salesforce's data confirms it. Start small. Measure clearly. Scale on evidence.
+This quarter, pick a task the team already does more than five times a week, that does not need strategic judgment, and that an API can reach. Keep a human on the output until trajectory evaluation, cost-per-resolution monitoring, and a memory layer exist. Klarna's reported $60 million saving arrived with a satisfaction drop and a rehire wave because those Stage 3 controls were missing. Scale after the measurements hold, not after the demo.
 </KeyTakeaway>
