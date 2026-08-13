@@ -158,12 +158,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const modifiedTime = essay.frontmatter.updated
     ? new Date(essay.frontmatter.updated).toISOString()
     : publishedTime;
-  const ogImage = {
-    url: `${essayUrl}/opengraph-image`,
-    width: 1200,
-    height: 630,
-    alt: title,
-  };
 
   return {
     title,
@@ -199,7 +193,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       authors: [essay.frontmatter.author || 'Vedang Vatsa'],
       section: essay.frontmatter.category || 'Technology',
       ...(essay.frontmatter.keywords && { tags: essay.frontmatter.keywords }),
-      images: [ogImage],
     },
     twitter: {
       card: 'summary_large_image',
@@ -207,7 +200,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       creator: '@vedangvatsa',
       site: '@vedangvatsa',
-      images: [ogImage.url],
     },
   };
 }
@@ -246,7 +238,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
     image: [
       {
         '@type': 'ImageObject',
-        url: `https://veda.ng/${slug}/opengraph-image`,
+        url: `https://veda.ng/${slug}/opengraph-image.png`,
         width: 1200,
         height: 630,
       },

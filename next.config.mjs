@@ -25,6 +25,18 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+  async rewrites() {
+    return [
+      {
+        source: '/:path*/opengraph-image.png',
+        destination: '/:path*/opengraph-image',
+      },
+      {
+        source: '/:path*/twitter-image.png',
+        destination: '/:path*/twitter-image',
+      },
+    ];
+  },
   async redirects() {
     return [
       {
