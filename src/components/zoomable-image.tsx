@@ -6,8 +6,8 @@ import { createPortal } from 'react-dom';
 interface ZoomableImageProps {
   src: string;
   alt?: string;
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
   className?: string;
 }
 
@@ -28,12 +28,15 @@ export function ZoomableImage({ src, alt = '', width, height, className = '' }: 
       if (e.key === 'Escape') close();
     };
     document.addEventListener('keydown', handleKey);
+    const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     return () => {
       document.removeEventListener('keydown', handleKey);
-      document.body.style.overflow = '';
+      document.body.style.overflow = prevOverflow;
     };
   }, [isOpen, close]);
+
+  if (!src) return null;
 
   const lightbox =
     isOpen && mounted
@@ -45,7 +48,7 @@ export function ZoomableImage({ src, alt = '', width, height, className = '' }: 
             aria-label="Enlarged image"
           >
             <div className="flex shrink-0 items-center justify-between gap-3 border-b border-white/10 px-4 py-3 text-sm text-white/80">
-              <span>Scroll to pan</span>
+              <span>Scroll to pan · tap image to close</span>
               <button
                 type="button"
                 onClick={close}
@@ -66,8 +69,8 @@ export function ZoomableImage({ src, alt = '', width, height, className = '' }: 
               <img
                 src={src}
                 alt={alt}
-                onClick={(e) => e.stopPropagation()}
-                className="mx-auto block h-auto max-w-none bg-white"
+                onClick={close}
+                className="mx-auto block h-auto max-w-none cursor-zoom-out bg-white"
                 style={{ width: 'max(100%, 56rem)' }}
               />
             </div>
@@ -79,14 +82,24 @@ export function ZoomableImage({ src, alt = '', width, height, className = '' }: 
   return (
     <>
       <div className="relative mx-auto w-fit min-w-0 max-w-full">
-        <img
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
-          onClick={open}
-          className={`mx-auto block h-auto w-auto max-w-full cursor-zoom-in ${className}`}
-        />
+        <a
+          href={src}
+          onClick={(e) => {
+            if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+            e.preventDefault();
+            open();
+          }}
+          className="block cursor-zoom-in text-inherit no-underline"
+          aria-label={alt ? `Enlarge image: ${alt}` : 'Enlarge image'}
+        >
+          <img
+            src={src}
+            alt={alt}
+            width={width}
+            height={height}
+            className={`mx-auto block h-auto w-auto max-w-full ${className}`}
+          />
+        </a>
         <span className="pointer-events-none absolute bottom-2 right-2 rounded bg-black/55 px-2 py-1 text-[11px] font-medium text-white sm:hidden">
           Tap to enlarge
         </span>

@@ -28,6 +28,10 @@ const nextConfig = {
   async rewrites() {
     return [
       {
+        source: '/og/:slug.png',
+        destination: '/api/og/:slug',
+      },
+      {
         source: '/api/og/:slug.png',
         destination: '/api/og/:slug',
       },
@@ -265,6 +269,15 @@ const nextConfig = {
               "base-uri 'self'",
               "form-action 'self'",
             ].join('; '),
+          },
+        ],
+      },
+      {
+        source: '/og/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, stale-while-revalidate=604800',
           },
         ],
       },

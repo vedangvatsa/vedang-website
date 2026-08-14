@@ -23,19 +23,23 @@ export function Column({ children }: { children: React.ReactNode }) {
 }
 
 /* ─── Figure with caption and source ─── */
-export function Figure({ src, alt, caption, source, sourceUrl, wide = false }: {
+export function Figure({ src, alt, caption, source, sourceUrl, wide = false, width, height }: {
   src: string;
   alt: string;
   caption?: string;
   source?: string;
   sourceUrl?: string;
   wide?: boolean;
+  width?: number;
+  height?: number;
 }) {
   return (
     <figure className={`not-prose my-8 first:mt-0 last:mb-0 ${wide ? 'w-full max-w-none' : 'max-w-sm mx-auto'}`}>
       <ZoomableImage
         src={src}
         alt={alt}
+        width={width}
+        height={height}
         className="rounded-lg border border-border/40 shadow-sm"
       />
       {(caption || source) && (

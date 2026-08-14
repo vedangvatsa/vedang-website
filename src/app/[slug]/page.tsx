@@ -158,10 +158,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const modifiedTime = essay.frontmatter.updated
     ? new Date(essay.frontmatter.updated).toISOString()
     : publishedTime;
-  // X drops share images when the URL has no file extension.
-  // Firebase 404s Next's /slug/opengraph-image.png convention, so serve a .png API route.
+  // X caches failed card crawls by page URL. Serve a real .png from /og, not /api,
+  // so Twitterbot gets a static file instead of a Cloud Run render.
   const ogImage = {
-    url: `${siteUrl}/api/og/${slug}.png`,
+    url: `${siteUrl}/og/${slug}.png`,
     width: 1200,
     height: 630,
     alt: title,
@@ -210,7 +210,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       creator: '@vedangvatsa',
       site: '@vedangvatsa',
-      images: [ogImage.url],
+      images: [ogImage],
     },
   };
 }
@@ -249,7 +249,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
     image: [
       {
         '@type': 'ImageObject',
-        url: `https://veda.ng/api/og/${slug}.png`,
+        url: `https://veda.ng/og/${slug}.png`,
         width: 1200,
         height: 630,
       },
@@ -502,6 +502,8 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
                 <ZoomableImage
                   src={props.src}
                   alt={props.alt || 'Blog post illustration'}
+                  width={props.width}
+                  height={props.height}
                   className="rounded-lg shadow-sm border border-border/30 mx-auto block"
                 />
               ),

@@ -43,12 +43,12 @@ export function Header() {
   const closeMobile = () => setMobileOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-background/30 backdrop-blur-lg border-b border-border/50">
+    <header className="sticky top-0 z-50 pointer-events-none bg-background/30 backdrop-blur-lg border-b border-border/50">
       <div className="content-width flex h-14 items-center justify-between">
-        <Link href="/" className="font-semibold tracking-tight text-lg">
+        <Link href="/" className="pointer-events-auto font-semibold tracking-tight text-lg">
           veda.ng
         </Link>
-        <div className="flex items-center justify-end gap-2 sm:gap-4 ml-auto">
+        <div className="pointer-events-auto flex items-center justify-end gap-2 sm:gap-4 ml-auto">
           {/* Desktop navigation */}
           <nav className="hidden md:flex items-center gap-1 sm:gap-4 text-[13px] sm:text-sm font-medium">
             <Link href="/essays" className="text-foreground transition-colors hover:text-primary px-1.5 py-1 sm:px-2">

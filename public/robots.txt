@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
+User-agent: Twitterbot
+Allow: /
+
 Sitemap: https://veda.ng/sitemap.xml
 
 # All AI crawlers are welcome. This file intentionally allows everything.

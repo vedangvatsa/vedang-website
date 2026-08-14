@@ -5,7 +5,11 @@ import Clarity from '@microsoft/clarity';
 
 export function ClarityAnalytics() {
   useEffect(() => {
-    Clarity.init('y0juupk53b');
+    try {
+      Clarity.init('y0juupk53b');
+    } catch {
+      // Analytics must not take the page down.
+    }
   }, []);
 
   return null;
