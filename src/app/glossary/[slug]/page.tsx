@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { ArrowLeft } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getTermBySlug, glossaryMetaDescription, glossaryTerms } from '@/lib/glossary';
+import { getTermBySlug, glossaryDocumentTitle, glossaryMetaDescription, glossaryTerms } from '@/lib/glossary';
 import { notFound } from 'next/navigation';
 import { PageLayout } from '@/components/page-layout';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
@@ -31,26 +31,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const truncatedDescription = glossaryMetaDescription(term.definition);
-
-  // Shorten title if it would exceed 70 chars (template adds " | Vedang Vatsa")
-  // Max: 70 - " | Glossary | Vedang Vatsa".length(26) = 44 chars for name
-  let titleName = term.term;
-  if (`${titleName} | Glossary | Vedang Vatsa`.length > 70) {
-    const abbrevMatch = titleName.match(/\(([A-Za-z0-9/\-]+)\)/);
-    if (abbrevMatch) {
-      titleName = abbrevMatch[1]; // Just use "RLHF", "DePIN", "CI/CD"
-    } else {
-      titleName = titleName.substring(0, 44); // Truncate as last resort
-    }
-  }
+  const titleName = glossaryDocumentTitle(term.term);
 
   return {
-    title: `${titleName} | Glossary`,
+    title: titleName,
     description: truncatedDescription,
     keywords: [term.term, term.category ? `${term.category} glossary` : 'glossary', 'definition'].filter(Boolean),
     alternates: { canonical: `/glossary/${slug}` },
     openGraph: {
-      title: `${term.term} | Glossary`,
+      title: titleName,
       description: truncatedDescription,
       url: `/glossary/${term.slug}`,
       type: 'article',
@@ -58,7 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${term.term} | Glossary`,
+      title: titleName,
       description: truncatedDescription,
       images: [`/glossary/${slug}/opengraph-image.png`],
     },

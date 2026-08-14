@@ -15,13 +15,13 @@ export const metadata: Metadata = genMeta({
 });
 
 const curriculumItems = [
-  { href: '/vibecoding/bootcamp/day-1-ai-foundations', title: 'Day 1 - AI Foundations', description: 'What AI actually is, the 3 types of tools, your first hands-on prompting session' },
-  { href: '/vibecoding/bootcamp/day-2-second-brain', title: 'Day 2 - Second Brain + AI', description: 'Build an AI-powered knowledge system with Obsidian and the PARA method' },
-  { href: '/vibecoding/bootcamp/day-3-ai-for-organizations', title: 'Day 3 - AI for Organizations', description: 'The 7 categories of AI applications, boring niches, and why agents exist' },
-  { href: '/vibecoding/bootcamp/day-4-vibe-coding', title: 'Day 4 - Build Your First App', description: 'Pick a tool, describe your app, ship something running in under an hour' },
-  { href: '/vibecoding/bootcamp/day-5-polish-and-power', title: 'Day 5 - Polish and Power', description: 'Professional design, multi-modal AI, and the 5 security holes to fix' },
-  { href: '/vibecoding/bootcamp/day-6-ship-and-grow', title: 'Day 6 - Ship and Grow', description: 'Deploy to a live URL, get 10 real testers, start building in public' },
-  { href: '/vibecoding/bootcamp/day-7-sell-and-beyond', title: 'Day 7 - Sell and Beyond', description: 'Pricing, your first paying customer, pitch decks, and the post-bootcamp playbook' },
+  { href: '/vibecoding/bootcamp/day-1-discover', title: 'Day 1 - Discover Your AI Idea', description: 'What AI actually is, the boring niche framework, and finding your first real idea before building the wrong thing.' },
+  { href: '/vibecoding/bootcamp/day-2-scope', title: 'Day 2 - Scope and Plan', description: 'Kill your darlings, write a 1-page PRD, and learn the one-feature MVP discipline that separates shippers from dreamers.' },
+  { href: '/vibecoding/bootcamp/day-3-build', title: 'Day 3 - Build Your First App', description: 'Pick your weapon, describe your app in 3 sentences, and get something running in under an hour.' },
+  { href: '/vibecoding/bootcamp/day-4-design', title: 'Day 4 - Design and AI Superpowers', description: 'Make your app look like it came from a top studio, then wire in text, image, voice, and video AI.' },
+  { href: '/vibecoding/bootcamp/day-5-ship', title: 'Day 5 - Ship It Live', description: 'Auth, payments, deploy. Walk out today with a live URL on your own domain and real users logging in.' },
+  { href: '/vibecoding/bootcamp/day-6-grow', title: 'Day 6 - Get Users and Grow', description: '10 testers, brutal feedback, build in public, and your first 25 real users.' },
+  { href: '/vibecoding/bootcamp/day-7-sell', title: 'Day 7 - Sell and Beyond', description: 'Pricing, your first paying customer, pitch decks, and the post-bootcamp playbook.' },
 ];
 const referenceLinks = [
     // Cloud Builders
@@ -124,7 +124,7 @@ const faqItems = [
   },
   {
     question: "What tools do I need?",
-    answer: "A laptop and an internet connection. All the AI tools mentioned have free tiers that are more than enough to build your first app. Day 2 uses Obsidian (free). Day 4 uses tools like Lovable, Cursor, or Bolt.new."
+    answer: "A laptop and an internet connection. All the AI tools mentioned have free tiers that are more than enough to build your first app. Day 3 uses tools like Lovable, Cursor, or Bolt.new."
   },
   {
     question: "Is this free?",
@@ -148,13 +148,13 @@ const courseSchema = {
   numberOfCredits: 7,
   timeRequired: 'P7D',
   teaches: [
-    'AI fundamentals and tool categories',
-    'AI-powered second brain with Obsidian',
-    'AI applications for organizations',
-    'Building your first app with AI tools',
-    'Professional design and security',
-    'Deployment and user testing',
-    'Selling and scaling your app',
+    'Finding an AI idea worth building',
+    'Scoping a one-feature MVP',
+    'Building a first app with AI tools',
+    'Design, multimodal AI, and security',
+    'Auth, payments, and live deployment',
+    'Getting testers and first users',
+    'Pricing, selling, and what comes after',
   ],
   coursePrerequisites: 'No coding experience required. Just a laptop and internet.',
 };

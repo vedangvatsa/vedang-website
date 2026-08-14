@@ -105,6 +105,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/community`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE_URL}/seo`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.3 },
     { url: `${BASE_URL}/lit`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/noslop`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/job-boards`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.5 },
   ];
 
   const glossaryRoutes: MetadataRoute.Sitemap = glossaryTerms.map(term => ({

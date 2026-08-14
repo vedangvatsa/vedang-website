@@ -10,10 +10,11 @@ import { CommandBlock } from './command-block';
 export const metadata: Metadata = {
   title: 'NoSlop',
   description: 'Standing agent law against AI slop in prose, UI, and code.',
+  alternates: { canonical: '/noslop' },
   openGraph: {
     title: 'NoSlop',
     description: 'Standing agent law against AI slop in prose, UI, and code.',
-    url: 'https://veda.ng/noslop',
+    url: '/noslop',
     type: 'website',
     images: [
       {

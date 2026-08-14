@@ -16,11 +16,11 @@ export const metadata: Metadata = {
     template: '%s | Vedang Vatsa',
   },
   description:
-    'Explore essays, free courses, and research on AI agents and Web3 by Vedang Vatsa, founder of Hashtag Web3 and Fellow of the Royal Society of Arts (FRSA).',
+    'Essays, free courses, and research on AI agents and Web3 by Vedang Vatsa, founder of Hashtag Web3 and Fellow of the Royal Society of Arts (FRSA).',
   keywords: ['Vedang Vatsa', 'AI', 'Blockchain', 'Web3', 'Growth Marketing', 'Founder', 'AI Researcher', 'DeFi'],
   openGraph: {
     title: 'Vedang Vatsa - AI & Web3 Thought Leader, Founder of Hashtag Web3',
-    description: 'Explore essays, free courses, and research on AI agents and Web3 by Vedang Vatsa, founder of Hashtag Web3 and Fellow of the Royal Society of Arts (FRSA).',
+    description: 'Essays, free courses, and research on AI agents and Web3 by Vedang Vatsa, founder of Hashtag Web3 and Fellow of the Royal Society of Arts (FRSA).',
     url: '/',
     siteName: 'Vedang Vatsa',
     locale: 'en_US',
@@ -79,7 +79,7 @@ const webPageSchema = {
   '@type': 'WebPage',
   name: 'Vedang Vatsa - AI & Web3 Thought Leader',
   url: 'https://veda.ng',
-  description: 'Explore essays, free courses, and research on AI agents and Web3 by Vedang Vatsa, founder of Hashtag Web3 and Fellow of the Royal Society of Arts (FRSA).',
+  description: 'Essays, free courses, and research on AI agents and Web3 by Vedang Vatsa, founder of Hashtag Web3 and Fellow of the Royal Society of Arts (FRSA).',
   inLanguage: 'en-US',
   isPartOf: {
     '@type': 'WebSite',

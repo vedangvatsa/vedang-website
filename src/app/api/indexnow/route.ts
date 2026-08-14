@@ -81,7 +81,7 @@ async function getAllUrls(): Promise<string[]> {
   // Fallback to static list if sitemap fetch fails
   const urls = [
     '/', '/essays', '/glossary', '/profile', '/media',
-    '/community', '/seo', '/lit',
+    '/community', '/seo', '/lit', '/noslop', '/job-boards',
   ];
 
   for (const config of Object.values(courseConfigs)) {

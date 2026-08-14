@@ -2070,6 +2070,25 @@ export function getTermBySlug(slug: string): GlossaryTerm | undefined {
  return glossaryTerms.find(term => term.slug === slug);
 }
 
+/**
+ * Title fragment for glossary pages. The root layout appends " | Vedang Vatsa" (16 chars).
+ * Keep the full document title at or under 60 characters so Bing and Google do not truncate it.
+ */
+export function glossaryDocumentTitle(term: string, maxLen = 60): string {
+  const brand = ' | Vedang Vatsa';
+  const nameMax = maxLen - brand.length;
+  if (term.length <= nameMax) return term;
+
+  const leading = term.match(/^([A-Za-z0-9/+\-]+)\s+\(/);
+  const trailing = term.match(/\(([A-Za-z0-9/+\-]+)\)\s*$/);
+  const acronym = (leading && leading[1].length <= 12 ? leading[1] : null) || trailing?.[1];
+  if (acronym && acronym.length <= nameMax) return acronym;
+
+  const cut = term.slice(0, nameMax);
+  const atWord = cut.lastIndexOf(' ');
+  return (atWord > 12 ? cut.slice(0, atWord) : cut).trimEnd();
+}
+
 /** First sentence, capped for meta tags. Prefer writing definitions whose first sentence is already under 155 characters. */
 export function glossaryMetaDescription(definition: string, maxLen = 155): string {
   const first = definition.match(/^[^.!?]+[.!?]/)?.[0]?.trim() ?? definition.trim().replace(/\s+/g, ' ');
