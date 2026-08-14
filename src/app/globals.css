@@ -179,16 +179,22 @@
   font-weight: 600;
 }
 
-/* Images: full width of the essay column. Always. */
+/* Images keep native size. A 400px table chart must not stretch to the column. */
 .notion-article img {
   border-radius: 0.5rem;
-  width: 100% !important;
+  display: block;
+  width: auto !important;
   max-width: 100% !important;
   height: auto !important;
-  display: block;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: auto;
+  margin-right: auto;
   object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .notion-article img {
+    max-height: min(40rem, 85vh);
+  }
 }
 
 /* Tables — cells stay on one line; wide tables scroll sideways on phones */
@@ -266,6 +272,26 @@
   font-weight: 600;
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+/* Source line that sits under a table, not in the body copy */
+.notion-article .table-source,
+.prose .table-source {
+  display: block;
+  max-width: 100%;
+  margin: -0.75rem auto 1.75rem;
+  padding: 0 0.25rem;
+  text-align: center;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: hsl(var(--muted-foreground));
+  overflow-wrap: break-word;
+}
+
+.notion-article .table-source a,
+.prose .table-source a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* Charts and custom components: full width within the prose column */

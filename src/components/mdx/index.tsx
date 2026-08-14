@@ -36,7 +36,7 @@ export function Figure({ src, alt, caption, source, sourceUrl, wide = false }: {
       <ZoomableImage
         src={src}
         alt={alt}
-        className="w-full rounded-lg border border-border/40 shadow-sm"
+        className="rounded-lg border border-border/40 shadow-sm"
       />
       {(caption || source) && (
         <figcaption className="mt-2 text-xs text-muted-foreground text-center">

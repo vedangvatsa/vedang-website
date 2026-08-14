@@ -60,8 +60,8 @@ export function ZoomableImage({ src, alt = '', width, height, className = '' }: 
               onClick={close}
             >
               {/*
-                Essay CSS forces article images to 100% width, which shrinks
-                table SVGs on phones. Render at least 56rem so 11px type stays readable.
+                Article CSS no longer stretches images. Lightbox still uses a
+                56rem floor so 11px type on table SVGs stays readable.
               */}
               <img
                 src={src}
@@ -78,14 +78,14 @@ export function ZoomableImage({ src, alt = '', width, height, className = '' }: 
 
   return (
     <>
-      <div className="relative w-full min-w-0 max-w-full">
+      <div className="relative mx-auto w-fit min-w-0 max-w-full">
         <img
           src={src}
           alt={alt}
           width={width}
           height={height}
           onClick={open}
-          className={`block h-auto w-full max-w-full cursor-zoom-in ${className}`}
+          className={`mx-auto block h-auto w-auto max-w-full cursor-zoom-in ${className}`}
         />
         <span className="pointer-events-none absolute bottom-2 right-2 rounded bg-black/55 px-2 py-1 text-[11px] font-medium text-white sm:hidden">
           Tap to enlarge

@@ -171,7 +171,7 @@ The outlay split is in the annex and in [MeitY's earlier Lok Sabha disclosure](h
 | Safe & Trusted AI | 20.46 | 0.2% |
 | **Total** | **10,371.92** | **100%** |
 
-<p class="text-center text-sm text-muted-foreground mt-2 mb-6">Source <a href="https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf">Rajya Sabha Unstarred Q.1668</a>. Figures sum to ₹10,371.92 Cr.</p>
+<p class="table-source">Source: <a href="https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf">Rajya Sabha Unstarred Q.1668</a>. Figures sum to ₹10,371.92 Cr.</p>
 
 Safe & Trusted AI gets about 1/5 of the overhead line. The sub-project breakdown inside Compute Capacity's ₹4,563.36 crore has never been published, as [MediaNama noted](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/) in February 2025. Compute is the largest pillar and the least transparent inside the pillar.
 
@@ -190,15 +190,15 @@ In the table below, BE is the Budget Estimate, what MeitY asked for at the start
 | 2026-27 | 1,000.00 | n/a | 0.00 | 0% | 0% |
 | **Total** | n/a | n/a | **400.94** | n/a | **3.9%** |
 
-<p class="text-center text-sm text-muted-foreground mt-2 mb-6">Rupee columns are ₹ crore. BE is Budget Estimate. RE is Revised Estimate. Total 3.9% is of the ₹10,371.92 crore outlay, not of BE.</p>
+<p class="table-source">Source: <a href="https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf">Rajya Sabha Unstarred Q.1668</a> (cash to 9 Feb 2026). 2025-26 BE from the <a href="https://www.indiabudget.gov.in/doc/Budget_at_Glance/budget_at_a_glance.pdf">Union Budget</a>. Rupee columns are ₹ crore. Total 3.9% is of the ₹10,371.92 Cr outlay, not of BE.</p>
 
-The release and estimate figures come from the [Rajya Sabha reply of 13 February 2026](https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf), with cash recorded to 9 February 2026. The ₹2,000 crore BE for 2025-26 comes from the [Union Budget documents](https://www.indiabudget.gov.in/doc/Budget_at_Glance/budget_at_a_glance.pdf). [MediaNama](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/) covered the FY 2024-25 cut in February 2025 and [the same cash figures](https://www.medianama.com/2026/04/223-indiaai-mission-400-crore-over-rs-10000-crore-5-year-outlay-released/) in April 2026.
+[MediaNama](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/) covered the FY 2024-25 cut in February 2025 and [the same cash figures](https://www.medianama.com/2026/04/223-indiaai-mission-400-crore-over-rs-10000-crore-5-year-outlay-released/) in April 2026.
 
 Every annual ask was cut. FY 2024-25 was trimmed 69%, from ₹551.75 crore to ₹173 crore. FY 2025-26 was trimmed 60%, from ₹2,000 crore to ₹800 crore. FY 2026-27 asks for ₹1,000 crore, half of the previous year's ask.
 
 Against the original Budget Estimate, FY 2024-25 delivered 3.9% of what MeitY asked for, and FY 2025-26 delivered 19%. The 5-year ceiling was never meant to be released in 1 year. The releases still lagged even the reduced estimates both years.
 
-<img src="/images/essays/indiaai-cascade.svg?v=2" alt="The cascade from Budget Estimate to Revised Estimate to cash received, showing how the money shrank at each stage" class="w-full my-8" />
+![Asked versus arrived for IndiaAI. Year 1: asked 551.75 crore, received 21.79 crore. Year 2: asked 2,000 crore, received 379.15 crore.](/images/essays/indiaai-cascade.svg?v=3)
 
 [MediaNama's February 2025 coverage](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/) listed 3 possible reasons for the FY 2024-25 cut. GPU bids came in cheaper than expected. Rollout was phased. Money may have been moved to other priorities. Those reasons can be true at the same time. Cheaper bids should free capacity, not freeze releases. Phased rollout should produce a published schedule of releases against milestones. Reallocation should leave a paper trail in Budget documents. The public record shows the cuts. It does not fully settle which reason dominated.
 
@@ -236,7 +236,7 @@ The [30 May 2025 PIB release](https://www.pib.gov.in/PressReleasePage.aspx?PRID=
 | NVIDIA H100 SXM | 153.00 | 134.10 | CyFuture |
 | NVIDIA B200 SXM | 323.00 | 308.00 | Yotta |
 
-<p class="text-center text-sm text-muted-foreground mt-2 mb-6">Rates in ₹ per hour. Source <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132817">PIB Press Release ID 2132817</a>, Table 1.</p>
+<p class="table-source">Rates in ₹ per hour. Source: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132817">PIB 2132817</a>, Table 1.</p>
 
 The [October 2025 PIB explainer](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092) says GPUs are available at a subsidised rate of ₹65 per hour. In January 2025, MeitY had announced a 40% subsidy with a target of [₹100 per hour](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/). The May 2025 tender table shows L1 prices from ₹29 to ₹323 per hour depending on the model and term. An H100 SXM is ₹153/hour on-demand. A B200 SXM is ₹323/hour. The February 2025 tender round averaged [₹115.85 per GPU-hour](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/).
 
@@ -250,13 +250,11 @@ GPUs pass through several stages before anyone uses them. [The Economic Times](h
 | Assigned | 12,638 | 38% |
 | Utilised by end users | 7,418 | 22% |
 
-Figures come from [The Economic Times](https://economictimes.indiatimes.com/tech/artificial-intelligence/underused-gpus-raise-questions-about-indiaai-capacity-build-out/articleshow/128981840.cms), citing an IndiaAI letter to empanelled providers. Treat as press-reported until MeitY reprints the same series in a parliamentary annex or PIB table.
+<p class="table-source">Source: <a href="https://economictimes.indiatimes.com/tech/artificial-intelligence/underused-gpus-raise-questions-about-indiaai-capacity-build-out/articleshow/128981840.cms">Economic Times</a>, citing an IndiaAI letter to providers. Press-reported. Not a parliamentary utilisation table.</p>
 
-<img src="/images/essays/indiaai-funnel.svg?v=2" alt="33,099 committed GPUs narrowing to 12,638 assigned and 7,418 utilised" class="w-full my-8" />
+On those press-reported figures, 2 of every 3 committed GPUs had not been assigned, and roughly 1 in 5 was in use. That is the newspaper's arithmetic on the letter it cited, not a parliamentary utilisation table. The government then announced the next target, a second tender round. [Economic Times reported on 13 May 2025](https://economictimes.indiatimes.com/tech/technology/govt-gets-bids-offering-18000-gpus-in-round-2-of-indiaai-mission-tender/articleshow/121118580.cms) that IndiaAI CEO Abhishek Singh said bids offered 18,000 GPUs, that about 15,000 would clear technical checks, that more than 30,000 GPU requests were in the pipeline, and that a third tender round was open. Those figures are Singh speaking to ET. They are not in a PIB release. The later official count is in the [30 May 2025 PIB note](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132817): 34,333 GPUs empaneled (18,417 + 15,916). The January 2025 target had been 18,693 GPUs, announced when the initial 10,000 figure was [expanded](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/), before that May expansion.
 
-On those press-reported figures, 2 of every 3 committed GPUs had not been assigned, and roughly 1 in 5 was in use. That is the newspaper's arithmetic on the letter it cited, not a parliamentary utilisation table. The government then announced the next target, a [second tender round drawing bids for 18,000 GPUs](https://www.medianama.com/2025/05/223-indiaai-mission-18000-gpu-bids-indigenous-ai-models/). IndiaAI CEO Abhishek Singh said in May 2025 that about 15,000 of the bids would clear technical checks, that more than 30,000 GPU requests were in the pipeline, and that a third tender round was open. The January 2025 target had been 18,693 GPUs, announced when the initial 10,000 figure was [expanded](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/), before the May 2025 expansion to 34,333.
-
-The same report noted the bidders' partners. Vensysco and Locuz with AWS. Ishan Infotech with Oracle. Netmagic with Google Cloud. IndiaAI's national compute is mostly rented from big cloud companies through Indian resellers. The Mission pays for access to machines it does not own. The design appears deliberate. Renting avoids a large capital outlay and the risk of owning idle hardware. It also means the GPU count refers to machines owned by private companies, and utilisation risk sits partly with those companies when demand is low.
+[MediaNama](https://www.medianama.com/2025/05/223-indiaai-mission-18000-gpu-bids-indigenous-ai-models/), covering the same tender, named the bidders' partners. Vensysco and Locuz with AWS. Ishan Infotech with Oracle. Netmagic with Google Cloud. IndiaAI's national compute is mostly rented from big cloud companies through Indian resellers. The Mission pays for access to machines it does not own. The design appears deliberate. Renting avoids a large capital outlay and the risk of owning idle hardware. It also means the GPU count refers to machines owned by private companies, and utilisation risk sits partly with those companies when demand is low.
 
 A later parliamentary reply filled 1 of those blanks, and left another open. [Lok Sabha Unstarred Question 2807](https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2807_hKyI1X.pdf), answered on 5 August 2026, said 15 compute service providers had been empaneled over 4 rounds, that **237 projects** had been approved for subsidised compute, and that **93.18 lakh GPU hours** (9.318 million) had been **sanctioned**. The same reply said a purchase order had been issued for a high-performance AI compute system of about 1.1 EFLOPS at the NIC data centre in Shastri Park, Delhi.
 
@@ -278,7 +276,7 @@ Parliament also got user counts.
 | Early researchers | 10 | 3% |
 | IndiaAI Fellows | 8 | 3% |
 
-<p class="text-center text-sm text-muted-foreground mt-2 mb-6">Source <a href="https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf">Rajya Sabha Unstarred Q.1668</a>. Rows may overlap. Listed slots sum to 305.</p>
+<p class="table-source">Source: <a href="https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf">Rajya Sabha Unstarred Q.1668</a>. Rows may overlap. Listed slots sum to 305.</p>
 
 305 slots across these categories. 33,099 committed GPUs. More than 100 GPUs for every named user slot. The capacity is pooled and shared, so the ratio does not mean each user holds 100 GPUs. The utilisation figure, 7,418 GPUs in use, is the closer measure of demand.
 
@@ -303,7 +301,7 @@ Sarvam received the largest compute subsidy in the programme. [MediaNama, citing
 | Sarvam Series B first close | $234M (June 2026) |
 | Post-money valuation | ~$1.5B |
 
-Press-reported via [Economic Times, covered by MediaNama](https://www.medianama.com/2026/06/223-govt-minority-stake-sarvam-indiaai-mission/). The commercial terms are not in the Rajya Sabha PDF.
+<p class="table-source">Source: <a href="https://www.medianama.com/2026/06/223-govt-minority-stake-sarvam-indiaai-mission/">Economic Times, via MediaNama</a>. Press-reported. Not in the Rajya Sabha PDF.</p>
 
 The subsidy is 40% of the bill, matching the subsidy level MeitY announced in [January 2025](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/). The support is compulsorily convertible debentures, not a grant. If the CCDs convert, the government ends up with a 1-2% ownership stake in Sarvam.
 
@@ -476,6 +474,8 @@ The EU's AI Factories publish more selection detail than any other programme. Th
 | First | December 2024 | 7 consortia, 15 member states |
 | Second | March 2025 | 6 more |
 | Third | October 2025 | 6 more, plus 13 antennas |
+
+<p class="table-source">Source: <a href="https://digital-strategy.ec.europa.eu/en/policies/ai-factories">European Commission, AI Factories</a>.</p>
 
 The network now stands at 19 AI Factories and 13 antennas across the EU and partner countries. The Commission says at least 9 new AI-optimised supercomputers will be procured, which it says will more than triple the EuroHPC AI computing capacity. Total investment through the EuroHPC Joint Undertaking for the 2021-2027 period is €10 billion, counting EU, member state, and associated country money.
 
