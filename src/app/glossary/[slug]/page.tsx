@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { ArrowLeft } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getTermBySlug, glossaryTerms } from '@/lib/glossary';
+import { getTermBySlug, glossaryMetaDescription, glossaryTerms } from '@/lib/glossary';
 import { notFound } from 'next/navigation';
 import { PageLayout } from '@/components/page-layout';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
@@ -30,9 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Term Not Found' };
   }
 
-  const truncatedDescription = term.definition.length > 160 
-    ? term.definition.substring(0, 157) + '...' 
-    : term.definition;
+  const truncatedDescription = glossaryMetaDescription(term.definition);
 
   // Shorten title if it would exceed 70 chars (template adds " | Vedang Vatsa")
   // Max: 70 - " | Glossary | Vedang Vatsa".length(26) = 44 chars for name
@@ -49,6 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${titleName} | Glossary`,
     description: truncatedDescription,
+    keywords: [term.term, term.category ? `${term.category} glossary` : 'glossary', 'definition'].filter(Boolean),
     alternates: { canonical: `/glossary/${slug}` },
     openGraph: {
       title: `${term.term} | Glossary`,
@@ -82,13 +81,22 @@ export default async function GlossaryTermPage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "DefinedTerm",
     "name": term.term,
-    "description": term.definition,
+    "description": glossaryMetaDescription(term.definition, 300),
     "inDefinedTermSet": "https://veda.ng/glossary",
     "url": `https://veda.ng/glossary/${term.slug}`,
     "speakable": {
       "@type": "SpeakableSpecification",
-      "cssSelector": ["h1"],
+      "cssSelector": ["h1", "article p"],
     },
+    ...(term.sources?.length
+      ? {
+          citation: term.sources.map((s) => ({
+            "@type": "CreativeWork",
+            name: s.label,
+            url: s.url,
+          })),
+        }
+      : {}),
   };
 
   return (
@@ -117,7 +125,7 @@ export default async function GlossaryTermPage({ params }: PageProps) {
           <div className="mt-6 mx-auto max-w-2xl">
             <Image
               src={`/images/glossary/${term.slug}.svg?v=4`}
-              alt={`${term.term} infographic`}
+              alt={`${term.term} diagram`}
               width={800}
               height={400}
               className="w-full h-auto rounded-lg"
@@ -165,6 +173,26 @@ export default async function GlossaryTermPage({ params }: PageProps) {
         </div>
 
         <GlossaryVisualizer term={term.slug} />
+
+        {term.sources && term.sources.length > 0 && (
+          <div className="border-t border-border/50 pt-12 mb-12">
+            <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4">Sources</h2>
+            <ul className="space-y-2">
+              {term.sources.map((source) => (
+                <li key={source.url}>
+                  <a
+                    href={source.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-primary hover:underline"
+                  >
+                    {source.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {relatedTermObjects.length > 0 && (
           <div className="border-t border-border/50 pt-12">

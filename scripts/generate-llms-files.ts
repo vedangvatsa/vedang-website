@@ -90,7 +90,7 @@ This file provides a structured overview of the site's content for Large Languag
 
 ## Guides & Resources
 
-- [Glossary](https://veda.ng/glossary): Comprehensive definitions of AI, Web3, and technical terms. Reference guide for developers and researchers.
+- [Glossary](https://veda.ng/glossary): Definitions of AI, Web3, and engineering terms.
 - [Essays](https://veda.ng/essays): Curated collection of thought pieces on technology, AI, and society.
 - [Web3 101](https://veda.ng/web3-101): Fundamentals of Web3, blockchain, and decentralized technologies.
 - [Prompt Engineering](https://veda.ng/prompt-engineering-101): Mastering AI through effective prompt design and instruction.
@@ -158,8 +158,7 @@ ${fullTextSections}
 ## Glossary
 URL: https://veda.ng/glossary
 
-This site includes a comprehensive glossary of ${glossaryTerms.length} terms covering AI, Web3, and Technology.
-Each term has a detailed 300+ word definition. Browse all terms at https://veda.ng/glossary
+This site has a glossary of ${glossaryTerms.length} AI, Web3, and engineering terms at https://veda.ng/glossary
 `;
 
   fs.writeFileSync(path.join(PUBLIC_DIR, 'llms-full.txt'), llmsFullContent);

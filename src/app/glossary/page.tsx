@@ -38,7 +38,7 @@ export default function GlossaryPage() {
     "@type": "DefinedTermSet",
     "@id": "https://veda.ng/glossary",
     "name": "Glossary - AI, Web3 & Tech Terms",
-    "description": "Definitions of AI, Web3, and technical terms.",
+    "description": "Definitions of AI, Web3, and engineering terms.",
     "url": "https://veda.ng/glossary",
     "hasDefinedTerm": terms.map((term) => ({
       "@type": "DefinedTerm",
@@ -57,7 +57,7 @@ export default function GlossaryPage() {
 
       <PageHero
         title="Glossary"
-        subtitle="Definitions of the terminology shaping AI, Web3, and deep tech."
+        subtitle="Short definitions of AI, Web3, and engineering terms."
       />
 
       <div className="py-16">

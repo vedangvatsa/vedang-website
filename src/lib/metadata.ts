@@ -84,7 +84,7 @@ export const pageMetadata = {
   glossary: {
     title: 'AI & Web3 Glossary',
     description:
-      'Complete glossary of AI and Web3 terms: blockchain, smart contracts, LLMs, AGI, DeFi, and more.',
+      'Definitions of AI and Web3 terms, including LLMs, AGI, smart contracts, and DeFi.',
     url: '/glossary',
     keywords: ['AI Glossary', 'Web3 Glossary', 'Artificial Intelligence Definitions', 'Blockchain Terms', 'Generative AI Terms', 'Crypto Glossary', 'Large Language Model (LLM)', 'DeFi Terms'],
   },

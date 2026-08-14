@@ -216,8 +216,20 @@ export function runAudit(): { totalFiles: number; totalViolations: number; viola
     }
   }
 
+  const glossaryPath = path.join(process.cwd(), 'src', 'lib', 'glossary.ts');
+  if (fs.existsSync(glossaryPath)) {
+    const glossaryViolations = checkEssayFile(glossaryPath).filter((v) => {
+      const line = v.context || '';
+      return /definition:/i.test(line) || v.type === 'em-dash';
+    });
+    if (glossaryViolations.length > 0) {
+      violationsByFile['glossary.ts'] = glossaryViolations;
+      totalViolations += glossaryViolations.length;
+    }
+  }
+
   return {
-    totalFiles: files.length,
+    totalFiles: files.length + (fs.existsSync(glossaryPath) ? 1 : 0),
     totalViolations,
     violationsByFile
   };
@@ -226,7 +238,7 @@ export function runAudit(): { totalFiles: number; totalViolations: number; viola
 if (process.argv[1] && process.argv[1].endsWith('check-ai-slop.ts')) {
   try {
     const { totalFiles, totalViolations, violationsByFile } = runAudit();
-    console.log(`\n🔍 Audited ${totalFiles} essays for AI slop, writing patterns, and structural rules...\n`);
+    console.log(`\n🔍 Audited ${totalFiles} files (essays + glossary) for AI slop, writing patterns, and structural rules...\n`);
 
     if (totalViolations === 0) {
       console.log('✨ CLEAN! Zero AI slop violations found across all essays.\n');
