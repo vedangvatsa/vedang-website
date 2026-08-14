@@ -140,7 +140,7 @@ Publishers are already paying the hosting bill for someone else's training run. 
 
 ## The IndiaAI Mission
 URL: https://veda.ng/indiaai
-Summary: India set aside ₹10,372 crore for an AI mission. Two years later, ₹401 crore had arrived. Officials count GPUs on a list. They have not published how the cash was spent, or how many hours those machines actually ran.
+Summary: India set aside ₹10,372 crore for an AI mission. By 9 February 2026, ₹401 crore had arrived. Officials count onboarded GPUs. Parliament later published hours sanctioned, not hours used.
 
 The Union Cabinet approved ₹10,371.92 crore for the IndiaAI Mission in [March 2024](https://pib.gov.in/Pressreleaseshare.aspx?PRID=2012375). By 9 February 2026, IndiaAI, the MeitY implementation arm, had received ₹400.94 crore. That is 3.9% of the outlay, 23 months into a 60-month plan. The cash figure comes from a [Rajya Sabha annex](https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf), Unstarred Question 1668, answered on 13 February 2026.
 
@@ -214,6 +214,7 @@ Officials talked about GPU numbers. The cash shown to Parliament was much smalle
 | MeitY | 13 Feb 2026 | ₹21.79 Cr then ₹379.15 Cr received. | [Q.1668](https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf) |
 | MeitY | 13 Feb 2026 | 38,000+ GPUs. 14 providers empaneled. | [Q.1668](https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf) |
 | MeitY | 13 Feb 2026 | 114 researchers, 47 startups, 58 govt. | [Q.1668](https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf) |
+| MeitY | 5 Aug 2026 | 15 CSPs. 237 projects approved. 93.18 lakh GPU hours sanctioned. | [Q.2807](https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2807_hKyI1X.pdf) |
 
 The GPU number grew from 10,000 in March 2024 to 34,333 empaneled in May 2025 to 38,000+ onboarded in October 2025. Cash received went from ₹21.79 crore to ₹379.15 crore in the same period. Both series can be true. Empanelment can grow while cash stays thin if the programme rents capacity on demand and pays only for approved use. The problem for public understanding is that "38,000 GPUs" sounds like a national fleet. In this design it is closer to a catalogue.
 
@@ -251,11 +252,15 @@ Figures come from [The Economic Times](https://economictimes.indiatimes.com/tech
 
 <img src="/images/essays/indiaai-funnel.svg" alt="33,099 committed GPUs narrowing to 12,638 assigned and 7,418 utilised" class="w-full my-8" />
 
-Two of every three committed GPUs had not been assigned. Roughly one in five was in use. The government then announced the next target, a [second tender round drawing bids for 18,000 GPUs](https://www.medianama.com/2025/05/223-indiaai-mission-18000-gpu-bids-indigenous-ai-models/). IndiaAI CEO Abhishek Singh said in May 2025 that about 15,000 of the bids would clear technical checks, that more than 30,000 GPU requests were in the pipeline, and that a third tender round was open. The January 2025 target had been 18,693 GPUs, announced when the initial 10,000 figure was [expanded](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/), before the May 2025 expansion to 34,333.
+On those press-reported figures, two of every three committed GPUs had not been assigned, and roughly one in five was in use. That is the newspaper's arithmetic on the letter it cited, not a parliamentary utilisation table. The government then announced the next target, a [second tender round drawing bids for 18,000 GPUs](https://www.medianama.com/2025/05/223-indiaai-mission-18000-gpu-bids-indigenous-ai-models/). IndiaAI CEO Abhishek Singh said in May 2025 that about 15,000 of the bids would clear technical checks, that more than 30,000 GPU requests were in the pipeline, and that a third tender round was open. The January 2025 target had been 18,693 GPUs, announced when the initial 10,000 figure was [expanded](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/), before the May 2025 expansion to 34,333.
 
 The same report noted the bidders' partners. Vensysco and Locuz with AWS. Ishan Infotech with Oracle. Netmagic with Google Cloud. IndiaAI's national compute is mostly rented from big cloud companies through Indian resellers. The Mission pays for access to machines it does not own. The design appears deliberate. Renting avoids a large capital outlay and the risk of owning idle hardware. It also means the GPU count refers to machines owned by private companies, and utilisation risk sits partly with those companies when demand is low.
 
-A companion piece on this site, [The National AI Compute Scorecard](/compute), places India's rental model next to the US donation model, the UK purchase model, and the EU co-federation model. The short version is that each country publishes the metric its model can produce. India can publish onboarded GPUs. It has not published GPU-hours per rupee in a parliamentary table.
+A later parliamentary reply filled one of those blanks, and left another open. [Lok Sabha Unstarred Question 2807](https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2807_hKyI1X.pdf), answered on 5 August 2026, said 15 compute service providers had been empaneled over four rounds, that **237 projects** had been approved for subsidised compute, and that **93.18 lakh GPU hours** (9.318 million) had been **sanctioned**. The same reply said a purchase order had been issued for a high-performance AI compute system of about 1.1 EFLOPS at the NIC data centre in Shastri Park, Delhi.
+
+Sanctioned hours are not hours consumed. The August 2026 annex still does not print GPU-hours used, or hours per rupee released. Treat 93.18 lakh as an approval total until MeitY publishes a consumption series next to it.
+
+A companion piece on this site, [The National AI Compute Scorecard](/compute), places India's rental model next to the US donation model, the UK purchase model, and the EU co-federation model. India can now point to sanctioned hours as well as onboarded GPUs. Consumed hours per rupee still do not appear in the annexes checked for this essay.
 
 ## Who is using the machines
 
@@ -312,19 +317,23 @@ A related piece on this site, [Sovereign AI Debt](/aidebt), treats the Sarvam CC
 
 The Mission has shipped real things. The list belongs next to the money and utilisation numbers, not instead of them.
 
-**[Foundation models](/glossary/foundation-model).** MeitY received 506 proposals for indigenous models by 30 April 2025 ([PIB, 30 May 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132817)). More than 230 applications were received for India-specific large and small [language models](/glossary/llm), per [MediaNama's May 2025 report](https://www.medianama.com/2025/05/223-indiaai-mission-18000-gpu-bids-indigenous-ai-models/). Four startups were selected in the first phase. Sarvam, Soket AI, Gnani AI, and Gan AI. Soket is building a 120 billion parameter model for defence, healthcare, and education. Gnani is building a 14 billion parameter [voice](/glossary/speech-recognition) model. Gan is building a 70 billion parameter model for [speech synthesis](/glossary/tts). BharatGen, launched on 2 June 2025, is the first government-funded homegrown [multimodal](/glossary/multimodal-ai) model, supporting 22 Indian languages ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). In April 2026, [BharatGen was reported with over ₹1,000 crore](https://www.medianama.com/2026/04/223-centre-funds-12-ai-projects-sovereign-models-bharatgen-4x-next-highest-allocation-rs-1000-crore/), four times the next-highest allocation among the twelve shortlisted teams. Eight more foundational model initiatives were announced on 18 September 2025 ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)).
+**[Foundation models](/glossary/foundation-model).** MeitY received 506 proposals by 30 April 2025 ([PIB, 30 May 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132817)). The [5 August 2026 Lok Sabha reply](https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2807_hKyI1X.pdf) says that, against those 506 applications, 20 indigenous foundation-model proposals had been identified for support: 12 large multimodal models and 8 small language models, with intellectual property retained by the applicants. The same reply lists "notable outputs already launched": Sarvam AI's 30 billion and 105 billion parameter models, and Indus; Gnani.AI's speech-to-speech model; BharatGen's Param2-17B, Patram-7B, and Shrutam-2; and Avataar AI's video generation model. Those names and sizes are the ministry's list as of that answer. They are not an independent eval table. An earlier PIB note described Sarvam's selection as a 120 billion parameter effort. The August 2026 annex lists 30 billion and 105 billion as launched. This essay does not collapse those figures into one model. They may be successive releases, parallel products, or a change of target. The annex does not say which.
 
 Announcement volume is high. Release quality is harder to score from PIB alone. A fair public scorecard would list model name, parameter count, open weights or not, evaluation set, and licence. That table does not yet exist in the parliamentary annex.
 
-**Applications.** Thirty applications were approved for India-specific AI use cases by July 2025, in healthcare, agriculture, climate change, governance, and assistive learning ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). Approval is not deployment. The public record lists approvals. It does not list live users per application.
+**Applications.** Thirty applications were approved for India-specific AI use cases by July 2025, in healthcare, agriculture, climate change, governance, and assistive learning ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). The August 2026 Lok Sabha reply cites 62 AI prototypes developed and 20 AI solutions deployed across public-sector institutions. Approval, prototype, and deployment are three different stages. The annex does not list live users per application.
 
 **AIKosh.** MeitY said 367 datasets were on the platform in May 2025 ([PIB, 30 May 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132817)). By July 2025, the platform reported over 3,000 datasets and 243 AI models across 20 sectors, with 265,000 visits, 6,000 registered users, and 13,000 downloads ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). Count alone is not quality. [MediaNama has noted](https://www.medianama.com/2024/12/223-indiaai-mission-expenditure-budget/) that MeitY has not published a scrub protocol matching the privacy risk of residual identifiers in "AI-ready" public datasets. A dataset library can grow fast if ingestion is light. Trust grows when scrub rules are public and audited.
 
-**FutureSkills.** More than 200 students had received fellowships by July 2025, according to [PIB](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092). Twenty-six institutes had onboarded PhD students. Twenty-seven Data and AI Labs were set up with NIELIT, and states and Union Territories nominated 174 ITIs and polytechnics. The [Rajya Sabha reply of 13 February 2026](https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf) says more than 8,000 undergraduates, 5,000 postgraduates, and 500 PhD students "are supported" for talent development, and that 27 labs have been established with 543 more identified. Those larger figures are the government's claim of students supported under the Mission, not a separate verified enrolment census published with names and institutes. Enrolment is not the same as a labour-market outcome. The Mission can count seats. Employers will count skills.
+**FutureSkills.** More than 200 students had received fellowships by July 2025, according to [PIB](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092). Twenty-six institutes had onboarded PhD students. Twenty-seven Data and AI Labs were set up with NIELIT, and states and Union Territories nominated 174 ITIs and polytechnics. The [Rajya Sabha reply of 13 February 2026](https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf) says more than 8,000 undergraduates, 5,000 postgraduates, and 500 PhD students "are supported" for talent development, and that 27 labs have been established with 543 more identified. Those larger figures are the government's claim of students supported under the Mission, not a separate verified enrolment census published with names and institutes.
+
+A later account, in [ThePrint on 7 August 2026](https://theprint.in/tech/ai-mission-misses-fellowship-targets-by-miles-spends-just-32-of-funds-parliament-panel-report-reveals/3008626/), citing the Thirty-First Report of the Standing Committee on Communications and Information Technology (presented to Lok Sabha and laid in Rajya Sabha on 6 August 2026), gives selection counts rather than "supported" counts. According to that reporting of MeitY's action-taken replies: in 2024 the ministry selected 150 undergraduate fellows against a target of 5,000, 140 postgraduate fellows against 2,000, and 3 PhD fellows against 100. In 2025 the UG target rose to 8,000 with 159 selected, the PG target rose to 5,000 with 101 selected, and PhD selections were 199 against a target of 167. This essay did not obtain the committee PDF itself. Treat the fellowship table as press-reported from a parliamentary report until the report is checked line by line. "Supported" and "selected" are different words. They should not be added together.
+
+ThePrint, citing the same report, also wrote that MeitY had spent 32 percent of 2025-26 revised-estimate funds as on 31 December 2025. That is a spend ratio against RE, with a December cut-off. It sits beside, and is not the same as, the ₹379.15 crore **received** by IndiaAI as on 9 February 2026 in Q.1668. Received and spent can differ. The two dates differ. Enrolment is not a labour-market outcome. The Mission can count seats. Employers will count skills.
 
 **Startup Financing.** The IndiaAI Startups Global programme launched in March 2025, sending ten Indian startups to Europe with Station F and HEC Paris ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). Details of who actually received the money appear thinner than the GPU price annex. Ten startups seem unlikely to absorb a ₹1,942 crore line. Either the line is mostly unspent, or the disbursement list is unpublished. Both are possible. Only a spend table settles it.
 
-**Safe & Trusted AI.** Eight projects were selected in the first round, covering machine unlearning, bias mitigation, and explainability. More than 400 applications came in for the second round. An expression of interest for partner institutions in the IndiaAI [Safety](/glossary/ai-safety) Institute was published on 9 May 2025 ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). The pillar's outlay is ₹20.46 crore. That is the smallest line in the Mission and the one most often invoked in speeches about responsible AI. The speeches talk about responsible AI. The budget table gives that pillar ₹20.46 crore.
+**Safe & Trusted AI.** Eight projects were selected in the first round, covering machine unlearning, bias mitigation, and explainability. More than 400 applications came in for the second round. An expression of interest for partner institutions in the IndiaAI [Safety](/glossary/ai-safety) Institute was published on 9 May 2025 ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). The August 2026 Lok Sabha reply puts the selected-project count at 13. The pillar's outlay is still ₹20.46 crore in the February annex. That is the smallest line in the Mission. Whether that ratio is the right policy choice is a separate argument. The budget table is the fact.
 
 **AIRAWAT** at C-DAC, the prior flagship AI platform, [suffered three months of downtime](https://www.medianama.com/2024/11/223-all-is-not-well-with-it-ministry-ai-platform-airawat/) in late 2024, disrupting startups that depended on it. **Bhashini**, launched in July 2022, has crossed one million downloads and supports 20 Indian languages with more than 350 [translation](/glossary/machine-translation) models ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). Neither replaces the IndiaAI money. Adding their GPU numbers to IndiaAI's would count the national total twice. Keeping them adjacent is useful. Prior programmes show both delivery and operational risk.
 
@@ -336,13 +345,13 @@ Renting rather than buying GPUs appears to be a deliberate design choice. When u
 
 Private money dwarfs the Mission. Amazon and Microsoft have committed [over $50 billion to India's cloud and AI infrastructure](https://www.medianama.com/2025/12/223-amazon-microsoft-52b-india-ai-investment/), far more than IndiaAI has received. That is company money, separate from the Mission total. The ₹10,372 crore Mission pays for access to the machines, and the machines stay with the companies. If the policy goal is cheaper access for Indian researchers and startups, rental plus subsidy can work. If the policy goal is sovereign ownership of silicon, rental cannot deliver it. The documents do not always say which goal is primary.
 
-India's most successful digital programmes reported completed transactions. UPI payments and Aadhaar authentications. That argument is developed in the [API States](/apis) and [bureaucracy](/bureaucracy) essays on this site. IndiaAI reports onboarded GPUs and Cabinet outlays. It has not yet reported [GPU-hours](/glossary/inference) used per rupee. Transaction metrics force a programme to show use. Capacity metrics allow a programme to show readiness.
+India's most successful digital programmes reported completed transactions. UPI payments and Aadhaar authentications. That argument is developed in the [API States](/apis) and [bureaucracy](/bureaucracy) essays on this site. IndiaAI reports onboarded GPUs, Cabinet outlays, and, as of August 2026, sanctioned GPU-hours. It has not yet reported GPU-hours **used** per rupee in the annexes checked here. Transaction metrics force a programme to show use. Capacity and sanction metrics show readiness and approval.
 
 A timing defence exists too. Twenty-three months into sixty is early. Foundation models take time. Empanelment takes tenders. Budget releases take Finance Ministry cycles. A Mission that spent the full outlay in year one would look reckless. A Mission that cannot explain why releases lag even the Revised Estimates looks opaque. Both can sit in the same paragraph.
 
 Parliament published how the ₹10,372 crore was split across pillars. It has not published how the ₹400.94 crore was spent. The table is the plan. It is not a record of payments.
 
-The ₹10,372 crore figure will keep appearing in speeches. By early February 2026, IndiaAI had received ₹400.94 crore.
+The ₹10,372 crore figure will keep appearing in speeches. By 9 February 2026, IndiaAI had received ₹400.94 crore. The 5 August 2026 Lok Sabha annex added sanctioned hours and project counts. It did not reprint a new cash-received total.
 
 ---
 
@@ -442,19 +451,19 @@ The NSF NAIRR page, [last updated in March 2026](https://www.nsf.gov/focus-areas
 
 Fourteen federal agencies participate, from NASA and DARPA to the FDA and the Department of War. The Department of Energy and the National Institutes of Health co-lead a separate secure allocation track called NAIRR Secure for privacy-sensitive AI research.
 
-The NAIRR pilot publishes a running tally on its portal, [nairrpilot.org](https://nairrpilot.org). As of August 2026: **840 research projects, 85 NAIRR Classroom awards, 23 infrastructure and data demonstration projects, 3 community workshops**. The NSF page, last updated March 2026, cited more than 600 projects and 6,000 students across all 50 states, Washington, DC, and Puerto Rico.
+The NAIRR pilot publishes a running tally on its portal, [nairrpilot.org](https://nairrpilot.org). As of 14 August 2026 the portal listed **840+ research projects, 86 NAIRR Classroom awards, 23 infrastructure and data demonstration projects, and 3 community workshops**. The NSF page, last updated March 2026, cited more than 600 projects and 6,000 students across all 50 states, Washington, DC, and Puerto Rico.
 
 Washington did not buy GPUs and did not build halls. It routes people to donated machines and counts projects.
 
 ## The UK
 
-The UK's AI Research Resource was announced in March 2023 with £900 million in funding. The first machine, Isambard-AI at the University of Bristol, was built with 5,000 NVIDIA Grace Hopper GH200 superchips at a cost of about £225 million. A second planned site, expected to be located in Cambridge or Edinburgh, did not proceed. The government was reported in early 2025 to have scrapped the second machine as part of budget cuts.
+The UK's AI Research Resource is a public procurement programme. In the [March 2023 Spring Budget](https://www.ukri.org/news/300-million-to-launch-first-phase-of-new-ai-research-resource/), the government set aside £100 million for AIRR. On 1 November 2023, at the AI Safety Summit, that figure was [tripled to £300 million](https://www.gov.uk/government/news/technology-secretary-announces-investment-boost-making-british-ai-supercomputing-30-times-more-powerful) for phase one, to build and connect two machines.
 
-Nobody published a single account that ties the £900 million announcement to the one machine that got built. The gap stays open.
+Those two machines exist. **Isambard-AI** at the University of Bristol uses [5,448 NVIDIA GH200 Grace Hopper superchips](https://www.bristol.ac.uk/news/2025/july/isambard-launch.html) and about [£225 million in public money](https://www.bristol.ac.uk/news/2025/july/isambard-launch.html). **Dawn** at the University of Cambridge is the second AIRR site. [GOV.UK](https://www.gov.uk/government/news/cambridge-supercomputer-set-to-get-6-times-more-powerful-as-government-backs-british-ai-innovation) describes AIRR, launched in July 2025, as giving researchers and start-ups free access to both systems.
 
-The UK now participates in the EU's AI Factory network as an antenna partner, listed as UKAIFA in the [European Commission's AI Factories catalogue](https://digital-strategy.ec.europa.eu/en/policies/ai-factories).
+A separate story often gets mixed into AIRR. The previous government planned a large national supercomputer in Edinburgh. The incoming Labour government [cancelled or paused that plan](https://www.theregister.com/special-features/2025/06/12/uk-reheats-edinburgh-supercomputer-plan-sans-exascale-chops/672644), saying the money had never been formally allocated. In 2025 the government [recommitted up to £750 million](https://www.gov.uk/government/news/scotland-to-host-uks-national-supercomputer-as-chancellor-confirms-750-million-investment) for a new national supercomputer at Edinburgh, now described as working alongside AIRR. AIRR's phase-one pair was Bristol and Cambridge. Edinburgh is a different ledger line.
 
-Britain bought one machine through public procurement and never published how much it was used.
+The UK also participates in the EU's AI Factory network as an antenna partner, listed as UKAIFA in the [European Commission's AI Factories catalogue](https://digital-strategy.ec.europa.eu/en/policies/ai-factories). Its natural metrics would be machine utilisation, queue length, and hours by user class. It has published announcements, chip counts, and site names. It has not published utilisation next to the £300 million phase-one figure.
 
 ## The EU
 
@@ -470,13 +479,15 @@ The network now stands at 19 AI Factories and 13 antennas across the EU and part
 
 The EU has also opened a call for up to seven AI Gigafactories, facilities of more than 100,000 advanced AI processors each, supported by up to €10 billion in public funding and an estimated €20 billion in private investment.
 
-The EU publishes factory selections, site counts, and partner lists. The [EuroHPC AI Factories page](https://eurohpc-ju.europa.eu/ai-factories_en) says the factories offer free, customised support to SMEs and startups. It does not publish running hours delivered to those startups in a comparable format. Factory count is a commitment number. Hours delivered would be a delivery number. The second one is missing.
+The EU publishes factory selections, site counts, and partner lists. The [EuroHPC AI Factories page](https://eurohpc-ju.europa.eu/ai-factories_en) says the factories offer free, customised support to SMEs and startups. It does not publish running hours delivered to those startups as a programme total.
+
+A related page, [Large Scale Access to AI factories](https://www.eurohpc-ju.europa.eu/large-scale-access-ai-factories_en), checked on 14 August 2026, carried a "TEMPORARILY CLOSED" banner and also listed Status as Open. Treat those two labels as unresolved on the page itself. What is clear is the update printed there: "Due to exceptionally high demand, Leonardo, MareNostrum and LUMI-G are currently unavailable for new allocations." That is a demand signal. It is not hours consumed.
 
 ## India
 
-India's programme is covered fully in [the IndiaAI essay](/indiaai). The model is empanelment rental: IndiaAI does not buy machines. It empanels private cloud providers, approves users, and subsidises access. MeitY reported 38,000 GPUs onboarded by February 2026. Cash released by that date: ₹400.94 crore, 3.9% of the ₹10,371.92 crore outlay. Press reporting put utilised GPUs at 7,418 of 33,099 committed. Both figures are documented in [the IndiaAI parliamentary record](/indiaai).
+India's programme is covered fully in [the IndiaAI essay](/indiaai). The model is empanelment rental: IndiaAI does not buy machines. It empanels private cloud providers, approves users, and subsidises access. MeitY reported 38,000 GPUs onboarded by February 2026. Cash released by that date: ₹400.94 crore, 3.9% of the ₹10,371.92 crore outlay. Press reporting put utilised GPUs at 7,418 of 33,099 committed.
 
-India's primary published metric is GPUs onboarded. Utilisation was reported by a newspaper, not by the programme.
+A later annex, [Lok Sabha Unstarred Question 2807](https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2807_hKyI1X.pdf), answered on 5 August 2026, added **93.18 lakh GPU hours sanctioned** across 237 approved projects. Sanctioned is an approval total. It is not hours consumed. India's primary published metric is still GPUs onboarded. Consumed hours still do not appear in that annex.
 
 ## France
 
@@ -488,17 +499,17 @@ France counts those pledges as national capacity. Hours would show whether any o
 
 ## Japan
 
-Japan's programme is not a single named mission but a series of subsidies and joint ventures anchored by SoftBank, the parent company of ARM. The government has budgeted over ¥100 billion for AI compute subsidies through 2026, and the Ministry of Economy, Trade and Industry has backed domestic AI infrastructure through state-backed lenders.
+Japan's programme is not a single named mission. In [April 2024](https://www.meti.go.jp/english/press/2024/0419_001.html), METI said it would provide subsidies of up to **¥72.5 billion** to five company plans for AI computational resources under the Economic Security Promotion Act. Sakura Internet's plan was the largest, at about ¥50.1 billion. That is a maximum subsidy for named cloud projects, not a single national GPU fleet and not hours consumed. Broader METI chip-and-AI budget lines for later years mix semiconductors with models. They are not the same cell as this compute subsidy.
 
-SoftBank is the chairman and largest equity holder of Stargate, covered in [the debt essay](/aidebt). SoftBank's announced $19 billion equity commitment is largely funded through bank borrowing from Mizuho and other Japanese lenders. Japan's national AI compute is, in practice, SoftBank's balance sheet.
+SoftBank is a named Stargate partner. Press has described it as the main financial backer. That is not a filed majority stake. SoftBank's announced $19 billion equity commitment, [as reported by the Wall Street Journal](https://www.wsj.com/business/deals/openai-softbank-investment-debt-51b4a130), was expected to be funded largely through bank borrowing. Japan's national AI compute is, in practice, hard to separate from SoftBank's balance sheet. That is a description of the public record, not a claim that Tokyo and SoftBank are the same entity.
 
 ## What each programme counts
 
 <img src="/images/essays/compute-table.svg" alt="Comparison table: six national AI compute programmes, their models, their primary metrics, and whether they publish utilisation hours. None publishes hours." class="w-full my-8" />
 
-No programme publishes hours of GPU use per unit of public money. The US publishes projects supported. The EU publishes sites selected. India publishes GPUs onboarded. France counts private pledges. Japan counts SoftBank's balance sheet. The UK published an announcement and then stopped.
+No programme publishes hours of GPU **use** per unit of public money. The US publishes projects supported. The EU publishes sites selected, and now a demand note on named machines. India publishes GPUs onboarded and, as of August 2026, hours sanctioned. France counts private pledges. Japan is hard to separate from SoftBank's public filings. The UK published machines and chip counts, not utilisation.
 
-They count what their model makes easy to count. The US never bought GPUs, so it counts projects. India rents from empanelled clouds, so it counts what those clouds report onboarded. Utilisation sat in a letter, not a dashboard. France counts summit pledges. Japan counts SoftBank. None of them publishes hours.
+They count what their model makes easy to count. The US never bought GPUs, so it counts projects. India rents from empanelled clouds, so it counts what those clouds report onboarded, and now hours sanctioned. Utilisation sat in a letter, not a dashboard. France counts summit pledges. Japan is hard to separate from SoftBank. None of them publishes hours consumed per unit of public money.
 
 ---
 
@@ -508,7 +519,7 @@ Summary: Sovereign funds are financing AI compute with equity, convertibles, and
 
 The largest AI compute projects of the past two years draw sovereign money, convertibles, and bank debt. Coverage treats the announcements as investment. Three figures rarely match: announced, funded, and spent. Each instrument shows who carries the risk when the numbers do not add up.
 
-The names that matter here: Stargate, the US joint venture with a $500 billion ceiling. MGX, Abu Dhabi's AI vehicle. G42, the Emirati group that trades capital and compliance for chip licences. Saudi Arabia's Public Investment Fund, still shaping an AI envelope. SoftBank, the debt engine behind a lot of Stargate's reported structure. Sarvam's IndiaAI subsidy is the same question at a smaller scale.
+The names that matter here: Stargate, the US joint venture with a $500 billion ceiling. MGX, Abu Dhabi's AI vehicle. G42, the Emirati group that trades capital and compliance for chip licences. Saudi Arabia's Public Investment Fund, still shaping an AI envelope. SoftBank, a named Stargate partner whose 2026 OpenAI share purchases are a separate ledger. Sarvam's IndiaAI subsidy is the same question at a smaller scale.
 
 Where a number comes only from a newspaper, I say so.
 
@@ -526,7 +537,7 @@ Coverage mashes all three into "investment." Sponsors look decisive, governments
 
 Stargate was [announced at the White House on 21 January 2025](https://www.reuters.com/technology/artificial-intelligence/openai-softbank-oracle-invest-500-bln-ai-trump-says-2025-01-21/) as a joint venture of OpenAI, SoftBank, Oracle, and MGX, with plans to spend up to $500 billion on US AI infrastructure by 2029. The funding structure was [reported by The Information on 23 January 2025](https://www.theinformation.com/articles/openai-softbank-each-commit-19-billion-to-stargate-data-center-venture).
 
-Four cells, not one number. Announced ceiling: $500B by 2029. Committed initial frame: $100B. Funded capital: about $38B by August 2025. Spent: $0 as of August 2025.
+Four numbers, kept apart from a fifth. Announced ceiling: $500B by 2029. Committed initial frame, in press: $100B. Named pledges around that frame, in press: about $38B from SoftBank and OpenAI by August 2025. **Spent toward the $500B JV ceiling:** Bloomberg, on 7 August 2025, [reported](https://www.bloomberg.com/news/articles/2025-08-07/softbank-concedes-stargate-project-with-openai-needs-more-time) that the project had not started and no funds had been raised to meet that budget. SoftBank said it needed more time. That is a timestamp. It is not a claim that every related campus sat idle through August 2026.
 
 Add SoftBank $19B, OpenAI $19B, Oracle $7B, and MGX $7B and you get $52 billion of named equity-like **pledges** around the initial $100 billion frame, with the rest described as limited partners and debt. SoftBank plus OpenAI alone are $38 billion of that named set. The public conversation still leads with $500 billion. That is the ceiling to 2029, not cash in hand in January 2025, and not the same as funded capital.
 
@@ -534,13 +545,11 @@ The debt structure is more useful than the headline. [The Wall Street Journal re
 
 On 7 August 2025, [Bloomberg reported](https://www.bloomberg.com/news/articles/2025-08-07/softbank-concedes-stargate-project-with-openai-needs-more-time) that the project had not started and no funds had been raised to meet the $500 billion budget. SoftBank conceded it needed more time.
 
-<img src="/images/essays/stargate-gap.svg" alt="Stargate: $500B announced, $100B committed, ~$38B funded, $0 spent as of August 2025" class="w-full my-8" />
+<img src="/images/essays/stargate-gap.svg" alt="Stargate 500 billion dollar ceiling versus named pledges versus Bloomberg August 2025 report that funds had not been raised to that ceiling" class="w-full my-8" />
 
 Then the announcements resumed. [OpenAI said on 23 September 2025](https://openai.com/index/five-new-stargate-sites/) that Stargate would add five new data centre sites, taking planned capacity to nearly 7 gigawatts and claiming over $400 billion in investment over three years. In October 2025, [Reuters reported](https://www.reuters.com/world/americas/openai-sur-energy-weigh-25-billion-argentina-data-center-project-2025-10-10/) a $25 billion, 500-megawatt project for Patagonia, Argentina, with Sur Energy.
 
-The September announcement was about an infrastructure plan. The August Bloomberg report was about money raised. Plans can grow while funding stalls. The instruments between them, a thin equity base with thick bank debt, mean the lenders hold much of the exposure when construction has not started.
-
-Large infrastructure programmes often look quiet between announcement and ground breaking. The August 2025 Bloomberg line is a timestamp, not a final verdict. Later claims still need funded capital and spent capital, site maps alone.
+The September announcement was an infrastructure plan. The August 2025 Bloomberg report was about money raised to the ceiling. Plans can grow while a JV close stalls. Some related construction can be real, through project finance and tenant leases, while the White House number is still a brochure. The error is folding every OpenAI-adjacent dollar into the $500 billion cell.
 
 ## MGX. $100 billion target, $40 billion acquisition closed, $49 billion fund raised
 
@@ -574,13 +583,21 @@ The Saudi numbers are still at the planning stage. MGX and G42 have identifiable
 
 Leave Saudi out and the Gulf looks finished. A $40-100 billion envelope with no closed ledger is still a plan. MGX buying Aligned is a closed deal. "Gulf AI money" hides the difference.
 
-## SoftBank. The debt engine
+## SoftBank. OpenAI equity is not Stargate project finance
 
-SoftBank is the financial backer of Stargate and, through its ownership of ARM, a company deeply exposed to the AI infrastructure build-out. The Stargate financing, [reported by the Wall Street Journal](https://www.wsj.com/business/deals/openai-softbank-investment-debt-51b4a130), said SoftBank would supply about 10% equity, with the rest from bank borrowing. The first $10 billion was expected from Mizuho and other Japanese lenders.
+SoftBank sits in this story twice. The first role is the reported financial backer of the Stargate JV. The second is a disclosed shareholder in OpenAI Group PBC. Mixing them inflates the JV.
 
-The MGX model and the SoftBank model point in opposite directions. MGX raises sovereign capital and deploys it directly, acquiring assets outright. SoftBank borrows and puts the borrowed money into ventures it chairs. The risk in the MGX model sits with the sovereign fund. The risk in the SoftBank model sits with the banks that lent to SoftBank. Both are governments and government-backed firms financing AI compute with instruments that sit closer to credit markets than to simple cash equity.
+On [27 February 2026](https://group.softbank/en/news/press/20260227), SoftBank said it had agreed to follow-on investments of **$30 billion** in OpenAI Group PBC via SoftBank Vision Fund 2, in three $10 billion tranches. Upon completion, it said, cumulative investment in OpenAI was **expected** to total $64.6 billion, about **13%** ownership. Those are SoftBank's words. The 13% figure is expected on completion, not a claim that 13% already sat on 27 February.
 
-ARM exposure adds a second layer. SoftBank benefits if AI infrastructure demand stays high, because ARM's designs sit in a wide share of the chip stack. That is equity upside from industry growth. It is not the same as funded Stargate construction. Mixing ARM's strategic position with Stargate's project finance creates a halo that project lenders do not share.
+The first $10 billion tranche [closed on 1 April 2026](https://group.softbank/en/news/press/20260401_0). SoftBank said it borrowed $10 billion that day under the same [bridge facility](https://group.softbank/en/news/press/20260327). The second $10 billion tranche [closed on 1 July 2026](https://group.softbank/en/news/press/20260701), again with a $10 billion draw under that facility. The facility itself is [$40 billion, unsecured, maturing 25 March 2027](https://group.softbank/en/news/press/20260327), with JPMorgan, Goldman Sachs, Mizuho, SMBC, and MUFG as named lenders, and is also available for general corporate purposes. A third $10 billion tranche is planned for 1 October 2026, subject to acceleration if OpenAI lists. As of the 1 July notice, **$20 billion** of the $30 billion follow-on had been executed. The remaining $10 billion had not. Two $10 billion draws do not prove that $20 billion of the $40 billion facility was used only for OpenAI. SoftBank's notices attach each draw to that day's tranche. They do not publish a running facility utilisation table.
+
+This is equity in a company, funded in part with bank debt. It is a funded item on the OpenAI cap table. It is not a disclosed close of the Stargate joint venture's $500 billion ceiling. SoftBank's notices do not say that this cash bought US data-centre halls.
+
+The earlier Stargate financing story, [reported by the Wall Street Journal](https://www.wsj.com/business/deals/openai-softbank-investment-debt-51b4a130), said SoftBank would supply about 10% equity to the JV, with the rest from bank borrowing. That remains press-reported structure for the project, not the 2026 OpenAI share purchase.
+
+The MGX model and the SoftBank model still point in different directions. MGX raises sovereign capital and, in the Aligned case, buys assets outright. SoftBank borrows and puts borrowed money into companies it backs. The risk in the MGX model sits with the sovereign fund. The risk in the SoftBank OpenAI purchases sits, first, with SoftBank and the banks on the bridge facility. Both are large cheques. They are not the same cheque as Stargate.
+
+ARM exposure adds a second layer. SoftBank benefits if AI infrastructure demand stays high, because ARM's designs sit in a wide share of the chip stack. That is equity upside from industry growth. It is not funded Stargate construction.
 
 ## Who holds the risk
 
@@ -619,7 +636,8 @@ January 2025. Press details of a smaller initial equity frame.
 April and May 2025. Debt structure reporting and a Texas loan.  
 August 2025. SoftBank says more time is needed, funding short of the ceiling.  
 September 2025. New sites and a fresh investment claim over three years.  
-October 2025. An Argentina project enters the story.
+October 2025. An Argentina project enters the story.  
+February to July 2026. SoftBank executes $20 billion of OpenAI Group PBC equity, partly with bridge draws. That line belongs on the OpenAI cap table, not automatically in the Stargate JV cell.
 
 Other projects run the same loop: announce, leak the structure, land a loan, admit delay, add a country. Each item can be true. A new site list after a funding stall is not proof the stall ended.
 
@@ -649,19 +667,19 @@ Private credit into AI data centres can be rational when leases are signed with 
 
 Sovereign funds can move slowly. A $49 billion raise that deploys over years can still be real. Demanding full deployment the quarter after a raise confuses a raise with capex.
 
-None of that lets you merge announced, funded, and spent into one cell. SoftBank's [10% equity figure](https://www.wsj.com/business/deals/openai-softbank-investment-debt-51b4a130) and The Information's $19 billion pledges are still press plans, not filed closes. The Abilene $2.3 billion JPMorgan loan is a verified construction financing for an Oracle-leased campus, later tied in press to Stargate. MGX Fund I's $49 billion close is from MGX's 1 July 2026 statement. How much of that fund is still undeployed is unpublished. The risk sits with whoever financed the last tranche.
+None of that lets you merge announced, funded, and spent into one cell. SoftBank's [10% equity figure](https://www.wsj.com/business/deals/openai-softbank-investment-debt-51b4a130) and The Information's $19 billion pledges are still press plans for the JV, not filed closes. The Abilene $2.3 billion JPMorgan loan is a verified construction financing for an Oracle-leased campus, later tied in press to Stargate. SoftBank's $20 billion of executed OpenAI equity in 2026 is a verified share purchase, funded in part with a bridge loan. MGX Fund I's $49 billion close is from MGX's 1 July 2026 statement. How much of that fund is still undeployed is unpublished. The risk sits with whoever financed the last tranche.
 
 ---
 
 ## AI Safety Institutes
 URL: https://veda.ng/safety
-Summary: Every capital launched a safety institute. The UK hired. The US renamed the shop and left about $15 million in the till. The EU built an Office that can fine. The noun travelled. The statute did not.
+Summary: Every capital launched a safety institute. The UK hired. The US renamed the shop and kept about $15 million in public cash. The EU built an Office that can fine. The word spread. The statute did not.
 
 In November 2023 London and Washington launched "AI safety institutes" in the same week, in the afterglow of Bletchley Park. By mid-2025 both had new names. The UK body is the [AI Security Institute](https://www.aisi.gov.uk/), a DSIT directorate that now lists more than 100 technical staff on its homepage. The US body is NIST's [Center for AI Standards and Innovation](https://www.nist.gov/caisi), carved out of the old AISI in June 2025. The EU never used the word institute. It built an [AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office) with inspection powers and a fine schedule, and on 2 August 2026 those powers switched on.
 
 The diplomatic sequence was Bletchley, then [Seoul in May 2024](https://www.gov.uk/government/news/global-leaders-agree-to-launch-first-international-network-of-ai-safety-institutes-to-boost-understanding-of-ai), then Paris in February 2025. The [institute network](https://www.csis.org/analysis/ai-safety-institute-international-network-next-steps-and-recommendations) that actually convened put the US, UK, EU, Japan, Singapore, Korea, Canada, France, Kenya, and Australia in one club. Germany and Italy signed the Seoul statement and then sat out that first membership list. CSIS, writing in October 2024, put most annual budgets around $10 million, with the UK as the outlier at about £50 million a year and a £100 million envelope through 2030. In August 2026 the UK still has the people. For the rest of the Seoul list the public number is still a pledge, a rename, or a slice of a bigger AI pot.
 
-Bletchley produced a photograph and a noun that any capital could copy. A directorate with a hundred researchers costs real money. A statute that can stop a release is something else again. The UK built the lab. The Commission wrote the regulation. Most of the Seoul list got a letterhead a minister can point at.
+Bletchley produced a photograph and a noun that any capital could copy. A directorate with a hundred researchers costs real money. A statute that can stop a release is something else again. The UK built the lab. The Commission wrote the regulation. Most of the Seoul list got a named body a minister can point at.
 
 Most of these bodies run evals and sit on ISO. That does not change a lab's week. A fine does. Only the [AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office) can issue one.
 
@@ -673,17 +691,17 @@ The Frontier AI Taskforce became the AI Safety Institute, then, in 2025, the AI 
 
 What they publish is evaluations. Open-weight cyber capability versus closed frontier: they put recent open models a few months behind, not a year. A persuasion study in *Science*. A pre-release look at Anthropic's Mythos, which is how a rumour about hacking skill became a written eval instead of a leak. A joint note with CAISI on Kimi K3 in July 2026. Labs still ship on their own calendar. The institute writes after, or just before, by invitation.
 
-They dropped Safety for Security because the brief is now cyber, biosecurity, and national capability, not Bletchley-era alignment. The 100 people on the homepage are the same shop. The noun changed because the government did. Alignment talk does not survive a minister who wants Chinese models measured and British ones unburdened. The staff can do both jobs. The letterhead tells you which one will be funded.
+They dropped Safety for Security because the brief is now cyber, biosecurity, and national capability, not Bletchley-era alignment. The 100 people on the homepage are the same shop. The noun changed because the government did. A reader can treat that as a real shift in mission, or as a label change on the same evaluators. The homepage still lists the staff. The statute still does not give them a fine.
 
 The UK's other output is a paper with thirty flags on it. The [International AI Safety Report 2026](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026), published 3 February, lists the UK institute as secretariat, with Mila. Yoshua Bengio chairs. The panel has nominees from more than thirty countries and organisations, including China, the EU, India, Japan, Kenya, Korea, Singapore, and the UN. The report's own findings are cautious: capabilities up in reasoning, code, maths; disagreement on timing; malicious use, malfunction, and systemic risk as the three buckets. Training compute still growing about 5x a year. Software tasks that take a human thirty minutes already done about 80 percent of the time, duration doubling every seven months.
 
-That paper is what the Seoul network actually produced together. It is a consensus document that lets every capital say it sat at the table. The UK paid for the secretariat. Everyone else paid for a nomination. That is a cheap way to look like a safety power, and it is why the report can be both the most serious scientific product in this set and evidence that the network is a byline machine.
+That paper is what the Seoul network actually produced together. It is a consensus document that lets every capital say it sat at the table. The UK paid for the secretariat. Everyone else paid for a nomination. The report can be the most serious scientific product in this set, and membership can still be cheaper than hiring a hundred evaluators. Both can be true.
 
-## Washington renamed the shop and left the till light
+## Washington renamed the shop. The public cash line stayed small
 
 NIST stood up a US AISI after the 2023 executive order. In June 2025 Commerce Secretary Howard Lutnick [turned it into CAISI](https://www.commerce.gov/news/press-releases/2025/06/statement-us-secretary-commerce-howard-lutnick-transforming-us-ai). The [NIST page](https://www.nist.gov/caisi) lists the job: voluntary standards, unclassified evals of cyber and bio risk, assessments of US and "adversary" models, and a brief to fight "burdensome" foreign rules on American tech.
 
-The last clause is the brief. CAISI still runs evals, but the customer is a competitiveness hearing: "adversary" models, "burdensome" foreign rules. Congress attached that talking point. It did not attach a fine.
+The last clause is the published brief. CAISI still runs evals. The NIST page puts those evals next to "adversary" models and "burdensome" foreign rules. Congress attached that talking point. It did not attach a fine. Whether that brief is the right one is a political argument. The statute, as funded, is the fact.
 
 The money is small. [IFP](https://ifp.org/funding-for-caisi/), in August 2025, put FY2026 at about $15 million: up to $10 million in appropriations plus a Technology Modernization Fund loan spread across two years. That is still the public ledger. The FY2027 request asked for $27 million. House and Senate appropriators had to put NIST back after a proposed cut in early 2026. There is still no public headcount comparable to the UK's 100.
 
@@ -693,11 +711,13 @@ CAISI does publish. [DeepSeek V4 Pro](https://www.nist.gov/news-events/news/2026
 
 The AI Office sits inside the Commission. As of the [page update on 13 August 2026](https://digital-strategy.ec.europa.eu/en/policies/ai-office) it employs more than 125 people across six units, including AI Safety, and is recruiting about 40 contractual agents for enforcement. Deadline 8 September 2026. Setup funding in 2024 was €46.5 million, reallocated, not a fresh multi-year envelope on the UK pattern. They would not be hiring paralegals for a think tank.
 
-The AI Act is the difference. The Office can evaluate general-purpose models, demand technical files, inspect, order corrective action, restrict a release, and fine. GPAI rules on paper applied from 2 August 2025. [Commission enforcement powers](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) over those providers switched on 2 August 2026. Wilson Sonsini, writing the next day, put the fine at the higher of 3 percent of global turnover or €15 million. The first year was compliance without a penalty. That year is over. The Commission's own [31 July 2026 note](https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august) said the switch-on out loud.
+The AI Act is the difference. The Office can evaluate general-purpose models, demand technical files, inspect, order corrective action, restrict a release, and fine. GPAI rules on paper applied from 2 August 2025. [Commission enforcement powers](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) over those providers switched on 2 August 2026. [Wilson Sonsini, writing the next day](https://www.wsgr.com/en/insights/eu-ai-act-enforcement-phase-begins.html), put the GPAI fine at the higher of 3 percent of worldwide turnover or €15 million, matching [Article 101](https://artificialintelligenceact.eu/article/101/). That is not the prohibited-practices ceiling, which sits higher at 7 percent or €35 million under [Article 99](https://artificialintelligenceact.eu/article/99/). Mixing those two invents a bigger stick than the GPAI file gives. The first year was compliance without a penalty. That year is over. The Commission's own [31 July 2026 note](https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august) said the switch-on out loud.
 
 Open-weight providers are not automatically out. The Act's free-and-open exemption is [narrow](https://linuxfoundation.eu/newsroom/ai-act-explainer). Systemic-risk GPAI stays in. Article 50 transparency stays in. A DeepSeek or Llama checkpoint that is widely used in the Union can still owe documentation. Apache on the card is an input to that test, not the test. The [GPAI guidelines](https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers) say an Apache card does not cancel copyright or documentation duties. Providers who signed the July 2025 Code of Practice get a softer enforcement path: the Commission said it will focus on whether they kept the code. That path is a queue, not a free pass.
 
-A 125-person office that can fine is a different machine from a 100-person lab that can blog. The Seoul network treated them as cousins because both showed up at Bletchley. One is a research directorate. One is a prosecutor's office that has not yet brought a case. The first week of August 2026 is the start of the clock. Anyone who writes "the EU enforced" in the past tense this month is early.
+A 125-person office that can fine is a different machine from a 100-person lab that can blog. The Seoul network treated them as cousins because both showed up at Bletchley. One is a research directorate. One is a regulator that has not yet used the fine. Between 2 and 14 August 2026 I did not find a Commission press note announcing a first documentation request, model evaluation, or fine. That is a search result, not a claim that the Office sat idle. The [Commission's own FAQ](https://ai-act-service-desk.ec.europa.eu/en/faq) says the first tool is a technical compliance dialogue, with formal powers reserved for cases where dialogue is not enough. Anyone who writes "the EU enforced" in the past tense this month is early.
+
+[Pour Demain](https://www.pourdemain.ngo/en/post/resourcing-the-ai-office) has argued that the Office's GPAI supervision unit should reach at least 160 staff by 2030. That is an advocacy target, not a Commission hiring plan. The recruiting round with an 8 September 2026 deadline is on the [Commission's own AI Office page](https://digital-strategy.ec.europa.eu/en/policies/ai-office).
 
 ## The rest of the network
 
@@ -719,11 +739,11 @@ What they have not produced is a forced delay of a Western frontier release, or 
 
 Ministers wanted the photograph. The UK wanted a lab and a secretariat. The Commission wanted a regulation it had already written. CAISI wanted a brief against foreign rules and a number on DeepSeek. Everyone got what they funded. A shared machine that can stop a model was never on that list.
 
-The UK hired. The US rebranded and underfunded. The EU wrote a regulation and is now hiring the people who will use it. From 2 August 2026 the Office can ask for files, inspect, and fine. An Apache card does not cancel that. A UK or US eval still cannot.
+The UK hired. The US rebranded and kept a small public cash line. The EU wrote a regulation and is now hiring the people who will use it. From 2 August 2026 the Office can ask for files, inspect, and fine. An Apache card does not cancel that. A UK or US eval still cannot.
 
 ---
 
-## The AI Lawsuit Ledger: Filed, Decided, Paid
+## The AI Lawsuit Ledger
 URL: https://veda.ng/lawsuits
 Summary: Two hundred AI suits sit on public dockets. One produced a $1.5 billion cheque. The Times has spent $28 million and does not have a verdict. The paid column is almost entirely people who did not sue.
 
@@ -805,17 +825,19 @@ Labs will keep buying the publishers who will sell, and litigating the publisher
 
 ## Intelligence is a Commodity
 URL: https://veda.ng/intelligence
-Summary: You can now buy intelligence at a monthly price. Higher reasoning costs more. Better decisions are no longer scarce.
+Summary: You can now buy intelligence at a monthly price. Higher list prices buy longer reasoning. Access is cheaper. Expertise is not the same as a list price.
 
 You can now buy intelligence at a monthly price. The old gatekeepers were credentials, departments, and long apprenticeships. Now you enter your card, choose a tier, and a model reasons for you. The cheapest plans answer simple questions. The expensive ones think longer, draw finer distinctions, and catch what you miss. Intelligence used to sit inside people and institutions. Now it sits on a shelf next to software, metered by the month and graded by the model.
 
-This is a real market. Twenty dollars a month buys a reasoning partner that reads faster than you, remembers more than you, and does not sleep. Two hundred dollars buys a slower, deeper thinker that checks its own work. Pay per token through an API and dial the intelligence up or down by picking a model name. The price is listed on a pricing page, like cloud storage or music.
+This is a real market. [ChatGPT Plus](https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus) still costs $20 a month. [ChatGPT Pro](https://help.openai.com/en/articles/9793128) is listed as $100 or $200, depending on usage allowance. Pay per token through an API and dial the list price up or down by picking a model name.
+
+On 14 August 2026, [OpenAI's API pricing page](https://developers.openai.com/api/docs/pricing) listed GPT-5.6 Luna at $0.20 input and $1.20 output per million tokens on the short-context Standard ladder, and GPT-5.6 Sol at $5 input and $30 output. Long-context cells on the same page are higher. They are a separate price. The same day, [Anthropic's pricing page](https://www.anthropic.com/pricing) listed Haiku 4.5 at $1 input and $5 output, and Fable 5 at $10 input and $50 output. [OpenAI's 30 July 2026 post](https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/) said Luna's list price was cut 80 percent and Terra's 20 percent that day, with Sol unchanged and subscription stickers unchanged. Those are list prices, not invoices. Enterprises negotiate. Cache and batch change the bill.
 
 ## What the builders say
 
-The people running the largest AI labs describe their products as utilities now. Sam Altman, OpenAI's CEO, said at the BlackRock Infrastructure Summit in March 2026: "We see a future where intelligence is a utility like electricity or water and people buy it from us on a meter and use it for whatever they want to use it for." He added that the business of every model provider "is going to look like selling tokens." Altman also floated the older energy dream of making intelligence "too cheap to meter."
+The people running the largest AI labs describe their products as utilities now. Sam Altman, OpenAI's CEO, said at the BlackRock Infrastructure Summit in March 2026, [as reported by Business Insider](https://www.businessinsider.com/sam-altman-ai-utility-electricity-water-openai-2026-3): "We see a future where intelligence is a utility like electricity or water and people buy it from us on a meter and use it for whatever they want to use it for." He added that the business of every model provider "is going to look like selling tokens." A [Rev transcript](https://www.rev.com/transcripts/altman-speaks-at-blackrocks-us-infrastructure-summit) of the same talk has him borrowing the old energy phrase of making intelligence "too cheap to meter."
 
-Andrew Ng called AI "the new electricity" years ago. The former Google Brain and Baidu scientist said that "just as electricity transformed almost everything 100 years ago," AI will transform almost every industry. Satya Nadella frames it as a commodity input. The Microsoft CEO said "GDP growth in any place will be directly correlated" to the cost of tokens, and that the job of every economy is to "translate these tokens into economic growth." Jensen Huang, NVIDIA's CEO, calls data centers "AI factories" that generate intelligence the way power plants generate electricity. He said: "Just like we generate electricity, we're now going to be generating AI."
+Andrew Ng called AI ["the new electricity"](https://www.gsb.stanford.edu/insights/andrew-ng-why-ai-new-electricity) years ago. The former Google Brain and Baidu scientist said that "just as electricity transformed almost everything 100 years ago," AI will transform almost every industry. Satya Nadella frames it as a commodity input. At Davos in January 2026, the Microsoft CEO said, [according to CNBC](https://www.cnbc.com/2026/01/20/microsoft-nadella-ai-race-energy-tokens.html), that "GDP growth in any place will be directly correlated" to energy costs in using AI, and that the job of every economy is to "translate these tokens into economic growth." Jensen Huang, NVIDIA's CEO, [calls these facilities AI factories](https://nvidianews.nvidia.com/news/nvidia-builds-worlds-first-industrial-ai-cloud-to-advance-european-manufacturing): "In the era of AI, every manufacturer needs two factories: one for making things, and one for creating the intelligence that powers them."
 
 ![Sam Altman speaking at the BlackRock Infrastructure Summit](/images/essays/sam-altman-vedang-vatsa.png)
 
@@ -827,7 +849,7 @@ For most of human history, good judgment was scarce. It came from parents, pries
 
 Think about spices. A few centuries ago, black pepper and cinnamon were expensive. Kingdoms funded voyages to find them. A cook without spices had few options. Then trade routes opened, prices fell, and kitchens changed. Today, no one brags about having salt. Flavor is cheap. We expect it. The baseline moved.
 
-The same thing is happening to judgment. You can buy a second opinion, ask a model to check your reasoning, list risks, compare options, and name what you missed. The model can be wrong. You can ask again. The scarcity is gone. You no longer depend only on the intelligence you happen to know in person.
+The same thing is happening to judgment, with a limit. You can buy a second opinion, ask a model to check your reasoning, list risks, compare options, and name what you missed. The model can be wrong. You can ask again. You no longer depend only on the intelligence you happen to know in person. That is cheaper access to a second pass. It is not a claim that the model is as good as a specialist, or that the old scarcity of expertise has vanished.
 
 The market is simple. More intelligence costs more. The cheapest models are fast and broad: they answer emails, summarize documents, rewrite code comments, and generate first drafts. They are good enough when being right nine times out of ten is acceptable. The stronger models cost more because they use more compute. They think in longer chains and hold up better in math, law, medicine, and strategy, where a wrong answer is expensive.
 
@@ -869,13 +891,13 @@ Now the models are tools, not toys. The conversation has moved from whether this
 
 Progress does not stop. It only changes how we measure it. Once intelligence is cheap, we will not celebrate it. We will demand the next scarce thing: better taste in which questions to ask, courage to follow an answer we did not expect, or institutions that can handle the power we now hold.
 
-We solved hunger, then wanted flavor. We solved transport, then wanted speed. We solved communication, then wanted clarity. We are solving access to reasoning. When that is cheap, attention will move again.
+In rich countries, cheap calories came first, then flavor. Transport got cheaper, then faster. Communication got cheaper, then clearer. Access to a second pass of reasoning is getting cheaper. When that is cheap, attention will move again.
 
 The gauge keeps moving. A person in 1700 would see a supermarket as a miracle of abundance. A person in 2026 will see a reasoning model as a useful appliance. In another century, both will look quaint. Progress turns luxuries into assumptions. It is not a destination.
 
 The coming divide is skill, not ownership. Intelligence is cheap enough to rent; judgment is still scarce. Models list options and lower the fear of being wrong, but they do not pick your values or act in your place. The edge is knowing what to ask, how to check an answer, which model to hire for the job, and when to ignore the machine. The commodity is the intelligence. The craft is the use of it.
 
-We spent most of history hunting for smart people to help us think. Now we can rent that help by the minute. What matters is what we do with it.
+We spent most of history hunting for smart people to help us think. Now we can rent a second pass by the minute. What matters is what we do with it.
 
 ---
 
