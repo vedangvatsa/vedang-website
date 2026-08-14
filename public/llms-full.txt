@@ -12,13 +12,13 @@ Cloudflare already drops about 6% of global traffic as malicious, and millions o
 
 Three cloud providers originate nearly a third of all bot traffic. Amazon at 14.7% across two AS numbers. Microsoft at 9%. Google at 8.5%. The United States originates 42.6% of all bot requests.
 
-<img src="/images/essays/traffic-cloud-bots.svg" alt="Bot traffic origination by cloud provider" class="w-full my-8" />
+<img src="/images/essays/traffic-cloud-bots.svg?v=2" alt="Bot traffic origination by cloud provider" class="w-full my-8" />
 
 The source is [Cloudflare Radar](https://radar.cloudflare.com/bots): 330 cities, 81 million HTTP requests per second. That is as close as the public internet gets to a full count.
 
 Most of this traffic is not AI. The [Cloudflare 2025 Year in Review](https://blog.cloudflare.com/radar-2025-year-in-review/) found that search engine crawlers made up 40% of verified bot traffic. AI crawlers accounted for 20%. SEO bots, the commercial scraping infrastructure that monitors rankings and backlinks, made up 13%. Googlebot alone generated more than a quarter of all verified bot traffic and 4.5% of HTML requests. All other AI bots combined generated 4.2%.
 
-<img src="/images/essays/traffic-composition.svg?v=2" alt="Verified bot traffic composition by category" class="w-full my-8" />
+<img src="/images/essays/traffic-composition.svg?v=3" alt="Verified bot traffic composition by category" class="w-full my-8" />
 
 User-action crawling grew 15x in 2025, faster than search, training, or SEO bots. Someone asks a chatbot a question. The chatbot fetches a page. The person reads the answer and never sees the site.
 
@@ -72,7 +72,7 @@ AI platforms were nowhere near those ratios. In the [July 2025 Radar post](https
 
 [Cloudflare's CEO wrote](https://blog.cloudflare.com/content-independence-day-no-ai-crawl-without-compensation/) that getting traffic from OpenAI is 750 times harder than it was from Google in the previous decade. Getting traffic from Anthropic is 30,000 times harder. On 1 July 2025, Cloudflare declared "Content Independence Day" and announced it would default to blocking AI crawlers that do not pay creators.
 
-<img src="/images/essays/traffic-crawl-gap.svg" alt="Pages crawled per referred visitor comparison" class="w-full my-8" />
+<img src="/images/essays/traffic-crawl-gap.svg?v=2" alt="Pages crawled per referred visitor comparison" class="w-full my-8" />
 
 ## What publishers see when the traffic stops
 
@@ -148,9 +148,9 @@ The same reply said more than 38,000 GPUs had been "onboarded." Empaneling GPUs 
 
 ## How to read Mission money
 
-Mission money sits in four ledgers. Public statements often mix them.
+Mission money sits in 4 ledgers. Public statements often mix them.
 
-1. **Outlay.** The Cabinet ceiling of ₹10,371.92 crore, fixed in March 2024. This is the five-year outer limit. It is not a promise that cash will arrive in year one.
+1. **Outlay.** The Cabinet ceiling of ₹10,371.92 crore, fixed in March 2024. This is the 5-year outer limit. It is not a promise that cash will arrive in year 1.
 2. **Estimate.** The annual Budget Estimate and Revised Estimate that MeitY asks for. The Budget Estimate is the ask at the start of the year. The Revised Estimate is the mid-year cut.
 3. **Release.** Cash that moves from the Ministry of Finance to IndiaAI. Parliament has published this for IndiaAI as a whole.
 4. **Spend.** What IndiaAI then pays to providers and institutions. Pillar-wise spend has not been published in the same annex that lists pillar-wise outlay.
@@ -173,9 +173,9 @@ The outlay split is in the annex and in [MeitY's earlier Lok Sabha disclosure](h
 
 <p class="text-center text-sm text-muted-foreground mt-2 mb-6">Source <a href="https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf">Rajya Sabha Unstarred Q.1668</a>. Figures sum to ₹10,371.92 Cr.</p>
 
-Safe & Trusted AI gets about one-fifth of the overhead line. The sub-project breakdown inside Compute Capacity's ₹4,563.36 crore has never been published, as [MediaNama noted](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/) in February 2025. Compute is the largest pillar and the least transparent inside the pillar.
+Safe & Trusted AI gets about 1/5 of the overhead line. The sub-project breakdown inside Compute Capacity's ₹4,563.36 crore has never been published, as [MediaNama noted](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/) in February 2025. Compute is the largest pillar and the least transparent inside the pillar.
 
-Start with the design as written. IndiaAI was never a single cheque. It was a multi-year ceiling with annual asks that Finance could trim. Slow releases do not, by themselves, prove mismanagement. They do prove that the number most often repeated in public, ₹10,372 crore, is not the number that describes what IndiaAI could spend in its first two years.
+Start with the design as written. IndiaAI was never a single cheque. It was a multi-year ceiling with annual asks that Finance could trim. Slow releases do not, by themselves, prove mismanagement. They do prove that the number most often repeated in public, ₹10,372 crore, is not the number that describes what IndiaAI could spend in its first 2 years.
 
 ## The cash, year by year
 
@@ -183,28 +183,30 @@ The estimates were cut every year. Then the releases ran further behind the cuts
 
 In the table below, BE is the Budget Estimate, what MeitY asked for at the start of the year. RE is the Revised Estimate, the figure after the mid-year cut. Received is cash that reached IndiaAI.
 
-| Year | BE (₹ Cr) | RE (₹ Cr) | Received (₹ Cr) | Share of RE | Share of BE |
+| Year | BE | RE | Received | of RE | of BE |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | 2024-25 | 551.75 | 173.00 | 21.79 | 12.6% | 3.9% |
 | 2025-26 | 2,000.00 | 800.00 | 379.15 | 47.4% | 19.0% |
 | 2026-27 | 1,000.00 | n/a | 0.00 | 0% | 0% |
-| **Total** | n/a | n/a | **400.94** | n/a | **3.9% of outlay** |
+| **Total** | n/a | n/a | **400.94** | n/a | **3.9%** |
+
+<p class="text-center text-sm text-muted-foreground mt-2 mb-6">Rupee columns are ₹ crore. BE is Budget Estimate. RE is Revised Estimate. Total 3.9% is of the ₹10,371.92 crore outlay, not of BE.</p>
 
 The release and estimate figures come from the [Rajya Sabha reply of 13 February 2026](https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf), with cash recorded to 9 February 2026. The ₹2,000 crore BE for 2025-26 comes from the [Union Budget documents](https://www.indiabudget.gov.in/doc/Budget_at_Glance/budget_at_a_glance.pdf). [MediaNama](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/) covered the FY 2024-25 cut in February 2025 and [the same cash figures](https://www.medianama.com/2026/04/223-indiaai-mission-400-crore-over-rs-10000-crore-5-year-outlay-released/) in April 2026.
 
 Every annual ask was cut. FY 2024-25 was trimmed 69%, from ₹551.75 crore to ₹173 crore. FY 2025-26 was trimmed 60%, from ₹2,000 crore to ₹800 crore. FY 2026-27 asks for ₹1,000 crore, half of the previous year's ask.
 
-Against the original Budget Estimate, FY 2024-25 delivered 3.9% of what MeitY asked for, and FY 2025-26 delivered 19%. The five-year ceiling was never meant to be released in one year. The releases still lagged even the reduced estimates both years.
+Against the original Budget Estimate, FY 2024-25 delivered 3.9% of what MeitY asked for, and FY 2025-26 delivered 19%. The 5-year ceiling was never meant to be released in 1 year. The releases still lagged even the reduced estimates both years.
 
-<img src="/images/essays/indiaai-cascade.svg" alt="The cascade from Budget Estimate to Revised Estimate to cash received, showing how the money shrank at each stage" class="w-full my-8" />
+<img src="/images/essays/indiaai-cascade.svg?v=2" alt="The cascade from Budget Estimate to Revised Estimate to cash received, showing how the money shrank at each stage" class="w-full my-8" />
 
-[MediaNama's February 2025 coverage](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/) listed three possible reasons for the FY 2024-25 cut. GPU bids came in cheaper than expected. Rollout was phased. Money may have been moved to other priorities. Those reasons can be true at the same time. Cheaper bids should free capacity, not freeze releases. Phased rollout should produce a published schedule of releases against milestones. Reallocation should leave a paper trail in Budget documents. The public record shows the cuts. It does not fully settle which reason dominated.
+[MediaNama's February 2025 coverage](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/) listed 3 possible reasons for the FY 2024-25 cut. GPU bids came in cheaper than expected. Rollout was phased. Money may have been moved to other priorities. Those reasons can be true at the same time. Cheaper bids should free capacity, not freeze releases. Phased rollout should produce a published schedule of releases against milestones. Reallocation should leave a paper trail in Budget documents. The public record shows the cuts. It does not fully settle which reason dominated.
 
 A note on FY 2026-27. The reply was cut off on 9 February 2026, before the first release of the new financial year. The zero reflects the cut-off date, not the full year. Any update after that date needs a fresh parliamentary reply or Budget paper.
 
 ## What officials said, and what the cash showed
 
-Officials talked about GPU numbers. The cash shown to Parliament was much smaller. Putting both on one page is the simplest way to keep the claims honest.
+Officials talked about GPU numbers. The cash shown to Parliament was much smaller. Putting both on 1 page is the simplest way to keep the claims honest.
 
 | Actor | Date | Claim | Source |
 | --- | --- | --- | --- |
@@ -222,9 +224,9 @@ The GPU number grew from 10,000 in March 2024 to 34,333 empaneled in May 2025 to
 
 IndiaAI does not buy and store chips in a government warehouse. It empanels cloud providers, approves users, and subsidises access. The user gets a lower hourly rate. The provider gets paid for the hours used. The government does not own the machine when the hour ends.
 
-The [30 May 2025 PIB release](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132817) published the lowest bid (L1) prices from seven bidders including Cyfuture, Netmagic, Sify, Locuz, Vensysco, Ishan Infotech, and Yotta.
+The [30 May 2025 PIB release](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132817) published the lowest bid (L1) prices from 7 bidders including Cyfuture, Netmagic, Sify, Locuz, Vensysco, Ishan Infotech, and Yotta.
 
-| Model | On-demand (₹/hr) | 1-month (₹/hr) | L1 (lowest bid) |
+| Model | On-demand | 1-month | L1 bidder |
 | --- | ---: | ---: | --- |
 | NVIDIA L4 (1X) | 45.07 | 29.00 | Sify / Netmagic |
 | Intel Gaudi 2 (1X) | 57.60 | 46.80 | CyFuture |
@@ -234,15 +236,15 @@ The [30 May 2025 PIB release](https://www.pib.gov.in/PressReleasePage.aspx?PRID=
 | NVIDIA H100 SXM | 153.00 | 134.10 | CyFuture |
 | NVIDIA B200 SXM | 323.00 | 308.00 | Yotta |
 
-<p class="text-center text-sm text-muted-foreground mt-2 mb-6">Source <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132817">PIB Press Release ID 2132817</a>, Table 1.</p>
+<p class="text-center text-sm text-muted-foreground mt-2 mb-6">Rates in ₹ per hour. Source <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132817">PIB Press Release ID 2132817</a>, Table 1.</p>
 
 The [October 2025 PIB explainer](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092) says GPUs are available at a subsidised rate of ₹65 per hour. In January 2025, MeitY had announced a 40% subsidy with a target of [₹100 per hour](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/). The May 2025 tender table shows L1 prices from ₹29 to ₹323 per hour depending on the model and term. An H100 SXM is ₹153/hour on-demand. A B200 SXM is ₹323/hour. The February 2025 tender round averaged [₹115.85 per GPU-hour](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/).
 
-These numbers sit next to each other without a public reconciliation. ₹65 per hour is a headline subsidy rate. The L1 table is a bid sheet by model. A researcher using an L4 at the month rate pays far less than a lab using a B200 on demand. Averaging them into one number hides the product mix. A mature scorecard would publish hours by model class, not a single rupee-per-hour slogan.
+These numbers sit next to each other without a public reconciliation. ₹65 per hour is a headline subsidy rate. The L1 table is a bid sheet by model. A researcher using an L4 at the month rate pays far less than a lab using a B200 on demand. Averaging them into 1 number hides the product mix. A mature scorecard would publish hours by model class, not a single rupee-per-hour slogan.
 
 GPUs pass through several stages before anyone uses them. [The Economic Times](https://economictimes.indiatimes.com/tech/artificial-intelligence/underused-gpus-raise-questions-about-indiaai-capacity-build-out/articleshow/128981840.cms), citing an IndiaAI letter to providers, reported these numbers.
 
-| Stage | GPUs | Share of committed |
+| Stage | GPUs | of committed |
 | --- | ---: | ---: |
 | Committed | 33,099 | 100% |
 | Assigned | 12,638 | 38% |
@@ -250,13 +252,13 @@ GPUs pass through several stages before anyone uses them. [The Economic Times](h
 
 Figures come from [The Economic Times](https://economictimes.indiatimes.com/tech/artificial-intelligence/underused-gpus-raise-questions-about-indiaai-capacity-build-out/articleshow/128981840.cms), citing an IndiaAI letter to empanelled providers. Treat as press-reported until MeitY reprints the same series in a parliamentary annex or PIB table.
 
-<img src="/images/essays/indiaai-funnel.svg" alt="33,099 committed GPUs narrowing to 12,638 assigned and 7,418 utilised" class="w-full my-8" />
+<img src="/images/essays/indiaai-funnel.svg?v=2" alt="33,099 committed GPUs narrowing to 12,638 assigned and 7,418 utilised" class="w-full my-8" />
 
-On those press-reported figures, two of every three committed GPUs had not been assigned, and roughly one in five was in use. That is the newspaper's arithmetic on the letter it cited, not a parliamentary utilisation table. The government then announced the next target, a [second tender round drawing bids for 18,000 GPUs](https://www.medianama.com/2025/05/223-indiaai-mission-18000-gpu-bids-indigenous-ai-models/). IndiaAI CEO Abhishek Singh said in May 2025 that about 15,000 of the bids would clear technical checks, that more than 30,000 GPU requests were in the pipeline, and that a third tender round was open. The January 2025 target had been 18,693 GPUs, announced when the initial 10,000 figure was [expanded](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/), before the May 2025 expansion to 34,333.
+On those press-reported figures, 2 of every 3 committed GPUs had not been assigned, and roughly 1 in 5 was in use. That is the newspaper's arithmetic on the letter it cited, not a parliamentary utilisation table. The government then announced the next target, a [second tender round drawing bids for 18,000 GPUs](https://www.medianama.com/2025/05/223-indiaai-mission-18000-gpu-bids-indigenous-ai-models/). IndiaAI CEO Abhishek Singh said in May 2025 that about 15,000 of the bids would clear technical checks, that more than 30,000 GPU requests were in the pipeline, and that a third tender round was open. The January 2025 target had been 18,693 GPUs, announced when the initial 10,000 figure was [expanded](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/), before the May 2025 expansion to 34,333.
 
 The same report noted the bidders' partners. Vensysco and Locuz with AWS. Ishan Infotech with Oracle. Netmagic with Google Cloud. IndiaAI's national compute is mostly rented from big cloud companies through Indian resellers. The Mission pays for access to machines it does not own. The design appears deliberate. Renting avoids a large capital outlay and the risk of owning idle hardware. It also means the GPU count refers to machines owned by private companies, and utilisation risk sits partly with those companies when demand is low.
 
-A later parliamentary reply filled one of those blanks, and left another open. [Lok Sabha Unstarred Question 2807](https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2807_hKyI1X.pdf), answered on 5 August 2026, said 15 compute service providers had been empaneled over four rounds, that **237 projects** had been approved for subsidised compute, and that **93.18 lakh GPU hours** (9.318 million) had been **sanctioned**. The same reply said a purchase order had been issued for a high-performance AI compute system of about 1.1 EFLOPS at the NIC data centre in Shastri Park, Delhi.
+A later parliamentary reply filled 1 of those blanks, and left another open. [Lok Sabha Unstarred Question 2807](https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2807_hKyI1X.pdf), answered on 5 August 2026, said 15 compute service providers had been empaneled over 4 rounds, that **237 projects** had been approved for subsidised compute, and that **93.18 lakh GPU hours** (9.318 million) had been **sanctioned**. The same reply said a purchase order had been issued for a high-performance AI compute system of about 1.1 EFLOPS at the NIC data centre in Shastri Park, Delhi.
 
 Sanctioned hours are not hours consumed. The August 2026 annex still does not print GPU-hours used, or hours per rupee released. Treat 93.18 lakh as an approval total until MeitY publishes a consumption series next to it.
 
@@ -278,15 +280,15 @@ Parliament also got user counts.
 
 <p class="text-center text-sm text-muted-foreground mt-2 mb-6">Source <a href="https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf">Rajya Sabha Unstarred Q.1668</a>. Rows may overlap. Listed slots sum to 305.</p>
 
-305 slots across these categories. 33,099 committed GPUs. More than one hundred GPUs for every named user slot. The capacity is pooled and shared, so the ratio does not mean each user holds a hundred GPUs. The utilisation figure, 7,418 GPUs in use, is the closer measure of demand.
+305 slots across these categories. 33,099 committed GPUs. More than 100 GPUs for every named user slot. The capacity is pooled and shared, so the ratio does not mean each user holds 100 GPUs. The utilisation figure, 7,418 GPUs in use, is the closer measure of demand.
 
-The single largest category is academic researchers, 114 of them. IndiaAI Fellows, the programme's own flagship cohort, number eight. [Takshashila warned in April 2025](https://www.medianama.com/2025/04/223-indiaai-mission-compute-capacity-underused-takshashila-report/) that strict eligibility rules and slow processes would leave Mission compute underused, and ranked India last among the US, China, and the EU for AI governance transparency.
+The single largest category is academic researchers, 114 of them. IndiaAI Fellows, the programme's own flagship cohort, number 8. [Takshashila warned in April 2025](https://www.medianama.com/2025/04/223-indiaai-mission-compute-capacity-underused-takshashila-report/) that strict eligibility rules and slow processes would leave Mission compute underused, and ranked India last among the US, China, and the EU for AI governance transparency.
 
 Providers can report idle capacity while approved users wait on paperwork. A programme that measures onboarded GPUs will look full. A programme that measured wait time from application to first hour would look different. IndiaAI has not published that wait-time series.
 
 ## The Sarvam deal
 
-The largest single deal in the Mission's first two years is Sarvam. The company had already shipped two open-source models before the government selected it. Sarvam-1 at 2 billion parameters and Sarvam-M at 24 billion. The selection, announced on 26 April 2025, asks Sarvam to build a sovereign open-source model at 120 billion parameters, with use cases named "2047: Citizen Connect" and "AI4Pragati" ([PIB, 30 May 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132817)). The company also works with UIDAI on generative AI for Aadhaar services ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). Twelve teams had been shortlisted for foundation models by the [February 2026 Rajya Sabha reply](https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf).
+The largest single deal in the Mission's first 2 years is Sarvam. The company had already shipped 2 open-source models before the government selected it. Sarvam-1 at 2 billion parameters and Sarvam-M at 24 billion. The selection, announced on 26 April 2025, asks Sarvam to build a sovereign open-source model at 120 billion parameters, with use cases named "2047: Citizen Connect" and "AI4Pragati" ([PIB, 30 May 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132817)). The company also works with UIDAI on generative AI for Aadhaar services ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). 12 teams had been shortlisted for foundation models by the [February 2026 Rajya Sabha reply](https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf).
 
 Sarvam received the largest compute subsidy in the programme. [MediaNama, citing Economic Times](https://www.medianama.com/2026/06/223-govt-minority-stake-sarvam-indiaai-mission/), reported the terms.
 
@@ -305,11 +307,11 @@ Press-reported via [Economic Times, covered by MediaNama](https://www.medianama.
 
 The subsidy is 40% of the bill, matching the subsidy level MeitY announced in [January 2025](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/). The support is compulsorily convertible debentures, not a grant. If the CCDs convert, the government ends up with a 1-2% ownership stake in Sarvam.
 
-The structure can be read two ways. As upside protection, the public keeps a share of the value it subsidised. As dilution, the startup gives up equity for compute it might have bought outright. Some IndiaAI participants have [said they do not want to give up equity for compute support](https://economictimes.indiatimes.com/tech/artificial-intelligence/indiaai-startups-resist-centres-plan-to-seek-equity-for-support/articleshow/126356889.cms). The Sarvam terms, reported in June 2026, offer a concrete case of that trade-off. Neither reading is proven by the press table alone. The conversion price, licence terms, and any converted equity need a primary document.
+The structure can be read 2 ways. As upside protection, the public keeps a share of the value it subsidised. As dilution, the startup gives up equity for compute it might have bought outright. Some IndiaAI participants have [said they do not want to give up equity for compute support](https://economictimes.indiatimes.com/tech/artificial-intelligence/indiaai-startups-resist-centres-plan-to-seek-equity-for-support/articleshow/126356889.cms). The Sarvam terms, reported in June 2026, offer a concrete case of that trade-off. Neither reading is proven by the press table alone. The conversion price, licence terms, and any converted equity need a primary document.
 
 Sarvam closed a $234 million round in June 2026, with HCLTech leading at $150 million and Khosla Ventures and Peak XV participating, at a valuation of about $1.5 billion ([MediaNama, June 2026](https://www.medianama.com/2026/06/223-govt-minority-stake-sarvam-indiaai-mission/)). The round closed days before [US export controls limited access to Anthropic's frontier models](https://www.medianama.com/2026/06/223-anthropic-fable-5-mythos-5-suspension-us-export-controls/). Timing does not prove cause. It does show why sovereign model capacity became a live commercial topic in the same quarter.
 
-In January 2026, Tamil Nadu signed a [₹10,000 crore MoU with Sarvam](https://www.medianama.com/2026/01/223-tamil-nadu-sarvam-ai-sovereign-ai-park/) for a sovereign AI park, roughly the size of the entire central Mission. As of mid-2026, public AI infrastructure in India runs on at least three money flows. The central Mission. The state MoU. Private funding rounds. Counting only the central cash understates the country's AI spend. Counting MoUs as cash overstates it. The discipline is to keep each ledger separate.
+In January 2026, Tamil Nadu signed a [₹10,000 crore MoU with Sarvam](https://www.medianama.com/2026/01/223-tamil-nadu-sarvam-ai-sovereign-ai-park/) for a sovereign AI park, roughly the size of the entire central Mission. As of mid-2026, public AI infrastructure in India runs on at least 3 money flows. The central Mission. The state MoU. Private funding rounds. Counting only the central cash understates the country's AI spend. Counting MoUs as cash overstates it. The discipline is to keep each ledger separate.
 
 A related piece on this site, [Sovereign AI Debt](/aidebt), treats the Sarvam CCD as the smaller cousin of sovereign funds that finance AI compute with equity, convertibles, and bank debt. The accountability question is the same at both scales. What happens to the public interest if the asset underperforms.
 
@@ -321,21 +323,21 @@ The Mission has shipped real things. The list belongs next to the money and util
 
 Announcement volume is high. Release quality is harder to score from PIB alone. A fair public scorecard would list model name, parameter count, open weights or not, evaluation set, and licence. That table does not yet exist in the parliamentary annex.
 
-**Applications.** Thirty applications were approved for India-specific AI use cases by July 2025, in healthcare, agriculture, climate change, governance, and assistive learning ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). The August 2026 Lok Sabha reply cites 62 AI prototypes developed and 20 AI solutions deployed across public-sector institutions. Approval, prototype, and deployment are three different stages. The annex does not list live users per application.
+**Applications.** 30 applications were approved for India-specific AI use cases by July 2025, in healthcare, agriculture, climate change, governance, and assistive learning ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). The August 2026 Lok Sabha reply cites 62 AI prototypes developed and 20 AI solutions deployed across public-sector institutions. Approval, prototype, and deployment are 3 different stages. The annex does not list live users per application.
 
 **AIKosh.** MeitY said 367 datasets were on the platform in May 2025 ([PIB, 30 May 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2132817)). By July 2025, the platform reported over 3,000 datasets and 243 AI models across 20 sectors, with 265,000 visits, 6,000 registered users, and 13,000 downloads ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). Count alone is not quality. [MediaNama has noted](https://www.medianama.com/2024/12/223-indiaai-mission-expenditure-budget/) that MeitY has not published a scrub protocol matching the privacy risk of residual identifiers in "AI-ready" public datasets. A dataset library can grow fast if ingestion is light. Trust grows when scrub rules are public and audited.
 
-**FutureSkills.** More than 200 students had received fellowships by July 2025, according to [PIB](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092). Twenty-six institutes had onboarded PhD students. Twenty-seven Data and AI Labs were set up with NIELIT, and states and Union Territories nominated 174 ITIs and polytechnics. The [Rajya Sabha reply of 13 February 2026](https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf) says more than 8,000 undergraduates, 5,000 postgraduates, and 500 PhD students "are supported" for talent development, and that 27 labs have been established with 543 more identified. Those larger figures are the government's claim of students supported under the Mission, not a separate verified enrolment census published with names and institutes.
+**FutureSkills.** More than 200 students had received fellowships by July 2025, according to [PIB](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092). 26 institutes had onboarded PhD students. 27 Data and AI Labs were set up with NIELIT, and states and Union Territories nominated 174 ITIs and polytechnics. The [Rajya Sabha reply of 13 February 2026](https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf) says more than 8,000 undergraduates, 5,000 postgraduates, and 500 PhD students "are supported" for talent development, and that 27 labs have been established with 543 more identified. Those larger figures are the government's claim of students supported under the Mission, not a separate verified enrolment census published with names and institutes.
 
 A later account, in [ThePrint on 7 August 2026](https://theprint.in/tech/ai-mission-misses-fellowship-targets-by-miles-spends-just-32-of-funds-parliament-panel-report-reveals/3008626/), citing the Thirty-First Report of the Standing Committee on Communications and Information Technology (presented to Lok Sabha and laid in Rajya Sabha on 6 August 2026), gives selection counts rather than "supported" counts. According to that reporting of MeitY's action-taken replies: in 2024 the ministry selected 150 undergraduate fellows against a target of 5,000, 140 postgraduate fellows against 2,000, and 3 PhD fellows against 100. In 2025 the UG target rose to 8,000 with 159 selected, the PG target rose to 5,000 with 101 selected, and PhD selections were 199 against a target of 167. This essay did not obtain the committee PDF itself. Treat the fellowship table as press-reported from a parliamentary report until the report is checked line by line. "Supported" and "selected" are different words. They should not be added together.
 
-ThePrint, citing the same report, also wrote that MeitY had spent 32 percent of 2025-26 revised-estimate funds as on 31 December 2025. That is a spend ratio against RE, with a December cut-off. It sits beside, and is not the same as, the ₹379.15 crore **received** by IndiaAI as on 9 February 2026 in Q.1668. Received and spent can differ. The two dates differ. Enrolment is not a labour-market outcome. The Mission can count seats. Employers will count skills.
+ThePrint, citing the same report, also wrote that MeitY had spent 32% of 2025-26 revised-estimate funds as on 31 December 2025. That is a spend ratio against RE, with a December cut-off. It sits beside, and is not the same as, the ₹379.15 crore **received** by IndiaAI as on 9 February 2026 in Q.1668. Received and spent can differ. The 2 dates differ. Enrolment is not a labour-market outcome. The Mission can count seats. Employers will count skills.
 
-**Startup Financing.** The IndiaAI Startups Global programme launched in March 2025, sending ten Indian startups to Europe with Station F and HEC Paris ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). Details of who actually received the money appear thinner than the GPU price annex. Ten startups seem unlikely to absorb a ₹1,942 crore line. Either the line is mostly unspent, or the disbursement list is unpublished. Both are possible. Only a spend table settles it.
+**Startup Financing.** The IndiaAI Startups Global programme launched in March 2025, sending 10 Indian startups to Europe with Station F and HEC Paris ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). Details of who actually received the money appear thinner than the GPU price annex. 10 startups seem unlikely to absorb a ₹1,942 crore line. Either the line is mostly unspent, or the disbursement list is unpublished. Both are possible. Only a spend table settles it.
 
-**Safe & Trusted AI.** Eight projects were selected in the first round, covering machine unlearning, bias mitigation, and explainability. More than 400 applications came in for the second round. An expression of interest for partner institutions in the IndiaAI [Safety](/glossary/ai-safety) Institute was published on 9 May 2025 ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). The August 2026 Lok Sabha reply puts the selected-project count at 13. The pillar's outlay is still ₹20.46 crore in the February annex. That is the smallest line in the Mission. Whether that ratio is the right policy choice is a separate argument. The budget table is the fact.
+**Safe & Trusted AI.** 8 projects were selected in the first round, covering machine unlearning, bias mitigation, and explainability. More than 400 applications came in for the second round. An expression of interest for partner institutions in the IndiaAI [Safety](/glossary/ai-safety) Institute was published on 9 May 2025 ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). The August 2026 Lok Sabha reply puts the selected-project count at 13. The pillar's outlay is still ₹20.46 crore in the February annex. That is the smallest line in the Mission. Whether that ratio is the right policy choice is a separate argument. The budget table is the fact.
 
-**AIRAWAT** at C-DAC, the prior flagship AI platform, [suffered three months of downtime](https://www.medianama.com/2024/11/223-all-is-not-well-with-it-ministry-ai-platform-airawat/) in late 2024, disrupting startups that depended on it. **Bhashini**, launched in July 2022, has crossed one million downloads and supports 20 Indian languages with more than 350 [translation](/glossary/machine-translation) models ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). Neither replaces the IndiaAI money. Adding their GPU numbers to IndiaAI's would count the national total twice. Keeping them adjacent is useful. Prior programmes show both delivery and operational risk.
+**AIRAWAT** at C-DAC, the prior flagship AI platform, [suffered 3 months of downtime](https://www.medianama.com/2024/11/223-all-is-not-well-with-it-ministry-ai-platform-airawat/) in late 2024, disrupting startups that depended on it. **Bhashini**, launched in July 2022, has crossed 1 million downloads and supports 20 Indian languages with more than 350 [translation](/glossary/machine-translation) models ([PIB, 12 Oct 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2178092)). Neither replaces the IndiaAI money. Adding their GPU numbers to IndiaAI's would count the national total twice. Keeping them adjacent is useful. Prior programmes show both delivery and operational risk.
 
 ## A balanced reading of the design
 
@@ -347,7 +349,7 @@ Private money dwarfs the Mission. Amazon and Microsoft have committed [over $50 
 
 India's most successful digital programmes reported completed transactions. UPI payments and Aadhaar authentications. That argument is developed in the [API States](/apis) and [bureaucracy](/bureaucracy) essays on this site. IndiaAI reports onboarded GPUs, Cabinet outlays, and, as of August 2026, sanctioned GPU-hours. It has not yet reported GPU-hours **used** per rupee in the annexes checked here. Transaction metrics force a programme to show use. Capacity and sanction metrics show readiness and approval.
 
-A timing defence exists too. Twenty-three months into sixty is early. Foundation models take time. Empanelment takes tenders. Budget releases take Finance Ministry cycles. A Mission that spent the full outlay in year one would look reckless. A Mission that cannot explain why releases lag even the Revised Estimates looks opaque. Both can sit in the same paragraph.
+A timing defence exists too. 23 months into 60 is early. Foundation models take time. Empanelment takes tenders. Budget releases take Finance Ministry cycles. A Mission that spent the full outlay in year 1 would look reckless. A Mission that cannot explain why releases lag even the Revised Estimates looks opaque. Both can sit in the same paragraph.
 
 Parliament published how the ₹10,372 crore was split across pillars. It has not published how the ₹400.94 crore was spent. The table is the plan. It is not a record of payments.
 
@@ -371,11 +373,11 @@ The blog and the licence file disagree. On 11 August 2026 I read the licence car
 
 **Use.** Can you sell a product on top of it, and does that right die at a user count, a geography, or a prohibited-use list.
 
-All seven families let you download the weights. None publish the training corpus. The code cell is mixed. Use rights usually hold until a user cap, a country bar, or a prohibited-use list. If "open source" still means source, the source is missing. What shipped is a checkpoint you can host and a training set you cannot inspect.
+All 7 families let you download the weights. None publish the training corpus. The code cell is mixed. Use rights usually hold until a user cap, a country bar, or a prohibited-use list. If "open source" still means source, the source is missing. What shipped is a checkpoint you can host and a training set you cannot inspect.
 
-<img src="/images/essays/licenses-score.svg?v=3" alt="Licence scorecard for seven open-weight families" class="w-full my-8" />
+<img src="/images/essays/licenses-score.svg?v=4" alt="Licence scorecard for 7 open-weight families" class="w-full my-8" />
 
-The [Open Source Initiative](https://opensource.org/ai/open-source-ai-definition) published OSAID 1.0 on 28 October 2024. It asks for the four software freedoms on the system: use, study, modify, share. It wants enough "data information" to rebuild, not necessarily every raw token. Meta [objected that week](https://www.axios.com/2024/10/29/meta-osi-definition-open-source-ai-llama). The Software Freedom Conservancy said OSAID was already too soft, because it does not demand the actual dump. Meta wants the phrase without the data, so Llama stays the default download. OSI wants a definition labs will accept. People who wrote the original open-source definition want the books, which would empty most of the hub's "open" filter.
+The [Open Source Initiative](https://opensource.org/ai/open-source-ai-definition) published OSAID 1.0 on 28 October 2024. It asks for the 4 software freedoms on the system: use, study, modify, share. It wants enough "data information" to rebuild, not necessarily every raw token. Meta [objected that week](https://www.axios.com/2024/10/29/meta-osi-definition-open-source-ai-llama). The Software Freedom Conservancy said OSAID was already too soft, because it does not demand the actual dump. Meta wants the phrase without the data, so Llama stays the default download. OSI wants a definition labs will accept. People who wrote the original open-source definition want the books, which would empty most of the hub's "open" filter.
 
 Almost nobody runs the model that publishes the data. Allen Institute's [OLMo](https://huggingface.co/allenai) line puts weights, training code, and a documented corpus in public. The models people host skip the data cell. A 70B checkpoint you can put behind an API sells. Teams took that and kept calling it open.
 
@@ -383,7 +385,7 @@ Almost nobody runs the model that publishes the data. Allen Institute's [OLMo](h
 
 The 700 million clause sat in Llama 2 and 3. [Counsel notes](https://wcr.legal/llama-3-license-700m-mau-limit/) have walked through the text: if products made available by you or your affiliates were used by more than 700 million monthly active users in the preceding calendar month, you request a licence, which Meta may grant in its sole discretion, before any such use. Google, Microsoft, Amazon, and a handful of consumer apps sit above that line. A startup does not.
 
-The clause is a legal hook on the three companies that could make Llama the default inside a competing cloud. Meta does not need to charge the startup. A veto you never use still shapes who builds their own model and who comes to Menlo Park. The startup spreads the file for free.
+The clause is a legal hook on the 3 companies that could make Llama the default inside a competing cloud. Meta does not need to charge the startup. A veto you never use still shapes who builds their own model and who comes to Menlo Park. The startup spreads the file for free.
 
 The same file bans using Llama outputs to train a competing model and attaches an acceptable-use policy. Llama 4 added a limit the Llama 3 text did not have. The [acceptable use policy](https://github.com/meta-llama/llama-models/blob/main/models/llama4/USE_POLICY.md) says the rights in the community licence are not granted, for the multimodal models, to a person domiciled in the EU or a company with its principal place of business there. Text-only cards are a different sentence. EU end users can still hit a service that wraps Llama 4 if the service sits outside the Union. The person who wants to fine-tune Scout in Berlin cannot. Meta's wording moved from "open source" on Llama 2 and 3 to "open-weight" on Llama 4. The 5 April blog used both. The licence file used neither.
 
@@ -407,7 +409,7 @@ DeepSeek V3 sat under the DeepSeek Model License: commercial use allowed, not MI
 
 MIT still hides the training data. It will not stop a government from blocking the download or make a trillion-parameter mixture cheap to run. It does make the licence memo short enough to vendor. The file got cleaner while the model got close enough to the frontier that [CAISI](https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro) spent April 2026 measuring it.
 
-CAISI put V4 Pro about eight months behind the US frontier on an aggregate, and much further on cyber: 32 percent against GPT-5.5's 71 percent on their unpublished suite. The [UK AI Security Institute](https://www.aisi.gov.uk/) put GLM-5.2 and DeepSeek V4-Pro a few months behind closed frontier models on cyber, not a year. A MIT file on a model eight months off the frontier is something a cloud might host. A 7B MIT file is not. Western labs that spent 2024 calling open weights a safety problem now face a MIT file eight months back and a Llama file with a 700 million veto.
+CAISI put V4 Pro about 8 months behind the US frontier on an aggregate, and much further on cyber: 32% against GPT-5.5's 71% on their unpublished suite. The [UK AI Security Institute](https://www.aisi.gov.uk/) put GLM-5.2 and DeepSeek V4-Pro a few months behind closed frontier models on cyber, not a year. A MIT file on a model 8 months off the frontier is something a cloud might host. A 7B MIT file is not. Western labs that spent 2024 calling open weights a safety problem now face a MIT file 8 months back and a Llama file with a 700 million veto.
 
 ## Mistral, gpt-oss, Phi
 
@@ -427,29 +429,29 @@ Cloud marketplaces add a second contract. AWS, Azure, and Together can cut you o
 
 ## The Act already ignored the blog
 
-The EU AI Act does not treat "open" as a free pass. [Article 2(12)](https://linuxfoundation.eu/newsroom/ai-act-explainer) exempts some free and open-source systems unless they are high-risk, prohibited, or under Article 50 transparency rules. GPAI models with systemic risk stay in scope even if the weights are downloadable. The [Commission's GPAI guidelines](https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers) say an Apache card does not cancel documentation or copyright duties. Provider obligations applied from 2 August 2025. [Enforcement powers](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai), including fines of up to the higher of 3 percent of worldwide turnover or €15 million, switched on 2 August 2026.
+The EU AI Act does not treat "open" as a free pass. [Article 2(12)](https://linuxfoundation.eu/newsroom/ai-act-explainer) exempts some free and open-source systems unless they are high-risk, prohibited, or under Article 50 transparency rules. GPAI models with systemic risk stay in scope even if the weights are downloadable. The [Commission's GPAI guidelines](https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers) say an Apache card does not cancel documentation or copyright duties. Provider obligations applied from 2 August 2025. [Enforcement powers](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai), including fines of up to the higher of 3% of worldwide turnover or €15 million, switched on 2 August 2026.
 
 A Llama Community file is even less likely to count as a "free and open licence" under that text. The 700 million veto is a field-of-use limit. Field-of-use limits fail the exemption. Meta's EU multimodal withdrawal fits that reading. The company treated the Act as a reason to stop granting rights, not as a reason to publish the training data.
 
 Llama, Gemma, gpt-oss, and several Mistral cards also attach a use policy: no bioweapons, no unsolicited mass persuasion, no child sexual abuse material, sometimes no military. Apache and MIT do not contain those sentences. The policy file does. Breaking it can get you banned from the hub or a marketplace. A policy file is not a law. The AI Office can still fine a GPAI provider. A US company above 700 million MAU still needs Meta's letter.
 
-On 11 August 2026, none of the seven families had published the training corpus. The cards still said Apache, MIT, Community, or Research.
+On 11 August 2026, none of the 7 families had published the training corpus. The cards still said Apache, MIT, Community, or Research.
 
 ---
 
 ## The National AI Compute Scorecard
 URL: https://veda.ng/compute
-Summary: Six countries took different approaches to national AI compute. I compared what each programme counts.
+Summary: 6 countries took different approaches to national AI compute. I compared what each programme counts.
 
-Six countries or blocs have national AI compute programmes large enough to compare. The US donated access. The UK bought a machine. The EU built a federation. India rented. France counts private pledges. Japan runs through one company. I compared what each one publishes.
+6 countries or blocs have national AI compute programmes large enough to compare. The US donated access. The UK bought a machine. The EU built a federation. India rented. France counts private pledges. Japan runs through 1 company. I compared what each one publishes.
 
 ## The US
 
 The United States did not buy a single GPU for its national programme. The National AI Research Resource pilot, launched in January 2024 under the National Science Foundation, coordinates donated compute from private companies and federal agencies and routes researchers and students to the machines.
 
-The NSF NAIRR page, [last updated in March 2026](https://www.nsf.gov/focus-areas/artificial-intelligence/nairr), estimates ~$100 million in private-sector in-kind contributions over the pilot's first two years. The largest contributions: NVIDIA ($30 million in compute and software), Microsoft ($20 million in Azure credits), OpenAI ($1 million in model access), and Cerebras (up to four EXAFLOPs of compute). [28 nongovernmental partners](https://www.nsf.gov/focus-areas/artificial-intelligence/nairr) have contributed.
+The NSF NAIRR page, [last updated in March 2026](https://www.nsf.gov/focus-areas/artificial-intelligence/nairr), estimates ~$100 million in private-sector in-kind contributions over the pilot's first 2 years. The largest contributions: NVIDIA ($30 million in compute and software), Microsoft ($20 million in Azure credits), OpenAI ($1 million in model access), and Cerebras (up to 4 EXAFLOPs of compute). [28 nongovernmental partners](https://www.nsf.gov/focus-areas/artificial-intelligence/nairr) have contributed.
 
-Fourteen federal agencies participate, from NASA and DARPA to the FDA and the Department of War. The Department of Energy and the National Institutes of Health co-lead a separate secure allocation track called NAIRR Secure for privacy-sensitive AI research.
+14 federal agencies participate, from NASA and DARPA to the FDA and the Department of War. The Department of Energy and the National Institutes of Health co-lead a separate secure allocation track called NAIRR Secure for privacy-sensitive AI research.
 
 The NAIRR pilot publishes a running tally on its portal, [nairrpilot.org](https://nairrpilot.org). As of 14 August 2026 the portal listed **840+ research projects, 86 NAIRR Classroom awards, 23 infrastructure and data demonstration projects, and 3 community workshops**. The NSF page, last updated March 2026, cited more than 600 projects and 6,000 students across all 50 states, Washington, DC, and Puerto Rico.
 
@@ -457,13 +459,13 @@ Washington did not buy GPUs and did not build halls. It routes people to donated
 
 ## The UK
 
-The UK's AI Research Resource is a public procurement programme. In the [March 2023 Spring Budget](https://www.ukri.org/news/300-million-to-launch-first-phase-of-new-ai-research-resource/), the government set aside £100 million for AIRR. On 1 November 2023, at the AI Safety Summit, that figure was [tripled to £300 million](https://www.gov.uk/government/news/technology-secretary-announces-investment-boost-making-british-ai-supercomputing-30-times-more-powerful) for phase one, to build and connect two machines.
+The UK's AI Research Resource is a public procurement programme. In the [March 2023 Spring Budget](https://www.ukri.org/news/300-million-to-launch-first-phase-of-new-ai-research-resource/), the government set aside £100 million for AIRR. On 1 November 2023, at the AI Safety Summit, that figure was [tripled to £300 million](https://www.gov.uk/government/news/technology-secretary-announces-investment-boost-making-british-ai-supercomputing-30-times-more-powerful) for phase 1, to build and connect 2 machines.
 
-Those two machines exist. **Isambard-AI** at the University of Bristol uses [5,448 NVIDIA GH200 Grace Hopper superchips](https://www.bristol.ac.uk/news/2025/july/isambard-launch.html) and about [£225 million in public money](https://www.bristol.ac.uk/news/2025/july/isambard-launch.html). **Dawn** at the University of Cambridge is the second AIRR site. [GOV.UK](https://www.gov.uk/government/news/cambridge-supercomputer-set-to-get-6-times-more-powerful-as-government-backs-british-ai-innovation) describes AIRR, launched in July 2025, as giving researchers and start-ups free access to both systems.
+Those 2 machines exist. **Isambard-AI** at the University of Bristol uses [5,448 NVIDIA GH200 Grace Hopper superchips](https://www.bristol.ac.uk/news/2025/july/isambard-launch.html) and about [£225 million in public money](https://www.bristol.ac.uk/news/2025/july/isambard-launch.html). **Dawn** at the University of Cambridge is the second AIRR site. [GOV.UK](https://www.gov.uk/government/news/cambridge-supercomputer-set-to-get-6-times-more-powerful-as-government-backs-british-ai-innovation) describes AIRR, launched in July 2025, as giving researchers and start-ups free access to both systems.
 
-A separate story often gets mixed into AIRR. The previous government planned a large national supercomputer in Edinburgh. The incoming Labour government [cancelled or paused that plan](https://www.theregister.com/special-features/2025/06/12/uk-reheats-edinburgh-supercomputer-plan-sans-exascale-chops/672644), saying the money had never been formally allocated. In 2025 the government [recommitted up to £750 million](https://www.gov.uk/government/news/scotland-to-host-uks-national-supercomputer-as-chancellor-confirms-750-million-investment) for a new national supercomputer at Edinburgh, now described as working alongside AIRR. AIRR's phase-one pair was Bristol and Cambridge. Edinburgh is a different ledger line.
+A separate story often gets mixed into AIRR. The previous government planned a large national supercomputer in Edinburgh. The incoming Labour government [cancelled or paused that plan](https://www.theregister.com/special-features/2025/06/12/uk-reheats-edinburgh-supercomputer-plan-sans-exascale-chops/672644), saying the money had never been formally allocated. In 2025 the government [recommitted up to £750 million](https://www.gov.uk/government/news/scotland-to-host-uks-national-supercomputer-as-chancellor-confirms-750-million-investment) for a new national supercomputer at Edinburgh, now described as working alongside AIRR. AIRR's phase-1 pair was Bristol and Cambridge. Edinburgh is a different ledger line.
 
-The UK also participates in the EU's AI Factory network as an antenna partner, listed as UKAIFA in the [European Commission's AI Factories catalogue](https://digital-strategy.ec.europa.eu/en/policies/ai-factories). Its natural metrics would be machine utilisation, queue length, and hours by user class. It has published announcements, chip counts, and site names. It has not published utilisation next to the £300 million phase-one figure.
+The UK also participates in the EU's AI Factory network as an antenna partner, listed as UKAIFA in the [European Commission's AI Factories catalogue](https://digital-strategy.ec.europa.eu/en/policies/ai-factories). Its natural metrics would be machine utilisation, queue length, and hours by user class. It has published announcements, chip counts, and site names. It has not published utilisation next to the £300 million phase-1 figure.
 
 ## The EU
 
@@ -475,13 +477,13 @@ The EU's AI Factories publish more selection detail than any other programme. Th
 | Second | March 2025 | 6 more |
 | Third | October 2025 | 6 more, plus 13 antennas |
 
-The network now stands at 19 AI Factories and 13 antennas across the EU and partner countries. The Commission says at least nine new AI-optimised supercomputers will be procured, which it says will more than triple the EuroHPC AI computing capacity. Total investment through the EuroHPC Joint Undertaking for the 2021-2027 period is €10 billion, counting EU, member state, and associated country money.
+The network now stands at 19 AI Factories and 13 antennas across the EU and partner countries. The Commission says at least 9 new AI-optimised supercomputers will be procured, which it says will more than triple the EuroHPC AI computing capacity. Total investment through the EuroHPC Joint Undertaking for the 2021-2027 period is €10 billion, counting EU, member state, and associated country money.
 
-The EU has also opened a call for up to seven AI Gigafactories, facilities of more than 100,000 advanced AI processors each, supported by up to €10 billion in public funding and an estimated €20 billion in private investment.
+The EU has also opened a call for up to 7 AI Gigafactories, facilities of more than 100,000 advanced AI processors each, supported by up to €10 billion in public funding and an estimated €20 billion in private investment.
 
 The EU publishes factory selections, site counts, and partner lists. The [EuroHPC AI Factories page](https://eurohpc-ju.europa.eu/ai-factories_en) says the factories offer free, customised support to SMEs and startups. It does not publish running hours delivered to those startups as a programme total.
 
-A related page, [Large Scale Access to AI factories](https://www.eurohpc-ju.europa.eu/large-scale-access-ai-factories_en), checked on 14 August 2026, carried a "TEMPORARILY CLOSED" banner and also listed Status as Open. Treat those two labels as unresolved on the page itself. What is clear is the update printed there: "Due to exceptionally high demand, Leonardo, MareNostrum and LUMI-G are currently unavailable for new allocations." That is a demand signal. It is not hours consumed.
+A related page, [Large Scale Access to AI factories](https://www.eurohpc-ju.europa.eu/large-scale-access-ai-factories_en), checked on 14 August 2026, carried a "TEMPORARILY CLOSED" banner and also listed Status as Open. Treat those 2 labels as unresolved on the page itself. What is clear is the update printed there: "Due to exceptionally high demand, Leonardo, MareNostrum and LUMI-G are currently unavailable for new allocations." That is a demand signal. It is not hours consumed.
 
 ## India
 
@@ -499,13 +501,13 @@ France counts those pledges as national capacity. Hours would show whether any o
 
 ## Japan
 
-Japan's programme is not a single named mission. In [April 2024](https://www.meti.go.jp/english/press/2024/0419_001.html), METI said it would provide subsidies of up to **¥72.5 billion** to five company plans for AI computational resources under the Economic Security Promotion Act. Sakura Internet's plan was the largest, at about ¥50.1 billion. That is a maximum subsidy for named cloud projects, not a single national GPU fleet and not hours consumed. Broader METI chip-and-AI budget lines for later years mix semiconductors with models. They are not the same cell as this compute subsidy.
+Japan's programme is not a single named mission. In [April 2024](https://www.meti.go.jp/english/press/2024/0419_001.html), METI said it would provide subsidies of up to **¥72.5 billion** to 5 company plans for AI computational resources under the Economic Security Promotion Act. Sakura Internet's plan was the largest, at about ¥50.1 billion. That is a maximum subsidy for named cloud projects, not a single national GPU fleet and not hours consumed. Broader METI chip-and-AI budget lines for later years mix semiconductors with models. They are not the same cell as this compute subsidy.
 
 SoftBank is a named Stargate partner. Press has described it as the main financial backer. That is not a filed majority stake. SoftBank's announced $19 billion equity commitment, [as reported by the Wall Street Journal](https://www.wsj.com/business/deals/openai-softbank-investment-debt-51b4a130), was expected to be funded largely through bank borrowing. Japan's national AI compute is, in practice, hard to separate from SoftBank's balance sheet. That is a description of the public record, not a claim that Tokyo and SoftBank are the same entity.
 
 ## What each programme counts
 
-<img src="/images/essays/compute-table.svg" alt="Comparison table: six national AI compute programmes, their models, their primary metrics, and whether they publish utilisation hours. None publishes hours." class="w-full my-8" />
+<img src="/images/essays/compute-table.svg?v=2" alt="Comparison of 6 national AI compute programmes: models, primary metrics, and whether they publish utilisation hours. None publishes hours." class="w-full my-8" />
 
 No programme publishes hours of GPU **use** per unit of public money. The US publishes projects supported. The EU publishes sites selected, and now a demand note on named machines. India publishes GPUs onboarded and, as of August 2026, hours sanctioned. France counts private pledges. Japan is hard to separate from SoftBank's public filings. The UK published machines and chip counts, not utilisation.
 
@@ -515,15 +517,15 @@ They count what their model makes easy to count. The US never bought GPUs, so it
 
 ## Sovereign AI Debt
 URL: https://veda.ng/aidebt
-Summary: Sovereign funds are financing AI compute with equity, convertibles, and bank debt. Stargate, MGX, G42, Saudi Arabia, and SoftBank each put three figures on the table: announced, funded, and spent. The gap between them shows who carries the risk.
+Summary: Sovereign funds are financing AI compute with equity, convertibles, and bank debt. Stargate, MGX, G42, Saudi Arabia, and SoftBank each put 3 figures on the table: announced, funded, and spent. The gap between them shows who carries the risk.
 
-The largest AI compute projects of the past two years draw sovereign money, convertibles, and bank debt. Coverage treats the announcements as investment. Three figures rarely match: announced, funded, and spent. Each instrument shows who carries the risk when the numbers do not add up.
+The largest AI compute projects of the past 2 years draw sovereign money, convertibles, and bank debt. Coverage treats the announcements as investment. 3 figures rarely match: announced, funded, and spent. Each instrument shows who carries the risk when the numbers do not add up.
 
 The names that matter here: Stargate, the US joint venture with a $500 billion ceiling. MGX, Abu Dhabi's AI vehicle. G42, the Emirati group that trades capital and compliance for chip licences. Saudi Arabia's Public Investment Fund, still shaping an AI envelope. SoftBank, a named Stargate partner whose 2026 OpenAI share purchases are a separate ledger. Sarvam's IndiaAI subsidy is the same question at a smaller scale.
 
 Where a number comes only from a newspaper, I say so.
 
-## Three numbers that get mixed
+## 3 numbers that get mixed
 
 **Announced** is the headline. It is often a multi-year ceiling or a memorandum. It can include debt that has not been raised and sites that have not broken ground.
 
@@ -531,13 +533,13 @@ Where a number comes only from a newspaper, I say so.
 
 **Spent** is cash or equity that bought something. An acquisition closed. A hall paid for. Chips invoiced. Until that happens, you still have a press release.
 
-Coverage mashes all three into "investment." Sponsors look decisive, governments look industrial, vendors look booked. You cannot see who actually took the risk.
+Coverage mashes all 3 into "investment." Sponsors look decisive, governments look industrial, vendors look booked. You cannot see who actually took the risk.
 
 ## Stargate. $500 billion announced, $38 billion pledged by SoftBank and OpenAI, slow to start
 
 Stargate was [announced at the White House on 21 January 2025](https://www.reuters.com/technology/artificial-intelligence/openai-softbank-oracle-invest-500-bln-ai-trump-says-2025-01-21/) as a joint venture of OpenAI, SoftBank, Oracle, and MGX, with plans to spend up to $500 billion on US AI infrastructure by 2029. The funding structure was [reported by The Information on 23 January 2025](https://www.theinformation.com/articles/openai-softbank-each-commit-19-billion-to-stargate-data-center-venture).
 
-Four numbers, kept apart from a fifth. Announced ceiling: $500B by 2029. Committed initial frame, in press: $100B. Named pledges around that frame, in press: about $38B from SoftBank and OpenAI by August 2025. **Spent toward the $500B JV ceiling:** Bloomberg, on 7 August 2025, [reported](https://www.bloomberg.com/news/articles/2025-08-07/softbank-concedes-stargate-project-with-openai-needs-more-time) that the project had not started and no funds had been raised to meet that budget. SoftBank said it needed more time. That is a timestamp. It is not a claim that every related campus sat idle through August 2026.
+4 numbers, kept apart from a 5th. Announced ceiling: $500B by 2029. Committed initial frame, in press: $100B. Named pledges around that frame, in press: about $38B from SoftBank and OpenAI by August 2025. **Spent toward the $500B JV ceiling:** Bloomberg, on 7 August 2025, [reported](https://www.bloomberg.com/news/articles/2025-08-07/softbank-concedes-stargate-project-with-openai-needs-more-time) that the project had not started and no funds had been raised to meet that budget. SoftBank said it needed more time. That is a timestamp. It is not a claim that every related campus sat idle through August 2026.
 
 Add SoftBank $19B, OpenAI $19B, Oracle $7B, and MGX $7B and you get $52 billion of named equity-like **pledges** around the initial $100 billion frame, with the rest described as limited partners and debt. SoftBank plus OpenAI alone are $38 billion of that named set. The public conversation still leads with $500 billion. That is the ceiling to 2029, not cash in hand in January 2025, and not the same as funded capital.
 
@@ -545,9 +547,9 @@ The debt structure is more useful than the headline. [The Wall Street Journal re
 
 On 7 August 2025, [Bloomberg reported](https://www.bloomberg.com/news/articles/2025-08-07/softbank-concedes-stargate-project-with-openai-needs-more-time) that the project had not started and no funds had been raised to meet the $500 billion budget. SoftBank conceded it needed more time.
 
-<img src="/images/essays/stargate-gap.svg" alt="Stargate 500 billion dollar ceiling versus named pledges versus Bloomberg August 2025 report that funds had not been raised to that ceiling" class="w-full my-8" />
+<img src="/images/essays/stargate-gap.svg?v=2" alt="Stargate 500 billion dollar ceiling versus named pledges versus Bloomberg August 2025 report that funds had not been raised to that ceiling" class="w-full my-8" />
 
-Then the announcements resumed. [OpenAI said on 23 September 2025](https://openai.com/index/five-new-stargate-sites/) that Stargate would add five new data centre sites, taking planned capacity to nearly 7 gigawatts and claiming over $400 billion in investment over three years. In October 2025, [Reuters reported](https://www.reuters.com/world/americas/openai-sur-energy-weigh-25-billion-argentina-data-center-project-2025-10-10/) a $25 billion, 500-megawatt project for Patagonia, Argentina, with Sur Energy.
+Then the announcements resumed. [OpenAI said on 23 September 2025](https://openai.com/index/five-new-stargate-sites/) that Stargate would add 5 new data centre sites, taking planned capacity to nearly 7 gigawatts and claiming over $400 billion in investment over 3 years. In October 2025, [Reuters reported](https://www.reuters.com/world/americas/openai-sur-energy-weigh-25-billion-argentina-data-center-project-2025-10-10/) a $25 billion, 500-megawatt project for Patagonia, Argentina, with Sur Energy.
 
 The September announcement was an infrastructure plan. The August 2025 Bloomberg report was about money raised to the ceiling. Plans can grow while a JV close stalls. Some related construction can be real, through project finance and tenant leases, while the White House number is still a brochure. The error is folding every OpenAI-adjacent dollar into the $500 billion cell.
 
@@ -565,7 +567,7 @@ MGX is the clearest example in this set of sovereign-backed capital buying asset
 
 G42 is the Emirati AI group chaired by Sheikh Tahnoon bin Zayed, as the company [said when Microsoft invested](https://www.g42.ai/resources/news/microsoft-invests-abu-dhabis-g42). Its history shows the exchange at the centre of sovereign AI. Capital and compute access against regulatory clearance.
 
-In July 2023, G42 agreed to pay about $100 million for the first of up to nine Cerebras supercomputers ([Reuters](https://www.reuters.com/technology/cerebras-systems-signs-100-mln-ai-supercomputer-deal-with-uaes-g42-2023-07-20/)). In April 2024, Microsoft [announced a $1.5 billion investment](https://www.ft.com/content/930a1c17-2e84-4ddb-8e72-4e4a1b833c40) in G42, with Microsoft's president joining the board. US lawmakers had asked for an intelligence assessment of G42's China ties before the deal could advance, and the company said it had divested its China holdings.
+In July 2023, G42 agreed to pay about $100 million for the first of up to 9 Cerebras supercomputers ([Reuters](https://www.reuters.com/technology/cerebras-systems-signs-100-mln-ai-supercomputer-deal-with-uaes-g42-2023-07-20/)). In April 2024, Microsoft [announced a $1.5 billion investment](https://www.ft.com/content/930a1c17-2e84-4ddb-8e72-4e4a1b833c40) in G42, with Microsoft's president joining the board. US lawmakers had asked for an intelligence assessment of G42's China ties before the deal could advance, and the company said it had divested its China holdings.
 
 The licences followed. In November 2025, the US Department of Commerce [authorised exports](https://www.businesstimes.com.sg/international/global/us-approves-sale-35000-ai-chips-uaes-g42-saudis-humain) of advanced semiconductors equivalent to about 35,000 NVIDIA GB300-class accelerators to G42 (a matched authorisation also covered Saudi Arabia's HUMAIN). In July 2026, the US [reclassified the UAE to Country Group A:5](https://www.skadden.com/insights/publications/2026/07/bis-liberalizes-export) and listed G42 and Core42 as approved recipients for certain advanced computing items without individual licences, subject to conditions and an expiry unless they become US-headquartered. A company under scrutiny for China ties in 2023 became a designated US-approved recipient by mid-2026.
 
@@ -587,9 +589,9 @@ Leave Saudi out and the Gulf looks finished. A $40-100 billion envelope with no 
 
 SoftBank sits in this story twice. The first role is the reported financial backer of the Stargate JV. The second is a disclosed shareholder in OpenAI Group PBC. Mixing them inflates the JV.
 
-On [27 February 2026](https://group.softbank/en/news/press/20260227), SoftBank said it had agreed to follow-on investments of **$30 billion** in OpenAI Group PBC via SoftBank Vision Fund 2, in three $10 billion tranches. Upon completion, it said, cumulative investment in OpenAI was **expected** to total $64.6 billion, about **13%** ownership. Those are SoftBank's words. The 13% figure is expected on completion, not a claim that 13% already sat on 27 February.
+On [27 February 2026](https://group.softbank/en/news/press/20260227), SoftBank said it had agreed to follow-on investments of **$30 billion** in OpenAI Group PBC via SoftBank Vision Fund 2, in 3 $10 billion tranches. Upon completion, it said, cumulative investment in OpenAI was **expected** to total $64.6 billion, about **13%** ownership. Those are SoftBank's words. The 13% figure is expected on completion, not a claim that 13% already sat on 27 February.
 
-The first $10 billion tranche [closed on 1 April 2026](https://group.softbank/en/news/press/20260401_0). SoftBank said it borrowed $10 billion that day under the same [bridge facility](https://group.softbank/en/news/press/20260327). The second $10 billion tranche [closed on 1 July 2026](https://group.softbank/en/news/press/20260701), again with a $10 billion draw under that facility. The facility itself is [$40 billion, unsecured, maturing 25 March 2027](https://group.softbank/en/news/press/20260327), with JPMorgan, Goldman Sachs, Mizuho, SMBC, and MUFG as named lenders, and is also available for general corporate purposes. A third $10 billion tranche is planned for 1 October 2026, subject to acceleration if OpenAI lists. As of the 1 July notice, **$20 billion** of the $30 billion follow-on had been executed. The remaining $10 billion had not. Two $10 billion draws do not prove that $20 billion of the $40 billion facility was used only for OpenAI. SoftBank's notices attach each draw to that day's tranche. They do not publish a running facility utilisation table.
+The first $10 billion tranche [closed on 1 April 2026](https://group.softbank/en/news/press/20260401_0). SoftBank said it borrowed $10 billion that day under the same [bridge facility](https://group.softbank/en/news/press/20260327). The second $10 billion tranche [closed on 1 July 2026](https://group.softbank/en/news/press/20260701), again with a $10 billion draw under that facility. The facility itself is [$40 billion, unsecured, maturing 25 March 2027](https://group.softbank/en/news/press/20260327), with JPMorgan, Goldman Sachs, Mizuho, SMBC, and MUFG as named lenders, and is also available for general corporate purposes. A third $10 billion tranche is planned for 1 October 2026, subject to acceleration if OpenAI lists. As of the 1 July notice, **$20 billion** of the $30 billion follow-on had been executed. The remaining $10 billion had not. 2 $10 billion draws do not prove that $20 billion of the $40 billion facility was used only for OpenAI. SoftBank's notices attach each draw to that day's tranche. They do not publish a running facility utilisation table.
 
 This is equity in a company, funded in part with bank debt. It is a funded item on the OpenAI cap table. It is not a disclosed close of the Stargate joint venture's $500 billion ceiling. SoftBank's notices do not say that this cash bought US data-centre halls.
 
@@ -609,15 +611,15 @@ G42's licence path places a different risk on the table. Political and complianc
 
 The [Sarvam pattern from the IndiaAI piece](/indiaai) is the smaller version of the same problem. A government supplies subsidised compute and receives convertibles that may become 1-2% of the company. MGX and G42 are the national version, where the state supplies capital and licences and receives either equity or infrastructure ownership. At both scales, ask what happens to the public interest if the assets underperform.
 
-There is no single correct instrument. Debt can be cheap and disciplined when covenants are real. Equity can align owners with long build times. Convertibles can protect a public subsidy. The failure mode is using announcement language for all three.
+There is no single correct instrument. Debt can be cheap and disciplined when covenants are real. Equity can align owners with long build times. Convertibles can protect a public subsidy. The failure mode is using announcement language for all 3.
 
 ## Power, land, and time
 
-Financing is only one constraint. Data centres need power connections, land, water or cooling, and permits. A funded project without a grid queue is not spent capacity. An announced gigawatt figure without interconnection dates is a brochure.
+Financing is only 1 constraint. Data centres need power connections, land, water or cooling, and permits. A funded project without a grid queue is not spent capacity. An announced gigawatt figure without interconnection dates is a brochure.
 
 Stargate's site announcements and the Argentina report show how fast the map grows in press time. Physical interconnection grows slowly. SoftBank's August 2025 concession that more time was needed tracks the build-out better than the September site list. A new map is not a funding close.
 
-A usable ledger would publish, for each major project, three dates next to three money fields. Announcement date. Funding close date. Power-connection or first-rack date. Announced capital. Funded capital. Spent capital. Few projects currently offer that six-cell table.
+A usable ledger would publish, for each major project, 3 dates next to 3 money fields. Announcement date. Funding close date. Power-connection or first-rack date. Announced capital. Funded capital. Spent capital. Few projects currently offer that 6-cell table.
 
 ## Why sovereign money entered this market
 
@@ -635,7 +637,7 @@ January 2025. White House announcement, $500 billion ceiling.
 January 2025. Press details of a smaller initial equity frame.  
 April and May 2025. Debt structure reporting and a Texas loan.  
 August 2025. SoftBank says more time is needed, funding short of the ceiling.  
-September 2025. New sites and a fresh investment claim over three years.  
+September 2025. New sites and a fresh investment claim over 3 years.  
 October 2025. An Argentina project enters the story.  
 February to July 2026. SoftBank executes $20 billion of OpenAI Group PBC equity, partly with bridge draws. That line belongs on the OpenAI cap table, not automatically in the Stargate JV cell.
 
@@ -667,7 +669,7 @@ Private credit into AI data centres can be rational when leases are signed with 
 
 Sovereign funds can move slowly. A $49 billion raise that deploys over years can still be real. Demanding full deployment the quarter after a raise confuses a raise with capex.
 
-None of that lets you merge announced, funded, and spent into one cell. SoftBank's [10% equity figure](https://www.wsj.com/business/deals/openai-softbank-investment-debt-51b4a130) and The Information's $19 billion pledges are still press plans for the JV, not filed closes. The Abilene $2.3 billion JPMorgan loan is a verified construction financing for an Oracle-leased campus, later tied in press to Stargate. SoftBank's $20 billion of executed OpenAI equity in 2026 is a verified share purchase, funded in part with a bridge loan. MGX Fund I's $49 billion close is from MGX's 1 July 2026 statement. How much of that fund is still undeployed is unpublished. The risk sits with whoever financed the last tranche.
+None of that lets you merge announced, funded, and spent into 1 cell. SoftBank's [10% equity figure](https://www.wsj.com/business/deals/openai-softbank-investment-debt-51b4a130) and The Information's $19 billion pledges are still press plans for the JV, not filed closes. The Abilene $2.3 billion JPMorgan loan is a verified construction financing for an Oracle-leased campus, later tied in press to Stargate. SoftBank's $20 billion of executed OpenAI equity in 2026 is a verified share purchase, funded in part with a bridge loan. MGX Fund I's $49 billion close is from MGX's 1 July 2026 statement. How much of that fund is still undeployed is unpublished. The risk sits with whoever financed the last tranche.
 
 ---
 
@@ -679,11 +681,11 @@ In November 2023 London and Washington launched "AI safety institutes" in the sa
 
 The diplomatic sequence was Bletchley, then [Seoul in May 2024](https://www.gov.uk/government/news/global-leaders-agree-to-launch-first-international-network-of-ai-safety-institutes-to-boost-understanding-of-ai), then Paris in February 2025. The [institute network](https://www.csis.org/analysis/ai-safety-institute-international-network-next-steps-and-recommendations) that actually convened put the US, UK, EU, Japan, Singapore, Korea, Canada, France, Kenya, and Australia in one club. Germany and Italy signed the Seoul statement and then sat out that first membership list. CSIS, writing in October 2024, put most annual budgets around $10 million, with the UK as the outlier at about £50 million a year and a £100 million envelope through 2030. In August 2026 the UK still has the people. For the rest of the Seoul list the public number is still a pledge, a rename, or a slice of a bigger AI pot.
 
-Bletchley produced a photograph and a noun that any capital could copy. A directorate with a hundred researchers costs real money. A statute that can stop a release is something else again. The UK built the lab. The Commission wrote the regulation. Most of the Seoul list got a named body a minister can point at.
+Bletchley produced a photograph and a noun that any capital could copy. A directorate with 100 researchers costs real money. A statute that can stop a release is something else again. The UK built the lab. The Commission wrote the regulation. Most of the Seoul list got a named body a minister can point at.
 
 Most of these bodies run evals and sit on ISO. That does not change a lab's week. A fine does. Only the [AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office) can issue one.
 
-<img src="/images/essays/safety-score.svg" alt="Staff, cash, and fining power for six AI safety bodies" class="w-full my-8" />
+<img src="/images/essays/safety-score.svg?v=2" alt="Staff, cash, and fining power for 6 AI safety bodies" class="w-full my-8" />
 
 ## Britain hired
 
@@ -693,9 +695,9 @@ What they publish is evaluations. Open-weight cyber capability versus closed fro
 
 They dropped Safety for Security because the brief is now cyber, biosecurity, and national capability, not Bletchley-era alignment. The 100 people on the homepage are the same shop. The noun changed because the government did. A reader can treat that as a real shift in mission, or as a label change on the same evaluators. The homepage still lists the staff. The statute still does not give them a fine.
 
-The UK's other output is a paper with thirty flags on it. The [International AI Safety Report 2026](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026), published 3 February, lists the UK institute as secretariat, with Mila. Yoshua Bengio chairs. The panel has nominees from more than thirty countries and organisations, including China, the EU, India, Japan, Kenya, Korea, Singapore, and the UN. The report's own findings are cautious: capabilities up in reasoning, code, maths; disagreement on timing; malicious use, malfunction, and systemic risk as the three buckets. Training compute still growing about 5x a year. Software tasks that take a human thirty minutes already done about 80 percent of the time, duration doubling every seven months.
+The UK's other output is a paper with 30 flags on it. The [International AI Safety Report 2026](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026), published 3 February, lists the UK institute as secretariat, with Mila. Yoshua Bengio chairs. The panel has nominees from more than 30 countries and organisations, including China, the EU, India, Japan, Kenya, Korea, Singapore, and the UN. The report's own findings are cautious: capabilities up in reasoning, code, maths; disagreement on timing; malicious use, malfunction, and systemic risk as the 3 buckets. Training compute still growing about 5x a year. Software tasks that take a human 30 minutes already done about 80% of the time, duration doubling every 7 months.
 
-That paper is what the Seoul network actually produced together. It is a consensus document that lets every capital say it sat at the table. The UK paid for the secretariat. Everyone else paid for a nomination. The report can be the most serious scientific product in this set, and membership can still be cheaper than hiring a hundred evaluators. Both can be true.
+That paper is what the Seoul network actually produced together. It is a consensus document that lets every capital say it sat at the table. The UK paid for the secretariat. Everyone else paid for a nomination. The report can be the most serious scientific product in this set, and membership can still be cheaper than hiring 100 evaluators. Both can be true.
 
 ## Washington renamed the shop. The public cash line stayed small
 
@@ -703,15 +705,15 @@ NIST stood up a US AISI after the 2023 executive order. In June 2025 Commerce Se
 
 The last clause is the published brief. CAISI still runs evals. The NIST page puts those evals next to "adversary" models and "burdensome" foreign rules. Congress attached that talking point. It did not attach a fine. Whether that brief is the right one is a political argument. The statute, as funded, is the fact.
 
-The money is small. [IFP](https://ifp.org/funding-for-caisi/), in August 2025, put FY2026 at about $15 million: up to $10 million in appropriations plus a Technology Modernization Fund loan spread across two years. That is still the public ledger. The FY2027 request asked for $27 million. House and Senate appropriators had to put NIST back after a proposed cut in early 2026. There is still no public headcount comparable to the UK's 100.
+The money is small. [IFP](https://ifp.org/funding-for-caisi/), in August 2025, put FY2026 at about $15 million: up to $10 million in appropriations plus a Technology Modernization Fund loan spread across 2 years. That is still the public ledger. The FY2027 request asked for $27 million. House and Senate appropriators had to put NIST back after a proposed cut in early 2026. There is still no public headcount comparable to the UK's 100.
 
-CAISI does publish. [DeepSeek V4 Pro](https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro) in April 2026: about eight months behind the US frontier on CAISI's aggregate, the most capable PRC model they have run, 32 percent versus GPT-5.5's 71 percent on cyber, nine benchmarks in five domains, two of them unpublished. [Z.ai's GLM-5.2](https://www.nist.gov/news-events/news/2026/07/caisi-assessment-zais-glm-52) in July. An RFI on agent security that closed 9 March 2026. An agent-standards initiative in February 2026. A CRADA with OpenMined. An eight-month gap on DeepSeek is a useful number for export-control hearings. It will not make a lab in San Francisco delay a release.
+CAISI does publish. [DeepSeek V4 Pro](https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro) in April 2026: about 8 months behind the US frontier on CAISI's aggregate, the most capable PRC model they have run, 32% versus GPT-5.5's 71% on cyber, 9 benchmarks in 5 domains, 2 of them unpublished. [Z.ai's GLM-5.2](https://www.nist.gov/news-events/news/2026/07/caisi-assessment-zais-glm-52) in July. An RFI on agent security that closed 9 March 2026. An agent-standards initiative in February 2026. A CRADA with OpenMined. An 8-month gap on DeepSeek is a useful number for export-control hearings. It will not make a lab in San Francisco delay a release.
 
 ## Brussels can knock on the door
 
-The AI Office sits inside the Commission. As of the [page update on 13 August 2026](https://digital-strategy.ec.europa.eu/en/policies/ai-office) it employs more than 125 people across six units, including AI Safety, and is recruiting about 40 contractual agents for enforcement. Deadline 8 September 2026. Setup funding in 2024 was €46.5 million, reallocated, not a fresh multi-year envelope on the UK pattern. They would not be hiring paralegals for a think tank.
+The AI Office sits inside the Commission. As of the [page update on 13 August 2026](https://digital-strategy.ec.europa.eu/en/policies/ai-office) it employs more than 125 people across 6 units, including AI Safety, and is recruiting about 40 contractual agents for enforcement. Deadline 8 September 2026. Setup funding in 2024 was €46.5 million, reallocated, not a fresh multi-year envelope on the UK pattern. They would not be hiring paralegals for a think tank.
 
-The AI Act is the difference. The Office can evaluate general-purpose models, demand technical files, inspect, order corrective action, restrict a release, and fine. GPAI rules on paper applied from 2 August 2025. [Commission enforcement powers](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) over those providers switched on 2 August 2026. [Wilson Sonsini, writing the next day](https://www.wsgr.com/en/insights/eu-ai-act-enforcement-phase-begins.html), put the GPAI fine at the higher of 3 percent of worldwide turnover or €15 million, matching [Article 101](https://artificialintelligenceact.eu/article/101/). That is not the prohibited-practices ceiling, which sits higher at 7 percent or €35 million under [Article 99](https://artificialintelligenceact.eu/article/99/). Mixing those two invents a bigger stick than the GPAI file gives. The first year was compliance without a penalty. That year is over. The Commission's own [31 July 2026 note](https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august) said the switch-on out loud.
+The AI Act is the difference. The Office can evaluate general-purpose models, demand technical files, inspect, order corrective action, restrict a release, and fine. GPAI rules on paper applied from 2 August 2025. [Commission enforcement powers](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) over those providers switched on 2 August 2026. [Wilson Sonsini, writing the next day](https://www.wsgr.com/en/insights/eu-ai-act-enforcement-phase-begins.html), put the GPAI fine at the higher of 3% of worldwide turnover or €15 million, matching [Article 101](https://artificialintelligenceact.eu/article/101/). That is not the prohibited-practices ceiling, which sits higher at 7% or €35 million under [Article 99](https://artificialintelligenceact.eu/article/99/). Mixing those 2 invents a bigger stick than the GPAI file gives. The first year was compliance without a penalty. That year is over. The Commission's own [31 July 2026 note](https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august) said the switch-on out loud.
 
 Open-weight providers are not automatically out. The Act's free-and-open exemption is [narrow](https://linuxfoundation.eu/newsroom/ai-act-explainer). Systemic-risk GPAI stays in. Article 50 transparency stays in. A DeepSeek or Llama checkpoint that is widely used in the Union can still owe documentation. Apache on the card is an input to that test, not the test. The [GPAI guidelines](https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers) say an Apache card does not cancel copyright or documentation duties. Providers who signed the July 2025 Code of Practice get a softer enforcement path: the Commission said it will focus on whether they kept the code. That path is a queue, not a free pass.
 
@@ -723,13 +725,13 @@ A 125-person office that can fine is a different machine from a 100-person lab t
 
 Japan AISI opened in February 2024 inside IPA. [CSIS](https://www.csis.org/analysis/ai-safety-institute-international-network-next-steps-and-recommendations), writing that October, put more established institutes around 20 to 30 staff. Tokyo has said it will double size and budget. The doubled number is not on a single audited line I could find. Japan already cared about ISO. Putting a few dozen people in IPA and calling it an institute is how you stay in the Seoul photograph without building the UK's shop.
 
-Singapore folded the work into the Digital Trust Centre at NTU and the IMDA, [rebranded as an AISI](https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2024/digital-trust-centre) in 2024. CSIS put about S$10 million a year against the institute, on top of a larger 2022 Digital Trust grant. Singapore hosted the 2026 International Scientific Exchange and the [Singapore Consensus](https://aisafetypriorities.org/) on research priorities. Hosting a meeting is a foreign-policy product. It is not the same as a hundred evaluators.
+Singapore folded the work into the Digital Trust Centre at NTU and the IMDA, [rebranded as an AISI](https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2024/digital-trust-centre) in 2024. CSIS put about S$10 million a year against the institute, on top of a larger 2022 Digital Trust grant. Singapore hosted the 2026 International Scientific Exchange and the [Singapore Consensus](https://aisafetypriorities.org/) on research priorities. Hosting a meeting is a foreign-policy product. It is not the same as 100 evaluators.
 
-India announced an IndiaAI Safety Institute on 30 January 2025. The only rupee figure that maps onto it in the parliamentary record is the [Safe & Trusted AI pillar](/indiaai): ₹20.46 crore of a ₹10,372 crore mission, 0.2 percent. That line is a budget ceiling. I could not find a published staff count or an eval series. India is in the International Report's panel list. The panel list is free.
+India announced an IndiaAI Safety Institute on 30 January 2025. The only rupee figure that maps onto it in the parliamentary record is the [Safe & Trusted AI pillar](/indiaai): ₹20.46 crore of a ₹10,372 crore mission, 0.2%. That line is a budget ceiling. I could not find a published staff count or an eval series. India is in the International Report's panel list. The panel list is free.
 
 Canada pledged C$50 million in 2024 without a clean public spend line. France's LNE/Inria evaluation partnership is in the network notes. Kenya and Australia signed the Seoul statement. Signing is not hiring.
 
-Korea is the easy country to misread. Seoul put [₩10.1 trillion](https://www.korea.net/Government/Briefing-Room/Press-Releases/view?articleId=8241&type=O&insttCode=) against national AI in the 2026 budget. That is the industrial AI pot. It is not the institute's operating line. Mixing the two invents "Korea funded safety." If the institute has a published headcount and a released-cash figure separate from that pot, it has not put both on one page I could check.
+Korea is the easy country to misread. Seoul put [₩10.1 trillion](https://www.korea.net/Government/Briefing-Room/Press-Releases/view?articleId=8241&type=O&insttCode=) against national AI in the 2026 budget. That is the industrial AI pot. It is not the institute's operating line. Mixing the 2 invents "Korea funded safety." If the institute has a published headcount and a released-cash figure separate from that pot, it has not put both on one page I could check.
 
 ## What they have actually produced
 
@@ -755,7 +757,7 @@ Coverage treats those two facts as one story: AI companies are being sued, there
 
 The [AI Lawsuit Tracker](https://ailawsuittracker.com/) snapshot of 1 June 2026 counted 200 cases, 68 defendants, 130 of them copyright, and more than $6 billion in disclosed stakes. Most of the $6 billion is a demand in a complaint. A demand is a number a lawyer typed. It is not money that moved.
 
-<img src="/images/essays/lawsuits-ledger.svg?v=2" alt="Ledger of six AI copyright cases: status and money" class="w-full my-8" />
+<img src="/images/essays/lawsuits-ledger.svg?v=3" alt="Ledger of six AI copyright cases: status and money" class="w-full my-8" />
 
 ## Bartz. The cheque was for the torrent
 
@@ -763,7 +765,7 @@ The [AI Lawsuit Tracker](https://ailawsuittracker.com/) snapshot of 1 June 2026 
 
 In June 2025 Judge William Alsup [split the case](https://docs.justia.com/cases/federal/district-courts/california/candce/3:2024cv05417/434709/231). Training on lawfully acquired books was "quintessentially transformative" and fair use. Building a central library from torrented files was not. That split is why the case settled instead of becoming a clean win for the labs, and why it is a bad template for the Times.
 
-Anthropic agreed in August 2025 to $1.5 billion, about $3,000 a title after fees, on a class of roughly 500,000 works. Class counsel told the court in April 2026 that [440,490 of 482,460 eligible works](https://authorsguild.org/news/anthropic-settlement-update-91-percent-of-books-claimed/) had been claimed: 91.3 percent. Ordinary class actions clear about 10 percent. Authors wanted the money. The [Authors Guild](https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/) published the installment plan: $300 million already in escrow, $300 million after final approval, $450 million by 25 September 2026, $450 million by 25 September 2027. Claims closed 30 March 2026. Judge Araceli Martínez-Olguín granted final approval on 20 July.
+Anthropic agreed in August 2025 to $1.5 billion, about $3,000 a title after fees, on a class of roughly 500,000 works. Class counsel told the court in April 2026 that [440,490 of 482,460 eligible works](https://authorsguild.org/news/anthropic-settlement-update-91-percent-of-books-claimed/) had been claimed: 91.3%. Ordinary class actions clear about 10%. Authors wanted the money. The [Authors Guild](https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/) published the installment plan: $300 million already in escrow, $300 million after final approval, $450 million by 25 September 2026, $450 million by 25 September 2027. Claims closed 30 March 2026. Judge Araceli Martínez-Olguín granted final approval on 20 July.
 
 The release covers past conduct through 25 August 2025. It does not license the next training run. It does not cover outputs. A lab that wants more books still has to buy them or take another complaint. $1.5 billion is the record. It is also small next to Anthropic's last published valuation, and it is a price for a library Anthropic should not have built, not a price for training. The first sentence is about authors. The second is about whether the number changes how labs ingest text. It changes how they acquire the pile. It does not tell you what a San Francisco jury would do with a purchased pile.
 
@@ -831,7 +833,7 @@ You can now buy intelligence at a monthly price. The old gatekeepers were creden
 
 This is a real market. [ChatGPT Plus](https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus) still costs $20 a month. [ChatGPT Pro](https://help.openai.com/en/articles/9793128) is listed as $100 or $200, depending on usage allowance. Pay per token through an API and dial the list price up or down by picking a model name.
 
-On 14 August 2026, [OpenAI's API pricing page](https://developers.openai.com/api/docs/pricing) listed GPT-5.6 Luna at $0.20 input and $1.20 output per million tokens on the short-context Standard ladder, and GPT-5.6 Sol at $5 input and $30 output. Long-context cells on the same page are higher. They are a separate price. The same day, [Anthropic's pricing page](https://www.anthropic.com/pricing) listed Haiku 4.5 at $1 input and $5 output, and Fable 5 at $10 input and $50 output. [OpenAI's 30 July 2026 post](https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/) said Luna's list price was cut 80 percent and Terra's 20 percent that day, with Sol unchanged and subscription stickers unchanged. Those are list prices, not invoices. Enterprises negotiate. Cache and batch change the bill.
+On 14 August 2026, [OpenAI's API pricing page](https://developers.openai.com/api/docs/pricing) listed GPT-5.6 Luna at $0.20 input and $1.20 output per million tokens on the short-context Standard ladder, and GPT-5.6 Sol at $5 input and $30 output. Long-context cells on the same page are higher. They are a separate price. The same day, [Anthropic's pricing page](https://www.anthropic.com/pricing) listed Haiku 4.5 at $1 input and $5 output, and Fable 5 at $10 input and $50 output. [OpenAI's 30 July 2026 post](https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/) said Luna's list price was cut 80% and Terra's 20% that day, with Sol unchanged and subscription stickers unchanged. Those are list prices, not invoices. Enterprises negotiate. Cache and batch change the bill.
 
 ## What the builders say
 
@@ -851,7 +853,7 @@ Think about spices. A few centuries ago, black pepper and cinnamon were expensiv
 
 The same thing is happening to judgment, with a limit. You can buy a second opinion, ask a model to check your reasoning, list risks, compare options, and name what you missed. The model can be wrong. You can ask again. You no longer depend only on the intelligence you happen to know in person. That is cheaper access to a second pass. It is not a claim that the model is as good as a specialist, or that the old scarcity of expertise has vanished.
 
-The market is simple. More intelligence costs more. The cheapest models are fast and broad: they answer emails, summarize documents, rewrite code comments, and generate first drafts. They are good enough when being right nine times out of ten is acceptable. The stronger models cost more because they use more compute. They think in longer chains and hold up better in math, law, medicine, and strategy, where a wrong answer is expensive.
+The market is simple. More intelligence costs more. The cheapest models are fast and broad: they answer emails, summarize documents, rewrite code comments, and generate first drafts. They are good enough when being right 9 times out of 10 is acceptable. The stronger models cost more because they use more compute. They think in longer chains and hold up better in math, law, medicine, and strategy, where a wrong answer is expensive.
 
 At the top sits a small class of reasoning models that take longer and cost more, reserved for decisions where the stakes justify the bill. A founder might use the cheap model for customer support and the expensive one for a term-sheet clause. The premium is longer reasoning, better judgment, and lower error rates. You pay for the quality of the thinking, not the existence of the thinking.
 
@@ -863,7 +865,7 @@ Daily life changes in small ways. A parent can research a symptom without panick
 
 ![ChatGPT productivity meme](/images/essays/chatgpt-productive.png)
 
-Free advice has always been the most expensive kind. Your uncle gives you stock tips. Your friend recommends a doctor. Your coworker suggests a framework. They mean well, but they are not paid for the outcome. Their incentive is to sound helpful, not to be right. They spend two minutes on a choice that will shape your year. You smile, thank them, and carry the risk alone.
+Free advice has always been the most expensive kind. Your uncle gives you stock tips. Your friend recommends a doctor. Your coworker suggests a framework. They mean well, but they are not paid for the outcome. Their incentive is to sound helpful, not to be right. They spend 2 minutes on a choice that will shape your year. You smile, thank them, and carry the risk alone.
 
 Paid intelligence changes the contract. A model does not need to please you and has no reputation to protect in the room. It lists downsides you do not want to hear and asks the follow-up you were avoiding, because you can keep paying, not because it is wise. The meter resets every conversation. You get the patience of a full-time analyst for the cost of a sandwich.
 
@@ -879,7 +881,7 @@ This creates a social divide in the short term. People who use intelligence well
 
 More intelligence, in the same direction progress always goes. The models are useful but limited. They make mistakes, need guidance, and stay expensive at the top end. Still, the cost of a unit of reasoning is falling while the ceiling of reasoning is rising. Cheap models get cheaper. Strong models get stronger. New forms show up: models that plan, verify, debate each other, or specialize in a single domain.
 
-The next decade will be less about one giant AI and more about specialized intelligences you hire for specific tasks: a contract reviewer, a medical research assistant, a coding partner, a strategy analyst, a writing coach. Some cheap, some expensive, all on demand.
+The next decade will be less about 1 giant AI and more about specialized intelligences you hire for specific tasks: a contract reviewer, a medical research assistant, a coding partner, a strategy analyst, a writing coach. Some cheap, some expensive, all on demand.
 
 People expect progress to feel linear, with a clear improvement every year they can name. Real progress piles small, invisible gains until the stack tips, then everything changes at once.
 
@@ -1513,7 +1515,7 @@ The modern venture capital ecosystem is experiencing a structural divergence tha
 
 This phenomenon, defined here as the Check Size Paradox, indicates that the venture market is not undergoing a simple cyclical downturn. Rather, it is undergoing a fundamental structural realignment. General Partners are not simply hoarding dry powder or retreating from the asset class. Instead, they are structurally reorganizing how they underwrite risk, concentrate capital, and price quality. The historical strategy of deploying relatively small checks across a wide portfolio (commonly known as the spray-and-pray approach) has been systematically retired. In its place, investors have established a barbell allocation model. This model concentrates massive capital reserves into a highly select conglomerate of super-performers, while starving the mid-market software and secondary technology ecosystems.
 
-To establish the statistical foundation of this study, this study tracks two primary indicators. First, the analysis calculates the median check size across a decade-long transaction set to map the exact trajectory of early capital structures. Second, the study applies the Gini coefficient, a classical economic measure of inequality, to the distribution of venture capital dollars. A Gini score of 1.0 represents a system where a single company captures all available funding, while a score of 0.0 represents perfect equality across all transacting entities. The analysis reveals that the venture capital Gini coefficient has climbed to a historic peak of 0.916 in 2026. This metric confirms that the top 1 percent of transactions now absorb more than 90 percent of all private capital deployed globally, creating an unprecedented capital-concentration moat.
+To establish the statistical foundation of this study, this study tracks two primary indicators. First, the analysis calculates the median check size across a decade-long transaction set to map the exact trajectory of early capital structures. Second, the study applies the Gini coefficient, a classical economic measure of inequality, to the distribution of venture capital dollars. A Gini score of 1.0 represents a system where a single company captures all available funding, while a score of 0.0 represents perfect equality across all transacting entities. The analysis reveals that the venture capital Gini coefficient has climbed to a historic peak of 0.916 in 2026. This metric confirms that the top 1% of transactions now absorb more than 90% of all private capital deployed globally, creating an unprecedented capital-concentration moat.
 
 The strategic implications of this realignment are severe for both allocators of capital and operators of technology companies. Founders who continue to raise capital using playbooks from the low-interest-rate era find themselves trapped in a structural bottleneck, particularly at the Seed-to-Series A transition. For General Partners, managing capital reserves and structuring liquidation preferences now requires a highly disciplined, quantitative underwriting methodology that prioritizes immediate unit economic viability over speculative, narrative-driven scale.
 
@@ -1539,7 +1541,7 @@ The first epoch was characterized by a highly predictable, linear capital alloca
 
 During this era, valuation multiples remained tightly bound to historical averages. Pre-money valuations for Series A rounds typically ranged between 10x and 15x annual recurring revenue (ARR). Investors relied on standardized performance metrics (such as the LTV to CAC ratio and simple cohort retention curves) to underwrite risk. The capital efficiency of a startup (defined as its net new ARR divided by its net burn) was treated as a highly significant health indicator. 
 
-The path from Pre-Seed to Series A was highly linear. A startup that achieved a stable growth rate of 20 percent month-over-month with low churn could reliably expect to transition to the next financing stage within 18 to 24 months. The distribution of venture dollars was relatively balanced across the ecosystem. The Gini coefficient during this period hovered between 0.880 and 0.900, indicating that while capital was concentrated, it remained accessible to a diverse array of software, consumer-web, and hardware ventures globally.
+The path from Pre-Seed to Series A was highly linear. A startup that achieved a stable growth rate of 20% month-over-month with low churn could reliably expect to transition to the next financing stage within 18 to 24 months. The distribution of venture dollars was relatively balanced across the ecosystem. The Gini coefficient during this period hovered between 0.880 and 0.900, indicating that while capital was concentrated, it remained accessible to a diverse array of software, consumer-web, and hardware ventures globally.
 
 ### 2. The ZIRP Outlier Peak (2021-2022)
 
@@ -1553,7 +1555,7 @@ The Gini coefficient during the peak actually dropped to 0.886. This decline was
 
 ### 3. The Great Re-Anchoring (2023-2026)
 
-The third epoch, running from 2023 to the current period in 2026, represents the structural re-anchoring of the global private markets. As global inflation spiked, central banks raised benchmark interest rates to their highest levels in decades. The risk-free rate of return shifted from near-zero to over 5 percent, completely changing the discount rate applied to far-future cash flows. Private tech assets, which rely on long-horizon growth projections, experienced an immediate and severe valuation correction.
+The third epoch, running from 2023 to the current period in 2026, represents the structural re-anchoring of the global private markets. As global inflation spiked, central banks raised benchmark interest rates to their highest levels in decades. The risk-free rate of return shifted from near-zero to over 5%, completely changing the discount rate applied to far-future cash flows. Private tech assets, which rely on long-horizon growth projections, experienced an immediate and severe valuation correction.
 
 The transition was violent. Institutional allocators reduced their commitments to venture capital funds, and General Partners immediately slowed their capital deployment velocity. The focus of the market shifted from pure growth to immediate path-to-profitability, positive operating cash flow, and absolute unit economic viability. Speculative, narrative-driven startups that were kept alive by cheap money were allowed to quietly shut down or were forced into severe down-rounds.
 
@@ -1601,13 +1603,13 @@ During the ZIRP peak of 2021, the Series A market reached a hyper-inflationary p
 
 When the market corrected, the absolute number of Series A rounds contracted sharply, falling to 3,260 in 2025 and tracking at 1,064 in early 2026. However, the median check size did not contract. Instead, it expanded to $11.00 million in 2025 and surged to a historic peak of $14.50 million in 2026. This is the core of the Check Size Paradox. Investors are doing far fewer Series A deals, but when they do commit, they write significantly larger checks to insulate the company against future capital market volatility.
 
-The underwriting bar for a Series A in 2026 is exceptionally high. Startups are generally expected to demonstrate at least $2.50 million to $5.00 million in ARR, a net new ARR growth rate exceeding 100 percent year-over-year, high customer retention metrics, and a highly efficient capital burner index. The Series A is no longer a milestone for establishing early commercial scaling; it is now reserved for companies that have demonstrated highly repeatable, highly predictable market dominance.
+The underwriting bar for a Series A in 2026 is exceptionally high. Startups are generally expected to demonstrate at least $2.50 million to $5.00 million in ARR, a net new ARR growth rate exceeding 100% year-over-year, high customer retention metrics, and a highly efficient capital burner index. The Series A is no longer a milestone for establishing early commercial scaling; it is now reserved for companies that have demonstrated highly repeatable, highly predictable market dominance.
 
 ### 4. Series B Financing Dynamics
 
 The Series B stage represents the scaling of a proven business model across broader market segments. In 2015, the median Series B check size stood at $12.00 million across 1,425 rounds. In 2021, it reached its ZIRP peak of $27.50 million across 2,651 transactions, before consolidating. In 2026, the median Series B check reached an all-time high of $30.00 million.
 
-This stage has been heavily impacted by the hollowing out of the mid-market. Traditional growth-stage investors, who historically wrote $15 million to $25 million checks for solid software companies, have largely pulled back. In their place, the Series B stage is dominated by high-conviction institutional funds that concentrate their capital into the top-performing 5 percent of the ecosystem.
+This stage has been heavily impacted by the hollowing out of the mid-market. Traditional growth-stage investors, who historically wrote $15 million to $25 million checks for solid software companies, have largely pulled back. In their place, the Series B stage is dominated by high-conviction institutional funds that concentrate their capital into the top-performing 5% of the ecosystem.
 
 A startup raising a Series B in 2026 must demonstrate a highly institutionalized corporate structure. Underwriting at this stage requires an exhaustive analysis of cohort retention, contribution margin profitability, customer acquisition cost payback periods, and net retention rates. The valuation multiples for Series B rounds have compressed back to historical ranges (typically 12x to 18x ARR), but the absolute check size has expanded because investors want to ensure the company is fully capitalized to reach self-sustainability without requiring future public market interventions.
 
@@ -1619,7 +1621,7 @@ This semantic mapping reveals that different technology sectors command entirely
 
 ### 1. Generative AI and Large Language Models (The Capital Sinkhole)
 
-The semantic subset tracking Generative AI, large language models, co-pilots, and neural network infrastructure represents exactly 7,878 matched financing events. This sector has emerged as the ultimate capital sinkhole of the 2023-2026 epoch. While representing less than 1 percent of total global rounds by count, it has absorbed a massive, disproportionate share of all capital deployed.
+The semantic subset tracking Generative AI, large language models, co-pilots, and neural network infrastructure represents exactly 7,878 matched financing events. This sector has emerged as the ultimate capital sinkhole of the 2023-2026 epoch. While representing less than 1% of total global rounds by count, it has absorbed a massive, disproportionate share of all capital deployed.
 
 The underwriting metrics for Generative AI represent a highly premium outlier in the private markets. The median pre-money valuation for GenAI companies stands at $6.55 million. More importantly, the check sizes expand aggressively as companies scale, where the median Seed round is $2.00 million, expanding to a median Series A of $10.00 million, and reaching an extraordinary median Series B of $30.00 million. 
 
@@ -1697,15 +1699,15 @@ The structural realignment of the venture capital market has created a severe bo
 
 ### 1. The Longitudinal Cohort Transition Analysis
 
-To map the exact transition dynamics, the study performs a longitudinal analysis tracking the funding outcomes of specific Seed cohorts from 2015 to 2025. This cohort-based analysis allows measurement of what percentage of startups that raised a documented Seed round in a given year successfully went on to raise a Series A, and how many months that transition required.
+To map the exact transition dynamics, the study performs a longitudinal analysis tracking the funding outcomes of specific Seed cohorts from 2015 to 2025. This cohort-based analysis allows measurement of what share of startups that raised a documented Seed round in a given year successfully went on to raise a Series A, and how many months that transition required.
 
 The empirical data exposes a structural collapse in the transition rate over the last five years.
 
-* **2015 Cohort (Pre-Boom baseline)** had 12,757 Seed companies, with 2,266 successfully converting to Series A (**17.76 percent conversion rate**) and a median transition duration of **21.9 months**.
-* **2018 Cohort (Steady growth baseline)** had 14,449 Seed companies, with 2,227 converting to Series A (**15.41 percent conversion rate**) and a median transition duration of **23.5 months**.
-* **2021 Cohort (The ZIRP Outlier Peak)** had 18,565 Seed companies, with 2,367 converting to Series A (**12.75 percent conversion rate**) and a highly compressed median transition duration of **17.2 months**. This accelerated transition was driven by the massive abundance of ZIRP liquidity, which allowed companies to raise Series A rounds in record time, often before establishing true product-market fit.
-* **2022 Cohort (The Transition Shock)** had 18,167 Seed companies, with 1,643 converting to Series A (**9.04 percent conversion rate**) and a median transition duration stretching back to **21.4 months**. This cohort represents the first wave of companies that raised Seed rounds during the peak of the boom, only to crash into the hard, metric-driven underwriting criteria of the 2024-2025 correction.
-* **2023 Cohort (Active Capital Friction)** had 14,942 Seed companies, with 1,170 converting to Series A (**7.83 percent conversion rate**) and a median transition duration of **17.1 months**. While this cohort is still actively transacting (and its final conversion percentage will expand slightly as the cohort matures), it is tracking significantly below historical baselines, demonstrating the severe capital friction at the Series A boundary.
+* **2015 Cohort (Pre-Boom baseline)** had 12,757 Seed companies, with 2,266 successfully converting to Series A (**17.76% conversion rate**) and a median transition duration of **21.9 months**.
+* **2018 Cohort (Steady growth baseline)** had 14,449 Seed companies, with 2,227 converting to Series A (**15.41% conversion rate**) and a median transition duration of **23.5 months**.
+* **2021 Cohort (The ZIRP Outlier Peak)** had 18,565 Seed companies, with 2,367 converting to Series A (**12.75% conversion rate**) and a highly compressed median transition duration of **17.2 months**. This accelerated transition was driven by the massive abundance of ZIRP liquidity, which allowed companies to raise Series A rounds in record time, often before establishing true product-market fit.
+* **2022 Cohort (The Transition Shock)** had 18,167 Seed companies, with 1,643 converting to Series A (**9.04% conversion rate**) and a median transition duration stretching back to **21.4 months**. This cohort represents the first wave of companies that raised Seed rounds during the peak of the boom, only to crash into the hard, metric-driven underwriting criteria of the 2024-2025 correction.
+* **2023 Cohort (Active Capital Friction)** had 14,942 Seed companies, with 1,170 converting to Series A (**7.83% conversion rate**) and a median transition duration of **17.1 months**. While this cohort is still actively transacting (and its final conversion rate will expand slightly as the cohort matures), it is tracking significantly below historical baselines, demonstrating the severe capital friction at the Series A boundary.
 
 ### 2. The Mechanics of the Series A Bottleneck
 
@@ -1766,7 +1768,7 @@ In the 2026 environment, this option-value model has structurally broken down. T
 
 #### Exhaustive Reserve Management
 
-Venture funds must maintain exceptionally disciplined reserve ratios to support their top-performing portfolio companies through future financing cycles. Instead of allocating the vast majority of a fund to initial checks, General Partners should reserve at least **60 to 70 percent** of their capital for follow-on rounds. This high reserve ratio ensures that the fund can fully back its winners and lead their Series A and B rounds if the external growth-equity market remains frozen or selective.
+Venture funds must maintain exceptionally disciplined reserve ratios to support their top-performing portfolio companies through future financing cycles. Instead of allocating the vast majority of a fund to initial checks, General Partners should reserve at least **60 to 70%** of their capital for follow-on rounds. This high reserve ratio ensures that the fund can fully back its winners and lead their Series A and B rounds if the external growth-equity market remains frozen or selective.
 
 #### Structuring for Downside Protection
 
@@ -2071,7 +2073,7 @@ Customer support is one of the highest-use areas for AI because the patterns are
 
 Connect your support inbox (Intercom, Zendesk, email) to an AI triage system. The system classifies incoming tickets by category, urgency, and complexity. It routes Tier 0 tickets to auto-response. Tier 1 tickets go to a queue with pre-drafted responses. Tier 2 tickets go to your support team with a context summary attached.
 
-Track deflection rate (percentage of tickets resolved without human involvement) and response quality scores. A well-implemented system should handle 40-60% of tickets automatically within three months.
+Track deflection rate (share of tickets resolved without human involvement) and response quality scores. A well-implemented system should handle 40-60% of tickets automatically within three months.
 
 ## Step 12. Automated Proposal and Contract Generation
 
@@ -2507,7 +2509,7 @@ AI agents break this assumption. An agent calls an API instead of logging in, co
 - **30%**: Enterprise software revenue from agents by 2035 (Gartner projection)
 - **40%+**: Enterprise SaaS shifting to outcome pricing by 2030 (Analyst consensus)
 
-[Gartner](https://www.gartner.com/en/newsroom/press-releases) projects that the percentage of enterprise applications embedding task-specific AI agents will grow from under 5% in 2025 to 40% by the end of 2026. That is an architectural change. The application moves from a tool that humans operate to a platform that agents consume, so the API becomes the product and the interface becomes optional.
+[Gartner](https://www.gartner.com/en/newsroom/press-releases) projects that the share of enterprise applications embedding task-specific AI agents will grow from under 5% in 2025 to 40% by the end of 2026. That is an architectural change. The application moves from a tool that humans operate to a platform that agents consume, so the API becomes the product and the interface becomes optional.
 
 ## The pricing collapse
 
@@ -2553,8 +2555,8 @@ HubSpot reports that its Customer Agent achieves a 65% resolution rate and reduc
 > 
 The SaaS agent pricing market in 2026 shows a clear pattern. Every major platform is experimenting with at least two pricing models simultaneously. None have settled on a single approach.
 
-| Vendor | Per-Seat | Per-Action/Credit | Per-Resolution/Outcome |
-|--------|----------|-------------------|------------------------|
+| Vendor | Seat | Action | Outcome |
+|--------|------|--------|---------|
 | **Salesforce** | $125-$550/user/mo | $0.10/action | $2/conversation (legacy) |
 | **Intercom** | Base plan + seat | n/a | $0.99/resolution |
 | **Zendesk** | Base plan + seat | n/a | $1.50-$2.00/resolution |
@@ -3819,7 +3821,7 @@ Data marketplaces like [Ocean Protocol](https://oceanprotocol.com/) and [Snowfla
 
 The security risks of autonomous agents are not theoretical. They are documented and growing.
 
-In November 2025, Anthropic confirmed that a Chinese state-sponsored group weaponized Claude Code to autonomously perform 80 to 90 percent of tactical operations (reconnaissance, vulnerability discovery, and data exfiltration) in attacks against 30 global targets across finance, manufacturing, and government. In January 2026, researchers studying a simulated social network of 770,000 autonomous agents observed agents performing prompt injection attacks against each other within days, exacerbated by a database misconfiguration. A vulnerability in Microsoft 365 Copilot (CVE-2025-32711, dubbed "EchoLeak") allowed a single crafted email to trigger automatic data exfiltration without any user interaction.
+In November 2025, Anthropic confirmed that a Chinese state-sponsored group weaponized Claude Code to autonomously perform 80 to 90% of tactical operations (reconnaissance, vulnerability discovery, and data exfiltration) in attacks against 30 global targets across finance, manufacturing, and government. In January 2026, researchers studying a simulated social network of 770,000 autonomous agents observed agents performing prompt injection attacks against each other within days, exacerbated by a database misconfiguration. A vulnerability in Microsoft 365 Copilot (CVE-2025-32711, dubbed "EchoLeak") allowed a single crafted email to trigger automatic data exfiltration without any user interaction.
 
 The threat categories break down into six areas. Indirect prompt injection, where malicious instructions are hidden in data the agent processes, remains the primary attack vector. Excessive agency, where agents are granted overly broad permissions, creates blast radius problems when a single agent is compromised. Memory poisoning introduces false information into an agent's persistent context. Cascading failures propagate malicious actions across multi-agent systems faster than humans can intervene. Supply chain attacks exploit vulnerabilities in agent frameworks and plugins. And agency abuse, where an agent executes technically permitted but unintended actions (like deleting a database from an ambiguous instruction), represents an emerging category.
 
@@ -5934,7 +5936,7 @@ Microsoft's [2023 Work Trend Index](https://www.microsoft.com/en-us/worklab/work
 
 [Atlassian](https://www.atlassian.com/)'s research on workplace productivity puts the interruption frequency at one every **3.5 minutes** for the average knowledge worker. Not every interruption is external; many are self-initiated (checking email, glancing at Slack). But the cognitive cost is the same regardless of origin. Each switch drains the limited pool of executive function, and the pool does not refill until the next sleep cycle.
 
-[McKinsey Global Institute](https://www.mckinsey.com/) estimated that improving collaboration and communication through reduced interruptions could raise knowledge-worker productivity by **20 to 25 percent**. Applied to the US knowledge-worker population of roughly 60 million, and using average compensation figures, multiple analyses place the annual cost of unnecessary context switching at **$450 billion to $650 billion** in lost productivity. That range exceeds the entire GDP of countries like Norway or Austria. It dwarfs the annual revenue of any single technology company responsible for producing the interruption tools.
+[McKinsey Global Institute](https://www.mckinsey.com/) estimated that improving collaboration and communication through reduced interruptions could raise knowledge-worker productivity by **20 to 25%**. Applied to the US knowledge-worker population of roughly 60 million, and using average compensation figures, multiple analyses place the annual cost of unnecessary context switching at **$450 billion to $650 billion** in lost productivity. That range exceeds the entire GDP of countries like Norway or Austria. It dwarfs the annual revenue of any single technology company responsible for producing the interruption tools.
 
 The organizational response has been, for the most part, to add more tools rather than reduce interruption load. Companies layer project management software on top of chat on top of email on top of document collaboration on top of video conferencing. Each tool adds a new notification channel. Each channel adds a new source of context switches. The result is a productivity stack that generates the very fragmentation it was purchased to solve. [Okta](https://www.okta.com/)'s 2023 Business at Work report found that the average large enterprise deploys **211 SaaS applications**. Each one competes for employee attention via its own badge, banner, or push notification. The total cognitive tax of this stack is never measured because no single vendor is responsible for it.
 
@@ -6089,7 +6091,7 @@ Regulatory friction imposes costs that can be quantified, though rarely are.
 
 **Business formation.** Incorporating a company in [Estonia](https://e-estonia.com/) takes hours. In Brazil, the same process takes 20-30 days across multiple agencies with notarization requirements. In the United States, LLC formation timelines vary from same-day (in some states with online portals) to 6 weeks (in states requiring paper filings and manual processing). The difference is the institutional architecture.
 
-**Compliance as a percentage of wages.** OECD and Ifo Institute research estimates that US firms spend 1.3-3.3% of their total wage bill on regulatory compliance. The [Competitive Enterprise Institute](https://cei.org/) puts total federal regulatory compliance cost at $2.155 trillion annually. Roughly 7% of US GDP. The [National Association of Manufacturers](https://www.nam.org/) estimates a higher figure of $3.079 trillion, or roughly 10-12% of GDP. For small businesses, these costs are disproportionately higher because compliance costs are largely fixed: the same form takes the same time to fill out whether you have 5 employees or 5,000. This creates a structural disadvantage for small firms and startups, which bear a heavier per-employee compliance burden than established incumbents.
+**Compliance as a % of wages.** OECD and Ifo Institute research estimates that US firms spend 1.3-3.3% of their total wage bill on regulatory compliance. The [Competitive Enterprise Institute](https://cei.org/) puts total federal regulatory compliance cost at $2.155 trillion annually. Roughly 7% of US GDP. The [National Association of Manufacturers](https://www.nam.org/) estimates a higher figure of $3.079 trillion, or roughly 10-12% of GDP. For small businesses, these costs are disproportionately higher because compliance costs are largely fixed: the same form takes the same time to fill out whether you have 5 employees or 5,000. This creates a structural disadvantage for small firms and startups, which bear a heavier per-employee compliance burden than established incumbents.
 
 > **The self-perpetuation problem**
 > 

@@ -1,35 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 290" width="640" height="290">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" width="400" height="340" preserveAspectRatio="xMidYMid meet">
   <style>
     text { font-family: Inter, system-ui, sans-serif; }
-    .title { font-size: 14px; font-weight: 600; fill: #18181b; }
-    .onbar { font-size: 12px; font-weight: 600; }
-    .count { font-size: 12px; fill: #18181b; }
-    .share { font-size: 11px; fill: #3f3f46; }
-    .note { font-size: 10px; fill: #52525b; }
+    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
+    .onbar { font-size: 14px; font-weight: 600; }
+    .count { font-size: 15px; font-weight: 600; fill: #18181b; }
+    .share { font-size: 13px; fill: #52525b; }
+    .note { font-size: 12px; fill: #52525b; }
   </style>
 
-  <text x="40" y="28" class="title">IndiaAI compute: committed, assigned, utilised (GPUs)</text>
+  <text x="16" y="28" class="title">Committed, assigned, utilised</text>
 
-  <rect x="40" y="48" width="420" height="36" rx="3" fill="#d4d4d8"/>
-  <text x="56" y="71" class="onbar" fill="#18181b">Committed</text>
-  <text x="480" y="64" class="count">33,099 GPUs</text>
-  <text x="480" y="80" class="share">100%</text>
+  <rect x="16" y="48" width="368" height="44" rx="3" fill="#d4d4d8"/>
+  <text x="28" y="68" class="onbar" fill="#18181b">Committed</text>
+  <text x="28" y="86" class="share">33,099 GPUs · 100%</text>
 
-  <text x="250" y="104" text-anchor="middle" fill="#71717a" font-size="10">▼</text>
+  <text x="200" y="114" text-anchor="middle" fill="#71717a" font-size="12">▼</text>
 
-  <rect x="40" y="112" width="160" height="36" rx="3" fill="#52525b"/>
-  <text x="56" y="135" class="onbar" fill="#fafafa">Assigned</text>
-  <text x="220" y="128" class="count">12,638</text>
-  <text x="220" y="144" class="share">38% of committed</text>
+  <rect x="16" y="124" width="140" height="44" rx="3" fill="#52525b"/>
+  <text x="168" y="144" class="count">12,638</text>
+  <text x="168" y="162" class="share">Assigned · 38%</text>
 
-  <text x="120" y="168" text-anchor="middle" fill="#71717a" font-size="10">▼</text>
+  <text x="86" y="190" text-anchor="middle" fill="#71717a" font-size="12">▼</text>
 
-  <rect x="40" y="176" width="94" height="36" rx="3" fill="#18181b"/>
-  <text x="56" y="199" class="onbar" fill="#fafafa">Utilised</text>
-  <text x="150" y="192" class="count">7,418</text>
-  <text x="150" y="208" class="share">22% of committed</text>
+  <rect x="16" y="200" width="82" height="44" rx="3" fill="#18181b"/>
+  <text x="110" y="220" class="count">7,418</text>
+  <text x="110" y="238" class="share">Utilised · 22%</text>
 
-  <text x="40" y="240" class="note">Source: Economic Times, citing an IndiaAI letter to providers. Press-reported.</text>
-  <text x="40" y="256" class="note">MeitY told Parliament 38,000+ GPUs were onboarded. 305 user slots were listed in the same reply.</text>
-  <text x="40" y="272" class="note">One listed slot for every 108 committed GPUs. Capacity is pooled, so that is not GPUs per user.</text>
+  <text x="16" y="280" class="note">Press-reported, citing an IndiaAI letter.</text>
+  <text x="16" y="300" class="note">MeitY told Parliament 38,000+ GPUs onboarded.</text>
+  <text x="16" y="324" class="note">Capacity is pooled, not GPUs per user.</text>
 </svg>

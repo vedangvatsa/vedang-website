@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 interface ZoomableImageProps {
   src: string;
@@ -12,9 +13,14 @@ interface ZoomableImageProps {
 
 export function ZoomableImage({ src, alt = '', width, height, className = '' }: ZoomableImageProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   const open = useCallback(() => setIsOpen(true), []);
   const close = useCallback(() => setIsOpen(false), []);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -29,38 +35,63 @@ export function ZoomableImage({ src, alt = '', width, height, className = '' }: 
     };
   }, [isOpen, close]);
 
+  const lightbox =
+    isOpen && mounted
+      ? createPortal(
+          <div
+            className="fixed inset-0 z-[9999] flex flex-col bg-zinc-950"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Enlarged image"
+          >
+            <div className="flex shrink-0 items-center justify-between gap-3 border-b border-white/10 px-4 py-3 text-sm text-white/80">
+              <span>Scroll to pan</span>
+              <button
+                type="button"
+                onClick={close}
+                className="rounded-md bg-white/15 px-3 py-1.5 text-white"
+              >
+                Close
+              </button>
+            </div>
+            <div
+              className="min-h-0 flex-1 overflow-auto overscroll-contain"
+              style={{ touchAction: 'pan-x pan-y pinch-zoom' }}
+              onClick={close}
+            >
+              {/*
+                Essay CSS forces article images to 100% width, which shrinks
+                table SVGs on phones. Render at least 56rem so 11px type stays readable.
+              */}
+              <img
+                src={src}
+                alt={alt}
+                onClick={(e) => e.stopPropagation()}
+                className="mx-auto block h-auto max-w-none bg-white"
+                style={{ width: 'max(100%, 56rem)' }}
+              />
+            </div>
+          </div>,
+          document.body
+        )
+      : null;
+
   return (
     <>
-      {/* Inline image with hover effect */}
-      <img
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        onClick={open}
-        className={`cursor-zoom-in transition-transform duration-200 hover:scale-[1.02] ${className}`}
-      />
-
-      {/* Lightbox overlay */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm cursor-zoom-out animate-in fade-in duration-200"
-          onClick={close}
-        >
-          {/* Close hint */}
-          <div className="absolute top-4 right-4 text-white/60 text-sm font-medium pointer-events-none">
-            ESC or click to close
-          </div>
-
-          {/* Zoomed image */}
-          <img
-            src={src}
-            alt={alt}
-            onClick={(e) => e.stopPropagation()}
-            className="max-w-[95vw] max-h-[92vh] object-contain rounded-lg shadow-2xl cursor-default animate-in zoom-in-95 duration-200"
-          />
-        </div>
-      )}
+      <div className="relative w-full min-w-0 max-w-full">
+        <img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          onClick={open}
+          className={`block h-auto w-full max-w-full cursor-zoom-in ${className}`}
+        />
+        <span className="pointer-events-none absolute bottom-2 right-2 rounded bg-black/55 px-2 py-1 text-[11px] font-medium text-white sm:hidden">
+          Tap to enlarge
+        </span>
+      </div>
+      {lightbox}
     </>
   );
 }

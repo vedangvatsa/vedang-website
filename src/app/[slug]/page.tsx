@@ -15,7 +15,7 @@ import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import { RelatedGlossaryTerms } from '@/lib/cross-links';
 import { glossaryTerms } from '@/lib/glossary';
-import { Columns, Column, Figure, StatRow, Stat, Callout, PullQuote, Timeline, TimelineItem, SectionLabel, KeyTakeaway, EcosystemDiagram, ResearchPaper } from '@/components/mdx';
+import { Columns, Column, Figure, StatRow, Stat, Callout, PullQuote, Timeline, TimelineItem, SectionLabel, KeyTakeaway, EcosystemDiagram, ResearchPaper, Table } from '@/components/mdx';
 import { MarketProjectionChart, TrustGapChart, ConsumerConcernsChart, ValueShiftGrid, InteractionModelsVisual, TransactionFlowDiagram, CommerceEvolutionTimeline, ProtocolComparisonTable, CompetitiveField } from '@/components/mdx/charts';
 import { VCValuationExpansionChart, VCGiniConcentrationChart, VCDeathValleyTimeline, VCSectorSemanticAnalysis, VCStrategicFrameworkDiagram, VCEquationBoxSVG, VCBarbellSystemVisual, VCBarbellVectorDiagram } from '@/components/mdx/funding-charts';
 import { WebEvolutionTimeline, ProtocolStackDiagram, SecurityThreatMatrix, AgentVsChatbot, InfrastructureOverview } from '@/components/mdx/agentic-web-charts';
@@ -333,11 +333,12 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
 
       {/* ─── Essay Body ─── */}
       <div className="pb-10 md:pb-14">
-        <article className="notion-article prose prose-lg prose-neutral max-w-4xl mx-auto">
+        <article className="notion-article prose prose-lg prose-neutral max-w-4xl mx-auto min-w-0">
           <MDXRemote
             source={essay.content}
             options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
             components={{
+              table: Table,
               Columns,
               Column,
               Figure,

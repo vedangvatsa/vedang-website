@@ -71,7 +71,9 @@ export const SLOP_RULES: RuleDefinition[] = [
   { name: 'in an era of', pattern: /\bin\s+an\s+era\s+of\b/i, description: 'Grandiose AI opener', suggestion: 'Start with specific data or observation.', category: 'Tier 3 Pattern' },
 
   // Formatting & Punctuation Rules
-  { name: 'em-dash', pattern: /[—–]/, description: 'Em-dash / En-dash character', suggestion: 'Use standard hyphens or rewrite into separate sentences.', category: 'Formatting' }
+  { name: 'em-dash', pattern: /[—–]/, description: 'Em-dash / En-dash character', suggestion: 'Use standard hyphens or rewrite into separate sentences.', category: 'Formatting' },
+  { name: 'spelled percent', pattern: /\d+(?:\.\d+)?\s+percent\b/i, description: 'AI-style spelled percent', suggestion: 'Write 32% not 32 percent.', category: 'Formatting' },
+  { name: 'per cent', pattern: /\bper\s+cent\b/i, description: 'Spelled per cent', suggestion: 'Use % after the number.', category: 'Formatting' },
 ];
 
 export function cleanLineForProseAnalysis(line: string): string {

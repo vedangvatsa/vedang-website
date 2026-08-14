@@ -1,58 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 268" width="720" height="268">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="400" height="560" preserveAspectRatio="xMidYMid meet">
   <style>
     text { font-family: Inter, system-ui, sans-serif; }
-    .head { font-size: 11px; font-weight: 600; fill: #fafafa; }
-    .cell { font-size: 11px; fill: #18181b; }
-    .dim { font-size: 11px; fill: #3f3f46; }
-    .no { font-size: 11px; font-weight: 600; fill: #52525b; }
-    .title { font-size: 13px; font-weight: 600; fill: #18181b; }
-    .note { font-size: 10px; fill: #52525b; }
+    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
+    .name { font-size: 15px; font-weight: 600; fill: #18181b; }
+    .model { font-size: 13px; fill: #52525b; }
+    .metric { font-size: 14px; fill: #18181b; }
+    .hours { font-size: 13px; font-weight: 600; fill: #52525b; }
+    .note { font-size: 12px; fill: #52525b; }
   </style>
 
-  <text x="24" y="24" class="title">Six models, six metrics, zero delivery ledgers</text>
+  <text x="16" y="28" class="title">6 models, 6 metrics, 0 hour ledgers</text>
 
-  <rect x="24" y="36" width="672" height="28" fill="#18181b"/>
-  <text x="36" y="54" class="head">Programme</text>
-  <text x="168" y="54" class="head">Model</text>
-  <text x="360" y="54" class="head">Primary metric</text>
-  <text x="620" y="54" class="head">Hours published</text>
+  <rect x="16" y="44" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="66" class="name">US NAIRR</text>
+  <text x="372" y="66" class="hours" text-anchor="end">Hours: No</text>
+  <text x="28" y="86" class="model">Donation + coordination</text>
+  <text x="28" y="106" class="metric">840+ projects supported</text>
 
-  <rect x="24" y="64" width="672" height="26" fill="#f4f4f5"/>
-  <text x="36" y="81" class="cell" font-weight="600">US NAIRR</text>
-  <text x="168" y="81" class="dim">Donation + coordination</text>
-  <text x="360" y="81" class="cell">840 projects supported</text>
-  <text x="620" y="81" class="no">No</text>
+  <rect x="16" y="116" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="138" class="name">UK AIRR</text>
+  <text x="372" y="138" class="hours" text-anchor="end">Hours: No</text>
+  <text x="28" y="158" class="model">Public procurement</text>
+  <text x="28" y="178" class="metric">2 machines, chip counts</text>
 
-  <rect x="24" y="90" width="672" height="26" fill="#ffffff"/>
-  <text x="36" y="107" class="cell" font-weight="600">UK AIRR</text>
-  <text x="168" y="107" class="dim">Public procurement</text>
-  <text x="360" y="107" class="cell">1 machine built (of 2)</text>
-  <text x="620" y="107" class="no">No</text>
+  <rect x="16" y="188" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="210" class="name">EU AI Factories</text>
+  <text x="372" y="210" class="hours" text-anchor="end">Hours: No</text>
+  <text x="28" y="230" class="model">Co-federation</text>
+  <text x="28" y="250" class="metric">19 sites selected</text>
 
-  <rect x="24" y="116" width="672" height="26" fill="#f4f4f5"/>
-  <text x="36" y="133" class="cell" font-weight="600">EU AI Factories</text>
-  <text x="168" y="133" class="dim">Co-federation</text>
-  <text x="360" y="133" class="cell">19 sites selected</text>
-  <text x="620" y="133" class="no">No</text>
+  <rect x="16" y="260" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="282" class="name">IndiaAI</text>
+  <text x="372" y="282" class="hours" text-anchor="end">Hours: No</text>
+  <text x="28" y="302" class="model">Empanelment rental</text>
+  <text x="28" y="322" class="metric">38,000 GPUs onboarded</text>
 
-  <rect x="24" y="142" width="672" height="26" fill="#ffffff"/>
-  <text x="36" y="159" class="cell" font-weight="600">IndiaAI</text>
-  <text x="168" y="159" class="dim">Empanelment rental</text>
-  <text x="360" y="159" class="cell">38,000 GPUs onboarded</text>
-  <text x="620" y="159" class="no">No</text>
+  <rect x="16" y="332" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="354" class="name">France</text>
+  <text x="372" y="354" class="hours" text-anchor="end">Hours: No</text>
+  <text x="28" y="374" class="model">Private pledges + EU sites</text>
+  <text x="28" y="394" class="metric">Summit investment counted</text>
 
-  <rect x="24" y="168" width="672" height="26" fill="#f4f4f5"/>
-  <text x="36" y="185" class="cell" font-weight="600">France</text>
-  <text x="168" y="185" class="dim">Private pledges + EU sites</text>
-  <text x="360" y="185" class="cell">Summit investment counted</text>
-  <text x="620" y="185" class="no">No</text>
+  <rect x="16" y="404" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="426" class="name">Japan</text>
+  <text x="372" y="426" class="hours" text-anchor="end">Hours: No</text>
+  <text x="28" y="446" class="model">METI subsidies + SoftBank</text>
+  <text x="28" y="466" class="metric">Named subsidy max, not hours</text>
 
-  <rect x="24" y="194" width="672" height="26" fill="#ffffff"/>
-  <text x="36" y="211" class="cell" font-weight="600">Japan</text>
-  <text x="168" y="211" class="dim">Subsidies + SoftBank debt</text>
-  <text x="360" y="211" class="cell">SoftBank balance sheet</text>
-  <text x="620" y="211" class="no">No</text>
-
-  <text x="24" y="244" class="note">Hours = GPU-hours used per unit of public money. Checked against primary sources, August 2026.</text>
-  <text x="24" y="260" class="note">None of the six programmes publishes that number.</text>
+  <text x="16" y="508" class="note">Hours = GPU-hours used per unit of public money.</text>
+  <text x="16" y="528" class="note">India published hours sanctioned, not hours used.</text>
+  <text x="16" y="548" class="note">None of the 6 publishes hours consumed.</text>
 </svg>

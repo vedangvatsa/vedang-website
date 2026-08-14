@@ -1,74 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 344" width="680" height="344">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" width="400" height="420" preserveAspectRatio="xMidYMid meet">
   <style>
     text { font-family: Inter, system-ui, sans-serif; }
-    .title { font-size: 14px; font-weight: 600; fill: #18181b; }
-    .head { font-size: 11px; font-weight: 600; fill: #fafafa; }
-    .row { font-size: 12px; fill: #18181b; }
-    .gap { font-size: 12px; font-weight: 600; fill: #18181b; }
-    .dim { font-size: 11px; fill: #71717a; }
-    .note { font-size: 10px; fill: #52525b; }
+    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
+    .name { font-size: 15px; font-weight: 600; fill: #18181b; }
+    .gap { font-size: 18px; font-weight: 700; fill: #18181b; }
+    .dim { font-size: 13px; fill: #52525b; }
+    .note { font-size: 12px; fill: #52525b; }
   </style>
 
-  <text x="40" y="28" class="title">Pages Crawled Per Referred Visitor, June 2025</text>
+  <text x="16" y="28" class="title">Pages crawled per referred visitor</text>
 
-  <!-- Header -->
-  <rect x="40" y="42" width="200" height="26" rx="2" fill="#18181b"/>
-  <text x="50" y="59" class="head">Platform</text>
-  <rect x="240" y="42" width="250" height="26" rx="2" fill="#18181b"/>
-  <text x="250" y="59" class="head">Crawls per referred visitor</text>
-  <rect x="490" y="42" width="150" height="26" rx="2" fill="#18181b"/>
-  <text x="500" y="59" class="head">Category</text>
+  <rect x="16" y="44" width="368" height="48" fill="#f4f4f5"/>
+  <text x="28" y="64" class="name">Anthropic Claude</text>
+  <text x="372" y="64" class="dim" text-anchor="end">chatbot</text>
+  <text x="28" y="84" class="gap">70,900 : 1</text>
 
-  <!-- Anthropic -->
-  <rect x="40" y="68" width="200" height="28" rx="1" fill="#fafafa"/>
-  <text x="50" y="86" class="row" font-weight="600">Anthropic Claude</text>
-  <rect x="240" y="68" width="250" height="28" rx="1" fill="#fafafa"/>
-  <text x="250" y="86" class="gap">70,900 : 1</text>
-  <rect x="490" y="68" width="150" height="28" rx="1" fill="#fff1f0"/>
-  <text x="500" y="86" class="dim">AI chatbot</text>
+  <rect x="16" y="92" width="368" height="48" fill="#ffffff"/>
+  <text x="28" y="112" class="name">OpenAI ChatGPT</text>
+  <text x="372" y="112" class="dim" text-anchor="end">chatbot</text>
+  <text x="28" y="132" class="gap">3,700 : 1</text>
 
-  <!-- OpenAI -->
-  <rect x="40" y="96" width="200" height="28" rx="1" fill="#fafafa"/>
-  <text x="50" y="114" class="row" font-weight="600">OpenAI ChatGPT</text>
-  <rect x="240" y="96" width="250" height="28" rx="1" fill="#fafafa"/>
-  <text x="250" y="114" class="gap">3,700 : 1</text>
-  <rect x="490" y="96" width="150" height="28" rx="1" fill="#fff1f0"/>
-  <text x="500" y="114" class="dim">AI chatbot</text>
+  <rect x="16" y="140" width="368" height="48" fill="#f4f4f5"/>
+  <text x="28" y="160" class="name">Perplexity</text>
+  <text x="372" y="160" class="dim" text-anchor="end">AI search</text>
+  <text x="28" y="180" class="gap">200 : 1</text>
 
-  <!-- Perplexity -->
-  <rect x="40" y="124" width="200" height="28" rx="1" fill="#fafafa"/>
-  <text x="50" y="142" class="row" font-weight="600">Perplexity</text>
-  <rect x="240" y="124" width="250" height="28" rx="1" fill="#fafafa"/>
-  <text x="250" y="142" class="gap">200 : 1</text>
-  <rect x="490" y="124" width="150" height="28" rx="1" fill="#f0f9ff"/>
-  <text x="500" y="142" class="dim">AI search</text>
+  <rect x="16" y="188" width="368" height="48" fill="#ffffff"/>
+  <text x="28" y="208" class="name">Microsoft Bing</text>
+  <text x="372" y="208" class="dim" text-anchor="end">search</text>
+  <text x="28" y="228" class="gap">60 : 1</text>
 
-  <!-- Bing -->
-  <rect x="40" y="152" width="200" height="28" rx="1" fill="#fafafa"/>
-  <text x="50" y="170" class="row" font-weight="600">Microsoft Bing</text>
-  <rect x="240" y="152" width="250" height="28" rx="1" fill="#fafafa"/>
-  <text x="250" y="170" class="gap">60 : 1</text>
-  <rect x="490" y="152" width="150" height="28" rx="1" fill="#f0fdf4"/>
-  <text x="500" y="170" class="dim">Search engine</text>
+  <rect x="16" y="236" width="368" height="48" fill="#f4f4f5"/>
+  <text x="28" y="256" class="name">Google</text>
+  <text x="372" y="256" class="dim" text-anchor="end">search</text>
+  <text x="28" y="276" class="gap">3 : 1</text>
 
-  <!-- Google -->
-  <rect x="40" y="180" width="200" height="28" rx="1" fill="#fafafa"/>
-  <text x="50" y="198" class="row" font-weight="600">Google</text>
-  <rect x="240" y="180" width="250" height="28" rx="1" fill="#fafafa"/>
-  <text x="250" y="198" class="gap">3 : 1</text>
-  <rect x="490" y="180" width="150" height="28" rx="1" fill="#f0fdf4"/>
-  <text x="500" y="198" class="dim">Search engine</text>
+  <rect x="16" y="284" width="368" height="48" fill="#ffffff"/>
+  <text x="28" y="304" class="name">DuckDuckGo</text>
+  <text x="372" y="304" class="dim" text-anchor="end">search</text>
+  <text x="28" y="324" class="gap">&lt; 1 : 1</text>
 
-  <!-- DuckDuckGo -->
-  <rect x="40" y="208" width="200" height="28" rx="1" fill="#fafafa"/>
-  <text x="50" y="226" class="row" font-weight="600">DuckDuckGo</text>
-  <rect x="240" y="208" width="250" height="28" rx="1" fill="#fafafa"/>
-  <text x="250" y="226" class="gap">&lt; 1 : 1</text>
-  <rect x="490" y="208" width="150" height="28" rx="1" fill="#f0fdf4"/>
-  <text x="500" y="226" class="dim">Search engine</text>
-
-  <text x="40" y="270" class="note">Source: Cloudflare, "AI Search Crawl Refer Ratio," 19-26 June 2025. blog.cloudflare.com/ai-search-crawl-refer-ratio-on-radar/</text>
-  <text x="40" y="288" class="note">Ratio compares HTML pages crawled to visitors referred. Anthropic's native app does not include referrer headers, likely overstating the gap.</text>
-  <text x="40" y="306" class="note">OpenAI peak March 2025. Perplexity data from September 2025 onward. Google ratio rose to 30:1 mid-2025 before falling back.</text>
-  <text x="40" y="328" class="note" fill="#dc2626">AI chatbots crawl 20x to 23,000x more pages per referral than search engines.</text>
+  <text x="16" y="360" class="note">Cloudflare, 19-26 June 2025.</text>
+  <text x="16" y="380" class="note">Anthropic's app often omits referrer headers.</text>
+  <text x="16" y="408" class="note">Chatbots crawl far more pages per referral than search.</text>
 </svg>

@@ -6,6 +6,7 @@ import { GlossaryVisualizer } from '@/components/mdx/glossary-visualizer';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { KnowledgeCheck } from '@/components/mdx/knowledge-check';
+import { Table } from '@/components/mdx';
 import Link from 'next/link';
 
 interface CourseModuleLayoutProps {
@@ -51,6 +52,7 @@ export function CourseModuleLayout({
     CardDescription,
     KnowledgeCheck,
     Link,
+    table: Table,
   };
 
   const components = {

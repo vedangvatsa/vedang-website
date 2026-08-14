@@ -1,42 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 292" width="860" height="292">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 548" width="400" height="548" preserveAspectRatio="xMidYMid meet">
   <style>
     text { font-family: Inter, system-ui, sans-serif; }
-    .title { font-size: 13px; font-weight: 600; fill: #18181b; }
-    .head { font-size: 11px; font-weight: 600; fill: #fafafa; }
-    .cell { font-size: 11px; fill: #18181b; }
-    .dim { font-size: 11px; fill: #3f3f46; }
-    .note { font-size: 10px; fill: #52525b; }
+    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
+    .name { font-size: 15px; font-weight: 600; fill: #18181b; }
+    .row { font-size: 13px; fill: #18181b; }
+    .dim { font-size: 13px; fill: #52525b; }
+    .note { font-size: 12px; fill: #52525b; }
   </style>
-  <text x="24" y="22" class="title">Filed, decided, paid. Six cases that set the money.</text>
-  <rect x="24" y="34" width="812" height="26" fill="#18181b"/>
-  <text x="36" y="51" class="head">Case</text>
-  <text x="300" y="51" class="head">Status</text>
-  <text x="540" y="51" class="head">Money on the docket</text>
-  <rect x="24" y="60" width="812" height="26" fill="#f4f4f5"/>
-  <text x="36" y="77" class="cell" font-weight="600">Bartz v. Anthropic</text>
-  <text x="300" y="77" class="cell">Settled. Final approval 20 Jul 2026</text>
-  <text x="540" y="77" class="cell">$1.5B fund, about $3,000/title</text>
-  <rect x="24" y="86" width="812" height="26" fill="#ffffff"/>
-  <text x="36" y="103" class="cell" font-weight="600">NYT v. OpenAI / Microsoft</text>
-  <text x="300" y="103" class="cell">Active. SJ set Apr 2026</text>
-  <text x="540" y="103" class="dim">Billions claimed. $28M spent suing</text>
-  <rect x="24" y="112" width="812" height="26" fill="#f4f4f5"/>
-  <text x="36" y="129" class="cell" font-weight="600">Getty v. Stability (UK)</text>
-  <text x="300" y="129" class="cell">Decided 4 Nov 2025</text>
-  <text x="540" y="129" class="dim">Weights held not to be copies</text>
-  <rect x="24" y="138" width="812" height="26" fill="#ffffff"/>
-  <text x="36" y="155" class="cell" font-weight="600">GEMA v. OpenAI (Munich)</text>
-  <text x="300" y="155" class="cell">Plaintiff. On appeal</text>
-  <text x="540" y="155" class="dim">Lyric memorization = reproduction</text>
-  <rect x="24" y="164" width="812" height="26" fill="#f4f4f5"/>
-  <text x="36" y="181" class="cell" font-weight="600">Warner v. Udio</text>
-  <text x="300" y="181" class="cell">Settled Apr 2026</text>
-  <text x="540" y="181" class="dim">Partnership. Terms confidential</text>
-  <rect x="24" y="190" width="812" height="26" fill="#ffffff"/>
-  <text x="36" y="207" class="cell" font-weight="600">Authors Guild v. OpenAI</text>
-  <text x="300" y="207" class="cell">Active. Output claims survive</text>
-  <text x="540" y="207" class="dim">Class-wide. No paid close</text>
-  <text x="24" y="236" class="note">Tracker count as of June 2026: 200 AI suits, 68 defendants, 130 copyright cases, $6B+ disclosed stakes.</text>
-  <text x="24" y="252" class="note">Bartz is the only nine-figure cash close. NYT has spent more on lawyers than most plaintiffs will ever collect.</text>
-  <text x="24" y="268" class="note">Reuters 21 Jul 2026; [2025] EWHC 2863 (Ch); ailawsuittracker.com; Variety 9 Jul 2026.</text>
+
+  <text x="16" y="28" class="title">Filed, decided, paid</text>
+
+  <rect x="16" y="44" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="66" class="name">Bartz v. Anthropic</text>
+  <text x="28" y="86" class="row">Settled. Final approval 20 Jul 2026</text>
+  <text x="28" y="106" class="row">$1.5B fund, about $3,000/title</text>
+
+  <rect x="16" y="116" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="138" class="name">NYT v. OpenAI / Microsoft</text>
+  <text x="28" y="158" class="row">Active. SJ set Apr 2026</text>
+  <text x="28" y="178" class="dim">Billions claimed. $28M spent suing</text>
+
+  <rect x="16" y="188" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="210" class="name">Getty v. Stability (UK)</text>
+  <text x="28" y="230" class="row">Decided 4 Nov 2025</text>
+  <text x="28" y="250" class="dim">Weights held not to be copies</text>
+
+  <rect x="16" y="260" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="282" class="name">GEMA v. OpenAI (Munich)</text>
+  <text x="28" y="302" class="row">Plaintiff. On appeal</text>
+  <text x="28" y="322" class="dim">Lyric memorization = reproduction</text>
+
+  <rect x="16" y="332" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="354" class="name">Warner v. Udio</text>
+  <text x="28" y="374" class="row">Settled Apr 2026</text>
+  <text x="28" y="394" class="dim">Partnership. Terms confidential</text>
+
+  <rect x="16" y="404" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="426" class="name">Authors Guild v. OpenAI</text>
+  <text x="28" y="446" class="row">Active. Output claims survive</text>
+  <text x="28" y="466" class="dim">Class-wide. No paid close</text>
+
+  <text x="16" y="516" class="note">Bartz is the only nine-figure cash close.</text>
+  <text x="16" y="536" class="note">Tracker, June 2026: 200 AI suits, 68 defendants.</text>
 </svg>

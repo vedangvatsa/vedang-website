@@ -1,49 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 292" width="720" height="292">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 548" width="400" height="548" preserveAspectRatio="xMidYMid meet">
   <style>
     text { font-family: Inter, system-ui, sans-serif; }
-    .title { font-size: 13px; font-weight: 600; fill: #18181b; }
-    .head { font-size: 11px; font-weight: 600; fill: #fafafa; }
-    .cell { font-size: 11px; fill: #18181b; }
-    .dim { font-size: 11px; fill: #3f3f46; }
-    .note { font-size: 10px; fill: #52525b; }
+    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
+    .name { font-size: 15px; font-weight: 600; fill: #18181b; }
+    .row { font-size: 13px; fill: #18181b; }
+    .dim { font-size: 13px; fill: #52525b; }
+    .note { font-size: 12px; fill: #52525b; }
   </style>
-  <text x="24" y="22" class="title">Safety institutes: staff, cash, and whether they can fine anyone</text>
-  <rect x="24" y="34" width="672" height="26" fill="#18181b"/>
-  <text x="36" y="51" class="head">Body</text>
-  <text x="190" y="51" class="head">Staff published</text>
-  <text x="360" y="51" class="head">Money on the record</text>
-  <text x="560" y="51" class="head">Can fine?</text>
-  <rect x="24" y="60" width="672" height="26" fill="#f4f4f5"/>
-  <text x="36" y="77" class="cell" font-weight="600">UK AISI (Security)</text>
-  <text x="190" y="77" class="cell">100+ technical</text>
-  <text x="360" y="77" class="cell">£100M envelope to 2030</text>
-  <text x="560" y="77" class="dim">No</text>
-  <rect x="24" y="86" width="672" height="26" fill="#ffffff"/>
-  <text x="36" y="103" class="cell" font-weight="600">US CAISI (NIST)</text>
-  <text x="190" y="103" class="dim">Not a published headcount</text>
-  <text x="360" y="103" class="cell">~$15M FY2026</text>
-  <text x="560" y="103" class="dim">No</text>
-  <rect x="24" y="112" width="672" height="26" fill="#f4f4f5"/>
-  <text x="36" y="129" class="cell" font-weight="600">EU AI Office</text>
-  <text x="190" y="129" class="cell">125+, hiring 40 more</text>
-  <text x="360" y="129" class="cell">€46.5M setup (2024)</text>
-  <text x="560" y="129" class="cell">Yes, under AI Act</text>
-  <rect x="24" y="138" width="672" height="26" fill="#ffffff"/>
-  <text x="36" y="155" class="cell" font-weight="600">Japan J-AISI</text>
-  <text x="190" y="155" class="cell">About 23</text>
-  <text x="360" y="155" class="dim">Plan to double. Cash unpublished</text>
-  <text x="560" y="155" class="dim">No</text>
-  <rect x="24" y="164" width="672" height="26" fill="#f4f4f5"/>
-  <text x="36" y="181" class="cell" font-weight="600">Singapore AISI</text>
-  <text x="190" y="181" class="dim">Not a published headcount</text>
-  <text x="360" y="181" class="cell">S$10M/year reported</text>
-  <text x="560" y="181" class="dim">No</text>
-  <rect x="24" y="190" width="672" height="26" fill="#ffffff"/>
-  <text x="36" y="207" class="cell" font-weight="600">India Safety Institute</text>
-  <text x="190" y="207" class="dim">Announced Jan 2025</text>
-  <text x="360" y="207" class="dim">₹20.46 Cr Safe &amp; Trusted pillar</text>
-  <text x="560" y="207" class="dim">No</text>
-  <text x="24" y="236" class="note">UK staff and mission from aisi.gov.uk. US cash from FY2026 appropriations plus TMF loan (IFP, Aug 2025; still the public ledger in 2026).</text>
-  <text x="24" y="252" class="note">EU staff and hiring from the Commission AI Office page, updated 13 Aug 2026. India figure is the Safe &amp; Trusted outlay in Q.1668, not a separate institute budget.</text>
-  <text x="24" y="268" class="note">Only the AI Office sits on a statute that can restrict a model and issue a fine.</text>
+
+  <text x="16" y="28" class="title">Staff, cash, and who can fine</text>
+
+  <rect x="16" y="44" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="66" class="name">UK AISI</text>
+  <text x="372" y="66" class="dim" text-anchor="end">Fine: No</text>
+  <text x="28" y="86" class="row">100+ technical staff</text>
+  <text x="28" y="106" class="row">£100M envelope to 2030</text>
+
+  <rect x="16" y="116" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="138" class="name">US CAISI (NIST)</text>
+  <text x="372" y="138" class="dim" text-anchor="end">Fine: No</text>
+  <text x="28" y="158" class="dim">Headcount unpublished</text>
+  <text x="28" y="178" class="row">~$15M FY2026</text>
+
+  <rect x="16" y="188" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="210" class="name">EU AI Office</text>
+  <text x="372" y="210" class="row" text-anchor="end">Fine: Yes</text>
+  <text x="28" y="230" class="row">125+, hiring 40 more</text>
+  <text x="28" y="250" class="row">€46.5M setup (2024)</text>
+
+  <rect x="16" y="260" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="282" class="name">Japan J-AISI</text>
+  <text x="372" y="282" class="dim" text-anchor="end">Fine: No</text>
+  <text x="28" y="302" class="row">About 23 staff</text>
+  <text x="28" y="322" class="dim">Plan to double. Cash unpublished</text>
+
+  <rect x="16" y="332" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="354" class="name">Singapore AISI</text>
+  <text x="372" y="354" class="dim" text-anchor="end">Fine: No</text>
+  <text x="28" y="374" class="dim">Headcount unpublished</text>
+  <text x="28" y="394" class="row">S$10M/year reported</text>
+
+  <rect x="16" y="404" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="426" class="name">India Safety Institute</text>
+  <text x="372" y="426" class="dim" text-anchor="end">Fine: No</text>
+  <text x="28" y="446" class="dim">Announced Jan 2025</text>
+  <text x="28" y="466" class="dim">₹20.46 Cr Safe &amp; Trusted pillar</text>
+
+  <text x="16" y="516" class="note">Only the AI Office sits on a statute that can</text>
+  <text x="16" y="536" class="note">restrict a model and issue a fine.</text>
 </svg>
