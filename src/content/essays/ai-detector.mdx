@@ -133,18 +133,6 @@ Security checks had been copied across endpoints. I extracted them into a shared
 
 I also cleaned up unused dependencies, pinned the remaining ones, and added a `download_assets.py` script so the data and models could be fetched automatically. The script downloads the trained models, the benchmark datasets, and the precomputed feature statistics. A new contributor can clone the repo, run the script, and start the API in a few commands. The result is a project that is portable, not a collection of notebooks that only work on the original machine.
 
-## 9. What this teaches us
-
-A few principles kept recurring throughout the project. The first is that interpretability does not destroy performance. A small Random Forest with carefully chosen features can compete with deep neural networks on structural detection. It will not beat a fine-tuned transformer on every benchmark, but it will beat it on cost, latency, and explainability. For most production use cases, that combination is more valuable than a leaderboard score.
-
-The second principle is that domain alignment matters more than parameter size. A model trained on the right domain beats a larger model trained on the wrong domain. This is counterintuitive because bigger models feel more powerful. But a big model trained mostly on news will misclassify academic essays, while a small model trained on academic essays will get them right. The data distribution matters as much as the architecture.
-
-The third principle is that ensembles outperform single models. Combining stylometry, neural pipelines, and domain routing gives better coverage than any one approach. Each component handles a different part of the problem. Stylometry handles the common case. Neural pipelines handle the hard cases. Domain routing keeps the model from confusing style with authorship.
-
-The fourth principle is that production concerns matter as much as benchmark accuracy. Caching, rate limiting, calibration, and clean feature definitions determine whether a detector is useful in practice. A model with 0.99 AUC that takes two seconds per request and cannot explain its output is less useful than a model with 0.95 AUC that runs in milliseconds and tells you why it decided what it decided.
-
-The final principle is that honesty about failure is a feature, not a bug. A detector that warns on short inputs, flags out-of-domain text, and explains its top features is more trustworthy than one that claims certainty everywhere. Users can decide how to act when they understand the uncertainty.
-
 <KeyTakeaway>
 Pick the detector you can explain, run cheaply, and trust under the attacks your users actually try. Benchmark rank is a press number.
 </KeyTakeaway>
