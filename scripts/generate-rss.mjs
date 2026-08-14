@@ -1,39 +1,46 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import matter from 'gray-matter';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
 const ESSAYS_DIR = path.resolve(REPO_ROOT, 'src/content/essays');
 const PUBLIC_DIR = path.resolve(REPO_ROOT, 'public');
 
+function escapeXml(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 function generateRSS() {
-  const files = fs.readdirSync(ESSAYS_DIR).filter(f => f.endsWith('.mdx'));
-  let items = '';
-
-  for (const file of files) {
-    const raw = fs.readFileSync(path.join(ESSAYS_DIR, file), 'utf-8');
+  const files = fs.readdirSync(ESSAYS_DIR).filter((f) => f.endsWith('.mdx'));
+  const essays = files.map((file) => {
     const slug = file.replace(/\.mdx$/, '');
-    
-    const titleMatch = raw.match(/title:\s*['"]?(.+?)['"]?\n/);
-    const dateMatch = raw.match(/date:\s*['"]?(.+?)['"]?\n/);
-    const descMatch = raw.match(/description:\s*['"]?(.+?)['"]?\n/);
-    
-    const title = titleMatch ? titleMatch[1].replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;') : slug;
-    const dateStr = dateMatch ? dateMatch[1] : new Date().toISOString();
-    const desc = descMatch ? descMatch[1].replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;') : '';
-    
-    const pubDate = new Date(dateStr).toUTCString();
+    const raw = fs.readFileSync(path.join(ESSAYS_DIR, file), 'utf-8');
+    const { data } = matter(raw);
+    return {
+      slug,
+      title: data.title || slug,
+      date: data.date || new Date().toISOString(),
+      summary: data.summary || data.description || '',
+    };
+  });
 
-    items += `
+  essays.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  const items = essays.map((essay) => `
     <item>
-      <title>${title}</title>
-      <link>https://veda.ng/${slug}</link>
-      <guid>https://veda.ng/${slug}</guid>
-      <pubDate>${pubDate}</pubDate>
-      <description>${desc}</description>
-    </item>`;
-  }
+      <title>${escapeXml(essay.title)}</title>
+      <link>https://veda.ng/${essay.slug}</link>
+      <guid>https://veda.ng/${essay.slug}</guid>
+      <pubDate>${new Date(essay.date).toUTCString()}</pubDate>
+      <description>${escapeXml(essay.summary)}</description>
+    </item>`).join('');
 
   const xml = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -48,7 +55,7 @@ function generateRSS() {
 </rss>`;
 
   fs.writeFileSync(path.join(PUBLIC_DIR, 'feed.xml'), xml);
-  console.log('✅ Generated public/feed.xml');
+  console.log(`✅ Generated public/feed.xml (${essays.length} essays)`);
 }
 
 generateRSS();

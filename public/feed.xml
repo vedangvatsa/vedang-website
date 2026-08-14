@@ -8,375 +8,459 @@
     <atom:link href="https://veda.ng/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Agentic Commerce</title>
-      <link>https://veda.ng/agentcommerce</link>
-      <guid>https://veda.ng/agentcommerce</guid>
-      <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
-      <description></description>
+      <title>When Agents Stop Speaking English</title>
+      <link>https://veda.ng/agentspeak</link>
+      <guid>https://veda.ng/agentspeak</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
+      <description>A2A still ships a sample message that says hello in English. The pipes of 2025 were JSON-RPC, REST, and payment mandates. The leftover human language is the part that will go.</description>
     </item>
     <item>
-      <title>The AI Agent Economy</title>
-      <link>https://veda.ng/agenteconomy</link>
-      <guid>https://veda.ng/agenteconomy</guid>
-      <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
-      <description></description>
+      <title>The IndiaAI Mission</title>
+      <link>https://veda.ng/indiaai</link>
+      <guid>https://veda.ng/indiaai</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
+      <description>India approved ₹10,372 crore for an AI mission. By 9 February 2026, ₹401 crore had arrived. Officials count onboarded GPUs. Parliament later published hours sanctioned, not hours used.</description>
     </item>
     <item>
-      <title>Towards the Agentic Web</title>
-      <link>https://veda.ng/agenticweb</link>
-      <guid>https://veda.ng/agenticweb</guid>
-      <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
-      <description></description>
+      <title>The Neocloud</title>
+      <link>https://veda.ng/neocloud</link>
+      <guid>https://veda.ng/neocloud</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
+      <description>CoreWeave calls itself a hyperscaler. Its S-1 showed Microsoft as 62% of 2024 revenue. The March 2026 loan was rated on the GPU rack and the customer contract. That is a landlord with a take-or-pay lease, not AWS.</description>
     </item>
     <item>
-      <title>Agents Eating SaaS</title>
-      <link>https://veda.ng/agentsaas</link>
-      <guid>https://veda.ng/agentsaas</guid>
-      <pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate>
-      <description></description>
+      <title>A Mind That Outlives You</title>
+      <link>https://veda.ng/outlives</link>
+      <guid>https://veda.ng/outlives</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
+      <description>OpenAI built ChatGPT memory for multi-year time horizons. Apple, Google, and Facebook already have dead-user tools. The assistants that now hold the running notes of a life still do not.</description>
     </item>
     <item>
-      <title>The Agent Infrastructure Stack</title>
-      <link>https://veda.ng/agentstack</link>
-      <guid>https://veda.ng/agentstack</guid>
-      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
-      <description></description>
+      <title>Private Cognition</title>
+      <link>https://veda.ng/private</link>
+      <guid>https://veda.ng/private</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
+      <description>You can encrypt a disk. You cannot yet encrypt a thought at ChatGPT prices. Apple&apos;s Private Cloud Compute is a shipped TEE. Zama&apos;s FHE still clocks a GPT-2 token in seconds. Zero data retention is a contract. Coverage uses one word for all three.</description>
     </item>
     <item>
-      <title>How I Built an AI-Text Detector That Actually Works</title>
+      <title>Agentic Internet Traffic</title>
+      <link>https://veda.ng/traffic</link>
+      <guid>https://veda.ng/traffic</guid>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
+      <description>The open web is paid when a person arrives. AI crawlers take the page and leave. The ratio has run to tens of thousands of fetches per referred visit, and the site pays the hosting bill.</description>
+    </item>
+    <item>
+      <title>Open-Weight Licences</title>
+      <link>https://veda.ng/licenses</link>
+      <guid>https://veda.ng/licenses</guid>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Labs call the weights open. The files are Apache, MIT, Community, or Research. You can run the download. You cannot check the training data. Llama still has a veto at 700 million users.</description>
+    </item>
+    <item>
+      <title>The National AI Compute Scorecard</title>
+      <link>https://veda.ng/compute</link>
+      <guid>https://veda.ng/compute</guid>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+      <description>6 countries took different approaches to national AI compute. I compared what each programme counts.</description>
+    </item>
+    <item>
+      <title>Sovereign AI Debt</title>
+      <link>https://veda.ng/aidebt</link>
+      <guid>https://veda.ng/aidebt</guid>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Sovereign funds are financing AI compute with equity, convertibles, and bank debt. Stargate, MGX, G42, Saudi Arabia, and SoftBank each put 3 figures on the table: announced, funded, and spent. The gap between them shows who carries the risk.</description>
+    </item>
+    <item>
+      <title>AI Safety Institutes</title>
+      <link>https://veda.ng/safety</link>
+      <guid>https://veda.ng/safety</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Every capital launched a safety institute. The UK hired. The US renamed the shop and kept about $15 million in public cash. The EU built an Office that can fine. The word spread. The statute did not.</description>
+    </item>
+    <item>
+      <title>The AI Lawsuit Ledger</title>
+      <link>https://veda.ng/lawsuits</link>
+      <guid>https://veda.ng/lawsuits</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Two hundred AI suits sit on public dockets. One produced a $1.5 billion cheque. The Times has spent $28 million and does not have a verdict. The paid column is almost entirely people who did not sue.</description>
+    </item>
+    <item>
+      <title>Intelligence is a Commodity</title>
+      <link>https://veda.ng/intelligence</link>
+      <guid>https://veda.ng/intelligence</guid>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
+      <description>You can now buy intelligence at a monthly price. Higher list prices buy longer reasoning. Access is cheaper. Expertise is not the same as a list price.</description>
+    </item>
+    <item>
+      <title>Building an AI Text Detector</title>
       <link>https://veda.ng/ai-detector</link>
       <guid>https://veda.ng/ai-detector</guid>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The AI Economy</title>
-      <link>https://veda.ng/aieconomy</link>
-      <guid>https://veda.ng/aieconomy</guid>
-      <pubDate>Sat, 07 Mar 2026 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Sacred Algorithms</title>
-      <link>https://veda.ng/algorithms</link>
-      <guid>https://veda.ng/algorithms</guid>
-      <pubDate>Fri, 19 Sep 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The World as an Interface</title>
-      <link>https://veda.ng/ambient</link>
-      <guid>https://veda.ng/ambient</guid>
-      <pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>API States</title>
-      <link>https://veda.ng/apis</link>
-      <guid>https://veda.ng/apis</guid>
-      <pubDate>Fri, 07 Nov 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>AI Superintelligence Timeline</title>
-      <link>https://veda.ng/asi</link>
-      <guid>https://veda.ng/asi</guid>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Attention Refinery</title>
-      <link>https://veda.ng/attention</link>
-      <guid>https://veda.ng/attention</guid>
-      <pubDate>Wed, 01 Oct 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Tracing Blockchain&apos;s Journey</title>
-      <link>https://veda.ng/blockchain</link>
-      <guid>https://veda.ng/blockchain</guid>
-      <pubDate>Mon, 22 Sep 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Bureaucracy is the friction tax everyone pays</title>
-      <link>https://veda.ng/bureaucracy</link>
-      <guid>https://veda.ng/bureaucracy</guid>
-      <pubDate>Wed, 15 Oct 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Cognitive Load Crisis</title>
-      <link>https://veda.ng/cognition</link>
-      <guid>https://veda.ng/cognition</guid>
-      <pubDate>Fri, 24 Oct 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>From Cheap to Competitive</title>
-      <link>https://veda.ng/competitive</link>
-      <guid>https://veda.ng/competitive</guid>
-      <pubDate>Thu, 26 Feb 2026 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Computational Constitutions</title>
-      <link>https://veda.ng/constitutions</link>
-      <guid>https://veda.ng/constitutions</guid>
-      <pubDate>Fri, 22 Aug 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The Dark Forest Internet</title>
-      <link>https://veda.ng/darkforest</link>
-      <guid>https://veda.ng/darkforest</guid>
-      <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Synthetic Empathy</title>
-      <link>https://veda.ng/empathy</link>
-      <guid>https://veda.ng/empathy</guid>
-      <pubDate>Thu, 29 Jan 2026 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The Great Funding Realignment</title>
-      <link>https://veda.ng/funding</link>
-      <guid>https://veda.ng/funding</guid>
-      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The God Protocol</title>
-      <link>https://veda.ng/godprotocol</link>
-      <guid>https://veda.ng/godprotocol</guid>
-      <pubDate>Fri, 11 Jul 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Governance in the Age of AGI</title>
-      <link>https://veda.ng/governance</link>
-      <guid>https://veda.ng/governance</guid>
-      <pubDate>Sun, 14 Dec 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The Hustle Trap</title>
-      <link>https://veda.ng/hustle</link>
-      <guid>https://veda.ng/hustle</guid>
-      <pubDate>Tue, 30 Dec 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The Infinity Economy</title>
-      <link>https://veda.ng/infinity</link>
-      <guid>https://veda.ng/infinity</guid>
-      <pubDate>Wed, 11 Mar 2026 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Intuitive Singularity</title>
-      <link>https://veda.ng/instinct</link>
-      <guid>https://veda.ng/instinct</guid>
-      <pubDate>Tue, 23 Dec 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Artificial Intuition</title>
-      <link>https://veda.ng/intuition</link>
-      <guid>https://veda.ng/intuition</guid>
-      <pubDate>Mon, 20 Oct 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>An Internet of Lies</title>
-      <link>https://veda.ng/lies</link>
-      <guid>https://veda.ng/lies</guid>
-      <pubDate>Sun, 28 Dec 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The In-Between State</title>
-      <link>https://veda.ng/liminal</link>
-      <guid>https://veda.ng/liminal</guid>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The Mesh Economy</title>
-      <link>https://veda.ng/mesh</link>
-      <guid>https://veda.ng/mesh</guid>
-      <pubDate>Fri, 13 Jun 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Digital Monasticism</title>
-      <link>https://veda.ng/monasticism</link>
-      <guid>https://veda.ng/monasticism</guid>
-      <pubDate>Fri, 03 Oct 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The Singularity Paradox</title>
-      <link>https://veda.ng/paradox</link>
-      <guid>https://veda.ng/paradox</guid>
-      <pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The AI Implementation Playbook</title>
-      <link>https://veda.ng/playbook</link>
-      <guid>https://veda.ng/playbook</guid>
-      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The Plurality Trap</title>
-      <link>https://veda.ng/plurality</link>
-      <guid>https://veda.ng/plurality</guid>
-      <pubDate>Fri, 30 May 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The Post-Interface Internet</title>
-      <link>https://veda.ng/postinterface</link>
-      <guid>https://veda.ng/postinterface</guid>
-      <pubDate>Sat, 25 Apr 2026 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Post-Scarcity Technology</title>
-      <link>https://veda.ng/postscarcity</link>
-      <guid>https://veda.ng/postscarcity</guid>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Pseudonymous Agency</title>
-      <link>https://veda.ng/pseudonymity</link>
-      <guid>https://veda.ng/pseudonymity</guid>
-      <pubDate>Fri, 08 Aug 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Rationality in AI</title>
-      <link>https://veda.ng/rationality</link>
-      <guid>https://veda.ng/rationality</guid>
-      <pubDate>Mon, 06 Oct 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The Revision Gap</title>
-      <link>https://veda.ng/revision</link>
-      <guid>https://veda.ng/revision</guid>
-      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The Sensory Internet</title>
-      <link>https://veda.ng/sensory</link>
-      <guid>https://veda.ng/sensory</guid>
-      <pubDate>Fri, 27 Jun 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Are We in a Computer Simulation?</title>
-      <link>https://veda.ng/simulation</link>
-      <guid>https://veda.ng/simulation</guid>
-      <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The Simulation Layer</title>
-      <link>https://veda.ng/simulayer</link>
-      <guid>https://veda.ng/simulayer</guid>
-      <pubDate>Fri, 16 May 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Lessons from Singapore&apos;s Arc</title>
-      <link>https://veda.ng/singapore</link>
-      <guid>https://veda.ng/singapore</guid>
-      <pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>What is the Singularity?</title>
-      <link>https://veda.ng/singularity</link>
-      <guid>https://veda.ng/singularity</guid>
-      <pubDate>Tue, 25 Nov 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Computational Social Science</title>
-      <link>https://veda.ng/socialscience</link>
-      <guid>https://veda.ng/socialscience</guid>
-      <pubDate>Fri, 05 Sep 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>The Agentic State</title>
-      <link>https://veda.ng/stateagents</link>
-      <guid>https://veda.ng/stateagents</guid>
-      <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
-      <description></description>
+      <description>Data, stylometric features, and production limits for AI text detection at scale.</description>
     </item>
     <item>
       <title>The State of AI</title>
       <link>https://veda.ng/stateofai</link>
       <guid>https://veda.ng/stateofai</guid>
       <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
-      <description></description>
+      <description>An OpenAlex sweep of 5,003,783 papers whose abstracts match AI method terms, 2013 through mid-2026. Neural networks still lead the cumulative count. LLM mentions grew 29.9x from 2018 to 2025. China leads volume. The US still leads LLM papers. 48.9% of the corpus has zero citations.</description>
     </item>
     <item>
       <title>The State of Web3</title>
       <link>https://veda.ng/stateofweb3</link>
       <guid>https://veda.ng/stateofweb3</guid>
       <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
-      <description></description>
+      <description>A bibliometric analysis of 128,286 academic papers classified as blockchain or cryptocurrency research by OpenAlex, cross-validated against Crossref, Europe PMC, arXiv, and DBLP. Tracking three eras of growth, the DeFi-NFT divergence, post-quantum urgency, and the global research map from 2013 through mid-2026.</description>
     </item>
     <item>
-      <title>The Stepwise Approach to Enterprise AI</title>
-      <link>https://veda.ng/stepwise</link>
-      <guid>https://veda.ng/stepwise</guid>
-      <pubDate>Mon, 06 Apr 2026 00:00:00 GMT</pubDate>
-      <description></description>
+      <title>The Agent Infrastructure Stack</title>
+      <link>https://veda.ng/agentstack</link>
+      <guid>https://veda.ng/agentstack</guid>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <description>Over $5 billion in venture capital has been deployed into the eight layers of infrastructure that AI agents need to function.</description>
     </item>
     <item>
-      <title>The Substrate Shift</title>
-      <link>https://veda.ng/substrate</link>
-      <guid>https://veda.ng/substrate</guid>
-      <pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate>
-      <description></description>
+      <title>The Great Funding Realignment</title>
+      <link>https://veda.ng/funding</link>
+      <guid>https://veda.ng/funding</guid>
+      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+      <description>An empirical study of global venture capital cycles from 2015 to 2026, analyzing capital concentration, the expansion of median check sizes, and the Seed-to-Series A transition bottleneck.</description>
+    </item>
+    <item>
+      <title>The AI Implementation Playbook</title>
+      <link>https://veda.ng/playbook</link>
+      <guid>https://veda.ng/playbook</guid>
+      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+      <description>A complete, step-by-step framework for implementing AI agents across every function of a startup. From brand consistency to automated outreach to SEO that runs itself.</description>
+    </item>
+    <item>
+      <title>The Post-Interface Internet</title>
+      <link>https://veda.ng/postinterface</link>
+      <guid>https://veda.ng/postinterface</guid>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 GMT</pubDate>
+      <description>The GUI was a 40-year hack for human-computer impedance matching.</description>
+    </item>
+    <item>
+      <title>Agents Eating SaaS</title>
+      <link>https://veda.ng/agentsaas</link>
+      <guid>https://veda.ng/agentsaas</guid>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description>The $400 billion SaaS industry was built on per-seat pricing. AI agents do not sit in seats.</description>
+    </item>
+    <item>
+      <title>The Agentic State</title>
+      <link>https://veda.ng/stateagents</link>
+      <guid>https://veda.ng/stateagents</guid>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Estonia claims 100% of government services are online. Singapore deployed AI across its public service at scale.</description>
     </item>
     <item>
       <title>The Text Field is the New Dashboard</title>
       <link>https://veda.ng/textui</link>
       <guid>https://veda.ng/textui</guid>
       <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
-      <description></description>
+      <description>When a text field backed by an LLM can answer any question by calling internal APIs directly, the dashboard becomes redundant.</description>
     </item>
     <item>
-      <title>Programmable Trust</title>
-      <link>https://veda.ng/trust</link>
-      <guid>https://veda.ng/trust</guid>
-      <pubDate>Fri, 25 Jul 2025 00:00:00 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Twilight Economy</title>
-      <link>https://veda.ng/twilight</link>
-      <guid>https://veda.ng/twilight</guid>
-      <pubDate>Mon, 16 Feb 2026 00:00:00 GMT</pubDate>
-      <description></description>
+      <title>The Stepwise Approach to Enterprise AI</title>
+      <link>https://veda.ng/stepwise</link>
+      <guid>https://veda.ng/stepwise</guid>
+      <pubDate>Mon, 06 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Most enterprises fail at AI by deploying it everywhere at once. Evidence shows that starting with narrow, high-frequency tasks produces measurable ROI.</description>
     </item>
     <item>
       <title>The YC Portfolio, Decoded</title>
       <link>https://veda.ng/yc</link>
       <guid>https://veda.ng/yc</guid>
       <pubDate>Sat, 04 Apr 2026 00:00:00 GMT</pubDate>
-      <description></description>
+      <description>An analysis of Y Combinator&apos;s 5,818 companies reveals five structural shifts: B2B dominance at 51%, the rise of the AI employee, defense tech at scale,...</description>
+    </item>
+    <item>
+      <title>Post-Scarcity Technology</title>
+      <link>https://veda.ng/postscarcity</link>
+      <guid>https://veda.ng/postscarcity</guid>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate>
+      <description>When the marginal cost of intelligence, energy, and digital goods trends toward zero, the economic frameworks built on scarcity face structural pressure.</description>
+    </item>
+    <item>
+      <title>Agentic Commerce</title>
+      <link>https://veda.ng/agentcommerce</link>
+      <guid>https://veda.ng/agentcommerce</guid>
+      <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
+      <description>When algorithms start shopping on behalf of consumers, traditional e-commerce breaks.</description>
+    </item>
+    <item>
+      <title>Towards the Agentic Web</title>
+      <link>https://veda.ng/agenticweb</link>
+      <guid>https://veda.ng/agenticweb</guid>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate>
+      <description>How the internet is shifting from a place where humans find information to  a platform where autonomous AI agents get things done on your behalf.</description>
+    </item>
+    <item>
+      <title>The Infinity Economy</title>
+      <link>https://veda.ng/infinity</link>
+      <guid>https://veda.ng/infinity</guid>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 GMT</pubDate>
+      <description>Can AI and decentralized systems make scarcity obsolete, or does the physical world have something to say about that?</description>
+    </item>
+    <item>
+      <title>The AI Economy</title>
+      <link>https://veda.ng/aieconomy</link>
+      <guid>https://veda.ng/aieconomy</guid>
+      <pubDate>Sat, 07 Mar 2026 00:00:00 GMT</pubDate>
+      <description>Job displacement, market concentration, and what a balanced AI transition actually requires.</description>
+    </item>
+    <item>
+      <title>Lessons from Singapore&apos;s Arc</title>
+      <link>https://veda.ng/singapore</link>
+      <guid>https://veda.ng/singapore</guid>
+      <pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate>
+      <description>How a fishing village became one of the richest countries on earth, and what the development economics literature says about why.</description>
+    </item>
+    <item>
+      <title>From Cheap to Competitive</title>
+      <link>https://veda.ng/competitive</link>
+      <guid>https://veda.ng/competitive</guid>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 GMT</pubDate>
+      <description>How national product quality perception follows income growth with a predictable lag, and where India sits on that arc today.</description>
+    </item>
+    <item>
+      <title>The Revision Gap</title>
+      <link>https://veda.ng/revision</link>
+      <guid>https://veda.ng/revision</guid>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <description>Why the difference between mediocre and effective writing is not first-draft quality but revision depth, how AI systems can be structured to close this...</description>
+    </item>
+    <item>
+      <title>Twilight Economy</title>
+      <link>https://veda.ng/twilight</link>
+      <guid>https://veda.ng/twilight</guid>
+      <pubDate>Mon, 16 Feb 2026 00:00:00 GMT</pubDate>
+      <description>The zone where human and AI labor blend indistinguishably, where attribution becomes indeterminate, and where the legal, economic, and psychological...</description>
+    </item>
+    <item>
+      <title>Are We in a Computer Simulation?</title>
+      <link>https://veda.ng/simulation</link>
+      <guid>https://veda.ng/simulation</guid>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+      <description>A structured examination of the simulation hypothesis: Bostrom&apos;s trilemma, the computational constraints, the consciousness dependency, and what modern...</description>
+    </item>
+    <item>
+      <title>The Singularity Paradox</title>
+      <link>https://veda.ng/paradox</link>
+      <guid>https://veda.ng/paradox</guid>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate>
+      <description>Why every prediction about post-singularity futures is self-defeating, how the alignment problem compounds with the control problem, and what the...</description>
+    </item>
+    <item>
+      <title>Synthetic Empathy</title>
+      <link>https://veda.ng/empathy</link>
+      <guid>https://veda.ng/empathy</guid>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 GMT</pubDate>
+      <description>A clinical trial showed AI therapy reduced depression symptoms by 51%. The WHO reports 1 in 6 people experience loneliness.</description>
+    </item>
+    <item>
+      <title>The AI Agent Economy</title>
+      <link>https://veda.ng/agenteconomy</link>
+      <guid>https://veda.ng/agenteconomy</guid>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
+      <description>When software starts acting as an economic agent, sourcing suppliers, executing trades, managing projects, the corporation as it exists today faces...</description>
+    </item>
+    <item>
+      <title>AI Superintelligence Timeline</title>
+      <link>https://veda.ng/asi</link>
+      <guid>https://veda.ng/asi</guid>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate>
+      <description>Why expert predictions for artificial superintelligence range from 2027 to 2100+, what the key bottlenecks are (compute, data, architecture,...</description>
+    </item>
+    <item>
+      <title>The In-Between State</title>
+      <link>https://veda.ng/liminal</link>
+      <guid>https://veda.ng/liminal</guid>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
+      <description>Transhumanism&apos;s actual near-term trajectory: not dramatic transcendence but a multi-decade period of partial, uneven, and socially disruptive...</description>
+    </item>
+    <item>
+      <title>The Hustle Trap</title>
+      <link>https://veda.ng/hustle</link>
+      <guid>https://veda.ng/hustle</guid>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 GMT</pubDate>
+      <description>After 55 hours per week, productivity drops to nearly zero.</description>
+    </item>
+    <item>
+      <title>An Internet of Lies</title>
+      <link>https://veda.ng/lies</link>
+      <guid>https://veda.ng/lies</guid>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 GMT</pubDate>
+      <description>Vendor reports put deepfake volume up hundreds of percent. Human detection of high-quality fakes is near chance in lab work. Official loss tallies lag.</description>
+    </item>
+    <item>
+      <title>Intuitive Singularity</title>
+      <link>https://veda.ng/instinct</link>
+      <guid>https://veda.ng/instinct</guid>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 GMT</pubDate>
+      <description>When AI systems transition from tools that execute commands to systems that anticipate intent, the interface between human and machine cognition...</description>
+    </item>
+    <item>
+      <title>Governance for AGI</title>
+      <link>https://veda.ng/governance</link>
+      <guid>https://veda.ng/governance</guid>
+      <pubDate>Sun, 14 Dec 2025 00:00:00 GMT</pubDate>
+      <description>Three regulatory superpowers are building incompatible AI governance frameworks. The EU bans practices. The US deregulates. China registers algorithms.</description>
+    </item>
+    <item>
+      <title>The Substrate Shift</title>
+      <link>https://veda.ng/substrate</link>
+      <guid>https://veda.ng/substrate</guid>
+      <pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate>
+      <description>Silicon is hitting physical limits at the atomic scale. DNA stores 455 exabytes per gram.</description>
+    </item>
+    <item>
+      <title>The World as an Interface</title>
+      <link>https://veda.ng/ambient</link>
+      <guid>https://veda.ng/ambient</guid>
+      <pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate>
+      <description>The smart home market will reach $175 billion in 2025. Device shipments approach 1.25 billion units.</description>
+    </item>
+    <item>
+      <title>What is the Singularity?</title>
+      <link>https://veda.ng/singularity</link>
+      <guid>https://veda.ng/singularity</guid>
+      <pubDate>Tue, 25 Nov 2025 00:00:00 GMT</pubDate>
+      <description>The word, the alignment problem, and why the only speed question that matters is a week versus a decade. Dates live elsewhere.</description>
+    </item>
+    <item>
+      <title>API States</title>
+      <link>https://veda.ng/apis</link>
+      <guid>https://veda.ng/apis</guid>
+      <pubDate>Fri, 07 Nov 2025 00:00:00 GMT</pubDate>
+      <description>Estonia runs 99% of public services digitally and saves 2% of GDP annually. India&apos;s UPI processes billions of transactions monthly.</description>
+    </item>
+    <item>
+      <title>Cognitive Load Crisis</title>
+      <link>https://veda.ng/cognition</link>
+      <guid>https://veda.ng/cognition</guid>
+      <pubDate>Fri, 24 Oct 2025 00:00:00 GMT</pubDate>
+      <description>The average attention span on a screen is 47 seconds. A 2025 US survey put daily phone checks at 205.</description>
+    </item>
+    <item>
+      <title>Artificial Intuition</title>
+      <link>https://veda.ng/intuition</link>
+      <guid>https://veda.ng/intuition</guid>
+      <pubDate>Mon, 20 Oct 2025 00:00:00 GMT</pubDate>
+      <description>How machines may develop synthetic analogues to human intuition through pattern recognition at scale, what Kahneman&apos;s dual-process theory reveals about...</description>
+    </item>
+    <item>
+      <title>Bureaucracy is the friction tax everyone pays</title>
+      <link>https://veda.ng/bureaucracy</link>
+      <guid>https://veda.ng/bureaucracy</guid>
+      <pubDate>Wed, 15 Oct 2025 00:00:00 GMT</pubDate>
+      <description>Why institutional complexity accumulates faster than it resolves, what the measurable costs are across sectors, and where digital-first governance...</description>
+    </item>
+    <item>
+      <title>The Dark Forest Internet</title>
+      <link>https://veda.ng/darkforest</link>
+      <guid>https://veda.ng/darkforest</guid>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
+      <description>Bots now generate 51% of all web traffic. 74% of new web pages contain AI-generated text.</description>
+    </item>
+    <item>
+      <title>Rationality in AI</title>
+      <link>https://veda.ng/rationality</link>
+      <guid>https://veda.ng/rationality</guid>
+      <pubDate>Mon, 06 Oct 2025 00:00:00 GMT</pubDate>
+      <description>What it means for an AI system to be rational, how decision theory applies to artificial agents, why the orthogonality thesis makes alignment a...</description>
+    </item>
+    <item>
+      <title>Digital Monasticism</title>
+      <link>https://veda.ng/monasticism</link>
+      <guid>https://veda.ng/monasticism</guid>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 GMT</pubDate>
+      <description>Silence is the new luxury. The average person spends 7 hours on screens daily. Gloria Mark&apos;s mean screen attention is 47 seconds. The median is 40.</description>
+    </item>
+    <item>
+      <title>Attention Refinery</title>
+      <link>https://veda.ng/attention</link>
+      <guid>https://veda.ng/attention</guid>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 GMT</pubDate>
+      <description>The five largest technology companies generate over $600 billion per year by extracting and reselling human attention.</description>
+    </item>
+    <item>
+      <title>What Blockchain Kept</title>
+      <link>https://veda.ng/blockchain</link>
+      <guid>https://veda.ng/blockchain</guid>
+      <pubDate>Mon, 22 Sep 2025 00:00:00 GMT</pubDate>
+      <description>An analysis of blockchain&apos;s evolution from cryptographic experiment to institutional infrastructure, examining what survived the hype cycles, where the...</description>
+    </item>
+    <item>
+      <title>Sacred Algorithms</title>
+      <link>https://veda.ng/algorithms</link>
+      <guid>https://veda.ng/algorithms</guid>
+      <pubDate>Fri, 19 Sep 2025 00:00:00 GMT</pubDate>
+      <description>COMPAS predicts recidivism with racial bias baked in. Healthcare AI underestimates illness in minority patients.</description>
+    </item>
+    <item>
+      <title>Computational Social Science</title>
+      <link>https://veda.ng/socialscience</link>
+      <guid>https://veda.ng/socialscience</guid>
+      <pubDate>Fri, 05 Sep 2025 00:00:00 GMT</pubDate>
+      <description>Twitter&apos;s API shutdown disrupted 20 years of social research. Digital twins simulate voter behavior.</description>
+    </item>
+    <item>
+      <title>Computational Constitutions</title>
+      <link>https://veda.ng/constitutions</link>
+      <guid>https://veda.ng/constitutions</guid>
+      <pubDate>Fri, 22 Aug 2025 00:00:00 GMT</pubDate>
+      <description>Wyoming legalized DAO LLCs in 2021. Smart contracts execute governance rules automatically.</description>
+    </item>
+    <item>
+      <title>Pseudonymous Agency</title>
+      <link>https://veda.ng/pseudonymity</link>
+      <guid>https://veda.ng/pseudonymity</guid>
+      <pubDate>Fri, 08 Aug 2025 00:00:00 GMT</pubDate>
+      <description>Satoshi Nakamoto built a $1 trillion protocol without revealing an identity. Banksy generates $25M+ per auction without a face.</description>
+    </item>
+    <item>
+      <title>Programmable Trust</title>
+      <link>https://veda.ng/trust</link>
+      <guid>https://veda.ng/trust</guid>
+      <pubDate>Fri, 25 Jul 2025 00:00:00 GMT</pubDate>
+      <description>Zero-knowledge proofs verify without revealing. Trusted execution environments create hardware-enforced privacy.</description>
+    </item>
+    <item>
+      <title>The God Protocol</title>
+      <link>https://veda.ng/godprotocol</link>
+      <guid>https://veda.ng/godprotocol</guid>
+      <pubDate>Fri, 11 Jul 2025 00:00:00 GMT</pubDate>
+      <description>Nick Szabo imagined a trusted third party with infinite integrity, no self-interest, and perfect confidentiality. Bitcoin approximated it.</description>
+    </item>
+    <item>
+      <title>The Sensory Internet</title>
+      <link>https://veda.ng/sensory</link>
+      <guid>https://veda.ng/sensory</guid>
+      <pubDate>Fri, 27 Jun 2025 00:00:00 GMT</pubDate>
+      <description>The haptic technology market reaches $4-12 billion in 2025. Apple shipped 390,000 Vision Pro units. Neuralink implanted its first human BCI.</description>
+    </item>
+    <item>
+      <title>The Mesh Economy</title>
+      <link>https://veda.ng/mesh</link>
+      <guid>https://veda.ng/mesh</guid>
+      <pubDate>Fri, 13 Jun 2025 00:00:00 GMT</pubDate>
+      <description>DeFi protocols execute billions in daily volume with zero employees. DAOs manage tens of billions in treasury assets through on-chain governance.</description>
+    </item>
+    <item>
+      <title>The Plurality Trap</title>
+      <link>https://veda.ng/plurality</link>
+      <guid>https://veda.ng/plurality</guid>
+      <pubDate>Fri, 30 May 2025 00:00:00 GMT</pubDate>
+      <description>More information was supposed to produce better understanding. Instead, it produced more ways to be wrong confidently.</description>
+    </item>
+    <item>
+      <title>The Simulation Layer</title>
+      <link>https://veda.ng/simulayer</link>
+      <guid>https://veda.ng/simulayer</guid>
+      <pubDate>Fri, 16 May 2025 00:00:00 GMT</pubDate>
+      <description>Digital twins save Boeing over $1 billion in manufacturing. Waymo has driven 20+ billion simulated miles.</description>
     </item>
   </channel>
 </rss>
