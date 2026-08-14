@@ -25,6 +25,14 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+  async rewrites() {
+    return [
+      {
+        source: '/api/og/:slug.png',
+        destination: '/api/og/:slug',
+      },
+    ];
+  },
   async redirects() {
     return [
       {

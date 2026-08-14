@@ -1,6 +1,8 @@
 import { ImageResponse } from 'next/og';
 import fs from 'fs';
 import path from 'path';
+import matter from 'gray-matter';
+import { essays } from '@/lib/essays';
 
 export const ogSize = { width: 1200, height: 630 };
 
@@ -240,6 +242,10 @@ export function generateTerminalOgImage(
     ),
     {
       ...ogSize,
+      headers: {
+        'Content-Type': 'image/png',
+        'Cache-Control': 'public, max-age=86400, stale-while-revalidate=604800',
+      },
       ...(interBold && interRegular ? {
         fonts: [
           { name: 'Inter', data: interRegular, weight: 400 as const, style: 'normal' as const },
@@ -248,4 +254,34 @@ export function generateTerminalOgImage(
       } : {})
     }
   );
+}
+
+function flattenOgText(text?: string) {
+  if (!text) return '';
+  return String(text).replace(/\s+/g, ' ').trim();
+}
+
+function firstOgSentence(text: string) {
+  const clean = flattenOgText(text);
+  if (!clean) return '';
+  const match = clean.match(/^(.+?[.!?])(?:\s|$)/);
+  return match ? match[1] : clean;
+}
+
+export function buildEssayOgImage(slug: string) {
+  const cleanSlug = slug.replace(/\.png$/i, '');
+  const filePath = path.join(process.cwd(), 'src', 'content', 'essays', `${cleanSlug}.mdx`);
+  let title = 'Vedang Vatsa';
+  let summary = '';
+  if (fs.existsSync(filePath)) {
+    const { data } = matter(fs.readFileSync(filePath, 'utf8'));
+    title = flattenOgText(data.title) || title;
+    summary = flattenOgText(data.summary);
+  } else {
+    const essay = essays.find((item) => item.slug === cleanSlug);
+    if (!essay) return null;
+    title = flattenOgText(essay.title) || title;
+    summary = flattenOgText(essay.summary);
+  }
+  return generateOgImage(title, firstOgSentence(summary) || undefined, cleanSlug);
 }

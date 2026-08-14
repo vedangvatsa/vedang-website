@@ -158,10 +158,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const modifiedTime = essay.frontmatter.updated
     ? new Date(essay.frontmatter.updated).toISOString()
     : publishedTime;
-  // Firebase App Hosting's Next adapter 404s on the .png file-convention
-  // suffix. The generator lives at this extensionless path.
+  // X drops share images when the URL has no file extension.
+  // Firebase 404s Next's /slug/opengraph-image.png convention, so serve a .png API route.
   const ogImage = {
-    url: `${siteUrl}/${slug}/opengraph-image`,
+    url: `${siteUrl}/api/og/${slug}.png`,
     width: 1200,
     height: 630,
     alt: title,
@@ -249,7 +249,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
     image: [
       {
         '@type': 'ImageObject',
-        url: `https://veda.ng/${slug}/opengraph-image`,
+        url: `https://veda.ng/api/og/${slug}.png`,
         width: 1200,
         height: 630,
       },
