@@ -75,7 +75,7 @@ export default function ProfilePage() {
             subtitle={
               <>
                 Computer Engineer, MBA, Chartered Engineer<br />
-                Young Researcher 2020 Awardee (22 publications) &amp; Young Achiever 2020-21 Awardee
+                Young Researcher 2020 Awardee (25 publications) &amp; Young Achiever 2020-21 Awardee
               </>
             }
           >
@@ -240,6 +240,9 @@ export default function ProfilePage() {
                  <Card>
                     <CardContent className="p-4">
                         <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground columns-1 md:columns-2 lg:columns-3 md:gap-6">
+                            <li><Link href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6991218" target="_blank" rel="noopener noreferrer" className="hover:text-primary">State of AI Research</Link>; SSRN</li>
+                            <li><Link href="https://dx.doi.org/10.2139/ssrn.6874178" target="_blank" rel="noopener noreferrer" className="hover:text-primary">AI Agent Infrastructure Stack</Link>; SSRN</li>
+                            <li><Link href="https://doi.org/10.5281/zenodo.20832739" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Blockchain Research Trends</Link>; Zenodo</li>
                             <li><Link href="https://dx.doi.org/10.2139/ssrn.5660270" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Device-to-Device Economics and AI Agent Transactions</Link>; SSRN</li>
                             <li><Link href="https://dx.doi.org/10.2139/ssrn.5325570" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Stablecoin Growth and Market Dynamics</Link>; SSRN</li>
                             <li><Link href="https://dx.doi.org/10.2139/ssrn.5329957" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Stablecoins in the Modern Financial System</Link>; SSRN</li>

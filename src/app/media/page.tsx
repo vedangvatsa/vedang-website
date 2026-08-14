@@ -127,7 +127,7 @@ export default function MediaPage() {
         <div>
           <PageHero
             title="Speaker on Emerging Technologies"
-            subtitle="As a recognized voice in AI, Web3, and the future of technology, Vedang is a frequent speaker at international conferences, academic institutions, and corporate events. His talks demystify complex topics, including decentralized economies and agentic AI, providing audiences with actionable insights into the forces shaping our world. Below is a glimpse into his media features and speaking engagements."
+            subtitle="Talks and press on AI agents, blockchain, and digital public infrastructure. Clips and speaking photos are below."
           />
 
           <section className="max-w-4xl mx-auto py-8">
