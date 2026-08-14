@@ -18,6 +18,9 @@ const AI_TOPICS = {
   'empathy': ['ambient', 'intuition'],
   'attention': ['agenteconomy', 'cognition'],
   'cognition': ['attention', 'monasticism'],
+  'outlives': ['empathy', 'liminal', 'lawsuits'],
+  'agentspeak': ['agenticweb', 'postinterface', 'darkforest'],
+  'private': ['trust', 'godprotocol', 'darkforest'],
 };
 
 export function RelatedEssays({ currentSlug }: { currentSlug: string }) {

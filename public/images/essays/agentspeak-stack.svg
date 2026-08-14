@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" preserveAspectRatio="xMidYMid meet">
+  <style>
+    text { font-family: Inter, system-ui, sans-serif; }
+    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
+    .name { font-size: 15px; font-weight: 600; fill: #18181b; }
+    .row { font-size: 13px; fill: #18181b; }
+    .dim { font-size: 13px; fill: #52525b; }
+    .note { font-size: 12px; fill: #52525b; }
+  </style>
+
+  <text x="16" y="28" class="title">Four pipes, one leftover language</text>
+
+  <rect x="16" y="44" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="66" class="name">MCP</text>
+  <text x="28" y="86" class="row">Agent to tool. Anthropic, Nov 2024.</text>
+  <text x="28" y="106" class="dim">Linux Foundation AAIF, Dec 2025.</text>
+
+  <rect x="16" y="116" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="138" class="name">A2A</text>
+  <text x="28" y="158" class="row">Agent to agent. Google, Apr 2025.</text>
+  <text x="28" y="178" class="dim">JSON-RPC. Agent Card. Linux Foundation.</text>
+
+  <rect x="16" y="188" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="210" class="name">ACP (IBM)</text>
+  <text x="28" y="230" class="row">REST, not JSON-RPC. Mar 2025.</text>
+  <text x="28" y="250" class="dim">Merged into A2A, 27 Aug 2025.</text>
+
+  <rect x="16" y="260" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="282" class="name">AP2</text>
+  <text x="28" y="302" class="row">Agent to payment. Mandates as VCs.</text>
+  <text x="28" y="322" class="dim">Money already refuses English.</text>
+
+  <rect x="16" y="332" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="354" class="name">AGNTCY</text>
+  <text x="28" y="374" class="row">Directory and transport. Cisco.</text>
+  <text x="28" y="394" class="dim">Not a language. A phone book.</text>
+
+  <text x="16" y="440" class="note">The fight of 2025 was the envelope.</text>
+  <text x="16" y="460" class="note">The fight of 2026 is the payload.</text>
+  <text x="16" y="484" class="note">veda.ng/agentspeak</text>
+</svg>

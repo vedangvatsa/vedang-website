@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 620" width="400" height="620" preserveAspectRatio="xMidYMid meet">
+  <style>
+    text { font-family: Inter, system-ui, sans-serif; }
+    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
+    .name { font-size: 15px; font-weight: 600; fill: #18181b; }
+    .row { font-size: 13px; fill: #18181b; }
+    .dim { font-size: 13px; fill: #52525b; }
+    .note { font-size: 12px; fill: #52525b; }
+  </style>
+
+  <text x="16" y="28" class="title">Five ways to hide a prompt</text>
+
+  <rect x="16" y="44" width="368" height="88" fill="#f4f4f5"/>
+  <text x="28" y="66" class="name">On the phone</text>
+  <text x="372" y="66" class="row" text-anchor="end">Real</text>
+  <text x="28" y="86" class="row">Apple on-device models</text>
+  <text x="28" y="110" class="dim">Small. The data never leaves.</text>
+
+  <rect x="16" y="132" width="368" height="88" fill="#ffffff"/>
+  <text x="28" y="154" class="name">TEE / PCC</text>
+  <text x="372" y="154" class="row" text-anchor="end">Shipped</text>
+  <text x="28" y="174" class="row">Apple PCC, NVIDIA CC, Intel TDX</text>
+  <text x="28" y="194" class="dim">Trust the attestation, not the landlord.</text>
+
+  <rect x="16" y="220" width="368" height="88" fill="#f4f4f5"/>
+  <text x="28" y="242" class="name">Zero data retention</text>
+  <text x="372" y="242" class="dim" text-anchor="end">Contract</text>
+  <text x="28" y="262" class="row">OpenAI / Anthropic ZDR</text>
+  <text x="28" y="282" class="dim">A promise. Staff can still see a live call.</text>
+
+  <rect x="16" y="308" width="368" height="88" fill="#ffffff"/>
+  <text x="28" y="330" class="name">FHE</text>
+  <text x="372" y="330" class="dim" text-anchor="end">Lab</text>
+  <text x="28" y="350" class="row">Zama Concrete ML</text>
+  <text x="28" y="370" class="dim">GPT-2 token ~11s on GPU. Not chat.</text>
+
+  <rect x="16" y="396" width="368" height="88" fill="#f4f4f5"/>
+  <text x="28" y="418" class="name">zkML</text>
+  <text x="372" y="418" class="dim" text-anchor="end">Proof</text>
+  <text x="28" y="438" class="row">EZKL, DeepProve, GPT-2 minutes</text>
+  <text x="28" y="458" class="dim">Proves the model ran. Does not hide the prompt.</text>
+
+  <text x="16" y="516" class="note">Confidentiality and integrity are not</text>
+  <text x="16" y="536" class="note">the same cell. Coverage mixes them.</text>
+  <text x="16" y="560" class="note">veda.ng/private</text>
+</svg>

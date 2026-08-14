@@ -97,6 +97,9 @@ const ESSAY_GLOSSARY_LINKS: Record<string, string[]> = {
   'indiaai': ['llm', 'foundation-model', 'inference', 'multimodal-ai', 'api', 'ai-safety', 'speech-recognition', 'tts', 'machine-translation'],
   'compute': ['llm', 'api', 'edge-computing', 'agent'],
   'aidebt': ['llm', 'api', 'defi', 'agent'],
+  'outlives': ['llm', 'agent', 'context-window', 'inference'],
+  'agentspeak': ['mcp', 'agent', 'api', 'embeddings', 'token'],
+  'private': ['zero-knowledge-proof', 'inference', 'llm', 'edge-computing'],
 };
 
 const GLOSSARY_LABELS: Record<string, string> = {
@@ -112,6 +115,9 @@ const GLOSSARY_LABELS: Record<string, string> = {
   'ai-safety': 'AI Safety', 'speech-recognition': 'Speech Recognition',
   'tts': 'Text-to-Speech', 'machine-translation': 'Machine Translation',
   'fine-tuning': 'Fine-Tuning',
+  'mcp': 'Model Context Protocol',
+  'token': 'Token',
+  'context-window': 'Context Window',
 };
 
 export function generateStaticParams() {

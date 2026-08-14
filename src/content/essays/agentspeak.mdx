@@ -1,0 +1,91 @@
+---
+title: "When Agents Stop Speaking English"
+summary: "A2A still ships a sample message that says hello in English. The pipes of 2025 were JSON-RPC, REST, and payment mandates. The leftover human language is the part that will go."
+date: "2026-08-14"
+author: "Vedang Vatsa"
+category: "AI Infrastructure"
+keywords: ["A2A", "MCP", "ACP", "AP2", "agent protocols", "JSON-RPC", "FIPA ACL", "structured outputs", "DataPart"]
+---
+
+Google's [A2A specification](https://a2a-protocol.org/latest/specification/) v1.0 still shows a sample TextPart whose text is "Hello, world!" The envelope is JSON-RPC 2.0 over HTTPS. The letter is English. That is the gap this piece is about. 2025 was the year the industry agreed on pipes. 2026 is the year the payload is still a sentence a person could have typed.
+
+Coverage treats MCP and A2A as the story. They are plumbing. I wrote that plumbing in [Towards the Agentic Web](/agenticweb). This essay is about the speech that travels through it.
+
+<Figure src="/images/essays/agentspeak-parts.svg" alt="TextPart, DataPart, tool call, and embedding as four kinds of agent message" source="A2A specification, August 2026" sourceUrl="https://a2a-protocol.org/latest/specification/" width={400} height={548} />
+
+## The sample is the tell
+
+A2A's core method is `message/send`. A Message has a role and an array of Parts. A Part can be text, a file, or data. Google's own [ADK walkthrough](https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a/) names them without romance: TextParts for natural language, DataParts for structured JSON. Version 1.0 of the spec made a breaking change. Older drafts tagged a part with `"kind": "text"`. Current form is a member name as the discriminator: `{ "text": "Hello, world!" }` for prose, `{ "data": { ... }, "mediaType": "application/json" }` for a DataPart. The greeting survived the refactor. The ontology did not arrive with it.
+
+JSON-RPC 2.0 is [from 2010](https://www.jsonrpc.org/specification). It is a request object with `jsonrpc`, `method`, `params`, and `id`. A2A borrowed a remote-procedure call format that backend teams already knew, plus [gRPC](https://grpc.io/) and HTTP+JSON as other bindings. HTTP itself is [RFC 9112](https://www.rfc-editor.org/rfc/rfc9112). The [Agent Card](https://a2a-protocol.org/latest/specification/) sits at `/.well-known/agent-card.json` and lists name, skills, endpoint, and auth. Discovery is a JSON file. The conversation that follows can still be a paragraph of English. The [A2A GitHub samples](https://github.com/a2aproject/A2A) still include a greeting.
+
+MCP, [released by Anthropic in November 2024](https://modelcontextprotocol.io/), is the other pipe. The [specification](https://modelcontextprotocol.io/specification) is the document. The live TypeScript schema, as of the 28 July 2026 tree, still sits in the [MCP specification repo](https://github.com/modelcontextprotocol/specification/blob/main/schema/2026-07-28/schema.ts). MCP borrowed the shape of the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/): a host, a client, a server, JSON-RPC methods. Servers expose resources, prompts, and tools. A tool is a function with a JSON Schema for arguments. `tools/list` returns objects. `tools/call` returns objects. English is allowed in a description field so a model can pick the tool. The call itself is not a paragraph. In [December 2025](https://www.linuxfoundation.org/) Anthropic put MCP under the Agentic AI Foundation at the Linux Foundation, with Block and OpenAI. MCP is agent-to-tool. A2A is agent-to-agent. The [A2A site](https://a2a-protocol.org/dev/) repeats that split on purpose. Neither protocol forbids English. Both make English optional. A2A's guiding principles even list "opaque execution": agents should not need to share internal thoughts. The sample TextPart is then a thought in English. The spec disagrees with its own example.
+
+IBM's Agent Communication Protocol tried a third envelope. ACP spoke REST and [OpenAPI](https://spec.openapis.org/oas/latest.html) instead of JSON-RPC. [BeeAI](https://beeai.dev/) was the reference stack. On [27 August 2025](https://github.com/i-am-bee/acp) IBM archived the ACP repo with a notice that ACP was now part of A2A. IBM's own [ACP page](https://www.ibm.com/think/topics/agent-communication-protocol) and the [LF AI & Data write-up](https://lfaidata.foundation/) closed the fork. REST lost as a competing protocol. JSON-RPC won the envelope war. A2A v1.0 still lists HTTP/REST and gRPC as bindings of the same data model. The REST binding is not a relapse into English. It is the same DataPart over a different verb. The payload question was not on the ballot.
+
+<StatRow>
+  <Stat value="Nov 2024" label="MCP announced" source="Anthropic / MCP docs" sourceUrl="https://modelcontextprotocol.io/" />
+  <Stat value="Apr 2025" label="A2A announced, 50+ logos" source="Google Developers Blog" sourceUrl="https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/" />
+  <Stat value="Aug 2025" label="IBM ACP merged into A2A" source="i-am-bee/acp archive notice" sourceUrl="https://github.com/i-am-bee/acp" />
+  <Stat value="2025" label="AP2 payment mandates as verifiable credentials" source="Google Cloud Blog" sourceUrl="https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol" />
+</StatRow>
+
+## This fight already happened, and English lost once
+
+In the 1990s, software agents were going to talk in Agent Communication Languages. [KQML](https://www.csee.umbc.edu/kqml/) came first. [FIPA ACL](http://www.fipa.org/specs/fipa00061/SC00061G.html) followed, under the Foundation for Intelligent Physical Agents, later an IEEE effort. A FIPA message had a performative: inform, request, propose, refuse. It had sender, receiver, content, ontology, protocol, conversation-id. The only mandatory field was the performative. The content sat in a formal language called SL. John Searle's speech-act theory, as the [Stanford Encyclopedia](https://plato.stanford.edu/entries/speech-acts/) still frames it, was the philosophy. JADE was the Java toolkit students actually ran.
+
+It died as a mass standard because FIPA assumed a shared ontology. Two agents had to agree, in advance, on the nouns. The open web never agreed on the nouns. XML and then JSON ate the payload. REST ate the transport. LLMs then made English cheap enough to fake an ontology: just say what you want and hope the other model parses it. That is why the A2A sample looks like a chat box. We skipped the ontology and rented a parser.
+
+Modern tool calling did not abandon speech acts. It compiled them into identifiers. `create_refund` is a request. `get_balance` is a query. That compilation is the moment English left, even if the demo still prints a sentence for the camera.
+
+The [semantic web](https://www.w3.org/2001/sw/) made the same bet with [RDF](https://www.w3.org/RDF/), [OWL](https://www.w3.org/OWL/), and [SPARQL](https://www.w3.org/TR/sparql11-query/). Tim Berners-Lee wanted machines to share meaning. What we got was [Schema.org](https://schema.org/) for search snippets and OpenAPI for humans who write clients. Agent Cards are OpenAPI for agents. DataParts are [JSON Schema](https://json-schema.org/) in a trench coat. [JSON-LD](https://json-ld.org/) already tried to hang meaning on web pages for Google. Search got the benefit. Agents still need a registry with versions, deprecation, and a steward who can say no. Linux Foundation AAIF can host MCP and A2A. It cannot make `price` mean the same thing at Amazon and a Delhi pharmacy. FIPA died on that drift. JSON Schema will die on it too unless someone runs a registry with teeth.
+
+Finance never waited. The [FIX Protocol](https://www.fixtrading.org/what-is-fix/) has moved orders since the 1990s. A New Order Single is tags: 35=D, 55=AAPL, 54=1, 38=100. SWIFT went from MT messages to [ISO 20022](https://www.iso20022.org/) XML. Nobody at a matching engine wants "please buy some Apple, not too expensive." Google's [Agent Payments Protocol (AP2)](https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol) already follows that rule. A Mandate is a verifiable credential, a signed object that says what the user allowed. Coinbase, the Ethereum Foundation, and MetaMask showed up for the crypto extension.
+
+The crypto extension now has its own house. [x402](https://x402.org/) is HTTP status 402, Payment Required, reused as a retry loop: the agent asks, the server answers 402, the agent pays, the agent retries. There is no checkout paragraph. On 14 July 2026 the Linux Foundation announced the [operational launch](https://x402.org/linux-foundation-announces-operational-launch-of-x402-foundation-to-standardize-internet-native-payments-for-ai-agents-and-applications/) of the x402 Foundation, with Coinbase contributing the protocol and 40 named members spanning Visa, Mastercard, Stripe, AWS, and Google. The project's own homepage, dated the same day, showed a "Last 30 Days" counter of 75.41 million transactions and $24.24 million volume. That is the project's meter, not an audit. A 402 is a field. A "please pay me" sentence is not.
+
+<PullQuote>
+A matching engine that accepted paragraphs would be a bug. Agent commerce is heading toward the same intolerance.
+</PullQuote>
+
+[Agentic commerce](/agentcommerce) is the business case. A buying agent that reads brand stories is a buying agent you can fool with adjectives. A buying agent that reads `price_usd`, `in_stock`, `lead_time_days`, `return_window` is a buying agent you serve with a schema.
+
+## Tool calls are already the native tongue
+
+Before A2A, models learned to speak functions. OpenAI shipped [function calling](https://platform.openai.com/docs/guides/function-calling) in 2023, then [structured outputs](https://openai.com/index/introducing-structured-outputs-in-the-api/) in 2024, with JSON Schema as the contract. Anthropic's [tool use](https://docs.anthropic.com/en/docs/build-with-claude/tool-use) is the same idea. Google's [Gemini function calling](https://ai.google.dev/gemini-api/docs/function-calling) followed. None of those objects contain a greeting. The greeting appears when a developer concatenates a system prompt. That concatenation is a product choice, not a protocol requirement.
+
+MCP wraps functions so any client can find them. A2A wraps a peer so any agent can ask another agent to run its functions. Peel the logos off and you have RPC. We dressed it in a chat bubble because the models were trained on chat.
+
+[LangGraph](https://www.langchain.com/langgraph), [AutoGen](https://microsoft.github.io/autogen/), [CrewAI](https://www.crewai.com/), and Google's ADK all still pass a lot of strings between nodes, because the node is an LLM. Put two LLMs on a loop and they will write each other essays. Put a schema in the middle and they will fill fields. Token bills are the pressure. A rambling English plan can be thousands of tokens. A DataPart can be eighty. On 14 August 2026, [OpenAI's API pricing](https://developers.openai.com/api/docs/pricing) still sold input and output by the million tokens. English is a tax.
+
+A worked loop: a buyer agent wants a flight. TextPart path: "Find a refundable economy seat SFO to DEL leaving 12 September, back 28 September, under 1200 dollars, aisle if cheap." Ambiguous "aisle if cheap." DataPart path: `{"origin":"SFO","dest":"DEL","depart":"2026-09-12","return":"2026-09-28","cabin":"Y","max_usd":1200,"refundable":true,"seat":"aisle","seat_flex_usd":40}`. The second message has a test. The first has a vibe. [IATA NDC](https://www.iata.org/en/programs/airline-distribution/ndc/) already pushed airlines toward XML offers for this reason. Agents will sit on NDC, FIX, HL7, ISO 20022, and whatever schema a vertical already paid to standardise.
+
+Healthcare has [HL7 FHIR](https://www.hl7.org/fhir/). Labs that let an agent "summarise the chart in English" and then let a second agent act on the summary are stacking two error-prone parsers. A FHIR Bundle is the DataPart. English is the after-action note for the human. [DICOM](https://www.dicomstandard.org/) did the same for images decades ago. The [ONC](https://www.healthit.gov/) has spent years pushing structured health data for this reason.
+
+Identity is the last English trap. An Agent Card can list a URL. It cannot, by itself, prove who paid for the agent. AP2's mandates, W3C [verifiable credentials](https://www.w3.org/TR/vc-data-model-2.0/), and [OpenID](https://openid.net/specs/openid-connect-core-1_0.html) are how you name a principal without a biography. A paragraph that says "I am Alice's agent" is phishing. A signed credential is a field.
+
+[Protobuf](https://protobuf.dev/) already exists for the bank-shaped case: binary fields, numbered not named, schema evolution by adding fields. [CBOR](https://cbor.io/) ([RFC 8949](https://www.rfc-editor.org/rfc/rfc8949.html)) and [Cap'n Proto](https://capnproto.org/) shave bytes further. Agent vendors will rediscover them the first time a million agents sit on a metered link.
+
+Cisco's [AGNTCY](https://agntcy.org/), donated to the Linux Foundation in July 2025 with LangChain and Galileo, is not a language. It is a directory, a schema, and a transport (SLIM) under the conversation. People still file it under "agent protocol wars" because the acronyms piled up. MCP, A2A, ACP, AP2, AGNTCY, plus Microsoft's [NLWeb](https://github.com/microsoft/NLWeb) for site-to-agent HTML, plus [`llms.txt`](https://llmstxt.org/) and `agents.json` on sites like this one. Mixing the layers is how you get a slide with twelve logos and no payload.
+
+<Figure src="/images/essays/agentspeak-stack.svg" alt="MCP, A2A, IBM ACP, AP2, and AGNTCY as layers, not rivals" source="Protocol docs, 2025-2026" width={400} height={500} />
+
+## What drops out when English drops out
+
+Three things go.
+
+First, the human audit. A regulator, a journalist, a founder can read a TextPart. A DataPart is readable if you know the schema. An embedding is not. If two agents start passing vectors, or distilled weight patches, or cached hidden states, the log becomes a tensor. You can store it. You cannot read it on the train. The [dark forest](/darkforest) version of the internet is not only bots talking to bots. It is bots talking in a code no bystander can parse. [The post-interface web](/postinterface) already moved pages toward fields for machines. The next step is fields that are not even fields, just geometry in a model.
+
+Second, the shared public meaning. English, for all its mess, is a commons. A schema is a private commons. Your `Order` and my `Order` will drift. Agent Cards can advertise skills. They cannot force two vendors to mean the same thing by `refund`. ISO 20022 works because banks were forced. Agent markets are not yet forced.
+
+Third, the polite fiction that you are in the conversation. When your travel agent hires a fare agent, and the fare agent hires a payments agent, and they settle in AP2 mandates, your screen is a summary of a fight you did not hear. That is fine for a flight. It is less fine for a medical prior auth, a parole report, a bid/ask in a thin market. The [God Protocol](/godprotocol) problem returns: a third party that executes perfectly and explains nothing.
+
+English will not vanish from the human edge. The claim is narrower. Agent-to-agent traffic will shed prose the way service-to-service traffic already did.
+
+Courts will still demand a transcript. Soelberg, [the Times log order](/lawsuits), every discovery fight: the law still thinks in sentences. A vendor that goes full vector without a sentence-level audit trail will meet a judge who asks for the emails. They will generate a story after the fact. That story is a reconstruction.
+
+The [EU AI Act](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) Article 50 is a labelling rule. NIST's [AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) asks for transparency and audit. A TextPart satisfies a shallow reading of both: here is what the agent said. A DataPart satisfies a stricter reading: here is the object. A vector satisfies neither unless you attach a decoder the auditor can run. If agencies freeze the shallow reading into procurement, English will linger as a compliance costume. Engineers will still speak JSON behind it. You will be billed for both.
+
+IETF work on AI agents is thin. JSON-RPC is a community spec, not an IETF RFC in the way HTTP is. gRPC is a [CNCF](https://www.cncf.io/) project. The "standard" in A2A is a Linux Foundation project with a steering committee of cloud vendors. That is enough to ship. It is not a law. A country that wants auditable agent speech will have to write the audit in a statute, the way [PSD2](https://www.ecb.europa.eu/paym/intro/mip-online/2018/html/1803_revisedpsd.en.html) wrote bank APIs, or sit with whatever the vendors log.
+
+The interesting year is the first year two production agents complete a high-value loop with zero TextParts. No hello. No "here is my plan." A Card, a DataPart, a Mandate, a receipt. When that loop is boring, English will have left the middle of the stack. It will still be at both ends, where people are.

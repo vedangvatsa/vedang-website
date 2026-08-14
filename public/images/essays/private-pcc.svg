@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" preserveAspectRatio="xMidYMid meet">
+  <style>
+    text { font-family: Inter, system-ui, sans-serif; }
+    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
+    .name { font-size: 15px; font-weight: 600; fill: #18181b; }
+    .row { font-size: 13px; fill: #18181b; }
+    .dim { font-size: 13px; fill: #52525b; }
+    .note { font-size: 12px; fill: #52525b; }
+  </style>
+
+  <text x="16" y="28" class="title">Apple's five PCC rules (2024)</text>
+
+  <rect x="16" y="44" width="368" height="64" fill="#f4f4f5"/>
+  <text x="28" y="68" class="name">1. Stateless</text>
+  <text x="28" y="88" class="row">Delete the prompt after the reply.</text>
+
+  <rect x="16" y="108" width="368" height="64" fill="#ffffff"/>
+  <text x="28" y="132" class="name">2. Enforceable</text>
+  <text x="28" y="152" class="row">No load balancer that can log TLS.</text>
+
+  <rect x="16" y="172" width="368" height="64" fill="#f4f4f5"/>
+  <text x="28" y="196" class="name">3. No privileged shell</text>
+  <text x="28" y="216" class="row">SRE cannot SSH into a live thought.</text>
+
+  <rect x="16" y="236" width="368" height="64" fill="#ffffff"/>
+  <text x="28" y="260" class="name">4. Non-targetable</text>
+  <text x="28" y="280" class="row">Cannot steer one user to a bad box.</text>
+
+  <rect x="16" y="300" width="368" height="64" fill="#f4f4f5"/>
+  <text x="28" y="324" class="name">5. Verifiable</text>
+  <text x="28" y="344" class="row">Publish binaries. Let researchers check.</text>
+
+  <rect x="16" y="364" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="386" class="name">2026 add-on</text>
+  <text x="28" y="406" class="row">Same five rules on Google Cloud</text>
+  <text x="28" y="426" class="dim">NVIDIA CC + Intel TDX + Titan.</text>
+
+  <text x="16" y="468" class="note">A contract is not on this list.</text>
+  <text x="16" y="488" class="note">veda.ng/private</text>
+</svg>

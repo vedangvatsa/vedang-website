@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" width="400" height="420" preserveAspectRatio="xMidYMid meet">
+  <style>
+    text { font-family: Inter, system-ui, sans-serif; }
+    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
+    .name { font-size: 15px; font-weight: 600; fill: #18181b; }
+    .row { font-size: 13px; fill: #18181b; }
+    .dim { font-size: 13px; fill: #52525b; }
+    .note { font-size: 12px; fill: #52525b; }
+  </style>
+
+  <text x="16" y="28" class="title">RUFADAA: who wins the inbox</text>
+
+  <rect x="16" y="44" width="368" height="88" fill="#f4f4f5"/>
+  <text x="28" y="70" class="name">1. The platform tool</text>
+  <text x="28" y="90" class="row">Apple Legacy Contact. Google Inactive</text>
+  <text x="28" y="110" class="dim">Account Manager. Facebook legacy.</text>
+
+  <rect x="16" y="132" width="368" height="88" fill="#ffffff"/>
+  <text x="28" y="158" class="name">2. The will or trust</text>
+  <text x="28" y="178" class="row">Only if there is no online tool,</text>
+  <text x="28" y="198" class="dim">or the tool was never switched on.</text>
+
+  <rect x="16" y="220" width="368" height="88" fill="#f4f4f5"/>
+  <text x="28" y="246" class="name">3. The terms of service</text>
+  <text x="28" y="266" class="row">If you said nothing, the contract</text>
+  <text x="28" y="286" class="dim">you clicked years ago decides.</text>
+
+  <text x="16" y="340" class="note">ChatGPT has no tier-1 tool. The will is</text>
+  <text x="16" y="360" class="note">then blocked by the Stored Communications</text>
+  <text x="16" y="380" class="note">Act unless the user consented in writing.</text>
+  <text x="16" y="404" class="note">veda.ng/outlives</text>
+</svg>

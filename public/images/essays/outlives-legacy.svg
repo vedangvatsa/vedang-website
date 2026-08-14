@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 620" width="400" height="620" preserveAspectRatio="xMidYMid meet">
+  <style>
+    text { font-family: Inter, system-ui, sans-serif; }
+    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
+    .name { font-size: 15px; font-weight: 600; fill: #18181b; }
+    .row { font-size: 13px; fill: #18181b; }
+    .dim { font-size: 13px; fill: #52525b; }
+    .note { font-size: 12px; fill: #52525b; }
+  </style>
+
+  <text x="16" y="28" class="title">Who built a dead-user tool</text>
+
+  <rect x="16" y="44" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="66" class="name">Apple</text>
+  <text x="372" y="66" class="row" text-anchor="end">Yes</text>
+  <text x="28" y="86" class="row">Legacy Contact + access key</text>
+  <text x="28" y="106" class="dim">Needs death certificate. Not Keychain.</text>
+
+  <rect x="16" y="116" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="138" class="name">Google</text>
+  <text x="372" y="138" class="row" text-anchor="end">Yes</text>
+  <text x="28" y="158" class="row">Inactive Account Manager</text>
+  <text x="28" y="178" class="dim">3-18 months idle. Up to 10 people.</text>
+
+  <rect x="16" y="188" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="210" class="name">Facebook</text>
+  <text x="372" y="210" class="row" text-anchor="end">Yes</text>
+  <text x="28" y="230" class="row">Legacy contact or delete</text>
+  <text x="28" y="250" class="dim">Cannot read private messages.</text>
+
+  <rect x="16" y="260" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="282" class="name">OpenAI ChatGPT</text>
+  <text x="372" y="282" class="dim" text-anchor="end">No</text>
+  <text x="28" y="302" class="row">Export while alive</text>
+  <text x="28" y="322" class="dim">No legacy contact in public docs.</text>
+
+  <rect x="16" y="332" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="354" class="name">Anthropic Claude</text>
+  <text x="372" y="354" class="dim" text-anchor="end">No</text>
+  <text x="28" y="374" class="row">Account is not property</text>
+  <text x="28" y="394" class="dim">Closes with the login. No transfer.</text>
+
+  <rect x="16" y="404" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="426" class="name">X / Instagram / Discord</text>
+  <text x="372" y="426" class="row" text-anchor="end">Partial</text>
+  <text x="28" y="446" class="row">Report a death, then delete</text>
+  <text x="28" y="466" class="dim">Tombstone or wipe. Not the DMs.</text>
+
+  <text x="16" y="516" class="note">The assistant holds the correspondence.</text>
+  <text x="16" y="536" class="note">Facebook's tool still withholds the inbox.</text>
+  <text x="16" y="556" class="note">Checked against public help pages, Aug 2026.</text>
+  <text x="16" y="580" class="note">veda.ng/outlives</text>
+</svg>
