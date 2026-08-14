@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 620" width="400" height="620" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" width="400" height="520" preserveAspectRatio="xMidYMid meet">
   <style>
     text { font-family: Inter, system-ui, sans-serif; }
     .title { font-size: 16px; font-weight: 600; fill: #18181b; }
@@ -8,46 +8,43 @@
     .note { font-size: 12px; fill: #52525b; }
   </style>
 
-  <text x="16" y="28" class="title">Who built a dead-user tool</text>
+  <text x="16" y="28" class="title">Who lets family in after you die</text>
 
   <rect x="16" y="44" width="368" height="72" fill="#f4f4f5"/>
   <text x="28" y="66" class="name">Apple</text>
   <text x="372" y="66" class="row" text-anchor="end">Yes</text>
-  <text x="28" y="86" class="row">Legacy Contact + access key</text>
-  <text x="28" y="106" class="dim">Needs death certificate. Not Keychain.</text>
+  <text x="28" y="86" class="row">You name a person. They get a key.</text>
+  <text x="28" y="106" class="dim">They need a death certificate. Not your passwords.</text>
 
   <rect x="16" y="116" width="368" height="72" fill="#ffffff"/>
   <text x="28" y="138" class="name">Google</text>
   <text x="372" y="138" class="row" text-anchor="end">Yes</text>
-  <text x="28" y="158" class="row">Inactive Account Manager</text>
-  <text x="28" y="178" class="dim">3-18 months idle. Up to 10 people.</text>
+  <text x="28" y="158" class="row">You name people while you are alive.</text>
+  <text x="28" y="178" class="dim">No sign-in for 3 to 18 months. Up to 10 people.</text>
 
   <rect x="16" y="188" width="368" height="72" fill="#f4f4f5"/>
   <text x="28" y="210" class="name">Facebook</text>
   <text x="372" y="210" class="row" text-anchor="end">Yes</text>
-  <text x="28" y="230" class="row">Legacy contact or delete</text>
-  <text x="28" y="250" class="dim">Cannot read private messages.</text>
+  <text x="28" y="230" class="row">You name a person, or they delete the page.</text>
+  <text x="28" y="250" class="dim">That person cannot read your private chats.</text>
 
   <rect x="16" y="260" width="368" height="72" fill="#ffffff"/>
-  <text x="28" y="282" class="name">OpenAI ChatGPT</text>
+  <text x="28" y="282" class="name">ChatGPT</text>
   <text x="372" y="282" class="dim" text-anchor="end">No</text>
-  <text x="28" y="302" class="row">Export while alive</text>
-  <text x="28" y="322" class="dim">No legacy contact in public docs.</text>
+  <text x="28" y="302" class="row">You can download your chats while alive.</text>
+  <text x="28" y="322" class="dim">No public way to pass the account on.</text>
 
   <rect x="16" y="332" width="368" height="72" fill="#f4f4f5"/>
-  <text x="28" y="354" class="name">Anthropic Claude</text>
+  <text x="28" y="354" class="name">Claude</text>
   <text x="372" y="354" class="dim" text-anchor="end">No</text>
-  <text x="28" y="374" class="row">Account is not property</text>
-  <text x="28" y="394" class="dim">Closes with the login. No transfer.</text>
+  <text x="28" y="374" class="row">The account ends with the login.</text>
+  <text x="28" y="394" class="dim">Family cannot take it over.</text>
 
   <rect x="16" y="404" width="368" height="72" fill="#ffffff"/>
-  <text x="28" y="426" class="name">X / Instagram / Discord</text>
-  <text x="372" y="426" class="row" text-anchor="end">Partial</text>
-  <text x="28" y="446" class="row">Report a death, then delete</text>
-  <text x="28" y="466" class="dim">Tombstone or wipe. Not the DMs.</text>
+  <text x="28" y="426" class="name">X, Instagram, Discord</text>
+  <text x="372" y="426" class="row" text-anchor="end">Delete only</text>
+  <text x="28" y="446" class="row">Family reports a death. The company deletes.</text>
+  <text x="28" y="466" class="dim">A memorial, or gone. Not the private chats.</text>
 
-  <text x="16" y="516" class="note">The assistant holds the correspondence.</text>
-  <text x="16" y="536" class="note">Facebook's tool still withholds the inbox.</text>
-  <text x="16" y="556" class="note">Checked against public help pages, Aug 2026.</text>
-  <text x="16" y="580" class="note">veda.ng/outlives</text>
+  <text x="16" y="504" class="note">veda.ng/outlives</text>
 </svg>
