@@ -24,10 +24,10 @@ export function AIJobExposure() {
               <div className="w-full h-4 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
-                  style={{ width: `${d.pct}%`, backgroundColor: i === 0 ? 'hsl(210 90% 40%)' : '#37352f', opacity: i === 0 ? 0.8 : 0.3 + (0.1 * (data.length - i)) }}
+                  style={{ width: `${d.pct}%`, backgroundColor: i === 0 ? '#18181b' : '#37352f', opacity: i === 0 ? 0.8 : 0.3 + (0.1 * (data.length - i)) }}
                 />
               </div>
-              <span className={`text-xs font-bold text-right ${i === 0 ? 'text-primary' : 'text-[#37352f]'}`}>{d.pct}%</span>
+              <span className={`text-xs font-bold text-right ${i === 0 ? 'text-[#18181b]' : 'text-[#37352f]'}`}>{d.pct}%</span>
             </div>
           ))}
         </div>
@@ -54,15 +54,15 @@ export function JobChurnChart() {
 
         <div className="grid grid-cols-3 gap-4 text-center">
           <div className="rounded-[3px] border border-[#e3e3e0] p-4">
-            <div className="text-2xl font-bold text-primary">+{created}M</div>
+            <div className="text-2xl font-bold text-[#18181b]">+{created}M</div>
             <div className="text-xs text-[#37352f] font-medium mt-1">Created</div>
           </div>
           <div className="rounded-[3px] border border-[#e3e3e0] p-4">
-            <div className="text-2xl font-bold text-red-600">-{displaced}M</div>
+            <div className="text-2xl font-bold text-[#18181b]">-{displaced}M</div>
             <div className="text-xs text-[#37352f] font-medium mt-1">Displaced</div>
           </div>
-          <div className="rounded-[3px] border border-primary/30 bg-primary/5 p-4">
-            <div className="text-2xl font-bold text-primary">+{net}M</div>
+          <div className="rounded-[3px] border border-[#e4e4e7] bg-[#f4f4f5] p-4">
+            <div className="text-2xl font-bold text-[#18181b]">+{net}M</div>
             <div className="text-xs text-[#37352f] font-medium mt-1">Net gain</div>
           </div>
         </div>
@@ -101,10 +101,10 @@ export function EarlyCareerImpact() {
               <div className="w-full h-4 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
-                  style={{ width: `${(r.decline / 25) * 100}%`, backgroundColor: i === 0 ? 'hsl(210 90% 40%)' : '#37352f', opacity: i === 0 ? 0.8 : 0.4 + (0.1 * (roles.length - i)) }}
+                  style={{ width: `${(r.decline / 25) * 100}%`, backgroundColor: i === 0 ? '#18181b' : '#37352f', opacity: i === 0 ? 0.8 : 0.4 + (0.1 * (roles.length - i)) }}
                 />
               </div>
-              <span className="text-xs font-bold text-right text-red-600">-{r.decline}%</span>
+              <span className="text-xs font-bold text-right text-[#18181b]">-{r.decline}%</span>
             </div>
           ))}
         </div>
@@ -132,11 +132,11 @@ export function ProductivityParadox() {
   ];
 
   const stanceColor: Record<string, string> = {
-    'conservative': 'bg-orange-50 text-orange-600',
-    'optimistic': 'bg-blue-50 text-blue-600',
+    'conservative': 'bg-[#f4f4f5] text-[#18181b]',
+    'optimistic': 'bg-[#f4f4f5] text-[#18181b]',
     'neutral': 'bg-[#f7f6f3] text-[#37352f]',
-    'measured': 'bg-green-50 text-green-600',
-    'paradox': 'bg-red-50 text-red-600',
+    'measured': 'bg-[#f4f4f5] text-[#18181b]',
+    'paradox': 'bg-[#f4f4f5] text-[#18181b]',
   };
 
   return (
@@ -186,10 +186,10 @@ export function GenderImpact() {
 
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div className="rounded-[3px] border border-[#e3e3e0] p-5">
-            <div className="text-3xl font-bold text-primary">79%</div>
+            <div className="text-3xl font-bold text-[#18181b]">79%</div>
             <div className="text-sm font-medium text-[#37352f] mt-1">Women</div>
             <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden mt-3">
-              <div className="h-full rounded-md bg-primary/80" style={{ width: '79%' }} />
+              <div className="h-full rounded-md bg-[#18181b]/80" style={{ width: '79%' }} />
             </div>
           </div>
           <div className="rounded-[3px] border border-[#e3e3e0] p-5">
@@ -203,7 +203,7 @@ export function GenderImpact() {
 
         <div className="rounded-[3px] border border-[#e3e3e0] bg-[#f7f6f3] p-3">
           <p className="text-xs text-[#37352f]/80">
-            In high-income OECD countries, vulnerable jobs make up <span className="font-bold text-primary">9.6%</span> of female employment vs. <span className="font-bold text-[#37352f]">3.2%</span> of male employment (nearly 3x the proportion).
+            In high-income OECD countries, vulnerable jobs make up <span className="font-bold text-[#18181b]">9.6%</span> of female employment vs. <span className="font-bold text-[#37352f]">3.2%</span> of male employment (nearly 3x the proportion).
           </p>
         </div>
 
@@ -225,7 +225,7 @@ export function UBIPilotResults() {
   ];
 
   const outcomeColor: Record<string, string> = {
-    'positive': 'text-green-600 bg-green-50',
+    'positive': 'text-[#18181b] bg-[#f4f4f5]',
     'minimal': 'text-yellow-700 bg-yellow-50',
   };
 
@@ -249,7 +249,7 @@ export function UBIPilotResults() {
               {pilots.map((p) => (
                 <tr key={p.name} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{p.name}</td>
-                  <td className="py-2.5 px-2 text-primary font-semibold">{p.amount}</td>
+                  <td className="py-2.5 px-2 text-[#18181b] font-semibold">{p.amount}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{p.finding}</td>
                   <td className="py-2.5 px-2">
                     <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${outcomeColor[p.outcome]}`}>

@@ -35,11 +35,11 @@ export function RegulatoryFriction() {
                 <tr key={d.country} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{d.country}</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${d.digital ? 'bg-green-50 text-green-600' : 'bg-amber-50 text-amber-700'}`}>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${d.digital ? 'bg-[#f4f4f5] text-[#18181b]' : 'bg-[#f4f4f5] text-[#52525b]'}`}>
                       {d.time}
                     </span>
                   </td>
-                  <td className="py-2.5 px-2">{d.digital ? <span className="text-green-600 text-[10px] font-bold">Yes</span> : <span className="text-amber-600 text-[10px] font-bold">Partial</span>}</td>
+                  <td className="py-2.5 px-2">{d.digital ? <span className="text-[#18181b] text-[10px] font-bold">Yes</span> : <span className="text-[#18181b] text-[10px] font-bold">Partial</span>}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/70">{d.note}</td>
                 </tr>
               ))}
@@ -86,8 +86,8 @@ export function BureaucracyCostChart() {
                 <tr key={s.sector} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{s.sector}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{s.metric}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-red-50 text-red-600">{s.cost}</span></td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-50 text-amber-700">{s.time}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{s.cost}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#52525b]">{s.time}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -133,7 +133,7 @@ export function EGovernanceMaturity() {
                     className="h-full rounded-md"
                     style={{
                       width: `${(c.score / max) * 100}%`,
-                      backgroundColor: i === 0 ? 'hsl(210 90% 40%)' : '#37352f',
+                      backgroundColor: i === 0 ? '#18181b' : '#37352f',
                       opacity: i === 0 ? 0.8 : 0.25 + (0.12 * (countries.length - i)),
                     }}
                   />
@@ -181,13 +181,13 @@ export function RegulatoryGrowth() {
                   className="h-full rounded-md"
                   style={{
                     width: `${(d.pages / max) * 100}%`,
-                    backgroundColor: d.year === '2024' ? 'hsl(0 70% 45%)' : '#37352f',
+                    backgroundColor: d.year === '2024' ? '#18181b' : '#37352f',
                     opacity: d.year === '2024' ? 0.8 : 0.35,
                   }}
                 />
               </div>
               <div className="text-right">
-                <span className={`text-xs font-bold ${d.year === '2024' ? 'text-red-600' : 'text-[#37352f]'}`}>
+                <span className={`text-xs font-bold ${d.year === '2024' ? 'text-[#18181b]' : 'text-[#37352f]'}`}>
                   {(d.pages / 1000).toFixed(1)}K
                 </span>
               </div>

@@ -15,8 +15,7 @@ import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import { RelatedGlossaryTerms } from '@/lib/cross-links';
 import { glossaryTerms } from '@/lib/glossary';
-import { Columns, Column, Figure, StatRow, Stat, Callout, PullQuote, Timeline, TimelineItem, SectionLabel, KeyTakeaway, EcosystemDiagram, ResearchPaper, Table } from '@/components/mdx';
-import { MarketProjectionChart, TrustGapChart, ConsumerConcernsChart, ValueShiftGrid, InteractionModelsVisual, TransactionFlowDiagram, CommerceEvolutionTimeline, ProtocolComparisonTable, CompetitiveField } from '@/components/mdx/charts';
+import { Columns, Column, Figure, StatRow, Stat, Callout, PullQuote, Timeline, TimelineItem, SectionLabel, KeyTakeaway, ResearchPaper, Table } from '@/components/mdx';
 import { VCValuationExpansionChart, VCGiniConcentrationChart, VCDeathValleyTimeline, VCSectorSemanticAnalysis, VCStrategicFrameworkDiagram, VCEquationBoxSVG, VCBarbellSystemVisual, VCBarbellVectorDiagram } from '@/components/mdx/funding-charts';
 import { WebEvolutionTimeline, ProtocolStackDiagram, SecurityThreatMatrix, AgentVsChatbot, InfrastructureOverview } from '@/components/mdx/agentic-web-charts';
 import { ScarcitySpectrum, MaterialConstraints, PlatformConcentration, RealityCheckGrid, DualEconomyFramework } from '@/components/mdx/infinity-charts';
@@ -100,6 +99,7 @@ const ESSAY_GLOSSARY_LINKS: Record<string, string[]> = {
   'outlives': ['llm', 'agent', 'context-window', 'inference'],
   'agentspeak': ['mcp', 'agent', 'api', 'embeddings', 'token'],
   'private': ['zero-knowledge-proof', 'inference', 'llm', 'edge-computing'],
+  'neocloud': ['inference', 'llm', 'api', 'edge-computing'],
 };
 
 const GLOSSARY_LABELS: Record<string, string> = {
@@ -356,16 +356,6 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               TimelineItem,
               SectionLabel,
               KeyTakeaway,
-              EcosystemDiagram,
-              MarketProjectionChart,
-              TrustGapChart,
-              ConsumerConcernsChart,
-              ValueShiftGrid,
-              InteractionModelsVisual,
-              TransactionFlowDiagram,
-              CommerceEvolutionTimeline,
-              ProtocolComparisonTable,
-              CompetitiveField,
               WebEvolutionTimeline,
               ProtocolStackDiagram,
               SecurityThreatMatrix,

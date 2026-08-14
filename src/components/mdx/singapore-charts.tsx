@@ -27,12 +27,12 @@ export function GDPGrowthTimeline() {
                   className="h-full rounded-md"
                   style={{
                     width: `${(d.gdp / max) * 100}%`,
-                    backgroundColor: i === data.length - 1 ? 'hsl(210 90% 40%)' : '#37352f',
+                    backgroundColor: i === data.length - 1 ? '#18181b' : '#37352f',
                     opacity: i === data.length - 1 ? 0.8 : 0.25 + (i * 0.09),
                   }}
                 />
               </div>
-              <span className={`text-xs font-bold text-right ${i === data.length - 1 ? 'text-primary' : 'text-[#37352f]'}`}>{d.label}</span>
+              <span className={`text-xs font-bold text-right ${i === data.length - 1 ? 'text-[#18181b]' : 'text-[#37352f]'}`}>{d.label}</span>
             </div>
           ))}
         </div>
@@ -75,7 +75,7 @@ export function GovernanceScorecard() {
               {metrics.map((m) => (
                 <tr key={m.index} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{m.index}</td>
-                  <td className="py-2.5 px-2 text-primary font-bold">{m.rank}</td>
+                  <td className="py-2.5 px-2 text-[#18181b] font-bold">{m.rank}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{m.score}</td>
                   <td className="py-2.5 px-2 text-muted-foreground">{m.source}</td>
                 </tr>
@@ -117,8 +117,8 @@ export function IndustrialEvolution() {
             </thead>
             <tbody>
               {eras.map((e, i) => (
-                <tr key={e.decade} className={`border-b border-[#e3e3e0]/60 ${i === eras.length - 1 ? 'bg-primary/5' : ''}`}>
-                  <td className={`py-2.5 px-2 font-bold ${i === eras.length - 1 ? 'text-primary' : 'text-[#37352f]'}`}>{e.decade}</td>
+                <tr key={e.decade} className={`border-b border-[#e3e3e0]/60 ${i === eras.length - 1 ? 'bg-[#f4f4f5]' : ''}`}>
+                  <td className={`py-2.5 px-2 font-bold ${i === eras.length - 1 ? 'text-[#18181b]' : 'text-[#37352f]'}`}>{e.decade}</td>
                   <td className="py-2.5 px-2 font-medium text-[#37352f]">{e.focus}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{e.detail}</td>
                   <td className="py-2.5 px-2 text-muted-foreground">{e.driver}</td>
@@ -147,10 +147,10 @@ export function HealthcareComparison() {
   ];
 
   const effColor: Record<string, string> = {
-    'Highest': 'text-green-600 bg-green-50',
-    'High': 'text-blue-600 bg-blue-50',
+    'Highest': 'text-[#18181b] bg-[#f4f4f5]',
+    'High': 'text-[#18181b] bg-[#f4f4f5]',
     'Moderate': 'text-yellow-700 bg-yellow-50',
-    'Low': 'text-red-600 bg-red-50',
+    'Low': 'text-[#18181b] bg-[#f4f4f5]',
   };
 
   return (
@@ -173,7 +173,7 @@ export function HealthcareComparison() {
               {countries.map((c) => (
                 <tr key={c.name} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{c.name}</td>
-                  <td className="py-2.5 px-2 text-primary font-semibold">{c.spending}%</td>
+                  <td className="py-2.5 px-2 text-[#18181b] font-semibold">{c.spending}%</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{c.lifeExp} yrs</td>
                   <td className="py-2.5 px-2">
                     <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${effColor[c.efficiency]}`}>{c.efficiency}</span>
@@ -202,11 +202,11 @@ export function InequalitySnapshot() {
 
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div className="rounded-[3px] border border-[#e3e3e0] p-4 text-center">
-            <div className="text-2xl font-bold text-primary">0.435</div>
+            <div className="text-2xl font-bold text-[#18181b]">0.435</div>
             <div className="text-xs font-medium text-[#37352f] mt-1">Gini (before transfers)</div>
           </div>
-          <div className="rounded-[3px] border border-primary/30 bg-primary/5 p-4 text-center">
-            <div className="text-2xl font-bold text-primary">0.364</div>
+          <div className="rounded-[3px] border border-[#e4e4e7] bg-[#f4f4f5] p-4 text-center">
+            <div className="text-2xl font-bold text-[#18181b]">0.364</div>
             <div className="text-xs font-medium text-[#37352f] mt-1">Gini (after transfers)</div>
             <div className="text-[10px] text-muted-foreground">Lowest since 2000</div>
           </div>
@@ -227,7 +227,7 @@ export function InequalitySnapshot() {
           </div>
           <div className="flex justify-between text-xs">
             <span className="text-[#37352f] font-medium">Home ownership rate</span>
-            <span className="font-bold text-primary">90.8%</span>
+            <span className="font-bold text-[#18181b]">90.8%</span>
           </div>
         </div>
 
@@ -264,11 +264,11 @@ export function TransferabilityGrid() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="rounded-[3px] border border-[#e3e3e0] bg-[#f7f6f3] p-5">
-            <div className="text-xs font-bold uppercase tracking-widest text-primary mb-3">Transferable</div>
+            <div className="text-xs font-bold uppercase tracking-widest text-[#18181b] mb-3">Transferable</div>
             <ul className="space-y-2">
               {transferable.map((item) => (
                 <li key={item} className="flex items-start gap-2 text-sm text-[#37352f]/80">
-                  <span className="text-primary mt-0.5 shrink-0">&#x2713;</span>
+                  <span className="text-[#18181b] mt-0.5 shrink-0">&#x2713;</span>
                   {item}
                 </li>
               ))}

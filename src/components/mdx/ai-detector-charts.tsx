@@ -3,9 +3,9 @@
 export function AIDetectorFeatureComparison() {
   const data = [
     { label: '11-feature AUC', value: 0.9645, color: '#94a3b8' },
-    { label: '35-feature AUC', value: 0.9826, color: '#2563eb' },
+    { label: '35-feature AUC', value: 0.9826, color: '#18181b' },
     { label: '11-feature Accuracy', value: 0.9011, color: '#cbd5e1' },
-    { label: '35-feature Accuracy', value: 0.9361, color: '#60a5fa' },
+    { label: '35-feature Accuracy', value: 0.9361, color: '#18181b' },
   ];
 
   return (

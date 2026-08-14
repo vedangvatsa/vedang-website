@@ -185,7 +185,7 @@ export function StateOfWeb3Timeline() {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200 flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#18181b] " />
             Publication Volume &amp; Milestone Timeline (2013 to 2026)
           </h4>
           <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
@@ -299,7 +299,7 @@ export function StateOfWeb3Timeline() {
               <span className="text-xl font-bold tracking-tight text-foreground font-mono">
                 Year {selectedTimeline.year}
               </span>
-              <span className="px-2 py-0.5 rounded bg-primary/10 border border-primary/20 text-primary text-xs font-semibold font-mono">
+              <span className="px-2 py-0.5 rounded bg-[#f4f4f5] border border-[#18181b]/20 text-[#18181b] text-xs font-semibold font-mono">
                 YoY: {selectedTimeline.growth}
               </span>
             </div>
@@ -313,7 +313,7 @@ export function StateOfWeb3Timeline() {
               </div>
               <div className="bg-background rounded-lg p-2.5 border border-border/50">
                 <p className="text-[10px] text-muted-foreground font-semibold uppercase">Avg Citations</p>
-                <p className="text-base font-extrabold text-primary font-mono mt-0.5">
+                <p className="text-base font-extrabold text-[#18181b] font-mono mt-0.5">
                   {selectedTimeline.avgCitations.toFixed(1)}
                 </p>
               </div>
@@ -334,7 +334,7 @@ export function StateOfWeb3Timeline() {
               </div>
               <div className="h-1.5 w-full bg-secondary rounded-full overflow-hidden">
                 <div 
-                  className="h-full bg-amber-500 transition-all duration-300"
+                  className="h-full bg-[#18181b] transition-all duration-300"
                   style={{ width: `${(selectedTimeline.avgCitations / 85) * 100}%` }}
                 />
               </div>
@@ -411,13 +411,13 @@ export function StateOfWeb3NgramAnalyzer() {
                 onClick={() => setActiveTermIdx(idx)}
                 className={`w-full text-left bg-muted/20 border rounded-lg p-3 space-y-2 transition-all flex flex-col ${
                   isSelected 
-                    ? 'border-primary bg-primary/5 shadow-sm'
+                    ? 'border-[#18181b] bg-[#f4f4f5] shadow-sm'
                     : 'border-border/40 bg-card hover:bg-muted/40'
                 }`}
               >
                 <div className="flex justify-between items-center w-full">
                   <div className="flex items-center gap-2">
-                    <span className={`px-1.5 py-0.5 rounded text-[9px] font-mono font-bold ${isSelected ? 'bg-primary/20 text-primary' : 'bg-secondary text-muted-foreground'}`}>
+                    <span className={`px-1.5 py-0.5 rounded text-[9px] font-mono font-bold ${isSelected ? 'bg-[#18181b]/20 text-[#18181b]' : 'bg-secondary text-muted-foreground'}`}>
                       Rank #{idx + 1}
                     </span>
                     <span className="text-sm font-bold text-foreground lowercase truncate max-w-[180px] sm:max-w-[280px]">
@@ -432,7 +432,7 @@ export function StateOfWeb3NgramAnalyzer() {
                 {/* Visual bar fill indicator */}
                 <div className="h-1.5 w-full bg-secondary/80 rounded-full overflow-hidden relative">
                   <div 
-                    className="h-full bg-primary/65 rounded-full transition-all duration-500 ease-out"
+                    className="h-full bg-[#18181b]/65 rounded-full transition-all duration-500 ease-out"
                     style={{ width: `${widthPct}%` }}
                   />
                 </div>
@@ -444,7 +444,7 @@ export function StateOfWeb3NgramAnalyzer() {
         {/* Selected Term Detail Box */}
         <div className="bg-muted/30 border border-border/50 rounded-lg p-4.5 space-y-3 lg:sticky lg:top-4 self-stretch flex flex-col justify-between">
           <div className="space-y-2">
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-primary">Term Insight Detail</span>
+            <span className="text-[10px] font-semibold uppercase tracking-wider text-[#18181b]">Term Insight Detail</span>
             <h5 className="text-base font-bold text-foreground lowercase">
               &ldquo;{activeTerm.term}&rdquo;
             </h5>
@@ -492,16 +492,16 @@ export function StateOfWeb3ConvergenceMatrix() {
                 onClick={() => setSelectedNodeId(node.id)}
                 className={`text-left p-3.5 rounded-lg border transition-all text-sm font-sans relative ${
                   isSelected
-                    ? 'border-primary bg-primary/5 text-foreground font-semibold shadow-sm'
+                    ? 'border-[#18181b] bg-[#f4f4f5] text-foreground font-semibold shadow-sm'
                     : 'border-border bg-muted/20 hover:border-border/80 text-muted-foreground hover:text-foreground'
                 }`}
               >
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-2">
-                    <Layers className={`w-4 h-4 ${isSelected ? 'text-primary' : 'text-muted-foreground'}`} />
+                    <Layers className={`w-4 h-4 ${isSelected ? 'text-[#18181b]' : 'text-muted-foreground'}`} />
                     <span>{node.label}</span>
                   </div>
-                  <span className="text-[10px] font-mono font-bold px-1.5 py-0.2 rounded bg-primary/10 border border-primary/20 text-primary">
+                  <span className="text-[10px] font-mono font-bold px-1.5 py-0.2 rounded bg-[#f4f4f5] border border-[#18181b]/20 text-[#18181b]">
                     {node.papers} papers
                   </span>
                 </div>
@@ -513,18 +513,18 @@ export function StateOfWeb3ConvergenceMatrix() {
         {/* Dynamic Architectural Flow Diagram (REPLACES THE SLOP PULSING ICON) */}
         <div className="bg-muted/20 border border-border/50 rounded-lg p-5 flex flex-col justify-between text-left min-h-[220px]">
           <div className="space-y-3">
-            <span className="text-[10px] uppercase font-mono tracking-widest text-primary font-bold">{selectedNode.layer}</span>
+            <span className="text-[10px] uppercase font-mono tracking-widest text-[#18181b] font-bold">{selectedNode.layer}</span>
             <div className="space-y-2">
               {selectedNode.dataFlow.map((step, idx) => (
                 <div key={idx} className="flex gap-2 items-start text-[11px] text-muted-foreground leading-snug">
-                  <ChevronRight className="w-3.5 h-3.5 text-primary/80 shrink-0 mt-0.5" />
+                  <ChevronRight className="w-3.5 h-3.5 text-[#18181b]/80 shrink-0 mt-0.5" />
                   <span className={idx === 1 || idx === 2 ? "font-mono font-medium text-foreground/80" : ""}>{step}</span>
                 </div>
               ))}
             </div>
           </div>
           <div className="flex items-center gap-1.5 text-[9px] font-mono text-muted-foreground/60 border-t border-border/30 pt-2.5">
-            <Zap className="w-3 h-3 text-amber-500 fill-current animate-pulse" />
+            <Zap className="w-3 h-3 text-[#18181b] fill-current " />
             <span>Interactive Data Pipeline Flow</span>
           </div>
         </div>
@@ -538,12 +538,12 @@ export function StateOfWeb3ConvergenceMatrix() {
           </div>
           <div className="bg-background rounded-lg p-2.5 border border-border/50 space-y-1">
             <p className="text-[9px] font-semibold uppercase tracking-wider text-muted-foreground">Exemplar Research Document</p>
-            <a href={selectedNode.exemplar.url} target="_blank" rel="noopener noreferrer" className="block text-xs font-bold text-foreground font-serif leading-snug hover:text-primary transition-colors line-clamp-2">
+            <a href={selectedNode.exemplar.url} target="_blank" rel="noopener noreferrer" className="block text-xs font-bold text-foreground font-serif leading-snug hover:text-[#18181b] transition-colors line-clamp-2">
               &ldquo;{selectedNode.exemplar.title}&rdquo;
             </a>
             <div className="flex justify-between items-center text-[10px] font-mono text-muted-foreground pt-1.5">
               <span>{selectedNode.exemplar.authors} ({selectedNode.exemplar.year})</span>
-              <span className="text-primary font-semibold">{selectedNode.exemplar.citations} cites</span>
+              <span className="text-[#18181b] font-semibold">{selectedNode.exemplar.citations} cites</span>
             </div>
           </div>
         </div>
@@ -619,19 +619,19 @@ export function StateOfWeb3Momentum() {
             <div key={idx} className="space-y-1.5 flex flex-col justify-center">
               <div className="flex justify-between items-baseline text-xs font-semibold text-foreground">
                 <div className="flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#18181b]/60 shrink-0" />
                   <span className="font-mono lowercase truncate max-w-[160px]">&ldquo;{item.term}&rdquo;</span>
                   <span className="text-[8px] font-sans font-bold px-1 py-0.2 rounded bg-secondary text-muted-foreground tracking-wider uppercase shrink-0">
                     {item.category.split(' ')[0]}
                   </span>
                 </div>
-                <div className="text-right font-mono font-bold text-primary">
+                <div className="text-right font-mono font-bold text-[#18181b]">
                   {activeMetricTab === 'volume' ? `${item.count2026.toLocaleString()} papers` : `+${item.growth.toFixed(1)}x`}
                 </div>
               </div>
               <div className="h-6 w-full bg-secondary rounded-full overflow-hidden relative flex items-center">
                 <div 
-                  className="h-full bg-primary/65 rounded-full transition-all duration-700 ease-out"
+                  className="h-full bg-[#18181b]/65 rounded-full transition-all duration-700 ease-out"
                   style={{ width: `${widthPct}%` }}
                 />
                 {/* Secondary metric helper inside bar container if there's room */}
@@ -677,7 +677,7 @@ export function StateOfWeb3Citations() {
             Exploration of academic citations and citation inequality
           </span>
         </div>
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-bold text-primary">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-bold text-[#18181b]">
           {percentile}th Percentile
         </div>
       </div>
@@ -686,7 +686,7 @@ export function StateOfWeb3Citations() {
       <div className="space-y-2 bg-muted/10 border border-border/40 rounded-lg p-4">
         <div className="flex justify-between text-[10px] text-muted-foreground font-bold uppercase tracking-wider">
           <span>Corpus Pareto Distribution Curve (Percentiles)</span>
-          <span className="text-primary font-mono">{percentile}% threshold: {getPercentileCitations(percentile)} citations</span>
+          <span className="text-[#18181b] font-mono">{percentile}% threshold: {getPercentileCitations(percentile)} citations</span>
         </div>
         <div className="h-6 w-full rounded-full overflow-hidden flex text-[10px] font-mono font-bold text-white shadow-inner">
           <div 
@@ -697,21 +697,21 @@ export function StateOfWeb3Citations() {
             {percentile <= 50 ? 'Active' : '0 Cites (43.5%)'}
           </div>
           <div 
-            className={`h-full flex items-center justify-center transition-all ${percentile > 50 && percentile <= 75 ? 'bg-primary ring-2 ring-white ring-inset text-white' : 'bg-sky-200 dark:bg-sky-950/40 text-sky-800'}`}
+            className={`h-full flex items-center justify-center transition-all ${percentile > 50 && percentile <= 75 ? 'bg-[#18181b] ring-2 ring-white ring-inset text-white' : 'bg-sky-200 dark:bg-sky-950/40 text-sky-800'}`}
             style={{ width: '31.5%' }}
             title="Low Citations: 1-13 (31.5% of papers)"
           >
             {percentile > 50 && percentile <= 75 ? 'Active' : '1-13 (31.5%)'}
           </div>
           <div 
-            className={`h-full flex items-center justify-center transition-all ${percentile > 75 && percentile <= 95 ? 'bg-primary ring-2 ring-white ring-inset text-white' : 'bg-blue-350 dark:bg-blue-900/60 text-blue-100'}`}
+            className={`h-full flex items-center justify-center transition-all ${percentile > 75 && percentile <= 95 ? 'bg-[#18181b] ring-2 ring-white ring-inset text-white' : 'bg-[#f4f4f5] dark:bg-[#f4f4f5] text-[#18181b]'}`}
             style={{ width: '20%' }}
             title="Moderate Citations: 14-41 (20% of papers)"
           >
             {percentile > 75 && percentile <= 95 ? 'Active' : '14-41 (20%)'}
           </div>
           <div 
-            className={`h-full flex items-center justify-center transition-all ${percentile > 95 ? 'bg-amber-500 ring-2 ring-white ring-inset text-white' : 'bg-amber-100 dark:bg-amber-950/20 text-amber-600'}`}
+            className={`h-full flex items-center justify-center transition-all ${percentile > 95 ? 'bg-[#18181b] ring-2 ring-white ring-inset text-white' : 'bg-[#f4f4f5] dark:bg-[#f4f4f5] text-[#18181b]'}`}
             style={{ width: '5%' }}
             title="Elite Citations: 42+ (5% of papers)"
           >
@@ -756,7 +756,7 @@ export function StateOfWeb3Citations() {
           ) : (
             <div className="space-y-1">
               <p className="text-[9px] uppercase font-mono tracking-widest text-muted-foreground font-bold">Threshold Cutoff</p>
-              <p className="text-2xl font-black text-primary font-mono">
+              <p className="text-2xl font-black text-[#18181b] font-mono">
                 {getPercentileCitations(percentile)} citations
               </p>
               <p className="text-[11px] text-muted-foreground leading-relaxed max-w-xs mx-auto">

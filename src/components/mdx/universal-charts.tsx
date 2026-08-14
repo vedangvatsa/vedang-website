@@ -33,9 +33,9 @@ export function UIComplexityComparison() {
                 <tr key={d.task} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{d.task}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{d.old}</td>
-                  <td className="py-2.5 px-2 font-bold text-primary">{d.new}</td>
+                  <td className="py-2.5 px-2 font-bold text-[#18181b]">{d.new}</td>
                   <td className="py-2.5 px-2">
-                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-green-50 text-green-600">
+                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">
                       ~{Math.round(((d.timeOld - d.timeNew) / d.timeOld) * 100)}% faster
                     </span>
                   </td>
@@ -62,7 +62,7 @@ export function APIAbstractionLayer() {
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How natural language replaces navigation logic</p>
 
         <div className="flex flex-col gap-2">
-          <div className="rounded border border-primary bg-primary/10 p-3 text-center font-bold text-primary text-sm">
+          <div className="rounded border border-[#18181b] bg-[#f4f4f5] p-3 text-center font-bold text-[#18181b] text-sm">
             Intent Layer (Natural Language Text Field)
           </div>
           <div className="mx-auto h-4 border-l-2 border-dashed border-[#e3e3e0]"></div>
@@ -71,10 +71,10 @@ export function APIAbstractionLayer() {
           </div>
           <div className="mx-auto h-4 border-l-2 border-dashed border-[#e3e3e0]"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Analytics DB<br/><span className="text-primary">PostHog / Amplitude</span></div>
-            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">CRM System<br/><span className="text-primary">Salesforce / HubSpot</span></div>
-            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Financial Data<br/><span className="text-primary">Stripe / QuickBooks</span></div>
-            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Codebase<br/><span className="text-primary">GitHub / IDE Agents</span></div>
+            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Analytics DB<br/><span className="text-[#18181b]">PostHog / Amplitude</span></div>
+            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">CRM System<br/><span className="text-[#18181b]">Salesforce / HubSpot</span></div>
+            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Financial Data<br/><span className="text-[#18181b]">Stripe / QuickBooks</span></div>
+            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Codebase<br/><span className="text-[#18181b]">GitHub / IDE Agents</span></div>
           </div>
         </div>
 
@@ -96,22 +96,22 @@ export function TextUIAdoption() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           <div className="rounded-[3px] border border-[#e3e3e0] p-4">
-            <div className="text-2xl font-bold text-primary">90%</div>
+            <div className="text-2xl font-bold text-[#18181b]">90%</div>
             <div className="text-[10px] text-[#37352f] font-medium mt-1 uppercase">Fortune 100 on Copilot</div>
             <div className="text-[10px] text-muted-foreground mt-2">GitHub, Jul 2025</div>
           </div>
           <div className="rounded-[3px] border border-[#e3e3e0] p-4">
-            <div className="text-2xl font-bold text-primary">12,000+</div>
+            <div className="text-2xl font-bold text-[#18181b]">12,000+</div>
             <div className="text-[10px] text-[#37352f] font-medium mt-1 uppercase">Agentforce Orgs</div>
             <div className="text-[10px] text-muted-foreground mt-2">Salesforce, Q1 2026</div>
           </div>
           <div className="rounded-[3px] border border-[#e3e3e0] p-4">
-            <div className="text-2xl font-bold text-primary">93%</div>
+            <div className="text-2xl font-bold text-[#18181b]">93%</div>
             <div className="text-[10px] text-[#37352f] font-medium mt-1 uppercase">Want NL Data Queries</div>
             <div className="text-[10px] text-muted-foreground mt-2">Salesforce survey</div>
           </div>
-          <div className="rounded-[3px] border border-primary/30 bg-primary/5 p-4">
-            <div className="text-2xl font-bold text-primary">46%</div>
+          <div className="rounded-[3px] border border-[#e4e4e7] bg-[#f4f4f5] p-4">
+            <div className="text-2xl font-bold text-[#18181b]">46%</div>
             <div className="text-[10px] text-[#37352f] font-medium mt-1 uppercase">Code Written by Copilot</div>
             <div className="text-[10px] text-muted-foreground mt-2">GitHub avg across users</div>
           </div>
@@ -144,8 +144,8 @@ export function PlatformShiftTimeline() {
         <div className="relative pl-6 border-l-2 border-[#e3e3e0]">
           {events.map((e, i) => (
             <div key={i} className="mb-5 last:mb-0 relative">
-              <div className="absolute -left-[1.6rem] top-1 w-3 h-3 rounded-full bg-primary border-2 border-white" />
-              <div className="text-[10px] font-bold text-primary uppercase tracking-wider">{e.date}</div>
+              <div className="absolute -left-[1.6rem] top-1 w-3 h-3 rounded-full bg-[#18181b] border-2 border-white" />
+              <div className="text-[10px] font-bold text-[#18181b] uppercase tracking-wider">{e.date}</div>
               <div className="text-xs font-bold text-[#37352f] mt-0.5">{e.title}</div>
               <div className="text-xs text-[#37352f]/70 mt-0.5 leading-relaxed">{e.desc}</div>
             </div>

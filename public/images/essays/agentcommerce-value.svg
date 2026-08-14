@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" width="400" height="440" preserveAspectRatio="xMidYMid meet">
+  <style>
+    text { font-family: Inter, system-ui, sans-serif; }
+    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
+    .name { font-size: 15px; font-weight: 600; fill: #18181b; }
+    .row { font-size: 13px; fill: #18181b; }
+    .note { font-size: 12px; fill: #52525b; }
+  </style>
+
+  <text x="16" y="28" class="title">When the buyer is an algorithm</text>
+
+  <rect x="16" y="44" width="368" height="168" fill="#f4f4f5"/>
+  <text x="28" y="70" class="name">Loses value</text>
+  <text x="28" y="96" class="row">Display ads and retargeting</text>
+  <text x="28" y="118" class="row">Brand loyalty priced against a cheaper SKU</text>
+  <text x="28" y="140" class="row">SEO keyword pages</text>
+  <text x="28" y="162" class="row">Checkout UX built for human eyes</text>
+  <text x="28" y="184" class="row">Product pages as the store</text>
+
+  <rect x="16" y="212" width="368" height="168" fill="#ffffff"/>
+  <text x="28" y="238" class="name">Gains value</text>
+  <text x="28" y="264" class="row">Structured product data</text>
+  <text x="28" y="286" class="row">Real-time inventory feeds</text>
+  <text x="28" y="308" class="row">Machine-readable specs and APIs</text>
+  <text x="28" y="330" class="row">Answer-engine ranking, not page rank</text>
+  <text x="28" y="352" class="row">Agent-readable price and return rules</text>
+
+  <text x="16" y="412" class="note">The page is for people. The feed is for the agent.</text>
+  <text x="16" y="430" class="note">veda.ng</text>
+</svg>

@@ -24,14 +24,14 @@ export function DigitalGovMaturity() {
         <div className="space-y-1.5">
           {countries.map((c) => (
             <div key={c.name} className="grid grid-cols-[90px_1fr_75px] gap-2 items-center">
-              <span className={`text-xs truncate ${c.highlight ? 'text-primary font-bold' : 'text-muted-foreground font-medium'}`}>{c.name}</span>
+              <span className={`text-xs truncate ${c.highlight ? 'text-[#18181b] font-bold' : 'text-muted-foreground font-medium'}`}>{c.name}</span>
               <div className="w-full h-3.5 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
-                  style={{ width: `${(c.digital / max) * 100}%`, backgroundColor: c.highlight ? 'hsl(210 90% 40%)' : '#37352f', opacity: c.highlight ? 0.8 : 0.25 + (c.digital / max) * 0.4 }}
+                  style={{ width: `${(c.digital / max) * 100}%`, backgroundColor: c.highlight ? '#18181b' : '#37352f', opacity: c.highlight ? 0.8 : 0.25 + (c.digital / max) * 0.4 }}
                 />
               </div>
-              <span className={`text-[10px] font-bold text-right ${c.highlight ? 'text-primary' : 'text-[#37352f]'}`}>{c.digital}%</span>
+              <span className={`text-[10px] font-bold text-right ${c.highlight ? 'text-[#18181b]' : 'text-[#37352f]'}`}>{c.digital}%</span>
             </div>
           ))}
         </div>
@@ -77,7 +77,7 @@ export function EResidencyImpact() {
                   <td className="py-2.5 px-2 text-[#37352f]">{d.year}</td>
                   <td className="py-2.5 px-2 text-[#37352f]">{d.companies.toLocaleString()}</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${i === data.length - 1 ? 'bg-green-50 text-green-600' : 'text-[#37352f]'}`}>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${i === data.length - 1 ? 'bg-[#f4f4f5] text-[#18181b]' : 'text-[#37352f]'}`}>
                       €{d.revenue}M
                     </span>
                   </td>
@@ -105,7 +105,7 @@ export function AgenticStateArchitecture() {
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How AI transforms digital government from reactive services to proactive agents</p>
 
         <div className="flex flex-col gap-2">
-          <div className="rounded border border-primary bg-primary/10 p-3 text-center font-bold text-primary text-sm">
+          <div className="rounded border border-[#18181b] bg-[#f4f4f5] p-3 text-center font-bold text-[#18181b] text-sm">
             Citizen Intent (Natural Language / Life Event Trigger)
           </div>
           <div className="mx-auto h-4 border-l-2 border-dashed border-[#e3e3e0]"></div>
@@ -114,10 +114,10 @@ export function AgenticStateArchitecture() {
           </div>
           <div className="mx-auto h-4 border-l-2 border-dashed border-[#e3e3e0]"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Population Registry<br/><span className="text-primary">X-Road / SingPass</span></div>
-            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Tax Authority<br/><span className="text-primary">Auto-assessment</span></div>
-            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Health Insurance<br/><span className="text-primary">Auto-enrollment</span></div>
-            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Business Registry<br/><span className="text-primary">Instant formation</span></div>
+            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Population Registry<br/><span className="text-[#18181b]">X-Road / SingPass</span></div>
+            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Tax Authority<br/><span className="text-[#18181b]">Auto-assessment</span></div>
+            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Health Insurance<br/><span className="text-[#18181b]">Auto-enrollment</span></div>
+            <div className="rounded border border-[#e3e3e0] p-2 text-center text-[10px] font-medium font-mono text-muted-foreground">Business Registry<br/><span className="text-[#18181b]">Instant formation</span></div>
           </div>
           <div className="mx-auto h-4 border-l-2 border-dashed border-[#e3e3e0]"></div>
           <div className="rounded border border-[#e3e3e0] bg-[#f7f6f3] p-3 text-center text-[10px] font-semibold text-muted-foreground">

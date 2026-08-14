@@ -24,23 +24,23 @@ export function GodProtocolComparison() {
               <div className="text-[11px] font-bold text-[#37352f] mb-1.5">{p.property}</div>
               <div className="space-y-1">
                 <div className="grid grid-cols-[90px_1fr_30px] gap-2 items-center">
-                  <span className="text-[9px] uppercase tracking-wider font-semibold" style={{ color: 'hsl(280 60% 45%)' }}>Ideal</span>
+                  <span className="text-[9px] uppercase tracking-wider font-semibold" style={{ color: '#71717a' }}>Ideal</span>
                   <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden">
-                    <div className="h-full rounded-md" style={{ width: `${p.godPct}%`, backgroundColor: 'hsl(280 60% 45%)', opacity: 0.4 }} />
+                    <div className="h-full rounded-md" style={{ width: `${p.godPct}%`, backgroundColor: '#71717a', opacity: 0.4 }} />
                   </div>
                   <span className="text-[9px] text-muted-foreground text-right">{p.godPct}%</span>
                 </div>
                 <div className="grid grid-cols-[90px_1fr_30px] gap-2 items-center">
-                  <span className="text-[9px] uppercase tracking-wider font-semibold" style={{ color: 'hsl(210 90% 40%)' }}>Crypto</span>
+                  <span className="text-[9px] uppercase tracking-wider font-semibold" style={{ color: '#18181b' }}>Crypto</span>
                   <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden">
-                    <div className="h-full rounded-md" style={{ width: `${p.cryptoPct}%`, backgroundColor: 'hsl(210 90% 40%)', opacity: 0.5 }} />
+                    <div className="h-full rounded-md" style={{ width: `${p.cryptoPct}%`, backgroundColor: '#18181b', opacity: 0.5 }} />
                   </div>
                   <span className="text-[9px] text-muted-foreground text-right">{p.cryptoPct}%</span>
                 </div>
                 <div className="grid grid-cols-[90px_1fr_30px] gap-2 items-center">
-                  <span className="text-[9px] uppercase tracking-wider font-semibold" style={{ color: 'hsl(0 0% 55%)' }}>Traditional</span>
+                  <span className="text-[9px] uppercase tracking-wider font-semibold" style={{ color: '#a1a1aa' }}>Traditional</span>
                   <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden">
-                    <div className="h-full rounded-md" style={{ width: `${p.tradPct}%`, backgroundColor: 'hsl(0 0% 55%)', opacity: 0.4 }} />
+                    <div className="h-full rounded-md" style={{ width: `${p.tradPct}%`, backgroundColor: '#a1a1aa', opacity: 0.4 }} />
                   </div>
                   <span className="text-[9px] text-muted-foreground text-right">{p.tradPct}%</span>
                 </div>
@@ -60,14 +60,14 @@ export function GodProtocolComparison() {
 /* ─── Cryptographic TTP Evolution Timeline ─── */
 export function TTPEvolutionTimeline() {
   const milestones = [
-    { year: '1997', event: 'Szabo publishes "The God Protocols"', type: 'concept', color: 'hsl(280 60% 45%)' },
-    { year: '2009', event: 'Bitcoin: first trustless value transfer', type: 'launch', color: 'hsl(30 80% 50%)' },
-    { year: '2015', event: 'Ethereum: Turing-complete smart contracts', type: 'launch', color: 'hsl(210 90% 40%)' },
-    { year: '2017', event: 'zkSNARKs deployed (Zcash) for privacy', type: 'privacy', color: 'hsl(160 80% 35%)' },
-    { year: '2020', event: 'DeFi summer: TVL surges past $10B', type: 'adoption', color: 'hsl(350 70% 45%)' },
-    { year: '2022', event: 'Ethereum Merge: PoS transition, 99.95% energy reduction', type: 'launch', color: 'hsl(210 90% 40%)' },
-    { year: '2023', event: 'ZK-rollups launch (zkSync, Polygon zkEVM)', type: 'privacy', color: 'hsl(160 80% 35%)' },
-    { year: '2025', event: 'L2s handle 95% of Ethereum throughput, $28B TVL in ZK-rollups', type: 'adoption', color: 'hsl(350 70% 45%)' },
+    { year: '1997', event: 'Szabo publishes "The God Protocols"', type: 'concept', color: '#71717a' },
+    { year: '2009', event: 'Bitcoin: first trustless value transfer', type: 'launch', color: '#52525b' },
+    { year: '2015', event: 'Ethereum: Turing-complete smart contracts', type: 'launch', color: '#18181b' },
+    { year: '2017', event: 'zkSNARKs deployed (Zcash) for privacy', type: 'privacy', color: '#3f3f46' },
+    { year: '2020', event: 'DeFi summer: TVL surges past $10B', type: 'adoption', color: '#a1a1aa' },
+    { year: '2022', event: 'Ethereum Merge: PoS transition, 99.95% energy reduction', type: 'launch', color: '#18181b' },
+    { year: '2023', event: 'ZK-rollups launch (zkSync, Polygon zkEVM)', type: 'privacy', color: '#3f3f46' },
+    { year: '2025', event: 'L2s handle 95% of Ethereum throughput, $28B TVL in ZK-rollups', type: 'adoption', color: '#a1a1aa' },
   ];
 
   return (
@@ -102,11 +102,11 @@ export function TTPEvolutionTimeline() {
 /* ─── Privacy Technology Stack ─── */
 export function PrivacyTechStack() {
   const techs = [
-    { name: 'Zero-Knowledge Proofs', abbr: 'ZKP', capability: 'Prove truth without revealing data', maturity: 85, status: 'Production (ZK-rollups, $28B TVL)', color: 'hsl(210 90% 40%)' },
-    { name: 'Multi-Party Computation', abbr: 'MPC', capability: 'Joint computation without shared data', maturity: 65, status: 'Institutional custody, Chainlink DECO', color: 'hsl(160 80% 35%)' },
-    { name: 'Fully Homomorphic Encryption', abbr: 'FHE', capability: 'Compute on encrypted data', maturity: 30, status: 'Research/early commercial (Zama, Microsoft SEAL)', color: 'hsl(280 60% 45%)' },
-    { name: 'Trusted Execution Environments', abbr: 'TEE', capability: 'Isolated hardware computation', maturity: 75, status: 'Intel SGX, AWS Nitro Enclaves', color: 'hsl(30 80% 50%)' },
-    { name: 'Decentralized Oracles', abbr: 'Oracle', capability: 'Trustless off-chain data feeds', maturity: 80, status: 'Chainlink ($16B+ TVS), Pyth', color: 'hsl(350 70% 45%)' },
+    { name: 'Zero-Knowledge Proofs', abbr: 'ZKP', capability: 'Prove truth without revealing data', maturity: 85, status: 'Production (ZK-rollups, $28B TVL)', color: '#18181b' },
+    { name: 'Multi-Party Computation', abbr: 'MPC', capability: 'Joint computation without shared data', maturity: 65, status: 'Institutional custody, Chainlink DECO', color: '#3f3f46' },
+    { name: 'Fully Homomorphic Encryption', abbr: 'FHE', capability: 'Compute on encrypted data', maturity: 30, status: 'Research/early commercial (Zama, Microsoft SEAL)', color: '#71717a' },
+    { name: 'Trusted Execution Environments', abbr: 'TEE', capability: 'Isolated hardware computation', maturity: 75, status: 'Intel SGX, AWS Nitro Enclaves', color: '#52525b' },
+    { name: 'Decentralized Oracles', abbr: 'Oracle', capability: 'Trustless off-chain data feeds', maturity: 80, status: 'Chainlink ($16B+ TVS), Pyth', color: '#a1a1aa' },
   ];
 
   return (
@@ -147,13 +147,13 @@ export function PrivacyTechStack() {
 /* ─── TTP Market Scale ─── */
 export function TTPMarketScale() {
   const markets = [
-    { name: 'Banking (correspondent)', value: 28, unit: 'T', color: 'hsl(0 0% 55%)' },
-    { name: 'Legal services', value: 1.1, unit: 'T', color: 'hsl(0 0% 55%)' },
-    { name: 'Title & escrow', value: 0.025, unit: 'T', color: 'hsl(0 0% 55%)' },
-    { name: 'Insurance claims', value: 5.5, unit: 'T', color: 'hsl(0 0% 55%)' },
-    { name: 'Bitcoin (trustless value)', value: 1.56, unit: 'T', color: 'hsl(30 80% 50%)' },
-    { name: 'DeFi TVL (smart contract TTP)', value: 0.085, unit: 'T', color: 'hsl(210 90% 40%)' },
-    { name: 'ZK-rollup TVL', value: 0.028, unit: 'T', color: 'hsl(160 80% 35%)' },
+    { name: 'Banking (correspondent)', value: 28, unit: 'T', color: '#a1a1aa' },
+    { name: 'Legal services', value: 1.1, unit: 'T', color: '#a1a1aa' },
+    { name: 'Title & escrow', value: 0.025, unit: 'T', color: '#a1a1aa' },
+    { name: 'Insurance claims', value: 5.5, unit: 'T', color: '#a1a1aa' },
+    { name: 'Bitcoin (trustless value)', value: 1.56, unit: 'T', color: '#52525b' },
+    { name: 'DeFi TVL (smart contract TTP)', value: 0.085, unit: 'T', color: '#18181b' },
+    { name: 'ZK-rollup TVL', value: 0.028, unit: 'T', color: '#3f3f46' },
   ];
   const maxLog = Math.log10(28);
 
@@ -182,8 +182,8 @@ export function TTPMarketScale() {
         </div>
 
         <div className="flex items-center gap-4 mt-4 pt-3 border-t border-[#e3e3e0]">
-          <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(0 0% 55%)' }} /><span className="text-[10px] text-muted-foreground">Traditional TTP</span></div>
-          <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(210 90% 40%)' }} /><span className="text-[10px] text-muted-foreground">Cryptographic TTP</span></div>
+          <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#a1a1aa' }} /><span className="text-[10px] text-muted-foreground">Traditional TTP</span></div>
+          <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#18181b' }} /><span className="text-[10px] text-muted-foreground">Cryptographic TTP</span></div>
         </div>
 
         <p className="mt-2 text-[10px] text-muted-foreground/60">
@@ -197,11 +197,11 @@ export function TTPMarketScale() {
 /* ─── Distributed God Protocol Architecture ─── */
 export function DistributedArchitectureChart() {
   const layers = [
-    { layer: 'Verification', components: ['ZKPs', 'Attestation', 'DECO'], status: 'Production', color: 'hsl(210 90% 40%)' },
-    { layer: 'Computation', components: ['Smart contracts', 'MPC', 'FHE'], status: 'Partial', color: 'hsl(160 80% 35%)' },
-    { layer: 'Data Access', components: ['Chainlink oracles', 'The Graph', 'IPFS'], status: 'Production', color: 'hsl(30 80% 50%)' },
-    { layer: 'Consensus', components: ['PoS validators', 'Cross-chain bridges', 'DA layers'], status: 'Production', color: 'hsl(280 60% 45%)' },
-    { layer: 'Governance', components: ['DAOs', 'Token voting', 'Futarchy'], status: 'Experimental', color: 'hsl(350 70% 45%)' },
+    { layer: 'Verification', components: ['ZKPs', 'Attestation', 'DECO'], status: 'Production', color: '#18181b' },
+    { layer: 'Computation', components: ['Smart contracts', 'MPC', 'FHE'], status: 'Partial', color: '#3f3f46' },
+    { layer: 'Data Access', components: ['Chainlink oracles', 'The Graph', 'IPFS'], status: 'Production', color: '#52525b' },
+    { layer: 'Consensus', components: ['PoS validators', 'Cross-chain bridges', 'DA layers'], status: 'Production', color: '#71717a' },
+    { layer: 'Governance', components: ['DAOs', 'Token voting', 'Futarchy'], status: 'Experimental', color: '#a1a1aa' },
   ];
 
   return (
@@ -237,11 +237,11 @@ export function DistributedArchitectureChart() {
 /* ─── Alignment Framework Comparison ─── */
 export function AlignmentFrameworkChart() {
   const frameworks = [
-    { name: 'Utilitarian', principle: 'Maximize aggregate welfare', godProtocol: 'Calculates optimal outcome for the greatest number', risk: 'Sacrifices minorities for majority benefit', color: 'hsl(210 90% 40%)' },
-    { name: 'Deontological', principle: 'Follow universal rules', godProtocol: 'Enforces inviolable rights regardless of outcome', risk: 'Rule rigidity in novel situations', color: 'hsl(160 80% 35%)' },
-    { name: 'Virtue Ethics', principle: 'Cultivate character traits', godProtocol: 'Models behavior on exemplary agents', risk: 'Whose "virtues" are selected?', color: 'hsl(280 60% 45%)' },
-    { name: 'Care Ethics', principle: 'Prioritize relationships and context', godProtocol: 'Weighs relational impact of decisions', risk: 'Bias toward in-group over fairness', color: 'hsl(350 70% 45%)' },
-    { name: 'Contractualist', principle: 'Rules no one could reasonably reject', godProtocol: 'Seeks unanimous reasonable consent', risk: 'Computationally intractable at scale', color: 'hsl(30 80% 50%)' },
+    { name: 'Utilitarian', principle: 'Maximize aggregate welfare', godProtocol: 'Calculates optimal outcome for the greatest number', risk: 'Sacrifices minorities for majority benefit', color: '#18181b' },
+    { name: 'Deontological', principle: 'Follow universal rules', godProtocol: 'Enforces inviolable rights regardless of outcome', risk: 'Rule rigidity in novel situations', color: '#3f3f46' },
+    { name: 'Virtue Ethics', principle: 'Cultivate character traits', godProtocol: 'Models behavior on exemplary agents', risk: 'Whose "virtues" are selected?', color: '#71717a' },
+    { name: 'Care Ethics', principle: 'Prioritize relationships and context', godProtocol: 'Weighs relational impact of decisions', risk: 'Bias toward in-group over fairness', color: '#a1a1aa' },
+    { name: 'Contractualist', principle: 'Rules no one could reasonably reject', godProtocol: 'Seeks unanimous reasonable consent', risk: 'Computationally intractable at scale', color: '#52525b' },
   ];
 
   return (
@@ -255,7 +255,7 @@ export function AlignmentFrameworkChart() {
             <div className="grid grid-cols-[100px_1fr_1fr_1fr] gap-2 mb-2">
               <span className="text-[10px] font-bold uppercase text-muted-foreground">Framework</span>
               <span className="text-[10px] font-bold uppercase text-muted-foreground text-center">Principle</span>
-              <span className="text-[10px] font-bold uppercase text-center" style={{ color: 'hsl(280 60% 45%)' }}>God Protocol Behavior</span>
+              <span className="text-[10px] font-bold uppercase text-center" style={{ color: '#71717a' }}>God Protocol Behavior</span>
               <span className="text-[10px] font-bold uppercase text-muted-foreground text-center">Risk</span>
             </div>
             {frameworks.map((f) => (

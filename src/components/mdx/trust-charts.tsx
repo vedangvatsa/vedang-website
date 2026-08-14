@@ -5,10 +5,10 @@ import React from 'react';
 /* ─── Trust Primitives Comparison ─── */
 export function TrustPrimitivesComparison() {
   const primitives = [
-    { name: 'Zero-Knowledge Proofs', abbr: 'ZKP', trustBasis: 'Mathematics', privacy: 'Full', speed: 'Fast verify / slow prove', deployment: 'ZK rollups ($28B TVL), identity, DeFi', maturity: 85, color: 'hsl(210 90% 40%)' },
-    { name: 'Trusted Execution Env.', abbr: 'TEE', trustBasis: 'Hardware', privacy: 'Hardware-enforced', speed: 'Near-native', deployment: 'Cloud, mobile, 3.5B+ Apple devices', maturity: 80, color: 'hsl(30 80% 50%)' },
-    { name: 'Multi-Party Computation', abbr: 'MPC', trustBasis: 'Protocol', privacy: 'Distributed', speed: 'Slower (comms overhead)', deployment: 'Custody (Fireblocks), joint analytics', maturity: 65, color: 'hsl(160 80% 35%)' },
-    { name: 'Fully Homomorphic Enc.', abbr: 'FHE', trustBasis: 'Mathematics', privacy: 'Full (compute on encrypted)', speed: 'Very slow (improving)', deployment: 'Research, early commercial (Zama)', maturity: 30, color: 'hsl(280 60% 45%)' },
+    { name: 'Zero-Knowledge Proofs', abbr: 'ZKP', trustBasis: 'Mathematics', privacy: 'Full', speed: 'Fast verify / slow prove', deployment: 'ZK rollups ($28B TVL), identity, DeFi', maturity: 85, color: '#18181b' },
+    { name: 'Trusted Execution Env.', abbr: 'TEE', trustBasis: 'Hardware', privacy: 'Hardware-enforced', speed: 'Near-native', deployment: 'Cloud, mobile, 3.5B+ Apple devices', maturity: 80, color: '#52525b' },
+    { name: 'Multi-Party Computation', abbr: 'MPC', trustBasis: 'Protocol', privacy: 'Distributed', speed: 'Slower (comms overhead)', deployment: 'Custody (Fireblocks), joint analytics', maturity: 65, color: '#3f3f46' },
+    { name: 'Fully Homomorphic Enc.', abbr: 'FHE', trustBasis: 'Mathematics', privacy: 'Full (compute on encrypted)', speed: 'Very slow (improving)', deployment: 'Research, early commercial (Zama)', maturity: 30, color: '#71717a' },
   ];
 
   return (
@@ -51,12 +51,12 @@ export function TrustPrimitivesComparison() {
 /* ─── DeFi Security Overview ─── */
 export function DeFiSecurityChart() {
   const years = [
-    { year: '2020', losses: 0.1, color: 'hsl(160 80% 35%)' },
-    { year: '2021', losses: 1.3, color: 'hsl(30 80% 50%)' },
-    { year: '2022', losses: 3.8, color: 'hsl(350 70% 45%)' },
-    { year: '2023', losses: 1.7, color: 'hsl(30 80% 50%)' },
-    { year: '2024', losses: 2.2, color: 'hsl(350 70% 45%)' },
-    { year: '2025', losses: 3.5, color: 'hsl(0 70% 50%)' },
+    { year: '2020', losses: 0.1, color: '#3f3f46' },
+    { year: '2021', losses: 1.3, color: '#52525b' },
+    { year: '2022', losses: 3.8, color: '#a1a1aa' },
+    { year: '2023', losses: 1.7, color: '#52525b' },
+    { year: '2024', losses: 2.2, color: '#a1a1aa' },
+    { year: '2025', losses: 3.5, color: '#18181b' },
   ];
   const max = 4;
 
@@ -97,10 +97,10 @@ export function DeFiSecurityChart() {
 /* ─── Trust Stack Architecture ─── */
 export function TrustStackArchitecture() {
   const layers = [
-    { layer: 4, name: 'Application Logic', components: ['Smart contracts', 'Identity wallets', 'DeFi protocols', 'Supply chain'], color: 'hsl(280 60% 45%)', desc: 'Inherits trust properties from lower layers' },
-    { layer: 3, name: 'Protocol Coordination', components: ['MPC', 'Cross-chain bridges', 'Sequencers', 'DA layers'], color: 'hsl(160 80% 35%)', desc: 'Multi-party computation without input disclosure' },
-    { layer: 2, name: 'Cryptographic Verification', components: ['ZKPs', 'zkSNARKs/STARKs', 'Digital signatures', 'FHE'], color: 'hsl(210 90% 40%)', desc: 'Mathematical proof of facts, zero data revealed' },
-    { layer: 1, name: 'Hardware Trust', components: ['Intel SGX', 'AMD SEV', 'Apple Secure Enclave', 'ARM TrustZone'], color: 'hsl(30 80% 50%)', desc: 'Physical security boundary, tamper-proof enclaves' },
+    { layer: 4, name: 'Application Logic', components: ['Smart contracts', 'Identity wallets', 'DeFi protocols', 'Supply chain'], color: '#71717a', desc: 'Inherits trust properties from lower layers' },
+    { layer: 3, name: 'Protocol Coordination', components: ['MPC', 'Cross-chain bridges', 'Sequencers', 'DA layers'], color: '#3f3f46', desc: 'Multi-party computation without input disclosure' },
+    { layer: 2, name: 'Cryptographic Verification', components: ['ZKPs', 'zkSNARKs/STARKs', 'Digital signatures', 'FHE'], color: '#18181b', desc: 'Mathematical proof of facts, zero data revealed' },
+    { layer: 1, name: 'Hardware Trust', components: ['Intel SGX', 'AMD SEV', 'Apple Secure Enclave', 'ARM TrustZone'], color: '#52525b', desc: 'Physical security boundary, tamper-proof enclaves' },
   ];
 
   return (
@@ -139,12 +139,12 @@ export function TrustStackArchitecture() {
 /* ─── Institutional vs. Programmable Trust ─── */
 export function TrustComparisonChart() {
   const dimensions = [
-    { dim: 'Verification speed', institutional: 'Days to weeks', programmable: 'Milliseconds to seconds', advantage: '10,000x+', color: 'hsl(210 90% 40%)' },
-    { dim: 'Data disclosed', institutional: 'Full financial/personal history', programmable: 'Zero (ZKP) to minimal', advantage: '100% reduction', color: 'hsl(160 80% 35%)' },
-    { dim: 'Corruption risk', institutional: 'Human (bribery, error, bias)', programmable: 'Code (bugs, exploits)', advantage: 'Different risk profile', color: 'hsl(30 80% 50%)' },
-    { dim: 'Availability', institutional: 'Business hours / jurisdiction', programmable: '24/7/365 (100% uptime)', advantage: '5-7x more hours', color: 'hsl(210 90% 40%)' },
-    { dim: 'Cost per verification', institutional: '$50-5,000 (lawyer, notary)', programmable: '$0.004-0.10 (L2 tx)', advantage: '1,000-50,000x cheaper', color: 'hsl(160 80% 35%)' },
-    { dim: 'Cross-border', institutional: 'Treaties, extradition, conflict of laws', programmable: 'Borderless by default', advantage: 'No jurisdictional friction', color: 'hsl(280 60% 45%)' },
+    { dim: 'Verification speed', institutional: 'Days to weeks', programmable: 'Milliseconds to seconds', advantage: '10,000x+', color: '#18181b' },
+    { dim: 'Data disclosed', institutional: 'Full financial/personal history', programmable: 'Zero (ZKP) to minimal', advantage: '100% reduction', color: '#3f3f46' },
+    { dim: 'Corruption risk', institutional: 'Human (bribery, error, bias)', programmable: 'Code (bugs, exploits)', advantage: 'Different risk profile', color: '#52525b' },
+    { dim: 'Availability', institutional: 'Business hours / jurisdiction', programmable: '24/7/365 (100% uptime)', advantage: '5-7x more hours', color: '#18181b' },
+    { dim: 'Cost per verification', institutional: '$50-5,000 (lawyer, notary)', programmable: '$0.004-0.10 (L2 tx)', advantage: '1,000-50,000x cheaper', color: '#3f3f46' },
+    { dim: 'Cross-border', institutional: 'Treaties, extradition, conflict of laws', programmable: 'Borderless by default', advantage: 'No jurisdictional friction', color: '#71717a' },
   ];
 
   return (
@@ -158,14 +158,14 @@ export function TrustComparisonChart() {
             <div className="grid grid-cols-[110px_1fr_1fr_90px] gap-2 mb-2">
               <span className="text-[10px] font-bold uppercase text-muted-foreground">Dimension</span>
               <span className="text-[10px] font-bold uppercase text-muted-foreground text-center">Institutional</span>
-              <span className="text-[10px] font-bold uppercase text-center" style={{ color: 'hsl(160 80% 35%)' }}>Programmable</span>
+              <span className="text-[10px] font-bold uppercase text-center" style={{ color: '#3f3f46' }}>Programmable</span>
               <span className="text-[10px] font-bold uppercase text-muted-foreground text-right">Advantage</span>
             </div>
             {dimensions.map((d) => (
               <div key={d.dim} className="grid grid-cols-[110px_1fr_1fr_90px] gap-2 border-t border-[#e3e3e0] py-2 items-center">
                 <span className="text-[11px] font-bold text-[#37352f]">{d.dim}</span>
                 <span className="text-[10px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1.5 rounded-md">{d.institutional}</span>
-                <span className="text-[10px] text-center px-2 py-1.5 rounded-md font-medium" style={{ backgroundColor: 'hsl(160 80% 35% / 0.08)', color: 'hsl(160 80% 35%)' }}>{d.programmable}</span>
+                <span className="text-[10px] text-center px-2 py-1.5 rounded-md font-medium" style={{ backgroundColor: '#f4f4f5', color: '#3f3f46' }}>{d.programmable}</span>
                 <span className="text-[10px] font-bold text-right" style={{ color: d.color }}>{d.advantage}</span>
               </div>
             ))}
@@ -183,12 +183,12 @@ export function TrustComparisonChart() {
 /* ─── eIDAS 2.0 & Digital Identity Timeline ─── */
 export function DigitalIdentityTimeline() {
   const milestones = [
-    { year: '2014', event: 'eIDAS 1.0: EU electronic identification framework', color: 'hsl(0 0% 55%)' },
-    { year: '2017', event: 'W3C publishes DID Core specification (draft)', color: 'hsl(210 70% 50%)' },
-    { year: '2022', event: 'W3C Verifiable Credentials v2.0 recommendation', color: 'hsl(210 90% 40%)' },
-    { year: '2024', event: 'eIDAS 2.0 regulation enters into force', color: 'hsl(160 80% 35%)' },
-    { year: '2026', event: 'EU Member States must provide EUDI Wallets (Dec 31)', color: 'hsl(160 80% 35%)' },
-    { year: '2027', event: 'Regulated services must accept EUDI Wallets', color: 'hsl(280 60% 45%)' },
+    { year: '2014', event: 'eIDAS 1.0: EU electronic identification framework', color: '#a1a1aa' },
+    { year: '2017', event: 'W3C publishes DID Core specification (draft)', color: '#18181b' },
+    { year: '2022', event: 'W3C Verifiable Credentials v2.0 recommendation', color: '#18181b' },
+    { year: '2024', event: 'eIDAS 2.0 regulation enters into force', color: '#3f3f46' },
+    { year: '2026', event: 'EU Member States must provide EUDI Wallets (Dec 31)', color: '#3f3f46' },
+    { year: '2027', event: 'Regulated services must accept EUDI Wallets', color: '#71717a' },
   ];
 
   return (
@@ -223,12 +223,12 @@ export function DigitalIdentityTimeline() {
 /* ─── Application Domains ─── */
 export function TrustApplicationDomains() {
   const domains = [
-    { domain: 'Private identity (KYC)', current: 'Full document disclosure', programmable: 'ZKP: prove age/status without data', readiness: 75, color: 'hsl(210 90% 40%)' },
-    { domain: 'Confidential DeFi', current: 'All transactions public', programmable: 'Aztec/Aleo: hidden amounts and parties', readiness: 55, color: 'hsl(160 80% 35%)' },
-    { domain: 'Regulatory compliance', current: 'Full audit access', programmable: 'ZKP attestations: prove compliance, no data', readiness: 40, color: 'hsl(280 60% 45%)' },
-    { domain: 'Supply chain audit', current: 'Supplier data exposed', programmable: 'TEE-secured audit with aggregate only', readiness: 50, color: 'hsl(30 80% 50%)' },
-    { domain: 'Medical referrals', current: 'Full patient record', programmable: 'VC: prove relevant diagnosis only', readiness: 35, color: 'hsl(350 70% 45%)' },
-    { domain: 'Cross-border payments', current: 'Correspondent banking ($28T)', programmable: 'Stablecoin + ZKP identity attestation', readiness: 60, color: 'hsl(210 90% 40%)' },
+    { domain: 'Private identity (KYC)', current: 'Full document disclosure', programmable: 'ZKP: prove age/status without data', readiness: 75, color: '#18181b' },
+    { domain: 'Confidential DeFi', current: 'All transactions public', programmable: 'Aztec/Aleo: hidden amounts and parties', readiness: 55, color: '#3f3f46' },
+    { domain: 'Regulatory compliance', current: 'Full audit access', programmable: 'ZKP attestations: prove compliance, no data', readiness: 40, color: '#71717a' },
+    { domain: 'Supply chain audit', current: 'Supplier data exposed', programmable: 'TEE-secured audit with aggregate only', readiness: 50, color: '#52525b' },
+    { domain: 'Medical referrals', current: 'Full patient record', programmable: 'VC: prove relevant diagnosis only', readiness: 35, color: '#a1a1aa' },
+    { domain: 'Cross-border payments', current: 'Correspondent banking ($28T)', programmable: 'Stablecoin + ZKP identity attestation', readiness: 60, color: '#18181b' },
   ];
 
   return (

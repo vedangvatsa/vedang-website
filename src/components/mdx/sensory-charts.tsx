@@ -5,11 +5,11 @@ import React from 'react';
 /* ─── Sensory Bandwidth Distribution ─── */
 export function SensoryBandwidthChart() {
   const senses = [
-    { name: 'Vision', bps: 10000000, pct: 90.9, covered: true, color: 'hsl(210 90% 40%)' },
-    { name: 'Touch', bps: 1000000, pct: 9.1, covered: false, color: 'hsl(350 70% 45%)' },
-    { name: 'Hearing', bps: 100000, pct: 0.9, covered: true, color: 'hsl(160 80% 35%)' },
-    { name: 'Smell', bps: 10000, pct: 0.09, covered: false, color: 'hsl(30 80% 50%)' },
-    { name: 'Taste', bps: 1000, pct: 0.01, covered: false, color: 'hsl(280 60% 45%)' },
+    { name: 'Vision', bps: 10000000, pct: 90.9, covered: true, color: '#18181b' },
+    { name: 'Touch', bps: 1000000, pct: 9.1, covered: false, color: '#a1a1aa' },
+    { name: 'Hearing', bps: 100000, pct: 0.9, covered: true, color: '#3f3f46' },
+    { name: 'Smell', bps: 10000, pct: 0.09, covered: false, color: '#52525b' },
+    { name: 'Taste', bps: 1000, pct: 0.01, covered: false, color: '#71717a' },
   ];
   const max = 10000000;
 
@@ -23,7 +23,7 @@ export function SensoryBandwidthChart() {
           {senses.map((s) => (
             <div key={s.name} className="grid grid-cols-[70px_1fr_90px] gap-3 items-center">
               <div className="flex items-center gap-1.5">
-                <div className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: s.covered ? 'hsl(160 80% 35%)' : 'hsl(0 70% 50%)' }} />
+                <div className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: s.covered ? '#3f3f46' : '#18181b' }} />
                 <span className="text-[11px] font-bold text-[#37352f]">{s.name}</span>
               </div>
               <div className="w-full h-5 bg-[#f7f6f3] rounded-md overflow-hidden">
@@ -38,8 +38,8 @@ export function SensoryBandwidthChart() {
         </div>
 
         <div className="flex items-center gap-4 mt-4 pt-3 border-t border-[#e3e3e0]">
-          <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full bg-[hsl(160_80%_35%)]" /><span className="text-[10px] text-muted-foreground">Covered by current internet</span></div>
-          <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full bg-[hsl(0_70%_50%)]" /><span className="text-[10px] text-muted-foreground">Not covered</span></div>
+          <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full bg-[#3f3f46]" /><span className="text-[10px] text-muted-foreground">Covered by current internet</span></div>
+          <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full bg-[#18181b]" /><span className="text-[10px] text-muted-foreground">Not covered</span></div>
         </div>
 
         <p className="mt-2 text-[10px] text-muted-foreground/60">
@@ -53,9 +53,9 @@ export function SensoryBandwidthChart() {
 /* ─── Haptic Technology Generations ─── */
 export function HapticGenerationsChart() {
   const gens = [
-    { gen: 'Gen 1', name: 'Vibration (ERM)', era: '1990s-present', fidelity: 'Binary on/off', examples: 'Phone vibration, basic game rumble', color: 'hsl(0 0% 55%)', width: 20 },
-    { gen: 'Gen 2', name: 'Linear Actuators (LRA)', era: '2015-present', fidelity: 'Variable intensity, waveform', examples: 'Apple Taptic Engine, Sony DualSense', color: 'hsl(210 90% 40%)', width: 55 },
-    { gen: 'Gen 3', name: 'Force Feedback / Surface', era: '2020s-emerging', fidelity: 'Spatial, temperature, texture', examples: 'Ultraleap, HaptX, electroactive polymers', color: 'hsl(160 80% 35%)', width: 90 },
+    { gen: 'Gen 1', name: 'Vibration (ERM)', era: '1990s-present', fidelity: 'Binary on/off', examples: 'Phone vibration, basic game rumble', color: '#a1a1aa', width: 20 },
+    { gen: 'Gen 2', name: 'Linear Actuators (LRA)', era: '2015-present', fidelity: 'Variable intensity, waveform', examples: 'Apple Taptic Engine, Sony DualSense', color: '#18181b', width: 55 },
+    { gen: 'Gen 3', name: 'Force Feedback / Surface', era: '2020s-emerging', fidelity: 'Spatial, temperature, texture', examples: 'Ultraleap, HaptX, electroactive polymers', color: '#3f3f46', width: 90 },
   ];
 
   return (
@@ -96,8 +96,8 @@ export function HapticGenerationsChart() {
 /* ─── Spatial Computing Adoption ─── */
 export function SpatialComputingAdoption() {
   const data = [
-    { product: 'Apple Vision Pro', y2024: 390, y2025: 45, price: '$3,499', color: 'hsl(0 0% 20%)' },
-    { product: 'Meta Quest 3/3S', y2024: 'Dominant (60-80% share)', y2025: 'All-time highest users', price: '$299-499', color: 'hsl(210 90% 40%)' },
+    { product: 'Apple Vision Pro', y2024: 390, y2025: 45, price: '$3,499', color: '#18181b' },
+    { product: 'Meta Quest 3/3S', y2024: 'Dominant (60-80% share)', y2025: 'All-time highest users', price: '$299-499', color: '#18181b' },
   ];
 
   return (
@@ -108,21 +108,21 @@ export function SpatialComputingAdoption() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Apple */}
-          <div className="rounded-[3px] border border-[#e3e3e0] p-4" style={{ borderTopWidth: '3px', borderTopColor: 'hsl(0 0% 20%)' }}>
+          <div className="rounded-[3px] border border-[#e3e3e0] p-4" style={{ borderTopWidth: '3px', borderTopColor: '#18181b' }}>
             <div className="text-xs font-bold uppercase tracking-wider text-[#37352f] mb-3">Apple Vision Pro</div>
             <div className="space-y-2">
               <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">2024 shipments</span><span className="text-lg font-black text-[#37352f]">390K</span></div>
-              <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">2025 shipments</span><span className="text-lg font-black text-red-500">45K</span></div>
+              <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">2025 shipments</span><span className="text-lg font-black text-[#18181b]">45K</span></div>
               <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">Price</span><span className="text-[11px] font-bold">$3,499</span></div>
               <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">Pivot</span><span className="text-[10px]">Enterprise / luxury retail</span></div>
             </div>
           </div>
           {/* Meta */}
-          <div className="rounded-[3px] border border-[#e3e3e0] p-4" style={{ borderTopWidth: '3px', borderTopColor: 'hsl(210 90% 40%)' }}>
+          <div className="rounded-[3px] border border-[#e3e3e0] p-4" style={{ borderTopWidth: '3px', borderTopColor: '#18181b' }}>
             <div className="text-xs font-bold uppercase tracking-wider text-[#37352f] mb-3">Meta Quest 3 / 3S</div>
             <div className="space-y-2">
-              <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">Market share</span><span className="text-lg font-black" style={{ color: 'hsl(210 90% 40%)' }}>60-80%</span></div>
-              <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">2025 users</span><span className="text-[11px] font-bold text-green-600">All-time record</span></div>
+              <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">Market share</span><span className="text-lg font-black" style={{ color: '#18181b' }}>60-80%</span></div>
+              <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">2025 users</span><span className="text-[11px] font-bold text-[#18181b]">All-time record</span></div>
               <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">Price</span><span className="text-[11px] font-bold">$299-499</span></div>
               <div className="flex justify-between items-center"><span className="text-[11px] text-muted-foreground">$1M+ apps</span><span className="text-[11px] font-bold">100+ titles</span></div>
             </div>
@@ -140,11 +140,11 @@ export function SpatialComputingAdoption() {
 /* ─── BCI Competitive Field ─── */
 export function BCIMarketChart() {
   const players = [
-    { name: 'Neuralink', approach: 'Invasive (motor cortex)', electrodes: '~1,024', status: 'Human trials (PRIME)', valuation: '$9-10B', color: 'hsl(350 70% 45%)' },
-    { name: 'Synchron', approach: 'Endovascular (minimally invasive)', electrodes: '~16', status: 'Human trials', valuation: 'Private', color: 'hsl(210 90% 40%)' },
-    { name: 'Precision Neuro', approach: 'Cortical surface', electrodes: '~1,024+', status: 'Human trials', valuation: 'Private', color: 'hsl(160 80% 35%)' },
-    { name: 'Paradromics', approach: 'Invasive (cortical)', electrodes: '~1,600+', status: 'Pre-clinical', valuation: 'Private', color: 'hsl(280 60% 45%)' },
-    { name: 'Emotiv / Muse', approach: 'Non-invasive (EEG)', electrodes: '5-32', status: 'Consumer available', valuation: 'Various', color: 'hsl(30 80% 50%)' },
+    { name: 'Neuralink', approach: 'Invasive (motor cortex)', electrodes: '~1,024', status: 'Human trials (PRIME)', valuation: '$9-10B', color: '#a1a1aa' },
+    { name: 'Synchron', approach: 'Endovascular (minimally invasive)', electrodes: '~16', status: 'Human trials', valuation: 'Private', color: '#18181b' },
+    { name: 'Precision Neuro', approach: 'Cortical surface', electrodes: '~1,024+', status: 'Human trials', valuation: 'Private', color: '#3f3f46' },
+    { name: 'Paradromics', approach: 'Invasive (cortical)', electrodes: '~1,600+', status: 'Pre-clinical', valuation: 'Private', color: '#71717a' },
+    { name: 'Emotiv / Muse', approach: 'Non-invasive (EEG)', electrodes: '5-32', status: 'Consumer available', valuation: 'Various', color: '#52525b' },
   ];
 
   return (
@@ -175,11 +175,11 @@ export function BCIMarketChart() {
 /* ─── Sensory Stack Timeline ─── */
 export function SensoryStackTimeline() {
   const phases = [
-    { era: '1990s', label: 'Text Internet', channels: ['Vision (text)'], color: 'hsl(0 0% 55%)' },
-    { era: '2000s', label: 'Rich Media', channels: ['Vision (images, video)', 'Audio (streaming)'], color: 'hsl(210 70% 50%)' },
-    { era: '2020s', label: 'Spatial Era', channels: ['Vision (3D, spatial)', 'Audio (spatial)', 'Haptics (vibration, LRA)'], color: 'hsl(210 90% 40%)' },
-    { era: '2030s', label: 'Sensory Internet', channels: ['Vision (AR glasses)', 'Audio (neural)', 'Haptics (force feedback)', 'Proprioception'], color: 'hsl(160 80% 35%)' },
-    { era: '2040s+', label: 'Neural Internet', channels: ['Bidirectional BCI', 'Full sensory bypass', 'Novel modalities'], color: 'hsl(280 60% 45%)' },
+    { era: '1990s', label: 'Text Internet', channels: ['Vision (text)'], color: '#a1a1aa' },
+    { era: '2000s', label: 'Rich Media', channels: ['Vision (images, video)', 'Audio (streaming)'], color: '#18181b' },
+    { era: '2020s', label: 'Spatial Era', channels: ['Vision (3D, spatial)', 'Audio (spatial)', 'Haptics (vibration, LRA)'], color: '#18181b' },
+    { era: '2030s', label: 'Sensory Internet', channels: ['Vision (AR glasses)', 'Audio (neural)', 'Haptics (force feedback)', 'Proprioception'], color: '#3f3f46' },
+    { era: '2040s+', label: 'Neural Internet', channels: ['Bidirectional BCI', 'Full sensory bypass', 'Novel modalities'], color: '#71717a' },
   ];
 
   return (
@@ -215,13 +215,13 @@ export function SensoryStackTimeline() {
 /* ─── Presence Threshold Requirements ─── */
 export function PresenceThresholdChart() {
   const reqs = [
-    { metric: 'Visual resolution', threshold: '60 ppd', current: '~34 ppd (Vision Pro)', pct: 57, color: 'hsl(210 90% 40%)' },
-    { metric: 'Haptic latency', threshold: '<23ms', current: '10-20ms (5G)', pct: 85, color: 'hsl(160 80% 35%)' },
-    { metric: 'Motion-to-photon', threshold: '<20ms', current: '~12ms (Quest 3)', pct: 100, color: 'hsl(160 80% 35%)' },
-    { metric: 'Frame rate', threshold: '120 fps', current: '90-120fps (current HW)', pct: 90, color: 'hsl(160 80% 35%)' },
-    { metric: 'Spatial audio', threshold: 'HRTF + tracking', current: 'Standard in XR devices', pct: 95, color: 'hsl(160 80% 35%)' },
-    { metric: 'Haptic fidelity', threshold: 'Full force feedback', current: 'Vibration/LRA only', pct: 25, color: 'hsl(350 70% 45%)' },
-    { metric: 'Form factor', threshold: '<100g glasses', current: '~600g headsets', pct: 15, color: 'hsl(350 70% 45%)' },
+    { metric: 'Visual resolution', threshold: '60 ppd', current: '~34 ppd (Vision Pro)', pct: 57, color: '#18181b' },
+    { metric: 'Haptic latency', threshold: '<23ms', current: '10-20ms (5G)', pct: 85, color: '#3f3f46' },
+    { metric: 'Motion-to-photon', threshold: '<20ms', current: '~12ms (Quest 3)', pct: 100, color: '#3f3f46' },
+    { metric: 'Frame rate', threshold: '120 fps', current: '90-120fps (current HW)', pct: 90, color: '#3f3f46' },
+    { metric: 'Spatial audio', threshold: 'HRTF + tracking', current: 'Standard in XR devices', pct: 95, color: '#3f3f46' },
+    { metric: 'Haptic fidelity', threshold: 'Full force feedback', current: 'Vibration/LRA only', pct: 25, color: '#a1a1aa' },
+    { metric: 'Form factor', threshold: '<100g glasses', current: '~600g headsets', pct: 15, color: '#a1a1aa' },
   ];
 
   return (
@@ -262,12 +262,12 @@ export function PresenceThresholdChart() {
 /* ─── Sensory Internet Stack Table ─── */
 export function SensoryStackTable() {
   const layers = [
-    { layer: 'Visual', current: 'Screens, Vision Pro (23 ppd)', nearTerm: 'Lightweight AR glasses (<100g)', longTerm: 'Retinal projection, neural visual', color: 'hsl(210 90% 40%)' },
-    { layer: 'Audio', current: 'Speakers, spatial audio', nearTerm: 'Bone conduction, directional', longTerm: 'Neural audio bypass', color: 'hsl(160 80% 35%)' },
-    { layer: 'Haptic', current: 'Vibration motors, Taptic Engine', nearTerm: 'Force feedback gloves, mid-air', longTerm: 'Full-body suits, neural touch', color: 'hsl(350 70% 45%)' },
-    { layer: 'Olfactory', current: 'None commercially viable', nearTerm: 'Digital scent cartridges (niche)', longTerm: 'Neural olfactory stimulation', color: 'hsl(30 80% 50%)' },
-    { layer: 'Proprioceptive', current: 'None', nearTerm: 'Motion platforms, vest feedback', longTerm: 'Neural proprioceptive input', color: 'hsl(280 60% 45%)' },
-    { layer: 'Neural', current: 'Medical BCI (motor cortex)', nearTerm: 'Expanded medical, non-invasive', longTerm: 'Bidirectional high-bandwidth', color: 'hsl(0 0% 40%)' },
+    { layer: 'Visual', current: 'Screens, Vision Pro (23 ppd)', nearTerm: 'Lightweight AR glasses (<100g)', longTerm: 'Retinal projection, neural visual', color: '#18181b' },
+    { layer: 'Audio', current: 'Speakers, spatial audio', nearTerm: 'Bone conduction, directional', longTerm: 'Neural audio bypass', color: '#3f3f46' },
+    { layer: 'Haptic', current: 'Vibration motors, Taptic Engine', nearTerm: 'Force feedback gloves, mid-air', longTerm: 'Full-body suits, neural touch', color: '#a1a1aa' },
+    { layer: 'Olfactory', current: 'None commercially viable', nearTerm: 'Digital scent cartridges (niche)', longTerm: 'Neural olfactory stimulation', color: '#52525b' },
+    { layer: 'Proprioceptive', current: 'None', nearTerm: 'Motion platforms, vest feedback', longTerm: 'Neural proprioceptive input', color: '#71717a' },
+    { layer: 'Neural', current: 'Medical BCI (motor cortex)', nearTerm: 'Expanded medical, non-invasive', longTerm: 'Bidirectional high-bandwidth', color: '#52525b' },
   ];
 
   return (
@@ -281,15 +281,15 @@ export function SensoryStackTable() {
             <div className="grid grid-cols-[90px_1fr_1fr_1fr] gap-2 mb-2">
               <span className="text-[10px] font-bold uppercase text-muted-foreground">Layer</span>
               <span className="text-[10px] font-bold uppercase text-muted-foreground text-center">Current (2025)</span>
-              <span className="text-[10px] font-bold uppercase text-center" style={{ color: 'hsl(210 90% 40%)' }}>Near-Term</span>
-              <span className="text-[10px] font-bold uppercase text-center" style={{ color: 'hsl(160 80% 35%)' }}>Long-Term</span>
+              <span className="text-[10px] font-bold uppercase text-center" style={{ color: '#18181b' }}>Near-Term</span>
+              <span className="text-[10px] font-bold uppercase text-center" style={{ color: '#3f3f46' }}>Long-Term</span>
             </div>
             {layers.map((l) => (
               <div key={l.layer} className="grid grid-cols-[90px_1fr_1fr_1fr] gap-2 border-t border-[#e3e3e0] py-2 items-center">
                 <span className="text-[11px] font-bold" style={{ color: l.color }}>{l.layer}</span>
                 <span className="text-[10px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1.5 rounded-md">{l.current}</span>
-                <span className="text-[10px] text-center px-2 py-1.5 rounded-md" style={{ backgroundColor: 'hsl(210 90% 40% / 0.06)' }}>{l.nearTerm}</span>
-                <span className="text-[10px] text-center px-2 py-1.5 rounded-md font-medium" style={{ backgroundColor: 'hsl(160 80% 35% / 0.06)', color: 'hsl(160 80% 35%)' }}>{l.longTerm}</span>
+                <span className="text-[10px] text-center px-2 py-1.5 rounded-md" style={{ backgroundColor: '#f4f4f5' }}>{l.nearTerm}</span>
+                <span className="text-[10px] text-center px-2 py-1.5 rounded-md font-medium" style={{ backgroundColor: '#f4f4f5', color: '#3f3f46' }}>{l.longTerm}</span>
               </div>
             ))}
           </div>

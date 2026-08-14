@@ -5,12 +5,12 @@ import React from 'react';
 /* ─── Governance Effectiveness Matrix ─── */
 export function GovernanceEffectivenessChart() {
   const decisions = [
-    { type: 'Parameter adjustment (rates, fees)', computational: 'Effective', human: 'Unnecessary', compPct: 95, humanPct: 20, color: 'hsl(160 80% 35%)' },
-    { type: 'Treasury allocation', computational: 'Works with checks', human: 'Better for complex cases', compPct: 60, humanPct: 80, color: 'hsl(30 80% 50%)' },
-    { type: 'Strategic direction', computational: 'Insufficient', human: 'Required', compPct: 20, humanPct: 90, color: 'hsl(350 70% 45%)' },
-    { type: 'Dispute resolution', computational: 'Cannot assess context', human: 'Required', compPct: 10, humanPct: 95, color: 'hsl(350 70% 45%)' },
-    { type: 'Emergency response', computational: 'Multi-sig works', human: 'Faster judgment', compPct: 55, humanPct: 85, color: 'hsl(30 80% 50%)' },
-    { type: 'Protocol upgrades', computational: 'Good with timelocks', human: 'Adds oversight', compPct: 75, humanPct: 70, color: 'hsl(210 90% 40%)' },
+    { type: 'Parameter adjustment (rates, fees)', computational: 'Effective', human: 'Unnecessary', compPct: 95, humanPct: 20, color: '#3f3f46' },
+    { type: 'Treasury allocation', computational: 'Works with checks', human: 'Better for complex cases', compPct: 60, humanPct: 80, color: '#52525b' },
+    { type: 'Strategic direction', computational: 'Insufficient', human: 'Required', compPct: 20, humanPct: 90, color: '#a1a1aa' },
+    { type: 'Dispute resolution', computational: 'Cannot assess context', human: 'Required', compPct: 10, humanPct: 95, color: '#a1a1aa' },
+    { type: 'Emergency response', computational: 'Multi-sig works', human: 'Faster judgment', compPct: 55, humanPct: 85, color: '#52525b' },
+    { type: 'Protocol upgrades', computational: 'Good with timelocks', human: 'Adds oversight', compPct: 75, humanPct: 70, color: '#18181b' },
   ];
 
   return (
@@ -25,16 +25,16 @@ export function GovernanceEffectivenessChart() {
               <div className="text-[11px] font-bold text-[#37352f] mb-1.5">{d.type}</div>
               <div className="space-y-1">
                 <div className="grid grid-cols-[85px_1fr_30px] gap-2 items-center">
-                  <span className="text-[9px] uppercase tracking-wider font-semibold" style={{ color: 'hsl(210 90% 40%)' }}>Code</span>
+                  <span className="text-[9px] uppercase tracking-wider font-semibold" style={{ color: '#18181b' }}>Code</span>
                   <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden">
-                    <div className="h-full rounded-md" style={{ width: `${d.compPct}%`, backgroundColor: 'hsl(210 90% 40%)', opacity: 0.5 }} />
+                    <div className="h-full rounded-md" style={{ width: `${d.compPct}%`, backgroundColor: '#18181b', opacity: 0.5 }} />
                   </div>
                   <span className="text-[9px] text-muted-foreground text-right">{d.compPct}%</span>
                 </div>
                 <div className="grid grid-cols-[85px_1fr_30px] gap-2 items-center">
-                  <span className="text-[9px] uppercase tracking-wider font-semibold" style={{ color: 'hsl(280 60% 45%)' }}>Human</span>
+                  <span className="text-[9px] uppercase tracking-wider font-semibold" style={{ color: '#71717a' }}>Human</span>
                   <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden">
-                    <div className="h-full rounded-md" style={{ width: `${d.humanPct}%`, backgroundColor: 'hsl(280 60% 45%)', opacity: 0.4 }} />
+                    <div className="h-full rounded-md" style={{ width: `${d.humanPct}%`, backgroundColor: '#71717a', opacity: 0.4 }} />
                   </div>
                   <span className="text-[9px] text-muted-foreground text-right">{d.humanPct}%</span>
                 </div>
@@ -44,8 +44,8 @@ export function GovernanceEffectivenessChart() {
         </div>
 
         <div className="flex items-center gap-4 mt-4 pt-3 border-t border-[#e3e3e0]">
-          <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(210 90% 40%)' }} /><span className="text-[10px] text-muted-foreground">Computational governance</span></div>
-          <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(280 60% 45%)' }} /><span className="text-[10px] text-muted-foreground">Human governance</span></div>
+          <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#18181b' }} /><span className="text-[10px] text-muted-foreground">Computational governance</span></div>
+          <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#71717a' }} /><span className="text-[10px] text-muted-foreground">Human governance</span></div>
         </div>
 
         <p className="mt-2 text-[10px] text-muted-foreground/60">
@@ -59,12 +59,12 @@ export function GovernanceEffectivenessChart() {
 /* ─── DAO Voter Participation ─── */
 export function DAOVoterParticipation() {
   const daos = [
-    { name: 'Uniswap', participation: 17, treasury: '$2.5B', highlight: 'UNIfication: 125M votes for, 742 against', color: 'hsl(350 70% 55%)' },
-    { name: 'Aave', participation: 80, treasury: '$400M+', highlight: 'Delegate participation >80%, $50M buyback', color: 'hsl(160 80% 35%)' },
-    { name: 'MakerDAO (Sky)', participation: 25, treasury: '$1B+', highlight: 'Endgame restructuring into MetaDAOs', color: 'hsl(210 90% 40%)' },
-    { name: 'ENS DAO', participation: 12, treasury: '$600M+', highlight: 'Manages Ethereum Name Service governance', color: 'hsl(30 80% 50%)' },
-    { name: 'Compound', participation: 15, treasury: '$150M+', highlight: 'Interest rate parameter governance', color: 'hsl(280 60% 45%)' },
-    { name: 'Optimism', participation: 22, treasury: '$800M+', highlight: '21-day futarchy experiment (500K OP)', color: 'hsl(0 0% 55%)' },
+    { name: 'Uniswap', participation: 17, treasury: '$2.5B', highlight: 'UNIfication: 125M votes for, 742 against', color: '#a1a1aa' },
+    { name: 'Aave', participation: 80, treasury: '$400M+', highlight: 'Delegate participation >80%, $50M buyback', color: '#3f3f46' },
+    { name: 'MakerDAO (Sky)', participation: 25, treasury: '$1B+', highlight: 'Endgame restructuring into MetaDAOs', color: '#18181b' },
+    { name: 'ENS DAO', participation: 12, treasury: '$600M+', highlight: 'Manages Ethereum Name Service governance', color: '#52525b' },
+    { name: 'Compound', participation: 15, treasury: '$150M+', highlight: 'Interest rate parameter governance', color: '#71717a' },
+    { name: 'Optimism', participation: 22, treasury: '$800M+', highlight: '21-day futarchy experiment (500K OP)', color: '#a1a1aa' },
   ];
 
   return (
@@ -104,12 +104,12 @@ export function DAOVoterParticipation() {
 /* ─── Voting Mechanism Innovations ─── */
 export function VotingMechanismChart() {
   const mechanisms = [
-    { name: 'Token-weighted (1 token = 1 vote)', advantage: 'Simple, Sybil-resistant', risk: 'Plutocratic: whales dominate', adoption: 'Default (90%+ of DAOs)', maturity: 95, color: 'hsl(0 0% 55%)' },
-    { name: 'Quadratic voting', advantage: 'Reduces whale influence', risk: 'Sybil attacks (multiple wallets)', adoption: 'Gitcoin grants, CLR.fund', maturity: 55, color: 'hsl(210 90% 40%)' },
-    { name: 'Conviction voting', advantage: 'Rewards sustained preference', risk: 'Slow decision-making', adoption: 'Gardens, 1Hive', maturity: 40, color: 'hsl(160 80% 35%)' },
-    { name: 'Delegation', advantage: 'Expert decision-making', risk: 'Centralization to mega-delegates', adoption: 'Uniswap, Aave, ENS', maturity: 75, color: 'hsl(30 80% 50%)' },
-    { name: 'Futarchy (prediction markets)', advantage: 'Outcome-based decisions', risk: 'Metric gaming, low liquidity', adoption: 'Optimism experiment (2025)', maturity: 20, color: 'hsl(280 60% 45%)' },
-    { name: 'ZK private ballots', advantage: 'Prevents vote buying/coercion', risk: 'Complex implementation', adoption: 'Research, MACI', maturity: 30, color: 'hsl(350 70% 45%)' },
+    { name: 'Token-weighted (1 token = 1 vote)', advantage: 'Simple, Sybil-resistant', risk: 'Plutocratic: whales dominate', adoption: 'Default (90%+ of DAOs)', maturity: 95, color: '#a1a1aa' },
+    { name: 'Quadratic voting', advantage: 'Reduces whale influence', risk: 'Sybil attacks (multiple wallets)', adoption: 'Gitcoin grants, CLR.fund', maturity: 55, color: '#18181b' },
+    { name: 'Conviction voting', advantage: 'Rewards sustained preference', risk: 'Slow decision-making', adoption: 'Gardens, 1Hive', maturity: 40, color: '#3f3f46' },
+    { name: 'Delegation', advantage: 'Expert decision-making', risk: 'Centralization to mega-delegates', adoption: 'Uniswap, Aave, ENS', maturity: 75, color: '#52525b' },
+    { name: 'Futarchy (prediction markets)', advantage: 'Outcome-based decisions', risk: 'Metric gaming, low liquidity', adoption: 'Optimism experiment (2025)', maturity: 20, color: '#71717a' },
+    { name: 'ZK private ballots', advantage: 'Prevents vote buying/coercion', risk: 'Complex implementation', adoption: 'Research, MACI', maturity: 30, color: '#a1a1aa' },
   ];
 
   return (
@@ -144,11 +144,11 @@ export function VotingMechanismChart() {
 /* ─── Governance Stack Architecture ─── */
 export function GovernanceStackChart() {
   const layers = [
-    { name: 'Constitutional Layer', desc: 'Immutable core rules, amendment thresholds', examples: 'Cardano constitution, MakerDAO Endgame', color: 'hsl(350 70% 45%)' },
-    { name: 'Proposal & Voting', desc: 'Submit, debate, and vote on changes', examples: 'Snapshot, Tally, Governor Bravo', color: 'hsl(280 60% 45%)' },
-    { name: 'Timelock & Multi-sig', desc: '24-72hr delay, multi-party authorization', examples: 'OpenZeppelin TimelockController, Gnosis Safe', color: 'hsl(210 90% 40%)' },
-    { name: 'Execution', desc: 'Automatic on-chain execution of passed proposals', examples: 'Ethereum smart contracts, Governor contracts', color: 'hsl(160 80% 35%)' },
-    { name: 'Dispute Resolution', desc: 'Human judgment for ambiguous cases', examples: 'Kleros, Aragon Court, Celeste', color: 'hsl(30 80% 50%)' },
+    { name: 'Constitutional Layer', desc: 'Immutable core rules, amendment thresholds', examples: 'Cardano constitution, MakerDAO Endgame', color: '#a1a1aa' },
+    { name: 'Proposal & Voting', desc: 'Submit, debate, and vote on changes', examples: 'Snapshot, Tally, Governor Bravo', color: '#71717a' },
+    { name: 'Timelock & Multi-sig', desc: '24-72hr delay, multi-party authorization', examples: 'OpenZeppelin TimelockController, Gnosis Safe', color: '#18181b' },
+    { name: 'Execution', desc: 'Automatic on-chain execution of passed proposals', examples: 'Ethereum smart contracts, Governor contracts', color: '#3f3f46' },
+    { name: 'Dispute Resolution', desc: 'Human judgment for ambiguous cases', examples: 'Kleros, Aragon Court, Celeste', color: '#52525b' },
   ];
 
   return (

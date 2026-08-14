@@ -5,13 +5,13 @@ import React from 'react';
 /* ─── Industry Breakdown Horizontal Bar Chart ─── */
 export function YCIndustryBreakdown() {
   const data = [
-    { industry: 'B2B', count: 2964, pct: '50.9%', color: 'hsl(210 90% 40%)' },
-    { industry: 'Consumer', count: 867, pct: '14.9%', color: 'hsl(210 60% 55%)' },
-    { industry: 'Healthcare', count: 665, pct: '11.4%', color: 'hsl(210 40% 65%)' },
-    { industry: 'Fintech', count: 618, pct: '10.6%', color: 'hsl(210 30% 70%)' },
-    { industry: 'Industrials', count: 368, pct: '6.3%', color: 'hsl(210 20% 75%)' },
-    { industry: 'Real Estate', count: 153, pct: '2.6%', color: 'hsl(210 15% 80%)' },
-    { industry: 'Education', count: 125, pct: '2.1%', color: 'hsl(210 10% 83%)' },
+    { industry: 'B2B', count: 2964, pct: '50.9%', color: '#18181b' },
+    { industry: 'Consumer', count: 867, pct: '14.9%', color: '#3f3f46' },
+    { industry: 'Healthcare', count: 665, pct: '11.4%', color: '#52525b' },
+    { industry: 'Fintech', count: 618, pct: '10.6%', color: '#71717a' },
+    { industry: 'Industrials', count: 368, pct: '6.3%', color: '#a1a1aa' },
+    { industry: 'Real Estate', count: 153, pct: '2.6%', color: '#d4d4d8' },
+    { industry: 'Education', count: 125, pct: '2.1%', color: '#e4e4e7' },
   ];
   const max = 3000;
 
@@ -28,7 +28,7 @@ export function YCIndustryBreakdown() {
               <div className="w-full h-3.5 bg-[#f7f6f3] rounded-sm overflow-hidden">
                 <div className="h-full rounded-sm" style={{ width: `${(d.count / max) * 100}%`, backgroundColor: d.color }} />
               </div>
-              <span className={`text-[11px] font-bold text-right ${i === 0 ? 'text-primary' : 'text-[#37352f]'}`}>{d.pct}</span>
+              <span className={`text-[11px] font-bold text-right ${i === 0 ? 'text-[#18181b]' : 'text-[#37352f]'}`}>{d.pct}</span>
             </div>
           ))}
         </div>
@@ -52,12 +52,12 @@ export function RecentBatchComposition() {
   ];
 
   const colors: Record<string, string> = {
-    b2b: 'hsl(210 90% 40%)',
-    consumer: 'hsl(340 60% 55%)',
-    fintech: 'hsl(160 50% 45%)',
-    healthcare: 'hsl(280 40% 55%)',
-    industrials: 'hsl(35 70% 50%)',
-    other: 'hsl(0 0% 75%)',
+    b2b: '#18181b',
+    consumer: '#3f3f46',
+    fintech: '#52525b',
+    healthcare: '#71717a',
+    industrials: '#a1a1aa',
+    other: '#d4d4d8',
   };
 
   return (
@@ -102,10 +102,10 @@ export function RecentBatchComposition() {
 /* ─── Agent Layer Taxonomy ─── */
 export function AgentLayerTaxonomy() {
   const layers = [
-    { layer: 'Agent Infrastructure', desc: 'Compute, hosting, orchestration, memory, identity', examples: 'Terminal Use, Klaus AI, Cumulus Labs, Chamber, Maven, Moda', count: '~65', badge: 'Foundation', badgeColor: 'bg-blue-50 text-blue-600' },
-    { layer: 'Agent Development', desc: 'IDEs, testing, evaluation, debugging for agents', examples: 'Canary, Sentrial, Ashr, Lark, Benchspan, Janus', count: '~40', badge: 'Tooling', badgeColor: 'bg-purple-50 text-purple-600' },
-    { layer: 'Vertical Agent Apps', desc: 'Domain-specific agent workers (legal, healthcare, finance)', examples: 'Lexi, Aegis, Cranston AI, Eos AI, Wayco, Foreman', count: '~110', badge: 'Application', badgeColor: 'bg-green-50 text-green-600' },
-    { layer: 'Agent Enablement', desc: 'Security, compliance, monitoring, payments for agents', examples: 'Salus, BeeSafe AI, Multifactor, Oximy, Protent, GhostEye', count: '~30', badge: 'Governance', badgeColor: 'bg-amber-50 text-amber-600' },
+    { layer: 'Agent Infrastructure', desc: 'Compute, hosting, orchestration, memory, identity', examples: 'Terminal Use, Klaus AI, Cumulus Labs, Chamber, Maven, Moda', count: '~65', badge: 'Foundation', badgeColor: 'bg-[#f4f4f5] text-[#18181b]' },
+    { layer: 'Agent Development', desc: 'IDEs, testing, evaluation, debugging for agents', examples: 'Canary, Sentrial, Ashr, Lark, Benchspan, Janus', count: '~40', badge: 'Tooling', badgeColor: 'bg-[#f4f4f5] text-[#18181b]' },
+    { layer: 'Vertical Agent Apps', desc: 'Domain-specific agent workers (legal, healthcare, finance)', examples: 'Lexi, Aegis, Cranston AI, Eos AI, Wayco, Foreman', count: '~110', badge: 'Application', badgeColor: 'bg-[#f4f4f5] text-[#18181b]' },
+    { layer: 'Agent Enablement', desc: 'Security, compliance, monitoring, payments for agents', examples: 'Salus, BeeSafe AI, Multifactor, Oximy, Protent, GhostEye', count: '~30', badge: 'Governance', badgeColor: 'bg-[#f4f4f5] text-[#18181b]' },
   ];
 
   return (
@@ -120,7 +120,7 @@ export function AgentLayerTaxonomy() {
               <div className="flex items-center gap-2 mb-1">
                 <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${l.badgeColor}`}>{l.badge}</span>
                 <span className="text-xs font-bold text-[#37352f]">{l.layer}</span>
-                <span className="ml-auto text-[11px] font-bold text-primary">{l.count}</span>
+                <span className="ml-auto text-[11px] font-bold text-[#18181b]">{l.count}</span>
               </div>
               <p className="text-[11px] text-[#37352f]/80 leading-snug">{l.desc}</p>
               <p className="text-[10px] text-muted-foreground mt-0.5">{l.examples}</p>
@@ -157,18 +157,18 @@ export function YCGeoConcentration() {
         <div className="space-y-1.5">
           {data.map((d) => (
             <div key={d.region} className="grid grid-cols-[100px_1fr_40px] gap-2 items-center">
-              <span className={`text-[11px] font-medium ${d.highlight ? 'text-primary font-bold' : 'text-muted-foreground'}`}>{d.region}</span>
+              <span className={`text-[11px] font-medium ${d.highlight ? 'text-[#18181b] font-bold' : 'text-muted-foreground'}`}>{d.region}</span>
               <div className="w-full h-3.5 bg-[#f7f6f3] rounded-sm overflow-hidden">
                 <div
                   className="h-full rounded-sm"
                   style={{
                     width: `${(d.pct / max) * 100}%`,
-                    backgroundColor: d.highlight ? 'hsl(210 90% 40%)' : '#37352f',
+                    backgroundColor: d.highlight ? '#18181b' : '#37352f',
                     opacity: d.highlight ? 0.85 : 0.25,
                   }}
                 />
               </div>
-              <span className={`text-[11px] font-bold text-right ${d.highlight ? 'text-primary' : 'text-[#37352f]'}`}>{d.pct}%</span>
+              <span className={`text-[11px] font-bold text-right ${d.highlight ? 'text-[#18181b]' : 'text-[#37352f]'}`}>{d.pct}%</span>
             </div>
           ))}
         </div>
@@ -214,7 +214,7 @@ export function AgentForXPattern() {
                 <tr key={v.vertical} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2 px-1.5 font-bold text-[#37352f]">{v.vertical}</td>
                   <td className="py-2 px-1.5 text-[#37352f]/80">{v.examples}</td>
-                  <td className="py-2 px-1.5"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-blue-50 text-blue-600">{v.batches}</span></td>
+                  <td className="py-2 px-1.5"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{v.batches}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -251,8 +251,8 @@ export function DefenseHardwareSurge() {
               <div className="flex items-center justify-between">
                 <span className="text-[11px] font-bold text-[#37352f]">{d.category}</span>
                 <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-green-50 text-green-600">{d.trend}</span>
-                  <span className="text-[11px] font-bold text-primary">{d.count}</span>
+                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{d.trend}</span>
+                  <span className="text-[11px] font-bold text-[#18181b]">{d.count}</span>
                 </div>
               </div>
               <p className="text-[10px] text-muted-foreground mt-0.5 leading-snug">{d.companies}</p>
@@ -295,10 +295,10 @@ export function TaglineArchaeology() {
             </thead>
             <tbody>
               {eras.map((e, i) => (
-                <tr key={e.era} className={`border-b border-[#e3e3e0]/60 ${i === eras.length - 1 ? 'bg-primary/5' : ''}`}>
+                <tr key={e.era} className={`border-b border-[#e3e3e0]/60 ${i === eras.length - 1 ? 'bg-[#f4f4f5]' : ''}`}>
                   <td className="py-2 px-1.5 font-bold text-[#37352f]">{e.era}</td>
                   <td className="py-2 px-1.5 text-[#37352f]/80">{e.pattern}</td>
-                  <td className="py-2 px-1.5"><span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${i === eras.length - 1 ? 'bg-blue-50 text-blue-600' : 'bg-zinc-100 text-zinc-600'}`}>{e.signal}</span></td>
+                  <td className="py-2 px-1.5"><span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${i === eras.length - 1 ? 'bg-[#f4f4f5] text-[#18181b]' : 'bg-zinc-100 text-zinc-600'}`}>{e.signal}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -349,7 +349,7 @@ export function BatchSizeTimeline() {
                   className="h-full rounded-sm"
                   style={{
                     width: `${(d.count / max) * 100}%`,
-                    backgroundColor: i >= data.length - 5 ? 'hsl(210 90% 40%)' : '#37352f',
+                    backgroundColor: i >= data.length - 5 ? '#18181b' : '#37352f',
                     opacity: i >= data.length - 5 ? 0.8 : 0.2 + (i * 0.04),
                   }}
                 />

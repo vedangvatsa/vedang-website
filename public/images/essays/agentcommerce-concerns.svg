@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" preserveAspectRatio="xMidYMid meet">
+  <style>
+    text { font-family: Inter, system-ui, sans-serif; }
+    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
+    .name { font-size: 13px; fill: #18181b; }
+    .num { font-size: 13px; font-weight: 600; fill: #18181b; }
+    .note { font-size: 12px; fill: #52525b; }
+  </style>
+
+  <text x="16" y="28" class="title">Why people will not let the agent pay</text>
+
+  <text x="16" y="58" class="name">Payment security</text>
+  <text x="360" y="58" text-anchor="end" class="num">32%</text>
+  <rect x="16" y="66" width="368" height="18" fill="#f4f4f5"/>
+  <rect x="16" y="66" width="368" height="18" fill="#18181b"/>
+
+  <text x="16" y="112" class="name">Privacy</text>
+  <text x="360" y="112" text-anchor="end" class="num">26%</text>
+  <rect x="16" y="120" width="368" height="18" fill="#f4f4f5"/>
+  <rect x="16" y="120" width="299" height="18" fill="#18181b"/>
+
+  <text x="16" y="166" class="name">Agent errors</text>
+  <text x="360" y="166" text-anchor="end" class="num">18%</text>
+  <rect x="16" y="174" width="368" height="18" fill="#f4f4f5"/>
+  <rect x="16" y="174" width="207" height="18" fill="#18181b"/>
+
+  <text x="16" y="220" class="name">Loss of control</text>
+  <text x="360" y="220" text-anchor="end" class="num">17%</text>
+  <rect x="16" y="228" width="368" height="18" fill="#f4f4f5"/>
+  <rect x="16" y="228" width="196" height="18" fill="#18181b"/>
+
+  <text x="16" y="270" class="note">Kearney US Consumer Study, July 2025. Multiple answers allowed.</text>
+  <text x="16" y="288" class="note">veda.ng</text>
+</svg>

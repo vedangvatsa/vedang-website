@@ -5,12 +5,12 @@ import React from 'react';
 /* ─── Transaction Cost Reduction Chart ─── */
 export function MeshTransactionCostChart() {
   const costs = [
-    { category: 'Search', traditional: 'Days-weeks', protocol: 'Milliseconds', reduction: '99.9%', color: 'hsl(210 90% 40%)' },
-    { category: 'Negotiation', traditional: 'Hours-days', protocol: 'Zero (accept/reject)', reduction: '100%', color: 'hsl(160 80% 35%)' },
-    { category: 'Contract writing', traditional: '$5,000-50,000', protocol: 'Deploy once, reuse', reduction: '~100%', color: 'hsl(280 60% 45%)' },
-    { category: 'Monitoring', traditional: 'Continuous staff', protocol: 'On-chain verifiable', reduction: '100%', color: 'hsl(30 80% 50%)' },
-    { category: 'Enforcement', traditional: 'Legal system', protocol: 'Self-executing', reduction: '100%', color: 'hsl(350 70% 45%)' },
-    { category: 'Dispute resolution', traditional: 'Courts/arbitration', protocol: 'Kleros/deterministic', reduction: '~95%', color: 'hsl(190 70% 40%)' },
+    { category: 'Search', traditional: 'Days-weeks', protocol: 'Milliseconds', reduction: '99.9%', color: '#18181b' },
+    { category: 'Negotiation', traditional: 'Hours-days', protocol: 'Zero (accept/reject)', reduction: '100%', color: '#3f3f46' },
+    { category: 'Contract writing', traditional: '$5,000-50,000', protocol: 'Deploy once, reuse', reduction: '~100%', color: '#71717a' },
+    { category: 'Monitoring', traditional: 'Continuous staff', protocol: 'On-chain verifiable', reduction: '100%', color: '#52525b' },
+    { category: 'Enforcement', traditional: 'Legal system', protocol: 'Self-executing', reduction: '100%', color: '#a1a1aa' },
+    { category: 'Dispute resolution', traditional: 'Courts/arbitration', protocol: 'Kleros/deterministic', reduction: '~95%', color: '#71717a' },
   ];
 
   return (
@@ -41,12 +41,12 @@ export function MeshTransactionCostChart() {
 /* ─── DAO Treasury Distribution ─── */
 export function DAOTreasuryChart() {
   const data = [
-    { name: 'Uniswap DAO', value: 3.2, color: 'hsl(330 70% 50%)' },
-    { name: 'Optimism', value: 2.8, color: 'hsl(0 70% 50%)' },
-    { name: 'Arbitrum', value: 2.1, color: 'hsl(210 90% 40%)' },
-    { name: 'Mantle', value: 1.5, color: 'hsl(160 80% 35%)' },
-    { name: 'ENS', value: 1.0, color: 'hsl(280 60% 45%)' },
-    { name: 'All others (~1,000+ DAOs)', value: 3.0, color: 'hsl(0 0% 65%)' },
+    { name: 'Uniswap DAO', value: 3.2, color: '#71717a' },
+    { name: 'Optimism', value: 2.8, color: '#18181b' },
+    { name: 'Arbitrum', value: 2.1, color: '#18181b' },
+    { name: 'Mantle', value: 1.5, color: '#3f3f46' },
+    { name: 'ENS', value: 1.0, color: '#71717a' },
+    { name: 'All others (~1,000+ DAOs)', value: 3.0, color: '#a1a1aa' },
   ];
   const total = data.reduce((s, d) => s + d.value, 0);
 
@@ -112,16 +112,16 @@ export function MeshOrgComparison() {
             <div className="grid grid-cols-[100px_1fr_1fr_1fr] gap-2 mb-2">
               <span className="text-[10px] font-bold uppercase text-muted-foreground">Dimension</span>
               <span className="text-[10px] font-bold uppercase text-muted-foreground text-center">Centralized Firm</span>
-              <span className="text-[10px] font-bold uppercase text-center" style={{ color: 'hsl(30 80% 50%)' }}>Platform</span>
-              <span className="text-[10px] font-bold uppercase text-center" style={{ color: 'hsl(160 80% 35%)' }}>Mesh Protocol</span>
+              <span className="text-[10px] font-bold uppercase text-center" style={{ color: '#52525b' }}>Platform</span>
+              <span className="text-[10px] font-bold uppercase text-center" style={{ color: '#3f3f46' }}>Mesh Protocol</span>
             </div>
             {/* Rows */}
             {dimensions.map((d) => (
               <div key={d.dim} className="grid grid-cols-[100px_1fr_1fr_1fr] gap-2 border-t border-[#e3e3e0] py-2">
                 <span className="text-[11px] font-bold text-[#37352f]">{d.dim}</span>
                 <span className="text-[11px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1 rounded-md">{d.firm}</span>
-                <span className="text-[11px] text-center px-2 py-1 rounded-md" style={{ backgroundColor: 'hsl(30 80% 50% / 0.08)' }}>{d.platform}</span>
-                <span className="text-[11px] text-center px-2 py-1 rounded-md font-medium" style={{ backgroundColor: 'hsl(160 80% 35% / 0.08)', color: 'hsl(160 80% 35%)' }}>{d.mesh}</span>
+                <span className="text-[11px] text-center px-2 py-1 rounded-md" style={{ backgroundColor: '#f4f4f5' }}>{d.platform}</span>
+                <span className="text-[11px] text-center px-2 py-1 rounded-md font-medium" style={{ backgroundColor: '#f4f4f5', color: '#3f3f46' }}>{d.mesh}</span>
               </div>
             ))}
           </div>
@@ -156,15 +156,15 @@ export function EnergyMeshComparison() {
             <div className="grid grid-cols-[110px_1fr_1fr_70px] gap-2 mb-2">
               <span className="text-[10px] font-bold uppercase text-muted-foreground">Metric</span>
               <span className="text-[10px] font-bold uppercase text-muted-foreground text-center">Traditional Utility</span>
-              <span className="text-[10px] font-bold uppercase text-center" style={{ color: 'hsl(160 80% 35%)' }}>P2P Mesh</span>
+              <span className="text-[10px] font-bold uppercase text-center" style={{ color: '#3f3f46' }}>P2P Mesh</span>
               <span className="text-[10px] font-bold uppercase text-muted-foreground text-right">Δ</span>
             </div>
             {rows.map((r) => (
               <div key={r.metric} className="grid grid-cols-[110px_1fr_1fr_70px] gap-2 border-t border-[#e3e3e0] py-2 items-center">
                 <span className="text-[11px] font-bold text-[#37352f]">{r.metric}</span>
                 <span className="text-[11px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1.5 rounded-md">{r.traditional}</span>
-                <span className="text-[11px] text-center px-2 py-1.5 rounded-md font-medium" style={{ backgroundColor: 'hsl(160 80% 35% / 0.08)', color: 'hsl(160 80% 35%)' }}>{r.mesh}</span>
-                <span className="text-[11px] font-bold text-right" style={{ color: 'hsl(160 80% 35%)' }}>{r.advantage}</span>
+                <span className="text-[11px] text-center px-2 py-1.5 rounded-md font-medium" style={{ backgroundColor: '#f4f4f5', color: '#3f3f46' }}>{r.mesh}</span>
+                <span className="text-[11px] font-bold text-right" style={{ color: '#3f3f46' }}>{r.advantage}</span>
               </div>
             ))}
           </div>

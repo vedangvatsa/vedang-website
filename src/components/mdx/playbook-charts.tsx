@@ -7,13 +7,13 @@ export function PlaybookHeroCard() {
   return (
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-0.5 text-center text-[#37352f]">THE AI IMPLEMENTATION PLAYBOOK</h3>
-        <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold text-center">From scattered tools to autonomous operations in 90 days</p>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-0.5 text-center text-[#37352f]">Implementation playbook</h3>
+        <p className="text-xs text-muted-foreground mb-8 text-center">From scattered tools to agent ops in 90 days</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           {/* Before */}
-          <div className="rounded-[3px] border-2 border-red-200 p-4">
-            <div className="text-xs font-bold text-red-500 uppercase tracking-wider mb-3">Before: Tool Adoption</div>
+          <div className="border border-[#e4e4e7] p-4">
+            <div className="text-xs font-bold text-[#52525b] mb-3">Before: tool adoption</div>
             {[
               ['Team members', '20 people, 20 different AI tools'],
               ['Consistency', 'Zero brand coherence'],
@@ -30,8 +30,8 @@ export function PlaybookHeroCard() {
           </div>
 
           {/* After */}
-          <div className="rounded-[3px] border-2 border-blue-300 p-4">
-            <div className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-3">After: Agent-Native Ops</div>
+          <div className="border border-[#18181b] p-4">
+            <div className="text-xs font-bold text-[#18181b] mb-3">After: agent ops</div>
             {[
               ['Team members', '1 operator + agent fleet'],
               ['Consistency', 'brand-guidelines.md everywhere'],
@@ -42,7 +42,7 @@ export function PlaybookHeroCard() {
             ].map(([label, value]) => (
               <div key={label} className="flex justify-between py-1.5 border-b border-[#e3e3e0]/40 last:border-0">
                 <span className="text-[11px] text-muted-foreground font-medium">{label}</span>
-                <span className="text-[11px] text-blue-600 font-semibold text-right">{value}</span>
+                <span className="text-[11px] text-[#18181b] font-semibold text-right">{value}</span>
               </div>
             ))}
           </div>
@@ -71,7 +71,7 @@ export function AgentToolsMap() {
   const categories = [
     {
       name: 'Agent Browsers',
-      color: 'hsl(210 90% 40%)',
+      color: '#18181b',
       tools: [
         { name: 'Browser Use', detail: '78k stars', url: 'https://github.com/browser-use/browser-use' },
         { name: 'Stagehand', detail: '21k stars', url: 'https://github.com/browserbase/stagehand' },
@@ -80,7 +80,7 @@ export function AgentToolsMap() {
     },
     {
       name: 'Orchestration',
-      color: 'hsl(30 80% 50%)',
+      color: '#52525b',
       tools: [
         { name: 'LangGraph', detail: 'Production std', url: 'https://github.com/langchain-ai/langgraph' },
         { name: 'CrewAI', detail: 'Role-based', url: 'https://github.com/crewAIInc/crewAI' },
@@ -89,7 +89,7 @@ export function AgentToolsMap() {
     },
     {
       name: 'Agent Email',
-      color: 'hsl(280 60% 45%)',
+      color: '#71717a',
       tools: [
         { name: 'Inbox Zero', detail: 'AI inbox mgmt', url: 'https://github.com/elie222/inbox-zero' },
         { name: 'AgenticMail', detail: 'Agent identity', url: 'https://github.com/topics/agentic-mail' },
@@ -98,7 +98,7 @@ export function AgentToolsMap() {
     },
     {
       name: 'Video Generation',
-      color: 'hsl(350 70% 45%)',
+      color: '#a1a1aa',
       tools: [
         { name: 'Wan2.1', detail: 'Alibaba', url: 'https://github.com/Wan-Video/Wan2.1' },
         { name: 'CogVideo', detail: 'Tsinghua', url: 'https://github.com/THUDM/CogVideo' },
@@ -107,7 +107,7 @@ export function AgentToolsMap() {
     },
     {
       name: 'Voice and Audio',
-      color: 'hsl(160 80% 35%)',
+      color: '#3f3f46',
       tools: [
         { name: 'Kokoro', detail: 'TTS', url: 'https://github.com/hexgrad/kokoro' },
         { name: 'F5-TTS', detail: 'Voice cloning', url: 'https://github.com/SWivid/F5-TTS' },
@@ -116,7 +116,7 @@ export function AgentToolsMap() {
     },
     {
       name: 'Data Extraction',
-      color: 'hsl(200 70% 45%)',
+      color: '#52525b',
       tools: [
         { name: 'Firecrawl', detail: 'Web → Markdown', url: 'https://github.com/mendableai/firecrawl' },
         { name: 'Crawl4AI', detail: 'AI web crawler', url: 'https://github.com/unclecode/crawl4ai' },
@@ -192,7 +192,7 @@ export function AutomationROIChart() {
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{t.task}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{t.manual}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{t.automated}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-green-50 text-green-600">{t.savings}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{t.savings}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -266,7 +266,7 @@ export function ContentPipelineFlow() {
             {stages.map((s, i) => (
               <div key={s.stage} className="grid grid-cols-[36px_1fr] gap-3 items-start">
                 <div className="relative flex items-center justify-center pt-1">
-                  <div className="w-[9px] h-[9px] rounded-full border-2 border-primary bg-primary" />
+                  <div className="w-[9px] h-[9px] rounded-full border-2 border-[#18181b] bg-[#18181b]" />
                 </div>
                 <div className="rounded-[3px] border border-[#e3e3e0] p-3">
                   <div className="flex items-center justify-between mb-1">
@@ -304,12 +304,12 @@ export function ContentPipelineFlow() {
 
 export function OutreachPipeline() {
   const steps = [
-    { num: '1', label: 'Lead Import', desc: 'CSV from Apollo, LinkedIn Sales Nav, or manual research', color: '#f59e0b' },
-    { num: '2', label: 'AI Enrichment', desc: 'Company data, tech stack, recent news, funding stage', color: '#f97316' },
-    { num: '3', label: 'Personalization', desc: 'AI writes context-aware email using prospect intel', color: '#ef4444' },
-    { num: '4', label: 'Sequences', desc: '4-email drip over 14 days: intro, value, proof, breakup', color: '#a855f7' },
-    { num: '5', label: 'Tracking', desc: 'Opens, clicks, replies tracked per lead per email', color: '#3b82f6' },
-    { num: '6', label: 'CRM Sync', desc: 'All activity logged to Google Sheets or Postgres', color: '#10b981' },
+    { num: '1', label: 'Lead Import', desc: 'CSV from Apollo, LinkedIn Sales Nav, or manual research', color: '#18181b' },
+    { num: '2', label: 'AI Enrichment', desc: 'Company data, tech stack, recent news, funding stage', color: '#18181b' },
+    { num: '3', label: 'Personalization', desc: 'AI writes context-aware email using prospect intel', color: '#18181b' },
+    { num: '4', label: 'Sequences', desc: '4-email drip over 14 days: intro, value, proof, breakup', color: '#18181b' },
+    { num: '5', label: 'Tracking', desc: 'Opens, clicks, replies tracked per lead per email', color: '#18181b' },
+    { num: '6', label: 'CRM Sync', desc: 'All activity logged to Google Sheets or Postgres', color: '#18181b' },
   ];
 
   return (
@@ -343,10 +343,10 @@ export function OutreachPipeline() {
 export function AIMaturityLevels() {
   const levels = [
     { level: 'Level 0', title: 'No AI', description: 'Everything manual. Spreadsheets, copy-paste, human in every loop.', color: '#64748b', pct: 10 },
-    { level: 'Level 1', title: 'Tool Adoption', description: 'Individual team members using ChatGPT, Copilot, Midjourney. No coordination.', color: '#f59e0b', pct: 25 },
-    { level: 'Level 2', title: 'Pipeline Automation', description: 'End-to-end workflows automated. Content, outreach, and reporting run on agents.', color: '#3b82f6', pct: 55 },
-    { level: 'Level 3', title: 'Agent-Native', description: 'Agents run the business. Humans review output and make strategic decisions.', color: '#10b981', pct: 85 },
-    { level: 'Level 4', title: 'Autonomous Operations', description: 'Self-improving systems. Agents optimize their own pipelines based on performance data.', color: '#8b5cf6', pct: 100 },
+    { level: 'Level 1', title: 'Tool Adoption', description: 'Individual team members using ChatGPT, Copilot, Midjourney. No coordination.', color: '#18181b', pct: 25 },
+    { level: 'Level 2', title: 'Pipeline Automation', description: 'End-to-end workflows automated. Content, outreach, and reporting run on agents.', color: '#18181b', pct: 55 },
+    { level: 'Level 3', title: 'Agent-Native', description: 'Agents run the business. Humans review output and make strategic decisions.', color: '#18181b', pct: 85 },
+    { level: 'Level 4', title: 'Autonomous Operations', description: 'Self-improving systems. Agents optimize their own pipelines based on performance data.', color: '#18181b', pct: 100 },
   ];
 
   return (
@@ -379,12 +379,12 @@ export function AIMaturityLevels() {
 
 export function ImplementationTimeline() {
   const phases = [
-    { period: 'Week 1', title: 'Foundation', items: ['Brand guidelines', 'Agent setup', 'AI discovery files'], color: '#f59e0b' },
-    { period: 'Week 2', title: 'Infrastructure', items: ['Email setup (Resend/SES)', 'Email capture', 'Nurture sequences'], color: '#f97316' },
-    { period: 'Week 3', title: 'Outreach', items: ['B2B pipeline', 'Lead import', 'Campaign launch'], color: '#ef4444' },
-    { period: 'Week 4', title: 'Content', items: ['Content pipeline', 'Social automation', 'Dashboard'], color: '#a855f7' },
-    { period: 'Month 2', title: 'Authority', items: ['First consulting report', 'AEO/GEO optimization', 'Scale outreach'], color: '#3b82f6' },
-    { period: 'Month 3', title: 'Autonomous', items: ['Full agent ops', 'Review and iterate', 'Strategic focus'], color: '#10b981' },
+    { period: 'Week 1', title: 'Foundation', items: ['Brand guidelines', 'Agent setup', 'AI discovery files'], color: '#18181b' },
+    { period: 'Week 2', title: 'Infrastructure', items: ['Email setup (Resend/SES)', 'Email capture', 'Nurture sequences'], color: '#18181b' },
+    { period: 'Week 3', title: 'Outreach', items: ['B2B pipeline', 'Lead import', 'Campaign launch'], color: '#18181b' },
+    { period: 'Week 4', title: 'Content', items: ['Content pipeline', 'Social automation', 'Dashboard'], color: '#18181b' },
+    { period: 'Month 2', title: 'Authority', items: ['First consulting report', 'AEO/GEO optimization', 'Scale outreach'], color: '#18181b' },
+    { period: 'Month 3', title: 'Autonomous', items: ['Full agent ops', 'Review and iterate', 'Strategic focus'], color: '#18181b' },
   ];
 
   return (
@@ -412,11 +412,11 @@ export function ImplementationTimeline() {
 
 export function NurtureSequence() {
   const steps = [
-    { day: 'Day 0', type: 'Welcome', desc: 'What they signed up for, one best-content link', color: '#10b981' },
-    { day: 'Day 3', type: 'Value', desc: 'Genuinely useful guide or framework', color: '#3b82f6' },
-    { day: 'Day 7', type: 'Authority', desc: 'Case study or data-backed result', color: '#a855f7' },
-    { day: 'Day 14', type: 'Soft CTA', desc: 'Book a call or reply with a challenge', color: '#f59e0b' },
-    { day: 'Day 21+', type: 'Newsletter', desc: 'Ongoing weekly or biweekly value', color: '#ef4444' },
+    { day: 'Day 0', type: 'Welcome', desc: 'What they signed up for, one best-content link', color: '#18181b' },
+    { day: 'Day 3', type: 'Value', desc: 'Genuinely useful guide or framework', color: '#18181b' },
+    { day: 'Day 7', type: 'Authority', desc: 'Case study or data-backed result', color: '#18181b' },
+    { day: 'Day 14', type: 'Soft CTA', desc: 'Book a call or reply with a challenge', color: '#18181b' },
+    { day: 'Day 21+', type: 'Newsletter', desc: 'Ongoing weekly or biweekly value', color: '#18181b' },
   ];
 
   return (
@@ -471,7 +471,7 @@ export function ImplementationChecklist() {
     {
       week: 'Week 1',
       title: 'Foundation',
-      color: '#f59e0b',
+      color: '#18181b',
       days: [
         {
           day: 'Day 1',
@@ -507,7 +507,7 @@ export function ImplementationChecklist() {
     {
       week: 'Week 2',
       title: 'Email Infrastructure',
-      color: '#f97316',
+      color: '#18181b',
       days: [
         {
           day: 'Day 8',
@@ -535,7 +535,7 @@ export function ImplementationChecklist() {
     {
       week: 'Week 3',
       title: 'Outreach Pipeline',
-      color: '#ef4444',
+      color: '#18181b',
       days: [
         {
           day: 'Day 15-16',
@@ -565,7 +565,7 @@ export function ImplementationChecklist() {
     {
       week: 'Week 4',
       title: 'Content and Social',
-      color: '#a855f7',
+      color: '#18181b',
       days: [
         {
           day: 'Day 22-23',
@@ -593,7 +593,7 @@ export function ImplementationChecklist() {
     {
       week: 'Month 2',
       title: 'Scale and Authority',
-      color: '#3b82f6',
+      color: '#18181b',
       days: [
         {
           day: 'Week 5-6',
@@ -615,7 +615,7 @@ export function ImplementationChecklist() {
     {
       week: 'Month 3',
       title: 'Full Automation',
-      color: '#10b981',
+      color: '#18181b',
       days: [
         {
           day: 'Week 9-10',
@@ -643,14 +643,14 @@ export function ImplementationChecklist() {
     <div className="not-prose my-8 first:mt-0 last:mb-0">
       <div className="rounded-lg border border-border/50 bg-secondary/20 p-5 md:p-6">
         <div className="flex items-center justify-between mb-5">
-          <div className="text-xs font-semibold uppercase tracking-wider text-primary/70">90-Day Implementation Checklist</div>
+          <div className="text-xs font-semibold uppercase tracking-wider text-[#18181b]/70">90-Day Implementation Checklist</div>
           <div className="text-xs text-muted-foreground">
             {completedTasks}/{totalTasks} tasks
           </div>
         </div>
         <div className="w-full bg-secondary/60 rounded-full h-2 mb-6">
           <div
-            className="h-2 rounded-full transition-all duration-500 bg-green-500"
+            className="h-2 rounded-full transition-all duration-500 bg-[#18181b]"
             style={{ width: `${totalTasks > 0 ? (completedTasks / totalTasks) * 100 : 0}%` }}
           />
         </div>
@@ -707,12 +707,12 @@ export function ImplementationChecklist() {
 /* ─── Social Listening + Competitive Intel Map ─── */
 export function SocialListeningMap() {
   const channels = [
-    { source: 'Twitter/X', what: 'Brand mentions, competitor launches, industry keywords', frequency: 'Real-time', color: '#3b82f6' },
-    { source: 'Reddit + HN', what: 'Product discussions, feature requests, sentiment', frequency: 'Hourly', color: '#f59e0b' },
-    { source: 'LinkedIn', what: 'Competitor content, key hires, thought leadership', frequency: 'Daily', color: '#0077b5' },
-    { source: 'Competitor sites', what: 'Pricing changes, changelog updates, job postings', frequency: 'Daily', color: '#ef4444' },
-    { source: 'App store reviews', what: 'User complaints, feature gaps, satisfaction trends', frequency: 'Weekly', color: '#10b981' },
-    { source: 'Patent filings', what: 'Technical direction changes, IP strategy shifts', frequency: 'Monthly', color: '#8b5cf6' },
+    { source: 'Twitter/X', what: 'Brand mentions, competitor launches, industry keywords', frequency: 'Real-time', color: '#18181b' },
+    { source: 'Reddit + HN', what: 'Product discussions, feature requests, sentiment', frequency: 'Hourly', color: '#18181b' },
+    { source: 'LinkedIn', what: 'Competitor content, key hires, thought leadership', frequency: 'Daily', color: '#18181b' },
+    { source: 'Competitor sites', what: 'Pricing changes, changelog updates, job postings', frequency: 'Daily', color: '#18181b' },
+    { source: 'App store reviews', what: 'User complaints, feature gaps, satisfaction trends', frequency: 'Weekly', color: '#18181b' },
+    { source: 'Patent filings', what: 'Technical direction changes, IP strategy shifts', frequency: 'Monthly', color: '#18181b' },
   ];
 
   return (
@@ -748,9 +748,9 @@ export function SocialListeningMap() {
 /* ─── Support Tiers ─── */
 export function SupportTierChart() {
   const tiers = [
-    { tier: 'Tier 0', name: 'Fully Automated', desc: 'FAQ-style questions with documented answers', volume: '40-50%', human: 'None', color: '#10b981' },
-    { tier: 'Tier 1', name: 'Draft + Review', desc: 'Known patterns, agent drafts response', volume: '30-40%', human: 'Review only', color: '#3b82f6' },
-    { tier: 'Tier 2', name: 'Human + Context', desc: 'Complex issues requiring judgment calls', volume: '10-20%', human: 'Full response', color: '#f59e0b' },
+    { tier: 'Tier 0', name: 'Fully Automated', desc: 'FAQ-style questions with documented answers', volume: '40-50%', human: 'None', color: '#18181b' },
+    { tier: 'Tier 1', name: 'Draft + Review', desc: 'Known patterns, agent drafts response', volume: '30-40%', human: 'Review only', color: '#18181b' },
+    { tier: 'Tier 2', name: 'Human + Context', desc: 'Complex issues requiring judgment calls', volume: '10-20%', human: 'Full response', color: '#18181b' },
   ];
 
   return (
@@ -793,11 +793,11 @@ export function SupportTierChart() {
 /* ─── Dashboard Metrics ─── */
 export function DashboardMetricsMap() {
   const categories = [
-    { name: 'Content', metrics: ['Posts published', 'Impressions', 'Engagement rate'], color: '#a855f7' },
-    { name: 'SEO', metrics: ['Search impressions', 'Clicks', 'Avg. position'], color: '#3b82f6' },
-    { name: 'Outreach', metrics: ['Emails sent', 'Open rate', 'Reply rate'], color: '#ef4444' },
-    { name: 'Pipeline', metrics: ['Leads captured', 'Nurture stage', 'Conversion rate'], color: '#f59e0b' },
-    { name: 'Support', metrics: ['Tickets received', 'Deflection rate', 'Avg. resolution time'], color: '#10b981' },
+    { name: 'Content', metrics: ['Posts published', 'Impressions', 'Engagement rate'], color: '#18181b' },
+    { name: 'SEO', metrics: ['Search impressions', 'Clicks', 'Avg. position'], color: '#18181b' },
+    { name: 'Outreach', metrics: ['Emails sent', 'Open rate', 'Reply rate'], color: '#18181b' },
+    { name: 'Pipeline', metrics: ['Leads captured', 'Nurture stage', 'Conversion rate'], color: '#18181b' },
+    { name: 'Support', metrics: ['Tickets received', 'Deflection rate', 'Avg. resolution time'], color: '#18181b' },
     { name: 'Infrastructure', metrics: ['Agent uptime', 'Pipeline success rate', 'API costs'], color: '#6b7280' },
   ];
 
@@ -828,14 +828,14 @@ export function DashboardMetricsMap() {
 /* ─── Use Case Catalog ─── */
 export function UseCaseCatalog() {
   const departments = [
-    { dept: 'Hiring', cases: 4, examples: 'Resume screening, candidate sourcing, interview scheduling', color: '#3b82f6' },
-    { dept: 'Finance', cases: 4, examples: 'Invoice processing, expense categorization, investor updates', color: '#10b981' },
-    { dept: 'Legal', cases: 3, examples: 'Contract review, compliance monitoring, policy updates', color: '#8b5cf6' },
-    { dept: 'Product/Eng', cases: 5, examples: 'Code review, test generation, bug triage, documentation', color: '#ef4444' },
-    { dept: 'Localization', cases: 2, examples: 'Multi-language content, market-specific adaptation', color: '#f59e0b' },
-    { dept: 'Ads', cases: 3, examples: 'Copy generation, budget optimization, landing pages', color: '#f97316' },
-    { dept: 'Podcast/Video', cases: 3, examples: 'Transcripts, clip generation, multi-platform distribution', color: '#a855f7' },
-    { dept: 'Customer Success', cases: 3, examples: 'Usage monitoring, churn prevention, NPS analysis', color: '#0ea5e9' },
+    { dept: 'Hiring', cases: 4, examples: 'Resume screening, candidate sourcing, interview scheduling', color: '#18181b' },
+    { dept: 'Finance', cases: 4, examples: 'Invoice processing, expense categorization, investor updates', color: '#18181b' },
+    { dept: 'Legal', cases: 3, examples: 'Contract review, compliance monitoring, policy updates', color: '#18181b' },
+    { dept: 'Product/Eng', cases: 5, examples: 'Code review, test generation, bug triage, documentation', color: '#18181b' },
+    { dept: 'Localization', cases: 2, examples: 'Multi-language content, market-specific adaptation', color: '#18181b' },
+    { dept: 'Ads', cases: 3, examples: 'Copy generation, budget optimization, landing pages', color: '#18181b' },
+    { dept: 'Podcast/Video', cases: 3, examples: 'Transcripts, clip generation, multi-platform distribution', color: '#18181b' },
+    { dept: 'Customer Success', cases: 3, examples: 'Usage monitoring, churn prevention, NPS analysis', color: '#18181b' },
   ];
 
   return (

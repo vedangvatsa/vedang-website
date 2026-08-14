@@ -5,11 +5,11 @@ import React from 'react';
 /* ─── Monastery Principle Chart (existing, expanded) ─── */
 export function MonasteryPrincipleChart() {
   const mappings = [
-    { monastic: 'Hours of silence', modern: 'Do Not Disturb / airplane mode', cognitive: 'Sustained attention', color: 'hsl(210 90% 40%)' },
-    { monastic: 'Lectio divina (slow reading)', modern: 'Long-form reading without hyperlinks', cognitive: 'Comprehension, synthesis', color: 'hsl(160 80% 35%)' },
-    { monastic: 'Manual labor between study', modern: 'Physical movement between deep work blocks', cognitive: 'Default-mode network activation', color: 'hsl(30 80% 50%)' },
-    { monastic: 'Communal meals at fixed hours', modern: 'Batched communication at fixed times', cognitive: 'Context-switch reduction', color: 'hsl(280 60% 45%)' },
-    { monastic: 'Cell (private workspace)', modern: 'Single-purpose device or physical workspace', cognitive: 'Environmental cue management', color: 'hsl(350 70% 45%)' },
+    { monastic: 'Hours of silence', modern: 'Do Not Disturb / airplane mode', cognitive: 'Sustained attention', color: '#18181b' },
+    { monastic: 'Lectio divina (slow reading)', modern: 'Long-form reading without hyperlinks', cognitive: 'Comprehension, synthesis', color: '#3f3f46' },
+    { monastic: 'Manual labor between study', modern: 'Physical movement between deep work blocks', cognitive: 'Default-mode network activation', color: '#52525b' },
+    { monastic: 'Communal meals at fixed hours', modern: 'Batched communication at fixed times', cognitive: 'Context-switch reduction', color: '#71717a' },
+    { monastic: 'Cell (private workspace)', modern: 'Single-purpose device or physical workspace', cognitive: 'Environmental cue management', color: '#a1a1aa' },
   ];
 
   return (
@@ -50,12 +50,12 @@ export function MonasteryPrincipleChart() {
 /* ─── Attention Span Decline ─── */
 export function AttentionSpanDecline() {
   const data = [
-    { year: '2004', seconds: 150, label: '2.5 min', color: 'hsl(160 80% 35%)' },
-    { year: '2008', seconds: 120, label: '2 min', color: 'hsl(160 70% 40%)' },
-    { year: '2012', seconds: 75, label: '75 sec', color: 'hsl(30 80% 50%)' },
-    { year: '2016', seconds: 60, label: '60 sec', color: 'hsl(30 70% 45%)' },
-    { year: '2020', seconds: 47, label: '47 sec', color: 'hsl(350 70% 45%)' },
-    { year: '2024', seconds: 40, label: '40 sec', color: 'hsl(0 70% 50%)' },
+    { year: '2004', seconds: 150, label: '2.5 min', color: '#3f3f46' },
+    { year: '2008', seconds: 120, label: '2 min', color: '#3f3f46' },
+    { year: '2012', seconds: 75, label: '75 sec', color: '#52525b' },
+    { year: '2016', seconds: 60, label: '60 sec', color: '#52525b' },
+    { year: '2020', seconds: 47, label: '47 sec', color: '#a1a1aa' },
+    { year: '2024', seconds: 40, label: '40 sec', color: '#18181b' },
   ];
   const max = 150;
 
@@ -96,11 +96,11 @@ export function AttentionSpanDecline() {
 /* ─── Interruption Cost Calculator ─── */
 export function InterruptionCostChart() {
   const scenarios = [
-    { label: 'Zero notifications', notifications: 0, recoveryHrs: 0, deepWorkHrs: 5, color: 'hsl(160 80% 35%)' },
-    { label: 'Essential only (5/day)', notifications: 5, recoveryHrs: 1.9, deepWorkHrs: 3.1, color: 'hsl(210 90% 40%)' },
-    { label: 'Moderate (23/day)', notifications: 23, recoveryHrs: 4.4, deepWorkHrs: 0.6, color: 'hsl(30 80% 50%)' },
-    { label: 'US average (46/day)', notifications: 46, recoveryHrs: 8.8, deepWorkHrs: 0, color: 'hsl(350 70% 45%)' },
-    { label: 'Heavy user (80/day)', notifications: 80, recoveryHrs: 15.3, deepWorkHrs: 0, color: 'hsl(0 70% 50%)' },
+    { label: 'Zero notifications', notifications: 0, recoveryHrs: 0, deepWorkHrs: 5, color: '#3f3f46' },
+    { label: 'Essential only (5/day)', notifications: 5, recoveryHrs: 1.9, deepWorkHrs: 3.1, color: '#18181b' },
+    { label: 'Moderate (23/day)', notifications: 23, recoveryHrs: 4.4, deepWorkHrs: 0.6, color: '#52525b' },
+    { label: 'US average (46/day)', notifications: 46, recoveryHrs: 8.8, deepWorkHrs: 0, color: '#a1a1aa' },
+    { label: 'Heavy user (80/day)', notifications: 80, recoveryHrs: 15.3, deepWorkHrs: 0, color: '#18181b' },
   ];
 
   return (
@@ -127,9 +127,9 @@ export function InterruptionCostChart() {
                 <div>
                   <span className="text-[9px] uppercase tracking-wider text-muted-foreground block mb-1">Deep work remaining</span>
                   <div className="w-full h-3 bg-[#f7f6f3] rounded-md overflow-hidden">
-                    <div className="h-full rounded-md" style={{ width: `${(s.deepWorkHrs / 5) * 100}%`, backgroundColor: 'hsl(160 80% 35%)', opacity: 0.5 }} />
+                    <div className="h-full rounded-md" style={{ width: `${(s.deepWorkHrs / 5) * 100}%`, backgroundColor: '#3f3f46', opacity: 0.5 }} />
                   </div>
-                  <span className="text-[10px] font-bold mt-0.5 block" style={{ color: s.deepWorkHrs > 0 ? 'hsl(160 80% 35%)' : 'hsl(0 70% 50%)' }}>{s.deepWorkHrs > 0 ? `${s.deepWorkHrs}h` : 'None'}</span>
+                  <span className="text-[10px] font-bold mt-0.5 block" style={{ color: s.deepWorkHrs > 0 ? '#3f3f46' : '#18181b' }}>{s.deepWorkHrs > 0 ? `${s.deepWorkHrs}h` : 'None'}</span>
                 </div>
               </div>
             </div>
@@ -147,12 +147,12 @@ export function InterruptionCostChart() {
 /* ─── Retreat Movements Timeline ─── */
 export function RetreatMovementsTimeline() {
   const movements = [
-    { era: '270 AD', movement: 'Desert Monasticism', trigger: 'Roman urban complexity', figure: 'Anthony the Great', practice: 'Silence, solitude, structured contemplation', color: 'hsl(30 80% 50%)' },
-    { era: '529 AD', movement: 'Benedictine Rule', trigger: 'Post-Roman chaos', figure: 'Benedict of Nursia', practice: 'Ora et labora: time-blocking, attention hygiene', color: 'hsl(30 70% 45%)' },
-    { era: '1845', movement: 'Transcendentalism', trigger: 'Industrial mechanization', figure: 'Thoreau, Emerson', practice: 'Deliberate withdrawal to nature, simplicity', color: 'hsl(160 80% 35%)' },
-    { era: '1960s', movement: 'Counterculture', trigger: 'Mass media saturation', figure: 'Ram Dass, Alan Watts', practice: 'Eastern meditation, conscious living', color: 'hsl(280 60% 45%)' },
-    { era: '2010s', movement: 'Digital Minimalism', trigger: 'Smartphone ubiquity', figure: 'Cal Newport', practice: 'Intentional technology use, deep work', color: 'hsl(210 90% 40%)' },
-    { era: '2020s', movement: 'Digital Monasticism', trigger: 'AI + infinite content', figure: 'Emerging practitioners', practice: 'Tech sabbaths, notification zero, device separation', color: 'hsl(350 70% 45%)' },
+    { era: '270 AD', movement: 'Desert Monasticism', trigger: 'Roman urban complexity', figure: 'Anthony the Great', practice: 'Silence, solitude, structured contemplation', color: '#52525b' },
+    { era: '529 AD', movement: 'Benedictine Rule', trigger: 'Post-Roman chaos', figure: 'Benedict of Nursia', practice: 'Ora et labora: time-blocking, attention hygiene', color: '#52525b' },
+    { era: '1845', movement: 'Transcendentalism', trigger: 'Industrial mechanization', figure: 'Thoreau, Emerson', practice: 'Deliberate withdrawal to nature, simplicity', color: '#3f3f46' },
+    { era: '1960s', movement: 'Counterculture', trigger: 'Mass media saturation', figure: 'Ram Dass, Alan Watts', practice: 'Eastern meditation, conscious living', color: '#71717a' },
+    { era: '2010s', movement: 'Digital Minimalism', trigger: 'Smartphone ubiquity', figure: 'Cal Newport', practice: 'Intentional technology use, deep work', color: '#18181b' },
+    { era: '2020s', movement: 'Digital Monasticism', trigger: 'AI + infinite content', figure: 'Emerging practitioners', practice: 'Tech sabbaths, notification zero, device separation', color: '#a1a1aa' },
   ];
 
   return (
@@ -188,12 +188,12 @@ export function RetreatMovementsTimeline() {
 /* ─── Silence Economy ─── */
 export function SilenceEconomyChart() {
   const products = [
-    { name: 'Vipassana retreats (10-day)', cost: 'Free (donation)', waitlist: '3-6 months', type: 'Non-profit', color: 'hsl(160 80% 35%)' },
-    { name: 'Headspace / Calm subscriptions', cost: '$70-100/yr', users: '100M+ downloads', type: 'Consumer app', color: 'hsl(210 90% 40%)' },
-    { name: 'Executive digital detox retreats', cost: '$5K-15K/week', waitlist: '1-3 months', type: 'Luxury wellness', color: 'hsl(280 60% 45%)' },
-    { name: 'Hotel digital detox packages', cost: '$200-500/night premium', waitlist: 'On-demand', type: 'Hospitality', color: 'hsl(30 80% 50%)' },
-    { name: 'Corporate wellness programs', cost: '$500-2K/employee/yr', waitlist: 'Enterprise contract', type: 'B2B', color: 'hsl(350 70% 45%)' },
-    { name: 'Light Phone / dumb phone market', cost: '$299-399', users: 'Growing niche', type: 'Hardware', color: 'hsl(0 0% 55%)' },
+    { name: 'Vipassana retreats (10-day)', cost: 'Free (donation)', waitlist: '3-6 months', type: 'Non-profit', color: '#3f3f46' },
+    { name: 'Headspace / Calm subscriptions', cost: '$70-100/yr', users: '100M+ downloads', type: 'Consumer app', color: '#18181b' },
+    { name: 'Executive digital detox retreats', cost: '$5K-15K/week', waitlist: '1-3 months', type: 'Luxury wellness', color: '#71717a' },
+    { name: 'Hotel digital detox packages', cost: '$200-500/night premium', waitlist: 'On-demand', type: 'Hospitality', color: '#52525b' },
+    { name: 'Corporate wellness programs', cost: '$500-2K/employee/yr', waitlist: 'Enterprise contract', type: 'B2B', color: '#a1a1aa' },
+    { name: 'Light Phone / dumb phone market', cost: '$299-399', users: 'Growing niche', type: 'Hardware', color: '#a1a1aa' },
   ];
 
   return (

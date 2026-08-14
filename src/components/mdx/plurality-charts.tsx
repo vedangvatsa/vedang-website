@@ -25,12 +25,12 @@ export function AINewsSiteGrowth() {
               <div className="w-full h-6 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md flex items-center pl-2"
-                  style={{ width: `${(d.count / max) * 100}%`, backgroundColor: 'hsl(0 70% 50%)', opacity: 0.65 }}
+                  style={{ width: `${(d.count / max) * 100}%`, backgroundColor: '#18181b', opacity: 0.65 }}
                 >
                   {d.count > 200 && <span className="text-[9px] font-bold text-white">{d.count.toLocaleString()}</span>}
                 </div>
               </div>
-              <span className="text-xs font-bold text-right text-red-600">{d.count.toLocaleString()}</span>
+              <span className="text-xs font-bold text-right text-[#18181b]">{d.count.toLocaleString()}</span>
             </div>
           ))}
         </div>
@@ -46,8 +46,8 @@ export function AINewsSiteGrowth() {
 /* ─── Information Spread Comparison ─── */
 export function MisinfoSpreadChart() {
   const data = [
-    { type: 'True information', reach: 1, speed: 1, color: 'hsl(160 80% 35%)' },
-    { type: 'False information', reach: 6, speed: 6, color: 'hsl(0 70% 50%)' },
+    { type: 'True information', reach: 1, speed: 1, color: '#3f3f46' },
+    { type: 'False information', reach: 6, speed: 6, color: '#18181b' },
   ];
 
   return (
@@ -94,9 +94,9 @@ export function MediaTrustChart() {
     { year: '2025', trust: 28, party: 'Overall' },
   ];
   const partisan = [
-    { label: 'Democrats', value: 51, color: 'hsl(210 80% 50%)' },
-    { label: 'Independents', value: 27, color: 'hsl(45 80% 50%)' },
-    { label: 'Republicans', value: 8, color: 'hsl(0 70% 50%)' },
+    { label: 'Democrats', value: 51, color: '#18181b' },
+    { label: 'Independents', value: 27, color: '#a1a1aa' },
+    { label: 'Republicans', value: 8, color: '#18181b' },
   ];
   const max = 80;
 
@@ -116,7 +116,7 @@ export function MediaTrustChart() {
                   className="h-full rounded-md"
                   style={{
                     width: `${(d.trust / max) * 100}%`,
-                    backgroundColor: d.trust > 50 ? 'hsl(160 60% 40%)' : d.trust > 35 ? 'hsl(45 80% 50%)' : 'hsl(0 70% 50%)',
+                    backgroundColor: d.trust > 50 ? '#3f3f46' : d.trust > 35 ? '#a1a1aa' : '#18181b',
                     opacity: 0.6,
                   }}
                 />
@@ -150,12 +150,12 @@ export function MediaTrustChart() {
 /* ─── Invisible Curation Factors ─── */
 export function CurationFactorsChart() {
   const factors = [
-    { factor: 'Algorithmic ranking', role: 'Amplifies emotionally charged, identity-reinforcing content', severity: 95, color: 'hsl(0 70% 50%)' },
-    { factor: 'User choice', role: 'People seek confirmation; disconfirmation is cognitively effortful', severity: 80, color: 'hsl(30 80% 50%)' },
-    { factor: 'Search behavior', role: 'Users phrase queries that reflect existing beliefs (PNAS, 2025)', severity: 70, color: 'hsl(30 80% 50%)' },
-    { factor: 'Platform economics', role: 'Engagement-based monetization rewards division over understanding', severity: 90, color: 'hsl(0 70% 50%)' },
-    { factor: 'Content velocity', role: 'False content spreads 6x faster, creating asymmetric advantage', severity: 85, color: 'hsl(350 70% 45%)' },
-    { factor: 'Awareness gap', role: '74% of users don\'t notice algorithmic interventions on feeds', severity: 75, color: 'hsl(30 80% 50%)' },
+    { factor: 'Algorithmic ranking', role: 'Amplifies emotionally charged, identity-reinforcing content', severity: 95, color: '#18181b' },
+    { factor: 'User choice', role: 'People seek confirmation; disconfirmation is cognitively effortful', severity: 80, color: '#52525b' },
+    { factor: 'Search behavior', role: 'Users phrase queries that reflect existing beliefs (PNAS, 2025)', severity: 70, color: '#52525b' },
+    { factor: 'Platform economics', role: 'Engagement-based monetization rewards division over understanding', severity: 90, color: '#18181b' },
+    { factor: 'Content velocity', role: 'False content spreads 6x faster, creating asymmetric advantage', severity: 85, color: '#a1a1aa' },
+    { factor: 'Awareness gap', role: '74% of users don\'t notice algorithmic interventions on feeds', severity: 75, color: '#52525b' },
   ];
 
   return (

@@ -5,9 +5,9 @@ import React from 'react';
 /* ─── Identity Spectrum ─── */
 export function IdentitySpectrumChart() {
   const spectra = [
-    { type: 'Anonymity', persistence: 'None', reputation: 'Cannot accumulate', accountability: 'None', privacy: 'Maximum', barrier: 'Low', trustMech: 'None', color: 'hsl(0 0% 55%)', pct: 15 },
-    { type: 'Pseudonymity', persistence: 'Persistent', reputation: 'Accumulates over time', accountability: 'Behavioral (track record)', privacy: 'Selective disclosure', barrier: 'Medium', trustMech: 'Earned through history', color: 'hsl(210 90% 40%)', pct: 65 },
-    { type: 'Identity', persistence: 'Permanent', reputation: 'Full history', accountability: 'Legal (enforceable)', privacy: 'Minimal', barrier: 'High', trustMech: 'Inherited from institutions', color: 'hsl(280 60% 45%)', pct: 90 },
+    { type: 'Anonymity', persistence: 'None', reputation: 'Cannot accumulate', accountability: 'None', privacy: 'Maximum', barrier: 'Low', trustMech: 'None', color: '#a1a1aa', pct: 15 },
+    { type: 'Pseudonymity', persistence: 'Persistent', reputation: 'Accumulates over time', accountability: 'Behavioral (track record)', privacy: 'Selective disclosure', barrier: 'Medium', trustMech: 'Earned through history', color: '#18181b', pct: 65 },
+    { type: 'Identity', persistence: 'Permanent', reputation: 'Full history', accountability: 'Legal (enforceable)', privacy: 'Minimal', barrier: 'High', trustMech: 'Inherited from institutions', color: '#71717a', pct: 90 },
   ];
 
   return (
@@ -49,12 +49,12 @@ export function IdentitySpectrumChart() {
 /* ─── Pseudonymous Success Cases ─── */
 export function PseudonymousSuccessCases() {
   const cases = [
-    { name: 'Satoshi Nakamoto', domain: 'Protocol design', achievement: 'Built Bitcoin ($1.56T market cap)', duration: '2008-2010', status: 'Never revealed', value: 1560, color: 'hsl(30 80% 50%)' },
-    { name: 'Banksy', domain: 'Art', achievement: 'Sotheby\'s auctions ($25M+ record)', duration: '1990s-present', status: 'Never confirmed', value: 25, color: 'hsl(350 70% 45%)' },
-    { name: '@PlanB', domain: 'Quantitative finance', achievement: 'Stock-to-Flow model, 1.8M followers', duration: '2019-present', status: 'Revealed voluntarily', value: 0, color: 'hsl(210 90% 40%)' },
-    { name: 'Bored Ape creators', domain: 'NFT / IP', achievement: '$4B+ valuation (Yuga Labs)', duration: '2021-2022', status: 'Doxxed by BuzzFeed', value: 4000, color: 'hsl(160 80% 35%)' },
-    { name: 'Chef Nomi', domain: 'DeFi', achievement: 'SushiSwap ($1B+ TVL)', duration: '2020', status: 'Revealed after controversy', value: 1000, color: 'hsl(280 60% 45%)' },
-    { name: 'Elena Ferrante', domain: 'Literature', achievement: 'Neapolitan Novels, global bestseller', duration: '1992-present', status: 'Never confirmed', value: 0, color: 'hsl(0 0% 55%)' },
+    { name: 'Satoshi Nakamoto', domain: 'Protocol design', achievement: 'Built Bitcoin ($1.56T market cap)', duration: '2008-2010', status: 'Never revealed', value: 1560, color: '#52525b' },
+    { name: 'Banksy', domain: 'Art', achievement: 'Sotheby\'s auctions ($25M+ record)', duration: '1990s-present', status: 'Never confirmed', value: 25, color: '#a1a1aa' },
+    { name: '@PlanB', domain: 'Quantitative finance', achievement: 'Stock-to-Flow model, 1.8M followers', duration: '2019-present', status: 'Revealed voluntarily', value: 0, color: '#18181b' },
+    { name: 'Bored Ape creators', domain: 'NFT / IP', achievement: '$4B+ valuation (Yuga Labs)', duration: '2021-2022', status: 'Doxxed by BuzzFeed', value: 4000, color: '#3f3f46' },
+    { name: 'Chef Nomi', domain: 'DeFi', achievement: 'SushiSwap ($1B+ TVL)', duration: '2020', status: 'Revealed after controversy', value: 1000, color: '#71717a' },
+    { name: 'Elena Ferrante', domain: 'Literature', achievement: 'Neapolitan Novels, global bestseller', duration: '1992-present', status: 'Never confirmed', value: 0, color: '#a1a1aa' },
   ];
 
   return (
@@ -90,12 +90,12 @@ export function PseudonymousSuccessCases() {
 /* ─── Reputation Infrastructure ─── */
 export function ReputationInfraChart() {
   const infra = [
-    { name: 'ENS (Ethereum Name Service)', function: 'Pseudonymous identity anchor', metric: '2M+ domains registered', maturity: 85, color: 'hsl(210 90% 40%)' },
-    { name: 'Human Passport (ex-Gitcoin)', function: 'Sybil-resistant personhood scoring', metric: '2M+ users, 43M+ credentials', maturity: 75, color: 'hsl(160 80% 35%)' },
-    { name: 'W3C DIDs', function: 'Self-sovereign identifiers', metric: 'W3C Recommendation standard', maturity: 70, color: 'hsl(280 60% 45%)' },
-    { name: 'Verifiable Credentials', function: 'Attestation without identity disclosure', metric: 'EU eIDAS 2.0 mandate (2026)', maturity: 65, color: 'hsl(30 80% 50%)' },
-    { name: 'EAS (Ethereum Attestation)', function: 'On-chain attestation registry', metric: '4M+ attestations created', maturity: 60, color: 'hsl(350 70% 45%)' },
-    { name: 'Worldcoin / World ID', function: 'Biometric proof of personhood', metric: '10M+ verified users', maturity: 50, color: 'hsl(0 0% 55%)' },
+    { name: 'ENS (Ethereum Name Service)', function: 'Pseudonymous identity anchor', metric: '2M+ domains registered', maturity: 85, color: '#18181b' },
+    { name: 'Human Passport (ex-Gitcoin)', function: 'Sybil-resistant personhood scoring', metric: '2M+ users, 43M+ credentials', maturity: 75, color: '#3f3f46' },
+    { name: 'W3C DIDs', function: 'Self-sovereign identifiers', metric: 'W3C Recommendation standard', maturity: 70, color: '#71717a' },
+    { name: 'Verifiable Credentials', function: 'Attestation without identity disclosure', metric: 'EU eIDAS 2.0 mandate (2026)', maturity: 65, color: '#52525b' },
+    { name: 'EAS (Ethereum Attestation)', function: 'On-chain attestation registry', metric: '4M+ attestations created', maturity: 60, color: '#a1a1aa' },
+    { name: 'Worldcoin / World ID', function: 'Biometric proof of personhood', metric: '10M+ verified users', maturity: 50, color: '#a1a1aa' },
   ];
 
   return (
@@ -133,11 +133,11 @@ export function ReputationInfraChart() {
 /* ─── Participation Expansion ─── */
 export function ParticipationExpansionChart() {
   const groups = [
-    { group: 'Dissidents & activists', barrier: 'Physical safety under real name', pseudonymous: 'Publish without lethal exposure', example: 'Arab Spring pseudonymous accounts', impact: 'High', color: 'hsl(350 70% 45%)' },
-    { group: 'Women in tech', barrier: 'Gender bias in code review', pseudonymous: 'Contributions judged on merit only', example: 'GitHub blind review studies', impact: 'High', color: 'hsl(280 60% 45%)' },
-    { group: 'Whistleblowers', barrier: 'Retaliation risk', pseudonymous: 'Evidence evaluated, not identity', example: 'SecureDrop (NYT, WaPo)', impact: 'Critical', color: 'hsl(210 90% 40%)' },
-    { group: 'Career transitioners', barrier: 'Risk to current position', pseudonymous: 'Build parallel reputation safely', example: 'Tech bloggers, analysts', impact: 'Medium', color: 'hsl(160 80% 35%)' },
-    { group: 'Marginalized communities', barrier: 'Discrimination based on name/origin', pseudonymous: 'Participate without demographic filtering', example: 'DeFi governance, DAOs', impact: 'High', color: 'hsl(30 80% 50%)' },
+    { group: 'Dissidents & activists', barrier: 'Physical safety under real name', pseudonymous: 'Publish without lethal exposure', example: 'Arab Spring pseudonymous accounts', impact: 'High', color: '#a1a1aa' },
+    { group: 'Women in tech', barrier: 'Gender bias in code review', pseudonymous: 'Contributions judged on merit only', example: 'GitHub blind review studies', impact: 'High', color: '#71717a' },
+    { group: 'Whistleblowers', barrier: 'Retaliation risk', pseudonymous: 'Evidence evaluated, not identity', example: 'SecureDrop (NYT, WaPo)', impact: 'Critical', color: '#18181b' },
+    { group: 'Career transitioners', barrier: 'Risk to current position', pseudonymous: 'Build parallel reputation safely', example: 'Tech bloggers, analysts', impact: 'Medium', color: '#3f3f46' },
+    { group: 'Marginalized communities', barrier: 'Discrimination based on name/origin', pseudonymous: 'Participate without demographic filtering', example: 'DeFi governance, DAOs', impact: 'High', color: '#52525b' },
   ];
 
   return (
@@ -169,11 +169,11 @@ export function ParticipationExpansionChart() {
 /* ─── Decentralized Identity Market ─── */
 export function DecentralizedIdentityMarket() {
   const data = [
-    { year: '2023', size: 1.2, color: 'hsl(210 70% 60%)' },
-    { year: '2024', size: 2.0, color: 'hsl(210 80% 50%)' },
-    { year: '2025', size: 3.0, color: 'hsl(210 90% 40%)' },
-    { year: '2027E', size: 8.5, color: 'hsl(160 80% 35%)' },
-    { year: '2030E', size: 45, color: 'hsl(160 80% 35%)' },
+    { year: '2023', size: 1.2, color: '#71717a' },
+    { year: '2024', size: 2.0, color: '#18181b' },
+    { year: '2025', size: 3.0, color: '#18181b' },
+    { year: '2027E', size: 8.5, color: '#3f3f46' },
+    { year: '2030E', size: 45, color: '#3f3f46' },
   ];
   const max = 45;
 

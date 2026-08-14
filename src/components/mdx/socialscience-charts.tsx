@@ -5,12 +5,12 @@ import React from 'react';
 /* ─── Data Source Disruption ─── */
 export function DataSourceDisruption() {
   const sources = [
-    { platform: 'Twitter/X', status: 'Restricted', cost: '$42K/mo', papers: '25,000+', impact: 'Primary source lost for most researchers', color: 'hsl(210 90% 40%)' },
-    { platform: 'Meta (FB/IG)', status: 'Limited partnerships', cost: 'Application-based', papers: '15,000+', impact: '2023 Science studies via Meta partnership', color: 'hsl(210 70% 50%)' },
-    { platform: 'Reddit', status: 'Restricted (2023)', cost: '$0.24/1K API calls', papers: '10,000+', impact: 'Pushshift archive shut down', color: 'hsl(30 80% 50%)' },
-    { platform: 'Bluesky', status: 'Open (AT Protocol)', cost: 'Free', papers: 'Emerging', impact: 'Decentralized, firehose API available', color: 'hsl(160 80% 35%)' },
-    { platform: 'Mastodon', status: 'Open (ActivityPub)', cost: 'Free', papers: 'Growing', impact: 'Federated, instance-level access', color: 'hsl(280 60% 45%)' },
-    { platform: 'TikTok', status: 'Minimal', cost: 'Research API (limited)', papers: '2,000+', impact: 'Most studied via scraping, not API', color: 'hsl(350 70% 45%)' },
+    { platform: 'Twitter/X', status: 'Restricted', cost: '$42K/mo', papers: '25,000+', impact: 'Primary source lost for most researchers', color: '#18181b' },
+    { platform: 'Meta (FB/IG)', status: 'Limited partnerships', cost: 'Application-based', papers: '15,000+', impact: '2023 Science studies via Meta partnership', color: '#18181b' },
+    { platform: 'Reddit', status: 'Restricted (2023)', cost: '$0.24/1K API calls', papers: '10,000+', impact: 'Pushshift archive shut down', color: '#52525b' },
+    { platform: 'Bluesky', status: 'Open (AT Protocol)', cost: 'Free', papers: 'Emerging', impact: 'Decentralized, firehose API available', color: '#3f3f46' },
+    { platform: 'Mastodon', status: 'Open (ActivityPub)', cost: 'Free', papers: 'Growing', impact: 'Federated, instance-level access', color: '#71717a' },
+    { platform: 'TikTok', status: 'Minimal', cost: 'Research API (limited)', papers: '2,000+', impact: 'Most studied via scraping, not API', color: '#a1a1aa' },
   ];
 
   return (
@@ -46,12 +46,12 @@ export function DataSourceDisruption() {
 /* ─── Methodological Evolution ─── */
 export function MethodologicalEvolution() {
   const methods = [
-    { name: 'API Scraping (traditional)', era: '2006-2023', scale: 'Millions of posts', privacy: 'Public data', limitation: 'Platform-dependent, shut down', maturity: 90, declining: true, color: 'hsl(0 0% 55%)' },
-    { name: 'Browser Extension Studies', era: '2020-present', scale: 'Thousands of participants', privacy: 'Informed consent', limitation: 'Small sample, self-selection bias', maturity: 65, declining: false, color: 'hsl(210 90% 40%)' },
-    { name: 'Data Donation (GDPR Art. 15)', era: '2021-present', scale: 'Hundreds to thousands', privacy: 'User-controlled export', limitation: 'Very small scale, labor-intensive', maturity: 45, declining: false, color: 'hsl(160 80% 35%)' },
-    { name: 'LLM Digital Twins', era: '2023-present', scale: 'Unlimited synthetic agents', privacy: 'No real users exposed', limitation: 'Validity of synthetic behavior', maturity: 30, declining: false, color: 'hsl(280 60% 45%)' },
-    { name: 'Algorithmic Auditing', era: '2019-present', scale: 'Controlled experiments', privacy: 'Researcher-created accounts', limitation: 'Platform detection, ToS violations', maturity: 55, declining: false, color: 'hsl(30 80% 50%)' },
-    { name: 'Platform Partnerships', era: '2018-present', scale: 'Millions (platform-controlled)', privacy: 'NDA-governed', limitation: 'Corporate veto on findings', maturity: 40, declining: false, color: 'hsl(350 70% 45%)' },
+    { name: 'API Scraping (traditional)', era: '2006-2023', scale: 'Millions of posts', privacy: 'Public data', limitation: 'Platform-dependent, shut down', maturity: 90, declining: true, color: '#a1a1aa' },
+    { name: 'Browser Extension Studies', era: '2020-present', scale: 'Thousands of participants', privacy: 'Informed consent', limitation: 'Small sample, self-selection bias', maturity: 65, declining: false, color: '#18181b' },
+    { name: 'Data Donation (GDPR Art. 15)', era: '2021-present', scale: 'Hundreds to thousands', privacy: 'User-controlled export', limitation: 'Very small scale, labor-intensive', maturity: 45, declining: false, color: '#3f3f46' },
+    { name: 'LLM Digital Twins', era: '2023-present', scale: 'Unlimited synthetic agents', privacy: 'No real users exposed', limitation: 'Validity of synthetic behavior', maturity: 30, declining: false, color: '#71717a' },
+    { name: 'Algorithmic Auditing', era: '2019-present', scale: 'Controlled experiments', privacy: 'Researcher-created accounts', limitation: 'Platform detection, ToS violations', maturity: 55, declining: false, color: '#52525b' },
+    { name: 'Platform Partnerships', era: '2018-present', scale: 'Millions (platform-controlled)', privacy: 'NDA-governed', limitation: 'Corporate veto on findings', maturity: 40, declining: false, color: '#a1a1aa' },
   ];
 
   return (
@@ -66,7 +66,7 @@ export function MethodologicalEvolution() {
               <div className="flex items-baseline justify-between mb-1">
                 <div>
                   <span className="text-[11px] font-bold text-[#37352f]">{m.name}</span>
-                  {m.declining && <span className="text-[8px] ml-1.5 px-1.5 py-0.5 rounded-full font-bold bg-red-50 text-red-500">declining</span>}
+                  {m.declining && <span className="text-[8px] ml-1.5 px-1.5 py-0.5 rounded-full font-bold bg-[#f4f4f5] text-[#18181b]">declining</span>}
                 </div>
                 <span className="text-[9px] text-muted-foreground">{m.era}</span>
               </div>
@@ -89,11 +89,11 @@ export function MethodologicalEvolution() {
 /* ─── Polarization Research Findings ─── */
 export function PolarizationFindings() {
   const findings = [
-    { study: 'Meta/Science (2023): Chronological feed', n: '23,000', finding: 'Algorithmic feed ↑ ideological sorting; chronological feed did not ↓ polarization', implication: 'Short-term manipulation ≠ attitude change', color: 'hsl(210 90% 40%)' },
-    { study: 'Meta/Science (2023): Remove reshares', n: '23,000', finding: 'Removing reshared content ↓ political news & misinformation exposure significantly', implication: 'Reshare mechanism is the primary amplification vector', color: 'hsl(160 80% 35%)' },
-    { study: 'Meta/Science (2023): Like-minded sources', n: '23,000', finding: 'Reducing like-minded content ↓ news from untrustworthy sources', implication: 'Echo chambers are algorithmically maintained', color: 'hsl(30 80% 50%)' },
-    { study: 'Bail et al. (2018): Cross-cutting exposure', n: '1,220', finding: 'Exposure to opposing views ↑ polarization (for Republicans)', implication: 'More information ≠ less polarization', color: 'hsl(350 70% 45%)' },
-    { study: 'Allcott et al. (2020): Facebook deactivation', n: '2,743', finding: '4-week deactivation ↓ political knowledge, ↓ polarization slightly', implication: 'Platform use maintains engagement in political discourse', color: 'hsl(280 60% 45%)' },
+    { study: 'Meta/Science (2023): Chronological feed', n: '23,000', finding: 'Algorithmic feed ↑ ideological sorting; chronological feed did not ↓ polarization', implication: 'Short-term manipulation ≠ attitude change', color: '#18181b' },
+    { study: 'Meta/Science (2023): Remove reshares', n: '23,000', finding: 'Removing reshared content ↓ political news & misinformation exposure significantly', implication: 'Reshare mechanism is the primary amplification vector', color: '#3f3f46' },
+    { study: 'Meta/Science (2023): Like-minded sources', n: '23,000', finding: 'Reducing like-minded content ↓ news from untrustworthy sources', implication: 'Echo chambers are algorithmically maintained', color: '#52525b' },
+    { study: 'Bail et al. (2018): Cross-cutting exposure', n: '1,220', finding: 'Exposure to opposing views ↑ polarization (for Republicans)', implication: 'More information ≠ less polarization', color: '#a1a1aa' },
+    { study: 'Allcott et al. (2020): Facebook deactivation', n: '2,743', finding: '4-week deactivation ↓ political knowledge, ↓ polarization slightly', implication: 'Platform use maintains engagement in political discourse', color: '#71717a' },
   ];
 
   return (
@@ -126,10 +126,10 @@ export function PolarizationFindings() {
 /* ─── Observer Effect ─── */
 export function ObserverEffectChart() {
   const biases = [
-    { platform: 'Twitter/X', designBias: 'Brevity (280 chars), public performance', algorithmicBias: 'Engagement optimization → outrage amplification', populationBias: 'Younger, male, urban, politically engaged', color: 'hsl(210 90% 40%)' },
-    { platform: 'Facebook', designBias: 'Social graph, reshare mechanics', algorithmicBias: 'Predicted engagement → ideological sorting', populationBias: 'Older, broader demographics, declining youth', color: 'hsl(210 70% 50%)' },
-    { platform: 'TikTok', designBias: 'Short video, low-friction creation', algorithmicBias: 'Watch time optimization → sensationalism', populationBias: 'Gen Z / Gen Alpha, global', color: 'hsl(350 70% 45%)' },
-    { platform: 'Reddit', designBias: 'Pseudonymous, community-gated', algorithmicBias: 'Upvote sorting → popularity bias', populationBias: 'Male-skewed, tech-literate, Western', color: 'hsl(30 80% 50%)' },
+    { platform: 'Twitter/X', designBias: 'Brevity (280 chars), public performance', algorithmicBias: 'Engagement optimization → outrage amplification', populationBias: 'Younger, male, urban, politically engaged', color: '#18181b' },
+    { platform: 'Facebook', designBias: 'Social graph, reshare mechanics', algorithmicBias: 'Predicted engagement → ideological sorting', populationBias: 'Older, broader demographics, declining youth', color: '#18181b' },
+    { platform: 'TikTok', designBias: 'Short video, low-friction creation', algorithmicBias: 'Watch time optimization → sensationalism', populationBias: 'Gen Z / Gen Alpha, global', color: '#a1a1aa' },
+    { platform: 'Reddit', designBias: 'Pseudonymous, community-gated', algorithmicBias: 'Upvote sorting → popularity bias', populationBias: 'Male-skewed, tech-literate, Western', color: '#52525b' },
   ];
 
   return (

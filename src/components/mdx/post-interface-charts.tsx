@@ -26,13 +26,13 @@ export function ApiTrafficChart() {
               <div className="w-full h-6 bg-[#f7f6f3] rounded-md overflow-hidden flex">
                 <div
                   className="h-full rounded-l-md flex items-center justify-end pr-1.5"
-                  style={{ width: `${d.human}%`, backgroundColor: 'hsl(210 90% 40%)', opacity: 0.35 }}
+                  style={{ width: `${d.human}%`, backgroundColor: '#18181b', opacity: 0.35 }}
                 >
                   <span className="text-[9px] font-bold text-white/80">{d.human}%</span>
                 </div>
                 <div
                   className="h-full rounded-r-md flex items-center pl-1.5"
-                  style={{ width: `${d.machine}%`, backgroundColor: 'hsl(210 90% 40%)' }}
+                  style={{ width: `${d.machine}%`, backgroundColor: '#18181b' }}
                 >
                   <span className="text-[9px] font-bold text-white">{d.machine}%</span>
                 </div>
@@ -43,11 +43,11 @@ export function ApiTrafficChart() {
 
         <div className="flex gap-4 mt-4">
           <div className="flex items-center gap-1.5">
-            <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: 'hsl(210 90% 40%)', opacity: 0.35 }} />
+            <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#18181b', opacity: 0.35 }} />
             <span className="text-[10px] text-muted-foreground font-medium">Human (browser)</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: 'hsl(210 90% 40%)' }} />
+            <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#18181b' }} />
             <span className="text-[10px] text-muted-foreground font-medium">Machine (API/M2M)</span>
           </div>
         </div>
@@ -66,35 +66,35 @@ export function ZeroUIMarketMap() {
     {
       name: 'Protocol Layer',
       desc: 'Standards for agent-to-service and agent-to-agent communication',
-      color: 'hsl(210 90% 40%)',
+      color: '#18181b',
 
       companies: ['Anthropic (MCP)', 'Google (A2A)', 'Google (UCP)', 'OpenAI (ACP)', 'Coinbase (x402)', 'Stripe (MPP)', 'LangChain (LangGraph)', 'CrewAI', 'Microsoft (AutoGen)'],
     },
     {
       name: 'Headless Commerce Engines',
       desc: 'API-first platforms exposing 100% functionality without a frontend',
-      color: 'hsl(160 80% 35%)',
+      color: '#3f3f46',
 
       companies: ['Commercetools', 'Fabric', 'Shopify (Storefront API)', 'BigCommerce', 'Medusa', 'Saleor', 'Elastic Path', 'Spryker'],
     },
     {
       name: 'AEO & Semantic Analytics',
       desc: 'Optimizing brand data for LLM ingestion instead of human SEO',
-      color: 'hsl(280 60% 45%)',
+      color: '#71717a',
 
       companies: ['Yext', 'Schema App', 'Botify', 'seoClarity', 'BrightEdge', 'Deep (AI search)', 'Perplexity Pages', 'Vectorize'],
     },
     {
       name: 'Identity & Execution',
       desc: 'Agentic wallets, ZKP attestation, and machine-native payments',
-      color: 'hsl(30 80% 50%)',
+      color: '#52525b',
 
       companies: ['Coinbase (Agentic Wallets)', 'Skyfire (KYAPay)', 'Privy', 'Dynamic', 'Crossmint', 'Circle (USDC rails)', 'Worldcoin (World ID)', 'Lit Protocol'],
     },
     {
       name: 'Edge Hardware & Ambient Sensors',
       desc: 'Post-smartphone form factors optimized for context, not screens',
-      color: 'hsl(350 70% 45%)',
+      color: '#a1a1aa',
 
       companies: ['Apple (Secure Enclave)', 'Limitless', 'Humane', 'Oura', 'CTRL-labs (Meta)', 'Rabbit r1', 'Frame (AR glasses)', 'Qualcomm (on-device LLM)'],
     },
@@ -164,7 +164,7 @@ export function SaaSPricingShift() {
                 <tr key={m.model} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{m.model}</td>
                   <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f]">{m.legacy}</span></td>
-                  <td className="py-2.5 px-2"><span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${m.agentic === 'Dominant' || m.agentic === 'Emerging' || m.agentic === 'Growing' ? 'bg-green-50 text-green-600' : 'bg-red-50 text-red-600'}`}>{m.agentic}</span></td>
+                  <td className="py-2.5 px-2"><span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${m.agentic === 'Dominant' || m.agentic === 'Emerging' || m.agentic === 'Growing' ? 'bg-[#f4f4f5] text-[#18181b]' : 'bg-[#f4f4f5] text-[#18181b]'}`}>{m.agentic}</span></td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{m.reason}</td>
                 </tr>
               ))}
@@ -212,7 +212,7 @@ export function AttentionCollapseChart() {
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{m.metric}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{m.before}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{m.after}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-red-50 text-red-600">{m.decline}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{m.decline}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -252,11 +252,11 @@ export function GUITimeline() {
             {eras.map((e) => (
               <div key={e.year} className="grid grid-cols-[36px_1fr] gap-3 items-start">
                 <div className="relative flex items-center justify-center">
-                  <div className={`w-[9px] h-[9px] rounded-full border-2 ${e.type === 'agent' ? 'border-primary bg-primary' : e.type === 'transition' ? 'border-amber-500 bg-amber-500' : 'border-[#37352f] bg-transparent'}`} />
+                  <div className={`w-[9px] h-[9px] rounded-full border-2 ${e.type === 'agent' ? 'border-[#18181b] bg-[#18181b]' : e.type === 'transition' ? 'border-[#18181b] bg-[#18181b]' : 'border-[#37352f] bg-transparent'}`} />
                 </div>
                 <div>
                   <div className="flex items-baseline gap-2">
-                    <span className={`text-xs font-bold ${e.type === 'agent' ? 'text-primary' : 'text-[#37352f]'}`}>{e.year}</span>
+                    <span className={`text-xs font-bold ${e.type === 'agent' ? 'text-[#18181b]' : 'text-[#37352f]'}`}>{e.year}</span>
                     <span className="text-xs font-bold text-[#37352f]">{e.event}</span>
                   </div>
                   <p className="text-[11px] text-muted-foreground mt-0.5">
@@ -277,11 +277,11 @@ export function GUITimeline() {
             <span className="text-[10px] text-muted-foreground font-medium">GUI era</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <div className="w-2.5 h-2.5 rounded-full bg-amber-500" />
+            <div className="w-2.5 h-2.5 rounded-full bg-[#18181b]" />
             <span className="text-[10px] text-muted-foreground font-medium">Transition</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <div className="w-2.5 h-2.5 rounded-full bg-primary" />
+            <div className="w-2.5 h-2.5 rounded-full bg-[#18181b]" />
             <span className="text-[10px] text-muted-foreground font-medium">Agent era</span>
           </div>
         </div>
@@ -318,12 +318,12 @@ export function FrontendDeclineChart() {
                     className="h-full rounded-md"
                     style={{
                       width: `${(d.y2026 / max) * 100}%`,
-                      backgroundColor: isGrowing ? 'hsl(160 80% 35%)' : 'hsl(0 70% 50%)',
+                      backgroundColor: isGrowing ? '#3f3f46' : '#18181b',
                       opacity: isGrowing ? 0.7 : 0.5,
                     }}
                   />
                 </div>
-                <span className={`text-xs font-bold text-right ${isGrowing ? 'text-green-600' : 'text-red-600'}`}>{d.trend}</span>
+                <span className={`text-xs font-bold text-right ${isGrowing ? 'text-[#18181b]' : 'text-[#18181b]'}`}>{d.trend}</span>
               </div>
             );
           })}
@@ -360,11 +360,11 @@ export function HardwarePivotGrid() {
               <div className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider mb-2">{item.label}</div>
               <div className="grid grid-cols-2 gap-2">
                 <div>
-                  <span className="text-[9px] font-bold text-red-500 uppercase">Legacy</span>
+                  <span className="text-[9px] font-bold text-[#18181b] uppercase">Legacy</span>
                   <p className="text-[11px] text-[#37352f] font-medium mt-0.5">{item.legacy}</p>
                 </div>
                 <div>
-                  <span className="text-[9px] font-bold text-green-600 uppercase">Zero-UI</span>
+                  <span className="text-[9px] font-bold text-[#18181b] uppercase">Zero-UI</span>
                   <p className="text-[11px] text-[#37352f] font-medium mt-0.5">{item.zeroUI}</p>
                 </div>
               </div>

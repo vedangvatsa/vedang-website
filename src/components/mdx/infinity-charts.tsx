@@ -15,9 +15,9 @@ export function ScarcitySpectrum() {
   ];
 
   const colorMap: Record<string, string> = {
-    'abundance': 'text-primary',
+    'abundance': 'text-[#18181b]',
     'transition': 'text-[#37352f]',
-    'scarce': 'text-red-600',
+    'scarce': 'text-[#18181b]',
   };
 
   return (
@@ -32,7 +32,7 @@ export function ScarcitySpectrum() {
               <div className="flex justify-between mb-1">
                 <span className={`text-sm font-medium ${colorMap[item.category]}`}>{item.name}</span>
               </div>
-              <div className="w-full h-3 bg-gradient-to-r from-red-100 via-[#f7f6f3] to-blue-100 rounded-md overflow-hidden relative">
+              <div className="w-full h-3  from-[#f4f4f5] via-[#f7f6f3] to-[#e4e4e7] rounded-md overflow-hidden relative">
                 <div
                   className="absolute top-0 h-full w-1.5 rounded-full bg-[#37352f]"
                   style={{ left: `${item.position}%` }}
@@ -79,12 +79,12 @@ export function DataCenterEnergyChart() {
                   className="h-full rounded-md"
                   style={{
                     width: `${(d.twh / max) * 100}%`,
-                    backgroundColor: i >= 3 ? 'hsl(210 90% 40%)' : '#37352f',
+                    backgroundColor: i >= 3 ? '#18181b' : '#37352f',
                     opacity: i >= 3 ? 0.8 : 0.4 + (i * 0.1),
                   }}
                 />
               </div>
-              <span className={`text-xs font-bold text-right ${i >= 3 ? 'text-primary' : 'text-[#37352f]'}`}>{d.twh}</span>
+              <span className={`text-xs font-bold text-right ${i >= 3 ? 'text-[#18181b]' : 'text-[#37352f]'}`}>{d.twh}</span>
             </div>
           ))}
         </div>
@@ -119,14 +119,14 @@ export function TrainingCostChart() {
             <div key={m.name}>
               <div className="flex justify-between mb-1">
                 <span className="text-sm font-medium text-[#37352f]">{m.name} <span className="text-[10px] text-muted-foreground">({m.year})</span></span>
-                <span className={`text-sm font-bold ${i === models.length - 1 ? 'text-primary' : 'text-[#37352f]'}`}>{m.unit}</span>
+                <span className={`text-sm font-bold ${i === models.length - 1 ? 'text-[#18181b]' : 'text-[#37352f]'}`}>{m.unit}</span>
               </div>
               <div className="w-full h-4 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
                   style={{
                     width: `${Math.max((m.cost / max) * 100, 2)}%`,
-                    backgroundColor: i === models.length - 1 ? 'hsl(210 90% 40%)' : '#37352f',
+                    backgroundColor: i === models.length - 1 ? '#18181b' : '#37352f',
                     opacity: i === models.length - 1 ? 0.8 : 0.3 + (i * 0.12),
                   }}
                 />
@@ -154,8 +154,8 @@ export function MaterialConstraints() {
   ];
 
   const riskColor: Record<string, string> = {
-    'Critical': 'text-red-600 bg-red-50',
-    'High': 'text-orange-600 bg-orange-50',
+    'Critical': 'text-[#18181b] bg-[#f4f4f5]',
+    'High': 'text-[#18181b] bg-[#f4f4f5]',
     'Medium': 'text-yellow-700 bg-yellow-50',
   };
 
@@ -179,7 +179,7 @@ export function MaterialConstraints() {
               {resources.map((r) => (
                 <tr key={r.resource} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{r.resource}</td>
-                  <td className="py-2.5 px-2 text-primary font-semibold">{r.demand}</td>
+                  <td className="py-2.5 px-2 text-[#18181b] font-semibold">{r.demand}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{r.supply}</td>
                   <td className="py-2.5 px-2">
                     <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${riskColor[r.risk]}`}>{r.risk}</span>
@@ -223,10 +223,10 @@ export function PlatformConcentration() {
               <div className="w-full h-4 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
-                  style={{ width: `${(c.cap / maxCap) * 100}%`, backgroundColor: i === 0 ? 'hsl(210 90% 40%)' : '#37352f', opacity: i === 0 ? 0.8 : 0.3 + (0.08 * (companies.length - i)) }}
+                  style={{ width: `${(c.cap / maxCap) * 100}%`, backgroundColor: i === 0 ? '#18181b' : '#37352f', opacity: i === 0 ? 0.8 : 0.3 + (0.08 * (companies.length - i)) }}
                 />
               </div>
-              <span className={`text-xs font-bold text-right ${i === 0 ? 'text-primary' : 'text-[#37352f]'}`}>${c.cap}T</span>
+              <span className={`text-xs font-bold text-right ${i === 0 ? 'text-[#18181b]' : 'text-[#37352f]'}`}>${c.cap}T</span>
             </div>
           ))}
         </div>
@@ -263,7 +263,7 @@ export function RealityCheckGrid() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {facts.map((f) => (
             <div key={f.label} className="rounded-[3px] border border-[#e3e3e0] p-4">
-              <div className="text-2xl font-bold text-primary">{f.stat}</div>
+              <div className="text-2xl font-bold text-[#18181b]">{f.stat}</div>
               <div className="text-xs text-[#37352f] font-medium mt-1">{f.label}</div>
               <div className="text-[10px] text-muted-foreground mt-0.5">{f.source}</div>
             </div>
@@ -299,11 +299,11 @@ export function DualEconomyFramework() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="rounded-[3px] border border-[#e3e3e0] bg-[#f7f6f3] p-5">
-            <div className="text-xs font-bold uppercase tracking-widest text-primary mb-3">Abundance dynamics</div>
+            <div className="text-xs font-bold uppercase tracking-widest text-[#18181b] mb-3">Abundance dynamics</div>
             <ul className="space-y-2">
               {abundance.map((item) => (
                 <li key={item} className="flex items-start gap-2 text-sm text-[#37352f]/80">
-                  <span className="text-primary mt-0.5 shrink-0">&#x2713;</span>
+                  <span className="text-[#18181b] mt-0.5 shrink-0">&#x2713;</span>
                   {item}
                 </li>
               ))}

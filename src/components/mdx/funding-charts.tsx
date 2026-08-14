@@ -107,13 +107,13 @@ export function VCValuationExpansionChart() {
                       {d.rounds.toLocaleString()} rounds completed · Total raised: ${(d.raised).toFixed(2)}B
                     </span>
                   </div>
-                  <span className="text-sm font-extrabold text-primary">
+                  <span className="text-sm font-extrabold text-[#18181b]">
                     ${d.median >= 1 ? `${d.median.toFixed(2)}M` : `${(d.median * 1000).toFixed(0)}K`}
                   </span>
                 </div>
                 <div className="w-full h-3 bg-[#f7f6f3] rounded-sm overflow-hidden relative border border-[#e3e3e0]/30 mt-1.5">
                   <div
-                    className="h-full rounded-sm bg-primary/80 transition-all duration-500 ease-out"
+                    className="h-full rounded-sm bg-[#18181b]/80 transition-all duration-500 ease-out"
                     style={{ width: `${pct}%` }}
                   />
                 </div>
@@ -152,11 +152,11 @@ export function VCGiniConcentrationChart() {
                     <span className="text-xs font-bold text-[#37352f] w-10 shrink-0">{d.year}</span>
                     <div className="flex-1 h-4 bg-[#f7f6f3] rounded-sm overflow-hidden border border-[#e3e3e0]/30">
                       <div
-                        className="h-full bg-primary/80 transition-all duration-500 ease-out"
+                        className="h-full bg-[#18181b]/80 transition-all duration-500 ease-out"
                         style={{ width: `${pct}%` }}
                       />
                     </div>
-                    <span className="text-xs font-bold text-primary w-16 text-right">${(d.total).toFixed(0)}B</span>
+                    <span className="text-xs font-bold text-[#18181b] w-16 text-right">${(d.total).toFixed(0)}B</span>
                   </div>
                 );
               })}
@@ -174,7 +174,7 @@ export function VCGiniConcentrationChart() {
                     <span className="text-xs font-bold text-[#37352f] w-10 shrink-0">{d.year}</span>
                     <div className="flex-1 h-4 bg-[#f7f6f3] rounded-sm overflow-hidden border border-[#e3e3e0]/30">
                       <div
-                        className="h-full bg-primary/40 transition-all duration-500 ease-out"
+                        className="h-full bg-[#18181b]/40 transition-all duration-500 ease-out"
                         style={{ width: `${pct}%` }}
                       />
                     </div>
@@ -220,13 +220,13 @@ export function VCDeathValleyTimeline() {
                 let statusLabel = 'Complete';
                 
                 if (d.year === 2021) {
-                  statusColor = 'text-blue-600 font-bold';
+                  statusColor = 'text-[#18181b] font-bold';
                   statusLabel = 'ZIRP Outlier (Fast Track)';
                 } else if (d.year === 2022) {
-                  statusColor = 'text-orange-600 font-bold';
+                  statusColor = 'text-[#18181b] font-bold';
                   statusLabel = 'Transition Shock';
                 } else if (d.year >= 2023) {
-                  statusColor = 'text-red-600 font-bold';
+                  statusColor = 'text-[#18181b] font-bold';
                   statusLabel = 'Severe Friction (Active)';
                 }
 
@@ -240,13 +240,13 @@ export function VCDeathValleyTimeline() {
                         <span className="w-10 text-right">{d.pct.toFixed(2)}%</span>
                         <div className="w-16 h-2 bg-[#f7f6f3] border border-[#e3e3e0]/30 rounded-sm overflow-hidden">
                           <div
-                            className={`h-full ${d.pct > 15 ? 'bg-emerald-500' : d.pct > 10 ? 'bg-blue-500' : 'bg-orange-500'}`}
+                            className={`h-full ${d.pct > 15 ? 'bg-[#18181b]' : d.pct > 10 ? 'bg-[#18181b]' : 'bg-[#18181b]'}`}
                             style={{ width: `${(d.pct / 18) * 100}%` }}
                           />
                         </div>
                       </div>
                     </td>
-                    <td className="py-3 px-2 font-semibold text-primary">{d.medianMonths.toFixed(1)} mos</td>
+                    <td className="py-3 px-2 font-semibold text-[#18181b]">{d.medianMonths.toFixed(1)} mos</td>
                     <td className={`py-3 px-2 ${statusColor}`}>{statusLabel}</td>
                   </tr>
                 );
@@ -266,12 +266,12 @@ export function VCDeathValleyTimeline() {
 /* ─── 4. VCSectorSemanticAnalysis ─── */
 export function VCSectorSemanticAnalysis() {
   const semanticSectorData = [
-    { theme: 'GenAI & LLMs', rounds: 7878, medianSize: 1.40, valuation: 6.55, investors: 3.0, hubs: 'San Francisco, New York, London', seed: 2.0, seriesA: 10.0, seriesB: 30.0, color: '#3b82f6' },
-    { theme: 'Enterprise SaaS', rounds: 90715, medianSize: 1.60, valuation: 5.00, investors: 2.5, hubs: 'San Francisco, New York, London', seed: 1.0, seriesA: 6.0, seriesB: 13.9, color: '#6366f1' },
-    { theme: 'Climate & GreenTech', rounds: 35772, medianSize: 2.60, valuation: 10.00, investors: 2.1, hubs: 'London, San Francisco, New York', seed: 1.1, seriesA: 7.85, seriesB: 17.65, color: '#10b981' },
-    { theme: 'Web3 & Ledger', rounds: 27479, medianSize: 1.90, valuation: 10.00, investors: 3.8, hubs: 'Singapore, San Francisco, New York', seed: 2.0, seriesA: 8.3, seriesB: 20.0, color: '#f59e0b' },
-    { theme: 'DeepTech & Hardware', rounds: 24911, medianSize: 3.20, valuation: 25.00, investors: 2.6, hubs: 'San Francisco, Shenzhen, Shanghai', seed: 1.6, seriesA: 9.2, seriesB: 15.45, color: '#ec4899' },
-    { theme: 'Consumer & Marketplace', rounds: 75200, medianSize: 1.20, valuation: 5.00, investors: 2.4, hubs: 'New York, London, San Francisco', seed: 0.66, seriesA: 5.0, seriesB: 13.5, color: '#8b5cf6' }
+    { theme: 'GenAI & LLMs', rounds: 7878, medianSize: 1.40, valuation: 6.55, investors: 3.0, hubs: 'San Francisco, New York, London', seed: 2.0, seriesA: 10.0, seriesB: 30.0, color: '#18181b' },
+    { theme: 'Enterprise SaaS', rounds: 90715, medianSize: 1.60, valuation: 5.00, investors: 2.5, hubs: 'San Francisco, New York, London', seed: 1.0, seriesA: 6.0, seriesB: 13.9, color: '#18181b' },
+    { theme: 'Climate & GreenTech', rounds: 35772, medianSize: 2.60, valuation: 10.00, investors: 2.1, hubs: 'London, San Francisco, New York', seed: 1.1, seriesA: 7.85, seriesB: 17.65, color: '#18181b' },
+    { theme: 'Web3 & Ledger', rounds: 27479, medianSize: 1.90, valuation: 10.00, investors: 3.8, hubs: 'Singapore, San Francisco, New York', seed: 2.0, seriesA: 8.3, seriesB: 20.0, color: '#18181b' },
+    { theme: 'DeepTech & Hardware', rounds: 24911, medianSize: 3.20, valuation: 25.00, investors: 2.6, hubs: 'San Francisco, Shenzhen, Shanghai', seed: 1.6, seriesA: 9.2, seriesB: 15.45, color: '#18181b' },
+    { theme: 'Consumer & Marketplace', rounds: 75200, medianSize: 1.20, valuation: 5.00, investors: 2.4, hubs: 'New York, London, San Francisco', seed: 0.66, seriesA: 5.0, seriesB: 13.5, color: '#18181b' }
   ];
 
   const maxVal = Math.max(...semanticSectorData.map(d => d.valuation));
@@ -363,8 +363,8 @@ export function VCStrategicFrameworkDiagram() {
           </div>
 
           {/* Complication Box */}
-          <div className="flex-1 rounded-[3px] border border-amber-300/60 bg-amber-50/50 p-5 flex flex-col">
-            <div className="text-[10px] font-bold uppercase tracking-wider text-amber-600 mb-2">2. The Complication</div>
+          <div className="flex-1 rounded-[3px] border border-[#e4e4e7] bg-[#f4f4f5] p-5 flex flex-col">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-[#18181b] mb-2">2. The Complication</div>
             <div className="text-sm font-bold text-[#37352f] mb-3">The Structural Barbell & Gini Moat</div>
             <p className="text-xs text-muted-foreground leading-relaxed flex-1">
               Macro reset and cost-of-capital increases hollowed out the software mid-market. Capital polarized into a barbell system: extreme concentration (0.916 Gini) in mega-rounds vs. lean early stages.
@@ -379,9 +379,9 @@ export function VCStrategicFrameworkDiagram() {
           </div>
 
           {/* Resolution Box */}
-          <div className="flex-1 rounded-[3px] border border-primary/30 bg-primary/5 p-5 flex flex-col">
-            <div className="text-[10px] font-bold uppercase tracking-wider text-primary mb-2">3. The Resolution</div>
-            <div className="text-sm font-bold text-primary mb-3">Metric-Driven Underwriting Moats</div>
+          <div className="flex-1 rounded-[3px] border border-[#e4e4e7] bg-[#f4f4f5] p-5 flex flex-col">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-[#18181b] mb-2">3. The Resolution</div>
+            <div className="text-sm font-bold text-[#18181b] mb-3">Metric-Driven Underwriting Moats</div>
             <p className="text-xs text-muted-foreground leading-relaxed flex-1">
               Transitioning portfolios from option-buying to core underwriting. Founders prioritize the Capital Efficiency Index (CEI &gt; 1.5x), expand runways to 36 months, and re-anchor valuation expectations.
             </p>
@@ -411,7 +411,7 @@ export function VCEquationBoxSVG() {
           <text x="280" y="28" fill="#37352f" fontSize="14" fontFamily="var(--font-mono), monospace" fontWeight="bold" textAnchor="middle">Net New ARR Generated</text>
           
           {/* Denominator */}
-          <text x="280" y="58" fill="#3b82f6" fontSize="14" fontFamily="var(--font-mono), monospace" fontWeight="bold" textAnchor="middle">Net Capital Burned</text>
+          <text x="280" y="58" fill="#18181b" fontSize="14" fontFamily="var(--font-mono), monospace" fontWeight="bold" textAnchor="middle">Net Capital Burned</text>
         </svg>
 
         <span className="text-[10px] text-muted-foreground/70 text-center mt-3 leading-relaxed">
@@ -436,26 +436,26 @@ export function VCBarbellSystemVisual() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {/* Card 1: The Low Pole */}
-          <div className="rounded-[3px] border border-primary/20 bg-primary/5 p-6 flex flex-col transition-all duration-300 hover:shadow-md">
-            <div className="text-[10px] font-extrabold uppercase tracking-widest text-primary mb-3">
+          <div className="rounded-[3px] border border-[#18181b]/20 bg-[#f4f4f5] p-6 flex flex-col transition-all duration-300 hover:shadow-md">
+            <div className="text-[10px] font-extrabold uppercase tracking-widest text-[#18181b] mb-3">
               The Low-Capital Pole
             </div>
             <h4 className="text-base font-bold text-[#37352f] mb-4">Capital-Lean (Modular)</h4>
             <ul className="text-xs text-muted-foreground leading-relaxed flex-1 flex flex-col gap-3">
               <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-1.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#18181b] shrink-0 mt-1.5" />
                 <span><strong>Pre-Seed and Seed check focus</strong> (median $0.50M - $2.80M)</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-1.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#18181b] shrink-0 mt-1.5" />
                 <span><strong>Small, highly targeted cash injections</strong> for operational traction</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-1.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#18181b] shrink-0 mt-1.5" />
                 <span><strong>Extremely lean development budgets</strong> leveraging open-source and SaaS tooling</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-1.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#18181b] shrink-0 mt-1.5" />
                 <span><strong>Absolute prioritization of cash sustainability</strong> over narrative-driven vanity metrics</span>
               </li>
             </ul>
@@ -490,26 +490,26 @@ export function VCBarbellSystemVisual() {
           </div>
 
           {/* Card 3: The High Pole */}
-          <div className="rounded-[3px] border border-emerald-500/20 bg-emerald-500/5 p-6 flex flex-col transition-all duration-300 hover:shadow-md relative overflow-hidden">
-            <div className="text-[10px] font-extrabold uppercase tracking-widest text-emerald-600 mb-3">
+          <div className="rounded-[3px] border border-[#e4e4e7] bg-[#f4f4f5] p-6 flex flex-col transition-all duration-300 hover:shadow-md relative overflow-hidden">
+            <div className="text-[10px] font-extrabold uppercase tracking-widest text-[#18181b] mb-3">
               The High-Capital Pole
             </div>
             <h4 className="text-base font-bold text-[#37352f] mb-4">Capital-Heavy (Moated)</h4>
             <ul className="text-xs text-muted-foreground leading-relaxed flex-1 flex flex-col gap-3">
               <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#18181b] shrink-0 mt-1.5" />
                 <span><strong>Mega-rounds of $100M+</strong> concentrated into undisputed market leaders</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#18181b] shrink-0 mt-1.5" />
                 <span><strong>Generative AI foundation models and neural compute networks</strong></span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#18181b] shrink-0 mt-1.5" />
                 <span><strong>Silicon chip designs, quantum computing, and physical deep technology</strong></span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#18181b] shrink-0 mt-1.5" />
                 <span><strong>Massive capital-moat structures</strong> backed by top-tier institutional allocators</span>
               </li>
             </ul>
@@ -541,38 +541,38 @@ export function VCBarbellVectorDiagram() {
             <line x1="410" y1="110" x2="620" y2="110" stroke="#cbd5e1" strokeWidth="6" strokeLinecap="round" />
 
             {/* Hollowed Middle segment (Red, Dotted line) */}
-            <line x1="330" y1="110" x2="410" y2="110" stroke="#f87171" strokeWidth="6" strokeDasharray="6 4" strokeLinecap="round" />
+            <line x1="330" y1="110" x2="410" y2="110" stroke="#18181b" strokeWidth="6" strokeDasharray="6 4" strokeLinecap="round" />
 
             {/* Left Node: Low-Capital Pole */}
-            <circle cx="120" cy="110" r="30" fill="#eff6ff" stroke="#3b82f6" strokeWidth="4" />
-            <circle cx="120" cy="110" r="8" fill="#3b82f6" />
+            <circle cx="120" cy="110" r="30" fill="#eff6ff" stroke="#18181b" strokeWidth="4" />
+            <circle cx="120" cy="110" r="8" fill="#18181b" />
             
             {/* Middle Node: Hollowed Out */}
-            <circle cx="370" cy="110" r="22" fill="#fff5f5" stroke="#f87171" strokeWidth="3" strokeDasharray="4 3" />
-            <line x1="362" y1="102" x2="378" y2="118" stroke="#f87171" strokeWidth="2.5" />
-            <line x1="378" y1="102" x2="362" y2="118" stroke="#f87171" strokeWidth="2.5" />
+            <circle cx="370" cy="110" r="22" fill="#fff5f5" stroke="#18181b" strokeWidth="3" strokeDasharray="4 3" />
+            <line x1="362" y1="102" x2="378" y2="118" stroke="#18181b" strokeWidth="2.5" />
+            <line x1="378" y1="102" x2="362" y2="118" stroke="#18181b" strokeWidth="2.5" />
 
             {/* Right Node: High-Capital Pole */}
-            <circle cx="620" cy="110" r="55" fill="#ecfdf5" stroke="#10b981" strokeWidth="5" />
+            <circle cx="620" cy="110" r="55" fill="#ecfdf5" stroke="#18181b" strokeWidth="5" />
             {/* Inner dense circles representing concentrated capital layers */}
-            <circle cx="620" cy="110" r="38" fill="none" stroke="#10b981" strokeWidth="1.5" strokeDasharray="3 2" />
-            <circle cx="620" cy="110" r="22" fill="#10b981" fillOpacity="0.15" stroke="#10b981" strokeWidth="2.5" />
-            <circle cx="620" cy="110" r="6" fill="#10b981" />
+            <circle cx="620" cy="110" r="38" fill="none" stroke="#18181b" strokeWidth="1.5" strokeDasharray="3 2" />
+            <circle cx="620" cy="110" r="22" fill="#18181b" fillOpacity="0.15" stroke="#18181b" strokeWidth="2.5" />
+            <circle cx="620" cy="110" r="6" fill="#18181b" />
 
             {/* Labels: Low-Capital Pole */}
-            <text x="120" y="45" fill="#3b82f6" fontSize="11" fontFamily="var(--font-sans), sans-serif" fontWeight="bold" textAnchor="middle" letterSpacing="0.05em">THE LOW POLE</text>
+            <text x="120" y="45" fill="#18181b" fontSize="11" fontFamily="var(--font-sans), sans-serif" fontWeight="bold" textAnchor="middle" letterSpacing="0.05em">THE LOW POLE</text>
             <text x="120" y="62" fill="#37352f" fontSize="13" fontFamily="var(--font-sans), sans-serif" fontWeight="bold" textAnchor="middle">Capital-Lean Startups</text>
             <text x="120" y="165" fill="#64748b" fontSize="10" fontFamily="var(--font-sans), sans-serif" textAnchor="middle">Modular Operations</text>
             <text x="120" y="180" fill="#64748b" fontSize="10" fontFamily="var(--font-sans), sans-serif" textAnchor="middle">Pre-Seed and Seed Checks</text>
 
             {/* Labels: Hollowed Out Middle */}
-            <text x="370" y="45" fill="#ef4444" fontSize="11" fontFamily="var(--font-sans), sans-serif" fontWeight="bold" textAnchor="middle" letterSpacing="0.05em">THE HOLLOW MIDDLE</text>
+            <text x="370" y="45" fill="#18181b" fontSize="11" fontFamily="var(--font-sans), sans-serif" fontWeight="bold" textAnchor="middle" letterSpacing="0.05em">THE HOLLOW MIDDLE</text>
             <text x="370" y="62" fill="#37352f" fontSize="13" fontFamily="var(--font-sans), sans-serif" fontWeight="bold" textAnchor="middle">Traditional Mid-Market SaaS</text>
             <text x="370" y="165" fill="#94a3b8" fontSize="10" fontFamily="var(--font-sans), sans-serif" textAnchor="middle">Liquidity Contraction</text>
             <text x="370" y="180" fill="#94a3b8" fontSize="10" fontFamily="var(--font-sans), sans-serif" textAnchor="middle">Valuation Compression</text>
 
             {/* Labels: High-Capital Pole */}
-            <text x="620" y="25" fill="#10b981" fontSize="11" fontFamily="var(--font-sans), sans-serif" fontWeight="bold" textAnchor="middle" letterSpacing="0.05em">THE HIGH POLE</text>
+            <text x="620" y="25" fill="#18181b" fontSize="11" fontFamily="var(--font-sans), sans-serif" fontWeight="bold" textAnchor="middle" letterSpacing="0.05em">THE HIGH POLE</text>
             <text x="620" y="42" fill="#37352f" fontSize="13" fontFamily="var(--font-sans), sans-serif" fontWeight="bold" textAnchor="middle">Capital-Heavy Mega-Rounds</text>
             <text x="620" y="185" fill="#64748b" fontSize="10" fontFamily="var(--font-sans), sans-serif" textAnchor="middle">Foundation Models and Infrastructure</text>
             <text x="620" y="200" fill="#64748b" fontSize="10" fontFamily="var(--font-sans), sans-serif" textAnchor="middle">Massive Gini Concentration Moats</text>

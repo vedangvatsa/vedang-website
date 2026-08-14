@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" width="400" height="520" preserveAspectRatio="xMidYMid meet">
+  <style>
+    text { font-family: Inter, system-ui, sans-serif; }
+    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
+    .name { font-size: 15px; font-weight: 600; fill: #18181b; }
+    .row { font-size: 13px; fill: #18181b; }
+    .dim { font-size: 13px; fill: #52525b; }
+    .note { font-size: 12px; fill: #52525b; }
+    .pct { font-size: 15px; font-weight: 600; fill: #18181b; }
+  </style>
+
+  <text x="16" y="28" class="title">CoreWeave: one tenant, then two</text>
+
+  <rect x="16" y="44" width="368" height="64" fill="#f4f4f5"/>
+  <text x="28" y="70" class="name">2022</text>
+  <text x="372" y="70" class="pct" text-anchor="end">16%</text>
+  <text x="28" y="90" class="dim">Largest customer share of revenue</text>
+
+  <rect x="16" y="108" width="368" height="64" fill="#ffffff"/>
+  <text x="28" y="134" class="name">2023</text>
+  <text x="372" y="134" class="pct" text-anchor="end">35%</text>
+  <text x="28" y="154" class="dim">Largest customer: Microsoft</text>
+
+  <rect x="16" y="172" width="368" height="64" fill="#f4f4f5"/>
+  <text x="28" y="198" class="name">2024</text>
+  <text x="372" y="198" class="pct" text-anchor="end">62%</text>
+  <text x="28" y="218" class="dim">Microsoft. Top two customers: 77%</text>
+
+  <rect x="16" y="236" width="368" height="64" fill="#ffffff"/>
+  <text x="28" y="262" class="name">Q1 2025</text>
+  <text x="372" y="262" class="pct" text-anchor="end">72%</text>
+  <text x="28" y="282" class="dim">Customer A, 10-Q. Same pattern.</text>
+
+  <rect x="16" y="300" width="368" height="64" fill="#f4f4f5"/>
+  <text x="28" y="326" class="name">Q1 2026</text>
+  <text x="372" y="326" class="pct" text-anchor="end">45%</text>
+  <text x="28" y="346" class="dim">Customer A. Customer B: 20%</text>
+
+  <rect x="16" y="376" width="368" height="72" fill="#ffffff" stroke="#18181b" stroke-width="1"/>
+  <text x="28" y="400" class="name">Q1 2026 revenue mix</text>
+  <text x="28" y="422" class="row">98% from committed contracts</text>
+  <text x="28" y="442" class="dim">On-demand is the leftover 2%</text>
+
+  <text x="16" y="478" class="note">Sources: CoreWeave S-1; Q1 2026 10-Q.</text>
+  <text x="16" y="496" class="note">veda.ng</text>
+</svg>

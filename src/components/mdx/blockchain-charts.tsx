@@ -12,7 +12,7 @@ export function BlockchainSnapshot() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
           <div className="rounded-[3px] border border-[#e3e3e0] p-4">
-            <div className="text-2xl font-bold text-primary">$315B</div>
+            <div className="text-2xl font-bold text-[#18181b]">$315B</div>
             <div className="text-xs text-[#37352f] font-medium mt-1">Stablecoin market cap</div>
             <div className="text-[10px] text-muted-foreground mt-0.5">All-time high, USDT 58% share</div>
           </div>
@@ -27,7 +27,7 @@ export function BlockchainSnapshot() {
             <div className="text-[10px] text-muted-foreground mt-0.5">1.28M BTC held, IBIT leads at $52B</div>
           </div>
           <div className="rounded-[3px] border border-[#e3e3e0] p-4">
-            <div className="text-2xl font-bold text-primary">$24-26B</div>
+            <div className="text-2xl font-bold text-[#18181b]">$24-26B</div>
             <div className="text-xs text-[#37352f] font-medium mt-1">Tokenized RWAs on-chain</div>
             <div className="text-[10px] text-muted-foreground mt-0.5">Treasuries &gt;$11B, excluding stables</div>
           </div>
@@ -36,8 +36,8 @@ export function BlockchainSnapshot() {
             <div className="text-xs text-[#37352f] font-medium mt-1">Blockchain tech market (2026)</div>
             <div className="text-[10px] text-muted-foreground mt-0.5">Hardware, software, services</div>
           </div>
-          <div className="rounded-[3px] border border-primary/30 bg-primary/5 p-4">
-            <div className="text-2xl font-bold text-primary">$10-16T</div>
+          <div className="rounded-[3px] border border-[#e4e4e7] bg-[#f4f4f5] p-4">
+            <div className="text-2xl font-bold text-[#18181b]">$10-16T</div>
             <div className="text-xs text-[#37352f] font-medium mt-1">RWA forecast by 2030</div>
             <div className="text-[10px] text-muted-foreground mt-0.5">BCG, Standard Chartered est.</div>
           </div>
@@ -62,8 +62,8 @@ export function BlockchainPhases() {
   ];
 
   const statusColor: Record<string, string> = {
-    'mature': 'text-green-600 bg-green-50',
-    'active': 'text-blue-600 bg-blue-50',
+    'mature': 'text-[#18181b] bg-[#f4f4f5]',
+    'active': 'text-[#18181b] bg-[#f4f4f5]',
   };
 
   return (
@@ -85,7 +85,7 @@ export function BlockchainPhases() {
             <tbody>
               {phases.map((p) => (
                 <tr key={p.era} className="border-b border-[#e3e3e0]/60">
-                  <td className="py-2.5 px-2 text-primary font-semibold">{p.era}</td>
+                  <td className="py-2.5 px-2 text-[#18181b] font-semibold">{p.era}</td>
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{p.label}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{p.achievement}</td>
                   <td className="py-2.5 px-2"><span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${statusColor[p.status]}`}>{p.status === 'active' ? 'Active' : 'Mature'}</span></td>
@@ -109,10 +109,10 @@ export function L2ScalingOverview() {
   ];
 
   const statusColor: Record<string, string> = {
-    'dominant': 'text-blue-600 bg-blue-50',
-    'leading': 'text-green-600 bg-green-50',
-    'growing': 'text-amber-600 bg-amber-50',
-    'consolidating': 'text-red-600 bg-red-50',
+    'dominant': 'text-[#18181b] bg-[#f4f4f5]',
+    'leading': 'text-[#18181b] bg-[#f4f4f5]',
+    'growing': 'text-[#18181b] bg-[#f4f4f5]',
+    'consolidating': 'text-[#18181b] bg-[#f4f4f5]',
   };
 
   return (
@@ -136,7 +136,7 @@ export function L2ScalingOverview() {
               {l2s.map((l) => (
                 <tr key={l.name} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{l.name}</td>
-                  <td className="py-2.5 px-2 text-primary font-semibold">{l.tvl}</td>
+                  <td className="py-2.5 px-2 text-[#18181b] font-semibold">{l.tvl}</td>
                   <td className="py-2.5 px-2 font-medium">{l.share}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/70">{l.focus}</td>
                   <td className="py-2.5 px-2"><span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${statusColor[l.status]}`}>{l.status.charAt(0).toUpperCase() + l.status.slice(1)}</span></td>
@@ -183,9 +183,9 @@ export function StablecoinRegulatory() {
               {frameworks.map((f) => (
                 <tr key={f.jurisdiction} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{f.jurisdiction}</td>
-                  <td className="py-2.5 px-2 text-primary font-semibold">{f.framework}</td>
+                  <td className="py-2.5 px-2 text-[#18181b] font-semibold">{f.framework}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/70">{f.requirement}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-green-50 text-green-600">{f.effective}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{f.effective}</span></td>
                 </tr>
               ))}
             </tbody>

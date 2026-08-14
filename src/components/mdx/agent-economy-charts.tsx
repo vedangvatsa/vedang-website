@@ -24,10 +24,10 @@ export function AgentMarketGrowth() {
               <div className="w-full h-4 bg-[#f7f6f3] rounded-md overflow-hidden">
                 <div
                   className="h-full rounded-md"
-                  style={{ width: `${(d.value / max) * 100}%`, backgroundColor: i === data.length - 1 ? 'hsl(210 90% 40%)' : '#37352f', opacity: i === data.length - 1 ? 0.8 : 0.3 + (0.15 * (data.length - i)) }}
+                  style={{ width: `${(d.value / max) * 100}%`, backgroundColor: i === data.length - 1 ? '#18181b' : '#37352f', opacity: i === data.length - 1 ? 0.8 : 0.3 + (0.15 * (data.length - i)) }}
                 />
               </div>
-              <span className={`text-xs font-bold text-right ${i === data.length - 1 ? 'text-primary' : 'text-[#37352f]'}`}>{d.label}</span>
+              <span className={`text-xs font-bold text-right ${i === data.length - 1 ? 'text-[#18181b]' : 'text-[#37352f]'}`}>{d.label}</span>
             </div>
           ))}
         </div>
@@ -50,7 +50,7 @@ export function EnterpriseAdoption() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           <div className="rounded-[3px] border border-[#e3e3e0] p-4">
-            <div className="text-2xl font-bold text-primary">79%</div>
+            <div className="text-2xl font-bold text-[#18181b]">79%</div>
             <div className="text-xs text-[#37352f] font-medium mt-1">Enterprises adopting agents</div>
           </div>
           <div className="rounded-[3px] border border-[#e3e3e0] p-4">
@@ -61,8 +61,8 @@ export function EnterpriseAdoption() {
             <div className="text-2xl font-bold text-[#37352f]">88%</div>
             <div className="text-xs text-[#37352f] font-medium mt-1">Executives increasing AI budgets</div>
           </div>
-          <div className="rounded-[3px] border border-primary/30 bg-primary/5 p-4">
-            <div className="text-2xl font-bold text-primary">66%</div>
+          <div className="rounded-[3px] border border-[#e4e4e7] bg-[#f4f4f5] p-4">
+            <div className="text-2xl font-bold text-[#18181b]">66%</div>
             <div className="text-xs text-[#37352f] font-medium mt-1">Report measurable productivity gains</div>
           </div>
         </div>
@@ -105,8 +105,8 @@ export function CoaseDisruption() {
               {old.map((o) => (
                 <tr key={o.function} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{o.function}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-red-50 text-red-600">{o.cost}</span></td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-green-50 text-green-600">{o.agent}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{o.cost}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{o.agent}</span></td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{o.mechanism}</td>
                 </tr>
               ))}

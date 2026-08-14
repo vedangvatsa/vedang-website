@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280" preserveAspectRatio="xMidYMid meet">
+  <style>
+    text { font-family: Inter, system-ui, sans-serif; }
+    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
+    .name { font-size: 13px; fill: #18181b; }
+    .num { font-size: 13px; font-weight: 600; fill: #18181b; }
+    .note { font-size: 12px; fill: #52525b; }
+  </style>
+
+  <text x="16" y="28" class="title">Use is not purchase trust</text>
+
+  <text x="16" y="58" class="name">Use AI agents regularly</text>
+  <text x="360" y="58" text-anchor="end" class="num">54%</text>
+  <rect x="16" y="66" width="368" height="18" fill="#f4f4f5"/>
+  <rect x="16" y="66" width="199" height="18" fill="#18181b"/>
+
+  <text x="16" y="112" class="name">Trust agents to buy for them</text>
+  <text x="360" y="112" text-anchor="end" class="num">24%</text>
+  <rect x="16" y="120" width="368" height="18" fill="#f4f4f5"/>
+  <rect x="16" y="120" width="88" height="18" fill="#18181b"/>
+
+  <text x="16" y="166" class="name">Have completed an AI purchase</text>
+  <text x="360" y="166" text-anchor="end" class="num">13%</text>
+  <rect x="16" y="174" width="368" height="18" fill="#f4f4f5"/>
+  <rect x="16" y="174" width="48" height="18" fill="#18181b"/>
+
+  <text x="16" y="228" class="note">PYMNTS Jan 2026; Forrester Mar 2025; Payments Industry Intel.</text>
+  <text x="16" y="248" class="note">Share of US adults. Surveys are not the same sample.</text>
+  <text x="16" y="268" class="note">veda.ng</text>
+</svg>

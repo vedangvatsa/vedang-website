@@ -21,6 +21,7 @@ const AI_TOPICS = {
   'outlives': ['empathy', 'liminal', 'lawsuits'],
   'agentspeak': ['agenticweb', 'postinterface', 'darkforest'],
   'private': ['trust', 'godprotocol', 'darkforest'],
+  'neocloud': ['aidebt', 'compute', 'agentstack'],
 };
 
 export function RelatedEssays({ currentSlug }: { currentSlug: string }) {

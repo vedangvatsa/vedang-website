@@ -5,13 +5,13 @@ import React from 'react';
 /* ─── Funding by Infrastructure Layer (horizontal bar chart) ─── */
 export function InfraFundingByLayer() {
   const data = [
-    { layer: 'Compute & Inference', value: 4000, label: '$4B+', color: '#2563eb' },
-    { layer: 'Orchestration', value: 709, label: '$709M', color: '#7c3aed' },
-    { layer: 'Vector / RAG', value: 312, label: '$312M', color: '#059669' },
-    { layer: 'Evaluation', value: 256, label: '$256M', color: '#d97706' },
-    { layer: 'Security', value: 182, label: '$182M', color: '#dc2626' },
-    { layer: 'Perception', value: 87, label: '$87M', color: '#0891b2' },
-    { layer: 'Memory & State', value: 36, label: '$36M', color: '#4f46e5' },
+    { layer: 'Compute & Inference', value: 4000, label: '$4B+', color: '#18181b' },
+    { layer: 'Orchestration', value: 709, label: '$709M', color: '#18181b' },
+    { layer: 'Vector / RAG', value: 312, label: '$312M', color: '#18181b' },
+    { layer: 'Evaluation', value: 256, label: '$256M', color: '#18181b' },
+    { layer: 'Security', value: 182, label: '$182M', color: '#18181b' },
+    { layer: 'Perception', value: 87, label: '$87M', color: '#18181b' },
+    { layer: 'Memory & State', value: 36, label: '$36M', color: '#18181b' },
     { layer: 'Sandboxed Execution', value: 32, label: '$32M', color: '#374151' },
   ];
   const max = 4200;
@@ -67,7 +67,7 @@ export function SecurityConsolidation() {
                 <div className="absolute left-[7px] top-[18px] bottom-0 w-px bg-[#e3e3e0]" />
               )}
               {/* Dot */}
-              <div className="w-[15px] h-[15px] rounded-full border-2 border-red-400 bg-red-50 flex-shrink-0 mt-0.5 z-10" />
+              <div className="w-[15px] h-[15px] rounded-full border-2 border-[#18181b] bg-[#f4f4f5] flex-shrink-0 mt-0.5 z-10" />
               <div className="pb-6">
                 <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{e.date}</div>
                 <div className="text-sm font-bold text-[#37352f] mt-0.5">{e.company} → {e.acquirer}</div>
@@ -121,7 +121,7 @@ export function ComputeValuationTable() {
               {companies.map((c) => (
                 <tr key={c.name} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{c.name}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-blue-50 text-blue-700">{c.metric}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{c.metric}</span></td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{c.detail}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/70">{c.notable}</td>
                 </tr>
@@ -202,7 +202,7 @@ export function MarketplaceComposition() {
     { name: 'Other', count: 7, pct: 7 },
   ];
 
-  const colors = ['#059669', '#7c3aed', '#d97706', '#4f46e5', '#0891b2', '#ea580c', '#dc2626', '#be185d', '#6b7280'];
+  const colors = ['#18181b', '#18181b', '#18181b', '#18181b', '#18181b', '#18181b', '#18181b', '#be185d', '#6b7280'];
 
   return (
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
@@ -267,7 +267,7 @@ export function FundingVelocityChart() {
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-bold text-[#37352f]">{d.label}</span>
                   {d.annualized && (
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 font-medium">{d.projectedLabel}</span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#52525b] font-medium">{d.projectedLabel}</span>
                   )}
                 </div>
               </div>
@@ -276,14 +276,14 @@ export function FundingVelocityChart() {
                 <div className="flex-1 h-5 bg-[#f7f6f3] rounded-md overflow-hidden">
                   <div
                     className="h-full rounded-md"
-                    style={{ width: `${(d.capital / maxCap) * 100}%`, backgroundColor: '#2563eb', opacity: 0.65 }}
+                    style={{ width: `${(d.capital / maxCap) * 100}%`, backgroundColor: '#18181b', opacity: 0.65 }}
                   />
                 </div>
                 {/* Deal count bar (small) */}
                 <div className="w-20 h-5 bg-[#f7f6f3] rounded-md overflow-hidden">
                   <div
                     className="h-full rounded-md"
-                    style={{ width: `${(d.deals / maxDeals) * 100}%`, backgroundColor: '#7c3aed', opacity: 0.5 }}
+                    style={{ width: `${(d.deals / maxDeals) * 100}%`, backgroundColor: '#18181b', opacity: 0.5 }}
                   />
                 </div>
               </div>
@@ -293,11 +293,11 @@ export function FundingVelocityChart() {
 
         <div className="mt-4 flex items-center gap-6">
           <div className="flex items-center gap-1.5">
-            <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#2563eb', opacity: 0.65 }} />
+            <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#18181b', opacity: 0.65 }} />
             <span className="text-[10px] text-muted-foreground">Capital raised</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#7c3aed', opacity: 0.5 }} />
+            <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: '#18181b', opacity: 0.5 }} />
             <span className="text-[10px] text-muted-foreground">Deal count</span>
           </div>
         </div>
@@ -313,8 +313,8 @@ export function FundingVelocityChart() {
 /* ─── Capital Concentration (top deals vs rest) ─── */
 export function CapitalConcentrationChart() {
   const segments = [
-    { label: 'Top 3 deals', pct: 44, color: '#dc2626' },
-    { label: 'Deals 4-10', pct: 34, color: '#f97316' },
+    { label: 'Top 3 deals', pct: 44, color: '#18181b' },
+    { label: 'Deals 4-10', pct: 34, color: '#18181b' },
     { label: 'Bottom 50%', pct: 11.5, color: '#d1d5db' },
     { label: 'Remaining', pct: 10.5, color: '#e5e7eb' },
   ];

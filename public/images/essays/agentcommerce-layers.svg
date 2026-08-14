@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" preserveAspectRatio="xMidYMid meet">
+  <style>
+    text { font-family: Inter, system-ui, sans-serif; }
+    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
+    .name { font-size: 15px; font-weight: 600; fill: #18181b; }
+    .row { font-size: 13px; fill: #18181b; }
+    .dim { font-size: 12px; fill: #52525b; }
+    .note { font-size: 12px; fill: #52525b; }
+  </style>
+
+  <text x="16" y="28" class="title">Five layers, not one product</text>
+
+  <rect x="16" y="44" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="70" class="name">1. AI platforms</text>
+  <text x="28" y="92" class="row">ChatGPT, Gemini, Claude, Copilot</text>
+
+  <rect x="16" y="116" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="142" class="name">2. Commerce protocols</text>
+  <text x="28" y="164" class="row">MCP, A2A, AP2, ACP, x402, MPP</text>
+
+  <rect x="16" y="188" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="214" class="name">3. Payment rails</text>
+  <text x="28" y="236" class="row">Visa, Mastercard, PayPal; USDC, Tempo</text>
+
+  <rect x="16" y="260" width="368" height="72" fill="#ffffff"/>
+  <text x="28" y="286" class="name">4. Retail platforms</text>
+  <text x="28" y="308" class="row">Shopify, Walmart, Target, Commercetools</text>
+
+  <rect x="16" y="332" width="368" height="72" fill="#f4f4f5"/>
+  <text x="28" y="358" class="name">5. Agent startups</text>
+  <text x="28" y="380" class="row">Sierra, Skyfire, Wildcard, Cloudflare</text>
+
+  <rect x="16" y="416" width="368" height="40" fill="#ffffff" stroke="#18181b" stroke-width="1"/>
+  <text x="28" y="442" class="dim">Each layer needs the ones above and below it.</text>
+
+  <text x="16" y="480" class="note">veda.ng</text>
+</svg>

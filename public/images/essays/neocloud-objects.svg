@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" preserveAspectRatio="xMidYMid meet">
+  <style>
+    text { font-family: Inter, system-ui, sans-serif; }
+    .title { font-size: 16px; font-weight: 600; fill: #18181b; }
+    .name { font-size: 15px; font-weight: 600; fill: #18181b; }
+    .row { font-size: 13px; fill: #18181b; }
+    .dim { font-size: 13px; fill: #52525b; }
+    .note { font-size: 12px; fill: #52525b; }
+  </style>
+
+  <text x="16" y="28" class="title">Three objects, one word</text>
+
+  <rect x="16" y="44" width="368" height="88" fill="#f4f4f5"/>
+  <text x="28" y="70" class="name">1. The rack</text>
+  <text x="28" y="92" class="row">NVIDIA GPUs, InfiniBand, a hall</text>
+  <text x="28" y="112" class="dim">Customers often name the SKU in the contract</text>
+
+  <rect x="16" y="132" width="368" height="88" fill="#ffffff"/>
+  <text x="28" y="158" class="name">2. The take-or-pay</text>
+  <text x="28" y="180" class="row">4 to 5 year committed GPU hours</text>
+  <text x="28" y="200" class="dim">Pay even if the cluster sits idle</text>
+
+  <rect x="16" y="220" width="368" height="88" fill="#f4f4f5"/>
+  <text x="28" y="246" class="name">3. The loan against both</text>
+  <text x="28" y="268" class="row">Delayed-draw term loan, SPV</text>
+  <text x="28" y="288" class="dim">Rated on the chips and the tenant</text>
+
+  <rect x="16" y="320" width="368" height="88" fill="#ffffff" stroke="#18181b" stroke-width="1"/>
+  <text x="28" y="346" class="name">Not in the stack</text>
+  <text x="28" y="368" class="row">S3, IAM, a thousand other SKUs</text>
+  <text x="28" y="388" class="dim">That is AWS. This is a GPU landlord.</text>
+
+  <text x="16" y="440" class="note">Sources: CoreWeave S-1; DDTL 4.0 8-K; SemiAnalysis.</text>
+  <text x="16" y="458" class="note">veda.ng</text>
+</svg>

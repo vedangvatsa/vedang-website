@@ -111,7 +111,7 @@ export function StateOfAiTimeline() {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200 flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#18181b] " />
             Publication Volume &amp; Milestone Timeline (2013-2026)
           </h4>
           <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
@@ -129,8 +129,8 @@ export function StateOfAiTimeline() {
             <svg viewBox={`0 0 ${width} ${height}`} width={width} height={height} className="w-full h-auto overflow-visible select-none">
               <defs>
                 <linearGradient id="areaGradAI" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="hsl(217, 91%, 60%)" stopOpacity="0.3" />
-                  <stop offset="100%" stopColor="hsl(217, 91%, 60%)" stopOpacity="0.0" />
+                  <stop offset="0%" stopColor="#18181b" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="#18181b" stopOpacity="0.0" />
                 </linearGradient>
               </defs>
               {Array.from({ length: 4 }).map((_, i) => {
@@ -138,8 +138,8 @@ export function StateOfAiTimeline() {
                 return <line key={`grid-${i}`} x1={padding} y1={yVal} x2={width - padding} y2={yVal} stroke="currentColor" strokeOpacity="0.08" strokeDasharray="4 4" />;
               })}
               <path d={areaD} fill="url(#areaGradAI)" />
-              <path d={solidPathD} fill="none" stroke="hsl(217, 91%, 60%)" strokeWidth="2.5" strokeLinejoin="round" />
-              <path d={dashedPathD} fill="none" stroke="hsl(217, 91%, 60%)" strokeWidth="2.5" strokeDasharray="4 4" strokeLinejoin="round" />
+              <path d={solidPathD} fill="none" stroke="#18181b" strokeWidth="2.5" strokeLinejoin="round" />
+              <path d={dashedPathD} fill="none" stroke="#18181b" strokeWidth="2.5" strokeDasharray="4 4" strokeLinejoin="round" />
               {points.map((p, i) => {
                 const isEstimate = p.year === '2026';
                 return (
@@ -148,8 +148,8 @@ export function StateOfAiTimeline() {
                       cx={p.x} 
                       cy={p.y} 
                       r={i === selectedIndex ? 7 : 4.5} 
-                      fill={i === selectedIndex ? (isEstimate ? 'hsl(var(--card))' : 'hsl(217, 91%, 60%)') : 'hsl(var(--card))'} 
-                      stroke="hsl(217, 91%, 60%)" 
+                      fill={i === selectedIndex ? (isEstimate ? 'hsl(var(--card))' : '#18181b') : 'hsl(var(--card))'} 
+                      stroke="#18181b" 
                       strokeWidth={i === selectedIndex ? 2.5 : 1.5}
                       strokeDasharray={isEstimate ? "3 1.5" : undefined}
                       className="transition-all duration-200" 
@@ -171,7 +171,7 @@ export function StateOfAiTimeline() {
               })}
               {(() => {
                 const sp = points[selectedIndex];
-                return <line x1={sp.x} y1={sp.y + 8} x2={sp.x} y2={height - padding} stroke="hsl(217, 91%, 60%)" strokeWidth="1" strokeDasharray="3 3" strokeOpacity="0.5" />;
+                return <line x1={sp.x} y1={sp.y + 8} x2={sp.x} y2={height - padding} stroke="#18181b" strokeWidth="1" strokeDasharray="3 3" strokeOpacity="0.5" />;
               })()}
             </svg>
           </div>
@@ -180,7 +180,7 @@ export function StateOfAiTimeline() {
           <div className="bg-muted/30 rounded-lg p-4 border border-border/50 space-y-2">
             <div className="text-3xl font-black tabular-nums text-foreground">{selected.docs.toLocaleString()}</div>
             <div className="text-xs text-muted-foreground">Papers Published{selected.year === '2026' ? ' (full-year estimate)' : ''}</div>
-            <div className="text-xs font-mono font-bold text-blue-500">{selected.growth !== '--' && selected.growth !== 'Partial' ? `YoY: ${selected.growth}` : selected.growth === 'Partial' ? 'Partial Year' : 'Baseline Year'}</div>
+            <div className="text-xs font-mono font-bold text-[#18181b]">{selected.growth !== '--' && selected.growth !== 'Partial' ? `YoY: ${selected.growth}` : selected.growth === 'Partial' ? 'Partial Year' : 'Baseline Year'}</div>
           </div>
           <div className="bg-muted/30 rounded-lg p-4 border border-border/50">
             <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1">Milestone</p>
@@ -213,7 +213,7 @@ export function StateOfAiNgramAnalyzer() {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div>
           <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200 flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-indigo-500" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#18181b]" />
             Linguistic N-Gram Corpus Frequency Analyzer
           </h4>
           <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
@@ -238,7 +238,7 @@ export function StateOfAiNgramAnalyzer() {
               </div>
               <div className="flex-1 relative">
                 <div className="h-7 w-full rounded-full bg-secondary overflow-hidden">
-                  <div className="h-full rounded-full bg-primary/65 transition-all duration-700 ease-out" style={{ width: `${(item.count / maxCount) * 100}%` }} />
+                  <div className="h-full rounded-full bg-[#18181b]/65 transition-all duration-700 ease-out" style={{ width: `${(item.count / maxCount) * 100}%` }} />
                 </div>
               </div>
               <div className="w-20 text-right text-xs font-bold tabular-nums text-foreground">{item.count.toLocaleString()}</div>
@@ -266,7 +266,7 @@ export function StateOfAiMomentum() {
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-5">
       <div>
         <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200 flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#18181b] " />
           Fastest-Rising Keywords (2025-2026 vs 2022-2023)
         </h4>
         <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
@@ -284,11 +284,11 @@ export function StateOfAiMomentum() {
                 <div className="flex-1 relative flex items-center">
                   <div className="h-8 w-full rounded-full bg-secondary overflow-hidden relative flex items-center">
                     <div 
-                      className="h-full rounded-full bg-primary/65 transition-all duration-700 ease-out flex items-center justify-end pr-2" 
+                      className="h-full rounded-full bg-[#18181b]/65 transition-all duration-700 ease-out flex items-center justify-end pr-2" 
                       style={{ width: `${pct}%` }}
                     >
                       {!isTooNarrow && (
-                        <span className="text-[10px] font-black text-primary-foreground tabular-nums">{item.growth}x</span>
+                        <span className="text-[10px] font-black text-[#18181b]-foreground tabular-nums">{item.growth}x</span>
                       )}
                     </div>
                     {isTooNarrow && (
@@ -344,7 +344,7 @@ export function StateOfAiGeography() {
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-5">
       <div>
         <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200 flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-orange-500" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#18181b]" />
           Global Research Output by Country (Top 10)
         </h4>
         <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
@@ -360,7 +360,7 @@ export function StateOfAiGeography() {
               <div className="h-6 w-full rounded-full bg-secondary overflow-hidden">
                 <div 
                   className="h-full rounded-full transition-all duration-700 ease-out opacity-65" 
-                  style={{ width: `${(item.count / maxCount) * 100}%`, backgroundColor: i === 0 ? 'hsl(12, 90%, 60%)' : i === 1 ? 'hsl(217, 91%, 60%)' : 'hsl(var(--primary))' }} 
+                  style={{ width: `${(item.count / maxCount) * 100}%`, backgroundColor: i === 0 ? '#18181b' : i === 1 ? '#18181b' : 'hsl(var(--primary))' }} 
                 />
               </div>
             </div>
@@ -403,7 +403,7 @@ export function StateOfAiCitations() {
             Concentration of academic impact and citations
           </span>
         </div>
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-bold text-primary">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/50 border border-border text-xs font-mono font-bold text-[#18181b]">
           {percentile}th Percentile
         </div>
       </div>
@@ -441,7 +441,7 @@ export function StateOfAiCitations() {
           ) : (
             <div className="space-y-1">
               <p className="text-[9px] uppercase font-mono tracking-widest text-muted-foreground font-bold">Threshold Cutoff</p>
-              <p className="text-2xl font-black text-primary font-mono">
+              <p className="text-2xl font-black text-[#18181b] font-mono">
                 {getPercentileCitations(percentile)} citations
               </p>
               <p className="text-[11px] text-muted-foreground leading-relaxed max-w-xs mx-auto">

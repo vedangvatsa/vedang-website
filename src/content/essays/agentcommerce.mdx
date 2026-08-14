@@ -9,7 +9,7 @@ keywords: ['agentic commerce', 'AI agents', 'e-commerce', 'x402', 'UCP', 'ACP', 
 
 Agentic commerce, where AI agents autonomously research, compare, and purchase products on behalf of humans, has moved from concept to live infrastructure in under 18 months. Every major payment network (Visa, Mastercard, PayPal) and AI platform (OpenAI, Google, Anthropic) has shipped agent commerce products. Six competing protocols are in production. Market projections range from $218B (Mordor Intelligence) to $3-5T (McKinsey) by 2030-2031. The binding constraint is trust: 54% of US adults use AI agents, but only 24% trust them to make purchases.
 
-<Figure src="/images/essays/agentcommerce.svg?v=7" alt="The Retail Evolution Infographic" wide />
+<Figure src="/images/essays/agentcommerce.svg?v=8" alt="Human-to-merchant checkout versus buyer-agent-to-seller-API" width={800} height={400} wide />
 
 
 ## What is agentic commerce?
@@ -20,11 +20,7 @@ In traditional e-commerce, you browse, compare, and click. In agentic commerce, 
 
 You accept a job in a new city and need to relocate your family. Today, that means weeks of juggling real estate listings, moving company quotes, utility transfers, school research, and furniture shopping across dozens of websites. In an agentic world, you describe your budget, commute preferences, and kids' school requirements. The agent scans rental listings, cross-references commute times, identifies neighborhoods with the right schools, gets moving quotes, negotiates rates, schedules utility transfers, and coordinates furniture deliveries to arrive the day you move in. Weeks of browser tabs and phone calls become a few days of conversation.
 
-The shift is structural. Each prior wave of commerce technology (web storefronts in the 2000s, mobile commerce in the 2010s, social commerce in the 2020s) added a new channel. Agentic commerce removes the human from the transaction loop. The agent is a new buyer.
-
-<CommerceEvolutionTimeline />
-
-The interaction is machine-to-machine, governed by rules of engagement written into standardized commerce protocols.
+The shift is structural. Each prior wave of commerce technology (web storefronts in the 2000s, mobile commerce in the 2010s, social commerce in the 2020s) added a new channel. Agentic commerce removes the human from the transaction loop. The agent is a new buyer. The interaction is machine-to-machine, governed by rules written into commerce protocols.
 
 ## The convergence of 2026
 
@@ -96,7 +92,14 @@ Traditional payment rails (Visa, Mastercard, PayPal) tokenize existing card netw
 
 The pace of protocol development is what separates this from prior hype cycles. Six interoperability standards are driving real adoption:
 
-<ProtocolComparisonTable />
+| Protocol | Creator | Type | Payment | Status |
+| --- | --- | --- | --- | --- |
+| MCP | Anthropic | Tool integration | None (context layer) | Adopted by major AI platforms |
+| A2A | Google | Agent coordination | None (negotiation layer) | 150+ organizations |
+| AP2 | Google | Payment authorization | Cryptographic mandates | Production |
+| ACP | OpenAI + Stripe | In-chat checkout | Stripe card processing | Live in ChatGPT |
+| x402 | Coinbase | HTTP-native payments | Stablecoins (USDC) | V2 live, multi-chain |
+| MPP | Stripe + Paradigm | Multi-rail payments | Stablecoins, cards, Lightning | Launched Mar 2026 |
 
 **Model Context Protocol (MCP)**, created by Anthropic, standardizes how AI agents connect to external tools and data sources. Unlike one-off API integrations, MCP provides persistent, structured communication. An agent retains memory, reasoning, and objectives across environments. For commerce, this means a shopping agent can maintain context about your preferences, price sensitivity, and past purchases across every merchant it interacts with, rather than starting from scratch each time.
 
@@ -117,15 +120,13 @@ In the x402 model, payment happens at the HTTP layer. An agent requests a resour
 
 ## How a transaction works
 
-<TransactionFlowDiagram />
-
 A typical agentic purchase has six steps. You state what you want ("order two bags of Colombian coffee beans, same brand as last time"). The agent checks your purchase history, brand preferences, and budget. It searches multiple stores simultaneously and compares options by weighing price, shipping speed, reviews, and your past preferences.
 
 When it finds the best match, it completes checkout through tokenized payment using Visa, Mastercard, or PayPal agent protocols. Your card details are never exposed to the agent. After purchase, it tracks shipping, handles returns if needed, and updates its model of your preferences for next time.
 
 McKinsey identified three interaction models ([mckinsey.com](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/agentcommerce)).
 
-<InteractionModelsVisual />
+<Figure src="/images/essays/agentcommerce-models.svg" alt="Three McKinsey interaction models: agent to site, agent to agent, and brokered" source="McKinsey" sourceUrl="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/agentcommerce" width={400} height={420} />
 
 In the **agent-to-site** model, your agent talks directly to a merchant's website or API. The merchant may not even know the buyer is an AI. In the **agent-to-agent** model, your shopping agent negotiates with a retailer's commerce agent, both communicating at machine speed through structured protocols. In the **brokered** model, an intermediary agent sits between you and multiple merchants, querying dozens of stores simultaneously.
 
@@ -136,7 +137,7 @@ Each purchase teaches the agent something. After three coffee orders, it knows y
 
 Agentic commerce runs on five layers, each depending on the ones above and below it.
 
-<EcosystemDiagram />
+<Figure src="/images/essays/agentcommerce-layers.svg" alt="Five layers of agentic commerce: AI platforms, protocols, payment rails, retail platforms, agent startups" width={400} height={500} />
 
 <ResearchPaper
   title="The Agent Infrastructure Stack"
@@ -191,7 +192,14 @@ With only 7 companies primarily classified as "User Interfaces" (like ChatGPT an
 <Stat value="13%" label="Have completed an AI purchase" source="Payments Industry Intel" sourceUrl="https://paymentsindustryintelligence.com" />
 </StatRow>
 
-<MarketProjectionChart />
+These figures are not the same object. Mordor counts a retail-AI market. Morgan Stanley and Bain count US agent-driven e-commerce. McKinsey counts global transaction volume that an agent might touch. Do not stack them.
+
+| Firm | Figure | What it counts |
+| --- | --- | --- |
+| [Mordor Intelligence](https://mordorintelligence.com) | $218B | Retail AI market by 2031 |
+| Morgan Stanley (2025) | $190-385B | US e-commerce via agents, 2030 |
+| Bain & Company (2025) | $300-500B | US agentic commerce, 2030 |
+| [McKinsey](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/agentcommerce) | $3-5T | Global transaction volume, 2030 |
 
 36% of consumers say they are open to AI making purchases for them ([SWAP Commerce](https://swap-commerce.com)), and 84% consider one-click checkout important ([WPFactory](https://wpfactory.com)). McKinsey projects agent-intermediated transaction volume could reach $3-5 trillion globally by 2030. During Cyber Week 2025, one in five orders involved an AI agent. Morgan Stanley estimates US e-commerce spending through agentic shoppers could reach $190-385 billion by 2030, representing 10-20% of total US e-commerce. Bain projects the US agentic commerce market at $300-500 billion by the same year.
 
@@ -211,7 +219,7 @@ Brand loyalty weakens. If your agent switches you to a cheaper toothpaste that w
 
 <Figure src="/images/essays/agentcommerce/meme-marketer.webp" alt="Every e-commerce marketer in 2026" caption="The marketer's new reality" />
 
-<ValueShiftGrid />
+<Figure src="/images/essays/agentcommerce-value.svg" alt="What loses value and what gains value when the buyer is an algorithm" width={400} height={440} />
 
 Product pages built for human eyes matter less than structured data built for agent consumption: schema.org markup, real-time inventory feeds, machine-readable specs. Traditional SEO gives way to what Commercetools calls "Answer Engine Optimization" and "LLM Optimization" ([commercetools.com](https://commercetools.com)). Display ads and retargeting lose relevance when the buyer is an algorithm. The traditional idea of visiting Amazon for shopping or Expedia for travel gives way to a single concierge that handles shopping and travel when your intent first surfaces.
 
@@ -264,9 +272,9 @@ Most agent interactions are still free, and providers have not developed clear r
 
 There is a 30-point gap between agent usage and purchase trust: 54% of US adults use AI agents, but only 24% trust them to buy things. Top consumer concerns: payment security (32%), privacy (26%), agent errors (18%), loss of control (17%). According to a July 2025 [Kearney US Consumer Study](https://www.kearney.com/documents/d/asset-library-291362522/agentcommerce-retail-disruption-pdf), roughly 30% of the market consists of "privacy-conscious skeptics" who demand absolute data control and assurances that agent mistakes will be financially corrected before they will adopt agentic shopping.
 
-<TrustGapChart />
+<Figure src="/images/essays/agentcommerce-trust.svg" alt="54 percent of US adults use AI agents, 24 percent trust them to buy, 13 percent have completed an AI purchase" width={400} height={280} />
 
-<ConsumerConcernsChart />
+<Figure src="/images/essays/agentcommerce-concerns.svg" alt="Top consumer concerns: payment security 32 percent, privacy 26 percent, agent errors 18 percent, loss of control 17 percent" source="Kearney US Consumer Study, July 2025" sourceUrl="https://www.kearney.com/documents/d/asset-library-291362522/agentcommerce-retail-disruption-pdf" width={400} height={300} />
 
 <Columns>
 <Column>
@@ -304,7 +312,17 @@ Trust is contextual. What feels intuitive in one market can be unacceptable in a
 
 The core question: who controls the agent? That entity controls what gets bought.
 
-<CompetitiveField />
+**Google.** Open standard, owned distribution. UCP is open. Search and Gemini are not. Same playbook as Android.
+
+**OpenAI.** Discovery and intent. About 800 million weekly active users. Moving from owning checkout to owning where the ask starts.
+
+**Coinbase.** Machine-to-machine pay. If agents settle in USDC over x402, Coinbase takes a cut no matter which model wins the chat.
+
+**Shopify.** Infrastructure on every AI surface, owned by none of them. Checkout Kit, Catalog, Universal Cart.
+
+**Stripe and Paradigm.** One protocol across stablecoins, cards, and Lightning. Backed by Anthropic, OpenAI, Mastercard, and Shopify.
+
+**Amazon.** Purchase history, reviews, and logistics behind Rufus and Alexa+. Agents can still read third-party reviews. That is the hole.
 
 
 <KeyTakeaway>

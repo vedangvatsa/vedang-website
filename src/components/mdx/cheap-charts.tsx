@@ -30,9 +30,9 @@ export function PerceptionArcTimeline() {
             </thead>
             <tbody>
               {countries.map((c, i) => (
-                <tr key={c.name} className={`border-b border-[#e3e3e0]/60 ${i === countries.length - 1 ? 'bg-primary/5' : ''}`}>
-                  <td className={`py-2.5 px-2 font-bold ${i === countries.length - 1 ? 'text-primary' : 'text-[#37352f]'}`}>{c.name}</td>
-                  <td className="py-2.5 px-2 text-primary font-semibold">{c.onset}</td>
+                <tr key={c.name} className={`border-b border-[#e3e3e0]/60 ${i === countries.length - 1 ? 'bg-[#f4f4f5]' : ''}`}>
+                  <td className={`py-2.5 px-2 font-bold ${i === countries.length - 1 ? 'text-[#18181b]' : 'text-[#37352f]'}`}>{c.name}</td>
+                  <td className="py-2.5 px-2 text-[#18181b] font-semibold">{c.onset}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{c.gdpAtOnset}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{c.premium}</td>
                   <td className="py-2.5 px-2 text-muted-foreground">{c.anchor}</td>
@@ -63,8 +63,8 @@ export function IndiaSectorBifurcation() {
   ];
 
   const statusColor: Record<string, string> = {
-    'Completed': 'text-green-600 bg-green-50',
-    'In progress': 'text-blue-600 bg-blue-50',
+    'Completed': 'text-[#18181b] bg-[#f4f4f5]',
+    'In progress': 'text-[#18181b] bg-[#f4f4f5]',
     'Early stage': 'text-yellow-700 bg-yellow-50',
   };
 
@@ -88,7 +88,7 @@ export function IndiaSectorBifurcation() {
               {[...completed, ...inProgress].map((s) => (
                 <tr key={s.sector} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{s.sector}</td>
-                  <td className="py-2.5 px-2 text-primary font-semibold">{s.exports}</td>
+                  <td className="py-2.5 px-2 text-[#18181b] font-semibold">{s.exports}</td>
                   <td className="py-2.5 px-2">
                     <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${statusColor[s.status]}`}>{s.status}</span>
                   </td>
@@ -132,8 +132,8 @@ export function IncomeThresholdChart() {
 
         {/* Zone legend */}
         <div className="mb-4 flex flex-wrap gap-3 text-[10px] font-medium">
-          <span className="flex items-center gap-1.5"><span className="inline-block w-3 h-3 rounded-sm bg-amber-100 border border-amber-300" /> Onset zone ($5-10K)</span>
-          <span className="flex items-center gap-1.5"><span className="inline-block w-3 h-3 rounded-sm bg-green-100 border border-green-300" /> Premium zone ($15-25K)</span>
+          <span className="flex items-center gap-1.5"><span className="inline-block w-3 h-3 rounded-sm bg-[#f4f4f5] border border-[#d4d4d8]" /> Onset zone ($5-10K)</span>
+          <span className="flex items-center gap-1.5"><span className="inline-block w-3 h-3 rounded-sm bg-[#f4f4f5] border border-[#d4d4d8]" /> Premium zone ($15-25K)</span>
         </div>
 
         <div className="space-y-4">
@@ -144,24 +144,24 @@ export function IncomeThresholdChart() {
             return (
               <div key={c.name}>
                 <div className="flex justify-between items-baseline mb-1">
-                  <span className={`text-xs font-bold ${isIndia ? 'text-primary' : 'text-[#37352f]'}`}>
+                  <span className={`text-xs font-bold ${isIndia ? 'text-[#18181b]' : 'text-[#37352f]'}`}>
                     {c.name} ({c.year})
                   </span>
-                  <span className={`text-xs font-bold ${isIndia ? 'text-primary' : 'text-[#37352f]'}`}>
+                  <span className={`text-xs font-bold ${isIndia ? 'text-[#18181b]' : 'text-[#37352f]'}`}>
                     ${(c.gdp / 1000).toFixed(1)}K
                   </span>
                 </div>
                 <div className="w-full h-5 bg-[#f7f6f3] rounded-md overflow-hidden relative">
                   {/* Zone overlays */}
-                  <div className="absolute h-full rounded-sm bg-amber-100/50" style={{ left: `${onsetStart}%`, width: `${onsetEnd - onsetStart}%` }} />
-                  <div className="absolute h-full rounded-sm bg-green-100/50" style={{ left: `${premiumStart}%`, width: `${premiumEnd - premiumStart}%` }} />
+                  <div className="absolute h-full rounded-sm bg-[#f4f4f5]/50" style={{ left: `${onsetStart}%`, width: `${onsetEnd - onsetStart}%` }} />
+                  <div className="absolute h-full rounded-sm bg-[#f4f4f5]" style={{ left: `${premiumStart}%`, width: `${premiumEnd - premiumStart}%` }} />
 
                   {/* Actual bar */}
                   <div
                     className="h-full rounded-md relative z-10"
                     style={{
                       width: `${barWidth}%`,
-                      backgroundColor: isIndia ? 'hsl(210 90% 40%)' : '#37352f',
+                      backgroundColor: isIndia ? '#18181b' : '#37352f',
                       opacity: isIndia ? 0.8 : 0.3 + (0.15 * (countries.length - i)),
                     }}
                   />
@@ -169,10 +169,10 @@ export function IncomeThresholdChart() {
                   {/* India's 2030 projected marker */}
                   {isIndia && (
                     <div
-                      className="absolute top-0 h-full border-l-2 border-dashed border-primary/50 z-20"
+                      className="absolute top-0 h-full border-l-2 border-dashed border-[#18181b]/50 z-20"
                       style={{ left: `${indiaProjected}%` }}
                     >
-                      <span className="absolute -top-4 left-1 text-[9px] font-medium text-primary whitespace-nowrap">~2030</span>
+                      <span className="absolute -top-4 left-1 text-[9px] font-medium text-[#18181b] whitespace-nowrap">~2030</span>
                     </div>
                   )}
                 </div>
@@ -220,7 +220,7 @@ export function COOEffectSize() {
                 <tr key={s.study} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{s.study}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{s.finding}</td>
-                  <td className="py-2.5 px-2 text-primary font-semibold">{s.effect}</td>
+                  <td className="py-2.5 px-2 text-[#18181b] font-semibold">{s.effect}</td>
                 </tr>
               ))}
             </tbody>
