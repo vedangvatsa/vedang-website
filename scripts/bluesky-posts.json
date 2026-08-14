@@ -2573,9 +2573,11 @@
     "id": "viral-rewrite-114",
     "scheduleDate": "2026-08-08",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "No one is as replaceable as some bosses think. A good employee carries systems, relationships, and trust. Replacing that costs more than a salary. The best companies invest in keeping people, not just finding them.",
-    "image": "scripts/post-images/post_134_1.jpg"
+    "image": "scripts/post-images/post_134_1.jpg",
+    "postedAt": "2026-08-14T12:25:54.255Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mt25pze3z62p"
   },
   {
     "id": "viral-rewrite-115",

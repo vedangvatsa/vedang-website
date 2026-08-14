@@ -2251,9 +2251,10 @@
     "id": "viral-rewrite-131",
     "scheduleDate": "2026-08-14",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "A review should never be a surprise. If it is, your manager has failed to communicate. The best feedback is a conversation, not a verdict. Find teams that make it normal at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_24_1.jpg"
+    "image": "scripts/post-images/post_24_1.jpg",
+    "error": "Media failed: scripts/post-images/post_24_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-132",

@@ -2375,9 +2375,11 @@
     "id": "viral-rewrite-127",
     "scheduleDate": "2026-08-13",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The best leaders are perpetual students. They don't graduate from learning because the people they lead keep changing. Find leaders who stay curious at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_44_1.jpg"
+    "image": "scripts/post-images/post_44_1.jpg",
+    "postedAt": "2026-08-14T12:25:59.601Z",
+    "castHash": "0x0e5c3beb6128a54b7604199952deac103b409366"
   },
   {
     "id": "viral-rewrite-128",
