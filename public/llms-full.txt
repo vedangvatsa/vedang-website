@@ -159,19 +159,7 @@ The 13 February 2026 annex publishes estimates and releases for IndiaAI as a who
 
 The outlay split is in the annex and in [MeitY's earlier Lok Sabha disclosure](https://www.medianama.com/2024/12/223-indiaai-mission-expenditure-budget/).
 
-| Pillar | Outlay (₹ Cr) | Share |
-| --- | ---: | ---: |
-| Compute Capacity | 4,563.36 | 44.0% |
-| Foundation Models | 1,971.37 | 19.0% |
-| Startup Financing | 1,942.50 | 18.7% |
-| FutureSkills | 882.94 | 8.5% |
-| Applications | 689.05 | 6.6% |
-| Datasets (AIKosh) | 199.55 | 1.9% |
-| Overheads | 102.69 | 1.0% |
-| Safe & Trusted AI | 20.46 | 0.2% |
-| **Total** | **10,371.92** | **100%** |
-
-<p class="table-source">Source: <a href="https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf">Rajya Sabha Unstarred Q.1668</a>. Figures sum to ₹10,371.92 Cr.</p>
+![IndiaAI Cabinet outlay by pillar. Compute Capacity 4,563.36 crore (44%). Safe and Trusted AI 20.46 crore (0.2%).](/images/essays/indiaai-pillars.svg?v=1)
 
 Safe & Trusted AI gets about 1/5 of the overhead line. The sub-project breakdown inside Compute Capacity's ₹4,563.36 crore has never been published, as [MediaNama noted](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/) in February 2025. Compute is the largest pillar and the least transparent inside the pillar.
 
@@ -181,24 +169,15 @@ Start with the design as written. IndiaAI was never a single cheque. It was a mu
 
 The estimates were cut every year. Then the releases ran further behind the cuts.
 
-In the table below, BE is the Budget Estimate, what MeitY asked for at the start of the year. RE is the Revised Estimate, the figure after the mid-year cut. Received is cash that reached IndiaAI.
+BE is the Budget Estimate, what MeitY asked for at the start of the year. RE is the Revised Estimate, the figure after the mid-year cut. Received is cash that reached IndiaAI.
 
-| Year | BE | RE | Received | of RE | of BE |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| 2024-25 | 551.75 | 173.00 | 21.79 | 12.6% | 3.9% |
-| 2025-26 | 2,000.00 | 800.00 | 379.15 | 47.4% | 19.0% |
-| 2026-27 | 1,000.00 | n/a | 0.00 | 0% | 0% |
-| **Total** | n/a | n/a | **400.94** | n/a | **3.9%** |
-
-<p class="table-source">Source: <a href="https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf">Rajya Sabha Unstarred Q.1668</a> (cash to 9 Feb 2026). 2025-26 BE from the <a href="https://www.indiabudget.gov.in/doc/Budget_at_Glance/budget_at_a_glance.pdf">Union Budget</a>. Rupee columns are ₹ crore. Total 3.9% is of the ₹10,371.92 Cr outlay, not of BE.</p>
+![IndiaAI cash: year 1 asked 551.75 crore, received 21.79 crore. Year 2 asked 2,000 crore, received 379.15 crore.](/images/essays/indiaai-cascade.svg?v=4)
 
 [MediaNama](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/) covered the FY 2024-25 cut in February 2025 and [the same cash figures](https://www.medianama.com/2026/04/223-indiaai-mission-400-crore-over-rs-10000-crore-5-year-outlay-released/) in April 2026.
 
 Every annual ask was cut. FY 2024-25 was trimmed 69%, from ₹551.75 crore to ₹173 crore. FY 2025-26 was trimmed 60%, from ₹2,000 crore to ₹800 crore. FY 2026-27 asks for ₹1,000 crore, half of the previous year's ask.
 
 Against the original Budget Estimate, FY 2024-25 delivered 3.9% of what MeitY asked for, and FY 2025-26 delivered 19%. The 5-year ceiling was never meant to be released in 1 year. The releases still lagged even the reduced estimates both years.
-
-![Asked versus arrived for IndiaAI. Year 1: asked 551.75 crore, received 21.79 crore. Year 2: asked 2,000 crore, received 379.15 crore.](/images/essays/indiaai-cascade.svg?v=3)
 
 [MediaNama's February 2025 coverage](https://www.medianama.com/2025/02/223-indiaai-mission-allocation-reduced-69-percent-2024-2025-estimates/) listed 3 possible reasons for the FY 2024-25 cut. GPU bids came in cheaper than expected. Rollout was phased. Money may have been moved to other priorities. Those reasons can be true at the same time. Cheaper bids should free capacity, not freeze releases. Phased rollout should produce a published schedule of releases against milestones. Reallocation should leave a paper trail in Budget documents. The public record shows the cuts. It does not fully settle which reason dominated.
 
@@ -266,17 +245,7 @@ A companion piece on this site, [The National AI Compute Scorecard](/compute), p
 
 Parliament also got user counts.
 
-| Group | Slots | Share |
-| --- | ---: | ---: |
-| Researchers | 114 | 37% |
-| Government | 58 | 19% |
-| Startups & MSMEs | 47 | 15% |
-| Early startups | 36 | 12% |
-| Students | 32 | 10% |
-| Early researchers | 10 | 3% |
-| IndiaAI Fellows | 8 | 3% |
-
-<p class="table-source">Source: <a href="https://www.medianama.com/wp-content/uploads/2026/04/annex_270_AU1668_ajohnN.pdf">Rajya Sabha Unstarred Q.1668</a>. Rows may overlap. Listed slots sum to 305.</p>
+![IndiaAI named user slots. Researchers 114, government 58, startups 47, Fellows 8. Listed slots sum to 305.](/images/essays/indiaai-users.svg?v=1)
 
 305 slots across these categories. 33,099 committed GPUs. More than 100 GPUs for every named user slot. The capacity is pooled and shared, so the ratio does not mean each user holds 100 GPUs. The utilisation figure, 7,418 GPUs in use, is the closer measure of demand.
 
