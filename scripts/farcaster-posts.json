@@ -2365,9 +2365,11 @@
     "id": "viral-rewrite-126",
     "scheduleDate": "2026-08-12",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "We talk about remote work as if the benefit is flexibility. The real benefit is hours. Time saved from commuting is time you can spend on anything that matters more. Find teams that value your time at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_43_1.jpg"
+    "image": "scripts/post-images/post_43_1.jpg",
+    "postedAt": "2026-08-14T05:18:10.274Z",
+    "castHash": "0x3a9b0f8a5d88ffe0b5feb9a1e4b6ffe45d6d98ad"
   },
   {
     "id": "viral-rewrite-127",
