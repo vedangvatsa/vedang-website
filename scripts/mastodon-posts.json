@@ -2285,9 +2285,10 @@
     "id": "viral-rewrite-135",
     "scheduleDate": "2026-08-15",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Your history is a set of facts, not a sentence. Every day you get to choose what becomes true next. The future is open, not because it's easy, but because it's unwritten. Find teams that help you write it at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_96_1.jpg"
+    "image": "scripts/post-images/post_96_1.jpg",
+    "error": "Media failed: scripts/post-images/post_96_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-136",

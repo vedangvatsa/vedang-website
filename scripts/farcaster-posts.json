@@ -2385,9 +2385,11 @@
     "id": "viral-rewrite-128",
     "scheduleDate": "2026-08-13",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The two sides of a motivation problem are too much pressure and too little purpose. Both leave people drained. The healthiest work gives you enough challenge without crushing you. Find that balance at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_41_1.jpg"
+    "image": "scripts/post-images/post_41_1.jpg",
+    "postedAt": "2026-08-14T20:06:48.374Z",
+    "castHash": "0xf6a2035f7b8b446407f45a952277cc5bc9f1e715"
   },
   {
     "id": "viral-rewrite-129",
