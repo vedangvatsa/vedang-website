@@ -10,9 +10,9 @@ From 176 papers in 2013 to 20,668 in 2025, there is a **117x increase** in twelv
 
 ## I. Methodology
 
-This analysis draws on a primary corpus of **128,286 academic papers** tagged as blockchain (C2779687700) or cryptocurrency (C180706569) by OpenAlex's machine-learning concept classifier, published between 2013 and mid-2026. Unlike title-only keyword searches that systematically undercount papers, the concept tagger evaluates full abstracts, citation networks, and contextual metadata, capturing papers like "Privacy-Preserving Data Sharing for Healthcare Systems" that use blockchain methods without placing "blockchain" in the title.
+This analysis draws on a primary corpus of **128,286** works tagged as [blockchain (C2779687700)](https://openalex.org/C2779687700) or [cryptocurrency (C180706569)](https://openalex.org/C180706569) by OpenAlex's concept classifier, published between 2013 and mid-2026, pulled **12 June 2026**. OpenAlex is a living index. Re-running later will not match digit-for-digit. Unlike a title keyword search, the tagger uses abstracts, citation networks, and metadata, so a healthcare-privacy paper that never puts "blockchain" in the title can still land in the corpus. It can also over-tag. Concept IDs are a classifier, not a human reading.
 
-The corpus was cross-validated against four independent databases. These are **Crossref** (124,333 papers), **Europe PMC** (61,191), **arXiv** (11,312), and **DBLP** (37,246). The Crossref count closely matches the primary corpus, providing independent confirmation of coverage. Journal articles dominate at **68.9%**, followed by book chapters (13.9%) and preprints (8.2%). Approximately half (**50.2%**) of the concept-tagged corpus is published as open access, making it highly accessible compared to standard academic baselines. A full n-gram frequency analysis (unigrams, bigrams, and trigrams) was executed across all paper abstracts to isolate the specific technical implementations and research domains commanding the field's attention.
+The corpus was cross-checked against four other databases: [Crossref](https://www.crossref.org/) (124,333), [Europe PMC](https://europepmc.org/) (61,191), [arXiv](https://arxiv.org) (11,312), and [DBLP](https://dblp.org/) (37,246). Crossref is within 3% of OpenAlex. The others are smaller by design (life sciences, preprints, computer science proceedings). They are coverage checks, not identical universes. Journal articles are **68.9%**, book chapters 13.9%, preprints 8.2%. Open access is **50.2%** in this tagged corpus, against the **28%** all-fields Crossref snapshot in [Piwowar et al. (2018)](https://doi.org/10.7717/peerj.4375). Same caveat as the AI essay: that 28% is 2018, all fields.
 
 <ResearchPaper
   title="Blockchain Research Trends - A Bibliometric Analysis of 128,286 Papers (2013-2026)"
@@ -80,7 +80,7 @@ The publication volume data reveals three distinct phases in blockchain's academ
 
 **The Smart Contract Era (2017 to 2019).** Growth was fastest at **+163.9%** in 2017 and **+177.6%** in 2018, the highest YoY expansion in the corpus. Ethereum's smart contract platform and the 2017 ICO boom generated massive academic interest. Annual output increased 11x from 955 (2016) to 10,591 (2019) in three years.
 
-**The Institutional Era (2020 to present).** Growth decelerated to sustainable rates as the field matured. The 2024 growth of **+1.8%** represents the lowest annual increase in the corpus. Research pivoted to deployment challenges like scalability (layer 2, zero-knowledge proofs), regulation (3.5x growth), institutional finance (stablecoins, real-world assets, CBDCs), and post-quantum security. Papers published from 2020 onward account for **82.7%** of the corpus. More than four in five blockchain papers were published in the last six years.
+**The Institutional Era (2020 to present).** Growth decelerated as the field matured. 2024's **+1.8%** is the lowest annual increase in the series. Research pivoted to deployment: layer 2, zero-knowledge proofs, regulation, stablecoins, real-world assets, CBDCs, post-quantum. Papers from 2020 through mid-2026 are **82.7%** of the corpus (106,069 / 128,286). The 2026 slice in that share is **8,419** observed works, not the ~18,800 full-year estimate on the chart.
 
 <StatRow>
   <Stat label="117x Growth" value="176 → 20,668 papers" trend="up" />
@@ -104,7 +104,7 @@ DeFi and NFTs followed sharply different research trajectories, and the divergen
 
 The fastest-rising keywords in the corpus are dominated by quantum-resistance research. **"Quantum resistant"** grew **6.6x** (from 37 to 243 papers) and **"post-quantum"** grew **3.9x** (95 to 367 papers) between the 2022 to 2023 and 2025 to 2026 periods. Together they account for **610 papers** in 2025 to 2026. This is a research community preparing for a potential existential threat to existing blockchain systems.
 
-The urgency is real. Most blockchain systems rely on elliptic curve cryptography (ECDSA for Bitcoin and Ethereum) that is theoretically vulnerable to Shor's algorithm on a sufficiently powerful quantum computer. The NIST post-quantum cryptography standardization in 2024 (selecting CRYSTALS-Kyber and CRYSTALS-Dilithium as standard algorithms) has accelerated academic work on quantum-safe blockchain designs.
+The urgency is a research-agenda fact, not a calendar for a cryptographically relevant quantum computer. Most public chains still use elliptic-curve signatures (ECDSA on Bitcoin and Ethereum) that Shor's algorithm would break given a large enough machine. [NIST's first three post-quantum FIPS](https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards) (August 2024) standardized ML-KEM (Kyber), ML-DSA (Dilithium), and SLH-DSA (SPHINCS+). That is the event that moved academic work. It is not a date when ECDSA dies.
 
 The full momentum map across all rising research themes is below.
 
@@ -119,7 +119,7 @@ The full momentum map across all rising research themes is below.
 Four categories structure the fastest-rising terms.
 
 1. **Post-Quantum Security.** "Quantum resistant" (6.6x) and "post-quantum" (3.9x), totaling 610 combined papers preparing blockchain for the quantum threat.
-2. **Scalability Infrastructure.** "Layer 2" (4.2x), "zk rollup" (3.4x), and "cross chain" (2.0x). Active engineering on rollups, state channels, and interoperability bridges.
+2. **Scalability Infrastructure.** "Layer 2" (4.2x), "zk rollup" (3.4x), and "cross chain" (2.0x). zk-rollup's 2025-2026 count is **34** papers. The 3.4x is a small-n ratio. Direction is up. Do not treat 3.4x as a volume story.
 3. **Institutional Adoption.** "Regulatory" (3.5x, 4,529 papers), "real world asset" (5.6x), and "stablecoin" (2.7x). Research focused on institutional finance, not experimental protocols.
 4. **Core DeFi.** "DeFi" (2.6x), "decentralized finance" (2.0x), and "interoperability" (2.2x). Sustained growth as protocols mature and cross-chain infrastructure develops.
 
@@ -157,8 +157,8 @@ The aggregation of 128,286 research papers yields three strategic imperatives fo
   <Stat label="Annual Output (2025)" value="20,668 papers" trend="up" />
 </StatRow>
 
-1. **Quantum-Proof Your Blockchain Strategy. Now.**
-   Post-quantum cryptography is the fastest-rising research theme in the corpus (6.6x growth). The NIST standardization of quantum-resistant algorithms in 2024 has shifted the question from "if" to "when." Organizations running blockchain infrastructure on elliptic curve cryptography face an existential migration challenge. Begin evaluating lattice-based signature schemes and hybrid cryptographic approaches today.
+1. **Quantum-proof the cryptography, on a real timeline.**
+   Post-quantum strings are the fastest-rising theme (6.6x on a still-small base). NIST's 2024 FIPS shifted the research question from "whether" to "which lattice scheme." ECDSA is not dead this year. Organizations that run chains on elliptic curves still have a migration problem with a long fuse. Start the inventory. Do not confuse a keyword spike with a drop-dead date.
 
 2. **Follow the Research, Not the Hype.**
    The DeFi-NFT divergence demonstrates that academic attention tracks demonstrated utility with remarkable precision. DeFi research accelerates (74x growth) because it solves a persistent structural problem. NFT research declines because the speculative use case collapsed. Capital allocation should weight research momentum (terms growing at 2x+) over market narratives. The data shows that regulatory infrastructure (3.5x), layer-2 scaling (4.2x), and real-world asset tokenization (5.6x) are the sectors commanding sustained intellectual capital.
@@ -166,4 +166,4 @@ The aggregation of 128,286 research papers yields three strategic imperatives fo
 3. **Recognize the Geographic Shift.**
    China and India together produce **26.8%** of all blockchain research, more than double the US contribution. The institutional concentration is equally telling. The Chinese Academy of Sciences alone produces 924 papers, and Indian technical institutes occupy two of the top six global positions. Western organizations cannot assume leadership in blockchain standards, protocols, or regulatory frameworks without actively engaging the research communities driving the highest-volume output.
 
-*The underlying bibliometric dataset and methodology are detailed in the companion research paper "Blockchain Research Trends - A Bibliometric Analysis of 128,286 Papers (2013 to 2026)." The empirical corpus is available in the [Web3 Reports Library](/web3lib).*
+*Tables and queries are in [Blockchain Research Trends](https://doi.org/10.5281/zenodo.20832738) (Zenodo). The live search tool is the [Web3 Reports Library](/web3lib). Counts are the 12 June 2026 OpenAlex pull. They will drift.*

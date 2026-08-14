@@ -1,25 +1,34 @@
 ---
 title: "The State of AI"
-summary: "A data-driven executive analysis of 5,003,783 academic papers, the largest open bibliometric study of AI research ever conducted, tracking the structural transformation of the field from neural network foundations to the LLM inflection, the China-US research crossover, and the 48.9% zero-citation reality."
+summary: "An OpenAlex sweep of 5,003,783 papers whose abstracts match AI method terms, 2013 through mid-2026. Neural networks still lead the cumulative count. LLM mentions grew 29.9x from 2018 to 2025. China leads volume. The US still leads LLM papers. 48.9% of the corpus has zero citations."
 date: "2026-06-12"
 author: "Vedang Vatsa"
 category: "AI"
 keywords: ["State of AI", "AI Research", "Large Language Models", "Neural Networks", "Bibliometrics", "OpenAlex", "China AI", "RAG", "DeepSeek"]
 ---
 
-Five million papers. That is the size of the AI research corpus indexed through mid-2026, and **58.8% of it was published in the last four years alone**. In 2025, over 944,000 academic papers mentioned artificial intelligence methods in their abstracts, a 42.6% surge over 2024 and a 10.1x increase since 2013. The first half of 2026 has already logged 812,972 papers, putting the full year on pace to breach 1.6 million, the first time annual output in this corpus will exceed one million publications.
+Five million papers. That is the size of this AI research corpus in [OpenAlex](https://openalex.org) through mid-2026, and **58.8% of it was published from 2023 through June 2026**. That window is three and a half years, not four. In 2025, **944,530** papers matched the query, a 42.6% rise over 2024 and a 10.1x increase since 2013. January through June 2026 logged **812,972**. Doubling that half-year gives about 1.6 million. Academic publishing is seasonal. Treat 1.6 million as arithmetic, not a forecast model.
 
-The data tells a story of concentration, acceleration, and structural shift. Neural networks still dominate (**1,522,612 papers**, or 30.4% of all abstracts) but the fastest-growing category is large language models, which grew **29.9x** from 2018 to 2025. Every single one of the ten fastest-rising keywords is LLM-related. China now produces 21.6% more AI papers than the United States. And nearly half of all papers (**48.9%**) have received zero citations.
+The data tells a story of concentration, acceleration, and structural shift. Neural networks still dominate (**1,522,612 abstracts**, or 30.4% of the corpus) but the fastest-growing category is large language models, which grew **29.9x** from 2018 to 2025. Every one of the ten fastest-rising keywords is LLM-related. China's **cumulative** count is 21.6% above the US. In 2025 the annual gap was **53.4%**. Nearly half of all papers (**48.9%**) have zero citations.
 
 This is the empirical map of where AI research capital and engineering attention are actually flowing.
 
 ## I. Methodology (5 Million Papers, One Open API)
 
-This analysis is built on a corpus of exactly **5,003,783 academic papers** published between 2013 and mid-2026, queried from the OpenAlex scholarly database using abstract-level search. OpenAlex indexes over 250 million academic works and provides free, structured API access with no proprietary databases required. Every count in this analysis can be independently verified and reproduced.
+This analysis is built on a corpus of **5,003,783** works published between 2013 and mid-2026, pulled from [OpenAlex](https://openalex.org) on **12 June 2026**. OpenAlex is a living index. Re-running the same strings later will not match digit-for-digit. The counts below are API totals for that pull, documented in the [SSRN paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6991218).
 
-The corpus was defined by searching paper abstracts for ten AI-related terms. These terms are *artificial intelligence, machine learning, deep learning, neural network, language model, reinforcement learning, computer vision, natural language, generative, autonomous.* Abstract-level search captures cross-disciplinary AI usage that title-only approaches systematically miss, returning **1.5x to 7.7x more papers** per keyword than title search alone.
+The corpus is an abstract-level OR search on ten terms: *artificial intelligence, machine learning, deep learning, neural network, language model, reinforcement learning, computer vision, natural language, generative, autonomous.* A paper lands in the corpus if any of those strings appear in the abstract. That is a methods-mention census, not a roster of papers whose main contribution is AI. Abstract search returns **1.5x to 7.7x** more hits per keyword than title search in this pull. Those ratios are in the paper.
 
-The resulting corpus is 65.4% journal articles, 13.4% preprints, and 7.7% book chapters. Repositories (primarily arXiv) account for 27.4% of sources, consistent with the AI community's preprint culture. All analyses (keyword frequency, growth detection, citation distribution, geographic output) were performed through direct API count queries. No papers were downloaded. No local text processing was applied.
+The resulting corpus is 65.4% journal articles, 13.4% preprints, and 7.7% book chapters. Repositories (primarily [arXiv](https://arxiv.org)) account for 27.4% of sources. Analyses are OpenAlex count queries. No full texts were downloaded.
+
+<ResearchPaper
+  title="State of AI Research"
+  authors="Vedang Ratan Vatsa"
+  date="June 2026"
+  venue="SSRN"
+  doi="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6991218"
+  abstract="A bibliometric analysis of 5,003,783 OpenAlex works (2013 to mid-2026) whose abstracts match AI method terms, covering publication volume, keyword frequency, LLM growth, geographic output, and citation distribution."
+/>
 
 <StateOfAiTimeline />
 
@@ -37,7 +46,7 @@ The n-gram frequency analysis across 5,003,783 paper abstracts reveals the actua
 
 **The bigram distribution splits cleanly into two tiers.** The top six terms are method-level. These are neural network, machine learning, deep learning, artificial intelligence, attention mechanism, and large language, totaling **5.37 million abstract mentions**. The bottom four are application-level. These are image classification, recommendation system, medical imaging, and feature extraction, totaling **1.39 million**. The ratio is 3.9 to 1. Method vocabulary dominates application vocabulary by nearly four to one.
 
-**"Neural network"** (1,522,612 mentions) remains the undisputed foundation of AI research, appearing in nearly one of every three abstracts. But the trend line tells a more nuanced story. In 2025, **"deep learning" surpassed "neural network" in annual abstract mentions for the first time** (216,713 vs. 207,140), even as neural network retains the larger cumulative total.
+**"Neural network"** (1,522,612 abstracts, 30.4% of the corpus) remains the foundation term. That is papers whose abstract contains the bigram, not 1.52 million unique architectures. The trend line is more useful than the cumulative stack. In 2025, **"deep learning" surpassed "neural network" in annual abstract mentions for the first time** (216,713 vs. 207,140), even as neural network retains the larger cumulative total.
 
 **"Attention mechanism"** (432,079) at rank 5 confirms the transformer's structural dominance across NLP, computer vision, and multimodal tasks since 2017. **"Large language"** (405,166) at rank 6 has already surpassed application-oriented terms like image classification and recommendation systems, a crossover that occurred within the last two years.
 
@@ -53,7 +62,7 @@ The critical signal is that **"large language model"** (292,873) has overtaken b
 
 The LLM trajectory represents the sharpest inflection in the entire five-million-paper corpus. No other term matches this acceleration profile.
 
-**"Large language model"** abstract mentions grew from 3,248 in 2018 to 96,984 in 2025, a **29.9x increase**. The growth curve has a clear inflection point. Between 2018 and 2022, mentions grew at a modest pace (3,248 to 7,931, or 2.4x over four years). Between 2022 and 2025, they grew **12.2x in three years**. By 2025, LLM papers accounted for 10.3% of all AI papers, up from 1.9% in 2022. The annualized 2026 estimate of ~170,000 papers suggests roughly one in nine AI papers will mention large language models by year-end.
+**"Large language model"** abstract mentions grew from 3,248 in 2018 to 96,984 in 2025, a **29.9x increase**. The growth curve has a clear inflection point. Between 2018 and 2022, mentions grew at a modest pace (3,248 to 7,931, or 2.4x over four years). Between 2022 and 2025, they grew **12.2x in three years**. By 2025, abstracts mentioning "large language model" accounted for **10.3%** of that year's corpus papers (96,984 / 944,530), up from 1.9% in 2022. A naive annualization of the 2026 run-rate points at ~170,000. Same caveat as the headline 1.6 million: H2 is not a copy of H1.
 
 For comparison, from 2022 to 2025 "transformer" grew 3.3x, "reinforcement learning" 2.7x, "deep learning" 2.1x, and "neural network" 1.5x. Nothing else comes close to the LLM growth rate.
 
@@ -65,7 +74,7 @@ The ten fastest-rising keywords tell a definitive story about where research att
 
 The data groups into three strategic categories.
 
-1. **Named models as research subjects.** "DeepSeek" (848.7x), "Mistral" (16.8x), and "Gemini" (13.6x) are specific commercial models, not architectures. Researchers are spending more time evaluating and benchmarking named products than developing novel architectures.
+1. **Named models as research subjects.** "DeepSeek" (848.7x), "Mistral" (16.8x), and "Gemini" (13.6x) are product names, not architectures. DeepSeek's multiple is a small-baseline explosion: 13 abstracts in 2022-2023, then 11,033 in 2025-2026. The ratio is real. It is not an 848x increase in model quality.
 
 2. **The RAG pipeline.** "Retrieval augmented generation" (52.4x), "retrieval-augmented" (19.2x), and "RAG" (15.4x) collectively account for **58,494 papers** in 2025-2026, making RAG the single largest growth area by absolute volume after "LLM" itself. The enterprise has chosen its architecture. separate the reasoning engine from the knowledge store.
 
@@ -114,7 +123,7 @@ India ranks third globally with **369,931 publications**, and its growth traject
 
 **Institutional concentration is significant.** The Chinese Academy of Sciences leads all institutions with 74,921 papers, 49.4% more than CNRS (50,145). Six of the top ten institutions globally are Chinese. Harvard (21,529) is the highest-ranked US institution at position 8.
 
-Paper counts measure research volume, not research impact. Citation-weighted metrics, shares of top-1% highly cited papers, and venue prestige may yield different rankings. These figures should be interpreted as measures of where engineering attention is being deployed, not where the highest-impact work is being produced.
+Paper counts measure volume, not impact. OpenAlex assigns a paper to every co-author country, so China plus the US plus India can exceed 100% of the corpus. Citation-weighted metrics, top-1% shares, and venue prestige can rank the same countries differently. Read these figures as where abstracts are being written, not where the highest-impact work is produced.
 
 ## V. The Citation Economy
 
@@ -124,7 +133,7 @@ This figure is partly inflated by recency. Papers published in 2024-2026 have ha
 
 <StateOfAiCitations />
 
-The most-cited paper is ResNet with **221,202 citations**, approximately 1.9x the next entry. The top-cited papers share a common characteristic. They are all reusable building blocks (ResNet, Adam optimizer, AlexNet, VGGNet, XGBoost). Papers that provide infrastructure accumulate orders of magnitude more citations than application-specific work, because every downstream paper that builds on the tool cites the original, regardless of application domain.
+The most-cited paper in this pull is [ResNet](https://arxiv.org/abs/1512.03385) (He et al., 2015/2016) with **221,202** OpenAlex citations as of 12 June 2026, about 1.9x the next entry. Citation totals move. This is a snapshot. The top-cited papers share a common characteristic. They are reusable building blocks (ResNet, Adam, AlexNet, VGGNet, XGBoost). Infrastructure accumulates citations because every downstream paper that uses the tool cites the original.
 
 <PullQuote author="Corpus Analysis" role="5,003,783 Papers, 2013-2026">
 "More papers were published in 2025 alone (944,530) than in the first six years combined (2013-2018 at 734,197). The median paper has zero citations."
@@ -132,7 +141,7 @@ The most-cited paper is ResNet with **221,202 citations**, approximately 1.9x th
 
 ### Open Access Dominance
 
-Of the 5,003,783 papers, **3,043,557 (60.8%) are published as open access**, more than double the 28% baseline across all academic fields. The AI community's preprint culture, anchored by arXiv, drives this premium. This has strategic implications. The barrier to accessing AI research is lower than in almost any other scientific discipline.
+Of the 5,003,783 papers, **3,043,557 (60.8%)** are open access in OpenAlex's tagging. That is more than double the **28%** of Crossref-DOI journal articles [Piwowar et al. (2018)](https://doi.org/10.7717/peerj.4375) found were OA across the whole literature. Their 28% is a 2018 snapshot of all fields, not a 2026 AI-specific control. The gap is still large. Preprint culture, anchored by arXiv, is the obvious driver.
 
 ## VI. Strategic Implications
 
@@ -153,4 +162,4 @@ The aggregation of 5,003,783 research papers yields three core strategic imperat
 3. **The geography of AI leadership is multipolar.**
    China leads in volume. The US leads in LLMs. India is growing fastest. Six of the top ten institutions are Chinese, but the US retains disproportionate influence in the fastest-growing category. Any strategic assessment that treats "AI leadership" as a single dimension is incomplete. The competition is term-specific, institution-specific, and rapidly shifting.
 
-*The underlying research paper and methodology are available in the [AI Reports Library](/ailib). All results are derived from the free OpenAlex API using abstract-level keyword search. Every count reported can be independently verified and updated.*
+*The query strings, tables, and caveats are in [State of AI Research (SSRN 6991218)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6991218). The live search tool is the [AI Reports Library](/ailib). Counts are the 12 June 2026 OpenAlex pull. They will drift.*

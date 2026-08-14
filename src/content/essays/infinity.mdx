@@ -28,7 +28,7 @@ Digital information is the clearest case. Once a piece of software, a song, or a
 <Stat value="$0.00" label="Marginal cost of a digital copy" source="Rifkin (2014)" />
 <Stat value="90%" label="Drop in solar energy cost since 2010" source="IRENA" sourceUrl="https://www.irena.org/publications/2024/Sep/Renewable-Power-Generation-Costs-in-2023" />
 <Stat value="~$0" label="Cost of an additional Wikipedia page view" />
-<Stat value="2-3x" label="Annual drop in LLM inference cost" source="Industry data" />
+<Stat value="~50x" label="Median capability-equivalent inference price drop / year" source="Epoch AI (range 9-900x)" sourceUrl="https://epoch.ai/data-insights/llm-inference-price-trends" />
 </StatRow>
 
 Cognitive labor is following a similar, if less complete, path. Large language models now perform legal research, medical triage, financial analysis, and software debugging at costs that fall with each model generation. [Brynjolfsson and McAfee](https://www.thenewmachineage.com/) described this as the second machine age, where machines move from replacing muscle to replacing cognition. If the cost of generating a competent first draft of a legal brief falls by 90% (and it has), then a meaningful portion of what lawyers bill for has moved closer to zero marginal cost.
@@ -66,15 +66,15 @@ One of the less examined ironies of the AI abundance thesis is how expensive the
 The cost of training frontier AI models has escalated from roughly $12 million for GPT-3 in 2020 to an estimated $100-191 million for GPT-4 and Gemini Ultra in 2023. Industry consensus projects that the next generation of frontier models may cost upward of $1 billion for a single training run. This cost grows at 2-3x per year. Compute and hardware are 47-67% of total training cost, with the remainder split between R&D talent and data infrastructure.
 
 <StatRow>
-<Stat value="$1B+" label="Projected cost of next-gen training run" source="Industry consensus (2026)" />
-<Stat value="47-67%" label="Hardware share of training cost" source="Research estimates" />
-<Stat value="$325B+" label="Combined Big Tech AI capex (2025)" source="Visual Capitalist" />
-<Stat value="6" label="Companies that can afford frontier training" />
+<Stat value="$1B+" label="Projected cost of next-gen training run" source="Lab commentary and leaked schedules; not a 10-K line" />
+<Stat value="47-67%" label="Hardware share of training cost" source="Published cost breakdowns, range not a constant" />
+<Stat value="$325B+" label="Combined Big Tech AI capex (2025, compiled)" source="Visual Capitalist compilation of company commentary" />
+<Stat value="6" label="Firms that can fund frontier training at this scale" />
 </StatRow>
 
 The capital requirements for frontier AI create a structural paradox. The technology that promises to make cognitive labor abundant is itself accessible only to a handful of companies with the resources to build it. In 2025, the combined AI-related capital expenditure of the six largest technology companies (Amazon, Apple, Alphabet, Microsoft, Meta, Nvidia) exceeded $325 billion. The barrier to entry for competing at the frontier is rising, not falling.
 
-Open-weight models (Llama, Mistral, DeepSeek) have demonstrated that smaller organizations can build competitive models at lower cost. Inference costs are falling rapidly, roughly 2-3x per year. The question is whether the concentration at the training level translates into lasting market power, or whether competition at the deployment level prevents it.
+Open-weight models (Llama, Mistral, DeepSeek) have demonstrated that smaller organizations can build competitive models at lower cost. Inference prices for a given capability level have fallen much faster than Moore's Law. [Epoch AI](https://epoch.ai/data-insights/llm-inference-price-trends) measured 9x to 900x per year across benchmarks, with a median around 50x. Token list prices often look milder. The question is whether concentration at the training level translates into lasting market power, or whether competition at the deployment level prevents it.
 
 ## The distribution problem that abundance does not solve
 

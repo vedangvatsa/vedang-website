@@ -63,7 +63,7 @@
   <rect x="480" y="140" width="230" height="90" class="box" rx="6" />
   <text x="495" y="165" font-weight="800" font-size="18" fill="#0f172a">Energy</text>
   <text x="495" y="190" font-size="14" fill="#334155">Solar LCOE down</text>
-  <text x="495" y="210" font-size="14" fill="#334155">97% since 2010</text>
+  <text x="495" y="210" font-size="14" fill="#334155">90% since 2010</text>
 
   <!-- Intelligence Box -->
   <rect x="60" y="480" width="220" height="90" class="box" rx="6" />

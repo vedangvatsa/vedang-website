@@ -1,8 +1,8 @@
 ---
 title: An Internet of Lies
 summary: >-
-  Deepfake incidents increased 900% year-over-year. Only 0.1% of users can
-  distinguish real from synthetic media.
+  Vendor reports put deepfake volume up hundreds of percent. Human detection
+  of high-quality fakes is near chance in lab work. Official loss tallies lag.
 date: '2025-12-28'
 author: 'Vedang Vatsa'
 keywords: ['misinformation', 'deepfakes', 'disinformation', 'C2PA', 'content provenance', 'AI detection', 'synthetic media', 'trust', 'verification']
@@ -16,13 +16,13 @@ The internet has an asymmetry problem. The cost of producing a convincing falseh
 
 In 2020, creating a convincing deepfake video required specialized hardware, technical expertise, and hours of footage for training. By 2025, generating a synthetic video of a person saying words they never said requires a consumer laptop, a free open-source model, and a 30-second voice sample. The barrier to entry has collapsed.
 
-The data reflects this. Deepfake content volume is growing at approximately [900% year-over-year](https://www.deepstrike.io/). The number of deepfake files shared online rose from roughly 500,000 in 2023 to an estimated 8 million by 2025. In Q1 2025 alone, 179 verified deepfake incidents were reported. Exceeding the total for all of 2024 by 19%. By late 2025, deepfake attacks were occurring at a rate of at least seven per day.
+The data reflects this. Security vendors publish steep growth rates. [Deepstrike](https://www.deepstrike.io/) is one of the sources circulating a **900% year-over-year** deepfake-content figure. That is a vendor page, not a government census. File-count estimates in the same circuit run from hundreds of thousands in 2023 to millions by 2025. Incident tallies (Q1 2025 "179 verified") are likewise vendor-compiled. Use them as a direction, not as a single official ledger.
 
 <StatRow>
-<Stat value="900%" label="Annual deepfake content growth" source="Industry reports" sourceUrl="https://www.deepstrike.io/" />
-<Stat value="8M" label="Deepfake files shared (2025 est.)" source="Research estimates" />
-<Stat value="0.1%" label="Users who can identify deepfakes" source="2025 detection study" />
-<Stat value="$547M" label="Deepfake fraud losses, H1 2025 (US)" source="Industry analysis" />
+<Stat value="900%" label="YoY deepfake growth (vendor-reported)" source="Deepstrike, not a census" sourceUrl="https://www.deepstrike.io/" />
+<Stat value="8M" label="Deepfake files shared (2025, circulating estimate)" source="Vendor/research estimates, not a registry" />
+<Stat value="0.1%" label="Perfect identification rate (vendor-cited)" source="Bright Defense page, not a journal paper" sourceUrl="https://www.brightdefense.com/" />
+<Stat value="$547M" label="Deepfake fraud losses, H1 2025 (US, vendor circuit)" source="Industry analysis; treat as unaudited" />
 </StatRow>
 
 The distribution by media type: video deepfakes account for approximately 46% of synthetic content, images for 32%, and audio for 22%. Audio deepfakes, the cheapest and easiest to produce, are the fastest-growing category, because they require the least source material and are the hardest for humans to evaluate without visual context.
@@ -31,7 +31,7 @@ The distribution by media type: video deepfakes account for approximately 46% of
 
 Human ability to identify deepfakes is poor and declining as generation quality improves.
 
-A [2025 controlled study](https://www.brightdefense.com/) found that only **0.1% of participants** could correctly distinguish between real and synthetic media across formats. For high-quality video deepfakes, human detection accuracy drops to 24.5%. For images, it hovers around 62%. For audio, participants reported 73% confidence in their judgments, but their actual accuracy was significantly lower.
+A [2025 Bright Defense page](https://www.brightdefense.com/) circulating in security blogs claims that only **0.1% of participants** could correctly distinguish real from synthetic media across formats. I have not found a peer-reviewed paper with that exact rate. For high-quality video, human detection in published lab work is often near chance. Treat the 0.1% figure as a vendor talking point until a methods section exists. For high-quality video deepfakes, human detection accuracy drops to 24.5%. For images, it hovers around 62%. For audio, participants reported 73% confidence in their judgments, but their actual accuracy was significantly lower.
 
 This is the core of the problem. Humans are bad at detecting synthetic content and simultaneously overconfident in their ability to do so. A person who is 73% confident they can tell real from fake audio is a person who will share synthetic audio believing it to be genuine. The overconfidence is more dangerous than the inability.
 
@@ -47,15 +47,15 @@ Technological detection is not solving the problem at scale. The [deepfake detec
 
 The financial cost is concrete and growing.
 
-Deepfake-driven fraud attempts [spiked 3,000%](https://www.keepnetlabs.com/) globally between 2022 and 2024, with North America alone seeing a 1,700% increase. In the first half of 2025, deepfake-related scams cost Americans approximately $547 million. Deepfakes now contribute to roughly 40% of all biometric fraud attempts worldwide. Nearly half of enterprises (49%) reported experiencing audio or video deepfake fraud by 2024.
+Deepfake-driven fraud attempt growth is another vendor circuit. Keepnet and similar firms publish **3,000%** spikes between 2022 and 2024. The **$547 million** H1 2025 US loss figure and the **40% of biometric fraud** claim travel with them. None of those is an FTC annual total I can tie to a filing. The direction is real. The decimals are marketing.
 
 The corporate vulnerability is direct. A fake earnings call audio from a CEO can move stock prices within minutes. A synthetic video of a CFO authorizing a wire transfer can drain accounts before anyone realizes the instruction was synthetic. The [World Economic Forum](https://www.weforum.org/) has identified AI-generated disinformation as one of the top global risks, with estimated costs in the tens of billions annually when accounting for market manipulation, consumer fraud, and institutional damage.
 
 <StatRow>
-<Stat value="3,000%" label="Deepfake fraud attempt spike (2022-24)" source="Global analysis" />
-<Stat value="40%" label="Biometric fraud using deepfakes" source="Industry data" />
-<Stat value="49%" label="Enterprises hit by deepfake fraud" source="2024 survey" />
-<Stat value="$15.7B" label="Detection market size (2026 est.)" source="Market research" />
+<Stat value="3,000%" label="Fraud-attempt spike (2022-24, vendor)" source="Keepnet and similar; not FTC" />
+<Stat value="40%" label="Biometric fraud using deepfakes (vendor)" source="Industry data; unaudited" />
+<Stat value="49%" label="Enterprises reporting deepfake fraud (2024 survey)" source="Vendor survey" />
+<Stat value="$15.7B" label="Detection market size (2026, analyst est.)" source="Market research note" />
 </StatRow>
 
 <Callout type="warning" title="The Liar's Dividend">

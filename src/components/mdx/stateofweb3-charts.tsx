@@ -45,7 +45,7 @@ const yearlyDataset: YearlyData[] = [
   { year: '2023', docs: 17677, growth: '+18.0%', avgCitations: 4.8, milestone: 'NFT research peaks then declines. Institutional era begins.' },
   { year: '2024', docs: 17993, growth: '+1.8%', avgCitations: 2.5, milestone: 'Lowest growth year. NIST post-quantum standards catalyze new research.' },
   { year: '2025', docs: 20668, growth: '+14.9%', avgCitations: 0.8, milestone: 'Record output: 20,668 papers. Post-quantum and regulatory themes surge.' },
-  { year: '2026', docs: 18800, growth: 'Estimate', avgCitations: 0.1, milestone: 'On pace for ~18,800. Quantum-resistant and AI convergence accelerate.' }
+  { year: '2026', docs: 18800, growth: 'Estimate', avgCitations: 0.1, milestone: 'Full-year estimate ~18,800. Observed H1 in the corpus is 8,419. Quantum-resistant and AI-convergence strings are up.' }
 ];
 
 const unigramData: TermFrequency[] = [
@@ -306,7 +306,7 @@ export function StateOfWeb3Timeline() {
 
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-background rounded-lg p-2.5 border border-border/50">
-                <p className="text-[10px] text-muted-foreground font-semibold uppercase">Documents</p>
+                <p className="text-[10px] text-muted-foreground font-semibold uppercase">{selectedTimeline.year === '2026' ? 'Documents (full-year est.)' : 'Documents'}</p>
                 <p className="text-base font-extrabold text-foreground font-mono mt-0.5">
                   {selectedTimeline.docs.toLocaleString()}
                 </p>
@@ -347,7 +347,7 @@ export function StateOfWeb3Timeline() {
       </div>
 
       <div className="text-[10px] text-muted-foreground/60 border-t border-border/50 pt-3 mt-4">
-        Source: 128,286 concept-tagged papers via OpenAlex database.
+        Source: 128,286 concept-tagged papers via OpenAlex, pull date 12 June 2026. 2026 point is a full-year estimate; observed H1 in the corpus is 8,419.
       </div>
     </figure>
   );

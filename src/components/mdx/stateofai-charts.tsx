@@ -35,9 +35,9 @@ const yearlyDataset: YearlyData[] = [
   { year: '2021', docs: 369519, growth: '+20.8%', milestone: 'China exceeds US in AI paper volume for first time (71K vs 65K).' },
   { year: '2022', docs: 411098, growth: '+11.2%', milestone: 'ChatGPT launch (Nov). Growth temporarily decelerates to 11.2%.' },
   { year: '2023', docs: 520861, growth: '+26.7%', milestone: 'GPT-4, Llama released. Post-ChatGPT research explosion re-accelerates.' },
-  { year: '2024', docs: 662417, growth: '+27.2%', milestone: 'Agentic frameworks emerge. LLM papers reach 10.3% of corpus.' },
-  { year: '2025', docs: 944530, growth: '+42.6%', milestone: 'DeepSeek disrupts. 944K papers, highest annual growth since 2018.' },
-  { year: '2026', docs: 1600000, growth: 'Estimate', milestone: 'Jan-Jun partial. On pace for 1.6M papers, first year exceeding 1M.' },
+  { year: '2024', docs: 662417, growth: '+27.2%', milestone: 'Agentic frameworks emerge. Volume still accelerating (+27.2%).' },
+  { year: '2025', docs: 944530, growth: '+42.6%', milestone: 'DeepSeek disrupts. 944,530 papers. LLM abstracts are 10.3% of this year (96,984).' },
+  { year: '2026', docs: 1600000, growth: 'Estimate', milestone: 'H1 actual: 812,972. 1.6M is a doubled run-rate, not a model. Publishing is seasonal.' },
 ];
 
 // Top 10 bigrams from Table 3 (abstract-level search, 5M corpus)
@@ -179,7 +179,7 @@ export function StateOfAiTimeline() {
         <div className="space-y-3">
           <div className="bg-muted/30 rounded-lg p-4 border border-border/50 space-y-2">
             <div className="text-3xl font-black tabular-nums text-foreground">{selected.docs.toLocaleString()}</div>
-            <div className="text-xs text-muted-foreground">Papers Published{selected.year === '2026' ? ' (Jan-Jun)' : ''}</div>
+            <div className="text-xs text-muted-foreground">Papers Published{selected.year === '2026' ? ' (full-year estimate)' : ''}</div>
             <div className="text-xs font-mono font-bold text-blue-500">{selected.growth !== '--' && selected.growth !== 'Partial' ? `YoY: ${selected.growth}` : selected.growth === 'Partial' ? 'Partial Year' : 'Baseline Year'}</div>
           </div>
           <div className="bg-muted/30 rounded-lg p-4 border border-border/50">
@@ -190,7 +190,7 @@ export function StateOfAiTimeline() {
       </div>
 
       <div className="text-[10px] text-muted-foreground/60 border-t border-border/50 pt-3 mt-4">
-        Corpus: 5,003,783 papers via abstract-level search on OpenAlex.
+        Corpus: 5,003,783 papers via abstract-level search on OpenAlex, pull date 12 June 2026. 2026 point is a doubled H1 run-rate, not observed output.
       </div>
     </figure>
   );
