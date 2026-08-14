@@ -19,13 +19,13 @@ I am only arguing about the year. The word is defined [here](/singularity). The 
 Researchers give wildly different answers. Some say 2027. Some say 2050. Some say never. The range itself is informative: it reflects genuine disagreement about whether the remaining barriers are engineering problems (solvable with sufficient resources) or fundamental obstacles (requiring conceptual breakthroughs that may not arrive on any predictable schedule).
 
 <StatRow>
-<Stat value="2029" label="Kurzweil's prediction for human-level AI" source="The Singularity Is Nearer (2024)" />
+<Stat value="2029" label="Kurzweil's human-level AI date" source="The Singularity Is Nearer (2024)" sourceUrl="https://www.theguardian.com/technology/article/2024/jun/29/ray-kurzweil-google-ai-the-singularity-is-nearer" />
 <Stat value="2030-33" label="Metaculus community median for AGI" source="Metaculus AGI question" sourceUrl="https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/" />
-<Stat value="2025-27" label="Aggressive industry estimates" source="Public comments by Dario Amodei, Elon Musk" />
+<Stat value="2026-27" label="Amodei's hunch for powerful AI" source="Machines of Loving Grace" sourceUrl="https://darioamodei.com/essay/machines-of-loving-grace" />
 <Stat value="2050+" label="Conservative academic estimates" source="Survey aggregates, not a single poll" />
 </StatRow>
 
-The Metaculus forecasting platform, which aggregates thousands of individual predictions, has shifted its median AGI estimate from the mid-2040s to the early 2030s over the past three years. This shift reflects the impact of large language models (LLMs) demonstrating capabilities, from multi-step reasoning to code generation to scientific analysis, that many forecasters did not expect this soon.
+The Metaculus forecasting platform, which aggregates thousands of individual predictions, has shifted its [median AGI estimate](https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/) from the mid-2040s to the early 2030s over the past three years. This shift reflects the impact of large language models (LLMs) demonstrating capabilities, from multi-step reasoning to code generation to scientific analysis, that many forecasters did not expect this soon.
 
 But forecasting platforms capture sentiment, not physics. The actual timeline depends on several technical factors, each carrying its own uncertainty.
 
@@ -35,7 +35,7 @@ Prediction disagreement is not random noise. It reflects genuine uncertainty abo
 
 ## The Scaling Hypothesis and Its Limits
 
-The dominant theory in AI between 2020 and 2024 was the scaling hypothesis: intelligence emerges predictably from scale. Bigger models trained on more data with more compute become proportionally smarter. Chinchilla scaling laws (2022) formalized the relationship between model size, dataset size, and compute, showing that optimal performance requires scaling all three in proportion.
+The dominant theory in AI between 2020 and 2024 was the scaling hypothesis: intelligence emerges predictably from scale. Bigger models trained on more data with more compute become proportionally smarter. [Chinchilla scaling laws](https://arxiv.org/abs/2203.15556) (Hoffmann et al., 2022) formalized the relationship between model size, dataset size, and compute, showing that optimal performance requires scaling all three in proportion.
 
 This hypothesis produced GPT-3, GPT-4, Claude, and Gemini. Each was substantially more capable than its predecessor, and each was substantially larger. The relationship between investment and output appeared predictable.
 
@@ -51,8 +51,8 @@ Training on AI-generated data introduces the risk of "model collapse": performan
 
 **Architecture matters more than scale.** The biggest jumps in AI capability have come from architectural innovations, not simply from more compute:
 
-- **Transformers (2017):** The attention mechanism enabled language modeling at scale
-- **Scaling laws (2020):** Chinchilla-optimal training formalized the relationship between parameters, data, and compute
+- **[Transformers (2017)](https://arxiv.org/abs/1706.03762):** The attention mechanism enabled language modeling at scale
+- **Scaling laws (2020):** [Chinchilla-optimal training](https://arxiv.org/abs/2203.15556) formalized the relationship between parameters, data, and compute
 - **RLHF (2022):** Reinforcement learning from human feedback made models useful and controllable
 - **Chain-of-thought / test-time compute (2024-25):** Models that "think longer" at inference time outperform larger models on complex tasks
 - **Mixture of Experts (2024-25):** Sparse architectures that activate only a fraction of parameters per query, reducing inference cost dramatically
@@ -69,9 +69,9 @@ Each of these was unpredicted. Each accelerated the timeline by years. The next 
 
 **3. Is the scaling hypothesis locally or globally true?** Scaling laws describe a predictable relationship between inputs and outputs within a given model. They do not guarantee that the model itself scales to superintelligence. Language modeling may approach human-level performance on many tasks through scale alone, but the gap between "human-level on benchmarks" and "genuinely superintelligent" may require qualitative shifts that scaling cannot produce.
 
-**4. Can alignment keep pace?** Even if capability advances rapidly, deployment depends on alignment and safety. Regulatory frameworks (the EU AI Act, various national AI safety institutes) increasingly constrain how frontier models can be deployed. If alignment research lags behind capability, the most powerful systems may not be deployable, effectively extending the practical timeline regardless of what is technically achievable.
+**4. Can alignment keep pace?** Even if capability advances rapidly, deployment depends on alignment and safety. Regulatory frameworks (the [EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj), various national AI safety institutes) increasingly constrain how frontier models can be deployed. If alignment research lags behind capability, the most powerful systems may not be deployable, effectively extending the practical timeline regardless of what is technically achievable.
 
-**5. Does recursive self-improvement actually work?** The theoretical argument for intelligence explosion (I.J. Good, 1965) assumes that a sufficiently intelligent system can improve itself, and that this improvement compounds. In practice, self-improvement may encounter diminishing returns, architectural constraints, or verification bottlenecks that prevent explosive takeoff. No evidence yet confirms or refutes this assumption at the relevant scale.
+**5. Does recursive self-improvement actually work?** The theoretical argument for intelligence explosion ([I.J. Good, 1965](https://doi.org/10.1016/S0065-2458(08)60418-0)) assumes that a sufficiently intelligent system can improve itself, and that this improvement compounds. In practice, self-improvement may encounter diminishing returns, architectural constraints, or verification bottlenecks that prevent explosive takeoff. No evidence yet confirms or refutes this assumption at the relevant scale.
 
 ## The Prediction Paradox
 

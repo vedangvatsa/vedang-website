@@ -6,10 +6,10 @@ summary: >-
   scale,...
 date: '2026-04-04'
 author: 'Vedang Vatsa'
-keywords: ['Y Combinator', 'YC', 'startup trends', 'AI agents', 'defense tech', 'venture capital', 'B2B SaaS', 'startup landscape', 'agentic AI']
+keywords: ['Y Combinator', 'YC', 'startup trends', 'AI agents', 'defense tech', 'venture capital', 'B2B SaaS', 'agentic AI']
 ---
 
-Y Combinator's public directory of 5,818 portfolio companies functions as a leading indicator for where the technology industry is heading. Five structural shifts emerge from the data: B2B now accounts for 51% of the portfolio and is accelerating toward 70% in recent batches. The dominant startup pitch has changed from "AI-powered X" to "AI agent/employee for X." Defense and hard-tech companies have appeared at unprecedented scale. San Francisco's gravitational pull has intensified despite remote work. And consumer internet, once YC's heartland, has contracted to under 15%.
+[Y Combinator's public directory](https://www.ycombinator.com/companies) of 5,818 portfolio companies is a leading indicator for where the industry is heading. Five shifts show up in the data: B2B is 51% of the portfolio and near 70% in recent batches. The pitch moved from "AI-powered X" to "AI agent/employee for X." Defense and hard-tech appear at a scale this directory has not shown before. San Francisco's pull intensified despite remote work. Consumer internet, once YC's heartland, is under 15%.
 
 <Figure src="/images/essays/yc-landscape-2026.svg?v=2" alt="YC portfolio 2026" wide />
 
@@ -30,10 +30,10 @@ A caveat is necessary. YC is not a neutral sample of the startup ecosystem. It s
 The dominance of B2B is the most important structural fact. 2,964 companies, 51% of the portfolio, are classified as B2B. Consumer is a distant second at 14.9%. In the most recent batches, B2B has climbed to roughly 70%.
 
 <StatRow>
-<Stat value="51%" label="YC portfolio is B2B" source="YC Startup Directory" sourceUrl="https://www.ycombinator.com/companies" />
-<Stat value="2,964" label="B2B companies in portfolio" source="YC Directory (Apr 2026)" sourceUrl="https://www.ycombinator.com/companies" />
-<Stat value="~70%" label="B2B share in W26/S26" />
-<Stat value="<15%" label="Consumer share, declining" />
+<Stat value="51%" label="YC portfolio is B2B (Apr 2026 scrape)" source="YC Startup Directory" sourceUrl="https://www.ycombinator.com/companies" />
+<Stat value="2,964" label="B2B companies in that scrape" source="YC Directory (Apr 2026)" sourceUrl="https://www.ycombinator.com/companies" />
+<Stat value="~70%" label="B2B share in W26/S26 (author count)" source="Same scrape, not a YC census" sourceUrl="https://www.ycombinator.com/companies" />
+<Stat value="<15%" label="Consumer share in that scrape" source="YC Directory (Apr 2026)" sourceUrl="https://www.ycombinator.com/companies" />
 </StatRow>
 
 This reflects a genuine inversion of the startup economy's center of gravity. The consumer internet thesis (build for millions, monetize with ads) created Airbnb and Reddit. But it also required viral distribution, low churn, and tolerance for years of pre-revenue growth. The enterprise thesis requires none of that. The buyer is a budget-holder with a measurable problem. The product replaces a line item on a P&L statement.
@@ -87,7 +87,7 @@ The YC portfolio reads as a census of which white-collar job functions the techn
 
 There is an important analytical distinction here. Previous waves of startup activity targeted industries with obvious software-shaped holes: restaurants without online ordering, hotels without dynamic pricing, banks without mobile apps. The current wave targets something different. It targets the human labor within industries that are already computerized. A law firm using Microsoft Word does not need digitization. These startups are selling the proposition that it needs fewer associates.
 
-When hundreds of funded startups simultaneously target the same job functions, the surviving ones (most will fail) inherit the market insight and technical progress of the cohort. Whether this translates into actual labor displacement depends on execution, regulation, and buyer adoption. Stanford's Digital Economy Lab has documented a 13-16% decline in entry-level employment in AI-exposed occupations since 2022. The YC data is consistent with that trend, though correlation between startup activity and employment outcomes should not be overstated.
+When hundreds of funded startups simultaneously target the same job functions, the surviving ones (most will fail) inherit the market insight and technical progress of the cohort. Whether this translates into actual labor displacement depends on execution, regulation, and buyer adoption. Stanford's [Digital Economy Lab](https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/) has documented a 13-16% decline in early-career employment in AI-exposed occupations since late 2022. That is one research series, not a BLS occupational census. The YC directory is consistent with that direction. Correlation between startup activity and employment outcomes should not be overstated.
 
 
 ## Defense tech arrives
@@ -99,10 +99,10 @@ YC was historically a software accelerator. Hardware companies were rare and usu
 The 2025-2026 batches include Maquoketa Research (attack drones), 9 Mothers (AI weapon systems), Tenet Industries (drones as ammunition), Seeing Systems (AI-commanded drone swarms), Milliray (drone detection), Perseus Defense (counter-drone systems), Icarus (stratospheric platforms), and Wardstone (missile defense satellites).
 
 <StatRow>
-<Stat value="12+" label="Defense cos in recent batches" />
-<Stat value="18+" label="Robotics / manufacturing" />
-<Stat value="3x" label="Defense growth vs. 2024" />
-<Stat value="8" label="Space and aerospace" />
+<Stat value="12+" label="Named defense cos in 2025-26 batches" source="Author tally from YC directory" sourceUrl="https://www.ycombinator.com/companies?industry=Defense" />
+<Stat value="18+" label="Robotics / manufacturing (author tally)" source="YC Directory (Apr 2026 scrape)" sourceUrl="https://www.ycombinator.com/companies?industry=Industrials" />
+<Stat value="3x" label="Defense names vs 2024 (author ratio)" source="Same scrape; not a YC census" sourceUrl="https://www.ycombinator.com/companies?industry=Defense" />
+<Stat value="8" label="Space and aerospace (author tally)" source="YC Directory (Apr 2026 scrape)" sourceUrl="https://www.ycombinator.com/companies?industry=Industrials" />
 </StatRow>
 
 Three forces help explain this. First, the Ukraine conflict highlighted the tactical value of small, cheap autonomous drones, creating demand that legacy contractors (Lockheed, Raytheon) have been slow to fill. Second, the US defense budget has grown and procurement pathways for dual-use technology have expanded through SBIR/STTR and DIU. Third, Anduril and Shield AI demonstrated that defense startups can win government contracts at meaningful scale. Whether this scales into a durable category or remains a niche within YC's portfolio is still open.

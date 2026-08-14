@@ -49,17 +49,17 @@ The term "dark forest" comes from Liu Cixin's science fiction novel *The Dark Fo
 
 Humans are leaving the public layer.
 
-**Encrypted messaging.** [WhatsApp](https://www.whatsapp.com/) has 3 billion monthly active users. [Telegram](https://telegram.org/) reached 1 billion. [Signal](https://signal.org/), the most privacy-focused option, operated as a nonprofit, has grown to roughly 70-100 million users. The migration pattern is clear: conversations that once happened on public Twitter threads or Facebook posts are moving into group chats where membership is verified and bots cannot enter.
+**Encrypted messaging.** [WhatsApp](https://techcrunch.com/2025/05/01/whatsapp-now-has-more-than-3-billion-users/) passed 3 billion monthly active users on Mark Zuckerberg's Q1 2025 earnings call in April 2025. Meta does not print WhatsApp MAU in the 10-K. [Telegram](https://techcrunch.com/2025/03/19/telegram-founder-pavel-durov-says-app-now-has-1b-users-calls-whatsapp-a-cheap-watered-down-imitation/) founder Pavel Durov said on 19 March 2025 that the app had significantly over 1 billion monthly active users. That is a founder claim, not an audited census. [Signal](https://signal.org/) remains the privacy-first nonprofit option. Public MAU figures for Signal are sparse and should not be treated as a platform census. The migration pattern is clear: conversations that once happened on public Twitter threads or Facebook posts are moving into group chats where membership is verified and bots cannot enter.
 
 **Private communities.** [Discord](https://discord.com/) now hosts millions of private servers where access requires invitation, role verification, or payment. The most valuable conversations about investing, technology, and specialized knowledge happen inside these servers, invisible to search engines and inaccessible to scrapers. [Substack](https://techcrunch.com/2023/03/28/substack-opens-up-a-2-million-community-fundraising-round/), last priced at $585 million pre-money on its 2021 Series B and 2023 writer round, represents the same trend in publishing: writers with paid subscribers build direct relationships with verified human readers, bypassing the algorithmic feed entirely.
 
 **Closed platforms.** The explosive growth of private Instagram accounts, Close Friends stories, and group-only content reflects a broader pattern. Users are voluntarily restricting their audience to avoid the bot-infested public layer.
 
 <StatRow>
-<Stat value="3B" label="WhatsApp monthly active users" source="Meta, 2025" />
-<Stat value="1B" label="Telegram monthly active users" source="Telegram, 2025" />
+<Stat value="3B+" label="WhatsApp MAU (Zuckerberg, Q1 2025 call)" source="Meta earnings call, Apr 2025" sourceUrl="https://techcrunch.com/2025/05/01/whatsapp-now-has-more-than-3-billion-users/" />
+<Stat value="1B+" label="Telegram MAU (Durov, Mar 2025)" source="TechCrunch / TASS" sourceUrl="https://techcrunch.com/2025/03/19/telegram-founder-pavel-durov-says-app-now-has-1b-users-calls-whatsapp-a-cheap-watered-down-imitation/" />
 <Stat value="$585M" label="Substack pre-money (2021 B / 2023 writer round)" source="TechCrunch / WeFunder" sourceUrl="https://techcrunch.com/2023/03/28/substack-opens-up-a-2-million-community-fundraising-round/" />
-<Stat value="18M" label="World (Worldcoin) iris-verified users" source="World, Mar 2026" />
+<Stat value="~18M" label="World iris-verified humans (Mar 2026)" source="CoinDesk, 17 Mar 2026" sourceUrl="https://www.coindesk.com/tech/2026/03/17/sam-altman-s-world-teams-up-with-coinbase-to-prove-there-is-a-real-person-behind-every-ai-transaction" />
 </StatRow>
 
 ## The Identity Problem
@@ -68,7 +68,7 @@ In the dark forest, the question shifts from "what information is available?" to
 
 Current verification systems are inadequate. CAPTCHAs, once the standard line of defense, have been consistently defeated by AI since 2023. Phone number verification creates a thin barrier. Bot operators purchase SIM cards in bulk for pennies. Email verification is meaningless when a single person can generate unlimited email addresses.
 
-The only durable solution is cryptographic proof of personhood. [World (formerly Worldcoin)](https://world.org/), founded by Sam Altman, is the most aggressive attempt. The project uses iris-scanning hardware ("Orbs") to generate a cryptographic proof that a person is a unique human being, without revealing their identity. By March 2026, 18 million users had completed iris verification across 160+ countries. The total registered user base reached 38 million.
+The only durable solution is cryptographic proof of personhood. [World (formerly Worldcoin)](https://world.org/), founded by Sam Altman, is the most aggressive attempt. The project uses iris-scanning hardware ("Orbs") to generate a cryptographic proof that a person is a unique human being, without revealing their identity. On 17 March 2026, [CoinDesk](https://www.coindesk.com/tech/2026/03/17/sam-altman-s-world-teams-up-with-coinbase-to-prove-there-is-a-real-person-behind-every-ai-transaction) showed World's live verification meter at 17,912,203. Later March press put iris-verified humans near 18 million and World App users near 39 million. Those are company-adjacent figures, not a government ID census.
 
 <Callout type="info" title="Proof of Personhood: The Technical Stack">
 World ID uses zero-knowledge proofs (ZKPs) to verify humanness without exposing personal data. The Orb scans the iris, generates a unique hash (an "IrisHash"), and stores a commitment on-chain. When a service asks "is this a real person?", the protocol proves the answer is yes without revealing which person. This is the cryptographic equivalent of a bouncer checking your ID at the door without recording your name.

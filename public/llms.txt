@@ -16,8 +16,11 @@ This file provides a structured overview of the site's content for Large Languag
 
 ## Essays
 
-- [Agentic Internet Traffic](https://veda.ng/traffic): The open web is paid when a person arrives. AI crawlers take the page and leave. The ratio has run to tens of thousands of fetches per referred visit, and the site pays the hosting bill.
+- [When Agents Stop Speaking English](https://veda.ng/agentspeak): A2A still ships a sample message that says hello in English. The pipes of 2025 were JSON-RPC, REST, and payment mandates. The leftover human language is the part that will go.
 - [The IndiaAI Mission](https://veda.ng/indiaai): India approved ₹10,372 crore for an AI mission. By 9 February 2026, ₹401 crore had arrived. Officials count onboarded GPUs. Parliament later published hours sanctioned, not hours used.
+- [A Mind That Outlives You](https://veda.ng/outlives): OpenAI built ChatGPT memory for multi-year time horizons. Apple, Google, and Facebook already have dead-user tools. The assistants that now hold the running notes of a life still do not.
+- [Private Cognition](https://veda.ng/private): You can encrypt a disk. You cannot yet encrypt a thought at ChatGPT prices. Apple's Private Cloud Compute is a shipped TEE. Zama's FHE still clocks a GPT-2 token in seconds. Zero data retention is a contract. Coverage uses one word for all three.
+- [Agentic Internet Traffic](https://veda.ng/traffic): The open web is paid when a person arrives. AI crawlers take the page and leave. The ratio has run to tens of thousands of fetches per referred visit, and the site pays the hosting bill.
 - [Open-Weight Licences](https://veda.ng/licenses): Labs call the weights open. The files are Apache, MIT, Community, or Research. You can run the download. You cannot check the training data. Llama still has a veto at 700 million users.
 - [The National AI Compute Scorecard](https://veda.ng/compute): 6 countries took different approaches to national AI compute. I compared what each programme counts.
 - [Sovereign AI Debt](https://veda.ng/aidebt): Sovereign funds are financing AI compute with equity, convertibles, and bank debt. Stargate, MGX, G42, Saudi Arabia, and SoftBank each put 3 figures on the table: announced, funded, and spent. The gap between them shows who carries the risk.
@@ -25,7 +28,7 @@ This file provides a structured overview of the site's content for Large Languag
 - [The AI Lawsuit Ledger](https://veda.ng/lawsuits): Two hundred AI suits sit on public dockets. One produced a $1.5 billion cheque. The Times has spent $28 million and does not have a verdict. The paid column is almost entirely people who did not sue.
 - [Intelligence is a Commodity](https://veda.ng/intelligence): You can now buy intelligence at a monthly price. Higher list prices buy longer reasoning. Access is cheaper. Expertise is not the same as a list price.
 - [Building an AI Text Detector](https://veda.ng/ai-detector): Data, stylometric features, and production limits for AI text detection at scale.
-- [The State of AI](https://veda.ng/stateofai): A data-driven executive analysis of 5,003,783 academic papers, the largest open bibliometric study of AI research ever conducted, tracking the structural transformation of the field from neural network foundations to the LLM inflection, the China-US research crossover, and the 48.9% zero-citation reality.
+- [The State of AI](https://veda.ng/stateofai): An OpenAlex sweep of 5,003,783 papers whose abstracts match AI method terms, 2013 through mid-2026. Neural networks still lead the cumulative count. LLM mentions grew 29.9x from 2018 to 2025. China leads volume. The US still leads LLM papers. 48.9% of the corpus has zero citations.
 - [The State of Web3](https://veda.ng/stateofweb3): A bibliometric analysis of 128,286 academic papers classified as blockchain or cryptocurrency research by OpenAlex, cross-validated against Crossref, Europe PMC, arXiv, and DBLP. Tracking three eras of growth, the DeFi-NFT divergence, post-quantum urgency, and the global research map from 2013 through mid-2026.
 - [The Agent Infrastructure Stack](https://veda.ng/agentstack): Over $5 billion in venture capital has been deployed into the eight layers of infrastructure that AI agents need to function.
 - [The Great Funding Realignment](https://veda.ng/funding): An empirical study of global venture capital cycles from 2015 to 2026, analyzing capital concentration, the expansion of median check sizes, and the Seed-to-Series A transition bottleneck.
@@ -52,19 +55,19 @@ This file provides a structured overview of the site's content for Large Languag
 - [AI Superintelligence Timeline](https://veda.ng/asi): Why expert predictions for artificial superintelligence range from 2027 to 2100+, what the key bottlenecks are (compute, data, architecture,...
 - [The In-Between State](https://veda.ng/liminal): Transhumanism's actual near-term trajectory: not dramatic transcendence but a multi-decade period of partial, uneven, and socially disruptive...
 - [The Hustle Trap](https://veda.ng/hustle): After 55 hours per week, productivity drops to nearly zero.
-- [An Internet of Lies](https://veda.ng/lies): Deepfake incidents increased 900% year-over-year. Only 0.1% of users can distinguish real from synthetic media.
+- [An Internet of Lies](https://veda.ng/lies): Vendor reports put deepfake volume up hundreds of percent. Human detection of high-quality fakes is near chance in lab work. Official loss tallies lag.
 - [Intuitive Singularity](https://veda.ng/instinct): When AI systems transition from tools that execute commands to systems that anticipate intent, the interface between human and machine cognition...
 - [Governance for AGI](https://veda.ng/governance): Three regulatory superpowers are building incompatible AI governance frameworks. The EU bans practices. The US deregulates. China registers algorithms.
 - [The Substrate Shift](https://veda.ng/substrate): Silicon is hitting physical limits at the atomic scale. DNA stores 455 exabytes per gram.
 - [The World as an Interface](https://veda.ng/ambient): The smart home market will reach $175 billion in 2025. Device shipments approach 1.25 billion units.
 - [What is the Singularity?](https://veda.ng/singularity): The word, the alignment problem, and why the only speed question that matters is a week versus a decade. Dates live elsewhere.
 - [API States](https://veda.ng/apis): Estonia runs 99% of public services digitally and saves 2% of GDP annually. India's UPI processes billions of transactions monthly.
-- [Cognitive Load Crisis](https://veda.ng/cognition): The average attention span on a screen is 47 seconds. Humans check their phones 200 times per day.
+- [Cognitive Load Crisis](https://veda.ng/cognition): The average attention span on a screen is 47 seconds. A 2025 US survey put daily phone checks at 205.
 - [Artificial Intuition](https://veda.ng/intuition): How machines may develop synthetic analogues to human intuition through pattern recognition at scale, what Kahneman's dual-process theory reveals about...
 - [Bureaucracy is the friction tax everyone pays](https://veda.ng/bureaucracy): Why institutional complexity accumulates faster than it resolves, what the measurable costs are across sectors, and where digital-first governance...
 - [The Dark Forest Internet](https://veda.ng/darkforest): Bots now generate 51% of all web traffic. 74% of new web pages contain AI-generated text.
 - [Rationality in AI](https://veda.ng/rationality): What it means for an AI system to be rational, how decision theory applies to artificial agents, why the orthogonality thesis makes alignment a...
-- [Digital Monasticism](https://veda.ng/monasticism): Silence is the new luxury. The average person spends 7 hours on screens daily. Attention spans dropped from 2.5 minutes to 40 seconds in twenty years.
+- [Digital Monasticism](https://veda.ng/monasticism): Silence is the new luxury. The average person spends 7 hours on screens daily. Gloria Mark's mean screen attention is 47 seconds. The median is 40.
 - [Attention Refinery](https://veda.ng/attention): The five largest technology companies generate over $600 billion per year by extracting and reselling human attention.
 - [What Blockchain Kept](https://veda.ng/blockchain): An analysis of blockchain's evolution from cryptographic experiment to institutional infrastructure, examining what survived the hype cycles, where the...
 - [Sacred Algorithms](https://veda.ng/algorithms): COMPAS predicts recidivism with racial bias baked in. Healthcare AI underestimates illness in minority patients.
