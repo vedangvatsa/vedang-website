@@ -2405,9 +2405,11 @@
     "id": "viral-rewrite-130",
     "scheduleDate": "2026-08-14",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Growth takes two skills. Learning what you don't know. And unlearning what you no longer need. Most people struggle more with the second. Find teams that reward both at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_126_1.jpg"
+    "image": "scripts/post-images/post_126_1.jpg",
+    "postedAt": "2026-08-15T11:51:48.569Z",
+    "castHash": "0x56f100308df6fb329a8023795e9a6f72c998565a"
   },
   {
     "id": "viral-rewrite-131",
