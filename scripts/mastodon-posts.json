@@ -2312,9 +2312,10 @@
     "id": "viral-rewrite-138",
     "scheduleDate": "2026-08-16",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Expertise gets you noticed. Care gets you remembered. The mentors who matter most are the ones who celebrate your progress as if it were their own. Find people who do at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_55_1.jpg"
+    "image": "scripts/post-images/post_55_1.jpg",
+    "error": "Media failed: scripts/post-images/post_55_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-139",
