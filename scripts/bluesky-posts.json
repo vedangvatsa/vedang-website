@@ -2623,9 +2623,11 @@
     "id": "viral-rewrite-119",
     "scheduleDate": "2026-08-10",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "We ask kids what they want to be when they grow up. Maybe we should ask what they want to do and who they want to become. A career isn't one identity. It's a series of choices.",
-    "image": "scripts/post-images/post_160_1.jpg"
+    "image": "scripts/post-images/post_160_1.jpg",
+    "postedAt": "2026-08-16T04:17:52.654Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mt6df76nbr2p"
   },
   {
     "id": "viral-rewrite-120",
