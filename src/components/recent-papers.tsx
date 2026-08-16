@@ -8,8 +8,8 @@ export const recentPapers = [
     url: 'https://dx.doi.org/10.2139/ssrn.6874178',
   },
   {
-    title: 'Blockchain Research Trends',
-    url: 'https://doi.org/10.5281/zenodo.20832739',
+    title: 'Web3 Research Trends',
+    url: 'https://doi.org/10.2139/ssrn.6990919',
   },
   {
     title: 'Device-to-Device Economics and AI Agent Transactions',

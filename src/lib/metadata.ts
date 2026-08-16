@@ -124,11 +124,11 @@ export const pageMetadata = {
     keywords: ['Book Meeting', 'Schedule Call', 'Vedang Vatsa', 'AI Consulting', 'Web3 Advisory', 'Speaking Engagement'],
   },
   stateOfWeb3: {
-    title: 'The State of Blockchain Research (2013-2026) | Vedang Vatsa',
+    title: 'The State of Web3 | Vedang Vatsa',
     description:
-      'An interactive bibliometric analysis of 100,024 blockchain and Web3 research documents. Track YoY growth, citation skews, and AI integration trends.',
+      'A 12 June 2026 OpenAlex pull tagged 128,286 blockchain papers. The same query on 16 August returned 133,681. Concepts are deprecated. Paper counts, live chains, and the law do not tell the same story.',
     url: '/stateofweb3',
-    keywords: ['Web3 Research', 'Blockchain Trends', 'Bibliometric Analysis', 'YoY Growth', 'Language Models', 'DeFi', 'RWA', 'Federated Learning'],
+    keywords: ['Web3', 'blockchain', 'OpenAlex', 'DeFi', 'NFT', 'post-quantum', 'CBDC', 'MiCA', 'smart contracts', 'China', 'India'],
   },
 };
 

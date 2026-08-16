@@ -42,7 +42,6 @@ import { DataSourceDisruption, MethodologicalEvolution, PolarizationFindings, Ob
 import { MonasteryPrincipleChart, AttentionSpanDecline, InterruptionCostChart, RetreatMovementsTimeline, SilenceEconomyChart } from '@/components/mdx/monasticism-charts';
 import { PlaybookHeroCard, AgentToolsMap, AutomationROIChart, ContentPipelineFlow, OutreachPipeline, AIMaturityLevels, ImplementationTimeline, NurtureSequence, ImplementationChecklist, SocialListeningMap, SupportTierChart, DashboardMetricsMap, UseCaseCatalog } from '@/components/mdx/playbook-charts';
 import { StateOfAiKeywordsChart, StateOfAiBigramsChart, StateOfAiTimeline, StateOfAiNgramAnalyzer, StateOfAiMomentum, StateOfAiGeography, StateOfAiCitations } from '@/components/mdx/stateofai-charts';
-import { StateOfWeb3KeywordsChart, StateOfWeb3BigramsChart, StateOfWeb3Timeline, StateOfWeb3NgramAnalyzer, StateOfWeb3ConvergenceMatrix, StateOfWeb3Momentum, StateOfWeb3Citations } from '@/components/mdx/stateofweb3-charts';
 import { SecurityConsolidation, ComputeValuationTable, AgentProductValuations, MarketplaceComposition, TopInvestorsTable } from '@/components/mdx/agentstack-charts';
 import { AIDetectorFeatureComparison } from '@/components/mdx/ai-detector-charts';
 
@@ -84,6 +83,7 @@ const ESSAY_GLOSSARY_LINKS: Record<string, string[]> = {
   'singularity': ['agi', 'llm', 'transformer'],
   'instinct': ['agi', 'llm', 'embeddings'],
   'blockchain': ['blockchain', 'smart-contract', 'defi', 'consensus-mechanism'],
+  'stateofweb3': ['blockchain', 'smart-contract', 'defi', 'zero-knowledge-proof'],
   'twilight': ['agent', 'llm', 'dao'],
   'sensory': ['multimodal-ai', 'agent', 'embeddings'],
   'liminal': ['agi', 'alignment'],
@@ -472,13 +472,6 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               StateOfAiMomentum,
               StateOfAiGeography,
               StateOfAiCitations,
-              StateOfWeb3KeywordsChart,
-              StateOfWeb3BigramsChart,
-              StateOfWeb3Timeline,
-              StateOfWeb3NgramAnalyzer,
-              StateOfWeb3ConvergenceMatrix,
-              StateOfWeb3Momentum,
-              StateOfWeb3Citations,
               VCValuationExpansionChart,
               VCGiniConcentrationChart,
               VCDeathValleyTimeline,

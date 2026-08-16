@@ -3,167 +3,230 @@ title: "The State of Web3"
 date: "2026-06-12"
 author: "Vedang Vatsa"
 category: "Web3"
-summary: "A bibliometric analysis of 128,286 academic papers classified as blockchain or cryptocurrency research by OpenAlex, cross-validated against Crossref, Europe PMC, arXiv, and DBLP. Tracking three eras of growth, the DeFi-NFT divergence, post-quantum urgency, and the global research map from 2013 through mid-2026."
+summary: "A 12 June 2026 OpenAlex pull tagged 128,286 blockchain papers. The same query on 16 August returned 133,681. Concepts are deprecated. Paper counts, live chains, and the law do not tell the same story."
+keywords: ["Web3", "blockchain", "OpenAlex", "DeFi", "NFT", "CBDC", "MiCA", "China", "India", "TradeLens", "e-CNY"]
 ---
 
-From 176 papers in 2013 to 20,668 in 2025, there is a **117x increase** in twelve years. Blockchain research has evolved through three distinct eras. A Bitcoin-only genesis (2013 to 2016), an Ethereum-driven explosion (2017 to 2019), and a maturing institutional phase (2020 to present) where annual output now exceeds 20,000 papers. Across **128,286 concept-tagged publications** indexed by OpenAlex through mid-2026, the data reveals a field that has decisively shifted from speculative experimentation to deployment-ready infrastructure, with post-quantum cryptography, regulatory compliance, and AI convergence emerging as the dominant research frontiers.
+On 12 June 2026 an OpenAlex pull tagged **128,286** papers as [blockchain](https://openalex.org/C2779687700) or [cryptocurrency](https://openalex.org/C180706569) between 2013 and mid-2026. Yearly output in that file went from 176 papers in 2013 to 20,668 in 2025. That is 117 times more papers in twelve years. The tables are in [Web3 Research Trends](https://doi.org/10.2139/ssrn.6990919) on SSRN.
 
-## I. Methodology
+The same tag filter, run on 16 August 2026, returned **133,681** papers for 2013 to 2026. That is 5,395 extra records in nine weeks. OpenAlex says [concepts are deprecated](https://developers.openalex.org/guides/deprecations): the tags still return results, and nobody updates them. The current tag, topic [T10270](https://openalex.org/T10270) ("Blockchain Technology Applications and Security"), returns **211,641** papers for the same years.
 
-This analysis draws on a primary corpus of **128,286** works tagged as [blockchain (C2779687700)](https://openalex.org/C2779687700) or [cryptocurrency (C180706569)](https://openalex.org/C180706569) by OpenAlex's concept classifier, published between 2013 and mid-2026, pulled **12 June 2026**. OpenAlex is a living index. Re-running later will not match digit-for-digit. Unlike a title keyword search, the tagger uses abstracts, citation networks, and metadata, so a healthcare-privacy paper that never puts "blockchain" in the title can still land in the corpus. It can also over-tag. Concept IDs are a classifier, not a human reading.
+I use the June file as a count from that day. Then I check it against live chains, court filings, and statutes. A paper count shows what people wrote. It does not show what still runs.
 
-The corpus was cross-checked against four other databases: [Crossref](https://www.crossref.org/) (124,333), [Europe PMC](https://europepmc.org/) (61,191), [arXiv](https://arxiv.org) (11,312), and [DBLP](https://dblp.org/) (37,246). Crossref is within 3% of OpenAlex. The others are smaller by design (life sciences, preprints, computer science proceedings). They are coverage checks, not identical universes. Journal articles are **68.9%**, book chapters 13.9%, preprints 8.2%. Open access is **50.2%** in this tagged corpus, against the **28%** all-fields Crossref snapshot in [Piwowar et al. (2018)](https://doi.org/10.7717/peerj.4375). Same caveat as the AI essay: that 28% is 2018, all fields.
+<Figure src="/images/essays/web3-volume.svg?v=2" alt="Papers tagged blockchain or cryptocurrency per year, 12 June 2026 OpenAlex pull. 176 in 2013 to 20,668 in 2025. Fastest jumps 2017 and 2018. Slowest 2024 at plus 1.8%." source="SSRN 6990919, 12 June 2026 pull" sourceUrl="https://doi.org/10.2139/ssrn.6990919" width={800} height={360} wide />
+
+## How to read a paper count
+
+Five counts get mixed. Mix them and a keyword jump reads like a boom, or a tracker row reads like a live currency.
+
+1. **June snapshot.** Papers with those two concept tags, pulled on 12 June 2026. Headline 128,286. This essay's charts. A count from that day.
+2. **Live concepts.** The same tags, queried later. On 16 August 2026: 133,681. OpenAlex [will keep serving concepts](https://developers.openalex.org/api-reference/concepts) and will not update them. About 65,000 concept labels, carried over from Microsoft Academic Graph.
+3. **Live topics.** OpenAlex's current tags, built with CWTS. About 4,500 topics. T10270 for 2013 to 2026: 211,641. A different set. Not a fix of the June file.
+4. **Keyword net.** A wider abstract search in the June paper: 1,938,409 papers. An upper bound. Not the tagged set.
+5. **Live systems.** Value locked, court dockets, statutes, CBDC trackers, shipping platforms. These do not move when abstracts do.
+
+[Priem, Piwowar, and Orr (2022)](https://arxiv.org/abs/2205.01833) built OpenAlex as an open replacement for Microsoft Academic Graph. How to cite it is on the [help page](https://help.openalex.org/hc/en-us/articles/28761511652247-How-can-I-cite-OpenAlex). Run the same query later and the digits will change. That is how the index works.
+
+The two concept tags overlap. On 16 August, for 2013 to 2026, blockchain alone was 102,916 papers and cryptocurrency alone was 40,178. Add them and you get 143,094. The combined set is 133,681. **9,413 papers carry both tags.** The `works_count` figures on the tag pages (122,694 and 71,167) cover all years, not 2013 to 2026. Do not add those two figures and call the sum the field.
+
+The yearly bars in the June chart add up to **127,286**. The paper's tagged total is **128,286**. The 1,000-record gap is in the snapshot. The 16 August yearly buckets add up exactly to 133,681. I cannot close the 1,000 from the published year splits. Use 128,286 as the paper's headline. Use the yearly bars as the published year splits.
+
+<div class="table-wrapper table-wrap-text">
+
+| Query | Date | Count | What it is |
+| --- | ---: | ---: | --- |
+| Concepts C2779687700 or C180706569, 2013 to mid-2026 | 12 Jun 2026 | 128,286 | SSRN paper. This essay's tables. |
+| Yearly bars in that chart, summed | 12 Jun 2026 | 127,286 | Same snapshot. 1,000 short of the headline. |
+| Same concepts, 2013 to 2026 | 16 Aug 2026 | 133,681 | Live API. Index moved. |
+| Blockchain concept only, 2013 to 2026 | 16 Aug 2026 | 102,916 | One tag. Not the combined set. |
+| Cryptocurrency concept only, 2013 to 2026 | 16 Aug 2026 | 40,178 | One tag. Overlap with blockchain is 9,413. |
+| Topic T10270, 2013 to 2026 | 16 Aug 2026 | 211,641 | Current OpenAlex tag. |
+| Abstract keyword search for Web3 words | 12 Jun 2026 | 1,938,409 | Wider net. Not the tagged set. |
+
+</div>
+
+The June paper also checked other databases as coverage, not as copies. Crossref 124,333 (within 3% of the June file). Europe PMC 61,191. arXiv 11,312. DBLP 37,246. Those four figures are from the 12 June pull. I did not re-run them on 16 August. Journal articles are 68.9% of the tagged set, book chapters 13.9%, preprints 8.2%. Open access is 50.2% here. [Piwowar, Priem, Larivière, et al. (2018)](https://doi.org/10.7717/peerj.4375) put all-field Crossref journal articles at 28% open access. That 28% is 2018, all fields.
+
+Earlier counts were smaller because the field was smaller. [Miau and Yang (2018)](https://doi.org/10.1080/09537325.2018.1434138) stopped in 2017. [Dabbagh, Sookhak, and Safa (2019)](https://doi.org/10.1109/ACCESS.2019.2895646) swept IEEE Access. [Casino, Dasaklis, and Patsakis (2019)](https://doi.org/10.1016/j.tele.2018.11.006) classified applications. [Ante (2020)](https://doi.org/10.1016/j.tele.2020.101519) counted smart-contract papers. The June file is about 100 times larger than those studies. A larger file is still a file of papers.
+
+## What people say, and what the record is
+
+<div class="table-wrapper table-wrap-text">
+
+| Public claim | Source | What the record actually is |
+| --- | --- | --- |
+| 128,286 blockchain papers | SSRN 6990919, 12 Jun 2026 | Concept-tagged papers that day. Yearly bars sum to 127,286. |
+| Same field, nine weeks later | OpenAlex API, 16 Aug 2026 | 133,681. 2026 alone: 8,419 to 13,885. |
+| 211,641 papers | Topic T10270 | A different tag, not an update of the June file. |
+| DeFi mentions grew 74x | June abstracts, 2019 to 2025 | The word in an abstract. Not dollars locked. |
+| 11,418 supply-chain papers | June bigrams | Abstracts. TradeLens shut in 2022. |
+| 205 CBDC papers in 2025 | June file | Papers. Not 205 live currencies. |
+| 146 countries on a CBDC | Atlantic Council, May 2026 | In the tracker, including research. 3 retail launches. e-CNY is still a pilot. |
+| $35T stablecoin volume | CoinDesk / McKinsey / Artemis, 2025 | On-chain transfers. Genuine payments printed as both $390B and $380B. |
+| China leads the literature | June geo, 17,258 papers | Author country. PBOC banned virtual-currency business in 2021. |
+| India is close second | June geo, 17,037 papers | Author country. 30% tax on VDA transfer. Chainalysis 2023 everyday-use #1. |
+
+</div>
 
 <ResearchPaper
-  title="Blockchain Research Trends - A Bibliometric Analysis of 128,286 Papers (2013-2026)"
+  title="Web3 Research Trends"
   authors="Vedang Ratan Vatsa"
   date="June 2026"
-  venue="Zenodo"
-  doi="https://doi.org/10.5281/zenodo.20832738"
-  abstract="A bibliometric analysis of 128,286 blockchain and cryptocurrency research papers indexed by OpenAlex (2013 to mid-2026), covering publication volume, keyword frequency, fastest-rising research themes, geographic distribution, citation dynamics, and cross-validation against four independent databases."
+  venue="SSRN"
+  doi="https://doi.org/10.2139/ssrn.6990919"
+  abstract="128,286 OpenAlex works tagged blockchain or cryptocurrency, 2013 to mid-2026. A wider keyword search finds 1,938,409 papers. Annual tagged output grew 117 times from 2013 to 2025. DeFi mentions grew 74 times from 2019 to 2025. NFT mentions peaked in 2023. China 13.5%, India 13.3%. 43.5% of papers have zero citations."
 />
 
-## II. The Research Map
+## Most of the extra papers are from 2026
 
-**Publication Volume & Milestone Timeline**
-Track the 117x growth trajectory from Bitcoin-era genesis to institutional-era maturation.
+The 16 August [group-by-year](https://api.openalex.org/works?filter=publication_year:2013-2026,concepts.id:C180706569%7CC2779687700&group_by=publication_year) call adds up to 133,681. Against the June yearly bars:
 
-<StateOfWeb3Timeline />
+<div class="table-wrapper">
 
-The keyword analysis across the full corpus exposes a clear hierarchy of research priorities. **"Blockchain"** appears in **68.5%** of all abstracts (87,818 papers), the universal anchor term. **"Security"** ranks third at **46.3%** (59,388 papers), confirming that trust and tamper-resistance remain central to blockchain's value proposition. Nearly half of all blockchain papers discuss security in their abstracts.
+| Year | 12 Jun 2026 | 16 Aug 2026 | Change |
+| ---: | ---: | ---: | ---: |
+| 2013 | 176 | 177 | +1 |
+| 2017 | 2,520 | 2,523 | +3 |
+| 2018 | 6,995 | 7,045 | +50 |
+| 2024 | 17,993 | 18,137 | +144 |
+| 2025 | 20,668 | 21,017 | +349 |
+| 2026 | 8,419 | 13,885 | +5,466 |
+| **All years in the filter** | **128,286 headline** | **133,681** | **+5,395** |
 
-The critical signal is that **"smart contract"** (29.9%) has overtaken **"bitcoin"** (27.9%) in abstract frequency. The field's center of gravity has moved from cryptocurrency mechanics to programmable execution layers. "Supply chain" (19.3%), "healthcare" (13.7%), and "energy" (16.0%) reflect blockchain's expansion into applied domains.
+</div>
 
-**Linguistic N-Gram Corpus Frequency Analyzer**
-Toggle between unigrams, bigrams, and trigrams to analyze which concepts dominate 128,286 paper abstracts.
-
-<StateOfWeb3NgramAnalyzer />
-
-<StatRow>
-  <Stat label="Papers Analyzed" value="128,286" trend="up" />
-  <Stat label="Top Bigram" value="Blockchain Technology (44,102)" />
-  <Stat label="Zero-Citation Rate" value="43.5%" />
-</StatRow>
-
-Five structural findings define the current research map.
-
-- **Infrastructure Integration, Not Standalone Products.** **"Blockchain technology"** (44,102 mentions) and **"blockchain based"** (18,516) dominate bigrams. Researchers treat blockchain as a modular component (an immutable audit layer, a state synchronization engine) within broader enterprise systems, not a monolithic replacement.
-- **Smart Contract Maturation.** **"Smart contract"** appears in 21,134 bigram mentions and 38,414 unigram mentions (29.9% of abstracts). The research focus has shifted from conceptual design to formal verification, vulnerability auditing, and production-grade deployment.
-- **Supply Chain Dominance.** **"Supply chain"** (11,418 bigram mentions) remains the single largest non-financial application vertical. Global logistics and manufacturing consortiums continue to build blockchain-based provenance, anti-counterfeiting, and multi-party transparency systems.
-- **The Blockchain-AI Convergence.** **"Machine learning"** (5,667) and **"artificial intelligence"** (5,463) together account for **11,130 combined mentions**, the largest technology convergence in the corpus. Papers apply AI to blockchain problems (anomaly detection, MEV optimization) and use blockchain for AI governance (decentralized model training, data provenance).
-
-<StateOfWeb3ConvergenceMatrix />
-- **Sovereign Digital Currencies.** **"Central bank digital"** (867 trigram mentions) and **"bank digital currency"** (864) reflect the institutional pivot toward CBDC infrastructure, with CBDC research growing from 1 paper in 2016 to 205 in 2025 as central banks deploy pilot programs globally.
-
-### Method Lifecycles
-
-To trace the development of different blockchain technologies, we map the relative growth and maturity of key terms onto an interpretive research Hype Cycle. 
-
-- **Innovation trigger and ascending hype.** Emerging topics such as "quantum resistant" and "real world asset" occupy the Innovation Trigger phase due to high growth ratios off small baselines.
-- **Peak of inflated expectations.** Scalability infrastructure like "layer 2" and "zk rollup" are located near the Peak of Inflated Expectations, alongside "regulatory" frameworks.
-- **Trough of disillusionment.** "NFT" and "metaverse" research sit in the Trough of Disillusionment, following a contraction in paper volume.
-- **Slope of enlightenment.** Core DeFi concepts and interoperability protocols are positioned in the Slope of Enlightenment.
-- **Plateau of productivity.** Foundational elements like "smart contract", "consensus", and "supply chain" are in the Plateau of Productivity.
-
-<Figure
-  src="/images/essays/fig_web3_hype_cycle.png"
-  alt="Blockchain research hype cycle based on keyword growth trajectories. Placement is interpretive, informed by the growth rates and temporal patterns. Data: 128,286 papers from OpenAlex (2013-2026)."
-  caption="Figure 4: Blockchain research hype cycle based on keyword growth trajectories."
-  wide={true}
-/>
-
-## III. Three Eras of Blockchain Research
-
-The publication volume data reveals three distinct phases in blockchain's academic trajectory.
-
-**The Bitcoin Era (2013 to 2016).** Annual output grew from **176 to 955 papers**. Research focused on cryptocurrency mechanics, mining economics, and Bitcoin transaction analysis. The total output of 2,111 papers over four years is smaller than a single month of 2025 output.
-
-**The Smart Contract Era (2017 to 2019).** Growth was fastest at **+163.9%** in 2017 and **+177.6%** in 2018, the highest YoY expansion in the corpus. Ethereum's smart contract platform and the 2017 ICO boom generated massive academic interest. Annual output increased 11x from 955 (2016) to 10,591 (2019) in three years.
-
-**The Institutional Era (2020 to present).** Growth decelerated as the field matured. 2024's **+1.8%** is the lowest annual increase in the series. Research pivoted to deployment: layer 2, zero-knowledge proofs, regulation, stablecoins, real-world assets, CBDCs, post-quantum. Papers from 2020 through mid-2026 are **82.7%** of the corpus (106,069 / 128,286). The 2026 slice in that share is **8,419** observed works, not the ~18,800 full-year estimate on the chart.
+Almost all of the extra papers are 2026 filling in. The June pull was mid-year. By mid-August the 2026 bucket had 13,885 papers. Years before 2026 in the chart moved by 929 records in total, including a 6-paper drop in 2015. Older years barely moved. 2026 was an incomplete year in June.
 
 <StatRow>
-  <Stat label="117x Growth" value="176 → 20,668 papers" trend="up" />
-  <Stat label="Lowest YoY" value="+1.8% (2024)" />
-  <Stat label="Post-2020 Share" value="82.7% of corpus" />
+  <Stat label="June 2026 tagged set" value="128,286" source="SSRN 6990919" sourceUrl="https://doi.org/10.2139/ssrn.6990919" />
+  <Stat label="Same query, 16 Aug 2026" value="133,681" source="OpenAlex API" sourceUrl="https://api.openalex.org/works?filter=publication_year:2013-2026,concepts.id:C180706569%7CC2779687700" />
+  <Stat label="Topic T10270, 16 Aug 2026" value="211,641" source="OpenAlex API" sourceUrl="https://api.openalex.org/works?filter=publication_year:2013-2026,topics.id:T10270" />
 </StatRow>
 
-## IV. The DeFi-NFT Divergence
+## What the papers were about, year by year
 
-DeFi and NFTs followed sharply different research trajectories, and the divergence is instructive.
+**2013 to 2016.** 176 to 955 papers. The object was still [Nakamoto (2008)](https://bitcoin.org/bitcoin.pdf): stop double-spending without a bank. [Lamport, Shostak, and Pease (1982)](https://lamport.azurewebsites.net/pubs/byz.pdf) asked how generals agree when some messengers lie. Those four years in the chart sum to 2,111 papers, about five weeks of 2025 output.
 
-**DeFi research continues to accelerate.** From near-zero papers before 2019 (7 papers), mentions grew to 12 in 2020, 63 in 2021, and **516 in 2025**, a **74x increase** over six years. The 2025 count exceeds all prior years. The annualized 2026 estimate (~584 papers) suggests continued acceleration. DeFi addresses a persistent structural problem (financial intermediation) with measurable efficiency gains.
+**2017 to 2019.** 2017 grew 164% to 2,520. 2018 grew 178% to 6,995, the fastest year in the June file. [Buterin's Ethereum whitepaper](https://ethereum.org/en/whitepaper/) and [Wood's Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) turned a ledger into a computer that stores state. [Androulaki et al. (2018)](https://doi.org/10.1145/3190508.3190538) described Hyperledger Fabric for firms that wanted a chain only invited members can write to. By 2019 the yearly count was 10,591.
 
-**NFT research has peaked and declined.** NFT mentions grew to 60 in 2021, peaked at **426 in 2023**, then fell to 334 in 2024. The 2023 peak coincides with the collapse of NFT trading volumes. A modest recovery to 366 in 2025 suggests stabilization around a sustainable baseline, with scholars analyzing underlying technology (provenance, digital ownership) rather than speculative marketplaces.
+**2020 to now.** Growth slowed. 2024 grew 1.8%. Papers from 2020 through mid-2026 are 82.7% of the June file (106,069 of 128,286). The 2026 slice in that share is 8,419 papers seen by 12 June, not a full year. Ethereum's Merge on 15 September 2022 ended proof-of-work. The old Foundation blog post for that day now [404s](https://blog.ethereum.org/2022/09/15/the-merge-is-here). The live page is [ethereum.org/roadmap/merge](https://ethereum.org/roadmap/merge/). [ethereum.org's energy page](https://ethereum.org/en/energy-consumption/) cites CCRI: about 2,601 MWh a year after the switch (0.0026 TWh), a drop of more than 99.988% in electricity and about 99.992% in carbon against proof-of-work. Those are estimates. The page says they are not an official Foundation promise. The comparison table on that page, figures accessed July 2023, puts Bitcoin at 149 TWh/yr, about 53,000 times proof-of-stake Ethereum. Bitcoin demand moves daily. The live index is the [Cambridge Bitcoin Electricity Consumption Index](https://ccaf.io/cbnsi/cbeci).
 
-<PullQuote author="Research Trajectory Analysis" role="128,286-paper corpus">
-"DeFi research grew 74x from 2019 to 2025 with no sign of deceleration. NFT research peaked in 2023 and is declining. Academic interest follows demonstrated utility, not market speculation."
-</PullQuote>
+## Supply chain is the big non-finance topic. The big shipping product shut down.
 
-## V. Post-Quantum Urgency
+"Blockchain" is in 68.5% of June abstracts (87,818). "Security" is in 46.3% (59,388). [Zheng, Xie, Dai, Chen, and Wang (2018)](https://doi.org/10.1504/IJWGS.2018.095647) listed failure modes early. [Khan and Salah (2018)](https://doi.org/10.1016/j.future.2017.11.022) did the same for IoT. Security stayed in the abstracts. "Smart contract" is in 29.9% (38,414). "Bitcoin" is in 27.9%.
 
-The fastest-rising keywords in the corpus are dominated by quantum-resistance research. **"Quantum resistant"** grew **6.6x** (from 37 to 243 papers) and **"post-quantum"** grew **3.9x** (95 to 367 papers) between the 2022 to 2023 and 2025 to 2026 periods. Together they account for **610 papers** in 2025 to 2026. This is a research community preparing for a potential existential threat to existing blockchain systems.
+<Figure src="/images/essays/web3-terms.svg?v=2" alt="Top two-word phrases in the June 2026 tagged set. Blockchain technology 44,102. Smart contract 21,134. Supply chain 11,418." source="SSRN 6990919" sourceUrl="https://doi.org/10.2139/ssrn.6990919" width={400} height={380} />
 
-The urgency is a research-agenda fact, not a calendar for a cryptographically relevant quantum computer. Most public chains still use elliptic-curve signatures (ECDSA on Bitcoin and Ethereum) that Shor's algorithm would break given a large enough machine. [NIST's first three post-quantum FIPS](https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards) (August 2024) standardized ML-KEM (Kyber), ML-DSA (Dilithium), and SLH-DSA (SPHINCS+). That is the event that moved academic work. It is not a date when ECDSA dies.
+"Blockchain technology" (44,102) and "blockchain based" (18,516) are how authors add a ledger to some other system. "Supply chain" is the largest non-finance job at 11,418. [Saberi, Kouhizadeh, Sarkis, and Shen (2019)](https://doi.org/10.1080/00207543.2018.1533261) tied it to sustainability claims. [Christidis and Devetsikiotis (2016)](https://doi.org/10.1109/ACCESS.2016.2566339) tied it to IoT.
 
-The full momentum map across all rising research themes is below.
+The largest industry test of that claim was TradeLens, a Maersk and IBM shipping platform announced in 2018. On 29 November 2022, [Maersk said it would shut the platform](https://www.maersk.com/news/articles/2022/11/29/maersk-and-ibm-to-discontinue-tradelens). The [19 December 2022 Wayback capture](https://web.archive.org/web/20221219103843/https://www.maersk.com/news/articles/2022/11/29/maersk-and-ibm-to-discontinue-tradelens) still has the text. The companies wrote that they had built a working platform, but "the need for full global industry collaboration has not been achieved," and it had not reached "the level of commercial viability necessary to continue work and meet the financial expectations as an independent business." The plan was to go offline by the end of Q1 2023. Supply-chain papers kept arriving after that. The June file does not subtract dead products.
 
-<StateOfWeb3Momentum />
+Health and privacy have early papers and smaller counts. [Zyskind, Nathan, and Pentland (2015)](https://doi.org/10.1109/SPW.2015.27) stored pointers to personal data, not the data. [Ekblaw, Azaria, Halamka, and Lippman](https://doi.org/10.1109/OBD.2016.11) built MedRec. "Healthcare" is in 13.7% of abstracts. "Machine learning" (5,667) plus "artificial intelligence" (5,463) is 11,130 mentions. [Kosba, Miller, Shi, Wen, and Papamanthou (2016)](https://doi.org/10.1109/SP.2016.55) hid contract internals (Hawk). [Lu, Huang, Zhang, Maharjan, and Zhang (2020)](https://doi.org/10.1109/TVT.2020.2973651) put federated learning on a ledger for vehicles. Those papers exist. 11,130 mentions is not 11,130 deployments.
+
+## DeFi papers rose. Locked dollars did not move as one line.
+
+DeFi mentions: 7 papers in 2019, 12 in 2020, 63 in 2021, **516 in 2025**. That is 74 times in six years. NFT mentions: 60 in 2021, **426 in 2023**, 334 in 2024, 366 in 2025.
+
+<Figure src="/images/essays/web3-defi-nft.svg?v=2" alt="DeFi abstract mentions 7 in 2019 to 516 in 2025. NFT mentions peaked at 426 in 2023." source="SSRN 6990919" sourceUrl="https://doi.org/10.2139/ssrn.6990919" width={400} height={300} />
+
+[Uniswap's docs](https://docs.uniswap.org) still describe the pool that replaced the order book. Live value locked is a different meter. [DefiLlama](https://defillama.com) is the public index. Its [2025 sector note](https://defillama.com/research/report/state-of-defi-2025) does not give one number for "DeFi." It splits:
+
+- Lending TVL rose from $48.15 billion to $64.06 billion inside 2025. Top ten protocols held $57.00 billion, 89.0% of lending TVL.
+- Liquid staking slipped from $58.73 billion to $57.62 billion.
+- Restaking fell from $23.85 billion to $18.78 billion, a 21.2% drop.
+- Tokenised US Treasuries and money-market products rose from $3.87 billion at end-2024 to $9.12 billion by late 2025.
+
+A paper count can rise while some locked-dollar series rise and others fall. They are not the same series.
+
+The algorithmic stablecoin that blew up is in a court file. It is also in abstracts. On 16 February 2023 the [SEC charged Terraform Labs and Do Kwon](https://www.sec.gov/newsroom/press-releases/2023-32) with a multi-billion-dollar securities fraud around UST, LUNA, and related tokens. Enforcement Director Gurbir S. Grewal said, as alleged, "the Terraform ecosystem was neither decentralized, nor finance." On 5 April 2024 a jury found them liable for securities fraud. On 13 June 2024 the [SEC announced a package above $4.5 billion](https://www.sec.gov/newsroom/press-releases/2024-73): Terraform $3,586,875,883 disgorgement, $466,952,423 interest, $420 million penalty; Kwon $110 million disgorgement and $14,320,196 interest, joint and several with Terraform, plus an $80 million penalty. That release says the May 2022 de-peg "wiped out $40 billion in market value nearly overnight." Academics kept writing about DeFi after that. They wrote about reserved dollars and over-collateralized loans, not about UST.
+
+NFT paper volume peaked in 2023, after the speculative market had already broken. Later papers are more about who owned an item than about profile pictures. The June file does not prove NFTs "found a use." It proves the word stayed in abstracts after the floor prices died.
+
+Stablecoins already move money. The payment claim is smaller than the chain volume. [CoinDesk, citing McKinsey and Artemis](https://www.coindesk.com/business/2026/01/23/stablecoins-moved-usd35-trillion-last-year-but-only-1-of-it-was-for-real-world-payments) (23 January 2026), put 2025 on-chain stablecoin volume above $35 trillion. The same article prints **$390 billion** of "genuine" payments in the summary and **$380 billion** in the body ($226 billion B2B, $90 billion payroll and remittances, $8 billion capital markets). Those two figures do not match. The finding is about 1%. The article cannot settle $380 billion vs $390 billion. McKinsey put the global payments market above $2 quadrillion, so even the higher figure is about 0.02% of that total. Circle and Tether still dominate issuance.
+
+## Keywords that rose, and what actually shipped
+
+Growth ratios in the June file compare 2025-2026 mentions to 2022-2023. A 6x jump off 37 papers is not the same as a 3x jump off 4,000.
+
+<Figure src="/images/essays/web3-rising.svg?v=2" alt="Fastest-rising terms in the June file. Quantum resistant 6.6x. Real world asset 5.6x. Layer 2 4.2x. zk rollup 3.4x off 34 papers." source="SSRN 6990919" sourceUrl="https://doi.org/10.2139/ssrn.6990919" width={400} height={420} />
+
+**Post-quantum.** "Quantum resistant" grew 6.6x (37 to 243). "Post-quantum" grew 3.9x (95 to 367). Together, 610 papers in 2025-2026. Bitcoin and Ethereum still sign with elliptic curves. [Shor (1994)](https://arxiv.org/abs/quant-ph/9508027) showed a large quantum computer would break those signatures. There is no such machine on the public record. What moved the papers is a standards event. On 13 August 2024, [NIST published FIPS 203, 204, and 205](https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards). [FIPS 203](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf) is ML-KEM. The [CSRC PQC page](https://csrc.nist.gov/groups/ST/post-quantum-crypto/) tells operators to start migrating. It does not give a date when ECDSA dies.
+
+**Scale.** "Layer 2" grew 4.2x (275 papers). "zk rollup" grew 3.4x off **34** papers. The count rose. Do not treat 3.4x as a volume story. [Buterin's 2021 rollup note](https://vitalik.eth.limo/general/2021/01/05/rollup.html) is still the map: execute off the base chain, post data or a proof back. [L2BEAT](https://l2beat.com/scaling/summary) tracks live rollups. The page is JavaScript. I did not copy a TVL figure from a blank HTML fetch. "Zero knowledge" grew 2.1x (743). The SSRN abstract flags that 2.1x as the fastest rise among cryptographic primitives.
+
+**Rules and tokens.** "Regulatory" grew 3.5x and the count is large: 4,529 papers. "Real world asset" grew 5.6x off 89 papers. "Stablecoin" grew 2.7x (576). "DeFi" grew 2.6x (808). "NFT" and "metaverse" sit at 0.8x.
+
+[BlackRock launched BUIDL](https://www.businesswire.com/news/home/20240320771318/en) on Ethereum on 20 March 2024, a tokenized money-market fund for qualified investors, $5 million minimum, cash and Treasuries and repo, tokens targeting $1. That is a product. 89 "real world asset" papers are not 89 BUIDLs. DefiLlama's tokenised-Treasury line ($3.87 billion to $9.12 billion in 2025) is closer to live dollars.
+
+## Laws arrived. Paper counts followed later.
+
+The EU's [Markets in Crypto-Assets Regulation](https://eur-lex.europa.eu/eli/reg/2023/1114/oj) (Regulation (EU) 2023/1114) was adopted on 31 May 2023 and published on 9 June 2023. It is the first EU-wide set of rules for issuance and crypto-asset services.
+
+The US followed on stablecoins. The [GENIUS Act](https://www.congress.gov/bill/119th-congress/senate-bill/1582) became [Public Law 119-27 on 18 July 2025](https://www.govinfo.gov/content/pkg/PLAW-119publ27/pdf/PLAW-119publ27.pdf). Payment stablecoins, 1:1 reserves. Signing remarks are in the [Daily Compilation](https://www.govinfo.gov/content/pkg/DCPD-202500778/html/DCPD-202500778.htm). The remaining design in statute is the reserved dollar, not the algorithmic one the SEC sued.
+
+Spot Bitcoin exchange-traded products were approved on 10 January 2024. [Chair Gensler's statement](https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023) is the public-market event. He wrote that the Commission did not approve bitcoin itself.
+
+## 146 countries sit on a tracker. Three launched. The largest rail is still a pilot.
+
+The [Atlantic Council tracker](https://www.atlanticcouncil.org/cbdctracker/) (May 2026) has 146 countries and currency unions with a CBDC entry, covering over 98% of world GDP, up from 87 in May 2022. 77 are in development, pilot, or launch. 41 pilots. Three retail CBDCs have launched: the Bahamas, Jamaica, and Nigeria. Every G20 member except the US is in the tracker. Canada, Australia, and Norway have stepped back from retail. The [BIS Innovation Hub CBDC page](https://www.bis.org/about/bisih/topics/cbdc.htm) covers the technical work. The [ECB digital euro page](https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html) is the euro-area project. India's [RBI concept note](https://rbi.org.in/scripts/PublicationReportDetails.aspx?ID=1218) set out an e-rupee. CBDC papers in the June file go from 1 in 2016 to 205 in 2025. They follow official work. They are not 205 live currencies.
+
+The tracker splits "launch" from "pilot." Volume and legal status do not line up.
+
+<div class="table-wrapper table-wrap-text">
+
+| Tracker bucket (May 2026) | Count | What it is |
+| --- | ---: | --- |
+| In the tracker for a CBDC | 146 | Research through launch. 98% of world GDP. |
+| Development, pilot, or launch | 77 | "Advanced" in the tracker. |
+| Pilots | 41 | Includes e-CNY, the largest by volume. |
+| Retail CBDCs fully launched | 3 | Bahamas, Jamaica, Nigeria. |
+
+</div>
+
+By December 2025, according to the same tracker, retail e-CNY had processed more than 3.4 billion transactions worth about 16.7 trillion yuan (~$2.3 trillion). In January 2026 the PBOC reclassified e-CNY as deposit liabilities. The Bahamas, Jamaica, and Nigeria are the three full launches. The largest rail is still in the pilot column.
+
+Nigeria launched eNaira in October 2021. The IMF's [May 2023 working paper](https://www.imf.org/-/media/files/publications/wp/2023/english/wpiea2023104-print-pdf.pdf) (WP/23/104) found about 14,000 transactions a week, 98.5% of wallets unused in a given week, and average weekly value of 923 million naira, 0.0018% of M3. The Fund called public adoption "disappointingly low." A later Article IV staff report, as quoted in [BusinessDay](https://businessday.ng/news/article/three-years-in-enaira-struggles-as-transactions-crawl-to-n29bn/), put cumulative transactions at 854,512 and N29.3 billion against N611 trillion of electronic payments in Nigeria in 2023.
+
+China is the opposite case. Cryptocurrency trading is illegal. The [PBOC and nine other departments](https://www.pbc.gov.cn/tiaofasi/144941/3581332/4348658/index.html) issued 银发〔2021〕237号 in September 2021: virtual currency has no legal-tender status, related businesses are illegal financial activity, overseas exchanges serving mainland residents are also illegal. The [NDRC mining notice](https://www.gov.cn/zhengce/zhengceku/2021-09/25/content_5639225.htm) (发改运行〔2021〕1283号, 3 September 2021) ordered existing mines out and cut finance and power. The e-CNY is the state substitute. [Atlantic Council, 15 January 2026](https://www.atlanticcouncil.org/blogs/econographics/what-to-watch-as-china-prepares-its-digital-yuan-for-prime-time/), citing PBOC year-end data, matches the tracker on the 3.4 billion transactions and 16.7 trillion yuan. Project mBridge, after the BIS stepped back in October 2024, had processed about $55.49 billion, with e-CNY about 95% of settlement. That is not bitcoin. It is a central bank payment system.
+
+The [Blockchain-based Service Network introductory whitepaper](https://bsnbase.io/static/tmpFile/BSNIntroductionWhitepaper.pdf) (5 February 2020) describes a network for government and firm chains that invited members write to. Chinese paper volume can be high while "Bitcoin" as a keyword is no longer the center. Inside China the legal topic is not a public coin.
+
+## China and India write the papers. The US writes the listings.
+
+China 17,258 papers (13.5%). India 17,037 (13.3%). United States 12,488 (9.7%). Top three: 36.5% of the June file. In most computer-science fields the US is first or second. Here it is third.
+
+<Figure src="/images/essays/web3-countries.svg?v=2" alt="Country counts in the June file. China 17,258. India 17,037. United States 12,488." source="SSRN 6990919" sourceUrl="https://doi.org/10.2139/ssrn.6990919" width={400} height={280} />
+
+OpenAlex assigns a paper to every co-author country, so shares can overlap. Read this as where authors sit.
+
+The country split matches use more than it matches famous US universities. [Chainalysis's 2023 Global Crypto Adoption Index](https://www.chainalysis.com/blog/2023-global-crypto-adoption-index/) put India first in everyday use. Nigeria second, Vietnam third, the United States fourth. The [2023 geography report](https://www.chainalysis.com/wp-content/uploads/2024/06/the-2023-geography-of-cryptocurrency-report-release.pdf) put India second in raw estimated volume after the US, about $250 billion received in the year to June 2023. That was after [section 115BBH](https://incometaxindia.gov.in/Acts/Income-tax%20Act,%201961/2022/102120000000079592.htm) of the Income-tax Act (Finance Act 2022): 30% on transfer of a virtual digital asset, no expense other than cost of acquisition, no loss set-off. [Section 194S](https://www.incometaxindia.gov.in/w/section-194s-4) deducts 1% TDS. People used crypto anyway. Indonesia is rank 6 in the June paper file (3,106) and rank 7 on that adoption index. Saudi Arabia is rank 10 here (2,423).
+
+No single US university sits in the top eight institutions in the June file. The [Chinese Academy of Sciences](https://english.cas.cn) has 924 papers. Indian Institutes of Technology occupy two of the top six slots. US work is spread. A high paper count is not a quality ranking. Citation-weighted lists can rank the same countries differently. The [State of AI essay](/stateofai) has the same warning on a five-million-paper pull.
+
+China leads the paper count and bans the public coin. India is a close second in papers, first in everyday use, and taxes that use at 30%. The US is third in papers and first in the products that list on NYSE and Nasdaq.
 
 <StatRow>
-  <Stat label="Quantum Resistant" value="6.6x growth" trend="up" />
-  <Stat label="Layer 2 Scaling" value="4.2x growth" trend="up" />
-  <Stat label="Regulatory Research" value="3.5x (4,529 papers)" trend="up" />
+  <Stat label="China" value="17,258 (13.5%)" source="SSRN 6990919" sourceUrl="https://doi.org/10.2139/ssrn.6990919" />
+  <Stat label="India" value="17,037 (13.3%)" source="SSRN 6990919" sourceUrl="https://doi.org/10.2139/ssrn.6990919" />
+  <Stat label="United States" value="12,488 (9.7%)" source="SSRN 6990919" sourceUrl="https://doi.org/10.2139/ssrn.6990919" />
 </StatRow>
 
-Four categories structure the fastest-rising terms.
+## Most of these papers will not be cited
 
-1. **Post-Quantum Security.** "Quantum resistant" (6.6x) and "post-quantum" (3.9x), totaling 610 combined papers preparing blockchain for the quantum threat.
-2. **Scalability Infrastructure.** "Layer 2" (4.2x), "zk rollup" (3.4x), and "cross chain" (2.0x). zk-rollup's 2025-2026 count is **34** papers. The 3.4x is a small-n ratio. Direction is up. Do not treat 3.4x as a volume story.
-3. **Institutional Adoption.** "Regulatory" (3.5x, 4,529 papers), "real world asset" (5.6x), and "stablecoin" (2.7x). Research focused on institutional finance, not experimental protocols.
-4. **Core DeFi.** "DeFi" (2.6x), "decentralized finance" (2.0x), and "interoperability" (2.2x). Sustained growth as protocols mature and cross-chain infrastructure develops.
+43.5% of the 128,286 papers have zero citations. 31.5% have 1 to 13. 20% have 14 to 41. 5% have 42 or more. The 99th percentile sits at 249. [Nakamoto (2008)](https://bitcoin.org/bitcoin.pdf) is an outlier at 14,286 OpenAlex citations in the June pull. [Zheng et al. (2017)](https://doi.org/10.1109/BigDataCongress.2017.85) is the survey a thousand later papers cite instead of citing the primary system. Melanie Swan's [2015 book](https://www.oreilly.com/library/view/blockchain-blueprint/9781491920480/) still collects citations. The long tail of "blockchain based X for Y" does not.
 
-**Declining terms** confirm the pattern. "NFT" declined to 0.8x and "metaverse" to 0.8x. Both experienced hype-driven peaks and are now in structural contraction.
+<Figure src="/images/essays/web3-citations.svg?v=2" alt="Citation split in the June file. 43.5% zero citations. 5% have 42 or more." source="SSRN 6990919" sourceUrl="https://doi.org/10.2139/ssrn.6990919" width={400} height={260} />
 
-## VI. The Global Research Map
+82.7% of the tagged set is from 2020 on. New papers have had little time. Average citations per paper in the yearly file fall from 85.0 in 2013 to 0.8 in 2025. That is new papers plus too many papers. It is not proof that 2025 papers are worse. It is proof that citation totals lag, and that most of this file will never be read twice.
 
-China and India have reached **near-parity** at the top of global blockchain research output, a finding that contrasts with most other computer science fields where China leads by a wider margin.
+## Quote a date and a filter
 
-**China** leads with **17,258 papers** (13.5%), followed by **India** at **17,037** (13.3%) and the **United States** at **12,488** (9.7%). The top three countries account for 36.5% of all papers. The US ranking of third is notable. In most computer science research rankings, the US holds first or second position. Regulatory uncertainty around cryptocurrency may have dampened American academic engagement.
+If you cite 128,286 as the size of Web3 research in 2026, say the pull date and the tag. A later reader who uses topics will get 211,641 and think you padded. A later reader who uses concepts will get 133,681 and think you undercounted. Neither number is TradeLens, UST, eNaira, or e-CNY.
 
-Emerging research economies contribute significantly. **Indonesia** (3,106 papers, rank 6) reflects Southeast Asia's high cryptocurrency adoption rate. **Saudi Arabia** (2,423, rank 10) signals Gulf states' strategic investment in blockchain and fintech infrastructure. No single US institution appears in the top eight institutional rankings. American blockchain research is distributed across many institutions rather than concentrated in a few.
+Supply-chain papers kept arriving after Maersk shut TradeLens. DeFi papers kept arriving after the SEC sued Terraform. Lending TVL rose in 2025 while restaking fell. NFT papers peaked after floor prices died. CBDC papers track official projects. They do not tell you that eNaira wallets sit idle, that e-CNY clears trillions of yuan while still sitting in the pilot column, or that 205 papers in 2025 are not 205 currencies.
 
-<StatRow>
-  <Stat label="China" value="17,258 papers (13.5%)" />
-  <Stat label="India" value="17,037 papers (13.3%)" />
-  <Stat label="United States" value="12,488 papers (9.7%)" />
-</StatRow>
+NIST's 2024 FIPS moved post-quantum work from "whether" to "which lattice scheme." List where you still use ECDSA. A 6.6x keyword jump is not a date when those signatures stop working.
 
-## VII. The Citation Economy
+China and India write a quarter of the papers. MiCA and the GENIUS Act are the EU and US rules. If a standard or a CBDC design is going to be used, it will be used there too. The [Web3 Reports Library](/web3lib) is the live search over this literature.
 
-The citation distribution across 128,286 blockchain papers follows an extreme power law. **43.5% of all papers have received zero citations.** The high zero-citation rate is partially explained by the recency of the corpus. 82.7% of papers were published from 2020 onward and have had limited time to accumulate citations.
-
-<StateOfWeb3Citations />
-
-Fewer than 0.1% of papers have 1,000+ citations, yet they account for a disproportionate share of the field's total citation volume.
-
-## VIII. Strategic Implications
-
-The aggregation of 128,286 research papers yields three strategic imperatives for technology leaders, policymakers, and institutional investors.
-
-<StatRow>
-  <Stat label="Total Corpus" value="128,286 papers" trend="up" />
-  <Stat label="Cross-Validated Against" value="4 databases" />
-  <Stat label="Annual Output (2025)" value="20,668 papers" trend="up" />
-</StatRow>
-
-1. **Quantum-proof the cryptography, on a real timeline.**
-   Post-quantum strings are the fastest-rising theme (6.6x on a still-small base). NIST's 2024 FIPS shifted the research question from "whether" to "which lattice scheme." ECDSA is not dead this year. Organizations that run chains on elliptic curves still have a migration problem with a long fuse. Start the inventory. Do not confuse a keyword spike with a drop-dead date.
-
-2. **Follow the Research, Not the Hype.**
-   The DeFi-NFT divergence demonstrates that academic attention tracks demonstrated utility with remarkable precision. DeFi research accelerates (74x growth) because it solves a persistent structural problem. NFT research declines because the speculative use case collapsed. Capital allocation should weight research momentum (terms growing at 2x+) over market narratives. The data shows that regulatory infrastructure (3.5x), layer-2 scaling (4.2x), and real-world asset tokenization (5.6x) are the sectors commanding sustained intellectual capital.
-
-3. **Recognize the Geographic Shift.**
-   China and India together produce **26.8%** of all blockchain research, more than double the US contribution. The institutional concentration is equally telling. The Chinese Academy of Sciences alone produces 924 papers, and Indian technical institutes occupy two of the top six global positions. Western organizations cannot assume leadership in blockchain standards, protocols, or regulatory frameworks without actively engaging the research communities driving the highest-volume output.
-
-*Tables and queries are in [Blockchain Research Trends](https://doi.org/10.5281/zenodo.20832738) (Zenodo). The live search tool is the [Web3 Reports Library](/web3lib). Counts are the 12 June 2026 OpenAlex pull. They will drift.*
+*Queries, tables, and limits for the 12 June 2026 pull are in [Web3 Research Trends (SSRN 6990919)](https://doi.org/10.2139/ssrn.6990919). The 16 August re-query is linked above. Counts move. Concepts are deprecated.*
