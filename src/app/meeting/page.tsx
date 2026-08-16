@@ -9,7 +9,6 @@ export const metadata: Metadata = generateMetadata({
   title: pageMetadata.meeting.title,
   description: pageMetadata.meeting.description,
   url: pageMetadata.meeting.url,
-  ogImage: '/images/og-homepage.png',
   ogImageAlt: 'Book a meeting with Vedang Vatsa',
 });
 
