@@ -126,7 +126,7 @@ export const pageMetadata = {
   stateOfWeb3: {
     title: 'The State of Web3 | Vedang Vatsa',
     description:
-      'A 12 June 2026 OpenAlex pull tagged 128,286 blockchain papers. The same query on 16 August returned 133,681. Concepts are deprecated. Paper counts, live chains, and the law do not tell the same story.',
+      'On 12 June 2026 OpenAlex tagged 128,286 blockchain papers. Yearly output grew 117 times from 2013 to 2025. A paper total is not a count of working software or of statutes in force.',
     url: '/stateofweb3',
     keywords: ['Web3', 'blockchain', 'OpenAlex', 'DeFi', 'NFT', 'post-quantum', 'CBDC', 'MiCA', 'smart contracts', 'China', 'India'],
   },

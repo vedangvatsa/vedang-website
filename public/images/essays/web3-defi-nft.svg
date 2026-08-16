@@ -13,21 +13,21 @@
   <rect x="16" y="44" width="176" height="196" fill="#f4f4f5"/>
   <text x="28" y="68" class="head">DeFi</text>
   <text x="28" y="108" class="num">516</text>
-  <text x="28" y="128" class="dim">papers in 2025</text>
-  <text x="28" y="156" class="dim">7 papers in 2019</text>
-  <text x="28" y="176" class="dim">12 in 2020</text>
-  <text x="28" y="196" class="dim">63 in 2021</text>
+  <text x="28" y="128" class="dim">2025 (2.5% of year)</text>
+  <text x="28" y="156" class="dim">7 in 2019 (0.07%)</text>
+  <text x="28" y="176" class="dim">12 in 2020 (0.10%)</text>
+  <text x="28" y="196" class="dim">63 in 2021 (0.47%)</text>
   <text x="28" y="220" class="head">74x in six years</text>
 
   <rect x="208" y="44" width="176" height="196" fill="#ffffff" stroke="#e4e4e7"/>
   <text x="220" y="68" class="head">NFT</text>
   <text x="220" y="108" class="num">426</text>
-  <text x="220" y="128" class="dim">peak in 2023</text>
-  <text x="220" y="156" class="dim">60 papers in 2021</text>
-  <text x="220" y="176" class="dim">334 in 2024</text>
-  <text x="220" y="196" class="dim">366 in 2025</text>
+  <text x="220" y="128" class="dim">2023 peak (2.4%)</text>
+  <text x="220" y="156" class="dim">60 in 2021 (0.45%)</text>
+  <text x="220" y="176" class="dim">334 in 2024 (1.9%)</text>
+  <text x="220" y="196" class="dim">366 in 2025 (1.8%)</text>
   <text x="220" y="220" class="head">down after 2023</text>
 
-  <text x="16" y="268" class="note">Tagged OpenAlex papers, pull date 12 June 2026.</text>
+  <text x="16" y="268" class="note">Share of that year's tagged papers. Pull date 12 June 2026.</text>
   <text x="16" y="288" class="note">A mention is a word in an abstract, not a protocol.</text>
 </svg>

@@ -10,21 +10,21 @@
   <text x="16" y="26" class="title">Where the papers are from</text>
 
   <text x="16" y="60" class="label">China</text>
-  <text x="384" y="60" class="pct" text-anchor="end">17,258  13.5%</text>
+  <text x="384" y="60" class="pct" text-anchor="end">17,258 (13.5%)</text>
   <rect x="16" y="68" width="368" height="14" rx="2" fill="#18181b"/>
 
   <text x="16" y="108" class="label">India</text>
-  <text x="384" y="108" class="pct" text-anchor="end">17,037  13.3%</text>
+  <text x="384" y="108" class="pct" text-anchor="end">17,037 (13.3%)</text>
   <rect x="16" y="116" width="363" height="14" rx="2" fill="#18181b" opacity="0.75"/>
 
   <text x="16" y="156" class="label">United States</text>
-  <text x="384" y="156" class="pct" text-anchor="end">12,488  9.7%</text>
+  <text x="384" y="156" class="pct" text-anchor="end">12,488 (9.7%)</text>
   <rect x="16" y="164" width="266" height="14" rx="2" fill="#18181b" opacity="0.45"/>
 
   <text x="16" y="204" class="label">Indonesia</text>
-  <text x="384" y="204" class="pct" text-anchor="end">3,106  rank 6</text>
+  <text x="384" y="204" class="pct" text-anchor="end">3,106 (2.4%)</text>
   <rect x="16" y="212" width="66" height="14" rx="2" fill="#d4d4d8"/>
 
-  <text x="16" y="248" class="note">A paper with authors in two countries counts twice.</text>
-  <text x="16" y="268" class="note">Saudi Arabia is rank 10 with 2,423 papers.</text>
+  <text x="16" y="248" class="note">Share of 128,286. A paper with authors in two countries counts twice.</text>
+  <text x="16" y="268" class="note">Saudi Arabia is rank 10 with 2,423 papers (1.9%).</text>
 </svg>

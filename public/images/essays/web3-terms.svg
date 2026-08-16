@@ -10,36 +10,36 @@
   <text x="16" y="26" class="title">Two-word phrases in abstracts</text>
 
   <text x="16" y="56" class="label">blockchain technology</text>
-  <text x="384" y="56" class="pct" text-anchor="end">44,102</text>
+  <text x="384" y="56" class="pct" text-anchor="end">44,102 (34.4%)</text>
   <rect x="16" y="62" width="368" height="12" rx="2" fill="#18181b"/>
 
   <text x="16" y="96" class="label">smart contract</text>
-  <text x="384" y="96" class="pct" text-anchor="end">21,134</text>
+  <text x="384" y="96" class="pct" text-anchor="end">21,134 (16.5%)</text>
   <rect x="16" y="102" width="176" height="12" rx="2" fill="#18181b" opacity="0.7"/>
 
   <text x="16" y="136" class="label">blockchain based</text>
-  <text x="384" y="136" class="pct" text-anchor="end">18,516</text>
+  <text x="384" y="136" class="pct" text-anchor="end">18,516 (14.4%)</text>
   <rect x="16" y="142" width="154" height="12" rx="2" fill="#18181b" opacity="0.6"/>
 
   <text x="16" y="176" class="label">supply chain</text>
-  <text x="384" y="176" class="pct" text-anchor="end">11,418</text>
+  <text x="384" y="176" class="pct" text-anchor="end">11,418 (8.9%)</text>
   <rect x="16" y="182" width="95" height="12" rx="2" fill="#18181b" opacity="0.45"/>
 
   <text x="16" y="216" class="label">Internet of Things</text>
-  <text x="384" y="216" class="pct" text-anchor="end">9,851</text>
+  <text x="384" y="216" class="pct" text-anchor="end">9,851 (7.7%)</text>
   <rect x="16" y="222" width="82" height="12" rx="2" fill="#18181b" opacity="0.4"/>
 
   <text x="16" y="256" class="label">distributed ledger</text>
-  <text x="384" y="256" class="pct" text-anchor="end">7,973</text>
+  <text x="384" y="256" class="pct" text-anchor="end">7,973 (6.2%)</text>
   <rect x="16" y="262" width="66" height="12" rx="2" fill="#d4d4d8"/>
 
   <text x="16" y="296" class="label">machine learning</text>
-  <text x="384" y="296" class="pct" text-anchor="end">5,667</text>
+  <text x="384" y="296" class="pct" text-anchor="end">5,667 (4.4%)</text>
   <rect x="16" y="302" width="47" height="12" rx="2" fill="#d4d4d8"/>
 
   <text x="16" y="336" class="label">artificial intelligence</text>
-  <text x="384" y="336" class="pct" text-anchor="end">5,463</text>
+  <text x="384" y="336" class="pct" text-anchor="end">5,463 (4.3%)</text>
   <rect x="16" y="342" width="46" height="12" rx="2" fill="#d4d4d8"/>
 
-  <text x="16" y="368" class="note">128,286 tagged papers. Bar track = 44,102.</text>
+  <text x="16" y="368" class="note">Share of 128,286 tagged papers. Bar track = 44,102 (34.4%).</text>
 </svg>
