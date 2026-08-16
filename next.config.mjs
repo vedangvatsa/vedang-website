@@ -48,6 +48,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/who-buys',
+        destination: '/receipts',
+        permanent: true,
+      },
+      {
         source: '/writings',
         destination: '/essays',
         permanent: true,

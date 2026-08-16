@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-export function WhoBuysExposureChart() {
+export function ReceiptsExposureChart() {
   const data = [
     { label: 'Global jobs exposed (IMF)', value: '40%', note: 'Augmentation plus replacement' },
     { label: 'Advanced-economy exposure', value: '60%', note: 'Half of that is low complementarity' },
@@ -32,7 +32,7 @@ export function WhoBuysExposureChart() {
   );
 }
 
-export function WhoBuysLaborFacts() {
+export function ReceiptsLaborFacts() {
   const rows = [
     { k: 'No economy-wide wipeout', v: 'Stanford/ADP through June 2026' },
     { k: 'Ages 22–25, exposed occupations', v: '19% below less-exposed peers' },
@@ -63,7 +63,7 @@ export function WhoBuysLaborFacts() {
   );
 }
 
-export function WhoBuysDemandChart() {
+export function ReceiptsDemandChart() {
   const items = [
     { label: 'Personal saving rate, June 2026', value: '2.7%', src: 'BEA' },
     { label: 'Real GDP, Q2 2026 annualized', value: '1.5%', src: 'BEA' },
