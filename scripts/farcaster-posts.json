@@ -2435,9 +2435,11 @@
     "id": "viral-rewrite-133",
     "scheduleDate": "2026-08-15",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "People don't lack work ethic. They lack fit. The brain resists meaninglessness more than effort. Fix the match, not the person. Find the right match at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_115_1.jpg"
+    "image": "scripts/post-images/post_115_1.jpg",
+    "postedAt": "2026-08-16T11:52:32.481Z",
+    "castHash": "0x6ea6a3def950d17afe63f7dc69f3a0ab6030feee"
   },
   {
     "id": "viral-rewrite-134",
