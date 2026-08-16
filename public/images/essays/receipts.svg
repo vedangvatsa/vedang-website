@@ -1,49 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" preserveAspectRatio="xMidYMid meet">
   <style>
     text { font-family: Inter, system-ui, sans-serif; }
-    .kicker { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; fill: #6366f1; }
     .title { font-size: 22px; font-weight: 700; fill: #18181b; }
-    .head { font-size: 13px; font-weight: 600; fill: #18181b; }
-    .body { font-size: 12px; fill: #3f3f46; }
-    .num { font-size: 20px; font-weight: 700; fill: #18181b; }
-    .note { font-size: 10px; fill: #71717a; }
+    .label { font-size: 22px; font-weight: 700; fill: #18181b; }
+    .sub { font-size: 14px; fill: #52525b; }
+    .sink { font-size: 22px; font-weight: 700; fill: #18181b; }
+    .note { font-size: 12px; fill: #71717a; }
   </style>
   <rect width="800" height="400" fill="#ffffff"/>
-  <text x="32" y="36" class="kicker">PAYROLL AND RECEIPTS</text>
-  <text x="32" y="68" class="title">Who buys after the wage is gone</text>
 
-  <rect x="32" y="92" width="228" height="248" fill="#fafafa" stroke="#e4e4e7"/>
-  <text x="48" y="120" class="head">1. Another paycheck</text>
-  <text x="48" y="148" class="num">Jobs</text>
-  <text x="48" y="176" class="body">Reinstatement, new tasks,</text>
-  <text x="48" y="194" class="body">data centers, energy.</text>
-  <text x="48" y="220" class="body">Buyer looks like 2015:</text>
-  <text x="48" y="238" class="body">a household spending wages.</text>
-  <text x="48" y="270" class="note">Autor, Acemoglu, Bessen</text>
-  <text x="48" y="288" class="note">WEF: +170M / -92M by 2030</text>
-  <text x="48" y="306" class="note">Forecast, not a count.</text>
+  <text x="400" y="44" text-anchor="middle" class="title">When a wage stops</text>
 
-  <rect x="286" y="92" width="228" height="248" fill="#fafafa" stroke="#e4e4e7"/>
-  <text x="302" y="120" class="head">2. A transfer</text>
-  <text x="302" y="148" class="num">Politics</text>
-  <text x="302" y="176" class="body">UI, wage insurance, UBI,</text>
-  <text x="302" y="194" class="body">equity grants.</text>
-  <text x="302" y="220" class="body">Buyer is a claimant.</text>
-  <text x="302" y="238" class="body">Timing is legislative.</text>
-  <text x="302" y="270" class="note">Jacobson: ~25% earnings loss</text>
-  <text x="302" y="288" class="note">Boston Fed: MPC falls with wealth</text>
-  <text x="302" y="306" class="note">UI covers unemployment, not the gap.</text>
+  <rect x="40" y="72" width="224" height="148" fill="#f4f4f5"/>
+  <text x="152" y="138" text-anchor="middle" class="label">Job</text>
+  <text x="152" y="168" text-anchor="middle" class="sub">Another paycheck</text>
 
-  <rect x="540" y="92" width="228" height="248" fill="#eef2ff" stroke="#c7d2fe"/>
-  <text x="556" y="120" class="head">3. An agent</text>
-  <text x="556" y="148" class="num">Capital</text>
-  <text x="556" y="176" class="body">Tokenized card, mandate,</text>
-  <text x="556" y="194" class="body">protocol checkout.</text>
-  <text x="556" y="220" class="body">Buyer is software funded</text>
-  <text x="556" y="238" class="body">by remaining income or owners.</text>
-  <text x="556" y="270" class="note">McKinsey: $3-5T by 2030</text>
-  <text x="556" y="288" class="note">Forecast. Trust is the brake.</text>
-  <text x="556" y="306" class="note">Visa, ACP, UCP, AP2</text>
+  <rect x="288" y="72" width="224" height="148" fill="#f4f4f5"/>
+  <text x="400" y="138" text-anchor="middle" class="label">Transfer</text>
+  <text x="400" y="168" text-anchor="middle" class="sub">UI, SNAP, equity</text>
 
-  <text x="32" y="372" class="note">veda.ng/receipts  Sources on the essay page. Forecasts labeled as forecasts.</text>
+  <rect x="536" y="72" width="224" height="148" fill="#f4f4f5"/>
+  <text x="648" y="138" text-anchor="middle" class="label">Agent</text>
+  <text x="648" y="168" text-anchor="middle" class="sub">A funded mandate</text>
+
+  <line x1="152" y1="220" x2="152" y2="268" stroke="#18181b" stroke-width="1.5"/>
+  <line x1="400" y1="220" x2="400" y2="268" stroke="#18181b" stroke-width="1.5"/>
+  <line x1="648" y1="220" x2="648" y2="268" stroke="#18181b" stroke-width="1.5"/>
+  <line x1="152" y1="268" x2="648" y2="268" stroke="#18181b" stroke-width="1.5"/>
+  <line x1="400" y1="268" x2="400" y2="292" stroke="#18181b" stroke-width="1.5"/>
+
+  <rect x="250" y="292" width="300" height="64" fill="#ffffff" stroke="#18181b" stroke-width="1.5"/>
+  <text x="400" y="332" text-anchor="middle" class="sink">Receipt</text>
+
+  <text x="400" y="384" text-anchor="middle" class="note">veda.ng/receipts</text>
 </svg>

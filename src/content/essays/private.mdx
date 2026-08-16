@@ -56,7 +56,7 @@ SGX's history is the caveat. [Foreshadow](https://foreshadowattack.eu/) (L1 Term
 
 ## The contract that people call private
 
-Most companies that say "we never train on your data" are not running PCC. They are running a processor agreement.
+Most companies that say "we never train on your data" are running a processor agreement.
 
 OpenAI's [data controls](https://developers.openai.com/api/docs/guides/your-data) are specific if you read the table. API customer content is not used for training by default. Abuse-monitoring logs exist for 30 days on many endpoints. Zero Data Retention is a separate control. You apply. OpenAI approves. The [project data-retention API](https://developers.openai.com/api/reference/resources/admin/subresources/organization/subresources/projects/subresources/data_retention/methods/update) is how a company turns it on after that approval. Some endpoints are eligible (`/v1/chat/completions`, `/v1/responses`). Some are not (`/v1/conversations`, Assistants, vector stores, videos). ZDR forces `store` to false even if your request asks to store. Modified Abuse Monitoring is a middle rung. Eyes-off and safety-retention variants exist for people who still need a human review lane. Data residency, where it exists, is chosen at project creation and is hard to bolt on later.
 

@@ -158,7 +158,7 @@ export function ObserverEffectChart() {
         </div>
 
         <p className="mt-3 text-[10px] text-muted-foreground/60">
-          "Twitter sentiment" is not public sentiment. It is the sentiment of people who express opinions on Twitter, filtered by an algorithm that amplifies emotionally charged content.
+          Twitter sentiment is the sentiment of people who express opinions on Twitter, filtered by an algorithm that amplifies emotionally charged content.
         </p>
       </div>
     </figure>

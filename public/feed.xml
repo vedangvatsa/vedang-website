@@ -8,6 +8,13 @@
     <atom:link href="https://veda.ng/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Who Buys After the Layoff</title>
+      <link>https://veda.ng/receipts</link>
+      <guid>https://veda.ng/receipts</guid>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+      <description>AI can cut a wage without cutting a customer, change a job, or create a new one. The open question is which of those three happens to the receipt.</description>
+    </item>
+    <item>
       <title>When Agents Stop Speaking English</title>
       <link>https://veda.ng/agentspeak</link>
       <guid>https://veda.ng/agentspeak</guid>
@@ -26,7 +33,7 @@
       <link>https://veda.ng/neocloud</link>
       <guid>https://veda.ng/neocloud</guid>
       <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
-      <description>CoreWeave calls itself a hyperscaler. Its S-1 showed Microsoft as 62% of 2024 revenue. The March 2026 loan was rated on the GPU rack and the customer contract. That is a landlord with a take-or-pay lease, not AWS.</description>
+      <description>CoreWeave calls itself a giant cloud company. Its IPO filing showed Microsoft as 62% of 2024 sales. The March 2026 loan was rated on the GPU rack and the customer contract. That is a renter with a pay-anyway lease, not AWS.</description>
     </item>
     <item>
       <title>A Mind That Outlives You</title>
@@ -47,7 +54,7 @@
       <link>https://veda.ng/traffic</link>
       <guid>https://veda.ng/traffic</guid>
       <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
-      <description>The open web is paid when a person arrives. AI crawlers take the page and leave. The ratio has run to tens of thousands of fetches per referred visit, and the site pays the hosting bill.</description>
+      <description>In August 2026, 35.6% of Cloudflare traffic was bots. Ads and subscriptions still need a person on the page. AI crawlers have fetched tens of thousands of HTML pages per referred visit, and the origin still pays for the fetch.</description>
     </item>
     <item>
       <title>Open-Weight Licences</title>
@@ -61,14 +68,14 @@
       <link>https://veda.ng/compute</link>
       <guid>https://veda.ng/compute</guid>
       <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
-      <description>6 countries took different approaches to national AI compute. I compared what each programme counts.</description>
+      <description>6 countries took different approaches to national AI compute. Each programme counts a different thing.</description>
     </item>
     <item>
       <title>Sovereign AI Debt</title>
       <link>https://veda.ng/aidebt</link>
       <guid>https://veda.ng/aidebt</guid>
       <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
-      <description>Sovereign funds are financing AI compute with equity, convertibles, and bank debt. Stargate, MGX, G42, Saudi Arabia, and SoftBank each put 3 figures on the table: announced, funded, and spent. The gap between them shows who carries the risk.</description>
+      <description>Stargate was announced as $500 billion. By August 2025 Bloomberg reported that funds had not been raised to that budget. MGX later closed a $40 billion acquisition. SoftBank borrowed to buy OpenAI shares. Announced, funded, and spent still get printed as one investment number.</description>
     </item>
     <item>
       <title>AI Safety Institutes</title>
@@ -110,7 +117,7 @@
       <link>https://veda.ng/stateofweb3</link>
       <guid>https://veda.ng/stateofweb3</guid>
       <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
-      <description>A bibliometric analysis of 128,286 academic papers classified as blockchain or cryptocurrency research by OpenAlex, cross-validated against Crossref, Europe PMC, arXiv, and DBLP. Tracking three eras of growth, the DeFi-NFT divergence, post-quantum urgency, and the global research map from 2013 through mid-2026.</description>
+      <description>On 12 June 2026 OpenAlex tagged 128,286 blockchain papers. Yearly output grew 117 times from 2013 to 2025. A paper total is not a count of working software or of statutes in force.</description>
     </item>
     <item>
       <title>The Agent Infrastructure Stack</title>

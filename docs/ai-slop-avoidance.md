@@ -143,8 +143,10 @@ These openings scored 88-99% AI on a public detector even when facts were real. 
 |---------|---------|----------------|
 | Announce a pattern | "The pattern is structural / clear / familiar / consistent." | Name the cycle or the companies. |
 | Dual-problem frame | "This creates a dual problem... The question is not whether X. The data shows it does." | Lead with the trial number, then the cost. |
+| Binary contrast theater | "This is not X. It is Y." / "not merely X. It is Y." | State Y directly. |
 | Speculative-to-measured | "X is no longer speculative. It is clinically measured." | Cite the RCT. |
 | Self-emphasis | "These are not marginal improvements. They are clinically significant." | Delete. Keep the 51%. |
+| Binary contrast theater | "This is not a morality play. It is a ledger problem." / "X is not Y. It is Z." | State Z. Delete the not-Y setup. |
 | Convergence glue | "The convergence of A, B, and C signals the emergence of..." | Name what shipped. |
 | Consulting diagnosis | "Enterprise leaders face conflicting signals." / "predictable failure pattern" | Name the vendor claim and the failed pilot. |
 | Epoch / mediation | "That era is ending." / "increasingly mediated by simulation" | Name the 3nm leak or the Waymo miles. |

@@ -36,7 +36,7 @@ You notice "important" four times. You notice a paragraph that repeats the last 
 A model picks the next token from probability. It is not asking whether this word helps the argument.
 
 <Callout type="insight" title="The editorial function">
-Pros are not ten times smarter on the first draft. They are ten times willing to kill a good line that does not belong, reorder a section, and swap a generic word for the one that actually means it. That editorial muscle is what model text usually skips.
+Pros kill a good line that does not belong, reorder a section, and swap a generic word for the one that actually means it. That editorial muscle is what model text usually skips.
 </Callout>
 
 ## Structured Revision as a Solvable Problem
@@ -47,7 +47,7 @@ If you instruct an AI system to identify repetitive language and rewrite it, it 
 
 Research on iterative refinement shows that AI systems run through multiple passes (first draft, then revision, then ranking of which revision is stronger) produce measurably better writing than systems that generate a single output. The improvement is not subtle. Multi-pass systems score higher on coherence, concision, and argument strength in blind evaluations.
 
-**Constitutional approaches extend this further.** Systems trained to evaluate their own output against explicit principles (Anthropic's Constitutional AI approach) produce text that adheres more consistently to quality standards. The system does not merely follow revision rules. It evaluates its output against criteria and iterates.
+**Constitutional approaches extend this further.** Systems trained to evaluate their own output against explicit principles (Anthropic's Constitutional AI approach) produce text that adheres more consistently to quality standards. The system evaluates its output against criteria and iterates.
 
 The gap is no longer between human and machine writing in absolute terms. The gap is between text that goes through revision and text that does not, regardless of whether the author is human or machine.
 
@@ -84,9 +84,7 @@ The quality ceiling of this process is set by the human editor, not by the AI ge
 
 ## The Authenticity Question
 
-The goal of revision is not to make AI-generated text indistinguishable from human-written text. That framing misunderstands the problem.
-
-The goal is to remove the patterns that signal machine generation without editorial oversight:
+Revision should remove the patterns that signal machine generation without editorial oversight, not make AI-generated text indistinguishable from human-written text. Those patterns include:
 
 - Generic emotional language that could appear in any piece on any topic
 - Redundancy (restating ideas that were already clear)
@@ -94,7 +92,7 @@ The goal is to remove the patterns that signal machine generation without editor
 - Formulaic structure (identical paragraph openings, predictable section transitions, list-heavy formatting as a substitute for analysis)
 - Filler constructions ("it is notable," "in today's rapidly evolving landscape," "the implications are deep")
 
-These patterns are not wrong individually. They are wrong collectively because they produce text that reads as if it was generated to fill space rather than to communicate something specific.
+Each pattern can look fine in isolation. Together they produce text that reads as if it was generated to fill space rather than to communicate something specific.
 
 The writer's job in this era is to become a more demanding editor. To read what the machine produces with the same skepticism applied to one's own drafts. To recognize patterns. To demand specificity. To cut anything that reads as if it was borrowed from every other piece of writing on the internet rather than written for this specific argument.
 

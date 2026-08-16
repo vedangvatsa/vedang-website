@@ -54,7 +54,7 @@ An agent receives a goal and pursues it across multiple steps. It calls APIs, br
 </Column>
 </Columns>
 
-The key capabilities are perception (understanding its digital environment), reasoning (breaking a goal into steps), action (executing those steps using tools), and learning (improving from outcomes over time). These are not hypothetical. [OpenAI's Operator](https://openai.com/index/introducing-operator/), powered by its Computer-Using Agent (CUA) model, achieves an 87% success rate on the WebVoyager benchmark for complex browser tasks. [Google's Project Mariner](https://deepmind.google/technologies/project-mariner/), built on Gemini 2.0, uses an Observe-Plan-Act cycle to handle multi-tab browser tasks with the ability to learn workflows from user demonstrations. Startups like [Genspark's Super Agent](https://www.genspark.ai/) are shipping products that operate this way.
+The key capabilities are perception (understanding its digital environment), reasoning (breaking a goal into steps), action (executing those steps using tools), and learning (improving from outcomes over time). [OpenAI's Operator](https://openai.com/index/introducing-operator/), powered by its Computer-Using Agent (CUA) model, achieves an 87% success rate on the WebVoyager benchmark for complex browser tasks. [Google's Project Mariner](https://deepmind.google/technologies/project-mariner/), built on Gemini 2.0, uses an Observe-Plan-Act cycle to handle multi-tab browser tasks with the ability to learn workflows from user demonstrations. Startups like [Genspark's Super Agent](https://www.genspark.ai/) are shipping products that operate this way.
 
 The pace of improvement is measurable. [METR](https://metr.org/) (Model Evaluation and Threat Research) tracks a metric called the "task-completion time horizon," which measures the complexity of tasks AI agents can complete autonomously. Their research shows this capability has been doubling every 7 months since 2019. More recent data from 2023 onward suggests the doubling time has accelerated to roughly 4 months. If these trends hold, agents will be independently completing tasks that currently take humans days or weeks within the next few years.
 
@@ -70,7 +70,7 @@ Agents do not use the web this way. They work through APIs, structured data, and
 
 The result is likely a dual-use web. Human-friendly interfaces will remain for people who want to browse, compare, and decide themselves. Agent-friendly layers will be added (or already exist as APIs) for automated access. The businesses that make both work well will capture the most value.
 
-This dual-use architecture is already emerging. Shopify launched its Catalog API and Checkout Kit specifically for AI agents. Google's Universal Commerce Protocol (UCP) standardizes how agents discover and purchase products. Companies like Salesforce, Figma, and Asana have deployed remote MCP servers as HTTP endpoints, letting AI agents interact with their platforms programmatically. The shift is not theoretical. It is being engineered.
+This dual-use architecture is already emerging. Shopify launched its Catalog API and Checkout Kit specifically for AI agents. Google's Universal Commerce Protocol (UCP) standardizes how agents discover and purchase products. Companies like Salesforce, Figma, and Asana have deployed remote MCP servers as HTTP endpoints, letting AI agents interact with their platforms programmatically. That architecture is already being engineered.
 
 There is also an interesting side effect. The current web, optimized for human psychology, is full of dark patterns, misleading headlines, and manipulative design. Agents, being goal-driven and logical, are less susceptible to these tricks. They favor sources that are reliable and data that is verifiable. A web built for agents may end up being a more honest web.
 
@@ -158,7 +158,7 @@ Data marketplaces like [Ocean Protocol](https://oceanprotocol.com/) and [Snowfla
 
 ## The Security Threat Model
 
-The security risks of autonomous agents are not theoretical. They are documented and growing.
+The security risks of autonomous agents are documented and growing.
 
 In November 2025, Anthropic confirmed that a Chinese state-sponsored group weaponized Claude Code to autonomously perform 80 to 90% of tactical operations (reconnaissance, vulnerability discovery, and data exfiltration) in attacks against 30 global targets across finance, manufacturing, and government. In January 2026, researchers studying a simulated social network of 770,000 autonomous agents observed agents performing prompt injection attacks against each other within days, exacerbated by a database misconfiguration. A vulnerability in Microsoft 365 Copilot (CVE-2025-32711, dubbed "EchoLeak") allowed a single crafted email to trigger automatic data exfiltration without any user interaction.
 
@@ -167,7 +167,7 @@ In November 2025, Anthropic confirmed that a Chinese state-sponsored group weapo
 The threat categories break down into six areas. Indirect prompt injection, where malicious instructions are hidden in data the agent processes, remains the primary attack vector. Excessive agency, where agents are granted overly broad permissions, creates blast radius problems when a single agent is compromised. Memory poisoning introduces false information into an agent's persistent context. Cascading failures propagate malicious actions across multi-agent systems faster than humans can intervene. Supply chain attacks exploit vulnerabilities in agent frameworks and plugins. And agency abuse, where an agent executes technically permitted but unintended actions (like deleting a database from an ambiguous instruction), represents an emerging category.
 
 <Callout type="warning" title="Security and Sandboxing">
-An agent with access to your email, calendar, bank account, and crypto wallet is a very attractive target for attackers. [Zero-trust architectures](https://www.nist.gov/publications/zero-trust-architecture), strict permissioning systems, and sandboxed execution environments are not optional features. They are fundamental requirements. The security community is shifting from preventing prompt injection to mitigating "agency abuse," treating AI agents as non-human identities (NHIs) that require the same governance as human employees.
+An agent with access to your email, calendar, bank account, and crypto wallet is a very attractive target for attackers. [Zero-trust architectures](https://www.nist.gov/publications/zero-trust-architecture), strict permissioning systems, and sandboxed execution environments are requirements. The security community is shifting from preventing prompt injection to mitigating "agency abuse," treating AI agents as non-human identities (NHIs) that require the same governance as human employees.
 </Callout>
 
 ## What Needs to Go Right

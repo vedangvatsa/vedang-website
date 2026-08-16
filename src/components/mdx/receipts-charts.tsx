@@ -74,7 +74,7 @@ export function ReceiptsDemandChart() {
   return (
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Demand is not a rumor. It is also not a collapse.</h3>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Households are still spending, and saving little</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Verified official and announcement data, mid-2026</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {items.map((d) => (

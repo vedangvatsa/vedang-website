@@ -41,7 +41,7 @@ The obvious path in 2024 was to use a transformer. RoBERTa-based detectors and s
 
 The cost issue is real. Running a RoBERTa-large model on every API request requires either a GPU or a long CPU inference time. At a few thousand requests per day, cloud GPU costs add up quickly. Latency also matters for real-time use cases such as browser extensions or document upload flows. A transformer that takes two seconds per request is fine for a batch job but unacceptable for a live user interface.
 
-Explainability is the deeper issue. When a teacher accuses a student of using AI, the student deserves to know why. When a platform moderates content, the moderator needs to see the reasoning. A transformer output of 0.87 with no explanation is not actionable. It is also hard to debug. If the model starts misclassifying a certain type of text, you cannot easily inspect what changed.
+Explainability is the deeper issue. When a teacher accuses a student of using AI, the student deserves to know why. When a platform moderates content, the moderator needs to see the reasoning. A transformer output of 0.87 with no explanation cannot be acted on or easily debugged. If the model starts misclassifying a certain type of text, you cannot easily inspect what changed.
 
 Stylometry takes the opposite approach. Instead of asking a neural network to memorize patterns, I measure interpretable properties of the text: sentence length variance, vocabulary diversity, repetition, punctuation entropy, and other readable signals. These features are fast to compute on a CPU, cheap to run at scale, and stable across model versions. The output is a probability plus a list of reasons: the text has unusually low sentence variance, high connector density, and a vocabulary diversity score that sits in the AI cluster.
 
@@ -143,7 +143,7 @@ Stylometry has real limits. Aggressive paraphrasing and translation loops can st
 
 Short inputs do not contain enough text to measure style reliably. A fifty-word email might have one or two features that look AI-like by chance. The model needs a few hundred words to estimate the distributions of sentence lengths, vocabulary, and punctuation. For short inputs, the API returns a calibrated, less confident score and a warning about input length.
 
-The model is not a plagiarism detector. It cannot prove authorship, only flag statistical patterns. A human writer whose style happens to match AI patterns will get a high score. An AI text that has been heavily edited by a human will get a low score. The output should be treated as evidence, not verdict. Cross-domain classification remains hard, with the AUC dropping to 0.728 when models score text from an unfamiliar register.
+The model flags statistical patterns; it cannot prove authorship. A human writer whose style happens to match AI patterns will get a high score. An AI text that has been heavily edited by a human will get a low score. The output should be treated as evidence, not verdict. Cross-domain classification remains hard, with the AUC dropping to 0.728 when models score text from an unfamiliar register.
 
 ## Try it
 
