@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" preserveAspectRatio="xMidYMid meet">
+  <style>
+    text { font-family: Inter, system-ui, sans-serif; }
+    .kicker { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; fill: #6366f1; }
+    .title { font-size: 22px; font-weight: 700; fill: #18181b; }
+    .head { font-size: 13px; font-weight: 600; fill: #18181b; }
+    .body { font-size: 12px; fill: #3f3f46; }
+    .num { font-size: 20px; font-weight: 700; fill: #18181b; }
+    .note { font-size: 10px; fill: #71717a; }
+  </style>
+  <rect width="800" height="400" fill="#ffffff"/>
+  <text x="32" y="36" class="kicker">PAYROLL AND RECEIPTS</text>
+  <text x="32" y="68" class="title">Who buys after the wage is gone</text>
+
+  <rect x="32" y="92" width="228" height="248" fill="#fafafa" stroke="#e4e4e7"/>
+  <text x="48" y="120" class="head">1. Another paycheck</text>
+  <text x="48" y="148" class="num">Jobs</text>
+  <text x="48" y="176" class="body">Reinstatement, new tasks,</text>
+  <text x="48" y="194" class="body">data centers, energy.</text>
+  <text x="48" y="220" class="body">Buyer looks like 2015:</text>
+  <text x="48" y="238" class="body">a household spending wages.</text>
+  <text x="48" y="270" class="note">Autor, Acemoglu, Bessen</text>
+  <text x="48" y="288" class="note">WEF: +170M / -92M by 2030</text>
+  <text x="48" y="306" class="note">Forecast, not a count.</text>
+
+  <rect x="286" y="92" width="228" height="248" fill="#fafafa" stroke="#e4e4e7"/>
+  <text x="302" y="120" class="head">2. A transfer</text>
+  <text x="302" y="148" class="num">Politics</text>
+  <text x="302" y="176" class="body">UI, wage insurance, UBI,</text>
+  <text x="302" y="194" class="body">equity grants.</text>
+  <text x="302" y="220" class="body">Buyer is a claimant.</text>
+  <text x="302" y="238" class="body">Timing is legislative.</text>
+  <text x="302" y="270" class="note">Jacobson: ~25% earnings loss</text>
+  <text x="302" y="288" class="note">Boston Fed: MPC falls with wealth</text>
+  <text x="302" y="306" class="note">UI covers unemployment, not the gap.</text>
+
+  <rect x="540" y="92" width="228" height="248" fill="#eef2ff" stroke="#c7d2fe"/>
+  <text x="556" y="120" class="head">3. An agent</text>
+  <text x="556" y="148" class="num">Capital</text>
+  <text x="556" y="176" class="body">Tokenized card, mandate,</text>
+  <text x="556" y="194" class="body">protocol checkout.</text>
+  <text x="556" y="220" class="body">Buyer is software funded</text>
+  <text x="556" y="238" class="body">by remaining income or owners.</text>
+  <text x="556" y="270" class="note">McKinsey: $3-5T by 2030</text>
+  <text x="556" y="288" class="note">Forecast. Trust is the brake.</text>
+  <text x="556" y="306" class="note">Visa, ACP, UCP, AP2</text>
+
+  <text x="32" y="372" class="note">veda.ng/who-buys  Sources on the essay page. Forecasts labeled as forecasts.</text>
+</svg>

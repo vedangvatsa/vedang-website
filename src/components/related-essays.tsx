@@ -22,6 +22,7 @@ const AI_TOPICS = {
   'agentspeak': ['agenticweb', 'postinterface', 'darkforest'],
   'private': ['trust', 'godprotocol', 'darkforest'],
   'neocloud': ['aidebt', 'compute', 'agentstack'],
+  'who-buys': ['aieconomy', 'agentcommerce', 'agenteconomy'],
 };
 
 export function RelatedEssays({ currentSlug }: { currentSlug: string }) {

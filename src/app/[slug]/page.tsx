@@ -44,6 +44,7 @@ import { PlaybookHeroCard, AgentToolsMap, AutomationROIChart, ContentPipelineFlo
 import { StateOfAiKeywordsChart, StateOfAiBigramsChart, StateOfAiTimeline, StateOfAiNgramAnalyzer, StateOfAiMomentum, StateOfAiGeography, StateOfAiCitations } from '@/components/mdx/stateofai-charts';
 import { SecurityConsolidation, ComputeValuationTable, AgentProductValuations, MarketplaceComposition, TopInvestorsTable } from '@/components/mdx/agentstack-charts';
 import { AIDetectorFeatureComparison } from '@/components/mdx/ai-detector-charts';
+import { WhoBuysExposureChart, WhoBuysLaborFacts, WhoBuysDemandChart } from '@/components/mdx/who-buys-charts';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -98,6 +99,7 @@ const ESSAY_GLOSSARY_LINKS: Record<string, string[]> = {
   'aidebt': ['llm', 'api', 'defi', 'agent'],
   'outlives': ['llm', 'agent', 'context-window', 'inference'],
   'agentspeak': ['mcp', 'agent', 'api', 'embeddings', 'token'],
+  'who-buys': ['agent', 'llm', 'api'],
   'private': ['zero-knowledge-proof', 'inference', 'llm', 'edge-computing'],
   'neocloud': ['inference', 'llm', 'api', 'edge-computing'],
 };
@@ -486,6 +488,9 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               MarketplaceComposition,
               TopInvestorsTable,
               AIDetectorFeatureComparison,
+              WhoBuysExposureChart,
+              WhoBuysLaborFacts,
+              WhoBuysDemandChart,
               ResearchPaper,
               img: (props: any) => (
                 <ZoomableImage
