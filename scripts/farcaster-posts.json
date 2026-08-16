@@ -2445,9 +2445,11 @@
     "id": "viral-rewrite-134",
     "scheduleDate": "2026-08-15",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "We mistake speed for care. A quick reply to a non-urgent message often means someone is overwhelmed, not attentive. The best relationships value quality of attention over speed. Find teams that respect boundaries at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_176_1.jpg"
+    "image": "scripts/post-images/post_176_1.jpg",
+    "postedAt": "2026-08-16T19:50:20.028Z",
+    "castHash": "0x44a4b0153707bc7e0c2b7147bd41bc063128552d"
   },
   {
     "id": "viral-rewrite-135",

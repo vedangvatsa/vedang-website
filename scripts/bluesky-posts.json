@@ -2643,9 +2643,11 @@
     "id": "viral-rewrite-121",
     "scheduleDate": "2026-08-11",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "We have plenty of hard and tough people in business. What we lack are trust, empathy, and kindness. The soft skills are the hard ones.",
-    "image": "scripts/post-images/post_171_1.jpg"
+    "image": "scripts/post-images/post_171_1.jpg",
+    "postedAt": "2026-08-16T19:50:14.275Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mt7xif7nho2p"
   },
   {
     "id": "viral-rewrite-122",
