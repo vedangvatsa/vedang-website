@@ -1,4 +1,4 @@
-import { buildEssayOgImage } from '@/lib/og-image';
+import { buildPageOgImage } from '@/lib/og-image';
 
 export const runtime = 'nodejs';
 export const revalidate = 86400;
@@ -8,7 +8,7 @@ export async function GET(
   { params }: { params: Promise<{ slug: string }> },
 ) {
   const { slug } = await params;
-  const image = buildEssayOgImage(slug);
+  const image = buildPageOgImage(slug);
   if (!image) {
     return new Response('Not found', { status: 404 });
   }

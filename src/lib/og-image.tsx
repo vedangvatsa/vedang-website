@@ -91,6 +91,11 @@ function titleFontSize(line1: string, line2: string) {
   return 82;
 }
 
+export interface TerminalLine {
+  text: string;
+  color: 'command' | 'success';
+}
+
 export function generateOgImage(title: string, subtitle?: string, slug?: string) {
   const [line1, line2] = splitTitleTwoLines(title);
   const url = slug ? `veda.ng/${slug}` : 'veda.ng';
@@ -100,11 +105,6 @@ export function generateOgImage(title: string, subtitle?: string, slug?: string)
     { text: 'veda.ng', color: 'success' },
   ];
   return generateTerminalOgImage(line1, line2, url, cardLines, subtitle);
-}
-
-export interface TerminalLine {
-  text: string;
-  color: 'command' | 'success';
 }
 
 export function generateTerminalOgImage(
@@ -266,6 +266,26 @@ function firstOgSentence(text: string) {
   if (!clean) return '';
   const match = clean.match(/^(.+?[.!?])(?:\s|$)/);
   return match ? match[1] : clean;
+}
+
+export function buildMeetingOgImage() {
+  return generateTerminalOgImage(
+    'Book a',
+    'Meeting',
+    'veda.ng/meeting',
+    [
+      { text: '$ book 30 min', color: 'command' },
+      { text: 'AI strategy', color: 'success' },
+      { text: 'Web3 advisory', color: 'success' },
+      { text: 'speaking', color: 'success' },
+    ],
+  );
+}
+
+export function buildPageOgImage(slug: string) {
+  const cleanSlug = slug.replace(/\.png$/i, '');
+  if (cleanSlug === 'meeting') return buildMeetingOgImage();
+  return buildEssayOgImage(cleanSlug);
 }
 
 export function buildEssayOgImage(slug: string) {

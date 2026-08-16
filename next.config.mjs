@@ -35,6 +35,14 @@ const nextConfig = {
         source: '/api/og/:slug.png',
         destination: '/api/og/:slug',
       },
+      {
+        source: '/meeting/opengraph-image',
+        destination: '/api/og/meeting',
+      },
+      {
+        source: '/meeting/opengraph-image.png',
+        destination: '/api/og/meeting',
+      },
     ];
   },
   async redirects() {
