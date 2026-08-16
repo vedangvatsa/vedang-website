@@ -8,13 +8,13 @@ author: 'Vedang Vatsa'
 keywords: ['God Protocol', 'Nick Szabo', 'trust', 'AGI', 'Bitcoin', 'omniscience', 'alignment', 'superintelligence', 'theology']
 ---
 
-In 1997, [Nick Szabo](https://en.wikipedia.org/wiki/Nick_Szabo) proposed the "God Protocol," a thought experiment imagining a trusted third party with perfect properties: it would faithfully execute any computation, maintain absolute confidentiality about inputs, never act in its own interest, and be available to all parties at all times. Szabo called it the "God Protocol" because no earthly institution could possess all these properties simultaneously. The progression from trusted institutions to cryptographic protocols to artificial general intelligence is a progression toward, but never reaching, this ideal.
+In 1997 [Nick Szabo](https://en.wikipedia.org/wiki/Nick_Szabo) named a thought experiment the "God Protocol." A third party that always runs the computation you asked for, never leaks the inputs, never works for itself, and is always on. No bank, court, or company has all of those at once. That is why he used the word God. Bitcoin got close for one job. AGI talk keeps reaching for the rest. We keep getting nearer. We do not arrive.
 
 <Figure src="/images/essays/godprotocol.svg?v=7" alt="Infographic" wide />
 
 ## Szabo's Original Formulation
 
-[Nick Szabo](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/ttps.html) articulated the problem with a precision that has proven durable across nearly three decades of technological change. Every transaction that requires trust requires a trusted third party (TTP). Buying a house requires a title company. Settling a dispute requires a court. Transferring money internationally requires a correspondent bank. Each TTP adds cost, latency, and a potential point of failure: corruption, incompetence, or unavailability.
+[Szabo's write-up](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/ttps.html) still reads clean after almost thirty years. If a deal needs trust, it needs a trusted third party. A house needs a title company. A fight needs a court. A cross-border wire needs a correspondent bank. Each one adds cost, delay, and a place the deal can die: graft, slowness, or a weekend when nobody picks up.
 
 <StatRow>
 <Stat value="1997" label="Szabo proposed the God Protocol" source="Nick Szabo, Nakamoto Institute" sourceUrl="https://nakamotoinstitute.org/library/the-god-protocols/" />
@@ -23,13 +23,13 @@ In 1997, [Nick Szabo](https://en.wikipedia.org/wiki/Nick_Szabo) proposed the "Go
 <Stat value="100%" label="Ethereum network uptime (10 years)" source="Ethereum Foundation" />
 </StatRow>
 
-The insight was not that TTPs are bad. It was that TTPs are structurally compromised. A bank that holds your escrow can, in principle, use those funds for its own purposes. A court that arbitrates your dispute can be slow, biased, or corrupt. A correspondent bank that transfers your payment across borders can freeze those funds unilaterally, without your consent, and often does so under governmental or regulatory pressure. Szabo did not propose this as a complaint about institutions. He proposed it as a computer science problem: can a protocol be built that provides the services of a perfectly trustworthy third party without requiring trust in any specific entity?
+The point was not that banks are evil. It was that they are structurally compromised. Escrow can be reused. A court can be slow or bent. A correspondent bank can freeze a wire because a government asked. Szabo did not write a rant. He wrote a CS problem: can a protocol do the job of a perfectly honest third party without trusting any one shop?
 
-The God Protocol was his answer in the abstract. Imagine, Szabo wrote, a deity who is a trusted third party. All parties send their inputs to this deity. The deity faithfully computes the result and returns each party's output, ensuring that no party learns anything more about other parties' inputs than they could deduce from their own inputs and the output alone. The deity has perfect integrity (it will not cheat), perfect confidentiality (it will not leak), and perfect availability (it is always accessible).
+His answer, on paper, was the God Protocol. Everyone sends inputs to a deity. The deity computes, sends each person their output, and leaks nothing extra. Perfect integrity, perfect confidentiality, always on.
 
-Szabo's term for this ideal was deliberately provocative. He called it the "God Protocol" because the properties he described, omniscience, impartiality, incorruptibility, and universal availability, are precisely the properties that religious traditions have historically attributed to a divine being. The implication was clear: no human institution, no company, no government, no individual could ever fully satisfy these requirements. The best that could be done was approximate.
+He picked the name on purpose. Omniscience, impartiality, no graft, always reachable: that is church language. No company or state ever clears that bar. The best you get is an approximation.
 
-The theoretical foundation for such approximation already existed. In the 1980s, researchers in secure multi-party computation (MPC), including Andrew Yao, Oded Goldreich, Silvio Micali, and others, had demonstrated that it was mathematically possible for multiple parties to jointly compute a function over their inputs without revealing those inputs to each other. The protocols were correct in theory but impractical for real-world use: too slow, too computationally expensive, and too fragile for deployment outside academic settings.
+The math already existed. In the 1980s, Yao, Goldreich, Micali, and others showed you can jointly compute a function without showing your inputs. Correct on paper. Too slow, too expensive, too brittle for anyone outside a lab.
 
 <TTPEvolutionTimeline />
 
@@ -44,11 +44,11 @@ The theoretical foundation for such approximation already existed. In the 1980s,
 
 ## The Cryptographic Approximation
 
-Bitcoin, launched in January 2009 by the pseudonymous Satoshi Nakamoto, was the first working approximation of the God Protocol for a specific, narrow function: value transfer without a trusted intermediary.
+Bitcoin, January 2009, Satoshi. First working sketch of the God Protocol for one narrow job: move value without a middleman.
 
-The Bitcoin network acts as a TTP for two specific tasks: verifying that a transaction is valid (the sender has sufficient funds) and reaching consensus on the order of transactions (preventing double-spending). No single entity controls the network. No participant can unilaterally alter the ledger. The "trust" is distributed across tens of thousands of nodes running open-source software, secured by proof-of-work consensus and the mathematical properties of SHA-256 cryptographic hashing.
+The network does two TTP jobs: check that the sender has the coins, and agree on order so nobody spends twice. Nobody owns it. Nobody edits the ledger alone. Trust is tens of thousands of nodes, proof-of-work, SHA-256.
 
-The achievement was extraordinary, but the limitations were equally significant. Bitcoin's approximation of the God Protocol fails on confidentiality: all transactions are public, permanently recorded on an open ledger. It fails partially on self-interest: miners and validators are economically motivated actors who optimize for their own profit, occasionally at the expense of network users (miner extractable value, or MEV). And it fails on universality: Bitcoin is purpose-built for value transfer and cannot execute arbitrary computations.
+It still fails Szabo's test in the obvious places. Confidentiality: every tx is public. Self-interest: miners optimize for themselves (MEV). Universality: Bitcoin moves value. It does not run arbitrary code.
 
 [Ethereum](https://ethereum.org/), launched in July 2015 by Vitalik Buterin and collaborators, extended the approximation from value transfer to arbitrary computation. Smart contracts, programs that execute automatically on the blockchain when triggered by a transaction, serve as TTPs for any computable agreement: escrow, insurance payouts, governance votes, financial derivatives, lending, borrowing, and token exchanges. Ethereum's virtual machine (EVM) is Turing-complete, meaning it can, in principle, execute any computation that any computer can perform.
 

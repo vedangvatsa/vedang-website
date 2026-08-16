@@ -7,19 +7,13 @@ category: "AI Infrastructure"
 keywords: ["open weights", "Llama license", "Apache 2.0", "DeepSeek", "Qwen", "Gemma", "Mistral", "gpt-oss", "OSAID"]
 ---
 
-On 5 April 2025, Meta's Llama 4 blog called Scout and Maverick [open-weight](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) in the lede, then talked about a "commitment to open source." The file that ships with Scout and Maverick is the [Llama 4 Community License](https://github.com/meta-llama/llama-models/blob/main/models/llama4/LICENSE). Apache and MIT are other files. If your product, or your affiliates', crossed 700 million monthly active users last calendar month, you ask Meta for a second licence. Meta may say no.
+Meta's Llama 4 blog on 5 April 2025 called Scout and Maverick [open-weight](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) in the first line, then talked about a "commitment to open source." The file that actually ships is the [Llama 4 Community License](https://github.com/meta-llama/llama-models/blob/main/models/llama4/LICENSE). Apache and MIT are other files, not this one. If your product, or your affiliates', crossed 700 million monthly active users last calendar month, you ask Meta for a second licence. Meta can say no.
 
-The blog and the licence file disagree. On 11 August 2026 I read the licence cards for Llama 4, Qwen 3.x, Gemma 4, DeepSeek from R1 through V4, Mistral's open line, OpenAI's gpt-oss, and Microsoft Phi-4. A lab can change a card later. These rows are from that date.
+The blog and the licence file do not match. On 11 August 2026 I sat down with the licence cards for Llama 4, Qwen 3.x, Gemma 4, DeepSeek from R1 through V4, Mistral's open line, OpenAI's gpt-oss, and Microsoft Phi-4. A lab can swap a card later. These rows are from that day.
 
-**Weights.** Can you download the parameters and run them without an API key.
+I scored four cells. Weights: can you download the parameters and run them with no API key. Data: is the training corpus public so someone else can rebuild. Code: is the training or inference stack under an OSI licence, or just a README screenshot. Use: can you sell a product on top of it, and does that right die at a user count, a country, or a banned-use list.
 
-**Data.** Is the training corpus published so someone else can rebuild the model.
-
-**Code.** Is the training or inference stack under an OSI licence, or just a README screenshot.
-
-**Use.** Can you sell a product on top of it, and does that right die at a user count, a geography, or a prohibited-use list.
-
-All 7 families let you download the weights. None publish the training corpus. The code cell is mixed. Use rights usually hold until a user cap, a country bar, or a prohibited-use list. If "open source" still means source, the source is missing. What shipped is a checkpoint you can host and a training set you cannot inspect.
+All 7 families let you download the weights. None publish the training corpus. The code cell is mixed. Use rights usually hold until a cap, a country bar, or a prohibited-use list. If "open source" still means source, the source is missing. What shipped is a checkpoint you can host and a training set you cannot inspect.
 
 <img src="/images/essays/licenses-score.svg?v=4" alt="Licence scorecard for 7 open-weight families" class="w-full my-8" />
 

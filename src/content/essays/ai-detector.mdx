@@ -6,13 +6,13 @@ author: 'Vedang Vatsa'
 keywords: ['AI text detection', 'stylometry', 'random forest', 'LLM', 'benchmarks', 'adversarial robustness', 'FastAPI', 'machine learning']
 ---
 
-By early 2024, telling human writing from AI text was getting messy. Classroom detectors flagged human essays as machine-written. Free online tools claimed 99% accuracy on one model and failed on the next. Paraphrasing, synonym swaps, and light editing broke most of them. Accuracy was only one failure. It was that the tools were black boxes, slow, and marketed with benchmark numbers that had little to do with real use.
+By early 2024, telling a person from a model was already a mess. Classroom tools flagged human essays. Free sites claimed 99% on one model and missed the next. A paraphrase, a synonym pass, a light edit, and the score jumped. Accuracy was only one problem. The tools were black boxes, slow, and sold on benchmarks that had little to do with a real queue.
 
-I wanted to build something different: a detector that was fast, interpretable, and honest about where it failed. It should run on cheap CPUs, explain why it flagged a text, and keep working when users tried to trick it. The result is a stylometric detector backed by a large training corpus, a small Random Forest for production, and a set of neural pipelines for hard cases. The engineering choices, the benchmark results, and the production limits matter more than a leaderboard score.
+I wanted something I could run on a cheap CPU, explain to a user, and still trust when people tried to cheat it. What I shipped is a stylometric detector on a large corpus, a small Random Forest in production, and neural pipelines for the hard cases. The engineering trade-offs matter more than a leaderboard.
 
-The project sits on three practical problems. First, generative models were becoming default writing tools, so demand for detection was rising. Second, existing detectors were either expensive neural APIs or shallow rule-based checks that broke under minimal editing. Third, most detection research optimized for benchmark scores rather than deployment realities such as latency, cost, and explainability. I started by asking what a useful detector would look like in production, then worked backward to the model and data.
+Three constraints drove it. Generative models were becoming default writing tools, so demand was up. Existing detectors were either expensive neural APIs or shallow rules that died under a rewrite. Most papers chased benchmark points, not latency, cost, or a reason you could read. I started from what production needed and worked backward.
 
-A useful detector needs five properties. It must be cheap enough to run at scale. It must explain its decisions so users can appeal or verify. It must handle short inputs, long documents, and inputs from different domains. It must degrade gracefully under adversarial editing. And it must be honest about uncertainty, especially when the input is too short or too foreign to the training distribution. Those five properties shaped every decision that follows.
+A detector that is useful has to be cheap, explainable, okay on short and long text across domains, messy under adversarial edits instead of brittle, and honest when the input is too short or too weird. Those five constraints drove the rest.
 
 <StatRow>
 <Stat value="2.77M" label="Training texts across four registers" />

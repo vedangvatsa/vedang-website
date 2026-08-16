@@ -8,7 +8,7 @@ author: 'Vedang Vatsa'
 keywords: ['simulation', 'digital twin', 'computation', 'AlphaFold', 'climate modeling', 'Boeing', 'Waymo', 'synthetic data', 'physics engine', 'NVIDIA Omniverse']
 ---
 
-Humanity's relationship with reality is increasingly mediated by simulation. Products are designed, tested, and optimized in digital environments before physical prototypes exist. Autonomous vehicles accumulate billions of miles in simulated driving. Drug candidates are screened computationally before entering clinical trials. Climate futures are modeled across thousands of scenarios. The simulation layer is the rehearsal space where designs get decided before they are built.
+Boeing tests factory changes on a digital twin before it cuts metal. Waymo logs tens of billions of miles in simulation. Drug candidates get screened in software before a clinical trial. Climate models run thousands of futures. The physical object is often the second draft.
 
 <Figure src="/images/essays/simulayer.svg?v=7" alt="Infographic" wide />
 
@@ -21,19 +21,15 @@ Humanity's relationship with reality is increasingly mediated by simulation. Pro
 
 ## The Digital Twin Economy
 
-A digital twin is a computational replica of a physical system, a jet engine, a factory floor, a city grid, a human heart, that updates in real time using data from sensors on the physical counterpart. The twin enables analysis, prediction, and optimization without touching the real system.
-
-The concept originated at NASA in the early 2000s, where engineers maintained computational models of spacecraft to diagnose and predict issues during missions. The Apollo 13 rescue was, in effect, a proto-digital twin exercise: engineers on the ground simulated the spacecraft's systems to develop procedures that would bring the crew home safely.
-
-Today, the digital twin market is projected to reach **$73 billion by 2030** (MarketsandMarkets), growing from approximately $10 billion in 2023. Three converging technologies drive this growth: IoT sensor proliferation (which provides the real-time data feed), cloud computing capacity (which provides the computational infrastructure), and AI/ML (which provides the predictive analytics layer on top of the raw simulation).
+NASA kept computer models of spacecraft in the early 2000s so ground crews could diagnose a ship they could not touch. Apollo 13's rescue was that idea with slide rules: simulate the crippled stack, then radio the procedure. Boeing now does the same for factory flow before it cuts metal. MarketsandMarkets puts the digital-twin market at about $10 billion in 2023 and **$73 billion by 2030**. Those are vendor TAM prints. The live cases below are Boeing, Siemens, and a heart model.
 
 <SimulationDomainChart />
 
 ### Boeing: Manufacturing Without Building
 
-[Boeing](https://www.boeing.com/) maintains digital twins of its aircraft manufacturing processes, enabling engineers to simulate assembly sequences, identify interference problems, and optimize production flows before physical parts are manufactured. The company estimates these simulations save over **$1 billion** in avoided rework and manufacturing delays (Boeing/industry estimates).
+[Boeing](https://www.boeing.com/) keeps digital twins of how a plane gets built. Engineers try the assembly order, catch clashes, and fix the flow before parts exist. They put the save at more than **$1 billion** in avoided rework and delay (Boeing/industry estimates).
 
-The 777X was Boeing's first aircraft designed entirely in a digital environment. Every component, every assembly step, every tool path was simulated before a single physical part was manufactured. When physical assembly began, engineers had already resolved thousands of interference problems that would traditionally have been discovered during manufacturing, at a cost of approximately $100,000-500,000 per interference.
+The 777X was the first Boeing designed entirely in software. Every part, every step, every tool path ran in sim first. When metal started moving, thousands of clashes that used to show up on the floor were already gone. Those used to cost about $100,000-500,000 each.
 
 ### Siemens: The Factory That Runs Before It's Built
 
@@ -127,7 +123,7 @@ The democratization of simulation is underway, but uneven:
 
 **AI-generated synthetic environments** allow researchers to generate training data for computer vision, robotics, and planning systems without building physical test environments. This dramatically reduces the data acquisition cost that historically limited simulation capability to well-funded organizations.
 
-But the gap between best current simulation (available to Boeing, Google DeepMind, and national weather services) and what is available to a small company or developing nation remains significant. A climate model running at 1km resolution requires computing resources that cost millions of dollars per simulation run. A full autonomous driving simulation stack costs tens of millions to develop and maintain. The simulation layer democratizes gradually, but it concentrates advantage first.
+But the gap between best current simulation (available to Boeing, Google DeepMind, and national weather services) and what is available to a small company or developing nation remains significant. A climate model running at 1km resolution requires computing resources that cost millions of dollars per simulation run. A full autonomous driving simulation stack costs tens of millions to develop and maintain. Access is still expensive first. The cost falls later.
 
 ## The Convergence: Simulation + AI Agents
 

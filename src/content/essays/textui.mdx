@@ -8,7 +8,7 @@ author: 'Vedang Vatsa'
 keywords: ['user interface', 'text field', 'dashboards', 'APIs', 'LLM', 'PostHog', 'Antigravity IDE', 'Salesforce Agentforce', 'GitHub Copilot', 'MCP', 'intent compiler', 'generative UI', 'Cursor', 'Glean']
 ---
 
-The graphic user interface requires humans to learn software logic. The LLM-driven text field requires software to learn human intent. This inversion collapses complex dashboards into a single input layer. When natural language is directly wired to backend APIs via protocols like [MCP](https://modelcontextprotocol.io/), the traditional navigation menu becomes structurally obsolete.
+A GUI makes people learn the software. An LLM text field makes the software parse the request. Wire that field to APIs through [MCP](https://modelcontextprotocol.io/) and the menu is optional. You type the question. The tool call hits the same endpoints the dashboard used.
 
 <Figure src="/images/essays/textui.svg?v=7" alt="Infographic" wide />
 
@@ -117,9 +117,9 @@ The same pattern applies to [Google Analytics](https://developers.google.com/ana
 
 ### The API Layer Replaces the Analyst
 
-The deeper implication is structural. Every SaaS platform with an API can now be queried by an LLM. The text field is not interfacing with one tool. It is interfacing with the entire operational layer of a business through programmatic access.
+Every SaaS platform with an API can be queried by an LLM. The text field is talking to the operational layer, not one screen.
 
-Consider what this means for each department:
+What that looks like by department:
 
 **Data science.** A startup previously needed a data scientist to write SQL queries against their warehouse, build dashboards in Looker or Metabase, and present weekly reports. With [Snowflake Cortex](https://www.snowflake.com/en/data-cloud/cortex/) or [Databricks AI/BI Genie](https://www.databricks.com/product/ai-bi), a product manager types "Show me the 7-day retention curve for users who signed up via the Google Ads campaign last month, broken down by pricing tier." The system writes the SQL, validates it against the semantic layer, executes it, and renders the chart. The analyst role does not disappear. It shifts from query execution to semantic governance: defining what "active user" or "conversion" means so the agent produces correct results.
 
@@ -248,7 +248,7 @@ The structural implications run through the entire software development process.
 
 **Enterprise buyers** will evaluate software not by visible feature count but by the depth and quality of the API surface available to their internal agents. The competitive advantage shifts from "better UI" to "better tool definitions." The product with the cleanest MCP integration wins.
 
-The dashboard will not disappear entirely. It persists as a monitoring surface for ambient awareness. But the primary interaction model is already shifting from clicking to typing. The companies that recognize this shift as architectural rather than cosmetic will build the platforms that define the next decade of enterprise software.
+The dashboard stays as a monitor. The primary job is already moving from clicking to typing. Buyers will pay for clean APIs and named columns, not another chart tab.
 
 <KeyTakeaway>
 Treat the text field as architecture. If the data is dirty, the box will lie in fluent English. MCP is already in the default stack. The missing work is naming columns so an agent can trust them.

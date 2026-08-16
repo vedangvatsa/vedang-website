@@ -8,39 +8,25 @@ author: 'Vedang Vatsa'
 keywords: ['rationality', 'decision theory', 'alignment', 'orthogonality thesis', 'helpful convergence', 'expected utility', 'bounded rationality', 'constitutional AI']
 ---
 
-A calculator follows perfect logical rules. Nobody considers it rational. GPT-4 reasons through novel problems, writes legal briefs, and debates philosophy. Whether it is rational depends entirely on what rationality means, and the answer determines whether building more capable AI makes the world safer or more dangerous.
+A calculator never breaks a logical rule. Nobody calls it rational. GPT-4 will write a brief and then invent a case. Nick Bostrom's orthogonality thesis says more capability does not buy you a better goal. A smarter system can still maximize the wrong number.
 
 <Figure src="/images/essays/rationality.svg?v=7" alt="Infographic" wide />
 
 ## What does it mean to be rational?
 
-Rationality, in the technical sense used by decision theorists and AI researchers, is effectiveness of action. A rational agent chooses actions likely to achieve its goals given what it knows about the world.
-
-This is the helpful conception of rationality, formalized by economists and decision theorists since von Neumann and Morgenstern's *Theory of Games and Economic Behavior* (1944). An agent is rational to the degree that it maximizes expected utility, the probability-weighted sum of outcomes, given its beliefs about the world and its preferences over outcomes.
-
-The definition is precise but it shifts the problem. To be rational, an agent needs goals (a utility function) and beliefs (a model of the world). The question of what makes an AI rational immediately becomes two deeper questions: what are its goals? And how accurate are its beliefs?
+Decision theorists since von Neumann and Morgenstern (*Theory of Games and Economic Behavior*, 1944) treat rationality as expected-utility: pick the action with the best probability-weighted outcome. That still needs a goal and a world model. Alignment fights are about the goal. Capability fights are about the model.
 
 ## Decision theory and its limits
 
-Decision theory provides the mathematical formalism for rational choice. The framework is simple in structure:
-
-1. Define the set of available actions
-2. For each action, enumerate possible consequences
-3. Assign probabilities to each consequence
-4. Assign a value (utility) to each consequence
-5. Choose the action that maximizes expected utility
+Decision theory is just expected utility with extra steps. You list the moves, list what might happen, put numbers on chance and value, pick the best weighted score.
 
 <Callout type="insight" title="The gap between theory and practice">
-The framework assumes the agent has access to true probabilities and complete enumeration of consequences. Real agents, biological or artificial, never do. Herbert Simon coined the term "bounded rationality" (1955) to describe the situation all actual agents face: limited information, limited computation, limited time. A bounded-rational agent satisfices: choosing an action that is "good enough" given its constraints. Every currently deployed AI system is bounded-rational, regardless of how capable it appears.
+The model assumes you have the real odds and a complete list of outcomes. Nobody does. Herbert Simon called that "bounded rationality" in 1955: limited facts, limited compute, limited time. You satisfice. You take good enough. Every deployed model I have seen is bounded-rational, no matter how flashy the demo.
 </Callout>
 
-The implications become dangerous at scale. An AI system calculates beliefs about probabilities, derived from its training data and model architecture. It makes decisions based on its model of the world, knowing (in some engineering sense) that the model is incomplete.
+That gets ugly at scale. The system is "rational" about its own beliefs. The beliefs can still be wrong. Locally optimal, globally a mess. Correct reasoning from a bad map.
 
-This opens a safety gap: the AI may be perfectly rational relative to its beliefs, while its beliefs are wrong. A system optimizing toward goals based on an incorrect world model can take actions that are locally optimal (given its beliefs) and globally catastrophic (given reality). The system is reasoning correctly from incorrect premises.
-
-**Bayesian rationality** attempts to address this by requiring agents to update beliefs continuously in response to new evidence, following Bayes' theorem. A Bayesian-rational agent never holds fixed beliefs. It treats every belief as provisional, subject to revision when evidence arrives.
-
-Current AI systems approximate Bayesian updating in some contexts (reinforcement learning, online fine-tuning) but diverge in others (frozen pre-trained models that cannot update beliefs based on post-training evidence without explicit intervention). The gap between Bayesian-rational ideal and practical AI behavior creates the conditions for systematic errors when operating in environments that differ from training distributions.
+**Bayesian rationality** says you keep updating when evidence shows up. No frozen creed. Current systems do that in RL and some fine-tunes. Frozen pretrained weights do not, unless you intervene. Train on one world, ship into another, and the errors pile up.
 
 ## The orthogonality thesis
 

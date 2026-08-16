@@ -9,13 +9,11 @@ keywords: ["State of AI", "AI Research", "Large Language Models", "Neural Networ
 
 Five million papers. That is the size of this AI research corpus in [OpenAlex](https://openalex.org) through mid-2026, and **58.8% of it was published from 2023 through June 2026**. That window is three and a half years, not four. In 2025, **944,530** papers matched the query, a 42.6% rise over 2024 and a 10.1x increase since 2013. January through June 2026 logged **812,972**. Doubling that half-year gives about 1.6 million. Academic publishing is seasonal. 1.6 million is arithmetic, not a forecast.
 
-The data tells a story of concentration, acceleration, and structural shift. Neural networks still dominate (**1,522,612 abstracts**, or 30.4% of the corpus) but the fastest-growing category is large language models, which grew **29.9x** from 2018 to 2025. Every one of the ten fastest-rising keywords is LLM-related. China's **cumulative** count is 21.6% above the US. In 2025 the annual gap was **53.4%**. Nearly half of all papers (**48.9%**) have zero citations.
-
-This is the empirical map of where AI research capital and engineering attention are actually flowing.
+Neural networks still dominate (**1,522,612 abstracts**, or 30.4% of the corpus). Large language models grew **29.9x** from 2018 to 2025, and every one of the ten fastest-rising keywords is LLM-related. China's **cumulative** count is 21.6% above the US. In 2025 the annual gap was **53.4%**. Nearly half of all papers (**48.9%**) have zero citations.
 
 ## I. Methodology (5 Million Papers, One Open API)
 
-This analysis is built on a corpus of **5,003,783** works published between 2013 and mid-2026, pulled from [OpenAlex](https://openalex.org) on **12 June 2026**. OpenAlex is a living index. Re-running the same strings later will not match digit-for-digit. The counts below are API totals for that pull, documented in the [SSRN paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6991218).
+The corpus is **5,003,783** works published between 2013 and mid-2026, pulled from [OpenAlex](https://openalex.org) on **12 June 2026**. OpenAlex is a living index. Re-running the same strings later will not match digit-for-digit. The counts below are API totals for that pull, documented in the [SSRN paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6991218).
 
 The corpus is an abstract-level OR search on ten terms: *artificial intelligence, machine learning, deep learning, neural network, language model, reinforcement learning, computer vision, natural language, generative, autonomous.* A paper lands in the corpus if any of those strings appear in the abstract. That is a methods-mention census, not a roster of papers whose main contribution is AI. Abstract search returns **1.5x to 7.7x** more hits per keyword than title search in this pull. Those ratios are in the paper.
 
@@ -32,7 +30,7 @@ The resulting corpus is 65.4% journal articles, 13.4% preprints, and 7.7% book c
 
 <StateOfAiTimeline />
 
-## II. The Empirical Map
+## II. Keyword counts
 
 The n-gram frequency analysis across 5,003,783 paper abstracts reveals the actual priorities of the global AI research enterprise. Not what conference keynotes claim matters, but what researchers are building.
 

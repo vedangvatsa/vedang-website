@@ -232,15 +232,20 @@
   padding: 0.35rem 0.1rem;
 }
 
-/* Long prose cells wrap so source links stay on screen instead of
-   sitting in a sideways-scroll gutter that eats taps. */
-.notion-article .table-wrapper.table-wrap-text td:nth-child(3),
-.notion-article .table-wrapper.table-wrap-text th:nth-child(3),
-.prose .table-wrapper.table-wrap-text td:nth-child(3),
-.prose .table-wrapper.table-wrap-text th:nth-child(3) {
+/* Wrapping tables: real HTML cells, not a sideways-scroll screenshot.
+   Source and record columns wrap so links stay tappable. */
+.notion-article .table-wrapper.table-wrap-text td,
+.notion-article .table-wrapper.table-wrap-text th,
+.prose .table-wrapper.table-wrap-text td,
+.prose .table-wrapper.table-wrap-text th {
   white-space: normal;
   text-align: left;
-  min-width: 10rem;
+}
+.notion-article .table-wrapper.table-wrap-text td:nth-child(n+2),
+.notion-article .table-wrapper.table-wrap-text th:nth-child(n+2),
+.prose .table-wrapper.table-wrap-text td:nth-child(n+2),
+.prose .table-wrapper.table-wrap-text th:nth-child(n+2) {
+  min-width: 8rem;
   max-width: 28rem;
 }
 
@@ -454,10 +459,10 @@ pre > code {
   .prose .table-wrapper table:has(th:nth-child(3)) td {
     white-space: nowrap;
   }
-  .notion-article .table-wrapper.table-wrap-text td:nth-child(3),
-  .notion-article .table-wrapper.table-wrap-text th:nth-child(3),
-  .prose .table-wrapper.table-wrap-text td:nth-child(3),
-  .prose .table-wrapper.table-wrap-text th:nth-child(3) {
+  .notion-article .table-wrapper.table-wrap-text td,
+  .notion-article .table-wrapper.table-wrap-text th,
+  .prose .table-wrapper.table-wrap-text td,
+  .prose .table-wrapper.table-wrap-text th {
     white-space: normal;
   }
 }

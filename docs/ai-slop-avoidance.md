@@ -135,6 +135,23 @@ developments unfold in the coming years."
 ```
 **Fix**: Make a prediction or ask a specific question. "If this trend continues, by 2028 [specific outcome]."
 
+### ❌ Detector bait (Fakespot, Aug 2026)
+
+These openings scored 88-99% AI on a public detector even when facts were real. Ban the sentence shape, not the topic.
+
+| Pattern | Example | Write instead |
+|---------|---------|----------------|
+| Announce a pattern | "The pattern is structural / clear / familiar / consistent." | Name the cycle or the companies. |
+| Dual-problem frame | "This creates a dual problem... The question is not whether X. The data shows it does." | Lead with the trial number, then the cost. |
+| Speculative-to-measured | "X is no longer speculative. It is clinically measured." | Cite the RCT. |
+| Self-emphasis | "These are not marginal improvements. They are clinically significant." | Delete. Keep the 51%. |
+| Convergence glue | "The convergence of A, B, and C signals the emergence of..." | Name what shipped. |
+| Consulting diagnosis | "Enterprise leaders face conflicting signals." / "predictable failure pattern" | Name the vendor claim and the failed pilot. |
+| Epoch / mediation | "That era is ending." / "increasingly mediated by simulation" | Name the 3nm leak or the Waymo miles. |
+| Unfalsifiable rank | "the most consequential infrastructure transition since electrification" | Drop the rank. Compare two named things. |
+| Writer-note tricolon | "A headline, a closed fund, and a paid hall are three different acts." | Define announced / funded / spent with examples. |
+| Throat-clearing pivot | "Notably," "More importantly," "That said," "What follows is" | Delete the adverb. State the fact. |
+
 ## Tier 4: LinkedIn-Specific Slop
 
 These are specifically banned in LinkedIn posts (and parodied by the LIT tool at veda.ng/lit):
