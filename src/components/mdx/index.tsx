@@ -1,4 +1,5 @@
 import { ZoomableImage } from '@/components/zoomable-image';
+import { TwitterEmbed } from '@/components/twitter-embed';
 
 /* ─── Markdown tables: keep cells on one line, scroll sideways on phones ─── */
 export function Table(props: React.TableHTMLAttributes<HTMLTableElement>) {
@@ -20,6 +21,18 @@ export function Columns({ children, reverse = false }: { children: React.ReactNo
 
 export function Column({ children }: { children: React.ReactNode }) {
   return <div className="flex flex-col gap-3">{children}</div>;
+}
+
+/* ─── Embedded X post ─── */
+export function XEmbed({ tweetId, url }: { tweetId?: string; url?: string }) {
+  const id = tweetId || url?.match(/status\/(\d+)/)?.[1];
+  if (!id) return null;
+
+  return (
+    <div className="not-prose my-8 flex justify-center">
+      <TwitterEmbed tweetId={id} />
+    </div>
+  );
 }
 
 /* ─── Figure with caption and source ─── */
