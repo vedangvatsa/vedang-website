@@ -2475,9 +2475,11 @@
     "id": "viral-rewrite-137",
     "scheduleDate": "2026-08-16",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Apologizing for not being always available trains people to expect instant responses. A better default is gratitude for patience. Boundaries are healthy. Find teams that respect them at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_174_1.jpg"
+    "image": "scripts/post-images/post_174_1.jpg",
+    "postedAt": "2026-08-17T19:55:13.714Z",
+    "castHash": "0xa6910300813cbbcf22bafbcd0544638aed215e19"
   },
   {
     "id": "viral-rewrite-138",

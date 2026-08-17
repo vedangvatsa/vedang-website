@@ -2366,9 +2366,10 @@
     "id": "viral-rewrite-144",
     "scheduleDate": "2026-08-18",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Sometimes people don't need solutions. They need to know their struggle is real and they're not alone. The simplest act of care is acknowledgment. Find teams where you can be heard at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_138_1.jpg"
+    "image": "scripts/post-images/post_138_1.jpg",
+    "error": "Media failed: scripts/post-images/post_138_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-145",
