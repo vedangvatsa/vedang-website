@@ -64,47 +64,42 @@ export function ApiTrafficChart() {
 export function ZeroUIMarketMap() {
   const layers = [
     {
-      name: 'Protocol Layer',
-      desc: 'Standards for agent-to-service and agent-to-agent communication',
+      name: 'Protocols',
+      desc: 'How agents call tools and other agents',
       color: '#18181b',
-
-      companies: ['Anthropic (MCP)', 'Google (A2A)', 'Google (UCP)', 'OpenAI (ACP)', 'Coinbase (x402)', 'Stripe (MPP)', 'LangChain (LangGraph)', 'CrewAI', 'Microsoft (AutoGen)'],
+      companies: ['MCP', 'A2A', 'UCP', 'x402'],
     },
     {
-      name: 'Headless Commerce Engines',
-      desc: 'API-first platforms exposing 100% functionality without a frontend',
+      name: 'Headless commerce',
+      desc: 'Storefront optional; API is the product',
       color: '#3f3f46',
-
-      companies: ['Commercetools', 'Fabric', 'Shopify (Storefront API)', 'BigCommerce', 'Medusa', 'Saleor', 'Elastic Path', 'Spryker'],
+      companies: ['Shopify Storefront API', 'Commercetools', 'Stripe', 'Medusa'],
     },
     {
-      name: 'AEO & Semantic Analytics',
-      desc: 'Optimizing brand data for LLM ingestion instead of human SEO',
+      name: 'Search for models',
+      desc: 'Structured data for LLM picks, not SEO tricks',
       color: '#71717a',
-
-      companies: ['Yext', 'Schema App', 'Botify', 'seoClarity', 'BrightEdge', 'Deep (AI search)', 'Perplexity Pages', 'Vectorize'],
+      companies: ['Schema markup', 'Yext', 'BrightEdge', 'Perplexity Pages'],
     },
     {
-      name: 'Identity & Execution',
-      desc: 'Agentic wallets, ZKP attestation, and machine-native payments',
+      name: 'Identity and pay',
+      desc: 'Who authorized the agent and who gets paid',
       color: '#52525b',
-
-      companies: ['Coinbase (Agentic Wallets)', 'Skyfire (KYAPay)', 'Privy', 'Dynamic', 'Crossmint', 'Circle (USDC rails)', 'Worldcoin (World ID)', 'Lit Protocol'],
+      companies: ['Agentic wallets', 'Privy', 'Circle USDC', 'World ID'],
     },
     {
-      name: 'Edge Hardware & Ambient Sensors',
-      desc: 'Post-smartphone form factors optimized for context, not screens',
+      name: 'Edge hardware',
+      desc: 'Sensors and local compute, not big screens',
       color: '#a1a1aa',
-
-      companies: ['Apple (Secure Enclave)', 'Limitless', 'Humane', 'Oura', 'CTRL-labs (Meta)', 'Rabbit r1', 'Frame (AR glasses)', 'Qualcomm (on-device LLM)'],
+      companies: ['Oura', 'Limitless', 'Apple Secure Enclave', 'Qualcomm on-device'],
     },
   ];
 
   return (
     <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
       <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Zero-UI Market Map</h3>
-        <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Five infrastructure layers powering the post-interface internet</p>
+        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Zero-UI market map</h3>
+        <p className="text-xs text-muted-foreground mb-6">Five layers where money is moving as the frontend shrinks</p>
 
         <div className="space-y-4">
           {layers.map((layer) => (

@@ -9,7 +9,7 @@ keywords: ['zero-ui', 'agentic web', 'headless software', 'api traffic', 'attent
 
 Bots took more than half the web in 2024. [Imperva's 2025 Bad Bot Report](https://www.imperva.com/blog/2025-imperva-bad-bot-report-how-ai-is-supercharging-the-bot-threat/) put automated traffic at 51%, and that is the first time in a decade people lost the majority. We have talked to computers through a GUI since the Xerox Alto in 1973. That job is slipping. [Gartner](https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027) says 33% of enterprise apps will include agentic AI by 2028, up from under 1% in 2024. Their IT Symposium/Xpo 2025 figure, via [Digital Commerce 360](https://www.digitalcommerce360.com/2025/11/28/gartner-ai-agents-15-trillion-in-b2b-purchases-by-2028/), is more than $15 trillion in B2B spend going through agents by 2028. Treat that as a forecast. Nobody has counted the money yet. What I can see is the medium: fewer pages built for eyes, more feeds built so a machine can actually use them.
 
-<Figure src="/images/essays/postinterface.svg?v=2" alt="The Post-Interface Internet: Legacy Web vs Agent Web comparison" wide />
+<Figure src="/images/essays/postinterface.svg?v=3" alt="Diagram: pages for people on the left, APIs for machines on the right, both backed by the same database" wide />
 
 <StatRow>
 <Stat value="51%" label="Web traffic automated in 2024" source="Imperva Bad Bot Report, 2025" sourceUrl="https://www.imperva.com/blog/2025-imperva-bad-bot-report-how-ai-is-supercharging-the-bot-threat/" />
@@ -40,7 +40,7 @@ An agent does the same buy in milliseconds. It hits the merchant's structured en
 The internet is splitting. One side still paints pages. The other side ships JSON. If you only optimize for the first, you disappear from the second.
 </PullQuote>
 
-<Figure src="/images/essays/charts/internet-traffic-composition.png" alt="100% stacked bar chart showing global internet traffic shifting from human-dominated in 2019 (63%) to machine-dominated by 2028 (65%) with crossover in 2024" wide />
+<ApiTrafficChart />
 
 ## The Collapse of the Attention Economy
 
@@ -56,7 +56,7 @@ You cannot show a banner to an API. You cannot dark-pattern an LLM into a sponso
 
 CPM and CTR start to look like relics. What replaces them is Answer Engine Optimization and LLM optimization. Brands stop tuning pages for human psychology. They tune feeds so the model that picks a product actually prefers theirs.
 
-<Figure src="/images/essays/charts/attention-economy-collapse.png" alt="Horizontal bar chart comparing Visual Web vs Agent Web across key marketing metrics like CTR and open rates" wide />
+<AttentionCollapseChart />
 
 B2B and B2C shops are already reacting. The headless pivot is real: strip the UI, keep the protocol.
 
@@ -127,7 +127,7 @@ For the last decade, building a SaaS product meant hiring a massive frontend tea
 
 In a headless, agent-first architecture, that entire cost center evaporates.
 
-<Figure src="/images/essays/charts/capital-reallocation.png" alt="Horizontal bar chart showing hiring trend changes indexed to 2024: agent protocol (+240%) and API engineers (+85%) rising, frontend (-38%) and UI/UX (-29%) declining" wide />
+<FrontendDeclineChart />
 
 When you do not need to paint pixels on glass, software gets cheaper and faster. 
 - **Zero Client-Side Hosting**: No more massive JavaScript bundles downloaded to user devices.

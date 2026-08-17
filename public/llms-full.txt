@@ -800,7 +800,7 @@ The IETF made robots.txt official as [RFC 9309](https://www.rfc-editor.org/rfc/r
 
 If crawl traffic is free to take and expensive to serve, sites lock it down. Paywalls, logins, bot checks, apps. The companies that wanted an open crawl are giving sites a reason to close. The sites that stayed open the longest pay the most for staying open.
 
-The web assumed each visit might bring a person who could pay. The logs show mostly bots. Publishers pay to host pages that chatbots read for free. The clicks that paid the bill are not coming back. Lawsuits and new rules have not changed that.
+A site used to bet that a visit meant a reader who might pay. Most visits are bots now. The publisher still hosts the page. The bot copies it and sends nobody back. Suits and new standards have not paid the bill.
 
 ---
 
@@ -1832,8 +1832,6 @@ A chatbot that hallucinates costs you credibility. An agent that hallucinates co
 
 One notable exit: [Helicone](https://helicone.ai/), an LLM observability proxy, was acquired by Mintlify in March 2026 and is now in maintenance mode.
 
-![Horizontal bar chart showing venture capital by agent infrastructure layer: Compute & Inference leads at $4B+, followed by Orchestration at $709M, Vector/RAG at $312M, Evaluation at $256M, Security at $182M, Perception at $87M, Memory & State at $36M, and Sandboxed Execution at $32M](/images/essays/charts/infra-funding-by-layer.png)
-
 ## How Agents Think
 
 Every agent call requires an inference pass. The compute layer provides the GPU infrastructure, model hosting, and API endpoints that turn prompts into responses. This is the largest value pool in the entire stack.
@@ -1888,13 +1886,9 @@ Combined, these six companies represent over $59 billion in valuation on roughly
 
 Disclosed equity funding for pure-play agentic AI companies nearly doubled from $1.5 billion in 2024 to $2.9 billion in 2025. The number of disclosed deals grew from 31 to 50. Between January and May 2026, the market raised another $1.1 billion across 29 deals, putting it on pace for approximately $2.6 billion annualized. The raw capital growth is real. What the headline numbers obscure is where that capital actually lands.
 
-![Grouped bar chart showing agentic AI funding velocity: 2024 had $1.5B across 31 deals, 2025 had $2.9B across 50 deals, Jan-May 2026 had $1.1B across 29 deals at ~$2.6B annualized pace](/images/essays/charts/funding-velocity.png)
-
 ### Capital Concentrates Violently
 
 The distribution is not normal. In early 2026, the top 3 deals captured 44% of total agentic AI capital. The top 10 captured 78%. The bottom half of all deals split 11.5% among themselves. This is the defining structural feature of the agent funding market. A small number of companies absorb most of the money, and the rest compete for scraps.
-
-![Stacked bar chart showing capital concentration in agentic AI: Top 3 deals captured 44%, Deals 4-10 captured 34%, Bottom 50% split 11.5%, Remaining 10.5%](/images/essays/charts/capital-concentration.png)
 
 This concentration exists at every stage. The median AI seed round in 2026 sits at approximately $4.6 million, up from around $3 million for the broader market. But the upper quartile of AI seed deals now exceeds $8 to $10 million, and outlier rounds (Parallel's $30 million seed, for example) distort the average further. Investors increasingly expect $500K to $1 million in ARR at seed stage, a bar that would have been Series A territory three years ago.
 
@@ -2533,7 +2527,7 @@ Summary: The GUI was a 40-year hack for human-computer impedance matching.
 
 Bots took more than half the web in 2024. [Imperva's 2025 Bad Bot Report](https://www.imperva.com/blog/2025-imperva-bad-bot-report-how-ai-is-supercharging-the-bot-threat/) put automated traffic at 51%, and that is the first time in a decade people lost the majority. We have talked to computers through a GUI since the Xerox Alto in 1973. That job is slipping. [Gartner](https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027) says 33% of enterprise apps will include agentic AI by 2028, up from under 1% in 2024. Their IT Symposium/Xpo 2025 figure, via [Digital Commerce 360](https://www.digitalcommerce360.com/2025/11/28/gartner-ai-agents-15-trillion-in-b2b-purchases-by-2028/), is more than $15 trillion in B2B spend going through agents by 2028. Treat that as a forecast. Nobody has counted the money yet. What I can see is the medium: fewer pages built for eyes, more feeds built so a machine can actually use them.
 
-![The Post-Interface Internet: Legacy Web vs Agent Web comparison](/images/essays/postinterface.svg?v=2)
+![Diagram: pages for people on the left, APIs for machines on the right, both backed by the same database](/images/essays/postinterface.svg?v=3)
 
 - **51%**: Web traffic automated in 2024 (Imperva Bad Bot Report, 2025)
 - **33%**: Enterprise software with agentic AI by 2028 (forecast) (Gartner, Jun 2025)
@@ -2559,8 +2553,6 @@ An agent does the same buy in milliseconds. It hits the merchant's structured en
 > 
 The internet is splitting. One side still paints pages. The other side ships JSON. If you only optimize for the first, you disappear from the second.
 
-![100% stacked bar chart showing global internet traffic shifting from human-dominated in 2019 (63%) to machine-dominated by 2028 (65%) with crossover in 2024](/images/essays/charts/internet-traffic-composition.png)
-
 ## The Collapse of the Attention Economy
 
 If an agent books your flights and groceries and never draws a screen, the ad model that paid for the last twenty years of "free" web starts to crack.
@@ -2574,8 +2566,6 @@ You cannot show a banner to an API. You cannot dark-pattern an LLM into a sponso
 > You cannot buy a banner impression from an agent. The product has to win on the specs and reviews the agent can parse.
 
 CPM and CTR start to look like relics. What replaces them is Answer Engine Optimization and LLM optimization. Brands stop tuning pages for human psychology. They tune feeds so the model that picks a product actually prefers theirs.
-
-![Horizontal bar chart comparing Visual Web vs Agent Web across key marketing metrics like CTR and open rates](/images/essays/charts/attention-economy-collapse.png)
 
 B2B and B2C shops are already reacting. The headless pivot is real: strip the UI, keep the protocol.
 
@@ -2634,8 +2624,6 @@ The transition away from visual interfaces radically alters the unit economics o
 For the last decade, building a SaaS product meant hiring a massive frontend team. You needed UI designers to build Figma wireframes, UX researchers to conduct user testing, React developers to manage state, and QA engineers to ensure the app rendered correctly on Safari, Chrome, iOS, and Android. 
 
 In a headless, agent-first architecture, that entire cost center evaporates.
-
-![Horizontal bar chart showing hiring trend changes indexed to 2024: agent protocol (+240%) and API engineers (+85%) rising, frontend (-38%) and UI/UX (-29%) declining](/images/essays/charts/capital-reallocation.png)
 
 When you do not need to paint pixels on glass, software gets cheaper and faster. 
 - **Zero Client-Side Hosting**: No more massive JavaScript bundles downloaded to user devices.
@@ -3468,8 +3456,6 @@ A caveat is necessary. YC is not a neutral sample of the startup ecosystem. It s
 
 ## The B2B supermajority
 
-![Bar chart showing YC portfolio by industry: B2B 50.9% (2,964 companies), Consumer 14.9% (867), Healthcare 11.4% (665), Fintech 10.6% (618), Industrials 6.3% (368), Real Estate 2.6% (153), Education 2.1% (125)](/images/essays/charts/yc-industry-breakdown.png)
-
 The dominance of B2B is the most important structural fact. 2,964 companies, 51% of the portfolio, are classified as B2B. Consumer is a distant second at 14.9%. In the most recent batches, B2B has climbed to roughly 70%.
 
 - **51%**: YC portfolio is B2B (Apr 2026 scrape) (YC Startup Directory)
@@ -3554,8 +3540,6 @@ Fintech is 10.6% of the portfolio (618 companies). The pattern has shifted from 
 The more interesting development is agent-native financial infrastructure. Maven builds payments for voice agents. ZeroSettle handles in-app billing. SpotPay is a stablecoin bank account. Unifold handles multi-chain payments. Fintech is no longer about building the bank. It is about building the financial plumbing that AI agents need to transact autonomously. This ties directly to the x402 and MPP protocols described in the [Agentic Commerce](/agentcommerce) analysis.
 
 ## Batch dynamics
-
-![Bar chart showing YC batch size evolution from 2005 (8 companies) to 2026 (199 in W26, 69 in S26)](/images/essays/charts/yc-batch-size-evolution.png)
 
 Batch sizes grew from 8 companies in Summer 2005 to a peak of roughly 230 in 2022-2024. In 2025, sizes moderated to 148-168 and YC added a third annual batch (Fall). Winter 2026 returned to 199. Spring 2026, still in-progress, shows 69 companies.
 
@@ -4015,7 +3999,7 @@ Summary: How the internet is shifting from a place where humans find information
 
 The web used to be for looking things up. Then it was for posting. Now people send ChatGPT, Perplexity, or a company agent to book, research, or buy, and they read the report. MCP and A2A are how those agents call tools instead of clicking a page.
 
-![Diagram showing the evolution from the attention economy to the intention economy](/images/essays/agentic-web-diagram.svg?v=7)
+![Diagram: human web with scroll and ads moving to agent web with goals and tools](/images/essays/agentic-web-diagram.svg?v=8)
 
 ## From Attention to Intention
 
@@ -4034,8 +4018,6 @@ Doc Searls coined the term [intention economy](https://cyber.harvard.edu/researc
 
 Every major AI platform (OpenAI, Google, Microsoft, Amazon, and Anthropic) has standardized around MCP. The protocol went from 2 million monthly SDK downloads at launch to 97 million by March 2026. Google released its complementary [Agent-to-Agent (A2A) protocol](https://a2a-protocol.org/latest/) in April 2025 with over 50 launch partners and moved it to the Linux Foundation in June 2025 under the same AAIF umbrella. By February 2026 more than 100 enterprises had been listed as adopters, including Salesforce, Atlassian, PayPal, and the usual consulting names. Those are logos on a launch page. MCP is how an agent calls a tool. A2A is how one agent finds another.
 
-![Bar chart showing MCP adoption growth: Nov 2024 had 2M SDK downloads and 50 servers, Sep 2025 had 45M downloads and 4.5K servers, Mar 2026 had 97M downloads and 10K+ servers](/images/essays/charts/mcp-adoption.png)
-
 ## What Makes an Agent Different from a Chatbot
 
 The distinction matters because it changes what computers can do for you.
@@ -4051,8 +4033,6 @@ An agent receives a goal and pursues it across multiple steps. It calls APIs, br
 The key capabilities are perception (understanding its digital environment), reasoning (breaking a goal into steps), action (executing those steps using tools), and learning (improving from outcomes over time). [OpenAI's Operator](https://openai.com/index/introducing-operator/), powered by its Computer-Using Agent (CUA) model, achieves an 87% success rate on the WebVoyager benchmark for complex browser tasks. [Google's Project Mariner](https://deepmind.google/technologies/project-mariner/), built on Gemini 2.0, uses an Observe-Plan-Act cycle to handle multi-tab browser tasks with the ability to learn workflows from user demonstrations. Startups like [Genspark's Super Agent](https://www.genspark.ai/) are shipping products that operate this way.
 
 The pace of improvement is measurable. [METR](https://metr.org/) (Model Evaluation and Threat Research) tracks a metric called the "task-completion time horizon," which measures the complexity of tasks AI agents can complete autonomously. Their research shows this capability has been doubling every 7 months since 2019. More recent data from 2023 onward suggests the doubling time has accelerated to roughly 4 months. If these trends hold, agents will be independently completing tasks that currently take humans days or weeks within the next few years.
-
-![Bar chart showing AI agent task horizon from 2019 (1.5 min) to 2026 (8 hrs), doubling every 7 months](/images/essays/charts/task-horizon.png)
 
 This is more than a feature upgrade. It is a change in the relationship between user and software. Instead of operating software, you manage it. You become the strategist, not the operator.
 
@@ -4111,11 +4091,7 @@ The agent-to-agent transaction layer is still early, but it is being built on in
 
 The adoption is not abstract. In September 2025, [Salesforce CEO Marc Benioff revealed](https://salesforceben.com/) that the company had reduced its customer support workforce from 9,000 to 5,000 employees, citing its Agentforce platform, which was handling roughly 50% of customer interactions with quality scores comparable to human agents. Duolingo stopped using human contractors for tasks AI could handle. A [study by OpenAI and the University of Pennsylvania](https://arxiv.org/abs/2303.10130) found that large language models can accelerate the completion of roughly 15% of U.S. job tasks without loss of quality. When additional tools are integrated, that figure rises to between 47% and 56%.
 
-![Bar chart showing AI agent market projections: Grand View Research estimates $70.5B and $50.3B by 2030, Dimension Market Research estimates $24.5B, Gartner projects 30% of enterprise software revenue by 2035](/images/essays/charts/agent-market-projections.png)
-
 The pattern is not uniform. Financial services leads in production deployments, with 78% of organizations running AI agents in at least one business function. Technology companies follow closely. Retail has hit 53%, driven heavily by demand forecasting and inventory optimization, with 75% of retailers now considering AI agents essential for competitiveness. Healthcare sits at 42%, accelerating in administrative workflows like scheduling and insurance verification while remaining cautious about clinical autonomy. Government and manufacturing lag behind but are scaling.
-
-![Bar chart showing AI agent adoption by industry: Financial Services 78%, Technology 75%, Retail 53%, Healthcare 42%, Manufacturing 38%, Government 22%](/images/essays/charts/industry-adoption.png)
 
 This matches a broader pattern. The AI agent market within Web3 specifically saw its token market value grow from $22 billion in late 2023 to over $55 billion by end of 2024, and it has continued growing through 2025. DeFAI, the fusion of decentralized finance with autonomous agents, is now a real category. Agents are optimizing DeFi strategies, managing liquidity pools, and participating in DAO governance. By 2026, the DeFAI sector has moved past the hype cycle into structural maturity, with projects emphasizing verifiable compute via Zero-Knowledge Machine Learning (ZKML) and autonomous intent-based execution.
 
@@ -4208,8 +4184,6 @@ Moleka is right that the mainstream economics profession has not fully reckoned 
 
 The difficulty begins when the paper extends the logic of digital abundance to the entire economy. Information can be copied at zero marginal cost. Lithium cannot. Fresh water cannot. Arable land cannot.
 
-![Bar chart showing global data center electricity consumption growing from 240 TWh in 2020 to 945 TWh projected by 2030](/images/essays/charts/datacenter-energy-consumption.png)
-
 The [IEA reported](https://www.iea.org/reports/electricity-2025) that global data center electricity consumption reached approximately 415 terawatt-hours in 2024, roughly 1.5% of total global electricity use. Their base-case projection puts this at 945 TWh by 2030, growing at approximately 15% per year as AI workloads scale. The United States and China account for nearly 80% of this growth. These "dematerialized" AI systems run on semiconductor chips manufactured from rare earth elements, cooled by water in [facilities that consumed 66 billion liters](https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks) in the United States alone in 2023, and powered by electricity generated overwhelmingly from fossil fuels.
 
 The paper references "decentralized quantum energy" as a pathway to eliminating traditional energy constraints. As of mid-2026, commercial quantum energy generation does not exist. Fusion energy, which is closer to realization, remains at least a decade from commercial deployment according to the most optimistic estimates from [the IAEA](https://www.iter.org/). The gap between what is theoretically possible and what is deployable at scale is the central question.
@@ -4221,8 +4195,6 @@ In 2025, China [tightened export controls](https://www.spglobal.com/commodityins
 ## The cost of building "abundance"
 
 One of the less examined ironies of the AI abundance thesis is how expensive the infrastructure of abundance itself has become.
-
-![Horizontal bar chart showing frontier model training costs growing exponentially from GPT-3 ($12M) to next-gen frontier ($1B+)](/images/essays/charts/frontier-model-training-costs.png)
 
 The cost of training frontier AI models has escalated from roughly $12 million for GPT-3 in 2020 to an estimated $100-191 million for GPT-4 and Gemini Ultra in 2023. Industry consensus projects that the next generation of frontier models may cost upward of $1 billion for a single training run. This cost grows at 2-3x per year. Compute and hardware are 47-67% of total training cost, with the remainder split between R&D talent and data infrastructure.
 
@@ -4311,8 +4283,6 @@ The [IMF's January 2024 staff note](https://www.imf.org/en/Publications/Staff-Di
 Unlike previous automation waves that targeted routine manual labor, AI exposure is concentrated in cognitive, higher-skilled work. This is a structural difference that changes the politics of technological transition. The affected populations are urban, educated, and politically active, which may accelerate the policy response but also the backlash.
 
 [Goldman Sachs projected](https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent) that up to 300 million full-time jobs across the United States and Europe may be affected by generative AI, while suggesting the technology could add roughly $7 trillion to global GDP over a decade. The [World Economic Forum's 2025 Future of Jobs Report](https://www.weforum.org/publications/the-future-of-jobs-report-2025/), surveying over 1,000 employers across 55 economies, projected 170 million new jobs created by 2030 against 92 million displaced, a net gain of 78 million roles.
-
-![Infographic showing WEF labor market churn by 2030: +170M jobs created, -92M jobs displaced, resulting in +78M net gain](/images/essays/charts/labor-market-churn.png)
 
 - **300M**: Jobs affected in US + Europe (Goldman Sachs)
 - **$7T**: Projected GDP gain over a decade (Goldman Sachs)
@@ -5134,8 +5104,6 @@ Every prior automation wave replaced human muscle with machines. AI agents repla
 [MarketsandMarkets](https://www.marketsandmarkets.com/PressReleases/ai-agents.asp) put the AI agents market at $5.26 billion in 2024 and $7.84 billion in 2025, with a $52.62 billion 2030 print at a 46.3% compound rate. That is a paid TAM model, not a census. A [PwC survey of 308 US executives](https://www.pwc.com/us/en/tech-effect/ai-analytics/ai-agent-survey.html) in April 2025 found 79% saying AI agents were already being adopted in their companies. That is a US executive sample, not a global production census, and PwC's own write-up notes that adoption is often shallow. Something structural has still changed: software now operates on people's behalf.
 
 AI agents that can perceive, reason, plan, and execute complex tasks autonomously represent something different from prior automation waves. They interpret ambiguous goals, formulate multi-step plans, and adapt strategies based on changing conditions, rather than following a predetermined script.
-
-![Bar chart of paid TAM forecasts for AI agents. MarketsandMarkets April 2025: $7.84B in 2025, $52.62B in 2030 at 46.3% CAGR](/images/essays/charts/agent-market-growth.png)
 
 - **$7.84B**: Agent market, 2025 (paid TAM) (MarketsandMarkets, Apr 2025)
 - **$52.62B**: Projected 2030 (same paid TAM) (MarketsandMarkets)
@@ -6373,8 +6341,6 @@ You need a permit to build a house. Then another permit. Then an inspection. The
 Rules get added. Almost none get deleted. World Bank B-READY and the US Federal Register both show the pile growing. Each extra form is a tax on anyone who needs a stamp to act.
 
 The assumption underlying bureaucracy is reasonable: rules create order, oversight creates safety, procedures prevent mistakes. The problem is that institutional incentive structures reward complexity and punish simplification. The [World Bank's B-READY 2025 report](https://www.worldbank.org/en/programs/business-enabling-environment/b-ready), covering 101 economies, found that the average country is roughly 60% "business ready." It also identified a 25-point gap between regulatory quality (averaging ~68 points) and public services/transparency (averaging ~43 points). Countries are relatively competent at writing laws and less competent at providing the services needed to comply with them efficiently.
-
-![Horizontal bar chart showing the regulatory friction tax by sector, highlighting pharmaceuticals timeline of 10-15 years ($2.6B avg cost)](/images/essays/charts/bureaucracy-friction-tax.png)
 
 ## The Measurable Cost
 
@@ -7822,8 +7788,6 @@ The answer: markets carry friction, and that friction determines the boundary be
 
 Every reduction in transaction costs shifts the boundary between firm and market. The internet reduced search costs (you can find a supplier in Shenzhen in seconds). Email reduced negotiation costs (a contract discussion that took weeks of postal exchange now takes hours). E-commerce reduced distribution costs (a single seller can reach global markets without physical retail). Each reduction made it viable to outsource activities that were previously internal, and the gig economy, contractor culture, and platform marketplaces followed.
 
-![Infographic comparing traditional vs protocol transaction cost reductions: search (99.9% reduction), contract writing (~100%), dispute resolution (95%)](/images/essays/charts/coasean-transaction-friction.png)
-
 Smart contracts, AI agents, and cryptographic protocols reduce transaction costs by another order of magnitude. The key categories of cost and their protocol-era equivalents:
 
 - **Search costs**: Zero. AI agents discover counterparties algorithmically across global liquidity pools.
@@ -7855,8 +7819,6 @@ These protocols demonstrate that complex economic coordination, the kind that hi
 Decentralized Autonomous Organizations (DAOs) extend the mesh model from execution to governance.
 
 [DeepDAO](https://deepdao.io/) data shows that DAO treasuries reached approximately **$35 billion** in assets under management at their peak in late 2024. By late 2025, market conditions had reduced this to approximately $13.6 billion, a figure that itself reveals an important structural insight: much of the "treasury" value was held in native governance tokens, making it circular (the DAO is "rich" in its own token, which derives value from the DAO's perceived value). Liquid, diversified treasury assets were closer to $12.3 billion.
-
-![Donut chart showing DAO Treasury Concentration: Uniswap 23.5% ($3.2B), Optimism 20.6% ($2.8B), Arbitrum 15.4% ($2.1B), Mantle 11% ($1.5B), ENS 7.4% ($1.0B), others 22.1% ($3.0B)](/images/essays/charts/dao-treasury-concentration.png)
 
 The concentration is extreme: the top 5 DAOs (Uniswap, Optimism, Arbitrum, Mantle, ENS) hold over 60% of all collective DAO treasury assets. This concentration mirrors traditional finance, where a small number of institutions manage the majority of capital. The mesh may distribute execution, but capital still concentrates.
 
@@ -7958,8 +7920,6 @@ The internet removed the access constraint. This was expected to be unambiguousl
 
 The [MIT study by Vosoughi, Roy, and Aral](https://www.science.org/doi/10.1126/science.aap9559) (published in *Science*, 2018) quantified the dynamic: false information spreads **six times faster** than true information on social media, reaches broader audiences, and penetrates deeper into social networks. The study analyzed approximately 126,000 stories shared by roughly 3 million people. The mechanism is novelty and emotional arousal. False claims tend to be more surprising and emotionally charged than accurate ones, and the brain allocates attention to surprising, emotionally charged information preferentially.
 
-![Bar chart comparing spread speed of true information (1x) vs. false information (6x faster)](/images/essays/charts/speed-asymmetry-misinfo.png)
-
 A 2025 study published in *Science* provided causal evidence that algorithmic ranking on platforms like X (formerly Twitter) directly shapes political attitudes. Researchers experimentally reduced or increased exposure to content promoting partisan hostility and observed measurable shifts in user polarization. The finding is significant: algorithms actively amplify existing divisions by rewarding hostility, which generates more engagement than reasoned discourse.
 
 The infrastructure of modern information consumption is designed for engagement, not comprehension. The average American receives approximately **46 push notifications per day**. Each notification competes for a finite cognitive resource: attention. The content that wins this competition is the most emotionally arousing, the most novel, and the most identity-reinforcing.
@@ -7971,8 +7931,6 @@ Approximately **64% of the global population** uses social media, spending an av
 ## The Collapse of Shared Epistemology
 
 The plurality trap is about different facts, different standards of evidence, and different criteria for what constitutes a credible source.
-
-![Line chart showing Gallup media trust decline from 1976 (72%) to 2025 (28%), with 2025 partisan breakdown showing Democrats (51%), Independents (27%), Republicans (8%)](/images/essays/charts/media-trust-collapse.png)
 
 [Gallup](https://news.gallup.com/) tracking data reveals the scale of the collapse. In 2025, only **28%** of Americans express "a great deal" or "a fair amount" of trust in mass media to report the news fully, accurately, and fairly. This is down from over **70% in the 1970s**. The decline is diverging along partisan lines at a rate that makes cross-community dialogue structurally impossible.
 
@@ -8005,8 +7963,6 @@ Generative AI compounds the plurality trap by reducing the cost of producing ide
 AI-generated content is cheap, fast, and scalable. A single operator can generate thousands of articles, social media posts, or news segments tailored to specific ideological communities. The [Reuters Institute](https://reutersinstitute.politics.ox.ac.uk/) found that only **19% of consumers** feel comfortable with news that is mostly AI-generated, even with human oversight. Yet most cannot reliably tell the difference. The driver is volume: a matter of volume and targeting.
 
 The AI generation cost is approaching zero per unit of content. The result: each ideological community will soon have its own AI-generated media apparatus, complete with news sites, analysis, commentary, and social media accounts, producing content that is internally consistent, well-written, and factually calibrated to confirm that community's existing beliefs.
-
-![Bar chart showing AI-generated news sites tracked by NewsGuard, growing from 49 sites in May 2023 to 1,121 sites in Nov 2024](/images/essays/charts/ai-news-site-growth.png)
 
 The inventory is already public. [NewsGuard](https://www.newsguardtech.com/) identified over **1,100 AI-generated "news" websites** operating as of late 2024, up from just 49 in May 2023. The growth trajectory is exponential. These sites produce hundreds of articles daily with no human editorial oversight, targeting specific political and cultural niches. The content is not always false. Much of it is factually accurate but selectively curated, presenting real information in arrangements designed to support specific conclusions.
 

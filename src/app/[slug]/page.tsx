@@ -17,21 +17,21 @@ import { RelatedGlossaryTerms } from '@/lib/cross-links';
 import { glossaryTerms } from '@/lib/glossary';
 import { Columns, Column, Figure, StatRow, Stat, Callout, PullQuote, Timeline, TimelineItem, SectionLabel, KeyTakeaway, ResearchPaper, Table, XEmbed } from '@/components/mdx';
 import { VCValuationExpansionChart, VCGiniConcentrationChart, VCDeathValleyTimeline, VCSectorSemanticAnalysis, VCStrategicFrameworkDiagram, VCEquationBoxSVG, VCBarbellSystemVisual, VCBarbellVectorDiagram } from '@/components/mdx/funding-charts';
-import { WebEvolutionTimeline, ProtocolStackDiagram, SecurityThreatMatrix, AgentVsChatbot, InfrastructureOverview } from '@/components/mdx/agentic-web-charts';
-import { ScarcitySpectrum, MaterialConstraints, PlatformConcentration, RealityCheckGrid, DualEconomyFramework } from '@/components/mdx/infinity-charts';
-import { AIJobExposure, EarlyCareerImpact, ProductivityParadox, GenderImpact, UBIPilotResults } from '@/components/mdx/aieconomy-charts';
+import { WebEvolutionTimeline, ProtocolStackDiagram, SecurityThreatMatrix, AgentVsChatbot, InfrastructureOverview, MCPAdoptionChart, TaskHorizonChart, AgentMarketChart, IndustryAdoptionChart } from '@/components/mdx/agentic-web-charts';
+import { ScarcitySpectrum, MaterialConstraints, PlatformConcentration, RealityCheckGrid, DualEconomyFramework, DataCenterEnergyChart, TrainingCostChart } from '@/components/mdx/infinity-charts';
+import { AIJobExposure, EarlyCareerImpact, ProductivityParadox, GenderImpact, UBIPilotResults, JobChurnChart } from '@/components/mdx/aieconomy-charts';
 import { GDPGrowthTimeline, GovernanceScorecard, IndustrialEvolution, HealthcareComparison, InequalitySnapshot, TransferabilityGrid } from '@/components/mdx/singapore-charts';
 import { PerceptionArcTimeline, IndiaSectorBifurcation, IncomeThresholdChart, COOEffectSize } from '@/components/mdx/cheap-charts';
-import { EnterpriseAdoption, CoaseDisruption } from '@/components/mdx/agent-economy-charts';
+import { EnterpriseAdoption, CoaseDisruption, AgentMarketGrowth } from '@/components/mdx/agent-economy-charts';
 import { BlockchainSnapshot, BlockchainPhases, L2ScalingOverview, StablecoinRegulatory } from '@/components/mdx/blockchain-charts';
 import { RegulatoryFriction, EGovernanceMaturity, RegulatoryGrowth } from '@/components/mdx/bureaucracy-charts';
-import { RecentBatchComposition, AgentLayerTaxonomy, YCGeoConcentration, AgentForXPattern, DefenseHardwareSurge, TaglineArchaeology } from '@/components/mdx/yc-charts';
+import { RecentBatchComposition, AgentLayerTaxonomy, YCGeoConcentration, AgentForXPattern, DefenseHardwareSurge, TaglineArchaeology, YCIndustryBreakdown, BatchSizeTimeline } from '@/components/mdx/yc-charts';
 import { UIComplexityComparison, APIAbstractionLayer, TextUIAdoption, PlatformShiftTimeline } from '@/components/mdx/universal-charts';
 import { StepwiseMaturityModel, ROIImpactStats } from '@/components/mdx/stepwise-charts';
 import { DigitalGovMaturity, EResidencyImpact, AgenticStateArchitecture } from '@/components/mdx/stateagents-charts';
-import { ZeroUIMarketMap, SaaSPricingShift, GUITimeline, HardwarePivotGrid } from '@/components/mdx/post-interface-charts';
-import { CurationFactorsChart } from '@/components/mdx/plurality-charts';
-import { MeshOrgComparison, EnergyMeshComparison } from '@/components/mdx/mesh-charts';
+import { ZeroUIMarketMap, SaaSPricingShift, GUITimeline, HardwarePivotGrid, ApiTrafficChart, AttentionCollapseChart, FrontendDeclineChart } from '@/components/mdx/post-interface-charts';
+import { CurationFactorsChart, MisinfoSpreadChart, MediaTrustChart, AINewsSiteGrowth } from '@/components/mdx/plurality-charts';
+import { MeshOrgComparison, EnergyMeshComparison, MeshTransactionCostChart, DAOTreasuryChart } from '@/components/mdx/mesh-charts';
 import { SimulationDomainChart, SimCostComparison, SimulationGapChart } from '@/components/mdx/simulayer-charts';
 import { SensoryBandwidthChart, HapticGenerationsChart, SpatialComputingAdoption, BCIMarketChart, SensoryStackTimeline, PresenceThresholdChart, SensoryStackTable } from '@/components/mdx/sensory-charts';
 import { GodProtocolComparison, TTPEvolutionTimeline, PrivacyTechStack, TTPMarketScale, DistributedArchitectureChart, AlignmentFrameworkChart } from '@/components/mdx/godprotocol-charts';
@@ -42,7 +42,7 @@ import { DataSourceDisruption, MethodologicalEvolution, PolarizationFindings, Ob
 import { MonasteryPrincipleChart, AttentionSpanDecline, InterruptionCostChart, RetreatMovementsTimeline, SilenceEconomyChart } from '@/components/mdx/monasticism-charts';
 import { PlaybookHeroCard, AgentToolsMap, AutomationROIChart, ContentPipelineFlow, OutreachPipeline, AIMaturityLevels, ImplementationTimeline, NurtureSequence, ImplementationChecklist, SocialListeningMap, SupportTierChart, DashboardMetricsMap, UseCaseCatalog } from '@/components/mdx/playbook-charts';
 import { StateOfAiKeywordsChart, StateOfAiBigramsChart, StateOfAiTimeline, StateOfAiNgramAnalyzer, StateOfAiMomentum, StateOfAiGeography, StateOfAiCitations } from '@/components/mdx/stateofai-charts';
-import { SecurityConsolidation, ComputeValuationTable, AgentProductValuations, MarketplaceComposition, TopInvestorsTable } from '@/components/mdx/agentstack-charts';
+import { SecurityConsolidation, ComputeValuationTable, AgentProductValuations, MarketplaceComposition, TopInvestorsTable, InfraFundingByLayer, FundingVelocityChart, CapitalConcentrationChart } from '@/components/mdx/agentstack-charts';
 import { AIDetectorFeatureComparison } from '@/components/mdx/ai-detector-charts';
 import { ReceiptsExposureChart, ReceiptsLaborFacts, ReceiptsDemandChart } from '@/components/mdx/receipts-charts';
 
@@ -364,16 +364,23 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               SecurityThreatMatrix,
               AgentVsChatbot,
               InfrastructureOverview,
+              MCPAdoptionChart,
+              TaskHorizonChart,
+              AgentMarketChart,
+              IndustryAdoptionChart,
               ScarcitySpectrum,
               MaterialConstraints,
               PlatformConcentration,
               RealityCheckGrid,
               DualEconomyFramework,
+              DataCenterEnergyChart,
+              TrainingCostChart,
               AIJobExposure,
               EarlyCareerImpact,
               ProductivityParadox,
               GenderImpact,
               UBIPilotResults,
+              JobChurnChart,
               GDPGrowthTimeline,
               GovernanceScorecard,
               IndustrialEvolution,
@@ -386,6 +393,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               COOEffectSize,
               EnterpriseAdoption,
               CoaseDisruption,
+              AgentMarketGrowth,
               BlockchainSnapshot,
               BlockchainPhases,
               L2ScalingOverview,
@@ -399,6 +407,8 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               AgentForXPattern,
               DefenseHardwareSurge,
               TaglineArchaeology,
+              YCIndustryBreakdown,
+              BatchSizeTimeline,
               UIComplexityComparison,
               APIAbstractionLayer,
               TextUIAdoption,
@@ -412,9 +422,17 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               SaaSPricingShift,
               GUITimeline,
               HardwarePivotGrid,
+              ApiTrafficChart,
+              AttentionCollapseChart,
+              FrontendDeclineChart,
               CurationFactorsChart,
+              MisinfoSpreadChart,
+              MediaTrustChart,
+              AINewsSiteGrowth,
               MeshOrgComparison,
               EnergyMeshComparison,
+              MeshTransactionCostChart,
+              DAOTreasuryChart,
               SimulationDomainChart,
               SimCostComparison,
               SimulationGapChart,
@@ -488,6 +506,9 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               AgentProductValuations,
               MarketplaceComposition,
               TopInvestorsTable,
+              InfraFundingByLayer,
+              FundingVelocityChart,
+              CapitalConcentrationChart,
               AIDetectorFeatureComparison,
               ReceiptsExposureChart,
               ReceiptsLaborFacts,
