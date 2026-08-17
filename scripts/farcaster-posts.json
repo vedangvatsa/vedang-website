@@ -2465,9 +2465,11 @@
     "id": "viral-rewrite-136",
     "scheduleDate": "2026-08-16",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The people worth following own the failures and share the wins. That pattern builds trust faster than any speech. Find leaders who distribute credit and absorb blame at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_112_1.jpg"
+    "image": "scripts/post-images/post_112_1.jpg",
+    "postedAt": "2026-08-17T11:55:04.983Z",
+    "castHash": "0x67ff7a57e1264659a29715e333219bc60be7a61e"
   },
   {
     "id": "viral-rewrite-137",

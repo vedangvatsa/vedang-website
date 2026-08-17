@@ -2332,9 +2332,10 @@
     "id": "viral-rewrite-140",
     "scheduleDate": "2026-08-17",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "When someone is struggling, they don't need a motivational speech. They need presence. The best support is showing up without trying to fix everything. Find teams that understand that at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_129_1.jpg"
+    "image": "scripts/post-images/post_129_1.jpg",
+    "error": "Media failed: scripts/post-images/post_129_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-141",
