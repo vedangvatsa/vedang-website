@@ -156,7 +156,7 @@ export function IndiaCityPillars() {
                     </rect>
                   );
                 })}
-                <text x={center} y={plot.top + plot.height + 16} fontSize="10" textAnchor="middle" fill="#52525b" transform={`rotate(-35 ${center} ${plot.top + plot.height + 16})`}>{item.city}</text>
+                <text x={center} y={plot.top + plot.height + 16} fontSize="9" textAnchor="end" fill="#52525b" transform={`rotate(-55 ${center} ${plot.top + plot.height + 16})`}>{item.city}</text>
               </g>
             );
           })}
@@ -175,18 +175,18 @@ export function IndiaCityPillars() {
 }
 
 const spendingProxy = [
-  ['Chandigarh', 'Chandigarh', 13425],
-  ['Hyderabad', 'Telangana', 8978],
-  ['Delhi', 'Delhi', 8534],
-  ['Chennai', 'Tamil Nadu', 8165],
-  ['Bengaluru', 'Karnataka', 8076],
-  ['Pune', 'Maharashtra', 7363],
-  ['Visakhapatnam', 'Andhra Pradesh', 7182],
-  ['Ahmedabad', 'Gujarat', 7175],
-  ['Jaipur', 'Rajasthan', 6574],
-  ['Bhubaneswar', 'Odisha', 5825],
-  ['Indore', 'Madhya Pradesh', 5538],
-  ['Lucknow', 'Uttar Pradesh', 5395],
+  ['Chandigarh', 13425],
+  ['Hyderabad, Telangana', 8978],
+  ['Delhi', 8534],
+  ['Chennai, Tamil Nadu', 8165],
+  ['Bengaluru, Karnataka', 8076],
+  ['Pune, Maharashtra', 7363],
+  ['Visakhapatnam, Andhra Pradesh', 7182],
+  ['Ahmedabad, Gujarat', 7175],
+  ['Jaipur, Rajasthan', 6574],
+  ['Bhubaneswar, Odisha', 5825],
+  ['Indore, Madhya Pradesh', 5538],
+  ['Lucknow, Uttar Pradesh', 5395],
 ] as const;
 
 export function IndiaAffordabilityProxy() {
@@ -207,15 +207,14 @@ export function IndiaAffordabilityProxy() {
       <div className="overflow-x-auto">
         <svg viewBox={`0 0 820 ${chartHeight}`} className="w-full min-w-[640px]" role="img" aria-label="Bar chart of urban monthly per-capita household spending for selected states and union territories">
           <title>Urban monthly per-capita consumption expenditure, 2023-24</title>
-          {spendingProxy.map(([city, state, value], index) => {
+          {spendingProxy.map(([label, value], index) => {
             const y = 10 + index * rowHeight;
-            const width = (value / max) * 500;
+            const width = (value / max) * 450;
             return (
-              <g key={city}>
-                <text x="0" y={y + 13} fontSize="11" fontWeight="500" fill="#18181b">{city}</text>
-                <text x="100" y={y + 13} fontSize="10" fill="#71717a">{state}</text>
-                <line x1="204" x2="704" y1={y + 10} y2={y + 10} stroke="#f1f5f9" />
-                <rect x="204" y={y + 3} width={width} height="14" fill="#d97706" />
+              <g key={label}>
+                <text x="0" y={y + 13} fontSize="10" fontWeight="500" fill="#18181b">{label}</text>
+                <line x1="254" x2="704" y1={y + 10} y2={y + 10} stroke="#f1f5f9" />
+                <rect x="254" y={y + 3} width={width} height="14" fill="#d97706" />
                 <text x="724" y={y + 13} fontSize="11" fontWeight="600" fill="#18181b">₹{value.toLocaleString('en-IN')}</text>
               </g>
             );
@@ -227,18 +226,18 @@ export function IndiaAffordabilityProxy() {
 }
 
 const quadrantData = [
-  { city: 'Bengaluru', quality: 55.67, spending: 8076, labelX: 9, labelY: -7 },
-  { city: 'Pune', quality: 58.10, spending: 7363, labelX: 9, labelY: -7 },
-  { city: 'Ahmedabad', quality: 57.46, spending: 7175, labelX: 9, labelY: 15 },
-  { city: 'Chennai', quality: 60.84, spending: 8165, labelX: 9, labelY: -7 },
-  { city: 'Surat', quality: 57.96, spending: 7175, labelX: 9, labelY: -7 },
-  { city: 'Coimbatore', quality: 60.33, spending: 8165, labelX: 9, labelY: 15 },
-  { city: 'Indore', quality: 59.86, spending: 5538, labelX: 9, labelY: -7 },
-  { city: 'Delhi', quality: 51.22, spending: 8534, labelX: 9, labelY: 15 },
-  { city: 'Hyderabad', quality: 51.28, spending: 8978, labelX: -70, labelY: -7 },
-  { city: 'Visakhapatnam', quality: 51.93, spending: 7182, labelX: 9, labelY: 15 },
-  { city: 'Jaipur', quality: 47.66, spending: 6574, labelX: 9, labelY: 15 },
-  { city: 'Lucknow', quality: 51.30, spending: 5395, labelX: 9, labelY: -7 },
+  { city: 'Bengaluru', quality: 55.67, spending: 8076, labelX: 10, labelY: -9, anchor: 'start' },
+  { city: 'Pune', quality: 58.10, spending: 7363, labelX: -10, labelY: -10, anchor: 'end' },
+  { city: 'Ahmedabad', quality: 57.46, spending: 7175, labelX: -10, labelY: 18, anchor: 'end' },
+  { city: 'Chennai', quality: 60.84, spending: 8165, labelX: 10, labelY: -9, anchor: 'start' },
+  { city: 'Surat', quality: 57.96, spending: 7175, labelX: 10, labelY: 4, anchor: 'start' },
+  { city: 'Coimbatore', quality: 60.33, spending: 8165, labelX: 10, labelY: 18, anchor: 'start' },
+  { city: 'Indore', quality: 59.86, spending: 5538, labelX: 10, labelY: -9, anchor: 'start' },
+  { city: 'Delhi', quality: 51.22, spending: 8534, labelX: -10, labelY: 18, anchor: 'end' },
+  { city: 'Hyderabad', quality: 51.28, spending: 8978, labelX: 10, labelY: -9, anchor: 'start' },
+  { city: 'Visakhapatnam', quality: 51.93, spending: 7182, labelX: 10, labelY: 18, anchor: 'start' },
+  { city: 'Jaipur', quality: 47.66, spending: 6574, labelX: 10, labelY: 4, anchor: 'start' },
+  { city: 'Lucknow', quality: 51.30, spending: 5395, labelX: 10, labelY: 18, anchor: 'start' },
 ] as const;
 
 export function IndiaQualityCostQuadrant() {
@@ -291,7 +290,7 @@ export function IndiaQualityCostQuadrant() {
               <circle cx={x(item.spending)} cy={y(item.quality)} r="5" fill="#18181b" stroke="#ffffff" strokeWidth="1.5">
                 <title>{`${item.city}: Quality of Life ${item.quality}, urban MPCE ₹${item.spending.toLocaleString('en-IN')}`}</title>
               </circle>
-              <text x={x(item.spending) + item.labelX} y={y(item.quality) + item.labelY} fontSize="10" fontWeight="600" fill="#18181b">{item.city}</text>
+              <text x={x(item.spending) + item.labelX} y={y(item.quality) + item.labelY} fontSize="9" fontWeight="600" textAnchor={item.anchor} fill="#18181b">{item.city}</text>
             </g>
           ))}
           <text x={plot.left + plot.width / 2} y="368" fontSize="11" textAnchor="middle" fill="#52525b">Urban MPCE, 2023-24</text>
