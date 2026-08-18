@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <rect width="1200" height="600" fill="#ffffff"/>
+  <rect x="0" y="0" width="12" height="600" fill="#4f46e5"/>
+  <text x="64" y="78" fill="#18181b" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">INDIA / CITY SCORECARD</text>
+  <text x="64" y="140" fill="#18181b" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800">Cities are not one number.</text>
+  <text x="64" y="180" fill="#71717a" font-family="Inter, Arial, sans-serif" font-size="22">The official score rewards different things in each city.</text>
+  <line x1="64" y1="220" x2="1136" y2="220" stroke="#e3e3e0" stroke-width="2"/>
+
+  <text x="64" y="270" fill="#71717a" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2">EASE OF LIVING 2020</text>
+  <text x="64" y="325" fill="#18181b" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800">66.70</text>
+  <text x="64" y="353" fill="#52525b" font-family="Inter, Arial, sans-serif" font-size="15">Bengaluru, the top Million+ city</text>
+  <text x="64" y="407" fill="#18181b" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="800">51.38</text>
+  <text x="64" y="433" fill="#52525b" font-family="Inter, Arial, sans-serif" font-size="15">national average for Quality of Life</text>
+
+  <text x="410" y="270" fill="#71717a" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2">PILLAR SCORES</text>
+  <text x="410" y="308" fill="#52525b" font-family="Inter, Arial, sans-serif" font-size="13">Bengaluru</text>
+  <rect x="410" y="320" width="350" height="18" rx="3" fill="#f4f4f5"/>
+  <rect x="410" y="320" width="195" height="18" rx="3" fill="#4f46e5" opacity="0.78"/>
+  <text x="778" y="334" fill="#18181b" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">Quality 55.67</text>
+  <rect x="410" y="354" width="350" height="18" rx="3" fill="#f4f4f5"/>
+  <rect x="410" y="354" width="276" height="18" rx="3" fill="#d97706" opacity="0.78"/>
+  <text x="778" y="368" fill="#18181b" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">Economic 78.82</text>
+  <rect x="410" y="388" width="350" height="18" rx="3" fill="#f4f4f5"/>
+  <rect x="410" y="388" width="210" height="18" rx="3" fill="#15803d" opacity="0.78"/>
+  <text x="778" y="402" fill="#18181b" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">Sustainability 59.97</text>
+
+  <text x="410" y="458" fill="#71717a" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2">LATEST PRICE SIGNAL</text>
+  <text x="410" y="505" fill="#18181b" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800">3.96%</text>
+  <text x="410" y="532" fill="#52525b" font-family="Inter, Arial, sans-serif" font-size="15">urban CPI inflation, July 2026</text>
+
+  <rect x="1000" y="258" width="136" height="238" fill="#fafafa" stroke="#e3e3e0" stroke-width="2"/>
+  <text x="1024" y="295" fill="#4f46e5" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800">20</text>
+  <text x="1024" y="320" fill="#52525b" font-family="Inter, Arial, sans-serif" font-size="13">cities shown</text>
+  <line x1="1024" y1="346" x2="1112" y2="346" stroke="#e3e3e0" stroke-width="2"/>
+  <text x="1024" y="385" fill="#d97706" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800">INR 6,996</text>
+  <text x="1024" y="410" fill="#52525b" font-family="Inter, Arial, sans-serif" font-size="13">all-India urban</text>
+  <text x="1024" y="429" fill="#52525b" font-family="Inter, Arial, sans-serif" font-size="13">MPCE, 2023-24</text>
+  <line x1="1024" y1="452" x2="1112" y2="452" stroke="#e3e3e0" stroke-width="2"/>
+  <text x="1024" y="483" fill="#15803d" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">official sources</text>
+</svg>
