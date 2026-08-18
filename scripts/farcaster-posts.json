@@ -2495,9 +2495,11 @@
     "id": "viral-rewrite-139",
     "scheduleDate": "2026-08-17",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Care isn't a soft perk. It's a performance strategy. People who feel seen do more than people who feel monitored. Find leaders who lead with care at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_151_1.jpg"
+    "image": "scripts/post-images/post_151_1.jpg",
+    "postedAt": "2026-08-18T11:56:09.247Z",
+    "castHash": "0x8ee04e4c353af9a0724591d72f31d73183e332d8"
   },
   {
     "id": "viral-rewrite-140",

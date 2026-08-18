@@ -2359,9 +2359,10 @@
     "id": "viral-rewrite-143",
     "scheduleDate": "2026-08-18",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "The danger isn't having opinions. It's becoming so attached to them that changing your mind feels like losing yourself. Stay curious. Find teams that reward growth over consistency at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_185_1.jpg"
+    "image": "scripts/post-images/post_185_1.jpg",
+    "error": "Media failed: scripts/post-images/post_185_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-144",
