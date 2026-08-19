@@ -2377,9 +2377,10 @@
     "id": "viral-rewrite-145",
     "scheduleDate": "2026-08-19",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The best leadership advice is also the simplest. Give others what you needed. You already know what good leadership feels like. Start there. Find teams that build leaders at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_59_1.jpg"
+    "image": "scripts/post-images/post_59_1.jpg",
+    "error": "Media failed: scripts/post-images/post_59_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-146",

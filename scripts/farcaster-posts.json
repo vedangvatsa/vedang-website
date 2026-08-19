@@ -2515,9 +2515,11 @@
     "id": "viral-rewrite-141",
     "scheduleDate": "2026-08-17",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Cultures that reward self-preservation produce politics. Cultures that reward protecting others produce trust. The second is harder to build and worth more. Find teams that build it at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_57_1.jpg"
+    "image": "scripts/post-images/post_57_1.jpg",
+    "postedAt": "2026-08-19T04:18:33.954Z",
+    "castHash": "0x1f0649f4a979ffd3343216a088fa56478f5debbc"
   },
   {
     "id": "viral-rewrite-142",
