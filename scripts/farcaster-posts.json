@@ -2525,9 +2525,11 @@
     "id": "viral-rewrite-142",
     "scheduleDate": "2026-08-18",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The perfect starting point is a myth. Most successful people began with less than they needed and more doubt than they admitted. The only wrong start is not starting. Find teams that value action at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_191_1.jpg"
+    "image": "scripts/post-images/post_191_1.jpg",
+    "postedAt": "2026-08-19T11:55:41.172Z",
+    "castHash": "0x5b6bc0b931fdfb8566bb205df9e9235ea1a8dadb"
   },
   {
     "id": "viral-rewrite-143",
