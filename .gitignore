@@ -65,7 +65,7 @@ AutoResearchClaw/
 motion-canvas-sort/
 remotion-sort/
 public_placeholder/
-media/
+/media/
 data-viz-videos-repo/
 
 # Temp data
@@ -89,7 +89,7 @@ video-analysis-frames/
 *.xlsx
 *.vtt
 scripts/video-retalking/
-media/
+/media/
 
 # Generated social media assets (large, recreatable by scripts)
 scripts/linkedin-assets/
