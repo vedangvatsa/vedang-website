@@ -8,7 +8,7 @@ Summary: A government-data view of Indian cities, covering quality of life, hous
 
 India does not publish one current city score for quality of life and cost of living. The best national city ranking comes from 2020. The household spending survey covers 2023-24. The latest price data runs to July 2026. Each source answers a different question.
 
-![A simple data panel for the Cities of India essay showing the 2020 Ease of Living score, 2023-24 urban household spending and July 2026 urban inflation.](/images/essays/india-city-scorecard.svg)
+![A simple data panel for the Cities of India essay showing the 2020 Ease of Living score, 2023-24 urban household spending and July 2026 urban inflation.](/images/essays/india-city-scorecard.svg?v=2)
 
 The essay uses the [MoHUA Ease of Living report](https://smartnet.niua.org/sites/default/files/resources/final_web_ease_of_living_report_2020_.pdf), the [MoSPI Household Consumption Expenditure Survey](https://www.mospi.gov.in/sites/default/files/publication_reports/HCES%20FactSheet%202023-24.pdf), the [MoSPI July 2026 CPI release](https://www.mospi.gov.in/uploads/latestReleases/latest_release_1786529680747_3113661d-1a2b-4b9a-af06-b340193ef9a0_Press_Release_CPI_July_2026.pdf) and CPCB air-programme results.
 

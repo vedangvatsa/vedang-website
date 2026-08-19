@@ -47,7 +47,7 @@ export function Figure({ src, alt, caption, source, sourceUrl, wide = false, wid
   height?: number;
 }) {
   return (
-    <figure className={`not-prose my-8 first:mt-0 last:mb-0 ${wide ? 'w-full max-w-none' : 'max-w-sm mx-auto'}`}>
+    <figure className={`not-prose my-8 first:mt-0 last:mb-0 ${wide ? 'w-full max-w-none [&>div]:w-full [&_img]:!w-full' : 'max-w-sm mx-auto'}`}>
       <ZoomableImage
         src={src}
         alt={alt}

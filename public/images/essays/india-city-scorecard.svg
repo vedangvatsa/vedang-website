@@ -1,22 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="560" viewBox="0 0 640 560">
-  <rect width="640" height="560" fill="#ffffff"/>
-  <rect x="0" y="0" width="10" height="560" fill="#4f46e5"/>
-  <text x="40" y="58" fill="#71717a" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600">INDIA</text>
-  <text x="40" y="112" fill="#18181b" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700">Cities of India</text>
-  <text x="40" y="150" fill="#52525b" font-family="Inter, Arial, sans-serif" font-size="18">Government data on quality, spending and prices</text>
-  <line x1="40" y1="182" x2="600" y2="182" stroke="#e3e3e0"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
+  <rect width="1200" height="400" fill="#ffffff"/>
+  <text x="48" y="58" fill="#71717a" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="0.08em">INDIA</text>
+  <text x="48" y="112" fill="#18181b" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="700">Cities of India</text>
+  <text x="48" y="152" fill="#52525b" font-family="Inter, Arial, sans-serif" font-size="20">Government data on quality, spending and prices</text>
+  <line x1="48" y1="190" x2="1152" y2="190" stroke="#e3e3e0"/>
 
   <g font-family="Inter, Arial, sans-serif">
-    <text x="40" y="226" fill="#71717a" font-size="14" font-weight="600">EASE OF LIVING, 2020</text>
-    <text x="40" y="274" fill="#18181b" font-size="38" font-weight="700">66.70</text>
-    <text x="175" y="274" fill="#52525b" font-size="17">Bengaluru ranked first</text>
+    <text x="48" y="242" fill="#71717a" font-size="15" font-weight="600">EASE OF LIVING · 2020</text>
+    <text x="48" y="300" fill="#18181b" font-size="42" font-weight="700">66.70</text>
+    <text x="48" y="336" fill="#52525b" font-size="18">Bengaluru ranked first</text>
 
-    <text x="40" y="330" fill="#71717a" font-size="14" font-weight="600">URBAN SPENDING, 2023-24</text>
-    <text x="40" y="378" fill="#18181b" font-size="38" font-weight="700">INR 6,996</text>
-    <text x="300" y="378" fill="#52525b" font-size="17">monthly, per person</text>
+    <line x1="416" y1="220" x2="416" y2="350" stroke="#e3e3e0"/>
+    <text x="456" y="242" fill="#71717a" font-size="15" font-weight="600">URBAN SPENDING · 2023-24</text>
+    <text x="456" y="300" fill="#18181b" font-size="42" font-weight="700">INR 6,996</text>
+    <text x="456" y="336" fill="#52525b" font-size="18">monthly, per person</text>
 
-    <text x="40" y="434" fill="#71717a" font-size="14" font-weight="600">URBAN CPI, JULY 2026</text>
-    <text x="40" y="482" fill="#18181b" font-size="38" font-weight="700">3.96%</text>
-    <text x="200" y="482" fill="#52525b" font-size="17">year-on-year change</text>
+    <line x1="824" y1="220" x2="824" y2="350" stroke="#e3e3e0"/>
+    <text x="864" y="242" fill="#71717a" font-size="15" font-weight="600">URBAN CPI · JULY 2026</text>
+    <text x="864" y="300" fill="#18181b" font-size="42" font-weight="700">3.96%</text>
+    <text x="864" y="336" fill="#52525b" font-size="18">year-on-year change</text>
   </g>
 </svg>
