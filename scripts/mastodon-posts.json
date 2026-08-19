@@ -2420,9 +2420,10 @@
     "id": "viral-rewrite-150",
     "scheduleDate": "2026-08-20",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Deep work isn't about discipline. It's about designing an environment where focus is possible. The hard part isn't motivation. It's protection. Find teams that protect your focus at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_135_1.jpg"
+    "image": "scripts/post-images/post_135_1.jpg",
+    "error": "Media failed: scripts/post-images/post_135_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-151",
