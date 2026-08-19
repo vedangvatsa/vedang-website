@@ -15,6 +15,7 @@ import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import { RelatedGlossaryTerms } from '@/lib/cross-links';
 import { glossaryTerms } from '@/lib/glossary';
+import { AuthorByline } from '@/components/author-byline';
 import { Columns, Column, Figure, StatRow, Stat, Callout, PullQuote, Timeline, TimelineItem, SectionLabel, KeyTakeaway, ResearchPaper, Table, XEmbed } from '@/components/mdx';
 import { VCValuationExpansionChart, VCGiniConcentrationChart, VCDeathValleyTimeline, VCSectorSemanticAnalysis, VCStrategicFrameworkDiagram, VCEquationBoxSVG, VCBarbellSystemVisual, VCBarbellVectorDiagram } from '@/components/mdx/funding-charts';
 import { WebEvolutionTimeline, ProtocolStackDiagram, SecurityThreatMatrix, AgentVsChatbot, InfrastructureOverview, MCPAdoptionChart, TaskHorizonChart, AgentMarketChart, IndustryAdoptionChart } from '@/components/mdx/agentic-web-charts';
@@ -290,8 +291,6 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
     ],
   };
 
-  const readingTime = Math.ceil(wordCount / 250);
-
   return (
     <PageLayout>
        <script
@@ -314,27 +313,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               {essay.frontmatter.summary}
             </p>
           )}
-          <div className="mt-8 flex items-center justify-center gap-3">
-            <Link href="/profile">
-              <img
-                src="/images/ved.png"
-                alt="Vedang Vatsa"
-                width={40}
-                height={40}
-                className="rounded-full"
-              />
-            </Link>
-            <div className="flex items-center gap-0 text-sm">
-              <Link href="/profile" className="font-medium text-foreground hover:text-primary transition-colors">Vedang Vatsa</Link>
-              <div className="flex items-center text-muted-foreground ml-3">
-                {essay.frontmatter.date && (
-                  <span>{new Date(essay.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                )}
-                <span className="mx-2">|</span>
-                <span>{readingTime} min read</span>
-              </div>
-            </div>
-          </div>
+          <AuthorByline socials />
         </div>
       </header>
 
