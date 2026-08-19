@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560">
+  <rect width="1000" height="560" fill="#ffffff"/>
+  <text x="48" y="58" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#18181b">Ease of Living Index, 2020</text>
+  <text x="48" y="90" font-family="Inter, Arial, sans-serif" font-size="17" fill="#71717a">Top ten cities above one million people</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="18" fill="#18181b">
+    <text x="48" y="140" font-weight="600">1. Bengaluru</text><rect x="250" y="120" width="478" height="24" fill="#4f46e5"/><text x="750" y="140" font-weight="700">66.70</text>
+    <text x="48" y="182" font-weight="600">2. Pune</text><rect x="250" y="162" width="475" height="24" fill="#4f46e5"/><text x="750" y="182" font-weight="700">66.27</text>
+    <text x="48" y="224" font-weight="600">3. Ahmedabad</text><rect x="250" y="204" width="465" height="24" fill="#4f46e5"/><text x="750" y="224" font-weight="700">64.87</text>
+    <text x="48" y="266">4. Chennai</text><rect x="250" y="246" width="448" height="24" fill="#94a3b8"/><text x="750" y="266">62.61</text>
+    <text x="48" y="308">5. Surat</text><rect x="250" y="288" width="442" height="24" fill="#94a3b8"/><text x="750" y="308">61.73</text>
+    <text x="48" y="350">6. Navi Mumbai</text><rect x="250" y="330" width="441" height="24" fill="#94a3b8"/><text x="750" y="350">61.60</text>
+    <text x="48" y="392">7. Coimbatore</text><rect x="250" y="372" width="428" height="24" fill="#94a3b8"/><text x="750" y="392">59.72</text>
+    <text x="48" y="434">8. Vadodara</text><rect x="250" y="414" width="424" height="24" fill="#94a3b8"/><text x="750" y="434">59.24</text>
+    <text x="48" y="476">9. Indore</text><rect x="250" y="456" width="420" height="24" fill="#94a3b8"/><text x="750" y="476">58.58</text>
+    <text x="48" y="518">10. Greater Mumbai</text><rect x="250" y="498" width="417" height="24" fill="#94a3b8"/><text x="750" y="518">58.23</text>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="640" viewBox="0 0 1000 640">
+  <rect width="1000" height="640" fill="#ffffff"/>
+  <text x="48" y="52" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#18181b">Quality of life and household spending</text>
+  <text x="48" y="84" font-family="Inter, Arial, sans-serif" font-size="17" fill="#71717a">Quality score, 2020; urban spending proxy, 2023-24</text>
+
+  <rect x="120" y="110" width="760" height="420" fill="#ffffff" stroke="#94a3b8"/>
+  <line x1="505" y1="110" x2="505" y2="530" stroke="#94a3b8" stroke-dasharray="6 6"/>
+  <line x1="120" y1="303" x2="880" y2="303" stroke="#94a3b8" stroke-dasharray="6 6"/>
+
+  <g stroke="#e3e3e0">
+    <line x1="204" y1="110" x2="204" y2="530"/><line x1="373" y1="110" x2="373" y2="530"/><line x1="542" y1="110" x2="542" y2="530"/><line x1="711" y1="110" x2="711" y2="530"/>
+    <line x1="120" y1="159" x2="880" y2="159"/><line x1="120" y1="258" x2="880" y2="258"/><line x1="120" y1="357" x2="880" y2="357"/><line x1="120" y1="456" x2="880" y2="456"/>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="15" fill="#71717a">
+    <text x="204" y="558" text-anchor="middle">INR 6k</text><text x="373" y="558" text-anchor="middle">INR 7k</text><text x="542" y="558" text-anchor="middle">INR 8k</text><text x="711" y="558" text-anchor="middle">INR 9k</text>
+    <text x="104" y="164" text-anchor="end">60</text><text x="104" y="263" text-anchor="end">55</text><text x="104" y="362" text-anchor="end">50</text><text x="104" y="461" text-anchor="end">45</text>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">
+    <text x="138" y="136" fill="#4f46e5">Higher quality / lower spending</text>
+    <text x="523" y="136" fill="#b45309">Higher quality / higher spending</text>
+    <text x="138" y="514" fill="#15803d">Lower quality / lower spending</text>
+    <text x="523" y="514" fill="#71717a">Lower quality / higher spending</text>
+  </g>
+
+  <g fill="#18181b" stroke="#ffffff" stroke-width="2">
+    <circle cx="211" cy="132" r="8"/><circle cx="186" cy="344" r="8"/><circle cx="386" cy="487" r="8"/>
+    <circle cx="485" cy="270" r="8"/><circle cx="485" cy="258" r="8"/><circle cx="519" cy="247" r="8"/>
+    <circle cx="486" cy="329" r="8"/><circle cx="640" cy="297" r="8"/><circle cx="655" cy="109" r="8"/>
+    <circle cx="655" cy="121" r="8"/><circle cx="717" cy="347" r="8"/><circle cx="792" cy="346" r="8"/>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#18181b">
+    <text x="225" y="127">Indore</text>
+    <text x="202" y="349">Lucknow</text>
+    <text x="402" y="492">Jaipur</text>
+    <text x="475" y="286" text-anchor="end">Ahmedabad</text>
+    <text x="501" y="256">Surat</text>
+    <text x="535" y="242">Pune</text>
+    <text x="502" y="334">Visakhapatnam</text>
+    <text x="656" y="302">Bengaluru</text>
+    <text x="671" y="104">Chennai</text>
+    <text x="671" y="136">Coimbatore</text>
+    <text x="703" y="373" text-anchor="end">Delhi</text>
+    <text x="782" y="326" text-anchor="end">Hyderabad</text>
+  </g>
+
+  <text x="500" y="608" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" fill="#52525b">Urban MPCE proxy</text>
+  <text x="38" y="320" text-anchor="middle" transform="rotate(-90 38 320)" font-family="Inter, Arial, sans-serif" font-size="17" fill="#52525b">Quality of Life score</text>
+</svg>

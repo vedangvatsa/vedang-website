@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300">
+  <rect width="1000" height="300" fill="#ffffff"/>
+  <text x="48" y="58" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#18181b">Four datasets, four dates</text>
+  <line x1="90" y1="150" x2="910" y2="150" stroke="#cbd5e1" stroke-width="3"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#18181b">
+    <circle cx="120" cy="150" r="9" fill="#4f46e5"/>
+    <text x="120" y="120" text-anchor="middle" font-size="22" font-weight="700">2020</text>
+    <text x="120" y="190" text-anchor="middle" font-size="17">Ease of Living</text>
+
+    <circle cx="380" cy="150" r="9" fill="#d97706"/>
+    <text x="380" y="120" text-anchor="middle" font-size="22" font-weight="700">2023-24</text>
+    <text x="380" y="190" text-anchor="middle" font-size="17">Household spending</text>
+
+    <circle cx="640" cy="150" r="9" fill="#15803d"/>
+    <text x="640" y="120" text-anchor="middle" font-size="22" font-weight="700">2024</text>
+    <text x="640" y="190" text-anchor="middle" font-size="17">Clean-air action</text>
+
+    <circle cx="880" cy="150" r="9" fill="#be123c"/>
+    <text x="880" y="120" text-anchor="middle" font-size="22" font-weight="700">July 2026</text>
+    <text x="880" y="190" text-anchor="middle" font-size="17">Urban prices</text>
+  </g>
+</svg>

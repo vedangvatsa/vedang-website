@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650">
+  <rect width="1000" height="650" fill="#ffffff"/>
+  <text x="48" y="58" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#18181b">Three scores, five cities</text>
+  <text x="48" y="90" font-family="Inter, Arial, sans-serif" font-size="17" fill="#71717a">Quality of life, economic ability and sustainability</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="16" fill="#52525b">
+    <rect x="650" y="40" width="14" height="14" fill="#4f46e5"/><text x="672" y="53">Quality</text>
+    <rect x="755" y="40" width="14" height="14" fill="#d97706"/><text x="777" y="53">Economy</text>
+    <rect x="865" y="40" width="14" height="14" fill="#15803d"/><text x="887" y="53">Sustainability</text>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-size="18" fill="#18181b">
+    <text x="48" y="142" font-weight="700">Bengaluru</text>
+    <rect x="220" y="116" width="279" height="20" fill="#4f46e5"/><text x="510" y="133">55.67</text>
+    <rect x="220" y="142" width="394" height="20" fill="#d97706"/><text x="625" y="159">78.82</text>
+    <rect x="220" y="168" width="300" height="20" fill="#15803d"/><text x="531" y="185">59.97</text>
+
+    <text x="48" y="252" font-weight="700">Pune</text>
+    <rect x="220" y="226" width="291" height="20" fill="#4f46e5"/><text x="522" y="243">58.10</text>
+    <rect x="220" y="252" width="244" height="20" fill="#d97706"/><text x="475" y="269">48.88</text>
+    <rect x="220" y="278" width="379" height="20" fill="#15803d"/><text x="610" y="295">75.74</text>
+
+    <text x="48" y="362" font-weight="700">Chennai</text>
+    <rect x="220" y="336" width="304" height="20" fill="#4f46e5"/><text x="535" y="353">60.84</text>
+    <rect x="220" y="362" width="171" height="20" fill="#d97706"/><text x="402" y="379">34.16</text>
+    <rect x="220" y="388" width="285" height="20" fill="#15803d"/><text x="516" y="405">57.05</text>
+
+    <text x="48" y="472" font-weight="700">Ahmedabad</text>
+    <rect x="220" y="446" width="287" height="20" fill="#4f46e5"/><text x="518" y="463">57.46</text>
+    <rect x="220" y="472" width="241" height="20" fill="#d97706"/><text x="472" y="489">48.19</text>
+    <rect x="220" y="498" width="321" height="20" fill="#15803d"/><text x="552" y="515">64.22</text>
+
+    <text x="48" y="582" font-weight="700">Indore</text>
+    <rect x="220" y="556" width="299" height="20" fill="#4f46e5"/><text x="530" y="573">59.86</text>
+    <rect x="220" y="582" width="75" height="20" fill="#d97706"/><text x="306" y="599">15.09</text>
+    <rect x="220" y="608" width="308" height="20" fill="#15803d"/><text x="539" y="625">61.62</text>
+  </g>
+</svg>
