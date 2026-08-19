@@ -1,21 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
-  <rect width="1000" height="500" fill="#ffffff"/>
-  <text x="48" y="58" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#18181b">Urban inflation, 2026</text>
-  <text x="48" y="90" font-family="Inter, Arial, sans-serif" font-size="17" fill="#71717a">Year-on-year change from January to July</text>
-  <rect x="90" y="120" width="810" height="270" fill="#ffffff"/>
-  <g stroke="#e3e3e0">
-    <line x1="90" y1="390" x2="900" y2="390"/><line x1="90" y1="336" x2="900" y2="336"/><line x1="90" y1="282" x2="900" y2="282"/><line x1="90" y1="228" x2="900" y2="228"/><line x1="90" y1="174" x2="900" y2="174"/><line x1="90" y1="120" x2="900" y2="120"/>
-  </g>
-  <g font-family="Inter, Arial, sans-serif" font-size="15" fill="#71717a">
-    <text x="76" y="395" text-anchor="end">0%</text><text x="76" y="341" text-anchor="end">1%</text><text x="76" y="287" text-anchor="end">2%</text><text x="76" y="233" text-anchor="end">3%</text><text x="76" y="179" text-anchor="end">4%</text><text x="76" y="125" text-anchor="end">5%</text>
-    <text x="90" y="425" text-anchor="middle">Jan</text><text x="225" y="425" text-anchor="middle">Feb</text><text x="360" y="425" text-anchor="middle">Mar</text><text x="495" y="425" text-anchor="middle">Apr</text><text x="630" y="425" text-anchor="middle">May</text><text x="765" y="425" text-anchor="middle">Jun</text><text x="900" y="425" text-anchor="middle">Jul</text>
-  </g>
-  <path d="M 90 242 L 225 227 L 360 222 L 495 220 L 630 200 L 765 178 L 900 176" fill="none" stroke="#4f46e5" stroke-width="5"/>
-  <path d="M 90 286 L 225 282 L 360 285 L 495 288 L 630 287 L 765 287 L 900 282" fill="none" stroke="#d97706" stroke-width="5"/>
-  <g fill="#4f46e5"><circle cx="90" cy="242" r="6"/><circle cx="225" cy="227" r="6"/><circle cx="360" cy="222" r="6"/><circle cx="495" cy="220" r="6"/><circle cx="630" cy="200" r="6"/><circle cx="765" cy="178" r="6"/><circle cx="900" cy="176" r="6"/></g>
-  <g fill="#d97706"><circle cx="90" cy="286" r="6"/><circle cx="225" cy="282" r="6"/><circle cx="360" cy="285" r="6"/><circle cx="495" cy="288" r="6"/><circle cx="630" cy="287" r="6"/><circle cx="765" cy="287" r="6"/><circle cx="900" cy="282" r="6"/></g>
-  <g font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">
-    <text x="798" y="158" fill="#4f46e5">3.96% CPI</text>
-    <text x="780" y="310" fill="#b45309">2.01% housing</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420">
+  <rect width="640" height="420" fill="#ffffff"/>
+  <text x="36" y="52" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#18181b">Urban prices, July 2026</text>
+  <text x="36" y="84" font-family="Inter, Arial, sans-serif" font-size="16" fill="#71717a">Change from the same month a year earlier</text>
+
+  <g font-family="Inter, Arial, sans-serif" fill="#18181b">
+    <text x="36" y="150" font-size="20" font-weight="700">General urban CPI</text>
+    <rect x="36" y="166" width="492" height="38" fill="#4f46e5"/>
+    <text x="590" y="192" font-size="24" font-weight="700" fill="#4f46e5" text-anchor="end">3.96%</text>
+
+    <text x="36" y="268" font-size="20" font-weight="700">Urban housing</text>
+    <rect x="36" y="284" width="250" height="38" fill="#d97706"/>
+    <text x="590" y="310" font-size="24" font-weight="700" fill="#d97706" text-anchor="end">2.01%</text>
+
+    <rect x="36" y="352" width="568" height="42" fill="#f8fafc"/>
+    <text x="60" y="379" font-size="17">General inflation ran 1.95 points above housing.</text>
   </g>
 </svg>

@@ -1,11 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360">
-  <rect width="1000" height="360" fill="#ffffff"/>
-  <text x="48" y="58" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#18181b">Clean-air action, 2024</text>
-  <text x="48" y="90" font-family="Inter, Arial, sans-serif" font-size="17" fill="#71717a">Top three Million+ cities in Swachh Vayu Survekshan</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#ffffff"/>
+  <text x="36" y="52" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#18181b">Clean-air action, 2024</text>
+  <text x="36" y="84" font-family="Inter, Arial, sans-serif" font-size="16" fill="#71717a">Swachh Vayu Survekshan, cities above one million</text>
   <g font-family="Inter, Arial, sans-serif" font-size="20" fill="#18181b">
-    <text x="48" y="155" font-weight="700">1. Surat</text><rect x="220" y="128" width="560" height="34" fill="#15803d"/>
-    <text x="48" y="225" font-weight="700">2. Jabalpur</text><rect x="220" y="198" width="420" height="34" fill="#22c55e"/>
-    <text x="48" y="295" font-weight="700">3. Agra</text><rect x="220" y="268" width="280" height="34" fill="#86efac"/>
+    <text x="36" y="142" font-weight="700">1. Surat</text>
+    <rect x="36" y="156" width="520" height="34" fill="#15803d"/>
+    <text x="36" y="216" font-weight="700">2. Jabalpur</text>
+    <rect x="36" y="230" width="430" height="34" fill="#65a30d"/>
+    <text x="36" y="290" font-weight="700">3. Agra</text>
+    <rect x="36" y="304" width="400" height="34" fill="#d97706"/>
   </g>
-  <text x="48" y="337" font-family="Inter, Arial, sans-serif" font-size="15" fill="#71717a">The result measures assessed action and PM10 improvement.</text>
 </svg>

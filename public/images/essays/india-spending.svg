@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
-  <rect width="1000" height="520" fill="#ffffff"/>
-  <text x="48" y="58" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#18181b">Urban household spending</text>
-  <text x="48" y="90" font-family="Inter, Arial, sans-serif" font-size="17" fill="#71717a">Monthly spending per person by state or UT, 2023-24</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="680" viewBox="0 0 640 680">
+  <rect width="640" height="680" fill="#ffffff"/>
+  <text x="36" y="52" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#18181b">Monthly urban household spending</text>
+  <text x="36" y="84" font-family="Inter, Arial, sans-serif" font-size="16" fill="#71717a">Household Consumption Expenditure Survey, 2023-24</text>
   <g font-family="Inter, Arial, sans-serif" font-size="18" fill="#18181b">
-    <text x="48" y="145" font-weight="600">Chandigarh</text><rect x="310" y="125" width="527" height="26" fill="#d97706"/><text x="855" y="145" font-weight="700">INR 13,425</text>
-    <text x="48" y="195">Hyderabad, Telangana</text><rect x="310" y="175" width="353" height="26" fill="#d97706"/><text x="855" y="195">INR 8,978</text>
-    <text x="48" y="245">Delhi</text><rect x="310" y="225" width="335" height="26" fill="#d97706"/><text x="855" y="245">INR 8,534</text>
-    <text x="48" y="295">Chennai, Tamil Nadu</text><rect x="310" y="275" width="321" height="26" fill="#d97706"/><text x="855" y="295">INR 8,165</text>
-    <text x="48" y="345">Bengaluru, Karnataka</text><rect x="310" y="325" width="317" height="26" fill="#d97706"/><text x="855" y="345">INR 8,076</text>
-    <text x="48" y="395">Pune, Maharashtra</text><rect x="310" y="375" width="289" height="26" fill="#d97706"/><text x="855" y="395">INR 7,363</text>
-    <text x="48" y="445">Indore, Madhya Pradesh</text><rect x="310" y="425" width="218" height="26" fill="#d97706"/><text x="855" y="445">INR 5,538</text>
-    <text x="48" y="495">Lucknow, Uttar Pradesh</text><rect x="310" y="475" width="212" height="26" fill="#d97706"/><text x="855" y="495">INR 5,395</text>
+    <text x="36" y="132" font-weight="700">Hyderabad, Telangana</text><rect x="36" y="144" width="462" height="26" fill="#4f46e5"/><text x="590" y="164" text-anchor="end" font-weight="700">INR 8,978</text>
+    <text x="36" y="202" font-weight="700">Delhi</text><rect x="36" y="214" width="440" height="26" fill="#4f46e5"/><text x="590" y="234" text-anchor="end" font-weight="700">INR 8,534</text>
+    <text x="36" y="272" font-weight="700">Chennai, Tamil Nadu</text><rect x="36" y="284" width="421" height="26" fill="#4f46e5"/><text x="590" y="304" text-anchor="end" font-weight="700">INR 8,165</text>
+    <text x="36" y="342" font-weight="700">Bengaluru, Karnataka</text><rect x="36" y="354" width="416" height="26" fill="#4f46e5"/><text x="590" y="374" text-anchor="end" font-weight="700">INR 8,076</text>
+    <text x="36" y="412">Pune, Maharashtra</text><rect x="36" y="424" width="380" height="26" fill="#94a3b8"/><text x="590" y="444" text-anchor="end">INR 7,363</text>
+    <text x="36" y="482">Jaipur, Rajasthan</text><rect x="36" y="494" width="339" height="26" fill="#94a3b8"/><text x="590" y="514" text-anchor="end">INR 6,574</text>
+    <text x="36" y="552">Indore, Madhya Pradesh</text><rect x="36" y="564" width="286" height="26" fill="#94a3b8"/><text x="590" y="584" text-anchor="end">INR 5,538</text>
+    <text x="36" y="622">Lucknow, Uttar Pradesh</text><rect x="36" y="634" width="278" height="26" fill="#94a3b8"/><text x="590" y="654" text-anchor="end">INR 5,395</text>
   </g>
 </svg>

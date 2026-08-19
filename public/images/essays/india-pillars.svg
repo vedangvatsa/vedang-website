@@ -1,36 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650">
-  <rect width="1000" height="650" fill="#ffffff"/>
-  <text x="48" y="58" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#18181b">Three scores, five cities</text>
-  <text x="48" y="90" font-family="Inter, Arial, sans-serif" font-size="17" fill="#71717a">Quality of life, economic ability and sustainability</text>
-  <g font-family="Inter, Arial, sans-serif" font-size="16" fill="#52525b">
-    <rect x="650" y="40" width="14" height="14" fill="#4f46e5"/><text x="672" y="53">Quality</text>
-    <rect x="755" y="40" width="14" height="14" fill="#d97706"/><text x="777" y="53">Economy</text>
-    <rect x="865" y="40" width="14" height="14" fill="#15803d"/><text x="887" y="53">Sustainability</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900">
+  <rect width="640" height="900" fill="#ffffff"/>
+  <text x="36" y="52" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#18181b">Three scores, five cities</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="15" fill="#52525b">
+    <rect x="36" y="72" width="12" height="12" fill="#4f46e5"/><text x="56" y="83">Quality</text>
+    <rect x="145" y="72" width="12" height="12" fill="#d97706"/><text x="165" y="83">Economy</text>
+    <rect x="255" y="72" width="12" height="12" fill="#15803d"/><text x="275" y="83">Sustainability</text>
   </g>
+
   <g font-family="Inter, Arial, sans-serif" font-size="18" fill="#18181b">
-    <text x="48" y="142" font-weight="700">Bengaluru</text>
-    <rect x="220" y="116" width="279" height="20" fill="#4f46e5"/><text x="510" y="133">55.67</text>
-    <rect x="220" y="142" width="394" height="20" fill="#d97706"/><text x="625" y="159">78.82</text>
-    <rect x="220" y="168" width="300" height="20" fill="#15803d"/><text x="531" y="185">59.97</text>
+    <text x="36" y="130" font-weight="700">Bengaluru</text>
+    <text x="36" y="160" font-size="15" fill="#52525b">Quality</text><rect x="120" y="145" width="279" height="22" fill="#4f46e5"/><text x="590" y="162" text-anchor="end">55.67</text>
+    <text x="36" y="194" font-size="15" fill="#52525b">Economy</text><rect x="120" y="179" width="394" height="22" fill="#d97706"/><text x="590" y="196" text-anchor="end">78.82</text>
+    <text x="36" y="228" font-size="15" fill="#52525b">Sustainability</text><rect x="120" y="213" width="300" height="22" fill="#15803d"/><text x="590" y="230" text-anchor="end">59.97</text>
 
-    <text x="48" y="252" font-weight="700">Pune</text>
-    <rect x="220" y="226" width="291" height="20" fill="#4f46e5"/><text x="522" y="243">58.10</text>
-    <rect x="220" y="252" width="244" height="20" fill="#d97706"/><text x="475" y="269">48.88</text>
-    <rect x="220" y="278" width="379" height="20" fill="#15803d"/><text x="610" y="295">75.74</text>
+    <text x="36" y="292" font-weight="700">Pune</text>
+    <text x="36" y="322" font-size="15" fill="#52525b">Quality</text><rect x="120" y="307" width="290" height="22" fill="#4f46e5"/><text x="590" y="324" text-anchor="end">58.10</text>
+    <text x="36" y="356" font-size="15" fill="#52525b">Economy</text><rect x="120" y="341" width="244" height="22" fill="#d97706"/><text x="590" y="358" text-anchor="end">48.88</text>
+    <text x="36" y="390" font-size="15" fill="#52525b">Sustainability</text><rect x="120" y="375" width="379" height="22" fill="#15803d"/><text x="590" y="392" text-anchor="end">75.74</text>
 
-    <text x="48" y="362" font-weight="700">Chennai</text>
-    <rect x="220" y="336" width="304" height="20" fill="#4f46e5"/><text x="535" y="353">60.84</text>
-    <rect x="220" y="362" width="171" height="20" fill="#d97706"/><text x="402" y="379">34.16</text>
-    <rect x="220" y="388" width="285" height="20" fill="#15803d"/><text x="516" y="405">57.05</text>
+    <text x="36" y="454" font-weight="700">Chennai</text>
+    <text x="36" y="484" font-size="15" fill="#52525b">Quality</text><rect x="120" y="469" width="304" height="22" fill="#4f46e5"/><text x="590" y="486" text-anchor="end">60.84</text>
+    <text x="36" y="518" font-size="15" fill="#52525b">Economy</text><rect x="120" y="503" width="171" height="22" fill="#d97706"/><text x="590" y="520" text-anchor="end">34.16</text>
+    <text x="36" y="552" font-size="15" fill="#52525b">Sustainability</text><rect x="120" y="537" width="285" height="22" fill="#15803d"/><text x="590" y="554" text-anchor="end">57.05</text>
 
-    <text x="48" y="472" font-weight="700">Ahmedabad</text>
-    <rect x="220" y="446" width="287" height="20" fill="#4f46e5"/><text x="518" y="463">57.46</text>
-    <rect x="220" y="472" width="241" height="20" fill="#d97706"/><text x="472" y="489">48.19</text>
-    <rect x="220" y="498" width="321" height="20" fill="#15803d"/><text x="552" y="515">64.22</text>
+    <text x="36" y="616" font-weight="700">Ahmedabad</text>
+    <text x="36" y="646" font-size="15" fill="#52525b">Quality</text><rect x="120" y="631" width="287" height="22" fill="#4f46e5"/><text x="590" y="648" text-anchor="end">57.46</text>
+    <text x="36" y="680" font-size="15" fill="#52525b">Economy</text><rect x="120" y="665" width="241" height="22" fill="#d97706"/><text x="590" y="682" text-anchor="end">48.19</text>
+    <text x="36" y="714" font-size="15" fill="#52525b">Sustainability</text><rect x="120" y="699" width="321" height="22" fill="#15803d"/><text x="590" y="716" text-anchor="end">64.22</text>
 
-    <text x="48" y="582" font-weight="700">Indore</text>
-    <rect x="220" y="556" width="299" height="20" fill="#4f46e5"/><text x="530" y="573">59.86</text>
-    <rect x="220" y="582" width="75" height="20" fill="#d97706"/><text x="306" y="599">15.09</text>
-    <rect x="220" y="608" width="308" height="20" fill="#15803d"/><text x="539" y="625">61.62</text>
+    <text x="36" y="778" font-weight="700">Indore</text>
+    <text x="36" y="808" font-size="15" fill="#52525b">Quality</text><rect x="120" y="793" width="299" height="22" fill="#4f46e5"/><text x="590" y="810" text-anchor="end">59.86</text>
+    <text x="36" y="842" font-size="15" fill="#52525b">Economy</text><rect x="120" y="827" width="75" height="22" fill="#d97706"/><text x="590" y="844" text-anchor="end">15.09</text>
+    <text x="36" y="876" font-size="15" fill="#52525b">Sustainability</text><rect x="120" y="861" width="265" height="22" fill="#15803d"/><text x="590" y="878" text-anchor="end">53.03</text>
   </g>
 </svg>
