@@ -1,42 +1,167 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="760" viewBox="0 0 640 760">
-  <rect width="640" height="760" fill="#ffffff"/>
-  <text x="36" y="52" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#18181b">Quality of life and cost</text>
-  <text x="36" y="84" font-family="Inter, Arial, sans-serif" font-size="16" fill="#71717a">Eight cities with comparable 2020 and 2023-24 data</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820">
+  <title>Quality of life and household spending in 20 Indian cities</title>
+  <rect width="1200" height="820" fill="#ffffff"/>
 
-  <rect x="70" y="100" width="260" height="260" fill="#eef2ff"/>
-  <rect x="330" y="100" width="260" height="260" fill="#f0fdf4"/>
-  <rect x="70" y="360" width="260" height="260" fill="#f8fafc"/>
-  <rect x="330" y="360" width="260" height="260" fill="#fff7ed"/>
+  <text x="60" y="52" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#18181b">Quality of life and household spending</text>
+  <text x="60" y="86" font-family="Inter, Arial, sans-serif" font-size="18" fill="#71717a">Top 20 Million+ cities by overall Ease of Living score</text>
 
-  <text x="90" y="128" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#4f46e5">Lower spend / higher quality</text>
-  <text x="550" y="128" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#15803d" text-anchor="end">Higher both</text>
-  <text x="90" y="596" font-family="Inter, Arial, sans-serif" font-size="16" fill="#64748b">Lower both</text>
-  <text x="550" y="596" font-family="Inter, Arial, sans-serif" font-size="16" fill="#d97706" text-anchor="end">Higher spend / lower quality</text>
+  <rect x="110" y="140" width="583" height="229" fill="#eef2ff"/>
+  <rect x="693" y="140" width="417" height="229" fill="#f0fdf4"/>
+  <rect x="110" y="369" width="583" height="321" fill="#f8fafc"/>
+  <rect x="693" y="369" width="417" height="321" fill="#fff7ed"/>
 
-  <line x1="70" y1="620" x2="590" y2="620" stroke="#18181b" stroke-width="2"/>
-  <line x1="70" y1="100" x2="70" y2="620" stroke="#18181b" stroke-width="2"/>
-  <line x1="330" y1="100" x2="330" y2="620" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 5"/>
-  <line x1="70" y1="418" x2="590" y2="418" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 5"/>
-
-  <g font-family="Inter, Arial, sans-serif" font-size="15" fill="#52525b">
-    <text x="70" y="645" text-anchor="middle">INR 5,000</text>
-    <text x="330" y="645" text-anchor="middle">INR 7,000</text>
-    <text x="590" y="645" text-anchor="middle">INR 9,000</text>
-    <text x="50" y="625" text-anchor="end">45</text>
-    <text x="50" y="423" text-anchor="end">52</text>
-    <text x="50" y="105" text-anchor="end">63</text>
-    <text x="330" y="690" text-anchor="middle" font-size="16">Monthly household spending proxy</text>
-    <text x="330" y="722" text-anchor="middle" font-size="14" fill="#71717a">Quality score rises upward</text>
+  <g stroke="#e3e3e0" stroke-width="1">
+    <line x1="155" y1="140" x2="155" y2="690"/>
+    <line x1="383" y1="140" x2="383" y2="690"/>
+    <line x1="610" y1="140" x2="610" y2="690"/>
+    <line x1="838" y1="140" x2="838" y2="690"/>
+    <line x1="1065" y1="140" x2="1065" y2="690"/>
+    <line x1="110" y1="648" x2="1110" y2="648"/>
+    <line x1="110" y1="565" x2="1110" y2="565"/>
+    <line x1="110" y1="482" x2="1110" y2="482"/>
+    <line x1="110" y1="399" x2="1110" y2="399"/>
+    <line x1="110" y1="316" x2="1110" y2="316"/>
+    <line x1="110" y1="233" x2="1110" y2="233"/>
+    <line x1="110" y1="150" x2="1110" y2="150"/>
   </g>
 
-  <g font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#18181b">
-    <circle cx="140" cy="190" r="9" fill="#4f46e5"/><text x="158" y="196">Indore</text>
-    <circle cx="377" cy="241" r="9" fill="#d97706"/><text x="395" y="247">Pune</text>
-    <circle cx="481" cy="160" r="9" fill="#15803d"/><text x="499" y="166">Chennai</text>
-    <circle cx="470" cy="312" r="9" fill="#d97706"/><text x="488" y="318">Bengaluru</text>
-    <circle cx="529" cy="440" r="9" fill="#d97706"/><text x="529" y="418" text-anchor="middle">Delhi</text>
-    <circle cx="587" cy="442" r="9" fill="#d97706"/><text x="587" y="485" text-anchor="middle">Hyderabad</text>
-    <circle cx="121" cy="438" r="9" fill="#64748b"/><text x="139" y="444">Lucknow</text>
-    <circle cx="274" cy="543" r="9" fill="#64748b"/><text x="292" y="549">Jaipur</text>
+  <line x1="110" y1="690" x2="1110" y2="690" stroke="#18181b" stroke-width="2"/>
+  <line x1="110" y1="140" x2="110" y2="690" stroke="#18181b" stroke-width="2"/>
+  <line x1="693" y1="140" x2="693" y2="690" stroke="#64748b" stroke-width="1.5" stroke-dasharray="7 7"/>
+  <line x1="110" y1="369" x2="1110" y2="369" stroke="#64748b" stroke-width="1.5" stroke-dasharray="7 7"/>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">
+    <text x="134" y="174" fill="#4f46e5">Higher quality / lower spending</text>
+    <text x="1086" y="174" fill="#15803d" text-anchor="end">Higher quality / higher spending</text>
+    <text x="134" y="672" fill="#64748b">Lower quality / lower spending</text>
+    <text x="1086" y="672" fill="#d97706" text-anchor="end">Lower quality / higher spending</text>
   </g>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="16" fill="#52525b">
+    <text x="155" y="720" text-anchor="middle">INR 5,000</text>
+    <text x="383" y="720" text-anchor="middle">INR 6,000</text>
+    <text x="610" y="720" text-anchor="middle">INR 7,000</text>
+    <text x="838" y="720" text-anchor="middle">INR 8,000</text>
+    <text x="1065" y="720" text-anchor="middle">INR 9,000</text>
+    <text x="88" y="654" text-anchor="end">50</text>
+    <text x="88" y="571" text-anchor="end">52</text>
+    <text x="88" y="488" text-anchor="end">54</text>
+    <text x="88" y="405" text-anchor="end">56</text>
+    <text x="88" y="322" text-anchor="end">58</text>
+    <text x="88" y="239" text-anchor="end">60</text>
+    <text x="88" y="156" text-anchor="end">62</text>
+    <text x="610" y="756" text-anchor="middle" font-size="18" font-weight="600" fill="#3f3f46">Urban household spending proxy, MPCE per person per month</text>
+    <text x="36" y="415" text-anchor="middle" font-size="18" font-weight="600" fill="#3f3f46" transform="rotate(-90 36 415)">Quality of Life score, 2020</text>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="17" font-weight="650" fill="#18181b">
+    <g>
+      <title>Raipur: Quality of Life 54.74; Chhattisgarh urban MPCE INR 4,927</title>
+      <circle cx="139" cy="452" r="8" fill="#64748b" stroke="#ffffff" stroke-width="2"/>
+      <text x="157" y="458">Raipur</text>
+    </g>
+    <g>
+      <title>Indore: Quality of Life 59.86; Madhya Pradesh urban MPCE INR 5,538</title>
+      <circle cx="278" cy="239" r="8" fill="#4f46e5" stroke="#ffffff" stroke-width="2"/>
+      <text x="296" y="245">Indore</text>
+    </g>
+    <g>
+      <title>Bhopal: Quality of Life 57.92; Madhya Pradesh urban MPCE INR 5,538</title>
+      <circle cx="278" cy="319" r="8" fill="#4f46e5" stroke="#ffffff" stroke-width="2"/>
+      <text x="296" y="325">Bhopal</text>
+    </g>
+    <g>
+      <title>Ahmedabad: Quality of Life 57.46; Gujarat urban MPCE INR 7,175</title>
+      <circle cx="650" cy="339" r="8" fill="#4f46e5" stroke="#ffffff" stroke-width="2"/>
+      <text x="670" y="350">Ahmedabad</text>
+    </g>
+    <g>
+      <title>Surat: Quality of Life 57.96; Gujarat urban MPCE INR 7,175</title>
+      <circle cx="650" cy="318" r="8" fill="#4f46e5" stroke="#ffffff" stroke-width="2"/>
+      <line x1="657" y1="312" x2="666" y2="292" stroke="#94a3b8"/>
+      <text x="670" y="286">Surat</text>
+    </g>
+    <g>
+      <title>Vadodara: Quality of Life 58.10; Gujarat urban MPCE INR 7,175</title>
+      <circle cx="650" cy="312" r="8" fill="#4f46e5" stroke="#ffffff" stroke-width="2"/>
+      <line x1="642" y1="310" x2="632" y2="308" stroke="#94a3b8"/>
+      <text x="625" y="306" text-anchor="end">Vadodara</text>
+    </g>
+    <g>
+      <title>Rajkot: Quality of Life 51.86; Gujarat urban MPCE INR 7,175</title>
+      <circle cx="650" cy="571" r="8" fill="#64748b" stroke="#ffffff" stroke-width="2"/>
+      <text x="670" y="588">Rajkot</text>
+    </g>
+    <g>
+      <title>Visakhapatnam: Quality of Life 51.93; Andhra Pradesh urban MPCE INR 7,182</title>
+      <circle cx="651" cy="568" r="8" fill="#64748b" stroke="#ffffff" stroke-width="2"/>
+      <line x1="644" y1="571" x2="634" y2="589" stroke="#94a3b8"/>
+      <text x="626" y="594" text-anchor="end">Visakhapatnam</text>
+    </g>
+    <g>
+      <title>Navi Mumbai: Quality of Life 59.93; Maharashtra urban MPCE INR 7,363</title>
+      <circle cx="693" cy="236" r="8" fill="#4f46e5" stroke="#ffffff" stroke-width="2"/>
+      <text x="713" y="232">Navi Mumbai</text>
+    </g>
+    <g>
+      <title>Pune: Quality of Life 58.10; Maharashtra urban MPCE INR 7,363</title>
+      <circle cx="693" cy="312" r="8" fill="#4f46e5" stroke="#ffffff" stroke-width="2"/>
+      <text x="713" y="315">Pune</text>
+    </g>
+    <g>
+      <title>Kalyan Dombivali: Quality of Life 57.80; Maharashtra urban MPCE INR 7,363</title>
+      <circle cx="693" cy="324" r="8" fill="#4f46e5" stroke="#ffffff" stroke-width="2"/>
+      <line x1="701" y1="327" x2="709" y2="340" stroke="#94a3b8"/>
+      <text x="713" y="346">Kalyan Dombivali</text>
+    </g>
+    <g>
+      <title>Ludhiana: Quality of Life 56.00; Punjab urban MPCE INR 7,359</title>
+      <circle cx="692" cy="399" r="8" fill="#64748b" stroke="#ffffff" stroke-width="2"/>
+      <text x="713" y="400">Ludhiana</text>
+    </g>
+    <g>
+      <title>Thane: Quality of Life 55.04; Maharashtra urban MPCE INR 7,363</title>
+      <circle cx="693" cy="439" r="8" fill="#d97706" stroke="#ffffff" stroke-width="2"/>
+      <text x="668" y="434" text-anchor="end">Thane</text>
+    </g>
+    <g>
+      <title>Pimpri Chinchwad: Quality of Life 54.79; Maharashtra urban MPCE INR 7,363</title>
+      <circle cx="693" cy="449" r="8" fill="#d97706" stroke="#ffffff" stroke-width="2"/>
+      <line x1="701" y1="451" x2="709" y2="462" stroke="#94a3b8"/>
+      <text x="713" y="468">Pimpri Chinchwad</text>
+    </g>
+    <g>
+      <title>Solapur: Quality of Life 51.79; Maharashtra urban MPCE INR 7,363</title>
+      <circle cx="693" cy="574" r="8" fill="#d97706" stroke="#ffffff" stroke-width="2"/>
+      <text x="668" y="570" text-anchor="end">Solapur</text>
+    </g>
+    <g>
+      <title>Greater Mumbai: Quality of Life 51.12; Maharashtra urban MPCE INR 7,363</title>
+      <circle cx="693" cy="602" r="8" fill="#d97706" stroke="#ffffff" stroke-width="2"/>
+      <text x="713" y="616">Greater Mumbai</text>
+    </g>
+    <g>
+      <title>Bengaluru: Quality of Life 55.67; Karnataka urban MPCE INR 8,076</title>
+      <circle cx="855" cy="413" r="8" fill="#d97706" stroke="#ffffff" stroke-width="2"/>
+      <line x1="847" y1="416" x2="837" y2="430" stroke="#94a3b8"/>
+      <text x="830" y="438" text-anchor="end">Bengaluru</text>
+    </g>
+    <g>
+      <title>Chennai: Quality of Life 60.84; Tamil Nadu urban MPCE INR 8,165</title>
+      <circle cx="875" cy="198" r="8" fill="#15803d" stroke="#ffffff" stroke-width="2"/>
+      <text x="850" y="184" text-anchor="end">Chennai</text>
+    </g>
+    <g>
+      <title>Coimbatore: Quality of Life 60.33; Tamil Nadu urban MPCE INR 8,165</title>
+      <circle cx="875" cy="219" r="8" fill="#15803d" stroke="#ffffff" stroke-width="2"/>
+      <text x="895" y="226">Coimbatore</text>
+    </g>
+    <g>
+      <title>Delhi: Quality of Life 51.22; Delhi urban MPCE INR 8,534</title>
+      <circle cx="959" cy="598" r="8" fill="#d97706" stroke="#ffffff" stroke-width="2"/>
+      <text x="934" y="624" text-anchor="end">Delhi</text>
+    </g>
+  </g>
+
+  <text x="610" y="792" font-family="Inter, Arial, sans-serif" font-size="15" fill="#71717a" text-anchor="middle">Spending uses each city's state or UT urban average. Cities in the same state share the same x-position.</text>
 </svg>

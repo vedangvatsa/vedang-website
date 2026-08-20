@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+  <title>India workplace AI use versus failed pilots</title>
+  <rect width="1200" height="360" fill="#ffffff"/>
+
+  <text x="48" y="48" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#18181b">Workplace use is high. Pilots often fail.</text>
+  <text x="48" y="78" font-family="Inter, Arial, sans-serif" font-size="16" fill="#71717a">Survey findings from Microsoft/LinkedIn, BCG and Salesforce</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="48" y="110" width="350" height="180" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="72" y="150" font-size="13" font-weight="700" fill="#71717a">MICROSOFT / LINKEDIN 2024</text>
+    <text x="72" y="198" font-size="42" font-weight="700" fill="#4f46e5">92%</text>
+    <text x="72" y="236" font-size="16" fill="#52525b">Indian knowledge workers</text>
+    <text x="72" y="260" font-size="16" fill="#52525b">said they use AI at work</text>
+
+    <rect x="425" y="110" width="350" height="180" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="449" y="150" font-size="13" font-weight="700" fill="#71717a">BCG AI AT WORK 2026</text>
+    <text x="449" y="198" font-size="42" font-weight="700" fill="#0f766e">70%</text>
+    <text x="449" y="236" font-size="16" fill="#52525b">Indian frontline AI users</text>
+    <text x="449" y="260" font-size="16" fill="#52525b">said they save a full day weekly</text>
+
+    <rect x="802" y="110" width="350" height="180" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="826" y="150" font-size="13" font-weight="700" fill="#71717a">SALESFORCE 2026</text>
+    <text x="826" y="198" font-size="42" font-weight="700" fill="#b45309">38%</text>
+    <text x="826" y="236" font-size="16" fill="#52525b">Indian desk workers reported</text>
+    <text x="826" y="260" font-size="16" fill="#52525b">an unsuccessful AI pilot</text>
+  </g>
+</svg>

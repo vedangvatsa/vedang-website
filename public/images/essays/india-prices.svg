@@ -1,18 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420">
-  <rect width="640" height="420" fill="#ffffff"/>
-  <text x="36" y="52" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#18181b">Urban prices, July 2026</text>
-  <text x="36" y="84" font-family="Inter, Arial, sans-serif" font-size="16" fill="#71717a">Change from the same month a year earlier</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <title>Urban inflation in July 2026</title>
+  <rect width="1200" height="300" fill="#ffffff"/>
 
-  <g font-family="Inter, Arial, sans-serif" fill="#18181b">
-    <text x="36" y="150" font-size="20" font-weight="700">General urban CPI</text>
-    <rect x="36" y="166" width="492" height="38" fill="#4f46e5"/>
-    <text x="590" y="192" font-size="24" font-weight="700" fill="#4f46e5" text-anchor="end">3.96%</text>
+  <text x="60" y="52" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#18181b">Urban prices, July 2026</text>
+  <text x="60" y="82" font-family="Inter, Arial, sans-serif" font-size="17" fill="#71717a">Change from the same month a year earlier</text>
 
-    <text x="36" y="268" font-size="20" font-weight="700">Urban housing</text>
-    <rect x="36" y="284" width="250" height="38" fill="#d97706"/>
-    <text x="590" y="310" font-size="24" font-weight="700" fill="#d97706" text-anchor="end">2.01%</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="60" y="132" font-size="18" font-weight="650" fill="#18181b">General urban CPI</text>
+    <rect x="60" y="148" width="780" height="28" rx="4" fill="#eef2ff"/>
+    <rect x="60" y="148" width="618" height="28" rx="4" fill="#4f46e5"/>
+    <text x="1110" y="171" font-size="27" font-weight="700" fill="#4f46e5" text-anchor="end">3.96%</text>
 
-    <rect x="36" y="352" width="568" height="42" fill="#f8fafc"/>
-    <text x="60" y="379" font-size="17">General inflation ran 1.95 points above housing.</text>
+    <text x="60" y="212" font-size="18" font-weight="650" fill="#18181b">Urban housing</text>
+    <rect x="60" y="228" width="780" height="28" rx="4" fill="#fff7ed"/>
+    <rect x="60" y="228" width="313" height="28" rx="4" fill="#d97706"/>
+    <text x="1110" y="251" font-size="27" font-weight="700" fill="#d97706" text-anchor="end">2.01%</text>
+
+    <text x="1110" y="112" font-size="16" fill="#71717a" text-anchor="end">Scale: 0 to 5%</text>
   </g>
 </svg>

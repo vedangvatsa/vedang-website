@@ -1,13 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
-  <rect width="640" height="360" fill="#ffffff"/>
-  <text x="36" y="52" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#18181b">Clean-air action, 2024</text>
-  <text x="36" y="84" font-family="Inter, Arial, sans-serif" font-size="16" fill="#71717a">Swachh Vayu Survekshan, cities above one million</text>
-  <g font-family="Inter, Arial, sans-serif" font-size="20" fill="#18181b">
-    <text x="36" y="142" font-weight="700">1. Surat</text>
-    <rect x="36" y="156" width="520" height="34" fill="#15803d"/>
-    <text x="36" y="216" font-weight="700">2. Jabalpur</text>
-    <rect x="36" y="230" width="430" height="34" fill="#65a30d"/>
-    <text x="36" y="290" font-weight="700">3. Agra</text>
-    <rect x="36" y="304" width="400" height="34" fill="#d97706"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280">
+  <title>Top three cities in Swachh Vayu Survekshan 2024</title>
+  <rect width="1200" height="280" fill="#ffffff"/>
+
+  <text x="60" y="52" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#18181b">Clean-air action, 2024</text>
+  <text x="60" y="82" font-family="Inter, Arial, sans-serif" font-size="17" fill="#71717a">Swachh Vayu Survekshan, cities above one million</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="60" y="120" width="340" height="104" rx="8" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="88" y="164" font-size="28" font-weight="700" fill="#15803d">1</text>
+    <text x="132" y="164" font-size="24" font-weight="700" fill="#18181b">Surat</text>
+    <text x="88" y="198" font-size="15" fill="#52635a">First in the Million+ category</text>
+
+    <rect x="430" y="120" width="340" height="104" rx="8" fill="#f7fee7" stroke="#d9f99d"/>
+    <text x="458" y="164" font-size="28" font-weight="700" fill="#65a30d">2</text>
+    <text x="502" y="164" font-size="24" font-weight="700" fill="#18181b">Jabalpur</text>
+    <text x="458" y="198" font-size="15" fill="#52635a">Second in the Million+ category</text>
+
+    <rect x="800" y="120" width="340" height="104" rx="8" fill="#fff7ed" stroke="#fed7aa"/>
+    <text x="828" y="164" font-size="28" font-weight="700" fill="#d97706">3</text>
+    <text x="872" y="164" font-size="24" font-weight="700" fill="#18181b">Agra</text>
+    <text x="828" y="198" font-size="15" fill="#66594a">Third in the Million+ category</text>
   </g>
 </svg>
