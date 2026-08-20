@@ -2565,9 +2565,11 @@
     "id": "viral-rewrite-146",
     "scheduleDate": "2026-08-19",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "Ego-driven leaders chase being right. Purpose-driven leaders chase the right answer. The first wins arguments. The second wins results. Find teams that value the answer over the ego at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_26_1.jpg"
+    "image": "scripts/post-images/post_26_1.jpg",
+    "postedAt": "2026-08-20T19:58:55.589Z",
+    "castHash": "0x90ffdc9f6caa8921a7fff21f9e84c0d1f8e92a18"
   },
   {
     "id": "viral-rewrite-147",
