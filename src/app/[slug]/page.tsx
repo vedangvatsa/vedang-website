@@ -24,7 +24,6 @@ import { AIJobExposure, EarlyCareerImpact, ProductivityParadox, GenderImpact, UB
 import { GDPGrowthTimeline, GovernanceScorecard, IndustrialEvolution, HealthcareComparison, InequalitySnapshot, TransferabilityGrid } from '@/components/mdx/singapore-charts';
 import { PerceptionArcTimeline, IndiaSectorBifurcation, IncomeThresholdChart, COOEffectSize } from '@/components/mdx/cheap-charts';
 import { EnterpriseAdoption, CoaseDisruption, AgentMarketGrowth } from '@/components/mdx/agent-economy-charts';
-import { BlockchainSnapshot, BlockchainPhases, L2ScalingOverview, StablecoinRegulatory } from '@/components/mdx/blockchain-charts';
 import { RegulatoryFriction, EGovernanceMaturity, RegulatoryGrowth } from '@/components/mdx/bureaucracy-charts';
 import { RecentBatchComposition, AgentLayerTaxonomy, YCGeoConcentration, AgentForXPattern, DefenseHardwareSurge, TaglineArchaeology, YCIndustryBreakdown, BatchSizeTimeline } from '@/components/mdx/yc-charts';
 import { UIComplexityComparison, APIAbstractionLayer, TextUIAdoption, PlatformShiftTimeline } from '@/components/mdx/universal-charts';
@@ -372,10 +371,6 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
               EnterpriseAdoption,
               CoaseDisruption,
               AgentMarketGrowth,
-              BlockchainSnapshot,
-              BlockchainPhases,
-              L2ScalingOverview,
-              StablecoinRegulatory,
               RegulatoryFriction,
               EGovernanceMaturity,
               RegulatoryGrowth,

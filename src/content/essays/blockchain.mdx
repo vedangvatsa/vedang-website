@@ -1,23 +1,39 @@
 ---
-title: What Blockchain Kept
-summary: >-
-  An analysis of blockchain's evolution from cryptographic experiment to
-  institutional infrastructure, examining what survived the hype cycles, where
-  the...
-date: '2025-09-22'
-author: 'Vedang Vatsa'
-keywords: ['blockchain', 'DeFi', 'stablecoins', 'tokenization', 'RWA', 'Bitcoin ETF', 'smart contracts', 'Layer 2', 'MiCA', 'GENIUS Act']
+title: "What Blockchain Kept"
+summary: "After five boom-and-bust cycles, stablecoins, spot Bitcoin ETFs and a thin layer of tokenized Treasuries are what still show up in the books."
+date: "2025-09-22"
+author: "Vedang Vatsa"
+category: "Web3"
+keywords: ["blockchain", "DeFi", "stablecoins", "tokenization", "RWA", "Bitcoin ETF", "smart contracts", "Layer 2", "MiCA", "GENIUS Act"]
 ---
 
-[Blockchain](/glossary/blockchain) has had at least five lives since Bitcoin shipped in 2009. Each life had a different pitch, a different crowd, and a different way to blow up. It was never a straight line. Booms, then long winters, then a few engineering wins that actually stuck. I care more about what survived the wipeouts than about the slogans.
+[Blockchain](/glossary/blockchain) has had at least five lives since Bitcoin shipped in 2009. Each life had a different pitch, a different crowd, and a different way to blow up. Booms, then winters, then a few engineering wins that stuck. This page tracks what survived the wipeouts, not the slogans.
 
-<Figure src="/images/essays/blockchain.svg?v=8" alt="Infographic" wide />
+<Figure
+  src="/images/essays/blockchain.svg?v=9"
+  alt="Three figures: 317 billion dollar stablecoin market cap, 85.8 billion dollar US spot Bitcoin ETF AUM, and 24 to 26 billion dollars in tokenized real-world assets."
+  caption="Stablecoins, ETFs and tokenized assets are the parts of the stack that still show clear size."
+  source="CoinDesk Data, ETF filings, RWA trackers"
+  wide
+  width={1200}
+  height={400}
+/>
 
-## From experiment to infrastructure
+## Five phases, one filter
 
-Other base-layer technologies ran the same cycle: a small technical community, then speculative excess, then a crash that filters weak projects, then infrastructure, then adoption driven by measurable utility.
+Other base-layer technologies ran a similar cycle: a small technical community, speculative excess, a crash that filters weak projects, then infrastructure, then use that can be measured.
 
-<BlockchainPhases />
+<div class="table-wrapper table-wrap-text">
+
+| Era | Phase | What stuck |
+| --- | --- | --- |
+| 2009-2013 | Cryptocurrency | Bitcoin, proof-of-work, double-spend without a bank |
+| 2014-2017 | Programmable money | Ethereum, smart contracts, ICO funding |
+| 2018-2023 | Infrastructure | Rollups, The Merge, DeFi and NFT experiments |
+| 2023-2025 | Stablecoin maturity | Dollar-pegged tokens, payment volume, first statutes |
+| 2024-2026 | Institutional rails | Spot ETFs, tokenized Treasuries, banking-style rules |
+
+</div>
 
 <ResearchPaper
   title="Web3 Research Trends"
@@ -28,121 +44,130 @@ Other base-layer technologies ran the same cycle: a small technical community, t
   abstract="Bibliometric analysis of 128,286 blockchain papers covering publication volume, keyword trends, geographic distribution, and citation dynamics across three distinct eras of blockchain research."
 />
 
-## Phase one: solving double-spending (2009-2013)
+## Phase one: double-spending (2009-2013)
 
 Bitcoin's first job was a CS problem: stop a digital coin from being spent twice without a central bank. The [whitepaper](https://bitcoin.org/bitcoin.pdf) said that in 2008. The [chain](/glossary/blockchain) does it with proof-of-work. Compute is what keeps the ledger honest.
 
 For years it was cryptographers, cypherpunks, and people who cared more about sovereignty than price. Ugly tooling. Energy already a complaint. The core trick was still real: peer-to-peer value no one office could freeze.
 
-Forget the ticker for a minute. The [Byzantine Generals' Problem](https://lamport.azurewebsites.net/pubs/byz.pdf) (Lamport, Shostak, and Pease, 1982) is how you agree when some of the messengers lie. Other answers existed. [Nakamoto's](https://bitcoin.org/bitcoin.pdf) has run 16+ years with no coordinator, moving billions a day.
+The [Byzantine Generals' Problem](https://lamport.azurewebsites.net/pubs/byz.pdf) (Lamport, Shostak, and Pease, 1982) is how you agree when some of the messengers lie. Other answers existed. [Nakamoto's](https://bitcoin.org/bitcoin.pdf) has run 16+ years with no coordinator, moving billions a day.
 
 ## Phase two: programmable money (2014-2017)
 
-[Ethereum](https://ethereum.org/en/whitepaper/) extended the concept from a distributed ledger to a distributed state machine. Smart contracts allowed arbitrary code execution on the blockchain, transforming it from a database into a global, programmable computer. This made Decentralized Applications (dApps) and the Initial Coin Offering (ICO) funding mechanism possible.
+[Ethereum](https://ethereum.org/en/whitepaper/) turned a ledger into a state machine. Smart contracts run arbitrary code on the chain. That made dApps and ICO fundraising possible.
 
-The conceptual leap was significant. Bitcoin could record that "A sent 1 BTC to B." Ethereum could execute: "If condition X is met by date Y, transfer Z tokens to address W, otherwise return them to address V." This programmability opened the design space from simple payments to programmable financial instruments, identity systems, governance mechanisms, and eventually entire economic protocols.
+Bitcoin could record that "A sent 1 BTC to B." Ethereum could run: "If condition X is met by date Y, transfer Z tokens to address W, otherwise return them to V." Payments became conditional instruments: escrow, auctions, voting, and later whole protocol economies.
 
-<Callout type="warning" title="The ICO crash was a necessary filter">
-The 2017 ICO boom produced thousands of whitepapers making claims that were technologically infeasible or outright fraudulent. The 2018 crash wiped out speculative excess but also filtered out weak projects and forced dedicated teams back to engineering. Scalability, the most significant technical limitation, became the primary focus of the next phase. The market lost roughly 80% of its value between January and December 2018. What survived was instructive: projects with real engineering teams, genuine user bases, and infrastructure-level utility.
-</Callout>
+The 2017 ICO boom printed thousands of whitepapers, many of them infeasible or fraudulent. The 2018 crash cut the market by about 80% between January and December. What remained tended to have engineering teams, users, or infrastructure jobs. Scalability moved to the top of the backlog.
 
-## Phase three: the infrastructure build (2018-2023)
+## Phase three: infrastructure (2018-2023)
 
-The "crypto winter" was the most productive period in blockchain's history. With speculative capital gone, engineers focused on the technical limitations that had become obvious during the 2017 boom: Ethereum could process roughly 15 transactions per second, compared to Visa's 65,000+.
+With speculative capital gone, engineers worked on limits that the boom had made obvious. Ethereum processed roughly 15 transactions per second. Visa's peak marketing figure sat near 65,000+.
 
-**Scaling solutions.** Two approaches emerged in parallel. Layer 2 solutions (optimistic and zero-knowledge rollups) process transactions off the main chain and submit compressed proofs back to the base layer, inheriting Ethereum's security without its throughput constraints. Alternative Layer 1 blockchains introduced different consensus mechanisms and architectural designs, trading decentralization for performance.
+Two scaling paths ran in parallel. Layer 2 rollups (optimistic and zero-knowledge) process transactions off the main chain and post proofs back to Ethereum. Other Layer 1s changed consensus and architecture, often trading some decentralization for speed.
 
-By early 2026, the Layer 2 market has consolidated around three networks.
+By early 2026, L2 activity clustered around three networks.
 
-<L2ScalingOverview />
+<Figure
+  src="/images/essays/blockchain-l2.svg?v=1"
+  alt="Horizontal bars showing Base over 60% of L2 transactions, Arbitrum about 20%, Optimism about 10%, and others about 10%."
+  caption="Top three L2s take most of the transaction share. TVL rankings differ: Arbitrum leads in locked value."
+  source="L2Beat, DefiLlama, BlockEden estimates"
+  wide
+  width={1200}
+  height={380}
+/>
 
-Base, built by Coinbase, emerged as the dominant network for consumer-facing applications, processing over 60% of all L2 transaction volume. Arbitrum leads in Total Value Locked (TVL) at approximately $18 billion, the primary venue for institutional DeFi. Optimism operates the "Superchain" vision: a set of interconnected chains.
+<div class="table-wrapper table-wrap-text">
 
-Combined, L2 networks process close to 2 million transactions per day, effectively eclipsing the volume of the Ethereum mainnet. A "consolidation crisis" has emerged in the long tail: smaller rollups have lost significant TVL and activity, concentrating activity around the top three players.
+| Network | TVL (approx.) | Focus |
+| --- | --- | --- |
+| Base | ~$5B | Consumer apps, Coinbase distribution |
+| Arbitrum | ~$18B | Highest TVL, institutional DeFi |
+| Optimism | ~$6-8B | Superchain of connected rollups |
+| Others | Declining | Long-tail rollups losing activity |
 
-**The Merge.** Ethereum moved from proof-of-work to proof-of-stake on [15 September 2022](https://blog.ethereum.org/2022/09/15/the-merge-is-here). The energy drop was large: about 99.95%, from millions of megawatt-hours a year to roughly 2,600 MWh. Per-transaction emissions fell from over 100 kg CO2 to about 0.01 kg. That removed the strongest public objection to the chain.
+</div>
 
-**DeFi.** Decentralized finance became the first compelling product-market fit beyond simple payments. Protocols like Uniswap, Aave, and Compound recreated lending, borrowing, and trading without traditional intermediaries. Automated market makers (AMMs) replaced order books with liquidity pools, so any tokenized asset can trade 24/7. The innovation was creating financial instruments that could not exist in traditional markets: flash loans (uncollateralized loans that must be repaid within a single transaction), composable yield strategies, and permissionless liquidity provision.
+Combined, L2 networks process close to 2 million transactions per day, above Ethereum mainnet volume. Smaller rollups have lost TVL and traffic. Activity sits with the top three.
 
-<PullQuote>Stablecoins are the functional currency of the crypto economy: a low-volatility medium of exchange that bridges traditional finance and on-chain activity.</PullQuote>
+Ethereum moved from proof-of-work to proof-of-stake on [15 September 2022](https://blog.ethereum.org/2022/09/15/the-merge-is-here). Reported energy use fell about 99.95%, from millions of megawatt-hours a year to roughly 2,600 MWh. Per-transaction emissions fell from over 100 kg CO2 to about 0.01 kg. That cut the strongest public objection to the chain.
 
-**NFTs.** Non-fungible tokens brought blockchain into cultural mainstream, introducing verifiable digital ownership. The initial speculation-driven phase (2021-2022) produced both legitimate innovation and a lot of excess. The underlying framework for representing ownership of unique digital or physical assets persists and is finding more durable applications in ticketing, intellectual property management, and supply chain verification, even as the speculative art market has cooled.
+DeFi rebuilt lending, borrowing and trading without the usual intermediaries. Uniswap, Aave and Compound are the usual examples. Automated market makers replace order books with pools. Flash loans, composable yield and permissionless liquidity are the new instruments. Uniswap alone has processed over $2 trillion in cumulative trading volume.
 
-## Phase four: stablecoin maturity (2023-2025)
+NFTs made digital ownership legible outside crypto Twitter. The 2021-2022 art boom mixed real experiments with excess. The ownership format still shows up in ticketing, IP and supply-chain trials, even as speculative art cooled.
 
-Stablecoins emerged as the most practical application of blockchain technology. Their growth tells a clearer story than any other blockchain metric.
+## Phase four: stablecoins (2023-2025)
+
+Stablecoins are the clearest utility line in the public data.
 
 <StatRow>
-<Stat value="~$317B" label="Stablecoin market cap ATH (Mar 2026)" source="CoinDesk Data" sourceUrl="https://www.coindesk.com/research/stablecoins-and-tokenized-asset-report-january-2026" />
-<Stat value="~$35T" label="On-chain volume, 2025 (not payments)" source="McKinsey / Artemis, via CoinDesk" sourceUrl="https://www.coindesk.com/business/2026/01/23/stablecoins-moved-usd35-trillion-last-year-but-only-1-of-it-was-for-real-world-payments" />
-<Stat value="~$390B" label="Estimated real-world payments, 2025" source="McKinsey / Artemis, Feb 2026" sourceUrl="https://www.coindesk.com/business/2026/01/23/stablecoins-moved-usd35-trillion-last-year-but-only-1-of-it-was-for-real-world-payments" />
-<Stat value="~66%" label="Supply held in emerging markets (est.)" source="Goldman Sachs Global Institute" sourceUrl="https://www.goldmansachs.com/what-we-do/goldman-sachs-global-institute/articles/stablecoins-and-emerging-markets" />
+  <Stat value="~$317B" label="Stablecoin market cap ATH (Mar 2026)" source="CoinDesk Data" sourceUrl="https://www.coindesk.com/research/stablecoins-and-tokenized-asset-report-january-2026" />
+  <Stat value="~$35T" label="On-chain volume, 2025 (mostly not payments)" source="McKinsey / Artemis, via CoinDesk" sourceUrl="https://www.coindesk.com/business/2026/01/23/stablecoins-moved-usd35-trillion-last-year-but-only-1-of-it-was-for-real-world-payments" />
+  <Stat value="~$390B" label="Estimated real-world payments, 2025" source="McKinsey / Artemis, Feb 2026" sourceUrl="https://www.coindesk.com/business/2026/01/23/stablecoins-moved-usd35-trillion-last-year-but-only-1-of-it-was-for-real-world-payments" />
+  <Stat value="~66%" label="Supply held in emerging markets (est.)" source="Goldman Sachs Global Institute" sourceUrl="https://www.goldmansachs.com/what-we-do/goldman-sachs-global-institute/articles/stablecoins-and-emerging-markets" />
 </StatRow>
 
-[CoinDesk Data](https://www.coindesk.com/research/stablecoins-and-tokenized-asset-report-january-2026) put the stablecoin market at a March 2026 all-time high of $317 billion. [CoinGecko's Q1 2026 report](https://www.coingecko.com/research/publications/2026-q1-crypto-industry-report) closed the quarter at $309.9 billion, with USDT near 59% share. Live tickers move daily. That $315 billion is a March snapshot, not a live cap. [McKinsey and Artemis](https://www.coindesk.com/business/2026/01/23/stablecoins-moved-usd35-trillion-last-year-but-only-1-of-it-was-for-real-world-payments) put 2025 on-chain volume near $35 trillion and estimated real-world payments (payroll, remittances, supplier settlement) near $390 billion, about 1% of the headline flow. The rest is trading, internal shuffling, and contract loops.
+<Figure
+  src="/images/essays/blockchain-stables.svg?v=1"
+  alt="Three figures: about 35 trillion dollars on-chain volume, about 390 billion dollars real-world payments, and about 1% of flow that is payments."
+  caption="Most stablecoin volume is trading and contract loops. Payments are a thin slice of the headline number."
+  source="McKinsey / Artemis via CoinDesk"
+  sourceUrl="https://www.coindesk.com/business/2026/01/23/stablecoins-moved-usd35-trillion-last-year-but-only-1-of-it-was-for-real-world-payments"
+  wide
+  width={1200}
+  height={300}
+/>
 
-**Emerging market adoption.** The most significant adoption signal may be geographic. [Goldman Sachs](https://www.goldmansachs.com/what-we-do/goldman-sachs-global-institute/articles/stablecoins-and-emerging-markets) estimates that roughly 66% of global stablecoin supply is held by individuals in emerging markets, against a supply they put near $290 billion at the time of that note. In high-inflation economies across Africa and Latin America, stablecoins are a digital proxy for the US dollar. They hold dollar value, move remittances across borders, and settle B2B trades. This is utility-driven adoption.
+[CoinDesk Data](https://www.coindesk.com/research/stablecoins-and-tokenized-asset-report-january-2026) put the stablecoin market at a March 2026 high of $317 billion. [CoinGecko's Q1 2026 report](https://www.coingecko.com/research/publications/2026-q1-crypto-industry-report) closed the quarter at $309.9 billion, with USDT near 59% share. Live tickers move daily. Treat $317 billion as a March snapshot.
 
-Central banks in these regions remain cautious, citing concerns over "deposit flight" (as consumers move funds from local banks to stablecoin issuers), potential loss of monetary policy effectiveness, and capital flight. The tension between individual utility and macroeconomic stability remains unresolved.
+[McKinsey and Artemis](https://www.coindesk.com/business/2026/01/23/stablecoins-moved-usd35-trillion-last-year-but-only-1-of-it-was-for-real-world-payments) put 2025 on-chain volume near $35 trillion and estimated real-world payments (payroll, remittances, supplier settlement) near $390 billion, about 1% of the headline flow. The rest is trading, internal shuffling and contract loops.
 
-**Regulatory clarity.** The regulatory environment evolved in 2024-2025, providing the legal frameworks that institutional participants require.
+[Goldman Sachs](https://www.goldmansachs.com/what-we-do/goldman-sachs-global-institute/articles/stablecoins-and-emerging-markets) estimates that roughly 66% of global stablecoin supply is held by people in emerging markets, against a supply near $290 billion in that note. In high-inflation economies across Africa and Latin America, a stablecoin is often a dollar proxy for remittances and B2B settlement.
 
-<StablecoinRegulatory />
+Central banks in those regions still worry about deposit flight, monetary-policy leakage and capital outflow. Individual utility and macro control sit on opposite sides of the same ledger.
 
-The US [GENIUS Act](https://www.congress.gov/bill/119th-congress/senate-bill/1582), signed in July 2025, established the first federal framework for payment stablecoins, mandating 1:1 reserves in high-quality liquid assets and bringing issuers under banking-equivalent oversight. The EU's [MiCA regulation](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1114) came fully into force in December 2024, with a hard compliance deadline for stablecoin issuers set for July 2026. Singapore, the UAE, and Hong Kong have developed their own frameworks that broadly align with the reserve transparency and consumer protection principles established by the US and EU.
+Rules caught up in 2024-2025.
 
-This regulatory convergence is a structural shift. Stablecoins are being categorized as regulated payment instruments, not generic crypto assets. That legal basis lets institutional treasuries, payment processors, and banks put stablecoins into existing financial infrastructure.
+<div class="table-wrapper table-wrap-text">
 
-## Phase five: institutional integration (2024-2026)
+| Jurisdiction | Framework | Requirement | Timeline |
+| --- | --- | --- | --- |
+| United States | [GENIUS Act](https://www.congress.gov/bill/119th-congress/senate-bill/1582) | 1:1 high-quality reserves, banking-style oversight | Signed July 2025 |
+| European Union | [MiCA](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1114) | Issuer authorization, reserve transparency | In force Dec 2024; issuer deadline July 2026 |
+| Singapore | MAS framework | Reserves and licensing for issuers | Active |
+| UAE | CBUAE rules | AED-backed coins, central-bank oversight | Active |
 
-The current phase is defined by institutional capital entering blockchain markets through regulated, familiar structures.
+</div>
 
-<BlockchainSnapshot />
+Stablecoins are being filed as payment instruments, not as generic crypto. That filing is what lets treasuries, processors and banks wire them into existing rails.
 
-**Bitcoin ETFs.** US [spot Bitcoin ETFs](https://www.sec.gov/newsroom/press-releases/2024-17) launched in January 2024. Later filings put combined AUM near $85.8 billion within two years, holding over 1.28 million BTC. BlackRock's iShares Bitcoin Trust (IBIT) is the largest. That AUM is a snapshot, not a live ticker. The significance is structural. These products allow pension funds, endowments, and registered investment advisors to allocate to Bitcoin through existing brokerage infrastructure. That removes the custody and operational complexity that previously limited institutional participation.
+## Phase five: institutional rails (2024-2026)
 
-**Real-world asset tokenization.** On-chain tokenized assets (excluding stablecoins) reached $24-26 billion by March 2026, led by tokenized US Treasuries at over $11 billion. The appeal is straightforward. Tokenized Treasuries provide yield to on-chain capital without requiring off-ramping to traditional finance. BCG and Standard Chartered project the total RWA market at $10-16 trillion by 2030, though these estimates use a broad definition of the total addressable opportunity and deserve the same skepticism applied to any long-range projection.
+US [spot Bitcoin ETFs](https://www.sec.gov/newsroom/press-releases/2024-17) launched in January 2024. Later filings put combined AUM near $85.8 billion within two years, holding over 1.28 million BTC. BlackRock's IBIT is the largest. That AUM is a snapshot. The practical change is that pensions, endowments and RIAs can hold Bitcoin through ordinary brokerage accounts.
 
-<Callout type="info" title="User experience is catching up">
-Early blockchain required managing cryptographic keys, understanding gas fees, and navigating complex interfaces. Account abstraction now lets wallets work like traditional web accounts, with social recovery and gasless transactions. Coinbase's integration with Base brought millions of existing retail users onto Layer 2 without requiring them to understand the underlying infrastructure. This reduction in friction is a prerequisite for mainstream adoption beyond financial applications.
-</Callout>
+On-chain tokenized assets (excluding stablecoins) reached $24-26 billion by March 2026, led by tokenized US Treasuries above $11 billion. Tokenized Treasuries give on-chain capital a yield without leaving the ledger. BCG and Standard Chartered project $10-16 trillion of RWA by 2030 under a wide definition. Treat that as a sales TAM, not a booked figure.
 
-## What blockchain proved
+Wallet UX is less hostile than it was. Account abstraction adds social recovery and gas sponsorship. Coinbase's Base path put retail users on an L2 without asking them to recite gas lore. That friction drop matters for anything beyond traders.
 
-Through five phases and multiple crashes, several propositions have been validated by market data:
+## What the record supports
 
-1. **Trustless value transfer works.** Bitcoin has operated continuously for 16+ years without a central authority, processing billions in daily volume. No other distributed system, financial or otherwise, has demonstrated this level of permissionless reliability.
+Bitcoin has moved value for 16+ years without a central operator. That claim still holds.
 
-2. **Programmable financial contracts can reduce intermediary costs.** DeFi demonstrated that lending, trading, and yield generation can operate with lower overhead than traditional finance when smart contracts are properly audited. Uniswap alone has processed over $2 trillion in cumulative trading volume.
+Smart-contract finance can cut intermediary cost when audits hold. Uniswap's cumulative volume is the usual citation.
 
-3. **Stablecoins have product-market fit.** $315 billion in aggregate value and $33 trillion in annual transaction volume suggest genuine utility, not speculation alone. Cross-border payments, emerging market dollarization, and DeFi collateral are the primary use cases.
+Stablecoins hold hundreds of billions and move tens of trillions on-chain. About 1% of that flow looks like real-world payment. Dollar access in emerging markets is the cleaner utility story than DeFi volume alone.
 
-4. **Traditional finance wants exposure.** $85.8 billion in ETF AUM and growing institutional custody operations confirm that blockchain assets have moved from fringe to portfolio allocation.
+Spot ETFs and custody desks put Bitcoin inside ordinary portfolios. Tokenized Treasuries are small next to ETF AUM, but they are booked.
 
-5. **Scalability can be solved through layered architecture.** L2 networks process 2 million transactions per day at a fraction of mainnet costs, validating the modular scaling thesis.
+L2s carry about 2 million transactions a day at lower cost than mainnet. The modular scaling bet is live. Governance by token vote still skews plutocratic, and DAO turnout stays thin. Metaverse settlement and privacy-with-compliance remain unfinished.
 
-Several propositions remain unproven or partially proven:
+## Where AI shows up
 
-- **Decentralized governance scales.** Most DAOs struggle with voter apathy, plutocratic concentration, and operational inefficiency. The gap between the democratic ideal and operational reality remains wide.
+AI agents need a way to pay for APIs, compute and data without a human clicking approve each time. Protocols such as x402 settle those calls in stablecoins over HTTP. That is a payments job, not a new L1 thesis.
 
-- **Blockchain as the economic layer for metaverse platforms.** This remains speculative and contingent on the metaverse itself materializing as a significant consumer medium.
+Akash, Render and similar networks sell GPU time outside the usual hyperscalers. Training bills for frontier models are large enough that buyers keep looking. Hyperscalers still hold most of the capacity.
 
-- **Regulatory frameworks can keep pace.** The GENIUS Act and MiCA are encouraging, but the gap between legislative intent and enforcement capacity is historically large in technology regulation.
+Provenance chains can label who made a file and how it changed. Synthetic media made that problem louder. Regulatory comfort with cryptographic privacy is still thin.
 
-- **Privacy is compatible with compliance.** Zero-knowledge proofs offer a potential path, but institutional adoption requires regulatory comfort with cryptographic privacy that most regulators have not yet granted.
-
-## Convergence with AI
-
-Blockchain is converging with AI on payments, compute, and provenance.
-
-**Machine-to-machine payments.** AI agents require payment infrastructure for autonomous transactions. Protocols like x402 and Monetization Payment Protocol use stablecoins over HTTP for exactly this: an AI agent can pay for an API call, a compute resource, or a data feed without human intervention. The programmability of stablecoins makes them a natural settlement layer for machine economies.
-
-**Decentralized compute.** Networks like Akash and Render provide GPU resources for AI training outside centralized providers. As AI training costs scale (GPT-4 reportedly cost $100M+ to train), decentralized compute offers an alternative to the oligopoly of hyperscaler cloud providers.
-
-**Content verification.** Cryptographic verification of AI-generated content may become important as synthetic media proliferates. Blockchain-based provenance chains can establish the origin and modification history of digital content, addressing a trust problem that AI itself has created.
-
-**Agent-native financial infrastructure.** As AI agents become more autonomous, they need financial primitives that do not require human authorization for every transaction. Smart contracts provide programmable spending limits, conditional logic, and automated settlement: the financial backbone of [agentic systems](/agenticweb).
-
-<KeyTakeaway>
-The chain already works. Another general-purpose L1 does not prove that. Fund a settlement, a tokenized Treasury, or a machine paying for an API call in stablecoins. DAOs still weight votes by tokens, and turnout stays thin. If the job does not need a trustless ledger, a database is cheaper.
-</KeyTakeaway>
+Smart contracts can set spend limits and settlement rules for agents. That links to the [agentic web](/agenticweb) stack. If the job does not need a trustless ledger, a database is cheaper.

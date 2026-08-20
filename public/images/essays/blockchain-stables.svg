@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <rect width="1200" height="300" fill="#ffffff"/>
+  <text x="48" y="48" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#18181b">Stablecoin flow, 2025</text>
+  <text x="48" y="78" font-family="Inter, Arial, sans-serif" font-size="16" fill="#71717a">McKinsey / Artemis via CoinDesk</text>
+  <line x1="48" y1="110" x2="1152" y2="110" stroke="#e3e3e0"/>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="48" y="168" fill="#71717a" font-size="14" font-weight="600">ON-CHAIN VOLUME</text>
+    <text x="48" y="220" fill="#18181b" font-size="40" font-weight="700">~$35T</text>
+    <text x="48" y="256" fill="#52525b" font-size="16">trading, loops, transfers</text>
+
+    <line x1="416" y1="140" x2="416" y2="270" stroke="#e3e3e0"/>
+    <text x="456" y="168" fill="#71717a" font-size="14" font-weight="600">REAL-WORLD PAYMENTS</text>
+    <text x="456" y="220" fill="#18181b" font-size="40" font-weight="700">~$390B</text>
+    <text x="456" y="256" fill="#52525b" font-size="16">payroll, remittance, B2B</text>
+
+    <line x1="824" y1="140" x2="824" y2="270" stroke="#e3e3e0"/>
+    <text x="864" y="168" fill="#71717a" font-size="14" font-weight="600">SHARE THAT IS PAYMENTS</text>
+    <text x="864" y="220" fill="#18181b" font-size="40" font-weight="700">~1%</text>
+    <text x="864" y="256" fill="#52525b" font-size="16">of the headline flow</text>
+  </g>
+</svg>

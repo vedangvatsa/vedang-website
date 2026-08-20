@@ -1,36 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
-  <defs>
-    <style>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
+  <rect width="1200" height="400" fill="#ffffff"/>
+  <text x="48" y="58" fill="#71717a" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="0.08em">BLOCKCHAIN</text>
+  <text x="48" y="112" fill="#18181b" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="700">What Blockchain Kept</text>
+  <text x="48" y="152" fill="#52525b" font-family="Inter, Arial, sans-serif" font-size="20">Stablecoins, ETFs and tokenized assets as of early 2026</text>
+  <line x1="48" y1="190" x2="1152" y2="190" stroke="#e3e3e0"/>
 
-      text { font-family: Inter, system-ui, sans-serif; }
-      .title { font-weight: 800; font-size: 24px; fill: #111; text-anchor: middle; }
-      .bg { fill: #ffffff; }
-      .path-line { stroke: #3b82f6; stroke-width: 4; fill: none; }
-      .node { fill: #ffffff; stroke: #3b82f6; stroke-width: 3; }
-      .text-title { font-weight: 800; font-size: 16px; fill: #1e293b; text-anchor: middle; }
-      .text-sub { font-weight: 600; font-size: 13px; fill: #64748b; text-anchor: middle; }
-      .focus-node { fill: #3b82f6; }
-    </style>
-  </defs>
-  <rect width="800" height="400" class="bg" />
-  <text x="400" y="50" class="title">THE BLOCKCHAIN EVOLUTION</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="48" y="242" fill="#71717a" font-size="15" font-weight="600">STABLECOIN CAP · MAR 2026</text>
+    <text x="48" y="300" fill="#18181b" font-size="42" font-weight="700">$317B</text>
+    <text x="48" y="336" fill="#52525b" font-size="18">CoinDesk Data ATH</text>
 
-  <!-- Step Path -->
-  <path d="M 150 300 L 400 200 L 650 100" class="path-line" />
+    <line x1="416" y1="220" x2="416" y2="350" stroke="#e3e3e0"/>
+    <text x="456" y="242" fill="#71717a" font-size="15" font-weight="600">US SPOT BTC ETFS</text>
+    <text x="456" y="300" fill="#18181b" font-size="42" font-weight="700">$85.8B</text>
+    <text x="456" y="336" fill="#52525b" font-size="18">AUM snapshot, ~1.28M BTC</text>
 
-  <!-- Speculative Era -->
-  <circle cx="150" cy="300" r="12" class="node" />
-  <text x="150" y="330" class="text-title">Phase 1: Discovery</text>
-  <text x="150" y="350" class="text-sub">Niche Asset &amp; Speculation</text>
-
-  <!-- Infrastructure Era -->
-  <circle cx="400" cy="200" r="12" class="node" />
-  <text x="400" y="230" class="text-title">Phase 2: Infrastructure</text>
-  <text x="400" y="250" class="text-sub">Smart Contracts &amp; Protocols</text>
-
-  <!-- Foundational Era -->
-  <circle cx="650" cy="100" r="16" class="focus-node" />
-  <text x="650" y="140" class="text-title">Phase 3: Integration</text>
-  <text x="650" y="160" class="text-sub">Global Financial Foundation</text>
+    <line x1="824" y1="220" x2="824" y2="350" stroke="#e3e3e0"/>
+    <text x="864" y="242" fill="#71717a" font-size="15" font-weight="600">TOKENIZED RWAS</text>
+    <text x="864" y="300" fill="#18181b" font-size="42" font-weight="700">$24-26B</text>
+    <text x="864" y="336" fill="#52525b" font-size="18">ex-stables, Mar 2026</text>
+  </g>
 </svg>

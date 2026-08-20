@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380">
+  <rect width="1200" height="380" fill="#ffffff"/>
+  <text x="48" y="48" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#18181b">Layer 2 transaction share</text>
+  <text x="48" y="78" font-family="Inter, Arial, sans-serif" font-size="16" fill="#71717a">Early 2026 estimates. Combined L2 volume near 2M tx/day</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="48" y="140" font-size="16" fill="#52525b">Base</text>
+    <rect x="200" y="118" width="720" height="28" fill="#18181b"/>
+    <text x="940" y="140" font-size="16" font-weight="700" fill="#18181b">60%+</text>
+
+    <text x="48" y="200" font-size="16" fill="#52525b">Arbitrum</text>
+    <rect x="200" y="178" width="240" height="28" fill="#18181b"/>
+    <text x="460" y="200" font-size="16" font-weight="700" fill="#18181b">~20%</text>
+
+    <text x="48" y="260" font-size="16" fill="#52525b">Optimism</text>
+    <rect x="200" y="238" width="120" height="28" fill="#18181b"/>
+    <text x="340" y="260" font-size="16" font-weight="700" fill="#18181b">~10%</text>
+
+    <text x="48" y="320" font-size="16" fill="#52525b">Others</text>
+    <rect x="200" y="298" width="120" height="28" fill="#a1a1aa"/>
+    <text x="340" y="320" font-size="16" font-weight="700" fill="#52525b">~10%</text>
+  </g>
+</svg>
