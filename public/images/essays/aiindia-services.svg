@@ -1,24 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
-  <title>Published AI revenue lines from large Indian IT firms</title>
-  <rect width="1200" height="320" fill="#ffffff"/>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280">
+  <title>Published AI revenue from large Indian IT firms</title>
+  <rect width="1200" height="280" fill="#ffffff"/>
   <text x="48" y="48" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#18181b">Published AI revenue lines</text>
-  <text x="48" y="78" font-family="Inter, Arial, sans-serif" font-size="16" fill="#71717a">Company definitions differ. Compare with care.</text>
+  <text x="48" y="78" font-family="Inter, Arial, sans-serif" font-size="16" fill="#71717a">Company definitions differ</text>
+  <line x1="48" y1="104" x2="1152" y2="104" stroke="#e3e3e0"/>
 
   <g font-family="Inter, Arial, sans-serif">
-    <rect x="48" y="110" width="350" height="150" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
-    <text x="72" y="148" font-size="15" font-weight="700" fill="#18181b">TCS</text>
-    <text x="72" y="196" font-size="34" font-weight="700" fill="#4f46e5">$2.3B</text>
-    <text x="72" y="230" font-size="14" fill="#71717a">Annualised AI revenue, Q4 FY26</text>
+    <text x="48" y="148" font-size="14" font-weight="600" fill="#71717a">TCS · Q4 FY26</text>
+    <text x="48" y="204" font-size="42" font-weight="700" fill="#18181b">$2.3B</text>
+    <text x="48" y="238" font-size="15" fill="#52525b">annualised AI revenue</text>
 
-    <rect x="425" y="110" width="350" height="150" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
-    <text x="449" y="148" font-size="15" font-weight="700" fill="#18181b">Infosys</text>
-    <text x="449" y="196" font-size="34" font-weight="700" fill="#0f766e">8.2%</text>
-    <text x="449" y="230" font-size="14" fill="#71717a">AI share of revenue, Q1 FY27</text>
+    <line x1="400" y1="130" x2="400" y2="250" stroke="#e3e3e0"/>
+    <text x="440" y="148" font-size="14" font-weight="600" fill="#71717a">INFOSYS · Q1 FY27</text>
+    <text x="440" y="204" font-size="42" font-weight="700" fill="#18181b">8.2%</text>
+    <text x="440" y="238" font-size="15" fill="#52525b">of total revenue</text>
 
-    <rect x="802" y="110" width="350" height="150" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
-    <text x="826" y="148" font-size="15" font-weight="700" fill="#18181b">HCLTech</text>
-    <text x="826" y="196" font-size="34" font-weight="700" fill="#b45309">$620M</text>
-    <text x="826" y="230" font-size="14" fill="#71717a">Annualised Advanced AI, FY26</text>
+    <line x1="800" y1="130" x2="800" y2="250" stroke="#e3e3e0"/>
+    <text x="840" y="148" font-size="14" font-weight="600" fill="#71717a">HCLTECH · FY26</text>
+    <text x="840" y="204" font-size="42" font-weight="700" fill="#18181b">$620M</text>
+    <text x="840" y="238" font-size="15" fill="#52525b">annualised Advanced AI</text>
   </g>
 </svg>
