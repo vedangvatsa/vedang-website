@@ -2404,9 +2404,10 @@
     "id": "viral-rewrite-148",
     "scheduleDate": "2026-08-20",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Doubt is often a sign that you're stretching, not failing. The people who never feel impostor syndrome are usually not growing. Find teams that make growth feel safe at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_149_1.jpg"
+    "image": "scripts/post-images/post_149_1.jpg",
+    "error": "Media failed: scripts/post-images/post_149_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-149",
