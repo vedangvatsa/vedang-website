@@ -15,7 +15,10 @@
     "x:authorize": "npx tsx scripts/x-authorize.ts",
     "x:post-essays": "npx tsx scripts/x-auto-post.ts",
     "x:thread": "npx tsx scripts/x-post-thread.ts",
-    "indexnow": "bash scripts/submit-indexnow.sh"
+    "indexnow": "bash scripts/submit-indexnow.sh",
+    "indexnow:ts": "npx tsx scripts/submit-indexnow.ts",
+    "backlink:matrix": "npx tsx scripts/backlink-tool.ts",
+    "backlink:ping": "npx tsx scripts/mass-1000-backlink-indexer.ts"
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",

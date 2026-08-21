@@ -244,15 +244,23 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
 
   const articleSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': ['Article', 'TechArticle'],
     headline: essay.frontmatter.title,
+    description: flattenMeta(essay.frontmatter.summary) || essay.frontmatter.title,
+    inLanguage: 'en-US',
+    isAccessibleForFree: true,
     author: {
       '@type': 'Person',
       name: essay.frontmatter.author || 'Vedang Vatsa',
-      url: 'https://veda.ng',
+      url: 'https://veda.ng/profile',
       image: 'https://veda.ng/images/icon.png',
+      jobTitle: 'AI & Web3 Researcher',
+      sameAs: [
+        'https://x.com/vedangvatsa',
+        'https://github.com/vedangvatsa',
+        'https://linkedin.com/in/vedangvatsa'
+      ]
     },
-    description: flattenMeta(essay.frontmatter.summary) || essay.frontmatter.title,
     image: [
       {
         '@type': 'ImageObject',
@@ -264,6 +272,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
     publisher: {
       '@type': 'Organization',
       name: 'Vedang Vatsa',
+      url: 'https://veda.ng',
       logo: {
         '@type': 'ImageObject',
         url: 'https://veda.ng/images/icon.png',
@@ -277,6 +286,10 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
     dateModified: dateModified,
     wordCount: wordCount,
     articleSection: essay.frontmatter.category || 'Technology',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '.prose p']
+    },
     ...(essay.frontmatter.keywords && { keywords: essay.frontmatter.keywords }),
   };
 
