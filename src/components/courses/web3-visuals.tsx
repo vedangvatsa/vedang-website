@@ -345,7 +345,7 @@ export function SecurityRedFlags() {
             <div key={f.title} className="rounded-[3px] border border-[#e3e3e0] p-3" style={{ borderLeftWidth: '3px', borderLeftColor: f.severity === 'Critical' ? '#ef4444' : '#f59e0b' }}>
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-xs font-bold text-[#37352f]">{f.title}</span>
-                <span className={`text-[9px] font-bold uppercase px-1.5 py-0.5 rounded ${f.severity === 'Critical' ? 'bg-red-500/10 text-red-500' : 'bg-amber-500/10 text-amber-600'}`}>{f.severity}</span>
+                <span className={`text-[9px] font-bold uppercase px-1.5 py-0.5 rounded ${f.severity === 'Critical' ? 'bg-red-500/10 text-red-500' : 'bg-amber-500/10 text-amber-600'} whitespace-nowrap`}>{f.severity}</span>
               </div>
               <p className="text-[10px] text-muted-foreground">{f.desc}</p>
             </div>
@@ -476,7 +476,7 @@ export function NFTUseCases() {
             <div key={c.category} className="rounded-[3px] border border-[#e3e3e0] px-4 py-2.5 flex items-center gap-3" style={{ borderLeftWidth: '3px', borderLeftColor: c.color }}>
               <span className="text-xs font-bold min-w-[120px]" style={{ color: c.color }}>{c.category}</span>
               <span className="text-[10px] text-muted-foreground flex-1">{c.example}</span>
-              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: c.color + '15', color: c.color }}>{c.market}</span>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: c.color + '15', color: c.color }}>{c.market}</span>
             </div>
           ))}
         </div>
@@ -540,7 +540,7 @@ export function RegulationMap() {
             <div key={r.region} className="rounded-[3px] border border-[#e3e3e0] px-4 py-2.5 flex flex-col md:flex-row md:items-center gap-1 md:gap-3" style={{ borderLeftWidth: '3px', borderLeftColor: r.color }}>
               <span className="text-xs font-bold min-w-[100px]" style={{ color: r.color }}>{r.region}</span>
               <span className="text-[10px] text-muted-foreground flex-1">{r.framework}</span>
-              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: r.color + '15', color: r.color }}>{r.stance}</span>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: r.color + '15', color: r.color }}>{r.stance}</span>
             </div>
           ))}
         </div>
@@ -607,7 +607,7 @@ export function TokenValueDrivers() {
             <div key={d.driver} className="rounded-[3px] border border-[#e3e3e0] px-4 py-2.5 flex items-center gap-3" style={{ borderLeftWidth: '3px', borderLeftColor: d.color }}>
               <span className="text-xs font-bold min-w-[110px]" style={{ color: d.color }}>{d.driver}</span>
               <span className="text-[10px] text-muted-foreground flex-1">{d.desc}</span>
-              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: d.color + '15', color: d.color }}>{d.impact}</span>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: d.color + '15', color: d.color }}>{d.impact}</span>
             </div>
           ))}
         </div>

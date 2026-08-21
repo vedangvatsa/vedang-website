@@ -106,15 +106,15 @@ export function PositionStatement() {
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Position Statement</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Fill this in before writing a single line of code</p>
         <div className="rounded-[3px] border-2 border-blue-300 bg-blue-50/30 p-5 font-mono text-sm leading-relaxed text-[#37352f]">
-          <span className="text-muted-foreground">For </span><span className="bg-blue-100 px-1.5 py-0.5 rounded font-bold text-blue-700">[WHO]</span>
-          <span className="text-muted-foreground">, who </span><span className="bg-amber-100 px-1.5 py-0.5 rounded font-bold text-amber-700">[PAIN]</span>
+          <span className="text-muted-foreground">For </span><span className="bg-blue-100 px-1.5 py-0.5 rounded font-bold text-blue-700 whitespace-nowrap">[WHO]</span>
+          <span className="text-muted-foreground">, who </span><span className="bg-amber-100 px-1.5 py-0.5 rounded font-bold text-amber-700 whitespace-nowrap">[PAIN]</span>
           <span className="text-muted-foreground">,</span><br />
-          <span className="bg-emerald-100 px-1.5 py-0.5 rounded font-bold text-emerald-700">[PRODUCT]</span>
-          <span className="text-muted-foreground"> is a </span><span className="bg-purple-100 px-1.5 py-0.5 rounded font-bold text-purple-700">[CATEGORY]</span>
-          <span className="text-muted-foreground"> that </span><span className="bg-emerald-100 px-1.5 py-0.5 rounded font-bold text-emerald-700">[KEY BENEFIT]</span>
+          <span className="bg-emerald-100 px-1.5 py-0.5 rounded font-bold text-emerald-700 whitespace-nowrap">[PRODUCT]</span>
+          <span className="text-muted-foreground"> is a </span><span className="bg-purple-100 px-1.5 py-0.5 rounded font-bold text-purple-700 whitespace-nowrap">[CATEGORY]</span>
+          <span className="text-muted-foreground"> that </span><span className="bg-emerald-100 px-1.5 py-0.5 rounded font-bold text-emerald-700 whitespace-nowrap">[KEY BENEFIT]</span>
           <span className="text-muted-foreground">.</span><br />
-          <span className="text-muted-foreground">Unlike </span><span className="bg-red-100 px-1.5 py-0.5 rounded font-bold text-red-700">[ALTERNATIVE]</span>
-          <span className="text-muted-foreground">, it </span><span className="bg-emerald-100 px-1.5 py-0.5 rounded font-bold text-emerald-700">[DIFFERENTIATOR]</span>
+          <span className="text-muted-foreground">Unlike </span><span className="bg-red-100 px-1.5 py-0.5 rounded font-bold text-red-700 whitespace-nowrap">[ALTERNATIVE]</span>
+          <span className="text-muted-foreground">, it </span><span className="bg-emerald-100 px-1.5 py-0.5 rounded font-bold text-emerald-700 whitespace-nowrap">[DIFFERENTIATOR]</span>
           <span className="text-muted-foreground">.</span>
         </div>
         <div className="mt-4 rounded-[3px] bg-[#f7f6f3] px-4 py-2.5">
@@ -321,8 +321,8 @@ export function GrowthChannels() {
             <div key={c.channel} className="rounded-[3px] border border-[#e3e3e0] px-4 py-2.5" style={{ borderLeftWidth: '3px', borderLeftColor: c.color }}>
               <div className="flex items-center gap-3 mb-1">
                 <span className="text-xs font-bold min-w-[110px]" style={{ color: c.color }}>{c.channel}</span>
-                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-muted-foreground">{c.effort}</span>
-                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: c.color + '12', color: c.color }}>{c.reach}</span>
+                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-muted-foreground whitespace-nowrap">{c.effort}</span>
+                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: c.color + '12', color: c.color }}>{c.reach}</span>
               </div>
               <p className="text-[10px] text-muted-foreground">{c.tip}</p>
             </div>

@@ -306,7 +306,7 @@ export function ReasoningStrategies() {
                   <td className="px-2 py-2 font-bold" style={{ color: s.color }}>{s.name}</td>
                   <td className="px-2 py-2 text-muted-foreground">{s.when}</td>
                   <td className="px-2 py-2 font-mono text-muted-foreground">{s.trigger}</td>
-                  <td className="px-2 py-2"><span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: s.color + '15', color: s.color }}>{s.quality}</span></td>
+                  <td className="px-2 py-2"><span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: s.color + '15', color: s.color }}>{s.quality}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -362,7 +362,7 @@ export function PromptAntiPatterns() {
           {antipatterns.map(a => (
             <div key={a.bad} className="rounded-[3px] border border-[#e3e3e0] p-3">
               <div className="flex items-center gap-2 mb-1.5">
-                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: a.color + '15', color: a.color }}>{a.bad}</span>
+                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: a.color + '15', color: a.color }}>{a.bad}</span>
               </div>
               <div className="grid grid-cols-2 gap-2">
                 <div className="text-[10px] rounded-[3px] bg-red-50 px-2.5 py-1.5"><span className="font-bold text-red-600">Bad: </span><span className="text-red-800/70 font-mono">{a.example}</span></div>
@@ -430,7 +430,7 @@ export function ChainTypes() {
               <span className="text-xs font-bold min-w-[90px]" style={{ color: c.color }}>{c.name}</span>
               <span className="text-[10px] text-muted-foreground flex-1">{c.desc}</span>
               <span className="text-[9px] font-mono text-muted-foreground/60 hidden md:block">{c.example}</span>
-              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: c.color + '15', color: c.color }}>{c.complexity}</span>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: c.color + '15', color: c.color }}>{c.complexity}</span>
             </div>
           ))}
         </div>

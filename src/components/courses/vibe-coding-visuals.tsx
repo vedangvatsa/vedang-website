@@ -247,7 +247,7 @@ export function LabProjectIdeas() {
             <div key={p.name} className="rounded-[3px] border border-[#e3e3e0] p-3" style={{ borderLeftWidth: '3px', borderLeftColor: p.color }}>
               <div className="flex items-center justify-between mb-1">
                 <span className="text-xs font-bold" style={{ color: p.color }}>{p.name}</span>
-                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: p.color + '15', color: p.color }}>{p.difficulty}</span>
+                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: p.color + '15', color: p.color }}>{p.difficulty}</span>
               </div>
               <div className="text-[10px] text-muted-foreground">{p.stack}</div>
               <div className="text-[10px] text-muted-foreground/60 mt-0.5">Estimated: {p.time}</div>
@@ -342,7 +342,7 @@ export function DeploymentChecklist() {
             <div key={s.step} className="rounded-[3px] border border-[#e3e3e0] px-4 py-2.5 flex items-center gap-3">
               <span className="text-xs font-bold text-[#37352f] min-w-[150px]">{s.step}</span>
               <span className="text-[10px] text-muted-foreground flex-1">{s.desc}</span>
-              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: s.color + '15', color: s.color }}>{s.status}</span>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: s.color + '15', color: s.color }}>{s.status}</span>
             </div>
           ))}
         </div>

@@ -524,7 +524,7 @@ export function IntegrationPatterns() {
               <span className="text-xs font-bold min-w-[140px]" style={{ color: p.color }}>{p.pattern}</span>
               <span className="text-[10px] text-muted-foreground flex-1">{p.desc}</span>
               <span className="text-[9px] font-mono text-muted-foreground/60 hidden md:block">{p.example}</span>
-              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: p.color + '15', color: p.color }}>Risk: {p.risk}</span>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: p.color + '15', color: p.color }}>Risk: {p.risk}</span>
             </div>
           ))}
         </div>

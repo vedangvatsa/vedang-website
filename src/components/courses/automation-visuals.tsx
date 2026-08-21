@@ -25,7 +25,7 @@ export function AutomationLayers() {
               <div className="rounded-[3px] border border-[#e3e3e0] p-3">
                 <div className="flex items-center justify-between mb-1">
                   <span className="text-xs font-bold" style={{ color: l.color }}>{l.label}</span>
-                  <span className="text-[10px] font-mono px-1.5 py-0.5 rounded" style={{ backgroundColor: l.color + '15', color: l.color }}>Effort: {l.effort}</span>
+                  <span className="text-[10px] font-mono px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: l.color + '15', color: l.color }}>Effort: {l.effort}</span>
                 </div>
                 <p className="text-[11px] text-muted-foreground">{l.desc}. {l.examples}.</p>
               </div>
@@ -303,7 +303,7 @@ export function ROICalculator() {
                   <td className="px-2 py-2 text-muted-foreground">{e.monthlyCost}</td>
                   <td className="px-2 py-2 font-bold" style={{ color: e.verdict === 'Build' ? '#10b981' : '#ef4444' }}>{e.annualSavings}</td>
                   <td className="px-2 py-2">
-                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: e.verdict === 'Build' ? '#10b98115' : '#ef444415', color: e.verdict === 'Build' ? '#10b981' : '#ef4444' }}>{e.verdict}</span>
+                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: e.verdict === 'Build' ? '#10b98115' : '#ef444415', color: e.verdict === 'Build' ? '#10b981' : '#ef4444' }}>{e.verdict}</span>
                   </td>
                 </tr>
               ))}
@@ -337,7 +337,7 @@ export function AuthPatterns() {
               <div className="px-4 py-2.5 flex flex-col md:flex-row md:items-center gap-1 md:gap-4">
                 <div className="flex items-center gap-2 min-w-[120px]">
                   <span className="text-xs font-bold" style={{ color: p.color }}>{p.method}</span>
-                  <span className="text-[9px] font-mono px-1.5 py-0.5 rounded" style={{ backgroundColor: p.color + '15', color: p.color }}>Security: {p.security}</span>
+                  <span className="text-[9px] font-mono px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: p.color + '15', color: p.color }}>Security: {p.security}</span>
                 </div>
                 <span className="text-[10px] text-muted-foreground flex-1">{p.how}</span>
                 <span className="text-[10px] text-muted-foreground/60">Best for: {p.use}</span>
@@ -446,7 +446,7 @@ export function MCPServerCatalog() {
               <div>
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-bold text-[#37352f]">{s.name}</span>
-                  <span className="text-[9px] px-1.5 py-0.5 rounded border border-[#e3e3e0] text-muted-foreground">{s.category}</span>
+                  <span className="text-[9px] px-1.5 py-0.5 rounded border border-[#e3e3e0] text-muted-foreground whitespace-nowrap">{s.category}</span>
                 </div>
                 <p className="text-[10px] text-muted-foreground mt-0.5">Tools: {s.examples}</p>
               </div>

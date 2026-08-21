@@ -341,7 +341,7 @@ export function AutonomySpectrum() {
               </div>
               <span className="text-[10px] text-muted-foreground flex-1">{l.desc}</span>
               <span className="text-[10px] text-muted-foreground/60 italic">{l.example}</span>
-              <span className="text-[9px] font-mono px-1.5 py-0.5 rounded" style={{ backgroundColor: l.color + '15', color: l.color }}>{l.effort}</span>
+              <span className="text-[9px] font-mono px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: l.color + '15', color: l.color }}>{l.effort}</span>
             </div>
           ))}
         </div>
@@ -401,7 +401,7 @@ export function AgentRiskMatrix() {
             <div key={r.risk} className="rounded-[3px] border border-[#e3e3e0] px-4 py-2.5 flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
               <div className="flex items-center gap-2 min-w-[180px]">
                 <span className="text-xs font-bold text-[#37352f]">{r.risk}</span>
-                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: r.color + '15', color: r.color }}>{r.severity}</span>
+                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: r.color + '15', color: r.color }}>{r.severity}</span>
               </div>
               <span className="text-[10px] text-muted-foreground">{r.mitigation}</span>
             </div>
@@ -441,7 +441,7 @@ export function AgentProtocolComparison() {
                   <td className="px-2 py-2 text-muted-foreground">{p.org}</td>
                   <td className="px-2 py-2 font-mono text-muted-foreground">{p.transport}</td>
                   <td className="px-2 py-2 text-muted-foreground">{p.focus}</td>
-                  <td className="px-2 py-2"><span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: p.color + '15', color: p.color }}>{p.status}</span></td>
+                  <td className="px-2 py-2"><span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: p.color + '15', color: p.color }}>{p.status}</span></td>
                 </tr>
               ))}
             </tbody>

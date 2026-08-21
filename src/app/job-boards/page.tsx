@@ -324,9 +324,9 @@ export default function Dashboard() {
               <table className="w-full border-collapse text-left text-xs">
                 <thead>
                   <tr className="border-b bg-slate-50">
-                    <th className="p-3 font-medium text-foreground">Database Metric</th>
-                    <th className="p-3 font-semibold text-emerald-600 text-right">CV in Bio</th>
-                    <th className="p-3 font-semibold text-rose-600 text-right">Hashtag Web3</th>
+                    <th className="p-3 font-medium text-foreground whitespace-nowrap">Database Metric</th>
+                    <th className="p-3 font-semibold text-emerald-600 text-right whitespace-nowrap">CV in Bio</th>
+                    <th className="p-3 font-semibold text-rose-600 text-right whitespace-nowrap">Hashtag Web3</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -403,9 +403,9 @@ export default function Dashboard() {
               <table className="w-full border-collapse text-left text-xs">
                 <thead>
                   <tr className="border-b bg-slate-50">
-                    <th className="p-3 font-medium text-foreground">Operations</th>
-                    <th className="p-3 font-semibold text-rose-600 text-center">Hashtag Web3</th>
-                    <th className="p-3 font-semibold text-emerald-600 text-center">CV in Bio</th>
+                    <th className="p-3 font-medium text-foreground whitespace-nowrap">Operations</th>
+                    <th className="p-3 font-semibold text-rose-600 text-center whitespace-nowrap">Hashtag Web3</th>
+                    <th className="p-3 font-semibold text-emerald-600 text-center whitespace-nowrap">CV in Bio</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -430,9 +430,9 @@ export default function Dashboard() {
               <table className="w-full border-collapse text-left text-xs">
                 <thead>
                   <tr className="border-b bg-slate-50">
-                    <th className="p-3 font-medium text-foreground">Social Media Channel</th>
-                    <th className="p-3 font-semibold text-rose-600 text-right">Hashtag Web3</th>
-                    <th className="p-3 font-semibold text-emerald-600 text-right">CV in Bio</th>
+                    <th className="p-3 font-medium text-foreground whitespace-nowrap">Social Media Channel</th>
+                    <th className="p-3 font-semibold text-rose-600 text-right whitespace-nowrap">Hashtag Web3</th>
+                    <th className="p-3 font-semibold text-emerald-600 text-right whitespace-nowrap">CV in Bio</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -492,9 +492,9 @@ export default function Dashboard() {
             <table className="w-full border-collapse text-left text-xs">
               <thead>
                 <tr className="border-b bg-slate-50">
-                  <th className="p-2.5 font-medium text-foreground">Department Category</th>
-                  <th className="p-2.5 font-semibold text-emerald-600 text-right">CV in Bio</th>
-                  <th className="p-2.5 font-semibold text-rose-600 text-right">Hashtag Web3</th>
+                  <th className="p-2.5 font-medium text-foreground whitespace-nowrap">Department Category</th>
+                  <th className="p-2.5 font-semibold text-emerald-600 text-right whitespace-nowrap">CV in Bio</th>
+                  <th className="p-2.5 font-semibold text-rose-600 text-right whitespace-nowrap">Hashtag Web3</th>
                 </tr>
               </thead>
               <tbody>
@@ -521,7 +521,7 @@ export default function Dashboard() {
               <thead>
                 {/* Master Headers */}
                 <tr className="border-b bg-slate-50/50">
-                  <th className="p-3 font-medium text-foreground w-16 border-r text-center">Rank</th>
+                  <th className="p-3 font-medium text-foreground w-16 border-r text-center whitespace-nowrap">Rank</th>
                   <th colSpan={2} className="p-3 font-semibold text-emerald-600 text-center border-r bg-emerald-50/10">
                     CV in Bio <span className="font-normal text-muted-foreground text-[10px]">(Total: 73,044)</span>
                   </th>
@@ -531,11 +531,11 @@ export default function Dashboard() {
                 </tr>
                 {/* Sub Headers */}
                 <tr className="border-b bg-slate-50/30 text-[10px] uppercase text-muted-foreground">
-                  <th className="px-3 py-2 font-medium border-r"></th>
-                  <th className="px-3 py-2 font-medium">In-Demand Skill</th>
-                  <th className="px-3 py-2 font-semibold text-emerald-600 text-right border-r">Job Volume / Share</th>
-                  <th className="px-3 py-2 font-medium">In-Demand Skill</th>
-                  <th className="px-3 py-2 font-semibold text-rose-600 text-right">Job Volume / Share</th>
+                  <th className="px-3 py-2 font-medium border-r whitespace-nowrap"></th>
+                  <th className="px-3 py-2 font-medium whitespace-nowrap">In-Demand Skill</th>
+                  <th className="px-3 py-2 font-semibold text-emerald-600 text-right border-r whitespace-nowrap">Job Volume / Share</th>
+                  <th className="px-3 py-2 font-medium whitespace-nowrap">In-Demand Skill</th>
+                  <th className="px-3 py-2 font-semibold text-rose-600 text-right whitespace-nowrap">Job Volume / Share</th>
                 </tr>
               </thead>
               <tbody>
@@ -571,19 +571,19 @@ export default function Dashboard() {
               <thead>
                 {/* Master Headers */}
                 <tr className="border-b bg-slate-50/50">
-                  <th className="p-3 font-medium text-foreground w-16 border-r text-center">Rank</th>
-                  <th className="p-3 font-semibold text-emerald-600 text-center border-r bg-emerald-50/10">
+                  <th className="p-3 font-medium text-foreground w-16 border-r text-center whitespace-nowrap">Rank</th>
+                  <th className="p-3 font-semibold text-emerald-600 text-center border-r bg-emerald-50/10 whitespace-nowrap">
                     CV in Bio <span className="font-normal text-muted-foreground text-[10px]">(via PostHog Analytics)</span>
                   </th>
-                  <th className="p-3 font-semibold text-rose-600 text-center bg-rose-50/10">
+                  <th className="p-3 font-semibold text-rose-600 text-center bg-rose-50/10 whitespace-nowrap">
                     Hashtag Web3 <span className="font-normal text-muted-foreground text-[10px]">(via Google Analytics)</span>
                   </th>
                 </tr>
                 {/* Sub Headers */}
                 <tr className="border-b bg-slate-50/30 text-[10px] uppercase text-muted-foreground">
-                  <th className="px-3 py-2 font-medium border-r"></th>
-                  <th className="px-3 py-2 font-medium border-r">Page / Utility Path</th>
-                  <th className="px-3 py-2 font-medium">Page / Utility Path</th>
+                  <th className="px-3 py-2 font-medium border-r whitespace-nowrap"></th>
+                  <th className="px-3 py-2 font-medium border-r whitespace-nowrap">Page / Utility Path</th>
+                  <th className="px-3 py-2 font-medium whitespace-nowrap">Page / Utility Path</th>
                 </tr>
               </thead>
               <tbody>

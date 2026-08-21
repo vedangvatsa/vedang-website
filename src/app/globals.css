@@ -336,6 +336,26 @@
   white-space: nowrap;
 }
 
+/* Same protection for course/tool figures and any other page tables
+   that are not under .notion-article. */
+figure.not-prose table th,
+figure.not-prose table td {
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+
+figure.not-prose table th {
+  white-space: nowrap;
+}
+
+figure.not-prose table td > span[class*="rounded"],
+figure.not-prose span[class*="rounded"][class*="px-1"],
+figure.not-prose span[class*="rounded"][class*="font-bold"] {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 /* Source line that sits under a table, not in the body copy */
 .notion-article .table-source,
 .prose .table-source {
