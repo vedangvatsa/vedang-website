@@ -2440,9 +2440,10 @@
     "id": "viral-rewrite-152",
     "scheduleDate": "2026-08-21",
     "scheduleTime": "17:00",
-    "posted": false,
+    "posted": true,
     "text": "You can't manage people the way you manage assets. Assets don't have moods, families, or limits. The best managers treat the human parts as features, not bugs. Find teams that do at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_52_1.jpg"
+    "image": "scripts/post-images/post_52_1.jpg",
+    "error": "Media failed: scripts/post-images/post_52_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-153",
