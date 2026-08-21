@@ -35,7 +35,7 @@ export function RegulatoryFriction() {
                 <tr key={d.country} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{d.country}</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${d.digital ? 'bg-[#f4f4f5] text-[#18181b]' : 'bg-[#f4f4f5] text-[#52525b]'}`}>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${d.digital ? 'bg-[#f4f4f5] text-[#18181b]' : 'bg-[#f4f4f5] text-[#52525b]'} whitespace-nowrap`}>
                       {d.time}
                     </span>
                   </td>
@@ -86,8 +86,8 @@ export function BureaucracyCostChart() {
                 <tr key={s.sector} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{s.sector}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{s.metric}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{s.cost}</span></td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#52525b]">{s.time}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">{s.cost}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#52525b] whitespace-nowrap">{s.time}</span></td>
                 </tr>
               ))}
             </tbody>

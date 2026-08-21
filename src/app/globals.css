@@ -240,6 +240,13 @@
 .prose .table-wrapper.table-wrap-text th {
   white-space: normal;
   text-align: left;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+.notion-article .table-wrapper.table-wrap-text th,
+.prose .table-wrapper.table-wrap-text th {
+  white-space: nowrap;
 }
 .notion-article .table-wrapper.table-wrap-text td:nth-child(n+2),
 .notion-article .table-wrapper.table-wrap-text th:nth-child(n+2),
@@ -304,6 +311,29 @@
   font-weight: 600;
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+/* Chart/data tables in essay figures sit outside .table-wrapper and inherit
+   .notion-article { word-break: break-word }, which mid-word-splits headers
+   like SEVERITY and badges like Medium when columns squeeze. */
+.notion-article figure table th,
+.notion-article figure table td,
+.prose figure table th,
+.prose figure table td {
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+
+.notion-article figure table th,
+.prose figure table th {
+  white-space: nowrap;
+}
+
+.notion-article figure table td > span[class*="rounded"],
+.prose figure table td > span[class*="rounded"] {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 /* Source line that sits under a table, not in the body copy */
@@ -460,10 +490,12 @@ pre > code {
     white-space: nowrap;
   }
   .notion-article .table-wrapper.table-wrap-text td,
-  .notion-article .table-wrapper.table-wrap-text th,
-  .prose .table-wrapper.table-wrap-text td,
-  .prose .table-wrapper.table-wrap-text th {
+  .prose .table-wrapper.table-wrap-text td {
     white-space: normal;
+  }
+  .notion-article .table-wrapper.table-wrap-text th,
+  .prose .table-wrapper.table-wrap-text th {
+    white-space: nowrap;
   }
 }
 

@@ -90,7 +90,7 @@ export function IndiaSectorBifurcation() {
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{s.sector}</td>
                   <td className="py-2.5 px-2 text-[#18181b] font-semibold">{s.exports}</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${statusColor[s.status]}`}>{s.status}</span>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${statusColor[s.status]} whitespace-nowrap`}>{s.status}</span>
                   </td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{s.signal}</td>
                 </tr>

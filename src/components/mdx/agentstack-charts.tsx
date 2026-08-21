@@ -121,7 +121,7 @@ export function ComputeValuationTable() {
               {companies.map((c) => (
                 <tr key={c.name} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{c.name}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{c.metric}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">{c.metric}</span></td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{c.detail}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/70">{c.notable}</td>
                 </tr>
@@ -162,7 +162,7 @@ export function AgentProductValuations() {
               <div className="flex items-center justify-between mb-1">
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-bold text-[#37352f]">{d.name}</span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f]/60 font-medium">{d.domain}</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f]/60 font-medium whitespace-nowrap">{d.domain}</span>
                 </div>
                 <span className="text-xs font-bold text-[#37352f]">{d.label}</span>
               </div>
@@ -267,7 +267,7 @@ export function FundingVelocityChart() {
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-bold text-[#37352f]">{d.label}</span>
                   {d.annualized && (
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#52525b] font-medium">{d.projectedLabel}</span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#52525b] font-medium whitespace-nowrap">{d.projectedLabel}</span>
                   )}
                 </div>
               </div>

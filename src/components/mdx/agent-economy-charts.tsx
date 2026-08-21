@@ -105,8 +105,8 @@ export function CoaseDisruption() {
               {old.map((o) => (
                 <tr key={o.function} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{o.function}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{o.cost}</span></td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{o.agent}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">{o.cost}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">{o.agent}</span></td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{o.mechanism}</td>
                 </tr>
               ))}

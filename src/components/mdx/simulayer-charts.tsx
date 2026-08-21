@@ -74,7 +74,7 @@ export function SimCostComparison() {
             {data.map((d) => (
               <div key={d.activity} className="grid grid-cols-[140px_1fr_1fr_80px] gap-2 border-t border-[#e3e3e0] py-2 items-center">
                 <span className="text-[11px] font-bold text-[#37352f]">{d.activity}</span>
-                <span className="text-[11px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1 rounded-md">{d.physical}</span>
+                <span className="text-[11px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1 rounded-md whitespace-nowrap">{d.physical}</span>
                 <span className="text-[11px] text-center px-2 py-1 rounded-md font-medium" style={{ backgroundColor: d.color + '10', color: d.color }}>{d.simulated}</span>
                 <span className="text-[11px] font-bold text-right" style={{ color: d.color }}>{d.ratio}</span>
               </div>

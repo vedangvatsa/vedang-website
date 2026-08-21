@@ -158,8 +158,8 @@ export function SaaSPricingShift() {
               {models.map((m) => (
                 <tr key={m.model} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{m.model}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f]">{m.legacy}</span></td>
-                  <td className="py-2.5 px-2"><span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${m.agentic === 'Dominant' || m.agentic === 'Emerging' || m.agentic === 'Growing' ? 'bg-[#f4f4f5] text-[#18181b]' : 'bg-[#f4f4f5] text-[#18181b]'}`}>{m.agentic}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f] whitespace-nowrap">{m.legacy}</span></td>
+                  <td className="py-2.5 px-2"><span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${m.agentic === 'Dominant' || m.agentic === 'Emerging' || m.agentic === 'Growing' ? 'bg-[#f4f4f5] text-[#18181b]' : 'bg-[#f4f4f5] text-[#18181b]'} whitespace-nowrap`}>{m.agentic}</span></td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{m.reason}</td>
                 </tr>
               ))}
@@ -207,7 +207,7 @@ export function AttentionCollapseChart() {
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{m.metric}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{m.before}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{m.after}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{m.decline}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">{m.decline}</span></td>
                 </tr>
               ))}
             </tbody>

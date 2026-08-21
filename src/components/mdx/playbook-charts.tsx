@@ -192,7 +192,7 @@ export function AutomationROIChart() {
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{t.task}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{t.manual}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{t.automated}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{t.savings}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">{t.savings}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -734,7 +734,7 @@ export function SocialListeningMap() {
                 <tr key={c.source} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold" style={{ color: c.color }}>{c.source}</td>
                   <td className="py-2.5 px-2 text-muted-foreground">{c.what}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f]">{c.frequency}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f] whitespace-nowrap">{c.frequency}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -856,7 +856,7 @@ export function UseCaseCatalog() {
               {departments.map((d) => (
                 <tr key={d.dept} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold" style={{ color: d.color }}>{d.dept}</td>
-                  <td className="py-2.5 px-2 text-center"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f]">{d.cases}</span></td>
+                  <td className="py-2.5 px-2 text-center"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f] whitespace-nowrap">{d.cases}</span></td>
                   <td className="py-2.5 px-2 text-muted-foreground">{d.examples}</td>
                 </tr>
               ))}

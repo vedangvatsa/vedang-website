@@ -66,7 +66,7 @@ export function MethodologicalEvolution() {
               <div className="flex items-baseline justify-between mb-1">
                 <div>
                   <span className="text-[11px] font-bold text-[#37352f]">{m.name}</span>
-                  {m.declining && <span className="text-[8px] ml-1.5 px-1.5 py-0.5 rounded-full font-bold bg-[#f4f4f5] text-[#18181b]">declining</span>}
+                  {m.declining && <span className="text-[8px] ml-1.5 px-1.5 py-0.5 rounded-full font-bold bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">declining</span>}
                 </div>
                 <span className="text-[9px] text-muted-foreground">{m.era}</span>
               </div>

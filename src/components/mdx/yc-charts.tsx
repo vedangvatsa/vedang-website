@@ -118,7 +118,7 @@ export function AgentLayerTaxonomy() {
           {layers.map((l) => (
             <div key={l.layer} className="rounded-[3px] border border-[#e3e3e0] p-3">
               <div className="flex items-center gap-2 mb-1">
-                <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${l.badgeColor}`}>{l.badge}</span>
+                <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${l.badgeColor} whitespace-nowrap`}>{l.badge}</span>
                 <span className="text-xs font-bold text-[#37352f]">{l.layer}</span>
                 <span className="ml-auto text-[11px] font-bold text-[#18181b]">{l.count}</span>
               </div>
@@ -214,7 +214,7 @@ export function AgentForXPattern() {
                 <tr key={v.vertical} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2 px-1.5 font-bold text-[#37352f]">{v.vertical}</td>
                   <td className="py-2 px-1.5 text-[#37352f]/80">{v.examples}</td>
-                  <td className="py-2 px-1.5"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{v.batches}</span></td>
+                  <td className="py-2 px-1.5"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">{v.batches}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -251,7 +251,7 @@ export function DefenseHardwareSurge() {
               <div className="flex items-center justify-between">
                 <span className="text-[11px] font-bold text-[#37352f]">{d.category}</span>
                 <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{d.trend}</span>
+                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">{d.trend}</span>
                   <span className="text-[11px] font-bold text-[#18181b]">{d.count}</span>
                 </div>
               </div>
@@ -298,7 +298,7 @@ export function TaglineArchaeology() {
                 <tr key={e.era} className={`border-b border-[#e3e3e0]/60 ${i === eras.length - 1 ? 'bg-[#f4f4f5]' : ''}`}>
                   <td className="py-2 px-1.5 font-bold text-[#37352f]">{e.era}</td>
                   <td className="py-2 px-1.5 text-[#37352f]/80">{e.pattern}</td>
-                  <td className="py-2 px-1.5"><span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${i === eras.length - 1 ? 'bg-[#f4f4f5] text-[#18181b]' : 'bg-zinc-100 text-zinc-600'}`}>{e.signal}</span></td>
+                  <td className="py-2 px-1.5"><span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${i === eras.length - 1 ? 'bg-[#f4f4f5] text-[#18181b]' : 'bg-zinc-100 text-zinc-600'} whitespace-nowrap`}>{e.signal}</span></td>
                 </tr>
               ))}
             </tbody>

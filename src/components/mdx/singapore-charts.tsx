@@ -176,7 +176,7 @@ export function HealthcareComparison() {
                   <td className="py-2.5 px-2 text-[#18181b] font-semibold">{c.spending}%</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{c.lifeExp} yrs</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${effColor[c.efficiency]}`}>{c.efficiency}</span>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${effColor[c.efficiency]} whitespace-nowrap`}>{c.efficiency}</span>
                   </td>
                 </tr>
               ))}

@@ -164,7 +164,7 @@ export function TrustComparisonChart() {
             {dimensions.map((d) => (
               <div key={d.dim} className="grid grid-cols-[110px_1fr_1fr_90px] gap-2 border-t border-[#e3e3e0] py-2 items-center">
                 <span className="text-[11px] font-bold text-[#37352f]">{d.dim}</span>
-                <span className="text-[10px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1.5 rounded-md">{d.institutional}</span>
+                <span className="text-[10px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1.5 rounded-md whitespace-nowrap">{d.institutional}</span>
                 <span className="text-[10px] text-center px-2 py-1.5 rounded-md font-medium" style={{ backgroundColor: '#f4f4f5', color: '#3f3f46' }}>{d.programmable}</span>
                 <span className="text-[10px] font-bold text-right" style={{ color: d.color }}>{d.advantage}</span>
               </div>

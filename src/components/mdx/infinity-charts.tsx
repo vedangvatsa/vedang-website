@@ -182,7 +182,7 @@ export function MaterialConstraints() {
                   <td className="py-2.5 px-2 text-[#18181b] font-semibold">{r.demand}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{r.supply}</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${riskColor[r.risk]}`}>{r.risk}</span>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${riskColor[r.risk]} whitespace-nowrap`}>{r.risk}</span>
                   </td>
                 </tr>
               ))}

@@ -159,7 +159,7 @@ export function ProductivityParadox() {
                 <tr key={v.source} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{v.source}</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${stanceColor[v.stance]}`}>{v.estimate}</span>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${stanceColor[v.stance]} whitespace-nowrap`}>{v.estimate}</span>
                   </td>
                   <td className="py-2.5 px-2 text-muted-foreground">{v.timeframe}</td>
                 </tr>
@@ -252,7 +252,7 @@ export function UBIPilotResults() {
                   <td className="py-2.5 px-2 text-[#18181b] font-semibold">{p.amount}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{p.finding}</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${outcomeColor[p.outcome]}`}>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${outcomeColor[p.outcome]} whitespace-nowrap`}>
                       {p.outcome === 'positive' ? 'Positive' : 'Minimal'}
                     </span>
                   </td>

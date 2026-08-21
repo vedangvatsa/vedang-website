@@ -77,7 +77,7 @@ export function EResidencyImpact() {
                   <td className="py-2.5 px-2 text-[#37352f]">{d.year}</td>
                   <td className="py-2.5 px-2 text-[#37352f]">{d.companies.toLocaleString()}</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${i === data.length - 1 ? 'bg-[#f4f4f5] text-[#18181b]' : 'text-[#37352f]'}`}>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${i === data.length - 1 ? 'bg-[#f4f4f5] text-[#18181b]' : 'text-[#37352f]'} whitespace-nowrap`}>
                       €{d.revenue}M
                     </span>
                   </td>
