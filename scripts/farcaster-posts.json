@@ -2575,9 +2575,11 @@
     "id": "viral-rewrite-147",
     "scheduleDate": "2026-08-19",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "Some workplaces treat exhaustion as a badge of honor. The ones that last treat it as a warning sign. Sustainable performance requires sustainable conditions. Find teams that know the difference at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_9_1.jpg"
+    "image": "scripts/post-images/post_9_1.jpg",
+    "postedAt": "2026-08-21T04:19:55.419Z",
+    "castHash": "0xc95c3cdddf13a93f99693ecd5275cb4fa2bf95b6"
   },
   {
     "id": "viral-rewrite-148",
