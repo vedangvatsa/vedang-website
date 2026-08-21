@@ -295,7 +295,7 @@ export function SecurityThreatMatrix() {
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
                 <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Threat</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Severity</th>
+                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider whitespace-nowrap">Severity</th>
                 <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Impact</th>
                 <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Real-world example</th>
               </tr>
@@ -304,8 +304,8 @@ export function SecurityThreatMatrix() {
               {threats.map((t) => (
                 <tr key={t.name} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{t.name}</td>
-                  <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${severityColor[t.severity]}`}>{t.severity}</span>
+                  <td className="py-2.5 px-2 whitespace-nowrap w-[1%]">
+                    <span className={`inline-block text-[10px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap ${severityColor[t.severity]}`}>{t.severity}</span>
                   </td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{t.impact}</td>
                   <td className="py-2.5 px-2 text-muted-foreground">{t.example}</td>
