@@ -2458,9 +2458,10 @@
     "id": "viral-rewrite-154",
     "scheduleDate": "2026-08-22",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "The same effort produces different results depending on why you're doing it. Meaning transforms stress into energy. Find work that gives you that reason at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_48_1.jpg"
+    "image": "scripts/post-images/post_48_1.jpg",
+    "error": "Media failed: scripts/post-images/post_48_1.jpg — skipped"
   },
   {
     "id": "viral-rewrite-155",
