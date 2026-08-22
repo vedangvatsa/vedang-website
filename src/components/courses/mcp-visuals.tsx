@@ -9,7 +9,7 @@ export function MCPArchitecture() {
     { component: 'Data Source', desc: 'The real-world system being connected', examples: 'PostgreSQL, Google Sheets, Slack, GitHub, REST APIs', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">MCP Architecture</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">The universal connector between AI models and any data source</p>
@@ -69,7 +69,7 @@ export function TransportDiagram() {
     },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">MCP Transport Layers</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Same protocol, different delivery mechanisms</p>
@@ -104,7 +104,7 @@ export function ServerSkeleton() {
     { num: '5', label: 'Test', desc: 'MCP Inspector for debugging, then connect to Claude Desktop', time: '5 min', color: '#ef4444' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Building an MCP Server in 5 Steps</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">From zero to a working tool in under 20 minutes</p>
@@ -153,7 +153,7 @@ export function MCPPrimitives() {
     },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Three MCP Primitives</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Different control semantics for different use cases</p>
@@ -191,7 +191,7 @@ export function ClientEcosystem() {
     { name: 'Custom App', type: 'Your own', config: 'SDK Client class', support: 'Build with SDK', color: '#6366f1' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">MCP Client Ecosystem</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Every major AI tool supports MCP</p>
@@ -200,10 +200,10 @@ export function ClientEcosystem() {
           <table className="w-full text-xs border-collapse min-w-[420px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Client</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Type</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Config File</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Support</th>
+                <th>Client</th>
+                <th>Type</th>
+                <th>Config File</th>
+                <th>Support</th>
               </tr>
             </thead>
             <tbody>
@@ -249,7 +249,7 @@ export function DatabaseServerDiagram() {
     },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Real-World Server Patterns</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Common architectures for production MCP servers</p>
@@ -304,7 +304,7 @@ export function ProductionChecklist() {
     },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Production Readiness Checklist</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Ship a reliable, secure MCP server that others can depend on</p>
@@ -339,7 +339,7 @@ export function MCPEcosystemMap() {
     { name: 'Transports', items: ['stdio', 'HTTP/SSE', 'Streamable HTTP'], desc: 'Communication channels between hosts and servers', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">MCP Ecosystem Map</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Three layers that make up the MCP architecture</p>
@@ -373,7 +373,7 @@ export function TransportComparison() {
     { name: 'Streamable HTTP', latency: '~50ms', setup: 'Server + URL', security: 'Auth + streaming', best: 'Long-running operations, file transfers', color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Transport Comparison</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Choosing the right communication layer for your MCP server</p>
@@ -410,7 +410,7 @@ export function ServerBoilerplate() {
     { file: 'tsconfig.json', purpose: 'TypeScript config: strict mode, ES2022 target', lines: '~10', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Minimal MCP Server Structure</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Three files to go from zero to a working server</p>
@@ -440,7 +440,7 @@ export function PrimitiveMatrix() {
     { name: 'Sampling', direction: 'Client → Server', invocation: 'Server requests LLM', example: 'Server asks host to generate text', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">MCP Primitive Matrix</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four primitive types and their data flow directions</p>
@@ -477,7 +477,7 @@ export function ClientCapabilities() {
     { name: 'Continue', tools: true, resources: true, prompts: true, sampling: false, color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Client Capability Matrix</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Which MCP primitives each host application supports</p>
@@ -514,7 +514,7 @@ export function IntegrationPatterns() {
     { pattern: 'Human-in-the-Loop', desc: 'Agent prepares action, waits for human approval', example: 'Draft email → review → send', risk: 'Low', color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">MCP Integration Patterns</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Common architectural patterns for real-world MCP deployments</p>
@@ -524,7 +524,7 @@ export function IntegrationPatterns() {
               <span className="text-xs font-bold min-w-[140px]" style={{ color: p.color }}>{p.pattern}</span>
               <span className="text-[10px] text-muted-foreground flex-1">{p.desc}</span>
               <span className="text-[9px] font-mono text-muted-foreground/60 hidden md:block">{p.example}</span>
-              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: p.color + '15', color: p.color }}>Risk: {p.risk}</span>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: p.color + '15', color: p.color }}>Risk: {p.risk}</span>
             </div>
           ))}
         </div>
@@ -542,7 +542,7 @@ export function ProductionReadiness() {
     { category: 'Distribution', items: ['npm package with bin entry', 'Docker image for remote deployment', 'README with connection instructions'], color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Production Readiness Checklist</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four categories to audit before shipping an MCP server</p>

@@ -11,7 +11,7 @@ export function StepwiseMaturityModel() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Stepwise AI Maturity Model</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Four phases of enterprise adoption</p>
@@ -37,7 +37,7 @@ export function StepwiseMaturityModel() {
 
 export function ROIImpactStats() {
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Measured Automation ROI</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Data from marketing, sales, and HR initial phase pilot studies</p>

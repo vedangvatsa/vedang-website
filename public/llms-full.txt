@@ -21,7 +21,7 @@ Cash, GPU and fellowship counts for the IndiaAI Mission sit in [The IndiaAI Miss
 
 ## Absolute counts and per-person ranks
 
-[IAMAI and Kantar's Internet in India Report 2025](https://www.indiadigitalsummit.in/wp-content/uploads/2026/01/Internet-in-India-2025-Press-Release-Final.pdf) landed on 29 January 2026. It estimates 958 million active internet users. Of those, 44% said they had used AI-enabled features: voice search, image search, chatbots, filters. Ages 15-24 came in at 57%. Ages 25-44 at 52%. The base is roughly 87,000 samples. The question catches light engagement as well as heavy use.
+[IAMAI and Kantar's Internet in India Report 2025](https://www.thehindu.com/sci-tech/technology/india-now-has-958-million-active-internet-users-57-of-these-are-from-rural-areas/article70566646.ece), launched at the India Digital Summit on 29 January 2026, estimates 958 million active internet users. Of those, 44% said they had used AI-enabled features: voice search, image search, chatbots, filters. Ages 15-24 came in at 57%. Ages 25-44 at 52%. The base is roughly 87,000 samples. The question catches light engagement as well as heavy use.
 
 A [Google-Kantar study](https://blog.google/intl/en-in/products/75-of-indians-desire-a-daily-growth-collaborator-google-kantar-report/) from April 2025 asked more than 8,000 people across 18 cities. Sixty percent said they were unfamiliar with AI. Only 31% had tried a generative tool. About 75% wanted a daily growth collaborator. Different method, different year, different result. Merge the two into one adoption rate and the certainty looks fake.
 
@@ -41,7 +41,7 @@ Maharashtra (15.5%), Tamil Nadu (13.2%), Karnataka (12.7%) and Delhi (10.5%) tog
 
 A second layer of use never asks a person to open an AI app. It sits inside programme workflows.
 
-The Ministry of Health told Lok Sabha on [5 December 2025](https://www.mohfw.gov.in/?q=en%2Fpressrelease%2Fsteps-taken-include-ai-based-diagnostic-tools-healthcare) that a Clinical Decision Support System inside eSanjeevani had supported standardised data capture for 282 million consultations from April 2023 to November 2025. The same reply describes AI-based differential diagnosis recommendations and names related tools such as diabetic retinopathy detection and an abnormal chest X-ray classifier. [The Hindu](https://www.thehindu.com/sci-tech/health/tool-to-help-doctors-make-quick-decisions-to-be-rolled-out-in-hospitals-soon/article70453878.ece) reported ministry plans to extend CDSS into more hospitals. Some coverage of the same reply also reports about 12 million consultations with direct AI diagnostic assistance. Standardised capture and doctor-facing suggestions remain different acts, and the doctor stays the decision-maker.
+The Ministry of Health told Lok Sabha on [5 December 2025](https://www.mohfw.gov.in/?q=en%2Fpressrelease%2Fsteps-taken-include-ai-based-diagnostic-tools-healthcare) that a Clinical Decision Support System inside eSanjeevani had supported standardised data capture for 282 million consultations from April 2023 to November 2025. That figure is CDSS-backed capture across those visits, not a count of AI diagnoses. The same reply describes AI-based differential diagnosis recommendations and names related tools such as diabetic retinopathy detection and an abnormal chest X-ray classifier. [The Hindu](https://www.thehindu.com/sci-tech/health/tool-to-help-doctors-make-quick-decisions-to-be-rolled-out-in-hospitals-soon/article70453878.ece) reported ministry plans to extend CDSS into more hospitals. Some coverage of the same reply also reports about 12 million consultations with direct AI diagnostic assistance. Capture volume, doctor-facing suggestions and diagnosis counts are different acts. The doctor stays the decision-maker.
 
 Reporting on the [National Health Authority Annual Report 2025-26](https://www.livemint.com/industry/nha-suspends-and-de-empanels-2-842-hospitals-for-fraud-imposes-114-06-crore-penalty-11784452386960.html) says the National Anti-Fraud Unit blocked suspicious claims worth ₹678.47 crore, penalised 2,842 hospitals ₹114.06 crore, de-empanelled 2,003 hospitals and suspended 839. Former NHA CEO Indu Bhushan has described more than 100 algorithms refined through feedback. Those agency-reported outcomes leave false-positive harm and residual fraud unmeasured.
 
@@ -53,7 +53,7 @@ The Bharat Forecast System, according to a [22 July 2026 Lok Sabha reply](https:
 
 Civil Aviation coverage in late May 2026 said DigiYatra had crossed [10 crore passenger journeys](https://www.thehindubusinessline.com/economy/logistics/digiyatra-crosses-10-crore-journeys-rollout-planned-at-27-additional-airports/article71042200.ece) across about 38 airports, with later Lok Sabha reporting near [10.75 crore journeys](https://www.indianaviationnews.net/home/2026/08/digi-yatra-expands-to-39-airports-over-10-75-crore-passenger-journeys-recorded.html) and 39 airports. DigiYatra uses facial recognition. Stretching every biometric match into "AI use" overclaims the label, yet the system still belongs in any account of machine vision at this scale.
 
-[Airtel's 21 April 2025 release](http://airtel.in/press-release/04-2025/airtel-announces-new-features-in-its-continued-fight-against-spam) said its AI spam tool had flagged over 27.5 billion spam calls since September 2024, about 1,560 a second, and claimed a 16% drop in spam calls for customers. Those are company metrics. The release omits an independent false-positive audit.
+[Airtel's 21 April 2025 release](https://www.airtel.in/press-release/04-2025/airtel-announces-new-features-in-its-continued-fight-against-spam) said its AI spam tool had flagged over 27.5 billion spam calls since September 2024, about 1,560 a second, and claimed a 16% drop in spam calls for customers. Those are company metrics. The release omits an independent false-positive audit.
 
 The [RBI FREE-AI committee report](https://www.rbi.org.in/Scripts/PublicationReportDetails.aspx?ID=1306), released 13 August 2025, sets seven sutras and six pillars for financial AI. SBI executives have described AI underwriting near ₹1 trillion of MSME loans in FY26 and cheque automation for smaller amounts, in [FIBAC coverage](https://bfsi.economictimes.indiatimes.com/articles/sbi-fully-automates-processing-of-25-of-cheques-using-ai-underwrites-nearly-rs-1-trn-in-fy26-md-amara/133177957). [HDFC Bank's FY26 annual report](https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/pdf/annual-reports/2025-26/reports/HDFC_Bank_IR26.pdf?outputType=chromeless) describes an in-house platform called Neev and says advanced analytics cut eligibility-search effort by about 50% for pre-approved loan limits across channels. These remain self-reported operating claims. A lot of India's AI use looks like workflow automation inside institutions that already hold the data.
 
@@ -73,9 +73,9 @@ The [RBI FREE-AI committee report](https://www.rbi.org.in/Scripts/PublicationRep
 
 Those figures describe sampled desk and knowledge workers. They leave the wider labour force out, and they leave open whether pilots create durable value.
 
-[NASSCOM's AI Adoption Index 2.0](https://nasscom.in/knowledge-center/publications/ai-adoption-index-20-tracking-indias-sectoral-progress-ai-adoption), summarised on [IndiaAI.gov.in](https://indiaai.gov.in/article/ai-s-presence-within-indian-organizations-has-witnessed-notable-growth-nasscom-ai-adoption-index-2-0), gives India an aggregate maturity score of 2.47 on a 4-point scale in 2024, barely above 2.45 in 2022, with 87% of 500 surveyed firms in the middle Enthusiast or Expert bands. The study covers seven sectors that the authors say represent about 75% of GDP. Salesforce's [Agentic Workplace Study India findings](https://www.salesforce.com/in/news/press-releases/2026/07/30/india-leads-in-workplace-ai-adoption-as-workers-push-for-more-trusted-contextual-ai-experiences/), released 30 July 2026, say Indian desk workers are 45% more likely than the global average to put AI in their core workflow, and also report the highest share of unsuccessful AI pilots at 38% versus 28% globally. Among workers whose pilots failed, 34% cited missing business context. BCG's global [AI at Work](https://www.bcg.com/publications/2026/ai-at-work-why-strategy-matters-more-than-tools) note says tool access moves impact only a little when strategy and workflow redesign stay weak.
+[NASSCOM's AI Adoption Index 2.0](https://nasscom.in/knowledge-center/publications/ai-adoption-index-20-tracking-indias-sectoral-progress-ai-adoption), summarised on [IndiaAI.gov.in](https://indiaai.gov.in/article/ai-s-presence-within-indian-organizations-has-witnessed-notable-growth-nasscom-ai-adoption-index-2-0), gives India an aggregate maturity score of 2.47 on a 4-point scale in 2024, barely above 2.45 in 2022, with 87% of 500 surveyed firms in the middle Enthusiast or Expert bands. The study covers seven sectors that the authors say represent about 75% of GDP. Salesforce's [Agentic Workplace Study India findings](https://www.salesforce.com/in/news/press-releases/2026/07/30/india-leads-in-workplace-ai-adoption-as-workers-push-for-more-trusted-contextual-ai-experiences/), released 30 July 2026, say Indian desk workers are 45% more likely than the global average to put AI in their core workflow, and also report the highest share of unsuccessful AI pilots: 38% of Indian respondents said their organisation had an unsuccessful AI pilot in the past year, versus 28% globally. Among workers whose pilots failed, 34% cited missing business context. BCG's global [AI at Work](https://www.bcg.com/publications/2026/ai-at-work-why-strategy-matters-more-than-tools) note says tool access moves impact only a little when strategy and workflow redesign stay weak.
 
-![Three figures: 92% workplace AI use, 70% saving a full day, and 38% reporting failed AI pilots.](/images/essays/aiindia-workplace.svg?v=2)
+![Three figures: 92% workplace AI use, 70% saving a full day, and 38% saying their organisation had an unsuccessful AI pilot.](/images/essays/aiindia-workplace.svg?v=3)
 
 Reported tool use runs hot while organisation redesign lags. People bring chatbots to the desk; firms often leave the workflow vague. Salesforce's India sample covers 120 desk workers, so treat the 38% failed-pilot figure as directional.
 
@@ -91,11 +91,11 @@ Models need labelled text, images, audio, video and, increasingly, human motion.
 
 [NASSCOM's data annotation work](https://nasscom.in/knowledge-center/publications/data-annotation-billion-dollar-potential-driving-ai-revolution) has long projected that the market India serves could exceed $7 billion by 2030, with up to about 1 million workers in full-time and part-time models. [Economic Times reporting](https://economictimes.indiatimes.com/tech/technology/indian-gig-workers-toil-at-frontlines-of-ai-revolution/articleshow/109864213.cms) has cited industry estimates of roughly 20,000 full-time managed-service annotators and about 50,000 Indian contractors on international platforms. Those remain industry estimates rather than a labour census.
 
-Field reporting from Tamil Nadu's Karur district makes the work concrete. [AFP coverage republished in June 2026](https://www.malaymail.com/news/tech-gadgets/2026/06/11/meet-the-indian-workers-training-ai-robots-to-replace-them/223341) describes Objectways workers wearing head cameras and smart glasses to record household and factory tasks for robotics training. Later [TechTimes coverage](https://www.techtimes.com/articles/324337/20260813/indian-workers-film-their-own-jobs-262-hour-train-robots-that-will-replace-them.htm) of related reporting puts some pay near $2.62 an hour. The New York Times published a related August 2026 piece on annotation work in India, including Karur. Direct access to that page is paywalled here, so this page relies on the open AFP and secondary accounts for the on-the-ground detail and links the [NYT URL](https://www.nytimes.com/2026/08/20/world/asia/ai-jobs-data-annotation-india-karur.html) for readers with access.
+Field reporting from Tamil Nadu's Karur district makes the work concrete. [AFP coverage republished in June 2026](https://www.malaymail.com/news/tech-gadgets/2026/06/11/meet-the-indian-workers-training-ai-robots-to-replace-them/223341) describes Objectways workers wearing head cameras and smart glasses to record household and factory tasks for robotics training. Later [TechTimes coverage](https://www.techtimes.com/articles/324337/20260813/indian-workers-film-their-own-jobs-262-hour-train-robots-that-will-replace-them.htm) of related reporting puts some pay near $2.62 an hour. The New York Times published a related August 2026 piece on annotation work in India, including Karur. The open AFP and TechTimes accounts carry the on-the-ground detail used here; the [NYT URL](https://www.nytimes.com/2026/08/20/world/asia/ai-jobs-data-annotation-india-karur.html) is linked for readers with access.
 
-India buys AI tools at scale and also sells the human judgment that makes those tools work. Chatbot rankings and annotation payrolls measure different markets. Policy that counts only GPUs and foundation-model contests will miss the towns where the training data is made.
+India buys AI tools at scale and also sells labelled data and human judgment that make those tools work. Chatbot rankings and annotation payrolls measure different markets. Policy that counts only GPUs and foundation-model contests will miss the towns where the training data is made.
 
-A Nomura note, as reported by [Times of India](https://timesofindia.indiatimes.com/business/india-business/more-hirings-than-firings-nomura-report-tests-ground-zero-says-ai-creating-more-jobs-in-india-than-cuts/articleshow/133036953.cms) and [India Today](https://www.indiatoday.in/business/story/ai-creating-more-jobs-than-it-cuts-in-india-but-there-is-a-catch-artificial-intelligence-2966309-2026-08-08), counted about 83,100 AI-related hires against about 31,921 AI-linked losses in a multi-year Asia sample ending August 2026. The net is positive in that ledger. Hiring often lands in AI delivery roles. Losses often hit support teams. Annotation work can expand even while some office roles shrink. Net headcount remains a weak proxy for job quality.
+A Nomura note, as reported by [Times of India](https://timesofindia.indiatimes.com/business/india-business/more-hirings-than-firings-nomura-report-tests-ground-zero-says-ai-creating-more-jobs-in-india-than-cuts/articleshow/133036953.cms) and [India Today](https://www.indiatoday.in/business/story/ai-creating-more-jobs-than-it-cuts-in-india-but-there-is-a-catch-artificial-intelligence-2966309-2026-08-08), counted about 83,100 AI-related hires against about 31,921 AI-linked losses in India, drawn from a review of Asia cases mostly spanning 2022 through August 2026. The India net is positive in that ledger. Hiring often lands in AI delivery roles. Losses often hit support teams. Annotation work can expand even while some office roles shrink. Net headcount remains a weak proxy for job quality.
 
 ## What the government stack claims
 
@@ -109,15 +109,15 @@ Bhashini and related translation stacks appear in summit materials, court tools 
 
 ## What the numbers leave out
 
-India posts high absolute chatbot volume, led by WhatsApp distribution and strong Claude use among software workers. Outside that core, per-person use stays thin.
+India posts high absolute chatbot volume, led by WhatsApp distribution and strong Claude use among software workers. Outside that core, Claude per-person use stays thin in Anthropic's sample. Meta AI leads on absolute users by company claim, without a published India headcount.
 
-Much of the state's AI work stays silent: telemedicine support, claims screening, pest alerts, judgment translation, weather products, biometric gates and network spam filters. Those systems can touch tens or hundreds of millions of events without creating a chatbot habit.
+Much of the state's machine help stays off the chat screen: eSanjeevani CDSS data capture at 282 million consultations, claims screening, pest alerts, judgment translation, weather products, biometric gates and network spam filters. Event counts are not the same as chatbot habits, and capture is not the same as diagnosis.
 
-Workplace surveys and IT-services revenue lines show intense tool use among professionals. Firm maturity scores and failed-pilot rates show that many organisations still struggle to redesign the work around those tools.
+Workplace surveys and IT-services revenue lines show intense tool use among sampled professionals. Firm maturity scores and failed-pilot rates, including a small Salesforce India desk sample, show many organisations still struggle to redesign the work around those tools.
 
-India also supplies a large share of the labelling and motion-capture labour behind global models. That market is growing in non-metro towns and barely appears in chatbot rankings.
+India also supplies labelling and motion-capture labour for global models. Field reports put that work in non-metro towns. It barely appears in chatbot rankings.
 
-Chat sessions, silent transactions, enterprise deployments and annotation employment need separate columns, with dates and definitions attached. Collapse those columns and national rankings will keep confusing size with spread.
+Absolute volume and per-person use answer different questions. So do chatbot rankings, silent programme traffic, IT delivery lines and annotation payrolls. Mix them and India looks like one market. Keep them apart and the map gets clearer.
 
 ---
 
@@ -129,7 +129,7 @@ India does not publish one current city score for quality of life and cost of li
 
 ![A simple data panel for the Cities of India essay showing the 2020 Ease of Living score, 2023-24 urban household spending and July 2026 urban inflation.](/images/essays/india-city-scorecard.svg?v=2)
 
-The essay uses the [MoHUA Ease of Living report](https://smartnet.niua.org/sites/default/files/resources/final_web_ease_of_living_report_2020_.pdf), the [MoSPI Household Consumption Expenditure Survey](https://www.mospi.gov.in/sites/default/files/publication_reports/HCES%20FactSheet%202023-24.pdf), the [MoSPI July 2026 CPI release](https://www.mospi.gov.in/uploads/latestReleases/latest_release_1786529680747_3113661d-1a2b-4b9a-af06-b340193ef9a0_Press_Release_CPI_July_2026.pdf) and CPCB air-programme results.
+Sources are the [MoHUA Ease of Living report](https://smartnet.niua.org/sites/default/files/resources/final_web_ease_of_living_report_2020_.pdf), the [MoSPI Household Consumption Expenditure Survey](https://www.mospi.gov.in/sites/default/files/publication_reports/HCES%20FactSheet%202023-24.pdf), the [MoSPI July 2026 CPI release](https://www.mospi.gov.in/uploads/latestReleases/latest_release_1786529680747_3113661d-1a2b-4b9a-af06-b340193ef9a0_Press_Release_CPI_July_2026.pdf) and CPCB air-programme results.
 
   - **111**: cities in the official Ease of Living assessment (MoHUA, EoL 2020)
   - **49**: indicators across 14 categories (MoHUA, EoL 2020)
@@ -144,7 +144,7 @@ The final score gives 35% to Quality of Life, 15% to Economic Ability, 20% to Su
 
 The newer sources are useful, but they do not replace the missing 2026 city ranking. MoSPI measures household spending at state level. MoSPI also measures inflation for urban India as a whole. CPCB measures air action and station-level air quality. None provides a current rent index for every city.
 
-![Timeline showing the four dataset years used in this essay: 2020, 2023-24, 2024 and July 2026.](/images/essays/india-dates.svg)
+![Timeline showing the four dataset years: 2020, 2023-24, 2024 and July 2026.](/images/essays/india-dates.svg)
 
 ## The official ranking
 
@@ -227,7 +227,7 @@ Surat, Jabalpur and Agra lead the Million+ category in the 2024 clean-air action
 
 A combined 2026 rank would require current, city-level measures that do not exist in one government release. The available sources use different dates and geographies.
 
-This essay therefore keeps the measures separate. The 2020 score is the common city baseline. MPCE is a state-level spending measure. CPI is a current urban price-change measure. The air chart is a programme result. None is a rent quote.
+Keep the measures separate. The 2020 score is the common city baseline. MPCE is a state-level spending measure. CPI is a current urban price-change measure. The air chart is a programme result. None is a rent quote.
 
 ## What the main cities show
 
@@ -354,7 +354,7 @@ Goldman Sachs's 0.6 percentage-point unemployment bump in a slow-adoption base c
 
 If the wage does not come back as a wage, it can come back as unemployment insurance, SNAP, wage insurance, a negative income tax, or a dividend on a public or private claim. Each has a different MPC and a different lag. Jacobson and LaLonde were blunt in *The Costs of Worker Dislocation*: existing programs do not, and probably cannot, cover most of the loss, because much of it arrives after reemployment. A UBI, in the mechanical sense of an unconditional add-on to disposable income, raises the consumption floor. It does not, by itself, change a firm's incentive to automate the next task. Those are the cash-flow effects, whether you support UBI or not.
 
-Worker equity is the other transfer. If displaced staff still hold stock, some profit returns to a high-MPC household. Employee stock ownership is uneven, concentrated in listed tech, and usually too small to replace a salary. Co-determination and profit-sharing have a long literature ([Weitzman 1985](https://www.jstor.org/stable/1805623) is the classic). Voluntary adoption that surrenders a large profit share is rare. Mandates are politics. For this essay the only claim required is narrower: equity can recycle some demand; it has not been shown, in US data, to recycle enough to offset a 25% earnings scar.
+Worker equity is the other transfer. If displaced staff still hold stock, some profit returns to a high-MPC household. Employee stock ownership is uneven, concentrated in listed tech, and usually too small to replace a salary. Co-determination and profit-sharing have a long literature ([Weitzman 1985](https://www.jstor.org/stable/1805623) is the classic). Voluntary adoption that surrenders a large profit share is rare. Mandates are politics. The narrower claim is enough: equity can recycle some demand; it has not been shown, in US data, to recycle enough to offset a 25% earnings scar.
 
 ## Replacement three: an agent spending someone else's mandate
 
@@ -4447,7 +4447,7 @@ Economics textbooks still open with scarcity: limited stuff, unlimited wants. Sm
 
 ![Infographic](/images/essays/infinity.svg?v=7)
 
-A [June 2025 preprint by Pitshou Moleka](https://doi.org/10.20944/preprints202506.0414.v1) says that assumption is dying. He names AI, automated factories, distributed energy, and free copies of information, then calls the result an Infinity Economy: post-money, AI-run, not bound by stuff. The paper is a proposal. The rest of this essay checks it against energy, chips, and land.
+A [June 2025 preprint by Pitshou Moleka](https://doi.org/10.20944/preprints202506.0414.v1) says that assumption is dying. He names AI, automated factories, distributed energy, and free copies of information, then calls the result an Infinity Economy: post-money, AI-run, not bound by stuff. The paper is a proposal. Energy, chips and land are the harder tests.
 
 ## Where scarcity has weakened
 
@@ -7153,7 +7153,7 @@ Every extra notification competes with the last one for the same waking hours. U
 URL: https://veda.ng/blockchain
 Summary: After five boom-and-bust cycles, stablecoins, spot Bitcoin ETFs and a thin layer of tokenized Treasuries are what still show up in the books.
 
-[Blockchain](/glossary/blockchain) has had at least five lives since Bitcoin shipped in 2009. Each life had a different pitch, a different crowd, and a different way to blow up. Booms, then winters, then a few engineering wins that stuck. This page tracks what survived the wipeouts, not the slogans.
+[Blockchain](/glossary/blockchain) has had at least five lives since Bitcoin shipped in 2009. Each life had a different pitch, a different crowd, and a different way to blow up. Booms, then winters, then a few engineering wins that stuck. What survived the wipeouts matters more than the slogans.
 
 ![Three figures: 317 billion dollar stablecoin market cap, 85.8 billion dollar US spot Bitcoin ETF AUM, and 24 to 26 billion dollars in tokenized real-world assets.](/images/essays/blockchain.svg?v=9)
 
@@ -8478,3 +8478,31 @@ Run the decision in the twin before you spend the metal. Waymo's 20 billion sim 
 URL: https://veda.ng/glossary
 
 This site has a glossary of 287 AI, Web3, and engineering terms at https://veda.ng/glossary
+
+## When to Use This Site
+
+- You need sourced long-form research or essays on AI agents, AI policy, or Web3 infrastructure
+- You need plain-language definitions of AI or Web3 terms (100+ glossary entries)
+- You need structured research datasets: 233,000+ indexed papers, AI and Web3 report libraries
+- You want free full courses on Vibe Coding, Web3, Prompt Engineering, Agentic Web, MCP Development, or AI Automation
+- You need verified biographical facts about Vedang Vatsa (founder of Hashtag Web3, FRSA, IIT Kanpur)
+
+
+## For Developers and Agents
+
+- Content index for LLMs: https://veda.ng/llms.txt
+- Full-text version: https://veda.ng/llms-full.txt
+- Developer resources: https://veda.ng/developers
+- MCP server (Streamable HTTP): https://veda.ng/.well-known/mcp
+- OpenAPI spec: https://veda.ng/openapi.json
+- Contact: https://veda.ng/meeting or vatsvedang@gmail.com
+
+Tip: send an HTTP Accept header of text/markdown on any page URL to get the Markdown version.
+
+
+## Trust Pages
+
+- [Profile / About](https://veda.ng/profile): Author biography and credentials
+- [Privacy Policy](https://veda.ng/privacy): Data handling, analytics, and third-party services
+- [Contact / Book a Meeting](https://veda.ng/meeting): Direct contact options
+

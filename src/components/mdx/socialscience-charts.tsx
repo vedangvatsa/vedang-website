@@ -14,7 +14,7 @@ export function DataSourceDisruption() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Data Access Crisis</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Platform API access for academic researchers (2025)</p>
@@ -55,7 +55,7 @@ export function MethodologicalEvolution() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Methodological Evolution</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How CSS adapted after the API shutdown</p>
@@ -66,7 +66,7 @@ export function MethodologicalEvolution() {
               <div className="flex items-baseline justify-between mb-1">
                 <div>
                   <span className="text-[11px] font-bold text-[#37352f]">{m.name}</span>
-                  {m.declining && <span className="text-[8px] ml-1.5 px-1.5 py-0.5 rounded-full font-bold bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">declining</span>}
+                  {m.declining && <span className="text-[8px] ml-1.5 px-1.5 py-0.5 rounded-full font-bold bg-[#f4f4f5] text-[#18181b]">declining</span>}
                 </div>
                 <span className="text-[9px] text-muted-foreground">{m.era}</span>
               </div>
@@ -97,7 +97,7 @@ export function PolarizationFindings() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">What the Research Actually Shows</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Landmark CSS studies on algorithmic polarization</p>
@@ -133,7 +133,7 @@ export function ObserverEffectChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Observer Effect at Platform Scale</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How platform design distorts the behavior it measures</p>

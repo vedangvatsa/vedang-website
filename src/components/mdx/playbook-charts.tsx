@@ -5,7 +5,7 @@ import React from 'react';
 /* ─── Hero Comparison Card ─── */
 export function PlaybookHeroCard() {
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-0.5 text-center text-[#37352f]">Implementation playbook</h3>
         <p className="text-xs text-muted-foreground mb-8 text-center">From scattered tools to agent ops in 90 days</p>
@@ -126,7 +126,7 @@ export function AgentToolsMap() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Open-Source Agent Ecosystem</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Every building block you need to automate your startup</p>
@@ -171,7 +171,7 @@ export function AutomationROIChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Time Savings Per Function</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Manual effort vs agent-automated effort (weekly)</p>
@@ -180,10 +180,10 @@ export function AutomationROIChart() {
           <table className="w-full text-xs border-collapse min-w-[480px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Task</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Manual</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Automated</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Saved</th>
+                <th>Task</th>
+                <th>Manual</th>
+                <th>Automated</th>
+                <th>Saved</th>
               </tr>
             </thead>
             <tbody>
@@ -192,7 +192,7 @@ export function AutomationROIChart() {
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{t.task}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{t.manual}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{t.automated}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">{t.savings}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{t.savings}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -255,7 +255,7 @@ export function ContentPipelineFlow() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Content Pipeline</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">From idea to published and distributed in under 1 hour</p>
@@ -313,7 +313,7 @@ export function OutreachPipeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Outreach Pipeline Architecture</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Six stages from raw leads to closed conversations</p>
@@ -350,7 +350,7 @@ export function AIMaturityLevels() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">AI Maturity Assessment</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Five levels from manual operations to autonomous systems</p>
@@ -388,7 +388,7 @@ export function ImplementationTimeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Implementation Timeline</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">From zero to autonomous operations in 90 days</p>
@@ -420,7 +420,7 @@ export function NurtureSequence() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Email Nurture Sequence</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Five-touch sequence from signup to conversion</p>
@@ -428,9 +428,9 @@ export function NurtureSequence() {
           <table className="w-full text-xs border-collapse min-w-[400px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Timing</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Type</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Content</th>
+                <th>Timing</th>
+                <th>Type</th>
+                <th>Content</th>
               </tr>
             </thead>
             <tbody>
@@ -716,7 +716,7 @@ export function SocialListeningMap() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Intelligence Collection Matrix</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">What to monitor, where, and how often</p>
@@ -724,9 +724,9 @@ export function SocialListeningMap() {
           <table className="w-full text-xs border-collapse min-w-[480px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Source</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">What to track</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Frequency</th>
+                <th>Source</th>
+                <th>What to track</th>
+                <th>Frequency</th>
               </tr>
             </thead>
             <tbody>
@@ -734,7 +734,7 @@ export function SocialListeningMap() {
                 <tr key={c.source} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold" style={{ color: c.color }}>{c.source}</td>
                   <td className="py-2.5 px-2 text-muted-foreground">{c.what}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f] whitespace-nowrap">{c.frequency}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f]">{c.frequency}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -754,7 +754,7 @@ export function SupportTierChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Customer Support Automation Tiers</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Progressive automation from full AI to human-led</p>
@@ -802,7 +802,7 @@ export function DashboardMetricsMap() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Management Dashboard Blueprint</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Six categories of metrics to track across all pipelines</p>
@@ -839,7 +839,7 @@ export function UseCaseCatalog() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">AI Use Case Catalog</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">27+ additional automations organized by department</p>
@@ -847,16 +847,16 @@ export function UseCaseCatalog() {
           <table className="w-full text-xs border-collapse min-w-[420px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Department</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Use cases</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Examples</th>
+                <th>Department</th>
+                <th>Use cases</th>
+                <th>Examples</th>
               </tr>
             </thead>
             <tbody>
               {departments.map((d) => (
                 <tr key={d.dept} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold" style={{ color: d.color }}>{d.dept}</td>
-                  <td className="py-2.5 px-2 text-center"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f] whitespace-nowrap">{d.cases}</span></td>
+                  <td className="py-2.5 px-2 text-center"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f]">{d.cases}</span></td>
                   <td className="py-2.5 px-2 text-muted-foreground">{d.examples}</td>
                 </tr>
               ))}

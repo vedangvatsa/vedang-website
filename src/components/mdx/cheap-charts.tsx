@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import { ChartCard } from './chart-card';
 
 /* ─── Perception Arc Timeline ─── */
 export function PerceptionArcTimeline() {
@@ -12,41 +12,41 @@ export function PerceptionArcTimeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
-      <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Perception Arc</h3>
-        <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">How long it takes for quality recognition to follow income growth</p>
-
-        <div className="overflow-x-auto -mx-2">
-          <table className="w-full text-xs border-collapse min-w-[500px]">
-            <thead>
-              <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Country</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Quality onset</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">GDP at onset</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Premium era</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Anchor sector</th>
-              </tr>
-            </thead>
-            <tbody>
-              {countries.map((c, i) => (
-                <tr key={c.name} className={`border-b border-[#e3e3e0]/60 ${i === countries.length - 1 ? 'bg-[#f4f4f5]' : ''}`}>
-                  <td className={`py-2.5 px-2 font-bold ${i === countries.length - 1 ? 'text-[#18181b]' : 'text-[#37352f]'}`}>{c.name}</td>
-                  <td className="py-2.5 px-2 text-[#18181b] font-semibold">{c.onset}</td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80">{c.gdpAtOnset}</td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80">{c.premium}</td>
-                  <td className="py-2.5 px-2 text-muted-foreground">{c.anchor}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
+    <ChartCard
+      title="The Perception Arc"
+      subtitle="How long it takes for quality recognition to follow income growth"
+      subtitleClassName="mb-4"
+      footer={
         <p className="mt-3 text-[10px] text-muted-foreground/60">
           Sources: World Bank, IMF WEO, Interbrand. *Projected based on IMF growth estimates. Quality onset = $5K-10K GDP/capita. Premium = $15K-25K.
         </p>
+      }
+    >
+      <div className="overflow-x-auto -mx-2">
+        <table className="w-full text-xs border-collapse min-w-[500px]">
+          <thead>
+            <tr className="border-b-2 border-[#e3e3e0]">
+              <th>Country</th>
+              <th>Quality onset</th>
+              <th>GDP at onset</th>
+              <th>Premium era</th>
+              <th>Anchor sector</th>
+            </tr>
+          </thead>
+          <tbody>
+            {countries.map((c, i) => (
+              <tr key={c.name} className={`border-b border-[#e3e3e0]/60 ${i === countries.length - 1 ? 'bg-[#f4f4f5]' : ''}`}>
+                <td className={`py-2.5 px-2 font-bold ${i === countries.length - 1 ? 'text-[#18181b]' : 'text-[#37352f]'}`}>{c.name}</td>
+                <td className="py-2.5 px-2 text-[#18181b] font-semibold">{c.onset}</td>
+                <td className="py-2.5 px-2 text-[#37352f]/80">{c.gdpAtOnset}</td>
+                <td className="py-2.5 px-2 text-[#37352f]/80">{c.premium}</td>
+                <td className="py-2.5 px-2 text-muted-foreground">{c.anchor}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
-    </figure>
+    </ChartCard>
   );
 }
 
@@ -69,41 +69,41 @@ export function IndiaSectorBifurcation() {
   };
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
-      <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">India's Perception Cycle by Sector</h3>
-        <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Some sectors have completed the transition, others are mid-cycle</p>
-
-        <div className="overflow-x-auto -mx-2">
-          <table className="w-full text-xs border-collapse min-w-[500px]">
-            <thead>
-              <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Sector</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Scale</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Status</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Quality signal</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[...completed, ...inProgress].map((s) => (
-                <tr key={s.sector} className="border-b border-[#e3e3e0]/60">
-                  <td className="py-2.5 px-2 font-bold text-[#37352f]">{s.sector}</td>
-                  <td className="py-2.5 px-2 text-[#18181b] font-semibold">{s.exports}</td>
-                  <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${statusColor[s.status]} whitespace-nowrap`}>{s.status}</span>
-                  </td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80">{s.signal}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
+    <ChartCard
+      title="India's Perception Cycle by Sector"
+      subtitle="Some sectors have completed the transition, others are mid-cycle"
+      subtitleClassName="mb-4"
+      footer={
         <p className="mt-3 text-[10px] text-muted-foreground/60">
           Sources: NASSCOM (FY25), Pharmexcil, India Times, IBEF. iPhone figure: 55M units assembled in 2025 (53% YoY increase).
         </p>
+      }
+    >
+      <div className="overflow-x-auto -mx-2">
+        <table className="w-full text-xs border-collapse min-w-[500px]">
+          <thead>
+            <tr className="border-b-2 border-[#e3e3e0]">
+              <th>Sector</th>
+              <th>Scale</th>
+              <th>Status</th>
+              <th>Quality signal</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[...completed, ...inProgress].map((s) => (
+              <tr key={s.sector} className="border-b border-[#e3e3e0]/60">
+                <td className="py-2.5 px-2 font-bold text-[#37352f]">{s.sector}</td>
+                <td className="py-2.5 px-2 text-[#18181b] font-semibold">{s.exports}</td>
+                <td className="py-2.5 px-2">
+                  <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${statusColor[s.status]}`}>{s.status}</span>
+                </td>
+                <td className="py-2.5 px-2 text-[#37352f]/80">{s.signal}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
-    </figure>
+    </ChartCard>
   );
 }
 
@@ -117,76 +117,68 @@ export function IncomeThresholdChart() {
   ];
   const max = 42000;
 
-  // Zone positions as percentages
   const onsetStart = (5000 / max) * 100;
   const onsetEnd = (10000 / max) * 100;
   const premiumStart = (15000 / max) * 100;
   const premiumEnd = (25000 / max) * 100;
-  const indiaProjected = (5000 / max) * 100; // India's ~2030 projected position
+  const indiaProjected = (5000 / max) * 100;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
-      <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">GDP Per Capita at Premium Recognition</h3>
-        <p className="text-xs text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Where each country was when perception shifted</p>
-
-        {/* Zone legend */}
-        <div className="mb-4 flex flex-wrap gap-3 text-[10px] font-medium">
-          <span className="flex items-center gap-1.5"><span className="inline-block w-3 h-3 rounded-sm bg-[#f4f4f5] border border-[#d4d4d8]" /> Onset zone ($5-10K)</span>
-          <span className="flex items-center gap-1.5"><span className="inline-block w-3 h-3 rounded-sm bg-[#f4f4f5] border border-[#d4d4d8]" /> Premium zone ($15-25K)</span>
-        </div>
-
-        <div className="space-y-4">
-          {countries.map((c, i) => {
-            const barWidth = Math.max((c.gdp / max) * 100, 4);
-            const isIndia = i === countries.length - 1;
-
-            return (
-              <div key={c.name}>
-                <div className="flex justify-between items-baseline mb-1">
-                  <span className={`text-xs font-bold ${isIndia ? 'text-[#18181b]' : 'text-[#37352f]'}`}>
-                    {c.name} ({c.year})
-                  </span>
-                  <span className={`text-xs font-bold ${isIndia ? 'text-[#18181b]' : 'text-[#37352f]'}`}>
-                    ${(c.gdp / 1000).toFixed(1)}K
-                  </span>
-                </div>
-                <div className="w-full h-5 bg-[#f7f6f3] rounded-md overflow-hidden relative">
-                  {/* Zone overlays */}
-                  <div className="absolute h-full rounded-sm bg-[#f4f4f5]/50" style={{ left: `${onsetStart}%`, width: `${onsetEnd - onsetStart}%` }} />
-                  <div className="absolute h-full rounded-sm bg-[#f4f4f5]" style={{ left: `${premiumStart}%`, width: `${premiumEnd - premiumStart}%` }} />
-
-                  {/* Actual bar */}
-                  <div
-                    className="h-full rounded-md relative z-10"
-                    style={{
-                      width: `${barWidth}%`,
-                      backgroundColor: isIndia ? '#18181b' : '#37352f',
-                      opacity: isIndia ? 0.8 : 0.3 + (0.15 * (countries.length - i)),
-                    }}
-                  />
-
-                  {/* India's 2030 projected marker */}
-                  {isIndia && (
-                    <div
-                      className="absolute top-0 h-full border-l-2 border-dashed border-[#18181b]/50 z-20"
-                      style={{ left: `${indiaProjected}%` }}
-                    >
-                      <span className="absolute -top-4 left-1 text-[9px] font-medium text-[#18181b] whitespace-nowrap">~2030</span>
-                    </div>
-                  )}
-                </div>
-                <div className="text-[10px] text-muted-foreground mt-0.5">{c.note}</div>
-              </div>
-            );
-          })}
-        </div>
-
+    <ChartCard
+      title="GDP Per Capita at Premium Recognition"
+      subtitle="Where each country was when perception shifted"
+      footer={
         <p className="mt-4 text-[10px] text-muted-foreground/60">
           Sources: World Bank, IMF WEO projections. Japan and Korea figures at point of full premium recognition. India projected via IMF growth trajectory.
         </p>
+      }
+    >
+      <div className="mb-4 flex flex-wrap gap-3 text-[10px] font-medium">
+        <span className="flex items-center gap-1.5"><span className="inline-block w-3 h-3 rounded-sm bg-[#f4f4f5] border border-[#d4d4d8]" /> Onset zone ($5-10K)</span>
+        <span className="flex items-center gap-1.5"><span className="inline-block w-3 h-3 rounded-sm bg-[#f4f4f5] border border-[#d4d4d8]" /> Premium zone ($15-25K)</span>
       </div>
-    </figure>
+
+      <div className="space-y-4">
+        {countries.map((c, i) => {
+          const barWidth = Math.max((c.gdp / max) * 100, 4);
+          const isIndia = i === countries.length - 1;
+
+          return (
+            <div key={c.name}>
+              <div className="flex justify-between items-baseline mb-1">
+                <span className={`text-xs font-bold ${isIndia ? 'text-[#18181b]' : 'text-[#37352f]'}`}>
+                  {c.name} ({c.year})
+                </span>
+                <span className={`text-xs font-bold ${isIndia ? 'text-[#18181b]' : 'text-[#37352f]'}`}>
+                  ${(c.gdp / 1000).toFixed(1)}K
+                </span>
+              </div>
+              <div className="w-full h-5 bg-[#f7f6f3] rounded-md overflow-hidden relative">
+                <div className="absolute h-full rounded-sm bg-[#f4f4f5]/50" style={{ left: `${onsetStart}%`, width: `${onsetEnd - onsetStart}%` }} />
+                <div className="absolute h-full rounded-sm bg-[#f4f4f5]" style={{ left: `${premiumStart}%`, width: `${premiumEnd - premiumStart}%` }} />
+                <div
+                  className="h-full rounded-md relative z-10"
+                  style={{
+                    width: `${barWidth}%`,
+                    backgroundColor: isIndia ? '#18181b' : '#37352f',
+                    opacity: isIndia ? 0.8 : 0.3 + (0.15 * (countries.length - i)),
+                  }}
+                />
+                {isIndia && (
+                  <div
+                    className="absolute top-0 h-full border-l-2 border-dashed border-[#18181b]/50 z-20"
+                    style={{ left: `${indiaProjected}%` }}
+                  >
+                    <span className="absolute -top-4 left-1 text-[9px] font-medium text-[#18181b]">~2030</span>
+                  </div>
+                )}
+              </div>
+              <div className="text-[10px] text-muted-foreground mt-0.5">{c.note}</div>
+            </div>
+          );
+        })}
+      </div>
+    </ChartCard>
   );
 }
 
@@ -201,32 +193,31 @@ export function COOEffectSize() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
-      <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Country-of-Origin Effect: The Evidence</h3>
-        <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Six decades of research on how national origin shapes product evaluation</p>
-
-        <div className="overflow-x-auto -mx-2">
-          <table className="w-full text-xs border-collapse min-w-[500px]">
-            <thead>
-              <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Study</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Finding</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Effect</th>
+    <ChartCard
+      title="Country-of-Origin Effect: The Evidence"
+      subtitle="Six decades of research on how national origin shapes product evaluation"
+      subtitleClassName="mb-4"
+    >
+      <div className="overflow-x-auto -mx-2">
+        <table className="w-full text-xs border-collapse min-w-[500px]">
+          <thead>
+            <tr className="border-b-2 border-[#e3e3e0]">
+              <th>Study</th>
+              <th>Finding</th>
+              <th>Effect</th>
+            </tr>
+          </thead>
+          <tbody>
+            {studies.map((s) => (
+              <tr key={s.study} className="border-b border-[#e3e3e0]/60">
+                <td className="py-2.5 px-2 font-bold text-[#37352f]">{s.study}</td>
+                <td className="py-2.5 px-2 text-[#37352f]/80">{s.finding}</td>
+                <td className="py-2.5 px-2 text-[#18181b] font-semibold">{s.effect}</td>
               </tr>
-            </thead>
-            <tbody>
-              {studies.map((s) => (
-                <tr key={s.study} className="border-b border-[#e3e3e0]/60">
-                  <td className="py-2.5 px-2 font-bold text-[#37352f]">{s.study}</td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80">{s.finding}</td>
-                  <td className="py-2.5 px-2 text-[#18181b] font-semibold">{s.effect}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+            ))}
+          </tbody>
+        </table>
       </div>
-    </figure>
+    </ChartCard>
   );
 }

@@ -13,7 +13,7 @@ export function MonasteryPrincipleChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Monastery Principle Applied to Knowledge Work</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">6th-century cognitive science, rediscovered</p>
@@ -60,7 +60,7 @@ export function AttentionSpanDecline() {
   const max = 150;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Attention Collapse</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Average sustained attention on a single screen (Dr. Gloria Mark, UC Irvine)</p>
@@ -104,7 +104,7 @@ export function InterruptionCostChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Interruption Tax</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Each notification costs 23 minutes of recovery (Gloria Mark)</p>
@@ -156,7 +156,7 @@ export function RetreatMovementsTimeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Pattern Repeats</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Every era of information excess produces structured retreat</p>
@@ -197,7 +197,7 @@ export function SilenceEconomyChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Silence Economy</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Silence as a premium product: $57B+ wellness tech market (2025)</p>

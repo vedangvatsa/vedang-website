@@ -12,7 +12,7 @@ export function AgentMarketGrowth() {
   const max = 55;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">AI Agent Market Size</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Projected market value, 2025-2030 (33-46% CAGR)</p>
@@ -43,7 +43,7 @@ export function AgentMarketGrowth() {
 /* ─── Enterprise Adoption ─── */
 export function EnterpriseAdoption() {
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Enterprise AI Agent Adoption</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Key metrics, 2025-2026</p>
@@ -86,7 +86,7 @@ export function CoaseDisruption() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Coasean Shift</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">How AI agents reduce the transaction costs that justify the firm</p>
@@ -95,18 +95,18 @@ export function CoaseDisruption() {
           <table className="w-full text-xs border-collapse min-w-[500px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Function</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Legacy cost</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">With agents</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Mechanism</th>
+                <th>Function</th>
+                <th>Legacy cost</th>
+                <th>With agents</th>
+                <th>Mechanism</th>
               </tr>
             </thead>
             <tbody>
               {old.map((o) => (
                 <tr key={o.function} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{o.function}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">{o.cost}</span></td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">{o.agent}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{o.cost}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{o.agent}</span></td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{o.mechanism}</td>
                 </tr>
               ))}

@@ -16,7 +16,7 @@ export function DigitalGovMaturity() {
   const max = 100;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Digital Government Maturity Index</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Service digitization rate and AI readiness, 2026</p>
@@ -56,7 +56,7 @@ export function EResidencyImpact() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Estonia e-Residency Growth</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Annual company formations, state revenue, and new e-residents, 2020-2025</p>
@@ -65,10 +65,10 @@ export function EResidencyImpact() {
           <table className="w-full text-xs border-collapse min-w-[500px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Year</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">New Companies</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">State Revenue (€M)</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">New e-Residents</th>
+                <th>Year</th>
+                <th>New Companies</th>
+                <th>State Revenue (€M)</th>
+                <th>New e-Residents</th>
               </tr>
             </thead>
             <tbody>
@@ -77,7 +77,7 @@ export function EResidencyImpact() {
                   <td className="py-2.5 px-2 text-[#37352f]">{d.year}</td>
                   <td className="py-2.5 px-2 text-[#37352f]">{d.companies.toLocaleString()}</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${i === data.length - 1 ? 'bg-[#f4f4f5] text-[#18181b]' : 'text-[#37352f]'} whitespace-nowrap`}>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${i === data.length - 1 ? 'bg-[#f4f4f5] text-[#18181b]' : 'text-[#37352f]'}`}>
                       €{d.revenue}M
                     </span>
                   </td>
@@ -99,7 +99,7 @@ export function EResidencyImpact() {
 /* ─── Agentic State Architecture ─── */
 export function AgenticStateArchitecture() {
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Agentic State Architecture</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How AI transforms digital government from reactive services to proactive agents</p>

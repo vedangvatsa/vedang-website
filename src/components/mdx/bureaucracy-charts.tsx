@@ -15,7 +15,7 @@ export function RegulatoryFriction() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Business Registration Speed</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Time to legally incorporate, selected jurisdictions (2025-2026)</p>
@@ -24,10 +24,10 @@ export function RegulatoryFriction() {
           <table className="w-full text-xs border-collapse min-w-[520px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Jurisdiction</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Time</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Digital-first</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Notes</th>
+                <th>Jurisdiction</th>
+                <th>Time</th>
+                <th>Digital-first</th>
+                <th>Notes</th>
               </tr>
             </thead>
             <tbody>
@@ -35,7 +35,7 @@ export function RegulatoryFriction() {
                 <tr key={d.country} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{d.country}</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${d.digital ? 'bg-[#f4f4f5] text-[#18181b]' : 'bg-[#f4f4f5] text-[#52525b]'} whitespace-nowrap`}>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${d.digital ? 'bg-[#f4f4f5] text-[#18181b]' : 'bg-[#f4f4f5] text-[#52525b]'}`}>
                       {d.time}
                     </span>
                   </td>
@@ -66,7 +66,7 @@ export function BureaucracyCostChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Friction Tax by Sector</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Regulatory approval cost and time across industries</p>
@@ -75,10 +75,10 @@ export function BureaucracyCostChart() {
           <table className="w-full text-xs border-collapse min-w-[520px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Sector</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Process</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Approx. cost</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Timeline</th>
+                <th>Sector</th>
+                <th>Process</th>
+                <th>Approx. cost</th>
+                <th>Timeline</th>
               </tr>
             </thead>
             <tbody>
@@ -86,8 +86,8 @@ export function BureaucracyCostChart() {
                 <tr key={s.sector} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{s.sector}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{s.metric}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">{s.cost}</span></td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#52525b] whitespace-nowrap">{s.time}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{s.cost}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#52525b]">{s.time}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -115,7 +115,7 @@ export function EGovernanceMaturity() {
   const max = 100;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Digital Governance Leaders</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">E-governance maturity, selected countries (UN EGDI-adjacent scoring)</p>
@@ -167,7 +167,7 @@ export function RegulatoryGrowth() {
   const max = 110000;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">US Federal Register Growth</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Pages published per year (rules, proposed rules, notices)</p>

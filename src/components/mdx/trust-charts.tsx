@@ -12,7 +12,7 @@ export function TrustPrimitivesComparison() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Programmable Trust Primitives</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Four cryptographic technologies replacing institutional trust</p>
@@ -61,7 +61,7 @@ export function DeFiSecurityChart() {
   const max = 4;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Cost of Code-as-Trust</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Annual losses from smart contract exploits and DeFi hacks ($B)</p>
@@ -104,7 +104,7 @@ export function TrustStackArchitecture() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Trust Stack</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Four layers replacing institutional verification</p>
@@ -148,7 +148,7 @@ export function TrustComparisonChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Institutional vs. Programmable Trust</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">The structural advantages of mathematical verification</p>
@@ -164,7 +164,7 @@ export function TrustComparisonChart() {
             {dimensions.map((d) => (
               <div key={d.dim} className="grid grid-cols-[110px_1fr_1fr_90px] gap-2 border-t border-[#e3e3e0] py-2 items-center">
                 <span className="text-[11px] font-bold text-[#37352f]">{d.dim}</span>
-                <span className="text-[10px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1.5 rounded-md whitespace-nowrap">{d.institutional}</span>
+                <span className="text-[10px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1.5 rounded-md">{d.institutional}</span>
                 <span className="text-[10px] text-center px-2 py-1.5 rounded-md font-medium" style={{ backgroundColor: '#f4f4f5', color: '#3f3f46' }}>{d.programmable}</span>
                 <span className="text-[10px] font-bold text-right" style={{ color: d.color }}>{d.advantage}</span>
               </div>
@@ -192,7 +192,7 @@ export function DigitalIdentityTimeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Regulatory Path to Programmable Identity</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">EU eIDAS 2.0 mandates selective disclosure wallets for 450M citizens</p>
@@ -232,7 +232,7 @@ export function TrustApplicationDomains() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Programmable Trust Application Domains</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">From data exposure to proof-based verification</p>

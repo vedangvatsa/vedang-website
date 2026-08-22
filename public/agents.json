@@ -1,43 +1,72 @@
 {
-  "name": "Vedang Vatsa Research Hub",
-  "description": "Data-driven research on AI, Web3, and agentic systems. 233,000+ indexed academic papers with n-gram analysis and executive reporting.",
+  "schema_version": "v1",
+  "name": "Vedang Vatsa - AI & Web3 Thought Leader",
+  "description": "Personal website of Vedang Vatsa. Free courses on Vibe Coding, Web3 101, Prompt Engineering, and Agentic AI. Essays, research, and a comprehensive AI/Web3 glossary with 100+ terms.",
   "url": "https://veda.ng",
-  "version": "1.0.0",
-  "capabilities": [
-    {
-      "name": "research_reports",
-      "description": "Executive reports on AI (133,847 papers) and Web3 (100,000 papers) research trends.",
-      "input_modes": ["text"],
-      "output_modes": ["text"]
-    },
-    {
-      "name": "glossary",
-      "description": "Technical glossary of 100+ AI and Web3 terms with interactive visualizations.",
-      "input_modes": ["text"],
-      "output_modes": ["text"]
-    },
-    {
-      "name": "essays",
-      "description": "50+ long-form essays on AI infrastructure, blockchain, agentic commerce, and digital governance.",
-      "input_modes": ["text"],
-      "output_modes": ["text"]
-    }
+  "when_to_use": [
+    "You need sourced long-form research or essays on AI agents, AI policy, or Web3 infrastructure",
+    "You need plain-language definitions of AI or Web3 terms (100+ glossary entries)",
+    "You need structured research datasets: 233,000+ indexed papers, AI and Web3 report libraries",
+    "You want free full courses on Vibe Coding, Web3, Prompt Engineering, Agentic Web, MCP Development, or AI Automation",
+    "You need verified biographical facts about Vedang Vatsa (founder of Hashtag Web3, FRSA, IIT Kanpur)"
   ],
-  "provider": {
-    "organization": "Vedang Vatsa",
-    "url": "https://veda.ng"
+  "when_not_to_use": [
+    "Real-time prices, market data, or breaking news; content updates on essay cadence, not live",
+    "Financial, investment, legal, or medical advice; content is educational",
+    "Private or user-generated data; the site publishes only authored public content"
+  ],
+  "how_to_use": {
+    "start": "Fetch https://veda.ng/llms.txt for the content index, or https://veda.ng/llms-full.txt for full-text essays",
+    "markdown": "Send Accept: text/markdown on any page URL to receive Markdown instead of HTML",
+    "mcp": "MCP Streamable HTTP server at https://veda.ng/.well-known/mcp (JSON-RPC 2.0; tools: search_essays, get_essay, search_glossary, get_glossary_term, search_reports)",
+    "search": "Glossary search and report search available via /developers documented API"
   },
-  "authentication": {
-    "schemes": ["none"]
-  },
-  "default_input_modes": ["text"],
-  "default_output_modes": ["text"],
-  "skills": [
-    {
-      "id": "search_research",
-      "name": "Search Research Papers",
-      "description": "Browse and discover AI and Web3 research papers indexed from Crossref, OpenAlex, and arXiv.",
-      "tags": ["research", "ai", "web3", "academic"]
+  "capabilities": {
+    "education": {
+      "courses": [
+        {
+          "name": "Vibe Coding 101",
+          "url": "https://veda.ng/vibecoding",
+          "description": "Build real apps with AI using Firebase Studio, Replit, Cursor, and Lovable"
+        },
+        {
+          "name": "Web3 101",
+          "url": "https://veda.ng/web3",
+          "description": "Blockchain fundamentals, smart contracts, dApps, NFTs, DAOs, and DeFi"
+        },
+        {
+          "name": "Prompt Engineering 101",
+          "url": "https://veda.ng/prompt",
+          "description": "Master prompt engineering for LLMs and AI assistants"
+        },
+        {
+          "name": "The Agentic Web",
+          "url": "https://veda.ng/agentic",
+          "description": "Autonomous AI agents, MCP, A2A protocols, and agentic systems"
+        }
+      ]
+    },
+    "reference": {
+      "glossary": {
+        "url": "https://veda.ng/glossary",
+        "description": "100+ AI and Web3 terms with detailed definitions"
+      }
+    },
+    "content": {
+      "essays": {
+        "url": "https://veda.ng/essays",
+        "description": "Essays on AI agents, blockchain, stablecoins, and decentralized systems"
+      }
     }
-  ]
+  },
+  "contact": {
+    "email": "vatsvedang@gmail.com",
+    "twitter": "@vedangvatsa",
+    "website": "https://veda.ng"
+  },
+  "developer": {
+    "docs": "https://veda.ng/developers",
+    "openapi": "https://veda.ng/openapi.json",
+    "mcp": "https://veda.ng/.well-known/mcp"
+  }
 }

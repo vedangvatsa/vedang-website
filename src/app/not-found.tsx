@@ -2,6 +2,14 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PageLayout } from '@/components/page-layout';
 
+const recoveryLinks = [
+  { href: '/llms.txt', label: 'llms.txt index' },
+  { href: '/sitemap.xml', label: 'Sitemap' },
+  { href: '/essays', label: 'Essays' },
+  { href: '/glossary', label: 'Glossary' },
+  { href: '/meeting', label: 'Contact' },
+];
+
 export default function NotFound() {
   return (
     <PageLayout>
@@ -19,6 +27,16 @@ export default function NotFound() {
             <Link href="/essays">Browse essays</Link>
           </Button>
         </div>
+        <nav aria-label="Recovery links" className="mt-8 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
+          {recoveryLinks.map((link, i) => (
+            <span key={link.href} className="flex items-center gap-2">
+              {i > 0 && <span aria-hidden="true">·</span>}
+              <Link href={link.href} className="underline underline-offset-4 hover:text-foreground transition-colors">
+                {link.label}
+              </Link>
+            </span>
+          ))}
+        </nav>
       </div>
     </PageLayout>
   );

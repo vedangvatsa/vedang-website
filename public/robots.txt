@@ -8,3 +8,5 @@ Sitemap: https://veda.ng/sitemap.xml
 
 # All AI crawlers are welcome. This file intentionally allows everything.
 # See /llms.txt and /ai.txt for structured AI discovery.
+
+Disallow: /md/

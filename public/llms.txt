@@ -396,3 +396,31 @@ Individual definitions for AI, Web3, and technical terms at `/glossary/[slug]`. 
 - [SSL/TLS](https://veda.ng/glossary/ssl-tls): SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic protocols that encrypt data sent between a web browser and a server, preventing anyone in between from reading or tampering with it.
 - [Git](https://veda.ng/glossary/git): Git is a distributed version control system that tracks changes to files over time, letting multiple people work on the same codebase without overwriting each other's work.
 - [Webhook](https://veda.ng/glossary/webhook): A webhook is an HTTP callback: the source POSTs to your URL when an event happens, instead of you polling on a timer.
+
+## When to Use This Site
+
+- You need sourced long-form research or essays on AI agents, AI policy, or Web3 infrastructure
+- You need plain-language definitions of AI or Web3 terms (100+ glossary entries)
+- You need structured research datasets: 233,000+ indexed papers, AI and Web3 report libraries
+- You want free full courses on Vibe Coding, Web3, Prompt Engineering, Agentic Web, MCP Development, or AI Automation
+- You need verified biographical facts about Vedang Vatsa (founder of Hashtag Web3, FRSA, IIT Kanpur)
+
+
+## For Developers and Agents
+
+- Content index for LLMs: https://veda.ng/llms.txt
+- Full-text version: https://veda.ng/llms-full.txt
+- Developer resources: https://veda.ng/developers
+- MCP server (Streamable HTTP): https://veda.ng/.well-known/mcp
+- OpenAPI spec: https://veda.ng/openapi.json
+- Contact: https://veda.ng/meeting or vatsvedang@gmail.com
+
+Tip: send an HTTP Accept header of text/markdown on any page URL to get the Markdown version.
+
+
+## Trust Pages
+
+- [Profile / About](https://veda.ng/profile): Author biography and credentials
+- [Privacy Policy](https://veda.ng/privacy): Data handling, analytics, and third-party services
+- [Contact / Book a Meeting](https://veda.ng/meeting): Direct contact options
+

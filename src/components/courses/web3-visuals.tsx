@@ -3,7 +3,7 @@
 /* ─── Web Evolution ─── */
 export function WebEvolution() {
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Web Evolution</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">From reading to owning</p>
@@ -41,7 +41,7 @@ export function BlockchainExplainer() {
     { title: 'Gas Fees', desc: 'Crypto pays validators for processing. Economic incentives keep the network honest.', color: '#3b82f6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">How Blockchain Works</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">An immutable, distributed ledger of transactions</p>
@@ -70,7 +70,7 @@ export function SmartContractExplainer() {
     { title: 'Composable', desc: '"Money Legos": developers combine existing contracts to build new products.' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Smart Contracts</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Self-executing programs on the blockchain: like a digital vending machine</p>
@@ -97,7 +97,7 @@ export function Web3Ecosystem() {
     { title: 'DeFi', desc: 'Decentralized finance: lending, trading without banks, 24/7', examples: 'Aave, Compound, Curve', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Web3 Ecosystem</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four pillars of the decentralized internet</p>
@@ -127,7 +127,7 @@ export function Web3Passport() {
     { num: '4', title: 'Try', desc: 'Get an ENS name, try Uniswap, mint an NFT. Start small.', warning: 'Only risk what you can lose', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Your Web3 Passport</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four steps to get started today</p>
@@ -167,7 +167,7 @@ export function Web3Future() {
     { title: 'Global DeFi', desc: 'Open financial services for anyone with internet access' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Challenges vs Opportunities</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">What's holding Web3 back, and what's pulling it forward</p>
@@ -215,7 +215,7 @@ export function L2ScalingDiagram() {
     { name: 'Polygon zkEVM', type: 'ZK Rollup', tps: '~2,000', cost: '~$0.02', color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Layer 2 Scaling Solutions</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Process transactions faster and cheaper off the main chain</p>
@@ -228,10 +228,10 @@ export function L2ScalingDiagram() {
           <table className="w-full text-xs border-collapse min-w-[400px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">L2</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Type</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">TPS</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Avg Cost</th>
+                <th>L2</th>
+                <th>Type</th>
+                <th>TPS</th>
+                <th>Avg Cost</th>
               </tr>
             </thead>
             <tbody>
@@ -260,7 +260,7 @@ export function TokenomicsVisual() {
     { label: 'Stablecoin', desc: 'Pegged to fiat currency', example: 'USDC, DAI, USDT', supply: 'Backed by reserves', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Token Types</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four categories of crypto tokens and their economic models</p>
@@ -269,10 +269,10 @@ export function TokenomicsVisual() {
           <table className="w-full text-xs border-collapse min-w-[400px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Type</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Purpose</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Examples</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Supply Model</th>
+                <th>Type</th>
+                <th>Purpose</th>
+                <th>Examples</th>
+                <th>Supply Model</th>
               </tr>
             </thead>
             <tbody>
@@ -302,7 +302,7 @@ export function DeFiStackDiagram() {
     { layer: 'Settlement Layer', desc: 'The base blockchain securing all transactions', examples: 'Ethereum, Solana', color: '#6b7280' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The DeFi Stack</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Bottom to top: each layer builds on the one below</p>
@@ -335,7 +335,7 @@ export function SecurityRedFlags() {
     { title: 'Pump & Dumps', desc: 'Coordinated buying to inflate price, then insiders sell.', severity: 'High' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Security Red Flags</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Common scam patterns every Web3 user must know</p>
@@ -345,7 +345,7 @@ export function SecurityRedFlags() {
             <div key={f.title} className="rounded-[3px] border border-[#e3e3e0] p-3" style={{ borderLeftWidth: '3px', borderLeftColor: f.severity === 'Critical' ? '#ef4444' : '#f59e0b' }}>
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-xs font-bold text-[#37352f]">{f.title}</span>
-                <span className={`text-[9px] font-bold uppercase px-1.5 py-0.5 rounded ${f.severity === 'Critical' ? 'bg-red-500/10 text-red-500' : 'bg-amber-500/10 text-amber-600'} whitespace-nowrap`}>{f.severity}</span>
+                <span className={`text-[9px] font-bold uppercase px-1.5 py-0.5 rounded ${f.severity === 'Critical' ? 'bg-red-500/10 text-red-500' : 'bg-amber-500/10 text-amber-600'}`}>{f.severity}</span>
               </div>
               <p className="text-[10px] text-muted-foreground">{f.desc}</p>
             </div>
@@ -366,7 +366,7 @@ export function Web3Timeline() {
     { year: '2024', event: 'Web3: read-write-own', desc: 'Users own their data, identity, and digital assets', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Web3 Timeline</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">35 years from static pages to user ownership</p>
@@ -400,7 +400,7 @@ export function ConsensusComparison() {
     { name: 'Proof of Authority', energy: 'Minimal', speed: '1,000+ TPS', security: 'Lower', used: 'Private chains', color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Consensus Mechanism Comparison</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">How different blockchains achieve agreement on truth</p>
@@ -438,7 +438,7 @@ export function SmartContractPlatforms() {
     { name: 'Sui', lang: 'Move', tvl: '$1B+', fees: '<$0.01', strength: 'Object-oriented data model', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Smart Contract Platforms</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Where developers deploy on-chain programs today</p>
@@ -467,7 +467,7 @@ export function NFTUseCases() {
     { category: 'Memberships', example: 'Access passes, community tokens', market: 'Growing', color: '#ef4444' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">NFT Use Cases Beyond Art</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Non-fungible tokens are programmable ownership certificates</p>
@@ -476,7 +476,7 @@ export function NFTUseCases() {
             <div key={c.category} className="rounded-[3px] border border-[#e3e3e0] px-4 py-2.5 flex items-center gap-3" style={{ borderLeftWidth: '3px', borderLeftColor: c.color }}>
               <span className="text-xs font-bold min-w-[120px]" style={{ color: c.color }}>{c.category}</span>
               <span className="text-[10px] text-muted-foreground flex-1">{c.example}</span>
-              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: c.color + '15', color: c.color }}>{c.market}</span>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: c.color + '15', color: c.color }}>{c.market}</span>
             </div>
           ))}
         </div>
@@ -494,7 +494,7 @@ export function WalletComparison() {
     { name: 'Ledger', type: 'Hardware device', chains: 'Multi-chain', best: 'Cold storage security', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Wallet Comparison</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Choosing the right wallet for your use case</p>
@@ -531,7 +531,7 @@ export function RegulationMap() {
     { region: 'UAE (Dubai)', framework: 'VARA (Virtual Assets Regulatory Authority)', status: 'Active', stance: 'Pro-crypto hub', color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Global Regulatory Map</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">How major jurisdictions are approaching crypto regulation</p>
@@ -540,7 +540,7 @@ export function RegulationMap() {
             <div key={r.region} className="rounded-[3px] border border-[#e3e3e0] px-4 py-2.5 flex flex-col md:flex-row md:items-center gap-1 md:gap-3" style={{ borderLeftWidth: '3px', borderLeftColor: r.color }}>
               <span className="text-xs font-bold min-w-[100px]" style={{ color: r.color }}>{r.region}</span>
               <span className="text-[10px] text-muted-foreground flex-1">{r.framework}</span>
-              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: r.color + '15', color: r.color }}>{r.stance}</span>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: r.color + '15', color: r.color }}>{r.stance}</span>
             </div>
           ))}
         </div>
@@ -559,7 +559,7 @@ export function L2Comparison() {
     { name: 'StarkNet', type: 'ZK Rollup', tps: '500', tvl: '$500M+', fee: '$0.01-0.05', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Layer 2 Comparison</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Leading Ethereum scaling solutions by type, speed, and liquidity</p>
@@ -598,7 +598,7 @@ export function TokenValueDrivers() {
     { driver: 'Speculation', desc: 'Market sentiment and trading activity', impact: 'Variable', color: '#ef4444' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Token Value Drivers</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Five factors that determine whether a token accrues value</p>
@@ -607,7 +607,7 @@ export function TokenValueDrivers() {
             <div key={d.driver} className="rounded-[3px] border border-[#e3e3e0] px-4 py-2.5 flex items-center gap-3" style={{ borderLeftWidth: '3px', borderLeftColor: d.color }}>
               <span className="text-xs font-bold min-w-[110px]" style={{ color: d.color }}>{d.driver}</span>
               <span className="text-[10px] text-muted-foreground flex-1">{d.desc}</span>
-              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: d.color + '15', color: d.color }}>{d.impact}</span>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: d.color + '15', color: d.color }}>{d.impact}</span>
             </div>
           ))}
         </div>

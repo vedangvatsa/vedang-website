@@ -69,7 +69,7 @@ export async function GET(request: NextRequest) {
     page: page.toString(),
     per_page: perPage.toString(),
     select: 'id,title,type,publication_year,doi,cited_by_count,primary_location,concepts',
-    mailto: 'vedangvats@gmail.com', // polite pool for faster rate limits
+    mailto: 'vatsvedang@gmail.com', // polite pool for faster rate limits
   });
 
   const apiUrl = `https://api.openalex.org/works?${params.toString()}`;

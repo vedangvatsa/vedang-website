@@ -178,4 +178,5 @@ export * from '../courses/bootcamp-visuals';
 export * from './playbook-charts';
 export * from './funding-charts';
 export { ResearchPaper } from './research-paper';
+export { ChartCard } from './chart-card';
 

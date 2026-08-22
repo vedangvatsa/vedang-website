@@ -3,51 +3,12 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import matter from 'gray-matter';
 import { glossaryTerms } from '../src/lib/glossary';
+import { cleanMdxToMarkdown } from '../src/lib/mdx-clean';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
 const ESSAYS_DIR = path.resolve(REPO_ROOT, 'src/content/essays');
 const PUBLIC_DIR = path.resolve(REPO_ROOT, 'public');
-
-function cleanMDX(content: string): string {
-  let text = content;
-  
-  // Remove HTML and MDX comments
-  text = text.replace(/<!--[\s\S]*?-->/g, '');
-
-  // 1. Convert Callout to Blockquote
-  text = text.replace(/<Callout\b[^>]*title="([^"]+)"[^>]*>([\s\S]*?)<\/Callout>/g, '> **$1**\n> $2');
-  text = text.replace(/<Callout\b[^>]*>([\s\S]*?)<\/Callout>/g, '> $1');
-  
-  // 2. Convert KeyTakeaway to Blockquote
-  text = text.replace(/<KeyTakeaway\b[^>]*>([\s\S]*?)<\/KeyTakeaway>/g, '> **Key Takeaway**\n> $1');
-  
-  // 3. Convert PullQuote to Blockquote
-  text = text.replace(/<PullQuote\b[^>]*>([\s\S]*?)<\/PullQuote>/g, '> $1');
-  
-  // 4. Convert StatRow and Stat components
-  // Parse individual Stats in StatRow
-  text = text.replace(/<Stat\s+value="([^"]+)"\s+label="([^"]+)"(?:\s+source="([^"]+)")?[^>]*\/>/g, (match, value, label, source) => {
-    return `- **${value}**: ${label}${source ? ` (${source})` : ''}`;
-  });
-  // Strip StatRow tags
-  text = text.replace(/<\/?StatRow>/g, '');
-  
-  // 5. Convert Figure components to clean markdown image tags or remove them
-  text = text.replace(/<Figure\s+src="([^"]+)"\s+alt="([^"]+)"[^>]*\/>/g, '![$2]($1)');
-  text = text.replace(/<Figure\b[^>]*\/>/g, ''); // strip default figures without alt
-  
-  // 6. Strip all other self-closing JSX components (like custom charts, matrix tables, grids)
-  text = text.replace(/<[A-Z][a-zA-Z0-9]*(?:\s+[^>]*?)?\/>/g, '');
-  
-  // 7. Strip any opening or closing tags of custom React components that contain text but we just want to keep the text inside
-  text = text.replace(/<\/?(?:Columns|Column|div|span|section|article)\b[^>]*>/g, '');
-  
-  // Trim multiple consecutive newlines down to 2
-  text = text.replace(/\n{3,}/g, '\n\n');
-  
-  return text.trim();
-}
 
 function generateFiles() {
   const mdxFiles = fs.readdirSync(ESSAYS_DIR).filter(f => f.endsWith('.mdx'));
@@ -67,10 +28,8 @@ function generateFiles() {
     };
   });
 
-  // Sort essays by date descending
   essaysData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-  // 1. Generate public/llms.txt (Structured Index)
   const essayLinks = essaysData
     .map(essay => `- [${essay.title}](${essay.url}): ${essay.summary}`)
     .join('\n');
@@ -81,6 +40,37 @@ function generateFiles() {
       return `- [${term.term}](https://veda.ng/glossary/${term.slug}): ${firstSentence}`;
     })
     .join('\n');
+
+  const whenToUse = `
+## When to Use This Site
+
+- You need sourced long-form research or essays on AI agents, AI policy, or Web3 infrastructure
+- You need plain-language definitions of AI or Web3 terms (100+ glossary entries)
+- You need structured research datasets: 233,000+ indexed papers, AI and Web3 report libraries
+- You want free full courses on Vibe Coding, Web3, Prompt Engineering, Agentic Web, MCP Development, or AI Automation
+- You need verified biographical facts about Vedang Vatsa (founder of Hashtag Web3, FRSA, IIT Kanpur)
+`;
+
+  const developerSection = `
+## For Developers and Agents
+
+- Content index for LLMs: https://veda.ng/llms.txt
+- Full-text version: https://veda.ng/llms-full.txt
+- Developer resources: https://veda.ng/developers
+- MCP server (Streamable HTTP): https://veda.ng/.well-known/mcp
+- OpenAPI spec: https://veda.ng/openapi.json
+- Contact: https://veda.ng/meeting or vatsvedang@gmail.com
+
+Tip: send an HTTP Accept header of text/markdown on any page URL to get the Markdown version.
+`;
+
+  const trustPages = `
+## Trust Pages
+
+- [Profile / About](https://veda.ng/profile): Author biography and credentials
+- [Privacy Policy](https://veda.ng/privacy): Data handling, analytics, and third-party services
+- [Contact / Book a Meeting](https://veda.ng/meeting): Direct contact options
+`;
 
   const llmsIndexContent = `# Vedang Vatsa
 
@@ -127,14 +117,16 @@ Selected peer-reviewed research on AI, Web3, and economic systems:
 Individual definitions for AI, Web3, and technical terms at \`/glossary/[slug]\`. All ${glossaryTerms.length} terms:
 
 ${glossaryLinks}
+${whenToUse}
+${developerSection}
+${trustPages}
 `;
 
   fs.writeFileSync(path.join(PUBLIC_DIR, 'llms.txt'), llmsIndexContent);
   console.log('✅ Generated public/llms.txt successfully!');
 
-  // 2. Generate public/llms-full.txt (Full Content Index)
   const fullTextSections = essaysData.map(essay => {
-    const cleanContent = cleanMDX(essay.content);
+    const cleanContent = cleanMdxToMarkdown(essay.content);
     return `## ${essay.title}
 URL: ${essay.url}
 Summary: ${essay.summary}
@@ -161,6 +153,9 @@ ${fullTextSections}
 URL: https://veda.ng/glossary
 
 This site has a glossary of ${glossaryTerms.length} AI, Web3, and engineering terms at https://veda.ng/glossary
+${whenToUse}
+${developerSection}
+${trustPages}
 `;
 
   fs.writeFileSync(path.join(PUBLIC_DIR, 'llms-full.txt'), llmsFullContent);

@@ -130,6 +130,20 @@ export const pageMetadata = {
     url: '/stateofweb3',
     keywords: ['Web3', 'blockchain', 'OpenAlex', 'DeFi', 'NFT', 'post-quantum', 'CBDC', 'MiCA', 'smart contracts', 'China', 'India'],
   },
+  privacy: {
+    title: 'Privacy Policy - veda.ng',
+    description:
+      'How veda.ng handles data: no accounts, no profiles. Google Analytics 4 and Microsoft Clarity analytics plus a Cal.com booking embed, described in plain language.',
+    url: '/privacy',
+    keywords: ['Privacy Policy', 'Data Protection', 'Google Analytics', 'Microsoft Clarity', 'Cal.com', 'GDPR', 'CCPA'],
+  },
+  developers: {
+    title: 'veda.ng Developer Resources - API, MCP Server, Feeds',
+    description:
+      'Developer and AI agent interfaces for veda.ng: public research search API, MCP server over Streamable HTTP, OpenAPI spec, RSS feed, sitemap, llms.txt index, and Markdown content negotiation.',
+    url: '/developers',
+    keywords: ['veda.ng API', 'veda.ng MCP server', 'veda.ng developer docs', 'Vedang Vatsa API', 'Hashtag Web3 developer resources', 'AI research API', 'OpenAlex search API'],
+  },
 };
 
 export function generateMetadata(params: MetadataParams): Metadata {

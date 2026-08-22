@@ -13,7 +13,7 @@ export function UIComplexityComparison() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Dashboard Interface vs Text Interface</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Task friction comparison across five common enterprise workflows</p>
@@ -22,10 +22,10 @@ export function UIComplexityComparison() {
           <table className="w-full text-xs border-collapse min-w-[600px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Task</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Traditional UI</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Text + Agent</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Reduction</th>
+                <th>Task</th>
+                <th>Traditional UI</th>
+                <th>Text + Agent</th>
+                <th>Reduction</th>
               </tr>
             </thead>
             <tbody>
@@ -35,7 +35,7 @@ export function UIComplexityComparison() {
                   <td className="py-2.5 px-2 text-[#37352f]/80">{d.old}</td>
                   <td className="py-2.5 px-2 font-bold text-[#18181b]">{d.new}</td>
                   <td className="py-2.5 px-2">
-                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">
+                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">
                       ~{Math.round(((d.timeOld - d.timeNew) / d.timeOld) * 100)}% faster
                     </span>
                   </td>
@@ -56,7 +56,7 @@ export function UIComplexityComparison() {
 /* ─── API Abstraction Stack ─── */
 export function APIAbstractionLayer() {
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The New Control Stack</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How natural language replaces navigation logic</p>
@@ -89,7 +89,7 @@ export function APIAbstractionLayer() {
 /* ─── Enterprise Adoption of Text-First Interfaces ─── */
 export function TextUIAdoption() {
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Text-First Interface Adoption</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Enterprise platforms shipping natural language as primary control, 2024-2026</p>
@@ -136,7 +136,7 @@ export function PlatformShiftTimeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Text Field Takeover</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Key moments in the shift from navigation to natural language, 2022-2026</p>

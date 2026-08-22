@@ -10,7 +10,7 @@ export function AutomationLayers() {
     { label: 'Autonomous Pipelines', desc: 'MCP + Agents + Cron', effort: '~0%', examples: 'Self-running systems, error recovery, continuous monitoring', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Five Layers of Automation</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">From manual effort to fully autonomous systems</p>
@@ -25,7 +25,7 @@ export function AutomationLayers() {
               <div className="rounded-[3px] border border-[#e3e3e0] p-3">
                 <div className="flex items-center justify-between mb-1">
                   <span className="text-xs font-bold" style={{ color: l.color }}>{l.label}</span>
-                  <span className="text-[10px] font-mono px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: l.color + '15', color: l.color }}>Effort: {l.effort}</span>
+                  <span className="text-[10px] font-mono px-1.5 py-0.5 rounded" style={{ backgroundColor: l.color + '15', color: l.color }}>Effort: {l.effort}</span>
                 </div>
                 <p className="text-[11px] text-muted-foreground">{l.desc}. {l.examples}.</p>
               </div>
@@ -52,7 +52,7 @@ export function APIFlowDiagram() {
     { method: 'DELETE', desc: 'Remove', example: 'Delete a listing' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">How APIs Work</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">The request-response cycle that powers every automation</p>
@@ -111,7 +111,7 @@ export function NoCodeToolsGrid() {
     },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">No-Code Automation Platforms</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Choosing the right tool for your automation needs</p>
@@ -158,7 +158,7 @@ export function AgentArchitecture() {
     { agent: 'GPT + Tools', features: ['Function calling', 'Code interpreter', 'Web browsing', 'DALL-E', 'File upload'] },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The AI Agent Loop</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Observe, Think, Act, Learn: the cycle that replaces rigid rule-based automation</p>
@@ -200,7 +200,7 @@ export function MCPAutomationStack() {
     { layer: 'External APIs', desc: 'The real-world services being automated', color: '#ef4444', examples: 'Google APIs, Slack API, database connections, file I/O' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The MCP Automation Stack</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">From natural language to real-world action in five layers</p>
@@ -237,7 +237,7 @@ export function PipelineBlueprint() {
     { num: '5', label: 'Report', desc: 'Log and notify', examples: 'Console logs, Slack alerts, dashboard updates, error handling', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Pipeline Architecture</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Every automation pipeline follows this five-stage pattern</p>
@@ -279,7 +279,7 @@ export function ROICalculator() {
     { task: 'Quarterly strategy review', freq: '4x/year', manual: '4 hrs', annual: '16 hrs', buildTime: '12 hrs', monthlyCost: '$0', annualSavings: '-$200', verdict: 'Skip' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Automation ROI Calculator</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">When to automate vs when to stay manual</p>
@@ -288,7 +288,7 @@ export function ROICalculator() {
             <thead>
               <tr className="border-b border-[#e3e3e0]">
                 {['Task', 'Freq', 'Manual', 'Annual Hrs', 'Build', 'Monthly', 'Net Savings', ''].map(h => (
-                  <th key={h} className="text-left px-2 py-2 font-bold text-[#37352f] whitespace-nowrap">{h}</th>
+                  <th key={h} className="text-left px-2 py-2 font-bold text-[#37352f]">{h}</th>
                 ))}
               </tr>
             </thead>
@@ -303,7 +303,7 @@ export function ROICalculator() {
                   <td className="px-2 py-2 text-muted-foreground">{e.monthlyCost}</td>
                   <td className="px-2 py-2 font-bold" style={{ color: e.verdict === 'Build' ? '#10b981' : '#ef4444' }}>{e.annualSavings}</td>
                   <td className="px-2 py-2">
-                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: e.verdict === 'Build' ? '#10b98115' : '#ef444415', color: e.verdict === 'Build' ? '#10b981' : '#ef4444' }}>{e.verdict}</span>
+                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: e.verdict === 'Build' ? '#10b98115' : '#ef444415', color: e.verdict === 'Build' ? '#10b981' : '#ef4444' }}>{e.verdict}</span>
                   </td>
                 </tr>
               ))}
@@ -327,7 +327,7 @@ export function AuthPatterns() {
     { method: 'Service Account', security: 'High', setup: '15 min', use: 'Server-to-server', how: 'JSON key file, no user interaction', color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">API Authentication Patterns</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four methods ranked by security level and setup complexity</p>
@@ -337,7 +337,7 @@ export function AuthPatterns() {
               <div className="px-4 py-2.5 flex flex-col md:flex-row md:items-center gap-1 md:gap-4">
                 <div className="flex items-center gap-2 min-w-[120px]">
                   <span className="text-xs font-bold" style={{ color: p.color }}>{p.method}</span>
-                  <span className="text-[9px] font-mono px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: p.color + '15', color: p.color }}>Security: {p.security}</span>
+                  <span className="text-[9px] font-mono px-1.5 py-0.5 rounded" style={{ backgroundColor: p.color + '15', color: p.color }}>Security: {p.security}</span>
                 </div>
                 <span className="text-[10px] text-muted-foreground flex-1">{p.how}</span>
                 <span className="text-[10px] text-muted-foreground/60">Best for: {p.use}</span>
@@ -360,7 +360,7 @@ export function WorkflowDecisionTree() {
     { question: 'Do you need AI processing in workflows?', yes: 'n8n (best AI node support)', no: 'All three support basic AI', color: '#ef4444' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">No-Code Tool Selection Guide</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Answer these five questions to pick the right platform</p>
@@ -399,7 +399,7 @@ export function ToolCallingFlow() {
   ];
   const colors: Record<string, string> = { input: '#3b82f6', think: '#f59e0b', action: '#10b981', output: '#8b5cf6' };
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Tool Calling in Practice</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">How an agent decomposes a natural language request into API calls</p>
@@ -435,7 +435,7 @@ export function MCPServerCatalog() {
     { name: 'Browser', tools: 5, examples: 'navigate, click, screenshot, read page', category: 'Web', color: '#06b6d4' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">MCP Server Catalog</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Production-ready MCP servers for common automation targets</p>
@@ -446,7 +446,7 @@ export function MCPServerCatalog() {
               <div>
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-bold text-[#37352f]">{s.name}</span>
-                  <span className="text-[9px] px-1.5 py-0.5 rounded border border-[#e3e3e0] text-muted-foreground whitespace-nowrap">{s.category}</span>
+                  <span className="text-[9px] px-1.5 py-0.5 rounded border border-[#e3e3e0] text-muted-foreground">{s.category}</span>
                 </div>
                 <p className="text-[10px] text-muted-foreground mt-0.5">Tools: {s.examples}</p>
               </div>
@@ -470,7 +470,7 @@ export function PipelineCaseStudies() {
     { name: 'Content Publishing', trigger: 'Git push', fetch: 'MDX files', transform: 'Build + optimize images', act: 'Deploy to Vercel', report: 'Social post', stack: 'GitHub Actions + Vercel', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Pipeline Case Studies</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four production pipelines showing the Trigger-Fetch-Transform-Act-Report pattern</p>
@@ -514,7 +514,7 @@ export function CostBreakdown() {
     { service: 'AWS SES', free: '3,000 emails/mo', paid: '$0.10 per 1,000', usage: 'Email delivery', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Automation Cost Breakdown</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Realistic monthly costs for a typical startup automation stack</p>
@@ -564,7 +564,7 @@ export function MonitoringDashboard() {
     { item: 'Cost alerts enabled', tool: 'OpenAI / Anthropic billing' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Production Readiness Dashboard</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Key metrics and pre-launch checklist for production automation</p>

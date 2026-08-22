@@ -3,7 +3,7 @@
 /* ─── Module 1: Vibe Coding Shift ─── */
 export function VibeCodingShift() {
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Core Difference</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">From writing code to directing AI</p>
@@ -36,7 +36,7 @@ export function GCESFramework() {
     { letter: 'S', title: 'Source', desc: 'Reference a design you admire. AI learns fastest from examples.', example: '"Similar to Linear.app pricing page"', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The GCES Framework</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">The four components of a perfect AI prompt</p>
@@ -70,7 +70,7 @@ export function DebuggingFlow() {
     { num: '5', label: 'Test & Loop', desc: 'Still broken? Loop again with the new error and more context.', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Debugging Cycle</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Error → Context → AI → Fix → Test → Loop</p>
@@ -109,7 +109,7 @@ export function DeploymentStack() {
     { layer: 'Domain', desc: 'Your custom web address', options: 'Namecheap, Cloudflare DNS, Google Domains', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Deployment Stack</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four layers from code to production</p>
@@ -141,7 +141,7 @@ export function VibeCodingManifesto() {
     { principle: 'Human handles taste', desc: 'UX decisions, design judgment, and product vision stay human', old: 'Both code and design', now: 'Design intent, AI implements' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Vibe Coding Manifesto</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four principles that define the new way of building software</p>
@@ -172,7 +172,7 @@ export function ToolSelectionGuide() {
     { name: 'Antigravity', type: 'IDE Agent', skill: 'Any', cost: 'Included', best: 'Deep codebase understanding + execution', color: '#ef4444' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Tool Selection Guide</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Choosing the right AI coding tool for your workflow</p>
@@ -211,7 +211,7 @@ export function PromptLibrary() {
     { category: 'Test', prompt: '"Write unit tests for the user service. Cover edge cases"', output: 'Test suite', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Prompt Library</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Battle-tested prompts for common development tasks</p>
@@ -238,7 +238,7 @@ export function LabProjectIdeas() {
     { name: 'Full-Stack CRUD App', time: '4 hours', stack: 'Next.js + Supabase + Auth', difficulty: 'Intermediate', color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Lab Project Ideas</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Start-to-finish projects you can build with AI assistance</p>
@@ -247,7 +247,7 @@ export function LabProjectIdeas() {
             <div key={p.name} className="rounded-[3px] border border-[#e3e3e0] p-3" style={{ borderLeftWidth: '3px', borderLeftColor: p.color }}>
               <div className="flex items-center justify-between mb-1">
                 <span className="text-xs font-bold" style={{ color: p.color }}>{p.name}</span>
-                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: p.color + '15', color: p.color }}>{p.difficulty}</span>
+                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: p.color + '15', color: p.color }}>{p.difficulty}</span>
               </div>
               <div className="text-[10px] text-muted-foreground">{p.stack}</div>
               <div className="text-[10px] text-muted-foreground/60 mt-0.5">Estimated: {p.time}</div>
@@ -269,7 +269,7 @@ export function ProductQualityGates() {
     { gate: 'Shipping', checks: ['SEO meta tags present', 'CI tests pass on main', 'Deployed to production URL'], color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Product Quality Gates</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four checkpoints before shipping any project</p>
@@ -304,7 +304,7 @@ export function DebugDecisionTree() {
     { error: 'Performance issue', first: 'Profile with React DevTools or Lighthouse', then: 'Share metrics + component causing bottleneck', color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Debug Decision Tree</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">How to diagnose issues and get effective AI help</p>
@@ -333,7 +333,7 @@ export function DeploymentChecklist() {
     { step: 'Error monitoring', desc: 'Set up Sentry or similar for production errors', status: 'Recommended', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Deployment Checklist</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Steps to go from local development to production</p>
@@ -342,7 +342,7 @@ export function DeploymentChecklist() {
             <div key={s.step} className="rounded-[3px] border border-[#e3e3e0] px-4 py-2.5 flex items-center gap-3">
               <span className="text-xs font-bold text-[#37352f] min-w-[150px]">{s.step}</span>
               <span className="text-[10px] text-muted-foreground flex-1">{s.desc}</span>
-              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: s.color + '15', color: s.color }}>{s.status}</span>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: s.color + '15', color: s.color }}>{s.status}</span>
             </div>
           ))}
         </div>

@@ -3,7 +3,7 @@
 /* ─── Module 1: Information Web → Action Web ─── */
 export function ActionWebEvolution() {
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Core Difference</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">From searching and reading to instructing and reviewing</p>
@@ -36,7 +36,7 @@ export function AgentComponents() {
     { title: 'Orchestration', desc: 'Planning loops, task decomposition, and self-reflection', role: 'Manager: coordinates multi-step workflows', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Agent Architecture</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four components that make an AI agent work</p>
@@ -65,7 +65,7 @@ export function AgenticDimensions() {
     { title: 'Agent-to-Agent', desc: 'Agents across organizations communicate via open protocols', examples: 'Your booking agent talks to airline agent via A2A', complexity: 'Advanced', color: '#ef4444' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Three Dimensions of Agency</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">From simple tool use to autonomous agent networks</p>
@@ -96,7 +96,7 @@ export function AgenticApps() {
     { title: 'Computer Use', desc: 'Control a full desktop GUI like a human', examples: 'Claude Computer Use, OpenAI Operator', status: 'Early stage', color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Agent Applications Today</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Where AI agents are already shipping value</p>
@@ -105,10 +105,10 @@ export function AgenticApps() {
           <table className="w-full text-xs border-collapse min-w-[420px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Category</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">What it does</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Products</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Status</th>
+                <th>Category</th>
+                <th>What it does</th>
+                <th>Products</th>
+                <th>Status</th>
               </tr>
             </thead>
             <tbody>
@@ -141,7 +141,7 @@ export function AgenticFuture() {
     { title: 'Ambient Intelligence', desc: 'AI woven into every device and service: proactively acting before you ask.' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Challenges vs Opportunities</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">What's holding agents back, and what's pulling them forward</p>
@@ -182,7 +182,7 @@ export function AgenticFuture() {
 /* ─── Module 6: Protocol Diagram (MCP + A2A) ─── */
 export function ProtocolDiagram() {
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Two Protocols</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">MCP connects agents to tools; A2A connects agents to agents</p>
@@ -232,7 +232,7 @@ export function AgentBuildSteps() {
     { num: '5', label: 'Test & Evaluate', desc: 'Run against edge cases. Measure quality. Add guardrails for failures.', time: '20 min', color: '#ef4444' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Build Your First Agent in 5 Steps</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">From idea to working agent in about 80 minutes</p>
@@ -270,7 +270,7 @@ export function WebParadigmStats() {
     { label: 'MCP servers published', value: '2,500+', source: 'Anthropic Registry', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Agentic Web in Numbers</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Key metrics indicating the shift from search to action</p>
@@ -297,7 +297,7 @@ export function ToolEcosystem() {
     { name: 'Commerce', tools: ['Shopify Agents', 'Stripe MCP', 'Payment APIs'], color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Agent Tool Ecosystem</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">How agents connect to real-world services across domains</p>
@@ -329,7 +329,7 @@ export function AutonomySpectrum() {
     { level: 'L4: Autonomous', desc: 'AI runs independently, human sets goals', example: 'Cron-triggered pipeline with error recovery', effort: '5% human', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Autonomy Spectrum</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four levels of AI agency, from copilot to fully autonomous</p>
@@ -341,7 +341,7 @@ export function AutonomySpectrum() {
               </div>
               <span className="text-[10px] text-muted-foreground flex-1">{l.desc}</span>
               <span className="text-[10px] text-muted-foreground/60 italic">{l.example}</span>
-              <span className="text-[9px] font-mono px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: l.color + '15', color: l.color }}>{l.effort}</span>
+              <span className="text-[9px] font-mono px-1.5 py-0.5 rounded" style={{ backgroundColor: l.color + '15', color: l.color }}>{l.effort}</span>
             </div>
           ))}
         </div>
@@ -359,7 +359,7 @@ export function AgenticIndustryAdoption() {
     { sector: 'Legal', adoption: '23%', use: 'Contract review, case research', leader: 'Harvey AI, Casetext', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Agent Adoption by Industry</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Where agentic AI is deployed in production today</p>
@@ -392,7 +392,7 @@ export function AgentRiskMatrix() {
     { risk: 'Stale Context', severity: 'Low', mitigation: 'Context window management, explicit memory resets', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Agent Risk Matrix</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Security and reliability risks in production agent deployments</p>
@@ -401,7 +401,7 @@ export function AgentRiskMatrix() {
             <div key={r.risk} className="rounded-[3px] border border-[#e3e3e0] px-4 py-2.5 flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
               <div className="flex items-center gap-2 min-w-[180px]">
                 <span className="text-xs font-bold text-[#37352f]">{r.risk}</span>
-                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: r.color + '15', color: r.color }}>{r.severity}</span>
+                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: r.color + '15', color: r.color }}>{r.severity}</span>
               </div>
               <span className="text-[10px] text-muted-foreground">{r.mitigation}</span>
             </div>
@@ -421,7 +421,7 @@ export function AgentProtocolComparison() {
     { name: 'ACP', org: 'Cisco', transport: 'HTTP', focus: 'Enterprise agent collaboration', status: 'Draft', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Agent Protocol Overview</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Competing standards for agent interoperability</p>
@@ -441,7 +441,7 @@ export function AgentProtocolComparison() {
                   <td className="px-2 py-2 text-muted-foreground">{p.org}</td>
                   <td className="px-2 py-2 font-mono text-muted-foreground">{p.transport}</td>
                   <td className="px-2 py-2 text-muted-foreground">{p.focus}</td>
-                  <td className="px-2 py-2"><span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: p.color + '15', color: p.color }}>{p.status}</span></td>
+                  <td className="px-2 py-2"><span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: p.color + '15', color: p.color }}>{p.status}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -461,7 +461,7 @@ export function AgentBuildChecklist() {
     { phase: 'Deploy', items: ['Wire to a scheduler (cron, webhook)', 'Set up monitoring and alerting', 'Document the pipeline in a README'], color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Agent Build Checklist</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four-phase workflow for shipping a production agent</p>

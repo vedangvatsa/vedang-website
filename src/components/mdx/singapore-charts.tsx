@@ -13,7 +13,7 @@ export function GDPGrowthTimeline() {
   const max = 95000;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">GDP Per Capita Growth</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Singapore, current USD, 1965-2024</p>
@@ -56,7 +56,7 @@ export function GovernanceScorecard() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Singapore's Global Rankings</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Performance across major international indices</p>
@@ -65,10 +65,10 @@ export function GovernanceScorecard() {
           <table className="w-full text-xs border-collapse min-w-[450px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Index</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Rank</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Detail</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Source</th>
+                <th>Index</th>
+                <th>Rank</th>
+                <th>Detail</th>
+                <th>Source</th>
               </tr>
             </thead>
             <tbody>
@@ -100,7 +100,7 @@ export function IndustrialEvolution() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Industrial Policy Evolution</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Six decades of deliberate value-chain migration</p>
@@ -109,10 +109,10 @@ export function IndustrialEvolution() {
           <table className="w-full text-xs border-collapse min-w-[500px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Era</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Focus</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Key sectors</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Driver</th>
+                <th>Era</th>
+                <th>Focus</th>
+                <th>Key sectors</th>
+                <th>Driver</th>
               </tr>
             </thead>
             <tbody>
@@ -154,7 +154,7 @@ export function HealthcareComparison() {
   };
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Healthcare Efficiency</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Health spending (% GDP) vs. life expectancy (years)</p>
@@ -163,10 +163,10 @@ export function HealthcareComparison() {
           <table className="w-full text-xs border-collapse min-w-[400px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Country</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Spending</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Life exp.</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Efficiency</th>
+                <th>Country</th>
+                <th>Spending</th>
+                <th>Life exp.</th>
+                <th>Efficiency</th>
               </tr>
             </thead>
             <tbody>
@@ -176,7 +176,7 @@ export function HealthcareComparison() {
                   <td className="py-2.5 px-2 text-[#18181b] font-semibold">{c.spending}%</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{c.lifeExp} yrs</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${effColor[c.efficiency]} whitespace-nowrap`}>{c.efficiency}</span>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${effColor[c.efficiency]}`}>{c.efficiency}</span>
                   </td>
                 </tr>
               ))}
@@ -195,7 +195,7 @@ export function HealthcareComparison() {
 /* ─── Inequality Snapshot ─── */
 export function InequalitySnapshot() {
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Inequality in Singapore</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Income vs. wealth distribution, 2024</p>
@@ -257,7 +257,7 @@ export function TransferabilityGrid() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-center text-[#37352f]">What Can Be Transferred</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold text-center">Policy lessons from Singapore's development model</p>

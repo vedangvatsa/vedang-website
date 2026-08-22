@@ -11,7 +11,7 @@ export function ReceiptsExposureChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Exposure is not displacement</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Share of work that could be affected, not jobs already gone</p>
@@ -43,7 +43,7 @@ export function ReceiptsLaborFacts() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">What payroll data shows so far</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Brynjolfsson, Chandar, Chen, August 2026 revision</p>
@@ -72,7 +72,7 @@ export function ReceiptsDemandChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Households are still spending, and saving little</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Verified official and announcement data, mid-2026</p>

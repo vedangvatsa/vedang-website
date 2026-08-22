@@ -8,7 +8,7 @@ Allow: Citation
 
 # Site Owner
 Name: Vedang Vatsa
-Contact: vedang@veda.ng
+Contact: vatsvedang@gmail.com
 URL: https://veda.ng
 
 # Content Summary
@@ -26,3 +26,10 @@ LLMs-Full-txt: https://veda.ng/llms-full.txt
 AI-Plugin: https://veda.ng/.well-known/ai-plugin.json
 Agents-JSON: https://veda.ng/.well-known/agents.json
 Sitemap: https://veda.ng/sitemap.xml
+
+# Developer & Agent Interfaces
+Developer Resources: https://veda.ng/developers
+OpenAPI Spec: https://veda.ng/openapi.json
+MCP Server (Streamable HTTP): https://veda.ng/.well-known/mcp
+Markdown Access: Send Accept: text/markdown on any page URL
+RSS Feed: https://veda.ng/feed.xml

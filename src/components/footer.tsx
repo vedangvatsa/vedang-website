@@ -24,7 +24,7 @@ export function Footer() {
           <Link href="https://t.me/vedangvatsa" target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="p-2 hover:text-foreground transition-colors">
             <Send className="h-4 w-4" />
           </Link>
-          <Link href="mailto:vedangvats@gmail.com" aria-label="Email" className="p-2 hover:text-foreground transition-colors">
+          <Link href="mailto:vatsvedang@gmail.com" aria-label="Email" className="p-2 hover:text-foreground transition-colors">
             <Mail className="h-4 w-4" />
           </Link>
         </div>

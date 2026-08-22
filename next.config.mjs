@@ -1,64 +1,10 @@
-
+ 
 import createMDX from '@next/mdx';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { ESSAY_SLUG_MIGRATIONS, EXTRA_REDIRECTS } from './routes.config.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-/** Old long essay slugs -> current root slugs. */
-const ESSAY_SLUG_MIGRATIONS = [
-  ['agent-infrastructure-stack', 'agentstack'],
-  ['agentic-commerce', 'agentcommerce'],
-  ['agentic-state', 'stateagents'],
-  ['agents-eating-saas', 'agentsaas'],
-  ['agi-governance', 'governance'],
-  ['ai-agent-economy', 'agenteconomy'],
-  ['ai-economy', 'aieconomy'],
-  ['ai-implementation-playbook', 'playbook'],
-  ['ambient-intelligence', 'ambient'],
-  ['api-states', 'apis'],
-  ['artificial-intuition', 'intuition'],
-  ['asi-timeline', 'asi'],
-  ['attention-refinery', 'attention'],
-  ['blockchain-journey', 'blockchain'],
-  ['bureaucracy-tax', 'bureaucracy'],
-  ['cheap-to-competitive', 'competitive'],
-  ['cognitive-load', 'cognition'],
-  ['computational-constitutions', 'constitutions'],
-  ['computational-social-science', 'socialscience'],
-  ['dark-forest-internet', 'darkforest'],
-  ['digital-monasticism', 'monasticism'],
-  ['god-protocol', 'godprotocol'],
-  ['great-funding-realignment', 'funding'],
-  ['hustle-culture', 'hustle'],
-  ['in-between-state', 'liminal'],
-  ['infinity-economy', 'infinity'],
-  ['internet-of-lies', 'lies'],
-  ['intuitive-singularity', 'instinct'],
-  ['mesh-economy', 'mesh'],
-  ['plurality-trap', 'plurality'],
-  ['post-interface-internet', 'postinterface'],
-  ['post-scarcity-technology', 'postscarcity'],
-  ['programmable-trust', 'trust'],
-  ['pseudonymous-agency', 'pseudonymity'],
-  ['rationality-in-ai', 'rationality'],
-  ['revision-gap', 'revision'],
-  ['sacred-algorithms', 'algorithms'],
-  ['sensory-internet', 'sensory'],
-  ['simulation-hypothesis', 'simulation'],
-  ['simulation-layer', 'simulayer'],
-  ['singapores-arc', 'singapore'],
-  ['singularity-paradox', 'paradox'],
-  ['state-of-ai', 'stateofai'],
-  ['state-of-web3', 'stateofweb3'],
-  ['stepwise-ai', 'stepwise'],
-  ['substrate-shift', 'substrate'],
-  ['synthetic-empathy', 'empathy'],
-  ['towards-the-agentic-web', 'agenticweb'],
-  ['twilight-economy', 'twilight'],
-  ['universal-text-ui', 'textui'],
-  ['yc-landscape', 'yc'],
-];
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -98,6 +44,10 @@ const nextConfig = {
         source: '/meeting/opengraph-image.png',
         destination: '/api/og/meeting',
       },
+      {
+        source: '/openapi.json',
+        destination: '/api/openapi',
+      },
     ];
   },
   async redirects() {
@@ -108,142 +58,7 @@ const nextConfig = {
     ]);
 
     return [
-      {
-        source: '/who-buys',
-        destination: '/receipts',
-        permanent: true,
-      },
-      {
-        source: '/writings',
-        destination: '/essays',
-        permanent: true,
-      },
-      {
-        source: '/194',
-        destination: '/agenticweb',
-        permanent: true,
-      },
-      {
-        source: '/158',
-        destination: '/blockchain',
-        permanent: true,
-      },
-      {
-        source: '/about',
-        destination: '/profile',
-        permanent: true,
-      },
-      // Course slug migrations
-      {
-        source: '/web3-101',
-        destination: '/web3',
-        permanent: true,
-      },
-      {
-        source: '/web3-101/:path*',
-        destination: '/web3/:path*',
-        permanent: true,
-      },
-      {
-        source: '/mcp-development',
-        destination: '/mcp',
-        permanent: true,
-      },
-      {
-        source: '/mcp-development/:path*',
-        destination: '/mcp/:path*',
-        permanent: true,
-      },
-      {
-        source: '/ai-automation',
-        destination: '/automation',
-        permanent: true,
-      },
-      {
-        source: '/ai-automation/:path*',
-        destination: '/automation/:path*',
-        permanent: true,
-      },
-      {
-        source: '/agentic-web',
-        destination: '/agentic',
-        permanent: true,
-      },
-      {
-        source: '/agentic-web/:path*',
-        destination: '/agentic/:path*',
-        permanent: true,
-      },
-      {
-        source: '/prompt-engineering-101',
-        destination: '/prompt',
-        permanent: true,
-      },
-      {
-        source: '/prompt-engineering-101/:path*',
-        destination: '/prompt/:path*',
-        permanent: true,
-      },
-      {
-        source: '/vibe-coding',
-        destination: '/vibecoding',
-        permanent: true,
-      },
-      {
-        source: '/vibe-coding/:path*',
-        destination: '/vibecoding/:path*',
-        permanent: true,
-      },
-      {
-        source: '/ai-reports',
-        destination: '/ailib',
-        permanent: true,
-      },
-      {
-        source: '/ai-reports/:path*',
-        destination: '/ailib/:path*',
-        permanent: true,
-      },
-      {
-        source: '/aireports',
-        destination: '/ailib',
-        permanent: true,
-      },
-      {
-        source: '/aireports/:path*',
-        destination: '/ailib/:path*',
-        permanent: true,
-      },
-      {
-        source: '/web3-reports',
-        destination: '/web3lib',
-        permanent: true,
-      },
-      {
-        source: '/web3-reports/:path*',
-        destination: '/web3lib/:path*',
-        permanent: true,
-      },
-      {
-        source: '/ai-discovery-standards',
-        destination: '/aistandards',
-        permanent: true,
-      },
-      {
-        source: '/ai-discovery-standards/:path*',
-        destination: '/aistandards/:path*',
-        permanent: true,
-      },
-      {
-        source: '/site-checklist',
-        destination: '/sitecheck',
-        permanent: true,
-      },
-      {
-        source: '/site-checklist/:path*',
-        destination: '/sitecheck/:path*',
-        permanent: true,
-      },
+      ...EXTRA_REDIRECTS.map(([source, destination]) => ({ source, destination, permanent: true })),
       // Essay slug migrations (root + /essays + /writings long forms)
       ...essayRedirects,
       // /essays/{current-slug} and leftover /writings/{slug} -> root

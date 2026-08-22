@@ -313,31 +313,33 @@
   padding-bottom: 8px;
 }
 
-/* Chart/data tables in essay figures sit outside .table-wrapper and inherit
-   .notion-article { word-break: break-word }, which mid-word-splits headers
-   like SEVERITY and badges like Medium when columns squeeze. */
-.notion-article figure table th,
-.notion-article figure table td,
-.prose figure table th,
-.prose figure table td {
-  word-break: normal;
-  overflow-wrap: break-word;
-  hyphens: none;
+/* Shared chart/data card shell (essays + courses). Use class `chart-card`
+   or the <ChartCard> component instead of repeating Tailwind shell classes. */
+.chart-card {
+  display: block;
+  width: 100%;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 3px;
+  border: 1px solid #e3e3e0;
+  background-color: #fff;
+  overflow: hidden;
 }
 
-.notion-article figure table th,
-.prose figure table th {
-  white-space: nowrap;
+.chart-card--sm {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-.notion-article figure table td > span[class*="rounded"],
-.prose figure table td > span[class*="rounded"] {
-  display: inline-block;
-  white-space: nowrap;
+.chart-card--shadow {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
 
-/* Same protection for course/tool figures and any other page tables
-   that are not under .notion-article. */
+/* Chart tables sit outside .table-wrapper and would inherit
+   .notion-article { word-break: break-word }, which mid-word-splits
+   headers (SEVERITY) and badges (Medium) when columns squeeze. */
+.chart-card table th,
+.chart-card table td,
 figure.not-prose table th,
 figure.not-prose table td {
   word-break: normal;
@@ -345,13 +347,25 @@ figure.not-prose table td {
   hyphens: none;
 }
 
+.chart-card table th,
 figure.not-prose table th {
   white-space: nowrap;
 }
 
+/* Default chart table header look; override with utilities when needed. */
+.chart-card table thead th {
+  text-align: left;
+  padding: 0.5rem;
+  font-weight: 700;
+  color: #37352f;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.chart-card table td > span[class*="rounded"],
+.chart-card span[class*="rounded"][class*="px-1"],
 figure.not-prose table td > span[class*="rounded"],
-figure.not-prose span[class*="rounded"][class*="px-1"],
-figure.not-prose span[class*="rounded"][class*="font-bold"] {
+figure.not-prose span[class*="rounded"][class*="px-1"] {
   display: inline-block;
   white-space: nowrap;
 }

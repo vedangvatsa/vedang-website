@@ -107,11 +107,11 @@ export function StateOfAiTimeline() {
   const areaD = `${solidPathD} L ${dashedPathD.split(' L ')[1]} L ${points[points.length - 1].x} ${height - padding} L ${points[0].x} ${height - padding} Z`;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-6">
+    <figure className="not-prose chart-card dark:border-zinc-800 dark:bg-zinc-900/20 p-6 space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200 flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#18181b] " />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#18181b]" />
             Publication Volume &amp; Milestone Timeline (2013-2026)
           </h4>
           <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
@@ -209,7 +209,7 @@ export function StateOfAiNgramAnalyzer() {
   const maxCount = Math.max(...activeData.map(d => d.count));
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-5">
+    <figure className="not-prose chart-card dark:border-zinc-800 dark:bg-zinc-900/20 p-6 space-y-5">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div>
           <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200 flex items-center gap-2">
@@ -263,10 +263,10 @@ export function StateOfAiNgramAnalyzer() {
 export function StateOfAiMomentum() {
   const maxGrowth = momentumData[0].growth;
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-5">
+    <figure className="not-prose chart-card dark:border-zinc-800 dark:bg-zinc-900/20 p-6 space-y-5">
       <div>
         <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200 flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#18181b] " />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#18181b]" />
           Fastest-Rising Keywords (2025-2026 vs 2022-2023)
         </h4>
         <span className="text-xs text-muted-foreground uppercase tracking-widest font-semibold block mt-1">
@@ -341,7 +341,7 @@ export function StateOfAiGeography() {
   const maxCount = geoData[0].count;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-5">
+    <figure className="not-prose chart-card dark:border-zinc-800 dark:bg-zinc-900/20 p-6 space-y-5">
       <div>
         <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200 flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-[#18181b]" />
@@ -393,7 +393,7 @@ export function StateOfAiCitations() {
   };
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] dark:border-zinc-800 bg-white dark:bg-zinc-900/20 overflow-hidden p-6 space-y-6">
+    <figure className="not-prose chart-card dark:border-zinc-800 dark:bg-zinc-900/20 p-6 space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h4 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] dark:text-zinc-200">
@@ -456,7 +456,7 @@ export function StateOfAiCitations() {
               isResNetHighlight 
                 ? 'bg-destructive/10 border-destructive text-destructive'
                 : 'bg-background border-border hover:border-foreground/50 text-muted-foreground hover:text-foreground'
-            }`}
+           }`}
           >
             {isResNetHighlight ? 'Reset Slider' : 'Trigger ResNet Outlier Node (221,202 citations)'}
           </button>

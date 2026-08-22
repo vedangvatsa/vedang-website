@@ -21,7 +21,7 @@ export function ScarcitySpectrum() {
   };
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Scarcity Spectrum</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Where different resources sit between scarcity and abundance</p>
@@ -32,7 +32,7 @@ export function ScarcitySpectrum() {
               <div className="flex justify-between mb-1">
                 <span className={`text-sm font-medium ${colorMap[item.category]}`}>{item.name}</span>
               </div>
-              <div className="w-full h-3  from-[#f4f4f5] via-[#f7f6f3] to-[#e4e4e7] rounded-md overflow-hidden relative">
+              <div className="w-full h-3 from-[#f4f4f5] via-[#f7f6f3] to-[#e4e4e7] rounded-md overflow-hidden relative">
                 <div
                   className="absolute top-0 h-full w-1.5 rounded-full bg-[#37352f]"
                   style={{ left: `${item.position}%` }}
@@ -65,7 +65,7 @@ export function DataCenterEnergyChart() {
   const max = 1000;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Data Center Electricity Consumption</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Global TWh/year (IEA base case)</p>
@@ -109,7 +109,7 @@ export function TrainingCostChart() {
   const max = 1100;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Frontier Model Training Costs</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Estimated cost per training run (USD)</p>
@@ -160,7 +160,7 @@ export function MaterialConstraints() {
   };
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Material Constraints on Digital Abundance</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Physical inputs the "dematerialized" economy depends on</p>
@@ -169,10 +169,10 @@ export function MaterialConstraints() {
           <table className="w-full text-xs border-collapse min-w-[550px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Resource</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Demand trend</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Supply constraint</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Risk</th>
+                <th>Resource</th>
+                <th>Demand trend</th>
+                <th>Supply constraint</th>
+                <th>Risk</th>
               </tr>
             </thead>
             <tbody>
@@ -182,7 +182,7 @@ export function MaterialConstraints() {
                   <td className="py-2.5 px-2 text-[#18181b] font-semibold">{r.demand}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{r.supply}</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${riskColor[r.risk]} whitespace-nowrap`}>{r.risk}</span>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${riskColor[r.risk]}`}>{r.risk}</span>
                   </td>
                 </tr>
               ))}
@@ -211,7 +211,7 @@ export function PlatformConcentration() {
   const maxCap = 5;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Platform Concentration</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Market cap ($T) of companies controlling AI infrastructure, Mar 2026</p>
@@ -255,7 +255,7 @@ export function RealityCheckGrid() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Empirical Reality Check</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Global scarcity in 2024, by the numbers</p>
@@ -292,7 +292,7 @@ export function DualEconomyFramework() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-center text-[#37352f]">The Dual Economy</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold text-center">Modern economies run on both logics simultaneously</p>

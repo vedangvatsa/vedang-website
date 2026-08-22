@@ -13,7 +13,7 @@ export function GodProtocolComparison() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Approximating the God Protocol</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How closely each system approaches Szabo&apos;s ideal TTP</p>
@@ -71,7 +71,7 @@ export function TTPEvolutionTimeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Path Toward the God Protocol</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">28 years of building trustless infrastructure</p>
@@ -110,7 +110,7 @@ export function PrivacyTechStack() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Privacy Technology Stack</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Closing the confidentiality gap in the God Protocol</p>
@@ -158,7 +158,7 @@ export function TTPMarketScale() {
   const maxLog = Math.log10(28);
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Trusted Third Party Market</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Traditional intermediaries vs. cryptographic replacements (log scale)</p>
@@ -205,7 +205,7 @@ export function DistributedArchitectureChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Distributed God Protocol Architecture</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">No single entity possesses all properties. The network does.</p>
@@ -245,7 +245,7 @@ export function AlignmentFrameworkChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Alignment Problem as Ethics Selection</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Each framework produces a different &quot;God&quot;</p>

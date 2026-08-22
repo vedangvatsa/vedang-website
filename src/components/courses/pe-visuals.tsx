@@ -3,7 +3,7 @@
 /* ─── Module 1: Prediction Engine ─── */
 export function PredictionEngine() {
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Weak vs Strong Prompts</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Constraints narrow the prediction space, producing better output</p>
@@ -33,7 +33,7 @@ export function CoreTechniques() {
     { title: 'Role / Persona', desc: 'Assign the AI an expert identity to shift tone and depth of response.', example: '"You are a senior data scientist..."', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Core Prompting Techniques</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">The three foundational patterns for any AI interaction</p>
@@ -62,7 +62,7 @@ export function AdvancedReasoning() {
     { title: 'Tree of Thought', desc: 'AI explores multiple reasoning branches in parallel, evaluates each, and picks the best path.', trigger: '"Consider 3 approaches, evaluate, choose best"', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Reasoning Strategies</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Force the AI to reason before it answers</p>
@@ -93,7 +93,7 @@ export function CodePrompting() {
     { title: 'Refactor by Intent', desc: 'Give the AI the outcome you want, not the mechanics.', example: '"Make this function more readable" or "Split into smaller functions"', color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Code Prompting Patterns</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">How to get the best code output from AI</p>
@@ -123,7 +123,7 @@ export function BestPractices() {
     { title: 'Set Constraints', desc: 'Tell the AI what NOT to do. Anti-instructions prevent bloat and hallucination.', anti: 'Never leave the output format undefined' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Prompt Engineering Best Practices</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Rules that apply to every prompt, every time</p>
@@ -152,7 +152,7 @@ export function RAGPipeline() {
     { num: '5', label: 'Generate', desc: 'LLM generates answer grounded in the retrieved context', color: '#ef4444' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">RAG Pipeline</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Retrieval-Augmented Generation: ground AI answers in your data</p>
@@ -188,7 +188,7 @@ export function PromptChaining() {
     { type: 'step', label: 'Step 3: Polish', desc: 'Refine language, add formatting, finalize output', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Prompt Chaining</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Output of each step becomes input for the next</p>
@@ -224,7 +224,7 @@ export function ModelComparison() {
     { name: 'Llama 3.3 70B', context: '128K', strengths: 'Open source, self-hosted, free', cost: 'Free (local compute)', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Model Comparison</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Frontier models and their trade-offs for prompt engineering</p>
@@ -262,7 +262,7 @@ export function PromptAnatomy() {
     { name: 'Constraints', desc: 'Boundaries and restrictions', example: '"Do not modify the public API surface"', color: '#ef4444' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Anatomy of a High-Quality Prompt</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Five components that separate effective prompts from vague instructions</p>
@@ -289,7 +289,7 @@ export function ReasoningStrategies() {
     { name: 'Self-Reflection', when: 'Error correction, quality assurance', trigger: '"Review your answer and fix errors"', quality: 'High', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Reasoning Strategy Selection</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Which reasoning technique to use for different problem types</p>
@@ -306,7 +306,7 @@ export function ReasoningStrategies() {
                   <td className="px-2 py-2 font-bold" style={{ color: s.color }}>{s.name}</td>
                   <td className="px-2 py-2 text-muted-foreground">{s.when}</td>
                   <td className="px-2 py-2 font-mono text-muted-foreground">{s.trigger}</td>
-                  <td className="px-2 py-2"><span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: s.color + '15', color: s.color }}>{s.quality}</span></td>
+                  <td className="px-2 py-2"><span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: s.color + '15', color: s.color }}>{s.quality}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -327,7 +327,7 @@ export function CodePromptPatterns() {
     { pattern: 'Document', example: '"Add JSDoc to every function"', output: 'Inline documentation', color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Code Prompt Patterns</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Five patterns for effective code generation and manipulation</p>
@@ -354,7 +354,7 @@ export function PromptAntiPatterns() {
     { bad: 'Multi-task prompt', example: '"Fix the bug, add tests, and refactor"', fix: 'Split into 3 separate prompts, chain the results', color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Prompt Anti-Patterns</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Common mistakes and their corrections</p>
@@ -362,7 +362,7 @@ export function PromptAntiPatterns() {
           {antipatterns.map(a => (
             <div key={a.bad} className="rounded-[3px] border border-[#e3e3e0] p-3">
               <div className="flex items-center gap-2 mb-1.5">
-                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: a.color + '15', color: a.color }}>{a.bad}</span>
+                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: a.color + '15', color: a.color }}>{a.bad}</span>
               </div>
               <div className="grid grid-cols-2 gap-2">
                 <div className="text-[10px] rounded-[3px] bg-red-50 px-2.5 py-1.5"><span className="font-bold text-red-600">Bad: </span><span className="text-red-800/70 font-mono">{a.example}</span></div>
@@ -386,7 +386,7 @@ export function RAGArchitecture() {
     { step: 'Generate', desc: 'Pass retrieved chunks as context to the LLM', color: '#ef4444' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">RAG Pipeline Architecture</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Five-stage Retrieval-Augmented Generation flow</p>
@@ -420,7 +420,7 @@ export function ChainTypes() {
     { name: 'Recursive', desc: 'Output triggers re-evaluation until quality threshold met', example: 'Write -> review -> rewrite loop', complexity: 'High', color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Prompt Chain Architectures</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Four patterns for chaining multiple LLM calls together</p>
@@ -430,7 +430,7 @@ export function ChainTypes() {
               <span className="text-xs font-bold min-w-[90px]" style={{ color: c.color }}>{c.name}</span>
               <span className="text-[10px] text-muted-foreground flex-1">{c.desc}</span>
               <span className="text-[9px] font-mono text-muted-foreground/60 hidden md:block">{c.example}</span>
-              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: c.color + '15', color: c.color }}>{c.complexity}</span>
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: c.color + '15', color: c.color }}>{c.complexity}</span>
             </div>
           ))}
         </div>

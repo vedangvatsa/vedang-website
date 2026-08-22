@@ -54,7 +54,7 @@ const PER_PAGE = 200;
 const PAGES_PER_QUERY = 6; // 200 * 6 = 1200 per query, 20 queries = 24,000 max
 
 async function fetchPage(query, page) {
-  const url = `https://api.openalex.org/works?search=${encodeURIComponent(query)}&filter=from_publication_date:2022-01-01,type:article&per_page=${PER_PAGE}&page=${page}&select=id,title,publication_date,primary_location,authorships&sort=cited_by_count:desc&mailto=vedang@veda.ng`;
+  const url = `https://api.openalex.org/works?search=${encodeURIComponent(query)}&filter=from_publication_date:2022-01-01,type:article&per_page=${PER_PAGE}&page=${page}&select=id,title,publication_date,primary_location,authorships&sort=cited_by_count:desc&mailto=vatsvedang@gmail.com`;
   
   try {
     const res = await fetch(url);

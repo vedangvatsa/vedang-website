@@ -1,0 +1,16 @@
+export const SITE_URL = 'https://veda.ng';
+export const SITE_NAME = 'Vedang Vatsa';
+export const ORG_NAME = 'Hashtag Web3';
+export const CONTACT_EMAIL = 'vatsvedang@gmail.com';
+export const CONTACT_MAILTO = `mailto:${CONTACT_EMAIL}`;
+export const MEETING_PATH = '/meeting';
+export const MEETING_URL = `${SITE_URL}${MEETING_PATH}`;
+export const MCP_ENDPOINT = `${SITE_URL}/.well-known/mcp`;
+export const OPENAPI_URL = `${SITE_URL}/openapi.json`;
+export const DEVELOPERS_URL = `${SITE_URL}/developers`;
+export const LLMSTXT_URL = `${SITE_URL}/llms.txt`;
+export const LLMSFULLTXT_URL = `${SITE_URL}/llms-full.txt`;
+export const SITEMAP_URL = `${SITE_URL}/sitemap.xml`;
+export const RSS_URL = `${SITE_URL}/feed.xml`;
+export const AUTHOR_NAME = 'Vedang Vatsa';
+export const AUTHOR_URL = `${SITE_URL}/profile`;

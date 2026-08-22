@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { ChartCard } from './chart-card';
 
 /* ─── Web Evolution Timeline ─── */
 export function WebEvolutionTimeline() {
@@ -12,7 +13,7 @@ export function WebEvolutionTimeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Four Phases of the Web</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold">Each era introduced a new verb</p>
@@ -30,7 +31,7 @@ export function WebEvolutionTimeline() {
                       isLast
                         ? 'bg-[#18181b] border-[#18181b] text-white shadow-md shadow-primary/20'
                         : 'bg-[#37352f] border-[#37352f] text-white'
-                    }`}
+                   }`}
                   >
                     {e.verb}
                   </div>
@@ -58,7 +59,7 @@ export function MCPAdoptionChart() {
   const maxD = 100;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">MCP Adoption</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Monthly SDK downloads (millions)</p>
@@ -104,7 +105,7 @@ export function TaskHorizonChart() {
   const max = 480;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">AI Agent Task Horizon</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Complexity of tasks agents can complete autonomously (50% success rate)</p>
@@ -147,7 +148,7 @@ export function ProtocolStackDiagram() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Agentic Web Protocol Stack</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold">Five layers from user intent to final settlement</p>
@@ -186,7 +187,7 @@ export function IndustryAdoptionChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">AI Agent Adoption by Industry</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">% of organizations with production agent deployments, Q1 2026</p>
@@ -228,7 +229,7 @@ export function AgentMarketChart() {
   const max = 75;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Market Size Projections</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold">AI agents market estimates by research firm</p>
@@ -285,41 +286,40 @@ export function SecurityThreatMatrix() {
   };
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
-      <div className="p-6 md:p-10">
-        <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Agent Security Threat Map</h3>
-        <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Known attack vectors and documented incidents, 2025-2026</p>
-
-        <div className="overflow-x-auto -mx-2">
-          <table className="w-full text-xs border-collapse min-w-[600px]">
-            <thead>
-              <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Threat</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider whitespace-nowrap">Severity</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Impact</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Real-world example</th>
-              </tr>
-            </thead>
-            <tbody>
-              {threats.map((t) => (
-                <tr key={t.name} className="border-b border-[#e3e3e0]/60">
-                  <td className="py-2.5 px-2 font-bold text-[#37352f]">{t.name}</td>
-                  <td className="py-2.5 px-2 whitespace-nowrap w-[1%]">
-                    <span className={`inline-block text-[10px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap ${severityColor[t.severity]}`}>{t.severity}</span>
-                  </td>
-                  <td className="py-2.5 px-2 text-[#37352f]/80">{t.impact}</td>
-                  <td className="py-2.5 px-2 text-muted-foreground">{t.example}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
+    <ChartCard
+      title="Agent Security Threat Map"
+      subtitle="Known attack vectors and documented incidents, 2025-2026"
+      footer={
         <p className="mt-4 text-[10px] text-muted-foreground/60">
           Sources: Anthropic disclosure (Nov 2025), RWNY security research (Jan 2026), SC World, Palo Alto Networks, Stellar Cyber. Examples are documented incidents, not hypothetical scenarios.
         </p>
+      }
+    >
+      <div className="overflow-x-auto -mx-2">
+        <table className="w-full text-xs border-collapse min-w-[600px]">
+          <thead>
+            <tr className="border-b-2 border-[#e3e3e0]">
+              <th>Threat</th>
+              <th>Severity</th>
+              <th>Impact</th>
+              <th>Real-world example</th>
+            </tr>
+          </thead>
+          <tbody>
+            {threats.map((t) => (
+              <tr key={t.name} className="border-b border-[#e3e3e0]/60">
+                <td className="py-2.5 px-2 font-bold text-[#37352f]">{t.name}</td>
+                <td className="py-2.5 px-2 w-[1%]">
+                  <span className={`inline-block text-[10px] font-bold px-1.5 py-0.5 rounded ${severityColor[t.severity]}`}>{t.severity}</span>
+                </td>
+                <td className="py-2.5 px-2 text-[#37352f]/80">{t.impact}</td>
+                <td className="py-2.5 px-2 text-muted-foreground">{t.example}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
-    </figure>
+    </ChartCard>
   );
 }
 
@@ -336,7 +336,7 @@ export function AgentVsChatbot() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Chatbot vs. Agent</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">The distinction that changes what software can do for you</p>
@@ -345,9 +345,9 @@ export function AgentVsChatbot() {
           <table className="w-full text-xs border-collapse min-w-[500px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider w-28">Dimension</th>
-                <th className="text-left py-2 px-2 font-bold text-muted-foreground uppercase tracking-wider">Chatbot</th>
-                <th className="text-left py-2 px-2 font-bold text-[#18181b] uppercase tracking-wider">Agent</th>
+                <th className="w-28">Dimension</th>
+                <th className="text-muted-foreground">Chatbot</th>
+                <th className="text-[#18181b]">Agent</th>
               </tr>
             </thead>
             <tbody>
@@ -406,7 +406,7 @@ export function InfrastructureOverview() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Infrastructure Overview</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold">Key players building the Agentic Web</p>

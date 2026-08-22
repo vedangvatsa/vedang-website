@@ -12,7 +12,7 @@ export function AIJobExposure() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">AI Employment Exposure</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Share of jobs exposed to AI, by economy type</p>
@@ -47,7 +47,7 @@ export function JobChurnChart() {
   const net = 78;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Labor Market Churn by 2030</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">WEF Future of Jobs Report 2025 (millions of jobs)</p>
@@ -89,7 +89,7 @@ export function EarlyCareerImpact() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Early-Career Employment Decline</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Relative decline for ages 22-25 in AI-exposed roles</p>
@@ -140,7 +140,7 @@ export function ProductivityParadox() {
   };
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The AI Productivity Paradox</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Where different analyses land on AI's economic impact</p>
@@ -149,9 +149,9 @@ export function ProductivityParadox() {
           <table className="w-full text-xs border-collapse min-w-[450px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Source</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Estimate</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Timeframe</th>
+                <th>Source</th>
+                <th>Estimate</th>
+                <th>Timeframe</th>
               </tr>
             </thead>
             <tbody>
@@ -159,7 +159,7 @@ export function ProductivityParadox() {
                 <tr key={v.source} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{v.source}</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${stanceColor[v.stance]} whitespace-nowrap`}>{v.estimate}</span>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${stanceColor[v.stance]}`}>{v.estimate}</span>
                   </td>
                   <td className="py-2.5 px-2 text-muted-foreground">{v.timeframe}</td>
                 </tr>
@@ -179,7 +179,7 @@ export function ProductivityParadox() {
 /* ─── Gender Impact Chart ─── */
 export function GenderImpact() {
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">AI Automation Risk by Gender</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">US workers in occupations at high risk of AI automation</p>
@@ -230,7 +230,7 @@ export function UBIPilotResults() {
   };
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">UBI Pilot Results</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Evidence from 160+ pilots across four decades</p>
@@ -239,10 +239,10 @@ export function UBIPilotResults() {
           <table className="w-full text-xs border-collapse min-w-[500px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Pilot</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Amount</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Finding</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Work impact</th>
+                <th>Pilot</th>
+                <th>Amount</th>
+                <th>Finding</th>
+                <th>Work impact</th>
               </tr>
             </thead>
             <tbody>
@@ -252,7 +252,7 @@ export function UBIPilotResults() {
                   <td className="py-2.5 px-2 text-[#18181b] font-semibold">{p.amount}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{p.finding}</td>
                   <td className="py-2.5 px-2">
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${outcomeColor[p.outcome]} whitespace-nowrap`}>
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${outcomeColor[p.outcome]}`}>
                       {p.outcome === 'positive' ? 'Positive' : 'Minimal'}
                     </span>
                   </td>

@@ -17,7 +17,7 @@ export function InfraFundingByLayer() {
   const max = 4200;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Venture Capital by Infrastructure Layer</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Combined funding into agent infrastructure companies, as of mid-2026</p>
@@ -54,7 +54,7 @@ export function SecurityConsolidation() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Agent Security: 18 Months of Acquisitions</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">3 of 4 pure-play agent security companies acquired since late 2024</p>
@@ -102,7 +102,7 @@ export function ComputeValuationTable() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Compute Layer</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Inference infrastructure companies by valuation, mid-2026</p>
@@ -111,17 +111,17 @@ export function ComputeValuationTable() {
           <table className="w-full text-xs border-collapse min-w-[550px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Company</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Valuation</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Capital</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Signal</th>
+                <th>Company</th>
+                <th>Valuation</th>
+                <th>Capital</th>
+                <th>Signal</th>
               </tr>
             </thead>
             <tbody>
               {companies.map((c) => (
                 <tr key={c.name} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{c.name}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">{c.metric}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{c.metric}</span></td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{c.detail}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/70">{c.notable}</td>
                 </tr>
@@ -151,7 +151,7 @@ export function AgentProductValuations() {
   const max = 28000;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Agent-as-Product: Who Ships Autonomous Agents</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Companies selling agents as finished products, by valuation (mid-2026)</p>
@@ -162,7 +162,7 @@ export function AgentProductValuations() {
               <div className="flex items-center justify-between mb-1">
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-bold text-[#37352f]">{d.name}</span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f]/60 font-medium whitespace-nowrap">{d.domain}</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f]/60 font-medium">{d.domain}</span>
                 </div>
                 <span className="text-xs font-bold text-[#37352f]">{d.label}</span>
               </div>
@@ -205,7 +205,7 @@ export function MarketplaceComposition() {
   const colors = ['#18181b', '#18181b', '#18181b', '#18181b', '#18181b', '#18181b', '#18181b', '#be185d', '#6b7280'];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Vercel Marketplace Composition</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">97+ integrations across 22 categories, distribution by type</p>
@@ -251,7 +251,7 @@ export function FundingVelocityChart() {
   const maxDeals = 55;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Agentic AI Funding Velocity</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Disclosed equity funding for pure-play agentic AI companies</p>
@@ -267,7 +267,7 @@ export function FundingVelocityChart() {
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-bold text-[#37352f]">{d.label}</span>
                   {d.annualized && (
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#52525b] font-medium whitespace-nowrap">{d.projectedLabel}</span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#52525b] font-medium">{d.projectedLabel}</span>
                   )}
                 </div>
               </div>
@@ -320,7 +320,7 @@ export function CapitalConcentrationChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Capital Concentration in Agentic AI</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Share of total capital by deal rank, Jan-May 2026</p>
@@ -376,7 +376,7 @@ export function TopInvestorsTable() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Most Active Investors in Agent Infrastructure</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Lead investors across the eight infrastructure layers, 2024-2026</p>
@@ -385,15 +385,15 @@ export function TopInvestorsTable() {
           <table className="w-full text-xs border-collapse min-w-[600px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Investor</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Focus</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Notable Agent Infra Deals</th>
+                <th>Investor</th>
+                <th>Focus</th>
+                <th>Notable Agent Infra Deals</th>
               </tr>
             </thead>
             <tbody>
               {investors.map((inv) => (
                 <tr key={inv.name} className="border-b border-[#e3e3e0]/60">
-                  <td className="py-2.5 px-2 font-bold text-[#37352f] whitespace-nowrap">{inv.name}</td>
+                  <td className="py-2.5 px-2 font-bold text-[#37352f]">{inv.name}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{inv.focus}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/70">{inv.deals}</td>
                 </tr>

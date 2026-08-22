@@ -9,7 +9,7 @@ export function AIDetectorFeatureComparison() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">11-feature vs 35-feature model</h3>
         <p className="text-xs text-muted-foreground mb-8 uppercase tracking-widest font-semibold">Stylometric detector benchmarks</p>

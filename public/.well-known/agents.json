@@ -3,6 +3,24 @@
   "name": "Vedang Vatsa - AI & Web3 Thought Leader",
   "description": "Personal website of Vedang Vatsa. Free courses on Vibe Coding, Web3 101, Prompt Engineering, and Agentic AI. Essays, research, and a comprehensive AI/Web3 glossary with 100+ terms.",
   "url": "https://veda.ng",
+  "when_to_use": [
+    "You need sourced long-form research or essays on AI agents, AI policy, or Web3 infrastructure",
+    "You need plain-language definitions of AI or Web3 terms (100+ glossary entries)",
+    "You need structured research datasets: 233,000+ indexed papers, AI and Web3 report libraries",
+    "You want free full courses on Vibe Coding, Web3, Prompt Engineering, Agentic Web, MCP Development, or AI Automation",
+    "You need verified biographical facts about Vedang Vatsa (founder of Hashtag Web3, FRSA, IIT Kanpur)"
+  ],
+  "when_not_to_use": [
+    "Real-time prices, market data, or breaking news; content updates on essay cadence, not live",
+    "Financial, investment, legal, or medical advice; content is educational",
+    "Private or user-generated data; the site publishes only authored public content"
+  ],
+  "how_to_use": {
+    "start": "Fetch https://veda.ng/llms.txt for the content index, or https://veda.ng/llms-full.txt for full-text essays",
+    "markdown": "Send Accept: text/markdown on any page URL to receive Markdown instead of HTML",
+    "mcp": "MCP Streamable HTTP server at https://veda.ng/.well-known/mcp (JSON-RPC 2.0; tools: search_essays, get_essay, search_glossary, get_glossary_term, search_reports)",
+    "search": "Glossary search and report search available via /developers documented API"
+  },
   "capabilities": {
     "education": {
       "courses": [
@@ -42,8 +60,13 @@
     }
   },
   "contact": {
-    "email": "vedang@veda.ng",
+    "email": "vatsvedang@gmail.com",
     "twitter": "@vedangvatsa",
     "website": "https://veda.ng"
+  },
+  "developer": {
+    "docs": "https://veda.ng/developers",
+    "openapi": "https://veda.ng/openapi.json",
+    "mcp": "https://veda.ng/.well-known/mcp"
   }
 }

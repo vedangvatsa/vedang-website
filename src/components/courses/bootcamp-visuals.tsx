@@ -8,7 +8,7 @@ export function AIToolsOverview() {
     { name: 'Agents', desc: 'AI that takes actions for you', tools: 'Claude Code, Cursor, Devin', icon: '🤖', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Three Types of AI Tools</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Know what each one does before picking</p>
@@ -41,7 +41,7 @@ export function AICategoryMap() {
     { num: '7', name: 'Decision Support', example: 'Risk scoring, pricing optimization, demand prediction', color: '#06b6d4' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">7 Categories of AI Applications</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Where AI creates real value for organizations</p>
@@ -67,7 +67,7 @@ export function BoringNicheFramework() {
     { niche: 'Restaurant menus', pain: 'Update across 5 platforms manually', ai: 'Change once, sync everywhere + auto-translate', score: '7/10' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Boring Niche + AI Framework</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">The best AI startups solve boring problems really well</p>
@@ -101,20 +101,20 @@ export function BoringNicheFramework() {
 /* ─── Day 2: Position Statement Template ─── */
 export function PositionStatement() {
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Position Statement</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Fill this in before writing a single line of code</p>
         <div className="rounded-[3px] border-2 border-blue-300 bg-blue-50/30 p-5 font-mono text-sm leading-relaxed text-[#37352f]">
-          <span className="text-muted-foreground">For </span><span className="bg-blue-100 px-1.5 py-0.5 rounded font-bold text-blue-700 whitespace-nowrap">[WHO]</span>
-          <span className="text-muted-foreground">, who </span><span className="bg-amber-100 px-1.5 py-0.5 rounded font-bold text-amber-700 whitespace-nowrap">[PAIN]</span>
+          <span className="text-muted-foreground">For </span><span className="bg-blue-100 px-1.5 py-0.5 rounded font-bold text-blue-700">[WHO]</span>
+          <span className="text-muted-foreground">, who </span><span className="bg-amber-100 px-1.5 py-0.5 rounded font-bold text-amber-700">[PAIN]</span>
           <span className="text-muted-foreground">,</span><br />
-          <span className="bg-emerald-100 px-1.5 py-0.5 rounded font-bold text-emerald-700 whitespace-nowrap">[PRODUCT]</span>
-          <span className="text-muted-foreground"> is a </span><span className="bg-purple-100 px-1.5 py-0.5 rounded font-bold text-purple-700 whitespace-nowrap">[CATEGORY]</span>
-          <span className="text-muted-foreground"> that </span><span className="bg-emerald-100 px-1.5 py-0.5 rounded font-bold text-emerald-700 whitespace-nowrap">[KEY BENEFIT]</span>
+          <span className="bg-emerald-100 px-1.5 py-0.5 rounded font-bold text-emerald-700">[PRODUCT]</span>
+          <span className="text-muted-foreground"> is a </span><span className="bg-purple-100 px-1.5 py-0.5 rounded font-bold text-purple-700">[CATEGORY]</span>
+          <span className="text-muted-foreground"> that </span><span className="bg-emerald-100 px-1.5 py-0.5 rounded font-bold text-emerald-700">[KEY BENEFIT]</span>
           <span className="text-muted-foreground">.</span><br />
-          <span className="text-muted-foreground">Unlike </span><span className="bg-red-100 px-1.5 py-0.5 rounded font-bold text-red-700 whitespace-nowrap">[ALTERNATIVE]</span>
-          <span className="text-muted-foreground">, it </span><span className="bg-emerald-100 px-1.5 py-0.5 rounded font-bold text-emerald-700 whitespace-nowrap">[DIFFERENTIATOR]</span>
+          <span className="text-muted-foreground">Unlike </span><span className="bg-red-100 px-1.5 py-0.5 rounded font-bold text-red-700">[ALTERNATIVE]</span>
+          <span className="text-muted-foreground">, it </span><span className="bg-emerald-100 px-1.5 py-0.5 rounded font-bold text-emerald-700">[DIFFERENTIATOR]</span>
           <span className="text-muted-foreground">.</span>
         </div>
         <div className="mt-4 rounded-[3px] bg-[#f7f6f3] px-4 py-2.5">
@@ -135,7 +135,7 @@ export function SecurityHoles() {
     { num: '5', hole: 'No auth on admin routes', risk: 'Anyone who guesses /admin can access everything', fix: 'Add authentication check on every protected route', color: '#ef4444' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">5 Security Holes in Every Vibe-Coded App</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Know these before you write a single line of code</p>
@@ -167,7 +167,7 @@ export function ToolDecisionTree() {
     { question: 'Terminal or IDE?', no: 'Cursor - VS Code with AI built in', yes: 'Claude Code - terminal-based, autonomous', color: '#10b981' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">Pick Your Tool</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Answer three questions, get your starting weapon</p>
@@ -208,7 +208,7 @@ export function MultiModalStack() {
     { mode: 'Music', tools: 'Suno, Udio', cost: '~$0.05/song', best: 'Background music, jingles', color: '#ec4899' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Multi-Modal AI Stack</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Five modalities you can wire into your app today</p>
@@ -249,7 +249,7 @@ export function DesignChecklist() {
     { rule: 'Mobile first', bad: 'Desktop-only layout', good: 'Design for phone, scale up to desktop', color: '#ef4444' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The 5-Minute Design Upgrade</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Five changes that make any app look professional</p>
@@ -280,7 +280,7 @@ export function ShipStack() {
     { layer: 'Analytics', tool: 'PostHog / Plausible', what: 'Privacy-friendly, see what users do', color: '#ec4899' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Ship Stack</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Everything you need to go from localhost to production</p>
@@ -312,7 +312,7 @@ export function GrowthChannels() {
     { channel: 'Word of Mouth', effort: '0 min', reach: 'Highest quality', tip: 'Ask every tester to invite one friend. That is it.', color: '#8b5cf6' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">5 Channels to Get Your First 25 Users</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Ranked by effort vs reach for solo founders</p>
@@ -321,8 +321,8 @@ export function GrowthChannels() {
             <div key={c.channel} className="rounded-[3px] border border-[#e3e3e0] px-4 py-2.5" style={{ borderLeftWidth: '3px', borderLeftColor: c.color }}>
               <div className="flex items-center gap-3 mb-1">
                 <span className="text-xs font-bold min-w-[110px]" style={{ color: c.color }}>{c.channel}</span>
-                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-muted-foreground whitespace-nowrap">{c.effort}</span>
-                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap" style={{ backgroundColor: c.color + '12', color: c.color }}>{c.reach}</span>
+                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-muted-foreground">{c.effort}</span>
+                <span className="text-[9px] font-bold px-1.5 py-0.5 rounded" style={{ backgroundColor: c.color + '12', color: c.color }}>{c.reach}</span>
               </div>
               <p className="text-[10px] text-muted-foreground">{c.tip}</p>
             </div>
@@ -342,7 +342,7 @@ export function PricingModels() {
     { model: 'One-time', example: '$49 lifetime', when: 'Simple tool, clear scope', pros: 'Easy sell, no churn', cons: 'No recurring revenue', color: '#f59e0b' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">4 Pricing Models for AI Apps</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Pick one. You can change it later.</p>
@@ -371,7 +371,7 @@ export function PricingModels() {
 /* ─── Day 7: Ramen Profitable Calculator ─── */
 export function RamenMath() {
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The Ramen Profitable Math</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">From Paul Graham - the minimum to keep building</p>
@@ -415,7 +415,7 @@ export function PitchDeckStructure() {
     { num: '10', slide: 'Ask', tip: 'How much. What for. Be specific.', time: '15s', color: '#ef4444' },
   ];
   return (
-    <figure className="not-prose my-8 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card chart-card--sm">
       <div className="p-5 md:p-8">
         <h3 className="text-base md:text-lg font-bold tracking-tight mb-0.5 text-[#37352f]">The 10-Slide Pitch Deck</h3>
         <p className="text-[11px] text-muted-foreground mb-5 uppercase tracking-widest font-semibold">Sequoia format - fits in a 5-minute pitch</p>

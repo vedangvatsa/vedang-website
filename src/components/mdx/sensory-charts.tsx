@@ -14,7 +14,7 @@ export function SensoryBandwidthChart() {
   const max = 10000000;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Human Sensory Bandwidth</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">~11 million bits per second across all channels</p>
@@ -59,7 +59,7 @@ export function HapticGenerationsChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Three Generations of Haptic Technology</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">From binary vibration to spatial force feedback</p>
@@ -101,7 +101,7 @@ export function SpatialComputingAdoption() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Spatial Computing Hardware Adoption</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Premium vs. accessible strategies, 2024-2025</p>
@@ -148,7 +148,7 @@ export function BCIMarketChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Brain-Computer Interface Market</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">$2.3-3B market (2025), projected $13-15B by 2035</p>
@@ -183,7 +183,7 @@ export function SensoryStackTimeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Sensory Internet Timeline</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">From text to full neural bandwidth</p>
@@ -225,7 +225,7 @@ export function PresenceThresholdChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Presence Threshold Progress</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How close each requirement is to the perceptual threshold</p>
@@ -271,7 +271,7 @@ export function SensoryStackTable() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Sensory Internet Stack</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Current state → near-term (2028-2030) → long-term (2035+)</p>
@@ -287,7 +287,7 @@ export function SensoryStackTable() {
             {layers.map((l) => (
               <div key={l.layer} className="grid grid-cols-[90px_1fr_1fr_1fr] gap-2 border-t border-[#e3e3e0] py-2 items-center">
                 <span className="text-[11px] font-bold" style={{ color: l.color }}>{l.layer}</span>
-                <span className="text-[10px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1.5 rounded-md whitespace-nowrap">{l.current}</span>
+                <span className="text-[10px] text-muted-foreground text-center bg-[#f7f6f3] px-2 py-1.5 rounded-md">{l.current}</span>
                 <span className="text-[10px] text-center px-2 py-1.5 rounded-md" style={{ backgroundColor: '#f4f4f5' }}>{l.nearTerm}</span>
                 <span className="text-[10px] text-center px-2 py-1.5 rounded-md font-medium" style={{ backgroundColor: '#f4f4f5', color: '#3f3f46' }}>{l.longTerm}</span>
               </div>

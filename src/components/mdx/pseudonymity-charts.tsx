@@ -11,7 +11,7 @@ export function IdentitySpectrumChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Identity Spectrum</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Anonymity → Pseudonymity → Identity: tradeoffs at each level</p>
@@ -58,7 +58,7 @@ export function PseudonymousSuccessCases() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Pseudonymous Success Cases</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Building value without identity disclosure</p>
@@ -99,7 +99,7 @@ export function ReputationInfraChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Pseudonymous Reputation Infrastructure</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Building trust without revealing identity</p>
@@ -141,7 +141,7 @@ export function ParticipationExpansionChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Who Pseudonymity Unlocks</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Participation expansion for groups excluded by identity disclosure</p>
@@ -178,7 +178,7 @@ export function DecentralizedIdentityMarket() {
   const max = 45;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Decentralized Identity Market</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">From $1.2B (2023) to $45B+ projected (2030), ~50% CAGR</p>

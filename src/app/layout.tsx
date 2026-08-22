@@ -118,6 +118,17 @@ const organizationSchema = {
     name: 'Vedang Vatsa',
     url: 'https://veda.ng',
   },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'vatsvedang@gmail.com',
+    contactType: 'customer support',
+    url: 'https://veda.ng/meeting',
+    availableLanguage: ['English'],
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'SG',
+  },
 };
 
 const personSchema = {

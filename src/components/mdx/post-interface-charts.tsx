@@ -14,7 +14,7 @@ export function ApiTrafficChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Global Internet Traffic Composition</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Human browser traffic vs machine-to-machine API traffic</p>
@@ -96,7 +96,7 @@ export function ZeroUIMarketMap() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Zero-UI market map</h3>
         <p className="text-xs text-muted-foreground mb-6">Five layers where money is moving as the frontend shrinks</p>
@@ -139,7 +139,7 @@ export function SaaSPricingShift() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">SaaS Pricing Model Transition</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">How software monetization shifts in the post-interface era</p>
@@ -148,18 +148,18 @@ export function SaaSPricingShift() {
           <table className="w-full text-xs border-collapse min-w-[500px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Pricing model</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Legacy web</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Agent web</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Why</th>
+                <th>Pricing model</th>
+                <th>Legacy web</th>
+                <th>Agent web</th>
+                <th>Why</th>
               </tr>
             </thead>
             <tbody>
               {models.map((m) => (
                 <tr key={m.model} className="border-b border-[#e3e3e0]/60">
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{m.model}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f] whitespace-nowrap">{m.legacy}</span></td>
-                  <td className="py-2.5 px-2"><span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${m.agentic === 'Dominant' || m.agentic === 'Emerging' || m.agentic === 'Growing' ? 'bg-[#f4f4f5] text-[#18181b]' : 'bg-[#f4f4f5] text-[#18181b]'} whitespace-nowrap`}>{m.agentic}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f7f6f3] text-[#37352f]">{m.legacy}</span></td>
+                  <td className="py-2.5 px-2"><span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${m.agentic === 'Dominant' || m.agentic === 'Emerging' || m.agentic === 'Growing' ? 'bg-[#f4f4f5] text-[#18181b]' : 'bg-[#f4f4f5] text-[#18181b]'}`}>{m.agentic}</span></td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{m.reason}</td>
                 </tr>
               ))}
@@ -186,7 +186,7 @@ export function AttentionCollapseChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Attention Economy Collapse</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Legacy marketing metrics in a Zero-UI world (projected)</p>
@@ -195,10 +195,10 @@ export function AttentionCollapseChart() {
           <table className="w-full text-xs border-collapse min-w-[460px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Metric</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Visual web</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Agent web</th>
-                <th className="text-left py-2 px-2 font-bold text-[#37352f] uppercase tracking-wider">Change</th>
+                <th>Metric</th>
+                <th>Visual web</th>
+                <th>Agent web</th>
+                <th>Change</th>
               </tr>
             </thead>
             <tbody>
@@ -207,7 +207,7 @@ export function AttentionCollapseChart() {
                   <td className="py-2.5 px-2 font-bold text-[#37352f]">{m.metric}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{m.before}</td>
                   <td className="py-2.5 px-2 text-[#37352f]/80">{m.after}</td>
-                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b] whitespace-nowrap">{m.decline}</span></td>
+                  <td className="py-2.5 px-2"><span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[#f4f4f5] text-[#18181b]">{m.decline}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -236,7 +236,7 @@ export function GUITimeline() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Interface Arc: 1973-2028</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">From the first GUI to Zero-UI</p>
@@ -297,7 +297,7 @@ export function FrontendDeclineChart() {
   const max = 340;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Capital Reallocation</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Directional hiring trends across the industry (illustrative, indexed to 2024 = 100)</p>
@@ -344,7 +344,7 @@ export function HardwarePivotGrid() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Hardware Pivot</h3>
         <p className="text-xs text-muted-foreground mb-4 uppercase tracking-widest font-semibold">Smartphone era vs Ambient computation era</p>

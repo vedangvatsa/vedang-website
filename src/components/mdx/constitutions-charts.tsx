@@ -14,7 +14,7 @@ export function GovernanceEffectivenessChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Where Computational Constitutions Work</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Effectiveness by decision type: code vs. human governance</p>
@@ -68,7 +68,7 @@ export function DAOVoterParticipation() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">DAO Voter Participation (2025)</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Average voter turnout across major governance DAOs</p>
@@ -113,7 +113,7 @@ export function VotingMechanismChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">Voting Mechanism Innovation</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Beyond one-token-one-vote: the governance design space</p>
@@ -152,7 +152,7 @@ export function GovernanceStackChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Governance Stack</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Five layers of on-chain constitutional governance</p>

@@ -52,9 +52,9 @@ Do not use these unless quoting a source or the user explicitly asks.
 
 ### High-frequency AI words
 
-delve, tapestry, pivotal, vibrant, meticulous, landscape (metaphorical), testament, underscore, intricate, interplay, garner, bolster, foster, showcase, emphasize, enduring, crucial, enhance, highlighting, renowned, groundbreaking, profound, comprehensive, multifaceted, leverage, utilize, facilitate, encompasses, spearhead, harness, elevate, streamline, robust, seamless, holistic, synergy, paradigm, ecosystem (metaphorical), supercharge, embark, paramount, transformative, cutting-edge, game-changer, ever-evolving, empower, realm, beacon, paradigm shift, elucidate, endeavor, myriad, plethora, catalyze, resonate, navigate (metaphorical), cultivate, galvanize, cornerstone, scalable (as hype), optimize (as hype), innovative, nestled, bustling, unwavering, compelling (as filler), nuanced (as filler), intricate tapestry, rich tapestry, deep dive, unpack, unpacking, landscape of, world of, age of, journey (metaphorical career/product arcs), unlock, unleash, reimagine, revolutionize, game changing, next-generation, world-class, enterprise-grade, best-in-class, cutting edge, state-of-the-art, thought-provoking, invaluable, shed light, pave the way, at the intersection, beacon of, tapestry of, indelible, emblematic, noteworthy, multifaceted landscape, evolving landscape, key turning point, focal point, deeply rooted, diverse array, natural beauty, rich cultural heritage, commitment to, valuable insights, align with (as hype), in the heart of, nestled in, stands as a, serves as a testament
+delve, tapestry, pivotal, vibrant, meticulous, landscape (metaphorical), testament, underscore, intricate, interplay, garner, bolster, foster, showcase, emphasize, enduring, crucial, enhance, highlighting, renowned, groundbreaking, profound, comprehensive, multifaceted, leverage, utilize, facilitate, encompasses, spearhead, harness, elevate, streamline, robust, seamless, holistic, synergy, paradigm, ecosystem (metaphorical), supercharge, embark, paramount, transformative, cutting-edge, game-changer, ever-evolving, empower, realm, beacon, paradigm shift, elucidate, endeavor, myriad, plethora, catalyze, resonate, navigate (metaphorical), cultivate, galvanize, cornerstone, scalable (as hype), optimize (as hype), innovative, nestled, bustling, unwavering, compelling (as filler), nuanced (as filler), intricate tapestry, rich tapestry, deep dive, unpack, unpacking, landscape of, world of, age of, journey (metaphorical career/product arcs), unlock, unleash, reimagine, revolutionize, game changing, next-generation, world-class, enterprise-grade, best-in-class, cutting edge, state-of-the-art, thought-provoking, invaluable, shed light, pave the way, at the intersection, beacon of, tapestry of, indelible, emblematic, noteworthy, multifaceted landscape, evolving landscape, key turning point, focal point, deeply rooted, diverse array, natural beauty, rich cultural heritage, commitment to, valuable insights, align with (as hype), in the heart of, nestled in, stands as a, serves as a testament, commence, aforementioned, pain points, value add / value proposition (as filler), rest assured, buckle up, bridge the gap, take it to the next level, in a nutshell, the bottom line is, frictionless (as hype), quietly (as magic significance adverb), arguably (as fake authority)
 
-Prefer plain swaps: delve → look at; leverage → use; robust → strong; showcase → show; facilitate → help; utilize → use; comprehensive → full / complete; seamless → smooth only if true.
+Prefer plain swaps: delve → look at; leverage → use; robust → strong; showcase → show; facilitate → help; utilize → use; comprehensive → full / complete; seamless → smooth only if true; commence → start; bridge the gap → connect / fix the miss.
 
 ### Banned phrases
 
@@ -124,6 +124,26 @@ Prefer plain swaps: delve → look at; leverage → use; robust → strong; show
 - "low-hanging fruit"
 - "move the needle" / "at the end of the day" (already banned variant)
 - "circle back" / "synergize" / "touch base" as business cosplay
+- "Full stop." / "Period." / "Let that sink in." / "Make no mistake"
+- "This matters because" / "Here's why that matters" / "This matters."
+- "X is a feature, not a bug" as canned wit
+- "Hint:" / "Plot twist:" / "Spoiler:" as section costume
+- "You already know this, but" / "They exist, I promise"
+- "This is genuinely hard" / "This is what X actually looks like" (announce difficulty; do not show it)
+- "The reasons are structural" / "The implications are significant" / "The stakes are high" / "The consequences are real" without naming them
+- "lean into" / "double down" / "take a step back" as business theater
+- "that being said"
+- "I hope this finds you well" / "Please don't hesitate to reach out" / "As per my last email"
+- "Buckle up" / "Thread:" / "🧵" openers
+- "The real question is" / "what really matters" / "the deeper issue" / "the heart of the matter" as fake revelation
+- "History is clear/unambiguous" / "The truth is simple" / "The reality is simpler" without proof
+- "will define the next decade/era" / "changes everything" / "this is huge" / "this changes everything"
+- "Imagine a world where..." / "Think of it as..." / "Think of it like..." as default pedagogy
+- "And yes, I'm openly..." / "since we're being honest:" as polished fake vulnerability
+- "A tempting approach would be... but" / "One might be tempted to..." when no reader would try that option
+- "This isn't mainly about..." / "I'm not saying..." / "Don't get me wrong" answering objections nobody raised
+- "X is the Y of Z" / "X becomes a trap" / "X is not a tool but a mirror" formulaic sayings
+- "the language of" / "the currency of" / "the architecture of" as ornamental abstract frames
 
 ### Banned openers
 
@@ -136,45 +156,70 @@ Do not start with:
 - "However, it's important to..."
 - "Moreover," / "Furthermore," / "Additionally," / "Interestingly," / "Notably," / "Importantly," / "Indeed,"
 - "In today's..." / "In a world where..."
+- "Look," / "Honestly?" / "Real talk," / "The thing is," as fake-candid hooks before an ordinary point
+- "As [role], I..." credential theater before the claim
+- Model first-word tics as response openers: stacking "Certainly/Sure/Here/Based/Creating/Yes/Title/Step/Comprehensive" as the default first token
 
 ### Empty adverbs and hedges
 
-Cut unless they change meaning: just, literally, honestly, simply, actually, truly, fundamentally, importantly, crucially, inherently, inevitably, essentially, basically, significantly (as padding).
+Cut unless they change meaning: just, literally, honestly, simply, actually, truly, fundamentally, importantly, crucially, inherently, inevitably, essentially, basically, significantly (as padding), genuinely, deeply, structurally, remarkably, arguably (as padding).
 
 Avoid hedge chains: can / may / might / could potentially / it's possible that stacked together. State the claim or say you do not know.
+
+Keep "I think," "maybe," or "to be honest" when they express real uncertainty or the writer's spoken rhythm, not when they soften a claim that should be clear.
 
 ---
 
 ## 2. Structural writing patterns to cut
 
-- **Binary contrast theater:** "This is not X. It's Y." State Y.
-- **Throat-clearing:** "Here's the thing", "I'll be honest", "The uncomfortable truth is".
-- **Faux-insight setups:** "What most people get wrong", "Nobody talks about".
-- **Colon-reveal drama:** "The detail that makes it work: ..." Use a normal sentence.
+- **Binary contrast theater:** "This is not X. It's Y." State Y. Same family: "Not because X. Because Y." / "The answer isn't X. It's Y." / "It feels like X. It's actually Y." / "stops being X and starts being Y."
+- **Throat-clearing:** "Here's the thing", "I'll be honest", "The uncomfortable truth is", "Here is the tension", "There is a failure mode worth naming".
+- **Faux-insight setups:** "What most people get wrong", "Nobody talks about", "Here's the kicker", "Here's where it gets interesting".
+- **Colon-reveal drama:** "The detail that makes it work: ..." Use a normal sentence. Mid-sentence colons used as connectors ("If you're coming from X: instead of Y...") are the same tell; rewrite without the comparison frame.
 - **Trailing -ing puff:** "..., highlighting X while underscoring Y".
 - **Weasel attribution:** "Experts agree". Name who or cut.
 - **Fake-strong verbs:** "serves as", "stands as", "boasts", "acts as". Prefer is / has / does.
 - **Synonym cycling / elegant variation:** do not rotate agent/assistant/tool for the same thing.
 - **Negative listing:** "Not X. Not Y. A Z."
-- **Dramatic fragments:** "X. And Y. And Z." used as style.
-- **Robotic rhythm:** same sentence shape paragraph after paragraph.
-- **Rhetorical bait:** "What if I told you", "Think about it:".
+- **Dramatic fragments:** "X. And Y. And Z." used as style. Also "X. That's it. That's the [thing]."
+- **Parataxis stacks:** short sentence. Then another. Then another. with no connective tissue. Merge related thoughts; show causation, contrast, or qualification.
+- **Demonstrative kickers:** "That instinct backfires." / "This is where the risk hides." / "That is the whole point." tacked after a sentence that already made the claim. Cut or fold in.
+- **Self-posed Q&A:** "The result? Devastating." / "The worst part? Nobody saw it coming." Ask only if the question breathes; otherwise state the answer.
+- **Anaphora abuse:** "They assume... They assume... They assume..." as manufactured rhythm.
+- **Listicle in a trench coat:** "The first wall... The second wall... The third wall..." pretending to be prose.
+- **Robotic rhythm:** same sentence shape paragraph after paragraph. No three consecutive sentences of matching length as a default.
+- **Rhetorical bait:** "What if I told you", "Think about it:", "And that's okay."
+- **Patronizing analogy:** "Think of it as a Swiss Army knife..." when the plain mechanism is clearer.
+- **Clever metaphor flourish:** "an auth bug wearing the costume of a performance optimization." State it plainly.
+- **False agency:** inanimate subjects doing human verbs ("the complaint becomes a fix", "the decision emerges", "the data tells us", "the market rewards"). Name the actor.
+- **Narrator-from-a-distance:** "Nobody designed this." / "People tend to..." / "This happens because..." Put the reader in the room ("You...") or name who.
+- **Wh- opener crutches:** stacking sentences that start with What/When/Where/Which/Who/Why/How as a template. Lead with the subject or the verb.
 - **Fake-profound kicker:** delete the final deep metaphor that restates the piece.
 - **Summary recap endings:** do not restate the whole answer.
-- **Em dashes:** do not use `—`. Prefer period, comma, colon, or parentheses. En dashes in ranges (15-20) are fine.
+- **Fractal summaries:** announce → say → recap at section, subsection, and document level.
+- **One-point dilution:** the same thesis restated ten ways across thousands of words.
+- **Dead metaphor beating:** one metaphor repeated until it stops meaning anything.
+- **Historical analogy stacking:** "Apple didn't build Uber. Facebook didn't build Spotify..." as false authority.
+- **Invented concept labels:** "the supervision paradox", "the acceleration trap", "workload creep" presented as established terms.
+- **Abstract consultant nouns:** substrate, wedge, vector, locus, vantage, nexus, bedrock, scaffolding (metaphorical), modality, north star, flywheel, gold-plating, ratchet (metaphorical), endgame. Prefer the concrete word.
+- **Em dashes:** do not use `—`. Prefer period, comma, colon, or parentheses. En dashes in ranges (15-20) are fine. Also strip spaced dashes (` — `) and double hyphens used as dashes (` -- `).
 - **Formatting slop:** emoji headings, mid-sentence bold storms, headers over two-line sections, title case past the first word and proper nouns.
-- **Decorative emoji in prose:** no rocket, sparkles, bulb, flex, party, fire as decoration.
+- **Decorative emoji in prose:** no rocket, sparkles, bulb, flex, party, fire as decoration. No emoji-as-bullets (✅ 🔥) stacks. No hashtag stacks.
+- **Unicode costume:** decorative → arrows, curly quotes as decoration (keep straight quotes unless the writer's sample uses curly). Prefer `->` / `=>` in technical text when an arrow is needed.
 - **Rule of three as rhetoric:** three-item lists as a device, not because there are three real things.
 - **Participle chains:** long ", improving X while enabling Y" tails.
 - **Overclaiming significance:** revolutionary, pivotal, unprecedented without proof.
-- **Collaborative filler:** "let's explore", "we'll dive into".
-- **Knowledge-cutoff theater:** "as of my last update" when a tool or search would answer.
+- **Collaborative filler:** "let's explore", "we'll dive into", "let's break this down".
+- **Knowledge-cutoff theater:** "as of my last update" when a tool or search would answer. Also "While specific details are limited..." then a plausible guess presented as fact.
+- **Speculative gap-fill:** "maintains a low profile" / "likely grew up..." invented to paper over missing sources.
 - **Promotional tone:** write like an engineer or journalist, not a launch blog.
 - **Topic-sentence machine:** topic → elaborations → example → wrap, every paragraph.
 - **List abuse:** bullets where prose is clearer; nested lists; every item starting with the same verb; lists that are always length 3 or 5 for symmetry.
+- **Bold-first bullets:** every item starts with a bold label + colon that restates the line ("**Performance:** Performance improved..."). Convert to prose, or use a real heading.
 - **Symmetry addiction:** equal sections, three pros / three cons, mirrored paragraphs. Real writing is lumpy.
-- **Transition addiction:** However / Furthermore / Moreover starting every block.
+- **Transition addiction:** However / Furthermore / Moreover starting every block. Also "First... Second... Finally..." on short passages that do not need signposts.
 - **Aphoristic cadence:** repeated short rebuttal lines ("Not a feature. A platform.") as section landings.
+- **Tailing negation:** "...no guessing." / "...no friction." clipped onto a sentence instead of a real clause.
 - **False depth:** restate the problem in fancier words, list obvious factors, end with vague "it depends".
 - **Legacy / significance inflation:** every minor fact becomes a "pivotal moment," "broader trend," or "enduring legacy." State the fact; skip the monument speech.
 - **Notability theater:** laundry lists of outlets, "profiled in," "widely covered," or "experts note" without a concrete claim worth keeping.
@@ -186,8 +231,17 @@ Avoid hedge chains: can / may / might / could potentially / it's possible that s
 - **Smart-quote costume:** curly quotes and ornamental quotation marks as decoration, not citation.
 - **Table cosplay:** a two-column table where two sentences would do.
 - **Unfilled templates:** `[Company Name]`, `TODO: add metric`, `lorem ipsum`, prompt leftovers left in the draft.
-- **Fabricated authority:** invented quotes, papers, DOIs, stats, or "a recent study" with no retrievable source. If you cannot cite it, do not claim it.
+- **Tool citation leftovers:** `turn0search0`, `contentReference`, `oaicite`, `oai_citation`, raw `utm_source=` junk in prose.
+- **Fabricated authority:** invented quotes, papers, DOIs, stats, or "a recent study" with no retrievable source. If you cannot cite it, do not claim it. Fabricated anecdotes presented as real are worse than honest vagueness.
 - **Copula avoidance:** inflating "is" into "serves as," "stands as," "functions as," "represents a" for no gain.
+- **Heading echoed in the first line:** "## Performance" followed by "Speed matters." Delete the echo; start with content.
+- **Docs about the previous version:** describe current behavior; put migration notes in changelogs, not every reference page.
+- **Hyphenated compound spray:** data-driven, cross-functional, client-facing, decision-making stacked for costume. Keep hyphens when grammar needs them before a noun; do not costume every adjective pair.
+- **Importance-flagging:** "Speed is not a footnote here." / "Make no mistake." Show the consequence instead of labeling importance.
+- **Portability test:** if a sentence could move unchanged to another person, company, product, or country, it is probably filler. Cut or replace with a local fact, mechanism, number, or judgment.
+- **Bland-clean failure:** a rewrite can pass the banned-word list and still fail if every sentence is interchangeable after noun swaps. Add a fact, scene, decision, contradiction, or consequence.
+- **Instruction bleed:** when the user mixes the draft with instructions ("keep that texture", "do not turn this into a lesson"), obey the instructions and leave them out of the published text.
+- **Evidence-bound mode:** if the source is vague, do not invent owners, dates, metrics, workflows, customers, or outcome claims ("faster decisions", "reduced friction") to sound concrete. Ask, label a placeholder, or name the missing proof.
 
 ---
 
@@ -196,11 +250,26 @@ Avoid hedge chains: can / may / might / could potentially / it's possible that s
 - Lead with the point when setup adds nothing.
 - Active voice with a real subject.
 - Concrete: names, numbers, dates, file paths, error strings, mechanisms.
-- Vary sentence length. Short after medium is fine; all short is a tic.
+- Vary sentence length. Short after medium is fine; all short is a tic. Do not stack three same-length sentences.
 - Some sentences may start with But, And, So, Or.
 - Contractions in informal prose.
 - Repeat the clear term; do not elegant-variation it away.
 - End on the last concrete point or next action, not a bow.
+- Include friction, doubt, or mess when it is true. Perfect balance reads as machine-made.
+- Say what it does or costs, not how it feels. Mechanism and number beat vibe.
+- Make verbs do the work: "decided" not "made a decision"; "can" not "has the ability to."
+- Ground claims in time and place when you have them: "last Tuesday," "during the outage," a named system.
+
+### Voice and soul
+
+Removing AI patterns is half the job. Sterile, voiceless prose is its own tell.
+
+- If the user provides a writing sample, match its vocabulary, cadence, bluntness, humor, digressions, and punctuation habits before applying bans. A sample outranks default style rules, including the em-dash rule when the sample clearly uses dashes.
+- Keep strong opinions, mixed feelings, asides, self-corrections, and uneven rhythm when they belong to the writer.
+- Do not invent facts to create personality. Stance is allowed; fabricated specificity is not.
+- Over-editing already strong human text is a failure. Surgical phrasing beats a full rewrite. When unsure whether a line is slop or voice, leave it.
+- For encyclopedic, legal, medical, or reference text, neutral and plain is the correct human voice. Do not inject first-person color there.
+- Do not replace one formula with another: clipped aphorisms, tidy triads, forced contrast, or generic consultant voice after a "cleanup."
 
 ### Plain-language bar
 
@@ -209,10 +278,11 @@ Write for one smart, busy reader. Aim for reading age ~14-15.
 1. Find the spine in one sentence. If you cannot, say so before editing.
 2. Kill meta-comments about the text ("in this section", "as mentioned earlier").
 3. Every sentence needs a who and a does-what.
-4. Define jargon or delete it.
+4. Define jargon or delete it. Domain terms that name a real method are fine; business buzzwords are not.
 5. Read aloud; fix what does not parse.
 6. Audit claims for truth and overclaim.
 7. Check the document does not contradict itself.
+8. Run the portability test on each soft sentence.
 
 Default short words:
 
@@ -505,11 +575,15 @@ Cohesion rule: one palette, one type voice, one signature. "Creative" briefs wan
 
 - No banned words/phrases/openers
 - No em dashes
-- Average sentence length roughly 15-20 words; long outliers broken up
+- Average sentence length roughly 15-20 words; long outliers broken up; no three matched lengths in a row
 - First sentence is the point or the action
 - No summary-recap ending
 - Claims attributed or hedged honestly
 - Would not fit unchanged into a generic AI blog
+- Density: each sentence carries a claim, example, constraint, number, image, or move
+- Voice preserved when editing a human draft; no bland-clean flattening
+
+Optional score (1-10 each; revise below 35/50): Directness, Rhythm, Trust, Authenticity, Density.
 
 ### UI NoSlop bar
 
@@ -533,40 +607,43 @@ Cohesion rule: one palette, one type voice, one signature. "Creative" briefs wan
 2. Is the first sentence the point (for prose) or is the first screen a composition (for UI)?
 3. Any line that could appear in a thousand other AI outputs unchanged?
 4. Any em dashes, banned phrases, or meta throat-clearing?
-5. Did you invent a detail, citation, metric, logo, or tool result you do not know?
+5. Did you invent a detail, citation, metric, logo, anecdote, or tool result you do not know?
 
 ### Prose
 
 6. Headings sentence case?
 7. Lists only where they help; not padded to 3/5 for symmetry?
 8. Concrete next action if the user needs one?
-9. Voice preserved if editing a human draft?
+9. Voice preserved if editing a human draft? Over-edited into flatness?
+10. Any demonstrative kicker, false agency, invented label, or tool-citation leftover?
+11. Three same-length sentences in a row? Parataxis stack? Heading echoed in the next line?
 
 ### UI
 
-10. Fonts, colors, components, and skeletons checked against section 6?
-11. Signature artifact + cohesion present?
-12. Motion safe? reduced-motion respected? content visible at rest?
-13. Every control clicked? forms submit? empty states real?
-14. Centering, alignment, clipping, contrast audited at zoom?
+12. Fonts, colors, components, and skeletons checked against section 6?
+13. Signature artifact + cohesion present?
+14. Motion safe? reduced-motion respected? content visible at rest?
+15. Every control clicked? forms submit? empty states real?
+16. Centering, alignment, clipping, contrast audited at zoom?
 
 ### Code
 
-15. Diff limited to the task?
-16. Matches project patterns?
-17. No fake names, dead buttons, or placeholder copy?
+17. Diff limited to the task?
+18. Matches project patterns?
+19. No fake names, dead buttons, or placeholder copy?
 
 ---
 
 ## 10. Workflow
 
-1. **Orient:** Read the brief and this file. For UI, state that you will re-check every relevant point before done.
-2. **Decide:** For design, pick the world first (palette, type, signature). For prose, pick the spine sentence.
-3. **Draft** with defaults suppressed on purpose.
-4. **Edit:** minimum effective change. Cut slop; keep strong human lines and real voice.
-5. **Detect mode (if asked):** name the pattern, quote the line or describe the region, give a short fix. Do not roleplay a plagiarism verdict.
-6. **Score mode (if asked):** use your project's scorer if one exists; otherwise list top issues with severity.
+1. **Orient:** Read the brief and this file. For UI, state that you will re-check every relevant point before done. If audience or goal is unclear for a prose edit, ask once.
+2. **Decide:** For design, pick the world first (palette, type, signature). For prose, pick the spine sentence. Note 3-5 voice signals to keep when editing someone else's draft.
+3. **Draft** with defaults suppressed on purpose. Do not self-censor into blandness while drafting; catch tells on the edit pass.
+4. **Edit:** minimum effective change. Cut slop; keep strong human lines and real voice. Separate user instructions about the draft from the draft itself.
+5. **Detect mode (if asked):** name the pattern, quote the line or describe the region, give a short fix. Do not roleplay a plagiarism verdict or claim permanent undetectability. Offer to edit after.
+6. **Score mode (if asked):** use your project's scorer if one exists; otherwise list top issues with severity, or the optional 5-dimension score above.
 7. **Prove:** walk the checklist. Fix what fails. Only then call it done.
+8. **Report (when editing):** return the revised text first; add a short "What changed" note when material cuts, preservation risks, or remaining issues need explaining.
 
 ### Field notes
 
@@ -575,6 +652,9 @@ Cohesion rule: one palette, one type voice, one signature. "Creative" briefs wan
 - Taking design language from references is good. Cloning their hero copy and product window is not.
 - Dead UI fails even when nothing is on the ban list. Authored motion and hierarchy matter.
 - Over-correction (no icons, no color, no motion) is its own tell.
+- A false positive that flattens a good sentence is worse than one surviving tell. Validate candidates before cutting.
+- Never claim text is permanently undetectable, guaranteed human, or safe against all AI detectors.
+- Reject detector tricks that make writing less true, less specific, or less like the author.
 
 ### Optional toolkit (primitives, not aesthetics)
 
@@ -590,16 +670,19 @@ Strip marketing blocks from any kit before they touch production.
 
 Before send, hunt:
 
-- Words: delve|tapestry|pivotal|robust|seamless|leverage|utilize|comprehensive|multifaceted|underscore|testament|vibrant|meticulous|nestled|embark|unlock|unleash|realm|landscape|paradigm|holistic|synergy|cutting-edge|game-changer|indelible|emblematic
-- Openers: Certainly|Absolutely|Great question|I'd be happy|As an AI|In today's|In a world
-- Em dash characters: `—` and double hyphen used as dash
+- Words: delve|tapestry|pivotal|robust|seamless|leverage|utilize|comprehensive|multifaceted|underscore|testament|vibrant|meticulous|nestled|embark|unlock|unleash|realm|landscape|paradigm|holistic|synergy|cutting-edge|game-changer|indelible|emblematic|quietly|frictionless|commence|aforementioned
+- Openers: Certainly|Absolutely|Great question|I'd be happy|As an AI|In today's|In a world|Honestly\?|Real talk|Look,
+- Em dash characters: `—` and double hyphen used as dash (` -- `)
 - Transitions: Furthermore|Moreover|Additionally|Importantly|Notably|Interestingly at line starts
-- Binary molds: "it's not" / "not only" / "not just" / "not a .*, not a"
+- Binary molds: "it's not" / "not only" / "not just" / "not a .*, not a" / "not because"
 - Empty closers: In conclusion|To summarize|Overall,|In summary|To sum up
-- Marketing: supercharge|streamline your|empower your|world-class|next-generation|game-changer|reimagine|revolutionize
+- Marketing: supercharge|streamline your|empower your|world-class|next-generation|game-changer|reimagine|revolutionize|bridge the gap|buckle up
 - Legacy puff: plays a (vital|crucial|key) role|serves as a|stands as a|setting the stage|broader (trend|movement|landscape)|future prospects|faces (several )?challenges
 - Notability theater: independent coverage|active social media presence|profiled in|widely regarded
-- Templates left in: \[Company|TODO|lorem ipsum|as an AI language model
+- Kickers / Q&A: That's it\.|That's the whole|The result\?|Here's the kicker|Let that sink in|Make no mistake
+- False agency: (data|market|decision|culture|conversation) (tells|rewards|emerges|shifts|moves)
+- Templates left in: \[Company|TODO|lorem ipsum|as an AI language model|turn0search|oaicite|contentReference
+- Consultant nouns: substrate|flywheel|north star|gold-plating|endgame|modality
 
 ### Quick greps for code
 
@@ -616,8 +699,29 @@ Before send, hunt:
 - Not a ban on craft tools (glass, grids, cards, motion) when they are intentional and earned.
 - Not a substitute for product truth, accessibility, or performance budgets.
 - Not license to be rude. Direct is not cruel.
+- Not a detector score. Named patterns are evidence you can check; "AI detectors guess" is not a substitute for judgment.
+- Not permission to flatten a distinctive voice into generic "clean" prose.
 
 When a rule here fights a clear user instruction, the user wins.
+
+---
+
+## Lineage
+
+NoSlop absorbs useful tells from public anti-slop skills and guides, then keeps its own UI/code law and hard defaults. Sources consulted for this merge:
+
+1. [stop-slop](https://skills.sh/hardikpandya/stop-slop) (@hvpandya)
+2. [no-ai-slop](https://skills.sh/petergyang/no-ai-slop/no-ai-slop) (@petergyang)
+3. [humanizer](https://skills.sh/blader/humanizer) (@blader) / Wikipedia [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
+4. [unslop](https://skills.sh/cursor/plugins/unslop) (@poteto / Cursor pstack)
+5. [slopbeth](https://skills.sh/ehmo/slopkit/slopbeth) (@synopsi / ehmo)
+6. [humanizer](https://skills.sh/Aboudjem/humanizer-skill/humanizer) (@AdamBoudj)
+7. [deslop](https://skills.sh/stephenturner/skills/deslop) (@strnr) / [tropes.fyi](https://tropes.fyi)
+8. [anti-slop](https://skills.sh/elithrar/dotfiles/anti-slop) (@elithrar)
+9. [humanize](https://skills.sh/aashaexo/soundshuman/humanize) (@aashatwt)
+10. [anti-ai-slop-writing](https://skills.sh/jalaalrd/anti-ai-slop-writing/anti-ai-slop-writing) (@jalaal_tweets)
+
+Conflicts are resolved toward NoSlop defaults: hard em-dash ban, user overrides, and craft/UI sections that those skills do not cover.
 
 ---
 

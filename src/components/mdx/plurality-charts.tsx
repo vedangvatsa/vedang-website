@@ -13,7 +13,7 @@ export function AINewsSiteGrowth() {
   const max = 1200;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">AI-Generated News Sites Tracked by NewsGuard</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Unreliable AI-Generated News Sites (UAINs) identified</p>
@@ -51,7 +51,7 @@ export function MisinfoSpreadChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Speed Asymmetry</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">How fast false vs. true information spreads on social media</p>
@@ -101,7 +101,7 @@ export function MediaTrustChart() {
   const max = 80;
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Trust Collapse</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Americans who trust mass media to report "fully, accurately, and fairly"</p>
@@ -159,7 +159,7 @@ export function CurationFactorsChart() {
   ];
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden">
+    <figure className="not-prose chart-card">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight mb-1 text-[#37352f]">The Invisible Curation</h3>
         <p className="text-xs text-muted-foreground mb-6 uppercase tracking-widest font-semibold">Factors driving the plurality trap, ranked by structural impact</p>

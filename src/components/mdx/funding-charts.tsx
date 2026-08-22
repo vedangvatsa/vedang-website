@@ -74,7 +74,7 @@ export function VCValuationExpansionChart() {
   const maxVal = Math.max(...currentData.map(d => d.median));
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden shadow-sm">
+    <figure className="not-prose chart-card chart-card--shadow">
       <div className="p-6 md:p-10">
         <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-8 gap-4">
           <div>
@@ -135,7 +135,7 @@ export function VCGiniConcentrationChart() {
   const maxRaised = Math.max(...globalGini.map(d => d.total));
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden shadow-sm">
+    <figure className="not-prose chart-card chart-card--shadow">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] mb-1">Gini Concentration & Capital Inflows</h3>
         <p className="text-xs text-muted-foreground uppercase tracking-widest font-semibold mb-8">Global capital inflows vs. structural concentration index</p>
@@ -197,7 +197,7 @@ export function VCGiniConcentrationChart() {
 /* ─── 3. VCDeathValleyTimeline ─── */
 export function VCDeathValleyTimeline() {
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden shadow-sm">
+    <figure className="not-prose chart-card chart-card--shadow">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] mb-1">Seed-to-Series A "Death Valley" Timeline</h3>
         <p className="text-xs text-muted-foreground uppercase tracking-widest font-semibold mb-8">Longitudinal conversion rates and median time gaps by cohort year</p>
@@ -206,12 +206,12 @@ export function VCDeathValleyTimeline() {
           <table className="w-full text-xs border-collapse min-w-[600px]">
             <thead>
               <tr className="border-b-2 border-[#e3e3e0]">
-                <th className="text-left py-3 px-2 font-bold text-[#37352f] uppercase tracking-wider">Cohort Year</th>
-                <th className="text-left py-3 px-2 font-bold text-[#37352f] uppercase tracking-wider">Total Seed Cohort</th>
-                <th className="text-left py-3 px-2 font-bold text-[#37352f] uppercase tracking-wider">Converted Companies</th>
-                <th className="text-left py-3 px-2 font-bold text-[#37352f] uppercase tracking-wider">Conversion Rate (%)</th>
-                <th className="text-left py-3 px-2 font-bold text-[#37352f] uppercase tracking-wider">Median Gap (Months)</th>
-                <th className="text-left py-3 px-2 font-bold text-[#37352f] uppercase tracking-wider">System State</th>
+                <th className="py-3">Cohort Year</th>
+                <th className="py-3">Total Seed Cohort</th>
+                <th className="py-3">Converted Companies</th>
+                <th className="py-3">Conversion Rate (%)</th>
+                <th className="py-3">Median Gap (Months)</th>
+                <th className="py-3">System State</th>
               </tr>
             </thead>
             <tbody>
@@ -277,7 +277,7 @@ export function VCSectorSemanticAnalysis() {
   const maxVal = Math.max(...semanticSectorData.map(d => d.valuation));
 
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden shadow-sm">
+    <figure className="not-prose chart-card chart-card--shadow">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] mb-1">Sector Semantic Analysis</h3>
         <p className="text-xs text-muted-foreground uppercase tracking-widest font-semibold mb-8">Financing structures, syndication density, and primary global hubs by company description theme</p>
@@ -340,7 +340,7 @@ export function VCSectorSemanticAnalysis() {
 /* ─── 5. VCStrategicFrameworkDiagram: McKinsey SCR Flowchart ─── */
 export function VCStrategicFrameworkDiagram() {
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden shadow-sm">
+    <figure className="not-prose chart-card chart-card--shadow">
       <div className="p-6 md:p-10 flex flex-col items-center">
         <h3 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] mb-1 text-center">The Venture Capital Strategic Realignment Framework</h3>
         <p className="text-xs text-muted-foreground uppercase tracking-widest font-semibold mb-8 text-center">McKinsey SCR structure for private technology markets</p>
@@ -425,7 +425,7 @@ export function VCEquationBoxSVG() {
 /* ─── 7. VCBarbellSystemVisual ─── */
 export function VCBarbellSystemVisual() {
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden shadow-sm">
+    <figure className="not-prose chart-card chart-card--shadow">
       <div className="p-6 md:p-10">
         <h3 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] mb-1 text-center">
           The Venture Capital Barbell Allocation Model
@@ -523,7 +523,7 @@ export function VCBarbellSystemVisual() {
 /* ─── 8. VCBarbellVectorDiagram ─── */
 export function VCBarbellVectorDiagram() {
   return (
-    <figure className="not-prose my-10 w-full rounded-[3px] border border-[#e3e3e0] bg-white overflow-hidden shadow-sm">
+    <figure className="not-prose chart-card chart-card--shadow">
       <div className="p-6 md:p-10 flex flex-col items-center">
         <h3 className="text-lg md:text-xl font-bold tracking-tight text-[#37352f] mb-1 text-center">
           Barbell Allocation Map
