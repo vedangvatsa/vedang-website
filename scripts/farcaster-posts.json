@@ -2615,9 +2615,11 @@
     "id": "viral-rewrite-151",
     "scheduleDate": "2026-08-21",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "Rest isn't something you earn by working until you break. It's something you need to keep working well. The best teams build recovery into the rhythm, not the reward system. Find teams that do at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_65_1.jpg"
+    "image": "scripts/post-images/post_65_1.jpg",
+    "postedAt": "2026-08-22T11:53:23.875Z",
+    "castHash": "0xb4ec3b436c2b6d2a76f34978089ac43c7f946017"
   },
   {
     "id": "viral-rewrite-152",
