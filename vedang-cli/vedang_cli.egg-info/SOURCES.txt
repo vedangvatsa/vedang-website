@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+tests/test_cli.py
+vedang_cli/__init__.py
+vedang_cli/main.py
+vedang_cli.egg-info/PKG-INFO
+vedang_cli.egg-info/SOURCES.txt
+vedang_cli.egg-info/dependency_links.txt
+vedang_cli.egg-info/entry_points.txt
+vedang_cli.egg-info/requires.txt
+vedang_cli.egg-info/top_level.txt

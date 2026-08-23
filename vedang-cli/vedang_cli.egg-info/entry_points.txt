@@ -1,0 +1,2 @@
+[console_scripts]
+vedang = vedang_cli.main:app
