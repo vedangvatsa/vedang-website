@@ -106,10 +106,36 @@ export default function Home() {
           <li><Link href="/developers">Developer Documentation and API Reference</Link></li>
           <li><Link href="/openapi.json">OpenAPI 3.1 Specification</Link></li>
           <li><Link href="/api/v1/reports/search">Veda Public REST API v1 (Search 233k+ papers)</Link></li>
+          <li><Link href="/api/v1/essays">Essays Catalog REST API</Link></li>
+          <li><Link href="/api/v1/glossary">Glossary REST API</Link></li>
           <li><Link href="/.well-known/mcp">Model Context Protocol (MCP) Streamable HTTP Server</Link></li>
           <li><Link href="/auth.md">Agent Authentication Specification (WorkOS format)</Link></li>
           <li><Link href="/llms.txt">LLMs Structured Content Index</Link></li>
         </ul>
+
+        {/* WebMCP In-Page Tools (W3C Draft Standard) */}
+        <form
+          {...({
+            toolname: 'search_reports',
+            tooldescription: 'Search 233,000+ indexed academic papers in AI and Web3 on veda.ng',
+          } as Record<string, string>)}
+          action="/api/v1/reports/search"
+          method="GET"
+        >
+          <input name="q" placeholder="Keywords" />
+          <button type="submit">Search Papers</button>
+        </form>
+        <form
+          {...({
+            toolname: 'search_essays',
+            tooldescription: 'Search 50+ long-form research essays by keyword or tag on veda.ng',
+          } as Record<string, string>)}
+          action="/api/v1/essays"
+          method="GET"
+        >
+          <input name="tag" placeholder="Topic Tag" />
+          <button type="submit">Search Essays</button>
+        </form>
       </section>
 
       <CardGrid
