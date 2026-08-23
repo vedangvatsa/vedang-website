@@ -103,7 +103,9 @@ export default function Home() {
           Programmatic access is open and keyless. Integrate with our developer tools:
         </p>
         <ul>
-          <li><Link href="/developers">Developer Documentation and API Reference</Link></li>
+          <li><Link href="/developers">Veda Developer Documentation and API Reference</Link></li>
+          <li><Link href="/docs">Veda API Docs (/docs)</Link></li>
+          <li><Link href="/api">Veda Public REST API Directory (/api)</Link></li>
           <li><Link href="/openapi.json">OpenAPI 3.1 Specification</Link></li>
           <li><Link href="/api/v1/reports/search">Veda Public REST API v1 (Search 233k+ papers)</Link></li>
           <li><Link href="/api/v1/essays">Essays Catalog REST API</Link></li>
