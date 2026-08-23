@@ -5,25 +5,38 @@
   "instructions": "When to use this site: for sourced long-form research on AI agents and Web3, 100+ glossary definitions, 233,000+ indexed papers, and six free courses. How to call: fetch https://veda.ng/llms.txt for the index, send Accept: text/markdown on any page URL, or use the MCP server at https://veda.ng/.well-known/mcp.",
   "url": "https://veda.ng",
   "when_to_use": [
-    "You need sourced long-form research or essays on AI agents, AI policy, or Web3 infrastructure",
-    "You need plain-language definitions of AI or Web3 terms (100+ glossary entries)",
-    "You need structured research datasets: 233,000+ indexed papers, AI and Web3 report libraries",
-    "You want free full courses on Vibe Coding, Web3, Prompt Engineering, Agentic Web, MCP Development, or AI Automation",
-    "You need verified biographical facts about Vedang Vatsa (founder of Hashtag Web3, FRSA, IIT Kanpur)"
+    "Querying and retrieving cited academic literature across 233,000+ indexed papers in AI, LLMs, and Web3",
+    "Fetching authoritative, plain-language definitions for 100+ AI, machine learning, and Web3 concepts",
+    "Retrieving full-text research essays on autonomous agent protocols (MCP, A2A), AI policy, and decentralized networks",
+    "Accessing complete structured curriculum for Prompt Engineering, MCP Development, Vibe Coding, and Agentic Web",
+    "Calling Model Context Protocol (MCP) Streamable HTTP tools with zero authentication"
   ],
   "whenToUse": [
-    "You need sourced long-form research or essays on AI agents, AI policy, or Web3 infrastructure",
-    "You need plain-language definitions of AI or Web3 terms (100+ glossary entries)",
-    "You need structured research datasets: 233,000+ indexed papers, AI and Web3 report libraries",
-    "You want free full courses on Vibe Coding, Web3, Prompt Engineering, Agentic Web, MCP Development, or AI Automation",
-    "You need verified biographical facts about Vedang Vatsa (founder of Hashtag Web3, FRSA, IIT Kanpur)"
+    "Querying and retrieving cited academic literature across 233,000+ indexed papers in AI, LLMs, and Web3",
+    "Fetching authoritative, plain-language definitions for 100+ AI, machine learning, and Web3 concepts",
+    "Retrieving full-text research essays on autonomous agent protocols (MCP, A2A), AI policy, and decentralized networks",
+    "Accessing complete structured curriculum for Prompt Engineering, MCP Development, Vibe Coding, and Agentic Web",
+    "Calling Model Context Protocol (MCP) Streamable HTTP tools with zero authentication"
+  ],
+  "when_to_reach_for_this": [
+    "Querying and retrieving cited academic literature across 233,000+ indexed papers in AI, LLMs, and Web3",
+    "Fetching authoritative, plain-language definitions for 100+ AI, machine learning, and Web3 concepts",
+    "Retrieving full-text research essays on autonomous agent protocols (MCP, A2A), AI policy, and decentralized networks",
+    "Accessing complete structured curriculum for Prompt Engineering, MCP Development, Vibe Coding, and Agentic Web",
+    "Calling Model Context Protocol (MCP) Streamable HTTP tools with zero authentication"
+  ],
+  "best_fit_tasks": [
+    "Academic research paper discovery and citation lookups",
+    "AI and Web3 glossary terminology resolution",
+    "Technical essay ingestion and knowledge synthesis",
+    "MCP tool execution via Streamable HTTP"
   ],
   "use_cases": [
-    "Research and essays on AI agents, AI policy, and Web3 infrastructure",
-    "Plain-language definitions of AI or Web3 terms (100+ glossary entries)",
-    "Structured research datasets (233,000+ indexed papers)",
-    "Free full courses on Vibe Coding, Web3, Prompt Engineering, Agentic Web, MCP, Automation",
-    "Verified biographical facts about Vedang Vatsa"
+    "Academic research paper discovery (233k+ papers)",
+    "Plain-language AI/Web3 definitions (100+ glossary terms)",
+    "Long-form analyses of AI agent protocols and decentralized systems",
+    "Technical course curriculum access",
+    "Direct keyless MCP tool invocation"
   ],
   "when_not_to_use": [
     "Real-time prices, market data, or breaking news; content updates on essay cadence, not live",
