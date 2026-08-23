@@ -68,17 +68,24 @@ export default function MeetingPage() {
         </div>
       </PageHero>
 
-      {/* Contact details & consultation information (invisible in visual UI, machine/screen-reader accessible) */}
-      <section className="sr-only">
+      {/* Contact details & trust anchor information (invisible in visual UI, fully server-rendered for AI agents & crawlers) */}
+      <section className="sr-only" aria-label="Contact Information and Business Verification">
+        <h2>Contact Information & Advisory Inquiries for Vedang Vatsa</h2>
         <p>
-          Vedang Vatsa is an AI & Web3 researcher, Fellow of the Royal Society of Arts (FRSA), alumnus of IIT Kanpur, and the founder of Hashtag Web3.
+          Vedang Vatsa is an AI researcher, technologist, Fellow of the Royal Society of Arts (FRSA), alumnus of the Indian Institute of Technology Kanpur (IIT Kanpur), and the founder of Hashtag Web3, an international professional community connecting more than 120,000 artificial intelligence and Web3 practitioners worldwide.
         </p>
         <p>
-          For executive advisory, keynote speaking engagements, AI agent architecture consulting, or research collaborations, schedule a session using the calendar below or email directly at <a href="mailto:vatsvedang@gmail.com">vatsvedang@gmail.com</a>.
+          Official communication channels, verified business contacts, and professional consultation details:
         </p>
-        <p>
-          Typical response time for inquiries is within 24 to 48 business hours. Meetings are conducted via Google Meet or Zoom.
-        </p>
+        <ul>
+          <li><strong>Direct Email:</strong> <a href="mailto:vatsvedang@gmail.com">vatsvedang@gmail.com</a></li>
+          <li><strong>Booking Calendar:</strong> <a href="https://cal.com/vedangvatsa">cal.com/vedangvatsa</a> (Google Meet & Zoom integrations)</li>
+          <li><strong>Primary Focus Areas:</strong> Autonomous AI Agent Systems, Model Context Protocol (MCP) implementations, AI Policy & Governance, Web3 Infrastructure, and Executive Advisory.</li>
+          <li><strong>Response Time:</strong> Standard inquiries and advisory requests receive a reply within 24 to 48 business hours.</li>
+          <li><strong>Speaking Engagements & Keynotes:</strong> For conferences, academic lectures, and panel discussions on AI systems, agentic workflows, and Web3 decentralization, please initiate contact via email with event dates and topics.</li>
+          <li><strong>Location & Timezone:</strong> Available globally across international timezones (IST / UTC+5:30, ET, GMT).</li>
+          <li><strong>Verified Social Profiles:</strong> <a href="https://x.com/vedangvatsa">X (@vedangvatsa)</a>, <a href="https://linkedin.com/in/vedangvatsa">LinkedIn (/in/vedangvatsa)</a>, <a href="https://github.com/vedangvatsa">GitHub (vedangvatsa)</a>.</li>
+        </ul>
       </section>
 
       {/* Calendar embed */}
