@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PageLayout } from '@/components/page-layout';
+import { NotFoundGame } from '@/app/not-found-game';
 
 const recoveryLinks = [
   { href: '/llms.txt', label: 'llms.txt index' },
@@ -27,6 +28,7 @@ export default function NotFound() {
             <Link href="/essays">Browse essays</Link>
           </Button>
         </div>
+        <NotFoundGame />
         <nav aria-label="Recovery links" className="mt-8 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-sm text-muted-foreground">
           {recoveryLinks.map((link, i) => (
             <span key={link.href} className="flex items-center gap-2">
