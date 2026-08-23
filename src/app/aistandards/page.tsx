@@ -100,13 +100,33 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
   },
   {
     name: 'agents.json',
-    path: '/agents.json',
-    what: 'Structured companion to agents.txt at the site root (not the A2A card path).',
-    why: 'Richer machine fields for the agents.txt convention. Distinct from /.well-known/agent-card.json (A2A).',
+    path: '/agents.json or /.well-known/agents.json',
+    what: 'Structured manifest declaring task suitability (when_to_use), tool endpoints, SDKs, and runtime guidance for AI agents.',
+    why: 'Richer machine fields for autonomous agent discovery. Distinct from /.well-known/agent-card.json (A2A).',
     category: 'Agent products',
     priority: 'When it applies',
     spec: 'agents-txt.com',
     specUrl: 'https://agents-txt.com',
+  },
+  {
+    name: 'MCP Streamable HTTP',
+    path: '/.well-known/mcp',
+    what: 'First-party Model Context Protocol server exposing tool capabilities over Streamable HTTP with JSON-RPC 2.0.',
+    why: 'Enables external LLM agents (Claude, ChatGPT, IDE agents) to discover and execute tools programmatically via HTTP POST.',
+    category: 'Agent products',
+    priority: 'When it applies',
+    spec: 'Model Context Protocol',
+    specUrl: 'https://modelcontextprotocol.io',
+  },
+  {
+    name: 'api-catalog (RFC 9727)',
+    path: '/.well-known/api-catalog',
+    what: 'A standard discovery document listing API entry points, documentation, and OpenAPI specification URLs.',
+    why: 'Published IETF standard (RFC 9727) allowing autonomous agents to locate API endpoints without guessing paths.',
+    category: 'Agent products',
+    priority: 'When it applies',
+    spec: 'RFC 9727',
+    specUrl: 'https://www.rfc-editor.org/rfc/rfc9727',
   },
   {
     name: 'agent-card.json',
@@ -121,12 +141,52 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
   {
     name: 'openapi.json / openapi.yaml',
     path: '/openapi.json or /openapi.yaml',
-    what: 'Machine contract for an HTTP API, covering paths, parameters, and responses.',
-    why: 'Useful when clients or agents should call the product over HTTP without relying only on human docs.',
+    what: 'Machine contract for an HTTP API, covering paths, typed parameters, cursor pagination, and response schemas.',
+    why: 'Essential when clients or agents should call the product over HTTP without relying only on human docs.',
     category: 'Agent products',
     priority: 'When it applies',
     spec: 'OpenAPI 3.1',
     specUrl: 'https://spec.openapis.org/oas/v3.1.0',
+  },
+  {
+    name: 'OAuth Protected Resource (RFC 9728)',
+    path: '/.well-known/oauth-protected-resource',
+    what: 'Metadata describing authorization servers, supported scopes, and token requirements for API access.',
+    why: 'Published IETF standard (RFC 9728) enabling automated clients to discover authentication flows before sending requests.',
+    category: 'Operations',
+    priority: 'When it applies',
+    spec: 'RFC 9728',
+    specUrl: 'https://www.rfc-editor.org/rfc/rfc9728',
+  },
+  {
+    name: 'Agent Auth Spec (auth.md / auth.json)',
+    path: '/auth.md or /auth.json',
+    what: 'Machine-readable authentication guide defining keyless access, registration endpoints, and token usage for agents.',
+    why: 'Provides autonomous agents with clear instructions on handling 401 challenges, registration, or anonymous requests.',
+    category: 'Agent products',
+    priority: 'When it applies',
+    spec: 'WorkOS Agent Auth',
+    specUrl: 'https://workos.com/blog/agent-auth-pattern',
+  },
+  {
+    name: 'webhooks.json',
+    path: '/webhooks.json',
+    what: 'Catalog of event notifications, webhook triggers, and real-time streaming channels (SSE / RSS).',
+    why: 'Allows agents to subscribe to real-time events and data updates without continuous polling.',
+    category: 'Agent products',
+    priority: 'When it applies',
+    spec: 'OpenAPI Webhooks',
+    specUrl: 'https://spec.openapis.org/oas/v3.1.0#oasWebhooks',
+  },
+  {
+    name: 'ai-catalog.json (AIR)',
+    path: '/.well-known/ai-catalog.json',
+    what: 'AI Resource (AIR) catalog listing verified capabilities, machine datasets, and trust manifests.',
+    why: 'Provides structured trust assertions, licenses, and capability registry entries for AI agent ecosystems.',
+    category: 'Agent products',
+    priority: 'When it applies',
+    spec: 'AI Resource (AIR)',
+    specUrl: 'https://github.com/microsoft/ai-resources',
   },
   {
     name: 'MCP Server Card',
@@ -305,14 +365,14 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
                 Think of the files as three separate jobs. <strong>Access control</strong> files (robots.txt,
                 tdmrep.json) tell documented bots what they may or may not crawl. <strong>Content maps</strong>
                 (sitemap.xml, llms.txt) tell any system that asks which pages matter and what they say.{' '}
-                <strong>Identity and capability</strong> files (agents.txt, agent cards, OpenAPI) tell agents what
+                <strong>Identity and capability</strong> files (agents.txt, agents.json, agent cards, OpenAPI, MCP) tell agents what
                 the site can do and how to call it.
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 A few files carry most of the value. robots.txt is a set of rules for bots. It says which paths they
                 may visit and which they should leave alone. sitemap.xml is a plain list of the pages that exist.
                 llms.txt is a short markdown reading list. It names who runs the site and which pages matter.
-                agents.txt and agent-card.json tell agent software what a site offers and how to reach it. Everything
+                agents.txt, agents.json, and Model Context Protocol (MCP) servers tell agent software what a site offers and how to reach it. Everything
                 else in the catalog is optional polish.
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
@@ -439,9 +499,9 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
             </section>
 
             <section id="content-techniques" className="min-w-0 scroll-mt-20">
-              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Content techniques</h2>
+              <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Content & API techniques</h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Files alone are not enough. How content is written affects whether answer engines can extract and cite it.
+                Files alone are not enough. How content and API responses are shaped affects whether AI agents and answer engines can extract facts and execute operations cleanly.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 min-w-0">
                 <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
@@ -453,7 +513,7 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
                 <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
                   <p className="text-sm font-medium text-foreground mb-1.5">Question-shaped headings</p>
                   <p className="text-xs text-muted-foreground leading-snug">
-                    Match how people actually ask. "How do I block AI training bots" works better than "Bot configuration overview".
+                    Match how people actually ask. &quot;How do I block AI training bots&quot; works better than &quot;Bot configuration overview&quot;.
                   </p>
                 </div>
                 <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
@@ -478,6 +538,30 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
                   <p className="text-sm font-medium text-foreground mb-1.5">Multi-format presentation</p>
                   <p className="text-xs text-muted-foreground leading-snug">
                     Prose plus tables plus schema gives extractors multiple paths to the same fact. Reduces ambiguity.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">Idempotency-Key support</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Declare Idempotency-Key headers on write operations so agents retrying on network drops never duplicate transactions or records.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">RateLimit & Sunset headers</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Expose standard RateLimit-Limit, RateLimit-Remaining, RateLimit-Reset, and RFC 8594 Sunset headers so agents budget API calls cleanly.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">Cursor-based pagination</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Expose opaque cursor tokens and limit counts rather than offset/page numbers to prevent index drift during automated crawls.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">Async 202 job polling</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Return 202 Accepted with a Location header and Retry-After interval for long-running operations so agents can track background work.
                   </p>
                 </div>
               </div>
@@ -521,9 +605,7 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
             <section id="standards-progress" className="min-w-0 scroll-mt-20">
               <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Standards in progress</h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Several IETF drafts are competing to become the standard way AI systems discover sites. None are
-                RFCs yet. Each one would add a file or a protocol that agents can look for, and the list changes as
-                drafts get merged or dropped.
+                Several IETF drafts and W3C proposals are establishing the standard ways AI systems discover sites and invoke tools. Each adds a protocol, header, or file that agents can rely on.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 min-w-0">
                 <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
@@ -538,6 +620,27 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
                   <p className="text-[11px] font-mono text-muted-foreground mb-1.5">draft-pro-adp-agent-discovery</p>
                   <p className="text-xs text-muted-foreground leading-snug">
                     Proposes a protocol-level approach to agent discovery.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1">IETF Idempotency-Key Header</p>
+                  <p className="text-[11px] font-mono text-muted-foreground mb-1.5">draft-ietf-httpapi-idempotency-key-header</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Defines standard Idempotency-Key header mechanics for preventing duplicate executions on retry.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1">IETF RateLimit Fields</p>
+                  <p className="text-[11px] font-mono text-muted-foreground mb-1.5">draft-ietf-httpapi-ratelimit-headers</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Standardizes RateLimit-Limit, RateLimit-Remaining, RateLimit-Reset, and RateLimit-Policy HTTP headers.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1">W3C WebMCP (In-Page Tools)</p>
+                  <p className="text-[11px] font-mono text-muted-foreground mb-1.5">Draft W3C WebMCP Standard</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Enables web pages to declare agent-callable tools directly in semantic HTML form elements.
                   </p>
                 </div>
                 <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
@@ -609,6 +712,9 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
 curl -sI https://your-domain.com/llms.txt | head -1
 curl -sI https://your-domain.com/sitemap.xml | head -1
 curl -sI https://your-domain.com/agents.txt | head -1
+curl -sI https://your-domain.com/.well-known/agents.json | head -1
+curl -sI https://your-domain.com/.well-known/api-catalog | head -1
+curl -sI https://your-domain.com/.well-known/mcp | head -1
 curl -sI https://your-domain.com/.well-known/security.txt | head -1`}</code>
                 </pre>
               </div>
@@ -650,7 +756,7 @@ curl -sI https://your-domain.com/.well-known/security.txt | head -1`}</code>
                 >
                   Issues
                 </Link>
-                <span className="text-xs text-muted-foreground/60">MIT · July 2026</span>
+                <span className="text-xs text-muted-foreground/60">MIT · Updated 2026</span>
               </div>
             </section>
           </div>
