@@ -51,6 +51,7 @@ export function shouldSkipNegotiation(
     pathname.startsWith('/api/') ||
     pathname.startsWith('/md/') ||
     pathname.startsWith('/.well-known/') ||
+    pathname.startsWith('/agent/') ||
     pathname === '/md'
   ) {
     return true;
