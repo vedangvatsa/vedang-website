@@ -110,9 +110,7 @@ const organizationSchema = {
   logo: 'https://veda.ng/images/icon.png',
   description: 'A global community of 120,000+ professionals in AI and Web3.',
   sameAs: [
-    'https://linkedin.com/company/hashtag-web3',
-    'https://x.com/hashtagweb3',
-    'https://twitter.com/hashtagweb3',
+    'https://www.linkedin.com/company/hashtagweb3',
     'https://github.com/vedangvatsa',
     'https://hashtagweb3.com',
   ],
