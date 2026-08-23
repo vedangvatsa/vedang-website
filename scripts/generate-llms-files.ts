@@ -35,10 +35,7 @@ function generateFiles() {
     .join('\n');
 
   const glossaryLinks = glossaryTerms
-    .map(term => {
-      const firstSentence = term.definition.split(/[.!?](?:\s|$)/)[0] + '.';
-      return `- [${term.term}](https://veda.ng/glossary/${term.slug}): ${firstSentence}`;
-    })
+    .map(term => `- [${term.term}](https://veda.ng/glossary/${term.slug})`)
     .join('\n');
 
   const whenToUse = `
@@ -114,7 +111,7 @@ Selected peer-reviewed research on AI, Web3, and economic systems:
 
 ## Glossary
 
-Individual definitions for AI, Web3, and technical terms at \`/glossary/[slug]\`. All ${glossaryTerms.length} terms:
+All ${glossaryTerms.length} terms, full definitions on each page:
 
 ${glossaryLinks}
 ${whenToUse}

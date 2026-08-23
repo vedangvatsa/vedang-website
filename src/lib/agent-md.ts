@@ -212,6 +212,25 @@ function developersMarkdown(): string {
 }
 
 export function getMarkdownForPath(pathname: string): string | null {
+  const body = getMarkdownBodyForPath(pathname);
+  if (body === null) return null;
+  const titleMatch = body.match(/^# (.+)$/m);
+  const title = titleMatch ? titleMatch[1] : SITE_NAME;
+  const canonical = `${SITE_URL}${pathname === '/' ? '' : pathname}`;
+  const frontmatter = [
+    '---',
+    `title: ${title}`,
+    `description: ${body.split('\n').find((l) => l.startsWith('Source: '))?.replace('Source: ', `Page on ${SITE_NAME}'s site: `) ?? `${SITE_NAME} - AI and Web3 research hub`}`,
+    `canonical: ${canonical}`,
+    `last_updated: ${new Date().toISOString().slice(0, 10)}`,
+    'type: text/markdown',
+    '---',
+    '',
+  ].join('\n');
+  return `${frontmatter}${body}`;
+}
+
+function getMarkdownBodyForPath(pathname: string): string | null {
   switch (pathname) {
     case '/':
       return homeMarkdown();

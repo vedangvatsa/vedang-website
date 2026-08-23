@@ -48,6 +48,10 @@ const nextConfig = {
         source: '/openapi.json',
         destination: '/api/openapi',
       },
+      {
+        source: '/api/v1/:path*',
+        destination: '/api/:path*',
+      },
     ];
   },
   async redirects() {

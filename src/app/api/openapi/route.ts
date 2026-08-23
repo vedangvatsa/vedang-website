@@ -31,7 +31,13 @@ export function GET() {
         'Public machine interfaces for veda.ng: research paper search backed by OpenAlex, an MCP server over Streamable HTTP, syndication feeds, and agent discovery files. No authentication required.',
       contact: { name: SITE_NAME, email: CONTACT_EMAIL, url: CONTACT_URL },
     },
-    servers: [{ url: SITE_URL }],
+    servers: [
+      { url: SITE_URL, description: 'Latest stable version' },
+      { url: `${SITE_URL}/api/v1`, description: 'Version-pinned v1 (stable, additive-only changes)' },
+    ],
+    versioning: {
+      policy: 'URL path versioning: /api/v1/* is pinned to major version 1. Unversioned paths always track the latest stable major.',
+    },
     tags: [
       { name: 'Search', description: 'Research paper search' },
       { name: 'MCP', description: 'Model Context Protocol server' },
@@ -52,9 +58,15 @@ export function GET() {
           responses: {
             '200': {
               description: 'Search results sorted by citation count.',
+              headers: {
+                'X-RateLimit-Limit': { schema: { type: 'string' }, description: 'Requests allowed per window.' },
+                'X-RateLimit-Remaining': { schema: { type: 'string' }, description: 'Requests left in current window.' },
+                'X-RateLimit-Reset': { schema: { type: 'string' }, description: 'Unix seconds when the window resets.' },
+                'Idempotency-Key': { schema: { type: 'string' }, description: 'Echoed when the client sends an Idempotency-Key header.' },
+              },
               content: { 'application/json': { schema: { $ref: '#/components/schemas/SearchReportsResponse' } } },
             },
-            '502': errorResponse('Upstream OpenAlex error.'),
+            '502': errorResponse('Upstream OpenAlex error. Returns Retry-After header; body is retryable JSON error.'),
           },
         },
       },
@@ -340,16 +352,18 @@ export function GET() {
     'x-mcp-tools': MCP_TOOLS.map((t) => ({
       name: t.name,
       description: t.description,
-      inputSchema: { $ref: '#/components/schemas/McpToolDefinition' },
+      inputSchema: t.inputSchema,
       invoke: {
         method: 'POST',
         url: MCP_ENDPOINT,
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: {
           jsonrpc: '2.0',
           id: 1,
           method: 'tools/call',
-          params: { name: t.name, arguments: '$inputSchema' },
+          params: { name: t.name, arguments: t.inputSchema.properties ?? {} },
         },
+        responseSchema: { $ref: '#/components/schemas/McpToolCallResponse' },
       },
     })),
     'x-discovery': {

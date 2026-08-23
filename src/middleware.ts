@@ -1,5 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { resolveAgentRequest, shouldSkipNegotiation } from '@/lib/agent-negotiation';
+import {
+  buildLinkHeader,
+  isMarkdownUrl,
+  markdownUrlToPath,
+  resolveAgentRequest,
+  shouldSkipNegotiation,
+} from '@/lib/agent-negotiation';
 
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
@@ -8,20 +14,34 @@ export function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
-  const resolution = resolveAgentRequest(pathname, req.headers.get('accept'));
+  const modeAgent = req.nextUrl.searchParams.get('mode') === 'agent';
+  const resolution = resolveAgentRequest(pathname, req.headers.get('accept'), {
+    modeAgent,
+    userAgent: req.headers.get('user-agent'),
+  });
 
-  if (resolution.kind === 'markdown' || resolution.kind === 'not-found') {
-    const target =
-      resolution.kind === 'markdown' && pathname === '/'
-        ? new URL('/md/index', req.url)
-        : new URL(resolution.kind === 'markdown' ? `/md${pathname}` : '/md/__404__', req.url);
-    const headers = new Headers(req.headers);
-    headers.set('x-agent-original-path', pathname);
-    return NextResponse.rewrite(target, { request: { headers } });
+  if (isMarkdownUrl(pathname) || resolution.kind === 'markdown' || resolution.kind === 'not-found') {
+    const mdTarget = isMarkdownUrl(pathname)
+      ? markdownUrlToPath(pathname)
+      : resolution.kind === 'markdown'
+        ? pathname
+        : null;
+
+    if (mdTarget !== null || resolution.kind === 'not-found') {
+      const target =
+        resolution.kind === 'not-found' && mdTarget === null
+          ? new URL('/md/__404__', req.url)
+          : new URL(`/md${mdTarget === '/' ? '/index' : mdTarget}`, req.url);
+      const headers = new Headers(req.headers);
+      headers.set('x-agent-original-path', isMarkdownUrl(pathname) ? markdownUrlToPath(pathname) : pathname);
+      return NextResponse.rewrite(target, { request: { headers } });
+    }
   }
 
   const res = NextResponse.next();
   res.headers.set('Vary', 'Accept, Accept-Encoding');
+  const link = buildLinkHeader(pathname);
+  if (link) res.headers.set('Link', link);
   return res;
 }
 

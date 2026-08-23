@@ -1,0 +1,42 @@
+{
+  "name": "veda.ng Research Hub MCP Server",
+  "identifier": "urn:air:veda.ng:mcp-server:research-hub",
+  "endpoint": "https://veda.ng/.well-known/mcp",
+  "transport": "streamable-http",
+  "protocolVersions": ["2025-06-18", "2025-03-26", "2024-11-05"],
+  "stateless": true,
+  "authentication": "none",
+  "serverInfo": {
+    "name": "veda.ng",
+    "title": "Vedang Vatsa Research Hub",
+    "version": "1.0.0"
+  },
+  "tools": [
+    {
+      "name": "search_essays",
+      "description": "Search long-form essays on AI agents, AI policy, and Web3 by title and summary.",
+      "input": { "query": "string (required)" }
+    },
+    {
+      "name": "get_essay",
+      "description": "Full Markdown text of one essay by URL slug.",
+      "input": { "slug": "string (required)" }
+    },
+    {
+      "name": "search_glossary",
+      "description": "Search the AI & Web3 glossary (100+ terms); returns previews.",
+      "input": { "query": "string (required)", "limit": "number (1-25, default 8)" }
+    },
+    {
+      "name": "get_glossary_term",
+      "description": "Full Markdown definition of one glossary term by slug.",
+      "input": { "slug": "string (required)" }
+    },
+    {
+      "name": "search_reports",
+      "description": "Search 233,000+ academic papers via OpenAlex in the AI or Web3 corpus.",
+      "input": { "query": "string (required)", "corpus": "'ai' | 'web3'", "per_page": "number (1-20)" }
+    }
+  ],
+  "docs": "https://veda.ng/developers"
+}

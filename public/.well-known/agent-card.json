@@ -1,0 +1,31 @@
+{
+  "name": "veda.ng Research Hub",
+  "description": "Essays, courses, glossary, and research paper search on AI agents and Web3 by Vedang Vatsa. MCP tools for essays, glossary, and OpenAlex-backed paper search.",
+  "url": "https://veda.ng",
+  "version": "1.0.0",
+  "protocolVersion": "0.2.9",
+  "preferredTransport": "JSONRPC",
+  "provider": {
+    "organization": "Vedang Vatsa",
+    "url": "https://veda.ng/about"
+  },
+  "capabilities": {
+    "search_research_papers": {
+      "description": "Search 233,000+ indexed AI/Web3 academic papers via OpenAlex, sorted by citations."
+    },
+    "fetch_essays": {
+      "description": "Full Markdown text of 50+ long-form essays on AI agents and Web3."
+    },
+    "glossary_lookup": {
+      "description": "Definitions of 100+ AI and Web3 terms."
+    }
+  },
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/markdown", "application/json"],
+  "authentication": {
+    "schemes": ["none"]
+  },
+  "endpoints": {
+    "mcp": "https://veda.ng/.well-known/mcp"
+  }
+}

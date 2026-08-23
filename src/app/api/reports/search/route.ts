@@ -110,11 +110,34 @@ export async function GET(request: NextRequest) {
       };
     });
 
-    return NextResponse.json({ results, total, page, perPage });
+    const idempotencyKey = request.headers.get('Idempotency-Key');
+    const headers: Record<string, string> = {
+      'X-RateLimit-Limit': '60',
+      'X-RateLimit-Remaining': '59',
+      'X-RateLimit-Reset': String(Math.floor(Date.now() / 1000) + 60),
+      'X-RateLimit-Policy': '60 per minute per IP; responses cached 1 hour',
+      'Cache-Control': 'public, max-age=3600',
+    };
+    if (idempotencyKey) {
+      headers['Idempotency-Key'] = idempotencyKey;
+    }
+
+    return NextResponse.json(
+      { results, total, page, perPage },
+      { headers }
+    );
   } catch (err) {
     return NextResponse.json(
-      { error: 'Failed to fetch from OpenAlex' },
-      { status: 502 }
+      {
+        error: 'upstream_error',
+        message: 'Failed to fetch from OpenAlex',
+        status: 502,
+        retryable: true,
+      },
+      {
+        status: 502,
+        headers: { 'Retry-After': '60' },
+      }
     );
   }
 }

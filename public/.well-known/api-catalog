@@ -1,0 +1,22 @@
+{
+  "specVersion": "1.0",
+  "name": "veda.ng Research Hub API Catalog",
+  "description": "Public machine APIs exposed by veda.ng.",
+  "apis": [
+    {
+      "name": "Research Paper Search",
+      "description": "Search 233,000+ indexed AI/Web3 academic papers (OpenAlex-backed), sorted by citations.",
+      "specification": "https://veda.ng/openapi.json",
+      "documentation": "https://veda.ng/developers",
+      "basePath": "https://veda.ng",
+      "endpoints": [
+        { "method": "GET", "path": "/api/reports/search", "auth": "none" }
+      ],
+      "authentication": "none",
+      "license": "https://veda.ng/ai.txt"
+    }
+  ],
+  "relatedResources": [
+    { "type": "mcp-server", "url": "https://veda.ng/.well-known/mcp", "catalog": "https://veda.ng/.well-known/ai-catalog.json" }
+  ]
+}
