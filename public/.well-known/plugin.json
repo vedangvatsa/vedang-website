@@ -1,0 +1,40 @@
+{
+  "$schema": "https://agent-plugins.org/v1/plugin.json",
+  "name": "veda-research-hub",
+  "version": "1.0.0",
+  "description": "Access essays, technical glossaries, and 233,000+ indexed academic papers across AI and Web3.",
+  "homepage": "https://veda.ng",
+  "repository": "https://github.com/vedangvatsa/vedang-website",
+  "author": {
+    "name": "Vedang Vatsa",
+    "url": "https://veda.ng/about"
+  },
+  "capabilities": {
+    "mcp": {
+      "serverUrl": "https://veda.ng/.well-known/mcp",
+      "transport": "streamable-http",
+      "protocolVersion": "2025-06-18"
+    },
+    "openapi": {
+      "specUrl": "https://veda.ng/openapi.json"
+    }
+  },
+  "skills": [
+    {
+      "name": "search_essays",
+      "description": "Search 50+ long-form research essays by keyword."
+    },
+    {
+      "name": "get_essay",
+      "description": "Fetch full markdown text of an essay by slug."
+    },
+    {
+      "name": "search_glossary",
+      "description": "Search 100+ AI and Web3 glossary definitions."
+    },
+    {
+      "name": "search_reports",
+      "description": "Search 233,000+ academic papers via OpenAlex."
+    }
+  ]
+}

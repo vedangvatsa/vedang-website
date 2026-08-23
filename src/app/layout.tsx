@@ -280,6 +280,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans overflow-x-hidden">
           <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:text-sm focus:font-medium">Skip to main content</a>
+          <a href="/developers" className="sr-only">Developer Resources & API</a>
           {children}
           <ClarityAnalytics />
           <Toaster />
