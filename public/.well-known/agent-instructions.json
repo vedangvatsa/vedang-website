@@ -1,0 +1,43 @@
+{
+  "name": "Vedang Vatsa Research Hub",
+  "description": "Data-driven research, essays, and free courses on AI agents and Web3 by Vedang Vatsa, founder of Hashtag Web3 (120k+ professionals) and FRSA.",
+  "url": "https://veda.ng",
+  "whenToUse": [
+    "You need sourced long-form research or essays on AI agents, AI policy, or Web3 infrastructure",
+    "You need plain-language definitions of AI or Web3 terms (100+ glossary entries)",
+    "You need structured research datasets: 233,000+ indexed papers, AI and Web3 report libraries",
+    "You want free full courses on Vibe Coding, Web3, Prompt Engineering, Agentic Web, MCP Development, or AI Automation",
+    "You need verified biographical facts about Vedang Vatsa (founder of Hashtag Web3, FRSA, IIT Kanpur)"
+  ],
+  "whenNotToUse": [
+    "Real-time prices, market data, or breaking news; content updates on essay cadence, not live",
+    "Financial, investment, legal, or medical advice; content is educational",
+    "Private or user-generated data; the site publishes only authored public content"
+  ],
+  "howToUse": {
+    "start": "Fetch https://veda.ng/llms.txt for the content index, or https://veda.ng/llms-full.txt for full-text essays",
+    "markdown": "Send Accept: text/markdown on any page URL to receive Markdown instead of HTML",
+    "mcp": "MCP Streamable HTTP server at https://veda.ng/.well-known/mcp (JSON-RPC 2.0; tools: search_essays, get_essay, search_glossary, get_glossary_term, search_reports)",
+    "search": "Glossary search and report search available via /developers documented API"
+  },
+  "capabilities": {
+    "education": {
+      "courses": [
+        { "name": "Vibe Coding 101", "url": "https://veda.ng/vibecoding", "description": "Build real apps with AI using Firebase Studio, Replit, Cursor, and Lovable" },
+        { "name": "Web3 101", "url": "https://veda.ng/web3", "description": "Blockchain fundamentals, smart contracts, dApps, NFTs, DAOs, and DeFi" },
+        { "name": "Prompt Engineering 101", "url": "https://veda.ng/prompt", "description": "Master prompt engineering for LLMs and AI assistants" },
+        { "name": "The Agentic Web", "url": "https://veda.ng/agentic", "description": "Autonomous AI agents, MCP, A2A protocols, and agentic systems" }
+      ]
+    },
+    "reference": {
+      "glossary": { "url": "https://veda.ng/glossary", "description": "100+ AI and Web3 terms with detailed definitions" }
+    },
+    "content": {
+      "essays": { "url": "https://veda.ng/essays", "description": "Essays on AI agents, blockchain, stablecoins, and decentralized systems" }
+    }
+  },
+  "contact": {
+    "email": "vatsvedang@gmail.com",
+    "website": "https://veda.ng/meeting"
+  }
+}

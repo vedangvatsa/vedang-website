@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T17:34:17.684Z",
+  "generatedAt": "2026-08-23T05:39:13.189Z",
   "validPaths": [
     "/",
     "/.well-known/mcp",
@@ -72,6 +72,7 @@
     "/computational-social-science",
     "/compute",
     "/constitutions",
+    "/contact",
     "/dark-forest-internet",
     "/darkforest",
     "/developers",

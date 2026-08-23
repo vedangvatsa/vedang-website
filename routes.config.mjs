@@ -66,6 +66,7 @@ export const EXTRA_REDIRECTS = [
   ['/194', '/agenticweb'],
   ['/158', '/blockchain'],
   ['/about', '/profile'],
+  ['/contact', '/meeting'],
   ['/web3-101', '/web3'],
   ['/web3-101/:path*', '/web3/:path*'],
   ['/mcp-development', '/mcp'],
