@@ -119,9 +119,41 @@ const speakingEngagementImages = [
 ];
 
 
+const mediaSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Press Coverage & Media Mentions of Vedang Vatsa',
+  url: 'https://veda.ng/media',
+  description: 'Verified press quotes, news features, and media citations of Vedang Vatsa across Decrypt, Yahoo Finance, Business Standard, The Tribune, Outlook Money, and ThePrint.',
+  about: {
+    '@type': 'Person',
+    name: 'Vedang Vatsa',
+    url: 'https://veda.ng/about',
+    sameAs: [
+      'https://x.com/vedangvatsa',
+      'https://linkedin.com/in/vedangvatsa',
+      'https://github.com/vedangvatsa',
+      'https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en',
+    ],
+  },
+  hasPart: mediaMentions.map((m) => ({
+    '@type': 'NewsArticle',
+    headline: m.title,
+    url: m.url,
+    publisher: {
+      '@type': 'Organization',
+      name: m.source,
+    },
+  })),
+};
+
 export default function MediaPage() {
   return (
     <PageLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(mediaSchema) }}
+      />
       <BreadcrumbSchema items={[{ name: "Media & Speaking", url: "https://veda.ng/media" }]} />
       <div>
         <div>

@@ -12,15 +12,15 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swa
 export const metadata: Metadata = {
   metadataBase: new URL('https://veda.ng'),
   title: {
-    default: 'Vedang Vatsa - AI & Web3 Thought Leader, Founder of Hashtag Web3',
-    template: '%s | Vedang Vatsa',
+    default: 'Veda - AI & Web3 Research Repository by Vedang Vatsa',
+    template: '%s | Veda',
   },
   description:
-    'Essays, free courses, and research on AI agents and Web3 by Vedang Vatsa, founder of Hashtag Web3 and Fellow of the Royal Society of Arts (FRSA).',
-  keywords: ['Vedang Vatsa', 'AI', 'Blockchain', 'Web3', 'Growth Marketing', 'Founder', 'AI Researcher', 'DeFi'],
+    'Veda (veda.ng) by Vedang Vatsa (FRSA) - Research repository and tools for AI & Web3. Indexing 233,000+ academic papers, 100+ glossary definitions, 40+ research essays, and Model Context Protocol (MCP) server.',
+  keywords: ['Veda', 'veda.ng', 'Vedang Vatsa', 'AI', 'Blockchain', 'Web3', 'Growth Marketing', 'Founder', 'AI Researcher', 'DeFi', 'MCP Server'],
   openGraph: {
-    title: 'Vedang Vatsa - AI & Web3 Thought Leader, Founder of Hashtag Web3',
-    description: 'Essays, free courses, and research on AI agents and Web3 by Vedang Vatsa, founder of Hashtag Web3 and Fellow of the Royal Society of Arts (FRSA).',
+    title: 'Veda - AI & Web3 Research Repository by Vedang Vatsa',
+    description: 'Veda (veda.ng) by Vedang Vatsa (FRSA) - Research repository and tools for AI & Web3. Indexing 233,000+ academic papers, 100+ glossary definitions, 40+ research essays, and Model Context Protocol (MCP) server.',
     url: '/',
     siteName: 'Veda',
     locale: 'en_US',
@@ -30,11 +30,11 @@ export const metadata: Metadata = {
         url: '/images/og-homepage.png',
         width: 1200,
         height: 630,
-        alt: 'Vedang Vatsa - AI & Web3 Thought Leader',
+        alt: 'Veda - AI & Web3 Research Repository',
       },
     ]
   },
-  authors: [{ name: 'Vedang Vatsa', url: 'https://veda.ng' }],
+  authors: [{ name: 'Vedang Vatsa', url: 'https://veda.ng/about' }],
   robots: {
     index: true,
     follow: true,
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: 'Vedang Vatsa - AI & Web3 Thought Leader, Founder of Hashtag Web3',
+    title: 'Veda - AI & Web3 Research Repository by Vedang Vatsa',
     card: 'summary_large_image',
     images: ['/images/og-homepage.png'],
   },
@@ -59,7 +59,7 @@ const websiteSchema = {
   name: 'Veda',
   alternateName: ['veda.ng', 'Vedang Vatsa', 'Veda Research Hub'],
   url: 'https://veda.ng',
-  description: 'Official research hub of Vedang Vatsa (veda.ng) - AI & Web3 essays, MCP server, and free courses.',
+  description: 'Official AI & Web3 research repository of Veda (veda.ng) by Vedang Vatsa (FRSA) - Indexing 233,000+ academic papers, 100+ glossary definitions, 40+ research essays, and Model Context Protocol (MCP) server.',
   publisher: {
     '@type': 'Person',
     name: 'Vedang Vatsa',

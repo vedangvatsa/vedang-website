@@ -25,63 +25,107 @@ export const metadata: Metadata = generateMetadata({
   title: pageMetadata.about.title,
   description: pageMetadata.about.description,
   url: pageMetadata.about.url,
-  ogImageAlt: 'Vedang Vatsa - Full Profile',
+  ogImageAlt: 'About Veda & Vedang Vatsa - Full Profile',
 });
 
-const personSchema = {
+const aboutPageSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Vedang Vatsa',
+  '@type': 'AboutPage',
+  name: 'About Veda & Vedang Vatsa',
   url: 'https://veda.ng/about',
-  image: 'https://veda.ng/images/icon.png',
-  jobTitle: ['Founder', 'AI Researcher', 'Web3 Innovator', 'Entrepreneur'],
-  worksFor: [
-    {
-      '@type': 'Organization',
-      name: 'Hashtag Web3',
-      url: 'https://hashtagweb3.com',
+  description: 'Author biography, brand authority, research publications, and community metrics for Veda (veda.ng) and Vedang Vatsa.',
+  mainEntity: {
+    '@type': 'Person',
+    name: 'Vedang Vatsa',
+    url: 'https://veda.ng/about',
+    image: 'https://veda.ng/images/icon.png',
+    jobTitle: ['Founder of Veda & Hashtag Web3', 'AI Researcher', 'Web3 Innovator', 'Author'],
+    worksFor: [
+      {
+        '@type': 'Organization',
+        name: 'Veda',
+        alternateName: ['veda.ng', 'Veda Research Hub'],
+        url: 'https://veda.ng',
+      },
+      {
+        '@type': 'Organization',
+        name: 'Hashtag Web3',
+        url: 'https://hashtagweb3.com',
+      },
+      {
+        '@type': 'Organization',
+        name: 'CVinBio',
+        url: 'https://cvin.bio',
+      },
+    ],
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: 'Indian Institute of Technology, Kanpur',
     },
-    {
-      '@type': 'Organization',
-      name: 'CVinBio',
-      url: 'https://cvin.bio',
-    },
-  ],
-  alumniOf: {
-    '@type': 'CollegeOrUniversity',
-    name: 'Indian Institute of Technology, Kanpur',
-  },
-  award: 'Fellow of the Royal Society of Arts',
-  sameAs: [
-    'https://linkedin.com/in/vedangvatsa',
-    'https://github.com/vedangvatsa',
-    'https://x.com/vedangvatsa',
-    'https://twitter.com/vedangvatsa',
-    'https://www.youtube.com/@vedangvatsa',
-    'https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en',
-    'https://www.instagram.com/vedangvatsa',
-    'https://t.me/vedangvatsa',
-    'https://pypi.org/project/vedang-cli/',
-    'https://hashtagweb3.com',
-    'https://cvin.bio',
-    'https://linkedin.com/company/cvinbio',
-    'https://www.linkedin.com/company/cvinbio',
-  ],
-  knowsAbout: ['Artificial Intelligence', 'Web3', 'Blockchain', 'Cryptocurrency', 'Community Building'],
-  speakable: {
-    '@type': 'SpeakableSpecification',
-    'cssSelector': ['h1'],
+    award: [
+      'Fellow of the Royal Society of Arts (FRSA)',
+      'Young Researcher Award 2020 (25 publications)',
+      'Young Achiever Award 2020-21',
+    ],
+    sameAs: [
+      'https://linkedin.com/in/vedangvatsa',
+      'https://github.com/vedangvatsa',
+      'https://x.com/vedangvatsa',
+      'https://twitter.com/vedangvatsa',
+      'https://www.youtube.com/@vedangvatsa',
+      'https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en',
+      'https://www.instagram.com/vedangvatsa',
+      'https://t.me/vedangvatsa',
+      'https://pypi.org/project/vedang-cli/',
+      'https://hashtagweb3.com',
+      'https://cvin.bio',
+      'https://linkedin.com/company/cvinbio',
+      'https://www.linkedin.com/company/cvinbio',
+      'https://linkedin.com/company/hashtagweb3',
+    ],
+    knowsAbout: [
+      'Artificial Intelligence',
+      'Model Context Protocol',
+      'Autonomous Agents',
+      'Web3 Infrastructure',
+      'Blockchain',
+      'DeFi',
+      'Community Building',
+    ],
   },
 };
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Veda',
+  alternateName: ['veda.ng', 'Veda Research Hub'],
+  url: 'https://veda.ng',
+  founder: {
+    '@type': 'Person',
+    name: 'Vedang Vatsa',
+    url: 'https://veda.ng/about',
+  },
+  description: 'Veda (veda.ng) is an open-access AI and Web3 research repository and tool platform indexing 233,000+ academic research papers, 40+ research essays, 100+ glossary terms, and Model Context Protocol (MCP) server tools.',
+  sameAs: [
+    'https://github.com/vedangvatsa/vedang-website',
+    'https://pypi.org/project/vedang-cli/',
+    'https://hashtagweb3.com',
+    'https://cvin.bio',
+  ],
+};
+
 export default function ProfilePage() {
-  
   return (
     <PageLayout>
       <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-        />
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <div>
         <div>
           <PageHero
