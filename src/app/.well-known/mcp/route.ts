@@ -21,10 +21,11 @@ export async function OPTIONS() {
 
 export async function GET() {
   return new Response(mcpEndpointDescriptor(), {
-    status: 405,
+    status: 200,
     headers: withCors({
       'Content-Type': 'application/json; charset=utf-8',
-      Allow: 'POST, DELETE, OPTIONS',
+      'Mcp-Protocol-Version': LATEST_PROTOCOL_VERSION,
+      'Cache-Control': 'public, max-age=86400',
     }),
   });
 }

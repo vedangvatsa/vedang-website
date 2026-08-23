@@ -18,74 +18,74 @@ This file provides a structured overview of the site's content for Large Languag
 
 ## Essays
 
-- [How India Uses AI](https://veda.ng/aiindia): India posts huge absolute AI numbers and thinner per-person use. Chatbots, silent public systems and annotation labour get mixed into one story.
-- [Cities of India](https://veda.ng/india): A government-data view of Indian cities, covering quality of life, household spending, prices and clean-air action.
-- [Who Buys After the Layoff](https://veda.ng/receipts): AI can cut a wage without cutting a customer, change a job, or create a new one. The open question is which of those three happens to the receipt.
-- [When Agents Stop Speaking English](https://veda.ng/agentspeak): A2A's sample message is still Hello, world. MCP and A2A already send JSON. Tickets and payments already use fields. The English in the sample is leftover from chat.
-- [The IndiaAI Mission](https://veda.ng/indiaai): India approved ₹10,372 crore for an AI mission. By 9 February 2026, ₹401 crore had arrived. Officials count onboarded GPUs. Parliament later published hours sanctioned, not hours used.
-- [The Neocloud](https://veda.ng/neocloud): CoreWeave calls itself a giant cloud company. Its IPO filing showed Microsoft as 62% of 2024 sales. The March 2026 loan was rated on the GPU rack and the customer contract. That is a renter with a pay-anyway lease, not AWS.
-- [A Mind That Outlives You](https://veda.ng/outlives): OpenAI built ChatGPT memory for multi-year time horizons. Apple, Google, and Facebook already have dead-user tools. The assistants that now hold the running notes of a life still do not.
-- [Private Cognition](https://veda.ng/private): You can encrypt a disk. You cannot yet encrypt a thought at ChatGPT prices. Apple's Private Cloud Compute is a shipped TEE. Zama's FHE still clocks a GPT-2 token in seconds. Zero data retention is a contract. Coverage uses one word for all three.
-- [Does Half the Web Run on Bots?](https://veda.ng/traffic): The web pays for itself when a bot visits and a person follows. AI crawlers now copy the page, answer elsewhere, and leave the site with the hosting bill.
-- [Open-Weight Licences](https://veda.ng/licenses): Labs call the weights open. The files are Apache, MIT, Community, or Research. You can run the download. You cannot check the training data. Llama still has a veto at 700 million users.
-- [The National AI Compute Scorecard](https://veda.ng/compute): 6 countries took different approaches to national AI compute. Each programme counts a different thing.
-- [Sovereign AI Debt](https://veda.ng/aidebt): Stargate was announced as $500 billion. By August 2025 Bloomberg reported that funds had not been raised to that budget. MGX later closed a $40 billion acquisition. SoftBank borrowed to buy OpenAI shares. Announced, funded, and spent still get printed as one investment number.
-- [AI Safety Institutes](https://veda.ng/safety): Every capital launched a safety institute. The UK hired. The US renamed the shop and kept about $15 million in public cash. The EU built an Office that can fine. The word spread. The statute did not.
-- [The AI Lawsuit Ledger](https://veda.ng/lawsuits): Two hundred AI suits sit on public dockets. One produced a $1.5 billion cheque. The Times has spent $28 million and does not have a verdict. The paid column is almost entirely people who did not sue.
-- [Intelligence is a Commodity](https://veda.ng/intelligence): You can now buy intelligence at a monthly price. Higher list prices buy longer reasoning. Access is cheaper. Expertise is not the same as a list price.
-- [Building an AI Text Detector](https://veda.ng/ai-detector): Data, stylometric features, and production limits for AI text detection at scale.
-- [The State of AI](https://veda.ng/stateofai): An OpenAlex sweep of 5,003,783 papers whose abstracts match AI method terms, 2013 through mid-2026. Neural networks still lead the cumulative count. LLM mentions grew 29.9x from 2018 to 2025. China leads volume. The US still leads LLM papers. 48.9% of the corpus has zero citations.
-- [The State of Web3](https://veda.ng/stateofweb3): On 12 June 2026 OpenAlex tagged 128,286 blockchain papers. Yearly output grew 117 times from 2013 to 2025. A paper total is not a count of working software or of statutes in force.
-- [The Agent Infrastructure Stack](https://veda.ng/agentstack): Over $5 billion in venture capital has been deployed into the eight layers of infrastructure that AI agents need to function.
-- [The Great Funding Realignment](https://veda.ng/funding): An empirical study of global venture capital cycles from 2015 to 2026, analyzing capital concentration, the expansion of median check sizes, and the Seed-to-Series A transition bottleneck.
-- [The AI Implementation Playbook](https://veda.ng/playbook): A complete, step-by-step framework for implementing AI agents across every function of a startup. From brand consistency to automated outreach to SEO that runs itself.
+- [How India Uses AI](https://veda.ng/aiindia): India posts huge absolute AI numbers and thinner per-person use. Chatbot...
+- [Cities of India](https://veda.ng/india): A government-data view of Indian cities, covering quality of life, house...
+- [Who Buys After the Layoff](https://veda.ng/receipts): AI can cut a wage without cutting a customer, change a job, or create a ...
+- [When Agents Stop Speaking English](https://veda.ng/agentspeak): A2A's sample message is still Hello, world. MCP and A2A already send JSO...
+- [The IndiaAI Mission](https://veda.ng/indiaai): India approved ₹10,372 crore for an AI mission. By 9 February 2026, ₹401...
+- [The Neocloud](https://veda.ng/neocloud): CoreWeave calls itself a giant cloud company. Its IPO filing showed Micr...
+- [A Mind That Outlives You](https://veda.ng/outlives): OpenAI built ChatGPT memory for multi-year time horizons. Apple, Google,...
+- [Private Cognition](https://veda.ng/private): You can encrypt a disk. You cannot yet encrypt a thought at ChatGPT pric...
+- [Does Half the Web Run on Bots?](https://veda.ng/traffic): The web pays for itself when a bot visits and a person follows. AI crawl...
+- [Open-Weight Licences](https://veda.ng/licenses): Labs call the weights open. The files are Apache, MIT, Community, or Res...
+- [The National AI Compute Scorecard](https://veda.ng/compute): 6 countries took different approaches to national AI compute. Each progr...
+- [Sovereign AI Debt](https://veda.ng/aidebt): Stargate was announced as $500 billion. By August 2025 Bloomberg reporte...
+- [AI Safety Institutes](https://veda.ng/safety): Every capital launched a safety institute. The UK hired. The US renamed ...
+- [The AI Lawsuit Ledger](https://veda.ng/lawsuits): Two hundred AI suits sit on public dockets. One produced a $1.5 billion ...
+- [Intelligence is a Commodity](https://veda.ng/intelligence): You can now buy intelligence at a monthly price. Higher list prices buy ...
+- [Building an AI Text Detector](https://veda.ng/ai-detector): Data, stylometric features, and production limits for AI text detection ...
+- [The State of AI](https://veda.ng/stateofai): An OpenAlex sweep of 5,003,783 papers whose abstracts match AI method te...
+- [The State of Web3](https://veda.ng/stateofweb3): On 12 June 2026 OpenAlex tagged 128,286 blockchain papers. Yearly output...
+- [The Agent Infrastructure Stack](https://veda.ng/agentstack): Over $5 billion in venture capital has been deployed into the eight laye...
+- [The Great Funding Realignment](https://veda.ng/funding): An empirical study of global venture capital cycles from 2015 to 2026, a...
+- [The AI Implementation Playbook](https://veda.ng/playbook): A complete, step-by-step framework for implementing AI agents across eve...
 - [The Post-Interface Internet](https://veda.ng/postinterface): The GUI was a 40-year hack for human-computer impedance matching.
-- [Agents Eating SaaS](https://veda.ng/agentsaas): The $400 billion SaaS industry was built on per-seat pricing. AI agents do not sit in seats.
-- [The Agentic State](https://veda.ng/stateagents): Estonia claims 100% of government services are online. Singapore deployed AI across its public service at scale.
-- [The Text Field is the New Dashboard](https://veda.ng/textui): When a text field backed by an LLM can answer any question by calling internal APIs directly, the dashboard becomes redundant.
-- [The Stepwise Approach to Enterprise AI](https://veda.ng/stepwise): Most enterprises fail at AI by deploying it everywhere at once. Evidence shows that starting with narrow, high-frequency tasks produces measurable ROI.
-- [The YC Portfolio, Decoded](https://veda.ng/yc): An analysis of Y Combinator's 5,818 companies reveals five structural shifts: B2B dominance at 51%, the rise of the AI employee, defense tech at scale,...
-- [Post-Scarcity Technology](https://veda.ng/postscarcity): When the marginal cost of intelligence, energy, and digital goods trends toward zero, the economic frameworks built on scarcity face structural pressure.
-- [Agentic Commerce](https://veda.ng/agentcommerce): When algorithms start shopping on behalf of consumers, traditional e-commerce breaks.
-- [Towards the Agentic Web](https://veda.ng/agenticweb): How the internet is shifting from a place where humans find information to  a platform where autonomous AI agents get things done on your behalf.
-- [The Infinity Economy](https://veda.ng/infinity): Can AI and decentralized systems make scarcity obsolete, or does the physical world have something to say about that?
-- [The AI Economy](https://veda.ng/aieconomy): Job displacement, market concentration, and what a balanced AI transition actually requires.
-- [Lessons from Singapore's Arc](https://veda.ng/singapore): How a fishing village became one of the richest countries on earth, and what the development economics literature says about why.
-- [From Cheap to Competitive](https://veda.ng/competitive): How national product quality perception follows income growth with a predictable lag, and where India sits on that arc today.
-- [The Revision Gap](https://veda.ng/revision): Why the difference between mediocre and effective writing is not first-draft quality but revision depth, how AI systems can be structured to close this...
-- [Twilight Economy](https://veda.ng/twilight): The zone where human and AI labor blend indistinguishably, where attribution becomes indeterminate, and where the legal, economic, and psychological...
-- [Are We in a Computer Simulation?](https://veda.ng/simulation): A structured examination of the simulation hypothesis: Bostrom's trilemma, the computational constraints, the consciousness dependency, and what modern...
-- [The Singularity Paradox](https://veda.ng/paradox): Why every prediction about post-singularity futures is self-defeating, how the alignment problem compounds with the control problem, and what the...
-- [Synthetic Empathy](https://veda.ng/empathy): A clinical trial showed AI therapy reduced depression symptoms by 51%. The WHO reports 1 in 6 people experience loneliness.
-- [The AI Agent Economy](https://veda.ng/agenteconomy): When software starts acting as an economic agent, sourcing suppliers, executing trades, managing projects, the corporation as it exists today faces...
-- [AI Superintelligence Timeline](https://veda.ng/asi): Why expert predictions for artificial superintelligence range from 2027 to 2100+, what the key bottlenecks are (compute, data, architecture,...
-- [The In-Between State](https://veda.ng/liminal): Transhumanism's actual near-term trajectory: not dramatic transcendence but a multi-decade period of partial, uneven, and socially disruptive...
+- [Agents Eating SaaS](https://veda.ng/agentsaas): The $400 billion SaaS industry was built on per-seat pricing. AI agents ...
+- [The Agentic State](https://veda.ng/stateagents): Estonia claims 100% of government services are online. Singapore deploye...
+- [The Text Field is the New Dashboard](https://veda.ng/textui): When a text field backed by an LLM can answer any question by calling in...
+- [The Stepwise Approach to Enterprise AI](https://veda.ng/stepwise): Most enterprises fail at AI by deploying it everywhere at once. Evidence...
+- [The YC Portfolio, Decoded](https://veda.ng/yc): An analysis of Y Combinator's 5,818 companies reveals five structural sh...
+- [Post-Scarcity Technology](https://veda.ng/postscarcity): When the marginal cost of intelligence, energy, and digital goods trends...
+- [Agentic Commerce](https://veda.ng/agentcommerce): When algorithms start shopping on behalf of consumers, traditional e-com...
+- [Towards the Agentic Web](https://veda.ng/agenticweb): How the internet is shifting from a place where humans find information ...
+- [The Infinity Economy](https://veda.ng/infinity): Can AI and decentralized systems make scarcity obsolete, or does the phy...
+- [The AI Economy](https://veda.ng/aieconomy): Job displacement, market concentration, and what a balanced AI transitio...
+- [Lessons from Singapore's Arc](https://veda.ng/singapore): How a fishing village became one of the richest countries on earth, and ...
+- [From Cheap to Competitive](https://veda.ng/competitive): How national product quality perception follows income growth with a pre...
+- [The Revision Gap](https://veda.ng/revision): Why the difference between mediocre and effective writing is not first-d...
+- [Twilight Economy](https://veda.ng/twilight): The zone where human and AI labor blend indistinguishably, where attribu...
+- [Are We in a Computer Simulation?](https://veda.ng/simulation): A structured examination of the simulation hypothesis: Bostrom's trilemm...
+- [The Singularity Paradox](https://veda.ng/paradox): Why every prediction about post-singularity futures is self-defeating, h...
+- [Synthetic Empathy](https://veda.ng/empathy): A clinical trial showed AI therapy reduced depression symptoms by 51%. T...
+- [The AI Agent Economy](https://veda.ng/agenteconomy): When software starts acting as an economic agent, sourcing suppliers, ex...
+- [AI Superintelligence Timeline](https://veda.ng/asi): Why expert predictions for artificial superintelligence range from 2027 ...
+- [The In-Between State](https://veda.ng/liminal): Transhumanism's actual near-term trajectory: not dramatic transcendence ...
 - [The Hustle Trap](https://veda.ng/hustle): After 55 hours per week, productivity drops to nearly zero.
-- [An Internet of Lies](https://veda.ng/lies): Vendor reports put deepfake volume up hundreds of percent. Human detection of high-quality fakes is near chance in lab work. Official loss tallies lag.
-- [Intuitive Singularity](https://veda.ng/instinct): When AI systems transition from tools that execute commands to systems that anticipate intent, the interface between human and machine cognition...
-- [Governance for AGI](https://veda.ng/governance): Three regulatory superpowers are building incompatible AI governance frameworks. The EU bans practices. The US deregulates. China registers algorithms.
-- [The Substrate Shift](https://veda.ng/substrate): Silicon is hitting physical limits at the atomic scale. DNA stores 455 exabytes per gram.
-- [The World as an Interface](https://veda.ng/ambient): The smart home market will reach $175 billion in 2025. Device shipments approach 1.25 billion units.
-- [What is the Singularity?](https://veda.ng/singularity): The word, the alignment problem, and why the only speed question that matters is a week versus a decade. Dates live elsewhere.
-- [API States](https://veda.ng/apis): Estonia runs 99% of public services digitally and saves 2% of GDP annually. India's UPI processes billions of transactions monthly.
-- [Cognitive Load Crisis](https://veda.ng/cognition): The average attention span on a screen is 47 seconds. A 2025 US survey put daily phone checks at 205.
-- [Artificial Intuition](https://veda.ng/intuition): How machines may develop synthetic analogues to human intuition through pattern recognition at scale, what Kahneman's dual-process theory reveals about...
-- [Bureaucracy is the friction tax everyone pays](https://veda.ng/bureaucracy): Why institutional complexity accumulates faster than it resolves, what the measurable costs are across sectors, and where digital-first governance...
-- [The Dark Forest Internet](https://veda.ng/darkforest): Bots now generate 51% of all web traffic. 74% of new web pages contain AI-generated text.
-- [Rationality in AI](https://veda.ng/rationality): What it means for an AI system to be rational, how decision theory applies to artificial agents, why the orthogonality thesis makes alignment a...
-- [Digital Monasticism](https://veda.ng/monasticism): Silence is the new luxury. The average person spends 7 hours on screens daily. Gloria Mark's mean screen attention is 47 seconds. The median is 40.
-- [Attention Refinery](https://veda.ng/attention): The five largest technology companies generate over $600 billion per year by extracting and reselling human attention.
-- [What Blockchain Kept](https://veda.ng/blockchain): After five boom-and-bust cycles, stablecoins, spot Bitcoin ETFs and a thin layer of tokenized Treasuries are what still show up in the books.
-- [Sacred Algorithms](https://veda.ng/algorithms): COMPAS predicts recidivism with racial bias baked in. Healthcare AI underestimates illness in minority patients.
-- [Computational Social Science](https://veda.ng/socialscience): Twitter's API shutdown disrupted 20 years of social research. Digital twins simulate voter behavior.
-- [Computational Constitutions](https://veda.ng/constitutions): Wyoming legalized DAO LLCs in 2021. Smart contracts execute governance rules automatically.
-- [Pseudonymous Agency](https://veda.ng/pseudonymity): Satoshi Nakamoto built a $1 trillion protocol without revealing an identity. Banksy generates $25M+ per auction without a face.
-- [Programmable Trust](https://veda.ng/trust): Zero-knowledge proofs verify without revealing. Trusted execution environments create hardware-enforced privacy.
-- [The God Protocol](https://veda.ng/godprotocol): Nick Szabo imagined a trusted third party with infinite integrity, no self-interest, and perfect confidentiality. Bitcoin approximated it.
-- [The Sensory Internet](https://veda.ng/sensory): The haptic technology market reaches $4-12 billion in 2025. Apple shipped 390,000 Vision Pro units. Neuralink implanted its first human BCI.
-- [The Mesh Economy](https://veda.ng/mesh): DeFi protocols execute billions in daily volume with zero employees. DAOs manage tens of billions in treasury assets through on-chain governance.
-- [The Plurality Trap](https://veda.ng/plurality): More information was supposed to produce better understanding. Instead, it produced more ways to be wrong confidently.
-- [The Simulation Layer](https://veda.ng/simulayer): Digital twins save Boeing over $1 billion in manufacturing. Waymo has driven 20+ billion simulated miles.
+- [An Internet of Lies](https://veda.ng/lies): Vendor reports put deepfake volume up hundreds of percent. Human detecti...
+- [Intuitive Singularity](https://veda.ng/instinct): When AI systems transition from tools that execute commands to systems t...
+- [Governance for AGI](https://veda.ng/governance): Three regulatory superpowers are building incompatible AI governance fra...
+- [The Substrate Shift](https://veda.ng/substrate): Silicon is hitting physical limits at the atomic scale. DNA stores 455 e...
+- [The World as an Interface](https://veda.ng/ambient): The smart home market will reach $175 billion in 2025. Device shipments ...
+- [What is the Singularity?](https://veda.ng/singularity): The word, the alignment problem, and why the only speed question that ma...
+- [API States](https://veda.ng/apis): Estonia runs 99% of public services digitally and saves 2% of GDP annual...
+- [Cognitive Load Crisis](https://veda.ng/cognition): The average attention span on a screen is 47 seconds. A 2025 US survey p...
+- [Artificial Intuition](https://veda.ng/intuition): How machines may develop synthetic analogues to human intuition through ...
+- [Bureaucracy is the friction tax everyone pays](https://veda.ng/bureaucracy): Why institutional complexity accumulates faster than it resolves, what t...
+- [The Dark Forest Internet](https://veda.ng/darkforest): Bots now generate 51% of all web traffic. 74% of new web pages contain A...
+- [Rationality in AI](https://veda.ng/rationality): What it means for an AI system to be rational, how decision theory appli...
+- [Digital Monasticism](https://veda.ng/monasticism): Silence is the new luxury. The average person spends 7 hours on screens ...
+- [Attention Refinery](https://veda.ng/attention): The five largest technology companies generate over $600 billion per yea...
+- [What Blockchain Kept](https://veda.ng/blockchain): After five boom-and-bust cycles, stablecoins, spot Bitcoin ETFs and a th...
+- [Sacred Algorithms](https://veda.ng/algorithms): COMPAS predicts recidivism with racial bias baked in. Healthcare AI unde...
+- [Computational Social Science](https://veda.ng/socialscience): Twitter's API shutdown disrupted 20 years of social research. Digital tw...
+- [Computational Constitutions](https://veda.ng/constitutions): Wyoming legalized DAO LLCs in 2021. Smart contracts execute governance r...
+- [Pseudonymous Agency](https://veda.ng/pseudonymity): Satoshi Nakamoto built a $1 trillion protocol without revealing an ident...
+- [Programmable Trust](https://veda.ng/trust): Zero-knowledge proofs verify without revealing. Trusted execution enviro...
+- [The God Protocol](https://veda.ng/godprotocol): Nick Szabo imagined a trusted third party with infinite integrity, no se...
+- [The Sensory Internet](https://veda.ng/sensory): The haptic technology market reaches $4-12 billion in 2025. Apple shippe...
+- [The Mesh Economy](https://veda.ng/mesh): DeFi protocols execute billions in daily volume with zero employees. DAO...
+- [The Plurality Trap](https://veda.ng/plurality): More information was supposed to produce better understanding. Instead, ...
+- [The Simulation Layer](https://veda.ng/simulayer): Digital twins save Boeing over $1 billion in manufacturing. Waymo has dr...
 
 ## Research Data Archives
 
@@ -107,7 +107,7 @@ Selected peer-reviewed research on AI, Web3, and economic systems:
 
 ## Glossary
 
-All 287 terms, full definitions on each page:
+Featured definitions (see https://veda.ng/glossary for full 100+ terms):
 
 - [Artificial General Intelligence (AGI)](https://veda.ng/glossary/agi)
 - [Large Language Model (LLM)](https://veda.ng/glossary/llm)
@@ -144,258 +144,7 @@ All 287 terms, full definitions on each page:
 - [Kubernetes](https://veda.ng/glossary/kubernetes)
 - [Serverless](https://veda.ng/glossary/serverless)
 - [CI/CD](https://veda.ng/glossary/cicd)
-- [Edge Computing](https://veda.ng/glossary/edge-computing)
-- [Zero-Knowledge Proof](https://veda.ng/glossary/zero-knowledge-proof)
-- [Merkle Tree](https://veda.ng/glossary/merkle-tree)
-- [Sharding](https://veda.ng/glossary/sharding)
-- [IPFS (InterPlanetary File System)](https://veda.ng/glossary/ipfs)
-- [WebAssembly (Wasm)](https://veda.ng/glossary/webassembly)
-- [GraphQL](https://veda.ng/glossary/graphql)
-- [Docker](https://veda.ng/glossary/docker)
-- [Message Queue](https://veda.ng/glossary/message-queue)
-- [Rate Limiting](https://veda.ng/glossary/rate-limiting)
-- [Context Window](https://veda.ng/glossary/context-window)
-- [Temperature](https://veda.ng/glossary/temperature)
-- [Inference](https://veda.ng/glossary/inference)
-- [Chain-of-Thought Prompting](https://veda.ng/glossary/chain-of-thought)
-- [Reasoning Model](https://veda.ng/glossary/reasoning-model)
-- [Model Context Protocol (MCP)](https://veda.ng/glossary/mcp)
-- [Vector Database](https://veda.ng/glossary/vector-database)
-- [Model Distillation](https://veda.ng/glossary/model-distillation)
-- [Tokenization](https://veda.ng/glossary/tokenization)
-- [Automated Market Maker (AMM)](https://veda.ng/glossary/amm)
-- [Seed Phrase](https://veda.ng/glossary/seed-phrase)
-- [Maximal Extractable Value (MEV)](https://veda.ng/glossary/mev)
-- [DePIN](https://veda.ng/glossary/depin)
-- [Restaking](https://veda.ng/glossary/restaking)
-- [Airdrop](https://veda.ng/glossary/airdrop)
-- [Tokenomics](https://veda.ng/glossary/tokenomics)
-- [Attention Mechanism](https://veda.ng/glossary/attention-mechanism)
-- [Quantization](https://veda.ng/glossary/quantization)
-- [Agentic Loop](https://veda.ng/glossary/agentic-loop)
-- [Synthetic Data](https://veda.ng/glossary/synthetic-data)
-- [Prompt Injection](https://veda.ng/glossary/prompt-injection)
-- [Mixture of Experts (MoE)](https://veda.ng/glossary/mixture-of-experts)
-- [Grounding](https://veda.ng/glossary/grounding)
-- [Liquidity Pool](https://veda.ng/glossary/liquidity-pool)
-- [Yield Farming](https://veda.ng/glossary/yield-farming)
-- [Flash Loan](https://veda.ng/glossary/flash-loan)
-- [Layer 1](https://veda.ng/glossary/layer-1)
-- [Proof of Work](https://veda.ng/glossary/proof-of-work)
-- [Proof of Stake](https://veda.ng/glossary/proof-of-stake)
-- [Cold Wallet](https://veda.ng/glossary/cold-wallet)
-- [Wrapped Token](https://veda.ng/glossary/wrapped-token)
-- [WebSocket](https://veda.ng/glossary/websocket)
-- [OAuth](https://veda.ng/glossary/oauth)
-- [Load Balancer](https://veda.ng/glossary/load-balancer)
-- [Monorepo](https://veda.ng/glossary/monorepo)
-- [Attention Head](https://veda.ng/glossary/attention-head)
-- [Positional Encoding](https://veda.ng/glossary/positional-encoding)
-- [Batch Normalization](https://veda.ng/glossary/batch-normalization)
-- [Beam Search](https://veda.ng/glossary/beam-search)
-- [Latency](https://veda.ng/glossary/latency)
-- [Perplexity](https://veda.ng/glossary/perplexity)
-- [Activation Function](https://veda.ng/glossary/activation-function)
-- [Softmax](https://veda.ng/glossary/softmax)
-- [Cross-Entropy Loss](https://veda.ng/glossary/cross-entropy-loss)
-- [Perplexity Trap](https://veda.ng/glossary/perplexity-trap)
-- [Throughput](https://veda.ng/glossary/throughput)
-- [Protocol Buffer](https://veda.ng/glossary/protobuf)
-- [gRPC](https://veda.ng/glossary/grpc)
-- [Idempotency](https://veda.ng/glossary/idempotency)
-- [Circuit Breaker](https://veda.ng/glossary/circuit-breaker)
-- [Database Index](https://veda.ng/glossary/database-index)
-- [ACID Properties](https://veda.ng/glossary/acid-properties)
-- [Consistency Hashing](https://veda.ng/glossary/consistency-hashing)
-- [CORS](https://veda.ng/glossary/cors)
-- [Database Sharding](https://veda.ng/glossary/database-sharding)
-- [Caching Strategy](https://veda.ng/glossary/caching-strategy)
-- [Yield](https://veda.ng/glossary/yield)
-- [Impermanent Loss](https://veda.ng/glossary/impermanent-loss)
-- [Slashing](https://veda.ng/glossary/slashing)
-- [MEV Burn](https://veda.ng/glossary/mev-burn)
-- [Composability](https://veda.ng/glossary/composability)
-- [Cross-Chain Bridge](https://veda.ng/glossary/cross-chain-bridge)
-- [State Channel](https://veda.ng/glossary/state-channel)
-- [Payment Channel](https://veda.ng/glossary/payment-channel)
-- [Atomic Swap](https://veda.ng/glossary/atomic-swap)
-- [Rug Pull](https://veda.ng/glossary/rug-pull)
-- [Sparse Expert](https://veda.ng/glossary/sparse-expert)
-- [Knowledge Distillation](https://veda.ng/glossary/knowledge-distillation)
-- [Scaling Law](https://veda.ng/glossary/scaling-law)
-- [Reward Model](https://veda.ng/glossary/reward-model)
-- [Scaffold](https://veda.ng/glossary/scaffold)
-- [Few-Shot Prompting](https://veda.ng/glossary/few-shot-prompting)
-- [Hyperparameter](https://veda.ng/glossary/hyperparameter)
-- [Dropout](https://veda.ng/glossary/dropout)
-- [Overfitting](https://veda.ng/glossary/overfitting)
-- [Generalization](https://veda.ng/glossary/generalization)
-- [Sybil Attack](https://veda.ng/glossary/sybil-attack)
-- [Double Spend](https://veda.ng/glossary/double-spend)
-- [Dust Attack](https://veda.ng/glossary/dust-attack)
-- [51% Attack](https://veda.ng/glossary/51-percent-attack)
-- [Liquidity Pool Volume](https://veda.ng/glossary/liquidity-pool-volume)
-- [Slippage](https://veda.ng/glossary/slippage)
-- [Value at Risk](https://veda.ng/glossary/value-at-risk)
-- [APY vs APR](https://veda.ng/glossary/apy-vs-apr)
-- [Time-Weighted Average Price](https://veda.ng/glossary/twap)
-- [Backpropagation](https://veda.ng/glossary/backpropagation)
-- [Gradient Descent](https://veda.ng/glossary/gradient-descent)
-- [Neural Network](https://veda.ng/glossary/neural-network)
-- [Convolutional Neural Network](https://veda.ng/glossary/cnn)
-- [Recurrent Neural Network](https://veda.ng/glossary/rnn)
-- [LSTM](https://veda.ng/glossary/lstm)
-- [Autoencoder](https://veda.ng/glossary/autoencoder)
-- [Variational Autoencoder](https://veda.ng/glossary/vae)
-- [Generative Adversarial Network](https://veda.ng/glossary/gan)
-- [Diffusion Model](https://veda.ng/glossary/diffusion-model)
-- [Generative Model](https://veda.ng/glossary/generative-model)
-- [Transfer Learning](https://veda.ng/glossary/transfer-learning)
-- [Foundation Model](https://veda.ng/glossary/foundation-model)
-- [BERT](https://veda.ng/glossary/bert)
-- [Attention Score](https://veda.ng/glossary/attention-score)
-- [Self-Attention](https://veda.ng/glossary/self-attention)
-- [Cross-Attention](https://veda.ng/glossary/cross-attention)
-- [Layer Normalization](https://veda.ng/glossary/layer-normalization)
-- [Residual Connection](https://veda.ng/glossary/residual-connection)
-- [Feedforward Network](https://veda.ng/glossary/feedforward-network)
-- [Causal Masking](https://veda.ng/glossary/causal-masking)
-- [Tokenizer](https://veda.ng/glossary/tokenizer)
-- [Byte-Pair Encoding](https://veda.ng/glossary/bpe)
-- [Vocabulary](https://veda.ng/glossary/vocabulary)
-- [Logit](https://veda.ng/glossary/logit)
-- [Top-k Sampling](https://veda.ng/glossary/top-k-sampling)
-- [Top-p Sampling](https://veda.ng/glossary/top-p-sampling)
-- [Speculative Decoding](https://veda.ng/glossary/speculative-decoding)
-- [KV Cache](https://veda.ng/glossary/kv-cache)
-- [Prefix Tuning](https://veda.ng/glossary/prefix-tuning)
-- [LoRA](https://veda.ng/glossary/lora)
-- [Adapter](https://veda.ng/glossary/adapter)
-- [Prompt Tuning](https://veda.ng/glossary/prompt-tuning)
-- [Instruction Tuning](https://veda.ng/glossary/instruction-tuning)
-- [Direct Preference Optimization](https://veda.ng/glossary/dpo)
-- [Contrastive Learning](https://veda.ng/glossary/contrastive-learning)
-- [CLIP](https://veda.ng/glossary/clip)
-- [Vision Transformer](https://veda.ng/glossary/vit)
-- [Object Detection](https://veda.ng/glossary/object-detection)
-- [Image Segmentation](https://veda.ng/glossary/image-segmentation)
-- [SAM](https://veda.ng/glossary/sam)
-- [Optical Character Recognition](https://veda.ng/glossary/ocr)
-- [Computer Vision](https://veda.ng/glossary/computer-vision)
-- [Speech Recognition](https://veda.ng/glossary/speech-recognition)
-- [Text-to-Speech](https://veda.ng/glossary/tts)
-- [Named Entity Recognition](https://veda.ng/glossary/ner)
-- [Sentiment Analysis](https://veda.ng/glossary/sentiment-analysis)
-- [Question Answering](https://veda.ng/glossary/question-answering)
-- [Machine Translation](https://veda.ng/glossary/machine-translation)
-- [Semantic Similarity](https://veda.ng/glossary/semantic-similarity)
-- [Document Retrieval](https://veda.ng/glossary/document-retrieval)
-- [Re-ranking](https://veda.ng/glossary/re-ranking)
-- [Chunking](https://veda.ng/glossary/chunking)
-- [Market Cap](https://veda.ng/glossary/market-cap)
-- [Circulating Supply](https://veda.ng/glossary/circulating-supply)
-- [Vesting Schedule](https://veda.ng/glossary/vesting-schedule)
-- [Token Burn](https://veda.ng/glossary/token-burn)
-- [Emission Rate](https://veda.ng/glossary/emission-rate)
-- [Order Book](https://veda.ng/glossary/order-book)
-- [Limit Order](https://veda.ng/glossary/limit-order)
-- [Market Order](https://veda.ng/glossary/market-order)
-- [Liquidity Provider](https://veda.ng/glossary/liquidity-provider)
-- [Concentrated Liquidity](https://veda.ng/glossary/concentrated-liquidity)
-- [Total Value Locked](https://veda.ng/glossary/tvl)
-- [Protocol Revenue](https://veda.ng/glossary/protocol-revenue)
-- [Collateralization Ratio](https://veda.ng/glossary/collateralization-ratio)
-- [Liquidation](https://veda.ng/glossary/liquidation)
-- [Borrow Rate](https://veda.ng/glossary/borrow-rate)
-- [Supply Rate](https://veda.ng/glossary/supply-rate)
-- [Utilization Rate](https://veda.ng/glossary/utilization-rate)
-- [Perpetual Futures](https://veda.ng/glossary/perpetual-futures)
-- [Funding Rate](https://veda.ng/glossary/funding-rate)
-- [Leverage](https://veda.ng/glossary/leverage)
-- [Margin](https://veda.ng/glossary/margin)
-- [Delta Neutral](https://veda.ng/glossary/delta-neutral)
-- [Basis Trade](https://veda.ng/glossary/basis-trade)
-- [Rollup](https://veda.ng/glossary/rollup)
-- [Optimistic Rollup](https://veda.ng/glossary/optimistic-rollup)
-- [ZK Rollup](https://veda.ng/glossary/zk-rollup)
-- [Data Availability](https://veda.ng/glossary/data-availability)
-- [Sequencer](https://veda.ng/glossary/sequencer)
-- [Account Abstraction](https://veda.ng/glossary/account-abstraction)
-- [Social Recovery](https://veda.ng/glossary/social-recovery)
-- [Intent](https://veda.ng/glossary/intent)
-- [Modular Blockchain](https://veda.ng/glossary/modular-blockchain)
-- [Liquid Restaking](https://veda.ng/glossary/liquid-restaking)
-- [Agentic Workflow](https://veda.ng/glossary/agentic-workflow)
-- [Real World Assets (RWA)](https://veda.ng/glossary/real-world-assets)
-- [Ethereum Virtual Machine (EVM)](https://veda.ng/glossary/ethereum-virtual-machine)
-- [Decentralized Identity (DID)](https://veda.ng/glossary/decentralized-identity)
-- [Soulbound Token (SBT)](https://veda.ng/glossary/soulbound-token)
-- [Zero-Knowledge EVM (zkEVM)](https://veda.ng/glossary/zkevm)
-- [Self-Sovereign Identity (SSI)](https://veda.ng/glossary/self-sovereign-identity)
-- [Federated Learning](https://veda.ng/glossary/federated-learning)
-- [Autonomous Agents](https://veda.ng/glossary/autonomous-agents)
-- [Reinforcement Learning](https://veda.ng/glossary/reinforcement-learning)
-- [Supervised Learning](https://veda.ng/glossary/supervised-learning)
-- [Deep Learning](https://veda.ng/glossary/deep-learning)
-- [Generative AI](https://veda.ng/glossary/generative-ai)
-- [Transformer Architecture](https://veda.ng/glossary/transformer-architecture)
-- [Semi-Supervised Learning](https://veda.ng/glossary/semi-supervised-learning)
-- [Expert Systems](https://veda.ng/glossary/expert-systems)
-- [AI Alignment](https://veda.ng/glossary/ai-alignment)
-- [Artificial Superintelligence (ASI)](https://veda.ng/glossary/artificial-superintelligence-asi)
-- [AI Safety](https://veda.ng/glossary/ai-safety)
-- [Feature Extraction](https://veda.ng/glossary/feature-extraction)
-- [Support Vector Machine (SVM)](https://veda.ng/glossary/support-vector-machine-svm)
-- [Random Forest](https://veda.ng/glossary/random-forest)
-- [Cluster Analysis](https://veda.ng/glossary/cluster-analysis)
-- [Word Embeddings](https://veda.ng/glossary/word-embeddings)
-- [Algorithmic Bias](https://veda.ng/glossary/algorithmic-bias)
-- [Explainable AI (XAI)](https://veda.ng/glossary/explainable-ai-xai)
-- [Knowledge Graph](https://veda.ng/glossary/knowledge-graph)
-- [Predictive Analytics](https://veda.ng/glossary/predictive-analytics)
-- [Low-Rank Adaptation (LoRA)](https://veda.ng/glossary/low-rank-adaptation-lora)
-- [Model Quantization](https://veda.ng/glossary/model-quantization)
-- [Multi-Agent Systems](https://veda.ng/glossary/multi-agent-systems)
-- [Edge AI](https://veda.ng/glossary/edge-ai)
-- [Hyperparameter Tuning](https://veda.ng/glossary/hyperparameter-tuning)
-- [Pattern Recognition](https://veda.ng/glossary/pattern-recognition)
-- [Vision Transformers (ViT)](https://veda.ng/glossary/vision-transformers-vit)
-- [Delegated Proof of Stake (DPoS)](https://veda.ng/glossary/delegated-proof-of-stake-dpos)
-- [Cryptocurrency Wallet](https://veda.ng/glossary/cryptocurrency-wallet)
-- [Public-Key Cryptography](https://veda.ng/glossary/public-key-cryptography)
-- [Cryptographic Hash Function](https://veda.ng/glossary/cryptographic-hash-function)
-- [Mining Pool](https://veda.ng/glossary/mining-pool)
-- [Genesis Block](https://veda.ng/glossary/genesis-block)
-- [Hard Fork](https://veda.ng/glossary/hard-fork)
-- [Soft Fork](https://veda.ng/glossary/soft-fork)
-- [Zero-Knowledge Proofs (ZKPs)](https://veda.ng/glossary/zero-knowledge-proofs-zkps)
-- [Peer-to-Peer (P2P)](https://veda.ng/glossary/peer-to-peer-p2p)
-- [Double-Spending](https://veda.ng/glossary/double-spending)
-- [Cold Storage](https://veda.ng/glossary/cold-storage)
-- [Hot Wallet](https://veda.ng/glossary/hot-wallet)
-- [Proof of History (PoH)](https://veda.ng/glossary/proof-of-history-poh)
-- [Directed Acyclic Graph (DAG)](https://veda.ng/glossary/directed-acyclic-graph-dag)
-- [Decentralized Physical Infrastructure Networks (DePIN)](https://veda.ng/glossary/depin-networks)
-- [Intent-Centric Architecture](https://veda.ng/glossary/intent-centric-architecture)
-- [Parallelized EVM](https://veda.ng/glossary/parallelized-evm)
-- [Decentralized Sequencer](https://veda.ng/glossary/decentralized-sequencer)
-- [Data Availability Sampling (DAS)](https://veda.ng/glossary/data-availability-sampling-das)
-- [Decentralized Exchange (DEX)](https://veda.ng/glossary/decentralized-exchange-dex)
-- [Web2](https://veda.ng/glossary/web2)
-- [Internet of Things (IoT)](https://veda.ng/glossary/internet-of-things-iot)
-- [Quantum Computing](https://veda.ng/glossary/quantum-computing)
-- [Serverless Architecture](https://veda.ng/glossary/serverless-architecture)
-- [Continuous Integration / Continuous Deployment (CI/CD)](https://veda.ng/glossary/ci-cd)
-- [Containerization (Docker)](https://veda.ng/glossary/containerization)
-- [Spatial Computing](https://veda.ng/glossary/spatial-computing)
-- [Digital Twin](https://veda.ng/glossary/digital-twin)
-- [DNS (Domain Name System)](https://veda.ng/glossary/dns)
-- [REST API](https://veda.ng/glossary/rest-api)
-- [TCP/IP](https://veda.ng/glossary/tcp-ip)
-- [CDN (Content Delivery Network)](https://veda.ng/glossary/cdn)
-- [SSL/TLS](https://veda.ng/glossary/ssl-tls)
-- [Git](https://veda.ng/glossary/git)
-- [Webhook](https://veda.ng/glossary/webhook)
+- [View all 287 glossary definitions...](https://veda.ng/glossary)
 
 ## When to Use This Site
 
@@ -406,21 +155,24 @@ All 287 terms, full definitions on each page:
 - You need verified biographical facts about Vedang Vatsa (founder of Hashtag Web3, FRSA, IIT Kanpur)
 
 
-## For Developers and Agents
+## Veda Developer Resources & APIs
 
-- Content index for LLMs: https://veda.ng/llms.txt
-- Full-text version: https://veda.ng/llms-full.txt
-- Developer resources: https://veda.ng/developers
-- MCP server (Streamable HTTP): https://veda.ng/.well-known/mcp
-- OpenAPI spec: https://veda.ng/openapi.json
-- Contact: https://veda.ng/contact or vatsvedang@gmail.com
+- Developer Documentation & Reference: https://veda.ng/developers
+- OpenAPI 3.1 Specification: https://veda.ng/openapi.json
+- Veda Public REST API (v1): https://veda.ng/api/v1/reports/search
+- Essays Catalog API (v1): https://veda.ng/api/v1/essays
+- Technical Glossary API (v1): https://veda.ng/api/v1/glossary
+- Model Context Protocol (MCP) Server: https://veda.ng/.well-known/mcp (Streamable HTTP)
+- Agent Authentication Guide (WorkOS format): https://veda.ng/auth.md
+- Full-Text Corpus Index: https://veda.ng/llms-full.txt
+- Contact & Advisory: https://veda.ng/contact or vatsvedang@gmail.com
 
 Tip: send an HTTP Accept header of text/markdown on any page URL to get the Markdown version.
 
 
 ## Trust Pages
 
-- [Profile / About](https://veda.ng/about): Author biography and credentials
+- [Profile / About](https://veda.ng/about): Author biography, credentials, and Hashtag Web3
 - [Privacy Policy](https://veda.ng/privacy): Data handling, analytics, and third-party services
-- [Contact / Book a Meeting](https://veda.ng/contact): Direct contact options
+- [Contact / Book a Meeting](https://veda.ng/contact): Direct consultation and email options
 

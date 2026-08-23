@@ -81,6 +81,37 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Semantic server-rendered content for crawlers & AI agents (invisible in visual UI) */}
+      <section className="sr-only" aria-label="About Vedang Vatsa and Hashtag Web3 Research Hub">
+        <h2>Hashtag Web3 Research and Publications Overview</h2>
+        <p>
+          veda.ng is the official research hub and personal publication platform of Vedang Vatsa (FRSA), founder of Hashtag Web3, a global network of over 120,000 Web3 and AI professionals, and CVinBio.
+        </p>
+        
+        <h3>Artificial Intelligence, LLMs, and Autonomous Agent Systems</h3>
+        <p>
+          Explore in-depth technical essays on autonomous AI agents, Model Context Protocol (MCP), agent-to-agent negotiation, prompt engineering patterns, vibe coding, and AI governance frameworks.
+        </p>
+        
+        <h3>Web3 Infrastructure and Decentralized Protocols</h3>
+        <p>
+          Comprehensive analysis of blockchain scalability, cryptographic primitives, smart contract design, decentralized finance mechanisms, and token engineering systems.
+        </p>
+
+        <h3>Veda Developer Resources, APIs, and Machine Interfaces</h3>
+        <p>
+          Programmatic access is open and keyless. Integrate with our developer tools:
+        </p>
+        <ul>
+          <li><Link href="/developers">Developer Documentation and API Reference</Link></li>
+          <li><Link href="/openapi.json">OpenAPI 3.1 Specification</Link></li>
+          <li><Link href="/api/v1/reports/search">Veda Public REST API v1 (Search 233k+ papers)</Link></li>
+          <li><Link href="/.well-known/mcp">Model Context Protocol (MCP) Streamable HTTP Server</Link></li>
+          <li><Link href="/auth.md">Agent Authentication Specification (WorkOS format)</Link></li>
+          <li><Link href="/llms.txt">LLMs Structured Content Index</Link></li>
+        </ul>
+      </section>
+
       <CardGrid
         id="learn"
         title="Resources"

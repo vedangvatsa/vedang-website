@@ -17,7 +17,7 @@ const rpcEnvelope = (resultSchemaName: string) => ({
 const errorResponse = (description: string) => ({
   description,
   content: {
-    'application/json': { schema: { $ref: '#/components/schemas/JsonRpcError' } },
+    'application/json': { schema: { $ref: '#/components/schemas/ApiError' } },
   },
 });
 
@@ -37,9 +37,13 @@ export function GET() {
     ],
     versioning: {
       policy: 'URL path versioning: /api/v1/* is pinned to major version 1. Unversioned paths always track the latest stable major.',
+      deprecation_policy: `${SITE_URL}/developers#versioning`,
+      sunset_date: '2028-03-01T00:00:00Z',
     },
     tags: [
-      { name: 'Search', description: 'Research paper search' },
+      { name: 'Search', description: 'Research paper search and query interfaces' },
+      { name: 'Essays', description: 'Published research essays catalog' },
+      { name: 'Glossary', description: 'AI and Web3 technical glossary' },
       { name: 'MCP', description: 'Model Context Protocol server' },
       { name: 'Feeds', description: 'Syndication and discovery files' },
     ],
@@ -48,6 +52,38 @@ export function GET() {
         get: {
           operationId: 'searchReports',
           summary: 'Search 233,000+ indexed AI/Web3 academic papers (OpenAlex-backed).',
+          description: 'Performs full-text keyword search across 233,000+ indexed academic papers in AI or Web3 corpora, sorted by citation count.',
+          tags: ['Search'],
+          parameters: [
+            { name: 'q', in: 'query', required: true, schema: { type: 'string', minLength: 2 }, description: 'Search keywords.' },
+            { name: 'corpus', in: 'query', schema: { type: 'string', enum: ['ai', 'web3'], default: 'ai' }, description: 'Target research corpus.' },
+            { name: 'page', in: 'query', schema: { type: 'integer', minimum: 1, default: 1 }, description: 'Page number.' },
+            { name: 'per_page', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 200, default: 50 }, description: 'Results per page.' },
+            { name: 'Idempotency-Key', in: 'header', required: false, schema: { type: 'string' }, description: 'Optional client idempotency identifier.' },
+          ],
+          responses: {
+            '200': {
+              description: 'Search results sorted by citation count.',
+              headers: {
+                'RateLimit-Limit': { schema: { type: 'integer' }, description: 'Requests allowed per minute window.' },
+                'RateLimit-Remaining': { schema: { type: 'integer' }, description: 'Requests left in current window.' },
+                'RateLimit-Reset': { schema: { type: 'integer' }, description: 'Seconds until window resets.' },
+                'Idempotency-Key': { schema: { type: 'string' }, description: 'Echoed when client sends Idempotency-Key.' },
+                'Sunset': { schema: { type: 'string' }, description: 'RFC 8594 Sunset date.' },
+                'Deprecation': { schema: { type: 'string' }, description: 'Draft deprecation date.' },
+              },
+              content: { 'application/json': { schema: { $ref: '#/components/schemas/SearchReportsResponse' } } },
+            },
+            '400': errorResponse('Invalid parameters or missing query string.'),
+            '502': errorResponse('Upstream OpenAlex error. Returns Retry-After header; body is retryable JSON error.'),
+          },
+        },
+      },
+      '/api/v1/reports/search': {
+        get: {
+          operationId: 'searchReportsV1',
+          summary: 'Search 233,000+ indexed academic papers (v1 stable).',
+          description: 'Version 1 pinned endpoint for searching academic research literature in AI and Web3.',
           tags: ['Search'],
           parameters: [
             { name: 'q', in: 'query', required: true, schema: { type: 'string', minLength: 2 }, description: 'Search keywords.' },
@@ -58,15 +94,46 @@ export function GET() {
           responses: {
             '200': {
               description: 'Search results sorted by citation count.',
-              headers: {
-                'X-RateLimit-Limit': { schema: { type: 'string' }, description: 'Requests allowed per window.' },
-                'X-RateLimit-Remaining': { schema: { type: 'string' }, description: 'Requests left in current window.' },
-                'X-RateLimit-Reset': { schema: { type: 'string' }, description: 'Unix seconds when the window resets.' },
-                'Idempotency-Key': { schema: { type: 'string' }, description: 'Echoed when the client sends an Idempotency-Key header.' },
-              },
               content: { 'application/json': { schema: { $ref: '#/components/schemas/SearchReportsResponse' } } },
             },
-            '502': errorResponse('Upstream OpenAlex error. Returns Retry-After header; body is retryable JSON error.'),
+            '400': errorResponse('Invalid parameters.'),
+            '502': errorResponse('Upstream database error.'),
+          },
+        },
+      },
+      '/api/v1/essays': {
+        get: {
+          operationId: 'listEssaysV1',
+          summary: 'List all published research essays.',
+          description: 'Retrieves the complete catalog of long-form research essays with URLs, slugs, dates, tags, and Markdown links.',
+          tags: ['Essays'],
+          parameters: [
+            { name: 'tag', in: 'query', required: false, schema: { type: 'string' }, description: 'Filter essays by topic tag (e.g. AI, Web3, Agents).' },
+            { name: 'limit', in: 'query', required: false, schema: { type: 'integer', default: 50 }, description: 'Max items to return.' },
+          ],
+          responses: {
+            '200': {
+              description: 'List of research essays.',
+              content: { 'application/json': { schema: { $ref: '#/components/schemas/EssaysListResponse' } } },
+            },
+          },
+        },
+      },
+      '/api/v1/glossary': {
+        get: {
+          operationId: 'listGlossaryV1',
+          summary: 'List AI and Web3 glossary definitions.',
+          description: 'Retrieves technical glossary terms with category classifications, plain-language definitions, and Markdown paths.',
+          tags: ['Glossary'],
+          parameters: [
+            { name: 'category', in: 'query', required: false, schema: { type: 'string' }, description: 'Filter by category (e.g. AI, Web3, Agents).' },
+            { name: 'limit', in: 'query', required: false, schema: { type: 'integer', default: 100 }, description: 'Max terms to return.' },
+          ],
+          responses: {
+            '200': {
+              description: 'List of glossary definitions.',
+              content: { 'application/json': { schema: { $ref: '#/components/schemas/GlossaryListResponse' } } },
+            },
           },
         },
       },
@@ -107,12 +174,12 @@ export function GET() {
         },
         get: {
           operationId: 'mcpDescriptor',
-          summary: 'Endpoint descriptor (HTTP 405 with JSON metadata; use POST for JSON-RPC).',
+          summary: 'Endpoint descriptor (HTTP 200 with JSON metadata).',
           description: 'Fetches metadata and transport capabilities for the veda.ng MCP Streamable HTTP server.',
           tags: ['MCP'],
           responses: {
-            '405': {
-              description: 'Server descriptor explaining POST usage.',
+            '200': {
+              description: 'Server descriptor and tools summary.',
               content: { 'application/json': { schema: { $ref: '#/components/schemas/McpDescriptor' } } },
             },
           },
@@ -125,14 +192,15 @@ export function GET() {
           description: 'Executes a natural language search query across essays and glossary entries, returning JSON with _meta headers.',
           tags: ['Search'],
           parameters: [
-            { name: 'q', in: 'query', required: true, schema: { type: 'string' }, description: 'Natural language query string.' }
+            { name: 'q', in: 'query', required: true, schema: { type: 'string' }, description: 'Natural language query string.' },
           ],
           responses: {
             '200': {
               description: 'NLWeb search results.',
-              content: { 'application/json': { schema: { type: 'object' } } }
-            }
-          }
+              content: { 'application/json': { schema: { $ref: '#/components/schemas/AskResponse' } } },
+            },
+            '400': errorResponse('Missing query parameter.'),
+          },
         },
         post: {
           operationId: 'askPost',
@@ -147,20 +215,21 @@ export function GET() {
                   type: 'object',
                   properties: {
                     query: { type: 'string', description: 'Query text' },
-                    prefer: { type: 'object', properties: { streaming: { type: 'boolean' } } }
+                    prefer: { type: 'object', properties: { streaming: { type: 'boolean' } } },
                   },
-                  required: ['query']
-                }
-              }
-            }
+                  required: ['query'],
+                },
+              },
+            },
           },
           responses: {
             '200': {
               description: 'NLWeb search results or text/event-stream.',
-              content: { 'application/json': { schema: { type: 'object' } } }
-            }
-          }
-        }
+              content: { 'application/json': { schema: { $ref: '#/components/schemas/AskResponse' } } },
+            },
+            '400': errorResponse('Invalid request body.'),
+          },
+        },
       },
       '/llms.txt': {
         get: {
@@ -235,6 +304,22 @@ export function GET() {
     },
     components: {
       schemas: {
+        ApiError: {
+          type: 'object',
+          properties: {
+            error: {
+              type: 'object',
+              properties: {
+                code: { type: 'string' },
+                message: { type: 'string' },
+                status: { type: 'integer' },
+                resolution: { type: 'string' },
+              },
+              required: ['code', 'message', 'status'],
+            },
+          },
+          required: ['error'],
+        },
         JsonRpcError: {
           type: 'object',
           properties: {
@@ -273,14 +358,8 @@ export function GET() {
         McpInitializeResult: {
           type: 'object',
           properties: {
-            protocolVersion: { type: 'string', examples: ['2025-06-18'] },
-            capabilities: {
-              type: 'object',
-              properties: {
-                tools: { type: 'object', properties: { listChanged: { type: 'boolean' } }, required: ['listChanged'] },
-              },
-              required: ['tools'],
-            },
+            protocolVersion: { type: 'string', enum: ['2025-06-18', '2025-03-26', '2024-11-05'] },
+            capabilities: { type: 'object' },
             serverInfo: { $ref: '#/components/schemas/McpServerInfo' },
             instructions: { type: 'string' },
           },
@@ -293,7 +372,6 @@ export function GET() {
             description: { type: 'string' },
             inputSchema: {
               type: 'object',
-              description: 'JSON Schema object describing accepted arguments.',
               properties: {
                 type: { type: 'string', const: 'object' },
                 properties: { type: 'object' },
@@ -357,8 +435,65 @@ export function GET() {
             total: { type: 'integer' },
             page: { type: 'integer' },
             perPage: { type: 'integer' },
+            corpus: { type: 'string' },
           },
           required: ['results', 'total', 'page', 'perPage'],
+        },
+        EssaysListResponse: {
+          type: 'object',
+          properties: {
+            total: { type: 'integer' },
+            limit: { type: 'integer' },
+            essays: {
+              type: 'array',
+              items: {
+                type: 'object',
+                properties: {
+                  slug: { type: 'string' },
+                  title: { type: 'string' },
+                  description: { type: 'string' },
+                  date: { type: 'string' },
+                  tags: { type: 'array', items: { type: 'string' } },
+                  url: { type: 'string' },
+                  markdownUrl: { type: 'string' },
+                },
+                required: ['slug', 'title', 'description', 'date', 'tags', 'url', 'markdownUrl'],
+              },
+            },
+          },
+          required: ['total', 'limit', 'essays'],
+        },
+        GlossaryListResponse: {
+          type: 'object',
+          properties: {
+            total: { type: 'integer' },
+            limit: { type: 'integer' },
+            terms: {
+              type: 'array',
+              items: {
+                type: 'object',
+                properties: {
+                  slug: { type: 'string' },
+                  term: { type: 'string' },
+                  definition: { type: 'string' },
+                  category: { type: 'string' },
+                  url: { type: 'string' },
+                  markdownUrl: { type: 'string' },
+                },
+                required: ['slug', 'term', 'definition', 'category', 'url', 'markdownUrl'],
+              },
+            },
+          },
+          required: ['total', 'limit', 'terms'],
+        },
+        AskResponse: {
+          type: 'object',
+          properties: {
+            results: { type: 'array', items: { type: 'object' } },
+            query_id: { type: 'string' },
+            total: { type: 'integer' },
+          },
+          required: ['results'],
         },
         McpDescriptor: {
           type: 'object',

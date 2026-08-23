@@ -31,10 +31,18 @@ function generateFiles() {
   essaysData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   const essayLinks = essaysData
-    .map(essay => `- [${essay.title}](${essay.url}): ${essay.summary}`)
+    .map(essay => {
+      const summary = essay.summary ? (essay.summary.length > 75 ? essay.summary.slice(0, 72) + '...' : essay.summary) : '';
+      return summary ? `- [${essay.title}](${essay.url}): ${summary}` : `- [${essay.title}](${essay.url})`;
+    })
     .join('\n');
 
-  const glossaryLinks = glossaryTerms
+  const glossaryIndexLinks = glossaryTerms
+    .slice(0, 35)
+    .map(term => `- [${term.term}](https://veda.ng/glossary/${term.slug})`)
+    .join('\n') + `\n- [View all ${glossaryTerms.length} glossary definitions...](https://veda.ng/glossary)`;
+
+  const glossaryFullLinks = glossaryTerms
     .map(term => `- [${term.term}](https://veda.ng/glossary/${term.slug})`)
     .join('\n');
 
@@ -49,14 +57,17 @@ function generateFiles() {
 `;
 
   const developerSection = `
-## For Developers and Agents
+## Veda Developer Resources & APIs
 
-- Content index for LLMs: https://veda.ng/llms.txt
-- Full-text version: https://veda.ng/llms-full.txt
-- Developer resources: https://veda.ng/developers
-- MCP server (Streamable HTTP): https://veda.ng/.well-known/mcp
-- OpenAPI spec: https://veda.ng/openapi.json
-- Contact: https://veda.ng/contact or vatsvedang@gmail.com
+- Developer Documentation & Reference: https://veda.ng/developers
+- OpenAPI 3.1 Specification: https://veda.ng/openapi.json
+- Veda Public REST API (v1): https://veda.ng/api/v1/reports/search
+- Essays Catalog API (v1): https://veda.ng/api/v1/essays
+- Technical Glossary API (v1): https://veda.ng/api/v1/glossary
+- Model Context Protocol (MCP) Server: https://veda.ng/.well-known/mcp (Streamable HTTP)
+- Agent Authentication Guide (WorkOS format): https://veda.ng/auth.md
+- Full-Text Corpus Index: https://veda.ng/llms-full.txt
+- Contact & Advisory: https://veda.ng/contact or vatsvedang@gmail.com
 
 Tip: send an HTTP Accept header of text/markdown on any page URL to get the Markdown version.
 `;
@@ -64,9 +75,9 @@ Tip: send an HTTP Accept header of text/markdown on any page URL to get the Mark
   const trustPages = `
 ## Trust Pages
 
-- [Profile / About](https://veda.ng/about): Author biography and credentials
+- [Profile / About](https://veda.ng/about): Author biography, credentials, and Hashtag Web3
 - [Privacy Policy](https://veda.ng/privacy): Data handling, analytics, and third-party services
-- [Contact / Book a Meeting](https://veda.ng/contact): Direct contact options
+- [Contact / Book a Meeting](https://veda.ng/contact): Direct consultation and email options
 `;
 
   const llmsIndexContent = `# Vedang Vatsa
@@ -111,9 +122,9 @@ Selected peer-reviewed research on AI, Web3, and economic systems:
 
 ## Glossary
 
-All ${glossaryTerms.length} terms, full definitions on each page:
+Featured definitions (see https://veda.ng/glossary for full 100+ terms):
 
-${glossaryLinks}
+${glossaryIndexLinks}
 ${whenToUse}
 ${developerSection}
 ${trustPages}
@@ -146,10 +157,10 @@ ${fullTextSections}
 
 ---
 
-## Glossary
+## Complete Glossary (All ${glossaryTerms.length} Terms)
 URL: https://veda.ng/glossary
 
-This site has a glossary of ${glossaryTerms.length} AI, Web3, and engineering terms at https://veda.ng/glossary
+${glossaryFullLinks}
 ${whenToUse}
 ${developerSection}
 ${trustPages}

@@ -1,11 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { getStandardApiHeaders, jsonError } from '@/lib/api-response';
+
+export const dynamic = 'force-dynamic';
 
 const CONCEPT_IDS: Record<string, string> = {
   ai: 'C154945302|C11413529|C119857082', // Artificial Intelligence | Machine Learning | Deep Learning
   web3: 'C2779687700|C180706569',         // Blockchain | Cryptocurrency
 };
 
-// Map OpenAlex work type to display type
 function mapType(type: string | null): string {
   switch (type) {
     case 'journal-article': return 'Paper';
@@ -19,7 +21,6 @@ function mapType(type: string | null): string {
   }
 }
 
-// Derive a category from OpenAlex concepts
 function deriveCategory(concepts: { display_name: string; level: number; score: number }[], corpus: string): string {
   if (!concepts || concepts.length === 0) return corpus === 'ai' ? 'AI Research' : 'Blockchain Research';
 
@@ -53,15 +54,19 @@ export async function GET(request: NextRequest) {
   const corpus = searchParams.get('corpus') || 'ai';
   const page = parseInt(searchParams.get('page') || '1', 10);
   const perPage = Math.min(parseInt(searchParams.get('per_page') || '50', 10), 200);
+  const idempotencyKey = request.headers.get('Idempotency-Key');
 
   if (!query || query.length < 2) {
-    return NextResponse.json({ results: [], total: 0 });
+    return jsonError(
+      'missing_query',
+      'Provide a query parameter q with at least 2 characters (e.g. ?q=agents&corpus=ai).',
+      400,
+      'Add ?q=<keyword> to your search query.'
+    );
   }
 
   const conceptFilter = CONCEPT_IDS[corpus] || CONCEPT_IDS.ai;
 
-  // Build OpenAlex API URL
-  // https://docs.openalex.org/api-entities/works
   const params = new URLSearchParams({
     search: query,
     filter: `concepts.id:${conceptFilter}`,
@@ -69,7 +74,7 @@ export async function GET(request: NextRequest) {
     page: page.toString(),
     per_page: perPage.toString(),
     select: 'id,title,type,publication_year,doi,cited_by_count,primary_location,concepts',
-    mailto: 'vatsvedang@gmail.com', // polite pool for faster rate limits
+    mailto: 'vatsvedang@gmail.com',
   });
 
   const apiUrl = `https://api.openalex.org/works?${params.toString()}`;
@@ -77,13 +82,15 @@ export async function GET(request: NextRequest) {
   try {
     const res = await fetch(apiUrl, {
       headers: { 'Accept': 'application/json' },
-      next: { revalidate: 3600 }, // Cache for 1 hour
+      next: { revalidate: 3600 },
     });
 
     if (!res.ok) {
-      return NextResponse.json(
-        { error: 'OpenAlex API error', status: res.status },
-        { status: 502 }
+      return jsonError(
+        'upstream_openalex_error',
+        `OpenAlex API responded with status ${res.status}`,
+        502,
+        'Retry your request after 60 seconds.'
       );
     }
 
@@ -91,12 +98,9 @@ export async function GET(request: NextRequest) {
     const total = data.meta?.count || 0;
 
     const results = (data.results || []).map((work: any) => {
-      // Get the best URL: DOI > primary location > OpenAlex page
       const doi = work.doi;
       const primaryUrl = work.primary_location?.landing_page_url;
       const url = doi || primaryUrl || `https://openalex.org/works/${work.id?.replace('https://openalex.org/', '')}`;
-
-      // Get source name
       const source = work.primary_location?.source?.display_name || 'OpenAlex';
 
       return {
@@ -110,35 +114,24 @@ export async function GET(request: NextRequest) {
       };
     });
 
-    const idempotencyKey = request.headers.get('Idempotency-Key');
-    const headers: Record<string, string> = {
-      'RateLimit': 'limit=60, remaining=59, reset=60',
-      'X-RateLimit-Limit': '60',
-      'X-RateLimit-Remaining': '59',
-      'X-RateLimit-Reset': String(Math.floor(Date.now() / 1000) + 60),
-      'X-RateLimit-Policy': '60 per minute per IP; responses cached 1 hour',
-      'Cache-Control': 'public, max-age=3600',
-    };
-    if (idempotencyKey) {
-      headers['Idempotency-Key'] = idempotencyKey;
-    }
+    const headers = getStandardApiHeaders({ idempotencyKey, cacheSeconds: 3600 });
 
     return NextResponse.json(
-      { results, total, page, perPage },
+      {
+        results,
+        total,
+        page,
+        perPage,
+        corpus,
+      },
       { headers }
     );
-  } catch (err) {
-    return NextResponse.json(
-      {
-        error: 'upstream_error',
-        message: 'Failed to fetch from OpenAlex',
-        status: 502,
-        retryable: true,
-      },
-      {
-        status: 502,
-        headers: { 'Retry-After': '60' },
-      }
+  } catch {
+    return jsonError(
+      'upstream_fetch_error',
+      'Failed to fetch records from OpenAlex research database.',
+      502,
+      'Retry after 60 seconds.'
     );
   }
 }
