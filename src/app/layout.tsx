@@ -140,11 +140,29 @@ const personSchema = {
   url: 'https://veda.ng',
   image: 'https://veda.ng/images/icon.png',
   jobTitle: 'Founder & AI Researcher',
-  description: 'Founder of Hashtag Web3, a 100,000+ member community of AI & Web3 professionals. Fellow of the Royal Society of Arts.',
-  affiliation: {
-    '@type': 'Organization',
-    name: 'Hashtag Web3',
-  },
+  description: 'Founder of Hashtag Web3 and CVinBio. Fellow of the Royal Society of Arts (FRSA), IIT Kanpur alumnus.',
+  affiliation: [
+    {
+      '@type': 'Organization',
+      name: 'Hashtag Web3',
+      url: 'https://hashtagweb3.com',
+      sameAs: [
+        'https://linkedin.com/company/hashtagweb3',
+        'https://www.linkedin.com/company/hashtagweb3',
+        'https://hashtagweb3.com',
+      ],
+    },
+    {
+      '@type': 'Organization',
+      name: 'CVinBio',
+      url: 'https://cvin.bio',
+      sameAs: [
+        'https://linkedin.com/company/cvinbio',
+        'https://www.linkedin.com/company/cvinbio',
+        'https://cvin.bio',
+      ],
+    },
+  ],
   alumniOf: {
     '@type': 'CollegeOrUniversity',
     name: 'Indian Institute of Technology, Kanpur',
@@ -166,6 +184,9 @@ const personSchema = {
     'https://t.me/vedangvatsa',
     'https://pypi.org/project/vedang-cli/',
     'https://hashtagweb3.com',
+    'https://cvin.bio',
+    'https://linkedin.com/company/cvinbio',
+    'https://www.linkedin.com/company/cvinbio',
   ],
   knowsAbout: ['Artificial Intelligence', 'Web3', 'Blockchain', 'Cryptocurrency', 'Community Building'],
 };

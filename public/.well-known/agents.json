@@ -98,6 +98,12 @@
     "website": "https://veda.ng"
   },
   "developer": {
+    "name": "Vedang Vatsa",
+    "organization": "Hashtag Web3 & CVinBio",
+    "affiliations": [
+      "Hashtag Web3 (https://hashtagweb3.com)",
+      "CVinBio (https://cvin.bio)"
+    ],
     "docs": "https://veda.ng/developers",
     "openapi": "https://veda.ng/openapi.json",
     "mcp": "https://veda.ng/.well-known/mcp",

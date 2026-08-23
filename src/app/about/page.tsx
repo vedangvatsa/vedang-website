@@ -35,10 +35,18 @@ const personSchema = {
   url: 'https://veda.ng/about',
   image: 'https://veda.ng/images/icon.png',
   jobTitle: ['Founder', 'AI Researcher', 'Web3 Innovator', 'Entrepreneur'],
-  worksFor: {
-    '@type': 'Organization',
-    name: 'Hashtag Web3',
-  },
+  worksFor: [
+    {
+      '@type': 'Organization',
+      name: 'Hashtag Web3',
+      url: 'https://hashtagweb3.com',
+    },
+    {
+      '@type': 'Organization',
+      name: 'CVinBio',
+      url: 'https://cvin.bio',
+    },
+  ],
   alumniOf: {
     '@type': 'CollegeOrUniversity',
     name: 'Indian Institute of Technology, Kanpur',
@@ -55,6 +63,9 @@ const personSchema = {
     'https://t.me/vedangvatsa',
     'https://pypi.org/project/vedang-cli/',
     'https://hashtagweb3.com',
+    'https://cvin.bio',
+    'https://linkedin.com/company/cvinbio',
+    'https://www.linkedin.com/company/cvinbio',
   ],
   knowsAbout: ['Artificial Intelligence', 'Web3', 'Blockchain', 'Cryptocurrency', 'Community Building'],
   speakable: {

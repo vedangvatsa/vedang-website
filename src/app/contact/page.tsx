@@ -72,7 +72,7 @@ export default function MeetingPage() {
       <section className="sr-only" aria-label="Contact Information and Business Verification">
         <h2>Contact Information & Advisory Inquiries for Vedang Vatsa</h2>
         <p>
-          Vedang Vatsa is an AI researcher, technologist, Fellow of the Royal Society of Arts (FRSA), alumnus of the Indian Institute of Technology Kanpur (IIT Kanpur), and the founder of Hashtag Web3, an international professional community connecting more than 120,000 artificial intelligence and Web3 practitioners worldwide.
+          Vedang Vatsa is an AI researcher, technologist, Fellow of the Royal Society of Arts (FRSA), alumnus of the Indian Institute of Technology Kanpur (IIT Kanpur), and the founder of Hashtag Web3 and <a href="https://cvin.bio">CVinBio</a>, connecting more than 120,000 artificial intelligence, machine learning, and Web3 builders worldwide.
         </p>
         <p>
           Official communication channels, verified business contacts, and professional consultation details:
