@@ -7,15 +7,19 @@ import { generateMetadata } from '@/lib/metadata';
 import { developersSummaryLines } from '@/lib/agent-md';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Veda Developer Resources - API, MCP Server, SDK, OpenAPI | veda.ng',
+  title: 'Veda Developer Resources, API Documentation & MCP Server | veda.ng',
   description:
     'Official Veda developer resources and AI agent interfaces: public REST API, Model Context Protocol (MCP) server, Python SDK (vedang-cli), OpenAPI 3.1 specification, and WorkOS auth spec.',
   url: '/developers',
   keywords: [
     'Veda developer resources',
     'Veda API',
+    'Veda API documentation',
     'Veda MCP server',
     'Veda developer docs',
+    'Veda OpenAPI specification',
+    'Veda webhooks',
+    'Veda authentication',
     'Veda SDK',
     'veda.ng API',
     'veda.ng MCP server',
@@ -30,9 +34,15 @@ export const metadata: Metadata = generateMetadata({
 const developersSchema = {
   '@context': 'https://schema.org',
   '@type': 'TechArticle',
-  headline: 'Veda Developer Resources & API Documentation',
+  headline: 'Veda Developer Resources, API Documentation & MCP Server',
   name: 'Veda Developer Resources',
-  alternateName: ['Veda API', 'Veda Developer Portal', 'Veda MCP Server', 'veda.ng Developer Resources'],
+  alternateName: [
+    'Veda API Documentation',
+    'Veda Developer Portal',
+    'Veda MCP Server',
+    'Veda OpenAPI Specification',
+    'veda.ng Developer Resources',
+  ],
   url: 'https://veda.ng/developers',
   description:
     'Official developer and machine interfaces for Veda (veda.ng): public report search API, MCP server over Streamable HTTP, OpenAPI specification, Python SDK, RSS feed, sitemap, and agent discovery files.',
@@ -63,9 +73,9 @@ const mcpExample = `curl -X POST https://veda.ng/.well-known/mcp \\
 
 const markdownExample = `curl -H "Accept: text/markdown" https://veda.ng/agentstack`;
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({ id, title, children }: { id?: string; title: string; children: React.ReactNode }) {
   return (
-    <section className="mb-10">
+    <section id={id} className="mb-10">
       <h2 className="text-xl md:text-2xl font-semibold tracking-tight mb-3">{title}</h2>
       {children}
     </section>
@@ -88,12 +98,12 @@ export default function DevelopersPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(developersSchema) }}
       />
       <PageHero
-        title="Developer Resources"
-        subtitle="Machine interfaces for veda.ng: a public research search API, an MCP server for AI agents, syndication feeds, and agent discovery files. No authentication required for any read endpoint."
+        title="Veda Developer Resources"
+        subtitle="Official machine and developer interfaces for Veda (veda.ng): public research search API, Model Context Protocol (MCP) server, OpenAPI 3.1 specification, Python SDK, syndication feeds, and agent discovery manifests. Keyless and open-access."
       />
 
       <article className="pb-16 text-sm md:text-base">
-        <Section title="Quick index">
+        <Section title="Veda Quick Index & Predictable Endpoints">
           <ul className="space-y-1.5 text-muted-foreground">
             {developersSummaryLines().map((line) => (
               <li key={line} className="break-words">{line}</li>
@@ -101,7 +111,7 @@ export default function DevelopersPage() {
           </ul>
         </Section>
 
-        <Section title="Report search API">
+        <Section id="api" title="Veda Report Search API & REST Endpoints">
           <p className="text-muted-foreground mb-3">
             Search 233,000+ indexed academic papers across the AI and Web3 corpora, backed by OpenAlex and sorted by
             citations. Results are cached for one hour.
@@ -111,12 +121,12 @@ export default function DevelopersPage() {
             Parameters: <code className="font-mono text-xs">q</code> (required, min 2 chars),{' '}
             <code className="font-mono text-xs">corpus</code> (<code className="font-mono text-xs">ai</code> or{' '}
             <code className="font-mono text-xs">web3</code>), <code className="font-mono text-xs">page</code>,{' '}
-            <code className="font-mono text-xs">per_page</code> (max 200). The full contract lives in the{' '}
-            <Link href="/openapi.json" className="underline underline-offset-4 hover:text-foreground">OpenAPI 3.1 spec</Link>.
+            <code className="font-mono text-xs">per_page</code> (max 200), <code className="font-mono text-xs">cursor</code> (for cursor pagination). The full schema lives in the{' '}
+            <Link href="/openapi.json" className="underline underline-offset-4 hover:text-foreground">Veda OpenAPI 3.1 Specification</Link>.
           </p>
         </Section>
 
-        <Section title="MCP server (Model Context Protocol)">
+        <Section id="mcp" title="Veda MCP Server (Model Context Protocol)">
           <p className="text-muted-foreground mb-3">
             A first-party MCP server runs at <code className="font-mono text-xs">/.well-known/mcp</code> using the
             Streamable HTTP transport with JSON-RPC 2.0. It is stateless, needs no auth, and supports protocol versions
@@ -133,15 +143,16 @@ export default function DevelopersPage() {
           <CommandBlock command={mcpExample} />
         </Section>
 
-        <Section title="Markdown content negotiation">
+        <Section id="openapi" title="Veda OpenAPI 3.1 Specification">
           <p className="text-muted-foreground mb-3">
-            Every essay, every glossary term, and key pages serve Markdown to machines. Send an Accept header instead of
-            parsing HTML:
+            The machine-readable OpenAPI specification is published at{' '}
+            <Link href="/openapi.json" className="underline underline-offset-4 hover:text-foreground">/openapi.json</Link>{' '}
+            (with predictable aliases at <code className="font-mono text-xs">/swagger.json</code> and <code className="font-mono text-xs">/docs.json</code>).
+            It documents 100% typed response schemas, RFC rate-limit headers, cursor pagination, batch execution, and async polling.
           </p>
-          <CommandBlock command={markdownExample} />
         </Section>
 
-        <Section title="Python SDK & CLI (vedang-cli)">
+        <Section id="sdk" title="Veda Python SDK & CLI (vedang-cli)">
           <p className="text-muted-foreground mb-3">
             Official Python SDK and CLI tool on PyPI for programmatic queries across research essays, glossary terms, and the 233,000+ indexed paper corpus.
           </p>
@@ -169,12 +180,39 @@ export default function DevelopersPage() {
           </p>
         </Section>
 
-        <Section title="Feeds & discovery files">
+        <Section id="auth" title="Veda Authentication & Security Guide">
+          <p className="text-muted-foreground mb-3">
+            All public reading and search APIs on veda.ng are keyless and require no API token. The complete WorkOS-format authentication specification is documented at{' '}
+            <Link href="/auth.md" className="underline underline-offset-4 hover:text-foreground">/auth.md</Link>.
+          </p>
+        </Section>
+
+        <Section id="webhooks" title="Veda Webhooks & Event Streaming">
+          <p className="text-muted-foreground mb-3">
+            Live updates and event subscriptions:
+          </p>
+          <ul className="space-y-1.5 text-muted-foreground mb-3">
+            <li><strong>RSS Syndication:</strong> Instant updates on new publications via <Link href="/feed.xml" className="underline underline-offset-4 hover:text-foreground">/feed.xml</Link>.</li>
+            <li><strong>SSE Live Streaming:</strong> Real-time streaming search responses supported on <code className="font-mono text-xs">POST /ask</code> with <code className="font-mono text-xs">prefer.streaming: true</code>.</li>
+            <li><strong>Agent Updates:</strong> Changes to tool capabilities are broadcast in <Link href="/.well-known/agents.json" className="underline underline-offset-4 hover:text-foreground">/.well-known/agents.json</Link>.</li>
+          </ul>
+        </Section>
+
+        <Section title="Veda Markdown Content Negotiation">
+          <p className="text-muted-foreground mb-3">
+            Every essay, every glossary term, and key pages serve Markdown to machines. Send an Accept header instead of
+            parsing HTML:
+          </p>
+          <CommandBlock command={markdownExample} />
+        </Section>
+
+        <Section title="Veda Discovery Feeds & Machine Manifests">
           <ul className="space-y-1.5 text-muted-foreground">
             <li><Link href="/feed.xml" className="underline underline-offset-4 hover:text-foreground">feed.xml</Link> - RSS feed of new essays</li>
             <li><Link href="/sitemap.xml" className="underline underline-offset-4 hover:text-foreground">sitemap.xml</Link> - every public URL</li>
             <li><Link href="/llms.txt" className="underline underline-offset-4 hover:text-foreground">llms.txt</Link> - structured index for LLMs (<Link href="/llms-full.txt" className="underline underline-offset-4 hover:text-foreground">full-text version</Link>)</li>
             <li><Link href="/.well-known/agents.json" className="underline underline-offset-4 hover:text-foreground">agents.json</Link> - when-to-use guidance and capabilities</li>
+            <li><Link href="/.well-known/ai-catalog.json" className="underline underline-offset-4 hover:text-foreground">ai-catalog.json</Link> - AI catalog manifest</li>
             <li><Link href="/ai.txt" className="underline underline-offset-4 hover:text-foreground">ai.txt</Link> - training, indexing, and citation permissions (allowed)</li>
           </ul>
         </Section>

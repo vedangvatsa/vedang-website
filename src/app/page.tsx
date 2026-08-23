@@ -103,17 +103,18 @@ export default function Home() {
           Programmatic access is open and keyless. Integrate with our developer tools:
         </p>
         <ul>
-          <li><Link href="/developers">Veda Developer Documentation and API Reference</Link></li>
-          <li><Link href="/docs">Veda API Docs (/docs)</Link></li>
+          <li><Link href="/developers">Veda Developer Resources & Documentation</Link></li>
+          <li><Link href="/docs">Veda API Documentation (/docs)</Link></li>
+          <li><Link href="/openapi.json">Veda OpenAPI Specification (/openapi.json)</Link></li>
+          <li><Link href="/.well-known/mcp">Veda MCP Server (Model Context Protocol over Streamable HTTP)</Link></li>
+          <li><a href="https://pypi.org/project/vedang-cli/" rel="package sdk">Veda Python SDK & CLI: vedang-cli on PyPI</a></li>
+          <li><Link href="/auth.md">Veda Authentication & Security Specification</Link></li>
+          <li><Link href="/developers#webhooks">Veda Webhooks & Event Streaming</Link></li>
           <li><Link href="/api">Veda Public REST API Directory (/api)</Link></li>
-          <li><Link href="/openapi.json">OpenAPI 3.1 Specification</Link></li>
-          <li><a href="https://pypi.org/project/vedang-cli/" rel="package sdk">Official Python SDK & CLI: vedang-cli on PyPI (pip install vedang-cli)</a></li>
           <li><Link href="/api/v1/reports/search">Veda Public REST API v1 (Search 233k+ papers)</Link></li>
-          <li><Link href="/api/v1/essays">Essays Catalog REST API</Link></li>
-          <li><Link href="/api/v1/glossary">Glossary REST API</Link></li>
-          <li><Link href="/.well-known/mcp">Model Context Protocol (MCP) Streamable HTTP Server</Link></li>
-          <li><Link href="/auth.md">Agent Authentication Specification (WorkOS format)</Link></li>
-          <li><Link href="/llms.txt">LLMs Structured Content Index</Link></li>
+          <li><Link href="/api/v1/essays">Veda Essays Catalog REST API</Link></li>
+          <li><Link href="/api/v1/glossary">Veda Glossary REST API</Link></li>
+          <li><Link href="/llms.txt">Veda LLMs Structured Content Index</Link></li>
         </ul>
 
         {/* WebMCP In-Page Tools (W3C Draft Standard) */}

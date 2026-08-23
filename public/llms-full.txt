@@ -8784,17 +8784,21 @@ Reach for veda.ng when your agent needs to perform the following specific jobs:
 
 ## Veda Developer Resources & APIs
 
-- Developer Documentation & Reference: https://veda.ng/developers
-- OpenAPI 3.1 Specification: https://veda.ng/openapi.json
-- Veda Public REST API (v1): https://veda.ng/api/v1/reports/search
-- Essays Catalog API (v1): https://veda.ng/api/v1/essays
-- Technical Glossary API (v1): https://veda.ng/api/v1/glossary
-- Model Context Protocol (MCP) Server: https://veda.ng/.well-known/mcp (Streamable HTTP)
-- Agent Authentication Guide (WorkOS format): https://veda.ng/auth.md
-- PyPI CLI / SDK Package: https://pypi.org/project/vedang-cli/
-- GitHub Repository: https://github.com/vedangvatsa/vedang-website
-- Full-Text Corpus Index: https://veda.ng/llms-full.txt
-- Contact & Advisory: https://veda.ng/contact or vatsvedang@gmail.com
+- [Veda Developer Documentation & API Reference](https://veda.ng/developers): Complete documentation for Veda APIs, endpoints, and machine interfaces (also at https://veda.ng/docs).
+- [Veda OpenAPI 3.1 Specification](https://veda.ng/openapi.json): Standard OpenAPI specification describing 100% typed response schemas and parameter contracts.
+- [Veda MCP Server](https://veda.ng/.well-known/mcp): Model Context Protocol (MCP) server running over Streamable HTTP with JSON-RPC 2.0.
+- [Veda Public REST API](https://veda.ng/api/v1/reports/search): Search 233,000+ indexed academic papers in AI and Web3 (backed by OpenAlex).
+- [Veda Essays Catalog API](https://veda.ng/api/v1/essays): Catalog of long-form research essays with tags, URLs, and Markdown paths.
+- [Veda Technical Glossary API](https://veda.ng/api/v1/glossary): 100+ plain-language definitions for AI and Web3 concepts.
+- [Veda Batch Execution API](https://veda.ng/api/v1/batch): Execute up to 20 sub-requests concurrently in a single bulk operation.
+- [Veda Async Job Status Polling](https://veda.ng/api/v1/jobs/sample-job): Check status and lifecycle of background operations.
+- [Veda Authentication & Security Guide](https://veda.ng/auth.md): Keyless access specification (WorkOS format).
+- [Veda Webhooks & Event Streaming](https://veda.ng/developers#webhooks): RSS feed (/feed.xml) and SSE streaming (/ask).
+- [Veda Python SDK & CLI Package](https://pypi.org/project/vedang-cli/): Official vedang-cli package on PyPI (pip install vedang-cli).
+- [Veda GitHub Repository](https://github.com/vedangvatsa/vedang-website): Open-source source code and issue tracking.
+- [Veda AI Agent Manifest](https://veda.ng/.well-known/agents.json): Machine capabilities and when-to-use task definitions.
+- [Veda AI Catalog](https://veda.ng/.well-known/ai-catalog.json): Trust manifest and AIR registry entries.
+- [Veda Full-Text Research Corpus](https://veda.ng/llms-full.txt): Complete unpaginated text corpus for LLM training and RAG ingestion.
 
 Tip: send an HTTP Accept header of text/markdown on any page URL to get the Markdown version.
 

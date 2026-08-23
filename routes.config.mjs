@@ -99,6 +99,14 @@ export const EXTRA_REDIRECTS = [
   ['/swagger.json', '/openapi.json'],
   ['/docs.json', '/openapi.json'],
   ['/api/spec', '/openapi.json'],
+  ['/auth', '/auth.md'],
+  ['/auth-docs', '/auth.md'],
+  ['/docs/auth', '/auth.md'],
+  ['/webhooks', '/developers'],
+  ['/webhooks.json', '/developers'],
+  ['/docs/webhooks', '/developers'],
+  ['/mcp-docs', '/developers'],
+  ['/mcp-server', '/.well-known/mcp'],
 ];
 
 /** Pages that exist but are intentionally excluded from agent manifests and sitemaps. */
