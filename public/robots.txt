@@ -1,15 +1,19 @@
-# AI crawler policy for veda.ng. Default remains open; tiers are explicit below.
+# robots.txt for veda.ng - 100% Open Access for AI Crawlers & Search Engines
 
-# Answer-engine crawlers (search/RAG surfaces)
-User-agent: GPTBot
+User-agent: *
 Allow: /
 
-User-agent: OAI-SearchBot
+# OpenAI Crawlers
+User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic Claude Crawlers
 User-agent: ClaudeBot
 Allow: /
 
@@ -19,35 +23,85 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+# Perplexity AI Crawlers
 User-agent: PerplexityBot
 Allow: /
 
+# Google AI & Search Crawlers
 User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: GoogleOther-Image
+Allow: /
+
+User-agent: GoogleOther-Video
+Allow: /
+
+# Apple Intelligence Crawlers
+User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
 
+# DeepSeek Crawlers
 User-agent: DeepSeekBot
 Allow: /
 
+# Amazon & AWS AI Crawlers
 User-agent: Amazonbot
 Allow: /
 
-# Training-only crawlers restricted
-User-agent: CCBot
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
-
-User-agent: *
+# Meta AI Crawlers
+User-agent: Meta-ExternalAgent
 Allow: /
-Disallow: /md/
 
-Content-Signal: search=yes, ai-train=no
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# ByteDance & TikTok Crawlers
+User-agent: Bytespider
+Allow: /
+
+# Open Datasets & Web Crawlers
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
+User-agent: PetalBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Machine-Readable Indexes & Discovery
+Content-Signal: search=yes, ai-train=yes, ai-input=yes, ai-index=yes
 
 Sitemap: https://veda.ng/sitemap.xml
 Schemamap: https://veda.ng/.well-known/ai-catalog.json
 
-# All AI crawlers are welcome. See /llms.txt, /ai.txt and /.well-known/agents.json.
+# Discovery manifests
+# See https://veda.ng/llms.txt, https://veda.ng/brand.txt, and https://veda.ng/.well-known/agents.json
