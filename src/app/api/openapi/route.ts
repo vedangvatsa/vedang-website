@@ -31,6 +31,10 @@ export function GET() {
         'Public machine interfaces for veda.ng: research paper search backed by OpenAlex, an MCP server over Streamable HTTP, syndication feeds, and agent discovery files. No authentication required.',
       contact: { name: SITE_NAME, email: CONTACT_EMAIL, url: CONTACT_URL },
     },
+    externalDocs: {
+      description: 'Veda Developer Documentation & Agent Guides',
+      url: `${SITE_URL}/developers`,
+    },
     servers: [
       { url: SITE_URL, description: 'Latest stable version' },
       { url: `${SITE_URL}/api/v1`, description: 'Version-pinned v1 (stable, additive-only changes)' },
@@ -44,10 +48,38 @@ export function GET() {
       { name: 'Search', description: 'Research paper search and query interfaces' },
       { name: 'Essays', description: 'Published research essays catalog' },
       { name: 'Glossary', description: 'AI and Web3 technical glossary' },
+      { name: 'Directory', description: 'API root directories and discovery manifests' },
       { name: 'MCP', description: 'Model Context Protocol server' },
-      { name: 'Feeds', description: 'Syndication and discovery files' },
     ],
     paths: {
+      '/api': {
+        get: {
+          operationId: 'getApiRoot',
+          summary: 'Root API directory and service discovery.',
+          description: 'Returns available endpoints, documentation links, OpenAPI specification URL, and rate limit policies.',
+          tags: ['Directory'],
+          responses: {
+            '200': {
+              description: 'API root service discovery directory.',
+              content: { 'application/json': { schema: { $ref: '#/components/schemas/ApiDirectoryResponse' } } },
+            },
+          },
+        },
+      },
+      '/api/v1': {
+        get: {
+          operationId: 'getApiV1Root',
+          summary: 'Version 1 root API directory.',
+          description: 'Returns endpoints available in version 1 of the veda.ng REST API.',
+          tags: ['Directory'],
+          responses: {
+            '200': {
+              description: 'Version 1 API directory.',
+              content: { 'application/json': { schema: { $ref: '#/components/schemas/ApiV1DirectoryResponse' } } },
+            },
+          },
+        },
+      },
       '/api/reports/search': {
         get: {
           operationId: 'searchReports',
@@ -231,76 +263,6 @@ export function GET() {
           },
         },
       },
-      '/llms.txt': {
-        get: {
-          operationId: 'getLlmsTxt',
-          summary: 'Structured content index for LLMs.',
-          description: 'Returns the primary llms.txt navigation index linking to essays, glossary definitions, and machine endpoints.',
-          tags: ['Feeds'],
-          responses: {
-            '200': {
-              description: 'Plain text content index.',
-              content: { 'text/plain': { schema: { $ref: '#/components/schemas/PlainTextDocument' } } },
-            },
-          },
-        },
-      },
-      '/llms-full.txt': {
-        get: {
-          operationId: 'getLlmsFullTxt',
-          summary: 'Full-text essay corpus for LLM consumption.',
-          description: 'Returns the complete text corpus of all research essays for AI model training and RAG ingestion.',
-          tags: ['Feeds'],
-          responses: {
-            '200': {
-              description: 'Plain text full-content index.',
-              content: { 'text/plain': { schema: { $ref: '#/components/schemas/PlainTextDocument' } } },
-            },
-          },
-        },
-      },
-      '/feed.xml': {
-        get: {
-          operationId: 'getRssFeed',
-          summary: 'RSS 2.0 feed of essays.',
-          description: 'Syndicates all published essays in standard RSS 2.0 XML format with publication dates and summaries.',
-          tags: ['Feeds'],
-          responses: {
-            '200': {
-              description: 'RSS 2.0 XML document.',
-              content: { 'application/rss+xml': { schema: { $ref: '#/components/schemas/XmlDocument' } } },
-            },
-          },
-        },
-      },
-      '/sitemap.xml': {
-        get: {
-          operationId: 'getSitemap',
-          summary: 'XML sitemap of every public URL.',
-          description: 'Standard sitemap listing all crawlable URLs, canonicals, and last-modified dates across the domain.',
-          tags: ['Feeds'],
-          responses: {
-            '200': {
-              description: 'Sitemap XML document.',
-              content: { 'application/xml': { schema: { $ref: '#/components/schemas/XmlDocument' } } },
-            },
-          },
-        },
-      },
-      '/.well-known/agents.json': {
-        get: {
-          operationId: 'getAgentsManifest',
-          summary: 'Agent capabilities manifest with when-to-use guidance.',
-          description: 'Provides structured machine-readable declarations of AI agent capabilities and use-case recommendations.',
-          tags: ['Feeds'],
-          responses: {
-            '200': {
-              description: 'Agent instruction manifest.',
-              content: { 'application/json': { schema: { $ref: '#/components/schemas/AgentsManifest' } } },
-            },
-          },
-        },
-      },
     },
     components: {
       schemas: {
@@ -335,6 +297,49 @@ export function GET() {
             },
           },
           required: ['jsonrpc', 'id', 'error'],
+        },
+        ApiDirectoryResponse: {
+          type: 'object',
+          properties: {
+            name: { type: 'string' },
+            version: { type: 'string' },
+            description: { type: 'string' },
+            documentation: { type: 'string' },
+            openapi: { type: 'string' },
+            mcp: { type: 'string' },
+            auth: { type: 'string' },
+            endpoints: {
+              type: 'object',
+              properties: {
+                search: { type: 'string' },
+                essays: { type: 'string' },
+                glossary: { type: 'string' },
+                ask: { type: 'string' },
+              },
+              required: ['search', 'essays', 'glossary'],
+            },
+          },
+          required: ['name', 'version', 'documentation', 'openapi', 'endpoints'],
+        },
+        ApiV1DirectoryResponse: {
+          type: 'object',
+          properties: {
+            name: { type: 'string' },
+            version: { type: 'string' },
+            description: { type: 'string' },
+            documentation: { type: 'string' },
+            openapi: { type: 'string' },
+            endpoints: {
+              type: 'object',
+              properties: {
+                search: { type: 'string' },
+                essays: { type: 'string' },
+                glossary: { type: 'string' },
+              },
+              required: ['search', 'essays', 'glossary'],
+            },
+          },
+          required: ['name', 'version', 'documentation', 'openapi', 'endpoints'],
         },
         McpRequest: {
           type: 'object',
@@ -486,10 +491,24 @@ export function GET() {
           },
           required: ['total', 'limit', 'terms'],
         },
+        AskResultItem: {
+          type: 'object',
+          properties: {
+            title: { type: 'string' },
+            url: { type: 'string' },
+            snippet: { type: 'string' },
+            type: { type: 'string', enum: ['essay', 'glossary', 'report'] },
+            score: { type: 'number' },
+          },
+          required: ['title', 'url', 'snippet', 'type'],
+        },
         AskResponse: {
           type: 'object',
           properties: {
-            results: { type: 'array', items: { type: 'object' } },
+            results: {
+              type: 'array',
+              items: { $ref: '#/components/schemas/AskResultItem' },
+            },
             query_id: { type: 'string' },
             total: { type: 'integer' },
           },
@@ -509,30 +528,16 @@ export function GET() {
           },
           required: ['endpoint', 'transport', 'protocol_versions', 'stateless', 'authentication', 'tools', 'usage', 'docs'],
         },
-        PlainTextDocument: {
-          type: 'string',
-          description: 'UTF-8 plain text document.',
-        },
-        XmlDocument: {
-          type: 'string',
-          description: 'UTF-8 XML document.',
-        },
-        AgentsManifest: {
-          type: 'object',
-          properties: {
-            schema_version: { type: 'string' },
-            name: { type: 'string' },
-            description: { type: 'string' },
-            url: { type: 'string' },
-            when_to_use: { type: 'array', items: { type: 'string' } },
-            when_not_to_use: { type: 'array', items: { type: 'string' } },
-            how_to_use: { type: 'object' },
-            contact: { type: 'object' },
-            developer: { type: 'object' },
-          },
-          required: ['schema_version', 'name', 'url', 'when_to_use'],
-        },
       },
+    },
+    'x-sdks': {
+      pypi: {
+        package: 'vedang-cli',
+        url: 'https://pypi.org/project/vedang-cli/',
+        install: 'pip install vedang-cli',
+        description: 'Official Python CLI & SDK for veda.ng research and essay APIs',
+      },
+      repository: 'https://github.com/vedangvatsa/vedang-website',
     },
     'x-mcp-tools': MCP_TOOLS.map((t) => ({
       name: t.name,
@@ -551,15 +556,6 @@ export function GET() {
         responseSchema: { $ref: '#/components/schemas/McpToolCallResponse' },
       },
     })),
-    'x-sdks': {
-      pypi: {
-        package: 'vedang-cli',
-        url: 'https://pypi.org/project/vedang-cli/',
-        install: 'pip install vedang-cli',
-        description: 'Official Python CLI & SDK for veda.ng research and essay APIs',
-      },
-      repository: 'https://github.com/vedangvatsa/vedang-website',
-    },
     'x-discovery': {
       llms_txt: LLMSTXT_URL,
       llms_full_txt: LLMSFULLTXT_URL,
