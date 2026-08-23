@@ -7,7 +7,7 @@ export const dynamic = 'force-static';
 const rpcEnvelope = (resultSchemaName: string) => ({
   type: 'object',
   properties: {
-    jsonrpc: { type: 'string', const: '2.0', description: 'JSON-RPC version.' },
+    jsonrpc: { type: 'string', enum: ['2.0'], description: 'JSON-RPC protocol version.' },
     id: { type: 'string', description: 'Echoed request ID.' },
     result: { $ref: `#/components/schemas/${resultSchemaName}` },
   },
@@ -73,6 +73,7 @@ export function GET() {
           description: 'Returns available endpoints, documentation links, OpenAPI specification URL, and rate limit policies.',
           tags: ['Directory'],
           parameters: [
+            { name: 'format', in: 'query', required: false, schema: { type: 'string', enum: ['json'], default: 'json' }, description: 'Response format.' },
             { $ref: '#/components/parameters/IdempotencyKeyHeader' },
           ],
           responses: {
@@ -90,6 +91,7 @@ export function GET() {
           description: 'Returns endpoints available in version 1 of the veda.ng REST API.',
           tags: ['Directory'],
           parameters: [
+            { name: 'format', in: 'query', required: false, schema: { type: 'string', enum: ['json'], default: 'json' }, description: 'Response format.' },
             { $ref: '#/components/parameters/IdempotencyKeyHeader' },
           ],
           responses: {
@@ -331,6 +333,7 @@ export function GET() {
           description: 'Fetches metadata and transport capabilities for the veda.ng MCP Streamable HTTP server.',
           tags: ['MCP'],
           parameters: [
+            { name: 'format', in: 'query', required: false, schema: { type: 'string', enum: ['json'], default: 'json' }, description: 'Descriptor output format.' },
             { $ref: '#/components/parameters/IdempotencyKeyHeader' },
           ],
           responses: {
@@ -428,7 +431,7 @@ export function GET() {
           type: 'object',
           description: 'Standard JSON-RPC 2.0 error object.',
           properties: {
-            jsonrpc: { type: 'string', const: '2.0' },
+            jsonrpc: { type: 'string', enum: ['2.0'] },
             id: { type: 'string', description: 'Identifier of the request that caused the error.' },
             error: {
               type: 'object',
@@ -448,10 +451,10 @@ export function GET() {
             total: { type: 'integer', description: 'Total available records matching query.' },
             limit: { type: 'integer', description: 'Number of items returned in current page.' },
             has_more: { type: 'boolean', description: 'True if more records exist beyond this cursor.' },
-            cursor: { type: ['string', 'null'], description: 'Current page cursor.' },
-            next_cursor: { type: ['string', 'null'], description: 'Opaque cursor token to fetch next page.' },
+            cursor: { type: 'string', nullable: true, description: 'Current page cursor.' },
+            next_cursor: { type: 'string', nullable: true, description: 'Opaque cursor token to fetch next page.' },
           },
-          required: ['total', 'limit', 'has_more', 'next_cursor'],
+          required: ['total', 'limit', 'has_more'],
         },
         BatchSubRequest: {
           type: 'object',
@@ -609,7 +612,7 @@ export function GET() {
           type: 'object',
           description: 'JSON-RPC 2.0 MCP request structure.',
           properties: {
-            jsonrpc: { type: 'string', const: '2.0', description: 'JSON-RPC protocol version.' },
+            jsonrpc: { type: 'string', enum: ['2.0'], description: 'JSON-RPC protocol version.' },
             id: { type: 'string', description: 'Request identifier.' },
             method: {
               type: 'string',
@@ -648,7 +651,7 @@ export function GET() {
           type: 'object',
           description: 'JSON Schema object defining tool input parameters.',
           properties: {
-            type: { type: 'string', const: 'object' },
+            type: { type: 'string', enum: ['object'] },
             properties: {
               type: 'object',
               description: 'Map of tool arguments.',
@@ -723,7 +726,7 @@ export function GET() {
             total: { type: 'integer', description: 'Total papers found.' },
             limit: { type: 'integer', description: 'Results returned per page.' },
             has_more: { type: 'boolean', description: 'True if more results exist.' },
-            next_cursor: { type: ['string', 'null'], description: 'Cursor to fetch next page.' },
+            next_cursor: { type: 'string', nullable: true, description: 'Cursor to fetch next page.' },
             pagination: { $ref: '#/components/schemas/PaginationSchema' },
             corpus: { type: 'string', description: 'Corpus used (ai or web3).' },
           },
@@ -736,7 +739,7 @@ export function GET() {
             total: { type: 'integer', description: 'Total published essays.' },
             limit: { type: 'integer', description: 'Returned limit.' },
             has_more: { type: 'boolean', description: 'True if more essays exist.' },
-            next_cursor: { type: ['string', 'null'], description: 'Cursor for next page.' },
+            next_cursor: { type: 'string', nullable: true, description: 'Cursor for next page.' },
             pagination: { $ref: '#/components/schemas/PaginationSchema' },
             essays: {
               type: 'array',
@@ -764,7 +767,7 @@ export function GET() {
             total: { type: 'integer', description: 'Total glossary terms.' },
             limit: { type: 'integer', description: 'Returned limit.' },
             has_more: { type: 'boolean', description: 'True if more terms exist.' },
-            next_cursor: { type: ['string', 'null'], description: 'Cursor for next page.' },
+            next_cursor: { type: 'string', nullable: true, description: 'Cursor for next page.' },
             pagination: { $ref: '#/components/schemas/PaginationSchema' },
             terms: {
               type: 'array',
