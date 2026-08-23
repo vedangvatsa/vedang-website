@@ -123,9 +123,27 @@
   "packages": [
     {
       "type": "pypi",
+      "ecosystem": "pypi",
+      "language": "python",
       "name": "vedang-cli",
       "url": "https://pypi.org/project/vedang-cli/",
       "install": "pip install vedang-cli"
+    },
+    {
+      "type": "npm",
+      "ecosystem": "npm",
+      "language": "typescript",
+      "name": "vedang",
+      "url": "https://www.npmjs.com/package/vedang",
+      "install": "npm install vedang"
+    },
+    {
+      "type": "go",
+      "ecosystem": "go",
+      "language": "go",
+      "name": "github.com/vedangvatsa/vedang-website",
+      "url": "https://github.com/vedangvatsa/vedang-website",
+      "install": "go get github.com/vedangvatsa/vedang-website"
     }
   ],
   "developer": {
@@ -140,6 +158,7 @@
     "mcp": "https://veda.ng/.well-known/mcp",
     "repository": "https://github.com/vedangvatsa/vedang-website",
     "pypi": "https://pypi.org/project/vedang-cli/",
+    "npm": "https://www.npmjs.com/package/vedang",
     "sdk": "https://pypi.org/project/vedang-cli/",
     "package": "vedang-cli",
     "cli": "pip install vedang-cli"

@@ -152,23 +152,48 @@ export default function DevelopersPage() {
           </p>
         </Section>
 
-        <Section id="sdk" title="Veda Python SDK & CLI (vedang-cli)">
+        <Section id="sdk" title="Veda Multi-Language SDK Packages & Tooling">
           <p className="text-muted-foreground mb-3">
-            Official Python SDK and CLI tool on PyPI for programmatic queries across research essays, glossary terms, and the 233,000+ indexed paper corpus.
+            Programmatic SDK packages and CLI tools for Python, TypeScript/JavaScript, and Go:
           </p>
-          <CommandBlock command="pip install vedang-cli" />
-          <p className="text-muted-foreground mt-3">
-            Package:{' '}
-            <a
-              href="https://pypi.org/project/vedang-cli/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-4 hover:text-foreground"
-            >
-              pypi.org/project/vedang-cli
-            </a>
-            {' · '}
-            Repository:{' '}
+          <div className="space-y-4">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">Python (PyPI)</p>
+              <CommandBlock command="pip install vedang-cli" />
+              <p className="text-xs text-muted-foreground mt-1.5">
+                PyPI:{' '}
+                <a
+                  href="https://pypi.org/project/vedang-cli/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-4 hover:text-foreground"
+                >
+                  pypi.org/project/vedang-cli
+                </a>
+              </p>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">TypeScript / JavaScript (NPM)</p>
+              <CommandBlock command="npm install vedang" />
+              <p className="text-xs text-muted-foreground mt-1.5">
+                NPM:{' '}
+                <a
+                  href="https://www.npmjs.com/package/vedang"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-4 hover:text-foreground"
+                >
+                  npmjs.com/package/vedang
+                </a>
+              </p>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">OpenAPI SDK Generator (Any Language)</p>
+              <CommandBlock command="npx @openapitools/openapi-generator-cli generate -i https://veda.ng/openapi.json -g typescript-fetch -o ./sdk" />
+            </div>
+          </div>
+          <p className="text-muted-foreground mt-4 text-xs">
+            Open-source repository:{' '}
             <a
               href="https://github.com/vedangvatsa/vedang-website"
               target="_blank"

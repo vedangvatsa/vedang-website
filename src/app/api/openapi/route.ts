@@ -841,11 +841,30 @@ export function GET() {
       },
     },
     'x-sdks': {
-      pypi: {
+      python: {
+        ecosystem: 'pypi',
         package: 'vedang-cli',
         url: 'https://pypi.org/project/vedang-cli/',
         install: 'pip install vedang-cli',
         description: 'Official Python CLI & SDK for veda.ng research and essay APIs',
+      },
+      typescript: {
+        ecosystem: 'npm',
+        package: 'vedang',
+        url: 'https://www.npmjs.com/package/vedang',
+        install: 'npm install vedang',
+        description: 'Official TypeScript / JavaScript SDK for veda.ng APIs',
+      },
+      go: {
+        ecosystem: 'go',
+        package: 'github.com/vedangvatsa/vedang-website',
+        url: 'https://github.com/vedangvatsa/vedang-website',
+        install: 'go get github.com/vedangvatsa/vedang-website',
+        description: 'Go module for veda.ng API client',
+      },
+      generator: {
+        openapi_url: `${SITE_URL}/openapi.json`,
+        command: `npx @openapitools/openapi-generator-cli generate -i ${SITE_URL}/openapi.json -g typescript-fetch -o ./sdk`,
       },
       repository: 'https://github.com/vedangvatsa/vedang-website',
     },
