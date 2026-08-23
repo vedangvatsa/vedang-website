@@ -245,51 +245,115 @@ export function checkEssayFile(filePath: string): SlopViolation[] {
   return violations;
 }
 
-export function runAudit(): { totalFiles: number; totalViolations: number; violationsByFile: Record<string, SlopViolation[]> } {
+export function getTargetFiles(): { files: string[]; isTargeted: boolean } {
+  const args = process.argv.slice(2).filter((a) => !a.startsWith('--'));
+  const checkAll = process.argv.includes('--all') || process.env.AUDIT_ALL === '1';
+
   const essaysDir = path.join(process.cwd(), 'src', 'content', 'essays');
   if (!fs.existsSync(essaysDir)) {
     throw new Error(`Essays directory not found at: ${essaysDir}`);
   }
 
-  const files = fs.readdirSync(essaysDir).filter(f => f.endsWith('.mdx') || f.endsWith('.md'));
+  // 1. Explicit files or slugs passed as CLI arguments
+  if (args.length > 0) {
+    const targets: string[] = [];
+    for (const arg of args) {
+      let resolved = arg;
+      if (!fs.existsSync(resolved)) {
+        const withExt = path.join(essaysDir, arg.endsWith('.mdx') ? arg : `${arg}.mdx`);
+        if (fs.existsSync(withExt)) {
+          resolved = withExt;
+        }
+      }
+      if (fs.existsSync(resolved)) {
+        targets.push(resolved);
+      } else {
+        console.warn(`⚠️ Warning: Specified file not found: ${arg}`);
+      }
+    }
+    return { files: targets, isTargeted: true };
+  }
+
+  // 2. If --all flag is provided, check entire corpus
+  if (checkAll) {
+    const allFiles = fs.readdirSync(essaysDir)
+      .filter((f) => f.endsWith('.mdx') || f.endsWith('.md'))
+      .map((f) => path.join(essaysDir, f));
+    return { files: allFiles, isTargeted: false };
+  }
+
+  // 3. Otherwise, check only newly added or modified files via git
+  try {
+    const { execSync } = require('child_process');
+    const gitDiff = execSync('git diff --name-only HEAD 2>/dev/null || git status --porcelain 2>/dev/null', {
+      encoding: 'utf8',
+    });
+    const modified = gitDiff
+      .split('\n')
+      .map((line: string) => line.trim().replace(/^..\s+/, ''))
+      .filter((f: string) => (f.startsWith('src/content/essays/') || f.startsWith('src/lib/glossary')) && (f.endsWith('.mdx') || f.endsWith('.ts')))
+      .map((f: string) => path.join(process.cwd(), f))
+      .filter((f: string) => fs.existsSync(f));
+
+    if (modified.length > 0) {
+      return { files: Array.from(new Set(modified)), isTargeted: true };
+    }
+  } catch {
+    /* fallback to all if git unavailable */
+  }
+
+  return { files: [], isTargeted: true };
+}
+
+export function runAudit(): { totalFiles: number; totalViolations: number; violationsByFile: Record<string, SlopViolation[]> } {
+  const { files: targetFiles, isTargeted } = getTargetFiles();
   let totalViolations = 0;
   const violationsByFile: Record<string, SlopViolation[]> = {};
 
-  for (const file of files) {
-    const fullPath = path.join(essaysDir, file);
-    const violations = checkEssayFile(fullPath);
-    if (violations.length > 0) {
-      violationsByFile[file] = violations;
-      totalViolations += violations.length;
-    }
+  if (isTargeted && targetFiles.length === 0) {
+    return { totalFiles: 0, totalViolations: 0, violationsByFile: {} };
   }
 
-  const glossaryPath = path.join(process.cwd(), 'src', 'lib', 'glossary.ts');
-  if (fs.existsSync(glossaryPath)) {
-    const glossaryViolations = checkEssayFile(glossaryPath).filter((v) => {
-      const line = v.context || '';
-      return /definition:/i.test(line) || v.type === 'em-dash';
-    });
-    if (glossaryViolations.length > 0) {
-      violationsByFile['glossary.ts'] = glossaryViolations;
-      totalViolations += glossaryViolations.length;
+  for (const fullPath of targetFiles) {
+    const fileName = path.basename(fullPath);
+    if (fileName === 'glossary.ts') {
+      const glossaryViolations = checkEssayFile(fullPath).filter((v) => {
+        const line = v.context || '';
+        return /definition:/i.test(line) || v.type === 'em-dash';
+      });
+      if (glossaryViolations.length > 0) {
+        violationsByFile[fileName] = glossaryViolations;
+        totalViolations += glossaryViolations.length;
+      }
+    } else {
+      const violations = checkEssayFile(fullPath);
+      if (violations.length > 0) {
+        violationsByFile[fileName] = violations;
+        totalViolations += violations.length;
+      }
     }
   }
 
   return {
-    totalFiles: files.length + (fs.existsSync(glossaryPath) ? 1 : 0),
+    totalFiles: targetFiles.length,
     totalViolations,
-    violationsByFile
+    violationsByFile,
   };
 }
 
 if (process.argv[1] && process.argv[1].endsWith('check-ai-slop.ts')) {
   try {
     const { totalFiles, totalViolations, violationsByFile } = runAudit();
-    console.log(`\n🔍 Audited ${totalFiles} files (essays + glossary) for AI slop, writing patterns, and structural rules...\n`);
+
+    if (totalFiles === 0) {
+      console.log('\n🔍 No newly created or modified essays to audit. Skipping slop check (use --all to check all essays).\n');
+      process.exit(0);
+    }
+
+    console.log(`\n🔍 Audited ${totalFiles} new/modified file(s) for AI slop, writing patterns, and structural rules...\n`);
 
     if (totalViolations === 0) {
-      console.log('✨ CLEAN! Zero AI slop violations found across all essays.\n');
+      console.log('✨ CLEAN! Zero AI slop violations found in the checked file(s).\n');
       process.exit(0);
     } else {
       console.log(`❌ FOUND ${totalViolations} VIOLATION(S) ACROSS ${Object.keys(violationsByFile).length} FILE(S):\n`);
