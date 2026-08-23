@@ -15,12 +15,16 @@ async function main() {
     .map((file) => file.replace(/\.mdx$/, ''));
 
   for (const slug of slugs) {
+    const outPath = path.join(OUT_DIR, `${slug}.png`);
+    if (fs.existsSync(outPath) && !process.env.FORCE_OG) {
+      continue;
+    }
     const image = buildEssayOgImage(slug);
     if (!image) {
       throw new Error(`No OG image for ${slug}`);
     }
     const buf = Buffer.from(await image.arrayBuffer());
-    fs.writeFileSync(path.join(OUT_DIR, `${slug}.png`), buf);
+    fs.writeFileSync(outPath, buf);
     console.log(`wrote public/og/${slug}.png (${buf.length} bytes)`);
   }
 }

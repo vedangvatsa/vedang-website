@@ -4,6 +4,12 @@ import path from 'path';
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
 
 function generateDefault(fileName: string, outputName: string, count = 1000) {
+  const outputPath = path.join(PUBLIC_DIR, outputName);
+  if (fs.existsSync(outputPath) && !process.env.FORCE_REPORTS) {
+    console.log(`Skipping ${outputName} (already exists).`);
+    return;
+  }
+
   const filePath = path.join(PUBLIC_DIR, fileName);
   if (!fs.existsSync(filePath)) {
     console.error(`Source file ${filePath} does not exist.`);
@@ -17,7 +23,6 @@ function generateDefault(fileName: string, outputName: string, count = 1000) {
   // The datasets are already sorted by citations/date, so just take the top ones
   const defaultList = data.slice(0, count);
   
-  const outputPath = path.join(PUBLIC_DIR, outputName);
   fs.writeFileSync(outputPath, JSON.stringify(defaultList), 'utf8');
   console.log(`Generated ${defaultList.length} default reports to ${outputName}`);
 }
