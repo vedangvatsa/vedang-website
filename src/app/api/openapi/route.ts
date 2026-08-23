@@ -21,6 +21,18 @@ const errorResponse = (description: string) => ({
   },
 });
 
+const acceptedAsyncResponse = (description: string) => ({
+  description,
+  headers: {
+    'Location': { schema: { type: 'string' }, description: 'Polling URL for async job status (e.g. /api/v1/jobs/{jobId}).' },
+    'Retry-After': { schema: { type: 'integer' }, description: 'Recommended seconds to wait before polling again.' },
+    'Idempotency-Key': { $ref: '#/components/headers/IdempotencyKey' },
+  },
+  content: {
+    'application/json': { schema: { $ref: '#/components/schemas/AsyncJobResponse' } },
+  },
+});
+
 export function GET() {
   const spec = {
     openapi: '3.1.0',
@@ -189,7 +201,7 @@ export function GET() {
         post: {
           operationId: 'executeBatchV1',
           summary: 'Execute multiple API operations in a single bulk request.',
-          description: 'Accepts an array of sub-requests and executes them concurrently, returning ordered sub-responses. Supports Idempotency-Key header.',
+          description: 'Accepts an array of sub-requests and executes them concurrently, returning ordered sub-responses. Supports Idempotency-Key and 202 async polling.',
           tags: ['Batch'],
           parameters: [
             { $ref: '#/components/parameters/IdempotencyKeyHeader' },
@@ -208,14 +220,7 @@ export function GET() {
               },
               content: { 'application/json': { schema: { $ref: '#/components/schemas/BatchResponse' } } },
             },
-            '202': {
-              description: 'Batch accepted for background async processing. Poll Location header for job status.',
-              headers: {
-                'Location': { schema: { type: 'string' }, description: 'Polling URL for async job status.' },
-                'Idempotency-Key': { $ref: '#/components/headers/IdempotencyKey' },
-              },
-              content: { 'application/json': { schema: { $ref: '#/components/schemas/AsyncJobResponse' } } },
-            },
+            '202': acceptedAsyncResponse('Batch job accepted for background async processing. Follow Location header to poll status.'),
             '400': errorResponse('Invalid batch payload or limit exceeded.'),
           },
         },
@@ -224,7 +229,33 @@ export function GET() {
         get: {
           operationId: 'getJobStatusV1',
           summary: 'Poll status of an asynchronous background job.',
-          description: 'Retrieves current lifecycle status, timestamps, and execution results for a 202 Accepted background job.',
+          description: 'Retrieves current lifecycle status, timestamps, polling interval, and execution results for an async background job.',
+          tags: ['Jobs'],
+          parameters: [
+            { name: 'jobId', in: 'path', required: true, schema: { type: 'string' }, description: 'Unique job identifier (e.g. job_12345).' },
+            { $ref: '#/components/parameters/IdempotencyKeyHeader' },
+          ],
+          responses: {
+            '200': {
+              description: 'Job execution status, polling hints, and result payload.',
+              headers: {
+                'Location': { schema: { type: 'string' }, description: 'Canonical job status URI (/api/v1/jobs/{jobId}).' },
+                'Retry-After': { schema: { type: 'integer' }, description: 'Recommended seconds to wait before polling.' },
+                'Idempotency-Key': { $ref: '#/components/headers/IdempotencyKey' },
+              },
+              content: { 'application/json': { schema: { $ref: '#/components/schemas/AsyncJobResponse' } } },
+            },
+            '202': acceptedAsyncResponse('Job still running in background. Continue polling Location URI.'),
+            '400': errorResponse('Invalid job ID.'),
+            '404': errorResponse('Job not found.'),
+          },
+        },
+      },
+      '/api/jobs/{jobId}': {
+        get: {
+          operationId: 'getJobStatus',
+          summary: 'Poll status of an asynchronous background job (latest).',
+          description: 'Unversioned route for polling background job lifecycle and status.',
           tags: ['Jobs'],
           parameters: [
             { name: 'jobId', in: 'path', required: true, schema: { type: 'string' }, description: 'Unique job identifier.' },
@@ -232,12 +263,14 @@ export function GET() {
           ],
           responses: {
             '200': {
-              description: 'Job execution status and result.',
+              description: 'Job status payload.',
               headers: {
-                'Location': { schema: { type: 'string' }, description: 'Canonical job status URI.' },
+                'Location': { schema: { type: 'string' }, description: 'Job status URI.' },
+                'Retry-After': { schema: { type: 'integer' } },
               },
               content: { 'application/json': { schema: { $ref: '#/components/schemas/AsyncJobResponse' } } },
             },
+            '202': acceptedAsyncResponse('Job in progress. Poll Location URI.'),
             '400': errorResponse('Invalid job ID.'),
             '404': errorResponse('Job not found.'),
           },
@@ -278,7 +311,7 @@ export function GET() {
                 },
               },
             },
-            '202': { description: 'Notification accepted (notifications/initialized). No response body.' },
+            '202': acceptedAsyncResponse('Async tool execution queued. Follow Location header for job status.'),
             '400': errorResponse('Unsupported Mcp-Protocol-Version.'),
             '406': errorResponse('Accept header must include application/json or text/event-stream.'),
             '415': errorResponse('Content-Type must be application/json.'),
@@ -346,6 +379,7 @@ export function GET() {
               },
               content: { 'application/json': { schema: { $ref: '#/components/schemas/AskResponse' } } },
             },
+            '202': acceptedAsyncResponse('Complex search query accepted for asynchronous compilation.'),
             '400': errorResponse('Invalid request body.'),
           },
         },
@@ -459,7 +493,8 @@ export function GET() {
             status: { type: 'string', enum: ['queued', 'running', 'completed', 'failed'] },
             created_at: { type: 'string', format: 'date-time' },
             completed_at: { type: 'string', format: 'date-time' },
-            location: { type: 'string', description: 'URL to poll for job status.' },
+            location: { type: 'string', description: 'URL to poll for job status (/api/v1/jobs/{jobId}).' },
+            poll_interval: { type: 'integer', description: 'Recommended polling interval in seconds.', default: 2 },
             result: { type: 'object', description: 'Job execution payload upon completion.' },
           },
           required: ['job_id', 'status', 'location'],
