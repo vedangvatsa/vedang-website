@@ -1,8 +1,17 @@
 import { MCP_TOOLS, TOOL_HANDLERS } from '@/lib/agent-tools';
 import { SITE_NAME, SITE_URL, LLMSTXT_URL, MCP_ENDPOINT } from '@/lib/site';
 
-export const SUPPORTED_PROTOCOL_VERSIONS = ['2025-06-18', '2025-03-26', '2024-11-05'] as const;
-export const LATEST_PROTOCOL_VERSION = SUPPORTED_PROTOCOL_VERSIONS[0];
+export const SUPPORTED_PROTOCOL_VERSIONS = [
+  '2025-06-18',
+  '2025-03-26',
+  '2024-11-05',
+  '2024-10-07',
+  '1.0',
+  'latest',
+] as const;
+
+export const LATEST_PROTOCOL_VERSION = '2025-06-18';
+export const DEFAULT_PROTOCOL_VERSION = '2024-11-05';
 
 export const SERVER_INFO = {
   name: 'veda.ng',
@@ -49,11 +58,14 @@ function isValidId(id: unknown): id is JsonRpcId {
   return typeof id === 'string' || typeof id === 'number' || id === null;
 }
 
-function negotiateProtocolVersion(requested: unknown): string {
-  if (typeof requested === 'string' && (SUPPORTED_PROTOCOL_VERSIONS as readonly string[]).includes(requested)) {
-    return requested;
+export function negotiateProtocolVersion(requested: unknown): string {
+  if (typeof requested === 'string') {
+    const clean = requested.trim().toLowerCase();
+    if (clean === '2024-11-05' || clean === '2024-10-07') return '2024-11-05';
+    if (clean === '2025-03-26') return '2025-03-26';
+    if (clean === '2025-06-18' || clean === 'latest' || clean === '1.0') return '2025-06-18';
   }
-  return LATEST_PROTOCOL_VERSION;
+  return DEFAULT_PROTOCOL_VERSION;
 }
 
 async function dispatch(method: string, params: Record<string, unknown> | undefined): Promise<unknown> {
@@ -63,14 +75,38 @@ async function dispatch(method: string, params: Record<string, unknown> | undefi
         protocolVersion: negotiateProtocolVersion(params?.protocolVersion),
         capabilities: {
           tools: { listChanged: false },
+          resources: { subscribe: false, listChanged: false },
+          prompts: { listChanged: false },
+          logging: {},
         },
         serverInfo: SERVER_INFO,
         instructions: SERVER_INSTRUCTIONS,
       };
+    case 'notifications/initialized':
+      return {};
     case 'ping':
       return {};
     case 'tools/list':
       return { tools: MCP_TOOLS };
+    case 'resources/list':
+      return {
+        resources: [
+          {
+            uri: `${SITE_URL}/llms.txt`,
+            name: 'llms.txt',
+            description: 'Structured index of veda.ng research and essays for LLMs.',
+            mimeType: 'text/markdown',
+          },
+          {
+            uri: `${SITE_URL}/openapi.json`,
+            name: 'openapi.json',
+            description: 'OpenAPI 3.1 specification for veda.ng public APIs.',
+            mimeType: 'application/json',
+          },
+        ],
+      };
+    case 'prompts/list':
+      return { prompts: [] };
     case 'tools/call': {
       const name = typeof params?.name === 'string' ? params.name : '';
       if (!name || !TOOL_HANDLERS[name]) {
@@ -87,6 +123,7 @@ async function dispatch(method: string, params: Record<string, unknown> | undefi
 export interface McpHttpResult {
   status: number;
   body: string | null;
+  negotiatedVersion?: string;
 }
 
 export async function handleMcpPost(rawBody: string | null): Promise<McpHttpResult> {
@@ -107,6 +144,10 @@ export async function handleMcpPost(rawBody: string | null): Promise<McpHttpResu
     return { status: 200, body: JSON.stringify(failure(isValidId(id) ? id : null, INVALID_REQUEST, 'Invalid Request')) };
   }
 
+  if (method === 'notifications/initialized' || method.startsWith('notifications/')) {
+    return { status: 202, body: null };
+  }
+
   if (id === undefined || id === null) {
     return { status: 202, body: null };
   }
@@ -117,7 +158,8 @@ export async function handleMcpPost(rawBody: string | null): Promise<McpHttpResu
 
   try {
     const result = await dispatch(method, (params ?? undefined) as Record<string, unknown> | undefined);
-    return { status: 200, body: JSON.stringify(success(id, result)) };
+    const negotiatedVersion = method === 'initialize' ? (result as { protocolVersion?: string })?.protocolVersion : undefined;
+    return { status: 200, body: JSON.stringify(success(id, result)), negotiatedVersion };
   } catch (err) {
     const rpcErr = err as { rpcCode?: number; message?: string };
     if (rpcErr && typeof rpcErr.rpcCode === 'number') {
@@ -136,7 +178,7 @@ export function mcpEndpointDescriptor(): string {
       stateless: true,
       authentication: 'none',
       tools: MCP_TOOLS.map((t) => t.name),
-      usage: `Send POST ${MCP_ENDPOINT} with Content-Type: application/json and body {"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"${LATEST_PROTOCOL_VERSION}","capabilities":{},"clientInfo":{"name":"your-client","version":"1.0"}}}`,
+      usage: `Send POST ${MCP_ENDPOINT} with Content-Type: application/json and body {"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"${DEFAULT_PROTOCOL_VERSION}","capabilities":{},"clientInfo":{"name":"your-client","version":"1.0"}}}`,
       docs: `${SITE_URL}/developers`,
     },
     null,
