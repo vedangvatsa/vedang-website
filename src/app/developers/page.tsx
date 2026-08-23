@@ -45,7 +45,12 @@ const developersSchema = {
   publisher: {
     '@type': 'Organization',
     name: 'Hashtag Web3',
-    url: 'https://veda.ng',
+    url: 'https://hashtagweb3.com',
+    sameAs: [
+      'https://linkedin.com/company/hashtagweb3',
+      'https://www.linkedin.com/company/hashtagweb3',
+      'https://hashtagweb3.com',
+    ],
   },
 };
 
