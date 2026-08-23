@@ -37,13 +37,13 @@ export function NotFoundGame() {
   const reset = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const groundY = canvas.height - 20;
+    const groundY = canvas.height - 24;
     groundYRef.current = groundY;
     playerRef.current = {
-      x: 50,
-      y: groundY - 40,
-      w: 40,
-      h: 40,
+      x: 48,
+      y: groundY - 36,
+      w: 36,
+      h: 36,
       vy: 0,
       jumping: false,
     };
@@ -54,10 +54,10 @@ export function NotFoundGame() {
   const jump = () => {
     const p = playerRef.current;
     if (!p.jumping && state.running && !state.over) {
-      p.vy = -18;
+      p.vy = -16;
       p.jumping = true;
     }
-    if (state.over) reset();
+    if (state.over || !state.running) reset();
   };
 
   const spawnObstacle = () => {
@@ -65,12 +65,12 @@ export function NotFoundGame() {
     if (!canvas) return;
     const groundY = groundYRef.current;
     const type = Math.random() < 0.7 ? 'cactus' : 'bird';
-    const h = type === 'cactus' ? 40 : 30;
-    const y = type === 'cactus' ? groundY - h : groundY - h - Math.random() * 40;
+    const h = type === 'cactus' ? 36 : 24;
+    const y = type === 'cactus' ? groundY - h : groundY - h - Math.random() * 32;
     obstaclesRef.current.push({
       x: canvas.width + 20,
       y,
-      w: type === 'cactus' ? 20 : 40,
+      w: type === 'cactus' ? 18 : 32,
       h,
       type,
     });
@@ -83,7 +83,7 @@ export function NotFoundGame() {
     if (!canvas) return;
 
     const p = playerRef.current;
-    const gravity = 0.9;
+    const gravity = 0.85;
 
     p.vy! += gravity;
     p.y += p.vy!;
@@ -118,7 +118,7 @@ export function NotFoundGame() {
     setState(s => ({
       ...s,
       score: s.score + dt * 0.1,
-      speed: Math.min(6 + s.score * 0.0005, 14),
+      speed: Math.min(6 + s.score * 0.0005, 13),
     }));
   };
 
@@ -134,60 +134,74 @@ export function NotFoundGame() {
 
     ctx.clearRect(0, 0, w, h);
 
-    ctx.strokeStyle = '#e5e5e5';
+    // Ground line
+    ctx.strokeStyle = '#e2e8f0';
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.moveTo(0, groundY);
     ctx.lineTo(w, groundY);
     ctx.stroke();
 
+    // Player
     const p = playerRef.current;
-    ctx.fillStyle = state.over ? '#ef4444' : '#374151';
-    ctx.fillRect(p.x, p.y, p.w, p.h);
-    ctx.fillStyle = '#fff';
-    ctx.fillRect(p.x + 28, p.y + 8, 8, 8);
+    ctx.fillStyle = state.over ? '#ef4444' : '#1e293b';
+    ctx.beginPath();
+    ctx.roundRect(p.x, p.y, p.w, p.h, 6);
+    ctx.fill();
 
+    // Player eye
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(p.x + p.w - 12, p.y + 8, 6, 6);
+
+    // Obstacles
     for (const o of obstaclesRef.current) {
-      ctx.fillStyle = '#22c55e';
-      if (o.type === 'cactus') {
-        ctx.fillRect(o.x, o.y, o.w, o.h);
-        ctx.fillRect(o.x - 8, o.y + 12, 8, 8);
-        ctx.fillRect(o.x + o.w, o.y + 12, 8, 8);
-      } else {
-        ctx.fillRect(o.x, o.y, o.w, o.h);
-        const wingOffset = Math.sin(Date.now() / 100) > 0 ? 0 : 4;
-        ctx.fillRect(o.x + 8, o.y - 6 + wingOffset, 16, 6);
-      }
+      ctx.fillStyle = '#10b981';
+      ctx.beginPath();
+      ctx.roundRect(o.x, o.y, o.w, o.h, 4);
+      ctx.fill();
     }
 
-    ctx.fillStyle = '#64748b';
-    ctx.font = '24px system-ui, sans-serif';
-    ctx.textAlign = 'right';
-    ctx.fillText(Math.floor(state.score).toString(), w - 20, 40);
+    // Active score in top right
+    if (state.running && !state.over) {
+      ctx.fillStyle = '#94a3b8';
+      ctx.font = '600 16px system-ui, sans-serif';
+      ctx.textAlign = 'right';
+      ctx.fillText(Math.floor(state.score).toString(), w - 20, 32);
+    }
 
+    // Center overlays
     if (state.over) {
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.85)';
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.75)';
       ctx.fillRect(0, 0, w, h);
-      ctx.fillStyle = '#fff';
-      ctx.font = 'bold 28px system-ui, sans-serif';
+
       ctx.textAlign = 'center';
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 22px system-ui, sans-serif';
       ctx.fillText('Game Over', w / 2, h / 2 - 20);
-      ctx.font = '18px system-ui, sans-serif';
-      ctx.fillText(`Score: ${Math.floor(state.score)}`, w / 2, h / 2 + 20);
-      ctx.font = '14px system-ui, sans-serif';
+
+      ctx.fillStyle = '#e2e8f0';
+      ctx.font = '500 15px system-ui, sans-serif';
+      ctx.fillText(`Score: ${Math.floor(state.score)}`, w / 2, h / 2 + 8);
+
       ctx.fillStyle = '#94a3b8';
-      ctx.fillText('Tap / Click / Space to restart', w / 2, h / 2 + 60);
+      ctx.font = '13px system-ui, sans-serif';
+      ctx.fillText('Press Space or tap to restart', w / 2, h / 2 + 36);
     } else if (!state.running) {
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.85)';
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.75)';
       ctx.fillRect(0, 0, w, h);
-      ctx.fillStyle = '#fff';
-      ctx.font = 'bold 24px system-ui, sans-serif';
+
       ctx.textAlign = 'center';
-      ctx.fillText('Agent Runner', w / 2, h / 2 - 30);
-      ctx.font = '16px system-ui, sans-serif';
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 22px system-ui, sans-serif';
+      ctx.fillText('Agent Runner', w / 2, h / 2 - 20);
+
+      ctx.fillStyle = '#e2e8f0';
+      ctx.font = '500 14px system-ui, sans-serif';
+      ctx.fillText('Jump over obstacles to survive', w / 2, h / 2 + 8);
+
       ctx.fillStyle = '#94a3b8';
-      ctx.fillText('Tap / Click / Space to start', w / 2, h / 2 + 10);
-      ctx.fillText('Jump over obstacles', w / 2, h / 2 + 40);
+      ctx.font = '13px system-ui, sans-serif';
+      ctx.fillText('Press Space or tap to start', w / 2, h / 2 + 36);
     }
   };
 
@@ -207,9 +221,9 @@ export function NotFoundGame() {
       const parent = canvas.parentElement;
       if (!parent) return;
       const rect = parent.getBoundingClientRect();
-      const targetWidth = Math.max(Math.min(rect.width, 600), 280);
+      const targetWidth = Math.max(Math.min(rect.width, 540), 280);
       canvas.width = targetWidth;
-      canvas.height = 200;
+      canvas.height = 180;
       if (!state.running && !state.over) reset();
       draw();
     };
@@ -254,7 +268,7 @@ export function NotFoundGame() {
   return (
     <canvas
       ref={canvasRef}
-      className="w-full max-w-[600px] h-[200px] rounded-lg border border-border/50 bg-background mt-6 sm:mt-8 touch-manipulation select-none"
+      className="w-full max-w-[540px] h-[180px] rounded-xl border border-border/40 bg-muted/20 shadow-sm touch-manipulation select-none"
       aria-label="Agent Runner - tap/click/space to jump over obstacles"
       role="application"
     />

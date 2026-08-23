@@ -14,28 +14,32 @@ const recoveryLinks = [
 export default function NotFound() {
   return (
     <PageLayout>
-      <div className="flex min-h-[70vh] w-full max-w-2xl mx-auto flex-col items-center justify-center px-4 py-8 sm:py-12 text-center">
-        <p className="text-5xl sm:text-6xl font-bold tracking-tighter text-muted-foreground/30 mb-3 sm:mb-4 select-none">404</p>
-        <h1 className="text-xl sm:text-2xl font-semibold tracking-tight mb-2">Page not found</h1>
-        <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 max-w-md px-2">
+      <div className="flex min-h-[70vh] w-full max-w-xl mx-auto flex-col items-center justify-center px-4 py-10 sm:py-14 text-center">
+        <h1 className="text-6xl sm:text-7xl font-bold tracking-tighter text-muted-foreground/25 mb-3 select-none">
+          404
+        </h1>
+        <p className="text-sm sm:text-base text-muted-foreground mb-8 max-w-md px-2">
           This page does not exist or may have been moved.
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 w-full max-w-xs sm:max-w-none justify-center">
-          <Button asChild className="w-full sm:w-auto min-w-[130px]">
+
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-8 w-full">
+          <Button asChild className="min-w-[140px]">
             <Link href="/">Go home</Link>
           </Button>
-          <Button variant="outline" asChild className="w-full sm:w-auto min-w-[130px]">
+          <Button variant="outline" asChild className="min-w-[140px]">
             <Link href="/essays">Browse essays</Link>
           </Button>
         </div>
-        <div className="w-full max-w-full overflow-hidden flex justify-center">
+
+        <div className="w-full max-w-[540px] flex justify-center">
           <NotFoundGame />
         </div>
-        <nav aria-label="Recovery links" className="mt-8 flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-xs sm:text-sm text-muted-foreground max-w-md px-2">
+
+        <nav aria-label="Recovery links" className="mt-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-xs sm:text-sm text-muted-foreground max-w-md px-2">
           {recoveryLinks.map((link, i) => (
-            <span key={link.href} className="flex items-center gap-2">
-              {i > 0 && <span aria-hidden="true">·</span>}
-              <Link href={link.href} className="underline underline-offset-4 hover:text-foreground transition-colors py-1">
+            <span key={link.href} className="inline-flex items-center gap-3">
+              {i > 0 && <span aria-hidden="true" className="text-muted-foreground/40">·</span>}
+              <Link href={link.href} className="hover:text-foreground transition-colors py-0.5">
                 {link.label}
               </Link>
             </span>
