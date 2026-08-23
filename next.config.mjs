@@ -106,6 +106,45 @@ const nextConfig = {
         ],
       },
       {
+        source: '/api/:path*',
+        headers: [
+          { key: 'RateLimit', value: 'limit=60, remaining=59, reset=60' },
+          { key: 'RateLimit-Limit', value: '60' },
+          { key: 'RateLimit-Remaining', value: '59' },
+          { key: 'RateLimit-Reset', value: '60' },
+          { key: 'RateLimit-Policy', value: '60;w=60' },
+          { key: 'X-RateLimit-Limit', value: '60' },
+          { key: 'X-RateLimit-Remaining', value: '59' },
+          { key: 'Sunset', value: 'Sun, 01 Mar 2028 00:00:00 GMT' },
+          { key: 'Deprecation', value: '@1835500000' },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Access-Control-Allow-Methods', value: 'GET, POST, OPTIONS' },
+          { key: 'Access-Control-Allow-Headers', value: 'Content-Type, Authorization, Idempotency-Key, Accept' },
+        ],
+      },
+      {
+        source: '/.well-known/mcp',
+        headers: [
+          { key: 'RateLimit', value: 'limit=60, remaining=59, reset=60' },
+          { key: 'RateLimit-Limit', value: '60' },
+          { key: 'RateLimit-Remaining', value: '59' },
+          { key: 'RateLimit-Reset', value: '60' },
+          { key: 'RateLimit-Policy', value: '60;w=60' },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+        ],
+      },
+      {
+        source: '/openapi.json',
+        headers: [
+          { key: 'RateLimit', value: 'limit=60, remaining=59, reset=60' },
+          { key: 'RateLimit-Limit', value: '60' },
+          { key: 'RateLimit-Remaining', value: '59' },
+          { key: 'RateLimit-Reset', value: '60' },
+          { key: 'RateLimit-Policy', value: '60;w=60' },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+        ],
+      },
+      {
         source: '/og/:path*',
         headers: [
           {
