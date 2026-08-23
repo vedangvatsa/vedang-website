@@ -1,13 +1,53 @@
-User-agent: *
+# AI crawler policy for veda.ng. Default remains open; tiers are explicit below.
+
+# Answer-engine crawlers (search/RAG surfaces)
+User-agent: GPTBot
 Allow: /
 
-User-agent: Twitterbot
+User-agent: OAI-SearchBot
 Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: DeepSeekBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Training-only crawlers remain allowed per ai.txt (training explicitly permitted)
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /md/
+
+Content-Signal: search=yes, ai-train=yes, ai-summarize=yes
 
 Sitemap: https://veda.ng/sitemap.xml
 Schemamap: https://veda.ng/.well-known/ai-catalog.json
 
-# All AI crawlers are welcome. This file intentionally allows everything.
-# See /llms.txt and /ai.txt for structured AI discovery.
-
-Disallow: /md/
+# All AI crawlers are welcome. See /llms.txt, /ai.txt and /.well-known/agents.json.

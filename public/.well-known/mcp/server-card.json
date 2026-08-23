@@ -1,7 +1,9 @@
 {
   "name": "veda.ng Research Hub MCP Server",
+  "description": "MCP server over Streamable HTTP exposing essays, glossary definitions, and 233,000+ indexed academic papers as tools for AI agents.",
+  "version": "1.0.0",
+  "serverUrl": "https://veda.ng/.well-known/mcp",
   "identifier": "urn:air:veda.ng:mcp-server:research-hub",
-  "endpoint": "https://veda.ng/.well-known/mcp",
   "transport": "streamable-http",
   "protocolVersions": ["2025-06-18", "2025-03-26", "2024-11-05"],
   "stateless": true,

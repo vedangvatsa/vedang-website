@@ -164,6 +164,63 @@ const personSchema = {
   knowsAbout: ['Artificial Intelligence', 'Web3', 'Blockchain', 'Cryptocurrency', 'Community Building'],
 };
 
+const coursesSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Free AI & Web3 Courses by Vedang Vatsa',
+  url: 'https://veda.ng',
+  itemListElement: [
+    {
+      '@type': 'Course',
+      name: 'Vibe Coding 101',
+      description: 'Build real apps with AI using Firebase Studio, Replit, Cursor, and Lovable.',
+      url: 'https://veda.ng/vibecoding',
+      provider: { '@type': 'Organization', name: 'Hashtag Web3' },
+      offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD', category: 'Free' },
+    },
+    {
+      '@type': 'Course',
+      name: 'Web3 101',
+      description: 'Blockchain fundamentals, smart contracts, dApps, NFTs, DAOs, and DeFi.',
+      url: 'https://veda.ng/web3',
+      provider: { '@type': 'Organization', name: 'Hashtag Web3' },
+      offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD', category: 'Free' },
+    },
+    {
+      '@type': 'Course',
+      name: 'Prompt Engineering 101',
+      description: 'Master prompt engineering fundamentals for LLMs and AI assistants.',
+      url: 'https://veda.ng/prompt',
+      provider: { '@type': 'Organization', name: 'Hashtag Web3' },
+      offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD', category: 'Free' },
+    },
+    {
+      '@type': 'Course',
+      name: 'The Agentic Web',
+      description: 'Autonomous AI agents, MCP, A2A protocols, and agentic systems.',
+      url: 'https://veda.ng/agentic',
+      provider: { '@type': 'Organization', name: 'Hashtag Web3' },
+      offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD', category: 'Free' },
+    },
+    {
+      '@type': 'Course',
+      name: 'MCP Development 101',
+      description: 'Build MCP servers to connect AI to databases, APIs, and any data source.',
+      url: 'https://veda.ng/mcp',
+      provider: { '@type': 'Organization', name: 'Hashtag Web3' },
+      offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD', category: 'Free' },
+    },
+    {
+      '@type': 'Course',
+      name: 'AI Automation 101',
+      description: 'Automate workflows with APIs, MCP servers, AI agents, n8n, and no-code tools.',
+      url: 'https://veda.ng/automation',
+      provider: { '@type': 'Organization', name: 'Hashtag Web3' },
+      offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD', category: 'Free' },
+    },
+  ].map((course, i) => ({ ...course, position: i + 1 })),
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -207,6 +264,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(coursesSchema) }}
         />
         <link rel="alternate" type="application/json" href="/deeprank.json" />
         <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />

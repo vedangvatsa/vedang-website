@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "publisher": {
+    "name": "Vedang Vatsa Research Hub",
+    "url": "https://veda.ng"
+  },
+  "skills": [
+    {
+      "name": "search_essays",
+      "description": "Search 50+ long-form essays on AI agents, AI policy, and Web3 infrastructure by keyword.",
+      "url": "https://veda.ng/.well-known/mcp"
+    },
+    {
+      "name": "get_essay",
+      "description": "Fetch the full Markdown text of a single essay by its URL slug.",
+      "url": "https://veda.ng/.well-known/mcp"
+    },
+    {
+      "name": "search_glossary",
+      "description": "Search 100+ AI and Web3 glossary terms with definition previews.",
+      "url": "https://veda.ng/.well-known/mcp"
+    },
+    {
+      "name": "get_glossary_term",
+      "description": "Fetch the full Markdown definition of one glossary term by slug.",
+      "url": "https://veda.ng/.well-known/mcp"
+    },
+    {
+      "name": "search_reports",
+      "description": "Search 233,000+ indexed academic papers via OpenAlex in the AI or Web3 corpus, sorted by citations.",
+      "url": "https://veda.ng/.well-known/mcp"
+    },
+    {
+      "name": "markdown_access",
+      "description": "Fetch any page as Markdown by sending Accept: text/markdown or appending .md to the URL.",
+      "url": "https://veda.ng/index.md"
+    }
+  ]
+}
