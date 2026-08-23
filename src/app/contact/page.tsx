@@ -13,9 +13,33 @@ export const metadata: Metadata = generateMetadata({
   ogImageAlt: 'Book a meeting with Vedang Vatsa',
 });
 
+const contactSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact Vedang Vatsa',
+  url: 'https://veda.ng/contact',
+  description: pageMetadata.contact.description,
+  mainEntity: {
+    '@type': 'Person',
+    name: 'Vedang Vatsa',
+    email: 'vatsvedang@gmail.com',
+    url: 'https://veda.ng/about',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'vatsvedang@gmail.com',
+      contactType: 'customer support',
+      availableLanguage: ['English'],
+    },
+  },
+};
+
 export default function MeetingPage() {
   return (
     <PageLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+      />
       <PageHero
         title="Book a Meeting"
         showAvatar
@@ -30,9 +54,6 @@ export default function MeetingPage() {
           <Link href="/media" className="text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4">
             Media
           </Link>
-          <a href="mailto:vatsvedang@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4">
-            Email
-          </a>
         </div>
       </PageHero>
 
