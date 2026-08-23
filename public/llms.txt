@@ -1,6 +1,6 @@
-# Vedang Vatsa
+# Veda - Developer Resources, APIs & AI Research Hub (veda.ng)
 
-> Founder of Hashtag Web3, a community of over 100,000 AI & Web3 professionals. This website serves as a central hub for my research, essays, and professional profile.
+> Official developer resources, APIs, and research repository for Veda (veda.ng) by Vedang Vatsa. Keyless, open-access public endpoints for research papers, essays, glossary definitions, and MCP tools.
 
 
 ## When to Use This Site (Agent Guidance & Best-Fit Tasks)
@@ -48,14 +48,14 @@ Tip: send an HTTP Accept header of text/markdown on any page URL to get the Mark
 - [Essays](https://veda.ng/essays): Curated collection of thought pieces on technology, AI, and society.
 - [Web3 101](https://veda.ng/web3): Fundamentals of Web3, blockchain, and decentralized technologies.
 - [Prompt Engineering](https://veda.ng/prompt): Mastering AI through effective prompt design and instruction.
-- [Agentic Web](https://veda.ng/agentic): The future of autonomous AI agents and their role in the internet.
-- [Vibe Coding](https://veda.ng/vibecoding): A philosophy of intuitive, human-centered software development.
-- [English to LinkedIn Translator](https://veda.ng/lit): AI-powered tool that translates honest human language into over-the-top LinkedIn corporate speak.
-- [NoSlop](https://veda.ng/noslop): Standing agent law against AI slop in prose, UI, and code.
-- [Job Board Comparison](https://veda.ng/job-boards): Comparative analytics for Hashtag Web3 and CV in Bio job boards.
+- [Vibe Coding 101](https://veda.ng/vibecoding): Fast software creation using generative AI and natural language.
+- [The Agentic Web](https://veda.ng/agentic): Design patterns, protocol standards, and architectural blueprints for autonomous agents.
+- [AI Automation](https://veda.ng/automation): Automate workflows with APIs, MCP servers, AI agents, n8n, and no-code tools.
+- [MCP Development](https://veda.ng/mcp): Complete curriculum for Model Context Protocol development.
 
-## Essays
+## Core Content Index
 
+### Published Research Essays
 - [How India Uses AI](https://veda.ng/aiindia): India posts huge absolute AI numbers and thinner per-person use. Chatbot...
 - [Cities of India](https://veda.ng/india): A government-data view of Indian cities, covering quality of life, house...
 - [Who Buys After the Layoff](https://veda.ng/receipts): AI can cut a wage without cutting a customer, change a job, or create a ...
@@ -124,15 +124,6 @@ Tip: send an HTTP Accept header of text/markdown on any page URL to get the Mark
 - [The Mesh Economy](https://veda.ng/mesh): DeFi protocols execute billions in daily volume with zero employees. DAO...
 - [The Plurality Trap](https://veda.ng/plurality): More information was supposed to produce better understanding. Instead, ...
 - [The Simulation Layer](https://veda.ng/simulayer): Digital twins save Boeing over $1 billion in manufacturing. Waymo has dr...
-
-## Research Data Archives
-
-- [AI Reports and Research Library](https://veda.ng/ailib): Searchable database of 19,000+ AI reports, research papers, and industry analyses from Stanford, McKinsey, Deloitte, OpenAI, and more.
-- [Web3 Reports and Research Library](https://veda.ng/web3lib): Searchable database of 18,000+ Web3 reports, whitepapers, institutional research, and regulatory frameworks.
-
-## Research Papers
-
-Selected peer-reviewed research on AI, Web3, and economic systems:
 
 - [Device-to-Device Economics and AI Agent Transactions](https://dx.doi.org/10.2139/ssrn.5660270): Economic models for direct AI-to-AI transactions and autonomous economic agents.
 - [Stablecoin Growth and Market Dynamics](https://dx.doi.org/10.2139/ssrn.5325570): Analysis of stablecoin adoption, market structure, and financial implications.

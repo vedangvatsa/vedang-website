@@ -94,9 +94,9 @@ Tip: send an HTTP Accept header of text/markdown on any page URL to get the Mark
 - [Contact / Book a Meeting](https://veda.ng/contact): Direct consultation and email options
 `;
 
-  const llmsIndexContent = `# Vedang Vatsa
+  const llmsIndexContent = `# Veda - Developer Resources, APIs & AI Research Hub (veda.ng)
 
-> Founder of Hashtag Web3, a community of over 100,000 AI & Web3 professionals. This website serves as a central hub for my research, essays, and professional profile.
+> Official developer resources, APIs, and research repository for Veda (veda.ng) by Vedang Vatsa. Keyless, open-access public endpoints for research papers, essays, glossary definitions, and MCP tools.
 
 ${whenToUse}
 
@@ -108,24 +108,15 @@ ${developerSection}
 - [Essays](https://veda.ng/essays): Curated collection of thought pieces on technology, AI, and society.
 - [Web3 101](https://veda.ng/web3): Fundamentals of Web3, blockchain, and decentralized technologies.
 - [Prompt Engineering](https://veda.ng/prompt): Mastering AI through effective prompt design and instruction.
-- [Agentic Web](https://veda.ng/agentic): The future of autonomous AI agents and their role in the internet.
-- [Vibe Coding](https://veda.ng/vibecoding): A philosophy of intuitive, human-centered software development.
-- [English to LinkedIn Translator](https://veda.ng/lit): AI-powered tool that translates honest human language into over-the-top LinkedIn corporate speak.
-- [NoSlop](https://veda.ng/noslop): Standing agent law against AI slop in prose, UI, and code.
-- [Job Board Comparison](https://veda.ng/job-boards): Comparative analytics for Hashtag Web3 and CV in Bio job boards.
+- [Vibe Coding 101](https://veda.ng/vibecoding): Fast software creation using generative AI and natural language.
+- [The Agentic Web](https://veda.ng/agentic): Design patterns, protocol standards, and architectural blueprints for autonomous agents.
+- [AI Automation](https://veda.ng/automation): Automate workflows with APIs, MCP servers, AI agents, n8n, and no-code tools.
+- [MCP Development](https://veda.ng/mcp): Complete curriculum for Model Context Protocol development.
 
-## Essays
+## Core Content Index
 
+### Published Research Essays
 ${essayLinks}
-
-## Research Data Archives
-
-- [AI Reports and Research Library](https://veda.ng/ailib): Searchable database of 19,000+ AI reports, research papers, and industry analyses from Stanford, McKinsey, Deloitte, OpenAI, and more.
-- [Web3 Reports and Research Library](https://veda.ng/web3lib): Searchable database of 18,000+ Web3 reports, whitepapers, institutional research, and regulatory frameworks.
-
-## Research Papers
-
-Selected peer-reviewed research on AI, Web3, and economic systems:
 
 - [Device-to-Device Economics and AI Agent Transactions](https://dx.doi.org/10.2139/ssrn.5660270): Economic models for direct AI-to-AI transactions and autonomous economic agents.
 - [Stablecoin Growth and Market Dynamics](https://dx.doi.org/10.2139/ssrn.5325570): Analysis of stablecoin adoption, market structure, and financial implications.
@@ -157,9 +148,9 @@ Summary: ${essay.summary}
 ${cleanContent}`;
   }).join('\n\n---\n\n');
 
-  const llmsFullContent = `# Vedang Vatsa - Full Content Index
+  const llmsFullContent = `# Veda - Complete Full-Text Research Corpus & Developer Index (veda.ng)
 
-> This is the full-text version of llms.txt, containing complete essay content for AI model training and citation.
+> Complete, unpaginated full-text of all published essays, glossary definitions, and machine interfaces published on veda.ng by Vedang Vatsa.
 
 ${fullTextSections}
 

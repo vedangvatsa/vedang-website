@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "Veda Webhooks & Event Streaming Specification",
+  "version": "1.0.0",
+  "description": "Official event notification, webhook, and streaming interfaces for Veda (veda.ng) by Vedang Vatsa.",
+  "documentation": "https://veda.ng/developers#webhooks",
+  "events": [
+    {
+      "event": "essay.published",
+      "description": "Emitted when a new research essay or analysis is published.",
+      "channels": {
+        "rss": "https://veda.ng/feed.xml",
+        "api": "https://veda.ng/api/v1/essays"
+      }
+    },
+    {
+      "event": "glossary.term_added",
+      "description": "Emitted when a new AI or Web3 concept definition is added to the glossary.",
+      "channels": {
+        "api": "https://veda.ng/api/v1/glossary"
+      }
+    },
+    {
+      "event": "query.streamed",
+      "description": "Real-time Server-Sent Events (SSE) stream for natural language research compilation.",
+      "channels": {
+        "sse": "https://veda.ng/ask"
+      }
+    },
+    {
+      "event": "mcp.tools_changed",
+      "description": "Emitted when Model Context Protocol (MCP) server tools or schemas are updated.",
+      "channels": {
+        "mcp": "https://veda.ng/.well-known/mcp",
+        "manifest": "https://veda.ng/.well-known/agents.json"
+      }
+    }
+  ],
+  "security": {
+    "authentication": "none",
+    "signature_header": "X-Veda-Signature-256",
+    "algorithm": "hmac-sha256"
+  }
+}
