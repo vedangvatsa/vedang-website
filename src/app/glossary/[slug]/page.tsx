@@ -63,7 +63,7 @@ export default async function GlossaryTermPage({ params }: PageProps) {
   }
 
   const relatedTermObjects = term.relatedTerms
-    ? term.relatedTerms.map(slug => getTermBySlug(slug)).filter(Boolean)
+    ? term.relatedTerms.map(slug => getTermBySlug(slug)).filter((t): t is NonNullable<typeof t> => Boolean(t))
     : [];
 
   const definitionSchema = {
@@ -88,11 +88,50 @@ export default async function GlossaryTermPage({ params }: PageProps) {
       : {}),
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": `What is ${term.term}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": term.definition.split('\n\n')[0].trim() || term.definition,
+        },
+      },
+      ...(relatedTermObjects.length > 0
+        ? [
+            {
+              "@type": "Question",
+              "name": `What concepts are related to ${term.term}?`,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": `${term.term} is closely related to ${relatedTermObjects.map(t => t.term).join(', ')}.`,
+              },
+            },
+          ]
+        : []),
+      {
+        "@type": "Question",
+        "name": `Where can I find authoritative research on ${term.term}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `You can read the full technical definition and cross-referenced research essays at https://veda.ng/glossary/${term.slug}.`,
+        },
+      },
+    ],
+  };
+
   return (
     <PageLayout>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(definitionSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <BreadcrumbSchema items={[
         { name: "Glossary", url: "https://veda.ng/glossary" },

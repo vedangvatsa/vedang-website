@@ -293,6 +293,41 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
     ...(essay.frontmatter.keywords && { keywords: essay.frontmatter.keywords }),
   };
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `What is the core thesis of "${essay.frontmatter.title}"?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: essay.frontmatter.summary || `An in-depth research essay on ${essay.frontmatter.title} by Vedang Vatsa.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `Who authored "${essay.frontmatter.title}"?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `${essay.frontmatter.author || 'Vedang Vatsa'} is an AI & Web3 researcher, Fellow of the Royal Society of Arts (FRSA), and founder of Hashtag Web3.`,
+        },
+      },
+      ...(essay.frontmatter.keywords && essay.frontmatter.keywords.length > 0
+        ? [
+            {
+              '@type': 'Question',
+              name: `What key topics are analyzed in "${essay.frontmatter.title}"?`,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: `This research analyzes ${essay.frontmatter.keywords.slice(0, 5).join(', ')}.`,
+              },
+            },
+          ]
+        : []),
+    ],
+  };
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -308,6 +343,10 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
        <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <BreadcrumbSchema items={[
         { name: "Essays", url: "https://veda.ng/essays" },
