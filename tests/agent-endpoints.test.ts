@@ -43,4 +43,10 @@ describe('Agent & Machine Endpoints', () => {
     const res = jsonError('test_error', 'Invalid input provided', 400, 'Check docs at /developers');
     assert.equal(res.status, 400);
   });
+
+  test('Base64 cursor encoding and decoding helper contract', () => {
+    const cursor = Buffer.from('10').toString('base64');
+    const decoded = parseInt(Buffer.from(cursor, 'base64').toString('utf8'), 10);
+    assert.equal(decoded, 10);
+  });
 });

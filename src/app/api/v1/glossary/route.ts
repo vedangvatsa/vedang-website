@@ -8,7 +8,8 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const category = searchParams.get('category');
-    const limit = parseInt(searchParams.get('limit') || '100', 10);
+    const limit = Math.min(parseInt(searchParams.get('limit') || '100', 10), 200);
+    const cursor = searchParams.get('cursor');
     const idempotencyKey = request.headers.get('Idempotency-Key');
 
     let terms = glossaryTerms;
@@ -16,7 +17,20 @@ export async function GET(request: NextRequest) {
       terms = terms.filter((t: GlossaryTerm) => t.category?.toLowerCase() === category.toLowerCase());
     }
 
-    const items = terms.slice(0, Math.min(limit, 200)).map((t: GlossaryTerm) => ({
+    let startIndex = 0;
+    if (cursor) {
+      const decodedIndex = parseInt(Buffer.from(cursor, 'base64').toString('utf8'), 10);
+      if (!isNaN(decodedIndex) && decodedIndex >= 0 && decodedIndex < terms.length) {
+        startIndex = decodedIndex;
+      }
+    }
+
+    const endIndex = Math.min(startIndex + limit, terms.length);
+    const pageItems = terms.slice(startIndex, endIndex);
+    const hasMore = endIndex < terms.length;
+    const nextCursor = hasMore ? Buffer.from(String(endIndex)).toString('base64') : null;
+
+    const items = pageItems.map((t: GlossaryTerm) => ({
       slug: t.slug,
       term: t.term,
       definition: t.definition,
@@ -31,6 +45,15 @@ export async function GET(request: NextRequest) {
       {
         total: terms.length,
         limit,
+        has_more: hasMore,
+        next_cursor: nextCursor,
+        pagination: {
+          total: terms.length,
+          limit,
+          has_more: hasMore,
+          cursor: cursor || null,
+          next_cursor: nextCursor,
+        },
         terms: items,
       },
       { headers }

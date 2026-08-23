@@ -49,6 +49,8 @@ export function GET() {
       { name: 'Essays', description: 'Published research essays catalog' },
       { name: 'Glossary', description: 'AI and Web3 technical glossary' },
       { name: 'Directory', description: 'API root directories and discovery manifests' },
+      { name: 'Batch', description: 'Bulk execution operations' },
+      { name: 'Jobs', description: 'Async job polling and status tracking' },
       { name: 'MCP', description: 'Model Context Protocol server' },
     ],
     paths: {
@@ -91,6 +93,7 @@ export function GET() {
             { name: 'corpus', in: 'query', schema: { type: 'string', enum: ['ai', 'web3'], default: 'ai' }, description: 'Target research corpus.' },
             { name: 'page', in: 'query', schema: { type: 'integer', minimum: 1, default: 1 }, description: 'Page number.' },
             { name: 'per_page', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 200, default: 50 }, description: 'Results per page.' },
+            { name: 'cursor', in: 'query', required: false, schema: { type: 'string' }, description: 'Cursor token for pagination.' },
             { name: 'Idempotency-Key', in: 'header', required: false, schema: { type: 'string' }, description: 'Optional client idempotency identifier.' },
           ],
           responses: {
@@ -122,6 +125,7 @@ export function GET() {
             { name: 'corpus', in: 'query', schema: { type: 'string', enum: ['ai', 'web3'], default: 'ai' } },
             { name: 'page', in: 'query', schema: { type: 'integer', minimum: 1, default: 1 } },
             { name: 'per_page', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 200, default: 50 } },
+            { name: 'cursor', in: 'query', required: false, schema: { type: 'string' }, description: 'Cursor token for pagination.' },
           ],
           responses: {
             '200': {
@@ -142,6 +146,7 @@ export function GET() {
           parameters: [
             { name: 'tag', in: 'query', required: false, schema: { type: 'string' }, description: 'Filter essays by topic tag (e.g. AI, Web3, Agents).' },
             { name: 'limit', in: 'query', required: false, schema: { type: 'integer', default: 50 }, description: 'Max items to return.' },
+            { name: 'cursor', in: 'query', required: false, schema: { type: 'string' }, description: 'Base64 cursor for pagination.' },
           ],
           responses: {
             '200': {
@@ -160,12 +165,63 @@ export function GET() {
           parameters: [
             { name: 'category', in: 'query', required: false, schema: { type: 'string' }, description: 'Filter by category (e.g. AI, Web3, Agents).' },
             { name: 'limit', in: 'query', required: false, schema: { type: 'integer', default: 100 }, description: 'Max terms to return.' },
+            { name: 'cursor', in: 'query', required: false, schema: { type: 'string' }, description: 'Base64 cursor for pagination.' },
           ],
           responses: {
             '200': {
               description: 'List of glossary definitions.',
               content: { 'application/json': { schema: { $ref: '#/components/schemas/GlossaryListResponse' } } },
             },
+          },
+        },
+      },
+      '/api/v1/batch': {
+        post: {
+          operationId: 'executeBatchV1',
+          summary: 'Execute multiple API operations in a single bulk request.',
+          description: 'Accepts an array of sub-requests and executes them concurrently, returning ordered sub-responses.',
+          tags: ['Batch'],
+          requestBody: {
+            required: true,
+            content: {
+              'application/json': { schema: { $ref: '#/components/schemas/BatchRequest' } },
+            },
+          },
+          responses: {
+            '200': {
+              description: 'Batch execution results.',
+              content: { 'application/json': { schema: { $ref: '#/components/schemas/BatchResponse' } } },
+            },
+            '202': {
+              description: 'Batch accepted for background async processing. Poll Location header for job status.',
+              headers: {
+                'Location': { schema: { type: 'string' }, description: 'Polling URL for async job status.' },
+              },
+              content: { 'application/json': { schema: { $ref: '#/components/schemas/AsyncJobResponse' } } },
+            },
+            '400': errorResponse('Invalid batch payload or limit exceeded.'),
+          },
+        },
+      },
+      '/api/v1/jobs/{jobId}': {
+        get: {
+          operationId: 'getJobStatusV1',
+          summary: 'Poll status of an asynchronous background job.',
+          description: 'Retrieves current lifecycle status, timestamps, and execution results for a 202 Accepted background job.',
+          tags: ['Jobs'],
+          parameters: [
+            { name: 'jobId', in: 'path', required: true, schema: { type: 'string' }, description: 'Unique job identifier.' },
+          ],
+          responses: {
+            '200': {
+              description: 'Job execution status and result.',
+              headers: {
+                'Location': { schema: { type: 'string' }, description: 'Canonical job status URI.' },
+              },
+              content: { 'application/json': { schema: { $ref: '#/components/schemas/AsyncJobResponse' } } },
+            },
+            '400': errorResponse('Invalid job ID.'),
+            '404': errorResponse('Job not found.'),
           },
         },
       },
@@ -298,6 +354,69 @@ export function GET() {
           },
           required: ['jsonrpc', 'id', 'error'],
         },
+        PaginationSchema: {
+          type: 'object',
+          properties: {
+            total: { type: 'integer', description: 'Total available records.' },
+            limit: { type: 'integer', description: 'Page size limit.' },
+            has_more: { type: 'boolean', description: 'True if additional records exist.' },
+            cursor: { type: ['string', 'null'], description: 'Current cursor token.' },
+            next_cursor: { type: ['string', 'null'], description: 'Cursor token to pass for the next page.' },
+          },
+          required: ['total', 'limit', 'has_more'],
+        },
+        BatchSubRequest: {
+          type: 'object',
+          properties: {
+            id: { type: 'string', description: 'Client-assigned identifier for tracking response.' },
+            method: { type: 'string', enum: ['GET', 'POST'], default: 'GET' },
+            path: { type: 'string', description: 'Target API endpoint relative path, e.g. /api/v1/essays?limit=5.' },
+          },
+          required: ['path'],
+        },
+        BatchRequest: {
+          type: 'object',
+          properties: {
+            requests: {
+              type: 'array',
+              items: { $ref: '#/components/schemas/BatchSubRequest' },
+              description: 'Array of sub-requests to execute in bulk (max 20).',
+            },
+          },
+          required: ['requests'],
+        },
+        BatchSubResponse: {
+          type: 'object',
+          properties: {
+            id: { type: 'string' },
+            status: { type: 'integer' },
+            body: { type: 'object' },
+          },
+          required: ['id', 'status', 'body'],
+        },
+        BatchResponse: {
+          type: 'object',
+          properties: {
+            total_operations: { type: 'integer' },
+            responses: {
+              type: 'array',
+              items: { $ref: '#/components/schemas/BatchSubResponse' },
+            },
+          },
+          required: ['total_operations', 'responses'],
+        },
+        AsyncJobResponse: {
+          type: 'object',
+          properties: {
+            job_id: { type: 'string', description: 'Unique background job identifier.' },
+            status: { type: 'string', enum: ['queued', 'running', 'completed', 'failed'] },
+            created_at: { type: 'string', format: 'date-time' },
+            completed_at: { type: 'string', format: 'date-time' },
+            location: { type: 'string', description: 'URL to poll for job status.' },
+            result: { type: 'object', description: 'Job execution payload upon completion.' },
+          },
+          required: ['job_id', 'status', 'location'],
+        },
         ApiDirectoryResponse: {
           type: 'object',
           properties: {
@@ -314,6 +433,8 @@ export function GET() {
                 search: { type: 'string' },
                 essays: { type: 'string' },
                 glossary: { type: 'string' },
+                batch: { type: 'string' },
+                jobs: { type: 'string' },
                 ask: { type: 'string' },
               },
               required: ['search', 'essays', 'glossary'],
@@ -335,6 +456,8 @@ export function GET() {
                 search: { type: 'string' },
                 essays: { type: 'string' },
                 glossary: { type: 'string' },
+                batch: { type: 'string' },
+                jobs: { type: 'string' },
               },
               required: ['search', 'essays', 'glossary'],
             },
@@ -440,6 +563,9 @@ export function GET() {
             total: { type: 'integer' },
             page: { type: 'integer' },
             perPage: { type: 'integer' },
+            has_more: { type: 'boolean' },
+            next_cursor: { type: ['string', 'null'] },
+            pagination: { $ref: '#/components/schemas/PaginationSchema' },
             corpus: { type: 'string' },
           },
           required: ['results', 'total', 'page', 'perPage'],
@@ -449,6 +575,9 @@ export function GET() {
           properties: {
             total: { type: 'integer' },
             limit: { type: 'integer' },
+            has_more: { type: 'boolean' },
+            next_cursor: { type: ['string', 'null'] },
+            pagination: { $ref: '#/components/schemas/PaginationSchema' },
             essays: {
               type: 'array',
               items: {
@@ -473,6 +602,9 @@ export function GET() {
           properties: {
             total: { type: 'integer' },
             limit: { type: 'integer' },
+            has_more: { type: 'boolean' },
+            next_cursor: { type: ['string', 'null'] },
+            pagination: { $ref: '#/components/schemas/PaginationSchema' },
             terms: {
               type: 'array',
               items: {
