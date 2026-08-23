@@ -97,6 +97,35 @@
     "twitter": "@vedangvatsa",
     "website": "https://veda.ng"
   },
+  "sdk": {
+    "name": "vedang-cli",
+    "registry": "pypi",
+    "package": "vedang-cli",
+    "url": "https://pypi.org/project/vedang-cli/",
+    "install": "pip install vedang-cli",
+    "repository": "https://github.com/vedangvatsa/vedang-website",
+    "homepage": "https://veda.ng"
+  },
+  "sdks": [
+    {
+      "name": "vedang-cli",
+      "ecosystem": "pypi",
+      "package": "vedang-cli",
+      "url": "https://pypi.org/project/vedang-cli/",
+      "install": "pip install vedang-cli",
+      "repository": "https://github.com/vedangvatsa/vedang-website",
+      "homepage": "https://veda.ng",
+      "description": "Official Python SDK and CLI for veda.ng research and essay APIs"
+    }
+  ],
+  "packages": [
+    {
+      "type": "pypi",
+      "name": "vedang-cli",
+      "url": "https://pypi.org/project/vedang-cli/",
+      "install": "pip install vedang-cli"
+    }
+  ],
   "developer": {
     "name": "Vedang Vatsa",
     "organization": "Hashtag Web3 & CVinBio",
@@ -109,6 +138,8 @@
     "mcp": "https://veda.ng/.well-known/mcp",
     "repository": "https://github.com/vedangvatsa/vedang-website",
     "pypi": "https://pypi.org/project/vedang-cli/",
+    "sdk": "https://pypi.org/project/vedang-cli/",
+    "package": "vedang-cli",
     "cli": "pip install vedang-cli"
   }
 }

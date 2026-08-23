@@ -107,6 +107,7 @@ export default function Home() {
           <li><Link href="/docs">Veda API Docs (/docs)</Link></li>
           <li><Link href="/api">Veda Public REST API Directory (/api)</Link></li>
           <li><Link href="/openapi.json">OpenAPI 3.1 Specification</Link></li>
+          <li><a href="https://pypi.org/project/vedang-cli/" rel="package sdk">Official Python SDK & CLI: vedang-cli on PyPI (pip install vedang-cli)</a></li>
           <li><Link href="/api/v1/reports/search">Veda Public REST API v1 (Search 233k+ papers)</Link></li>
           <li><Link href="/api/v1/essays">Essays Catalog REST API</Link></li>
           <li><Link href="/api/v1/glossary">Glossary REST API</Link></li>

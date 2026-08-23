@@ -361,6 +361,10 @@ export default function RootLayout({
         <link rel="api" href="/api" title="Veda Public REST API" />
         <link rel="describedby" href="/openapi.json" type="application/openapi+json" title="OpenAPI 3.1 Specification" />
         <link rel="service" href="/.well-known/mcp" title="MCP server (Streamable HTTP)" />
+        <link rel="sdk" href="https://pypi.org/project/vedang-cli/" title="Official Python CLI & SDK (vedang-cli on PyPI)" />
+        <link rel="package" href="https://pypi.org/project/vedang-cli/" title="vedang-cli on PyPI" />
+        <meta name="sdk:pypi" content="https://pypi.org/project/vedang-cli/" />
+        <meta name="pypi:package" content="vedang-cli" />
       </head>
       <body className="font-sans overflow-x-hidden">
           <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:text-sm focus:font-medium">Skip to main content</a>
@@ -368,6 +372,7 @@ export default function RootLayout({
           <a href="/docs" className="sr-only">Veda API Documentation</a>
           <a href="/api" className="sr-only">Veda Public REST API</a>
           <a href="/openapi.json" className="sr-only">OpenAPI Specification</a>
+          <a href="https://pypi.org/project/vedang-cli/" rel="package sdk" className="sr-only">Official Python SDK & CLI: vedang-cli on PyPI</a>
           {children}
           <ClarityAnalytics />
           <Toaster />
