@@ -50,6 +50,7 @@ export function shouldSkipNegotiation(
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api/') ||
     pathname.startsWith('/md/') ||
+    pathname.startsWith('/.well-known/') ||
     pathname === '/md'
   ) {
     return true;
