@@ -70,11 +70,13 @@ export async function POST(request: NextRequest) {
       };
     });
 
-    const headers = getStandardApiHeaders({ cacheSeconds: 0 });
+    const idempotencyKey = request.headers.get('Idempotency-Key');
+    const headers = getStandardApiHeaders({ idempotencyKey, cacheSeconds: 0 });
 
     return NextResponse.json(
       {
         total_operations: requests.length,
+        idempotency_key: idempotencyKey || undefined,
         responses,
       },
       { headers }

@@ -94,7 +94,7 @@ export function GET() {
             { name: 'page', in: 'query', schema: { type: 'integer', minimum: 1, default: 1 }, description: 'Page number.' },
             { name: 'per_page', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 200, default: 50 }, description: 'Results per page.' },
             { name: 'cursor', in: 'query', required: false, schema: { type: 'string' }, description: 'Cursor token for pagination.' },
-            { name: 'Idempotency-Key', in: 'header', required: false, schema: { type: 'string' }, description: 'Optional client idempotency identifier.' },
+            { $ref: '#/components/parameters/IdempotencyKeyHeader' },
           ],
           responses: {
             '200': {
@@ -103,7 +103,7 @@ export function GET() {
                 'RateLimit-Limit': { schema: { type: 'integer' }, description: 'Requests allowed per minute window.' },
                 'RateLimit-Remaining': { schema: { type: 'integer' }, description: 'Requests left in current window.' },
                 'RateLimit-Reset': { schema: { type: 'integer' }, description: 'Seconds until window resets.' },
-                'Idempotency-Key': { schema: { type: 'string' }, description: 'Echoed when client sends Idempotency-Key.' },
+                'Idempotency-Key': { $ref: '#/components/headers/IdempotencyKey' },
                 'Sunset': { schema: { type: 'string' }, description: 'RFC 8594 Sunset date.' },
                 'Deprecation': { schema: { type: 'string' }, description: 'Draft deprecation date.' },
               },
@@ -126,10 +126,14 @@ export function GET() {
             { name: 'page', in: 'query', schema: { type: 'integer', minimum: 1, default: 1 } },
             { name: 'per_page', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 200, default: 50 } },
             { name: 'cursor', in: 'query', required: false, schema: { type: 'string' }, description: 'Cursor token for pagination.' },
+            { $ref: '#/components/parameters/IdempotencyKeyHeader' },
           ],
           responses: {
             '200': {
               description: 'Search results sorted by citation count.',
+              headers: {
+                'Idempotency-Key': { $ref: '#/components/headers/IdempotencyKey' },
+              },
               content: { 'application/json': { schema: { $ref: '#/components/schemas/SearchReportsResponse' } } },
             },
             '400': errorResponse('Invalid parameters.'),
@@ -147,10 +151,14 @@ export function GET() {
             { name: 'tag', in: 'query', required: false, schema: { type: 'string' }, description: 'Filter essays by topic tag (e.g. AI, Web3, Agents).' },
             { name: 'limit', in: 'query', required: false, schema: { type: 'integer', default: 50 }, description: 'Max items to return.' },
             { name: 'cursor', in: 'query', required: false, schema: { type: 'string' }, description: 'Base64 cursor for pagination.' },
+            { $ref: '#/components/parameters/IdempotencyKeyHeader' },
           ],
           responses: {
             '200': {
               description: 'List of research essays.',
+              headers: {
+                'Idempotency-Key': { $ref: '#/components/headers/IdempotencyKey' },
+              },
               content: { 'application/json': { schema: { $ref: '#/components/schemas/EssaysListResponse' } } },
             },
           },
@@ -166,10 +174,14 @@ export function GET() {
             { name: 'category', in: 'query', required: false, schema: { type: 'string' }, description: 'Filter by category (e.g. AI, Web3, Agents).' },
             { name: 'limit', in: 'query', required: false, schema: { type: 'integer', default: 100 }, description: 'Max terms to return.' },
             { name: 'cursor', in: 'query', required: false, schema: { type: 'string' }, description: 'Base64 cursor for pagination.' },
+            { $ref: '#/components/parameters/IdempotencyKeyHeader' },
           ],
           responses: {
             '200': {
               description: 'List of glossary definitions.',
+              headers: {
+                'Idempotency-Key': { $ref: '#/components/headers/IdempotencyKey' },
+              },
               content: { 'application/json': { schema: { $ref: '#/components/schemas/GlossaryListResponse' } } },
             },
           },
@@ -179,8 +191,11 @@ export function GET() {
         post: {
           operationId: 'executeBatchV1',
           summary: 'Execute multiple API operations in a single bulk request.',
-          description: 'Accepts an array of sub-requests and executes them concurrently, returning ordered sub-responses.',
+          description: 'Accepts an array of sub-requests and executes them concurrently, returning ordered sub-responses. Supports Idempotency-Key header.',
           tags: ['Batch'],
+          parameters: [
+            { $ref: '#/components/parameters/IdempotencyKeyHeader' },
+          ],
           requestBody: {
             required: true,
             content: {
@@ -190,12 +205,16 @@ export function GET() {
           responses: {
             '200': {
               description: 'Batch execution results.',
+              headers: {
+                'Idempotency-Key': { $ref: '#/components/headers/IdempotencyKey' },
+              },
               content: { 'application/json': { schema: { $ref: '#/components/schemas/BatchResponse' } } },
             },
             '202': {
               description: 'Batch accepted for background async processing. Poll Location header for job status.',
               headers: {
                 'Location': { schema: { type: 'string' }, description: 'Polling URL for async job status.' },
+                'Idempotency-Key': { $ref: '#/components/headers/IdempotencyKey' },
               },
               content: { 'application/json': { schema: { $ref: '#/components/schemas/AsyncJobResponse' } } },
             },
@@ -211,6 +230,7 @@ export function GET() {
           tags: ['Jobs'],
           parameters: [
             { name: 'jobId', in: 'path', required: true, schema: { type: 'string' }, description: 'Unique job identifier.' },
+            { $ref: '#/components/parameters/IdempotencyKeyHeader' },
           ],
           responses: {
             '200': {
@@ -231,6 +251,9 @@ export function GET() {
           summary: 'MCP Streamable HTTP endpoint (JSON-RPC 2.0): initialize, tools/list, tools/call.',
           description: `Stateless MCP server supporting protocol versions 2025-06-18, 2025-03-26, and 2024-11-05. Tool catalog also discoverable via GET (descriptor). Site index: ${LLMSTXT_URL}`,
           tags: ['MCP'],
+          parameters: [
+            { $ref: '#/components/parameters/IdempotencyKeyHeader' },
+          ],
           requestBody: {
             required: true,
             content: {
@@ -240,6 +263,9 @@ export function GET() {
           responses: {
             '200': {
               description: 'JSON-RPC result for initialize, ping, tools/list, or tools/call; or a JSON-RPC error.',
+              headers: {
+                'Idempotency-Key': { $ref: '#/components/headers/IdempotencyKey' },
+              },
               content: {
                 'application/json': {
                   schema: {
@@ -281,6 +307,7 @@ export function GET() {
           tags: ['Search'],
           parameters: [
             { name: 'q', in: 'query', required: true, schema: { type: 'string' }, description: 'Natural language query string.' },
+            { $ref: '#/components/parameters/IdempotencyKeyHeader' },
           ],
           responses: {
             '200': {
@@ -295,6 +322,9 @@ export function GET() {
           summary: 'Natural language search query interface (NLWeb POST & SSE).',
           description: 'Executes a natural language search query with optional SSE streaming (prefer.streaming: true).',
           tags: ['Search'],
+          parameters: [
+            { $ref: '#/components/parameters/IdempotencyKeyHeader' },
+          ],
           requestBody: {
             required: true,
             content: {
@@ -313,6 +343,9 @@ export function GET() {
           responses: {
             '200': {
               description: 'NLWeb search results or text/event-stream.',
+              headers: {
+                'Idempotency-Key': { $ref: '#/components/headers/IdempotencyKey' },
+              },
               content: { 'application/json': { schema: { $ref: '#/components/schemas/AskResponse' } } },
             },
             '400': errorResponse('Invalid request body.'),
@@ -321,6 +354,21 @@ export function GET() {
       },
     },
     components: {
+      parameters: {
+        IdempotencyKeyHeader: {
+          name: 'Idempotency-Key',
+          in: 'header',
+          required: false,
+          schema: { type: 'string' },
+          description: 'Client-supplied idempotency key identifier (UUID or hash) to safely retry write/read operations without duplicate side effects.',
+        },
+      },
+      headers: {
+        IdempotencyKey: {
+          schema: { type: 'string' },
+          description: 'Echoed client idempotency identifier.',
+        },
+      },
       schemas: {
         ApiError: {
           type: 'object',
@@ -398,6 +446,7 @@ export function GET() {
           type: 'object',
           properties: {
             total_operations: { type: 'integer' },
+            idempotency_key: { type: 'string', description: 'Echoed client idempotency key.' },
             responses: {
               type: 'array',
               items: { $ref: '#/components/schemas/BatchSubResponse' },
