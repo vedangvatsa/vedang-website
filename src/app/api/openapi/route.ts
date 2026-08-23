@@ -7,8 +7,8 @@ export const dynamic = 'force-static';
 const rpcEnvelope = (resultSchemaName: string) => ({
   type: 'object',
   properties: {
-    jsonrpc: { type: 'string', const: '2.0' },
-    id: { type: ['string', 'number'] },
+    jsonrpc: { type: 'string', const: '2.0', description: 'JSON-RPC version.' },
+    id: { type: 'string', description: 'Echoed request ID.' },
     result: { $ref: `#/components/schemas/${resultSchemaName}` },
   },
   required: ['jsonrpc', 'id', 'result'],
@@ -24,7 +24,7 @@ const errorResponse = (description: string) => ({
 const acceptedAsyncResponse = (description: string) => ({
   description,
   headers: {
-    'Location': { schema: { type: 'string' }, description: 'Polling URL for async job status (e.g. /api/v1/jobs/{jobId}).' },
+    'Location': { schema: { type: 'string' }, description: 'Polling URL for async job status (/api/v1/jobs/{jobId}).' },
     'Retry-After': { schema: { type: 'integer' }, description: 'Recommended seconds to wait before polling again.' },
     'Idempotency-Key': { $ref: '#/components/headers/IdempotencyKey' },
   },
@@ -72,6 +72,9 @@ export function GET() {
           summary: 'Root API directory and service discovery.',
           description: 'Returns available endpoints, documentation links, OpenAPI specification URL, and rate limit policies.',
           tags: ['Directory'],
+          parameters: [
+            { $ref: '#/components/parameters/IdempotencyKeyHeader' },
+          ],
           responses: {
             '200': {
               description: 'API root service discovery directory.',
@@ -86,6 +89,9 @@ export function GET() {
           summary: 'Version 1 root API directory.',
           description: 'Returns endpoints available in version 1 of the veda.ng REST API.',
           tags: ['Directory'],
+          parameters: [
+            { $ref: '#/components/parameters/IdempotencyKeyHeader' },
+          ],
           responses: {
             '200': {
               description: 'Version 1 API directory.',
@@ -102,7 +108,7 @@ export function GET() {
           tags: ['Search'],
           parameters: [
             { name: 'q', in: 'query', required: true, schema: { type: 'string', minLength: 2 }, description: 'Search keywords.' },
-            { name: 'corpus', in: 'query', schema: { type: 'string', enum: ['ai', 'web3'], default: 'ai' }, description: 'Target research corpus.' },
+            { name: 'corpus', in: 'query', required: false, schema: { type: 'string', enum: ['ai', 'web3'], default: 'ai' }, description: 'Target research corpus.' },
             { name: 'limit', in: 'query', required: false, schema: { type: 'integer', minimum: 1, maximum: 200, default: 50 }, description: 'Number of results to return per page.' },
             { name: 'cursor', in: 'query', required: false, schema: { type: 'string' }, description: 'Opaque pagination cursor token to fetch the next page.' },
             { $ref: '#/components/parameters/IdempotencyKeyHeader' },
@@ -133,7 +139,7 @@ export function GET() {
           tags: ['Search'],
           parameters: [
             { name: 'q', in: 'query', required: true, schema: { type: 'string', minLength: 2 }, description: 'Search keywords.' },
-            { name: 'corpus', in: 'query', schema: { type: 'string', enum: ['ai', 'web3'], default: 'ai' } },
+            { name: 'corpus', in: 'query', required: false, schema: { type: 'string', enum: ['ai', 'web3'], default: 'ai' }, description: 'Corpus.' },
             { name: 'limit', in: 'query', required: false, schema: { type: 'integer', minimum: 1, maximum: 200, default: 50 }, description: 'Number of results per page.' },
             { name: 'cursor', in: 'query', required: false, schema: { type: 'string' }, description: 'Opaque pagination cursor token.' },
             { $ref: '#/components/parameters/IdempotencyKeyHeader' },
@@ -208,6 +214,7 @@ export function GET() {
           ],
           requestBody: {
             required: true,
+            description: 'Batch request payload containing sub-operations.',
             content: {
               'application/json': { schema: { $ref: '#/components/schemas/BatchRequest' } },
             },
@@ -287,6 +294,7 @@ export function GET() {
           ],
           requestBody: {
             required: true,
+            description: 'JSON-RPC 2.0 request payload.',
             content: {
               'application/json': { schema: { $ref: '#/components/schemas/McpRequest' } },
             },
@@ -322,6 +330,9 @@ export function GET() {
           summary: 'Endpoint descriptor (HTTP 200 with JSON metadata).',
           description: 'Fetches metadata and transport capabilities for the veda.ng MCP Streamable HTTP server.',
           tags: ['MCP'],
+          parameters: [
+            { $ref: '#/components/parameters/IdempotencyKeyHeader' },
+          ],
           responses: {
             '200': {
               description: 'Server descriptor and tools summary.',
@@ -358,16 +369,10 @@ export function GET() {
           ],
           requestBody: {
             required: true,
+            description: 'Natural language query and streaming configuration.',
             content: {
               'application/json': {
-                schema: {
-                  type: 'object',
-                  properties: {
-                    query: { type: 'string', description: 'Query text' },
-                    prefer: { type: 'object', properties: { streaming: { type: 'boolean' } } },
-                  },
-                  required: ['query'],
-                },
+                schema: { $ref: '#/components/schemas/AskRequestBody' },
               },
             },
           },
@@ -404,14 +409,15 @@ export function GET() {
       schemas: {
         ApiError: {
           type: 'object',
+          description: 'Standardized API error response payload.',
           properties: {
             error: {
               type: 'object',
               properties: {
-                code: { type: 'string' },
-                message: { type: 'string' },
-                status: { type: 'integer' },
-                resolution: { type: 'string' },
+                code: { type: 'string', description: 'Machine-readable error code.' },
+                message: { type: 'string', description: 'Human-readable explanation of error.' },
+                status: { type: 'integer', description: 'HTTP status code.' },
+                resolution: { type: 'string', description: 'Suggested steps to resolve the error.' },
               },
               required: ['code', 'message', 'status'],
             },
@@ -420,14 +426,15 @@ export function GET() {
         },
         JsonRpcError: {
           type: 'object',
+          description: 'Standard JSON-RPC 2.0 error object.',
           properties: {
             jsonrpc: { type: 'string', const: '2.0' },
-            id: { type: ['string', 'number', 'null'] },
+            id: { type: 'string', description: 'Identifier of the request that caused the error.' },
             error: {
               type: 'object',
               properties: {
                 code: { type: 'integer', description: 'JSON-RPC error code, e.g. -32700, -32600, -32601, -32602.' },
-                message: { type: 'string' },
+                message: { type: 'string', description: 'Error message.' },
               },
               required: ['code', 'message'],
             },
@@ -436,6 +443,7 @@ export function GET() {
         },
         PaginationSchema: {
           type: 'object',
+          description: 'Cursor-based pagination envelope.',
           properties: {
             total: { type: 'integer', description: 'Total available records matching query.' },
             limit: { type: 'integer', description: 'Number of items returned in current page.' },
@@ -447,70 +455,93 @@ export function GET() {
         },
         BatchSubRequest: {
           type: 'object',
+          description: 'Single operation within a batch request.',
           properties: {
-            id: { type: 'string', description: 'Client-assigned identifier for tracking response.' },
-            method: { type: 'string', enum: ['GET', 'POST'], default: 'GET' },
+            id: { type: 'string', description: 'Client-assigned identifier for tracking sub-response.' },
+            method: { type: 'string', enum: ['GET', 'POST'], default: 'GET', description: 'HTTP method for sub-request.' },
             path: { type: 'string', description: 'Target API endpoint relative path, e.g. /api/v1/essays?limit=5.' },
           },
           required: ['path'],
         },
         BatchRequest: {
           type: 'object',
+          description: 'Array of sub-requests to execute in bulk (max 20).',
           properties: {
             requests: {
               type: 'array',
               items: { $ref: '#/components/schemas/BatchSubRequest' },
-              description: 'Array of sub-requests to execute in bulk (max 20).',
+              description: 'Array of sub-requests to execute.',
             },
           },
           required: ['requests'],
         },
         BatchSubResponse: {
           type: 'object',
+          description: 'Result of an individual sub-request execution in batch.',
           properties: {
-            id: { type: 'string' },
-            status: { type: 'integer' },
-            body: { type: 'object' },
+            id: { type: 'string', description: 'Identifier matching the input sub-request.' },
+            status: { type: 'integer', description: 'HTTP status code of the sub-operation.' },
+            body: {
+              type: 'object',
+              description: 'Execution payload returned by the sub-operation.',
+              properties: {
+                status: { type: 'string' },
+                total: { type: 'integer' },
+                message: { type: 'string' },
+              },
+            },
           },
           required: ['id', 'status', 'body'],
         },
         BatchResponse: {
           type: 'object',
+          description: 'Batch execution result payload.',
           properties: {
-            total_operations: { type: 'integer' },
+            total_operations: { type: 'integer', description: 'Total number of operations processed.' },
             idempotency_key: { type: 'string', description: 'Echoed client idempotency key.' },
             responses: {
               type: 'array',
               items: { $ref: '#/components/schemas/BatchSubResponse' },
+              description: 'List of individual execution results.',
             },
           },
           required: ['total_operations', 'responses'],
         },
         AsyncJobResponse: {
           type: 'object',
+          description: 'Status descriptor for an asynchronous background job.',
           properties: {
             job_id: { type: 'string', description: 'Unique background job identifier.' },
-            status: { type: 'string', enum: ['queued', 'running', 'completed', 'failed'] },
-            created_at: { type: 'string', format: 'date-time' },
-            completed_at: { type: 'string', format: 'date-time' },
+            status: { type: 'string', enum: ['queued', 'running', 'completed', 'failed'], description: 'Current lifecycle state.' },
+            created_at: { type: 'string', format: 'date-time', description: 'Job creation timestamp.' },
+            completed_at: { type: 'string', format: 'date-time', description: 'Job completion timestamp.' },
             location: { type: 'string', description: 'URL to poll for job status (/api/v1/jobs/{jobId}).' },
             poll_interval: { type: 'integer', description: 'Recommended polling interval in seconds.', default: 2 },
-            result: { type: 'object', description: 'Job execution payload upon completion.' },
+            result: {
+              type: 'object',
+              description: 'Job execution payload upon completion.',
+              properties: {
+                message: { type: 'string' },
+                ready: { type: 'boolean' },
+              },
+            },
           },
           required: ['job_id', 'status', 'location'],
         },
         ApiDirectoryResponse: {
           type: 'object',
+          description: 'Root service discovery directory.',
           properties: {
-            name: { type: 'string' },
-            version: { type: 'string' },
-            description: { type: 'string' },
-            documentation: { type: 'string' },
-            openapi: { type: 'string' },
-            mcp: { type: 'string' },
-            auth: { type: 'string' },
+            name: { type: 'string', description: 'API service name.' },
+            version: { type: 'string', description: 'Current API version.' },
+            description: { type: 'string', description: 'Service description.' },
+            documentation: { type: 'string', description: 'Documentation URL.' },
+            openapi: { type: 'string', description: 'OpenAPI specification URL.' },
+            mcp: { type: 'string', description: 'MCP server URL.' },
+            auth: { type: 'string', description: 'Authentication guide URL.' },
             endpoints: {
               type: 'object',
+              description: 'Directory of available API endpoint URLs.',
               properties: {
                 search: { type: 'string' },
                 essays: { type: 'string' },
@@ -526,6 +557,7 @@ export function GET() {
         },
         ApiV1DirectoryResponse: {
           type: 'object',
+          description: 'Version 1 API directory.',
           properties: {
             name: { type: 'string' },
             version: { type: 'string' },
@@ -546,13 +578,45 @@ export function GET() {
           },
           required: ['name', 'version', 'documentation', 'openapi', 'endpoints'],
         },
+        McpRequestParams: {
+          type: 'object',
+          description: 'JSON-RPC method parameters object.',
+          properties: {
+            protocolVersion: { type: 'string', description: 'MCP protocol version, e.g. 2025-06-18.' },
+            clientInfo: {
+              type: 'object',
+              description: 'Client software descriptor.',
+              properties: {
+                name: { type: 'string', description: 'Client name.' },
+                version: { type: 'string', description: 'Client version.' },
+              },
+              required: ['name'],
+            },
+            name: { type: 'string', description: 'Target tool name (e.g. search_essays, get_essay, search_reports).' },
+            arguments: {
+              type: 'object',
+              description: 'Arguments map passed to the tool.',
+              properties: {
+                query: { type: 'string', description: 'Search term or query keyword.' },
+                slug: { type: 'string', description: 'Essay or glossary slug.' },
+                corpus: { type: 'string', enum: ['ai', 'web3'], description: 'Corpus.' },
+                limit: { type: 'integer', description: 'Max items to return.' },
+              },
+            },
+          },
+        },
         McpRequest: {
           type: 'object',
+          description: 'JSON-RPC 2.0 MCP request structure.',
           properties: {
-            jsonrpc: { type: 'string', const: '2.0' },
-            id: { type: ['string', 'number'], description: 'Omit for notifications.' },
-            method: { type: 'string', enum: ['initialize', 'ping', 'tools/list', 'tools/call', 'notifications/initialized'] },
-            params: { type: 'object' },
+            jsonrpc: { type: 'string', const: '2.0', description: 'JSON-RPC protocol version.' },
+            id: { type: 'string', description: 'Request identifier.' },
+            method: {
+              type: 'string',
+              enum: ['initialize', 'ping', 'tools/list', 'tools/call', 'notifications/initialized'],
+              description: 'Method identifier.',
+            },
+            params: { $ref: '#/components/schemas/McpRequestParams' },
           },
           required: ['jsonrpc', 'method'],
         },
@@ -569,26 +633,36 @@ export function GET() {
           type: 'object',
           properties: {
             protocolVersion: { type: 'string', enum: ['2025-06-18', '2025-03-26', '2024-11-05'] },
-            capabilities: { type: 'object' },
+            capabilities: {
+              type: 'object',
+              properties: {
+                tools: { type: 'object', properties: { listChanged: { type: 'boolean' } } },
+              },
+            },
             serverInfo: { $ref: '#/components/schemas/McpServerInfo' },
             instructions: { type: 'string' },
           },
           required: ['protocolVersion', 'capabilities', 'serverInfo', 'instructions'],
         },
+        McpToolInputSchema: {
+          type: 'object',
+          description: 'JSON Schema object defining tool input parameters.',
+          properties: {
+            type: { type: 'string', const: 'object' },
+            properties: {
+              type: 'object',
+              description: 'Map of tool arguments.',
+            },
+            required: { type: 'array', items: { type: 'string' } },
+          },
+          required: ['type'],
+        },
         McpToolDefinition: {
           type: 'object',
           properties: {
-            name: { type: 'string' },
-            description: { type: 'string' },
-            inputSchema: {
-              type: 'object',
-              properties: {
-                type: { type: 'string', const: 'object' },
-                properties: { type: 'object' },
-                required: { type: 'array', items: { type: 'string' } },
-              },
-              required: ['type'],
-            },
+            name: { type: 'string', description: 'Tool identifier.' },
+            description: { type: 'string', description: 'Tool purpose.' },
+            inputSchema: { $ref: '#/components/schemas/McpToolInputSchema' },
           },
           required: ['name', 'description', 'inputSchema'],
         },
@@ -617,7 +691,10 @@ export function GET() {
         },
         McpPingResult: {
           type: 'object',
-          properties: {},
+          description: 'Ping result.',
+          properties: {
+            status: { type: 'string', default: 'ok' },
+          },
         },
         McpInitializeResponse: rpcEnvelope('McpInitializeResult'),
         McpToolsListResponse: rpcEnvelope('McpToolsListResult'),
@@ -625,52 +702,54 @@ export function GET() {
         McpPingResponse: rpcEnvelope('McpPingResult'),
         SearchReportsResponse: {
           type: 'object',
+          description: 'Search results from academic literature database.',
           properties: {
             results: {
               type: 'array',
               items: {
                 type: 'object',
                 properties: {
-                  title: { type: 'string' },
-                  source: { type: 'string' },
-                  url: { type: 'string' },
+                  title: { type: 'string', description: 'Paper title.' },
+                  source: { type: 'string', description: 'Journal or repository source.' },
+                  url: { type: 'string', description: 'Direct or DOI URL.' },
                   date: { type: 'string', description: 'Publication year.' },
-                  category: { type: 'string' },
-                  type: { type: 'string', examples: ['Paper'] },
-                  citations: { type: 'integer' },
+                  category: { type: 'string', description: 'Topic category.' },
+                  type: { type: 'string', examples: ['Paper'], description: 'Work type.' },
+                  citations: { type: 'integer', description: 'Citation count.' },
                 },
                 required: ['title', 'source', 'url', 'date', 'category', 'type', 'citations'],
               },
             },
-            total: { type: 'integer' },
-            limit: { type: 'integer' },
-            has_more: { type: 'boolean' },
-            next_cursor: { type: ['string', 'null'] },
+            total: { type: 'integer', description: 'Total papers found.' },
+            limit: { type: 'integer', description: 'Results returned per page.' },
+            has_more: { type: 'boolean', description: 'True if more results exist.' },
+            next_cursor: { type: ['string', 'null'], description: 'Cursor to fetch next page.' },
             pagination: { $ref: '#/components/schemas/PaginationSchema' },
-            corpus: { type: 'string' },
+            corpus: { type: 'string', description: 'Corpus used (ai or web3).' },
           },
           required: ['results', 'total', 'limit', 'has_more', 'pagination'],
         },
         EssaysListResponse: {
           type: 'object',
+          description: 'List of research essays.',
           properties: {
-            total: { type: 'integer' },
-            limit: { type: 'integer' },
-            has_more: { type: 'boolean' },
-            next_cursor: { type: ['string', 'null'] },
+            total: { type: 'integer', description: 'Total published essays.' },
+            limit: { type: 'integer', description: 'Returned limit.' },
+            has_more: { type: 'boolean', description: 'True if more essays exist.' },
+            next_cursor: { type: ['string', 'null'], description: 'Cursor for next page.' },
             pagination: { $ref: '#/components/schemas/PaginationSchema' },
             essays: {
               type: 'array',
               items: {
                 type: 'object',
                 properties: {
-                  slug: { type: 'string' },
-                  title: { type: 'string' },
-                  description: { type: 'string' },
-                  date: { type: 'string' },
-                  tags: { type: 'array', items: { type: 'string' } },
-                  url: { type: 'string' },
-                  markdownUrl: { type: 'string' },
+                  slug: { type: 'string', description: 'URL slug.' },
+                  title: { type: 'string', description: 'Essay title.' },
+                  description: { type: 'string', description: 'Summary snippet.' },
+                  date: { type: 'string', description: 'Publication date.' },
+                  tags: { type: 'array', items: { type: 'string' }, description: 'Topic tags.' },
+                  url: { type: 'string', description: 'Web URL.' },
+                  markdownUrl: { type: 'string', description: 'Markdown endpoint URL.' },
                 },
                 required: ['slug', 'title', 'description', 'date', 'tags', 'url', 'markdownUrl'],
               },
@@ -680,29 +759,45 @@ export function GET() {
         },
         GlossaryListResponse: {
           type: 'object',
+          description: 'List of technical glossary definitions.',
           properties: {
-            total: { type: 'integer' },
-            limit: { type: 'integer' },
-            has_more: { type: 'boolean' },
-            next_cursor: { type: ['string', 'null'] },
+            total: { type: 'integer', description: 'Total glossary terms.' },
+            limit: { type: 'integer', description: 'Returned limit.' },
+            has_more: { type: 'boolean', description: 'True if more terms exist.' },
+            next_cursor: { type: ['string', 'null'], description: 'Cursor for next page.' },
             pagination: { $ref: '#/components/schemas/PaginationSchema' },
             terms: {
               type: 'array',
               items: {
                 type: 'object',
                 properties: {
-                  slug: { type: 'string' },
-                  term: { type: 'string' },
-                  definition: { type: 'string' },
-                  category: { type: 'string' },
-                  url: { type: 'string' },
-                  markdownUrl: { type: 'string' },
+                  slug: { type: 'string', description: 'Term slug.' },
+                  term: { type: 'string', description: 'Name of the concept.' },
+                  definition: { type: 'string', description: 'Plain-language definition.' },
+                  category: { type: 'string', description: 'Concept classification.' },
+                  url: { type: 'string', description: 'Web URL.' },
+                  markdownUrl: { type: 'string', description: 'Markdown endpoint URL.' },
                 },
                 required: ['slug', 'term', 'definition', 'category', 'url', 'markdownUrl'],
               },
             },
           },
           required: ['total', 'limit', 'terms', 'has_more', 'pagination'],
+        },
+        AskRequestBody: {
+          type: 'object',
+          description: 'Search query and streaming preferences.',
+          properties: {
+            query: { type: 'string', description: 'Natural language search query string.' },
+            prefer: {
+              type: 'object',
+              description: 'Preferences for query execution.',
+              properties: {
+                streaming: { type: 'boolean', description: 'Enable SSE streaming output.' },
+              },
+            },
+          },
+          required: ['query'],
         },
         AskResultItem: {
           type: 'object',
@@ -717,6 +812,7 @@ export function GET() {
         },
         AskResponse: {
           type: 'object',
+          description: 'Search results matching natural language query.',
           properties: {
             results: {
               type: 'array',
@@ -729,6 +825,7 @@ export function GET() {
         },
         McpDescriptor: {
           type: 'object',
+          description: 'MCP server metadata descriptor.',
           properties: {
             endpoint: { type: 'string' },
             transport: { type: 'string' },
