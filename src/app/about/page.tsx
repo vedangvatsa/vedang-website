@@ -46,11 +46,15 @@ const personSchema = {
   award: 'Fellow of the Royal Society of Arts',
   sameAs: [
     'https://linkedin.com/in/vedangvatsa',
+    'https://github.com/vedangvatsa',
+    'https://x.com/vedangvatsa',
+    'https://twitter.com/vedangvatsa',
     'https://www.youtube.com/@vedangvatsa',
     'https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en',
-    'https://x.com/vedangvatsa',
-    'https://www.t.me/vedangvatsa',
     'https://www.instagram.com/vedangvatsa',
+    'https://t.me/vedangvatsa',
+    'https://pypi.org/project/vedang-cli/',
+    'https://hashtagweb3.com',
   ],
   knowsAbout: ['Artificial Intelligence', 'Web3', 'Blockchain', 'Cryptocurrency', 'Community Building'],
   speakable: {

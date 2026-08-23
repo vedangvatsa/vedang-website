@@ -112,7 +112,9 @@ const organizationSchema = {
   sameAs: [
     'https://linkedin.com/company/hashtag-web3',
     'https://x.com/hashtagweb3',
+    'https://twitter.com/hashtagweb3',
     'https://github.com/vedangvatsa',
+    'https://hashtagweb3.com',
   ],
   founder: {
     '@type': 'Person',
@@ -157,9 +159,14 @@ const personSchema = {
   sameAs: [
     'https://linkedin.com/in/vedangvatsa',
     'https://github.com/vedangvatsa',
+    'https://x.com/vedangvatsa',
+    'https://twitter.com/vedangvatsa',
     'https://www.youtube.com/@vedangvatsa',
     'https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en',
-    'https://x.com/vedangvatsa',
+    'https://www.instagram.com/vedangvatsa',
+    'https://t.me/vedangvatsa',
+    'https://pypi.org/project/vedang-cli/',
+    'https://hashtagweb3.com',
   ],
   knowsAbout: ['Artificial Intelligence', 'Web3', 'Blockchain', 'Cryptocurrency', 'Community Building'],
 };
