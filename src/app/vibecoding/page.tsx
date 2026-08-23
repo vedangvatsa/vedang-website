@@ -344,11 +344,22 @@ const faqSchema = {
   })),
 };
 
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
+
 export default function VibeCodingCoursePage() {
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <BreadcrumbSchema items={[{ name: "Vibe Coding", url: "https://veda.ng/vibecoding" }]} />
+
+      {/* Semantic definition block for AI engines */}
+      <div className="sr-only">
+        <h2>What is Vibe Coding?</h2>
+        <p>
+          Vibe coding is an AI-assisted software development approach coined by Andrej Karpathy where the human acts as an architect and creative director, describing intent in natural language while AI models generate and maintain the codebase.
+        </p>
+      </div>
 
       <CourseHero
         title="Vibe Coding"

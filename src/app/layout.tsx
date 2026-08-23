@@ -16,18 +16,18 @@ export const metadata: Metadata = {
     template: '%s | Veda',
   },
   description:
-    'Veda (veda.ng) by Vedang Vatsa (FRSA) - Research repository and tools for AI & Web3. Indexing 233,000+ academic papers, 100+ glossary definitions, 40+ research essays, and Model Context Protocol (MCP) server.',
+    'Veda (veda.ng) by Vedang Vatsa (FRSA) is an AI & Web3 research hub indexing 233k+ papers, 40+ essays, 100+ glossary terms, and an official MCP server.',
   keywords: ['Veda', 'veda.ng', 'Vedang Vatsa', 'AI', 'Blockchain', 'Web3', 'Growth Marketing', 'Founder', 'AI Researcher', 'DeFi', 'MCP Server'],
   openGraph: {
     title: 'Veda - AI & Web3 Research Repository by Vedang Vatsa',
-    description: 'Veda (veda.ng) by Vedang Vatsa (FRSA) - Research repository and tools for AI & Web3. Indexing 233,000+ academic papers, 100+ glossary definitions, 40+ research essays, and Model Context Protocol (MCP) server.',
+    description: 'Veda (veda.ng) by Vedang Vatsa (FRSA) is an AI & Web3 research hub indexing 233k+ papers, 40+ essays, 100+ glossary terms, and an official MCP server.',
     url: '/',
     siteName: 'Veda',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: '/images/og-homepage.png',
+        url: 'https://veda.ng/images/og-homepage.png',
         width: 1200,
         height: 630,
         alt: 'Veda - AI & Web3 Research Repository',

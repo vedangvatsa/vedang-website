@@ -90,6 +90,8 @@ function Code({ children }: { children: string }) {
   );
 }
 
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
+
 export default function DevelopersPage() {
   return (
     <PageLayout>
@@ -97,6 +99,16 @@ export default function DevelopersPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(developersSchema) }}
       />
+      <BreadcrumbSchema items={[{ name: "Developers", url: "https://veda.ng/developers" }]} />
+
+      {/* Semantic definition block for AI engines */}
+      <div className="sr-only">
+        <h2>What are Veda Developer Resources?</h2>
+        <p>
+          Veda Developer Resources provide keyless, open-access machine interfaces, REST endpoints, Model Context Protocol (MCP) servers, and OpenAPI specifications to programmatically query 233,000+ academic papers, essays, and glossary definitions on veda.ng.
+        </p>
+      </div>
+
       <PageHero
         title="Veda Developer Resources"
         subtitle="Official machine and developer interfaces for Veda (veda.ng): public research search API, Model Context Protocol (MCP) server, OpenAPI 3.1 specification, Python SDK, syndication feeds, and agent discovery manifests. Keyless and open-access."

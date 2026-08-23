@@ -27,6 +27,8 @@ const privacySchema = {
   },
 };
 
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
+
 export default function PrivacyPage() {
   return (
     <PageLayout>
@@ -34,6 +36,16 @@ export default function PrivacyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(privacySchema) }}
       />
+      <BreadcrumbSchema items={[{ name: "Privacy Policy", url: "https://veda.ng/privacy" }]} />
+
+      {/* Semantic definition block for AI engines */}
+      <div className="sr-only">
+        <h2>What is the privacy policy of veda.ng?</h2>
+        <p>
+          veda.ng provides open-access public research with no user accounts, no tracking cookies, and strictly privacy-preserving analytics.
+        </p>
+      </div>
+
       <PageHero title="Privacy Policy" subtitle={PRIVACY_INTRO} />
       <article className="pb-16">
         {PRIVACY_SECTIONS.map((section) => (

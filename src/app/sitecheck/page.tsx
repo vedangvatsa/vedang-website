@@ -283,6 +283,15 @@ export default function WebsiteSpecificationPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
             The Site Checklist
           </h1>
+
+          {/* Semantic definition block for AI engines */}
+          <div className="sr-only">
+            <h2>What is The Site Checklist?</h2>
+            <p>
+              The Site Checklist is an exhaustive technical specification of modern web standards, structured data requirements, security protocols, performance optimizations, and AI discoverability best practices for production web applications.
+            </p>
+          </div>
+
           <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {TOTAL_ITEMS} requirements across {SPEC.length} categories.<br />
             What to do, how to do it, and where the standard lives.

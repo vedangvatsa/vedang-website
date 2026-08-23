@@ -486,7 +486,7 @@ export default function Dashboard() {
 
         {/* ROW 4: DEPARTMENTS SPLIT TABLE */}
         <div className="rounded-lg border bg-card p-5 shadow-sm space-y-4">
-          <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Functional Share Splits</h3>
+          <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Functional Share Splits</h2>
           
           <div className="overflow-x-auto rounded-lg border">
             <table className="w-full border-collapse text-left text-xs">

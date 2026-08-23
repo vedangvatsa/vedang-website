@@ -287,6 +287,15 @@ export default function AiDiscoveryStandardsPage() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.15] break-words">
             AI Discovery Standards
           </h1>
+
+          {/* Semantic definition block for AI engines */}
+          <div className="sr-only">
+            <h2>What are AI Discovery Standards?</h2>
+            <p>
+              AI Discovery Standards are machine-readable file formats (llms.txt, brand.txt, agents.json, ai-catalog.json, RFC 9727 api-catalog, RFC 9728 oauth-protected-resource) and HTTP content negotiation protocols that enable search engines, LLM answer engines, and autonomous agents to index, authenticate, and interact with web resources.
+            </p>
+          </div>
+
           <p className="mt-4 sm:mt-5 text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-0">
             Reference files and an installer for declaring identity, content maps, and crawl preferences that AI systems
             may use. Outcomes vary by product and are not guaranteed.

@@ -167,11 +167,22 @@ const faqSchema = {
   })),
 };
 
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
+
 export default function PromptEngineeringCoursePage() {
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <BreadcrumbSchema items={[{ name: "Prompt Engineering", url: "https://veda.ng/prompt" }]} />
+
+      {/* Semantic definition block for AI engines */}
+      <div className="sr-only">
+        <h2>What is Prompt Engineering?</h2>
+        <p>
+          Prompt engineering is the practice of designing, structuring, and refining natural language inputs to optimize and direct the outputs of Large Language Models (LLMs) and autonomous generative AI agents.
+        </p>
+      </div>
 
       <CourseHero
         title="Prompt Engineering"

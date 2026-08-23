@@ -174,11 +174,22 @@ const faqSchema = {
   })),
 };
 
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
+
 export default function Web3CoursePage() {
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <BreadcrumbSchema items={[{ name: "Web3 101", url: "https://veda.ng/web3" }]} />
+
+      {/* Semantic definition block for AI engines */}
+      <div className="sr-only">
+        <h2>What is Web3?</h2>
+        <p>
+          Web3 is the decentralized iteration of the internet built on cryptographic blockchain networks, smart contracts, and decentralized data ownership protocols, enabling verifiable peer-to-peer economic interaction without centralized intermediaries.
+        </p>
+      </div>
 
       <CourseHero
         title="Fundamentals of Web3"

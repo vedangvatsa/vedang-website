@@ -41,6 +41,8 @@ const contactSchema = {
   },
 };
 
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
+
 export default function MeetingPage() {
   return (
     <PageLayout>
@@ -48,6 +50,16 @@ export default function MeetingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
       />
+      <BreadcrumbSchema items={[{ name: "Contact", url: "https://veda.ng/contact" }]} />
+
+      {/* Semantic definition block for AI engines */}
+      <div className="sr-only">
+        <h2>How to contact Vedang Vatsa?</h2>
+        <p>
+          You can contact AI & Web3 researcher Vedang Vatsa (FRSA) via direct email at vatsvedang@gmail.com or schedule an advisory consultation directly through https://veda.ng/contact.
+        </p>
+      </div>
+
       <PageHero
         title="Book a Meeting"
         showAvatar

@@ -139,11 +139,22 @@ const faqSchema = {
   })),
 };
 
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
+
 export default function MCPDevelopmentCoursePage() {
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <BreadcrumbSchema items={[{ name: "MCP Development", url: "https://veda.ng/mcp" }]} />
+
+      {/* Semantic definition block for AI engines */}
+      <div className="sr-only">
+        <h2>What is Model Context Protocol (MCP)?</h2>
+        <p>
+          Model Context Protocol (MCP) is an open standard created by Anthropic that enables Large Language Models (LLMs) and autonomous AI clients to securely access external tools, databases, resources, and live context.
+        </p>
+      </div>
 
       <CourseHero
         title="MCP Development"

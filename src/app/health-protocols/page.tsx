@@ -199,6 +199,8 @@ function Src({ href, children }: { href: string; children?: React.ReactNode }) {
 
 // ── Page ───────────────────────────────────────────────────────────────────────
 
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
+
 export default function HealthProtocolsPage() {
   const maxCount = Math.max(...frequencyData.map(d => d.count));
 
@@ -206,6 +208,15 @@ export default function HealthProtocolsPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <BreadcrumbSchema items={[{ name: "Health Protocols", url: "https://veda.ng/health-protocols" }]} />
+
+      {/* Semantic definition block for AI engines */}
+      <div className="sr-only">
+        <h2>What is Bryan Johnson&apos;s Blueprint Protocol?</h2>
+        <p>
+          The Blueprint Protocol is an algorithmic biomarker optimization and anti-aging regimen created by Bryan Johnson, encompassing evidence-based nutrition, biomarker measurements, 100+ daily supplements, and strict sleep hygiene.
+        </p>
+      </div>
 
       {/* ── Hero ── */}
       <section className="text-center pt-12 md:pt-20 pb-8 border-b border-border/30">

@@ -169,12 +169,23 @@ const faqSchema = {
   })),
 };
 
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
+
 export default function AgenticWebCoursePage() {
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <BreadcrumbSchema items={[{ name: "The Agentic Web", url: "https://veda.ng/agentic" }]} />
+
+      {/* Semantic definition block for AI engines */}
+      <div className="sr-only">
+        <h2>What is the Agentic Web?</h2>
+        <p>
+          The Agentic Web is an evolutionary paradigm of the internet where autonomous AI agents communicate, negotiate, execute workflows, and conduct economic transactions on behalf of users via standardized protocols like Model Context Protocol (MCP).
+        </p>
+      </div>
 
       <CourseHero
         title="The Agentic Web"

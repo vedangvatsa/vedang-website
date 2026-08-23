@@ -14,133 +14,133 @@ export const pageMetadata = {
   home: {
     title: 'Veda - AI & Web3 Research Repository by Vedang Vatsa',
     description:
-      'Veda (veda.ng) by Vedang Vatsa (FRSA) - Research repository and tools for AI & Web3. Indexing 233,000+ academic papers, 100+ glossary definitions, 40+ research essays, and Model Context Protocol (MCP) server.',
+      'Veda (veda.ng) by Vedang Vatsa (FRSA) is an AI & Web3 research hub indexing 233k+ papers, 40+ essays, 100+ glossary terms, and an official MCP server.',
     url: '/',
     keywords: ['Veda', 'veda.ng', 'Vedang Vatsa', 'AI Thought Leader', 'Web3 Expert', 'Blockchain Technology', 'Generative AI', 'MCP Server', 'DeFi'],
   },
   essays: {
     title: 'Essays on AI & Web3 | Veda',
     description:
-      '40+ in-depth research essays and architectural analyses on AI agents, Model Context Protocol, stablecoins, and decentralized economies on Veda (veda.ng).',
+      'Read 40+ research essays and architectural guides on autonomous AI agents, MCP protocols, and decentralized systems on Veda (veda.ng).',
     url: '/essays',
     keywords: ['Essays', 'Research Papers', 'AI Agents', 'Stablecoins', 'Blockchain', 'Decentralized Economies', 'Vedang Vatsa', 'Veda'],
   },
   web3101: {
     title: 'Web3 101 - Blockchain Fundamentals Course',
     description:
-      'Free course on blockchain, cryptocurrencies, smart contracts, dApps, NFTs, DAOs, and decentralized systems.',
+      'Free course on blockchain, cryptocurrencies, smart contracts, dApps, NFTs, DAOs, and decentralized systems on Veda (veda.ng).',
     url: '/web3',
     keywords: ['Web3 Course', 'Blockchain Fundamentals', 'Learn Crypto', 'Smart Contracts', 'dApps', 'NFTs', 'DAOs'],
   },
   promptEngineering: {
     title: 'Prompt Engineering 101 - AI Course',
     description:
-      'Master prompt engineering fundamentals. Learn to craft effective prompts for LLMs and AI assistants.',
+      'Master prompt engineering fundamentals. Learn to craft effective prompts for LLMs and AI agents with practical examples on Veda.',
     url: '/prompt',
     keywords: ['Prompt Engineering Course', 'Learn AI Prompts', 'LLM Tutorial', 'AI Assistants', 'Generative AI', 'Prompt Design'],
   },
   community: {
     title: 'Community Building Guide',
     description:
-      'Strategies for building engaged communities. Lessons from scaling Hashtag Web3 to 120k+ members.',
+      'Community building playbook: lessons and frameworks from scaling Hashtag Web3 to 120k+ professional members by Vedang Vatsa.',
     url: '/community',
     keywords: ['Community Building', 'Scaling Communities', 'Hashtag Web3', 'Web3 Community', 'Member Engagement', 'Growth Strategy'],
   },
   about: {
     title: 'About Veda & Vedang Vatsa - Founder, FRSA & AI Researcher',
     description:
-      'About Veda (veda.ng) and founder Vedang Vatsa: Fellow of the Royal Society of Arts (FRSA), IIT Kanpur alumnus, founder of Hashtag Web3 (120k+ members) and CVinBio. Author of 25+ academic publications in AI and Web3.',
+      'About Veda (veda.ng) & Vedang Vatsa: FRSA, IIT Kanpur alumnus, founder of Hashtag Web3 (120k+ members) and author of 25+ academic papers.',
     url: '/about',
     keywords: ['About Veda', 'About Vedang Vatsa', 'AI Thought Leaders', 'Top Web3 Speakers', 'Artificial Intelligence Expert', 'Web3 Keynote Speaker', 'Blockchain Thought Leaders', 'AI in Business', 'AI Innovation'],
   },
   media: {
     title: 'Speaking Engagements & Media',
     description:
-      'Speaking engagements, interviews, and media mentions. Featured in TechCrunch, Forbes, Crypto Briefing.',
+      'Press coverage and 65+ media quotes of Vedang Vatsa in Decrypt, Yahoo Finance, Business Standard, The Tribune, and Outlook Money.',
     url: '/media',
     keywords: ['AI Keynote Speaker', 'Web3 Keynote Speaker', 'Innovation Speaker', 'Top AI Speakers', 'Futurist Speaker', 'Industry Expert Keynote', 'Conference Speaker'],
   },
   agenticWeb: {
     title: 'The Agentic Web - AI Agents Course',
     description:
-      'Learn about autonomous AI agents and agentic systems transforming the web and digital economy.',
+      'Free course on autonomous AI agents, multi-agent coordination, MCP protocols, and agentic architecture on Veda (veda.ng).',
     url: '/agentic',
     keywords: ['Agentic Web', 'AI Agents Course', 'Autonomous AI', 'Agentic Systems', 'Digital Economy', 'Future of Web'],
   },
   vibeCoding: {
     title: 'Vibe Coding 101 by Vedang Vatsa',
     description:
-      'Vibe Coding 101: A free course on building real apps with AI. Learn to build software in plain English using Cursor, Replit, Antigravity, and Lovable.',
+      'Vibe Coding 101: Free course by Vedang Vatsa on building production software with AI tools like Cursor, Antigravity, and Replit.',
     url: '/vibecoding',
     keywords: ['Vibe Coding', 'Intuitive Engineering', 'Creative Software Design', 'Technical Excellence', 'Design Engineering'],
   },
   seo: {
     title: 'Growth Marketing & SEO Expertise',
     description:
-      'Data-driven growth strategies for Web3, FinTech, and mobile. Expert in SEO, ASO, and community-led growth.',
+      'Data-driven growth strategies for Web3, FinTech, and AI. Frameworks for programmatic SEO, ASO, and organic acquisition.',
     url: '/seo',
     keywords: ['Growth Marketing', 'SEO Expert', 'Web3 Marketing', 'FinTech Marketing', 'ASO Specialist', 'Community-Led Growth'],
   },
   glossary: {
     title: 'AI & Web3 Glossary',
     description:
-      'Definitions of AI and Web3 terms, including LLMs, AGI, smart contracts, and DeFi.',
+      'Authoritative plain-language definitions for 100+ AI, LLM, machine learning, and Web3 terms on Veda (veda.ng).',
     url: '/glossary',
     keywords: ['AI Glossary', 'Web3 Glossary', 'Artificial Intelligence Definitions', 'Blockchain Terms', 'Generative AI Terms', 'Crypto Glossary', 'Large Language Model (LLM)', 'DeFi Terms'],
   },
   mcpDev: {
     title: 'MCP Development 101 - Build AI Tool Servers',
     description:
-      'Free course on building MCP servers. Learn the Model Context Protocol to connect AI to databases, APIs, and any data source.',
+      'Free course on Model Context Protocol (MCP). Learn to build tool servers connecting AI agents to APIs, databases, and services.',
     url: '/mcp',
     keywords: ['MCP', 'Model Context Protocol', 'MCP Server', 'AI Tools', 'Claude MCP', 'Cursor MCP', 'TypeScript MCP', 'Build MCP Server'],
   },
   aiAutomation: {
     title: 'AI Automation 101 - Automate Anything with AI',
     description:
-      'Free course on AI-powered automation. Build pipelines with APIs, MCP servers, AI agents, n8n, and no-code tools.',
+      'Free guide to AI automation: build autonomous pipelines with APIs, MCP servers, AI agents, n8n, and no-code tools.',
     url: '/automation',
     keywords: ['AI Automation', 'n8n', 'MCP Automation', 'AI Agents', 'API Automation', 'Workflow Automation', 'No-Code AI', 'Telegram Bot'],
   },
   healthProtocols: {
     title: 'Bryan Johnson Blueprint Protocol - Full Reference Guide',
     description:
-      'A detailed breakdown of Bryan Johnson\'s Blueprint longevity protocol: supplements, diet, exercise, and sleep routines backed by transcript data.',
+      "Reference guide to Bryan Johnson's Blueprint protocol: supplements, diet, biomarkers, and routines with transcript data.",
     url: '/health-protocols',
     keywords: ['Bryan Johnson', 'Blueprint Protocol', 'Longevity', 'Anti-Aging', 'Supplements', 'Biohacking', 'Health Optimization', 'Sleep Protocol'],
   },
   aiReports: {
     title: 'AI Reports & Research Library - 2025-2026',
     description:
-      '1000+ AI reports, research papers, and industry analyses from Stanford, McKinsey, Deloitte, OpenAI, and more.',
+      'Searchable repository of 1,000+ AI research papers, industry reports, and governance benchmarks on Veda (veda.ng).',
     url: '/ailib',
     keywords: ['AI Reports', 'AI Research Papers', 'State of AI', 'McKinsey AI', 'Stanford AI Index', 'AI Industry Reports', 'AI Governance', 'Generative AI Reports'],
   },
   contact: {
     title: 'Book a Meeting with Vedang Vatsa',
     description:
-      'Schedule a 1:1 conversation with Vedang Vatsa. Available for AI strategy, Web3 advisory, speaking engagements, and collaboration.',
+      'Book a consultation or advisory meeting with Vedang Vatsa (FRSA) for AI strategy, Web3 architecture, or speaking engagements.',
     url: '/contact',
     keywords: ['Book Meeting', 'Schedule Call', 'Vedang Vatsa', 'AI Consulting', 'Web3 Advisory', 'Speaking Engagement'],
   },
   stateOfWeb3: {
     title: 'The State of Web3 | Vedang Vatsa',
     description:
-      'On 12 June 2026 OpenAlex tagged 128,286 blockchain papers. Yearly output grew 117 times from 2013 to 2025. A paper total is not a count of working software or of statutes in force.',
+      'Empirical analysis of 128,000+ blockchain research papers indexed on OpenAlex, evaluating global Web3 output and trends.',
     url: '/stateofweb3',
     keywords: ['Web3', 'blockchain', 'OpenAlex', 'DeFi', 'NFT', 'post-quantum', 'CBDC', 'MiCA', 'smart contracts', 'China', 'India'],
   },
   privacy: {
     title: 'Privacy Policy - veda.ng',
     description:
-      'How veda.ng handles data: no accounts, no profiles. Google Analytics 4 and Microsoft Clarity analytics plus a Cal.com booking embed, described in plain language.',
+      'Privacy policy for veda.ng: keyless open access, no user accounts, minimal privacy-preserving analytics, and GDPR compliance.',
     url: '/privacy',
     keywords: ['Privacy Policy', 'Data Protection', 'Google Analytics', 'Microsoft Clarity', 'Cal.com', 'GDPR', 'CCPA'],
   },
   developers: {
     title: 'veda.ng Developer Resources - API, MCP Server, Feeds',
     description:
-      'Developer and AI agent interfaces for veda.ng: public research search API, MCP server over Streamable HTTP, OpenAPI spec, RSS feed, sitemap, llms.txt index, and Markdown content negotiation.',
+      'Developer portal for veda.ng: open REST APIs, Model Context Protocol (MCP) server, OpenAPI 3.1 spec, and llms.txt index.',
     url: '/developers',
     keywords: ['veda.ng API', 'veda.ng MCP server', 'veda.ng developer docs', 'Vedang Vatsa API', 'Hashtag Web3 developer resources', 'AI research API', 'OpenAlex search API'],
   },
@@ -152,8 +152,8 @@ export function generateMetadata(params: MetadataParams): Metadata {
     description,
     url,
     keywords,
-    ogImage,
-    ogImageAlt = 'Vedang Vatsa',
+    ogImage = 'https://veda.ng/images/og-homepage.png',
+    ogImageAlt = 'Veda - AI & Web3 Research Repository by Vedang Vatsa',
     type = 'website',
   } = params;
 
@@ -168,23 +168,23 @@ export function generateMetadata(params: MetadataParams): Metadata {
     }
   }
 
-  // Only set images if an explicit ogImage is provided.
-  // Otherwise, Next.js will use the dynamic opengraph-image.tsx generator.
+  const resolvedOgImage = ogImage.startsWith('http') ? ogImage : `https://veda.ng${ogImage}`;
+
   const openGraph: any = {
     title,
     description,
     url,
     type,
-    ...(ogImage ? {
-      images: [{ url: ogImage, width: 1200, height: 630, alt: ogImageAlt }],
-    } : {}),
+    siteName: 'Veda',
+    locale: 'en_US',
+    images: [{ url: resolvedOgImage, width: 1200, height: 630, alt: ogImageAlt }],
   };
 
   const twitter: any = {
     card: 'summary_large_image',
     title,
     description,
-    ...(ogImage ? { images: [ogImage] } : {}),
+    images: [resolvedOgImage],
   };
 
   const isLongTitle = title.length > 45 || title.includes('Vedang Vatsa');

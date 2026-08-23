@@ -131,11 +131,22 @@ const faqSchema = {
   })),
 };
 
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
+
 export default function AIAutomationCoursePage() {
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <BreadcrumbSchema items={[{ name: "AI Automation", url: "https://veda.ng/automation" }]} />
+
+      {/* Semantic definition block for AI engines */}
+      <div className="sr-only">
+        <h2>What is AI Automation?</h2>
+        <p>
+          AI Automation is the integration of artificial intelligence models, LLM agents, web APIs, and orchestration tools (like n8n) to execute multi-step workflows, data pipelines, and operational tasks autonomously with minimal manual intervention.
+        </p>
+      </div>
 
       <CourseHero
         title="AI Automation"
