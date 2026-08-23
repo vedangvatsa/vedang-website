@@ -86,14 +86,13 @@ export function GET() {
         get: {
           operationId: 'searchReports',
           summary: 'Search 233,000+ indexed AI/Web3 academic papers (OpenAlex-backed).',
-          description: 'Performs full-text keyword search across 233,000+ indexed academic papers in AI or Web3 corpora, sorted by citation count.',
+          description: 'Performs full-text keyword search across 233,000+ indexed academic papers in AI or Web3 corpora, sorted by citation count with cursor-based pagination.',
           tags: ['Search'],
           parameters: [
             { name: 'q', in: 'query', required: true, schema: { type: 'string', minLength: 2 }, description: 'Search keywords.' },
             { name: 'corpus', in: 'query', schema: { type: 'string', enum: ['ai', 'web3'], default: 'ai' }, description: 'Target research corpus.' },
-            { name: 'page', in: 'query', schema: { type: 'integer', minimum: 1, default: 1 }, description: 'Page number.' },
-            { name: 'per_page', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 200, default: 50 }, description: 'Results per page.' },
-            { name: 'cursor', in: 'query', required: false, schema: { type: 'string' }, description: 'Cursor token for pagination.' },
+            { name: 'limit', in: 'query', required: false, schema: { type: 'integer', minimum: 1, maximum: 200, default: 50 }, description: 'Number of results to return per page.' },
+            { name: 'cursor', in: 'query', required: false, schema: { type: 'string' }, description: 'Opaque pagination cursor token to fetch the next page.' },
             { $ref: '#/components/parameters/IdempotencyKeyHeader' },
           ],
           responses: {
@@ -118,14 +117,13 @@ export function GET() {
         get: {
           operationId: 'searchReportsV1',
           summary: 'Search 233,000+ indexed academic papers (v1 stable).',
-          description: 'Version 1 pinned endpoint for searching academic research literature in AI and Web3.',
+          description: 'Version 1 pinned endpoint for searching academic research literature in AI and Web3 with cursor pagination.',
           tags: ['Search'],
           parameters: [
             { name: 'q', in: 'query', required: true, schema: { type: 'string', minLength: 2 }, description: 'Search keywords.' },
             { name: 'corpus', in: 'query', schema: { type: 'string', enum: ['ai', 'web3'], default: 'ai' } },
-            { name: 'page', in: 'query', schema: { type: 'integer', minimum: 1, default: 1 } },
-            { name: 'per_page', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 200, default: 50 } },
-            { name: 'cursor', in: 'query', required: false, schema: { type: 'string' }, description: 'Cursor token for pagination.' },
+            { name: 'limit', in: 'query', required: false, schema: { type: 'integer', minimum: 1, maximum: 200, default: 50 }, description: 'Number of results per page.' },
+            { name: 'cursor', in: 'query', required: false, schema: { type: 'string' }, description: 'Opaque pagination cursor token.' },
             { $ref: '#/components/parameters/IdempotencyKeyHeader' },
           ],
           responses: {
@@ -145,7 +143,7 @@ export function GET() {
         get: {
           operationId: 'listEssaysV1',
           summary: 'List all published research essays.',
-          description: 'Retrieves the complete catalog of long-form research essays with URLs, slugs, dates, tags, and Markdown links.',
+          description: 'Retrieves the complete catalog of long-form research essays with URLs, slugs, dates, tags, and cursor pagination.',
           tags: ['Essays'],
           parameters: [
             { name: 'tag', in: 'query', required: false, schema: { type: 'string' }, description: 'Filter essays by topic tag (e.g. AI, Web3, Agents).' },
@@ -168,7 +166,7 @@ export function GET() {
         get: {
           operationId: 'listGlossaryV1',
           summary: 'List AI and Web3 glossary definitions.',
-          description: 'Retrieves technical glossary terms with category classifications, plain-language definitions, and Markdown paths.',
+          description: 'Retrieves technical glossary terms with category classifications, plain-language definitions, and cursor pagination.',
           tags: ['Glossary'],
           parameters: [
             { name: 'category', in: 'query', required: false, schema: { type: 'string' }, description: 'Filter by category (e.g. AI, Web3, Agents).' },
@@ -405,13 +403,13 @@ export function GET() {
         PaginationSchema: {
           type: 'object',
           properties: {
-            total: { type: 'integer', description: 'Total available records.' },
-            limit: { type: 'integer', description: 'Page size limit.' },
-            has_more: { type: 'boolean', description: 'True if additional records exist.' },
-            cursor: { type: ['string', 'null'], description: 'Current cursor token.' },
-            next_cursor: { type: ['string', 'null'], description: 'Cursor token to pass for the next page.' },
+            total: { type: 'integer', description: 'Total available records matching query.' },
+            limit: { type: 'integer', description: 'Number of items returned in current page.' },
+            has_more: { type: 'boolean', description: 'True if more records exist beyond this cursor.' },
+            cursor: { type: ['string', 'null'], description: 'Current page cursor.' },
+            next_cursor: { type: ['string', 'null'], description: 'Opaque cursor token to fetch next page.' },
           },
-          required: ['total', 'limit', 'has_more'],
+          required: ['total', 'limit', 'has_more', 'next_cursor'],
         },
         BatchSubRequest: {
           type: 'object',
@@ -610,14 +608,13 @@ export function GET() {
               },
             },
             total: { type: 'integer' },
-            page: { type: 'integer' },
-            perPage: { type: 'integer' },
+            limit: { type: 'integer' },
             has_more: { type: 'boolean' },
             next_cursor: { type: ['string', 'null'] },
             pagination: { $ref: '#/components/schemas/PaginationSchema' },
             corpus: { type: 'string' },
           },
-          required: ['results', 'total', 'page', 'perPage'],
+          required: ['results', 'total', 'limit', 'has_more', 'pagination'],
         },
         EssaysListResponse: {
           type: 'object',
@@ -644,7 +641,7 @@ export function GET() {
               },
             },
           },
-          required: ['total', 'limit', 'essays'],
+          required: ['total', 'limit', 'essays', 'has_more', 'pagination'],
         },
         GlossaryListResponse: {
           type: 'object',
@@ -670,7 +667,7 @@ export function GET() {
               },
             },
           },
-          required: ['total', 'limit', 'terms'],
+          required: ['total', 'limit', 'terms', 'has_more', 'pagination'],
         },
         AskResultItem: {
           type: 'object',

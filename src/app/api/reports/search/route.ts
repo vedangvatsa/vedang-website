@@ -52,9 +52,19 @@ export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const query = searchParams.get('q')?.trim();
   const corpus = searchParams.get('corpus') || 'ai';
-  const page = parseInt(searchParams.get('page') || '1', 10);
-  const perPage = Math.min(parseInt(searchParams.get('per_page') || '50', 10), 200);
+  const limit = Math.min(parseInt(searchParams.get('limit') || searchParams.get('per_page') || '50', 10), 200);
+  const cursor = searchParams.get('cursor');
   const idempotencyKey = request.headers.get('Idempotency-Key');
+
+  let page = 1;
+  if (cursor) {
+    const decodedPage = parseInt(Buffer.from(cursor, 'base64').toString('utf8'), 10);
+    if (!isNaN(decodedPage) && decodedPage >= 1) {
+      page = decodedPage;
+    }
+  } else if (searchParams.get('page')) {
+    page = Math.max(parseInt(searchParams.get('page') || '1', 10), 1);
+  }
 
   if (!query || query.length < 2) {
     return jsonError(
@@ -72,7 +82,7 @@ export async function GET(request: NextRequest) {
     filter: `concepts.id:${conceptFilter}`,
     sort: 'cited_by_count:desc',
     page: page.toString(),
-    per_page: perPage.toString(),
+    per_page: limit.toString(),
     select: 'id,title,type,publication_year,doi,cited_by_count,primary_location,concepts',
     mailto: 'vatsvedang@gmail.com',
   });
@@ -96,6 +106,8 @@ export async function GET(request: NextRequest) {
 
     const data = await res.json();
     const total = data.meta?.count || 0;
+    const hasMore = page * limit < total;
+    const nextCursor = hasMore ? Buffer.from(String(page + 1)).toString('base64') : null;
 
     const results = (data.results || []).map((work: any) => {
       const doi = work.doi;
@@ -118,10 +130,18 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(
       {
-        results,
         total,
-        page,
-        perPage,
+        limit,
+        has_more: hasMore,
+        next_cursor: nextCursor,
+        pagination: {
+          total,
+          limit,
+          has_more: hasMore,
+          cursor: cursor || null,
+          next_cursor: nextCursor,
+        },
+        results,
         corpus,
       },
       { headers }
