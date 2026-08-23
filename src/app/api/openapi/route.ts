@@ -551,6 +551,15 @@ export function GET() {
         responseSchema: { $ref: '#/components/schemas/McpToolCallResponse' },
       },
     })),
+    'x-sdks': {
+      pypi: {
+        package: 'vedang-cli',
+        url: 'https://pypi.org/project/vedang-cli/',
+        install: 'pip install vedang-cli',
+        description: 'Official Python CLI & SDK for veda.ng research and essay APIs',
+      },
+      repository: 'https://github.com/vedangvatsa/vedang-website',
+    },
     'x-discovery': {
       llms_txt: LLMSTXT_URL,
       llms_full_txt: LLMSFULLTXT_URL,

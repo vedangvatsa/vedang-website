@@ -2,6 +2,18 @@
   "name": "vedang-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://veda.ng",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vedangvatsa/vedang-website.git"
+  },
+  "author": {
+    "name": "Vedang Vatsa",
+    "url": "https://veda.ng/about"
+  },
+  "bugs": {
+    "url": "https://github.com/vedangvatsa/vedang-website/issues"
+  },
   "scripts": {
     "dev": "next dev -p 3000",
     "genkit:dev": "genkit start -- tsx src/ai/dev.ts",

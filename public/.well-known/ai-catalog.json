@@ -12,6 +12,18 @@
   },
   "entries": [
     {
+      "identifier": "urn:air:veda.ng:pypi:vedang-cli",
+      "displayName": "vedang-cli (Official PyPI SDK & CLI)",
+      "type": "application/x-python-package",
+      "url": "https://pypi.org/project/vedang-cli/",
+      "description": "Official Python SDK and CLI tool for veda.ng research APIs and essay search.",
+      "trustManifest": {
+        "verified": true,
+        "verificationMethod": "direct",
+        "attestation": "urn:air:attestation:self-hosted"
+      }
+    },
+    {
       "identifier": "urn:air:veda.ng:mcp-server:research-hub",
       "displayName": "veda.ng Research Hub MCP Server",
       "type": "application/mcp-server+json",

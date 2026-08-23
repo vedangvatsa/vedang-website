@@ -87,6 +87,9 @@
   "developer": {
     "docs": "https://veda.ng/developers",
     "openapi": "https://veda.ng/openapi.json",
-    "mcp": "https://veda.ng/.well-known/mcp"
+    "mcp": "https://veda.ng/.well-known/mcp",
+    "repository": "https://github.com/vedangvatsa/vedang-website",
+    "pypi": "https://pypi.org/project/vedang-cli/",
+    "cli": "pip install vedang-cli"
   }
 }

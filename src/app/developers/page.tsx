@@ -119,6 +119,34 @@ export default function DevelopersPage() {
           <CommandBlock command={markdownExample} />
         </Section>
 
+        <Section title="Python SDK & CLI (vedang-cli)">
+          <p className="text-muted-foreground mb-3">
+            Official Python SDK and CLI tool on PyPI for programmatic queries across research essays, glossary terms, and the 233,000+ indexed paper corpus.
+          </p>
+          <CommandBlock command="pip install vedang-cli" />
+          <p className="text-muted-foreground mt-3">
+            Package:{' '}
+            <a
+              href="https://pypi.org/project/vedang-cli/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 hover:text-foreground"
+            >
+              pypi.org/project/vedang-cli
+            </a>
+            {' · '}
+            Repository:{' '}
+            <a
+              href="https://github.com/vedangvatsa/vedang-website"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 hover:text-foreground"
+            >
+              github.com/vedangvatsa/vedang-website
+            </a>
+          </p>
+        </Section>
+
         <Section title="Feeds & discovery files">
           <ul className="space-y-1.5 text-muted-foreground">
             <li><Link href="/feed.xml" className="underline underline-offset-4 hover:text-foreground">feed.xml</Link> - RSS feed of new essays</li>
