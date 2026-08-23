@@ -12,18 +12,18 @@ interface MetadataParams {
 
 export const pageMetadata = {
   home: {
-    title: 'Veda - AI & Web3 Research Repository by Vedang Vatsa',
+    title: 'Vedang Vatsa - Essays, Research & Profile | veda.ng',
     description:
-      'Veda (veda.ng) by Vedang Vatsa (FRSA) is an AI & Web3 research hub indexing 233k+ papers, 40+ essays, 100+ glossary terms, and an official MCP server.',
+      'Official website of Vedang Vatsa (FRSA) on veda.ng. Personal essays, research papers, profile, and free courses on AI agents and Web3.',
     url: '/',
-    keywords: ['Veda', 'veda.ng', 'Vedang Vatsa', 'AI Thought Leader', 'Web3 Expert', 'Blockchain Technology', 'Generative AI', 'MCP Server', 'DeFi'],
+    keywords: ['Vedang Vatsa', 'veda.ng', 'Essays', 'AI Thought Leader', 'Web3 Expert', 'Hashtag Web3', 'AI Researcher', 'DeFi', 'Profile'],
   },
   essays: {
-    title: 'Essays on AI & Web3 | Veda',
+    title: 'Essays by Vedang Vatsa | veda.ng',
     description:
-      'Read 40+ research essays and architectural guides on autonomous AI agents, MCP protocols, and decentralized systems on Veda (veda.ng).',
+      '40+ original essays and architectural guides by Vedang Vatsa on autonomous AI agents, Model Context Protocol, and decentralized systems.',
     url: '/essays',
-    keywords: ['Essays', 'Research Papers', 'AI Agents', 'Stablecoins', 'Blockchain', 'Decentralized Economies', 'Vedang Vatsa', 'Veda'],
+    keywords: ['Essays', 'Research Papers', 'AI Agents', 'Stablecoins', 'Blockchain', 'Decentralized Economies', 'Vedang Vatsa', 'veda.ng'],
   },
   web3101: {
     title: 'Web3 101 - Blockchain Fundamentals Course',
@@ -47,11 +47,11 @@ export const pageMetadata = {
     keywords: ['Community Building', 'Scaling Communities', 'Hashtag Web3', 'Web3 Community', 'Member Engagement', 'Growth Strategy'],
   },
   about: {
-    title: 'About Veda & Vedang Vatsa - Founder, FRSA & AI Researcher',
+    title: 'About Vedang Vatsa - Bio, Research & Profile | veda.ng',
     description:
-      'About Veda (veda.ng) & Vedang Vatsa: FRSA, IIT Kanpur alumnus, founder of Hashtag Web3 (120k+ members) and author of 25+ academic papers.',
+      'Profile and biography of Vedang Vatsa (FRSA): founder of Hashtag Web3 (120k+ members) and CVinBio, IIT Kanpur alumnus, and author of 25+ papers.',
     url: '/about',
-    keywords: ['About Veda', 'About Vedang Vatsa', 'AI Thought Leaders', 'Top Web3 Speakers', 'Artificial Intelligence Expert', 'Web3 Keynote Speaker', 'Blockchain Thought Leaders', 'AI in Business', 'AI Innovation'],
+    keywords: ['About Vedang Vatsa', 'Vedang Vatsa Profile', 'Vedang Vatsa Bio', 'AI Thought Leaders', 'Top Web3 Speakers', 'Artificial Intelligence Expert', 'Web3 Keynote Speaker', 'veda.ng'],
   },
   media: {
     title: 'Speaking Engagements & Media',

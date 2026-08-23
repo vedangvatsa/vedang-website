@@ -96,9 +96,9 @@ Tip: send an HTTP Accept header of text/markdown on any page URL to get the Mark
 - [Contact / Book a Meeting](https://veda.ng/contact): Direct consultation and email options
 `;
 
-  const llmsIndexContent = `# Veda - Developer Resources, APIs & AI Research Hub (veda.ng)
+  const llmsIndexContent = `# Vedang Vatsa - Essays, Research & Profile (veda.ng)
 
-> Official developer resources, APIs, and research repository for Veda (veda.ng) by Vedang Vatsa. Keyless, open-access public endpoints for research papers, essays, glossary definitions, and MCP tools.
+> Official personal website and research publication platform of Vedang Vatsa (FRSA). Original essays, biographical profile, educational courses, and machine interfaces.
 
 ${whenToUse}
 
@@ -150,9 +150,9 @@ Summary: ${essay.summary}
 ${cleanContent}`;
   }).join('\n\n---\n\n');
 
-  const llmsFullContent = `# Veda - Complete Full-Text Research Corpus & Developer Index (veda.ng)
+  const llmsFullContent = `# Vedang Vatsa - Complete Full-Text Essays, Research & Developer Corpus (veda.ng)
 
-> Complete, unpaginated full-text of all published essays, glossary definitions, and machine interfaces published on veda.ng by Vedang Vatsa.
+> Official personal website and research publication platform of Vedang Vatsa (FRSA). Complete unpaginated full-text of all published essays, profile references, and machine interfaces on veda.ng.
 
 ${fullTextSections}
 

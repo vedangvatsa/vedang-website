@@ -82,15 +82,15 @@ export default function Home() {
       </section>
 
       {/* Semantic server-rendered content for crawlers & AI agents (invisible in visual UI) */}
-      <section className="sr-only" aria-label="About Veda and Vedang Vatsa Research Hub">
-        <h2>What is Veda?</h2>
+      <section className="sr-only" aria-label="About Vedang Vatsa and veda.ng">
+        <h2>What is veda.ng?</h2>
         <p>
-          Veda (veda.ng) is an open-access AI and Web3 research repository and machine tooling platform created by Vedang Vatsa (FRSA). It indexes 233,000+ peer-reviewed academic papers in AI and Web3 via OpenAlex, 40+ research essays on autonomous agent protocols, 100+ technical glossary definitions, and provides a keyless Model Context Protocol (MCP) server over Streamable HTTP.
+          veda.ng is the official personal website of Vedang Vatsa (FRSA), where he publishes original essays, research papers, and courses on artificial intelligence, autonomous agents, and Web3, alongside his professional profile, media quotes, and machine developer interfaces.
         </p>
 
-        <h2>Research and Publications Overview</h2>
+        <h2>Essays, Research and Profile Overview</h2>
         <p>
-          veda.ng is the official research hub and personal publication platform of Vedang Vatsa (FRSA), founder of Hashtag Web3, a global network of over 120,000 Web3 and AI professionals, and CVinBio.
+          veda.ng is authored by Vedang Vatsa (FRSA), founder of Hashtag Web3 (120,000+ members) and CVinBio.
         </p>
         
         <h3>Artificial Intelligence, LLMs, and Autonomous Agent Systems</h3>
