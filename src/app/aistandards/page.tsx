@@ -189,6 +189,16 @@ const DISCOVERY_FILES: DiscoveryFile[] = [
     specUrl: 'https://github.com/microsoft/ai-resources',
   },
   {
+    name: 'L402 Machine Payments',
+    path: 'HTTP 402 Authorization: L402',
+    what: 'Protocol standard using HTTP 402 and Lightning Network macaroons for machine-to-machine API payments.',
+    why: 'Enables autonomous agents to pay for metered API access, premium tools, and compute without human credit cards.',
+    category: 'Agent products',
+    priority: 'When it applies',
+    spec: 'L402 Protocol',
+    specUrl: 'https://docs.lightning.engineering/the-lightning-network/l402',
+  },
+  {
     name: 'MCP Server Card',
     path: '/.well-known/mcp/server-card.json',
     what: 'Draft discovery document for Model Context Protocol servers.',
@@ -357,29 +367,44 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
               <h2 className="text-xl sm:text-2xl font-semibold tracking-tight mb-3">Why these standards exist</h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 Websites were built for people who read. AI systems find content differently. Crawlers follow links,
-                fetch pages, and parse HTML. Agents look for machine-readable files that describe what a site offers
-                and how to use it. The standards below are the files, formats, and bot conventions that make this
-                work.
+                fetch pages, and parse HTML. Autonomous agents look for machine-readable files that describe what a site offers
+                and how to use it.
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Think of the files as three separate jobs. <strong>Access control</strong> files (robots.txt,
-                tdmrep.json) tell documented bots what they may or may not crawl. <strong>Content maps</strong>
-                (sitemap.xml, llms.txt) tell any system that asks which pages matter and what they say.{' '}
-                <strong>Identity and capability</strong> files (agents.txt, agents.json, agent cards, OpenAPI, MCP) tell agents what
-                the site can do and how to call it.
+                In modern Agent Experience (AX) frameworks, interactions move across four distinct layers:
               </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+                <div className="rounded-lg border bg-card p-3 min-w-0">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">1. Discovery</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Can search engines and answer engines find your brand, API docs, and developer portals by name without disambiguation errors?
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 min-w-0">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">2. Access</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Can crawlers land on the site, bypass JS-rendering bottlenecks, and extract facts via Markdown negotiation and JSON-LD?
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 min-w-0">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">3. Usability</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Can agents authenticate, execute tools over MCP, page with cursor tokens, and safely retry write operations via Idempotency-Key headers?
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 min-w-0">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">4. Payments & Action</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Can agents autonomously purchase metered access or pay for tool calls via machine payment protocols like L402?
+                  </p>
+                </div>
+              </div>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 A few files carry most of the value. robots.txt is a set of rules for bots. It says which paths they
                 may visit and which they should leave alone. sitemap.xml is a plain list of the pages that exist.
                 llms.txt is a short markdown reading list. It names who runs the site and which pages matter.
                 agents.txt, agents.json, and Model Context Protocol (MCP) servers tell agent software what a site offers and how to reach it. Everything
                 else in the catalog is optional polish.
-              </p>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                The rules themselves come from different places. Some are finished standards (RFCs and W3C reports),
-                some are drafts still being written at the IETF, some are documented conventions from a single
-                vendor, and some are community ideas with no formal body behind them. Maturity matters. A draft is
-                not a contract, and no file can force any company to read it.
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Start with the pieces that are free and stable, like clear HTML, a sitemap, and robots.txt. Add
@@ -505,6 +530,48 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 min-w-0">
                 <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">Markdown content negotiation</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Serve raw Markdown on standard URLs when requests include Accept: text/markdown. Saves agent inference tokens by stripping visual HTML chrome.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">Actionable error contracts</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Return structured JSON errors with explicit resolution hints so autonomous LLM agents can self-correct parameters and retry without failing.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">Idempotency-Key support</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Declare Idempotency-Key headers on write operations so agents retrying on network drops never duplicate transactions or records.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">RateLimit & Sunset headers</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Expose standard RateLimit-Limit, RateLimit-Remaining, RateLimit-Reset, and RFC 8594 Sunset headers so agents budget API calls cleanly.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">Cursor-based pagination</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Expose opaque cursor tokens and limit counts rather than offset/page numbers to prevent index drift during automated crawls.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">Async 202 job polling</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Return 202 Accepted with a Location header and Retry-After interval for long-running operations so agents can track background work.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
+                  <p className="text-sm font-medium text-foreground mb-1.5">Batch execution endpoints</p>
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Accept arrays of sub-requests in a single POST /batch call to minimize round-trip latency and conserve agent context windows.
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
                   <p className="text-sm font-medium text-foreground mb-1.5">Answer-first writing</p>
                   <p className="text-xs text-muted-foreground leading-snug">
                     Lead each section with a concise direct answer. Put context after. This matches how people ask and how extractors pull snippets.
@@ -532,36 +599,6 @@ npx --yes github:vedangvatsa/aistandards --yes --scan \\
                   <p className="text-sm font-medium text-foreground mb-1.5">Person and Organization schema</p>
                   <p className="text-xs text-muted-foreground leading-snug">
                     Link to authoritative profiles with sameAs. Helps verify identity across sources.
-                  </p>
-                </div>
-                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
-                  <p className="text-sm font-medium text-foreground mb-1.5">Multi-format presentation</p>
-                  <p className="text-xs text-muted-foreground leading-snug">
-                    Prose plus tables plus schema gives extractors multiple paths to the same fact. Reduces ambiguity.
-                  </p>
-                </div>
-                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
-                  <p className="text-sm font-medium text-foreground mb-1.5">Idempotency-Key support</p>
-                  <p className="text-xs text-muted-foreground leading-snug">
-                    Declare Idempotency-Key headers on write operations so agents retrying on network drops never duplicate transactions or records.
-                  </p>
-                </div>
-                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
-                  <p className="text-sm font-medium text-foreground mb-1.5">RateLimit & Sunset headers</p>
-                  <p className="text-xs text-muted-foreground leading-snug">
-                    Expose standard RateLimit-Limit, RateLimit-Remaining, RateLimit-Reset, and RFC 8594 Sunset headers so agents budget API calls cleanly.
-                  </p>
-                </div>
-                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
-                  <p className="text-sm font-medium text-foreground mb-1.5">Cursor-based pagination</p>
-                  <p className="text-xs text-muted-foreground leading-snug">
-                    Expose opaque cursor tokens and limit counts rather than offset/page numbers to prevent index drift during automated crawls.
-                  </p>
-                </div>
-                <div className="rounded-lg border bg-card p-3 sm:p-3.5 min-w-0">
-                  <p className="text-sm font-medium text-foreground mb-1.5">Async 202 job polling</p>
-                  <p className="text-xs text-muted-foreground leading-snug">
-                    Return 202 Accepted with a Location header and Retry-After interval for long-running operations so agents can track background work.
                   </p>
                 </div>
               </div>
