@@ -1297,9 +1297,11 @@
     "id": "ig-genz-boundaries",
     "scheduleDate": "2026-08-23",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "A one week unpaid trial is not a trial.\n\nIt is free labor.\n\nThis person declined the offer in one line.\n\nNo apology. No explanation. Just a clear boundary.\n\nKnow your worth before someone else sets it for you.",
-    "image": "scripts/thread-assets/ig-reels/DWYA42DiYqH.mp4"
+    "image": "scripts/thread-assets/ig-reels/DWYA42DiYqH.mp4",
+    "postedAt": "2026-08-23T04:19:33.396Z",
+    "castHash": "0xcae5f5d68e2511786eb238cc1fcc41e48e2e6893"
   },
   {
     "id": "ig-bryson-relatable",
