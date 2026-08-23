@@ -207,7 +207,8 @@ export function NotFoundGame() {
       const parent = canvas.parentElement;
       if (!parent) return;
       const rect = parent.getBoundingClientRect();
-      canvas.width = Math.min(rect.width - 32, 600);
+      const targetWidth = Math.max(Math.min(rect.width, 600), 280);
+      canvas.width = targetWidth;
       canvas.height = 200;
       if (!state.running && !state.over) reset();
       draw();
@@ -222,7 +223,9 @@ export function NotFoundGame() {
       }
     };
     const onTouch = (e: TouchEvent) => {
-      e.preventDefault();
+      if (state.running || state.over) {
+        e.preventDefault();
+      }
       jump();
     };
     const onClick = (e: MouseEvent) => {
@@ -251,7 +254,7 @@ export function NotFoundGame() {
   return (
     <canvas
       ref={canvasRef}
-      className="w-full max-w-[600px] h-[200px] rounded-lg border border-border/50 bg-background mt-8"
+      className="w-full max-w-[600px] h-[200px] rounded-lg border border-border/50 bg-background mt-6 sm:mt-8 touch-manipulation select-none"
       aria-label="Agent Runner - tap/click/space to jump over obstacles"
       role="application"
     />
