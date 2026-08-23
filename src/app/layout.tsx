@@ -221,6 +221,52 @@ const coursesSchema = {
   ].map((course, i) => ({ ...course, position: i + 1 })),
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What research and content does veda.ng publish?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'veda.ng publishes long-form research essays on AI agents, AI policy, and Web3 infrastructure by Vedang Vatsa, alongside free technical courses, a 100+ term glossary, and indexes of 233,000+ academic papers.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How can AI agents and developers access veda.ng programmatic tools?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'AI agents can query the Model Context Protocol (MCP) server at /.well-known/mcp, access the REST API at /api/reports/search, fetch OpenAPI 3.1 specs at /openapi.json, or request any page with Accept: text/markdown header. No authentication is required.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Who is Vedang Vatsa?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Vedang Vatsa is an AI & Web3 researcher, Fellow of the Royal Society of Arts (FRSA), alumnus of IIT Kanpur, and the founder of Hashtag Web3, a global community of 120,000+ professionals.',
+      },
+    },
+  ],
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'veda.ng AI & Web3 Research Hub',
+  provider: {
+    '@type': 'Person',
+    name: 'Vedang Vatsa',
+    url: 'https://veda.ng',
+  },
+  serviceType: 'AI & Web3 Research and Advisory',
+  description: 'Open research publications, AI agent interoperability tools, and executive advisory on autonomous systems and Web3 protocols.',
+  url: 'https://veda.ng',
+  isAccessibleForFree: true,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -268,6 +314,14 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(coursesSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
         />
         <link rel="alternate" type="application/json" href="/deeprank.json" />
         <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />

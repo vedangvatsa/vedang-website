@@ -34,18 +34,18 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
-# Training-only crawlers remain allowed per ai.txt (training explicitly permitted)
+# Training-only crawlers restricted
 User-agent: CCBot
-Allow: /
+Disallow: /
 
 User-agent: Bytespider
-Allow: /
+Disallow: /
 
 User-agent: *
 Allow: /
 Disallow: /md/
 
-Content-Signal: search=yes, ai-train=yes, ai-summarize=yes
+Content-Signal: search=yes, ai-train=no
 
 Sitemap: https://veda.ng/sitemap.xml
 Schemamap: https://veda.ng/.well-known/ai-catalog.json

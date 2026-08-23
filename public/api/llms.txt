@@ -1,0 +1,11 @@
+# veda.ng API & Developer LLMs Index
+
+Scoped index of machine interfaces and developer APIs on veda.ng.
+
+## Primary Endpoints
+- [Research Paper Search API](https://veda.ng/api/reports/search): Search 233,000+ indexed papers backed by OpenAlex
+- [Model Context Protocol Server](https://veda.ng/.well-known/mcp): Streamable HTTP MCP server for AI agents
+- [OpenAPI Specification](https://veda.ng/openapi.json): Full OpenAPI 3.1 contract
+- [Natural Language Search Query API](https://veda.ng/ask): NLWeb search and SSE streaming query interface
+- [Agent Skills Discovery](https://veda.ng/.well-known/agent-skills/index.json): v0.2.0 skills catalog
+- [Authentication Guide](https://veda.ng/auth.md): Keyless and open machine access guide

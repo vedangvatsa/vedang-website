@@ -4,9 +4,19 @@ export const dynamic = 'force-static';
 
 export function GET() {
   const directory = {
-    keys: [],
     version: '1.0',
-    description: 'Web Bot Auth directory (RFC 9421 http-message-signatures)',
+    keys: [
+      {
+        kty: 'OKP',
+        crv: 'Ed25519',
+        kid: 'veda-bot-auth-2026',
+        use: 'sig',
+        alg: 'EdDSA',
+        x: '11qYAYKxCrfVS_7TyWQHOg7hcvPapiMlrwIaaPcHURo',
+        nbf: 1770000000,
+        exp: 1890000000,
+      },
+    ],
   };
 
   return NextResponse.json(directory, {

@@ -4,20 +4,36 @@
     "displayName": "Vedang Vatsa Research Hub",
     "identifier": "veda.ng"
   },
+  "trustManifest": {
+    "issuer": "https://veda.ng",
+    "verificationMethod": "https://veda.ng/.well-known/security.txt",
+    "signatureType": "ed25519",
+    "attestations": ["identity", "open-access"]
+  },
   "entries": [
     {
       "identifier": "urn:air:veda.ng:mcp-server:research-hub",
       "displayName": "veda.ng Research Hub MCP Server",
       "type": "application/mcp-server+json",
       "url": "https://veda.ng/.well-known/mcp",
-      "description": "MCP server over Streamable HTTP (JSON-RPC 2.0). Tools: search_essays, get_essay, search_glossary, get_glossary_term, search_reports. Stateless, no authentication."
+      "description": "MCP server over Streamable HTTP (JSON-RPC 2.0). Tools: search_essays, get_essay, search_glossary, get_glossary_term, search_reports. Stateless, no authentication.",
+      "trustManifest": {
+        "verified": true,
+        "verificationMethod": "direct",
+        "attestation": "urn:air:attestation:self-hosted"
+      }
     },
     {
       "identifier": "urn:air:veda.ng:api:reports-search",
       "displayName": "veda.ng Research Paper Search API",
       "type": "application/openapi+json",
       "url": "https://veda.ng/openapi.json",
-      "description": "OpenAPI 3.1 specification for the public research paper search API backed by OpenAlex (233,000+ indexed AI and Web3 papers)."
+      "description": "OpenAPI 3.1 specification for the public research paper search API backed by OpenAlex (233,000+ indexed AI and Web3 papers).",
+      "trustManifest": {
+        "verified": true,
+        "verificationMethod": "direct",
+        "attestation": "urn:air:attestation:self-hosted"
+      }
     }
   ]
 }

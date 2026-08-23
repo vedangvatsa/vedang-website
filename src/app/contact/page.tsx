@@ -68,6 +68,19 @@ export default function MeetingPage() {
         </div>
       </PageHero>
 
+      {/* Contact details & consultation information (invisible in visual UI, machine/screen-reader accessible) */}
+      <section className="sr-only">
+        <p>
+          Vedang Vatsa is an AI & Web3 researcher, Fellow of the Royal Society of Arts (FRSA), alumnus of IIT Kanpur, and the founder of Hashtag Web3.
+        </p>
+        <p>
+          For executive advisory, keynote speaking engagements, AI agent architecture consulting, or research collaborations, schedule a session using the calendar below or email directly at <a href="mailto:vatsvedang@gmail.com">vatsvedang@gmail.com</a>.
+        </p>
+        <p>
+          Typical response time for inquiries is within 24 to 48 business hours. Meetings are conducted via Google Meet or Zoom.
+        </p>
+      </section>
+
       {/* Calendar embed */}
       <section className="pb-16">
         <CalEmbed />

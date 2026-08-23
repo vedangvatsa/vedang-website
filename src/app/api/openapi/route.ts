@@ -108,6 +108,7 @@ export function GET() {
         get: {
           operationId: 'mcpDescriptor',
           summary: 'Endpoint descriptor (HTTP 405 with JSON metadata; use POST for JSON-RPC).',
+          description: 'Fetches metadata and transport capabilities for the veda.ng MCP Streamable HTTP server.',
           tags: ['MCP'],
           responses: {
             '405': {
@@ -117,10 +118,55 @@ export function GET() {
           },
         },
       },
+      '/ask': {
+        get: {
+          operationId: 'askGet',
+          summary: 'Natural language search query interface (NLWeb GET).',
+          description: 'Executes a natural language search query across essays and glossary entries, returning JSON with _meta headers.',
+          tags: ['Search'],
+          parameters: [
+            { name: 'q', in: 'query', required: true, schema: { type: 'string' }, description: 'Natural language query string.' }
+          ],
+          responses: {
+            '200': {
+              description: 'NLWeb search results.',
+              content: { 'application/json': { schema: { type: 'object' } } }
+            }
+          }
+        },
+        post: {
+          operationId: 'askPost',
+          summary: 'Natural language search query interface (NLWeb POST & SSE).',
+          description: 'Executes a natural language search query with optional SSE streaming (prefer.streaming: true).',
+          tags: ['Search'],
+          requestBody: {
+            required: true,
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  properties: {
+                    query: { type: 'string', description: 'Query text' },
+                    prefer: { type: 'object', properties: { streaming: { type: 'boolean' } } }
+                  },
+                  required: ['query']
+                }
+              }
+            }
+          },
+          responses: {
+            '200': {
+              description: 'NLWeb search results or text/event-stream.',
+              content: { 'application/json': { schema: { type: 'object' } } }
+            }
+          }
+        }
+      },
       '/llms.txt': {
         get: {
           operationId: 'getLlmsTxt',
           summary: 'Structured content index for LLMs.',
+          description: 'Returns the primary llms.txt navigation index linking to essays, glossary definitions, and machine endpoints.',
           tags: ['Feeds'],
           responses: {
             '200': {
@@ -134,6 +180,7 @@ export function GET() {
         get: {
           operationId: 'getLlmsFullTxt',
           summary: 'Full-text essay corpus for LLM consumption.',
+          description: 'Returns the complete text corpus of all research essays for AI model training and RAG ingestion.',
           tags: ['Feeds'],
           responses: {
             '200': {
@@ -147,6 +194,7 @@ export function GET() {
         get: {
           operationId: 'getRssFeed',
           summary: 'RSS 2.0 feed of essays.',
+          description: 'Syndicates all published essays in standard RSS 2.0 XML format with publication dates and summaries.',
           tags: ['Feeds'],
           responses: {
             '200': {
@@ -160,6 +208,7 @@ export function GET() {
         get: {
           operationId: 'getSitemap',
           summary: 'XML sitemap of every public URL.',
+          description: 'Standard sitemap listing all crawlable URLs, canonicals, and last-modified dates across the domain.',
           tags: ['Feeds'],
           responses: {
             '200': {
@@ -173,6 +222,7 @@ export function GET() {
         get: {
           operationId: 'getAgentsManifest',
           summary: 'Agent capabilities manifest with when-to-use guidance.',
+          description: 'Provides structured machine-readable declarations of AI agent capabilities and use-case recommendations.',
           tags: ['Feeds'],
           responses: {
             '200': {

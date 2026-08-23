@@ -8,6 +8,23 @@ export function GET() {
     linkset: [
       {
         anchor: `${SITE_URL}/api/reports/search`,
+        item: [
+          {
+            href: OPENAPI_URL,
+            type: 'application/openapi+json',
+            title: `${SITE_NAME} Research Paper Search API (OpenAPI 3.1)`,
+          },
+          {
+            href: `${SITE_URL}/developers`,
+            type: 'text/html',
+            title: 'Developer documentation',
+          },
+          {
+            href: `${SITE_URL}/auth.md`,
+            type: 'text/markdown',
+            title: 'Authentication guide (no auth required)',
+          },
+        ],
         service: [
           {
             href: OPENAPI_URL,
@@ -35,6 +52,13 @@ export function GET() {
       },
       {
         anchor: `${SITE_URL}/.well-known/mcp`,
+        item: [
+          {
+            href: `${SITE_URL}/.well-known/mcp/server-card.json`,
+            type: 'application/json',
+            title: 'MCP server card',
+          },
+        ],
         service: [
           {
             href: `${SITE_URL}/.well-known/mcp/server-card.json`,
