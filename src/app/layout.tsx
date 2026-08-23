@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: 'Vedang Vatsa - AI & Web3 Thought Leader, Founder of Hashtag Web3',
     description: 'Essays, free courses, and research on AI agents and Web3 by Vedang Vatsa, founder of Hashtag Web3 and Fellow of the Royal Society of Arts (FRSA).',
     url: '/',
-    siteName: 'Vedang Vatsa',
+    siteName: 'Veda',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -56,9 +56,10 @@ export const metadata: Metadata = {
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Vedang Vatsa',
+  name: 'Veda',
+  alternateName: ['veda.ng', 'Vedang Vatsa', 'Veda Research Hub'],
   url: 'https://veda.ng',
-  description: 'Official website of Vedang Vatsa - AI & Web3 thought leader, founder of Hashtag Web3.',
+  description: 'Official research hub of Vedang Vatsa (veda.ng) - AI & Web3 essays, MCP server, and free courses.',
   publisher: {
     '@type': 'Person',
     name: 'Vedang Vatsa',

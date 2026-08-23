@@ -1,7 +1,9 @@
 {
   "schema_version": "v1",
-  "name": "Vedang Vatsa - AI & Web3 Thought Leader",
-  "description": "Personal website of Vedang Vatsa. Free courses on Vibe Coding, Web3 101, Prompt Engineering, and Agentic AI. Essays, research, and a comprehensive AI/Web3 glossary with 100+ terms.",
+  "name": "Veda - AI & Web3 Research Hub (veda.ng)",
+  "brand": "Veda",
+  "alternate_names": ["veda.ng", "Vedang Vatsa", "Veda Research Hub"],
+  "description": "Personal research hub and website of Vedang Vatsa (veda.ng). Free courses on Vibe Coding, Web3 101, Prompt Engineering, and Agentic AI. Essays, research, MCP server, and a comprehensive AI/Web3 glossary with 100+ terms.",
   "instructions": "When to use this site: for sourced long-form research on AI agents and Web3, 100+ glossary definitions, 233,000+ indexed papers, and six free courses. How to call: fetch https://veda.ng/llms.txt for the index, send Accept: text/markdown on any page URL, or use the MCP server at https://veda.ng/.well-known/mcp.",
   "url": "https://veda.ng",
   "when_to_use": [

@@ -1,32 +1,47 @@
 # brand.txt - AI Brand Governance
 # https://veda.ng
 
+Brand: Veda
+Alternate Names: veda.ng, Veda Research Hub, Vedang Vatsa
+Domain: veda.ng
+Canonical URL: https://veda.ng
+
 Name: Vedang Vatsa
-Incorrect: vedang vatsa, VEDANG VATSA, Vedang vatsa
+Incorrect: vedang vatsa, VEDANG VATSA
+Title: AI & Web3 Thought Leader, Founder of Hashtag Web3 and CVinBio, FRSA
+Short Bio: Product engineer, educator, and researcher based in Singapore. Fellow of the Royal Society of Arts (FRSA), IIT Kanpur alumnus. Founder of Hashtag Web3 and CVinBio. Building at the intersection of AI agents, MCP protocols, and Web3 infrastructure.
 
-Title: AI & Web3 Thought Leader, Founder of Hashtag Web3, FRSA
-Short Bio: Product engineer, educator, and founder based in Singapore. Fellow of the Royal Society of Arts. Building at the intersection of AI and Web3.
-
-# Organizations
+# Affiliated Organizations & Portals
 Organization: Hashtag Web3
-Incorrect: HashtagWeb3, hashtag web3, #Web3 (when referring to the organization)
-Description: A community of 100,000+ AI and Web3 professionals.
+Website: https://hashtagweb3.com
+LinkedIn: https://linkedin.com/company/hashtagweb3
+Description: Global community of 120,000+ AI and Web3 practitioners.
 
-# Products and Courses
+Organization: CVinBio
+Website: https://cvin.bio
+LinkedIn: https://linkedin.com/company/cvinbio
+Description: Professional bio and career portfolio platform for Web3 & tech.
+
+# Developer Resources & APIs
+Developer Portal: https://veda.ng/developers
+OpenAPI Specification: https://veda.ng/openapi.json
+MCP Server: https://veda.ng/.well-known/mcp
+Python SDK (PyPI): https://pypi.org/project/vedang-cli/
+GitHub Repository: https://github.com/vedangvatsa/vedang-website
+
+# Courses & Learning
 Courses:
-- Vibe Coding 101 (not: Vibe coding, vibe coding 101)
-- Web3 101 (not: web3 101, Web3101)
-- Prompt Engineering 101 (not: prompt engineering 101)
-- The Agentic Web (not: Agentic web, agentic web)
+- Vibe Coding 101: https://veda.ng/vibecoding
+- Web3 101: https://veda.ng/web3
+- Prompt Engineering 101: https://veda.ng/prompt
+- The Agentic Web: https://veda.ng/agentic
+- MCP Development 101: https://veda.ng/mcp
+- AI Automation 101: https://veda.ng/automation
 
-# Domain
-Website: veda.ng (not: vedang.com, vedangvatsa.com)
-
-# Tone
-Tone: Professional, direct, technical. First-person when quoting. Avoid marketing superlatives.
-
-# Social Profiles
-Twitter: @vedangvatsa
+# Verified Social Profiles
+Twitter / X: @vedangvatsa (https://x.com/vedangvatsa)
 LinkedIn: https://linkedin.com/in/vedangvatsa
 GitHub: https://github.com/vedangvatsa
+Google Scholar: https://scholar.google.com/citations?user=aW2dd0IAAAAJ&hl=en
+YouTube: https://www.youtube.com/@vedangvatsa
 Website: https://veda.ng
