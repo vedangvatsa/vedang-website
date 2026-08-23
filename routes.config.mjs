@@ -89,6 +89,16 @@ export const EXTRA_REDIRECTS = [
   ['/ai-discovery-standards/:path*', '/aistandards/:path*'],
   ['/site-checklist', '/sitecheck'],
   ['/site-checklist/:path*', '/sitecheck/:path*'],
+  ['/docs', '/developers'],
+  ['/docs/:path*', '/developers'],
+  ['/developer', '/developers'],
+  ['/developer/:path*', '/developers'],
+  ['/api-docs', '/developers'],
+  ['/apidocs', '/developers'],
+  ['/api/docs', '/developers'],
+  ['/swagger.json', '/openapi.json'],
+  ['/docs.json', '/openapi.json'],
+  ['/api/spec', '/openapi.json'],
 ];
 
 /** Pages that exist but are intentionally excluded from agent manifests and sitemaps. */

@@ -7,11 +7,16 @@ import { generateMetadata } from '@/lib/metadata';
 import { developersSummaryLines } from '@/lib/agent-md';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'veda.ng Developer Resources - API, MCP Server, Feeds',
+  title: 'Veda Developer Resources - API, MCP Server, SDK, OpenAPI | veda.ng',
   description:
-    'Developer and AI agent interfaces for veda.ng: public research search API, MCP server over Streamable HTTP, OpenAPI spec, RSS feed, sitemap, llms.txt index, and Markdown content negotiation.',
+    'Official Veda developer resources and AI agent interfaces: public REST API, Model Context Protocol (MCP) server, Python SDK (vedang-cli), OpenAPI 3.1 specification, and WorkOS auth spec.',
   url: '/developers',
   keywords: [
+    'Veda developer resources',
+    'Veda API',
+    'Veda MCP server',
+    'Veda developer docs',
+    'Veda SDK',
     'veda.ng API',
     'veda.ng MCP server',
     'veda.ng developer docs',
@@ -24,12 +29,24 @@ export const metadata: Metadata = generateMetadata({
 
 const developersSchema = {
   '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  name: 'veda.ng Developer Resources',
+  '@type': 'TechArticle',
+  headline: 'Veda Developer Resources & API Documentation',
+  name: 'Veda Developer Resources',
+  alternateName: ['Veda API', 'Veda Developer Portal', 'Veda MCP Server', 'veda.ng Developer Resources'],
   url: 'https://veda.ng/developers',
   description:
-    'Machine interfaces for veda.ng: public report search API, MCP server over Streamable HTTP, OpenAPI specification, RSS feed, sitemap, and agent discovery files.',
+    'Official developer and machine interfaces for Veda (veda.ng): public report search API, MCP server over Streamable HTTP, OpenAPI specification, Python SDK, RSS feed, sitemap, and agent discovery files.',
   inLanguage: 'en-US',
+  author: {
+    '@type': 'Person',
+    name: 'Vedang Vatsa',
+    url: 'https://veda.ng/about',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Hashtag Web3',
+    url: 'https://veda.ng',
+  },
 };
 
 const mcpExample = `curl -X POST https://veda.ng/.well-known/mcp \\

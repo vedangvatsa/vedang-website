@@ -44,14 +44,6 @@ const nextConfig = {
         source: '/contact/opengraph-image.png',
         destination: '/api/og/contact',
       },
-      {
-        source: '/openapi.json',
-        destination: '/api/openapi',
-      },
-      {
-        source: '/api/v1/:path*',
-        destination: '/api/:path*',
-      },
     ];
   },
   async redirects() {
