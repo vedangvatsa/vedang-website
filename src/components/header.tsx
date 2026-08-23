@@ -116,13 +116,13 @@ export function Header() {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem asChild>
-                  <Link href="/profile">Full Profile</Link>
+                  <Link href="/about">Full Profile</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/media">Media & Speaking</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/meeting">Book a Meeting</Link>
+                  <Link href="/contact">Book a Meeting</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -139,9 +139,9 @@ export function Header() {
               <SheetTitle className="sr-only">Navigation</SheetTitle>
               <nav className="flex flex-col overflow-y-auto flex-1 pb-6">
                 <MobileNavLink href="/essays" onClose={closeMobile}>Essays</MobileNavLink>
-                <MobileNavLink href="/profile" onClose={closeMobile}>Profile</MobileNavLink>
+                <MobileNavLink href="/about" onClose={closeMobile}>Profile</MobileNavLink>
                 <MobileNavLink href="/media" onClose={closeMobile}>Media & Speaking</MobileNavLink>
-                <MobileNavLink href="/meeting" onClose={closeMobile}>Book a Meeting</MobileNavLink>
+                <MobileNavLink href="/contact" onClose={closeMobile}>Book a Meeting</MobileNavLink>
 
                 <Separator className="my-4" />
 

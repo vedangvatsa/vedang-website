@@ -37,12 +37,12 @@ const nextConfig = {
         destination: '/api/og/:slug',
       },
       {
-        source: '/meeting/opengraph-image',
-        destination: '/api/og/meeting',
+        source: '/contact/opengraph-image',
+        destination: '/api/og/contact',
       },
       {
-        source: '/meeting/opengraph-image.png',
-        destination: '/api/og/meeting',
+        source: '/contact/opengraph-image.png',
+        destination: '/api/og/contact',
       },
       {
         source: '/openapi.json',

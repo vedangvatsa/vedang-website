@@ -59,7 +59,7 @@ function generateFiles() {
 - Developer resources: https://veda.ng/developers
 - MCP server (Streamable HTTP): https://veda.ng/.well-known/mcp
 - OpenAPI spec: https://veda.ng/openapi.json
-- Contact: https://veda.ng/meeting or vatsvedang@gmail.com
+- Contact: https://veda.ng/contact or vatsvedang@gmail.com
 
 Tip: send an HTTP Accept header of text/markdown on any page URL to get the Markdown version.
 `;
@@ -67,9 +67,9 @@ Tip: send an HTTP Accept header of text/markdown on any page URL to get the Mark
   const trustPages = `
 ## Trust Pages
 
-- [Profile / About](https://veda.ng/profile): Author biography and credentials
+- [Profile / About](https://veda.ng/about): Author biography and credentials
 - [Privacy Policy](https://veda.ng/privacy): Data handling, analytics, and third-party services
-- [Contact / Book a Meeting](https://veda.ng/meeting): Direct contact options
+- [Contact / Book a Meeting](https://veda.ng/contact): Direct contact options
 `;
 
   const llmsIndexContent = `# Vedang Vatsa

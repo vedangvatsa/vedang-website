@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T06:35:53.832Z",
+  "generatedAt": "2026-08-23T07:20:30.573Z",
   "validPaths": [
     "/",
     "/.well-known/mcp",
@@ -615,6 +615,7 @@
   ],
   "markdownPaths": [
     "/",
+    "/about",
     "/agentcommerce",
     "/agenteconomy",
     "/agenticweb",
@@ -636,6 +637,7 @@
     "/competitive",
     "/compute",
     "/constitutions",
+    "/contact",
     "/darkforest",
     "/developers",
     "/empathy",
@@ -942,7 +944,6 @@
     "/licenses",
     "/lies",
     "/liminal",
-    "/meeting",
     "/mesh",
     "/monasticism",
     "/neocloud",
@@ -954,7 +955,6 @@
     "/postscarcity",
     "/privacy",
     "/private",
-    "/profile",
     "/pseudonymity",
     "/rationality",
     "/receipts",

@@ -1,205 +1,48 @@
 import { NextResponse } from 'next/server';
 import { MCP_TOOLS } from '@/lib/agent-tools';
-import { CONTACT_EMAIL, LLMSTXT_URL, MCP_ENDPOINT, RSS_URL, SITE_NAME, SITE_URL, SITEMAP_URL } from '@/lib/site';
+import { CONTACT_EMAIL, CONTACT_URL, LLMSTXT_URL, LLMSFULLTXT_URL, MCP_ENDPOINT, RSS_URL, SITE_NAME, SITE_URL, SITEMAP_URL } from '@/lib/site';
 
 export const dynamic = 'force-static';
 
-function toolToOpenApiOperation(toolName: string) {
-  const tool = MCP_TOOLS.find((t) => t.name === toolName);
-  return {
-    summary: tool?.description,
-    description: `MCP tool exposed via JSON-RPC 2.0 tools/call at ${MCP_ENDPOINT}.`,
-    requestBody: {
-      required: true,
-      content: {
-        'application/json': {
-          schema: {
-            type: 'object',
-            properties: {
-              jsonrpc: { type: 'string', const: '2.0' },
-              id: { type: ['string', 'number'] },
-              method: { type: 'string', const: 'tools/call' },
-              params: {
-                type: 'object',
-                properties: {
-                  name: { type: 'string', const: toolName },
-                  arguments: tool?.inputSchema,
-                },
-                required: ['name'],
-              },
-            },
-            required: ['jsonrpc', 'id', 'method', 'params'],
-          },
-        },
-      },
-    },
-    responses: {
-      '200': {
-        description: 'JSON-RPC response containing tool output as text content.',
-        content: {
-          'application/json': {
-            schema: {
-              type: 'object',
-              properties: {
-                jsonrpc: { type: 'string', const: '2.0' },
-                id: { type: ['string', 'number'] },
-                result: {
-                  type: 'object',
-                  properties: {
-                    content: {
-                      type: 'array',
-                      items: {
-                        type: 'object',
-                        properties: {
-                          type: { type: 'string', enum: ['text'] },
-                          text: { type: 'string' },
-                        },
-                        required: ['type', 'text'],
-                      },
-                    },
-                    isError: { type: 'boolean' },
-                  },
-                  required: ['content'],
-                },
-              },
-              required: ['jsonrpc', 'id', 'result'],
-            },
-          },
-        },
-      },
-    },
-  };
-}
-
-const rpcSuccessSchema = {
+const rpcEnvelope = (resultSchemaName: string) => ({
   type: 'object',
   properties: {
     jsonrpc: { type: 'string', const: '2.0' },
     id: { type: ['string', 'number'] },
-    result: { type: 'object' },
+    result: { $ref: `#/components/schemas/${resultSchemaName}` },
   },
   required: ['jsonrpc', 'id', 'result'],
-};
+});
 
-const rpcErrorSchema = {
-  type: 'object',
-  properties: {
-    jsonrpc: { type: 'string', const: '2.0' },
-    id: { type: ['string', 'number', 'null'] },
-    error: {
-      type: 'object',
-      properties: {
-        code: { type: 'integer' },
-        message: { type: 'string' },
-        data: { type: 'object' },
-      },
-      required: ['code', 'message'],
-    },
+const errorResponse = (description: string) => ({
+  description,
+  content: {
+    'application/json': { schema: { $ref: '#/components/schemas/JsonRpcError' } },
   },
-  required: ['jsonrpc', 'id', 'error'],
-};
-
-const searchReportsResultSchema = {
-  type: 'object',
-  properties: {
-    results: {
-      type: 'array',
-      items: {
-        type: 'object',
-        properties: {
-          title: { type: 'string' },
-          source: { type: 'string' },
-          url: { type: 'string' },
-          date: { type: 'string' },
-          category: { type: 'string' },
-          type: { type: 'string' },
-          citations: { type: 'integer' },
-        },
-        required: ['title', 'source', 'url', 'date', 'category', 'type', 'citations'],
-      },
-    },
-    total: { type: 'integer' },
-    page: { type: 'integer' },
-    perPage: { type: 'integer' },
-  },
-  required: ['results', 'total', 'page', 'perPage'],
-};
-
-const mcpToolsListSchema = {
-  type: 'object',
-  properties: {
-    jsonrpc: { type: 'string', const: '2.0' },
-    id: { type: ['string', 'number'] },
-    result: {
-      type: 'object',
-      properties: {
-        tools: {
-          type: 'array',
-          items: {
-            type: 'object',
-            properties: {
-              name: { type: 'string' },
-              description: { type: 'string' },
-              inputSchema: { type: 'object' },
-            },
-            required: ['name', 'description', 'inputSchema'],
-          },
-        },
-      },
-      required: ['tools'],
-    },
-  },
-  required: ['jsonrpc', 'id', 'result'],
-};
-
-const mcpInitializeSchema = {
-  type: 'object',
-  properties: {
-    jsonrpc: { type: 'string', const: '2.0' },
-    id: { type: ['string', 'number'] },
-    result: {
-      type: 'object',
-      properties: {
-        protocolVersion: { type: 'string' },
-        capabilities: {
-          type: 'object',
-          properties: {
-            tools: { type: 'object', properties: { listChanged: { type: 'boolean' } } },
-          },
-        },
-        serverInfo: {
-          type: 'object',
-          properties: {
-            name: { type: 'string' },
-            title: { type: 'string' },
-            version: { type: 'string' },
-          },
-          required: ['name', 'title', 'version'],
-        },
-        instructions: { type: 'string' },
-      },
-      required: ['protocolVersion', 'capabilities', 'serverInfo', 'instructions'],
-    },
-  },
-  required: ['jsonrpc', 'id', 'result'],
-};
+});
 
 export function GET() {
   const spec = {
     openapi: '3.1.0',
     info: {
       title: `${SITE_NAME} Research Hub API (veda.ng)`,
-      version: '1.0.0',
+      version: '1.1.0',
       description:
-        'Public machine interfaces for veda.ng: research paper search backed by OpenAlex, an MCP server over Streamable HTTP, and syndication feeds. No authentication required.',
-      contact: { name: SITE_NAME, email: CONTACT_EMAIL, url: `${SITE_URL}/meeting` },
+        'Public machine interfaces for veda.ng: research paper search backed by OpenAlex, an MCP server over Streamable HTTP, syndication feeds, and agent discovery files. No authentication required.',
+      contact: { name: SITE_NAME, email: CONTACT_EMAIL, url: CONTACT_URL },
     },
     servers: [{ url: SITE_URL }],
+    tags: [
+      { name: 'Search', description: 'Research paper search' },
+      { name: 'MCP', description: 'Model Context Protocol server' },
+      { name: 'Feeds', description: 'Syndication and discovery files' },
+    ],
     paths: {
       '/api/reports/search': {
         get: {
           operationId: 'searchReports',
           summary: 'Search 233,000+ indexed AI/Web3 academic papers (OpenAlex-backed).',
+          tags: ['Search'],
           parameters: [
             { name: 'q', in: 'query', required: true, schema: { type: 'string', minLength: 2 }, description: 'Search keywords.' },
             { name: 'corpus', in: 'query', schema: { type: 'string', enum: ['ai', 'web3'], default: 'ai' } },
@@ -208,54 +51,10 @@ export function GET() {
           ],
           responses: {
             '200': {
-              description: 'Search results with citation counts.',
-              content: {
-                'application/json': { schema: searchReportsResultSchema },
-              },
+              description: 'Search results sorted by citation count.',
+              content: { 'application/json': { schema: { $ref: '#/components/schemas/SearchReportsResponse' } } },
             },
-            '502': { description: 'Upstream OpenAlex error.', content: { 'application/json': { schema: { type: 'object', properties: { error: { type: 'string' }, status: { type: 'integer' } } } } } },
-          },
-        },
-      },
-      '/feed.xml': {
-        get: {
-          operationId: 'getRssFeed',
-          summary: 'RSS feed of essays.',
-          responses: {
-            '200': {
-              description: 'RSS 2.0 XML document.',
-              content: {
-                'application/rss+xml': { schema: { type: 'string', format: 'xml' } },
-              },
-            },
-          },
-        },
-      },
-      '/sitemap.xml': {
-        get: {
-          operationId: 'getSitemap',
-          summary: 'Sitemap of every public URL.',
-          responses: {
-            '200': {
-              description: 'XML sitemap.',
-              content: {
-                'application/xml': { schema: { type: 'string', format: 'xml' } },
-              },
-            },
-          },
-        },
-      },
-      '/llms.txt': {
-        get: {
-          operationId: 'getLlmsTxt',
-          summary: 'Structured content index for LLMs.',
-          responses: {
-            '200': {
-              description: 'Plain text index.',
-              content: {
-                'text/plain': { schema: { type: 'string' } },
-              },
-            },
+            '502': errorResponse('Upstream OpenAlex error.'),
           },
         },
       },
@@ -263,31 +62,20 @@ export function GET() {
         post: {
           operationId: 'mcpRpc',
           summary: 'MCP Streamable HTTP endpoint (JSON-RPC 2.0): initialize, tools/list, tools/call.',
-          description: `Stateless MCP server supporting protocol versions 2025-06-18, 2025-03-26, 2024-11-05. Site index: ${LLMSTXT_URL}`,
+          description: `Stateless MCP server supporting protocol versions 2025-06-18, 2025-03-26, and 2024-11-05. Tool catalog also discoverable via GET (descriptor). Site index: ${LLMSTXT_URL}`,
+          tags: ['MCP'],
           requestBody: {
             required: true,
             content: {
-              'application/json': {
-                schema: {
-                  type: 'object',
-                  properties: {
-                    jsonrpc: { type: 'string', const: '2.0' },
-                    id: { type: ['string', 'number'] },
-                    method: { type: 'string', enum: ['initialize', 'ping', 'tools/list', 'tools/call', 'notifications/initialized'] },
-                    params: { type: 'object' },
-                  },
-                  required: ['jsonrpc', 'method'],
-                },
-              },
+              'application/json': { schema: { $ref: '#/components/schemas/McpRequest' } },
             },
           },
           responses: {
             '200': {
-              description: 'JSON-RPC result (initialize, tools/list, tools/call, ping) or error.',
+              description: 'JSON-RPC result for initialize, ping, tools/list, or tools/call; or a JSON-RPC error.',
               content: {
                 'application/json': {
                   schema: {
-                    type: 'object',
                     oneOf: [
                       { $ref: '#/components/schemas/McpInitializeResponse' },
                       { $ref: '#/components/schemas/McpToolsListResponse' },
@@ -299,60 +87,85 @@ export function GET() {
                 },
               },
             },
-            '202': {
-              description: 'Notification accepted (notifications/initialized); no body.',
-              content: {},
-            },
-            '400': {
-              description: 'Unsupported Mcp-Protocol-Version or invalid request.',
-              content: {
-                'application/json': { schema: { $ref: '#/components/schemas/JsonRpcError' } },
-              },
-            },
-            '405': {
-              description: 'GET/DELETE not supported for this stateless server.',
-              content: {
-                'application/json': { schema: { $ref: '#/components/schemas/JsonRpcError' } },
-              },
-            },
-            '406': {
-              description: 'Accept header must include application/json or text/event-stream.',
-              content: {
-                'application/json': { schema: { $ref: '#/components/schemas/JsonRpcError' } },
-              },
-            },
-            '415': {
-              description: 'Content-Type must be application/json.',
-              content: {
-                'application/json': { schema: { $ref: '#/components/schemas/JsonRpcError' } },
-              },
-            },
+            '202': { description: 'Notification accepted (notifications/initialized). No response body.' },
+            '400': errorResponse('Unsupported Mcp-Protocol-Version.'),
+            '406': errorResponse('Accept header must include application/json or text/event-stream.'),
+            '415': errorResponse('Content-Type must be application/json.'),
           },
         },
         get: {
           operationId: 'mcpDescriptor',
           summary: 'Endpoint descriptor (HTTP 405 with JSON metadata; use POST for JSON-RPC).',
+          tags: ['MCP'],
           responses: {
             '405': {
               description: 'Server descriptor explaining POST usage.',
-              content: {
-                'application/json': {
-                  schema: {
-                    type: 'object',
-                    properties: {
-                      endpoint: { type: 'string' },
-                      transport: { type: 'string' },
-                      protocol_versions: { type: 'array', items: { type: 'string' } },
-                      stateless: { type: 'boolean' },
-                      authentication: { type: 'string' },
-                      tools: { type: 'array', items: { type: 'string' } },
-                      usage: { type: 'string' },
-                      docs: { type: 'string' },
-                    },
-                    required: ['endpoint', 'transport', 'protocol_versions', 'stateless', 'authentication', 'tools', 'usage', 'docs'],
-                  },
-                },
-              },
+              content: { 'application/json': { schema: { $ref: '#/components/schemas/McpDescriptor' } } },
+            },
+          },
+        },
+      },
+      '/llms.txt': {
+        get: {
+          operationId: 'getLlmsTxt',
+          summary: 'Structured content index for LLMs.',
+          tags: ['Feeds'],
+          responses: {
+            '200': {
+              description: 'Plain text content index.',
+              content: { 'text/plain': { schema: { $ref: '#/components/schemas/PlainTextDocument' } } },
+            },
+          },
+        },
+      },
+      '/llms-full.txt': {
+        get: {
+          operationId: 'getLlmsFullTxt',
+          summary: 'Full-text essay corpus for LLM consumption.',
+          tags: ['Feeds'],
+          responses: {
+            '200': {
+              description: 'Plain text full-content index.',
+              content: { 'text/plain': { schema: { $ref: '#/components/schemas/PlainTextDocument' } } },
+            },
+          },
+        },
+      },
+      '/feed.xml': {
+        get: {
+          operationId: 'getRssFeed',
+          summary: 'RSS 2.0 feed of essays.',
+          tags: ['Feeds'],
+          responses: {
+            '200': {
+              description: 'RSS 2.0 XML document.',
+              content: { 'application/rss+xml': { schema: { $ref: '#/components/schemas/XmlDocument' } } },
+            },
+          },
+        },
+      },
+      '/sitemap.xml': {
+        get: {
+          operationId: 'getSitemap',
+          summary: 'XML sitemap of every public URL.',
+          tags: ['Feeds'],
+          responses: {
+            '200': {
+              description: 'Sitemap XML document.',
+              content: { 'application/xml': { schema: { $ref: '#/components/schemas/XmlDocument' } } },
+            },
+          },
+        },
+      },
+      '/.well-known/agents.json': {
+        get: {
+          operationId: 'getAgentsManifest',
+          summary: 'Agent capabilities manifest with when-to-use guidance.',
+          tags: ['Feeds'],
+          responses: {
+            '200': {
+              description: 'Agent instruction manifest.',
+              content: { 'application/json': { schema: { $ref: '#/components/schemas/AgentsManifest' } } },
             },
           },
         },
@@ -360,45 +173,131 @@ export function GET() {
     },
     components: {
       schemas: {
-        JsonRpcError: rpcErrorSchema,
-        McpInitializeResponse: mcpInitializeSchema,
-        McpToolsListResponse: mcpToolsListSchema,
-        McpToolCallResponse: {
+        JsonRpcError: {
           type: 'object',
           properties: {
             jsonrpc: { type: 'string', const: '2.0' },
-            id: { type: ['string', 'number'] },
-            result: {
+            id: { type: ['string', 'number', 'null'] },
+            error: {
               type: 'object',
               properties: {
-                content: {
-                  type: 'array',
-                  items: {
-                    type: 'object',
-                    properties: {
-                      type: { type: 'string', enum: ['text'] },
-                      text: { type: 'string' },
-                    },
-                    required: ['type', 'text'],
-                  },
-                },
-                isError: { type: 'boolean' },
+                code: { type: 'integer', description: 'JSON-RPC error code, e.g. -32700, -32600, -32601, -32602.' },
+                message: { type: 'string' },
               },
-              required: ['content'],
+              required: ['code', 'message'],
             },
           },
-          required: ['jsonrpc', 'id', 'result'],
+          required: ['jsonrpc', 'id', 'error'],
         },
-        McpPingResponse: {
+        McpRequest: {
           type: 'object',
           properties: {
             jsonrpc: { type: 'string', const: '2.0' },
-            id: { type: ['string', 'number'] },
-            result: { type: 'object', properties: {} },
+            id: { type: ['string', 'number'], description: 'Omit for notifications.' },
+            method: { type: 'string', enum: ['initialize', 'ping', 'tools/list', 'tools/call', 'notifications/initialized'] },
+            params: { type: 'object' },
           },
-          required: ['jsonrpc', 'id', 'result'],
+          required: ['jsonrpc', 'method'],
         },
-        SearchReportsResponse: searchReportsResultSchema,
+        McpServerInfo: {
+          type: 'object',
+          properties: {
+            name: { type: 'string', examples: ['veda.ng'] },
+            title: { type: 'string' },
+            version: { type: 'string' },
+          },
+          required: ['name', 'title', 'version'],
+        },
+        McpInitializeResult: {
+          type: 'object',
+          properties: {
+            protocolVersion: { type: 'string', examples: ['2025-06-18'] },
+            capabilities: {
+              type: 'object',
+              properties: {
+                tools: { type: 'object', properties: { listChanged: { type: 'boolean' } }, required: ['listChanged'] },
+              },
+              required: ['tools'],
+            },
+            serverInfo: { $ref: '#/components/schemas/McpServerInfo' },
+            instructions: { type: 'string' },
+          },
+          required: ['protocolVersion', 'capabilities', 'serverInfo', 'instructions'],
+        },
+        McpToolDefinition: {
+          type: 'object',
+          properties: {
+            name: { type: 'string' },
+            description: { type: 'string' },
+            inputSchema: {
+              type: 'object',
+              description: 'JSON Schema object describing accepted arguments.',
+              properties: {
+                type: { type: 'string', const: 'object' },
+                properties: { type: 'object' },
+                required: { type: 'array', items: { type: 'string' } },
+              },
+              required: ['type'],
+            },
+          },
+          required: ['name', 'description', 'inputSchema'],
+        },
+        McpToolsListResult: {
+          type: 'object',
+          properties: {
+            tools: { type: 'array', items: { $ref: '#/components/schemas/McpToolDefinition' } },
+          },
+          required: ['tools'],
+        },
+        McpTextContent: {
+          type: 'object',
+          properties: {
+            type: { type: 'string', enum: ['text'] },
+            text: { type: 'string' },
+          },
+          required: ['type', 'text'],
+        },
+        McpToolCallResult: {
+          type: 'object',
+          properties: {
+            content: { type: 'array', items: { $ref: '#/components/schemas/McpTextContent' } },
+            isError: { type: 'boolean', description: 'True when the tool failed; message is in content[0].text.' },
+          },
+          required: ['content'],
+        },
+        McpPingResult: {
+          type: 'object',
+          properties: {},
+        },
+        McpInitializeResponse: rpcEnvelope('McpInitializeResult'),
+        McpToolsListResponse: rpcEnvelope('McpToolsListResult'),
+        McpToolCallResponse: rpcEnvelope('McpToolCallResult'),
+        McpPingResponse: rpcEnvelope('McpPingResult'),
+        SearchReportsResponse: {
+          type: 'object',
+          properties: {
+            results: {
+              type: 'array',
+              items: {
+                type: 'object',
+                properties: {
+                  title: { type: 'string' },
+                  source: { type: 'string' },
+                  url: { type: 'string' },
+                  date: { type: 'string', description: 'Publication year.' },
+                  category: { type: 'string' },
+                  type: { type: 'string', examples: ['Paper'] },
+                  citations: { type: 'integer' },
+                },
+                required: ['title', 'source', 'url', 'date', 'category', 'type', 'citations'],
+              },
+            },
+            total: { type: 'integer' },
+            page: { type: 'integer' },
+            perPage: { type: 'integer' },
+          },
+          required: ['results', 'total', 'page', 'perPage'],
+        },
         McpDescriptor: {
           type: 'object',
           properties: {
@@ -413,14 +312,54 @@ export function GET() {
           },
           required: ['endpoint', 'transport', 'protocol_versions', 'stateless', 'authentication', 'tools', 'usage', 'docs'],
         },
+        PlainTextDocument: {
+          type: 'string',
+          description: 'UTF-8 plain text document.',
+        },
+        XmlDocument: {
+          type: 'string',
+          description: 'UTF-8 XML document.',
+        },
+        AgentsManifest: {
+          type: 'object',
+          properties: {
+            schema_version: { type: 'string' },
+            name: { type: 'string' },
+            description: { type: 'string' },
+            url: { type: 'string' },
+            when_to_use: { type: 'array', items: { type: 'string' } },
+            when_not_to_use: { type: 'array', items: { type: 'string' } },
+            how_to_use: { type: 'object' },
+            contact: { type: 'object' },
+            developer: { type: 'object' },
+          },
+          required: ['schema_version', 'name', 'url', 'when_to_use'],
+        },
       },
     },
-    'x-mcp-tools': Object.fromEntries(MCP_TOOLS.map((t) => [t.name, toolToOpenApiOperation(t.name)])),
+    'x-mcp-tools': MCP_TOOLS.map((t) => ({
+      name: t.name,
+      description: t.description,
+      inputSchema: { $ref: '#/components/schemas/McpToolDefinition' },
+      invoke: {
+        method: 'POST',
+        url: MCP_ENDPOINT,
+        body: {
+          jsonrpc: '2.0',
+          id: 1,
+          method: 'tools/call',
+          params: { name: t.name, arguments: '$inputSchema' },
+        },
+      },
+    })),
     'x-discovery': {
       llms_txt: LLMSTXT_URL,
+      llms_full_txt: LLMSFULLTXT_URL,
       sitemap: SITEMAP_URL,
       rss: RSS_URL,
       mcp_endpoint: MCP_ENDPOINT,
+      ai_catalog: `${SITE_URL}/.well-known/ai-catalog.json`,
+      agents_manifest: `${SITE_URL}/.well-known/agents.json`,
     },
   };
 

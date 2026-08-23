@@ -1,0 +1,58 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Vedang Vatsa Research Hub",
+    "identifier": "veda.ng"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:veda.ng:mcp-server:research-hub",
+      "displayName": "veda.ng Research Hub MCP Server",
+      "type": "application/mcp-server+json",
+      "url": "https://veda.ng/.well-known/mcp",
+      "description": "MCP server over Streamable HTTP (JSON-RPC 2.0). Tools: search_essays, get_essay, search_glossary, get_glossary_term, search_reports. Stateless, no authentication.",
+      "trustManifest": {
+        "identity": {
+          "type": "domain",
+          "value": "veda.ng"
+        },
+        "provenance": {
+          "publishedFrom": "https://veda.ng/developers"
+        }
+      }
+    },
+    {
+      "identifier": "urn:air:veda.ng:api:reports-search",
+      "displayName": "veda.ng Research Paper Search API",
+      "type": "application/openapi+json",
+      "url": "https://veda.ng/openapi.json",
+      "description": "OpenAPI 3.1 specification for the public research paper search API backed by OpenAlex (233,000+ indexed AI and Web3 papers).",
+      "trustManifest": {
+        "identity": {
+          "type": "domain",
+          "value": "veda.ng"
+        },
+        "provenance": {
+          "publishedFrom": "https://veda.ng/developers"
+        }
+      }
+    },
+    {
+      "identifier": "urn:air:veda.ng:api:content-index",
+      "displayName": "veda.ng LLM Content Index",
+      "type": "text/plain",
+      "url": "https://veda.ng/llms.txt",
+      "description": "Structured content index for LLMs: essays, courses, glossary, and research libraries with Markdown access via Accept negotiation.",
+      "trustManifest": {
+        "identity": {
+          "type": "domain",
+          "value": "veda.ng"
+        },
+        "provenance": {
+          "publishedFrom": "https://veda.ng/developers"
+        }
+      }
+    }
+  ],
+  "collections": []
+}

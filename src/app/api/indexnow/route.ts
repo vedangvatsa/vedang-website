@@ -80,7 +80,7 @@ async function getAllUrls(): Promise<string[]> {
 
   // Fallback to static list if sitemap fetch fails
   const urls = [
-    '/', '/essays', '/glossary', '/profile', '/media',
+    '/', '/essays', '/glossary', '/about', '/media',
     '/community', '/seo', '/lit', '/noslop', '/job-boards',
   ];
 

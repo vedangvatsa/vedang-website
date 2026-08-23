@@ -46,11 +46,11 @@ export const pageMetadata = {
     url: '/community',
     keywords: ['Community Building', 'Scaling Communities', 'Hashtag Web3', 'Web3 Community', 'Member Engagement', 'Growth Strategy'],
   },
-  profile: {
+  about: {
     title: 'Vedang Vatsa - Founder & AI Researcher',
     description:
       'Profile of Vedang Vatsa: founder of Hashtag Web3, speaker, researcher, and thought leader in AI and Web3.',
-    url: '/profile',
+    url: '/about',
     keywords: ['AI Thought Leaders', 'Top Web3 Speakers', 'Artificial Intelligence Expert', 'Web3 Keynote Speaker', 'Blockchain Thought Leaders', 'AI in Business', 'AI Innovation'],
   },
   media: {
@@ -116,11 +116,11 @@ export const pageMetadata = {
     url: '/ailib',
     keywords: ['AI Reports', 'AI Research Papers', 'State of AI', 'McKinsey AI', 'Stanford AI Index', 'AI Industry Reports', 'AI Governance', 'Generative AI Reports'],
   },
-  meeting: {
+  contact: {
     title: 'Book a Meeting with Vedang Vatsa',
     description:
       'Schedule a 1:1 conversation with Vedang Vatsa. Available for AI strategy, Web3 advisory, speaking engagements, and collaboration.',
-    url: '/meeting',
+    url: '/contact',
     keywords: ['Book Meeting', 'Schedule Call', 'Vedang Vatsa', 'AI Consulting', 'Web3 Advisory', 'Speaking Engagement'],
   },
   stateOfWeb3: {

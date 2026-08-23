@@ -8,7 +8,7 @@ const recoveryLinks = [
   { href: '/sitemap.xml', label: 'Sitemap' },
   { href: '/essays', label: 'Essays' },
   { href: '/glossary', label: 'Glossary' },
-  { href: '/meeting', label: 'Contact' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export default function NotFound() {

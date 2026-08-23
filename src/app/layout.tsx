@@ -122,7 +122,7 @@ const organizationSchema = {
     '@type': 'ContactPoint',
     email: 'vatsvedang@gmail.com',
     contactType: 'customer support',
-    url: 'https://veda.ng/meeting',
+    url: 'https://veda.ng/contact',
     availableLanguage: ['English'],
   },
   address: {

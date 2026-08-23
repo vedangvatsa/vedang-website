@@ -21,9 +21,9 @@ const STATIC_PAGES = [
   '/sitecheck',
   '/swarm-prediction',
   '/swarm-prediction/wiki',
-  '/profile',
+  '/about',
   '/media',
-  '/meeting',
+  '/contact',
   '/community',
   '/seo',
   '/lit',
@@ -33,7 +33,7 @@ const STATIC_PAGES = [
   '/developers',
 ];
 
-const MARKDOWN_STATIC_PAGES = ['/', '/essays', '/glossary', '/profile', '/privacy', '/meeting', '/developers'];
+const MARKDOWN_STATIC_PAGES = ['/', '/essays', '/glossary', '/about', '/privacy', '/contact', '/developers'];
 
 const AGENT_INFRA_PATHS = ['/md', '/.well-known/mcp'];
 

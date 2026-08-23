@@ -6,10 +6,10 @@ import { CalEmbed } from '@/components/cal-embed';
 import Link from 'next/link';
 
 export const metadata: Metadata = generateMetadata({
-  title: pageMetadata.meeting.title,
-  description: pageMetadata.meeting.description,
-  url: pageMetadata.meeting.url,
-  ogImage: '/og/meeting.png',
+  title: pageMetadata.contact.title,
+  description: pageMetadata.contact.description,
+  url: pageMetadata.contact.url,
+  ogImage: '/og/contact.png',
   ogImageAlt: 'Book a meeting with Vedang Vatsa',
 });
 
@@ -21,7 +21,7 @@ export default function MeetingPage() {
         showAvatar
       >
         <div className="mt-4 flex items-center justify-center gap-4 text-sm">
-          <Link href="/profile" className="text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4">
+          <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4">
             Profile
           </Link>
           <Link href="/essays" className="text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4">

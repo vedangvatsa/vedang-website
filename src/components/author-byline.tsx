@@ -11,7 +11,7 @@ interface AuthorBylineProps {
 export function AuthorByline({ links, socials = false }: AuthorBylineProps) {
   return (
     <div className="mt-8 flex items-center justify-center gap-3">
-      <Link href="/profile">
+      <Link href="/about">
         <img
           src="/images/ved.png"
           alt="Vedang Vatsa"
@@ -22,7 +22,7 @@ export function AuthorByline({ links, socials = false }: AuthorBylineProps) {
       </Link>
       <div className="flex items-center gap-0 text-sm">
         <Link
-          href="/profile"
+          href="/about"
           className="font-medium text-foreground hover:text-primary transition-colors"
         >
           Vedang Vatsa

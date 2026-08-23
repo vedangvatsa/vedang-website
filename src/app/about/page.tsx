@@ -22,9 +22,9 @@ import { Button } from '@/components/ui/button';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = generateMetadata({
-  title: pageMetadata.profile.title,
-  description: pageMetadata.profile.description,
-  url: pageMetadata.profile.url,
+  title: pageMetadata.about.title,
+  description: pageMetadata.about.description,
+  url: pageMetadata.about.url,
   ogImageAlt: 'Vedang Vatsa - Full Profile',
 });
 
@@ -32,7 +32,7 @@ const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Vedang Vatsa',
-  url: 'https://veda.ng/profile',
+  url: 'https://veda.ng/about',
   image: 'https://veda.ng/images/icon.png',
   jobTitle: ['Founder', 'AI Researcher', 'Web3 Innovator', 'Entrepreneur'],
   worksFor: {

@@ -1,5 +1,6 @@
 import { PageLayout } from '@/components/page-layout';
 import { PageHero } from '@/components/page-hero';
+import { ContentSection, SectionParagraph } from '@/components/content-section';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { PRIVACY_INTRO, PRIVACY_SECTIONS } from '@/lib/trust-content';
@@ -36,17 +37,14 @@ export default function PrivacyPage() {
       <PageHero title="Privacy Policy" subtitle={PRIVACY_INTRO} />
       <article className="pb-16">
         {PRIVACY_SECTIONS.map((section) => (
-          <section key={section.heading} className="mb-8">
-            <h2 className="text-xl md:text-2xl font-semibold tracking-tight mb-3">{section.heading}</h2>
+          <ContentSection key={section.heading} heading={section.heading}>
             {section.paragraphs.map((paragraph, i) => (
-              <p key={i} className="text-muted-foreground leading-relaxed mb-3">
-                {paragraph}
-              </p>
+              <SectionParagraph key={i}>{paragraph}</SectionParagraph>
             ))}
-          </section>
+          </ContentSection>
         ))}
         <p className="text-sm text-muted-foreground">
-          Questions about this policy? The <Link href="/meeting" className="underline underline-offset-4 hover:text-foreground">meeting page</Link> lists every way to reach the site owner.
+          Questions about this policy? The <Link href="/contact" className="underline underline-offset-4 hover:text-foreground">contact page</Link> lists every way to reach the site owner.
         </p>
       </article>
     </PageLayout>

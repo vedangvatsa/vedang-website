@@ -8,7 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const TARGET_HOST = 'http://localhost:3000';
 const ROUTES = [
   '/',
-  '/profile',
+  '/about',
   '/essays',
   '/ailib',
   '/web3lib',

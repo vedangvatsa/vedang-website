@@ -9,7 +9,7 @@ export default async function Image() {
   return generateTerminalOgImage(
     'Vedang',
     'Vatsa FRSA',
-    'veda.ng/profile',
+    'veda.ng/about',
     [
       { text: 'Computer Engineer', color: 'success' },
       { text: 'MBA, Chartered Eng', color: 'success' },

@@ -272,7 +272,7 @@ export function buildMeetingOgImage() {
   return generateTerminalOgImage(
     'Book a',
     'Meeting',
-    'veda.ng/meeting',
+    'veda.ng/contact',
     [
       { text: '$ book 30 min', color: 'command' },
       { text: 'AI strategy', color: 'success' },
@@ -284,7 +284,7 @@ export function buildMeetingOgImage() {
 
 export function buildPageOgImage(slug: string) {
   const cleanSlug = slug.replace(/\.png$/i, '');
-  if (cleanSlug === 'meeting') return buildMeetingOgImage();
+  if (cleanSlug === 'contact') return buildMeetingOgImage();
   return buildEssayOgImage(cleanSlug);
 }
 

@@ -252,7 +252,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
     author: {
       '@type': 'Person',
       name: essay.frontmatter.author || 'Vedang Vatsa',
-      url: 'https://veda.ng/profile',
+      url: 'https://veda.ng/about',
       image: 'https://veda.ng/images/icon.png',
       jobTitle: 'AI & Web3 Researcher',
       sameAs: [

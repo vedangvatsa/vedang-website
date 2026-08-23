@@ -20,8 +20,8 @@ import {
   LLMSTXT_URL,
   LLMSFULLTXT_URL,
   MCP_ENDPOINT,
-  MEETING_PATH,
-  MEETING_URL,
+  CONTACT_PATH,
+  CONTACT_URL,
   OPENAPI_URL,
   SITE_NAME,
   SITE_URL,
@@ -130,7 +130,7 @@ function homeMarkdown(): string {
     `- Developer resources: ${SITE_URL}/developers`,
     `- MCP server (Streamable HTTP): ${MCP_ENDPOINT}`,
     `- OpenAPI spec: ${OPENAPI_URL}`,
-    `- Contact: ${MEETING_URL} or ${CONTACT_EMAIL}`,
+    `- Contact: ${CONTACT_URL} or ${CONTACT_EMAIL}`,
     '',
     MARKDOWN_NEGOTIATION_TIP,
   ].join('\n');
@@ -159,7 +159,7 @@ function glossaryIndexMarkdown(): string {
 }
 
 function profileMarkdown(): string {
-  return [`# ${PROFILE_SUMMARY.heading}`, '', frontmatterFor(PROFILE_SUMMARY.heading, '/profile').trimEnd(), '', sectionsToMarkdown(PROFILE_SUMMARY.paragraphs.join('\n\n'), [])].join('\n');
+  return [`# ${PROFILE_SUMMARY.heading}`, '', frontmatterFor(PROFILE_SUMMARY.heading, '/about').trimEnd(), '', sectionsToMarkdown(PROFILE_SUMMARY.paragraphs.join('\n\n'), [])].join('\n');
 }
 
 function privacyMarkdown(): string {
@@ -176,7 +176,7 @@ function meetingContactMarkdown(): string {
   return [
     '# Contact Vedang Vatsa',
     '',
-    frontmatterFor('Contact', MEETING_PATH).trimEnd(),
+    frontmatterFor('Contact', CONTACT_PATH).trimEnd(),
     '',
     sectionsToMarkdown(CONTACT_INTRO, CONTACT_SECTIONS),
   ].join('\n');
@@ -219,11 +219,11 @@ export function getMarkdownForPath(pathname: string): string | null {
       return essaysIndexMarkdown();
     case '/glossary':
       return glossaryIndexMarkdown();
-    case '/profile':
+    case '/about':
       return profileMarkdown();
     case '/privacy':
       return privacyMarkdown();
-    case '/meeting':
+    case '/contact':
       return meetingContactMarkdown();
     case '/developers':
       return developersMarkdown();
@@ -254,7 +254,7 @@ export function getAgentNotFoundMarkdown(pathname: string): string {
     `- [HTML sitemap of every page](${SITEMAP_URL})`,
     `- [Essays](https://veda.ng/essays) and [Glossary](https://veda.ng/glossary)`,
     `- [Developer resources and API docs](${SITE_URL}/developers)`,
-    `- [Contact or book a meeting](${MEETING_URL})`,
+    `- [Contact or book a meeting](${CONTACT_URL})`,
     '',
     MARKDOWN_NEGOTIATION_TIP,
   ].join('\n');

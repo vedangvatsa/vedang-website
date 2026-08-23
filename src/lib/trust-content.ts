@@ -48,7 +48,7 @@ export const PRIVACY_SECTIONS: ContentSection[] = [
   {
     heading: 'Booking a meeting',
     paragraphs: [
-      'When you book a call through the embedded Cal.com scheduler on /meeting, the booking details you type (name, email, notes) go to Cal.com as the processor and to Vedang Vatsa as the recipient. They are used only to run the scheduled conversation and are not added to any marketing list.',
+      'When you book a call through the embedded Cal.com scheduler on /contact, the booking details you type (name, email, notes) go to Cal.com as the processor and to Vedang Vatsa as the recipient. They are used only to run the scheduled conversation and are not added to any marketing list.',
     ],
   },
   {
@@ -76,7 +76,7 @@ export const PROFILE_SUMMARY = {
   paragraphs: [
     'Vedang Vatsa FRSA is the founder of Hashtag Web3, a community of more than 120,000 AI and Web3 professionals, and of CVinBio. He is a computer engineer with an MBA, a Chartered Engineer, and a Fellow of the Royal Society of Arts. He was named Young Researcher 2020 with 25 publications and won the Young Achiever 2020-21 award.',
     'He writes data-driven essays on AI agents, AI policy, and Web3 infrastructure, teaches six free courses including Vibe Coding 101 and MCP Development 101, and maintains a glossary of more than 100 technical terms. His peer-reviewed work covers stablecoins, blockchain ecosystems, and digital governance, with papers in SSRN and IEEE venues.',
-    `Full profile: ${SITE_URL}/profile. Speaking history: ${SITE_URL}/media. Book a conversation: ${SITE_URL}/meeting.`,
+    `Full profile: ${SITE_URL}/about. Speaking history: ${SITE_URL}/media. Book a conversation: ${SITE_URL}/contact.`,
   ],
 };
 
