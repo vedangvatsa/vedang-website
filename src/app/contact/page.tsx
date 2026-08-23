@@ -30,6 +30,9 @@ export default function MeetingPage() {
           <Link href="/media" className="text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4">
             Media
           </Link>
+          <a href="mailto:vatsvedang@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4">
+            Email
+          </a>
         </div>
       </PageHero>
 
