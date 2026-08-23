@@ -2637,9 +2637,11 @@
     "id": "viral-rewrite-153",
     "scheduleDate": "2026-08-21",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "We often bet on confidence and miss potential. Arrogance is loud. Growth mindset is quiet. The second is the better long-term investment. Find teams that spot potential at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_13_1.jpg"
+    "image": "scripts/post-images/post_13_1.jpg",
+    "postedAt": "2026-08-23T11:53:22.815Z",
+    "castHash": "0x83484df20f673e796e29594b7a36cbef8ffec796"
   },
   {
     "id": "viral-rewrite-154",
