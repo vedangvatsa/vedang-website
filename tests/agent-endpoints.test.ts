@@ -30,6 +30,20 @@ describe('Agent & Machine Endpoints', () => {
     assert.equal(parsed.result.serverInfo.name, 'veda.ng');
   });
 
+  test('MCP JSON-RPC handles tools/list and batch calls', async () => {
+    const batch = JSON.stringify([
+      { jsonrpc: '2.0', id: 10, method: 'tools/list' },
+      { jsonrpc: '2.0', id: 20, method: 'ping' },
+    ]);
+    const res = await handleMcpPost(batch);
+    assert.equal(res.status, 200);
+    const parsed = JSON.parse(res.body || '[]');
+    assert.equal(parsed.length, 2);
+    assert.equal(parsed[0].id, 10);
+    assert.ok(Array.isArray(parsed[0].result.tools));
+    assert.equal(parsed[1].id, 20);
+  });
+
   test('Standard API headers include RFC rate-limit and deprecation info', () => {
     const headers = getStandardApiHeaders({ idempotencyKey: 'test-key-123' });
     assert.equal(headers['RateLimit-Limit'], '60');

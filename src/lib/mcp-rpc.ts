@@ -64,8 +64,9 @@ export function negotiateProtocolVersion(requested: unknown): string {
     if (clean === '2024-11-05' || clean === '2024-10-07') return '2024-11-05';
     if (clean === '2025-03-26') return '2025-03-26';
     if (clean === '2025-06-18' || clean === 'latest' || clean === '1.0') return '2025-06-18';
+    return clean;
   }
-  return DEFAULT_PROTOCOL_VERSION;
+  return LATEST_PROTOCOL_VERSION;
 }
 
 async function dispatch(method: string, params: Record<string, unknown> | undefined): Promise<unknown> {
@@ -127,45 +128,79 @@ export interface McpHttpResult {
 }
 
 export async function handleMcpPost(rawBody: string | null): Promise<McpHttpResult> {
-  let message: unknown;
-  try {
-    message = JSON.parse(rawBody ?? '');
-  } catch {
-    return { status: 200, body: JSON.stringify(failure(null, PARSE_ERROR, 'Parse error')) };
+  if (!rawBody || rawBody.trim() === '') {
+    return { status: 200, body: JSON.stringify(failure(null, PARSE_ERROR, 'Parse error: empty request body')) };
   }
 
-  if (message === null || typeof message !== 'object' || Array.isArray(message)) {
+  let message: unknown;
+  try {
+    message = JSON.parse(rawBody);
+  } catch {
+    return { status: 200, body: JSON.stringify(failure(null, PARSE_ERROR, 'Parse error: invalid JSON')) };
+  }
+
+  // Support JSON-RPC 2.0 batch requests
+  if (Array.isArray(message)) {
+    const results = await Promise.all(
+      message.map(async (msg) => {
+        if (!msg || typeof msg !== 'object') {
+          return failure(null, INVALID_REQUEST, 'Invalid Request');
+        }
+        const { method, id, params } = msg as { method?: unknown; id?: unknown; params?: unknown };
+        if (typeof method !== 'string') {
+          return failure(isValidId(id) ? id : null, INVALID_REQUEST, 'Invalid Request');
+        }
+        if (method.startsWith('notifications/')) {
+          return null;
+        }
+        const effectiveId = isValidId(id) ? id : 1;
+        try {
+          const res = await dispatch(method, params as Record<string, unknown> | undefined);
+          return success(effectiveId, res);
+        } catch (err) {
+          const rpcErr = err as { rpcCode?: number; message?: string };
+          return failure(effectiveId, rpcErr?.rpcCode ?? INVALID_REQUEST, rpcErr?.message ?? 'Internal error');
+        }
+      })
+    );
+    const nonNull = results.filter(Boolean);
+    return {
+      status: 200,
+      body: nonNull.length > 0 ? JSON.stringify(nonNull) : null,
+      negotiatedVersion: LATEST_PROTOCOL_VERSION,
+    };
+  }
+
+  if (message === null || typeof message !== 'object') {
     return { status: 200, body: JSON.stringify(failure(null, INVALID_REQUEST, 'Invalid Request')) };
   }
 
   const { method, id, params } = message as { method?: unknown; id?: unknown; params?: unknown };
 
   if (typeof method !== 'string') {
-    return { status: 200, body: JSON.stringify(failure(isValidId(id) ? id : null, INVALID_REQUEST, 'Invalid Request')) };
+    return { status: 200, body: JSON.stringify(failure(isValidId(id) ? id : null, INVALID_REQUEST, 'Invalid Request: method is required')) };
   }
 
   if (method === 'notifications/initialized' || method.startsWith('notifications/')) {
     return { status: 202, body: null };
   }
 
-  if (id === undefined || id === null) {
-    return { status: 202, body: null };
-  }
-
-  if (!isValidId(id)) {
-    return { status: 200, body: JSON.stringify(failure(null, INVALID_REQUEST, 'Invalid Request: invalid id')) };
-  }
+  const effectiveId = isValidId(id) ? id : 1;
 
   try {
     const result = await dispatch(method, (params ?? undefined) as Record<string, unknown> | undefined);
     const negotiatedVersion = method === 'initialize' ? (result as { protocolVersion?: string })?.protocolVersion : undefined;
-    return { status: 200, body: JSON.stringify(success(id, result)), negotiatedVersion };
+    return {
+      status: 200,
+      body: JSON.stringify(success(effectiveId, result)),
+      negotiatedVersion: negotiatedVersion ?? LATEST_PROTOCOL_VERSION,
+    };
   } catch (err) {
     const rpcErr = err as { rpcCode?: number; message?: string };
     if (rpcErr && typeof rpcErr.rpcCode === 'number') {
-      return { status: 200, body: JSON.stringify(failure(id, rpcErr.rpcCode, rpcErr.message ?? 'Tool error')) };
+      return { status: 200, body: JSON.stringify(failure(effectiveId, rpcErr.rpcCode, rpcErr.message ?? 'Tool error')) };
     }
-    return { status: 200, body: JSON.stringify(failure(id, INVALID_REQUEST, 'Internal error while handling request.')) };
+    return { status: 200, body: JSON.stringify(failure(effectiveId, INVALID_REQUEST, 'Internal error while handling request.')) };
   }
 }
 
@@ -174,10 +209,20 @@ export function mcpEndpointDescriptor(): string {
     {
       endpoint: MCP_ENDPOINT,
       transport: 'Streamable HTTP (JSON-RPC 2.0 over POST)',
+      protocol_version: LATEST_PROTOCOL_VERSION,
       protocol_versions: SUPPORTED_PROTOCOL_VERSIONS,
       stateless: true,
       authentication: 'none',
+      capabilities: {
+        tools: { listChanged: false },
+        resources: { subscribe: false, listChanged: false },
+        prompts: { listChanged: false },
+        logging: {},
+      },
+      serverInfo: SERVER_INFO,
+      instructions: SERVER_INSTRUCTIONS,
       tools: MCP_TOOLS.map((t) => t.name),
+      tool_definitions: MCP_TOOLS,
       usage: `Send POST ${MCP_ENDPOINT} with Content-Type: application/json and body {"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"${DEFAULT_PROTOCOL_VERSION}","capabilities":{},"clientInfo":{"name":"your-client","version":"1.0"}}}`,
       docs: `${SITE_URL}/developers`,
     },

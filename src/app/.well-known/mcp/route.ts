@@ -30,7 +30,25 @@ export async function HEAD() {
   });
 }
 
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const accept = (request.headers.get('accept') ?? '').toLowerCase();
+
+  // If client requested SSE stream, respond with SSE endpoint announcement
+  if (accept.includes('text/event-stream')) {
+    const ssePayload = `event: endpoint\ndata: https://veda.ng/.well-known/mcp\n\n`;
+    return new Response(ssePayload, {
+      status: 200,
+      headers: withCors({
+        'Content-Type': 'text/event-stream; charset=utf-8',
+        'Cache-Control': 'no-cache, no-transform',
+        'Connection': 'keep-alive',
+        'Mcp-Protocol-Version': DEFAULT_PROTOCOL_VERSION,
+        'Mcp-Session-Id': 'default',
+      }),
+    });
+  }
+
+  // Standard JSON descriptor
   return new Response(mcpEndpointDescriptor(), {
     status: 200,
     headers: withCors({
@@ -86,13 +104,32 @@ export async function POST(request: NextRequest) {
   const result = await handleMcpPost(rawBody);
   const activeVersion = result.negotiatedVersion || protocolVersion;
 
-  const headers = withCors({
-    'Content-Type': 'application/json; charset=utf-8',
+  const baseHeaders = withCors({
     'Mcp-Protocol-Version': activeVersion,
+    'Mcp-Session-Id': 'default',
   });
 
   if (result.body === null) {
-    return new Response(null, { status: 202, headers });
+    return new Response(null, { status: 202, headers: baseHeaders });
   }
-  return new Response(result.body, { status: result.status, headers });
+
+  if (accept.includes('text/event-stream')) {
+    const sseData = `event: message\ndata: ${result.body}\n\n`;
+    return new Response(sseData, {
+      status: result.status,
+      headers: withCors({
+        ...baseHeaders,
+        'Content-Type': 'text/event-stream; charset=utf-8',
+        'Cache-Control': 'no-cache, no-transform',
+      }),
+    });
+  }
+
+  return new Response(result.body, {
+    status: result.status,
+    headers: withCors({
+      ...baseHeaders,
+      'Content-Type': 'application/json; charset=utf-8',
+    }),
+  });
 }

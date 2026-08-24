@@ -1,6 +1,6 @@
-# Authentication for veda.ng
+# Veda Authentication & Security Specification (veda.ng)
 
-All public machine interfaces, research search APIs, and MCP servers on veda.ng are **open, keyless, and require no authentication**.
+All public machine interfaces, research search APIs, OpenAPI endpoints, and MCP servers on Veda (veda.ng) are **open, keyless, and require no authentication**.
 
 ## Discover
 

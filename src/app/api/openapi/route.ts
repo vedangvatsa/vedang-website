@@ -275,7 +275,7 @@ export function GET() {
               description: 'Job status payload.',
               headers: {
                 'Location': { schema: { type: 'string' }, description: 'Job status URI.' },
-                'Retry-After': { schema: { type: 'integer' } },
+                'Retry-After': { schema: { type: 'integer' }, description: 'Recommended polling interval in seconds.' },
               },
               content: { 'application/json': { schema: { $ref: '#/components/schemas/AsyncJobResponse' } } },
             },
@@ -309,15 +309,7 @@ export function GET() {
               },
               content: {
                 'application/json': {
-                  schema: {
-                    oneOf: [
-                      { $ref: '#/components/schemas/McpInitializeResponse' },
-                      { $ref: '#/components/schemas/McpToolsListResponse' },
-                      { $ref: '#/components/schemas/McpToolCallResponse' },
-                      { $ref: '#/components/schemas/McpPingResponse' },
-                      { $ref: '#/components/schemas/JsonRpcError' },
-                    ],
-                  },
+                  schema: { $ref: '#/components/schemas/McpRpcResponse' },
                 },
               },
             },
@@ -698,6 +690,38 @@ export function GET() {
           properties: {
             status: { type: 'string', default: 'ok' },
           },
+        },
+        McpRpcResponse: {
+          type: 'object',
+          description: 'Standard JSON-RPC 2.0 response object for MCP operations.',
+          properties: {
+            jsonrpc: { type: 'string', enum: ['2.0'], description: 'JSON-RPC version.' },
+            id: { type: 'string', nullable: true, description: 'Request identifier.' },
+            result: {
+              type: 'object',
+              description: 'Result payload from MCP method execution.',
+              properties: {
+                protocolVersion: { type: 'string', description: 'Negotiated MCP protocol version.' },
+                capabilities: { type: 'object', description: 'Server capabilities dictionary.' },
+                serverInfo: { $ref: '#/components/schemas/McpServerInfo' },
+                instructions: { type: 'string', description: 'Server usage instructions.' },
+                tools: { type: 'array', items: { $ref: '#/components/schemas/McpToolDefinition' }, description: 'List of available tools.' },
+                resources: { type: 'array', items: { type: 'object' }, description: 'List of available resources.' },
+                prompts: { type: 'array', items: { type: 'object' }, description: 'List of available prompts.' },
+                content: { type: 'array', items: { $ref: '#/components/schemas/McpTextContent' }, description: 'Tool call output content.' },
+                isError: { type: 'boolean', description: 'Whether the tool execution encountered an error.' },
+              },
+            },
+            error: {
+              type: 'object',
+              description: 'Error details if request failed.',
+              properties: {
+                code: { type: 'integer', description: 'JSON-RPC error code.' },
+                message: { type: 'string', description: 'Error message.' },
+              },
+            },
+          },
+          required: ['jsonrpc'],
         },
         McpInitializeResponse: rpcEnvelope('McpInitializeResult'),
         McpToolsListResponse: rpcEnvelope('McpToolsListResult'),
