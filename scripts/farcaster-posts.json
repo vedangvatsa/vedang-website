@@ -2669,8 +2669,10 @@
     "id": "viral-rewrite-156",
     "scheduleDate": "2026-08-22",
     "scheduleTime": "01:00",
-    "posted": false,
+    "posted": true,
     "text": "You can't fix a toxic culture from the bottom if the top isn't interested. The best move is to protect yourself and the people around you. Your well-being is your job too. Find teams where you don't have to choose at cvin.bio/jobs/li",
-    "image": "scripts/post-images/post_47_1.jpg"
+    "image": "scripts/post-images/post_47_1.jpg",
+    "postedAt": "2026-08-24T19:58:49.677Z",
+    "castHash": "0xe9709e014c3987e443e0765a3598b1198479993f"
   }
 ]
