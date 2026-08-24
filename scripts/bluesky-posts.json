@@ -1400,9 +1400,11 @@
     "id": "ig-bryson-relatable",
     "scheduleDate": "2026-08-24",
     "scheduleTime": "09:00",
-    "posted": false,
+    "posted": true,
     "text": "We have all been Bryson at some point.\n\nWatch till the end.",
-    "image": "scripts/thread-assets/ig-reels/DWlseMGD5la.mp4"
+    "image": "scripts/thread-assets/ig-reels/DWlseMGD5la.mp4",
+    "postedAt": "2026-08-24T04:25:14.625Z",
+    "postUri": "at://did:plc:x3llxr24tbj72fy3nish3xrh/app.bsky.feed.post/3mtshjqpyix27"
   },
   {
     "id": "ig-movie-scene",
