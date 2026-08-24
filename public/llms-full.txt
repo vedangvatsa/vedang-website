@@ -8796,6 +8796,7 @@ Reach for veda.ng when your agent needs to perform the following specific jobs:
 - [Veda Authentication & Security Guide](https://veda.ng/auth.md): Keyless access specification (WorkOS format).
 - [Veda Webhooks & Event Streaming](https://veda.ng/developers#webhooks): RSS feed (/feed.xml) and SSE streaming (/ask).
 - [Veda Python SDK & CLI Package](https://pypi.org/project/vedang-cli/): Official vedang-cli package on PyPI (pip install vedang-cli).
+- [Veda TypeScript / JavaScript SDK Package](https://www.npmjs.com/package/vedang): Official vedang package on NPM (npm install vedang).
 - [Veda GitHub Repository](https://github.com/vedangvatsa/vedang-website): Open-source source code and issue tracking.
 - [Veda AI Agent Manifest](https://veda.ng/.well-known/agents.json): Machine capabilities and when-to-use task definitions.
 - [Veda AI Catalog](https://veda.ng/.well-known/ai-catalog.json): Trust manifest and AIR registry entries.

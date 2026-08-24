@@ -42,10 +42,11 @@ const developersSchema = {
     'Veda MCP Server',
     'Veda OpenAPI Specification',
     'veda.ng Developer Resources',
+    'Veda SDK Packages',
   ],
   url: 'https://veda.ng/developers',
   description:
-    'Official developer and machine interfaces for Veda (veda.ng): public report search API, MCP server over Streamable HTTP, OpenAPI specification, Python SDK, RSS feed, sitemap, and agent discovery files.',
+    'Official developer and machine interfaces for Veda (veda.ng): public report search API, MCP server over Streamable HTTP, OpenAPI specification, Python SDK (vedang-cli), NPM SDK (vedang), RSS feed, sitemap, and agent discovery files.',
   inLanguage: 'en-US',
   author: {
     '@type': 'Person',
@@ -54,13 +55,66 @@ const developersSchema = {
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Hashtag Web3',
-    url: 'https://hashtagweb3.com',
+    name: 'Veda',
+    alternateName: ['veda.ng', 'Vedang Vatsa', 'Hashtag Web3'],
+    url: 'https://veda.ng',
     sameAs: [
-      'https://linkedin.com/company/hashtagweb3',
-      'https://www.linkedin.com/company/hashtagweb3',
+      'https://github.com/vedangvatsa/vedang-website',
+      'https://pypi.org/project/vedang-cli/',
+      'https://www.npmjs.com/package/vedang',
       'https://hashtagweb3.com',
+      'https://cvin.bio',
     ],
+  },
+};
+
+const devWebAPISchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebAPI',
+  name: 'Veda Public REST API & MCP Server',
+  url: 'https://veda.ng/developers',
+  documentation: 'https://veda.ng/developers',
+  termsOfService: 'https://veda.ng/privacy',
+  provider: {
+    '@type': 'Organization',
+    name: 'Veda',
+    url: 'https://veda.ng',
+  },
+};
+
+const devPyPISchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'vedang-cli',
+  alternateName: ['Veda Python SDK', 'Veda CLI'],
+  applicationCategory: 'DeveloperApplication',
+  operatingSystem: 'All',
+  url: 'https://pypi.org/project/vedang-cli/',
+  downloadUrl: 'https://pypi.org/project/vedang-cli/',
+  installUrl: 'https://pypi.org/project/vedang-cli/',
+  softwareVersion: '1.0.0',
+  author: {
+    '@type': 'Person',
+    name: 'Vedang Vatsa',
+    url: 'https://veda.ng/about',
+  },
+};
+
+const devNPMSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'vedang',
+  alternateName: ['Veda NPM Package', 'Veda TypeScript SDK'],
+  applicationCategory: 'DeveloperApplication',
+  operatingSystem: 'All',
+  url: 'https://www.npmjs.com/package/vedang',
+  downloadUrl: 'https://www.npmjs.com/package/vedang',
+  installUrl: 'https://www.npmjs.com/package/vedang',
+  softwareVersion: '1.0.0',
+  author: {
+    '@type': 'Person',
+    name: 'Vedang Vatsa',
+    url: 'https://veda.ng/about',
   },
 };
 
@@ -98,6 +152,18 @@ export default function DevelopersPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(developersSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(devWebAPISchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(devPyPISchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(devNPMSchema) }}
       />
       <BreadcrumbSchema items={[{ name: "Developers", url: "https://veda.ng/developers" }]} />
 
@@ -177,10 +243,10 @@ export default function DevelopersPage() {
                 <a
                   href="https://pypi.org/project/vedang-cli/"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline underline-offset-4 hover:text-foreground"
+                  rel="package noopener noreferrer"
+                  className="underline underline-offset-4 hover:text-foreground font-medium"
                 >
-                  pypi.org/project/vedang-cli
+                  pypi.org/project/vedang-cli (vedang-cli)
                 </a>
               </p>
             </div>
@@ -192,10 +258,10 @@ export default function DevelopersPage() {
                 <a
                   href="https://www.npmjs.com/package/vedang"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline underline-offset-4 hover:text-foreground"
+                  rel="package noopener noreferrer"
+                  className="underline underline-offset-4 hover:text-foreground font-medium"
                 >
-                  npmjs.com/package/vedang
+                  npmjs.com/package/vedang (vedang)
                 </a>
               </p>
             </div>

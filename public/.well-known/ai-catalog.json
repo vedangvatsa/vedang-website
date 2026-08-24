@@ -36,6 +36,18 @@
       }
     },
     {
+      "identifier": "urn:air:veda.ng:npm:vedang",
+      "displayName": "vedang (Official NPM TypeScript/JS SDK)",
+      "type": "application/x-npm-package",
+      "url": "https://www.npmjs.com/package/vedang",
+      "description": "Official TypeScript and JavaScript SDK package for veda.ng developer resources.",
+      "trustManifest": {
+        "verified": true,
+        "verificationMethod": "direct",
+        "attestation": "urn:air:attestation:self-hosted"
+      }
+    },
+    {
       "identifier": "urn:air:veda.ng:api:reports-search",
       "displayName": "veda.ng Research Paper Search API",
       "type": "application/openapi+json",

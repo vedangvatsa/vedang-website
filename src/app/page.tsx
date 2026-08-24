@@ -113,6 +113,7 @@ export default function Home() {
           <li><Link href="/openapi.json">Veda OpenAPI Specification (/openapi.json)</Link></li>
           <li><Link href="/.well-known/mcp">Veda MCP Server (Model Context Protocol over Streamable HTTP)</Link></li>
           <li><a href="https://pypi.org/project/vedang-cli/" rel="package sdk">Veda Python SDK & CLI: vedang-cli on PyPI</a></li>
+          <li><a href="https://www.npmjs.com/package/vedang" rel="package sdk">Veda TypeScript & JavaScript SDK: vedang on NPM</a></li>
           <li><Link href="/auth.md">Veda Authentication & Security Specification</Link></li>
           <li><Link href="/developers#webhooks">Veda Webhooks & Event Streaming</Link></li>
           <li><Link href="/api">Veda Public REST API Directory (/api)</Link></li>

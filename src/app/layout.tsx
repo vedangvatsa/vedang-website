@@ -106,20 +106,74 @@ const webPageSchema = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Hashtag Web3',
-  url: 'https://hashtagweb3.com',
+  name: 'Veda',
+  alternateName: ['veda.ng', 'Vedang Vatsa', 'Hashtag Web3', 'Veda Research Hub'],
+  url: 'https://veda.ng',
   logo: 'https://veda.ng/images/icon.png',
-  description: 'A global community of 120,000+ professionals in AI and Web3.',
-  sameAs: [
-    'https://linkedin.com/company/hashtagweb3',
-    'https://www.linkedin.com/company/hashtagweb3',
-    'https://github.com/vedangvatsa',
-    'https://hashtagweb3.com',
-  ],
+  description: 'Official AI and Web3 research publication, developer API, and tool platform created by Vedang Vatsa.',
   founder: {
     '@type': 'Person',
     name: 'Vedang Vatsa',
-    url: 'https://veda.ng',
+    url: 'https://veda.ng/about',
+  },
+  sameAs: [
+    'https://github.com/vedangvatsa/vedang-website',
+    'https://pypi.org/project/vedang-cli/',
+    'https://www.npmjs.com/package/vedang',
+    'https://hashtagweb3.com',
+    'https://cvin.bio',
+    'https://linkedin.com/in/vedangvatsa',
+    'https://x.com/vedangvatsa',
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Veda Developer Resources & SDKs',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'WebAPI',
+          name: 'Veda Public REST API',
+          description: 'Keyless, open-access research API indexing 233,000+ academic papers.',
+          url: 'https://veda.ng/developers',
+          documentation: 'https://veda.ng/developers',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'SoftwareApplication',
+          name: 'Veda MCP Server',
+          description: 'Model Context Protocol (MCP) server over Streamable HTTP.',
+          url: 'https://veda.ng/.well-known/mcp',
+          applicationCategory: 'DeveloperApplication',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'SoftwareApplication',
+          name: 'vedang-cli (PyPI Python SDK)',
+          description: 'Official Python SDK and CLI package for Veda research tools.',
+          url: 'https://pypi.org/project/vedang-cli/',
+          downloadUrl: 'https://pypi.org/project/vedang-cli/',
+          applicationCategory: 'DeveloperApplication',
+          operatingSystem: 'All',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'SoftwareApplication',
+          name: 'vedang (NPM TypeScript SDK)',
+          description: 'Official TypeScript and JavaScript SDK package for Veda developer resources.',
+          url: 'https://www.npmjs.com/package/vedang',
+          downloadUrl: 'https://www.npmjs.com/package/vedang',
+          applicationCategory: 'DeveloperApplication',
+          operatingSystem: 'All',
+        },
+      },
+    ],
   },
   contactPoint: {
     '@type': 'ContactPoint',
@@ -132,6 +186,59 @@ const organizationSchema = {
     '@type': 'PostalAddress',
     addressCountry: 'SG',
   },
+};
+
+const sdkSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'SoftwareApplication',
+      name: 'vedang-cli',
+      alternateName: ['Veda Python SDK', 'Veda CLI', 'vedang-cli PyPI package'],
+      operatingSystem: 'All',
+      applicationCategory: 'DeveloperApplication',
+      softwareVersion: '1.0.0',
+      description: 'Official Python SDK and CLI package for Veda (veda.ng) research APIs and essays.',
+      url: 'https://pypi.org/project/vedang-cli/',
+      downloadUrl: 'https://pypi.org/project/vedang-cli/',
+      installUrl: 'https://pypi.org/project/vedang-cli/',
+      author: {
+        '@type': 'Person',
+        name: 'Vedang Vatsa',
+        url: 'https://veda.ng/about',
+      },
+    },
+    {
+      '@type': 'SoftwareApplication',
+      name: 'vedang',
+      alternateName: ['Veda NPM Package', 'Veda TypeScript SDK', 'vedang npm package'],
+      operatingSystem: 'All',
+      applicationCategory: 'DeveloperApplication',
+      softwareVersion: '1.0.0',
+      description: 'Official TypeScript and JavaScript SDK package for Veda (veda.ng) developer resources.',
+      url: 'https://www.npmjs.com/package/vedang',
+      downloadUrl: 'https://www.npmjs.com/package/vedang',
+      installUrl: 'https://www.npmjs.com/package/vedang',
+      author: {
+        '@type': 'Person',
+        name: 'Vedang Vatsa',
+        url: 'https://veda.ng/about',
+      },
+    },
+    {
+      '@type': 'WebAPI',
+      name: 'Veda Developer API & MCP Server',
+      alternateName: ['Veda API', 'Veda Developer Resources', 'Veda OpenAPI Specification', 'Veda MCP Server'],
+      url: 'https://veda.ng/developers',
+      documentation: 'https://veda.ng/developers',
+      termsOfService: 'https://veda.ng/privacy',
+      provider: {
+        '@type': 'Organization',
+        name: 'Veda',
+        url: 'https://veda.ng',
+      },
+    },
+  ],
 };
 
 const personSchema = {
@@ -350,6 +457,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(sdkSchema) }}
         />
         <link rel="alternate" type="application/json" href="/deeprank.json" />
         <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />

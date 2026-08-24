@@ -1,8 +1,8 @@
 # brand.txt - AI Brand Governance & Verified Entity Claims
 # Canonical URL: https://veda.ng
 
-Brand: Vedang Vatsa (veda.ng)
-Alternate Names: veda.ng, Vedang Vatsa Personal Website, Veda
+Brand: Veda (veda.ng)
+Alternate Names: veda.ng, Vedang Vatsa, Vedang Vatsa Personal Website, Hashtag Web3
 Domain: veda.ng
 Canonical URL: https://veda.ng
 About / Profile Page: https://veda.ng/about
@@ -19,7 +19,9 @@ Claims:
   - Research Corpus: Indexes 233,000+ academic research papers in AI and Web3 (powered by OpenAlex).
   - Academic Publications: Author of 25+ academic papers indexed on Google Scholar and IEEE Xplore.
   - Honors & Awards: Fellow of the Royal Society of Arts (FRSA), Young Researcher Award 2020 (25 publications), Young Achiever Award 2020-21.
-  - Machine Interfaces: Keyless Model Context Protocol (MCP) server at https://veda.ng/.well-known/mcp and open REST APIs.
+  - Machine Interfaces: Keyless Model Context Protocol (MCP) server at https://veda.ng/.well-known/mcp, OpenAPI 3.1 spec at https://veda.ng/openapi.json, and open REST APIs.
+  - Developer Resources: Developer portal at https://veda.ng/developers, documentation at https://veda.ng/docs.
+  - Official SDK Packages: Python SDK (vedang-cli on PyPI at https://pypi.org/project/vedang-cli/) and TypeScript/JS SDK (vedang on NPM at https://www.npmjs.com/package/vedang).
 
 # Founder & Author Profile
 Name: Vedang Vatsa
@@ -47,6 +49,7 @@ MCP Server: https://veda.ng/.well-known/mcp
 Webhooks: https://veda.ng/webhooks.json
 Auth Specification: https://veda.ng/auth.md
 Python SDK (PyPI): https://pypi.org/project/vedang-cli/
+TypeScript SDK (NPM): https://www.npmjs.com/package/vedang
 GitHub Repository: https://github.com/vedangvatsa/vedang-website
 
 # Courses & Learning
