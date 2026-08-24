@@ -62,14 +62,7 @@ const softwareSchema = {
   ],
 };
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://veda.ng' },
-    { '@type': 'ListItem', position: 2, name: 'Swarm Prediction', item: 'https://veda.ng/swarm-prediction' },
-  ],
-};
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 
 export default function SwarmPredictionLayout({
   children,
@@ -82,10 +75,7 @@ export default function SwarmPredictionLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <BreadcrumbSchema items={[{ name: 'Swarm Prediction', url: 'https://veda.ng/swarm-prediction' }]} />
       {children}
     </>
   );

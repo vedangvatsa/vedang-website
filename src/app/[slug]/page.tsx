@@ -328,16 +328,6 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
     ],
   };
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://veda.ng' },
-      { '@type': 'ListItem', position: 2, name: 'Essays', item: 'https://veda.ng/essays' },
-      { '@type': 'ListItem', position: 3, name: essay.frontmatter.title, item: `https://veda.ng/${slug}` },
-    ],
-  };
-
   return (
     <PageLayout>
        <script

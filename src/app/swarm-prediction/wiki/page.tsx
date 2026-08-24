@@ -92,15 +92,7 @@ const faqSchema = {
   ],
 };
 
-const wikiBreadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://veda.ng' },
-    { '@type': 'ListItem', position: 2, name: 'Swarm Prediction', item: 'https://veda.ng/swarm-prediction' },
-    { '@type': 'ListItem', position: 3, name: 'How It Works', item: 'https://veda.ng/swarm-prediction/wiki' },
-  ],
-};
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 
 const pipelineSteps = [
   { num: 1, title: 'Document ingestion', desc: 'Your source files are parsed into a clean text corpus with structure preserved.' },
@@ -134,9 +126,11 @@ export default function WikiPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(wikiBreadcrumbSchema) }}
+        <BreadcrumbSchema
+          items={[
+            { name: 'Swarm Prediction', url: 'https://veda.ng/swarm-prediction' },
+            { name: 'How It Works', url: 'https://veda.ng/swarm-prediction/wiki' },
+          ]}
         />
         <article className="max-w-3xl mx-auto px-4 md:px-6 py-12">
           <Link href="/swarm-prediction" className="text-sm text-muted-foreground hover:text-foreground transition-colors">

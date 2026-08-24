@@ -3,6 +3,7 @@ import { readFile } from 'fs/promises';
 import path from 'path';
 import { PageLayout } from '@/components/page-layout';
 import { AuthorByline } from '@/components/author-byline';
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 import { Button } from '@/components/ui/button';
 import { CopyButton } from './copy-button';
 import { CommandBlock } from './command-block';
@@ -43,6 +44,7 @@ export default async function NoSlopPage() {
 
   return (
     <PageLayout wide center>
+      <BreadcrumbSchema items={[{ name: 'NoSlop', url: 'https://veda.ng/noslop' }]} />
       <div className='mx-auto flex w-full max-w-2xl flex-col items-center py-8 text-center'>
         <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.15] break-words'>
           NoSlop

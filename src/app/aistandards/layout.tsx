@@ -54,14 +54,7 @@ const softwareSchema = {
   },
 };
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://veda.ng' },
-    { '@type': 'ListItem', position: 2, name: 'AI Discovery Standards', item: 'https://veda.ng/aistandards' },
-  ],
-};
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 
 export default function AiDiscoveryStandardsLayout({
   children,
@@ -74,10 +67,7 @@ export default function AiDiscoveryStandardsLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <BreadcrumbSchema items={[{ name: 'AI Discovery Standards', url: 'https://veda.ng/aistandards' }]} />
       <PageLayout>{children}</PageLayout>
     </>
   );

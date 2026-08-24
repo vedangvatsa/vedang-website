@@ -98,14 +98,7 @@ const faqSchema = {
   ],
 };
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://veda.ng' },
-    { '@type': 'ListItem', position: 2, name: 'Site Checklist', item: 'https://veda.ng/sitecheck' },
-  ],
-};
+import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 
 export default function SiteChecklistLayout({
   children,
@@ -122,10 +115,7 @@ export default function SiteChecklistLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <BreadcrumbSchema items={[{ name: 'Site Checklist', url: 'https://veda.ng/sitecheck' }]} />
       <PageLayout>
         <div className="py-8">
           {children}
