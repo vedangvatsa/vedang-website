@@ -55,15 +55,15 @@ const developersSchema = {
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Veda',
-    alternateName: ['veda.ng', 'Vedang Vatsa', 'Hashtag Web3'],
+    name: 'Vedang Vatsa',
+    alternateName: ['veda.ng', 'Veda', 'CVinBio', 'Hashtag Web3'],
     url: 'https://veda.ng',
     sameAs: [
+      'https://cvin.bio',
+      'https://hashtagweb3.com',
       'https://github.com/vedangvatsa/vedang-website',
       'https://pypi.org/project/vedang-cli/',
       'https://www.npmjs.com/package/vedang',
-      'https://hashtagweb3.com',
-      'https://cvin.bio',
     ],
   },
 };
@@ -77,7 +77,7 @@ const devWebAPISchema = {
   termsOfService: 'https://veda.ng/privacy',
   provider: {
     '@type': 'Organization',
-    name: 'Veda',
+    name: 'Vedang Vatsa',
     url: 'https://veda.ng',
   },
 };

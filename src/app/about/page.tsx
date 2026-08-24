@@ -39,13 +39,12 @@ const aboutPageSchema = {
     name: 'Vedang Vatsa',
     url: 'https://veda.ng/about',
     image: 'https://veda.ng/images/icon.png',
-    jobTitle: ['Founder of Veda & Hashtag Web3', 'AI Researcher', 'Web3 Innovator', 'Author'],
+    jobTitle: ['Founder of CVinBio & Hashtag Web3', 'AI Researcher', 'Web3 Innovator', 'Author'],
     worksFor: [
       {
         '@type': 'Organization',
-        name: 'Veda',
-        alternateName: ['veda.ng', 'Veda Research Hub'],
-        url: 'https://veda.ng',
+        name: 'CVinBio',
+        url: 'https://cvin.bio',
       },
       {
         '@type': 'Organization',
@@ -54,8 +53,9 @@ const aboutPageSchema = {
       },
       {
         '@type': 'Organization',
-        name: 'CVinBio',
-        url: 'https://cvin.bio',
+        name: 'Veda',
+        alternateName: ['veda.ng', 'Veda Research Hub'],
+        url: 'https://veda.ng',
       },
     ],
     alumniOf: {

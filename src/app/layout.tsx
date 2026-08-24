@@ -106,8 +106,8 @@ const webPageSchema = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Veda',
-  alternateName: ['veda.ng', 'Vedang Vatsa', 'Hashtag Web3', 'Veda Research Hub'],
+  name: 'Vedang Vatsa',
+  alternateName: ['veda.ng', 'Veda', 'CVinBio', 'Hashtag Web3', 'Veda Research Hub'],
   url: 'https://veda.ng',
   logo: 'https://veda.ng/images/icon.png',
   description: 'Official AI and Web3 research publication, developer API, and tool platform created by Vedang Vatsa.',
@@ -117,11 +117,11 @@ const organizationSchema = {
     url: 'https://veda.ng/about',
   },
   sameAs: [
+    'https://cvin.bio',
+    'https://hashtagweb3.com',
     'https://github.com/vedangvatsa/vedang-website',
     'https://pypi.org/project/vedang-cli/',
     'https://www.npmjs.com/package/vedang',
-    'https://hashtagweb3.com',
-    'https://cvin.bio',
     'https://linkedin.com/in/vedangvatsa',
     'https://x.com/vedangvatsa',
   ],
@@ -234,7 +234,7 @@ const sdkSchema = {
       termsOfService: 'https://veda.ng/privacy',
       provider: {
         '@type': 'Organization',
-        name: 'Veda',
+        name: 'Vedang Vatsa',
         url: 'https://veda.ng',
       },
     },
@@ -248,18 +248,8 @@ const personSchema = {
   url: 'https://veda.ng',
   image: 'https://veda.ng/images/icon.png',
   jobTitle: 'Founder & AI Researcher',
-  description: 'Founder of Hashtag Web3 and CVinBio. Fellow of the Royal Society of Arts (FRSA), IIT Kanpur alumnus.',
+  description: 'Founder of CVinBio and Hashtag Web3. Fellow of the Royal Society of Arts (FRSA), IIT Kanpur alumnus.',
   affiliation: [
-    {
-      '@type': 'Organization',
-      name: 'Hashtag Web3',
-      url: 'https://hashtagweb3.com',
-      sameAs: [
-        'https://linkedin.com/company/hashtagweb3',
-        'https://www.linkedin.com/company/hashtagweb3',
-        'https://hashtagweb3.com',
-      ],
-    },
     {
       '@type': 'Organization',
       name: 'CVinBio',
@@ -268,6 +258,16 @@ const personSchema = {
         'https://linkedin.com/company/cvinbio',
         'https://www.linkedin.com/company/cvinbio',
         'https://cvin.bio',
+      ],
+    },
+    {
+      '@type': 'Organization',
+      name: 'Hashtag Web3',
+      url: 'https://hashtagweb3.com',
+      sameAs: [
+        'https://linkedin.com/company/hashtagweb3',
+        'https://www.linkedin.com/company/hashtagweb3',
+        'https://hashtagweb3.com',
       ],
     },
   ],

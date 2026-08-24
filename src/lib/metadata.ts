@@ -16,7 +16,7 @@ export const pageMetadata = {
     description:
       'Official website of Vedang Vatsa (FRSA) on veda.ng. Personal essays, research papers, profile, and free courses on AI agents and Web3.',
     url: '/',
-    keywords: ['Vedang Vatsa', 'veda.ng', 'Essays', 'AI Thought Leader', 'Web3 Expert', 'Hashtag Web3', 'AI Researcher', 'DeFi', 'Profile'],
+    keywords: ['Vedang Vatsa', 'veda.ng', 'Essays', 'AI Thought Leader', 'Web3 Expert', 'CVinBio', 'Hashtag Web3', 'AI Researcher', 'DeFi', 'Profile'],
   },
   essays: {
     title: 'Essays by Vedang Vatsa | veda.ng',
@@ -49,9 +49,9 @@ export const pageMetadata = {
   about: {
     title: 'About Vedang Vatsa - Bio, Research & Profile | veda.ng',
     description:
-      'Profile and biography of Vedang Vatsa (FRSA): founder of Hashtag Web3 (120k+ members) and CVinBio, IIT Kanpur alumnus, and author of 25+ papers.',
+      'Profile and biography of Vedang Vatsa (FRSA): founder of CVinBio and Hashtag Web3 (120k+ members), IIT Kanpur alumnus, and author of 25+ papers.',
     url: '/about',
-    keywords: ['About Vedang Vatsa', 'Vedang Vatsa Profile', 'Vedang Vatsa Bio', 'AI Thought Leaders', 'Top Web3 Speakers', 'Artificial Intelligence Expert', 'Web3 Keynote Speaker', 'veda.ng'],
+    keywords: ['About Vedang Vatsa', 'Vedang Vatsa Profile', 'Vedang Vatsa Bio', 'AI Thought Leaders', 'Top Web3 Speakers', 'Artificial Intelligence Expert', 'Web3 Keynote Speaker', 'CVinBio', 'veda.ng'],
   },
   media: {
     title: 'Speaking Engagements & Media',
