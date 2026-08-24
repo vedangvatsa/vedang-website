@@ -68,56 +68,6 @@ const developersSchema = {
   },
 };
 
-const devWebAPISchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebAPI',
-  name: 'Veda Public REST API & MCP Server',
-  url: 'https://veda.ng/developers',
-  documentation: 'https://veda.ng/developers',
-  termsOfService: 'https://veda.ng/privacy',
-  provider: {
-    '@type': 'Organization',
-    name: 'Vedang Vatsa',
-    url: 'https://veda.ng',
-  },
-};
-
-const devPyPISchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'vedang-cli',
-  alternateName: ['Veda Python SDK', 'Veda CLI'],
-  applicationCategory: 'DeveloperApplication',
-  operatingSystem: 'All',
-  url: 'https://pypi.org/project/vedang-cli/',
-  downloadUrl: 'https://pypi.org/project/vedang-cli/',
-  installUrl: 'https://pypi.org/project/vedang-cli/',
-  softwareVersion: '1.0.0',
-  author: {
-    '@type': 'Person',
-    name: 'Vedang Vatsa',
-    url: 'https://veda.ng/about',
-  },
-};
-
-const devNPMSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'vedang',
-  alternateName: ['Veda NPM Package', 'Veda TypeScript SDK'],
-  applicationCategory: 'DeveloperApplication',
-  operatingSystem: 'All',
-  url: 'https://www.npmjs.com/package/vedang',
-  downloadUrl: 'https://www.npmjs.com/package/vedang',
-  installUrl: 'https://www.npmjs.com/package/vedang',
-  softwareVersion: '1.0.0',
-  author: {
-    '@type': 'Person',
-    name: 'Vedang Vatsa',
-    url: 'https://veda.ng/about',
-  },
-};
-
 const mcpExample = `curl -X POST https://veda.ng/.well-known/mcp \\
   -H "Content-Type: application/json" \\
   -H "Accept: application/json" \\
@@ -152,18 +102,6 @@ export default function DevelopersPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(developersSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(devWebAPISchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(devPyPISchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(devNPMSchema) }}
       />
       <BreadcrumbSchema items={[{ name: "Developers", url: "https://veda.ng/developers" }]} />
 
