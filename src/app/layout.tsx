@@ -473,6 +473,9 @@ export default function RootLayout({
         <link rel="api" href="/api" title="Veda Public REST API" />
         <link rel="describedby" href="/openapi.json" type="application/openapi+json" title="OpenAPI 3.1 Specification" />
         <link rel="service" href="/.well-known/mcp" title="MCP server (Streamable HTTP)" />
+        <link rel="mcp" href="/.well-known/mcp" title="Veda Model Context Protocol (MCP) Server" />
+        <meta name="mcp:endpoint" content="https://veda.ng/.well-known/mcp" />
+        <meta name="mcp:transport" content="Streamable HTTP" />
         <link rel="sdk" href="https://pypi.org/project/vedang-cli/" title="Python SDK (vedang-cli on PyPI)" />
         <link rel="sdk" href="https://www.npmjs.com/package/vedang" title="TypeScript/JavaScript SDK (vedang on NPM)" />
         <link rel="package" href="https://pypi.org/project/vedang-cli/" title="vedang-cli on PyPI" />

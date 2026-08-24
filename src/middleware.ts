@@ -10,6 +10,17 @@ import {
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
+  // Seamlessly handle MCP clients connecting to /mcp via POST, SSE, or JSON-RPC
+  if (
+    pathname === '/mcp' &&
+    (req.method === 'POST' ||
+      req.method === 'OPTIONS' ||
+      req.headers.get('accept')?.includes('text/event-stream') ||
+      req.headers.get('content-type')?.includes('application/json'))
+  ) {
+    return NextResponse.rewrite(new URL('/.well-known/mcp', req.url));
+  }
+
   if (shouldSkipNegotiation(pathname, req.method, req.headers.get('rsc'), req.headers.get('next-router-prefetch'))) {
     return NextResponse.next();
   }
