@@ -153,7 +153,7 @@ export function generateMetadata(params: MetadataParams): Metadata {
     url,
     keywords,
     ogImage = 'https://veda.ng/images/og-homepage.png',
-    ogImageAlt = 'Veda - AI & Web3 Research Repository by Vedang Vatsa',
+    ogImageAlt = 'Vedang Vatsa - Personal Website, Essays & Research Hub',
     type = 'website',
   } = params;
 
@@ -175,7 +175,7 @@ export function generateMetadata(params: MetadataParams): Metadata {
     description,
     url,
     type,
-    siteName: 'Veda',
+    siteName: 'Vedang Vatsa',
     locale: 'en_US',
     images: [{ url: resolvedOgImage, width: 1200, height: 630, alt: ogImageAlt }],
   };

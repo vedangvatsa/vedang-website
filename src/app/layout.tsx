@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: 'Vedang Vatsa - Essays, Research & Profile (veda.ng)',
     description: 'Official website of Vedang Vatsa (FRSA) on veda.ng. Personal essays, research papers, profile, and free courses on AI agents and Web3.',
     url: '/',
-    siteName: 'Vedang Vatsa (veda.ng)',
+    siteName: 'Vedang Vatsa',
     locale: 'en_US',
     type: 'website',
     images: [
