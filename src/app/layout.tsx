@@ -483,6 +483,8 @@ export default function RootLayout({
         <meta name="sdk:pypi" content="https://pypi.org/project/vedang-cli/" />
         <meta name="sdk:npm" content="https://www.npmjs.com/package/vedang" />
         <meta name="sdk:repository" content="https://github.com/vedangvatsa/vedang-website" />
+        <meta name="content-signal" content="search=yes, ai-train=yes, ai-input=yes" />
+        <meta name="ai-content-signal" content="search=yes, ai-train=yes, ai-input=yes" />
         <meta name="pypi:package" content="vedang-cli" />
         <meta name="npm:package" content="vedang" />
       </head>

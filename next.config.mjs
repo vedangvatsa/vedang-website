@@ -88,6 +88,14 @@ const nextConfig = {
             value: 'max-age=63072000; includeSubDomains; preload',
           },
           {
+            key: 'Content-Signal',
+            value: 'search=yes, ai-train=yes, ai-input=yes',
+          },
+          {
+            key: 'Ai-Content-Signal',
+            value: 'search=yes, ai-train=yes, ai-input=yes',
+          },
+          {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",

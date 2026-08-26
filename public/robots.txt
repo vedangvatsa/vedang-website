@@ -68,13 +68,20 @@ Allow: /
 User-agent: FacebookBot
 Allow: /
 
-# ByteDance & TikTok Crawlers
+# ByteDance & TikTok Scraping Bots (Blocked)
 User-agent: Bytespider
-Allow: /
+Disallow: /
 
-# Open Datasets & Web Crawlers
+User-agent: ByteSpider
+Disallow: /
+
+# Common Crawl Bulk Scraper (Blocked)
 User-agent: CCBot
-Allow: /
+Disallow: /
+
+# Scrapy generic scraping bot (Blocked)
+User-agent: Scrapy
+Disallow: /
 
 User-agent: cohere-ai
 Allow: /
@@ -98,7 +105,7 @@ User-agent: Bingbot
 Allow: /
 
 # Machine-Readable Indexes & Discovery
-Content-Signal: search=yes, ai-train=yes, ai-input=yes, ai-index=yes
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
 
 Sitemap: https://veda.ng/sitemap.xml
 Schemamap: https://veda.ng/.well-known/ai-catalog.json
