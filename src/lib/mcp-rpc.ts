@@ -106,6 +106,47 @@ async function dispatch(method: string, params: Record<string, unknown> | undefi
           },
         ],
       };
+    case 'resources/read': {
+      const uri = typeof params?.uri === 'string' ? params.uri.trim() : '';
+      if (!uri) {
+        throw { rpcCode: INVALID_PARAMS, message: 'uri parameter is required for resources/read' };
+      }
+      if (uri.endsWith('/llms.txt') || uri === 'llms.txt') {
+        let textContent = '';
+        try {
+          const fs = await import('fs');
+          const path = await import('path');
+          textContent = fs.readFileSync(path.join(process.cwd(), 'public', 'llms.txt'), 'utf8');
+        } catch {
+          textContent = '# Vedang Vatsa - Personal Website (veda.ng)\n\nhttps://veda.ng';
+        }
+        return {
+          contents: [
+            {
+              uri: `${SITE_URL}/llms.txt`,
+              mimeType: 'text/markdown',
+              text: textContent,
+            },
+          ],
+        };
+      }
+      if (uri.endsWith('/openapi.json') || uri === 'openapi.json') {
+        return {
+          contents: [
+            {
+              uri: `${SITE_URL}/openapi.json`,
+              mimeType: 'application/json',
+              text: JSON.stringify({
+                openapi: '3.1.0',
+                info: { title: 'Veda Developer API', version: '1.0.0', description: 'OpenAPI 3.1 spec for veda.ng' },
+                servers: [{ url: 'https://veda.ng' }],
+              }),
+            },
+          ],
+        };
+      }
+      throw { rpcCode: INVALID_PARAMS, message: `Resource not found: ${uri}` };
+    }
     case 'prompts/list':
       return { prompts: [] };
     case 'tools/call': {

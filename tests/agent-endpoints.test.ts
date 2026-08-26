@@ -30,18 +30,21 @@ describe('Agent & Machine Endpoints', () => {
     assert.equal(parsed.result.serverInfo.name, 'veda.ng');
   });
 
-  test('MCP JSON-RPC handles tools/list and batch calls', async () => {
+  test('MCP JSON-RPC handles tools/list, resources/read, and batch calls', async () => {
     const batch = JSON.stringify([
       { jsonrpc: '2.0', id: 10, method: 'tools/list' },
       { jsonrpc: '2.0', id: 20, method: 'ping' },
+      { jsonrpc: '2.0', id: 30, method: 'resources/read', params: { uri: 'https://veda.ng/llms.txt' } },
     ]);
     const res = await handleMcpPost(batch);
     assert.equal(res.status, 200);
     const parsed = JSON.parse(res.body || '[]');
-    assert.equal(parsed.length, 2);
+    assert.equal(parsed.length, 3);
     assert.equal(parsed[0].id, 10);
     assert.ok(Array.isArray(parsed[0].result.tools));
     assert.equal(parsed[1].id, 20);
+    assert.equal(parsed[2].id, 30);
+    assert.ok(Array.isArray(parsed[2].result.contents));
   });
 
   test('Standard API headers include RFC rate-limit and deprecation info', () => {
