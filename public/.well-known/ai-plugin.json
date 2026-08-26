@@ -9,7 +9,7 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://veda.ng/sitemap.xml"
+    "url": "https://veda.ng/openapi.json"
   },
   "logo_url": "https://veda.ng/images/icon.png",
   "contact_email": "vatsvedang@gmail.com",

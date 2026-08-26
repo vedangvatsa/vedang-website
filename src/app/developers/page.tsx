@@ -7,24 +7,30 @@ import { generateMetadata } from '@/lib/metadata';
 import { developersSummaryLines } from '@/lib/agent-md';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Veda Developer Resources, API Documentation & MCP Server | veda.ng',
+  title: 'Veda Developer Resources, API Documentation & MCP Server | Vedang Vatsa (veda.ng)',
   description:
-    'Official Veda developer resources and AI agent interfaces: public REST API, Model Context Protocol (MCP) server, Python SDK (vedang-cli), OpenAPI 3.1 specification, and WorkOS auth spec.',
+    'Official developer resources, API documentation, Model Context Protocol (MCP) server, Python SDK (vedang-cli), NPM SDK (vedang), and OpenAPI 3.1 specification for Vedang Vatsa and Veda (veda.ng).',
   url: '/developers',
   keywords: [
     'Veda developer resources',
+    'Vedang Vatsa developer resources',
     'Veda API',
+    'Vedang Vatsa API',
     'Veda API documentation',
+    'Vedang Vatsa API documentation',
     'Veda MCP server',
+    'Vedang Vatsa MCP server',
     'Veda developer docs',
+    'Vedang Vatsa developer portal',
     'Veda OpenAPI specification',
+    'Vedang Vatsa OpenAPI',
     'Veda webhooks',
     'Veda authentication',
     'Veda SDK',
+    'Vedang Vatsa SDK',
     'veda.ng API',
     'veda.ng MCP server',
     'veda.ng developer docs',
-    'Vedang Vatsa API',
     'Hashtag Web3 developer resources',
     'AI research API',
     'OpenAlex search API',
@@ -37,6 +43,10 @@ const developersSchema = {
   headline: 'Veda Developer Resources, API Documentation & MCP Server',
   name: 'Veda Developer Resources',
   alternateName: [
+    'Vedang Vatsa Developer Resources',
+    'Vedang Vatsa API Documentation',
+    'Vedang Vatsa Developer Portal',
+    'Vedang Vatsa MCP Server',
     'Veda API Documentation',
     'Veda Developer Portal',
     'Veda MCP Server',
@@ -46,7 +56,7 @@ const developersSchema = {
   ],
   url: 'https://veda.ng/developers',
   description:
-    'Official developer and machine interfaces for Veda (veda.ng): public report search API, MCP server over Streamable HTTP, OpenAPI specification, Python SDK (vedang-cli), NPM SDK (vedang), RSS feed, sitemap, and agent discovery files.',
+    'Official developer and machine interfaces for Vedang Vatsa and Veda (veda.ng): public report search API, MCP server over Streamable HTTP, OpenAPI specification, Python SDK (vedang-cli), NPM SDK (vedang), RSS feed, sitemap, and agent discovery files.',
   inLanguage: 'en-US',
   author: {
     '@type': 'Person',
