@@ -22,6 +22,7 @@ export const SERVER_INFO = {
 export const SERVER_INSTRUCTIONS = [
   `Tools for searching and reading the published research of ${SITE_NAME}: essays on AI agents and Web3, a 100+ term glossary, and a 233,000-paper academic index.`,
   `Use search_essays or search_glossary first, then get_essay or get_glossary_term for full text. Use search_reports for peer-reviewed literature.`,
+  `Official SDKs: JavaScript/TypeScript SDK package on NPM (npm install vedang) and Python SDK package on PyPI (pip install vedang-cli).`,
   `Content is educational; it is not financial, legal, or medical advice. Full site index: ${LLMSTXT_URL}. Human-readable docs: ${SITE_URL}/developers. Contact: ${SITE_URL}/contact.`,
 ].join(' ');
 

@@ -40,7 +40,7 @@ export function GET() {
       title: `${SITE_NAME} Research Hub API (veda.ng)`,
       version: '1.1.0',
       description:
-        'Public machine interfaces for veda.ng: research paper search backed by OpenAlex, an MCP server over Streamable HTTP, syndication feeds, and agent discovery files. No authentication required.',
+        'Public machine interfaces for veda.ng: research paper search backed by OpenAlex, an MCP server over Streamable HTTP, syndication feeds, and agent discovery files. No authentication required. Official SDKs: JavaScript/TypeScript SDK package on NPM (npm install vedang) and Python SDK package on PyPI (pip install vedang-cli).',
       contact: { name: SITE_NAME, email: CONTACT_EMAIL, url: CONTACT_URL },
     },
     externalDocs: {
