@@ -14,7 +14,7 @@ export function wantsMarkdown(accept: string | null | undefined, userAgent?: str
   return accept.toLowerCase().includes('markdown');
 }
 
-const STATIC_MD_FILES = new Set(['/auth.md', '/noslop.md']);
+const STATIC_MD_FILES = new Set(['/auth.md', '/noslop.md', '/SKILL.md']);
 
 export function isMarkdownUrl(pathname: string): boolean {
   return /\.md$/i.test(pathname) && !STATIC_MD_FILES.has(normalizePath(pathname));
