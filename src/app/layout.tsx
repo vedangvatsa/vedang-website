@@ -12,8 +12,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swa
 export const metadata: Metadata = {
   metadataBase: new URL('https://veda.ng'),
   title: {
-    default: 'Vedang Vatsa - Essays, Research & Profile (veda.ng)',
-    template: '%s | Vedang Vatsa',
+    default: 'Vedang - Essays, Research & Profile (veda.ng)',
+    template: '%s | Vedang',
   },
   description:
     'Official website of Vedang Vatsa (FRSA) on veda.ng. Personal essays, research papers, profile, and free courses on AI agents and Web3.',

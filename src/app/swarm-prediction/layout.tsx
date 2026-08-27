@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: {
     default: 'Swarm Intelligence Prediction',
-    template: '%s | Swarm Prediction | Vedang Vatsa',
+    template: '%s | Swarm Prediction | Vedang',
   },
   description: 'Run multi-agent AI debates to forecast outcomes from any document, URL, or pasted text. Supports 8 LLM providers via BYOK. Built by Vedang Vatsa.',
   keywords: [
