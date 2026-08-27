@@ -108,7 +108,7 @@ Allow: /
 Content-Signal: search=yes, ai-train=yes, ai-input=yes
 
 Sitemap: https://veda.ng/sitemap.xml
-Schemamap: https://veda.ng/.well-known/ai-catalog.json
+Schemamap: https://veda.ng/schemamap.xml
 
 # Discovery manifests
 # See https://veda.ng/llms.txt, https://veda.ng/brand.txt, and https://veda.ng/.well-known/agents.json
