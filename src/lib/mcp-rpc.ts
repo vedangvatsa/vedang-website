@@ -131,16 +131,32 @@ async function dispatch(method: string, params: Record<string, unknown> | undefi
         };
       }
       if (uri.endsWith('/openapi.json') || uri === 'openapi.json') {
+        let specText = '';
+        try {
+          const specRes = await fetch(`${SITE_URL}/api/openapi`, { headers: { Accept: 'application/json' } });
+          specText = specRes.ok ? await specRes.text() : '';
+        } catch {
+          /* fallback below */
+        }
+        if (!specText) {
+          try {
+            const fs = await import('fs');
+            const path = await import('path');
+            specText = fs.readFileSync(path.join(process.cwd(), 'public', 'openapi.json'), 'utf8');
+          } catch {
+            specText = JSON.stringify({
+              openapi: '3.1.0',
+              info: { title: 'Veda Developer API', version: '1.0.0', description: 'OpenAPI 3.1 spec for veda.ng' },
+              servers: [{ url: SITE_URL }],
+            });
+          }
+        }
         return {
           contents: [
             {
               uri: `${SITE_URL}/openapi.json`,
               mimeType: 'application/json',
-              text: JSON.stringify({
-                openapi: '3.1.0',
-                info: { title: 'Veda Developer API', version: '1.0.0', description: 'OpenAPI 3.1 spec for veda.ng' },
-                servers: [{ url: 'https://veda.ng' }],
-              }),
+              text: specText,
             },
           ],
         };

@@ -636,7 +636,10 @@
     "/writings/universal-text-ui",
     "/writings/yc-landscape",
     "/yc",
-    "/yc-landscape"
+    "/yc-landscape",
+    "/api",
+    "/api/v1/essays",
+    "/api/v1/glossary"
   ],
   "markdownPaths": [
     "/",
@@ -1000,6 +1003,10 @@
     "/traffic",
     "/trust",
     "/twilight",
-    "/yc"
+    "/yc",
+    "/api",
+    "/docs",
+    "/api/v1/essays",
+    "/api/v1/glossary"
   ]
 }

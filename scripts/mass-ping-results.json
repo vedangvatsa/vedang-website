@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-08-13T23:54:00.352Z",
+  "totalEssays": 61,
+  "indexNowGateways": [
+    {
+      "gateway": "https://api.indexnow.org/IndexNow",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "gateway": "https://www.bing.com/IndexNow",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "gateway": "https://yandex.com/IndexNow",
+      "status": 202,
+      "ok": true
+    },
+    {
+      "gateway": "https://search.seznam.cz/IndexNow",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "gateway": "https://searchadvisor.naver.com/IndexNow",
+      "status": 403,
+      "ok": false
+    }
+  ],
+  "pingStatistics": {
+    "totalAttemptedPings": 880,
+    "totalSuccessfulPings": 156,
+    "livePingPercentage": "17.7%"
+  }
+}

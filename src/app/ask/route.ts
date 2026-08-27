@@ -99,12 +99,52 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   const query = request.nextUrl.searchParams.get('q') ?? request.nextUrl.searchParams.get('query') ?? '';
+  const wantsStream =
+    request.nextUrl.searchParams.get('stream') === 'true' ||
+    (request.headers.get('accept') ?? '').includes('text/event-stream');
+
   if (!query) {
+    if (wantsStream) {
+      const encoder = new TextEncoder();
+      const body = encoder.encode(
+        `event: error\ndata: ${JSON.stringify({ code: 'missing_query', message: 'Provide ?q=<query>.' })}\n\n`
+      );
+      return new Response(body, {
+        status: 200,
+        headers: { 'Content-Type': 'text/event-stream; charset=utf-8', 'Cache-Control': 'no-cache' },
+      });
+    }
     return NextResponse.json(
       { _meta: { response_type: 'error', version: '0.1' }, error: { code: 'missing_query', message: 'Provide ?q=<query>.' } },
       { status: 400 }
     );
   }
+
+  if (wantsStream) {
+    const encoder = new TextEncoder();
+    const stream = new ReadableStream({
+      async start(controller) {
+        const send = (event: string, data: unknown) => {
+          controller.enqueue(encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`));
+        };
+        send('start', { _meta: { response_type: 'search_results', version: '0.1' }, query });
+        const results = await buildResults(query);
+        for (const r of results) {
+          send('result', r);
+        }
+        send('complete', { _meta: { response_type: 'complete', version: '0.1' }, count: results.length });
+        controller.close();
+      },
+    });
+    return new Response(stream, {
+      headers: {
+        'Content-Type': 'text/event-stream; charset=utf-8',
+        'Cache-Control': 'no-cache',
+        Connection: 'keep-alive',
+      },
+    });
+  }
+
   const results = await buildResults(query);
   return NextResponse.json(jsonPayload(results), {
     headers: { 'Cache-Control': 'public, max-age=600' },

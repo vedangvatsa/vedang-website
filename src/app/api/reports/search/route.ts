@@ -67,11 +67,23 @@ export async function GET(request: NextRequest) {
   }
 
   if (!query || query.length < 2) {
-    return jsonError(
-      'missing_query',
-      'Provide a query parameter q with at least 2 characters (e.g. ?q=agents&corpus=ai).',
-      400,
-      'Add ?q=<keyword> to your search query.'
+    // No query — return schema/capability description so discovery probes get a 200
+    return NextResponse.json(
+      {
+        endpoint: 'GET /api/v1/reports/search',
+        description: 'Search 233,000+ indexed academic papers via OpenAlex in the AI or Web3 corpus.',
+        parameters: {
+          q: { type: 'string', required: true, description: 'Search query (min 2 chars). Example: agents' },
+          corpus: { type: 'string', enum: ['ai', 'web3'], default: 'ai', description: 'Corpus to search.' },
+          limit: { type: 'number', default: 50, max: 200, description: 'Results per page.' },
+          page: { type: 'number', default: 1, description: 'Page number.' },
+          cursor: { type: 'string', description: 'Opaque cursor for pagination (base64-encoded page number).' },
+        },
+        example: '/api/v1/reports/search?q=agents&corpus=ai&limit=10',
+        docs: 'https://veda.ng/developers',
+        openapi: 'https://veda.ng/openapi.json',
+      },
+      { headers: { 'Cache-Control': 'public, max-age=3600', 'Access-Control-Allow-Origin': '*' } }
     );
   }
 

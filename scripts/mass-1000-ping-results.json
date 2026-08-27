@@ -1,0 +1,282 @@
+{
+  "timestamp": "2026-08-20T22:31:13.462Z",
+  "totalEssays": 68,
+  "pingGatewaysCount": 55,
+  "totalAttemptedSubmissions": 3740,
+  "totalSuccessfulResponses": 532,
+  "liveResponseRate": "14.2%",
+  "essayResults": {
+    "agentcommerce": {
+      "attempted": 55,
+      "successful": 6
+    },
+    "agenteconomy": {
+      "attempted": 55,
+      "successful": 7
+    },
+    "agenticweb": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "agentsaas": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "agentspeak": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "agentstack": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "ai-detector": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "aidebt": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "aieconomy": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "aiindia": {
+      "attempted": 55,
+      "successful": 7
+    },
+    "algorithms": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "ambient": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "apis": {
+      "attempted": 55,
+      "successful": 7
+    },
+    "asi": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "attention": {
+      "attempted": 55,
+      "successful": 7
+    },
+    "blockchain": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "bureaucracy": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "cognition": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "competitive": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "compute": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "constitutions": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "darkforest": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "empathy": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "funding": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "godprotocol": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "governance": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "hustle": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "india": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "indiaai": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "infinity": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "instinct": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "intelligence": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "intuition": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "lawsuits": {
+      "attempted": 55,
+      "successful": 7
+    },
+    "licenses": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "lies": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "liminal": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "mesh": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "monasticism": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "neocloud": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "outlives": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "paradox": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "playbook": {
+      "attempted": 55,
+      "successful": 7
+    },
+    "plurality": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "postinterface": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "postscarcity": {
+      "attempted": 55,
+      "successful": 7
+    },
+    "private": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "pseudonymity": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "rationality": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "receipts": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "revision": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "safety": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "sensory": {
+      "attempted": 55,
+      "successful": 7
+    },
+    "simulation": {
+      "attempted": 55,
+      "successful": 7
+    },
+    "simulayer": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "singapore": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "singularity": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "socialscience": {
+      "attempted": 55,
+      "successful": 7
+    },
+    "stateagents": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "stateofai": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "stateofweb3": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "stepwise": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "substrate": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "textui": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "traffic": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "trust": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "twilight": {
+      "attempted": 55,
+      "successful": 8
+    },
+    "yc": {
+      "attempted": 55,
+      "successful": 8
+    }
+  }
+}

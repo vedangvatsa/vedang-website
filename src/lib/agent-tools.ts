@@ -6,6 +6,11 @@ export interface McpToolDefinition {
   name: string;
   description: string;
   inputSchema: Record<string, unknown>;
+  annotations?: {
+    readOnlyHint?: boolean;
+    destructiveHint?: boolean;
+    idempotentHint?: boolean;
+  };
 }
 
 export interface ToolOutput {
@@ -96,6 +101,7 @@ export const MCP_TOOLS: McpToolDefinition[] = [
       },
       required: ['query'],
     },
+    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true },
   },
   {
     name: 'get_essay',
@@ -107,6 +113,7 @@ export const MCP_TOOLS: McpToolDefinition[] = [
       },
       required: ['slug'],
     },
+    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true },
   },
   {
     name: 'search_glossary',
@@ -119,6 +126,7 @@ export const MCP_TOOLS: McpToolDefinition[] = [
       },
       required: ['query'],
     },
+    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true },
   },
   {
     name: 'get_glossary_term',
@@ -130,6 +138,7 @@ export const MCP_TOOLS: McpToolDefinition[] = [
       },
       required: ['slug'],
     },
+    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true },
   },
   {
     name: 'search_reports',
@@ -144,6 +153,7 @@ export const MCP_TOOLS: McpToolDefinition[] = [
       },
       required: ['query'],
     },
+    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true },
   },
 ];
 

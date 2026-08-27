@@ -245,7 +245,13 @@ function getMarkdownBodyForPath(pathname: string): string | null {
     case '/contact':
       return meetingContactMarkdown();
     case '/developers':
+    case '/api':
+    case '/docs':
       return developersMarkdown();
+    case '/api/v1/essays':
+      return essaysIndexMarkdown();
+    case '/api/v1/glossary':
+      return glossaryIndexMarkdown();
     default:
       break;
   }
