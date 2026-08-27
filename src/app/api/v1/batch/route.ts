@@ -85,3 +85,46 @@ export async function POST(request: NextRequest) {
     return jsonError('invalid_json', 'Failed to parse JSON body for batch request.', 400);
   }
 }
+
+export async function GET() {
+  return NextResponse.json(
+    {
+      endpoint: 'POST /api/v1/batch',
+      description: 'Execute up to 20 sub-requests concurrently in a single bulk operation.',
+      schema: {
+        type: 'object',
+        properties: {
+          requests: {
+            type: 'array',
+            maxItems: 20,
+            items: {
+              type: 'object',
+              properties: {
+                id: { type: 'string', description: 'Client request ID.' },
+                path: { type: 'string', description: 'Relative path, e.g. /api/v1/essays or /api/v1/glossary' },
+                method: { type: 'string', enum: ['GET', 'POST'], default: 'GET' },
+              },
+              required: ['path'],
+            },
+          },
+        },
+        required: ['requests'],
+      },
+      example: {
+        requests: [
+          { id: '1', path: '/api/v1/essays' },
+          { id: '2', path: '/api/v1/glossary' },
+        ],
+      },
+      docs: 'https://veda.ng/developers',
+      openapi: 'https://veda.ng/openapi.json',
+    },
+    {
+      headers: {
+        'Cache-Control': 'public, max-age=3600',
+        'Access-Control-Allow-Origin': '*',
+      },
+    }
+  );
+}
+

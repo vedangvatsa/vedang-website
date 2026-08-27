@@ -45,17 +45,21 @@ export function middleware(req: NextRequest) {
           : new URL(`/md${mdTarget === '/' ? '/index' : mdTarget}`, req.url);
       const headers = new Headers(req.headers);
       headers.set('x-agent-original-path', isMarkdownUrl(pathname) ? markdownUrlToPath(pathname) : pathname);
-      return NextResponse.rewrite(target, { request: { headers } });
+      const res = NextResponse.rewrite(target, { request: { headers } });
+      res.headers.set('Vary', 'Accept, User-Agent, Accept-Encoding');
+      res.headers.set('Content-Type', 'text/markdown; charset=utf-8');
+      res.headers.set('Access-Control-Allow-Origin', '*');
+      return res;
     }
   }
 
   const res = NextResponse.next();
-  res.headers.set('Vary', 'Accept, Accept-Encoding');
+  res.headers.set('Vary', 'Accept, User-Agent, Accept-Encoding');
   const link = buildLinkHeader(pathname);
   if (link) res.headers.set('Link', link);
   return res;
 }
 
 export const config = {
-  matcher: ['/((?!_next/|api/|md/).*)'],
+  matcher: ['/((?!_next/|md/).*)'],
 };

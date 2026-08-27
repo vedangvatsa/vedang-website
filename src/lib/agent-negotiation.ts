@@ -6,7 +6,7 @@ export type AgentResolution =
   | { kind: 'passthrough' };
 
 const AGENT_BOT_UA =
-  /GPTBot|ClaudeBot|Claude-Web|anthropic-ai|ChatGPT-User|PerplexityBot|Google-Extended|Applebot-Extended|ora-agent|DeepSeekBot|Bytespider|CCBot/i;
+  /GPTBot|ClaudeBot|Claude-Web|anthropic-ai|ChatGPT-User|PerplexityBot|Google-Extended|Applebot-Extended|ora-agent|DeepSeekBot|Bytespider|CCBot|Amazonbot|Meta-ExternalAgent|cohere-ai|Diffbot|YouBot|DuckAssistBot|Timpibot|PetalBot/i;
 
 export function wantsMarkdown(accept: string | null | undefined, userAgent?: string | null): boolean {
   if (userAgent && AGENT_BOT_UA.test(userAgent)) return true;
@@ -46,9 +46,12 @@ export function shouldSkipNegotiation(
 ): boolean {
   if (method !== 'GET' && method !== 'HEAD') return true;
   if (rscHeader || prefetchHeader) return true;
+
+  const normalized = normalizePath(pathname);
+  if (isMarkdownUrl(normalized)) return false;
+
   if (
     pathname.startsWith('/_next') ||
-    pathname.startsWith('/api/') ||
     pathname.startsWith('/md/') ||
     pathname.startsWith('/.well-known/') ||
     pathname.startsWith('/agent/') ||
@@ -56,8 +59,9 @@ export function shouldSkipNegotiation(
   ) {
     return true;
   }
-  const normalized = normalizePath(pathname);
-  if (isMarkdownUrl(normalized)) return false;
+
+  if (pathname.startsWith('/api/')) return true;
+
   return lastSegmentHasExtension(normalized);
 }
 

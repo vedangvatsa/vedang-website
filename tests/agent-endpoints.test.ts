@@ -66,4 +66,30 @@ describe('Agent & Machine Endpoints', () => {
     const decoded = parseInt(Buffer.from(cursor, 'base64').toString('utf8'), 10);
     assert.equal(decoded, 10);
   });
+
+  test('Docs MCP server handles tools/list with annotations and resources/read', async () => {
+    const { handleDocsMcpPost, docsMcpEndpointDescriptor } = await import('../src/lib/mcp-docs-rpc');
+    const desc = JSON.parse(docsMcpEndpointDescriptor());
+    assert.equal(desc.serverInfo.name, 'veda-docs-mcp');
+    assert.ok(desc.tools.includes('get_api_documentation'));
+
+    const listRes = await handleDocsMcpPost(JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/list' }));
+    assert.equal(listRes.status, 200);
+    const parsed = JSON.parse(listRes.body || '{}');
+    assert.ok(Array.isArray(parsed.result.tools));
+    assert.ok(parsed.result.tools.every((t: any) => t.annotations && t.annotations.readOnlyHint === true));
+  });
+
+  test('Markdown negotiation resolves .md twins for API and content pages', async () => {
+    const { isMarkdownUrl, markdownUrlToPath, shouldSkipNegotiation, wantsMarkdown } = await import('../src/lib/agent-negotiation');
+    assert.equal(isMarkdownUrl('/api/v1/essays.md'), true);
+    assert.equal(isMarkdownUrl('/api.md'), true);
+    assert.equal(markdownUrlToPath('/api/v1/essays.md'), '/api/v1/essays');
+    assert.equal(shouldSkipNegotiation('/api/v1/essays.md', 'GET'), false);
+    assert.equal(shouldSkipNegotiation('/api.md', 'GET'), false);
+    assert.equal(wantsMarkdown(null, 'Mozilla/5.0 (compatible; ClaudeBot/1.0; +claudebot@anthropic.com)'), true);
+    assert.equal(wantsMarkdown(null, 'Mozilla/5.0 (compatible; GPTBot/1.0; +https://openai.com/gptbot)'), true);
+    assert.equal(wantsMarkdown('text/markdown'), true);
+  });
 });
+

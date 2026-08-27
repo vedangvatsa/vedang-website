@@ -639,7 +639,8 @@
     "/yc-landscape",
     "/api",
     "/api/v1/essays",
-    "/api/v1/glossary"
+    "/api/v1/glossary",
+    "/api/v1/reports/search"
   ],
   "markdownPaths": [
     "/",
@@ -1007,6 +1008,18 @@
     "/api",
     "/docs",
     "/api/v1/essays",
-    "/api/v1/glossary"
+    "/api/v1/glossary",
+    "/prompt",
+    "/web3",
+    "/vibecoding",
+    "/mcp",
+    "/agentic",
+    "/automation",
+    "/media",
+    "/community",
+    "/health-protocols",
+    "/auth",
+    "/api/v1/reports/search",
+    "/seo"
   ]
 }

@@ -230,6 +230,24 @@ export function getMarkdownForPath(pathname: string): string | null {
   return `${frontmatter}${body}`;
 }
 
+function courseMarkdown(title: string, slug: string, desc: string, modules: string[]): string {
+  return [
+    `# ${title}`,
+    '',
+    frontmatterFor(title, `/${slug}`).trimEnd(),
+    '',
+    desc,
+    '',
+    '## Curriculum Modules',
+    '',
+    ...modules.map((m, i) => `${i + 1}. **${m}**: https://veda.ng/${slug}`),
+    '',
+    `Explore interactive lessons and exams at https://veda.ng/${slug}`,
+    '',
+    MARKDOWN_NEGOTIATION_TIP,
+  ].join('\n');
+}
+
 function getMarkdownBodyForPath(pathname: string): string | null {
   switch (pathname) {
     case '/':
@@ -252,6 +270,94 @@ function getMarkdownBodyForPath(pathname: string): string | null {
       return essaysIndexMarkdown();
     case '/api/v1/glossary':
       return glossaryIndexMarkdown();
+    case '/auth':
+    case '/auth.md':
+      return [
+        '# Authentication & Security Guide',
+        '',
+        frontmatterFor('Authentication & Security Guide', '/auth.md').trimEnd(),
+        '',
+        '## Keyless Open Access',
+        'All read endpoints on veda.ng are public and open-access. No API keys, Bearer tokens, or registration are required.',
+        '',
+        '## Machine Interfaces',
+        '- REST API: `https://veda.ng/api/v1/reports/search`',
+        '- MCP Server: `https://veda.ng/.well-known/mcp`',
+        '- OpenAPI Specification: `https://veda.ng/openapi.json`',
+      ].join('\n');
+    case '/prompt':
+      return courseMarkdown(
+        'Prompt Engineering 101 - AI Course',
+        'prompt',
+        'Master prompt engineering fundamentals. Learn to craft effective prompts for LLMs and AI agents with practical examples on veda.ng.',
+        ['Foundations & Mental Models', 'Context & Few-Shot Learning', 'Chain-of-Thought & Reasoning', 'System Prompts & Personas', 'Function Calling & Tools', 'Defense & Prompt Injection', 'Evaluation & Optimization']
+      );
+    case '/web3':
+      return courseMarkdown(
+        'Web3 101 - Blockchain Fundamentals Course',
+        'web3',
+        'Free course on blockchain, cryptocurrencies, smart contracts, dApps, NFTs, DAOs, and decentralized systems on veda.ng.',
+        ['Blockchain Architecture & Consensus', 'Smart Contracts & EVM', 'DeFi Primitives & AMMs', 'Tokens, NFTs & Digital Property', 'DAOs & Decentralized Governance', 'Zero-Knowledge Proofs & Scaling', 'Security & Smart Contract Auditing']
+      );
+    case '/vibecoding':
+      return courseMarkdown(
+        'Vibe Coding 101 - Build Software with Generative AI',
+        'vibecoding',
+        'Vibe Coding 101: Free course by Vedang Vatsa on building production software with AI tools like Cursor, Antigravity, and Replit.',
+        ['The Vibe Coding Paradigm', 'IDE Setup & Agentic Workflows', 'Specification Driven Development', 'Iterative Debugging & Testing', 'Deploying to Production', 'Fullstack App Architecture', 'Building AI Agents']
+      );
+    case '/mcp':
+      return courseMarkdown(
+        'MCP Development 101 - Build AI Tool Servers',
+        'mcp',
+        'Free course on Model Context Protocol (MCP). Learn to build tool servers connecting AI agents to APIs, databases, and services.',
+        ['Protocol Fundamentals & Architecture', 'Transports: stdio & Streamable HTTP', 'Implementing Tools & JSON Schema', 'Resources, Prompts & Subscriptions', 'Security, Sandbox & Permissions', 'Building Multi-Agent Systems', 'Production Deployment & Monitoring']
+      );
+    case '/agentic':
+      return courseMarkdown(
+        'The Agentic Web - Autonomous AI Systems & Protocols',
+        'agentic',
+        'Free course on autonomous AI agents, multi-agent coordination, MCP protocols, and agentic architecture on veda.ng.',
+        ['Autonomous Agent Architecture', 'Tool Use & Environment Grounding', 'Multi-Agent Coordination & A2A', 'Economic Agency & Micropayments', 'Safety, Alignment & Governance', 'Self-Improving Pipelines', 'Future of the Agentic Web']
+      );
+    case '/automation':
+      return courseMarkdown(
+        'AI Automation 101 - Automate Anything with AI',
+        'automation',
+        'Free guide to AI automation: build autonomous pipelines with APIs, MCP servers, AI agents, n8n, and no-code tools.',
+        ['Automation Mental Models', 'Webhook & API Workflows', 'n8n & Workflow Orchestration', 'LLM Chains & Structured Extraction', 'Agentic Autonomous Triage', 'Error Handling & Idempotency', 'Enterprise Deployment']
+      );
+    case '/media':
+      return [
+        '# Speaking Engagements & Media Coverage',
+        '',
+        frontmatterFor('Media & Speaking', '/media').trimEnd(),
+        '',
+        'Press coverage, keynotes, and 65+ media quotes of Vedang Vatsa in Decrypt, Yahoo Finance, Business Standard, The Tribune, and Outlook Money.',
+        '',
+        '## Press Features',
+        '- Decrypt: Analysis of blockchain trends and institutional adoption',
+        '- Yahoo Finance: Digital assets, stablecoin regulatory landscape',
+        '- Business Standard: AI policy and technological impact on emerging markets',
+        '- The Tribune: Academic research and education in Web3 and AI',
+        '- Outlook Money: Future of decentralized finance',
+      ].join('\n');
+    case '/community':
+      return [
+        '# Community Building Guide by Vedang Vatsa',
+        '',
+        frontmatterFor('Community Building', '/community').trimEnd(),
+        '',
+        'Playbook and operational frameworks from scaling Hashtag Web3 to 120,000+ members and founding CVinBio.',
+      ].join('\n');
+    case '/health-protocols':
+      return [
+        '# Bryan Johnson Blueprint Protocol - Reference Guide',
+        '',
+        frontmatterFor('Health Protocols', '/health-protocols').trimEnd(),
+        '',
+        'Full reference guide to biomarker tracking, longevity science, and routines with transcript data.',
+      ].join('\n');
     default:
       break;
   }
@@ -260,7 +366,8 @@ function getMarkdownBodyForPath(pathname: string): string | null {
   }
   const segments = pathname.split('/').filter(Boolean);
   if (segments.length === 1) {
-    return essayMarkdown(segments[0]);
+    const essay = essayMarkdown(segments[0]);
+    if (essay) return essay;
   }
   return null;
 }

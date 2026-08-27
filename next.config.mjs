@@ -96,6 +96,10 @@ const nextConfig = {
             value: 'search=yes, ai-train=yes, ai-input=yes',
           },
           {
+            key: 'Vary',
+            value: 'Accept, User-Agent, Accept-Encoding',
+          },
+          {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
@@ -131,6 +135,19 @@ const nextConfig = {
         ],
       },
       {
+        source: '/.well-known/mcp/:path*',
+        headers: [
+          { key: 'RateLimit', value: 'limit=60, remaining=59, reset=60' },
+          { key: 'RateLimit-Limit', value: '60' },
+          { key: 'RateLimit-Remaining', value: '59' },
+          { key: 'RateLimit-Reset', value: '60' },
+          { key: 'RateLimit-Policy', value: '60;w=60' },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Access-Control-Allow-Methods', value: 'POST, GET, OPTIONS, HEAD, DELETE' },
+          { key: 'Access-Control-Allow-Headers', value: 'Content-Type, Accept, Mcp-Session-Id, Mcp-Protocol-Version, Authorization, X-Requested-With, Idempotency-Key' },
+        ],
+      },
+      {
         source: '/.well-known/mcp',
         headers: [
           { key: 'RateLimit', value: 'limit=60, remaining=59, reset=60' },
@@ -139,6 +156,8 @@ const nextConfig = {
           { key: 'RateLimit-Reset', value: '60' },
           { key: 'RateLimit-Policy', value: '60;w=60' },
           { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Access-Control-Allow-Methods', value: 'POST, GET, OPTIONS, HEAD, DELETE' },
+          { key: 'Access-Control-Allow-Headers', value: 'Content-Type, Accept, Mcp-Session-Id, Mcp-Protocol-Version, Authorization, X-Requested-With, Idempotency-Key' },
         ],
       },
       {

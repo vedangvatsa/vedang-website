@@ -146,16 +146,29 @@
       "install": "go get github.com/vedangvatsa/vedang-website"
     }
   ],
+  "mcp_servers": {
+    "product": {
+      "name": "veda-product-mcp",
+      "url": "https://veda.ng/.well-known/mcp",
+      "description": "Product action & execution server"
+    },
+    "docs": {
+      "name": "veda-docs-mcp",
+      "url": "https://veda.ng/.well-known/mcp/docs",
+      "description": "Documentation & knowledge server"
+    }
+  },
   "developer": {
     "name": "Vedang Vatsa",
-    "organization": "Hashtag Web3 & CVinBio",
+    "organization": "CVinBio & Hashtag Web3",
     "affiliations": [
-      "Hashtag Web3 (https://hashtagweb3.com)",
-      "CVinBio (https://cvin.bio)"
+      "CVinBio (https://cvin.bio)",
+      "Hashtag Web3 (https://hashtagweb3.com)"
     ],
     "docs": "https://veda.ng/developers",
     "openapi": "https://veda.ng/openapi.json",
     "mcp": "https://veda.ng/.well-known/mcp",
+    "mcp_docs": "https://veda.ng/.well-known/mcp/docs",
     "repository": "https://github.com/vedangvatsa/vedang-website",
     "pypi": "https://pypi.org/project/vedang-cli/",
     "npm": "https://www.npmjs.com/package/vedang",

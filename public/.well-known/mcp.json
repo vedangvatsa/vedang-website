@@ -1,0 +1,37 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/mcp.json",
+  "name": "veda.ng",
+  "description": "Official Model Context Protocol (MCP) servers for veda.ng providing both product actions and documentation retrieval.",
+  "servers": {
+    "product": {
+      "name": "veda-product-mcp",
+      "url": "https://veda.ng/.well-known/mcp",
+      "transport": "streamable-http",
+      "protocolVersion": "2025-06-18",
+      "description": "Product execution server: search academic research literature, run batch operations, and query published essays.",
+      "tools": [
+        "search_reports",
+        "search_essays",
+        "get_essay",
+        "search_glossary",
+        "get_glossary_term"
+      ]
+    },
+    "docs": {
+      "name": "veda-docs-mcp",
+      "url": "https://veda.ng/.well-known/mcp/docs",
+      "transport": "streamable-http",
+      "protocolVersion": "2025-06-18",
+      "description": "Documentation server: query API references, OpenAPI schemas, authentication guides, and educational course curricula.",
+      "tools": [
+        "get_api_documentation",
+        "get_openapi_specification",
+        "get_auth_guide",
+        "search_documentation",
+        "get_course_curriculum",
+        "get_glossary_term",
+        "get_essay"
+      ]
+    }
+  }
+}

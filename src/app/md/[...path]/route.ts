@@ -5,8 +5,9 @@ export const dynamic = 'force-dynamic';
 
 const MARKDOWN_HEADERS: Record<string, string> = {
   'Content-Type': 'text/markdown; charset=utf-8',
-  Vary: 'Accept, Accept-Encoding',
+  Vary: 'Accept, User-Agent, Accept-Encoding',
   'Cache-Control': 'public, max-age=300, stale-while-revalidate=86400',
+  'Access-Control-Allow-Origin': '*',
 };
 
 type RouteContext = { params: Promise<{ path?: string[] }> };
