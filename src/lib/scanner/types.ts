@@ -1,5 +1,5 @@
 export type CheckStatus = 'pass' | 'warning' | 'fail' | 'na';
-
+export type CheckImpact = 'critical' | 'important' | 'recommended' | 'optional';
 export type LayerId = 'discovery' | 'access' | 'usability' | 'security' | 'seo' | 'payments';
 
 export interface CheckResult {
@@ -9,13 +9,21 @@ export interface CheckResult {
   status: CheckStatus;
   score: number;
   maxScore: number;
+  /** What the scanner actually found (factual, specific to this domain). */
   details: string;
+  /** Why this check matters for AI agents, LLMs, and machine consumers — educational context. */
+  why?: string;
+  /** What to do to fix or improve this check. */
   recommendation?: string;
+  /** Copy-paste code snippet to implement the fix. */
   fixSnippet?: {
     language: string;
     filename?: string;
     code: string;
   };
+  /** Priority level for this check. */
+  impact?: CheckImpact;
+  /** Link to full guide or spec. */
   referenceUrl?: string;
 }
 
