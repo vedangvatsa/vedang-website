@@ -264,28 +264,7 @@ function getMarkdownBodyForPath(pathname: string): string | null {
     case '/contact':
       return meetingContactMarkdown();
     case '/developers':
-    case '/api':
-    case '/docs':
       return developersMarkdown();
-    case '/api/v1/essays':
-      return essaysIndexMarkdown();
-    case '/api/v1/glossary':
-      return glossaryIndexMarkdown();
-    case '/auth':
-    case '/auth.md':
-      return [
-        '# Authentication & Security Guide',
-        '',
-        frontmatterFor('Authentication & Security Guide', '/auth.md').trimEnd(),
-        '',
-        '## Keyless Open Access',
-        'All read endpoints on veda.ng are public and open-access. No API keys, Bearer tokens, or registration are required.',
-        '',
-        '## Machine Interfaces',
-        '- REST API: `https://veda.ng/api/v1/reports/search`',
-        '- MCP Server: `https://veda.ng/.well-known/mcp`',
-        '- OpenAPI Specification: `https://veda.ng/openapi.json`',
-      ].join('\n');
     case '/prompt':
       return courseMarkdown(
         'Prompt Engineering 101 - AI Course',
@@ -420,6 +399,7 @@ function getMarkdownBodyForPath(pathname: string): string | null {
         '- Authentication Guide: https://veda.ng/auth.md',
       ].join('\n');
     case '/auth':
+    case '/auth.md':
       return [
         '# Authentication Guide - Vedang Vatsa (veda.ng)',
         '',

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { PageLayout } from '@/components/page-layout';
+import { AuthorByline } from '@/components/author-byline';
 import { BreadcrumbSchema } from '@/components/breadcrumb-schema';
 import { CATEGORIES } from '@/lib/web3-reports-data';
 import { ReportLibrary } from '@/components/report-library';
@@ -25,6 +26,7 @@ export default function Web3ReportsPage() {
           <p className="mt-4 text-sm md:text-base text-muted-foreground max-w-xl mx-auto leading-relaxed">
             Search 250M+ academic papers via OpenAlex and browse 100,000+ curated blockchain and Web3 reports, including consulting and industry analyses.
           </p>
+          <AuthorByline />
           <p className="mt-4 text-sm text-muted-foreground">
             Read the full synthesis: <Link href="/stateofweb3" className="text-primary hover:underline font-medium">The State of Web3 →</Link>
           </p>

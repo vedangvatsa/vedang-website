@@ -80,6 +80,9 @@ export function Header() {
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
+                  <Link href="/scan">Agentic Scanner</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <Link href="/aistandards">AI Discovery Standards</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
@@ -155,6 +158,7 @@ export function Header() {
                 </MobileNavSection>
 
                 <MobileNavSection title="Tools">
+                  <MobileNavLink href="/scan" onClose={closeMobile}>Agentic Scanner</MobileNavLink>
                   <MobileNavLink href="/glossary" onClose={closeMobile}>Glossary</MobileNavLink>
                   <MobileNavLink href="/lit" onClose={closeMobile}>LinkedIn Translator</MobileNavLink>
                   <MobileNavLink href="/swarm-prediction" onClose={closeMobile}>Swarm Prediction</MobileNavLink>

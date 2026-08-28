@@ -27,6 +27,7 @@ const resources = [
   { title: 'Learn AI Automation', url: '/automation' },
   { title: 'LinkedIn Translator', url: '/lit' },
   { title: 'Swarm Prediction', url: '/swarm-prediction' },
+  { title: 'Agentic Readiness Scanner', url: '/scan' },
   { title: 'AI Discovery Standards', url: '/aistandards' },
   { title: 'Website Checklist', url: '/sitecheck' },
   { title: 'AI Reports Library', url: '/ailib' },

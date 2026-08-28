@@ -1,4 +1,4 @@
-import { CheckResult, LayerScore, ScanResult } from './types';
+import { CheckResult, ScanResult } from './types';
 
 const PROBE_TIMEOUT_MS = 4500;
 
@@ -66,6 +66,7 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     agentsTxtRes, agentsJsonRes, agentCardRes,
     securityTxtRes, tdmrepRes, feedRes, feedJsonRes,
     homepageRes, rateLimitRes,
+    aiPluginRes, sitemapJsonRes, termsRes,
   ] = await Promise.all([
     safeFetch(`${origin}/robots.txt`),
     safeFetch(`${origin}/llms.txt`),
@@ -96,6 +97,9 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     safeFetch(`${origin}/feed.json`),
     safeFetch(`${origin}/`),
     safeFetch(`${origin}/api`),
+    safeFetch(`${origin}/.well-known/ai-plugin.json`),
+    safeFetch(`${origin}/.well-known/sitemap.json`),
+    safeFetch(`${origin}/terms-of-use.md`),
   ]);
 
   const homepageHtml = homepageRes?.text || mdAcceptRes?.text || '';
@@ -340,6 +344,84 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     });
   }
 
+  // 1.10 Selective AI robots.txt Directives
+  if (robotsRes?.ok && robotsRes.text) {
+    const txt = robotsRes.text;
+    const blocksTraining = /User-agent:\s*(GPTBot|ClaudeBot|CCBot|Google-Extended)[\s\S]*?Disallow:\s*\/\s*$/im.test(txt);
+    const allowsSearch = /User-agent:\s*(OAI-SearchBot|PerplexityBot|Claude-SearchBot)[\s\S]*?Allow:\s*\/\s*$/im.test(txt);
+
+    if (blocksTraining && allowsSearch) {
+      discoveryChecks.push({
+        id: 'robots-selective-ai-policy', name: 'Selective AI Crawler Rules (robots.txt)', layer: 'discovery',
+        status: 'pass', score: 2, maxScore: 2, impact: 'important',
+        details: 'robots.txt selectively restricts model training bots (GPTBot/ClaudeBot) while explicitly allowing live search bots (OAI-SearchBot/PerplexityBot).',
+        why: 'In the agentic web, complete crawler blocks harm discoverability. The best practice is a tiered policy: restrict training harvesters to protect intellectual property, but allow live search retrieval so agents can site-source your domain in answers.',
+        referenceUrl: 'https://veda.ng/aistandards',
+      });
+    } else {
+      discoveryChecks.push({
+        id: 'robots-selective-ai-policy', name: 'Selective AI Crawler Rules (robots.txt)', layer: 'discovery',
+        status: 'warning', score: 1, maxScore: 2, impact: 'important',
+        details: 'robots.txt does not distinguish between model training crawlers and live search citation agents.',
+        why: 'Applying a blanket allow/disallow treats training crawlers and search agents identically. This can either expose all your data to model training or completely hide your site from AI search engines.',
+        recommendation: 'Add selective directives in robots.txt: block GPTBot and ClaudeBot, but allow OAI-SearchBot and PerplexityBot.',
+        fixSnippet: { language: 'robots.txt', filename: 'public/robots.txt', code: `# Allow AI Search Engines\nUser-agent: OAI-SearchBot\nUser-agent: PerplexityBot\nAllow: /\n\n# Block general training models\nUser-agent: GPTBot\nUser-agent: ClaudeBot\nUser-agent: Google-Extended\nDisallow: /` },
+        referenceUrl: 'https://veda.ng/aistandards',
+      });
+    }
+  } else {
+    discoveryChecks.push({
+      id: 'robots-selective-ai-policy', name: 'Selective AI Crawler Rules (robots.txt)', layer: 'discovery',
+      status: 'fail', score: 0, maxScore: 2, impact: 'important',
+      details: 'robots.txt not found or empty.',
+      why: 'AI search engines cannot selectively process your domain without a robots.txt file indicating clear access rules.',
+      recommendation: 'Publish a robots.txt containing selective AI bot rules.',
+      referenceUrl: 'https://veda.ng/aistandards',
+    });
+  }
+
+  // 1.11 OpenAI Plugin Manifest (/.well-known/ai-plugin.json)
+  if (aiPluginRes?.ok && aiPluginRes.text && aiPluginRes.text.includes('schema_version')) {
+    discoveryChecks.push({
+      id: 'openai-plugin', name: 'OpenAI Plugin Manifest (ai-plugin.json)', layer: 'discovery',
+      status: 'pass', score: 2, maxScore: 2, impact: 'optional',
+      details: 'OpenAI plugin manifest found and validated at /.well-known/ai-plugin.json.',
+      why: 'ai-plugin.json is OpenAI\'s standard for describing API-driven capabilities. Even as plugins evolve, ChatGPT and other API-aware orchestrators use this file to auto-discover tool specs and authentication parameters.',
+      referenceUrl: 'https://veda.ng/aistandards',
+    });
+  } else {
+    discoveryChecks.push({
+      id: 'openai-plugin', name: 'OpenAI Plugin Manifest (ai-plugin.json)', layer: 'discovery',
+      status: 'warning', score: 0, maxScore: 2, impact: 'optional',
+      details: 'No plugin manifest detected at /.well-known/ai-plugin.json.',
+      why: 'Publishing a plugin manifest allows chat interfaces to interact directly with your API schemas to fetch live data on demand.',
+      recommendation: 'Create a /.well-known/ai-plugin.json defining your API descriptions, schemas, and icons.',
+      fixSnippet: { language: 'json', filename: 'public/.well-known/ai-plugin.json', code: `{\n  "schema_version": "v1",\n  "name_for_human": "${domain} Service",\n  "name_for_model": "${domain.replace(/\\./g, '')}",\n  "description_for_human": "Human description of your service.",\n  "description_for_model": "Model-facing guide explaining when to call the API.",\n  "auth": { "type": "none" },\n  "api": { "type": "openapi", "url": "${origin}/openapi.json" },\n  "logo_url": "${origin}/logo.png",\n  "contact_email": "support@${domain}",\n  "legal_info_url": "${origin}/legal"\n}` },
+      referenceUrl: 'https://veda.ng/aistandards',
+    });
+  }
+
+  // 1.12 JSON Sitemap (sitemap.json)
+  if (sitemapJsonRes?.ok && sitemapJsonRes.text && sitemapJsonRes.text.includes('urls')) {
+    discoveryChecks.push({
+      id: 'sitemap-json', name: 'JSON Sitemap (sitemap.json)', layer: 'discovery',
+      status: 'pass', score: 2, maxScore: 2, impact: 'optional',
+      details: 'JSON Sitemap found at /.well-known/sitemap.json. Clean and cheap format for agent parsing.',
+      why: 'JSON sitemaps are an emerging standard for agentic discoverability. Agents can fetch and parse JSON with far less compute/tokens compared to parsing legacy XML schemas, reducing execution latency.',
+      referenceUrl: 'https://veda.ng/aistandards',
+    });
+  } else {
+    discoveryChecks.push({
+      id: 'sitemap-json', name: 'JSON Sitemap (sitemap.json)', layer: 'discovery',
+      status: 'warning', score: 0, maxScore: 2, impact: 'optional',
+      details: 'No JSON Sitemap found at /.well-known/sitemap.json.',
+      why: 'Standard XML sitemaps require XML parsing libraries and are verbose. A JSON sitemap provides a token-efficient, structure-friendly way for API-based agents to map your pages.',
+      recommendation: 'Publish a sitemap.json listing your core URLs, titles, and update frequencies.',
+      fixSnippet: { language: 'json', filename: 'public/.well-known/sitemap.json', code: `{\n  "urls": [\n    { "url": "${origin}/", "title": "Home", "lastmod": "${new Date().toISOString().split('T')[0]}" },\n    { "url": "${origin}/docs", "title": "Docs", "lastmod": "${new Date().toISOString().split('T')[0]}" }\n  ]\n}` },
+      referenceUrl: 'https://veda.ng/aistandards',
+    });
+  }
+
   // ──────────────────────────────────────────────────────────────────────────
   // LAYER 2 — Access
   // ──────────────────────────────────────────────────────────────────────────
@@ -461,6 +543,73 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     });
   }
 
+  // 2.6 JS Hydration & Client-side Rendering Check
+  const hasNoContent = homepageHtml.length > 0 && !/<body[^>]*>[\s\S]*?[a-zA-Z0-9]{3,}[\s\S]*?<\/body>/i.test(homepageHtml);
+  const isSPA = homepageHtml.includes('id="root"') || homepageHtml.includes('id="app"');
+  if (hasNoContent && isSPA) {
+    accessChecks.push({
+      id: 'access-js-hydration', name: 'Static Content fallback (No-JS Readiness)', layer: 'access',
+      status: 'fail', score: 0, maxScore: 2, impact: 'critical',
+      details: 'HTML body is nearly empty, but client-side app mounting points (e.g. #root) are present. The site relies entirely on JavaScript execution.',
+      why: 'Most AI bots and API clients fetch raw HTML using basic HTTP request libraries (like python-requests, node-fetch, or Go standard libraries) and do not spin up full browser runtimes. If your site requires JS to render content, agents will see a blank page.',
+      recommendation: 'Implement Server-Side Rendering (SSR) or Static Site Generation (SSG). Ensure core content is returned directly in the raw HTML payload.',
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  } else {
+    accessChecks.push({
+      id: 'access-js-hydration', name: 'Static Content fallback (No-JS Readiness)', layer: 'access',
+      status: 'pass', score: 2, maxScore: 2, impact: 'critical',
+      details: 'Semantic HTML content is directly available in the initial HTML payload (server-rendered).',
+      why: 'Server-rendered content lets simple HTTP clients and LLM web crawlers extract text immediately without running a heavy headless browser, maximizing compatibility and saving agent compute.',
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  }
+
+  // 2.7 Payload Compression (Accept-Encoding: br/zstd)
+  const contentEncoding = homepageRes?.headers.get('content-encoding') || '';
+  if (contentEncoding.includes('br') || contentEncoding.includes('zstd') || contentEncoding.includes('gzip')) {
+    accessChecks.push({
+      id: 'access-compression', name: 'Payload Compression (Brotli/Zstandard)', layer: 'access',
+      status: 'pass', score: 1, maxScore: 1, impact: 'optional',
+      details: `Server uses compression for payloads (${contentEncoding}).`,
+      why: 'Compression reduces network latency and bandwidth costs for agent crawlers processing high volumes of pages.',
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  } else {
+    accessChecks.push({
+      id: 'access-compression', name: 'Payload Compression (Brotli/Zstandard)', layer: 'access',
+      status: 'warning', score: 0, maxScore: 1, impact: 'optional',
+      details: 'No compression header (Content-Encoding) detected in response.',
+      why: 'Transferring uncompressed text blocks inflates latency and bandwidth consumption, slowing down real-time retrieval loops.',
+      recommendation: 'Enable Brotli (br) or gzip compression on your web server / CDN.',
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  }
+
+  // 2.8 Text-to-HTML Boilerplate Ratio
+  const htmlLen = homepageHtml.length || 1;
+  const textOnly = homepageHtml.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+  const textLen = textOnly.length;
+  const textRatio = textLen / htmlLen;
+  if (textRatio > 0.15) {
+    accessChecks.push({
+      id: 'access-boilerplate-ratio', name: 'Text-to-HTML Ratio', layer: 'access',
+      status: 'pass', score: 1, maxScore: 1, impact: 'optional',
+      details: `High content density: text-to-HTML ratio is ${(textRatio * 100).toFixed(1)}%.`,
+      why: 'A high text-to-HTML ratio means the page contains clean, descriptive text with minimal DOM/markup bloat, ensuring token-efficient crawler parsing.',
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  } else {
+    accessChecks.push({
+      id: 'access-boilerplate-ratio', name: 'Text-to-HTML Ratio', layer: 'access',
+      status: 'warning', score: 0, maxScore: 1, impact: 'optional',
+      details: `Low content density: text-to-HTML ratio is ${(textRatio * 100).toFixed(1)}% (heavy DOM structure/styles).`,
+      why: 'If markup, classes (e.g. excessive Tailwind classes), and scripts dwarf the actual text content, AI models spend unnecessary tokens parsing code instead of reading the content.',
+      recommendation: 'Minimize CSS/JS injection inside HTML. Clean up unnecessary DOM nodes and use semantic elements to reduce DOM depth.',
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  }
+
   // ──────────────────────────────────────────────────────────────────────────
   // LAYER 3 — Usability & MCP
   // ──────────────────────────────────────────────────────────────────────────
@@ -549,6 +698,143 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       recommendation: 'Publish a /.well-known/tdmrep.json. Set "tdm-reservation": 0 to allow mining, or 1 to reserve rights.',
       fixSnippet: { language: 'json', filename: 'public/.well-known/tdmrep.json', code: `{\n  "@context": "http://www.w3.org/ns/tdmrep",\n  "tdm-reservation": 0,\n  "tdm-policy": "${origin}/tdm-policy"\n}` },
       referenceUrl: 'https://veda.ng/aistandards',
+    });
+  }
+
+  // 3.5 OpenAPI Example Coverage
+  if (openapiRes?.ok && openapiRes.text) {
+    const hasExamples = openapiRes.text.includes('"example"') || openapiRes.text.includes('"examples"');
+    if (hasExamples) {
+      usabilityChecks.push({
+        id: 'openapi-examples', name: 'OpenAPI Example Documentation', layer: 'usability',
+        status: 'pass', score: 2, maxScore: 2, impact: 'recommended',
+        details: 'OpenAPI specification includes parameter or payload examples.',
+        why: 'AI models rely on parameter examples to construct syntactically correct HTTP requests. Lacking examples, LLMs must guess formatting (e.g., date formats or ID prefixes), leading to high rates of failed tool execution.',
+        referenceUrl: 'https://veda.ng/developers',
+      });
+    } else {
+      usabilityChecks.push({
+        id: 'openapi-examples', name: 'OpenAPI Example Documentation', layer: 'usability',
+        status: 'warning', score: 0, maxScore: 2, impact: 'recommended',
+        details: 'OpenAPI spec found but does not contain parameter "example" or "examples" objects.',
+        why: 'AI agents require structural context to operate APIs correctly. Adding clear examples in your schema reduces model tool-call failures by up to 40%.',
+        recommendation: 'Add example values to all query parameters and requestBody schemas in your openapi.json file.',
+        fixSnippet: { language: 'json', code: `"parameters": [\n  {\n    "name": "limit",\n    "in": "query",\n    "schema": { "type": "integer", "example": 20 }\n  }\n]` },
+        referenceUrl: 'https://veda.ng/developers',
+      });
+    }
+  } else {
+    usabilityChecks.push({
+      id: 'openapi-examples', name: 'OpenAPI Example Documentation', layer: 'usability',
+      status: 'na', score: 0, maxScore: 0, impact: 'recommended',
+      details: 'No OpenAPI specification found to inspect.',
+      why: 'No API spec is published, so schema examples cannot be assessed.',
+      referenceUrl: 'https://veda.ng/developers',
+    });
+  }
+
+  // 3.6 Standardized Error Formatting (RFC 7807)
+  const isRfcProblem = rateLimitRes?.headers.get('content-type')?.includes('application/problem+json') ||
+                        openapiRes?.text?.includes('application/problem+json');
+  if (isRfcProblem) {
+    usabilityChecks.push({
+      id: 'rfc-7807-errors', name: 'Standardized Error Formatting (RFC 7807)', layer: 'usability',
+      status: 'pass', score: 1, maxScore: 1, impact: 'optional',
+      details: 'API describes or uses application/problem+json response formats for error handling.',
+      why: 'When a tool call fails, an agent must recover programmatically. Returning errors in the standard RFC 7807 JSON format lets agents parse error details and correct their parameters autonomously.',
+      referenceUrl: 'https://veda.ng/developers',
+    });
+  } else {
+    usabilityChecks.push({
+      id: 'rfc-7807-errors', name: 'Standardized Error Formatting (RFC 7807)', layer: 'usability',
+      status: 'warning', score: 0, maxScore: 1, impact: 'optional',
+      details: 'No RFC 7807 problem details detected in API error response footprints.',
+      why: 'Returning raw stack traces, generic HTML, or plain strings during API failures breaks agent flows since the LLM cannot parse what went wrong to fix its next action.',
+      recommendation: 'Configure your API error handlers to respond with content-type application/problem+json containing title, status, and detail fields.',
+      fixSnippet: { language: 'json', code: `{\n  "type": "https://api.${domain}/errors/validation",\n  "title": "Validation Error",\n  "status": 400,\n  "detail": "The limit parameter must be between 1 and 100.",\n  "instance": "/api/v1/resource"\n}` },
+      referenceUrl: 'https://veda.ng/developers',
+    });
+  }
+
+  // 3.7 API Dry-Run / Test Mode Support
+  const hasDryRun = openapiRes?.text && (
+    openapiRes.text.toLowerCase().includes('dry-run') ||
+    openapiRes.text.toLowerCase().includes('dryrun') ||
+    openapiRes.text.toLowerCase().includes('sandbox') ||
+    openapiRes.text.toLowerCase().includes('test-mode')
+  );
+  if (hasDryRun) {
+    usabilityChecks.push({
+      id: 'api-dry-run', name: 'API Dry-Run / Test Mode Support', layer: 'usability',
+      status: 'pass', score: 2, maxScore: 2, impact: 'recommended',
+      details: 'OpenAPI specification includes dry-run headers or test-mode parameters.',
+      why: 'Agents operate autonomously and can execute unintended changes. A dry-run capability allows agents to validate action payloads and receive simulated results safely before committing transactions.',
+      referenceUrl: 'https://veda.ng/developers',
+    });
+  } else {
+    usabilityChecks.push({
+      id: 'api-dry-run', name: 'API Dry-Run / Test Mode Support', layer: 'usability',
+      status: 'warning', score: 0, maxScore: 2, impact: 'recommended',
+      details: 'No dry-run parameters or test mode endpoints discovered in the API spec.',
+      why: 'Lacking a safety sandbox or dry-run validation flag, agents cannot verify their commands beforehand, raising the risk of destructive actions or transaction errors.',
+      recommendation: 'Implement support for an X-Dry-Run header or query parameter on all mutate endpoints.',
+      fixSnippet: { language: 'typescript', code: `// In POST/PUT API handlers\nconst dryRun = req.headers.get('X-Dry-Run') === 'true';\nif (dryRun) {\n  return Response.json({ status: 'validated', changes: { id: 123 } });\n}` },
+      referenceUrl: 'https://veda.ng/developers',
+    });
+  }
+
+  // 3.8 CORS Configuration for AI Interfaces
+  const apiCors = rateLimitRes?.headers.get('access-control-allow-origin') || '';
+  const allowsAll = apiCors === '*' || apiCors.toLowerCase().includes('chatgpt') || apiCors.toLowerCase().includes('claude');
+  if (allowsAll) {
+    usabilityChecks.push({
+      id: 'api-cors-ai', name: 'CORS Configuration for AI interfaces', layer: 'usability',
+      status: 'pass', score: 1, maxScore: 1, impact: 'optional',
+      details: `API allows cross-origin requests: Access-Control-Allow-Origin: ${apiCors || '*'}`,
+      why: 'If your APIs are called directly by client-side agents running inside browser plugins or web playgrounds (like ChatGPT canvas or Claude artifacts), strict CORS rules will block the network requests.',
+      referenceUrl: 'https://veda.ng/developers',
+    });
+  } else {
+    usabilityChecks.push({
+      id: 'api-cors-ai', name: 'CORS Configuration for AI interfaces', layer: 'usability',
+      status: 'warning', score: 0, maxScore: 1, impact: 'optional',
+      details: 'Strict CORS policy detected. API may reject browser-based agent executions.',
+      why: 'Browser-driven agent sandboxes (such as custom GPTs running in a browser) will trigger CORS preflight checks. If access-control headers block the origin, the agent cannot access your resources.',
+      recommendation: 'Set Access-Control-Allow-Origin: * or explicitly whitelist *.openai.com, *.chatgpt.com, and *.claude.ai.',
+      fixSnippet: { language: 'http', code: `Access-Control-Allow-Origin: *\nAccess-Control-Allow-Methods: GET, POST, OPTIONS\nAccess-Control-Allow-Headers: Content-Type, Authorization` },
+      referenceUrl: 'https://veda.ng/developers',
+    });
+  }
+
+  // 3.9 MCP Schema Handshake Validation
+  if (mcpWorking) {
+    const hasTools = (mcpWellKnownRes?.text && mcpWellKnownRes.text.includes('tools')) ||
+                     (mcpApiRes?.text && mcpApiRes.text.includes('tools'));
+    if (hasTools) {
+      usabilityChecks.push({
+        id: 'mcp-schema-handshake', name: 'MCP Schema Handshake Validation', layer: 'usability',
+        status: 'pass', score: 2, maxScore: 2, impact: 'important',
+        details: 'MCP server successfully advertises capabilities.tools during initialization.',
+        why: 'Simply returning an initialize handshake is not enough; the server must declare its tool definitions in its capabilities. Without tools, the agent cannot execute any functionality.',
+        referenceUrl: 'https://veda.ng/mcp',
+      });
+    } else {
+      usabilityChecks.push({
+        id: 'mcp-schema-handshake', name: 'MCP Schema Handshake Validation', layer: 'usability',
+        status: 'warning', score: 0, maxScore: 2, impact: 'important',
+        details: 'MCP server responds to handshake but lists no tool capabilities.',
+        why: 'The MCP handshake completed but the capabilities object was empty or missing the tools object, rendering the server unusable for task execution.',
+        recommendation: 'Ensure your MCP initialize response includes capabilities: { tools: {} } and responds to tools/list requests.',
+        referenceUrl: 'https://veda.ng/mcp',
+      });
+    }
+  } else {
+    usabilityChecks.push({
+      id: 'mcp-schema-handshake', name: 'MCP Schema Handshake Validation', layer: 'usability',
+      status: 'na', score: 0, maxScore: 0, impact: 'important',
+      details: 'No live MCP server detected to handshake with.',
+      why: 'Handshake validation requires a running MCP server.',
+      referenceUrl: 'https://veda.ng/mcp',
     });
   }
 
@@ -730,6 +1016,60 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     });
   }
 
+  // 4.9 Content Provenance (C2PA / Content Credentials)
+  const hasC2PA = homepageHtml.includes('c2pa') || homepageHtml.includes('manifest.jumbf');
+  if (hasC2PA) {
+    securityChecks.push({
+      id: 'security-c2pa', name: 'Content Provenance & Credentials (C2PA)', layer: 'security',
+      status: 'pass', score: 1, maxScore: 1, impact: 'optional',
+      details: 'C2PA content metadata hooks or reference declarations detected in the site source.',
+      why: 'C2PA (Content Provenance and Authenticity) is the standard for certifying whether content was generated by AI or made by humans. AI search systems and social networks favor domains publishing signed media provenance to prevent disinformation.',
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  } else {
+    securityChecks.push({
+      id: 'security-c2pa', name: 'Content Provenance & Credentials (C2PA)', layer: 'security',
+      status: 'warning', score: 0, maxScore: 1, impact: 'optional',
+      details: 'No C2PA provenance indicators found in HTML resources.',
+      why: 'Without provenance signatures on images and media, agents cannot automatically verify if assets are authentic, unedited, or generated by an AI model, which is becoming a baseline trust factor.',
+      recommendation: 'If you publish original images or articles, consider signing media files with C2PA metadata schemas using the c2pa-tool.',
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  }
+
+  // 4.10 AI Safety & Vulnerability Disclosures (security.txt)
+  if (securityTxtRes?.ok && securityTxtRes.text) {
+    const txt = securityTxtRes.text;
+    const mentionsAiSafety = /ai\b|llm\b|prompt\s*injection|model\b/i.test(txt);
+    if (mentionsAiSafety) {
+      securityChecks.push({
+        id: 'security-ai-disclosure', name: 'AI Safety Vulnerability Policy', layer: 'security',
+        status: 'pass', score: 1, maxScore: 1, impact: 'optional',
+        details: 'security.txt includes disclosure directives specifically addressing AI safety or prompt injection vulnerabilities.',
+        why: 'Autonomous agents can be manipulated via prompt injection or model hacking. Declaring how reports on model-related vulnerabilities are handled guides security researchers safely.',
+        referenceUrl: 'https://veda.ng/sitecheck',
+      });
+    } else {
+      securityChecks.push({
+        id: 'security-ai-disclosure', name: 'AI Safety Vulnerability Policy', layer: 'security',
+        status: 'warning', score: 0, maxScore: 1, impact: 'optional',
+        details: 'security.txt found but lacks guidance specifically addressing model security or prompt injections.',
+        why: 'Traditional security rules do not outline how LLM-specific vulnerabilities (like prompt injection, training set poisoning, or sandbox escape) should be handled. Explicitly adding these rules clarifies reporting terms.',
+        recommendation: 'Add a section in security.txt pointing to your policy on handling prompt injections and model safety reports.',
+        fixSnippet: { language: 'text', code: `# AI Safety Reports\nPolicy: https://${domain}/security/ai-policy\n# Or add context to your existing vulnerability page.` },
+        referenceUrl: 'https://veda.ng/sitecheck',
+      });
+    }
+  } else {
+    securityChecks.push({
+      id: 'security-ai-disclosure', name: 'AI Safety Vulnerability Policy', layer: 'security',
+      status: 'na', score: 0, maxScore: 0, impact: 'optional',
+      details: 'No security.txt file found to evaluate.',
+      why: 'No security contact file is published.',
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  }
+
   // ──────────────────────────────────────────────────────────────────────────
   // LAYER 5 — SEO & Content
   // ──────────────────────────────────────────────────────────────────────────
@@ -861,6 +1201,121 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
     });
   }
 
+  // 5.6 JSON-LD Entity Graph Linking (@graph & @id)
+  const hasGraph = homepageHtml.includes('"@graph"') || homepageHtml.includes('"@id"');
+  if (hasGraph) {
+    seoChecks.push({
+      id: 'seo-schema-graph', name: 'JSON-LD Entity Graph Linking (@graph)', layer: 'seo',
+      status: 'pass', score: 2, maxScore: 2, impact: 'important',
+      details: 'JSON-LD data contains unified @graph declarations or explicit @id entity linkages.',
+      why: 'Grouping schemas in a single @graph block or linking them via @id helps LLM crawlers construct a coherent knowledge graph of your domain (e.g., matching the Author entity to a specific Article and Organization) instead of parsing isolated blocks.',
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  } else {
+    seoChecks.push({
+      id: 'seo-schema-graph', name: 'JSON-LD Entity Graph Linking (@graph)', layer: 'seo',
+      status: 'warning', score: 0, maxScore: 2, impact: 'important',
+      details: 'No unified @graph structure or explicit @id entity linkage discovered in structured data.',
+      why: 'Without @id linking, agents must guess entity relationships (e.g. whether the local author matches the writer of another page), reducing entity extraction reliability.',
+      recommendation: 'Refactor JSON-LD schemas to group entities inside a single "@graph" array or link them using unique "@id" keys.',
+      fixSnippet: { language: 'json', code: `{\n  "@context": "https://schema.org",\n  "@graph": [\n    {\n      "@type": "Organization",\n      "@id": "${origin}/#org",\n      "name": "${domain}"\n    },\n    {\n      "@type": "WebSite",\n      "@id": "${origin}/#site",\n      "url": "${origin}",\n      "publisher": { "@id": "${origin}/#org" }\n    }\n  ]\n}` },
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  }
+
+  // 5.7 Extended Schema Support (FAQPage, Product, HowTo, SoftwareApplication)
+  const schemaTypes = ['FAQPage', 'Product', 'HowTo', 'SoftwareApplication', 'LocalBusiness', 'NewsArticle', 'Course'];
+  const foundSchemas = schemaTypes.filter(s => homepageHtml.includes(`"${s}"`) || homepageHtml.includes(`'${s}'`));
+  if (foundSchemas.length > 0) {
+    seoChecks.push({
+      id: 'seo-rich-schemas', name: 'Extended Schema Support', layer: 'seo',
+      status: 'pass', score: 2, maxScore: 2, impact: 'recommended',
+      details: `Discovered rich schema entity declarations: ${foundSchemas.join(', ')}.`,
+      why: 'Rich schemas (FAQPage, Product, HowTo) declare precise parameters (e.g., price, ratings, step-by-step guides) that answer engines use directly to populate citation snippets and interactive widgets.',
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  } else {
+    seoChecks.push({
+      id: 'seo-rich-schemas', name: 'Extended Schema Support', layer: 'seo',
+      status: 'warning', score: 1, maxScore: 2, impact: 'recommended',
+      details: 'No advanced entity schemas (e.g. FAQPage, Product, HowTo) detected beyond WebSite or Organization.',
+      why: 'Lacking specific types like FAQPage or Product, LLM answer engines must fall back to crawling prose text, increasing citation error rates.',
+      recommendation: 'Deploy matching advanced schemas on relevant pages (e.g., FAQPage on Q&A layouts, Product on purchase pages).',
+      fixSnippet: { language: 'json', code: `{\n  "@context": "https://schema.org",\n  "@type": "FAQPage",\n  "mainEntity": [{\n    "@type": "Question",\n    "name": "How to do X?",\n    "acceptedAnswer": {\n      "@type": "Answer",\n      "text": "Do X by following step Y."\n    }\n  }]\n}` },
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  }
+
+  // 5.8 Answer-First Content Hierarchy
+  const bodyMatch = homepageHtml.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+  const first1000Chars = bodyMatch ? bodyMatch[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').substring(0, 1000) : '';
+  const wordCount = first1000Chars.split(' ').filter(Boolean).length;
+  if (wordCount >= 50) {
+    seoChecks.push({
+      id: 'seo-answer-first', name: 'Answer-First Content Hierarchy', layer: 'seo',
+      status: 'pass', score: 1, maxScore: 1, impact: 'recommended',
+      details: 'Page features structured text immediately in the initial layout fold.',
+      why: 'LLMs parse content sequentially. Front-loading the main entity summary, thesis, or answers in the first 500-1000 tokens ensures the crawler extracts the core information before reaching context limits.',
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  } else {
+    seoChecks.push({
+      id: 'seo-answer-first', name: 'Answer-First Content Hierarchy', layer: 'seo',
+      status: 'warning', score: 0, maxScore: 1, impact: 'recommended',
+      details: `Low text density in the first fold (${wordCount} words found). Layout may be menu-heavy or spacer-heavy.`,
+      why: 'If the top of your page is filled with nav links, structural wrappers, or empty margins, model crawlers waste input tokens reading boilerplate before reaching actual answers.',
+      recommendation: 'Place a clear summary paragraph, subtitle, or definition at the very top of your content hierarchy.',
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  }
+
+  // 5.9 Multimodal Optimization (Image Alt Tags & SVGs)
+  const hasImages = homepageHtml.includes('<img');
+  const missingAlts = hasImages ? (homepageHtml.match(/<img(?![^>]*\balt=)[^>]*>/gi) || []).length : 0;
+  const hasSVGs = homepageHtml.includes('<svg');
+  if (hasImages && missingAlts > 0) {
+    seoChecks.push({
+      id: 'seo-multimodal', name: 'Multimodal Asset Optimization', layer: 'seo',
+      status: 'warning', score: 1, maxScore: 2, impact: 'important',
+      details: `Missing alt attributes on ${missingAlts} image tag(s) on the homepage.`,
+      why: 'Multimodal AI systems (like Gemini Pro or GPT-4o) parse images directly. Alt tags are crucial anchors for matching visual images to surrounding text, especially for crawlers operating in text-only mode.',
+      recommendation: 'Provide meaningful, descriptive alt text for all image tags.',
+      fixSnippet: { language: 'html', code: `<img src="/diagram.png" alt="Architecture diagram of the agent validation flow showing the HTTP request sequence">` },
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  } else {
+    seoChecks.push({
+      id: 'seo-multimodal', name: 'Multimodal Asset Optimization', layer: 'seo',
+      status: 'pass', score: 2, maxScore: 2, impact: 'important',
+      details: `All image tags have alt descriptions. ${hasSVGs ? 'SVG code is utilized for icons, enabling direct token reading.' : ''}`,
+      why: 'Clean alt tags and SVG code enable both text-only search bots and multimodal vision models to correctly extract details from your visual assets.',
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  }
+
+  // 5.10 Content Freshness & Recency Indicators
+  const hasFreshness = homepageHtml.includes('dateModified') || homepageHtml.includes('datePublished') ||
+                       homepageHtml.includes('lastModified') || homepageHtml.includes('pubdate');
+  if (hasFreshness) {
+    seoChecks.push({
+      id: 'seo-freshness', name: 'Content Freshness & Recency Indicators', layer: 'seo',
+      status: 'pass', score: 1, maxScore: 1, impact: 'optional',
+      details: 'Metadata includes publication or modification timestamps.',
+      why: 'AI models prioritize recent, updated facts. Publishing clear schema timestamps signals content recency to answer engines indexing news, updates, or specs.',
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  } else {
+    seoChecks.push({
+      id: 'seo-freshness', name: 'Content Freshness & Recency Indicators', layer: 'seo',
+      status: 'warning', score: 0, maxScore: 1, impact: 'optional',
+      details: 'No publication or modification dates found in HTML markup.',
+      why: 'Lacking timestamp metadata, agents cannot easily verify if your specs or articles are up to date, which can result in stale citations in AI-generated responses.',
+      recommendation: 'Include datePublished and dateModified fields in your article JSON-LD or meta tags.',
+      fixSnippet: { language: 'json', code: `"datePublished": "2026-08-28T09:00:00Z",\n"dateModified": "${new Date().toISOString()}"` },
+      referenceUrl: 'https://veda.ng/sitecheck',
+    });
+  }
+
   // ──────────────────────────────────────────────────────────────────────────
   // LAYER 6 — Payments
   // ──────────────────────────────────────────────────────────────────────────
@@ -883,6 +1338,50 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       details: 'No paid API challenge detected — site appears to be open-access or non-commerce.',
       why: 'x402 and MPP enable autonomous agents to pay for premium API access using HTTP 402 responses and machine-readable payment instructions. If you offer paywalled content or metered APIs, adopting these protocols enables native agent billing without user intervention.',
       recommendation: 'If offering paywalled APIs, consider implementing x402 (Payment Required) or Machine Payments Protocol for keyless agent billing.',
+      referenceUrl: 'https://veda.ng/aistandards',
+    });
+  }
+
+  // 6.2 WebLN / Lightning Micropayments Discovery
+  const hasWebLN = homepageHtml.includes('name="lightning"') || homepageHtml.includes('rel="lightning"');
+  if (hasWebLN) {
+    paymentChecks.push({
+      id: 'payments-webln', name: 'WebLN / Lightning Wallet Discovery', layer: 'payments',
+      status: 'pass', score: 1, maxScore: 1, impact: 'optional',
+      details: 'WebLN / Lightning node address discovered in homepage meta tags.',
+      why: 'WebLN allows agents to pay for microservices or access automatically using Lightning network invoices. Having a WebLN meta tag enables agents to locate your invoice provider or payment gateway natively.',
+      referenceUrl: 'https://veda.ng/aistandards',
+    });
+  } else {
+    paymentChecks.push({
+      id: 'payments-webln', name: 'WebLN / Lightning Wallet Discovery', layer: 'payments',
+      status: 'na', score: 0, maxScore: 0, impact: 'optional',
+      details: 'No WebLN wallet addresses declared on the homepage.',
+      why: 'Agents cannot locate a Lightning node connection endpoint to perform WebLN payments.',
+      recommendation: 'If you want to receive Lightning micropayments from machines, add a meta tag containing your Lightning Address.',
+      fixSnippet: { language: 'html', code: `<meta name="lightning" content="youraddress@ln.tips">` },
+      referenceUrl: 'https://veda.ng/aistandards',
+    });
+  }
+
+  // 6.3 AI Terms of Use Check (terms-of-use.md)
+  if (termsRes?.ok && termsRes.text && termsRes.text.length > 50) {
+    const hasScrapingClauses = /scrape|crawling|ai\b|agent|llm|mining/i.test(termsRes.text);
+    paymentChecks.push({
+      id: 'payments-terms', name: 'AI Terms of Service (terms-of-use.md)', layer: 'payments',
+      status: hasScrapingClauses ? 'pass' : 'warning', score: hasScrapingClauses ? 1 : 0, maxScore: 1, impact: 'optional',
+      details: `terms-of-use.md discovered at /terms-of-use.md. ${hasScrapingClauses ? 'Includes explicit terms detailing acceptable agent crawling bounds.' : 'File found but does not specify crawler/agent terms.'}`,
+      why: 'Autonomous agents must comply with legal boundaries. Publishing a clear, machine-readable terms-of-use.md listing acceptable crawling thresholds, API usage policies, and scraping constraints prevents compliance friction.',
+      referenceUrl: 'https://veda.ng/aistandards',
+    });
+  } else {
+    paymentChecks.push({
+      id: 'payments-terms', name: 'AI Terms of Service (terms-of-use.md)', layer: 'payments',
+      status: 'warning', score: 0, maxScore: 1, impact: 'optional',
+      details: 'No machine-readable terms of use found at /terms-of-use.md.',
+      why: 'Without a clear /terms-of-use.md, compliance-aware agents may refuse to crawl your site to avoid copyright or licensing liabilities.',
+      recommendation: 'Publish a /terms-of-use.md outlining rules for AI crawling, data usage, and scraping limitations.',
+      fixSnippet: { language: 'markdown', filename: 'public/terms-of-use.md', code: `# Terms of Use — ${domain}\n\n## AI Crawling & Data Usage\n- Crawler bots may ingest public documentation for indexing and search citation.\n- Scraping for model training is permitted only in accordance with robots.txt directives.\n- Bulk database dumping is strictly prohibited.` },
       referenceUrl: 'https://veda.ng/aistandards',
     });
   }
@@ -947,6 +1446,11 @@ export async function scanDomain(targetInput: string): Promise<ScanResult> {
       aiBotFriendly: Boolean(robotsRes?.ok),
       httpsSecure: isHttps && hsts.length > 0,
       structuredData: hasJsonLd,
+      jsRenderingSelfSufficient: !hasNoContent || !isSPA,
+      xmlOrJsonSitemap: Boolean(sitemapRes?.ok || sitemapJsonRes?.ok),
+      schemaEntityGraph: hasGraph,
+      openapiExamplesReady: Boolean(openapiRes?.ok && openapiRes.text.includes('"example"')),
+      micropaymentsSupported: Boolean(hasMppOrX402 || hasWebLN),
     },
   };
 }

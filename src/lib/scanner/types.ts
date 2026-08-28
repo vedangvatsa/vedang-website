@@ -55,5 +55,10 @@ export interface ScanResult {
     aiBotFriendly: boolean;
     httpsSecure: boolean;
     structuredData: boolean;
+    jsRenderingSelfSufficient: boolean;
+    xmlOrJsonSitemap: boolean;
+    schemaEntityGraph: boolean;
+    openapiExamplesReady: boolean;
+    micropaymentsSupported: boolean;
   };
 }
