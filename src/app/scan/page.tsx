@@ -118,16 +118,16 @@ function CheckCard({ check, defaultExpanded = false }: { check: CheckResult; def
         </div>
       </div>
 
-      {/* ── Expanded body ── */}
+      {/* Rationale */}
       {expanded && hasDetails && (
         <div className="border-t border-border/50 divide-y divide-border/30">
 
-          {/* Why it matters */}
+          {/* Rationale */}
           {check.why && (
             <div className="px-5 py-4 flex gap-3">
               <BookOpen className="h-4 w-4 text-primary shrink-0 mt-0.5" />
               <div>
-                <p className="text-xs font-semibold text-primary mb-1 uppercase tracking-wider">Why this matters</p>
+                <p className="text-xs font-semibold text-primary mb-1 uppercase tracking-wider">Rationale</p>
                 <p className="text-sm text-foreground/90 leading-relaxed">{check.why}</p>
               </div>
             </div>
@@ -324,7 +324,7 @@ Here are the details of the selected gaps:
 
 ${selected.map((c, i) => `${i + 1}. [${c.name}] (${c.layer} layer — ${c.impact || 'recommended'} priority)
    - Finding: ${c.details}
-   - Why it matters: ${c.why || 'AI agents need this to perform tasks.'}
+   - Rationale: ${c.why || 'AI agents need this to perform tasks.'}
    - Fix recommendation: ${c.recommendation || 'Implement standard configurations.'}
    ${c.fixSnippet ? `- Code Template / Fix Reference:\n\`\`\`${c.fixSnippet.language}\n${c.fixSnippet.code}\n\`\`\`` : ''}`).join('\n\n')}
 
