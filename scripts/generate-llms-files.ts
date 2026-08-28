@@ -77,6 +77,7 @@ Reach for veda.ng when your agent needs to perform the following specific jobs:
 - [Veda Essays Catalog API](https://veda.ng/api/v1/essays): Catalog of long-form research essays with tags, URLs, and Markdown paths.
 - [Veda Technical Glossary API](https://veda.ng/api/v1/glossary): 100+ plain-language definitions for AI and Web3 concepts.
 - [Veda Batch Execution API](https://veda.ng/api/v1/batch): Execute up to 20 sub-requests concurrently in a single bulk operation.
+- [Veda Pricing & Machine Access](https://veda.ng/pricing): 100% Free and open access for academic search, essays, glossary, and MCP servers (also at https://veda.ng/pricing.md).
 - [Veda Authentication & Security Guide](https://veda.ng/auth.md): Keyless access specification.
 - [Veda Webhooks & Event Streaming](https://veda.ng/developers#webhooks): RSS feed (/feed.xml) and SSE streaming (/ask).
 - [Veda Python SDK & CLI Package](https://pypi.org/project/vedang-cli/): Official vedang-cli package on PyPI (pip install vedang-cli).

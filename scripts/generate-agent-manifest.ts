@@ -31,11 +31,46 @@ const STATIC_PAGES = [
   '/job-boards',
   '/privacy',
   '/developers',
+  '/pricing',
+  '/docs',
+  '/api',
+  '/auth',
+  '/api/v1/batch',
+  '/api/v1/reports/search',
+  '/api/v1/essays',
+  '/api/v1/glossary',
+  '/api/v1/jobs',
 ];
 
-const MARKDOWN_STATIC_PAGES = ['/', '/essays', '/glossary', '/about', '/privacy', '/contact', '/developers'];
+const MARKDOWN_STATIC_PAGES = [
+  '/',
+  '/essays',
+  '/glossary',
+  '/about',
+  '/privacy',
+  '/contact',
+  '/developers',
+  '/pricing',
+  '/docs',
+  '/api',
+  '/auth',
+  '/api/v1/batch',
+  '/api/v1/reports/search',
+  '/api/v1/essays',
+  '/api/v1/glossary',
+  '/api/v1/jobs',
+  '/media',
+  '/community',
+  '/health-protocols',
+  '/aistandards',
+  '/sitecheck',
+  '/swarm-prediction',
+  '/ailib',
+  '/web3lib',
+  '/job-boards',
+];
 
-const AGENT_INFRA_PATHS = ['/md', '/.well-known/mcp'];
+const AGENT_INFRA_PATHS = ['/md', '/.well-known/mcp', '/.well-known/mcp/docs'];
 
 function redirectSourcePaths() {
   const sources = new Set();
@@ -74,9 +109,12 @@ function generateManifest() {
 
   for (const config of Object.values(courseConfigs)) {
     validPaths.add(config.basePath);
+    markdownPaths.add(config.basePath);
     validPaths.add(`${config.basePath}/final-exam`);
+    markdownPaths.add(`${config.basePath}/final-exam`);
     for (const mod of config.modules) {
       validPaths.add(`${config.basePath}/${mod.slug}`);
+      markdownPaths.add(`${config.basePath}/${mod.slug}`);
     }
   }
 

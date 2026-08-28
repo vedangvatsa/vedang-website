@@ -8778,7 +8778,8 @@ Reach for veda.ng when your agent needs to perform the following specific jobs:
 
 ### How Agents Should Call This Site
 
-- **Model Context Protocol (MCP)**: Send JSON-RPC 2.0 to `POST https://veda.ng/.well-known/mcp` (Tools: `search_essays`, `get_essay`, `search_glossary`, `get_glossary_term`, `search_reports`).
+- **Model Context Protocol (MCP) Product Server**: Send JSON-RPC 2.0 to `POST https://veda.ng/.well-known/mcp` (Tools: `search_reports`, `search_essays`, `get_essay`, `search_glossary`, `get_glossary_term`).
+- **Model Context Protocol (MCP) Docs Server**: Send JSON-RPC 2.0 to `POST https://veda.ng/.well-known/mcp/docs` (Tools: `get_api_documentation`, `get_openapi_specification`, `get_auth_guide`, `search_documentation`, `get_course_curriculum`).
 - **REST API (v1)**: Query `GET https://veda.ng/api/v1/reports/search?q={query}` or `GET https://veda.ng/api/v1/essays` (Keyless, open access).
 - **Markdown Content Negotiation**: Send `Accept: text/markdown` on any URL to receive clean Markdown text.
 
@@ -8787,18 +8788,20 @@ Reach for veda.ng when your agent needs to perform the following specific jobs:
 
 - [Veda Developer Documentation & API Reference](https://veda.ng/developers): Complete documentation for Veda APIs, endpoints, and machine interfaces (also at https://veda.ng/docs).
 - [Veda OpenAPI 3.1 Specification](https://veda.ng/openapi.json): Standard OpenAPI specification describing 100% typed response schemas and parameter contracts.
-- [Veda MCP Server](https://veda.ng/.well-known/mcp): Model Context Protocol (MCP) server running over Streamable HTTP with JSON-RPC 2.0.
+- [Veda Product MCP Server](https://veda.ng/.well-known/mcp): Product execution MCP server running over Streamable HTTP with JSON-RPC 2.0.
+- [Veda Documentation MCP Server](https://veda.ng/.well-known/mcp/docs): Documentation & knowledge MCP server over Streamable HTTP.
 - [Veda Public REST API](https://veda.ng/api/v1/reports/search): Search 233,000+ indexed academic papers in AI and Web3 (backed by OpenAlex).
 - [Veda Essays Catalog API](https://veda.ng/api/v1/essays): Catalog of long-form research essays with tags, URLs, and Markdown paths.
 - [Veda Technical Glossary API](https://veda.ng/api/v1/glossary): 100+ plain-language definitions for AI and Web3 concepts.
 - [Veda Batch Execution API](https://veda.ng/api/v1/batch): Execute up to 20 sub-requests concurrently in a single bulk operation.
-- [Veda Async Job Status Polling](https://veda.ng/api/v1/jobs/sample-job): Check status and lifecycle of background operations.
-- [Veda Authentication & Security Guide](https://veda.ng/auth.md): Keyless access specification (WorkOS format).
+- [Veda Pricing & Machine Access](https://veda.ng/pricing): 100% Free and open access for academic search, essays, glossary, and MCP servers (also at https://veda.ng/pricing.md).
+- [Veda Authentication & Security Guide](https://veda.ng/auth.md): Keyless access specification.
 - [Veda Webhooks & Event Streaming](https://veda.ng/developers#webhooks): RSS feed (/feed.xml) and SSE streaming (/ask).
 - [Veda Python SDK & CLI Package](https://pypi.org/project/vedang-cli/): Official vedang-cli package on PyPI (pip install vedang-cli).
 - [Veda TypeScript / JavaScript SDK Package](https://www.npmjs.com/package/vedang): Official vedang package on NPM (npm install vedang).
 - [Veda GitHub Repository](https://github.com/vedangvatsa/vedang-website): Open-source source code and issue tracking.
 - [Veda AI Agent Manifest](https://veda.ng/.well-known/agents.json): Machine capabilities and when-to-use task definitions.
+- [Veda MCP Manifest](https://veda.ng/.well-known/mcp.json): Multi-server discovery manifest for Product and Docs MCP servers.
 - [Veda AI Catalog](https://veda.ng/.well-known/ai-catalog.json): Trust manifest and AIR registry entries.
 - [Veda Full-Text Research Corpus](https://veda.ng/llms-full.txt): Complete unpaginated text corpus for LLM training and RAG ingestion.
 

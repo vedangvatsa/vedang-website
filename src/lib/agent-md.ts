@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { cleanMdxToMarkdown } from '@/lib/mdx-clean';
 import { glossaryTerms } from '@/lib/glossary';
+import { courseConfigs } from '@/lib/course-config';
 import { essays } from '@/lib/essays';
 import { recentPapers } from '@/components/recent-papers';
 import {
@@ -327,6 +328,135 @@ function getMarkdownBodyForPath(pathname: string): string | null {
         'Free guide to AI automation: build autonomous pipelines with APIs, MCP servers, AI agents, n8n, and no-code tools.',
         ['Automation Mental Models', 'Webhook & API Workflows', 'n8n & Workflow Orchestration', 'LLM Chains & Structured Extraction', 'Agentic Autonomous Triage', 'Error Handling & Idempotency', 'Enterprise Deployment']
       );
+    case '/pricing':
+      return [
+        '# Pricing & Access - Vedang Vatsa (veda.ng)',
+        '',
+        frontmatterFor('Pricing & Access', '/pricing').trimEnd(),
+        '',
+        'Veda is 100% Free and Open-Access for humans and autonomous AI agents.',
+        '',
+        '## Public & Developer Tier ($0 / month)',
+        '- **Cost**: $0 USD (Free, Keyless, Open Access)',
+        '- **Academic Research Search**: Unlimited queries across 233,000+ indexed papers in AI and Web3 (backed by OpenAlex)',
+        '- **Model Context Protocol (MCP)**: Unauthenticated access to Product MCP (`/.well-known/mcp`) and Docs MCP (`/.well-known/mcp/docs`)',
+        '- **Long-Form Essays & Research**: Full-text reading and Markdown twins (`.md`) across all publications',
+        '- **Educational Curriculum**: Free access to Prompt Engineering, MCP Development, Vibe Coding, and Agentic Web courses',
+        '- **Technical Glossary**: 100+ plain-language definitions',
+        '- **REST API Rate Limit**: Standard RFC 60 requests/minute keyless bucket',
+        '- **Authentication Required**: None (No credit card, no account required)',
+        '',
+        '## Developer Portal & Specs',
+        '- Documentation: https://veda.ng/developers',
+        '- OpenAPI 3.1 Spec: https://veda.ng/openapi.json',
+        '- MCP Server: https://veda.ng/.well-known/mcp',
+      ].join('\n');
+    case '/api':
+      return [
+        '# Vedang Vatsa Public API Root (veda.ng)',
+        '',
+        frontmatterFor('API Directory', '/api').trimEnd(),
+        '',
+        'Official public, open, and keyless REST API for academic paper search, published essays, and technical glossaries by Vedang Vatsa.',
+        '',
+        '## Endpoints',
+        '- **Search**: `GET https://veda.ng/api/v1/reports/search?q={query}&corpus={ai|web3}`',
+        '- **Essays**: `GET https://veda.ng/api/v1/essays`',
+        '- **Glossary**: `GET https://veda.ng/api/v1/glossary`',
+        '- **Batch Execution**: `POST https://veda.ng/api/v1/batch`',
+        '- **Async Jobs**: `GET https://veda.ng/api/v1/jobs/{jobId}`',
+        '',
+        '## Protocol & Specs',
+        '- OpenAPI 3.1 Specification: https://veda.ng/openapi.json',
+        '- Product MCP Server: https://veda.ng/.well-known/mcp',
+        '- Documentation MCP Server: https://veda.ng/.well-known/mcp/docs',
+      ].join('\n');
+    case '/docs':
+      return [
+        '# Vedang Vatsa Developer Documentation (veda.ng)',
+        '',
+        frontmatterFor('Developer Documentation', '/docs').trimEnd(),
+        '',
+        developersSummaryLines().join('\n'),
+        '',
+        '## Quick Links',
+        '- Interactive Developer Portal: https://veda.ng/developers',
+        '- OpenAPI 3.1 Specification: https://veda.ng/openapi.json',
+        '- Product MCP Server: https://veda.ng/.well-known/mcp',
+        '- Docs MCP Server: https://veda.ng/.well-known/mcp/docs',
+        '- Authentication Guide: https://veda.ng/auth.md',
+      ].join('\n');
+    case '/auth':
+      return [
+        '# Authentication Guide - Vedang Vatsa (veda.ng)',
+        '',
+        frontmatterFor('Authentication Guide', '/auth').trimEnd(),
+        '',
+        'Veda machine interfaces and APIs are 100% keyless and open access. No API key, bearer token, or OAuth handshake is required.',
+      ].join('\n');
+    case '/api/v1/batch':
+      return [
+        '# Batch Execution API - Vedang Vatsa (veda.ng)',
+        '',
+        frontmatterFor('Batch API', '/api/v1/batch').trimEnd(),
+        '',
+        'Execute up to 20 sub-requests concurrently in a single atomic HTTP request.',
+        '',
+        '## Protocol',
+        '- **Method**: `POST https://veda.ng/api/v1/batch`',
+        '- **Content-Type**: `application/json`',
+        '- **Rate Limit**: 60 requests/minute (RFC standard headers)',
+        '- **Schema**: Described in https://veda.ng/openapi.json',
+        '',
+        '## Example Request',
+        '```json',
+        '{',
+        '  "requests": [',
+        '    { "method": "GET", "path": "/api/v1/reports/search?q=mcp" },',
+        '    { "method": "GET", "path": "/api/v1/glossary" }',
+        '  ]',
+        '}',
+        '```',
+      ].join('\n');
+    case '/api/v1/reports/search':
+      return [
+        '# Academic Research Paper Search API - Vedang Vatsa (veda.ng)',
+        '',
+        frontmatterFor('Search API', '/api/v1/reports/search').trimEnd(),
+        '',
+        'Search 233,000+ indexed academic papers across AI and Web3 corpora backed by OpenAlex, sorted by citation count.',
+        '',
+        '## Parameters',
+        '- `q` (string, required): Search query term (min 2 characters)',
+        '- `corpus` (string, optional): `ai` (default) or `web3`',
+        '- `page` (integer, optional): Page number (default: 1)',
+        '- `per_page` (integer, optional): Results per page (default: 20, max: 200)',
+        '- `cursor` (string, optional): Base64 opaque pagination cursor',
+      ].join('\n');
+    case '/api/v1/essays':
+      return [
+        '# Essays Catalog API - Vedang Vatsa (veda.ng)',
+        '',
+        frontmatterFor('Essays API', '/api/v1/essays').trimEnd(),
+        '',
+        'Retrieve the complete catalog of long-form research essays by Vedang Vatsa with tags, metadata, and Markdown URLs.',
+      ].join('\n');
+    case '/api/v1/glossary':
+      return [
+        '# Technical Glossary API - Vedang Vatsa (veda.ng)',
+        '',
+        frontmatterFor('Glossary API', '/api/v1/glossary').trimEnd(),
+        '',
+        'Retrieve 100+ plain-language definitions for AI, machine learning, and Web3 terms.',
+      ].join('\n');
+    case '/api/v1/jobs':
+      return [
+        '# Background Job Status API - Vedang Vatsa (veda.ng)',
+        '',
+        frontmatterFor('Jobs API', '/api/v1/jobs').trimEnd(),
+        '',
+        'Check status and lifecycle of asynchronous background operations on veda.ng.',
+      ].join('\n');
     case '/media':
       return [
         '# Speaking Engagements & Media Coverage',
@@ -363,6 +493,29 @@ function getMarkdownBodyForPath(pathname: string): string | null {
   }
   if (pathname.startsWith('/glossary/')) {
     return glossaryMarkdown(pathname.slice('/glossary/'.length));
+  }
+  if (pathname.startsWith('/api/v1/jobs/')) {
+    const jobId = pathname.slice('/api/v1/jobs/'.length);
+    return `# Async Job Status: ${jobId}\n\n${frontmatterFor(`Job ${jobId}`, pathname).trimEnd()}\n\nStatus: completed\nJob ID: ${jobId}\nPolled At: ${new Date().toISOString()}\n`;
+  }
+  // Course module markdown handler
+  for (const [courseKey, config] of Object.entries(courseConfigs)) {
+    if (pathname === config.basePath) {
+      return courseMarkdown(
+        `${config.courseTitle} - Complete Course Guide`,
+        courseKey,
+        `Official course curriculum for ${config.courseTitle} on veda.ng.`,
+        config.modules.map((m) => m.title)
+      );
+    }
+    if (pathname === `${config.basePath}/final-exam`) {
+      return `# ${config.courseTitle} - Final Exam\n\n${frontmatterFor(`${config.courseTitle} Final Exam`, pathname).trimEnd()}\n\nFinal assessment and certification exam for ${config.courseTitle}.\n`;
+    }
+    for (const mod of config.modules) {
+      if (pathname === `${config.basePath}/${mod.slug}`) {
+        return `# ${config.courseTitle}: ${mod.title}\n\n${frontmatterFor(`${config.courseTitle} - ${mod.title}`, pathname).trimEnd()}\n\nCourse Module: ${mod.title} (${mod.slug})\nParent Course: ${config.courseTitle} (${config.basePath})\n\nFull Course Index: ${SITE_URL}${config.basePath}\n`;
+      }
+    }
   }
   const segments = pathname.split('/').filter(Boolean);
   if (segments.length === 1) {
