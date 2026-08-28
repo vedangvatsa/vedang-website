@@ -313,7 +313,7 @@ function getMarkdownBodyForPath(pathname: string): string | null {
         '',
         frontmatterFor('Pricing & Access', '/pricing').trimEnd(),
         '',
-        'Veda is 100% Free and Open-Access for humans and autonomous AI agents.',
+        'Vedang Vatsa\'s research hub (veda.ng) is 100% Free and Open-Access for humans and autonomous AI agents.',
         '',
         '## Public & Developer Tier ($0 / month)',
         '- **Cost**: $0 USD (Free, Keyless, Open Access)',
@@ -405,7 +405,7 @@ function getMarkdownBodyForPath(pathname: string): string | null {
         '',
         frontmatterFor('Authentication Guide', '/auth').trimEnd(),
         '',
-        'Veda machine interfaces and APIs are 100% keyless and open access. No API key, bearer token, or OAuth handshake is required.',
+        'Vedang Vatsa machine interfaces and APIs are 100% keyless and open access. No API key, bearer token, or OAuth handshake is required.',
       ].join('\n');
     case '/api/v1/batch':
       return [

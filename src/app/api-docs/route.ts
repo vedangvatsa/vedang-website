@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
   const accept = request.headers.get('accept') || '';
   if (accept.includes('application/json')) {
     return NextResponse.json({
-      name: 'Veda API Documentation & OpenAPI Spec',
+      name: 'Vedang API Documentation & OpenAPI Spec',
       url: 'https://veda.ng/developers',
       documentation: 'https://veda.ng/developers',
       openapi: 'https://veda.ng/openapi.json',
@@ -25,7 +25,7 @@ export async function GET(request: NextRequest) {
   }
 
   if (accept.includes('text/markdown')) {
-    const md = `# Veda API Documentation\n\n${developersSummaryLines().join('\n')}\n\nFull documentation: https://veda.ng/developers\nOpenAPI: https://veda.ng/openapi.json\n`;
+    const md = `# Vedang API Documentation\n\n${developersSummaryLines().join('\n')}\n\nFull documentation: https://veda.ng/developers\nOpenAPI: https://veda.ng/openapi.json\n`;
     return new Response(md, { headers: { 'Content-Type': 'text/markdown; charset=utf-8' } });
   }
 

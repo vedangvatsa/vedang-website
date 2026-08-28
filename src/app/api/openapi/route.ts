@@ -44,7 +44,7 @@ export function GET() {
       contact: { name: SITE_NAME, email: CONTACT_EMAIL, url: CONTACT_URL },
     },
     externalDocs: {
-      description: 'Veda Developer Documentation & Agent Guides',
+      description: 'Vedang Developer Documentation & Agent Guides',
       url: `${SITE_URL}/developers`,
     },
     servers: [

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   description:
     'Official personal website and research hub of Vedang Vatsa (FRSA) on veda.ng. Personal essays, research publications, profile, and free courses on AI agents and Web3.',
-  keywords: ['Vedang Vatsa', 'veda.ng', 'Veda', 'Vedang', 'Essays', 'AI Thought Leader', 'Web3 Expert', 'Hashtag Web3', 'AI Researcher', 'DeFi', 'Profile'],
+  keywords: ['Vedang Vatsa', 'veda.ng', 'Vedang', 'Essays', 'AI Thought Leader', 'Web3 Expert', 'Hashtag Web3', 'AI Researcher', 'DeFi', 'Profile'],
   openGraph: {
     title: 'Vedang Vatsa - Essays, Research & Profile (veda.ng)',
     description: 'Official personal website and research hub of Vedang Vatsa (FRSA) on veda.ng. Personal essays, research publications, profile, and free courses on AI agents and Web3.',
@@ -57,7 +57,7 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Vedang Vatsa',
-  alternateName: ['veda.ng', 'Vedang Vatsa Website', 'Veda'],
+  alternateName: ['veda.ng', 'Vedang Vatsa Website', 'Vedang'],
   url: 'https://veda.ng',
   description: 'Official website of Vedang Vatsa (veda.ng) - Personal essays, research publications, profile, and courses on AI & Web3.',
   publisher: {
@@ -107,7 +107,7 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Vedang Vatsa',
-  alternateName: ['veda.ng', 'Veda', 'CVinBio', 'Hashtag Web3', 'Veda Research Hub'],
+  alternateName: ['veda.ng', 'Vedang', 'CVinBio', 'Hashtag Web3', 'Vedang Research Hub'],
   url: 'https://veda.ng',
   logo: 'https://veda.ng/images/icon.png',
   description: 'Official AI and Web3 research publication, developer API, and tool platform created by Vedang Vatsa.',

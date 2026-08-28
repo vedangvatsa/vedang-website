@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
 
   if (accept.includes('application/json')) {
     return NextResponse.json({
-      name: 'Veda Pricing & Access',
+      name: 'Vedang Vatsa Pricing & Access',
       url: 'https://veda.ng/pricing',
       pricing_model: 'free',
       currency: 'USD',

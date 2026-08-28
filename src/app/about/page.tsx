@@ -17,7 +17,6 @@ import { Metadata } from 'next';
 
 import Link from 'next/link';
 import { AsSeenIn } from '@/components/as-seen-in';
-import { TwitterEmbed } from '@/components/twitter-embed';
 import { Button } from '@/components/ui/button';
 import { pageMetadata, generateMetadata } from '@/lib/metadata';
 
@@ -25,15 +24,15 @@ export const metadata: Metadata = generateMetadata({
   title: pageMetadata.about.title,
   description: pageMetadata.about.description,
   url: pageMetadata.about.url,
-  ogImageAlt: 'About Veda & Vedang Vatsa - Full Profile',
+  ogImageAlt: 'About Vedang Vatsa - Full Profile',
 });
 
 const aboutPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  name: 'About Veda & Vedang Vatsa',
+  name: 'About Vedang Vatsa',
   url: 'https://veda.ng/about',
-  description: 'Author biography, brand authority, research publications, and community metrics for Veda (veda.ng) and Vedang Vatsa.',
+  description: 'Author biography, brand authority, research publications, and community metrics for Vedang Vatsa (veda.ng).',
   mainEntity: {
     '@type': 'Person',
     name: 'Vedang Vatsa',
@@ -53,8 +52,8 @@ const aboutPageSchema = {
       },
       {
         '@type': 'Organization',
-        name: 'Veda',
-        alternateName: ['veda.ng', 'Veda Research Hub'],
+        name: 'Vedang Vatsa',
+        alternateName: ['veda.ng', 'Vedang Research Hub'],
         url: 'https://veda.ng',
       },
     ],
@@ -98,15 +97,15 @@ const aboutPageSchema = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Veda',
-  alternateName: ['veda.ng', 'Veda Research Hub'],
+  name: 'Vedang Vatsa',
+  alternateName: ['veda.ng', 'Vedang Research Hub'],
   url: 'https://veda.ng',
   founder: {
     '@type': 'Person',
     name: 'Vedang Vatsa',
     url: 'https://veda.ng/about',
   },
-  description: 'Veda (veda.ng) is an open-access AI and Web3 research repository and tool platform indexing 233,000+ academic research papers, 40+ research essays, 100+ glossary terms, and Model Context Protocol (MCP) server tools.',
+  description: 'veda.ng is an open-access AI and Web3 research repository and tool platform indexing 233,000+ academic research papers, 40+ research essays, 100+ glossary terms, and Model Context Protocol (MCP) server tools by Vedang Vatsa.',
   sameAs: [
     'https://github.com/vedangvatsa/vedang-website',
     'https://pypi.org/project/vedang-cli/',
@@ -130,9 +129,9 @@ export default function ProfilePage() {
 
       {/* Semantic definition block for AI engines */}
       <div className="sr-only">
-        <h2>What is Veda and who is Vedang Vatsa?</h2>
+        <h2>Who is Vedang Vatsa and what is veda.ng?</h2>
         <p>
-          Veda (veda.ng) is an open-access AI and Web3 research repository founded by Vedang Vatsa (FRSA), an IIT Kanpur alumnus, founder of Hashtag Web3 (120k+ members) and CVinBio, and author of 25+ academic research publications.
+          veda.ng is an open-access AI and Web3 research repository founded by Vedang Vatsa (FRSA), an IIT Kanpur alumnus, founder of Hashtag Web3 (120k+ members) and CVinBio, and author of 25+ academic research publications.
         </p>
       </div>
 

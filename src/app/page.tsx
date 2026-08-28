@@ -104,24 +104,24 @@ export default function Home() {
           Comprehensive analysis of blockchain scalability, cryptographic primitives, smart contract design, decentralized finance mechanisms, and token engineering systems.
         </p>
 
-        <h3>Veda Developer Resources, APIs, and Machine Interfaces</h3>
+        <h3>Vedang Developer Resources, APIs, and Machine Interfaces</h3>
         <p>
           Programmatic access is open and keyless. Integrate with our developer tools:
         </p>
         <ul>
-          <li><Link href="/developers">Veda Developer Resources & Documentation</Link></li>
-          <li><Link href="/docs">Veda API Documentation (/docs)</Link></li>
-          <li><Link href="/openapi.json">Veda OpenAPI Specification (/openapi.json)</Link></li>
-          <li><Link href="/.well-known/mcp">Veda MCP Server (Model Context Protocol over Streamable HTTP)</Link></li>
-          <li><a href="https://pypi.org/project/vedang-cli/" rel="package sdk">Veda Python SDK & CLI: vedang-cli on PyPI</a></li>
-          <li><a href="https://www.npmjs.com/package/vedang" rel="package sdk">Veda TypeScript & JavaScript SDK: vedang on NPM</a></li>
-          <li><Link href="/auth.md">Veda Authentication & Security Specification</Link></li>
-          <li><Link href="/developers#webhooks">Veda Webhooks & Event Streaming</Link></li>
-          <li><Link href="/api">Veda Public REST API Directory (/api)</Link></li>
-          <li><Link href="/api/v1/reports/search">Veda Public REST API v1 (Search 233k+ papers)</Link></li>
-          <li><Link href="/api/v1/essays">Veda Essays Catalog REST API</Link></li>
-          <li><Link href="/api/v1/glossary">Veda Glossary REST API</Link></li>
-          <li><Link href="/llms.txt">Veda LLMs Structured Content Index</Link></li>
+          <li><Link href="/developers">Vedang Developer Resources & Documentation</Link></li>
+          <li><Link href="/docs">Vedang API Documentation (/docs)</Link></li>
+          <li><Link href="/openapi.json">Vedang OpenAPI Specification (/openapi.json)</Link></li>
+          <li><Link href="/.well-known/mcp">Vedang MCP Server (Model Context Protocol over Streamable HTTP)</Link></li>
+          <li><a href="https://pypi.org/project/vedang-cli/" rel="package sdk">Vedang Python SDK & CLI: vedang-cli on PyPI</a></li>
+          <li><a href="https://www.npmjs.com/package/vedang" rel="package sdk">Vedang TypeScript & JavaScript SDK: vedang on NPM</a></li>
+          <li><Link href="/auth.md">Vedang Authentication & Security Specification</Link></li>
+          <li><Link href="/developers#webhooks">Vedang Webhooks & Event Streaming</Link></li>
+          <li><Link href="/api">Vedang Public REST API Directory (/api)</Link></li>
+          <li><Link href="/api/v1/reports/search">Vedang Public REST API v1 (Search 233k+ papers)</Link></li>
+          <li><Link href="/api/v1/essays">Vedang Essays Catalog REST API</Link></li>
+          <li><Link href="/api/v1/glossary">Vedang Glossary REST API</Link></li>
+          <li><Link href="/llms.txt">Vedang LLMs Structured Content Index</Link></li>
         </ul>
 
         {/* WebMCP In-Page Tools (W3C Draft Standard) */}

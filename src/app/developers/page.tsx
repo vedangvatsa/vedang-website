@@ -7,26 +7,26 @@ import { generateMetadata } from '@/lib/metadata';
 import { developersSummaryLines } from '@/lib/agent-md';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Veda Developer Resources, API Documentation & MCP Server | Vedang Vatsa (veda.ng)',
+  title: 'Vedang Developer Resources, API Documentation & MCP Server | Vedang Vatsa (veda.ng)',
   description:
-    'Official developer resources, API documentation, Model Context Protocol (MCP) server, Python SDK (vedang-cli), NPM SDK (vedang), and OpenAPI 3.1 specification for Vedang Vatsa and Veda (veda.ng).',
+    'Official developer resources, API documentation, Model Context Protocol (MCP) server, Python SDK (vedang-cli), NPM SDK (vedang), and OpenAPI 3.1 specification for Vedang Vatsa (veda.ng).',
   url: '/developers',
   keywords: [
-    'Veda developer resources',
+    'Vedang developer resources',
     'Vedang Vatsa developer resources',
-    'Veda API',
+    'Vedang API',
     'Vedang Vatsa API',
-    'Veda API documentation',
+    'Vedang API documentation',
     'Vedang Vatsa API documentation',
-    'Veda MCP server',
+    'Vedang MCP server',
     'Vedang Vatsa MCP server',
-    'Veda developer docs',
+    'Vedang developer docs',
     'Vedang Vatsa developer portal',
-    'Veda OpenAPI specification',
+    'Vedang OpenAPI specification',
     'Vedang Vatsa OpenAPI',
-    'Veda webhooks',
-    'Veda authentication',
-    'Veda SDK',
+    'Vedang webhooks',
+    'Vedang authentication',
+    'Vedang SDK',
     'Vedang Vatsa SDK',
     'veda.ng API',
     'veda.ng MCP server',
@@ -40,23 +40,23 @@ export const metadata: Metadata = generateMetadata({
 const developersSchema = {
   '@context': 'https://schema.org',
   '@type': 'TechArticle',
-  headline: 'Veda Developer Resources, API Documentation & MCP Server',
-  name: 'Veda Developer Resources',
+  headline: 'Vedang Developer Resources, API Documentation & MCP Server',
+  name: 'Vedang Developer Resources',
   alternateName: [
     'Vedang Vatsa Developer Resources',
     'Vedang Vatsa API Documentation',
     'Vedang Vatsa Developer Portal',
     'Vedang Vatsa MCP Server',
-    'Veda API Documentation',
-    'Veda Developer Portal',
-    'Veda MCP Server',
-    'Veda OpenAPI Specification',
+    'Vedang API Documentation',
+    'Vedang Developer Portal',
+    'Vedang MCP Server',
+    'Vedang OpenAPI Specification',
     'veda.ng Developer Resources',
-    'Veda SDK Packages',
+    'Vedang SDK Packages',
   ],
   url: 'https://veda.ng/developers',
   description:
-    'Official developer and machine interfaces for Vedang Vatsa and Veda (veda.ng): public report search API, MCP server over Streamable HTTP, OpenAPI specification, Python SDK (vedang-cli), NPM SDK (vedang), RSS feed, sitemap, and agent discovery files.',
+    'Official developer and machine interfaces for Vedang Vatsa (veda.ng): public report search API, MCP server over Streamable HTTP, OpenAPI specification, Python SDK (vedang-cli), NPM SDK (vedang), RSS feed, sitemap, and agent discovery files.',
   inLanguage: 'en-US',
   author: {
     '@type': 'Person',
@@ -66,7 +66,7 @@ const developersSchema = {
   publisher: {
     '@type': 'Organization',
     name: 'Vedang Vatsa',
-    alternateName: ['veda.ng', 'Veda', 'CVinBio', 'Hashtag Web3'],
+    alternateName: ['veda.ng', 'Vedang', 'CVinBio', 'Hashtag Web3'],
     url: 'https://veda.ng',
     sameAs: [
       'https://cvin.bio',
@@ -117,19 +117,19 @@ export default function DevelopersPage() {
 
       {/* Semantic definition block for AI engines */}
       <div className="sr-only">
-        <h2>What are Veda Developer Resources?</h2>
+        <h2>What are Vedang Developer Resources?</h2>
         <p>
-          Veda Developer Resources provide keyless, open-access machine interfaces, REST endpoints, Model Context Protocol (MCP) servers, and OpenAPI specifications to programmatically query 233,000+ academic papers, essays, and glossary definitions on veda.ng.
+          Vedang Developer Resources provide keyless, open-access machine interfaces, REST endpoints, Model Context Protocol (MCP) servers, and OpenAPI specifications to programmatically query 233,000+ academic papers, essays, and glossary definitions on veda.ng by Vedang Vatsa.
         </p>
       </div>
 
       <PageHero
-        title="Veda Developer Resources"
-        subtitle="Official machine and developer interfaces for Veda (veda.ng): public research search API, Model Context Protocol (MCP) server, OpenAPI 3.1 specification, Python SDK, syndication feeds, and agent discovery manifests. Keyless and open-access."
+        title="Vedang Developer Resources"
+        subtitle="Official machine and developer interfaces for Vedang Vatsa (veda.ng): public research search API, Model Context Protocol (MCP) server, OpenAPI 3.1 specification, Python SDK, syndication feeds, and agent discovery manifests. Keyless and open-access."
       />
 
       <article className="pb-16 text-sm md:text-base">
-        <Section title="Veda Quick Index & Predictable Endpoints">
+        <Section title="Vedang Quick Index & Predictable Endpoints">
           <ul className="space-y-1.5 text-muted-foreground">
             {developersSummaryLines().map((line) => (
               <li key={line} className="break-words">{line}</li>
@@ -137,7 +137,7 @@ export default function DevelopersPage() {
           </ul>
         </Section>
 
-        <Section id="api" title="Veda Report Search API & REST Endpoints">
+        <Section id="api" title="Vedang Report Search API & REST Endpoints">
           <p className="text-muted-foreground mb-3">
             Search 233,000+ indexed academic papers across the AI and Web3 corpora, backed by OpenAlex and sorted by
             citations. Results are cached for one hour.
@@ -148,17 +148,17 @@ export default function DevelopersPage() {
             <code className="font-mono text-xs">corpus</code> (<code className="font-mono text-xs">ai</code> or{' '}
             <code className="font-mono text-xs">web3</code>), <code className="font-mono text-xs">page</code>,{' '}
             <code className="font-mono text-xs">per_page</code> (max 200), <code className="font-mono text-xs">cursor</code> (for cursor pagination). The full schema lives in the{' '}
-            <Link href="/openapi.json" className="underline underline-offset-4 hover:text-foreground">Veda OpenAPI 3.1 Specification</Link>.
+            <Link href="/openapi.json" className="underline underline-offset-4 hover:text-foreground">Vedang OpenAPI 3.1 Specification</Link>.
           </p>
         </Section>
 
-        <Section id="mcp" title="Veda Model Context Protocol (MCP) Servers">
+        <Section id="mcp" title="Vedang Model Context Protocol (MCP) Servers">
           <p className="text-muted-foreground mb-3">
-            Veda runs dual, production-ready MCP servers over Streamable HTTP (JSON-RPC 2.0) with zero authentication required:
+            Vedang runs dual, production-ready MCP servers over Streamable HTTP (JSON-RPC 2.0) with zero authentication required:
           </p>
           <div className="space-y-4 mb-4">
             <div className="rounded-lg border border-border p-4 bg-card">
-              <h3 className="font-semibold text-sm mb-1">1. Veda Product MCP Server (Action & Research)</h3>
+              <h3 className="font-semibold text-sm mb-1">1. Vedang Product MCP Server (Action & Research)</h3>
               <p className="text-xs text-muted-foreground mb-2">
                 Endpoint: <code className="font-mono text-xs text-foreground">https://veda.ng/.well-known/mcp</code> (also reachable at <code className="font-mono text-xs">/api/mcp</code>)
               </p>
@@ -171,7 +171,7 @@ export default function DevelopersPage() {
               </ul>
             </div>
             <div className="rounded-lg border border-border p-4 bg-card">
-              <h3 className="font-semibold text-sm mb-1">2. Veda Documentation MCP Server (Knowledge & Courses)</h3>
+              <h3 className="font-semibold text-sm mb-1">2. Vedang Documentation MCP Server (Knowledge & Courses)</h3>
               <p className="text-xs text-muted-foreground mb-2">
                 Endpoint: <code className="font-mono text-xs text-foreground">https://veda.ng/.well-known/mcp/docs</code> (also reachable at <code className="font-mono text-xs">/api/mcp/docs</code>)
               </p>
@@ -187,7 +187,7 @@ export default function DevelopersPage() {
           <CommandBlock command={mcpExample} />
         </Section>
 
-        <Section id="openapi" title="Veda OpenAPI 3.1 Specification">
+        <Section id="openapi" title="Vedang OpenAPI 3.1 Specification">
           <p className="text-muted-foreground mb-3">
             The machine-readable OpenAPI specification is published at{' '}
             <Link href="/openapi.json" className="underline underline-offset-4 hover:text-foreground">/openapi.json</Link>{' '}
@@ -196,7 +196,7 @@ export default function DevelopersPage() {
           </p>
         </Section>
 
-        <Section id="sdk" title="Veda Multi-Language SDK Packages & Tooling">
+        <Section id="sdk" title="Vedang Multi-Language SDK Packages & Tooling">
           <p className="text-muted-foreground mb-3">
             Programmatic SDK packages and CLI tools for Python, TypeScript/JavaScript, and Go:
           </p>
@@ -249,14 +249,14 @@ export default function DevelopersPage() {
           </p>
         </Section>
 
-        <Section id="auth" title="Veda Authentication & Security Guide">
+        <Section id="auth" title="Vedang Authentication & Security Guide">
           <p className="text-muted-foreground mb-3">
             All public reading and search APIs on veda.ng are keyless and require no API token. The complete WorkOS-format authentication specification is documented at{' '}
             <Link href="/auth.md" className="underline underline-offset-4 hover:text-foreground">/auth.md</Link>.
           </p>
         </Section>
 
-        <Section id="webhooks" title="Veda Webhooks & Event Streaming">
+        <Section id="webhooks" title="Vedang Webhooks & Event Streaming">
           <p className="text-muted-foreground mb-3">
             Live updates and event subscriptions:
           </p>
@@ -267,7 +267,7 @@ export default function DevelopersPage() {
           </ul>
         </Section>
 
-        <Section title="Veda Markdown Content Negotiation">
+        <Section title="Vedang Markdown Content Negotiation">
           <p className="text-muted-foreground mb-3">
             Every essay, every glossary term, and key pages serve Markdown to machines. Send an Accept header instead of
             parsing HTML:
@@ -275,7 +275,7 @@ export default function DevelopersPage() {
           <CommandBlock command={markdownExample} />
         </Section>
 
-        <Section title="Veda Discovery Feeds & Machine Manifests">
+        <Section title="Vedang Discovery Feeds & Machine Manifests">
           <ul className="space-y-1.5 text-muted-foreground">
             <li><Link href="/feed.xml" className="underline underline-offset-4 hover:text-foreground">feed.xml</Link> - RSS feed of new essays</li>
             <li><Link href="/sitemap.xml" className="underline underline-offset-4 hover:text-foreground">sitemap.xml</Link> - every public URL</li>

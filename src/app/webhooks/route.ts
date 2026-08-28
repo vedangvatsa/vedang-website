@@ -9,8 +9,8 @@ export async function GET(request: NextRequest) {
   }
 
   return NextResponse.json({
-    name: 'Veda Webhooks & Event Streaming',
-    description: 'Event subscription and real-time streaming interfaces for Veda (veda.ng).',
+    name: 'Vedang Webhooks & Event Streaming',
+    description: 'Event subscription and real-time streaming interfaces for Vedang Vatsa (veda.ng).',
     documentation: 'https://veda.ng/developers#webhooks',
     manifest: 'https://veda.ng/webhooks.json',
     channels: {

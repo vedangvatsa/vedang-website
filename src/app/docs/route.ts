@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
   const accept = request.headers.get('accept') || '';
   if (accept.includes('application/json')) {
     return NextResponse.json({
-      name: 'Veda Developer Resources',
+      name: 'Vedang Developer Resources',
       url: 'https://veda.ng/developers',
       documentation: 'https://veda.ng/developers',
       openapi: 'https://veda.ng/openapi.json',
