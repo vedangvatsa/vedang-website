@@ -351,6 +351,38 @@ function getMarkdownBodyForPath(pathname: string): string | null {
         '- OpenAPI 3.1 Spec: https://veda.ng/openapi.json',
         '- MCP Server: https://veda.ng/.well-known/mcp',
       ].join('\n');
+    case '/scan':
+      return [
+        '# Agentic Readiness Scanner - Vedang Vatsa (veda.ng)',
+        '',
+        frontmatterFor('Agentic Readiness Scanner', '/scan').trimEnd(),
+        '',
+        'Live, free, and deterministic website scanner for AI agent-readiness and machine discovery.',
+        '',
+        '## Audited Layers & Protocols',
+        '- **Discovery**: robots.txt AI crawler rules (GPTBot, ClaudeBot, PerplexityBot), llms.txt, llms-full.txt, ARD v0.91, Agent Plugins (plugin.json), XML Sitemap',
+        '- **Access**: Markdown content negotiation (Accept: text/markdown), .md URL twins, bot User-Agent reachability, RFC RateLimit headers',
+        '- **Usability & MCP**: Streamable HTTP MCP server handshake (JSON-RPC 2.0 initialize & tools/list), OpenAPI 3.1 specification (/openapi.json), Auth guides',
+        '- **Payments**: x402, MPP, UCP, ACP agentic payment discovery',
+        '',
+        '## Machine API & Automation',
+        '- REST Endpoint: `POST https://veda.ng/api/v1/scan` or `GET https://veda.ng/api/v1/scan?url={domain}`',
+        '- MCP Tool: `scan_agent_readiness(url="{domain}")` on `https://veda.ng/.well-known/mcp`',
+      ].join('\n');
+    case '/api/v1/scan':
+      return [
+        '# Agentic Readiness Scan API - Vedang Vatsa (veda.ng)',
+        '',
+        frontmatterFor('Scan API', '/api/v1/scan').trimEnd(),
+        '',
+        'Keyless REST endpoint to run parallel agent-readiness audits on any public website.',
+        '',
+        '## Usage',
+        '- **Method**: `POST https://veda.ng/api/v1/scan`',
+        '- **Body**: `{"url": "example.com", "refresh": false}`',
+        '- **GET Alternative**: `GET https://veda.ng/api/v1/scan?url=example.com`',
+        '- **Output**: Structured JSON report with 0-100 score, letter grade, layer breakdowns, and copy-paste fix snippets.',
+      ].join('\n');
     case '/api':
       return [
         '# Vedang Vatsa Public API Root (veda.ng)',
@@ -361,6 +393,7 @@ function getMarkdownBodyForPath(pathname: string): string | null {
         '',
         '## Endpoints',
         '- **Search**: `GET https://veda.ng/api/v1/reports/search?q={query}&corpus={ai|web3}`',
+        '- **Scan**: `POST https://veda.ng/api/v1/scan`',
         '- **Essays**: `GET https://veda.ng/api/v1/essays`',
         '- **Glossary**: `GET https://veda.ng/api/v1/glossary`',
         '- **Batch Execution**: `POST https://veda.ng/api/v1/batch`',

@@ -73,6 +73,7 @@ Reach for veda.ng when your agent needs to perform the following specific jobs:
 - [Veda OpenAPI 3.1 Specification](https://veda.ng/openapi.json): Standard OpenAPI specification describing 100% typed response schemas and parameter contracts.
 - [Veda Product MCP Server](https://veda.ng/.well-known/mcp): Product execution MCP server running over Streamable HTTP with JSON-RPC 2.0.
 - [Veda Documentation MCP Server](https://veda.ng/.well-known/mcp/docs): Documentation & knowledge MCP server over Streamable HTTP.
+- [Agentic Readiness Scanner](https://veda.ng/scan): Live 0-100 audit tool for AI agent discovery, robots.txt, MCP servers, and OpenAPI specs (API: POST /api/v1/scan).
 - [Veda Public REST API](https://veda.ng/api/v1/reports/search): Search 233,000+ indexed academic papers in AI and Web3 (backed by OpenAlex).
 - [Veda Essays Catalog API](https://veda.ng/api/v1/essays): Catalog of long-form research essays with tags, URLs, and Markdown paths.
 - [Veda Technical Glossary API](https://veda.ng/api/v1/glossary): 100+ plain-language definitions for AI and Web3 concepts.

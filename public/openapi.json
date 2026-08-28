@@ -2500,6 +2500,55 @@
           "$ref": "#/components/schemas/McpToolCallResponse"
         }
       }
+    },
+    {
+      "name": "scan_agent_readiness",
+      "description": "Audit any website for AI agent-readiness and machine discovery: evaluates robots.txt AI bot policies, llms.txt, MCP endpoints, OpenAPI schemas, and Markdown twins with a 0-100 score.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "Domain or URL to audit (e.g. \"stripe.com\" or \"https://example.com\")."
+          },
+          "refresh": {
+            "type": "boolean",
+            "description": "Bypass cache and force a fresh live scan."
+          }
+        },
+        "required": [
+          "url"
+        ]
+      },
+      "invoke": {
+        "method": "POST",
+        "url": "https://veda.ng/.well-known/mcp",
+        "headers": {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        "body": {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "method": "tools/call",
+          "params": {
+            "name": "scan_agent_readiness",
+            "arguments": {
+              "url": {
+                "type": "string",
+                "description": "Domain or URL to audit (e.g. \"stripe.com\" or \"https://example.com\")."
+              },
+              "refresh": {
+                "type": "boolean",
+                "description": "Bypass cache and force a fresh live scan."
+              }
+            }
+          }
+        },
+        "responseSchema": {
+          "$ref": "#/components/schemas/McpToolCallResponse"
+        }
+      }
     }
   ],
   "x-discovery": {

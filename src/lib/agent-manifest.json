@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T05:55:09.481Z",
+  "generatedAt": "2026-08-28T08:21:08.494Z",
   "validPaths": [
     "/",
     "/.well-known/mcp",
@@ -56,6 +56,7 @@
     "/api/v1/glossary",
     "/api/v1/jobs",
     "/api/v1/reports/search",
+    "/api/v1/scan",
     "/apidocs",
     "/apis",
     "/artificial-intuition",
@@ -523,6 +524,7 @@
     "/revision-gap",
     "/sacred-algorithms",
     "/safety",
+    "/scan",
     "/sensory",
     "/sensory-internet",
     "/seo",
@@ -682,6 +684,7 @@
     "/api/v1/glossary",
     "/api/v1/jobs",
     "/api/v1/reports/search",
+    "/api/v1/scan",
     "/apis",
     "/asi",
     "/attention",
@@ -1048,6 +1051,7 @@
     "/receipts",
     "/revision",
     "/safety",
+    "/scan",
     "/sensory",
     "/simulation",
     "/simulayer",

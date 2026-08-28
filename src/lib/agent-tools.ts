@@ -155,6 +155,20 @@ export const MCP_TOOLS: McpToolDefinition[] = [
     },
     annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true },
   },
+  {
+    name: 'scan_agent_readiness',
+    description:
+      'Audit any website for AI agent-readiness and machine discovery: evaluates robots.txt AI bot policies, llms.txt, MCP endpoints, OpenAPI schemas, and Markdown twins with a 0-100 score.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        url: { type: 'string', description: 'Domain or URL to audit (e.g. "stripe.com" or "https://example.com").' },
+        refresh: { type: 'boolean', description: 'Bypass cache and force a fresh live scan.' },
+      },
+      required: ['url'],
+    },
+    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true },
+  },
 ];
 
 export function searchEssays(args: Record<string, unknown>): ToolOutput {
@@ -224,10 +238,24 @@ export function getGlossaryTerm(args: Record<string, unknown>): ToolOutput {
   return text(markdown);
 }
 
+export async function scanAgentReadiness(args: Record<string, unknown>): Promise<ToolOutput> {
+  const url = typeof args.url === 'string' ? args.url.trim() : '';
+  if (!url) return errorText('url is required (e.g. "stripe.com").');
+  try {
+    const { scanDomain } = await import('@/lib/scanner/engine');
+    const result = await scanDomain(url);
+    return text(JSON.stringify(result, null, 2));
+  } catch (err: any) {
+    return errorText(err.message || 'Failed to scan domain.');
+  }
+}
+
 export const TOOL_HANDLERS: Record<string, ToolHandler> = {
   search_essays: searchEssays,
   get_essay: getEssay,
   search_glossary: searchGlossary,
   get_glossary_term: getGlossaryTerm,
   search_reports: (args) => searchReports(args),
+  scan_reports: (args) => searchReports(args),
+  scan_agent_readiness: scanAgentReadiness,
 };
